@@ -1,0 +1,395 @@
+# Índice del corpus
+
+377 secciones. Generado por `tools/buscar.py -r`.
+
+Para el detalle de una sección: `./tools/buscar.py -v <id>`.
+
+
+## FEP01 — `FEP01_26_Bases_Administrativas_TFEP_01_2026_3.md`
+
+- `   1` p.1   **FORMULACIÓN DE PROYECTOS** — 13 palabras
+- `   2` p.2   **Bases Administrativas** — 526 palabras
+- `   3` p.4   **DISPOSICIONES GENERALES** — 0 palabras
+- `   4` p.4   **CAPÍTULO 1 ANTECEDENTES Y MARCO NORMATIVO** — 0 palabras
+- `   5` p.4   **ARTÍCULO 1°. IDENTIFICACIÓN DE LA LICITACIÓN** — 182 palabras
+- `   6` p.4   **ARTÍCULO 2°. ENTIDAD CONVOCANTE** — 68 palabras
+- `   7` p.4   **ARTÍCULO 3°. DEFINICIONES** — 617 palabras
+- `   8` p.6   **ARTÍCULO 4°. MARCO LEGAL, NORMATIVO Y DE ESTÁNDARES** — 620 palabras
+- `   9` p.7   **ARTÍCULO 5°. DOCUMENTOS QUE RIGEN LA LICITACIÓN Y ORDEN DE PRECEDENCIA** — 194 palabras
+- `  10` p.8   **ARTÍCULO 6°. INTERPRETACIÓN DE LAS BASES** — 96 palabras
+- `  11` p.8   **CAPÍTULO 2 CONDICIONES GENERALES DEL PROCESO** — 0 palabras
+- `  12` p.8   **ARTÍCULO 7°. TIPO Y MODALIDAD DE LICITACIÓN** — 55 palabras
+- `  13` p.8   **ARTÍCULO 8°. IDIOMA OFICIAL** — 81 palabras
+- `  14` p.8   **ARTÍCULO 9°. MONEDA, VALORES E IMPUESTOS** — 148 palabras
+- `  15` p.9   **ARTÍCULO 10°. CÓMPUTO Y CARÁCTER DE LOS PLAZOS** — 100 palabras
+- `  16` p.9   **ARTÍCULO 11°. GASTOS DEL PROCESO** — 61 palabras
+- `  17` p.9   **ARTÍCULO 12°. COMUNICACIONES OFICIALES** — 126 palabras
+- `  18` p.9   **ARTÍCULO 13°. PROBIDAD, CONFLICTOS DE INTERÉS Y CONDUCTA** — 192 palabras
+- `  19` p.11  **OBJETO, ALCANCE Y REQUISITOS TRANSVERSALES OBLIGATORIOS** — 0 palabras
+- `  20` p.11  **CAPÍTULO 3 OBJETO Y ESTRUCTURA DE LA CONTRATACIÓN** — 0 palabras
+- `  21` p.11  **ARTÍCULO 14°. OBJETO DE LA CONTRATACIÓN** — 79 palabras
+- `  22` p.11  **14.2 El alcance comprende, sin que la enumeración sea taxativa:** — 229 palabras
+- `  23` p.12  **ARTÍCULO 15°. ESTRUCTURA DEL SUMINISTRO** — 191 palabras
+- `  24` p.12  **ARTÍCULO 16°. MODELO DE DESPLIEGUE HÍBRIDO OBLIGATORIO** — 77 palabras
+- `  25` p.12  **16.3 Exigencias del componente en nube** — 168 palabras
+- `  26` p.13  **16.4 Exigencias del componente on-premise** — 182 palabras
+- `  27` p.13  **ARTÍCULO 17°. CRONOGRAMA CONTRACTUAL OBLIGATORIO** — 268 palabras
+- `  28` p.14  **17.2 Reglas de solapamiento y convivencia:** — 326 palabras
+- `  29` p.14  **ARTÍCULO 18°. HITOS CONTRACTUALES Y CRITERIOS DE ACEPTACIÓN** — 143 palabras
+- `  30` p.15  **CAPÍTULO 4 REQUISITOS TRANSVERSALES OBLIGATORIOS DE LA SOLUCIÓN** — 48 palabras
+- `  31` p.15  **ARTÍCULO 19°. ARQUITECTURA Y DISEÑO** — 247 palabras
+- `  32` p.15  **ARTÍCULO 20°. DISPONIBILIDAD, CONTINUIDAD Y RECUPERACIÓN ANTE DESASTRES** — 234 palabras
+- `  33` p.16  **ARTÍCULO 21°. SEGURIDAD DE LA INFORMACIÓN Y CIBERSEGURIDAD** — 0 palabras
+- `  34` p.16  **21.1 Principios y gobierno** — 90 palabras
+- `  35` p.16  **21.2 Protección de la capa expuesta** — 149 palabras
+- `  36` p.16  **21.3 Detección, respuesta y evidencia** — 170 palabras
+- `  37` p.17  **21.4 Seguridad del ciclo de desarrollo** — 106 palabras
+- `  38` p.17  **ARTÍCULO 22°. IDENTIDAD, ACCESO Y GESTIÓN DE SESIONES** — 258 palabras
+- `  39` p.17  **ARTÍCULO 23°. DATOS, INTEGRACIÓN E INTEROPERABILIDAD** — 202 palabras
+- `  40` p.18  **ARTÍCULO 24°. INGENIERÍA, DEVSECOPS Y CALIDAD** — 209 palabras
+- `  41` p.18  **ARTÍCULO 25°. OBSERVABILIDAD, OPERACIÓN Y NIVELES DE SERVICIO** — 178 palabras
+- `  42` p.19  **ARTÍCULO 26°. ACCESIBILIDAD, USABILIDAD Y SOSTENIBILIDAD** — 180 palabras
+- `  43` p.19  **ARTÍCULO 27°. CUMPLIMIENTO NORMATIVO, AUDITORÍA Y DERECHO DE INSPECCIÓN** — 135 palabras
+- `  44` p.20  **CAPÍTULO 5 EXIGENCIA DE INNOVACIÓN** — 0 palabras
+- `  45` p.20  **ARTÍCULO 28°. CARTERA OBLIGATORIA DE CINCO INNOVACIONES** — 299 palabras
+- `  46` p.20  **ARTÍCULO 29°. DOCUMENTACIÓN EXIGIDA POR CADA INNOVACIÓN** — 186 palabras
+- `  47` p.21  **ARTÍCULO 30°. EVALUACIÓN Y EXIGIBILIDAD DE LAS INNOVACIONES** — 139 palabras
+- `  48` p.22  **REQUISITOS Y CONDICIONES DE PARTICIPACIÓN** — 0 palabras
+- `  49` p.22  **CAPÍTULO 6 PARTICIPANTES** — 0 palabras
+- `  50` p.22  **ARTÍCULO 31°. QUIÉNES PUEDEN PARTICIPAR** — 29 palabras
+- `  51` p.22  **31.2 Los participantes deberán:** — 96 palabras
+- `  52` p.22  **ARTÍCULO 32°. PROHIBICIONES E INHABILIDADES** — 151 palabras
+- `  53` p.22  **ARTÍCULO 33°. CONSORCIOS Y UNIONES TEMPORALES** — 150 palabras
+- `  54` p.23  **ARTÍCULO 34°. REQUISITOS HABILITANTES DE IDONEIDAD TÉCNICA Y FINANCIERA** — 332 palabras
+- `  55` p.24  **CAPÍTULO 7 GARANTÍAS Y SEGUROS** — 0 palabras
+- `  56` p.24  **ARTÍCULO 35°. GARANTÍA DE SERIEDAD DE LA OFERTA** — 272 palabras
+- `  57` p.24  **ARTÍCULO 36°. GARANTÍA DE FIEL CUMPLIMIENTO DEL CONTRATO** — 234 palabras
+- `  58` p.25  **ARTÍCULO 37°. GARANTÍA DE CORRECTO FUNCIONAMIENTO** — 79 palabras
+- `  59` p.25  **ARTÍCULO 38°. SEGUROS** — 142 palabras
+- `  60` p.26  **CAPÍTULO 8 REQUISITOS ADMINISTRATIVOS Y FORMALES** — 0 palabras
+- `  61` p.26  **ARTÍCULO 39°. DOCUMENTACIÓN ADMINISTRATIVA OBLIGATORIA** — 275 palabras
+- `  62` p.27  **ARTÍCULO 40°. REQUISITOS DE FORMA Y PRESENTACIÓN** — 84 palabras
+- `  63` p.27  **40.4 Formato de los documentos digitales:** — 185 palabras
+- `  64` p.28  **PROCESO DE LICITACIÓN** — 0 palabras
+- `  65` p.28  **CAPÍTULO 9 OBTENCIÓN DE BASES Y CALENDARIO** — 0 palabras
+- `  66` p.28  **ARTÍCULO 41°%. ADQUISICIÓN DE LAS BASES Y REGISTRO DE PARTICIPANTES** — 89 palabras
+- `  67` p.28  **ARTÍCULO 42°. CALENDARIO DEL PROCESO** — 31 palabras
+- `  68` p.28  **CAPÍTULO 10 CONSULTAS Y ACLARACIONES** — 0 palabras
+- `  69` p.28  **ARTÍCULO 43°. PERÍODO DE CONSULTAS** — 118 palabras
+- `  70` p.28  **43.3 Nomenclatura del archivo: CONSULTAS_ [EMPRESA] _AAAAMMDD.XLSX** — 119 palabras
+- `  71` p.29  **ARTÍCULO 44°. ACLARACIONES Y MODIFICACIONES DE OFICIO** — 65 palabras
+- `  72` p.29  **CAPÍTULO 11 INFORMES Y PRESENTACIONES PREPARATORIAS** — 0 palabras
+- `  73` p.29  **ARTÍCULO 45°. OBLIGATORIEDAD Y CARACTERÍSTICAS** — 151 palabras
+- `  74` p.29  **ARTÍCULO 46°. CONTENIDO DE LAS PRESENTACIONES PREPARATORIAS** — 35 palabras
+- `  75` p.29  **ARTÍCULO 47°. EFECTOS DE LAS OBSERVACIONES** — 68 palabras
+- `  76` p.30  **CAPÍTULO 12 RECEPCIÓN Y APERTURA DE OFERTAS** — 0 palabras
+- `  77` p.30  **ARTÍCULO 48°. PRESENTACIÓN DE OFERTAS** — 114 palabras
+- `  78` p.30  **ARTÍCULO 49°. SOBRE N° 1 ANTECEDENTES ADMINISTRATIVOS** — 0 palabras
+- `  79` p.30  **49.1 Carátula del sobre físico, en la que deberá leerse:** — 85 palabras
+- `  80` p.30  **ARTÍCULO 50°. SOBRE N° 2 OFERTA TÉCNICA** — 49 palabras
+- `  81` p.30  **50.3 Nomenciatura: SOBRE2_ [EMPRESA] OFERTA_TECNICA_AAAAMMDD.ZIP** — 0 palabras
+- `  82` p.30  **ARTÍCULO 51°. SOBRE N° 3 OFERTA ECONÓMICA** — 37 palabras
+- `  83` p.30  **51.3 Nomenclatura: SOBRE3_[EMPRESA]_OFERTA_ECONOMICA_AAAAMMDD.ZIP** — 31 palabras
+- `  84` p.31  **ARTÍCULO 52°. ACTO DE APERTURA** — 116 palabras
+- `  85` p.31  **ARTÍCULO 53°. CAUSALES DE INADMISIBILIDAD DE LA OFERTA** — 108 palabras
+- `  86` p.31  **Artículo 16°.** — 79 palabras
+- `  87` p.32  **EVALUACIÓN Y ADJUDICACIÓN** — 0 palabras
+- `  88` p.32  **CAPÍTULO 13 PROCESO DE EVALUACIÓN** — 0 palabras
+- `  89` p.32  **ARTÍCULO 54°. COMISIÓN EVALUADORA** — 36 palabras
+- `  90` p.32  **54.2 Son atribuciones de la Comisión:** — 89 palabras
+- `  91` p.32  **ARTÍCULO 55°. EVALUACIÓN ADMINISTRATIVA** — 83 palabras
+- `  92` p.32  **CAPÍTULO 14 EVALUACIÓN TÉCNICA** — 0 palabras
+- `  93` p.32  **ARTÍCULO 56°. ESCALA Y CRITERIOS DE ASIGNACIÓN DE PUNTAJE** — 271 palabras
+- `  94` p.33  **ARTÍCULO 57°. PONDERACIÓN POR ÍTEM Y PUNTAJE TÉCNICO** — 176 palabras
+- `  95` p.33  **ARTÍCULO 58°%. CONDICIONES DE EXCLUSIÓN EN LA EVALUACIÓN TÉCNICA** — 58 palabras
+- `  96` p.34  **CAPÍTULO 15 EVALUACIÓN ECONÓMICA** — 0 palabras
+- `  97` p.34  **ARTÍCULO 59°. APERTURA DE LAS OFERTAS ECONÓMICAS** — 30 palabras
+- `  98` p.34  **ARTÍCULO 60°. DETERMINACIÓN DEL INTERVALO DE CONFIANZA** — 32 palabras
+- `  99` p.34  **IC=[P-nS, P+n'S]** — 184 palabras
+- ` 100` p.34  **ARTÍCULO 61°. ASIGNACIÓN DEL PUNTAJE ECONÓMICO** — 111 palabras
+- ` 101` p.35  **CAPÍTULO 16 EVALUACIÓN FINAL Y ADJUDICACIÓN** — 0 palabras
+- ` 102` p.35  **ARTÍCULO 62°. PUNTAJE FINAL** — 11 palabras
+- ` 103` p.35  **PUNTAJE FINAL = (Presentaciones x 0,10) + (Técnica x 0,70) + (Económica x 0,20)** — 65 palabras
+- ` 104` p.35  **ARTÍCULO 63°. CRITERIOS DE ADJUDICACIÓN Y DESEMPATE** — 113 palabras
+- ` 105` p.35  **ARTÍCULO 64°. NOTIFICACIÓN Y PUBLICACIÓN DE LA ADJUDICACIÓN** — 57 palabras
+- ` 106` p.36  **CAPÍTULO 17 EVALUACIÓN ACADÉMICA** — 0 palabras
+- ` 107` p.36  **ARTÍCULO 65°. ESCALA DE CALIFICACIÓN ACADÉMICA** — 197 palabras
+- ` 108` p.36  **ARTÍCULO 66°. AJUSTE POR EXCELENCIA DEL PRIMER LUGAR** — 36 palabras
+- ` 109` p.36  **66.2 Condiciones copulativas para aplicar el ajuste:** — 64 palabras
+- ` 110` p.37  **CONTRATACIÓN Y EJECUCIÓN** — 0 palabras
+- ` 111` p.37  **CAPÍTULO 18 FORMALIZACIÓN DEL CONTRATO** — 0 palabras
+- ` 112` p.37  **ARTÍCULO 67°. DOCUMENTACIÓN PARA CONTRATAR** — 16 palabras
+- ` 113` p.37  **adjudicación:** — 132 palabras
+- ` 114` p.37  **ARTÍCULO 68°. PLAZO Y CONDICIONES DE FIRMA** — 77 palabras
+- ` 115` p.38  **ARTÍCULO 69°. CONTENIDO MÍNIMO DEL CONTRATO** — 118 palabras
+- ` 116` p.38  **CAPÍTULO 19 GESTIÓN CONTRACTUAL** — 0 palabras
+- ` 117` p.38  **ARTÍCULO 70°. ADMINISTRACIÓN DEL CONTRATO** — 85 palabras
+- ` 118` p.38  **ARTÍCULO 71°%. GOBIERNO DEL PROYECTO** — 194 palabras
+- ` 119` p.39  **ARTÍCULO 72°. MODIFICACIONES CONTRACTUALES Y CONTROL DE CAMBIOS** — 107 palabras
+- ` 120` p.39  **ARTÍCULO 73°. SUBCONTRATACIÓN** — 105 palabras
+- ` 121` p.39  **ARTÍCULO 74°. OBLIGACIONES GENERALES** — 112 palabras
+- ` 122` p.40  **ARTÍCULO 75°. OBLIGACIONES LABORALES Y PREVISIONALES** — 70 palabras
+- ` 123` p.40  **ARTÍCULO 76°. EQUIPO CLAVE, CONTINUIDAD Y REEMPLAZOS** — 120 palabras
+- ` 124` p.40  **ARTÍCULO 77°. TRANSFERENCIA TECNOLÓGICA Y REVERSIBILIDAD** — 191 palabras
+- ` 125` p.41  **CAPÍTULO 21 NIVELES DE SERVICIO Y RÉGIMEN DE PENALIDADES** — 0 palabras
+- ` 126` p.41  **ARTÍCULO 78°. NIVELES DE SERVICIO** — 0 palabras
+- ` 127` p.41  **78.1 Clasificación de severidad de los incidentes:** — 97 palabras
+- ` 128` p.41  **78.2 Niveles de servicio exigidos durante la fase de Operación:** — 107 palabras
+- ` 129` p.41  **78.3 Indicadores adicionales exigidos:** — 152 palabras
+- ` 130` p.41  **ARTÍCULO 79°. MEDICIÓN, REPORTE Y VERIFICACIÓN** — 114 palabras
+- ` 131` p.42  **ARTÍCULO 80°. MULTAS Y PENALIDADES** — 375 palabras
+- ` 132` p.43  **CAPÍTULO 22 TÉRMINO DEL CONTRATO** — 0 palabras
+- ` 133` p.43  **ARTÍCULO 81°. CAUSALES DE TÉRMINO** — 94 palabras
+- ` 134` p.43  **ARTÍCULO 82°. PROCEDIMIENTO DE TÉRMINO Y REVERSIBILIDAD** — 107 palabras
+- ` 135` p.44  **DISPOSICIONES ESPECIALES** — 8 palabras
+- ` 136` p.44  **ARTÍCULO 83°. CONFIDENCIALIDAD** — 157 palabras
+- ` 137` p.44  **ARTÍCULO 84°. PROPIEDAD INTELECTUAL, CÓDIGO FUENTE Y CUSTODIA** — 255 palabras
+- ` 138` p.45  **ARTÍCULO 85°%. PROTECCIÓN DE DATOS PERSONALES** — 209 palabras
+- ` 139` p.45  **ARTÍCULO 86°. USO DE INTELIGENCIA ARTIFICIAL EN LA SOLUCIÓN** — 147 palabras
+- ` 140` p.46  **CAPÍTULO 24 SOLUCIÓN DE CONTROVERSIAS** — 0 palabras
+- ` 141` p.46  **ARTÍCULO 87°. MECANISMOS DE RESOLUCIÓN** — 88 palabras
+- ` 142` p.46  **ARTÍCULO 88°. DOMICILIO Y JURISDICCIÓN** — 23 palabras
+- ` 143` p.46  **CAPÍTULO 25 GESTIÓN DEL CAMBIO, CAPACITACIÓN Y DOCUMENTACIÓN** — 0 palabras
+- ` 144` p.46  **ARTÍCULO 89°. GESTIÓN DEL CAMBIO ORGANIZACIONAL** — 131 palabras
+- ` 145` p.46  **ARTÍCULO 90°. CAPACITACIÓN** — 132 palabras
+- ` 146` p.47  **ARTÍCULO 91°. DOCUMENTACIÓN EXIGIBLE** — 210 palabras
+- ` 147` p.47  **CAPÍTULO 26 DISPOSICIONES FINALES** — 0 palabras
+- ` 148` p.47  **ARTÍCULO 92°. RELACIÓN CON LAS BASES TÉCNICAS DEL CASO** — 127 palabras
+- ` 149` p.47  **ARTÍCULO 93°. CARÁCTER ACADÉMICO DEL PROCESO** — 103 palabras
+- ` 150` p.48  **ARTÍCULO 94°. VIGENCIA Y ACEPTACIÓN** — 53 palabras
+- ` 151` p.49  **ANEXOS Y FORMULARIOS** — 0 palabras
+- ` 152` p.49  **CAPÍTULO A FORMULARIOS ADMINISTRATIVOS** — 101 palabras
+- ` 153` p.50  **FORMULARIO A-1 IDENTIFICACIÓN DEL PROPONENTE** — 163 palabras
+- ` 154` p.51  **bajo juramento que su representada:** — 122 palabras
+- ` 155` p.52  **FORMULARIO A-3 DECLARACIÓN DE ACEPTACIÓN ÍNTEGRA DE LAS BASES** — 126 palabras
+- ` 156` p.52  **|) [o] -** — 2 palabras
+- ` 157` p.53  **FORMULARIO A-4 DECLARACIÓN DE AUSENCIA DE CONFLICTOS DE INTERÉS** — 88 palabras
+- ` 158` p.53  **[No] 1]] -** — 0 palabras
+- ` 159` p.53  **Firma: racer ene Fecha:** — 0 palabras
+- ` 160` p.54  **FORMULARIO A-5 PRESENTACIÓN E ÍNDICE DE ANTECEDENTES** — 146 palabras
+- ` 161` p.55  **FORMULARIO A-6 DECLARACIÓN DE USO DE INTELIGENCIA ARTIFICIAL GENERATIVA** — 97 palabras
+- ` 162` p.55  **| [o]1]]** — 2 palabras
+- ` 163` p.56  **CAPÍTULO B FORMULARIOS TÉCNICOS** — 332 palabras
+- ` 164` p.58  **FORMULARIO T-7** — 0 palabras
+- ` 165` p.58  **CONTENIDO Y ESTRUCTURA DE LA PROPUESTA TÉCNICA** — 1661 palabras
+- ` 166` p.63  **FORMULARIO T-13** — 50 palabras
+- ` 167` p.64  **FORMULARIO T-14** — 0 palabras
+- ` 168` p.64  **PLAN DE TRABAJO, EDT Y CARTA GANTT** — 43 palabras
+- ` 169` p.64  **FORMULARIO T-15** — 0 palabras
+- ` 170` p.64  **NIVELACIÓN DE RECURSOS** — 820 palabras
+- ` 171` p.67  **FORMULARIO T-21** — 0 palabras
+- ` 172` p.67  **PONDERACIÓN DE LA EVALUACIÓN TÉCNICA** — 436 palabras
+- ` 173` p.69  **FORMULARIO T-22** — 0 palabras
+- ` 174` p.69  **CONTENIDO DE LOS INFORMES Y PRESENTACIONES PREPARATORIAS** — 227 palabras
+- ` 175` p.69  **Artículo 16°.** — 328 palabras
+- ` 176` p.71  **CAPÍTULO C FORMULARIOS ECONÓMICOS** — 693 palabras
+- ` 177` p.73  **[EMPRESA]_OfertaEconomica_1_[FECHA].pdf** — 0 palabras
+- ` 178` p.73  **[EMPRESA] AnalisisFinanciero_2_[FECHA].pdf** — 0 palabras
+- ` 179` p.73  **[EMPRESA]_ModeloFinanciero_3_[FECHA].xIsx** — 225 palabras
+- ` 180` p.75  **FORMULARIO E-25** — 0 palabras
+- ` 181` p.75  **HITOS DE PAGO** — 799 palabras
+
+## FEP02 — `FEP02_26_Bases_Tecnicas_Transversales_TFEP_01_2026.md`
+
+- ` 182` p.1   **FORMULACIÓN DE PROYECTOS** — 14 palabras
+- ` 183` p.2   **Bases Técnicas Transversales** — 593 palabras
+- ` 184` p.4   **DISPOSICIONES DEL DOCUMENTO** — 0 palabras
+- ` 185` p.4   **CAPÍTULO 1 OBJETO, ÁMBITO Y RÉGIMEN DE CUMPLIMIENTO** — 0 palabras
+- ` 186` p.4   **1.1 Objeto** — 122 palabras
+- ` 187` p.4   **1.2 Ámbito de aplicación** — 137 palabras
+- ` 188` p.4   **1.3 Relación con los demás documentos del proceso** — 203 palabras
+- ` 189` p.5   **1.4 Régimen de cumplimiento** — 188 palabras
+- ` 190` p.5   **1.5 Cómo debe responderse este documento** — 117 palabras
+- ` 191` p.5   **1.6 Neutralidad tecnológica y criterio de vigencia** — 163 palabras
+- ` 192` p.6   **1.7 Interpretación de los umbrales** — 87 palabras
+- ` 193` p.7   **ARQUITECTURA DE LA SOLUCIÓN** — 7 palabras
+- ` 194` p.7   **2.1 Modelo multicapa exigido** — 321 palabras
+- ` 195` p.7   **2.2 Requisitos de arquitectura** — 509 palabras
+- ` 196` p.8   **2.3 Estilo arquitectónico y su justificación** — 97 palabras
+- ` 197` p.9   **CAPÍTULO 3 MODELO HÍBRIDO: NUBE Y ON-PREMISE** — 0 palabras
+- ` 198` p.9   **3.1 Distribución de cargas** — 168 palabras
+- ` 199` p.9   **3.2 Requisitos del componente en nube** — 340 palabras
+- ` 200` p.10  **3.3 Requisitos del componente on-premise y del borde operacional** — 332 palabras
+- ` 201` p.10  **3.4 Conectividad y redes** — 214 palabras
+- ` 202` p.11  **CAPÍTULO 4 AMBIENTES, ENTREGA CONTINUA Y GESTIÓN DE LA CONFIGURACIÓN** — 0 palabras
+- ` 203` p.11  **4.1 Ambientes obligatorios** — 130 palabras
+- ` 204` p.11  **4.2 Requisitos de entrega continua** — 459 palabras
+- ` 205` p.12  **CAPÍTULO 5 DATOS, INTEGRACIÓN E INTEROPERABILIDAD** — 0 palabras
+- ` 206` p.12  **5.1 Modelo y gestión de datos** — 374 palabras
+- ` 207` p.13  **5.2 Migración de datos** — 169 palabras
+- ` 208` p.13  **5.3 Integración e interoperabilidad** — 317 palabras
+- ` 209` p.14  **5.4 Analítica e inteligencia de negocio** — 190 palabras
+- ` 210` p.15  **INFRAESTRUCTURA** — 0 palabras
+- ` 211` p.15  **CAPÍTULO 6 SITE PRINCIPAL ON-PREMISE** — 0 palabras
+- ` 212` p.15  **6.1 Alcance y dimensionamiento proporcional** — 240 palabras
+- ` 213` p.15  **6.2 Requisitos de obra y habilitación** — 202 palabras
+- ` 214` p.16  **6.3 Energía** — 190 palabras
+- ` 215` p.16  **6.4 Climatización y condiciones ambientales** — 104 palabras
+- ` 216` p.16  **6.5 Detección y extinción de incendios** — 130 palabras
+- ` 217` p.17  **6.6 Seguridad física y control de acceso** — 231 palabras
+- ` 218` p.17  **6.7 Respaldo y custodia de medios** — 117 palabras
+- ` 219` p.17  **6.8 Espacio de operación del personal** — 128 palabras
+- ` 220` p.18  **6.9 Rutas de comunicaciones** — 94 palabras
+- ` 221` p.18  **CAPÍTULO 7 SITE SECUNDARIO Y RECUPERACIÓN ANTE DESASTRES** — 0 palabras
+- ` 222` p.18  **7.1 Configuración exigida** — 318 palabras
+- ` 223` p.18  **7.2 Niveles de servicio de infraestructura** — 131 palabras
+- ` 224` p.19  **7.3 Respaldos** — 182 palabras
+- ` 225` p.19  **CAPÍTULO 8 HARDWARE, PUESTOS DE TRABAJO Y EQUIPAMIENTO DE TERRENO** — 0 palabras
+- ` 226` p.19  **8.1 Infraestructura de cómputo, almacenamiento y red** — 193 palabras
+- ` 227` p.20  **8.2 Puestos de trabajo de operación y de back office** — 105 palabras
+- ` 228` p.20  **8.3 Equipamiento de terreno y dispositivos operacionales** — 216 palabras
+- ` 229` p.20  **8.4 Garantías, repuestos y niveles de reemplazo** — 133 palabras
+- ` 230` p.21  **8.5 Ciclo de vida y disposición final** — 127 palabras
+- ` 231` p.22  **REQUISITOS NO FUNCIONALES** — 0 palabras
+- ` 232` p.22  **CAPÍTULO 9 DESEMPEÑO, CAPACIDAD Y ESCALABILIDAD** — 0 palabras
+- ` 233` p.22  **9.1 Umbrales de desempeño** — 171 palabras
+- ` 234` p.22  **9.2 Requisitos de capacidad y escalabilidad** — 360 palabras
+- ` 235` p.23  **CAPÍTULO 10 DISPONIBILIDAD, CONTINUIDAD Y RESILIENCIA** — 313 palabras
+- ` 236` p.24  **CAPÍTULO 11 SEGURIDAD DE LA INFORMACIÓN** — 0 palabras
+- ` 237` p.24  **11.1 Gobierno y modelo de seguridad** — 218 palabras
+- ` 238` p.24  **11.2 Protección de la capa expuesta** — 277 palabras
+- ` 239` p.25  **11.3 Detección, respuesta y evidencia** — 281 palabras
+- ` 240` p.25  **11.4 Seguridad del ciclo de desarrollo y de la cadena de suministro** — 213 palabras
+- ` 241` p.26  **11.5 Certificaciones y estándares de seguridad exigidos** — 134 palabras
+- ` 242` p.26  **CAPÍTULO 12 IDENTIDAD, ACCESO Y GESTIÓN DE SESIONES** — 453 palabras
+- ` 243` p.27  **CAPÍTULO 13 USABILIDAD, ACCESIBILIDAD Y EXPERIENCIA DE USUARIO** — 392 palabras
+- ` 244` p.28  **CAPÍTULO 14 OBSERVABILIDAD Y GESTIÓN DEL SERVICIO** — 296 palabras
+- ` 245` p.28  **15.1 Sostenibilidad y eficiencia energética** — 186 palabras
+- ` 246` p.29  **15.2 Certificaciones institucionales exigidas** — 137 palabras
+- ` 247` p.29  **15.3 Certificaciones del personal** — 236 palabras
+- ` 248` p.30  **CAPACIDADES TRANSVERSALES DE LA SOLUCIÓN** — 43 palabras
+- ` 249` p.30  **CAPÍTULO 16 MÓDULOS TRANSVERSALES OBLIGATORIOS** — 0 palabras
+- ` 250` p.30  **16.1 Administración y parametrización** — 169 palabras
+- ` 251` p.30  **16.2 Auditoría y trazabilidad** — 163 palabras
+- ` 252` p.31  **16.3 Flujos de trabajo y motor de reglas** — 120 palabras
+- ` 253` p.31  **16.4 Gestión documental y firma electrónica** — 162 palabras
+- ` 254` p.31  **16.5 Notificaciones y mensajería multicanal** — 199 palabras
+- ` 255` p.32  **16.6 Búsqueda, reportería y exportación** — 123 palabras
+- ` 256` p.32  **16.7 Portal público y canales de autoatención** — 129 palabras
+- ` 257` p.32  **CAPÍTULO 17 CANALES DIGITALES Y MOVILIDAD** — 266 palabras
+- ` 258` p.33  **CAPÍTULO 18 INTELIGENCIA ARTIFICIAL Y AUTOMATIZACIÓN** — 409 palabras
+- ` 259` p.34  **PROYECTO, IMPLANTACIÓN Y OPERACIÓN** — 7 palabras
+- ` 260` p.34  **19.1 Oficina de gestión y metodología** — 183 palabras
+- ` 261` p.34  **19.2 Roles mínimos del equipo** — 250 palabras
+- ` 262` p.35  **19.3 Control y reporte del proyecto** — 171 palabras
+- ` 263` p.35  **20.1 Estrategia de pruebas** — 258 palabras
+- ` 264` p.36  **20.2 Requisitos de implantación** — 247 palabras
+- ` 265` p.36  **CAPÍTULO 21 MODELO DE OPERACIÓN, MANTENCIÓN Y SOPORTE** — 0 palabras
+- ` 266` p.36  **21.1 Estructura operativa** — 113 palabras
+- ` 267` p.37  **21.2 Centro de atención telefónica** — 359 palabras
+- ` 268` p.37  **21.3 Mesa de ayuda por niveles** — 382 palabras
+- ` 269` p.38  **21.4 Mantención** — 289 palabras
+- ` 270` p.39  **CAPÍTULO 22 CAPACITACIÓN Y TRANSFERENCIA DE CONOCIMIENTO** — 284 palabras
+- ` 271` p.40  **EXIGENCIAS DE PRESENTACIÓN DE LA PROPUESTA** — 37 palabras
+- ` 272` p.40  **CAPÍTULO 23 INFORMACIÓN CORPORATIVA Y PRESENCIA DIGITAL** — 0 palabras
+- ` 273` p.40  **23.1 Página web corporativa** — 323 palabras
+- ` 274` p.40  **23.2 Verificación y validación** — 64 palabras
+- ` 275` p.41  **23.3 Declaración de veracidad** — 76 palabras
+- ` 276` p.41  **CAPÍTULO 24 VIDEO DE PRESENTACIÓN DE LA PROPUESTA** — 0 palabras
+- ` 277` p.41  **24.1 Especificaciones técnicas** — 137 palabras
+- ` 278` p.41  **24.2 Estructura y contenido** — 137 palabras
+- ` 279` p.42  **24.3 Participación del equipo** — 199 palabras
+- ` 280` p.42  **24.4 Evaluación, penalizaciones y descalificación** — 126 palabras
+- ` 281` p.42  **24.5 Entrega, derechos y autorizaciones** — 111 palabras
+- ` 282` p.43  **CAPÍTULO 25 PROTOTIPO INTERACTIVO DE INTERFAZ Y DISEÑO UX/UI** — 0 palabras
+- ` 283` p.43  **25.1 Objetivo y momento de entrega** — 106 palabras
+- ` 284` p.43  **25.2 Alcance mínimo** — 292 palabras
+- ` 285` p.44  **25.3 Principios de diseño exigidos** — 169 palabras
+- ` 286` p.44  **25.4 Componentes de interfaz obligatorios** — 163 palabras
+- ` 287` p.44  **25.5 Entrega y nivel de interactividad** — 167 palabras
+- ` 288` p.45  **25.6 Restricciones y penalizaciones** — 88 palabras
+- ` 289` p.45  **25.7 Propiedad intelectual del diseño** — 16 palabras
+- ` 290` p.45  **Artículo 84° de las Bases Administrativas.** — 48 palabras
+- ` 291` p.45  **CAPÍTULO 26 INNOVACIONES** — 347 palabras
+- ` 292` p.47  **CAPÍTULO A ÍNDICE DE REQUISITOS TRANSVERSALES** — 636 palabras
+- ` 293` p.48  **CAPÍTULO C CHECKLIST DE ENTREGABLES DE LA OFERTA TÉCNICA** — 618 palabras
+- ` 294` p.50  **CAPÍTULO D GLOSARIO Y DEFINICIONES** — 734 palabras
+
+## FEP03 — `FEP03_10_26_Caso_10_Transporte_de_Carga_Bases_Tecnicas_del_Caso.md`
+
+- ` 295` p.1   **FORMULACIÓN DE PROYECTOS** — 0 palabras
+- ` 296` p.1   **BASES TÉCNICAS** — 11 palabras
+- ` 297` p.2   **Bases Técnicas Transporte de Carga** — 881 palabras
+- ` 298` p.5   **EL MANDANTE Y EL ENCARGO** — 0 palabras
+- ` 299` p.5   **CAPÍTULO 1 CÓMO LLEGAMOS A ESTA LICITACIÓN** — 684 palabras
+- ` 300` p.6   **CAPÍTULO 2 LA COMPAÑÍA** — 0 palabras
+- ` 301` p.6   **2.1 Identificación** — 256 palabras
+- ` 302` p.7   **2.2 La flota** — 203 palabras
+- ` 303` p.7   **2.3 Cifras de la operación** — 207 palabras
+- ` 304` p.8   **2.4 Las personas** — 305 palabras
+- ` 305` p.9   **CAPÍTULO 3 EL TERRITORIO Y SUS NODOS** — 433 palabras
+- ` 306` p.10  **LA OPERACIÓN TAL COMO ES HOY** — 94 palabras
+- ` 307` p.10  **4.1 La tarifa y el contrato** — 125 palabras
+- ` 308` p.10  **4.2 La programación y la asignación del viaje** — 145 palabras
+- ` 309` p.10  **4.3 La jornada del conductor, y por qué no se conoce** — 203 palabras
+- ` 310` p.11  **4.4 Las habilitaciones del conductor y del equipo** — 145 palabras
+- ` 311` p.11  **4.5 La carga y el documento de transporte** — 150 palabras
+- ` 312` p.11  **4.6 La ruta, la posición y la cobertura** — 177 palabras
+- ` 313` p.12  **4.7 La espera en los puntos de carga y descarga** — 122 palabras
+- ` 314` p.12  **4.8 La descarga y la conformidad** — 96 palabras
+- ` 315` p.12  **4.9 El combustible, los peajes y los neumáticos** — 156 palabras
+- ` 316` p.12  **4.10 El mantenimiento** — 136 palabras
+- ` 317` p.13  **4.11 La liquidación al transportista subcontratado** — 100 palabras
+- ` 318` p.13  **4.12 La carga peligrosa y el cruce fronterizo** — 138 palabras
+- ` 319` p.13  **CAPÍTULO 5 LOS SISTEMAS QUE EXISTEN HOY** — 562 palabras
+- ` 320` p.14  **CAPÍTULO 6 CONECTIVIDAD, SEGURIDAD Y CONDICIONES DEL SITIO** — 527 palabras
+- ` 321` p.15  **CAPÍTULO 7 LO QUE DUELE: INDICADORES DEL PROBLEMA** — 37 palabras
+- ` 322` p.15  **7.1 Seguridad, jornada y habilitaciones** — 168 palabras
+- ` 323` p.16  **7.2 El viaje, la posición y el cumplimiento al cliente** — 193 palabras
+- ` 324` p.16  **7.3 Costo, tarifa y liquidación** — 192 palabras
+- ` 325` p.17  **7.4 Mantenimiento, equipo y tecnología** — 260 palabras
+- ` 326` p.18  **LO QUE DICEN QUIENES OPERAN** — 0 palabras
+- ` 327` p.18  **CAPÍTULO 8 ENTREVISTAS DE LEVANTAMIENTO** — 2747 palabras
+- ` 328` p.23  **LO QUE EL MANDANTE ESPERA** — 0 palabras
+- ` 329` p.23  **CAPÍTULO 9 EXPECTATIVAS DE NEGOCIO** — 37 palabras
+- ` 330` p.23  **9.1 Que ningún camión salga si no puede salir** — 92 palabras
+- ` 331` p.23  **9.2 Que la jornada del conductor sea un dato y no una declaración** — 72 palabras
+- ` 332` p.23  **9.3 Que las vigencias no dependan de que alguien se acuerde** — 35 palabras
+- ` 333` p.23  **9.4 Que se sepa qué viaje ocurrió, y no sólo cuál se encargó** — 55 palabras
+- ` 334` p.23  **9.5 Que el tiempo de espera se pueda cobrar** — 42 palabras
+- ` 335` p.24  **9.6 Que el camión vuelva cargado** — 41 palabras
+- ` 336` p.24  **9.7 Que se conozca el costo real de cada ruta y de cada contrato** — 97 palabras
+- ` 337` p.24  **9.9 Que el cliente vea su carga** — 37 palabras
+- ` 338` p.24  **9.10 Que el documento de transporte no se redigite** — 37 palabras
+- ` 339` p.24  **9.11 Que las emisiones se midan con método** — 30 palabras
+- ` 340` p.24  **CAPÍTULO 10 RESTRICCIONES NO NEGOCIABLES** — 491 palabras
+- ` 341` p.25  **CAPÍTULO 11 EXCLUSIONES EXPLÍCITAS** — 303 palabras
+- ` 342` p.26  **CAPÍTULO 12 MARCO NORMATIVO Y COMPROMISOS CON TERCEROS** — 689 palabras
+- ` 343` p.27  **CAPÍTULO 13 HORIZONTE, PRIORIDADES Y ETAPAS** — 0 palabras
+- ` 344` p.27  **13.1 Lo que el comité quiere primero** — 308 palabras
+- ` 345` p.28  **13.2 Hitos externos que condicionan el proyecto** — 381 palabras
+- ` 346` p.28  **13.3 Estrategia de puesta en producción esperada** — 413 palabras
+- ` 347` p.30  **ANTECEDENTES PARA EL DIMENSIONAMIENTO** — 0 palabras
+- ` 348` p.30  **CAPÍTULO 14 VOLUMETRÍA: LO QUE SE ENTREGA Y LO QUE SE DEBE ESTIMAR** — 88 palabras
+- ` 349` p.30  **14.1 Volumetría operacional entregada por el CLIENTE** — 310 palabras
+- ` 350` p.31  **14.2 Volumetría de sistema que el proponente debe estimar** — 488 palabras
+- ` 351` p.32  **CAPÍTULO 15 PARÁMETROS DEL CASO PARA LOS REQUISITOS «SEGÚN CASO»** — 2023 palabras
+- ` 352` p.35  **CAPÍTULO 16 LO QUE ESTE DOCUMENTO DELIBERADAMENTE NO RESUELVE** — 56 palabras
+- ` 353` p.35  **16.1 Decisiones de diseño pendientes** — 1361 palabras
+- ` 354` p.37  **16.2 Materias que el proponente deberá investigar** — 135 palabras
+- ` 355` p.37  **Reglamento de transporte de cargas peligrosas: documentación, señalización, equipamiento,** — 273 palabras
+- ` 356` p.39  **LO QUE DEBE PRODUCIR EL PROPONENTE** — 0 palabras
+- ` 357` p.39  **CAPÍTULO 17 EL TRABAJO DE TRADUCCIÓN EXIGIDO** — 28 palabras
+- ` 358` p.39  **17.1 De la necesidad al requerimiento** — 431 palabras
+- ` 359` p.40  **17.2 Distinguir lo funcional de lo no funcional** — 269 palabras
+- ` 360` p.40  **17.3 Definir el alcance y su reparto entre etapas** — 129 palabras
+- ` 361` p.40  **17.4 Diseñar la arquitectura** — 388 palabras
+- ` 362` p.41  **17.5 Planificar de forma realista** — 305 palabras
+- ` 363` p.42  **17.6 Proponer una estrategia de puesta en producción y de operación** — 159 palabras
+- ` 364` p.42  **Artículo 17.3 de las Bases Administrativas.** — 187 palabras
+- ` 365` p.42  **CAPÍTULO 18 CRITERIOS DE ACEPTACIÓN DEL CASO** — 1013 palabras
+- ` 366` p.44  **CAPÍTULO 19 CÓMO SE EVALUARÁ ESTE CASO** — 752 palabras
+- ` 367` p.46  **ANEXOS DEL CASO** — 540 palabras
+- ` 368` p.47  **CAPÍTULO B CALENDARIO Y PERFIL OPERACIONAL DE REFERENCIA** — 602 palabras
+- ` 369` p.48  **CAPÍTULO C GLOSARIO DE LA INDUSTRIA** — 690 palabras
+
+## Indicaciones — `Indicaciones_Trabajo_de_Investigacion_2026.txt`
+
+- ` 370` p.1   **1. Objetivo y alcance del trabajo** — 114 palabras
+- ` 371` p.1   **2. Entrega, formato y exposición** — 151 palabras
+- ` 372` p.1   **3. Cuestionario de evaluación de conocimientos** — 128 palabras
+- ` 373` p.1   **4. Aporte propio del grupo** — 246 palabras
+- ` 374` p.1   **5. Precios y fuentes** — 220 palabras
+- ` 375` p.1   **6. Declaración de uso de inteligencia artificial** — 580 palabras
+- ` 376` p.1   **7. Asignación de temas** — 188 palabras
+- ` 377` p.1   **8. Fichas de los temas** — 5245 palabras

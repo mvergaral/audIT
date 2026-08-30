@@ -1,0 +1,20 @@
+# Los PDF originales no se versionan: son 88 MB de escaneo que no cambian nunca.
+# Se obtienen del material del curso y se dejan en la raíz para poder reejecutar
+# el pipeline de OCR. Ver README.
+*.pdf
+
+# Directorio temporal del OCR (imágenes de página a 300 dpi).
+.ocr_work/
+
+# Índice binario de búsqueda: lo reconstruye tools/buscar.py en 0,16 s.
+texto/secciones.db
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Editor y sistema
+.vscode/
+.idea/
+*.swp
+.DS_Store
