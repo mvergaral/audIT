@@ -1,5 +1,6 @@
 
-<!-- ===== página 1 / 49 ===== -->
+<!-- ===== página ? / 49 · PDF 1 ===== -->
+
 
 ### FORMULACIÓN DE PROYECTOS
 
@@ -12,7 +13,8 @@ DE LA PROPUESTA
 Versión 1.0
 
 Fecha Documento: 18-08-2026
-<!-- ===== página 2 / 49 ===== -->
+<!-- ===== página 1/49 · PDF 2 ===== -->
+
 
 ### Bases Técnicas Transporte de Carga
 
@@ -31,7 +33,8 @@ Transportes Curimón S.A. — cuando la responsabilidad y el control no coincide
 | Versión | 1.0 — agosto de 2026 |
 
 > Este documento no es una especificación de requerimientos. Es la descripción de una operación real, con sus datos, sus dolores, sus contradicciones internas y sus vacíos. Identificar qué es funcional y qué no lo es, completar lo que falta con supuestos declarados y con reglas de negocio propias de la industria, investigar aquello que el documento no explica, y traducir todo ello en un alcance, una arquitectura, un plan y una estrategia de puesta en producción, es exactamente el trabajo que se está licitando y lo que será evaluado.
-<!-- ===== página 3 / 49 ===== -->
+<!-- ===== página 2/49 · PDF 3 ===== -->
+
 
 CONTENIDO
 
@@ -54,10 +57,12 @@ El Título III recoge las voces de quienes operan y también las de tres persona
 El Título IV expresa lo que el mandante espera, deliberadamente en lenguaje de negocio y no de requerimientos. El Título V entrega los datos duros que la compañía conoce, señala cuáles debe estimar el proponente, fija los parámetros de los requisitos que las Bases Técnicas Transversales dejaron abiertos al caso, y enumera veintiséis decisiones que el cliente no ha tomado.
 
 El Título VI describe el trabajo exigido y los criterios con que se juzgará. Conviene leerlo primero y volver a él al final.
-<!-- ===== página 4 / 49 ===== -->
+<!-- ===== página 3/49 · PDF 4 ===== -->
+
 
 > Tres particularidades de este caso. La primera es que la responsabilidad y el control no coinciden. El 60 % de los camiones no son de la compañía y las 258 personas que los conducen no son sus trabajadores, pero la compañía responde ante el cliente por la carga, ante la autoridad por las condiciones del viaje que despacha y ante su seguro por el siniestro. Todo lo que dependa de esos terceros deberá conseguirse por contrato, por incentivo o por diseño, nunca por instrucción. La segunda es que el dato más importante está fuera de la empresa. El accidente que originó esta licitación ocurrió porque un conductor había manejado antes para otro cliente, algo que la compañía no tenía forma de saber. El cliente mayor exige, para 2029, acreditar la jornada de cada viaje incluidos los camiones subcontratados. Ése es el problema central y no tiene una solución evidente. La tercera es que el cronograma no lo decide el proveedor: lo decide la física de la operación. Todo equipamiento a bordo sólo puede instalarse cuando el camión pasa por un terminal, y un camión pasa cada seis días en promedio, con un 22 % de la flota subcontratada que aparece menos de una vez al mes. Durante buena parte del proyecto convivirán camiones equipados y camiones sin equipar.
-<!-- ===== página 5 / 49 ===== -->
+<!-- ===== página 4/49 · PDF 5 ===== -->
+
 
 ### EL MANDANTE Y EL ENCARGO
 
@@ -88,7 +93,8 @@ Gabriela Ossandón Prieto, que asumió como gerenta de administración y finanza
 El resultado fue que tres de los ocho contratos principales —que en conjunto son el treinta y uno por ciento de los ingresos — se estaban sirviendo por debajo del costo. Uno de ellos con un margen de menos catorce por ciento, sostenido durante cuatro años.
 
 «No es que alguien se haya equivocado», explicó en el mismo directorio. «Es que las tarifas se negociaron el 2021 sobre una estructura de costos que ya no existe, y como repartimos los costos por ingreso, las rutas buenas venían pagando las malas. Nadie podía verlo porque el dato para verlo nunca se juntó.»
-<!-- ===== página 6 / 49 ===== -->
+<!-- ===== página 5/49 · PDF 6 ===== -->
+
 
 La semana siguiente, la exportadora que representa el diecinueve por ciento de los ingresos comunicó por escrito sus condiciones para la renovación de 2029. Son cuatro: documento electrónico de transporte integrado de extremo a extremo; posición de la carga disponible para el cliente en tiempo real; reporte verificado de emisiones por tonelada-kilómetro; y acreditación del cumplimiento de la jornada del conductor en cada viaje, incluidos los camiones subcontratados.
 
@@ -110,7 +116,8 @@ El directorio aprobó licitar el proyecto. En el acta quedó consignada una adve
 | Inicio de operaciones | 1989. Incorporación de transportistas subcontratados a partir de 2004; hoy son la mayoría de la capacidad. |
 | Ingresos anuales | $ 78.000 millones. |
 | Propiedad | Sociedad anónima cerrada. 78 % de la familia fundadora en segunda generación; 22 % de un fondo de inversión incorporado en 2019. |
-<!-- ===== página 7 / 49 ===== -->
+<!-- ===== página 6/49 · PDF 7 ===== -->
+
 
 > El dato que define este caso está en la tabla anterior y conviene subrayarlo: el 60 % de la capacidad de transporte de esta compañía no le pertenece, y las personas que conducen esos camiones no son sus trabajadores. La compañía responde ante el cliente por la carga, responde ante la autoridad por las condiciones del viaje que despacha, y responde ante su seguro por el siniestro; pero no manda sobre el equipo ni sobre la persona, En este caso la responsabilidad y el control no coinciden, y esa brecha es el problema.
 
@@ -141,7 +148,8 @@ El directorio aprobó licitar el proyecto. En el acta quedó consignada una adve
 | Cruces fronterizos al año por Los Libertadores | = 1.900 |
 | Terminales | 5: San Bernardo, Antofagasta, Talca, Los Ángeles y Puerto Montt |
 | Estructura de costo | Pago a transportistas subcontratados 38 %, combustible de flota propia 14 %, conductores propios 12 %, administración y otros 11 %, mantenimiento 5 %, neumáticos 4 %, peajes 4 %, seguros 3 % |
-<!-- ===== página 8 / 49 ===== -->
+<!-- ===== página 7/49 · PDF 8 ===== -->
+
 
 | Indicador | Valor |
 | --- | --- |
@@ -166,7 +174,8 @@ El directorio aprobó licitar el proyecto. En el acta quedó consignada una adve
 | Conductores de transportistas subcontratados | 258 personas | No son trabajadores de la compañía. Conducen bajo su programación y, en muchos casos, también para otros clientes. |
 
 > Los 258 conductores de transportistas subcontratados son el punto ciego de toda la operación. La compañía les asigna viajes, depende de ellos para cumplir con sus clientes y responde por lo que ocurra durante esos viajes, pero no los contrata, no los remunera, no los capacita por obligación laboral y no conoce lo que hacen cuando no están conduciendo para ella. El accidente del 14 de febrero ocurrió exactamente en ese punto ciego.
-<!-- ===== página 9 / 49 ===== -->
+<!-- ===== página 8/49 · PDF 9 ===== -->
+
 
 ### CAPÍTULO 3 EL TERRITORIO Y SUS NODOS
 
@@ -184,7 +193,8 @@ Esta compañía no tiene un recinto: tiene una red. Su operación ocurre a lo la
 | Paso fronterizo Los Libertadores | Cruce hacia Mendoza, con control aduanero y migratorio de dos países. | Cierra por nieve entre junio y septiembre, en episodios impredecibles que han llegado a 12 días continuos. |
 | Talleres en ruta | Mantención correctiva subcontratada cuando un camión falla lejos de un terminal. | Proveedores externos cuya intervención hoy no queda registrada en la hoja de vida del equipo. |
 | Estaciones de servicio de la red | Abastecimiento de combustible con tarjeta fuera de San Bernardo. | El consumo se conoce por la liquidación mensual de la red, no en el momento de la carga. |
-<!-- ===== página 10 / 49 ===== -->
+<!-- ===== página 9/49 · PDF 10 ===== -->
+
 
 ### LA OPERACIÓN TAL COMO ES HOY
 
@@ -217,7 +227,8 @@ La decisión sobre qué hará el camión después de descargar es la más import
 La normativa laboral chilena somete a los conductores de carga a un régimen especial: límites a las horas de conducción continua, descansos mínimos obligatorios y un tope de horas mensuales. No es una recomendación: es una obligación cuyo cumplimiento la empresa debe poder acreditar.
 
 Para los ciento noventa y seis conductores propios, la compañía lleva ese control con un registro que el conductor completa y firma, complementado con el libro de asistencia del terminal. Los camiones nuevos tienen tacógrafo digital, pero su información no se descarga: nadie definió quién lo hace ni con qué frecuencia.
-<!-- ===== página 11 / 49 ===== -->
+<!-- ===== página 10/49 · PDF 11 ===== -->
+
 
 Para los doscientos cincuenta y ocho conductores de transportistas subcontratados, la compañía no lleva control alguno. Lo que sabe es cuándo les asignó un viaje y cuándo lo terminaron.
 
@@ -250,7 +261,8 @@ Trescientos cuarenta de los trescientos setenta y cuatro camiones tienen disposi
 Los que tienen se reparten entre tres proveedores distintos, porque el dueño de camión contrata el suyo. Control de flota opera tres pantallas simultáneas con tres formas distintas de representar lo mismo, y no existe una vista única de la flota.
 
 Hay tramos de ruta con más de ochenta kilómetros continuos sin cobertura móvil, en el norte y en zonas cordilleranas. Durante esos tramos no hay posición, no hay comunicación y no hay registro, salvo el que el propio dispositivo almacene y envíe después.
-<!-- ===== página 12 / 49 ===== -->
+<!-- ===== página 11/49 · PDF 12 ===== -->
+
 
 El cliente mayor exige, para 2029, posición de la carga en tiempo real disponible para él. Eso supone resolver simultáneamente los tres proveedores, los treinta y cuatro camiones sin equipo, los tramos sin cobertura y — la parte que nadie ha discutido— si el dueño de un camión está dispuesto a que su posición se comparta con un tercero.
 
@@ -285,7 +297,8 @@ La flota propia tiene un plan de mantenimiento preventivo por kilometraje. El ki
 Sesenta y un tractocamiones tienen telemetría de fábrica capaz de reportar kilometraje, consumo, códigos de falla y hábitos de conducción. Esa información no se descarga desde que se compraron los equipos.
 
 Cuando un camión falla en ruta se recurre a un taller externo. Esa intervención se paga con una factura y no queda registrada en la hoja de vida del equipo, de modo que el historia! de mantenimiento de un camión está incompleto por diseño.
-<!-- ===== página 13 / 49 ===== -->
+<!-- ===== página 12/49 · PDF 13 ===== -->
+
 
 De los camiones subcontratados la compañía no sabe nada: el mantenimiento es responsabilidad de su dueño y la única verificación es la revisión técnica vigente.
 
@@ -314,7 +327,8 @@ El PROPONENTE deberá integrarse a este panorama. La columna de destino indica l
 | Sistema de gestión de transporte, implantado en 2013 | Órdenes de transporte, asignación de viajes, tarifas, control de viajes y base de la liquidación a transportistas. | Decisión del PROPONENTE. Es el núcleo de la operación y la decisión de arquitectura más importante del caso, y debe resolverse con fundamento técnico y económico explícito. |
 | Plataformas de posicionamiento satelital | Ubicación y eventos de los camiones. Tres proveedores distintos: uno contratado por la compañía y dos por los dueños de camión, | Se mantienen los equipos instalados. Unificar la vista es parte del alcance y su factibilidad debe verificarse con cada proveedor. 34 camiones no tienen ninguno. |
 | Telemetría de fábrica de los tractocamiones | Kilometraje, consumo, códigos de falla y conducción, en 61 equipos propios. | No se interviene el vehículo. Su aprovechamiento como integración de solo lectura debe evaluarse y su factibilidad verificarse con cada fabricante. |
-<!-- ===== página 14 / 49 ===== -->
+<!-- ===== página 13/49 · PDF 14 ===== -->
+
 
 | Sistema | Función | Destino |
 | --- | --- | --- |
@@ -334,7 +348,8 @@ El PROPONENTE deberá integrarse a este panorama. La columna de destino indica l
 | Cobertura móvil en ruta | Discontinua. Hay tramos de más de 80 km continuos sín cobertura en el norte y en zonas cordilleranas, y la calidad varía por operador. Es la condición más determinante del diseño. |
 | Enlace de los terminales | San Bernardo con dos proveedores. Los cuatro terminales regionales con un proveedor y sin respaldo en tres de ellos. |
 | Sala de equipos | Recinto de 26 m? en San Bernardo, habilitado en 2013, con climatización tipo split, alimentación ininterrumpida de 20 minutos y acceso por credencial. No cumple los estándares del Capítulo 6 de las Bases Técnicas Transversales. |
-<!-- ===== página 15 / 49 ===== -->
+<!-- ===== página 14/49 · PDF 15 ===== -->
+
 
 | Elemento | Situación actual |
 | --- | --- |
@@ -360,7 +375,8 @@ Los siguientes datos corresponden al ejercicio 2025 y al primer semestre de 2026
 | Conductores sobre los que existe control de jornada | 196 de 454 | 454 |
 | Conocimiento de la jornada previa de un conductor de un tercero | inexistente | acreditable por viaje |
 | Tacógrafos digitales cuya información se descarga | o) | todos |
-<!-- ===== página 16 / 49 ===== -->
+<!-- ===== página 15/49 · PDF 16 ===== -->
+
 
 | Indicador | Valor | Referencia |
 | --- | --- | --- |
@@ -396,7 +412,8 @@ Los siguientes datos corresponden al ejercicio 2025 y al primer semestre de 2026
 | Método de asignación de costos a contratos hasta junio de 2026 | prorrateo por ingreso | por ruta y por viaje |
 | Desfase con que se conoce el consumo de combustible de un camión | hasta 40 días | por viaje |
 | Dispersión de rendimiento entre camiones del mismo modelo y ruta | 19 %, sin investigar | explicada |
-<!-- ===== página 17 / 49 ===== -->
+<!-- ===== página 16/49 · PDF 17 ===== -->
+
 
 | Indicador | Valor | Referencia |
 | --- | --- | --- |
@@ -419,7 +436,8 @@ Los siguientes datos corresponden al ejercicio 2025 y al primer semestre de 2026
 | Sistemas que deben consultarse para reconstruir un viaje completo | 5, más dos planillas y un papel |
 
 > Ninguno de estos indicadores se resuelve comprando software. Esta compañía responde por viajes que ocurren a mil kilómetros de distancia, ejecutados en su mayoría por camiones que no son suyos y por personas que no son sus trabajadoras, en tramos donde no hay cobertura y con un dato crítico —cuántas horas lleva conduciendo esa persona— que sencillamente está fuera de su alcance. El PROPONENTE que entienda que el problema de este caso es que la responsabilidad y el control no coinciden, y que diseñe para conseguir información de quien no está obligado a dársela, tendrá una ventaja evidente sobre quien ofrezca módulos.
-<!-- ===== página 18 / 49 ===== -->
+<!-- ===== página 17/49 · PDF 18 ===== -->
+
 
 ### LO QUE DICEN QUIENES OPERAN
 
@@ -446,7 +464,8 @@ El PROPONENTE debe leerlas como lo que son: la palabra de personas que conocen m
 > Mi torre son veintidós personas en turnos, veinticuatro por siete, asignando viajes a trescientos setenta y cuatro camiones.
 
 > Para asignar un viaje tengo que saber cuatro cosas al mismo tiempo: dónde está el camión, si el equipo sirve para esa carga, si el conductor tiene jornada, y si los papeles están al día. De esas cuatro, hoy sé una y media. La posición la veo en tres pantallas distintas porque hay tres proveedores de GPS, y hay treinta y cuatro camiones que no tienen ninguno: a esos los ubico llamando por teléfono.
-<!-- ===== página 19 / 49 ===== -->
+<!-- ===== página 18/49 · PDF 19 ===== -->
+
 
 La jornada de un conductor propio la sé más o menos. La de un conductor de un tercero no la sé. Eso hay que decirlo con todas sus letras, porque es la pregunta que nos hizo la autoridad después del accidente. Y lo que más plata cuesta es lo que menos sistematizado tengo: qué hace el camión después de descargar. El veintiséis por ciento de los kilómetros los hacemos vacíos. Eso lo resolvemos a punta de teléfono y de memoria de la gente de la torre.
 
@@ -475,7 +494,8 @@ Le voy a hablar claro porque para eso me invitaron. Mis camiones valen más de d
 Cuando me dicen que me van a instalar un aparato, yo pregunto tres cosas: quién lo paga, quién ve esa información, y qué pasa con ella cuando yo estoy trabajando para otro cliente. Porque si el aparato es de ellos y anda prendido siempre, ellos van a saber cuándo trabajo para la competencia. Eso no se lo voy a dar. Ahora, sobre el accidente: yo conozco al colega y a mí también me dio vueltas. Es verdad que hay gente que agarra un viaje encima de otro porque necesita la plata. Yo no lo hago, pero pasa. Y también es verdad que nadie tiene cómo saberlo.
 
 Si me preguntan qué me haría cambiar de opinión: que yo controle qué se comparte y cuándo. Si el aparato registra mis horas y eso me sirve a mÍ para demostrar que estoy en regla, lo acepto. Si el aparato es para que ellos me vigilen, no.
-<!-- ===== página 20 / 49 ===== -->
+<!-- ===== página 19/49 · PDF 20 ===== -->
+
 
 Y una cosa práctica que a mí me duele todos los meses: yo no veo mi liquidación hasta que llega. Nueve días después del cierre. Si falta un viaje, tengo que llamar y esperar. Si yo pudiera ver mis viajes en el momento, me ahorraría la mitad de los problemas del año.
 
@@ -504,7 +524,8 @@ Y aquí viene lo que me tiene molesto hace años: sesenta y un camiones traen te
 Cuando un camión se rompe en ruta lo arregla un taller externo. Llega la factura y se paga. Esa reparación no queda en la hoja de vida del equipo. Después yo miro el historial de un camión y tiene hoyos de años. De los camiones de terceros no sé nada y no me corresponde saber. Pero cuando uno de ellos se queda en pana con carga de un cliente mío, el problema es mío igual.
 
 Y ojo con una cosa de la que nadie habla: yo sólo puedo tocar un camión cuando pasa por un terminal. Si me dicen que hay que instalar algo en trescientos setenta y cuatro camiones, eso no es un proyecto de un mes: es un proyecto de meses, y hay camiones que aparecen por acá dos veces al año.
-<!-- ===== página 21 / 49 ===== -->
+<!-- ===== página 20/49 · PDF 21 ===== -->
+
 
 Denisse Aguayo Lillo —- Jefa de Prevención de Riesgos y Seguridad
 
@@ -535,7 +556,8 @@ Marcelo Riquelme Ibáñez —- Jefe de Tecnologías de Información
 Somos nueve personas para cinco terminales, dos talleres y una flota que por definición no está en ninguna parte fija.
 
 El sistema de gestión de transporte es del 2013 y hace bien una cosa: sabe qué viaje encargamos. No sabe qué viaje ocurrió. No sabe a qué hora llegó el camión, cuánto manejó el conductor, cuánto combustible gastó ni qué ruta tomó.
-<!-- ===== página 22 / 49 ===== -->
+<!-- ===== página 21/49 · PDF 22 ===== -->
+
 
 Toda esa información existe. Está en tres plataformas de GPS, en una telemetría que nunca bajamos, en una liquidación de combustible que llega a los cuarenta días y en papeles que andan en la cabina. Nunca se junta, y ése es literalmente el proyecto.
 
@@ -562,7 +584,8 @@ Sobre las contradicciones.
 El PROPONENTE habrá advertido que estas entrevistas no son consistentes entre sí. Operaciones quiere asignar al camión más cercano y no sabe cuánta jornada le queda al conductor si es de un tercero. Prevención quiere que el sistema bloquee la salida y operaciones sabe que eso frena viajes. El cliente exige la posición de la carga en tiempo real y el dueño del camión responde que su posición es información suya, sobre todo cuando trabaja para otro. Finanzas quiere costo por kilómetro real y no conoce el costo de un camión que no es suyo. Taller quiere mantenimiento con telemetría y el 60 % de la flota no le pertenece. La conductora respeta la regla de las horas y explica que hay tramos donde no existe un lugar donde detenerse. Y el gerente general recuerda que a ciento cuarenta y ocho dueños de camión no se les puede dar una orden: hay que ofrecerles algo.
 
 Estas tensiones son reales y no se resolverán antes de la adjudicación. Resolverlas —o, cuando no sea posible, proponer una arquitectura que permita convivir con ellas y dejar constancia de la decisión y de su costo— es parte de lo que se está licitando.
-<!-- ===== página 23 / 49 ===== -->
+<!-- ===== página 22/49 · PDF 23 ===== -->
+
 
 ### LO QUE EL MANDANTE ESPERA
 
@@ -597,7 +620,8 @@ Espera que esa reconstrucción sea automática y que no dependa de un papel que 
 ### 9.5 Que el tiempo de espera se pueda cobrar
 
 El CLIENTE espera que la hora de llegada y la de salida en las instalaciones de un cliente se registren sin intervención del conductor, con evidencia suficiente para sostener el cobro que hoy se objeta en un setenta y uno por ciento.
-<!-- ===== página 24 / 49 ===== -->
+<!-- ===== página 23/49 · PDF 24 ===== -->
+
 
 ### 9.6 Que el camión vuelva cargado
 
@@ -634,7 +658,8 @@ Las siguientes condiciones no están en discusión. Una propuesta que no las res
 | 3 | Los dispositivos instalados en camiones de terceros pertenecen a sus dueños. No pueden intervenirse, reconfigurarse ni reemplazarse sin su acuerdo expreso. |
 | 4 | La operación no puede depender de la cobertura móvil. Existen tramos de más de 80 km continuos sin señal y son parte permanente de la operación, no una excepción. |
 | 5 | Todo equipamiento a bordo sólo puede instalarse, actualizarse o reemplazarse cuando el camión pasa por un terminal. Un camión pasa cada 6 días en promedio y el 22 % de la flota subcontratada pasa menos de una vez al mes. |
-<!-- ===== página 25 / 49 ===== -->
+<!-- ===== página 24/49 · PDF 25 ===== -->
+
 
 | N° | Restricción |
 | --- | --- |
@@ -662,7 +687,8 @@ Para evitar sorpresas, el CLIENTE declara expresamente qué NO está pidiendo:
 - Nose pide sustituir los sistemas de la autoridad aduanera ni los de los clientes; sí integrarse a ellos donde exista interfaz disponible.
 - No se pide instalar infraestructura en los puntos de carga y descarga de los clientes, que son instalaciones de terceros.
 - El hardware — dispositivos a bordo, terminales de terminal y taller, lectores y equipamiento de red— lo adquiere el CLIENTE; el PROPONENTE debe especificar exactamente qué comprar, cuánto y con qué características, conforme al Capítulo 8 de las Bases Técnicas Transversales.
-<!-- ===== página 26 / 49 ===== -->
+<!-- ===== página 25/49 · PDF 26 ===== -->
+
 
 > Que algo esté excluido del alcance no significa que pueda ignorarse en el diseño. La solución debe convivir con todo lo excluido, y las dependencias que ello genera deben estar identificadas, documentadas y consideradas en el plan y enel riesgo.
 
@@ -684,7 +710,8 @@ El PROPONENTE deberá identificar, investigar y considerar en su propuesta el ma
 | Revisión técnica y emisiones vehiculares | Régimen de revisión técnica, certificación de emisiones y permisos de circulación. | Aplica a 374 camiones y 210 semirremolques, propios y de terceros. |
 | Tránsito y seguridad vial | Ley de tránsito y normativa sobre uso de dispositivos, velocidad y condiciones de conducción. | Fundamenta la restricción no negociable N° 1. |
 | Cruce fronterizo y aduanas | Documentación de tránsito internacional, control aduanero y migratorio de dos países. | = 1.900 cruces al año por Los Libertadores. |
-<!-- ===== página 27 / 49 ===== -->
+<!-- ===== página 26/49 · PDF 27 ===== -->
+
 
 | Ámbito | Referencia | Por qué importa aquí |
 | --- | --- | --- |
@@ -708,7 +735,8 @@ Las dos objeciones apuntan a lo mismo desde ángulos distintos: hay decisiones d
 Ese orden es una preferencia del mandante, no una definición de alcance. La distribución concreta entre la Etapa 1 y la Etapa 2 la propone el PROPONENTE y debe justificarla en función de las dependencias técnicas, del riesgo, de los hitos externos del numeral 13.2 y de la capacidad de absorción del CLIENTE, que en este caso incluye la disposición de ciento cuarenta y ocho transportistas que no dependen de él.
 
 > Una propuesta que se limite a repetir el orden de preferencia del comité sin analizarlo será evaluada como falta de criterio profesional. Si el PROPONENTE considera que hay una dependencia técnica que obliga a alterar ese orden, debe decirlo y fundamentarlo. El CLIENTE contrata ingeniería, no obediencia.
-<!-- ===== página 28 / 49 ===== -->
+<!-- ===== página 27/49 · PDF 28 ===== -->
+
 
 ### 13.2 Hitos externos que condicionan el proyecto
 
@@ -737,7 +765,8 @@ El CLIENTE no impone una estrategia de implantación, pero sí declara las condi
 3. El despliegue de equipamiento a bordo se hace camión por camión, cuando cada uno pasa por un
 
 terminal. El plan debe declarar la cobertura acumulada esperada mes a mes y qué se hace con el 22 % de la flota subcontratada que aparece con menos frecuencia.
-<!-- ===== página 29 / 49 ===== -->
+<!-- ===== página 28/49 · PDF 29 ===== -->
+
 
 El paso a producción no puede ocurrir entre diciembre y abril, ni en las ventanas de restricción
 
@@ -760,7 +789,8 @@ contemplar presencia en los terminales en horario de relevo, que es de madrugada
 10. El plan debe declarar qué ocurre con los camiones que quedan sin equipar al término de cada etapa y cómo opera la solución en modo mixto durante ese período, que será largo.
 
 > El CUENTE despacha viajes que ocurren a mil kilómetros de distancia, ejecutados en su mayoría por camiones que no son suyos y por personas que no son sus trabajadoras. Un error durante la marcha blanca no se traduce en un dato mal registrado: se traduce en un camión que sale cuando no debía salir. La estrategia de puesta en producción, y el plan de adhesión de los ciento cuarenta y ocho transportistas subcontratados, pesan en la evaluación de este caso tanto como la arquitectura.
-<!-- ===== página 30 / 49 ===== -->
+<!-- ===== página 29/49 · PDF 30 ===== -->
+
 
 ### ANTECEDENTES PARA EL DIMENSIONAMIENTO
 
@@ -794,7 +824,8 @@ El CLIENTE entrega los volúmenes que efectivamente conoce, porque son los que g
 | Abastecimientos de combustible al año | = 74.000 | = 90.000 |
 | Pasadas de peaje al año | = 620.000 | = 760.000 |
 | Personal propio con acceso a sistemas | 336 | 390 |
-<!-- ===== página 31 / 49 ===== -->
+<!-- ===== página 30/49 · PDF 31 ===== -->
+
 
 | Dimensión | Valor actual | Proyección a 3 años |
 | --- | --- | --- |
@@ -820,7 +851,8 @@ El CLIENTE entrega los volúmenes que efectivamente conoce, porque son los que g
 | Ancho de banda por terminal | A estimar y declarar como supuesto |
 | Contactos mensuales a la mesa de ayuda, distinguiendo personal interno, conductores y transportistas | A estimar y declarar como supuesto |
 | Dotación de la mesa de ayuda y del equipo de operación para cobertura 24x7x365 | A estimar y declarar como supuesto |
-<!-- ===== página 32 / 49 ===== -->
+<!-- ===== página 31/49 · PDF 32 ===== -->
+
 
 > Preste atención a tres particularidades del perfil de carga de este caso. La primera es que la fuente principal de datos está en movimiento y desconectada buena parte del tiempo: el dimensionamiento no depende sólo de cuántos eventos se generan sino de cuántos se acumulan a bordo y de qué ocurre cuando trescientos camiones recuperan cobertura al mismo tiempo al salir de una zona de sombra. La segunda es que la frecuencia de muestreo es una decisión de diseño con consecuencia directa en el costo de datos móviles de la flota, que es un costo recurrente y no despreciable para una empresa con margen del 9 %. La tercera es que hay dos poblaciones de usuarios externos —84 clientes y 148 transportistas con 258 conductores— cuyos perfiles, derechos sobre los datos y capacidad tecnológica son completamente distintos.
 
@@ -836,7 +868,8 @@ Las Bases Técnicas Transversales marcan un conjunto de requisitos como «Según
 | RT-03.24 | Red de los sitios operacionales | Exigible el respaldo de enlace en los cuatro terminales regionales, tres de los cuales hoy no lo tienen. Y, con carácter propio de este caso, se exige caracterizar la cobertura móvil real de las rutas que la compañía opera mediante mediciones en terreno, y no suponerla: la disponibilidad declarada por los operadores no es un antecedente aceptable para el diseño. |
 | RT-05.10 | Retención de datos históricos y de auditoría | Registro de jornada de conducción y su evidencia: mínimo 5 años, conforme a la normativa laboral aplicable. Documento electrónico de transporte y antecedentes del viaje: 6 años. Antecedentes de siniestros: 10 años. Habilitaciones de conductores y equipos: su vigencia y 5 años más. Registros de carga peligrosa: 5 años. Evidencia de tiempos de llegada y salida en instalaciones de cliente: 3 años. Liquidaciones a transportistas: 6 años. Series de posición y telemetría: 2 años en línea, con política de agregación declarada para el resto. |
 | RT-05.15 | Datos históricos a migrar | Maestros de flota, semirremolques, conductores, transportistas y clientes: la totalidad. Viajes: 5 años. Liquidaciones a transportistas: 6 años. Siniestros: la totalidad. Las = 6.000 vigencias, con verificación documental de cada una durante la migración, por tratarse de datos hoy dispersos en cuatro planillas mantenidas por personas distintas. |
-<!-- ===== página 33 / 49 ===== -->
+<!-- ===== página 32/49 · PDF 33 ===== -->
+
 
 | Código | Materia | Valor para el Caso 10 |
 | --- | --- | --- |
@@ -848,7 +881,8 @@ Las Bases Técnicas Transversales marcan un conjunto de requisitos como «Según
 | RT-10.05 | Ventana operacional protegida | La flota rueda 24x7x365 y no existe ventana de detención: la intervención es camión por camión y terminal por terminal. Congelamiento de diciembre a abril por temporada de fruta. Congelamiento en las ventanas de restricción vehicular de Semana Santa y Fiestas Patrias. Congelamiento durante los nueve días del cierre mensual de liquidaciones. Los cierres del paso fronterizo por nieve, de hasta 12 días continuos, deben absorberse sin desplazar hitos. |
 | RT-11.10 | Cifrado a nivel de campo | Exigible para los datos personales de los 258 conductores que no son trabajadores de la compañía, para toda información de localización asociada a una persona identificable, para los antecedentes de jornada y para las tarifas y condiciones pactadas con cada uno de los 148 transportistas subcontratados. |
 | RT-12.11 | Autenticación en el perfil operacional | Torre en turnos 24x7. Conductores sin dispositivo asignado propio en una parte relevante de los casos y con camiones que rotan entre conductores. 258 conductores que no son trabajadores de la compañía y que en muchos casos trabajan también para otros. La identificación del conductor al inicio de un viaje debe resolverse sin exigir manipulación de un dispositivo con el vehículo en movimiento y sin depender de que el conductor recuerde una credencial. |
-<!-- ===== página 34 / 49 ===== -->
+<!-- ===== página 33/49 · PDF 34 ===== -->
+
 
 | Código | Materia | Valor para el Caso 10 |
 | --- | --- | --- |
@@ -861,7 +895,8 @@ Las Bases Técnicas Transversales marcan un conjunto de requisitos como «Según
 | RT-16.21 | Canales de notificación | Alerta de jornada próxima a agotarse, al conductor y a la torre, con la anticipación fundamentada de RT-09.01. Alerta de vencimiento de habilitaciones con escalonamiento a 60, 30 y 7 días, al titular y a quien deba actuar. Alerta de desvío de ruta y evento de botón de emergencia a la torre, con confirmación de recepción por una persona identificada. Aviso al cliente ante eventos relevantes del viaje. Aviso al transportista subcontratado ante cada viaje liquidado. |
 | RT-16.30 | Portal público | Sin autenticación: seguimiento del estado de un envío mediante su número de documento. Autenticado, portal del cliente: posición de la carga, estado del viaje, documentos, conformidades, tiempos en sus instalaciones y emisiones asociadas. Autenticado, portal del transportista subcontratado: sus viajes, su liquidación en curso y su detalle, sus vencimientos, su evaluación y —con carácter obligatorio— el control de qué datos de sus camiones y conductores autoriza compartir y con quién, con posibilidad de revocación. |
 | RT-17.01 | Aplicación móvil | Exigible en cuatro perfiles: conductor, operable con una sola mano y con guantes, sin ninguna interacción exigible en marcha y con operación desconectada de 72 horas; torre de programación; terminal y taller; y transportista subcontratado, con la gestión de sus viajes, su liquidación y sus autorizaciones de datos. |
-<!-- ===== página 35 / 49 ===== -->
+<!-- ===== página 34/49 · PDF 35 ===== -->
+
 
 | Código | Materia | Valor para el Caso 10 |
 | --- | --- | --- |
@@ -884,7 +919,8 @@ Las decisiones que siguen son necesarias para que la solución sea coherente. El
 | 4 | Cómo se unifica la posición de la flota con tres proveedores distintos, accesos de solo consulta en dos de ellos y 34 camiones sin dispositivo alguno. | Es la base de la posición en tiempo real que exige el cliente, y una de las tres plataformas ni siquiera permite exportar. |
 | 5 | De quién es el dispositivo a bordo en un camión de un tercero, quién lo paga, quién lo administra y qué ocurre con él si el transportista deja de trabajar con la compañía. | Define el modelo económico y contractual de todo el despliegue, y es la primera pregunta que hacen los dueños de camión. |
 | 6 | Qué ocurre cuando la verificación bloqueante impide un viaje ya comprometido con un cliente, quién puede autorizar una excepción y con qué registro. | Prevención quiere que el sistema no deje salir; operaciones sabe que eso detiene viajes. Sin regla de excepción, la primera vez que ocurra alguien la saltará por fuera. |
-<!-- ===== página 36 / 49 ===== -->
+<!-- ===== página 35/49 · PDF 36 ===== -->
+
 
 | N° | Decisión no tomada | Por qué importa |
 | --- | --- | --- |
@@ -903,7 +939,8 @@ Las decisiones que siguen son necesarias para que la solución sea coherente. El
 | 19 | Cómo se verifica que la documentación de carga peligrosa corresponde efectivamente a lo que se cargó, y no alo que se planificó cargar. | Es exactamente el hallazgo de la fiscalización de abril. |
 | 20 | Qué hace la solución cuando el paso fronterizo cierra doce días con camiones detenidos, carga comprometida y conductores en jornada. | Ocurre todos los inviernos y hoy se administra por teléfono. |
 | 21 | Cómo se incorpora a la hoja de vida del equipo la intervención de un taller externo en ruta. | Hoy no se incorpora, y por eso el historial de mantenimiento de cada camión tiene hoyos de años. |
-<!-- ===== página 37 / 49 ===== -->
+<!-- ===== página 36/49 · PDF 37 ===== -->
+
 
 | N° | Decisión no tomada | Por qué importa |
 | --- | --- | --- |
@@ -934,7 +971,8 @@ capacitación del conductor y plan de emergencia.
 - Documento electrónico de transporte: contenido, oportunidad de emisión y mecanismos de contingencia sin conectividad.
 - Contrato de transporte terrestre de carga: responsabilidad del porteador por pérdida, daño y retraso, prueba de la entrega y plazos de reclamo.
 - Régimen de subcontratación y responsabilidad de la empresa principal respecto de trabajadores de terceros.
-<!-- ===== página 38 / 49 ===== -->
+<!-- ===== página 37/49 · PDF 38 ===== -->
+
 
 Modelos de relación con transportistas subcontratados: esquemas contractuales, incentivos, evaluación y programas de adhesión tecnológica.
 
@@ -957,7 +995,8 @@ trabajadores de quien trata el dato.
 Tránsito internacional de carga por pasos fronterizos y documentación aduanera aplicable.
 
 > Una propuesta que ofrezca «control de flota» sin haber entendido que el sesenta por ciento de esa flota no le pertenece al mandante, o que prometa acreditación de jornada sin explicar qué se le va a ofrecer a ciento cuarenta y ocho dueños de camión para que la entreguen, quedará en evidencia frente a la Comisión de Expertos.
-<!-- ===== página 39 / 49 ===== -->
+<!-- ===== página 38/49 · PDF 39 ===== -->
+
 
 ### LO QUE DEBE PRODUCIR EL PROPONENTE
 
@@ -980,7 +1019,8 @@ El PROPONENTE deberá recorrer este documento y producir un catálogo de requeri
 | Registro de vacíos y consultas | Aquello que el PROPONENTE no puede resolver por sí solo y que someterá al CLIENTE durante el período de consultas. |
 
 > Un requerimiento no es una frase copiada de este documento. «Debe controlarse la jornada del conductor» no es un requerimiento: es un resultado esperado. El requerimiento indica de qué fuente se obtiene el tiempo de conducción, cómo se distingue conducir de esperar, qué ocurre con las horas que esa persona trabajó para otro, cómo se acredita el dato ante un tercero que puede impugnarlo, quién puede corregirlo y con qué registro, cuánto tiempo se conserva y cómo se demuestra que no fue alterado.
-<!-- ===== página 40 / 49 ===== -->
+<!-- ===== página 39/49 · PDF 40 ===== -->
+
 
 ### 17.2 Distinguir lo funcional de lo no funcional
 
@@ -1016,7 +1056,8 @@ trabajadores de la compañía, y cómo se convierte en evidencia oponible.
 sistema cuando cientos de unidades recuperan señal a la vez.
 
 4. Cómo se unifica la posición con tres plataformas de proveedores distintos, dos de ellas con acceso de solo consulta, y treinta y cuatro camiones sin dispositivo.
-<!-- ===== página 41 / 49 ===== -->
+<!-- ===== página 40/49 · PDF 41 ===== -->
+
 
 5. Cómo se registran la llegada y la salida en instalaciones de terceros sin intervención del conductor y sin
 
@@ -1071,7 +1112,8 @@ El plan de trabajo debe ser específico de esta compañía. Un cronograma que po
 - La verificación de factibilidad con tres proveedores de posicionamiento y con los fabricantes de camiones, que no depende del ADJUDICATARIO.
 - La migración y verificación documental de las = 6.000 vigencias hoy dispersas en cuatro planillas.
 - La disponibilidad del costo real por ruta antes de la renegociación de 2027 de dos de los contratos bajo costo.
-<!-- ===== página 42 / 49 ===== -->
+<!-- ===== página 41/49 · PDF 42 ===== -->
+
 
 - La capacitación de conductores que no están en ningún lugar fijo, de los cuales 258 no son trabajadores de la compañía, y de una torre que opera en turnos 24x7.
 - El solapamiento de los meses 13 a 15 y 19 a 20, con la dotación efectivamente necesaria para sostener dos frentes en cinco terminales y en ruta.
@@ -1103,7 +1145,8 @@ Los siguientes resultados de negocio son los que el CLIENTE utilizará para juzg
 | N° | Resultado esperado | Situación actual |
 | --- | --- | --- |
 | 1 | Ningún camión sale con un conductor sin jornada disponible, con una habilitación vencida o con un equipo no apto. | No se verifica nada al asignar. |
-<!-- ===== página 43 / 49 ===== -->
+<!-- ===== página 42/49 · PDF 43 ===== -->
+
 
 | N° | Resultado esperado | Situación actual |
 | --- | --- | --- |
@@ -1129,7 +1172,8 @@ Los siguientes resultados de negocio son los que el CLIENTE utilizará para juzg
 | 21 | Cada transportista ve sus viajes y su liquidación en curso en cualquier momento. | Se entera cuando le llega el documento. |
 | 22 | El cliente ve la posición y el estado de su carga, con lo que el dueño del camión haya autorizado. | Inexistente. |
 | 23 | Cada dueño de camión controla qué datos comparte, con quién y hasta cuándo, y puede revocarlo. | No existe ningún mecanismo. |
-<!-- ===== página 44 / 49 ===== -->
+<!-- ===== página 43/49 · PDF 44 ===== -->
+
 
 | N° | Resultado esperado | Situación actual |
 | --- | --- | --- |
@@ -1152,7 +1196,8 @@ La evaluación se rige por el Título V de las Bases Administrativas y por la po
 | Esquema de solución y alcance | Que la decisión sobre cómo se obtiene la jornada de un conductor externo esté tomada, fundada y costeada, y que exista un plan de adhesión concreto para los 148 transportistas. Que la decisión sobre el sistema de gestión de 2013 no se resuelva por omisión. Que las exclusiones sean explícitas. |
 | Arquitectura lógica y física | Que resuelva de forma verificable la operación de 72 horas sin cobertura, la reconexión masiva al salir de zonas de sombra, la unificación de tres plataformas de posicionamiento, el registro de tiempos en instalaciones de terceros sin instalar nada, la emisión del documento sin cobertura y el ciclo de vida de un componente distribuido en 374 vehículos. Que sea propia de esta operación y no un diagrama de referencia con el nombre cambiado. |
 | Modelo y gestión de datos | Que la evidencia de jornada esté diseñada para resistir una impugnación. Que el consentimiento de cada dueño de camión sea gestionable y revocable, y que su ejercicio esté registrado. Que las veintiséis decisiones pendientes del numeral 16.1 estén resueltas y declaradas como supuesto. |
-<!-- ===== página 45 / 49 ===== -->
+<!-- ===== página 44/49 · PDF 45 ===== -->
+
 
 | ítem | Qué se buscará en este caso |
 | --- | --- |
@@ -1163,7 +1208,8 @@ La evaluación se rige por el Título V de las Bases Administrativas y por la po
 | Consolidación | Que la propuesta sea internamente coherente: que la arquitectura sostenga el alcance, que la EDT contenga la arquitectura, que el cronograma refleje la EDT y que el costo derive de todo lo anterior. |
 
 > Una advertencia final del mandante. Enelacta del directorio quedó consignada la advertencia que el gerente general pidió incorporar: el sesenta por ciento de la capacidad de esta compañía no le pertenece y esas personas no son sus trabajadores; cualquier solución que suponga que se les puede dar una orden va a fracasar el primer día. Una propuesta técnicamente impecable que instale un dispositivo en toda la flota sin explicar quién se lo pide a ciento cuarenta y ocho dueños de camión, quién lo paga y qué se les ofrece a cambio, será superada por una propuesta más modesta que traiga esa conversación resuelta. Y detrás de todo lo demás está la frase con que empezó este documento: la compañía cumplió con todo lo que estaba a su alcance, y aun así despachó a una persona que no estaba en condiciones de manejar.
-<!-- ===== página 46 / 49 ===== -->
+<!-- ===== página 45/49 · PDF 46 ===== -->
+
 
 ### ANEXOS DEL CASO
 
@@ -1189,7 +1235,8 @@ Descripción de los flujos de información tal como ocurren hoy. La columna «c�
 | Taller propio | Sistema de mantenimiento | Órdenes de trabajo y plan preventivo | Sistema de 2017, con kilometraje leído del odómetro en el taller |
 | Taller externo en ruta | Nadie | Intervención sobre un equipo | Llega una factura; no queda en la hoja de vida del equipo |
 | Prevención | Planillas | = 6.000 vigencias de conductores y equipos | Cuatro planillas separadas, mantenidas por personas distintas |
-<!-- ===== página 47 / 49 ===== -->
+<!-- ===== página 46/49 · PDF 47 ===== -->
+
 
 | Origen | Destino | Qué información | Cómo viaja hoy |
 | --- | --- | --- | --- |
@@ -1213,7 +1260,8 @@ B.1 Perfil de un viaje típico de larga distancia
 | Llegada al destino | Descarga y obtención de la conformidad del destinatario. | La conformidad debe quedar disponible el mismo día, no cuando el conductor pase por un terminal. |
 | Decisión de retorno | Se define si el camión vuelve cargado o vacío. | Es la decisión de mayor impacto económico del ciclo y hoy la menos sistematizada. 26 % de los kilómetros son en vacío. |
 | Cierre del viaje | Se consolidan tiempos, kilómetros, combustible, peajes e incidentes. | El costo del viaje debe estar disponible en 24 horas, indicando qué componentes aún faltan. |
-<!-- ===== página 48 / 49 ===== -->
+<!-- ===== página 47/49 · PDF 48 ===== -->
+
 
 B.2 Calendario operacional y ventanas
 
@@ -1241,7 +1289,8 @@ Vocabulario mínimo para leer este documento. No sustituye la investigación exi
 | Documento electrónico de transporte | Documento tributario que ampara el traslado de mercaderías y que debe estar emitido antes de que el vehículo se mueva. |
 | Dueño de camión | Persona natural o empresa pequeña propietaria de uno o pocos camiones, que presta servicio a un transportista mayor sin ser su trabajador. Es el 60 % de la capacidad de este caso. |
 | Hoja de vida del equipo | Historial completo de intervenciones, mantenciones y fallas de un vehículo. En este caso está incompleta porque los talleres externos no reportan. |
-<!-- ===== página 49 / 49 ===== -->
+<!-- ===== página 48/49 · PDF 49 ===== -->
+
 
 | Término | Significado |
 | --- | --- |

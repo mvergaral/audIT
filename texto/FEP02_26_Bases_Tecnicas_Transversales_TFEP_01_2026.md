@@ -1,5 +1,6 @@
 
-<!-- ===== página 1 / 51 ===== -->
+<!-- ===== página ? / 51 · PDF 1 ===== -->
+
 
 ### FORMULACIÓN DE PROYECTOS
 
@@ -10,7 +11,8 @@ DE LA PROPUESTA
 Versión 1.0
 
 Fecha Documento: 18-08-2026
-<!-- ===== página 2 / 51 ===== -->
+<!-- ===== página 1/51 · PDF 2 ===== -->
+
 
 ### Bases Técnicas Transversales
 
@@ -27,7 +29,8 @@ Requisitos técnicos comunes a las trece industrias del llamado
 | Versión | 1.0 — agosto de 2026 |
 
 > Este documento fija el piso técnico común del llamado. Todo lo que aquí se exige es exigible en las trece industrias; lo que cada industria tiene de propio —su proceso de negocio, sus volúmenes, sus integraciones y su regulación sectorial— se establece en las Bases Técnicas de cada caso. Los requisitos están codificados como RT-CC.NN y deben responderse uno a uno en el Formulario T-12 de las Bases Administrativas.
-<!-- ===== página 3 / 51 ===== -->
+<!-- ===== página 2/51 · PDF 3 ===== -->
+
 
 CONTENIDO
 
@@ -51,7 +54,8 @@ Este documento desarrolla técnicamente ese Capítulo 4 y lo lleva al nivel de r
 Las Bases Técnicas de cada caso, que se publican por separado, aportan el contexto de la industria, el proceso de negocio, los requerimientos funcionales, la volumetría real y los valores concretos de todo requisito marcado «Según caso» en este documento.
 
 > Sobre el nivel de exigencia. Este pliego describe una plataforma de misión crítica, no un sistema de gestión convencional. Los umbrales, los estándares y los controles que contiene son los que hoy se exigen en el mercado a un proveedor que opera la infraestructura digital de una empresa. Una propuesta que los trate como formalidades a declarar, en lugar de como decisiones de ingeniería a resolver, quedará en evidencia en la matriz de cumplimiento y en la defensa técnica.
-<!-- ===== página 4 / 51 ===== -->
+<!-- ===== página 3/51 · PDF 4 ===== -->
+
 
 ### DISPOSICIONES DEL DOCUMENTO
 
@@ -85,7 +89,8 @@ Este documento se lee conjuntamente con las Bases Administrativas y con las Base
 | --- | --- | --- |
 | Bases Administrativas TFEP-01/2026 | Reglas del proceso, participación, garantías, evaluación, adjudicación, contrato, niveles de servicio contractuales, penalidades y exigencia de innovación. Incluye el cronograma obligatorio de 56 meses (Art. 17°) y los requisitos transversales de nivel contractual (Capítulo 4). | Prevalecen sobre este documento en materias administrativas y contractuales. |
 | Bases Técnicas Transversales (este documento) | Cómo debe estar construida, desplegada, protegida, operada y presentada la solución, en términos técnicos verificables y comunes a las trece industrias. | Desarrolla técnicamente el Capítulo 4 de las Bases Administrativas. No lo contradice ni lo rebaja. |
-<!-- ===== página 5 / 51 ===== -->
+<!-- ===== página 4/51 · PDF 5 ===== -->
+
 
 | Documento | Qué define | Relación |
 | --- | --- | --- |
@@ -120,7 +125,8 @@ El PROPONENTE deberá acreditar el cumplimiento de la totalidad de los requisito
 Este documento no impone marcas, productos ni proveedores determinados. Cuando menciona un producto lo hace a título de referencia y admite equivalentes de prestaciones iguales o superiores, lo que el PROPONENTE deberá acreditar.
 
 Sí impone, en cambio, un criterio de vigencia. Todo componente ofertado —lenguaje, marco de trabajo, motor de base de datos, sistema operativo, biblioteca, dispositivo — deberá contar con soporte vigente del fabricante o de su comunidad al momento de la oferta, y con hoja de ruta de soporte que cubra, como mínimo, la totalidad
-<!-- ===== página 6 / 51 ===== -->
+<!-- ===== página 5/51 · PDF 6 ===== -->
+
 
 del período contractual de 56 meses. El PROPONENTE deberá declarar, por cada componente principal, su versión, su fecha de fin de soporte y su plan de actualización.
 
@@ -129,7 +135,8 @@ del período contractual de 56 meses. El PROPONENTE deberá declarar, por cada c
 ### 1.7 Interpretación de los umbrales
 
 Todo umbral expresado en este documento es un mínimo exigido, salvo que se indique expresamente que constituye un máximo. Los tiempos de respuesta se entienden medidos en el percentil 95 sobre la experiencia real del usuario final, y no como promedio ni como medición sintética de laboratorio, salvo indicación expresa. Las mediciones de disponibilidad se calculan sobre la transacción de negocio completa de extremo a extremo. La disponibilidad de la infraestructura subyacente no es un sustituto válido: un componente activo que devuelve errores no cuenta como disponible.
-<!-- ===== página 7 / 51 ===== -->
+<!-- ===== página 6/51 · PDF 7 ===== -->
+
 
 ### ARQUITECTURA DE LA SOLUCIÓN
 
@@ -156,7 +163,8 @@ La solución deberá organizarse en las capas que se describen a continuación. 
 | --- | --- | --- |
 | RT-02.01 | La solución se organizará en las ocho capas del numeral 2.1. El PROPONENTE presentará el diagrama de la arquitectura lógica identificando cada capa, sus componentes y las interfaces entre ellas. | Obligatorio |
 | RT-02.02 | La arquitectura será modular, con límites de contexto explícitos y acoplamiento débil. Se rechazará toda arquitectura monolítica que no permita desplegar de forma independiente sus componentes críticos. | Obligatorio |
-<!-- ===== página 8 / 51 ===== -->
+<!-- ===== página 7/51 · PDF 8 ===== -->
+
 
 | Código | Requisito | Carácter |
 | --- | --- | --- |
@@ -178,7 +186,8 @@ La solución deberá organizarse en las capas que se describen a continuación. 
 El CLIENTE no impone un estilo arquitectónico. SÍ exige que el escogido sea explícito, coherente con la escala del caso y justificado. El PROPONENTE deberá comparar al menos dos alternativas y explicar por qué descarta la no elegida, considerando la complejidad operacional que introduce, el tamaño y las competencias del equipo, el costo de infraestructura y la capacidad del CLIENTE de operarla al término del Contrato.
 
 > Adoptar una arquitectura de microservicios para un caso cuyo volumen no la justifica es un error de ingeniería y se evaluará como tal. La sofisticación no reemplaza a la pertinencia.
-<!-- ===== página 9 / 51 ===== -->
+<!-- ===== página 8/51 · PDF 9 ===== -->
+
 
 ### CAPÍTULO 3 MODELO HÍBRIDO: NUBE Y ON-PREMISE
 
@@ -207,7 +216,8 @@ Conforme al Artículo 16° de las Bases Administrativas, la solución será obli
 | RT-03.06 | Se aplicarán prácticas FinOps: etiquetado obligatorio de todos los recursos por ambiente, módulo y centro de costo; presupuestos con alertas de desviación; y reporte mensual de consumo desglosado entregado al CLIENTE. | Obligatorio |
 | RT-03.07 | El PROPONENTE declarará su estrategia de reversibilidad y de mitigación del bloqueo por proveedor, identificando qué componentes son portables, cuáles no lo son y cuál sería el esfuerzo estimado de una migración. | Obligatorio |
 | RT-03.08 | La solución empleará instancias reservadas, planes de ahorro o capacidad comprometida cuando el perfil de carga lo justifique, y lo reflejará en la estructura de costos. | Deseable |
-<!-- ===== página 10 / 51 ===== -->
+<!-- ===== página 9/51 · PDF 10 ===== -->
+
 
 | Código | Requisito | Carácter |
 | --- | --- | --- |
@@ -234,7 +244,8 @@ Conforme al Artículo 16° de las Bases Administrativas, la solución será obli
 | --- | --- | --- |
 | RT-03.20 | El PROPONENTE dimensionará el ancho de banda requerido por sitio, en régimen normal y en peak, y lo justificará con el cálculo de volumen de transacciones y de datos. | Obligatorio |
 | RT-03.21 | La conexión entre la red del CLIENTE y la nube se establecerá mediante enlace privado dedicado o red privada virtual con cifrado, según lo que el volumen y la criticidad justifiquen. | Obligatorio |
-<!-- ===== página 11 / 51 ===== -->
+<!-- ===== página 10/51 · PDF 11 ===== -->
+
 
 | Código | Requisito | Carácter |
 | --- | --- | --- |
@@ -263,7 +274,8 @@ Conforme al Artículo 16° de las Bases Administrativas, la solución será obli
 | RT-04.03 | El código residirá en un sistema de control de versiones con ramas protegidas, revisión obligatoria por pares y prohibición de escritura directa sobre la rama principal. | Obligatorio |
 | RT-04.04 | Existirá trazabilidad completa entre requerimiento, incidencia, cambio de código, prueba ejecutada y despliegue realizado. | Obligatorio |
 | RT-04.05 | El flujo de integración continua ejecutará, como mínimo: compilación, pruebas unitarias, análisis estático de código, análisis de composición de software, escaneo de secretos y escaneo de imágenes de contenedor, con criterios de bloqueo automático del despliegue. | Obligatorio |
-<!-- ===== página 12 / 51 ===== -->
+<!-- ===== página 11/51 · PDF 12 ===== -->
+
 
 | Código | Requisito | Carácter |
 | --- | --- | --- |
@@ -288,7 +300,8 @@ Conforme al Artículo 16° de las Bases Administrativas, la solución será obli
 | RT-05.03 | Toda operación de negocio será trazable: la solución permitirá reconstruir quién, qué, cuándo, desde qué dispositivo y con qué valores anteriores y posteriores, para cualquier registro y en cualquier momento del período de retención. | Obligatorio |
 | RT-05.04 | La calidad de datos se gestionará conforme a ISO/IEC 25012, con validación en el punto de captura, indicadores de completitud, exactitud y consistencia, y tablero de calidad disponible para el CLIENTE. | Obligatorio |
 | RT-05.05 | El almacenamiento transaccional y el analítico estarán separados. Ninguna consulta analítica podrá degradar el desempeño de la operación. | Obligatorio |
-<!-- ===== página 13 / 51 ===== -->
+<!-- ===== página 12/51 · PDF 13 ===== -->
+
 
 | Código | Requisito | Carácter |
 | --- | --- | --- |
@@ -316,7 +329,8 @@ Conforme al Artículo 16° de las Bases Administrativas, la solución será obli
 | RT-05.17 | Los contratos de interfaz se versionarán semánticamente, con compatibilidad hacia atrás y política de obsolescencia con preaviso mínimo de seis meses. | Obligatorio |
 | RT-05.18 | La autenticación entre sistemas empleará OAuth 2.1 con credenciales de cliente o autenticación mutua TLS. Queda prohibida la autenticación por clave estática en la ruta de la dirección web. | Obligatorio |
 | RT-05.19 | Toda integración registrará la transacción de entrada y de salida, con identificador de correlación común que permita seguir una operación de negocio a través de todos los sistemas involucrados. | Obligatorio |
-<!-- ===== página 14 / 51 ===== -->
+<!-- ===== página 13/51 · PDF 14 ===== -->
+
 
 | Código | Requisito | Carácter |
 | --- | --- | --- |
@@ -336,7 +350,8 @@ Conforme al Artículo 16° de las Bases Administrativas, la solución será obli
 | RT-05.28 | Todo informe será exportable en formatos abiertos y programable para envío automático por calendario. | Obligatorio |
 | RT-05.29 | La latencia máxima entre la ocurrencia de una transacción y su disponibilidad en la capa analítica será la que fije el caso y, en su defecto, no superará las 4 horas. | Según caso |
 | RT-05.30 | Se valorará la incorporación de analítica predictiva pertinente al proceso del caso, con el modelo, sus variables, su métrica de desempeño y su plan de reentrenamiento documentados. | Deseable |
-<!-- ===== página 15 / 51 ===== -->
+<!-- ===== página 14/51 · PDF 15 ===== -->
+
 
 ### INFRAESTRUCTURA
 
@@ -364,7 +379,8 @@ Las exigencias de este capítulo se aplican de manera proporcional a la escala d
 | RT-06.02 | Los muros no estructurales del recinto contarán con blindaje perimetral; el PROPONENTE especificará el material y la resistencia. | Obligatorio |
 | RT-06.03 | El PROPONENTE entregará el plano de distribución interna del recinto, con la separación de las zonas de generadores, baterías, climatización, servidores, comunicaciones, trabajo y respaldo. | Obligatorio |
 | RT-06.04 | El piso técnico, la canalización, el cableado estructurado y el etiquetado se ejecutarán conforme a norma, con documentación de la certificación de cada enlace. | Obligatorio |
-<!-- ===== página 16 / 51 ===== -->
+<!-- ===== página 15/51 · PDF 16 ===== -->
+
 
 | Código | Requisito | Carácter |
 | --- | --- | --- |
@@ -397,7 +413,8 @@ Las exigencias de este capítulo se aplican de manera proporcional a la escala d
 | RT-06.16 | El recinto contará con detección temprana por aspiración de aire con tecnología láser, tipo AnaLASER o equivalente de prestaciones iguales o superiores. | Obligatorio |
 | RT-06.17 | La extinción será automática mediante agente limpio tipo FM-200 o equivalente, con aprobación UL e instalación conforme a norma NEPA. | Obligatorio |
 | RT-06.18 | Se proveerá un sistema secundario de extintores portátiles habilitados, con mantención y certificación vigentes. | Obligatorio |
-<!-- ===== página 17 / 51 ===== -->
+<!-- ===== página 16/51 · PDF 17 ===== -->
+
 
 | Código | Requisito | Carácter |
 | --- | --- | --- |
@@ -429,7 +446,8 @@ Las exigencias de este capítulo se aplican de manera proporcional a la escala d
 | RT-06.29 | El PROPONENTE habilitará el espacio físico necesario para el personal encargado de la operación y administración de la plataforma, con estaciones de trabajo, telefonía, conexión a Internet y todo elemento que permita realizar la labor en condiciones adecuadas. | Obligatorio |
 | RT-06.30 | El espacio de operación estará separado de la sala de equipos y no requerirá el ingreso al recinto técnico para las labores habituales de operación. | Obligatorio |
 | RT-06.31 | Las instalaciones sanitarias, las zonas de seguridad ante emergencia y las áreas exteriores existentes en el edificio del CLIENTE podrán utilizarse y no deben implementarse nuevamente. El PROPONENTE declarará de cuáles hará uso. | Obligatorio |
-<!-- ===== página 18 / 51 ===== -->
+<!-- ===== página 17/51 · PDF 18 ===== -->
+
 
 ### 6.9 Rutas de comunicaciones
 
@@ -462,7 +480,8 @@ Complementariamente al sitio principal, el PROPONENTE deberá habilitar un sitio
 | --- | --- |
 | Energía del recinto | 99,95 % |
 | Climatización | 99,95 % |
-<!-- ===== página 19 / 51 ===== -->
+<!-- ===== página 18/51 · PDF 19 ===== -->
+
 
 | Componente | Disponibilidad mensual mínima |
 | --- | --- |
@@ -495,7 +514,8 @@ Los niveles de disponibilidad de infraestructura son un medio, no un fin. El com
 | RT-08.02 | El almacenamiento será redundante, con tolerancia declarada a la falla de discos, control de errores y monitoreo predictivo de salud de los medios. | Obligatorio |
 | RT-08.03 | Los conmutadores de núcleo, los cortafuegos y los balanceadores de carga estarán en configuración de alta disponibilidad, sin punto único de falla. | Obligatorio |
 | RT-08.04 | Todo el equipamiento contará con fuentes de poder redundantes y conexión a circuitos eléctricos distintos. | Obligatorio |
-<!-- ===== página 20 / 51 ===== -->
+<!-- ===== página 19/51 · PDF 20 ===== -->
+
 
 | Código | Requisito | Carácter |
 | --- | --- | --- |
@@ -530,7 +550,8 @@ Conforme al Artículo 14.2 de las Bases Administrativas, la especificación téc
 | Hardware crítico | Soporte 24x7 con atención en sitio y compromiso de resolución en 4 horas. |
 | Hardware no crítico | Soporte en horario hábil con compromiso de resolución en 24 horas. |
 | Software de base y de plataforma | Soporte continuo del fabricante durante todo el período contractual. |
-<!-- ===== página 21 / 51 ===== -->
+<!-- ===== página 20/51 · PDF 21 ===== -->
+
 
 | Elemento | Exigencia mínima |
 | --- | --- |
@@ -546,7 +567,8 @@ Conforme al Artículo 14.2 de las Bases Administrativas, la especificación téc
 | RT-08.17 | Todo medio de almacenamiento que salga de servicio será borrado de forma segura y verificable, con certificado de destrucción o de sanitización entregado al CLIENTE. | Obligatorio |
 | RT-08.18 | La disposición final de equipamiento electrónico se realizará con gestor autorizado, conforme a la normativa de residuos aplicable, con certificado de disposición. | Obligatorio |
 | RT-08.19 | Se valorará una estrategia de reacondicionamiento o de extensión de vida útil que reduzca el impacto ambiental, cuantificada en la propuesta. | Deseable |
-<!-- ===== página 22 / 51 ===== -->
+<!-- ===== página 21/51 · PDF 22 ===== -->
+
 
 ### REQUISITOS NO FUNCIONALES
 
@@ -580,7 +602,8 @@ Los siguientes umbrales son exigibles en producción, medidos en el percentil 95
 | RT-09.05 | El PROPONENTE identificará el componente que primero se convertirá en cuello de botella al crecer la carga y explicará cómo lo detectará y cómo lo resolverá. | Obligatorio |
 | RT-09.06 | Se ejecutarán pruebas de carga sobre Preproducción con un volumen equivalente a 1,5 veces el peak declarado, y pruebas de estrés hasta identificar el punto de quiebre de la solución. | Obligatorio |
 | RT-09.07 | El informe de pruebas de carga incluirá la curva de tiempo de respuesta frente a carga, el punto de saturación, el consumo de recursos y el comportamiento durante y después del peak. | Obligatorio |
-<!-- ===== página 23 / 51 ===== -->
+<!-- ===== página 22/51 · PDF 23 ===== -->
+
 
 | Código | Requisito | Carácter |
 | --- | --- | --- |
@@ -601,7 +624,8 @@ Los siguientes umbrales son exigibles en producción, medidos en el percentil 95
 | RT-10.07 | Se ejecutarán pruebas de resiliencia mediante inyección controlada de fallas —caída de instancia, de zona, de dependencia externa, latencia elevada, saturación de disco— antes de cada paso a producción y al menos una vez por semestre durante la Operación. | Obligatorio |
 | RT-10.08 | El PROPONENTE documentará, por cada dependencia externa, el comportamiento de la solución cuando esa dependencia no responde, responde con error o responde con lentitud. | Obligatorio |
 | RT-10.09 | Se declarará un presupuesto de error por servicio crítico y su vinculación con el ritmo de despliegue de cambios. | Deseable |
-<!-- ===== página 24 / 51 ===== -->
+<!-- ===== página 23/51 · PDF 24 ===== -->
+
 
 ### CAPÍTULO 11 SEGURIDAD DE LA INFORMACIÓN
 
@@ -627,7 +651,8 @@ Los siguientes umbrales son exigibles en producción, medidos en el percentil 95
 | RT-11.11 | La puerta de enlace de servicios aplicará autenticación, autorización, cuotas, límites de tasa, validación de esquema e inspección de carga útil. | Obligatorio |
 | RT-11.12 | Los puntos de entrada públicos contarán con protección contra bots y abuso automatizado, con reto progresivo que no degrade la accesibilidad ni bloquee a personas usuarias legítimas. | Obligatorio |
 | RT-11.13 | El PROPONENTE declarará la superficie de exposición completa de la solución: cada nombre de dominio, puerto y servicio alcanzable desde fuera de la red del CLIENTE. | Obligatorio |
-<!-- ===== página 25 / 51 ===== -->
+<!-- ===== página 24/51 · PDF 25 ===== -->
+
 
 ### 11.3 Detección, respuesta y evidencia
 
@@ -653,7 +678,8 @@ Los siguientes umbrales son exigibles en producción, medidos en el percentil 95
 | RT-11.26 | El PROPONENTE declarará el proceso de aprobación de nuevas dependencias de terceros, incluyendo criterios de licencia, mantención activa y ausencia de vulnerabilidades conocidas. | Obligatorio |
 | RT-11.27 | Las personas desarrolladoras no tendrán acceso interactivo directo al ambiente de producción. Todo acceso excepcional será temporal, aprobado, registrado y con sesión grabada. | Obligatorio |
 | RT-11.28 | Se aplicará el marco OWASP SAMM o equivalente para medir y mejorar la madurez del proceso de desarrollo seguro, con evaluación inicial y reevaluación anual. | Deseable |
-<!-- ===== página 26 / 51 ===== -->
+<!-- ===== página 25/51 · PDF 26 ===== -->
+
 
 ### 11.5 Certificaciones y estándares de seguridad exigidos
 
@@ -683,7 +709,8 @@ Los siguientes umbrales son exigibles en producción, medidos en el percentil 95
 | RT-12.07 | La política de sesión declarará duración máxima, caducidad por inactividad, renovación de la credencial de sesión tras la autenticación, revocación inmediata y control de sesiones concurrentes. | Obligatorio |
 | RT-12.08 | Las credenciales de sesión serán firmadas y de vida breve, con credencial de refresco rotatoria. Queda prohibido transportar identificadores de sesión en la ruta de la dirección web. | Obligatorio |
 | RT-12.09 | Se registrará auditoría completa del ciclo de vida de la identidad: creación, modificación, elevación, bloqueo y baja de cuentas, con no repudio y retención declarada. | Obligatorio |
-<!-- ===== página 27 / 51 ===== -->
+<!-- ===== página 26/51 · PDF 27 ===== -->
+
 
 | Código | Requisito | Carácter |
 | --- | --- | --- |
@@ -707,7 +734,8 @@ Los siguientes umbrales son exigibles en producción, medidos en el percentil 95
 | RT-13.09 | Existirá un sistema de diseño documentado con paleta de colores acotada, jerarquía tipográfica de a lo más dos familias, iconografía coherente, retícula y componentes reutilizables. | Obligatorio |
 | RT-13.10 | El PROPONENTE declarará la matriz de navegadores y de versiones soportadas y su política de actualización. | Obligatorio |
 | RT-13.11 | La solución será navegable íntegramente por teclado, con orden de foco lógico y atajos para las operaciones frecuentes. | Obligatorio |
-<!-- ===== página 28 / 51 ===== -->
+<!-- ===== página 27/51 · PDF 28 ===== -->
+
 
 | Código | Requisito | Carácter |
 | --- | --- | --- |
@@ -737,7 +765,8 @@ Los siguientes umbrales son exigibles en producción, medidos en el percentil 95
 | RT-15.02 | Los ambientes no productivos se apagarán o reducirán fuera del horario de uso. | Obligatorio |
 | RT-15.03 | El PROPONENTE estimará la huella de carbono anual de la operación de la solución y declarará la metodología empleada. | Obligatorio |
 | RT-15.04 | Se declarará la eficiencia en el uso de la energía (PUE) del recinto on-premise y la intensidad de carbono de la región de nube escogida. | Obligatorio |
-<!-- ===== página 29 / 51 ===== -->
+<!-- ===== página 28/51 · PDF 29 ===== -->
+
 
 | Código | Requisito | Carácter |
 | --- | --- | --- |
@@ -774,7 +803,8 @@ El equipo propuesto acreditará, como mínimo, las siguientes certificaciones in
 | RT-15.07 | Las certificaciones se acreditarán con copia del certificado vigente y con el código de verificación del organismo emisor cuando exista. | Obligatorio |
 | RT-15.08 | Las personas certificadas formarán parte del equipo efectivamente asignado al PROYECTO, con dedicación declarada. No se aceptará acreditar personal que no participe. | Obligatorio |
 | RT-15.09 | El ADJUDICATARIO mantendrá vigentes estas certificaciones durante todo el período contractual y las repondrá ante la salida de una persona certificada, conforme al Artículo 76° de las Bases Administrativas. | Obligatorio |
-<!-- ===== página 30 / 51 ===== -->
+<!-- ===== página 29/51 · PDF 30 ===== -->
+
 
 ### CAPACIDADES TRANSVERSALES DE LA SOLUCIÓN
 
@@ -801,7 +831,8 @@ Los módulos y capacidades de este Título son exigibles en las trece industrias
 | RT-16.08 | El CLIENTE podrá consultar y exportar la auditoría desde la interfaz, con filtros por persona, período, entidad y tipo de operación, sin requerir acceso a la base de datos. | Obligatorio |
 | RT-16.09 | Las consultas a información sensible quedarán registradas, no sólo las modificaciones. | Según caso |
 | RT-16.10 | El período de retención de la auditoría será el que fije el caso y, en su defecto, no inferior a cinco años. | Según caso |
-<!-- ===== página 31 / 51 ===== -->
+<!-- ===== página 30/51 · PDF 31 ===== -->
+
 
 ### 16.3 Flujos de trabajo y motor de reglas
 
@@ -833,7 +864,8 @@ Los módulos y capacidades de este Título son exigibles en las trece industrias
 | RT-16.24 | El PROPONENTE declarará el proveedor de cada canal, su costo unitario, su volumen proyectado y el tratamiento del costo variable en la Oferta Económica. | Obligatorio |
 | RT-16.25 | Las notificaciones respetarán la normativa de comunicaciones comerciales y permitirán la baja cuando corresponda. | Obligatorio |
 | RT-16.26 | Se valorará la integración con canales conversacionales que permitan a la persona usuaria responder y ejecutar acciones desde el propio canal. | Deseable |
-<!-- ===== página 32 / 51 ===== -->
+<!-- ===== página 31/51 · PDF 32 ===== -->
+
 
 ### 16.6 Búsqueda, reportería y exportación
 
@@ -864,7 +896,8 @@ Los módulos y capacidades de este Título son exigibles en las trece industrias
 | RT-17.05 | La información almacenada en el dispositivo estará cifrada, con borrado remoto y bloqueo ante pérdida o desvinculación de la persona usuaria. | Obligatorio |
 | RT-17.06 | La aplicación integrará los periféricos que el caso requiera: cámara, lector de códigos, NFC, GPS, impresora de etiquetas, balanza o báscula. | Según caso |
 | RT-17.07 | El consumo de datos móviles y de batería se optimizará y se declarará el consumo estimado por turno de trabajo. | Obligatorio |
-<!-- ===== página 33 / 51 ===== -->
+<!-- ===== página 32/51 · PDF 33 ===== -->
+
 
 | Código | Requisito | Carácter |
 | --- | --- | --- |
@@ -888,7 +921,8 @@ La incorporación de inteligencia artificial no es obligatoria. Sí lo es, cuand
 | RT-18.10 | Se valorará el uso de automatización robótica de procesos o de agentes para tareas repetitivas de back office, con el ahorro de horas cuantificado y reflejado en la Oferta Económica. | Deseable |
 
 > Incorporar un modelo de lenguaje a la solución sin declarar dónde se procesan los datos, sin control de acceso a la información que consulta y sin validación humana de sus resultados será evaluado como incumplimiento de los requisitos de seguridad, no como innovación.
-<!-- ===== página 34 / 51 ===== -->
+<!-- ===== página 33/51 · PDF 34 ===== -->
+
 
 ### PROYECTO, IMPLANTACIÓN Y OPERACIÓN
 
@@ -917,7 +951,8 @@ La incorporación de inteligencia artificial no es obligatoria. Sí lo es, cuand
 | Líder de Calidad y Pruebas | Permanente | Certificación en pruebas de software. |
 | Líder de Integración | Permanente en implementación | Experiencia en integración de sistemas heredados. |
 | Líder de Operación / SRE | Desde el mes 6, permanente en Operación | Certificación en gestión de servicios. |
-<!-- ===== página 35 / 51 ===== -->
+<!-- ===== página 34/51 · PDF 35 ===== -->
+
 
 | Rol | Dedicación mínima | Requisito |
 | --- | --- | --- |
@@ -950,7 +985,8 @@ El PROPONENTE podrá agregar los roles que su propuesta requiera. La dotación t
 | Recuperación ante desastres | Antes del paso a producción y semestral | RTO y RPO comprometidos alcanzados en conmutación real. |
 | Seguridad ofensiva | Antes de cada paso a producción y anual | Sin hallazgos críticos ni altos abiertos. |
 | Accesibilidad | Antes de cada paso a producción | Conformidad WCAG 2.2 AA verificada y documentada. |
-<!-- ===== página 36 / 51 ===== -->
+<!-- ===== página 35/51 · PDF 36 ===== -->
+
 
 | Tipo de prueba | Cuándo | Criterio de salida |
 | --- | --- | --- |
@@ -979,7 +1015,8 @@ El PROPONENTE podrá agregar los roles que su propuesta requiera. La dotación t
 | RT-21.02 | Se designará un gerente de servicio dedicado como contraparte permanente del CLIENTE durante la fase de Operación. | Obligatorio |
 | RT-21.03 | El equipo de operación contará con especialistas por tecnología, nominados y con dedicación declarada. | Obligatorio |
 | RT-21.04 | Los procedimientos de operación estarán documentados y serán ejecutables por el personal del CLIENTE tras la transferencia de conocimiento. | Obligatorio |
-<!-- ===== página 37 / 51 ===== -->
+<!-- ===== página 36/51 · PDF 37 ===== -->
+
 
 ### 21.2 Centro de atención telefónica
 
@@ -1004,7 +1041,8 @@ Este ámbito es central para dar continuidad y seguimiento al esfuerzo de incorp
 | --- | --- | --- |
 | Nivel 1 | Recibe los contactos de las personas usuarias internas y externas sobre cualquier requerimiento de la plataforma. | Recepción, registro del ticket, clasificación, soluciones básicas y derivación. |
 | Nivel 2 | Agentes con mayores conocimientos o especialistas en el sistema y en las aplicaciones provistas por el ADJUDICATARIO. Resuelven los incidentes derivados del nivel 1 apoyándose en manuales y guías. | Soporte especializado, configuraciones y diagnóstico. Los incidentes relativos a procedimientos propios de la operación 0 a aplicaciones del CLIENTE no provistas por el ADJUDICATARIO son de responsabilidad del CLIENTE y no se derivan a la mesa. |
-<!-- ===== página 38 / 51 ===== -->
+<!-- ===== página 37/51 · PDF 38 ===== -->
+
 
 | Nivel | Alcance | Responsabilidad |
 | --- | --- | --- |
@@ -1030,7 +1068,8 @@ Este ámbito es central para dar continuidad y seguimiento al esfuerzo de incorp
 | Código | Requisito | Carácter |
 | --- | --- | --- |
 | RT-21.19 | El PROPONENTE declarará el tamaño de la bolsa anual de horas de mantención evolutiva, su composición por perfil y el procedimiento de solicitud, estimación, aprobación y liquidación. | Obligatorio |
-<!-- ===== página 39 / 51 ===== -->
+<!-- ===== página 38/51 · PDF 39 ===== -->
+
 
 | Código | Requisito | Carácter |
 | --- | --- | --- |
@@ -1051,7 +1090,8 @@ Este ámbito es central para dar continuidad y seguimiento al esfuerzo de incorp
 | RT-22.07 | El ADJUDICATARIO proveerá acompañamiento y mentoría al equipo técnico del CLIENTE durante al menos seis meses posteriores al paso a producción de la Etapa 2. | Obligatorio |
 | RT-22.08 | La base de conocimiento será mantenida y actualizada durante todo el Contrato, con métricas de uso y de utilidad percibida. | Obligatorio |
 | RT-22.09 | Se valorará la existencia de un ambiente permanente de entrenamiento, con datos ficticios, disponible para la práctica sin riesgo. | Deseable |
-<!-- ===== página 40 / 51 ===== -->
+<!-- ===== página 39/51 · PDF 40 ===== -->
+
 
 ### EXIGENCIAS DE PRESENTACIÓN DE LA PROPUESTA
 
@@ -1081,7 +1121,8 @@ El PROPONENTE deberá disponer de una página web corporativa activa y actualiza
 El CLIENTE verificará el sitio durante el proceso de evaluación. Constituyen causal de descalificación:
 
 - Sitio web no disponible o con caídas recurrentes durante el período de evaluación.
-<!-- ===== página 41 / 51 ===== -->
+<!-- ===== página 40/51 · PDF 41 ===== -->
+
 
 - Información falsa o engañosa comprobada.
 - Ausencia de la información crítica exigida en el numeral 23.1.
@@ -1126,7 +1167,8 @@ El video deberá contener los siguientes segmentos, en este orden:
 comprensión del sector.
 
 3. Solución propuesta: visión general, beneficios para cada grupo de interés, diferenciadores clave, innovaciones incluidas y resultados esperados con métricas.
-<!-- ===== página 42 / 51 ===== -->
+<!-- ===== página 41/51 · PDF 42 ===== -->
+
 
 4. Propuesta tecnológica: conjunto tecnológico completo, arquitectura de alto nivel, servicios de nube
 
@@ -1168,7 +1210,8 @@ relevantes, garantías y compromisos, y valor agregado único.
 ### 24.5 Entrega, derechos y autorizaciones
 
 - Entrega física: unidad de almacenamiento USB junto con la propuesta, etiquetada con el nombre de la empresa y del proyecto, incluyendo archivo de respaldo.
-<!-- ===== página 43 / 51 ===== -->
+<!-- ===== página 42/51 · PDF 43 ===== -->
+
 
 - Entrega digital: enlace de descarga con vigencia mínima de 60 días, sin restricciones de descarga y con la contraseña de acceso en documento separado.
 - El PROPONENTE autoriza el uso del video para fines de evaluación y su proyección en las sesiones de evaluación.
@@ -1198,7 +1241,8 @@ El prototipo deberá incluir, como mínimo, las siguientes vistas y funcionalida
 | Tablero analítico | Indicadores principales con visualizaciones; al menos seis tipos de gráfico distintos; filtros por período y categoría; profundización desde el indicador hasta el detalle; y exportación de informes. |
 | Administración | Gestión de personas usuarias, roles y permisos; parametrización; y consulta de auditoría. |
 | Dos módulos adicionales | A elección del PROPONENTE, pertinentes al caso. |
-<!-- ===== página 44 / 51 ===== -->
+<!-- ===== página 43/51 · PDF 44 ===== -->
+
 
 ### 25.3 Principios de diseño exigidos
 
@@ -1228,7 +1272,8 @@ El prototipo deberá incluir, como mínimo, las siguientes vistas y funcionalida
 | RT-25.07 | El acceso al prototipo estará garantizado por un mínimo de seis meses desde su entrega. | Obligatorio |
 | RT-25.08 | El prototipo permitirá navegación completa entre pantallas, simulación de ingreso de datos, transiciones y animaciones básicas, estados de posado y activo, simulación de carga de archivos, elementos desplegables funcionales y simulación de validaciones. | Obligatorio |
 | RT-25.09 | Se entregará la arquitectura de información del prototipo: mapa del sitio completo, diagrama de navegación, taxonomía y nomenclatura, estructura de menús y jerarquía de la información. | Obligatorio |
-<!-- ===== página 45 / 51 ===== -->
+<!-- ===== página 44/51 · PDF 45 ===== -->
+
 
 | Código | Requisito | Carácter |
 | --- | --- | --- |
@@ -1267,7 +1312,8 @@ La exigencia de innovación se establece en el Capítulo 5 de las Bases Administ
 | RT-26.04 | Cada innovación declarará su riesgo de adopción, su probabilidad, su impacto, la estrategia de mitigación y el plan de contingencia si no rinde lo esperado. | Obligatorio |
 | RT-26.05 | Cada innovación declarará su indicador de verificación con línea base, meta y momento de medición, y su impacto en inversión, costo operacional y beneficio esperado. | Obligatorio |
 | RT-26.06 | Las innovaciones que incorporen inteligencia artificial cumplirán íntegramente el Capítulo 18 de este documento. | Obligatorio |
-<!-- ===== página 46 / 51 ===== -->
+<!-- ===== página 45/51 · PDF 46 ===== -->
+
 
 | Código | Requisito | Carácter |
 | --- | --- | --- |
@@ -1275,7 +1321,8 @@ La exigencia de innovación se establece en el Capítulo 5 de las Bases Administ
 | RT-26.08 | Se valorará que al menos una innovación sea verificable durante la marcha blanca de la Etapa 1, es decir, que su beneficio pueda medirse antes del mes 16. | Deseable |
 
 > No se aceptará como innovación la sola adopción de una tecnología que ya constituye estándar de la industria, la mención de una tendencia sin diseño de incorporación, ni una funcionalidad exigida por las Bases Técnicas presentada como innovación. La pertinencia al caso pesa más que la novedad tecnológica en abstracto.
-<!-- ===== página 47 / 51 ===== -->
+<!-- ===== página 46/51 · PDF 47 ===== -->
+
 
 ### CAPÍTULO A ÍNDICE DE REQUISITOS TRANSVERSALES
 
@@ -1309,7 +1356,8 @@ Resumen de los requisitos codificados de este documento. El PROPONENTE deberá p
 | 23 | Información corporativa y presencia digital | RT-23.01—RT-23.10 | 10 |
 | 24 | Video de presentación de la propuesta | RT-24.01—RT-24.06 | 6 |
 | 25 | Prototipo interactivo y diseño UX/UI | RT-25.01—RT-25.10 | 10 |
-<!-- ===== página 48 / 51 ===== -->
+<!-- ===== página 47/51 · PDF 48 ===== -->
+
 
 | Cap. | Materia | Rango de códigos | N° |
 | --- | --- | --- | --- |
@@ -1347,7 +1395,8 @@ Lista de verificación para el PROPONENTE. No reemplaza a los formularios del An
 | --- | --- | --- | --- |
 | 1 | Documento de arquitectura conforme a ISO/IEC/1EEE 42010, con las cinco vistas | RT-02.03 | Sobre N° 2 |
 | 2 | Registro de decisiones de arquitectura (ADR) | RT-02.04 | Sobre N° 2 |
-<!-- ===== página 49 / 51 ===== -->
+<!-- ===== página 48/51 · PDF 49 ===== -->
+
 
 | N° | Entregable | Dónde se exige | Sobre / instancia |
 | --- | --- | --- | --- |
@@ -1375,7 +1424,8 @@ Lista de verificación para el PROPONENTE. No reemplaza a los formularios del An
 | 24 | Matriz de cumplimiento técnico (Formulario T-12) sobre todos los códigos RT | Numeral 1.5 | Sobre N° 2 |
 | 25 | Sitio web corporativo activo y declaración jurada de veracidad | Cap. 23 | Sobre N° 1 |
 | 26 | Video de presentación de la propuesta | Cap. 24 | Con la propuesta final |
-<!-- ===== página 50 / 51 ===== -->
+<!-- ===== página 49/51 · PDF 50 ===== -->
+
 
 | N° | Entregable | Dónde se exige | Sobre / instancia |
 | --- | --- | --- | --- |
@@ -1410,7 +1460,8 @@ Complementa el Artículo 3° de las Bases Administrativas. Ante discrepancia, pr
 | NOC | Network Operations Center. Centro de operaciones de red. |
 | NCh | Norma Chilena Oficial, emitida por el Instituto Nacional de Normalización. |
 | OpenTelemetry | Estándar abierto de instrumentación para métricas, registros y trazas. |
-<!-- ===== página 51 / 51 ===== -->
+<!-- ===== página 50/51 · PDF 51 ===== -->
+
 
 | Término | Definición |
 | --- | --- |

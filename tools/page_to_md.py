@@ -300,10 +300,13 @@ def render_table(ocr, hr, vr, lang):
     # Una sola columna no es una tabla: es un recuadro destacado.
     if ncol == 1:
         body = " ".join(r[0] for r in grid).strip()
-        # Un recuadro de una sola columna con texto corto es el título de un
-        # formulario o sección, no una cita destacada.
-        return (f"### {body}\n" if len(body) < 80 and not body.endswith(".")
-                else f"> {body}\n")
+        # Un recuadro de una sola columna es el título de un formulario o sección,
+        # no una cita destacada, cuando el texto es corto o cuando se identifica
+        # como encabezado por sí mismo (el de un formulario puede pasar de 80
+        # caracteres y aun así ser un título).
+        titulo = (CAP.match(body) and body == body.upper()) or (
+            len(body) < 80 and not body.endswith("."))
+        return f"### {body}\n" if titulo else f"> {body}\n"
 
     out = ["| " + " | ".join(grid[0]) + " |",
            "| " + " | ".join("---" for _ in grid[0]) + " |"]
@@ -313,7 +316,7 @@ def render_table(ocr, hr, vr, lang):
 
 ART = re.compile(r"^(ART[IÍ]CULO|ANEXO|AP[EÉ]NDICE)\s", re.I)
 SUBSEC = re.compile(r"^\d+(\.\d+)+\s+\S")
-CAP = re.compile(r"^CAP[IÍ]TULO\s+[0-9IVX]+\b", re.I)
+CAP = re.compile(r"^(?:CAP[IÍ]TULO\s+[0-9IVX]+|FORMULARIO\s+[A-Z]+-?\d+)\b", re.I)
 
 
 def group_lines(words):
@@ -417,10 +420,12 @@ def render_prose(ocr, y0, y1, lang):
 
     def kind_of(ln):
         t = ln["text"]
-        # El encabezado de capítulo no siempre se compone más grande que el
-        # cuerpo, así que la prueba de altura se le escapa a varios. El texto
-        # sí es inequívoco.
-        if CAP.match(t):
+        # Los encabezados de capítulo y de formulario no siempre se componen
+        # más grandes que el cuerpo, así que la prueba de altura se le escapa a
+        # la mitad de ellos. El texto sí es inequívoco, siempre que se exija
+        # además la caja alta: en prosa aparecen menciones como "Formulario A-1:
+        # Identificación del Proponente", que no son encabezados.
+        if CAP.match(t) and t == t.upper():
             return "h3"
         if ART.match(t):
             return "h2"
@@ -509,6 +514,23 @@ def render_prose(ocr, y0, y1, lang):
     return text
 
 
+PIE = re.compile(r"(\d+)\s*/\s*(\d+)")
+
+
+def pagina_impresa(ocr, lang):
+    """Número de página impreso en el pie, que es el que se cita.
+
+    No coincide con el número de página del PDF: en estos tres documentos la
+    portada no va numerada, así que el impreso es siempre uno menos. Se lee del
+    pie en vez de asumir el desfase, para que la cita sea verificable.
+    Se toma la ÚLTIMA fracción del renglón: antes viene "TFEP-01/2026".
+    """
+    pie = ocr[int(ocr.shape[0] * (1 - MARGIN_FRAC)):, :]
+    txt = " ".join(w["text"] for w in ocr_tsv(pie, lang, 11, pad=25))
+    ms = PIE.findall(txt)
+    return f"{ms[-1][0]}/{ms[-1][1]}" if ms else ""
+
+
 def page_to_md(path, lang="spa"):
     mn = np.array(Image.open(path).convert("RGB")).min(axis=2)
     H, W = mn.shape
@@ -556,7 +578,8 @@ def page_to_md(path, lang="spa"):
     if bot - cursor > MIN_STRIP:
         chunks.append(("prose", cursor, bot, None, None))
 
-    out = []
+    marca = pagina_impresa(ocr, lang)
+    out = [f"<!--pag:{marca}-->"] if marca else ["<!--pag:-->"]
     for kind, y0, y1, rows, cols in chunks:
         md = (render_prose(ocr, y0, y1, lang) if kind == "prose"
               else render_table(ocr, rows, cols, lang))

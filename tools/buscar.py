@@ -35,7 +35,7 @@ TEXTO = RAIZ / "texto"
 DB = TEXTO / "secciones.db"
 MAPA = TEXTO / "INDICE.md"
 
-PAGINA = re.compile(r"<!-- ===== página (\d+) / (\d+) ===== -->")
+PAGINA = re.compile(r"<!-- ===== página (\d+) ?/ ?(\d+) · PDF (\d+) ===== -->")
 TITULO_MD = re.compile(r"^(#{2,3})\s+(.*\S)\s*$")
 TITULO_TXT = re.compile(r"^(\d+)\.\s+([A-ZÁÉÍÓÚÑ].*\S)\s*$")
 
@@ -70,7 +70,7 @@ def secciones(path):
     for linea in path.read_text().split("\n"):
         m = PAGINA.match(linea)
         if m:
-            pagina = int(m.group(1))
+            pagina = int(m.group(1))       # la impresa, que es la que se cita
             continue
         t = TITULO_MD.match(linea) if md else TITULO_TXT.match(linea)
         if t:

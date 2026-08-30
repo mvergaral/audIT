@@ -148,7 +148,13 @@ for pdf in "$@"; do
   find "$wd" -name "p-*.$EXT" | sort -V | while read -r f; do
     n=$(basename "$f" ".$EXT"); n=${n#p-}; n=$((10#$n))
     if [ "$MARKDOWN" -eq 1 ]; then
-      printf '\n<!-- ===== página %d / %s ===== -->\n\n' "$n" "$pages" >> "$out"
+      # page_to_md deja en la primera línea el número impreso en el pie, que es
+      # el que se cita; el del PDF va aparte porque no coinciden.
+      imp=$(head -1 "$f" | sed -n 's/^<!--pag:\(.*\)-->$/\1/p')
+      [ -n "$imp" ] || imp="? / $pages"
+      printf '\n<!-- ===== página %s · PDF %d ===== -->\n\n' "$imp" "$n" >> "$out"
+      tail -n +2 "$f" >> "$out"
+      continue
     else
       printf '\n\n===== [%s] página %d/%s =====\n\n' "$name" "$n" "$pages" >> "$out"
     fi

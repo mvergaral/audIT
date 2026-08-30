@@ -1,5 +1,6 @@
 
-<!-- ===== página 1 / 77 ===== -->
+<!-- ===== página ? / 77 · PDF 1 ===== -->
+
 
 ### FORMULACIÓN DE PROYECTOS
 
@@ -12,7 +13,8 @@ DE LA PROPUESTA
 Versión 1.0
 
 Fecha Documento: 18-08-2026
-<!-- ===== página 2 / 77 ===== -->
+<!-- ===== página 1/77 · PDF 2 ===== -->
+
 
 ### Bases Administrativas
 
@@ -43,7 +45,8 @@ CONTENIDO
 | VI - Contratación y ejecución | 18-22 | 67° —82° |
 | VII: Disposiciones especiales | 23-26 | 83° —94° |
 | VIII - Anexos y formularios | A—-C | Formularios A-1 a A-6, T-6 a T-22, E-21aE-26 |
-<!-- ===== página 3 / 77 ===== -->
+<!-- ===== página 2/77 · PDF 3 ===== -->
+
 
 Cómo está organizado este documento
 
@@ -54,7 +57,8 @@ El Título I| es distinto y merece atención especial. Contiene el objeto de la 
 El Título VII reúne los formularios. Los del Anexo A integran el Sobre N° 1, los del Anexo B el Sobre N° 2 y los del Anexo C el Sobre N° 3.
 
 > Advertencia sobre el nivel de exigencia de estas Bases. El CLIENTE ha optado deliberadamente por un pliego exigente. Los requisitos de arquitectura, seguridad, continuidad, calidad y operación que contiene el Capítulo 4 no son aspiracionales: son el estándar con que hoy se contratan plataformas de misión crítica en la industria. Una propuesta que los aborde de manera superficial no será competitiva, con independencia de su precio.
-<!-- ===== página 4 / 77 ===== -->
+<!-- ===== página 3/77 · PDF 4 ===== -->
+
 
 ### DISPOSICIONES GENERALES
 
@@ -84,7 +88,8 @@ Para la correcta interpretación de las presentes Bases, de las Bases Técnicas 
 | ALTA DISPONIBILIDAD | Capacidad de la solución de mantener el servicio ante la falla de uno o más de sus componentes, sin intervención manual y sin pérdida de transacciones comprometidas. |
 | AMBIENTE | Instancia completa e independiente de la solución. El PROYECTO exige, como mínimo, los ambientes de Desarrollo, QA, Preproducción y Producción, más el ambiente de Recuperación ante Desastres. |
 | BASES | Conjunto integrado por las Bases Administrativas, las Bases Técnicas del caso, sus anexos, formularios, aclaraciones y modificaciones. |
-<!-- ===== página 5 / 77 ===== -->
+<!-- ===== página 4/77 · PDF 5 ===== -->
+
 
 | Término | Definición |
 | --- | --- |
@@ -107,7 +112,8 @@ Para la correcta interpretación de las presentes Bases, de las Bases Técnicas 
 | SLA / SLO / SLI | Acuerdo, objetivo e indicador de nivel de servicio, respectivamente, conforme a la definición de ITIL 4 e ISO/IEC 20000-1. |
 | SOLUCIÓN HÍBRIDA | Arquitectura en que la carga principal se ejecuta en nube pública y existen componentes obligatorios desplegados on-premise, integrados como un único sistema gobernado. |
 | ZERO TRUST | Modelo de seguridad en que ninguna red, dispositivo, identidad o carga de trabajo es confiable por defecto, y toda solicitud se autentica, autoriza y cifra de forma explícita. |
-<!-- ===== página 6 / 77 ===== -->
+<!-- ===== página 5/77 · PDF 6 ===== -->
+
 
 ## ARTÍCULO 4°. MARCO LEGAL, NORMATIVO Y DE ESTÁNDARES
 
@@ -144,7 +150,8 @@ Para la correcta interpretación de las presentes Bases, de las Bases Técnicas 
 | Continuidad del negocio | ISO 22301 para el sistema de gestión de continuidad; ISO/IEC 27031 para la continuidad TIC. |
 | Gestión de servicios | ISO/IEC 20000-1; prácticas ITIL 4; principios de Site Reliability Engineering. |
 | Calidad del producto software | ISO/IEC 25010 e ISO/IEC 25012 para calidad de datos; ISO/IEC/IEEE 29119 para pruebas. |
-<!-- ===== página 7 / 77 ===== -->
+<!-- ===== página 6/77 · PDF 7 ===== -->
+
 
 | Ámbito | Estándar o marco exigido |
 | --- | --- |
@@ -176,7 +183,8 @@ N Bases Técnicas del caso asignado y sus anexos.
 5.3 En caso de discrepancia prevalecerá el orden establecido en el numeral 5.1. Si la discrepancia se produce entre disposiciones de un mismo documento, prevalecerá la más exigente para el ADJUDICATARIO.
 
 5.4 Si el PROPONENTE detecta una contradicción, un vacío 0 una ambiguedad en las Bases, deberá plantearla durante el período de consultas. Presentada la oferta, se entenderá que el PROPONENTE aceptó la interpretación más exigente y no podrá invocar la contradicción como fundamento de mayor precio, mayor plazo o menor alcance.
-<!-- ===== página 8 / 77 ===== -->
+<!-- ===== página 7/77 · PDF 8 ===== -->
+
 
 ## ARTÍCULO 6°. INTERPRETACIÓN DE LAS BASES
 
@@ -217,7 +225,8 @@ retroalimentación formal del CLIENTE.
 9.3 Para efectos de evaluación y de conversión entre monedas se utilizarán exclusivamente los parámetros del Formulario E-24. El uso de tipos de cambio distintos constituye causal de observación grave y, si altera el orden de mérito, causal de inadmisibilidad de la oferta económica.
 
 9.4 Los precios ofertados se entenderán firmes durante la Etapa 1 y la Etapa 2. Para la fase de Operación se admitirá reajustabilidad conforme a lo que el PROPONENTE declare y justifique en su Oferta Económica, la que no podrá superar la variación acumulada del Índice de Precios al Consumidor del período.
-<!-- ===== página 9 / 77 ===== -->
+<!-- ===== página 8/77 · PDF 9 ===== -->
+
 
 ## ARTÍCULO 10°. CÓMPUTO Y CARÁCTER DE LOS PLAZOS
 
@@ -258,10 +267,12 @@ todos los participantes registrados por los canales oficiales.
 13.3 Se prohíbe todo contacto con integrantes de la Comisión Evaluadora respecto del contenido de las ofertas fuera de los canales y las instancias formales previstas en estas Bases.
 
 13.4 La constatación de plagio, de suplantación de autoría, de falsificación de antecedentes o de presentación de información que no corresponda a la realidad producirá la exclusión inmediata del PROPONENTE y la ejecución de la Garantía de Seriedad de la Oferta.
-<!-- ===== página 10 / 77 ===== -->
+<!-- ===== página 9/77 · PDF 10 ===== -->
+
 
 13.5 El uso de herramientas de inteligencia artificial generativa en la preparación de la propuesta deberá declararse en el Formulario A-6, indicando en qué secciones se utilizó y con qué finalidad. La declaración no exime al PROPONENTE de la responsabilidad íntegra sobre el contenido, la exactitud y la originalidad de su propuesta.
-<!-- ===== página 11 / 77 ===== -->
+<!-- ===== página 10/77 · PDF 11 ===== -->
+
 
 ### OBJETO, ALCANCE Y REQUISITOS TRANSVERSALES OBLIGATORIOS
 
@@ -294,7 +305,8 @@ todos los participantes registrados por los canales oficiales.
 > Gestión del cambio organizacional, capacitación y transferencia tecnológica.
 
 > Soporte, mantención correctiva, preventiva y evolutiva, y operación de la plataforma durante 36 meses. Documentación técnica, operativa y de usuario, y entrega de código fuente y artefactos conforme al Título VII
-<!-- ===== página 12 / 77 ===== -->
+<!-- ===== página 11/77 · PDF 12 ===== -->
+
 
 ## ARTÍCULO 15°. ESTRUCTURA DEL SUMINISTRO
 
@@ -323,7 +335,8 @@ todos los participantes registrados por los canales oficiales.
 - Uso de servicios administrados por sobre servicios autoadministrados cuando ello reduzca el riesgo operacional, con justificación explícita en cada caso.
 - Gestión de costos en nube conforme a prácticas FinOps: etiquetado obligatorio de recursos, presupuestos, alertas de desviación y reporte mensual de consumo al CLIENTE.
 - Declaración explícita de la estrategia de reversibilidad y de mitigación del bloqueo por proveedor, identificando qué componentes son portables y cuáles no.
-<!-- ===== página 13 / 77 ===== -->
+<!-- ===== página 12/77 · PDF 13 ===== -->
+
 
 ### 16.4 Exigencias del componente on-premise
 
@@ -354,7 +367,8 @@ Enlace de comunicaciones redundante entre el sitio on-premise y la nube, con cam
 | 19-20 | Etapa 2 - Marcha blanca | Dos meses de operación supervisada de la Etapa 2, conviviendo con la Etapa 1 en producción, con integridad de datos garantizada entre ambos alcances. |
 | 21 | Etapa 2 - Producción | La Etapa 2 pasa a producción. Aceptación final del PROYECTO de implementación. |
 | 21-56 | Operación | 36 meses continuos de soporte de la plataforma y de la operación, bajo los niveles de servicio del Artículo 78°. |
-<!-- ===== página 14 / 77 ===== -->
+<!-- ===== página 13/77 · PDF 14 ===== -->
+
 
 ### 17.2 Reglas de solapamiento y convivencia:
 
@@ -386,7 +400,8 @@ PROPONENTE deberá dimensionar dotación y frentes de trabajo suficientes para a
 18.3 El CLIENTE dispondrá de diez días hábiles para revisar cada entregable y pronunciarse. Formuladas observaciones, el ADJUDICATARIO dispondrá de diez días hábiles para subsanarlas. La segunda presentación de un entregable con observaciones de la misma naturaleza se considerará atraso imputable al ADJUDICATARIO.
 
 18.4 La aceptación de un entregable no libera al ADJUDICATARIO de su responsabilidad por defectos posteriores, ni convalida incumplimientos de requisitos que se detecten con posterioridad.
-<!-- ===== página 15 / 77 ===== -->
+<!-- ===== página 14/77 · PDF 15 ===== -->
+
 
 ### CAPÍTULO 4 REQUISITOS TRANSVERSALES OBLIGATORIOS DE LA SOLUCIÓN
 
@@ -412,7 +427,8 @@ Los requisitos de este Capítulo son exigibles a la totalidad de los casos e ind
 - Prueba de recuperación ante desastres al menos semestral durante la fase de Operación, con ejecución real de la conmutación, informe de resultados y plan de corrección de las brechas detectadas.
 - Política de respaldo con esquema 3-2-1-1-0: tres copias, en dos medios, una fuera de sitio, una inmutable o fuera de línea y cero errores de verificación de restauración.
 - Respaldos cifrados en reposo y en tránsito, con retención declarada, con copias inmutables protegidas contra borrado y con prueba de restauración documentada al menos mensual.
-<!-- ===== página 16 / 77 ===== -->
+<!-- ===== página 15/77 · PDF 16 ===== -->
+
 
 Plan de continuidad del negocio conforme a ISO 22301, con análisis de impacto en el negocio, escenarios de contingencia y procedimientos manuales de respaldo para el período de indisponibilidad.
 
@@ -465,7 +481,8 @@ responsables y protocolo de comunicación al CLIENTE dentro de las dos horas de 
 Obligación de notificar al CLIENTE toda brecha de seguridad y de datos personales en un plazo no
 
 superior a 24 horas desde su detección, con informe preliminar, y de entregar el análisis de causa raíz dentro de los cinco días hábiles siguientes.
-<!-- ===== página 17 / 77 ===== -->
+<!-- ===== página 16/77 · PDF 17 ===== -->
+
 
 Pruebas de intrusión anuales por un tercero independiente del ADJUDICATARIO, y previas a cada paso a producción, con entrega íntegra del informe al CLIENTE y plan de remediación con plazos.
 
@@ -518,7 +535,8 @@ considerando entornos de terreno, guantes, baja alfabetización digital y dispos
 Modelo de datos documentado, normalizado donde corresponda y con diccionario de datos entregable, incluyendo linaje y propietario de cada dominio de información.
 
 Trazabilidad completa de las operaciones de negocio: toda transacción debe permitir reconstruir quién, qué, cuándo, desde dónde y con qué valores anteriores y posteriores.
-<!-- ===== página 18 / 77 ===== -->
+<!-- ===== página 17/77 · PDF 18 ===== -->
+
 
 Calidad de datos conforme a ISO/IEC 25012, con reglas de validación en el punto de captura, indicadores de completitud y exactitud, y proceso de saneamiento de los datos migrados.
 
@@ -571,7 +589,8 @@ correlacionadas por identificador único de transacción, con instrumentación c
 Alertamiento basado en síntomas de negocio y no sólo en umbrales de infraestructura, con supresión de ruido, escalamiento automático y turnos de disponibilidad declarados.
 
 Mesa de servicio con canal único de registro, clasificación por severidad, seguimiento del ciclo de vida del incidente y reporte mensual de cumplimiento.
-<!-- ===== página 19 / 77 ===== -->
+<!-- ===== página 18/77 · PDF 19 ===== -->
+
 
 Libros de operación y guías de resolución documentados para cada escenario de falla previsible, con automatización progresiva de las tareas repetitivas.
 
@@ -614,7 +633,8 @@ Entrega anual al CLIENTE de los informes de certificación vigentes del ADJUDICA
 proveedores de nube, y notificación inmediata de toda pérdida o suspensión de una certificación.
 
 Conservación de la evidencia de cumplimiento por todo el período contractual y por veinticuatro meses adicionales.
-<!-- ===== página 20 / 77 ===== -->
+<!-- ===== página 19/77 · PDF 20 ===== -->
+
 
 ### CAPÍTULO 5 EXIGENCIA DE INNOVACIÓN
 
@@ -651,7 +671,8 @@ descomposición del trabajo la ejecutan y en qué mes del cronograma se material
 5. Impacto económico estimado: inversión requerida, efecto en el costo operacional y beneficio esperado, reflejado en el flujo de caja de la propuesta.
 
 6. Indicador de verificación del beneficio, con línea base, meta y momento de medición.
-<!-- ===== página 21 / 77 ===== -->
+<!-- ===== página 20/77 · PDF 21 ===== -->
+
 
 7. Riesgo de adopción, su probabilidad, su impacto, la estrategia de mitigación y el plan de contingencia si la innovación no rinde lo esperado.
 
@@ -664,7 +685,8 @@ descomposición del trabajo la ejecutan y en qué mes del cronograma se material
 30.3 Las innovaciones comprometidas en la propuesta adjudicada forman parte del alcance contractual y son exigibles como cualquier otro requerimiento. Su omisión durante la ejecución será tratada como incumplimiento del alcance.
 
 > No se aceptará como innovación: la sola adopción de una tecnología que ya constituye estándar de la industria; la mención de una tendencia sin diseño de incorporación; ni una funcionalidad exigida por las Bases Técnicas presentada como innovación.
-<!-- ===== página 22 / 77 ===== -->
+<!-- ===== página 21/77 · PDF 22 ===== -->
+
 
 ### REQUISITOS Y CONDICIONES DE PARTICIPACIÓN
 
@@ -721,7 +743,8 @@ Los consorcios y uniones temporales deberán:
 > 1. Designar un representante único con poder suficiente para obligar a todos sus integrantes.
 
 > 2. Establecer responsabilidad solidaria e indivisible entre todos sus integrantes respecto de la totalidad de las obligaciones del Contrato.
-<!-- ===== página 23 / 77 ===== -->
+<!-- ===== página 22/77 · PDF 23 ===== -->
+
 
 3. Presentar promesa de constitución formal, exigible en caso de adjudicación, con plazo de constitución no superior a quince días hábiles desde la notificación.
 
@@ -746,7 +769,8 @@ Ningún integrante podrá participar en más de un consorcio ni, simultáneament
 | Cumplimiento laboral | Sin deudas previsionales ni sanciones laborales graves vigentes. | Certificado de la Dirección del Trabajo y Boletín Laboral y Previsional. |
 
 34.2 El CLIENTE se reserva el derecho de verificar directamente con las contrapartes declaradas la efectividad de la experiencia informada. La constatación de información no veraz produce la exclusión inmediata y la ejecución de la Garantía de Seriedad de la Oferta.
-<!-- ===== página 24 / 77 ===== -->
+<!-- ===== página 23/77 · PDF 24 ===== -->
+
 
 ### CAPÍTULO 7 GARANTÍAS Y SEGUROS
 
@@ -781,7 +805,8 @@ Ningún integrante podrá participar en más de un consorcio ni, simultáneament
 | Vigencia | Desde la firma del Contrato y hasta doce (12) meses posteriores al término de la fase de Operación. |
 | Plazo de entrega | Dentro de los diez (10) días hábiles siguientes a la notificación de la adjudicación. |
 | Efecto | Reemplaza a la Garantía de Seriedad de la Oferta, la que se devolverá una vez recibida conforme. |
-<!-- ===== página 25 / 77 ===== -->
+<!-- ===== página 24/77 · PDF 25 ===== -->
+
 
 36.2 Esta garantía caucionará el cumplimiento íntegro y oportuno de todas las obligaciones del Contrato, incluidas las obligaciones laborales y previsionales del ADJUDICATARIO y de sus subcontratistas, y el pago de multas.
 
@@ -803,7 +828,8 @@ El ADJUDICATARIO deberá mantener vigentes, durante toda la ejecución del Contr
 | Ciberriesgo y responsabilidad por datos | UF 20.000, con cobertura de gastos de notificación, análisis forense y restitución de datos. | Toda la duración del Contrato y 12 meses posteriores. |
 | Todo riesgo de equipos y bienes | Valor de reposición de los equipos provistos u operados en instalaciones del CLIENTE. | Desde la instalación hasta la entrega final. |
 | Accidentes del trabajo y responsabilidad patronal | Conforme a la legislación vigente. | Toda la duración del Contrato. |
-<!-- ===== página 26 / 77 ===== -->
+<!-- ===== página 25/77 · PDF 26 ===== -->
+
 
 ### CAPÍTULO 8 REQUISITOS ADMINISTRATIVOS Y FORMALES
 
@@ -843,7 +869,8 @@ Los PROPONENTES deberán presentar, en el Sobre N° 1, la totalidad de los sigui
 - Formulario A-5: presentación e índice de antecedentes.
 - Formulario A-6: declaración de uso de herramientas de inteligencia artificial generativa.
 - Certificaciones institucionales y de fabricante vigentes.
-<!-- ===== página 27 / 77 ===== -->
+<!-- ===== página 26/77 · PDF 27 ===== -->
+
 
 ## ARTÍCULO 40°. REQUISITOS DE FORMA Y PRESENTACIÓN
 
@@ -866,7 +893,8 @@ Los PROPONENTES deberán presentar, en el Sobre N° 1, la totalidad de los sigui
 | Tamaño máximo | 500 MB por sobre digital; los archivos mayores deberán segmentarse y declararse en el índice. |
 
 > El CLIENTE no revisará documentos que no consten en el índice, que no estén foliados, que estén protegidos por contraseña no informada o que no puedan abrirse con las herramientas estándar declaradas. La carga de la correcta presentación recae íntegramente en el PROPONENTE.
-<!-- ===== página 28 / 77 ===== -->
+<!-- ===== página 27/77 · PDF 28 ===== -->
+
 
 ### PROCESO DE LICITACIÓN
 
@@ -905,7 +933,8 @@ El Calendario de Actividades es el establecido en el Formulario T-20 de estas Ba
 ### 43.3 Nomenclatura del archivo: CONSULTAS_ [EMPRESA] _AAAAMMDD.XLSX
 
 43.4 El CLIENTE responderá únicamente las consultas pertinentes al proceso, concretas y precisas, y que no involucren información confidencial ni exijan al CLIENTE diseñar la solución en lugar del PROPONENTE.
-<!-- ===== página 29 / 77 ===== -->
+<!-- ===== página 28/77 · PDF 29 ===== -->
+
 
 43.5 Las respuestas se consolidarán en un Acta de Respuestas a Consultas, de conocimiento público para todos los participantes registrados, que pasará a formar parte integrante de las Bases con la precedencia del Artículo 5°. Las consultas se publicarán sin identificar a la empresa que las formuló.
 
@@ -941,7 +970,8 @@ El contenido exigido en cada instancia se detalla en el Formulario T-22. Cada in
 47.1 Las observaciones formuladas por el CLIENTE en una instancia preparatoria son vinculantes. Su no incorporación en la propuesta final será evaluada como observación grave en el criterio afectado.
 
 47.2 Las presentaciones preparatorias ponderan un diez por ciento del puntaje final, conforme al Artículo 62°. 47.3 La retroalimentación del CLIENTE no constituye aprobación de la solución ni traslada al CLIENTE responsabilidad alguna sobre las decisiones técnicas del PROPONENTE.
-<!-- ===== página 30 / 77 ===== -->
+<!-- ===== página 29/77 · PDF 30 ===== -->
+
 
 ### CAPÍTULO 12 RECEPCIÓN Y APERTURA DE OFERTAS
 
@@ -980,7 +1010,8 @@ El contenido exigido en cada instancia se detalla en el Formulario T-22. Cada in
 51.1 Contenido obligatorio conforme al Formulario E-21, comprendiendo los tres entregables allí definidos. 51.2 Formato: valores en CLP, UF y USD; valores netos; IVA desglosado; totales por ítem y total general; tipo de cambio del Formulario E-24.
 
 ### 51.3 Nomenclatura: SOBRE3_[EMPRESA]_OFERTA_ECONOMICA_AAAAMMDD.ZIP
-<!-- ===== página 31 / 77 ===== -->
+<!-- ===== página 30/77 · PDF 31 ===== -->
+
 
 51.4 Los valores contenidos en los tres entregables de la Oferta Económica deberán ser idénticos entre sí y coherentes con la Oferta Técnica. Toda discrepancia no explicada es causal de descalificación.
 
@@ -1014,7 +1045,8 @@ Serán declaradas inadmisibles, sin evaluación posterior, las ofertas que incur
 - Ausencia de la cartera completa de cinco innovaciones exigida en el Artículo 28°.
 
 > La inadmisibilidad opera de pleno derecho y se declarará en acta fundada. El CLIENTE no está obligado a otorgar plazo de subsanación respecto de estas causales.
-<!-- ===== página 32 / 77 ===== -->
+<!-- ===== página 31/77 · PDF 32 ===== -->
+
 
 ### EVALUACIÓN Y ADJUDICACIÓN
 
@@ -1053,7 +1085,8 @@ Serán declaradas inadmisibles, sin evaluación posterior, las ofertas que incur
 | 100 | El ítem cumple con todo lo solicitado, sin observaciones. |
 | 930 | El ítem cumple con todo lo solicitado, con una observación menor. |
 | 80 | El ítem cumple con lo solicitado, pero presenta dos observaciones. |
-<!-- ===== página 33 / 77 ===== -->
+<!-- ===== página 32/77 · PDF 33 ===== -->
+
 
 | Puntaje | Criterio de asignación |
 | --- | --- |
@@ -1089,7 +1122,8 @@ Serán excluidas de la continuación del proceso las ofertas que:
 - Obtengan un puntaje técnico ponderado total inferior a 60 puntos.
 - Omitan alguno de los subdocumentos obligatorios del Formulario T-7.
 - No acrediten el cumplimiento de los requisitos transversales obligatorios del Capítulo 4.
-<!-- ===== página 34 / 77 ===== -->
+<!-- ===== página 33/77 · PDF 34 ===== -->
+
 
 ### CAPÍTULO 15 EVALUACIÓN ECONÓMICA
 
@@ -1127,7 +1161,8 @@ Donde:
 61.2 El mejor precio dentro del intervalo obtiene 100 puntos. Las ofertas situadas fuera del intervalo obtienen O puntos.
 
 61.3 Para la aplicación de la fórmula se considerará el Valor Total del Proyecto, esto es, la suma del valor de la fase de implementación (Etapas 1 y 2) y del valor de la fase de Operación por los 36 meses, expresado en la moneda de referencia del Formulario E-24.
-<!-- ===== página 35 / 77 ===== -->
+<!-- ===== página 34/77 · PDF 35 ===== -->
+
 
 ### CAPÍTULO 16 EVALUACIÓN FINAL Y ADJUDICACIÓN
 
@@ -1166,7 +1201,8 @@ Donde:
 64.1 La adjudicación se notificará al ADJUDICATARIO por carta certificada y correo electrónico, y a los demás PROPONENTES por correo electrónico, dentro de los cinco días hábiles siguientes a la resolución.
 
 64.2 Junto con la notificación se publicará el cuadro comparativo de evaluación, con el puntaje de cada PROPONENTE por criterio y la fundamentación de la decisión.
-<!-- ===== página 36 / 77 ===== -->
+<!-- ===== página 35/77 · PDF 36 ===== -->
+
 
 ### CAPÍTULO 17 EVALUACIÓN ACADÉMICA
 
@@ -1195,7 +1231,8 @@ Donde:
 - Debe haber obtenido al menos el 75 % del puntaje máximo posible en la evaluación técnica.
 
 66.3 Aplicado el ajuste, las demás propuestas se reposicionarán proporcionalmente según las diferencias establecidas.
-<!-- ===== página 37 / 77 ===== -->
+<!-- ===== página 36/77 · PDF 37 ===== -->
+
 
 ### CONTRATACIÓN Y EJECUCIÓN
 
@@ -1240,7 +1277,8 @@ El ADJUDICATARIO deberá presentar, dentro de los diez días hábiles siguientes
 > 3. Gastos notariales y de legalización: de cargo del ADJUDICATARIO.
 
 > 4 Si el ADJUDICATARIO no suscribe el Contrato en el plazo señalado, el CLIENTE hará efectiva la Garantía de Seriedad de la Oferta y podrá adjudicar al PROPONENTE que le siga en el orden de mérito, o declarar desierta la licitación.
-<!-- ===== página 38 / 77 ===== -->
+<!-- ===== página 37/77 · PDF 38 ===== -->
+
 
 ## ARTÍCULO 69°. CONTENIDO MÍNIMO DEL CONTRATO
 
@@ -1279,7 +1317,8 @@ Se establecen las siguientes instancias de gobierno, de asistencia obligatoria p
 | Comité Ejecutivo | Mensual | Patrocinador del CLIENTE, gerencia del ADJUDICATARIO, Administrador del Contrato. | Decisiones estratégicas, escalamiento, aprobación de cambios de alcance y revisión de riesgos mayores. |
 | Comité de Proyecto | Quincenal | Contraparte Técnica y Jefe de Proyecto del ADJUDICATARIO. | Avance del cronograma, estado de entregables, desviaciones y decisiones operativas. |
 | Comité de Arquitectura | Mensual | Arquitecto de Solución, Encargado de Seguridad, referentes técnicos del CLIENTE. | Aprobación de decisiones de arquitectura, revisión de deuda técnica y de riesgos técnicos. |
-<!-- ===== página 39 / 77 ===== -->
+<!-- ===== página 38/77 · PDF 39 ===== -->
+
 
 | Instancia | Frecuencia | Participantes | Propósito |
 | --- | --- | --- | --- |
@@ -1316,7 +1355,8 @@ WN Mantener vigentes las garantías y los seguros durante todo el período contr
 - Cumplir toda la normativa aplicable y mantener actualizadas sus certificaciones. EP Mantener confidencialidad absoluta sobre la información del CLIENTE.
 - Reportar el avance con la periodicidad y el formato acordados, informando oportunamente toda desviación.
 - Facilitar auditorías, inspecciones y fiscalizaciones del CLIENTE y de la autoridad competente.
-<!-- ===== página 40 / 77 ===== -->
+<!-- ===== página 39/77 · PDF 40 ===== -->
+
 
 7. Advertir por escrito al CLIENTE de toda decisión suya que, a juicio experto del ADJUDICATARIO,
 
@@ -1359,7 +1399,8 @@ subcontratistas.
 77.2 Plan de reversibilidad y salida. Dentro de los primeros noventa días del Contrato, el ADJUDICATARIO deberá entregar un Plan de Reversibilidad, actualizado anualmente, que permita al CLIENTE o a un tercero asumir la operación sin interrupción del servicio, incluyendo el inventario de activos, el traspaso de credenciales, la exportación íntegra de los datos en formatos abiertos y un período de acompañamiento de a lo menos noventa días.
 
 77.3 La ejecución del Plan de Reversibilidad al término del Contrato, por cualquier causa, está incluida en el precio ofertado y no da derecho a cobro adicional.
-<!-- ===== página 41 / 77 ===== -->
+<!-- ===== página 40/77 · PDF 41 ===== -->
+
 
 ### CAPÍTULO 21 NIVELES DE SERVICIO Y RÉGIMEN DE PENALIDADES
 
@@ -1401,7 +1442,8 @@ subcontratistas.
 79.1 La medición de los niveles de servicio se realizará sobre la plataforma de observabilidad, cuyos datos deberán estar disponibles para el CLIENTE en tiempo real y ser exportables.
 
 79.2 El ADJUDICATARIO entregará, dentro de los primeros cinco días hábiles de cada mes, un informe de nivel de servicio con el detalle de cada indicador, los incidentes del período, las causas raíz y el plan de acción.
-<!-- ===== página 42 / 77 ===== -->
+<!-- ===== página 41/77 · PDF 42 ===== -->
+
 
 79.3 El CLIENTE podrá verificar la medición por sus propios medios. Ante discrepancias, prevalecerá la medición del CLIENTE, salvo que el ADJUDICATARIO acredite un error metodológico.
 
@@ -1433,7 +1475,8 @@ Procedimiento de aplicación:
 4 Descuento del monto en el siguiente estado de pago o, en su defecto, cobro con cargo a la Garantía de Fiel Cumplimiento.
 
 Tope global. El total de multas aplicadas en un período de doce meses no podrá exceder el 15 % del valor del Contrato correspondiente a ese período. Superado dicho tope, el CLIENTE podrá poner término anticipado al Contrato por incumplimiento grave.
-<!-- ===== página 43 / 77 ===== -->
+<!-- ===== página 42/77 · PDF 43 ===== -->
+
 
 ### CAPÍTULO 22 TÉRMINO DEL CONTRATO
 
@@ -1454,7 +1497,8 @@ WN Acta de cierre con el estado de avance, los entregables recibidos y los pendi
 - Activación del Plan de Reversibilidad del Artículo 77°, con acompañamiento mínimo de noventa días. E Liquidación de pagos pendientes, compensación de multas y determinación de saldos.
 - Entrega íntegra de la documentación, del código fuente, de los datos en formatos abiertos y de las credenciales.
 - Devolución de las garantías que procedan, una vez verificado el cumplimiento de las obligaciones pendientes.
-<!-- ===== página 44 / 77 ===== -->
+<!-- ===== página 43/77 · PDF 44 ===== -->
+
 
 ### DISPOSICIONES ESPECIALES
 
@@ -1498,7 +1542,8 @@ tercero independiente, con actualización semestral y cláusulas de liberación 
 incumplimiento grave.
 
 Se prohibe al ADJUDICATARIO reutilizar los desarrollos específicos del PROYECTO para otros clientes sin autorización previa y escrita del CLIENTE.
-<!-- ===== página 45 / 77 ===== -->
+<!-- ===== página 44/77 · PDF 45 ===== -->
+
 
 8. Los datos del CLIENTE, en todo momento y en cualquier estado de procesamiento, son de propiedad exclusiva del CLIENTE.
 
@@ -1538,7 +1583,8 @@ escrita del CLIENTE, y el subencargado quedará sujeto a las mismas obligaciones
 - Proveer un mecanismo de desactivación del componente sin comprometer la operación del resto de la solución.
 
 86.2 La responsabilidad por los resultados de los componentes de inteligencia artificial incorporados a la solución recae íntegramente en el ADJUDICATARIO.
-<!-- ===== página 46 / 77 ===== -->
+<!-- ===== página 45/77 · PDF 46 ===== -->
+
 
 ### CAPÍTULO 24 SOLUCIÓN DE CONTROVERSIAS
 
@@ -1583,7 +1629,8 @@ El ADJUDICATARIO deberá presentar y ejecutar un plan de gestión del cambio que
 90.3 Materiales exigidos: manuales por perfil, guías rápidas, preguntas frecuentes, videos tutoriales en español y base de conocimiento consultable, todos entregados en formato editable y de propiedad del CLIENTE.
 
 90.4 Certificación: el plan deberá contemplar la evaluación y certificación de los usuarios administradores y del equipo técnico del CLIENTE, como condición para el cierre de cada marcha blanca.
-<!-- ===== página 47 / 77 ===== -->
+<!-- ===== página 46/77 · PDF 47 ===== -->
+
 
 90.5 Refuerzo: durante la fase de Operación, el ADJUDICATARIO deberá ejecutar al menos dos jornadas anuales de actualización y capacitar al personal nuevo del CLIENTE, sin costo adicional.
 
@@ -1610,14 +1657,13 @@ La documentación es un entregable contractual y su ausencia o desactualización
 
 92.2 Cuando las Bases Técnicas establezcan una exigencia superior a la de estas Bases Administrativas, prevalecerá la más exigente. Cuando establezcan una exigencia inferior, se entenderá que rige la de estas Bases Administrativas.
 
-92.3 Ninguna disposición de las Bases Técnicas podrá interpretarse como una dispensa del cronograma contractual obligatorio del Artículo 17°, del modelo híbrido del Artículo 16°, de los requisitos transversales del
-
-### Capítulo 4 ni de la exigencia de innovación del Capítulo 5.
+92.3 Ninguna disposición de las Bases Técnicas podrá interpretarse como una dispensa del cronograma contractual obligatorio del Artículo 17°, del modelo híbrido del Artículo 16°, de los requisitos transversales del Capítulo 4 ni de la exigencia de innovación del Capítulo 5.
 
 ## ARTÍCULO 93°. CARÁCTER ACADÉMICO DEL PROCESO
 
 923.1 El presente proceso constituye una simulación con fines formativos, desarrollada en el marco de la asignatura Taller de Formulación de Proyectos Informáticos (ICI-5444) de la Escuela de Informática de la Pontificia Universidad Católica de Valparaíso.
-<!-- ===== página 48 / 77 ===== -->
+<!-- ===== página 47/77 · PDF 48 ===== -->
+
 
 93.2 Las garantías, montos, obligaciones contractuales y penalidades descritas en estas Bases son elementos del ejercicio y no generan obligaciones jurídicas reales entre las partes. Su rigor es deliberado: reproducen las condiciones a las que se enfrenta una empresa proveedora en un proceso de licitación real.
 
@@ -1628,7 +1674,8 @@ La documentación es un entregable contractual y su ausencia o desactualización
 94.1 Estas Bases rigen desde su publicación y hasta el término del proceso de adjudicación.
 
 94.2 La sola presentación de una oferta implica la aceptación íntegra e incondicional de estas Bases, de las Bases Técnicas del caso, de sus anexos y de las aclaraciones y modificaciones emitidas por el CLIENTE, sin reserva alguna.
-<!-- ===== página 49 / 77 ===== -->
+<!-- ===== página 48/77 · PDF 49 ===== -->
+
 
 ### ANEXOS Y FORMULARIOS
 
@@ -1644,7 +1691,8 @@ Los formularios de este anexo integran el Sobre N° 1. Todos deberán presentars
 | A-4 | Declaración de ausencia de conflictos de interés. |
 | A-5 | Presentación e índice de antecedentes. |
 | A-6 | Declaración de uso de herramientas de inteligencia artificial generativa. |
-<!-- ===== página 50 / 77 ===== -->
+<!-- ===== página 49/77 · PDF 50 ===== -->
+
 
 ### FORMULARIO A-1 IDENTIFICACIÓN DEL PROPONENTE
 
@@ -1669,9 +1717,10 @@ Los formularios de este anexo integran el Sobre N° 1. Todos deberán presentars
 | Integrantes y porcentaje (si aplica) |  |
 
 Firma del representante legal: .......................2een000eier ie DD Re eee DR LI e eee eee
-<!-- ===== página 51 / 77 ===== -->
+<!-- ===== página 50/77 · PDF 51 ===== -->
 
-> FORMULARIO A-2 DECLARACIÓN JURADA DE NO AFECTACIÓN POR PROHIBICIONES E INHABILIDADES
+
+### FORMULARIO A-2 DECLARACIÓN JURADA DE NO AFECTACIÓN POR PROHIBICIONES E INHABILIDADES
 
 El suscrito, en su calidad de representante legal de la empresa individualizada en el Formulario A-1, declara
 
@@ -1696,7 +1745,8 @@ probidad.
 ee]
 
 FIrma: ...........econerareear Fecha:
-<!-- ===== página 52 / 77 ===== -->
+<!-- ===== página 51/77 · PDF 52 ===== -->
+
 
 ### FORMULARIO A-3 DECLARACIÓN DE ACEPTACIÓN ÍNTEGRA DE LAS BASES
 
@@ -1713,7 +1763,8 @@ El suscrito, en representación de la empresa individualizada en el Formulario A
 ### |) [o] -
 
 FIrma: Fecha:
-<!-- ===== página 53 / 77 ===== -->
+<!-- ===== página 52/77 · PDF 53 ===== -->
+
 
 ### FORMULARIO A-4 DECLARACIÓN DE AUSENCIA DE CONFLICTOS DE INTERÉS
 
@@ -1727,7 +1778,8 @@ Declara asimismo conocer que la omisión de un vínculo existente constituye cau
 ### [No] 1]] -
 
 ### Firma: racer ene Fecha:
-<!-- ===== página 54 / 77 ===== -->
+<!-- ===== página 53/77 · PDF 54 ===== -->
+
 
 ### FORMULARIO A-5 PRESENTACIÓN E ÍNDICE DE ANTECEDENTES
 
@@ -1747,7 +1799,8 @@ El Proponente deberá completar el índice de la totalidad de los documentos inc
 | 10 |  |  |  |  |
 | 11 |  |  |  |  |
 | 12 |  |  |  |  |
-<!-- ===== página 55 / 77 ===== -->
+<!-- ===== página 54/77 · PDF 55 ===== -->
+
 
 ### FORMULARIO A-6 DECLARACIÓN DE USO DE INTELIGENCIA ARTIFICIAL GENERATIVA
 
@@ -1761,7 +1814,8 @@ El Proponente declara que asume la responsabilidad íntegra sobre el contenido, 
 ### | [o]1]]
 
 [PT Fecha:
-<!-- ===== página 56 / 77 ===== -->
+<!-- ===== página 55/77 · PDF 56 ===== -->
+
 
 ### CAPÍTULO B FORMULARIOS TÉCNICOS
 
@@ -1785,9 +1839,10 @@ Los formularios de este anexo integran el Sobre N° 2. Ninguno de ellos podrá c
 | T-20 | Calendario de actividades. |
 | T-21 | Ponderación de la evaluación técnica. |
 | T-22 | Contenido de los informes y presentaciones preparatorias. |
-<!-- ===== página 57 / 77 ===== -->
+<!-- ===== página 56/77 · PDF 57 ===== -->
 
-FORMULARIO T-6
+
+### FORMULARIO T-6
 
 EXPERIENCIA EN PROYECTOS SIMILARES
 
@@ -1806,7 +1861,8 @@ Se deberán declarar al menos tres proyectos finalizados y en operación en los 
 | Volumen de operación soportado |  |  |  |
 | Rol de la empresa (principal / socio) |  |  |  |
 | Contraparte de referencia y contacto |  |  |  |
-<!-- ===== página 58 / 77 ===== -->
+<!-- ===== página 57/77 · PDF 58 ===== -->
+
 
 ### FORMULARIO T-7
 
@@ -1852,7 +1908,8 @@ SUBDOCUMENTO 4 Arquitectura lógica y física de la solución
 SUBDOCUMENTO 5 — Modelo y gestión de datos
 
 - Dominio de información.
-<!-- ===== página 59 / 77 ===== -->
+<!-- ===== página 58/77 · PDF 59 ===== -->
+
 
 Selección del motor y del paradigma de persistencia, con justificación: relacional o no relacional,
 
@@ -1907,7 +1964,8 @@ Los riesgos deben corresponder a la solución efectivamente propuesta y no a un 
 SUBDOCUMENTO 9 — Plan de calidad
 
 Marco de aseguramiento de calidad basado en ISO/IEC 25010 y en modelos de madurez.
-<!-- ===== página 60 / 77 ===== -->
+<!-- ===== página 59/77 · PDF 60 ===== -->
+
 
 - Métricas de calidad del código, cobertura de pruebas, complejidad y acoplamiento, con umbrales bloqueantes.
 - Puertas de calidad, revisiones por pares, análisis estático y dinámico.
@@ -1950,7 +2008,8 @@ SUBDOCUMENTO 13 — Innovaciones
 SUBDOCUMENTO 14 — Ventajas, beneficios y consolidación
 
 - Síntesis de la propuesta de valor desde una perspectiva de ingeniería integral.
-<!-- ===== página 61 / 77 ===== -->
+<!-- ===== página 60/77 · PDF 61 ===== -->
+
 
 - Análisis cuantitativo de beneficios para el CLIENTE: mejoras de desempeño, reducción del tiempo de restauración, aumento de disponibilidad y ahorro operacional.
 - Demostración de cómo la solución equilibra alcance, tiempo, costo y calidad.
@@ -1963,9 +2022,10 @@ Consideraciones transversales de evaluación
 - Trazabilidad: mapeo explícito entre requerimientos, diseño, implementación y operación.
 - Fundamentación ingenieril: decisiones respaldadas por análisis cuantitativo, modelos y mejores prácticas.
 - Cumplimiento: consideración de los aspectos regulatorios, de los estándares del Artículo 4.3 y de los marcos de gobierno de tecnologías de información.
-<!-- ===== página 62 / 77 ===== -->
+<!-- ===== página 61/77 · PDF 62 ===== -->
 
-FORMULARIO T-8
+
+### FORMULARIO T-8
 
 EQUIPO DE TRABAJO, SUBCONTRATACIONES Y ALIANZAS
 
@@ -1985,20 +2045,21 @@ Subcontrataciones y alianzas:
 | Empresa | Servicio o componente | % del valor | Justificación |
 | --- | --- | --- | --- |
 
-FORMULARIO T-9
+### FORMULARIO T-9
 
 METODOLOGÍA PARA LA ADMINISTRACIÓN Y GESTIÓN DEL PROYECTO
 
 El Proponente adjuntará a este formulario la información solicitada en el Subdocumento 6, letra a.
 
-FORMULARIO T-10
+### FORMULARIO T-10
 
 METODOLOGÍA PARA EL DESARROLLO
 
 El Proponente adjuntará a este formulario la información solicitada en el Subdocumento 6, letra b.
-<!-- ===== página 63 / 77 ===== -->
+<!-- ===== página 62/77 · PDF 63 ===== -->
 
-FORMULARIO T-11
+
+### FORMULARIO T-11
 
 ESPECIFICACIONES TÉCNICAS OFERTADAS
 
@@ -2009,7 +2070,7 @@ Detalle de los componentes de infraestructura, plataforma, licenciamiento y hard
 | comocanente | PrOOUCTO / ServICIO OTerrado | UICICACION / LUPArN | cantidad | rUSTITICACION |
 | . | - |  | o | o |
 
-FORMULARIO T-12
+### FORMULARIO T-12
 
 MATRIZ DE CUMPLIMIENTO TÉCNICO Y TRAZABILIDAD
 
@@ -2023,7 +2084,8 @@ El Proponente deberá declarar el cumplimiento de cada requerimiento de las Base
 PLAN DE PRUEBAS Y VALIDACIÓN
 
 El Proponente adjuntará a este formulario el plan de pruebas conforme al Subdocumento 9, incluyendo niveles, tipos, ambientes, datos de prueba, criterios de entrada y salida, automatización y el calendario de las pruebas de carga, de resiliencia, de recuperación ante desastres y de seguridad ofensiva.
-<!-- ===== página 64 / 77 ===== -->
+<!-- ===== página 63/77 · PDF 64 ===== -->
+
 
 ### FORMULARIO T-14
 
@@ -2051,7 +2113,9 @@ El Proponente deberá indicar claramente la siguiente información de planificac
 | Etapa 2 — Marcha blanca |  |  |  | 19-20 |
 | Operación |  |  |  | 21-56 |
 
-FORMULARIO T-16 PLAN DE RIESGOS
+### FORMULARIO T-16
+
+PLAN DE RIESGOS
 
 | 1D | Riesgo | Categoría | Prob. | Impacto | Expos. | Mitigación | Responsable |
 | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -2061,21 +2125,22 @@ FORMULARIO T-16 PLAN DE RIESGOS
 | 4 |  |  |  |  |  |  |  |
 | 5 |  |  |  |  |  |  |  |
 | 6 |  |  |  |  |  |  |  |
-<!-- ===== página 65 / 77 ===== -->
+<!-- ===== página 64/77 · PDF 65 ===== -->
 
-FORMULARIO T-17
+
+### FORMULARIO T-17
 
 PROTOCOLO DE ACEPTACIÓN
 
 El Proponente adjuntará a este formulario la propuesta de Protocolo de Aceptación de cada hito y del producto final, indicando entregables, criterios de aceptación objetivos, evidencia requerida, plazos de revisión, procedimiento de observaciones y acta de conformidad.
 
-FORMULARIO T-18
+### FORMULARIO T-18
 
 PROPUESTA DE IMPLANTACIÓN Y PUESTA EN MARCHA CONTROLADA
 
 El Proponente adjuntará a este formulario la propuesta de implantación y puesta en marcha controlada que asegure el éxito del paso a producción, cubriendo por separado la Etapa 1 (marcha blanca de los meses 13 a 15 y producción desde el mes 16) y la Etapa 2 (marcha blanca de los meses 19 y 20 y producción desde el mes 21), con el plan de convivencia entre ambas y el procedimiento de reversión.
 
-FORMULARIO T-19
+### FORMULARIO T-19
 
 CARTERA DE INNOVACIONES
 
@@ -2100,9 +2165,10 @@ Una ficha por cada una de las cinco innovaciones obligatorias del Artículo 28°
 | Riesgo de adopción, probabilidad e impacto |  |
 | Estrategia de mitigación |  |
 | Plan de contingencia si no rinde lo esperado |  |
-<!-- ===== página 66 / 77 ===== -->
+<!-- ===== página 65/77 · PDF 66 ===== -->
 
-FORMULARIO T-20
+
+### FORMULARIO T-20
 
 CALENDARIO DE ACTIVIDADES
 
@@ -2122,7 +2188,8 @@ Las fechas podrán ser ajustadas por el CLIENTE conforme al Artículo 10° de la
 | 12 | Entrega de propuestas en sobres cerrados (máximo 14:00 h). Incluye antecedentes administrativos, garantías, Oferta Técnica y Oferta Económica. | 25-11-2026 | 25-11-2026 |
 | 13 | Presentación de propuestas ante empresas evaluadoras | 27-11-2026 | 27-11-2026 |
 | 14 | Entrega de resultados Licitación | 01-12-2026 | 01-12-2026 |
-<!-- ===== página 67 / 77 ===== -->
+<!-- ===== página 66/77 · PDF 67 ===== -->
+
 
 ### FORMULARIO T-21
 
@@ -2146,14 +2213,16 @@ Cada subdocumento del Formulario T-7 se evalúa de 0 a 100 puntos conforme al Ar
 | 9 | Plan de calidad Formulario T-13 Formulario T-17 |  | 8% | 6% |
 | 10 | Servicios de operación y niveles de servicio |  |  | 8% |
 | 11 | Planes en operación a) Plan Mantención Preventiva / Evolutiva b) Plan Servicios de Operación |  |  | 6% |
-<!-- ===== página 68 / 77 ===== -->
+<!-- ===== página 67/77 · PDF 68 ===== -->
+
 
 | Subdoc. | Ítem evaluado / Índice Propuesta | Informe 1 | Informe 2 | Ponderación |
 | --- | --- | --- | --- | --- |
 | 12 | Equipo de trabajo, subcontrataciones y alianzas Formulario T-8 |  |  | 5% |
 | 13 14 | Innovaciones Formulario T-19 Ventajas, beneficios y consolidación | 17% | 10% | 8% 3% |
 | TOTAL | Puntaje técnico ponderado | 100 % | 100 % | 100 % |
-<!-- ===== página 69 / 77 ===== -->
+<!-- ===== página 68/77 · PDF 69 ===== -->
+
 
 ### FORMULARIO T-22
 
@@ -2180,7 +2249,8 @@ Informe y presentación 2
 - Análisis de riesgo de implantación.
 - EDT del proyecto y equipo de trabajo: el equipo debe ser coherente con las actividades en términos concretos de la propuesta.
 - Planificación e hitos del proyecto, alineados con el cronograma contractual obligatorio del Artículo 17°. Se evaluará con severidad todo plan de trabajo con actividades genéricas que podrían servir para cualquier proyecto, o incoherente con los objetivos declarados. De la Propuesta Técnica corresponde a los subdocumentos: 1, 2, 3, 4, 5, 6, 7, 8, 9 y 13.
-<!-- ===== página 70 / 77 ===== -->
+<!-- ===== página 69/77 · PDF 70 ===== -->
+
 
 Informe y presentación 3
 
@@ -2194,7 +2264,8 @@ Informe y presentación 3
 Se deberá completar la planilla de cálculo que entregará el CLIENTE con la información económica del proyecto, desglosada en gastos de operación, gastos de inversión, gastos administrativos y gastos de recursos humanos. Los gastos asociados a proveedores deben explicitarse en una hoja y sumarse al gasto de operación. Debe incluirse además un flujo de caja mensual con total del mes y monto acumulado.
 
 De la Propuesta Económica corresponde a: el documento de costos frente a venta y la planilla de cálculo.
-<!-- ===== página 71 / 77 ===== -->
+<!-- ===== página 70/77 · PDF 71 ===== -->
+
 
 ### CAPÍTULO C FORMULARIOS ECONÓMICOS
 
@@ -2207,7 +2278,7 @@ Los formularios de este anexo integran el Sobre N° 3.
 | E-25 | Hitos de pago. |
 | E-26 | Rango de valores aceptados para perfiles profesionales. |
 
-FORMULARIO E-21
+### FORMULARIO E-21
 
 ESTRUCTURA DE LA PROPUESTA ECONÓMICA
 
@@ -2230,7 +2301,8 @@ Documento ejecutivo con la propuesta comercial definitiva.
 
 - Hitos de pago de la fase de implementación conforme al Formulario E-25: identificación de cada hito facturable, porcentaje y monto, entregables que gatillan el pago y criterios de aceptación vinculados.
 - Estructura de pagos mensuales de la fase de Operación: servicios incluidos, componentes fijos y variables, métricas que afectan los pagos variables y periodicidad de facturación.
-<!-- ===== página 72 / 77 ===== -->
+<!-- ===== página 71/77 · PDF 72 ===== -->
+
 
 1.3 Resumen ejecutivo de valor.
 
@@ -2267,7 +2339,8 @@ Requisitos técnicos obligatorios del modelo:
 - Ausencia de valores fijos incrustados dentro de las fórmulas.
 
 Criterios de evaluación del modelo: coherencia y consistencia de fórmulas, flexibilidad para el análisis de escenarios, claridad de la presentación, robustez ante cambios de parámetros, alineación con los documentos 1 y 2 y cumplimiento de la plantilla proporcionada.
-<!-- ===== página 73 / 77 ===== -->
+<!-- ===== página 72/77 · PDF 73 ===== -->
+
 
 Requisitos formales de presentación
 
@@ -2292,9 +2365,10 @@ La oferta debe incorporar todas las correcciones solicitadas en los informes y p
 Toda la información económica está sujeta al acuerdo de confidencialidad.
 
 > RECORDATORIO FINAL: El incumplimiento de cualquier requisito establecido en estas instrucciones resultará en la descalificación automática del proceso. No se aceptarán entregas parciales, fuera de plazo, o que no cumplan con el formato especificado.
-<!-- ===== página 74 / 77 ===== -->
+<!-- ===== página 73/77 · PDF 74 ===== -->
 
-FORMULARIO E-24
+
+### FORMULARIO E-24
 
 CONDICIONES Y PARÁMETROS PARA LA PREPARACIÓN DE LA OFERTA ECONÓMICA
 
@@ -2311,7 +2385,8 @@ CONDICIONES Y PARÁMETROS PARA LA PREPARACIÓN DE LA OFERTA ECONÓMICA
 | Porcentaje máximo de financiamiento bancario | 80% |
 | Impuesto al Valor Agregado | 19% |
 | Horizonte de evaluación | 56 meses |
-<!-- ===== página 75 / 77 ===== -->
+<!-- ===== página 74/77 · PDF 75 ===== -->
+
 
 ### FORMULARIO E-25
 
@@ -2348,12 +2423,14 @@ Operación de la solución
 | Hito | Condición | Período |
 | --- | --- | --- |
 | Hito mensual en producción | Valor mensual fijo más componentes variables, pagado dentro de los primeros días del mes siguiente vencido, sujeto al descuento de las multas por incumplimiento de nivel de servicio. | 36 pagos, meses 21 a 56 |
-<!-- ===== página 76 / 77 ===== -->
+<!-- ===== página 75/77 · PDF 76 ===== -->
+
 
 > La suma de los hitos de la Etapa 1 y de la Etapa 2 debe totalizar el 100 % del valor de la fase de implementación. La fase de Operación se factura íntegramente contra los 36 pagos mensuales y no puede anticiparse ni prorratearse en la fase de implementación.
-<!-- ===== página 77 / 77 ===== -->
+<!-- ===== página 76/77 · PDF 77 ===== -->
 
-FORMULARIO E-26
+
+### FORMULARIO E-26
 
 RANGO DE VALORES ACEPTADOS PARA PERFILES PROFESIONALES
 
