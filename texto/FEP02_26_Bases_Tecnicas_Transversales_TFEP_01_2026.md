@@ -133,7 +133,7 @@ Todo umbral expresado en este documento es un mínimo exigido, salvo que se indi
 
 ### ARQUITECTURA DE LA SOLUCIÓN
 
-CAPÍTULO 2 MODELO DE ARQUITECTURA DE REFERENCIA
+### CAPÍTULO 2 MODELO DE ARQUITECTURA DE REFERENCIA
 
 ### 2.1 Modelo multicapa exigido
 
@@ -727,7 +727,7 @@ Los siguientes umbrales son exigibles en producción, medidos en el percentil 95
 | RT-14.08 | El PROPONENTE declarará la retención de métricas, registros y trazas, y su costo asociado, distinguiendo el almacenamiento en línea del archivado. | Obligatorio |
 | RT-14.09 | Se valorará la detección proactiva de anomalías mediante análisis del comportamiento histórico, con alerta antes de que el incidente afecte a la operación. | Deseable |
 
-CAPÍTULO 15 SOSTENIBILIDAD, EFICIENCIA Y CERTIFICACIONES
+### CAPÍTULO 15 SOSTENIBILIDAD, EFICIENCIA Y CERTIFICACIONES
 
 ### 15.1 Sostenibilidad y eficiencia energética
 
@@ -892,7 +892,7 @@ La incorporación de inteligencia artificial no es obligatoria. Sí lo es, cuand
 
 ### PROYECTO, IMPLANTACIÓN Y OPERACIÓN
 
-CAPÍTULO 19 ESTRUCTURA Y GOBIERNO DEL PROYECTO
+### CAPÍTULO 19 ESTRUCTURA Y GOBIERNO DEL PROYECTO
 
 ### 19.1 Oficina de gestión y metodología
 
@@ -935,7 +935,7 @@ El PROPONENTE podrá agregar los roles que su propuesta requiera. La dotación t
 | RT-19.09 | Las actas de todos los comités del Artículo 71° de las Bases Administrativas se levantarán dentro de los dos días hábiles siguientes y registrarán acuerdos, responsables y plazos. | Obligatorio |
 | RT-19.10 | Toda desviación superior al 10 % en un hito se comunicará dentro de los cinco días hábiles de detectada, con plan de recuperación. | Obligatorio |
 
-CAPÍTULO 20 IMPLANTACIÓN, PRUEBAS Y CRITERIOS DE ACEPTACIÓN
+### CAPÍTULO 20 IMPLANTACIÓN, PRUEBAS Y CRITERIOS DE ACEPTACIÓN
 
 ### 20.1 Estrategia de pruebas
 
@@ -1263,7 +1263,7 @@ La exigencia de innovación se establece en el Capítulo 5 de las Bases Administ
 | --- | --- | --- |
 | RT-26.01 | Cada innovación se ubicará explícitamente en la arquitectura: qué capa la contiene, qué componentes la implementan y qué interfaces consume o expone. | Obligatorio |
 | RT-26.02 | Cada innovación identificará los paquetes de la estructura de descomposición del trabajo que la ejecutan y el mes del cronograma en que se materializa. | Obligatorio |
-| RT-26.03 | Las innovaciones de base tecnológica declararán el nivel de madurez de la tecnología con la escala utilizada y citarán las fuentes en norma APA 7.2 edición. | Obligatorio |
+| RT-26.03 | Las innovaciones de base tecnológica declararán el nivel de madurez de la tecnología con la escala utilizada y citarán las fuentes en norma APA 7.ª edición. | Obligatorio |
 | RT-26.04 | Cada innovación declarará su riesgo de adopción, su probabilidad, su impacto, la estrategia de mitigación y el plan de contingencia si no rinde lo esperado. | Obligatorio |
 | RT-26.05 | Cada innovación declarará su indicador de verificación con línea base, meta y momento de medición, y su impacto en inversión, costo operacional y beneficio esperado. | Obligatorio |
 | RT-26.06 | Las innovaciones que incorporen inteligencia artificial cumplirán íntegramente el Capítulo 18 de este documento. | Obligatorio |

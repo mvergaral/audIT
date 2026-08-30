@@ -188,7 +188,7 @@ Esta compañía no tiene un recinto: tiene una red. Su operación ocurre a lo la
 
 ### LA OPERACIÓN TAL COMO ES HOY
 
-CAPÍTULO 4 EL CICLO DEL VIAJE
+### CAPÍTULO 4 EL CICLO DEL VIAJE
 
 Lo que sigue es la descripción del proceso tal como ocurre, no como debería ocurrir. Se entrega con este nivel de detalle porque de él dependen las decisiones de alcance, de arquitectura y de trazabilidad que el PROPONENTE deberá tomar.
 

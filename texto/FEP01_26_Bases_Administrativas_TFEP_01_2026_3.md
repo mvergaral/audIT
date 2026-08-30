@@ -628,7 +628,7 @@ Conservación de la evidencia de cumplimiento por todo el período contractual y
 | --- | --- | --- |
 | 1 | Producto o servicio | Funcionalidad o servicio nuevo, o significativamente mejorado respecto de la operación actual del CLIENTE. Debe declararse el beneficio para el usuario final y el indicador con que se verificará. |
 | 2 | Proceso | Cambio en la forma de ejecutar el proceso de negocio, o el proceso de desarrollo y operación (automatización, integración, autoservicio, DevOps), con la mejora esperada en tiempo, tasa de error o costo unitario. |
-| 3 | Tecnológica o de arquitectura | Adopción de una tecnología o de un patrón arquitectónico vigente (nube, datos, inteligencia artificial, integración o seguridad), justificada con estándares y fuentes citadas en norma APA 7.2 ed., indicando su nivel de madurez y el riesgo de adopción. |
+| 3 | Tecnológica o de arquitectura | Adopción de una tecnología o de un patrón arquitectónico vigente (nube, datos, inteligencia artificial, integración o seguridad), justificada con estándares y fuentes citadas en norma APA 7.ª ed., indicando su nivel de madurez y el riesgo de adopción. |
 | 4 | Modelo de negocio o de contratación | Cambio en la forma de generar o capturar valor: modelo de licenciamiento, pago por uso, servicios gestionados, niveles de servicio o esquema de escalamiento. Debe quedar reflejado en la estructura de costos y en el flujo de caja. |
 | 5 | Experiencia de usuario, sostenibilidad o impacto social | Mejora verificable en accesibilidad, usabilidad, inclusión, eficiencia energética o impacto ambiental y social de la solución, coherente con las restricciones del contexto del caso. |
 
@@ -642,7 +642,7 @@ Para cada una de las cinco innovaciones, el PROPONENTE deberá presentar, en el 
 
 genérica.
 
-3. Nivel de madurez de la tecnología o práctica, con la escala utilizada y las fuentes citadas en norma APA 7.2 edición.
+3. Nivel de madurez de la tecnología o práctica, con la escala utilizada y las fuentes citadas en norma APA 7.ª edición.
 
 4. Diseño de la incorporación: dónde se inserta en la arquitectura, qué paquetes de la estructura de
 
@@ -861,7 +861,7 @@ Los PROPONENTES deberán presentar, en el Sobre N° 1, la totalidad de los sigui
 | Tamaño de página | Carta u oficio, orientación vertical, salvo anexos gráficos que podrán ser horizontales. |
 | Tipografía | Cuerpo no inferior a 11 puntos; en tablas y figuras, no inferior a 9 puntos. |
 | Índice | Índice detallado con numeración de páginas en cada documento. |
-| Referencias | Norma APA 7.2 edición para toda cita y referencia bibliográfica. |
+| Referencias | Norma APA 7.ª edición para toda cita y referencia bibliográfica. |
 | Nomenclatura | Conforme a los Artículos 49° a 51°. Un archivo mal nominado se considerará no presentado. |
 | Tamaño máximo | 500 MB por sobre digital; los archivos mayores deberán segmentarse y declararse en el índice. |
 
@@ -1303,7 +1303,7 @@ Se establecen las siguientes instancias de gobierno, de asistencia obligatoria p
 
 73.3 El ADJUDICATARIO responde solidariamente por sus subcontratistas, quienes deberán cumplir los mismos estándares de seguridad, confidencialidad, calidad y cumplimiento laboral exigidos al contratista principal. 73.4 Todo subcontratista con acceso a datos del CLIENTE deberá ser declarado, auditado y sujeto a acuerdo de tratamiento de datos conforme a la Ley N° 21.719.
 
-CAPÍTULO 20 OBLIGACIONES DEL CONTRATISTA
+### CAPÍTULO 20 OBLIGACIONES DEL CONTRATISTA
 
 ## ARTÍCULO 74°. OBLIGACIONES GENERALES
 
@@ -1458,7 +1458,7 @@ WN Acta de cierre con el estado de avance, los entregables recibidos y los pendi
 
 ### DISPOSICIONES ESPECIALES
 
-CAPÍTULO 23 CONFIDENCIALIDAD, PROPIEDAD INTELECTUAL Y DATOS PERSONALES
+### CAPÍTULO 23 CONFIDENCIALIDAD, PROPIEDAD INTELECTUAL Y DATOS PERSONALES
 
 ## ARTÍCULO 83°. CONFIDENCIALIDAD
 
@@ -1610,7 +1610,9 @@ La documentación es un entregable contractual y su ausencia o desactualización
 
 92.2 Cuando las Bases Técnicas establezcan una exigencia superior a la de estas Bases Administrativas, prevalecerá la más exigente. Cuando establezcan una exigencia inferior, se entenderá que rige la de estas Bases Administrativas.
 
-92.3 Ninguna disposición de las Bases Técnicas podrá interpretarse como una dispensa del cronograma contractual obligatorio del Artículo 17°, del modelo híbrido del Artículo 16°, de los requisitos transversales del Capítulo 4 ni de la exigencia de innovación del Capítulo 5.
+92.3 Ninguna disposición de las Bases Técnicas podrá interpretarse como una dispensa del cronograma contractual obligatorio del Artículo 17°, del modelo híbrido del Artículo 16°, de los requisitos transversales del
+
+### Capítulo 4 ni de la exigencia de innovación del Capítulo 5.
 
 ## ARTÍCULO 93°. CARÁCTER ACADÉMICO DEL PROCESO
 
@@ -1825,7 +1827,7 @@ SUBDOCUMENTO 2 — Comprensión del problema y de la necesidad
 - Comprensión del contexto de la industria, de sus particularidades operacionales, regulatorias y estacionales.
 - Identificación de los actores afectados y de los grupos de interés, con su nivel de influencia e interés.
 - Supuestos declarados y su fundamento. No mezclar el problema con la solución.
-- Información de apoyo adecuadamente referenciada en norma APA 7.2 edición.
+- Información de apoyo adecuadamente referenciada en norma APA 7.ª edición.
 
 SUBDOCUMENTO 3 — Esquema de solución y alcance
 
@@ -1943,7 +1945,7 @@ SUBDOCUMENTO 13 — Innovaciones
 - Cartera obligatoria de cinco innovaciones, una por cada tipo del Artículo 28°, presentada en el Formulario T-19.
 - Cada innovación con los siete elementos del Artículo 29°: problema, tecnología, madurez, diseño de incorporación, impacto económico, indicador de verificación y riesgo de adopción.
 - Trazabilidad de cada innovación con la arquitectura, con la EDT y con el flujo de caja.
-- Fuentes citadas en norma APA 7.2 edición para las innovaciones de base tecnológica.
+- Fuentes citadas en norma APA 7.ª edición para las innovaciones de base tecnológica.
 
 SUBDOCUMENTO 14 — Ventajas, beneficios y consolidación
 
@@ -2086,7 +2088,7 @@ Una ficha por cada una de las cinco innovaciones obligatorias del Artículo 28°
 | Problema u oportunidad del caso que resuelve |  |
 | Tecnología, práctica o modelo que la sustenta |  |
 | Nivel de madurez y escala utilizada |  |
-| Fuentes citadas (APA 7.2 ed.) |  |
+| Fuentes citadas (APA 7.ª ed.) |  |
 | Dónde se inserta en la arquitectura |  |
 | Paquetes de la EDT que la ejecutan |  |
 | Mes del cronograma en que se materializa |  |

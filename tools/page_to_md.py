@@ -204,6 +204,9 @@ AT_SIGN = re.compile(r"(\w)\s+E\s+(\w+\.(?:cl|com|org|net))\b")
 # "ISO/1EC", y "ISO 22301" como "1SO 22301".
 NORMA = re.compile(r"\b1SO\b|[!¡]?1EC\b")
 
+# El ordinal femenino de "APA 7.ª edición" se lee como un 2: "APA 7.2 edición".
+ORD_FEM = re.compile(r"\b(\d)\.2(\s+(?:ed\.|edici[óo]n))", re.I)
+
 ROMAN = ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X",
          "XI", "XII", "XIII", "XIV", "XV", "XVI", "XVII", "XVIII", "XIX", "XX"]
 # El separador es un punto medio en el original, y el OCR lo devuelve como '-',
@@ -220,6 +223,7 @@ def normalize(text):
     text = COURSE.sub(r"ICI-\1", text)
     text = NUM_SIGN.sub("N°", text)
     text = NORMA.sub(lambda m: "ISO" if "S" in m.group(0) else "IEC", text)
+    text = ORD_FEM.sub(r"\1.ª\2", text)
     # En un rango, si un extremo quedó como grado el otro también lo es.
     for _ in range(2):
         text = ORD_RANGE.sub(
@@ -309,6 +313,7 @@ def render_table(ocr, hr, vr, lang):
 
 ART = re.compile(r"^(ART[IÍ]CULO|ANEXO|AP[EÉ]NDICE)\s", re.I)
 SUBSEC = re.compile(r"^\d+(\.\d+)+\s+\S")
+CAP = re.compile(r"^CAP[IÍ]TULO\s+[0-9IVX]+\b", re.I)
 
 
 def group_lines(words):
@@ -412,6 +417,11 @@ def render_prose(ocr, y0, y1, lang):
 
     def kind_of(ln):
         t = ln["text"]
+        # El encabezado de capítulo no siempre se compone más grande que el
+        # cuerpo, así que la prueba de altura se le escapa a varios. El texto
+        # sí es inequívoco.
+        if CAP.match(t):
+            return "h3"
         if ART.match(t):
             return "h2"
         short = len(t) < 90 and not t.endswith(".")
