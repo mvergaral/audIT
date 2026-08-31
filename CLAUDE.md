@@ -83,3 +83,17 @@ vigencias`) y `m²` como `m?` en 2.
 - Todo en español, incluidos comentarios y mensajes de commit.
 - Los porcentajes y cifras del caso se citan con su fuente; no los repitas de memoria
   sin verificarlos con `buscar.py`.
+
+## Trabajo de la dupla D2
+
+`equipo/D2/` tiene el plan y las consultas de Ignacio C. y Matías V. (subdocumento 3,
+21 % del Informe 1). Las innovaciones de D2 son los tipos **1** (producto o servicio) y
+**4** (modelo de negocio); D1 queda con el tipo 5.
+
+`tools/consultas_xlsx.py` genera la planilla oficial desde
+`equipo/D2/consultas-d2-v2.md`, valida que la columna Tipo solo use los tres valores
+del Artículo 43.2 y nombra el archivo según el 43.3:
+
+```bash
+./tools/consultas_xlsx.py AUDIT 20260831
+```
