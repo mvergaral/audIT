@@ -1,380 +1,429 @@
 # CAPÍTULO II: COMPRENSIÓN DEL PROBLEMA Y DE LA NECESIDAD
 
-**Licitación N.º TFEP-01/2026 — Caso 10: Transportes Curimón S.A.**
-**Dupla 1 (D1) — Subdocumento 2**
+**Licitación N.º TFEP-01/2026 — Caso 10: Transportes Curimón S.A.**  
+**Dupla 1 (D1) — Subdocumento 2**  
+**Empresa Proponente: audIT**  
 
 ---
 
-## 2.1 Contexto Estratégico y Territorial de Transportes Curimón S.A.
 
-### 2.1.1 El Territorio Operacional: 3.000 km, Nodos Críticos y Zonas de Sombra
+## 2.1 Síntesis Ejecutiva de la Situación Actual y Dimensión del Desafío
 
-Transportes Curimón S.A. despliega su operación de carga terrestre a lo largo de un corredor logístico de aproximadamente **3.000 kilómetros lineales**, extendido desde Antofagasta por el norte hasta Puerto Montt por el sur, con un ramal internacional que cruza la Cordillera de los Andes a través del **Paso Los Libertadores**. Este último constituye un nodo de altísima criticidad operacional: el paso acumula un promedio histórico de **1.900 cortes y cierres** por condiciones climáticas invernales, con episodios de interrupción que alcanzan hasta **12 días consecutivos** de inoperabilidad. La materialización de estos cierres no solo detiene los vehículos en tránsito, sino que genera un efecto cascada sobre la programación completa de la flota, las obligaciones contractuales con exportadores y la capacidad de reasignación de recursos en la torre de despacho.
+El diagnóstico estructural de Transportes Curimón S.A. revela una fractura fundamental que compromete la viabilidad operacional y financiera de la compañía: la asimetría insostenible entre la responsabilidad legal, comercial y regulatoria que la empresa asume frente a sus mandantes, y el control efectivo que ejerce sobre los recursos que ejecutan el servicio. La compañía soporta el cien por ciento de la responsabilidad sobre cargas, siniestros y fiscalizaciones, pero opera en un escenario donde el 60,4 % de su capacidad de transporte (226 camiones subcontratados de un total de 374) y el 56,8 % de sus operadores (258 conductores externos frente a 196 propios) no se encuentran bajo su tuición directa. Esta disociación genera un vacío de gobernanza sobre operaciones críticas ejecutadas a nombre de Curimón, conformando un riesgo latente de magnitudes incalculables.
 
-La infraestructura fija de Curimón se articula en torno a una red de **5 terminales operacionales** distribuidos a lo largo del corredor: **Antofagasta**, **Coquimbo**, **San Bernardo (Santiago)**, **Concepción** y **Puerto Montt**. Complementariamente, la empresa opera **2 talleres principales de mantención** localizados en **San Bernardo** y **Concepción**, que concentran las capacidades de mantenimiento preventivo y correctivo de la flota propia. Esta disposición geográfica de nodos fijos —cinco puntos de contacto en 3.000 km— implica que los tramos entre terminales superan ampliamente las distancias que permiten una supervisión presencial periódica, y que extensas franjas del corredor quedan fuera del alcance directo de cualquier instalación de la empresa.
+La dimensión física del desafío amplifica esta fractura. La red logística moviliza 96.000 viajes anuales, totalizando 41 millones de kilómetros recorridos por una flota de 374 tractocamiones a lo largo de un corredor de 3.000 kilómetros entre Antofagasta y Puerto Montt, complementado por el cruce fronterizo del paso Los Libertadores. Este despliegue territorial extenso se administra con un nivel de fragilidad financiera agudo, evidenciado por un margen operacional consolidado de apenas el 9 %. El análisis pormenorizado del costeo expone un deterioro estructural grave: tres de los ocho contratos principales operan por debajo de la línea de costo, representando en conjunto el 31 % del ingreso total de la empresa. El caso más extremo documenta un contrato ejecutado con un margen negativo del 14 % durante cuatro años consecutivos, subsidiado sistemáticamente por rutas rentables bajo un modelo ciego de prorrateo por ingreso.
 
-La extensión territorial plantea, por tanto, un primer problema estructural de naturaleza geográfica: la dispersión espacial de los activos móviles impide cualquier forma de supervisión presencial continua. Los **374 tractocamiones** que gestiona la empresa transitan simultáneamente por una red vial donde conviven tramos de autopista concesionada con segmentos de ruta interurbana sin bermas adecuadas, zonas desérticas del norte grande con extensiones superiores a **60-80 km sin infraestructura de detención segura**, y corredores de alta congestión en la zona central vinculados a la industria frutícola y portuaria.
+La materialización de este desacople estructural se concentró en tres eventos críticos durante el primer semestre de 2026. El 14 de febrero, el accidente en el kilómetro 312 de la Ruta 5 Sur demostró la ceguera de la compañía respecto a los tiempos de descanso previos de los conductores subcontratados. En abril, una fiscalización inmovilizó un vehículo con sustancias peligrosas por presentar un certificado vencido hacía tres semanas, evidenciando el colapso del sistema de control documental. Finalmente, en junio, el levantamiento de costos demostró las profundas deficiencias del modelo de asignación financiera. Estos eventos no constituyen fallas aisladas, sino manifestaciones directas de un ecosistema de datos desintegrado.
 
-La consecuencia directa de esta configuración territorial es la existencia de lo que operacionalmente puede denominarse **"zonas de sombra"**: franjas geográficas donde la empresa carece de visibilidad sobre la posición, el estado mecánico y la condición del conductor que opera el vehículo. Esta opacidad territorial se agrava por un dato estructural del caso: **34 camiones carecen por completo de dispositivo GPS**, y los restantes **340 camiones con GPS** están distribuidos en **3 plataformas de rastreo distintas e incompatibles entre sí**, lo que obliga a la torre de despacho a operar con tres pantallas simultáneas sin capacidad de correlación automática de datos.
+Este colapso de la gobernanza de datos se cuantifica en la gestión manual de aproximadamente 6.000 fechas de vencimiento vivas, distribuidas en cuatro planillas de cálculo aisladas que carecen de integridad referencial. A nivel de hardware instalado, se constata una omisión total en la extracción de evidencia: cero descargas de información de los tacógrafos digitales y 61 tractocamiones operando con telemetría CANbus de fábrica inactiva. En el plano de visibilidad, 34 camiones circulan sin dispositivo de posicionamiento GPS, mientras que los 340 restantes se monitorean a través de tres plataformas incompatibles, fragmentando la lectura de la torre de control. 
 
-Desde la perspectiva de la gobernanza del dato posicional, Curimón enfrenta un problema de **fragmentación de la fuente de verdad territorial**. No existe una visión única y consolidada de dónde se encuentra cada activo en un momento dado. La torre de despacho —compuesta por **22 operadores en turnos 24/7**— recurre a la **memoria humana y llamadas telefónicas** como mecanismo primario de asignación y seguimiento, lo cual introduce latencia, errores de juicio y una dependencia crítica del conocimiento tácito individual de cada operador.
+Frente a esta vulnerabilidad sistémica, la compañía enfrenta una amenaza existencial hacia el año 2029: el cliente exportador mayor, responsable del 19 % de los ingresos, ha condicionado la renovación de su contrato al cumplimiento de requisitos ineludibles. Estas exigencias imponen la necesidad de acreditar el cumplimiento de la jornada en cada viaje —incluyendo transportistas subcontratados—, contar con el cien por ciento de trazabilidad y posicionamiento de carga en tiempo real, digitalización integral de la documentación (e-Docs) y la emisión de reportes auditados de huella de carbono (CO2e) por tonelada-kilómetro. Esta matriz de condiciones demanda una transformación absoluta de los estándares probatorios de Transportes Curimón S.A., cerrando el margen para operaciones basadas en la invisibilidad de los activos de terceros.
 
-### 2.1.2 La Dinámica de Negocio: Redundancia, Subcontratación y Margen Operacional del 9%
+## 2.2 Desglose Cuantitativo y Diagnóstico de los 7 Bloques de Datos Duros
 
-Transportes Curimón S.A. opera bajo un modelo de negocio mixto que combina flota propia con subcontratación extensiva de capacidad de transporte. La empresa gestiona **374 tractocamiones**: **148 camiones propios** (39,6% de la flota) y **226 camiones subcontratados** (60,4%) pertenecientes a **148 dueños independientes**. Complementariamente, la empresa posee **210 semirremolques propios** que se acoplan indistintamente a tractocamiones propios y de terceros.
+### Bloque 1: Flota y Asimetría de Tenencia
 
-Este modelo de negocio genera una dinámica de redundancia operacional necesaria pero costosa: la empresa debe mantener una base de activos propios suficiente para honrar compromisos contractuales mínimos, mientras que recurre masivamente a la subcontratación para absorber peaks de demanda, cubrir rutas de baja rentabilidad y compensar la indisponibilidad de vehículos propios por mantenimiento o siniestralidad.
+| Indicador | Valor |
+| :--- | :--- |
+| Capacidad total gestionada | 374 tractocamiones |
+| Flota propia | 148 tractocamiones (39,6 %) |
+| Flota subcontratada | 226 tractocamiones (60,4 %) |
+| Semirremolques propios | 210 equipos |
+| Proveedores subcontratados | 148 dueños independientes |
 
-La escala de la operación es significativa: aproximadamente **96.000 viajes anuales** que totalizan cerca de **41.000.000 de kilómetros recorridos por año**. Sin embargo, una cifra revela una ineficiencia logística de primer orden: el **26% de los kilómetros totales se recorren en vacío**, lo que equivale a aproximadamente **10,66 millones de kilómetros anuales sin carga**. Esta redundancia kilométrica no solo representa un costo directo de combustible, peajes, desgaste de neumáticos y depreciación acelerada, sino que evidencia una incapacidad estructural de la torre de despacho para optimizar la triangulación de cargas de retorno.
+> [!IMPORTANT]  
+> El 60,4 % de la capacidad tractora principal no pertenece a la compañía, fragmentada entre 148 propietarios independientes que toman decisiones autónomas sobre el mantenimiento y disponibilidad de sus activos.
 
-El margen operacional consolidado de la empresa es de apenas un **9%**, una cifra que por sí sola revela la fragilidad financiera de la operación. Más preocupante aún es la composición interna de dicho margen: **3 de los 8 contratos principales operan bajo costo**, y estos tres contratos representan el **31% del ingreso total de la compañía**. El caso más extremo corresponde a un contrato que ha operado a un **margen negativo del −14%** durante **4 años consecutivos**. Esta situación configura un patrón de **subsidios cruzados ocultos**, donde los contratos rentables financian la pérdida sostenida de los deficitarios sin que exista un mecanismo analítico que permita a la gerencia identificar, cuantificar y corregir esta distorsión de forma oportuna.
+El análisis de la estructura de la flota evidencia una dependencia crítica hacia terceros que desequilibra la arquitectura de control. Curimón provee la interfaz comercial, los semirremolques propios y absorbe la responsabilidad del servicio, pero el activo motriz fundamental está bajo el mando de terceros. Esta asimetría de tenencia bloquea cualquier esfuerzo de estandarización tecnológica forzada y determina que las capacidades de trazabilidad o integración no pueden depender de imposiciones jerárquicas, configurando el principal obstáculo para asegurar la fiabilidad operacional.
 
-La causa raíz de esta opacidad financiera reside en el método de **asignación histórica de costos prorrateada por volumen de ingreso**: un criterio que distribuye los costos operacionales proporcionalmente a la facturación de cada contrato, en lugar de imputarlos analíticamente al consumo real de recursos (kilómetros recorridos, horas de conducción, combustible consumido, peajes pagados, mantenciones efectuadas) de cada ruta, viaje y contrato específico. Esta metodología enmascara sistemáticamente la verdadera rentabilidad de cada operación y priva a la gerencia de la información necesaria para tomar decisiones de negociación tarifaria, abandono de contratos deficitarios o reestructuración de rutas.
+### Bloque 2: Fuerza Conductora y Brecha de Jornada
 
----
+| Indicador | Valor |
+| :--- | :--- |
+| Dotación total de conductores programados | 454 operadores |
+| Conductores propios | 196 (43,2 %) |
+| Conductores subcontratados (externos) | 258 (56,8 %) |
+| Descargas de tacógrafo digital | 0 registros |
+| Incidente de referencia (km 312) | Chofer externo con descanso simulado tras operar para otro cliente |
 
-## 2.2 La Fractura Estructural: La Brecha entre Responsabilidad Legal y Control Operacional
+El ecosistema laboral de la compañía presenta una ceguera probatoria total frente a la normativa de tiempos de conducción y descanso. Con 258 conductores que no mantienen un vínculo laboral con Curimón y cero descargas históricas de tacógrafo, la empresa asigna viajes sin evidencia objetiva de la jornada previa del operador. El accidente del kilómetro 312 subraya la gravedad de esta fisura: el cumplimiento aparente de los registros internos de la empresa no garantiza el descanso real del conductor externo, exponiendo a la compañía a responsabilidades penales, civiles y comerciales sobre comportamientos que están fuera de su campo visual.
 
-> [!IMPORTANT]
-> **Declaración formal del problema raíz:** Transportes Curimón S.A. soporta la **totalidad de la responsabilidad civil, comercial, regulatoria y reputacional** derivada de cada viaje que gestiona ante clientes, autoridades fiscalizadoras y terceros afectados, pero carece de **tuición operacional directa** sobre el **60,4% de los vehículos** (226 camiones subcontratados) y el **56,8% de los conductores** (258 choferes externos) que ejecutan materialmente dichos viajes.
+### Bloque 3: Red, Rutas y Fricción Logística
 
-Esta fractura estructural constituye el **problema central** que atraviesa transversalmente todos los dominios operacionales de la compañía: seguridad vial, cumplimiento normativo, eficiencia logística, control financiero y gestión comercial. No se trata de un problema funcional aislado ni de una deficiencia de un proceso particular, sino de un **desacople sistémico** entre la arquitectura jurídico-comercial del negocio y la arquitectura de control operacional de la empresa.
+| Indicador | Valor |
+| :--- | :--- |
+| Volumetría anual | 96.000 viajes |
+| Distancia anual recorrida | 41.000.000 de kilómetros |
+| Operación en vacío | 26 % (10,66 millones de kilómetros) |
+| Torre de programación | 22 operadores en turnos de 24x7 |
+| Cruces fronterizos anuales (Paso Los Libertadores) | ≈ 1.900 cruces al año (cierres estacionales por nieve de hasta 12 días continuos) |
 
-La magnitud de este desacople se manifiesta en datos concretos:
+La coordinación de 41 millones de kilómetros anuales recae sobre una torre de control de 22 operadores que ejecutan la asignación de viajes sin soporte algorítmico, operando desde la memoria y la telefonía. El impacto más severo de este modelo es la generación de 10,66 millones de kilómetros recorridos sin carga, representando un 26 % de ineficiencia estructural directa sobre la capacidad rodante. A esta fricción logística se suma la volatilidad geográfica del paso Los Libertadores, cuyos cierres prolongados quiebran cualquier modelo estático de planificación de recursos, saturando la capacidad de respuesta manual del equipo de programación.
 
-- **Control de jornada:** Curimón posee un control precario de la jornada de sus **196 conductores propios** (limitado a los momentos de presencia en terminal), y tiene **cero visibilidad** sobre la jornada previa de los **258 conductores externos** al momento de asignarles un flete. Este punto ciego quedó trágicamente expuesto en el siniestro del **km 312**, donde se determinó que el conductor externo involucrado tenía **11 horas de descanso simulado** en sus registros, habiendo en realidad conducido para otro cliente inmediatamente antes de tomar el flete de Curimón.
+### Bloque 4: Desgobierno de Datos e Infraestructura Ociosa
 
-- **Retorno a terminales:** Los camiones propios retornan a un terminal de Curimón en promedio cada **6 días**, lo que ya limita la frecuencia de inspecciones presenciales, verificación documental y descarga de datos. Pero el problema se agudiza dramáticamente con la flota subcontratada: el **22% de los camiones de terceros** pasa menos de **1 vez al mes** por un terminal de la empresa. Esto significa que para una fracción significativa de su capacidad operativa, Curimón opera esencialmente "a ciegas" respecto del estado mecánico del vehículo, la vigencia documental del conductor y las condiciones reales de prestación del servicio.
+| Indicador | Valor |
+| :--- | :--- |
+| Fechas de vencimiento vivas (estimado) | ~6.000 fechas |
+| Soporte de control documental | 4 planillas de cálculo (Excel) aisladas |
+| Telemetría CANbus inactiva | 61 tractocamiones propios |
+| Camiones sin posicionamiento GPS | 34 tractocamiones |
+| Plataformas de rastreo simultáneas incompatibles | 3 plataformas para 340 tractocamiones |
 
-- **Datos de operación:** **61 tractocamiones propios** cuentan con telemetría de fábrica CANbus que transmite datos de motor, consumo, frenado y velocidad, pero esta capacidad está **completamente inactiva**: los datos nunca han sido descargados ni analizados. De forma análoga, la empresa tiene **0 descargas de tacógrafos digitales** a pesar de que estos instrumentos son **obligatorios por ley**. Esta doble inactividad configura una paradoja: la empresa posee hardware instalado capaz de generar evidencia objetiva del comportamiento operacional de sus vehículos y conductores, pero no ha establecido los procesos, competencias ni rutinas organizacionales necesarios para transformar esos datos en información de gestión y cumplimiento.
+Se constata un estado de inoperatividad de los datos donde la captura, integración y alerta preventiva han fallado sistemáticamente. La mantención manual de cerca de 6.000 vigencias en hojas de cálculo inconexas garantiza la aparición de incidentes por vencimientos documentales no detectados. Al mismo tiempo, la empresa desperdicia activos tecnológicos de fábrica, como el CANbus de 61 tractocamiones que nunca ha sido consultado. La fragmentación de 340 vehículos en tres plataformas de monitoreo divergentes, sumado a los 34 camiones ciegos, destruye la posibilidad de conformar una vista operacional única.
 
-La fractura entre responsabilidad y control no es una condición estática: se está agravando progresivamente por la convergencia de presiones regulatorias crecientes (fiscalización de jornada, normativa hazmat, control de emisiones), exigencias contractuales del cliente exportador clave (trazabilidad del 100% de los viajes para la renovación de contrato en 2029) y la propia inercia de crecimiento de la flota subcontratada como mecanismo de flexibilidad comercial.
+### Bloque 5: Fricción Comercial y Tiempos de Espera
 
----
+| Indicador | Valor |
+| :--- | :--- |
+| Tiempo medio de espera en puntos de carga | 3 horas 10 minutos (hasta 8 horas en temporada de fruta) |
+| Cobros facturados por sobreestadía | $ 340.000.000 anuales |
+| Cobros objetados / no recaudados por falta de prueba | 71 % ($ 241.400.000) |
+| Proceso de liquidación mensual a terceros | 9 días de duración, 8 analistas involucrados |
+| Tasa de refacturación / corrección en liquidaciones | 11 % |
 
-## 2.3 Diagnóstico Cuantitativo del Dolor Operacional (Los 7 Bloques de Datos Duros)
-
-### Bloque 1: Estructura de Flota y Asimetría de Tenencia
-
-La configuración de activos de Curimón revela una **asimetría estructural de tenencia** que condiciona todo el modelo de control:
-
-| Indicador | Valor | Implicancia |
-|:---|:---|:---|
-| Tractocamiones gestionados | 374 | Escala operacional que excede la capacidad de control manual |
-| Camiones propios | 148 (39,6%) | Minoría de la flota bajo tuición directa |
-| Camiones subcontratados | 226 (60,4%) | Mayoría de la flota sin tuición directa |
-| Dueños independientes | 148 | Alta fragmentación de la propiedad; 148 interlocutores con intereses divergentes |
-| Semirremolques propios | 210 | Acople con tractocamiones propios y de terceros: punto de contacto físico entre ambas flotas |
-| Retorno a terminal (propios) | Cada 6 días | Ventana limitada para inspección, verificación y descarga de datos |
-| Retorno a terminal (subcontratados) | 22% pasa < 1 vez/mes | Punto ciego operacional: fracción de la flota virtualmente invisible |
-
-La asimetría de tenencia implica que Curimón ha externalizado la propiedad del activo principal (el tractocamión) pero no ha podido externalizar la **responsabilidad** que le es jurídicamente imputable como operador logístico mandante. Los 148 dueños independientes mantienen soberanía sobre sus vehículos: deciden a qué otros operadores prestan servicio, cuándo llevan sus camiones a mantención, qué conductores contratan y qué información comparten o retienen. La empresa, por su parte, carece de mecanismos contractuales, operacionales o informativos que le permitan verificar de forma independiente el cumplimiento de estándares mínimos cuando el activo no está físicamente presente en sus terminales.
-
-### Bloque 2: Fuerza Laboral y Brecha de Control de Jornada
-
-| Indicador | Valor | Implicancia |
-|:---|:---|:---|
-| Conductores programados | 454 | Fuerza laboral distribuida en territorio extenso |
-| Conductores propios | 196 (43,2%) | Control de jornada precario, limitado a presencia en terminal |
-| Conductores externos | 258 (56,8%) | Control de jornada **inexistente** por parte de Curimón |
-| Descargas de tacógrafo digital | 0 | Incumplimiento normativo total; ausencia de evidencia objetiva de jornada |
-| Caso km 312 | 11 h de descanso simulado | Evidencia de riesgo sistémico: el conductor había operado para otro cliente sin descanso real |
-
-La **brecha de control de jornada** es quizás la vulnerabilidad más grave del modelo operacional de Curimón, tanto por sus implicancias de seguridad vial como por su exposición legal. La normativa vigente (Art. 25 bis del Código del Trabajo) establece límites estrictos de jornada de conducción y descanso obligatorio para conductores de transporte de carga interurbana. Sin embargo, Curimón no tiene forma de conocer qué actividad realizó un conductor externo **antes** de tomar un flete de la empresa. El siniestro del km 312 no es un evento aislado sino la manifestación tangible de un riesgo latente en cada uno de los aproximadamente **96.000 viajes anuales** donde participan conductores externos: la empresa despacha vehículos confiando en la declaración verbal del conductor sobre su estado de descanso, sin contar con ningún registro objetivo que respalde o contradiga dicha declaración.
-
-La absoluta ausencia de descargas de tacógrafo digital agrava esta situación: incluso para los conductores propios, la empresa carece de registros instrumentales que permitan verificar el cumplimiento de jornada, establecer patrones de fatiga o generar evidencia de descargo ante un eventual proceso judicial o fiscalización laboral.
-
-### Bloque 3: Eficiencia y Dinámica de Rutas
-
-| Indicador | Valor | Implicancia |
-|:---|:---|:---|
-| Viajes anuales | ≈ 96.000 | Alta frecuencia de despacho; presión sobre la torre de control |
-| Kilómetros anuales | ≈ 41.000.000 | Escala que amplifica cualquier ineficiencia porcentual |
-| Extensión territorial | 3.000 km | Dispersión que impide supervisión presencial |
-| Kilómetros en vacío | 26% (≈ 10,66 M km/año) | Redundancia logística masiva; costo operacional sin contraprestación de ingreso |
-| Operadores de torre | 22 (turnos 24/7) | Asignación por memoria humana y llamadas telefónicas |
-| Paso Los Libertadores | 1.900 cierres; hasta 12 días | Nodo de alta volatilidad que desestabiliza la programación |
-
-El dato de **10,66 millones de kilómetros recorridos en vacío** por año merece un análisis particular. Cada kilómetro en vacío consume combustible (el rubro representa el **14% del ingreso total** de la compañía), desgasta neumáticos, acumula peajes, genera depreciación del activo y ocupa horas de conducción que podrían destinarse a viajes productivos. En una operación con margen del 9%, la reducción de incluso una fracción de este porcentaje de vacío tendría un impacto directo y mensurable en la rentabilidad consolidada.
-
-La causa raíz de esta ineficiencia se localiza en el método de asignación de la torre de despacho: **22 operadores humanos** que programan **96.000 viajes anuales** apoyándose en su memoria individual, conocimiento tácito de la disponibilidad de conductores y comunicación telefónica. Este esquema de asignación carece de visibilidad sobre la posición actual de todos los vehículos disponibles, las cargas de retorno potencialmente triangulables y las ventanas de tiempo óptimas para minimizar el recorrido sin carga. La asignación por memoria humana no solo es subóptima desde el punto de vista logístico, sino que es además **irrepetible y no auditable**: no existe registro de por qué se asignó un determinado camión a un determinado viaje, ni es posible evaluar retrospectivamente si existía una alternativa más eficiente.
-
-### Bloque 4: Desgobierno de Datos, Vigencias y Hardware Ocioso
-
-| Indicador | Valor | Implicancia |
-|:---|:---|:---|
-| Fechas de vencimiento vivas | ≈ 6.000 | Licencias, revisiones, seguros, cursos en vigilancia simultánea |
-| Soporte de gestión | 4 planillas Excel aisladas | Sin integridad referencial, sin alertas automatizadas, sin auditoría de cambios |
-| Descargas de tacógrafo | 0 | Incumplimiento legal; dato de jornada inutilizado |
-| Tractocamiones con CANbus inactivo | 61 propios | Hardware de telemetría instalado de fábrica, nunca descargado |
-| Camiones sin GPS | 34 | Invisibilidad posicional total |
-| Camiones con GPS | 340 en 3 plataformas incompatibles | Fragmentación de la visibilidad; 3 pantallas en torre sin integración |
-
-Este bloque revela un patrón de **desgobierno de datos** que opera en tres niveles simultáneos:
-
-**Nivel 1 — Datos existentes pero no gestionados:** Las **≈ 6.000 fechas de vencimiento** constituyen un corpus de información crítica para el cumplimiento normativo (un curso vencido puede derivar en una infracción grave, como ocurrió en abril 2026 con la carga hazmat), pero su gestión está dispersa en **4 planillas Excel aisladas**. Estas planillas carecen de integridad referencial cruzada, no generan alertas proactivas de próximo vencimiento, no registran quién modificó qué dato ni cuándo, y son susceptibles a errores de digitación, duplicación y omisión. La consecuencia práctica es que el vencimiento de un documento crítico solo se detecta cuando ya se ha materializado la infracción.
-
-**Nivel 2 — Datos generados pero no capturados:** Los **61 tractocamiones propios con telemetría CANbus** y los tacógrafos digitales de la flota generan datos continuamente durante cada viaje: velocidad, RPM, consumo instantáneo, temperatura de motor, eventos de frenado brusco, tiempos de conducción y descanso. Sin embargo, estos datos **nunca se descargan**. La empresa posee el hardware pero no ejecuta el proceso de extracción, almacenamiento y análisis. El resultado es una pérdida sistemática de información que podría fundamentar decisiones de mantenimiento predictivo, cumplimiento de jornada y optimización de consumo.
-
-**Nivel 3 — Datos capturados pero no integrados:** Los **340 camiones con GPS** generan datos de posición, pero la distribución en **3 plataformas incompatibles** obliga a los operadores de torre a alternar entre tres interfaces distintas sin posibilidad de correlacionar la información en una vista unificada. Esta fragmentación reduce la utilidad operacional del dato posicional y aumenta la probabilidad de error humano en la coordinación de flota.
-
-### Bloque 5: Fricción Comercial, Esperas y Liquidación a Terceros
-
-| Indicador | Valor | Implicancia |
-|:---|:---|:---|
-| Espera promedio en clientes | 3 h 10 min | Tiempo improductivo del activo y del conductor |
-| Espera máxima (temporada fruta) | Hasta 8 h | Pico estacional que multiplica la ineficiencia |
-| Sobreestadías facturadas | $340 M CLP/año | Ingreso potencial por compensación del tiempo de espera |
-| Cobros objetados por clientes | 71% ($241,4 M CLP) | Pérdida cuasi-cierta por falta de prueba fehaciente |
-| Respaldos ilegibles/incompletos | 4,2% | Documentación manual que no soporta disputa comercial |
-| Proceso de liquidación mensual | 9 días hábiles, 8 personas | Alto consumo de recursos administrativos |
-| Notas de corrección post-emisión | 11% | Indicador de error sistemático en el cálculo de liquidación |
-
-Este bloque cuantifica una **hemorragia financiera crónica** directamente atribuible a la incapacidad de la empresa para generar prueba fehaciente de los tiempos de espera en instalaciones de clientes. Curimón factura anualmente **$340 millones CLP** por concepto de sobreestadías, pero el **71% de estos cobros** —equivalente a **$241,4 millones CLP**— es objetado y no percibido porque la empresa no puede demostrar de forma incontrovertible la hora de ingreso y la hora de salida del vehículo en las instalaciones del cliente.
-
-En el contexto de un margen operacional del 9%, la no percepción de $241,4 millones CLP anuales representa una erosión directa de la rentabilidad que es enteramente atribuible a una deficiencia de registro y documentación, no a una condición intrínseca del mercado o de la operación física. La causa raíz es la dependencia de **respaldos documentales manuales** (guías, timbres, anotaciones) que resultan ilegibles, incompletos o insuficientes como prueba ante la objeción del cliente.
-
-Paralelamente, el **proceso de liquidación mensual a los 148 transportistas subcontratados** consume **9 días hábiles** y la dedicación de **8 personas** del área administrativa. El **11% de notas de corrección post-emisión** indica que más de 1 de cada 10 liquidaciones contiene errores que deben ser detectados, reclamados por el transportista, corregidos, re-emitidos y re-aprobados. Este ciclo de corrección no solo consume recursos adicionales sino que deteriora la relación comercial con los dueños de camiones subcontratados, quienes perciben la liquidación como un proceso opaco, tardío y propenso a errores en su perjuicio.
+La ausencia de registros de posicionamiento georreferenciado e inalterable genera una profunda merma financiera mediante la objeción del 71 % de los montos facturados por demoras en las instalaciones de clientes, representando $241,4 millones no recaudados. El soporte de papel, manipulable y de entrega diferida, fracasa como instrumento probatorio. Adicionalmente, el procesamiento de las liquidaciones de 148 dueños subcontratados exige 9 días de trabajo de 8 personas, resultando en un 11 % de notas de corrección post-emisión; un indicador de fricción que deteriora la confianza de los proveedores externos que sostienen la mayoría de la operación.
 
 ### Bloque 6: Estructura Financiera y Distorsión de Costos
 
-| Indicador | Valor | Implicancia |
-|:---|:---|:---|
-| Margen operacional consolidado | 9% | Fragilidad ante cualquier incremento de costos o pérdida de ingresos |
-| Contratos bajo costo | 3 de 8 principales | Subsidios cruzados ocultos; rentabilidad aparente distorsionada |
-| Peor contrato | −14% de margen, 4 años consecutivos | Destrucción sostenida de valor no corregida |
-| Peso de contratos deficitarios | 31% del ingreso | Magnitud significativa del ingreso proveniente de operaciones no rentables |
-| Costo de combustible | 14% del ingreso | Segundo rubro de costo más relevante |
-| Desfase de registro de combustible | Hasta 40 días | Información de costos disponible con rezago que impide gestión oportuna |
-| Método de costeo | Prorrateo por volumen de ingreso | Enmascara subsidios cruzados; impide costeo analítico por viaje/ruta/contrato |
+| Indicador | Valor |
+| :--- | :--- |
+| Margen operacional consolidado | 9 % |
+| Contratos principales bajo el costo | 3 de 8 contratos |
+| Participación de los contratos bajo costo | 31 % del ingreso total |
+| Caso crítico de rentabilidad negativa | -14 % de margen durante 4 años consecutivos |
+| Combustible sobre ingreso y rezago contable | 14 % del ingreso; hasta 40 días de desfase probatorio |
 
-La **distorsión de costos** constituye un problema de gobernanza financiera de primer orden. El método de prorrateo por volumen de ingreso asigna costos a cada contrato en proporción a lo que factura, no en proporción a lo que consume. Esto genera una ilusión óptica contable: los contratos de mayor facturación absorben proporcionalmente más costos aunque sus rutas sean más eficientes, mientras que los contratos de menor facturación parecen menos costosos aunque sus rutas sean más largas, más complejas o más intensivas en combustible.
+La rentabilidad del 9 % encubre un modelo de gestión basado en prorrateos generales que impiden el costeo analítico a nivel de ruta y viaje. El descubrimiento de que el 31 % de los ingresos de la empresa proviene de tres contratos deficitarios —uno de ellos drenando un margen del -14 % durante cuatro años ininterrumpidos— es el resultado de operar a ciegas respecto de los costos reales de ejecución. El rubro de combustible, responsable del 14 % del gasto, opera bajo un esquema de facturación consolidada mensual que retrasa en 40 días la visualización del consumo, impidiendo relacionar el rendimiento energético con los hábitos de conducción o el desgaste mecánico.
 
-El resultado práctico es que la gerencia no dispone de la información necesaria para responder preguntas fundamentales de gestión: ¿Cuál es el costo real por kilómetro de cada ruta? ¿Cuánto cuesta servir a cada cliente por tonelada transportada? ¿Qué contratos generan valor y cuáles destruyen valor? La persistencia de un contrato a **−14% de margen durante 4 años consecutivos** es evidencia directa de esta ceguera analítica: si el dato estuviera visible, cuantificado y atribuido correctamente, la decisión de renegociar o abandonar ese contrato debería haberse tomado años antes.
+### Bloque 7: Seguridad y Riesgo Existencial
 
-El **desfase de hasta 40 días en el registro de combustible** agrava la distorsión: el rubro que representa el **14% del ingreso** total se contabiliza con un rezago que impide cualquier forma de control de gestión en tiempo operacional. La gerencia conoce el costo real de combustible de un viaje solo semanas después de que el viaje se completó, cuando la oportunidad de corrección o ajuste ya ha caducado.
+| Indicador | Valor |
+| :--- | :--- |
+| Detenciones en ruta por exceso de peso (año 2025) | 142 eventos |
+| Horas de inmovilización por sobrepeso | 2.556 horas-camión perdidas |
+| Infracción Hazmat (abril 2026) | Curso vencido hace 3 semanas; 14 horas de inmovilización |
+| Siniestros con lesiones (últimos 3 años) | 4 accidentes |
+| Exigencias condicionantes del cliente principal (2029) | Trazabilidad 100 %, posición tiempo real, e-Docs, CO2e |
 
-### Bloque 7: Seguridad Operacional, Sobrepeso e Incumplimiento Normativo
+> [!IMPORTANT]  
+> La imposibilidad de certificar los estándares operacionales ya no solo genera multas y tiempos muertos, sino que constituye una amenaza a la continuidad del negocio frente al ultimátum del cliente mayor (19 % de los ingresos).
 
-| Indicador | Valor | Implicancia |
-|:---|:---|:---|
-| Detenciones por sobrepeso (2025) | 142 | Frecuencia inaceptable; patrón recurrente, no incidental |
-| Inmovilización promedio por evento | 18 h | Pérdida de productividad directa del activo y el conductor |
-| Horas-camión perdidas por sobrepeso | 2.556 h/año | Equivalente a más de 106 días-camión completos inoperativos |
-| Infracción hazmat (abril 2026) | 1 grave; 14 h inmovilización | Curso vencido 3 semanas atrás; falla de vigilancia documental |
-| Siniestros con lesiones (3 años) | 4 (1 grave en febrero 2026) | Riesgo de vida, costo humano, exposición judicial y reputacional |
-| Exigencia del exportador clave | Trazabilidad 100%, posición real, e-Docs, CO₂e | Condición no negociable para renovación de contrato 2029 |
-| Peso del exportador clave en ingresos | 19% | Pérdida de este contrato comprometería la viabilidad del negocio |
-
-Las **142 detenciones por sobrepeso** en 2025 no pueden interpretarse como eventos aislados o accidentales: su frecuencia configura un **patrón de incumplimiento recurrente** que sugiere una falla estructural en el proceso de carga, verificación de peso y despacho. Cada detención genera un promedio de **18 horas de inmovilización**, lo que totaliza **2.556 horas-camión perdidas** en el año. Este dato debe leerse en el contexto de una operación que lucha por optimizar cada hora productiva de sus activos: las 2.556 horas equivalen a más de **106 jornadas completas de 24 horas** donde un tractocamión y su conductor están detenidos sin generar ingreso alguno, además de las multas, costos de descarga parcial y daño reputacional asociados.
-
-La infracción por transporte de carga peligrosa (hazmat) de **abril 2026** es un caso emblemático del fracaso en la vigilancia de vigencias documentales: el curso obligatorio del conductor estaba **vencido 3 semanas atrás**, un lapso que se sitúa dentro del horizonte normal de cualquier mecanismo de alerta proactivo razonablemente diseñado. El hecho de que esta expiración no haya sido detectada hasta que se materializó la fiscalización en ruta confirma que las **4 planillas Excel aisladas** que gestionan las ≈ 6.000 fechas de vencimiento no constituyen un mecanismo efectivo de control.
-
-Los **4 siniestros con lesiones en los últimos 3 años**, incluyendo **1 siniestro grave en febrero 2026**, configuran una tendencia de siniestralidad que, además de su costo humano primario, expone a la empresa a consecuencias judiciales, regulatorias y comerciales de magnitud potencialmente existencial.
-
-Finalmente, la **exigencia del cliente exportador clave** —que representa el **19% de los ingresos** de Curimón— establece un horizonte temporal no negociable: para la **renovación de contrato en 2029**, la empresa debe demostrar capacidad de trazabilidad de jornada en el **100% de los viajes** (incluyendo los operados por terceros), posición en tiempo real, documentación electrónica (e-Docs) y reporte auditado de emisiones de **CO₂e por tonelada-kilómetro**. El incumplimiento de estas condiciones no implicará una penalización dentro del contrato, sino la **no renovación del contrato mismo**, con la consiguiente pérdida del 19% de los ingresos de la compañía —un impacto que, sobre un margen del 9%, podría comprometer la viabilidad financiera de la empresa.
+Las 142 detenciones por sobrepeso revelan una incapacidad sistemática de controlar la carga antes de iniciar la marcha, drenando 2.556 horas-camión del sistema anualmente, contraviniendo los límites de peso por eje establecidos en el Decreto Supremo N.° 158 (Ministerio de Obras Públicas [MOP], 1980). La negligencia de control documental se evidencia en infracciones críticas como la ocurrida en abril con sustancias peligrosas, reguladas bajo el D.S. N.° 298 (Ministerio de Transportes y Telecomunicaciones [MTT], 1995), sumándose a los 4 siniestros con lesiones documentados. Estos pasivos operativos y de seguridad colisionan de frente con las exigencias ineludibles para la renovación de 2029: un entorno donde la empresa no solo deberá erradicar las ineficiencias de peso y documentación, sino auditar con total transparencia parámetros como el CO2e bajo estándares internacionales (Global Logistics Emissions Council [GLEC], 2023) y la posición instantánea de la carga bajo amenaza de cancelación de contrato.
 
 ---
 
-### Tabla Maestra de Síntomas, Causas Raíz e Impactos Económicos/Legales
+## 2.3 Mapeo de Infraestructura Operacional y Nodos Críticos
 
-| N.º | Síntoma Observable | Causa Raíz | Impacto Económico / Legal |
-|:---:|:---|:---|:---|
-| S1 | 0 descargas de tacógrafo; 258 conductores sin control de jornada | Ausencia de proceso de descarga y de mecanismo de verificación de jornada previa de externos | Exposición legal por incumplimiento Art. 25 bis; riesgo de siniestralidad por fatiga (caso km 312) |
-| S2 | 26% de km en vacío (10,66 M km/año) | Asignación por memoria humana sin visibilidad de posición ni de cargas de retorno disponibles | Costo directo de combustible, peajes y desgaste sin contraprestación de ingreso; erosión del margen del 9% |
-| S3 | $241,4 M CLP/año en cobros de sobreestadía no percibidos | Incapacidad de generar prueba fehaciente de hora de ingreso/salida en instalaciones de clientes | Pérdida directa de ingreso equivalente a un porcentaje significativo del margen operacional |
-| S4 | 142 detenciones por sobrepeso; 2.556 h-camión perdidas | Falla en el proceso de verificación de peso en carga y despacho | Multas, inmovilización, pérdida de productividad, daño reputacional ante clientes y autoridades |
-| S5 | 3 contratos a margen negativo (peor: −14%) durante 4 años | Costeo por prorrateo que enmascara subsidios cruzados; desfase de 40 días en registro de combustible | Destrucción sostenida de valor; financiamiento oculto de contratos deficitarios por los rentables |
-| S6 | 6.000 vigencias en 4 Excel; infracción hazmat por curso vencido 3 semanas | Dispersión de datos en planillas sin alertas, sin integridad referencial y sin auditoría de cambios | Infracciones regulatorias; riesgo de prohibición de operar en rutas hazmat; exposición penal en caso de siniestro con carga peligrosa |
-| S7 | 61 camiones con CANbus inactivo; 340 GPS en 3 plataformas | Hardware instalado sin proceso de descarga; plataformas no interoperables | Pérdida de datos de operación generados pero no capturados; fragmentación de visibilidad en torre |
-| S8 | Liquidación de 9 días, 8 personas, 11% correcciones | Proceso manual intensivo sin verificación cruzada automatizada | Costo administrativo, tensión con 148 transportistas, demora en cierre contable mensual |
-| S9 | 22% de flota subcontratada pasa < 1 vez/mes por terminal | Modelo de subcontratación sin mecanismo de verificación remota | Punto ciego total sobre estado mecánico, documental y de jornada de fracción relevante de la flota |
-| S10 | Exigencia de exportador clave no satisfecha (trazabilidad, CO₂e, e-Docs) | Brecha entre las capacidades actuales de registro y las exigencias contractuales de 2029 | Riesgo de no renovación del contrato que representa el 19% de los ingresos |
+El análisis territorial de Transportes Curimón S.A. evidencia que la operación no transcurre en un recinto confinado, sino a través de una red logística distribuida en un corredor de 3.000 kilómetros lineales, donde la exposición al riesgo es máxima y el control directo es mínimo. La infraestructura fija y móvil se articula en torno a seis tipologías de nodos críticos, cuyas condiciones de conectividad y propiedad determinan los límites de la gobernanza operacional.
+
+### 2.3.1 Los 5 Terminales Operacionales
+
+La infraestructura principal se concentra en cinco terminales: San Bernardo (Región Metropolitana), Antofagasta, Talca, Los Ángeles y Puerto Montt. El Terminal de San Bernardo funciona como nodo matriz, alojando la torre de programación que opera 24/7, el estanque propio de combustible, el patio principal de maniobras y la sala de equipos. Es, además, el único punto de convergencia donde se puede instalar o intervenir el equipamiento a bordo de la flota. Su conectividad está asegurada por dos enlaces de proveedores distintos. 
+
+En contraste, los cuatro terminales regionales operan como puntos de relevo, descanso y apoyo para el conductor, provistos de un único enlace de proveedor y sin respaldo en tres de ellos. La asimetría de conectividad entre la matriz y las regiones introduce un riesgo de desconexión latente.
+
+### 2.3.2 Los 2 Talleres Propios y la Red Externa
+
+La capacidad de mantenimiento físico se sostiene en dos talleres propios (San Bernardo y Los Ángeles), operados por una dotación de 46 personas en sistema de turnos, encargados del cuidado de los 148 tractocamiones y 210 semirremolques propios. 
+
+Cualquier contingencia mecánica que ocurra fuera del radio de estos dos talleres recae en talleres externos en ruta. Actualmente, las intervenciones de estos proveedores externos carecen de toda integración técnica o de software con la compañía; ocurren al margen de la hoja de vida del equipo, fracturando la trazabilidad de mantenimiento.
+
+### 2.3.3 Paso Fronterizo Los Libertadores
+
+El cruce hacia la provincia de Mendoza concentra un flujo de 1.900 operaciones anuales. Este nodo internacional impone la gestión simultánea de documentación aduanera y migratoria de dos países, y está sujeto a severas disrupciones. Entre los meses de junio y septiembre, los cierres por nieve desencadenan episodios impredecibles que han alcanzado hasta 12 días continuos de clausura, generando un efecto cascada sobre la flota detenida, la carga en tránsito y la programación de jornadas de los conductores.
+
+### 2.3.4 Zonas de Sombra de Conectividad
+
+La ruta de 3.000 kilómetros presenta extensas "zonas de sombra" geográficas, superando en algunos casos los 80 kilómetros continuos sin ninguna cobertura móvil, particularmente en el desierto del norte y en zonas cordilleranas. Durante el tránsito por estas franjas, la operación experimenta ceguera sistémica: se pierde la transmisión en tiempo real de la posición GPS, se interrumpe la capacidad de emitir documentos electrónicos o solicitar apoyos de emergencia, y se difiere obligadamente la entrega de datos telemáticos o de jornada.
+
+### 2.3.5 Puntos de Carga y Descarga de Clientes
+
+El extremo comercial de cada viaje se materializa en aproximadamente 1.400 puntos distintos. Éstas constituyen instalaciones de terceros donde Curimón actúa exclusivamente en calidad de visita. Se imponen allí reglas, sistemas y tiempos de espera dictados por el cliente (registrándose tiempos medios de espera de 3 horas y 10 minutos). La empresa se encuentra normativamente inhabilitada para instalar equipamiento físico o infraestructura en estos recintos, varios de los cuales, además, carecen de cobertura móvil para la confirmación de entrega.
+
+### 2.3.6 La Cabina del Camión
+
+La cabina representa el verdadero puesto de trabajo. Constituye un entorno físico hostil, caracterizado por vibración constante, temperaturas extremas, resplandor solar y alimentación eléctrica fluctuante. La restricción operacional fundamental de este nodo es que el conductor se encuentra impedido de interactuar con cualquier dispositivo mientras el camión está en movimiento, exigiendo que toda captura de información durante la marcha ocurra de manera automática y desatendida.
+
+### 2.3.7 Tabla de Síntesis de Nodos Operacionales
+
+| Nodo Operacional | Función Principal | Condiciones de Conectividad | Criticidad Operacional |
+| :--- | :--- | :--- | :--- |
+| **Terminal San Bernardo (Matriz)** | Base de torre 24/7, taller principal, estanque de abastecimiento y gestión central. | Alta. Dos enlaces de proveedores distintos, sala de equipos. | Máxima. Único punto de intervención técnica a bordo para la flota. |
+| **Terminales Regionales (4)** | Relevo, descanso y estacionamiento en Antofagasta, Talca, Los Ángeles y Pto. Montt. | Baja. Enlace único, sin respaldo en tres de los cuatro recintos. | Media. Puntos de soporte geográfico con fragilidad de transmisión. |
+| **Talleres Propios (2)** | Mantenimiento preventivo y correctivo de la flota propia (358 equipos sumados). | Integrados a la red corporativa de San Bernardo y Los Ángeles. | Alta. Sostienen la disponibilidad mecánica de los activos de la empresa. |
+| **Talleres Externos en Ruta** | Reparaciones correctivas de emergencia lejos de los terminales propios. | Nula integración tecnológica con el sistema central de Curimón. | Alta. Intervenciones no registradas que degradan el historial mecánico. |
+| **Paso Los Libertadores** | Operación internacional binacional (1.900 cruces al año). | Externa. Depende de infraestructura pública y oficial de dos países. | Alta. Alta volatilidad climática con cierres prolongados y bloqueo de flota. |
+| **Zonas de Sombra en Ruta** | Tránsito prolongado en áreas desérticas o cordilleranas de la Ruta 5 y anexos. | Nula. Extensión de más de 80 km continuos sin cobertura móvil. | Crítica. Pérdida total de visibilidad, posición GPS y alertas de emergencia. |
+| **Puntos de Clientes (~1.400)** | Recepción de carga, espera y entrega con firma de conformidad. | Variable. Infraestructura de terceros; varios sin cobertura celular. | Alta. Imposibilidad de instalar equipos propios; foco de objeción de esperas. |
+| **Cabina del Camión** | Centro de trabajo móvil y origen del registro de la jornada. | Fluctuante según ruta. Ambiente físico de vibración y temperaturas extremas. | Crítica. Restricción absoluta de manipulación de sistemas durante el avance. |
 
 ---
 
-## 2.4 Mapa de Actores y Grupos de Interés (Stakeholder Analysis)
+## 2.4 Caracterización de Actores y Matriz de Tensiones Operacionales
 
-### 2.4.1 Matriz de Poder/Influencia vs. Nivel de Interés
+El modelo operacional de Transportes Curimón S.A. se sostiene sobre un delicado equilibrio de intereses, responsabilidades y limitaciones estructurales. A partir del levantamiento (Capítulo 8 de las Bases), el diagnóstico evidencia que las fallas de control no responden primariamente a negligencia, sino a asimetrías de información y herramientas desalineadas con la realidad en terreno. A continuación, se caracterizan los diez actores críticos que determinan la viabilidad de cualquier intervención tecnológica.
 
-La siguiente matriz clasifica a los 10 actores identificados en el caso según su **capacidad de influir** en las decisiones organizacionales (poder) y su **grado de involucramiento** en la problemática diagnosticada (interés).
+### 2.4.1 Fichas de Caracterización de los 10 Actores del Capítulo 8
 
+**1. Ricardo Mansilla Oyarzo — Gerente de Operaciones**
+* **Dolor Operacional Principal:** Gestión de 22 despachadores operando a ciegas con 3 plataformas GPS incompatibles, 34 camiones sin cobertura y un 26% de kilómetros en vacío resueltos por teléfono y memoria. Necesita un bloqueo de seguridad automatizado, pero teme una parálisis operacional.
+* **Cita Clave:** «Para asignar un viaje tengo que saber cuatro cosas al mismo tiempo: dónde está el camión, si el equipo sirve para esa carga, si el conductor tiene jornada, y si los papeles están al día. De esas cuatro, hoy sé una y media... Prefiero que me bloquee a que me deje pasar.»
+* **Dependencias y Necesidades de Información:** Depende de la posición real del vehículo, estado del conductor y disponibilidad de cargas de retorno. 
+* **Capacidad de Bloqueo/Habilitación:** Alta. Controla la asignación diaria y puede desestimar sistemas que introduzcan fricción excesiva al despacho.
+
+**2. Yasna Colipán Marín — Conductora de ruta (7 años, ruta norte)**
+* **Dolor Operacional Principal:** Obligación de cumplir la jornada en tramos de 60-80 km sin infraestructura segura, registro manual retroactivo que no evidencia esperas de 6+ horas, y tramos ciegos prolongados sin comunicación en el norte.
+* **Cita Clave:** «Hay tramos donde a mí se me cumple el tiempo y no hay dónde parar. No hay banquina, no hay servicentro, no hay nada por sesenta kilómetros... Manejando no puedo tocar nada.»
+* **Dependencias y Necesidades de Información:** Requiere alertas anticipadas de jornada compatibles con la disponibilidad de paraderos seguros, sin interactuar con pantallas mientras conduce.
+* **Capacidad de Bloqueo/Habilitación:** Alta (operacional de facto). Si la interfaz exige manipulación en ruta, será ignorada o generará riesgos de seguridad.
+
+**3. Nolberto Sandoval Pinto — Transportista subcontratado (2 camiones, 9 años)**
+* **Dolor Operacional Principal:** Vulneración de la soberanía sobre su activo ($200M+) mediante rastreo continuo incluso cuando trabaja para competidores de Curimón, sumado a una opacidad financiera donde las liquidaciones tardan 9 días en llegar con errores frecuentes.
+* **Cita Clave:** «Si me preguntan qué me haría cambiar de opinión: que yo controle qué se comparte y cuándo. Si el aparato registra mis horas y eso me sirve a mí para demostrar que estoy en regla, lo acepto. Si el aparato es para que ellos me vigilen, no.»
+* **Dependencias y Necesidades de Información:** Depende de liquidaciones transparentes y visibilidad en tiempo real de sus viajes ejecutados para auditar sus pagos.
+* **Capacidad de Bloqueo/Habilitación:** Muy Alta (colectiva). Representa a 148 dueños (60% de la flota). Su resistencia activa puede impedir cualquier despliegue de trazabilidad.
+
+**4. Gabriela Ossandón Prieto — Gerenta de Administración y Finanzas (ingreso Ene-26)**
+* **Dolor Operacional Principal:** Ceguera financiera estructural. Descubrió contratos históricos operando con un −14% de margen durante 4 años por culpa del prorrateo por ingresos. Padece un retraso de 40 días en datos de combustible y un 38% de costos gestionados con alto porcentaje de error manual (11%).
+* **Cita Clave:** «El problema de fondo es que los datos existen y están todos separados... Cinco fuentes que nunca se juntan.»
+* **Dependencias y Necesidades de Información:** Requiere integración automatizada de consumo de combustible, horas-conductor y kilómetros reales para establecer un costeo analítico y liquidaciones precisas a terceros.
+* **Capacidad de Bloqueo/Habilitación:** Alta. Autoriza las inversiones tecnológicas y supervisa el límite del 9% de margen.
+
+**5. Hugo Trincado Bahamonde — Jefe de Taller y Mantenimiento**
+* **Dolor Operacional Principal:** Mantenimiento fundamentado en "adivinanza informada" por lectura manual de odómetros, y 61 camiones con telemetría de fábrica inactiva. No puede instalar nada que no pase físicamente por un terminal.
+* **Cita Clave:** «Sesenta y un camiones traen telemetría de fábrica... nadie ha bajado ese dato... si me dicen que hay que instalar algo en trescientos setenta y cuatro camiones, eso no es un proyecto de un mes: es un proyecto de meses.»
+* **Dependencias y Necesidades de Información:** Necesita kilometraje y códigos de falla remotos para transitar de un modelo preventivo a uno predictivo.
+* **Capacidad de Bloqueo/Habilitación:** Alta (logística). Determina la viabilidad temporal del despliegue de hardware en la flota.
+
+**6. Denisse Aguayo Lillo — Jefa de Prevención de Riesgos y Seguridad**
+* **Dolor Operacional Principal:** Responsabilidad legal sobre 454 conductores (sólo 196 propios) sin herramientas de control. Gestiona 6.000 vigencias en planillas Excel, con cero descargas de tacógrafo y una exposición directa que ya generó accidentes severos por fatiga y descontrol documental.
+* **Cita Clave:** «Lo que yo quiero es que el sistema no deje salir un camión que no puede salir. No una alerta, no un correo: que no deje.»
+* **Dependencias y Necesidades de Información:** Requiere que el cumplimiento de jornada y vigencias documentales intercepte de forma mandatoria el flujo de despacho.
+* **Capacidad de Bloqueo/Habilitación:** Media-Alta. Puede escalar riesgos legales paralizando la operación si no existen garantías de cumplimiento normativo.
+
+**7. Andrea Lecaros Vives — Gerenta de Logística de la exportadora clave (19% de ingresos)**
+* **Dolor Operacional Principal:** Riesgo de incumplimiento ante clientes internacionales por opacidad de Curimón. Ha impuesto un ultimátum para la renovación de contrato en 2029: trazabilidad total e integración de procesos.
+* **Cita Clave:** «Pedimos cuatro cosas para 2029... acreditación del cumplimiento de la jornada del conductor en cada viaje, incluidos los camiones subcontratados. No es una amenaza, es una exigencia con plazo.»
+* **Dependencias y Necesidades de Información:** Trazabilidad de posición en tiempo real, e-Docs, emisiones CO₂e y certificación de jornada legal.
+* **Capacidad de Bloqueo/Habilitación:** Extrema (comercial). Condiciona la supervivencia del 19% de los ingresos de la empresa.
+
+**8. Enrique Valdebenito Rioseco — Gerente General (21 años en la empresa)**
+* **Dolor Operacional Principal:** La fractura entre responsabilidad corporativa y control operacional real, cristalizada en el accidente de febrero, sumado a las pérdidas financieras ocultas.
+* **Cita Clave:** «El sesenta por ciento de mi capacidad no me pertenece... no les puedo dar una orden. Entonces cuando alguien me diga 'instalamos un dispositivo', le voy a preguntar quién le va a pedir permiso a ciento cuarenta y ocho dueños... y qué les vamos a ofrecer a cambio.»
+* **Dependencias y Necesidades de Información:** Necesita viabilidad táctica en la propuesta: mecanismos de incentivo a terceros e integración sin disrupción total.
+* **Capacidad de Bloqueo/Habilitación:** Máxima. El adjudicador final de la licitación y responsable corporativo.
+
+**9. Patricio Kast Fuentealba — Jefe de Control de Flota**
+* **Dolor Operacional Principal:** Equipo de 6 personas forzado a consolidar mapas de 3 proveedores distintos (algunos sin permisos de exportación), 34 camiones fantasmas sin GPS y zonas ciegas interurbanas de más de 80 kilómetros. 
+* **Cita Clave:** «El cliente grande quiere ver la posición en tiempo real... eso significa resolver tres proveedores, treinta y cuatro camiones sin equipo, los hoyos de cobertura, y convencer a ciento cuarenta y ocho dueños.»
+* **Dependencias y Necesidades de Información:** Estandarización de la capa de captura posicional y resolución de los baches de conectividad satelital/celular.
+* **Capacidad de Bloqueo/Habilitación:** Alta (técnica). Diagnosticará si las soluciones propuestas son factibles de integrar a nivel de señal en ruta.
+
+**10. Marcelo Riquelme Ibáñez — Jefe de Tecnologías de Información**
+* **Dolor Operacional Principal:** Un ecosistema fragmentado heredado (TMS 2013), con 5 sistemas y papel que jamás convergen. Redigitación constante de documentos, lo cual impide la trazabilidad en tiempo real.
+* **Cita Clave:** «Toda esa información existe... pero nunca se junta, y ése es literalmente el proyecto... hay puntos de carga sin cobertura donde el documento electrónico no se puede emitir en el momento.»
+* **Dependencias y Necesidades de Información:** Soluciones con arquitectura desacoplada, capaces de operar offline temporalmente e integrarse con el legado transaccional.
+* **Capacidad de Bloqueo/Habilitación:** Alta (tecnológica). Evaluará la factibilidad arquitectónica, de integración de datos y la robustez del despliegue.
+
+### 2.4.2 Matriz de Poder vs. Interés y Tabla de Brechas Operacionales
+
+**a) Matriz de Poder / Influencia vs. Nivel de Interés**
+
+```text
+                           ALTO INTERÉS                          BAJO INTERÉS
+                ┌───────────────────────────────┬──────────────────────────────┐
+                │        GESTIONAR DE CERCA     │     MANTENER SATISFECHO      │
+     ALTO       │                               │                              │
+     PODER      │ • E. Valdebenito (G. General) │                              │
+                │ • R. Mansilla (Operaciones)   │                              │
+                │ • A. Lecaros (Cliente 19%)    │                              │
+                │ • G. Ossandón (Finanzas)      │                              │
+                │ • M. Riquelme (TI)            │                              │
+                ├───────────────────────────────┼──────────────────────────────┤
+                │       MANTENER INFORMADO      │          MONITOREAR          │
+     BAJO       │                               │                              │
+     PODER      │ • D. Aguayo (Prevención)      │                              │
+    FORMAL      │ • H. Trincado (Mantenimiento) │                              │
+                │ • P. Kast (Control Flota)     │                              │
+                │ • Y. Colipán (Conductores)    │                              │
+                │ • N. Sandoval (Subcontratos)* │                              │
+                └───────────────────────────────┴──────────────────────────────┘
+* Nota: Los 148 dueños subcontratados tienen bajo poder formal, pero alto poder de bloqueo sistémico colectivo.
 ```
-                         ALTO INTERÉS                          BAJO INTERÉS
-              ┌───────────────────────────────┬──────────────────────────────┐
-              │        GESTIONAR DE CERCA      │     MANTENER SATISFECHO      │
-   ALTO       │                               │                              │
-   PODER      │ • Gerencia General            │                              │
-              │ • Operaciones (R. Mansilla)   │                              │
-              │ • Exportadora Clave           │                              │
-              │   (A. Lecaros)                │                              │
-              │ • Finanzas (G. Ossandón)      │                              │
-              ├───────────────────────────────┼──────────────────────────────┤
-              │       MANTENER INFORMADO       │          MONITOREAR          │
-   BAJO       │                               │                              │
-   PODER      │ • Prevención (D. Aguayo)      │                              │
-              │ • Taller (H. Trincado)        │                              │
-              │ • Torre de Despacho           │                              │
-              │ • Conductores Propios         │                              │
-              │ • Conductores Externos        │                              │
-              │   (Y. Colipán)                │                              │
-              │ • 148 Dueños Subcontratados   │                              │
-              │   (N. Sandoval)               │                              │
-              └───────────────────────────────┴──────────────────────────────┘
-```
 
-> [!NOTE]
-> Los 148 Dueños Subcontratados (representados por N. Sandoval) poseen **bajo poder formal** dentro de la estructura de Curimón, pero ejercen una **alta capacidad de bloqueo colectivo**: si un número significativo de ellos retira sus camiones de la operación, la empresa pierde el 60,4% de su capacidad de flota. Esta asimetría entre poder formal e influencia real los convierte en un actor de gestión crítica.
+**b) Tabla Consolidada de Caracterización y Brechas Operacionales**
 
-### 2.4.2 Tabla de Caracterización de Actores
-
-| Actor | Expectativas Principales | Temores Principales | Capacidad de Bloqueo | Necesidades de Información |
+| Actor | Expectativas Principales | Temores Principales | Capacidad de Bloqueo | Necesidades de Información / Brechas |
 |:---|:---|:---|:---|:---|
-| **Gerencia General** | Rentabilidad sostenible; cumplimiento normativo total; renovación del contrato del exportador clave 2029; reducción de siniestralidad | Pérdida del contrato del 19%; sanción regulatoria grave; siniestro fatal con consecuencias penales; erosión del margen del 9% | Máxima: autoridad decisional final sobre inversiones, contratos y política operacional | Costeo analítico por contrato y ruta; indicadores de cumplimiento normativo; estado de avance hacia exigencias 2029 |
-| **Operaciones (R. Mansilla)** | Continuidad del despacho sin interrupciones; máxima utilización de flota; cumplimiento de ventanas de entrega | Parálisis operacional por bloqueos de seguridad excesivos; penalizaciones comerciales por atrasos; pérdida de clientes por incumplimiento de SLA | Alta: controla la asignación diaria de los 374 tractocamiones y define prioridades de despacho | Posición de flota en tiempo real; disponibilidad de conductores; estado de cargas de retorno; alertas de incumplimiento que no paralicen la operación |
-| **Finanzas (G. Ossandón)** | Visibilidad de rentabilidad real por contrato; cierre contable oportuno; costeo analítico por ruta y viaje | Mantener subsidios cruzados ocultos; desfase perpetuo en el registro de combustible; incapacidad de fundamentar renegociación tarifaria | Media-alta: capacidad de escalar alertas financieras a gerencia y condicionar la aprobación de nuevos compromisos contractuales | Costo real desglosado por viaje (combustible, peajes, mantención, horas-conductor); margen real por contrato; conciliación de liquidaciones |
-| **Prevención de Riesgos (D. Aguayo)** | Cumplimiento irrestricto de normativa de jornada, habilitaciones y seguridad; bloqueo de salidas ante cualquier incumplimiento documental | Ser considerada obstruccionista; que un siniestro ocurra por una excepción operacional que ella no autorizó; exposición personal por omisión de fiscalización | Media: puede vetar despachos por incumplimiento, pero enfrenta presión constante de Operaciones para flexibilizar | Vigencia en tiempo real de todos los documentos (licencias, revisiones, seguros, cursos hazmat); registros objetivos de jornada; historial de siniestralidad |
-| **Taller (H. Trincado)** | Confiabilidad mecánica de la flota; mantenimiento preventivo según plan; registro completo de intervenciones | Fallas mecánicas en ruta por mantenimiento diferido; reparaciones de emergencia en talleres externos sin registro; pérdida de garantías por falta de trazabilidad de servicio | Baja-media: puede recomendar baja de vehículos pero la decisión final es de Operaciones y Gerencia | Kilometraje acumulado por vehículo; datos de CANbus (temperatura, presión, códigos de falla); historial unificado de mantenciones propias y de terceros |
-| **Torre de Despacho (22 operadores)** | Herramientas de trabajo que faciliten la asignación; reducción de llamadas telefónicas; visibilidad unificada de flota | Sobrecarga de decisiones con información insuficiente; errores de asignación por falta de datos; responsabilización por fallas de información que no controlan | Baja formal, pero alta operacional de facto: son el cuello de botella de cada despacho y su desempeño individual condiciona la eficiencia de toda la cadena | Vista única de posición de todos los vehículos; disponibilidad de conductores habilitados; cargas de retorno disponibles; estado de vigencias documentales |
-| **Conductores Propios (196)** | Condiciones laborales seguras; descanso efectivo; jornada respetada; equipo mecánico confiable | Fiscalización excesiva que no considere la realidad vial; sanciones por situaciones fuera de su control; riesgo de asalto en detenciones en zonas inseguras | Baja individual, pero colectiva mediante sindicato o ausentismo concertado | Rutas con información de puntos seguros de detención; confirmación de que el vehículo asignado está en condiciones mecánicas adecuadas |
-| **Conductores Externos (Y. Colipán, 258)** | Flexibilidad; ingresos estables; no ser sometidos a control excesivo por un operador que no es su empleador directo | Que Curimón intente controlar su jornada completa incluyendo servicios a otros operadores; pérdida de autonomía laboral; sanciones por incumplimiento de normas que no fueron comunicadas oportunamente | Media colectiva: pueden rechazar fletes de Curimón y optar por competidores con menos exigencias | Condiciones del flete antes de aceptarlo; puntos de descanso seguro; claridad sobre qué obligaciones documentales les corresponden |
-| **148 Dueños Subcontratados (N. Sandoval)** | Flujo de fletes constante; liquidación oportuna y transparente; respeto de la soberanía sobre su activo | Que Curimón rastree sus camiones cuando prestan servicio a otros operadores; que les impongan costos o inversiones sin contraprestación; liquidaciones con errores recurrentes | Alta colectiva: retiro masivo de camiones colapsaría la capacidad operativa de Curimón (60,4% de la flota) | Detalle transparente de la liquidación; calendario de pagos; condiciones contractuales claras sobre uso de datos de su vehículo |
-| **Exportadora Clave (A. Lecaros, 19% ingreso)** | Trazabilidad de jornada 100% (propios y terceros); posición en tiempo real; e-Docs; reporte de CO₂e/ton-km auditado; cumplimiento para renovación 2029 | Siniestro con su carga; incumplimiento regulatorio que comprometa su cadena de suministro; falta de evidencia para auditorías de sostenibilidad de sus propios clientes | Máxima externa: condición de renovación de contrato no negociable; pérdida de este actor equivale a pérdida del 19% del ingreso | Trazabilidad completa de cada viaje (conductor, jornada, ruta, posición, documentos, emisiones); acceso a reportes auditables |
+| **E. Valdebenito** | Viabilidad sistémica; retención del cliente clave; control de riesgo legal | Exposición penal por fallas ajenas; parálisis operativa por boicot de transportistas externos | Máxima | Indicadores consolidados de riesgo, costo y cumplimiento en tablero único |
+| **R. Mansilla** | Asignación eficiente sin kilómetros vacíos; bloqueo inteligente | Sistemas excesivamente rígidos que impidan despachar; freno total de flota | Alta (operativa) | Visibilidad integrada de posición, equipo, jornada y vigencias en 1 pantalla |
+| **Y. Colipán** | Respeto de sus tiempos reales de servicio (incluyendo esperas) | Alertas inoportunas; ser sancionada por fallas del sistema o infraestructura vial | Alta (ejecución) | Dispositivo sin distracción; reconocimiento legal del tiempo de espera |
+| **N. Sandoval** | Autonomía sobre su activo; cobro ágil y preciso (sin 9 días de retraso) | Espionaje corporativo cuando opera para terceros; penalizaciones injustas | Muy Alta (colectiva) | Control granular de la privacidad de su GPS; transparencia en liquidaciones |
+| **G. Ossandón** | Erradicación de subsidios cruzados; costeo analítico por ruta/cliente | Mantener contratos a −14%; retrasos de 40 días en datos de combustible | Alta (financiera) | Integración automatizada de combustible, GPS y TMS para cierre rápido |
+| **H. Trincado** | Mantenimiento preventivo real basado en telemetría de uso | Daños inadvertidos; fallas en ruta no registradas; instalaciones inmanejables | Alta (logística) | Lectura automática de odómetros y CANbus; historial unificado de vida útil |
+| **D. Aguayo** | "Tolerancia cero" sistemática automatizada ante vigencias caducadas | Otro siniestro fatal predecible; responsabilidad penal por omisión | Media-Alta | Base de datos relacional de certificaciones conectada al motor de asignación |
+| **A. Lecaros** | Cumplimiento estricto para 2029 (CO₂e, trazabilidad, e-Doc) | No poder auditar la cadena; perder certificaciones internacionales | Extrema (comercial) | Reportería de emisiones e historial verificable del 100% de la carga |
+| **P. Kast** | Coherencia en la visualización geoespacial de toda la flota | Intermitencias crónicas en ruta norte; gestión de equipos dispares | Alta (técnica) | Protocolo unificado de geolocalización que cubra áreas sin señal celular |
+| **M. Riquelme** | Arquitectura integrada sin silos; despliegue realista | Exigencia de soluciones mágicas o instalaciones instantáneas | Alta (tecnológica)| APIs de conexión fluida entre telemetría, contabilidad, TMS y dispositivos offline |
+
+### 2.4.3 Las 5 Tensiones Operacionales Irreconciliables del Modelo Actual
+
+La sistematización de las posturas revela cinco tensiones estructurales. Estas representan incompatibilidades verificables que requieren un mecanismo tecnológico y procedimental de arbitraje, y frente a las cuales el modelo actual no ofrece gobernanza (Supuesto Operacional Gobernado).
+
+**1. Seguridad vs. Continuidad Operacional (Aguayo vs. Mansilla)**
+* **Naturaleza del Conflicto:** Prevención de Riesgos exige bloquear la salida de cualquier camión con la mínima inconsistencia documental, basándose en la responsabilidad legal. Operaciones teme que un bloqueo binario detenga despachos por caducidades administrativas menores, paralizando los 96.000 viajes anuales.
+* **Diagnóstico Analítico:** Falta un protocolo semántico escalonado. Hoy, la torre depende de negociaciones caso a caso porque las 6.000 vigencias están en 4 hojas de cálculo inasibles y desconectadas de las reglas de negocio del TMS.
+* **Impacto Económico:** Frena la capacidad de respuesta (afectando el 9% de margen por despachos perdidos) mientras mantiene la exposición crítica a multas o accidentes fatales.
+
+**2. Visibilidad vs. Soberanía del Activo (Lecaros vs. Sandoval)**
+* **Naturaleza del Conflicto:** El cliente estratégico demanda el seguimiento continuo de todos los viajes para el 2029. Sin embargo, el subcontratista advierte que no entregará control permanente de su posición a Curimón. 
+* **Diagnóstico Analítico (Ley 21.719):** Según la nueva ley de datos, geolocalizar a un transportista externo fuera del marco de su servicio a Curimón carece de base de licitud. Las plataformas actuales obligan a elegir entre trazabilidad nula o vigilancia permanente, y no poseen lógicas de "acceso consentido y temporalizado" por evento de despacho.
+* **Impacto Económico:** Amenaza la renovación del contrato del 19% de ingresos, y simultáneamente arriesga el abandono masivo de la flota externa (60%).
+
+**3. Jornada Legal vs. Geografía Vial (Normativa vs. Colipán)**
+* **Naturaleza del Conflicto:** La Dirección del Trabajo exige pausas rígidas. La conductora demuestra que la geografía de la ruta impone tramos prolongados sin bermas o paraderos, forzando un incumplimiento por razones de seguridad personal y vial.
+* **Diagnóstico Analítico:** El tacógrafo, incluso si se usara, no comprende el contexto geoespacial. Las alertas de fatiga actuales desconocen la infraestructura física, provocando que la norma y la seguridad in situ colisionen.
+* **Impacto Económico:** Riesgo sistémico de accidentes en ruta norte e ineficacia en el control de conducción preventiva.
+
+**4. Visibilidad Financiera vs. Opacidad de Costos (Ossandón vs. Inercia Organizacional)**
+* **Naturaleza del Conflicto:** La nueva gerencia financiera busca erradicar contratos a −14% de rentabilidad. Se topa con un ecosistema transaccional donde el costeo de ruta está disgregado (combustible a 40 días, esperas no documentadas, peajes atrasados).
+* **Diagnóstico Analítico:** El prorrateo de costos oculta el verdadero consumo de cada ruta y es una barrera para una facturación justa. No hay manera de sustentar renegociaciones sin un repositorio de datos consolidados de uso (combustible/kilómetro).
+* **Impacto Económico:** Perpetúa el subsidio de rutas que destruyen valor, drenando el endeble 9% de margen corporativo y aumentando los cobros de sobreestadía rechazados ($241,4 M CLP).
+
+**5. Mantenimiento Técnico vs. Descentralización de Activos (Trincado vs. Realidad Operativa)**
+* **Naturaleza del Conflicto:** El taller anhela predecir fallas y descargar telemetría de fábrica. Sin embargo, la física dicta que el 22% de la flota subcontratada apenas visita el terminal una vez al mes, y los propios regresan cada 6 días.
+* **Diagnóstico Analítico:** Proyectar intervenciones de hardware sin contemplar la asincronía del paso por taller es inviable. Toda estrategia de despliegue y recolección de datos deberá convivir con latencias y la operación remota desconectada.
+* **Impacto Económico:** Desgaste acelerado del capital y mermas por lucro cesante derivado de mantenimientos reactivos en carretera.
+
+**Matriz Consolidada de Tensiones:**
+
+| Tensión Operacional | Actores Involucrados | Riesgo de No Resolución | Exigencia para la Solución Técnica |
+|:---|:---|:---|:---|
+| 1. Seguridad vs. Continuidad | Prevención / Operaciones | Infracciones o freno de la operación | Motor de reglas de validación en tiempo de despacho |
+| 2. Visibilidad vs. Soberanía | Cliente (Lecaros) / Transportistas externos | Pérdida del 19% de ingresos | Geolocalización activada/desactivada por flete |
+| 3. Jornada vs. Geografía | Ley laboral / Conductores | Multas y fatiga; rechazo de dispositivos | Alertas geo-conscientes anticipadas a zonas ciegas |
+| 4. Rentabilidad vs. Opacidad | Finanzas / TI y Procesos de liquidación | Destrucción del 9% de margen | Unificación de fuentes (TMS, Telemetría, e-Doc) |
+| 5. Mantenimiento vs. Dispersión | Taller / Realidad de flota de terceros | Fallas graves; parálisis logística | Captura asíncrona y sobre el aire (OTA) de los CANbus |
 
 ---
 
-## 2.5 Hallazgos Críticos y Matriz de Tensiones Operacionales (Análisis del Capítulo 8)
+## 2.5 Las Diez Patologías Sistémicas de Curimón S.A. (Tabla de Síntomas S1 a S10)
 
-La sistematización de las 10 entrevistas del Capítulo 8 del Caso 10 revela **5 tensiones estructurales** que no son anomalías de gestión sino consecuencias lógicas de la fractura entre responsabilidad y control descrita en la sección 2.2. Cada tensión representa una **incompatibilidad verificable entre objetivos legítimos** de distintos actores que, en ausencia de información confiable y procesos de arbitraje basados en datos, se resuelve ad hoc mediante negociación informal, imposición jerárquica o simple omisión.
+El análisis del entorno operativo de Transportes Curimón S.A. evidencia que los síntomas observados no constituyen fallas aisladas, sino la manifestación clínica de diez patologías sistémicas originadas en la fractura entre responsabilidad y control. A continuación, audIT constata la cadena causal de cada patología, desde su origen estructural hasta su impacto cuantificable.
 
-### Tensión 1: Seguridad vs. Continuidad Operacional
+**S1 — Ceguera de Jornada**
+La compañía registra cero descargas de tacógrafos digitales y carece por completo de visibilidad sobre los 258 conductores subcontratados al momento de asignar viajes. La causa raíz radica en la inexistencia de un proceso de extracción de datos y en la incapacidad de verificar remotamente la actividad previa de trabajadores externos. Esta condición genera un riesgo crítico de siniestralidad por fatiga, evidenciado en el accidente del kilómetro 312, y constituye un incumplimiento sostenido del Artículo 25 bis del Código del Trabajo.
 
-**Actores en conflicto:** Denisse Aguayo (Prevención de Riesgos) vs. Ricardo Mansilla (Operaciones).
+**S2 — Hemorragia Kilométrica en Vacío**
+La operación acumula 10,66 millones de kilómetros anuales recorridos sin carga, cifra equivalente al 26 % del total transitado. Esta redundancia logística se origina en un modelo de asignación dependiente de la memoria humana en la torre de control, sin integración posicional unificada que permita triangular cargas de retorno. El impacto económico recae directamente sobre los costos de combustible, peajes y desgaste del activo sin contraprestación de ingreso, erosionando severamente el margen consolidado del 9 %.
 
-**Naturaleza del conflicto:** Denisse Aguayo sostiene que ningún vehículo debe salir del terminal si presenta cualquier incumplimiento documental —licencia vencida, revisión técnica pendiente, curso hazmat expirado, o falta de certificación de descanso del conductor—. Su posición se fundamenta en la obligación legal de la empresa y en la experiencia del siniestro de febrero 2026. Ricardo Mansilla, por su parte, opera bajo la presión de **96.000 despachos anuales** con **22 operadores** en turno continuo y clientes con ventanas de entrega rígidas: un bloqueo de salida no solo detiene un camión, sino que puede desencadenar una cascada de incumplimientos contractuales con penalizaciones comerciales directas.
+**S3 — Erosión de Ingresos por Sobreestadía**
+De los $340 millones CLP facturados anualmente por tiempos de espera, el 71 % ($241,4 millones CLP) resulta objetado por los clientes. Este drenaje financiero es consecuencia directa de la incapacidad operativa de producir una prueba irrefutable sobre los horarios de llegada y salida en las instalaciones de terceros. La dependencia de anotaciones manuales vulnerables se traduce en una pérdida directa e irrecuperable de ingresos por servicios efectivamente prestados.
 
-**Diagnóstico analítico:** Esta tensión es irresoluble bajo las condiciones actuales porque ambas posiciones son legítimas y el mecanismo de arbitraje es inexistente. No existe un protocolo basado en datos que permita distinguir entre un incumplimiento documental crítico (conductor con jornada excedida, curso hazmat vencido para carga peligrosa) y un incumplimiento menor (revisión técnica que vence mañana pero el vehículo fue inspeccionado ayer). La ausencia de esta gradación obliga a Prevención a adoptar una política de tolerancia cero (con el riesgo de paralizar despachos) o a transigir caso a caso (con el riesgo de que la excepción se convierta en norma). El dato de las **6.000 vigencias gestionadas en 4 planillas Excel** agrava la tensión: ni siquiera hay certeza compartida sobre cuáles documentos están efectivamente vencidos y cuáles no, lo que transforma cada despacho en una negociación de información contradictoria.
+**S4 — Sobrepeso Recurrente**
+Los registros oficiales constatan 142 detenciones por exceso de peso en un año, inmovilizando la flota productiva por un total de 2.556 horas-camión, en contravención a las disposiciones de peso máximo del D.S. N.° 158 (Ministerio de Obras Públicas [MOP], 1980). La patología surge de una deficiencia estructural en los procesos de verificación de tonelaje durante las fases de carga y despacho. Cada episodio materializa multas formales, detención del activo, pérdida de horas de conducción y un profundo daño reputacional frente a las autoridades viales y el mercado.
 
-**Impacto en el margen del 9%:** Cada despacho detenido innecesariamente genera un costo de inactividad del activo y del conductor, y potencialmente una penalización comercial. Cada despacho liberado indebidamente genera un riesgo de multa, siniestro o inmovilización que puede ser órdenes de magnitud mayor.
+**S5 — Subsidios Cruzados Ocultos**
+Tres de los ocho contratos principales operan a pérdida, absorbiendo el 31 % de los ingresos y registrando un margen negativo de hasta un -14 % sostenido por cuatro años. El origen del defecto es la aplicación de un prorrateo de costos por ingreso y un rezago de cuarenta días en la lectura del consumo de combustible. Esta ceguera contable enmascara la verdadera rentabilidad, provocando que las rutas eficientes financien una destrucción continua de valor.
 
----
+**S6 — Desgobierno de Vigencias**
+La fiscalización de abril, que sancionó el transporte de sustancias peligrosas con un certificado vencido hace tres semanas, ilustra la fragilidad del control documental bajo el D.S. N.° 298 (Ministerio de Transportes y Telecomunicaciones [MTT], 1995). Aproximadamente 6.000 fechas críticas de caducidad se administran en cuatro planillas aisladas, sin integridad referencial, alertas automáticas ni pistas de auditoría. El impacto abarca inmovilizaciones vehiculares, riesgo de prohibición para operar faenas de carga peligrosa y exposición penal directa ante accidentes.
 
-### Tensión 2: Visibilidad vs. Soberanía del Activo
+**S7 — Hardware Ocioso y Fragmentación Telemática**
+La organización posee 61 tractocamiones propios con telemetría CANbus inactiva y 340 unidades distribuidas en tres plataformas incompatibles de posicionamiento satelital. La causa subyacente es la instalación de equipamiento sin el desarrollo de procesos de descarga, y la contratación fragmentada de sistemas no interoperables. Como consecuencia, se pierde información operacional generada por la flota y la torre de control sufre una visibilidad parcial del territorio.
 
-**Actores en conflicto:** Andrea Lecaros (Exportadora Clave) vs. Nolberto Sandoval (representante de los 148 Dueños Subcontratados).
+**S8 — Fricción Administrativa en Liquidación**
+El ciclo mensual de liquidación a los 148 transportistas consume nueve días hábiles, ocupa a ocho administrativos y resulta en un 11 % de documentos que requieren notas de corrección. Esta ineficiencia surge de un procedimiento estrictamente manual que omite cualquier cruce de verificación automatizada. El efecto se manifiesta en costos de administración inflados, tensiones sostenidas con la red de transportistas subcontratados y un retraso crónico en el cierre financiero.
 
-**Naturaleza del conflicto:** Andrea Lecaros exige, como condición no negociable para la renovación del contrato en 2029, **tracking en tiempo real** de cada vehículo que transporta su carga, independientemente de si es propio o subcontratado. Esta exigencia responde a las obligaciones de trazabilidad de su propia cadena de suministro y a estándares de sostenibilidad de sus clientes internacionales. Nolberto Sandoval, en representación de los dueños de camiones, se opone a que Curimón rastree sus vehículos **cuando estos están prestando servicios a otros operadores o competidores directos de Curimón**. Su argumento es de soberanía patrimonial: el camión es su activo, y la información de su utilización fuera del contrato con Curimón es información comercial confidencial que puede ser usada en su perjuicio.
+**S9 — Punto Ciego de Flota Subcontratada**
+El 22 % de los vehículos pertenecientes a terceros transita por las instalaciones de Curimón con una frecuencia inferior a una vez por mes. La compañía sustenta su modelo de negocio en esta capacidad externa, pero no dispone de un mecanismo remoto de supervisión técnica. La empresa asume así la responsabilidad integral frente al cliente sobre una fracción de la flota de la cual desconoce el estado mecánico, el cumplimiento documental y la condición de jornada real.
 
-**Diagnóstico analítico:** Esta tensión revela un conflicto de intereses de información que es inherente al modelo de subcontratación. Curimón necesita la información de posición para satisfacer a su cliente exportador (19% del ingreso), pero los 148 dueños de camiones perciben esa misma información como una amenaza a su independencia comercial. Crucialmente, la posición de Sandoval no es solo un reclamo de conveniencia empresarial: la **Ley N° 21.719 sobre Protección de Datos Personales** —que refuerza el marco de la Ley N° 19.628 y armoniza la normativa chilena con estándares internacionales de protección de datos— reconoce la **geolocalización como dato personal** cuyo tratamiento requiere base de licitud, proporcionalidad y finalidad específica. En consecuencia, el rastreo continuo de un vehículo de propiedad de un tercero durante períodos en que **no** está prestando servicio a Curimón podría constituir un tratamiento de datos personales sin base de licitud, otorgando al transportista un **amparo legal expreso** para oponerse a dicho rastreo. Esta dimensión jurídica transforma la tensión de un problema puramente comercial a un problema de cumplimiento normativo bidireccional: Curimón debe satisfacer las exigencias de trazabilidad de su cliente exportador sin vulnerar los derechos de protección de datos de sus transportistas subcontratados. Actualmente, la empresa no puede ofrecer garantías verificables sobre el uso exclusivo de los datos de posición para el período en que el camión opera para Curimón, ni cuenta con un marco contractual que delimite con precisión los derechos de uso de la información posicional conforme a las exigencias de la Ley N° 21.719. La existencia de **34 camiones sin GPS** y la fragmentación en **3 plataformas incompatibles** agrava la tensión: incluso si se lograra un acuerdo de principio, la infraestructura actual es incapaz de implementar un rastreo selectivo, delimitado y auditable.
+**S10 — Brecha Existencial con Cliente Exportador**
+El principal demandante logístico, responsable del 19 % de la facturación, condiciona su renovación contractual de 2029 a la implementación de trazabilidad total, geolocalización, medición de emisiones de CO2e auditables según estándares internacionales (Global Logistics Emissions Council [GLEC], 2023) y documentación electrónica. La brecha operacional actual impide certificar estas obligaciones sobre los viajes despachados. La imposibilidad de cerrar esta distancia supone el riesgo de no renovación, lo que comprometería la viabilidad del negocio al tensionar un margen operacional ya restringido al 9 %.
 
-**Impacto en el contrato 2029:** Si esta tensión no se resuelve, Curimón no podrá cumplir la exigencia de trazabilidad del 100% de los viajes (incluyendo los operados por terceros), lo que precipitaría la no renovación del contrato que representa el 19% de los ingresos.
+### Tabla de Síntesis Analítica: Las 10 Patologías de Transportes Curimón S.A.
 
----
-
-### Tensión 3: Jornada Legal vs. Geografía Vial
-
-**Actores en conflicto:** Normativa vigente (Art. 25 bis del Código del Trabajo / Dirección del Trabajo) vs. Yasna Colipán (conductora representativa de los choferes de ruta).
-
-**Naturaleza del conflicto:** La normativa laboral establece pausas de descanso obligatorias después de períodos determinados de conducción continua. Yasna Colipán, conductora con experiencia en la Ruta 5 Norte, expone una realidad geográfica que la norma no contempla: en el desierto de Atacama existen tramos de **más de 60-80 km sin bermas, estaciones de servicio ni zonas seguras de detención**. Detenerse en esos tramos para cumplir la pausa horaria expone al conductor a riesgos de **asalto, atropello o colisión por falta de espacio de detención seguro**. El conductor enfrenta un dilema binario: infringir la norma de jornada y continuar hasta un punto seguro (arriesgando sanción laboral y responsabilidad en caso de siniestro), o detenerse donde marca el reloj (arriesgando su integridad física).
-
-**Diagnóstico analítico:** Esta tensión no es un problema de voluntad de cumplimiento sino un conflicto entre la abstracción normativa y la materialidad del territorio. La normativa asume la existencia de infraestructura vial que permita pausas seguras a intervalos regulares, una condición que no se cumple en segmentos significativos de la red vial que opera Curimón. El problema se agudiza porque la empresa carece de un **mapeo sistemático de puntos seguros de detención** a lo largo de sus 3.000 km de operación, y no dispone de información de contexto territorial que permita al despachador considerar las condiciones específicas de cada tramo al momento de programar un viaje y estimar los tiempos de descanso.
-
-**Impacto en el margen del 9% y el riesgo legal:** Si un siniestro ocurre durante una pausa realizada en una zona insegura por cumplir la norma, la responsabilidad recae sobre la empresa. Si un siniestro ocurre por fatiga porque el conductor no se detuvo para evitar una zona insegura, la responsabilidad también recae sobre la empresa. La ausencia de un criterio documentado y basado en información territorial expone a Curimón a responsabilidad en ambos escenarios.
-
----
-
-### Tensión 4: Visibilidad Financiera vs. Opacidad de Costos Reales
-
-**Actores en conflicto:** Gabriela Ossandón (Finanzas) vs. la inercia organizacional del costeo por prorrateo.
-
-**Naturaleza del conflicto:** Gabriela Ossandón ha identificado que **3 de los 8 contratos principales operan bajo costo** y que el peor de ellos arrastra un margen del **−14% durante 4 años consecutivos**. Sin embargo, carece de las herramientas y datos necesarios para realizar un **costeo analítico por tramo, viaje y contrato** que fundamente una renegociación tarifaria o una decisión de abandono. Los datos de combustible llegan con un **desfase de hasta 40 días**, y las tarifas pagadas a los 148 transportistas subcontratados son **planas** (no reflejan la variabilidad real del costo por ruta), lo que impide imputar correctamente el costo variable a cada servicio.
-
-**Diagnóstico analítico:** Ossandón posee la hipótesis correcta (existen subsidios cruzados) y la evidencia parcial (margen negativo en 3 contratos), pero no dispone del **dato granular** que le permita convertir esa hipótesis en una demostración cuantitativa irrebatible ante la gerencia. El método de prorrateo no es una decisión deliberada de ocultamiento sino una inercia histórica: en una época de menor escala y menor complejidad, distribuir costos por volumen de ingreso podía ser una aproximación razonable. A la escala actual de **41 millones de kilómetros anuales**, **374 vehículos** y **8 contratos con perfiles de costo radicalmente distintos**, esa aproximación ya no es admisible.
-
-La tensión se manifiesta además en el proceso de liquidación a terceros: las **8 personas** que durante **9 días hábiles** producen las liquidaciones mensuales operan con las mismas limitaciones de información que Finanzas, lo que explica el **11% de notas de corrección post-emisión**. Cada corrección es un síntoma de que el dato de entrada (kilómetros recorridos, combustible consumido, peajes pagados, horas de espera) no está capturado de forma confiable en el origen.
-
-**Impacto en el margen del 9%:** La imposibilidad de costear analíticamente perpetúa la destrucción de valor en contratos deficitarios. Los **$241,4 millones no percibidos** por sobreestadías objetadas son otro síntoma de la misma raíz: sin dato fehaciente, no hay negociación posible.
+| N.º | Patología | Síntoma Observable | Causa Raíz Identificada | Impacto Económico / Legal / Operacional | Trazabilidad al Caso |
+|:---|:---|:---|:---|:---|:---|
+| **S1** | Ceguera de Jornada | 0 descargas de tacógrafo; 258 conductores externos sin control. | Ausencia de proceso de descarga y de verificación previa al despacho para externos. | Incumplimiento Art. 25 bis; riesgo de accidente por fatiga (km 312). | Caps. 1, 4.3, 7.1 |
+| **S2** | Hemorragia Kilométrica en Vacío | 26 % de kilómetros vacíos (10,66 M km/año). | Asignación basada en memoria humana sin visibilidad de posición ni de cargas de retorno. | Gasto directo en combustible, peajes y desgaste; erosión del margen de 9 %. | Caps. 4.2, 7.2, 8 |
+| **S3** | Erosión de Ingresos por Sobreestadía | $241,4 M CLP/año en cobros objetados (71 % de $340 M). | Incapacidad de generar prueba irrefutable de llegada/salida en instalaciones del cliente. | Pérdida directa de facturación por servicios prestados. | Caps. 4.7, 7.2 |
+| **S4** | Sobrepeso Recurrente | 142 detenciones; 2.556 h-camión inmovilizadas. | Falla estructural en verificación de peso durante carga y despacho. | Multas, inmovilización del activo, pérdida de productividad y daño reputacional. | Caps. 4.5, 7.1 |
+| **S5** | Subsidios Cruzados Ocultos | 3 contratos a pérdida (peor al -14 % por 4 años); 31 % del ingreso. | Costeo prorrateado que enmascara subsidios cruzados; desfase de 40 días en combustible. | Destrucción sostenida de valor al interior de la compañía. | Caps. 1, 4.1, 7.3 |
+| **S6** | Desgobierno de Vigencias | ~6.000 vencimientos en 4 Excel; infracción hazmat (curso vencido 3 semanas). | Datos dispersos sin alertas, integridad referencial ni pista de auditoría. | Infracciones, riesgo de prohibición de operar rutas peligrosas, exposición penal. | Caps. 1, 4.4, 7.1 |
+| **S7** | Hardware Ocioso y Fragmentación Telemática | 61 CANbus inactivos; 340 GPS fragmentados en 3 plataformas. | Hardware instalado sin proceso de descarga; sistemas no interoperables. | Pérdida de analítica generada; ceguera parcial en la torre de despacho. | Caps. 4.10, 5, 7.4 |
+| **S8** | Fricción Administrativa en Liquidación | Ciclo de 9 días con 8 administrativos; 11 % de correcciones. | Procedimiento intensivo manual sin verificación cruzada automatizada. | Sobrecosto administrativo, demora en cierre contable y tensión con 148 transportistas. | Caps. 4.11, 7.3 |
+| **S9** | Punto Ciego de Flota Subcontratada | 22 % de los camiones de terceros pasa < 1 vez/mes por terminal. | Modelo de subcontratación sin mecanismo de verificación remota. | Operación a ciegas sobre el estado mecánico, documental y laboral. | Caps. 2.3, 6, 7.4 |
+| **S10** | Brecha Existencial con Cliente Exportador | Exigencias 2029 (CO2e, e-Docs, trazabilidad) no cumplidas. | Brecha absoluta entre capacidades vigentes de registro y exigencias futuras. | Riesgo de pérdida del 19 % de ingresos; amenaza a la viabilidad del negocio (9 % margen). | Caps. 1, 4.6, 7.2 |
 
 ---
 
-### Tensión 5: Mantenimiento Técnico vs. Descentralización de Activos
+## 2.6 Registro de Supuestos Operacionales y Mapeo Exhaustivo del Numeral 16.1
 
-**Actores en conflicto:** Hugo Trincado (Jefe de Talleres) vs. la realidad operacional de la flota subcontratada.
+### 2.6.1 Principios de Modelamiento y Delimitación del Diagnóstico
 
-**Naturaleza del conflicto:** Hugo Trincado tiene como objetivo asegurar la **confiabilidad mecánica** de los vehículos que operan para Curimón, lo que requiere el cumplimiento de planes de mantenimiento preventivo basados en kilometraje y horas de operación, así como el registro completo de cada intervención mecánica para preservar garantías de fábrica y establecer trazabilidad de fallas. Sin embargo, el **60,4% de los camiones** (la flota subcontratada) **no pasa por el taller de San Bernardo** con regularidad alguna. Cuando un camión subcontratado sufre una falla mecánica en ruta, la reparación se realiza en talleres de terceros a lo largo de los 3.000 km de operación, y la documentación de esa intervención queda en **facturas sueltas** que en la mayoría de los casos **nunca se incorporan al historial técnico del equipo**.
+El análisis del Numeral 16.1 de las Bases Técnicas del Caso (FEP03.10.26) evidencia la existencia de 26 decisiones operacionales y estratégicas deliberadamente omitidas por Transportes Curimón S.A. Para preservar el rigor metodológico del diagnóstico sin incurrir en la prefiguración prematura de soluciones, audIT ha procedido a transformar cada uno de estos vacíos normativos en un «Supuesto Operacional Gobernado». Esta técnica garantiza plena transparencia algorítmica y funcional: los supuestos operan exclusivamente como un marco limitante para dimensionar el nivel de madurez, el grado de fricción logística y el riesgo latente del modelo actual, pero no constituyen arquitecturas de solución. El trazado de estos 26 supuestos se encuentra formalmente anclado a las interrogantes levantadas en el pliego oficial de *Consultas Consolidadas* del proponente audIT.
 
-**Diagnóstico analítico:** Esta tensión revela una **fragmentación del registro de vida del activo**. Un tractocamión subcontratado puede acumular cientos de miles de kilómetros y decenas de intervenciones mecánicas sin que Curimón tenga visibilidad sobre su estado real. Los **61 tractocamiones propios con CANbus inactivo** representan una versión menos extrema del mismo problema: el activo genera datos de diagnóstico mecánico continuamente, pero nadie los descarga ni los analiza, con lo cual Trincado programa mantenciones basándose en **intervalos calendario estimados** en lugar de en **condiciones operacionales reales**.
+### 2.6.2 Matriz Maestra de los 26 Supuestos del Numeral 16.1
 
-La consecuencia práctica es doble: (a) riesgo de falla mecánica en ruta por mantenimiento diferido o inadecuado, con los costos asociados de rescate, transferencia de carga, incumplimiento contractual y potencial siniestralidad; y (b) riesgo de **pérdida de garantías de fábrica** de los vehículos propios por incapacidad de demostrar el cumplimiento del plan de servicio recomendado por el fabricante, al no contar con un historial unificado y verificable de las intervenciones realizadas.
+| N.° Decisión | Área / Dominio | Dilema No Resuelto por Curimón (Numeral 16.1) | Supuesto Técnico/Operacional Asumido por audIT para el Diagnóstico | Impacto en Riesgo / Viabilidad |
+| :--- | :--- | :--- | :--- | :--- |
+| **1** | Laboral y Normativo | Cómo obtener/acreditar la jornada de conductores externos de 148 contratistas que pueden haber conducido para otros clientes. | Ante el silencio de las bases en la Decisión N.° 1, audIT asume como supuesto técnico que el mecanismo de acreditación requerirá evidencia con valor probatorio ante la autoridad laboral, descartando la mera declaración verbal (Véase Consulta N.° 8 del pliego oficial de audIT). | Riesgo legal alto; exposición por responsabilidad subsidiaria y fatiga no controlada. |
+| **2** | Gestión de Terceros | Qué ofrecer a los 148 transportistas subcontratados a cambio de compartir datos, y penalizaciones para no adherentes. | Ante el silencio de las bases en la Decisión N.° 2, audIT asume como supuesto técnico que la integración dependerá de un marco de incentivos y anexos contractuales exigibles, condicionando la viabilidad del ruteo a la transparencia del tercero. | Riesgo de adopción crítico; amenaza de merma en la disponibilidad de la flota en un 60,4%. |
+| **3** | Deuda Técnica | Qué hacer con el TMS de 2013: reemplazar, mantener/integrar o encapsular mediante sustitución progresiva. | Ante el silencio de las bases en la Decisión N.° 3, audIT asume como supuesto técnico que el TMS de 2013 constituye deuda técnica activa cuyo ciclo de vida ha concluido, limitando las capacidades operativas actuales de forma estructural (Véase Consulta N.° 13). | Impacto alto; obsolescencia basal que impide la optimización algorítmica del flete. |
+| **4** | Visibilidad Geoespacial | Cómo unificar la posición de la flota operando con 3 proveedores, acceso limitado (solo lectura) en 2 de ellos y 34 camiones sin GPS. | Ante el silencio de las bases en la Decisión N.° 4, audIT asume como supuesto técnico que la actual fragmentación de señales conforma un entorno de control asimétrico, tratando los 34 camiones sin cobertura como una zona ciega de alto riesgo patrimonial. | Riesgo operativo y de seguridad; imposibilidad de garantizar niveles de servicio (SLA). |
+| **5** | Activos Físicos (IoT) | Propiedad del dispositivo a bordo en camiones de terceros: quién costea, administra y qué sucede si el contratista abandona la flota. | Ante el silencio de las bases en la Decisión N.° 5, audIT asume como supuesto técnico que la propiedad y gestión de inventario del hardware recaerá en Curimón, implicando costos hundidos y fricción de recuperación de activos. | Riesgo financiero medio; complejidad en la logística inversa del hardware. |
+| **6** | Continuidad Operativa | Qué ocurre cuando la verificación de requisitos bloquea un viaje ya comprometido: quién autoriza y mediante qué registro. | Ante el silencio de las bases en la Decisión N.° 6, audIT asume como supuesto técnico que el bloqueo absoluto genera parálisis, por lo que el diagnóstico asume la necesidad de flujos de excepción (override) auditables y jerarquizados (Véase Consulta N.° 16). | Riesgo de paralización crítico; impacto directo en los tiempos de respuesta y compromisos comerciales. |
+| **7** | Fatiga y Ruteo | Con cuánta antelación alertar el agotamiento de jornada, considerando tramos de ruta sin lugares seguros de detención. | Ante el silencio de las bases en la Decisión N.° 7, audIT asume como supuesto técnico que el cálculo de la alerta es dinámico espacialmente e indexado a una cartografía validada de paraderos seguros, no un simple contador regresivo (Véase Consulta N.° 20). | Riesgo de seguridad vital y multas normativas por conducción extendida forzosa. |
+| **8** | Control de Tiempos | Cómo registrar llegadas/salidas en puntos de terceros sin intervención manual del conductor ni instalación de equipos locales. | Ante el silencio de las bases en la Decisión N.° 8, audIT asume como supuesto técnico que la certificación de estadías dependerá exclusivamente del cruce entre telemetría móvil y geocercas satelitales parametrizadas (Véase Consulta N.° 10). | Riesgo financiero medio; alta tasa de sobreestadías no facturables por ausencia de prueba. |
+| **9** | Integración Tributaria | Cómo emitir el e-Doc en puntos de carga sin cobertura móvil (sombra de red), considerando que su emisión es un requisito previo al rodaje. | Ante el silencio de las bases en la Decisión N.° 9, audIT asume como supuesto técnico que la operación en sombra exige pre-foliado local y autorización de contingencia SII para evitar la inmovilización de la carga (Véase Consulta N.° 15). | Riesgo normativo y operativo; detención de faena por latencia de infraestructura de telecomunicaciones. |
+| **10** | Trazabilidad Comercial | Cómo obtener la confirmación de entrega (PoD) del destinatario y en qué momento se habilita para facturación o defensa de cobros. | Ante el silencio de las bases en la Decisión N.° 10, audIT asume como supuesto técnico que el PoD es un evento asíncrono, cuya latencia actual entre el plano físico (firma) y el lógico retrasa el reconocimiento de ingresos. | Impacto alto en el flujo de caja; aumento del ciclo de conversión de efectivo. |
+| **11** | Transmisión de Datos | Qué frecuencia de muestreo utilizar para posición y telemetría, balanceando qué se transmite en línea versus qué se almacena a bordo. | Ante el silencio de las bases en la Decisión N.° 11, audIT asume como supuesto técnico que la saturación de red exige discriminación entre paquetes críticos en tiempo real y tramas de alta resolución cacheadas localmente. | Impacto en viabilidad técnica; saturación de planes de datos M2M y sobrecostos por tráfico. |
+| **12** | Telemetría de Fábrica | Qué hacer con la telemetría FMS/CANbus instalada de fábrica en 61 tractocamiones, la cual no está siendo procesada actualmente. | Ante el silencio de las bases en la Decisión N.° 12, audIT asume como supuesto técnico que la explotación de estos datos requerirá integración homologada para no vulnerar la garantía activa del tren motriz por parte del concesionario (Véase Consulta N.° 14). | Impacto medio; oportunidad perdida de optimización de combustible y mantenimiento predictivo. |
+| **13** | Custodia de Evidencia | Quién descarga la data del tacógrafo, con qué periodicidad, dónde se custodia y con qué garantías de integridad técnica. | Ante el silencio de las bases en la Decisión N.° 13, audIT asume como supuesto técnico que la custodia manual actual representa una vulnerabilidad forense, asumiendo la necesidad de una extracción automatizada, centralizada y criptográficamente segura. | Riesgo legal alto; potencial pérdida o repudio de evidencia ante accidentes graves. |
+| **14** | Eficiencia de Flota | Cómo y con qué algoritmo asignar el viaje de retorno a un camión que previsiblemente quedará vacío (26% de kilómetros en vacío). | Ante el silencio de las bases en la Decisión N.° 14, audIT asume como supuesto técnico que dicho porcentaje es una merma estructural derivada de la incapacidad algorítmica de triangular disponibilidad geoespacial con el *backhaul* oportuno. | Impacto financiero grave; erosión severa de los márgenes de utilidad neta de la operación. |
+| **15** | Contabilidad Analítica | Cómo reconstruir el costo por viaje recibiendo insumos asíncronos (combustible a 40 días, TAG mensual, llantas por planilla). | Ante el silencio de las bases en la Decisión N.° 15, audIT asume como supuesto técnico que la métrica de costo se diagnostica mediante aproximaciones incrementales, donde el costo inicial es parcial y versionable en el tiempo (Véase Consulta N.° 18). | Impacto financiero alto; fijación de precios y rentabilidad calculadas sobre bases distorsionadas. |
+| **16** | Costeo de Terceros | Cómo estimar el costo real operativo de un camión subcontratado cuando Curimón solo visibiliza la tarifa plana de flete pagada. | Ante el silencio de las bases en la Decisión N.° 16, audIT asume como supuesto técnico que la opacidad del contratista obliga a utilizar la tarifa pagada como un factor sustituto del costo directo, ocultando las deficiencias propias de los terceros. | Riesgo de gestión estratégico; imposibilidad de optimizar la red de subcontratistas bajo modelos *open-book*. |
+| **17** | Evaluación de Contratos | Qué acciones correctivas tomar ante los 3 contratos operativos bajo el costo y qué data levantar para su renegociación en 2027. | Ante el silencio de las bases en la Decisión N.° 17, audIT asume como supuesto técnico que cualquier renegociación requerirá granularidad probatoria del costo por cliente/eje operativo, inexistente bajo el paradigma actual del TMS de 2013. | Impacto financiero crítico; subsidio cruzado prolongado que destruye valor corporativo. |
+| **18** | Gestión Documental | Cómo fiscalizar ~6.000 fechas de expiración y a quién responsabilizar cuando el titular del documento es una empresa externa. | Ante el silencio de las bases en la Decisión N.° 18, audIT asume como supuesto técnico que la responsabilidad recae de forma solidaria sobre Curimón en ruta, lo que expone a la empresa a fallos de auditoría por dependencia manual (Véase Consulta N.° 21). | Riesgo operativo alto; multas, retenciones y suspensiones por caducidades no detectadas a tiempo. |
+| **19** | Cargas Peligrosas | Cómo verificar que los documentos de sustancias peligrosas (SUSPEL) a bordo coincidan con la carga real física, no con la teórica. | Ante el silencio de las bases en la Decisión N.° 19, audIT asume como supuesto técnico que la desconexión entre la orden de transporte y la lectura de báscula en origen representa una brecha de seguridad grave bajo el D.S. N.° 298. | Riesgo legal severo y de daño ambiental; contingencias penales por discrepancia de manifiestos. |
+| **20** | Gestión de Contingencias| Cómo responde el modelo si el Paso Los Libertadores cierra 12 días con camiones inmovilizados, carga sellada y conductores perdiendo jornada. | Ante el silencio de las bases en la Decisión N.° 20, audIT asume como supuesto técnico que la disrupción fronteriza actúa como factor exógeno incontrolable, evidenciando carencia de protocolos de hibernación segura de fletes y pausas de jornada. | Impacto logístico y laboral extremo; sobrecostos masivos no traspasables a clientes. |
+| **21** | Hoja de Vida del Activo | Cómo integrar intervenciones mecánicas realizadas por talleres de terceros dentro de la bitácora unificada de mantenimiento. | Ante el silencio de las bases en la Decisión N.° 21, audIT asume como supuesto técnico que la fragmentación de la historia clínica del vehículo corrompe la fiabilidad del mantenimiento predictivo, operando actualmente a ciegas. | Impacto operativo; falla catastrófica de activos por mantenciones externalizadas no consolidadas. |
+| **22** | Sostenibilidad (GHG) | Cómo reportar las emisiones de CO2 equivalente por tonelada-kilómetro en camiones de terceros donde no existe medición directa. | Ante el silencio de las bases en la Decisión N.° 22, audIT asume como supuesto técnico que el cálculo para la flota externa requerirá la aplicación de estándares internacionales paramétricos de interpolación conforme al GLEC Framework (Global Logistics Emissions Council [GLEC], 2023), dada la imposibilidad de ingesta telemática pura (Véase Consulta N.° 12). | Riesgo comercial estratégico; posible pérdida del 19% de ingresos por no cumplimiento ante exportadores. |
+| **23** | Privacidad de Datos | Qué proporciones de ruta e historial se comparten con el cliente final y cómo conciliarlo con la autorización de cada dueño de camión. | Ante el silencio de las bases en la Decisión N.° 23, audIT asume como supuesto técnico que la transmisión de coordenadas está rígidamente confinada al ciclo activo del flete, limitando la visibilidad para preservar la observancia de la Ley N.° 21.719 (Ministerio Secretaría General de la Presidencia, 2024; Véase Consulta N.° 9). | Riesgo normativo; contingencias por uso indebido de posicionamiento en flotas no propias. |
+| **24** | Seguridad de la Prueba | Cómo proteger la evidencia horaria frente a acusaciones de manipulación de registros de jornada por parte de los conductores o el contratista. | Ante el silencio de las bases en la Decisión N.° 24, audIT asume como supuesto técnico que la actual carencia de un sello criptográfico de tiempo y origen deja a Curimón expuesta a repudio de logs en tribunales laborales, requiriendo principios de confianza cero (National Institute of Standards and Technology [NIST], 2020) y controles de seguridad de la información (International Organization for Standardization [ISO], 2022). | Riesgo probatorio alto; juicios desfavorables e imposibilidad de certificar el apego a la norma. |
+| **25** | Logística de Implantación| Cómo desplegar equipos a bordo en 374 máquinas que pasan por terminal cada 6 días, o los contratistas que van menos de 1 vez al mes (22%). | Ante el silencio de las bases en la Decisión N.° 25, audIT asume como supuesto técnico que el ciclo de penetración tecnológica estará indexado al patrón errático de visitas, impidiendo un despliegue masivo y simultáneo de infraestructura física (Véase Consulta N.° 19). | Riesgo de proyecto alto; dilatación severa de las fases de enrolamiento y puesta en marcha. |
+| **26** | Transición Operativa | Cómo subsiste la trazabilidad de Curimón durante la fase de transición, donde convivirán camiones equipados y unidades rezagadas. | Ante el silencio de las bases en la Decisión N.° 26, audIT asume como supuesto técnico que el modelo operativo enfrentará una fricción crítica al tener que soportar procesos paralelos (modo mixto telemático/documental manual) de manera sostenida (Véase Consulta N.° 19). | Riesgo organizativo; duplicación de esfuerzos de control en las torres de tráfico durante el periodo de *ramp-up*. |
 
-**Impacto en el margen del 9%:** Las fallas mecánicas en ruta generan costos de emergencia (grúa, taller externo, transferencia de carga) que pueden ser varias veces superiores al costo de un mantenimiento preventivo oportuno. La pérdida de garantías obliga a asumir como costo operacional reparaciones que deberían estar cubiertas por el fabricante.
-
----
-
-### Matriz Consolidada de Tensiones
-
-| Tensión | Polo A | Polo B | Variable en Disputa | Riesgo si Prevalece A | Riesgo si Prevalece B |
-|:---:|:---|:---|:---|:---|:---|
-| T1 | Prevención (bloqueo estricto) | Operaciones (continuidad) | Criterio de despacho | Parálisis operacional; penalizaciones comerciales | Siniestro; infracción regulatoria grave |
-| T2 | Exportadora (tracking total) | 148 Dueños (soberanía del activo) | Alcance de la visibilidad posicional | Retiro de camiones subcontratados; pérdida de 60,4% de capacidad | No renovación del contrato 2029; pérdida del 19% del ingreso |
-| T3 | Normativa DT (pausa rígida) | Conductora (geografía real) | Lugar y momento de descanso | Riesgo de asalto/accidente en zona insegura | Infracción de jornada; responsabilidad por fatiga |
-| T4 | Finanzas (costeo analítico) | Inercia organizacional (prorrateo) | Granularidad del dato de costo | Ninguno (el escenario A es deseable pero inalcanzable sin datos) | Subsidios cruzados perpetuos; destrucción de valor en 31% del ingreso |
-| T5 | Taller (mantenimiento preventivo) | Descentralización de activos (60,4% fuera de San Bernardo) | Registro y control del estado mecánico | Ninguno (el escenario A es deseable pero inalcanzable sin presencia física) | Fallas mecánicas en ruta; pérdida de garantías; siniestralidad mecánica |
-
----
-
-## 2.6 Registro de Supuestos Declarados y Límites del Diagnóstico
-
-El presente diagnóstico se ha elaborado sobre la base de la información disponible en el Caso 10 y las entrevistas del Capítulo 8. Sin embargo, existen **supuestos analíticos** que deben ser declarados explícitamente, así como **límites del diagnóstico** que condicionan la validez de ciertas conclusiones. Este registro se vincula particularmente con las **26 decisiones no tomadas** documentadas en el numeral 16.1 del caso, sobre las cuales la empresa no ha definido posición.
-
-### Supuesto 1: Obtención de Jornada de Conductores Externos
-
-El diagnóstico asume que Curimón reconoce la necesidad de obtener información verificable sobre la jornada previa de los 258 conductores externos, pero **no ha definido el mecanismo** mediante el cual se obtendrá esta información. Existen al menos tres interrogantes sin respuesta:
-
-- ¿Los conductores externos estarán obligados contractualmente a declarar su jornada previa antes de aceptar un flete?
-- ¿Se aceptará la declaración verbal como suficiente o se requerirá un registro instrumental?
-- ¿Qué consecuencia operacional tendrá la negativa de un conductor externo a proporcionar esta información?
-
-La respuesta a estas preguntas condiciona directamente la factibilidad de cumplir la exigencia de trazabilidad de jornada del 100% de los viajes requerida por el exportador clave para 2029.
-
-### Supuesto 2: Adhesión de los 148 Transportistas Subcontratados
-
-El diagnóstico identifica la tensión entre visibilidad y soberanía del activo (Tensión 2), pero asume que, en última instancia, será necesario lograr un **acuerdo de adhesión** con los 148 dueños de camiones para cualquier esquema de trazabilidad que incluya sus vehículos. Sin embargo, **no se ha establecido**:
-
-- Si la adhesión será voluntaria o será condición contractual para continuar operando con Curimón.
-- Si Curimón ofrecerá alguna contraprestación (prioridad de asignación de fletes, mejora en tiempos de liquidación, tarifas diferenciadas) a cambio de la participación del transportista.
-- Si existe un **umbral mínimo de adhesión** bajo el cual el esquema de trazabilidad pierde su utilidad para el cumplimiento de la exigencia del exportador clave.
-- Cuál sería el impacto operacional si un porcentaje significativo de los 148 transportistas rechazara la adhesión y retirara sus camiones de la operación.
-
-### Supuesto 3: Preservación de Garantías de Vehículos
-
-El diagnóstico señala que los **61 tractocamiones propios con CANbus inactivo** nunca han sido descargados, lo que implica una pérdida de datos de diagnóstico mecánico potencialmente relevantes para el mantenimiento preventivo y la preservación de garantías de fábrica. Se asume que:
-
-- La activación de la descarga de datos CANbus no invalidará las garantías vigentes del fabricante.
-- El proceso de descarga no requiere intervenciones de hardware que puedan ser interpretadas por el fabricante como modificaciones no autorizadas.
-- La información extraída será propiedad de Curimón y podrá ser utilizada para fines de gestión interna sin restricciones contractuales del fabricante.
-
-Estas asunciones deben verificarse con los contratos de adquisición y las condiciones de garantía de cada marca y modelo presente en la flota.
-
-### Supuesto 4: Estabilidad del Marco Regulatorio
-
-El diagnóstico toma como referencia la normativa vigente al momento de la elaboración del caso (Art. 25 bis del Código del Trabajo, regulación de carga peligrosa, obligatoriedad de tacógrafo digital). Se asume que el **marco regulatorio se mantendrá estable o se endurecerá** en el horizonte 2026-2029, lo que refuerza la urgencia de cerrar las brechas de cumplimiento identificadas. No obstante, eventuales modificaciones regulatorias (particularmente en materia de jornada de conducción, emisiones vehiculares o requisitos de trazabilidad digital) podrían alterar la magnitud y la prioridad relativa de los problemas diagnosticados.
-
-### Supuesto 5: Veracidad y Completitud de los Datos del Caso
-
-Se asume que los datos cuantitativos proporcionados en el Caso 10 (374 camiones, 96.000 viajes, 41 M km, 26% km vacío, $340 M sobreestadías, 142 detenciones, 9% margen, −14% peor contrato, entre otros) **son fidedignos y representan el estado real de la operación** al momento de la elaboración del caso. El análisis no ha podido verificar de forma independiente estas cifras, y cualquier inexactitud en los datos de entrada se propagaría a las conclusiones del diagnóstico.
-
-### Supuesto 6: Integridad de los Testimonios del Capítulo 8
-
-Las 5 tensiones identificadas se construyeron a partir de las declaraciones de los 10 entrevistados del Capítulo 8. Se asume que cada entrevistado expresó su posición de forma **honesta y representativa** de su rol, sin omisiones deliberadas ni sesgos por presión jerárquica. Las posibles dinámicas de poder dentro de la empresa (por ejemplo, la reticencia de un subordinado a contradecir a su superior directo en una entrevista) podrían haber atenuado o exacerbado la expresión de ciertas tensiones.
-
-### Límite Explícito del Diagnóstico
+### 2.6.3 Límite Explícito del Diagnóstico (Frontera formal con Subdoc 3)
 
 > [!WARNING]
-> El presente subdocumento describe, cuantifica y analiza los problemas y necesidades de Transportes Curimón S.A., pero **no propone ni insinúa ningún tipo de solución**. La formulación de la propuesta de intervención, la selección de alternativas y la definición de la arquitectura de respuesta corresponden a los subdocumentos posteriores, conforme a la estructura establecida por las bases de licitación y el Formulario T-22.
+> **DELIMITACIÓN RIGUROSA DEL PRESENTE DOCUMENTO**
+> AudIT constata que la formulación de los Supuestos Operacionales Gobernados en el presente subdocumento **tiene un carácter estricta y exclusivamente diagnóstico**. Su propósito es modelar el impacto de los vacíos de información en la viabilidad técnica y operativa de Transportes Curimón S.A., delimitando el problema central. **Ninguna de las descripciones precedentes constituye una propuesta tecnológica, selección de arquitectura o definición de producto**. El diseño detallado de la solución que mitigará las deficiencias expuestas corresponde, por estructura, a las dimensiones arquitectónicas tratadas a partir del **Subdocumento 3** en adelante.
 
 ---
 
-*Fin del Subdocumento 2 — Comprensión del Problema y de la Necesidad*
-*Dupla 1 (D1) — Licitación N.º TFEP-01/2026*
-*Caso 10: Transportes Curimón S.A.*
+## 2.7 Referencias Normativas y de la Industria (Norma APA 7.ª Edición)
+
+Global Logistics Emissions Council. (2023). *GLEC framework for logistics emissions methodologies* (v3.0) / ISO 14083:2023. Smart Freight Centre.
+
+International Organization for Standardization. (2022). *ISO/IEC 27001:2022 Information security, cybersecurity and privacy protection — Information security management systems — Requirements*.
+
+Ministerio de Obras Públicas. (1980). *Decreto Supremo N.° 158: Fija peso máximo de los vehículos que pueden circular por caminos públicos*. Biblioteca del Congreso Nacional de Chile.
+
+Ministerio de Transportes y Telecomunicaciones. (1995). *Decreto Supremo N.° 298: Reglamenta transporte de cargas peligrosas por calles y caminos*. Biblioteca del Congreso Nacional de Chile.
+
+Ministerio del Trabajo y Previsión Social. (2001). *Código del Trabajo de Chile* (Artículo 25 bis). Biblioteca del Congreso Nacional de Chile.
+
+Ministerio Secretaría General de la Presidencia. (2024). *Ley N.° 21.719: Cumplimiento de obligaciones en materia de protección de datos personales*. Biblioteca del Congreso Nacional de Chile.
+
+National Institute of Standards and Technology. (2020). *Zero trust architecture* (NIST Special Publication 800-207). U.S. Department of Commerce. https://doi.org/10.6028/NIST.SP.800-207
+
+Transportes Curimón S.A. (2026). *Pliego de Licitación TFEP-01/2026: Bases Administrativas FEP01.26, Bases Técnicas Transversales FEP02.26 y Bases Técnicas del Caso FEP03.10.26*.
+
+---
+
+*Fin del Subdocumento 2 — Comprensión del Problema y de la Necesidad*  
+*Dupla 1 (D1) — Licitación N.º TFEP-01/2026*  
+*Caso 10: Transportes Curimón S.A. · Proponente: audIT*
