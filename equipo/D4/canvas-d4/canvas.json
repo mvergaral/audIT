@@ -1,0 +1,16 @@
+{
+  "pages": [
+    { "id": "page-1", "name": "Arquitectura física (4.2)" },
+    { "id": "page-2", "name": "Arquitectura lógica (4.1)" }
+  ],
+  "artboards": [
+    { "file": "Main.dc.html",    "x": 0,    "y": 0,   "w": 1123, "h": 794, "title": "1 · Arquitectura física general", "print": "fixed", "page": "page-1" },
+    { "file": "Camion.dc.html",  "x": 1223, "y": 0,   "w": 1123, "h": 794, "title": "2 · El camión", "print": "fixed", "page": "page-1" },
+    { "file": "DosEjes.dc.html", "x": 0,    "y": 914, "w": 1123, "h": 794, "title": "3 · Los dos ejes", "print": "fixed", "page": "page-1" },
+    { "file": "Flujo.dc.html",   "x": 1223, "y": 914, "w": 1123, "h": 794, "title": "4 · Flujo sin cobertura", "print": "fixed", "page": "page-1" },
+    { "file": "LogicaCapas.dc.html",         "x": 0,    "y": 0, "w": 1123, "h": 794, "title": "A · Las ocho capas", "print": "fixed", "page": "page-2" },
+    { "file": "LogicaIntegraciones.dc.html", "x": 1223, "y": 0, "w": 1123, "h": 794, "title": "B · Mapa de integraciones", "print": "fixed", "page": "page-2" },
+    { "file": "LogicaEmplazamiento.dc.html", "x": 2446, "y": 0, "w": 1123, "h": 794, "title": "C · Capa lógica → emplazamiento", "print": "fixed", "page": "page-2" }
+  ],
+  "launch": { "view": "canvas", "page": "page-2" }
+}
