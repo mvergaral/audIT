@@ -95,6 +95,22 @@ para efectos de este documento: hay entregables —la política de respaldos, lo
 los caps. 9 y 10— que no estaban asignados a nadie y que son fuente obligatoria.
 
 
+### 0.6 Procedencia de los datos — cómo leer las marcas
+
+Toda cifra de este documento pertenece a uno de cuatro niveles. **La marca aparece junto al dato
+salvo en el nivel [B], donde la cita de página cumple esa función.**
+
+| Marca | Significado | Se puede citar en el informe |
+|---|---|---|
+| **[B]** | Verificado en los PDF de las bases. Lleva capítulo, numeral y página. | Sí |
+| **[F]** | Verificado en fuente externa durante el análisis (ficha del fabricante, sitio del proveedor, especificación pública). | Sí, citando la fuente en APA |
+| **[S]** | Supuesto de D4, con derivación explícita en §7. | Sí, **declarado como supuesto** |
+| **[?]** | Escrito de memoria, **sin verificar**. | **No.** Verificar o eliminar antes de la entrega |
+
+El registro completo de los niveles [F], [S] y [?] está en la **§13**. Los del nivel [?] son los
+únicos que bloquean: si llegan al informe sin comprobar, se está afirmando algo que nadie contrastó.
+
+
 ---
 
 ## 1. «Debe presentar la Empresa» — aporte de D4
@@ -325,16 +341,16 @@ desplazar hitos». Un camión detenido 12 días en zona cordillerana sin cobertu
 a no perder ningún registro.
 
 → **Exigencia de pliego propuesta: almacenamiento no volátil ≥ 8 GB**, no «suficiente para 72 h».
-El sobrecosto de pasar de 16 MB a 8 GB es marginal y elimina toda una clase de riesgo.
+El sobrecosto de subir a esa capacidad es marginal y elimina toda una clase de riesgo.
 
 > ⚠️ **Esto descarta el LINK 740 como unidad telemática**, y hay que decirlo con datos:
 >
 > | Especificación | LINK 740 (verificado en webfleet.com) | Lo que el caso exige |
 > |---|---|---|
-> | Memoria interna / buffer | **No publicada** | 72 h sin pérdida (RT-03.10) |
-> | Protección de ingreso | **IP20** | «polvo» nombrado explícitamente (Cap. 6, pág. 14/49); RT-08.12 |
-> | Temperatura de operación | **−30 a +70 °C** | «temperatura extrema en el norte» (Cap. 6, pág. 14/49) |
-> | Módem | **LTE-M y GPRS** | RT-03.15 del Caso: sincronizar 72 h de datos en ≤20 min |
+> | Memoria interna / buffer | **No publicada** [F] | 72 h sin pérdida (RT-03.10) |
+> | Protección de ingreso | **IP20** [F] | «polvo» nombrado explícitamente (Cap. 6, pág. 14/49); RT-08.12 |
+> | Temperatura de operación | **−30 a +70 °C** [F] | «temperatura extrema en el norte» (Cap. 6, pág. 14/49) |
+> | Módem | **LTE-M y GPRS** [F] | RT-03.15 del Caso: sincronizar 72 h de datos en ≤20 min |
 >
 > El Iridium Edge sí cumple (−40/+85 °C, IP67), pero **el conjunto vale lo que vale su
 > componente más débil**, y ese es el LINK. `BLOQUE2-INVESTIGACION-TECNICA.md` afirmaba que el
@@ -395,18 +411,20 @@ contractual**, con alternativa escogida, descartadas y criterio. Mínimo dos alt
 
 **Candidato A — Teltonika FMC650 + Iridium Edge.** Lo verificado:
 - 4G LTE Cat 1, doble SIM o eSIM.
-- **16 MB de flash interna + ranura microSD hasta 32 GB.** La flash sola no basta (Teltonika
-  documenta que alcanza para «hasta 6 horas» de registros); **la microSD es la que cumple las 72 h
-  y los 12 días**. Esto va explícito en el pliego: no «tiene memoria», sino «≥8 GB no volátil».
-- Interfaces: 2× RS232, 1× RS485, CAN J1939, CAN J1708, 1-Wire, BLE 5.0.
+- **16 MB de flash interna + ranura microSD hasta 32 GB [?]. Cifra escrita de memoria: las
+  búsquedas devolvieron los puertos serie, el CAN y la batería, pero nunca la capacidad de memoria.
+  Confirmar con el distribuidor o eliminarla.** El razonamiento que sí se sostiene sin ella: la
+  flash interna de un equipo de esta clase no basta y **la tarjeta extraíble es la que cumple las
+  72 h y los 12 días**. La exigencia de ≥8 GB de §5.3.3 no depende de esta cifra. Esto va explícito en el pliego: no «tiene memoria», sino «≥8 GB no volátil».
+- Interfaces: 2× RS232, 1× RS485, CAN J1939, CAN J1708, 1-Wire, BLE 5.0. **[F]**
 - Alimentación 8–32 V DC con protección de sobretensión y polaridad inversa; batería de respaldo
-  Ni-MH 550 mAh.
+  Ni-MH 550 mAh. **[F]**
 - **Descarga remota de tacógrafo**: DDD, y también TGD español y V1B/C1B franceses; soporta
   Smart Tachograph v2. Se conecta al conector C del tacógrafo (C5 = CAN2H, C7 = CAN2L) cuando la
-  señal RDD no está disponible por FMS.
+  señal RDD no está disponible por FMS. **[F]**
 
 > ⚠️ **Verificar antes de citarlo en el informe:** al consultar el catálogo de Teltonika la ficha
-> del FMC650 aparece marcada como *End of life* y *Out of stock*, mientras que su wiki registra
+> del FMC650 aparece marcada como *End of life* y *Out of stock* **[F]**, mientras que su wiki registra
 > actualizaciones de la guía de instalación en mayo de 2026. Los datos se contradicen.
 > **RT-08.13 obliga a declarar ciclo de vida y disponibilidad de repuestos por 56 meses**:
 > proponer un producto en fin de vida es un defecto de la propuesta. Confirmar con el
@@ -501,7 +519,9 @@ Eso reordena la recomendación:
 
 #### Volumetría satelital
 
-Un mensaje SBD transporta hasta 340 B; un reporte de posición comprimido ocupa 30–50 B. A una
+Un mensaje SBD saliente transporta hasta **340 B** en los transceptores 9601/9602, que son la
+familia del Iridium Edge **[F]** (en un 9522A/B el máximo sube a 1.960 B, así que el dato es del
+equipo, no del servicio). Un reporte de posición comprimido ocupa 30–50 B **[S]**. A una
 posición por minuto, un camión que pase 40 h/mes en sombra genera ≈ 2.400 mensajes/mes
 (≈120 KB). **Trivial en bytes, caro en mensajes**, porque SBD se tarifica por mensaje y por
 paquete mensual.
@@ -576,10 +596,14 @@ Decreto N.º 80 de 2004 exige dispositivo de registro en vehículos de servicios
 que desde el 1 de abril de 1995 los vehículos de carga con motor sobre 360 HP-SAE deben estar
 dotados de tacógrafo. **No lo verifiqué en fuente oficial y no debe citarse en el informe hasta
 confirmarlo en la Biblioteca del Congreso o el MTT.** Lo que sí está verificado en fuentes de la
-Dirección del Trabajo es el régimen del **Art. 25 bis del Código del Trabajo** (180 h mensuales,
+Dirección del Trabajo es el régimen del **Art. 25 bis del Código del Trabajo [?]** (180 h mensuales,
 no distribuibles en menos de 21 días, descansos y esperas no imputables a jornada) y la
-**Res. Ex. N.º 1213 de 08-10-2009**, que establece la libreta foliada, timbrada y registrada en
+**Res. Ex. N.º 1213 de 08-10-2009 [?]**, que establece la libreta foliada, timbrada y registrada en
 la Inspección del Trabajo, de confección y costo del empleador.
+
+> ⚠ **Las dos referencias laborales anteriores vienen de `BLOQUE2-INVESTIGACION-TECNICA.md`, de una
+> sesión anterior. Ese archivo las declara verificadas en fuentes de la Dirección del Trabajo, pero
+> no fueron contrastadas en este análisis.** Antes de citarlas en el informe hay que abrir la norma.
 
 **Y la consecuencia legal que ordena todo:** para los 258 conductores externos **el empleador es
 el transportista, no Curimón**. La libreta es del transportista. Eso no es un obstáculo: es el
@@ -640,7 +664,7 @@ OEM. Crece a ≈110 tractocamiones en 3 años (Cap. 14.1, pág. 29/49).
 
 #### 5.8.1 La región y por qué cumple
 
-**Azure Chile Central**, Santiago (comuna de Quilicura). Generalmente disponible desde 2025, con
+**Azure Chile Central [F]**, Santiago (comuna de Quilicura). Generalmente disponible desde 2025, con
 **tres zonas de disponibilidad** y residencia de datos en Chile.
 
 | Requisito | Texto | Cómo se cumple |
@@ -690,7 +714,8 @@ reescritura. **Hay que decirlo.**
 > afectado por el mismo evento de fuerza mayor**. El PROPONENTE declarará la distancia y el
 > análisis de amenazas comunes considerado.»
 
-Azure Chile Central está en Quilicura. San Bernardo está a ~20 km, en la misma Región
+Azure Chile Central está en Quilicura. San Bernardo está a ~20 km **[?] — estimación
+geográfica, no medida; conviene medirla, aunque el argumento se sostiene sin la cifra**, en la misma Región
 Metropolitana: **misma cuenca sísmica, mismo sistema eléctrico regional, mismo evento de fuerza
 mayor**. Como par de recuperación ante desastres **no pasa RT-07.02**, y el evaluador lo va a ver
 en la primera lectura.
@@ -811,9 +836,11 @@ expresamente que **no cumple** el Cap. 6 transversal.
 > «Se privilegiará al PROPONENTE que ofrezca o provea especificaciones nuevas o **mejores** que
 > las aquí establecidas, debidamente fundamentadas.»
 
-RT-06.17 pide «FM-200 **o equivalente**». El FM-200 (HFC-227ea) es un hidrofluorocarbono de alto
+RT-06.17 pide «FM-200 **o equivalente**». El FM-200 (HFC-227ea) **[?]** es un hidrofluorocarbono de alto
 potencial de calentamiento global, en retirada progresiva por regulación ambiental. La
-alternativa habitual hoy es **FK-5-1-12** o sistemas inertes de nitrógeno/argón.
+alternativa habitual hoy es **FK-5-1-12 [?]** o sistemas inertes de nitrógeno/argón.
+*Ambas afirmaciones sobre agentes de extinción están escritas de memoria: verificar la composición
+y el estado regulatorio antes de citarlas.*
 
 Y **RT-15.03** (pág. 27/51, obligatorio) exige estimar la huella de carbono anual de la operación
 de la solución y declarar la metodología.
@@ -1243,7 +1270,7 @@ Reglas que gobiernan las elecciones:
 │   ✗ No puede afectar la garantía del vehículo     ← restricción 6          │
 └────────────────────────────────────────────────────────────────────────────┘
 
-  61 tractocamiones adicionales: telemetría de fábrica por rFMS v5.0.0
+  61 tractocamiones adicionales: telemetría de fábrica por rFMS v5.0.0 [F]
   ── solo lectura, sin instalar hardware, sin pasar por terminal ──
      API REST/HTTPS del OEM ─────────────────────────► Azure (integración)
      RT-17.06 · decisión 12 · Cap. 11: no se interviene la electrónica
@@ -1544,4 +1571,67 @@ cobertura en terreno, y transversalmente ese código es otra cosa y ni siquiera 
 | 14 | Calendario de las dos conmutaciones reales anuales (RT-07.07) contra las ventanas congeladas | D4 | 05-09 |
 | 15 | Plano de distribución interna de San Bernardo (RT-06.03), entregable gráfico | D4 | 05-09 |
 | 16 | Especificación de puestos de trabajo de la torre 24×7 (RT-08.07 a RT-08.09) | D4 | 05-09 |
+
+---
+
+## 13. Registro de procedencia de los datos
+
+Los del nivel **[B]** no se listan: son la mayoría y cada uno lleva su página en el texto.
+Aquí van los otros tres niveles, que son los que alguien tiene que revisar antes de la entrega.
+
+### 13.1 ⛔ Nivel [?] — sin verificar. No citar hasta comprobar
+
+| # | Dato | Dónde aparece | Cómo se cierra | ¿Bloquea? |
+|---|---|---|---|---|
+| ?-01 | FMC650: 16 MB de flash interna y microSD hasta 32 GB; «alcanza para 6 horas» | §5.3.6 | Ficha oficial de Teltonika o cotización del distribuidor | No — la exigencia de ≥8 GB no depende de esta cifra |
+| ?-02 | ≈20 km entre Quilicura y San Bernardo | §5.9.1, Diagrama 3 | Medición en mapa | No — el argumento de RT-07.02 se sostiene por cuenca sísmica y red eléctrica comunes |
+| ?-03 | FM-200 = HFC-227ea, hidrofluorocarbono de alto GWP | §5.9.6 | Ficha del agente o normativa ambiental | **Sí** — es el fundamento de proponer el agente alternativo |
+| ?-04 | FK-5-1-12 / Novec 1230 como alternativa de bajo GWP | §5.9.6 | Ídem | **Sí** — mismo argumento |
+| ?-05 | Art. 25 bis del Código del Trabajo: 180 h mensuales, no distribuibles en menos de 21 días | §5.6, §7 supuesto S-02 | Texto de la norma en la BCN | **Sí** — sustenta el cálculo de 30 h de marcha en 72 h |
+| ?-06 | Res. Ex. N.º 1213 de 08-10-2009: libreta foliada, timbrada, de cargo del empleador | §5.6 | Texto de la resolución en la Dirección del Trabajo | **Sí** — sustenta la consulta C-10 |
+| ?-07 | Decreto N.º 80 de 2004 y umbral de 360 HP-SAE para tacógrafo | §5.6 | BCN o Ministerio de Transportes | No — ya está marcado en el texto como no verificado |
+| ?-08 | Anchos de banda de LTE Cat-1 (2–5 Mbps) y LTE-M (100–300 kbps) | Análisis de sincronización | Ficha del módem elegido | No — el argumento es comparativo, no absoluto |
+
+**Origen común de ?-05, ?-06 y ?-07:** provienen de `BLOQUE2-INVESTIGACION-TECNICA.md`, elaborado en
+una sesión anterior. Ese archivo los declara verificados en fuentes de la Dirección del Trabajo,
+pero no fueron contrastados en este análisis. **Heredar una verificación no es verificar.**
+
+### 13.2 Nivel [F] — verificado en fuente externa
+
+| Dato | Fuente | Dónde aparece |
+|---|---|---|
+| Webfleet SAT: almacenamiento de hasta 40 h; conmuta a satélite tras 10 min sin red; en satélite la posición se actualiza cada 10 min | `wf-wfsat-datasheet.cl.pdf`, ficha entregada por el CLIENTE | §5.3.4 |
+| Iridium Edge: 123,2 × 78,4 × 30,3 mm, 205 g, IP67, −40/+85 °C, 9–32 V, 1,6 W en transmisión, red SBD sobre 66 satélites LEO | Misma ficha | §5.3.1, §5.4 |
+| LINK 740: IP20, −30 a +70 °C, módem LTE-M y GPRS, memoria interna no publicada, 122 × 59 × 24 mm, 96 g | webfleet.com, especificaciones del producto | §5.3.3 |
+| Iridium SBD: 340 B máximo por mensaje saliente en 9601/9602; 1.960 B en 9522A/B | Documentación pública de Iridium SBD | §5.5 |
+| Azure Chile Central: Santiago (Quilicura), disponible desde 2025, tres zonas de disponibilidad, residencia de datos en Chile | Documentación de Microsoft Azure | §5.8.1 |
+| rFMS v5.0.0, especificación de 25-07-2025, API REST sobre HTTPS | `fms-standard.com` | §5.7 |
+| FMC650: 2× RS232, 1× RS485, CAN J1939, CAN J1708, 1-Wire, BLE; 8–32 V DC; batería Ni-MH 8,4 V 550 mAh; descarga remota DDD/TGD/V1B/C1B y Smart Tachograph v2 por el conector C (C5/C7) | Documentación de Teltonika | §5.3.6 |
+| FMC650 marcado *End of life* y *Out of stock* en el catálogo, con la wiki actualizada en mayo de 2026 | Catálogo de Teltonika | §5.3.6 |
+
+**Regla de forma:** el Art. 40° exige referencias en **APA 7.ª edición**. Cada fila de esta tabla
+que llegue al informe necesita su entrada bibliográfica completa con fecha de consulta.
+
+### 13.3 Nivel [S] — supuestos de D4
+
+Están en la **§7**, con su derivación y la actividad que los cierra. No se repiten aquí.
+
+### 13.4 Qué cambió al aparecer las bases en texto
+
+Las Bases Administrativas eran el PDF escaneado sin capa de texto, y todo lo que citábamos de
+ellas venía del documento de traspaso. Con el texto disponible en `audIT/texto/` quedaron
+**verificados textualmente**:
+
+| Artículo | Texto confirmado |
+|---|---|
+| **50.2** | «la Oferta Técnica no podrá contener información de precios, tarifas, valores unitarios ni cifra alguna que permita inferir el monto de la oferta económica. Su inclusión es causal de exclusión inmediata» |
+| **16.1** | «No se admiten propuestas exclusivamente en nube ni exclusivamente on-premise» |
+| **16.2** | Justificar el emplazamiento componente por componente por latencia, criticidad, volumen, regulación, conectividad y costo total de propiedad. «Una asignación no justificada será evaluada como observación grave» |
+| **16.3** | Nube pública con región o zona en Chile o Sudamérica, **«declarando expresamente la región primaria y la región secundaria utilizadas»** |
+| **40.1** | «La falta de foliación es requisito excluyente y produce la exclusión automática» |
+| **43** | Período de consultas por canal oficial, en planilla con estructura obligatoria |
+
+**El Art. 16.3 es un hallazgo:** obliga a declarar región primaria **y** secundaria de nube. Eso
+respalda por escrito la corrección de §5.9.2 —el secundario de la nube es otra región Azure, no
+San Bernardo— y conviene citarlo en el informe junto a RT-07.02.
 
