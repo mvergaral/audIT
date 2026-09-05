@@ -1,4 +1,3 @@
----
 **LICITACIÓN PÚBLICA INTERNACIONAL N.° TFEP-01/2026**  
 **PROYECTO DE PLATAFORMA DIGITAL DE MISIÓN CRÍTICA — CASO 10: TRANSPORTE DE CARGA (TRANSPORTES CURIMÓN S.A.)**  
 **OFERTA TÉCNICA (SOBRE N.° 2) · INFORME PREPARATORIO 1**  
@@ -163,15 +162,15 @@ El gobierno interno de audIT se ejecuta a través del área transversal de Calid
 ### Referencias Bibliográficas (Norma APA 7.ª edición)
 
 * Center for Internet Security. (2024). *CIS Benchmarks: Secure Configuration Guides*. CIS Security. https://www.cisecurity.org/cis-benchmarks
-* Congreso Nacional de Chile. (2001). *Ley N.° 19.799 sobre Documentos Electrónicos, Firma Electrónica y Servicios de Certificación de dicha Firma*. Diario Oficial de la República de Chile.
-* Congreso Nacional de Chile. (2002). *Código del Trabajo: Artículo 25 bis sobre jornada de trabajo de los choferes de vehículos de carga terrestre interurbana*. Diario Oficial de la República de Chile.
-* Congreso Nacional de Chile. (2024). *Ley N.° 21.663 Marco de Ciberseguridad y Creación de la Agencia Nacional de Ciberseguridad*. Diario Oficial de la República de Chile.
-* Congreso Nacional de Chile. (2024). *Ley N.° 21.719 sobre Protección y Tratamiento de Datos Personales y Creación de la Agencia de Protección de Datos*. Diario Oficial de la República de Chile.
+* Congreso Nacional de Chile. (2001). *Ley N.° 19.799 sobre Documentos Electrónicos, Firma Electrónica y Servicios de Certificación de dicha Firma*. Diario Oficial de la República de Chile. https://www.bcn.cl/leychile/navegar?idNorma=196640
+* Ministerio del Trabajo y Previsión Social. (2003). *Decreto con Fuerza de Ley N.° 1: Fija el texto refundido, coordinado y sistematizado del Código del Trabajo (Artículo 25 bis sobre jornada de trabajo de los choferes de vehículos de carga terrestre interurbana)*. Biblioteca del Congreso Nacional de Chile. https://www.bcn.cl/leychile/navegar?idNorma=207436
+* Congreso Nacional de Chile. (2024). *Ley N.° 21.663 Marco de Ciberseguridad y Creación de la Agencia Nacional de Ciberseguridad*. Diario Oficial de la República de Chile. https://www.bcn.cl/leychile/navegar?idNorma=1202434
+* Congreso Nacional de Chile. (2024). *Ley N.° 21.719 sobre Protección y Tratamiento de Datos Personales y Creación de la Agencia de Protección de Datos*. Diario Oficial de la República de Chile. https://www.bcn.cl/leychile/navegar?idNorma=1209272
 * International Organization for Standardization. (2015). *Quality management systems — Requirements* (ISO Standard No. 9001:2015). https://www.iso.org/standard/62085.html
 * International Organization for Standardization. (2017). *Systems and software engineering — Software life cycle processes* (ISO/IEC/IEEE Standard No. 12207:2017). https://www.iso.org/standard/63711.html
 * International Organization for Standardization. (2022). *Information security, cybersecurity and privacy protection — Information security management systems — Requirements* (ISO/IEC Standard No. 27001:2022). https://www.iso.org/standard/27001
-* Ministerio de Salud. (2016). *Decreto Supremo N.° 43: Aprueba el Reglamento de Almacenamiento de Sustancias Peligrosas*. Biblioteca del Congreso Nacional de Chile. https://www.bcn.cl/leychile/navegar?idNorma=1089376
-* Ministerio de Transportes y Telecomunicaciones. (1995). *Decreto Supremo N.° 298: Reglamenta el Transporte de Cargas Peligrosas por Calles y Caminos*. Biblioteca del Congreso Nacional de Chile.
+* Ministerio de Salud. (2016). *Decreto Supremo N.° 43: Aprueba el Reglamento de Almacenamiento de Sustancias Peligrosas*. Biblioteca del Congreso Nacional de Chile. https://www.bcn.cl/leychile/navegar?idNorma=1088802
+* Ministerio de Transportes y Telecomunicaciones. (1995). *Decreto Supremo N.° 298: Reglamenta el Transporte de Cargas Peligrosas por Calles y Caminos*. Biblioteca del Congreso Nacional de Chile. https://www.bcn.cl/leychile/navegar?idNorma=12087
 * National Institute of Standards and Technology. (2020). *Zero Trust Architecture* (NIST Special Publication 800-207). U.S. Department of Commerce. https://doi.org/10.6028/NIST.SP.800-207
 * National Institute of Standards and Technology. (2024). *The NIST Cybersecurity Framework (CSF) 2.0* (NIST Special Publication 1300). U.S. Department of Commerce. https://doi.org/10.6028/NIST.CSWP.29
 * Open Worldwide Application Security Project. (2021). *OWASP Application Security Verification Standard 4.0 (ASVS)*. OWASP Foundation. https://owasp.org/www-project-application-security-verification-standard/

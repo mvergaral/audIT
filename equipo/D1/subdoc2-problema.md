@@ -435,17 +435,17 @@ Esta técnica garantiza plena coherencia metodológica: los supuestos operan exc
 
 Global Logistics Emissions Council. (2023). *GLEC framework for logistics emissions methodologies: Version 3.0* (Coincidente con la norma ISO 14083:2023). Smart Freight Centre.
 
-Ministerio de Obras Públicas. (1980). *Decreto Supremo N.° 158: Fija peso máximo de los vehículos que pueden circular por caminos públicos*. Biblioteca del Congreso Nacional de Chile. https://www.bcn.cl/leychile/navegar?idNorma=17529
+Ministerio de Obras Públicas. (1980). *Decreto Supremo N.° 158: Fija peso máximo de los vehículos que pueden circular por caminos públicos* (Texto refundido y actualizado con la modificación del Decreto N.° 181 de 2025). Biblioteca del Congreso Nacional de Chile. https://www.bcn.cl/leychile/navegar?idNorma=10212
 
 Ministerio de Transportes y Telecomunicaciones. (2009). *Decreto con Fuerza de Ley N.° 1: Fija texto refundido, coordinado y sistematizado de la Ley de Tránsito N.° 18.290*. Biblioteca del Congreso Nacional de Chile. https://www.bcn.cl/leychile/navegar?idNorma=1007469
 
-Ministerio de Transportes y Telecomunicaciones. (1995). *Decreto Supremo N.° 298: Reglamenta transporte de cargas peligrosas por calles y caminos*. Biblioteca del Congreso Nacional de Chile. https://www.bcn.cl/leychile/navegar?idNorma=13346
+Ministerio de Transportes y Telecomunicaciones. (1995). *Decreto Supremo N.° 298: Reglamenta transporte de cargas peligrosas por calles y caminos*. Biblioteca del Congreso Nacional de Chile. https://www.bcn.cl/leychile/navegar?idNorma=12087
 
-Ministerio del Trabajo y Previsión Social. (2001). *Código del Trabajo de Chile: Fija el texto refundido, coordinado y sistematizado del Código del Trabajo (Artículo 25 bis sobre jornada de choferes de carga terrestre interurbana)*. Biblioteca del Congreso Nacional de Chile. https://www.bcn.cl/leychile/navegar?idNorma=186064
+Ministerio del Trabajo y Previsión Social. (2003). *Decreto con Fuerza de Ley N.° 1: Fija el texto refundido, coordinado y sistematizado del Código del Trabajo (Artículo 25 bis sobre jornada de choferes de carga terrestre interurbana)*. Biblioteca del Congreso Nacional de Chile. https://www.bcn.cl/leychile/navegar?idNorma=207436
 
-Ministerio del Trabajo y Previsión Social. (2006). *Ley N.° 20.123: Regula trabajo en régimen de subcontratación, el funcionamiento de las empresas de servicios transitorios y el contrato de trabajo de servicios transitorios*. Biblioteca del Congreso Nacional de Chile. https://www.bcn.cl/leychile/navegar?idNorma=254423
+Ministerio del Trabajo y Previsión Social. (2006). *Ley N.° 20.123: Regula trabajo en régimen de subcontratación, el funcionamiento de las empresas de servicios transitorios y el contrato de trabajo de servicios transitorios*. Biblioteca del Congreso Nacional de Chile. https://www.bcn.cl/leychile/navegar?idNorma=254080
 
-Ministerio Secretaría General de la Presidencia. (2024). *Ley N.° 21.719: Regula el tratamiento y la protección de los datos personales y crea la Agencia de Protección de Datos Personales*. Biblioteca del Congreso Nacional de Chile. https://www.bcn.cl/leychile/navegar?idNorma=1207175
+Ministerio Secretaría General de la Presidencia. (2024). *Ley N.° 21.719: Regula el tratamiento y la protección de los datos personales y crea la Agencia de Protección de Datos Personales*. Biblioteca del Congreso Nacional de Chile. https://www.bcn.cl/leychile/navegar?idNorma=1209272
 
 Transportes Curimón S.A. (2026). *Pliego de Licitación TFEP-01/2026: Bases Administrativas FEP01.26, Bases Técnicas Transversales FEP02.26 y Bases Técnicas del Caso FEP03.10.26*.
 
