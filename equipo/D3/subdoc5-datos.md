@@ -306,7 +306,7 @@ El alcance de migración histórica establecido en el **Capítulo 15 de las Base
 | **Histórico de Liquidaciones a Transportistas** | **6 años (≈ 10.656 liquidaciones mensuales)** | Cuadre financiero al peso contra libros contables del ERP 2013. |
 | **Histórico de Siniestros y Reclamos**          | **100 % de los antecedentes disponibles**       | Integridad de expedientes legales y peritajes de seguros.       |
 
-![Figura 6: Estrategia de Saneamiento y Migración de Datos Históricos](./diagramas/diagrama6_migracion_datos.png)
+![Figura 8: Estrategia de Saneamiento y Migración de Datos Históricos](./diagramas/diagrama6_migracion_datos.png)
 
 #### Fases de Ejecución del Plan de Migración:
 
@@ -353,7 +353,7 @@ Para cumplir con **RT-05.05** y viabilizar los entregables analíticos y de BI a
    * *Versión 1 (≤ 24 h tras cierre de viaje)*: Costo preliminar trazable que consolida costos directos conocidos (tarifa del flete, peajes estimados, combustible inferido por odómetro/CANbus) e identifica explícitamente los componentes pendientes (Consulta Oficial N.° 18).
    * *Versión 2 (Conciliación a 40 días)*: Actualización automática al ingresar el archivo de liquidación mensual de estaciones de servicio (Enex/Copec) y peajes, generando una nueva versión auditada sin sobreescribir la historia previa.
 
-![Figura 7: Separación Transaccional/Analítica vía CDC y Ensamble de Costo por Kilómetro](./diagramas/diagrama7_oltp_olap_cdc.png)
+![Figura 9: Separación Transaccional/Analítica vía CDC y Ensamble de Costo por Kilómetro](./diagramas/diagrama7_oltp_olap_cdc.png)
 
 ---
 

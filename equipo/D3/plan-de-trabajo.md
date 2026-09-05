@@ -44,13 +44,13 @@ Taller de Formulación de Proyectos Informáticos (ICI-5444) · Escuela de Infor
 | **D3-04** | Especificación de Integración, APIs y Capa Anticorrupción        | 4.1           | RT-05.16–21, RT-02.14, Consultas 13, 17     | Martín | Marcel         | 05-09  | Pendiente     |
 | **D3-05** | Modelo de Capa Analítica y Costeo por Km/Ruta (BI)                 | 4.1 / 5       | RT-05.25–30, Consulta 18, Decisiones 15, 16 | Martín | Marcel         | 05-09  | Pendiente     |
 | **D3-06** | Inventario de Componentes Lógicos (para Emplazamiento D4)          | 4.1 / 4.2     | RT-03.01–24, Art. 16°, Formulario T-11     | Martín | Alonso (D4)    | 04-09  | Bloqueante D4 |
-| **D3-07** | Modelo de Dominio del Negocio y Entidades Principales               | 5             | RT-02.13, FEP03 Cap. 4 y 14                  | Marcel  | Martín        | 04-09  | En curso      |
-| **D3-08** | Diccionario de Datos, Sensibilidades y Datos Maestros (MDM)         | 5             | RT-05.01, RT-05.09, ISO 25012                | Marcel  | Martín        | 05-09  | Pendiente     |
-| **D3-09** | Matriz de Persistencia y Justificación Teorema CAP                 | 5             | RT-05.02, T-7 Subdoc. 5                      | Marcel  | Martín        | 04-09  | En curso      |
-| **D3-10** | Modelo Transaccional, Trazabilidad y Auditoría Inalterable         | 5             | RT-05.03, RT-16.06, RT-16.07                 | Marcel  | Martín        | 05-09  | Pendiente     |
-| **D3-11** | Estrategia de Desempeño: Indexación, Partición y Caché          | 5             | T-7 Subdoc. 5, RT-09.02                      | Marcel  | Martín        | 05-09  | Pendiente     |
-| **D3-12** | Plan de Migración, Saneamiento y Ensayos de Preproducción         | 5             | RT-05.11–15, Consulta 21, Decisión 18      | Marcel  | Martín        | 05-09  | Pendiente     |
-| **D3-13** | Política de Retención, Cifrado Ley 21.719 y Reversibilidad        | 5             | RT-05.06–10, RT-11.10, Art. 85°            | Marcel  | Martín        | 05-09  | Pendiente     |
+| **D3-07** | Modelo de Dominio del Negocio y Entidades Principales               | 5             | RT-02.13, FEP03 Cap. 4 y 14                  | Marcel  | Martín        | 04-09  | Completado    |
+| **D3-08** | Diccionario de Datos, Sensibilidades y Datos Maestros (MDM)         | 5             | RT-05.01, RT-05.09, ISO 25012                | Marcel  | Martín        | 05-09  | Completado    |
+| **D3-09** | Matriz de Persistencia y Justificación Teorema CAP                 | 5             | RT-05.02, T-7 Subdoc. 5                      | Marcel  | Martín        | 04-09  | Completado    |
+| **D3-10** | Modelo Transaccional, Trazabilidad y Auditoría Inalterable         | 5             | RT-05.03, RT-16.06, RT-16.07                 | Marcel  | Martín        | 05-09  | Completado    |
+| **D3-11** | Estrategia de Desempeño: Indexación, Partición y Caché          | 5             | T-7 Subdoc. 5, RT-09.02                      | Marcel  | Martín        | 05-09  | Completado    |
+| **D3-12** | Plan de Migración, Saneamiento y Ensayos de Preproducción         | 5             | RT-05.11–15, Consulta 21, Decisión 18      | Marcel  | Martín        | 05-09  | Completado    |
+| **D3-13** | Política de Retención, Cifrado Ley 21.719 y Reversibilidad        | 5             | RT-05.06–10, RT-11.10, Art. 85°            | Marcel  | Martín        | 05-09  | Completado    |
 | **D3-14** | Ficha T-19 Innovación Tipo 3 (Desconexión 72h / Unificación GPS) | 13            | Art. 28°, 29°, RT-26.01–08, APA 7         | Ambos   | Ambos          | 06-09  | Pendiente     |
 | **D3-15** | Tablas de Coordinación RT-03.13 (Offline) y RT-07.13 (Backup)      | 4.1 / 5 / 4.2 | RT-03.13, RT-07.13, RT-03.14                 | Ambos   | Ignacio V (D4) | 05-09  | En curso      |
 | **D3-16** | Guión de Exposición y Preparación de Defensa (Art. 45°)         | Presentación | Art. 45°, Formulario T-22                   | Ambos   | Ambos          | 06-09  | Pendiente     |
