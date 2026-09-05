@@ -1,0 +1,130 @@
+%%{init: {
+  "theme": "neutral",
+  "themeVariables": {
+    "background": "#FFFFFF",
+    "primaryColor": "#FFFFFF",
+    "primaryBorderColor": "#1E293B",
+    "primaryTextColor": "#0F172A",
+    "lineColor": "#334155",
+    "secondaryColor": "#F8FAFC",
+    "tertiaryColor": "#FFFFFF",
+    "mainBkg": "#FFFFFF",
+    "nodeBorder": "#1E293B",
+    "clusterBkg": "#F8FAFC",
+    "clusterBorder": "#94A3B8",
+    "edgeLabelBackground": "#FFFFFF",
+    "fontFamily": "sans-serif",
+    "fontSize": "13px"
+  }
+}}%%
+classDiagram
+    direction TB
+
+    class Viaje {
+        <<AggregateRoot>>
+        -ViajeId id
+        -CodigoViaje codigo
+        -EstadoViaje estado
+        -TractocamionId tractoAsignado
+        -SemirremolqueId ramplaAsignada
+        -ConductorId conductorAsignado
+        -Kilogramos pesoBrutoCarga
+        -Sobreestadia sobreestadia
+        -List~GastoOperacional~ gastos
+        +asignarRecursos(tracto, rampla, conductor)
+        +validarPesajeYCapacidad()
+        +iniciarViaje()
+        +registrarPasoGeocerca(evento)
+        +suspenderPorTramiteAduanero()
+        +cerrarViaje()
+    }
+
+    class Tractocamion {
+        <<AggregateRoot>>
+        -TractoId id
+        -Patente patente
+        -TipoPropiedad propiedad
+        -boolean telemetriaCanbusActiva
+        -List~Vigencia~ vigencias
+        +estaAptoParaDespacho(fechaEstimadaFin)
+        +admiteCargaPeligrosa()
+    }
+
+    class Semirremolque {
+        <<AggregateRoot>>
+        -RamplaId id
+        -Patente patente
+        -TipoCarroceria tipoCarroceria
+        -CapacidadTon capacidadMax
+        -List~Vigencia~ vigencias
+        +estaAptoParaDespacho(fechaEstimadaFin)
+        +cumpleNormaEstanqueDS298()
+    }
+
+    class Conductor {
+        <<AggregateRoot>>
+        -ConductorId id
+        -Rut rut
+        -ClaseLicencia licencia
+        -EstadoOperativo estado
+        -ConsentimientoDatos consentimiento
+        -JornadaConductor jornada
+        +puedeConducir(horasRequeridas)
+        +tieneCursoCargasPeligrosas()
+    }
+
+    class JornadaConductor {
+        <<Entity>>
+        -Instant inicioJornada
+        -Minutos tiempoConduccionContinua
+        -Minutos descansoUltimas24h
+        +excedeLimiteArt25Bis()
+        +exigePausaInmediata2Horas()
+    }
+
+    class Sobreestadia {
+        <<Entity>>
+        -Minutos tiempoPermanenciaTotal
+        -Minutos tiempoEsperaExenta
+        -boolean enPasoFronterizo
+        +calcularMinutosCobro()
+        +certificarMonto(tarifaHora)
+    }
+
+    class Vigencia {
+        <<Entity>>
+        -VigenciaId id
+        -TipoDocumento tipo
+        -Date fechaVencimiento
+        -HashSHA256 hashDocumento
+        -EstadoVerificacion estado
+        +estaVigente(fechaConsulta)
+        +tieneRespaldoValido()
+    }
+
+    class ConsentimientoDatos {
+        <<ValueObject>>
+        -boolean autorizaTrackingFlete
+        -boolean autorizaTelemetriaMotor
+        -Instant fechaValidez
+        +permiteCapturaEnHorario(esEnFlete)
+    }
+
+    class GastoOperacional {
+        <<ValueObject>>
+        -TipoGasto tipo
+        -Money monto
+        -String comprobanteRef
+    }
+
+    Viaje "1" *-- "1" Tractocamion : tracciona
+    Viaje "1" *-- "0..1" Semirremolque : acopla
+    Viaje "1" *-- "1" Conductor : asigna
+    Viaje "1" *-- "0..1" Sobreestadia
+    Viaje "1" *-- "*" GastoOperacional
+
+    Tractocamion "1" *-- "*" Vigencia
+    Semirremolque "1" *-- "*" Vigencia
+    Conductor "1" *-- "1" JornadaConductor
+    Conductor "1" *-- "1" ConsentimientoDatos
+    Conductor "1" *-- "*" Vigencia

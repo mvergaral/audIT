@@ -1,0 +1,50 @@
+%%{init: {
+  "theme": "neutral",
+  "themeVariables": {
+    "background": "#FFFFFF",
+    "primaryColor": "#FFFFFF",
+    "primaryBorderColor": "#1E293B",
+    "primaryTextColor": "#0F172A",
+    "lineColor": "#334155",
+    "secondaryColor": "#F8FAFC",
+    "tertiaryColor": "#FFFFFF",
+    "mainBkg": "#FFFFFF",
+    "nodeBorder": "#1E293B",
+    "clusterBkg": "#F8FAFC",
+    "clusterBorder": "#94A3B8",
+    "edgeLabelBackground": "#FFFFFF",
+    "fontFamily": "sans-serif",
+    "fontSize": "13px"
+  }
+}}%%
+flowchart TB
+    subgraph MDM["Catálogo Maestro Central (Golden Record - audIT)"]
+        direction TB
+        CONDUCTOR["Maestro de Conductores\n(RUT Módulo 11 + Vigencias)"]
+        FLOTA["Maestro de Flota\n(Tractocamión PPU + Semirremolque)"]
+        ENTIDADES["Maestro de Red Logística\n(Clientes + Transportistas + Geocercas)"]
+    end
+
+    subgraph OP["Módulos Operacionales audIT (Nube / Multi-AZ)"]
+        direction TB
+        TRAFICO["Despacho y Programación\n(Verificación Bloqueante)"]
+        APP_CABINA["App Móvil Conductor\n(Validación de Identidad & Jornada)"]
+        PORTAL_TRANS["Portal Transportista\n(Gestión de Activos y Consentimiento)"]
+    end
+
+    subgraph LEGADO["Entorno Heredado y Sistemas Externos"]
+        direction TB
+        ACL["Capa Anticorrupción (ACL)\n(Mapeo de Entidades y Servicios)"]
+        ERP["ERP Contable 2013\n(Emisión DTE / Facturación / Pagos)"]
+        REG_CIVIL["Servicios Externos\n(Validación PPU / Registro Civil)"]
+    end
+
+    %% Relaciones
+    MDM -->|"Sincronización Asíncrona (Kafka / CDC)"| OP
+    MDM -->|"Contratos OpenAPI 3.1"| ACL
+    ACL -->|"Traducción de Protocolo / DB Link"| ERP
+    FLOTA -.->|"Cotejo de Padrón"| REG_CIVIL
+
+    TRAFICO -->|"Consulta en Caché (<5 ms)"| MDM
+    APP_CABINA -->|"Validación de Turno"| MDM
+    PORTAL_TRANS -->|"Actualización de Datos"| MDM

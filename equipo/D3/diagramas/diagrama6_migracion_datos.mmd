@@ -1,0 +1,70 @@
+%%{init: {
+  "theme": "neutral",
+  "themeVariables": {
+    "background": "#FFFFFF",
+    "primaryColor": "#FFFFFF",
+    "primaryBorderColor": "#1E293B",
+    "primaryTextColor": "#0F172A",
+    "lineColor": "#334155",
+    "secondaryColor": "#F8FAFC",
+    "tertiaryColor": "#FFFFFF",
+    "mainBkg": "#FFFFFF",
+    "nodeBorder": "#1E293B",
+    "clusterBkg": "#F8FAFC",
+    "clusterBorder": "#94A3B8",
+    "edgeLabelBackground": "#FFFFFF",
+    "fontFamily": "sans-serif",
+    "fontSize": "13px"
+  }
+}}%%
+flowchart TD
+    subgraph FuentesHeredadas["Fuentes de Datos Desintegradas"]
+        F1["Planilla 1: Vigencias Camiones Propios"]
+        F2["Planilla 2: Vigencias Camiones Terceros"]
+        F3["Planilla 3: Documentos Conductores"]
+        F4["Planilla 4: Vencimientos Cargas Peligrosas"]
+        F5["Base Datos Legacy 2013: Maestros Flota"]
+    end
+
+    subgraph Fase1_2["Fase 1 y 2: Perfilamiento y Normalizacion"]
+        EXTRACT["Extraccion ETL y Profiling"]
+        CLEAN{"Validacion RUT y PPU<br/>Fechas Coherentes"}
+        ERROR_QUEUE["Cola de Excepciones:<br/>Revision Prevencion de Riesgos"]
+        STANDARDIZE["Homologacion a Catalogo Oficial<br/>UUIDs, Licencias y Tipos Doc"]
+    end
+
+    subgraph Fase3["Fase 3: Acreditacion Criptografica"]
+        PDF_VERIF{"Verificacion Archivo<br/>Digital de Respaldo"}
+        HASH["Calculo de Hash SHA-256<br/>Carga Storage WORM"]
+        ESTADO_OK["Estado: VERIFICADO_CON_DOCUMENTO<br/>(Habilitado para Despacho)"]
+        ESTADO_PEND["Estado: PENDIENTE_DOCUMENTACION<br/>(Bloqueo preventivo)"]
+    end
+
+    subgraph Fase4["Fase 4: Ensayos y Cutover"]
+        MOCK1["Ensayo 1 (Dia 45):<br/>Dry-Run en Preproduccion"]
+        MOCK2["Ensayo 2 (Dia 60):<br/>Simulacion Cutover y Estres"]
+        CONCIL{"Conciliacion Cuantitativa<br/>Cuadre Total"}
+        PROD[("Base de Datos Produccion PostgreSQL<br/>Go-Live Oficial")]
+    end
+
+    F1 --> EXTRACT
+    F2 --> EXTRACT
+    F3 --> EXTRACT
+    F4 --> EXTRACT
+    F5 --> EXTRACT
+    EXTRACT --> CLEAN
+    CLEAN -->|No| ERROR_QUEUE
+    ERROR_QUEUE -.->|corregido| STANDARDIZE
+    CLEAN -->|Si| STANDARDIZE
+    
+    STANDARDIZE --> PDF_VERIF
+    PDF_VERIF -->|Si| HASH
+    HASH --> ESTADO_OK
+    PDF_VERIF -->|No| ESTADO_PEND
+
+    ESTADO_OK --> MOCK1
+    ESTADO_PEND --> MOCK1
+    MOCK1 --> MOCK2
+    MOCK2 --> CONCIL
+    CONCIL -->|Aprobado| PROD
+    CONCIL -->|Discrepancias| ERROR_QUEUE

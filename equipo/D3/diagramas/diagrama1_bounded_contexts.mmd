@@ -1,0 +1,73 @@
+%%{init: {
+  "theme": "neutral",
+  "themeVariables": {
+    "background": "#FFFFFF",
+    "primaryColor": "#FFFFFF",
+    "primaryBorderColor": "#1E293B",
+    "primaryTextColor": "#0F172A",
+    "lineColor": "#334155",
+    "secondaryColor": "#F8FAFC",
+    "tertiaryColor": "#FFFFFF",
+    "mainBkg": "#FFFFFF",
+    "nodeBorder": "#1E293B",
+    "clusterBkg": "#F8FAFC",
+    "clusterBorder": "#94A3B8",
+    "edgeLabelBackground": "#FFFFFF",
+    "fontFamily": "sans-serif",
+    "fontSize": "13px"
+  }
+}}%%
+flowchart TB
+    subgraph EXT["Sistemas Externos y Reguladores"]
+        ERP_LEGACY["ERP Contable 2013\n(Emisor Oficial DTE)"]
+        GPS_EXT["3 Proveedores GPS Externos\n(Flota Subcontratada)"]
+        SII["Servicio de Impuestos Internos\n(SII - Folios CAF)"]
+        DT["Dirección del Trabajo\n(Fiscalización Art. 25 bis)"]
+    end
+
+    subgraph BC_Planificacion["1. Planificación y Tráfico"]
+        ST[Solicitud de Transporte]
+        PO[Puntos Operacionales / Geocercas]
+    end
+
+    subgraph BC_Flota["2. Gestión de Flota y Activos"]
+        TRACTO[Tractocamiones Propios y Terceros]
+        RAMPLA[Semirremolques / Ramplas]
+        VIG[Matriz de ~6.000 Vigencias]
+    end
+
+    subgraph BC_Personas["3. Personas y Cumplimiento Laboral"]
+        COND[454 Conductores]
+        JOR[Tacógrafo Virtual Art. 25 bis]
+        PRIV[Consentimientos Ley 21.719]
+    end
+
+    subgraph BC_Telemetria["4. Telemetría y Geofencing (Fast-Data)"]
+        IOT[Ingesta Telemática / Adaptadores GPS]
+        GEO[Motor Espacial de Geocercas]
+    end
+
+    subgraph BC_Operacion["5. Operación y Ejecución de Fletes (Core Domain)"]
+        V[Agregado VIAJE]
+        OVR[Comité de Override / Excepciones]
+        SOB[Certificación de Sobreestadías]
+    end
+
+    subgraph BC_Liquidacion["6. Liquidación, Costeo y Facturación"]
+        ACL["Capa Anticorrupción (ACL)"]
+        LIQ[Liquidación a 148 Transportistas]
+        COSTO[Cálculo Costo por Km / Viaje]
+    end
+
+    GPS_EXT -->|pings en bruto| IOT
+    ST -->|origina flete| V
+    BC_Flota -->|valida aptitud técnica tracto/rampla| V
+    BC_Personas -->|valida jornada legal disponible| V
+    IOT -->|eventos de arribo/salida| GEO
+    GEO -.->|eventos de dominio en tiempo real| V
+    V -->|flete completado| BC_Liquidacion
+    
+    BC_Personas -.->|evidencia de jornada| DT
+    SII -.->|stock folios CAF offline| V
+    BC_Liquidacion <-->|sincronización bidireccional| ACL
+    ACL <-->|asientos contables / DTE| ERP_LEGACY

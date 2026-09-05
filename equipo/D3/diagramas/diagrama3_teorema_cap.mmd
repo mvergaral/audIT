@@ -1,0 +1,40 @@
+%%{init: {
+  "theme": "neutral",
+  "themeVariables": {
+    "background": "#FFFFFF",
+    "primaryColor": "#FFFFFF",
+    "primaryBorderColor": "#1E293B",
+    "primaryTextColor": "#0F172A",
+    "lineColor": "#334155",
+    "secondaryColor": "#F8FAFC",
+    "tertiaryColor": "#FFFFFF",
+    "mainBkg": "#FFFFFF",
+    "nodeBorder": "#1E293B",
+    "clusterBkg": "#F8FAFC",
+    "clusterBorder": "#94A3B8",
+    "edgeLabelBackground": "#FFFFFF",
+    "fontFamily": "sans-serif",
+    "fontSize": "13px"
+  }
+}}%%
+flowchart TD
+    subgraph CAP_Theorem["Teorema CAP aplicado a Curimón S.A."]
+        P["TOLERANCIA A PARTICIONES (P)\nObligatoria por diseño distribuido\n(Ruta 5 Norte, Zonas de Sombra, Multi-AZ Cloud)"]
+        
+        subgraph CP_Branch["Lado CP: Consistencia Estricta sobre Disponibilidad"]
+            CP_CORE["PostgreSQL 16 Multi-AZ + PostGIS\n• Validación Bloqueante de Despacho (RT-09.01)\n• Integridad de ~6.000 Vigencias Legales\n• Asientos Financieros y DTE\n• Regla: Es preferible abortar o encolar el despacho\nque autorizar un viaje con chofer sin descanso\no camión sin revisión técnica."]
+        end
+
+        subgraph AP_Branch["Lado AP: Disponibilidad Extrema sobre Consistencia Inmediata"]
+            AP_TELEMETRIA["TimescaleDB / Kafka + SQLite Embarcado\n• Ingesta Continua de Pings GPS (41M km/año)\n• Operación Desconectada 72h a Bordo (T-19)\n• Regla: La telemetría nunca bloquea al camión.\nSe acumula en búfer local y sincroniza vía\nConsistencia Eventual (BASE) al recuperar red."]
+        end
+
+        subgraph CACHE["Capa Transitoria de Ultra-Baja Latencia"]
+            REDIS["Redis 7.2 Cluster In-Memory\n• Evaluación de Geocercas Activas (<5 ms)\n• Tokens de Sesión y Control de Tasa (Rate Limiting)"]
+        end
+    end
+
+    P --- CP_CORE
+    P --- AP_TELEMETRIA
+    CP_CORE -.->|eventos de cambio CDC| AP_TELEMETRIA
+    CP_CORE <-->|sincronización de geometrías| REDIS

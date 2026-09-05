@@ -1,0 +1,61 @@
+%%{init: {
+  "theme": "neutral",
+  "themeVariables": {
+    "background": "#FFFFFF",
+    "primaryColor": "#FFFFFF",
+    "primaryBorderColor": "#1E293B",
+    "primaryTextColor": "#0F172A",
+    "lineColor": "#334155",
+    "secondaryColor": "#F8FAFC",
+    "tertiaryColor": "#FFFFFF",
+    "mainBkg": "#FFFFFF",
+    "nodeBorder": "#1E293B",
+    "clusterBkg": "#F8FAFC",
+    "clusterBorder": "#94A3B8",
+    "edgeLabelBackground": "#FFFFFF",
+    "fontFamily": "sans-serif",
+    "fontSize": "13px"
+  }
+}}%%
+flowchart LR
+    subgraph Terreno["Dispositivos en Terreno (Edge Computing)"]
+        GPS[GPS / CANbus / App Móvil]
+        BUFFER[(Buffer Local SQLite\nResistencia 72h Offline)]
+        GPS -->|en sombra >80 km| BUFFER
+        BUFFER -->|reconexión celular| IOT_GW
+        GPS -->|en línea| IOT_GW[Gateway IoT / MQTT Broker]
+    end
+
+    subgraph FastData["Capa de Streaming y Reglas Espaciales"]
+        SP[Motor de Eventos de Streaming / PostGIS]
+        GEO_CACHE[(Redis Geocercas Clientes / Aduana)]
+        IOT_GW --> SP
+        GEO_CACHE <--> SP
+    end
+
+    subgraph Eventos["Eventos de Dominio Generados"]
+        E1[Evento: IngresoClienteDetectado]
+        E2[Evento: SalidaClienteDetectada]
+        E3[Evento: CruceFronterizoEnEspera]
+        E4[Evento: AlertaFatigaArt25Bis]
+        E5[Evento: FinFleteCortePrivacidad]
+    end
+
+    subgraph Core["Dominio Transaccional y Liquidación"]
+        V[Agregado VIAJE]
+        J[Agregado CONDUCTOR / JORNADA]
+        LIQ[Contexto LIQUIDACIÓN / COBRANZA]
+    end
+
+    SP -->|dispara si cruza perímetro| E1
+    SP -->|dispara al salir| E2
+    SP -->|detecta espera en Libertadores| E3
+    SP -->|conducción > 5h continuas| E4
+    SP -->|cierre de viaje en destino| E5
+
+    E1 -->|inicia reloj 2h libres| V
+    E2 -->|liquida sobreestadía $241M| V
+    E3 -->|suspende cobro sobreestadía| V
+    E4 -->|alerta preventiva torre/cabina| J
+    E5 -->|apaga ingesta tercero Ley 21.719| V
+    V -->|notifica viaje conciliado| LIQ

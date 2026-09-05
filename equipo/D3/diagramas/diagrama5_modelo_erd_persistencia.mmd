@@ -1,0 +1,208 @@
+%%{init: {
+  "theme": "neutral",
+  "themeVariables": {
+    "background": "#FFFFFF",
+    "primaryColor": "#FFFFFF",
+    "primaryBorderColor": "#1E293B",
+    "primaryTextColor": "#0F172A",
+    "lineColor": "#334155",
+    "secondaryColor": "#F8FAFC",
+    "tertiaryColor": "#FFFFFF",
+    "mainBkg": "#FFFFFF",
+    "nodeBorder": "#1E293B",
+    "clusterBkg": "#F8FAFC",
+    "clusterBorder": "#94A3B8",
+    "edgeLabelBackground": "#FFFFFF",
+    "fontFamily": "sans-serif",
+    "fontSize": "13px"
+  }
+}}%%
+erDiagram
+    TRANSPORTISTA ||--o{ CONDUCTOR : "emplea"
+    TRANSPORTISTA ||--o{ TRACTOCAMION : "posee"
+    TRANSPORTISTA ||--o{ SEMIRREMOLQUE : "posee"
+    TRANSPORTISTA ||--|| CONSENTIMIENTO_DATOS : "suscribe"
+    TRANSPORTISTA ||--o{ LIQUIDACION_MENSUAL : "recibe"
+
+    CLIENTE ||--o{ SOLICITUD_TRANSPORTE : "solicita"
+    CLIENTE ||--o{ PUNTO_OPERACIONAL : "opera_en"
+
+    CONDUCTOR ||--o{ REGISTRO_JORNADA : "registra"
+    CONDUCTOR ||--o{ VIGENCIA_HABILITACION : "sujeto_a"
+    CONDUCTOR ||--o{ VIAJE : "conduce"
+
+    TRACTOCAMION ||--o{ VIGENCIA_HABILITACION : "sujeto_a"
+    TRACTOCAMION ||--o{ VIAJE : "tracciona"
+
+    SEMIRREMOLQUE ||--o{ VIGENCIA_HABILITACION : "sujeto_a"
+    SEMIRREMOLQUE ||--o{ VIAJE : "acoplado_en"
+
+    SOLICITUD_TRANSPORTE ||--|| VIAJE : "origina"
+    VIGENCIA_HABILITACION ||--|| DOCUMENTO_RESPALDO : "acreditada_por"
+
+    VIAJE ||--o{ EVENTO_GEOCERCA : "registra"
+    VIAJE ||--o{ REGISTRO_SOBREESTADIA : "genera"
+    VIAJE ||--o{ EXCEPCION_OVERRIDE : "autorizado_por"
+    VIAJE ||--|| DTE_DOCUMENTO : "respaldado_por"
+    VIAJE ||--o{ CONSUMO_COMBUSTIBLE : "asocia_gasto"
+    VIAJE ||--o{ PASADA_PEAJE : "asocia_peaje"
+
+    PUNTO_OPERACIONAL ||--o{ EVENTO_GEOCERCA : "delimita"
+
+    TRANSPORTISTA {
+        uuid id_transportista PK
+        string razon_social
+        string rut
+    }
+
+    CLIENTE {
+        uuid id_cliente PK
+        string razon_social
+        string rut
+    }
+
+    PUNTO_OPERACIONAL {
+        uuid id_punto PK
+        uuid id_cliente FK
+        string nombre_punto
+        string tipo_geocerca
+    }
+
+    SOLICITUD_TRANSPORTE {
+        uuid id_solicitud PK
+        uuid id_cliente FK
+        string numero_pedido
+        timestamptz fecha_solicitud
+    }
+
+    LIQUIDACION_MENSUAL {
+        uuid id_liquidacion PK
+        uuid id_transportista FK
+        string periodo_mes
+        numeric monto_total
+    }
+
+    TRACTOCAMION {
+        uuid id_tracto PK
+        uuid id_transportista FK
+        string patente UK
+        string tipo_propiedad
+        boolean canbus_activo
+        string estado_habilitacion
+    }
+
+    SEMIRREMOLQUE {
+        uuid id_semirremolque PK
+        uuid id_transportista FK
+        string patente UK
+        string tipo_carroceria
+        numeric capacidad_ton
+        string estado_habilitacion
+    }
+
+    CONDUCTOR {
+        uuid id_conductor PK
+        uuid id_transportista FK
+        string rut_conductor UK
+        string nombre_completo
+        string clase_licencia
+        string estado_operativo
+    }
+
+    VIAJE {
+        uuid id_viaje PK
+        string codigo_viaje UK
+        uuid id_solicitud FK
+        uuid id_tracto FK
+        uuid id_semirremolque FK
+        uuid id_conductor FK
+        string estado_viaje
+        numeric peso_origen_kg
+        timestamptz fecha_inicio_real
+        timestamptz fecha_fin_real
+    }
+
+    VIGENCIA_HABILITACION {
+        uuid id_vigencia PK
+        uuid id_sujeto FK
+        string tipo_sujeto
+        string tipo_documento
+        date fecha_vencimiento
+        string estado_verificacion
+        uuid id_documento FK
+    }
+
+    DOCUMENTO_RESPALDO {
+        uuid id_documento PK
+        string hash_sha256 UK
+        string uri_almacenamiento
+        timestamptz fecha_carga
+    }
+
+    REGISTRO_JORNADA {
+        uuid id_jornada PK
+        uuid id_conductor FK
+        timestamptz inicio_turno
+        timestamptz fin_turno
+        numeric horas_conduccion
+    }
+
+    EVENTO_GEOCERCA {
+        uuid id_evento PK
+        uuid id_viaje FK
+        uuid id_punto FK
+        string tipo_evento
+        timestamptz timestamp_gps
+    }
+
+    REGISTRO_SOBREESTADIA {
+        uuid id_sobreestadia PK
+        uuid id_viaje FK
+        numeric horas_totales
+        numeric horas_cobrables
+        numeric monto_calculado
+        string estado_cobro
+    }
+
+    EXCEPCION_OVERRIDE {
+        uuid id_override PK
+        uuid id_viaje FK
+        string motivo_excepcion
+        string nivel_severidad
+        string rut_autorizador
+        timestamptz fecha_autorizacion
+    }
+
+    DTE_DOCUMENTO {
+        uuid id_dte PK
+        uuid id_viaje FK
+        string folio_sii
+        string tipo_dte
+        string modo_emision
+        timestamptz fecha_timbraje
+    }
+
+    CONSUMO_COMBUSTIBLE {
+        uuid id_consumo PK
+        uuid id_viaje FK
+        date fecha_carga
+        numeric litros_cargados
+        numeric monto_total
+        string estado_conciliacion
+    }
+
+    PASADA_PEAJE {
+        uuid id_peaje PK
+        uuid id_viaje FK
+        string portico_id
+        timestamptz timestamp_pasada
+        numeric tarifa_peaje
+    }
+
+    CONSENTIMIENTO_DATOS {
+        uuid id_consentimiento PK
+        uuid id_transportista FK
+        boolean comparte_posicion
+        boolean comparte_canbus
+        timestamptz fecha_firma
+    }

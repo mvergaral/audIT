@@ -1,0 +1,61 @@
+%%{init: {
+  "theme": "neutral",
+  "themeVariables": {
+    "background": "#FFFFFF",
+    "primaryColor": "#FFFFFF",
+    "primaryBorderColor": "#1E293B",
+    "primaryTextColor": "#0F172A",
+    "lineColor": "#334155",
+    "secondaryColor": "#F8FAFC",
+    "tertiaryColor": "#FFFFFF",
+    "mainBkg": "#FFFFFF",
+    "nodeBorder": "#1E293B",
+    "clusterBkg": "#F8FAFC",
+    "clusterBorder": "#94A3B8",
+    "edgeLabelBackground": "#FFFFFF",
+    "fontFamily": "sans-serif",
+    "fontSize": "13px"
+  }
+}}%%
+flowchart LR
+    subgraph OLTP["Ambiente Transaccional Operativo (PostgreSQL)"]
+        T1[(Viajes y Despacho)]
+        T2[(Geocercas y Tiempos)]
+        T3[(Horas de Conducción)]
+        T1 --> WAL[Write-Ahead Log\nPostgreSQL]
+        T2 --> WAL
+        T3 --> WAL
+    end
+
+    subgraph FuentesDesfasadas["Fuentes de Costo con Desfase Temporal"]
+        ENEX["Portal Proveedor Combustible\n(Liquidación con 40 días desfase)"]
+        AUTOPISTA["Telepeaje / TAG\n(Cierre mensual de pasadas)"]
+        TARIFAS["Matriz Tarifaria Transportistas\n(148 contratos pactados)"]
+    end
+
+    subgraph IngestionCDC["Capa de Integración Asíncrona"]
+        DEBEZIUM[Debezium CDC]
+        KAFKA[Apache Kafka / Event Streams]
+        BATCH[Carga Batch Programada]
+        WAL --> DEBEZIUM --> KAFKA
+        ENEX --> BATCH
+        AUTOPISTA --> BATCH
+        TARIFAS --> BATCH
+    end
+
+    subgraph OLAP["Almacenamiento Analítico (Data Warehouse / Lakehouse)"]
+        STAGING[(Staging Area)]
+        DWH[(Modelo Dimensional Estrella\nHechos: CostoViaje, Desempeño)]
+        KAFKA --> STAGING
+        BATCH --> STAGING
+        STAGING --> DWH
+    end
+
+    subgraph BI["Capa de Explotación y Reportabilidad (RT-05.25 a RT-05.30)"]
+        CALC["Motor de Cálculo de Costo por Km\n(Criterio 17 / RT-05.29)"]
+        DWH --> CALC
+        CALC --> R1["Costo Preliminar (< 24 h):\nCostos directos + Combustible estimado"]
+        CALC --> R2["Costo Definitivo Conciliado:\nActualizado post 40 días con factura real"]
+        R1 --> DASH["Tableros de Negocio / Power BI / Metabase:\nDrill-down hasta transacción de origen"]
+        R2 --> DASH
+    end

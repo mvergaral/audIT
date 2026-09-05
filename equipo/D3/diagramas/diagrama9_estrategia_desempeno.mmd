@@ -1,0 +1,51 @@
+%%{init: {
+  "theme": "neutral",
+  "themeVariables": {
+    "background": "#FFFFFF",
+    "primaryColor": "#FFFFFF",
+    "primaryBorderColor": "#1E293B",
+    "primaryTextColor": "#0F172A",
+    "lineColor": "#334155",
+    "secondaryColor": "#F8FAFC",
+    "tertiaryColor": "#FFFFFF",
+    "mainBkg": "#FFFFFF",
+    "nodeBorder": "#1E293B",
+    "clusterBkg": "#F8FAFC",
+    "clusterBorder": "#94A3B8",
+    "edgeLabelBackground": "#FFFFFF",
+    "fontFamily": "sans-serif",
+    "fontSize": "13px"
+  }
+}}%%
+flowchart LR
+    subgraph P1["1. Indexación Especializada"]
+        direction TB
+        IDX_BTREE["Índices B-Tree\n(FKs, UUIDs, RUTs y Códigos de Viaje)"]
+        IDX_GIST["Índices GiST / SP-GiST\n(PostGIS Geocercas y Puntos Clientes)"]
+        IDX_BRIN["Índices BRIN\n(Series Temporales: 95% menos RAM/Disco)"]
+    end
+
+    subgraph P2["2. Particionamiento Declarativo"]
+        direction TB
+        PART_VIAJE["Tabla 'viaje'\n(Particiones Mensuales Declarativas)"]
+        PART_AUDIT["Tabla 'auditoria_evento'\n(Particiones Mensuales + Object Lock)"]
+        PART_TELEMETRIA["Tabla 'telemetria_posicion'\n(Particiones Semanales en TimescaleDB)"]
+    end
+
+    subgraph P3["3. Caché Multinivel (<5 ms)"]
+        direction TB
+        CACHE_L1["Caché L1 Aplicación\n(Catálogos Estáticos y Enums)"]
+        CACHE_L2["Caché L2 Redis Cluster\n(Geocercas 1.400 puntos y Sesiones 24x7)"]
+        CACHE_EDGE["Caché Local Cabina\n(Búfer SQLite WAL a Bordo 72 h)"]
+    end
+
+    subgraph P4["4. Optimización de Consultas"]
+        direction TB
+        MAT_VIEWS["Vistas Materializadas\n(Liquidaciones Mensuales y Desempeño)"]
+        QUERY_PLAN["Planes de Ejecución EXPLAIN\n(Sin Escaneos Secuenciales en Histórico)"]
+        ASYNC_PIPE["Propagación CDC Desacoplada\n(Zero Impacto en Motor Transaccional)"]
+    end
+
+    P1 --> P2
+    P2 --> P3
+    P3 --> P4
