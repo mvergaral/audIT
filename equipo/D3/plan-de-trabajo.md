@@ -1,6 +1,6 @@
 # Plan de Trabajo de Dupla D3 — Versión 2.0 Definitiva
 
-**Marcel. y Martín. · Arquitectura Lógica y Datos**
+**Marcel y Martín · Arquitectura Lógica y Datos**
 Empresa Proponente: **audIT**
 Licitación N.º TFEP-01/2026 · Caso 10: Transporte de Carga (Transportes Curimón S.A.)
 Taller de Formulación de Proyectos Informáticos (ICI-5444) · Escuela de Informática · PUCV
@@ -12,7 +12,7 @@ Taller de Formulación de Proyectos Informáticos (ICI-5444) · Escuela de Infor
 | Parámetro                                | Definición Contractual y Académica                                                                                                                                                                                                  |
 | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Empresa Proponente**              | **audIT** (escrito según asignación oficial)                                                                                                                                                                                  |
-| **Integrantes Dupla 3**             | **Martín .** (Arquitectura Lógica, Integración, BI/Analítica)**Marcel.** (Modelo de Dominio, Persistencia, Migración, Retención)                                                                                    |
+| **Integrantes Dupla 3**             | **Martín** (Arquitectura Lógica, Integración, BI/Analítica)<br/>**Marcel** (Modelo de Dominio, Persistencia, Migración, Retención)                                                                                    |
 | **Subdocumentos Asignados**         | **Subdoc. 4.1**: Arquitectura lógica (**16 %**)**Subdoc. 5**: Modelo y gestión de datos (**11 %**)**Subdoc. 13**: Innovación Tipo 3 (Tecnológica / Arquitectura, **17 %** cartera compartida) |
 | **Ponderación Total Directa**      | **27 %** de la Oferta Técnica en el Informe 1 (la dupla con mayor peso técnico relativo) + 1 Ficha T-19                                                                                                                       |
 | **Hito Entrega Simulación (T-20)** | **Lunes 07-09-2026** (Cierre formal según Formulario T-20 de las Bases Administrativas)                                                                                                                                        |
@@ -38,12 +38,12 @@ Taller de Formulación de Proyectos Informáticos (ICI-5444) · Escuela de Infor
 
 | Código         | Entregable / Artefacto                                              | Subdoc.       | Requisitos Base                              | Líder  | Revisor        | Cierre | Estado        |
 | --------------- | ------------------------------------------------------------------- | ------------- | -------------------------------------------- | ------- | -------------- | ------ | ------------- |
-| **D3-01** | Diagrama y Memoria de Arquitectura Lógica (8 Capas)                | 4.1           | RT-02.01, RT-02.02, ISO/IEC/IEEE 42010       | Martín | Marcel         | 04-09  | En curso      |
-| **D3-02** | Registro de Decisiones de Arquitectura (ADR inicial)                | 4.1           | RT-02.04, Art. 19°                          | Martín | Marcel         | 04-09  | En curso      |
-| **D3-03** | Diseño de Resiliencia y Servicios de Negocio Stateless             | 4.1           | RT-02.05, RT-02.08, RT-09.01                 | Martín | Marcel         | 05-09  | Pendiente     |
-| **D3-04** | Especificación de Integración, APIs y Capa Anticorrupción        | 4.1           | RT-05.16–21, RT-02.14, Consultas 13, 17     | Martín | Marcel         | 05-09  | Pendiente     |
-| **D3-05** | Modelo de Capa Analítica y Costeo por Km/Ruta (BI)                 | 4.1 / 5       | RT-05.25–30, Consulta 18, Decisiones 15, 16 | Martín | Marcel         | 05-09  | Pendiente     |
-| **D3-06** | Inventario de Componentes Lógicos (para Emplazamiento D4)          | 4.1 / 4.2     | RT-03.01–24, Art. 16°, Formulario T-11     | Martín | Alonso (D4)    | 04-09  | Bloqueante D4 |
+| **D3-01** | Diagrama y Memoria de Arquitectura Lógica (8 Capas)                | 4.1           | RT-02.01, RT-02.02, ISO/IEC/IEEE 42010       | Martín | Marcel         | 04-09  | Completado    |
+| **D3-02** | Registro de Decisiones de Arquitectura (ADR inicial)                | 4.1           | RT-02.04, Art. 19°                          | Martín | Marcel         | 04-09  | Completado    |
+| **D3-03** | Diseño de Resiliencia y Servicios de Negocio Stateless             | 4.1           | RT-02.05, RT-02.08, RT-09.01                 | Martín | Marcel         | 05-09  | Completado    |
+| **D3-04** | Especificación de Integración, APIs y Capa Anticorrupción        | 4.1           | RT-05.16–21, RT-02.14, Consultas 13, 17     | Martín | Marcel         | 05-09  | Completado    |
+| **D3-05** | Modelo de Capa Analítica y Costeo por Km/Ruta (BI)                 | 4.1 / 5       | RT-05.25–30, Consulta 18, Decisiones 15, 16 | Martín | Marcel         | 05-09  | Completado    |
+| **D3-06** | Inventario de Componentes Lógicos (para Emplazamiento D4)          | 4.1 / 4.2     | RT-03.01–24, Art. 16°, Formulario T-11     | Martín | Alonso (D4)    | 04-09  | Completado    |
 | **D3-07** | Modelo de Dominio del Negocio y Entidades Principales               | 5             | RT-02.13, FEP03 Cap. 4 y 14                  | Marcel  | Martín        | 04-09  | Completado    |
 | **D3-08** | Diccionario de Datos, Sensibilidades y Datos Maestros (MDM)         | 5             | RT-05.01, RT-05.09, ISO 25012                | Marcel  | Martín        | 05-09  | Completado    |
 | **D3-09** | Matriz de Persistencia y Justificación Teorema CAP                 | 5             | RT-05.02, T-7 Subdoc. 5                      | Marcel  | Martín        | 04-09  | Completado    |
@@ -59,7 +59,7 @@ Taller de Formulación de Proyectos Informáticos (ICI-5444) · Escuela de Infor
 
 ## 3. Asignación Detallada por Integrante
 
-### Martín. — Arquitectura Lógica, Integración y BI (Subdocumento 4.1)
+### Martín — Arquitectura Lógica, Integración y BI (Subdocumento 4.1)
 
 *Foco: Definir cómo se organizan y comunican los componentes de software, cómo interactúan con sistemas legados y externos, y cómo se extrae valor analítico operativo en tiempo y forma.*
 
@@ -105,7 +105,7 @@ Taller de Formulación de Proyectos Informáticos (ICI-5444) · Escuela de Infor
 
 ---
 
-### Marcel. — Modelo de Dominio, Persistencia y Migración (Subdocumento 5)
+### Marcel — Modelo de Dominio, Persistencia y Migración (Subdocumento 5)
 
 *Foco: Diseñar dónde y cómo residen los datos, su consistencia y transaccionalidad, la limpieza de los datos heredados y el cumplimiento normativo estricto.*
 
@@ -153,7 +153,7 @@ Taller de Formulación de Proyectos Informáticos (ICI-5444) · Escuela de Infor
 
 ## 4. Trabajo Conjunto: Innovación Tipo 3 (Subdocumento 13 / Ficha T-19)
 
-**Responsables:** Marcel . y Martín.
+**Responsables:** Marcel y Martín
 **Tema Asignado:** *"Operación desconectada 72 h y unificación de las tres plataformas GPS"*
 **Ponderación:** 17 % de la cartera de 5 innovaciones en el Informe 1 (Formulario T-21 y Consulta N.° 2).
 

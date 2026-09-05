@@ -1,0 +1,64 @@
+graph TB
+    subgraph CAPA1 ["1. CAPA DE PRESENTACIÓN (Canales & Clientes)"]
+        UI_WEB["Portal Web Unificado<br/>(React / Next.js / Tailwind)<br/>Torre de Tráfico, Clientes, Facturación"]
+        UI_MOB["App Móvil Conductor<br/>(Flutter / SQLite Offline)<br/>Operable con guantes / Cero distracción"]
+        UI_TRANS["Portal Transportista Subcontratado<br/>Liquidaciones, Tarifas, Consentimiento Ley 21.719"]
+        UI_TERM["Terminales Operacionales & Taller<br/>Portería San Bernardo, 4 Regionales, 2 Talleres"]
+    end
+
+    subgraph CAPA2 ["2. CAPA DE BORDE & SEGURIDAD PERIMETRAL (Zero Trust Edge)"]
+        AFD["Azure Front Door / Cloudflare Enterprise<br/>Anycast CDN + Terminación TLS 1.3"]
+        WAF["Web Application Firewall (WAF)<br/>Reglas OWASP Top 10 + Mitigación Anti-DDoS L3-L7"]
+    end
+
+    subgraph CAPA3 ["3. CAPA DE PUERTA DE ENLACE (API Gateway & Ingress)"]
+        APIM["Azure API Management (APIM)<br/>Autenticación OAuth 2.1 / OIDC / mTLS<br/>Rate Limiting, Throttling & Catálogo OpenAPI 3.1"]
+    end
+
+    subgraph CAPA4 ["4. CAPA DE SERVICIOS DE NEGOCIO (Microservicios Stateless en AKS)"]
+        direction TB
+        MS_DESP["Servicio de Despacho & Asignación<br/>Validación bloqueante en memoria ≤ 30 s"]
+        MS_FLOTA["Servicio de Flota & Mantenimiento<br/>Tractos (374) y Semirremolques (210)"]
+        MS_JOR["Servicio de Jornada & Tacógrafo<br/>Cumplimiento Art. 25 bis Cód. Trabajo"]
+        MS_DOC["Servicio de Gestión Documental<br/>Sellado SHA-256 de ~6.000 Vigencias"]
+        MS_TAR["Servicio de Tarifas & Contratos<br/>148 Transportistas / 84 Clientes"]
+        MS_LIQ["Servicio de Liquidaciones & Peajes<br/>Cálculo fletes, estadías y anticipos"]
+    end
+
+    subgraph CAPA5 ["5. CAPA DE INTEGRACIÓN, EVENTOS & BROKERS"]
+        direction LR
+        SB["Azure Service Bus<br/>Mensajería transaccional empresarial<br/>Colas FIFO con Dead-Letter Queue (DLQ)"]
+        EH["Kafka / Azure Event Hubs<br/>Ingesta Fast-Data Telemetría<br/>≈ 41M km/año · 1.500 pings/min"]
+        ACL["Capa Anticorrupción (ACL)<br/>Aislamiento ERP 2013 Legado (Consulta 13)"]
+    end
+
+    subgraph CAPA6 ["6. CAPA DE DATOS POLÍGLOTA & PERSISTENCIA"]
+        direction LR
+        PG[("PostgreSQL 16 Multi-AZ<br/>(Transaccional CP ACID)<br/>Particionamiento Mensual")]
+        TS[("TimescaleDB / Cosmos DB<br/>(Series Temporales AP)<br/>Partición por Camión/Día")]
+        REDIS[("Redis 7.2 Cluster<br/>(Caché L2 RAM < 5 ms)<br/>Geocercas & Sesiones")]
+        BLOB[("Azure Blob Storage WORM<br/>(e-Docs inmutables)<br/>Object Lock Compliance")]
+        LAKE[("Lakehouse Analítico<br/>(Delta Lake / Parquet)<br/>Separación OLTP / OLAP")]
+    end
+
+    subgraph CAPA7 ["7. CAPA TRANSVERSAL DE SEGURIDAD & GOBERNANZA"]
+        AKV["Azure Key Vault (HSM FIPS 140-2 N3)<br/>Custodia de llaves FLE (AES-256-GCM)"]
+        ENTRA["Microsoft Entra ID (Azure AD)<br/>Identidad Centralizada, MFA & RBAC"]
+        AUDIT["Append-Only Audit Engine<br/>Hash Chain SHA-256 inalterable"]
+    end
+
+    subgraph CAPA8 ["8. CAPA TRANSVERSAL DE OBSERVABILIDAD & TELEMETRÍA"]
+        OTEL["OpenTelemetry Collector<br/>Trazas distribuidas, Métricas & Logs"]
+        MON["Azure Monitor & Application Insights<br/>Alertas SLA y Tableros 24x7"]
+    end
+
+    %% Relaciones principales entre capas
+    CAPA1 --> CAPA2
+    CAPA2 --> CAPA3
+    CAPA3 --> CAPA4
+    CAPA4 --> CAPA5
+    CAPA5 --> CAPA6
+    CAPA4 -.-> CAPA7
+    CAPA4 -.-> CAPA8
+    CAPA5 -.-> CAPA8
+    CAPA6 -.-> CAPA8

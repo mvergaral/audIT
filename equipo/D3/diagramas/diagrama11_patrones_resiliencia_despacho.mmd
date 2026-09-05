@@ -1,0 +1,53 @@
+sequenceDiagram
+    autonumber
+    actor Operador as Operador Torre 24x7
+    participant APIM as API Gateway (APIM)
+    participant Redis as Redis L2 (Caché / Idempotencia)
+    participant SvcDespacho as Servicio de Despacho (Stateless)
+    participant SvcJornada as Svc. Jornada (Art. 25 bis)
+    participant SvcFlota as Svc. Flota (Tracto/Rampla)
+    participant SvcDoc as Svc. Documental (Vigencias)
+    participant BD as PostgreSQL 16 (CP ACID)
+    participant Bus as Azure Service Bus
+
+    Operador->>APIM: POST /viajes/asignar (Header: Idempotency-Key UUIDv4)
+    Note over APIM: Validación de Esquema OpenAPI 3.1<br/>y Rate Limiting (RT-05.21)
+    
+    APIM->>Redis: Verificar Idempotency-Key (TTL 24h)
+    alt Clave Duplicada (Encolada / Ya procesada)
+        Redis-->>APIM: Respuesta Cacheada o Estado EN_PROCESO
+        APIM-->>Operador: 409 Conflict o 200 OK Idempotente
+    else Clave Nueva
+        Redis->>Redis: Registrar Clave como BLOQUEADA_EN_PROCESO
+        APIM->>SvcDespacho: Invocar Asignación Bloqueante (Timeout = 5s)
+        
+        Note over SvcDespacho: Aislamiento por Mamparos (Bulkheads)<br/>Pool dedicado a Despachos Críticos (RT-02.08)
+        
+        par Verificación Paralela de Invariantes de Negocio (≤ 30 s · RT-09.01)
+            SvcDespacho->>SvcJornada: Validar Jornada Art. 25 bis (Timeout = 800ms)
+            Note over SvcJornada: Máx 5h continuas, descanso 2h,<br/>descanso semanal previo
+            SvcJornada-->>SvcDespacho: Estado: CONDUCTOR_HABILITADO
+        and Validar Tracto
+            SvcDespacho->>SvcFlota: Validar PPU, Rev. Técnica, SOAP (Timeout = 800ms)
+            SvcFlota-->>SvcDespacho: Estado: TRACTO_APTO
+        and Validar Semirremolque y DS 298
+            SvcDespacho->>SvcDoc: Validar Prueba Estanqueidad DS 298 (Timeout = 800ms)
+            Note over SvcDoc: Cotejo hash SHA-256 en WORM
+            SvcDoc-->>SvcDespacho: Estado: RAMPLA_CERTIFICADA
+        end
+
+        alt Alguna Validación Rechazada (Bloqueo Automático)
+            SvcDespacho-->>APIM: 422 Unprocessable Entity (RFC 7807)<br/>Motivo: Infracción Normativa Detectada
+            APIM-->>Operador: Despacho Bloqueado con Causa Legal
+        else Todas las Invariantes Válidas
+            SvcDespacho->>BD: BEGIN TRANSACTION (SERIALIZABLE)<br/>UPDATE viaje SET estado='ASIGNADO', id_tracto, id_conductor...<br/>COMMIT
+            BD-->>SvcDespacho: Transacción Exitosa
+            
+            SvcDespacho->>Redis: Cachear resultado del Viaje & Liberar Clave Idempotencia
+            SvcDespacho-)Bus: Publicar Evento Domain: ViajeAsignadoEvent
+            Note over Bus: Propagación asíncrona hacia App Móvil Conductor,<br/>Portal Cliente y Lakehouse Analítico (RT-05.05)
+            
+            SvcDespacho-->>APIM: 200 OK (Payload Viaje Asignado)
+            APIM-->>Operador: Viaje Asignado Exitosamente (Latencia total < 1,2 s)
+        end
+    end

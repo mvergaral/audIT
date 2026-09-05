@@ -1,0 +1,60 @@
+graph TB
+    subgraph FUENTES_OLTP ["CAPA TRANSACCIONAL & TELEMÁTICA (OLTP)"]
+        direction LR
+        PG_PROD[("PostgreSQL 16 Producción<br/>(Viajes, Flota, Liquidaciones)")]
+        TS_PROD[("TimescaleDB / Cosmos DB<br/>(Pings GPS, Odómetros)")]
+        EXT_DATA["Archivos Mensuales<br/>(Enex, Copec, Autopistas TAG)"]
+    end
+
+    subgraph INGESTA_STREAMING ["INGESTIÓN DESACOPLADA (RT-05.05)"]
+        DEBEZIUM["Debezium CDC<br/>(Lectura WAL continua < 60s)"]
+        KAFKA_BROKER["Apache Kafka / Azure Event Hubs<br/>(Streaming Buffer Particionado)"]
+        PG_PROD --> DEBEZIUM
+        DEBEZIUM --> KAFKA_BROKER
+        TS_PROD --> KAFKA_BROKER
+    end
+
+    subgraph LAKEHOUSE_MEDALLION ["ARQUITECTURA LAKEHOUSE (DELTA LAKE / AZURE ADLS GEN2)"]
+        direction TB
+        
+        subgraph BRONZE ["CAPA BRONCE (Raw Ingestion)"]
+            B_CDC["Logs Crudos de Transacciones (CDC)"]
+            B_TEL["Telemetría GPS Cruda (1.500 pings/min)"]
+            B_ARCH["Archivos Crudos Facturas Combustible & TAG"]
+        end
+
+        subgraph SILVER ["CAPA PLATA (Cleansed, Validated & Joined)"]
+            S_VIAJES["Viajes Validados & Trazas Limpias"]
+            S_COMB["Combustible Asignado por Odómetro/FMS"]
+            S_PEAJES["Peajes Conciliados por Tramo y Pórtico"]
+        end
+
+        subgraph GOLD ["CAPA ORO (Modelo Dimensional & Costeo por Km)"]
+            G_FACT["Tabla de Hechos: FACT_COSTO_VIAJE<br/>(Costo real por km por ruta)"]
+            G_DIM["Dimensiones: RUTA, CLIENTE, FLOTA (Propia vs Tercero)"]
+            
+            subgraph MODELO_COSTEO ["Mecanismo Dual de Costeo (Consulta N.° 18)"]
+                V1_COST["Versión 1: Preliminar (≤ 24 h tras cierre)<br/>Costo directo conocido + Combustible estimado"]
+                V2_COST["Versión 2: Consolidada (Conciliación a 40 días)<br/>Cierre con facturas reales Enex/Copec/TAG"]
+            end
+        end
+
+        KAFKA_BROKER --> BRONZE
+        EXT_DATA --> BRONZE
+        BRONZE -->|Limpieza, Deduplicación y Normalización| SILVER
+        SILVER -->|Agregación de Negocio y Reglas de Costeo| GOLD
+    end
+
+    subgraph EXPLOTACION_BI ["AUTOSERVICIO BI & CONSUMO ANALÍTICO (RT-05.25 - RT-05.30)"]
+        SEMANTIC["Capa Semántica Unificada (Power BI Embedded / Analysis Services)<br/>Métricas DAX de Margen, Costo/Km y Desviación Presupuestaria"]
+        DASH_FIN["Tablero Gerencial de Rentabilidad<br/>(Detección de los 2 contratos deficitarios)"]
+        DASH_OP["Tablero de Control de Flota & Emisiones<br/>(Consumo L/100km e índice de ralentí)"]
+        DRILLDOWN["Navegación Drill-Down<br/>(Desde Margen Global hasta el Ticket y Viaje Individual)"]
+        EXPORT["Exportación Abierta (RT-05.30)<br/>CSV, Excel y Apache Parquet"]
+        
+        GOLD --> SEMANTIC
+        SEMANTIC --> DASH_FIN
+        SEMANTIC --> DASH_OP
+        SEMANTIC --> DRILLDOWN
+        SEMANTIC --> EXPORT
+    end

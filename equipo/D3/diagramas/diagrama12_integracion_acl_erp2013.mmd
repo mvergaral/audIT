@@ -1,0 +1,57 @@
+graph TB
+    subgraph AUDIT_CORE ["NUEVA PLATAFORMA audIT (MICROSERVICIOS EN NUBE)"]
+        direction TB
+        MS_VIAJES["Microservicio de Viajes & Tráfico"]
+        MS_LIQ["Microservicio de Liquidaciones"]
+        MS_COSTOS["Motor de Costeo de Flota"]
+        BUS_INT["Broker Transaccional: Azure Service Bus"]
+        MS_VIAJES --> BUS_INT
+        MS_LIQ --> BUS_INT
+    end
+
+    subgraph CAPA_ACL ["CAPA ANTICORRUPCIÓN (ACL — RT-02.14 / CONSULTA N.° 13)"]
+        direction TB
+        ADAPTER_ERP["Adaptador de Dominio audIT → ERP 2013<br/>(Traducción de modelos y mapeo semántico)"]
+        TRANS_ERP["Transformador Bidireccional de Esquemas<br/>(Validación de formatos XML/JSON)"]
+        CIRCUIT_ERP["Protector de Circuit Breaker & Retry<br/>(Aislamiento de caídas y lentitud del ERP)"]
+        DLQ_ERP["Cola de Mensajes Muertos (DLQ)<br/>(Reintentos ante fallas contables)"]
+        
+        ADAPTER_ERP --> TRANS_ERP
+        TRANS_ERP --> CIRCUIT_ERP
+        CIRCUIT_ERP -.->|Falla persistente| DLQ_ERP
+    end
+
+    subgraph SISTEMA_LEGADO ["ERP CONTABLE HEREDADO 2013 (ON-PREMISE SAN BERNARDO)"]
+        ERP_APP["Motor Contable ERP 2013<br/>(Contabilidad General y Asientos)"]
+        DTE_SVC["Emisor de DTE Tributario<br/>(Facturas de Flete y Enlace SII)"]
+        BD_ERP[("Base de Datos ERP 2013<br/>(Acceso restringido solo lectura/SP)")]
+        ERP_APP --> BD_ERP
+        DTE_SVC --> BD_ERP
+    end
+
+    subgraph FUENTES_EXTERNAS ["INTEGRACIONES EXTERNAS & PROVEEDORES DE SERVICIO"]
+        subgraph COMBUSTIBLE_PEAJES ["Combustible & Peajes (Consulta N.° 17)"]
+            PORTAL_COMB["Portales de Combustible<br/>(Enex / Copec / Shell)"]
+            PORTAL_TAG["Autopistas & Concesionarias TAG<br/>(Costanera Norte, Vespucio, Ruta 5)"]
+            CONNECTOR_BATCH["Conector Ingesta Batch ETL<br/>(Archivos mensuales planos con desfase 40d)<br/>Preparado para APIs diarias futuras"]
+        end
+
+        subgraph CANBUS_FMS ["Telemetría FMS/CANbus (Consulta N.° 14)"]
+            TRACTOS_61["61 Tractocamiones Propios<br/>(Puerto FMS SAE J1939 inactivo)"]
+            ACOPLADOR["Acoplador Inductivo de Solo Lectura<br/>(Sin corte de cables / Garantía intacta)"]
+            CONNECTOR_CAN["Gateway Telemático IoT<br/>(Lectura RPM, odómetro y consumo L/h)"]
+        end
+    end
+
+    %% Enlaces
+    BUS_INT ==>|Eventos: ViajeCerrado, LiquidacionAprobada| ADAPTER_ERP
+    CIRCUIT_ERP ==>|Llamadas API REST / WebServices SOAP| ERP_APP
+    CIRCUIT_ERP ==>|Solicitud Emisión DTE ≤ 90s| DTE_SVC
+    
+    PORTAL_COMB --> CONNECTOR_BATCH
+    PORTAL_TAG --> CONNECTOR_BATCH
+    CONNECTOR_BATCH ==>|Ingesta de Archivos y Conciliación| MS_COSTOS
+    
+    TRACTOS_61 --> ACOPLADOR
+    ACOPLADOR --> CONNECTOR_CAN
+    CONNECTOR_CAN ==>|Streaming MQTT / AMQP de Solo Lectura| MS_COSTOS

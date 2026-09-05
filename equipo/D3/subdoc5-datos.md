@@ -1,7 +1,7 @@
 # Subdocumento 5: Modelo de Persistencia, Saneamiento y Gestión de Datos — audIT (Versión 2.2 Consolidada)
 
 **Licitación Pública TFEP-01/2026 · Caso 10: Transportes Curimón S.A.**
-**Dupla Responsable:** D3 (Marcel Vergara L. y Martín Vergara L.) · **Especialista en Datos y Persistencia:** Marcel Vergara L.
+**Dupla Responsable:** D3 (Marcel y Martín) · **Especialista en Datos y Persistencia:** Marcel
 **Estándares y Marcos de Cumplimiento:** Formulario T-7 Subdoc. 5 (FEP01 · p.57); RT-05.01 a RT-05.15 (FEP02 · p.11-12); RT-02.13 (FEP02 · p.6); RT-07.02, RT-07.04, RT-07.13 (FEP02 · p.18); RT-09.01, RT-09.02 (FEP02 · p.20); RT-11.10 (FEP02 · p.22); RT-16.06, RT-16.07, RT-16.09, RT-16.30 (FEP02 · p.29-31); Parámetros del Caso 10 para RT-05.10, RT-05.15, RT-05.29 (FEP03 · Cap. 15 · p.31); Ley N.° 21.719 (Protección de Datos Personales); ISO/IEC 25012 (Calidad de Datos); NIST SP 800-88 Rev. 1 (Eliminación Segura); Consultas Oficiales N.° 13, 18 y 21.
 
 ---
