@@ -71,14 +71,14 @@ integrarla.
 
 | Código | Entregable | Líder | Revisor | Estado |
 |---|---|---|---|---|
-| D2-01 | Registro de las 26 decisiones | Ignacio C. | Matías V. | En curso 3/26 |
-| D2-02 | Catálogo RF/RNF | Ignacio C. | Matías V. | [ ] |
-| D2-03 | Matriz de trazabilidad | Ambos | Ambos | [ ] |
+| D2-01 | Registro de las 26 decisiones | Ignacio C. | Matías V. | Borrador 26/26; pendiente ratificación |
+| D2-02 | Catálogo RF/RNF | Ignacio C. | Matías V. | Borrador 28 RF + 14 RNF; pendiente ratificación |
+| D2-03 | Matriz de trazabilidad | Ambos | Ambos | Borrador 42/42; pendiente revisión D3-D4 |
 | D2-04 | Esquema de solución | Ambos | Ambos | [ ] |
-| D2-05 | Alcance por etapas | Matías V. | Ignacio C. | [ ] |
+| D2-05 | Alcance por etapas | Matías V. | Ignacio C. | Borrador E1/E2; pendiente ratificación |
 | D2-06 | Plan de adhesión | Matías V. | Ignacio C. | [ ] |
-| D2-07 | Criterios de aceptación | Matías V. | Ignacio C. | [ ] |
-| D2-08 | Formulario T-12 | Ignacio C. | Matías V. | [ ] |
+| D2-07 | Criterios de aceptación | Matías V. | Ignacio C. | Borrador 29/29; metas por ratificar |
+| D2-08 | Formulario T-12 | Ignacio C. | Matías V. | Preliminar 42/42; falta inventario textual completo |
 | D2-09 | Innovación tipo 1 · producto o servicio | Ignacio C. | Matías V. | [ ] |
 | D2-10 | Innovación tipo 4 · modelo de negocio | Matías V. | Ignacio C. | [ ] |
 | D2-11 | Subdocumento 3 consolidado | Ambos | Ambos | [ ] |
@@ -118,7 +118,8 @@ No se empieza por la redacción narrativa.
 ## 6. Decisiones prioritarias
 
 Deben quedar acordadas antes de que D3 y D4 cierren la arquitectura. Detalle en
-`Registro_Decisiones_D2`. Estado: 3 de 26 fundamentadas.
+`registro-decisiones-d2.md`. Estado: 26 propuestas documentadas; pendientes de
+ratificación, con las decisiones 10, 14, 19 y 21 todavía abiertas.
 
 - **Decisión 1 · jornada de conductores externos** — propuesta completa, pendiente
   validación legal y de interfaces.
