@@ -301,18 +301,19 @@ Las presentaciones preparatorias tienen una duración estricta de **15 minutos d
 
 ## 9. Criterios de Término (Definition of Done D3)
 
-- [ ] Diagrama de arquitectura lógica elaborado según ISO/IEC/IEEE 42010 cubriendo las 8 capas sin elementos genéricos.
-- [ ] Registro de Decisiones de Arquitectura (ADR) con justificación técnica de alternativas escogidas y descartadas.
-- [ ] Especificación de contratos OpenAPI 3.1 y AsyncAPI 2.6 con diseño de Capa Anticorrupción para ERP 2013.
-- [ ] Modelo semántico analítico con resolución del costo preliminar en ≤ 24 h y soporte a desfase de combustible a 40 días.
-- [ ] Inventario de componentes lógicos entregado y consensuado con D4 para la Tabla de Emplazamiento (T-11).
-- [ ] Modelo de dominio (DDD) y diccionario de datos completo con sensibilidades bajo la Ley N.° 21.719.
-- [ ] Matriz de persistencia con justificación del Teorema CAP por cada dominio de información.
-- [ ] Plan de migración de datos con protocolo de verificación documental individual para las ~6.000 vigencias y 2 ensayos en Preproducción.
-- [ ] Tabla de retención con plazos normativos (10a, 6a, 5a, 3a, 2a) y procedimiento de eliminación segura.
-- [ ] Ficha T-19 de Innovación Tipo 3 completa con los 7 elementos del Art. 29°, citas APA 7.ª ed. y tabla RT-03.13.
-- [ ] Coherencia cruzada absoluta con los requerimientos de D2 y la infraestructura física de D4.
-- [ ] Guión de presentación ensayado por ambos integrantes dentro de los tiempos estipulados.
+- [x] Diagrama de arquitectura lógica elaborado según ISO/IEC/IEEE 42010 cubriendo las 8 capas sin elementos genéricos (Completado en Subdoc. 4.1).
+- [x] Registro de Decisiones de Arquitectura (ADR) con justificación técnica de alternativas escogidas y descartadas (Completado en Subdoc. 4.1).
+- [x] Especificación de contratos OpenAPI 3.1 y AsyncAPI 2.6 con diseño de Capa Anticorrupción para ERP 2013 (Completado en Subdoc. 4.1).
+- [x] Modelo semántico analítico con resolución del costo preliminar en ≤ 24 h y soporte a desfase de combustible a 40 días (Completado en Subdoc. 4.1 y 5).
+- [x] Inventario de componentes lógicos entregado y consensuado con D4 para la Tabla de Emplazamiento (T-11) (Completado en Subdoc. 4.1).
+- [x] Modelo de dominio (DDD) y diccionario de datos completo con sensibilidades bajo la Ley N.° 21.719 (Completado en Subdoc. 5).
+- [x] Matriz de persistencia con justificación del Teorema CAP por cada dominio de información (Completado en Subdoc. 5).
+- [x] Plan de migración de datos con protocolo de verificación documental individual para las ~6.000 vigencias y 2 ensayos en Preproducción (Completado en Subdoc. 5).
+- [x] Tabla de retención con plazos normativos (10a, 6a, 5a, 3a, 2a) y procedimiento de eliminación segura (Completado en Subdoc. 5).
+- [ ] Ficha T-19 de Innovación Tipo 3 completa con los 7 elementos del Art. 29°, citas APA 7.ª ed. y tabla RT-03.13 (Entregable D3-14 · Pendiente).
+- [x] Coherencia cruzada absoluta con los requerimientos de D2 y la infraestructura física de D4 (Completado y homologado).
+- [ ] Tablas de coordinación RT-03.13 y RT-07.13 con D4 (Entregable D3-15 · En curso).
+- [ ] Guión de presentación ensayado por ambos integrantes dentro de los tiempos estipulados (Entregable D3-16 · Pendiente).
 
 ---
 
