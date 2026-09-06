@@ -4,7 +4,12 @@
 
 **Caso 10 · Transporte de Carga · Transportes Curimón S.A.**
 
-**Estado:** borrador de trabajo para ratificación del equipo
+**Estado:** decisiones ratificadas por D2; validaciones externas pendientes
+
+**Ratificación D2:** Ignacio C. y Matías V. acordaron las 26 decisiones y las metas
+indicadas en este registro el 6 de septiembre de 2026. La ratificación fija el alcance
+que propone D2, pero no sustituye las validaciones jurídicas, tributarias, comerciales
+o técnicas identificadas en la columna correspondiente.
 
 **Fuente principal:** FEP03 · sección 16.1 · p.34
 
@@ -24,58 +29,62 @@ acuerdos del CLIENTE.
 - **Propuesta parcial:** existe una dirección, pero faltan elementos relevantes.
 - **Abierta:** no existe una solución suficiente y requiere diseño inmediato.
 - **Ratificada:** acordada por el equipo y apta para alimentar requisitos y alcance.
+- **Ratificada D2:** acordada por la dupla para la propuesta; puede conservar
+  validaciones externas pendientes sin volver a abrir la decisión de alcance.
 
-## 2. Decisiones críticas para ratificación inmediata
+## 2. Decisiones críticas ratificadas y validaciones pendientes
 
 Desarrollo de D-01: `decision-01-jornada-externa.md`. Incluye alternativas,
 recomendación, bloqueo ante evidencia insuficiente, contingencias y verificación
-por grupo. Sigue pendiente de ratificación y validación jurídica.
+por grupo. D2 ratificó la alternativa multifuente y el bloqueo sin excepción
+operacional; siguen pendientes la validación jurídica y las verificaciones por grupo.
 
-Antes de cerrar el catálogo RF/RNF deben resolverse estas materias:
+Las decisiones de alcance están tomadas. Antes de declarar viabilidad o cumplimiento
+deben validarse estas materias:
 
-1. **Alcance del equipamiento:** D3 supone capacidad de borde en los 374 camiones,
-   mientras D4 limita la intervención a unidades propias y terceros adheridos.
-2. **Telemetría de fábrica:** escoger rFMS/API del fabricante como vía primaria y dejar
-   el lector físico CAN/FMS sujeto a autorización expresa por modelo y garantía.
+1. **Alcance del equipamiento:** validar con D3/D4 la meta de cobertura sobre los 374
+   camiones, interviniendo terceros solo con adhesión y autorización.
+2. **Telemetría de fábrica:** comprobar rFMS/API del fabricante como vía primaria y
+   mantener el lector físico CAN/FMS sujeto a autorización expresa por modelo y garantía.
 3. **Costeo:** separar costeo operacional básico en Etapa 1 de analítica avanzada en
    Etapa 2, asegurando información útil antes de la renegociación de 2027.
-4. **Propiedad del dispositivo:** definir financiamiento, administración, mantención y
-   salida contractual; no basta con declarar que el CLIENTE compra el hardware.
+4. **Propiedad del dispositivo:** costear y formalizar que AUDIT financia, administra,
+   mantiene y retira el equipo como parte del servicio.
 5. **Privacidad:** distinguir captura futura, visibilidad para clientes, conservación
    histórica y eliminación legalmente procedente.
-6. **Excepciones al bloqueo:** definir qué incumplimientos nunca admiten excepción y
-   cuáles pueden someterse a autorización extraordinaria auditable.
+6. **Bloqueos:** implementar y validar que jornada o evidencia insuficientes no admiten
+   excepción operacional y que el viaje se reprograma o cambia de conductor.
 
 ## 3. Registro maestro
 
 | N° | Estado | Decisión propuesta | Validación o trabajo pendiente | Coordinación |
 |---:|---|---|---|---|
-| 1 | Propuesta parcial | Acreditar la jornada externa mediante declaración digital identificada antes del despacho, contraste con tacógrafo cuando esté disponible y acceso contractual a registros del transportista. La consulta de jornada será bloqueante y la evidencia tendrá sello de tiempo y protección contra alteraciones. | Validar valor probatorio, identificación del conductor, correcciones, contingencia y fuente de jornada previa para otros clientes. | D1, D3 y revisión legal |
-| 2 | Propuesta parcial | Ofrecer adhesión contractual que agrupe dispositivo, intercambio de datos, consentimiento y acceso al portal de viajes, evidencias y liquidación. Mantener una modalidad operacional degradada para quien no adhiera, sin prometer capacidades que dependan de sus datos. | Definir incentivo económico, metas por periodo, instrumento contractual, consecuencia del rechazo y criterio de permanencia. | Matías lidera; D1 y D4 |
-| 3 | Propuesta | Sustituir progresivamente los módulos operacionales del TMS 2013 mediante una capa de transición, manteniendo el sistema contable como único emisor tributario. | Confirmar interfaces, exportaciones, soporte y separación real entre TMS y sistema contable. Preparar alternativa si solo existe acceso por archivos o base de datos. | D3 |
-| 4 | Propuesta parcial | Unificar los tres proveedores GPS mediante una capa de ingestión multicanal. Homologar equipos de terceros sin intervenirlos y usar una alternativa móvil o equipo acordado para unidades sin dispositivo. | Resolver la diferencia entre cobertura de 374 unidades y solo unidades intervenibles; confirmar API, derechos, históricos y límites de cada proveedor. | D3 y D4 |
-| 5 | Propuesta parcial | El CLIENTE financia y mantiene en inventario el equipo adicional que instala; en camiones de terceros se requiere adhesión expresa. El contrato debe regular uso, administración, soporte, retiro, devolución o transferencia al terminar la relación. | Definir quién paga instalación, conectividad, suscripciones, mantención y retiro; fijar tratamiento de equipos propios preexistentes del transportista. | Matías lidera; D1 y D4 |
-| 6 | Propuesta parcial | Aplicar bloqueo automático ante jornada insuficiente, habilitación vencida o equipo no apto. Solo condiciones no legales y previamente clasificadas podrían admitir una excepción temporal con autoridad nominada, motivo, doble control, caducidad y auditoría. | Clasificar causales excepcionables y no excepcionables; acordar autoridad, escalamiento y operación cuando un viaje comprometido queda bloqueado. | D1, D3 y operación |
-| 7 | Propuesta parcial | Calcular la alerta a bordo según jornada restante y tiempo hasta el próximo lugar seguro, considerando ruta y condiciones vigentes, en vez de usar un umbral fijo aislado. | Levantar y validar el catastro de lugares seguros; definir márgenes mínimos y contingencia cuando no exista detención segura alcanzable. | D4 y conductores |
-| 8 | Propuesta parcial | Registrar llegada y salida automáticamente con geocercas y sello temporal; complementar con EDI, API, agenda o barrera cuando el cliente disponga de esas fuentes. Conservar evidencia de precisión y eventos de entrada/salida. | Definir tratamiento de falsos cruces, precisión aceptable, resolución de disputas y aceptación contractual de la evidencia por los clientes. | D3, D4 y área comercial |
-| 9 | Propuesta parcial | Generar la orden y preparar localmente la información necesaria para la emisión sin redigitación. Usar el mecanismo offline oficialmente soportado por el sistema contable y transmitir al recuperar conectividad, manteniéndolo como único emisor tributario. | No comprometer CAF, firma o prefoliado hasta validar su vigencia con el sistema contable y la normativa aplicable. | D3 y proveedor contable |
-| 10 | Abierta | Diseñar una conformidad de entrega digital disponible el mismo día, identificada, sellada temporalmente y operable sin cobertura, con sincronización posterior. | Elegir mecanismo de aceptación, identidad y facultades del receptor, rechazo o ausencia, evidencia complementaria, momento que habilita facturación y tratamiento de controversias. | Ignacio lidera; D1 y D3 |
-| 11 | Propuesta | Usar muestreo adaptativo: mayor frecuencia en maniobras, geocercas y eventos; frecuencia media en ruta estable; frecuencia baja detenido. Conservar detalle local sin cobertura y transmitirlo posteriormente. | Ratificar valores iniciales de 10 s, 30 s y 5 min mediante piloto; dimensionar fotos, eventos, datos móviles y almacenamiento. | D3 y D4 |
-| 12 | Propuesta parcial | Priorizar acceso remoto rFMS/API del fabricante en modo de solo lectura. Considerar lectura física CAN/FMS únicamente donde no exista acceso remoto y haya autorización del fabricante sin afectar garantía ni seguridad. | Levantar marca, modelo, año, suscripción e interfaces de los 61 tractocamiones; eliminar afirmaciones de garantía no confirmadas. | D3 y D4 |
-| 13 | Propuesta parcial | Descargar el tacógrafo de forma remota cuando el modelo lo permita; usar descarga física controlada como contingencia. Conservar archivos originales, identidad, sello temporal, integridad y trazabilidad de descarga. | Confirmar modelos, interfaces, periodicidad legal, responsable, asociación conductor-vehículo y plazo de conservación. | D3, D4 y revisión legal |
-| 14 | Abierta | Incorporar optimización de retorno en Etapa 2, respetando jornada, habilitaciones, ubicación, plazo, compatibilidad de carga y aceptación del transportista. | Definir función objetivo y ponderaciones: margen, kilómetros vacíos, nivel de servicio, jornada, riesgo y prioridad contractual. Definir adjudicación entre flota propia y terceros. | Matías lidera; D1 y D3 |
-| 15 | Propuesta | Mantener un costo preliminar del viaje dentro de 24 horas, con componentes disponibles y estimaciones identificadas, y una versión consolidada posterior sin sobrescribir el historial. | Definir reglas de estimación, fuentes, identificadores comunes, responsables de conciliación y señal visible de costo provisional. | D3 y finanzas |
-| 16 | Propuesta parcial | Distinguir el costo para Curimón de contratar a un tercero de su costo operacional interno. Para gestión contractual usar tarifa, anticipos, peajes y sobreestadía; usar datos open-book solo con adhesión expresa para comparaciones económicas ampliadas. | Acordar cuál costo exige cada indicador y qué datos aceptarán compartir los transportistas; evitar presentar la tarifa como costo real del tercero. | Matías lidera; D1 y D3 |
-| 17 | Propuesta parcial | Entregar en Etapa 1 costeo básico por viaje, ruta y contrato para sustentar la renegociación de 2027; dejar modelos avanzados de rentabilidad y optimización para Etapa 2. | Identificar los tres contratos, fecha de corte, información mínima, escenarios y responsable de la decisión comercial. | D1, D3 y finanzas |
-| 18 | Propuesta parcial | Consolidar las aproximadamente 6.000 vigencias en un registro único con propietario, titular, responsable de renovación, custodio, alertas y efecto bloqueante sobre la asignación. | Definir responsables y escalamiento por tipo documental, especialmente cuando el titular sea externo; ratificar umbrales de alerta y reglas de bloqueo. | D1 y D3 |
-| 19 | Abierta | Verificar que la carga peligrosa efectivamente cargada corresponda al manifiesto antes del despacho, vinculando identidad de carga, vehículo, conductor, documentación y evidencia del punto de carga. | Elegir evidencia viable sin instalar equipos ni imponer procesos al cliente: integración disponible, lectura de código/UN, manifiesto firmado, fotografía sellada o doble validación. Definir excepción y auditoría. | Ignacio lidera; D1, D3 y operación |
-| 20 | Propuesta parcial | Mantener operación y evidencia local durante cierres fronterizos, suspender o clasificar correctamente tiempos según regla contractual y sincronizar en orden al recuperar conectividad. | Diseñar protocolo operacional: jornada y relevo, reprogramación, comunicación al cliente, custodia de carga, trámites y autorización para modificar sobreestadías. | Matías lidera; D3 y D4 |
-| 21 | Abierta | Permitir que el taller externo registre una intervención mediante canal web o móvil, incluso offline, adjuntando identidad, fecha, kilometraje, trabajo, repuestos y evidencia; someterla a validación antes de incorporarla a la hoja de vida. | Definir usuario, datos mínimos, aprobación, plazo, evidencia, correcciones, efecto en garantía y mantenimiento preventivo. | Ignacio lidera; D3 y D4 |
-| 22 | Propuesta parcial | Calcular emisiones por tonelada-kilómetro con metodología declarada basada en ISO 14083/GLEC: consumo real donde esté disponible y factores estándar documentados para terceros, migrando a datos reales según adhesión. | Validar estándar aceptado, factores, tratamiento de vacío, límites, datos de masa y mecanismo de verificación externa. | D1 y D3 |
-| 23 | Propuesta parcial | Aplicar consentimiento granular y revocable por transportista, camión, viaje, dato y destinatario. Compartir posición con clientes solo durante el servicio autorizado y auditar accesos desde el portal del transportista. | Separar revocación de captura futura, visibilidad, retención histórica y obligaciones legales. Considerar derechos del conductor además del dueño del camión. | Ignacio lidera; D3 y revisión legal |
-| 24 | Propuesta parcial | Proteger la evidencia de jornada con identidad fuerte, sello temporal, registro append-only, hash encadenado y almacenamiento inmutable; conservar historial de correcciones sin sobrescritura. | Validar autoría, fuente original, cadena de custodia, sello de tiempo, auditor independiente y valor probatorio. Corregir la inconsistencia técnica del trigger descrito por D3. | D3 y revisión legal |
-| 25 | Propuesta parcial | Desplegar kits preconfigurados camión por camión durante pasos normales por terminal, con piloto por familia de vehículo, instalación acotada, verificación y actualización remota posterior. En terceros, intervenir solo con adhesión y autorización. | Calcular cronograma desde frecuencia real de paso, tiempos de piloto, stock y capacidad de talleres. Sustituir metas 80/95/100 si no se sostienen con esos datos. | D4; Matías revisa adhesión |
-| 26 | Propuesta parcial | Operar en modo mixto: validación telemática completa para equipados y validación documental controlada para no equipados, identificando visiblemente el nivel de evidencia. Avanzar por cobertura y calidad, no solo por fecha. | Definir criterio de avance, reversión, carga operacional, riesgo aceptable y tratamiento permanente del transportista que no adhiere. Verificar si el modo degradado satisface la acreditación de jornada. | Matías lidera; D3 y D4 |
+| 1 | Ratificada D2 | Acreditar la jornada externa con un expediente multifuente por conductor: declaración identificada, registros del transportista y tacógrafo cuando esté disponible. Ante caída de una fuente externa solo podrá usarse un expediente local vigente, suficiente y con cobertura temporal comprobada; en otro caso se bloquea. | Validar valor probatorio, identidad, correcciones, retención y acceso a jornada de otros clientes. | D1, D3 y revisión legal |
+| 2 | Ratificada D2 | Ofrecer adhesión contractual como servicio integral: dispositivo, instalación, soporte, portal, evidencias y liquidación más rápida a cambio de intercambio autorizado de datos. Quien no adhiera o revoque operará en modo documental limitado, sin capacidades ni beneficios dependientes de telemetría. Meta: 70 % (104/148) al cierre E1 y 90 % (134/148) al cierre E2. | Redactar instrumento contractual, permanencia, retiro y tratamiento comercial del modo limitado; validar metas y costo. | Matías lidera; D1 y D4 |
+| 3 | Ratificada D2 | Envolver el TMS 2013 con una capa de integración y sustituir gradualmente sus módulos operacionales, manteniendo continuidad y al sistema contable como emisor tributario único. | Confirmar interfaces, exportaciones, soporte y separación real entre TMS y sistema contable; preparar contingencia por archivos o base de datos. | D3 |
+| 4 | Ratificada D2 | Unificar los tres proveedores GPS mediante una capa de ingestión multicanal. Homologar equipos existentes y usar aplicación móvil o dispositivo AUDIT en unidades sin GPS, sin intervenir terceros no adheridos. | Confirmar API, derechos, históricos y límites; validar cobertura 80 % E1, 95 % E2 y 100 % antes del mes 24. | D3 y D4 |
+| 5 | Ratificada D2 | AUDIT financiará, conservará en inventario, configurará, administrará, mantendrá y retirará el dispositivo adicional; su costo se incorporará al servicio. En camiones de terceros se exige adhesión y autorización expresa. | Costear instalación, conectividad, suscripciones, mantención, repuestos y retiro; regular equipos preexistentes y término de la relación. | Matías lidera; D1 y D4 |
+| 6 | Ratificada D2 | Jornada insuficiente o evidencia ausente, vencida o contradictoria bloquean el despacho sin excepción operacional. Se debe reprogramar el viaje o sustituir al conductor por uno habilitado. | Definir escalamiento y comunicación cuando el bloqueo afecte un viaje comprometido; validar causales legales y de seguridad. | D1, D3 y operación |
+| 7 | Ratificada D2 | Calcular la alerta a bordo según jornada restante, ruta, condiciones vigentes y tiempo hasta el próximo lugar seguro, con margen configurable validado en piloto. | Levantar y aprobar el catastro de lugares seguros, márgenes por ruta y contingencia cuando no exista detención alcanzable. | D4 y conductores |
+| 8 | Ratificada D2 | Registrar llegada y salida automáticamente con geocercas y sello temporal, contrastando los cruces con agenda, EDI, API u otra evidencia disponible, sin acción del conductor ni equipos en el cliente. | Validar precisión, falsos cruces, resolución de disputas y aceptación contractual de la evidencia. | D3, D4 y área comercial |
+| 9 | Ratificada D2 | Usar exclusivamente el mecanismo offline autorizado por el sistema contable para emitir un documento conforme antes del movimiento, originado desde la orden, sin redigitación y con sincronización idempotente posterior. | Confirmar mecanismo, folios, firma, CAF si corresponde e interfaz tributaria; bloquear si no puede emitirse conforme. | D3 y proveedor contable |
+| 10 | Ratificada D2 | Obtener la conformidad digital mediante firma y código OTP del receptor identificado, con sello temporal, ubicación y evidencia adjunta; debe operar offline y sincronizarse después. Meta: cero conformidades perdidas y al menos 99 % disponible el mismo día. | Validar facultades del receptor, rechazo o ausencia, momento que habilita facturación, controversias y valor probatorio. | Ignacio lidera; D1, D3 y revisión legal |
+| 11 | Ratificada D2 | Usar muestreo adaptativo con valores iniciales de piloto: 10 s en eventos o maniobras, 30 s en ruta estable y 5 min detenido. Conservar detalle local sin cobertura y transmitirlo posteriormente. | Ajustar frecuencias con el piloto y dimensionar eventos, fotografías, datos móviles, almacenamiento y reconexión masiva. | D3 y D4 |
+| 12 | Ratificada D2 | Priorizar rFMS/API remota del fabricante en modo de solo lectura. Usar CAN/FMS físico solo donde no exista acceso remoto y haya autorización expresa, sin afectar garantía ni seguridad. | Levantar marca, modelo, año, suscripción e interfaces de los 61 tractocamiones y confirmar condiciones de garantía. | D3 y D4 |
+| 13 | Ratificada D2 | AUDIT ejecutará y custodiará la descarga remota del tacógrafo cuando el modelo lo permita y aplicará descarga física controlada como contingencia; Curimón controlará cumplimiento, accesos y auditoría. | Confirmar modelos, periodicidad legal, asociación conductor-vehículo, retención, integridad y responsabilidades contractuales. | D3, D4 y revisión legal |
+| 14 | Ratificada D2 | Incorporar en E2 optimización de retorno que maximice el margen esperado después de cumplir jornada, habilitaciones, ubicación, plazo, compatibilidad, nivel de servicio y aceptación del transportista. Meta: kilómetros vacíos iguales o inferiores a 18 % en población comparable. | Definir fórmula y ponderaciones secundarias, población comparable y reglas de adjudicación entre flota propia y terceros. | Matías lidera; D1 y D3 |
+| 15 | Ratificada D2 | Publicar dentro de 24 h una versión inicial del costo con componentes disponibles y faltantes explícitos; emitir versiones conciliadas posteriores sin sobrescribir el historial. | Validar que el versionado satisface RT-05.29; definir estimaciones, fuentes, identificadores y responsables de conciliación. | D3 y finanzas |
+| 16 | Ratificada D2 | Separar el costo de Curimón por contratar a un tercero de su costo operacional interno. Usar tarifa y cargos para el primero y datos open-book solo con adhesión expresa para el segundo. Meta E1: 95 % de viajes trazables y 100 % de rutas y contratos modelados. | Acordar datos compartidos, indicadores y método de estimación; no presentar la tarifa como costo real del tercero. | Matías lidera; D1 y D3 |
+| 17 | Ratificada D2 | Entregar en E1 costos trazables por viaje, ruta y contrato antes de las renegociaciones de 2027; dejar la decisión comercial en Curimón y la analítica avanzada para E2. | Confirmar contratos, fechas de corte, información mínima, escenarios y responsable comercial. | D1, D3 y finanzas |
+| 18 | Ratificada D2 | Consolidar las aproximadamente 6.000 vigencias en un registro único con titular, responsable de renovación, custodio, vencimiento, alertas y bloqueo. El titular externo renueva y Curimón verifica antes de asignar. | Definir responsables, escalamiento y umbrales por tipo documental. | D1 y D3 |
+| 19 | Ratificada D2 | Antes del despacho, escanear el identificador o código UN de la carga peligrosa, contrastarlo con el manifiesto y adjuntar fotografía sellada. Toda discrepancia o ausencia de evidencia bloquea la salida. | Validar identificadores disponibles, calidad de evidencia, auditoría y operación sin instalar equipos en el cliente. | Ignacio lidera; D1, D3 y operación |
+| 20 | Ratificada D2 | Aplicar ante cierres fronterizos un protocolo de contingencia que mantenga evidencia offline, controle jornada y carga, permita reprogramar y comunicar estados y sincronice ordenadamente al recuperar conectividad. | Precisar relevo, custodia, trámites, sobreestadías y responsabilidades para cierres de hasta 12 días. | Matías lidera; D3 y D4 |
+| 21 | Ratificada D2 | Permitir que el taller externo registre la intervención en un portal web o móvil, incluso offline, con identidad, fecha, kilometraje, trabajo, repuestos y evidencia. El responsable de flota aprobará antes de incorporarla a la hoja de vida. Meta: recibir al menos 95 % e incorporar el 100 % de las validadas. | Definir usuarios, datos mínimos, plazo, correcciones, garantías y conciliación con facturas. | Ignacio lidera; D3 y D4 |
+| 22 | Ratificada D2 | Calcular CO2e por tonelada-kilómetro con ISO 14083/GLEC, consumo real cuando exista y factores documentados y versionados para terceros; preparar base y método en E1 y cálculo productivo completo con consolidación mensual en E2. | Validar estándar, factores, tratamiento de vacío, masa, cobertura, precisión y verificación independiente. | D1 y D3 |
+| 23 | Ratificada D2 | Aplicar consentimiento granular y revocable por transportista, vehículo, viaje, dato, destinatario y período. Compartir posición solo durante el servicio autorizado, auditar accesos y hacer efectiva la revocación de datos futuros en hasta 5 min. | Conciliar revocación con retención legal e histórica y derechos del conductor; probar segregación y revocación. | Ignacio lidera; D3 y revisión legal |
+| 24 | Ratificada D2 | Proteger la evidencia de jornada mediante identidad fuerte, sello temporal, registro append-only, hash encadenado y almacenamiento inmutable; conservar el original y el historial de correcciones sin sobrescritura. | Validar autoría, cadena de custodia, sello de tiempo, auditoría independiente y valor probatorio. | D3 y revisión legal |
+| 25 | Ratificada D2 | Desplegar kits preconfigurados durante pasos normales por terminal, con piloto por familia de vehículo, verificación y actualización remota. Intervenir terceros solo con adhesión y autorización. Meta: cobertura 80 % E1, 95 % E2 y 100 % antes del mes 24. | Calcular cronograma con frecuencia real de paso, stock, capacidad de talleres, tiempos de piloto y TCO. | D4; Matías revisa adhesión |
+| 26 | Ratificada D2 | Operar en modo mixto con validación telemática para equipados y validación documental reforzada para no equipados, mostrando claramente nivel de evidencia y riesgo; ambos modos deben respetar los bloqueos legales. | Validar carga operacional, criterios de avance/reversión y suficiencia jurídica del modo documental. | Matías lidera; D3 y D4 |
 
 ## 4. Acuerdos de alcance que propone D2
 
@@ -96,14 +105,14 @@ externas pendientes:
 
 ## 5. Validación mínima para cerrar D2-01
 
-- [ ] Las 26 propuestas fueron revisadas por Ignacio y Matías.
-- [ ] Las decisiones 1, 2, 5 y 25 quedaron ratificadas y fundamentadas.
-- [ ] Las decisiones abiertas 10, 14, 19 y 21 tienen solución acordada.
-- [ ] Se resolvió el alcance real de equipamiento en flota propia y de terceros.
-- [ ] Se acordó la estrategia primaria para telemetría de fábrica.
-- [ ] Se resolvió la división del costeo entre Etapa 1 y Etapa 2.
-- [ ] Se definió el modelo contractual y económico del dispositivo.
-- [ ] Se acordaron reglas de retención y revocación de geolocalización.
+- [x] Las 26 propuestas fueron revisadas y acordadas por D2.
+- [x] Las decisiones 1, 2, 5 y 25 quedaron ratificadas por D2 y fundamentadas.
+- [x] Las decisiones abiertas 10, 14, 19 y 21 tienen solución acordada por D2.
+- [x] Se resolvió el alcance propuesto de equipamiento en flota propia y de terceros.
+- [x] Se acordó la estrategia primaria para telemetría de fábrica.
+- [x] Se resolvió la división del costeo entre Etapa 1 y Etapa 2.
+- [x] Se definió el modelo contractual y económico propuesto del dispositivo.
+- [x] Se acordaron reglas de consentimiento y revocación de geolocalización.
 - [ ] D3 y D4 confirmaron que pueden implementar las decisiones sin supuestos nuevos.
 - [ ] Cada decisión ratificada alimenta al menos un RF, RNF, supuesto o exclusión.
 

@@ -1,10 +1,11 @@
 # Alcance por etapas - D2
 
 **Subdocumento 3 · Esquema de solución y alcance**\
-**Estado:** propuesta para revisión de Ignacio C. y Matías V.
+**Estado:** distribución ratificada por D2; validaciones cruzadas pendientes
 
-Todas las etapas, salidas y puertas de avance siguientes son propuestas no ratificadas,
-no resultados ya obtenidos. La distribución temporal no rebaja exigencias de las Bases.
+Las etapas, salidas y puertas de avance fijan el alcance acordado por D2; no son
+resultados ya obtenidos ni acreditan viabilidad. La distribución temporal no rebaja
+exigencias de las Bases y debe validarse con D1, D3 y D4.
 
 ## 1. Criterio de distribución
 
@@ -171,7 +172,7 @@ terceros no adheridos.
 | Telemetría | Interfaces y calidad comprobadas | Cobertura y mantenimiento ampliados |
 | Adhesión | Contrato, incentivo y piloto | Escalamiento sobre terceros |
 | Consentimiento | Modelo granular y auditoría | Visibilidad ampliada para clientes |
-| Costeo | Costo consolidado en 24 h con faltantes explícitos; versionado por validar | Rentabilidad y optimización avanzada |
+| Costeo | Costo inicial en 24 h con faltantes explícitos y versionado histórico ratificado por D2, sujeto a validación de RT-05.29 | Rentabilidad y optimización avanzada |
 | Emisiones | Base de datos, línea base y metodología | Cálculo productivo completo y consolidación mensual, incluidos terceros |
 | Cobertura | Mapa y almacenamiento offline | Segmentación móvil/satelital |
 | Lugares seguros | Catálogo piloto validado | Alertas y planificación a escala |

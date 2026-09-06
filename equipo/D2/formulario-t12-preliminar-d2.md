@@ -37,7 +37,7 @@ D3/D4 y las referencias SD3 no acreditan aún una sección definitiva de la prop
 | RF-020 | Portal segregado de viajes y liquidación. | Pendiente de verificación | Portal; Entra ID; Transportista | SD3 · Portal transportista |
 | RF-021 | Seguimiento del cliente sujeto a autorización. | Pendiente de verificación | Portal; Entra ID; Consentimiento; Telemetría | SD3 · Portal cliente |
 | RF-022 | Consentimiento granular, revocable y auditable. | Pendiente de verificación | Consentimiento; Portal; Auditoría; Entra ID | SD3 · Soberanía de datos |
-| RF-023 | CO2e verificable por tonelada-kilómetro, incluidos terceros, con consolidación mensual; base/metodología E1 y productivo completo E2, propuesta no ratificada. | Pendiente de verificación | Lakehouse; Capa Semántica; motor por definir | SD3 · Emisiones E1/E2 |
+| RF-023 | CO2e verificable por tonelada-kilómetro, incluidos terceros, con consolidación mensual; D2 ratifica ISO 14083/GLEC, base/metodología E1 y productivo completo E2. | Pendiente de verificación | Lakehouse; Capa Semántica; motor por definir | SD3 · Emisiones E1/E2 |
 | RF-024 | Intervenciones de talleres externos registradas offline. | Pendiente de verificación | Interfaz Taller; Aplicación Móvil; Gestión de Flota | SD3 · Talleres E2 |
 | RF-025 | Mantenimiento por kilometraje real trazable. | Pendiente de verificación | Gestión de Flota; rFMS; Telemetría | SD3 · Mantenimiento |
 | RF-026 | Adhesión de transportistas gestionada y medible. | Pendiente de verificación | Portal; Transportista; Consentimiento | SD3 · Plan de adhesión |

@@ -1,6 +1,6 @@
 # Resumen de avances de D2
 
-Fecha: 5 de septiembre de 2026.
+Fecha: 6 de septiembre de 2026.
 
 Integrantes: Ignacio C. y Matías V. Fuente de reparto:
 [plan de trabajo D2 v2](plan-trabajo-d2-v2.md).
@@ -8,8 +8,9 @@ Integrantes: Ignacio C. y Matías V. Fuente de reparto:
 ## Resumen ejecutivo
 
 Se prepararon seis entregables del plan en calidad de borrador, dos instrumentos de
-coordinación entre duplas y un desarrollo específico de la decisión D-01. Ninguno
-se considera ratificado por el equipo ni aprobado por el CLIENTE.
+coordinación entre duplas y un desarrollo específico de la decisión D-01. D2 ratificó
+sus 26 decisiones de alcance y las metas seleccionadas; los documentos no se consideran
+aprobados por el CLIENTE ni validados en materias jurídicas, tributarias o técnicas.
 
 El catálogo contiene 42 requisitos de solución: 28 funcionales y 14 no funcionales.
 Se documentaron relaciones con los 29 criterios de aceptación y las 14 restricciones
@@ -19,13 +20,13 @@ del caso. Esa cobertura de referencias no demuestra por sí sola cumplimiento t�
 
 | Código | Entregable | Avance | Pendiente |
 |---|---|---|---|
-| D2-01 | [Registro de decisiones](registro-decisiones-d2.md) | 26 decisiones documentadas como propuestas | Fundamentación, ratificación y validaciones; D-10, D-14, D-19 y D-21 siguen abiertas |
-| D2-02 | [Catálogo RF/RNF](catalogo-requisitos-d2.md) | 28 RF y 14 RNF con origen, etapa y verificación | Completar detalle normativo, metas y revisión cruzada |
+| D2-01 | [Registro de decisiones](registro-decisiones-d2.md) | 26 decisiones ratificadas por D2; D-10, D-14, D-19 y D-21 resueltas | Completar validaciones jurídicas, tributarias, comerciales y técnicas |
+| D2-02 | [Catálogo RF/RNF](catalogo-requisitos-d2.md) | 28 RF y 14 RNF con origen, etapa, verificación y metas D2 seleccionadas | Completar detalle normativo y revisión cruzada |
 | D2-03 | [Matriz de trazabilidad](matriz-trazabilidad-d2.md) | 42 requisitos vinculados a capacidades, componentes y pruebas | Validar relaciones y resolver componentes ausentes con D3/D4 |
 | D2-04 | Esquema de solución | Insumos disponibles, sin documento específico | Redactar capacidades y su articulación con el problema |
-| D2-05 | [Alcance por etapas](alcance-etapas-d2.md) | E1/E2, dependencias, entradas, salidas y exclusiones | Ratificar distribución y compromisos con Matías y el equipo |
+| D2-05 | [Alcance por etapas](alcance-etapas-d2.md) | E1/E2 ratificadas por D2, con dependencias, entradas, salidas y exclusiones | Validar distribución con D1, D3 y D4 |
 | D2-06 | Plan de adhesión | Orientaciones en registro y D-01 | Desarrollar contrato, incentivos, dispositivo, capacitación y no adhesión |
-| D2-07 | [Criterios de aceptación](criterios-aceptacion-d2.md) | 29 criterios, medición y metas propuestas | Sustentar metas y validar viabilidad; no tratarlas como exigencias textuales |
+| D2-07 | [Criterios de aceptación](criterios-aceptacion-d2.md) | 29 criterios; metas seleccionadas ratificadas por D2 | Sustentar metas y validar viabilidad; no tratarlas como exigencias textuales |
 | D2-08 | [T-12 preliminar](formulario-t12-preliminar-d2.md) | 42 filas y las cinco columnas oficiales | Inventario textual aplicable completo y referencias definitivas; todas las filas pendientes de verificación |
 | D2-09 | Innovación tipo 1 | Portal del transportista como base conceptual | Ficha T-19; demostrar aporte adicional a funciones obligatorias |
 | D2-10 | Innovación tipo 4 | Modelo de adhesión como base conceptual | Ficha T-19 y fundamento contractual/económico |
@@ -80,8 +81,9 @@ declaración firmada o un tacógrafo aislado no acreditan automáticamente toda 
 | Corrección posterior | Conservar original, registrar nueva versión y revisar efectos operacionales |
 
 Incluye flujo, riesgos, contingencias, pruebas y verificación por D1/D2/D3/D4 y revisión
-jurídica. No constituye dictamen legal ni decisión ratificada. No se admite que un
-override operacional supla jornada insuficiente o falta de acreditación.
+jurídica. D2 ratificó la alternativa, pero no constituye dictamen legal ni acreditación
+de cumplimiento. No se admite que un override operacional supla jornada insuficiente
+o falta de acreditación.
 
 ## Bloqueos principales
 
@@ -104,13 +106,12 @@ consultas no se trataron como respuestas del CLIENTE.
 
 ## Próximas acciones
 
-1. Ignacio y Matías revisan D-01; D3/D4 validan implementación y se coordina revisión jurídica.
-2. Desarrollar D-06 y D-09 en coherencia con los bloqueos de seguridad y documentación.
-3. Matías lidera D-02/D-05 y el plan de adhesión; D4 aporta despliegue y flota mixta.
-4. Completar D-10, D-14, D-19 y D-21 sin dejar sus soluciones implícitas.
-5. Cada dupla verifica sus bloques y documenta correcciones y evidencia.
-6. Completar el inventario normativo y la trazabilidad antes de declarar cumplimiento.
-7. Redactar esquema de solución, fichas T-19, Subdocumento 3 y presentación.
+1. D1, D3 y D4 verifican los bloques que les corresponden y registran evidencia.
+2. Coordinar revisión jurídica de D-01, D-10, D-13, D-23 y D-24.
+3. Validar con proveedor contable y D3 el mecanismo offline ratificado en D-09.
+4. Desarrollar el plan de adhesión a partir de D-02, D-05, D-23, D-25 y D-26.
+5. Completar el inventario normativo y la trazabilidad antes de declarar cumplimiento.
+6. Redactar esquema de solución, fichas T-19, Subdocumento 3 y presentación.
 
 ## Uso de asistencia de IA
 

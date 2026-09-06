@@ -11,11 +11,12 @@
 - `R-01` a `R-14`: restricciones no negociables del caso.
 - `D-01` a `D-26`: decisiones del registro D2.
 - **Propuesto:** formulación de solución D2 para atender la fuente citada; no implica aprobación ni cumplimiento.
-- **Condicionado:** depende de una decisión o validación todavía no ratificada.
+- **Condicionado:** depende de una validación jurídica, tributaria, comercial o técnica todavía pendiente.
 - Las consultas se consideran propuestas de interpretación, no respuestas del CLIENTE.
-- Cuando las Bases no fijan un umbral, se indica **meta por ratificar**.
+- Cuando las Bases no fijan un umbral, se identifica como **meta D2 ratificada** o
+  **meta pendiente**, según el registro de decisiones.
 - La exigencia normativa reside en la fuente; los mecanismos, etapas y metas D2 son
-  propuestas no ratificadas. Ningún estado de esta tabla acredita cumplimiento.
+  decisiones de alcance de D2. Ningún estado de esta tabla acredita cumplimiento.
 
 ## 2. Requisitos funcionales
 
@@ -31,22 +32,22 @@
 | RF-008 | Entregar a la torre una vista única con posición, fuente, antigüedad y nivel de evidencia de los 374 camiones, explicitando unidades sin señal o sin adhesión. | CA-08; R-02; R-03; D-04; D-26 | Must | E1 | Conciliación del padrón y simulación de pérdida de señal/no adhesión. | Condicionado |
 | RF-009 | Cada unidad intervenida deberá registrar localmente al menos 72 horas de posición, eventos, jornada, permanencias y documentos, sin pérdida, y sincronizarlos después. | CA-09; R-03; R-04; D-11; D-26 | Must | E1 | Ensayo desconectado de 72 horas y reconciliación extremo a extremo. | Condicionado |
 | RF-010 | Registrar automáticamente llegada y salida en instalaciones de clientes, sin interacción del conductor ni equipos instalados allí, conservando fuente, precisión y sello temporal. | CA-10; R-01; R-09; D-08 | Must | E1 | Prueba en terreno con falsos cruces y ausencia de cobertura. | Propuesto |
-| RF-011 | Generar evidencia consultable de tiempos de espera y relacionarla con viaje, reglas contractuales y cobro de sobreestadía. Reducción de objeciones: meta por ratificar. | CA-11; D-08 | Must | E1 | Muestreo de cobros y medición de tasa de objeción. | Condicionado |
-| RF-012 | Obtener una conformidad de entrega digital identificada, sellada y disponible el mismo día, incluso si se captura sin cobertura y se sincroniza después. | CA-12; R-04; R-09; D-10 | Must | E1 | Casos de aceptación, rechazo, ausencia y operación offline. | Condicionado |
+| RF-011 | Generar evidencia consultable de tiempos de espera y relacionarla con viaje, reglas contractuales y cobro de sobreestadía. Meta D2 ratificada: objeciones ≤20 % de cobros respaldados en E2. | CA-11; D-08 | Must | E1 | Muestreo de cobros y medición de tasa de objeción. | Condicionado |
+| RF-012 | Obtener conformidad mediante firma y OTP del receptor identificado, con sello temporal, ubicación y evidencia; operar offline y sincronizar después. Meta D2 ratificada: cero pérdidas y ≥99 % disponible el mismo día. | CA-12; R-04; R-09; D-10 | Must | E1 | Casos de aceptación, rechazo, ausencia y operación offline. | Condicionado |
 | RF-013 | Generar desde la orden la información requerida para el documento electrónico de transporte, sin redigitación y manteniendo al sistema contable como único emisor tributario. | CA-13; R-08; D-03; D-09 | Must | E1 | Comparación campo a campo y prueba de integración. | Propuesto |
 | RF-014 | Disponer del documento electrónico de transporte conforme antes de iniciar el movimiento, incluso en puntos de carga sin cobertura, mediante un mecanismo declarado, validado y soportado por el sistema contable como único emisor. Una solicitud en cola para emisión posterior no satisface el requisito; sin documento conforme se bloquea la salida. | CA-14; R-04; R-08; D-09 | Must | E1 | Documento conforme anterior al movimiento en escenario sin cobertura; bloqueo si falta; validación tributaria, reintentos sin duplicación ni redigitación. | Condicionado |
-| RF-015 | Recomendar retornos considerando ubicación, jornada, habilitaciones, compatibilidad, plazo y aceptación del transportista, y medir kilómetros vacíos. Reducción: meta por ratificar. | CA-15; R-02; D-14 | Should | E2 | Piloto antes/después y registro de recomendaciones. | Condicionado |
-| RF-016 | Conocer sistemáticamente el costo real por kilómetro y viaje, ruta y contrato; publicar el costo consolidado por viaje dentro de 24 horas de su cierre, con los componentes disponibles y los aún no disponibles explícitos, y disponer del costo real por ruta antes de la renegociación de 2027. El versionado preliminar/consolidado y la identificación de estimaciones son propuesta D2, no equivalencia normativa aprobada. | CA-16; CA-17; CA-19; FEP03 cap.15 RT-05.29; D-15; D-16; D-17 | Must | E1 | Medir cierre-publicación ≤24 h, componentes disponibles/pendientes, costo por km y conciliación posterior sin sobrescritura; validar tratamiento de estimaciones. | Condicionado |
+| RF-015 | Recomendar retornos que maximicen el margen esperado después de respetar ubicación, jornada, habilitaciones, compatibilidad, plazo, nivel de servicio y aceptación. Meta D2 ratificada: kilómetros vacíos ≤18 % en población comparable. | CA-15; R-02; D-14 | Should | E2 | Piloto antes/después y registro de recomendaciones. | Condicionado |
+| RF-016 | Conocer sistemáticamente el costo real por kilómetro y viaje, ruta y contrato; publicar el costo consolidado por viaje dentro de 24 horas de su cierre, con componentes disponibles y faltantes explícitos, y disponer del costo real por ruta antes de la renegociación de 2027. D2 ratifica versionado inicial/consolidado sin sobrescritura y meta E1 de ≥95 % de viajes trazables y 100 % de rutas y contratos modelados; debe validarse su equivalencia con RT-05.29. | CA-16; CA-17; CA-19; FEP03 cap.15 RT-05.29; D-15; D-16; D-17 | Must | E1 | Medir cierre-publicación ≤24 h, componentes disponibles/pendientes, costo por km y conciliación posterior sin sobrescritura; validar tratamiento de estimaciones. | Condicionado |
 | RF-017 | Distinguir costo interno de flota propia y costo contractual de usar flota subcontratada; incorporar costos internos del tercero solo con información open-book autorizada. | CA-16; R-02; D-16 | Must | E1 | Revisión con Finanzas y tres escenarios de flota. | Condicionado |
-| RF-018 | Relacionar kilometraje, consumo, ruta, vehículo, conductor y condiciones para explicar la dispersión de rendimiento entre camiones comparables. Meta analítica: por ratificar. | CA-18; D-12; D-15 | Should | E2 | Análisis reproducible sobre muestra comparable. | Condicionado |
-| RF-019 | Calcular la liquidación del transportista desde viajes, tarifas, anticipos, peajes, sobreestadías y ajustes, dejando la intervención manual como excepción auditable. | CA-20; D-03; D-16 | Must | E1 | Ejecución paralela y conciliación con proceso actual. | Condicionado |
+| RF-018 | Relacionar kilometraje, consumo, ruta, vehículo, conductor y condiciones para explicar la dispersión de rendimiento entre camiones comparables. Meta D2 ratificada: explicar ≥80 % de la variación comparable. | CA-18; D-12; D-15 | Should | E2 | Análisis reproducible sobre muestra comparable. | Condicionado |
+| RF-019 | Calcular la liquidación del transportista desde viajes, tarifas, anticipos, peajes, sobreestadías y ajustes, dejando la intervención manual como excepción auditable. Meta D2 ratificada: ≤1 día hábil y ≤2 % de correcciones en E1. | CA-20; D-03; D-16 | Must | E1 | Ejecución paralela y conciliación con proceso actual. | Condicionado |
 | RF-020 | Permitir a cada transportista autenticado consultar sus viajes, estados, evidencias y liquidación en curso, restringidos a su operación. | CA-21; CA-29; D-02; D-23 | Must | E1 | Aceptación y pruebas de segregación de datos. | Propuesto |
 | RF-021 | Permitir al cliente autorizado consultar posición y estado de su carga solo durante el servicio y dentro de lo autorizado por el titular de los datos. | CA-22; R-02; R-03; D-23 | Must | E1 | Acceso antes, durante y después del viaje. | Condicionado |
-| RF-022 | Permitir al dueño otorgar, consultar y revocar permisos por camión, viaje, dato, destinatario y periodo, manteniendo bitácora y distinguiendo captura futura, visibilidad y retención obligatoria. | CA-23; CA-29; R-02; R-03; D-23 | Must | E1 | Casos de consentimiento/revocación y auditoría de accesos. | Condicionado |
-| RF-023 | Calcular emisiones de CO2e por tonelada-kilómetro con metodología declarada y verificable, incluidos terceros, y consolidación mensual. Propuesta D2: base de datos, línea base y metodología en E1; cálculo productivo completo en E2, con consumo real donde exista y factores documentados. | CA-24; FEP03 cap.15 RT-05.29; R-02; D-22 | Must | E1 base/metodología; E2 productivo completo (por ratificar) | E1: revisar fuentes, línea base y método; E2: reproducción independiente del cálculo y consolidación mensual, incluidos terceros. | Condicionado |
-| RF-024 | Permitir que un taller externo registre una intervención, incluso offline, identificando taller, técnico, activo, fecha, kilometraje, trabajo, repuestos y evidencia, con validación previa a la hoja de vida. | CA-25; R-04; R-09; D-21 | Should | E2 | Prueba con taller, aprobación, corrección y sincronización. | Condicionado |
+| RF-022 | Permitir al dueño otorgar, consultar y revocar permisos por camión, viaje, dato, destinatario y periodo, manteniendo bitácora y distinguiendo captura futura, visibilidad y retención obligatoria. Meta D2 ratificada: revocación de datos futuros efectiva en ≤5 min. | CA-23; CA-29; R-02; R-03; D-23 | Must | E1 | Casos de consentimiento/revocación y auditoría de accesos. | Condicionado |
+| RF-023 | Calcular emisiones de CO2e por tonelada-kilómetro con metodología ISO 14083/GLEC declarada y verificable, incluidos terceros, y consolidación mensual. Decisión D2 ratificada: base, línea base y método en E1; cálculo productivo completo en E2, con consumo real donde exista y factores documentados y versionados. | CA-24; FEP03 cap.15 RT-05.29; R-02; D-22 | Must | E1 base/metodología; E2 productivo completo | E1: revisar fuentes, línea base y método; E2: reproducción independiente del cálculo y consolidación mensual, incluidos terceros. | Condicionado |
+| RF-024 | Permitir que un taller externo registre una intervención, incluso offline, identificando taller, técnico, activo, fecha, kilometraje, trabajo, repuestos y evidencia, con validación previa a la hoja de vida. Meta D2 ratificada: ≥95 % recibidas y 100 % de las validadas incorporadas. | CA-25; R-04; R-09; D-21 | Should | E2 | Prueba con taller, aprobación, corrección y sincronización. | Condicionado |
 | RF-025 | Gatillar mantenimiento preventivo con kilometraje real trazable y mostrar explícitamente el nivel de estimación cuando no exista telemetría. | CA-26; R-03; R-06; D-12; D-21 | Must | E1 | Comparación con odómetro y prueba de órdenes. | Condicionado |
-| RF-026 | Administrar adhesión de los 148 transportistas, registrando invitación, condiciones, consentimiento, estado, fecha, equipos y capacidades habilitadas. Metas y plazo: por ratificar. | CA-27; R-02; R-03; D-02; D-05 | Must | E1 | Reporte periódico y muestreo contractual. | Condicionado |
+| RF-026 | Administrar adhesión de los 148 transportistas, registrando invitación, condiciones, consentimiento, estado, fecha, equipos y capacidades habilitadas. Meta D2 ratificada: ≥70 % (104/148) al cierre E1 y ≥90 % (134/148) al cierre E2. | CA-27; R-02; R-03; D-02; D-05 | Must | E1-E2 | Reporte periódico y muestreo contractual. | Condicionado |
 | RF-027 | Calcular a bordo una alerta anticipada según jornada restante, ubicación, ruta y tiempo hasta un lugar seguro. Margen mínimo: meta por ratificar. | CA-28; R-01; R-04; D-07 | Must | E1 | Prueba en rutas piloto, incluido caso sin lugar alcanzable. | Condicionado |
 | RF-028 | Durante la transición, distinguir validación telemática completa y documental controlada, sin presentar el modo degradado como equivalente ni reducir controles legales o de seguridad. | CA-01; CA-02; CA-08; CA-27; R-02; R-03; R-07; D-26 | Must | E1 | Operación mixta y auditoría de bloqueos. | Condicionado |
 
@@ -125,17 +126,15 @@ no satisfacción demostrada de los criterios o restricciones.
 | R-13 | RNF-009 |
 | R-14 | RNF-010 |
 
-## 6. Bloqueos para ratificación
+## 6. Validaciones pendientes después de la ratificación D2
 
-1. Resolver las decisiones abiertas D-10, D-14, D-19 y D-21.
-2. Acordar si la capacidad a bordo cubre 374 camiones o solo unidades intervenibles.
-3. Validar jornada externa, tacógrafos y valor probatorio de la evidencia.
-4. Confirmar un mecanismo soportado por el sistema contable que entregue el documento conforme antes del movimiento aun sin cobertura; no aceptar solo emisión diferida.
-5. Cerrar propiedad y ciclo de vida contractual del dispositivo.
-6. Definir excepciones permitidas y prohibidas ante el bloqueo.
-7. Levantar el catálogo de lugares seguros y fijar la anticipación de alertas.
-8. Separar revocación, visibilidad y retención de geolocalización.
-9. Unificar la cifra de contratos bajo costo y los que se renegocian en 2027.
-10. Ratificar todas las metas que las Bases dejan a propuesta del oferente.
-11. Ratificar la distribución de RF-023: base/metodología E1 y productivo completo E2, sin presentar E1 como cumplimiento completo de CA-24.
-12. Validar el diseño de costeo frente a CA-16/17/19 y FEP03 RT-05.29; una versión llamada preliminar no acredita por sí sola el costo consolidado exigido.
+1. Confirmar con D3/D4 la viabilidad de la cobertura sobre 374 camiones y los componentes propuestos.
+2. Validar jurídicamente jornada externa, tacógrafos, firma/OTP y valor probatorio de la evidencia.
+3. Confirmar un mecanismo soportado por el sistema contable que entregue el documento conforme antes del movimiento aun sin cobertura; no aceptar solo emisión diferida.
+4. Costear y formalizar el ciclo de vida contractual del dispositivo financiado por AUDIT.
+5. Levantar el catálogo de lugares seguros y fijar la anticipación de alertas.
+6. Conciliar revocación de datos futuros, visibilidad y retención legal de geolocalización.
+7. Unificar la cifra de contratos bajo costo y los que se renegocian en 2027.
+8. Fijar las metas que continúan pendientes y validar la viabilidad de las ya ratificadas por D2.
+9. Validar ISO 14083/GLEC, factores y cobertura sin presentar E1 como cumplimiento completo de CA-24.
+10. Validar el diseño de costeo frente a CA-16/17/19 y FEP03 RT-05.29; una versión llamada inicial no acredita por sí sola el costo consolidado exigido.
