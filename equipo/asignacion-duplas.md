@@ -62,15 +62,23 @@ por eso lleva dos personas técnicas aunque valga 16 %.
 
 ## Innovaciones (subdocumentos 13-14, 17 %)
 
-Reasignadas según quién quedó dónde.
+Reparto **confirmado por el equipo el 6 de septiembre de 2026**. Los tipos son los del
+`FEP01 · Artículo 28° · p.19`, y el 28.1 prohíbe repetir tipo entre las cinco fichas.
 
 | Tipo | Dupla | Por qué |
 | --- | --- | --- |
-| 1 · Producto o servicio | D2 | Portal del transportista — Ignacio C |
-| 5 · UX / sostenibilidad | D2 | Interfaz operable con guantes y sin interacción en marcha — Ignacio C |
-| 4 · Modelo de negocio | D1 | Quién paga el dispositivo, incentivos por adhesión — Carlos con los números |
-| 3 · Tecnológica / arquitectura | D3 | Operación desconectada 72 h, unificación de las tres plataformas GPS |
+| 1 · Producto o servicio | D2 | Hoja de servicio del transportista, expediente exportable y verificable. Ignacio C |
 | 2 · Proceso | D4 | Despliegue camión por camión, actualización remota del parque |
+| 3 · Tecnológica o de arquitectura | D3 | Operación desconectada 72 h, unificación de las tres plataformas GPS |
+| 4 · Modelo de negocio o contratación | D2 | Adhesión recíproca, comodato del equipo y ventana de consentimiento. Matías |
+| 5 · Experiencia de usuario, sostenibilidad o impacto social | D1 | Interfaz operable con guantes y sin interacción en marcha, RT-13.08 y RT-13.12 |
+
+> **Corrección respecto de la versión anterior de este archivo.** Hasta el 6 de
+> septiembre esta tabla asignaba a D2 los tipos 1 y 5, y a D1 el tipo 4. El reparto
+> vigente es el de arriba. **D1 queda con el tipo 5, no con el tipo 4.** D3 y D4 no
+> cambian, sus tipos eran los mismos en ambas versiones.
+
+Las fichas de D2 están en `D2/fichas-t19-d2.md`.
 
 ## Comprobación de cobertura
 

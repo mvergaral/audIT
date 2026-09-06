@@ -1,4 +1,4 @@
-# Plan de trabajo de dupla D2 — versión 2
+# Plan de trabajo de dupla D2, versión 2
 
 **Ignacio C. y Matías V. · Esquema de solución y alcance**
 
@@ -21,8 +21,8 @@
 
 | # | Cambio | Motivo |
 |---|---|---|
-| 1 | Innovaciones de D2: tipos **1 y 4** confirmados | Decisión del equipo. Obliga a avisar a D1, que queda con el tipo 5 |
-| 2 | Se agrega el segundo bloque de presentación, 13:00–15:00 | El plan general da a D2 dos tramos; la v1 solo contemplaba el primero |
+| 1 | Innovaciones de D2: tipos **1 y 4** | Zanjado por el equipo el 06-09-2026. D1 queda con el tipo 5 |
+| 2 | Se agrega el segundo bloque de presentación, 13:00 a 15:00 | El plan general da a D2 dos tramos; la v1 solo contemplaba el primero |
 | 3 | Empresa escrita **AUDIT** | Es la grafía de la tabla de asignación del curso |
 | 4 | Se explicita el contenido del Informe 1 según el T-22 | Delimita qué se entrega ahora y qué no |
 | 5 | Fuentes con número de artículo, capítulo y página verificados | Varias referencias de la v1 iban sin página |
@@ -74,14 +74,14 @@ integrarla.
 | D2-01 | Registro de las 26 decisiones | Ignacio C. | Matías V. | Borrador 26/26; pendiente ratificación |
 | D2-02 | Catálogo RF/RNF | Ignacio C. | Matías V. | Borrador 28 RF + 14 RNF; pendiente ratificación |
 | D2-03 | Matriz de trazabilidad | Ambos | Ambos | Borrador 42/42; pendiente revisión D3-D4 |
-| D2-04 | Esquema de solución | Ambos | Ambos | [ ] |
+| D2-04 | Esquema de solución | Ambos | Ambos | Integrado en `subdoc3-esquema-solucion.md`, capítulos 1 a 3 |
 | D2-05 | Alcance por etapas | Matías V. | Ignacio C. | Borrador E1/E2; pendiente ratificación |
-| D2-06 | Plan de adhesión | Matías V. | Ignacio C. | [ ] |
-| D2-07 | Criterios de aceptación | Matías V. | Ignacio C. | Borrador 29/29; metas por ratificar |
+| D2-06 | Plan de adhesión | Matías V. | Ignacio C. | Integrado en `subdoc3-esquema-solucion.md`, capítulo 5 |
+| D2-07 | Criterios de aceptación | Matías V. | Ignacio C. | 29/29 con meta comprometida y siete supuestos declarados |
 | D2-08 | Formulario T-12 | Ignacio C. | Matías V. | Preliminar 42/42; falta inventario textual completo |
-| D2-09 | Innovación tipo 1 · producto o servicio | Ignacio C. | Matías V. | [ ] |
-| D2-10 | Innovación tipo 4 · modelo de negocio | Matías V. | Ignacio C. | [ ] |
-| D2-11 | Subdocumento 3 consolidado | Ambos | Ambos | [ ] |
+| D2-09 | Innovación tipo 1 · producto o servicio | Ignacio C. | Matías V. | Ficha en `fichas-t19-d2.md`; tipo confirmado, faltan referencias APA verificadas |
+| D2-10 | Innovación tipo 4 · modelo de negocio | Matías V. | Ignacio C. | Ficha en `fichas-t19-d2.md`; tipo confirmado, faltan referencias APA verificadas |
+| D2-11 | Subdocumento 3 consolidado | Ambos | Ambos | v1 en `subdoc3-esquema-solucion.md`, pendiente lectura cruzada |
 | D2-12 | Presentación, dos bloques | Ambos | Ambos | [ ] |
 
 ## 4. Orden de ejecución
@@ -107,7 +107,7 @@ No se empieza por la redacción narrativa.
 | Sáb. 29 ago. | Decisiones 1 y 25 | Decisión 2, consultas | Tres decisiones críticas ✔ |
 | Dom. 30 ago. | Decisiones técnicas e integraciones | Decisiones operacionales y de alcance | D2-01 completo |
 | Lun. 31 ago. | Iniciar catálogo RF/RNF | Relación dolor-requisito-etapa | Sincronización D1-D2 |
-| **Mar. 1 sep.** | Cerrar RF/RNF, preparar T-12 | Revisar requisitos | **D2-02 v1 y consultas enviadas — cierre oficial** |
+| **Mar. 1 sep.** | Cerrar RF/RNF, preparar T-12 | Revisar requisitos | **D2-02 v1 y consultas enviadas, cierre oficial** |
 | Mié. 2 sep. | Capacidades y dependencias | Distribución Etapa 1 / Etapa 2 | D2-04, D2-05, sincronización D3-D4 |
 | Jue. 3 sep. | T-12 y trazabilidad | Plan de adhesión y aceptación | D2-06, D2-07, D2-08 v1 |
 | Vie. 4 sep. | Ficha T-19 tipo 1 | Ficha T-19 tipo 4 | Dos fichas revisadas cruzadamente |
@@ -121,12 +121,12 @@ Deben quedar acordadas antes de que D3 y D4 cierren la arquitectura. Detalle en
 `registro-decisiones-d2.md`. Estado: 26 propuestas documentadas; pendientes de
 ratificación, con las decisiones 10, 14, 19 y 21 todavía abiertas.
 
-- **Decisión 1 · jornada de conductores externos** — propuesta completa, pendiente
+- **Decisión 1 · jornada de conductores externos**. Propuesta completa, pendiente
   validación legal y de interfaces.
-- **Decisión 2 · adhesión de los 148 transportistas** — propuesta completa, metas
+- **Decisión 2 · adhesión de los 148 transportistas**. Propuesta completa, metas
   pendientes de datos reales.
-- **Decisión 25 · despliegue del equipamiento a bordo** — propuesta completa.
-- **Decisión 5 · propiedad y financiamiento del dispositivo** — abierta. Es la que
+- **Decisión 25 · despliegue del equipamiento a bordo**. Propuesta completa.
+- **Decisión 5 · propiedad y financiamiento del dispositivo**. Abierta. Es la que
   alimenta la innovación tipo 4, así que tiene prioridad.
 
 Quedan 11 decisiones adicionales identificadas como de cierre temprano en la v1.
@@ -204,11 +204,10 @@ repetir tipo**. D2 responde por dos:
 | **1** | Producto o servicio | Ignacio C. | Portal del transportista: visibilidad de viajes, liquidación en curso, evidencias y control de los datos compartidos |
 | **4** | Modelo de negocio o contratación | **Matías V.** | Esquema de adhesión: financiamiento del dispositivo, incentivos, consentimiento granular y beneficios verificables |
 
-> **Avisar al equipo.** Una nota anterior de reparto daba a D2 los tipos 1 y 5, y el
-> tipo 4 a D1. Se resolvió mantener el reparto del plan general: D2 toma 1 y 4, y
-> **D1 queda con el tipo 5** (experiencia de usuario, sostenibilidad o impacto
-> social: interfaz operable con guantes y sin interacción en marcha, RT-13.08 y
-> RT-13.12). Confirmarlo con D1 antes del viernes 4.
+> **Reparto zanjado el 6 de septiembre de 2026.** D2 desarrolla los tipos **1 y 4**.
+> D1 queda con el tipo 5, experiencia de usuario, sostenibilidad o impacto social. D3
+> con el tipo 3 y D4 con el tipo 2, que no cambiaron. La tabla vigente está en
+> `equipo/asignacion-duplas.md`, ya corregida.
 
 Cada ficha se documenta en el Formulario T-19 (FEP01 · p.64) con los **siete elementos
 del Artículo 29°** (p.20). La omisión de cualquiera reduce el puntaje:
@@ -261,7 +260,7 @@ Son **15 minutos de exposición y 15 de preguntas** (Artículo 45°, FEP01 · p.
 CLIENTE puede designar quién expone cada sección, así que ambos deben poder defender
 todo. **D2 tiene dos bloques:**
 
-### Bloque A · 4:30–8:00 · Esquema de solución y alcance (3 min 30 s)
+### Bloque A · 4:30 a 8:00 · Esquema de solución y alcance (3 min 30 s)
 
 > La solución hace coincidir responsabilidad y control mediante evidencia verificable,
 > adhesión contractual de terceros y una implantación gradual que no depende de
@@ -269,13 +268,13 @@ todo. **D2 tiene dos bloques:**
 
 | Tiempo | Contenido |
 |---|---|
-| 0:00–0:35 | Principio de solución y relación con el problema |
-| 0:35–1:30 | Capacidades principales y verificación bloqueante |
-| 1:30–2:20 | Etapa 1 y Etapa 2, con el criterio del reparto |
-| 2:20–3:05 | Plan de adhesión de transportistas |
-| 3:05–3:30 | Criterios que demostrarán el éxito |
+| 0:00 a 0:35 | Principio de solución y relación con el problema |
+| 0:35 a 1:30 | Capacidades principales y verificación bloqueante |
+| 1:30 a 2:20 | Etapa 1 y Etapa 2, con el criterio del reparto |
+| 2:20 a 3:05 | Plan de adhesión de transportistas |
+| 3:05 a 3:30 | Criterios que demostrarán el éxito |
 
-### Bloque B · 13:00–15:00 · Cartera de cinco innovaciones, junto con D4 (2 min)
+### Bloque B · 13:00 a 15:00 · Cartera de cinco innovaciones, junto con D4 (2 min)
 
 D2 presenta los tipos 1 y 4. Hay que acordar con D4 quién hila la cartera completa y
 quién presenta los tipos 2, 3 y 5. El T-22 advierte que *en ningún caso puede
@@ -296,20 +295,39 @@ presentarse sólo el título de la innovación*.
 
 ## 14. Criterios de término
 
-- [ ] Las 26 decisiones del numeral 16.1 registradas.
-- [ ] Las decisiones 1, 2, 5 y 25 completamente fundamentadas.
-- [ ] Cada dolor con requisito, exclusión o supuesto asociado.
-- [ ] Cada requisito con origen, prioridad, etapa, componente y verificación.
-- [ ] Las **14** restricciones no negociables respetadas (FEP03 · Cap. 10 · p.23).
-- [ ] Exclusiones declaradas y sus dependencias cubiertas (Cap. 11 · p.24).
-- [ ] Los **29** criterios de aceptación comprometidos o justificados (Cap. 18 · p.41).
-- [ ] Plan de adhesión contractual, medible y realista.
-- [ ] Las dos fichas T-19 con los siete elementos del Artículo 29°.
-- [ ] D3 y D4 pueden construir la arquitectura sin inventar decisiones de alcance.
-- [ ] El T-12 coincide con el catálogo y con el Subdocumento 3.
-- [ ] Sin contradicciones entre alcance, arquitectura e innovaciones.
-- [ ] Referencias en APA 7.ª edición.
-- [ ] Ambos bloques de exposición ensayados y dentro del tiempo.
+Estado al 6 de septiembre de 2026, víspera de la entrega del Informe 1.
+
+- [x] Las 26 decisiones del numeral 16.1 registradas. Son 3 con propuesta completa, 19
+      parciales y 4 abiertas con contingencia declarada.
+- [x] Las decisiones 1, 2, 5 y 25 fundamentadas. La 1 en su propio documento; la 2 y la
+      5 en el capítulo 5 del Subdocumento 3; la 25 en RNF-004 y RNF-011.
+- [x] Cada dolor con requisito, exclusión o supuesto asociado. Los veinte indicadores del
+      Capítulo 7 del caso están mapeados en el capítulo 2 del Subdocumento 3.
+- [x] Cada requisito con origen, prioridad, etapa, componente y verificación.
+- [x] Las **14** restricciones no negociables respetadas (FEP03 · Cap. 10 · p.23).
+- [x] Exclusiones declaradas y sus dependencias cubiertas (Cap. 11 · p.24).
+- [x] Los **29** criterios de aceptación comprometidos, distinguiendo resultado
+      obligatorio, meta del PROPONENTE y parámetro a fijar en la Etapa 1, con siete
+      supuestos declarados (Cap. 18 · p.41).
+- [x] Plan de adhesión contractual, medible y realista. Capítulo 5 del Subdocumento 3.
+- [x] Las dos fichas T-19 con los siete elementos del Artículo 29° y la verificación
+      contra RT-26.01 a RT-26.08.
+- [x] El T-12 coincide con el catálogo y con el Subdocumento 3. Los 42 identificadores
+      cuadran y cada fila apunta a un capítulo existente.
+- [x] Referencias en APA 7.ª edición, verificadas en su fuente oficial el 06-09-2026 y
+      consolidadas en la bibliografía de `fichas-t19-d2.md`.
+
+Pendiente y **no depende solo de D2**:
+
+- [ ] D3 y D4 confirman que pueden construir la arquitectura sin inventar decisiones de
+      alcance, y que aceptan los tres componentes nuevos que declaran las fichas.
+- [ ] Lectura cruzada del equipo para descartar contradicciones entre alcance,
+      arquitectura e innovaciones (Artículo 57.2, descuento por incoherencia).
+
+Fuera del Informe 1, con fecha propia:
+
+- [ ] Ambos bloques de exposición ensayados y dentro del tiempo. La presentación
+      preparatoria 1 se realiza entre el 14 y el 25 de septiembre (Formulario T-20).
 
 ## 15. Fuentes, con página verificada
 

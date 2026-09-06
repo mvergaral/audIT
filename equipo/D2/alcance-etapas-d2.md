@@ -1,10 +1,11 @@
 # Alcance por etapas - D2
 
 **Subdocumento 3 · Esquema de solución y alcance**\
-**Estado:** propuesta para revisión de Ignacio C. y Matías V.
+**Estado:** versión comprometida para el Informe 1 del 07-09-2026
 
-Todas las etapas, salidas y puertas de avance siguientes son propuestas no ratificadas,
-no resultados ya obtenidos. La distribución temporal no rebaja exigencias de las Bases.
+Las etapas, salidas y puertas de avance siguientes son la propuesta de alcance del
+PROPONENTE, no resultados ya obtenidos ni acuerdos del CLIENTE. La distribución temporal
+escalona el trabajo, no rebaja ninguna exigencia de las Bases.
 
 ## 1. Criterio de distribución
 
@@ -37,7 +38,7 @@ técnicas y contractuales antes de un despliegue masivo.
 | Evidencia y documentos | RF-004, RF-005, RF-006, RF-007, RNF-012, RNF-014 | Registro maestro, trazabilidad, integridad y pilotos de carga/tacógrafo |
 | Posición y operación offline | RF-008, RF-009, RF-010, RNF-001, RNF-002 | Vista única piloto, geocercas y almacenamiento mínimo de 72 h |
 | Viaje y facturación | RF-011, RF-012, RF-013, RF-014, RNF-006, RNF-007 | Evidencia de permanencia/entrega; documento conforme antes del movimiento aun sin cobertura, con emisor contable único e integración idempotente |
-| Costos y liquidación | RF-016, RF-017, RF-019 | Costo consolidado en 24 h con componentes disponibles y faltantes explícitos según FEP03 RT-05.29; versionado propuesto por validar y liquidación por excepción |
+| Costos y liquidación | RF-016, RF-017, RF-019 | Costo consolidado en 24 h con componentes disponibles y faltantes explícitos según FEP03 RT-05.29; versionado preliminar y consolidado sujeto a la respuesta de la consulta sobre RT-05.29, y liquidación por excepción |
 | Base de emisiones | RF-023 | Fuentes, línea base y metodología declarada/verificable, incluidos terceros; preparación de consolidación mensual, no cálculo productivo completo |
 | Portales y consentimiento | RF-020, RF-021, RF-022, RF-026, RNF-003, RNF-013 | Portal mínimo, segregación, adhesión y permisos granulares |
 | Flota y mantenimiento | RF-025, RF-027 | Pilotos de kilometraje real y alerta de lugar seguro |
@@ -171,7 +172,7 @@ terceros no adheridos.
 | Telemetría | Interfaces y calidad comprobadas | Cobertura y mantenimiento ampliados |
 | Adhesión | Contrato, incentivo y piloto | Escalamiento sobre terceros |
 | Consentimiento | Modelo granular y auditoría | Visibilidad ampliada para clientes |
-| Costeo | Costo consolidado en 24 h con faltantes explícitos; versionado por validar | Rentabilidad y optimización avanzada |
+| Costeo | Costo consolidado en 24 h con faltantes explícitos, con historial de versiones | Rentabilidad y optimización avanzada |
 | Emisiones | Base de datos, línea base y metodología | Cálculo productivo completo y consolidación mensual, incluidos terceros |
 | Cobertura | Mapa y almacenamiento offline | Segmentación móvil/satelital |
 | Lugares seguros | Catálogo piloto validado | Alertas y planificación a escala |

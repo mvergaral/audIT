@@ -4,7 +4,9 @@
 
 **Caso 10 · Transporte de Carga · Transportes Curimón S.A.**
 
-**Estado:** borrador de trabajo para ratificación del equipo
+**Estado:** versión comprometida para el Informe 1 del 07-09-2026. Las decisiones se
+declaran como supuesto del PROPONENTE conforme al Capítulo 19 del caso, no como acuerdos
+del CLIENTE.
 
 **Fuente principal:** FEP03 · sección 16.1 · p.34
 

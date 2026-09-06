@@ -1,7 +1,7 @@
 # Matriz de trazabilidad - D2
 
 **Subdocumento 3 · Esquema de solución y alcance**\
-**Estado:** borrador derivado de `catalogo-requisitos-d2.md`\
+**Estado:** versión comprometida para el Informe 1, derivada de `catalogo-requisitos-d2.md`\
 **Regla:** un componente ausente se marca **por definir**; no se inventa como parte de
 la arquitectura acordada.
 
@@ -36,7 +36,7 @@ brechas son observaciones documentales pendientes de validación por sus respons
 | RF-020 | D-02, D-23 | Portal del transportista | Portal Unificado; Entra ID; Transportista | CA-21; CA-29 | Aceptación y segregación | ABAC y auditoría visible pendientes |
 | RF-021 | D-23 | Seguimiento para clientes | Portal; Entra ID; CONSENTIMIENTO_DATOS; Telemetría | CA-22; R-02; R-03 | Acceso antes/durante/después | Modelo de permiso insuficiente |
 | RF-022 | D-23 | Consentimiento granular | CONSENTIMIENTO_DATOS; Portal; Auditoría; Entra ID | CA-23; CA-29; R-02; R-03 | Otorgar/revocar y auditar | Granularidad y derechos del conductor |
-| RF-023 | D-22 | Emisiones: base/metodología E1; productivo completo E2 (propuesta no ratificada) | Lakehouse; Capa Semántica; **motor CO2e por definir** | CA-24; FEP03 RT-05.29; R-02 | E1: fuentes, línea base y método; E2: reproducción independiente y consolidación mensual, incluidos terceros | Método, factores, cobertura y distribución E1/E2 pendientes; E1 no acredita cumplimiento completo |
+| RF-023 | D-22 | Emisiones: base y metodología en E1, productivo completo en E2 | Lakehouse; Capa Semántica; **motor CO2e por definir** | CA-24; FEP03 RT-05.29; R-02 | E1: fuentes, línea base y método; E2: reproducción independiente y consolidación mensual, incluidos terceros | Método, factores, cobertura y distribución E1/E2 pendientes; E1 no acredita cumplimiento completo |
 | RF-024 | D-21 | Taller externo | Interfaces de Taller; Aplicación Móvil; Gestión de Flota | CA-25; R-04; R-09 | Offline, aprobación y sincronización | Workflow de taller por definir |
 | RF-025 | D-12, D-21 | Mantenimiento por kilometraje | Gestión de Flota; Tractocamion; rFMS; Telemetría | CA-26; R-03; R-06 | Comparación con odómetro y orden | Acceso OEM pendiente |
 | RF-026 | D-02, D-05 | Adhesión de transportistas | Portal; Transportista; CONSENTIMIENTO_DATOS | CA-27; R-02; R-03 | Flujo de adhesión y muestreo contractual | Workflow contractual por definir |
@@ -55,7 +55,7 @@ brechas son observaciones documentales pendientes de validación por sus respons
 | RNF-006 | D-03, D-09 | Emisor tributario único | ACL; Adaptador ERP; Broker; DLQ | R-08 | Emisión única y reintentos | Interfaz y ventana pendientes |
 | RNF-007 | D-08, D-10, D-19 | Sin equipos en clientes | Unidad telemática; geocercas; Aplicación Móvil | R-09; CA-10; CA-12 | Piloto sin instalación externa | Evidencias D-10/D-19 abiertas |
 | RNF-008 | D-20 | Continuidad 12 días | Búfer ≥8 GB; Unidad telemática; sala secundaria | R-04; R-12 | Simulación de cierre prolongado | Energía y terceros no demostrados |
-| RNF-009 | — | Operación por TI reducido | Azure administrado; Monitor; Log Analytics; Grafana; Arc | R-13 | Runbook y prueba por TI | RACI/NOC por definir |
+| RNF-009 | Sin decisión asociada | Operación por TI reducido | Azure administrado; Monitor; Log Analytics; Grafana; Arc | R-13 | Runbook y prueba por TI | RACI/NOC por definir |
 | RNF-010 | D-05, D-11 | TCO de 36 meses | Cost Management; FinOps; modelo D4 | R-14 | Trazabilidad de costos por escenario | Cantidades reales pendientes |
 | RNF-011 | D-25, D-26 | Despliegue progresivo | Despliegue sin detener flota; IoT Device Twins/Update | R-05; R-10; R-11 | Convivencia, actualización y reversión | Cronograma y reversión pendientes |
 | RNF-012 | D-24 | Auditoría probatoria | Auditoría Append-Only; auditoria_evento; WORM | CA-04 | Intentos INSERT/UPDATE/DELETE y hashes | Trigger inconsistente |

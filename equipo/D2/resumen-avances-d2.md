@@ -1,15 +1,17 @@
 # Resumen de avances de D2
 
-Fecha: 5 de septiembre de 2026.
+Fecha: 6 de septiembre de 2026.
 
 Integrantes: Ignacio C. y Matías V. Fuente de reparto:
 [plan de trabajo D2 v2](plan-trabajo-d2-v2.md).
 
 ## Resumen ejecutivo
 
-Se prepararon seis entregables del plan en calidad de borrador, dos instrumentos de
-coordinación entre duplas y un desarrollo específico de la decisión D-01. Ninguno
-se considera ratificado por el equipo ni aprobado por el CLIENTE.
+Se prepararon once de los doce entregables del plan, dos instrumentos de coordinación
+entre duplas y un desarrollo específico de la decisión D-01. Los dos entregables que
+cierran el Informe 1 son el Subdocumento 3 consolidado y las dos fichas T-19 de las
+innovaciones tipo 1 y tipo 4. Ninguno se considera ratificado por el equipo ni aprobado
+por el CLIENTE.
 
 El catálogo contiene 42 requisitos de solución: 28 funcionales y 14 no funcionales.
 Se documentaron relaciones con los 29 criterios de aceptación y las 14 restricciones
@@ -22,14 +24,14 @@ del caso. Esa cobertura de referencias no demuestra por sí sola cumplimiento t�
 | D2-01 | [Registro de decisiones](registro-decisiones-d2.md) | 26 decisiones documentadas como propuestas | Fundamentación, ratificación y validaciones; D-10, D-14, D-19 y D-21 siguen abiertas |
 | D2-02 | [Catálogo RF/RNF](catalogo-requisitos-d2.md) | 28 RF y 14 RNF con origen, etapa y verificación | Completar detalle normativo, metas y revisión cruzada |
 | D2-03 | [Matriz de trazabilidad](matriz-trazabilidad-d2.md) | 42 requisitos vinculados a capacidades, componentes y pruebas | Validar relaciones y resolver componentes ausentes con D3/D4 |
-| D2-04 | Esquema de solución | Insumos disponibles, sin documento específico | Redactar capacidades y su articulación con el problema |
+| D2-04 | [Esquema de solución](subdoc3-esquema-solucion.md) | Principio de solución, coherencia problema-solución y nueve capacidades | Lectura cruzada con D1, D3 y D4 |
 | D2-05 | [Alcance por etapas](alcance-etapas-d2.md) | E1/E2, dependencias, entradas, salidas y exclusiones | Ratificar distribución y compromisos con Matías y el equipo |
-| D2-06 | Plan de adhesión | Orientaciones en registro y D-01 | Desarrollar contrato, incentivos, dispositivo, capacitación y no adhesión |
+| D2-06 | [Plan de adhesión](subdoc3-esquema-solucion.md) | Capítulo 5 del subdocumento 3, con las doce materias exigidas por el plan | Validación jurídica del anexo y ratificación de metas |
 | D2-07 | [Criterios de aceptación](criterios-aceptacion-d2.md) | 29 criterios, medición y metas propuestas | Sustentar metas y validar viabilidad; no tratarlas como exigencias textuales |
 | D2-08 | [T-12 preliminar](formulario-t12-preliminar-d2.md) | 42 filas y las cinco columnas oficiales | Inventario textual aplicable completo y referencias definitivas; todas las filas pendientes de verificación |
-| D2-09 | Innovación tipo 1 | Portal del transportista como base conceptual | Ficha T-19; demostrar aporte adicional a funciones obligatorias |
-| D2-10 | Innovación tipo 4 | Modelo de adhesión como base conceptual | Ficha T-19 y fundamento contractual/económico |
-| D2-11 | Subdocumento 3 consolidado | No redactado | Integrar artefactos revisados en narrativa coherente |
+| D2-09 | [Innovación tipo 1](fichas-t19-d2.md) | Ficha T-19 con los siete elementos del Artículo 29° y la delimitación frente a CA-21 y CA-29 | Verificar las referencias APA en su fuente oficial |
+| D2-10 | [Innovación tipo 4](fichas-t19-d2.md) | Ficha T-19 con los siete elementos, comodato, ventana de consentimiento y financiamiento del incentivo | Cotizar las partidas de inversión declaradas |
+| D2-11 | [Subdocumento 3 consolidado](subdoc3-esquema-solucion.md) | Once capítulos, con justificación del reparto por etapas y declaración de supuestos | Lectura cruzada y numeración definitiva de secciones |
 | D2-12 | Presentación | Bloques definidos en el plan | Diapositivas, reparto y ensayo |
 
 ## Coordinación con otras duplas
@@ -59,6 +61,10 @@ el T-12. Citar un rango tampoco demuestra desarrollo de cada requisito intermedi
 - RF-014 corregido para exigir documento conforme antes del movimiento, no mera emisión posterior.
 - Separado el parámetro del caso para costeo en 24 horas del versionado propuesto por D2.
 - Retiradas las declaraciones de cumplimiento del T-12: 42 filas pendientes de verificación.
+- Cerrada la cifra de contratos bajo costo. Son 3, equivalentes al 31 % del ingreso, y 2 se
+  renegocian en 2027 (FEP03 · Sección 7.3 · p.15 y Sección 13.2 · p.27).
+- Retirados los guiones largos de los documentos de la dupla, sustituidos por punto o coma.
+- Corregido el recuento de estados de las 26 decisiones: 3 completas, 19 parciales y 4 abiertas.
 
 ## Decisión D-01 desarrollada
 
@@ -105,12 +111,15 @@ consultas no se trataron como respuestas del CLIENTE.
 ## Próximas acciones
 
 1. Ignacio y Matías revisan D-01; D3/D4 validan implementación y se coordina revisión jurídica.
-2. Desarrollar D-06 y D-09 en coherencia con los bloqueos de seguridad y documentación.
+2. Reparto de innovaciones zanjado el 6 de septiembre. D2 lleva los tipos 1 y 4, D1 el
+   tipo 5, D3 el tipo 3 y D4 el tipo 2. `equipo/asignacion-duplas.md` quedó corregido.
 3. Matías lidera D-02/D-05 y el plan de adhesión; D4 aporta despliegue y flota mixta.
 4. Completar D-10, D-14, D-19 y D-21 sin dejar sus soluciones implícitas.
 5. Cada dupla verifica sus bloques y documenta correcciones y evidencia.
 6. Completar el inventario normativo y la trazabilidad antes de declarar cumplimiento.
-7. Redactar esquema de solución, fichas T-19, Subdocumento 3 y presentación.
+7. Verificar las referencias APA de ambas fichas en su fuente oficial, con fecha de consulta.
+8. Preparar las diapositivas de los dos bloques de presentación, que se exponen entre el
+   14 y el 25 de septiembre.
 
 ## Uso de asistencia de IA
 

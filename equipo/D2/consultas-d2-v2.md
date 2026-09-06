@@ -1,4 +1,4 @@
-# Consultas al CLIENTE — D2, versión 2
+# Consultas al CLIENTE, D2, versión 2
 
 **Ignacio C. y Matías V. · Esquema de solución y alcance**
 Empresa proponente: **AUDIT** · Cierre oficial del período: **01-09-2026**
@@ -15,12 +15,12 @@ Planilla a enviar: `CONSULTAS_AUDIT_20260831.XLSX`
 | 5 | Fecha del archivo = fecha de envío | La v1 lo nombraba con la fecha de cierre |
 | 6 | Páginas verificadas una por una | Todas correctas en la v1; se confirmaron contra el índice |
 
-## Reglas aplicables — Artículo 43° (FEP01 · p.27)
+## Reglas aplicables. Artículo 43° (FEP01 · p.27)
 
 - Por escrito, por el canal oficial, dentro del período del Formulario T-20.
 - Concretas, precisas y pertinentes. No pueden pedir información confidencial ni que
   el CLIENTE diseñe la solución en lugar del PROPONENTE (43.4).
-- Planilla con columnas A–G: correlativo, empresa, fecha, **tipo**, referencia,
+- Planilla con columnas A a G: correlativo, empresa, fecha, **tipo**, referencia,
   consulta, propuesta de interpretación.
 - Tipo: **`Administrativa`, `Técnica` o `Anexo`**. Solo esos tres valores.
 - Nomenclatura: `CONSULTAS_[EMPRESA]_AAAAMMDD.XLSX` (43.3).
@@ -81,7 +81,7 @@ CLIENTE que diseñe la solución, y el Art. 43.4 lo excluye expresamente.
 | Cómo obtener y acreditar la jornada de un conductor externo | Decisión 1 | Proponer fuente, consentimiento, integridad, corrección y contingencia |
 | Qué ofrecer a los 148 transportistas | Decisión 2 | Diseñar plan de adhesión e incentivos |
 | Reemplazar o conservar el sistema de 2013 | Decisión 3 | Evaluar alternativas con la respuesta a la consulta 4 |
-| Quién paga o administra el dispositivo | Decisión 5 | Definir modelo contractual y económico — alimenta la innovación tipo 4 |
+| Quién paga o administra el dispositivo | Decisión 5 | Definir modelo contractual y económico, alimenta la innovación tipo 4 |
 | Quién autoriza una excepción al bloqueo | Decisión 6 | Proponer regla, usando como entrada la respuesta a la consulta 12 |
 | Anticipación de la alerta de jornada | Debe justificarla el PROPONENTE | Derivar de distancia a lugares seguros y condiciones de ruta |
 | Emisión del documento sin cobertura | Decisión pendiente | Diseñar conforme a la interfaz y contingencia admitidas |

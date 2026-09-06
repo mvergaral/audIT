@@ -30,7 +30,7 @@ Fuentes verificadas:
 | Declaración del conductor como única fuente | Puede recogerse sin integración | Firmar no demuestra que el historial sea completo ni verdadero | No aceptarla automáticamente como acreditación suficiente |
 | Tacógrafo como única fuente | Evidencia operacional contrastable | Puede faltar identificación personal o historial de otros vehículos | No usarlo como fuente única universal |
 | Integración exclusiva con el empleador | Reduce transcripción y permite obtener registros | Depende de contratos, sistemas e interfaces aún desconocidos | Vía preferente donde esté disponible, no dependencia universal |
-| Expediente por conductor con varias fuentes y evaluación previa | Reconcilia historial, autoría y discrepancias | Requiere reglas de suficiencia, revisión y mayor esfuerzo de enrolamiento | Recomendada para el borrador |
+| Expediente por conductor con varias fuentes y evaluación previa | Reconcilia historial, autoría y discrepancias | Requiere reglas de suficiencia, revisión y mayor esfuerzo de enrolamiento | Recomendada, es la alternativa adoptada |
 
 ## Recomendación
 
