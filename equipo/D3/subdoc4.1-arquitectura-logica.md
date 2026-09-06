@@ -2,7 +2,7 @@
 
 **Licitación Pública TFEP-01/2026 · Caso 10: Transportes Curimón S.A.**  
 **Dupla Responsable:** D3 (Martín y Marcel) · **Especialista en Arquitectura Lógica y BI:** Martín
-**Estándares y Marcos de Cumplimiento:** Formulario T-7 Subdoc. 4.1 (FEP01 · p.57); RT-02.01 a RT-02.10, RT-02.14 (FEP02 · p.5-6); RT-03.01 a RT-03.24 (FEP02 · p.7-9); RT-05.16 a RT-05.30 (FEP02 · p.12-13); RT-09.01, RT-09.02 (FEP02 · p.20); RT-11.01 a RT-11.10 (FEP02 · p.22); RT-16.09, RT-16.30 (FEP02 · p.29-31); ISO/IEC/IEEE 42010 (Arquitectura de Sistemas y Software); OpenAPI 3.1; AsyncAPI 2.6+; RFC 7807 (*Problem Details*); Ley N.° 21.719 (Protección de Datos Personales); Consultas Oficiales N.° 13, 14, 17 y 18.
+**Estándares y Marcos de Cumplimiento:** Formulario T-7 Subdoc. 4.1 (FEP01 · p.57); RT-02.01 a RT-02.10, RT-02.14 (Deseable) (FEP02 · p.5-6); RT-03.01 a RT-03.24 (incluyendo RT-03.13 de Operación Offline) (FEP02 · p.7-9); RT-05.16 a RT-05.30 (incluyendo RT-05.20 de Capa Anticorrupción Obligatoria) (FEP02 · p.12-13); RT-09.01, RT-09.02 (FEP02 · p.20); RT-10.05 (Contingencia Los Libertadores · FEP03 · p.32); RT-11.01 a RT-11.10 (FEP02 · p.22); RT-16.09, RT-16.30 (FEP02 · p.29-31); ISO/IEC/IEEE 42010 (Arquitectura de Sistemas y Software); OpenAPI 3.1; AsyncAPI 2.6+; RFC 7807 (*Problem Details*); Ley N.° 21.719 (Protección de Datos Personales); Consultas Oficiales N.° 13, 14, 17 y 18.
 
 ---
 
@@ -24,7 +24,7 @@ La auditoría de los sistemas heredados de Transportes Curimón S.A. reveló vul
 | :--- | :--- | :--- | :--- |
 | **Estilo Arquitectónico** | Monolito cliente-servidor acoplado. | **Microservicios Stateless en Contenedores (AKS)** desacoplados por Bounded Contexts (RT-02.01, RT-02.05). | Escalabilidad horizontal elástica ante picos de reconexión telemática (RT-09.02). |
 | **Patrón de Intercomunicación** | Llamadas síncronas bloqueantes sin límites. | **Arquitectura Híbrida Event-Driven** (Kafka para telemetría masiva + Service Bus para transacciones con DLQ). | Resiliencia operativa; aislamiento de fallas entre servicios (RT-02.08). |
-| **Integración ERP Legado** | Vistas y tablas compartidas en base 2013. | **Capa Anticorrupción (ACL)** con traducción bidireccional y Circuit Breaker (RT-02.14, Consulta N.° 13). | Aislamiento del dominio central; ERP 2013 preservado solo para contabilidad y DTE. |
+| **Integración ERP Legado** | Vistas y tablas compartidas en base 2013. | **Capa Anticorrupción (ACL)** con traducción bidireccional y Circuit Breaker (RT-05.20 Obligatorio, RT-02.14 Deseable, Consulta N.° 13). | Aislamiento del dominio central; ERP 2013 preservado solo para contabilidad y DTE. |
 | **Ingesta Combustible & TAG** | Digitación manual diferida en hojas de cálculo. | **Conectores Batch ETL con adaptación a APIs** y conciliación algorítmica con trazas GPS (Consulta N.° 17). | Erradicación de errores de digitación; captura de costos para 374 camiones. |
 | **Telemetría CANbus FMS** | Puertos deshabilitados por temor a pérdida de garantía. | **Acoplador Inductivo Contactless (SAE J1939)** de solo lectura estricta (Consulta N.° 14). | Telemetría profunda de 61 tractos propios sin vulnerar garantías de fábrica. |
 | **Modelo de Costeo (BI)** | Inexistente; desfase ciego de 40 días. | **Modelo Dual en Lakehouse:** Versión 1 en ≤ 24 h (preliminar) + Versión 2 a 40 días (consolidada) (Consulta N.° 18). | Visibilidad de rentabilidad en Etapa 1 previo a renegociación contractual de 2027. |
@@ -46,7 +46,7 @@ Conforme a los estándares **RT-02.01** e **ISO/IEC/IEEE 42010**, la solución a
 
 1. **Capa 1: Presentación (Canales & Experiencia de Usuario):**
    * *Portal Web Unificado*: Desarrollado en React 19 / Next.js con Server-Side Rendering (SSR). Atiende tres perfiles principales: (i) Torre de Tráfico y Control 24x7 (monitoreo en tiempo real, asignación de fletes, gestión de incidentes), (ii) Portal Autenticado de Clientes (seguimiento de envíos, cálculo de emisiones CO2, registro transparente de tiempos en plantas y estado de sobreestadías según RT-16.30), y (iii) Portal de Transportistas Subcontratados (consulta de viajes, liquidaciones mensuales transparentes y control de soberanía de datos según Ley N.° 21.719).
-   * *Aplicación Móvil para Conductores (Flutter)*: Diseñada específicamente para condiciones extremas de cabina (vibración, luz solar, manipulación con una sola mano y guantes de faena, RT-13.08). Incorpora base local segura SQLite 3 con modo WAL para operación 100 % autónoma durante las **72 horas de desconexión en zonas de sombra** (RT-03.10, RT-17.01). En estricto cumplimiento de la **Restricción N.° 3** ("No intervenir equipamiento de terceros sin acuerdo contractual") y las decisiones **D-02** y **D-26** de D2, la App Móvil actúa como el nodo de borde principal para los transportistas terceros no adheridos a la instalación de hardware y para los 34 camiones sin GPS, capturando geolocalización del viaje activo, eventos de jornada (Art. 25 bis) y conformidad de entrega sin requerir intervención física en el tractocamión.
+   * *Aplicación Móvil para Conductores (Flutter - RT-17.01)*: Diseñada con interfaz ergonómica de alto contraste para cabina (RT-13.08). Opera como **canal voluntario e incentivado** para los choferes (consulta de liquidaciones, detalle de viajes asignados y carga opcional de comprobantes de entrega PoD para agilizar su pago). En estricto cumplimiento de las **Restricciones 1 y 2**, **RT-12.11** y las decisiones **D-02 / D-26**, **la trazabilidad del viaje y la telemetría obligatoria no dependen de la manipulación del teléfono personal del conductor en marcha**: la captura telemática se realiza vía hardware a bordo en las 148 unidades propias, vía integración de APIs de los dos proveedores GPS existentes para los ~192 terceros homologados (Restricción 3, Cap. 11), y mediante kit subvencionado para los 34 terceros sin equipo por adhesión voluntaria.
    * *Interfaces de Terminal y Taller*: Vistas especializadas de alto contraste para porterías de acceso (validación biométrica/código QR de vigencias en < 3 s) y mecánicos de taller.
 2. **Capa 2: Borde y Seguridad Perimetral (Zero Trust Edge):**
    * *Azure Front Door / Cloudflare Enterprise*: Red de distribución Anycast global con terminación TLS 1.3, enrutamiento inteligente basado en latencia y aceleración TCP.
@@ -64,7 +64,7 @@ Conforme a los estándares **RT-02.01** e **ISO/IEC/IEEE 42010**, la solución a
 5. **Capa 5: Integración, Eventos y Brokers:**
    * *Broker de Telemetría Streaming (Kafka / Azure Event Hubs)*: Ingesta en tiempo real los pings GPS y eventos de cabina generados por los 374 camiones (hasta 1.500 eventos/minuto en ráfagas de reconexión tras zonas de sombra).
    * *Broker Transaccional Empresarial (Azure Service Bus)*: Mensajería asíncrona garantizada con semántica *At-Least-Once*, ordenamiento FIFO por partición y colas de descarte de fallos (*Dead-Letter Queues - DLQ*) para eventos transaccionales de negocio (`ViajeIniciado`, `ViajeFinalizado`, `LiquidacionEmitida`).
-   * *Capa Anticorrupción (ACL)*: Adaptador mediador que encapsula y aísla el ERP contable legado de 2013 (RT-02.14 y Consulta N.° 13).
+   * *Capa Anticorrupción (ACL)*: Adaptador mediador que encapsula y aísla el ERP contable legado de 2013 (RT-05.20 obligatorio, RT-02.14 deseable y Consulta N.° 13).
 6. **Capa 6: Persistencia Políglota y Almacenamiento:**
    * Diseñada e implementada por Marcel (Subdocumento 5): PostgreSQL 16 Multi-AZ (transaccional CP), TimescaleDB (series de telemetría AP), Redis 7.2 Cluster (caché L2 en RAM < 5 ms), Azure Blob Storage inmutable (WORM e-Docs) y Delta Lake Lakehouse (capa analítica segregada).
 7. **Capa 7: Seguridad Transversal y Gobernanza:**
@@ -186,6 +186,27 @@ Para dar cumplimiento estricto al compromiso de **asignación bloqueante en un t
    }
    ```
 5. **Latencia Total Observada:** El proceso completo se ejecuta en **< 1,2 segundos**, cumpliendo holgadamente el tope reglamentario de 30 segundos.
+
+---
+
+### 2.5 Matriz Conjunta de Comportamiento en Operación Desconectada y Contingencias (RT-03.13 / Entregable D3-15)
+
+*(Referencia: FEP02 · RT-03.13, RT-03.10 · p.8-9; FEP03 · RT-10.05 · p.32; Coordinación Duplas D3 y D4)*
+
+Conforme a **RT-03.13**, la propuesta técnica debe declarar de manera explícita y pormenorizada qué funciones de la solución continúan operativas y cuáles se suspenden ante la pérdida total de enlace telemático o cobertura celular (contingencias climáticas de hasta 12 días = 288 horas en Paso Los Libertadores según RT-10.05 y zonas de sombra de hasta 72 horas). En acuerdo de diseño conjunto entre D3 (Lógica/Datos) y D4 (Infraestructura/Borde), se formaliza la siguiente matriz oficial:
+
+| Función Operacional del Sistema | ¿Disponible sin Enlace Celular? | Procedimiento de Mitigación o Contingencia Manual | Dupla Responsable |
+| :--- | :---: | :--- | :---: |
+| **Registro de posición, jornada y eventos telemáticos** | **Sí** | Escritura inmediata en búfer local no volátil ($\ge 8\text{ GB}$ flash industrial con *wear-leveling*). Cero pérdida de paquetes. | **D4** |
+| **Evaluación de geocercas (arribo / partida)** | **Sí** | Procesamiento autónomo a bordo con polígonos precargados en memoria local. | **D4** |
+| **Alerta preventiva de agotamiento de jornada (Art. 25 bis)** | **Sí** | Algoritmo autónomo a bordo; señal lumínica y sonora en cabina previo al límite legal. | **D4** |
+| **Botón de emergencia y alerta de pánico** | **Sí** (Vía Satelital) | Transmisión por enlace satelital bidireccional Iridium SBD. Protocolo telefónico supletorio con torre donde no haya SBD. | **D4** |
+| **Emisión del DET (Guía de Despacho Electrónica)** | **Sí** | Generación y timbrado local XML/PDF con folios CAF pre-asignados y certificado digital a bordo *antes de rodar*. | **D3** |
+| **Asignación de nuevo viaje no precargado** | **No** | Autorización telefónica/radial con Torre de Control; registro de contingencia y reconciliación obligatoria al reconectar. | **D3** |
+| **Verificación bloqueante de jornada y habilitaciones** | **Parcial** | Validación contra copia local precargada en el dispositivo. Si no hay datos vigentes, aplica regla de excepción (Decisión 6) con rol nominado y registro auditado. | **D3 + D4** |
+| **Consulta de liquidaciones por transportistas** | **No** | Función no crítica en ruta; disponible al restablecer enlace en Portal Web / App Móvil. | **D3** |
+| **Notificación en tiempo real a clientes corporativos** | **No** | Envío de alerta diferida con marca temporal de ocurrencia real una vez sincronizado el viaje. | **D3** |
+| **Actualización de firmware de dispositivos telemáticos** | **No** | Prohibida en ruta por seguridad operacional (Restricción 5); se ejecuta exclusivamente en terminales por red local segura. | **D4** |
 
 ---
 
@@ -383,10 +404,35 @@ Para cumplir con la **interfaz de sincronización S4 con la Dupla D4 (Alonso e I
 | **Repositorio e-Docs (WORM)** | Datos | < 1,0 s | Alta | Certificados, fotos siniestros | Almacenamiento inmutable para cumplimiento probatorio (10 años). | **Nube (Azure Blob Storage WORM)** |
 | **Lakehouse Analítico (BI)** | Analítica | Segundos | Media | Histórico 5 años / Delta Lake | Aislamiento total OLTP/OLAP para costeo por km en ≤ 24 h (RT-05.05). | **Nube (Azure Synapse / Databricks)** |
 | **Capa Semántica Power BI** | Analítica | < 2,0 s | Media | Tableros gerenciales y Finanzas | Explotación de autoservicio con navegación drill-down (RT-05.27). | **Nube (Power BI Embedded)** |
-| **Búfer a Bordo en Cabina** | Terreno | Inmediata | **Máxima (72h Offline)** | Pings y eventos en 148 unidades intervenibles | Almacenamiento local físico en camiones propios y de terceros adheridos (D4, D-02, Restricción 3). | **On-Premise Terreno (Dispositivo Físico SQLite WAL)** |
-| **Búfer Offline App Móvil** | Terreno | Inmediata | **Máxima (72h Offline)** | Eventos/jornada en flota restante (226 camiones) | Captura telemática y offline vía smartphone/tablet para terceros no intervenidos y 34 sin GPS (D-26). | **Borde Móvil (SQLite/Realm en App Conductor)** |
+| **Búfer a Bordo en Cabina** | Terreno | Inmediata | **Máxima (Resiliencia Extrema)** | Pings, FMS y DET en 148 propias y 34 adheridas | Almacenamiento flash industrial no volátil $\ge 8\text{ GB}$ con *wear-leveling* (RT-08.11). Soporta hasta 12 días = 288 h continuas por contingencias climáticas en Paso Los Libertadores (RT-10.05) y 72 h estándar (RT-03.13). | **On-Premise Terreno (Hardware Dispositivo SQLite WAL $\ge 8\text{ GB}$)** |
+| **Integración Telemática Terceros** | Integr. | < 500 ms | Alta (Flota Terceros) | Pings y eventos en ~192 tractos subcontratados | Homologación de APIs telemáticas de los 2 proveedores GPS existentes (Restricción 3, D-02). Cero intervención física de hardware. | **Nube (Microservicio Ingesta Telemática AKS)** |
+| **App Móvil Conductor (Canal Voluntario)** | Borde | < 1,0 s | Media-Alta (No Bloqueante) | Consultas y comprobantes en 454 choferes | Canal voluntario/incentivado (RT-17.01) para consultar viajes, liquidaciones y subir fotos PoD. No se impone como trazabilidad bloqueante (Restricciones 1 y 2, RT-12.11). | **Borde Móvil (App Flutter Android/iOS)** |
 | **Lector Portería y Terminal** | Terreno | < 2,0 s | Alta | Control acceso en 5 terminales | Verificación local de vigencias y enrolamiento ágil de conductores. | **On-Premise (Terminales Regionales)** |
 | **ERP Contable Heredado 2013** | Legado | N/A | Externa | Contabilidad y DTE SII | Sistema existente no reemplazable; opera en sala de San Bernardo. | **On-Premise (San Bernardo Sala 26 m²)** |
+
+---
+
+### Parámetros de Capacidad, Dimensionamiento y Tráfico para D4 (Formulario T-11 / RT-09.01)
+
+Para que la Dupla D4 dimensione la infraestructura física, cómputo en la nube (AKS), almacenamiento y enlaces de telecomunicaciones, D3 define las siguientes métricas oficiales:
+
+1. **Concurrencia de Personas Usuarias (RT-09.01 / Cap. 14.2):**
+   * *Usuarios internos concurrentes (hora punta)*: **50 a 80 usuarios** (22 operadores de Torre de Control, 15 despachadores de terminal, personal de finanzas, facturación y mantenimiento).
+   * *Conductores concurrentes en App Móvil*: **100 a 150 choferes** en accesos transitorios (inicio/cierre de turno, consultas breves).
+   * *Transportistas subcontratados en Portal Web*: **30 a 50 transportistas concurrentes** (consultas de preconformidad y liquidaciones).
+   * *Clientes corporativos en seguimiento*: **50 a 100 sesiones concurrentes** (monitoreo B2B de pedidos y cálculo de huella CO2).
+   * **Carga pico global simultánea:** **300 a 350 sesiones concurrentes activas**.
+
+2. **Definición de "Documentos Asociados al Viaje" y Tratamiento de Fotografías:**
+   * *Documentos livianos de texto y transacciones*: DET con folio CAF (40 KB), hoja de ruta electrónica, eventos de geocerca y pesaje. Se transmiten de forma síncrona o con búfer local prioritario.
+   * *Evidencia fotográfica pesada*: Fotos de comprobante de entrega firmado (PoD - *Proof of Delivery*) y fotografías de siniestros o disconformidades de carga (~300 KB cada una tras compresión WebP/JPEG local a bordo).
+   * *Estrategia de transmisión costo-eficiente*: En ruta celular se envían en segundo plano con prioridad baja (*background worker*) sin saturar la telemetría crítica. En contingencias sin red o roaming satelital de alto costo, las imágenes quedan resguardadas en la memoria flash $\ge 8\text{ GB}$ y se descargan automáticamente vía red Wi-Fi segura de alta velocidad al ingresar a cualquiera de los 5 terminales regionales de Curimón.
+
+3. **Volumen Anual de Telemetría y Crecimiento de Series Temporales:**
+   * Flota completa de **374 tractocamiones** recorriendo $\approx 41.000.000\text{ km/año}$ a velocidad comercial de 55 km/h $\rightarrow \approx 745.000\text{ horas de marcha/año}$.
+   * Frecuencia de muestreo acordada (30 s en movimiento / 5 min detenido) $\rightarrow \approx \mathbf{89,4\text{ millones de pings de posición/año}}$.
+   * *Volumen en crudo*: $\approx 5,7\text{ GB/año}$; con telemetría FMS CANbus (160 B/muestra), índices B-tree/BRIN y tablas de estado en TimescaleDB $\rightarrow \approx \mathbf{25\text{ a }35\text{ GB/año}}$.
+   * *Política de ciclo de vida*: 2 años en capa *Hot/Warm* en línea para consulta inmediata (RT-05.10); posterior agregación estadística horaria/diaria y compactación a capa fría (*Cold tier* en Azure Data Lake).
 
 ---
 

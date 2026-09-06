@@ -2,7 +2,7 @@
 
 **Licitación Pública TFEP-01/2026 · Caso 10: Transportes Curimón S.A.**
 **Dupla Responsable:** D3 (Marcel y Martín) · **Especialista en Datos y Persistencia:** Marcel
-**Estándares y Marcos de Cumplimiento:** Formulario T-7 Subdoc. 5 (FEP01 · p.57); RT-05.01 a RT-05.15 (FEP02 · p.11-12); RT-02.13 (FEP02 · p.6); RT-07.02, RT-07.04, RT-07.13 (FEP02 · p.18); RT-09.01, RT-09.02 (FEP02 · p.20); RT-11.10 (FEP02 · p.22); RT-16.06, RT-16.07, RT-16.09, RT-16.30 (FEP02 · p.29-31); Parámetros del Caso 10 para RT-05.10, RT-05.15, RT-05.29 (FEP03 · Cap. 15 · p.31); Ley N.° 21.719 (Protección de Datos Personales); ISO/IEC 25012 (Calidad de Datos); NIST SP 800-88 Rev. 1 (Eliminación Segura); Consultas Oficiales N.° 13, 18 y 21.
+**Estándares y Marcos de Cumplimiento:** Formulario T-7 Subdoc. 5 (FEP01 · p.57); RT-05.01 a RT-05.15 (FEP02 · p.11-12); RT-02.13 (FEP02 · p.6); RT-07.02, RT-07.04, RT-07.09 (Política 3-2-1-1-0), RT-07.13 (Frecuencia y RTO de Respaldos) (FEP02 · p.18); RT-09.01, RT-09.02 (FEP02 · p.20); RT-10.05 (FEP03 · p.32); RT-11.10 (FEP02 · p.22); RT-16.06, RT-16.07, RT-16.09, RT-16.30 (FEP02 · p.29-31); Parámetros del Caso 10 para RT-05.10, RT-05.15, RT-05.29 (FEP03 · Cap. 15 · p.31); Ley N.° 21.719 (Protección de Datos Personales); ISO/IEC 25012 (Calidad de Datos); NIST SP 800-88 Rev. 1 (Eliminación Segura); Consultas Oficiales N.° 13, 18 y 21.
 
 ---
 
@@ -248,18 +248,35 @@ Para satisfacer **RT-05.03** y el **Criterio de Aceptación 4**, la solución im
 
 ---
 
-### 1.8 Esquema de Respaldo 3-2-1-1-0 y Continuidad Operacional
+### 1.8 Esquema de Respaldo 3-2-1-1-0 y Continuidad Operacional (RT-07.09, RT-07.13 / Entregable D3-15)
 
-*(Referencia: FEP02 · RT-07.02, RT-07.04, RT-07.13 · p.18)*
+*(Referencia: FEP02 · RT-07.02, RT-07.04, RT-07.09, RT-07.13 · p.18; Coordinación Duplas D3 y D4)*
 
-Para garantizar la continuidad de servicio con un **RTO ≤ 4 horas** y un **RPO ≤ 15 minutos** conforme a los estándares transversales:
+Para garantizar la continuidad de servicio con un **RTO ≤ 4 horas** y un **RPO ≤ 15 minutos** conforme a los estándares transversales, se implementa la política **3-2-1-1-0** (RT-07.09):
 
 * **3 Copias de la Información:** 1 base productiva viva en Azure Chile Central (Multi-AZ), 1 réplica síncrona en zona secundaria, y 1 respaldo binario diario consolidado.
 * **2 Medios Diferentes:** Almacenamiento NVMe local de alta velocidad para la base transaccional viva y *Azure Blob Storage* con redundancia geográfica (GZRS) para los respaldos binarios.
 * **1 Copia Fuera de Sitio (Off-site):** Replicación asíncrona continua de logs de transacciones (*WAL-G archiving*) hacia una región de nube secundaria situada a más de 100 kilómetros de distancia física (Azure East US 2 o región alternativa).
-* **1 Copia Desconectada e Inmutable (Immutable Air-Gapped):** Snapshots semanales con retención bloqueada WORM que impiden cualquier borrado o cifrado no autorizado, incluso ante secuestro total de credenciales de infraestructura.
+* **1 Copia Desconectada e Inmutable (Immutable Air-Gapped):** Snapshots semanales con retención bloqueada WORM (*Object Lock Compliance*) que impiden cualquier borrado o cifrado no autorizado, incluso ante secuestro total de credenciales de infraestructura.
 * **0 Errores en Ensayos de Restauración:** Pipeline automatizado semanal que levanta una instancia efímera de PostgreSQL, restaura el último backup binario, aplica los WALs hasta el punto en el tiempo (*PITR*) y ejecuta pruebas automáticas de consistencia referencial (`pg_amcheck`).
 * **Cifrado Integral:** Datos en tránsito protegidos con **TLS 1.3**; datos en reposo cifrados mediante **AES-256 (TDE / LUKS)** con llaves custodiadas en Azure Key Vault gestionado (HSM FIPS 140-2 Nivel 3) con rotación anual.
+
+#### Matriz Oficial de Respaldo, Retención y RTO por Dominio de Datos (RT-07.13)
+
+En acuerdo de diseño conjunto con la Dupla D4 (Infraestructura), se formaliza la política de respaldo específica por cada dominio del modelo de datos:
+
+| Dominio de Datos | Período de Retención (RT-05.10) | Frecuencia y Estrategia de Respaldo | Tiempo Estimado de Restauración (RTO) | Dupla Responsable |
+| :--- | :---: | :--- | :---: | :---: |
+| **Jornada de conducción y su evidencia** | Mínimo 5 años | Continua (WAL Streaming) + Diaria consolidada | $\le$ 2 horas | **D3 + D4** |
+| **DET y antecedentes del viaje** | 6 años | Continua (WAL Streaming) + Diaria consolidada | $\le$ 2 horas | **D3 + D4** |
+| **Antecedentes de siniestros** | 10 años | Diaria consolidada + WORM mensual | $\le$ 4 horas | **D3 + D4** |
+| **Habilitaciones de conductores y flota** | Vigencia + 5 años | Diaria consolidada | $\le$ 2 horas | **D3 + D4** |
+| **Registros de carga peligrosa (DS 298)** | 5 años | Diaria consolidada + WORM mensual | $\le$ 2 horas | **D3 + D4** |
+| **Tiempos en instalaciones de cliente** | 3 años | Diaria consolidada | $\le$ 4 horas | **D3 + D4** |
+| **Liquidaciones a transportistas** | 6 años | Diaria + antes y después de cada cierre mensual | $\le$ 2 horas | **D3 + D4** |
+| **Series de posición y telemetría** | 2 años en línea + agregación | Continua (Micro-batch / TimescaleDB chunks) | $\le$ 4 horas | **D3 + D4** |
+
+> **Cuarta Copia Distribuida en el Borde Terrestre:** Los 374 dispositivos a bordo conservan en su memoria flash industrial ($\ge 8\text{ GB}$) el registro operacional íntegro de al menos 72 horas (y hasta 288 horas continuas en contingencias climáticas en Paso Los Libertadores según RT-10.05). Si bien no reemplaza el esquema de respaldo centralizado, constituye una fuente distribuida de reconciliación determinista ante cualquier pérdida accidental reciente de datos, reforzando la resiliencia integral de la arquitectura.
 
 ---
 

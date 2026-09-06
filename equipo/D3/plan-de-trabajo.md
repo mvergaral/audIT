@@ -52,7 +52,7 @@ Taller de Formulación de Proyectos Informáticos (ICI-5444) · Escuela de Infor
 | **D3-12** | Plan de Migración, Saneamiento y Ensayos de Preproducción         | 5             | RT-05.11–15, Consulta 21, Decisión 18      | RF-005, RNF-011 · D-18                        | Marcel  | Martín        | 05-09  | Completado    |
 | **D3-13** | Política de Retención, Cifrado Ley 21.719 y Reversibilidad        | 5             | RT-05.06–10, RT-11.10, Art. 85°            | RF-022, RNF-013, RNF-014 (Retención legal) · D-23, D-24 | Marcel  | Martín        | 05-09  | Completado    |
 | **D3-14** | Ficha T-19 Innovación Tipo 3 (Desconexión 72h / Unificación GPS) | 13            | Art. 28°, 29°, RT-26.01–08, APA 7         | RF-008, RF-009, RNF-002, RNF-008 · D-04, D-11, D-20 | Ambos   | Ambos          | 06-09  | Pendiente     |
-| **D3-15** | Tablas de Coordinación RT-03.13 (Offline) y RT-07.13 (Backup)      | 4.1 / 5 / 4.2 | RT-03.13, RT-07.13, RT-03.14                 | RF-009, RNF-002, RNF-008, RNF-012 · D-11, D-20 | Ambos   | Ignacio V (D4) | 05-09  | En curso      |
+| **D3-15** | Tablas de Coordinación RT-03.13 (Offline) y RT-07.13 (Backup)      | 4.1 / 5 / 4.2 | RT-03.13, RT-07.13, RT-03.14                 | RF-009, RNF-002, RNF-008, RNF-012 · D-11, D-20 | Ambos   | Ignacio V (D4) | 05-09  | Completado (coordinado con D4) |
 | **D3-16** | Guión de Exposición y Preparación de Defensa (Art. 45°)         | Presentación | Art. 45°, Formulario T-22                   | Art. 45°, Formulario T-22 · D2-12              | Ambos   | Ambos          | 06-09  | Pendiente     |
 
 ---
@@ -166,8 +166,8 @@ Taller de Formulación de Proyectos Informáticos (ICI-5444) · Escuela de Infor
    - *Impacto*: Ceguera operativa, pérdida de eventos de jornada y sobreestadías no cobradas por falta de sellos de tiempo continuos.
 2. **Tecnología que la Sustenta:**
 
-   - *Arquitectura Edge-to-Cloud con Store-and-Forward tolerante a partición de red*: Almacenamiento local estructurado a bordo (SQLite embebido cifrado con SQLCipher / AES-256) con capacidad de retención de hasta 120 horas de series de tiempo comprimidas en protocolo Protocol Buffers (Protobuf).
-   - *Capa de Ingestión Telemática Unificada*: Conectores adaptadores multifuente en la nube (API scraping gobernado, ingestión síncrona/asíncrona y webhooks) combinados con una App Móvil con geolocalización autónoma para los 34 camiones sin GPS hardware, normalizando todo evento bajo el estándar sectorial telemático.
+   - *Arquitectura Edge-to-Cloud con Store-and-Forward tolerante a partición de red*: Almacenamiento local estructurado a bordo (SQLite embebido cifrado con SQLCipher / AES-256) en flash industrial no volátil $\ge 8\text{ GB}$ con *wear-leveling* (RT-08.11), asegurando retención de meses de telemetría y cubriendo holgadamente los cierres de hasta 12 días continuos (288 h) del Paso Los Libertadores (RT-10.05) y las 72 h mínimas de desconexión (RT-03.13).
+   - *Capa de Ingestión Telemática Unificada*: Conectores adaptadores multifuente en la nube (homologación de APIs de los 2 proveedores GPS existentes para ~192 terceros según Restricción 3 y D-02) combinados con kit subvencionado para los 34 camiones sin GPS hardware por adhesión voluntaria, normalizando todo evento bajo el estándar sectorial telemático.
    - *Emisión de DTE Tributario en Sombra*: Pre-asignación de folios CAF autorizados por el SII en memoria protegida del dispositivo a bordo, permitiendo emitir la guía de despacho electrónica firmada localmente en puntos de carga sin señal y sincronizando al ERP contable tras la reconexión (Consulta N.° 15).
 3. **Nivel de Madurez Tecnológica (TRL) y Citas APA 7.ª Edición:**
 
@@ -179,16 +179,15 @@ Taller de Formulación de Proyectos Informáticos (ICI-5444) · Escuela de Infor
    - *Procedimiento de Sincronización Determinista (RT-03.12 y RT-03.13)*: Reconciliación basada en marcas temporales de reloj GPS confiable (*monotonic clock*), resolución determinista de conflictos sin pérdida de integridad y tiempo de sincronización total ≤ 20 minutos por camión.
    - *Capacidad ante Reconexión Simultánea*: Diseño de cola elástica en Azure Event Hubs capaz de absorber la ráfaga concurrente de más de 300 camiones saliendo simultáneamente de zonas de sombra sin degradar la torre.
    - *Declaración Explícita de Funciones NO Disponibles en Modo Desconectado (RT-03.13)*:
-     * No disponible: Notificaciones en tiempo real al cliente final, asignación de nuevos viajes no pre-cargados, consulta interactiva de liquidaciones.
-     * Procedimiento manual supletorio documentado para evitar observaciones graves.
-   - *Hardware On-Premise y RAID (RT-03.14)*: Declaración de tolerancia a falla de al menos 1 disco (RAID-1 en nodos de borde de terminales y flash industrial con wear-leveling en cabina).
+     * Matriz conjunta D3-D4 formalizada con 10 funciones críticas, procedimientos manuales supletorios y asignación de dueños (Subdoc. 4.1 §2.5).
+   - *Hardware On-Premise y RAID (RT-03.14)*: Declaración de tolerancia a falla de al menos 1 disco (RAID-1 en nodos de borde de terminales, justificado frente a RAID-10/6 por D4 en Subdoc 4.2, y flash industrial $\ge 8\text{ GB}$ con wear-leveling en cabina según RT-08.11).
 5. **Impacto Económico Preliminar (Informe 1):**
 
    - Estimación paramétrica de inversión en licencias/desarrollo de conectores vs. ahorro en penalizaciones contractuales por pérdida de señal, reducción de horas-hombre en torre de control y recupero de sobreestadías (Consulta Oficial N.° 5: estimación conceptual en Informe 1; flujo de caja valorizado en Informe 3).
 6. **Indicadores de Verificación del Beneficio:**
 
    - *Línea Base*: 0 % de camiones con trazabilidad continua en zonas de sombra; 3 plataformas aisladas; 34 camiones sin visibilidad.
-   - *Meta*: 100 % de eventos de viaje y jornada recuperados tras 72 h sin pérdida de paquetes; 100 % de la flota visible en una única torre de control; latencia de sincronización < 15 min. Momento de medición: Marcha blanca Etapa 1 (Mes 12 a 15).
+   - *Meta*: 100 % de eventos de viaje y jornada recuperados tras 72 h sin pérdida de paquetes; 100 % de la flota visible en una única torre de control; latencia de sincronización < 15 min (supera el umbral de ≤ 20 min de FEP03 Cap. 15 p.31). Momento de medición: Marcha blanca Etapa 1 (Mes 12 a 15).
 7. **Riesgos de Adopción, Probabilidad, Impacto y Mitigación:**
 
    - *Riesgo*: Negativa de un proveedor GPS externo a facilitar acceso de scraping/datos. (Probabilidad: Media, Impacto: Alto).
@@ -203,9 +202,9 @@ D3 asume la fundamentación técnica y formalización de supuestos para las **16
 | N.°         | Decisión Pendiente del Caso 10                                            | Tratamiento y Supuesto Arquitectónico / Persistencia en D3                                                                                                                                       |
 | ------------ | -------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **1**  | Obtención y acreditación de jornada de conductores externos              | Registro inalterable con sellos de tiempo criptográficos, firma electrónica en App móvil y consulta bloqueante previa al despacho (RT-02.13, RT-05.01, RT-16.14).                              |
-| **3**  | Destino del sistema de gestión de transporte de 2013                      | Sustitución integral de módulos operativos de 2013 mediante Capa Anticorrupción (ACL); ERP contable se preserva vía API para facturación/DTE (RT-02.14, Consulta 13).                        |
+| **3**  | Destino del sistema de gestión de transporte de 2013                      | Sustitución integral de módulos operativos de 2013 mediante Capa Anticorrupción (ACL); ERP contable se preserva vía API para facturación/DTE (RT-05.20 obligatorio, RT-02.14 deseable, Consulta 13). |
 | **4**  | Unificación de 3 GPS externos y 34 camiones sin hardware                  | Capa de ingestión telemática multicanal en la nube + App móvil con geolocalización de respaldo en viajes activos para unidades sin dispositivo (Innovación Tipo 3).                          |
-| **8**  | Registro de llegada/salida en porterías de clientes sin instalar hardware | Geocercas virtuales telemáticas de alta precisión (±15 m) con marca temporal GPS certificada y registro automático de entrada/salida sin intervención humana (Restricción 9).               |
+| **8**  | Registro de llegada/salida en porterías de clientes sin instalar hardware | Geocercas virtuales telemáticas de alta precisión (±15 m, supuesto de diseño GNSS multi-constelación) con marca temporal GPS certificada y registro automático de entrada/salida sin intervención humana (Restricción 9). |
 | **9**  | Emisión de DTE tributario en puntos de carga sin cobertura celular        | Pre-foliado de contingencia autorizado por SII (Res. Ex. N.° 107/2014) con stock de folios CAF en memoria segura de cabina y sincronización diferida (Consulta 15).                             |
 | **11** | Frecuencia de muestreo de posición y telemetría a bordo                  | Frecuencia adaptativa: 30 s en movimiento con cobertura, 5 min en ralentí/detención, compresión y almacenamiento en buffer local ante pérdida de enlace (Decisión conjunta con D4).          |
 | **12** | Telemetría de fábrica inactiva en 61 tractocamiones propios              | Integración de solo lectura mediante lector inductivo en puerto FMS/CANbus (SAE J1939) sin vulnerar garantías de motor (Restricción 6, Consulta 14).                                           |
@@ -214,7 +213,7 @@ D3 asume la fundamentación técnica y formalización de supuestos para las **16
 | **16** | Estimación del costo real de camiones subcontratados                      | Algoritmo analítico de imputación basado en tarifa contractual, incentivos por tramo, peajes reales e imputación de combustible anticipado.                                                    |
 | **17** | Información de los 3 contratos bajo costo antes de 2027                   | Despliegue prioritario de la capa analítica de rentabilidad de rutas en la**Etapa 1** para respaldar la renegociación contractual temprana.                                               |
 | **18** | Control y vigencia de las ~6.000 fechas de vencimiento                     | Módulo de vigencias con motor de alertas escalonadas (60, 30, 7 días) y verificación documental individual durante la migración (RT-05.15, RT-16.21, Consulta 21).                            |
-| **20** | Gestión ante cierre de 12 días por nieve en Los Libertadores             | Buffer local extendido a bordo, preservación de estados en repositorios locales y sincronización determinista masiva al habilitarse el paso sin saturar enlaces.                                |
+| **20** | Gestión ante cierre de 12 días por nieve en Los Libertadores             | Almacenamiento físico flash industrial no volátil $\ge 8\text{ GB}$ con *wear-leveling* (RT-08.11), preservación de estados en SQLite local y sincronización elástica determinista al habilitarse el paso sin saturar enlaces (RT-10.05). |
 | **22** | Cálculo de emisiones CO2e/ton-km para flota propia y terceros             | Motor analítico bajo estándar GLEC Framework / ISO 14083 con datos directos CANbus en flota propia y factores ponderados en terceros con consolidación mensual (RT-05.29, Consulta 12).        |
 | **23** | Consentimiento granular y revocable sobre datos compartidos                | Portal del transportista con matriz de permisos por camión/viaje, registro de auditoría de accesos a datos de localización y cumplimiento Ley 21.719 (RT-16.09, RT-16.30).                     |
 | **24** | Inalterabilidad y protección de la evidencia de jornada                   | Base de datos relacional con firmas hash encadenadas y almacenamiento inmutable (WORM) para impedir manipulación por parte de la empresa o conductores (RT-05.03).                               |
@@ -311,8 +310,8 @@ Las presentaciones preparatorias tienen una duración estricta de **15 minutos d
 - [x] Plan de migración de datos con protocolo de verificación documental individual para las ~6.000 vigencias y 2 ensayos en Preproducción (Completado en Subdoc. 5).
 - [x] Tabla de retención con plazos normativos (10a, 6a, 5a, 3a, 2a) y procedimiento de eliminación segura (Completado en Subdoc. 5).
 - [ ] Ficha T-19 de Innovación Tipo 3 completa con los 7 elementos del Art. 29°, citas APA 7.ª ed. y tabla RT-03.13 (Entregable D3-14 · Pendiente).
-- [x] Coherencia cruzada absoluta con los requerimientos de D2 y la infraestructura física de D4 (Completado y homologado).
-- [ ] Tablas de coordinación RT-03.13 y RT-07.13 con D4 (Entregable D3-15 · En curso).
+- [x] Coherencia cruzada con los requerimientos de D2 y la infraestructura física de D4 (Homologación técnica S4 completada).
+- [x] Tablas de coordinación RT-03.13 y RT-07.13 con D4 (Entregable D3-15 · Completado y coordinado con D4).
 - [ ] Guión de presentación ensayado por ambos integrantes dentro de los tiempos estipulados (Entregable D3-16 · Pendiente).
 
 ---
