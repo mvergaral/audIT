@@ -107,8 +107,9 @@ En estricta conformidad con **RT-05.02**, la solución adopta una **Arquitectura
 2. **Capa de Telemetría y Streaming (Sistema AP — TimescaleDB / Kafka / Azure Cosmos DB):**
    * Para absorber los eventos continuos generados por la flota en **≈ 41 millones de km anuales**, el sistema prioriza la Disponibilidad (A) y la Tolerancia a Particiones (P) bajo **Consistencia Eventual (BASE)**.
    * Los dispositivos a bordo acumulan las lecturas en su búfer local (*SQLite WAL*) durante las zonas de sombra (> 80 km en Ruta 5 o pasos cordilleranos). Al recuperar conectividad 4G, transmiten en ráfagas asíncronas masivas sin competir por recursos con la base de datos relacional central.
-3. **Capa de Búfer a Bordo en Cabina (SQLite 3 Embebido con WAL):**
-   * Desplegado en las 374 unidades físicas. Opera como almacén local autónomo con modo WAL (*Write-Ahead Logging*), garantizando persistencia segura y transacciones atómicas ante caídas intempestivas de alimentación eléctrica del camión.
+3. **Capa de Búfer a Bordo en Cabina y Almacenamiento Offline en Móvil (SQLite 3 Embebido con WAL):**
+   * *Unidades con Kit Físico a Bordo (148 unidades)*: Desplegado en el hardware telemático embarcado en los tractocamiones propios y de terceros adheridos (D4, D-02, Restricción 3). Opera como almacén local autónomo con modo WAL (*Write-Ahead Logging*), garantizando persistencia segura y transacciones atómicas ante caídas intempestivas de alimentación eléctrica del camión.
+   * *Flota Tercera sin Kit y Unidades sin GPS (226 camiones)*: En cumplimiento de la Restricción 3 y la decisión D-26 de D2, el almacenamiento seguro local opera mediante SQLite/Realm embebido en el espacio seguro (*sandbox*) de la App Móvil del conductor, garantizando la retención offline de 72 horas de eventos de viaje, marcaciones de jornada (Art. 25 bis) y firmas de entrega sin intervenir físicamente el vehículo del transportista.
 4. **Capa de Caché y Baja Latencia (Redis 7.2 Cluster):**
    * Almacena en memoria RAM las geometrías espaciales de las geocercas de los 1.400 puntos de carga/descarga y terminales, permitiendo evaluar eventos de cruce espacial en < 5 ms sin golpear el disco.
 
@@ -232,7 +233,7 @@ El esquema relacional en PostgreSQL 16 implementa identificadores unívocos UUID
 
 Para satisfacer **RT-05.03** y el **Criterio de Aceptación 4**, la solución implementa una infraestructura de trazabilidad inalterable oponible ante tribunales y compañías de seguros:
 
-1. **Trigger de Auditoría Transaccional:** Toda sentencia `INSERT`, `UPDATE` o `DELETE` sobre entidades maestras, de viaje y de habilitaciones dispara un trigger a nivel de fila (`AFTER STATEMENT`) que inserta un registro en la tabla particionada `auditoria_evento`.
+1. **Trigger de Auditoría Transaccional:** Toda sentencia `INSERT`, `UPDATE` o `DELETE` sobre entidades maestras, de viaje y de habilitaciones dispara un trigger a nivel de fila (`AFTER INSERT OR UPDATE OR DELETE ... FOR EACH ROW`) que inserta un registro en la tabla particionada `auditoria_evento`, capturando atómicamente los estados `OLD` y `NEW`.
 2. **Estructura Forense del Registro de Auditoría:**
    * Identificador del operador (`usuario_id`), IP de origen, dispositivo y sello temporal UTC sincronizado por NTP estrato 1.
    * Tabla intervenida, UUID del registro y tipo de operación (`INSERT`, `UPDATE`, `DELETE`).
@@ -335,7 +336,7 @@ En estricto apego a los plazos legales fijados en el **Capítulo 15 de las Bases
 | **Habilitaciones de Conductores y Flota** | **Su vigencia y 5 años más** | Exigencia expresa del Capítulo 15 (p.31) para trazabilidad histórica de aptitud laboral y vial.                | Mantenido en caliente durante vigencia; archivado frío posterior.                                                                                      |
 | **Registros de Jornada y Tacógrafo**     |          **5 años**          | Fiscalización Dirección del Trabajo (Art. 25 bis Código del Trabajo y normativa laboral de transporte).       | Purga criptográfica segura; conservación de resúmenes estadísticos.                                                                                 |
 | **Cargas Peligrosas (DS 298)**            |          **5 años**          | Decreto Supremo N.° 298 (MTT) y fiscalizaciones de la Seremi de Salud y Medio Ambiente.                         | Archivado inmutable para auditorías sectoriales.                                                                                                       |
-| **Tiempos en Clientes y Geocercas**       |          **3 años**          | Respaldo probatorio fehaciente ante controversias por cobro de sobreestadías ($340M facturados, 71 % objetado). | Agregación mensual de tiempos; purga de trazas GPS crudas.                                                                                             |
+| **Tiempos en Clientes y Geocercas**       |          **3 años**          | Respaldo probatorio fehaciente ante controversias por cobro de sobreestadías (\$340M facturados, 71 % objetado). | Agregación mensual de tiempos; purga de trazas GPS crudas.                                                                                             |
 | **Series de Posición y Telemetría**     |     **2 años en línea**     | Diagnóstico operacional y reconstrucción telemática de viajes recientes (RT-05.10 del Caso).                  | **Política de Agregación para > 2 años**: Se conservan promedios horarios de velocidad y distancias; se purgan pings individuales de terceros. |
 
 ---
@@ -361,8 +362,9 @@ Para cumplir con **RT-05.05** y viabilizar los entregables analíticos y de BI a
 
 *(Referencia: FEP02 · RT-05.06 · p.11; NIST SP 800-88 Rev. 1; Ley N.° 21.719)*
 
-1. **Procedimiento Verificable de Eliminación Segura (NIST SP 800-88 Rev. 1):**
-   Al cumplirse los plazos de retención o ante la solicitud de revocación de consentimiento de un transportista subcontratado (Ley N.° 21.719), se ejecuta la destrucción criptográfica (*Crypto-shredding*) de las llaves FLE de cifrado asociadas a los identificadores del titular, volviendo la información matemáticamente irrecuperable en todos los medios de almacenamiento y respaldos.
+1. **Procedimiento Verificable de Eliminación Segura y Conciliación Ley N.° 21.719 (NIST SP 800-88 Rev. 1):**
+   * *Revocación de Consentimiento vs. Retención Legal Mandatoria*: Ante la solicitud de revocación de consentimiento de un transportista o conductor subcontratado bajo la Ley N.° 21.719, el sistema suspende de forma inmediata e irrevocable la captura telemática futura, el rastreo GPS activo y la visibilidad de sus datos ante clientes o terceros. Sin embargo, para no infringir las obligaciones legales de conservación del Estado de Chile (Art. 25 bis del Código del Trabajo por 5 años, Código Tributario/SII por 6 años y responsabilidad civil por siniestros por 10 años), los datos históricos precedentes no se destruyen de inmediato: se bloquean lógicamente, se desvinculan del uso operacional y quedan en cuarentena criptográfica de solo lectura, accesibles exclusivamente ante requerimientos judiciales o fiscalizaciones de la autoridad.
+   * *Destrucción Criptográfica Definitiva (Crypto-shredding)*: Una vez cumplidos íntegramente los plazos legales estatutarios de retención, se gatilla automáticamente el procedimiento de purga mediante *Crypto-shredding*, destruyendo las llaves de cifrado a nivel de campo (FLE) en Azure Key Vault asociadas a los identificadores del titular. Esto renderiza la información matemáticamente irrecuperable en todos los medios de almacenamiento activos, réplicas y respaldos sin comprometer la integridad estructural de la base de datos.
 2. **Garantía de Reversibilidad Contractual (Fin del Contrato a 36 o 56 meses — RT-05.06):**
    audIT garantiza formalmente la entrega íntegra del patrimonio de datos propiedad de Transportes Curimón S.A. en **formatos abiertos, documentados y sin costo adicional**, eliminando cualquier riesgo de dependencia de proveedor (*no vendor lock-in*):
    * *Base transaccional completa*: Volcado SQL estándar (`pg_dump` con DDL y DML limpios) compatible con cualquier motor PostgreSQL estándar.

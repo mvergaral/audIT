@@ -23,22 +23,22 @@ incumplimiento o inaplicabilidad. No se deducen requisitos faltantes por continu
 
 | Bloque | Códigos citados | RF/RNF D2 relacionados | Dueño | Verificado |
 |---|---|---|---|---|
-| Arquitectura lógica | RT-02.01, RT-02.04, RT-02.05, RT-02.06, RT-02.08, RT-02.10, RT-02.13, RT-02.14 | RF-001, RF-013, RF-028, RNF-006 | D3 | — |
-| Escalamiento y diseño de capacidad | RT-02.02, RT-02.12 | RF-008, RNF-011 | D3 + D4 | — |
+| Arquitectura lógica | RT-02.01, RT-02.04, RT-02.05, RT-02.06, RT-02.08, RT-02.10, RT-02.13, RT-02.14 | RF-001, RF-013, RF-028, RNF-006 | D3 | Sí (D3: subdoc4.1 §1-§3) |
+| Escalamiento y diseño de capacidad | RT-02.02, RT-02.12 | RF-008, RNF-011 | D3 + D4 | Parcial (D3 verificado en subdoc4.1 §1.2 / D4 pend.) |
 | Infraestructura de nube | RT-03.01 a RT-03.24 | RNF-002, RNF-008, RNF-009, RNF-010, RNF-011 | D4 | — |
-| Desarrollo y ambientes | RT-04.14 | RNF-013 | D3 | — |
-| Gestión de datos e integración | RT-05.01 a RT-05.11, RT-05.13 a RT-05.21, RT-05.23 a RT-05.30 | RF-004, RF-005, RF-007, RF-016, RF-017, RF-019, RF-023, RNF-012, RNF-014 | D3 | — |
+| Desarrollo y ambientes | RT-04.14 | RNF-013 | D3 | Sí (D3: subdoc4.1 §1.3) |
+| Gestión de datos e integración | RT-05.01 a RT-05.11, RT-05.13 a RT-05.21, RT-05.23 a RT-05.30 | RF-004, RF-005, RF-007, RF-016, RF-017, RF-019, RF-023, RNF-012, RNF-014 | D3 | Sí (D3: subdoc5 §1-§3 y subdoc4.1 §3) |
 | Seguridad física de sala | RT-06.01 a RT-06.34 | RNF-008 | D4 | — |
 | Recuperación y respaldo | RT-07.01 a RT-07.14 | RNF-012, RNF-014 | D4 | — |
 | Equipamiento y ciclo de vida | RT-08.01 a RT-08.19 | RNF-004, RNF-005, RNF-010 | D4 | — |
-| Desempeño y latencias | RT-09.01 a RT-09.10 | RF-001, RF-013, RF-027, RNF-002 | D3 + D4 | — |
+| Desempeño y latencias | RT-09.01 a RT-09.10 | RF-001, RF-013, RF-027, RNF-002 | D3 + D4 | Parcial (D3 verificado en subdoc4.1 §2.4 / D4 pend.) |
 | Continuidad operacional | RT-10.01 a RT-10.09 | RNF-008 | D4 | — |
-| Seguridad y privacidad | RT-11.01, RT-11.10 | RF-022, RNF-013 | D3 + D4 | — |
+| Seguridad y privacidad | RT-11.01, RT-11.10 | RF-022, RNF-013 | D3 + D4 | Parcial (D3 verificado en subdoc5 §1.6 / D4 pend.) |
 | Identidad y acceso | RT-12.11, RT-12.12 | RF-020, RF-021, RF-022, RNF-013 | D4 | — |
 | Experiencia de usuario | RT-13.08, RT-13.12 | RNF-001, RF-027 | D1 | — |
 | RT-15: sostenibilidad / certificaciones, según fuente | FEP02: RT-15.02, RT-15.03; FEP03: RT-15.02 | Por contrastar; sin enlace funcional confirmado | D4 | — |
-| Auditoría y trazabilidad | RT-16.06, RT-16.07, RT-16.09, RT-16.10, RT-16.14, RT-16.21, RT-16.30 | RF-004, RF-011, RF-019, RNF-012 | D3 + D4 | — |
-| Integración vehicular y periféricos | RT-17.01, RT-17.06 | RF-007, RNF-005 | D3 + D4 | — |
+| Auditoría y trazabilidad | RT-16.06, RT-16.07, RT-16.09, RT-16.10, RT-16.14, RT-16.21, RT-16.30 | RF-004, RF-011, RF-019, RNF-012 | D3 + D4 | Parcial (D3 verificado en subdoc5 §1.7 / D4 pend.) |
+| Integración vehicular y periféricos | RT-17.01, RT-17.06 | RF-007, RNF-005 | D3 + D4 | Parcial (D3 verificado en subdoc4.1 §3.5 / D4 pend.) |
 | Atención y traslado a sitios alejados | RT-21.06, RT-21.16 | RNF-008 | D4 | — |
 | Calidad y empresa | RT-23.01 a RT-23.04 | — | D1 | — |
 | Innovaciones | RT-26.01 | RF-020, RF-022, RF-023, RF-026 | D2 | — |
@@ -48,13 +48,13 @@ incumplimiento o inaplicabilidad. No se deducen requisitos faltantes por continu
 Separar referencias generales, citas compartidas y cobertura por verificar. No se
 eliminan citas ni se crean ausencias normativas a partir de saltos de secuencia.
 
-| Código | Dónde aparece | Problema | Resolver con |
-|---|---|---|---|
-| RT-02, RT-03, RT-05, RT-11, RT-16, RT-17, RT-26 | plan-de-trabajo D3 | Referencia a capítulo, no a requisito | Confirmar si alude a un requisito puntual |
-| RT-26.01 | plan-de-trabajo D3 | Requisito FEP02 de ubicación de innovaciones en arquitectura; cita compartida, no duplicado demostrado | D2 + D3 |
-| RT-06.15 | D4-MATERIAL-INFORME1.md, apartado de contención de pasillos | Sí está citado; verificar fuente y evidencia, no tratar como ausencia | D4 |
-| RT-15.02, RT-15.03 | D4-MATERIAL-INFORME1.md | Desambiguar: FEP02 §15.1 p.27 trata eficiencia/huella de la solución; FEP03 cap.15 trata certificaciones en RT-15.02. No equivalen automáticamente a telemática ni a emisiones de transporte | D4 |
-| Cobertura normativa completa | Inventario pendiente de contraste literal | Comparar requisitos existentes y aplicables en las Bases con las citas; no inferir faltantes por secuencia | Todas las duplas |
+| Código | Dónde aparece | Problema | Resolver con | Estado |
+|---|---|---|---|---|
+| RT-02, RT-03, RT-05, RT-11, RT-16, RT-17, RT-26 | plan-de-trabajo D3 | Referencia a capítulo, no a requisito | D3 desambiguó todas las referencias generales por rangos específicos (RT-02.01–14, RT-03.01–24, RT-05.01–30, RT-11.01–10, RT-16.01–30, RT-17.01–06, RT-26.01–08) | **Resuelto por D3** |
+| RT-26.01 | plan-de-trabajo D3 | Requisito FEP02 de ubicación de innovaciones en arquitectura; cita compartida, no duplicado demostrado | D3 mapeó la ubicación arquitectónica de Innovación Tipo 3 (Capas 1, 5 y 6) según FEP02 §26.1 p.44 | **Resuelto por D3** |
+| RT-06.15 | D4-MATERIAL-INFORME1.md, apartado de contención de pasillos | Sí está citado; verificar fuente y evidencia, no tratar como ausencia | D4 | Pendiente D4 |
+| RT-15.02, RT-15.03 | D4-MATERIAL-INFORME1.md | Desambiguar: FEP02 §15.1 p.27 trata eficiencia/huella de la solución; FEP03 cap.15 trata certificaciones en RT-15.02. No equivalen automáticamente a telemática ni a emisiones de transporte | D4 | Pendiente D4 |
+| Cobertura normativa completa | Inventario pendiente de contraste literal | Comparar requisitos existentes y aplicables en las Bases con las citas; no inferir faltantes por secuencia | Todas las duplas | En proceso |
 
 ## 4. Checklist de verificación por dupla
 
@@ -72,9 +72,10 @@ eliminan citas ni se crean ausencias normativas a partir de saltos de secuencia.
 
 ### D3
 
-- [ ] Verificar que los RT-02, RT-04, RT-05 y RT-16 citados son correctos y completos.
-- [ ] Comparar la cobertura RT-05 con el texto aplicable, sin completar secuencias supuestas.
-- [ ] Verificar la cobertura de seguridad por requisito y fuente, no por numeración.
+- [x] Verificar que los RT-02, RT-04, RT-05 y RT-16 citados son correctos y completos (contrastados con FEP02 y FEP03 en subdoc4.1 y subdoc5).
+- [x] Comparar la cobertura RT-05 con el texto aplicable, sin completar secuencias supuestas (RT-05.01 a RT-05.11, RT-05.13 a RT-05.21, RT-05.23 a RT-05.30 verificados).
+- [x] Verificar la cobertura de seguridad por requisito y fuente, no por numeración (RT-11.10 y RT-16.06/.07 contrastados con Ley 21.719 y FEP02).
+- [x] Resolver observaciones técnicas de D2: trigger a nivel de fila `FOR EACH ROW` en `subdoc5.md`, ventana de idempotencia de 7 días (168 h) para tolerar 72 h offline en `subdoc4.1.md`, contingencia offline DET con CAF en `subdoc4.1.md`, y conciliación de revocación Ley 21.719 con retención legal estatutaria en `subdoc5.md`.
 
 ### D4
 
@@ -88,10 +89,10 @@ eliminan citas ni se crean ausencias normativas a partir de saltos de secuencia.
 |---|---|---:|---:|
 | D1 | 2 | 0 | 2 |
 | D2 | 1 | 0 | 1 |
-| D3 | 8 | 0 | 8 |
+| D3 | 8 | 8 | 0 |
 | D4 | 13 | 0 | 13 |
 
-**19 bloques únicos; 24 asignaciones dupla-bloque; 0 bloques verificados.** Los cinco
+**19 bloques únicos; 24 asignaciones dupla-bloque; 8 bloques verificados (D3 completos/parciales en componente lógico).** Los cinco
 bloques compartidos D3 + D4 cuentan una vez para cada dupla: capacidad, desempeño,
 seguridad/privacidad, auditoría e integración vehicular/periféricos. Las asignaciones
 siguen siendo propuestas, no aceptación de responsabilidad por sus destinatarios.

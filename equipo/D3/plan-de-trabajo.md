@@ -36,24 +36,24 @@ Taller de Formulación de Proyectos Informáticos (ICI-5444) · Escuela de Infor
 
 ## 2. Matriz Maestra de Entregables D3
 
-| Código         | Entregable / Artefacto                                              | Subdoc.       | Requisitos Base                              | Líder  | Revisor        | Cierre | Estado        |
-| --------------- | ------------------------------------------------------------------- | ------------- | -------------------------------------------- | ------- | -------------- | ------ | ------------- |
-| **D3-01** | Diagrama y Memoria de Arquitectura Lógica (8 Capas)                | 4.1           | RT-02.01, RT-02.02, ISO/IEC/IEEE 42010       | Martín | Marcel         | 04-09  | Completado    |
-| **D3-02** | Registro de Decisiones de Arquitectura (ADR inicial)                | 4.1           | RT-02.04, Art. 19°                          | Martín | Marcel         | 04-09  | Completado    |
-| **D3-03** | Diseño de Resiliencia y Servicios de Negocio Stateless             | 4.1           | RT-02.05, RT-02.08, RT-09.01                 | Martín | Marcel         | 05-09  | Completado    |
-| **D3-04** | Especificación de Integración, APIs y Capa Anticorrupción        | 4.1           | RT-05.16–21, RT-02.14, Consultas 13, 17     | Martín | Marcel         | 05-09  | Completado    |
-| **D3-05** | Modelo de Capa Analítica y Costeo por Km/Ruta (BI)                 | 4.1 / 5       | RT-05.25–30, Consulta 18, Decisiones 15, 16 | Martín | Marcel         | 05-09  | Completado    |
-| **D3-06** | Inventario de Componentes Lógicos (para Emplazamiento D4)          | 4.1 / 4.2     | RT-03.01–24, Art. 16°, Formulario T-11     | Martín | Alonso (D4)    | 04-09  | Completado    |
-| **D3-07** | Modelo de Dominio del Negocio y Entidades Principales               | 5             | RT-02.13, FEP03 Cap. 4 y 14                  | Marcel  | Martín        | 04-09  | Completado    |
-| **D3-08** | Diccionario de Datos, Sensibilidades y Datos Maestros (MDM)         | 5             | RT-05.01, RT-05.09, ISO 25012                | Marcel  | Martín        | 05-09  | Completado    |
-| **D3-09** | Matriz de Persistencia y Justificación Teorema CAP                 | 5             | RT-05.02, T-7 Subdoc. 5                      | Marcel  | Martín        | 04-09  | Completado    |
-| **D3-10** | Modelo Transaccional, Trazabilidad y Auditoría Inalterable         | 5             | RT-05.03, RT-16.06, RT-16.07                 | Marcel  | Martín        | 05-09  | Completado    |
-| **D3-11** | Estrategia de Desempeño: Indexación, Partición y Caché          | 5             | T-7 Subdoc. 5, RT-09.02                      | Marcel  | Martín        | 05-09  | Completado    |
-| **D3-12** | Plan de Migración, Saneamiento y Ensayos de Preproducción         | 5             | RT-05.11–15, Consulta 21, Decisión 18      | Marcel  | Martín        | 05-09  | Completado    |
-| **D3-13** | Política de Retención, Cifrado Ley 21.719 y Reversibilidad        | 5             | RT-05.06–10, RT-11.10, Art. 85°            | Marcel  | Martín        | 05-09  | Completado    |
-| **D3-14** | Ficha T-19 Innovación Tipo 3 (Desconexión 72h / Unificación GPS) | 13            | Art. 28°, 29°, RT-26.01–08, APA 7         | Ambos   | Ambos          | 06-09  | Pendiente     |
-| **D3-15** | Tablas de Coordinación RT-03.13 (Offline) y RT-07.13 (Backup)      | 4.1 / 5 / 4.2 | RT-03.13, RT-07.13, RT-03.14                 | Ambos   | Ignacio V (D4) | 05-09  | En curso      |
-| **D3-16** | Guión de Exposición y Preparación de Defensa (Art. 45°)         | Presentación | Art. 45°, Formulario T-22                   | Ambos   | Ambos          | 06-09  | Pendiente     |
+| Código         | Entregable / Artefacto                                              | Subdoc.       | Requisitos Base y Normativa                  | Trazabilidad D2 (RF / RNF / Decisión)          | Líder  | Revisor        | Cierre | Estado        |
+| --------------- | ------------------------------------------------------------------- | ------------- | -------------------------------------------- | ---------------------------------------------- | ------- | -------------- | ------ | ------------- |
+| **D3-01** | Diagrama y Memoria de Arquitectura Lógica (8 Capas)                | 4.1           | RT-02.01, RT-02.02, ISO/IEC/IEEE 42010       | RF-001, RF-028, RNF-006 · D-03, D-06          | Martín | Marcel         | 04-09  | Completado    |
+| **D3-02** | Registro de Decisiones de Arquitectura (ADR inicial)                | 4.1           | RT-02.04, Art. 19°                          | RNF-006, RNF-009 · D-03, D-09                  | Martín | Marcel         | 04-09  | Completado    |
+| **D3-03** | Diseño de Resiliencia y Servicios de Negocio Stateless             | 4.1           | RT-02.05, RT-02.06, RT-02.08, RT-09.01       | RF-001, RNF-002 (Idempotencia 7d) · D-06, D-11 | Martín | Marcel         | 05-09  | Completado    |
+| **D3-04** | Especificación de Integración, APIs y Capa Anticorrupción        | 4.1           | RT-05.16–21, RT-02.14, Consultas 13, 17     | RF-013, RF-014 (DET offline CAF), RNF-006 · D-03, D-09 | Martín | Marcel         | 05-09  | Completado    |
+| **D3-05** | Modelo de Capa Analítica y Costeo por Km/Ruta (BI)                 | 4.1 / 5       | RT-05.25–30, Consulta 18, Decisiones 15, 16 | RF-016, RF-017, RF-023 · D-15, D-16, D-17     | Martín | Marcel         | 05-09  | Completado    |
+| **D3-06** | Inventario de Componentes Lógicos (para Emplazamiento D4)          | 4.1 / 4.2     | RT-03.01–24, Art. 16°, Formulario T-11     | RF-008, RNF-011 · D-04, D-25                  | Martín | Alonso (D4)    | 04-09  | Completado    |
+| **D3-07** | Modelo de Dominio del Negocio y Entidades Principales               | 5             | RT-02.13, FEP03 Cap. 4 y 14                  | RF-001, RF-002, RF-003 · D-01                  | Marcel  | Martín        | 04-09  | Completado    |
+| **D3-08** | Diccionario de Datos, Sensibilidades y Datos Maestros (MDM)         | 5             | RT-05.01, RT-05.09, ISO 25012                | RF-005, RNF-013 · D-01, D-18                  | Marcel  | Martín        | 05-09  | Completado    |
+| **D3-09** | Matriz de Persistencia y Justificación Teorema CAP                 | 5             | RT-05.02, T-7 Subdoc. 5                      | RNF-002, RNF-012 · D-11, D-24                  | Marcel  | Martín        | 04-09  | Completado    |
+| **D3-10** | Modelo Transaccional, Trazabilidad y Auditoría Inalterable         | 5             | RT-05.03, RT-16.06, RT-16.07                 | RF-004, RNF-012 (FOR EACH ROW) · D-24          | Marcel  | Martín        | 05-09  | Completado    |
+| **D3-11** | Estrategia de Desempeño: Indexación, Partición y Caché          | 5             | T-7 Subdoc. 5, RT-09.02                      | RNF-002, RNF-011 · D-11                        | Marcel  | Martín        | 05-09  | Completado    |
+| **D3-12** | Plan de Migración, Saneamiento y Ensayos de Preproducción         | 5             | RT-05.11–15, Consulta 21, Decisión 18      | RF-005, RNF-011 · D-18                        | Marcel  | Martín        | 05-09  | Completado    |
+| **D3-13** | Política de Retención, Cifrado Ley 21.719 y Reversibilidad        | 5             | RT-05.06–10, RT-11.10, Art. 85°            | RF-022, RNF-013, RNF-014 (Retención legal) · D-23, D-24 | Marcel  | Martín        | 05-09  | Completado    |
+| **D3-14** | Ficha T-19 Innovación Tipo 3 (Desconexión 72h / Unificación GPS) | 13            | Art. 28°, 29°, RT-26.01–08, APA 7         | RF-008, RF-009, RNF-002, RNF-008 · D-04, D-11, D-20 | Ambos   | Ambos          | 06-09  | Pendiente     |
+| **D3-15** | Tablas de Coordinación RT-03.13 (Offline) y RT-07.13 (Backup)      | 4.1 / 5 / 4.2 | RT-03.13, RT-07.13, RT-03.14                 | RF-009, RNF-002, RNF-008, RNF-012 · D-11, D-20 | Ambos   | Ignacio V (D4) | 05-09  | En curso      |
+| **D3-16** | Guión de Exposición y Preparación de Defensa (Art. 45°)         | Presentación | Art. 45°, Formulario T-22                   | Art. 45°, Formulario T-22 · D2-12              | Ambos   | Ambos          | 06-09  | Pendiente     |
 
 ---
 
@@ -83,23 +83,23 @@ Taller de Formulación de Proyectos Informáticos (ICI-5444) · Escuela de Infor
      * **Time-outs explícitos**: Prohibida taxativamente cualquier llamada remota sin tiempo límite declarado.
      * **Cortacircuitos (Circuit Breakers)** y mamparos (*bulkheads*) para aislar fallas en integraciones externas.
      * **Reintento exponencial con variación aleatoria (*jitter*)**.
-     * **Idempotencia estricta en escrituras** con claves de idempotencia y ventana de deduplicación documentada (RT-02.06).
+     * **Idempotencia estricta en escrituras (RT-02.06, RNF-002)**: Claves de idempotencia globales UUIDv4 con ventana de deduplicación extendida de **7 días (168 h / 604.800 s)** en Redis y restricción única duradera en PostgreSQL, tolerando la desconexión prolongada de 72 h en ruta y cortes climáticos.
 3. **Capa de Integración e Interoperabilidad (RT-05.16 a RT-05.24):**
 
    - Documentar contratos síncronos en **OpenAPI 3.1** y flujos dirigidos por eventos en **AsyncAPI 2.6+**, generados automáticamente desde el código.
    - Diseñar la seguridad M2M mediante **OAuth 2.1** (Client Credentials Grant) o autenticación mutua TLS (**mTLS**). Prohibición absoluta de API keys en URL.
-   - **Capa Anticorrupción (ACL, RT-02.14, RT-05.20 y Consulta N.° 13)**: Sustituir los módulos operativos de 2013 (tráfico, despacho, tarifas, liquidación) y encapsular el ERP contable existente, interactuando únicamente vía API para la emisión de DTE tributario y asientos contables.
+   - **Capa Anticorrupción (ACL, RT-02.14, RT-05.20, Consultas 13 y 15, RF-013, RF-014, RNF-006)**: Sustituir los módulos operativos de 2013 (tráfico, despacho, tarifas, liquidación) y encapsular el ERP contable existente para la emisión de DTE tributario y asientos contables. Para puntos de carga desconectados, habilitar contingencia offline con folios CAF pre-asignados y Timbre Electrónico DTE (TED) a bordo, generando el documento legal conforme *antes de que el camión ruede* y sincronizando al ERP/SII tras reconectar.
    - Diseñar la ingestión desacoplada de fuentes externas desfasadas (Consulta N.° 17): portal de combustible (archivos mensuales) y dispositivos de peaje/TAG (archivos mensuales), preparados para evolucionar a APIs diarias.
-   - Integración con la telemetría CANbus/FMS inactiva de los 61 tractocamiones propios mediante conectores de solo lectura en protocolo estándar SAE J1939 sin vulnerar garantías de fábrica (Restricción 6 y Consulta N.° 14).
+   - Integración con la telemetría CANbus/FMS inactiva de los 61 tractocamiones propios mediante conectores de solo lectura en protocolo estándar SAE J1939 sin vulnerar garantías de fábrica (Restricción 6, RNF-005 y Consulta N.° 14).
 4. **Capa Analítica e Inteligencia de Negocio (RT-05.25 a RT-05.30):**
 
    - **Separación absoluta** entre procesamiento transaccional (OLTP) y analítico (OLAP) mediante réplicas de lectura y arquitectura Lakehouse / Data Warehouse para evitar cualquier degradación operacional (RT-05.05).
-   - **Modelo de Costeo Real por Kilómetro y por Ruta (Decisiones 15, 16, 17 y Consulta N.° 18)**:
+   - **Modelo de Costeo Real por Kilómetro y por Ruta (Decisiones 15, 16, 17, Consulta N.° 18, RF-016, RF-017, RF-023)**:
      * Resolver la latencia de negocio: emitir el **costo consolidado preliminar del viaje en ≤ 24 horas** tras su cierre, indicando explícitamente los componentes pendientes y actualizándose automáticamente con historial de versiones a medida que ingresan peajes y combustible a 40 días.
      * Diseñar el algoritmo de costeo para camiones subcontratados donde solo se dispone de la tarifa pactada y anticipos de combustible.
-     * Asegurar que el costeo analítico esté disponible en la **Etapa 1**, previo a la renegociación contractual de 2027 donde dos contratos pierden plata sistemáticamente.
+     * Asegurar que el costeo analítico y rentabilidad por ruta esté disponible en la **Etapa 1**, previo a la renegociación contractual de 2027 donde se busca rescatar los contratos deficitarios. Los modelos de optimización de retornos (RF-015) y factores avanzados de emisiones (RF-023) se expanden para la **Etapa 2**.
    - Proveer herramienta de autoservicio con **modelo semántico documentado** (Power BI Embedded / Semantic Layer) para que Finanzas cree tableros con *drill-down* hasta la transacción individual sin requerir soporte TI (RT-05.27).
-5. **Inventario Lógico para la Dupla D4 (RT-03 / Formulario T-11):**
+5. **Inventario Lógico para la Dupla D4 (RT-03.01 a RT-03.24 / Formulario T-11):**
 
    - Entregar a D4 la lista exhaustiva de componentes lógicos clasificados por latencia, criticidad, volumen, regulación, conectividad y justificación de emplazamiento (Nube vs. San Bernardo vs. Terminales Regionales vs. Camiones On-Premise).
 
@@ -119,12 +119,12 @@ Taller de Formulación de Proyectos Informáticos (ICI-5444) · Escuela de Infor
    - Justificar formalmente la posición en el Teorema CAP y el motor seleccionado para cada dominio:
      * *Transaccional Crítico (Despacho, Asignación, Viajes, DTE, Liquidaciones)*: **RDBMS Relacional** (Azure Database for PostgreSQL Flexible Server o SQL Server). Enfoque **CP/CA** (Consistencia estricta, ACID, transaccionalidad total).
      * *Series Temporales de Telemetría y Posición GPS*: **Time-Series / NoSQL Distribuido** (Azure Cosmos DB o TimescaleDB / Azure Data Explorer). Enfoque **AP** (Alta disponibilidad, particionamiento masivo horizontal, consistencia eventual).
-     * *Buffer Local a Bordo (Dispositivo 374 camiones)*: **SQLite embebido / Realm / RocksDB**. Tolerancia a 72h offline con almacenamiento local cifrado en disco.
+      * *Buffer Local a Bordo y Borde Móvil (148 kits físicos + App Móvil en 226 restantes)*: **SQLite embebido / Realm**. Tolerancia a 72h offline con cifrado local, aplicando hardware físico en flota propia y terceros adheridos (D4), y App Móvil en unidades no intervenidas (Restricción 3, D-02, D-26).
      * *Repositorio Documental (e-Docs, guías firmadas, fotos de siniestros)*: **Object Storage** (Azure Blob Storage con inmutabilidad WORM).
-3. **Auditoría Inalterable y Trazabilidad (RT-05.03, RT-16.06, RT-16.07):**
+3. **Auditoría Inalterable y Trazabilidad (RT-05.03, RT-16.06, RT-16.07, RNF-012):**
 
-   - Diseñar bitácora de auditoría inmutable que capture para cada operación de escritura: identificador de transacción, usuario/dispositivo, marca de tiempo, dirección IP, valores anteriores y valores posteriores (*CDC - Change Data Capture*).
-   - Garantizar inalterabilidad absoluta de los registros de jornada y asignación frente a administradores mediante almacenamiento protegido contra borrado o encadenamiento criptográfico (*Append-only Ledger*), blindando a Curimón ante juicios laborales o reclamos de seguros (Criterio de Aceptación 4).
+   - Diseñar bitácora de auditoría inmutable que capture para cada operación de escritura: identificador de transacción, usuario/dispositivo, marca de tiempo UTC por NTP, dirección IP, valores anteriores y valores posteriores (*CDC - Change Data Capture*) mediante un **trigger transaccional a nivel de fila (`AFTER INSERT OR UPDATE OR DELETE ... FOR EACH ROW`)**, capturando atómicamente los registros `OLD` y `NEW`.
+   - Garantizar inalterabilidad absoluta de los registros de jornada y asignación frente a administradores mediante almacenamiento protegido contra borrado o encadenamiento criptográfico SHA-256 (*Append-only Ledger* y WORM), blindando a Curimón ante juicios laborales o reclamos de seguros (Criterio de Aceptación 4).
 4. **Estrategia de Desempeño de Base de Datos (Formulario T-7 Subdoc. 5):**
 
    - Definir estrategia de indexación B-Tree para claves foráneas y búsquedas transaccionales, índices GiST/SP-GiST para consultas geoespaciales de geocercas (PostGIS).
@@ -137,16 +137,16 @@ Taller de Formulación de Proyectos Informáticos (ICI-5444) · Escuela de Infor
    - Definir las reglas de transformación ETL/ELT, reportes de excepciones y plan de reversión (*rollback*).
    - Comprometer formalmente **al menos 2 ensayos completos de migración** en ambiente de Preproducción antes de la salida en vivo (RT-05.13) con conciliación cuantitativa verificable mediante sumas de control (*checksums*) y recuentos (RT-05.14).
    - Migración histórica completa de maestros de flota/clientes, 5 años de viajes, 6 años de liquidaciones y 100 % de antecedentes de siniestros.
-6. **Política de Retención Legal y Cifrado Ley 21.719 (RT-05.07, RT-05.10, RT-11.10):**
+6. **Política de Retención Legal, Conciliación Ley 21.719 y Reversibilidad (RT-05.06–10, RT-11.10, RNF-014):**
 
-   - Codificar en base de datos las políticas automáticas de retención y purga segura:
-     * *10 años*: Antecedentes de siniestros.
-     * *6 años*: Documentos tributarios (DTE) y liquidaciones a transportistas.
-     * *5 años*: Registros y evidencia de jornada de conducción (normativa laboral) y cargas peligrosas.
+   - Codificar en base de datos las políticas automáticas de retención y purga segura por dominio:
+     * *10 años*: Antecedentes de siniestros y responsabilidad civil.
+     * *6 años*: Documentos tributarios (DTE) y liquidaciones a transportistas (SII).
+     * *5 años*: Registros y evidencia de jornada de conducción (normativa laboral Art. 25 bis) y cargas peligrosas (DS 298).
      * *Vigencia + 5 años*: Habilitaciones de conductores y tractocamiones/semirremolques.
      * *3 años*: Tiempos de permanencia en instalaciones de clientes (respaldo de sobreestadías).
      * *2 años en línea*: Series de posición y telemetría (posteriormente agregadas y archivadas en frío).
-   - **Cifrado a nivel de campo obligatorio (RT-11.10)**: Aplicar llaves gestionadas en HSM para datos sensibles de los 258 conductores subcontratados (RUT, teléfonos, antecedentes médicos/licencias), coordenadas GPS asociadas a personas identificables y tarifas individuales pactadas con los 148 dueños de camiones.
+   - **Cifrado a Nivel de Campo (FLE, RT-11.10) y Conciliación Ley N.° 21.719**: Aplicar llaves gestionadas en HSM para datos sensibles. Ante revocación de consentimiento de un transportista, se corta inmediatamente el rastreo futuro y la visibilidad comercial; los datos históricos quedan bloqueados exclusivamente para fines probatorios legales hasta cumplir los plazos estatutarios de retención, momento en el cual se ejecuta la destrucción criptográfica (*Crypto-shredding*, NIST SP 800-88 Rev. 1).
    - **Reversibilidad y Formatos Abiertos (RT-05.06)**: Asegurar mecanismos nativos de exportación completa en formatos abiertos (JSON, CSV, Parquet) sin costo ni dependencia de proveedor al término del contrato.
 
 ---
@@ -250,7 +250,7 @@ D3 asume la fundamentación técnica y formalización de supuestos para las **16
 
 1. **Lo que D3 recibe de D1 y D2:**
 
-   - De D1: Matriz de actores afectados, datos cuantitativos consolidados (los 3 contratos bajo costo, los $340M en esperas con 71 % objetado, los 142 pesajes viales).
+   - De D1: Matriz de actores afectados, datos cuantitativos consolidados (los 3 contratos bajo costo, los \$340M en esperas con 71 % objetado, los 142 pesajes viales).
    - De D2: Catálogo de requerimientos RF/RNF versión 1, delimitación de alcance Etapa 1 vs. Etapa 2, y el plan de adhesión de los 148 transportistas.
 2. **Lo que D3 entrega a D4 (Hito Crítico de Sincronización S4 — Viernes 04-09):**
 
@@ -331,13 +331,13 @@ Todas las citas corresponden a la **numeración impresa al pie** de los document
 | **FEP01** | Formulario T-20        |    65 | Calendario oficial de actividades del proceso                                           |
 | **FEP01** | Formulario T-21        |    66 | Tabla de ponderación técnica: Subdoc 4.1 (16 %), Subdoc 5 (11 %), Innovaciones (17 %) |
 | **FEP01** | Formulario T-22        |    68 | Contenido específico exigido para el Informe y Presentación 1                         |
-| **FEP02** | Capítulo 2 (RT-02)    |     6 | Modelo de 8 capas (2.1), resiliencia, stateless, ADR y Capa Anticorrupción             |
-| **FEP02** | Capítulo 3 (RT-03)    |     8 | Operación desconectada on-premise, reconciliación y tabla RT-03.13                    |
-| **FEP02** | Capítulo 5 (RT-05)    |    11 | Datos, diccionario, Teorema CAP, migración, OpenAPI/AsyncAPI y BI                      |
-| **FEP02** | Capítulo 11 (RT-11)   |    21 | Cifrado a nivel de campo (RT-11.10) y seguridad de datos personales                     |
-| **FEP02** | Capítulo 16 (RT-16)   |    29 | Auditoría con valores antes/después (RT-16.06) y control de accesos                   |
-| **FEP02** | Capítulo 17 (RT-17)   |    31 | Aplicación móvil, periféricos (GPS) y optimización de datos móviles                |
-| **FEP02** | Capítulo 26 (RT-26)   |    44 | Exigencias técnicas de las innovaciones y trazabilidad arquitectónica                 |
+| **FEP02** | Capítulo 2 (RT-02.01 a RT-02.14)  |     6 | Modelo de 8 capas (2.1), resiliencia, stateless, ADR y Capa Anticorrupción             |
+| **FEP02** | Capítulo 3 (RT-03.01 a RT-03.24)  |     8 | Operación desconectada on-premise, reconciliación y tabla RT-03.13                    |
+| **FEP02** | Capítulo 5 (RT-05.01 a RT-05.30)  |    11 | Datos, diccionario, Teorema CAP, migración, OpenAPI/AsyncAPI y BI                      |
+| **FEP02** | Capítulo 11 (RT-11.01 a RT-11.10) |    21 | Cifrado a nivel de campo (RT-11.10) y seguridad de datos personales                     |
+| **FEP02** | Capítulo 16 (RT-16.01 a RT-16.30) |    29 | Auditoría con valores antes/después (RT-16.06) y control de accesos                   |
+| **FEP02** | Capítulo 17 (RT-17.01 a RT-17.06) |    31 | Aplicación móvil, periféricos (GPS) y optimización de datos móviles                |
+| **FEP02** | Capítulo 26 (RT-26.01 a RT-26.08) |    44 | Exigencias técnicas de las innovaciones y trazabilidad arquitectónica                 |
 | **FEP03** | Capítulo 5            |    12 | Sistemas legados actuales (gestión 2013, ERP contable, portal combustible)             |
 | **FEP03** | Capítulo 10           |    23 | Las 14 restricciones no negociables                                                     |
 | **FEP03** | Capítulo 13           |    26 | Horizonte, prioridades y ventanas protegidas (temporada de fruta, Los Libertadores)     |

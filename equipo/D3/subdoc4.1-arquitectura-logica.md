@@ -46,7 +46,7 @@ Conforme a los estándares **RT-02.01** e **ISO/IEC/IEEE 42010**, la solución a
 
 1. **Capa 1: Presentación (Canales & Experiencia de Usuario):**
    * *Portal Web Unificado*: Desarrollado en React 19 / Next.js con Server-Side Rendering (SSR). Atiende tres perfiles principales: (i) Torre de Tráfico y Control 24x7 (monitoreo en tiempo real, asignación de fletes, gestión de incidentes), (ii) Portal Autenticado de Clientes (seguimiento de envíos, cálculo de emisiones CO2, registro transparente de tiempos en plantas y estado de sobreestadías según RT-16.30), y (iii) Portal de Transportistas Subcontratados (consulta de viajes, liquidaciones mensuales transparentes y control de soberanía de datos según Ley N.° 21.719).
-   * *Aplicación Móvil para Conductores (Flutter)*: Diseñada específicamente para condiciones extremas de cabina (vibración, luz solar, manipulación con una sola mano y guantes de faena, RT-13.08). Incorpora base local SQLite 3 con modo WAL para operación 100 % autónoma durante las **72 horas de desconexión en zonas de sombra** (RT-03.10, RT-17.01).
+   * *Aplicación Móvil para Conductores (Flutter)*: Diseñada específicamente para condiciones extremas de cabina (vibración, luz solar, manipulación con una sola mano y guantes de faena, RT-13.08). Incorpora base local segura SQLite 3 con modo WAL para operación 100 % autónoma durante las **72 horas de desconexión en zonas de sombra** (RT-03.10, RT-17.01). En estricto cumplimiento de la **Restricción N.° 3** ("No intervenir equipamiento de terceros sin acuerdo contractual") y las decisiones **D-02** y **D-26** de D2, la App Móvil actúa como el nodo de borde principal para los transportistas terceros no adheridos a la instalación de hardware y para los 34 camiones sin GPS, capturando geolocalización del viaje activo, eventos de jornada (Art. 25 bis) y conformidad de entrega sin requerir intervención física en el tractocamión.
    * *Interfaces de Terminal y Taller*: Vistas especializadas de alto contraste para porterías de acceso (validación biométrica/código QR de vigencias en < 3 s) y mecánicos de taller.
 2. **Capa 2: Borde y Seguridad Perimetral (Zero Trust Edge):**
    * *Azure Front Door / Cloudflare Enterprise*: Red de distribución Anycast global con terminación TLS 1.3, enrutamiento inteligente basado en latencia y aceleración TCP.
@@ -152,10 +152,10 @@ Para evitar la propagación de fallas en cascada y blindar la torre de programac
 Para anular el riesgo de duplicación transaccional por reintentos de red o desconexiones intermitentes del operador:
 
 * **Mecanismo de Encabezado `Idempotency-Key`:** Toda petición de mutación HTTP (`POST`, `PUT`, `PATCH`) en los endpoints de despacho, liquidación y registro de jornada exige de forma obligatoria un identificador único global (UUIDv4) generado por el cliente emisor.
-* **Ventana de Deduplicación de 24 Horas:**
-  1. Al recibir la petición en el API Gateway (APIM), se consulta atómicamente en Redis mediante la instrucción `SET key payload_hash NX EX 86400`.
-  2. Si la clave ya existe y su estado es `EN_PROCESO`, el Gateway rechaza la petición concurrente con código HTTP `409 Conflict`.
-  3. Si la clave ya fue completada exitosamente, el Gateway recupera de Redis la respuesta exacta previamente almacenada y la devuelve de inmediato con código HTTP `200 OK`, sin volver a ejecutar la lógica de negocio ni reinsertar registros en la base de datos.
+* **Ventana de Deduplicación Extensa de 7 Días (168 Horas / 604.800 s) para Operación Desconectada (RNF-002):**
+  Dado que los tractocamiones operan en zonas de sombra cordillerana y desértica desconectados hasta por 72 horas continuas (y hasta 12 días en contingencias climáticas en Los Libertadores), una ventana de 24 horas resultaría insuficiente y provocaría doble inserción tras reconexiones diferidas. Por ello, se implementa una estrategia de dos capas:
+  1. *Capa Rápida en Redis (TTL = 604.800 s)*: Al recibir la petición en el API Gateway (APIM), se consulta atómicamente en Redis mediante la instrucción `SET key payload_hash NX EX 604800`. Si la clave ya existe y su estado es `EN_PROCESO`, el Gateway rechaza la petición concurrente con código HTTP `409 Conflict`. Si ya fue completada exitosamente, devuelve la respuesta cacheada con código HTTP `200 OK`.
+  2. *Capa Duradera en PostgreSQL*: Si la clave expiró en Redis pero el mensaje proviene de una sincronización masiva de búfer tras desconexión prolongada, la base de datos cuenta con una restricción única `UNIQUE(idempotency_key)` en la tabla `auditoria_evento`, asegurando deduplicación determinista e inmutable sin importar el tiempo transcurrido.
 
 ---
 
@@ -235,6 +235,10 @@ En estricta conformidad con la **Consulta Oficial N.° 13**, la nueva plataforma
 3. **Protector de Resiliencia y Cola de Mensajes Muertos (DLQ):**
    * Si el ERP contable on-premise en San Bernardo sufre caídas de enlace o lentitud, el Circuit Breaker de la ACL aísla el tráfico y encola las transacciones en una cola persistente de reintentos (*Dead-Letter Queue*) en Azure Service Bus.
    * La torre de programación y la operación de los camiones en ruta continúan operando sin interrupción, garantizando que una indisponibilidad contable no detenga los despachos operacionales 24x7.
+4. **Mecanismo Conforme de Emisión de DET Previo al Movimiento en Zonas sin Cobertura (RF-014 / Criterio 14):**
+   * *Exigencia Normativa*: Conforme a la legislación tributaria chilena (SII Res. Ex. N.° 107/2014) y el Criterio de Aceptación 14, ningún camión puede iniciar el movimiento de carga sin portar un Documento Electrónico de Transporte (DET / Guía de Despacho Electrónica) legalmente válido y timbrado. Una mera emisión diferida en cola posterior no satisface la exigencia legal de traslado.
+   * *Mecanismo de Contingencia Offline*: En puntos de carga remotos sin señal celular (faenas mineras, predios forestales o pasos cordilleranos), el sistema provee al dispositivo a bordo (o terminal de despacho de faena) de un lote pre-asignado de folios CAF (Código de Autorización de Folios) y certificado digital de contingencia autorizado por el contribuyente. El documento XML timbrado con Timbre Electrónico DTE (TED) y su representación gráfica PDF/QR se genera y firma criptográficamente en el búfer local *antes de que el camión ruede*.
+   * *Sincronización Idempotente con ERP 2013 y SII*: Una vez recuperado el enlace de red, el evento de emisión de contingencia se despacha a la ACL vía Azure Service Bus para su registro oficial como asiento contable en el ERP 2013 y envío formal al SII, garantizando emisor contable centralizado, correlación unívoca de folios y cero duplicidad transaccional (RNF-006).
 
 ---
 
@@ -379,7 +383,8 @@ Para cumplir con la **interfaz de sincronización S4 con la Dupla D4 (Alonso e I
 | **Repositorio e-Docs (WORM)** | Datos | < 1,0 s | Alta | Certificados, fotos siniestros | Almacenamiento inmutable para cumplimiento probatorio (10 años). | **Nube (Azure Blob Storage WORM)** |
 | **Lakehouse Analítico (BI)** | Analítica | Segundos | Media | Histórico 5 años / Delta Lake | Aislamiento total OLTP/OLAP para costeo por km en ≤ 24 h (RT-05.05). | **Nube (Azure Synapse / Databricks)** |
 | **Capa Semántica Power BI** | Analítica | < 2,0 s | Media | Tableros gerenciales y Finanzas | Explotación de autoservicio con navegación drill-down (RT-05.27). | **Nube (Power BI Embedded)** |
-| **Búfer a Bordo en Cabina** | Terreno | Inmediata | **Máxima (72h Offline)** | Pings locales en 374 camiones | Continuidad operativa durante 72 h en zonas de sombra sin red móvil. | **On-Premise Terreno (SQLite en Camión)** |
+| **Búfer a Bordo en Cabina** | Terreno | Inmediata | **Máxima (72h Offline)** | Pings y eventos en 148 unidades intervenibles | Almacenamiento local físico en camiones propios y de terceros adheridos (D4, D-02, Restricción 3). | **On-Premise Terreno (Dispositivo Físico SQLite WAL)** |
+| **Búfer Offline App Móvil** | Terreno | Inmediata | **Máxima (72h Offline)** | Eventos/jornada en flota restante (226 camiones) | Captura telemática y offline vía smartphone/tablet para terceros no intervenidos y 34 sin GPS (D-26). | **Borde Móvil (SQLite/Realm en App Conductor)** |
 | **Lector Portería y Terminal** | Terreno | < 2,0 s | Alta | Control acceso en 5 terminales | Verificación local de vigencias y enrolamiento ágil de conductores. | **On-Premise (Terminales Regionales)** |
 | **ERP Contable Heredado 2013** | Legado | N/A | Externa | Contabilidad y DTE SII | Sistema existente no reemplazable; opera en sala de San Bernardo. | **On-Premise (San Bernardo Sala 26 m²)** |
 
