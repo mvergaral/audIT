@@ -51,7 +51,7 @@ Taller de Formulación de Proyectos Informáticos (ICI-5444) · Escuela de Infor
 | **D3-11** | Estrategia de Desempeño: Indexación, Partición y Caché          | 5             | T-7 Subdoc. 5, RT-09.02                      | RNF-002, RNF-011 · D-11                        | Marcel  | Martín        | 05-09  | Completado    |
 | **D3-12** | Plan de Migración, Saneamiento y Ensayos de Preproducción         | 5             | RT-05.11–15, Consulta 21, Decisión 18      | RF-005, RNF-011 · D-18                        | Marcel  | Martín        | 05-09  | Completado    |
 | **D3-13** | Política de Retención, Cifrado Ley 21.719 y Reversibilidad        | 5             | RT-05.06–10, RT-11.10, Art. 85°            | RF-022, RNF-013, RNF-014 (Retención legal) · D-23, D-24 | Marcel  | Martín        | 05-09  | Completado    |
-| **D3-14** | Ficha T-19 Innovación Tipo 3 (Desconexión 72h / Unificación GPS) | 13            | Art. 28°, 29°, RT-26.01–08, APA 7         | RF-008, RF-009, RNF-002, RNF-008 · D-04, D-11, D-20 | Ambos   | Ambos          | 06-09  | Pendiente     |
+| **D3-14** | Ficha T-19 Innovación Tipo 3 (Desconexión 72h / Unificación GPS) | 13            | Art. 28°, 29°, RT-26.01–08, APA 7         | RF-008, RF-009, RNF-002, RNF-008 · D-04, D-11, D-20 | Ambos   | Ambos          | 06-09  | Completado    |
 | **D3-15** | Tablas de Coordinación RT-03.13 (Offline) y RT-07.13 (Backup)      | 4.1 / 5 / 4.2 | RT-03.13, RT-07.13, RT-03.14                 | RF-009, RNF-002, RNF-008, RNF-012 · D-11, D-20 | Ambos   | Ignacio V (D4) | 05-09  | Completado (coordinado con D4) |
 | **D3-16** | Guión de Exposición y Preparación de Defensa (Art. 45°)         | Presentación | Art. 45°, Formulario T-22                   | Art. 45°, Formulario T-22 · D2-12              | Ambos   | Ambos          | 06-09  | Pendiente     |
 
@@ -309,7 +309,7 @@ Las presentaciones preparatorias tienen una duración estricta de **15 minutos d
 - [x] Matriz de persistencia con justificación del Teorema CAP por cada dominio de información (Completado en Subdoc. 5).
 - [x] Plan de migración de datos con protocolo de verificación documental individual para las ~6.000 vigencias y 2 ensayos en Preproducción (Completado en Subdoc. 5).
 - [x] Tabla de retención con plazos normativos (10a, 6a, 5a, 3a, 2a) y procedimiento de eliminación segura (Completado en Subdoc. 5).
-- [ ] Ficha T-19 de Innovación Tipo 3 completa con los 7 elementos del Art. 29°, citas APA 7.ª ed. y tabla RT-03.13 (Entregable D3-14 · Pendiente).
+- [x] Ficha T-19 de Innovación Tipo 3 completa con los 7 elementos del Art. 29°, citas APA 7.ª ed. y tabla RT-03.13 (Entregable D3-14 · Completado en Subdoc. 13).
 - [x] Coherencia cruzada con los requerimientos de D2 y la infraestructura física de D4 (Homologación técnica S4 completada).
 - [x] Tablas de coordinación RT-03.13 y RT-07.13 con D4 (Entregable D3-15 · Completado y coordinado con D4).
 - [ ] Guión de presentación ensayado por ambos integrantes dentro de los tiempos estipulados (Entregable D3-16 · Pendiente).
