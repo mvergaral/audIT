@@ -13,7 +13,7 @@ sequenceDiagram
     Operador->>APIM: POST /viajes/asignar (Header: Idempotency-Key UUIDv4)
     Note over APIM: Validación de Esquema OpenAPI 3.1<br/>y Rate Limiting (RT-05.21)
     
-    APIM->>Redis: Verificar Idempotency-Key (TTL 24h)
+    APIM->>Redis: Verificar Idempotency-Key (TTL 7 días / RNF-002)
     alt Clave Duplicada (Encolada / Ya procesada)
         Redis-->>APIM: Respuesta Cacheada o Estado EN_PROCESO
         APIM-->>Operador: 409 Conflict o 200 OK Idempotente

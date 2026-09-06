@@ -1,7 +1,7 @@
 graph TB
     subgraph CAPA1 ["1. CAPA DE PRESENTACIÓN (Canales & Clientes)"]
         UI_WEB["Portal Web Unificado<br/>(React / Next.js / Tailwind)<br/>Torre de Tráfico, Clientes, Facturación"]
-        UI_MOB["App Móvil Conductor<br/>(Flutter / SQLite Offline)<br/>Operable con guantes / Cero distracción"]
+        UI_MOB["App Móvil Conductor (Canal Voluntario)<br/>(Flutter / SQLite Offline)<br/>Liquidaciones, Asignación & PoD"]
         UI_TRANS["Portal Transportista Subcontratado<br/>Liquidaciones, Tarifas, Consentimiento Ley 21.719"]
         UI_TERM["Terminales Operacionales & Taller<br/>Portería San Bernardo, 4 Regionales, 2 Talleres"]
     end
@@ -29,7 +29,7 @@ graph TB
         direction LR
         SB["Azure Service Bus<br/>Mensajería transaccional empresarial<br/>Colas FIFO con Dead-Letter Queue (DLQ)"]
         EH["Kafka / Azure Event Hubs<br/>Ingesta Fast-Data Telemetría<br/>≈ 41M km/año · 1.500 pings/min"]
-        ACL["Capa Anticorrupción (ACL)<br/>Aislamiento ERP 2013 Legado (Consulta 13)"]
+        ACL["Capa Anticorrupción (ACL)<br/>Aislamiento ERP 2013 (RT-05.20 / Consulta 13)"]
     end
 
     subgraph CAPA6 ["6. CAPA DE DATOS POLÍGLOTA & PERSISTENCIA"]

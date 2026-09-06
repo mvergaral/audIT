@@ -20,7 +20,7 @@
 flowchart LR
     subgraph Terreno["Dispositivos en Terreno (Edge Computing)"]
         GPS[GPS / CANbus / App Móvil]
-        BUFFER[(Buffer Local SQLite\nResistencia 72h Offline)]
+        BUFFER[(Buffer Local SQLite ≥ 8 GB\nFlash Industrial / 72h-288h Offline)]
         GPS -->|en sombra >80 km| BUFFER
         BUFFER -->|reconexión celular| IOT_GW
         GPS -->|en línea| IOT_GW[Gateway IoT / MQTT Broker]
