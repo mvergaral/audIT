@@ -1,0 +1,45 @@
+\documentclass[12pt, letterpaper, table, xcdraw]{inf-pucv}
+\input{comun/preambulo}
+\newcommand{\subdocCorto}{Sub. 1 Empresa}
+\begin{document}
+
+% Pagina 1. Portada de la empresa
+\portadaImagen{Presentación de la Empresa}{1}
+
+% Pagina 2. Ficha del documento
+\thispagestyle{empty}
+\vspace*{1.2cm}
+{\color{audITnavy}\fontsize{28}{32}\selectfont\bfseries Ficha del documento}
+
+\vspace{10pt}
+{\color{audITteal}\rule{\linewidth}{2pt}}
+
+\vspace{22pt}
+{\small
+\begin{longtable}{@{}p{3.5cm}p{10.5cm}@{}}
+\color{audITgris}EMPRESA & \color{black}audIT, Empresa N.\textordmasculine{}\,10 \\
+\color{audITgris}SUBDOCUMENTO & \color{black}N.\textordmasculine{}\,1. Presentación de la Empresa \\
+\color{audITgris}PROYECTO & \color{black}Plataforma Digital de Misión Crítica para Transporte de Carga \\
+\color{audITgris}CLIENTE & \color{black}Transportes Curimón S.A. \\
+\color{audITgris}LICITACIÓN & \color{black}Licitación Pública Internacional N.\textordmasculine{}\,TFEP-01/2026. Caso 10 Transporte de Carga \\
+\color{audITgris}INSTANCIA & \color{black}Informe Preparatorio 1. Oferta Técnica Sobre N.\textordmasculine{}\,2 \\
+\color{audITgris}CONTENIDO & \color{black}Identificación, líneas de negocio, capacidad de intervención en terreno y acreditaciones. \\
+\color{audITgris}VERSIÓN & \color{black}1.0 \\
+\color{audITgris}FECHA & \color{black}7 de septiembre de 2026 \\
+\color{audITgris}LUGAR & \color{black}Viña del Mar, Chile \\
+\end{longtable}}
+\clearpage
+
+% Pagina 3. Indice
+\pagenumbering{arabic}\setcounter{page}{1}
+\renewcommand{\contentsname}{Índice}
+\tableofcontents
+\clearpage
+
+\import{contenido/}{c1.tex}
+
+\clearpage
+\phantomsection
+\addcontentsline{toc}{section}{Bibliografía}
+\printbibliography[title={Bibliografía}]
+\end{document}

@@ -1,0 +1,44 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%% | Styles for LaTeX Template | %%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%% | @sebaignacioo             | %%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Paquetes principales
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-tabla]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{pgfplots}
+\usepackage{paracol}
+\usepackage{wrapfig}
+
+\usepackage{multicol}
+
+% Definiendo márgenes
+\usepackage[left=3cm, right=2.5cm, top=2.5cm, bottom=2.5cm]{geometry}
+
+% Definiciones de estilos
+\pgfplotsset{width=15cm, compat=1.17}
+\usepgfplotslibrary{fillbetween}
+\usetikzlibrary{patterns}
+\tikzstyle{arrow} = [very thick,->,>=stealth]
+% Tabla del informe: cuerpo a 10 pt, sobre el minimo de 9 pt del Articulo 40.3
+\usepackage{longtable}
+\usepackage{booktabs}
+\newenvironment{tablaAudit}[3]
+  {\begin{center}\small\begin{longtable}{#3}
+   \caption{\leyendaFont{#1}}\label{tab:#2}\\\toprule}
+  {\bottomrule\end{longtable}\end{center}}
+
+% Figura en pagina vertical. Se ajusta al ancho y nunca excede el alto util,
+% de modo que no se corta al final de la pagina.
+\usepackage{float}
+\newcommand{\figuraAncha}[3]{%
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth,height=0.80\textheight,keepaspectratio]{#1}
+    \caption{\leyendaFont{#2}}
+    \label{fig:#3}
+  \end{figure}}

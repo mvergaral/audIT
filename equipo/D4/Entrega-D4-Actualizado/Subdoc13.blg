@@ -1,0 +1,9 @@
+[0] Config.pm:328> INFO - This is Biber 2.21
+[0] Config.pm:331> INFO - Logfile is 'Subdoc13.blg'
+[88] biber:342> INFO - === dom sep  6, 2026, 21:49:35
+[106] Biber.pm:421> INFO - Reading 'Subdoc13.bcf'
+[214] Biber.pm:1002> INFO - Found 0 citekeys in bib section 0
+[242] bbl.pm:676> INFO - Writing 'Subdoc13.bbl' with encoding 'UTF-8'
+[242] bbl.pm:779> INFO - Output to Subdoc13.bbl
+[242] Biber.pm:132> WARN - The file 'Subdoc13.bcf' does not contain any citations!
+[242] Biber.pm:134> INFO - WARNINGS: 1

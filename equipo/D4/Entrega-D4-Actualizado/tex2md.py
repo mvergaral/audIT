@@ -84,58 +84,73 @@ def convierte(path):
     return "\n".join(out)
 
 
+SUB = [
+ ("1","contenido/c1.tex","Presentación de la Empresa",
+  "Identificación, líneas de negocio, capacidad de intervención en terreno y acreditaciones."),
+ ("2","contenido/c2.tex","Problema y Necesidad",
+  "Comprensión del problema, dimensión de la operación, brechas de información y exigencias del cliente mayor."),
+ ("3","contenido/c3.tex","Esquema de Solución y Alcance",
+  "Decisiones estructurantes, catálogo de requisitos, alcance por etapas, plan de adhesión, consultas y contradicciones detectadas."),
+ ("4","contenido/c4.tex","Arquitectura Lógica y Física",
+  "Ocho capas, contextos delimitados, emplazamiento, dispositivo a bordo, dimensionamiento, supuestos y diagramas."),
+ ("5","contenido/c5.tex","Modelo y Gestión de Datos",
+  "Modelo de dominio, persistencia políglota, evidencia inalterable, retención, respaldo, migración y protección de datos personales."),
+ ("13","contenido/c13.tex","Innovaciones",
+  "Cartera de cinco innovaciones con su idea, la tecnología que la sustenta y el resultado esperado."),
+]
 
-import glob, os, sys, re as _re
+BIB = """
+## Bibliografía
 
-RAIZ = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
-os.chdir(RAIZ)
+Dirección del Trabajo. (2009). *Resolución Exenta N.º 1213. Sistema obligatorio de control de asistencia, horas de trabajo y descanso para conductores de vehículos de carga terrestre interurbana*.
 
-def leer_meta(d):
-    t = open(os.path.join(d, "meta.tex"), encoding="utf-8").read()
-    g = lambda k: _re.search(r"\\newcommand\{\\%s\}\{(.*)\}" % k, t).group(1)
-    return g("elNumero"), g("elTitulo"), g("laDescripcion")
+Ministerio del Trabajo. (2003). *Decreto con Fuerza de Ley N.º 1. Texto refundido del Código del Trabajo. Artículo 25 bis*. Biblioteca del Congreso Nacional de Chile. https://www.bcn.cl/leychile/navegar?idNorma=207436
 
-def leer_instancia():
-    t = open("comun/instancia.tex", encoding="utf-8").read()
-    g = lambda k: _re.search(r"\\newcommand\{\\%s\}\{(.*)\}" % k, t).group(1)
-    lim = lambda x: x.replace("\\textordmasculine{}", "º").replace("\\,", " ")
-    return {k: lim(g(k)) for k in
-            ("laEmpresa","elNumeroEmpresa","elProyecto","elCliente",
-             "laLicitacion","laInstancia","laVersion","laFecha","elLugar")}
+Escuela de Informática PUCV. (2026a). *Bases Administrativas. Licitación Pública Internacional N.º TFEP-01/2026* (FEP01.26).
 
-BIB = open("comun/bibliografia.md", encoding="utf-8").read() if os.path.exists("comun/bibliografia.md") else ""
+Escuela de Informática PUCV. (2026b). *Bases Técnicas Transversales* (FEP02.26).
 
-ins = leer_instancia()
-sel = sys.argv[1:]
-carpetas = sorted(glob.glob("subdocumentos/*/"))
-if sel:
-    carpetas = [c for c in carpetas if any(os.path.basename(c.rstrip("/")).startswith(a) for a in sel)]
+Escuela de Informática PUCV. (2026c). *Bases Técnicas del Caso 10. Transporte de Carga* (FEP03.10.26).
 
-os.makedirs("salida", exist_ok=True)
-for c in carpetas:
-    d = c.rstrip("/")
-    num, tit, desc = leer_meta(d)
-    enc = f"""# {tit}
+FMS Standard. (2025). *Technical Specification rFMS vehicle data version 5.0.0*. https://www.fms-standard.com
+
+Iridium Communications. (2024). *Iridium Short Burst Data Service Developers Guide*.
+
+ISO. (2011). *ISO/IEC 27031*. ISO. (2019). *ISO 22301*. ISO. (2022). *ISO/IEC/IEEE 42010*. ISO. (2023). *ISO 14083*.
+
+Microsoft. (2025). *Azure geographies. Chile Central region*.
+
+Ministerio de Hacienda. (2024). *Ley N.º 21.719 sobre protección y tratamiento de datos personales*.
+
+Ministerio de Transportes. (1995). *Decreto Supremo N.º 298*.
+
+Ministerio del Trabajo. (2006). *Ley N.º 20.123 sobre trabajo en régimen de subcontratación*.
+
+NFPA. (2022). *NFPA 2001*. NIST. (2014). *NIST SP 800-88 Rev. 1*.
+
+Smart Freight Centre. (2023). *GLEC Framework, version 3.0*.
+
+Webfleet Solutions. (2025). *WEBFLEET SAT. Ficha técnica del producto*.
+"""
+
+for num, arch, titulo, desc in SUB:
+    enc = f"""# {titulo}
 
 **Subdocumento N.º {num}**
 
 | | |
 |---|---|
-| Empresa | {ins['laEmpresa']}, Empresa N.º {ins['elNumeroEmpresa']} |
-| Licitación | {ins['laLicitacion']} |
-| Proyecto | {ins['elProyecto']} |
-| Cliente | {ins['elCliente']} |
-| Instancia | {ins['laInstancia']} |
+| Empresa | audIT, Empresa N.º 10 |
+| Licitación | Licitación Pública Internacional N.º TFEP-01/2026, Caso 10 Transporte de Carga |
+| Proyecto | Plataforma Digital de Misión Crítica para Transporte de Carga |
+| Cliente | Transportes Curimón S.A. |
+| Instancia | Informe Preparatorio 1, Oferta Técnica Sobre N.º 2 |
 | Contenido | {desc} |
-| Versión | {ins['laVersion']} |
-| Fecha | {ins['laFecha']} |
-| Lugar | {ins['elLugar']} |
+| Fecha | 7 de septiembre de 2026 |
 
 ---
 """
-    cuerpo = convierte(os.path.join(d, "contenido.tex"))
-    txt = _re.sub(r"\n{4,}", "\n\n\n", enc + cuerpo + BIB)
-    pref = os.path.basename(d).split("-")[0]
-    salida = f"salida/{pref}-audIT-Subdoc{int(num):02d}.md"
-    open(salida, "w", encoding="utf-8").write(txt)
-    print(f"  {salida:42s} {len(txt.split()):>6} palabras")
+    cuerpo = convierte(arch)
+    txt = re.sub(r"\n{4,}", "\n\n\n", enc + cuerpo + BIB)
+    open(f"Subdoc{num}.md", "w", encoding="utf-8").write(txt)
+    print(f"Subdoc{num}.md  {len(txt.split()):>6} palabras")
