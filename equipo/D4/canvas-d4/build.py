@@ -110,11 +110,12 @@ def page(inner, title, num, foot):
             f'<text x="{W-44}" y="46" font-family="{FONT}" font-size="11" fill="{MUTED}" '
             f'text-anchor="end">Diagrama {num}</text>'
             f'<line x1="44" y1="60" x2="{W-44}" y2="60" stroke="{HAIR}" stroke-width="1"/>'
-            + inner +
+            + inner + (
             f'<line x1="44" y1="{H-42}" x2="{W-44}" y2="{H-42}" stroke="{HAIR}" stroke-width="1"/>'
             f'<text x="44" y="{H-26}" font-family="{MONO}" font-size="9" fill="{MUTED}">{esc(foot)}</text>'
             f'<text x="{W-44}" y="{H-26}" font-family="{FONT}" font-size="9" fill="{MUTED}" '
-            f'text-anchor="end">Dupla 4 · Subdoc. 4.2 · TFEP-01/2026</text></svg>')
+            f'text-anchor="end">audIT · TFEP-01/2026</text>' if foot else '')
+            + '</svg>')
 
 # ══════════════════════════════════════════════════════════ 1 · general
 def d1():
@@ -164,7 +165,7 @@ def d1():
     o.append(elabel(840, 300, "Enlace + respaldo"))
     # flota
     o.append(box(44, 556, 994, 152, "Flota", C_FLEET, "truck", sub="374 camiones"))
-    for i, (t, sb) in enumerate([("Propios", "148"), ("Terceros", "192"), ("Sin equipo", "34")]):
+    for i, (t, sb) in enumerate([("Propios", "148"), ("Terceros", "226"), ("Sin dispositivo", "34 de 374")]):
         o.append(icon(140 + i * 120, 600, "truck", t, C_FLEET, 38, sb))
     o.append(box(470, 580, 550, 108, "Dispositivo a bordo", C_FLEET, dashed=True))
     for i, (g, t) in enumerate([("chip", "Unidad"), ("sim", "Celular"),
