@@ -1,0 +1,357 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{apa/apasortcite//global/global/global}
+    \entry{bases_caso10_2026}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=ee5d1fce8a3bf142902b6ac732f8f708}{%
+           family={{Escuela de Informática PUCV}},
+           familyi={E\bibinitperiod}}}%
+      }
+      \name{shortauthor}{1}{}{%
+        {{un=0,uniquepart=base,hash=ee5d1fce8a3bf142902b6ac732f8f708}{%
+           family={{Escuela de Informática PUCV}},
+           familyi={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{ee5d1fce8a3bf142902b6ac732f8f708}
+      \strng{fullhash}{ee5d1fce8a3bf142902b6ac732f8f708}
+      \strng{fullhashraw}{ee5d1fce8a3bf142902b6ac732f8f708}
+      \strng{bibnamehash}{ee5d1fce8a3bf142902b6ac732f8f708}
+      \strng{authorbibnamehash}{ee5d1fce8a3bf142902b6ac732f8f708}
+      \strng{authornamehash}{ee5d1fce8a3bf142902b6ac732f8f708}
+      \strng{authorfullhash}{ee5d1fce8a3bf142902b6ac732f8f708}
+      \strng{authorfullhashraw}{ee5d1fce8a3bf142902b6ac732f8f708}
+      \strng{shortauthorbibnamehash}{ee5d1fce8a3bf142902b6ac732f8f708}
+      \strng{shortauthornamehash}{ee5d1fce8a3bf142902b6ac732f8f708}
+      \strng{shortauthorfullhash}{ee5d1fce8a3bf142902b6ac732f8f708}
+      \strng{shortauthorfullhashraw}{ee5d1fce8a3bf142902b6ac732f8f708}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{shortauthor}
+      \field{labeltitlesource}{title}
+      \field{note}{Documento FEP03.10.26}
+      \field{title}{Bases Técnicas del Caso 10. Transporte de Carga. Transportes Curimón S.A.}
+      \field{year}{2026}
+    \endentry
+    \entry{iso14083}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5b512ee8a59deb284ad0a6a035ba10b1}{%
+           family={{ISO}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{fullhash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{fullhashraw}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{bibnamehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authorbibnamehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authornamehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authorfullhash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authorfullhashraw}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{ISO 14083. Greenhouse gases. Quantification and reporting of greenhouse gas emissions arising from transport chain operations}
+      \field{year}{2023}
+    \endentry
+    \entry{ds298}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=acc54fd726de9f1741513109eab8d5d5}{%
+           family={{Ministerio de Transportes}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{acc54fd726de9f1741513109eab8d5d5}
+      \strng{fullhash}{acc54fd726de9f1741513109eab8d5d5}
+      \strng{fullhashraw}{acc54fd726de9f1741513109eab8d5d5}
+      \strng{bibnamehash}{acc54fd726de9f1741513109eab8d5d5}
+      \strng{authorbibnamehash}{acc54fd726de9f1741513109eab8d5d5}
+      \strng{authornamehash}{acc54fd726de9f1741513109eab8d5d5}
+      \strng{authorfullhash}{acc54fd726de9f1741513109eab8d5d5}
+      \strng{authorfullhashraw}{acc54fd726de9f1741513109eab8d5d5}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Decreto Supremo N.º 298. Reglamento de transporte de cargas peligrosas por calles y caminos}
+      \field{year}{1995}
+    \endentry
+    \entry{codigo_trabajo_25bis}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=4bea1cf2944a8ad58a1c159a33e3a06b}{%
+           family={{Ministerio del Trabajo}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Biblioteca del Congreso Nacional de Chile}%
+      }
+      \strng{namehash}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{fullhash}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{fullhashraw}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{bibnamehash}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{authorbibnamehash}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{authornamehash}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{authorfullhash}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{authorfullhashraw}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \field{extraname}{1}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Decreto con Fuerza de Ley N.º 1. Texto refundido, coordinado y sistematizado del Código del Trabajo. Artículo 25 bis sobre jornada de choferes de vehículos de carga terrestre interurbana}
+      \field{year}{2003}
+      \verb{urlraw}
+      \verb https://www.bcn.cl/leychile/navegar?idNorma=207436
+      \endverb
+      \verb{url}
+      \verb https://www.bcn.cl/leychile/navegar?idNorma=207436
+      \endverb
+    \endentry
+    \entry{ley20123}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=4bea1cf2944a8ad58a1c159a33e3a06b}{%
+           family={{Ministerio del Trabajo}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{fullhash}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{fullhashraw}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{bibnamehash}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{authorbibnamehash}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{authornamehash}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{authorfullhash}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{authorfullhashraw}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \field{extraname}{2}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Ley N.º 20.123 que regula el trabajo en régimen de subcontratación}
+      \field{year}{2006}
+    \endentry
+    \entry{glec2023}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=00c9777685cd3dfbca4fd45ae0fc7b9a}{%
+           family={{Smart Freight Centre}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{00c9777685cd3dfbca4fd45ae0fc7b9a}
+      \strng{fullhash}{00c9777685cd3dfbca4fd45ae0fc7b9a}
+      \strng{fullhashraw}{00c9777685cd3dfbca4fd45ae0fc7b9a}
+      \strng{bibnamehash}{00c9777685cd3dfbca4fd45ae0fc7b9a}
+      \strng{authorbibnamehash}{00c9777685cd3dfbca4fd45ae0fc7b9a}
+      \strng{authornamehash}{00c9777685cd3dfbca4fd45ae0fc7b9a}
+      \strng{authorfullhash}{00c9777685cd3dfbca4fd45ae0fc7b9a}
+      \strng{authorfullhashraw}{00c9777685cd3dfbca4fd45ae0fc7b9a}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{GLEC Framework for logistics emissions accounting and reporting, version 3.0}
+      \field{year}{2023}
+    \endentry
+  \enddatalist
+  \datalist[entry]{apa/global//global/global/global}
+    \entry{bases_caso10_2026}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=ee5d1fce8a3bf142902b6ac732f8f708}{%
+           family={{Escuela de Informática PUCV}},
+           familyi={E\bibinitperiod}}}%
+      }
+      \name{shortauthor}{1}{}{%
+        {{un=0,uniquepart=base,hash=ee5d1fce8a3bf142902b6ac732f8f708}{%
+           family={{Escuela de Informática PUCV}},
+           familyi={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{ee5d1fce8a3bf142902b6ac732f8f708}
+      \strng{fullhash}{ee5d1fce8a3bf142902b6ac732f8f708}
+      \strng{fullhashraw}{ee5d1fce8a3bf142902b6ac732f8f708}
+      \strng{bibnamehash}{ee5d1fce8a3bf142902b6ac732f8f708}
+      \strng{authorbibnamehash}{ee5d1fce8a3bf142902b6ac732f8f708}
+      \strng{authornamehash}{ee5d1fce8a3bf142902b6ac732f8f708}
+      \strng{authorfullhash}{ee5d1fce8a3bf142902b6ac732f8f708}
+      \strng{authorfullhashraw}{ee5d1fce8a3bf142902b6ac732f8f708}
+      \strng{shortauthorbibnamehash}{ee5d1fce8a3bf142902b6ac732f8f708}
+      \strng{shortauthornamehash}{ee5d1fce8a3bf142902b6ac732f8f708}
+      \strng{shortauthorfullhash}{ee5d1fce8a3bf142902b6ac732f8f708}
+      \strng{shortauthorfullhashraw}{ee5d1fce8a3bf142902b6ac732f8f708}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{shortauthor}
+      \field{labeltitlesource}{title}
+      \field{note}{Documento FEP03.10.26}
+      \field{title}{Bases Técnicas del Caso 10. Transporte de Carga. Transportes Curimón S.A.}
+      \field{year}{2026}
+    \endentry
+    \entry{iso14083}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5b512ee8a59deb284ad0a6a035ba10b1}{%
+           family={{ISO}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{fullhash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{fullhashraw}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{bibnamehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authorbibnamehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authornamehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authorfullhash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authorfullhashraw}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{ISO 14083. Greenhouse gases. Quantification and reporting of greenhouse gas emissions arising from transport chain operations}
+      \field{year}{2023}
+    \endentry
+    \entry{ds298}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=acc54fd726de9f1741513109eab8d5d5}{%
+           family={{Ministerio de Transportes}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{acc54fd726de9f1741513109eab8d5d5}
+      \strng{fullhash}{acc54fd726de9f1741513109eab8d5d5}
+      \strng{fullhashraw}{acc54fd726de9f1741513109eab8d5d5}
+      \strng{bibnamehash}{acc54fd726de9f1741513109eab8d5d5}
+      \strng{authorbibnamehash}{acc54fd726de9f1741513109eab8d5d5}
+      \strng{authornamehash}{acc54fd726de9f1741513109eab8d5d5}
+      \strng{authorfullhash}{acc54fd726de9f1741513109eab8d5d5}
+      \strng{authorfullhashraw}{acc54fd726de9f1741513109eab8d5d5}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Decreto Supremo N.º 298. Reglamento de transporte de cargas peligrosas por calles y caminos}
+      \field{year}{1995}
+    \endentry
+    \entry{codigo_trabajo_25bis}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=4bea1cf2944a8ad58a1c159a33e3a06b}{%
+           family={{Ministerio del Trabajo}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Biblioteca del Congreso Nacional de Chile}%
+      }
+      \strng{namehash}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{fullhash}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{fullhashraw}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{bibnamehash}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{authorbibnamehash}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{authornamehash}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{authorfullhash}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{authorfullhashraw}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \field{extraname}{1}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Decreto con Fuerza de Ley N.º 1. Texto refundido, coordinado y sistematizado del Código del Trabajo. Artículo 25 bis sobre jornada de choferes de vehículos de carga terrestre interurbana}
+      \field{year}{2003}
+      \verb{urlraw}
+      \verb https://www.bcn.cl/leychile/navegar?idNorma=207436
+      \endverb
+      \verb{url}
+      \verb https://www.bcn.cl/leychile/navegar?idNorma=207436
+      \endverb
+    \endentry
+    \entry{ley20123}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=4bea1cf2944a8ad58a1c159a33e3a06b}{%
+           family={{Ministerio del Trabajo}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{fullhash}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{fullhashraw}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{bibnamehash}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{authorbibnamehash}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{authornamehash}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{authorfullhash}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{authorfullhashraw}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \field{extraname}{2}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Ley N.º 20.123 que regula el trabajo en régimen de subcontratación}
+      \field{year}{2006}
+    \endentry
+    \entry{glec2023}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=00c9777685cd3dfbca4fd45ae0fc7b9a}{%
+           family={{Smart Freight Centre}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{00c9777685cd3dfbca4fd45ae0fc7b9a}
+      \strng{fullhash}{00c9777685cd3dfbca4fd45ae0fc7b9a}
+      \strng{fullhashraw}{00c9777685cd3dfbca4fd45ae0fc7b9a}
+      \strng{bibnamehash}{00c9777685cd3dfbca4fd45ae0fc7b9a}
+      \strng{authorbibnamehash}{00c9777685cd3dfbca4fd45ae0fc7b9a}
+      \strng{authornamehash}{00c9777685cd3dfbca4fd45ae0fc7b9a}
+      \strng{authorfullhash}{00c9777685cd3dfbca4fd45ae0fc7b9a}
+      \strng{authorfullhashraw}{00c9777685cd3dfbca4fd45ae0fc7b9a}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{GLEC Framework for logistics emissions accounting and reporting, version 3.0}
+      \field{year}{2023}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

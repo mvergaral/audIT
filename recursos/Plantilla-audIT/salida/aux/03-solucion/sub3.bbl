@@ -1,0 +1,123 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{apa/apasortcite//global/global/global}
+    \entry{res_ex_1213_2009}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=854d8d40c409c155aa578b45080e4c74}{%
+           family={{Dirección del Trabajo}},
+           familyi={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{854d8d40c409c155aa578b45080e4c74}
+      \strng{fullhash}{854d8d40c409c155aa578b45080e4c74}
+      \strng{fullhashraw}{854d8d40c409c155aa578b45080e4c74}
+      \strng{bibnamehash}{854d8d40c409c155aa578b45080e4c74}
+      \strng{authorbibnamehash}{854d8d40c409c155aa578b45080e4c74}
+      \strng{authornamehash}{854d8d40c409c155aa578b45080e4c74}
+      \strng{authorfullhash}{854d8d40c409c155aa578b45080e4c74}
+      \strng{authorfullhashraw}{854d8d40c409c155aa578b45080e4c74}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Resolución Exenta N.º 1213. Sistema obligatorio de control de asistencia, horas de trabajo y descanso para conductores de vehículos de carga terrestre interurbana}
+      \field{year}{2009}
+    \endentry
+    \entry{iridium_sbd}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=6574bc27f2e9ba625a26b4c34361dbba}{%
+           family={{Iridium Communications}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{6574bc27f2e9ba625a26b4c34361dbba}
+      \strng{fullhash}{6574bc27f2e9ba625a26b4c34361dbba}
+      \strng{fullhashraw}{6574bc27f2e9ba625a26b4c34361dbba}
+      \strng{bibnamehash}{6574bc27f2e9ba625a26b4c34361dbba}
+      \strng{authorbibnamehash}{6574bc27f2e9ba625a26b4c34361dbba}
+      \strng{authornamehash}{6574bc27f2e9ba625a26b4c34361dbba}
+      \strng{authorfullhash}{6574bc27f2e9ba625a26b4c34361dbba}
+      \strng{authorfullhashraw}{6574bc27f2e9ba625a26b4c34361dbba}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Iridium Short Burst Data Service Developers Guide}
+      \field{year}{2024}
+    \endentry
+  \enddatalist
+  \datalist[entry]{apa/global//global/global/global}
+    \entry{res_ex_1213_2009}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=854d8d40c409c155aa578b45080e4c74}{%
+           family={{Dirección del Trabajo}},
+           familyi={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{854d8d40c409c155aa578b45080e4c74}
+      \strng{fullhash}{854d8d40c409c155aa578b45080e4c74}
+      \strng{fullhashraw}{854d8d40c409c155aa578b45080e4c74}
+      \strng{bibnamehash}{854d8d40c409c155aa578b45080e4c74}
+      \strng{authorbibnamehash}{854d8d40c409c155aa578b45080e4c74}
+      \strng{authornamehash}{854d8d40c409c155aa578b45080e4c74}
+      \strng{authorfullhash}{854d8d40c409c155aa578b45080e4c74}
+      \strng{authorfullhashraw}{854d8d40c409c155aa578b45080e4c74}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Resolución Exenta N.º 1213. Sistema obligatorio de control de asistencia, horas de trabajo y descanso para conductores de vehículos de carga terrestre interurbana}
+      \field{year}{2009}
+    \endentry
+    \entry{iridium_sbd}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=6574bc27f2e9ba625a26b4c34361dbba}{%
+           family={{Iridium Communications}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{6574bc27f2e9ba625a26b4c34361dbba}
+      \strng{fullhash}{6574bc27f2e9ba625a26b4c34361dbba}
+      \strng{fullhashraw}{6574bc27f2e9ba625a26b4c34361dbba}
+      \strng{bibnamehash}{6574bc27f2e9ba625a26b4c34361dbba}
+      \strng{authorbibnamehash}{6574bc27f2e9ba625a26b4c34361dbba}
+      \strng{authornamehash}{6574bc27f2e9ba625a26b4c34361dbba}
+      \strng{authorfullhash}{6574bc27f2e9ba625a26b4c34361dbba}
+      \strng{authorfullhashraw}{6574bc27f2e9ba625a26b4c34361dbba}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Iridium Short Burst Data Service Developers Guide}
+      \field{year}{2024}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

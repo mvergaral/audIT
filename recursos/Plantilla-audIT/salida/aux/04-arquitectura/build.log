@@ -1,0 +1,2923 @@
+Rc files read:
+  NONE
+Latexmk: This is Latexmk, John Collins, 15 June 2025. Version 4.87.
+No existing .aux file, so I'll make a simple one, and require run of *latex.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Category 'other':
+  Rerun of 'pdflatex' forced or previously required:
+    Reason or flag: 'Initial setup'
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -interaction=nonstopmode -halt-on-error -recorder --jobname="sub4" -output-directory="salida/aux/04-arquitectura"  "\def\subdocRuta{subdocumentos/04-arquitectura}\input{subdocumentos/04-arquitectura/main.tex}"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+(/mnt/NuevoVol/FEP/Plantilla-audIT/subdocumentos/04-arquitectura/main.tex
+(/mnt/NuevoVol/FEP/Plantilla-audIT/comun/inf-pucv.cls
+Document Class: inf-pucv 2023/04/24 sgarciad.me v0.1, Clase para la plantilla L
+aTeX con formato escuela INF PUCV.
+(/usr/share/texmf-dist/tex/latex/extsizes/extarticle.cls
+Document Class: extarticle 1996/10/08 v1.0 Non Standard LaTeX document class
+(/usr/share/texmf-dist/tex/latex/base/size12.clo)
+(/usr/share/texmf-dist/tex/latex/base/exscale.sty))
+(/usr/share/texmf-dist/tex/latex/pdfx/pdfx.sty
+(/usr/share/texmf-dist/tex/generic/iftex/ifluatex.sty
+(/usr/share/texmf-dist/tex/generic/iftex/iftex.sty))
+(/usr/share/texmf-dist/tex/generic/iftex/ifpdf.sty)
+(/usr/share/texmf-dist/tex/generic/iftex/ifxetex.sty)
+(/usr/share/texmf-dist/tex/latex/everyshi/everyshi.sty){/var/lib/texmf/fonts/ma
+p/pdftex/updmap/pdftex.map} (/usr/share/texmf-dist/tex/latex/base/inputenc.sty)
+ (/usr/share/texmf-dist/tex/latex/pdfx/l8u-penc.def)
+(/usr/share/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/share/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+
+Package xcolor Warning: Package option `hyperref' is obsolete and ignored on in
+put line 265.
+
+(/usr/share/texmf-dist/tex/latex/graphics-def/pdftex.def)
+(/usr/share/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(/usr/share/texmf-dist/tex/latex/colortbl/colortbl.sty
+(/usr/share/texmf-dist/tex/latex/tools/array.sty))
+(/usr/share/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/share/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/share/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)
+(/usr/share/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/share/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+(/usr/share/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(/usr/share/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/share/texmf-dist/tex/generic/infwarerr/infwarerr.sty)))
+(/usr/share/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/share/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/share/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+(/usr/share/texmf-dist/tex/latex/kvoptions/kvoptions.sty)))
+(/usr/share/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/share/texmf-dist/tex/generic/stringenc/stringenc.sty)
+(/usr/share/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/share/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/share/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/share/texmf-dist/tex/latex/url/url.sty)
+(/usr/share/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/share/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty)))
+(/usr/share/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/share/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+(/usr/share/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty)))
+(/usr/share/texmf-dist/tex/latex/hyperref/psdextra.def)
+(/usr/share/texmf-dist/tex/generic/colorprofiles/colorprofiles.sty
+(/usr/share/texmf-dist/tex/generic/colorprofiles/colorprofiles.tex))
+(/usr/share/texmf-dist/tex/latex/pdfx/AdobeColorProfiles.tex)
+(/usr/share/texmf-dist/tex/latex/pdfx/8bit.def)
+** pdfx: No file sub4.xmpdata . Metadata will be incomplete!
+<<sRGB.icc>> (/usr/share/texmf-dist/tex/latex/pdfx/8bit.def)
+(/usr/share/texmf-dist/tex/generic/pdftex/glyphtounicode.tex)
+(/usr/share/texmf-dist/tex/latex/pdfx/glyphtounicode-cmr.tex)
+(/usr/share/texmf-dist/tex/latex/pdfx/glyphtounicode-ntx.tex)
+(/usr/share/texmf-dist/tex/latex/base/ifthen.sty)
+(/usr/share/texmf-dist/tex/latex/xmpincl/xmpincl.sty)
+(/usr/share/texmf-dist/tex/latex/pdfx/8bit.def)
+Using XMP template file: pdfa.xmp
+<<pdfa.xmpi>>
+
+Package pdfx Warning: Setting all color commands to rgb,
+consistent with the Color Model for PDF/A  on input line 3126.
+
+) (/usr/share/texmf-dist/tex/latex/base/utf8.def
+(/usr/share/texmf-dist/tex/latex/base/omsenc.dfu)
+(/usr/share/texmf-dist/tex/latex/base/ot1enc.dfu)
+(/usr/share/texmf-dist/tex/latex/base/t1enc.dfu)
+(/usr/share/texmf-dist/tex/latex/base/ts1enc.dfu))
+(/mnt/NuevoVol/FEP/Plantilla-audIT/comun/styles.sty
+(/usr/share/texmf-dist/tex/latex/base/inputenc.sty)
+(/usr/share/texmf-dist/tex/latex/base/fontenc.sty)
+(/usr/share/texmf-dist/tex/generic/babel/babel.sty
+(/usr/share/texmf-dist/tex/generic/babel/txtbabel.def)
+(/usr/share/texmf-dist/tex/generic/babel/locale/es/babel-spanish.tex)
+(/usr/share/texmf-dist/tex/generic/babel-spanish/spanish.ldf))
+(/usr/share/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/share/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/share/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/share/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/share/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/share/texmf-dist/tex/latex/amsfonts/amsfonts.sty)
+(/usr/share/texmf-dist/tex/latex/amsfonts/amssymb.sty)
+(/usr/share/texmf-dist/tex/latex/pgfplots/pgfplots.sty
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
+(/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/share/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/share/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/share/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)))
+(/usr/share/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/share/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/share/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def)
+(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/pgf.revision.tex)))
+(/usr/share/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/share/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered.code.te
+x)) (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg)
+(/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+(/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def)))
+(/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex))
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code
+.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.te
+x) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics
+.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex))
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
+) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex)
+
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.t
+ex) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.te
+x) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex)
+ (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex)))
+(/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex)
+(/usr/share/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty)
+(/usr/share/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty))
+(/usr/share/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/share/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex))
+(/usr/share/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex))
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.te
+x) (/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
+topaths.code.tex)))
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
+(/usr/share/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric.code.tex))
+(/usr/share/texmf-dist/tex/generic/pgfplots/libs/pgfplotslibrary.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_l
+oader.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_p
+gfutil-common-lists.tex))
+(/usr/share/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.code.tex
+(/usr/share/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststructure
+.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststructure
+ext.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsarray.code.te
+x)
+(/usr/share/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsmatrix.code.t
+ex)
+(/usr/share/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstableshared.code.t
+ex)
+(/usr/share/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsdeque.code.te
+x) (/usr/share/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.code.tex
+(/usr/share/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.data.code.tex))
+(/usr/share/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.verb.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplots.surfshading
+.code.tex
+(/usr/share/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surfshading.
+pgfsys-pdftex.def)))
+(/usr/share/texmf-dist/tex/generic/pgfplots/util/pgfplotscolormap.code.tex
+(/usr/share/texmf-dist/tex/generic/pgfplots/util/pgfplotscolor.code.tex))
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplotsstackedplots.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplotsplothandlers.code.tex
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplothandler.code.tex
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplotimage.code.tex)))
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplots.scaling.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplotscoordprocessing.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplots.errorbars.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplots.markers.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplotsticks.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplots.paths.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
+decorations.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.code.tex))
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
+decorations.pathmorphing.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorati
+ons.pathmorphing.code.tex))
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
+decorations.pathreplacing.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorati
+ons.pathreplacing.code.tex))
+(/usr/share/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.contourlua
+.code.tex))
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
+plotmarks.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmarks.code.tex))
+) (/usr/share/texmf-dist/tex/latex/paracol/paracol.sty)
+(/usr/share/texmf-dist/tex/latex/wrapfig/wrapfig.sty)
+(/usr/share/texmf-dist/tex/latex/tools/multicol.sty)
+(/usr/share/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/share/texmf-dist/tex/generic/iftex/ifvtex.sty))
+(/usr/share/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.fillbetwee
+n.code.tex
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfcontrib/tikzlibraryfillbetween.c
+ode.tex
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
+intersections.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryintersections.code.t
+ex))
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfcontrib/tikzlibrarydecorations.s
+oftclip.code.tex
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfcontrib/pgflibraryfillbetween.co
+de.tex)))
+(/usr/share/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.decoration
+s.softclip.code.tex))
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
+patterns.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibrarypatterns.code.tex))
+(/usr/share/texmf-dist/tex/latex/tools/longtable.sty)
+(/usr/share/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(/usr/share/texmf-dist/tex/latex/float/float.sty))
+(/usr/share/texmf-dist/tex/latex/accsupp/accsupp.sty
+(/usr/share/texmf-dist/tex/latex/accsupp/accsupp-pdftex.def))
+(/usr/share/texmf-dist/tex/latex/csquotes/csquotes.sty
+(/usr/share/texmf-dist/tex/latex/csquotes/csquotes.def)
+(/usr/share/texmf-dist/tex/latex/csquotes/csquotes.cfg))
+(/usr/share/texmf-dist/tex/latex/biblatex/biblatex.sty
+(/usr/share/texmf-dist/tex/latex/logreq/logreq.sty
+(/usr/share/texmf-dist/tex/latex/logreq/logreq.def))
+(/usr/share/texmf-dist/tex/latex/biblatex/blx-dm.def)
+(/usr/share/texmf-dist/tex/latex/biblatex-apa/apa.dbx)
+(/usr/share/texmf-dist/tex/latex/biblatex/blx-compat.def)
+(/usr/share/texmf-dist/tex/latex/biblatex/biblatex.def)
+(/usr/share/texmf-dist/tex/latex/biblatex-apa/apa.bbx
+(/usr/share/texmf-dist/tex/latex/biblatex/bbx/standard.bbx))
+(/usr/share/texmf-dist/tex/latex/biblatex-apa/apa.cbx)
+(/usr/share/texmf-dist/tex/latex/biblatex/biblatex.cfg)
+(/usr/share/texmf-dist/tex/latex/l3kernel/expl3.sty
+(/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def))
+(/usr/share/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty
+(/usr/share/texmf-dist/tex/latex/l3packages/xparse/xparse.sty)))
+(/usr/share/texmf-dist/tex/latex/fontawesome5/fontawesome5.sty
+(/usr/share/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty)
+(/usr/share/texmf-dist/tex/latex/fontawesome5/fontawesome5-generic-helper.sty
+(/usr/share/texmf-dist/tex/latex/fontawesome5/fontawesome5-mapping.def)))
+(/usr/share/texmf-dist/tex/latex/koma-script/scrlfile.sty
+(/usr/share/texmf-dist/tex/latex/koma-script/scrlfile-hook.sty
+(/usr/share/texmf-dist/tex/latex/koma-script/scrlogo.sty)))
+(/usr/share/texmf-dist/tex/latex/titlesec/titlesec.sty)
+(/usr/share/texmf-dist/tex/latex/minted/minted.sty
+(/usr/share/texmf-dist/tex/generic/catchfile/catchfile.sty
+(/usr/share/texmf-dist/tex/generic/etexcmds/etexcmds.sty))
+(/usr/share/texmf-dist/tex/latex/fvextra/fvextra.sty
+(/usr/share/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty)
+(/usr/share/texmf-dist/tex/latex/upquote/upquote.sty
+(/usr/share/texmf-dist/tex/latex/base/textcomp.sty))
+(/usr/share/texmf-dist/tex/latex/lineno/lineno.sty
+
+LaTeX Warning: Command \@parboxrestore  has changed.
+               Check if current package is valid.
+
+)
+
+Package fvextra Warning: csquotes should be loaded after fvextra, to avoid a wa
+rning from the lineno package on input line 36.
+
+) (/usr/share/texmf-dist/tex/latex/latex2pydata/latex2pydata.sty)
+(/usr/share/texmf-dist/tex/latex/pgfopts/pgfopts.sty)
+(/usr/share/texmf-dist/tex/latex/tools/shellesc.sty))
+(/usr/share/texmf-dist/tex/latex/caption/caption.sty
+(/usr/share/texmf-dist/tex/latex/caption/caption3.sty)
+(/usr/share/texmf-dist/tex/latex/caption/ltcaption.sty))
+(/usr/share/texmf-dist/tex/latex/chngcntr/chngcntr.sty)
+(/usr/share/texmf-dist/tex/latex/lipsum/lipsum.sty
+(/usr/share/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex))
+(/usr/share/texmf-dist/tex/latex/enumitem/enumitem.sty)
+(/usr/share/texmf-dist/tex/latex/pdfpages/pdfpages.sty
+(/usr/share/texmf-dist/tex/latex/tools/calc.sty)
+(/usr/share/texmf-dist/tex/latex/eso-pic/eso-pic.sty)
+(/usr/share/texmf-dist/tex/latex/pdfpages/pppdftex.def))
+(/usr/share/texmf-dist/tex/latex/tocloft/tocloft.sty)
+(/usr/share/texmf-dist/tex/latex/tools/tabularx.sty))
+(/mnt/NuevoVol/FEP/Plantilla-audIT/comun/instancia.tex)
+(/mnt/NuevoVol/FEP/Plantilla-audIT/subdocumentos/04-arquitectura/meta.tex)
+(/mnt/NuevoVol/FEP/Plantilla-audIT/comun/preambulo.tex
+(/usr/share/texmf-dist/tex/latex/import/import.sty)
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
+calc.code.tex) (/usr/share/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+(/usr/share/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.sty
+(/usr/share/texmf-dist/tex/latex/graphics/lscape.sty)))
+(/usr/share/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty))
+(/mnt/NuevoVol/FEP/Plantilla-audIT/comun/portada.tex)
+(salida/aux/04-arquitectura/sub4.aux)
+(/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+Package pgfplots notification 'compat/show suggested version=true': you might b
+enefit from \pgfplotsset{compat=1.18} (current compat level: 1.17).
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+(/usr/share/texmf-dist/tex/latex/biblatex-apa/spanish-apa.lbx
+(/usr/share/texmf-dist/tex/latex/biblatex/lbx/spanish.lbx)
+(/usr/share/texmf-dist/tex/latex/biblatex/lbx/spanish.lbx))
+No file sub4.bbl.
+
+LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <19> not available
+(Font)              size <17.28> substituted on input line 8.
+
+
+LaTeX Font Warning: Font shape `T1/cmr/bx/n' in size <19> not available
+(Font)              size <17.28> substituted on input line 8.
+
+[1{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/t
+exmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} </mnt/NuevoVol/FEP/Plantil
+la-audIT/comun/assets/portada.jpeg>]
+
+LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <28> not available
+(Font)              size <29.86> substituted on input line 9.
+
+
+LaTeX Font Warning: Font shape `T1/cmr/bx/n' in size <28> not available
+(Font)              size <29.86> substituted on input line 9.
+
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 9--9
+[][][] 
+[2]
+No file sub4.toc.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.9 \fichaSubdocumento
+                       [1]
+(/mnt/NuevoVol/FEP/Plantilla-audIT/subdocumentos/04-arquitectura/contenido.tex
+
+LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <86> not available
+(Font)              size <51.59> substituted on input line 1.
+
+
+LaTeX Font Warning: Font shape `T1/cmr/bx/n' in size <86> not available
+(Font)              size <51.59> substituted on input line 1.
+
+
+LaTeX Warning: Citation 'iso42010' on page 2 undefined on input line 8.
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.20 \end{tablaAudit}
+                      [2] [3]
+Underfull \hbox (badness 10000) in paragraph at lines 59--59
+[]|\T1/cmr/bx/n/10.95 Alternativa des-car-
+
+Underfull \hbox (badness 1052) in paragraph at lines 60--60
+[]|\T1/cmr/m/n/10.95 Monolito mo-du-lar con
+
+Underfull \hbox (badness 1590) in paragraph at lines 60--61
+\T1/cmr/m/n/10.95 La in-ges-ta te-le-má-ti-ca
+
+Underfull \hbox (badness 2790) in paragraph at lines 61--62
+[]|\T1/cmr/m/n/10.95 Desacoplamiento tem-
+
+Underfull \hbox (badness 2065) in paragraph at lines 62--62
+[]|\T1/cmr/m/n/10.95 Segregación por cap-tu-ra
+
+Underfull \hbox (badness 2027) in paragraph at lines 63--63
+[]|\T1/cmr/m/n/10.95 Claves de in-ter-faz de
+
+Underfull \hbox (badness 10000) in paragraph at lines 63--64
+[]|\T1/cmr/m/n/10.95 RT-05.18 prohí-be la
+
+Underfull \hbox (badness 5802) in paragraph at lines 63--64
+\T1/cmr/m/n/10.95 cla-ve es-tá-ti-ca en la
+
+Underfull \hbox (badness 2393) in paragraph at lines 63--64
+\T1/cmr/m/n/10.95 ru-ta. Nin-gún ser-vi-cio
+[4]
+
+LaTeX Warning: Citation 'codigo_trabajo_25bis' on page 5 undefined on input lin
+e 83.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 83--84
+[]|\T1/cmr/m/n/10.95 Artículo 25 bis del
+
+Underfull \hbox (badness 10000) in paragraph at lines 83--84
+\T1/cmr/m/n/10.95 Có-di-go del Tra-ba-jo
+
+Underfull \hbox (badness 10000) in paragraph at lines 85--85
+[]|\T1/cmr/m/n/10.95 Semirremolque
+
+LaTeX Warning: Citation 'ds298' on page 5 undefined on input line 85.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 85--86
+[]|\T1/cmr/m/n/10.95 Decreto Su-pre-mo N.\TS1/cmr/m/n/10.95 º\T1/cmr/m/n/10.95 
+298
+[5] [6 </mnt/NuevoVol/FEP/Plantilla-audIT/comun/assets/figuras/D3-diagrama12_in
+tegracion_acl_erp2013.png (PNG copy)>] [7] [8 </mnt/NuevoVol/FEP/Plantilla-audI
+T/comun/assets/figuras/D3-diagrama13_arquitectura_analitica_lakehouse_bi.png (P
+NG copy)>] [9 </mnt/NuevoVol/FEP/Plantilla-audIT/comun/assets/figuras/D3-diagra
+ma2_arquitectura_tactica_ddd.png (PNG copy)>]
+Underfull \hbox (badness 4328) in paragraph at lines 168--168
+[]|\T1/cmr/m/n/10.95 On-premise dis-tri-bui-
+ [10 </mnt/NuevoVol/FEP/Plantilla-audIT/comun/assets/figuras/D3-diagrama11_patr
+ones_resiliencia_despacho.png (PNG copy)>] [11] [12]
+
+LaTeX Warning: Citation 'azure_regions' on page 13 undefined on input line 234.
+
+
+ [13]
+
+LaTeX Warning: Citation 'nfpa2001' on page 14 undefined on input line 269.
+
+ [14]
+Underfull \hbox (badness 1371) in paragraph at lines 285--286
+[]|\T1/cmr/m/n/10.95 RT-07.02 exi-ge dis-tan-cia su-fi-
+ [15] [16]
+
+LaTeX Warning: Citation 'iso22301' on page 17 undefined on input line 336.
+
+
+LaTeX Warning: Citation 'iso27031' on page 17 undefined on input line 337.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 350--350
+[]|\T1/cmr/m/n/10.95 Disponible
+
+Underfull \hbox (badness 10000) in paragraph at lines 350--350
+\T1/cmr/m/n/10.95 la po-bla-ción
+
+Underfull \hbox (badness 10000) in paragraph at lines 352--352
+[]|\T1/cmr/m/n/10.95 Parcial, con-
+
+Underfull \hbox (badness 1270) in paragraph at lines 355--355
+[]|\T1/cmr/m/n/10.95 Actualización de firm-wa-re del
+ [17]
+Underfull \hbox (badness 1442) in paragraph at lines 369--370
+[]|\T1/cmr/m/n/10.95 Régimen de des-can-sos
+
+Underfull \hbox (badness 3019) in paragraph at lines 371--371
+[]|\T1/cmr/m/n/10.95 Volumen acu-mu-la-do a bor-do
+
+Underfull \hbox (badness 1052) in paragraph at lines 375--376
+[]|\T1/cmr/m/n/10.95 Campaña de me-di-ción
+
+Underfull \hbox (badness 1275) in paragraph at lines 377--377
+[]|\T1/cmr/m/n/10.95 Modelo de rá-fa-ga
+ [18]
+
+LaTeX Warning: Citation 'webfleet_sat' on page 19 undefined on input line 397.
+
+
+Overfull \hbox (41.70764pt too wide) in paragraph at lines 396--399
+[]\T1/cmr/bx/n/12 El pro-duc-to sa-te-li-tal eva-lua-do de-cla-ra 40 ho-ras de 
+al-ma-ce-na-mien-to \T1/cmr/m/n/12 ([])
+[19] [20 </mnt/NuevoVol/FEP/Plantilla-audIT/comun/assets/figuras/LogicaCapas.pd
+f>] [21 </mnt/NuevoVol/FEP/Plantilla-audIT/comun/assets/figuras/Contextos.pdf>]
+[22 </mnt/NuevoVol/FEP/Plantilla-audIT/comun/assets/figuras/LogicaIntegraciones
+.pdf>] [23 </mnt/NuevoVol/FEP/Plantilla-audIT/comun/assets/figuras/Main.pdf>]
+[24 </mnt/NuevoVol/FEP/Plantilla-audIT/comun/assets/figuras/Camion.pdf>]
+[25 </mnt/NuevoVol/FEP/Plantilla-audIT/comun/assets/figuras/DosEjes.pdf>]
+[26 </mnt/NuevoVol/FEP/Plantilla-audIT/comun/assets/figuras/Flujo.pdf>]
+[27 </mnt/NuevoVol/FEP/Plantilla-audIT/comun/assets/figuras/LogicaEmplazamiento
+.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 436--437
+[]|\T1/cmr/m/n/10.95 RT-03.01 y RT-
+
+Underfull \hbox (badness 10000) in paragraph at lines 449--450
+[]|\T1/cmr/m/n/10.95 Autenticación y en-ru-ta-mien-to
+
+Underfull \hbox (badness 2057) in paragraph at lines 450--450
+[]|\T1/cmr/m/n/10.95 Servicio de des-pa-cho y
+
+Underfull \hbox (badness 1565) in paragraph at lines 451--452
+[]|\T1/cmr/m/n/10.95 RT-21.06: asig-nar via-je, emi-tir
+
+Underfull \hbox (badness 3078) in paragraph at lines 452--453
+[]|\T1/cmr/m/n/10.95 Administración cen-tra-li-za-da de
+(/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd)
+Underfull \hbox (badness 2027) in paragraph at lines 453--454
+[]|\T1/cmr/m/n/10.95 Validación blo-quean-te $\OMS/cmsy/m/n/10.95 ^^T$ \T1/cmr/
+m/n/10.95 30 s
+
+Overfull \hbox (4.86163pt too wide) in paragraph at lines 458--458
+[]|\T1/cmr/m/n/10.95 Integración| 
+
+Overfull \hbox (4.86163pt too wide) in paragraph at lines 459--459
+[]|\T1/cmr/m/n/10.95 Integración| 
+
+Overfull \hbox (4.86163pt too wide) in paragraph at lines 460--460
+[]|\T1/cmr/m/n/10.95 Integración| 
+
+Underfull \hbox (badness 10000) in paragraph at lines 464--464
+[]|\T1/cmr/m/n/10.95 Repositorio do-cu-men-tal
+
+Underfull \hbox (badness 1824) in paragraph at lines 468--469
+[]|\T1/cmr/m/n/10.95 Clave ges-tio-na-da in-de-pen-dien-te
+
+Underfull \hbox (badness 1412) in paragraph at lines 470--470
+[]|\T1/cmr/m/n/10.95 Réplica de re-cu-pe-ra-ción
+
+Underfull \hbox (badness 1910) in paragraph at lines 471--471
+[]|\T1/cmr/m/n/10.95 ERP con-ta-ble he-re-da-do
+
+Underfull \hbox (badness 1789) in paragraph at lines 473--473
+[]|\T1/cmr/m/n/10.95 Custodia de me-dios de
+
+Underfull \hbox (badness 2698) in paragraph at lines 476--477
+\T1/cmr/m/n/10.95 pér-di-da de re-gis-tro. RT-10.05:
+
+Underfull \hbox (badness 1019) in paragraph at lines 480--481
+[]|\T1/cmr/m/n/10.95 Subconjunto por ries-go. Po-bla-
+[28] [29] [30]
+Overfull \hbox (12.3112pt too wide) in paragraph at lines 485--485
+[]|\T1/cmr/bx/n/10.95 Criticidad| 
+
+Overfull \hbox (26.39209pt too wide) in paragraph at lines 485--485
+[]|\T1/cmr/bx/n/10.95 Conectividad| 
+
+Underfull \hbox (badness 1231) in paragraph at lines 486--486
+[]|\T1/cmr/m/n/10.95 Despacho y asig-
+
+Underfull \hbox (badness 10000) in paragraph at lines 486--486
+[]|\T1/cmr/m/n/10.95 96.000 via-
+
+Underfull \hbox (badness 10000) in paragraph at lines 486--486
+[]|\T1/cmr/m/n/10.95 Requiere
+
+Underfull \hbox (badness 4024) in paragraph at lines 487--487
+[]|\T1/cmr/m/n/10.95 Ventana de
+
+Underfull \hbox (badness 10000) in paragraph at lines 487--488
+[]|\T1/cmr/m/n/10.95 Fijo,
+
+Underfull \hbox (badness 10000) in paragraph at lines 487--488
+\T1/cmr/m/n/10.95 dos
+
+Underfull \hbox (badness 10000) in paragraph at lines 488--488
+[]|\T1/cmr/m/n/10.95 Requiere
+
+Underfull \hbox (badness 10000) in paragraph at lines 489--489
+[]|\T1/cmr/m/n/10.95 Peak de
+
+Underfull \hbox (badness 10000) in paragraph at lines 489--489
+\T1/cmr/m/n/10.95 re-co-ne-xión
+
+Underfull \hbox (badness 10000) in paragraph at lines 489--489
+[]|\T1/cmr/m/n/10.95 Requiere
+
+Underfull \hbox (badness 10000) in paragraph at lines 489--490
+[]|\T1/cmr/m/n/10.95 Elástico
+
+Overfull \hbox (0.58797pt too wide) in paragraph at lines 490--490
+[]|\T1/cmr/m/n/10.95 Particionado
+
+Underfull \hbox (badness 10000) in paragraph at lines 490--490
+[]|\T1/cmr/m/n/10.95 Requiere
+
+Overfull \hbox (8.46513pt too wide) in paragraph at lines 490--491
+[]|\T1/cmr/m/n/10.95 Reservado| 
+
+Underfull \hbox (badness 10000) in paragraph at lines 491--491
+[]|\T1/cmr/m/n/10.95 Requiere
+
+Underfull \hbox (badness 10000) in paragraph at lines 491--492
+[]|\T1/cmr/m/n/10.95 Por
+
+Underfull \hbox (badness 10000) in paragraph at lines 491--492
+\T1/cmr/m/n/10.95 ca-pa
+
+Overfull \hbox (0.69548pt too wide) in paragraph at lines 491--492
+\T1/cmr/m/n/10.95 hot/cold| 
+
+Underfull \hbox (badness 10000) in paragraph at lines 492--492
+[]|\T1/cmr/m/n/10.95 Evidencia
+
+Underfull \hbox (badness 1939) in paragraph at lines 492--492
+[]|\T1/cmr/m/n/10.95 WORM, 10
+
+Underfull \hbox (badness 3148) in paragraph at lines 492--492
+\T1/cmr/m/n/10.95 años si-nies-
+
+Underfull \hbox (badness 10000) in paragraph at lines 492--492
+[]|\T1/cmr/m/n/10.95 Requiere
+
+Underfull \hbox (badness 10000) in paragraph at lines 492--493
+[]|\T1/cmr/m/n/10.95 Por
+
+Underfull \hbox (badness 10000) in paragraph at lines 493--493
+[]|\T1/cmr/m/n/10.95 Requiere
+
+Underfull \hbox (badness 10000) in paragraph at lines 494--494
+[]|\T1/cmr/m/n/10.95 Espejo de
+
+Underfull \hbox (badness 10000) in paragraph at lines 494--494
+[]|\T1/cmr/m/n/10.95 Enlace
+
+Underfull \hbox (badness 10000) in paragraph at lines 494--494
+\T1/cmr/m/n/10.95 en-tre
+
+Underfull \hbox (badness 10000) in paragraph at lines 494--495
+[]|\T1/cmr/m/n/10.95 Activo-
+
+Overfull \hbox (1.64725pt too wide) in paragraph at lines 495--495
+[]|\T1/cmr/m/n/10.95 Contabilidad
+
+Underfull \hbox (badness 10000) in paragraph at lines 495--495
+[]|\T1/cmr/m/n/10.95 Único
+
+Underfull \hbox (badness 10000) in paragraph at lines 495--495
+\T1/cmr/m/n/10.95 emi-sor tri-
+
+Overfull \hbox (4.53613pt too wide) in paragraph at lines 495--496
+[]|\T1/cmr/m/n/10.95 Existente| 
+
+Underfull \hbox (badness 6157) in paragraph at lines 496--497
+[]|\T1/cmr/m/n/10.95 4 ga-bi-
+
+Underfull \hbox (badness 10000) in paragraph at lines 497--497
+[]|\T1/cmr/m/n/10.95 Opera
+
+Underfull \hbox (badness 10000) in paragraph at lines 497--497
+\T1/cmr/m/n/10.95 sin co-
+
+Underfull \hbox (badness 10000) in paragraph at lines 498--498
+[]|\T1/cmr/m/n/10.95 Opera
+
+Underfull \hbox (badness 10000) in paragraph at lines 498--498
+\T1/cmr/m/n/10.95 sin co-
+
+Underfull \hbox (badness 1189) in paragraph at lines 498--499
+\T1/cmr/m/n/10.95 to mar-
+
+Underfull \hbox (badness 2875) in paragraph at lines 499--499
+[]|$\OMS/cmsy/m/n/10.95 ^^T$ \T1/cmr/m/n/10.95 de-ce-nas
+
+Underfull \hbox (badness 10000) in paragraph at lines 499--499
+[]|\T1/cmr/m/n/10.95 Sin co-
+
+Underfull \hbox (badness 10000) in paragraph at lines 499--499
+\T1/cmr/m/n/10.95 ber-tu-ra
+
+Underfull \hbox (badness 10000) in paragraph at lines 499--500
+[]|\T1/cmr/m/n/10.95 Por
+
+Underfull \hbox (badness 10000) in paragraph at lines 500--500
+[]|\T1/cmr/m/n/10.95 Media,
+
+Underfull \hbox (badness 10000) in paragraph at lines 500--500
+\T1/cmr/m/n/10.95 no blo-
+
+Underfull \hbox (badness 10000) in paragraph at lines 500--500
+[]|\T1/cmr/m/n/10.95 454 po-ten-
+
+Overfull \hbox (14.10675pt too wide) in paragraph at lines 500--500
+[]|\T1/cmr/m/n/10.95 Consentimiento
+
+Underfull \hbox (badness 10000) in paragraph at lines 500--500
+[]|\T1/cmr/m/n/10.95 Requiere
+
+Underfull \hbox (badness 1968) in paragraph at lines 500--501
+[]|\T1/cmr/m/n/10.95 Por de-
+
+Overfull \hbox (34.8106pt too wide) in alignment at lines 484--501
+ [] [] [] [] [] [] [] [] 
+[31] [32] [33]) [34]
+
+LaTeX Warning: Empty bibliography on input line 14.
+
+(salida/aux/04-arquitectura/sub4.aux)
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 34.41pt have occurred.
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `sub4.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                sub4
+(biblatex)                and rerun LaTeX afterwards.
+
+ )
+(see the transcript file for additional information) </home/disco/.texlive/texm
+f-var/fonts/pk/ljfour/jknappen/ec/ecbx5159.600pk></usr/share/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/cm
+-super/sfbx1095.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1200
+.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/shar
+e/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/share/texmf-dist/fo
+nts/type1/public/cm-super/sfbx2986.pfb></usr/share/texmf-dist/fonts/type1/publi
+c/cm-super/sfrm1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm
+1095.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on salida/aux/04-arquitectura/sub4.pdf (36 pages, 1615993 bytes)
+.
+Transcript written on salida/aux/04-arquitectura/sub4.log.
+Latexmk: Getting log file 'salida/aux/04-arquitectura/sub4.log'
+Latexmk: Examining 'salida/aux/04-arquitectura/sub4.fls'
+Latexmk: Examining 'salida/aux/04-arquitectura/sub4.log'
+Latexmk: Missing bbl file 'salida/aux/04-arquitectura/sub4.bbl' in following:
+ No file sub4.bbl.
+Latexmk: Missing input file 'sub4.toc' message in .log file:
+  No file sub4.toc.
+Latexmk: References changed.
+Latexmk: References changed.
+====== biblatex/biber in use
+Latexmk: Log file says output to 'salida/aux/04-arquitectura/sub4.pdf'
+Latexmk: Log file says output to 'salida/aux/04-arquitectura/sub4.pdf'
+Latexmk: Using biber to make bibliography file(s).
+Latexmk: Bibliography file(s) from .bcf file:
+  comun/referencias.bib
+Sources for biber
+  comun/referencias.bib
+  salida/aux/04-arquitectura/sub4.bcf
+Latexmk: applying rule 'biber salida/aux/04-arquitectura/sub4'...
+Rule 'biber salida/aux/04-arquitectura/sub4':  Reasons for rerun
+Category 'other':
+  Rerun of 'biber salida/aux/04-arquitectura/sub4' forced or previously required:
+    Reason or flag: 'Initial set up of rule'
+
+------------
+Run number 1 of rule 'biber salida/aux/04-arquitectura/sub4'
+------------
+------------
+Running 'biber  "salida/aux/04-arquitectura/sub4.bcf"'
+------------
+INFO - This is Biber 2.21
+INFO - Logfile is 'salida/aux/04-arquitectura/sub4.blg'
+INFO - Reading 'salida/aux/04-arquitectura/sub4.bcf'
+INFO - Found 8 citekeys in bib section 0
+INFO - Processing section 0
+INFO - Looking for bibtex file 'comun/referencias.bib' for section 0
+INFO - LaTeX decoding ...
+INFO - Found BibTeX data source 'comun/referencias.bib'
+INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+INFO - Sorting list 'apa/apasortcite//global/global/global' of type 'entry' with template 'apa' and locale 'es-ES'
+INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+INFO - Sorting list 'apa/global//global/global/global' of type 'entry' with template 'apa' and locale 'es-ES'
+INFO - Writing 'salida/aux/04-arquitectura/sub4.bbl' with encoding 'UTF-8'
+INFO - Output to salida/aux/04-arquitectura/sub4.bbl
+Latexmk: Found biber source file(s) [comun/referencias.bib, salida/aux/04-arquitectura/sub4.bcf]
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Changed files or newly in use/created:
+  salida/aux/04-arquitectura/pdfa.xmpi
+  salida/aux/04-arquitectura/sub4.aux
+  salida/aux/04-arquitectura/sub4.bbl
+  salida/aux/04-arquitectura/sub4.out
+  salida/aux/04-arquitectura/sub4.toc
+
+------------
+Run number 2 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -interaction=nonstopmode -halt-on-error -recorder --jobname="sub4" -output-directory="salida/aux/04-arquitectura"  "\def\subdocRuta{subdocumentos/04-arquitectura}\input{subdocumentos/04-arquitectura/main.tex}"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+(/mnt/NuevoVol/FEP/Plantilla-audIT/subdocumentos/04-arquitectura/main.tex
+(/mnt/NuevoVol/FEP/Plantilla-audIT/comun/inf-pucv.cls
+Document Class: inf-pucv 2023/04/24 sgarciad.me v0.1, Clase para la plantilla L
+aTeX con formato escuela INF PUCV.
+(/usr/share/texmf-dist/tex/latex/extsizes/extarticle.cls
+Document Class: extarticle 1996/10/08 v1.0 Non Standard LaTeX document class
+(/usr/share/texmf-dist/tex/latex/base/size12.clo)
+(/usr/share/texmf-dist/tex/latex/base/exscale.sty))
+(/usr/share/texmf-dist/tex/latex/pdfx/pdfx.sty
+(/usr/share/texmf-dist/tex/generic/iftex/ifluatex.sty
+(/usr/share/texmf-dist/tex/generic/iftex/iftex.sty))
+(/usr/share/texmf-dist/tex/generic/iftex/ifpdf.sty)
+(/usr/share/texmf-dist/tex/generic/iftex/ifxetex.sty)
+(/usr/share/texmf-dist/tex/latex/everyshi/everyshi.sty){/var/lib/texmf/fonts/ma
+p/pdftex/updmap/pdftex.map} (/usr/share/texmf-dist/tex/latex/base/inputenc.sty)
+ (/usr/share/texmf-dist/tex/latex/pdfx/l8u-penc.def)
+(/usr/share/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/share/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+
+Package xcolor Warning: Package option `hyperref' is obsolete and ignored on in
+put line 265.
+
+(/usr/share/texmf-dist/tex/latex/graphics-def/pdftex.def)
+(/usr/share/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(/usr/share/texmf-dist/tex/latex/colortbl/colortbl.sty
+(/usr/share/texmf-dist/tex/latex/tools/array.sty))
+(/usr/share/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/share/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/share/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)
+(/usr/share/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/share/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+(/usr/share/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(/usr/share/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/share/texmf-dist/tex/generic/infwarerr/infwarerr.sty)))
+(/usr/share/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/share/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/share/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+(/usr/share/texmf-dist/tex/latex/kvoptions/kvoptions.sty)))
+(/usr/share/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/share/texmf-dist/tex/generic/stringenc/stringenc.sty)
+(/usr/share/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/share/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/share/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/share/texmf-dist/tex/latex/url/url.sty)
+(/usr/share/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/share/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty)))
+(/usr/share/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/share/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+(/usr/share/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty)))
+(/usr/share/texmf-dist/tex/latex/hyperref/psdextra.def)
+(/usr/share/texmf-dist/tex/generic/colorprofiles/colorprofiles.sty
+(/usr/share/texmf-dist/tex/generic/colorprofiles/colorprofiles.tex))
+(/usr/share/texmf-dist/tex/latex/pdfx/AdobeColorProfiles.tex)
+(/usr/share/texmf-dist/tex/latex/pdfx/8bit.def)
+** pdfx: No file sub4.xmpdata . Metadata will be incomplete!
+<<sRGB.icc>> (/usr/share/texmf-dist/tex/latex/pdfx/8bit.def)
+(/usr/share/texmf-dist/tex/generic/pdftex/glyphtounicode.tex)
+(/usr/share/texmf-dist/tex/latex/pdfx/glyphtounicode-cmr.tex)
+(/usr/share/texmf-dist/tex/latex/pdfx/glyphtounicode-ntx.tex)
+(/usr/share/texmf-dist/tex/latex/base/ifthen.sty)
+(/usr/share/texmf-dist/tex/latex/xmpincl/xmpincl.sty)
+(/usr/share/texmf-dist/tex/latex/pdfx/8bit.def)
+Using XMP template file: pdfa.xmp
+<<pdfa.xmpi>>
+
+Package pdfx Warning: Setting all color commands to rgb,
+consistent with the Color Model for PDF/A  on input line 3126.
+
+) (/usr/share/texmf-dist/tex/latex/base/utf8.def
+(/usr/share/texmf-dist/tex/latex/base/omsenc.dfu)
+(/usr/share/texmf-dist/tex/latex/base/ot1enc.dfu)
+(/usr/share/texmf-dist/tex/latex/base/t1enc.dfu)
+(/usr/share/texmf-dist/tex/latex/base/ts1enc.dfu))
+(/mnt/NuevoVol/FEP/Plantilla-audIT/comun/styles.sty
+(/usr/share/texmf-dist/tex/latex/base/inputenc.sty)
+(/usr/share/texmf-dist/tex/latex/base/fontenc.sty)
+(/usr/share/texmf-dist/tex/generic/babel/babel.sty
+(/usr/share/texmf-dist/tex/generic/babel/txtbabel.def)
+(/usr/share/texmf-dist/tex/generic/babel/locale/es/babel-spanish.tex)
+(/usr/share/texmf-dist/tex/generic/babel-spanish/spanish.ldf))
+(/usr/share/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/share/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/share/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/share/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/share/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/share/texmf-dist/tex/latex/amsfonts/amsfonts.sty)
+(/usr/share/texmf-dist/tex/latex/amsfonts/amssymb.sty)
+(/usr/share/texmf-dist/tex/latex/pgfplots/pgfplots.sty
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
+(/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/share/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/share/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/share/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)))
+(/usr/share/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/share/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/share/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def)
+(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/pgf.revision.tex)))
+(/usr/share/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/share/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered.code.te
+x)) (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg)
+(/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+(/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def)))
+(/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex))
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code
+.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.te
+x) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics
+.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex))
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
+) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex)
+
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.t
+ex) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.te
+x) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex)
+ (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex)))
+(/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex)
+(/usr/share/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty)
+(/usr/share/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty))
+(/usr/share/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/share/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex))
+(/usr/share/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex))
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.te
+x) (/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
+topaths.code.tex)))
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
+(/usr/share/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric.code.tex))
+(/usr/share/texmf-dist/tex/generic/pgfplots/libs/pgfplotslibrary.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_l
+oader.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_p
+gfutil-common-lists.tex))
+(/usr/share/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.code.tex
+(/usr/share/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststructure
+.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststructure
+ext.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsarray.code.te
+x)
+(/usr/share/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsmatrix.code.t
+ex)
+(/usr/share/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstableshared.code.t
+ex)
+(/usr/share/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsdeque.code.te
+x) (/usr/share/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.code.tex
+(/usr/share/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.data.code.tex))
+(/usr/share/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.verb.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplots.surfshading
+.code.tex
+(/usr/share/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surfshading.
+pgfsys-pdftex.def)))
+(/usr/share/texmf-dist/tex/generic/pgfplots/util/pgfplotscolormap.code.tex
+(/usr/share/texmf-dist/tex/generic/pgfplots/util/pgfplotscolor.code.tex))
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplotsstackedplots.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplotsplothandlers.code.tex
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplothandler.code.tex
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplotimage.code.tex)))
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplots.scaling.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplotscoordprocessing.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplots.errorbars.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplots.markers.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplotsticks.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplots.paths.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
+decorations.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.code.tex))
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
+decorations.pathmorphing.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorati
+ons.pathmorphing.code.tex))
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
+decorations.pathreplacing.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorati
+ons.pathreplacing.code.tex))
+(/usr/share/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.contourlua
+.code.tex))
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
+plotmarks.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmarks.code.tex))
+) (/usr/share/texmf-dist/tex/latex/paracol/paracol.sty)
+(/usr/share/texmf-dist/tex/latex/wrapfig/wrapfig.sty)
+(/usr/share/texmf-dist/tex/latex/tools/multicol.sty)
+(/usr/share/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/share/texmf-dist/tex/generic/iftex/ifvtex.sty))
+(/usr/share/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.fillbetwee
+n.code.tex
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfcontrib/tikzlibraryfillbetween.c
+ode.tex
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
+intersections.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryintersections.code.t
+ex))
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfcontrib/tikzlibrarydecorations.s
+oftclip.code.tex
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfcontrib/pgflibraryfillbetween.co
+de.tex)))
+(/usr/share/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.decoration
+s.softclip.code.tex))
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
+patterns.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibrarypatterns.code.tex))
+(/usr/share/texmf-dist/tex/latex/tools/longtable.sty)
+(/usr/share/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(/usr/share/texmf-dist/tex/latex/float/float.sty))
+(/usr/share/texmf-dist/tex/latex/accsupp/accsupp.sty
+(/usr/share/texmf-dist/tex/latex/accsupp/accsupp-pdftex.def))
+(/usr/share/texmf-dist/tex/latex/csquotes/csquotes.sty
+(/usr/share/texmf-dist/tex/latex/csquotes/csquotes.def)
+(/usr/share/texmf-dist/tex/latex/csquotes/csquotes.cfg))
+(/usr/share/texmf-dist/tex/latex/biblatex/biblatex.sty
+(/usr/share/texmf-dist/tex/latex/logreq/logreq.sty
+(/usr/share/texmf-dist/tex/latex/logreq/logreq.def))
+(/usr/share/texmf-dist/tex/latex/biblatex/blx-dm.def)
+(/usr/share/texmf-dist/tex/latex/biblatex-apa/apa.dbx)
+(/usr/share/texmf-dist/tex/latex/biblatex/blx-compat.def)
+(/usr/share/texmf-dist/tex/latex/biblatex/biblatex.def)
+(/usr/share/texmf-dist/tex/latex/biblatex-apa/apa.bbx
+(/usr/share/texmf-dist/tex/latex/biblatex/bbx/standard.bbx))
+(/usr/share/texmf-dist/tex/latex/biblatex-apa/apa.cbx)
+(/usr/share/texmf-dist/tex/latex/biblatex/biblatex.cfg)
+(/usr/share/texmf-dist/tex/latex/l3kernel/expl3.sty
+(/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def))
+(/usr/share/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty
+(/usr/share/texmf-dist/tex/latex/l3packages/xparse/xparse.sty)))
+(/usr/share/texmf-dist/tex/latex/fontawesome5/fontawesome5.sty
+(/usr/share/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty)
+(/usr/share/texmf-dist/tex/latex/fontawesome5/fontawesome5-generic-helper.sty
+(/usr/share/texmf-dist/tex/latex/fontawesome5/fontawesome5-mapping.def)))
+(/usr/share/texmf-dist/tex/latex/koma-script/scrlfile.sty
+(/usr/share/texmf-dist/tex/latex/koma-script/scrlfile-hook.sty
+(/usr/share/texmf-dist/tex/latex/koma-script/scrlogo.sty)))
+(/usr/share/texmf-dist/tex/latex/titlesec/titlesec.sty)
+(/usr/share/texmf-dist/tex/latex/minted/minted.sty
+(/usr/share/texmf-dist/tex/generic/catchfile/catchfile.sty
+(/usr/share/texmf-dist/tex/generic/etexcmds/etexcmds.sty))
+(/usr/share/texmf-dist/tex/latex/fvextra/fvextra.sty
+(/usr/share/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty)
+(/usr/share/texmf-dist/tex/latex/upquote/upquote.sty
+(/usr/share/texmf-dist/tex/latex/base/textcomp.sty))
+(/usr/share/texmf-dist/tex/latex/lineno/lineno.sty
+
+LaTeX Warning: Command \@parboxrestore  has changed.
+               Check if current package is valid.
+
+)
+
+Package fvextra Warning: csquotes should be loaded after fvextra, to avoid a wa
+rning from the lineno package on input line 36.
+
+) (/usr/share/texmf-dist/tex/latex/latex2pydata/latex2pydata.sty)
+(/usr/share/texmf-dist/tex/latex/pgfopts/pgfopts.sty)
+(/usr/share/texmf-dist/tex/latex/tools/shellesc.sty))
+(/usr/share/texmf-dist/tex/latex/caption/caption.sty
+(/usr/share/texmf-dist/tex/latex/caption/caption3.sty)
+(/usr/share/texmf-dist/tex/latex/caption/ltcaption.sty))
+(/usr/share/texmf-dist/tex/latex/chngcntr/chngcntr.sty)
+(/usr/share/texmf-dist/tex/latex/lipsum/lipsum.sty
+(/usr/share/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex))
+(/usr/share/texmf-dist/tex/latex/enumitem/enumitem.sty)
+(/usr/share/texmf-dist/tex/latex/pdfpages/pdfpages.sty
+(/usr/share/texmf-dist/tex/latex/tools/calc.sty)
+(/usr/share/texmf-dist/tex/latex/eso-pic/eso-pic.sty)
+(/usr/share/texmf-dist/tex/latex/pdfpages/pppdftex.def))
+(/usr/share/texmf-dist/tex/latex/tocloft/tocloft.sty)
+(/usr/share/texmf-dist/tex/latex/tools/tabularx.sty))
+(/mnt/NuevoVol/FEP/Plantilla-audIT/comun/instancia.tex)
+(/mnt/NuevoVol/FEP/Plantilla-audIT/subdocumentos/04-arquitectura/meta.tex)
+(/mnt/NuevoVol/FEP/Plantilla-audIT/comun/preambulo.tex
+(/usr/share/texmf-dist/tex/latex/import/import.sty)
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
+calc.code.tex) (/usr/share/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+(/usr/share/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.sty
+(/usr/share/texmf-dist/tex/latex/graphics/lscape.sty)))
+(/usr/share/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty))
+(/mnt/NuevoVol/FEP/Plantilla-audIT/comun/portada.tex)
+(salida/aux/04-arquitectura/sub4.aux)
+(/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+(salida/aux/04-arquitectura/sub4.out) (salida/aux/04-arquitectura/sub4.out)
+Package pgfplots notification 'compat/show suggested version=true': you might b
+enefit from \pgfplotsset{compat=1.18} (current compat level: 1.17).
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+(/usr/share/texmf-dist/tex/latex/biblatex-apa/spanish-apa.lbx
+(/usr/share/texmf-dist/tex/latex/biblatex/lbx/spanish.lbx)
+(/usr/share/texmf-dist/tex/latex/biblatex/lbx/spanish.lbx))
+(salida/aux/04-arquitectura/sub4.bbl)
+
+LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <19> not available
+(Font)              size <17.28> substituted on input line 8.
+
+
+LaTeX Font Warning: Font shape `T1/cmr/bx/n' in size <19> not available
+(Font)              size <17.28> substituted on input line 8.
+
+[1{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/t
+exmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} </mnt/NuevoVol/FEP/Plantil
+la-audIT/comun/assets/portada.jpeg>]
+
+LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <28> not available
+(Font)              size <29.86> substituted on input line 9.
+
+
+LaTeX Font Warning: Font shape `T1/cmr/bx/n' in size <28> not available
+(Font)              size <29.86> substituted on input line 9.
+
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 9--9
+[][][] 
+[2] (salida/aux/04-arquitectura/sub4.toc
+(/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd))
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.9 \fichaSubdocumento
+                       [1]
+(/mnt/NuevoVol/FEP/Plantilla-audIT/subdocumentos/04-arquitectura/contenido.tex
+
+LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <86> not available
+(Font)              size <51.59> substituted on input line 1.
+
+
+LaTeX Font Warning: Font shape `T1/cmr/bx/n' in size <86> not available
+(Font)              size <51.59> substituted on input line 1.
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.20 \end{tablaAudit}
+                      [2] [3]
+Underfull \hbox (badness 10000) in paragraph at lines 59--59
+[]|\T1/cmr/bx/n/10.95 Alternativa des-car-
+
+Underfull \hbox (badness 1052) in paragraph at lines 60--60
+[]|\T1/cmr/m/n/10.95 Monolito mo-du-lar con
+
+Underfull \hbox (badness 1590) in paragraph at lines 60--61
+\T1/cmr/m/n/10.95 La in-ges-ta te-le-má-ti-ca
+
+Underfull \hbox (badness 2790) in paragraph at lines 61--62
+[]|\T1/cmr/m/n/10.95 Desacoplamiento tem-
+
+Underfull \hbox (badness 2065) in paragraph at lines 62--62
+[]|\T1/cmr/m/n/10.95 Segregación por cap-tu-ra
+
+Underfull \hbox (badness 2027) in paragraph at lines 63--63
+[]|\T1/cmr/m/n/10.95 Claves de in-ter-faz de
+
+Underfull \hbox (badness 10000) in paragraph at lines 63--64
+[]|\T1/cmr/m/n/10.95 RT-05.18 prohí-be la
+
+Underfull \hbox (badness 5802) in paragraph at lines 63--64
+\T1/cmr/m/n/10.95 cla-ve es-tá-ti-ca en la
+
+Underfull \hbox (badness 2393) in paragraph at lines 63--64
+\T1/cmr/m/n/10.95 ru-ta. Nin-gún ser-vi-cio
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 85--85
+[]|\T1/cmr/m/n/10.95 Semirremolque
+
+Underfull \hbox (badness 10000) in paragraph at lines 85--86
+[]|\T1/cmr/m/n/10.95 Decreto Su-pre-mo N.\TS1/cmr/m/n/10.95 º\T1/cmr/m/n/10.95 
+298
+[5] [6 </mnt/NuevoVol/FEP/Plantilla-audIT/comun/assets/figuras/D3-diagrama12_in
+tegracion_acl_erp2013.png (PNG copy)>] [7] [8 </mnt/NuevoVol/FEP/Plantilla-audI
+T/comun/assets/figuras/D3-diagrama13_arquitectura_analitica_lakehouse_bi.png (P
+NG copy)>] [9 </mnt/NuevoVol/FEP/Plantilla-audIT/comun/assets/figuras/D3-diagra
+ma2_arquitectura_tactica_ddd.png (PNG copy)>]
+Underfull \hbox (badness 4328) in paragraph at lines 168--168
+[]|\T1/cmr/m/n/10.95 On-premise dis-tri-bui-
+ [10 </mnt/NuevoVol/FEP/Plantilla-audIT/comun/assets/figuras/D3-diagrama11_patr
+ones_resiliencia_despacho.png (PNG copy)>] [11] [12] [13] [14]
+Underfull \hbox (badness 1371) in paragraph at lines 285--286
+[]|\T1/cmr/m/n/10.95 RT-07.02 exi-ge dis-tan-cia su-fi-
+ [15] [16]
+Underfull \hbox (badness 10000) in paragraph at lines 350--350
+[]|\T1/cmr/m/n/10.95 Disponible
+
+Underfull \hbox (badness 10000) in paragraph at lines 350--350
+\T1/cmr/m/n/10.95 la po-bla-ción
+
+Underfull \hbox (badness 10000) in paragraph at lines 352--352
+[]|\T1/cmr/m/n/10.95 Parcial, con-
+
+Underfull \hbox (badness 1270) in paragraph at lines 355--355
+[]|\T1/cmr/m/n/10.95 Actualización de firm-wa-re del
+ [17]
+Underfull \hbox (badness 1442) in paragraph at lines 369--370
+[]|\T1/cmr/m/n/10.95 Régimen de des-can-sos
+
+Underfull \hbox (badness 3019) in paragraph at lines 371--371
+[]|\T1/cmr/m/n/10.95 Volumen acu-mu-la-do a bor-do
+
+Underfull \hbox (badness 1052) in paragraph at lines 375--376
+[]|\T1/cmr/m/n/10.95 Campaña de me-di-ción
+
+Underfull \hbox (badness 1275) in paragraph at lines 377--377
+[]|\T1/cmr/m/n/10.95 Modelo de rá-fa-ga
+ [18] [19] [20 </mnt/NuevoVol/FEP/Plantilla-audIT/comun/assets/figuras/LogicaCa
+pas.pdf>] [21 </mnt/NuevoVol/FEP/Plantilla-audIT/comun/assets/figuras/Contextos
+.pdf>] [22 </mnt/NuevoVol/FEP/Plantilla-audIT/comun/assets/figuras/LogicaIntegr
+aciones.pdf>] [23 </mnt/NuevoVol/FEP/Plantilla-audIT/comun/assets/figuras/Main.
+pdf>] [24 </mnt/NuevoVol/FEP/Plantilla-audIT/comun/assets/figuras/Camion.pdf>]
+[25 </mnt/NuevoVol/FEP/Plantilla-audIT/comun/assets/figuras/DosEjes.pdf>]
+[26 </mnt/NuevoVol/FEP/Plantilla-audIT/comun/assets/figuras/Flujo.pdf>]
+[27 </mnt/NuevoVol/FEP/Plantilla-audIT/comun/assets/figuras/LogicaEmplazamiento
+.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 436--437
+[]|\T1/cmr/m/n/10.95 RT-03.01 y RT-
+
+Underfull \hbox (badness 10000) in paragraph at lines 449--450
+[]|\T1/cmr/m/n/10.95 Autenticación y en-ru-ta-mien-to
+
+Underfull \hbox (badness 2057) in paragraph at lines 450--450
+[]|\T1/cmr/m/n/10.95 Servicio de des-pa-cho y
+
+Underfull \hbox (badness 1565) in paragraph at lines 451--452
+[]|\T1/cmr/m/n/10.95 RT-21.06: asig-nar via-je, emi-tir
+
+Underfull \hbox (badness 3078) in paragraph at lines 452--453
+[]|\T1/cmr/m/n/10.95 Administración cen-tra-li-za-da de
+
+Underfull \hbox (badness 2027) in paragraph at lines 453--454
+[]|\T1/cmr/m/n/10.95 Validación blo-quean-te $\OMS/cmsy/m/n/10.95 ^^T$ \T1/cmr/
+m/n/10.95 30 s
+
+Overfull \hbox (4.86163pt too wide) in paragraph at lines 458--458
+[]|\T1/cmr/m/n/10.95 Integración| 
+
+Overfull \hbox (4.86163pt too wide) in paragraph at lines 459--459
+[]|\T1/cmr/m/n/10.95 Integración| 
+
+Overfull \hbox (4.86163pt too wide) in paragraph at lines 460--460
+[]|\T1/cmr/m/n/10.95 Integración| 
+
+Underfull \hbox (badness 10000) in paragraph at lines 464--464
+[]|\T1/cmr/m/n/10.95 Repositorio do-cu-men-tal
+
+Underfull \hbox (badness 1824) in paragraph at lines 468--469
+[]|\T1/cmr/m/n/10.95 Clave ges-tio-na-da in-de-pen-dien-te
+
+Underfull \hbox (badness 1412) in paragraph at lines 470--470
+[]|\T1/cmr/m/n/10.95 Réplica de re-cu-pe-ra-ción
+
+Underfull \hbox (badness 1910) in paragraph at lines 471--471
+[]|\T1/cmr/m/n/10.95 ERP con-ta-ble he-re-da-do
+
+Underfull \hbox (badness 1789) in paragraph at lines 473--473
+[]|\T1/cmr/m/n/10.95 Custodia de me-dios de
+
+Underfull \hbox (badness 2698) in paragraph at lines 476--477
+\T1/cmr/m/n/10.95 pér-di-da de re-gis-tro. RT-10.05:
+
+Underfull \hbox (badness 1019) in paragraph at lines 480--481
+[]|\T1/cmr/m/n/10.95 Subconjunto por ries-go. Po-bla-
+[28] [29] [30]
+Overfull \hbox (12.3112pt too wide) in paragraph at lines 485--485
+[]|\T1/cmr/bx/n/10.95 Criticidad| 
+
+Overfull \hbox (26.39209pt too wide) in paragraph at lines 485--485
+[]|\T1/cmr/bx/n/10.95 Conectividad| 
+
+Underfull \hbox (badness 1231) in paragraph at lines 486--486
+[]|\T1/cmr/m/n/10.95 Despacho y asig-
+
+Underfull \hbox (badness 10000) in paragraph at lines 486--486
+[]|\T1/cmr/m/n/10.95 96.000 via-
+
+Underfull \hbox (badness 10000) in paragraph at lines 486--486
+[]|\T1/cmr/m/n/10.95 Requiere
+
+Underfull \hbox (badness 4024) in paragraph at lines 487--487
+[]|\T1/cmr/m/n/10.95 Ventana de
+
+Underfull \hbox (badness 10000) in paragraph at lines 487--488
+[]|\T1/cmr/m/n/10.95 Fijo,
+
+Underfull \hbox (badness 10000) in paragraph at lines 487--488
+\T1/cmr/m/n/10.95 dos
+
+Underfull \hbox (badness 10000) in paragraph at lines 488--488
+[]|\T1/cmr/m/n/10.95 Requiere
+
+Underfull \hbox (badness 10000) in paragraph at lines 489--489
+[]|\T1/cmr/m/n/10.95 Peak de
+
+Underfull \hbox (badness 10000) in paragraph at lines 489--489
+\T1/cmr/m/n/10.95 re-co-ne-xión
+
+Underfull \hbox (badness 10000) in paragraph at lines 489--489
+[]|\T1/cmr/m/n/10.95 Requiere
+
+Underfull \hbox (badness 10000) in paragraph at lines 489--490
+[]|\T1/cmr/m/n/10.95 Elástico
+
+Overfull \hbox (0.58797pt too wide) in paragraph at lines 490--490
+[]|\T1/cmr/m/n/10.95 Particionado
+
+Underfull \hbox (badness 10000) in paragraph at lines 490--490
+[]|\T1/cmr/m/n/10.95 Requiere
+
+Overfull \hbox (8.46513pt too wide) in paragraph at lines 490--491
+[]|\T1/cmr/m/n/10.95 Reservado| 
+
+Underfull \hbox (badness 10000) in paragraph at lines 491--491
+[]|\T1/cmr/m/n/10.95 Requiere
+
+Underfull \hbox (badness 10000) in paragraph at lines 491--492
+[]|\T1/cmr/m/n/10.95 Por
+
+Underfull \hbox (badness 10000) in paragraph at lines 491--492
+\T1/cmr/m/n/10.95 ca-pa
+
+Overfull \hbox (0.69548pt too wide) in paragraph at lines 491--492
+\T1/cmr/m/n/10.95 hot/cold| 
+
+Underfull \hbox (badness 10000) in paragraph at lines 492--492
+[]|\T1/cmr/m/n/10.95 Evidencia
+
+Underfull \hbox (badness 1939) in paragraph at lines 492--492
+[]|\T1/cmr/m/n/10.95 WORM, 10
+
+Underfull \hbox (badness 3148) in paragraph at lines 492--492
+\T1/cmr/m/n/10.95 años si-nies-
+
+Underfull \hbox (badness 10000) in paragraph at lines 492--492
+[]|\T1/cmr/m/n/10.95 Requiere
+
+Underfull \hbox (badness 10000) in paragraph at lines 492--493
+[]|\T1/cmr/m/n/10.95 Por
+
+Underfull \hbox (badness 10000) in paragraph at lines 493--493
+[]|\T1/cmr/m/n/10.95 Requiere
+
+Underfull \hbox (badness 10000) in paragraph at lines 494--494
+[]|\T1/cmr/m/n/10.95 Espejo de
+
+Underfull \hbox (badness 10000) in paragraph at lines 494--494
+[]|\T1/cmr/m/n/10.95 Enlace
+
+Underfull \hbox (badness 10000) in paragraph at lines 494--494
+\T1/cmr/m/n/10.95 en-tre
+
+Underfull \hbox (badness 10000) in paragraph at lines 494--495
+[]|\T1/cmr/m/n/10.95 Activo-
+
+Overfull \hbox (1.64725pt too wide) in paragraph at lines 495--495
+[]|\T1/cmr/m/n/10.95 Contabilidad
+
+Underfull \hbox (badness 10000) in paragraph at lines 495--495
+[]|\T1/cmr/m/n/10.95 Único
+
+Underfull \hbox (badness 10000) in paragraph at lines 495--495
+\T1/cmr/m/n/10.95 emi-sor tri-
+
+Overfull \hbox (4.53613pt too wide) in paragraph at lines 495--496
+[]|\T1/cmr/m/n/10.95 Existente| 
+
+Underfull \hbox (badness 6157) in paragraph at lines 496--497
+[]|\T1/cmr/m/n/10.95 4 ga-bi-
+
+Underfull \hbox (badness 10000) in paragraph at lines 497--497
+[]|\T1/cmr/m/n/10.95 Opera
+
+Underfull \hbox (badness 10000) in paragraph at lines 497--497
+\T1/cmr/m/n/10.95 sin co-
+
+Underfull \hbox (badness 10000) in paragraph at lines 498--498
+[]|\T1/cmr/m/n/10.95 Opera
+
+Underfull \hbox (badness 10000) in paragraph at lines 498--498
+\T1/cmr/m/n/10.95 sin co-
+
+Underfull \hbox (badness 1189) in paragraph at lines 498--499
+\T1/cmr/m/n/10.95 to mar-
+
+Underfull \hbox (badness 2875) in paragraph at lines 499--499
+[]|$\OMS/cmsy/m/n/10.95 ^^T$ \T1/cmr/m/n/10.95 de-ce-nas
+
+Underfull \hbox (badness 10000) in paragraph at lines 499--499
+[]|\T1/cmr/m/n/10.95 Sin co-
+
+Underfull \hbox (badness 10000) in paragraph at lines 499--499
+\T1/cmr/m/n/10.95 ber-tu-ra
+
+Underfull \hbox (badness 10000) in paragraph at lines 499--500
+[]|\T1/cmr/m/n/10.95 Por
+
+Underfull \hbox (badness 10000) in paragraph at lines 500--500
+[]|\T1/cmr/m/n/10.95 Media,
+
+Underfull \hbox (badness 10000) in paragraph at lines 500--500
+\T1/cmr/m/n/10.95 no blo-
+
+Underfull \hbox (badness 10000) in paragraph at lines 500--500
+[]|\T1/cmr/m/n/10.95 454 po-ten-
+
+Overfull \hbox (14.10675pt too wide) in paragraph at lines 500--500
+[]|\T1/cmr/m/n/10.95 Consentimiento
+
+Underfull \hbox (badness 10000) in paragraph at lines 500--500
+[]|\T1/cmr/m/n/10.95 Requiere
+
+Underfull \hbox (badness 1968) in paragraph at lines 500--501
+[]|\T1/cmr/m/n/10.95 Por de-
+
+Overfull \hbox (34.8106pt too wide) in alignment at lines 484--501
+ [] [] [] [] [] [] [] [] 
+[31] [32] [33]) [34] [35] (salida/aux/04-arquitectura/sub4.aux)
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 34.41pt have occurred.
+
+
+LaTeX Warning: There were undefined references.
+
+
+Package rerunfilecheck Warning: File `sub4.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+
+Package biblatex Warning: Please rerun LaTeX.
+(biblatex)                Page breaks have changed.
+
+ )
+(see the transcript file for additional information) </home/disco/.texlive/texm
+f-var/fonts/pk/ljfour/jknappen/ec/ecbx5159.600pk></usr/share/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/cm
+-super/sfbx1095.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1200
+.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/shar
+e/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/share/texmf-dist/fo
+nts/type1/public/cm-super/sfbx2986.pfb></usr/share/texmf-dist/fonts/type1/publi
+c/cm-super/sfrm1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm
+1095.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on salida/aux/04-arquitectura/sub4.pdf (37 pages, 1649198 bytes)
+.
+Transcript written on salida/aux/04-arquitectura/sub4.log.
+Latexmk: Getting log file 'salida/aux/04-arquitectura/sub4.log'
+Latexmk: Examining 'salida/aux/04-arquitectura/sub4.fls'
+Latexmk: Examining 'salida/aux/04-arquitectura/sub4.log'
+Latexmk: Found input bbl file 'salida/aux/04-arquitectura/sub4.bbl'
+Latexmk: References changed.
+Latexmk: Log file says output to 'salida/aux/04-arquitectura/sub4.pdf'
+Latexmk: Log file says output to 'salida/aux/04-arquitectura/sub4.pdf'
+Latexmk: Using biber to make bibliography file(s).
+Latexmk: Bibliography file(s) from .bcf file:
+  comun/referencias.bib
+Sources for biber
+  comun/referencias.bib
+  salida/aux/04-arquitectura/sub4.bcf
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Changed files or newly in use/created:
+  salida/aux/04-arquitectura/sub4.aux
+  salida/aux/04-arquitectura/sub4.out
+  salida/aux/04-arquitectura/sub4.run.xml
+  salida/aux/04-arquitectura/sub4.toc
+
+------------
+Run number 3 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -interaction=nonstopmode -halt-on-error -recorder --jobname="sub4" -output-directory="salida/aux/04-arquitectura"  "\def\subdocRuta{subdocumentos/04-arquitectura}\input{subdocumentos/04-arquitectura/main.tex}"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+(/mnt/NuevoVol/FEP/Plantilla-audIT/subdocumentos/04-arquitectura/main.tex
+(/mnt/NuevoVol/FEP/Plantilla-audIT/comun/inf-pucv.cls
+Document Class: inf-pucv 2023/04/24 sgarciad.me v0.1, Clase para la plantilla L
+aTeX con formato escuela INF PUCV.
+(/usr/share/texmf-dist/tex/latex/extsizes/extarticle.cls
+Document Class: extarticle 1996/10/08 v1.0 Non Standard LaTeX document class
+(/usr/share/texmf-dist/tex/latex/base/size12.clo)
+(/usr/share/texmf-dist/tex/latex/base/exscale.sty))
+(/usr/share/texmf-dist/tex/latex/pdfx/pdfx.sty
+(/usr/share/texmf-dist/tex/generic/iftex/ifluatex.sty
+(/usr/share/texmf-dist/tex/generic/iftex/iftex.sty))
+(/usr/share/texmf-dist/tex/generic/iftex/ifpdf.sty)
+(/usr/share/texmf-dist/tex/generic/iftex/ifxetex.sty)
+(/usr/share/texmf-dist/tex/latex/everyshi/everyshi.sty){/var/lib/texmf/fonts/ma
+p/pdftex/updmap/pdftex.map} (/usr/share/texmf-dist/tex/latex/base/inputenc.sty)
+ (/usr/share/texmf-dist/tex/latex/pdfx/l8u-penc.def)
+(/usr/share/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/share/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+
+Package xcolor Warning: Package option `hyperref' is obsolete and ignored on in
+put line 265.
+
+(/usr/share/texmf-dist/tex/latex/graphics-def/pdftex.def)
+(/usr/share/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(/usr/share/texmf-dist/tex/latex/colortbl/colortbl.sty
+(/usr/share/texmf-dist/tex/latex/tools/array.sty))
+(/usr/share/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/share/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/share/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)
+(/usr/share/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/share/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+(/usr/share/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(/usr/share/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/share/texmf-dist/tex/generic/infwarerr/infwarerr.sty)))
+(/usr/share/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/share/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/share/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+(/usr/share/texmf-dist/tex/latex/kvoptions/kvoptions.sty)))
+(/usr/share/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/share/texmf-dist/tex/generic/stringenc/stringenc.sty)
+(/usr/share/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/share/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/share/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/share/texmf-dist/tex/latex/url/url.sty)
+(/usr/share/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/share/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty)))
+(/usr/share/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/share/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+(/usr/share/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty)))
+(/usr/share/texmf-dist/tex/latex/hyperref/psdextra.def)
+(/usr/share/texmf-dist/tex/generic/colorprofiles/colorprofiles.sty
+(/usr/share/texmf-dist/tex/generic/colorprofiles/colorprofiles.tex))
+(/usr/share/texmf-dist/tex/latex/pdfx/AdobeColorProfiles.tex)
+(/usr/share/texmf-dist/tex/latex/pdfx/8bit.def)
+** pdfx: No file sub4.xmpdata . Metadata will be incomplete!
+<<sRGB.icc>> (/usr/share/texmf-dist/tex/latex/pdfx/8bit.def)
+(/usr/share/texmf-dist/tex/generic/pdftex/glyphtounicode.tex)
+(/usr/share/texmf-dist/tex/latex/pdfx/glyphtounicode-cmr.tex)
+(/usr/share/texmf-dist/tex/latex/pdfx/glyphtounicode-ntx.tex)
+(/usr/share/texmf-dist/tex/latex/base/ifthen.sty)
+(/usr/share/texmf-dist/tex/latex/xmpincl/xmpincl.sty)
+(/usr/share/texmf-dist/tex/latex/pdfx/8bit.def)
+Using XMP template file: pdfa.xmp
+<<pdfa.xmpi>>
+
+Package pdfx Warning: Setting all color commands to rgb,
+consistent with the Color Model for PDF/A  on input line 3126.
+
+) (/usr/share/texmf-dist/tex/latex/base/utf8.def
+(/usr/share/texmf-dist/tex/latex/base/omsenc.dfu)
+(/usr/share/texmf-dist/tex/latex/base/ot1enc.dfu)
+(/usr/share/texmf-dist/tex/latex/base/t1enc.dfu)
+(/usr/share/texmf-dist/tex/latex/base/ts1enc.dfu))
+(/mnt/NuevoVol/FEP/Plantilla-audIT/comun/styles.sty
+(/usr/share/texmf-dist/tex/latex/base/inputenc.sty)
+(/usr/share/texmf-dist/tex/latex/base/fontenc.sty)
+(/usr/share/texmf-dist/tex/generic/babel/babel.sty
+(/usr/share/texmf-dist/tex/generic/babel/txtbabel.def)
+(/usr/share/texmf-dist/tex/generic/babel/locale/es/babel-spanish.tex)
+(/usr/share/texmf-dist/tex/generic/babel-spanish/spanish.ldf))
+(/usr/share/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/share/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/share/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/share/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/share/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/share/texmf-dist/tex/latex/amsfonts/amsfonts.sty)
+(/usr/share/texmf-dist/tex/latex/amsfonts/amssymb.sty)
+(/usr/share/texmf-dist/tex/latex/pgfplots/pgfplots.sty
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
+(/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/share/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/share/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/share/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)))
+(/usr/share/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/share/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/share/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def)
+(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/pgf.revision.tex)))
+(/usr/share/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/share/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered.code.te
+x)) (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg)
+(/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+(/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def)))
+(/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex))
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code
+.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.te
+x) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics
+.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex))
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
+) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex)
+
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.t
+ex) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.te
+x) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex)
+ (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex)))
+(/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex)
+(/usr/share/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty)
+(/usr/share/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty))
+(/usr/share/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/share/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex))
+(/usr/share/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex))
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.te
+x) (/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
+topaths.code.tex)))
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
+(/usr/share/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric.code.tex))
+(/usr/share/texmf-dist/tex/generic/pgfplots/libs/pgfplotslibrary.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_l
+oader.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_p
+gfutil-common-lists.tex))
+(/usr/share/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.code.tex
+(/usr/share/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststructure
+.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststructure
+ext.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsarray.code.te
+x)
+(/usr/share/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsmatrix.code.t
+ex)
+(/usr/share/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstableshared.code.t
+ex)
+(/usr/share/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsdeque.code.te
+x) (/usr/share/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.code.tex
+(/usr/share/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.data.code.tex))
+(/usr/share/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.verb.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplots.surfshading
+.code.tex
+(/usr/share/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surfshading.
+pgfsys-pdftex.def)))
+(/usr/share/texmf-dist/tex/generic/pgfplots/util/pgfplotscolormap.code.tex
+(/usr/share/texmf-dist/tex/generic/pgfplots/util/pgfplotscolor.code.tex))
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplotsstackedplots.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplotsplothandlers.code.tex
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplothandler.code.tex
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplotimage.code.tex)))
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplots.scaling.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplotscoordprocessing.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplots.errorbars.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplots.markers.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplotsticks.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplots.paths.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
+decorations.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.code.tex))
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
+decorations.pathmorphing.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorati
+ons.pathmorphing.code.tex))
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
+decorations.pathreplacing.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorati
+ons.pathreplacing.code.tex))
+(/usr/share/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.contourlua
+.code.tex))
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
+plotmarks.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmarks.code.tex))
+) (/usr/share/texmf-dist/tex/latex/paracol/paracol.sty)
+(/usr/share/texmf-dist/tex/latex/wrapfig/wrapfig.sty)
+(/usr/share/texmf-dist/tex/latex/tools/multicol.sty)
+(/usr/share/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/share/texmf-dist/tex/generic/iftex/ifvtex.sty))
+(/usr/share/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.fillbetwee
+n.code.tex
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfcontrib/tikzlibraryfillbetween.c
+ode.tex
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
+intersections.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryintersections.code.t
+ex))
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfcontrib/tikzlibrarydecorations.s
+oftclip.code.tex
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfcontrib/pgflibraryfillbetween.co
+de.tex)))
+(/usr/share/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.decoration
+s.softclip.code.tex))
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
+patterns.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibrarypatterns.code.tex))
+(/usr/share/texmf-dist/tex/latex/tools/longtable.sty)
+(/usr/share/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(/usr/share/texmf-dist/tex/latex/float/float.sty))
+(/usr/share/texmf-dist/tex/latex/accsupp/accsupp.sty
+(/usr/share/texmf-dist/tex/latex/accsupp/accsupp-pdftex.def))
+(/usr/share/texmf-dist/tex/latex/csquotes/csquotes.sty
+(/usr/share/texmf-dist/tex/latex/csquotes/csquotes.def)
+(/usr/share/texmf-dist/tex/latex/csquotes/csquotes.cfg))
+(/usr/share/texmf-dist/tex/latex/biblatex/biblatex.sty
+(/usr/share/texmf-dist/tex/latex/logreq/logreq.sty
+(/usr/share/texmf-dist/tex/latex/logreq/logreq.def))
+(/usr/share/texmf-dist/tex/latex/biblatex/blx-dm.def)
+(/usr/share/texmf-dist/tex/latex/biblatex-apa/apa.dbx)
+(/usr/share/texmf-dist/tex/latex/biblatex/blx-compat.def)
+(/usr/share/texmf-dist/tex/latex/biblatex/biblatex.def)
+(/usr/share/texmf-dist/tex/latex/biblatex-apa/apa.bbx
+(/usr/share/texmf-dist/tex/latex/biblatex/bbx/standard.bbx))
+(/usr/share/texmf-dist/tex/latex/biblatex-apa/apa.cbx)
+(/usr/share/texmf-dist/tex/latex/biblatex/biblatex.cfg)
+(/usr/share/texmf-dist/tex/latex/l3kernel/expl3.sty
+(/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def))
+(/usr/share/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty
+(/usr/share/texmf-dist/tex/latex/l3packages/xparse/xparse.sty)))
+(/usr/share/texmf-dist/tex/latex/fontawesome5/fontawesome5.sty
+(/usr/share/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty)
+(/usr/share/texmf-dist/tex/latex/fontawesome5/fontawesome5-generic-helper.sty
+(/usr/share/texmf-dist/tex/latex/fontawesome5/fontawesome5-mapping.def)))
+(/usr/share/texmf-dist/tex/latex/koma-script/scrlfile.sty
+(/usr/share/texmf-dist/tex/latex/koma-script/scrlfile-hook.sty
+(/usr/share/texmf-dist/tex/latex/koma-script/scrlogo.sty)))
+(/usr/share/texmf-dist/tex/latex/titlesec/titlesec.sty)
+(/usr/share/texmf-dist/tex/latex/minted/minted.sty
+(/usr/share/texmf-dist/tex/generic/catchfile/catchfile.sty
+(/usr/share/texmf-dist/tex/generic/etexcmds/etexcmds.sty))
+(/usr/share/texmf-dist/tex/latex/fvextra/fvextra.sty
+(/usr/share/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty)
+(/usr/share/texmf-dist/tex/latex/upquote/upquote.sty
+(/usr/share/texmf-dist/tex/latex/base/textcomp.sty))
+(/usr/share/texmf-dist/tex/latex/lineno/lineno.sty
+
+LaTeX Warning: Command \@parboxrestore  has changed.
+               Check if current package is valid.
+
+)
+
+Package fvextra Warning: csquotes should be loaded after fvextra, to avoid a wa
+rning from the lineno package on input line 36.
+
+) (/usr/share/texmf-dist/tex/latex/latex2pydata/latex2pydata.sty)
+(/usr/share/texmf-dist/tex/latex/pgfopts/pgfopts.sty)
+(/usr/share/texmf-dist/tex/latex/tools/shellesc.sty))
+(/usr/share/texmf-dist/tex/latex/caption/caption.sty
+(/usr/share/texmf-dist/tex/latex/caption/caption3.sty)
+(/usr/share/texmf-dist/tex/latex/caption/ltcaption.sty))
+(/usr/share/texmf-dist/tex/latex/chngcntr/chngcntr.sty)
+(/usr/share/texmf-dist/tex/latex/lipsum/lipsum.sty
+(/usr/share/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex))
+(/usr/share/texmf-dist/tex/latex/enumitem/enumitem.sty)
+(/usr/share/texmf-dist/tex/latex/pdfpages/pdfpages.sty
+(/usr/share/texmf-dist/tex/latex/tools/calc.sty)
+(/usr/share/texmf-dist/tex/latex/eso-pic/eso-pic.sty)
+(/usr/share/texmf-dist/tex/latex/pdfpages/pppdftex.def))
+(/usr/share/texmf-dist/tex/latex/tocloft/tocloft.sty)
+(/usr/share/texmf-dist/tex/latex/tools/tabularx.sty))
+(/mnt/NuevoVol/FEP/Plantilla-audIT/comun/instancia.tex)
+(/mnt/NuevoVol/FEP/Plantilla-audIT/subdocumentos/04-arquitectura/meta.tex)
+(/mnt/NuevoVol/FEP/Plantilla-audIT/comun/preambulo.tex
+(/usr/share/texmf-dist/tex/latex/import/import.sty)
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
+calc.code.tex) (/usr/share/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+(/usr/share/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.sty
+(/usr/share/texmf-dist/tex/latex/graphics/lscape.sty)))
+(/usr/share/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty))
+(/mnt/NuevoVol/FEP/Plantilla-audIT/comun/portada.tex)
+(salida/aux/04-arquitectura/sub4.aux)
+(/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+(salida/aux/04-arquitectura/sub4.out) (salida/aux/04-arquitectura/sub4.out)
+Package pgfplots notification 'compat/show suggested version=true': you might b
+enefit from \pgfplotsset{compat=1.18} (current compat level: 1.17).
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+(/usr/share/texmf-dist/tex/latex/biblatex-apa/spanish-apa.lbx
+(/usr/share/texmf-dist/tex/latex/biblatex/lbx/spanish.lbx)
+(/usr/share/texmf-dist/tex/latex/biblatex/lbx/spanish.lbx))
+(salida/aux/04-arquitectura/sub4.bbl)
+
+LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <19> not available
+(Font)              size <17.28> substituted on input line 8.
+
+
+LaTeX Font Warning: Font shape `T1/cmr/bx/n' in size <19> not available
+(Font)              size <17.28> substituted on input line 8.
+
+[1{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/t
+exmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} </mnt/NuevoVol/FEP/Plantil
+la-audIT/comun/assets/portada.jpeg>]
+
+LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <28> not available
+(Font)              size <29.86> substituted on input line 9.
+
+
+LaTeX Font Warning: Font shape `T1/cmr/bx/n' in size <28> not available
+(Font)              size <29.86> substituted on input line 9.
+
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 9--9
+[][][] 
+[2] (salida/aux/04-arquitectura/sub4.toc
+(/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd))
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.9 \fichaSubdocumento
+                       [1]
+(/mnt/NuevoVol/FEP/Plantilla-audIT/subdocumentos/04-arquitectura/contenido.tex
+
+LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <86> not available
+(Font)              size <51.59> substituted on input line 1.
+
+
+LaTeX Font Warning: Font shape `T1/cmr/bx/n' in size <86> not available
+(Font)              size <51.59> substituted on input line 1.
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.20 \end{tablaAudit}
+                      [2] [3]
+Underfull \hbox (badness 10000) in paragraph at lines 59--59
+[]|\T1/cmr/bx/n/10.95 Alternativa des-car-
+
+Underfull \hbox (badness 1052) in paragraph at lines 60--60
+[]|\T1/cmr/m/n/10.95 Monolito mo-du-lar con
+
+Underfull \hbox (badness 1590) in paragraph at lines 60--61
+\T1/cmr/m/n/10.95 La in-ges-ta te-le-má-ti-ca
+
+Underfull \hbox (badness 2790) in paragraph at lines 61--62
+[]|\T1/cmr/m/n/10.95 Desacoplamiento tem-
+
+Underfull \hbox (badness 2065) in paragraph at lines 62--62
+[]|\T1/cmr/m/n/10.95 Segregación por cap-tu-ra
+
+Underfull \hbox (badness 2027) in paragraph at lines 63--63
+[]|\T1/cmr/m/n/10.95 Claves de in-ter-faz de
+
+Underfull \hbox (badness 10000) in paragraph at lines 63--64
+[]|\T1/cmr/m/n/10.95 RT-05.18 prohí-be la
+
+Underfull \hbox (badness 5802) in paragraph at lines 63--64
+\T1/cmr/m/n/10.95 cla-ve es-tá-ti-ca en la
+
+Underfull \hbox (badness 2393) in paragraph at lines 63--64
+\T1/cmr/m/n/10.95 ru-ta. Nin-gún ser-vi-cio
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 85--85
+[]|\T1/cmr/m/n/10.95 Semirremolque
+
+Underfull \hbox (badness 10000) in paragraph at lines 85--86
+[]|\T1/cmr/m/n/10.95 Decreto Su-pre-mo N.\TS1/cmr/m/n/10.95 º\T1/cmr/m/n/10.95 
+298
+[5] [6 </mnt/NuevoVol/FEP/Plantilla-audIT/comun/assets/figuras/D3-diagrama12_in
+tegracion_acl_erp2013.png (PNG copy)>] [7] [8 </mnt/NuevoVol/FEP/Plantilla-audI
+T/comun/assets/figuras/D3-diagrama13_arquitectura_analitica_lakehouse_bi.png (P
+NG copy)>] [9 </mnt/NuevoVol/FEP/Plantilla-audIT/comun/assets/figuras/D3-diagra
+ma2_arquitectura_tactica_ddd.png (PNG copy)>]
+Underfull \hbox (badness 4328) in paragraph at lines 168--168
+[]|\T1/cmr/m/n/10.95 On-premise dis-tri-bui-
+ [10 </mnt/NuevoVol/FEP/Plantilla-audIT/comun/assets/figuras/D3-diagrama11_patr
+ones_resiliencia_despacho.png (PNG copy)>] [11] [12] [13] [14]
+Underfull \hbox (badness 1371) in paragraph at lines 285--286
+[]|\T1/cmr/m/n/10.95 RT-07.02 exi-ge dis-tan-cia su-fi-
+ [15] [16]
+Underfull \hbox (badness 10000) in paragraph at lines 350--350
+[]|\T1/cmr/m/n/10.95 Disponible
+
+Underfull \hbox (badness 10000) in paragraph at lines 350--350
+\T1/cmr/m/n/10.95 la po-bla-ción
+
+Underfull \hbox (badness 10000) in paragraph at lines 352--352
+[]|\T1/cmr/m/n/10.95 Parcial, con-
+
+Underfull \hbox (badness 1270) in paragraph at lines 355--355
+[]|\T1/cmr/m/n/10.95 Actualización de firm-wa-re del
+ [17]
+Underfull \hbox (badness 1442) in paragraph at lines 369--370
+[]|\T1/cmr/m/n/10.95 Régimen de des-can-sos
+
+Underfull \hbox (badness 3019) in paragraph at lines 371--371
+[]|\T1/cmr/m/n/10.95 Volumen acu-mu-la-do a bor-do
+
+Underfull \hbox (badness 1052) in paragraph at lines 375--376
+[]|\T1/cmr/m/n/10.95 Campaña de me-di-ción
+
+Underfull \hbox (badness 1275) in paragraph at lines 377--377
+[]|\T1/cmr/m/n/10.95 Modelo de rá-fa-ga
+ [18] [19] [20 </mnt/NuevoVol/FEP/Plantilla-audIT/comun/assets/figuras/LogicaCa
+pas.pdf>] [21 </mnt/NuevoVol/FEP/Plantilla-audIT/comun/assets/figuras/Contextos
+.pdf>] [22 </mnt/NuevoVol/FEP/Plantilla-audIT/comun/assets/figuras/LogicaIntegr
+aciones.pdf>] [23 </mnt/NuevoVol/FEP/Plantilla-audIT/comun/assets/figuras/Main.
+pdf>] [24 </mnt/NuevoVol/FEP/Plantilla-audIT/comun/assets/figuras/Camion.pdf>]
+[25 </mnt/NuevoVol/FEP/Plantilla-audIT/comun/assets/figuras/DosEjes.pdf>]
+[26 </mnt/NuevoVol/FEP/Plantilla-audIT/comun/assets/figuras/Flujo.pdf>]
+[27 </mnt/NuevoVol/FEP/Plantilla-audIT/comun/assets/figuras/LogicaEmplazamiento
+.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 436--437
+[]|\T1/cmr/m/n/10.95 RT-03.01 y RT-
+
+Underfull \hbox (badness 10000) in paragraph at lines 449--450
+[]|\T1/cmr/m/n/10.95 Autenticación y en-ru-ta-mien-to
+
+Underfull \hbox (badness 2057) in paragraph at lines 450--450
+[]|\T1/cmr/m/n/10.95 Servicio de des-pa-cho y
+
+Underfull \hbox (badness 1565) in paragraph at lines 451--452
+[]|\T1/cmr/m/n/10.95 RT-21.06: asig-nar via-je, emi-tir
+
+Underfull \hbox (badness 3078) in paragraph at lines 452--453
+[]|\T1/cmr/m/n/10.95 Administración cen-tra-li-za-da de
+
+Underfull \hbox (badness 2027) in paragraph at lines 453--454
+[]|\T1/cmr/m/n/10.95 Validación blo-quean-te $\OMS/cmsy/m/n/10.95 ^^T$ \T1/cmr/
+m/n/10.95 30 s
+
+Overfull \hbox (4.86163pt too wide) in paragraph at lines 458--458
+[]|\T1/cmr/m/n/10.95 Integración| 
+
+Overfull \hbox (4.86163pt too wide) in paragraph at lines 459--459
+[]|\T1/cmr/m/n/10.95 Integración| 
+
+Overfull \hbox (4.86163pt too wide) in paragraph at lines 460--460
+[]|\T1/cmr/m/n/10.95 Integración| 
+
+Underfull \hbox (badness 10000) in paragraph at lines 464--464
+[]|\T1/cmr/m/n/10.95 Repositorio do-cu-men-tal
+
+Underfull \hbox (badness 1824) in paragraph at lines 468--469
+[]|\T1/cmr/m/n/10.95 Clave ges-tio-na-da in-de-pen-dien-te
+
+Underfull \hbox (badness 1412) in paragraph at lines 470--470
+[]|\T1/cmr/m/n/10.95 Réplica de re-cu-pe-ra-ción
+
+Underfull \hbox (badness 1910) in paragraph at lines 471--471
+[]|\T1/cmr/m/n/10.95 ERP con-ta-ble he-re-da-do
+
+Underfull \hbox (badness 1789) in paragraph at lines 473--473
+[]|\T1/cmr/m/n/10.95 Custodia de me-dios de
+
+Underfull \hbox (badness 2698) in paragraph at lines 476--477
+\T1/cmr/m/n/10.95 pér-di-da de re-gis-tro. RT-10.05:
+
+Underfull \hbox (badness 1019) in paragraph at lines 480--481
+[]|\T1/cmr/m/n/10.95 Subconjunto por ries-go. Po-bla-
+[28] [29] [30]
+Overfull \hbox (12.3112pt too wide) in paragraph at lines 485--485
+[]|\T1/cmr/bx/n/10.95 Criticidad| 
+
+Overfull \hbox (26.39209pt too wide) in paragraph at lines 485--485
+[]|\T1/cmr/bx/n/10.95 Conectividad| 
+
+Underfull \hbox (badness 1231) in paragraph at lines 486--486
+[]|\T1/cmr/m/n/10.95 Despacho y asig-
+
+Underfull \hbox (badness 10000) in paragraph at lines 486--486
+[]|\T1/cmr/m/n/10.95 96.000 via-
+
+Underfull \hbox (badness 10000) in paragraph at lines 486--486
+[]|\T1/cmr/m/n/10.95 Requiere
+
+Underfull \hbox (badness 4024) in paragraph at lines 487--487
+[]|\T1/cmr/m/n/10.95 Ventana de
+
+Underfull \hbox (badness 10000) in paragraph at lines 487--488
+[]|\T1/cmr/m/n/10.95 Fijo,
+
+Underfull \hbox (badness 10000) in paragraph at lines 487--488
+\T1/cmr/m/n/10.95 dos
+
+Underfull \hbox (badness 10000) in paragraph at lines 488--488
+[]|\T1/cmr/m/n/10.95 Requiere
+
+Underfull \hbox (badness 10000) in paragraph at lines 489--489
+[]|\T1/cmr/m/n/10.95 Peak de
+
+Underfull \hbox (badness 10000) in paragraph at lines 489--489
+\T1/cmr/m/n/10.95 re-co-ne-xión
+
+Underfull \hbox (badness 10000) in paragraph at lines 489--489
+[]|\T1/cmr/m/n/10.95 Requiere
+
+Underfull \hbox (badness 10000) in paragraph at lines 489--490
+[]|\T1/cmr/m/n/10.95 Elástico
+
+Overfull \hbox (0.58797pt too wide) in paragraph at lines 490--490
+[]|\T1/cmr/m/n/10.95 Particionado
+
+Underfull \hbox (badness 10000) in paragraph at lines 490--490
+[]|\T1/cmr/m/n/10.95 Requiere
+
+Overfull \hbox (8.46513pt too wide) in paragraph at lines 490--491
+[]|\T1/cmr/m/n/10.95 Reservado| 
+
+Underfull \hbox (badness 10000) in paragraph at lines 491--491
+[]|\T1/cmr/m/n/10.95 Requiere
+
+Underfull \hbox (badness 10000) in paragraph at lines 491--492
+[]|\T1/cmr/m/n/10.95 Por
+
+Underfull \hbox (badness 10000) in paragraph at lines 491--492
+\T1/cmr/m/n/10.95 ca-pa
+
+Overfull \hbox (0.69548pt too wide) in paragraph at lines 491--492
+\T1/cmr/m/n/10.95 hot/cold| 
+
+Underfull \hbox (badness 10000) in paragraph at lines 492--492
+[]|\T1/cmr/m/n/10.95 Evidencia
+
+Underfull \hbox (badness 1939) in paragraph at lines 492--492
+[]|\T1/cmr/m/n/10.95 WORM, 10
+
+Underfull \hbox (badness 3148) in paragraph at lines 492--492
+\T1/cmr/m/n/10.95 años si-nies-
+
+Underfull \hbox (badness 10000) in paragraph at lines 492--492
+[]|\T1/cmr/m/n/10.95 Requiere
+
+Underfull \hbox (badness 10000) in paragraph at lines 492--493
+[]|\T1/cmr/m/n/10.95 Por
+
+Underfull \hbox (badness 10000) in paragraph at lines 493--493
+[]|\T1/cmr/m/n/10.95 Requiere
+
+Underfull \hbox (badness 10000) in paragraph at lines 494--494
+[]|\T1/cmr/m/n/10.95 Espejo de
+
+Underfull \hbox (badness 10000) in paragraph at lines 494--494
+[]|\T1/cmr/m/n/10.95 Enlace
+
+Underfull \hbox (badness 10000) in paragraph at lines 494--494
+\T1/cmr/m/n/10.95 en-tre
+
+Underfull \hbox (badness 10000) in paragraph at lines 494--495
+[]|\T1/cmr/m/n/10.95 Activo-
+
+Overfull \hbox (1.64725pt too wide) in paragraph at lines 495--495
+[]|\T1/cmr/m/n/10.95 Contabilidad
+
+Underfull \hbox (badness 10000) in paragraph at lines 495--495
+[]|\T1/cmr/m/n/10.95 Único
+
+Underfull \hbox (badness 10000) in paragraph at lines 495--495
+\T1/cmr/m/n/10.95 emi-sor tri-
+
+Overfull \hbox (4.53613pt too wide) in paragraph at lines 495--496
+[]|\T1/cmr/m/n/10.95 Existente| 
+
+Underfull \hbox (badness 6157) in paragraph at lines 496--497
+[]|\T1/cmr/m/n/10.95 4 ga-bi-
+
+Underfull \hbox (badness 10000) in paragraph at lines 497--497
+[]|\T1/cmr/m/n/10.95 Opera
+
+Underfull \hbox (badness 10000) in paragraph at lines 497--497
+\T1/cmr/m/n/10.95 sin co-
+
+Underfull \hbox (badness 10000) in paragraph at lines 498--498
+[]|\T1/cmr/m/n/10.95 Opera
+
+Underfull \hbox (badness 10000) in paragraph at lines 498--498
+\T1/cmr/m/n/10.95 sin co-
+
+Underfull \hbox (badness 1189) in paragraph at lines 498--499
+\T1/cmr/m/n/10.95 to mar-
+
+Underfull \hbox (badness 2875) in paragraph at lines 499--499
+[]|$\OMS/cmsy/m/n/10.95 ^^T$ \T1/cmr/m/n/10.95 de-ce-nas
+
+Underfull \hbox (badness 10000) in paragraph at lines 499--499
+[]|\T1/cmr/m/n/10.95 Sin co-
+
+Underfull \hbox (badness 10000) in paragraph at lines 499--499
+\T1/cmr/m/n/10.95 ber-tu-ra
+
+Underfull \hbox (badness 10000) in paragraph at lines 499--500
+[]|\T1/cmr/m/n/10.95 Por
+
+Underfull \hbox (badness 10000) in paragraph at lines 500--500
+[]|\T1/cmr/m/n/10.95 Media,
+
+Underfull \hbox (badness 10000) in paragraph at lines 500--500
+\T1/cmr/m/n/10.95 no blo-
+
+Underfull \hbox (badness 10000) in paragraph at lines 500--500
+[]|\T1/cmr/m/n/10.95 454 po-ten-
+
+Overfull \hbox (14.10675pt too wide) in paragraph at lines 500--500
+[]|\T1/cmr/m/n/10.95 Consentimiento
+
+Underfull \hbox (badness 10000) in paragraph at lines 500--500
+[]|\T1/cmr/m/n/10.95 Requiere
+
+Underfull \hbox (badness 1968) in paragraph at lines 500--501
+[]|\T1/cmr/m/n/10.95 Por de-
+
+Overfull \hbox (34.8106pt too wide) in alignment at lines 484--501
+ [] [] [] [] [] [] [] [] 
+[31] [32] [33]) [34] [35] (salida/aux/04-arquitectura/sub4.aux)
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 34.41pt have occurred.
+
+ )
+(see the transcript file for additional information) </home/disco/.texlive/texm
+f-var/fonts/pk/ljfour/jknappen/ec/ecbx5159.600pk></usr/share/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/cm
+-super/sfbx1095.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1200
+.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/shar
+e/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/share/texmf-dist/fo
+nts/type1/public/cm-super/sfbx2986.pfb></usr/share/texmf-dist/fonts/type1/publi
+c/cm-super/sfrm1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm
+1095.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on salida/aux/04-arquitectura/sub4.pdf (37 pages, 1651206 bytes)
+.
+Transcript written on salida/aux/04-arquitectura/sub4.log.
+Latexmk: Getting log file 'salida/aux/04-arquitectura/sub4.log'
+Latexmk: Examining 'salida/aux/04-arquitectura/sub4.fls'
+Latexmk: Examining 'salida/aux/04-arquitectura/sub4.log'
+Latexmk: Found input bbl file 'salida/aux/04-arquitectura/sub4.bbl'
+Latexmk: Log file says output to 'salida/aux/04-arquitectura/sub4.pdf'
+Latexmk: Log file says output to 'salida/aux/04-arquitectura/sub4.pdf'
+Latexmk: Using biber to make bibliography file(s).
+Latexmk: Bibliography file(s) from .bcf file:
+  comun/referencias.bib
+Sources for biber
+  comun/referencias.bib
+  salida/aux/04-arquitectura/sub4.bcf
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Changed files or newly in use/created:
+  salida/aux/04-arquitectura/sub4.run.xml
+
+------------
+Run number 4 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -interaction=nonstopmode -halt-on-error -recorder --jobname="sub4" -output-directory="salida/aux/04-arquitectura"  "\def\subdocRuta{subdocumentos/04-arquitectura}\input{subdocumentos/04-arquitectura/main.tex}"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+(/mnt/NuevoVol/FEP/Plantilla-audIT/subdocumentos/04-arquitectura/main.tex
+(/mnt/NuevoVol/FEP/Plantilla-audIT/comun/inf-pucv.cls
+Document Class: inf-pucv 2023/04/24 sgarciad.me v0.1, Clase para la plantilla L
+aTeX con formato escuela INF PUCV.
+(/usr/share/texmf-dist/tex/latex/extsizes/extarticle.cls
+Document Class: extarticle 1996/10/08 v1.0 Non Standard LaTeX document class
+(/usr/share/texmf-dist/tex/latex/base/size12.clo)
+(/usr/share/texmf-dist/tex/latex/base/exscale.sty))
+(/usr/share/texmf-dist/tex/latex/pdfx/pdfx.sty
+(/usr/share/texmf-dist/tex/generic/iftex/ifluatex.sty
+(/usr/share/texmf-dist/tex/generic/iftex/iftex.sty))
+(/usr/share/texmf-dist/tex/generic/iftex/ifpdf.sty)
+(/usr/share/texmf-dist/tex/generic/iftex/ifxetex.sty)
+(/usr/share/texmf-dist/tex/latex/everyshi/everyshi.sty){/var/lib/texmf/fonts/ma
+p/pdftex/updmap/pdftex.map} (/usr/share/texmf-dist/tex/latex/base/inputenc.sty)
+ (/usr/share/texmf-dist/tex/latex/pdfx/l8u-penc.def)
+(/usr/share/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/share/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+
+Package xcolor Warning: Package option `hyperref' is obsolete and ignored on in
+put line 265.
+
+(/usr/share/texmf-dist/tex/latex/graphics-def/pdftex.def)
+(/usr/share/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(/usr/share/texmf-dist/tex/latex/colortbl/colortbl.sty
+(/usr/share/texmf-dist/tex/latex/tools/array.sty))
+(/usr/share/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/share/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/share/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)
+(/usr/share/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/share/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+(/usr/share/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(/usr/share/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/share/texmf-dist/tex/generic/infwarerr/infwarerr.sty)))
+(/usr/share/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/share/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/share/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+(/usr/share/texmf-dist/tex/latex/kvoptions/kvoptions.sty)))
+(/usr/share/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/share/texmf-dist/tex/generic/stringenc/stringenc.sty)
+(/usr/share/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/share/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/share/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/share/texmf-dist/tex/latex/url/url.sty)
+(/usr/share/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/share/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty)))
+(/usr/share/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/share/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+(/usr/share/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty)))
+(/usr/share/texmf-dist/tex/latex/hyperref/psdextra.def)
+(/usr/share/texmf-dist/tex/generic/colorprofiles/colorprofiles.sty
+(/usr/share/texmf-dist/tex/generic/colorprofiles/colorprofiles.tex))
+(/usr/share/texmf-dist/tex/latex/pdfx/AdobeColorProfiles.tex)
+(/usr/share/texmf-dist/tex/latex/pdfx/8bit.def)
+** pdfx: No file sub4.xmpdata . Metadata will be incomplete!
+<<sRGB.icc>> (/usr/share/texmf-dist/tex/latex/pdfx/8bit.def)
+(/usr/share/texmf-dist/tex/generic/pdftex/glyphtounicode.tex)
+(/usr/share/texmf-dist/tex/latex/pdfx/glyphtounicode-cmr.tex)
+(/usr/share/texmf-dist/tex/latex/pdfx/glyphtounicode-ntx.tex)
+(/usr/share/texmf-dist/tex/latex/base/ifthen.sty)
+(/usr/share/texmf-dist/tex/latex/xmpincl/xmpincl.sty)
+(/usr/share/texmf-dist/tex/latex/pdfx/8bit.def)
+Using XMP template file: pdfa.xmp
+<<pdfa.xmpi>>
+
+Package pdfx Warning: Setting all color commands to rgb,
+consistent with the Color Model for PDF/A  on input line 3126.
+
+) (/usr/share/texmf-dist/tex/latex/base/utf8.def
+(/usr/share/texmf-dist/tex/latex/base/omsenc.dfu)
+(/usr/share/texmf-dist/tex/latex/base/ot1enc.dfu)
+(/usr/share/texmf-dist/tex/latex/base/t1enc.dfu)
+(/usr/share/texmf-dist/tex/latex/base/ts1enc.dfu))
+(/mnt/NuevoVol/FEP/Plantilla-audIT/comun/styles.sty
+(/usr/share/texmf-dist/tex/latex/base/inputenc.sty)
+(/usr/share/texmf-dist/tex/latex/base/fontenc.sty)
+(/usr/share/texmf-dist/tex/generic/babel/babel.sty
+(/usr/share/texmf-dist/tex/generic/babel/txtbabel.def)
+(/usr/share/texmf-dist/tex/generic/babel/locale/es/babel-spanish.tex)
+(/usr/share/texmf-dist/tex/generic/babel-spanish/spanish.ldf))
+(/usr/share/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/share/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/share/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/share/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/share/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/share/texmf-dist/tex/latex/amsfonts/amsfonts.sty)
+(/usr/share/texmf-dist/tex/latex/amsfonts/amssymb.sty)
+(/usr/share/texmf-dist/tex/latex/pgfplots/pgfplots.sty
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
+(/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/share/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/share/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/share/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)))
+(/usr/share/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/share/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/share/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def)
+(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/pgf.revision.tex)))
+(/usr/share/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/share/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered.code.te
+x)) (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg)
+(/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+(/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def)))
+(/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex))
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code
+.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.te
+x) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics
+.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex))
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
+) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex)
+
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.t
+ex) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.te
+x) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex)
+ (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex)))
+(/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex)
+(/usr/share/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty)
+(/usr/share/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty))
+(/usr/share/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/share/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex))
+(/usr/share/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex))
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.te
+x) (/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
+topaths.code.tex)))
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
+(/usr/share/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric.code.tex))
+(/usr/share/texmf-dist/tex/generic/pgfplots/libs/pgfplotslibrary.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_l
+oader.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_p
+gfutil-common-lists.tex))
+(/usr/share/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.code.tex
+(/usr/share/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststructure
+.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststructure
+ext.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsarray.code.te
+x)
+(/usr/share/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsmatrix.code.t
+ex)
+(/usr/share/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstableshared.code.t
+ex)
+(/usr/share/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsdeque.code.te
+x) (/usr/share/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.code.tex
+(/usr/share/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.data.code.tex))
+(/usr/share/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.verb.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplots.surfshading
+.code.tex
+(/usr/share/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surfshading.
+pgfsys-pdftex.def)))
+(/usr/share/texmf-dist/tex/generic/pgfplots/util/pgfplotscolormap.code.tex
+(/usr/share/texmf-dist/tex/generic/pgfplots/util/pgfplotscolor.code.tex))
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplotsstackedplots.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplotsplothandlers.code.tex
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplothandler.code.tex
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplotimage.code.tex)))
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplots.scaling.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplotscoordprocessing.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplots.errorbars.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplots.markers.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplotsticks.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplots.paths.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
+decorations.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.code.tex))
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
+decorations.pathmorphing.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorati
+ons.pathmorphing.code.tex))
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
+decorations.pathreplacing.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorati
+ons.pathreplacing.code.tex))
+(/usr/share/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.contourlua
+.code.tex))
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
+plotmarks.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmarks.code.tex))
+) (/usr/share/texmf-dist/tex/latex/paracol/paracol.sty)
+(/usr/share/texmf-dist/tex/latex/wrapfig/wrapfig.sty)
+(/usr/share/texmf-dist/tex/latex/tools/multicol.sty)
+(/usr/share/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/share/texmf-dist/tex/generic/iftex/ifvtex.sty))
+(/usr/share/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.fillbetwee
+n.code.tex
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfcontrib/tikzlibraryfillbetween.c
+ode.tex
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
+intersections.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryintersections.code.t
+ex))
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfcontrib/tikzlibrarydecorations.s
+oftclip.code.tex
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfcontrib/pgflibraryfillbetween.co
+de.tex)))
+(/usr/share/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.decoration
+s.softclip.code.tex))
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
+patterns.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibrarypatterns.code.tex))
+(/usr/share/texmf-dist/tex/latex/tools/longtable.sty)
+(/usr/share/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(/usr/share/texmf-dist/tex/latex/float/float.sty))
+(/usr/share/texmf-dist/tex/latex/accsupp/accsupp.sty
+(/usr/share/texmf-dist/tex/latex/accsupp/accsupp-pdftex.def))
+(/usr/share/texmf-dist/tex/latex/csquotes/csquotes.sty
+(/usr/share/texmf-dist/tex/latex/csquotes/csquotes.def)
+(/usr/share/texmf-dist/tex/latex/csquotes/csquotes.cfg))
+(/usr/share/texmf-dist/tex/latex/biblatex/biblatex.sty
+(/usr/share/texmf-dist/tex/latex/logreq/logreq.sty
+(/usr/share/texmf-dist/tex/latex/logreq/logreq.def))
+(/usr/share/texmf-dist/tex/latex/biblatex/blx-dm.def)
+(/usr/share/texmf-dist/tex/latex/biblatex-apa/apa.dbx)
+(/usr/share/texmf-dist/tex/latex/biblatex/blx-compat.def)
+(/usr/share/texmf-dist/tex/latex/biblatex/biblatex.def)
+(/usr/share/texmf-dist/tex/latex/biblatex-apa/apa.bbx
+(/usr/share/texmf-dist/tex/latex/biblatex/bbx/standard.bbx))
+(/usr/share/texmf-dist/tex/latex/biblatex-apa/apa.cbx)
+(/usr/share/texmf-dist/tex/latex/biblatex/biblatex.cfg)
+(/usr/share/texmf-dist/tex/latex/l3kernel/expl3.sty
+(/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def))
+(/usr/share/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty
+(/usr/share/texmf-dist/tex/latex/l3packages/xparse/xparse.sty)))
+(/usr/share/texmf-dist/tex/latex/fontawesome5/fontawesome5.sty
+(/usr/share/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty)
+(/usr/share/texmf-dist/tex/latex/fontawesome5/fontawesome5-generic-helper.sty
+(/usr/share/texmf-dist/tex/latex/fontawesome5/fontawesome5-mapping.def)))
+(/usr/share/texmf-dist/tex/latex/koma-script/scrlfile.sty
+(/usr/share/texmf-dist/tex/latex/koma-script/scrlfile-hook.sty
+(/usr/share/texmf-dist/tex/latex/koma-script/scrlogo.sty)))
+(/usr/share/texmf-dist/tex/latex/titlesec/titlesec.sty)
+(/usr/share/texmf-dist/tex/latex/minted/minted.sty
+(/usr/share/texmf-dist/tex/generic/catchfile/catchfile.sty
+(/usr/share/texmf-dist/tex/generic/etexcmds/etexcmds.sty))
+(/usr/share/texmf-dist/tex/latex/fvextra/fvextra.sty
+(/usr/share/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty)
+(/usr/share/texmf-dist/tex/latex/upquote/upquote.sty
+(/usr/share/texmf-dist/tex/latex/base/textcomp.sty))
+(/usr/share/texmf-dist/tex/latex/lineno/lineno.sty
+
+LaTeX Warning: Command \@parboxrestore  has changed.
+               Check if current package is valid.
+
+)
+
+Package fvextra Warning: csquotes should be loaded after fvextra, to avoid a wa
+rning from the lineno package on input line 36.
+
+) (/usr/share/texmf-dist/tex/latex/latex2pydata/latex2pydata.sty)
+(/usr/share/texmf-dist/tex/latex/pgfopts/pgfopts.sty)
+(/usr/share/texmf-dist/tex/latex/tools/shellesc.sty))
+(/usr/share/texmf-dist/tex/latex/caption/caption.sty
+(/usr/share/texmf-dist/tex/latex/caption/caption3.sty)
+(/usr/share/texmf-dist/tex/latex/caption/ltcaption.sty))
+(/usr/share/texmf-dist/tex/latex/chngcntr/chngcntr.sty)
+(/usr/share/texmf-dist/tex/latex/lipsum/lipsum.sty
+(/usr/share/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex))
+(/usr/share/texmf-dist/tex/latex/enumitem/enumitem.sty)
+(/usr/share/texmf-dist/tex/latex/pdfpages/pdfpages.sty
+(/usr/share/texmf-dist/tex/latex/tools/calc.sty)
+(/usr/share/texmf-dist/tex/latex/eso-pic/eso-pic.sty)
+(/usr/share/texmf-dist/tex/latex/pdfpages/pppdftex.def))
+(/usr/share/texmf-dist/tex/latex/tocloft/tocloft.sty)
+(/usr/share/texmf-dist/tex/latex/tools/tabularx.sty))
+(/mnt/NuevoVol/FEP/Plantilla-audIT/comun/instancia.tex)
+(/mnt/NuevoVol/FEP/Plantilla-audIT/subdocumentos/04-arquitectura/meta.tex)
+(/mnt/NuevoVol/FEP/Plantilla-audIT/comun/preambulo.tex
+(/usr/share/texmf-dist/tex/latex/import/import.sty)
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
+calc.code.tex) (/usr/share/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+(/usr/share/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.sty
+(/usr/share/texmf-dist/tex/latex/graphics/lscape.sty)))
+(/usr/share/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty))
+(/mnt/NuevoVol/FEP/Plantilla-audIT/comun/portada.tex)
+(salida/aux/04-arquitectura/sub4.aux)
+(/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+(salida/aux/04-arquitectura/sub4.out) (salida/aux/04-arquitectura/sub4.out)
+Package pgfplots notification 'compat/show suggested version=true': you might b
+enefit from \pgfplotsset{compat=1.18} (current compat level: 1.17).
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+(/usr/share/texmf-dist/tex/latex/biblatex-apa/spanish-apa.lbx
+(/usr/share/texmf-dist/tex/latex/biblatex/lbx/spanish.lbx)
+(/usr/share/texmf-dist/tex/latex/biblatex/lbx/spanish.lbx))
+(salida/aux/04-arquitectura/sub4.bbl)
+
+LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <19> not available
+(Font)              size <17.28> substituted on input line 8.
+
+
+LaTeX Font Warning: Font shape `T1/cmr/bx/n' in size <19> not available
+(Font)              size <17.28> substituted on input line 8.
+
+[1{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/t
+exmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} </mnt/NuevoVol/FEP/Plantil
+la-audIT/comun/assets/portada.jpeg>]
+
+LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <28> not available
+(Font)              size <29.86> substituted on input line 9.
+
+
+LaTeX Font Warning: Font shape `T1/cmr/bx/n' in size <28> not available
+(Font)              size <29.86> substituted on input line 9.
+
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 9--9
+[][][] 
+[2] (salida/aux/04-arquitectura/sub4.toc
+(/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd))
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.9 \fichaSubdocumento
+                       [1]
+(/mnt/NuevoVol/FEP/Plantilla-audIT/subdocumentos/04-arquitectura/contenido.tex
+
+LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <86> not available
+(Font)              size <51.59> substituted on input line 1.
+
+
+LaTeX Font Warning: Font shape `T1/cmr/bx/n' in size <86> not available
+(Font)              size <51.59> substituted on input line 1.
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.20 \end{tablaAudit}
+                      [2] [3]
+Underfull \hbox (badness 10000) in paragraph at lines 59--59
+[]|\T1/cmr/bx/n/10.95 Alternativa des-car-
+
+Underfull \hbox (badness 1052) in paragraph at lines 60--60
+[]|\T1/cmr/m/n/10.95 Monolito mo-du-lar con
+
+Underfull \hbox (badness 1590) in paragraph at lines 60--61
+\T1/cmr/m/n/10.95 La in-ges-ta te-le-má-ti-ca
+
+Underfull \hbox (badness 2790) in paragraph at lines 61--62
+[]|\T1/cmr/m/n/10.95 Desacoplamiento tem-
+
+Underfull \hbox (badness 2065) in paragraph at lines 62--62
+[]|\T1/cmr/m/n/10.95 Segregación por cap-tu-ra
+
+Underfull \hbox (badness 2027) in paragraph at lines 63--63
+[]|\T1/cmr/m/n/10.95 Claves de in-ter-faz de
+
+Underfull \hbox (badness 10000) in paragraph at lines 63--64
+[]|\T1/cmr/m/n/10.95 RT-05.18 prohí-be la
+
+Underfull \hbox (badness 5802) in paragraph at lines 63--64
+\T1/cmr/m/n/10.95 cla-ve es-tá-ti-ca en la
+
+Underfull \hbox (badness 2393) in paragraph at lines 63--64
+\T1/cmr/m/n/10.95 ru-ta. Nin-gún ser-vi-cio
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 85--85
+[]|\T1/cmr/m/n/10.95 Semirremolque
+
+Underfull \hbox (badness 10000) in paragraph at lines 85--86
+[]|\T1/cmr/m/n/10.95 Decreto Su-pre-mo N.\TS1/cmr/m/n/10.95 º\T1/cmr/m/n/10.95 
+298
+[5] [6 </mnt/NuevoVol/FEP/Plantilla-audIT/comun/assets/figuras/D3-diagrama12_in
+tegracion_acl_erp2013.png (PNG copy)>] [7] [8 </mnt/NuevoVol/FEP/Plantilla-audI
+T/comun/assets/figuras/D3-diagrama13_arquitectura_analitica_lakehouse_bi.png (P
+NG copy)>] [9 </mnt/NuevoVol/FEP/Plantilla-audIT/comun/assets/figuras/D3-diagra
+ma2_arquitectura_tactica_ddd.png (PNG copy)>]
+Underfull \hbox (badness 4328) in paragraph at lines 168--168
+[]|\T1/cmr/m/n/10.95 On-premise dis-tri-bui-
+ [10 </mnt/NuevoVol/FEP/Plantilla-audIT/comun/assets/figuras/D3-diagrama11_patr
+ones_resiliencia_despacho.png (PNG copy)>] [11] [12] [13] [14]
+Underfull \hbox (badness 1371) in paragraph at lines 285--286
+[]|\T1/cmr/m/n/10.95 RT-07.02 exi-ge dis-tan-cia su-fi-
+ [15] [16]
+Underfull \hbox (badness 10000) in paragraph at lines 350--350
+[]|\T1/cmr/m/n/10.95 Disponible
+
+Underfull \hbox (badness 10000) in paragraph at lines 350--350
+\T1/cmr/m/n/10.95 la po-bla-ción
+
+Underfull \hbox (badness 10000) in paragraph at lines 352--352
+[]|\T1/cmr/m/n/10.95 Parcial, con-
+
+Underfull \hbox (badness 1270) in paragraph at lines 355--355
+[]|\T1/cmr/m/n/10.95 Actualización de firm-wa-re del
+ [17]
+Underfull \hbox (badness 1442) in paragraph at lines 369--370
+[]|\T1/cmr/m/n/10.95 Régimen de des-can-sos
+
+Underfull \hbox (badness 3019) in paragraph at lines 371--371
+[]|\T1/cmr/m/n/10.95 Volumen acu-mu-la-do a bor-do
+
+Underfull \hbox (badness 1052) in paragraph at lines 375--376
+[]|\T1/cmr/m/n/10.95 Campaña de me-di-ción
+
+Underfull \hbox (badness 1275) in paragraph at lines 377--377
+[]|\T1/cmr/m/n/10.95 Modelo de rá-fa-ga
+ [18] [19] [20 </mnt/NuevoVol/FEP/Plantilla-audIT/comun/assets/figuras/LogicaCa
+pas.pdf>] [21 </mnt/NuevoVol/FEP/Plantilla-audIT/comun/assets/figuras/Contextos
+.pdf>] [22 </mnt/NuevoVol/FEP/Plantilla-audIT/comun/assets/figuras/LogicaIntegr
+aciones.pdf>] [23 </mnt/NuevoVol/FEP/Plantilla-audIT/comun/assets/figuras/Main.
+pdf>] [24 </mnt/NuevoVol/FEP/Plantilla-audIT/comun/assets/figuras/Camion.pdf>]
+[25 </mnt/NuevoVol/FEP/Plantilla-audIT/comun/assets/figuras/DosEjes.pdf>]
+[26 </mnt/NuevoVol/FEP/Plantilla-audIT/comun/assets/figuras/Flujo.pdf>]
+[27 </mnt/NuevoVol/FEP/Plantilla-audIT/comun/assets/figuras/LogicaEmplazamiento
+.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 436--437
+[]|\T1/cmr/m/n/10.95 RT-03.01 y RT-
+
+Underfull \hbox (badness 10000) in paragraph at lines 449--450
+[]|\T1/cmr/m/n/10.95 Autenticación y en-ru-ta-mien-to
+
+Underfull \hbox (badness 2057) in paragraph at lines 450--450
+[]|\T1/cmr/m/n/10.95 Servicio de des-pa-cho y
+
+Underfull \hbox (badness 1565) in paragraph at lines 451--452
+[]|\T1/cmr/m/n/10.95 RT-21.06: asig-nar via-je, emi-tir
+
+Underfull \hbox (badness 3078) in paragraph at lines 452--453
+[]|\T1/cmr/m/n/10.95 Administración cen-tra-li-za-da de
+
+Underfull \hbox (badness 2027) in paragraph at lines 453--454
+[]|\T1/cmr/m/n/10.95 Validación blo-quean-te $\OMS/cmsy/m/n/10.95 ^^T$ \T1/cmr/
+m/n/10.95 30 s
+
+Overfull \hbox (4.86163pt too wide) in paragraph at lines 458--458
+[]|\T1/cmr/m/n/10.95 Integración| 
+
+Overfull \hbox (4.86163pt too wide) in paragraph at lines 459--459
+[]|\T1/cmr/m/n/10.95 Integración| 
+
+Overfull \hbox (4.86163pt too wide) in paragraph at lines 460--460
+[]|\T1/cmr/m/n/10.95 Integración| 
+
+Underfull \hbox (badness 10000) in paragraph at lines 464--464
+[]|\T1/cmr/m/n/10.95 Repositorio do-cu-men-tal
+
+Underfull \hbox (badness 1824) in paragraph at lines 468--469
+[]|\T1/cmr/m/n/10.95 Clave ges-tio-na-da in-de-pen-dien-te
+
+Underfull \hbox (badness 1412) in paragraph at lines 470--470
+[]|\T1/cmr/m/n/10.95 Réplica de re-cu-pe-ra-ción
+
+Underfull \hbox (badness 1910) in paragraph at lines 471--471
+[]|\T1/cmr/m/n/10.95 ERP con-ta-ble he-re-da-do
+
+Underfull \hbox (badness 1789) in paragraph at lines 473--473
+[]|\T1/cmr/m/n/10.95 Custodia de me-dios de
+
+Underfull \hbox (badness 2698) in paragraph at lines 476--477
+\T1/cmr/m/n/10.95 pér-di-da de re-gis-tro. RT-10.05:
+
+Underfull \hbox (badness 1019) in paragraph at lines 480--481
+[]|\T1/cmr/m/n/10.95 Subconjunto por ries-go. Po-bla-
+[28] [29] [30]
+Overfull \hbox (12.3112pt too wide) in paragraph at lines 485--485
+[]|\T1/cmr/bx/n/10.95 Criticidad| 
+
+Overfull \hbox (26.39209pt too wide) in paragraph at lines 485--485
+[]|\T1/cmr/bx/n/10.95 Conectividad| 
+
+Underfull \hbox (badness 1231) in paragraph at lines 486--486
+[]|\T1/cmr/m/n/10.95 Despacho y asig-
+
+Underfull \hbox (badness 10000) in paragraph at lines 486--486
+[]|\T1/cmr/m/n/10.95 96.000 via-
+
+Underfull \hbox (badness 10000) in paragraph at lines 486--486
+[]|\T1/cmr/m/n/10.95 Requiere
+
+Underfull \hbox (badness 4024) in paragraph at lines 487--487
+[]|\T1/cmr/m/n/10.95 Ventana de
+
+Underfull \hbox (badness 10000) in paragraph at lines 487--488
+[]|\T1/cmr/m/n/10.95 Fijo,
+
+Underfull \hbox (badness 10000) in paragraph at lines 487--488
+\T1/cmr/m/n/10.95 dos
+
+Underfull \hbox (badness 10000) in paragraph at lines 488--488
+[]|\T1/cmr/m/n/10.95 Requiere
+
+Underfull \hbox (badness 10000) in paragraph at lines 489--489
+[]|\T1/cmr/m/n/10.95 Peak de
+
+Underfull \hbox (badness 10000) in paragraph at lines 489--489
+\T1/cmr/m/n/10.95 re-co-ne-xión
+
+Underfull \hbox (badness 10000) in paragraph at lines 489--489
+[]|\T1/cmr/m/n/10.95 Requiere
+
+Underfull \hbox (badness 10000) in paragraph at lines 489--490
+[]|\T1/cmr/m/n/10.95 Elástico
+
+Overfull \hbox (0.58797pt too wide) in paragraph at lines 490--490
+[]|\T1/cmr/m/n/10.95 Particionado
+
+Underfull \hbox (badness 10000) in paragraph at lines 490--490
+[]|\T1/cmr/m/n/10.95 Requiere
+
+Overfull \hbox (8.46513pt too wide) in paragraph at lines 490--491
+[]|\T1/cmr/m/n/10.95 Reservado| 
+
+Underfull \hbox (badness 10000) in paragraph at lines 491--491
+[]|\T1/cmr/m/n/10.95 Requiere
+
+Underfull \hbox (badness 10000) in paragraph at lines 491--492
+[]|\T1/cmr/m/n/10.95 Por
+
+Underfull \hbox (badness 10000) in paragraph at lines 491--492
+\T1/cmr/m/n/10.95 ca-pa
+
+Overfull \hbox (0.69548pt too wide) in paragraph at lines 491--492
+\T1/cmr/m/n/10.95 hot/cold| 
+
+Underfull \hbox (badness 10000) in paragraph at lines 492--492
+[]|\T1/cmr/m/n/10.95 Evidencia
+
+Underfull \hbox (badness 1939) in paragraph at lines 492--492
+[]|\T1/cmr/m/n/10.95 WORM, 10
+
+Underfull \hbox (badness 3148) in paragraph at lines 492--492
+\T1/cmr/m/n/10.95 años si-nies-
+
+Underfull \hbox (badness 10000) in paragraph at lines 492--492
+[]|\T1/cmr/m/n/10.95 Requiere
+
+Underfull \hbox (badness 10000) in paragraph at lines 492--493
+[]|\T1/cmr/m/n/10.95 Por
+
+Underfull \hbox (badness 10000) in paragraph at lines 493--493
+[]|\T1/cmr/m/n/10.95 Requiere
+
+Underfull \hbox (badness 10000) in paragraph at lines 494--494
+[]|\T1/cmr/m/n/10.95 Espejo de
+
+Underfull \hbox (badness 10000) in paragraph at lines 494--494
+[]|\T1/cmr/m/n/10.95 Enlace
+
+Underfull \hbox (badness 10000) in paragraph at lines 494--494
+\T1/cmr/m/n/10.95 en-tre
+
+Underfull \hbox (badness 10000) in paragraph at lines 494--495
+[]|\T1/cmr/m/n/10.95 Activo-
+
+Overfull \hbox (1.64725pt too wide) in paragraph at lines 495--495
+[]|\T1/cmr/m/n/10.95 Contabilidad
+
+Underfull \hbox (badness 10000) in paragraph at lines 495--495
+[]|\T1/cmr/m/n/10.95 Único
+
+Underfull \hbox (badness 10000) in paragraph at lines 495--495
+\T1/cmr/m/n/10.95 emi-sor tri-
+
+Overfull \hbox (4.53613pt too wide) in paragraph at lines 495--496
+[]|\T1/cmr/m/n/10.95 Existente| 
+
+Underfull \hbox (badness 6157) in paragraph at lines 496--497
+[]|\T1/cmr/m/n/10.95 4 ga-bi-
+
+Underfull \hbox (badness 10000) in paragraph at lines 497--497
+[]|\T1/cmr/m/n/10.95 Opera
+
+Underfull \hbox (badness 10000) in paragraph at lines 497--497
+\T1/cmr/m/n/10.95 sin co-
+
+Underfull \hbox (badness 10000) in paragraph at lines 498--498
+[]|\T1/cmr/m/n/10.95 Opera
+
+Underfull \hbox (badness 10000) in paragraph at lines 498--498
+\T1/cmr/m/n/10.95 sin co-
+
+Underfull \hbox (badness 1189) in paragraph at lines 498--499
+\T1/cmr/m/n/10.95 to mar-
+
+Underfull \hbox (badness 2875) in paragraph at lines 499--499
+[]|$\OMS/cmsy/m/n/10.95 ^^T$ \T1/cmr/m/n/10.95 de-ce-nas
+
+Underfull \hbox (badness 10000) in paragraph at lines 499--499
+[]|\T1/cmr/m/n/10.95 Sin co-
+
+Underfull \hbox (badness 10000) in paragraph at lines 499--499
+\T1/cmr/m/n/10.95 ber-tu-ra
+
+Underfull \hbox (badness 10000) in paragraph at lines 499--500
+[]|\T1/cmr/m/n/10.95 Por
+
+Underfull \hbox (badness 10000) in paragraph at lines 500--500
+[]|\T1/cmr/m/n/10.95 Media,
+
+Underfull \hbox (badness 10000) in paragraph at lines 500--500
+\T1/cmr/m/n/10.95 no blo-
+
+Underfull \hbox (badness 10000) in paragraph at lines 500--500
+[]|\T1/cmr/m/n/10.95 454 po-ten-
+
+Overfull \hbox (14.10675pt too wide) in paragraph at lines 500--500
+[]|\T1/cmr/m/n/10.95 Consentimiento
+
+Underfull \hbox (badness 10000) in paragraph at lines 500--500
+[]|\T1/cmr/m/n/10.95 Requiere
+
+Underfull \hbox (badness 1968) in paragraph at lines 500--501
+[]|\T1/cmr/m/n/10.95 Por de-
+
+Overfull \hbox (34.8106pt too wide) in alignment at lines 484--501
+ [] [] [] [] [] [] [] [] 
+[31] [32] [33]) [34] [35] (salida/aux/04-arquitectura/sub4.aux)
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 34.41pt have occurred.
+
+ )
+(see the transcript file for additional information) </home/disco/.texlive/texm
+f-var/fonts/pk/ljfour/jknappen/ec/ecbx5159.600pk></usr/share/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/cm
+-super/sfbx1095.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1200
+.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/shar
+e/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/share/texmf-dist/fo
+nts/type1/public/cm-super/sfbx2986.pfb></usr/share/texmf-dist/fonts/type1/publi
+c/cm-super/sfrm1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm
+1095.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on salida/aux/04-arquitectura/sub4.pdf (37 pages, 1651206 bytes)
+.
+Transcript written on salida/aux/04-arquitectura/sub4.log.
+Latexmk: Getting log file 'salida/aux/04-arquitectura/sub4.log'
+Latexmk: Examining 'salida/aux/04-arquitectura/sub4.fls'
+Latexmk: Examining 'salida/aux/04-arquitectura/sub4.log'
+Latexmk: Found input bbl file 'salida/aux/04-arquitectura/sub4.bbl'
+Latexmk: Log file says output to 'salida/aux/04-arquitectura/sub4.pdf'
+Latexmk: Log file says output to 'salida/aux/04-arquitectura/sub4.pdf'
+Latexmk: Using biber to make bibliography file(s).
+Latexmk: Bibliography file(s) from .bcf file:
+  comun/referencias.bib
+Sources for biber
+  comun/referencias.bib
+  salida/aux/04-arquitectura/sub4.bcf
+Latexmk: All targets (salida/aux/04-arquitectura/sub4.pdf) are up-to-date
+

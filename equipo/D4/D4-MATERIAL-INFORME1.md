@@ -269,8 +269,14 @@ declarar». La tabla se llena componente por componente o no sirve.
 
 ### 5.2 Tabla de emplazamiento — plantilla y criterios
 
-**Bloqueada hasta S4.** Lo que sí está cerrado son las **columnas** y los **criterios**, que es
-lo que el Art. 16.2 exige justificar. Estructura obligatoria:
+**DESBLOQUEADA Y CONSTRUIDA.** D3 entregó el inventario lógico (Eje 5 de
+`subdoc4.1-arquitectura-logica.md`) y la tabla está en **`T-11-tabla-emplazamiento.md`**:
+34 componentes en cuatro emplazamientos, con la matriz de los seis criterios del Art. 16.2 y
+cuatro correcciones documentadas respecto de la recomendación de D3 — la principal, el **nodo de
+continuidad operacional en San Bernardo**, que la recomendación de D3 no contemplaba y que
+RT-03.10 y RT-21.06 hacen obligatorio.
+
+Estructura de columnas:
 
 | Componente | Emplazamiento | Latencia | Criticidad | Volumen | Regulación | Conectividad | TCO | Justificación |
 |---|---|---|---|---|---|---|---|---|

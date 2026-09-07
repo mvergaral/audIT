@@ -1,0 +1,4 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {section}{\numberline {1}Servicios de Operación y Niveles de Servicio}{2}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Contenido exigido por el Formulario T-7}{2}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Redacción}{2}{subsection.1.2}%

@@ -1,0 +1,17 @@
+[0] Config.pm:328> INFO - This is Biber 2.21
+[0] Config.pm:331> INFO - Logfile is 'salida/aux/02-problema/sub2.blg'
+[84] biber:342> INFO - === dom sep  6, 2026, 21:50:24
+[101] Biber.pm:421> INFO - Reading 'salida/aux/02-problema/sub2.bcf'
+[197] Biber.pm:1002> INFO - Found 6 citekeys in bib section 0
+[223] Biber.pm:4487> INFO - Processing section 0
+[234] Biber.pm:4678> INFO - Looking for bibtex file 'comun/referencias.bib' for section 0
+[235] bibtex.pm:1713> INFO - LaTeX decoding ...
+[246] bibtex.pm:1519> INFO - Found BibTeX data source 'comun/referencias.bib'
+[325] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[325] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[325] Biber.pm:4307> INFO - Sorting list 'apa/apasortcite//global/global/global' of type 'entry' with template 'apa' and locale 'es-ES'
+[348] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[348] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[348] Biber.pm:4307> INFO - Sorting list 'apa/global//global/global/global' of type 'entry' with template 'apa' and locale 'es-ES'
+[361] bbl.pm:676> INFO - Writing 'salida/aux/02-problema/sub2.bbl' with encoding 'UTF-8'
+[368] bbl.pm:779> INFO - Output to salida/aux/02-problema/sub2.bbl
