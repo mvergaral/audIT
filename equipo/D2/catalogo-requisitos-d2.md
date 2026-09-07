@@ -132,7 +132,7 @@ no satisfacción demostrada de los criterios o restricciones.
 1. Confirmar con D3/D4 la viabilidad de la cobertura sobre 374 camiones y los componentes propuestos.
 2. Validar jurídicamente jornada externa, tacógrafos, firma/OTP y valor probatorio de la evidencia.
 3. Confirmar un mecanismo soportado por el sistema contable que entregue el documento conforme antes del movimiento aun sin cobertura; no aceptar solo emisión diferida.
-4. Costear y formalizar el ciclo de vida contractual del dispositivo financiado por AUDIT.
+4. Costear y formalizar el ciclo de vida contractual del dispositivo, adquirido por el CLIENTE conforme al Capítulo 11 y entregado en comodato al transportista adherido.
 5. Levantar el catálogo de lugares seguros y fijar la anticipación de alertas.
 6. Conciliar revocación de datos futuros, visibilidad y retención legal de geolocalización.
 7. Resuelto. Son 3 los contratos servidos bajo costo, equivalentes al 31 % del ingreso, y 2 de ellos se renegocian en 2027 (FEP03 · Sección 7.3 · p.15 y Sección 13.2 · p.27).

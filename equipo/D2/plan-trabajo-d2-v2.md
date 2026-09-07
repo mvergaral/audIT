@@ -127,10 +127,10 @@ Detalle en `registro-decisiones-d2.md`.
   documental limitado ratificados; metas de 70 % en E1 y 90 % en E2 sujetas a viabilidad.
 - **Decisión 25 · despliegue del equipamiento a bordo**. Piloto por familia y pasos
   normales por terminal ratificados; cronograma pendiente de validación con D4.
-- **Decisión 5 · propiedad y financiamiento del dispositivo**. Activo financiado,
-  administrado y retirado por AUDIT en camiones de terceros; costo y contrato pendientes.
-  La lectura declarada frente al Capítulo 11 del caso está en el numeral 5.3 del
-  Subdocumento 3.
+- **Decisión 5 · propiedad y financiamiento del dispositivo**. El CLIENTE adquiere el
+  hardware conforme al Capítulo 11 del caso, y AUDIT especifica qué comprar. El equipo
+  del camión ajeno se entrega en comodato al transportista adherido. Costo del servicio
+  y contrato pendientes.
 
 Quedan 11 decisiones adicionales identificadas como de cierre temprano en la v1.
 

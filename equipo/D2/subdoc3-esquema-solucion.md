@@ -217,54 +217,36 @@ textualmente, que el aparato le sirva a él para demostrar que está en regla y 
 para que lo vigilen (FEP03 · Capítulo 8 · p.17). Se desarrolla como innovación tipo 1
 en `fichas-t19-d2.md`.
 
-### 5.3. Quién financia y quién administra el dispositivo
+### 5.3. Quién compra, quién administra y quién tiene el dispositivo
 
-**Lectura declarada de las Bases.** Este punto exige declarar una interpretación,
-porque las Bases dicen dos cosas que conviven mal. El Capítulo 11 establece que el
-hardware lo adquiere el CLIENTE y que el PROPONENTE debe especificar qué comprar
-(FEP03 · p.24). El numeral 16.1, decisión 5, pregunta en cambio *de quién es el
-dispositivo a bordo en un camión de un tercero, quién lo paga, quién lo administra y
-qué ocurre con él si el transportista deja de trabajar con la compañía* (FEP03 · p.34).
-Si el Capítulo 11 ya resolviera el punto para toda la flota, la decisión 5 no existiría.
+Las Bases resuelven la primera mitad de la pregunta y no admiten lectura alternativa.
+**Todo el hardware lo adquiere el CLIENTE**, y el PROPONENTE debe especificar qué
+comprar, cuánto y con qué características (FEP03 · Capítulo 11 · p.24).
 
-El PROPONENTE interpreta que el Capítulo 11 fija la regla general para el equipamiento
-de la operación propia del CLIENTE, y que la decisión 5 abre expresamente el caso del
-camión de un tercero, donde la pregunta no es contable sino de adhesión. Sobre esa
-lectura se construye la propuesta.
+Lo que el caso deja abierto es la segunda mitad, y la formula en el numeral 16.1,
+decisión 5, preguntando *de quién es el dispositivo a bordo en un camión de un tercero,
+quién lo administra y qué ocurre con él si el transportista deja de trabajar con la
+compañía* (FEP03 · p.34). Sobre esa parte sí decide el PROPONENTE.
 
-| Materia | Flota propia del CLIENTE | Camión de un transportista adherido |
-|---|---|---|
-| Adquisición | Del CLIENTE, conforme al Capítulo 11 | Financiada por el PROPONENTE dentro del servicio |
-| Propiedad | Del CLIENTE | Del PROPONENTE mientras dure el contrato |
-| Tenencia | Del CLIENTE | Del transportista, en comodato, mientras dure la relación comercial |
-| Instalación y soporte | Del CLIENTE, en el paso normal por terminal | Del PROPONENTE, en el paso normal por terminal |
-| Conectividad y suscripciones | Del CLIENTE | Del PROPONENTE, dentro del costo de operación de 36 meses |
-| Retiro | Del CLIENTE | Del PROPONENTE, en el primer paso por terminal, sin costo para el transportista |
-| Daño o pérdida | Régimen del CLIENTE | Régimen declarado en el anexo de adhesión, distinguiendo uso normal de negligencia |
-| Equipos preexistentes del transportista | No aplica | No se intervienen. Se homologa la vista, conforme al Capítulo 11 |
+| Materia | Propuesta del PROPONENTE |
+|---|---|
+| Adquisición y propiedad | Del CLIENTE, conforme al Capítulo 11, para toda la flota |
+| Especificación de qué comprar | Del PROPONENTE, con cantidad y características declaradas |
+| Tenencia en camión de tercero | Del transportista adherido, en comodato, mientras dure la relación comercial |
+| Configuración, instalación y soporte | Del PROPONENTE, como parte del servicio, en el paso normal por terminal |
+| Conectividad y suscripciones | Declaradas en el costo total de operación de 36 meses |
+| Retiro | En el primer paso por terminal al término de la relación, sin costo para el transportista |
+| Daño o pérdida | Régimen declarado en el anexo de adhesión, distinguiendo uso normal de negligencia |
+| Equipos preexistentes del transportista | No se intervienen. Se homologa la vista, conforme al Capítulo 11 |
 
-**Por qué el PROPONENTE financia el equipo del camión ajeno.** Porque es la única
-respuesta que hace viable la adhesión. Pedirle a 148 dueños de camión que acepten un
-aparato comprado por su mandante, instalado en un activo propio de más de cien millones
-de pesos, es pedirles que asuman el riesgo patrimonial de una decisión que no tomaron.
-El transportista entrevistado lo planteó como su primera pregunta. Trasladar el
-financiamiento al PROPONENTE convierte el dispositivo en parte del servicio contratado,
-que es precisamente un cambio de modelo de negocio en el sentido del Artículo 28°,
-tipo 4, y por eso se desarrolla como innovación.
-
-**Consecuencia económica que se declara.** Esta opción carga al PROPONENTE el costo de
-los equipos de la flota de terceros y su conectividad por 36 meses. El CLIENTE opera con
-un margen de 9 % y su oferta económica será evaluada con especial atención al costo de
-operación (FEP03 · Capítulo 10, restricción 14 · p.23), de modo que el efecto se
-incorpora íntegro al modelo económico y se valoriza en el Informe 3. Si el CLIENTE
-prefiere adquirir también estos equipos, la propuesta se mantiene sin cambios
-estructurales y solo se traslada la partida, con la meta de adhesión revisada a la baja.
-
-El equipo instalado en un camión de tercero **no transmite fuera de la ventana del
-viaje asignado por el CLIENTE**. Esa es una decisión de diseño, no una promesa
-comercial, y es la que responde a la objeción central del transportista sobre qué pasa
-con sus datos cuando trabaja para otro cliente. Su mecanismo se desarrolla como
-innovación tipo 4.
+**Lo que hace viable la adhesión no es quién paga el aparato, sino de quién son los
+datos.** El transportista entrevistado hizo tres preguntas, quién lo paga, quién ve esa
+información y qué pasa con ella cuando trabaja para otro cliente (FEP03 · Capítulo 8 ·
+p.17). La primera la responden las Bases. Las otras dos las responde el diseño, y son
+las que deciden si adhiere. Por eso la propuesta **separa la propiedad del equipo de la
+propiedad del dato**. El equipo es del CLIENTE; el dato de la actividad del transportista
+sigue siendo suyo, y el dispositivo solo transmite dentro de la ventana del viaje
+asignado. Esa separación es el núcleo de la innovación tipo 4.
 
 ### 5.4. Instrumento contractual
 
@@ -359,10 +341,11 @@ comprometido, y se declaran como supuestos con su impacto explícito.
   persona y el bloqueo sin excepción operacional. La suficiencia probatoria requiere
   validación jurídica. Si resultara insuficiente, cambia el medio de acreditación, no la
   regla de bloqueo.
-- **D-05, propiedad y financiamiento del dispositivo.** Se decide el régimen del
-  numeral 5.3, con el equipo del camión ajeno financiado por el PROPONENTE. Si el
-  CLIENTE prefiere adquirirlo, se traslada la partida sin cambio estructural y la meta
-  de adhesión del 70 % debe revisarse a la baja.
+- **D-05, propiedad y administración del dispositivo.** Se decide el régimen del
+  numeral 5.3. El CLIENTE adquiere el hardware conforme al Capítulo 11 y el equipo del
+  camión ajeno se entrega en comodato al transportista adherido, con el PROPONENTE a
+  cargo de configuración, instalación, soporte y retiro. Falta costear ese servicio y
+  formalizar el anexo contractual.
 - **D-09, emisión tributaria sin cobertura.** Se decide usar exclusivamente el mecanismo
   offline oficialmente soportado por el sistema contable. Si no existiera tal mecanismo,
   el documento conforme antes del movimiento no es alcanzable y el CLIENTE debe

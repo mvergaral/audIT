@@ -117,8 +117,8 @@ consultas no se trataron como respuestas del CLIENTE.
 2. D1, D3 y D4 verifican los bloques que les corresponden y registran evidencia.
 3. Coordinar la revisión jurídica de D-01, D-10, D-13, D-23 y D-24.
 4. Validar con el proveedor contable y con D3 el mecanismo offline ratificado en D-09.
-5. Resolver el contraste entre la decisión D-05 y FEP03 · Capítulo 11 · p.24, que
-   asigna al CLIENTE la adquisición del hardware.
+5. Alinear el plan de adhesión con el informe consolidado del equipo. Todo el hardware
+   lo adquiere el CLIENTE conforme a FEP03 · Capítulo 11 · p.24.
 6. Completar el inventario normativo y la trazabilidad antes de declarar cumplimiento.
 7. Preparar las diapositivas de los dos bloques de presentación, que se exponen entre el
    14 y el 25 de septiembre.
