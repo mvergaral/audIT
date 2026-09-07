@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.8.26)  7 SEP 2026 01:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.8.26)  7 SEP 2026 03:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2197,44 +2197,65 @@ LaTeX Font Warning: Font shape `T1/cmr/bx/n' in size <19> not available
  </home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recurso
 s/Plantilla-audIT/comun/assets/portada.jpeg>]
 
-LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <28> not available
-(Font)              size <29.86> substituted on input line 9.
+LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <26> not available
+(Font)              size <24.88> substituted on input line 9.
 
 
-LaTeX Font Warning: Font shape `T1/cmr/bx/n' in size <28> not available
-(Font)              size <29.86> substituted on input line 9.
+LaTeX Font Warning: Font shape `T1/cmr/bx/n' in size <26> not available
+(Font)              size <24.88> substituted on input line 9.
 
 
 Overfull \hbox (28.45274pt too wide) in paragraph at lines 9--9
 [][][] 
  []
 
-[2
-
-] (salida/aux/02-problema/sub2.toc
-LaTeX Info: Redefining \sptext on input line 1.
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 2.
-
+LaTeX Font Info:    Trying to load font information for U+msa on input line 9.
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 2.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 9.
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-))
+)
+<comun/assets/figuras/Firma.png, id=130, 550.055pt x 299.1175pt>
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 9.
+(pdftex.def)             Requested size: 68.0181pt x 36.98866pt.
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 9.
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[2
+
+ </home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recurso
+s/Plantilla-audIT/comun/assets/figuras/Firma.png>]
+(salida/aux/02-problema/sub2.toc
+LaTeX Info: Redefining \sptext on input line 1.
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+)
 \tf@toc=\write8
 \openout8 = `sub2.toc'.
 
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 9.
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.9 \fichaSubdocumento
-                       [1
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[3
 
 ]
 (/home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recursos
@@ -2247,28 +2268,88 @@ LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <86> not available
 LaTeX Font Warning: Font shape `T1/cmr/bx/n' in size <86> not available
 (Font)              size <51.59> substituted on input line 1.
 
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 10.
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.10 
-      [2
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
 
-] [3]
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[4
+
+]
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 19.
+
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[5]
 Underfull \hbox (badness 6396) in paragraph at lines 27--28
 []|\T1/cmr/m/n/10.95 18 trac-to-ca-mio-nes ha-bi-li-ta-dos
  []
 
-[4] [5]
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 37.
+
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[6]
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 63.
+
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[7]
 Underfull \hbox (badness 2142) in paragraph at lines 74--75
 []|\T1/cmr/m/n/10.95 34 trac-to-ca-mio-nes de ter-ce-ros
  []
 
 
-ignored: Infinite glue shrinkage found in box being split [6]
-ignored: Infinite glue shrinkage fou
-nd in box being split [7]
+ignored: Infinite glue shrinkage found in box being split
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 77.
+
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[8]
+ignored: Infinite glue shrinkage found in box being split
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 92.
+
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[9]
 Underfull \hbox (badness 10000) in paragraph at lines 103--104
 []|\T1/cmr/m/n/10.95 31$ $% del in-gre-so to-tal
  []
@@ -2279,1347 +2360,1604 @@ Underfull \hbox (badness 10000) in paragraph at lines 106--107
  []
 
 
-ignored: Infinite glue shrinkage found in box being split [8]
-Underfull \hbox (badness 4556) in paragraph at lines 119--120
+ignored: Infinite glue shrinkage found in box being split
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 108
+.
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[10]
+Underfull \hbox (badness 4556) in paragraph at lines 122--123
 []|\T1/cmr/m/n/10.95 D.S. N.\TS1/cmr/m/n/10.95 º \T1/cmr/m/n/10.95 158 ([]Mi-ni
 s-te-rio de
  []
 
 
-Underfull \hbox (badness 2662) in paragraph at lines 122--122
+Underfull \hbox (badness 2662) in paragraph at lines 125--125
 []|\T1/cmr/m/n/10.95 Exigencias con-di-cio-nan-tes del clien-te prin-ci-pal
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 122--123
+Underfull \hbox (badness 10000) in paragraph at lines 125--126
 []|\T1/cmr/m/n/10.95 Trazabilidad 100$ $%, po-si-ción
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 123--124
+Underfull \hbox (badness 10000) in paragraph at lines 126--127
 []|\T1/cmr/m/n/10.95 19$ $% del in-gre-so to-tal
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 123--124
+Underfull \hbox (badness 10000) in paragraph at lines 126--127
 \T1/cmr/m/n/10.95 ($14.820.000.000 CLP anua-
  []
 
 
-ignored: Infinite glue shrinkage found in box being split [9] [10] [11]
-Underfull \hbox (badness 10000) in paragraph at lines 170--170
+ignored: Infinite glue shrinkage found in box being split
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 127
+.
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[11]
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 138
+.
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[12]
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 157
+.
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[13]
+Underfull \hbox (badness 10000) in paragraph at lines 173--173
 []|\T1/cmr/m/n/10.95 Terminal San
  []
 
 
-Underfull \hbox (badness 3919) in paragraph at lines 170--170
+Underfull \hbox (badness 3919) in paragraph at lines 173--173
 \T1/cmr/m/n/10.95 co pun-to de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 170--170
+Underfull \hbox (badness 10000) in paragraph at lines 173--173
 \T1/cmr/m/n/10.95 in-ter-ven-ción
  []
 
 
-Underfull \hbox (badness 7869) in paragraph at lines 171--171
+Underfull \hbox (badness 7869) in paragraph at lines 174--174
 []|\T1/cmr/m/n/10.95 Terminales Re-
  []
 
 
-Underfull \hbox (badness 1648) in paragraph at lines 171--171
+Underfull \hbox (badness 1648) in paragraph at lines 174--174
 \T1/cmr/m/n/10.95 to-fa-gas-ta, Tal-ca, Los
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 171--171
+Underfull \hbox (badness 10000) in paragraph at lines 174--174
 \T1/cmr/m/n/10.95 te geo-grá-fi-co
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 171--171
+Underfull \hbox (badness 10000) in paragraph at lines 174--174
 \T1/cmr/m/n/10.95 de trans-mi-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 172--172
+Underfull \hbox (badness 10000) in paragraph at lines 175--175
 []|\T1/cmr/m/n/10.95 Mantenimiento pre-
  []
 
 
-Underfull \hbox (badness 6188) in paragraph at lines 172--172
+Underfull \hbox (badness 6188) in paragraph at lines 175--175
 \T1/cmr/m/n/10.95 ven-ti-vo y co-rrec-ti-vo
  []
 
 
-Underfull \hbox (badness 1831) in paragraph at lines 172--172
+Underfull \hbox (badness 1831) in paragraph at lines 175--175
 \T1/cmr/m/n/10.95 de flo-ta pro-pia (358
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 172--172
+Underfull \hbox (badness 10000) in paragraph at lines 175--175
 []|\T1/cmr/m/n/10.95 Alta. Sos-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 172--172
+Underfull \hbox (badness 10000) in paragraph at lines 175--175
 \T1/cmr/m/n/10.95 tie-nen dis-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 172--172
+Underfull \hbox (badness 10000) in paragraph at lines 175--175
 \T1/cmr/m/n/10.95 po-ni-bi-li-dad
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 172--172
+Underfull \hbox (badness 10000) in paragraph at lines 175--175
 \T1/cmr/m/n/10.95 me-cá-ni-ca de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 172--172
+Underfull \hbox (badness 10000) in paragraph at lines 175--175
 \T1/cmr/m/n/10.95 ac-ti-vos pro-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 173--173
+Underfull \hbox (badness 10000) in paragraph at lines 176--176
 []|\T1/cmr/m/n/10.95 Talleres Ex-ter-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 173--173
+Underfull \hbox (badness 10000) in paragraph at lines 176--176
 []|\T1/cmr/m/n/10.95 Alta. In-ter-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 173--173
+Underfull \hbox (badness 10000) in paragraph at lines 176--176
 \T1/cmr/m/n/10.95 ven-cio-nes no
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 173--173
+Underfull \hbox (badness 10000) in paragraph at lines 176--176
 \T1/cmr/m/n/10.95 re-gis-tra-das
  []
 
 
-Underfull \hbox (badness 1496) in paragraph at lines 173--173
+Underfull \hbox (badness 1496) in paragraph at lines 176--176
 \T1/cmr/m/n/10.95 que de-gra-dan
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 174--174
+Underfull \hbox (badness 10000) in paragraph at lines 177--177
 []|\T1/cmr/m/n/10.95 Operación in-ter-na-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 174--174
+Underfull \hbox (badness 10000) in paragraph at lines 177--177
 \T1/cmr/m/n/10.95 cio-nal bi-na-cio-nal
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 174--174
+Underfull \hbox (badness 10000) in paragraph at lines 177--177
 []|\T1/cmr/m/n/10.95 Infraestructura adua-ne-ra
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 174--174
+Underfull \hbox (badness 10000) in paragraph at lines 177--177
 \T1/cmr/m/n/10.95 bi-na-cio-nal. Cie-rres por
  []
 
 
-Underfull \hbox (badness 4647) in paragraph at lines 174--174
+Underfull \hbox (badness 4647) in paragraph at lines 177--177
 \T1/cmr/m/n/10.95 nie-ve de has-ta 12 días
  []
 
 
-Underfull \hbox (badness 1210) in paragraph at lines 174--174
+Underfull \hbox (badness 1210) in paragraph at lines 177--177
 \T1/cmr/m/n/10.95 dad cli-má-ti-ca
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 176--176
+Underfull \hbox (badness 10000) in paragraph at lines 179--179
 \T1/cmr/m/n/10.95 ob-je-ción de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 176--176
+Underfull \hbox (badness 10000) in paragraph at lines 179--179
 \T1/cmr/m/n/10.95 so-bre-es-ta-días
  []
 
 
-Underfull \hbox (badness 3049) in paragraph at lines 177--177
+Underfull \hbox (badness 3049) in paragraph at lines 180--180
 []|\T1/cmr/m/n/10.95 Ambiente hos-til; prohi-bi-
  []
 
 
-Underfull \hbox (badness 4647) in paragraph at lines 177--177
+Underfull \hbox (badness 4647) in paragraph at lines 180--180
 \T1/cmr/m/n/10.95 ción le-gal de ma-ni-pu-lar
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 177--178
+Underfull \hbox (badness 10000) in paragraph at lines 180--181
 []|\T1/cmr/m/n/10.95 Crítica.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 177--178
+Underfull \hbox (badness 10000) in paragraph at lines 180--181
 \T1/cmr/m/n/10.95 Res-tric-ción
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 177--178
+Underfull \hbox (badness 10000) in paragraph at lines 180--181
 \T1/cmr/m/n/10.95 ab-so-lu-ta de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 177--178
+Underfull \hbox (badness 10000) in paragraph at lines 180--181
 \T1/cmr/m/n/10.95 in-ter-ac-ción
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 177--178
+Underfull \hbox (badness 10000) in paragraph at lines 180--181
 \T1/cmr/m/n/10.95 (Ley N.\TS1/cmr/m/n/10.95 º
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 177--178
+Underfull \hbox (badness 10000) in paragraph at lines 180--181
 \T1/cmr/m/n/10.95 18.290 ([]Mi-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 177--178
+Underfull \hbox (badness 10000) in paragraph at lines 180--181
 \T1/cmr/m/n/10.95 nis-te-rio de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 177--178
+Underfull \hbox (badness 10000) in paragraph at lines 180--181
 \T1/cmr/m/n/10.95 Te-le-co-mu-ni-ca-
  []
 
 
-ignored: Infinite glue shrinkage found in box being split [12]
-Overfull \hbox (0.28471pt too wide) in paragraph at lines 180--180
+ignored: Infinite glue shrinkage found in box being split
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 181
+.
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[14]
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 181
+.
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[15]
+Overfull \hbox (0.28471pt too wide) in paragraph at lines 183--183
 |[]\T1/cmr/bx/n/17.28 Caracterización de ac-to-res y ma-triz de ten-sio-nes ope
 -
  []
 
-[13] [14] [15] [16]
-Overfull \hbox (11.10811pt too wide) in paragraph at lines 254--255
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 202
+.
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[16]
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 223
+.
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[17]
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 242
+.
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[18]
+Overfull \hbox (11.10811pt too wide) in paragraph at lines 257--258
 \T1/cmr/m/n/12 cap-tu-ra po-si-cio-nal y re-so-lu-ción ope-ra-ti-va de los ba-c
 hes de co-nec-ti-vi-dad sa-te-li-tal/celular. 
  []
 
-[17]
-<subdocumentos/02-problema/Img.png, id=307, 1541.76pt x 1027.84pt>
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 265
+.
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[19]
+<subdocumentos/02-problema/Img.png, id=321, 1541.76pt x 1027.84pt>
 File: subdocumentos/02-problema/Img.png Graphic file (type png)
 <use subdocumentos/02-problema/Img.png>
 Package pdftex.def Info: subdocumentos/02-problema/Img.png  used on input line 
-270.
+273.
 (pdftex.def)             Requested size: 457.80298pt x 305.20198pt.
 
-Underfull \hbox (badness 1286) in paragraph at lines 279--279
+Underfull \hbox (badness 1286) in paragraph at lines 282--282
 []|\T1/cmr/m/n/10.95 E. Val-de-be-
  []
 
 
-Underfull \hbox (badness 4792) in paragraph at lines 279--279
+Underfull \hbox (badness 4792) in paragraph at lines 282--282
 \T1/cmr/m/n/10.95 ca; re-ten-ción de
  []
 
 
-Underfull \hbox (badness 6348) in paragraph at lines 279--279
+Underfull \hbox (badness 6348) in paragraph at lines 282--282
 []|\T1/cmr/m/n/10.95 Exposición pe-nal
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 279--279
+Underfull \hbox (badness 10000) in paragraph at lines 282--282
 \T1/cmr/m/n/10.95 por re-cha-zo de
  []
 
 
-Underfull \hbox (badness 1867) in paragraph at lines 279--279
+Underfull \hbox (badness 1867) in paragraph at lines 282--282
 \T1/cmr/m/n/10.95 to y cum-pli-mien-to
  []
 
 
-Underfull \hbox (badness 1596) in paragraph at lines 280--280
+Underfull \hbox (badness 1596) in paragraph at lines 283--283
 \T1/cmr/m/n/10.95 te sin ki-ló-me-tros
  []
 
 
-Underfull \hbox (badness 3364) in paragraph at lines 280--280
+Underfull \hbox (badness 3364) in paragraph at lines 283--283
 \T1/cmr/m/n/10.95 va-cíos; va-li-da-ción
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 280--280
+Underfull \hbox (badness 10000) in paragraph at lines 283--283
 \T1/cmr/m/n/10.95 blo-quean-te pre-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 280--280
+Underfull \hbox (badness 10000) in paragraph at lines 283--283
 []|\T1/cmr/m/n/10.95 Sistemas ex-ce-si-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 280--280
+Underfull \hbox (badness 10000) in paragraph at lines 283--283
 \T1/cmr/m/n/10.95 va-men-te rí-gi-dos
  []
 
 
-Underfull \hbox (badness 2538) in paragraph at lines 280--280
+Underfull \hbox (badness 2538) in paragraph at lines 283--283
 []|\T1/cmr/m/n/10.95 Visibilidad in-te-gra-
  []
 
 
-Underfull \hbox (badness 1867) in paragraph at lines 280--280
+Underfull \hbox (badness 1867) in paragraph at lines 283--283
 \T1/cmr/m/n/10.95 nei-dad del equi-po,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 281--281
+Underfull \hbox (badness 10000) in paragraph at lines 284--284
 []|\T1/cmr/m/n/10.95 Respeto de sus
  []
 
 
-Underfull \hbox (badness 3396) in paragraph at lines 281--281
+Underfull \hbox (badness 3396) in paragraph at lines 284--284
 []|\T1/cmr/m/n/10.95 Alertas in-opor-tu-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 281--281
+Underfull \hbox (badness 10000) in paragraph at lines 284--284
 \T1/cmr/m/n/10.95 nas; ser san-cio-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 281--281
+Underfull \hbox (badness 10000) in paragraph at lines 284--284
 \T1/cmr/m/n/10.95 na-da por fa-llas
  []
 
 
-Underfull \hbox (badness 2359) in paragraph at lines 281--281
+Underfull \hbox (badness 2359) in paragraph at lines 284--284
 []|\T1/cmr/m/n/10.95 Operación sin dis-
  []
 
 
-Underfull \hbox (badness 5231) in paragraph at lines 282--282
+Underfull \hbox (badness 5231) in paragraph at lines 285--285
 []|\T1/cmr/m/n/10.95 Autonomía so-bre
  []
 
 
-Underfull \hbox (badness 4726) in paragraph at lines 282--282
+Underfull \hbox (badness 4726) in paragraph at lines 285--285
 \T1/cmr/m/n/10.95 su ac-ti-vo; co-bro
  []
 
 
-Underfull \hbox (badness 2158) in paragraph at lines 282--282
+Underfull \hbox (badness 2158) in paragraph at lines 285--285
 \T1/cmr/m/n/10.95 ra pa-ra ter-ce-ros;
  []
 
 
-Underfull \hbox (badness 1383) in paragraph at lines 282--282
+Underfull \hbox (badness 1383) in paragraph at lines 285--285
 \T1/cmr/m/n/10.95 pe-na-li-za-cio-nes in-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 282--282
+Underfull \hbox (badness 10000) in paragraph at lines 285--285
 []|\T1/cmr/m/n/10.95 Muy Al-ta
  []
 
 
-Underfull \hbox (badness 4660) in paragraph at lines 282--282
+Underfull \hbox (badness 4660) in paragraph at lines 285--285
 \T1/cmr/m/n/10.95 ción; trans-pa-ren-cia
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 283--283
+Underfull \hbox (badness 10000) in paragraph at lines 286--286
 []|\T1/cmr/m/n/10.95 G. Os-san-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 283--283
+Underfull \hbox (badness 10000) in paragraph at lines 286--286
 []|\T1/cmr/m/n/10.95 Erradicación de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 283--283
+Underfull \hbox (badness 10000) in paragraph at lines 286--286
 \T1/cmr/m/n/10.95 sub-si-dios cru-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 283--283
+Underfull \hbox (badness 10000) in paragraph at lines 286--286
 \T1/cmr/m/n/10.95 za-dos; cos-teo
  []
 
 
-Underfull \hbox (badness 2401) in paragraph at lines 283--283
+Underfull \hbox (badness 2401) in paragraph at lines 286--286
 \T1/cmr/m/n/10.95 ana-lí-ti-co por ru-
  []
 
 
-Underfull \hbox (badness 3000) in paragraph at lines 283--283
+Underfull \hbox (badness 3000) in paragraph at lines 286--286
 []|\T1/cmr/m/n/10.95 Mantener con-tra-
  []
 
 
-Underfull \hbox (badness 1515) in paragraph at lines 283--283
+Underfull \hbox (badness 1515) in paragraph at lines 286--286
 []|\T1/cmr/m/n/10.95 Integración opor-tu-
  []
 
 
-Underfull \hbox (badness 6252) in paragraph at lines 283--283
+Underfull \hbox (badness 6252) in paragraph at lines 286--286
 \T1/cmr/m/n/10.95 odó-me-tro y fle-tes
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 284--284
+Underfull \hbox (badness 10000) in paragraph at lines 287--287
 []|\T1/cmr/m/n/10.95 Mantenimiento
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 284--284
+Underfull \hbox (badness 10000) in paragraph at lines 287--287
 []|\T1/cmr/m/n/10.95 Daños inad-ver-ti-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 284--284
+Underfull \hbox (badness 10000) in paragraph at lines 287--287
 \T1/cmr/m/n/10.95 no re-gis-tra-das;
  []
 
 
-Underfull \hbox (badness 4416) in paragraph at lines 284--284
+Underfull \hbox (badness 4416) in paragraph at lines 287--287
 \T1/cmr/m/n/10.95 ins-ta-la-cio-nes ma-
  []
 
 
-Underfull \hbox (badness 1466) in paragraph at lines 284--284
+Underfull \hbox (badness 1466) in paragraph at lines 287--287
 []|\T1/cmr/m/n/10.95 Lectura re-mo-ta de
  []
 
 
-Underfull \hbox (badness 2990) in paragraph at lines 285--285
+Underfull \hbox (badness 2990) in paragraph at lines 288--288
 []|\T1/cmr/m/n/10.95 Validación vin-cu-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 285--285
+Underfull \hbox (badness 10000) in paragraph at lines 288--288
 []|\T1/cmr/m/n/10.95 Nuevo si-nies-tro
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 285--285
+Underfull \hbox (badness 10000) in paragraph at lines 288--288
 \T1/cmr/m/n/10.95 con le-sio-nes o
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 285--285
+Underfull \hbox (badness 10000) in paragraph at lines 288--288
 []|\T1/cmr/m/n/10.95 Alta (ve-to
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 285--285
+Underfull \hbox (badness 10000) in paragraph at lines 288--288
 []|\T1/cmr/m/n/10.95 Repositorio uni-fi-
  []
 
 
-Underfull \hbox (badness 5878) in paragraph at lines 285--285
+Underfull \hbox (badness 5878) in paragraph at lines 288--288
 \T1/cmr/m/n/10.95 ca-do de vi-gen-cias
  []
 
 
-Underfull \hbox (badness 7168) in paragraph at lines 285--285
+Underfull \hbox (badness 7168) in paragraph at lines 288--288
 \T1/cmr/m/n/10.95 con ca-pa-ci-dad de
  []
 
 
-Underfull \hbox (badness 4181) in paragraph at lines 285--285
+Underfull \hbox (badness 4181) in paragraph at lines 288--288
 \T1/cmr/m/n/10.95 in-ter-cep-ción pre-via
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 286--286
+Underfull \hbox (badness 10000) in paragraph at lines 289--289
 []|\T1/cmr/m/n/10.95 Cumplimiento
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 286--286
+Underfull \hbox (badness 10000) in paragraph at lines 289--289
 \T1/cmr/m/n/10.95 (CO$[]$e, tra-za-bi-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 286--286
+Underfull \hbox (badness 10000) in paragraph at lines 289--289
 \T1/cmr/m/n/10.95 li-dad, e-Docs,
  []
 
 
-Underfull \hbox (badness 5203) in paragraph at lines 286--286
+Underfull \hbox (badness 5203) in paragraph at lines 289--289
 \T1/cmr/m/n/10.95 ti-fi-ca-cio-nes in-ter-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 286--286
+Underfull \hbox (badness 10000) in paragraph at lines 289--289
 []|\T1/cmr/m/n/10.95 Extrema
  []
 
 
-Underfull \hbox (badness 2012) in paragraph at lines 286--286
+Underfull \hbox (badness 2012) in paragraph at lines 289--289
 []|\T1/cmr/m/n/10.95 Reportería ve-ri-fi-ca-
  []
 
 
-Underfull \hbox (badness 1609) in paragraph at lines 286--286
+Underfull \hbox (badness 1609) in paragraph at lines 289--289
 \T1/cmr/m/n/10.95 da de emi-sio-nes e
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 286--286
+Underfull \hbox (badness 10000) in paragraph at lines 289--289
 \T1/cmr/m/n/10.95 his-to-rial fi-de-digno
  []
 
 
-Underfull \hbox (badness 4416) in paragraph at lines 286--286
+Underfull \hbox (badness 4416) in paragraph at lines 289--289
 \T1/cmr/m/n/10.95 del 100$ $% de los
  []
 
 
-Underfull \hbox (badness 1502) in paragraph at lines 287--287
+Underfull \hbox (badness 1502) in paragraph at lines 290--290
 []|\T1/cmr/m/n/10.95 Coherencia en la
  []
 
 
-Underfull \hbox (badness 2042) in paragraph at lines 287--287
+Underfull \hbox (badness 2042) in paragraph at lines 290--290
 \T1/cmr/m/n/10.95 vi-sua-li-za-ción geo-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 287--287
+Underfull \hbox (badness 10000) in paragraph at lines 290--290
 []|\T1/cmr/m/n/10.95 Intermitencias
  []
 
 
-Underfull \hbox (badness 3547) in paragraph at lines 287--287
+Underfull \hbox (badness 3547) in paragraph at lines 290--290
 \T1/cmr/m/n/10.95 cró-ni-cas en ru-ta
  []
 
 
-Underfull \hbox (badness 1466) in paragraph at lines 287--287
+Underfull \hbox (badness 1466) in paragraph at lines 290--290
 \T1/cmr/m/n/10.95 nor-te; ges-tión de
  []
 
 
-Underfull \hbox (badness 1424) in paragraph at lines 287--287
+Underfull \hbox (badness 1424) in paragraph at lines 290--290
 []|\T1/cmr/m/n/10.95 Alta (téc-ni-
  []
 
 
-Underfull \hbox (badness 2409) in paragraph at lines 287--287
+Underfull \hbox (badness 2409) in paragraph at lines 290--290
 []|\T1/cmr/m/n/10.95 Vista uni-fi-ca-da de
  []
 
 
-Underfull \hbox (badness 3612) in paragraph at lines 287--287
+Underfull \hbox (badness 3612) in paragraph at lines 290--290
 \T1/cmr/m/n/10.95 geo-lo-ca-li-za-ción que
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 288--288
+Underfull \hbox (badness 10000) in paragraph at lines 291--291
 []|\T1/cmr/m/n/10.95 M. Ri-quel-
  []
 
 
-Underfull \hbox (badness 2753) in paragraph at lines 288--289
+Underfull \hbox (badness 2753) in paragraph at lines 291--292
 []|\T1/cmr/m/n/10.95 Resiliencia ope-ra-ti-
  []
 
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 292
+.
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
 
-ignored: Infinite glue shrinkage found in box being split [18 </home/carlosa/Documentos/
-Universidad/Actual/FEP/Proyecto/Informe/repo/recursos/Plantilla-audIT/subdocume
-ntos/02-problema/Img.png (PNG copy)>]
-ignored: Infinite glue shrinkage found in box being
- split [19]
-[20]
-Underfull \hbox (badness 3735) in paragraph at lines 305--305
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[20 </home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recu
+rsos/Plantilla-audIT/subdocumentos/02-problema/Img.png (PNG copy)>]
+ignored: Infinite glu
+e shrinkage found in box being split
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 292
+.
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[21]
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 301
+.
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[22]
+Underfull \hbox (badness 3735) in paragraph at lines 308--308
 []|\T1/cmr/bx/n/10.95 Tensión Ope-
  []
 
 
-Underfull \hbox (badness 3690) in paragraph at lines 305--305
+Underfull \hbox (badness 3690) in paragraph at lines 308--308
 []|\T1/cmr/bx/n/10.95 Actores In-vo-lu-
  []
 
 
-Underfull \hbox (badness 1694) in paragraph at lines 307--307
+Underfull \hbox (badness 1694) in paragraph at lines 310--310
 \T1/cmr/m/n/10.95 Trans-por-tis-tas ex-
  []
 
 
-Underfull \hbox (badness 2538) in paragraph at lines 307--307
+Underfull \hbox (badness 2538) in paragraph at lines 310--310
 []|\T1/cmr/m/n/10.95 Geolocalización cir-cuns-
  []
 
 
-Underfull \hbox (badness 4156) in paragraph at lines 308--308
+Underfull \hbox (badness 4156) in paragraph at lines 311--311
 []|\T1/cmr/m/n/10.95 3. Jor-na-da vs.
  []
 
 
-Underfull \hbox (badness 4779) in paragraph at lines 309--309
+Underfull \hbox (badness 4779) in paragraph at lines 312--312
 []|\T1/cmr/m/n/10.95 4. Ren-ta-bi-li-dad
  []
 
 
-Underfull \hbox (badness 7925) in paragraph at lines 309--309
+Underfull \hbox (badness 7925) in paragraph at lines 312--312
 []|\T1/cmr/m/n/10.95 Destrucción con-ti-nua
  []
 
 
-Underfull \hbox (badness 4872) in paragraph at lines 309--309
+Underfull \hbox (badness 4872) in paragraph at lines 312--312
 []|\T1/cmr/m/n/10.95 Consolidación opor-tu-na
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 310--310
+Underfull \hbox (badness 10000) in paragraph at lines 313--313
 []|\T1/cmr/m/n/10.95 Fallas en ru-ta; 61
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 311--311
+Underfull \hbox (badness 10000) in paragraph at lines 314--314
 []|\T1/cmr/m/n/10.95 6. Go-ber-nan-za
  []
 
 
-Underfull \hbox (badness 4353) in paragraph at lines 311--312
+Underfull \hbox (badness 4353) in paragraph at lines 314--315
 []|\T1/cmr/m/n/10.95 Esquema de be-ne-fi-cios
  []
 
 
-ignored: Infinite glue shrinkage found in box being split [21] [22]
-Underfull \hbox (badness 10000) in paragraph at lines 333--333
+ignored: Infinite glue shrinkage found in box being split
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 315
+.
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[23]
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 328
+.
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[24]
+Underfull \hbox (badness 10000) in paragraph at lines 336--336
 []|\T1/cmr/m/n/10.95 Ceguera de
  []
 
 
-Underfull \hbox (badness 1215) in paragraph at lines 333--333
+Underfull \hbox (badness 1215) in paragraph at lines 336--336
 []|\T1/cmr/m/n/10.95 0 des-car-gas de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 333--333
+Underfull \hbox (badness 10000) in paragraph at lines 336--336
 \T1/cmr/m/n/10.95 ta-có-gra-fo; 258
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 333--333
+Underfull \hbox (badness 10000) in paragraph at lines 336--336
 []|\T1/cmr/m/n/10.95 Falta de ex-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 333--333
+Underfull \hbox (badness 10000) in paragraph at lines 336--336
 \T1/cmr/m/n/10.95 trac-ción y
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 333--333
+Underfull \hbox (badness 10000) in paragraph at lines 336--336
 \T1/cmr/m/n/10.95 ve-ri-fi-ca-ción
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 333--333
+Underfull \hbox (badness 10000) in paragraph at lines 336--336
 []|\T1/cmr/m/n/10.95 Incumplimiento Art.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 333--333
+Underfull \hbox (badness 10000) in paragraph at lines 336--336
 []|\T1/cmr/m/n/10.95 Caps. 1,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 334--334
+Underfull \hbox (badness 10000) in paragraph at lines 337--337
 []|\T1/cmr/m/n/10.95 Hemorragia
  []
 
 
-Underfull \hbox (badness 4543) in paragraph at lines 334--334
+Underfull \hbox (badness 4543) in paragraph at lines 337--337
 \T1/cmr/m/n/10.95 cíos (10,66 M
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 335--335
+Underfull \hbox (badness 10000) in paragraph at lines 338--338
 []|\T1/cmr/m/n/10.95 Erosión So-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 335--335
+Underfull \hbox (badness 10000) in paragraph at lines 338--338
 []|\T1/cmr/m/n/10.95 $241,4M/año
  []
 
 
-Underfull \hbox (badness 2922) in paragraph at lines 335--335
+Underfull \hbox (badness 2922) in paragraph at lines 338--338
 \T1/cmr/m/n/10.95 fu-ta-ble de lle-
  []
 
 
-Underfull \hbox (badness 6236) in paragraph at lines 335--335
+Underfull \hbox (badness 6236) in paragraph at lines 338--338
 \T1/cmr/m/n/10.95 ga-da/salida en
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 336--336
+Underfull \hbox (badness 10000) in paragraph at lines 339--339
 []|\T1/cmr/m/n/10.95 Sobrepeso
  []
 
 
-Underfull \hbox (badness 1895) in paragraph at lines 336--336
+Underfull \hbox (badness 1895) in paragraph at lines 339--339
 \T1/cmr/m/n/10.95 2.556 h-camión
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 336--336
+Underfull \hbox (badness 10000) in paragraph at lines 339--339
 \T1/cmr/m/n/10.95 per-di-das en
  []
 
 
-Underfull \hbox (badness 5622) in paragraph at lines 336--336
+Underfull \hbox (badness 5622) in paragraph at lines 339--339
 []|\T1/cmr/m/n/10.95 Infracción D.S. 158;
  []
 
 
-Underfull \hbox (badness 3780) in paragraph at lines 336--336
+Underfull \hbox (badness 3780) in paragraph at lines 339--339
 \T1/cmr/m/n/10.95 mul-tas e in-mo-vi-li-za-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 337--337
+Underfull \hbox (badness 10000) in paragraph at lines 340--340
 []|\T1/cmr/m/n/10.95 Subsidios
  []
 
 
-Underfull \hbox (badness 6725) in paragraph at lines 337--337
+Underfull \hbox (badness 6725) in paragraph at lines 340--340
 []|\T1/cmr/m/n/10.95 3 con-tra-tos a
  []
 
 
-Underfull \hbox (badness 6641) in paragraph at lines 337--337
+Underfull \hbox (badness 6641) in paragraph at lines 340--340
 \T1/cmr/m/n/10.95 des-fa-se de 40
  []
 
 
-Underfull \hbox (badness 2435) in paragraph at lines 337--337
+Underfull \hbox (badness 2435) in paragraph at lines 340--340
 []|\T1/cmr/m/n/10.95 Destrucción de va-lor
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 337--337
+Underfull \hbox (badness 10000) in paragraph at lines 340--340
 []|\T1/cmr/m/n/10.95 Caps. 1,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 338--338
+Underfull \hbox (badness 10000) in paragraph at lines 341--341
 []|\T1/cmr/m/n/10.95 Desgobierno
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 338--338
+Underfull \hbox (badness 10000) in paragraph at lines 341--341
 \T1/cmr/m/n/10.95 en 4 Ex-cel;
  []
 
 
-Underfull \hbox (badness 5622) in paragraph at lines 338--338
+Underfull \hbox (badness 5622) in paragraph at lines 341--341
 \T1/cmr/m/n/10.95 in-frac-ción haz-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 338--338
+Underfull \hbox (badness 10000) in paragraph at lines 341--341
 []|\T1/cmr/m/n/10.95 Caps. 1,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 339--339
-[]|\T1/cmr/m/n/10.95 Hardware
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 339--339
-[]|\T1/cmr/m/n/10.95 61 CAN-bus
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 339--339
-\T1/cmr/m/n/10.95 inac-ti-vos; 3
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 339--339
-\T1/cmr/m/n/10.95 GPS dis-pa-res;
- []
-
-
-Underfull \hbox (badness 7685) in paragraph at lines 339--339
-\T1/cmr/m/n/10.95 trac-ción; sis-te-
- []
-
-
-Underfull \hbox (badness 1888) in paragraph at lines 339--339
-[]|\T1/cmr/m/n/10.95 Pérdida de ana-lí-ti-ca;
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 339--339
-[]|\T1/cmr/m/n/10.95 Caps.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 339--339
-\T1/cmr/m/n/10.95 4.10, 5,
- []
-
-
-Underfull \hbox (badness 8094) in paragraph at lines 340--340
-[]|\T1/cmr/m/n/10.95 Fricción Li-
- []
-
-
-Underfull \hbox (badness 2941) in paragraph at lines 340--340
-\T1/cmr/m/n/10.95 per-so-nas; 11$ $%
- []
-
-
-Underfull \hbox (badness 2435) in paragraph at lines 340--340
-\T1/cmr/m/n/10.95 vo ma-nual sin
- []
-
-
-Underfull \hbox (badness 1824) in paragraph at lines 340--340
-\T1/cmr/m/n/10.95 cru-ces au-to-má-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 340--340
-[]|\T1/cmr/m/n/10.95 Caps.
- []
-
-
-Underfull \hbox (badness 4779) in paragraph at lines 341--341
-[]|\T1/cmr/m/n/10.95 22$ $% ca-mio-nes
- []
-
-
-Underfull \hbox (badness 1688) in paragraph at lines 341--341
-\T1/cmr/m/n/10.95 1 vez/mes por
- []
-
-
-Overfull \hbox (0.6054pt too wide) in paragraph at lines 341--341
-[]|\T1/cmr/m/n/10.95 Subcontratación
- []
-
-
-Underfull \hbox (badness 4531) in paragraph at lines 341--341
-\T1/cmr/m/n/10.95 sin su-per-vi-sión
- []
-
-
-Underfull \hbox (badness 2512) in paragraph at lines 342--342
-\T1/cmr/m/n/10.95 (CO$[]$e, e-Docs,
- []
-
-
-Underfull \hbox (badness 3168) in paragraph at lines 342--342
-\T1/cmr/m/n/10.95 tual y exi-gen-
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 342--342
+[]|\T1/cmr/m/n/10.95 Hardware
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 342--342
+[]|\T1/cmr/m/n/10.95 61 CAN-bus
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 342--342
+\T1/cmr/m/n/10.95 inac-ti-vos; 3
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 342--342
+\T1/cmr/m/n/10.95 GPS dis-pa-res;
+ []
+
+
+Underfull \hbox (badness 7685) in paragraph at lines 342--342
+\T1/cmr/m/n/10.95 trac-ción; sis-te-
+ []
+
+
+Underfull \hbox (badness 1888) in paragraph at lines 342--342
+[]|\T1/cmr/m/n/10.95 Pérdida de ana-lí-ti-ca;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 342--342
+[]|\T1/cmr/m/n/10.95 Caps.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 342--342
+\T1/cmr/m/n/10.95 4.10, 5,
+ []
+
+
+Underfull \hbox (badness 8094) in paragraph at lines 343--343
+[]|\T1/cmr/m/n/10.95 Fricción Li-
+ []
+
+
+Underfull \hbox (badness 2941) in paragraph at lines 343--343
+\T1/cmr/m/n/10.95 per-so-nas; 11$ $%
+ []
+
+
+Underfull \hbox (badness 2435) in paragraph at lines 343--343
+\T1/cmr/m/n/10.95 vo ma-nual sin
+ []
+
+
+Underfull \hbox (badness 1824) in paragraph at lines 343--343
+\T1/cmr/m/n/10.95 cru-ces au-to-má-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 343--343
+[]|\T1/cmr/m/n/10.95 Caps.
+ []
+
+
+Underfull \hbox (badness 4779) in paragraph at lines 344--344
+[]|\T1/cmr/m/n/10.95 22$ $% ca-mio-nes
+ []
+
+
+Underfull \hbox (badness 1688) in paragraph at lines 344--344
+\T1/cmr/m/n/10.95 1 vez/mes por
+ []
+
+
+Overfull \hbox (0.6054pt too wide) in paragraph at lines 344--344
+[]|\T1/cmr/m/n/10.95 Subcontratación
+ []
+
+
+Underfull \hbox (badness 4531) in paragraph at lines 344--344
+\T1/cmr/m/n/10.95 sin su-per-vi-sión
+ []
+
+
+Underfull \hbox (badness 2512) in paragraph at lines 345--345
+\T1/cmr/m/n/10.95 (CO$[]$e, e-Docs,
+ []
+
+
+Underfull \hbox (badness 3168) in paragraph at lines 345--345
+\T1/cmr/m/n/10.95 tual y exi-gen-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 345--345
 []|\T1/cmr/m/n/10.95 Riesgo de pér-di-da
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 342--343
+Underfull \hbox (badness 10000) in paragraph at lines 345--346
 []|\T1/cmr/m/n/10.95 Caps. 1,
  []
 
 
-ignored: Infinite glue shrinkage found in box being split [23]
-Overfull \hbox (1.42781pt too wide) in paragraph at lines 345--345
+ignored: Infinite glue shrinkage found in box being split
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 346
+.
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[25]
+Overfull \hbox (1.42781pt too wide) in paragraph at lines 348--348
 |[]\T1/cmr/bx/n/17.28 Registro de su-pues-tos ope-ra-cio-na-les y ma-peo exhaus
 -
  []
 
-[24]
-Underfull \hbox (badness 2735) in paragraph at lines 356--356
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 353
+.
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[26]
+Underfull \hbox (badness 2735) in paragraph at lines 359--359
 []|\T1/cmr/bx/n/10.95 Supuesto del En-torno
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 356--356
+Underfull \hbox (badness 10000) in paragraph at lines 359--359
 []|\T1/cmr/bx/n/10.95 Impacto en
  []
 
 
-Underfull \hbox (badness 4366) in paragraph at lines 357--357
+Underfull \hbox (badness 4366) in paragraph at lines 360--360
 \T1/cmr/m/n/10.95 tis-tas que ma-ne-jan
  []
 
 
-Underfull \hbox (badness 1019) in paragraph at lines 357--357
+Underfull \hbox (badness 1019) in paragraph at lines 360--360
 \T1/cmr/m/n/10.95 DT, des-car-tan-do la me-ra
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 357--357
+Underfull \hbox (badness 10000) in paragraph at lines 360--360
 []|\T1/cmr/m/n/10.95 Riesgo le-gal
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 357--357
+Underfull \hbox (badness 10000) in paragraph at lines 360--360
 \T1/cmr/m/n/10.95 ([]Mi-nis-te-rio del
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 358--358
+Underfull \hbox (badness 10000) in paragraph at lines 361--361
 \T1/cmr/m/n/10.95 trans-por-tis-tas por
  []
 
 
-Underfull \hbox (badness 6173) in paragraph at lines 358--358
+Underfull \hbox (badness 6173) in paragraph at lines 361--361
 \T1/cmr/m/n/10.95 com-par-tir da-tos, y
  []
 
 
-Underfull \hbox (badness 1365) in paragraph at lines 358--358
+Underfull \hbox (badness 1365) in paragraph at lines 361--361
 []|\T1/cmr/m/n/10.95 Requiere es-que-ma de va-
  []
 
 
-Underfull \hbox (badness 1596) in paragraph at lines 358--358
+Underfull \hbox (badness 1596) in paragraph at lines 361--361
 \T1/cmr/m/n/10.95 ma de dis-po-ni-
  []
 
 
-Underfull \hbox (badness 5985) in paragraph at lines 359--359
+Underfull \hbox (badness 5985) in paragraph at lines 362--362
 []|\T1/cmr/m/n/10.95 Deuda Téc-
  []
 
 
-Underfull \hbox (badness 7133) in paragraph at lines 359--359
+Underfull \hbox (badness 7133) in paragraph at lines 362--362
 []|\T1/cmr/m/n/10.95 Qué ha-cer con el
  []
 
 
-Underfull \hbox (badness 4416) in paragraph at lines 359--359
+Underfull \hbox (badness 4416) in paragraph at lines 362--362
 \T1/cmr/m/n/10.95 TMS de 2013: re-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 359--359
+Underfull \hbox (badness 10000) in paragraph at lines 362--362
 []|\T1/cmr/m/n/10.95 Obsolescencia
  []
 
 
-Underfull \hbox (badness 6396) in paragraph at lines 359--359
+Underfull \hbox (badness 6396) in paragraph at lines 362--362
 \T1/cmr/m/n/10.95 ba-sal que res-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 360--360
+Underfull \hbox (badness 10000) in paragraph at lines 363--363
 []|\T1/cmr/m/n/10.95 Incapacidad de
  []
 
 
-Underfull \hbox (badness 5771) in paragraph at lines 360--360
+Underfull \hbox (badness 5771) in paragraph at lines 363--363
 \T1/cmr/m/n/10.95 ase-gu-rar acuer-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 362--362
+Underfull \hbox (badness 10000) in paragraph at lines 365--365
 []|\T1/cmr/m/n/10.95 Bloqueo de via-je
  []
 
 
-Underfull \hbox (badness 7558) in paragraph at lines 362--362
+Underfull \hbox (badness 7558) in paragraph at lines 365--365
 \T1/cmr/m/n/10.95 li-za-ción crí-ti-co;
  []
 
 
-Underfull \hbox (badness 2435) in paragraph at lines 362--362
+Underfull \hbox (badness 2435) in paragraph at lines 365--365
 \T1/cmr/m/n/10.95 im-pac-to di-rec-to
  []
 
 
-Underfull \hbox (badness 1019) in paragraph at lines 362--362
+Underfull \hbox (badness 1019) in paragraph at lines 365--365
 \T1/cmr/m/n/10.95 en com-pro-mi-sos
  []
 
 
-Underfull \hbox (badness 1062) in paragraph at lines 363--363
+Underfull \hbox (badness 1062) in paragraph at lines 366--366
 \T1/cmr/m/n/10.95 ten-ción en ber-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 364--364
+Underfull \hbox (badness 10000) in paragraph at lines 367--367
 []|\T1/cmr/m/n/10.95 Registro de lle-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 364--364
+Underfull \hbox (badness 10000) in paragraph at lines 367--367
 \T1/cmr/m/n/10.95 ga-das/salidas en
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 364--364
+Underfull \hbox (badness 10000) in paragraph at lines 367--367
 []|\T1/cmr/m/n/10.95 Objeción del
  []
 
 
-Underfull \hbox (badness 5637) in paragraph at lines 364--364
+Underfull \hbox (badness 5637) in paragraph at lines 367--367
 \T1/cmr/m/n/10.95 de so-bre-es-ta-día
  []
 
 
-Underfull \hbox (badness 2452) in paragraph at lines 364--364
+Underfull \hbox (badness 2452) in paragraph at lines 367--367
 \T1/cmr/m/n/10.95 ($241,4M anua-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 365--365
+Underfull \hbox (badness 10000) in paragraph at lines 368--368
 []|\T1/cmr/m/n/10.95 Inmovilización
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 366--366
+Underfull \hbox (badness 10000) in paragraph at lines 369--369
 []|\T1/cmr/m/n/10.95 Impacto se-ve-ro
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 366--366
+Underfull \hbox (badness 10000) in paragraph at lines 369--369
 \T1/cmr/m/n/10.95 au-men-to del
  []
 
 
-Underfull \hbox (badness 3525) in paragraph at lines 367--367
+Underfull \hbox (badness 3525) in paragraph at lines 370--370
 \T1/cmr/m/n/10.95 lí-nea vs. al-ma-ce-na-
  []
 
 
-Underfull \hbox (badness 4543) in paragraph at lines 367--367
+Underfull \hbox (badness 4543) in paragraph at lines 370--370
 []|\T1/cmr/m/n/10.95 Priorizar even-tos crí-ti-cos
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 367--367
+Underfull \hbox (badness 10000) in paragraph at lines 370--370
 []|\T1/cmr/m/n/10.95 Saturación de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 367--367
+Underfull \hbox (badness 10000) in paragraph at lines 370--370
 \T1/cmr/m/n/10.95 pla-nes de da-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 367--367
+Underfull \hbox (badness 10000) in paragraph at lines 370--370
 \T1/cmr/m/n/10.95 tos mó-vi-les y
  []
 
 
-Underfull \hbox (badness 4792) in paragraph at lines 367--367
+Underfull \hbox (badness 4792) in paragraph at lines 370--370
 \T1/cmr/m/n/10.95 so-bre-cos-tos por
  []
 
 
-Overfull \hbox (17.32416pt too wide) in paragraph at lines 368--368
+Overfull \hbox (17.32416pt too wide) in paragraph at lines 371--371
 []|\T1/cmr/m/n/10.95 Desaprovechamiento
  []
 
 
-Underfull \hbox (badness 2150) in paragraph at lines 368--368
+Underfull \hbox (badness 2150) in paragraph at lines 371--371
 \T1/cmr/m/n/10.95 de ana-lí-ti-ca de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 368--368
+Underfull \hbox (badness 10000) in paragraph at lines 371--371
 \T1/cmr/m/n/10.95 man-te-ni-mien-to
  []
 
 
-Underfull \hbox (badness 5802) in paragraph at lines 370--370
+Underfull \hbox (badness 5802) in paragraph at lines 373--373
 []|\T1/cmr/m/n/10.95 Criterio de asig-na-
  []
 
 
-Underfull \hbox (badness 7685) in paragraph at lines 370--370
+Underfull \hbox (badness 7685) in paragraph at lines 373--373
 []|\T1/cmr/m/n/10.95 Erosión ma-si-va
  []
 
 
-Underfull \hbox (badness 5345) in paragraph at lines 370--370
+Underfull \hbox (badness 5345) in paragraph at lines 373--373
 \T1/cmr/m/n/10.95 gas-to en com-
  []
 
 
-Underfull \hbox (badness 1436) in paragraph at lines 370--370
+Underfull \hbox (badness 1436) in paragraph at lines 373--373
 \T1/cmr/m/n/10.95 bus-ti-ble y pea-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 371--371
+Underfull \hbox (badness 10000) in paragraph at lines 374--374
 []|\T1/cmr/m/n/10.95 Reconstrucción de
  []
 
 
-Underfull \hbox (badness 1052) in paragraph at lines 371--371
+Underfull \hbox (badness 1052) in paragraph at lines 374--374
 \T1/cmr/m/n/10.95 cos-to por via-je con
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 371--371
+Underfull \hbox (badness 10000) in paragraph at lines 374--374
 []|\T1/cmr/m/n/10.95 Tarifas co-mer-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 371--371
+Underfull \hbox (badness 10000) in paragraph at lines 374--374
 \T1/cmr/m/n/10.95 cos-to mar-gi-nal
  []
 
 
-Underfull \hbox (badness 8038) in paragraph at lines 372--372
+Underfull \hbox (badness 8038) in paragraph at lines 375--375
 []|\T1/cmr/m/n/10.95 Dificultad pa-ra
  []
 
 
-Underfull \hbox (badness 1590) in paragraph at lines 373--373
+Underfull \hbox (badness 1590) in paragraph at lines 376--376
 \T1/cmr/m/n/10.95 tra-tos ba-jo cos-to e
  []
 
 
-Underfull \hbox (badness 3428) in paragraph at lines 373--373
+Underfull \hbox (badness 3428) in paragraph at lines 376--376
 []|\T1/cmr/m/n/10.95 Persistencia del
  []
 
 
-Underfull \hbox (badness 1038) in paragraph at lines 373--373
+Underfull \hbox (badness 1038) in paragraph at lines 376--376
 \T1/cmr/m/n/10.95 que des-tru-ye el
  []
 
 
-Underfull \hbox (badness 2351) in paragraph at lines 373--373
+Underfull \hbox (badness 2351) in paragraph at lines 376--376
 \T1/cmr/m/n/10.95 mar-gen con-so-li-
  []
 
 
-Underfull \hbox (badness 7576) in paragraph at lines 374--374
+Underfull \hbox (badness 7576) in paragraph at lines 377--377
 []|\T1/cmr/m/n/10.95 Fiscalización de $\OMS/cmsy/m/n/10.95 ^^Y
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 374--374
+Underfull \hbox (badness 10000) in paragraph at lines 377--377
 []|\T1/cmr/m/n/10.95 Responsabilidad so-li-da-ria
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 374--374
+Underfull \hbox (badness 10000) in paragraph at lines 377--377
 []|\T1/cmr/m/n/10.95 Retención de
  []
 
 
-Underfull \hbox (badness 8132) in paragraph at lines 374--374
+Underfull \hbox (badness 8132) in paragraph at lines 377--377
 \T1/cmr/m/n/10.95 cio-nes for-ma-les
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 375--375
+Underfull \hbox (badness 10000) in paragraph at lines 378--378
 []|\T1/cmr/m/n/10.95 Coincidencia en-tre
  []
 
 
-Underfull \hbox (badness 1910) in paragraph at lines 375--375
+Underfull \hbox (badness 1910) in paragraph at lines 378--378
 \T1/cmr/m/n/10.95 do-cu-men-tos de sus-
  []
 
 
-Underfull \hbox (badness 1902) in paragraph at lines 375--375
+Underfull \hbox (badness 1902) in paragraph at lines 378--378
 \T1/cmr/m/n/10.95 tan-cias pe-li-gro-sas y
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 375--375
+Underfull \hbox (badness 10000) in paragraph at lines 378--378
 []|\T1/cmr/m/n/10.95 Riesgo de se-
  []
 
 
-Underfull \hbox (badness 7397) in paragraph at lines 375--375
+Underfull \hbox (badness 7397) in paragraph at lines 378--378
 \T1/cmr/m/n/10.95 gu-ri-dad se-ve-ro;
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 375--375
+Underfull \hbox (badness 10000) in paragraph at lines 378--378
 \T1/cmr/m/n/10.95 emer-gen-cias
  []
 
 
-Overfull \hbox (3.70216pt too wide) in paragraph at lines 376--376
+Overfull \hbox (3.70216pt too wide) in paragraph at lines 379--379
 []|\T1/cmr/m/n/10.95 Contingencias| 
  []
 
 
-Underfull \hbox (badness 4779) in paragraph at lines 376--376
+Underfull \hbox (badness 4779) in paragraph at lines 379--379
 []|\T1/cmr/m/n/10.95 Respuesta ope-ra-ti-va
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 376--376
+Underfull \hbox (badness 10000) in paragraph at lines 379--379
 []|\T1/cmr/m/n/10.95 Sobrecostos no
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 376--376
+Underfull \hbox (badness 10000) in paragraph at lines 379--379
 \T1/cmr/m/n/10.95 re-cu-pe-ra-bles y
  []
 
 
-Underfull \hbox (badness 1755) in paragraph at lines 376--376
+Underfull \hbox (badness 1755) in paragraph at lines 379--379
 \T1/cmr/m/n/10.95 rio-ro en car-gas
  []
 
 
-Overfull \hbox (9.07892pt too wide) in paragraph at lines 377--377
+Overfull \hbox (9.07892pt too wide) in paragraph at lines 380--380
 []|\T1/cmr/m/n/10.95 Mantenimiento| 
  []
 
 
-Underfull \hbox (badness 3769) in paragraph at lines 377--377
+Underfull \hbox (badness 3769) in paragraph at lines 380--380
 \T1/cmr/m/n/10.95 ra-cio-nes en ta-lle-res
  []
 
 
-Overfull \hbox (4.00818pt too wide) in paragraph at lines 378--378
+Overfull \hbox (4.00818pt too wide) in paragraph at lines 381--381
 []|\T1/cmr/m/n/10.95 Sostenibilidad| 
  []
 
 
-Underfull \hbox (badness 5862) in paragraph at lines 378--378
+Underfull \hbox (badness 5862) in paragraph at lines 381--381
 \T1/cmr/m/n/10.95 es-tan-da-ri-za-das in-ter-na-cio-
  []
 
 
-Underfull \hbox (badness 6493) in paragraph at lines 378--378
+Underfull \hbox (badness 6493) in paragraph at lines 381--381
 \T1/cmr/m/n/10.95 na-les del Mar-co GLEC
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 378--378
+Underfull \hbox (badness 10000) in paragraph at lines 381--381
 \T1/cmr/m/n/10.95 ([]Smart Freight Cen-tre,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 378--378
+Underfull \hbox (badness 10000) in paragraph at lines 381--381
 []|\T1/cmr/m/n/10.95 Ultimátum del
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 378--378
+Underfull \hbox (badness 10000) in paragraph at lines 381--381
 \T1/cmr/m/n/10.95 clien-te ex-por-
  []
 
 
-Underfull \hbox (badness 1184) in paragraph at lines 378--378
+Underfull \hbox (badness 1184) in paragraph at lines 381--381
 \T1/cmr/m/n/10.95 ta-dor (19$ $% de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 378--378
+Underfull \hbox (badness 10000) in paragraph at lines 381--381
 \T1/cmr/m/n/10.95 in-gre-sos) no
  []
 
 
-Underfull \hbox (badness 1817) in paragraph at lines 379--379
+Underfull \hbox (badness 1817) in paragraph at lines 382--382
 []|\T1/cmr/m/n/10.95 Visibilidad pa-ra man-dan-
  []
 
 
-Underfull \hbox (badness 5519) in paragraph at lines 379--379
+Underfull \hbox (badness 5519) in paragraph at lines 382--382
 []|\T1/cmr/m/n/10.95 Riesgo le-gal y
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 380--380
+Underfull \hbox (badness 10000) in paragraph at lines 383--383
 \T1/cmr/m/n/10.95 des-fa-vo-ra-bles
  []
 
 
-Underfull \hbox (badness 2119) in paragraph at lines 380--380
+Underfull \hbox (badness 2119) in paragraph at lines 383--383
 \T1/cmr/m/n/10.95 dios de prue-ba
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 381--381
+Underfull \hbox (badness 10000) in paragraph at lines 384--384
 []|\T1/cmr/m/n/10.95 Despliegue en 374
  []
 
 
-Underfull \hbox (badness 1147) in paragraph at lines 381--381
+Underfull \hbox (badness 1147) in paragraph at lines 384--384
 \T1/cmr/m/n/10.95 má-qui-nas con pa-sos
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 381--381
+Underfull \hbox (badness 10000) in paragraph at lines 384--384
 []|\T1/cmr/m/n/10.95 Dilatación de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 381--381
+Underfull \hbox (badness 10000) in paragraph at lines 384--384
 \T1/cmr/m/n/10.95 pla-zos si se
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 381--381
+Underfull \hbox (badness 10000) in paragraph at lines 384--384
 \T1/cmr/m/n/10.95 asu-men rit-mos
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 382--382
+Underfull \hbox (badness 10000) in paragraph at lines 385--385
 []|\T1/cmr/m/n/10.95 Subsistencia de la
  []
 
 
-Underfull \hbox (badness 2547) in paragraph at lines 382--382
+Underfull \hbox (badness 2547) in paragraph at lines 385--385
 \T1/cmr/m/n/10.95 tra-za-bi-li-dad du-ran-te
  []
 
 
-Underfull \hbox (badness 1360) in paragraph at lines 382--382
+Underfull \hbox (badness 1360) in paragraph at lines 385--385
 \T1/cmr/m/n/10.95 con-vi-ven-cia de re-gí-
  []
 
 
-Underfull \hbox (badness 3364) in paragraph at lines 382--382
+Underfull \hbox (badness 3364) in paragraph at lines 385--385
 []|\T1/cmr/m/n/10.95 Operación de-be-rá to-le-rar
  []
 
 
-Underfull \hbox (badness 1490) in paragraph at lines 382--382
+Underfull \hbox (badness 1490) in paragraph at lines 385--385
 \T1/cmr/m/n/10.95 ré-gi-men mix-to tran-si-to-rio
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 382--383
+Underfull \hbox (badness 10000) in paragraph at lines 385--386
 []|\T1/cmr/m/n/10.95 Duplicación de
  []
 
 
-Underfull \hbox (badness 4531) in paragraph at lines 382--383
+Underfull \hbox (badness 4531) in paragraph at lines 385--386
 \T1/cmr/m/n/10.95 con-trol du-ran-te
  []
 
 
-ignored: Infinite glue shrinkage found in box being split [25]
-ignored: Infinite glue shrinkage fo
-und in box being split [26]
-ignored: Infinite glue shrinkage found in box being split [27
-]
-ignored: Infinite glue shrinkage found in box being split [28]) [29] [30
+ignored: Infinite glue shrinkage found in box being split
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 386
+.
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[27]
+ignored: Infinite glue shrinkage found in box being split
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 386
+.
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[28]
+ignored: Infinite glue shrinkage found in box being split
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 386
+.
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[29]
+ignored: Infinite glue shrinkage found in box being split
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 386
+.
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[30])
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 11.
+
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[31]
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 15.
+
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[32
 
 ]
-runsystem(latexminted cleantemp  --timestamp 20260907013822 5FBEF65269A99BDDC21
+runsystem(latexminted cleantemp  --timestamp 20260907030742 5FBEF65269A99BDDC21
 06251DD89B1DC)...executed safely (allowed).
 
  (salida/aux/02-problema/sub2.aux
@@ -3643,33 +3981,39 @@ Package logreq Info: Writing requests to 'sub2.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 57360 strings out of 469453
- 1267518 string characters out of 5469037
- 2501804 words of memory out of 5000000
- 85079 multiletter control sequences out of 15000+600000
- 644977 words of font info for 80 fonts, out of 8000000 for 9000
+ 57406 strings out of 469453
+ 1268501 string characters out of 5469037
+ 2502767 words of memory out of 5000000
+ 85115 multiletter control sequences out of 15000+600000
+ 650785 words of font info for 94 fonts, out of 8000000 for 9000
  40 hyphenation exceptions out of 8191
- 133i,13n,139p,1338b,2815s stack positions out of 10000i,1000n,20000p,200000b,200000s
- </home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk
-> </home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk>
- </home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx5159.600pk> 
-</home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> <
-/home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </
-home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </h
-ome/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1095.600pk> </ho
-me/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.600pk> </hom
-e/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx2986.600pk> </home
-/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk> </home/
-carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcbx1095.600pk> </home/c
-arlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1095.600pk></usr/shar
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr
-/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on salida/aux/02-problema/sub2.pdf (32 pages, 2097001 bytes).
+ 133i,24n,139p,1338b,2815s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ </home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1000.600pk
+> </home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk>
+ </home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk> 
+</home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx2986.600pk> <
+/home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx5159.600pk> </
+home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </h
+ome/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </ho
+me/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0600.600pk> </hom
+e/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk> </home
+/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </home/
+carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.600pk> </home/c
+arlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1095.600pk> </home/ca
+rlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.600pk> </home/car
+losa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx2488.600pk> </home/carl
+osa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk> </home/carlo
+sa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcbx1095.600pk> </home/carlos
+a/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1095.600pk></usr/share/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr1
+2.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/shar
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on salida/aux/02-problema/sub2.pdf (32 pages, 2207037 bytes).
 PDF statistics:
- 967 PDF objects out of 1000 (max. 8388607)
- 87 named destinations out of 1000 (max. 500000)
- 259 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1094 PDF objects out of 1200 (max. 8388607)
+ 89 named destinations out of 1000 (max. 500000)
+ 264 words of extra memory for PDF output out of 10000 (max. 10000000)
 

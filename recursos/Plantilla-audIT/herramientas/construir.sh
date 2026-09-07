@@ -39,7 +39,9 @@ for d in "${SEL[@]}"; do
     "$ruta/main.tex" > "$aux/build.log" 2>&1
   if [ -f "$aux/sub$num.pdf" ]; then
     dest="salida/${d%%-*}-audIT-Subdoc$(printf %02d "$num").pdf"
+    canon="salida/INFORME1_AUDIT_SUBDOC$(printf %02d "$num")_20260907.pdf"
     cp "$aux/sub$num.pdf" "$dest"
+    cp "$aux/sub$num.pdf" "$canon"
     printf "  ok    %-22s %2s pags -> %s\n" "$d" \
       "$(pdfinfo "$dest" | awk '/^Pages/{print $2}')" "$(basename "$dest")"
     ok=$((ok+1))
@@ -51,6 +53,22 @@ for d in "${SEL[@]}"; do
 done
 echo "  ─────────────────────────────"
 printf "  %s compilados, %s con error\n" "$ok" "$fail"
+
+# Generar archivo ZIP canónico según Art. 50.3
+if [ $ok -gt 0 ]; then
+  (
+    cd salida || exit 1
+    python3 -c '
+import glob, zipfile
+canons = sorted(glob.glob("INFORME1_AUDIT_SUBDOC*_20260907.pdf"))
+if canons:
+    with zipfile.ZipFile("INFORME1_AUDIT_20260907.ZIP", "w", zipfile.ZIP_DEFLATED) as zf:
+        for f in canons:
+            zf.write(f)
+    print(f"  ok    archivo zip generado: salida/INFORME1_AUDIT_20260907.ZIP ({len(canons)} subdocumentos)")
+'
+  )
+fi
 
 # Los .md se regeneran siempre desde el mismo contenido.tex, para que nunca
 # queden desfasados respecto de los PDF.

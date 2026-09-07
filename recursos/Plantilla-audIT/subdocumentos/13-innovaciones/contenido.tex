@@ -32,12 +32,7 @@ transportista, alimentado por el mismo motor de costeo que produce la liquidaci�
 viaje aparece con su tarifa aplicada, sus tiempos de espera certificados por geocerca y sus
 descuentos, en el momento en que el dato entra al sistema y no cuando el mes cierra.
 
-\textbf{Resultado esperado.} Reducción del tiempo de cierre mensual y del porcentaje de
-liquidaciones corregidas. Y un efecto que importa más que ambos, porque el portal es la primera
-razón concreta que un dueño de camión tiene para adherir. La transparencia del pago es el
-argumento comercial del plan de adhesión que mide el criterio 27.
-
-\textbf{Lo que agrega sobre lo que las bases ya exigen.} Los criterios 21 y 29 obligan a que el
+\textbf{Alcance y delimitación frente a las bases.} Los criterios 21 y 29 obligan a que el
 transportista autenticado consulte sus viajes, evidencias y liquidación en curso dentro del portal
 del mandante. Eso está comprometido en el alcance y no se presenta como innovación. Lo que agrega
 esta ficha es que la evidencia salga del portal como un documento del transportista, verificable
@@ -47,16 +42,7 @@ que él presenta a sus otros clientes, a la autoridad o a su aseguradora. Las ba
 tampoco cae en la exclusión del Capítulo 11 sobre administrar la contabilidad de los
 transportistas, porque no administra nada. Devuelve a su titular una evidencia ya producida.
 
-\textbf{Madurez.} Escala de niveles de madurez tecnológica de uno a nueve
-\parencite{iso16290}. La firma electrónica avanzada con verificación en línea está en nivel nueve,
-en operación productiva y regulada en Chile desde 2002 \parencite{ley19799}, y es la línea base
-comprometida. La credencial verificable alcanzó el estado de recomendación en mayo de 2025
-\parencite{w3c_vcdm2} y se sitúa entre siete y ocho por su adopción todavía acotada en el
-ecosistema logístico local. El modelo de datos se diseña para incorporarla sin rehacer la emisión.
-La composición del expediente sobre datos de jornada y mantenimiento está en nivel seis, porque el
-componente es convencional y lo nuevo es su uso probatorio por el titular.
-
-\textbf{Incorporación en la arquitectura y en el cronograma.} Un servicio de emisión de expediente
+\textbf{Forma de implementación y cronograma.} Un servicio de emisión de expediente
 en la capa de servicios de negocio, que consume control de jornada, gestión documental y gestión de
 flota. Un servicio público de verificación sin autenticación, que recibe un código y responde
 válido o inválido sin revelar contenido. La firma la provee la bóveda de claves de la capa de
@@ -65,29 +51,25 @@ credencial verificable se documenta en el mes cuatro con el levantamiento de des
 la emisión se construye entre los meses diez y doce, y el expediente queda disponible durante la
 marcha blanca de la Etapa 1.
 
-\textbf{Impacto económico.} La inversión es incremental sobre el portal, que ya está presupuestado
-por los criterios 21 y 29 con independencia de esta ficha. Agrega el desarrollo de los dos
-servicios y la suscripción anual de certificados de firma del emisor, partidas por cotizar cuyo
-valor definitivo se incorpora al flujo de caja del Informe 3. El efecto en costo operacional es
-marginal y positivo, porque el expediente se compone de evidencia que el sistema ya produce y
-conserva por obligación del criterio 4. El beneficio principal no se realiza en esta línea sino en
-la adhesión, de la que depende el sesenta coma cuatro por ciento de la capacidad, y así se declara
-en lugar de atribuirle un ahorro directo que no tiene.
-
-\textbf{Indicador de verificación.} Línea base cero, porque la capacidad no existe. Meta de
+\textbf{Resultados esperados e indicadores.} Reducción del tiempo de cierre mensual y del porcentaje de
+liquidaciones corregidas. Línea base cero, porque la capacidad no existe. Meta de
 cuarenta por ciento de los transportistas adheridos emitiendo al menos un expediente, medida al
 cierre de la marcha blanca en el mes quince. Meta secundaria de reducir a menos del dos por ciento
 las liquidaciones corregidas después de emitidas, desde el once por ciento actual, medida en el
 tercer cierre mensual posterior al paso a producción.
 
-\textbf{Riesgo de adopción.} El riesgo principal es que el transportista no perciba utilidad y no
-emita el expediente, con probabilidad media e impacto alto, porque desaparece el argumento central
-de la adhesión. Se mitiga asistiendo la primera emisión en el terminal durante el enrolamiento. El
-riesgo secundario es que los destinatarios no acepten el documento como prueba, que se mitiga
-levantando destinatarios reales en el mes cuatro antes de construir. La contingencia general es que
-el portal obligatorio se entrega igual, porque esta ficha es una capa sobre él y no una condición
-de su funcionamiento. Lo que se pierde es el argumento de reciprocidad, que se compensa con los
-incentivos económicos de la ficha tipo 4.
+\textbf{Madurez e impacto.} Escala de niveles de madurez tecnológica de uno a nueve
+\parencite{iso16290}. La firma electrónica avanzada con verificación en línea está en nivel nueve,
+en operación productiva y regulada en Chile desde 2002 \parencite{ley19799}, y es la línea base
+comprometida. La credencial verificable alcanzó el estado de recomendación en mayo de 2025
+\parencite{w3c_vcdm2} y se sitúa entre siete y ocho por su adopción todavía acotada en el
+ecosistema logístico local. La inversión es incremental sobre el portal ya presupuestado, agregando
+el desarrollo de servicios y suscripción de certificados de firma del emisor.
+
+\textbf{Riesgo de adopción.} Que el transportista no perciba utilidad y no
+emita el expediente, con probabilidad media e impacto alto. Se mitiga asistiendo la primera emisión en el terminal durante el enrolamiento. El
+riesgo secundario es que los destinatarios no acepten el documento como prueba, mitigado
+levantando destinatarios reales en el mes cuatro antes de construir.
 
 \textbf{Investigación adicional requerida.} La elección entre firma electrónica avanzada y
 credencial verificable requiere el levantamiento de destinatarios del mes cuatro. El motor de
@@ -95,22 +77,17 @@ costeo del que depende la liquidación en curso ya forma parte del alcance de la
 
 \subsection{Tipo 2. Despliegue sin detener la flota}
 
-\textbf{Idea.} Un camión detenido no produce, la intervención a bordo solo puede hacerse cuando el
-camión pasa por un terminal, y ese paso ocurre cada seis días en promedio mientras el 22 por ciento
-de la flota subcontratada pasa menos de una vez al mes. La innovación convierte ese paso fortuito
-en una ventana de intervención planificada y de duración acotada.
+\textbf{Idea.} Un camión detenido no produce (restricción 10 del Caso), la intervención física en cabina solo puede realizarse cuando la unidad ingresa a un terminal, y ese paso ocurre en promedio cada seis días mientras que el 22 por ciento de la flota subcontratada ingresa menos de una vez al mes (Capítulo 6 del Caso). La innovación transforma el despliegue de hardware: deja de ser un proyecto de detención masiva que paraliza la operación comercial y pasa a ser un proceso continuo, no intrusivo, que aprovecha las ventanas naturales de estadía en terminal mediante kits modulares preconfigurados de sustitución rápida.
 
-\textbf{Tecnología que la sustenta.} Anticipación de la llegada al terminal a partir de la posición
-de la propia flota, equipo preconfigurado en el stock de reemplazo antes de que el camión llegue, y
-gestión remota del parque para que todo el ciclo de vida posterior ocurra por aire. La intervención
-física se reduce a sustituir y salir.
+\textbf{Tecnología que la sustenta.} Gestión centralizada y aprovisionamiento remoto del parque telemático mediante Azure IoT Hub Device Update y Device Twins, configuración precargada en fábrica y kits de reemplazo con arneses estandarizados de acople rápido (plug-and-play) por familia de tractocamión (Scania, Volvo, Mercedes-Benz, Freightliner). Anticipación de llegada a terminal a partir de la posición de la propia flota, de modo que el equipo técnico en terreno disponga del kit específico en el andén antes de que el camión ingrese a patio.
 
-\textbf{Resultado esperado.} Unidades intervenidas por mes y tiempo de inmovilización por unidad.
-El techo del ritmo lo fija el 22 por ciento que pasa menos de una vez al mes, y esa limitación se
-declara en lugar de ocultarse.
+\textbf{Alcance y delimitación frente a las bases.} El alcance comprende el despliegue directo de los dispositivos provistos por el mandante en las 148 unidades propias y en las 34 unidades sin equipo cuyos dueños suscriban el convenio de comodato (innovación tipo 4). No interviene físicamente los 192 camiones de terceros que ya cuentan con dispositivos telemáticos preexistentes, los cuales se integran de manera lógica vía adaptadores de interoperabilidad sin alterar su hardware privado, respetando estrictamente la Restricción 3 del Caso. La delimitación frente a las bases radica en que el Caso exige disponer de stock de reemplazo (RT-08.04), pero no resuelve el método operativo para instalar sin detener el flete comercial ni define la logística de intervención en tránsito.
 
-\textbf{Investigación adicional requerida.} Ninguna en el concepto. El tiempo real de intervención
-por familia de vehículo se mide en el piloto de la Etapa 1.
+\textbf{Forma de implementación y cronograma.} La intervención se ejecuta en los cinco terminales operativos (San Bernardo, Antofagasta, Talca, Los Ángeles y Puerto Montt) durante las ventanas de relevo de conductor o pausas de carga/descarga, con un procedimiento estandarizado cronometrado en $\le 30$ minutos por vehículo. Tras el montaje, el dispositivo ejecuta una rutina automatizada de autodiagnóstico y enrolamiento (mTLS, enlace celular, fijación GNSS y lectura de bus CAN) que valida la correcta operación en la barrera de salida sin requerir instrumentación adicional en patio. La actividad se articula en el paquete EDT 4.2 (Homologación e Instalación de Búfer a Bordo, Meses 4 a 8) y EDT 4.5 (Acopladores Inductivos FMS J1939 en 61 camiones, Meses 6 a 9).
+
+\textbf{Resultados esperados e indicadores.} Cero horas de lucro cesante o inmovilización de flota comercialmente activa atribuible a la instalación. Ritmo sostenido de intervención de 35 a 45 tractocamiones mensuales distribuidos en la red de terminales, alcanzando el 100\,\% de la flota propia (148 unidades) al cierre del mes 8. Reducción del tiempo medio de sustitución en terreno a menos de 30 minutos por camión.
+
+\textbf{Investigación adicional requerida.} El levantamiento de las familias de conectores y distribución de cabina de los tractocamiones propios se consolida en el piloto cronometrado de los primeros 10 camiones durante el mes 4.
 
 \subsection{Tipo 3. Operación desconectada y vista única de flota}
 
@@ -131,13 +108,9 @@ plataformas comerciales vía adaptadores API/Webhooks sin intervenir físicament
 (Restricción 3, Decisión D-02). Emisión tributaria offline de Documentos Electrónicos de Transporte (DET)
 con folios CAF pre-asignados y Timbre Electrónico DTE (TED) en memoria criptográfica antes del rodado (RF-014).
 
-\textbf{Madurez.} Nivel de Madurez Tecnológica TRL 8/9 (\cite{iso16290}), sustentado en componentes
-comerciales y estándares industriales maduros (MQTT v5.0, SAE J1939-71, OCI Runtime). La consistencia
-eventual y reconciliación determinista de estados tras particiones prolongadas se apoya formalmente en
-estructuras de datos replicadas libres de conflictos (CRDT) y modelos de replicación distribuida
-\parencite{kleppmann2017}.
+\textbf{Alcance y delimitación frente a las bases.} El alcance abarca el diseño e implantación del firmware de borde resiliente para las 182 unidades intervenidas (148 propias y 34 por adhesión), el mecanismo atómico de persistencia local SQLite WAL ante pérdidas prolongadas de enlace, y la arquitectura de ingestión desacoplada en la nube mediante adaptadores API/Webhooks para normalizar la telemetría de las tres plataformas comerciales de terceros. Lo que agrega sobre los requerimientos base es la eliminación de la ceguera operacional en la totalidad de la flota mixta (374 camiones) bajo una sola interfaz canónica sin sustituir los equipos privados existentes, junto con la capacidad de emisión tributaria de DET en modo 100\,\% desconectado con folios CAF precargados y firma criptográfica en cabina, superando la limitación del sistema actual de 2013.
 
-\textbf{Incorporación en la arquitectura y en el cronograma.} Se articula en la Capa 1 (Borde Terrestre:
+\textbf{Forma de implementación y cronograma.} Se articula en la Capa 1 (Borde Terrestre:
 dispositivo con flash $\ge 8\text{ GB}$, SQLite WAL y acopladores inductivos FMS J1939 en 61 unidades
 propias sin alterar garantías), Capa 3 (APIM con mTLS y limitación elástica de tasa a 60 req/min por
 dispositivo para ráfagas de reconexión), Capa 5 (Event Ingestion Kafka con búfer de hasta 1.500 pings/min)
@@ -146,7 +119,13 @@ Su trazabilidad contractual con la EDT comprende los paquetes EDT 3.4 (Conector 
 Meses 3--6), EDT 4.2 (Homologación e Instalación de Búfer a Bordo $\ge 8\text{ GB}$, Meses 4--8) y EDT 4.5
 (Acopladores Inductivos FMS J1939 en 61 camiones, Meses 6--9).
 
-\textbf{Resultado esperado.} Los indicadores parten de una línea base medida:
+\textbf{Madurez.} Nivel de Madurez Tecnológica TRL 8/9 (\cite{iso16290}), sustentado en componentes
+comerciales y estándares industriales maduros (MQTT v5.0, SAE J1939-71, OCI Runtime). La consistencia
+eventual y reconciliación determinista de estados tras particiones prolongadas se apoya formalmente en
+estructuras de datos replicadas libres de conflictos (CRDT) y modelos de replicación distribuida
+\parencite{kleppmann2017}.
+
+\textbf{Resultados esperados e indicadores.} Los indicadores parten de una línea base medida:
 
 \begin{tablaAudit}{Indicadores de la innovación tipo 3}{indtres}{@{}p{4.8cm}p{4.4cm}p{4.4cm}@{}}
 \textbf{Indicador} & \textbf{Línea base} & \textbf{Meta} \\ \midrule
@@ -177,7 +156,7 @@ mandante cuando el camión trabaja para otro cliente, y esa garantía sea verifi
 lugar de prometida. Consentimiento granular y revocable administrado desde el portal, con registro
 auditable de cada acceso a la información de localización.
 
-\textbf{Lo que agrega sobre lo que las bases ya exigen.} El Capítulo 11 resuelve quién compra el
+\textbf{Alcance y delimitación frente a las bases.} El Capítulo 11 resuelve quién compra el
 hardware, y presentar esa regla como innovación sería presentar como propia una decisión que ya
 está en las bases. Lo que el Caso deja abierto es la decisión quinta del numeral 16.1, sobre el
 dispositivo instalado en un camión de un tercero, y la restricción 2, que obliga a conseguir por
@@ -200,7 +179,7 @@ equipamiento a proveedores de servicio es figura de uso corriente y no requiere 
 reparto de recupero sobre evidencia aportada tiene precedente acotado y poca documentación pública
 en el sector nacional.
 
-\textbf{Incorporación en la arquitectura y en el cronograma.} La ventana se aplica en la unidad
+\textbf{Forma de implementación y cronograma.} La ventana se aplica en la unidad
 telemática y en el búfer local, que almacenan fuera de ella y no transmiten. El concentrador de
 dispositivos distribuye la configuración de ventana a cada equipo. Un servicio de consentimiento y
 un servicio de adhesión, ambos nuevos, definen la ventana desde la asignación del viaje y registran
@@ -224,7 +203,7 @@ de reducir la objeción bajo el veinte por ciento implica un recupero anual del 
 setenta y tres millones, cifra derivada de la meta y no comprometida como ingreso. Ese recupero es
 el que financia el incentivo, y su reparto concreto se fija en el anexo contractual.
 
-\textbf{Indicador de verificación.} Línea base cero de ciento cuarenta y ocho transportistas
+\textbf{Resultados esperados e indicadores.} Línea base cero de ciento cuarenta y ocho transportistas
 adheridos. Meta de setenta por ciento al cierre de la Etapa 1 y noventa por ciento al cierre de la
 Etapa 2. La primera medición de anexos firmados ocurre desde el mes tres, muy antes del paso a
 producción, lo que satisface con holgura el requisito deseable de que al menos una innovación sea
@@ -254,15 +233,15 @@ del equipamiento no está abierta, la resuelve el Capítulo 11 del Caso.
 
 \textbf{Tecnología que la sustenta.} Motor predictivo embebido a bordo en \textit{audIT EdgeHub} (RT-06.01), que evalúa en tiempo real el tiempo de conducción acumulado, la topografía del tramo siguiente y la ventana de mínima alerta circadiana (\textit{Window of Circadian Low}, 02:00 a 06:00 h). Catálogo georreferenciado local estructurado en SQLite WAL sobre memoria flash industrial ($\ge 8\text{ GB}$, RT-08.11), que califica capacidad geométrica de estacionamiento, servicios de higiene, duchas, agua potable y seguridad perimetral. Enclavamiento cinético estricto de pantalla ante cualquier movimiento ($v > 0\text{ km/h}$ o freno de mano liberado, conforme a la Ley N.º 21.377), con entrega de sugerencias mediante síntesis vocal local pasiva (TTS offline en español por altavoz vehicular, RT-16.21) sin exigir desviar la mirada ni admitir interacción táctil en marcha (RT-13.08). En modo detenido, interfaz ergonómica con guantes pesados (botones $\ge 60\times 60\text{ mm}$ e iluminación ámbar de alto contraste).
 
-\textbf{Lo que agrega sobre lo que las bases ya exigen.} El cálculo reactivo de distancia al lugar seguro de detención (RT-09.01, RF-027), la autenticación sin manipulación (RT-12.11), la interfaz para guantes sin interacción en marcha (RT-13.08) y la resiliencia desconectada de 72 horas (RT-17.01) constituyen el alcance base comprometido y no se presentan como innovación. Lo que agrega esta ficha son tres elementos: (1) la anticipación predictiva circadiana, que sugiere pausas preventivas antes de que el conductor ingrese a tramos críticos sin infraestructura o enfrente el valle biológico de microsueño de madrugada (disparador del accidente del 14 de febrero de 2026), (2) la ontología, gobernanza y sincronización OTA en terminales de un catálogo calificado para camiones de 45 toneladas con servicios dignos de descanso, y (3) un modelo social y ergonómico no punitivo para los 258 conductores externos subcontratados (Restricciones 1 y 2, Ley N.º 20.123), transformando una herramienta de control patronal en un asistente de seguridad y bienestar.
+\textbf{Alcance y delimitación frente a las bases.} El cálculo reactivo de distancia al lugar seguro de detención (RT-09.01, RF-027), la autenticación sin manipulación (RT-12.11), la interfaz para guantes sin interacción en marcha (RT-13.08) y la resiliencia desconectada de 72 horas (RT-17.01) constituyen el alcance base comprometido y no se presentan como innovación. Lo que agrega esta ficha son tres elementos: (1) la anticipación predictiva circadiana, que sugiere pausas preventivas antes de que el conductor ingrese a tramos críticos sin infraestructura o enfrente el valle biológico de microsueño de madrugada (disparador del accidente del 14 de febrero de 2026), (2) la ontología, gobernanza y sincronización OTA en terminales de un catálogo calificado para camiones de 45 toneladas con servicios dignos de descanso, y (3) un modelo social y ergonómico no punitivo para los 258 conductores externos subcontratados (Restricciones 1 y 2, Ley N.º 20.123), transformando una herramienta de control patronal en un asistente de seguridad y bienestar.
 
 \textbf{Madurez.} Escala de madurez tecnológica de uno a nueve \parencite{iso16290}. El hardware telemático de borde, almacenamiento SQLite WAL, TTS local y enclavamiento cinético están en nivel ocho, con componentes comerciales de uso maduro en flotas pesadas. El modelo predictivo circadiano y la ontología de paradores adaptada a la red vial chilena se sitúan en nivel siete, demostrados en entorno operacional representativo de la Ruta 5 y pasos cordilleranos, apoyados en estándares de ergonomía vehicular \parencite{iso15005,iso9241_210}, investigación de fatiga en transporte de carga \parencite{fmcsa_fatigue_2020} y normativa vial nacional \parencite{ley21377,codigo_trabajo_25bis}.
 
-\textbf{Incorporación en la arquitectura y en el cronograma.} Se articula en la Capa 1 (Borde Terrestre: motor predictivo a bordo, catálogo local SQLite y síntesis TTS), Capa 4 (Servicio de Gobernanza de Paradores y Seguridad Vial en la Torre de Control) y Capa 7 (Portal para consulta pasiva). Su trazabilidad comprende los paquetes EDT 2.4 (Diseño Ergonómico UI/UX y Protocolo Guantes, Meses 4 a 7), EDT 3.7 (Catálogo de Paradores en Campaña de Cobertura RT-03.24, Meses 3 a 6), EDT 4.6 (Software de Enclavamiento Cinético y Alerta Circadiana, Meses 7 a 10) y EDT 7.2 (Validación Operacional en Marcha Blanca con Conductores Reales, Meses 13 a 15). El beneficio es verificable antes del mes 16, cumpliendo RT-26.08.
+\textbf{Forma de implementación y cronograma.} Se articula en la Capa 1 (Borde Terrestre: motor predictivo a bordo, catálogo local SQLite y síntesis TTS), Capa 4 (Servicio de Gobernanza de Paradores y Seguridad Vial en la Torre de Control) y Capa 7 (Portal para consulta pasiva). Su trazabilidad comprende los paquetes EDT 2.4 (Diseño Ergonómico UI/UX y Protocolo Guantes, Meses 4 a 7), EDT 3.7 (Catálogo de Paradores en Campaña de Cobertura RT-03.24, Meses 3 a 6), EDT 4.6 (Software de Enclavamiento Cinético y Alerta Circadiana, Meses 7 a 10) y EDT 7.2 (Validación Operacional en Marcha Blanca con Conductores Reales, Meses 13 a 15). El beneficio es verificable antes del mes 16, cumpliendo RT-26.08.
 
 \textbf{Impacto económico.} La inversión requerida es incremental sobre el software de borde (280 horas-hombre de desarrollo) y talleres ergonómicos participativos, mientras que el levantamiento del catálogo se absorbe dentro del recorrido de la campaña de medición de cobertura (RT-03.24) sin costo logístico adicional. En costo operacional genera un ahorro estimado de 1,2 \% en combustible nocturno de larga distancia al eliminar la búsqueda errática de estacionamiento en ruta. El beneficio central radica en la mitigación del riesgo de siniestros graves por microsueño (cuyo costo supera \$150 millones por evento e induce paralización de clientes) y la supresión de multas por Ley No Chat y Art. 25 bis.
 
-\textbf{Indicador de verificación.} Línea base cero de alertas con parador calificado garantizado, con meta de $\ge 98\text{ \%}$ de efectividad en ruta nacional medida mensualmente en marcha blanca. Cero eventos de interacción táctil con vehículo en movimiento ($v > 0\text{ km/h}$, meta 100 \% de bloqueo cinético). Carga cognitiva NASA-TLX con guantes reducida a $< 35$ puntos (desde 68 puntos de línea base). Y adherencia voluntaria de paradas seguras en conductores externos de $\ge 85\text{ \%}$ (frente al 22 \% actual).
+\textbf{Resultados esperados e indicadores.} Línea base cero de alertas con parador calificado garantizado, con meta de $\ge 98\text{ \%}$ de efectividad en ruta nacional medida mensualmente en marcha blanca. Cero eventos de interacción táctil con vehículo en movimiento ($v > 0\text{ km/h}$, meta 100 \% de bloqueo cinético). Carga cognitiva NASA-TLX con guantes reducida a $< 35$ puntos (desde 68 puntos de línea base). Y adherencia voluntaria de paradas seguras en conductores externos de $\ge 85\text{ \%}$ (frente al 22 \% actual).
 
 \textbf{Riesgo de adopción.} Que los 258 conductores externos perciban el sistema como vigilancia patronal encubierta, con probabilidad media-alta e impacto alto. Se mitiga mediante diseño ergonómico participativo en horario de relevo en los cinco terminales y orientando la herramienta al bienestar (recomendación de sitios con duchas, seguridad y convenios comerciales). La contingencia es que la unidad a bordo conmuta a notificación puramente acústica pasiva por altavoz ambiental, sin requerir teléfonos personales ni botones adicionales en cabina, manteniendo la seguridad activa sin fricción sindical.
 

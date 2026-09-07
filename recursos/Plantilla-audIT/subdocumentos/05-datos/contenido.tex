@@ -87,7 +87,7 @@ Caché y Baja Latencia & En memoria & Redis 7.2 Cluster & Evaluación de geocerc
 Documentos y Evidencia & Inmutable & Object Storage WORM (Compliance) & Custodia inalterable de firmas, e-Docs y actas con retención bloqueada frente a administradores. \\
 \end{tablaAudit}
 
-\figuraAncha{Persistencia.pdf}{Persistencia políglota. Consistencia estricta, disponibilidad extrema y capa transitoria}{persistencia}
+\figuraHorizontal{Persistencia.pdf}{Persistencia políglota. Consistencia estricta, disponibilidad extrema y capa transitoria}{persistencia}
 
 \subsection{Estrategia de desempeño de base de datos}
 
@@ -217,7 +217,7 @@ Series de posición y telemetría & 2 años en línea & Continua (Micro-batch / 
 \end{tablaAudit}
 
 \begin{alertInfo}
-Cuarta copia distribuida en el borde: las unidades intervenidas de la flota (148 tractocamiones propios y los 34 camiones de terceros incorporados por adhesión voluntaria) conservan en la memoria flash industrial ($\ge 8\text{ GB}$) de su dispositivo embarcado el registro operacional íntegro de al menos 72 horas y hasta 288 horas continuas durante aislamientos por nieve en Los Libertadores, mientras que los 192 terceros homologados mantienen el búfer local exigido por el estándar de interoperabilidad sin intervenir su equipamiento privado. Si bien no sustituye al respaldo centralizado, constituye una fuente distribuida de reconciliación determinista ante caídas de red.
+Cuarta copia distribuida en el borde: las unidades intervenidas de la flota (148 tractocamiones propios y los 34 camiones de terceros incorporados por adhesión voluntaria) conservan en la memoria flash industrial ($\ge 8\text{ GB}$) de su dispositivo embarcado el registro operacional íntegro de al menos 72 horas y hasta 288 horas continuas durante aislamientos por nieve en Los Libertadores, mientras que los 192 terceros homologados (hipótesis de dimensionamiento que asume con equipo las 148 unidades propias: $340 - 148 = 192$, sujeta a confirmación en el levantamiento de Etapa 1) mantienen el búfer local exigido por el estándar de interoperabilidad sin intervenir su equipamiento privado. Si bien no sustituye al respaldo centralizado, constituye una fuente distribuida de reconciliación determinista ante caídas de red.
 \end{alertInfo}
 
 \subsection{Migración de datos y saneamiento histórico}
@@ -282,6 +282,6 @@ Para dar cumplimiento a RT-05.05 y soportar la analítica financiera:
     \end{itemize}
 \end{enumerate}
 
-\figuraAncha{Costo.pdf}{Construcción del costo real por kilómetro con fuentes de distinto desfase}{costo}
+\figuraHorizontal{Costo.pdf}{Construcción del costo real por kilómetro con fuentes de distinto desfase}{costo}
 
 Ese diseño responde a la razón por la que el problema existe. El combustible llega con 40 días de desfase, los peajes se liquidan mensualmente y las tarifas de terceros son contractuales. Esperar a que todo esté disponible convierte el costo por viaje en un cierre contable tardío, y esa demora es la que permitió que un contrato operara cuatro años a menos 14 por ciento sin que nadie lo advirtiera.

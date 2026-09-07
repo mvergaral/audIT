@@ -191,14 +191,11 @@ reemplazarse sin acuerdo expreso.
 | **Población** | **Unidades** | **Tratamiento** |
 |---|---|---|
 | Flota propia | 148 | Especificación completa y despliegue directo |
-| Terceros con dispositivo | 192 | No se reemplaza nada. Estándar mínimo de homologación y unificación de la vista |
+| Terceros con dispositivo | 192* | No se reemplaza nada. Estándar mínimo de homologación y unificación de la vista |
 | Terceros sin dispositivo | 34 | Únicos candidatos a equipamiento nuevo, y solo por adhesión |
 
 
-El entregable para la población intermedia no es un inventario, que el mandante no entregó, sino un
-estándar mínimo de homologación contra el cual clasificar después cada equipo. Almacenamiento local
-de 72 horas, sincronización diferida, formato de evento, identificación del conductor y sello de
-tiempo con garantía de integridad.
+*El valor de 192 unidades corresponde a la hipótesis técnica de dimensionamiento que asume equipadas las 148 unidades propias ($340 - 148 = 192$, restando las 34 sin equipo de los 226 terceros). El entregable para esta población intermedia no es un inventario acabado ---cuya composición detallada se declara desconocida en el supuesto S-09 y sujeta a levantamiento en Etapa 1---, sino un estándar mínimo de homologación contra el cual clasificar después cada equipo: almacenamiento local de 72 horas, sincronización diferida, formato canónico de evento, identificación del conductor y sello de tiempo con garantía de integridad.
 
 
 ### Lo que queda fuera del alcance

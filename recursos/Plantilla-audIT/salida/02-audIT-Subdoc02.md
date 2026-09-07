@@ -148,7 +148,6 @@ La ausencia de registros de posicionamiento georreferenciado e inalterable gener
 | Estructura de costos operacionales | Fletes terceros (38 %), Combustible (14 %), Conductores propios (12 %) |
 | Combustible sobre ingreso y rezago contable | 14 % del ingreso (\$10.920M CLP); hasta 40 días de desfase probatorio |
 | Dispersión de rendimiento de combustible no justificada | 19 % de variación entre camiones idénticos en idéntica ruta |
-| Concentración comercial de clientes | 84 clientes activos; 8 clientes concentran el 71 % de la facturación |
 
 
 La rentabilidad del 9 % encubre un modelo de gestión basado en prorrateos generales que impiden el costeo analítico a nivel de ruta y viaje. El descubrimiento de que el 31 % de los ingresos de la empresa proviene de tres contratos deficitarios ---uno de ellos drenando un margen del -14 % durante cuatro años ininterrumpidos--- es el resultado de operar a ciegas respecto de los costos reales de ejecución. El rubro de combustible, responsable del 14 % del gasto (\$10.920 millones CLP), opera bajo un esquema de facturación consolidada mensual que retrasa en 40 días la visualización del consumo, ocultando una dispersión injustificada del 19 % de rendimiento energético entre vehículos similares en la misma ruta.

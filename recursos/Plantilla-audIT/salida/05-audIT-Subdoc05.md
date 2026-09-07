@@ -122,11 +122,6 @@ En estricta conformidad con RT-05.02, la solución adopta una Arquitectura Polí
 | Documentos y Evidencia | Inmutable | Object Storage WORM (Compliance) | Custodia inalterable de firmas, e-Docs y actas con retención bloqueada frente a administradores. |
 
 
-![Persistencia políglota. Consistencia estricta, disponibilidad extrema y capa transitoria](Persistencia.pdf)
-
-*Figura. Persistencia políglota. Consistencia estricta, disponibilidad extrema y capa transitoria*
-
-
 ### Estrategia de desempeño de base de datos
 
 
@@ -274,7 +269,7 @@ Para garantizar la continuidad de servicio con un RTO $\le 4$ horas y un RPO $\l
 | Series de posición y telemetría | 2 años en línea | Continua (Micro-batch / TimescaleDB chunks) | $\le 4$ horas |
 
 
-Cuarta copia distribuida en el borde: las unidades intervenidas de la flota (148 tractocamiones propios y los 34 camiones de terceros incorporados por adhesión voluntaria) conservan en la memoria flash industrial ($\ge 8\text{ GB}$) de su dispositivo embarcado el registro operacional íntegro de al menos 72 horas y hasta 288 horas continuas durante aislamientos por nieve en Los Libertadores, mientras que los 192 terceros homologados mantienen el búfer local exigido por el estándar de interoperabilidad sin intervenir su equipamiento privado. Si bien no sustituye al respaldo centralizado, constituye una fuente distribuida de reconciliación determinista ante caídas de red.
+Cuarta copia distribuida en el borde: las unidades intervenidas de la flota (148 tractocamiones propios y los 34 camiones de terceros incorporados por adhesión voluntaria) conservan en la memoria flash industrial ($\ge 8\text{ GB}$) de su dispositivo embarcado el registro operacional íntegro de al menos 72 horas y hasta 288 horas continuas durante aislamientos por nieve en Los Libertadores, mientras que los 192 terceros homologados (hipótesis de dimensionamiento que asume con equipo las 148 unidades propias: $340 - 148 = 192$, sujeta a confirmación en el levantamiento de Etapa 1) mantienen el búfer local exigido por el estándar de interoperabilidad sin intervenir su equipamiento privado. Si bien no sustituye al respaldo centralizado, constituye una fuente distribuida de reconciliación determinista ante caídas de red.
 
 
 ### Migración de datos y saneamiento histórico
@@ -341,11 +336,6 @@ Para dar cumplimiento a RT-05.05 y soportar la analítica financiera:
 
 - \textit{Versión 1 ($\le 24$ h tras cierre del viaje):} Costo preliminar trazable que consolida costos directos conocidos (tarifa del flete, peajes estimados, combustible inferido por odómetro/CANbus) e identifica explícitamente los componentes pendientes de liquidación.
 - \textit{Versión 2 (Conciliación a 40 días):} Actualización automática al ingresar el archivo de liquidación mensual de estaciones de servicio (Enex/Copec) y peajes, generando una nueva versión auditada sin sobreescribir la historia previa.
-
-
-![Construcción del costo real por kilómetro con fuentes de distinto desfase](Costo.pdf)
-
-*Figura. Construcción del costo real por kilómetro con fuentes de distinto desfase*
 
 
 Ese diseño responde a la razón por la que el problema existe. El combustible llega con 40 días de desfase, los peajes se liquidan mensualmente y las tarifas de terceros son contractuales. Esperar a que todo esté disponible convierte el costo por viaje en un cierre contable tardío, y esa demora es la que permitió que un contrato operara cuatro años a menos 14 por ciento sin que nadie lo advirtiera.

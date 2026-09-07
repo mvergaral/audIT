@@ -4,9 +4,11 @@ Latexmk: This is Latexmk, John Collins, 15 June 2025. Version 4.87.
 Latexmk: applying rule 'pdflatex'...
 Rule 'pdflatex':  Reasons for rerun
 Changed files or newly in use/created:
-  subdocumentos/13-innovaciones/contenido.tex
+  comun/portada.tex
+  comun/preambulo.tex
 Category 'changed_user':
-  subdocumentos/13-innovaciones/contenido.tex
+  comun/portada.tex
+  comun/preambulo.tex
 
 ------------
 Run number 1 of rule 'pdflatex'
@@ -366,25 +368,32 @@ LaTeX Font Warning: Font shape `T1/cmr/bx/n' in size <19> not available
 [1 </home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recur
 sos/Plantilla-audIT/comun/assets/portada.jpeg>]
 
-LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <28> not available
-(Font)              size <29.86> substituted on input line 9.
+LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <26> not available
+(Font)              size <24.88> substituted on input line 9.
 
 
-LaTeX Font Warning: Font shape `T1/cmr/bx/n' in size <28> not available
-(Font)              size <29.86> substituted on input line 9.
+LaTeX Font Warning: Font shape `T1/cmr/bx/n' in size <26> not available
+(Font)              size <24.88> substituted on input line 9.
 
 
 Overfull \hbox (28.45274pt too wide) in paragraph at lines 9--9
 [][][] 
-[2] (salida/aux/13-innovaciones/sub13.toc
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd)
-(/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd))
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.9 \fichaSubdocumento
-                       [1]
+(/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd)
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[2 </home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recur
+sos/Plantilla-audIT/comun/assets/figuras/Firma.png>]
+(salida/aux/13-innovaciones/sub13.toc)
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[3]
 (/home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recursos
 /Plantilla-audIT/subdocumentos/13-innovaciones/contenido.tex
 
@@ -405,18 +414,76 @@ Underfull \hbox (badness 1565) in paragraph at lines 19--19
 Underfull \hbox (badness 1062) in paragraph at lines 20--20
 []|\T1/cmr/m/n/10.95 Experiencia de usua-rio,
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.21 \end{tablaAudit}
-                      [2] [3] [4] [5]
-Underfull \hbox (badness 1122) in paragraph at lines 155--155
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[4]
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[5]
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[6]
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[7]
+Underfull \hbox (badness 1122) in paragraph at lines 134--134
 []|\T1/cmr/m/n/10.95 Visibilidad uni-fi-ca-da de la
 
-Underfull \hbox (badness 5288) in paragraph at lines 156--156
+Underfull \hbox (badness 5288) in paragraph at lines 135--135
 []|\T1/cmr/m/n/10.95 Latencia de re-con-ci-lia-ción
-[6] [7] [8] [9] [10]) [11] [12] (salida/aux/13-innovaciones/sub13.aux)
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[8]
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[9]
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[10]
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[11]
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[12])
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[13]
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[14] (salida/aux/13-innovaciones/sub13.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 34.41pt have occurred.
@@ -426,20 +493,24 @@ LaTeX Font Warning: Size substitutions with differences
 xmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk> </home/carlosa/.texlive/tex
 mf-var/fonts/pk/ljfour/jknappen/ec/ectt1200.600pk> </home/carlosa/.texlive/texm
 f-var/fonts/pk/ljfour/jknappen/ec/ecti1200.600pk> </home/carlosa/.texlive/texmf
--var/fonts/pk/ljfour/jknappen/ec/ecbx5159.600pk> </home/carlosa/.texlive/texmf-
-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </home/carlosa/.texlive/texmf-v
+-var/fonts/pk/ljfour/jknappen/ec/ecbx2986.600pk> </home/carlosa/.texlive/texmf-
+var/fonts/pk/ljfour/jknappen/ec/ecbx5159.600pk> </home/carlosa/.texlive/texmf-v
 ar/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/carlosa/.texlive/texmf-va
 r/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/carlosa/.texlive/texmf-var
-/fonts/pk/ljfour/jknappen/ec/tcrm1095.600pk> </home/carlosa/.texlive/texmf-var/
-fonts/pk/ljfour/jknappen/ec/ecrm1095.600pk> </home/carlosa/.texlive/texmf-var/f
-onts/pk/ljfour/jknappen/ec/ecbx2986.600pk> </home/carlosa/.texlive/texmf-var/fo
-nts/pk/ljfour/jknappen/ec/ecbx1728.600pk> </home/carlosa/.texlive/texmf-var/fon
-ts/pk/ljfour/jknappen/ec/tcbx1095.600pk> </home/carlosa/.texlive/texmf-var/font
-s/pk/ljfour/jknappen/ec/ecbx1095.600pk></usr/share/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></us
-r/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on salida/aux/13-innovaciones/sub13.pdf (14 pages, 521661 bytes)
+/fonts/pk/ljfour/jknappen/ec/ecrm0600.600pk> </home/carlosa/.texlive/texmf-var/
+fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk> </home/carlosa/.texlive/texmf-var/f
+onts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </home/carlosa/.texlive/texmf-var/fo
+nts/pk/ljfour/jknappen/ec/ecbx1000.600pk> </home/carlosa/.texlive/texmf-var/fon
+ts/pk/ljfour/jknappen/ec/tcrm1095.600pk> </home/carlosa/.texlive/texmf-var/font
+s/pk/ljfour/jknappen/ec/ecrm1095.600pk> </home/carlosa/.texlive/texmf-var/fonts
+/pk/ljfour/jknappen/ec/ecbx2488.600pk> </home/carlosa/.texlive/texmf-var/fonts/
+pk/ljfour/jknappen/ec/ecbx1728.600pk> </home/carlosa/.texlive/texmf-var/fonts/p
+k/ljfour/jknappen/ec/tcbx1095.600pk> </home/carlosa/.texlive/texmf-var/fonts/pk
+/ljfour/jknappen/ec/ecbx1095.600pk></usr/share/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr1
+2.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/sh
+are/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on salida/aux/13-innovaciones/sub13.pdf (14 pages, 605319 bytes)
 .
 Transcript written on salida/aux/13-innovaciones/sub13.log.
 Latexmk: Getting log file 'salida/aux/13-innovaciones/sub13.log'

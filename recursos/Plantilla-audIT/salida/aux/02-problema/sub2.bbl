@@ -49,6 +49,42 @@
       \verb https://www.bcn.cl/leychile/navegar?i=1209272
       \endverb
     \endentry
+    \entry{bases_admin_2026}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=ee5d1fce8a3bf142902b6ac732f8f708}{%
+           family={{Escuela de Informática PUCV}},
+           familyi={E\bibinitperiod}}}%
+      }
+      \name{shortauthor}{1}{}{%
+        {{un=0,uniquepart=base,hash=ee5d1fce8a3bf142902b6ac732f8f708}{%
+           family={{Escuela de Informática PUCV}},
+           familyi={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{ee5d1fce8a3bf142902b6ac732f8f708}
+      \strng{fullhash}{ee5d1fce8a3bf142902b6ac732f8f708}
+      \strng{fullhashraw}{ee5d1fce8a3bf142902b6ac732f8f708}
+      \strng{bibnamehash}{ee5d1fce8a3bf142902b6ac732f8f708}
+      \strng{authorbibnamehash}{ee5d1fce8a3bf142902b6ac732f8f708}
+      \strng{authornamehash}{ee5d1fce8a3bf142902b6ac732f8f708}
+      \strng{authorfullhash}{ee5d1fce8a3bf142902b6ac732f8f708}
+      \strng{authorfullhashraw}{ee5d1fce8a3bf142902b6ac732f8f708}
+      \strng{shortauthorbibnamehash}{ee5d1fce8a3bf142902b6ac732f8f708}
+      \strng{shortauthornamehash}{ee5d1fce8a3bf142902b6ac732f8f708}
+      \strng{shortauthorfullhash}{ee5d1fce8a3bf142902b6ac732f8f708}
+      \strng{shortauthorfullhashraw}{ee5d1fce8a3bf142902b6ac732f8f708}
+      \field{extraname}{1}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{shortauthor}
+      \field{labeltitlesource}{title}
+      \field{note}{Documento FEP01.26}
+      \field{title}{Bases Administrativas. Licitación Pública Internacional N.º TFEP-01/2026}
+      \field{year}{2026}
+    \endentry
     \entry{bases_caso10_2026}{misc}{}{}
       \name{author}{1}{}{%
         {{hash=ee5d1fce8a3bf142902b6ac732f8f708}{%
@@ -72,8 +108,10 @@
       \strng{shortauthornamehash}{ee5d1fce8a3bf142902b6ac732f8f708}
       \strng{shortauthorfullhash}{ee5d1fce8a3bf142902b6ac732f8f708}
       \strng{shortauthorfullhashraw}{ee5d1fce8a3bf142902b6ac732f8f708}
+      \field{extraname}{2}
       \field{sortinit}{E}
       \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{extradate}{2}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \true{uniqueprimaryauthor}
@@ -282,6 +320,42 @@
       \verb https://www.bcn.cl/leychile/navegar?i=1209272
       \endverb
     \endentry
+    \entry{bases_admin_2026}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=ee5d1fce8a3bf142902b6ac732f8f708}{%
+           family={{Escuela de Informática PUCV}},
+           familyi={E\bibinitperiod}}}%
+      }
+      \name{shortauthor}{1}{}{%
+        {{un=0,uniquepart=base,hash=ee5d1fce8a3bf142902b6ac732f8f708}{%
+           family={{Escuela de Informática PUCV}},
+           familyi={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{ee5d1fce8a3bf142902b6ac732f8f708}
+      \strng{fullhash}{ee5d1fce8a3bf142902b6ac732f8f708}
+      \strng{fullhashraw}{ee5d1fce8a3bf142902b6ac732f8f708}
+      \strng{bibnamehash}{ee5d1fce8a3bf142902b6ac732f8f708}
+      \strng{authorbibnamehash}{ee5d1fce8a3bf142902b6ac732f8f708}
+      \strng{authornamehash}{ee5d1fce8a3bf142902b6ac732f8f708}
+      \strng{authorfullhash}{ee5d1fce8a3bf142902b6ac732f8f708}
+      \strng{authorfullhashraw}{ee5d1fce8a3bf142902b6ac732f8f708}
+      \strng{shortauthorbibnamehash}{ee5d1fce8a3bf142902b6ac732f8f708}
+      \strng{shortauthornamehash}{ee5d1fce8a3bf142902b6ac732f8f708}
+      \strng{shortauthorfullhash}{ee5d1fce8a3bf142902b6ac732f8f708}
+      \strng{shortauthorfullhashraw}{ee5d1fce8a3bf142902b6ac732f8f708}
+      \field{extraname}{1}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{shortauthor}
+      \field{labeltitlesource}{title}
+      \field{note}{Documento FEP01.26}
+      \field{title}{Bases Administrativas. Licitación Pública Internacional N.º TFEP-01/2026}
+      \field{year}{2026}
+    \endentry
     \entry{bases_caso10_2026}{misc}{}{}
       \name{author}{1}{}{%
         {{hash=ee5d1fce8a3bf142902b6ac732f8f708}{%
@@ -305,8 +379,10 @@
       \strng{shortauthornamehash}{ee5d1fce8a3bf142902b6ac732f8f708}
       \strng{shortauthorfullhash}{ee5d1fce8a3bf142902b6ac732f8f708}
       \strng{shortauthorfullhashraw}{ee5d1fce8a3bf142902b6ac732f8f708}
+      \field{extraname}{2}
       \field{sortinit}{E}
       \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{extradate}{2}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \true{uniqueprimaryauthor}

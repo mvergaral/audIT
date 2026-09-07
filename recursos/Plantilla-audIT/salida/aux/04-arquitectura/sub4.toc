@@ -1,38 +1,38 @@
 \babel@toc {spanish}{}\relax 
-\contentsline {section}{\numberline {1}Arquitectura de la solución}{2}{section.1}%
-\contentsline {subsection}{\numberline {1.1}Arquitectura lógica}{2}{subsection.1.1}%
-\contentsline {subsubsection}{\numberline {1.1.1}Punto de partida}{2}{subsubsection.1.1.1}%
-\contentsline {subsubsection}{\numberline {1.1.2}Las ocho capas}{3}{subsubsection.1.1.2}%
-\contentsline {subsubsection}{\numberline {1.1.3}Los seis contextos delimitados}{5}{subsubsection.1.1.3}%
-\contentsline {subsubsection}{\numberline {1.1.4}Convivencia con lo que ya existe}{6}{subsubsection.1.1.4}%
-\contentsline {subsubsection}{\numberline {1.1.5}Registro de decisiones de arquitectura}{6}{subsubsection.1.1.5}%
-\contentsline {subsubsection}{\numberline {1.1.6}Degradación, escalamiento y puntos únicos de falla}{7}{subsubsection.1.1.6}%
-\contentsline {subsubsection}{\numberline {1.1.7}Resiliencia}{8}{subsubsection.1.1.7}%
-\contentsline {subsubsection}{\numberline {1.1.8}Verificación bloqueante del despacho}{9}{subsubsection.1.1.8}%
-\contentsline {subsubsection}{\numberline {1.1.9}Idempotencia y ventana de deduplicación}{11}{subsubsection.1.1.9}%
-\contentsline {subsubsection}{\numberline {1.1.10}Gobernanza de interfaces y contratos}{12}{subsubsection.1.1.10}%
-\contentsline {subsubsection}{\numberline {1.1.11}Convivencia con el sistema contable heredado}{13}{subsubsection.1.1.11}%
-\contentsline {paragraph}{Emisión del documento de transporte sin cobertura.}{14}{table.1.12}%
-\contentsline {subsubsection}{\numberline {1.1.12}Fuentes con desfase y telemetría del vehículo}{15}{subsubsection.1.1.12}%
-\contentsline {subsubsection}{\numberline {1.1.13}Capa analítica y costo real por kilómetro}{17}{subsubsection.1.1.13}%
-\contentsline {subsubsection}{\numberline {1.1.14}Explotación analítica y autoservicio}{20}{subsubsection.1.1.14}%
-\contentsline {subsubsection}{\numberline {1.1.15}Modelo táctico del dominio}{21}{subsubsection.1.1.15}%
-\contentsline {subsubsection}{\numberline {1.1.16}Inventario de componentes lógicos}{21}{subsubsection.1.1.16}%
-\contentsline {subsubsection}{\numberline {1.1.17}Concurrencia y volumen declarados}{23}{subsubsection.1.1.17}%
-\contentsline {subsection}{\numberline {1.2}Arquitectura física}{25}{subsection.1.2}%
-\contentsline {subsubsection}{\numberline {1.2.1}Cumplimiento del modelo híbrido}{26}{subsubsection.1.2.1}%
-\contentsline {subsubsection}{\numberline {1.2.2}El dispositivo a bordo es infraestructura}{26}{subsubsection.1.2.2}%
-\contentsline {subsubsection}{\numberline {1.2.3}Dimensionamiento derivado}{28}{subsubsection.1.2.3}%
-\contentsline {subsubsection}{\numberline {1.2.4}Emplazamiento en nube}{29}{subsubsection.1.2.4}%
-\contentsline {subsubsection}{\numberline {1.2.5}Emplazamiento on-premise y tipología declarada}{29}{subsubsection.1.2.5}%
-\contentsline {subsubsection}{\numberline {1.2.6}Continuidad y recuperación como ejes separados}{31}{subsubsection.1.2.6}%
-\contentsline {subsubsection}{\numberline {1.2.7}Red y enlaces}{31}{subsubsection.1.2.7}%
-\contentsline {subsubsection}{\numberline {1.2.8}Tecnologías de software}{32}{subsubsection.1.2.8}%
-\contentsline {subsubsection}{\numberline {1.2.9}Desempeño, capacidad y disponibilidad}{33}{subsubsection.1.2.9}%
-\contentsline {subsubsection}{\numberline {1.2.10}Funciones no disponibles en modo desconectado}{33}{subsubsection.1.2.10}%
-\contentsline {subsection}{\numberline {1.3}Supuestos y brechas declaradas}{35}{subsection.1.3}%
-\contentsline {subsubsection}{\numberline {1.3.1}Supuestos declarados}{35}{subsubsection.1.3.1}%
-\contentsline {subsubsection}{\numberline {1.3.2}Brechas que esta oferta reconoce}{36}{subsubsection.1.3.2}%
-\contentsline {subsection}{\numberline {1.4}Diagramas de arquitectura}{37}{subsection.1.4}%
-\contentsline {section}{Anexo A. Tabla de emplazamiento de componentes}{44}{figure.caption.12}%
-\contentsline {section}{Bibliografía}{51}{section*.13}%
+\contentsline {section}{\numberline {1}Arquitectura de la solución}{4}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Arquitectura lógica}{4}{subsection.1.1}%
+\contentsline {subsubsection}{\numberline {1.1.1}Punto de partida}{4}{subsubsection.1.1.1}%
+\contentsline {subsubsection}{\numberline {1.1.2}Las ocho capas}{5}{subsubsection.1.1.2}%
+\contentsline {subsubsection}{\numberline {1.1.3}Los seis contextos delimitados}{9}{subsubsection.1.1.3}%
+\contentsline {subsubsection}{\numberline {1.1.4}Convivencia con lo que ya existe}{9}{subsubsection.1.1.4}%
+\contentsline {subsubsection}{\numberline {1.1.5}Registro de decisiones de arquitectura}{9}{subsubsection.1.1.5}%
+\contentsline {subsubsection}{\numberline {1.1.6}Degradación, escalamiento y puntos únicos de falla}{10}{subsubsection.1.1.6}%
+\contentsline {subsubsection}{\numberline {1.1.7}Resiliencia}{11}{subsubsection.1.1.7}%
+\contentsline {subsubsection}{\numberline {1.1.8}Verificación bloqueante del despacho}{12}{subsubsection.1.1.8}%
+\contentsline {subsubsection}{\numberline {1.1.9}Idempotencia y ventana de deduplicación}{14}{subsubsection.1.1.9}%
+\contentsline {subsubsection}{\numberline {1.1.10}Gobernanza de interfaces y contratos}{15}{subsubsection.1.1.10}%
+\contentsline {subsubsection}{\numberline {1.1.11}Convivencia con el sistema contable heredado}{16}{subsubsection.1.1.11}%
+\contentsline {paragraph}{Emisión del documento de transporte sin cobertura.}{17}{table.1.12}%
+\contentsline {subsubsection}{\numberline {1.1.12}Fuentes con desfase y telemetría del vehículo}{18}{subsubsection.1.1.12}%
+\contentsline {subsubsection}{\numberline {1.1.13}Capa analítica y costo real por kilómetro}{20}{subsubsection.1.1.13}%
+\contentsline {subsubsection}{\numberline {1.1.14}Explotación analítica y autoservicio}{23}{subsubsection.1.1.14}%
+\contentsline {subsubsection}{\numberline {1.1.15}Modelo táctico del dominio}{24}{subsubsection.1.1.15}%
+\contentsline {subsubsection}{\numberline {1.1.16}Inventario de componentes lógicos}{24}{subsubsection.1.1.16}%
+\contentsline {subsubsection}{\numberline {1.1.17}Concurrencia y volumen declarados}{26}{subsubsection.1.1.17}%
+\contentsline {subsection}{\numberline {1.2}Arquitectura física}{28}{subsection.1.2}%
+\contentsline {subsubsection}{\numberline {1.2.1}Cumplimiento del modelo híbrido}{29}{subsubsection.1.2.1}%
+\contentsline {subsubsection}{\numberline {1.2.2}El dispositivo a bordo es infraestructura}{29}{subsubsection.1.2.2}%
+\contentsline {subsubsection}{\numberline {1.2.3}Dimensionamiento derivado}{31}{subsubsection.1.2.3}%
+\contentsline {subsubsection}{\numberline {1.2.4}Emplazamiento en nube}{32}{subsubsection.1.2.4}%
+\contentsline {subsubsection}{\numberline {1.2.5}Emplazamiento on-premise y tipología declarada}{32}{subsubsection.1.2.5}%
+\contentsline {subsubsection}{\numberline {1.2.6}Continuidad y recuperación como ejes separados}{34}{subsubsection.1.2.6}%
+\contentsline {subsubsection}{\numberline {1.2.7}Red y enlaces}{34}{subsubsection.1.2.7}%
+\contentsline {subsubsection}{\numberline {1.2.8}Tecnologías de software}{35}{subsubsection.1.2.8}%
+\contentsline {subsubsection}{\numberline {1.2.9}Desempeño, capacidad y disponibilidad}{36}{subsubsection.1.2.9}%
+\contentsline {subsubsection}{\numberline {1.2.10}Funciones no disponibles en modo desconectado}{36}{subsubsection.1.2.10}%
+\contentsline {subsection}{\numberline {1.3}Supuestos y brechas declaradas}{38}{subsection.1.3}%
+\contentsline {subsubsection}{\numberline {1.3.1}Supuestos declarados}{38}{subsubsection.1.3.1}%
+\contentsline {subsubsection}{\numberline {1.3.2}Brechas que esta oferta reconoce}{39}{subsubsection.1.3.2}%
+\contentsline {subsection}{\numberline {1.4}Diagramas de arquitectura}{40}{subsection.1.4}%
+\contentsline {section}{Anexo A. Tabla de emplazamiento de componentes}{48}{figure.caption.12}%
+\contentsline {section}{Bibliografía}{55}{section*.13}%

@@ -1,10 +1,10 @@
 \babel@toc {spanish}{}\relax 
-\contentsline {section}{\numberline {1}Innovaciones}{2}{section.1}%
-\contentsline {subsection}{\numberline {1.1}Tipo 1. Portal del transportista con liquidación en curso}{3}{subsection.1.1}%
-\contentsline {subsection}{\numberline {1.2}Tipo 2. Despliegue sin detener la flota}{5}{subsection.1.2}%
-\contentsline {subsection}{\numberline {1.3}Tipo 3. Operación desconectada y vista única de flota}{5}{subsection.1.3}%
-\contentsline {subsection}{\numberline {1.4}Tipo 4. Esquema de adhesión y propiedad del dispositivo}{7}{subsection.1.4}%
-\contentsline {subsection}{\numberline {1.5}Tipo 5. Bienestar del conductor y descanso en parador seguro}{9}{subsection.1.5}%
-\contentsline {subsection}{\numberline {1.6}Estado de elaboración y responsables}{11}{subsection.1.6}%
-\contentsline {subsection}{\numberline {1.7}Trazabilidad con el resto de la propuesta}{11}{subsection.1.7}%
-\contentsline {section}{Bibliografía}{12}{section*.1}%
+\contentsline {section}{\numberline {1}Innovaciones}{4}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Tipo 1. Portal del transportista con liquidación en curso}{5}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Tipo 2. Despliegue sin detener la flota}{6}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Tipo 3. Operación desconectada y vista única de flota}{7}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}Tipo 4. Esquema de adhesión y propiedad del dispositivo}{9}{subsection.1.4}%
+\contentsline {subsection}{\numberline {1.5}Tipo 5. Bienestar del conductor y descanso en parador seguro}{11}{subsection.1.5}%
+\contentsline {subsection}{\numberline {1.6}Estado de elaboración y responsables}{13}{subsection.1.6}%
+\contentsline {subsection}{\numberline {1.7}Trazabilidad con el resto de la propuesta}{13}{subsection.1.7}%
+\contentsline {section}{Bibliografía}{14}{section*.1}%

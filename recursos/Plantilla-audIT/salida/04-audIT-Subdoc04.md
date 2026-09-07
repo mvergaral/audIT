@@ -86,11 +86,6 @@ ocupan un lugar en esa pila, la atraviesan entera.
 | Observabilidad | Instrumentación única con trazas, métricas y registros correlacionados por el identificador común que RT-05.19 exige a toda integración |
 
 
-![Las ocho capas obligatorias del numeral 2.1 transversal, con sus componentes e interfaces, conforme a RT-02.01](LogicaCapas.pdf)
-
-*Figura. Las ocho capas obligatorias del numeral 2.1 transversal, con sus componentes e interfaces, conforme a RT-02.01*
-
-
 #### Los seis contextos delimitados
 
 
@@ -627,7 +622,7 @@ RT-06.01 del Caso ordena tratar el componente a bordo como un sistema on-premise
 cubre la operación de los 374 tractocamiones. Conforme a la restricción 3 de las bases, el
 equipamiento físico provisto por el mandante con memoria flash industrial de 8 GB se despliega
 directamente en las 148 unidades propias y en las 34 unidades sin equipo que adhieran al programa.
-Los 192 camiones de terceros con dispositivo preexistente se integran como terminales lógicos
+Los 192 camiones de terceros con dispositivo preexistente ---cifra adoptada como hipótesis técnica de dimensionamiento al asumir equipadas las 148 unidades propias ($340 - 148 = 192$) y sujeta a confirmación en el levantamiento de Etapa 1--- se integran como terminales lógicos
 mediante adaptadores de interoperabilidad, exigiendo el estándar de homologación pero sin
 intervenir su hardware privado. Todo el parque intervenido cuenta con su propio ciclo de vida, su
 mecanismo de actualización remota, su gestión de seguridad y su plan de reposición, sujeto a que
@@ -896,7 +891,7 @@ declaran aquí con su cierre.
 | S-06 | Consumo mensual de datos por camión | 13 a 16 MB | Campaña de medición |
 | S-07 | Consumo agregado de la flota | 5,6 GB mensuales | Derivado de S-06 |
 | S-08 | Población que requiere enlace satelital | No estimable hoy | Campaña de medición de cobertura, Etapa 1 |
-| S-09 | Composición del parque telemático de terceros | Desconocida | Levantamiento en Etapa 1 y consulta al mandante |
+| S-09 | Composición del parque telemático de terceros | Desconocida (hipótesis de dimensionamiento: 192 equipados) | Levantamiento en Etapa 1 y consulta al mandante |
 | S-10 | Tarificación satelital por mensaje y no por byte | Modelo de ráfaga corta | Cotización |
 | S-11 | Umbral de latencia del botón de emergencia en modo satelital | Por declarar y fundamentar | El requisito limita los 15 segundos al caso con cobertura |
 | S-12 | Tipología del recinto de San Bernardo | Sala técnica de sitio | Consulta C-03 |
@@ -914,10 +909,12 @@ declaran aquí con su cierre.
     por los operadores no es un antecedente aceptable para el diseño. Cualquier cifra sobre cuántas
     unidades requieren enlace satelital antes de la medición en terreno sería una invención.
 - **El parque telemático de los 226 camiones de terceros no se inventaría.** El Caso
-    no entrega marca, modelo, protocolo ni capacidad de almacenamiento de esos equipos. El
-    entregable correcto es un estándar mínimo de homologación contra el cual clasificar después
-    cada equipo, y el levantamiento es una actividad de Etapa 1 con costo, plazo y dependencia de
-    terceros.
+    no entrega marca, modelo, protocolo ni capacidad de almacenamiento de esos equipos. La estimación
+    de 192 unidades de terceros con equipo empleada en el dimensionamiento constituye una hipótesis
+    de trabajo preliminar (asumiendo con dispositivo los 148 tractocamiones propios: $340 - 148 = 192$)
+    y no un inventario cerrado. El entregable correcto es un estándar mínimo de homologación contra el cual
+    clasificar después cada equipo, y el levantamiento detallado es una actividad de Etapa 1 con costo,
+    plazo y dependencia de terceros.
 - **El conductor que manejó otro camión sin dispositivo no deja rastro
     instrumental.** Esa brecha se cierra por responsabilidad contractual y no por tecnología.
 - **Las consultas del Artículo 43 están enviadas y no respondidas.** Las
@@ -934,42 +931,7 @@ declaran aquí con su cierre.
 ### Diagramas de arquitectura
 
 
-Los diagramas que siguen se presentan en orientación horizontal a página completa. Sus versiones a resolución de trabajo acompañan esta oferta como archivos independientes.
-
-
-![Contextos delimitados del dominio y sistemas con los que convive la solución](Contextos.pdf)
-
-*Figura. Contextos delimitados del dominio y sistemas con los que convive la solución*
-
-
-![Mapa de integraciones. Sistemas internos, fuentes de terreno y contrapartes externas](LogicaIntegraciones.pdf)
-
-*Figura. Mapa de integraciones. Sistemas internos, fuentes de terreno y contrapartes externas*
-
-
-![Arquitectura física general. Nube, sitio de continuidad, gabinetes de terminal y flota](Main.pdf)
-
-*Figura. Arquitectura física general. Nube, sitio de continuidad, gabinetes de terminal y flota*
-
-
-![El camión como componente on-premise distribuido](Camion.pdf)
-
-*Figura. El camión como componente on-premise distribuido*
-
-
-![Separación entre recuperación ante desastres y continuidad operacional en el borde](DosEjes.pdf)
-
-*Figura. Separación entre recuperación ante desastres y continuidad operacional en el borde*
-
-
-![Flujo de un evento de jornada registrado sin cobertura](Flujo.pdf)
-
-*Figura. Flujo de un evento de jornada registrado sin cobertura*
-
-
-![Correspondencia entre capa lógica y emplazamiento físico](LogicaEmplazamiento.pdf)
-
-*Figura. Correspondencia entre capa lógica y emplazamiento físico*
+Los diagramas que siguen se presentan como anexos gráficos en orientación horizontal a página completa (conforme a la facultad expresa del Artículo 40.4 de las Bases Administrativas), preservando la escala y legibilidad del texto técnico. Sus versiones a resolución de trabajo acompañan esta oferta como archivos independientes.
 
 
 ## Anexo A. Tabla de emplazamiento de componentes

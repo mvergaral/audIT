@@ -1,22 +1,22 @@
 \babel@toc {spanish}{}\relax 
-\contentsline {section}{\numberline {1}Esquema de solución y alcance}{2}{section.1}%
-\contentsline {subsection}{\numberline {1.1}Principio rector}{2}{subsection.1.1}%
-\contentsline {subsection}{\numberline {1.2}Decisión primera. El sujeto obligado de la acreditación de jornada}{2}{subsection.1.2}%
-\contentsline {subsection}{\numberline {1.3}Decisión segunda. La operación no depende de la cobertura móvil}{3}{subsection.1.3}%
-\contentsline {subsection}{\numberline {1.4}Decisión tercera. Continuidad y recuperación son problemas distintos}{4}{subsection.1.4}%
-\contentsline {subsection}{\numberline {1.5}Catálogo de requisitos}{4}{subsection.1.5}%
-\contentsline {subsection}{\numberline {1.6}Alcance por etapas}{5}{subsection.1.6}%
-\contentsline {subsection}{\numberline {1.7}Tres poblaciones de camiones, tres tratamientos}{6}{subsection.1.7}%
-\contentsline {subsection}{\numberline {1.8}Lo que queda fuera del alcance}{7}{subsection.1.8}%
-\contentsline {subsection}{\numberline {1.9}Plan de adhesión}{7}{subsection.1.9}%
-\contentsline {subsubsection}{\numberline {1.9.1}Qué se les pide y qué se les ofrece}{8}{subsubsection.1.9.1}%
-\contentsline {subsubsection}{\numberline {1.9.2}Régimen del dispositivo}{8}{subsubsection.1.9.2}%
-\contentsline {subsubsection}{\numberline {1.9.3}Instrumento contractual, enrolamiento y capacitación}{9}{subsubsection.1.9.3}%
-\contentsline {subsubsection}{\numberline {1.9.4}Modalidades y tratamiento de quien no adhiere}{10}{subsubsection.1.9.4}%
-\contentsline {subsubsection}{\numberline {1.9.5}Cómo se mide y qué ocurre si no alcanza}{10}{subsubsection.1.9.5}%
-\contentsline {subsection}{\numberline {1.10}Criterios de aceptación comprometidos}{11}{subsection.1.10}%
-\contentsline {subsection}{\numberline {1.11}Trazabilidad y matriz de cumplimiento}{12}{subsection.1.11}%
-\contentsline {subsection}{\numberline {1.12}Consultas formuladas al mandante}{13}{subsection.1.12}%
-\contentsline {subsection}{\numberline {1.13}Contradicciones detectadas entre los documentos de la licitación}{14}{subsection.1.13}%
-\contentsline {subsection}{\numberline {1.14}Materias pendientes al cierre de esta instancia}{14}{subsection.1.14}%
-\contentsline {section}{Bibliografía}{16}{section*.1}%
+\contentsline {section}{\numberline {1}Esquema de solución y alcance}{4}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Principio rector}{4}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Decisión primera. El sujeto obligado de la acreditación de jornada}{4}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Decisión segunda. La operación no depende de la cobertura móvil}{5}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}Decisión tercera. Continuidad y recuperación son problemas distintos}{6}{subsection.1.4}%
+\contentsline {subsection}{\numberline {1.5}Catálogo de requisitos}{6}{subsection.1.5}%
+\contentsline {subsection}{\numberline {1.6}Alcance por etapas}{7}{subsection.1.6}%
+\contentsline {subsection}{\numberline {1.7}Tres poblaciones de camiones, tres tratamientos}{8}{subsection.1.7}%
+\contentsline {subsection}{\numberline {1.8}Lo que queda fuera del alcance}{9}{subsection.1.8}%
+\contentsline {subsection}{\numberline {1.9}Plan de adhesión}{9}{subsection.1.9}%
+\contentsline {subsubsection}{\numberline {1.9.1}Qué se les pide y qué se les ofrece}{10}{subsubsection.1.9.1}%
+\contentsline {subsubsection}{\numberline {1.9.2}Régimen del dispositivo}{10}{subsubsection.1.9.2}%
+\contentsline {subsubsection}{\numberline {1.9.3}Instrumento contractual, enrolamiento y capacitación}{11}{subsubsection.1.9.3}%
+\contentsline {subsubsection}{\numberline {1.9.4}Modalidades y tratamiento de quien no adhiere}{12}{subsubsection.1.9.4}%
+\contentsline {subsubsection}{\numberline {1.9.5}Cómo se mide y qué ocurre si no alcanza}{12}{subsubsection.1.9.5}%
+\contentsline {subsection}{\numberline {1.10}Criterios de aceptación comprometidos}{13}{subsection.1.10}%
+\contentsline {subsection}{\numberline {1.11}Trazabilidad y matriz de cumplimiento}{14}{subsection.1.11}%
+\contentsline {subsection}{\numberline {1.12}Consultas formuladas al mandante}{15}{subsection.1.12}%
+\contentsline {subsection}{\numberline {1.13}Contradicciones detectadas entre los documentos de la licitación}{16}{subsection.1.13}%
+\contentsline {subsection}{\numberline {1.14}Materias pendientes al cierre de esta instancia}{16}{subsection.1.14}%
+\contentsline {section}{Bibliografía}{18}{section*.1}%

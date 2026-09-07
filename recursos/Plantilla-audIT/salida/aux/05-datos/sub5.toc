@@ -1,21 +1,21 @@
 \babel@toc {spanish}{}\relax 
-\contentsline {section}{\numberline {1}Modelo y gestión de datos}{2}{section.1}%
-\contentsline {subsection}{\numberline {1.1}Control de versiones y diagnóstico de evolución técnica}{2}{subsection.1.1}%
-\contentsline {subsubsection}{\numberline {1.1.1}Diagnóstico del modelo inicial y deficiencias superadas}{2}{subsubsection.1.1.1}%
-\contentsline {subsubsection}{\numberline {1.1.2}Cuadro comparativo de innovaciones técnicas}{2}{subsubsection.1.1.2}%
-\contentsline {subsection}{\numberline {1.2}Modelo de dominio y fronteras transaccionales (DDD)}{4}{subsection.1.2}%
-\contentsline {subsection}{\numberline {1.3}Estrategia de Gestión de Datos Maestros (MDM)}{4}{subsection.1.3}%
-\contentsline {subsection}{\numberline {1.4}Calidad de datos bajo ISO/IEC 25012 y catálogo con linaje}{5}{subsection.1.4}%
-\contentsline {subsection}{\numberline {1.5}Persistencia políglota y justificación frente al Teorema CAP}{6}{subsection.1.5}%
-\contentsline {subsection}{\numberline {1.6}Estrategia de desempeño de base de datos}{7}{subsection.1.6}%
-\contentsline {subsection}{\numberline {1.7}Modelo lógico de persistencia y diccionario de datos}{8}{subsection.1.7}%
-\contentsline {subsubsection}{\numberline {1.7.1}Criterios de clasificación de sensibilidad (Ley N.\textordmasculine {} 21.719 y RT-11.10)}{8}{subsubsection.1.7.1}%
-\contentsline {subsubsection}{\numberline {1.7.2}Diccionario de datos de las entidades centrales}{8}{subsubsection.1.7.2}%
-\contentsline {subsection}{\numberline {1.8}Auditoría inalterable de modificaciones (Append-Only CDC)}{12}{subsection.1.8}%
-\contentsline {subsection}{\numberline {1.9}Esquema de respaldo 3-2-1-1-0 y continuidad operacional}{13}{subsection.1.9}%
-\contentsline {subsection}{\numberline {1.10}Migración de datos y saneamiento histórico}{15}{subsection.1.10}%
-\contentsline {subsubsection}{\numberline {1.10.1}Acreditación documental individual de las $\approx 6.000$ vigencias}{15}{subsubsection.1.10.1}%
-\contentsline {subsubsection}{\numberline {1.10.2}Alcance cuantitativo y plan de migración en 4 fases}{15}{subsubsection.1.10.2}%
-\contentsline {subsection}{\numberline {1.11}Protección de datos personales y soberanía (Ley N.\textordmasculine {} 21.719)}{16}{subsection.1.11}%
-\contentsline {subsection}{\numberline {1.12}Analítica y costo real por kilómetro en $\le 24$ horas}{17}{subsection.1.12}%
-\contentsline {section}{Bibliografía}{19}{section*.3}%
+\contentsline {section}{\numberline {1}Modelo y gestión de datos}{4}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Control de versiones y diagnóstico de evolución técnica}{4}{subsection.1.1}%
+\contentsline {subsubsection}{\numberline {1.1.1}Diagnóstico del modelo inicial y deficiencias superadas}{4}{subsubsection.1.1.1}%
+\contentsline {subsubsection}{\numberline {1.1.2}Cuadro comparativo de innovaciones técnicas}{4}{subsubsection.1.1.2}%
+\contentsline {subsection}{\numberline {1.2}Modelo de dominio y fronteras transaccionales (DDD)}{6}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Estrategia de Gestión de Datos Maestros (MDM)}{6}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}Calidad de datos bajo ISO/IEC 25012 y catálogo con linaje}{7}{subsection.1.4}%
+\contentsline {subsection}{\numberline {1.5}Persistencia políglota y justificación frente al Teorema CAP}{8}{subsection.1.5}%
+\contentsline {subsection}{\numberline {1.6}Estrategia de desempeño de base de datos}{11}{subsection.1.6}%
+\contentsline {subsection}{\numberline {1.7}Modelo lógico de persistencia y diccionario de datos}{11}{subsection.1.7}%
+\contentsline {subsubsection}{\numberline {1.7.1}Criterios de clasificación de sensibilidad (Ley N.\textordmasculine {} 21.719 y RT-11.10)}{11}{subsubsection.1.7.1}%
+\contentsline {subsubsection}{\numberline {1.7.2}Diccionario de datos de las entidades centrales}{12}{subsubsection.1.7.2}%
+\contentsline {subsection}{\numberline {1.8}Auditoría inalterable de modificaciones (Append-Only CDC)}{15}{subsection.1.8}%
+\contentsline {subsection}{\numberline {1.9}Esquema de respaldo 3-2-1-1-0 y continuidad operacional}{16}{subsection.1.9}%
+\contentsline {subsection}{\numberline {1.10}Migración de datos y saneamiento histórico}{18}{subsection.1.10}%
+\contentsline {subsubsection}{\numberline {1.10.1}Acreditación documental individual de las $\approx 6.000$ vigencias}{18}{subsubsection.1.10.1}%
+\contentsline {subsubsection}{\numberline {1.10.2}Alcance cuantitativo y plan de migración en 4 fases}{18}{subsubsection.1.10.2}%
+\contentsline {subsection}{\numberline {1.11}Protección de datos personales y soberanía (Ley N.\textordmasculine {} 21.719)}{19}{subsection.1.11}%
+\contentsline {subsection}{\numberline {1.12}Analítica y costo real por kilómetro en $\le 24$ horas}{20}{subsection.1.12}%
+\contentsline {section}{Bibliografía}{23}{section*.3}%

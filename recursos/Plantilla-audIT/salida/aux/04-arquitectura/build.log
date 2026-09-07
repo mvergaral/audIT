@@ -1,6 +1,1354 @@
 Rc files read:
   NONE
 Latexmk: This is Latexmk, John Collins, 15 June 2025. Version 4.87.
-Latexmk: Nothing to do for 'subdocumentos/04-arquitectura/main.tex'.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Changed files or newly in use/created:
+  comun/portada.tex
+  comun/preambulo.tex
+Category 'changed_user':
+  comun/portada.tex
+  comun/preambulo.tex
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -interaction=nonstopmode -halt-on-error -recorder --jobname="sub4" -output-directory="salida/aux/04-arquitectura"  "\def\subdocRuta{subdocumentos/04-arquitectura}\input{subdocumentos/04-arquitectura/main.tex}"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+
+(/home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recursos
+/Plantilla-audIT/subdocumentos/04-arquitectura/main.tex
+(/home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recursos
+/Plantilla-audIT/comun/inf-pucv.cls
+Document Class: inf-pucv 2023/04/24 sgarciad.me v0.1, Clase para la plantilla L
+aTeX con formato escuela INF PUCV.
+(/usr/share/texmf-dist/tex/latex/extsizes/extarticle.cls
+Document Class: extarticle 1996/10/08 v1.0 Non Standard LaTeX document class
+(/usr/share/texmf-dist/tex/latex/base/size12.clo)
+(/usr/share/texmf-dist/tex/latex/base/exscale.sty))
+(/usr/share/texmf-dist/tex/latex/pdfx/pdfx.sty
+(/usr/share/texmf-dist/tex/generic/iftex/ifluatex.sty
+(/usr/share/texmf-dist/tex/generic/iftex/iftex.sty))
+(/usr/share/texmf-dist/tex/generic/iftex/ifpdf.sty)
+(/usr/share/texmf-dist/tex/generic/iftex/ifxetex.sty)
+(/usr/share/texmf-dist/tex/latex/everyshi/everyshi.sty){/var/lib/texmf/fonts/ma
+p/pdftex/updmap/pdftex.map} (/usr/share/texmf-dist/tex/latex/base/inputenc.sty)
+ (/usr/share/texmf-dist/tex/latex/pdfx/l8u-penc.def)
+(/usr/share/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/share/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+
+Package xcolor Warning: Package option `hyperref' is obsolete and ignored on in
+put line 265.
+
+(/usr/share/texmf-dist/tex/latex/graphics-def/pdftex.def)
+(/usr/share/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(/usr/share/texmf-dist/tex/latex/colortbl/colortbl.sty
+(/usr/share/texmf-dist/tex/latex/tools/array.sty))
+(/usr/share/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/share/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/share/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)
+(/usr/share/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/share/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+(/usr/share/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(/usr/share/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/share/texmf-dist/tex/generic/infwarerr/infwarerr.sty)))
+(/usr/share/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/share/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/share/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+(/usr/share/texmf-dist/tex/latex/kvoptions/kvoptions.sty)))
+(/usr/share/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/share/texmf-dist/tex/generic/stringenc/stringenc.sty)
+(/usr/share/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/share/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/share/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/share/texmf-dist/tex/latex/url/url.sty)
+(/usr/share/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/share/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty)))
+(/usr/share/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/share/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+(/usr/share/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty)))
+(/usr/share/texmf-dist/tex/latex/hyperref/psdextra.def)
+(/usr/share/texmf-dist/tex/generic/colorprofiles/colorprofiles.sty
+(/usr/share/texmf-dist/tex/generic/colorprofiles/colorprofiles.tex))
+(/usr/share/texmf-dist/tex/latex/pdfx/AdobeColorProfiles.tex)
+(/usr/share/texmf-dist/tex/latex/pdfx/8bit.def)
+** pdfx: No file sub4.xmpdata . Metadata will be incomplete!
+<<sRGB.icc>> (/usr/share/texmf-dist/tex/latex/pdfx/8bit.def)
+(/usr/share/texmf-dist/tex/generic/pdftex/glyphtounicode.tex)
+(/usr/share/texmf-dist/tex/latex/pdfx/glyphtounicode-cmr.tex)
+(/usr/share/texmf-dist/tex/latex/pdfx/glyphtounicode-ntx.tex)
+(/usr/share/texmf-dist/tex/latex/base/ifthen.sty)
+(/usr/share/texmf-dist/tex/latex/xmpincl/xmpincl.sty)
+(/usr/share/texmf-dist/tex/latex/pdfx/8bit.def)
+Using XMP template file: pdfa.xmp
+<<pdfa.xmpi>>
+
+Package pdfx Warning: Setting all color commands to rgb,
+consistent with the Color Model for PDF/A  on input line 3126.
+
+) (/usr/share/texmf-dist/tex/latex/base/utf8.def
+(/usr/share/texmf-dist/tex/latex/base/omsenc.dfu)
+(/usr/share/texmf-dist/tex/latex/base/ot1enc.dfu)
+(/usr/share/texmf-dist/tex/latex/base/t1enc.dfu)
+(/usr/share/texmf-dist/tex/latex/base/ts1enc.dfu))
+(/home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recursos
+/Plantilla-audIT/comun/styles.sty
+(/usr/share/texmf-dist/tex/latex/base/inputenc.sty)
+(/usr/share/texmf-dist/tex/latex/base/fontenc.sty)
+(/usr/share/texmf-dist/tex/generic/babel/babel.sty
+(/usr/share/texmf-dist/tex/generic/babel/txtbabel.def)
+(/usr/share/texmf-dist/tex/generic/babel/locale/es/babel-spanish.tex)
+(/usr/share/texmf-dist/tex/generic/babel-spanish/spanish.ldf))
+(/usr/share/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/share/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/share/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/share/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/share/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/share/texmf-dist/tex/latex/amsfonts/amsfonts.sty)
+(/usr/share/texmf-dist/tex/latex/amsfonts/amssymb.sty)
+(/usr/share/texmf-dist/tex/latex/pgfplots/pgfplots.sty
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
+(/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/share/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/share/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/share/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)))
+(/usr/share/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/share/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/share/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def)
+(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/pgf.revision.tex)))
+(/usr/share/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/share/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered.code.te
+x)) (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg)
+(/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+(/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def)))
+(/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex))
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code
+.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.te
+x) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics
+.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex))
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
+) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex)
+
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.t
+ex) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.te
+x) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex)
+ (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex)))
+(/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex)
+(/usr/share/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty)
+(/usr/share/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty))
+(/usr/share/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/share/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex))
+(/usr/share/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex))
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.te
+x) (/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
+topaths.code.tex)))
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
+(/usr/share/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric.code.tex))
+(/usr/share/texmf-dist/tex/generic/pgfplots/libs/pgfplotslibrary.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_l
+oader.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_p
+gfutil-common-lists.tex))
+(/usr/share/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.code.tex
+(/usr/share/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststructure
+.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststructure
+ext.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsarray.code.te
+x)
+(/usr/share/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsmatrix.code.t
+ex)
+(/usr/share/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstableshared.code.t
+ex)
+(/usr/share/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsdeque.code.te
+x) (/usr/share/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.code.tex
+(/usr/share/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.data.code.tex))
+(/usr/share/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.verb.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplots.surfshading
+.code.tex
+(/usr/share/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surfshading.
+pgfsys-pdftex.def)))
+(/usr/share/texmf-dist/tex/generic/pgfplots/util/pgfplotscolormap.code.tex
+(/usr/share/texmf-dist/tex/generic/pgfplots/util/pgfplotscolor.code.tex))
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplotsstackedplots.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplotsplothandlers.code.tex
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplothandler.code.tex
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplotimage.code.tex)))
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplots.scaling.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplotscoordprocessing.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplots.errorbars.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplots.markers.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplotsticks.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplots.paths.code.tex)
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
+decorations.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.code.tex))
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
+decorations.pathmorphing.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorati
+ons.pathmorphing.code.tex))
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
+decorations.pathreplacing.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorati
+ons.pathreplacing.code.tex))
+(/usr/share/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.contourlua
+.code.tex))
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
+plotmarks.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmarks.code.tex))
+) (/usr/share/texmf-dist/tex/latex/paracol/paracol.sty)
+(/usr/share/texmf-dist/tex/latex/wrapfig/wrapfig.sty)
+(/usr/share/texmf-dist/tex/latex/tools/multicol.sty)
+(/usr/share/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/share/texmf-dist/tex/generic/iftex/ifvtex.sty))
+(/usr/share/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.fillbetwee
+n.code.tex
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfcontrib/tikzlibraryfillbetween.c
+ode.tex
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
+intersections.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryintersections.code.t
+ex))
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfcontrib/tikzlibrarydecorations.s
+oftclip.code.tex
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfcontrib/pgflibraryfillbetween.co
+de.tex)))
+(/usr/share/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.decoration
+s.softclip.code.tex))
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
+patterns.code.tex
+(/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibrarypatterns.code.tex))
+(/usr/share/texmf-dist/tex/latex/tools/longtable.sty)
+(/usr/share/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(/usr/share/texmf-dist/tex/latex/float/float.sty))
+(/usr/share/texmf-dist/tex/latex/accsupp/accsupp.sty
+(/usr/share/texmf-dist/tex/latex/accsupp/accsupp-pdftex.def))
+(/usr/share/texmf-dist/tex/latex/csquotes/csquotes.sty
+(/usr/share/texmf-dist/tex/latex/csquotes/csquotes.def)
+(/usr/share/texmf-dist/tex/latex/csquotes/csquotes.cfg))
+(/usr/share/texmf-dist/tex/latex/biblatex/biblatex.sty
+(/usr/share/texmf-dist/tex/latex/logreq/logreq.sty
+(/usr/share/texmf-dist/tex/latex/logreq/logreq.def))
+(/usr/share/texmf-dist/tex/latex/biblatex/blx-dm.def)
+(/usr/share/texmf-dist/tex/latex/biblatex-apa/apa.dbx)
+(/usr/share/texmf-dist/tex/latex/biblatex/blx-compat.def)
+(/usr/share/texmf-dist/tex/latex/biblatex/biblatex.def)
+(/usr/share/texmf-dist/tex/latex/biblatex-apa/apa.bbx
+(/usr/share/texmf-dist/tex/latex/biblatex/bbx/standard.bbx))
+(/usr/share/texmf-dist/tex/latex/biblatex-apa/apa.cbx)
+(/usr/share/texmf-dist/tex/latex/biblatex/biblatex.cfg)
+(/usr/share/texmf-dist/tex/latex/l3kernel/expl3.sty
+(/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def))
+(/usr/share/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty
+(/usr/share/texmf-dist/tex/latex/l3packages/xparse/xparse.sty)))
+(/usr/share/texmf-dist/tex/latex/fontawesome5/fontawesome5.sty
+(/usr/share/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty)
+(/usr/share/texmf-dist/tex/latex/fontawesome5/fontawesome5-generic-helper.sty
+(/usr/share/texmf-dist/tex/latex/fontawesome5/fontawesome5-mapping.def)))
+(/usr/share/texmf-dist/tex/latex/koma-script/scrlfile.sty
+(/usr/share/texmf-dist/tex/latex/koma-script/scrlfile-hook.sty
+(/usr/share/texmf-dist/tex/latex/koma-script/scrlogo.sty)))
+(/usr/share/texmf-dist/tex/latex/titlesec/titlesec.sty)
+(/usr/share/texmf-dist/tex/latex/minted/minted.sty
+(/usr/share/texmf-dist/tex/generic/catchfile/catchfile.sty
+(/usr/share/texmf-dist/tex/generic/etexcmds/etexcmds.sty))
+(/usr/share/texmf-dist/tex/latex/fvextra/fvextra.sty
+(/usr/share/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty)
+(/usr/share/texmf-dist/tex/latex/upquote/upquote.sty
+(/usr/share/texmf-dist/tex/latex/base/textcomp.sty))
+(/usr/share/texmf-dist/tex/latex/lineno/lineno.sty
+
+LaTeX Warning: Command \@parboxrestore  has changed.
+               Check if current package is valid.
+
+)
+
+Package fvextra Warning: csquotes should be loaded after fvextra, to avoid a wa
+rning from the lineno package on input line 36.
+
+) (/usr/share/texmf-dist/tex/latex/latex2pydata/latex2pydata.sty)
+(/usr/share/texmf-dist/tex/latex/pgfopts/pgfopts.sty)
+(/usr/share/texmf-dist/tex/latex/tools/shellesc.sty))
+(/usr/share/texmf-dist/tex/latex/caption/caption.sty
+(/usr/share/texmf-dist/tex/latex/caption/caption3.sty)
+(/usr/share/texmf-dist/tex/latex/caption/ltcaption.sty))
+(/usr/share/texmf-dist/tex/latex/chngcntr/chngcntr.sty)
+(/usr/share/texmf-dist/tex/latex/lipsum/lipsum.sty
+(/usr/share/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex))
+(/usr/share/texmf-dist/tex/latex/enumitem/enumitem.sty)
+(/usr/share/texmf-dist/tex/latex/pdfpages/pdfpages.sty
+(/usr/share/texmf-dist/tex/latex/tools/calc.sty)
+(/usr/share/texmf-dist/tex/latex/eso-pic/eso-pic.sty)
+(/usr/share/texmf-dist/tex/latex/pdfpages/pppdftex.def))
+(/usr/share/texmf-dist/tex/latex/tocloft/tocloft.sty)
+(/usr/share/texmf-dist/tex/latex/tools/tabularx.sty))
+(/home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recursos
+/Plantilla-audIT/comun/instancia.tex)
+(/home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recursos
+/Plantilla-audIT/subdocumentos/04-arquitectura/meta.tex)
+(/home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recursos
+/Plantilla-audIT/comun/preambulo.tex
+(/usr/share/texmf-dist/tex/latex/import/import.sty)
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
+calc.code.tex) (/usr/share/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+(/usr/share/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.sty
+(/usr/share/texmf-dist/tex/latex/graphics/lscape.sty)))
+(/usr/share/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty))
+(/home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recursos
+/Plantilla-audIT/comun/portada.tex) (salida/aux/04-arquitectura/sub4.aux)
+(/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+(salida/aux/04-arquitectura/sub4.out) (salida/aux/04-arquitectura/sub4.out)
+Package pgfplots notification 'compat/show suggested version=true': you might b
+enefit from \pgfplotsset{compat=1.18} (current compat level: 1.17).
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+(/usr/share/texmf-dist/tex/latex/biblatex-apa/spanish-apa.lbx
+(/usr/share/texmf-dist/tex/latex/biblatex/lbx/spanish.lbx)
+(/usr/share/texmf-dist/tex/latex/biblatex/lbx/spanish.lbx))
+(salida/aux/04-arquitectura/sub4.bbl)
+
+LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <19> not available
+(Font)              size <17.28> substituted on input line 8.
+
+
+LaTeX Font Warning: Font shape `T1/cmr/bx/n' in size <19> not available
+(Font)              size <17.28> substituted on input line 8.
+
+[1 </home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recur
+sos/Plantilla-audIT/comun/assets/portada.jpeg>]
+
+LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <26> not available
+(Font)              size <24.88> substituted on input line 9.
+
+
+LaTeX Font Warning: Font shape `T1/cmr/bx/n' in size <26> not available
+(Font)              size <24.88> substituted on input line 9.
+
+
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 9--9
+[][][] 
+(/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd)
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[2 </home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recur
+sos/Plantilla-audIT/comun/assets/figuras/Firma.png>]
+(salida/aux/04-arquitectura/sub4.toc)
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[3]
+(/home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recursos
+/Plantilla-audIT/subdocumentos/04-arquitectura/contenido.tex
+
+LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <86> not available
+(Font)              size <51.59> substituted on input line 1.
+
+
+LaTeX Font Warning: Font shape `T1/cmr/bx/n' in size <86> not available
+(Font)              size <51.59> substituted on input line 1.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--17
+[]|\T1/cmr/m/n/10.95 Separación del al-ma-ce-na-mien-to
+
+Underfull \hbox (badness 3657) in paragraph at lines 17--17
+[]|\T1/cmr/m/n/10.95 Integración con el
+
+Underfull \hbox (badness 3229) in paragraph at lines 17--17
+\T1/cmr/m/n/10.95 con-sul-tas y ta-blas
+
+Underfull \hbox (badness 4595) in paragraph at lines 17--18
+[]|\T1/cmr/m/n/10.95 Capa an-ti-co-rrup-ción, obli-ga-to-ria
+
+Underfull \hbox (badness 3291) in paragraph at lines 18--18
+[]|\T1/cmr/m/n/10.95 Ausencia de cos-to
+
+Underfull \hbox (badness 3942) in paragraph at lines 18--18
+\T1/cmr/m/n/10.95 por ki-ló-me-tro por
+
+Underfull \hbox (badness 1939) in paragraph at lines 20--21
+[]|\T1/cmr/m/n/10.95 Seis con-tex-tos de-li-mi-ta-dos, ca-da
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[4]
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[5]
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[6]
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[7]
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[8 </home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recur
+sos/Plantilla-audIT/comun/assets/figuras/LogicaCapas.pdf>]
+Overfull \hbox (5.60898pt too wide) in paragraph at lines 93--93
+[]|\T1/cmr/bx/n/10.95 ADR| 
+
+Underfull \hbox (badness 10000) in paragraph at lines 93--93
+[]|\T1/cmr/bx/n/10.95 Alternativa
+
+Underfull \hbox (badness 3769) in paragraph at lines 94--94
+\T1/cmr/m/n/10.95 sa-len a la vez de
+
+Underfull \hbox (badness 10000) in paragraph at lines 94--94
+\T1/cmr/m/n/10.95 re-gis-tro acu-mu-la-do
+
+Underfull \hbox (badness 10000) in paragraph at lines 94--94
+\T1/cmr/m/n/10.95 mien-tras la to-rre
+
+Underfull \hbox (badness 10000) in paragraph at lines 94--94
+[]|\T1/cmr/m/n/10.95 Contenedores or-
+
+Underfull \hbox (badness 10000) in paragraph at lines 94--94
+\T1/cmr/m/n/10.95 ques-ta-dos con
+
+Underfull \hbox (badness 10000) in paragraph at lines 95--95
+[]|\T1/cmr/m/n/10.95 Asignar un via-je
+
+Underfull \hbox (badness 5231) in paragraph at lines 95--95
+\T1/cmr/m/n/10.95 dis-pa-ra no-ti-fi-ca-ción,
+
+Underfull \hbox (badness 10000) in paragraph at lines 95--95
+\T1/cmr/m/n/10.95 geo-cer-ca, cos-teo
+
+Underfull \hbox (badness 10000) in paragraph at lines 95--95
+[]|\T1/cmr/m/n/10.95 Publicación de
+
+Underfull \hbox (badness 4940) in paragraph at lines 95--95
+[]|\T1/cmr/m/n/10.95 Cadena sín-cro-na
+
+Underfull \hbox (badness 10000) in paragraph at lines 95--96
+[]|\T1/cmr/m/n/10.95 Desacoplamiento
+
+Underfull \hbox (badness 3333) in paragraph at lines 95--96
+\T1/cmr/m/n/10.95 tem-po-ral. El des-
+
+Underfull \hbox (badness 3826) in paragraph at lines 95--96
+\T1/cmr/m/n/10.95 pa-cho con-fir-ma y
+
+Underfull \hbox (badness 1629) in paragraph at lines 95--96
+\T1/cmr/m/n/10.95 li-be-ra al ope-ra-dor
+
+Underfull \hbox (badness 10000) in paragraph at lines 95--96
+\T1/cmr/m/n/10.95 sin es-pe-rar los
+
+Underfull \hbox (badness 10000) in paragraph at lines 96--96
+[]|\T1/cmr/m/n/10.95 Finanzas ne-ce-si-ta
+
+Underfull \hbox (badness 10000) in paragraph at lines 96--96
+\T1/cmr/m/n/10.95 los mis-mos da-tos
+
+Underfull \hbox (badness 10000) in paragraph at lines 96--97
+[]|\T1/cmr/m/n/10.95 RT-05.05 prohí-be
+
+Underfull \hbox (badness 10000) in paragraph at lines 96--97
+\T1/cmr/m/n/10.95 que la con-sul-ta
+
+Underfull \hbox (badness 6675) in paragraph at lines 97--97
+[]|\T1/cmr/m/n/10.95 Conviven 84 clien-
+
+Underfull \hbox (badness 1033) in paragraph at lines 97--97
+\T1/cmr/m/n/10.95 tas, ter-mi-na-les y el
+
+Underfull \hbox (badness 1769) in paragraph at lines 97--97
+\T1/cmr/m/n/10.95 sis-te-ma con-ta-ble de
+
+Underfull \hbox (badness 1708) in paragraph at lines 97--97
+[]|\T1/cmr/m/n/10.95 Identidad fe-de-ra-da
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[9]
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[10]
+Underfull \hbox (badness 3701) in paragraph at lines 123--123
+[]|\T1/cmr/m/n/10.95 El sis-te-ma con-ta-ble de
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 163--163
+[]|\T1/cmr/m/n/10.95 Semirremolque
+
+Underfull \hbox (badness 10000) in paragraph at lines 163--164
+[]|\T1/cmr/m/n/10.95 Decreto Su-pre-mo N.\TS1/cmr/m/n/10.95 º\T1/cmr/m/n/10.95 
+298
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[12]
+Underfull \hbox (badness 6641) in paragraph at lines 172--173
+\T1/cmr/m/n/10.95 res-pal-do en el mo-tor
+
+Underfull \hbox (badness 1648) in paragraph at lines 174--174
+[]|\T1/cmr/m/n/10.95 Fuera del ca-mino
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[13]
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 229--229
+[]|\T1/cmr/bx/n/10.95 Ventana de
+
+Underfull \hbox (badness 1325) in paragraph at lines 230--230
+[]|\T1/cmr/m/n/10.95 Horario ad-mi-
+
+Underfull \hbox (badness 3049) in paragraph at lines 230--230
+\T1/cmr/m/n/10.95 nis-tra-ti-vo, sin
+
+Underfull \hbox (badness 10000) in paragraph at lines 230--230
+\T1/cmr/m/n/10.95 com-pro-mi-so
+
+Underfull \hbox (badness 1194) in paragraph at lines 230--231
+\T1/cmr/m/n/10.95 co-la-do. La ope-ra-
+
+Underfull \hbox (badness 10000) in paragraph at lines 231--231
+[]|\T1/cmr/m/n/10.95 Plataformas de
+
+Underfull \hbox (badness 1043) in paragraph at lines 231--231
+[]|\T1/cmr/m/n/10.95 Posición de los ca-
+
+Underfull \hbox (badness 3396) in paragraph at lines 231--231
+\T1/cmr/m/n/10.95 mio-nes de ter-ce-ros
+
+Underfull \hbox (badness 10000) in paragraph at lines 231--231
+[]|\T1/cmr/m/n/10.95 No de-cla-ra-da
+
+Underfull \hbox (badness 10000) in paragraph at lines 231--232
+[]|\T1/cmr/m/n/10.95 Última po-si-ción
+
+Underfull \hbox (badness 8056) in paragraph at lines 231--232
+\T1/cmr/m/n/10.95 co-no-ci-da con su
+
+Underfull \hbox (badness 10000) in paragraph at lines 232--232
+[]|\T1/cmr/m/n/10.95 61 trac-to-ca-mio-nes,
+
+Underfull \hbox (badness 10000) in paragraph at lines 232--232
+[]|\T1/cmr/m/n/10.95 Sujeta a la
+
+Underfull \hbox (badness 10000) in paragraph at lines 232--232
+\T1/cmr/m/n/10.95 au-to-ri-za-ción
+
+Underfull \hbox (badness 1817) in paragraph at lines 233--233
+[]|\T1/cmr/m/n/10.95 Red de es-ta-cio-nes
+
+Underfull \hbox (badness 10000) in paragraph at lines 233--233
+[]|\T1/cmr/m/n/10.95 Mensual, con
+
+Underfull \hbox (badness 1377) in paragraph at lines 233--233
+\T1/cmr/m/n/10.95 has-ta 40 días
+
+Underfull \hbox (badness 2426) in paragraph at lines 233--234
+[]|\T1/cmr/m/n/10.95 El cos-to se emi-
+
+Underfull \hbox (badness 1571) in paragraph at lines 233--234
+\T1/cmr/m/n/10.95 mar-ca co-mo pen-
+
+Underfull \hbox (badness 10000) in paragraph at lines 234--234
+[]|\T1/cmr/m/n/10.95 Concesionarias de
+
+Underfull \hbox (badness 2894) in paragraph at lines 234--234
+[]|\T1/cmr/m/n/10.95 620.000 pa-sa-das al
+
+Underfull \hbox (badness 1708) in paragraph at lines 235--235
+[]|\T1/cmr/m/n/10.95 Autoridad tri-bu-ta-
+
+Underfull \hbox (badness 1033) in paragraph at lines 235--235
+[]|\T1/cmr/m/n/10.95 128.000 do-cu-men-tos
+
+Underfull \hbox (badness 2753) in paragraph at lines 236--236
+[]|\T1/cmr/m/n/10.95 Clientes y au-to-ri-
+
+Underfull \hbox (badness 10000) in paragraph at lines 236--236
+[]|\T1/cmr/m/n/10.95 Según con-tra-to y
+
+Underfull \hbox (badness 1342) in paragraph at lines 236--237
+[]|\T1/cmr/m/n/10.95 Reintento con re-
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[15]
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[16]
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[17]
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[18 </home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recu
+rsos/Plantilla-audIT/comun/assets/figuras/D3-diagrama12_integracion_acl_erp2013
+.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 316--316
+[]|\T1/cmr/m/n/10.95 Revoluciones y ace-le-ra-cio-nes
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[19]
+Underfull \hbox (badness 10000) in paragraph at lines 336--336
+[]|\T1/cmr/m/n/10.95 Deduplicación, va-li-da-ción de
+
+Underfull \hbox (badness 1931) in paragraph at lines 336--336
+\T1/cmr/m/n/10.95 cas de tiem-po y cru-ce de la
+
+Underfull \hbox (badness 1314) in paragraph at lines 336--336
+\T1/cmr/m/n/10.95 te-le-me-tría con el tra-mo de la
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[20]
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[21 </home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recu
+rsos/Plantilla-audIT/comun/assets/figuras/D3-diagrama13_arquitectura_analitica_
+lakehouse_bi.png (PNG copy)>]
+Underfull \hbox (badness 3229) in paragraph at lines 353--353
+[]|\T1/cmr/m/n/10.95 Pasada efec-ti-va cru-za-da
+
+Underfull \hbox (badness 10000) in paragraph at lines 355--355
+[]|\T1/cmr/m/n/10.95 Mantenimiento y
+
+Underfull \hbox (badness 2913) in paragraph at lines 358--358
+[]|\T1/cmr/m/n/10.95 Kilómetro del odó-me-tro
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[22]
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[23]
+Overfull \hbox (0.7217pt too wide) in paragraph at lines 423--423
+[]|\T1/cmr/bx/n/10.95 Latencia| 
+
+Underfull \hbox (badness 3792) in paragraph at lines 429--430
+[]|\T1/cmr/m/n/10.95 128.000 do-cu-men-tos de
+
+Underfull \hbox (badness 1259) in paragraph at lines 430--431
+[]|\T1/cmr/m/n/10.95 148 trans-por-tis-tas y 84
+
+Underfull \hbox (badness 4582) in paragraph at lines 433--434
+[]|\T1/cmr/m/n/10.95 Asientos y do-cu-men-tos
+
+Underfull \hbox (badness 5105) in paragraph at lines 438--439
+[]|\T1/cmr/m/n/10.95 Retención de RT-05.10
+
+Overfull \hbox (2.56117pt too wide) in paragraph at lines 440--440
+[]|\T1/cmr/m/n/10.95 Inmediata| 
+
+Overfull \hbox (3.49388pt too wide) in paragraph at lines 442--442
+[]|\T1/cmr/m/n/10.95 Presentación| 
+
+Underfull \hbox (badness 2119) in paragraph at lines 442--443
+[]|\T1/cmr/m/n/10.95 Cuatro per-fi-les de RT-
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[24 </home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recu
+rsos/Plantilla-audIT/comun/assets/figuras/D3-diagrama2_arquitectura_tactica_ddd
+.png (PNG copy)>]
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[25]
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[26]
+Underfull \hbox (badness 2626) in paragraph at lines 473--474
+[]|\T1/cmr/m/n/10.95 160 by-tes por mues-tra,
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[27]
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[28 </home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recu
+rsos/Plantilla-audIT/comun/assets/figuras/D3-diagrama11_patrones_resiliencia_de
+spacho.png (PNG copy)>]
+Underfull \hbox (badness 4328) in paragraph at lines 495--495
+[]|\T1/cmr/m/n/10.95 On-premise dis-tri-bui-
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[29]
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[30]
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[31]
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[32]
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[33]
+Underfull \hbox (badness 1371) in paragraph at lines 617--618
+[]|\T1/cmr/m/n/10.95 RT-07.02 exi-ge dis-tan-cia su-fi-
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[34]
+Underfull \hbox (badness 10000) in paragraph at lines 649--649
+[]|\T1/cmr/m/n/10.95 Orquestación y
+
+Underfull \hbox (badness 10000) in paragraph at lines 649--649
+\T1/cmr/m/n/10.95 Ser-vi-ce (AKS)
+
+Underfull \hbox (badness 2970) in paragraph at lines 649--649
+[]|\T1/cmr/m/n/10.95 Ciclo con-ti-nuo
+
+Underfull \hbox (badness 3088) in paragraph at lines 649--650
+[]|\T1/cmr/m/n/10.95 Servicio ad-mi-nis-tra-do PaaS
+
+Underfull \hbox (badness 4819) in paragraph at lines 650--650
+[]|\T1/cmr/m/n/10.95 Motor tran-sac-cio-
+
+Underfull \hbox (badness 10000) in paragraph at lines 650--650
+[]|\T1/cmr/m/n/10.95 PostgreSQL 16
+
+Underfull \hbox (badness 10000) in paragraph at lines 650--650
+\T1/cmr/m/n/10.95 Fle-xi-ble Ser-ver
+
+Underfull \hbox (badness 10000) in paragraph at lines 650--650
+[]|\T1/cmr/m/n/10.95 Noviembre
+
+Underfull \hbox (badness 10000) in paragraph at lines 651--651
+[]|\T1/cmr/m/n/10.95 TimescaleDB
+
+Underfull \hbox (badness 10000) in paragraph at lines 651--651
+\T1/cmr/m/n/10.95 2.15 / Event
+
+Underfull \hbox (badness 1668) in paragraph at lines 651--652
+[]|\T1/cmr/m/n/10.95 Particionamiento men-sual y
+
+Underfull \hbox (badness 1168) in paragraph at lines 652--652
+[]|\T1/cmr/m/n/10.95 Azure Ca-che for
+
+Underfull \hbox (badness 1584) in paragraph at lines 652--653
+[]|\T1/cmr/m/n/10.95 Réplicas en me-mo-ria RAM
+
+Underfull \hbox (badness 10000) in paragraph at lines 653--653
+[]|\T1/cmr/m/n/10.95 SQLite 3 con
+
+Underfull \hbox (badness 10000) in paragraph at lines 653--653
+[]|\T1/cmr/m/n/10.95 Indefinido
+
+Underfull \hbox (badness 10000) in paragraph at lines 654--654
+[]|\T1/cmr/m/n/10.95 Delta La-ke en
+
+Underfull \hbox (badness 10000) in paragraph at lines 655--655
+[]|\T1/cmr/m/n/10.95 Microsoft En-tra
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[35]
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[36]
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
+[]|\T1/cmr/m/n/10.95 Disponible
+
+Underfull \hbox (badness 10000) in paragraph at lines 703--703
+\T1/cmr/m/n/10.95 la po-bla-ción
+
+Underfull \hbox (badness 10000) in paragraph at lines 705--705
+[]|\T1/cmr/m/n/10.95 Parcial, con-
+
+Underfull \hbox (badness 1270) in paragraph at lines 708--708
+[]|\T1/cmr/m/n/10.95 Actualización de firm-wa-re del
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[37]
+Underfull \hbox (badness 1442) in paragraph at lines 722--723
+[]|\T1/cmr/m/n/10.95 Régimen de des-can-sos
+
+Underfull \hbox (badness 3019) in paragraph at lines 724--724
+[]|\T1/cmr/m/n/10.95 Volumen acu-mu-la-do a bor-do
+
+Underfull \hbox (badness 1052) in paragraph at lines 728--729
+[]|\T1/cmr/m/n/10.95 Campaña de me-di-ción
+
+Underfull \hbox (badness 10000) in paragraph at lines 729--729
+[]|\T1/cmr/m/n/10.95 Desconocida
+
+Underfull \hbox (badness 6252) in paragraph at lines 729--729
+\T1/cmr/m/n/10.95 (hi-pó-te-sis de di-
+
+Underfull \hbox (badness 10000) in paragraph at lines 729--729
+\T1/cmr/m/n/10.95 men-sio-na-mien-to:
+
+Underfull \hbox (badness 1275) in paragraph at lines 730--730
+[]|\T1/cmr/m/n/10.95 Modelo de rá-fa-ga
+
+Underfull \hbox (badness 3375) in paragraph at lines 733--734
+[]|\T1/cmr/m/n/10.95 Derivada del nu-me-ral
+
+Underfull \hbox (badness 10000) in paragraph at lines 736--736
+[]|\T1/cmr/m/n/10.95 Parámetros de cor-ta-cir-cui-to,
+
+Underfull \hbox (badness 4084) in paragraph at lines 736--736
+[]|\T1/cmr/m/n/10.95 Declarados en la
+
+Underfull \hbox (badness 1418) in paragraph at lines 737--737
+[]|\T1/cmr/m/n/10.95 No de-cla-ra-da por
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[38]
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[39]
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[40]
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[41 </home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recu
+rsos/Plantilla-audIT/comun/assets/figuras/Contextos.pdf>]
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[42 </home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recu
+rsos/Plantilla-audIT/comun/assets/figuras/LogicaIntegraciones.pdf>]
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[43 </home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recu
+rsos/Plantilla-audIT/comun/assets/figuras/Main.pdf>]
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[44 </home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recu
+rsos/Plantilla-audIT/comun/assets/figuras/Camion.pdf>]
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[45 </home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recu
+rsos/Plantilla-audIT/comun/assets/figuras/DosEjes.pdf>]
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[46 </home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recu
+rsos/Plantilla-audIT/comun/assets/figuras/Flujo.pdf>]
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[47 </home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recu
+rsos/Plantilla-audIT/comun/assets/figuras/LogicaEmplazamiento.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 800--801
+[]|\T1/cmr/m/n/10.95 RT-03.01 y RT-
+
+Underfull \hbox (badness 10000) in paragraph at lines 813--814
+[]|\T1/cmr/m/n/10.95 Autenticación y en-ru-ta-mien-to
+
+Underfull \hbox (badness 2057) in paragraph at lines 814--814
+[]|\T1/cmr/m/n/10.95 Servicio de des-pa-cho y
+
+Underfull \hbox (badness 1565) in paragraph at lines 815--816
+[]|\T1/cmr/m/n/10.95 RT-21.06: asig-nar via-je, emi-tir
+
+Underfull \hbox (badness 3078) in paragraph at lines 816--817
+[]|\T1/cmr/m/n/10.95 Administración cen-tra-li-za-da de
+
+Underfull \hbox (badness 2027) in paragraph at lines 817--818
+[]|\T1/cmr/m/n/10.95 Validación blo-quean-te $\OMS/cmsy/m/n/10.95 ^^T$ \T1/cmr/
+m/n/10.95 30 s
+
+Overfull \hbox (4.86163pt too wide) in paragraph at lines 822--822
+[]|\T1/cmr/m/n/10.95 Integración| 
+
+Overfull \hbox (4.86163pt too wide) in paragraph at lines 823--823
+[]|\T1/cmr/m/n/10.95 Integración| 
+
+Overfull \hbox (4.86163pt too wide) in paragraph at lines 824--824
+[]|\T1/cmr/m/n/10.95 Integración| 
+
+Underfull \hbox (badness 10000) in paragraph at lines 828--828
+[]|\T1/cmr/m/n/10.95 Repositorio do-cu-men-tal
+
+Underfull \hbox (badness 1824) in paragraph at lines 832--833
+[]|\T1/cmr/m/n/10.95 Clave ges-tio-na-da in-de-pen-dien-te
+
+Underfull \hbox (badness 1412) in paragraph at lines 834--834
+[]|\T1/cmr/m/n/10.95 Réplica de re-cu-pe-ra-ción
+
+Underfull \hbox (badness 1910) in paragraph at lines 835--835
+[]|\T1/cmr/m/n/10.95 ERP con-ta-ble he-re-da-do
+
+Underfull \hbox (badness 1789) in paragraph at lines 837--837
+[]|\T1/cmr/m/n/10.95 Custodia de me-dios de
+
+Underfull \hbox (badness 2698) in paragraph at lines 840--841
+\T1/cmr/m/n/10.95 pér-di-da de re-gis-tro. RT-10.05:
+
+Underfull \hbox (badness 1019) in paragraph at lines 844--845
+[]|\T1/cmr/m/n/10.95 Subconjunto por ries-go. Po-bla-
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[48]
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[49]
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[50]
+Overfull \hbox (12.3112pt too wide) in paragraph at lines 849--849
+[]|\T1/cmr/bx/n/10.95 Criticidad| 
+
+Overfull \hbox (26.39209pt too wide) in paragraph at lines 849--849
+[]|\T1/cmr/bx/n/10.95 Conectividad| 
+
+Underfull \hbox (badness 1231) in paragraph at lines 850--850
+[]|\T1/cmr/m/n/10.95 Despacho y asig-
+
+Underfull \hbox (badness 10000) in paragraph at lines 850--850
+[]|\T1/cmr/m/n/10.95 96.000 via-
+
+Underfull \hbox (badness 6842) in paragraph at lines 850--850
+[]|\T1/cmr/m/n/10.95 Sin exi-gen-
+
+Underfull \hbox (badness 2012) in paragraph at lines 850--850
+\T1/cmr/m/n/10.95 cia es-pe-cí-fi-
+
+Underfull \hbox (badness 10000) in paragraph at lines 850--850
+[]|\T1/cmr/m/n/10.95 Requiere
+
+Underfull \hbox (badness 4024) in paragraph at lines 851--851
+[]|\T1/cmr/m/n/10.95 Ventana de
+
+Underfull \hbox (badness 6842) in paragraph at lines 851--851
+[]|\T1/cmr/m/n/10.95 Sin exi-gen-
+
+Underfull \hbox (badness 2012) in paragraph at lines 851--851
+\T1/cmr/m/n/10.95 cia es-pe-cí-fi-
+
+Underfull \hbox (badness 10000) in paragraph at lines 851--852
+[]|\T1/cmr/m/n/10.95 Fijo,
+
+Underfull \hbox (badness 10000) in paragraph at lines 851--852
+\T1/cmr/m/n/10.95 dos
+
+Underfull \hbox (badness 10000) in paragraph at lines 852--852
+[]|\T1/cmr/m/n/10.95 Requiere
+
+Underfull \hbox (badness 10000) in paragraph at lines 853--853
+[]|\T1/cmr/m/n/10.95 Peak de
+
+Underfull \hbox (badness 10000) in paragraph at lines 853--853
+\T1/cmr/m/n/10.95 re-co-ne-xión
+
+Underfull \hbox (badness 6842) in paragraph at lines 853--853
+[]|\T1/cmr/m/n/10.95 Sin exi-gen-
+
+Underfull \hbox (badness 2012) in paragraph at lines 853--853
+\T1/cmr/m/n/10.95 cia es-pe-cí-fi-
+
+Underfull \hbox (badness 10000) in paragraph at lines 853--853
+[]|\T1/cmr/m/n/10.95 Requiere
+
+Underfull \hbox (badness 10000) in paragraph at lines 853--854
+[]|\T1/cmr/m/n/10.95 Elástico
+
+Overfull \hbox (0.58797pt too wide) in paragraph at lines 854--854
+[]|\T1/cmr/m/n/10.95 Particionado
+
+Underfull \hbox (badness 10000) in paragraph at lines 854--854
+[]|\T1/cmr/m/n/10.95 Requiere
+
+Overfull \hbox (8.46513pt too wide) in paragraph at lines 854--855
+[]|\T1/cmr/m/n/10.95 Reservado| 
+
+Underfull \hbox (badness 6842) in paragraph at lines 855--855
+[]|\T1/cmr/m/n/10.95 Sin exi-gen-
+
+Underfull \hbox (badness 2012) in paragraph at lines 855--855
+\T1/cmr/m/n/10.95 cia es-pe-cí-fi-
+
+Underfull \hbox (badness 10000) in paragraph at lines 855--855
+[]|\T1/cmr/m/n/10.95 Requiere
+
+Underfull \hbox (badness 10000) in paragraph at lines 855--856
+[]|\T1/cmr/m/n/10.95 Por
+
+Underfull \hbox (badness 10000) in paragraph at lines 855--856
+\T1/cmr/m/n/10.95 ca-pa
+
+Overfull \hbox (0.69548pt too wide) in paragraph at lines 855--856
+\T1/cmr/m/n/10.95 hot/cold| 
+
+Underfull \hbox (badness 10000) in paragraph at lines 856--856
+[]|\T1/cmr/m/n/10.95 Evidencia
+
+Underfull \hbox (badness 1939) in paragraph at lines 856--856
+[]|\T1/cmr/m/n/10.95 WORM, 10
+
+Underfull \hbox (badness 3148) in paragraph at lines 856--856
+\T1/cmr/m/n/10.95 años si-nies-
+
+Underfull \hbox (badness 10000) in paragraph at lines 856--856
+[]|\T1/cmr/m/n/10.95 Requiere
+
+Underfull \hbox (badness 10000) in paragraph at lines 856--857
+[]|\T1/cmr/m/n/10.95 Por
+
+Underfull \hbox (badness 6842) in paragraph at lines 857--857
+[]|\T1/cmr/m/n/10.95 Sin exi-gen-
+
+Underfull \hbox (badness 2012) in paragraph at lines 857--857
+\T1/cmr/m/n/10.95 cia es-pe-cí-fi-
+
+Underfull \hbox (badness 10000) in paragraph at lines 857--857
+[]|\T1/cmr/m/n/10.95 Requiere
+
+Underfull \hbox (badness 10000) in paragraph at lines 858--858
+[]|\T1/cmr/m/n/10.95 Espejo de
+
+Underfull \hbox (badness 6842) in paragraph at lines 858--858
+[]|\T1/cmr/m/n/10.95 Sin exi-gen-
+
+Underfull \hbox (badness 2012) in paragraph at lines 858--858
+\T1/cmr/m/n/10.95 cia es-pe-cí-fi-
+
+Underfull \hbox (badness 10000) in paragraph at lines 858--858
+[]|\T1/cmr/m/n/10.95 Enlace
+
+Underfull \hbox (badness 10000) in paragraph at lines 858--858
+\T1/cmr/m/n/10.95 en-tre
+
+Underfull \hbox (badness 10000) in paragraph at lines 858--859
+[]|\T1/cmr/m/n/10.95 Activo-
+
+Overfull \hbox (1.64725pt too wide) in paragraph at lines 859--859
+[]|\T1/cmr/m/n/10.95 Contabilidad
+
+Underfull \hbox (badness 10000) in paragraph at lines 859--859
+[]|\T1/cmr/m/n/10.95 Único
+
+Underfull \hbox (badness 10000) in paragraph at lines 859--859
+\T1/cmr/m/n/10.95 emi-sor tri-
+
+Overfull \hbox (4.53613pt too wide) in paragraph at lines 859--860
+[]|\T1/cmr/m/n/10.95 Existente| 
+
+Underfull \hbox (badness 6842) in paragraph at lines 860--860
+[]|\T1/cmr/m/n/10.95 Sin exi-gen-
+
+Underfull \hbox (badness 2012) in paragraph at lines 860--860
+\T1/cmr/m/n/10.95 cia es-pe-cí-fi-
+
+Underfull \hbox (badness 6157) in paragraph at lines 860--861
+[]|\T1/cmr/m/n/10.95 4 ga-bi-
+
+Underfull \hbox (badness 10000) in paragraph at lines 861--861
+[]|\T1/cmr/m/n/10.95 Opera
+
+Underfull \hbox (badness 10000) in paragraph at lines 861--861
+\T1/cmr/m/n/10.95 sin co-
+
+Underfull \hbox (badness 6842) in paragraph at lines 862--862
+[]|\T1/cmr/m/n/10.95 Sin exi-gen-
+
+Underfull \hbox (badness 2012) in paragraph at lines 862--862
+\T1/cmr/m/n/10.95 cia es-pe-cí-fi-
+
+Underfull \hbox (badness 10000) in paragraph at lines 862--862
+[]|\T1/cmr/m/n/10.95 Opera
+
+Underfull \hbox (badness 10000) in paragraph at lines 862--862
+\T1/cmr/m/n/10.95 sin co-
+
+Underfull \hbox (badness 1189) in paragraph at lines 862--863
+\T1/cmr/m/n/10.95 to mar-
+
+Underfull \hbox (badness 2875) in paragraph at lines 863--863
+[]|$\OMS/cmsy/m/n/10.95 ^^T$ \T1/cmr/m/n/10.95 de-ce-nas
+
+Underfull \hbox (badness 6842) in paragraph at lines 863--863
+[]|\T1/cmr/m/n/10.95 Sin exi-gen-
+
+Underfull \hbox (badness 2012) in paragraph at lines 863--863
+\T1/cmr/m/n/10.95 cia es-pe-cí-fi-
+
+Underfull \hbox (badness 10000) in paragraph at lines 863--863
+[]|\T1/cmr/m/n/10.95 Sin co-
+
+Underfull \hbox (badness 10000) in paragraph at lines 863--863
+\T1/cmr/m/n/10.95 ber-tu-ra
+
+Underfull \hbox (badness 10000) in paragraph at lines 863--864
+[]|\T1/cmr/m/n/10.95 Por
+
+Underfull \hbox (badness 10000) in paragraph at lines 864--864
+[]|\T1/cmr/m/n/10.95 Media,
+
+Underfull \hbox (badness 10000) in paragraph at lines 864--864
+\T1/cmr/m/n/10.95 no blo-
+
+Underfull \hbox (badness 10000) in paragraph at lines 864--864
+[]|\T1/cmr/m/n/10.95 454 po-ten-
+
+Overfull \hbox (14.10675pt too wide) in paragraph at lines 864--864
+[]|\T1/cmr/m/n/10.95 Consentimiento
+
+Underfull \hbox (badness 10000) in paragraph at lines 864--864
+[]|\T1/cmr/m/n/10.95 Requiere
+
+Underfull \hbox (badness 1968) in paragraph at lines 864--865
+[]|\T1/cmr/m/n/10.95 Por de-
+
+Overfull \hbox (34.8106pt too wide) in alignment at lines 848--865
+ [] [] [] [] [] [] [] [] 
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[51]
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[52]
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[53])
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[54]
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[55] (salida/aux/04-arquitectura/sub4.aux)
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 34.41pt have occurred.
+
+ )
+(see the transcript file for additional information) </home/carlosa/.texlive/te
+xmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk> </home/carlosa/.texlive/tex
+mf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </home/carlosa/.texlive/texm
+f-var/fonts/pk/ljfour/jknappen/ec/ecbx2986.600pk> </home/carlosa/.texlive/texmf
+-var/fonts/pk/ljfour/jknappen/ec/ecbx5159.600pk> </home/carlosa/.texlive/texmf-
+var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/carlosa/.texlive/texmf-v
+ar/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/carlosa/.texlive/texmf-va
+r/fonts/pk/ljfour/jknappen/ec/ecrm0600.600pk> </home/carlosa/.texlive/texmf-var
+/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk> </home/carlosa/.texlive/texmf-var/
+fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </home/carlosa/.texlive/texmf-var/f
+onts/pk/ljfour/jknappen/ec/ecbx1000.600pk> </home/carlosa/.texlive/texmf-var/fo
+nts/pk/ljfour/jknappen/ec/tcrm1095.600pk> </home/carlosa/.texlive/texmf-var/fon
+ts/pk/ljfour/jknappen/ec/ecrm1095.600pk> </home/carlosa/.texlive/texmf-var/font
+s/pk/ljfour/jknappen/ec/ecbx2488.600pk> </home/carlosa/.texlive/texmf-var/fonts
+/pk/ljfour/jknappen/ec/ecbx1728.600pk> </home/carlosa/.texlive/texmf-var/fonts/
+pk/ljfour/jknappen/ec/tcbx1095.600pk> </home/carlosa/.texlive/texmf-var/fonts/p
+k/ljfour/jknappen/ec/ecbx1095.600pk></usr/share/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr1
+2.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on salida/aux/04-arquitectura/sub4.pdf (55 pages, 1774084 bytes)
+.
+Transcript written on salida/aux/04-arquitectura/sub4.log.
+Latexmk: Getting log file 'salida/aux/04-arquitectura/sub4.log'
+Latexmk: Examining 'salida/aux/04-arquitectura/sub4.fls'
+Latexmk: Examining 'salida/aux/04-arquitectura/sub4.log'
+Latexmk: Found input bbl file 'salida/aux/04-arquitectura/sub4.bbl'
+Latexmk: Log file says output to 'salida/aux/04-arquitectura/sub4.pdf'
+Latexmk: Log file says output to 'salida/aux/04-arquitectura/sub4.pdf'
+Latexmk: Using biber to make bibliography file(s).
+Latexmk: Bibliography file(s) from .bcf file:
+  comun/referencias.bib
+Sources for biber
+  comun/referencias.bib
+  salida/aux/04-arquitectura/sub4.bcf
 Latexmk: All targets (salida/aux/04-arquitectura/sub4.pdf) are up-to-date
 

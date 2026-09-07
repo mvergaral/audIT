@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.8.26)  7 SEP 2026 01:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.8.26)  7 SEP 2026 03:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2197,44 +2197,65 @@ LaTeX Font Warning: Font shape `T1/cmr/bx/n' in size <19> not available
  </home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recurso
 s/Plantilla-audIT/comun/assets/portada.jpeg>]
 
-LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <28> not available
-(Font)              size <29.86> substituted on input line 9.
+LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <26> not available
+(Font)              size <24.88> substituted on input line 9.
 
 
-LaTeX Font Warning: Font shape `T1/cmr/bx/n' in size <28> not available
-(Font)              size <29.86> substituted on input line 9.
+LaTeX Font Warning: Font shape `T1/cmr/bx/n' in size <26> not available
+(Font)              size <24.88> substituted on input line 9.
 
 
 Overfull \hbox (28.45274pt too wide) in paragraph at lines 9--9
 [][][] 
  []
 
-[2
-
-] (salida/aux/04-arquitectura/sub4.toc
-LaTeX Info: Redefining \sptext on input line 1.
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 2.
-
+LaTeX Font Info:    Trying to load font information for U+msa on input line 9.
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 2.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 9.
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-))
+)
+<comun/assets/figuras/Firma.png, id=162, 550.055pt x 299.1175pt>
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 9.
+(pdftex.def)             Requested size: 68.0181pt x 36.98866pt.
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 9.
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[2
+
+ </home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recurso
+s/Plantilla-audIT/comun/assets/figuras/Firma.png>]
+(salida/aux/04-arquitectura/sub4.toc
+LaTeX Info: Redefining \sptext on input line 1.
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+)
 \tf@toc=\write8
 \openout8 = `sub4.toc'.
 
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 9.
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.9 \fichaSubdocumento
-                       [1
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[3
 
 ]
 (/home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recursos
@@ -2284,25 +2305,76 @@ Underfull \hbox (badness 1939) in paragraph at lines 20--21
 
 
 ignored: Infinite glue shrinkage found in box being split
-pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.21 \end{tablaAudit}
-                      [2
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 21.
+
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[4
 
 ]
-ignored: Infinite glue shrinkage found in box being split [3]
-ignored: Infinite glue shrinkage fo
-und in box being split [4]
-<comun/assets/figuras/LogicaCapas.pdf, id=266, 845.40843pt x 597.73312pt>
+ignored: Infinite glue shrinkage found in box being split
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 40.
+
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[5]
+ignored: Infinite glue shrinkage found in box being split
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 56.
+
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[6]
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 58.
+
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[7]
+<comun/assets/figuras/LogicaCapas.pdf, id=280, 845.40843pt x 597.73312pt>
 File: comun/assets/figuras/LogicaCapas.pdf Graphic file (type pdf)
 <use comun/assets/figuras/LogicaCapas.pdf>
 Package pdftex.def Info: comun/assets/figuras/LogicaCapas.pdf  used on input li
 ne 58.
-(pdftex.def)             Requested size: 457.80374pt x 323.68314pt.
- [5 </home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recu
-rsos/Plantilla-audIT/comun/assets/figuras/LogicaCapas.pdf>]
+(pdftex.def)             Requested size: 530.95894pt x 375.40642pt.
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 58.
+
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[8 </home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recur
+sos/Plantilla-audIT/comun/assets/figuras/LogicaCapas.pdf>]
 Overfull \hbox (5.60898pt too wide) in paragraph at lines 93--93
 []|\T1/cmr/bx/n/10.95 ADR| 
  []
@@ -2427,13 +2499,49 @@ Underfull \hbox (badness 1708) in paragraph at lines 97--97
 []|\T1/cmr/m/n/10.95 Identidad fe-de-ra-da
  []
 
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 98.
 
-ignored: Infinite glue shrinkage found in box being split [6] [7]
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[9
+
+
+
+
+]
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 112
+.
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[10]
 Underfull \hbox (badness 3701) in paragraph at lines 123--123
 []|\T1/cmr/m/n/10.95 El sis-te-ma con-ta-ble de
  []
 
-[8]
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 143
+.
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[11]
 Underfull \hbox (badness 10000) in paragraph at lines 163--163
 []|\T1/cmr/m/n/10.95 Semirremolque
  []
@@ -2445,7 +2553,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 163--164
  []
 
 
-ignored: Infinite glue shrinkage found in box being split [9]
+ignored: Infinite glue shrinkage found in box being split
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 164
+.
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[12]
 Underfull \hbox (badness 6641) in paragraph at lines 172--173
 \T1/cmr/m/n/10.95 res-pal-do en el mo-tor
  []
@@ -2455,7 +2574,29 @@ Underfull \hbox (badness 1648) in paragraph at lines 174--174
 []|\T1/cmr/m/n/10.95 Fuera del ca-mino
  []
 
-[10] [11]
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 180
+.
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[13]
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 216
+.
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[14]
 Underfull \hbox (badness 10000) in paragraph at lines 229--229
 []|\T1/cmr/bx/n/10.95 Ventana de
  []
@@ -2586,8 +2727,31 @@ Underfull \hbox (badness 1342) in paragraph at lines 236--237
  []
 
 
-ignored: Infinite glue shrinkage found in box being split [12] [13]
-<comun/assets/figuras/D3-diagrama12_integracion_acl_erp2013.png, id=333, 1030.8
+ignored: Infinite glue shrinkage found in box being split
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 237
+.
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[15]
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 267
+.
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[16]
+<comun/assets/figuras/D3-diagrama12_integracion_acl_erp2013.png, id=346, 1030.8
 5126pt x 2416.02625pt>
 File: comun/assets/figuras/D3-diagrama12_integracion_acl_erp2013.png Graphic fi
 le (type png)
@@ -2595,15 +2759,49 @@ le (type png)
 Package pdftex.def Info: comun/assets/figuras/D3-diagrama12_integracion_acl_erp
 2013.png  used on input line 281.
 (pdftex.def)             Requested size: 222.79268pt x 522.16357pt.
- [14] [15 </home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/rep
-o/recursos/Plantilla-audIT/comun/assets/figuras/D3-diagrama12_integracion_acl_e
-rp2013.png (PNG copy)>]
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 282
+.
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[17]
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 291
+.
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[18 </home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recu
+rsos/Plantilla-audIT/comun/assets/figuras/D3-diagrama12_integracion_acl_erp2013
+.png (PNG copy)>]
 Underfull \hbox (badness 10000) in paragraph at lines 316--316
 []|\T1/cmr/m/n/10.95 Revoluciones y ace-le-ra-cio-nes
  []
 
 
-ignored: Infinite glue shrinkage found in box being split [16]
+ignored: Infinite glue shrinkage found in box being split
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 320
+.
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[19]
 Underfull \hbox (badness 10000) in paragraph at lines 336--336
 []|\T1/cmr/m/n/10.95 Deduplicación, va-li-da-ción de
  []
@@ -2619,7 +2817,7 @@ Underfull \hbox (badness 1314) in paragraph at lines 336--336
  []
 
 <comun/assets/figuras/D3-diagrama13_arquitectura_analitica_lakehouse_bi.png, id
-=349, 1280.785pt x 3297.31876pt>
+=363, 1280.785pt x 3297.31876pt>
 File: comun/assets/figuras/D3-diagrama13_arquitectura_analitica_lakehouse_bi.pn
 g Graphic file (type png)
 <use comun/assets/figuras/D3-diagrama13_arquitectura_analitica_lakehouse_bi.png
@@ -2627,9 +2825,31 @@ g Graphic file (type png)
 Package pdftex.def Info: comun/assets/figuras/D3-diagrama13_arquitectura_analit
 ica_lakehouse_bi.png  used on input line 340.
 (pdftex.def)             Requested size: 202.81912pt x 522.14798pt.
-[17] [18 </home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo
-/recursos/Plantilla-audIT/comun/assets/figuras/D3-diagrama13_arquitectura_anali
-tica_lakehouse_bi.png (PNG copy)>]
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 341
+.
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[20]
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 349
+.
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[21 </home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recu
+rsos/Plantilla-audIT/comun/assets/figuras/D3-diagrama13_arquitectura_analitica_
+lakehouse_bi.png (PNG copy)>]
 Underfull \hbox (badness 3229) in paragraph at lines 353--353
 []|\T1/cmr/m/n/10.95 Pasada efec-ti-va cru-za-da
  []
@@ -2644,8 +2864,30 @@ Underfull \hbox (badness 2913) in paragraph at lines 358--358
 []|\T1/cmr/m/n/10.95 Kilómetro del odó-me-tro
  []
 
-[19] [20]
-<comun/assets/figuras/D3-diagrama2_arquitectura_tactica_ddd.png, id=371, 1533.7
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 380
+.
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[22]
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 409
+.
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[23]
+<comun/assets/figuras/D3-diagrama2_arquitectura_tactica_ddd.png, id=384, 1533.7
 3pt x 1056.94875pt>
 File: comun/assets/figuras/D3-diagrama2_arquitectura_tactica_ddd.png Graphic fi
 le (type png)
@@ -2693,19 +2935,63 @@ Underfull \hbox (badness 2119) in paragraph at lines 442--443
 []|\T1/cmr/m/n/10.95 Cuatro per-fi-les de RT-
  []
 
-[21 </home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recu
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 445
+.
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[24 </home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recu
 rsos/Plantilla-audIT/comun/assets/figuras/D3-diagrama2_arquitectura_tactica_ddd
 .png (PNG copy)>]
-ignored: Infinite glue shrinkage found in box being split [22]
-ignored: Infinite 
-glue shrinkage found in box being split [23]
+ignored: Infinite glue shrinkage found in box being split
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 445
+.
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[25]
+ignored: Infinite glue shrinkage found in box being split
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 464
+.
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[26]
 Underfull \hbox (badness 2626) in paragraph at lines 473--474
 []|\T1/cmr/m/n/10.95 160 by-tes por mues-tra,
  []
 
 
-ignored: Infinite glue shrinkage found in box being split [24]
-<comun/assets/figuras/D3-diagrama11_patrones_resiliencia_despacho.png, id=395, 
+ignored: Infinite glue shrinkage found in box being split
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 475
+.
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[27]
+<comun/assets/figuras/D3-diagrama11_patrones_resiliencia_despacho.png, id=407, 
 1911.14pt x 1154.3125pt>
 File: comun/assets/figuras/D3-diagrama11_patrones_resiliencia_despacho.png Grap
 hic file (type png)
@@ -2713,20 +2999,99 @@ hic file (type png)
 Package pdftex.def Info: comun/assets/figuras/D3-diagrama11_patrones_resilienci
 a_despacho.png  used on input line 482.
 (pdftex.def)             Requested size: 457.77896pt x 276.49464pt.
- [25 </home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/rec
-ursos/Plantilla-audIT/comun/assets/figuras/D3-diagrama11_patrones_resiliencia_d
-espacho.png (PNG copy)>]
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 490
+.
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[28 </home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recu
+rsos/Plantilla-audIT/comun/assets/figuras/D3-diagrama11_patrones_resiliencia_de
+spacho.png (PNG copy)>]
 Underfull \hbox (badness 4328) in paragraph at lines 495--495
 []|\T1/cmr/m/n/10.95 On-premise dis-tri-bui-
  []
 
-[26] [27] [28] [29]
-ignored: Infinite glue shrinkage found in box being split [30]
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 522
+.
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[29]
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 535
+.
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[30]
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 562
+.
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[31]
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 591
+.
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[32]
+ignored: Infinite glue shrinkage found in box being split
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 606
+.
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[33]
 Underfull \hbox (badness 1371) in paragraph at lines 617--618
 []|\T1/cmr/m/n/10.95 RT-07.02 exi-ge dis-tan-cia su-fi-
  []
 
-[31]
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 638
+.
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[34]
 Underfull \hbox (badness 10000) in paragraph at lines 649--649
 []|\T1/cmr/m/n/10.95 Orquestación y
  []
@@ -2812,7 +3177,30 @@ Underfull \hbox (badness 10000) in paragraph at lines 655--655
  []
 
 
-ignored: Infinite glue shrinkage found in box being split [32] [33]
+ignored: Infinite glue shrinkage found in box being split
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 656
+.
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[35]
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 696
+.
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[36]
 Underfull \hbox (badness 10000) in paragraph at lines 703--703
 []|\T1/cmr/m/n/10.95 Disponible
  []
@@ -2832,7 +3220,17 @@ Underfull \hbox (badness 1270) in paragraph at lines 708--708
 []|\T1/cmr/m/n/10.95 Actualización de firm-wa-re del
  []
 
-[34]
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 716
+.
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[37]
 Underfull \hbox (badness 1442) in paragraph at lines 722--723
 []|\T1/cmr/m/n/10.95 Régimen de des-can-sos
  []
@@ -2845,6 +3243,21 @@ Underfull \hbox (badness 3019) in paragraph at lines 724--724
 
 Underfull \hbox (badness 1052) in paragraph at lines 728--729
 []|\T1/cmr/m/n/10.95 Campaña de me-di-ción
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 729--729
+[]|\T1/cmr/m/n/10.95 Desconocida
+ []
+
+
+Underfull \hbox (badness 6252) in paragraph at lines 729--729
+\T1/cmr/m/n/10.95 (hi-pó-te-sis de di-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 729--729
+\T1/cmr/m/n/10.95 men-sio-na-mien-to:
  []
 
 
@@ -2873,103 +3286,205 @@ Underfull \hbox (badness 1418) in paragraph at lines 737--737
  []
 
 
-ignored: Infinite glue shrinkage found in box being split [35] [36]
-<comun/assets/figuras/Contextos.pdf, id=469, 845.40843pt x 597.73312pt>
+ignored: Infinite glue shrinkage found in box being split
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 738
+.
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[38]
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 756
+.
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[39]
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 772
+.
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[40]
+<comun/assets/figuras/Contextos.pdf, id=489, 845.40843pt x 597.73312pt>
 File: comun/assets/figuras/Contextos.pdf Graphic file (type pdf)
 <use comun/assets/figuras/Contextos.pdf>
 Package pdftex.def Info: comun/assets/figuras/Contextos.pdf  used on input line
- 770.
-(pdftex.def)             Requested size: 457.80374pt x 323.68314pt.
-<comun/assets/figuras/LogicaIntegraciones.pdf, id=470, 845.40843pt x 597.73312p
+ 772.
+(pdftex.def)             Requested size: 530.95894pt x 375.40642pt.
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 772
+.
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[41 </home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recu
+rsos/Plantilla-audIT/comun/assets/figuras/Contextos.pdf>]
+<comun/assets/figuras/LogicaIntegraciones.pdf, id=516, 845.40843pt x 597.73312p
 t>
 File: comun/assets/figuras/LogicaIntegraciones.pdf Graphic file (type pdf)
 <use comun/assets/figuras/LogicaIntegraciones.pdf>
 Package pdftex.def Info: comun/assets/figuras/LogicaIntegraciones.pdf  used on 
-input line 772.
-(pdftex.def)             Requested size: 457.80374pt x 323.68314pt.
- [37 </home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/rec
-ursos/Plantilla-audIT/comun/assets/figuras/Contextos.pdf>]
-<comun/assets/figuras/Main.pdf, id=500, 845.40843pt x 597.73312pt>
+input line 774.
+(pdftex.def)             Requested size: 530.95894pt x 375.40642pt.
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 774
+.
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[42 </home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recu
+rsos/Plantilla-audIT/comun/assets/figuras/LogicaIntegraciones.pdf>]
+<comun/assets/figuras/Main.pdf, id=543, 845.40843pt x 597.73312pt>
 File: comun/assets/figuras/Main.pdf Graphic file (type pdf)
 <use comun/assets/figuras/Main.pdf>
-Package pdftex.def Info: comun/assets/figuras/Main.pdf  used on input line 774.
+Package pdftex.def Info: comun/assets/figuras/Main.pdf  used on input line 776.
 
-(pdftex.def)             Requested size: 457.80374pt x 323.68314pt.
- [38 </home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/rec
-ursos/Plantilla-audIT/comun/assets/figuras/LogicaIntegraciones.pdf>]
-<comun/assets/figuras/Camion.pdf, id=527, 845.40843pt x 597.73312pt>
+(pdftex.def)             Requested size: 530.95894pt x 375.40642pt.
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 776
+.
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[43 </home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recu
+rsos/Plantilla-audIT/comun/assets/figuras/Main.pdf>]
+<comun/assets/figuras/Camion.pdf, id=570, 845.40843pt x 597.73312pt>
 File: comun/assets/figuras/Camion.pdf Graphic file (type pdf)
 <use comun/assets/figuras/Camion.pdf>
 Package pdftex.def Info: comun/assets/figuras/Camion.pdf  used on input line 77
-6.
-(pdftex.def)             Requested size: 457.80374pt x 323.68314pt.
- [39 </home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/rec
-ursos/Plantilla-audIT/comun/assets/figuras/Main.pdf>]
-<comun/assets/figuras/DosEjes.pdf, id=553, 845.40843pt x 597.73312pt>
+8.
+(pdftex.def)             Requested size: 530.95894pt x 375.40642pt.
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 778
+.
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[44 </home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recu
+rsos/Plantilla-audIT/comun/assets/figuras/Camion.pdf>]
+<comun/assets/figuras/DosEjes.pdf, id=596, 845.40843pt x 597.73312pt>
 File: comun/assets/figuras/DosEjes.pdf Graphic file (type pdf)
 <use comun/assets/figuras/DosEjes.pdf>
 Package pdftex.def Info: comun/assets/figuras/DosEjes.pdf  used on input line 7
-78.
-(pdftex.def)             Requested size: 457.80374pt x 323.68314pt.
- [40 </home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/rec
-ursos/Plantilla-audIT/comun/assets/figuras/Camion.pdf>]
-<comun/assets/figuras/Flujo.pdf, id=579, 845.40843pt x 597.73312pt>
+80.
+(pdftex.def)             Requested size: 530.95894pt x 375.40642pt.
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 780
+.
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[45 </home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recu
+rsos/Plantilla-audIT/comun/assets/figuras/DosEjes.pdf>]
+<comun/assets/figuras/Flujo.pdf, id=629, 845.40843pt x 597.73312pt>
 File: comun/assets/figuras/Flujo.pdf Graphic file (type pdf)
 <use comun/assets/figuras/Flujo.pdf>
-Package pdftex.def Info: comun/assets/figuras/Flujo.pdf  used on input line 780
+Package pdftex.def Info: comun/assets/figuras/Flujo.pdf  used on input line 782
 .
-(pdftex.def)             Requested size: 457.80374pt x 323.68314pt.
- [41 </home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/rec
-ursos/Plantilla-audIT/comun/assets/figuras/DosEjes.pdf>]
-<comun/assets/figuras/LogicaEmplazamiento.pdf, id=613, 845.40843pt x 597.73312p
+(pdftex.def)             Requested size: 530.95894pt x 375.40642pt.
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 782
+.
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[46 </home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recu
+rsos/Plantilla-audIT/comun/assets/figuras/Flujo.pdf>]
+<comun/assets/figuras/LogicaEmplazamiento.pdf, id=662, 845.40843pt x 597.73312p
 t>
 File: comun/assets/figuras/LogicaEmplazamiento.pdf Graphic file (type pdf)
 <use comun/assets/figuras/LogicaEmplazamiento.pdf>
 Package pdftex.def Info: comun/assets/figuras/LogicaEmplazamiento.pdf  used on 
-input line 782.
-(pdftex.def)             Requested size: 457.80374pt x 323.68314pt.
- [42 </home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/rec
-ursos/Plantilla-audIT/comun/assets/figuras/Flujo.pdf>] [43 </home/carlosa/Docum
-entos/Universidad/Actual/FEP/Proyecto/Informe/repo/recursos/Plantilla-audIT/com
-un/assets/figuras/LogicaEmplazamiento.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 798--799
+input line 784.
+(pdftex.def)             Requested size: 530.95894pt x 375.40642pt.
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 784
+.
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[47 </home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recu
+rsos/Plantilla-audIT/comun/assets/figuras/LogicaEmplazamiento.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 800--801
 []|\T1/cmr/m/n/10.95 RT-03.01 y RT-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 811--812
+Underfull \hbox (badness 10000) in paragraph at lines 813--814
 []|\T1/cmr/m/n/10.95 Autenticación y en-ru-ta-mien-to
  []
 
 
-Underfull \hbox (badness 2057) in paragraph at lines 812--812
+Underfull \hbox (badness 2057) in paragraph at lines 814--814
 []|\T1/cmr/m/n/10.95 Servicio de des-pa-cho y
  []
 
 
-Underfull \hbox (badness 1565) in paragraph at lines 813--814
+Underfull \hbox (badness 1565) in paragraph at lines 815--816
 []|\T1/cmr/m/n/10.95 RT-21.06: asig-nar via-je, emi-tir
  []
 
 
-Underfull \hbox (badness 3078) in paragraph at lines 814--815
+Underfull \hbox (badness 3078) in paragraph at lines 816--817
 []|\T1/cmr/m/n/10.95 Administración cen-tra-li-za-da de
  []
 
 
-Underfull \hbox (badness 2027) in paragraph at lines 815--816
+Underfull \hbox (badness 2027) in paragraph at lines 817--818
 []|\T1/cmr/m/n/10.95 Validación blo-quean-te $\OMS/cmsy/m/n/10.95 ^^T$ \T1/cmr/
 m/n/10.95 30 s
- []
-
-
-Overfull \hbox (4.86163pt too wide) in paragraph at lines 820--820
-[]|\T1/cmr/m/n/10.95 Integración| 
- []
-
-
-Overfull \hbox (4.86163pt too wide) in paragraph at lines 821--821
-[]|\T1/cmr/m/n/10.95 Integración| 
  []
 
 
@@ -2978,103 +3493,144 @@ Overfull \hbox (4.86163pt too wide) in paragraph at lines 822--822
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 826--826
+Overfull \hbox (4.86163pt too wide) in paragraph at lines 823--823
+[]|\T1/cmr/m/n/10.95 Integración| 
+ []
+
+
+Overfull \hbox (4.86163pt too wide) in paragraph at lines 824--824
+[]|\T1/cmr/m/n/10.95 Integración| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 828--828
 []|\T1/cmr/m/n/10.95 Repositorio do-cu-men-tal
  []
 
 
-Underfull \hbox (badness 1824) in paragraph at lines 830--831
+Underfull \hbox (badness 1824) in paragraph at lines 832--833
 []|\T1/cmr/m/n/10.95 Clave ges-tio-na-da in-de-pen-dien-te
  []
 
 
-Underfull \hbox (badness 1412) in paragraph at lines 832--832
+Underfull \hbox (badness 1412) in paragraph at lines 834--834
 []|\T1/cmr/m/n/10.95 Réplica de re-cu-pe-ra-ción
  []
 
 
-Underfull \hbox (badness 1910) in paragraph at lines 833--833
+Underfull \hbox (badness 1910) in paragraph at lines 835--835
 []|\T1/cmr/m/n/10.95 ERP con-ta-ble he-re-da-do
  []
 
 
-Underfull \hbox (badness 1789) in paragraph at lines 835--835
+Underfull \hbox (badness 1789) in paragraph at lines 837--837
 []|\T1/cmr/m/n/10.95 Custodia de me-dios de
  []
 
 
-Underfull \hbox (badness 2698) in paragraph at lines 838--839
+Underfull \hbox (badness 2698) in paragraph at lines 840--841
 \T1/cmr/m/n/10.95 pér-di-da de re-gis-tro. RT-10.05:
  []
 
 
-Underfull \hbox (badness 1019) in paragraph at lines 842--843
+Underfull \hbox (badness 1019) in paragraph at lines 844--845
 []|\T1/cmr/m/n/10.95 Subconjunto por ries-go. Po-bla-
  []
 
-[44
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 846
+.
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[48
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ]
-ignored: Infinite glue shrinkage found in box being split [45]
-ignored: Infinite glue shrinkage f
-ound in box being split [46]
-Overfull \hbox (12.3112pt too wide) in paragraph at lines 847--847
+ignored: Infinite glue shrinkage found in box being split
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 846
+.
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[49]
+ignored: Infinite glue shrinkage found in box being split
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 846
+.
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[50]
+Overfull \hbox (12.3112pt too wide) in paragraph at lines 849--849
 []|\T1/cmr/bx/n/10.95 Criticidad| 
  []
 
 
-Overfull \hbox (26.39209pt too wide) in paragraph at lines 847--847
+Overfull \hbox (26.39209pt too wide) in paragraph at lines 849--849
 []|\T1/cmr/bx/n/10.95 Conectividad| 
  []
 
 
-Underfull \hbox (badness 1231) in paragraph at lines 848--848
+Underfull \hbox (badness 1231) in paragraph at lines 850--850
 []|\T1/cmr/m/n/10.95 Despacho y asig-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 848--848
+Underfull \hbox (badness 10000) in paragraph at lines 850--850
 []|\T1/cmr/m/n/10.95 96.000 via-
  []
 
 
-Underfull \hbox (badness 6842) in paragraph at lines 848--848
+Underfull \hbox (badness 6842) in paragraph at lines 850--850
 []|\T1/cmr/m/n/10.95 Sin exi-gen-
  []
 
 
-Underfull \hbox (badness 2012) in paragraph at lines 848--848
+Underfull \hbox (badness 2012) in paragraph at lines 850--850
 \T1/cmr/m/n/10.95 cia es-pe-cí-fi-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 848--848
-[]|\T1/cmr/m/n/10.95 Requiere
- []
-
-
-Underfull \hbox (badness 4024) in paragraph at lines 849--849
-[]|\T1/cmr/m/n/10.95 Ventana de
- []
-
-
-Underfull \hbox (badness 6842) in paragraph at lines 849--849
-[]|\T1/cmr/m/n/10.95 Sin exi-gen-
- []
-
-
-Underfull \hbox (badness 2012) in paragraph at lines 849--849
-\T1/cmr/m/n/10.95 cia es-pe-cí-fi-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 849--850
-[]|\T1/cmr/m/n/10.95 Fijo,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 849--850
-\T1/cmr/m/n/10.95 dos
  []
 
 
@@ -3083,13 +3639,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 850--850
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 851--851
-[]|\T1/cmr/m/n/10.95 Peak de
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 851--851
-\T1/cmr/m/n/10.95 re-co-ne-xión
+Underfull \hbox (badness 4024) in paragraph at lines 851--851
+[]|\T1/cmr/m/n/10.95 Ventana de
  []
 
 
@@ -3103,18 +3654,13 @@ Underfull \hbox (badness 2012) in paragraph at lines 851--851
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 851--851
-[]|\T1/cmr/m/n/10.95 Requiere
+Underfull \hbox (badness 10000) in paragraph at lines 851--852
+[]|\T1/cmr/m/n/10.95 Fijo,
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 851--852
-[]|\T1/cmr/m/n/10.95 Elástico
- []
-
-
-Overfull \hbox (0.58797pt too wide) in paragraph at lines 852--852
-[]|\T1/cmr/m/n/10.95 Particionado
+\T1/cmr/m/n/10.95 dos
  []
 
 
@@ -3123,8 +3669,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 852--852
  []
 
 
-Overfull \hbox (8.46513pt too wide) in paragraph at lines 852--853
-[]|\T1/cmr/m/n/10.95 Reservado| 
+Underfull \hbox (badness 10000) in paragraph at lines 853--853
+[]|\T1/cmr/m/n/10.95 Peak de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 853--853
+\T1/cmr/m/n/10.95 re-co-ne-xión
  []
 
 
@@ -3144,32 +3695,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 853--853
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 853--854
-[]|\T1/cmr/m/n/10.95 Por
+[]|\T1/cmr/m/n/10.95 Elástico
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 853--854
-\T1/cmr/m/n/10.95 ca-pa
- []
-
-
-Overfull \hbox (0.69548pt too wide) in paragraph at lines 853--854
-\T1/cmr/m/n/10.95 hot/cold| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 854--854
-[]|\T1/cmr/m/n/10.95 Evidencia
- []
-
-
-Underfull \hbox (badness 1939) in paragraph at lines 854--854
-[]|\T1/cmr/m/n/10.95 WORM, 10
- []
-
-
-Underfull \hbox (badness 3148) in paragraph at lines 854--854
-\T1/cmr/m/n/10.95 años si-nies-
+Overfull \hbox (0.58797pt too wide) in paragraph at lines 854--854
+[]|\T1/cmr/m/n/10.95 Particionado
  []
 
 
@@ -3178,8 +3709,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 854--854
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 854--855
-[]|\T1/cmr/m/n/10.95 Por
+Overfull \hbox (8.46513pt too wide) in paragraph at lines 854--855
+[]|\T1/cmr/m/n/10.95 Reservado| 
  []
 
 
@@ -3198,53 +3729,63 @@ Underfull \hbox (badness 10000) in paragraph at lines 855--855
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 856--856
-[]|\T1/cmr/m/n/10.95 Espejo de
+Underfull \hbox (badness 10000) in paragraph at lines 855--856
+[]|\T1/cmr/m/n/10.95 Por
  []
 
 
-Underfull \hbox (badness 6842) in paragraph at lines 856--856
-[]|\T1/cmr/m/n/10.95 Sin exi-gen-
+Underfull \hbox (badness 10000) in paragraph at lines 855--856
+\T1/cmr/m/n/10.95 ca-pa
  []
 
 
-Underfull \hbox (badness 2012) in paragraph at lines 856--856
-\T1/cmr/m/n/10.95 cia es-pe-cí-fi-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 856--856
-[]|\T1/cmr/m/n/10.95 Enlace
+Overfull \hbox (0.69548pt too wide) in paragraph at lines 855--856
+\T1/cmr/m/n/10.95 hot/cold| 
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 856--856
-\T1/cmr/m/n/10.95 en-tre
+[]|\T1/cmr/m/n/10.95 Evidencia
+ []
+
+
+Underfull \hbox (badness 1939) in paragraph at lines 856--856
+[]|\T1/cmr/m/n/10.95 WORM, 10
+ []
+
+
+Underfull \hbox (badness 3148) in paragraph at lines 856--856
+\T1/cmr/m/n/10.95 años si-nies-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 856--856
+[]|\T1/cmr/m/n/10.95 Requiere
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 856--857
-[]|\T1/cmr/m/n/10.95 Activo-
+[]|\T1/cmr/m/n/10.95 Por
  []
 
 
-Overfull \hbox (1.64725pt too wide) in paragraph at lines 857--857
-[]|\T1/cmr/m/n/10.95 Contabilidad
+Underfull \hbox (badness 6842) in paragraph at lines 857--857
+[]|\T1/cmr/m/n/10.95 Sin exi-gen-
+ []
+
+
+Underfull \hbox (badness 2012) in paragraph at lines 857--857
+\T1/cmr/m/n/10.95 cia es-pe-cí-fi-
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 857--857
-[]|\T1/cmr/m/n/10.95 Único
+[]|\T1/cmr/m/n/10.95 Requiere
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 857--857
-\T1/cmr/m/n/10.95 emi-sor tri-
- []
-
-
-Overfull \hbox (4.53613pt too wide) in paragraph at lines 857--858
-[]|\T1/cmr/m/n/10.95 Existente| 
+Underfull \hbox (badness 10000) in paragraph at lines 858--858
+[]|\T1/cmr/m/n/10.95 Espejo de
  []
 
 
@@ -3258,18 +3799,38 @@ Underfull \hbox (badness 2012) in paragraph at lines 858--858
  []
 
 
-Underfull \hbox (badness 6157) in paragraph at lines 858--859
-[]|\T1/cmr/m/n/10.95 4 ga-bi-
+Underfull \hbox (badness 10000) in paragraph at lines 858--858
+[]|\T1/cmr/m/n/10.95 Enlace
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 858--858
+\T1/cmr/m/n/10.95 en-tre
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 858--859
+[]|\T1/cmr/m/n/10.95 Activo-
+ []
+
+
+Overfull \hbox (1.64725pt too wide) in paragraph at lines 859--859
+[]|\T1/cmr/m/n/10.95 Contabilidad
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 859--859
-[]|\T1/cmr/m/n/10.95 Opera
+[]|\T1/cmr/m/n/10.95 Único
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 859--859
-\T1/cmr/m/n/10.95 sin co-
+\T1/cmr/m/n/10.95 emi-sor tri-
+ []
+
+
+Overfull \hbox (4.53613pt too wide) in paragraph at lines 859--860
+[]|\T1/cmr/m/n/10.95 Existente| 
  []
 
 
@@ -3283,92 +3844,174 @@ Underfull \hbox (badness 2012) in paragraph at lines 860--860
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 860--860
+Underfull \hbox (badness 6157) in paragraph at lines 860--861
+[]|\T1/cmr/m/n/10.95 4 ga-bi-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 861--861
 []|\T1/cmr/m/n/10.95 Opera
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 860--860
+Underfull \hbox (badness 10000) in paragraph at lines 861--861
 \T1/cmr/m/n/10.95 sin co-
  []
 
 
-Underfull \hbox (badness 1189) in paragraph at lines 860--861
-\T1/cmr/m/n/10.95 to mar-
- []
-
-
-Underfull \hbox (badness 2875) in paragraph at lines 861--861
-[]|$\OMS/cmsy/m/n/10.95 ^^T$ \T1/cmr/m/n/10.95 de-ce-nas
- []
-
-
-Underfull \hbox (badness 6842) in paragraph at lines 861--861
+Underfull \hbox (badness 6842) in paragraph at lines 862--862
 []|\T1/cmr/m/n/10.95 Sin exi-gen-
  []
 
 
-Underfull \hbox (badness 2012) in paragraph at lines 861--861
+Underfull \hbox (badness 2012) in paragraph at lines 862--862
 \T1/cmr/m/n/10.95 cia es-pe-cí-fi-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 861--861
+Underfull \hbox (badness 10000) in paragraph at lines 862--862
+[]|\T1/cmr/m/n/10.95 Opera
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 862--862
+\T1/cmr/m/n/10.95 sin co-
+ []
+
+
+Underfull \hbox (badness 1189) in paragraph at lines 862--863
+\T1/cmr/m/n/10.95 to mar-
+ []
+
+
+Underfull \hbox (badness 2875) in paragraph at lines 863--863
+[]|$\OMS/cmsy/m/n/10.95 ^^T$ \T1/cmr/m/n/10.95 de-ce-nas
+ []
+
+
+Underfull \hbox (badness 6842) in paragraph at lines 863--863
+[]|\T1/cmr/m/n/10.95 Sin exi-gen-
+ []
+
+
+Underfull \hbox (badness 2012) in paragraph at lines 863--863
+\T1/cmr/m/n/10.95 cia es-pe-cí-fi-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 863--863
 []|\T1/cmr/m/n/10.95 Sin co-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 861--861
+Underfull \hbox (badness 10000) in paragraph at lines 863--863
 \T1/cmr/m/n/10.95 ber-tu-ra
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 861--862
+Underfull \hbox (badness 10000) in paragraph at lines 863--864
 []|\T1/cmr/m/n/10.95 Por
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 862--862
+Underfull \hbox (badness 10000) in paragraph at lines 864--864
 []|\T1/cmr/m/n/10.95 Media,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 862--862
+Underfull \hbox (badness 10000) in paragraph at lines 864--864
 \T1/cmr/m/n/10.95 no blo-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 862--862
+Underfull \hbox (badness 10000) in paragraph at lines 864--864
 []|\T1/cmr/m/n/10.95 454 po-ten-
  []
 
 
-Overfull \hbox (14.10675pt too wide) in paragraph at lines 862--862
+Overfull \hbox (14.10675pt too wide) in paragraph at lines 864--864
 []|\T1/cmr/m/n/10.95 Consentimiento
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 862--862
+Underfull \hbox (badness 10000) in paragraph at lines 864--864
 []|\T1/cmr/m/n/10.95 Requiere
  []
 
 
-Underfull \hbox (badness 1968) in paragraph at lines 862--863
+Underfull \hbox (badness 1968) in paragraph at lines 864--865
 []|\T1/cmr/m/n/10.95 Por de-
  []
 
 
-Overfull \hbox (34.8106pt too wide) in alignment at lines 846--863
+Overfull \hbox (34.8106pt too wide) in alignment at lines 848--865
  [] [] [] [] [] [] [] [] 
  []
 
-[47]
-ignored: Infinite glue shrinkage found in box being split [48]
-ignored: Infinite glue shrinkag
-e found in box being split [49]) [50] [51
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 865
+.
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[51]
+ignored: Infinite glue shrinkage found in box being split
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 865
+.
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[52]
+ignored: Infinite glue shrinkage found in box being split
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 883
+.
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[53])
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 11.
+
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[54]
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 15.
+
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[55
 
 ]
-runsystem(latexminted cleantemp  --timestamp 20260907013839 0939BFF1FC348B3EF42
+runsystem(latexminted cleantemp  --timestamp 20260907030746 0939BFF1FC348B3EF42
 65810B6127B25)...executed safely (allowed).
 
  (salida/aux/04-arquitectura/sub4.aux
@@ -3392,31 +4035,36 @@ Package logreq Info: Writing requests to 'sub4.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 57537 strings out of 469453
- 1273322 string characters out of 5469037
- 2490753 words of memory out of 5000000
- 85197 multiletter control sequences out of 15000+600000
- 644977 words of font info for 80 fonts, out of 8000000 for 9000
+ 57576 strings out of 469453
+ 1274066 string characters out of 5469037
+ 2491633 words of memory out of 5000000
+ 85226 multiletter control sequences out of 15000+600000
+ 650099 words of font info for 93 fonts, out of 8000000 for 9000
  40 hyphenation exceptions out of 8191
- 133i,12n,139p,1265b,2815s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 133i,23n,139p,1265b,2815s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk
 > </home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk>
- </home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx5159.600pk> 
-</home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> <
+ </home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx2986.600pk> 
+</home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx5159.600pk> <
 /home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </
 home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </h
-ome/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1095.600pk> </ho
-me/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.600pk> </hom
-e/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx2986.600pk> </home
-/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk> </home/
-carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcbx1095.600pk> </home/c
-arlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1095.600pk></usr/shar
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on salida/aux/04-arquitectura/sub4.pdf (53 pages, 1671351 bytes)
+ome/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0600.600pk> </ho
+me/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk> </hom
+e/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </home
+/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.600pk> </home/
+carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1095.600pk> </home/c
+arlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.600pk> </home/ca
+rlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx2488.600pk> </home/car
+losa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk> </home/carl
+osa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcbx1095.600pk> </home/carlo
+sa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1095.600pk></usr/share/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmsy10.pfb>
+Output written on salida/aux/04-arquitectura/sub4.pdf (55 pages, 1774084 bytes)
 .
 PDF statistics:
- 1240 PDF objects out of 1440 (max. 8388607)
- 146 named destinations out of 1000 (max. 500000)
- 378 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1320 PDF objects out of 1440 (max. 8388607)
+ 149 named destinations out of 1000 (max. 500000)
+ 383 words of extra memory for PDF output out of 10000 (max. 10000000)
 

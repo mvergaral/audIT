@@ -1,31 +1,31 @@
 \babel@toc {spanish}{}\relax 
-\contentsline {section}{\numberline {1}Comprensión del problema}{2}{section.1}%
-\contentsline {subsection}{\numberline {1.1}Síntesis ejecutiva de la situación actual y dimensión del desafío}{2}{subsection.1.1}%
-\contentsline {subsection}{\numberline {1.2}Desglose cuantitativo y diagnóstico de los siete bloques de datos duros}{4}{subsection.1.2}%
-\contentsline {subsubsection}{\numberline {1.2.1}Bloque 1: Flota y asimetría de tenencia}{4}{subsubsection.1.2.1}%
-\contentsline {subsubsection}{\numberline {1.2.2}Bloque 2: Fuerza conductora y brecha de jornada}{5}{subsubsection.1.2.2}%
-\contentsline {subsubsection}{\numberline {1.2.3}Bloque 3: Red, rutas y fricción logística}{5}{subsubsection.1.2.3}%
-\contentsline {subsubsection}{\numberline {1.2.4}Bloque 4: Desgobierno de datos e infraestructura ociosa}{6}{subsubsection.1.2.4}%
-\contentsline {subsubsection}{\numberline {1.2.5}Bloque 5: Fricción comercial y tiempos de espera}{7}{subsubsection.1.2.5}%
-\contentsline {subsubsection}{\numberline {1.2.6}Bloque 6: Estructura financiera y distorsión de costos}{8}{subsubsection.1.2.6}%
-\contentsline {subsubsection}{\numberline {1.2.7}Bloque 7: Seguridad y riesgo existencial}{9}{subsubsection.1.2.7}%
-\contentsline {subsection}{\numberline {1.3}Mapeo de infraestructura operacional y nodos críticos}{10}{subsection.1.3}%
-\contentsline {subsubsection}{\numberline {1.3.1}Los cinco terminales operacionales}{10}{subsubsection.1.3.1}%
-\contentsline {subsubsection}{\numberline {1.3.2}Los dos talleres propios y la red externa}{11}{subsubsection.1.3.2}%
-\contentsline {subsubsection}{\numberline {1.3.3}Paso fronterizo Los Libertadores}{11}{subsubsection.1.3.3}%
-\contentsline {subsubsection}{\numberline {1.3.4}Zonas de sombra de conectividad}{11}{subsubsection.1.3.4}%
-\contentsline {subsubsection}{\numberline {1.3.5}Puntos de carga y descarga de clientes}{12}{subsubsection.1.3.5}%
-\contentsline {subsubsection}{\numberline {1.3.6}La cabina del camión}{12}{subsubsection.1.3.6}%
-\contentsline {subsubsection}{\numberline {1.3.7}Síntesis de nodos operacionales}{12}{subsubsection.1.3.7}%
-\contentsline {subsection}{\numberline {1.4}Caracterización de actores y matriz de tensiones operacionales}{14}{subsection.1.4}%
-\contentsline {subsubsection}{\numberline {1.4.1}Fichas de caracterización de los diez actores clave}{14}{subsubsection.1.4.1}%
-\contentsline {subsubsection}{\numberline {1.4.2}Matriz de poder vs. interés y tabla de brechas operacionales}{18}{subsubsection.1.4.2}%
-\contentsline {paragraph}{a) Matriz de Poder / Influencia vs. Nivel de Interés}{18}{subsubsection.1.4.2}%
-\contentsline {paragraph}{b) Tabla consolidada de caracterización y brechas operacionales}{18}{figure.caption.1}%
-\contentsline {subsubsection}{\numberline {1.4.3}Las seis tensiones operacionales irreconciliables del modelo actual}{20}{subsubsection.1.4.3}%
-\contentsline {subsection}{\numberline {1.5}Las diez patologías sistémicas de Transportes Curimón S.A.}{22}{subsection.1.5}%
-\contentsline {subsection}{\numberline {1.6}Registro de supuestos operacionales y mapeo exhaustivo del Numeral 16.1}{24}{subsection.1.6}%
-\contentsline {subsubsection}{\numberline {1.6.1}Principios de modelamiento y delimitación del diagnóstico}{25}{subsubsection.1.6.1}%
-\contentsline {subsubsection}{\numberline {1.6.2}Matriz maestra de los 26 supuestos operacionales del Numeral 16.1}{25}{subsubsection.1.6.2}%
-\contentsline {subsubsection}{\numberline {1.6.3}Límite explícito del diagnóstico}{29}{subsubsection.1.6.3}%
-\contentsline {section}{Bibliografía}{30}{section*.2}%
+\contentsline {section}{\numberline {1}Comprensión del problema}{4}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Síntesis ejecutiva de la situación actual y dimensión del desafío}{4}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Desglose cuantitativo y diagnóstico de los siete bloques de datos duros}{6}{subsection.1.2}%
+\contentsline {subsubsection}{\numberline {1.2.1}Bloque 1: Flota y asimetría de tenencia}{6}{subsubsection.1.2.1}%
+\contentsline {subsubsection}{\numberline {1.2.2}Bloque 2: Fuerza conductora y brecha de jornada}{7}{subsubsection.1.2.2}%
+\contentsline {subsubsection}{\numberline {1.2.3}Bloque 3: Red, rutas y fricción logística}{7}{subsubsection.1.2.3}%
+\contentsline {subsubsection}{\numberline {1.2.4}Bloque 4: Desgobierno de datos e infraestructura ociosa}{8}{subsubsection.1.2.4}%
+\contentsline {subsubsection}{\numberline {1.2.5}Bloque 5: Fricción comercial y tiempos de espera}{9}{subsubsection.1.2.5}%
+\contentsline {subsubsection}{\numberline {1.2.6}Bloque 6: Estructura financiera y distorsión de costos}{10}{subsubsection.1.2.6}%
+\contentsline {subsubsection}{\numberline {1.2.7}Bloque 7: Seguridad y riesgo existencial}{11}{subsubsection.1.2.7}%
+\contentsline {subsection}{\numberline {1.3}Mapeo de infraestructura operacional y nodos críticos}{12}{subsection.1.3}%
+\contentsline {subsubsection}{\numberline {1.3.1}Los cinco terminales operacionales}{13}{subsubsection.1.3.1}%
+\contentsline {subsubsection}{\numberline {1.3.2}Los dos talleres propios y la red externa}{13}{subsubsection.1.3.2}%
+\contentsline {subsubsection}{\numberline {1.3.3}Paso fronterizo Los Libertadores}{13}{subsubsection.1.3.3}%
+\contentsline {subsubsection}{\numberline {1.3.4}Zonas de sombra de conectividad}{14}{subsubsection.1.3.4}%
+\contentsline {subsubsection}{\numberline {1.3.5}Puntos de carga y descarga de clientes}{14}{subsubsection.1.3.5}%
+\contentsline {subsubsection}{\numberline {1.3.6}La cabina del camión}{14}{subsubsection.1.3.6}%
+\contentsline {subsubsection}{\numberline {1.3.7}Síntesis de nodos operacionales}{14}{subsubsection.1.3.7}%
+\contentsline {subsection}{\numberline {1.4}Caracterización de actores y matriz de tensiones operacionales}{16}{subsection.1.4}%
+\contentsline {subsubsection}{\numberline {1.4.1}Fichas de caracterización de los diez actores clave}{16}{subsubsection.1.4.1}%
+\contentsline {subsubsection}{\numberline {1.4.2}Matriz de poder vs. interés y tabla de brechas operacionales}{20}{subsubsection.1.4.2}%
+\contentsline {paragraph}{a) Matriz de Poder / Influencia vs. Nivel de Interés}{20}{subsubsection.1.4.2}%
+\contentsline {paragraph}{b) Tabla consolidada de caracterización y brechas operacionales}{20}{figure.caption.1}%
+\contentsline {subsubsection}{\numberline {1.4.3}Las seis tensiones operacionales irreconciliables del modelo actual}{22}{subsubsection.1.4.3}%
+\contentsline {subsection}{\numberline {1.5}Las diez patologías sistémicas de Transportes Curimón S.A.}{24}{subsection.1.5}%
+\contentsline {subsection}{\numberline {1.6}Registro de supuestos operacionales y mapeo exhaustivo del Numeral 16.1}{26}{subsection.1.6}%
+\contentsline {subsubsection}{\numberline {1.6.1}Principios de modelamiento y delimitación del diagnóstico}{27}{subsubsection.1.6.1}%
+\contentsline {subsubsection}{\numberline {1.6.2}Matriz maestra de los 26 supuestos operacionales del Numeral 16.1}{27}{subsubsection.1.6.2}%
+\contentsline {subsubsection}{\numberline {1.6.3}Límite explícito del diagnóstico}{31}{subsubsection.1.6.3}%
+\contentsline {section}{Bibliografía}{32}{section*.2}%

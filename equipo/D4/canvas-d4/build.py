@@ -114,7 +114,7 @@ def page(inner, title, num, foot):
             f'<line x1="44" y1="{H-42}" x2="{W-44}" y2="{H-42}" stroke="{HAIR}" stroke-width="1"/>'
             f'<text x="44" y="{H-26}" font-family="{MONO}" font-size="9" fill="{MUTED}">{esc(foot)}</text>'
             f'<text x="{W-44}" y="{H-26}" font-family="{FONT}" font-size="9" fill="{MUTED}" '
-            f'text-anchor="end">Dupla 4 · Subdoc. 4.2 · TFEP-01/2026</text></svg>')
+            f'text-anchor="end">audIT · Oferta Técnica · TFEP-01/2026</text></svg>')
 
 # ══════════════════════════════════════════════════════════ 1 · general
 def d1():

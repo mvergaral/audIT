@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.8.26)  7 SEP 2026 01:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.8.26)  7 SEP 2026 03:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2197,44 +2197,65 @@ LaTeX Font Warning: Font shape `T1/cmr/bx/n' in size <19> not available
  </home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recurso
 s/Plantilla-audIT/comun/assets/portada.jpeg>]
 
-LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <28> not available
-(Font)              size <29.86> substituted on input line 9.
+LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <26> not available
+(Font)              size <24.88> substituted on input line 9.
 
 
-LaTeX Font Warning: Font shape `T1/cmr/bx/n' in size <28> not available
-(Font)              size <29.86> substituted on input line 9.
+LaTeX Font Warning: Font shape `T1/cmr/bx/n' in size <26> not available
+(Font)              size <24.88> substituted on input line 9.
 
 
 Overfull \hbox (28.45274pt too wide) in paragraph at lines 9--9
 [][][] 
  []
 
-[2
-
-] (salida/aux/01-empresa/sub1.toc
-LaTeX Info: Redefining \sptext on input line 1.
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 2.
-
+LaTeX Font Info:    Trying to load font information for U+msa on input line 9.
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 2.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 9.
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-))
+)
+<comun/assets/figuras/Firma.png, id=46, 550.055pt x 299.1175pt>
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 9.
+(pdftex.def)             Requested size: 68.0181pt x 36.98866pt.
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 9.
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[2
+
+ </home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recurso
+s/Plantilla-audIT/comun/assets/figuras/Firma.png>]
+(salida/aux/01-empresa/sub1.toc
+LaTeX Info: Redefining \sptext on input line 1.
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+)
 \tf@toc=\write8
 \openout8 = `sub1.toc'.
 
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 9.
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.9 \fichaSubdocumento
-                       [1
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[3
 
 ]
 (/home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recursos
@@ -2247,13 +2268,17 @@ LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <86> not available
 LaTeX Font Warning: Font shape `T1/cmr/bx/n' in size <86> not available
 (Font)              size <51.59> substituted on input line 1.
 
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 13.
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.13 \end{itemize}
-                   [2
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[4
 
 ]
 Overfull \hbox (19.06589pt too wide) in paragraph at lines 25--26
@@ -2261,14 +2286,36 @@ Overfull \hbox (19.06589pt too wide) in paragraph at lines 25--26
  in-ge-nie-ros de te-le-co-mu-ni-ca-cio-nes/electrónica
  []
 
-<subdocumentos/01-empresa/Img.png, id=84, 1541.76pt x 1027.84pt>
+<subdocumentos/01-empresa/Img.png, id=93, 1541.76pt x 1027.84pt>
 File: subdocumentos/01-empresa/Img.png Graphic file (type png)
 <use subdocumentos/01-empresa/Img.png>
 Package pdftex.def Info: subdocumentos/01-empresa/Img.png  used on input line 2
 7.
 (pdftex.def)             Requested size: 457.80298pt x 305.20198pt.
-[3] [4 </home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/r
-ecursos/Plantilla-audIT/subdocumentos/01-empresa/Img.png (PNG copy)>]
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 28.
+
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[5]
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 40.
+
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[6 </home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recur
+sos/Plantilla-audIT/subdocumentos/01-empresa/Img.png (PNG copy)>]
 Overfull \hbox (18.13422pt too wide) in paragraph at lines 45--48
 []\T1/cmr/bx/n/12 Certificaciones In-di-vi-dua-les del Per-so-nal de Plan-ta (B
 a-ses Téc-ni-cas FEP02.26
@@ -2280,7 +2327,41 @@ Overfull \hbox (0.48735pt too wide) in paragraph at lines 57--58
 cas y Com-pe-ten-cias Sec-
  []
 
-[5] [6] [7]
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 62.
+
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[7]
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 75.
+
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[8]
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 92.
+
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[9]
 Underfull \hbox (badness 4832) in paragraph at lines 100--100
 []|\T1/cmr/bx/n/10.95 1. Nom-bre
  []
@@ -2371,12 +2452,70 @@ Underfull \hbox (badness 10000) in paragraph at lines 110--110
  []
 
 
-ignored: Infinite glue shrinkage found in box being split [8]
-ignored: Infinite glue shrinkage fou
-nd in box being split [9] [10]) [11] [12
+ignored: Infinite glue shrinkage found in box being split
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 111
+.
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[10]
+ignored: Infinite glue shrinkage found in box being split
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 111
+.
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[11]
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 123
+.
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[12])
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 11.
+
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[13]
+File: comun/assets/figuras/Firma.png Graphic file (type png)
+<use comun/assets/figuras/Firma.png>
+Package pdftex.def Info: comun/assets/figuras/Firma.png  used on input line 15.
+
+(pdftex.def)             Requested size: 36.61932pt x 19.91684pt.
+
+
+Package fancyhdr Warning: \footskip is too small (30.0pt): 
+(fancyhdr)                Make it at least 69.14996pt, for example:
+(fancyhdr)                \setlength{\footskip}{69.14996pt}.
+
+[14
 
 ]
-runsystem(latexminted cleantemp  --timestamp 20260907013812 1B52EB8EF2C1875CFDF
+runsystem(latexminted cleantemp  --timestamp 20260907030740 1B52EB8EF2C1875CFDF
 3FFBE9E3C05DA)...executed safely (allowed).
 
  (salida/aux/01-empresa/sub1.aux
@@ -2400,36 +2539,40 @@ Package logreq Info: Writing requests to 'sub1.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 57319 strings out of 469453
- 1267820 string characters out of 5469037
- 2465762 words of memory out of 5000000
- 85070 multiletter control sequences out of 15000+600000
- 649413 words of font info for 93 fonts, out of 8000000 for 9000
+ 57342 strings out of 469453
+ 1268365 string characters out of 5469037
+ 2466639 words of memory out of 5000000
+ 85088 multiletter control sequences out of 15000+600000
+ 652070 words of font info for 97 fonts, out of 8000000 for 9000
  40 hyphenation exceptions out of 8191
- 133i,12n,139p,1547b,2815s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 133i,23n,139p,1547b,2815s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbi1200.600pk
 > </home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1095.600pk>
  </home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcbx1200.600pk> 
 </home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm0800.600pk> <
 /home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk> </
 home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1200.600pk> </h
-ome/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx5159.600pk> </ho
-me/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </hom
+ome/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx2986.600pk> </ho
+me/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx5159.600pk> </hom
 e/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home
 /carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/
-carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1095.600pk> </home/c
-arlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.600pk> </home/ca
-rlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx2986.600pk> </home/car
-losa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk> </home/carl
-osa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcbx1095.600pk> </home/carlo
-sa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1095.600pk></usr/share/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
-10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on salida/aux/01-empresa/sub1.pdf (14 pages, 1892264 bytes).
+carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0600.600pk> </home/c
+arlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk> </home/ca
+rlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </home/car
+losa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.600pk> </home/carl
+osa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1095.600pk> </home/carlo
+sa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.600pk> </home/carlos
+a/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx2488.600pk> </home/carlosa
+/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk> </home/carlosa/
+.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcbx1095.600pk> </home/carlosa/.
+texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1095.600pk></usr/share/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.p
+fb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on salida/aux/01-empresa/sub1.pdf (14 pages, 1973244 bytes).
 PDF statistics:
- 814 PDF objects out of 1000 (max. 8388607)
- 48 named destinations out of 1000 (max. 500000)
- 91 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 890 PDF objects out of 1000 (max. 8388607)
+ 49 named destinations out of 1000 (max. 500000)
+ 96 words of extra memory for PDF output out of 10000 (max. 10000000)
 
