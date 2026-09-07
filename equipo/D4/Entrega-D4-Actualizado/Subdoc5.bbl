@@ -1,0 +1,123 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{apa/apasortcite//global/global/global}
+    \entry{ley21719}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=cebe14c45771db4bb892353f5a668fc5}{%
+           family={{Ministerio de Hacienda}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{cebe14c45771db4bb892353f5a668fc5}
+      \strng{fullhash}{cebe14c45771db4bb892353f5a668fc5}
+      \strng{fullhashraw}{cebe14c45771db4bb892353f5a668fc5}
+      \strng{bibnamehash}{cebe14c45771db4bb892353f5a668fc5}
+      \strng{authorbibnamehash}{cebe14c45771db4bb892353f5a668fc5}
+      \strng{authornamehash}{cebe14c45771db4bb892353f5a668fc5}
+      \strng{authorfullhash}{cebe14c45771db4bb892353f5a668fc5}
+      \strng{authorfullhashraw}{cebe14c45771db4bb892353f5a668fc5}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Ley N.º 21.719 sobre protección y tratamiento de datos personales}
+      \field{year}{2024}
+    \endentry
+    \entry{nist80088}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=a44b6b00e5eebd7494e1fd00658685e2}{%
+           family={{NIST}},
+           familyi={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{a44b6b00e5eebd7494e1fd00658685e2}
+      \strng{fullhash}{a44b6b00e5eebd7494e1fd00658685e2}
+      \strng{fullhashraw}{a44b6b00e5eebd7494e1fd00658685e2}
+      \strng{bibnamehash}{a44b6b00e5eebd7494e1fd00658685e2}
+      \strng{authorbibnamehash}{a44b6b00e5eebd7494e1fd00658685e2}
+      \strng{authornamehash}{a44b6b00e5eebd7494e1fd00658685e2}
+      \strng{authorfullhash}{a44b6b00e5eebd7494e1fd00658685e2}
+      \strng{authorfullhashraw}{a44b6b00e5eebd7494e1fd00658685e2}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{NIST Special Publication 800-88 Revision 1. Guidelines for media sanitization}
+      \field{year}{2014}
+    \endentry
+  \enddatalist
+  \datalist[entry]{apa/global//global/global/global}
+    \entry{ley21719}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=cebe14c45771db4bb892353f5a668fc5}{%
+           family={{Ministerio de Hacienda}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{cebe14c45771db4bb892353f5a668fc5}
+      \strng{fullhash}{cebe14c45771db4bb892353f5a668fc5}
+      \strng{fullhashraw}{cebe14c45771db4bb892353f5a668fc5}
+      \strng{bibnamehash}{cebe14c45771db4bb892353f5a668fc5}
+      \strng{authorbibnamehash}{cebe14c45771db4bb892353f5a668fc5}
+      \strng{authornamehash}{cebe14c45771db4bb892353f5a668fc5}
+      \strng{authorfullhash}{cebe14c45771db4bb892353f5a668fc5}
+      \strng{authorfullhashraw}{cebe14c45771db4bb892353f5a668fc5}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Ley N.º 21.719 sobre protección y tratamiento de datos personales}
+      \field{year}{2024}
+    \endentry
+    \entry{nist80088}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=a44b6b00e5eebd7494e1fd00658685e2}{%
+           family={{NIST}},
+           familyi={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{a44b6b00e5eebd7494e1fd00658685e2}
+      \strng{fullhash}{a44b6b00e5eebd7494e1fd00658685e2}
+      \strng{fullhashraw}{a44b6b00e5eebd7494e1fd00658685e2}
+      \strng{bibnamehash}{a44b6b00e5eebd7494e1fd00658685e2}
+      \strng{authorbibnamehash}{a44b6b00e5eebd7494e1fd00658685e2}
+      \strng{authornamehash}{a44b6b00e5eebd7494e1fd00658685e2}
+      \strng{authorfullhash}{a44b6b00e5eebd7494e1fd00658685e2}
+      \strng{authorfullhashraw}{a44b6b00e5eebd7494e1fd00658685e2}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{NIST Special Publication 800-88 Revision 1. Guidelines for media sanitization}
+      \field{year}{2014}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

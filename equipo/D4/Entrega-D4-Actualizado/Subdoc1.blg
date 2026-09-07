@@ -1,0 +1,17 @@
+[0] Config.pm:328> INFO - This is Biber 2.21
+[0] Config.pm:331> INFO - Logfile is 'Subdoc1.blg'
+[85] biber:342> INFO - === dom sep  6, 2026, 21:48:30
+[103] Biber.pm:421> INFO - Reading 'Subdoc1.bcf'
+[206] Biber.pm:1002> INFO - Found 3 citekeys in bib section 0
+[234] Biber.pm:4487> INFO - Processing section 0
+[244] Biber.pm:4678> INFO - Looking for bibtex file 'referencias.bib' for section 0
+[246] bibtex.pm:1713> INFO - LaTeX decoding ...
+[257] bibtex.pm:1519> INFO - Found BibTeX data source 'referencias.bib'
+[320] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[320] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[320] Biber.pm:4307> INFO - Sorting list 'apa/apasortcite//global/global/global' of type 'entry' with template 'apa' and locale 'es-ES'
+[336] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[337] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[337] Biber.pm:4307> INFO - Sorting list 'apa/global//global/global/global' of type 'entry' with template 'apa' and locale 'es-ES'
+[342] bbl.pm:676> INFO - Writing 'Subdoc1.bbl' with encoding 'UTF-8'
+[347] bbl.pm:779> INFO - Output to Subdoc1.bbl
