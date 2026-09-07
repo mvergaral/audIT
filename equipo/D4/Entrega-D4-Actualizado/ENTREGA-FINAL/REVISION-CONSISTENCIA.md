@@ -74,6 +74,51 @@ Verificado por búsqueda sobre los tres documentos.
 | Concurrencia | 300 a 350 sesiones pico | El desglose propio suma 230 a 380 |
 | Marcado | Repeticiones de mayor o igual a 8 GB y del signo de multiplicación | Duplicación de formato |
 
+### 2.6 Integración de `D3/subdoc4.1-arquitectura-logica.md` al subdocumento 4
+
+El subdocumento 4 vale 16 % por la arquitectura lógica y 16 % por la física en el Informe 1, y el
+Formulario T-21 las evalúa en un solo documento. La versión anterior recogía la mitad del material
+lógico de D3. Ahora está completo. Se incorporaron el diagnóstico del sistema de 2013, los
+componentes declarados por capa, el contexto de cada decisión de arquitectura, los parámetros de
+los patrones de resiliencia, el reparto del presupuesto de 30 segundos, la gobernanza de interfaces
+del numeral 5.3, las piezas de la capa anticorrupción, la emisión del documento de transporte sin
+cobertura, los parámetros leídos de la telemetría de fábrica, las capas del repositorio analítico,
+la explotación analítica del numeral 5.4, el inventario de componentes lógicos y la concurrencia
+derivada del numeral 14.1.
+
+Se agregaron además cuatro requisitos obligatorios que no estaban en el material de D3 ni en el
+subdocumento. RT-02.09 sobre degradación elegante, RT-02.10 sobre escalamiento automático declarado,
+RT-02.11 sobre puntos únicos de falla, que evalúa como observación grave omitir la declaración
+cuando existen, y RT-02.13 sobre el modelo de dominio.
+
+#### Correcciones aplicadas al material de D3 durante la integración
+
+| Punto | Dice el material de D3 | Corresponde según las bases |
+|---|---|---|
+| OpenAPI y AsyncAPI | RT-05.16 y RT-05.17 por separado | Ambos son RT-05.16, FEP02 p.12 |
+| Versionado semántico y política de obsolescencia | RT-05.18 y RT-05.24 | Ambos son RT-05.17 |
+| Prohibición de la clave estática en la ruta | RT-05.19 | Es RT-05.18 |
+| Cuotas y límites de tasa | RT-05.21 | RT-05.21 obliga a declarar modo, volumen, ventana de la contraparte y comportamiento ante no respuesta. No trata de cuotas |
+| Navegación hasta la transacción de origen | RT-05.28 | Es RT-05.26 |
+| Exportación en formatos abiertos | RT-05.30 | Es RT-05.28. RT-05.30 es analítica predictiva, deseable |
+| Plataformas de posicionamiento de terceros | Dos proveedores GPS | Tres plataformas distintas, dos con acceso de solo consulta y una que no permite exportar. FEP03 numeral 14.1 p.29 y p.34 |
+| Contratos servidos bajo costo | Dos contratos | Tres de los ocho principales, 31 % del ingreso, el peor a menos catorce por ciento durante cuatro años. FEP03 numeral 7.3 p.15 |
+| Costo preliminar en 24 horas | Atribuido a la Consulta N.º 18 | Lo fija RT-05.29 del Caso, Capítulo 15 p.31, con texto expreso sobre los componentes pendientes |
+| Consultas 13, 14, 17 y 18 | Citadas como confirmadas | Están enviadas y sin responder. Lo que figura en el pliego es la interpretación propuesta por audIT |
+| Parque telemático de terceros | 192 homologados y 34 sin equipo | El Caso solo declara 340 de 374 con dispositivo. La partición 192 y 34 es aritmética propia y no un inventario. El documento entrega el estándar de homologación, no el inventario |
+| Retención de series de posición | RT-05.10 sin distinguir documento | RT-05.10 del Caso fija dos años en línea. El mismo código transversal es otra materia y solo deseable. Queda anotado en el texto |
+| Sincronización tras la reconexión | No aparece | RT-03.13 del Caso fija 20 minutos por camión tras 72 horas sin cobertura. Incorporado |
+
+#### Material de D3 que no se incorporó
+
+| Elemento | Motivo |
+|---|---|
+| Diagrama de las ocho capas, `diagrama10` | Relación de aspecto de 0,51 sobre 3.713 píxeles de alto. A tamaño de página el texto queda en unos 3 puntos. Se usa el diagrama propio equivalente, que cumple el mismo RT-02.01 y es legible |
+| Nombres comerciales de productos | El numeral 2.3 advierte que el estilo se justifica con la volumetría del caso y no con la tendencia del mercado. La declaración de productos con versión y fin de soporte va en la sección de tecnologías |
+| Fórmulas del costo por kilómetro en notación matemática | Sustituidas por la tabla de componentes con su origen y con la marca de cuáles no son observables en flota de terceros |
+| Cuadro comparativo de innovaciones técnicas | Su lugar es el subdocumento 13, no el 4 |
+| Columna de dupla responsable en la matriz de operación desconectada | Es reparto interno del equipo y no información para el mandante |
+
 ### 2.5 El archivo `audIT/CLAUDE.md` describe otro entregable
 
 Ese archivo describe el trabajo como un informe de investigación de 10 a 15 páginas con
