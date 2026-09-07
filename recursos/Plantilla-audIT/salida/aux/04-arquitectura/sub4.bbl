@@ -1,0 +1,447 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{apa/apasortcite//global/global/global}
+    \entry{iso27031}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5b512ee8a59deb284ad0a6a035ba10b1}{%
+           family={{ISO}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{fullhash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{fullhashraw}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{bibnamehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authorbibnamehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authornamehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authorfullhash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authorfullhashraw}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \field{extraname}{1}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{ISO/IEC 27031. Guidelines for information and communication technology readiness for business continuity}
+      \field{year}{2011}
+    \endentry
+    \entry{iso22301}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5b512ee8a59deb284ad0a6a035ba10b1}{%
+           family={{ISO}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{fullhash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{fullhashraw}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{bibnamehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authorbibnamehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authornamehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authorfullhash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authorfullhashraw}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \field{extraname}{2}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{ISO 22301. Security and resilience. Business continuity management systems}
+      \field{year}{2019}
+    \endentry
+    \entry{iso42010}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5b512ee8a59deb284ad0a6a035ba10b1}{%
+           family={{ISO}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{fullhash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{fullhashraw}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{bibnamehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authorbibnamehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authornamehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authorfullhash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authorfullhashraw}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \field{extraname}{3}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{ISO/IEC/IEEE 42010. Systems and software engineering. Architecture description}
+      \field{year}{2022}
+    \endentry
+    \entry{azure_regions}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=140864078aeca1c7c35b4beb33c53c34}{%
+           family={{Microsoft}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{fullhash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{fullhashraw}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{bibnamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorbibnamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authornamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorfullhash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorfullhashraw}{140864078aeca1c7c35b4beb33c53c34}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Azure geographies. Chile Central region}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://azure.microsoft.com/explore/global-infrastructure/geographies/
+      \endverb
+      \verb{url}
+      \verb https://azure.microsoft.com/explore/global-infrastructure/geographies/
+      \endverb
+    \endentry
+    \entry{ds298}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=acc54fd726de9f1741513109eab8d5d5}{%
+           family={{Ministerio de Transportes}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{acc54fd726de9f1741513109eab8d5d5}
+      \strng{fullhash}{acc54fd726de9f1741513109eab8d5d5}
+      \strng{fullhashraw}{acc54fd726de9f1741513109eab8d5d5}
+      \strng{bibnamehash}{acc54fd726de9f1741513109eab8d5d5}
+      \strng{authorbibnamehash}{acc54fd726de9f1741513109eab8d5d5}
+      \strng{authornamehash}{acc54fd726de9f1741513109eab8d5d5}
+      \strng{authorfullhash}{acc54fd726de9f1741513109eab8d5d5}
+      \strng{authorfullhashraw}{acc54fd726de9f1741513109eab8d5d5}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Decreto Supremo N.º 298. Reglamento de transporte de cargas peligrosas por calles y caminos}
+      \field{year}{1995}
+    \endentry
+    \entry{codigo_trabajo_25bis}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=4bea1cf2944a8ad58a1c159a33e3a06b}{%
+           family={{Ministerio del Trabajo}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Biblioteca del Congreso Nacional de Chile}%
+      }
+      \strng{namehash}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{fullhash}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{fullhashraw}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{bibnamehash}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{authorbibnamehash}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{authornamehash}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{authorfullhash}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{authorfullhashraw}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Decreto con Fuerza de Ley N.º 1. Texto refundido, coordinado y sistematizado del Código del Trabajo. Artículo 25 bis sobre jornada de choferes de vehículos de carga terrestre interurbana}
+      \field{year}{2003}
+      \verb{urlraw}
+      \verb https://www.bcn.cl/leychile/navegar?idNorma=207436
+      \endverb
+      \verb{url}
+      \verb https://www.bcn.cl/leychile/navegar?idNorma=207436
+      \endverb
+    \endentry
+    \entry{nfpa2001}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=fc640b76bfcd48240a1404b6741848af}{%
+           family={{NFPA}},
+           familyi={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{fc640b76bfcd48240a1404b6741848af}
+      \strng{fullhash}{fc640b76bfcd48240a1404b6741848af}
+      \strng{fullhashraw}{fc640b76bfcd48240a1404b6741848af}
+      \strng{bibnamehash}{fc640b76bfcd48240a1404b6741848af}
+      \strng{authorbibnamehash}{fc640b76bfcd48240a1404b6741848af}
+      \strng{authornamehash}{fc640b76bfcd48240a1404b6741848af}
+      \strng{authorfullhash}{fc640b76bfcd48240a1404b6741848af}
+      \strng{authorfullhashraw}{fc640b76bfcd48240a1404b6741848af}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{NFPA 2001. Standard on clean agent fire extinguishing systems}
+      \field{year}{2022}
+    \endentry
+    \entry{webfleet_sat}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=1cd2245966f7beaf5fcd97d9abf44d81}{%
+           family={{Webfleet Solutions}},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{1cd2245966f7beaf5fcd97d9abf44d81}
+      \strng{fullhash}{1cd2245966f7beaf5fcd97d9abf44d81}
+      \strng{fullhashraw}{1cd2245966f7beaf5fcd97d9abf44d81}
+      \strng{bibnamehash}{1cd2245966f7beaf5fcd97d9abf44d81}
+      \strng{authorbibnamehash}{1cd2245966f7beaf5fcd97d9abf44d81}
+      \strng{authornamehash}{1cd2245966f7beaf5fcd97d9abf44d81}
+      \strng{authorfullhash}{1cd2245966f7beaf5fcd97d9abf44d81}
+      \strng{authorfullhashraw}{1cd2245966f7beaf5fcd97d9abf44d81}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{WEBFLEET SAT. Ficha técnica del producto}
+      \field{year}{2025}
+    \endentry
+  \enddatalist
+  \datalist[entry]{apa/global//global/global/global}
+    \entry{iso27031}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5b512ee8a59deb284ad0a6a035ba10b1}{%
+           family={{ISO}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{fullhash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{fullhashraw}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{bibnamehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authorbibnamehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authornamehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authorfullhash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authorfullhashraw}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \field{extraname}{1}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{ISO/IEC 27031. Guidelines for information and communication technology readiness for business continuity}
+      \field{year}{2011}
+    \endentry
+    \entry{iso22301}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5b512ee8a59deb284ad0a6a035ba10b1}{%
+           family={{ISO}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{fullhash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{fullhashraw}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{bibnamehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authorbibnamehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authornamehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authorfullhash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authorfullhashraw}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \field{extraname}{2}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{ISO 22301. Security and resilience. Business continuity management systems}
+      \field{year}{2019}
+    \endentry
+    \entry{iso42010}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5b512ee8a59deb284ad0a6a035ba10b1}{%
+           family={{ISO}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{fullhash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{fullhashraw}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{bibnamehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authorbibnamehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authornamehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authorfullhash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authorfullhashraw}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \field{extraname}{3}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{ISO/IEC/IEEE 42010. Systems and software engineering. Architecture description}
+      \field{year}{2022}
+    \endentry
+    \entry{azure_regions}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=140864078aeca1c7c35b4beb33c53c34}{%
+           family={{Microsoft}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{fullhash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{fullhashraw}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{bibnamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorbibnamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authornamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorfullhash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorfullhashraw}{140864078aeca1c7c35b4beb33c53c34}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Azure geographies. Chile Central region}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://azure.microsoft.com/explore/global-infrastructure/geographies/
+      \endverb
+      \verb{url}
+      \verb https://azure.microsoft.com/explore/global-infrastructure/geographies/
+      \endverb
+    \endentry
+    \entry{ds298}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=acc54fd726de9f1741513109eab8d5d5}{%
+           family={{Ministerio de Transportes}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{acc54fd726de9f1741513109eab8d5d5}
+      \strng{fullhash}{acc54fd726de9f1741513109eab8d5d5}
+      \strng{fullhashraw}{acc54fd726de9f1741513109eab8d5d5}
+      \strng{bibnamehash}{acc54fd726de9f1741513109eab8d5d5}
+      \strng{authorbibnamehash}{acc54fd726de9f1741513109eab8d5d5}
+      \strng{authornamehash}{acc54fd726de9f1741513109eab8d5d5}
+      \strng{authorfullhash}{acc54fd726de9f1741513109eab8d5d5}
+      \strng{authorfullhashraw}{acc54fd726de9f1741513109eab8d5d5}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Decreto Supremo N.º 298. Reglamento de transporte de cargas peligrosas por calles y caminos}
+      \field{year}{1995}
+    \endentry
+    \entry{codigo_trabajo_25bis}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=4bea1cf2944a8ad58a1c159a33e3a06b}{%
+           family={{Ministerio del Trabajo}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Biblioteca del Congreso Nacional de Chile}%
+      }
+      \strng{namehash}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{fullhash}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{fullhashraw}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{bibnamehash}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{authorbibnamehash}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{authornamehash}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{authorfullhash}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{authorfullhashraw}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Decreto con Fuerza de Ley N.º 1. Texto refundido, coordinado y sistematizado del Código del Trabajo. Artículo 25 bis sobre jornada de choferes de vehículos de carga terrestre interurbana}
+      \field{year}{2003}
+      \verb{urlraw}
+      \verb https://www.bcn.cl/leychile/navegar?idNorma=207436
+      \endverb
+      \verb{url}
+      \verb https://www.bcn.cl/leychile/navegar?idNorma=207436
+      \endverb
+    \endentry
+    \entry{nfpa2001}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=fc640b76bfcd48240a1404b6741848af}{%
+           family={{NFPA}},
+           familyi={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{fc640b76bfcd48240a1404b6741848af}
+      \strng{fullhash}{fc640b76bfcd48240a1404b6741848af}
+      \strng{fullhashraw}{fc640b76bfcd48240a1404b6741848af}
+      \strng{bibnamehash}{fc640b76bfcd48240a1404b6741848af}
+      \strng{authorbibnamehash}{fc640b76bfcd48240a1404b6741848af}
+      \strng{authornamehash}{fc640b76bfcd48240a1404b6741848af}
+      \strng{authorfullhash}{fc640b76bfcd48240a1404b6741848af}
+      \strng{authorfullhashraw}{fc640b76bfcd48240a1404b6741848af}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{NFPA 2001. Standard on clean agent fire extinguishing systems}
+      \field{year}{2022}
+    \endentry
+    \entry{webfleet_sat}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=1cd2245966f7beaf5fcd97d9abf44d81}{%
+           family={{Webfleet Solutions}},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{1cd2245966f7beaf5fcd97d9abf44d81}
+      \strng{fullhash}{1cd2245966f7beaf5fcd97d9abf44d81}
+      \strng{fullhashraw}{1cd2245966f7beaf5fcd97d9abf44d81}
+      \strng{bibnamehash}{1cd2245966f7beaf5fcd97d9abf44d81}
+      \strng{authorbibnamehash}{1cd2245966f7beaf5fcd97d9abf44d81}
+      \strng{authornamehash}{1cd2245966f7beaf5fcd97d9abf44d81}
+      \strng{authorfullhash}{1cd2245966f7beaf5fcd97d9abf44d81}
+      \strng{authorfullhashraw}{1cd2245966f7beaf5fcd97d9abf44d81}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{WEBFLEET SAT. Ficha técnica del producto}
+      \field{year}{2025}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

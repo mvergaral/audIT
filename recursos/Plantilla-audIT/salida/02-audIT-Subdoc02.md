@@ -1,0 +1,188 @@
+# Comprensión del Problema y de la Necesidad
+
+**Subdocumento N.º 2**
+
+| | |
+|---|---|
+| Empresa | audIT, Empresa N.º 10 |
+| Licitación | Licitación Pública Internacional N.º TFEP-01/2026. Caso 10 Transporte de Carga |
+| Proyecto | Plataforma Digital de Misión Crítica para Transporte de Carga |
+| Cliente | Transportes Curimón S.A. |
+| Instancia | Informe Preparatorio 1. Oferta Técnica Sobre N.º 2 |
+| Contenido | Dimensionamiento del problema, contexto de la industria, actores afectados y supuestos declarados. |
+| Versión | 1.0 |
+| Fecha | 7 de septiembre de 2026 |
+| Lugar | Viña del Mar, Chile |
+
+---
+
+## Comprensión del problema
+
+
+### El problema raíz
+
+
+Transportes Curimón S.A. asume el cien por ciento de la responsabilidad sobre la carga que
+transporta, sobre las condiciones del viaje ante la autoridad y sobre el siniestro ante su
+aseguradora. Opera esa responsabilidad con recursos que en su mayoría no controla. De los 374
+tractocamiones que gestiona, 226 pertenecen a 148 transportistas subcontratados. De los 454
+conductores que trabajan bajo su programación, 258 no son sus trabajadores
+(Escuela de Informática PUCV, 2026c).
+
+Bajo el régimen de subcontratación de la Ley N.º 20.123 (Ministerio del Trabajo, 2006), esa
+distancia no es un inconveniente administrativo. Es una exposición legal cuya magnitud la compañía
+no ha cuantificado, y la advertencia del gerente general recogida en el acta de directorio fija el
+límite de cualquier solución posible. El sesenta por ciento de la capacidad no pertenece a la
+empresa y esas personas no son sus trabajadores, de modo que toda propuesta que suponga la
+capacidad de darles una orden fracasa el primer día.
+
+
+### Dimensión de la operación
+
+
+**Tabla. Volumetría operacional entregada por el mandante. Numeral 14.1 del Caso**
+
+| **Magnitud** | **Hoy** | **A tres años** |
+|---|---|---|
+| Tractocamiones gestionados | 374 | 430 |
+| Flota propia | 148 | 170 |
+| Flota subcontratada | 226 | 260 |
+| Transportistas subcontratados | 148 | 175 |
+| Conductores bajo programación | 454 | 520 |
+| Conductores externos | 258 | 300 |
+| Semirremolques propios | 210 | 245 |
+| Viajes al año | 96.000 | 118.000 |
+| Kilómetros al año | 41.000.000 | 50.000.000 |
+| Toneladas al año | 2.400.000 | 2.900.000 |
+| Documentos electrónicos de transporte al año | 128.000 | 157.000 |
+| Clientes activos | 84 | 100 |
+| Puntos distintos de carga y descarga | 1.400 | 1.700 |
+| Cruces fronterizos al año | 1.900 | 2.400 |
+| Tractocamiones con telemetría de fábrica | 61 | 110 |
+| Fechas de vencimiento vivas | 6.000 | 7.000 |
+
+
+La red se despliega sobre un corredor de 3.000 kilómetros con cinco terminales, dos talleres
+propios y un estanque de combustible. El 26 por ciento de los kilómetros se recorre en vacío.
+
+
+### Fragilidad financiera
+
+
+La facturación anual alcanza los 78.000 millones de pesos con un margen operacional de 9 por
+ciento. Tres de los ocho contratos principales se sirven bajo la línea de costo y representan en
+conjunto el 31 por ciento del ingreso. El peor de ellos acumula cuatro años consecutivos a menos 14
+por ciento, subsidiado por rutas rentables mediante un prorrateo ciego por ingreso. La
+concentración comercial agrava el cuadro, porque ocho clientes de una cartera de 84 generan el 71
+por ciento de la facturación.
+
+Ese margen de 9 por ciento condiciona el diseño. La restricción 14 del Caso obliga a evaluar la
+propuesta económica con especial atención al costo de operar durante 36 meses, de modo que toda
+decisión con costo recurrente por unidad se multiplica por 374 y luego por 430.
+
+
+### Los tres eventos de 2026
+
+
+- **14 de febrero.** Un camión subcontratado sale de la calzada en la Ruta 5 Sur. El
+    conductor había manejado el día anterior para otra empresa y no había completado su descanso.
+    Los registros del mandante mostraban once horas sin conducir para ella, y no tenían forma de
+    mostrar qué ocurrió en esas once horas.
+- **Abril.** Una fiscalización inmoviliza un tractocamión con sustancias peligrosas. La
+    documentación no correspondía a la carga y el curso obligatorio del conductor estaba vencido
+    hacía tres semanas. El vencimiento vivía en una planilla que se actualiza cuando alguien se
+    acuerda, situación que el Decreto Supremo N.º 298 no admite (Ministerio de Transportes, 1995).
+- **Junio.** El primer costeo por kilómetro y por ruta revela los subsidios cruzados
+    entre contratos.
+
+
+Los tres comparten causa. La información que habría evitado cada uno existía, repartida entre tres
+plataformas de posicionamiento, una telemetría que nadie descarga, una liquidación de combustible
+que llega con 40 días de atraso y papeles que viajan en la cabina.
+
+
+### El estado de los datos
+
+
+**Tabla. Brechas de información verificadas en el Capítulo 7 del Caso**
+
+| **Indicador** | **Situación actual** |
+|---|---|
+| Conductores con control de jornada | 196 de 454 |
+| Jornada previa de un conductor de tercero | Inexistente |
+| Tacógrafos digitales cuya información se descarga | Cero |
+| Tractocamiones con telemetría de fábrica sin descargar | 61 |
+| Camiones sin dispositivo de posicionamiento | 34 |
+| Plataformas de posicionamiento incompatibles | 3, una sin exportación |
+| Fechas de vencimiento vivas en planillas separadas | 6.000 en 4 planillas |
+| Espera media en punto de carga | 3 horas 10 minutos |
+| Cobros por espera objetados por el cliente | 71 por ciento |
+| Documentos de respaldo que llegan incompletos o no llegan | 4,2 por ciento |
+| Liquidación mensual a 148 transportistas | 9 días, 8 personas, 11 por ciento se corrige |
+| Detenciones por sobrepeso en 2025 | 142 |
+
+
+### La exigencia de 2029
+
+
+El cliente exportador mayor, responsable del 19 por ciento de los ingresos, condicionó la
+renovación de su contrato a cuatro exigencias. Documento electrónico de transporte integrado punta
+a punta. Posición de la carga en tiempo real. Emisiones por tonelada kilómetro verificadas por un
+tercero conforme a ISO 14083 (ISO, 2023) y al marco GLEC (Smart Freight Centre, 2023). Y acreditación del cumplimiento de
+jornada en cada viaje, incluidos los camiones subcontratados.
+
+La cuarta exigencia es el problema central del Caso. El régimen del Artículo 25 bis del Código del
+Trabajo (Ministerio del Trabajo, 2003) recae sobre el empleador, y para los 258 conductores
+externos el empleador es el transportista, no el mandante. Esa constatación no es un obstáculo. Es
+el anclaje jurídico de la solución que la Sección 3 desarrolla, porque confirma que la obligación
+se persigue por el contrato con el dueño del camión y no con el conductor.
+
+
+### Los nodos donde ocurre la operación
+
+
+**Tabla. Nodos operacionales y su condición. Capítulo 3 del Caso**
+
+| **Nodo** | **Condición determinante para el diseño** |
+|---|---|
+| Terminal San Bernardo | Casa matriz, torre de programación 24x7, taller principal. Único punto donde converge todo y donde se instala cualquier equipamiento a bordo |
+| Cuatro terminales regionales | Antofagasta, Talca, Los Ángeles y Puerto Montt. Enlace de un proveedor, sin respaldo en tres de los cuatro |
+| La cabina del camión | Lugar de trabajo real. Ninguna interacción admisible durante la marcha |
+| La ruta | Tramos de más de 80 kilómetros continuos sin cobertura. Ocurre allí el cien por ciento del riesgo y existe allí la menor visibilidad |
+| Puntos de carga y descarga | Instalaciones de terceros con reglas y sistemas propios. No se puede instalar equipamiento |
+| Plazas de pesaje | El cliente carga y a la compañía la pesan. Un sobrepeso es multa e inmovilización |
+| Paso Los Libertadores | Cierra por nieve entre junio y septiembre, en episodios de hasta 12 días continuos |
+| Talleres en ruta | Proveedores externos cuya intervención hoy no queda registrada |
+
+
+## Bibliografía
+
+Dirección del Trabajo. (2009). *Resolución Exenta N.º 1213. Sistema obligatorio de control de asistencia, horas de trabajo y descanso para conductores de vehículos de carga terrestre interurbana*.
+
+Ministerio del Trabajo. (2003). *Decreto con Fuerza de Ley N.º 1. Texto refundido del Código del Trabajo. Artículo 25 bis*. Biblioteca del Congreso Nacional de Chile. https://www.bcn.cl/leychile/navegar?idNorma=207436
+
+Escuela de Informática PUCV. (2026a). *Bases Administrativas. Licitación Pública Internacional N.º TFEP-01/2026* (FEP01.26).
+
+Escuela de Informática PUCV. (2026b). *Bases Técnicas Transversales* (FEP02.26).
+
+Escuela de Informática PUCV. (2026c). *Bases Técnicas del Caso 10. Transporte de Carga* (FEP03.10.26).
+
+FMS Standard. (2025). *Technical Specification rFMS vehicle data version 5.0.0*. https://www.fms-standard.com
+
+Iridium Communications. (2024). *Iridium Short Burst Data Service Developers Guide*.
+
+ISO. (2011). *ISO/IEC 27031*. ISO. (2019). *ISO 22301*. ISO. (2022). *ISO/IEC/IEEE 42010*. ISO. (2023). *ISO 14083*.
+
+Microsoft. (2025). *Azure geographies. Chile Central region*.
+
+Ministerio de Hacienda. (2024). *Ley N.º 21.719 sobre protección y tratamiento de datos personales*.
+
+Ministerio de Transportes. (1995). *Decreto Supremo N.º 298*.
+
+Ministerio del Trabajo. (2006). *Ley N.º 20.123 sobre trabajo en régimen de subcontratación*.
+
+NFPA. (2022). *NFPA 2001*. NIST. (2014). *NIST SP 800-88 Rev. 1*.
+
+Smart Freight Centre. (2023). *GLEC Framework, version 3.0*.
+
+Webfleet Solutions. (2025). *WEBFLEET SAT. Ficha técnica del producto*.

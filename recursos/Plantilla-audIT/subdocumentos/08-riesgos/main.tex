@@ -1,0 +1,15 @@
+% Compilar desde la raiz del proyecto con herramientas/construir.sh
+\documentclass[12pt, letterpaper, table, xcdraw]{inf-pucv}
+\input{comun/instancia}
+\input{\subdocRuta/meta}
+\input{comun/preambulo}
+\input{comun/portada}
+\begin{document}
+\portadaSubdocumento
+\fichaSubdocumento
+\input{\subdocRuta/contenido}
+\clearpage
+\phantomsection
+\addcontentsline{toc}{section}{Bibliografía}
+\printbibliography[title={Bibliografía}]
+\end{document}

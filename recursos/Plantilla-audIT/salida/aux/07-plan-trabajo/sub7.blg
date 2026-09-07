@@ -1,0 +1,9 @@
+[0] Config.pm:328> INFO - This is Biber 2.21
+[0] Config.pm:331> INFO - Logfile is 'salida/aux/07-plan-trabajo/sub7.blg'
+[84] biber:342> INFO - === dom sep  6, 2026, 21:51:24
+[101] Biber.pm:421> INFO - Reading 'salida/aux/07-plan-trabajo/sub7.bcf'
+[203] Biber.pm:1002> INFO - Found 0 citekeys in bib section 0
+[231] bbl.pm:676> INFO - Writing 'salida/aux/07-plan-trabajo/sub7.bbl' with encoding 'UTF-8'
+[231] bbl.pm:779> INFO - Output to salida/aux/07-plan-trabajo/sub7.bbl
+[231] Biber.pm:132> WARN - The file 'salida/aux/07-plan-trabajo/sub7.bcf' does not contain any citations!
+[231] Biber.pm:134> INFO - WARNINGS: 1

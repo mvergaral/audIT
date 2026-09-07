@@ -1,0 +1,9 @@
+[0] Config.pm:328> INFO - This is Biber 2.21
+[0] Config.pm:331> INFO - Logfile is 'salida/aux/13-innovaciones/sub13.blg'
+[85] biber:342> INFO - === dom sep  6, 2026, 21:52:19
+[103] Biber.pm:421> INFO - Reading 'salida/aux/13-innovaciones/sub13.bcf'
+[201] Biber.pm:1002> INFO - Found 0 citekeys in bib section 0
+[229] bbl.pm:676> INFO - Writing 'salida/aux/13-innovaciones/sub13.bbl' with encoding 'UTF-8'
+[229] bbl.pm:779> INFO - Output to salida/aux/13-innovaciones/sub13.bbl
+[229] Biber.pm:132> WARN - The file 'salida/aux/13-innovaciones/sub13.bcf' does not contain any citations!
+[229] Biber.pm:134> INFO - WARNINGS: 1
