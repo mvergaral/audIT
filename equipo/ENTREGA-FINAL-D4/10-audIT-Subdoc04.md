@@ -1,16 +1,18 @@
-# Arquitectura Lógica y Física
+# Arquitectura Lógica y Física de la Solución
 
 **Subdocumento N.º 4**
 
 | | |
 |---|---|
 | Empresa | audIT, Empresa N.º 10 |
-| Licitación | Licitación Pública Internacional N.º TFEP-01/2026, Caso 10 Transporte de Carga |
+| Licitación | Licitación Pública Internacional N.º TFEP-01/2026. Caso 10 Transporte de Carga |
 | Proyecto | Plataforma Digital de Misión Crítica para Transporte de Carga |
 | Cliente | Transportes Curimón S.A. |
-| Instancia | Informe Preparatorio 1, Oferta Técnica Sobre N.º 2 |
-| Contenido | Ocho capas, contextos delimitados, emplazamiento, dispositivo a bordo, dimensionamiento, supuestos y diagramas. |
+| Instancia | Informe Preparatorio 1. Oferta Técnica Sobre N.º 2 |
+| Contenido | Arquitectura lógica, física, de integración, de seguridad y de despliegue, con dimensionamiento y decisiones registradas. |
+| Versión | 1.0 |
 | Fecha | 7 de septiembre de 2026 |
+| Lugar | Viña del Mar, Chile |
 
 ---
 
@@ -78,6 +80,24 @@ capa sustituye los módulos operativos de 2013, tráfico, despacho, tarifas y li
 encapsula el sistema contable, que se conserva como único emisor de documentos tributarios.
 
 
+#### Registro de decisiones de arquitectura
+
+
+RT-02.04 y el Artículo 19 convierten el registro de decisiones en entregable contractual, con la
+alternativa escogida, las descartadas y el criterio de selección. Se registran cuatro decisiones
+estructurales de la arquitectura lógica.
+
+
+**Tabla. Decisiones de arquitectura lógica registradas**
+
+| **ADR** | **Decisión** | **Alternativa descartada** | **Criterio** |
+|---|---|---|---|
+| 01 | Microservicios en contenedores orquestados | Monolito modular con escalado vertical | Aislamiento de fallas y escalado independiente. La ingesta telemática no compite por recursos con el despacho |
+| 02 | Arquitectura dirigida por eventos | Cadena síncrona de llamadas entre servicios | Desacoplamiento temporal. El despacho confirma y libera al operador sin esperar los efectos derivados |
+| 03 | Segregación por captura de cambios hacia el analítico | Consultas analíticas sobre réplicas de lectura | Aislamiento total de recursos. RT-05.05 prohíbe que la analítica degrade la operación |
+| 04 | Autenticación federada y autenticación mutua entre servicios | Claves de interfaz de larga duración | RT-05.18 prohíbe la clave estática en la ruta. Ningún servicio confía en otro sin verificación criptográfica |
+
+
 #### Resiliencia
 
 
@@ -87,6 +107,117 @@ límite explícitos en toda llamada remota, cortacircuitos y mamparos para aisla
 integraciones externas, y reintento exponencial con variación aleatoria. La escritura es
 idempotente con ventana de deduplicación dimensionada para tolerar la desconexión prolongada en
 ruta.
+
+
+#### Verificación bloqueante del despacho
+
+
+RT-09.01 del Caso fija en 30 segundos el tope para asignar un viaje con verificación de jornada,
+habilitaciones y aptitud del equipo. El servicio evalúa tres invariantes en paralelo y ninguna
+admite excepción automática.
+
+
+**Tabla. Invariantes de la verificación bloqueante**
+
+| **Invariante** | **Qué comprueba** | **Fundamento** |
+|---|---|---|
+| Conductor | Horas conducidas en el día, continuidad sin descanso y acumulado del período | Artículo 25 bis del Código del Trabajo (Ministerio del Trabajo, 2003) |
+| Tractocamión | Revisión técnica aprobada, seguro obligatorio vigente y permiso de circulación al día | Numeral 4.4 del Caso |
+| Semirremolque y carga peligrosa | Curso vigente del conductor y correspondencia entre la documentación y lo efectivamente cargado | Decreto Supremo N.º 298 (Ministerio de Transportes, 1995) |
+
+
+La secuencia bloquea la clave de idempotencia, evalúa las tres invariantes, persiste en una única
+transacción y responde. Ante rechazo devuelve un documento de error estructurado que nombra la
+invariante incumplida, de modo que el operador sepa qué falta y no reintente a ciegas. El
+presupuesto de 30 segundos se cumple con holgura porque la evaluación ocurre sobre datos en memoria.
+
+
+#### Idempotencia y ventana de deduplicación
+
+
+RT-02.06 exige escrituras idempotentes. Cada operación lleva una clave única que se retiene durante
+siete días, plazo dimensionado para cubrir las 72 horas de desconexión más el margen de los cierres
+prolongados del paso fronterizo. La clave se bloquea en el almacén en memoria y se respalda con una
+restricción de unicidad duradera en el motor transaccional, de modo que un reintento tras la
+reconexión masiva no duplica un viaje ni un documento.
+
+
+#### Convivencia con el sistema contable heredado
+
+
+La capa anticorrupción sustituye los módulos operativos de 2013, tráfico, despacho, tarifas y
+liquidación, y encapsula el sistema contable, que se conserva como único emisor de documentos
+tributarios. El aislamiento es bidireccional. Un cambio en el sistema externo no propaga su modelo
+al núcleo, y el núcleo no escribe directamente sobre el legado.
+
+
+![Integración con el sistema contable heredado a través de la capa anticorrupción](D3-diagrama12_integracion_acl_erp2013.png)
+
+*Figura. Integración con el sistema contable heredado a través de la capa anticorrupción*
+
+
+#### Fuentes con desfase y telemetría del vehículo
+
+
+Dos integraciones no entregan datos en el momento en que ocurren y la arquitectura las trata como
+tales. El consumo de combustible llega con hasta 40 días de desfase y los peajes se liquidan
+mensualmente. Ambas se ingieren de forma desacoplada, preparadas para evolucionar a entrega diaria
+sin rediseño.
+
+La telemetría de fábrica de los 61 tractocamiones se lee por acoplamiento sin contacto sobre la
+interfaz del vehículo. Esa elección no es de conveniencia técnica. La restricción 6 prohíbe que el
+equipamiento a bordo afecte la garantía del vehículo o interfiera con sus sistemas de seguridad, y
+el Capítulo 11 excluye intervenir la electrónica de fábrica. Una conexión que no corta ni empalma
+el arnés original es lo que permite cumplir ambas.
+
+
+#### Capa analítica y costo real por kilómetro
+
+
+La segregación entre lo transaccional y lo analítico se resuelve por captura de cambios hacia un
+repositorio organizado en capas sucesivas de refinamiento, desde el dato crudo hasta el modelo
+dimensional que consume la gerencia.
+
+
+![Capa analítica por niveles de refinamiento y explotación del costo por kilómetro](D3-diagrama13_arquitectura_analitica_lakehouse_bi.png)
+
+*Figura. Capa analítica por niveles de refinamiento y explotación del costo por kilómetro*
+
+
+El costo por kilómetro se calcula distinto según el régimen de propiedad del equipo. Para la flota
+propia se compone de combustible medido por telemetría, peajes efectivamente transitados,
+neumáticos, mantenimiento, jornada del conductor y depreciación. Para la flota subcontratada el
+mandante solo conoce la tarifa pactada y los anticipos de combustible, de modo que el resto se
+imputa. Esa diferencia hay que declararla, porque comparar flota propia con flota de terceros sin
+declararla es comparar cosas distintas, y esa comparación gobierna la decisión de crecer con una u
+otra.
+
+El mecanismo es dual. Se emite un costo preliminar dentro de las 24 horas del cierre del viaje,
+declarando qué componentes faltan, y una versión definitiva cuando llegan el combustible y los
+peajes. Sin ese doble paso el costo por viaje se convierte en un cierre contable tardío, que es
+exactamente la condición que permitió que un contrato operara cuatro años bajo costo.
+
+
+#### Modelo táctico del dominio
+
+
+![Modelo táctico del dominio. Agregados, entidades y servicios por contexto](D3-diagrama2_arquitectura_tactica_ddd.png)
+
+*Figura. Modelo táctico del dominio. Agregados, entidades y servicios por contexto*
+
+
+#### Inventario de componentes lógicos
+
+
+El Artículo 16.2 obliga a justificar el emplazamiento componente por componente. El inventario
+lógico clasifica cada componente por capa, latencia exigida, criticidad operacional, volumen y
+dependencia de conectividad, y es el insumo directo de la tabla de emplazamiento que se desarrolla
+en la sección física y se detalla en el Anexo A.
+
+
+![Patrones de resiliencia y flujo de la asignación bloqueante](D3-diagrama11_patrones_resiliencia_despacho.png)
+
+*Figura. Patrones de resiliencia y flujo de la asignación bloqueante*
 
 
 ### Arquitectura física
@@ -385,44 +516,155 @@ declaran aquí con su cierre.
 Los diagramas que siguen se presentan en orientación horizontal a página completa. Sus versiones a resolución de trabajo acompañan esta oferta como archivos independientes.
 
 
-![Arquitectura lógica. Las ocho capas obligatorias del numeral 2.1 transversal](assets/images/LogicaCapas.pdf)
+![Arquitectura lógica. Las ocho capas obligatorias del numeral 2.1 transversal](LogicaCapas.pdf)
 
 *Figura. Arquitectura lógica. Las ocho capas obligatorias del numeral 2.1 transversal*
 
 
-![Contextos delimitados del dominio y sistemas con los que convive la solución](assets/images/Contextos.pdf)
+![Contextos delimitados del dominio y sistemas con los que convive la solución](Contextos.pdf)
 
 *Figura. Contextos delimitados del dominio y sistemas con los que convive la solución*
 
 
-![Mapa de integraciones. Sistemas internos, fuentes de terreno y contrapartes externas](assets/images/LogicaIntegraciones.pdf)
+![Mapa de integraciones. Sistemas internos, fuentes de terreno y contrapartes externas](LogicaIntegraciones.pdf)
 
 *Figura. Mapa de integraciones. Sistemas internos, fuentes de terreno y contrapartes externas*
 
 
-![Arquitectura física general. Nube, sitio de continuidad, gabinetes de terminal y flota](assets/images/Main.pdf)
+![Arquitectura física general. Nube, sitio de continuidad, gabinetes de terminal y flota](Main.pdf)
 
 *Figura. Arquitectura física general. Nube, sitio de continuidad, gabinetes de terminal y flota*
 
 
-![El camión como componente on-premise distribuido](assets/images/Camion.pdf)
+![El camión como componente on-premise distribuido](Camion.pdf)
 
 *Figura. El camión como componente on-premise distribuido*
 
 
-![Separación entre recuperación ante desastres y continuidad operacional en el borde](assets/images/DosEjes.pdf)
+![Separación entre recuperación ante desastres y continuidad operacional en el borde](DosEjes.pdf)
 
 *Figura. Separación entre recuperación ante desastres y continuidad operacional en el borde*
 
 
-![Flujo de un evento de jornada registrado sin cobertura](assets/images/Flujo.pdf)
+![Flujo de un evento de jornada registrado sin cobertura](Flujo.pdf)
 
 *Figura. Flujo de un evento de jornada registrado sin cobertura*
 
 
-![Correspondencia entre capa lógica y emplazamiento físico](assets/images/LogicaEmplazamiento.pdf)
+![Correspondencia entre capa lógica y emplazamiento físico](LogicaEmplazamiento.pdf)
 
 *Figura. Correspondencia entre capa lógica y emplazamiento físico*
+
+
+## Anexo A. Tabla de emplazamiento de componentes
+
+
+El Artículo 16.2 obliga a justificar, componente por componente, la decisión de emplazamiento en
+función de latencia, criticidad operacional, volumen de datos, restricciones regulatorias,
+disponibilidad de conectividad y costo total de propiedad, y califica como observación grave toda
+asignación no justificada. El numeral 1.5 añade que declarar cumplimiento sin individualizar el
+componente equivale a no declarar. Por eso cada fila lleva su justificación propia.
+
+
+### Emplazamientos declarados
+
+
+**Tabla. Emplazamientos y tipología declarada por sitio**
+
+| **Código** | **Emplazamiento** | **Tipología declarada** | **Fundamento** |
+|---|---|---|---|
+| N | Nube, Azure Chile Central, tres zonas | No aplica | RT-03.01 y RT-03.02 |
+| N2 | Nube, segunda región Azure | No aplica | RT-07.02 y Artículo 16.3 |
+| SB | San Bernardo, 26 metros cuadrados | Sala técnica secundaria o de sitio | Numeral 6.1 transversal |
+| GT | Gabinete de terminal, cuatro unidades | Gabinete o borde operacional | RT-06.01 del Caso |
+| DB | Dispositivo a bordo, 374 unidades | On-premise distribuido | RT-06.01 del Caso |
+| BM | Borde móvil | No aplica | RT-17.01 |
+
+
+### Decisión de emplazamiento componente por componente
+
+
+**Tabla. Tabla de emplazamiento de componentes. Formulario T-11**
+
+| **N.º** | **Componente lógico** | **Capa** | **Empl.** | **Justificación de la decisión** |
+|---|---|---|---|---|
+| 1 | CDN y protección perimetral | Borde | N | Punto de presencia distribuido. no tiene sentido físico fuera de la nube |
+| 2 | Puerta de enlace de servicios | Borde | N | Autenticación y enrutamiento centralizados. escala con el peak de reconexión |
+| 3 | Servicio de despacho y asignación | Negocio | N | Orquesta recursos de toda la red. requiere la vista completa de flota y jornada |
+| 4 | Nodo de continuidad operacional | Negocio | SB | RT-21.06: asignar viaje, emitir DET y recibir pánico son severidad máxima. No pueden depender del enlace a la nube |
+| 5 | Servicio de flota y mantenimiento | Negocio | N | Administración centralizada de activos. tolera latencia de segundos |
+| 6 | Servicio de jornada | Negocio | N | Validación bloqueante $\leq$ 30 s (RT-09.01) contra el dato consolidado |
+| 7 | Servicio de gestión documental | Negocio | N | Sellado y control de retención centralizados |
+| 8 | Servicio de tarifas y liquidación | Negocio | N | Proceso por lotes mensual. sin exigencia de latencia operacional |
+| 9 | Bus de eventos de telemetría | Eventos | N | Absorbe la ráfaga de cientos de unidades saliendo de la misma sombra |
+| 10 | Bus transaccional | Eventos | N | Entrega garantizada con cola de mensajes fallidos |
+| 11 | Pasarela de la capa anticorrupción | Integración | SB | Debe alcanzar el ERP heredado, que está físicamente en San Bernardo |
+| 12 | Integración telemática de terceros | Integración | N | Consume APIs de los dos proveedores externos. cero intervención física (restricción 3) |
+| 13 | Integración rFMS de fábrica | Integración | N | API del fabricante, solo lectura, autorización por OEM (RT-17.06) |
+| 14 | Base transaccional | Datos | N | Consistencia estricta con alta disponibilidad multizona |
+| 15 | Base de series de tiempo | Datos | N | Volumen y patrón de escritura masiva. 2 años en línea (RT-05.10 del Caso) |
+| 16 | Caché distribuida | Datos | N | Sesiones, vigencias y geocercas de consulta. no sustituye la evaluación a bordo |
+| 17 | Repositorio documental inmutable | Datos | N | Evidencia probatoria con retención de 5 a 10 años (RT-07.11, RT-05.10) |
+| 18 | Lakehouse analítico | Analítica | N | Aislamiento OLTP/OLAP. costo por km en $\leq$ 24 h (RT-05.29) |
+| 19 | Capa semántica de autoservicio | Analítica | N | Explotación por Finanzas sin intervención de TI (RT-05.27) |
+| 20 | Gestión del parque de dispositivos | Terreno | N | Inventario, configuración, firmware, bloqueo y borrado remotos (RT-03.18) |
+| 21 | Identidad, secretos y cifrado de campo | Seguridad | N | Clave gestionada independiente de la infraestructura respaldada (RT-07.10, RT-11.10) |
+| 22 | Observabilidad | Observab. | N | Cobertura unificada de nube y on-premise, sin puntos ciegos (RT-03.16) |
+| 23 | Réplica de recuperación ante desastres | Todas | N2 | RT-07.02: distancia suficiente para no compartir el evento de fuerza mayor |
+| 24 | ERP contable heredado 2013 | Legado | SB | Sistema existente no reemplazable y único emisor de documentos tributarios (Cap. 11) |
+| 25 | Terminación de enlaces y borde de red | Red | SB | Punto de entrada de ExpressRoute y VPN por rutas físicas distintas (RT-03.17, RT-06.32) |
+| 26 | Custodia de medios de respaldo | Datos | SB | Medio físico transportable fuera de sitio (RT-06.26, esquema 3-2-1-1-0 de RT-07.09) |
+| 27 | Nodo de terminal | Negocio | GT | RT-03.10 del Caso: «Los terminales deben operar 12 horas sin enlace hacia el exterior» |
+| 28 | Lector de portería y enrolamiento | Terreno | GT + SB | Verificación local de vigencias en los 5 terminales. el enrolamiento biométrico se centraliza (RT-06.22) |
+| 29 | Buffer no volátil $\geq$ 8 GB | Terreno | DB | RT-03.10: 72 h sin cobertura sin pérdida de registro. RT-10.05: hasta 12 días (288 h) de cierre fronterizo |
+| 30 | Motor de geocercas a bordo | Terreno | DB | RT-09.01: registro de llegada y salida automático, sin intervención del conductor y sin equipamiento en instalaciones del cliente |
+| 31 | Cálculo de alerta de jornada a bordo | Terreno | DB | Criterio 28: la alerta debe llegar aunque no haya enlace, con anticipación al lugar seguro |
+| 32 | Identificación del conductor | Terreno | DB | RT-12.11: sin manipular un dispositivo y sin recordar una credencial |
+| 33 | Módulo satelital de ráfaga corta | Terreno | DB | Subconjunto por riesgo. Población no estimable hasta la medición de RT-03.24 |
+| 34 | App móvil del conductor | Borde | BM | RT-17.01. Canal voluntario e incentivado. la trazabilidad obligatoria no depende de él (restricciones 1 y 2) |
+
+
+**Tabla. Matriz de los seis criterios del Artículo 16.2**
+
+| **N.º** | **Componente** | **Latencia** | **Criticidad** | **Volumen** | **Regulación** | **Conectividad** | **TCO** |
+|---|---|---|---|---|---|---|---|
+| 3 | Despacho y asignación | $\leq$ 30 s extremo a extremo | Máxima | 96.000 viajes/año | , | Requiere enlace | Elástico |
+| 4 | Nodo de continuidad | $\leq$ 30 s local | Máxima | Ventana de 12 h | , | Opera sin enlace | Fijo, dos nodos |
+| 6 | Servicio de jornada | $\leq$ 30 s | Máxima | 454 conductores | Datos personales de 258 externos | Requiere enlace | Elástico |
+| 9 | Bus de telemetría | $\leq$ 100 ms | Crítica | Peak de reconexión masiva | , | Requiere enlace | Elástico por partición |
+| 14 | Base transaccional | $\leq$ 15 ms | Máxima | Particionado mensual | Retención 5-10 años | Requiere enlace | Reservado |
+| 15 | Series de tiempo | $\leq$ 20 ms | Alta | 2 años en línea + agregación | , | Requiere enlace | Por capa hot/cold |
+| 17 | Repositorio inmutable | $\leq$ 1 s | Alta | Evidencia probatoria | WORM, 10 años siniestros | Requiere enlace | Por capa de acceso |
+| 21 | Identidad y cifrado | $\leq$ 50 ms | Crítica | , | RT-11.10 cifrado a nivel de campo . Ley 21.719 | Requiere enlace | Fijo por HSM |
+| 23 | Réplica de DR | RPO $\leq$ 15 min | Crítica | Espejo de producción | , | Enlace entre regiones | Activo-pasivo |
+| 24 | ERP heredado | N/A | Externa | Contabilidad y DTE | Único emisor tributario | Local | Existente |
+| 27 | Nodo de terminal | Local | Alta | 12 h de operación autónoma | , | Opera sin enlace 12 h | 4 gabinetes |
+| 29 | Buffer a bordo | Inmediata | Máxima | $\approx$ 0,8 MB en 72 h . $\geq$ 8 GB de capacidad | Evidencia de jornada | Opera sin cobertura | Por unidad |
+| 30 | Geocercas a bordo | Inmediata | Alta | Eventos discretos | , | Opera sin cobertura | Sin costo marginal |
+| 33 | Módulo satelital | $\leq$ decenas de s | Alta | Ráfagas cortas | , | Sin cobertura celular | Por mensaje |
+| 34 | App móvil | $\leq$ 1 s | Media, no bloqueante | 454 potenciales | Consentimiento revocable | Requiere enlace | Por desarrollo |
+
+
+### Reparto resultante
+
+
+Dieciocho componentes en la región primaria de nube, uno en la segunda región, cinco en San
+Bernardo, dos en gabinete de terminal, cinco en el dispositivo a bordo y uno en borde móvil. La
+propuesta cumple el Artículo 16.1, porque no es exclusivamente en nube ni exclusivamente
+on-premise, y la parte on-premise sostiene las tres funciones que RT-21.06 clasifica en severidad
+máxima cuando cae el enlace.
+
+
+### Celdas que no se pueden cerrar en esta instancia
+
+
+**Tabla. Materias abiertas de la tabla de emplazamiento**
+
+| **Materia** | **Por qué y cómo se cierra** |
+|---|---|
+| Población del módulo satelital | RT-03.24 del Caso prohíbe suponer la cobertura y exige medirla en terreno. Se cierra con la campaña de medición de la Etapa 1 |
+| Unidades totales con almacenamiento local | Depende de cuántos transportistas adhieran. Se cierra con el plan de adhesión |
+| Dimensionamiento del nodo de continuidad | Requiere el peak de asignación de la torre, derivado de RT-09.02 y del numeral 14.2 |
 
 
 ## Bibliografía
@@ -441,11 +683,13 @@ FMS Standard. (2025). *Technical Specification rFMS vehicle data version 5.0.0*.
 
 Iridium Communications. (2024). *Iridium Short Burst Data Service Developers Guide*.
 
-ISO. (2011). *ISO/IEC 27031*. ISO. (2019). *ISO 22301*. ISO. (2022). *ISO/IEC/IEEE 42010*. ISO. (2023). *ISO 14083*.
+ISO. (2011). *ISO/IEC 27031*. ISO. (2013). *ISO 16290. Definition of the Technology Readiness Levels (TRLs) and their criteria of assessment*. ISO. (2019). *ISO 22301*. ISO. (2022). *ISO/IEC/IEEE 42010*. ISO. (2023). *ISO 14083*.
 
 Microsoft. (2025). *Azure geographies. Chile Central region*.
 
-Ministerio de Hacienda. (2024). *Ley N.º 21.719 sobre protección y tratamiento de datos personales*.
+Congreso Nacional de Chile. (2002). *Ley N.º 19.799 sobre documentos electrónicos, firma electrónica y servicios de certificación de dicha firma*. https://www.bcn.cl/leychile/navegar?idNorma=196640
+
+Congreso Nacional de Chile. (2024). *Ley N.º 21.719 que regula la protección y el tratamiento de los datos personales y crea la Agencia de Protección de Datos Personales*. Diario Oficial de 13 de diciembre de 2024. https://www.bcn.cl/leychile/navegar?i=1209272
 
 Ministerio de Transportes. (1995). *Decreto Supremo N.º 298*.
 
@@ -456,3 +700,5 @@ NFPA. (2022). *NFPA 2001*. NIST. (2014). *NIST SP 800-88 Rev. 1*.
 Smart Freight Centre. (2023). *GLEC Framework, version 3.0*.
 
 Webfleet Solutions. (2025). *WEBFLEET SAT. Ficha técnica del producto*.
+
+World Wide Web Consortium. (2025). *Verifiable credentials data model v2.0*. W3C Recommendation de 15 de mayo de 2025. https://www.w3.org/TR/vc-data-model-2.0/

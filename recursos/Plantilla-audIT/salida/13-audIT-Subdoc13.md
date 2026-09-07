@@ -60,8 +60,61 @@ liquidaciones corregidas. Y un efecto que importa más que ambos, porque el port
 razón concreta que un dueño de camión tiene para adherir. La transparencia del pago es el
 argumento comercial del plan de adhesión que mide el criterio 27.
 
-**Investigación adicional requerida.** Ninguna. La capacidad depende del motor de costeo que
-ya forma parte del alcance de la Etapa 1.
+**Lo que agrega sobre lo que las bases ya exigen.** Los criterios 21 y 29 obligan a que el
+transportista autenticado consulte sus viajes, evidencias y liquidación en curso dentro del portal
+del mandante. Eso está comprometido en el alcance y no se presenta como innovación. Lo que agrega
+esta ficha es que la evidencia salga del portal como un documento del transportista, verificable
+por un tercero que no tiene acceso al sistema del mandante. Un expediente exportable con la jornada
+acreditada de sus conductores, la vigencia de sus habilitaciones y la hoja de vida de sus equipos,
+que él presenta a sus otros clientes, a la autoridad o a su aseguradora. Las bases no lo piden, y
+tampoco cae en la exclusión del Capítulo 11 sobre administrar la contabilidad de los
+transportistas, porque no administra nada. Devuelve a su titular una evidencia ya producida.
+
+**Madurez.** Escala de niveles de madurez tecnológica de uno a nueve
+(ISO, 2013). La firma electrónica avanzada con verificación en línea está en nivel nueve,
+en operación productiva y regulada en Chile desde 2002 (Congreso Nacional de Chile, 2002), y es la línea base
+comprometida. La credencial verificable alcanzó el estado de recomendación en mayo de 2025
+(World Wide Web Consortium, 2025) y se sitúa entre siete y ocho por su adopción todavía acotada en el
+ecosistema logístico local. El modelo de datos se diseña para incorporarla sin rehacer la emisión.
+La composición del expediente sobre datos de jornada y mantenimiento está en nivel seis, porque el
+componente es convencional y lo nuevo es su uso probatorio por el titular.
+
+**Incorporación en la arquitectura y en el cronograma.** Un servicio de emisión de expediente
+en la capa de servicios de negocio, que consume control de jornada, gestión documental y gestión de
+flota. Un servicio público de verificación sin autenticación, que recibe un código y responde
+válido o inválido sin revelar contenido. La firma la provee la bóveda de claves de la capa de
+seguridad. El portal expone la solicitud y la descarga. La decisión entre firma avanzada y
+credencial verificable se documenta en el mes cuatro con el levantamiento de destinatarios reales,
+la emisión se construye entre los meses diez y doce, y el expediente queda disponible durante la
+marcha blanca de la Etapa 1.
+
+**Impacto económico.** La inversión es incremental sobre el portal, que ya está presupuestado
+por los criterios 21 y 29 con independencia de esta ficha. Agrega el desarrollo de los dos
+servicios y la suscripción anual de certificados de firma del emisor, partidas por cotizar cuyo
+valor definitivo se incorpora al flujo de caja del Informe 3. El efecto en costo operacional es
+marginal y positivo, porque el expediente se compone de evidencia que el sistema ya produce y
+conserva por obligación del criterio 4. El beneficio principal no se realiza en esta línea sino en
+la adhesión, de la que depende el sesenta coma cuatro por ciento de la capacidad, y así se declara
+en lugar de atribuirle un ahorro directo que no tiene.
+
+**Indicador de verificación.** Línea base cero, porque la capacidad no existe. Meta de
+cuarenta por ciento de los transportistas adheridos emitiendo al menos un expediente, medida al
+cierre de la marcha blanca en el mes quince. Meta secundaria de reducir a menos del dos por ciento
+las liquidaciones corregidas después de emitidas, desde el once por ciento actual, medida en el
+tercer cierre mensual posterior al paso a producción.
+
+**Riesgo de adopción.** El riesgo principal es que el transportista no perciba utilidad y no
+emita el expediente, con probabilidad media e impacto alto, porque desaparece el argumento central
+de la adhesión. Se mitiga asistiendo la primera emisión en el terminal durante el enrolamiento. El
+riesgo secundario es que los destinatarios no acepten el documento como prueba, que se mitiga
+levantando destinatarios reales en el mes cuatro antes de construir. La contingencia general es que
+el portal obligatorio se entrega igual, porque esta ficha es una capa sobre él y no una condición
+de su funcionamiento. Lo que se pierde es el argumento de reciprocidad, que se compensa con los
+incentivos económicos de la ficha tipo 4.
+
+**Investigación adicional requerida.** La elección entre firma electrónica avanzada y
+credencial verificable requiere el levantamiento de destinatarios del mes cuatro. El motor de
+costeo del que depende la liquidación en curso ya forma parte del alcance de la Etapa 1.
 
 
 ### Tipo 2. Despliegue sin detener la flota
@@ -134,13 +187,76 @@ mandante cuando el camión trabaja para otro cliente, y esa garantía sea verifi
 lugar de prometida. Consentimiento granular y revocable administrado desde el portal, con registro
 auditable de cada acceso a la información de localización.
 
-**Resultado esperado.** Número de transportistas adheridos sobre el total de 148 y plazo en
-que cada tramo se alcanza. Es la innovación que responde de manera directa al criterio 29, que
-exige que quien entrega el dato conserve el control sobre él.
+**Lo que agrega sobre lo que las bases ya exigen.** El Capítulo 11 resuelve quién compra el
+hardware, y presentar esa regla como innovación sería presentar como propia una decisión que ya
+está en las bases. Lo que el Caso deja abierto es la decisión quinta del numeral 16.1, sobre el
+dispositivo instalado en un camión de un tercero, y la restricción 2, que obliga a conseguir por
+contrato, por incentivo o por diseño lo que dependa de terceros. Esta ficha agrega tres cosas que
+las bases no piden. La ventana de transmisión gobernada en el firmware, que convierte una promesa
+de privacidad en una propiedad verificable. El comodato con retiro sin costo, que elimina el riesgo
+patrimonial del transportista sobre un activo que es suyo, y que según el levantamiento del Caso
+alcanza los doscientos millones de pesos en el caso de un dueño de dos camiones
+(Escuela de Informática PUCV, 2026c). Y el
+financiamiento del incentivo con el recupero de un ingreso que hoy se pierde, de modo que la
+adhesión no compita con el margen operacional de nueve por ciento del mandante.
 
-**Investigación adicional requerida.** El modelo de financiamiento del equipamiento y el
-tratamiento contable del comodato requieren definición conjunta con el mandante. La decisión de
-quién paga el dispositivo permanece abierta en el Capítulo 16 del Caso.
+**Madurez.** Los componentes técnicos se evalúan en la escala de niveles de madurez
+tecnológica (ISO, 2013). El control de transmisión por ventana en el dispositivo está en
+nivel ocho, porque la gestión remota de configuración de equipos conectados es tecnología
+productiva y lo específico es la regla de negocio que la gobierna. El registro de consentimiento
+granular y revocable está en nivel ocho y su exigencia es normativa (Congreso Nacional de Chile, 2024). El
+componente contractual no se califica en esta escala porque no es una tecnología. El comodato de
+equipamiento a proveedores de servicio es figura de uso corriente y no requiere desarrollo. El
+reparto de recupero sobre evidencia aportada tiene precedente acotado y poca documentación pública
+en el sector nacional.
+
+**Incorporación en la arquitectura y en el cronograma.** La ventana se aplica en la unidad
+telemática y en el búfer local, que almacenan fuera de ella y no transmiten. El concentrador de
+dispositivos distribuye la configuración de ventana a cada equipo. Un servicio de consentimiento y
+un servicio de adhesión, ambos nuevos, definen la ventana desde la asignación del viaje y registran
+la revocación. El portal expone la consola de permisos con bitácora. La adhesión comienza en el mes
+uno, antes que cualquier construcción, porque el numeral 13.1 advierte que hay decisiones cuyo
+plazo no lo fija la tecnología sino una negociación con terceros, y las negociaciones no se
+paralelizan. La cohorte piloto va entre los meses seis y nueve, la consola entre el nueve y el
+doce, y el resultado se mide en la marcha blanca.
+
+**Impacto económico.** La adquisición del equipamiento es del mandante conforme al Capítulo
+11, y audIT especifica y dimensiona la cantidad sobre la adhesión efectiva y no sobre los
+doscientos veintiséis camiones de terceros. Las partidas propias son el diseño y la validación
+jurídica del anexo, la campaña de enrolamiento en cinco terminales con presencia en horario de
+relevo, y la consola de consentimiento. Todas por cotizar, con valorización en el flujo de caja del
+Informe 3. En costo operacional aumenta la conectividad, el soporte y la reposición del parque en
+comodato, y disminuyen el costo de la liquidación mensual y el de gestionar las objeciones de
+cobro. El beneficio se apoya en base verificada. En 2025 se facturaron trescientos cuarenta
+millones de pesos por tiempos de espera y el setenta y uno por ciento fue objetado, es decir
+doscientos cuarenta y un coma cuatro millones, porque la hora de llegada se anota en papel. La meta
+de reducir la objeción bajo el veinte por ciento implica un recupero anual del orden de ciento
+setenta y tres millones, cifra derivada de la meta y no comprometida como ingreso. Ese recupero es
+el que financia el incentivo, y su reparto concreto se fija en el anexo contractual.
+
+**Indicador de verificación.** Línea base cero de ciento cuarenta y ocho transportistas
+adheridos. Meta de setenta por ciento al cierre de la Etapa 1 y noventa por ciento al cierre de la
+Etapa 2. La primera medición de anexos firmados ocurre desde el mes tres, muy antes del paso a
+producción, lo que satisface con holgura el requisito deseable de que al menos una innovación sea
+verificable durante la marcha blanca. Indicadores complementarios, tasa de revocación del
+consentimiento bajo el diez por ciento de los adheridos, y objeción sobre cobros de espera
+respaldados bajo el veinte por ciento desde el setenta y uno actual.
+
+**Riesgo de adopción.** Que la adhesión no alcance el setenta por ciento en la Etapa 1, con
+probabilidad media e impacto alto, porque limita jornada, posición y emisiones sobre el sesenta
+coma cuatro por ciento de la capacidad. Se mitiga comenzando en el mes uno y mostrando beneficio
+verificable antes de pedir el equipo, y la contingencia es escalonar el incentivo y extender la
+modalidad de datos, que no requiere instalar nada. Que el transportista desconfíe de la ventana de
+transmisión, que se mitiga haciéndola auditable por él mismo desde su consola de permisos. Que los
+clientes no acepten la evidencia telemática como respaldo del cobro, lo que eliminaría la fuente de
+financiamiento del incentivo, con contingencia de financiarlo con la reducción del costo de
+liquidación, que no depende del cliente. Y que el anexo no resista revisión jurídica, con
+probabilidad baja e impacto alto, mitigado por la validación entre los meses uno y tres, antes de
+construir.
+
+**Investigación adicional requerida.** El tratamiento contable del comodato y el reparto
+concreto del recupero de sobreestadía requieren definición conjunta con el mandante. La adquisición
+del equipamiento no está abierta, la resuelve el Capítulo 11 del Caso.
 
 
 ### Tipo 5. Alerta de jornada con lugar seguro alcanzable
@@ -199,11 +315,13 @@ FMS Standard. (2025). *Technical Specification rFMS vehicle data version 5.0.0*.
 
 Iridium Communications. (2024). *Iridium Short Burst Data Service Developers Guide*.
 
-ISO. (2011). *ISO/IEC 27031*. ISO. (2019). *ISO 22301*. ISO. (2022). *ISO/IEC/IEEE 42010*. ISO. (2023). *ISO 14083*.
+ISO. (2011). *ISO/IEC 27031*. ISO. (2013). *ISO 16290. Definition of the Technology Readiness Levels (TRLs) and their criteria of assessment*. ISO. (2019). *ISO 22301*. ISO. (2022). *ISO/IEC/IEEE 42010*. ISO. (2023). *ISO 14083*.
 
 Microsoft. (2025). *Azure geographies. Chile Central region*.
 
-Ministerio de Hacienda. (2024). *Ley N.º 21.719 sobre protección y tratamiento de datos personales*.
+Congreso Nacional de Chile. (2002). *Ley N.º 19.799 sobre documentos electrónicos, firma electrónica y servicios de certificación de dicha firma*. https://www.bcn.cl/leychile/navegar?idNorma=196640
+
+Congreso Nacional de Chile. (2024). *Ley N.º 21.719 que regula la protección y el tratamiento de los datos personales y crea la Agencia de Protección de Datos Personales*. Diario Oficial de 13 de diciembre de 2024. https://www.bcn.cl/leychile/navegar?i=1209272
 
 Ministerio de Transportes. (1995). *Decreto Supremo N.º 298*.
 
@@ -214,3 +332,5 @@ NFPA. (2022). *NFPA 2001*. NIST. (2014). *NIST SP 800-88 Rev. 1*.
 Smart Freight Centre. (2023). *GLEC Framework, version 3.0*.
 
 Webfleet Solutions. (2025). *WEBFLEET SAT. Ficha técnica del producto*.
+
+World Wide Web Consortium. (2025). *Verifiable credentials data model v2.0*. W3C Recommendation de 15 de mayo de 2025. https://www.w3.org/TR/vc-data-model-2.0/
