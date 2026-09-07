@@ -1,16 +1,18 @@
-# Arquitectura Lógica y Física
+# Arquitectura Lógica y Física de la Solución
 
 **Subdocumento N.º 4**
 
 | | |
 |---|---|
 | Empresa | audIT, Empresa N.º 10 |
-| Licitación | Licitación Pública Internacional N.º TFEP-01/2026, Caso 10 Transporte de Carga |
+| Licitación | Licitación Pública Internacional N.º TFEP-01/2026. Caso 10 Transporte de Carga |
 | Proyecto | Plataforma Digital de Misión Crítica para Transporte de Carga |
 | Cliente | Transportes Curimón S.A. |
-| Instancia | Informe Preparatorio 1, Oferta Técnica Sobre N.º 2 |
-| Contenido | Ocho capas, contextos delimitados, emplazamiento, dispositivo a bordo, dimensionamiento, supuestos y diagramas. |
+| Instancia | Informe Preparatorio 1. Oferta Técnica Sobre N.º 2 |
+| Contenido | Arquitectura lógica, física, de integración, de seguridad y de despliegue, con dimensionamiento y decisiones registradas. |
+| Versión | 1.0 |
 | Fecha | 7 de septiembre de 2026 |
+| Lugar | Viña del Mar, Chile |
 
 ---
 
@@ -84,7 +86,7 @@ ocupan un lugar en esa pila, la atraviesan entera.
 | Observabilidad | Instrumentación única con trazas, métricas y registros correlacionados por el identificador común que RT-05.19 exige a toda integración |
 
 
-![Las ocho capas obligatorias del numeral 2.1 transversal, con sus componentes e interfaces, conforme a RT-02.01](assets/images/LogicaCapas.pdf)
+![Las ocho capas obligatorias del numeral 2.1 transversal, con sus componentes e interfaces, conforme a RT-02.01](LogicaCapas.pdf)
 
 *Figura. Las ocho capas obligatorias del numeral 2.1 transversal, con sus componentes e interfaces, conforme a RT-02.01*
 
@@ -352,7 +354,7 @@ depende de una gestión que corresponde al mandante ante la autoridad tributaria
 en el pliego del Artículo 43 bajo el número 15.
 
 
-![Integración con el sistema contable heredado a través de la capa anticorrupción](assets/images/D3-diagrama12_integracion_acl_erp2013.png)
+![Integración con el sistema contable heredado a través de la capa anticorrupción](D3-diagrama12_integracion_acl_erp2013.png)
 
 *Figura. Integración con el sistema contable heredado a través de la capa anticorrupción*
 
@@ -423,7 +425,7 @@ operación.
 | De negocio | Modelo dimensional con el hecho de costo por viaje y por tramo, y las dimensiones de ruta, cliente, tracto, conductor, régimen de propiedad y tiempo | Consulta de gerencia sin conocimiento del modelo transaccional |
 
 
-![Capa analítica por niveles de refinamiento y explotación del costo por kilómetro](assets/images/D3-diagrama13_arquitectura_analitica_lakehouse_bi.png)
+![Capa analítica por niveles de refinamiento y explotación del costo por kilómetro](D3-diagrama13_arquitectura_analitica_lakehouse_bi.png)
 
 *Figura. Capa analítica por niveles de refinamiento y explotación del costo por kilómetro*
 
@@ -507,7 +509,7 @@ relaciones y los eventos de negocio que las modifican. El modelo táctico que si
 organizado por contexto delimitado, de modo que cada agregado quede bajo el contexto que lo posee.
 
 
-![Modelo táctico del dominio. Agregados, entidades y servicios por contexto](assets/images/D3-diagrama2_arquitectura_tactica_ddd.png)
+![Modelo táctico del dominio. Agregados, entidades y servicios por contexto](D3-diagrama2_arquitectura_tactica_ddd.png)
 
 *Figura. Modelo táctico del dominio. Agregados, entidades y servicios por contexto*
 
@@ -516,9 +518,12 @@ organizado por contexto delimitado, de modo que cada agregado quede bajo el cont
 
 
 El Artículo 16.2 obliga a justificar el emplazamiento componente por componente. El inventario
-lógico clasifica cada componente por capa, latencia exigida, criticidad operacional y volumen. Es
-el insumo directo de la tabla de emplazamiento, que se desarrolla en la sección física y se detalla
-componente por componente en el Anexo A.
+lógico clasifica cada componente por capa, latencia exigida, criticidad operacional y volumen. El
+servicio de Personas y cumplimiento gobierna la jornada y custodia la matriz general de vigencias,
+mientras que el modelo polimórfico del Subdocumento 5 desagrega las vigencias mecánicas hacia el
+contexto de Flota y activos y las habilitaciones hacia los conductores. Es el insumo directo de la
+tabla de emplazamiento, que se desarrolla en la sección física y se detalla componente por
+componente en el Anexo A.
 
 
 **Tabla. Inventario de componentes lógicos**
@@ -528,8 +533,8 @@ componente por componente en el Anexo A.
 | Distribución de contenidos y cortafuegos | Borde | 50 ms | Crítica | Todo el tráfico web entrante |
 | Puerta de enlace | Borde | 30 ms | Crítica | Toda petición de portal, aplicación e integración |
 | Despacho y asignación | Negocio | 500 ms | Máxima, bloqueante | 96.000 viajes al año |
-| Flota y activos | Negocio | 1 s | Alta | 374 tractocamiones y 210 semirremolques |
-| Personas y cumplimiento | Negocio | 500 ms | Máxima | 454 conductores y cerca de 6.000 vigencias |
+| Flota y activos | Negocio | 1 s | Alta | 374 tractocamiones, 210 semirremolques y vigencias mecánicas |
+| Personas y cumplimiento | Negocio | 500 ms | Máxima | 454 conductores, jornada y matriz de cumplimiento |
 | Gestión documental | Negocio | 2 s | Alta | 128.000 documentos de transporte al año |
 | Tarifas y liquidación | Negocio | 3 s | Media alta | 148 transportistas y 84 clientes |
 | Bus de telemetría | Eventos | 100 ms | Crítica | Ingesta continua con peak de reconexión masiva |
@@ -541,7 +546,7 @@ componente por componente en el Anexo A.
 | Almacenamiento inmutable | Datos | 1 s | Alta | Conformidades, certificados y siniestros |
 | Repositorio analítico | Analítica | Segundos | Media | Retención de RT-05.10 del Caso |
 | Capa semántica y tableros | Analítica | 2 s | Media | Gerencia, finanzas y operaciones |
-| Búfer a bordo | Terreno | Inmediata | Máxima | 374 unidades, mínimo 8 GB cada una |
+| Búfer a bordo | Terreno | Inmediata | Máxima | 182 unidades con flash industrial $\ge 8$ GB y 192 homologadas |
 | Ingesta de plataformas de terceros | Integración | 500 ms | Alta | Tres plataformas existentes |
 | Aplicación móvil | Presentación | 1 s | Media alta | Cuatro perfiles de RT-17.01 del Caso |
 | Lector de portería y terminal | Terreno | 2 s | Alta | Cinco terminales y dos talleres |
@@ -591,7 +596,7 @@ dejar constancia de que el mismo código, en las Bases Técnicas Transversales, 
 materia distinta y de carácter deseable, y que esta oferta se rige por el texto del Caso.
 
 
-![Patrones de resiliencia y flujo de la asignación bloqueante](assets/images/D3-diagrama11_patrones_resiliencia_despacho.png)
+![Patrones de resiliencia y flujo de la asignación bloqueante](D3-diagrama11_patrones_resiliencia_despacho.png)
 
 *Figura. Patrones de resiliencia y flujo de la asignación bloqueante*
 
@@ -612,16 +617,21 @@ solución es híbrida en tres planos simultáneos, y la parte on-premise no es d
 |---|---|---|
 | Nube | Núcleo transaccional, analítica, portales e integración | Elasticidad hacia 430 camiones y absorción del peak de reconexión |
 | On-premise de sitio | Continuidad de la torre en San Bernardo y gabinetes en los cuatro terminales regionales | RT-06.01 del Caso exige gabinete por terminal dimensionado para RT-03.10 |
-| On-premise distribuido | 374 dispositivos a bordo | La operación no puede depender de la cobertura móvil |
+| On-premise distribuido | Nodos a bordo de 374 camiones | La operación no puede depender de la cobertura móvil. Equipamiento físico en 148 propios y 34 por adhesión, e integración lógica en 192 de terceros |
 
 
 #### El dispositivo a bordo es infraestructura
 
 
-RT-06.01 del Caso ordena tratar el dispositivo a bordo como un componente on-premise distribuido en
-374 unidades, con su propio ciclo de vida, su mecanismo de actualización remota, su gestión de
-seguridad y su plan de reposición, todo ello sujeto a que solo puede intervenirse físicamente
-cuando el camión pasa por un terminal.
+RT-06.01 del Caso ordena tratar el componente a bordo como un sistema on-premise distribuido que
+cubre la operación de los 374 tractocamiones. Conforme a la restricción 3 de las bases, el
+equipamiento físico provisto por el mandante con memoria flash industrial de 8 GB se despliega
+directamente en las 148 unidades propias y en las 34 unidades sin equipo que adhieran al programa.
+Los 192 camiones de terceros con dispositivo preexistente se integran como terminales lógicos
+mediante adaptadores de interoperabilidad, exigiendo el estándar de homologación pero sin
+intervenir su hardware privado. Todo el parque intervenido cuenta con su propio ciclo de vida, su
+mecanismo de actualización remota, su gestión de seguridad y su plan de reposición, sujeto a que
+solo puede intervenirse físicamente cuando el camión pasa por un terminal.
 
 
 **Tabla. Especificación del componente a bordo**
@@ -790,6 +800,23 @@ excepción. El estilo arquitectónico se justifica con la volumetría del caso y
 del mercado, tal como advierte el numeral 2.3.
 
 
+**Tabla. Tecnologías de software, versiones y soporte ofertado**
+
+| **Componente** | **Producto y versión** | **Fin de soporte** | **Plan a 56 meses y justificación** |
+|---|---|---|---|
+| Orquestación y cómputo | Azure Kubernetes Service (AKS) 1.30+ | Ciclo continuo N-2 | Servicio administrado PaaS con actualización programada fuera de horas punta |
+| Motor transaccional | PostgreSQL 16 Flexible Server con PostGIS | Noviembre 2028 | Alta disponibilidad zonal con conmutación automática y soporte extendido |
+| Series temporales y streaming | TimescaleDB 2.15 / Event Hubs Kafka | Mayo 2029 | Particionamiento mensual y compresión columnar para 120 millones de eventos anuales |
+| Caché en memoria | Azure Cache for Redis 7.2 | Octubre 2028 | Réplicas en memoria RAM con latencia menor a 5 ms para geocercas y sesiones |
+| Almacenamiento a bordo | SQLite 3 con WAL | Indefinido (LTS) | Motor embebido en flash industrial de 8 GB con nivelación de desgaste |
+| Repositorio analítico | Delta Lake en ADLS Gen2 | Soporte activo | Arquitectura de tres capas con captura de cambios desacoplada |
+| Seguridad e identidad | Microsoft Entra ID y Key Vault HSM | Continuo | Autenticación federada y custodia de claves FIPS 140-2 Nivel 3 |
+
+
+El diseño detallado del modelo de persistencia, particionamiento y consultas transaccionales de
+estos motores se acompaña en el Subdocumento 5.
+
+
 #### Desempeño, capacidad y disponibilidad
 
 
@@ -910,37 +937,37 @@ declaran aquí con su cierre.
 Los diagramas que siguen se presentan en orientación horizontal a página completa. Sus versiones a resolución de trabajo acompañan esta oferta como archivos independientes.
 
 
-![Contextos delimitados del dominio y sistemas con los que convive la solución](assets/images/Contextos.pdf)
+![Contextos delimitados del dominio y sistemas con los que convive la solución](Contextos.pdf)
 
 *Figura. Contextos delimitados del dominio y sistemas con los que convive la solución*
 
 
-![Mapa de integraciones. Sistemas internos, fuentes de terreno y contrapartes externas](assets/images/LogicaIntegraciones.pdf)
+![Mapa de integraciones. Sistemas internos, fuentes de terreno y contrapartes externas](LogicaIntegraciones.pdf)
 
 *Figura. Mapa de integraciones. Sistemas internos, fuentes de terreno y contrapartes externas*
 
 
-![Arquitectura física general. Nube, sitio de continuidad, gabinetes de terminal y flota](assets/images/Main.pdf)
+![Arquitectura física general. Nube, sitio de continuidad, gabinetes de terminal y flota](Main.pdf)
 
 *Figura. Arquitectura física general. Nube, sitio de continuidad, gabinetes de terminal y flota*
 
 
-![El camión como componente on-premise distribuido](assets/images/Camion.pdf)
+![El camión como componente on-premise distribuido](Camion.pdf)
 
 *Figura. El camión como componente on-premise distribuido*
 
 
-![Separación entre recuperación ante desastres y continuidad operacional en el borde](assets/images/DosEjes.pdf)
+![Separación entre recuperación ante desastres y continuidad operacional en el borde](DosEjes.pdf)
 
 *Figura. Separación entre recuperación ante desastres y continuidad operacional en el borde*
 
 
-![Flujo de un evento de jornada registrado sin cobertura](assets/images/Flujo.pdf)
+![Flujo de un evento de jornada registrado sin cobertura](Flujo.pdf)
 
 *Figura. Flujo de un evento de jornada registrado sin cobertura*
 
 
-![Correspondencia entre capa lógica y emplazamiento físico](assets/images/LogicaEmplazamiento.pdf)
+![Correspondencia entre capa lógica y emplazamiento físico](LogicaEmplazamiento.pdf)
 
 *Figura. Correspondencia entre capa lógica y emplazamiento físico*
 
@@ -1072,11 +1099,17 @@ FMS Standard. (2025). *Technical Specification rFMS vehicle data version 5.0.0*.
 
 Iridium Communications. (2024). *Iridium Short Burst Data Service Developers Guide*.
 
-ISO. (2011). *ISO/IEC 27031*. ISO. (2019). *ISO 22301*. ISO. (2022). *ISO/IEC/IEEE 42010*. ISO. (2023). *ISO 14083*.
+ISO. (2011). *ISO/IEC 27031*. ISO. (2013). *ISO 16290. Definition of the Technology Readiness Levels (TRLs) and their criteria of assessment*. ISO. (2017). *ISO 15005. Road vehicles — Ergonomic aspects of transport and information and control systems*. ISO. (2019). *ISO 9241-210. Ergonomics of human-system interaction*. ISO. (2019). *ISO 22301*. ISO. (2022). *ISO/IEC/IEEE 42010*. ISO. (2023). *ISO 14083*.
+
+Federal Motor Carrier Safety Administration [FMCSA]. (2020). *Commercial Motor Vehicle Driver Fatigue, Long-Term Health, and Highway Safety: Research Needs*. The National Academies Press. https://doi.org/10.17226/21921
 
 Microsoft. (2025). *Azure geographies. Chile Central region*.
 
-Ministerio de Hacienda. (2024). *Ley N.º 21.719 sobre protección y tratamiento de datos personales*.
+Congreso Nacional de Chile. (2002). *Ley N.º 19.799 sobre documentos electrónicos, firma electrónica y servicios de certificación de dicha firma*. https://www.bcn.cl/leychile/navegar?idNorma=196640
+
+Congreso Nacional de Chile. (2021). *Ley N.º 21.377 que sanciona como infracción gravísima la conducción de vehículos manipulando dispositivos de telefonía móvil o cualquier otro artefacto electrónico («Ley No Chat»)*. https://www.bcn.cl/leychile/navegar?idNorma=1166014
+
+Congreso Nacional de Chile. (2024). *Ley N.º 21.719 que regula la protección y el tratamiento de los datos personales y crea la Agencia de Protección de Datos Personales*. Diario Oficial de 13 de diciembre de 2024. https://www.bcn.cl/leychile/navegar?i=1209272
 
 Ministerio de Transportes. (1995). *Decreto Supremo N.º 298*.
 
@@ -1087,3 +1120,5 @@ NFPA. (2022). *NFPA 2001*. NIST. (2014). *NIST SP 800-88 Rev. 1*.
 Smart Freight Centre. (2023). *GLEC Framework, version 3.0*.
 
 Webfleet Solutions. (2025). *WEBFLEET SAT. Ficha técnica del producto*.
+
+World Wide Web Consortium. (2025). *Verifiable credentials data model v2.0*. W3C Recommendation de 15 de mayo de 2025. https://www.w3.org/TR/vc-data-model-2.0/

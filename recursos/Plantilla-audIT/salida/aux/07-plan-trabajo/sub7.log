@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.8.26)  7 SEP 2026 00:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.8.26)  7 SEP 2026 01:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2259,7 +2259,7 @@ l.11 \clearpage
 
 LaTeX Warning: Empty bibliography on input line 14.
 
-runsystem(latexminted cleantemp  --timestamp 20260907002847 DAF406525F731D784BC
+runsystem(latexminted cleantemp  --timestamp 20260907013859 DAF406525F731D784BC
 F209D3658D426)...executed safely (allowed).
 
 (salida/aux/07-plan-trabajo/sub7.aux
@@ -2285,7 +2285,7 @@ Package logreq Info: Writing requests to 'sub7.run.xml'.
 Here is how much of TeX's memory you used:
  56875 strings out of 469453
  1257830 string characters out of 5469037
- 2445461 words of memory out of 5000000
+ 2445462 words of memory out of 5000000
  84672 multiletter control sequences out of 15000+600000
  641549 words of font info for 71 fonts, out of 8000000 for 9000
  40 hyphenation exceptions out of 8191

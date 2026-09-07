@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.8.26)  7 SEP 2026 00:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.8.26)  7 SEP 2026 01:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2376,7 +2376,7 @@ ignored: Infinite glue shrinkage fou
 nd in box being split [9] [10]) [11] [12
 
 ]
-runsystem(latexminted cleantemp  --timestamp 20260907002822 1B52EB8EF2C1875CFDF
+runsystem(latexminted cleantemp  --timestamp 20260907013812 1B52EB8EF2C1875CFDF
 3FFBE9E3C05DA)...executed safely (allowed).
 
  (salida/aux/01-empresa/sub1.aux
@@ -2402,7 +2402,7 @@ Package logreq Info: Writing requests to 'sub1.run.xml'.
 Here is how much of TeX's memory you used:
  57319 strings out of 469453
  1267820 string characters out of 5469037
- 2465761 words of memory out of 5000000
+ 2465762 words of memory out of 5000000
  85070 multiletter control sequences out of 15000+600000
  649413 words of font info for 93 fonts, out of 8000000 for 9000
  40 hyphenation exceptions out of 8191

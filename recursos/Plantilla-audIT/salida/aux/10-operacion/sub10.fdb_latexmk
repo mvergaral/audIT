@@ -1,11 +1,11 @@
 # Fdb version 4
-["biber salida/aux/10-operacion/sub10"] 1788742311.3155 "salida/aux/10-operacion/sub10.bcf" "salida/aux/10-operacion/sub10.bbl" "salida/aux/10-operacion/sub10" 1788751733.75524 0
-  "salida/aux/10-operacion/sub10.bcf" 1788751733.61365 133950 2f617327a5709784dff4a2aced76e7ed "pdflatex"
+["biber salida/aux/10-operacion/sub10"] 1788755953.18647 "salida/aux/10-operacion/sub10.bcf" "salida/aux/10-operacion/sub10.bbl" "salida/aux/10-operacion/sub10" 1788755957.0111 0
+  "salida/aux/10-operacion/sub10.bcf" 1788755956.86102 133950 2f617327a5709784dff4a2aced76e7ed "pdflatex"
   (generated)
   "salida/aux/10-operacion/sub10.bbl"
   "salida/aux/10-operacion/sub10.blg"
   (rewritten before read)
-["pdflatex"] 1788751732.20959 "subdocumentos/10-operacion/main.tex" "salida/aux/10-operacion/sub10.pdf" "sub10" 1788751733.75548 0
+["pdflatex"] 1788755955.37301 "subdocumentos/10-operacion/main.tex" "salida/aux/10-operacion/sub10.pdf" "sub10" 1788755957.01168 0
   "/home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1095.600pk" 1787243221.20692 28952 456a939cc7820666d14dbd81e991005f ""
   "/home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk" 1787243223.82597 31928 2338bbd01c68c6b68f343dd7ac2dd286 ""
   "/home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk" 1787243224.48498 49076 efbf40810ea27f4fd93692e1e9e1a9ef ""
@@ -319,12 +319,12 @@
   "comun/portada.tex" 1788743233.89999 1885 17302419ae19358e34946a27a1e03826 ""
   "comun/preambulo.tex" 1788743233.89999 1300 e2c67134be8afe9b31627b2eb43c8b9b ""
   "comun/styles.sty" 1788745869.69712 1994 f687c7d63ac99a8a50583cd7989f02fe ""
-  "salida/aux/10-operacion/pdfa.xmpi" 1788751732.48465 5042 2ec038cd9251e6fe1f007c257fddf397 "pdflatex"
-  "salida/aux/10-operacion/sub10.aux" 1788751733.60965 1127 a34e18d75b33a122765aec96c64f4d8c "pdflatex"
-  "salida/aux/10-operacion/sub10.bbl" 1788743233.90971 466 76d65a242ec496c9b4361af646ff12cb "biber salida/aux/10-operacion/sub10"
-  "salida/aux/10-operacion/sub10.out" 1788751733.61265 656 dc51f70136e95048d8be0ad5b0e605c7 "pdflatex"
-  "salida/aux/10-operacion/sub10.run.xml" 1788751733.61535 2373 6af2ccb20fe52195157cb43d6eabf5a5 "pdflatex"
-  "salida/aux/10-operacion/sub10.toc" 1788751733.61535 312 738dc6c63c23c7e6e76aaaf17e82f9d5 "pdflatex"
+  "salida/aux/10-operacion/pdfa.xmpi" 1788755955.66302 5042 5ab99e6d4eae881c4ddf9b9d0f849b44 "pdflatex"
+  "salida/aux/10-operacion/sub10.aux" 1788755956.85702 1127 a34e18d75b33a122765aec96c64f4d8c "pdflatex"
+  "salida/aux/10-operacion/sub10.bbl" 1788755953.71402 466 76d65a242ec496c9b4361af646ff12cb "biber salida/aux/10-operacion/sub10"
+  "salida/aux/10-operacion/sub10.out" 1788755956.85902 656 dc51f70136e95048d8be0ad5b0e605c7 "pdflatex"
+  "salida/aux/10-operacion/sub10.run.xml" 1788755956.86375 2373 6af2ccb20fe52195157cb43d6eabf5a5 "pdflatex"
+  "salida/aux/10-operacion/sub10.toc" 1788755956.86375 312 738dc6c63c23c7e6e76aaaf17e82f9d5 "pdflatex"
   "subdocumentos/10-operacion/contenido.tex" 1788743233.91515 1121 b4b6bfc13763612e6602f5892c7dc5b5 ""
   "subdocumentos/10-operacion/main.tex" 1788743233.91519 439 76522e938e48eac199105b44ea1a91e9 ""
   "subdocumentos/10-operacion/meta.tex" 1788743233.91523 276 422b86554567c099d7a4a34ce8803766 ""

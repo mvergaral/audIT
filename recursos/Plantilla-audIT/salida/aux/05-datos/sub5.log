@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.8.26)  7 SEP 2026 00:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.8.26)  7 SEP 2026 01:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2263,11 +2263,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 20--20
  []
 
 
-Underfull \hbox (badness 7907) in paragraph at lines 20--20
-[]|\T1/cmr/m/n/10.95 Valida en me-mo-ria;
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 21--21
 []|\T1/cmr/m/n/10.95 Arquitectura Fast-Data
  []
@@ -2449,8 +2444,7 @@ Overfull \hbox (51.12965pt too wide) in alignment at lines 118--126
  [] [] [] [] [] 
  []
 
-
-ignored: Infinite glue shrinkage found in box being split [8]
+[8]
 Underfull \hbox (badness 2111) in paragraph at lines 132--132
 []|\T1/cmr/m/n/10.95 'PROPIO', 'TER-
  []
@@ -2680,7 +2674,7 @@ Overfull \hbox (39.12967pt too wide) in alignment at lines 207--217
  [] [] [] [] 
  []
 
-[13]
+[13] [14]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 225.
@@ -2689,7 +2683,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 225.
 
-[14]
+
 Underfull \hbox (badness 1097) in paragraph at lines 240--240
 []|\T1/cmr/m/n/10.95 Conciliación de RUTs y con-tra-tos
  []
@@ -2724,7 +2718,7 @@ Package pdftex.def Info: comun/assets/figuras/Costo.pdf  used on input line 285
 o/recursos/Plantilla-audIT/comun/assets/figuras/Costo.pdf>] [19
 
 ]
-runsystem(latexminted cleantemp  --timestamp 20260907003011 B11AAC2C5399F4D0982
+runsystem(latexminted cleantemp  --timestamp 20260907013848 B11AAC2C5399F4D0982
 15C166DC5B5D9)...executed safely (allowed).
 
 
@@ -2751,7 +2745,7 @@ Package logreq Info: Writing requests to 'sub5.run.xml'.
 Here is how much of TeX's memory you used:
  57378 strings out of 469453
  1267362 string characters out of 5469037
- 2461777 words of memory out of 5000000
+ 2462775 words of memory out of 5000000
  85080 multiletter control sequences out of 15000+600000
  655012 words of font info for 110 fonts, out of 8000000 for 9000
  40 hyphenation exceptions out of 8191
@@ -2781,9 +2775,9 @@ e1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsf
 onts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.p
 fb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on salida/aux/05-datos/sub5.pdf (21 pages, 734522 bytes).
+Output written on salida/aux/05-datos/sub5.pdf (21 pages, 733950 bytes).
 PDF statistics:
- 1137 PDF objects out of 1200 (max. 8388607)
+ 1134 PDF objects out of 1200 (max. 8388607)
  91 named destinations out of 1000 (max. 500000)
  200 words of extra memory for PDF output out of 10000 (max. 10000000)
 

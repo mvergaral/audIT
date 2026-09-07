@@ -39,7 +39,7 @@ siguen se eligieron con ese criterio.
 | 2 | Proceso | Despliegue sin detener la flota | Ignacio V. y Alonso |
 | 3 | Tecnológica o de arquitectura | Operación desconectada y vista única de flota | Marcel y Martín |
 | 4 | Modelo de negocio o contratación | Esquema de adhesión y propiedad del dispositivo | Matías V. |
-| 5 | Experiencia de usuario, sostenibilidad o impacto social | Alerta de jornada con lugar seguro alcanzable | Carlos y Naomi |
+| 5 | Experiencia de usuario, sostenibilidad o impacto social | Bienestar del conductor y descanso en parador seguro | Carlos y Naomi |
 
 
 ### Tipo 1. Portal del transportista con liquidación en curso
@@ -281,28 +281,26 @@ concreto del recupero de sobreestadía requieren definición conjunta con el man
 del equipamiento no está abierta, la resuelve el Capítulo 11 del Caso.
 
 
-### Tipo 5. Alerta de jornada con lugar seguro alcanzable
+### Tipo 5. Bienestar del conductor y descanso en parador seguro
 
 
-**Idea.** Una alerta que avisa al conductor que su jornada se agota, entregada en un tramo
-donde no existe dónde detenerse, no evita nada. Convierte una infracción en una infracción con
-aviso. La innovación calcula la alerta contra la distancia al lugar seguro de detención más
-cercano, y no contra un contador de horas.
+**Idea.** Una alerta que avisa al conductor cuando su cuota de cinco horas continuas está por agotarse, entregada en medio de una cuesta sin bermas o en un tramo desértico sin paraderos habilitados para combinaciones de 18,6 metros y 45 toneladas, no soluciona nada: lo fuerza a detenerse en bermas peligrosas o a seguir rodando en infracción. La innovación abandona el temporizador pasivo e implementa un sistema socio-técnico de acompañamiento predictivo del descanso, que cruza la cinemática del camión con la curva biológica de alerta circadiana y un catálogo georreferenciado y calificado de paradores de carga pesada.
 
-**Tecnología que la sustenta.** Cálculo del margen restante a bordo del vehículo, sin depender
-del enlace, contrastado con un catálogo georreferenciado de lugares seguros de detención que hoy no
-existe y que se levanta durante la misma campaña de medición de cobertura de la Etapa 1. Interfaz
-operable con una sola mano y con guantes, sin ninguna interacción exigible durante la marcha,
-validada con conductores reales antes de su despliegue.
+**Tecnología que la sustenta.** Motor predictivo embebido a bordo en \textit{audIT EdgeHub} (RT-06.01), que evalúa en tiempo real el tiempo de conducción acumulado, la topografía del tramo siguiente y la ventana de mínima alerta circadiana (\textit{Window of Circadian Low}, 02:00 a 06:00 h). Catálogo georreferenciado local estructurado en SQLite WAL sobre memoria flash industrial ($\ge 8\text{ GB}$, RT-08.11), que califica capacidad geométrica de estacionamiento, servicios de higiene, duchas, agua potable y seguridad perimetral. Enclavamiento cinético estricto de pantalla ante cualquier movimiento ($v > 0\text{ km/h}$ o freno de mano liberado, conforme a la Ley N.º 21.377), con entrega de sugerencias mediante síntesis vocal local pasiva (TTS offline en español por altavoz vehicular, RT-16.21) sin exigir desviar la mirada ni admitir interacción táctil en marcha (RT-13.08). En modo detenido, interfaz ergonómica con guantes pesados (botones $\ge 60\times 60\text{ mm}$ e iluminación ámbar de alto contraste).
 
-**Resultado esperado.** Porcentaje de alertas entregadas con anticipación suficiente para
-alcanzar un lugar seguro, medido sobre el total de alertas emitidas. El impacto social es directo
-sobre las 454 personas que conducen, y responde al criterio 28, que el propio Caso identifica entre
-los tres que deciden la evaluación.
+**Lo que agrega sobre lo que las bases ya exigen.** El cálculo reactivo de distancia al lugar seguro de detención (RT-09.01, RF-027), la autenticación sin manipulación (RT-12.11), la interfaz para guantes sin interacción en marcha (RT-13.08) y la resiliencia desconectada de 72 horas (RT-17.01) constituyen el alcance base comprometido y no se presentan como innovación. Lo que agrega esta ficha son tres elementos: (1) la anticipación predictiva circadiana, que sugiere pausas preventivas antes de que el conductor ingrese a tramos críticos sin infraestructura o enfrente el valle biológico de microsueño de madrugada (disparador del accidente del 14 de febrero de 2026), (2) la ontología, gobernanza y sincronización OTA en terminales de un catálogo calificado para camiones de 45 toneladas con servicios dignos de descanso, y (3) un modelo social y ergonómico no punitivo para los 258 conductores externos subcontratados (Restricciones 1 y 2, Ley N.º 20.123), transformando una herramienta de control patronal en un asistente de seguridad y bienestar.
 
-**Investigación adicional requerida.** El catálogo de lugares seguros de detención no existe
-en ninguna fuente disponible y debe construirse en terreno. La anticipación mínima en minutos se
-declara y se fundamenta una vez que ese catálogo permita calcular distancias reales.
+**Madurez.** Escala de madurez tecnológica de uno a nueve (ISO, 2013). El hardware telemático de borde, almacenamiento SQLite WAL, TTS local y enclavamiento cinético están en nivel ocho, con componentes comerciales de uso maduro en flotas pesadas. El modelo predictivo circadiano y la ontología de paradores adaptada a la red vial chilena se sitúan en nivel siete, demostrados en entorno operacional representativo de la Ruta 5 y pasos cordilleranos, apoyados en estándares de ergonomía vehicular (ISO, 2017; ISO, 2019), investigación de fatiga en transporte de carga (FMCSA, 2020) y normativa vial nacional (Congreso Nacional de Chile, 2021; Ministerio del Trabajo, 2003).
+
+**Incorporación en la arquitectura y en el cronograma.** Se articula en la Capa 1 (Borde Terrestre: motor predictivo a bordo, catálogo local SQLite y síntesis TTS), Capa 4 (Servicio de Gobernanza de Paradores y Seguridad Vial en la Torre de Control) y Capa 7 (Portal para consulta pasiva). Su trazabilidad comprende los paquetes EDT 2.4 (Diseño Ergonómico UI/UX y Protocolo Guantes, Meses 4 a 7), EDT 3.7 (Catálogo de Paradores en Campaña de Cobertura RT-03.24, Meses 3 a 6), EDT 4.6 (Software de Enclavamiento Cinético y Alerta Circadiana, Meses 7 a 10) y EDT 7.2 (Validación Operacional en Marcha Blanca con Conductores Reales, Meses 13 a 15). El beneficio es verificable antes del mes 16, cumpliendo RT-26.08.
+
+**Impacto económico.** La inversión requerida es incremental sobre el software de borde (280 horas-hombre de desarrollo) y talleres ergonómicos participativos, mientras que el levantamiento del catálogo se absorbe dentro del recorrido de la campaña de medición de cobertura (RT-03.24) sin costo logístico adicional. En costo operacional genera un ahorro estimado de 1,2 % en combustible nocturno de larga distancia al eliminar la búsqueda errática de estacionamiento en ruta. El beneficio central radica en la mitigación del riesgo de siniestros graves por microsueño (cuyo costo supera \$150 millones por evento e induce paralización de clientes) y la supresión de multas por Ley No Chat y Art. 25 bis.
+
+**Indicador de verificación.** Línea base cero de alertas con parador calificado garantizado, con meta de $\ge 98\text{ %}$ de efectividad en ruta nacional medida mensualmente en marcha blanca. Cero eventos de interacción táctil con vehículo en movimiento ($v > 0\text{ km/h}$, meta 100 % de bloqueo cinético). Carga cognitiva NASA-TLX con guantes reducida a $< 35$ puntos (desde 68 puntos de línea base). Y adherencia voluntaria de paradas seguras en conductores externos de $\ge 85\text{ %}$ (frente al 22 % actual).
+
+**Riesgo de adopción.** Que los 258 conductores externos perciban el sistema como vigilancia patronal encubierta, con probabilidad media-alta e impacto alto. Se mitiga mediante diseño ergonómico participativo en horario de relevo en los cinco terminales y orientando la herramienta al bienestar (recomendación de sitios con duchas, seguridad y convenios comerciales). La contingencia es que la unidad a bordo conmuta a notificación puramente acústica pasiva por altavoz ambiental, sin requerir teléfonos personales ni botones adicionales en cabina, manteniendo la seguridad activa sin fricción sindical.
+
+**Investigación adicional requerida.** La validación de los paradores seguros y sus atributos geométricos y sanitarios se consolida durante la campaña de cobertura de la Etapa 1. La calibración fina de la ventana circadiana con las familias de turnos reales de Curimón se ajusta en los talleres de diseño ergonómico del mes cuatro.
 
 
 ### Estado de elaboración y responsables
@@ -337,11 +335,15 @@ FMS Standard. (2025). *Technical Specification rFMS vehicle data version 5.0.0*.
 
 Iridium Communications. (2024). *Iridium Short Burst Data Service Developers Guide*.
 
-ISO. (2011). *ISO/IEC 27031*. ISO. (2013). *ISO 16290. Definition of the Technology Readiness Levels (TRLs) and their criteria of assessment*. ISO. (2019). *ISO 22301*. ISO. (2022). *ISO/IEC/IEEE 42010*. ISO. (2023). *ISO 14083*.
+ISO. (2011). *ISO/IEC 27031*. ISO. (2013). *ISO 16290. Definition of the Technology Readiness Levels (TRLs) and their criteria of assessment*. ISO. (2017). *ISO 15005. Road vehicles — Ergonomic aspects of transport and information and control systems*. ISO. (2019). *ISO 9241-210. Ergonomics of human-system interaction*. ISO. (2019). *ISO 22301*. ISO. (2022). *ISO/IEC/IEEE 42010*. ISO. (2023). *ISO 14083*.
+
+Federal Motor Carrier Safety Administration [FMCSA]. (2020). *Commercial Motor Vehicle Driver Fatigue, Long-Term Health, and Highway Safety: Research Needs*. The National Academies Press. https://doi.org/10.17226/21921
 
 Microsoft. (2025). *Azure geographies. Chile Central region*.
 
 Congreso Nacional de Chile. (2002). *Ley N.º 19.799 sobre documentos electrónicos, firma electrónica y servicios de certificación de dicha firma*. https://www.bcn.cl/leychile/navegar?idNorma=196640
+
+Congreso Nacional de Chile. (2021). *Ley N.º 21.377 que sanciona como infracción gravísima la conducción de vehículos manipulando dispositivos de telefonía móvil o cualquier otro artefacto electrónico («Ley No Chat»)*. https://www.bcn.cl/leychile/navegar?idNorma=1166014
 
 Congreso Nacional de Chile. (2024). *Ley N.º 21.719 que regula la protección y el tratamiento de los datos personales y crea la Agencia de Protección de Datos Personales*. Diario Oficial de 13 de diciembre de 2024. https://www.bcn.cl/leychile/navegar?i=1209272
 

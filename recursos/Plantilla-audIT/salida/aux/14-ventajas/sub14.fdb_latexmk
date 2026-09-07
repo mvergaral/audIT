@@ -1,11 +1,11 @@
 # Fdb version 4
-["biber salida/aux/14-ventajas/sub14"] 1788742348.16704 "salida/aux/14-ventajas/sub14.bcf" "salida/aux/14-ventajas/sub14.bbl" "salida/aux/14-ventajas/sub14" 1788751746.24037 0
-  "salida/aux/14-ventajas/sub14.bcf" 1788751746.10164 133950 2f617327a5709784dff4a2aced76e7ed "pdflatex"
+["biber salida/aux/14-ventajas/sub14"] 1788755969.61191 "salida/aux/14-ventajas/sub14.bcf" "salida/aux/14-ventajas/sub14.bbl" "salida/aux/14-ventajas/sub14" 1788755973.54881 0
+  "salida/aux/14-ventajas/sub14.bcf" 1788755973.405 133950 2f617327a5709784dff4a2aced76e7ed "pdflatex"
   (generated)
   "salida/aux/14-ventajas/sub14.bbl"
   "salida/aux/14-ventajas/sub14.blg"
   (rewritten before read)
-["pdflatex"] 1788751744.70129 "subdocumentos/14-ventajas/main.tex" "salida/aux/14-ventajas/sub14.pdf" "sub14" 1788751746.24061 0
+["pdflatex"] 1788755971.86816 "subdocumentos/14-ventajas/main.tex" "salida/aux/14-ventajas/sub14.pdf" "sub14" 1788755973.54911 0
   "/home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1095.600pk" 1787243221.20692 28952 456a939cc7820666d14dbd81e991005f ""
   "/home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk" 1787243223.82597 31928 2338bbd01c68c6b68f343dd7ac2dd286 ""
   "/home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk" 1787243224.48498 49076 efbf40810ea27f4fd93692e1e9e1a9ef ""
@@ -319,12 +319,12 @@
   "comun/portada.tex" 1788743233.89999 1885 17302419ae19358e34946a27a1e03826 ""
   "comun/preambulo.tex" 1788743233.89999 1300 e2c67134be8afe9b31627b2eb43c8b9b ""
   "comun/styles.sty" 1788745869.69712 1994 f687c7d63ac99a8a50583cd7989f02fe ""
-  "salida/aux/14-ventajas/pdfa.xmpi" 1788751744.97153 5042 e8f91a5723a08cd27f4c2712db414aa3 "pdflatex"
-  "salida/aux/14-ventajas/sub14.aux" 1788751746.09764 1119 a4cc7a847b8c7803f6d7180077e3b8c5 "pdflatex"
-  "salida/aux/14-ventajas/sub14.bbl" 1788743233.91292 466 76d65a242ec496c9b4361af646ff12cb "biber salida/aux/14-ventajas/sub14"
-  "salida/aux/14-ventajas/sub14.out" 1788751746.10064 607 de22be86db27475fdbf1ae92c4c75933 "pdflatex"
-  "salida/aux/14-ventajas/sub14.run.xml" 1788751746.10323 2373 2d489a1882cae1e7bb42228f49cff815 "pdflatex"
-  "salida/aux/14-ventajas/sub14.toc" 1788751746.10323 304 4885e47b3be31f63fffbcaeaf0aa635d "pdflatex"
+  "salida/aux/14-ventajas/pdfa.xmpi" 1788755972.18842 5042 3210531bfe996adc34e82853d3d2c2f7 "pdflatex"
+  "salida/aux/14-ventajas/sub14.aux" 1788755973.401 1119 a4cc7a847b8c7803f6d7180077e3b8c5 "pdflatex"
+  "salida/aux/14-ventajas/sub14.bbl" 1788755970.15255 466 76d65a242ec496c9b4361af646ff12cb "biber salida/aux/14-ventajas/sub14"
+  "salida/aux/14-ventajas/sub14.out" 1788755973.404 607 de22be86db27475fdbf1ae92c4c75933 "pdflatex"
+  "salida/aux/14-ventajas/sub14.run.xml" 1788755973.40748 2373 2d489a1882cae1e7bb42228f49cff815 "pdflatex"
+  "salida/aux/14-ventajas/sub14.toc" 1788755973.40748 304 4885e47b3be31f63fffbcaeaf0aa635d "pdflatex"
   "subdocumentos/14-ventajas/contenido.tex" 1788743233.91561 1110 70dd82c74b3869a45bd742da370687bc ""
   "subdocumentos/14-ventajas/main.tex" 1788743233.91563 439 76522e938e48eac199105b44ea1a91e9 ""
   "subdocumentos/14-ventajas/meta.tex" 1788743233.91563 253 ac4e5d9aa031a108b052912dc439e92a ""

@@ -41,12 +41,12 @@ En la auditoría técnica de arquitectura se identificaron cuatro vulnerabilidad
 
 | **Dimensión** | **Enfoque Anterior** | **Enfoque Definitivo audIT** | **Impacto en Curimón** |
 |---|---|---|---|
-| Paradigma de Modelado | Esquema ERD relacional plano. | Domain-Driven Design (DDD): contextos delimitados e invariantes (RT-02.13). | Valida en memoria; previene despachos ilegales en $\le 30$ s. |
-| Ingesta Telemática | Tablas relacionales sobrecargadas. | Arquitectura Fast-Data desacoplada: TimescaleDB / Kafka y búfer offline 72 h. | Aísla pings GPS del motor central; resiste sombras $> 80$ km. |
+| Paradigma de Modelado | Esquema ERD relacional plano. | Domain-Driven Design (DDD): contextos delimitados e invariantes (RT-02.13). | Valida en memoria y previene despachos ilegales en $\le 30$ s. |
+| Ingesta Telemática | Tablas relacionales sobrecargadas. | Arquitectura Fast-Data desacoplada: TimescaleDB / Kafka y búfer offline 72 h. | Aísla pings GPS del motor central y resiste sombras $> 80$ km. |
 | Gobernanza de Activos | Entidad única CAMION. | Disociación estricta TRACTOCAMION y SEMIRREMOLQUE. | Controla vencimientos cruzados y compatibilidad química (DS 298). |
 | Datos Maestros (MDM) | Entidades dispersas sin sincronización. | MDM de Registro Maestro Único (\textit{Golden Record}) con Capa Anticorrupción. | Evita duplicidad de 454 choferes, 374 camiones y 84 clientes vs ERP 2013. |
 | Estrategia de Desempeño | Índices genéricos sin partición. | Particionamiento mensual, índices GiST y BRIN, y caché L2 Redis Cluster. | Geocercas en $< 5$ ms y almacenamiento telemático optimizado 95 %. |
-| Saneamiento Vigencias | Carga masiva sin contrastación. | Verificación documental individual obligatoria con hash SHA-256 en WORM. | Sanea 4 planillas ($\approx 6.000$ vigencias); erradica multas por atraso. |
+| Saneamiento Vigencias | Carga masiva sin contrastación. | Verificación documental individual obligatoria con hash SHA-256 en WORM. | Sanea 4 planillas ($\approx 6.000$ vigencias) y erradica multas por atraso. |
 | Seguridad y Privacidad | Cifrado de disco estándar. | Cifrado a nivel de campo (FLE AES-256-GCM) y anonimización en Dev/QA. | Cumplimiento irrestricto Ley N.º 21.719 en 258 choferes externos. |
 | Retención Legal | Plazos genéricos sin norma. | Matriz ajustada a Cap. 15 del Caso (10a, 6a, 5a, vigencia+5a, 3a, 2a). | Certeza probatoria laboral, tributaria (SII) y sobreestadías. |
 
@@ -95,10 +95,10 @@ En cumplimiento de RT-05.04, la gestión de la información se rige formalmente 
 
 | **Dimensión ISO 25012** | **Métrica Comprometida** | **Mecanismo de Control en la Solución** |
 |---|---|---|
-| Completitud (\textit{Completeness}) | $\ge 99{,}8$% de campos obligatorios en despachos. | Validación bloqueante web y móvil; no se admite viaje con conductor o activo nulo. |
+| Completitud (\textit{Completeness}) | $\ge 99{,}8$% de campos obligatorios en despachos. | Validación bloqueante web y móvil, impidiendo viajes con conductor o activo nulo. |
 | Exactitud (\textit{Accuracy}) | 100 % RUT válidos con DV y 100 % patentes verificadas. | Validación sintáctica Módulo 11 y cotejo con padrón oficial autorizado. |
 | Consistencia (\textit{Consistency}) | 100 % correspondencia tracto, rampla y carga. | Reglas de negocio que impiden asignar ramplas estándar a órdenes DS 298. |
-| Credibilidad (\textit{Credibility}) | 100 % marcas temporales sincronizadas. | NTP estrato 1 y reloj GPS satelital; descarte de reloj manipulable del SO local. |
+| Credibilidad (\textit{Credibility}) | 100 % marcas temporales sincronizadas. | NTP estrato 1 y reloj GPS satelital con descarte de reloj manipulable del SO local. |
 | Accesibilidad (\textit{Accessibility}) | Disponibilidad $\ge 99{,}9$% para 22 despachadores 24/7. | Réplicas de lectura transaccionales distribuidas en zonas Multi-AZ. |
 
 
@@ -133,9 +133,9 @@ En estricta conformidad con RT-05.02, la solución adopta una Arquitectura Polí
 Para garantizar que la validación bloqueante de despacho responda en $\le 30$ segundos (RT-09.01) sin contención de bloqueos frente a los 96.000 viajes anuales, se implementa una estrategia cuádruple de optimización:
 
 
-- **Indexación especializada:** Índices B-Tree en claves foráneas (\texttt{id_tracto}, \texttt{id_conductor}, \texttt{id_semirremolque}) y RUTs; índices espaciales GiST y SP-GiST (PostGIS) en polígonos de geocercas para optimizar \texttt{ST_Contains()} y \texttt{ST_DWithin()}; e índices BRIN (\textit{Block Range Indexes}) en marcas temporales de telemetría y auditoría, ocupando un 95 % menos de espacio en disco y memoria RAM que un B-Tree tradicional.
+- **Indexación especializada:** Índices B-Tree en claves foráneas (\texttt{id_tracto}, \texttt{id_conductor}, \texttt{id_semirremolque}) y RUTs, índices espaciales GiST y SP-GiST (PostGIS) en polígonos de geocercas para optimizar \texttt{ST_Contains()} y \texttt{ST_DWithin()}, además de índices BRIN (\textit{Block Range Indexes}) en marcas temporales de telemetría y auditoría, ocupando un 95 % menos de espacio en disco y memoria RAM que un B-Tree tradicional.
 - **Particionamiento horizontal declarativo:** La tabla transaccional central \texttt{viaje} se particiona por rango de fechas en segmentos **mensuales**, concentrando el 90 % de las consultas en la partición activa. Las tablas históricas de telemetría y auditoría se particionan automáticamente, facilitando su desacople hacia almacenamiento en frío (\textit{Detached Partitions}).
-- **Caché multinivel de baja latencia:** Nivel 1 en memoria de microservicios para catálogos estáticos; Nivel 2 en Redis Cluster para sesiones, estados de vigencia precalculados y coordenadas de las 1.400 instalaciones de clientes ($< 5$ ms).
+- **Caché multinivel de baja latencia:** Nivel 1 en memoria de microservicios para catálogos estáticos y Nivel 2 en Redis Cluster para sesiones, estados de vigencia precalculados y coordenadas de las 1.400 instalaciones de clientes ($< 5$ ms).
 - **Vistas materializadas concurrentes:** Actualizadas de forma asíncrona (\texttt{REFRESH MATERIALIZED VIEW CONCURRENTLY}) para saldos de pre-liquidación y consumos de combustible, evitando escaneos masivos sobre tablas en caliente durante la jornada diurna.
 
 
@@ -218,7 +218,7 @@ El esquema relacional en PostgreSQL 16 implementa claves primarias UUIDv4 genera
 | fecha_revocacion | TIMESTAMPTZ | Sello UTC (nullable) | No | Operacional. Cese inmediato de transmisión. |
 
 
-**Tabla. Entidad VIAJE (Transacción Central --- 96.000 viajes/año)**
+**Tabla. Entidad VIAJE (Transacción Central, 96.000 viajes/año)**
 
 | **Atributo** | **Tipo de Dato** | **Dominio / Formato** | **Req.** | **Sensibilidad y Tratamiento** |
 |---|---|---|---|---|
@@ -257,7 +257,7 @@ Para garantizar la continuidad de servicio con un RTO $\le 4$ horas y un RPO $\l
 - \textbf{1 Copia Fuera de Sitio (\textit{Off-site}):} Replicación asíncrona continua de logs de transacciones (\textit{WAL-G archiving}) hacia una región secundaria a más de 100 km (Azure East US 2 o región equivalente).
 - \textbf{1 Copia Desconectada e Inmutable (\textit{Immutable Air-Gapped}):} Snapshots semanales con retención bloqueada WORM (\textit{Object Lock Compliance}) que impiden cualquier alteración, incluso ante secuestro de credenciales maestras.
 - **0 Errores en Ensayos de Restauración:** Pipeline semanal automatizado que levanta una instancia efímera de PostgreSQL, restaura el último backup binario, aplica los WALs hasta el punto en el tiempo (PITR) y ejecuta pruebas automáticas de consistencia referencial (\texttt{pg_amcheck}).
-- **Cifrado Integral:** Datos en tránsito con TLS 1.3; datos en reposo cifrados con AES-256 (TDE / LUKS) con llaves en Azure Key Vault gestionado (HSM FIPS 140-2 Nivel 3) con rotación anual.
+- **Cifrado Integral:** Datos en tránsito con TLS 1.3 y datos en reposo cifrados con AES-256 (TDE / LUKS) con llaves en Azure Key Vault gestionado (HSM FIPS 140-2 Nivel 3) con rotación anual.
 
 
 **Tabla. Matriz de respaldo, retención y RTO por dominio**
@@ -274,7 +274,7 @@ Para garantizar la continuidad de servicio con un RTO $\le 4$ horas y un RPO $\l
 | Series de posición y telemetría | 2 años en línea | Continua (Micro-batch / TimescaleDB chunks) | $\le 4$ horas |
 
 
-Cuarta copia distribuida en el borde: los 374 dispositivos a bordo conservan en su memoria flash industrial ($\ge 8\text{ GB}$) el registro operacional íntegro de al menos 72 horas (y hasta 288 horas continuas durante aislamientos por nieve en Los Libertadores). Si bien no sustituye al respaldo centralizado, constituye una fuente distribuida de reconciliación determinista ante caídas de red.
+Cuarta copia distribuida en el borde: las unidades intervenidas de la flota (148 tractocamiones propios y los 34 camiones de terceros incorporados por adhesión voluntaria) conservan en la memoria flash industrial ($\ge 8\text{ GB}$) de su dispositivo embarcado el registro operacional íntegro de al menos 72 horas y hasta 288 horas continuas durante aislamientos por nieve en Los Libertadores, mientras que los 192 terceros homologados mantienen el búfer local exigido por el estándar de interoperabilidad sin intervenir su equipamiento privado. Si bien no sustituye al respaldo centralizado, constituye una fuente distribuida de reconciliación determinista ante caídas de red.
 
 
 ### Migración de datos y saneamiento histórico
@@ -288,7 +288,7 @@ Transportes Curimón S.A. administra aproximadamente 6.000 fechas de vencimiento
 
 - **Regla probatoria de habilitación:** Ningún registro de vigencia migrado se considerará habilitante para despachar si no cuenta con su respectiva **verificación documental individual**.
 - **Custodia criptográfica:** Cada documento de respaldo (licencia, revisión técnica, SOAP, curso DS 298) se almacena en el repositorio inmutable WORM y se sella con su huella SHA-256 vinculada en base de datos.
-- **Régimen de excepción gobernado:** Registros sin documento digital ingresan como \texttt{'PENDIENTE_DOCUMENTACION'}. Se otorga una ventana perentoria de 30 días en marcha blanca; cumplido el plazo, el sistema bloquea automáticamente la asignación del activo o chofer hasta cargar el respaldo verificado.
+- **Régimen de excepción gobernado:** Registros sin documento digital ingresan como \texttt{'PENDIENTE_DOCUMENTACION'}. Se otorga una ventana perentoria de 30 días en marcha blanca. Cumplido el plazo, el sistema bloquea automáticamente la asignación del activo o chofer hasta cargar el respaldo verificado.
 
 
 #### Alcance cuantitativo y plan de migración en 4 fases
@@ -323,7 +323,7 @@ Transportes Curimón S.A. administra aproximadamente 6.000 fechas de vencimiento
 RT-11.10 exige cifrado a nivel de campo para los datos personales de los 258 conductores que no son trabajadores de la compañía, para toda información de localización asociada a una persona identificable, para los antecedentes de jornada y para las tarifas pactadas con cada transportista. La Ley N.º 21.719 (Congreso Nacional de Chile, 2024) gobierna ese tratamiento:
 
 
-- **Soberanía y minimización del dato:** La solución no sabe dónde está una persona; sabe dónde está un camión durante la ejecución de un flete contratado, con autorización expresa y revocable de su dueño (RT-16.30). Fuera de la ventana temporal del viaje, el streaming de posición se suspende a nivel de firmware en cabina.
+- **Soberanía y minimización del dato:** La solución no sabe dónde está una persona, sino dónde está un camión durante la ejecución de un flete contratado, con autorización expresa y revocable de su dueño (RT-16.30). Fuera de la ventana temporal del viaje, el streaming de posición se suspende a nivel de firmware en cabina.
 - **Anonimización verificable en desarrollo y pruebas (RT-04.14):** Prohibición total de clonar bases productivas a entornos de desarrollo o QA sin anonimización previa. Se aplican RUTs sintéticos vía Módulo 11 pseudoaleatorio, enmascaramiento irreversible de nombres y adición de ruido gaussiano ($\mu = 1.0, \sigma = 0.05$) sobre tarifas y liquidaciones para preservar distribuciones estadísticas destruyendo los valores nominales.
 - **Revocación de consentimiento vs. retención legal mandatoria:** Ante la revocación de consentimiento de un transportista, cesa de inmediato la captura telemática futura. Sin embargo, para cumplir con las obligaciones legales de conservación del Estado de Chile (Art. 25 bis por 5 años, Código Tributario por 6 años y responsabilidad civil por 10 años), los datos históricos precedentes se bloquean en cuarentena criptográfica de solo lectura, accesibles únicamente ante requerimiento judicial.
 - \textbf{Destrucción criptográfica definitiva (\textit{Crypto-shredding}):} Cumplidos íntegramente los plazos estatutarios de retención, se gatilla automáticamente la purga mediante \textit{crypto-shredding}, destruyendo las llaves FLE en Azure Key Vault asociadas al titular, renderizando los datos matemáticamente irrecuperables en disco y respaldos sin alterar la integridad estructural de la base de datos (NIST, 2014).
@@ -366,11 +366,15 @@ FMS Standard. (2025). *Technical Specification rFMS vehicle data version 5.0.0*.
 
 Iridium Communications. (2024). *Iridium Short Burst Data Service Developers Guide*.
 
-ISO. (2011). *ISO/IEC 27031*. ISO. (2013). *ISO 16290. Definition of the Technology Readiness Levels (TRLs) and their criteria of assessment*. ISO. (2019). *ISO 22301*. ISO. (2022). *ISO/IEC/IEEE 42010*. ISO. (2023). *ISO 14083*.
+ISO. (2011). *ISO/IEC 27031*. ISO. (2013). *ISO 16290. Definition of the Technology Readiness Levels (TRLs) and their criteria of assessment*. ISO. (2017). *ISO 15005. Road vehicles — Ergonomic aspects of transport and information and control systems*. ISO. (2019). *ISO 9241-210. Ergonomics of human-system interaction*. ISO. (2019). *ISO 22301*. ISO. (2022). *ISO/IEC/IEEE 42010*. ISO. (2023). *ISO 14083*.
+
+Federal Motor Carrier Safety Administration [FMCSA]. (2020). *Commercial Motor Vehicle Driver Fatigue, Long-Term Health, and Highway Safety: Research Needs*. The National Academies Press. https://doi.org/10.17226/21921
 
 Microsoft. (2025). *Azure geographies. Chile Central region*.
 
 Congreso Nacional de Chile. (2002). *Ley N.º 19.799 sobre documentos electrónicos, firma electrónica y servicios de certificación de dicha firma*. https://www.bcn.cl/leychile/navegar?idNorma=196640
+
+Congreso Nacional de Chile. (2021). *Ley N.º 21.377 que sanciona como infracción gravísima la conducción de vehículos manipulando dispositivos de telefonía móvil o cualquier otro artefacto electrónico («Ley No Chat»)*. https://www.bcn.cl/leychile/navegar?idNorma=1166014
 
 Congreso Nacional de Chile. (2024). *Ley N.º 21.719 que regula la protección y el tratamiento de los datos personales y crea la Agencia de Protección de Datos Personales*. Diario Oficial de 13 de diciembre de 2024. https://www.bcn.cl/leychile/navegar?i=1209272
 

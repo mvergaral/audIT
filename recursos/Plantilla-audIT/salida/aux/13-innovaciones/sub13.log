@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.8.26)  7 SEP 2026 00:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.8.26)  7 SEP 2026 01:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2281,10 +2281,10 @@ Underfull \hbox (badness 5288) in paragraph at lines 156--156
 []|\T1/cmr/m/n/10.95 Latencia de re-con-ci-lia-ción
  []
 
-[6] [7] [8]) [9] [10
+[6] [7] [8] [9] [10]) [11] [12
 
 ]
-runsystem(latexminted cleantemp  --timestamp 20260907002902 21E521DC47CF9029F9F
+runsystem(latexminted cleantemp  --timestamp 20260907014503 21E521DC47CF9029F9F
 6DC26D15ACB40)...executed safely (allowed).
 
  (salida/aux/13-innovaciones/sub13.aux
@@ -2302,17 +2302,17 @@ LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 34.41pt have occurred.
 
 Package rerunfilecheck Info: File `sub13.out' has not changed.
-(rerunfilecheck)             Checksum: BB4FC79403737F2B4AAE0AEF311BF45A;2438.
+(rerunfilecheck)             Checksum: 80519B5544FAF1F9E297D8C356F1BC52;2476.
 Package logreq Info: Writing requests to 'sub13.run.xml'.
 \openout1 = `sub13.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 57189 strings out of 469453
- 1264627 string characters out of 5469037
- 2453115 words of memory out of 5000000
- 84964 multiletter control sequences out of 15000+600000
- 644413 words of font info for 76 fonts, out of 8000000 for 9000
+ 57240 strings out of 469453
+ 1266035 string characters out of 5469037
+ 2453480 words of memory out of 5000000
+ 85006 multiletter control sequences out of 15000+600000
+ 645058 words of font info for 79 fonts, out of 8000000 for 9000
  40 hyphenation exceptions out of 8191
  133i,12n,139p,1265b,2815s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk
@@ -2328,13 +2328,14 @@ e/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.600pk> </home
 carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk> </home/c
 arlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcbx1095.600pk> </home/ca
 rlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1095.600pk></usr/share
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmsy8.pfb>
-Output written on salida/aux/13-innovaciones/sub13.pdf (12 pages, 498213 bytes)
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmsy8.pfb>
+Output written on salida/aux/13-innovaciones/sub13.pdf (14 pages, 521661 bytes)
 .
 PDF statistics:
- 573 PDF objects out of 1000 (max. 8388607)
- 29 named destinations out of 1000 (max. 500000)
+ 613 PDF objects out of 1000 (max. 8388607)
+ 36 named destinations out of 1000 (max. 500000)
  102 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -3079,6 +3079,12 @@
     <bcf:citekey order="6" intorder="1">bases_caso10_2026</bcf:citekey>
     <bcf:citekey order="7" intorder="1">iso16290</bcf:citekey>
     <bcf:citekey order="8" intorder="1">ley21719</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">iso16290</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">iso15005</bcf:citekey>
+    <bcf:citekey order="10" intorder="2">iso9241_210</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">fmcsa_fatigue_2020</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">ley21377</bcf:citekey>
+    <bcf:citekey order="12" intorder="2">codigo_trabajo_25bis</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="apa">

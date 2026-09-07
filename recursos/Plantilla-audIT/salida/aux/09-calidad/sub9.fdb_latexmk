@@ -1,11 +1,11 @@
 # Fdb version 4
-["biber salida/aux/09-calidad/sub9"] 1788742302.15965 "salida/aux/09-calidad/sub9.bcf" "salida/aux/09-calidad/sub9.bbl" "salida/aux/09-calidad/sub9" 1788751732.09313 0
-  "salida/aux/09-calidad/sub9.bcf" 1788751731.95565 133950 2f617327a5709784dff4a2aced76e7ed "pdflatex"
+["biber salida/aux/09-calidad/sub9"] 1788755947.78418 "salida/aux/09-calidad/sub9.bcf" "salida/aux/09-calidad/sub9.bbl" "salida/aux/09-calidad/sub9" 1788755951.63845 0
+  "salida/aux/09-calidad/sub9.bcf" 1788755951.48702 133950 2f617327a5709784dff4a2aced76e7ed "pdflatex"
   (generated)
   "salida/aux/09-calidad/sub9.bbl"
   "salida/aux/09-calidad/sub9.blg"
   (rewritten before read)
-["pdflatex"] 1788751730.52578 "subdocumentos/09-calidad/main.tex" "salida/aux/09-calidad/sub9.pdf" "sub9" 1788751732.09337 0
+["pdflatex"] 1788755949.994 "subdocumentos/09-calidad/main.tex" "salida/aux/09-calidad/sub9.pdf" "sub9" 1788755951.63877 0
   "/home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1095.600pk" 1787243221.20692 28952 456a939cc7820666d14dbd81e991005f ""
   "/home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk" 1787243223.82597 31928 2338bbd01c68c6b68f343dd7ac2dd286 ""
   "/home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk" 1787243224.48498 49076 efbf40810ea27f4fd93692e1e9e1a9ef ""
@@ -319,12 +319,12 @@
   "comun/portada.tex" 1788743233.89999 1885 17302419ae19358e34946a27a1e03826 ""
   "comun/preambulo.tex" 1788743233.89999 1300 e2c67134be8afe9b31627b2eb43c8b9b ""
   "comun/styles.sty" 1788745869.69712 1994 f687c7d63ac99a8a50583cd7989f02fe ""
-  "salida/aux/09-calidad/pdfa.xmpi" 1788751730.79549 5042 7764a93b2b4b31b6f7f8216582f5a7c0 "pdflatex"
-  "salida/aux/09-calidad/sub9.aux" 1788751731.95065 1097 ea4b1c194fbbe8bc5b8f131ab3273273 "pdflatex"
-  "salida/aux/09-calidad/sub9.bbl" 1788743233.90907 466 76d65a242ec496c9b4361af646ff12cb "biber salida/aux/09-calidad/sub9"
-  "salida/aux/09-calidad/sub9.out" 1788751731.95365 496 307a6cb644cda8d468ff7bdd651eaf6a "pdflatex"
-  "salida/aux/09-calidad/sub9.run.xml" 1788751731.95711 2366 d8363a42a10f21c3f1b2eb18c3b13bc9 "pdflatex"
-  "salida/aux/09-calidad/sub9.toc" 1788751731.95711 282 afd7a27a99c0e5519bde0e03db1c8d18 "pdflatex"
+  "salida/aux/09-calidad/pdfa.xmpi" 1788755950.28402 5042 5d762b373c328be2b50b96b7eb420d95 "pdflatex"
+  "salida/aux/09-calidad/sub9.aux" 1788755951.48202 1097 ea4b1c194fbbe8bc5b8f131ab3273273 "pdflatex"
+  "salida/aux/09-calidad/sub9.bbl" 1788755948.33457 466 76d65a242ec496c9b4361af646ff12cb "biber salida/aux/09-calidad/sub9"
+  "salida/aux/09-calidad/sub9.out" 1788755951.48502 496 307a6cb644cda8d468ff7bdd651eaf6a "pdflatex"
+  "salida/aux/09-calidad/sub9.run.xml" 1788755951.49041 2366 d8363a42a10f21c3f1b2eb18c3b13bc9 "pdflatex"
+  "salida/aux/09-calidad/sub9.toc" 1788755951.49041 282 afd7a27a99c0e5519bde0e03db1c8d18 "pdflatex"
   "subdocumentos/09-calidad/contenido.tex" 1788743233.91504 1137 18b69b6f8447e29f8938b158bf4cf7bd ""
   "subdocumentos/09-calidad/main.tex" 1788743233.91508 439 76522e938e48eac199105b44ea1a91e9 ""
   "subdocumentos/09-calidad/meta.tex" 1788743233.91512 238 87957dfc182c53e060e665294a2ac568 ""

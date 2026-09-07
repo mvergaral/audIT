@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber salida/aux/04-arquitectura/sub4"] 1788751720.76486 "salida/aux/04-arquitectura/sub4.bcf" "salida/aux/04-arquitectura/sub4.bbl" "salida/aux/04-arquitectura/sub4" 1788751723.33188 0
-  "comun/referencias.bib" 1788751614.4198 8425 7d8bddb880a576e9759fa6e79b786f98 ""
-  "salida/aux/04-arquitectura/sub4.bcf" 1788751723.15267 134472 aa0e1ba608f9684fcc91b7d02cfd92be "pdflatex"
+["biber salida/aux/04-arquitectura/sub4"] 1788755914.5181 "salida/aux/04-arquitectura/sub4.bcf" "salida/aux/04-arquitectura/sub4.bbl" "salida/aux/04-arquitectura/sub4" 1788755921.69006 0
+  "comun/referencias.bib" 1788755700.16024 9637 8468fd319537e5d6012a8a0b245cdd59 ""
+  "salida/aux/04-arquitectura/sub4.bcf" 1788755921.49105 134472 aa0e1ba608f9684fcc91b7d02cfd92be "pdflatex"
   (generated)
   "salida/aux/04-arquitectura/sub4.bbl"
   "salida/aux/04-arquitectura/sub4.blg"
   (rewritten before read)
-["pdflatex"] 1788751721.39899 "subdocumentos/04-arquitectura/main.tex" "salida/aux/04-arquitectura/sub4.pdf" "sub4" 1788751723.33218 0
+["pdflatex"] 1788755919.52421 "subdocumentos/04-arquitectura/main.tex" "salida/aux/04-arquitectura/sub4.pdf" "sub4" 1788755921.69035 0
   "/home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1095.600pk" 1787243221.20692 28952 456a939cc7820666d14dbd81e991005f ""
   "/home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk" 1787243223.82597 31928 2338bbd01c68c6b68f343dd7ac2dd286 ""
   "/home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk" 1787243222.49894 40112 a178bba1001b3230773bde0c4dd3c717 ""
@@ -53,6 +53,7 @@
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm" 1775415801 1124 6c73e740cf17375f03eec0ee63599741 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm" 1775415801 1116 933a60c408fc0a863a92debe84b2d294 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm" 1775415801 1120 8b7d695260f3cff42e636090a8002094 ""
+  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1775415801 35752 024fb6c41858982481f6968b5fc26508 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1775415801 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1775415801 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/share/texmf-dist/tex/generic/babel-spanish/spanish.ldf" 1775415801 26965 3b6d1655ad716f98e788b1fb9f2e87b8 ""
@@ -340,13 +341,13 @@
   "comun/portada.tex" 1788743233.89999 1885 17302419ae19358e34946a27a1e03826 ""
   "comun/preambulo.tex" 1788743233.89999 1300 e2c67134be8afe9b31627b2eb43c8b9b ""
   "comun/styles.sty" 1788745869.69712 1994 f687c7d63ac99a8a50583cd7989f02fe ""
-  "salida/aux/04-arquitectura/pdfa.xmpi" 1788751721.66872 5042 b3334dfc4860d055ce61f30e9d7355b2 "pdflatex"
-  "salida/aux/04-arquitectura/sub4.aux" 1788751723.14667 19427 7eb9cb3a6b4cde3a06dff6750fae3ffd "pdflatex"
-  "salida/aux/04-arquitectura/sub4.bbl" 1788751721.36423 19766 3d7a4eb08fb7fef6a6d876365aee3d5a "biber salida/aux/04-arquitectura/sub4"
-  "salida/aux/04-arquitectura/sub4.out" 1788751723.15067 6933 0a89db3f3b932c08d98093a0dae31a71 "pdflatex"
-  "salida/aux/04-arquitectura/sub4.run.xml" 1788751723.15517 2366 14c606916f05a263432aec72bd48b2bf "pdflatex"
-  "salida/aux/04-arquitectura/sub4.toc" 1788751723.15517 3163 f8251e49af50db9fad07dc8f8bfb15ef "pdflatex"
-  "subdocumentos/04-arquitectura/contenido.tex" 1788743233.91431 38559 0bd86d35c4b506e4e9b3eeec86e116c8 ""
+  "salida/aux/04-arquitectura/pdfa.xmpi" 1788755919.81238 5042 910cb399239c7ea1c15a33d1f09a572a "pdflatex"
+  "salida/aux/04-arquitectura/sub4.aux" 1788755921.48505 27459 ae07aeb9db9819c2958c12a3267d536e "pdflatex"
+  "salida/aux/04-arquitectura/sub4.bbl" 1788755915.14799 19766 3d7a4eb08fb7fef6a6d876365aee3d5a "biber salida/aux/04-arquitectura/sub4"
+  "salida/aux/04-arquitectura/sub4.out" 1788755921.49005 8344 b6ce0804d5f3f4a29b71a14004b9830c "pdflatex"
+  "salida/aux/04-arquitectura/sub4.run.xml" 1788755921.49394 2366 14c606916f05a263432aec72bd48b2bf "pdflatex"
+  "salida/aux/04-arquitectura/sub4.toc" 1788755921.49394 3925 40f1395d7efff89764f1f3c8f377f698 "pdflatex"
+  "subdocumentos/04-arquitectura/contenido.tex" 1788754213.61585 70689 11836b435249f4f54a750eddb8000015 ""
   "subdocumentos/04-arquitectura/main.tex" 1788743233.91435 439 76522e938e48eac199105b44ea1a91e9 ""
   "subdocumentos/04-arquitectura/meta.tex" 1788743233.91435 294 d0b5541a5883f713744118e879959919 ""
   (generated)

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.8.26)  7 SEP 2026 00:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.8.26)  7 SEP 2026 01:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2256,51 +2256,51 @@ been already used, duplicate ignored
 l.28 \end{tablaAudit}
                       [2
 
-]
-Overfull \hbox (7.17307pt too wide) in paragraph at lines 61--61
+] [3]
+Overfull \hbox (7.17307pt too wide) in paragraph at lines 65--65
 |[]\T1/cmr/bx/n/17.28 Decisión ter-ce-ra. Con-ti-nui-dad y re-cu-pe-ra-ción son
  pro-
  []
 
-[3]
-Underfull \hbox (badness 10000) in paragraph at lines 76--77
+
+Underfull \hbox (badness 10000) in paragraph at lines 80--81
 []|\T1/cmr/m/n/10.95 Decisión pri-me-ra del
  []
 
 
 ignored: Infinite glue shrinkage found in box being split [4] [5] [6] [7]
-Underfull \hbox (badness 1742) in paragraph at lines 208--208
+Underfull \hbox (badness 1742) in paragraph at lines 212--212
 []|\T1/cmr/m/n/10.95 Configuración, ins-ta-la-ción y
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 211--211
+Underfull \hbox (badness 10000) in paragraph at lines 215--215
 []|\T1/cmr/m/n/10.95 Equipos pre-exis-ten-tes del
  []
 
 [8] [9]
-Underfull \hbox (badness 10000) in paragraph at lines 243--244
+Underfull \hbox (badness 10000) in paragraph at lines 247--248
 []|\T1/cmr/m/n/10.95 Posición ho-mo-lo-ga-da, jor-na-da
  []
 
 [10]
-Underfull \hbox (badness 2452) in paragraph at lines 294--295
+Underfull \hbox (badness 2452) in paragraph at lines 298--299
 []|\T1/cmr/m/n/10.95 Modelo re-pro-du-ci-ble que ex-pli-que el
  []
 
 
 ignored: Infinite glue shrinkage found in box being split [11] [12]
-Underfull \hbox (badness 10000) in paragraph at lines 336--337
+Underfull \hbox (badness 10000) in paragraph at lines 340--341
 []|\T1/cmr/m/n/10.95 Dimensionamiento y
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 338--339
+Underfull \hbox (badness 10000) in paragraph at lines 342--343
 []|\T1/cmr/m/n/10.95 Dimensionamiento del
  []
 
 
-Underfull \hbox (badness 2134) in paragraph at lines 341--342
+Underfull \hbox (badness 2134) in paragraph at lines 345--346
 []|\T1/cmr/m/n/10.95 Alcance del pro-gra-ma
  []
 
@@ -2308,7 +2308,7 @@ Underfull \hbox (badness 2134) in paragraph at lines 341--342
 ignored: Infinite glue shrinkage found in box being split [13] [14]) [15] [16
 
 ]
-runsystem(latexminted cleantemp  --timestamp 20260907002838 8C8A5D351A982BD6165
+runsystem(latexminted cleantemp  --timestamp 20260907013830 8C8A5D351A982BD6165
 BB1FC6C041410)...executed safely (allowed).
 
  (salida/aux/03-solucion/sub3.aux
@@ -2334,7 +2334,7 @@ Package logreq Info: Writing requests to 'sub3.run.xml'.
 Here is how much of TeX's memory you used:
  57241 strings out of 469453
  1265000 string characters out of 5469037
- 2454968 words of memory out of 5000000
+ 2454969 words of memory out of 5000000
  84986 multiletter control sequences out of 15000+600000
  643429 words of font info for 74 fonts, out of 8000000 for 9000
  40 hyphenation exceptions out of 8191
@@ -2351,7 +2351,7 @@ e/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx2986.600pk> </home
 /carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk> </home/
 carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcbx1095.600pk> </home/c
 arlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1095.600pk>
-Output written on salida/aux/03-solucion/sub3.pdf (18 pages, 508285 bytes).
+Output written on salida/aux/03-solucion/sub3.pdf (18 pages, 508664 bytes).
 PDF statistics:
  697 PDF objects out of 1000 (max. 8388607)
  61 named destinations out of 1000 (max. 500000)

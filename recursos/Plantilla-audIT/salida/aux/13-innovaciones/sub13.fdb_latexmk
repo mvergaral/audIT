@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber salida/aux/13-innovaciones/sub13"] 1788751738.85859 "salida/aux/13-innovaciones/sub13.bcf" "salida/aux/13-innovaciones/sub13.bbl" "salida/aux/13-innovaciones/sub13" 1788751744.58197 0
-  "comun/referencias.bib" 1788751614.4198 8425 7d8bddb880a576e9759fa6e79b786f98 ""
-  "salida/aux/13-innovaciones/sub13.bcf" 1788751744.43364 134469 da012875ef16b773d3e47e80e6a9501b "pdflatex"
+["biber salida/aux/13-innovaciones/sub13"] 1788755867.8514 "salida/aux/13-innovaciones/sub13.bcf" "salida/aux/13-innovaciones/sub13.bbl" "salida/aux/13-innovaciones/sub13" 1788756305.52093 0
+  "comun/referencias.bib" 1788755700.16024 9637 8468fd319537e5d6012a8a0b245cdd59 ""
+  "salida/aux/13-innovaciones/sub13.bcf" 1788756305.36035 134877 532e59bc58763dc0ce82803579c3d35f "pdflatex"
   (generated)
   "salida/aux/13-innovaciones/sub13.bbl"
   "salida/aux/13-innovaciones/sub13.blg"
   (rewritten before read)
-["pdflatex"] 1788751742.89831 "subdocumentos/13-innovaciones/main.tex" "salida/aux/13-innovaciones/sub13.pdf" "sub13" 1788751744.58227 0
+["pdflatex"] 1788756303.63214 "subdocumentos/13-innovaciones/main.tex" "salida/aux/13-innovaciones/sub13.pdf" "sub13" 1788756305.52122 0
   "/home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1095.600pk" 1787243221.20692 28952 456a939cc7820666d14dbd81e991005f ""
   "/home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk" 1787243223.82597 31928 2338bbd01c68c6b68f343dd7ac2dd286 ""
   "/home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk" 1787243224.48498 49076 efbf40810ea27f4fd93692e1e9e1a9ef ""
@@ -41,8 +41,10 @@
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1775415801 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1775415801 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1775415801 916 f87d7c45f9c908e672703b83b72241a3 ""
+  "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm" 1775415801 924 9904cf1d39e9767e7a3622f2a125a565 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm" 1775415801 928 2dc8d444221b7a635bb58038579b861a ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm" 1775415801 908 2921f8a10601f252058503cc6570e581 ""
+  "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm" 1775415801 940 75ac932a52f80982a9f8ea75d03a34cf ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm" 1775415801 940 228d6584342e91276bf566bcf9716b83 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmex10.tfm" 1775415801 992 662f679a0b3d2d53c1b94050fdaa3f50 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm" 1775415801 1524 4414a8315f39513458b80dfc63bff03a ""
@@ -54,6 +56,7 @@
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm" 1775415801 1124 6c73e740cf17375f03eec0ee63599741 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm" 1775415801 1116 933a60c408fc0a863a92debe84b2d294 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm" 1775415801 1120 8b7d695260f3cff42e636090a8002094 ""
+  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb" 1775415801 36741 fa121aac0049305630cf160b86157ee4 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1775415801 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1775415801 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1775415801 32626 4f5c1b83753b1dd3a97d1b399a005b4b ""
@@ -331,13 +334,13 @@
   "comun/portada.tex" 1788743233.89999 1885 17302419ae19358e34946a27a1e03826 ""
   "comun/preambulo.tex" 1788743233.89999 1300 e2c67134be8afe9b31627b2eb43c8b9b ""
   "comun/styles.sty" 1788745869.69712 1994 f687c7d63ac99a8a50583cd7989f02fe ""
-  "salida/aux/13-innovaciones/pdfa.xmpi" 1788751743.16864 5042 b5740e85d3764fffb7617555184a37b0 "pdflatex"
-  "salida/aux/13-innovaciones/sub13.aux" 1788751744.42864 4689 51b68f6b2a6f3af9b1bce685e89197d0 "pdflatex"
-  "salida/aux/13-innovaciones/sub13.bbl" 1788751739.46208 17308 b73ee7c2f067968201752c9681fb921c "biber salida/aux/13-innovaciones/sub13"
-  "salida/aux/13-innovaciones/sub13.out" 1788751744.43164 2438 bb4fc79403737f2b4aae0aef311bf45a "pdflatex"
-  "salida/aux/13-innovaciones/sub13.run.xml" 1788751744.435 2373 a119c98d3cc9c7211999b6741f422c14 "pdflatex"
-  "salida/aux/13-innovaciones/sub13.toc" 1788751744.435 955 2c8eb88d33db8b70305ef3490bbec108 "pdflatex"
-  "subdocumentos/13-innovaciones/contenido.tex" 1788751547.24789 21659 5c15424b69c39a9dd7e0d4be1b8b6cdc ""
+  "salida/aux/13-innovaciones/pdfa.xmpi" 1788756303.91735 5042 a13c2caf765abf4317e4766d34c6f3b8 "pdflatex"
+  "salida/aux/13-innovaciones/sub13.aux" 1788756305.35435 6000 c831cbeb7d2ca4b3fc56e19955877212 "pdflatex"
+  "salida/aux/13-innovaciones/sub13.bbl" 1788755868.52109 30990 65c141acf2e5df0d21f218b6f11c6cb0 "biber salida/aux/13-innovaciones/sub13"
+  "salida/aux/13-innovaciones/sub13.out" 1788756305.35835 2476 80519b5544faf1f9e297d8c356f1bc52 "pdflatex"
+  "salida/aux/13-innovaciones/sub13.run.xml" 1788756305.36239 2373 a119c98d3cc9c7211999b6741f422c14 "pdflatex"
+  "salida/aux/13-innovaciones/sub13.toc" 1788756305.36239 964 2948e8120023eaf36fc56d634926cf01 "pdflatex"
+  "subdocumentos/13-innovaciones/contenido.tex" 1788756187.52559 26676 5962e0e433d193b5275644c1e0ca1d16 ""
   "subdocumentos/13-innovaciones/main.tex" 1788743233.91556 439 76522e938e48eac199105b44ea1a91e9 ""
   "subdocumentos/13-innovaciones/meta.tex" 1788743233.91556 216 628c9d0285e1a3a2ab07c11022bf7c61 ""
   (generated)

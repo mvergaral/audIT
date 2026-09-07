@@ -1,11 +1,11 @@
 # Fdb version 4
-["biber salida/aux/06-metodologias/sub6"] 1788742275.10501 "salida/aux/06-metodologias/sub6.bcf" "salida/aux/06-metodologias/sub6.bbl" "salida/aux/06-metodologias/sub6" 1788751727.08197 0
-  "salida/aux/06-metodologias/sub6.bcf" 1788751726.93766 133950 2f617327a5709784dff4a2aced76e7ed "pdflatex"
+["biber salida/aux/06-metodologias/sub6"] 1788755931.56813 "salida/aux/06-metodologias/sub6.bcf" "salida/aux/06-metodologias/sub6.bbl" "salida/aux/06-metodologias/sub6" 1788755935.44905 0
+  "salida/aux/06-metodologias/sub6.bcf" 1788755935.30504 133950 2f617327a5709784dff4a2aced76e7ed "pdflatex"
   (generated)
   "salida/aux/06-metodologias/sub6.bbl"
   "salida/aux/06-metodologias/sub6.blg"
   (rewritten before read)
-["pdflatex"] 1788751725.5142 "subdocumentos/06-metodologias/main.tex" "salida/aux/06-metodologias/sub6.pdf" "sub6" 1788751727.08221 0
+["pdflatex"] 1788755933.80693 "subdocumentos/06-metodologias/main.tex" "salida/aux/06-metodologias/sub6.pdf" "sub6" 1788755935.44933 0
   "/home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1095.600pk" 1787243221.20692 28952 456a939cc7820666d14dbd81e991005f ""
   "/home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk" 1787243223.82597 31928 2338bbd01c68c6b68f343dd7ac2dd286 ""
   "/home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk" 1787243224.48498 49076 efbf40810ea27f4fd93692e1e9e1a9ef ""
@@ -319,12 +319,12 @@
   "comun/portada.tex" 1788743233.89999 1885 17302419ae19358e34946a27a1e03826 ""
   "comun/preambulo.tex" 1788743233.89999 1300 e2c67134be8afe9b31627b2eb43c8b9b ""
   "comun/styles.sty" 1788745869.69712 1994 f687c7d63ac99a8a50583cd7989f02fe ""
-  "salida/aux/06-metodologias/pdfa.xmpi" 1788751725.77966 5042 22a3dd3012d9d8075781468203afa6fe "pdflatex"
-  "salida/aux/06-metodologias/sub6.aux" 1788751726.93266 1095 e5596af0c4821c453091c007a3ab6ae1 "pdflatex"
-  "salida/aux/06-metodologias/sub6.bbl" 1788743233.907 466 76d65a242ec496c9b4361af646ff12cb "biber salida/aux/06-metodologias/sub6"
-  "salida/aux/06-metodologias/sub6.out" 1788751726.93566 478 9d9fe7a53a33acd7f0fe248b324c30ec "pdflatex"
-  "salida/aux/06-metodologias/sub6.run.xml" 1788751726.93895 2366 fa6542a42cc20a876471c550dc490e8f "pdflatex"
-  "salida/aux/06-metodologias/sub6.toc" 1788751726.93895 280 ee8b8ae263714a1d18068be2f4e3789e "pdflatex"
+  "salida/aux/06-metodologias/pdfa.xmpi" 1788755934.09537 5042 8731280c86a3f7f030d6ffd6ef85a9c6 "pdflatex"
+  "salida/aux/06-metodologias/sub6.aux" 1788755935.30004 1095 e5596af0c4821c453091c007a3ab6ae1 "pdflatex"
+  "salida/aux/06-metodologias/sub6.bbl" 1788755932.11072 466 76d65a242ec496c9b4361af646ff12cb "biber salida/aux/06-metodologias/sub6"
+  "salida/aux/06-metodologias/sub6.out" 1788755935.30304 478 9d9fe7a53a33acd7f0fe248b324c30ec "pdflatex"
+  "salida/aux/06-metodologias/sub6.run.xml" 1788755935.3067 2366 fa6542a42cc20a876471c550dc490e8f "pdflatex"
+  "salida/aux/06-metodologias/sub6.toc" 1788755935.3067 280 ee8b8ae263714a1d18068be2f4e3789e "pdflatex"
   "subdocumentos/06-metodologias/contenido.tex" 1788743233.91466 1141 42c2de8f47b1a801373a1686f8df3917 ""
   "subdocumentos/06-metodologias/main.tex" 1788743233.91471 439 76522e938e48eac199105b44ea1a91e9 ""
   "subdocumentos/06-metodologias/meta.tex" 1788743233.91476 245 2504c27dd7423c0c9a1d2ef81e9dd8c3 ""

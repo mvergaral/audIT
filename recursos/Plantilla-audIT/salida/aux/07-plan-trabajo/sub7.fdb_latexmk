@@ -1,11 +1,11 @@
 # Fdb version 4
-["biber salida/aux/07-plan-trabajo/sub7"] 1788742284.09401 "salida/aux/07-plan-trabajo/sub7.bcf" "salida/aux/07-plan-trabajo/sub7.bbl" "salida/aux/07-plan-trabajo/sub7" 1788751728.77167 0
-  "salida/aux/07-plan-trabajo/sub7.bcf" 1788751728.62666 133950 2f617327a5709784dff4a2aced76e7ed "pdflatex"
+["biber salida/aux/07-plan-trabajo/sub7"] 1788755936.9749 "salida/aux/07-plan-trabajo/sub7.bcf" "salida/aux/07-plan-trabajo/sub7.bbl" "salida/aux/07-plan-trabajo/sub7" 1788755940.79641 0
+  "salida/aux/07-plan-trabajo/sub7.bcf" 1788755940.65025 133950 2f617327a5709784dff4a2aced76e7ed "pdflatex"
   (generated)
   "salida/aux/07-plan-trabajo/sub7.bbl"
   "salida/aux/07-plan-trabajo/sub7.blg"
   (rewritten before read)
-["pdflatex"] 1788751727.20725 "subdocumentos/07-plan-trabajo/main.tex" "salida/aux/07-plan-trabajo/sub7.pdf" "sub7" 1788751728.77192 0
+["pdflatex"] 1788755939.17246 "subdocumentos/07-plan-trabajo/main.tex" "salida/aux/07-plan-trabajo/sub7.pdf" "sub7" 1788755940.79668 0
   "/home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1095.600pk" 1787243221.20692 28952 456a939cc7820666d14dbd81e991005f ""
   "/home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk" 1787243223.82597 31928 2338bbd01c68c6b68f343dd7ac2dd286 ""
   "/home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk" 1787243224.48498 49076 efbf40810ea27f4fd93692e1e9e1a9ef ""
@@ -319,12 +319,12 @@
   "comun/portada.tex" 1788743233.89999 1885 17302419ae19358e34946a27a1e03826 ""
   "comun/preambulo.tex" 1788743233.89999 1300 e2c67134be8afe9b31627b2eb43c8b9b ""
   "comun/styles.sty" 1788745869.69712 1994 f687c7d63ac99a8a50583cd7989f02fe ""
-  "salida/aux/07-plan-trabajo/pdfa.xmpi" 1788751727.49366 5042 af74b6c9a6519dc6d61ea77a9e040046 "pdflatex"
-  "salida/aux/07-plan-trabajo/sub7.aux" 1788751728.62166 1130 946de98775091f370769f8a78ac35e34 "pdflatex"
-  "salida/aux/07-plan-trabajo/sub7.bbl" 1788743233.90764 466 76d65a242ec496c9b4361af646ff12cb "biber salida/aux/07-plan-trabajo/sub7"
-  "salida/aux/07-plan-trabajo/sub7.out" 1788751728.62566 671 3f63bc0bbc6be4ecd88a8ecedc3bce99 "pdflatex"
-  "salida/aux/07-plan-trabajo/sub7.run.xml" 1788751728.62825 2366 2c5d42d3ff99fa5c8e30d6f3f254ff15 "pdflatex"
-  "salida/aux/07-plan-trabajo/sub7.toc" 1788751728.62825 315 d7b64a529b2bdc9b213621fe3cdd12bb "pdflatex"
+  "salida/aux/07-plan-trabajo/pdfa.xmpi" 1788755939.45203 5042 f97e44bcc2aa69d6a45b5ce40e7ebfe3 "pdflatex"
+  "salida/aux/07-plan-trabajo/sub7.aux" 1788755940.64603 1130 946de98775091f370769f8a78ac35e34 "pdflatex"
+  "salida/aux/07-plan-trabajo/sub7.bbl" 1788755937.50889 466 76d65a242ec496c9b4361af646ff12cb "biber salida/aux/07-plan-trabajo/sub7"
+  "salida/aux/07-plan-trabajo/sub7.out" 1788755940.64903 671 3f63bc0bbc6be4ecd88a8ecedc3bce99 "pdflatex"
+  "salida/aux/07-plan-trabajo/sub7.run.xml" 1788755940.65226 2366 2c5d42d3ff99fa5c8e30d6f3f254ff15 "pdflatex"
+  "salida/aux/07-plan-trabajo/sub7.toc" 1788755940.65226 315 d7b64a529b2bdc9b213621fe3cdd12bb "pdflatex"
   "subdocumentos/07-plan-trabajo/contenido.tex" 1788743233.91482 1199 936420ce09210f33315fb994cffb0888 ""
   "subdocumentos/07-plan-trabajo/main.tex" 1788743233.91486 439 76522e938e48eac199105b44ea1a91e9 ""
   "subdocumentos/07-plan-trabajo/meta.tex" 1788743233.9149 269 f40cbf2facd08e0b9cbf6657e42c66ab ""

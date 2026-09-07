@@ -1,11 +1,11 @@
 # Fdb version 4
-["biber salida/aux/12-equipo/sub12"] 1788742329.19303 "salida/aux/12-equipo/sub12.bcf" "salida/aux/12-equipo/sub12.bbl" "salida/aux/12-equipo/sub12" 1788751737.10773 0
-  "salida/aux/12-equipo/sub12.bcf" 1788751736.96465 133950 2f617327a5709784dff4a2aced76e7ed "pdflatex"
+["biber salida/aux/12-equipo/sub12"] 1788755964.04449 "salida/aux/12-equipo/sub12.bcf" "salida/aux/12-equipo/sub12.bbl" "salida/aux/12-equipo/sub12" 1788755967.89707 0
+  "salida/aux/12-equipo/sub12.bcf" 1788755967.75129 133950 2f617327a5709784dff4a2aced76e7ed "pdflatex"
   (generated)
   "salida/aux/12-equipo/sub12.bbl"
   "salida/aux/12-equipo/sub12.blg"
   (rewritten before read)
-["pdflatex"] 1788751735.54594 "subdocumentos/12-equipo/main.tex" "salida/aux/12-equipo/sub12.pdf" "sub12" 1788751737.10798 0
+["pdflatex"] 1788755966.2639 "subdocumentos/12-equipo/main.tex" "salida/aux/12-equipo/sub12.pdf" "sub12" 1788755967.89736 0
   "/home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1095.600pk" 1787243221.20692 28952 456a939cc7820666d14dbd81e991005f ""
   "/home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk" 1787243223.82597 31928 2338bbd01c68c6b68f343dd7ac2dd286 ""
   "/home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk" 1787243224.48498 49076 efbf40810ea27f4fd93692e1e9e1a9ef ""
@@ -319,12 +319,12 @@
   "comun/portada.tex" 1788743233.89999 1885 17302419ae19358e34946a27a1e03826 ""
   "comun/preambulo.tex" 1788743233.89999 1300 e2c67134be8afe9b31627b2eb43c8b9b ""
   "comun/styles.sty" 1788745869.69712 1994 f687c7d63ac99a8a50583cd7989f02fe ""
-  "salida/aux/12-equipo/pdfa.xmpi" 1788751735.81965 5042 20560dbf92ad0c16b76175d8a916be93 "pdflatex"
-  "salida/aux/12-equipo/sub12.aux" 1788751736.96065 1129 d45966734be788c51150f10466fff9c4 "pdflatex"
-  "salida/aux/12-equipo/sub12.bbl" 1788743233.91097 466 76d65a242ec496c9b4361af646ff12cb "biber salida/aux/12-equipo/sub12"
-  "salida/aux/12-equipo/sub12.out" 1788751736.96365 665 41ddf0cb80eb80d7f7c25254521f66b7 "pdflatex"
-  "salida/aux/12-equipo/sub12.run.xml" 1788751736.96676 2373 bd634a60fdd9e8ee2cdb2b8fe7b72cea "pdflatex"
-  "salida/aux/12-equipo/sub12.toc" 1788751736.96676 314 0fc036dc6fdf4f35bc129b3ae17612c9 "pdflatex"
+  "salida/aux/12-equipo/pdfa.xmpi" 1788755966.55174 5042 4db339431d39b7cc47f3b50cf79d4c6c "pdflatex"
+  "salida/aux/12-equipo/sub12.aux" 1788755967.74701 1129 d45966734be788c51150f10466fff9c4 "pdflatex"
+  "salida/aux/12-equipo/sub12.bbl" 1788755964.58553 466 76d65a242ec496c9b4361af646ff12cb "biber salida/aux/12-equipo/sub12"
+  "salida/aux/12-equipo/sub12.out" 1788755967.75001 665 41ddf0cb80eb80d7f7c25254521f66b7 "pdflatex"
+  "salida/aux/12-equipo/sub12.run.xml" 1788755967.75339 2373 bd634a60fdd9e8ee2cdb2b8fe7b72cea "pdflatex"
+  "salida/aux/12-equipo/sub12.toc" 1788755967.75339 314 0fc036dc6fdf4f35bc129b3ae17612c9 "pdflatex"
   "subdocumentos/12-equipo/contenido.tex" 1788743233.91539 1076 4aeebb7899449e2dd94cf132c4be441f ""
   "subdocumentos/12-equipo/main.tex" 1788743233.91542 439 76522e938e48eac199105b44ea1a91e9 ""
   "subdocumentos/12-equipo/meta.tex" 1788743233.91546 262 c2a96c75ebb92845858d6903a1876fe0 ""

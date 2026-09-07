@@ -50,7 +50,7 @@
       \verb https://www.bcn.cl/leychile/navegar?idNorma=196640
       \endverb
     \endentry
-    \entry{ley21719}{misc}{}{}
+    \entry{ley21377}{misc}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=499b3368fa957f63eb091bbe7f8b363a}{%
            family={{Congreso Nacional de Chile}},
@@ -65,6 +65,37 @@
       \strng{authorfullhash}{499b3368fa957f63eb091bbe7f8b363a}
       \strng{authorfullhashraw}{499b3368fa957f63eb091bbe7f8b363a}
       \field{extraname}{2}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Ley N.º 21.377 que modifica la Ley de Tránsito para sancionar como infracción gravísima la conducción de vehículos manipulando dispositivos de telefonía móvil o cualquier otro artefacto electrónico o digital («Ley No Chat»)}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://www.bcn.cl/leychile/navegar?idNorma=1166014
+      \endverb
+      \verb{url}
+      \verb https://www.bcn.cl/leychile/navegar?idNorma=1166014
+      \endverb
+    \endentry
+    \entry{ley21719}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=499b3368fa957f63eb091bbe7f8b363a}{%
+           family={{Congreso Nacional de Chile}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{499b3368fa957f63eb091bbe7f8b363a}
+      \strng{fullhash}{499b3368fa957f63eb091bbe7f8b363a}
+      \strng{fullhashraw}{499b3368fa957f63eb091bbe7f8b363a}
+      \strng{bibnamehash}{499b3368fa957f63eb091bbe7f8b363a}
+      \strng{authorbibnamehash}{499b3368fa957f63eb091bbe7f8b363a}
+      \strng{authornamehash}{499b3368fa957f63eb091bbe7f8b363a}
+      \strng{authorfullhash}{499b3368fa957f63eb091bbe7f8b363a}
+      \strng{authorfullhashraw}{499b3368fa957f63eb091bbe7f8b363a}
+      \field{extraname}{3}
       \field{sortinit}{C}
       \field{sortinithash}{4d103a86280481745c9c897c925753c0}
       \field{extradatescope}{labelyear}
@@ -115,6 +146,39 @@
       \field{title}{Bases Técnicas del Caso 10. Transporte de Carga. Transportes Curimón S.A.}
       \field{year}{2026}
     \endentry
+    \entry{fmcsa_fatigue_2020}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=45b43bcca711008930c2693ac543d14f}{%
+           family={{Federal Motor Carrier Safety Administration}},
+           familyi={F\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {National Academies Press}%
+      }
+      \strng{namehash}{45b43bcca711008930c2693ac543d14f}
+      \strng{fullhash}{45b43bcca711008930c2693ac543d14f}
+      \strng{fullhashraw}{45b43bcca711008930c2693ac543d14f}
+      \strng{bibnamehash}{45b43bcca711008930c2693ac543d14f}
+      \strng{authorbibnamehash}{45b43bcca711008930c2693ac543d14f}
+      \strng{authornamehash}{45b43bcca711008930c2693ac543d14f}
+      \strng{authorfullhash}{45b43bcca711008930c2693ac543d14f}
+      \strng{authorfullhashraw}{45b43bcca711008930c2693ac543d14f}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Commercial Motor Vehicle Driver Fatigue, Long-Term Health, and Highway Safety: Research Needs}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb https://doi.org/10.17226/21921
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.17226/21921
+      \endverb
+    \endentry
     \entry{iso16290}{misc}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=5b512ee8a59deb284ad0a6a035ba10b1}{%
@@ -129,6 +193,7 @@
       \strng{authornamehash}{5b512ee8a59deb284ad0a6a035ba10b1}
       \strng{authorfullhash}{5b512ee8a59deb284ad0a6a035ba10b1}
       \strng{authorfullhashraw}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \field{extraname}{1}
       \field{sortinit}{I}
       \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
       \field{extradatescope}{labelyear}
@@ -144,6 +209,56 @@
       \verb{url}
       \verb https://www.iso.org/standard/56064.html
       \endverb
+    \endentry
+    \entry{iso15005}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5b512ee8a59deb284ad0a6a035ba10b1}{%
+           family={{ISO}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{fullhash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{fullhashraw}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{bibnamehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authorbibnamehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authornamehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authorfullhash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authorfullhashraw}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \field{extraname}{2}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{ISO 15005:2017. Road vehicles — Ergonomic aspects of transport and information and control systems — Dialogue management principles and compliance procedures}
+      \field{year}{2017}
+    \endentry
+    \entry{iso9241_210}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5b512ee8a59deb284ad0a6a035ba10b1}{%
+           family={{ISO}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{fullhash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{fullhashraw}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{bibnamehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authorbibnamehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authornamehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authorfullhash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authorfullhashraw}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \field{extraname}{3}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{ISO 9241-210:2019. Ergonomics of human-system interaction — Part 210: Human-centred design for interactive systems}
+      \field{year}{2019}
     \endentry
     \entry{kleppmann2017}{book}{}{}
       \name{author}{1}{}{%
@@ -174,6 +289,39 @@
       \field{labeltitlesource}{title}
       \field{title}{Designing Data-Intensive Applications: The Big Ideas Behind Reliable, Scalable, and Maintainable Systems}
       \field{year}{2017}
+    \endentry
+    \entry{codigo_trabajo_25bis}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=4bea1cf2944a8ad58a1c159a33e3a06b}{%
+           family={{Ministerio del Trabajo}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Biblioteca del Congreso Nacional de Chile}%
+      }
+      \strng{namehash}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{fullhash}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{fullhashraw}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{bibnamehash}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{authorbibnamehash}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{authornamehash}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{authorfullhash}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{authorfullhashraw}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Decreto con Fuerza de Ley N.º 1. Texto refundido, coordinado y sistematizado del Código del Trabajo. Artículo 25 bis sobre jornada de choferes de vehículos de carga terrestre interurbana}
+      \field{year}{2003}
+      \verb{urlraw}
+      \verb https://www.bcn.cl/leychile/navegar?idNorma=207436
+      \endverb
+      \verb{url}
+      \verb https://www.bcn.cl/leychile/navegar?idNorma=207436
+      \endverb
     \endentry
     \entry{w3c_vcdm2}{misc}{}{}
       \name{author}{1}{}{%
@@ -238,7 +386,7 @@
       \verb https://www.bcn.cl/leychile/navegar?idNorma=196640
       \endverb
     \endentry
-    \entry{ley21719}{misc}{}{}
+    \entry{ley21377}{misc}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=499b3368fa957f63eb091bbe7f8b363a}{%
            family={{Congreso Nacional de Chile}},
@@ -253,6 +401,37 @@
       \strng{authorfullhash}{499b3368fa957f63eb091bbe7f8b363a}
       \strng{authorfullhashraw}{499b3368fa957f63eb091bbe7f8b363a}
       \field{extraname}{2}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Ley N.º 21.377 que modifica la Ley de Tránsito para sancionar como infracción gravísima la conducción de vehículos manipulando dispositivos de telefonía móvil o cualquier otro artefacto electrónico o digital («Ley No Chat»)}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://www.bcn.cl/leychile/navegar?idNorma=1166014
+      \endverb
+      \verb{url}
+      \verb https://www.bcn.cl/leychile/navegar?idNorma=1166014
+      \endverb
+    \endentry
+    \entry{ley21719}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=499b3368fa957f63eb091bbe7f8b363a}{%
+           family={{Congreso Nacional de Chile}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{499b3368fa957f63eb091bbe7f8b363a}
+      \strng{fullhash}{499b3368fa957f63eb091bbe7f8b363a}
+      \strng{fullhashraw}{499b3368fa957f63eb091bbe7f8b363a}
+      \strng{bibnamehash}{499b3368fa957f63eb091bbe7f8b363a}
+      \strng{authorbibnamehash}{499b3368fa957f63eb091bbe7f8b363a}
+      \strng{authornamehash}{499b3368fa957f63eb091bbe7f8b363a}
+      \strng{authorfullhash}{499b3368fa957f63eb091bbe7f8b363a}
+      \strng{authorfullhashraw}{499b3368fa957f63eb091bbe7f8b363a}
+      \field{extraname}{3}
       \field{sortinit}{C}
       \field{sortinithash}{4d103a86280481745c9c897c925753c0}
       \field{extradatescope}{labelyear}
@@ -303,6 +482,39 @@
       \field{title}{Bases Técnicas del Caso 10. Transporte de Carga. Transportes Curimón S.A.}
       \field{year}{2026}
     \endentry
+    \entry{fmcsa_fatigue_2020}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=45b43bcca711008930c2693ac543d14f}{%
+           family={{Federal Motor Carrier Safety Administration}},
+           familyi={F\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {National Academies Press}%
+      }
+      \strng{namehash}{45b43bcca711008930c2693ac543d14f}
+      \strng{fullhash}{45b43bcca711008930c2693ac543d14f}
+      \strng{fullhashraw}{45b43bcca711008930c2693ac543d14f}
+      \strng{bibnamehash}{45b43bcca711008930c2693ac543d14f}
+      \strng{authorbibnamehash}{45b43bcca711008930c2693ac543d14f}
+      \strng{authornamehash}{45b43bcca711008930c2693ac543d14f}
+      \strng{authorfullhash}{45b43bcca711008930c2693ac543d14f}
+      \strng{authorfullhashraw}{45b43bcca711008930c2693ac543d14f}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Commercial Motor Vehicle Driver Fatigue, Long-Term Health, and Highway Safety: Research Needs}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb https://doi.org/10.17226/21921
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.17226/21921
+      \endverb
+    \endentry
     \entry{iso16290}{misc}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=5b512ee8a59deb284ad0a6a035ba10b1}{%
@@ -317,6 +529,7 @@
       \strng{authornamehash}{5b512ee8a59deb284ad0a6a035ba10b1}
       \strng{authorfullhash}{5b512ee8a59deb284ad0a6a035ba10b1}
       \strng{authorfullhashraw}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \field{extraname}{1}
       \field{sortinit}{I}
       \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
       \field{extradatescope}{labelyear}
@@ -332,6 +545,56 @@
       \verb{url}
       \verb https://www.iso.org/standard/56064.html
       \endverb
+    \endentry
+    \entry{iso15005}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5b512ee8a59deb284ad0a6a035ba10b1}{%
+           family={{ISO}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{fullhash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{fullhashraw}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{bibnamehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authorbibnamehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authornamehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authorfullhash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authorfullhashraw}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \field{extraname}{2}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{ISO 15005:2017. Road vehicles — Ergonomic aspects of transport and information and control systems — Dialogue management principles and compliance procedures}
+      \field{year}{2017}
+    \endentry
+    \entry{iso9241_210}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5b512ee8a59deb284ad0a6a035ba10b1}{%
+           family={{ISO}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{fullhash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{fullhashraw}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{bibnamehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authorbibnamehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authornamehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authorfullhash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authorfullhashraw}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \field{extraname}{3}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{ISO 9241-210:2019. Ergonomics of human-system interaction — Part 210: Human-centred design for interactive systems}
+      \field{year}{2019}
     \endentry
     \entry{kleppmann2017}{book}{}{}
       \name{author}{1}{}{%
@@ -362,6 +625,39 @@
       \field{labeltitlesource}{title}
       \field{title}{Designing Data-Intensive Applications: The Big Ideas Behind Reliable, Scalable, and Maintainable Systems}
       \field{year}{2017}
+    \endentry
+    \entry{codigo_trabajo_25bis}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=4bea1cf2944a8ad58a1c159a33e3a06b}{%
+           family={{Ministerio del Trabajo}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Biblioteca del Congreso Nacional de Chile}%
+      }
+      \strng{namehash}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{fullhash}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{fullhashraw}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{bibnamehash}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{authorbibnamehash}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{authornamehash}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{authorfullhash}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{authorfullhashraw}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Decreto con Fuerza de Ley N.º 1. Texto refundido, coordinado y sistematizado del Código del Trabajo. Artículo 25 bis sobre jornada de choferes de vehículos de carga terrestre interurbana}
+      \field{year}{2003}
+      \verb{urlraw}
+      \verb https://www.bcn.cl/leychile/navegar?idNorma=207436
+      \endverb
+      \verb{url}
+      \verb https://www.bcn.cl/leychile/navegar?idNorma=207436
+      \endverb
     \endentry
     \entry{w3c_vcdm2}{misc}{}{}
       \name{author}{1}{}{%

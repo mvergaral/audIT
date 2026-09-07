@@ -1,11 +1,11 @@
 # Fdb version 4
-["biber salida/aux/11-planes-operacion/sub11"] 1788742320.25864 "salida/aux/11-planes-operacion/sub11.bcf" "salida/aux/11-planes-operacion/sub11.bbl" "salida/aux/11-planes-operacion/sub11" 1788751735.42813 0
-  "salida/aux/11-planes-operacion/sub11.bcf" 1788751735.28965 133950 2f617327a5709784dff4a2aced76e7ed "pdflatex"
+["biber salida/aux/11-planes-operacion/sub11"] 1788755958.58365 "salida/aux/11-planes-operacion/sub11.bcf" "salida/aux/11-planes-operacion/sub11.bbl" "salida/aux/11-planes-operacion/sub11" 1788755962.49 0
+  "salida/aux/11-planes-operacion/sub11.bcf" 1788755962.33701 133950 2f617327a5709784dff4a2aced76e7ed "pdflatex"
   (generated)
   "salida/aux/11-planes-operacion/sub11.bbl"
   "salida/aux/11-planes-operacion/sub11.blg"
   (rewritten before read)
-["pdflatex"] 1788751733.87967 "subdocumentos/11-planes-operacion/main.tex" "salida/aux/11-planes-operacion/sub11.pdf" "sub11" 1788751735.42836 0
+["pdflatex"] 1788755960.81631 "subdocumentos/11-planes-operacion/main.tex" "salida/aux/11-planes-operacion/sub11.pdf" "sub11" 1788755962.49026 0
   "/home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1095.600pk" 1787243221.20692 28952 456a939cc7820666d14dbd81e991005f ""
   "/home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk" 1787243223.82597 31928 2338bbd01c68c6b68f343dd7ac2dd286 ""
   "/home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk" 1787243224.48498 49076 efbf40810ea27f4fd93692e1e9e1a9ef ""
@@ -319,12 +319,12 @@
   "comun/portada.tex" 1788743233.89999 1885 17302419ae19358e34946a27a1e03826 ""
   "comun/preambulo.tex" 1788743233.89999 1300 e2c67134be8afe9b31627b2eb43c8b9b ""
   "comun/styles.sty" 1788745869.69712 1994 f687c7d63ac99a8a50583cd7989f02fe ""
-  "salida/aux/11-planes-operacion/pdfa.xmpi" 1788751734.1453 5042 d058d7ce72466204fabc6420a66acc84 "pdflatex"
-  "salida/aux/11-planes-operacion/sub11.aux" 1788751735.28565 1102 4f5cef1e055fbb72fac7e85b9ff0fcbf "pdflatex"
-  "salida/aux/11-planes-operacion/sub11.bbl" 1788743233.91032 466 76d65a242ec496c9b4361af646ff12cb "biber salida/aux/11-planes-operacion/sub11"
-  "salida/aux/11-planes-operacion/sub11.out" 1788751735.28865 519 3658e79d8b0efb7585a4ccc62a51f5ff "pdflatex"
-  "salida/aux/11-planes-operacion/sub11.run.xml" 1788751735.29155 2373 740e0c8e8127107d2920f62e21d9908e "pdflatex"
-  "salida/aux/11-planes-operacion/sub11.toc" 1788751735.29155 287 4e7928216136c4503690f27cc3faf380 "pdflatex"
+  "salida/aux/11-planes-operacion/pdfa.xmpi" 1788755961.10901 5042 38b9dda564829bf6860af42c6f1e48e4 "pdflatex"
+  "salida/aux/11-planes-operacion/sub11.aux" 1788755962.33201 1102 4f5cef1e055fbb72fac7e85b9ff0fcbf "pdflatex"
+  "salida/aux/11-planes-operacion/sub11.bbl" 1788755959.13751 466 76d65a242ec496c9b4361af646ff12cb "biber salida/aux/11-planes-operacion/sub11"
+  "salida/aux/11-planes-operacion/sub11.out" 1788755962.33501 519 3658e79d8b0efb7585a4ccc62a51f5ff "pdflatex"
+  "salida/aux/11-planes-operacion/sub11.run.xml" 1788755962.33934 2373 740e0c8e8127107d2920f62e21d9908e "pdflatex"
+  "salida/aux/11-planes-operacion/sub11.toc" 1788755962.33934 287 4e7928216136c4503690f27cc3faf380 "pdflatex"
   "subdocumentos/11-planes-operacion/contenido.tex" 1788743233.91528 1080 292ca01b19a29ce981632273151ef3be ""
   "subdocumentos/11-planes-operacion/main.tex" 1788743233.91531 439 76522e938e48eac199105b44ea1a91e9 ""
   "subdocumentos/11-planes-operacion/meta.tex" 1788743233.91535 244 780508f42d3dfdc761b0087869299b3d ""

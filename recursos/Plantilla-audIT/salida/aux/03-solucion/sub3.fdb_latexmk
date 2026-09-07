@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber salida/aux/03-solucion/sub3"] 1788751714.50621 "salida/aux/03-solucion/sub3.bcf" "salida/aux/03-solucion/sub3.bbl" "salida/aux/03-solucion/sub3" 1788751720.66021 0
-  "comun/referencias.bib" 1788751614.4198 8425 7d8bddb880a576e9759fa6e79b786f98 ""
-  "salida/aux/03-solucion/sub3.bcf" 1788751720.50967 134445 650191b3f80962f3a08b9da405f6b24e "pdflatex"
+["biber salida/aux/03-solucion/sub3"] 1788755906.21352 "salida/aux/03-solucion/sub3.bcf" "salida/aux/03-solucion/sub3.bbl" "salida/aux/03-solucion/sub3" 1788755912.52539 0
+  "comun/referencias.bib" 1788755700.16024 9637 8468fd319537e5d6012a8a0b245cdd59 ""
+  "salida/aux/03-solucion/sub3.bcf" 1788755912.37206 134445 650191b3f80962f3a08b9da405f6b24e "pdflatex"
   (generated)
   "salida/aux/03-solucion/sub3.bbl"
   "salida/aux/03-solucion/sub3.blg"
   (rewritten before read)
-["pdflatex"] 1788751718.8849 "subdocumentos/03-solucion/main.tex" "salida/aux/03-solucion/sub3.pdf" "sub3" 1788751720.66053 0
+["pdflatex"] 1788755910.64489 "subdocumentos/03-solucion/main.tex" "salida/aux/03-solucion/sub3.pdf" "sub3" 1788755912.52572 0
   "/home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1095.600pk" 1787243221.20692 28952 456a939cc7820666d14dbd81e991005f ""
   "/home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk" 1787243223.82597 31928 2338bbd01c68c6b68f343dd7ac2dd286 ""
   "/home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk" 1787243222.49894 40112 a178bba1001b3230773bde0c4dd3c717 ""
@@ -325,13 +325,13 @@
   "comun/portada.tex" 1788743233.89999 1885 17302419ae19358e34946a27a1e03826 ""
   "comun/preambulo.tex" 1788743233.89999 1300 e2c67134be8afe9b31627b2eb43c8b9b ""
   "comun/styles.sty" 1788745869.69712 1994 f687c7d63ac99a8a50583cd7989f02fe ""
-  "salida/aux/03-solucion/pdfa.xmpi" 1788751719.18145 5042 83839aff3147388945be4bf710a10774 "pdflatex"
-  "salida/aux/03-solucion/sub3.aux" 1788751720.50467 9547 5705af90b045a8ac9300e665df7e6807 "pdflatex"
-  "salida/aux/03-solucion/sub3.bbl" 1788751715.12425 12048 62a7155fc8c82191da15753f454f65b0 "biber salida/aux/03-solucion/sub3"
-  "salida/aux/03-solucion/sub3.out" 1788751720.50867 5575 1c7aecdfdc7fb46b4a22628a418aaedb "pdflatex"
-  "salida/aux/03-solucion/sub3.run.xml" 1788751720.51212 2366 a0aa8225b500fe40e043bdc97a896f66 "pdflatex"
-  "salida/aux/03-solucion/sub3.toc" 1788751720.51212 2267 888d746244b62df7a8eec4f0a6835738 "pdflatex"
-  "subdocumentos/03-solucion/contenido.tex" 1788747068.06154 28805 5ab24228fbc7ae03cbabcb841dd4d7fa ""
+  "salida/aux/03-solucion/pdfa.xmpi" 1788755910.94657 5042 2226d67fc57a6bcdcf27eaa3281a6d24 "pdflatex"
+  "salida/aux/03-solucion/sub3.aux" 1788755912.36706 9547 5705af90b045a8ac9300e665df7e6807 "pdflatex"
+  "salida/aux/03-solucion/sub3.bbl" 1788755906.84211 12048 62a7155fc8c82191da15753f454f65b0 "biber salida/aux/03-solucion/sub3"
+  "salida/aux/03-solucion/sub3.out" 1788755912.37106 5575 1c7aecdfdc7fb46b4a22628a418aaedb "pdflatex"
+  "salida/aux/03-solucion/sub3.run.xml" 1788755912.37412 2366 a0aa8225b500fe40e043bdc97a896f66 "pdflatex"
+  "salida/aux/03-solucion/sub3.toc" 1788755912.37412 2267 888d746244b62df7a8eec4f0a6835738 "pdflatex"
+  "subdocumentos/03-solucion/contenido.tex" 1788753759.10541 29176 41c0c49955eaf14ea23efffd5ba39e34 ""
   "subdocumentos/03-solucion/main.tex" 1788743233.91403 439 76522e938e48eac199105b44ea1a91e9 ""
   "subdocumentos/03-solucion/meta.tex" 1788743233.91408 263 07fcc9896e4ed88414158694614b38f0 ""
   (generated)

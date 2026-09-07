@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber salida/aux/05-datos/sub5"] 1788751807.13632 "salida/aux/05-datos/sub5.bcf" "salida/aux/05-datos/sub5.bbl" "salida/aux/05-datos/sub5" 1788751813.59679 0
-  "comun/referencias.bib" 1788751614.4198 8425 7d8bddb880a576e9759fa6e79b786f98 ""
-  "salida/aux/05-datos/sub5.bcf" 1788751813.40755 134485 5f62485a503d17301cf09996bfba84ad "pdflatex"
+["biber salida/aux/05-datos/sub5"] 1788755923.48843 "salida/aux/05-datos/sub5.bcf" "salida/aux/05-datos/sub5.bbl" "salida/aux/05-datos/sub5" 1788755929.98372 0
+  "comun/referencias.bib" 1788755700.16024 9637 8468fd319537e5d6012a8a0b245cdd59 ""
+  "salida/aux/05-datos/sub5.bcf" 1788755929.78904 134485 5f62485a503d17301cf09996bfba84ad "pdflatex"
   (generated)
   "salida/aux/05-datos/sub5.bbl"
   "salida/aux/05-datos/sub5.blg"
   (rewritten before read)
-["pdflatex"] 1788751811.62765 "subdocumentos/05-datos/main.tex" "salida/aux/05-datos/sub5.pdf" "sub5" 1788751813.59711 0
+["pdflatex"] 1788755928.03244 "subdocumentos/05-datos/main.tex" "salida/aux/05-datos/sub5.pdf" "sub5" 1788755929.984 0
   "/home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbi1200.600pk" 1787243216.83583 42704 49671b7f8be9a5cfbdf26ca846c7a62b ""
   "/home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1095.600pk" 1787243221.20692 28952 456a939cc7820666d14dbd81e991005f ""
   "/home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk" 1787243223.82597 31928 2338bbd01c68c6b68f343dd7ac2dd286 ""
@@ -356,13 +356,13 @@
   "comun/portada.tex" 1788743233.89999 1885 17302419ae19358e34946a27a1e03826 ""
   "comun/preambulo.tex" 1788743233.89999 1300 e2c67134be8afe9b31627b2eb43c8b9b ""
   "comun/styles.sty" 1788745869.69712 1994 f687c7d63ac99a8a50583cd7989f02fe ""
-  "salida/aux/05-datos/pdfa.xmpi" 1788751811.91531 5042 d2c5ab9441c5f87d43baf34ca23e47bf "pdflatex"
-  "salida/aux/05-datos/sub5.aux" 1788751813.40255 12110 e1f126f410964bd6043d02078c8976cf "pdflatex"
-  "salida/aux/05-datos/sub5.bbl" 1788751807.75542 16596 d4df2e02784a18ef98e95248a102643e "biber salida/aux/05-datos/sub5"
-  "salida/aux/05-datos/sub5.out" 1788751813.40655 6586 dd5f73a08ee88deca7fbfffb807cf61f "pdflatex"
-  "salida/aux/05-datos/sub5.run.xml" 1788751813.40946 2366 418090ca6bc580b6e9818d750002112a "pdflatex"
-  "salida/aux/05-datos/sub5.toc" 1788751813.40946 2452 7cefec21e6eaae47a913c95be5b424bf "pdflatex"
-  "subdocumentos/05-datos/contenido.tex" 1788751775.56145 33660 81f4a4f38a70fdc32131502101761b56 ""
+  "salida/aux/05-datos/pdfa.xmpi" 1788755928.33155 5042 1640aa7b3c3057dfa7fb00e5885f914f "pdflatex"
+  "salida/aux/05-datos/sub5.aux" 1788755929.78304 12104 5f94a827a04d4e08ade27cea0bf48091 "pdflatex"
+  "salida/aux/05-datos/sub5.bbl" 1788755924.11649 16596 d4df2e02784a18ef98e95248a102643e "biber salida/aux/05-datos/sub5"
+  "salida/aux/05-datos/sub5.out" 1788755929.78704 6586 dd5f73a08ee88deca7fbfffb807cf61f "pdflatex"
+  "salida/aux/05-datos/sub5.run.xml" 1788755929.79112 2366 418090ca6bc580b6e9818d750002112a "pdflatex"
+  "salida/aux/05-datos/sub5.toc" 1788755929.79112 2452 7cefec21e6eaae47a913c95be5b424bf "pdflatex"
+  "subdocumentos/05-datos/contenido.tex" 1788754266.34577 33959 6a6634b64cfc4ccb547cbb2d41b39375 ""
   "subdocumentos/05-datos/main.tex" 1788743233.91455 439 76522e938e48eac199105b44ea1a91e9 ""
   "subdocumentos/05-datos/meta.tex" 1788743233.91461 255 afa51b1fa3188df38d29a7dd38b3f576 ""
   (generated)
