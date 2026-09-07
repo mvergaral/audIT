@@ -17,7 +17,7 @@ siguen se eligieron con ese criterio.
 2 & Proceso & Despliegue sin detener la flota & Ignacio V. y Alonso \\
 3 & Tecnológica o de arquitectura & Operación desconectada y vista única de flota & Marcel y Martín \\
 4 & Modelo de negocio o contratación & Esquema de adhesión y propiedad del dispositivo & Matías V. \\
-5 & Experiencia de usuario, sostenibilidad o impacto social & Alerta de jornada con lugar seguro alcanzable & Carlos y Naomi \\
+5 & Experiencia de usuario, sostenibilidad o impacto social & Bienestar del conductor y descanso en parador seguro & Carlos y Naomi \\
 \end{tablaAudit}
 
 \subsection{Tipo 1. Portal del transportista con liquidación en curso}
@@ -117,27 +117,49 @@ por familia de vehículo se mide en el piloto de la Etapa 1.
 \textbf{Idea.} Cuarenta y un millones de kilómetros al año con tramos de más de 80 kilómetros sin
 cobertura, 34 camiones sin dispositivo y 340 repartidos en tres plataformas incompatibles, una de
 las cuales no permite exportar. La innovación hace que el registro exista en el vehículo antes de
-que exista cualquier enlace, y que las tres plataformas se vean como una sola.
+que exista cualquier enlace, garantizando operatividad total durante desconexiones extremas, y que
+las tres plataformas se vean como una sola interfaz unificada.
 
-\textbf{Tecnología que la sustenta.} Almacenamiento local estructurado y cifrado a bordo con
-volcado diferido y reconciliación determinista, capa de ingestión que normaliza los eventos de las
-tres plataformas bajo un formato común, y emisión del documento de transporte con folio autorizado
-en memoria protegida del dispositivo para los puntos de carga sin señal.
+\textbf{Tecnología que la sustenta.} Arquitectura híbrida Edge-to-Cloud con almacenamiento local no
+volátil en cabina sobre memoria flash industrial ($\ge 8\text{ GB}$) con algoritmos de nivelación de
+desgaste (\textit{wear-leveling}) resistentes a choques térmicos ($-20^\circ\text{C}$ a $+70^\circ\text{C}$)
+y vibraciones severas (RT-08.11). Motor embebido SQLite en modo WAL (\textit{Write-Ahead Logging}) con
+serialización binaria ultracompacta en Protocol Buffers (Protobuf) sobre MQTT v5.0 / Kafka, requiriendo
+menos de 10 MB para 72 horas continuas y soportando hasta 288 horas (12 días) de aislamiento en el Paso
+Los Libertadores (RT-10.05). Capa de ingestión telemática unificada que normaliza eventos de las tres
+plataformas comerciales vía adaptadores API/Webhooks sin intervenir físicamente equipos de terceros
+(Restricción 3, Decisión D-02). Emisión tributaria offline de Documentos Electrónicos de Transporte (DET)
+con folios CAF pre-asignados y Timbre Electrónico DTE (TED) en memoria criptográfica antes del rodado (RF-014).
 
-\textbf{Resultado esperado.} Los indicadores parten de una línea base medida.
+\textbf{Madurez.} Nivel de Madurez Tecnológica TRL 8/9 (\cite{iso16290}), sustentado en componentes
+comerciales y estándares industriales maduros (MQTT v5.0, SAE J1939-71, OCI Runtime). La consistencia
+eventual y reconciliación determinista de estados tras particiones prolongadas se apoya formalmente en
+estructuras de datos replicadas libres de conflictos (CRDT) y modelos de replicación distribuida
+\parencite{kleppmann2017}.
+
+\textbf{Incorporación en la arquitectura y en el cronograma.} Se articula en la Capa 1 (Borde Terrestre:
+dispositivo con flash $\ge 8\text{ GB}$, SQLite WAL y acopladores inductivos FMS J1939 en 61 unidades
+propias sin alterar garantías), Capa 3 (APIM con mTLS y limitación elástica de tasa a 60 req/min por
+dispositivo para ráfagas de reconexión), Capa 5 (Event Ingestion Kafka con búfer de hasta 1.500 pings/min)
+y Capa 6 (TimescaleDB para series temporales y deduplicación en PostgreSQL 16 por \texttt{idempotency\_key}).
+Su trazabilidad contractual con la EDT comprende los paquetes EDT 3.4 (Conector de Ingestión Telemática,
+Meses 3--6), EDT 4.2 (Homologación e Instalación de Búfer a Bordo $\ge 8\text{ GB}$, Meses 4--8) y EDT 4.5
+(Acopladores Inductivos FMS J1939 en 61 camiones, Meses 6--9).
+
+\textbf{Resultado esperado.} Los indicadores parten de una línea base medida:
 
 \begin{tablaAudit}{Indicadores de la innovación tipo 3}{indtres}{@{}p{4.8cm}p{4.4cm}p{4.4cm}@{}}
 \textbf{Indicador} & \textbf{Línea base} & \textbf{Meta} \\ \midrule
 Pérdida de registros en desconexión de 72 horas & Pérdida total en sombras de más de dos horas & Cero pérdida \\
-Resistencia al cierre de Los Libertadores & Ceguera tras 24 a 48 horas & Preservación hasta 288 horas \\
+Resistencia al cierre de Los Libertadores & Ceguera tras 24 a 48 horas & Preservación hasta 288 horas (12 días) \\
 Visibilidad unificada de la flota & Tres plataformas separadas y 34 unidades ciegas & Totalidad de unidades en vista única \\
 Latencia de reconciliación tras la sombra & No existe sincronización & Supera el umbral de 20 minutos del Capítulo 15 \\
 Emisión del documento sin señal & Rezagada o inexistente & Emitido conforme antes de que el vehículo se mueva \\
 \end{tablaAudit}
 
-\textbf{Investigación adicional requerida.} La factibilidad de exportación de la plataforma que hoy
-no la permite debe verificarse con ese proveedor. Es una dependencia de terceros con actividad
-propia en la Etapa 1.
+\textbf{Investigación adicional requerida.} La factibilidad técnica y SLA de los adaptadores de
+exportación de la plataforma que hoy no permite salida directa debe verificarse con ese proveedor
+durante la actividad EDT 3.4 en la Etapa 1.
 
 \subsection{Tipo 4. Esquema de adhesión y propiedad del dispositivo}
 
@@ -226,27 +248,25 @@ construir.
 concreto del recupero de sobreestadía requieren definición conjunta con el mandante. La adquisición
 del equipamiento no está abierta, la resuelve el Capítulo 11 del Caso.
 
-\subsection{Tipo 5. Alerta de jornada con lugar seguro alcanzable}
+\subsection{Tipo 5. Bienestar del conductor y descanso en parador seguro}
 
-\textbf{Idea.} Una alerta que avisa al conductor que su jornada se agota, entregada en un tramo
-donde no existe dónde detenerse, no evita nada. Convierte una infracción en una infracción con
-aviso. La innovación calcula la alerta contra la distancia al lugar seguro de detención más
-cercano, y no contra un contador de horas.
+\textbf{Idea.} Una alerta que avisa al conductor cuando su cuota de cinco horas continuas está por agotarse, entregada en medio de una cuesta sin bermas o en un tramo desértico sin paraderos habilitados para combinaciones de 18,6 metros y 45 toneladas, no soluciona nada: lo fuerza a detenerse en bermas peligrosas o a seguir rodando en infracción. La innovación abandona el temporizador pasivo e implementa un sistema socio-técnico de acompañamiento predictivo del descanso, que cruza la cinemática del camión con la curva biológica de alerta circadiana y un catálogo georreferenciado y calificado de paradores de carga pesada.
 
-\textbf{Tecnología que la sustenta.} Cálculo del margen restante a bordo del vehículo, sin depender
-del enlace, contrastado con un catálogo georreferenciado de lugares seguros de detención que hoy no
-existe y que se levanta durante la misma campaña de medición de cobertura de la Etapa 1. Interfaz
-operable con una sola mano y con guantes, sin ninguna interacción exigible durante la marcha,
-validada con conductores reales antes de su despliegue.
+\textbf{Tecnología que la sustenta.} Motor predictivo embebido a bordo en \textit{audIT EdgeHub} (RT-06.01), que evalúa en tiempo real el tiempo de conducción acumulado, la topografía del tramo siguiente y la ventana de mínima alerta circadiana (\textit{Window of Circadian Low}, 02:00 a 06:00 h). Catálogo georreferenciado local estructurado en SQLite WAL sobre memoria flash industrial ($\ge 8\text{ GB}$, RT-08.11), que califica capacidad geométrica de estacionamiento, servicios de higiene, duchas, agua potable y seguridad perimetral. Enclavamiento cinético estricto de pantalla ante cualquier movimiento ($v > 0\text{ km/h}$ o freno de mano liberado, conforme a la Ley N.º 21.377), con entrega de sugerencias mediante síntesis vocal local pasiva (TTS offline en español por altavoz vehicular, RT-16.21) sin exigir desviar la mirada ni admitir interacción táctil en marcha (RT-13.08). En modo detenido, interfaz ergonómica con guantes pesados (botones $\ge 60\times 60\text{ mm}$ e iluminación ámbar de alto contraste).
 
-\textbf{Resultado esperado.} Porcentaje de alertas entregadas con anticipación suficiente para
-alcanzar un lugar seguro, medido sobre el total de alertas emitidas. El impacto social es directo
-sobre las 454 personas que conducen, y responde al criterio 28, que el propio Caso identifica entre
-los tres que deciden la evaluación.
+\textbf{Lo que agrega sobre lo que las bases ya exigen.} El cálculo reactivo de distancia al lugar seguro de detención (RT-09.01, RF-027), la autenticación sin manipulación (RT-12.11), la interfaz para guantes sin interacción en marcha (RT-13.08) y la resiliencia desconectada de 72 horas (RT-17.01) constituyen el alcance base comprometido y no se presentan como innovación. Lo que agrega esta ficha son tres elementos: (1) la anticipación predictiva circadiana, que sugiere pausas preventivas antes de que el conductor ingrese a tramos críticos sin infraestructura o enfrente el valle biológico de microsueño de madrugada (disparador del accidente del 14 de febrero de 2026), (2) la ontología, gobernanza y sincronización OTA en terminales de un catálogo calificado para camiones de 45 toneladas con servicios dignos de descanso, y (3) un modelo social y ergonómico no punitivo para los 258 conductores externos subcontratados (Restricciones 1 y 2, Ley N.º 20.123), transformando una herramienta de control patronal en un asistente de seguridad y bienestar.
 
-\textbf{Investigación adicional requerida.} El catálogo de lugares seguros de detención no existe
-en ninguna fuente disponible y debe construirse en terreno. La anticipación mínima en minutos se
-declara y se fundamenta una vez que ese catálogo permita calcular distancias reales.
+\textbf{Madurez.} Escala de madurez tecnológica de uno a nueve \parencite{iso16290}. El hardware telemático de borde, almacenamiento SQLite WAL, TTS local y enclavamiento cinético están en nivel ocho, con componentes comerciales de uso maduro en flotas pesadas. El modelo predictivo circadiano y la ontología de paradores adaptada a la red vial chilena se sitúan en nivel siete, demostrados en entorno operacional representativo de la Ruta 5 y pasos cordilleranos, apoyados en estándares de ergonomía vehicular \parencite{iso15005,iso9241_210}, investigación de fatiga en transporte de carga \parencite{fmcsa_fatigue_2020} y normativa vial nacional \parencite{ley21377,codigo_trabajo_25bis}.
+
+\textbf{Incorporación en la arquitectura y en el cronograma.} Se articula en la Capa 1 (Borde Terrestre: motor predictivo a bordo, catálogo local SQLite y síntesis TTS), Capa 4 (Servicio de Gobernanza de Paradores y Seguridad Vial en la Torre de Control) y Capa 7 (Portal para consulta pasiva). Su trazabilidad comprende los paquetes EDT 2.4 (Diseño Ergonómico UI/UX y Protocolo Guantes, Meses 4 a 7), EDT 3.7 (Catálogo de Paradores en Campaña de Cobertura RT-03.24, Meses 3 a 6), EDT 4.6 (Software de Enclavamiento Cinético y Alerta Circadiana, Meses 7 a 10) y EDT 7.2 (Validación Operacional en Marcha Blanca con Conductores Reales, Meses 13 a 15). El beneficio es verificable antes del mes 16, cumpliendo RT-26.08.
+
+\textbf{Impacto económico.} La inversión requerida es incremental sobre el software de borde (280 horas-hombre de desarrollo) y talleres ergonómicos participativos, mientras que el levantamiento del catálogo se absorbe dentro del recorrido de la campaña de medición de cobertura (RT-03.24) sin costo logístico adicional. En costo operacional genera un ahorro estimado de 1,2 \% en combustible nocturno de larga distancia al eliminar la búsqueda errática de estacionamiento en ruta. El beneficio central radica en la mitigación del riesgo de siniestros graves por microsueño (cuyo costo supera \$150 millones por evento e induce paralización de clientes) y la supresión de multas por Ley No Chat y Art. 25 bis.
+
+\textbf{Indicador de verificación.} Línea base cero de alertas con parador calificado garantizado, con meta de $\ge 98\text{ \%}$ de efectividad en ruta nacional medida mensualmente en marcha blanca. Cero eventos de interacción táctil con vehículo en movimiento ($v > 0\text{ km/h}$, meta 100 \% de bloqueo cinético). Carga cognitiva NASA-TLX con guantes reducida a $< 35$ puntos (desde 68 puntos de línea base). Y adherencia voluntaria de paradas seguras en conductores externos de $\ge 85\text{ \%}$ (frente al 22 \% actual).
+
+\textbf{Riesgo de adopción.} Que los 258 conductores externos perciban el sistema como vigilancia patronal encubierta, con probabilidad media-alta e impacto alto. Se mitiga mediante diseño ergonómico participativo en horario de relevo en los cinco terminales y orientando la herramienta al bienestar (recomendación de sitios con duchas, seguridad y convenios comerciales). La contingencia es que la unidad a bordo conmuta a notificación puramente acústica pasiva por altavoz ambiental, sin requerir teléfonos personales ni botones adicionales en cabina, manteniendo la seguridad activa sin fricción sindical.
+
+\textbf{Investigación adicional requerida.} La validación de los paradores seguros y sus atributos geométricos y sanitarios se consolida durante la campaña de cobertura de la Etapa 1. La calibración fina de la ventana circadiana con las familias de turnos reales de Curimón se ajusta en los talleres de diseño ergonómico del mes cuatro.
 
 \subsection{Estado de elaboración y responsables}
 

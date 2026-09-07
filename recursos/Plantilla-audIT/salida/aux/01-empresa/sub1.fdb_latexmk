@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber salida/aux/01-empresa/sub1"] 1788744768.59397 "salida/aux/01-empresa/sub1.bcf" "salida/aux/01-empresa/sub1.bbl" "salida/aux/01-empresa/sub1" 1788745747.86675 0
-  "comun/referencias.bib" 1788744493.90006 7283 4fefef77bdc83ebbaf66a5fe0a62b0dd ""
-  "salida/aux/01-empresa/sub1.bcf" 1788745747.69605 135282 206f056156208b8b6b820c7301f2555e "pdflatex"
+["biber salida/aux/01-empresa/sub1"] 1788755888.11682 "salida/aux/01-empresa/sub1.bcf" "salida/aux/01-empresa/sub1.bbl" "salida/aux/01-empresa/sub1" 1788755894.87398 0
+  "comun/referencias.bib" 1788755700.16024 9637 8468fd319537e5d6012a8a0b245cdd59 ""
+  "salida/aux/01-empresa/sub1.bcf" 1788755894.69807 135282 206f056156208b8b6b820c7301f2555e "pdflatex"
   (generated)
   "salida/aux/01-empresa/sub1.bbl"
   "salida/aux/01-empresa/sub1.blg"
   (rewritten before read)
-["pdflatex"] 1788745745.98809 "subdocumentos/01-empresa/main.tex" "salida/aux/01-empresa/sub1.pdf" "sub1" 1788745747.86705 0
+["pdflatex"] 1788755892.8803 "subdocumentos/01-empresa/main.tex" "salida/aux/01-empresa/sub1.pdf" "sub1" 1788755894.87427 0
   "/home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbi1200.600pk" 1787243216.83583 42704 49671b7f8be9a5cfbdf26ca846c7a62b ""
   "/home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1095.600pk" 1787243221.20692 28952 456a939cc7820666d14dbd81e991005f ""
   "/home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk" 1787243223.82597 31928 2338bbd01c68c6b68f343dd7ac2dd286 ""
@@ -342,15 +342,15 @@
   "comun/instancia.tex" 1788743233.89999 1579 b747bf1406b7cf681eb883a71e121517 ""
   "comun/portada.tex" 1788743233.89999 1885 17302419ae19358e34946a27a1e03826 ""
   "comun/preambulo.tex" 1788743233.89999 1300 e2c67134be8afe9b31627b2eb43c8b9b ""
-  "comun/styles.sty" 1788744811.79382 1994 f687c7d63ac99a8a50583cd7989f02fe ""
-  "salida/aux/01-empresa/pdfa.xmpi" 1788745746.26905 5042 ad901fe15e1d37654e88fae11a732962 "pdflatex"
-  "salida/aux/01-empresa/sub1.aux" 1788745747.69105 7325 7fe2ebda25cf04c4c5acd0900e2db75b "pdflatex"
-  "salida/aux/01-empresa/sub1.bbl" 1788744769.33196 42174 7a925e52eccf3915649edace10e95770 "biber salida/aux/01-empresa/sub1"
-  "salida/aux/01-empresa/sub1.out" 1788745747.69505 2631 47e5bf4952424f32242bfc53ed25298a "pdflatex"
-  "salida/aux/01-empresa/sub1.run.xml" 1788745747.69873 2366 5b952b0615a191ba3da3e4acaaa68609 "pdflatex"
-  "salida/aux/01-empresa/sub1.toc" 1788745747.69873 871 3a89ae396c442d116f4cf7e6f46a50c3 "pdflatex"
-  "subdocumentos/01-empresa/Img.png" 1788745233.37748 1315935 14111ed586b22f98e329a57b40ae2aee ""
-  "subdocumentos/01-empresa/contenido.tex" 1788745732.94306 23255 ee44c2b48506945dc6299dc71fe336dc ""
+  "comun/styles.sty" 1788745869.69712 1994 f687c7d63ac99a8a50583cd7989f02fe ""
+  "salida/aux/01-empresa/pdfa.xmpi" 1788755893.17407 5042 fd36b0a7c5d8ac771d2a4f224c4397e0 "pdflatex"
+  "salida/aux/01-empresa/sub1.aux" 1788755894.69207 7325 68bb03fe2090ed729dd6d90d042c2551 "pdflatex"
+  "salida/aux/01-empresa/sub1.bbl" 1788755888.7985 42986 c39e23fdc880f56752b3094ce9b3cdfe "biber salida/aux/01-empresa/sub1"
+  "salida/aux/01-empresa/sub1.out" 1788755894.69607 2631 47e5bf4952424f32242bfc53ed25298a "pdflatex"
+  "salida/aux/01-empresa/sub1.run.xml" 1788755894.69994 2366 5b952b0615a191ba3da3e4acaaa68609 "pdflatex"
+  "salida/aux/01-empresa/sub1.toc" 1788755894.69994 871 3a89ae396c442d116f4cf7e6f46a50c3 "pdflatex"
+  "subdocumentos/01-empresa/Img.png" 1788745869.70548 1315935 14111ed586b22f98e329a57b40ae2aee ""
+  "subdocumentos/01-empresa/contenido.tex" 1788745869.70595 23255 ee44c2b48506945dc6299dc71fe336dc ""
   "subdocumentos/01-empresa/main.tex" 1788743233.91369 439 76522e938e48eac199105b44ea1a91e9 ""
   "subdocumentos/01-empresa/meta.tex" 1788743233.91372 262 501011a504f0ad71bf079b8beed4ccc6 ""
   (generated)

@@ -1,11 +1,14 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.6.14)  6 SEP 2026 21:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.8.26)  7 SEP 2026 01:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **\def\subdocRuta{subdocumentos/03-solucion}\input{subdocumentos/03-solucion/ma
 in.tex}
-(/mnt/NuevoVol/FEP/Plantilla-audIT/subdocumentos/03-solucion/main.tex
-(/mnt/NuevoVol/FEP/Plantilla-audIT/comun/inf-pucv.cls
+
+(/home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recursos
+/Plantilla-audIT/subdocumentos/03-solucion/main.tex
+(/home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recursos
+/Plantilla-audIT/comun/inf-pucv.cls
 Document Class: inf-pucv 2023/04/24 sgarciad.me v0.1, Clase para la plantilla L
 aTeX con formato escuela INF PUCV.
 (/usr/share/texmf-dist/tex/latex/extsizes/extarticle.cls
@@ -753,7 +756,8 @@ Now handling font encoding PU ...
    defining Unicode char U+2423 (decimal 9251)
    defining Unicode char U+FEFF (decimal 65279)
 )
-(/mnt/NuevoVol/FEP/Plantilla-audIT/comun/styles.sty
+(/home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recursos
+/Plantilla-audIT/comun/styles.sty
 (/usr/share/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2024/02/08 v1.3d Input encoding file
 )
@@ -2001,9 +2005,12 @@ Package hyperref Info: Option `colorlinks' set `true' on input line 69.
 \c@subactividadesii=\count568
 \enitdp@subactividades=\count569
 )
-(/mnt/NuevoVol/FEP/Plantilla-audIT/comun/instancia.tex)
-(/mnt/NuevoVol/FEP/Plantilla-audIT/subdocumentos/03-solucion/meta.tex)
-(/mnt/NuevoVol/FEP/Plantilla-audIT/comun/preambulo.tex
+(/home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recursos
+/Plantilla-audIT/comun/instancia.tex)
+(/home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recursos
+/Plantilla-audIT/subdocumentos/03-solucion/meta.tex)
+(/home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recursos
+/Plantilla-audIT/comun/preambulo.tex
 (/usr/share/texmf-dist/tex/latex/import/import.sty
 Package: import 2020/04/01  v 6.2
 )
@@ -2041,13 +2048,13 @@ Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
 \f@nch@widthR=\skip139
 \@temptokenb=\toks63
 ))
-(/mnt/NuevoVol/FEP/Plantilla-audIT/comun/portada.tex)
+(/home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recursos
+/Plantilla-audIT/comun/portada.tex)
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'spanish'.
-
-(salida/aux/03-solucion/sub3.aux
+ (salida/aux/03-solucion/sub3.aux
 LaTeX Info: Redefining \. on input line 12.
 LaTeX Info: Redefining \% on input line 12.
 Package babel Info: 'spanish' activates 'spanish' shorthands.
@@ -2171,7 +2178,7 @@ Package biblatex Info: Reference section=0 on input line 7.
 Package biblatex Info: Reference segment=0 on input line 7.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-<comun/assets/portada.jpeg, id=65, 1135.24126pt x 1606.0pt>
+<comun/assets/portada.jpeg, id=93, 1135.24126pt x 1606.0pt>
 File: comun/assets/portada.jpeg Graphic file (type jpg)
 <use comun/assets/portada.jpeg>
 Package pdftex.def Info: comun/assets/portada.jpeg  used on input line 8.
@@ -2187,9 +2194,8 @@ LaTeX Font Warning: Font shape `T1/cmr/bx/n' in size <19> not available
 
 [1
 
-{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/tex
-mf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} </mnt/NuevoVol/FEP/Plantilla
--audIT/comun/assets/portada.jpeg>]
+ </home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recurso
+s/Plantilla-audIT/comun/assets/portada.jpeg>]
 
 LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <28> not available
 (Font)              size <29.86> substituted on input line 9.
@@ -2231,7 +2237,8 @@ l.9 \fichaSubdocumento
                        [1
 
 ]
-(/mnt/NuevoVol/FEP/Plantilla-audIT/subdocumentos/03-solucion/contenido.tex
+(/home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recursos
+/Plantilla-audIT/subdocumentos/03-solucion/contenido.tex
 
 LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <86> not available
 (Font)              size <51.59> substituted on input line 1.
@@ -2249,40 +2256,59 @@ been already used, duplicate ignored
 l.28 \end{tablaAudit}
                       [2
 
-]
-Overfull \hbox (7.17307pt too wide) in paragraph at lines 61--61
+] [3]
+Overfull \hbox (7.17307pt too wide) in paragraph at lines 65--65
 |[]\T1/cmr/bx/n/17.28 Decisión ter-ce-ra. Con-ti-nui-dad y re-cu-pe-ra-ción son
  pro-
  []
 
-[3]
-Underfull \hbox (badness 10000) in paragraph at lines 76--77
+
+Underfull \hbox (badness 10000) in paragraph at lines 80--81
 []|\T1/cmr/m/n/10.95 Decisión pri-me-ra del
  []
 
 
-ignored: Infinite glue shrinkage found in box being split [4]
-ignored: Infinite glue shrinkage fou
-nd in box being split [5] [6]
-Underfull \hbox (badness 10000) in paragraph at lines 163--164
+ignored: Infinite glue shrinkage found in box being split [4] [5] [6] [7]
+Underfull \hbox (badness 1742) in paragraph at lines 212--212
+[]|\T1/cmr/m/n/10.95 Configuración, ins-ta-la-ción y
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 215--215
+[]|\T1/cmr/m/n/10.95 Equipos pre-exis-ten-tes del
+ []
+
+[8] [9]
+Underfull \hbox (badness 10000) in paragraph at lines 247--248
+[]|\T1/cmr/m/n/10.95 Posición ho-mo-lo-ga-da, jor-na-da
+ []
+
+[10]
+Underfull \hbox (badness 2452) in paragraph at lines 298--299
+[]|\T1/cmr/m/n/10.95 Modelo re-pro-du-ci-ble que ex-pli-que el
+ []
+
+
+ignored: Infinite glue shrinkage found in box being split [11] [12]
+Underfull \hbox (badness 10000) in paragraph at lines 340--341
 []|\T1/cmr/m/n/10.95 Dimensionamiento y
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 165--166
+Underfull \hbox (badness 10000) in paragraph at lines 342--343
 []|\T1/cmr/m/n/10.95 Dimensionamiento del
  []
 
 
-Underfull \hbox (badness 2134) in paragraph at lines 168--169
+Underfull \hbox (badness 2134) in paragraph at lines 345--346
 []|\T1/cmr/m/n/10.95 Alcance del pro-gra-ma
  []
 
 
-ignored: Infinite glue shrinkage found in box being split [7] [8]) [9] [10
+ignored: Infinite glue shrinkage found in box being split [13] [14]) [15] [16
 
 ]
-runsystem(latexminted cleantemp  --timestamp 20260906215042 8C8A5D351A982BD6165
+runsystem(latexminted cleantemp  --timestamp 20260907013830 8C8A5D351A982BD6165
 BB1FC6C041410)...executed safely (allowed).
 
  (salida/aux/03-solucion/sub3.aux
@@ -2300,29 +2326,34 @@ LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 34.41pt have occurred.
 
 Package rerunfilecheck Info: File `sub3.out' has not changed.
-(rerunfilecheck)             Checksum: 90FF843550BCB84F67C3E199A2C2AC6C;3651.
+(rerunfilecheck)             Checksum: 1C7AECDFDC7FB46B4A22628A418AAEDB;5575.
 Package logreq Info: Writing requests to 'sub3.run.xml'.
 \openout1 = `sub3.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 57177 strings out of 469453
- 1262630 string characters out of 5469037
- 2455127 words of memory out of 5000000
- 84941 multiletter control sequences out of 15000+600000
- 641886 words of font info for 72 fonts, out of 8000000 for 9000
+ 57241 strings out of 469453
+ 1265000 string characters out of 5469037
+ 2454969 words of memory out of 5000000
+ 84986 multiletter control sequences out of 15000+600000
+ 643429 words of font info for 74 fonts, out of 8000000 for 9000
  40 hyphenation exceptions out of 8191
- 133i,12n,139p,1257b,2815s stack positions out of 10000i,1000n,20000p,200000b,200000s
- </home/disco/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx5159.600pk><
-/usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/share/texm
-f-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf-dist/fonts/ty
-pe1/public/cm-super/sfbx1728.pfb></usr/share/texmf-dist/fonts/type1/public/cm-s
-uper/sfbx2986.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1000.p
-fb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/
-texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on salida/aux/03-solucion/sub3.pdf (12 pages, 506327 bytes).
+ 133i,13n,139p,1257b,2815s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ </home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk
+> </home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk>
+ </home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx5159.600pk> 
+</home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> <
+/home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </
+home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </h
+ome/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1095.600pk> </ho
+me/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.600pk> </hom
+e/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx2986.600pk> </home
+/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk> </home/
+carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcbx1095.600pk> </home/c
+arlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1095.600pk>
+Output written on salida/aux/03-solucion/sub3.pdf (18 pages, 508664 bytes).
 PDF statistics:
- 226 PDF objects out of 1000 (max. 8388607)
- 42 named destinations out of 1000 (max. 500000)
- 142 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 697 PDF objects out of 1000 (max. 8388607)
+ 61 named destinations out of 1000 (max. 500000)
+ 198 words of extra memory for PDF output out of 10000 (max. 10000000)
 

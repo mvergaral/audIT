@@ -613,6 +613,7 @@ INPUT /home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recu
 INPUT /home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recursos/Plantilla-audIT/subdocumentos/02-problema/contenido.tex
 INPUT /home/carlosa/.texlive/texmf-var/fonts/tfm/jknappen/ec/ecrm5159.tfm
 INPUT /home/carlosa/.texlive/texmf-var/fonts/tfm/jknappen/ec/ecbx5159.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/jknappen/ec/ecrm1000.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/jknappen/ec/ecrm1440.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/jknappen/ec/ecbx1440.tfm
@@ -627,14 +628,13 @@ INPUT /home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recu
 INPUT /home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recursos/Plantilla-audIT/subdocumentos/02-problema/Img.png
 INPUT /home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recursos/Plantilla-audIT/subdocumentos/02-problema/Img.png
 INPUT /home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recursos/Plantilla-audIT/subdocumentos/02-problema/Img.png
-INPUT /usr/share/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm
 INPUT salida/aux/02-problema/sub2.aux
 INPUT salida/aux/02-problema/sub2.out
 INPUT salida/aux/02-problema/sub2.out
 INPUT salida/aux/02-problema/sub2.run.xml
 OUTPUT salida/aux/02-problema/sub2.run.xml
-INPUT /home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk
 INPUT /home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk
+INPUT /home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk
 INPUT /home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx5159.600pk
 INPUT /home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk
 INPUT /home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk

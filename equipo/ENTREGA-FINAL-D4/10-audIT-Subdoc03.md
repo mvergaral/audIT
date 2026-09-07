@@ -72,7 +72,11 @@ La conectividad se resuelve por capas y no con una única opción para toda la f
     exige que el dispositivo opere 72 horas continuas sin cobertura móvil registrando posición,
     eventos de conducción y jornada, tiempos en puntos de carga y descarga, y documentos asociados
     al viaje, sin pérdida de ningún registro. Ese requisito está escrito sobre la cobertura móvil,
-    de modo que la disponibilidad de enlace satelital no releva de cumplirlo.
+    de modo que la disponibilidad de enlace satelital no releva de cumplirlo. Para absorber no solo
+    ese mínimo sino también los cierres invernales del paso Los Libertadores de hasta 12 días
+    continuos (288 horas) según RT-10.05, el hardware embarcado provisto por el mandante se
+    dimensiona con memoria flash industrial de al menos 8 GB con nivelación de desgaste, según se
+    especifica en el Subdocumento 4.
 - **Celular como portador primario en toda unidad intervenida**, a tasa completa, con
     sincronización diferida y reconciliación determinista al recuperar enlace.
 - **Satelital de ráfaga corta en un subconjunto acotado por riesgo**, para posición a
@@ -456,8 +460,8 @@ Esta oferta declara con la misma claridad lo que aún no está cerrado.
 
 | **Materia** | **Condición de cierre** |
 |---|---|
-| Fichas T-19 de los tipos 4 y 5 | Requiere resolver la asignación interna de responsabilidad, hoy consignada de forma distinta en dos documentos de trabajo del proponente |
-| Estimación de personas usuarias concurrentes internas y externas | Insumo de RT-09.01, derivado de la volumetría del numeral 14.2 |
+| Fichas T-19 de los tipos 4 y 5 | Asignación ratificada conforme al plan general (tipo 4 a D2 y tipo 5 a D1), con desglose económico reservado para el Sobre N.º 3 |
+| Estimación de personas usuarias concurrentes internas y externas | Dimensionada en 350 sesiones simultáneas en hora punta y desarrollada en el Subdocumento 4 |
 | Volumen anual de series de posición y de evidencia de jornada | Requiere la política de agregación definitiva |
 | Justificación comparada del nivel de redundancia de almacenamiento | RT-03.14 exige compararlo con las alternativas y no solo declararlo |
 | Verificación de dos normas chilenas citadas en las bases | Confirmación ante el organismo normalizador antes de citarlas en la oferta definitiva |
@@ -480,11 +484,15 @@ FMS Standard. (2025). *Technical Specification rFMS vehicle data version 5.0.0*.
 
 Iridium Communications. (2024). *Iridium Short Burst Data Service Developers Guide*.
 
-ISO. (2011). *ISO/IEC 27031*. ISO. (2013). *ISO 16290. Definition of the Technology Readiness Levels (TRLs) and their criteria of assessment*. ISO. (2019). *ISO 22301*. ISO. (2022). *ISO/IEC/IEEE 42010*. ISO. (2023). *ISO 14083*.
+ISO. (2011). *ISO/IEC 27031*. ISO. (2013). *ISO 16290. Definition of the Technology Readiness Levels (TRLs) and their criteria of assessment*. ISO. (2017). *ISO 15005. Road vehicles — Ergonomic aspects of transport and information and control systems*. ISO. (2019). *ISO 9241-210. Ergonomics of human-system interaction*. ISO. (2019). *ISO 22301*. ISO. (2022). *ISO/IEC/IEEE 42010*. ISO. (2023). *ISO 14083*.
+
+Federal Motor Carrier Safety Administration [FMCSA]. (2020). *Commercial Motor Vehicle Driver Fatigue, Long-Term Health, and Highway Safety: Research Needs*. The National Academies Press. https://doi.org/10.17226/21921
 
 Microsoft. (2025). *Azure geographies. Chile Central region*.
 
 Congreso Nacional de Chile. (2002). *Ley N.º 19.799 sobre documentos electrónicos, firma electrónica y servicios de certificación de dicha firma*. https://www.bcn.cl/leychile/navegar?idNorma=196640
+
+Congreso Nacional de Chile. (2021). *Ley N.º 21.377 que sanciona como infracción gravísima la conducción de vehículos manipulando dispositivos de telefonía móvil o cualquier otro artefacto electrónico («Ley No Chat»)*. https://www.bcn.cl/leychile/navegar?idNorma=1166014
 
 Congreso Nacional de Chile. (2024). *Ley N.º 21.719 que regula la protección y el tratamiento de los datos personales y crea la Agencia de Protección de Datos Personales*. Diario Oficial de 13 de diciembre de 2024. https://www.bcn.cl/leychile/navegar?i=1209272
 

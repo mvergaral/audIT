@@ -1,9 +1,9 @@
-[0] Config.pm:328> INFO - This is Biber 2.21
-[0] Config.pm:331> INFO - Logfile is 'salida/aux/10-operacion/sub10.blg'
-[86] biber:342> INFO - === dom sep  6, 2026, 21:51:52
-[102] Biber.pm:421> INFO - Reading 'salida/aux/10-operacion/sub10.bcf'
-[206] Biber.pm:1002> INFO - Found 0 citekeys in bib section 0
-[232] bbl.pm:676> INFO - Writing 'salida/aux/10-operacion/sub10.bbl' with encoding 'UTF-8'
-[233] bbl.pm:779> INFO - Output to salida/aux/10-operacion/sub10.bbl
-[233] Biber.pm:132> WARN - The file 'salida/aux/10-operacion/sub10.bcf' does not contain any citations!
-[233] Biber.pm:134> INFO - WARNINGS: 1
+[0] Config.pm:329> INFO - This is Biber 2.22
+[0] Config.pm:332> INFO - Logfile is 'salida/aux/10-operacion/sub10.blg'
+[43] biber:342> INFO - === lun sep  7, 2026, 01:39:13
+[54] Biber.pm:421> INFO - Reading 'salida/aux/10-operacion/sub10.bcf'
+[105] Biber.pm:1002> INFO - Found 0 citekeys in bib section 0
+[121] bbl.pm:676> INFO - Writing 'salida/aux/10-operacion/sub10.bbl' with encoding 'UTF-8'
+[121] bbl.pm:779> INFO - Output to salida/aux/10-operacion/sub10.bbl
+[121] Biber.pm:132> WARN - The file 'salida/aux/10-operacion/sub10.bcf' does not contain any citations!
+[121] Biber.pm:134> INFO - WARNINGS: 1

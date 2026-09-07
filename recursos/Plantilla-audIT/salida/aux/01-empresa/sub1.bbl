@@ -63,8 +63,10 @@
       \strng{authornamehash}{499b3368fa957f63eb091bbe7f8b363a}
       \strng{authorfullhash}{499b3368fa957f63eb091bbe7f8b363a}
       \strng{authorfullhashraw}{499b3368fa957f63eb091bbe7f8b363a}
+      \field{extraname}{1}
       \field{sortinit}{C}
       \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradate}{1}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \true{uniqueprimaryauthor}
@@ -77,6 +79,38 @@
       \endverb
       \verb{url}
       \verb https://www.bcn.cl/leychile/navegar?idNorma=1202434
+      \endverb
+    \endentry
+    \entry{ley21719}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=499b3368fa957f63eb091bbe7f8b363a}{%
+           family={{Congreso Nacional de Chile}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{499b3368fa957f63eb091bbe7f8b363a}
+      \strng{fullhash}{499b3368fa957f63eb091bbe7f8b363a}
+      \strng{fullhashraw}{499b3368fa957f63eb091bbe7f8b363a}
+      \strng{bibnamehash}{499b3368fa957f63eb091bbe7f8b363a}
+      \strng{authorbibnamehash}{499b3368fa957f63eb091bbe7f8b363a}
+      \strng{authornamehash}{499b3368fa957f63eb091bbe7f8b363a}
+      \strng{authorfullhash}{499b3368fa957f63eb091bbe7f8b363a}
+      \strng{authorfullhashraw}{499b3368fa957f63eb091bbe7f8b363a}
+      \field{extraname}{2}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Ley N.º 21.719 que regula la protección y el tratamiento de los datos personales y crea la Agencia de Protección de Datos Personales. Diario Oficial de 13 de diciembre de 2024}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://www.bcn.cl/leychile/navegar?i=1209272
+      \endverb
+      \verb{url}
+      \verb https://www.bcn.cl/leychile/navegar?i=1209272
       \endverb
     \endentry
     \entry{bases_admin_2026}{misc}{}{}
@@ -275,30 +309,6 @@
       \field{labeltitlesource}{title}
       \field{title}{ISO/IEC 27001:2022. Information security, cybersecurity and privacy protection — Information security management systems — Requirements}
       \field{year}{2022}
-    \endentry
-    \entry{ley21719}{misc}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=cebe14c45771db4bb892353f5a668fc5}{%
-           family={{Ministerio de Hacienda}},
-           familyi={M\bibinitperiod}}}%
-      }
-      \strng{namehash}{cebe14c45771db4bb892353f5a668fc5}
-      \strng{fullhash}{cebe14c45771db4bb892353f5a668fc5}
-      \strng{fullhashraw}{cebe14c45771db4bb892353f5a668fc5}
-      \strng{bibnamehash}{cebe14c45771db4bb892353f5a668fc5}
-      \strng{authorbibnamehash}{cebe14c45771db4bb892353f5a668fc5}
-      \strng{authornamehash}{cebe14c45771db4bb892353f5a668fc5}
-      \strng{authorfullhash}{cebe14c45771db4bb892353f5a668fc5}
-      \strng{authorfullhashraw}{cebe14c45771db4bb892353f5a668fc5}
-      \field{sortinit}{M}
-      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Ley N.º 21.719 sobre protección y tratamiento de datos personales}
-      \field{year}{2024}
     \endentry
     \entry{ds43}{misc}{}{}
       \name{author}{1}{}{%
@@ -525,8 +535,10 @@
       \strng{authornamehash}{499b3368fa957f63eb091bbe7f8b363a}
       \strng{authorfullhash}{499b3368fa957f63eb091bbe7f8b363a}
       \strng{authorfullhashraw}{499b3368fa957f63eb091bbe7f8b363a}
+      \field{extraname}{1}
       \field{sortinit}{C}
       \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradate}{1}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \true{uniqueprimaryauthor}
@@ -539,6 +551,38 @@
       \endverb
       \verb{url}
       \verb https://www.bcn.cl/leychile/navegar?idNorma=1202434
+      \endverb
+    \endentry
+    \entry{ley21719}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=499b3368fa957f63eb091bbe7f8b363a}{%
+           family={{Congreso Nacional de Chile}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{499b3368fa957f63eb091bbe7f8b363a}
+      \strng{fullhash}{499b3368fa957f63eb091bbe7f8b363a}
+      \strng{fullhashraw}{499b3368fa957f63eb091bbe7f8b363a}
+      \strng{bibnamehash}{499b3368fa957f63eb091bbe7f8b363a}
+      \strng{authorbibnamehash}{499b3368fa957f63eb091bbe7f8b363a}
+      \strng{authornamehash}{499b3368fa957f63eb091bbe7f8b363a}
+      \strng{authorfullhash}{499b3368fa957f63eb091bbe7f8b363a}
+      \strng{authorfullhashraw}{499b3368fa957f63eb091bbe7f8b363a}
+      \field{extraname}{2}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Ley N.º 21.719 que regula la protección y el tratamiento de los datos personales y crea la Agencia de Protección de Datos Personales. Diario Oficial de 13 de diciembre de 2024}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://www.bcn.cl/leychile/navegar?i=1209272
+      \endverb
+      \verb{url}
+      \verb https://www.bcn.cl/leychile/navegar?i=1209272
       \endverb
     \endentry
     \entry{bases_admin_2026}{misc}{}{}
@@ -737,30 +781,6 @@
       \field{labeltitlesource}{title}
       \field{title}{ISO/IEC 27001:2022. Information security, cybersecurity and privacy protection — Information security management systems — Requirements}
       \field{year}{2022}
-    \endentry
-    \entry{ley21719}{misc}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=cebe14c45771db4bb892353f5a668fc5}{%
-           family={{Ministerio de Hacienda}},
-           familyi={M\bibinitperiod}}}%
-      }
-      \strng{namehash}{cebe14c45771db4bb892353f5a668fc5}
-      \strng{fullhash}{cebe14c45771db4bb892353f5a668fc5}
-      \strng{fullhashraw}{cebe14c45771db4bb892353f5a668fc5}
-      \strng{bibnamehash}{cebe14c45771db4bb892353f5a668fc5}
-      \strng{authorbibnamehash}{cebe14c45771db4bb892353f5a668fc5}
-      \strng{authornamehash}{cebe14c45771db4bb892353f5a668fc5}
-      \strng{authorfullhash}{cebe14c45771db4bb892353f5a668fc5}
-      \strng{authorfullhashraw}{cebe14c45771db4bb892353f5a668fc5}
-      \field{sortinit}{M}
-      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Ley N.º 21.719 sobre protección y tratamiento de datos personales}
-      \field{year}{2024}
     \endentry
     \entry{ds43}{misc}{}{}
       \name{author}{1}{}{%

@@ -27,10 +27,15 @@ CITAS = {
  "owasp_asvs": "OWASP, 2021",
  "w3c_vcdm2": "World Wide Web Consortium, 2025",
  "glec2023": "Smart Freight Centre, 2023", "iso14083": "ISO, 2023", "ley21663": "Congreso Nacional de Chile, 2024", "nfpa2001": "NFPA, 2022", "nist80088": "NIST, 2014",
+ "kleppmann2017": "Kleppmann, 2017", "iso25012": "ISO, 2008",
+ "ley21377": "Congreso Nacional de Chile, 2021",
+ "iso15005": "ISO, 2017",
+ "iso9241_210": "ISO, 2019",
+ "fmcsa_fatigue_2020": "FMCSA, 2020",
 }
 
 def limpia(t):
-    t = re.sub(r"\\parencite\{([^}]+)\}", lambda m: "(" + CITAS.get(m.group(1), m.group(1)) + ")", t)
+    t = re.sub(r"\\parencite\{([^}]+)\}", lambda m: "(" + "; ".join(CITAS.get(k.strip(), k.strip()) for k in m.group(1).split(",")) + ")", t)
     t = t.replace("\\textordmasculine{}", "º").replace("\\textordmasculine", "º")
     t = t.replace("\\textbar{}", "|").replace("\\,", " ")
     t = re.sub(r"\\textbf\{([^{}]*)\}", r"**\1**", t)

@@ -518,9 +518,12 @@ organizado por contexto delimitado, de modo que cada agregado quede bajo el cont
 
 
 El Artículo 16.2 obliga a justificar el emplazamiento componente por componente. El inventario
-lógico clasifica cada componente por capa, latencia exigida, criticidad operacional y volumen. Es
-el insumo directo de la tabla de emplazamiento, que se desarrolla en la sección física y se detalla
-componente por componente en el Anexo A.
+lógico clasifica cada componente por capa, latencia exigida, criticidad operacional y volumen. El
+servicio de Personas y cumplimiento gobierna la jornada y custodia la matriz general de vigencias,
+mientras que el modelo polimórfico del Subdocumento 5 desagrega las vigencias mecánicas hacia el
+contexto de Flota y activos y las habilitaciones hacia los conductores. Es el insumo directo de la
+tabla de emplazamiento, que se desarrolla en la sección física y se detalla componente por
+componente en el Anexo A.
 
 
 **Tabla. Inventario de componentes lógicos**
@@ -530,8 +533,8 @@ componente por componente en el Anexo A.
 | Distribución de contenidos y cortafuegos | Borde | 50 ms | Crítica | Todo el tráfico web entrante |
 | Puerta de enlace | Borde | 30 ms | Crítica | Toda petición de portal, aplicación e integración |
 | Despacho y asignación | Negocio | 500 ms | Máxima, bloqueante | 96.000 viajes al año |
-| Flota y activos | Negocio | 1 s | Alta | 374 tractocamiones y 210 semirremolques |
-| Personas y cumplimiento | Negocio | 500 ms | Máxima | 454 conductores y cerca de 6.000 vigencias |
+| Flota y activos | Negocio | 1 s | Alta | 374 tractocamiones, 210 semirremolques y vigencias mecánicas |
+| Personas y cumplimiento | Negocio | 500 ms | Máxima | 454 conductores, jornada y matriz de cumplimiento |
 | Gestión documental | Negocio | 2 s | Alta | 128.000 documentos de transporte al año |
 | Tarifas y liquidación | Negocio | 3 s | Media alta | 148 transportistas y 84 clientes |
 | Bus de telemetría | Eventos | 100 ms | Crítica | Ingesta continua con peak de reconexión masiva |
@@ -543,7 +546,7 @@ componente por componente en el Anexo A.
 | Almacenamiento inmutable | Datos | 1 s | Alta | Conformidades, certificados y siniestros |
 | Repositorio analítico | Analítica | Segundos | Media | Retención de RT-05.10 del Caso |
 | Capa semántica y tableros | Analítica | 2 s | Media | Gerencia, finanzas y operaciones |
-| Búfer a bordo | Terreno | Inmediata | Máxima | 374 unidades, mínimo 8 GB cada una |
+| Búfer a bordo | Terreno | Inmediata | Máxima | 182 unidades con flash industrial $\ge 8$ GB y 192 homologadas |
 | Ingesta de plataformas de terceros | Integración | 500 ms | Alta | Tres plataformas existentes |
 | Aplicación móvil | Presentación | 1 s | Media alta | Cuatro perfiles de RT-17.01 del Caso |
 | Lector de portería y terminal | Terreno | 2 s | Alta | Cinco terminales y dos talleres |
@@ -614,16 +617,21 @@ solución es híbrida en tres planos simultáneos, y la parte on-premise no es d
 |---|---|---|
 | Nube | Núcleo transaccional, analítica, portales e integración | Elasticidad hacia 430 camiones y absorción del peak de reconexión |
 | On-premise de sitio | Continuidad de la torre en San Bernardo y gabinetes en los cuatro terminales regionales | RT-06.01 del Caso exige gabinete por terminal dimensionado para RT-03.10 |
-| On-premise distribuido | 374 dispositivos a bordo | La operación no puede depender de la cobertura móvil |
+| On-premise distribuido | Nodos a bordo de 374 camiones | La operación no puede depender de la cobertura móvil. Equipamiento físico en 148 propios y 34 por adhesión, e integración lógica en 192 de terceros |
 
 
 #### El dispositivo a bordo es infraestructura
 
 
-RT-06.01 del Caso ordena tratar el dispositivo a bordo como un componente on-premise distribuido en
-374 unidades, con su propio ciclo de vida, su mecanismo de actualización remota, su gestión de
-seguridad y su plan de reposición, todo ello sujeto a que solo puede intervenirse físicamente
-cuando el camión pasa por un terminal.
+RT-06.01 del Caso ordena tratar el componente a bordo como un sistema on-premise distribuido que
+cubre la operación de los 374 tractocamiones. Conforme a la restricción 3 de las bases, el
+equipamiento físico provisto por el mandante con memoria flash industrial de 8 GB se despliega
+directamente en las 148 unidades propias y en las 34 unidades sin equipo que adhieran al programa.
+Los 192 camiones de terceros con dispositivo preexistente se integran como terminales lógicos
+mediante adaptadores de interoperabilidad, exigiendo el estándar de homologación pero sin
+intervenir su hardware privado. Todo el parque intervenido cuenta con su propio ciclo de vida, su
+mecanismo de actualización remota, su gestión de seguridad y su plan de reposición, sujeto a que
+solo puede intervenirse físicamente cuando el camión pasa por un terminal.
 
 
 **Tabla. Especificación del componente a bordo**
@@ -790,6 +798,23 @@ plan de actualización para los 56 meses del contrato. RT-03.05 obliga a privile
 administrados sobre autoadministrados cuando ello reduzca el riesgo operacional y a justificar cada
 excepción. El estilo arquitectónico se justifica con la volumetría del caso y no con la tendencia
 del mercado, tal como advierte el numeral 2.3.
+
+
+**Tabla. Tecnologías de software, versiones y soporte ofertado**
+
+| **Componente** | **Producto y versión** | **Fin de soporte** | **Plan a 56 meses y justificación** |
+|---|---|---|---|
+| Orquestación y cómputo | Azure Kubernetes Service (AKS) 1.30+ | Ciclo continuo N-2 | Servicio administrado PaaS con actualización programada fuera de horas punta |
+| Motor transaccional | PostgreSQL 16 Flexible Server con PostGIS | Noviembre 2028 | Alta disponibilidad zonal con conmutación automática y soporte extendido |
+| Series temporales y streaming | TimescaleDB 2.15 / Event Hubs Kafka | Mayo 2029 | Particionamiento mensual y compresión columnar para 120 millones de eventos anuales |
+| Caché en memoria | Azure Cache for Redis 7.2 | Octubre 2028 | Réplicas en memoria RAM con latencia menor a 5 ms para geocercas y sesiones |
+| Almacenamiento a bordo | SQLite 3 con WAL | Indefinido (LTS) | Motor embebido en flash industrial de 8 GB con nivelación de desgaste |
+| Repositorio analítico | Delta Lake en ADLS Gen2 | Soporte activo | Arquitectura de tres capas con captura de cambios desacoplada |
+| Seguridad e identidad | Microsoft Entra ID y Key Vault HSM | Continuo | Autenticación federada y custodia de claves FIPS 140-2 Nivel 3 |
+
+
+El diseño detallado del modelo de persistencia, particionamiento y consultas transaccionales de
+estos motores se acompaña en el Subdocumento 5.
 
 
 #### Desempeño, capacidad y disponibilidad
@@ -1074,11 +1099,15 @@ FMS Standard. (2025). *Technical Specification rFMS vehicle data version 5.0.0*.
 
 Iridium Communications. (2024). *Iridium Short Burst Data Service Developers Guide*.
 
-ISO. (2011). *ISO/IEC 27031*. ISO. (2013). *ISO 16290. Definition of the Technology Readiness Levels (TRLs) and their criteria of assessment*. ISO. (2019). *ISO 22301*. ISO. (2022). *ISO/IEC/IEEE 42010*. ISO. (2023). *ISO 14083*.
+ISO. (2011). *ISO/IEC 27031*. ISO. (2013). *ISO 16290. Definition of the Technology Readiness Levels (TRLs) and their criteria of assessment*. ISO. (2017). *ISO 15005. Road vehicles — Ergonomic aspects of transport and information and control systems*. ISO. (2019). *ISO 9241-210. Ergonomics of human-system interaction*. ISO. (2019). *ISO 22301*. ISO. (2022). *ISO/IEC/IEEE 42010*. ISO. (2023). *ISO 14083*.
+
+Federal Motor Carrier Safety Administration [FMCSA]. (2020). *Commercial Motor Vehicle Driver Fatigue, Long-Term Health, and Highway Safety: Research Needs*. The National Academies Press. https://doi.org/10.17226/21921
 
 Microsoft. (2025). *Azure geographies. Chile Central region*.
 
 Congreso Nacional de Chile. (2002). *Ley N.º 19.799 sobre documentos electrónicos, firma electrónica y servicios de certificación de dicha firma*. https://www.bcn.cl/leychile/navegar?idNorma=196640
+
+Congreso Nacional de Chile. (2021). *Ley N.º 21.377 que sanciona como infracción gravísima la conducción de vehículos manipulando dispositivos de telefonía móvil o cualquier otro artefacto electrónico («Ley No Chat»)*. https://www.bcn.cl/leychile/navegar?idNorma=1166014
 
 Congreso Nacional de Chile. (2024). *Ley N.º 21.719 que regula la protección y el tratamiento de los datos personales y crea la Agencia de Protección de Datos Personales*. Diario Oficial de 13 de diciembre de 2024. https://www.bcn.cl/leychile/navegar?i=1209272
 

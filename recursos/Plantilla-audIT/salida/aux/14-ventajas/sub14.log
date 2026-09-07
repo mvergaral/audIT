@@ -1,11 +1,14 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.6.14)  6 SEP 2026 21:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.8.26)  7 SEP 2026 01:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **\def\subdocRuta{subdocumentos/14-ventajas}\input{subdocumentos/14-ventajas/ma
 in.tex}
-(/mnt/NuevoVol/FEP/Plantilla-audIT/subdocumentos/14-ventajas/main.tex
-(/mnt/NuevoVol/FEP/Plantilla-audIT/comun/inf-pucv.cls
+
+(/home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recursos
+/Plantilla-audIT/subdocumentos/14-ventajas/main.tex
+(/home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recursos
+/Plantilla-audIT/comun/inf-pucv.cls
 Document Class: inf-pucv 2023/04/24 sgarciad.me v0.1, Clase para la plantilla L
 aTeX con formato escuela INF PUCV.
 (/usr/share/texmf-dist/tex/latex/extsizes/extarticle.cls
@@ -753,7 +756,8 @@ Now handling font encoding PU ...
    defining Unicode char U+2423 (decimal 9251)
    defining Unicode char U+FEFF (decimal 65279)
 )
-(/mnt/NuevoVol/FEP/Plantilla-audIT/comun/styles.sty
+(/home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recursos
+/Plantilla-audIT/comun/styles.sty
 (/usr/share/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2024/02/08 v1.3d Input encoding file
 )
@@ -2001,9 +2005,12 @@ Package hyperref Info: Option `colorlinks' set `true' on input line 69.
 \c@subactividadesii=\count568
 \enitdp@subactividades=\count569
 )
-(/mnt/NuevoVol/FEP/Plantilla-audIT/comun/instancia.tex)
-(/mnt/NuevoVol/FEP/Plantilla-audIT/subdocumentos/14-ventajas/meta.tex)
-(/mnt/NuevoVol/FEP/Plantilla-audIT/comun/preambulo.tex
+(/home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recursos
+/Plantilla-audIT/comun/instancia.tex)
+(/home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recursos
+/Plantilla-audIT/subdocumentos/14-ventajas/meta.tex)
+(/home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recursos
+/Plantilla-audIT/comun/preambulo.tex
 (/usr/share/texmf-dist/tex/latex/import/import.sty
 Package: import 2020/04/01  v 6.2
 )
@@ -2041,13 +2048,13 @@ Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
 \f@nch@widthR=\skip139
 \@temptokenb=\toks63
 ))
-(/mnt/NuevoVol/FEP/Plantilla-audIT/comun/portada.tex)
+(/home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recursos
+/Plantilla-audIT/comun/portada.tex)
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'spanish'.
-
-(salida/aux/14-ventajas/sub14.aux
+ (salida/aux/14-ventajas/sub14.aux
 LaTeX Info: Redefining \. on input line 12.
 LaTeX Info: Redefining \% on input line 12.
 Package babel Info: 'spanish' activates 'spanish' shorthands.
@@ -2187,9 +2194,8 @@ LaTeX Font Warning: Font shape `T1/cmr/bx/n' in size <19> not available
 
 [1
 
-{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/tex
-mf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} </mnt/NuevoVol/FEP/Plantilla
--audIT/comun/assets/portada.jpeg>]
+ </home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recurso
+s/Plantilla-audIT/comun/assets/portada.jpeg>]
 
 LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <28> not available
 (Font)              size <29.86> substituted on input line 9.
@@ -2231,7 +2237,8 @@ l.9 \fichaSubdocumento
                        [1
 
 ]
-(/mnt/NuevoVol/FEP/Plantilla-audIT/subdocumentos/14-ventajas/contenido.tex
+(/home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recursos
+/Plantilla-audIT/subdocumentos/14-ventajas/contenido.tex
 
 LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <86> not available
 (Font)              size <51.59> substituted on input line 1.
@@ -2252,7 +2259,7 @@ l.11 \clearpage
 
 LaTeX Warning: Empty bibliography on input line 14.
 
-runsystem(latexminted cleantemp  --timestamp 20260906215232 C22E8886106FD67A441
+runsystem(latexminted cleantemp  --timestamp 20260907013931 C22E8886106FD67A441
 B8A5476681F2F)...executed safely (allowed).
 
 (salida/aux/14-ventajas/sub14.aux
@@ -2276,23 +2283,26 @@ Package logreq Info: Writing requests to 'sub14.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 56872 strings out of 469453
- 1256596 string characters out of 5469037
- 2445219 words of memory out of 5000000
- 84668 multiletter control sequences out of 15000+600000
+ 56874 strings out of 469453
+ 1257711 string characters out of 5469037
+ 2445403 words of memory out of 5000000
+ 84672 multiletter control sequences out of 15000+600000
  641549 words of font info for 71 fonts, out of 8000000 for 9000
  40 hyphenation exceptions out of 8191
  133i,12n,139p,1257b,2815s stack positions out of 10000i,1000n,20000p,200000b,200000s
- </home/disco/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx5159.600pk><
-/usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/share/texm
-f-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf-dist/fonts/ty
-pe1/public/cm-super/sfbx1728.pfb></usr/share/texmf-dist/fonts/type1/public/cm-s
-uper/sfbx2986.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1000.p
-fb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/
-texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on salida/aux/14-ventajas/sub14.pdf (4 pages, 440759 bytes).
+ </home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx5159.600pk
+> </home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk>
+ </home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> 
+</home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> <
+/home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1095.600pk> </
+home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.600pk> </h
+ome/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx2986.600pk> </ho
+me/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk> </hom
+e/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcbx1095.600pk> </home
+/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1095.600pk>
+Output written on salida/aux/14-ventajas/sub14.pdf (4 pages, 381242 bytes).
 PDF statistics:
- 102 PDF objects out of 1000 (max. 8388607)
+ 294 PDF objects out of 1000 (max. 8388607)
  11 named destinations out of 1000 (max. 500000)
  54 words of extra memory for PDF output out of 10000 (max. 10000000)
 
