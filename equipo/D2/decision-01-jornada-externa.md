@@ -118,11 +118,11 @@ firma, enrolamiento y revisión deberán incorporarse al modelo económico.
 | Grupo | Qué debe verificar | Estado | Persona, fecha y evidencia |
 |---|---|---|---|
 | D1 | Coherencia con problema, actores y fuentes del caso | Pendiente | Sin registrar |
-| D2: Ignacio y Matías | Alternativa elegida, adhesión, contingencias y alcance | Pendiente | Sin registrar |
+| D2: Ignacio y Matías | Alternativa elegida, adhesión, contingencias y alcance | Ratificada por D2 | 06-09-2026; expediente multifuente, bloqueo sin excepción y contingencia con expediente local vigente |
 | D3 | Modelo por persona, conciliación, reglas, auditoría y desempeño | Pendiente | Sin registrar |
 | D4 | Identificación, registro local y sincronización | Pendiente | Sin registrar |
 | Revisión jurídica por coordinar | Régimen de jornada, firma, suficiencia probatoria y tratamiento de datos | Pendiente | Sin registrar |
 
 Impacta RF-001 a RF-004, RF-007, RF-026 a RF-028 y RNF-001, RNF-002,
-RNF-003, RNF-012, RNF-013 y RNF-014. No se cierra D-01 hasta registrar las
-validaciones necesarias; documentar esta propuesta no equivale a ratificarla.
+RNF-003, RNF-012, RNF-013 y RNF-014. D2 ratificó la decisión de alcance; D-01
+no puede declararse validada ni cumplida hasta registrar las verificaciones restantes.

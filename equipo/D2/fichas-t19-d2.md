@@ -264,10 +264,20 @@ de la actividad del transportista con otro cliente nunca llegue al CLIENTE. Es l
 respuesta técnica y verificable a la objeción citada, y es también minimización en el
 sentido de la normativa de datos personales.
 
-**Pieza 2. Comodato del equipo.** El hardware lo adquiere el CLIENTE, conforme a la
-exclusión del Capítulo 11 del caso, y lo entrega en comodato al transportista adherido.
-El anexo contractual regula tenencia, uso, soporte, responsabilidad por daño, retiro sin
-costo al término de la relación y prohibición de reconfiguración unilateral.
+**Pieza 2. El equipo del camión ajeno como parte del servicio, en comodato.** El
+PROPONENTE financia, configura, administra, mantiene y retira el dispositivo instalado
+en camiones de terceros, y lo entrega en comodato al transportista adherido. El anexo
+contractual regula tenencia, uso, soporte, responsabilidad por daño, retiro sin costo al
+término de la relación y prohibición de reconfiguración unilateral.
+
+Esto se aparta de la regla general del Capítulo 11, que asigna al CLIENTE la adquisición
+del hardware, y se funda en que el propio numeral 16.1 abre la decisión 5 preguntando
+*quién lo paga* tratándose de un camión de un tercero. La lectura declarada de esa
+tensión está en el numeral 5.3 del Subdocumento 3. **Aquí está el cambio de modelo de
+negocio**, en el sentido del Artículo 28°, tipo 4, que menciona expresamente los
+servicios gestionados. El dueño de camión deja de asumir el riesgo patrimonial de un
+aparato que no pidió, y el PROPONENTE captura valor por el servicio en vez de por el
+suministro.
 
 **Pieza 3. Contraprestación medible y financiada por el propio proyecto.** El incentivo
 económico no sale del margen operacional del CLIENTE, que es de 9 % (FEP03 · Capítulo
@@ -355,17 +365,28 @@ meses 13 a 15.
 
 | Partida | Naturaleza | Estado |
 |---|---|---|
-| Equipamiento a bordo para camiones de terceros adheridos | Adquisición del CLIENTE, conforme al Capítulo 11 | Cantidad determinada por la adhesión efectiva; precio unitario por cotizar |
-| Conectividad y suscripciones de los equipos en comodato | Costo recurrente de 36 meses | Por cotizar |
+| Equipamiento a bordo para camiones de terceros adheridos | Adquisición del PROPONENTE, activada dentro del servicio | Cantidad determinada por la adhesión efectiva; precio unitario por cotizar |
+| Conectividad y suscripciones de los equipos en comodato | Costo recurrente del PROPONENTE por 36 meses | Por cotizar |
 | Diseño y validación jurídica del anexo contractual | Servicio profesional | Por cotizar |
 | Campaña de enrolamiento en cinco terminales | Dotación y horas | Por cotizar, con presencia en horario de relevo |
 | Consola de consentimiento y servicio de adhesión | Desarrollo | Por cotizar |
 
-**Efecto en el costo operacional.** Dos efectos de signo opuesto que deben presentarse
-juntos. Aumenta el costo recurrente de conectividad y soporte de cada equipo en
-comodato. Disminuye el costo de la liquidación mensual, que hoy ocupa 9 días y 8
-personas para 148 transportistas (FEP03 · Sección 7.3 · p.15), y disminuye el costo de
-gestionar las objeciones de cobro.
+**Efecto en el costo operacional.** Tres efectos que deben presentarse juntos, dos de
+ellos favorables al CLIENTE y uno desfavorable al PROPONENTE, porque ocultar el tercero
+haría la oferta insostenible a 36 meses.
+
+1. El PROPONENTE asume la inversión y la conectividad de los equipos de la flota de
+   terceros, que hasta ahora el Capítulo 11 situaba en el CLIENTE. Es el costo del
+   modelo y se incorpora íntegro a la oferta económica.
+2. Disminuye el costo de la liquidación mensual, que hoy ocupa 9 días y 8 personas para
+   148 transportistas (FEP03 · Sección 7.3 · p.15).
+3. Disminuye el costo de gestionar las objeciones de cobro de sobreestadía.
+
+El CLIENTE opera con un margen de 9 % y evaluará con especial atención el costo de
+operación de los 36 meses (FEP03 · Capítulo 10, restricción 14 · p.23). El PROPONENTE
+declara que el punto 1 es el que decide la viabilidad económica de esta innovación, y
+que su dimensionamiento depende de la adhesión efectiva, no del total de 226 camiones
+de terceros.
 
 **Beneficio esperado.** Se declara sobre la base verificada de 2025 y con la meta
 propuesta por el PROPONENTE, y se identifica cuál cifra es dato y cuál es meta.
@@ -414,6 +435,7 @@ apoyar el indicador en una resta que las Bases no declaran de manera inequívoca
 | El recupero de sobreestadía es menor al proyectado | Media | Medio, encarece el incentivo | Medir el recupero en la cohorte piloto antes de comprometer el reparto general | Ajustar el reparto conforme a la cláusula de revisión del anexo |
 | Los clientes no aceptan la evidencia telemática como respaldo del cobro | Media | Alto, elimina la fuente de financiamiento del incentivo | Acordar con el área comercial el reconocimiento contractual de la geocerca sellada | Financiar el incentivo con la reducción del costo de liquidación, que no depende del cliente |
 | El anexo contractual no resiste revisión jurídica | Baja | Alto, bloquea todo el modelo | Validación jurídica en los meses 1 a 3, antes de construir | Reducir el alcance del consentimiento a lo estrictamente necesario para acreditar jornada |
+| La inversión en equipos de flota de terceros excede lo previsto | Media | Alto, es el costo que decide la viabilidad económica del modelo | Dimensionar sobre adhesión efectiva y no sobre los 226 camiones; escalonar la compra por cohorte | Trasladar la partida al CLIENTE conforme a la regla general del Capítulo 11, revisando a la baja la meta de adhesión |
 | Un transportista revoca el consentimiento a mitad de viaje | Media | Medio, deja el viaje sin evidencia | Separar revocación de captura futura, de visibilidad y de retención obligatoria | Conservar la evidencia cuya retención es legal y bloquear la asignación siguiente |
 
 **Contingencia general si la innovación no rinde lo esperado.** La solución opera en

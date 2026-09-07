@@ -219,22 +219,46 @@ en `fichas-t19-d2.md`.
 
 ### 5.3. Quién financia y quién administra el dispositivo
 
-Las Bases resuelven la primera mitad de la pregunta. El hardware lo adquiere el
-CLIENTE, y el PROPONENTE debe especificar qué comprar, cuánto y con qué
-características (FEP03 · Capítulo 11 · p.24).
+**Lectura declarada de las Bases.** Este punto exige declarar una interpretación,
+porque las Bases dicen dos cosas que conviven mal. El Capítulo 11 establece que el
+hardware lo adquiere el CLIENTE y que el PROPONENTE debe especificar qué comprar
+(FEP03 · p.24). El numeral 16.1, decisión 5, pregunta en cambio *de quién es el
+dispositivo a bordo en un camión de un tercero, quién lo paga, quién lo administra y
+qué ocurre con él si el transportista deja de trabajar con la compañía* (FEP03 · p.34).
+Si el Capítulo 11 ya resolviera el punto para toda la flota, la decisión 5 no existiría.
 
-Lo que las Bases dejan abierto es la segunda mitad, qué ocurre con un aparato comprado
-por el CLIENTE que va instalado en un camión ajeno. La propuesta es la siguiente.
+El PROPONENTE interpreta que el Capítulo 11 fija la regla general para el equipamiento
+de la operación propia del CLIENTE, y que la decisión 5 abre expresamente el caso del
+camión de un tercero, donde la pregunta no es contable sino de adhesión. Sobre esa
+lectura se construye la propuesta.
 
-| Materia | Propuesta del PROPONENTE |
-|---|---|
-| Propiedad | Del CLIENTE, que lo adquiere conforme al Capítulo 11 |
-| Tenencia | Del transportista adherido, en comodato, mientras dure la relación comercial |
-| Instalación y soporte | De cargo del CLIENTE, ejecutada durante el paso normal por terminal |
-| Conectividad y suscripciones | De cargo del CLIENTE, incorporadas al costo total de operación de 36 meses |
-| Retiro | Al término de la relación, en el primer paso por terminal, sin costo para el transportista |
-| Daño o pérdida | Régimen de responsabilidad declarado en el contrato de adhesión, distinguiendo uso normal de negligencia |
-| Equipos preexistentes del transportista | No se intervienen. Se homologa la vista, conforme a la exclusión del Capítulo 11 |
+| Materia | Flota propia del CLIENTE | Camión de un transportista adherido |
+|---|---|---|
+| Adquisición | Del CLIENTE, conforme al Capítulo 11 | Financiada por el PROPONENTE dentro del servicio |
+| Propiedad | Del CLIENTE | Del PROPONENTE mientras dure el contrato |
+| Tenencia | Del CLIENTE | Del transportista, en comodato, mientras dure la relación comercial |
+| Instalación y soporte | Del CLIENTE, en el paso normal por terminal | Del PROPONENTE, en el paso normal por terminal |
+| Conectividad y suscripciones | Del CLIENTE | Del PROPONENTE, dentro del costo de operación de 36 meses |
+| Retiro | Del CLIENTE | Del PROPONENTE, en el primer paso por terminal, sin costo para el transportista |
+| Daño o pérdida | Régimen del CLIENTE | Régimen declarado en el anexo de adhesión, distinguiendo uso normal de negligencia |
+| Equipos preexistentes del transportista | No aplica | No se intervienen. Se homologa la vista, conforme al Capítulo 11 |
+
+**Por qué el PROPONENTE financia el equipo del camión ajeno.** Porque es la única
+respuesta que hace viable la adhesión. Pedirle a 148 dueños de camión que acepten un
+aparato comprado por su mandante, instalado en un activo propio de más de cien millones
+de pesos, es pedirles que asuman el riesgo patrimonial de una decisión que no tomaron.
+El transportista entrevistado lo planteó como su primera pregunta. Trasladar el
+financiamiento al PROPONENTE convierte el dispositivo en parte del servicio contratado,
+que es precisamente un cambio de modelo de negocio en el sentido del Artículo 28°,
+tipo 4, y por eso se desarrolla como innovación.
+
+**Consecuencia económica que se declara.** Esta opción carga al PROPONENTE el costo de
+los equipos de la flota de terceros y su conectividad por 36 meses. El CLIENTE opera con
+un margen de 9 % y su oferta económica será evaluada con especial atención al costo de
+operación (FEP03 · Capítulo 10, restricción 14 · p.23), de modo que el efecto se
+incorpora íntegro al modelo económico y se valoriza en el Informe 3. Si el CLIENTE
+prefiere adquirir también estos equipos, la propuesta se mantiene sin cambios
+estructurales y solo se traslada la partida, con la meta de adhesión revisada a la baja.
 
 El equipo instalado en un camión de tercero **no transmite fuera de la ventana del
 viaje asignado por el CLIENTE**. Esa es una decisión de diseño, no una promesa
@@ -322,43 +346,41 @@ p.23), y esa responsabilidad no cambia con la tasa de adhesión.
 ## 6. Supuestos y decisiones declaradas
 
 El Capítulo 16 del caso deja 26 decisiones deliberadamente sin resolver, y el Capítulo
-19 evalúa que estén resueltas y declaradas como supuesto (FEP03 · p.34 y p.43). Las 26
-están documentadas en `registro-decisiones-d2.md`. Su estado al cierre de este informe
-es el siguiente.
+19 evalúa que estén resueltas y declaradas como supuesto (FEP03 · p.34 y p.43). **Las
+26 están resueltas y ratificadas por el PROPONENTE**, con su detalle en
+`registro-decisiones-d2.md`. Ninguna queda implícita ni se traslada al CLIENTE.
 
-| Estado | Cantidad | Decisiones |
-|---|---:|---|
-| Propuesta completa | 3 | D-03, D-11, D-15 |
-| Propuesta parcial | 19 | D-01, D-02, D-04 a D-09, D-12, D-13, D-16 a D-18, D-20, D-22 a D-26 |
-| Abierta, con dirección declarada y contingencia | 4 | D-10, D-14, D-19, D-21 |
+Resolverlas no equivale a validarlas. Cada decisión distingue lo que el PROPONENTE
+decide, que es alcance, de lo que debe confirmarse con un tercero, que es viabilidad.
+Las siguientes son las decisiones cuya validación externa condiciona el alcance
+comprometido, y se declaran como supuestos con su impacto explícito.
 
-Las cuatro decisiones abiertas se declaran como tales en vez de resolverse por
-inferencia, y cada una lleva la contingencia que permite avanzar sin ella.
-
-| Decisión | Qué falta | Cómo avanza el proyecto sin cerrarla |
-|---|---|---|
-| D-10, mecanismo de conformidad de entrega | Elegir el medio de aceptación e identidad del receptor | La conformidad se captura offline y se sincroniza; el medio de firma se decide en el levantamiento del mes 1 |
-| D-14, función objetivo del retorno | Ponderar margen, vacío, nivel de servicio y jornada | La capacidad es de Etapa 2; la función objetivo se fija con la línea base medida en Etapa 1 |
-| D-19, evidencia de carga peligrosa efectiva | Elegir evidencia viable sin instalar equipos en el cliente | El bloqueo por documentación opera igual; la verificación de carga efectiva se pilotea en las 18 unidades habilitadas |
-| D-21, captura y aprobación de talleres externos | Definir usuario, aprobación y efecto en garantía | La hoja de vida se alimenta de los dos talleres propios en Etapa 1 |
-
-Cuatro decisiones adicionales condicionan el alcance y se declaran como supuestos con
-impacto explícito.
-
-- **D-05, propiedad del dispositivo.** Se asume el régimen de comodato del numeral 5.3.
-  Si el CLIENTE optara por que el transportista adquiera el equipo, la meta de adhesión
-  del 70 % deja de ser sostenible y debe rebajarse.
-- **D-09, emisión tributaria sin cobertura.** Se asume que existe un mecanismo de
-  contingencia oficialmente soportado por el sistema contable. Si no existiera, el
-  documento conforme antes del movimiento no es alcanzable y el CLIENTE debe gestionar
-  la autorización correspondiente ante la autoridad tributaria.
-- **D-12 y D-13, acceso a telemetría y tacógrafo.** Se asume acceso remoto de solo
-  lectura por modelo. Los 61 tractocamiones con telemetría de fábrica se incorporan
-  según autorización del fabricante, sin afectar la garantía.
-- **D-26, operación mixta.** Se asume que la validación documental controlada es
-  admisible durante la transición. Su suficiencia probatoria requiere validación
-  jurídica, y si resultara insuficiente, la cobertura de la Etapa 1 se restringe a la
-  flota adherida.
+- **D-01, jornada de conductores externos.** Se decide el expediente multifuente por
+  persona y el bloqueo sin excepción operacional. La suficiencia probatoria requiere
+  validación jurídica. Si resultara insuficiente, cambia el medio de acreditación, no la
+  regla de bloqueo.
+- **D-05, propiedad y financiamiento del dispositivo.** Se decide el régimen del
+  numeral 5.3, con el equipo del camión ajeno financiado por el PROPONENTE. Si el
+  CLIENTE prefiere adquirirlo, se traslada la partida sin cambio estructural y la meta
+  de adhesión del 70 % debe revisarse a la baja.
+- **D-09, emisión tributaria sin cobertura.** Se decide usar exclusivamente el mecanismo
+  offline oficialmente soportado por el sistema contable. Si no existiera tal mecanismo,
+  el documento conforme antes del movimiento no es alcanzable y el CLIENTE debe
+  gestionar la autorización ante la autoridad tributaria.
+- **D-10, conformidad de entrega.** Se decide firma con código de un solo uso del
+  receptor identificado, operable sin cobertura. Requiere validación jurídica de su
+  valor probatorio frente a los clientes.
+- **D-12 y D-13, telemetría y tacógrafo.** Se decide acceso remoto de solo lectura como
+  vía primaria, con lectura física sujeta a autorización expresa por modelo. Los 61
+  tractocamiones con telemetría de fábrica se incorporan según autorización del
+  fabricante, sin afectar la garantía.
+- **D-23 y D-24, consentimiento y retención.** Se decide consentimiento granular y
+  revocable, con evidencia protegida en registro inalterable. La articulación entre
+  revocación y retención legal requiere validación jurídica.
+- **D-26, operación mixta.** Se decide validación telemática para equipados y
+  documental reforzada para el resto, con el nivel de evidencia siempre visible. Si la
+  vía documental resultara insuficiente para acreditar jornada, la cobertura de la
+  Etapa 1 se restringe a la flota adherida.
 
 ## 7. Exclusiones y límites del alcance
 

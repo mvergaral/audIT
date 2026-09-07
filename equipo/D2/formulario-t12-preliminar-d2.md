@@ -39,7 +39,7 @@ válida cualquiera sea la foliación global que adopte el informe impreso.
 | RF-020 | Portal segregado de viajes y liquidación. | Pendiente de verificación | Portal; Entra ID; Transportista | Cap. 3, Portales y consentimiento y cap. 5.2 |
 | RF-021 | Seguimiento del cliente sujeto a autorización. | Pendiente de verificación | Portal; Entra ID; Consentimiento; Telemetría | Cap. 3, Portales y consentimiento |
 | RF-022 | Consentimiento granular, revocable y auditable. | Pendiente de verificación | Consentimiento; Portal; Auditoría; Entra ID | Cap. 3, Portales y consentimiento y cap. 5.3 |
-| RF-023 | CO2e verificable por tonelada-kilómetro, incluidos terceros, con consolidación mensual; base y metodología en E1, cálculo productivo completo en E2. | Pendiente de verificación | Lakehouse; Capa Semántica; motor por definir | Cap. 4.1, reparto de emisiones |
+| RF-023 | CO2e verificable por tonelada-kilómetro, incluidos terceros, con consolidación mensual, según ISO 14083 y GLEC; base y metodología en E1, cálculo productivo completo en E2. | Pendiente de verificación | Lakehouse; Capa Semántica; motor por definir | Cap. 4.1, reparto de emisiones |
 | RF-024 | Intervenciones de talleres externos registradas offline. | Pendiente de verificación | Interfaz Taller; Aplicación Móvil; Gestión de Flota | Cap. 4.3, Etapa 2 |
 | RF-025 | Mantenimiento por kilometraje real trazable. | Pendiente de verificación | Gestión de Flota; rFMS; Telemetría | Cap. 2, Coherencia problema-solución |
 | RF-026 | Adhesión de transportistas gestionada y medible. | Pendiente de verificación | Portal; Transportista; Consentimiento | Cap. 5, Plan de adhesión |

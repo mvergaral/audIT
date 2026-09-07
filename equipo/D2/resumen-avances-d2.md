@@ -7,11 +7,12 @@ Integrantes: Ignacio C. y Matías V. Fuente de reparto:
 
 ## Resumen ejecutivo
 
-Se prepararon once de los doce entregables del plan, dos instrumentos de coordinación
-entre duplas y un desarrollo específico de la decisión D-01. Los dos entregables que
-cierran el Informe 1 son el Subdocumento 3 consolidado y las dos fichas T-19 de las
-innovaciones tipo 1 y tipo 4. Ninguno se considera ratificado por el equipo ni aprobado
-por el CLIENTE.
+Se prepararon los doce entregables del plan, dos instrumentos de coordinación entre
+duplas y un desarrollo específico de la decisión D-01. Los dos que cierran el Informe 1
+son el Subdocumento 3 consolidado y las dos fichas T-19 de las innovaciones tipo 1 y
+tipo 4. D2 ratificó sus 26 decisiones de alcance y las metas de los criterios de
+aceptación. Los documentos no están aprobados por el CLIENTE ni validados en materias
+jurídicas, tributarias, comerciales o técnicas.
 
 El catálogo contiene 42 requisitos de solución: 28 funcionales y 14 no funcionales.
 Se documentaron relaciones con los 29 criterios de aceptación y las 14 restricciones
@@ -21,13 +22,13 @@ del caso. Esa cobertura de referencias no demuestra por sí sola cumplimiento t�
 
 | Código | Entregable | Avance | Pendiente |
 |---|---|---|---|
-| D2-01 | [Registro de decisiones](registro-decisiones-d2.md) | 26 decisiones documentadas como propuestas | Fundamentación, ratificación y validaciones; D-10, D-14, D-19 y D-21 siguen abiertas |
-| D2-02 | [Catálogo RF/RNF](catalogo-requisitos-d2.md) | 28 RF y 14 RNF con origen, etapa y verificación | Completar detalle normativo, metas y revisión cruzada |
+| D2-01 | [Registro de decisiones](registro-decisiones-d2.md) | 26 decisiones ratificadas por D2; D-10, D-14, D-19 y D-21 resueltas | Completar validaciones jurídicas, tributarias, comerciales y técnicas |
+| D2-02 | [Catálogo RF/RNF](catalogo-requisitos-d2.md) | 28 RF y 14 RNF con origen, etapa, verificación y metas D2 seleccionadas | Completar detalle normativo y revisión cruzada |
 | D2-03 | [Matriz de trazabilidad](matriz-trazabilidad-d2.md) | 42 requisitos vinculados a capacidades, componentes y pruebas | Validar relaciones y resolver componentes ausentes con D3/D4 |
 | D2-04 | [Esquema de solución](subdoc3-esquema-solucion.md) | Principio de solución, coherencia problema-solución y nueve capacidades | Lectura cruzada con D1, D3 y D4 |
-| D2-05 | [Alcance por etapas](alcance-etapas-d2.md) | E1/E2, dependencias, entradas, salidas y exclusiones | Ratificar distribución y compromisos con Matías y el equipo |
-| D2-06 | [Plan de adhesión](subdoc3-esquema-solucion.md) | Capítulo 5 del subdocumento 3, con las doce materias exigidas por el plan | Validación jurídica del anexo y ratificación de metas |
-| D2-07 | [Criterios de aceptación](criterios-aceptacion-d2.md) | 29 criterios, medición y metas propuestas | Sustentar metas y validar viabilidad; no tratarlas como exigencias textuales |
+| D2-05 | [Alcance por etapas](alcance-etapas-d2.md) | E1/E2 ratificadas por D2, con dependencias, entradas, salidas y exclusiones | Validar la distribución en la lectura cruzada |
+| D2-06 | [Plan de adhesión](subdoc3-esquema-solucion.md) | Capítulo 5 del subdocumento 3, con las doce materias exigidas por el plan | Validación jurídica del anexo contractual |
+| D2-07 | [Criterios de aceptación](criterios-aceptacion-d2.md) | 29 criterios con meta ratificada por D2 y siete supuestos declarados | Validar viabilidad de las metas comprometidas |
 | D2-08 | [T-12 preliminar](formulario-t12-preliminar-d2.md) | 42 filas y las cinco columnas oficiales | Inventario textual aplicable completo y referencias definitivas; todas las filas pendientes de verificación |
 | D2-09 | [Innovación tipo 1](fichas-t19-d2.md) | Ficha T-19 con los siete elementos del Artículo 29° y la delimitación frente a CA-21 y CA-29 | Verificar las referencias APA en su fuente oficial |
 | D2-10 | [Innovación tipo 4](fichas-t19-d2.md) | Ficha T-19 con los siete elementos, comodato, ventana de consentimiento y financiamiento del incentivo | Cotizar las partidas de inversión declaradas |
@@ -86,8 +87,9 @@ declaración firmada o un tacógrafo aislado no acreditan automáticamente toda 
 | Corrección posterior | Conservar original, registrar nueva versión y revisar efectos operacionales |
 
 Incluye flujo, riesgos, contingencias, pruebas y verificación por D1/D2/D3/D4 y revisión
-jurídica. No constituye dictamen legal ni decisión ratificada. No se admite que un
-override operacional supla jornada insuficiente o falta de acreditación.
+jurídica. D2 ratificó la alternativa, pero no constituye dictamen legal ni acreditación
+de cumplimiento. No se admite que un override operacional supla jornada insuficiente
+o falta de acreditación.
 
 ## Bloqueos principales
 
@@ -110,15 +112,15 @@ consultas no se trataron como respuestas del CLIENTE.
 
 ## Próximas acciones
 
-1. Ignacio y Matías revisan D-01; D3/D4 validan implementación y se coordina revisión jurídica.
-2. Reparto de innovaciones zanjado el 6 de septiembre. D2 lleva los tipos 1 y 4, D1 el
+1. Reparto de innovaciones zanjado el 6 de septiembre. D2 lleva los tipos 1 y 4, D1 el
    tipo 5, D3 el tipo 3 y D4 el tipo 2. `equipo/asignacion-duplas.md` quedó corregido.
-3. Matías lidera D-02/D-05 y el plan de adhesión; D4 aporta despliegue y flota mixta.
-4. Completar D-10, D-14, D-19 y D-21 sin dejar sus soluciones implícitas.
-5. Cada dupla verifica sus bloques y documenta correcciones y evidencia.
+2. D1, D3 y D4 verifican los bloques que les corresponden y registran evidencia.
+3. Coordinar la revisión jurídica de D-01, D-10, D-13, D-23 y D-24.
+4. Validar con el proveedor contable y con D3 el mecanismo offline ratificado en D-09.
+5. Resolver el contraste entre la decisión D-05 y FEP03 · Capítulo 11 · p.24, que
+   asigna al CLIENTE la adquisición del hardware.
 6. Completar el inventario normativo y la trazabilidad antes de declarar cumplimiento.
-7. Verificar las referencias APA de ambas fichas en su fuente oficial, con fecha de consulta.
-8. Preparar las diapositivas de los dos bloques de presentación, que se exponen entre el
+7. Preparar las diapositivas de los dos bloques de presentación, que se exponen entre el
    14 y el 25 de septiembre.
 
 ## Uso de asistencia de IA

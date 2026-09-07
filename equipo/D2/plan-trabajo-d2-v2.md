@@ -71,13 +71,13 @@ integrarla.
 
 | Código | Entregable | Líder | Revisor | Estado |
 |---|---|---|---|---|
-| D2-01 | Registro de las 26 decisiones | Ignacio C. | Matías V. | Borrador 26/26; pendiente ratificación |
+| D2-01 | Registro de las 26 decisiones | Ignacio C. | Matías V. | 26/26 ratificadas por D2; validaciones externas pendientes |
 | D2-02 | Catálogo RF/RNF | Ignacio C. | Matías V. | Borrador 28 RF + 14 RNF; pendiente ratificación |
 | D2-03 | Matriz de trazabilidad | Ambos | Ambos | Borrador 42/42; pendiente revisión D3-D4 |
 | D2-04 | Esquema de solución | Ambos | Ambos | Integrado en `subdoc3-esquema-solucion.md`, capítulos 1 a 3 |
-| D2-05 | Alcance por etapas | Matías V. | Ignacio C. | Borrador E1/E2; pendiente ratificación |
+| D2-05 | Alcance por etapas | Matías V. | Ignacio C. | E1/E2 ratificadas por D2; revisión cruzada pendiente |
 | D2-06 | Plan de adhesión | Matías V. | Ignacio C. | Integrado en `subdoc3-esquema-solucion.md`, capítulo 5 |
-| D2-07 | Criterios de aceptación | Matías V. | Ignacio C. | 29/29 con meta comprometida y siete supuestos declarados |
+| D2-07 | Criterios de aceptación | Matías V. | Ignacio C. | 29/29 con meta ratificada y siete supuestos declarados |
 | D2-08 | Formulario T-12 | Ignacio C. | Matías V. | Preliminar 42/42; falta inventario textual completo |
 | D2-09 | Innovación tipo 1 · producto o servicio | Ignacio C. | Matías V. | Ficha en `fichas-t19-d2.md`; tipo confirmado, faltan referencias APA verificadas |
 | D2-10 | Innovación tipo 4 · modelo de negocio | Matías V. | Ignacio C. | Ficha en `fichas-t19-d2.md`; tipo confirmado, faltan referencias APA verificadas |
@@ -117,17 +117,20 @@ No se empieza por la redacción narrativa.
 
 ## 6. Decisiones prioritarias
 
-Deben quedar acordadas antes de que D3 y D4 cierren la arquitectura. Detalle en
-`registro-decisiones-d2.md`. Estado: 26 propuestas documentadas; pendientes de
-ratificación, con las decisiones 10, 14, 19 y 21 todavía abiertas.
+Las 26 decisiones quedaron ratificadas por D2 el 6 de septiembre de 2026. D3 y D4
+deben validar que pueden implementarlas sin introducir supuestos contradictorios.
+Detalle en `registro-decisiones-d2.md`.
 
-- **Decisión 1 · jornada de conductores externos**. Propuesta completa, pendiente
-  validación legal y de interfaces.
-- **Decisión 2 · adhesión de los 148 transportistas**. Propuesta completa, metas
-  pendientes de datos reales.
-- **Decisión 25 · despliegue del equipamiento a bordo**. Propuesta completa.
-- **Decisión 5 · propiedad y financiamiento del dispositivo**. Abierta. Es la que
-  alimenta la innovación tipo 4, así que tiene prioridad.
+- **Decisión 1 · jornada de conductores externos**. Expediente multifuente y bloqueo
+  sin excepción ratificados; pendientes la validación legal y las interfaces.
+- **Decisión 2 · adhesión de los 148 transportistas**. Servicio integral y modo
+  documental limitado ratificados; metas de 70 % en E1 y 90 % en E2 sujetas a viabilidad.
+- **Decisión 25 · despliegue del equipamiento a bordo**. Piloto por familia y pasos
+  normales por terminal ratificados; cronograma pendiente de validación con D4.
+- **Decisión 5 · propiedad y financiamiento del dispositivo**. Activo financiado,
+  administrado y retirado por AUDIT en camiones de terceros; costo y contrato pendientes.
+  La lectura declarada frente al Capítulo 11 del caso está en el numeral 5.3 del
+  Subdocumento 3.
 
 Quedan 11 decisiones adicionales identificadas como de cierre temprano en la v1.
 
@@ -297,10 +300,12 @@ presentarse sólo el título de la innovación*.
 
 Estado al 6 de septiembre de 2026, víspera de la entrega del Informe 1.
 
-- [x] Las 26 decisiones del numeral 16.1 registradas. Son 3 con propuesta completa, 19
-      parciales y 4 abiertas con contingencia declarada.
-- [x] Las decisiones 1, 2, 5 y 25 fundamentadas. La 1 en su propio documento; la 2 y la
-      5 en el capítulo 5 del Subdocumento 3; la 25 en RNF-004 y RNF-011.
+- [x] Las 26 decisiones del numeral 16.1 resueltas y ratificadas por D2 el 06-09-2026.
+      Ninguna queda implícita; las que dependen de validación externa se declaran como
+      supuesto con su impacto en el capítulo 6 del Subdocumento 3.
+- [x] Las decisiones 1, 2, 5 y 25 fundamentadas y ratificadas. La 1 en su propio
+      documento; la 2 y la 5 en el capítulo 5 del Subdocumento 3; la 25 en RNF-004 y
+      RNF-011.
 - [x] Cada dolor con requisito, exclusión o supuesto asociado. Los veinte indicadores del
       Capítulo 7 del caso están mapeados en el capítulo 2 del Subdocumento 3.
 - [x] Cada requisito con origen, prioridad, etapa, componente y verificación.

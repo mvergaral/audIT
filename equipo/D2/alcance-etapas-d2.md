@@ -1,11 +1,12 @@
 # Alcance por etapas - D2
 
 **Subdocumento 3 · Esquema de solución y alcance**\
-**Estado:** versión comprometida para el Informe 1 del 07-09-2026
+**Estado:** distribución ratificada por D2 el 06-09-2026, comprometida para el Informe 1
 
-Las etapas, salidas y puertas de avance siguientes son la propuesta de alcance del
-PROPONENTE, no resultados ya obtenidos ni acuerdos del CLIENTE. La distribución temporal
-escalona el trabajo, no rebaja ninguna exigencia de las Bases.
+Las etapas, salidas y puertas de avance fijan el alcance acordado por D2. No son
+resultados ya obtenidos, no acreditan viabilidad y no constituyen acuerdos del CLIENTE.
+La distribución temporal escalona el trabajo, no rebaja ninguna exigencia de las Bases,
+y debe validarse en la lectura cruzada con D1, D3 y D4.
 
 ## 1. Criterio de distribución
 
@@ -172,7 +173,7 @@ terceros no adheridos.
 | Telemetría | Interfaces y calidad comprobadas | Cobertura y mantenimiento ampliados |
 | Adhesión | Contrato, incentivo y piloto | Escalamiento sobre terceros |
 | Consentimiento | Modelo granular y auditoría | Visibilidad ampliada para clientes |
-| Costeo | Costo consolidado en 24 h con faltantes explícitos, con historial de versiones | Rentabilidad y optimización avanzada |
+| Costeo | Costo inicial en 24 h con faltantes explícitos y versionado histórico, sujeto a validación de RT-05.29 | Rentabilidad y optimización avanzada |
 | Emisiones | Base de datos, línea base y metodología | Cálculo productivo completo y consolidación mensual, incluidos terceros |
 | Cobertura | Mapa y almacenamiento offline | Segmentación móvil/satelital |
 | Lugares seguros | Catálogo piloto validado | Alertas y planificación a escala |
