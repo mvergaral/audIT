@@ -19,7 +19,67 @@
 
 \refsection{0}
   \datalist[entry]{apa/apasortcite//global/global/global}
-    \entry{bases_caso10_2026}{misc}{}{}
+    \entry{cis_benchmarks}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=4bb05c228ea4da8e9f76e80ae1e45db5}{%
+           family={{Center for Internet Security}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{4bb05c228ea4da8e9f76e80ae1e45db5}
+      \strng{fullhash}{4bb05c228ea4da8e9f76e80ae1e45db5}
+      \strng{fullhashraw}{4bb05c228ea4da8e9f76e80ae1e45db5}
+      \strng{bibnamehash}{4bb05c228ea4da8e9f76e80ae1e45db5}
+      \strng{authorbibnamehash}{4bb05c228ea4da8e9f76e80ae1e45db5}
+      \strng{authornamehash}{4bb05c228ea4da8e9f76e80ae1e45db5}
+      \strng{authorfullhash}{4bb05c228ea4da8e9f76e80ae1e45db5}
+      \strng{authorfullhashraw}{4bb05c228ea4da8e9f76e80ae1e45db5}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{CIS Benchmarks: Secure Configuration Guides}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://www.cisecurity.org/cis-benchmarks
+      \endverb
+      \verb{url}
+      \verb https://www.cisecurity.org/cis-benchmarks
+      \endverb
+    \endentry
+    \entry{ley21663}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=499b3368fa957f63eb091bbe7f8b363a}{%
+           family={{Congreso Nacional de Chile}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{499b3368fa957f63eb091bbe7f8b363a}
+      \strng{fullhash}{499b3368fa957f63eb091bbe7f8b363a}
+      \strng{fullhashraw}{499b3368fa957f63eb091bbe7f8b363a}
+      \strng{bibnamehash}{499b3368fa957f63eb091bbe7f8b363a}
+      \strng{authorbibnamehash}{499b3368fa957f63eb091bbe7f8b363a}
+      \strng{authornamehash}{499b3368fa957f63eb091bbe7f8b363a}
+      \strng{authorfullhash}{499b3368fa957f63eb091bbe7f8b363a}
+      \strng{authorfullhashraw}{499b3368fa957f63eb091bbe7f8b363a}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Ley N.º 21.663 Marco de Ciberseguridad y creación de la Agencia Nacional de Ciberseguridad}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://www.bcn.cl/leychile/navegar?idNorma=1202434
+      \endverb
+      \verb{url}
+      \verb https://www.bcn.cl/leychile/navegar?idNorma=1202434
+      \endverb
+    \endentry
+    \entry{bases_admin_2026}{misc}{}{}
       \name{author}{1}{}{%
         {{hash=ee5d1fce8a3bf142902b6ac732f8f708}{%
            family={{Escuela de Informática PUCV}},
@@ -51,8 +111,8 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{shortauthor}
       \field{labeltitlesource}{title}
-      \field{note}{Documento FEP03.10.26}
-      \field{title}{Bases Técnicas del Caso 10. Transporte de Carga. Transportes Curimón S.A.}
+      \field{note}{Documento FEP01.26}
+      \field{title}{Bases Administrativas. Licitación Pública Internacional N.º TFEP-01/2026}
       \field{year}{2026}
     \endentry
     \entry{bases_transversales_2026}{misc}{}{}
@@ -91,6 +151,131 @@
       \field{title}{Bases Técnicas Transversales. Licitación Pública Internacional N.º TFEP-01/2026}
       \field{year}{2026}
     \endentry
+    \entry{iso9001}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5b512ee8a59deb284ad0a6a035ba10b1}{%
+           family={{ISO}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{fullhash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{fullhashraw}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{bibnamehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authorbibnamehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authornamehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authorfullhash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authorfullhashraw}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \field{extraname}{1}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{ISO 9001:2015. Quality management systems — Requirements}
+      \field{year}{2015}
+    \endentry
+    \entry{iso12207}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5b512ee8a59deb284ad0a6a035ba10b1}{%
+           family={{ISO}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{fullhash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{fullhashraw}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{bibnamehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authorbibnamehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authornamehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authorfullhash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authorfullhashraw}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \field{extraname}{2}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{ISO/IEC/IEEE 12207:2017. Systems and software engineering — Software life cycle processes}
+      \field{year}{2017}
+    \endentry
+    \entry{iso20000_1}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5b512ee8a59deb284ad0a6a035ba10b1}{%
+           family={{ISO}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{fullhash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{fullhashraw}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{bibnamehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authorbibnamehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authornamehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authorfullhash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authorfullhashraw}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \field{extraname}{3}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{ISO/IEC 20000-1:2018. Information technology — Service management — Part 1: Service management system requirements}
+      \field{year}{2018}
+    \endentry
+    \entry{iso22301}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5b512ee8a59deb284ad0a6a035ba10b1}{%
+           family={{ISO}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{fullhash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{fullhashraw}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{bibnamehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authorbibnamehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authornamehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authorfullhash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authorfullhashraw}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \field{extraname}{4}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{ISO 22301. Security and resilience. Business continuity management systems}
+      \field{year}{2019}
+    \endentry
+    \entry{iso27001}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5b512ee8a59deb284ad0a6a035ba10b1}{%
+           family={{ISO}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{fullhash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{fullhashraw}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{bibnamehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authorbibnamehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authornamehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authorfullhash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authorfullhashraw}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \field{extraname}{5}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{ISO/IEC 27001:2022. Information security, cybersecurity and privacy protection — Information security management systems — Requirements}
+      \field{year}{2022}
+    \endentry
     \entry{ley21719}{misc}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=cebe14c45771db4bb892353f5a668fc5}{%
@@ -114,10 +299,249 @@
       \field{labeltitlesource}{title}
       \field{title}{Ley N.º 21.719 sobre protección y tratamiento de datos personales}
       \field{year}{2024}
+    \endentry
+    \entry{ds43}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5b369b8183feef85ba3da1de1682dc54}{%
+           family={{Ministerio de Salud}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{5b369b8183feef85ba3da1de1682dc54}
+      \strng{fullhash}{5b369b8183feef85ba3da1de1682dc54}
+      \strng{fullhashraw}{5b369b8183feef85ba3da1de1682dc54}
+      \strng{bibnamehash}{5b369b8183feef85ba3da1de1682dc54}
+      \strng{authorbibnamehash}{5b369b8183feef85ba3da1de1682dc54}
+      \strng{authornamehash}{5b369b8183feef85ba3da1de1682dc54}
+      \strng{authorfullhash}{5b369b8183feef85ba3da1de1682dc54}
+      \strng{authorfullhashraw}{5b369b8183feef85ba3da1de1682dc54}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Decreto Supremo N.º 43. Aprueba el reglamento de almacenamiento de sustancias peligrosas}
+      \field{year}{2016}
+      \verb{urlraw}
+      \verb https://www.bcn.cl/leychile/navegar?idNorma=1088802
+      \endverb
+      \verb{url}
+      \verb https://www.bcn.cl/leychile/navegar?idNorma=1088802
+      \endverb
+    \endentry
+    \entry{ds298}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=acc54fd726de9f1741513109eab8d5d5}{%
+           family={{Ministerio de Transportes}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{acc54fd726de9f1741513109eab8d5d5}
+      \strng{fullhash}{acc54fd726de9f1741513109eab8d5d5}
+      \strng{fullhashraw}{acc54fd726de9f1741513109eab8d5d5}
+      \strng{bibnamehash}{acc54fd726de9f1741513109eab8d5d5}
+      \strng{authorbibnamehash}{acc54fd726de9f1741513109eab8d5d5}
+      \strng{authornamehash}{acc54fd726de9f1741513109eab8d5d5}
+      \strng{authorfullhash}{acc54fd726de9f1741513109eab8d5d5}
+      \strng{authorfullhashraw}{acc54fd726de9f1741513109eab8d5d5}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Decreto Supremo N.º 298. Reglamento de transporte de cargas peligrosas por calles y caminos}
+      \field{year}{1995}
+    \endentry
+    \entry{codigo_trabajo_25bis}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=4bea1cf2944a8ad58a1c159a33e3a06b}{%
+           family={{Ministerio del Trabajo}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Biblioteca del Congreso Nacional de Chile}%
+      }
+      \strng{namehash}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{fullhash}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{fullhashraw}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{bibnamehash}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{authorbibnamehash}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{authornamehash}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{authorfullhash}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{authorfullhashraw}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Decreto con Fuerza de Ley N.º 1. Texto refundido, coordinado y sistematizado del Código del Trabajo. Artículo 25 bis sobre jornada de choferes de vehículos de carga terrestre interurbana}
+      \field{year}{2003}
+      \verb{urlraw}
+      \verb https://www.bcn.cl/leychile/navegar?idNorma=207436
+      \endverb
+      \verb{url}
+      \verb https://www.bcn.cl/leychile/navegar?idNorma=207436
+      \endverb
+    \endentry
+    \entry{nist_sp800_207}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=a44b6b00e5eebd7494e1fd00658685e2}{%
+           family={{NIST}},
+           familyi={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{a44b6b00e5eebd7494e1fd00658685e2}
+      \strng{fullhash}{a44b6b00e5eebd7494e1fd00658685e2}
+      \strng{fullhashraw}{a44b6b00e5eebd7494e1fd00658685e2}
+      \strng{bibnamehash}{a44b6b00e5eebd7494e1fd00658685e2}
+      \strng{authorbibnamehash}{a44b6b00e5eebd7494e1fd00658685e2}
+      \strng{authornamehash}{a44b6b00e5eebd7494e1fd00658685e2}
+      \strng{authorfullhash}{a44b6b00e5eebd7494e1fd00658685e2}
+      \strng{authorfullhashraw}{a44b6b00e5eebd7494e1fd00658685e2}
+      \field{extraname}{1}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{NIST Special Publication 800-207. Zero Trust Architecture}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb https://doi.org/10.6028/NIST.SP.800-207
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.6028/NIST.SP.800-207
+      \endverb
+    \endentry
+    \entry{nist_csf2}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=a44b6b00e5eebd7494e1fd00658685e2}{%
+           family={{NIST}},
+           familyi={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{a44b6b00e5eebd7494e1fd00658685e2}
+      \strng{fullhash}{a44b6b00e5eebd7494e1fd00658685e2}
+      \strng{fullhashraw}{a44b6b00e5eebd7494e1fd00658685e2}
+      \strng{bibnamehash}{a44b6b00e5eebd7494e1fd00658685e2}
+      \strng{authorbibnamehash}{a44b6b00e5eebd7494e1fd00658685e2}
+      \strng{authornamehash}{a44b6b00e5eebd7494e1fd00658685e2}
+      \strng{authorfullhash}{a44b6b00e5eebd7494e1fd00658685e2}
+      \strng{authorfullhashraw}{a44b6b00e5eebd7494e1fd00658685e2}
+      \field{extraname}{2}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{NIST Special Publication 1300. The NIST Cybersecurity Framework (CSF) 2.0}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://doi.org/10.6028/NIST.CSWP.29
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.6028/NIST.CSWP.29
+      \endverb
+    \endentry
+    \entry{owasp_asvs}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=24b95a7fdad5a850196cd87546dcc70b}{%
+           family={{OWASP}},
+           familyi={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{24b95a7fdad5a850196cd87546dcc70b}
+      \strng{fullhash}{24b95a7fdad5a850196cd87546dcc70b}
+      \strng{fullhashraw}{24b95a7fdad5a850196cd87546dcc70b}
+      \strng{bibnamehash}{24b95a7fdad5a850196cd87546dcc70b}
+      \strng{authorbibnamehash}{24b95a7fdad5a850196cd87546dcc70b}
+      \strng{authornamehash}{24b95a7fdad5a850196cd87546dcc70b}
+      \strng{authorfullhash}{24b95a7fdad5a850196cd87546dcc70b}
+      \strng{authorfullhashraw}{24b95a7fdad5a850196cd87546dcc70b}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{OWASP Application Security Verification Standard 4.0 (ASVS)}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://owasp.org/www-project-application-security-verification-standard/
+      \endverb
+      \verb{url}
+      \verb https://owasp.org/www-project-application-security-verification-standard/
+      \endverb
     \endentry
   \enddatalist
   \datalist[entry]{apa/global//global/global/global}
-    \entry{bases_caso10_2026}{misc}{}{}
+    \entry{cis_benchmarks}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=4bb05c228ea4da8e9f76e80ae1e45db5}{%
+           family={{Center for Internet Security}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{4bb05c228ea4da8e9f76e80ae1e45db5}
+      \strng{fullhash}{4bb05c228ea4da8e9f76e80ae1e45db5}
+      \strng{fullhashraw}{4bb05c228ea4da8e9f76e80ae1e45db5}
+      \strng{bibnamehash}{4bb05c228ea4da8e9f76e80ae1e45db5}
+      \strng{authorbibnamehash}{4bb05c228ea4da8e9f76e80ae1e45db5}
+      \strng{authornamehash}{4bb05c228ea4da8e9f76e80ae1e45db5}
+      \strng{authorfullhash}{4bb05c228ea4da8e9f76e80ae1e45db5}
+      \strng{authorfullhashraw}{4bb05c228ea4da8e9f76e80ae1e45db5}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{CIS Benchmarks: Secure Configuration Guides}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://www.cisecurity.org/cis-benchmarks
+      \endverb
+      \verb{url}
+      \verb https://www.cisecurity.org/cis-benchmarks
+      \endverb
+    \endentry
+    \entry{ley21663}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=499b3368fa957f63eb091bbe7f8b363a}{%
+           family={{Congreso Nacional de Chile}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{499b3368fa957f63eb091bbe7f8b363a}
+      \strng{fullhash}{499b3368fa957f63eb091bbe7f8b363a}
+      \strng{fullhashraw}{499b3368fa957f63eb091bbe7f8b363a}
+      \strng{bibnamehash}{499b3368fa957f63eb091bbe7f8b363a}
+      \strng{authorbibnamehash}{499b3368fa957f63eb091bbe7f8b363a}
+      \strng{authornamehash}{499b3368fa957f63eb091bbe7f8b363a}
+      \strng{authorfullhash}{499b3368fa957f63eb091bbe7f8b363a}
+      \strng{authorfullhashraw}{499b3368fa957f63eb091bbe7f8b363a}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Ley N.º 21.663 Marco de Ciberseguridad y creación de la Agencia Nacional de Ciberseguridad}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://www.bcn.cl/leychile/navegar?idNorma=1202434
+      \endverb
+      \verb{url}
+      \verb https://www.bcn.cl/leychile/navegar?idNorma=1202434
+      \endverb
+    \endentry
+    \entry{bases_admin_2026}{misc}{}{}
       \name{author}{1}{}{%
         {{hash=ee5d1fce8a3bf142902b6ac732f8f708}{%
            family={{Escuela de Informática PUCV}},
@@ -149,8 +573,8 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{shortauthor}
       \field{labeltitlesource}{title}
-      \field{note}{Documento FEP03.10.26}
-      \field{title}{Bases Técnicas del Caso 10. Transporte de Carga. Transportes Curimón S.A.}
+      \field{note}{Documento FEP01.26}
+      \field{title}{Bases Administrativas. Licitación Pública Internacional N.º TFEP-01/2026}
       \field{year}{2026}
     \endentry
     \entry{bases_transversales_2026}{misc}{}{}
@@ -189,6 +613,131 @@
       \field{title}{Bases Técnicas Transversales. Licitación Pública Internacional N.º TFEP-01/2026}
       \field{year}{2026}
     \endentry
+    \entry{iso9001}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5b512ee8a59deb284ad0a6a035ba10b1}{%
+           family={{ISO}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{fullhash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{fullhashraw}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{bibnamehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authorbibnamehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authornamehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authorfullhash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authorfullhashraw}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \field{extraname}{1}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{ISO 9001:2015. Quality management systems — Requirements}
+      \field{year}{2015}
+    \endentry
+    \entry{iso12207}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5b512ee8a59deb284ad0a6a035ba10b1}{%
+           family={{ISO}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{fullhash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{fullhashraw}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{bibnamehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authorbibnamehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authornamehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authorfullhash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authorfullhashraw}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \field{extraname}{2}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{ISO/IEC/IEEE 12207:2017. Systems and software engineering — Software life cycle processes}
+      \field{year}{2017}
+    \endentry
+    \entry{iso20000_1}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5b512ee8a59deb284ad0a6a035ba10b1}{%
+           family={{ISO}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{fullhash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{fullhashraw}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{bibnamehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authorbibnamehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authornamehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authorfullhash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authorfullhashraw}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \field{extraname}{3}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{ISO/IEC 20000-1:2018. Information technology — Service management — Part 1: Service management system requirements}
+      \field{year}{2018}
+    \endentry
+    \entry{iso22301}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5b512ee8a59deb284ad0a6a035ba10b1}{%
+           family={{ISO}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{fullhash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{fullhashraw}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{bibnamehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authorbibnamehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authornamehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authorfullhash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authorfullhashraw}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \field{extraname}{4}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{ISO 22301. Security and resilience. Business continuity management systems}
+      \field{year}{2019}
+    \endentry
+    \entry{iso27001}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5b512ee8a59deb284ad0a6a035ba10b1}{%
+           family={{ISO}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{fullhash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{fullhashraw}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{bibnamehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authorbibnamehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authornamehash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authorfullhash}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \strng{authorfullhashraw}{5b512ee8a59deb284ad0a6a035ba10b1}
+      \field{extraname}{5}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{ISO/IEC 27001:2022. Information security, cybersecurity and privacy protection — Information security management systems — Requirements}
+      \field{year}{2022}
+    \endentry
     \entry{ley21719}{misc}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=cebe14c45771db4bb892353f5a668fc5}{%
@@ -212,6 +761,185 @@
       \field{labeltitlesource}{title}
       \field{title}{Ley N.º 21.719 sobre protección y tratamiento de datos personales}
       \field{year}{2024}
+    \endentry
+    \entry{ds43}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5b369b8183feef85ba3da1de1682dc54}{%
+           family={{Ministerio de Salud}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{5b369b8183feef85ba3da1de1682dc54}
+      \strng{fullhash}{5b369b8183feef85ba3da1de1682dc54}
+      \strng{fullhashraw}{5b369b8183feef85ba3da1de1682dc54}
+      \strng{bibnamehash}{5b369b8183feef85ba3da1de1682dc54}
+      \strng{authorbibnamehash}{5b369b8183feef85ba3da1de1682dc54}
+      \strng{authornamehash}{5b369b8183feef85ba3da1de1682dc54}
+      \strng{authorfullhash}{5b369b8183feef85ba3da1de1682dc54}
+      \strng{authorfullhashraw}{5b369b8183feef85ba3da1de1682dc54}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Decreto Supremo N.º 43. Aprueba el reglamento de almacenamiento de sustancias peligrosas}
+      \field{year}{2016}
+      \verb{urlraw}
+      \verb https://www.bcn.cl/leychile/navegar?idNorma=1088802
+      \endverb
+      \verb{url}
+      \verb https://www.bcn.cl/leychile/navegar?idNorma=1088802
+      \endverb
+    \endentry
+    \entry{ds298}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=acc54fd726de9f1741513109eab8d5d5}{%
+           family={{Ministerio de Transportes}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{acc54fd726de9f1741513109eab8d5d5}
+      \strng{fullhash}{acc54fd726de9f1741513109eab8d5d5}
+      \strng{fullhashraw}{acc54fd726de9f1741513109eab8d5d5}
+      \strng{bibnamehash}{acc54fd726de9f1741513109eab8d5d5}
+      \strng{authorbibnamehash}{acc54fd726de9f1741513109eab8d5d5}
+      \strng{authornamehash}{acc54fd726de9f1741513109eab8d5d5}
+      \strng{authorfullhash}{acc54fd726de9f1741513109eab8d5d5}
+      \strng{authorfullhashraw}{acc54fd726de9f1741513109eab8d5d5}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Decreto Supremo N.º 298. Reglamento de transporte de cargas peligrosas por calles y caminos}
+      \field{year}{1995}
+    \endentry
+    \entry{codigo_trabajo_25bis}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=4bea1cf2944a8ad58a1c159a33e3a06b}{%
+           family={{Ministerio del Trabajo}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Biblioteca del Congreso Nacional de Chile}%
+      }
+      \strng{namehash}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{fullhash}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{fullhashraw}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{bibnamehash}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{authorbibnamehash}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{authornamehash}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{authorfullhash}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{authorfullhashraw}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Decreto con Fuerza de Ley N.º 1. Texto refundido, coordinado y sistematizado del Código del Trabajo. Artículo 25 bis sobre jornada de choferes de vehículos de carga terrestre interurbana}
+      \field{year}{2003}
+      \verb{urlraw}
+      \verb https://www.bcn.cl/leychile/navegar?idNorma=207436
+      \endverb
+      \verb{url}
+      \verb https://www.bcn.cl/leychile/navegar?idNorma=207436
+      \endverb
+    \endentry
+    \entry{nist_sp800_207}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=a44b6b00e5eebd7494e1fd00658685e2}{%
+           family={{NIST}},
+           familyi={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{a44b6b00e5eebd7494e1fd00658685e2}
+      \strng{fullhash}{a44b6b00e5eebd7494e1fd00658685e2}
+      \strng{fullhashraw}{a44b6b00e5eebd7494e1fd00658685e2}
+      \strng{bibnamehash}{a44b6b00e5eebd7494e1fd00658685e2}
+      \strng{authorbibnamehash}{a44b6b00e5eebd7494e1fd00658685e2}
+      \strng{authornamehash}{a44b6b00e5eebd7494e1fd00658685e2}
+      \strng{authorfullhash}{a44b6b00e5eebd7494e1fd00658685e2}
+      \strng{authorfullhashraw}{a44b6b00e5eebd7494e1fd00658685e2}
+      \field{extraname}{1}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{NIST Special Publication 800-207. Zero Trust Architecture}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb https://doi.org/10.6028/NIST.SP.800-207
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.6028/NIST.SP.800-207
+      \endverb
+    \endentry
+    \entry{nist_csf2}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=a44b6b00e5eebd7494e1fd00658685e2}{%
+           family={{NIST}},
+           familyi={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{a44b6b00e5eebd7494e1fd00658685e2}
+      \strng{fullhash}{a44b6b00e5eebd7494e1fd00658685e2}
+      \strng{fullhashraw}{a44b6b00e5eebd7494e1fd00658685e2}
+      \strng{bibnamehash}{a44b6b00e5eebd7494e1fd00658685e2}
+      \strng{authorbibnamehash}{a44b6b00e5eebd7494e1fd00658685e2}
+      \strng{authornamehash}{a44b6b00e5eebd7494e1fd00658685e2}
+      \strng{authorfullhash}{a44b6b00e5eebd7494e1fd00658685e2}
+      \strng{authorfullhashraw}{a44b6b00e5eebd7494e1fd00658685e2}
+      \field{extraname}{2}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{NIST Special Publication 1300. The NIST Cybersecurity Framework (CSF) 2.0}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://doi.org/10.6028/NIST.CSWP.29
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.6028/NIST.CSWP.29
+      \endverb
+    \endentry
+    \entry{owasp_asvs}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=24b95a7fdad5a850196cd87546dcc70b}{%
+           family={{OWASP}},
+           familyi={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{24b95a7fdad5a850196cd87546dcc70b}
+      \strng{fullhash}{24b95a7fdad5a850196cd87546dcc70b}
+      \strng{fullhashraw}{24b95a7fdad5a850196cd87546dcc70b}
+      \strng{bibnamehash}{24b95a7fdad5a850196cd87546dcc70b}
+      \strng{authorbibnamehash}{24b95a7fdad5a850196cd87546dcc70b}
+      \strng{authornamehash}{24b95a7fdad5a850196cd87546dcc70b}
+      \strng{authorfullhash}{24b95a7fdad5a850196cd87546dcc70b}
+      \strng{authorfullhashraw}{24b95a7fdad5a850196cd87546dcc70b}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{OWASP Application Security Verification Standard 4.0 (ASVS)}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://owasp.org/www-project-application-security-verification-standard/
+      \endverb
+      \verb{url}
+      \verb https://owasp.org/www-project-application-security-verification-standard/
+      \endverb
     \endentry
   \enddatalist
 \endrefsection

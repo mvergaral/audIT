@@ -42,3 +42,12 @@
     \caption{\leyendaFont{#2}}
     \label{fig:#3}
   \end{figure}}
+
+% Entornos de alerta
+\newenvironment{alertInfo}
+  {\vspace{6pt}\begin{quote}\small\color{audITnavy}\rule{\linewidth}{0.8pt}\par\noindent\textbf{IMPORTANTE:}\enspace\ignorespaces}
+  {\par\noindent\rule{\linewidth}{0.8pt}\end{quote}\vspace{6pt}}
+
+\newenvironment{alertWarning}
+  {\vspace{6pt}\begin{quote}\small\color{audITnavy}\rule{\linewidth}{0.8pt}\par\noindent\textbf{ADVERTENCIA / LÍMITE:}\enspace\ignorespaces}
+  {\par\noindent\rule{\linewidth}{0.8pt}\end{quote}\vspace{6pt}}

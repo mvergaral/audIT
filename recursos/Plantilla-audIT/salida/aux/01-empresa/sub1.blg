@@ -1,17 +1,17 @@
-[0] Config.pm:328> INFO - This is Biber 2.21
-[0] Config.pm:331> INFO - Logfile is 'salida/aux/01-empresa/sub1.blg'
-[79] biber:342> INFO - === dom sep  6, 2026, 21:50:11
-[98] Biber.pm:421> INFO - Reading 'salida/aux/01-empresa/sub1.bcf'
-[192] Biber.pm:1002> INFO - Found 3 citekeys in bib section 0
-[217] Biber.pm:4487> INFO - Processing section 0
-[226] Biber.pm:4678> INFO - Looking for bibtex file 'comun/referencias.bib' for section 0
-[227] bibtex.pm:1713> INFO - LaTeX decoding ...
-[238] bibtex.pm:1519> INFO - Found BibTeX data source 'comun/referencias.bib'
-[298] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
-[298] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[298] Biber.pm:4307> INFO - Sorting list 'apa/apasortcite//global/global/global' of type 'entry' with template 'apa' and locale 'es-ES'
-[314] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
-[314] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[314] Biber.pm:4307> INFO - Sorting list 'apa/global//global/global/global' of type 'entry' with template 'apa' and locale 'es-ES'
-[317] bbl.pm:676> INFO - Writing 'salida/aux/01-empresa/sub1.bbl' with encoding 'UTF-8'
-[320] bbl.pm:779> INFO - Output to salida/aux/01-empresa/sub1.bbl
+[0] Config.pm:329> INFO - This is Biber 2.22
+[0] Config.pm:332> INFO - Logfile is 'salida/aux/01-empresa/sub1.blg'
+[44] biber:342> INFO - === dom sep  6, 2026, 22:32:49
+[56] Biber.pm:421> INFO - Reading 'salida/aux/01-empresa/sub1.bcf'
+[109] Biber.pm:1002> INFO - Found 16 citekeys in bib section 0
+[124] Biber.pm:4487> INFO - Processing section 0
+[132] Biber.pm:4680> INFO - Looking for bibtex file 'comun/referencias.bib' for section 0
+[133] bibtex.pm:1713> INFO - LaTeX decoding ...
+[142] bibtex.pm:1519> INFO - Found BibTeX data source 'comun/referencias.bib'
+[219] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[219] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[219] Biber.pm:4307> INFO - Sorting list 'apa/apasortcite//global/global/global' of type 'entry' with template 'apa' and locale 'es-ES'
+[242] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[243] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[243] Biber.pm:4307> INFO - Sorting list 'apa/global//global/global/global' of type 'entry' with template 'apa' and locale 'es-ES'
+[257] bbl.pm:676> INFO - Writing 'salida/aux/01-empresa/sub1.bbl' with encoding 'UTF-8'
+[263] bbl.pm:779> INFO - Output to salida/aux/01-empresa/sub1.bbl

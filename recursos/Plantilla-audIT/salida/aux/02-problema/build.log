@@ -1,12 +1,12 @@
 Rc files read:
   NONE
 Latexmk: This is Latexmk, John Collins, 15 June 2025. Version 4.87.
-No existing .aux file, so I'll make a simple one, and require run of *latex.
 Latexmk: applying rule 'pdflatex'...
 Rule 'pdflatex':  Reasons for rerun
-Category 'other':
-  Rerun of 'pdflatex' forced or previously required:
-    Reason or flag: 'Initial setup'
+Changed files or newly in use/created:
+  subdocumentos/02-problema/contenido.tex
+Category 'changed_user':
+  subdocumentos/02-problema/contenido.tex
 
 ------------
 Run number 1 of rule 'pdflatex'
@@ -19,8 +19,11 @@ This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (prel
 entering extended mode
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
-(/mnt/NuevoVol/FEP/Plantilla-audIT/subdocumentos/02-problema/main.tex
-(/mnt/NuevoVol/FEP/Plantilla-audIT/comun/inf-pucv.cls
+
+(/home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recursos
+/Plantilla-audIT/subdocumentos/02-problema/main.tex
+(/home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recursos
+/Plantilla-audIT/comun/inf-pucv.cls
 Document Class: inf-pucv 2023/04/24 sgarciad.me v0.1, Clase para la plantilla L
 aTeX con formato escuela INF PUCV.
 (/usr/share/texmf-dist/tex/latex/extsizes/extarticle.cls
@@ -93,7 +96,8 @@ consistent with the Color Model for PDF/A  on input line 3126.
 (/usr/share/texmf-dist/tex/latex/base/ot1enc.dfu)
 (/usr/share/texmf-dist/tex/latex/base/t1enc.dfu)
 (/usr/share/texmf-dist/tex/latex/base/ts1enc.dfu))
-(/mnt/NuevoVol/FEP/Plantilla-audIT/comun/styles.sty
+(/home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recursos
+/Plantilla-audIT/comun/styles.sty
 (/usr/share/texmf-dist/tex/latex/base/inputenc.sty)
 (/usr/share/texmf-dist/tex/latex/base/fontenc.sty)
 (/usr/share/texmf-dist/tex/generic/babel/babel.sty
@@ -323,21 +327,25 @@ rning from the lineno package on input line 36.
 (/usr/share/texmf-dist/tex/latex/pdfpages/pppdftex.def))
 (/usr/share/texmf-dist/tex/latex/tocloft/tocloft.sty)
 (/usr/share/texmf-dist/tex/latex/tools/tabularx.sty))
-(/mnt/NuevoVol/FEP/Plantilla-audIT/comun/instancia.tex)
-(/mnt/NuevoVol/FEP/Plantilla-audIT/subdocumentos/02-problema/meta.tex)
-(/mnt/NuevoVol/FEP/Plantilla-audIT/comun/preambulo.tex
+(/home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recursos
+/Plantilla-audIT/comun/instancia.tex)
+(/home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recursos
+/Plantilla-audIT/subdocumentos/02-problema/meta.tex)
+(/home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recursos
+/Plantilla-audIT/comun/preambulo.tex
 (/usr/share/texmf-dist/tex/latex/import/import.sty)
 (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
 calc.code.tex) (/usr/share/texmf-dist/tex/latex/pdflscape/pdflscape.sty
 (/usr/share/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.sty
 (/usr/share/texmf-dist/tex/latex/graphics/lscape.sty)))
 (/usr/share/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty))
-(/mnt/NuevoVol/FEP/Plantilla-audIT/comun/portada.tex)
-(salida/aux/02-problema/sub2.aux)
+(/home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recursos
+/Plantilla-audIT/comun/portada.tex) (salida/aux/02-problema/sub2.aux)
 (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 ) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 (/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+(salida/aux/02-problema/sub2.out) (salida/aux/02-problema/sub2.out)
 Package pgfplots notification 'compat/show suggested version=true': you might b
 enefit from \pgfplotsset{compat=1.18} (current compat level: 1.17).
 
@@ -346,7 +354,7 @@ enefit from \pgfplotsset{compat=1.18} (current compat level: 1.17).
 (/usr/share/texmf-dist/tex/latex/biblatex-apa/spanish-apa.lbx
 (/usr/share/texmf-dist/tex/latex/biblatex/lbx/spanish.lbx)
 (/usr/share/texmf-dist/tex/latex/biblatex/lbx/spanish.lbx))
-No file sub2.bbl.
+(salida/aux/02-problema/sub2.bbl)
 
 LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <19> not available
 (Font)              size <17.28> substituted on input line 8.
@@ -355,9 +363,8 @@ LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <19> not available
 LaTeX Font Warning: Font shape `T1/cmr/bx/n' in size <19> not available
 (Font)              size <17.28> substituted on input line 8.
 
-[1{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/t
-exmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} </mnt/NuevoVol/FEP/Plantil
-la-audIT/comun/assets/portada.jpeg>]
+[1 </home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recur
+sos/Plantilla-audIT/comun/assets/portada.jpeg>]
 
 LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <28> not available
 (Font)              size <29.86> substituted on input line 9.
@@ -369,16 +376,17 @@ LaTeX Font Warning: Font shape `T1/cmr/bx/n' in size <28> not available
 
 Overfull \hbox (28.45274pt too wide) in paragraph at lines 9--9
 [][][] 
-[2]
-No file sub2.toc.
-
+[2] (salida/aux/02-problema/sub2.toc
+(/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd))
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.9 \fichaSubdocumento
                        [1]
-(/mnt/NuevoVol/FEP/Plantilla-audIT/subdocumentos/02-problema/contenido.tex
+(/home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recursos
+/Plantilla-audIT/subdocumentos/02-problema/contenido.tex
 
 LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <86> not available
 (Font)              size <51.59> substituted on input line 1.
@@ -388,44 +396,806 @@ LaTeX Font Warning: Font shape `T1/cmr/bx/n' in size <86> not available
 (Font)              size <51.59> substituted on input line 1.
 
 
-LaTeX Warning: Citation 'bases_caso10_2026' on page 2 undefined on input line 1
-0.
-
-
-LaTeX Warning: Citation 'ley20123' on page 2 undefined on input line 12.
-
-
 pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.39 \end{tablaAudit}
-                      [2] [3]
+l.10 
+      [2]
+Underfull \hbox (badness 6396) in paragraph at lines 27--28
+[]|\T1/cmr/m/n/10.95 18 trac-to-ca-mio-nes ha-bi-li-ta-dos
+[3] [4] [5]
+Underfull \hbox (badness 2142) in paragraph at lines 74--75
+[]|\T1/cmr/m/n/10.95 34 trac-to-ca-mio-nes de ter-ce-ros
+ [6] [7]
+Underfull \hbox (badness 10000) in paragraph at lines 103--104
+[]|\T1/cmr/m/n/10.95 31$ $% del in-gre-so to-tal
 
-LaTeX Warning: Citation 'ds298' on page 4 undefined on input line 67.
+Underfull \hbox (badness 10000) in paragraph at lines 106--107
+[]|\T1/cmr/m/n/10.95 14$ $% del in-gre-so ($10.920M
+ [8]
+Underfull \hbox (badness 2662) in paragraph at lines 122--122
+[]|\T1/cmr/m/n/10.95 Exigencias con-di-cio-nan-tes del clien-te prin-ci-pal
 
- [4]
+Underfull \hbox (badness 10000) in paragraph at lines 122--123
+[]|\T1/cmr/m/n/10.95 Trazabilidad 100$ $%, po-si-ción
 
-LaTeX Warning: Citation 'iso14083' on page 5 undefined on input line 99.
+Underfull \hbox (badness 10000) in paragraph at lines 123--124
+[]|\T1/cmr/m/n/10.95 19$ $% del in-gre-so to-tal
 
+Underfull \hbox (badness 10000) in paragraph at lines 123--124
+\T1/cmr/m/n/10.95 ($14.820.000.000 CLP anua-
+ [9] [10] [11]
+Underfull \hbox (badness 10000) in paragraph at lines 170--170
+[]|\T1/cmr/m/n/10.95 Terminal San
 
-LaTeX Warning: Citation 'glec2023' on page 5 undefined on input line 99.
+Underfull \hbox (badness 3919) in paragraph at lines 170--170
+\T1/cmr/m/n/10.95 co pun-to de
 
+Underfull \hbox (badness 10000) in paragraph at lines 170--170
+\T1/cmr/m/n/10.95 in-ter-ven-ción
 
-LaTeX Warning: Citation 'codigo_trabajo_25bis' on page 5 undefined on input lin
-e 103.
+Underfull \hbox (badness 7869) in paragraph at lines 171--171
+[]|\T1/cmr/m/n/10.95 Terminales Re-
 
- [5]) [6]
+Underfull \hbox (badness 1648) in paragraph at lines 171--171
+\T1/cmr/m/n/10.95 to-fa-gas-ta, Tal-ca, Los
 
-LaTeX Warning: Empty bibliography on input line 14.
+Underfull \hbox (badness 10000) in paragraph at lines 171--171
+\T1/cmr/m/n/10.95 te geo-grá-fi-co
 
-(salida/aux/02-problema/sub2.aux)
+Underfull \hbox (badness 10000) in paragraph at lines 171--171
+\T1/cmr/m/n/10.95 de trans-mi-
+
+Underfull \hbox (badness 10000) in paragraph at lines 172--172
+[]|\T1/cmr/m/n/10.95 Mantenimiento pre-
+
+Underfull \hbox (badness 6188) in paragraph at lines 172--172
+\T1/cmr/m/n/10.95 ven-ti-vo y co-rrec-ti-vo
+
+Underfull \hbox (badness 1831) in paragraph at lines 172--172
+\T1/cmr/m/n/10.95 de flo-ta pro-pia (358
+
+Underfull \hbox (badness 10000) in paragraph at lines 172--172
+[]|\T1/cmr/m/n/10.95 Alta. Sos-
+
+Underfull \hbox (badness 10000) in paragraph at lines 172--172
+\T1/cmr/m/n/10.95 tie-nen dis-
+
+Underfull \hbox (badness 10000) in paragraph at lines 172--172
+\T1/cmr/m/n/10.95 po-ni-bi-li-dad
+
+Underfull \hbox (badness 10000) in paragraph at lines 172--172
+\T1/cmr/m/n/10.95 me-cá-ni-ca de
+
+Underfull \hbox (badness 10000) in paragraph at lines 172--172
+\T1/cmr/m/n/10.95 ac-ti-vos pro-
+
+Underfull \hbox (badness 10000) in paragraph at lines 173--173
+[]|\T1/cmr/m/n/10.95 Talleres Ex-ter-
+
+Underfull \hbox (badness 10000) in paragraph at lines 173--173
+[]|\T1/cmr/m/n/10.95 Alta. In-ter-
+
+Underfull \hbox (badness 10000) in paragraph at lines 173--173
+\T1/cmr/m/n/10.95 ven-cio-nes no
+
+Underfull \hbox (badness 10000) in paragraph at lines 173--173
+\T1/cmr/m/n/10.95 re-gis-tra-das
+
+Underfull \hbox (badness 1496) in paragraph at lines 173--173
+\T1/cmr/m/n/10.95 que de-gra-dan
+
+Underfull \hbox (badness 10000) in paragraph at lines 174--174
+[]|\T1/cmr/m/n/10.95 Operación in-ter-na-
+
+Underfull \hbox (badness 10000) in paragraph at lines 174--174
+\T1/cmr/m/n/10.95 cio-nal bi-na-cio-nal
+
+Underfull \hbox (badness 10000) in paragraph at lines 174--174
+[]|\T1/cmr/m/n/10.95 Infraestructura adua-ne-ra
+
+Underfull \hbox (badness 10000) in paragraph at lines 174--174
+\T1/cmr/m/n/10.95 bi-na-cio-nal. Cie-rres por
+
+Underfull \hbox (badness 4647) in paragraph at lines 174--174
+\T1/cmr/m/n/10.95 nie-ve de has-ta 12 días
+
+Underfull \hbox (badness 1210) in paragraph at lines 174--174
+\T1/cmr/m/n/10.95 dad cli-má-ti-ca
+
+Underfull \hbox (badness 10000) in paragraph at lines 176--176
+\T1/cmr/m/n/10.95 ob-je-ción de
+
+Underfull \hbox (badness 10000) in paragraph at lines 176--176
+\T1/cmr/m/n/10.95 so-bre-es-ta-días
+
+Underfull \hbox (badness 3049) in paragraph at lines 177--177
+[]|\T1/cmr/m/n/10.95 Ambiente hos-til; prohi-bi-
+
+Underfull \hbox (badness 4647) in paragraph at lines 177--177
+\T1/cmr/m/n/10.95 ción le-gal de ma-ni-pu-lar
+
+Underfull \hbox (badness 10000) in paragraph at lines 177--178
+[]|\T1/cmr/m/n/10.95 Crítica.
+
+Underfull \hbox (badness 10000) in paragraph at lines 177--178
+\T1/cmr/m/n/10.95 Res-tric-ción
+
+Underfull \hbox (badness 10000) in paragraph at lines 177--178
+\T1/cmr/m/n/10.95 ab-so-lu-ta de
+
+Underfull \hbox (badness 10000) in paragraph at lines 177--178
+\T1/cmr/m/n/10.95 in-ter-ac-ción
+
+Underfull \hbox (badness 10000) in paragraph at lines 177--178
+\T1/cmr/m/n/10.95 (([]Mi-nis-te-rio
+
+Underfull \hbox (badness 10000) in paragraph at lines 177--178
+\T1/cmr/m/n/10.95 de Trans-
+
+Underfull \hbox (badness 10000) in paragraph at lines 177--178
+\T1/cmr/m/n/10.95 por-tes y
+
+Underfull \hbox (badness 10000) in paragraph at lines 177--178
+\T1/cmr/m/n/10.95 Te-le-co-mu-ni-ca-
+ [12]
+Overfull \hbox (0.28471pt too wide) in paragraph at lines 180--180
+|[]\T1/cmr/bx/n/17.28 Caracterización de ac-to-res y ma-triz de ten-sio-nes ope
+-
+[13] [14] [15] [16]
+Overfull \hbox (11.10811pt too wide) in paragraph at lines 254--255
+\T1/cmr/m/n/12 cap-tu-ra po-si-cio-nal y re-so-lu-ción ope-ra-ti-va de los ba-c
+hes de co-nec-ti-vi-dad sa-te-li-tal/celular. 
+[17]
+Underfull \hbox (badness 1286) in paragraph at lines 279--279
+[]|\T1/cmr/m/n/10.95 E. Val-de-be-
+
+Underfull \hbox (badness 4792) in paragraph at lines 279--279
+\T1/cmr/m/n/10.95 ca; re-ten-ción de
+
+Underfull \hbox (badness 6348) in paragraph at lines 279--279
+[]|\T1/cmr/m/n/10.95 Exposición pe-nal
+
+Underfull \hbox (badness 10000) in paragraph at lines 279--279
+\T1/cmr/m/n/10.95 por re-cha-zo de
+
+Underfull \hbox (badness 1867) in paragraph at lines 279--279
+\T1/cmr/m/n/10.95 to y cum-pli-mien-to
+
+Underfull \hbox (badness 1596) in paragraph at lines 280--280
+\T1/cmr/m/n/10.95 te sin ki-ló-me-tros
+
+Underfull \hbox (badness 3364) in paragraph at lines 280--280
+\T1/cmr/m/n/10.95 va-cíos; va-li-da-ción
+
+Underfull \hbox (badness 10000) in paragraph at lines 280--280
+\T1/cmr/m/n/10.95 blo-quean-te pre-
+
+Underfull \hbox (badness 10000) in paragraph at lines 280--280
+[]|\T1/cmr/m/n/10.95 Sistemas ex-ce-si-
+
+Underfull \hbox (badness 10000) in paragraph at lines 280--280
+\T1/cmr/m/n/10.95 va-men-te rí-gi-dos
+
+Underfull \hbox (badness 2538) in paragraph at lines 280--280
+[]|\T1/cmr/m/n/10.95 Visibilidad in-te-gra-
+
+Underfull \hbox (badness 1867) in paragraph at lines 280--280
+\T1/cmr/m/n/10.95 nei-dad del equi-po,
+
+Underfull \hbox (badness 10000) in paragraph at lines 281--281
+[]|\T1/cmr/m/n/10.95 Respeto de sus
+
+Underfull \hbox (badness 3396) in paragraph at lines 281--281
+[]|\T1/cmr/m/n/10.95 Alertas in-opor-tu-
+
+Underfull \hbox (badness 10000) in paragraph at lines 281--281
+\T1/cmr/m/n/10.95 nas; ser san-cio-
+
+Underfull \hbox (badness 10000) in paragraph at lines 281--281
+\T1/cmr/m/n/10.95 na-da por fa-llas
+
+Underfull \hbox (badness 2359) in paragraph at lines 281--281
+[]|\T1/cmr/m/n/10.95 Operación sin dis-
+
+Underfull \hbox (badness 5231) in paragraph at lines 282--282
+[]|\T1/cmr/m/n/10.95 Autonomía so-bre
+
+Underfull \hbox (badness 4726) in paragraph at lines 282--282
+\T1/cmr/m/n/10.95 su ac-ti-vo; co-bro
+
+Underfull \hbox (badness 2158) in paragraph at lines 282--282
+\T1/cmr/m/n/10.95 ra pa-ra ter-ce-ros;
+
+Underfull \hbox (badness 1383) in paragraph at lines 282--282
+\T1/cmr/m/n/10.95 pe-na-li-za-cio-nes in-
+
+Underfull \hbox (badness 10000) in paragraph at lines 282--282
+[]|\T1/cmr/m/n/10.95 Muy Al-ta
+
+Underfull \hbox (badness 4660) in paragraph at lines 282--282
+\T1/cmr/m/n/10.95 ción; trans-pa-ren-cia
+
+Underfull \hbox (badness 10000) in paragraph at lines 283--283
+[]|\T1/cmr/m/n/10.95 G. Os-san-
+
+Underfull \hbox (badness 10000) in paragraph at lines 283--283
+[]|\T1/cmr/m/n/10.95 Erradicación de
+
+Underfull \hbox (badness 10000) in paragraph at lines 283--283
+\T1/cmr/m/n/10.95 sub-si-dios cru-
+
+Underfull \hbox (badness 10000) in paragraph at lines 283--283
+\T1/cmr/m/n/10.95 za-dos; cos-teo
+
+Underfull \hbox (badness 2401) in paragraph at lines 283--283
+\T1/cmr/m/n/10.95 ana-lí-ti-co por ru-
+
+Underfull \hbox (badness 3000) in paragraph at lines 283--283
+[]|\T1/cmr/m/n/10.95 Mantener con-tra-
+
+Underfull \hbox (badness 1515) in paragraph at lines 283--283
+[]|\T1/cmr/m/n/10.95 Integración opor-tu-
+
+Underfull \hbox (badness 6252) in paragraph at lines 283--283
+\T1/cmr/m/n/10.95 odó-me-tro y fle-tes
+
+Underfull \hbox (badness 10000) in paragraph at lines 284--284
+[]|\T1/cmr/m/n/10.95 Mantenimiento
+
+Underfull \hbox (badness 10000) in paragraph at lines 284--284
+[]|\T1/cmr/m/n/10.95 Daños inad-ver-ti-
+
+Underfull \hbox (badness 10000) in paragraph at lines 284--284
+\T1/cmr/m/n/10.95 no re-gis-tra-das;
+
+Underfull \hbox (badness 4416) in paragraph at lines 284--284
+\T1/cmr/m/n/10.95 ins-ta-la-cio-nes ma-
+
+Underfull \hbox (badness 1466) in paragraph at lines 284--284
+[]|\T1/cmr/m/n/10.95 Lectura re-mo-ta de
+
+Underfull \hbox (badness 2990) in paragraph at lines 285--285
+[]|\T1/cmr/m/n/10.95 Validación vin-cu-
+
+Underfull \hbox (badness 10000) in paragraph at lines 285--285
+[]|\T1/cmr/m/n/10.95 Nuevo si-nies-tro
+
+Underfull \hbox (badness 10000) in paragraph at lines 285--285
+\T1/cmr/m/n/10.95 con le-sio-nes o
+
+Underfull \hbox (badness 10000) in paragraph at lines 285--285
+[]|\T1/cmr/m/n/10.95 Alta (ve-to
+
+Underfull \hbox (badness 10000) in paragraph at lines 285--285
+[]|\T1/cmr/m/n/10.95 Repositorio uni-fi-
+
+Underfull \hbox (badness 5878) in paragraph at lines 285--285
+\T1/cmr/m/n/10.95 ca-do de vi-gen-cias
+
+Underfull \hbox (badness 7168) in paragraph at lines 285--285
+\T1/cmr/m/n/10.95 con ca-pa-ci-dad de
+
+Underfull \hbox (badness 4181) in paragraph at lines 285--285
+\T1/cmr/m/n/10.95 in-ter-cep-ción pre-via
+
+Underfull \hbox (badness 10000) in paragraph at lines 286--286
+[]|\T1/cmr/m/n/10.95 Cumplimiento
+
+Underfull \hbox (badness 10000) in paragraph at lines 286--286
+\T1/cmr/m/n/10.95 (CO$[]$e, tra-za-bi-
+
+Underfull \hbox (badness 10000) in paragraph at lines 286--286
+\T1/cmr/m/n/10.95 li-dad, e-Docs,
+
+Underfull \hbox (badness 5203) in paragraph at lines 286--286
+\T1/cmr/m/n/10.95 ti-fi-ca-cio-nes in-ter-
+
+Underfull \hbox (badness 10000) in paragraph at lines 286--286
+[]|\T1/cmr/m/n/10.95 Extrema
+
+Underfull \hbox (badness 2012) in paragraph at lines 286--286
+[]|\T1/cmr/m/n/10.95 Reportería ve-ri-fi-ca-
+
+Underfull \hbox (badness 1609) in paragraph at lines 286--286
+\T1/cmr/m/n/10.95 da de emi-sio-nes e
+
+Underfull \hbox (badness 10000) in paragraph at lines 286--286
+\T1/cmr/m/n/10.95 his-to-rial fi-de-digno
+
+Underfull \hbox (badness 4416) in paragraph at lines 286--286
+\T1/cmr/m/n/10.95 del 100$ $% de los
+
+Underfull \hbox (badness 1502) in paragraph at lines 287--287
+[]|\T1/cmr/m/n/10.95 Coherencia en la
+
+Underfull \hbox (badness 2042) in paragraph at lines 287--287
+\T1/cmr/m/n/10.95 vi-sua-li-za-ción geo-
+
+Underfull \hbox (badness 10000) in paragraph at lines 287--287
+[]|\T1/cmr/m/n/10.95 Intermitencias
+
+Underfull \hbox (badness 3547) in paragraph at lines 287--287
+\T1/cmr/m/n/10.95 cró-ni-cas en ru-ta
+
+Underfull \hbox (badness 1466) in paragraph at lines 287--287
+\T1/cmr/m/n/10.95 nor-te; ges-tión de
+
+Underfull \hbox (badness 1424) in paragraph at lines 287--287
+[]|\T1/cmr/m/n/10.95 Alta (téc-ni-
+
+Underfull \hbox (badness 2409) in paragraph at lines 287--287
+[]|\T1/cmr/m/n/10.95 Vista uni-fi-ca-da de
+
+Underfull \hbox (badness 3612) in paragraph at lines 287--287
+\T1/cmr/m/n/10.95 geo-lo-ca-li-za-ción que
+
+Underfull \hbox (badness 10000) in paragraph at lines 288--288
+[]|\T1/cmr/m/n/10.95 M. Ri-quel-
+
+Underfull \hbox (badness 2753) in paragraph at lines 288--289
+[]|\T1/cmr/m/n/10.95 Resiliencia ope-ra-ti-
+ [18 </home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/rec
+ursos/Plantilla-audIT/subdocumentos/02-problema/Img.png (PNG copy)>] [19]
+[20]
+Underfull \hbox (badness 3735) in paragraph at lines 305--305
+[]|\T1/cmr/bx/n/10.95 Tensión Ope-
+
+Underfull \hbox (badness 3690) in paragraph at lines 305--305
+[]|\T1/cmr/bx/n/10.95 Actores In-vo-lu-
+
+Underfull \hbox (badness 1694) in paragraph at lines 307--307
+\T1/cmr/m/n/10.95 Trans-por-tis-tas ex-
+
+Underfull \hbox (badness 2538) in paragraph at lines 307--307
+[]|\T1/cmr/m/n/10.95 Geolocalización cir-cuns-
+
+Underfull \hbox (badness 4156) in paragraph at lines 308--308
+[]|\T1/cmr/m/n/10.95 3. Jor-na-da vs.
+
+Underfull \hbox (badness 4779) in paragraph at lines 309--309
+[]|\T1/cmr/m/n/10.95 4. Ren-ta-bi-li-dad
+
+Underfull \hbox (badness 7925) in paragraph at lines 309--309
+[]|\T1/cmr/m/n/10.95 Destrucción con-ti-nua
+
+Underfull \hbox (badness 4872) in paragraph at lines 309--309
+[]|\T1/cmr/m/n/10.95 Consolidación opor-tu-na
+
+Underfull \hbox (badness 10000) in paragraph at lines 310--310
+[]|\T1/cmr/m/n/10.95 Fallas en ru-ta; 61
+
+Underfull \hbox (badness 10000) in paragraph at lines 311--311
+[]|\T1/cmr/m/n/10.95 6. Go-ber-nan-za
+
+Underfull \hbox (badness 4353) in paragraph at lines 311--312
+[]|\T1/cmr/m/n/10.95 Esquema de be-ne-fi-cios
+ [21] [22]
+Underfull \hbox (badness 10000) in paragraph at lines 333--333
+[]|\T1/cmr/m/n/10.95 Ceguera de
+
+Underfull \hbox (badness 1215) in paragraph at lines 333--333
+[]|\T1/cmr/m/n/10.95 0 des-car-gas de
+
+Underfull \hbox (badness 10000) in paragraph at lines 333--333
+\T1/cmr/m/n/10.95 ta-có-gra-fo; 258
+
+Underfull \hbox (badness 10000) in paragraph at lines 333--333
+[]|\T1/cmr/m/n/10.95 Falta de ex-
+
+Underfull \hbox (badness 10000) in paragraph at lines 333--333
+\T1/cmr/m/n/10.95 trac-ción y
+
+Underfull \hbox (badness 10000) in paragraph at lines 333--333
+\T1/cmr/m/n/10.95 ve-ri-fi-ca-ción
+
+Underfull \hbox (badness 10000) in paragraph at lines 333--333
+[]|\T1/cmr/m/n/10.95 Incumplimiento Art.
+
+Underfull \hbox (badness 10000) in paragraph at lines 333--333
+[]|\T1/cmr/m/n/10.95 Caps. 1,
+
+Underfull \hbox (badness 10000) in paragraph at lines 334--334
+[]|\T1/cmr/m/n/10.95 Hemorragia
+
+Underfull \hbox (badness 4543) in paragraph at lines 334--334
+\T1/cmr/m/n/10.95 cíos (10,66 M
+
+Underfull \hbox (badness 10000) in paragraph at lines 335--335
+[]|\T1/cmr/m/n/10.95 Erosión So-
+
+Underfull \hbox (badness 10000) in paragraph at lines 335--335
+[]|\T1/cmr/m/n/10.95 $241,4M/año
+
+Underfull \hbox (badness 2922) in paragraph at lines 335--335
+\T1/cmr/m/n/10.95 fu-ta-ble de lle-
+
+Underfull \hbox (badness 6236) in paragraph at lines 335--335
+\T1/cmr/m/n/10.95 ga-da/salida en
+
+Underfull \hbox (badness 10000) in paragraph at lines 336--336
+[]|\T1/cmr/m/n/10.95 Sobrepeso
+
+Underfull \hbox (badness 1895) in paragraph at lines 336--336
+\T1/cmr/m/n/10.95 2.556 h-camión
+
+Underfull \hbox (badness 10000) in paragraph at lines 336--336
+\T1/cmr/m/n/10.95 per-di-das en
+
+Underfull \hbox (badness 5622) in paragraph at lines 336--336
+[]|\T1/cmr/m/n/10.95 Infracción D.S. 158;
+
+Underfull \hbox (badness 3780) in paragraph at lines 336--336
+\T1/cmr/m/n/10.95 mul-tas e in-mo-vi-li-za-
+
+Underfull \hbox (badness 10000) in paragraph at lines 337--337
+[]|\T1/cmr/m/n/10.95 Subsidios
+
+Underfull \hbox (badness 6725) in paragraph at lines 337--337
+[]|\T1/cmr/m/n/10.95 3 con-tra-tos a
+
+Underfull \hbox (badness 6641) in paragraph at lines 337--337
+\T1/cmr/m/n/10.95 des-fa-se de 40
+
+Underfull \hbox (badness 2435) in paragraph at lines 337--337
+[]|\T1/cmr/m/n/10.95 Destrucción de va-lor
+
+Underfull \hbox (badness 10000) in paragraph at lines 337--337
+[]|\T1/cmr/m/n/10.95 Caps. 1,
+
+Underfull \hbox (badness 10000) in paragraph at lines 338--338
+[]|\T1/cmr/m/n/10.95 Desgobierno
+
+Underfull \hbox (badness 10000) in paragraph at lines 338--338
+\T1/cmr/m/n/10.95 en 4 Ex-cel;
+
+Underfull \hbox (badness 5622) in paragraph at lines 338--338
+\T1/cmr/m/n/10.95 in-frac-ción haz-
+
+Underfull \hbox (badness 10000) in paragraph at lines 338--338
+[]|\T1/cmr/m/n/10.95 Caps. 1,
+
+Underfull \hbox (badness 10000) in paragraph at lines 339--339
+[]|\T1/cmr/m/n/10.95 Hardware
+
+Underfull \hbox (badness 10000) in paragraph at lines 339--339
+[]|\T1/cmr/m/n/10.95 61 CAN-bus
+
+Underfull \hbox (badness 10000) in paragraph at lines 339--339
+\T1/cmr/m/n/10.95 inac-ti-vos; 3
+
+Underfull \hbox (badness 10000) in paragraph at lines 339--339
+\T1/cmr/m/n/10.95 GPS dis-pa-res;
+
+Underfull \hbox (badness 7685) in paragraph at lines 339--339
+\T1/cmr/m/n/10.95 trac-ción; sis-te-
+
+Underfull \hbox (badness 1888) in paragraph at lines 339--339
+[]|\T1/cmr/m/n/10.95 Pérdida de ana-lí-ti-ca;
+
+Underfull \hbox (badness 10000) in paragraph at lines 339--339
+[]|\T1/cmr/m/n/10.95 Caps.
+
+Underfull \hbox (badness 10000) in paragraph at lines 339--339
+\T1/cmr/m/n/10.95 4.10, 5,
+
+Underfull \hbox (badness 8094) in paragraph at lines 340--340
+[]|\T1/cmr/m/n/10.95 Fricción Li-
+
+Underfull \hbox (badness 2941) in paragraph at lines 340--340
+\T1/cmr/m/n/10.95 per-so-nas; 11$ $%
+
+Underfull \hbox (badness 2435) in paragraph at lines 340--340
+\T1/cmr/m/n/10.95 vo ma-nual sin
+
+Underfull \hbox (badness 1824) in paragraph at lines 340--340
+\T1/cmr/m/n/10.95 cru-ces au-to-má-
+
+Underfull \hbox (badness 10000) in paragraph at lines 340--340
+[]|\T1/cmr/m/n/10.95 Caps.
+
+Underfull \hbox (badness 4779) in paragraph at lines 341--341
+[]|\T1/cmr/m/n/10.95 22$ $% ca-mio-nes
+
+Underfull \hbox (badness 1688) in paragraph at lines 341--341
+\T1/cmr/m/n/10.95 1 vez/mes por
+
+Overfull \hbox (0.6054pt too wide) in paragraph at lines 341--341
+[]|\T1/cmr/m/n/10.95 Subcontratación
+
+Underfull \hbox (badness 4531) in paragraph at lines 341--341
+\T1/cmr/m/n/10.95 sin su-per-vi-sión
+
+Underfull \hbox (badness 2512) in paragraph at lines 342--342
+\T1/cmr/m/n/10.95 (CO$[]$e, e-Docs,
+
+Underfull \hbox (badness 3168) in paragraph at lines 342--342
+\T1/cmr/m/n/10.95 tual y exi-gen-
+
+Underfull \hbox (badness 10000) in paragraph at lines 342--342
+[]|\T1/cmr/m/n/10.95 Riesgo de pér-di-da
+
+Underfull \hbox (badness 10000) in paragraph at lines 342--343
+[]|\T1/cmr/m/n/10.95 Caps. 1,
+ [23]
+Overfull \hbox (1.42781pt too wide) in paragraph at lines 345--345
+|[]\T1/cmr/bx/n/17.28 Registro de su-pues-tos ope-ra-cio-na-les y ma-peo exhaus
+-
+[24]
+Underfull \hbox (badness 2735) in paragraph at lines 356--356
+[]|\T1/cmr/bx/n/10.95 Supuesto del En-torno
+
+Underfull \hbox (badness 10000) in paragraph at lines 356--356
+[]|\T1/cmr/bx/n/10.95 Impacto en
+
+Underfull \hbox (badness 4366) in paragraph at lines 357--357
+\T1/cmr/m/n/10.95 tis-tas que ma-ne-jan
+
+Underfull \hbox (badness 1019) in paragraph at lines 357--357
+\T1/cmr/m/n/10.95 DT, des-car-tan-do la me-ra
+
+Underfull \hbox (badness 7238) in paragraph at lines 357--357
+\T1/cmr/m/n/10.95 dad sub-si-dia-ria
+
+Underfull \hbox (badness 2790) in paragraph at lines 357--357
+\T1/cmr/m/n/10.95 (([]Mi-nis-te-rio del
+
+Underfull \hbox (badness 10000) in paragraph at lines 358--358
+\T1/cmr/m/n/10.95 trans-por-tis-tas por
+
+Underfull \hbox (badness 6173) in paragraph at lines 358--358
+\T1/cmr/m/n/10.95 com-par-tir da-tos, y
+
+Underfull \hbox (badness 1365) in paragraph at lines 358--358
+[]|\T1/cmr/m/n/10.95 Requiere es-que-ma de va-
+
+Underfull \hbox (badness 1596) in paragraph at lines 358--358
+\T1/cmr/m/n/10.95 ma de dis-po-ni-
+
+Underfull \hbox (badness 5985) in paragraph at lines 359--359
+[]|\T1/cmr/m/n/10.95 Deuda Téc-
+
+Underfull \hbox (badness 7133) in paragraph at lines 359--359
+[]|\T1/cmr/m/n/10.95 Qué ha-cer con el
+
+Underfull \hbox (badness 4416) in paragraph at lines 359--359
+\T1/cmr/m/n/10.95 TMS de 2013: re-
+
+Underfull \hbox (badness 10000) in paragraph at lines 359--359
+[]|\T1/cmr/m/n/10.95 Obsolescencia
+
+Underfull \hbox (badness 6396) in paragraph at lines 359--359
+\T1/cmr/m/n/10.95 ba-sal que res-
+
+Underfull \hbox (badness 10000) in paragraph at lines 360--360
+[]|\T1/cmr/m/n/10.95 Incapacidad de
+
+Underfull \hbox (badness 5771) in paragraph at lines 360--360
+\T1/cmr/m/n/10.95 ase-gu-rar acuer-
+
+Underfull \hbox (badness 10000) in paragraph at lines 362--362
+[]|\T1/cmr/m/n/10.95 Bloqueo de via-je
+
+Underfull \hbox (badness 7558) in paragraph at lines 362--362
+\T1/cmr/m/n/10.95 li-za-ción crí-ti-co;
+
+Underfull \hbox (badness 2435) in paragraph at lines 362--362
+\T1/cmr/m/n/10.95 im-pac-to di-rec-to
+
+Underfull \hbox (badness 1019) in paragraph at lines 362--362
+\T1/cmr/m/n/10.95 en com-pro-mi-sos
+
+Underfull \hbox (badness 1062) in paragraph at lines 363--363
+\T1/cmr/m/n/10.95 ten-ción en ber-
+
+Underfull \hbox (badness 10000) in paragraph at lines 364--364
+[]|\T1/cmr/m/n/10.95 Registro de lle-
+
+Underfull \hbox (badness 10000) in paragraph at lines 364--364
+\T1/cmr/m/n/10.95 ga-das/salidas en
+
+Underfull \hbox (badness 10000) in paragraph at lines 364--364
+[]|\T1/cmr/m/n/10.95 Objeción del
+
+Underfull \hbox (badness 5637) in paragraph at lines 364--364
+\T1/cmr/m/n/10.95 de so-bre-es-ta-día
+
+Underfull \hbox (badness 2452) in paragraph at lines 364--364
+\T1/cmr/m/n/10.95 ($241,4M anua-
+
+Underfull \hbox (badness 10000) in paragraph at lines 365--365
+[]|\T1/cmr/m/n/10.95 Inmovilización
+
+Underfull \hbox (badness 10000) in paragraph at lines 366--366
+[]|\T1/cmr/m/n/10.95 Impacto se-ve-ro
+
+Underfull \hbox (badness 10000) in paragraph at lines 366--366
+\T1/cmr/m/n/10.95 au-men-to del
+
+Underfull \hbox (badness 3525) in paragraph at lines 367--367
+\T1/cmr/m/n/10.95 lí-nea vs. al-ma-ce-na-
+
+Underfull \hbox (badness 4543) in paragraph at lines 367--367
+[]|\T1/cmr/m/n/10.95 Priorizar even-tos crí-ti-cos
+
+Underfull \hbox (badness 10000) in paragraph at lines 367--367
+[]|\T1/cmr/m/n/10.95 Saturación de
+
+Underfull \hbox (badness 10000) in paragraph at lines 367--367
+\T1/cmr/m/n/10.95 pla-nes de da-
+
+Underfull \hbox (badness 10000) in paragraph at lines 367--367
+\T1/cmr/m/n/10.95 tos mó-vi-les y
+
+Underfull \hbox (badness 4792) in paragraph at lines 367--367
+\T1/cmr/m/n/10.95 so-bre-cos-tos por
+
+Overfull \hbox (17.32416pt too wide) in paragraph at lines 368--368
+[]|\T1/cmr/m/n/10.95 Desaprovechamiento
+
+Underfull \hbox (badness 2150) in paragraph at lines 368--368
+\T1/cmr/m/n/10.95 de ana-lí-ti-ca de
+
+Underfull \hbox (badness 10000) in paragraph at lines 368--368
+\T1/cmr/m/n/10.95 man-te-ni-mien-to
+
+Underfull \hbox (badness 5802) in paragraph at lines 370--370
+[]|\T1/cmr/m/n/10.95 Criterio de asig-na-
+
+Underfull \hbox (badness 7685) in paragraph at lines 370--370
+[]|\T1/cmr/m/n/10.95 Erosión ma-si-va
+
+Underfull \hbox (badness 5345) in paragraph at lines 370--370
+\T1/cmr/m/n/10.95 gas-to en com-
+
+Underfull \hbox (badness 1436) in paragraph at lines 370--370
+\T1/cmr/m/n/10.95 bus-ti-ble y pea-
+
+Underfull \hbox (badness 10000) in paragraph at lines 371--371
+[]|\T1/cmr/m/n/10.95 Reconstrucción de
+
+Underfull \hbox (badness 1052) in paragraph at lines 371--371
+\T1/cmr/m/n/10.95 cos-to por via-je con
+
+Underfull \hbox (badness 10000) in paragraph at lines 371--371
+[]|\T1/cmr/m/n/10.95 Tarifas co-mer-
+
+Underfull \hbox (badness 10000) in paragraph at lines 371--371
+\T1/cmr/m/n/10.95 cos-to mar-gi-nal
+
+Underfull \hbox (badness 8038) in paragraph at lines 372--372
+[]|\T1/cmr/m/n/10.95 Dificultad pa-ra
+
+Underfull \hbox (badness 1590) in paragraph at lines 373--373
+\T1/cmr/m/n/10.95 tra-tos ba-jo cos-to e
+
+Underfull \hbox (badness 3428) in paragraph at lines 373--373
+[]|\T1/cmr/m/n/10.95 Persistencia del
+
+Underfull \hbox (badness 1038) in paragraph at lines 373--373
+\T1/cmr/m/n/10.95 que des-tru-ye el
+
+Underfull \hbox (badness 2351) in paragraph at lines 373--373
+\T1/cmr/m/n/10.95 mar-gen con-so-li-
+
+Underfull \hbox (badness 7576) in paragraph at lines 374--374
+[]|\T1/cmr/m/n/10.95 Fiscalización de $\OMS/cmsy/m/n/10.95 ^^Y
+
+Underfull \hbox (badness 10000) in paragraph at lines 374--374
+[]|\T1/cmr/m/n/10.95 Responsabilidad so-li-da-ria
+
+Underfull \hbox (badness 10000) in paragraph at lines 374--374
+[]|\T1/cmr/m/n/10.95 Retención de
+
+Underfull \hbox (badness 8132) in paragraph at lines 374--374
+\T1/cmr/m/n/10.95 cio-nes for-ma-les
+
+Underfull \hbox (badness 10000) in paragraph at lines 375--375
+[]|\T1/cmr/m/n/10.95 Coincidencia en-tre
+
+Underfull \hbox (badness 1910) in paragraph at lines 375--375
+\T1/cmr/m/n/10.95 do-cu-men-tos de sus-
+
+Underfull \hbox (badness 1902) in paragraph at lines 375--375
+\T1/cmr/m/n/10.95 tan-cias pe-li-gro-sas y
+
+Underfull \hbox (badness 10000) in paragraph at lines 375--375
+[]|\T1/cmr/m/n/10.95 Riesgo de se-
+
+Underfull \hbox (badness 7397) in paragraph at lines 375--375
+\T1/cmr/m/n/10.95 gu-ri-dad se-ve-ro;
+
+Underfull \hbox (badness 10000) in paragraph at lines 375--375
+\T1/cmr/m/n/10.95 emer-gen-cias
+
+Overfull \hbox (3.70216pt too wide) in paragraph at lines 376--376
+[]|\T1/cmr/m/n/10.95 Contingencias| 
+
+Underfull \hbox (badness 4779) in paragraph at lines 376--376
+[]|\T1/cmr/m/n/10.95 Respuesta ope-ra-ti-va
+
+Underfull \hbox (badness 10000) in paragraph at lines 376--376
+[]|\T1/cmr/m/n/10.95 Sobrecostos no
+
+Underfull \hbox (badness 10000) in paragraph at lines 376--376
+\T1/cmr/m/n/10.95 re-cu-pe-ra-bles y
+
+Underfull \hbox (badness 1755) in paragraph at lines 376--376
+\T1/cmr/m/n/10.95 rio-ro en car-gas
+
+Overfull \hbox (9.07892pt too wide) in paragraph at lines 377--377
+[]|\T1/cmr/m/n/10.95 Mantenimiento| 
+
+Underfull \hbox (badness 3769) in paragraph at lines 377--377
+\T1/cmr/m/n/10.95 ra-cio-nes en ta-lle-res
+
+Overfull \hbox (4.00818pt too wide) in paragraph at lines 378--378
+[]|\T1/cmr/m/n/10.95 Sostenibilidad| 
+
+Underfull \hbox (badness 1701) in paragraph at lines 378--378
+[]|\T1/cmr/m/n/10.95 Cálculo de emi-sio-nes de-
+
+Underfull \hbox (badness 10000) in paragraph at lines 378--378
+[]|\T1/cmr/m/n/10.95 Ultimátum del
+
+Underfull \hbox (badness 10000) in paragraph at lines 378--378
+\T1/cmr/m/n/10.95 clien-te ex-por-
+
+Underfull \hbox (badness 1184) in paragraph at lines 378--378
+\T1/cmr/m/n/10.95 ta-dor (19$ $% de
+
+Underfull \hbox (badness 10000) in paragraph at lines 378--378
+\T1/cmr/m/n/10.95 in-gre-sos) no
+
+Underfull \hbox (badness 5519) in paragraph at lines 379--379
+[]|\T1/cmr/m/n/10.95 Riesgo le-gal y
+
+Underfull \hbox (badness 10000) in paragraph at lines 380--380
+\T1/cmr/m/n/10.95 des-fa-vo-ra-bles
+
+Underfull \hbox (badness 2119) in paragraph at lines 380--380
+\T1/cmr/m/n/10.95 dios de prue-ba
+
+Underfull \hbox (badness 10000) in paragraph at lines 381--381
+[]|\T1/cmr/m/n/10.95 Despliegue en 374
+
+Underfull \hbox (badness 1147) in paragraph at lines 381--381
+\T1/cmr/m/n/10.95 má-qui-nas con pa-sos
+
+Underfull \hbox (badness 10000) in paragraph at lines 381--381
+[]|\T1/cmr/m/n/10.95 Dilatación de
+
+Underfull \hbox (badness 10000) in paragraph at lines 381--381
+\T1/cmr/m/n/10.95 pla-zos si se
+
+Underfull \hbox (badness 10000) in paragraph at lines 381--381
+\T1/cmr/m/n/10.95 asu-men rit-mos
+
+Underfull \hbox (badness 10000) in paragraph at lines 382--382
+[]|\T1/cmr/m/n/10.95 Subsistencia de la
+
+Underfull \hbox (badness 2547) in paragraph at lines 382--382
+\T1/cmr/m/n/10.95 tra-za-bi-li-dad du-ran-te
+
+Underfull \hbox (badness 1360) in paragraph at lines 382--382
+\T1/cmr/m/n/10.95 con-vi-ven-cia de re-gí-
+
+Underfull \hbox (badness 3364) in paragraph at lines 382--382
+[]|\T1/cmr/m/n/10.95 Operación de-be-rá to-le-rar
+
+Underfull \hbox (badness 1490) in paragraph at lines 382--382
+\T1/cmr/m/n/10.95 ré-gi-men mix-to tran-si-to-rio
+
+Underfull \hbox (badness 10000) in paragraph at lines 382--383
+[]|\T1/cmr/m/n/10.95 Duplicación de
+
+Underfull \hbox (badness 4531) in paragraph at lines 382--383
+\T1/cmr/m/n/10.95 con-trol du-ran-te
+ [25] [26] [27] [28]) [29] [30] (salida/aux/02-problema/sub2.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 34.41pt have occurred.
-
-
-LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
@@ -436,31 +1206,39 @@ Package rerunfilecheck Warning: File `sub2.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                sub2
-(biblatex)                and rerun LaTeX afterwards.
+Package biblatex Warning: Please rerun LaTeX.
+(biblatex)                Page breaks have changed.
 
  )
-(see the transcript file for additional information) </home/disco/.texlive/texm
-f-var/fonts/pk/ljfour/jknappen/ec/ecbx5159.600pk></usr/share/texmf-dist/fonts/t
-ype1/public/cm-super/sfbx1095.pfb></usr/share/texmf-dist/fonts/type1/public/cm-
-super/sfbx1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1728.
-pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx2986.pfb></usr/share
-/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf-dist/fon
-ts/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf-dist/fonts/type1/public
-/cm-super/sfrm1200.pfb>
-Output written on salida/aux/02-problema/sub2.pdf (8 pages, 475339 bytes).
+(see the transcript file for additional information)
+pdfTeX warning (dest): name{section*.1} has been referenced but does not exist,
+ replaced by a fixed one
+
+ </home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk> 
+</home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> <
+/home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx5159.600pk> </
+home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </h
+ome/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </ho
+me/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </hom
+e/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1095.600pk> </home
+/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.600pk> </home/
+carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx2986.600pk> </home/c
+arlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk> </home/ca
+rlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcbx1095.600pk> </home/car
+losa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1095.600pk></usr/share/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/s
+hare/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on salida/aux/02-problema/sub2.pdf (32 pages, 2095271 bytes).
 Transcript written on salida/aux/02-problema/sub2.log.
 Latexmk: Getting log file 'salida/aux/02-problema/sub2.log'
 Latexmk: Examining 'salida/aux/02-problema/sub2.fls'
 Latexmk: Examining 'salida/aux/02-problema/sub2.log'
-Latexmk: Missing bbl file 'salida/aux/02-problema/sub2.bbl' in following:
- No file sub2.bbl.
-Latexmk: Missing input file 'sub2.toc' message in .log file:
-  No file sub2.toc.
+Latexmk: Found input bbl file 'salida/aux/02-problema/sub2.bbl'
 Latexmk: References changed.
 Latexmk: References changed.
-====== biblatex/biber in use
 Latexmk: Log file says output to 'salida/aux/02-problema/sub2.pdf'
 Latexmk: Using biber to make bibliography file(s).
 Latexmk: Bibliography file(s) from .bcf file:
@@ -468,42 +1246,12 @@ Latexmk: Bibliography file(s) from .bcf file:
 Sources for biber
   comun/referencias.bib
   salida/aux/02-problema/sub2.bcf
-Latexmk: applying rule 'biber salida/aux/02-problema/sub2'...
-Rule 'biber salida/aux/02-problema/sub2':  Reasons for rerun
-Category 'other':
-  Rerun of 'biber salida/aux/02-problema/sub2' forced or previously required:
-    Reason or flag: 'Initial set up of rule'
-
-------------
-Run number 1 of rule 'biber salida/aux/02-problema/sub2'
-------------
-------------
-Running 'biber  "salida/aux/02-problema/sub2.bcf"'
-------------
-INFO - This is Biber 2.21
-INFO - Logfile is 'salida/aux/02-problema/sub2.blg'
-INFO - Reading 'salida/aux/02-problema/sub2.bcf'
-INFO - Found 6 citekeys in bib section 0
-INFO - Processing section 0
-INFO - Looking for bibtex file 'comun/referencias.bib' for section 0
-INFO - LaTeX decoding ...
-INFO - Found BibTeX data source 'comun/referencias.bib'
-INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
-INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
-INFO - Sorting list 'apa/apasortcite//global/global/global' of type 'entry' with template 'apa' and locale 'es-ES'
-INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
-INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
-INFO - Sorting list 'apa/global//global/global/global' of type 'entry' with template 'apa' and locale 'es-ES'
-INFO - Writing 'salida/aux/02-problema/sub2.bbl' with encoding 'UTF-8'
-INFO - Output to salida/aux/02-problema/sub2.bbl
-Latexmk: Found biber source file(s) [comun/referencias.bib, salida/aux/02-problema/sub2.bcf]
 Latexmk: applying rule 'pdflatex'...
 Rule 'pdflatex':  Reasons for rerun
 Changed files or newly in use/created:
-  salida/aux/02-problema/pdfa.xmpi
   salida/aux/02-problema/sub2.aux
-  salida/aux/02-problema/sub2.bbl
   salida/aux/02-problema/sub2.out
+  salida/aux/02-problema/sub2.run.xml
   salida/aux/02-problema/sub2.toc
 
 ------------
@@ -517,8 +1265,11 @@ This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (prel
 entering extended mode
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
-(/mnt/NuevoVol/FEP/Plantilla-audIT/subdocumentos/02-problema/main.tex
-(/mnt/NuevoVol/FEP/Plantilla-audIT/comun/inf-pucv.cls
+
+(/home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recursos
+/Plantilla-audIT/subdocumentos/02-problema/main.tex
+(/home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recursos
+/Plantilla-audIT/comun/inf-pucv.cls
 Document Class: inf-pucv 2023/04/24 sgarciad.me v0.1, Clase para la plantilla L
 aTeX con formato escuela INF PUCV.
 (/usr/share/texmf-dist/tex/latex/extsizes/extarticle.cls
@@ -591,7 +1342,8 @@ consistent with the Color Model for PDF/A  on input line 3126.
 (/usr/share/texmf-dist/tex/latex/base/ot1enc.dfu)
 (/usr/share/texmf-dist/tex/latex/base/t1enc.dfu)
 (/usr/share/texmf-dist/tex/latex/base/ts1enc.dfu))
-(/mnt/NuevoVol/FEP/Plantilla-audIT/comun/styles.sty
+(/home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recursos
+/Plantilla-audIT/comun/styles.sty
 (/usr/share/texmf-dist/tex/latex/base/inputenc.sty)
 (/usr/share/texmf-dist/tex/latex/base/fontenc.sty)
 (/usr/share/texmf-dist/tex/generic/babel/babel.sty
@@ -821,17 +1573,20 @@ rning from the lineno package on input line 36.
 (/usr/share/texmf-dist/tex/latex/pdfpages/pppdftex.def))
 (/usr/share/texmf-dist/tex/latex/tocloft/tocloft.sty)
 (/usr/share/texmf-dist/tex/latex/tools/tabularx.sty))
-(/mnt/NuevoVol/FEP/Plantilla-audIT/comun/instancia.tex)
-(/mnt/NuevoVol/FEP/Plantilla-audIT/subdocumentos/02-problema/meta.tex)
-(/mnt/NuevoVol/FEP/Plantilla-audIT/comun/preambulo.tex
+(/home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recursos
+/Plantilla-audIT/comun/instancia.tex)
+(/home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recursos
+/Plantilla-audIT/subdocumentos/02-problema/meta.tex)
+(/home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recursos
+/Plantilla-audIT/comun/preambulo.tex
 (/usr/share/texmf-dist/tex/latex/import/import.sty)
 (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
 calc.code.tex) (/usr/share/texmf-dist/tex/latex/pdflscape/pdflscape.sty
 (/usr/share/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.sty
 (/usr/share/texmf-dist/tex/latex/graphics/lscape.sty)))
 (/usr/share/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty))
-(/mnt/NuevoVol/FEP/Plantilla-audIT/comun/portada.tex)
-(salida/aux/02-problema/sub2.aux)
+(/home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recursos
+/Plantilla-audIT/comun/portada.tex) (salida/aux/02-problema/sub2.aux)
 (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 ) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
@@ -854,9 +1609,8 @@ LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <19> not available
 LaTeX Font Warning: Font shape `T1/cmr/bx/n' in size <19> not available
 (Font)              size <17.28> substituted on input line 8.
 
-[1{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/t
-exmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} </mnt/NuevoVol/FEP/Plantil
-la-audIT/comun/assets/portada.jpeg>]
+[1 </home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recur
+sos/Plantilla-audIT/comun/assets/portada.jpeg>]
 
 LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <28> not available
 (Font)              size <29.86> substituted on input line 9.
@@ -877,7 +1631,8 @@ been already used, duplicate ignored
                    \relax 
 l.9 \fichaSubdocumento
                        [1]
-(/mnt/NuevoVol/FEP/Plantilla-audIT/subdocumentos/02-problema/contenido.tex
+(/home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recursos
+/Plantilla-audIT/subdocumentos/02-problema/contenido.tex
 
 LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <86> not available
 (Font)              size <51.59> substituted on input line 1.
@@ -891,41 +1646,828 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.39 \end{tablaAudit}
-                      [2] [3] [4] [5]) [6] [7] (salida/aux/02-problema/sub2.aux
-)
+l.10 
+      [2]
+Underfull \hbox (badness 6396) in paragraph at lines 27--28
+[]|\T1/cmr/m/n/10.95 18 trac-to-ca-mio-nes ha-bi-li-ta-dos
+[3] [4] [5]
+Underfull \hbox (badness 2142) in paragraph at lines 74--75
+[]|\T1/cmr/m/n/10.95 34 trac-to-ca-mio-nes de ter-ce-ros
+ [6] [7]
+Underfull \hbox (badness 10000) in paragraph at lines 103--104
+[]|\T1/cmr/m/n/10.95 31$ $% del in-gre-so to-tal
+
+Underfull \hbox (badness 10000) in paragraph at lines 106--107
+[]|\T1/cmr/m/n/10.95 14$ $% del in-gre-so ($10.920M
+ [8]
+Underfull \hbox (badness 2662) in paragraph at lines 122--122
+[]|\T1/cmr/m/n/10.95 Exigencias con-di-cio-nan-tes del clien-te prin-ci-pal
+
+Underfull \hbox (badness 10000) in paragraph at lines 122--123
+[]|\T1/cmr/m/n/10.95 Trazabilidad 100$ $%, po-si-ción
+
+Underfull \hbox (badness 10000) in paragraph at lines 123--124
+[]|\T1/cmr/m/n/10.95 19$ $% del in-gre-so to-tal
+
+Underfull \hbox (badness 10000) in paragraph at lines 123--124
+\T1/cmr/m/n/10.95 ($14.820.000.000 CLP anua-
+ [9] [10] [11]
+Underfull \hbox (badness 10000) in paragraph at lines 170--170
+[]|\T1/cmr/m/n/10.95 Terminal San
+
+Underfull \hbox (badness 3919) in paragraph at lines 170--170
+\T1/cmr/m/n/10.95 co pun-to de
+
+Underfull \hbox (badness 10000) in paragraph at lines 170--170
+\T1/cmr/m/n/10.95 in-ter-ven-ción
+
+Underfull \hbox (badness 7869) in paragraph at lines 171--171
+[]|\T1/cmr/m/n/10.95 Terminales Re-
+
+Underfull \hbox (badness 1648) in paragraph at lines 171--171
+\T1/cmr/m/n/10.95 to-fa-gas-ta, Tal-ca, Los
+
+Underfull \hbox (badness 10000) in paragraph at lines 171--171
+\T1/cmr/m/n/10.95 te geo-grá-fi-co
+
+Underfull \hbox (badness 10000) in paragraph at lines 171--171
+\T1/cmr/m/n/10.95 de trans-mi-
+
+Underfull \hbox (badness 10000) in paragraph at lines 172--172
+[]|\T1/cmr/m/n/10.95 Mantenimiento pre-
+
+Underfull \hbox (badness 6188) in paragraph at lines 172--172
+\T1/cmr/m/n/10.95 ven-ti-vo y co-rrec-ti-vo
+
+Underfull \hbox (badness 1831) in paragraph at lines 172--172
+\T1/cmr/m/n/10.95 de flo-ta pro-pia (358
+
+Underfull \hbox (badness 10000) in paragraph at lines 172--172
+[]|\T1/cmr/m/n/10.95 Alta. Sos-
+
+Underfull \hbox (badness 10000) in paragraph at lines 172--172
+\T1/cmr/m/n/10.95 tie-nen dis-
+
+Underfull \hbox (badness 10000) in paragraph at lines 172--172
+\T1/cmr/m/n/10.95 po-ni-bi-li-dad
+
+Underfull \hbox (badness 10000) in paragraph at lines 172--172
+\T1/cmr/m/n/10.95 me-cá-ni-ca de
+
+Underfull \hbox (badness 10000) in paragraph at lines 172--172
+\T1/cmr/m/n/10.95 ac-ti-vos pro-
+
+Underfull \hbox (badness 10000) in paragraph at lines 173--173
+[]|\T1/cmr/m/n/10.95 Talleres Ex-ter-
+
+Underfull \hbox (badness 10000) in paragraph at lines 173--173
+[]|\T1/cmr/m/n/10.95 Alta. In-ter-
+
+Underfull \hbox (badness 10000) in paragraph at lines 173--173
+\T1/cmr/m/n/10.95 ven-cio-nes no
+
+Underfull \hbox (badness 10000) in paragraph at lines 173--173
+\T1/cmr/m/n/10.95 re-gis-tra-das
+
+Underfull \hbox (badness 1496) in paragraph at lines 173--173
+\T1/cmr/m/n/10.95 que de-gra-dan
+
+Underfull \hbox (badness 10000) in paragraph at lines 174--174
+[]|\T1/cmr/m/n/10.95 Operación in-ter-na-
+
+Underfull \hbox (badness 10000) in paragraph at lines 174--174
+\T1/cmr/m/n/10.95 cio-nal bi-na-cio-nal
+
+Underfull \hbox (badness 10000) in paragraph at lines 174--174
+[]|\T1/cmr/m/n/10.95 Infraestructura adua-ne-ra
+
+Underfull \hbox (badness 10000) in paragraph at lines 174--174
+\T1/cmr/m/n/10.95 bi-na-cio-nal. Cie-rres por
+
+Underfull \hbox (badness 4647) in paragraph at lines 174--174
+\T1/cmr/m/n/10.95 nie-ve de has-ta 12 días
+
+Underfull \hbox (badness 1210) in paragraph at lines 174--174
+\T1/cmr/m/n/10.95 dad cli-má-ti-ca
+
+Underfull \hbox (badness 10000) in paragraph at lines 176--176
+\T1/cmr/m/n/10.95 ob-je-ción de
+
+Underfull \hbox (badness 10000) in paragraph at lines 176--176
+\T1/cmr/m/n/10.95 so-bre-es-ta-días
+
+Underfull \hbox (badness 3049) in paragraph at lines 177--177
+[]|\T1/cmr/m/n/10.95 Ambiente hos-til; prohi-bi-
+
+Underfull \hbox (badness 4647) in paragraph at lines 177--177
+\T1/cmr/m/n/10.95 ción le-gal de ma-ni-pu-lar
+
+Underfull \hbox (badness 10000) in paragraph at lines 177--178
+[]|\T1/cmr/m/n/10.95 Crítica.
+
+Underfull \hbox (badness 10000) in paragraph at lines 177--178
+\T1/cmr/m/n/10.95 Res-tric-ción
+
+Underfull \hbox (badness 10000) in paragraph at lines 177--178
+\T1/cmr/m/n/10.95 ab-so-lu-ta de
+
+Underfull \hbox (badness 10000) in paragraph at lines 177--178
+\T1/cmr/m/n/10.95 in-ter-ac-ción
+
+Underfull \hbox (badness 10000) in paragraph at lines 177--178
+\T1/cmr/m/n/10.95 (([]Mi-nis-te-rio
+
+Underfull \hbox (badness 10000) in paragraph at lines 177--178
+\T1/cmr/m/n/10.95 de Trans-
+
+Underfull \hbox (badness 10000) in paragraph at lines 177--178
+\T1/cmr/m/n/10.95 por-tes y
+
+Underfull \hbox (badness 10000) in paragraph at lines 177--178
+\T1/cmr/m/n/10.95 Te-le-co-mu-ni-ca-
+ [12]
+Overfull \hbox (0.28471pt too wide) in paragraph at lines 180--180
+|[]\T1/cmr/bx/n/17.28 Caracterización de ac-to-res y ma-triz de ten-sio-nes ope
+-
+[13] [14] [15] [16]
+Overfull \hbox (11.10811pt too wide) in paragraph at lines 254--255
+\T1/cmr/m/n/12 cap-tu-ra po-si-cio-nal y re-so-lu-ción ope-ra-ti-va de los ba-c
+hes de co-nec-ti-vi-dad sa-te-li-tal/celular. 
+[17]
+Underfull \hbox (badness 1286) in paragraph at lines 279--279
+[]|\T1/cmr/m/n/10.95 E. Val-de-be-
+
+Underfull \hbox (badness 4792) in paragraph at lines 279--279
+\T1/cmr/m/n/10.95 ca; re-ten-ción de
+
+Underfull \hbox (badness 6348) in paragraph at lines 279--279
+[]|\T1/cmr/m/n/10.95 Exposición pe-nal
+
+Underfull \hbox (badness 10000) in paragraph at lines 279--279
+\T1/cmr/m/n/10.95 por re-cha-zo de
+
+Underfull \hbox (badness 1867) in paragraph at lines 279--279
+\T1/cmr/m/n/10.95 to y cum-pli-mien-to
+
+Underfull \hbox (badness 1596) in paragraph at lines 280--280
+\T1/cmr/m/n/10.95 te sin ki-ló-me-tros
+
+Underfull \hbox (badness 3364) in paragraph at lines 280--280
+\T1/cmr/m/n/10.95 va-cíos; va-li-da-ción
+
+Underfull \hbox (badness 10000) in paragraph at lines 280--280
+\T1/cmr/m/n/10.95 blo-quean-te pre-
+
+Underfull \hbox (badness 10000) in paragraph at lines 280--280
+[]|\T1/cmr/m/n/10.95 Sistemas ex-ce-si-
+
+Underfull \hbox (badness 10000) in paragraph at lines 280--280
+\T1/cmr/m/n/10.95 va-men-te rí-gi-dos
+
+Underfull \hbox (badness 2538) in paragraph at lines 280--280
+[]|\T1/cmr/m/n/10.95 Visibilidad in-te-gra-
+
+Underfull \hbox (badness 1867) in paragraph at lines 280--280
+\T1/cmr/m/n/10.95 nei-dad del equi-po,
+
+Underfull \hbox (badness 10000) in paragraph at lines 281--281
+[]|\T1/cmr/m/n/10.95 Respeto de sus
+
+Underfull \hbox (badness 3396) in paragraph at lines 281--281
+[]|\T1/cmr/m/n/10.95 Alertas in-opor-tu-
+
+Underfull \hbox (badness 10000) in paragraph at lines 281--281
+\T1/cmr/m/n/10.95 nas; ser san-cio-
+
+Underfull \hbox (badness 10000) in paragraph at lines 281--281
+\T1/cmr/m/n/10.95 na-da por fa-llas
+
+Underfull \hbox (badness 2359) in paragraph at lines 281--281
+[]|\T1/cmr/m/n/10.95 Operación sin dis-
+
+Underfull \hbox (badness 5231) in paragraph at lines 282--282
+[]|\T1/cmr/m/n/10.95 Autonomía so-bre
+
+Underfull \hbox (badness 4726) in paragraph at lines 282--282
+\T1/cmr/m/n/10.95 su ac-ti-vo; co-bro
+
+Underfull \hbox (badness 2158) in paragraph at lines 282--282
+\T1/cmr/m/n/10.95 ra pa-ra ter-ce-ros;
+
+Underfull \hbox (badness 1383) in paragraph at lines 282--282
+\T1/cmr/m/n/10.95 pe-na-li-za-cio-nes in-
+
+Underfull \hbox (badness 10000) in paragraph at lines 282--282
+[]|\T1/cmr/m/n/10.95 Muy Al-ta
+
+Underfull \hbox (badness 4660) in paragraph at lines 282--282
+\T1/cmr/m/n/10.95 ción; trans-pa-ren-cia
+
+Underfull \hbox (badness 10000) in paragraph at lines 283--283
+[]|\T1/cmr/m/n/10.95 G. Os-san-
+
+Underfull \hbox (badness 10000) in paragraph at lines 283--283
+[]|\T1/cmr/m/n/10.95 Erradicación de
+
+Underfull \hbox (badness 10000) in paragraph at lines 283--283
+\T1/cmr/m/n/10.95 sub-si-dios cru-
+
+Underfull \hbox (badness 10000) in paragraph at lines 283--283
+\T1/cmr/m/n/10.95 za-dos; cos-teo
+
+Underfull \hbox (badness 2401) in paragraph at lines 283--283
+\T1/cmr/m/n/10.95 ana-lí-ti-co por ru-
+
+Underfull \hbox (badness 3000) in paragraph at lines 283--283
+[]|\T1/cmr/m/n/10.95 Mantener con-tra-
+
+Underfull \hbox (badness 1515) in paragraph at lines 283--283
+[]|\T1/cmr/m/n/10.95 Integración opor-tu-
+
+Underfull \hbox (badness 6252) in paragraph at lines 283--283
+\T1/cmr/m/n/10.95 odó-me-tro y fle-tes
+
+Underfull \hbox (badness 10000) in paragraph at lines 284--284
+[]|\T1/cmr/m/n/10.95 Mantenimiento
+
+Underfull \hbox (badness 10000) in paragraph at lines 284--284
+[]|\T1/cmr/m/n/10.95 Daños inad-ver-ti-
+
+Underfull \hbox (badness 10000) in paragraph at lines 284--284
+\T1/cmr/m/n/10.95 no re-gis-tra-das;
+
+Underfull \hbox (badness 4416) in paragraph at lines 284--284
+\T1/cmr/m/n/10.95 ins-ta-la-cio-nes ma-
+
+Underfull \hbox (badness 1466) in paragraph at lines 284--284
+[]|\T1/cmr/m/n/10.95 Lectura re-mo-ta de
+
+Underfull \hbox (badness 2990) in paragraph at lines 285--285
+[]|\T1/cmr/m/n/10.95 Validación vin-cu-
+
+Underfull \hbox (badness 10000) in paragraph at lines 285--285
+[]|\T1/cmr/m/n/10.95 Nuevo si-nies-tro
+
+Underfull \hbox (badness 10000) in paragraph at lines 285--285
+\T1/cmr/m/n/10.95 con le-sio-nes o
+
+Underfull \hbox (badness 10000) in paragraph at lines 285--285
+[]|\T1/cmr/m/n/10.95 Alta (ve-to
+
+Underfull \hbox (badness 10000) in paragraph at lines 285--285
+[]|\T1/cmr/m/n/10.95 Repositorio uni-fi-
+
+Underfull \hbox (badness 5878) in paragraph at lines 285--285
+\T1/cmr/m/n/10.95 ca-do de vi-gen-cias
+
+Underfull \hbox (badness 7168) in paragraph at lines 285--285
+\T1/cmr/m/n/10.95 con ca-pa-ci-dad de
+
+Underfull \hbox (badness 4181) in paragraph at lines 285--285
+\T1/cmr/m/n/10.95 in-ter-cep-ción pre-via
+
+Underfull \hbox (badness 10000) in paragraph at lines 286--286
+[]|\T1/cmr/m/n/10.95 Cumplimiento
+
+Underfull \hbox (badness 10000) in paragraph at lines 286--286
+\T1/cmr/m/n/10.95 (CO$[]$e, tra-za-bi-
+
+Underfull \hbox (badness 10000) in paragraph at lines 286--286
+\T1/cmr/m/n/10.95 li-dad, e-Docs,
+
+Underfull \hbox (badness 5203) in paragraph at lines 286--286
+\T1/cmr/m/n/10.95 ti-fi-ca-cio-nes in-ter-
+
+Underfull \hbox (badness 10000) in paragraph at lines 286--286
+[]|\T1/cmr/m/n/10.95 Extrema
+
+Underfull \hbox (badness 2012) in paragraph at lines 286--286
+[]|\T1/cmr/m/n/10.95 Reportería ve-ri-fi-ca-
+
+Underfull \hbox (badness 1609) in paragraph at lines 286--286
+\T1/cmr/m/n/10.95 da de emi-sio-nes e
+
+Underfull \hbox (badness 10000) in paragraph at lines 286--286
+\T1/cmr/m/n/10.95 his-to-rial fi-de-digno
+
+Underfull \hbox (badness 4416) in paragraph at lines 286--286
+\T1/cmr/m/n/10.95 del 100$ $% de los
+
+Underfull \hbox (badness 1502) in paragraph at lines 287--287
+[]|\T1/cmr/m/n/10.95 Coherencia en la
+
+Underfull \hbox (badness 2042) in paragraph at lines 287--287
+\T1/cmr/m/n/10.95 vi-sua-li-za-ción geo-
+
+Underfull \hbox (badness 10000) in paragraph at lines 287--287
+[]|\T1/cmr/m/n/10.95 Intermitencias
+
+Underfull \hbox (badness 3547) in paragraph at lines 287--287
+\T1/cmr/m/n/10.95 cró-ni-cas en ru-ta
+
+Underfull \hbox (badness 1466) in paragraph at lines 287--287
+\T1/cmr/m/n/10.95 nor-te; ges-tión de
+
+Underfull \hbox (badness 1424) in paragraph at lines 287--287
+[]|\T1/cmr/m/n/10.95 Alta (téc-ni-
+
+Underfull \hbox (badness 2409) in paragraph at lines 287--287
+[]|\T1/cmr/m/n/10.95 Vista uni-fi-ca-da de
+
+Underfull \hbox (badness 3612) in paragraph at lines 287--287
+\T1/cmr/m/n/10.95 geo-lo-ca-li-za-ción que
+
+Underfull \hbox (badness 10000) in paragraph at lines 288--288
+[]|\T1/cmr/m/n/10.95 M. Ri-quel-
+
+Underfull \hbox (badness 2753) in paragraph at lines 288--289
+[]|\T1/cmr/m/n/10.95 Resiliencia ope-ra-ti-
+ [18 </home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/rec
+ursos/Plantilla-audIT/subdocumentos/02-problema/Img.png (PNG copy)>] [19]
+[20]
+Underfull \hbox (badness 3735) in paragraph at lines 305--305
+[]|\T1/cmr/bx/n/10.95 Tensión Ope-
+
+Underfull \hbox (badness 3690) in paragraph at lines 305--305
+[]|\T1/cmr/bx/n/10.95 Actores In-vo-lu-
+
+Underfull \hbox (badness 1694) in paragraph at lines 307--307
+\T1/cmr/m/n/10.95 Trans-por-tis-tas ex-
+
+Underfull \hbox (badness 2538) in paragraph at lines 307--307
+[]|\T1/cmr/m/n/10.95 Geolocalización cir-cuns-
+
+Underfull \hbox (badness 4156) in paragraph at lines 308--308
+[]|\T1/cmr/m/n/10.95 3. Jor-na-da vs.
+
+Underfull \hbox (badness 4779) in paragraph at lines 309--309
+[]|\T1/cmr/m/n/10.95 4. Ren-ta-bi-li-dad
+
+Underfull \hbox (badness 7925) in paragraph at lines 309--309
+[]|\T1/cmr/m/n/10.95 Destrucción con-ti-nua
+
+Underfull \hbox (badness 4872) in paragraph at lines 309--309
+[]|\T1/cmr/m/n/10.95 Consolidación opor-tu-na
+
+Underfull \hbox (badness 10000) in paragraph at lines 310--310
+[]|\T1/cmr/m/n/10.95 Fallas en ru-ta; 61
+
+Underfull \hbox (badness 10000) in paragraph at lines 311--311
+[]|\T1/cmr/m/n/10.95 6. Go-ber-nan-za
+
+Underfull \hbox (badness 4353) in paragraph at lines 311--312
+[]|\T1/cmr/m/n/10.95 Esquema de be-ne-fi-cios
+ [21] [22]
+Underfull \hbox (badness 10000) in paragraph at lines 333--333
+[]|\T1/cmr/m/n/10.95 Ceguera de
+
+Underfull \hbox (badness 1215) in paragraph at lines 333--333
+[]|\T1/cmr/m/n/10.95 0 des-car-gas de
+
+Underfull \hbox (badness 10000) in paragraph at lines 333--333
+\T1/cmr/m/n/10.95 ta-có-gra-fo; 258
+
+Underfull \hbox (badness 10000) in paragraph at lines 333--333
+[]|\T1/cmr/m/n/10.95 Falta de ex-
+
+Underfull \hbox (badness 10000) in paragraph at lines 333--333
+\T1/cmr/m/n/10.95 trac-ción y
+
+Underfull \hbox (badness 10000) in paragraph at lines 333--333
+\T1/cmr/m/n/10.95 ve-ri-fi-ca-ción
+
+Underfull \hbox (badness 10000) in paragraph at lines 333--333
+[]|\T1/cmr/m/n/10.95 Incumplimiento Art.
+
+Underfull \hbox (badness 10000) in paragraph at lines 333--333
+[]|\T1/cmr/m/n/10.95 Caps. 1,
+
+Underfull \hbox (badness 10000) in paragraph at lines 334--334
+[]|\T1/cmr/m/n/10.95 Hemorragia
+
+Underfull \hbox (badness 4543) in paragraph at lines 334--334
+\T1/cmr/m/n/10.95 cíos (10,66 M
+
+Underfull \hbox (badness 10000) in paragraph at lines 335--335
+[]|\T1/cmr/m/n/10.95 Erosión So-
+
+Underfull \hbox (badness 10000) in paragraph at lines 335--335
+[]|\T1/cmr/m/n/10.95 $241,4M/año
+
+Underfull \hbox (badness 2922) in paragraph at lines 335--335
+\T1/cmr/m/n/10.95 fu-ta-ble de lle-
+
+Underfull \hbox (badness 6236) in paragraph at lines 335--335
+\T1/cmr/m/n/10.95 ga-da/salida en
+
+Underfull \hbox (badness 10000) in paragraph at lines 336--336
+[]|\T1/cmr/m/n/10.95 Sobrepeso
+
+Underfull \hbox (badness 1895) in paragraph at lines 336--336
+\T1/cmr/m/n/10.95 2.556 h-camión
+
+Underfull \hbox (badness 10000) in paragraph at lines 336--336
+\T1/cmr/m/n/10.95 per-di-das en
+
+Underfull \hbox (badness 5622) in paragraph at lines 336--336
+[]|\T1/cmr/m/n/10.95 Infracción D.S. 158;
+
+Underfull \hbox (badness 3780) in paragraph at lines 336--336
+\T1/cmr/m/n/10.95 mul-tas e in-mo-vi-li-za-
+
+Underfull \hbox (badness 10000) in paragraph at lines 337--337
+[]|\T1/cmr/m/n/10.95 Subsidios
+
+Underfull \hbox (badness 6725) in paragraph at lines 337--337
+[]|\T1/cmr/m/n/10.95 3 con-tra-tos a
+
+Underfull \hbox (badness 6641) in paragraph at lines 337--337
+\T1/cmr/m/n/10.95 des-fa-se de 40
+
+Underfull \hbox (badness 2435) in paragraph at lines 337--337
+[]|\T1/cmr/m/n/10.95 Destrucción de va-lor
+
+Underfull \hbox (badness 10000) in paragraph at lines 337--337
+[]|\T1/cmr/m/n/10.95 Caps. 1,
+
+Underfull \hbox (badness 10000) in paragraph at lines 338--338
+[]|\T1/cmr/m/n/10.95 Desgobierno
+
+Underfull \hbox (badness 10000) in paragraph at lines 338--338
+\T1/cmr/m/n/10.95 en 4 Ex-cel;
+
+Underfull \hbox (badness 5622) in paragraph at lines 338--338
+\T1/cmr/m/n/10.95 in-frac-ción haz-
+
+Underfull \hbox (badness 10000) in paragraph at lines 338--338
+[]|\T1/cmr/m/n/10.95 Caps. 1,
+
+Underfull \hbox (badness 10000) in paragraph at lines 339--339
+[]|\T1/cmr/m/n/10.95 Hardware
+
+Underfull \hbox (badness 10000) in paragraph at lines 339--339
+[]|\T1/cmr/m/n/10.95 61 CAN-bus
+
+Underfull \hbox (badness 10000) in paragraph at lines 339--339
+\T1/cmr/m/n/10.95 inac-ti-vos; 3
+
+Underfull \hbox (badness 10000) in paragraph at lines 339--339
+\T1/cmr/m/n/10.95 GPS dis-pa-res;
+
+Underfull \hbox (badness 7685) in paragraph at lines 339--339
+\T1/cmr/m/n/10.95 trac-ción; sis-te-
+
+Underfull \hbox (badness 1888) in paragraph at lines 339--339
+[]|\T1/cmr/m/n/10.95 Pérdida de ana-lí-ti-ca;
+
+Underfull \hbox (badness 10000) in paragraph at lines 339--339
+[]|\T1/cmr/m/n/10.95 Caps.
+
+Underfull \hbox (badness 10000) in paragraph at lines 339--339
+\T1/cmr/m/n/10.95 4.10, 5,
+
+Underfull \hbox (badness 8094) in paragraph at lines 340--340
+[]|\T1/cmr/m/n/10.95 Fricción Li-
+
+Underfull \hbox (badness 2941) in paragraph at lines 340--340
+\T1/cmr/m/n/10.95 per-so-nas; 11$ $%
+
+Underfull \hbox (badness 2435) in paragraph at lines 340--340
+\T1/cmr/m/n/10.95 vo ma-nual sin
+
+Underfull \hbox (badness 1824) in paragraph at lines 340--340
+\T1/cmr/m/n/10.95 cru-ces au-to-má-
+
+Underfull \hbox (badness 10000) in paragraph at lines 340--340
+[]|\T1/cmr/m/n/10.95 Caps.
+
+Underfull \hbox (badness 4779) in paragraph at lines 341--341
+[]|\T1/cmr/m/n/10.95 22$ $% ca-mio-nes
+
+Underfull \hbox (badness 1688) in paragraph at lines 341--341
+\T1/cmr/m/n/10.95 1 vez/mes por
+
+Overfull \hbox (0.6054pt too wide) in paragraph at lines 341--341
+[]|\T1/cmr/m/n/10.95 Subcontratación
+
+Underfull \hbox (badness 4531) in paragraph at lines 341--341
+\T1/cmr/m/n/10.95 sin su-per-vi-sión
+
+Underfull \hbox (badness 2512) in paragraph at lines 342--342
+\T1/cmr/m/n/10.95 (CO$[]$e, e-Docs,
+
+Underfull \hbox (badness 3168) in paragraph at lines 342--342
+\T1/cmr/m/n/10.95 tual y exi-gen-
+
+Underfull \hbox (badness 10000) in paragraph at lines 342--342
+[]|\T1/cmr/m/n/10.95 Riesgo de pér-di-da
+
+Underfull \hbox (badness 10000) in paragraph at lines 342--343
+[]|\T1/cmr/m/n/10.95 Caps. 1,
+ [23]
+Overfull \hbox (1.42781pt too wide) in paragraph at lines 345--345
+|[]\T1/cmr/bx/n/17.28 Registro de su-pues-tos ope-ra-cio-na-les y ma-peo exhaus
+-
+[24]
+Underfull \hbox (badness 2735) in paragraph at lines 356--356
+[]|\T1/cmr/bx/n/10.95 Supuesto del En-torno
+
+Underfull \hbox (badness 10000) in paragraph at lines 356--356
+[]|\T1/cmr/bx/n/10.95 Impacto en
+
+Underfull \hbox (badness 4366) in paragraph at lines 357--357
+\T1/cmr/m/n/10.95 tis-tas que ma-ne-jan
+
+Underfull \hbox (badness 1019) in paragraph at lines 357--357
+\T1/cmr/m/n/10.95 DT, des-car-tan-do la me-ra
+
+Underfull \hbox (badness 7238) in paragraph at lines 357--357
+\T1/cmr/m/n/10.95 dad sub-si-dia-ria
+
+Underfull \hbox (badness 2790) in paragraph at lines 357--357
+\T1/cmr/m/n/10.95 (([]Mi-nis-te-rio del
+
+Underfull \hbox (badness 10000) in paragraph at lines 358--358
+\T1/cmr/m/n/10.95 trans-por-tis-tas por
+
+Underfull \hbox (badness 6173) in paragraph at lines 358--358
+\T1/cmr/m/n/10.95 com-par-tir da-tos, y
+
+Underfull \hbox (badness 1365) in paragraph at lines 358--358
+[]|\T1/cmr/m/n/10.95 Requiere es-que-ma de va-
+
+Underfull \hbox (badness 1596) in paragraph at lines 358--358
+\T1/cmr/m/n/10.95 ma de dis-po-ni-
+
+Underfull \hbox (badness 5985) in paragraph at lines 359--359
+[]|\T1/cmr/m/n/10.95 Deuda Téc-
+
+Underfull \hbox (badness 7133) in paragraph at lines 359--359
+[]|\T1/cmr/m/n/10.95 Qué ha-cer con el
+
+Underfull \hbox (badness 4416) in paragraph at lines 359--359
+\T1/cmr/m/n/10.95 TMS de 2013: re-
+
+Underfull \hbox (badness 10000) in paragraph at lines 359--359
+[]|\T1/cmr/m/n/10.95 Obsolescencia
+
+Underfull \hbox (badness 6396) in paragraph at lines 359--359
+\T1/cmr/m/n/10.95 ba-sal que res-
+
+Underfull \hbox (badness 10000) in paragraph at lines 360--360
+[]|\T1/cmr/m/n/10.95 Incapacidad de
+
+Underfull \hbox (badness 5771) in paragraph at lines 360--360
+\T1/cmr/m/n/10.95 ase-gu-rar acuer-
+
+Underfull \hbox (badness 10000) in paragraph at lines 362--362
+[]|\T1/cmr/m/n/10.95 Bloqueo de via-je
+
+Underfull \hbox (badness 7558) in paragraph at lines 362--362
+\T1/cmr/m/n/10.95 li-za-ción crí-ti-co;
+
+Underfull \hbox (badness 2435) in paragraph at lines 362--362
+\T1/cmr/m/n/10.95 im-pac-to di-rec-to
+
+Underfull \hbox (badness 1019) in paragraph at lines 362--362
+\T1/cmr/m/n/10.95 en com-pro-mi-sos
+
+Underfull \hbox (badness 1062) in paragraph at lines 363--363
+\T1/cmr/m/n/10.95 ten-ción en ber-
+
+Underfull \hbox (badness 10000) in paragraph at lines 364--364
+[]|\T1/cmr/m/n/10.95 Registro de lle-
+
+Underfull \hbox (badness 10000) in paragraph at lines 364--364
+\T1/cmr/m/n/10.95 ga-das/salidas en
+
+Underfull \hbox (badness 10000) in paragraph at lines 364--364
+[]|\T1/cmr/m/n/10.95 Objeción del
+
+Underfull \hbox (badness 5637) in paragraph at lines 364--364
+\T1/cmr/m/n/10.95 de so-bre-es-ta-día
+
+Underfull \hbox (badness 2452) in paragraph at lines 364--364
+\T1/cmr/m/n/10.95 ($241,4M anua-
+
+Underfull \hbox (badness 10000) in paragraph at lines 365--365
+[]|\T1/cmr/m/n/10.95 Inmovilización
+
+Underfull \hbox (badness 10000) in paragraph at lines 366--366
+[]|\T1/cmr/m/n/10.95 Impacto se-ve-ro
+
+Underfull \hbox (badness 10000) in paragraph at lines 366--366
+\T1/cmr/m/n/10.95 au-men-to del
+
+Underfull \hbox (badness 3525) in paragraph at lines 367--367
+\T1/cmr/m/n/10.95 lí-nea vs. al-ma-ce-na-
+
+Underfull \hbox (badness 4543) in paragraph at lines 367--367
+[]|\T1/cmr/m/n/10.95 Priorizar even-tos crí-ti-cos
+
+Underfull \hbox (badness 10000) in paragraph at lines 367--367
+[]|\T1/cmr/m/n/10.95 Saturación de
+
+Underfull \hbox (badness 10000) in paragraph at lines 367--367
+\T1/cmr/m/n/10.95 pla-nes de da-
+
+Underfull \hbox (badness 10000) in paragraph at lines 367--367
+\T1/cmr/m/n/10.95 tos mó-vi-les y
+
+Underfull \hbox (badness 4792) in paragraph at lines 367--367
+\T1/cmr/m/n/10.95 so-bre-cos-tos por
+
+Overfull \hbox (17.32416pt too wide) in paragraph at lines 368--368
+[]|\T1/cmr/m/n/10.95 Desaprovechamiento
+
+Underfull \hbox (badness 2150) in paragraph at lines 368--368
+\T1/cmr/m/n/10.95 de ana-lí-ti-ca de
+
+Underfull \hbox (badness 10000) in paragraph at lines 368--368
+\T1/cmr/m/n/10.95 man-te-ni-mien-to
+
+Underfull \hbox (badness 5802) in paragraph at lines 370--370
+[]|\T1/cmr/m/n/10.95 Criterio de asig-na-
+
+Underfull \hbox (badness 7685) in paragraph at lines 370--370
+[]|\T1/cmr/m/n/10.95 Erosión ma-si-va
+
+Underfull \hbox (badness 5345) in paragraph at lines 370--370
+\T1/cmr/m/n/10.95 gas-to en com-
+
+Underfull \hbox (badness 1436) in paragraph at lines 370--370
+\T1/cmr/m/n/10.95 bus-ti-ble y pea-
+
+Underfull \hbox (badness 10000) in paragraph at lines 371--371
+[]|\T1/cmr/m/n/10.95 Reconstrucción de
+
+Underfull \hbox (badness 1052) in paragraph at lines 371--371
+\T1/cmr/m/n/10.95 cos-to por via-je con
+
+Underfull \hbox (badness 10000) in paragraph at lines 371--371
+[]|\T1/cmr/m/n/10.95 Tarifas co-mer-
+
+Underfull \hbox (badness 10000) in paragraph at lines 371--371
+\T1/cmr/m/n/10.95 cos-to mar-gi-nal
+
+Underfull \hbox (badness 8038) in paragraph at lines 372--372
+[]|\T1/cmr/m/n/10.95 Dificultad pa-ra
+
+Underfull \hbox (badness 1590) in paragraph at lines 373--373
+\T1/cmr/m/n/10.95 tra-tos ba-jo cos-to e
+
+Underfull \hbox (badness 3428) in paragraph at lines 373--373
+[]|\T1/cmr/m/n/10.95 Persistencia del
+
+Underfull \hbox (badness 1038) in paragraph at lines 373--373
+\T1/cmr/m/n/10.95 que des-tru-ye el
+
+Underfull \hbox (badness 2351) in paragraph at lines 373--373
+\T1/cmr/m/n/10.95 mar-gen con-so-li-
+
+Underfull \hbox (badness 7576) in paragraph at lines 374--374
+[]|\T1/cmr/m/n/10.95 Fiscalización de $\OMS/cmsy/m/n/10.95 ^^Y
+
+Underfull \hbox (badness 10000) in paragraph at lines 374--374
+[]|\T1/cmr/m/n/10.95 Responsabilidad so-li-da-ria
+
+Underfull \hbox (badness 10000) in paragraph at lines 374--374
+[]|\T1/cmr/m/n/10.95 Retención de
+
+Underfull \hbox (badness 8132) in paragraph at lines 374--374
+\T1/cmr/m/n/10.95 cio-nes for-ma-les
+
+Underfull \hbox (badness 10000) in paragraph at lines 375--375
+[]|\T1/cmr/m/n/10.95 Coincidencia en-tre
+
+Underfull \hbox (badness 1910) in paragraph at lines 375--375
+\T1/cmr/m/n/10.95 do-cu-men-tos de sus-
+
+Underfull \hbox (badness 1902) in paragraph at lines 375--375
+\T1/cmr/m/n/10.95 tan-cias pe-li-gro-sas y
+
+Underfull \hbox (badness 10000) in paragraph at lines 375--375
+[]|\T1/cmr/m/n/10.95 Riesgo de se-
+
+Underfull \hbox (badness 7397) in paragraph at lines 375--375
+\T1/cmr/m/n/10.95 gu-ri-dad se-ve-ro;
+
+Underfull \hbox (badness 10000) in paragraph at lines 375--375
+\T1/cmr/m/n/10.95 emer-gen-cias
+
+Overfull \hbox (3.70216pt too wide) in paragraph at lines 376--376
+[]|\T1/cmr/m/n/10.95 Contingencias| 
+
+Underfull \hbox (badness 4779) in paragraph at lines 376--376
+[]|\T1/cmr/m/n/10.95 Respuesta ope-ra-ti-va
+
+Underfull \hbox (badness 10000) in paragraph at lines 376--376
+[]|\T1/cmr/m/n/10.95 Sobrecostos no
+
+Underfull \hbox (badness 10000) in paragraph at lines 376--376
+\T1/cmr/m/n/10.95 re-cu-pe-ra-bles y
+
+Underfull \hbox (badness 1755) in paragraph at lines 376--376
+\T1/cmr/m/n/10.95 rio-ro en car-gas
+
+Overfull \hbox (9.07892pt too wide) in paragraph at lines 377--377
+[]|\T1/cmr/m/n/10.95 Mantenimiento| 
+
+Underfull \hbox (badness 3769) in paragraph at lines 377--377
+\T1/cmr/m/n/10.95 ra-cio-nes en ta-lle-res
+
+Overfull \hbox (4.00818pt too wide) in paragraph at lines 378--378
+[]|\T1/cmr/m/n/10.95 Sostenibilidad| 
+
+Underfull \hbox (badness 1701) in paragraph at lines 378--378
+[]|\T1/cmr/m/n/10.95 Cálculo de emi-sio-nes de-
+
+Underfull \hbox (badness 10000) in paragraph at lines 378--378
+[]|\T1/cmr/m/n/10.95 Ultimátum del
+
+Underfull \hbox (badness 10000) in paragraph at lines 378--378
+\T1/cmr/m/n/10.95 clien-te ex-por-
+
+Underfull \hbox (badness 1184) in paragraph at lines 378--378
+\T1/cmr/m/n/10.95 ta-dor (19$ $% de
+
+Underfull \hbox (badness 10000) in paragraph at lines 378--378
+\T1/cmr/m/n/10.95 in-gre-sos) no
+
+Underfull \hbox (badness 5519) in paragraph at lines 379--379
+[]|\T1/cmr/m/n/10.95 Riesgo le-gal y
+
+Underfull \hbox (badness 10000) in paragraph at lines 380--380
+\T1/cmr/m/n/10.95 des-fa-vo-ra-bles
+
+Underfull \hbox (badness 2119) in paragraph at lines 380--380
+\T1/cmr/m/n/10.95 dios de prue-ba
+
+Underfull \hbox (badness 10000) in paragraph at lines 381--381
+[]|\T1/cmr/m/n/10.95 Despliegue en 374
+
+Underfull \hbox (badness 1147) in paragraph at lines 381--381
+\T1/cmr/m/n/10.95 má-qui-nas con pa-sos
+
+Underfull \hbox (badness 10000) in paragraph at lines 381--381
+[]|\T1/cmr/m/n/10.95 Dilatación de
+
+Underfull \hbox (badness 10000) in paragraph at lines 381--381
+\T1/cmr/m/n/10.95 pla-zos si se
+
+Underfull \hbox (badness 10000) in paragraph at lines 381--381
+\T1/cmr/m/n/10.95 asu-men rit-mos
+
+Underfull \hbox (badness 10000) in paragraph at lines 382--382
+[]|\T1/cmr/m/n/10.95 Subsistencia de la
+
+Underfull \hbox (badness 2547) in paragraph at lines 382--382
+\T1/cmr/m/n/10.95 tra-za-bi-li-dad du-ran-te
+
+Underfull \hbox (badness 1360) in paragraph at lines 382--382
+\T1/cmr/m/n/10.95 con-vi-ven-cia de re-gí-
+
+Underfull \hbox (badness 3364) in paragraph at lines 382--382
+[]|\T1/cmr/m/n/10.95 Operación de-be-rá to-le-rar
+
+Underfull \hbox (badness 1490) in paragraph at lines 382--382
+\T1/cmr/m/n/10.95 ré-gi-men mix-to tran-si-to-rio
+
+Underfull \hbox (badness 10000) in paragraph at lines 382--383
+[]|\T1/cmr/m/n/10.95 Duplicación de
+
+Underfull \hbox (badness 4531) in paragraph at lines 382--383
+\T1/cmr/m/n/10.95 con-trol du-ran-te
+ [25] [26] [27] [28]) [29] [30] (salida/aux/02-problema/sub2.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 34.41pt have occurred.
 
-
-LaTeX Warning: There were undefined references.
-
-
-Package rerunfilecheck Warning: File `sub2.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-
-Package biblatex Warning: Please rerun LaTeX.
-(biblatex)                Page breaks have changed.
-
  )
-(see the transcript file for additional information) </home/disco/.texlive/texm
-f-var/fonts/pk/ljfour/jknappen/ec/ecbx5159.600pk></usr/share/texmf-dist/fonts/t
-ype1/public/cm-super/sfbx1095.pfb></usr/share/texmf-dist/fonts/type1/public/cm-
-super/sfbx1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1728.
-pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx2986.pfb></usr/share
-/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf-dist/fon
-ts/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf-dist/fonts/type1/public
-/cm-super/sfrm1200.pfb>
-Output written on salida/aux/02-problema/sub2.pdf (9 pages, 485372 bytes).
+(see the transcript file for additional information) </home/carlosa/.texlive/te
+xmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk> </home/carlosa/.texlive/tex
+mf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </home/carlosa/.texlive/texm
+f-var/fonts/pk/ljfour/jknappen/ec/ecbx5159.600pk> </home/carlosa/.texlive/texmf
+-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </home/carlosa/.texlive/texmf-
+var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/carlosa/.texlive/texmf-v
+ar/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/carlosa/.texlive/texmf-va
+r/fonts/pk/ljfour/jknappen/ec/tcrm1095.600pk> </home/carlosa/.texlive/texmf-var
+/fonts/pk/ljfour/jknappen/ec/ecrm1095.600pk> </home/carlosa/.texlive/texmf-var/
+fonts/pk/ljfour/jknappen/ec/ecbx2986.600pk> </home/carlosa/.texlive/texmf-var/f
+onts/pk/ljfour/jknappen/ec/ecbx1728.600pk> </home/carlosa/.texlive/texmf-var/fo
+nts/pk/ljfour/jknappen/ec/tcbx1095.600pk> </home/carlosa/.texlive/texmf-var/fon
+ts/pk/ljfour/jknappen/ec/ecbx1095.600pk></usr/share/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
+sr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmsy10.pfb>
+Output written on salida/aux/02-problema/sub2.pdf (32 pages, 2095207 bytes).
 Transcript written on salida/aux/02-problema/sub2.log.
 Latexmk: Getting log file 'salida/aux/02-problema/sub2.log'
 Latexmk: Examining 'salida/aux/02-problema/sub2.fls'
 Latexmk: Examining 'salida/aux/02-problema/sub2.log'
 Latexmk: Found input bbl file 'salida/aux/02-problema/sub2.bbl'
-Latexmk: References changed.
 Latexmk: Log file says output to 'salida/aux/02-problema/sub2.pdf'
 Latexmk: Using biber to make bibliography file(s).
 Latexmk: Bibliography file(s) from .bcf file:
@@ -936,10 +2478,7 @@ Sources for biber
 Latexmk: applying rule 'pdflatex'...
 Rule 'pdflatex':  Reasons for rerun
 Changed files or newly in use/created:
-  salida/aux/02-problema/sub2.aux
-  salida/aux/02-problema/sub2.out
   salida/aux/02-problema/sub2.run.xml
-  salida/aux/02-problema/sub2.toc
 
 ------------
 Run number 3 of rule 'pdflatex'
@@ -952,8 +2491,11 @@ This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (prel
 entering extended mode
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
-(/mnt/NuevoVol/FEP/Plantilla-audIT/subdocumentos/02-problema/main.tex
-(/mnt/NuevoVol/FEP/Plantilla-audIT/comun/inf-pucv.cls
+
+(/home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recursos
+/Plantilla-audIT/subdocumentos/02-problema/main.tex
+(/home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recursos
+/Plantilla-audIT/comun/inf-pucv.cls
 Document Class: inf-pucv 2023/04/24 sgarciad.me v0.1, Clase para la plantilla L
 aTeX con formato escuela INF PUCV.
 (/usr/share/texmf-dist/tex/latex/extsizes/extarticle.cls
@@ -1026,7 +2568,8 @@ consistent with the Color Model for PDF/A  on input line 3126.
 (/usr/share/texmf-dist/tex/latex/base/ot1enc.dfu)
 (/usr/share/texmf-dist/tex/latex/base/t1enc.dfu)
 (/usr/share/texmf-dist/tex/latex/base/ts1enc.dfu))
-(/mnt/NuevoVol/FEP/Plantilla-audIT/comun/styles.sty
+(/home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recursos
+/Plantilla-audIT/comun/styles.sty
 (/usr/share/texmf-dist/tex/latex/base/inputenc.sty)
 (/usr/share/texmf-dist/tex/latex/base/fontenc.sty)
 (/usr/share/texmf-dist/tex/generic/babel/babel.sty
@@ -1256,17 +2799,20 @@ rning from the lineno package on input line 36.
 (/usr/share/texmf-dist/tex/latex/pdfpages/pppdftex.def))
 (/usr/share/texmf-dist/tex/latex/tocloft/tocloft.sty)
 (/usr/share/texmf-dist/tex/latex/tools/tabularx.sty))
-(/mnt/NuevoVol/FEP/Plantilla-audIT/comun/instancia.tex)
-(/mnt/NuevoVol/FEP/Plantilla-audIT/subdocumentos/02-problema/meta.tex)
-(/mnt/NuevoVol/FEP/Plantilla-audIT/comun/preambulo.tex
+(/home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recursos
+/Plantilla-audIT/comun/instancia.tex)
+(/home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recursos
+/Plantilla-audIT/subdocumentos/02-problema/meta.tex)
+(/home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recursos
+/Plantilla-audIT/comun/preambulo.tex
 (/usr/share/texmf-dist/tex/latex/import/import.sty)
 (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
 calc.code.tex) (/usr/share/texmf-dist/tex/latex/pdflscape/pdflscape.sty
 (/usr/share/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.sty
 (/usr/share/texmf-dist/tex/latex/graphics/lscape.sty)))
 (/usr/share/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty))
-(/mnt/NuevoVol/FEP/Plantilla-audIT/comun/portada.tex)
-(salida/aux/02-problema/sub2.aux)
+(/home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recursos
+/Plantilla-audIT/comun/portada.tex) (salida/aux/02-problema/sub2.aux)
 (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 ) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
@@ -1289,9 +2835,8 @@ LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <19> not available
 LaTeX Font Warning: Font shape `T1/cmr/bx/n' in size <19> not available
 (Font)              size <17.28> substituted on input line 8.
 
-[1{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/t
-exmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} </mnt/NuevoVol/FEP/Plantil
-la-audIT/comun/assets/portada.jpeg>]
+[1 </home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recur
+sos/Plantilla-audIT/comun/assets/portada.jpeg>]
 
 LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <28> not available
 (Font)              size <29.86> substituted on input line 9.
@@ -1312,7 +2857,8 @@ been already used, duplicate ignored
                    \relax 
 l.9 \fichaSubdocumento
                        [1]
-(/mnt/NuevoVol/FEP/Plantilla-audIT/subdocumentos/02-problema/contenido.tex
+(/home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recursos
+/Plantilla-audIT/subdocumentos/02-problema/contenido.tex
 
 LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <86> not available
 (Font)              size <51.59> substituted on input line 1.
@@ -1326,442 +2872,823 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.39 \end{tablaAudit}
-                      [2] [3] [4] [5]) [6] [7] (salida/aux/02-problema/sub2.aux
-)
+l.10 
+      [2]
+Underfull \hbox (badness 6396) in paragraph at lines 27--28
+[]|\T1/cmr/m/n/10.95 18 trac-to-ca-mio-nes ha-bi-li-ta-dos
+[3] [4] [5]
+Underfull \hbox (badness 2142) in paragraph at lines 74--75
+[]|\T1/cmr/m/n/10.95 34 trac-to-ca-mio-nes de ter-ce-ros
+ [6] [7]
+Underfull \hbox (badness 10000) in paragraph at lines 103--104
+[]|\T1/cmr/m/n/10.95 31$ $% del in-gre-so to-tal
+
+Underfull \hbox (badness 10000) in paragraph at lines 106--107
+[]|\T1/cmr/m/n/10.95 14$ $% del in-gre-so ($10.920M
+ [8]
+Underfull \hbox (badness 2662) in paragraph at lines 122--122
+[]|\T1/cmr/m/n/10.95 Exigencias con-di-cio-nan-tes del clien-te prin-ci-pal
+
+Underfull \hbox (badness 10000) in paragraph at lines 122--123
+[]|\T1/cmr/m/n/10.95 Trazabilidad 100$ $%, po-si-ción
+
+Underfull \hbox (badness 10000) in paragraph at lines 123--124
+[]|\T1/cmr/m/n/10.95 19$ $% del in-gre-so to-tal
+
+Underfull \hbox (badness 10000) in paragraph at lines 123--124
+\T1/cmr/m/n/10.95 ($14.820.000.000 CLP anua-
+ [9] [10] [11]
+Underfull \hbox (badness 10000) in paragraph at lines 170--170
+[]|\T1/cmr/m/n/10.95 Terminal San
+
+Underfull \hbox (badness 3919) in paragraph at lines 170--170
+\T1/cmr/m/n/10.95 co pun-to de
+
+Underfull \hbox (badness 10000) in paragraph at lines 170--170
+\T1/cmr/m/n/10.95 in-ter-ven-ción
+
+Underfull \hbox (badness 7869) in paragraph at lines 171--171
+[]|\T1/cmr/m/n/10.95 Terminales Re-
+
+Underfull \hbox (badness 1648) in paragraph at lines 171--171
+\T1/cmr/m/n/10.95 to-fa-gas-ta, Tal-ca, Los
+
+Underfull \hbox (badness 10000) in paragraph at lines 171--171
+\T1/cmr/m/n/10.95 te geo-grá-fi-co
+
+Underfull \hbox (badness 10000) in paragraph at lines 171--171
+\T1/cmr/m/n/10.95 de trans-mi-
+
+Underfull \hbox (badness 10000) in paragraph at lines 172--172
+[]|\T1/cmr/m/n/10.95 Mantenimiento pre-
+
+Underfull \hbox (badness 6188) in paragraph at lines 172--172
+\T1/cmr/m/n/10.95 ven-ti-vo y co-rrec-ti-vo
+
+Underfull \hbox (badness 1831) in paragraph at lines 172--172
+\T1/cmr/m/n/10.95 de flo-ta pro-pia (358
+
+Underfull \hbox (badness 10000) in paragraph at lines 172--172
+[]|\T1/cmr/m/n/10.95 Alta. Sos-
+
+Underfull \hbox (badness 10000) in paragraph at lines 172--172
+\T1/cmr/m/n/10.95 tie-nen dis-
+
+Underfull \hbox (badness 10000) in paragraph at lines 172--172
+\T1/cmr/m/n/10.95 po-ni-bi-li-dad
+
+Underfull \hbox (badness 10000) in paragraph at lines 172--172
+\T1/cmr/m/n/10.95 me-cá-ni-ca de
+
+Underfull \hbox (badness 10000) in paragraph at lines 172--172
+\T1/cmr/m/n/10.95 ac-ti-vos pro-
+
+Underfull \hbox (badness 10000) in paragraph at lines 173--173
+[]|\T1/cmr/m/n/10.95 Talleres Ex-ter-
+
+Underfull \hbox (badness 10000) in paragraph at lines 173--173
+[]|\T1/cmr/m/n/10.95 Alta. In-ter-
+
+Underfull \hbox (badness 10000) in paragraph at lines 173--173
+\T1/cmr/m/n/10.95 ven-cio-nes no
+
+Underfull \hbox (badness 10000) in paragraph at lines 173--173
+\T1/cmr/m/n/10.95 re-gis-tra-das
+
+Underfull \hbox (badness 1496) in paragraph at lines 173--173
+\T1/cmr/m/n/10.95 que de-gra-dan
+
+Underfull \hbox (badness 10000) in paragraph at lines 174--174
+[]|\T1/cmr/m/n/10.95 Operación in-ter-na-
+
+Underfull \hbox (badness 10000) in paragraph at lines 174--174
+\T1/cmr/m/n/10.95 cio-nal bi-na-cio-nal
+
+Underfull \hbox (badness 10000) in paragraph at lines 174--174
+[]|\T1/cmr/m/n/10.95 Infraestructura adua-ne-ra
+
+Underfull \hbox (badness 10000) in paragraph at lines 174--174
+\T1/cmr/m/n/10.95 bi-na-cio-nal. Cie-rres por
+
+Underfull \hbox (badness 4647) in paragraph at lines 174--174
+\T1/cmr/m/n/10.95 nie-ve de has-ta 12 días
+
+Underfull \hbox (badness 1210) in paragraph at lines 174--174
+\T1/cmr/m/n/10.95 dad cli-má-ti-ca
+
+Underfull \hbox (badness 10000) in paragraph at lines 176--176
+\T1/cmr/m/n/10.95 ob-je-ción de
+
+Underfull \hbox (badness 10000) in paragraph at lines 176--176
+\T1/cmr/m/n/10.95 so-bre-es-ta-días
+
+Underfull \hbox (badness 3049) in paragraph at lines 177--177
+[]|\T1/cmr/m/n/10.95 Ambiente hos-til; prohi-bi-
+
+Underfull \hbox (badness 4647) in paragraph at lines 177--177
+\T1/cmr/m/n/10.95 ción le-gal de ma-ni-pu-lar
+
+Underfull \hbox (badness 10000) in paragraph at lines 177--178
+[]|\T1/cmr/m/n/10.95 Crítica.
+
+Underfull \hbox (badness 10000) in paragraph at lines 177--178
+\T1/cmr/m/n/10.95 Res-tric-ción
+
+Underfull \hbox (badness 10000) in paragraph at lines 177--178
+\T1/cmr/m/n/10.95 ab-so-lu-ta de
+
+Underfull \hbox (badness 10000) in paragraph at lines 177--178
+\T1/cmr/m/n/10.95 in-ter-ac-ción
+
+Underfull \hbox (badness 10000) in paragraph at lines 177--178
+\T1/cmr/m/n/10.95 (([]Mi-nis-te-rio
+
+Underfull \hbox (badness 10000) in paragraph at lines 177--178
+\T1/cmr/m/n/10.95 de Trans-
+
+Underfull \hbox (badness 10000) in paragraph at lines 177--178
+\T1/cmr/m/n/10.95 por-tes y
+
+Underfull \hbox (badness 10000) in paragraph at lines 177--178
+\T1/cmr/m/n/10.95 Te-le-co-mu-ni-ca-
+ [12]
+Overfull \hbox (0.28471pt too wide) in paragraph at lines 180--180
+|[]\T1/cmr/bx/n/17.28 Caracterización de ac-to-res y ma-triz de ten-sio-nes ope
+-
+[13] [14] [15] [16]
+Overfull \hbox (11.10811pt too wide) in paragraph at lines 254--255
+\T1/cmr/m/n/12 cap-tu-ra po-si-cio-nal y re-so-lu-ción ope-ra-ti-va de los ba-c
+hes de co-nec-ti-vi-dad sa-te-li-tal/celular. 
+[17]
+Underfull \hbox (badness 1286) in paragraph at lines 279--279
+[]|\T1/cmr/m/n/10.95 E. Val-de-be-
+
+Underfull \hbox (badness 4792) in paragraph at lines 279--279
+\T1/cmr/m/n/10.95 ca; re-ten-ción de
+
+Underfull \hbox (badness 6348) in paragraph at lines 279--279
+[]|\T1/cmr/m/n/10.95 Exposición pe-nal
+
+Underfull \hbox (badness 10000) in paragraph at lines 279--279
+\T1/cmr/m/n/10.95 por re-cha-zo de
+
+Underfull \hbox (badness 1867) in paragraph at lines 279--279
+\T1/cmr/m/n/10.95 to y cum-pli-mien-to
+
+Underfull \hbox (badness 1596) in paragraph at lines 280--280
+\T1/cmr/m/n/10.95 te sin ki-ló-me-tros
+
+Underfull \hbox (badness 3364) in paragraph at lines 280--280
+\T1/cmr/m/n/10.95 va-cíos; va-li-da-ción
+
+Underfull \hbox (badness 10000) in paragraph at lines 280--280
+\T1/cmr/m/n/10.95 blo-quean-te pre-
+
+Underfull \hbox (badness 10000) in paragraph at lines 280--280
+[]|\T1/cmr/m/n/10.95 Sistemas ex-ce-si-
+
+Underfull \hbox (badness 10000) in paragraph at lines 280--280
+\T1/cmr/m/n/10.95 va-men-te rí-gi-dos
+
+Underfull \hbox (badness 2538) in paragraph at lines 280--280
+[]|\T1/cmr/m/n/10.95 Visibilidad in-te-gra-
+
+Underfull \hbox (badness 1867) in paragraph at lines 280--280
+\T1/cmr/m/n/10.95 nei-dad del equi-po,
+
+Underfull \hbox (badness 10000) in paragraph at lines 281--281
+[]|\T1/cmr/m/n/10.95 Respeto de sus
+
+Underfull \hbox (badness 3396) in paragraph at lines 281--281
+[]|\T1/cmr/m/n/10.95 Alertas in-opor-tu-
+
+Underfull \hbox (badness 10000) in paragraph at lines 281--281
+\T1/cmr/m/n/10.95 nas; ser san-cio-
+
+Underfull \hbox (badness 10000) in paragraph at lines 281--281
+\T1/cmr/m/n/10.95 na-da por fa-llas
+
+Underfull \hbox (badness 2359) in paragraph at lines 281--281
+[]|\T1/cmr/m/n/10.95 Operación sin dis-
+
+Underfull \hbox (badness 5231) in paragraph at lines 282--282
+[]|\T1/cmr/m/n/10.95 Autonomía so-bre
+
+Underfull \hbox (badness 4726) in paragraph at lines 282--282
+\T1/cmr/m/n/10.95 su ac-ti-vo; co-bro
+
+Underfull \hbox (badness 2158) in paragraph at lines 282--282
+\T1/cmr/m/n/10.95 ra pa-ra ter-ce-ros;
+
+Underfull \hbox (badness 1383) in paragraph at lines 282--282
+\T1/cmr/m/n/10.95 pe-na-li-za-cio-nes in-
+
+Underfull \hbox (badness 10000) in paragraph at lines 282--282
+[]|\T1/cmr/m/n/10.95 Muy Al-ta
+
+Underfull \hbox (badness 4660) in paragraph at lines 282--282
+\T1/cmr/m/n/10.95 ción; trans-pa-ren-cia
+
+Underfull \hbox (badness 10000) in paragraph at lines 283--283
+[]|\T1/cmr/m/n/10.95 G. Os-san-
+
+Underfull \hbox (badness 10000) in paragraph at lines 283--283
+[]|\T1/cmr/m/n/10.95 Erradicación de
+
+Underfull \hbox (badness 10000) in paragraph at lines 283--283
+\T1/cmr/m/n/10.95 sub-si-dios cru-
+
+Underfull \hbox (badness 10000) in paragraph at lines 283--283
+\T1/cmr/m/n/10.95 za-dos; cos-teo
+
+Underfull \hbox (badness 2401) in paragraph at lines 283--283
+\T1/cmr/m/n/10.95 ana-lí-ti-co por ru-
+
+Underfull \hbox (badness 3000) in paragraph at lines 283--283
+[]|\T1/cmr/m/n/10.95 Mantener con-tra-
+
+Underfull \hbox (badness 1515) in paragraph at lines 283--283
+[]|\T1/cmr/m/n/10.95 Integración opor-tu-
+
+Underfull \hbox (badness 6252) in paragraph at lines 283--283
+\T1/cmr/m/n/10.95 odó-me-tro y fle-tes
+
+Underfull \hbox (badness 10000) in paragraph at lines 284--284
+[]|\T1/cmr/m/n/10.95 Mantenimiento
+
+Underfull \hbox (badness 10000) in paragraph at lines 284--284
+[]|\T1/cmr/m/n/10.95 Daños inad-ver-ti-
+
+Underfull \hbox (badness 10000) in paragraph at lines 284--284
+\T1/cmr/m/n/10.95 no re-gis-tra-das;
+
+Underfull \hbox (badness 4416) in paragraph at lines 284--284
+\T1/cmr/m/n/10.95 ins-ta-la-cio-nes ma-
+
+Underfull \hbox (badness 1466) in paragraph at lines 284--284
+[]|\T1/cmr/m/n/10.95 Lectura re-mo-ta de
+
+Underfull \hbox (badness 2990) in paragraph at lines 285--285
+[]|\T1/cmr/m/n/10.95 Validación vin-cu-
+
+Underfull \hbox (badness 10000) in paragraph at lines 285--285
+[]|\T1/cmr/m/n/10.95 Nuevo si-nies-tro
+
+Underfull \hbox (badness 10000) in paragraph at lines 285--285
+\T1/cmr/m/n/10.95 con le-sio-nes o
+
+Underfull \hbox (badness 10000) in paragraph at lines 285--285
+[]|\T1/cmr/m/n/10.95 Alta (ve-to
+
+Underfull \hbox (badness 10000) in paragraph at lines 285--285
+[]|\T1/cmr/m/n/10.95 Repositorio uni-fi-
+
+Underfull \hbox (badness 5878) in paragraph at lines 285--285
+\T1/cmr/m/n/10.95 ca-do de vi-gen-cias
+
+Underfull \hbox (badness 7168) in paragraph at lines 285--285
+\T1/cmr/m/n/10.95 con ca-pa-ci-dad de
+
+Underfull \hbox (badness 4181) in paragraph at lines 285--285
+\T1/cmr/m/n/10.95 in-ter-cep-ción pre-via
+
+Underfull \hbox (badness 10000) in paragraph at lines 286--286
+[]|\T1/cmr/m/n/10.95 Cumplimiento
+
+Underfull \hbox (badness 10000) in paragraph at lines 286--286
+\T1/cmr/m/n/10.95 (CO$[]$e, tra-za-bi-
+
+Underfull \hbox (badness 10000) in paragraph at lines 286--286
+\T1/cmr/m/n/10.95 li-dad, e-Docs,
+
+Underfull \hbox (badness 5203) in paragraph at lines 286--286
+\T1/cmr/m/n/10.95 ti-fi-ca-cio-nes in-ter-
+
+Underfull \hbox (badness 10000) in paragraph at lines 286--286
+[]|\T1/cmr/m/n/10.95 Extrema
+
+Underfull \hbox (badness 2012) in paragraph at lines 286--286
+[]|\T1/cmr/m/n/10.95 Reportería ve-ri-fi-ca-
+
+Underfull \hbox (badness 1609) in paragraph at lines 286--286
+\T1/cmr/m/n/10.95 da de emi-sio-nes e
+
+Underfull \hbox (badness 10000) in paragraph at lines 286--286
+\T1/cmr/m/n/10.95 his-to-rial fi-de-digno
+
+Underfull \hbox (badness 4416) in paragraph at lines 286--286
+\T1/cmr/m/n/10.95 del 100$ $% de los
+
+Underfull \hbox (badness 1502) in paragraph at lines 287--287
+[]|\T1/cmr/m/n/10.95 Coherencia en la
+
+Underfull \hbox (badness 2042) in paragraph at lines 287--287
+\T1/cmr/m/n/10.95 vi-sua-li-za-ción geo-
+
+Underfull \hbox (badness 10000) in paragraph at lines 287--287
+[]|\T1/cmr/m/n/10.95 Intermitencias
+
+Underfull \hbox (badness 3547) in paragraph at lines 287--287
+\T1/cmr/m/n/10.95 cró-ni-cas en ru-ta
+
+Underfull \hbox (badness 1466) in paragraph at lines 287--287
+\T1/cmr/m/n/10.95 nor-te; ges-tión de
+
+Underfull \hbox (badness 1424) in paragraph at lines 287--287
+[]|\T1/cmr/m/n/10.95 Alta (téc-ni-
+
+Underfull \hbox (badness 2409) in paragraph at lines 287--287
+[]|\T1/cmr/m/n/10.95 Vista uni-fi-ca-da de
+
+Underfull \hbox (badness 3612) in paragraph at lines 287--287
+\T1/cmr/m/n/10.95 geo-lo-ca-li-za-ción que
+
+Underfull \hbox (badness 10000) in paragraph at lines 288--288
+[]|\T1/cmr/m/n/10.95 M. Ri-quel-
+
+Underfull \hbox (badness 2753) in paragraph at lines 288--289
+[]|\T1/cmr/m/n/10.95 Resiliencia ope-ra-ti-
+ [18 </home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/rec
+ursos/Plantilla-audIT/subdocumentos/02-problema/Img.png (PNG copy)>] [19]
+[20]
+Underfull \hbox (badness 3735) in paragraph at lines 305--305
+[]|\T1/cmr/bx/n/10.95 Tensión Ope-
+
+Underfull \hbox (badness 3690) in paragraph at lines 305--305
+[]|\T1/cmr/bx/n/10.95 Actores In-vo-lu-
+
+Underfull \hbox (badness 1694) in paragraph at lines 307--307
+\T1/cmr/m/n/10.95 Trans-por-tis-tas ex-
+
+Underfull \hbox (badness 2538) in paragraph at lines 307--307
+[]|\T1/cmr/m/n/10.95 Geolocalización cir-cuns-
+
+Underfull \hbox (badness 4156) in paragraph at lines 308--308
+[]|\T1/cmr/m/n/10.95 3. Jor-na-da vs.
+
+Underfull \hbox (badness 4779) in paragraph at lines 309--309
+[]|\T1/cmr/m/n/10.95 4. Ren-ta-bi-li-dad
+
+Underfull \hbox (badness 7925) in paragraph at lines 309--309
+[]|\T1/cmr/m/n/10.95 Destrucción con-ti-nua
+
+Underfull \hbox (badness 4872) in paragraph at lines 309--309
+[]|\T1/cmr/m/n/10.95 Consolidación opor-tu-na
+
+Underfull \hbox (badness 10000) in paragraph at lines 310--310
+[]|\T1/cmr/m/n/10.95 Fallas en ru-ta; 61
+
+Underfull \hbox (badness 10000) in paragraph at lines 311--311
+[]|\T1/cmr/m/n/10.95 6. Go-ber-nan-za
+
+Underfull \hbox (badness 4353) in paragraph at lines 311--312
+[]|\T1/cmr/m/n/10.95 Esquema de be-ne-fi-cios
+ [21] [22]
+Underfull \hbox (badness 10000) in paragraph at lines 333--333
+[]|\T1/cmr/m/n/10.95 Ceguera de
+
+Underfull \hbox (badness 1215) in paragraph at lines 333--333
+[]|\T1/cmr/m/n/10.95 0 des-car-gas de
+
+Underfull \hbox (badness 10000) in paragraph at lines 333--333
+\T1/cmr/m/n/10.95 ta-có-gra-fo; 258
+
+Underfull \hbox (badness 10000) in paragraph at lines 333--333
+[]|\T1/cmr/m/n/10.95 Falta de ex-
+
+Underfull \hbox (badness 10000) in paragraph at lines 333--333
+\T1/cmr/m/n/10.95 trac-ción y
+
+Underfull \hbox (badness 10000) in paragraph at lines 333--333
+\T1/cmr/m/n/10.95 ve-ri-fi-ca-ción
+
+Underfull \hbox (badness 10000) in paragraph at lines 333--333
+[]|\T1/cmr/m/n/10.95 Incumplimiento Art.
+
+Underfull \hbox (badness 10000) in paragraph at lines 333--333
+[]|\T1/cmr/m/n/10.95 Caps. 1,
+
+Underfull \hbox (badness 10000) in paragraph at lines 334--334
+[]|\T1/cmr/m/n/10.95 Hemorragia
+
+Underfull \hbox (badness 4543) in paragraph at lines 334--334
+\T1/cmr/m/n/10.95 cíos (10,66 M
+
+Underfull \hbox (badness 10000) in paragraph at lines 335--335
+[]|\T1/cmr/m/n/10.95 Erosión So-
+
+Underfull \hbox (badness 10000) in paragraph at lines 335--335
+[]|\T1/cmr/m/n/10.95 $241,4M/año
+
+Underfull \hbox (badness 2922) in paragraph at lines 335--335
+\T1/cmr/m/n/10.95 fu-ta-ble de lle-
+
+Underfull \hbox (badness 6236) in paragraph at lines 335--335
+\T1/cmr/m/n/10.95 ga-da/salida en
+
+Underfull \hbox (badness 10000) in paragraph at lines 336--336
+[]|\T1/cmr/m/n/10.95 Sobrepeso
+
+Underfull \hbox (badness 1895) in paragraph at lines 336--336
+\T1/cmr/m/n/10.95 2.556 h-camión
+
+Underfull \hbox (badness 10000) in paragraph at lines 336--336
+\T1/cmr/m/n/10.95 per-di-das en
+
+Underfull \hbox (badness 5622) in paragraph at lines 336--336
+[]|\T1/cmr/m/n/10.95 Infracción D.S. 158;
+
+Underfull \hbox (badness 3780) in paragraph at lines 336--336
+\T1/cmr/m/n/10.95 mul-tas e in-mo-vi-li-za-
+
+Underfull \hbox (badness 10000) in paragraph at lines 337--337
+[]|\T1/cmr/m/n/10.95 Subsidios
+
+Underfull \hbox (badness 6725) in paragraph at lines 337--337
+[]|\T1/cmr/m/n/10.95 3 con-tra-tos a
+
+Underfull \hbox (badness 6641) in paragraph at lines 337--337
+\T1/cmr/m/n/10.95 des-fa-se de 40
+
+Underfull \hbox (badness 2435) in paragraph at lines 337--337
+[]|\T1/cmr/m/n/10.95 Destrucción de va-lor
+
+Underfull \hbox (badness 10000) in paragraph at lines 337--337
+[]|\T1/cmr/m/n/10.95 Caps. 1,
+
+Underfull \hbox (badness 10000) in paragraph at lines 338--338
+[]|\T1/cmr/m/n/10.95 Desgobierno
+
+Underfull \hbox (badness 10000) in paragraph at lines 338--338
+\T1/cmr/m/n/10.95 en 4 Ex-cel;
+
+Underfull \hbox (badness 5622) in paragraph at lines 338--338
+\T1/cmr/m/n/10.95 in-frac-ción haz-
+
+Underfull \hbox (badness 10000) in paragraph at lines 338--338
+[]|\T1/cmr/m/n/10.95 Caps. 1,
+
+Underfull \hbox (badness 10000) in paragraph at lines 339--339
+[]|\T1/cmr/m/n/10.95 Hardware
+
+Underfull \hbox (badness 10000) in paragraph at lines 339--339
+[]|\T1/cmr/m/n/10.95 61 CAN-bus
+
+Underfull \hbox (badness 10000) in paragraph at lines 339--339
+\T1/cmr/m/n/10.95 inac-ti-vos; 3
+
+Underfull \hbox (badness 10000) in paragraph at lines 339--339
+\T1/cmr/m/n/10.95 GPS dis-pa-res;
+
+Underfull \hbox (badness 7685) in paragraph at lines 339--339
+\T1/cmr/m/n/10.95 trac-ción; sis-te-
+
+Underfull \hbox (badness 1888) in paragraph at lines 339--339
+[]|\T1/cmr/m/n/10.95 Pérdida de ana-lí-ti-ca;
+
+Underfull \hbox (badness 10000) in paragraph at lines 339--339
+[]|\T1/cmr/m/n/10.95 Caps.
+
+Underfull \hbox (badness 10000) in paragraph at lines 339--339
+\T1/cmr/m/n/10.95 4.10, 5,
+
+Underfull \hbox (badness 8094) in paragraph at lines 340--340
+[]|\T1/cmr/m/n/10.95 Fricción Li-
+
+Underfull \hbox (badness 2941) in paragraph at lines 340--340
+\T1/cmr/m/n/10.95 per-so-nas; 11$ $%
+
+Underfull \hbox (badness 2435) in paragraph at lines 340--340
+\T1/cmr/m/n/10.95 vo ma-nual sin
+
+Underfull \hbox (badness 1824) in paragraph at lines 340--340
+\T1/cmr/m/n/10.95 cru-ces au-to-má-
+
+Underfull \hbox (badness 10000) in paragraph at lines 340--340
+[]|\T1/cmr/m/n/10.95 Caps.
+
+Underfull \hbox (badness 4779) in paragraph at lines 341--341
+[]|\T1/cmr/m/n/10.95 22$ $% ca-mio-nes
+
+Underfull \hbox (badness 1688) in paragraph at lines 341--341
+\T1/cmr/m/n/10.95 1 vez/mes por
+
+Overfull \hbox (0.6054pt too wide) in paragraph at lines 341--341
+[]|\T1/cmr/m/n/10.95 Subcontratación
+
+Underfull \hbox (badness 4531) in paragraph at lines 341--341
+\T1/cmr/m/n/10.95 sin su-per-vi-sión
+
+Underfull \hbox (badness 2512) in paragraph at lines 342--342
+\T1/cmr/m/n/10.95 (CO$[]$e, e-Docs,
+
+Underfull \hbox (badness 3168) in paragraph at lines 342--342
+\T1/cmr/m/n/10.95 tual y exi-gen-
+
+Underfull \hbox (badness 10000) in paragraph at lines 342--342
+[]|\T1/cmr/m/n/10.95 Riesgo de pér-di-da
+
+Underfull \hbox (badness 10000) in paragraph at lines 342--343
+[]|\T1/cmr/m/n/10.95 Caps. 1,
+ [23]
+Overfull \hbox (1.42781pt too wide) in paragraph at lines 345--345
+|[]\T1/cmr/bx/n/17.28 Registro de su-pues-tos ope-ra-cio-na-les y ma-peo exhaus
+-
+[24]
+Underfull \hbox (badness 2735) in paragraph at lines 356--356
+[]|\T1/cmr/bx/n/10.95 Supuesto del En-torno
+
+Underfull \hbox (badness 10000) in paragraph at lines 356--356
+[]|\T1/cmr/bx/n/10.95 Impacto en
+
+Underfull \hbox (badness 4366) in paragraph at lines 357--357
+\T1/cmr/m/n/10.95 tis-tas que ma-ne-jan
+
+Underfull \hbox (badness 1019) in paragraph at lines 357--357
+\T1/cmr/m/n/10.95 DT, des-car-tan-do la me-ra
+
+Underfull \hbox (badness 7238) in paragraph at lines 357--357
+\T1/cmr/m/n/10.95 dad sub-si-dia-ria
+
+Underfull \hbox (badness 2790) in paragraph at lines 357--357
+\T1/cmr/m/n/10.95 (([]Mi-nis-te-rio del
+
+Underfull \hbox (badness 10000) in paragraph at lines 358--358
+\T1/cmr/m/n/10.95 trans-por-tis-tas por
+
+Underfull \hbox (badness 6173) in paragraph at lines 358--358
+\T1/cmr/m/n/10.95 com-par-tir da-tos, y
+
+Underfull \hbox (badness 1365) in paragraph at lines 358--358
+[]|\T1/cmr/m/n/10.95 Requiere es-que-ma de va-
+
+Underfull \hbox (badness 1596) in paragraph at lines 358--358
+\T1/cmr/m/n/10.95 ma de dis-po-ni-
+
+Underfull \hbox (badness 5985) in paragraph at lines 359--359
+[]|\T1/cmr/m/n/10.95 Deuda Téc-
+
+Underfull \hbox (badness 7133) in paragraph at lines 359--359
+[]|\T1/cmr/m/n/10.95 Qué ha-cer con el
+
+Underfull \hbox (badness 4416) in paragraph at lines 359--359
+\T1/cmr/m/n/10.95 TMS de 2013: re-
+
+Underfull \hbox (badness 10000) in paragraph at lines 359--359
+[]|\T1/cmr/m/n/10.95 Obsolescencia
+
+Underfull \hbox (badness 6396) in paragraph at lines 359--359
+\T1/cmr/m/n/10.95 ba-sal que res-
+
+Underfull \hbox (badness 10000) in paragraph at lines 360--360
+[]|\T1/cmr/m/n/10.95 Incapacidad de
+
+Underfull \hbox (badness 5771) in paragraph at lines 360--360
+\T1/cmr/m/n/10.95 ase-gu-rar acuer-
+
+Underfull \hbox (badness 10000) in paragraph at lines 362--362
+[]|\T1/cmr/m/n/10.95 Bloqueo de via-je
+
+Underfull \hbox (badness 7558) in paragraph at lines 362--362
+\T1/cmr/m/n/10.95 li-za-ción crí-ti-co;
+
+Underfull \hbox (badness 2435) in paragraph at lines 362--362
+\T1/cmr/m/n/10.95 im-pac-to di-rec-to
+
+Underfull \hbox (badness 1019) in paragraph at lines 362--362
+\T1/cmr/m/n/10.95 en com-pro-mi-sos
+
+Underfull \hbox (badness 1062) in paragraph at lines 363--363
+\T1/cmr/m/n/10.95 ten-ción en ber-
+
+Underfull \hbox (badness 10000) in paragraph at lines 364--364
+[]|\T1/cmr/m/n/10.95 Registro de lle-
+
+Underfull \hbox (badness 10000) in paragraph at lines 364--364
+\T1/cmr/m/n/10.95 ga-das/salidas en
+
+Underfull \hbox (badness 10000) in paragraph at lines 364--364
+[]|\T1/cmr/m/n/10.95 Objeción del
+
+Underfull \hbox (badness 5637) in paragraph at lines 364--364
+\T1/cmr/m/n/10.95 de so-bre-es-ta-día
+
+Underfull \hbox (badness 2452) in paragraph at lines 364--364
+\T1/cmr/m/n/10.95 ($241,4M anua-
+
+Underfull \hbox (badness 10000) in paragraph at lines 365--365
+[]|\T1/cmr/m/n/10.95 Inmovilización
+
+Underfull \hbox (badness 10000) in paragraph at lines 366--366
+[]|\T1/cmr/m/n/10.95 Impacto se-ve-ro
+
+Underfull \hbox (badness 10000) in paragraph at lines 366--366
+\T1/cmr/m/n/10.95 au-men-to del
+
+Underfull \hbox (badness 3525) in paragraph at lines 367--367
+\T1/cmr/m/n/10.95 lí-nea vs. al-ma-ce-na-
+
+Underfull \hbox (badness 4543) in paragraph at lines 367--367
+[]|\T1/cmr/m/n/10.95 Priorizar even-tos crí-ti-cos
+
+Underfull \hbox (badness 10000) in paragraph at lines 367--367
+[]|\T1/cmr/m/n/10.95 Saturación de
+
+Underfull \hbox (badness 10000) in paragraph at lines 367--367
+\T1/cmr/m/n/10.95 pla-nes de da-
+
+Underfull \hbox (badness 10000) in paragraph at lines 367--367
+\T1/cmr/m/n/10.95 tos mó-vi-les y
+
+Underfull \hbox (badness 4792) in paragraph at lines 367--367
+\T1/cmr/m/n/10.95 so-bre-cos-tos por
+
+Overfull \hbox (17.32416pt too wide) in paragraph at lines 368--368
+[]|\T1/cmr/m/n/10.95 Desaprovechamiento
+
+Underfull \hbox (badness 2150) in paragraph at lines 368--368
+\T1/cmr/m/n/10.95 de ana-lí-ti-ca de
+
+Underfull \hbox (badness 10000) in paragraph at lines 368--368
+\T1/cmr/m/n/10.95 man-te-ni-mien-to
+
+Underfull \hbox (badness 5802) in paragraph at lines 370--370
+[]|\T1/cmr/m/n/10.95 Criterio de asig-na-
+
+Underfull \hbox (badness 7685) in paragraph at lines 370--370
+[]|\T1/cmr/m/n/10.95 Erosión ma-si-va
+
+Underfull \hbox (badness 5345) in paragraph at lines 370--370
+\T1/cmr/m/n/10.95 gas-to en com-
+
+Underfull \hbox (badness 1436) in paragraph at lines 370--370
+\T1/cmr/m/n/10.95 bus-ti-ble y pea-
+
+Underfull \hbox (badness 10000) in paragraph at lines 371--371
+[]|\T1/cmr/m/n/10.95 Reconstrucción de
+
+Underfull \hbox (badness 1052) in paragraph at lines 371--371
+\T1/cmr/m/n/10.95 cos-to por via-je con
+
+Underfull \hbox (badness 10000) in paragraph at lines 371--371
+[]|\T1/cmr/m/n/10.95 Tarifas co-mer-
+
+Underfull \hbox (badness 10000) in paragraph at lines 371--371
+\T1/cmr/m/n/10.95 cos-to mar-gi-nal
+
+Underfull \hbox (badness 8038) in paragraph at lines 372--372
+[]|\T1/cmr/m/n/10.95 Dificultad pa-ra
+
+Underfull \hbox (badness 1590) in paragraph at lines 373--373
+\T1/cmr/m/n/10.95 tra-tos ba-jo cos-to e
+
+Underfull \hbox (badness 3428) in paragraph at lines 373--373
+[]|\T1/cmr/m/n/10.95 Persistencia del
+
+Underfull \hbox (badness 1038) in paragraph at lines 373--373
+\T1/cmr/m/n/10.95 que des-tru-ye el
+
+Underfull \hbox (badness 2351) in paragraph at lines 373--373
+\T1/cmr/m/n/10.95 mar-gen con-so-li-
+
+Underfull \hbox (badness 7576) in paragraph at lines 374--374
+[]|\T1/cmr/m/n/10.95 Fiscalización de $\OMS/cmsy/m/n/10.95 ^^Y
+
+Underfull \hbox (badness 10000) in paragraph at lines 374--374
+[]|\T1/cmr/m/n/10.95 Responsabilidad so-li-da-ria
+
+Underfull \hbox (badness 10000) in paragraph at lines 374--374
+[]|\T1/cmr/m/n/10.95 Retención de
+
+Underfull \hbox (badness 8132) in paragraph at lines 374--374
+\T1/cmr/m/n/10.95 cio-nes for-ma-les
+
+Underfull \hbox (badness 10000) in paragraph at lines 375--375
+[]|\T1/cmr/m/n/10.95 Coincidencia en-tre
+
+Underfull \hbox (badness 1910) in paragraph at lines 375--375
+\T1/cmr/m/n/10.95 do-cu-men-tos de sus-
+
+Underfull \hbox (badness 1902) in paragraph at lines 375--375
+\T1/cmr/m/n/10.95 tan-cias pe-li-gro-sas y
+
+Underfull \hbox (badness 10000) in paragraph at lines 375--375
+[]|\T1/cmr/m/n/10.95 Riesgo de se-
+
+Underfull \hbox (badness 7397) in paragraph at lines 375--375
+\T1/cmr/m/n/10.95 gu-ri-dad se-ve-ro;
+
+Underfull \hbox (badness 10000) in paragraph at lines 375--375
+\T1/cmr/m/n/10.95 emer-gen-cias
+
+Overfull \hbox (3.70216pt too wide) in paragraph at lines 376--376
+[]|\T1/cmr/m/n/10.95 Contingencias| 
+
+Underfull \hbox (badness 4779) in paragraph at lines 376--376
+[]|\T1/cmr/m/n/10.95 Respuesta ope-ra-ti-va
+
+Underfull \hbox (badness 10000) in paragraph at lines 376--376
+[]|\T1/cmr/m/n/10.95 Sobrecostos no
+
+Underfull \hbox (badness 10000) in paragraph at lines 376--376
+\T1/cmr/m/n/10.95 re-cu-pe-ra-bles y
+
+Underfull \hbox (badness 1755) in paragraph at lines 376--376
+\T1/cmr/m/n/10.95 rio-ro en car-gas
+
+Overfull \hbox (9.07892pt too wide) in paragraph at lines 377--377
+[]|\T1/cmr/m/n/10.95 Mantenimiento| 
+
+Underfull \hbox (badness 3769) in paragraph at lines 377--377
+\T1/cmr/m/n/10.95 ra-cio-nes en ta-lle-res
+
+Overfull \hbox (4.00818pt too wide) in paragraph at lines 378--378
+[]|\T1/cmr/m/n/10.95 Sostenibilidad| 
+
+Underfull \hbox (badness 1701) in paragraph at lines 378--378
+[]|\T1/cmr/m/n/10.95 Cálculo de emi-sio-nes de-
+
+Underfull \hbox (badness 10000) in paragraph at lines 378--378
+[]|\T1/cmr/m/n/10.95 Ultimátum del
+
+Underfull \hbox (badness 10000) in paragraph at lines 378--378
+\T1/cmr/m/n/10.95 clien-te ex-por-
+
+Underfull \hbox (badness 1184) in paragraph at lines 378--378
+\T1/cmr/m/n/10.95 ta-dor (19$ $% de
+
+Underfull \hbox (badness 10000) in paragraph at lines 378--378
+\T1/cmr/m/n/10.95 in-gre-sos) no
+
+Underfull \hbox (badness 5519) in paragraph at lines 379--379
+[]|\T1/cmr/m/n/10.95 Riesgo le-gal y
+
+Underfull \hbox (badness 10000) in paragraph at lines 380--380
+\T1/cmr/m/n/10.95 des-fa-vo-ra-bles
+
+Underfull \hbox (badness 2119) in paragraph at lines 380--380
+\T1/cmr/m/n/10.95 dios de prue-ba
+
+Underfull \hbox (badness 10000) in paragraph at lines 381--381
+[]|\T1/cmr/m/n/10.95 Despliegue en 374
+
+Underfull \hbox (badness 1147) in paragraph at lines 381--381
+\T1/cmr/m/n/10.95 má-qui-nas con pa-sos
+
+Underfull \hbox (badness 10000) in paragraph at lines 381--381
+[]|\T1/cmr/m/n/10.95 Dilatación de
+
+Underfull \hbox (badness 10000) in paragraph at lines 381--381
+\T1/cmr/m/n/10.95 pla-zos si se
+
+Underfull \hbox (badness 10000) in paragraph at lines 381--381
+\T1/cmr/m/n/10.95 asu-men rit-mos
+
+Underfull \hbox (badness 10000) in paragraph at lines 382--382
+[]|\T1/cmr/m/n/10.95 Subsistencia de la
+
+Underfull \hbox (badness 2547) in paragraph at lines 382--382
+\T1/cmr/m/n/10.95 tra-za-bi-li-dad du-ran-te
+
+Underfull \hbox (badness 1360) in paragraph at lines 382--382
+\T1/cmr/m/n/10.95 con-vi-ven-cia de re-gí-
+
+Underfull \hbox (badness 3364) in paragraph at lines 382--382
+[]|\T1/cmr/m/n/10.95 Operación de-be-rá to-le-rar
+
+Underfull \hbox (badness 1490) in paragraph at lines 382--382
+\T1/cmr/m/n/10.95 ré-gi-men mix-to tran-si-to-rio
+
+Underfull \hbox (badness 10000) in paragraph at lines 382--383
+[]|\T1/cmr/m/n/10.95 Duplicación de
+
+Underfull \hbox (badness 4531) in paragraph at lines 382--383
+\T1/cmr/m/n/10.95 con-trol du-ran-te
+ [25] [26] [27] [28]) [29] [30] (salida/aux/02-problema/sub2.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 34.41pt have occurred.
 
  )
-(see the transcript file for additional information) </home/disco/.texlive/texm
-f-var/fonts/pk/ljfour/jknappen/ec/ecbx5159.600pk></usr/share/texmf-dist/fonts/t
-ype1/public/cm-super/sfbx1095.pfb></usr/share/texmf-dist/fonts/type1/public/cm-
-super/sfbx1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1728.
-pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx2986.pfb></usr/share
-/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf-dist/fon
-ts/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf-dist/fonts/type1/public
-/cm-super/sfrm1200.pfb>
-Output written on salida/aux/02-problema/sub2.pdf (9 pages, 487244 bytes).
-Transcript written on salida/aux/02-problema/sub2.log.
-Latexmk: Getting log file 'salida/aux/02-problema/sub2.log'
-Latexmk: Examining 'salida/aux/02-problema/sub2.fls'
-Latexmk: Examining 'salida/aux/02-problema/sub2.log'
-Latexmk: Found input bbl file 'salida/aux/02-problema/sub2.bbl'
-Latexmk: Log file says output to 'salida/aux/02-problema/sub2.pdf'
-Latexmk: Using biber to make bibliography file(s).
-Latexmk: Bibliography file(s) from .bcf file:
-  comun/referencias.bib
-Sources for biber
-  comun/referencias.bib
-  salida/aux/02-problema/sub2.bcf
-Latexmk: applying rule 'pdflatex'...
-Rule 'pdflatex':  Reasons for rerun
-Changed files or newly in use/created:
-  salida/aux/02-problema/sub2.run.xml
-
-------------
-Run number 4 of rule 'pdflatex'
-------------
-------------
-Running 'pdflatex  -interaction=nonstopmode -halt-on-error -recorder --jobname="sub2" -output-directory="salida/aux/02-problema"  "\def\subdocRuta{subdocumentos/02-problema}\input{subdocumentos/02-problema/main.tex}"'
-------------
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex)
- restricted \write18 enabled.
-entering extended mode
-LaTeX2e <2025-11-01>
-L3 programming layer <2026-01-19>
-(/mnt/NuevoVol/FEP/Plantilla-audIT/subdocumentos/02-problema/main.tex
-(/mnt/NuevoVol/FEP/Plantilla-audIT/comun/inf-pucv.cls
-Document Class: inf-pucv 2023/04/24 sgarciad.me v0.1, Clase para la plantilla L
-aTeX con formato escuela INF PUCV.
-(/usr/share/texmf-dist/tex/latex/extsizes/extarticle.cls
-Document Class: extarticle 1996/10/08 v1.0 Non Standard LaTeX document class
-(/usr/share/texmf-dist/tex/latex/base/size12.clo)
-(/usr/share/texmf-dist/tex/latex/base/exscale.sty))
-(/usr/share/texmf-dist/tex/latex/pdfx/pdfx.sty
-(/usr/share/texmf-dist/tex/generic/iftex/ifluatex.sty
-(/usr/share/texmf-dist/tex/generic/iftex/iftex.sty))
-(/usr/share/texmf-dist/tex/generic/iftex/ifpdf.sty)
-(/usr/share/texmf-dist/tex/generic/iftex/ifxetex.sty)
-(/usr/share/texmf-dist/tex/latex/everyshi/everyshi.sty){/var/lib/texmf/fonts/ma
-p/pdftex/updmap/pdftex.map} (/usr/share/texmf-dist/tex/latex/base/inputenc.sty)
- (/usr/share/texmf-dist/tex/latex/pdfx/l8u-penc.def)
-(/usr/share/texmf-dist/tex/latex/xcolor/xcolor.sty
-(/usr/share/texmf-dist/tex/latex/graphics-cfg/color.cfg)
-
-Package xcolor Warning: Package option `hyperref' is obsolete and ignored on in
-put line 265.
-
-(/usr/share/texmf-dist/tex/latex/graphics-def/pdftex.def)
-(/usr/share/texmf-dist/tex/latex/graphics/mathcolor.ltx))
-(/usr/share/texmf-dist/tex/latex/colortbl/colortbl.sty
-(/usr/share/texmf-dist/tex/latex/tools/array.sty))
-(/usr/share/texmf-dist/tex/latex/hyperref/hyperref.sty
-(/usr/share/texmf-dist/tex/latex/graphics/keyval.sty)
-(/usr/share/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)
-(/usr/share/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
-(/usr/share/texmf-dist/tex/generic/pdfescape/pdfescape.sty
-(/usr/share/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
-(/usr/share/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
-(/usr/share/texmf-dist/tex/generic/infwarerr/infwarerr.sty)))
-(/usr/share/texmf-dist/tex/latex/hycolor/hycolor.sty)
-(/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
-(/usr/share/texmf-dist/tex/latex/refcount/refcount.sty)
-(/usr/share/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
-(/usr/share/texmf-dist/tex/latex/kvoptions/kvoptions.sty)))
-(/usr/share/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
-(/usr/share/texmf-dist/tex/generic/stringenc/stringenc.sty)
-(/usr/share/texmf-dist/tex/latex/hyperref/pd1enc.def)
-(/usr/share/texmf-dist/tex/generic/intcalc/intcalc.sty)
-(/usr/share/texmf-dist/tex/latex/hyperref/puenc.def)
-(/usr/share/texmf-dist/tex/latex/url/url.sty)
-(/usr/share/texmf-dist/tex/generic/bitset/bitset.sty
-(/usr/share/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty)))
-(/usr/share/texmf-dist/tex/latex/hyperref/hpdftex.def
-(/usr/share/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
-(/usr/share/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty)))
-(/usr/share/texmf-dist/tex/latex/hyperref/psdextra.def)
-(/usr/share/texmf-dist/tex/generic/colorprofiles/colorprofiles.sty
-(/usr/share/texmf-dist/tex/generic/colorprofiles/colorprofiles.tex))
-(/usr/share/texmf-dist/tex/latex/pdfx/AdobeColorProfiles.tex)
-(/usr/share/texmf-dist/tex/latex/pdfx/8bit.def)
-** pdfx: No file sub2.xmpdata . Metadata will be incomplete!
-<<sRGB.icc>> (/usr/share/texmf-dist/tex/latex/pdfx/8bit.def)
-(/usr/share/texmf-dist/tex/generic/pdftex/glyphtounicode.tex)
-(/usr/share/texmf-dist/tex/latex/pdfx/glyphtounicode-cmr.tex)
-(/usr/share/texmf-dist/tex/latex/pdfx/glyphtounicode-ntx.tex)
-(/usr/share/texmf-dist/tex/latex/base/ifthen.sty)
-(/usr/share/texmf-dist/tex/latex/xmpincl/xmpincl.sty)
-(/usr/share/texmf-dist/tex/latex/pdfx/8bit.def)
-Using XMP template file: pdfa.xmp
-<<pdfa.xmpi>>
-
-Package pdfx Warning: Setting all color commands to rgb,
-consistent with the Color Model for PDF/A  on input line 3126.
-
-) (/usr/share/texmf-dist/tex/latex/base/utf8.def
-(/usr/share/texmf-dist/tex/latex/base/omsenc.dfu)
-(/usr/share/texmf-dist/tex/latex/base/ot1enc.dfu)
-(/usr/share/texmf-dist/tex/latex/base/t1enc.dfu)
-(/usr/share/texmf-dist/tex/latex/base/ts1enc.dfu))
-(/mnt/NuevoVol/FEP/Plantilla-audIT/comun/styles.sty
-(/usr/share/texmf-dist/tex/latex/base/inputenc.sty)
-(/usr/share/texmf-dist/tex/latex/base/fontenc.sty)
-(/usr/share/texmf-dist/tex/generic/babel/babel.sty
-(/usr/share/texmf-dist/tex/generic/babel/txtbabel.def)
-(/usr/share/texmf-dist/tex/generic/babel/locale/es/babel-spanish.tex)
-(/usr/share/texmf-dist/tex/generic/babel-spanish/spanish.ldf))
-(/usr/share/texmf-dist/tex/latex/amsmath/amsmath.sty
-For additional information on amsmath, use the `?' option.
-(/usr/share/texmf-dist/tex/latex/amsmath/amstext.sty
-(/usr/share/texmf-dist/tex/latex/amsmath/amsgen.sty))
-(/usr/share/texmf-dist/tex/latex/amsmath/amsbsy.sty)
-(/usr/share/texmf-dist/tex/latex/amsmath/amsopn.sty))
-(/usr/share/texmf-dist/tex/latex/amsfonts/amsfonts.sty)
-(/usr/share/texmf-dist/tex/latex/amsfonts/amssymb.sty)
-(/usr/share/texmf-dist/tex/latex/pgfplots/pgfplots.sty
-(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
-(/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
-(/usr/share/texmf-dist/tex/latex/graphics/graphics.sty
-(/usr/share/texmf-dist/tex/latex/graphics/trig.sty)
-(/usr/share/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)))
-(/usr/share/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
-(/usr/share/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
-(/usr/share/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
-(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex)
-(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def)
-(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
-(/usr/share/texmf-dist/tex/generic/pgf/pgf.revision.tex)))
-(/usr/share/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
-(/usr/share/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
-(/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
-(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
-(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered.code.te
-x)) (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg)
-(/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
-(/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def)))
-(/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex)
-(/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex))
-(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
-(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
-(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
-(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex)
-(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex)
-(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex)
-(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code
-.tex)
-(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex)
-(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.te
-x) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex)
-(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex)
-(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex)
-(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics
-.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
-(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex))
-(/usr/share/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
-(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex)
-(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
-) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex)
-(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex)
-(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex)
-
-(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.t
-ex) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex)
-(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex)
-(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.te
-x) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex)
-(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex)
-(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex)
-(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex)
-(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex)
-(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex)
- (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex)
-(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex)))
-(/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex)
-(/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex)
-(/usr/share/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty)
-(/usr/share/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty))
-(/usr/share/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
-(/usr/share/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
-(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex))
-(/usr/share/texmf-dist/tex/latex/pgf/math/pgfmath.sty
-(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
-(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex))
-(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
-(/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.te
-x) (/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex)
-(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
-topaths.code.tex)))
-(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex
-(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
-(/usr/share/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric.code.tex))
-(/usr/share/texmf-dist/tex/generic/pgfplots/libs/pgfplotslibrary.code.tex)
-(/usr/share/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_l
-oader.code.tex
-(/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex)
-(/usr/share/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_p
-gfutil-common-lists.tex))
-(/usr/share/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.code.tex
-(/usr/share/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststructure
-.code.tex)
-(/usr/share/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststructure
-ext.code.tex)
-(/usr/share/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsarray.code.te
-x)
-(/usr/share/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsmatrix.code.t
-ex)
-(/usr/share/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstableshared.code.t
-ex)
-(/usr/share/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsdeque.code.te
-x) (/usr/share/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.code.tex
-(/usr/share/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.data.code.tex))
-(/usr/share/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.verb.code.tex)
-(/usr/share/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplots.surfshading
-.code.tex
-(/usr/share/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surfshading.
-pgfsys-pdftex.def)))
-(/usr/share/texmf-dist/tex/generic/pgfplots/util/pgfplotscolormap.code.tex
-(/usr/share/texmf-dist/tex/generic/pgfplots/util/pgfplotscolor.code.tex))
-(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplotsstackedplots.code.tex)
-(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplotsplothandlers.code.tex
-(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplothandler.code.tex
-(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplotimage.code.tex)))
-(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplots.scaling.code.tex)
-(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplotscoordprocessing.code.tex)
-(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplots.errorbars.code.tex)
-(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplots.markers.code.tex)
-(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplotsticks.code.tex)
-(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplots.paths.code.tex)
-(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
-decorations.code.tex
-(/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.code.tex))
-(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
-decorations.pathmorphing.code.tex
-(/usr/share/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorati
-ons.pathmorphing.code.tex))
-(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
-decorations.pathreplacing.code.tex
-(/usr/share/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorati
-ons.pathreplacing.code.tex))
-(/usr/share/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.contourlua
-.code.tex))
-(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
-plotmarks.code.tex
-(/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmarks.code.tex))
-) (/usr/share/texmf-dist/tex/latex/paracol/paracol.sty)
-(/usr/share/texmf-dist/tex/latex/wrapfig/wrapfig.sty)
-(/usr/share/texmf-dist/tex/latex/tools/multicol.sty)
-(/usr/share/texmf-dist/tex/latex/geometry/geometry.sty
-(/usr/share/texmf-dist/tex/generic/iftex/ifvtex.sty))
-(/usr/share/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.fillbetwee
-n.code.tex
-(/usr/share/texmf-dist/tex/generic/pgfplots/pgfcontrib/tikzlibraryfillbetween.c
-ode.tex
-(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
-intersections.code.tex
-(/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryintersections.code.t
-ex))
-(/usr/share/texmf-dist/tex/generic/pgfplots/pgfcontrib/tikzlibrarydecorations.s
-oftclip.code.tex
-(/usr/share/texmf-dist/tex/generic/pgfplots/pgfcontrib/pgflibraryfillbetween.co
-de.tex)))
-(/usr/share/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.decoration
-s.softclip.code.tex))
-(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
-patterns.code.tex
-(/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibrarypatterns.code.tex))
-(/usr/share/texmf-dist/tex/latex/tools/longtable.sty)
-(/usr/share/texmf-dist/tex/latex/booktabs/booktabs.sty)
-(/usr/share/texmf-dist/tex/latex/float/float.sty))
-(/usr/share/texmf-dist/tex/latex/accsupp/accsupp.sty
-(/usr/share/texmf-dist/tex/latex/accsupp/accsupp-pdftex.def))
-(/usr/share/texmf-dist/tex/latex/csquotes/csquotes.sty
-(/usr/share/texmf-dist/tex/latex/csquotes/csquotes.def)
-(/usr/share/texmf-dist/tex/latex/csquotes/csquotes.cfg))
-(/usr/share/texmf-dist/tex/latex/biblatex/biblatex.sty
-(/usr/share/texmf-dist/tex/latex/logreq/logreq.sty
-(/usr/share/texmf-dist/tex/latex/logreq/logreq.def))
-(/usr/share/texmf-dist/tex/latex/biblatex/blx-dm.def)
-(/usr/share/texmf-dist/tex/latex/biblatex-apa/apa.dbx)
-(/usr/share/texmf-dist/tex/latex/biblatex/blx-compat.def)
-(/usr/share/texmf-dist/tex/latex/biblatex/biblatex.def)
-(/usr/share/texmf-dist/tex/latex/biblatex-apa/apa.bbx
-(/usr/share/texmf-dist/tex/latex/biblatex/bbx/standard.bbx))
-(/usr/share/texmf-dist/tex/latex/biblatex-apa/apa.cbx)
-(/usr/share/texmf-dist/tex/latex/biblatex/biblatex.cfg)
-(/usr/share/texmf-dist/tex/latex/l3kernel/expl3.sty
-(/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def))
-(/usr/share/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty
-(/usr/share/texmf-dist/tex/latex/l3packages/xparse/xparse.sty)))
-(/usr/share/texmf-dist/tex/latex/fontawesome5/fontawesome5.sty
-(/usr/share/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty)
-(/usr/share/texmf-dist/tex/latex/fontawesome5/fontawesome5-generic-helper.sty
-(/usr/share/texmf-dist/tex/latex/fontawesome5/fontawesome5-mapping.def)))
-(/usr/share/texmf-dist/tex/latex/koma-script/scrlfile.sty
-(/usr/share/texmf-dist/tex/latex/koma-script/scrlfile-hook.sty
-(/usr/share/texmf-dist/tex/latex/koma-script/scrlogo.sty)))
-(/usr/share/texmf-dist/tex/latex/titlesec/titlesec.sty)
-(/usr/share/texmf-dist/tex/latex/minted/minted.sty
-(/usr/share/texmf-dist/tex/generic/catchfile/catchfile.sty
-(/usr/share/texmf-dist/tex/generic/etexcmds/etexcmds.sty))
-(/usr/share/texmf-dist/tex/latex/fvextra/fvextra.sty
-(/usr/share/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty)
-(/usr/share/texmf-dist/tex/latex/upquote/upquote.sty
-(/usr/share/texmf-dist/tex/latex/base/textcomp.sty))
-(/usr/share/texmf-dist/tex/latex/lineno/lineno.sty
-
-LaTeX Warning: Command \@parboxrestore  has changed.
-               Check if current package is valid.
-
-)
-
-Package fvextra Warning: csquotes should be loaded after fvextra, to avoid a wa
-rning from the lineno package on input line 36.
-
-) (/usr/share/texmf-dist/tex/latex/latex2pydata/latex2pydata.sty)
-(/usr/share/texmf-dist/tex/latex/pgfopts/pgfopts.sty)
-(/usr/share/texmf-dist/tex/latex/tools/shellesc.sty))
-(/usr/share/texmf-dist/tex/latex/caption/caption.sty
-(/usr/share/texmf-dist/tex/latex/caption/caption3.sty)
-(/usr/share/texmf-dist/tex/latex/caption/ltcaption.sty))
-(/usr/share/texmf-dist/tex/latex/chngcntr/chngcntr.sty)
-(/usr/share/texmf-dist/tex/latex/lipsum/lipsum.sty
-(/usr/share/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex))
-(/usr/share/texmf-dist/tex/latex/enumitem/enumitem.sty)
-(/usr/share/texmf-dist/tex/latex/pdfpages/pdfpages.sty
-(/usr/share/texmf-dist/tex/latex/tools/calc.sty)
-(/usr/share/texmf-dist/tex/latex/eso-pic/eso-pic.sty)
-(/usr/share/texmf-dist/tex/latex/pdfpages/pppdftex.def))
-(/usr/share/texmf-dist/tex/latex/tocloft/tocloft.sty)
-(/usr/share/texmf-dist/tex/latex/tools/tabularx.sty))
-(/mnt/NuevoVol/FEP/Plantilla-audIT/comun/instancia.tex)
-(/mnt/NuevoVol/FEP/Plantilla-audIT/subdocumentos/02-problema/meta.tex)
-(/mnt/NuevoVol/FEP/Plantilla-audIT/comun/preambulo.tex
-(/usr/share/texmf-dist/tex/latex/import/import.sty)
-(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
-calc.code.tex) (/usr/share/texmf-dist/tex/latex/pdflscape/pdflscape.sty
-(/usr/share/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.sty
-(/usr/share/texmf-dist/tex/latex/graphics/lscape.sty)))
-(/usr/share/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty))
-(/mnt/NuevoVol/FEP/Plantilla-audIT/comun/portada.tex)
-(salida/aux/02-problema/sub2.aux)
-(/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
-[Loading MPS to PDF converter (version 2006.09.02).]
-) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
-(/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
-(salida/aux/02-problema/sub2.out) (salida/aux/02-problema/sub2.out)
-Package pgfplots notification 'compat/show suggested version=true': you might b
-enefit from \pgfplotsset{compat=1.18} (current compat level: 1.17).
-
-*geometry* driver: auto-detecting
-*geometry* detected driver: pdftex
-(/usr/share/texmf-dist/tex/latex/biblatex-apa/spanish-apa.lbx
-(/usr/share/texmf-dist/tex/latex/biblatex/lbx/spanish.lbx)
-(/usr/share/texmf-dist/tex/latex/biblatex/lbx/spanish.lbx))
-(salida/aux/02-problema/sub2.bbl)
-
-LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <19> not available
-(Font)              size <17.28> substituted on input line 8.
-
-
-LaTeX Font Warning: Font shape `T1/cmr/bx/n' in size <19> not available
-(Font)              size <17.28> substituted on input line 8.
-
-[1{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/t
-exmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} </mnt/NuevoVol/FEP/Plantil
-la-audIT/comun/assets/portada.jpeg>]
-
-LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <28> not available
-(Font)              size <29.86> substituted on input line 9.
-
-
-LaTeX Font Warning: Font shape `T1/cmr/bx/n' in size <28> not available
-(Font)              size <29.86> substituted on input line 9.
-
-
-Overfull \hbox (28.45274pt too wide) in paragraph at lines 9--9
-[][][] 
-[2] (salida/aux/02-problema/sub2.toc
-(/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd)
-(/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd))
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.9 \fichaSubdocumento
-                       [1]
-(/mnt/NuevoVol/FEP/Plantilla-audIT/subdocumentos/02-problema/contenido.tex
-
-LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <86> not available
-(Font)              size <51.59> substituted on input line 1.
-
-
-LaTeX Font Warning: Font shape `T1/cmr/bx/n' in size <86> not available
-(Font)              size <51.59> substituted on input line 1.
-
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.39 \end{tablaAudit}
-                      [2] [3] [4] [5]) [6] [7] (salida/aux/02-problema/sub2.aux
-)
-
-LaTeX Font Warning: Size substitutions with differences
-(Font)              up to 34.41pt have occurred.
-
- )
-(see the transcript file for additional information) </home/disco/.texlive/texm
-f-var/fonts/pk/ljfour/jknappen/ec/ecbx5159.600pk></usr/share/texmf-dist/fonts/t
-ype1/public/cm-super/sfbx1095.pfb></usr/share/texmf-dist/fonts/type1/public/cm-
-super/sfbx1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1728.
-pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx2986.pfb></usr/share
-/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf-dist/fon
-ts/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf-dist/fonts/type1/public
-/cm-super/sfrm1200.pfb>
-Output written on salida/aux/02-problema/sub2.pdf (9 pages, 487244 bytes).
+(see the transcript file for additional information) </home/carlosa/.texlive/te
+xmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk> </home/carlosa/.texlive/tex
+mf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </home/carlosa/.texlive/texm
+f-var/fonts/pk/ljfour/jknappen/ec/ecbx5159.600pk> </home/carlosa/.texlive/texmf
+-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </home/carlosa/.texlive/texmf-
+var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/carlosa/.texlive/texmf-v
+ar/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/carlosa/.texlive/texmf-va
+r/fonts/pk/ljfour/jknappen/ec/tcrm1095.600pk> </home/carlosa/.texlive/texmf-var
+/fonts/pk/ljfour/jknappen/ec/ecrm1095.600pk> </home/carlosa/.texlive/texmf-var/
+fonts/pk/ljfour/jknappen/ec/ecbx2986.600pk> </home/carlosa/.texlive/texmf-var/f
+onts/pk/ljfour/jknappen/ec/ecbx1728.600pk> </home/carlosa/.texlive/texmf-var/fo
+nts/pk/ljfour/jknappen/ec/tcbx1095.600pk> </home/carlosa/.texlive/texmf-var/fon
+ts/pk/ljfour/jknappen/ec/ecbx1095.600pk></usr/share/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
+sr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmsy10.pfb>
+Output written on salida/aux/02-problema/sub2.pdf (32 pages, 2095207 bytes).
 Transcript written on salida/aux/02-problema/sub2.log.
 Latexmk: Getting log file 'salida/aux/02-problema/sub2.log'
 Latexmk: Examining 'salida/aux/02-problema/sub2.fls'

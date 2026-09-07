@@ -1,7 +1,8 @@
 \babel@toc {spanish}{}\relax 
 \contentsline {section}{\numberline {1}Presentación de la empresa}{2}{section.1}%
-\contentsline {subsection}{\numberline {1.1}Identificación y propuesta de valor}{2}{subsection.1.1}%
-\contentsline {subsection}{\numberline {1.2}Líneas de negocio}{3}{subsection.1.2}%
-\contentsline {subsection}{\numberline {1.3}Capacidad de intervención en terreno}{3}{subsection.1.3}%
-\contentsline {subsection}{\numberline {1.4}Acreditaciones pertinentes al caso}{3}{subsection.1.4}%
-\contentsline {section}{Bibliografía}{4}{section*.1}%
+\contentsline {subsection}{\numberline {1.1}Reseña de la trayectoria, capacidades instaladas y líneas de negocio}{2}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Estructura organizacional, dotación, certificaciones y alianzas}{3}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}1.2.1 Capacidades Técnicas Instaladas, Stack Tecnológico y Metodologías de Trabajo}{6}{subsection.1.3}%
+\contentsline {section}{\numberline {2}1.3 Experiencia Relevante en la Industria del Caso y en Proyectos de Complejidad Equivalente}{7}{section.2}%
+\contentsline {section}{\numberline {3}1.4 Modelo de Gobierno Interno de Calidad, Seguridad y Gestión del Conocimiento}{10}{section.3}%
+\contentsline {section}{Bibliografía}{12}{section*.2}%

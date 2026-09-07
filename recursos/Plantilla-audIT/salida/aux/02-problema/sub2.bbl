@@ -53,29 +53,59 @@
       \field{title}{Bases Técnicas del Caso 10. Transporte de Carga. Transportes Curimón S.A.}
       \field{year}{2026}
     \endentry
-    \entry{iso14083}{misc}{}{}
+    \entry{ley21719}{misc}{}{}
       \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=5b512ee8a59deb284ad0a6a035ba10b1}{%
-           family={{ISO}},
-           familyi={I\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=cebe14c45771db4bb892353f5a668fc5}{%
+           family={{Ministerio de Hacienda}},
+           familyi={M\bibinitperiod}}}%
       }
-      \strng{namehash}{5b512ee8a59deb284ad0a6a035ba10b1}
-      \strng{fullhash}{5b512ee8a59deb284ad0a6a035ba10b1}
-      \strng{fullhashraw}{5b512ee8a59deb284ad0a6a035ba10b1}
-      \strng{bibnamehash}{5b512ee8a59deb284ad0a6a035ba10b1}
-      \strng{authorbibnamehash}{5b512ee8a59deb284ad0a6a035ba10b1}
-      \strng{authornamehash}{5b512ee8a59deb284ad0a6a035ba10b1}
-      \strng{authorfullhash}{5b512ee8a59deb284ad0a6a035ba10b1}
-      \strng{authorfullhashraw}{5b512ee8a59deb284ad0a6a035ba10b1}
-      \field{sortinit}{I}
-      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \strng{namehash}{cebe14c45771db4bb892353f5a668fc5}
+      \strng{fullhash}{cebe14c45771db4bb892353f5a668fc5}
+      \strng{fullhashraw}{cebe14c45771db4bb892353f5a668fc5}
+      \strng{bibnamehash}{cebe14c45771db4bb892353f5a668fc5}
+      \strng{authorbibnamehash}{cebe14c45771db4bb892353f5a668fc5}
+      \strng{authornamehash}{cebe14c45771db4bb892353f5a668fc5}
+      \strng{authorfullhash}{cebe14c45771db4bb892353f5a668fc5}
+      \strng{authorfullhashraw}{cebe14c45771db4bb892353f5a668fc5}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{ISO 14083. Greenhouse gases. Quantification and reporting of greenhouse gas emissions arising from transport chain operations}
-      \field{year}{2023}
+      \field{title}{Ley N.º 21.719 sobre protección y tratamiento de datos personales}
+      \field{year}{2024}
+    \endentry
+    \entry{ds158}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=57e6654eaa8b02db8de92c3ecf7cbbae}{%
+           family={{Ministerio de Obras Públicas}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{57e6654eaa8b02db8de92c3ecf7cbbae}
+      \strng{fullhash}{57e6654eaa8b02db8de92c3ecf7cbbae}
+      \strng{fullhashraw}{57e6654eaa8b02db8de92c3ecf7cbbae}
+      \strng{bibnamehash}{57e6654eaa8b02db8de92c3ecf7cbbae}
+      \strng{authorbibnamehash}{57e6654eaa8b02db8de92c3ecf7cbbae}
+      \strng{authornamehash}{57e6654eaa8b02db8de92c3ecf7cbbae}
+      \strng{authorfullhash}{57e6654eaa8b02db8de92c3ecf7cbbae}
+      \strng{authorfullhashraw}{57e6654eaa8b02db8de92c3ecf7cbbae}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Decreto Supremo N.º 158. Fija peso máximo de los vehículos que pueden circular por caminos públicos}
+      \field{year}{1980}
+      \verb{urlraw}
+      \verb https://www.bcn.cl/leychile/navegar?idNorma=10212
+      \endverb
+      \verb{url}
+      \verb https://www.bcn.cl/leychile/navegar?idNorma=10212
+      \endverb
     \endentry
     \entry{ds298}{misc}{}{}
       \name{author}{1}{}{%
@@ -100,6 +130,36 @@
       \field{labeltitlesource}{title}
       \field{title}{Decreto Supremo N.º 298. Reglamento de transporte de cargas peligrosas por calles y caminos}
       \field{year}{1995}
+    \endentry
+    \entry{ley18290}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ec720493acab4c39dc36d616addff3be}{%
+           family={{Ministerio de Transportes y Telecomunicaciones}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{ec720493acab4c39dc36d616addff3be}
+      \strng{fullhash}{ec720493acab4c39dc36d616addff3be}
+      \strng{fullhashraw}{ec720493acab4c39dc36d616addff3be}
+      \strng{bibnamehash}{ec720493acab4c39dc36d616addff3be}
+      \strng{authorbibnamehash}{ec720493acab4c39dc36d616addff3be}
+      \strng{authornamehash}{ec720493acab4c39dc36d616addff3be}
+      \strng{authorfullhash}{ec720493acab4c39dc36d616addff3be}
+      \strng{authorfullhashraw}{ec720493acab4c39dc36d616addff3be}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Decreto con Fuerza de Ley N.º 1. Fija texto refundido, coordinado y sistematizado de la Ley de Tránsito N.º 18.290}
+      \field{year}{2009}
+      \verb{urlraw}
+      \verb https://www.bcn.cl/leychile/navegar?idNorma=1007469
+      \endverb
+      \verb{url}
+      \verb https://www.bcn.cl/leychile/navegar?idNorma=1007469
+      \endverb
     \endentry
     \entry{codigo_trabajo_25bis}{misc}{}{}
       \name{author}{1}{}{%
@@ -220,29 +280,59 @@
       \field{title}{Bases Técnicas del Caso 10. Transporte de Carga. Transportes Curimón S.A.}
       \field{year}{2026}
     \endentry
-    \entry{iso14083}{misc}{}{}
+    \entry{ley21719}{misc}{}{}
       \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=5b512ee8a59deb284ad0a6a035ba10b1}{%
-           family={{ISO}},
-           familyi={I\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=cebe14c45771db4bb892353f5a668fc5}{%
+           family={{Ministerio de Hacienda}},
+           familyi={M\bibinitperiod}}}%
       }
-      \strng{namehash}{5b512ee8a59deb284ad0a6a035ba10b1}
-      \strng{fullhash}{5b512ee8a59deb284ad0a6a035ba10b1}
-      \strng{fullhashraw}{5b512ee8a59deb284ad0a6a035ba10b1}
-      \strng{bibnamehash}{5b512ee8a59deb284ad0a6a035ba10b1}
-      \strng{authorbibnamehash}{5b512ee8a59deb284ad0a6a035ba10b1}
-      \strng{authornamehash}{5b512ee8a59deb284ad0a6a035ba10b1}
-      \strng{authorfullhash}{5b512ee8a59deb284ad0a6a035ba10b1}
-      \strng{authorfullhashraw}{5b512ee8a59deb284ad0a6a035ba10b1}
-      \field{sortinit}{I}
-      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \strng{namehash}{cebe14c45771db4bb892353f5a668fc5}
+      \strng{fullhash}{cebe14c45771db4bb892353f5a668fc5}
+      \strng{fullhashraw}{cebe14c45771db4bb892353f5a668fc5}
+      \strng{bibnamehash}{cebe14c45771db4bb892353f5a668fc5}
+      \strng{authorbibnamehash}{cebe14c45771db4bb892353f5a668fc5}
+      \strng{authornamehash}{cebe14c45771db4bb892353f5a668fc5}
+      \strng{authorfullhash}{cebe14c45771db4bb892353f5a668fc5}
+      \strng{authorfullhashraw}{cebe14c45771db4bb892353f5a668fc5}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{ISO 14083. Greenhouse gases. Quantification and reporting of greenhouse gas emissions arising from transport chain operations}
-      \field{year}{2023}
+      \field{title}{Ley N.º 21.719 sobre protección y tratamiento de datos personales}
+      \field{year}{2024}
+    \endentry
+    \entry{ds158}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=57e6654eaa8b02db8de92c3ecf7cbbae}{%
+           family={{Ministerio de Obras Públicas}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{57e6654eaa8b02db8de92c3ecf7cbbae}
+      \strng{fullhash}{57e6654eaa8b02db8de92c3ecf7cbbae}
+      \strng{fullhashraw}{57e6654eaa8b02db8de92c3ecf7cbbae}
+      \strng{bibnamehash}{57e6654eaa8b02db8de92c3ecf7cbbae}
+      \strng{authorbibnamehash}{57e6654eaa8b02db8de92c3ecf7cbbae}
+      \strng{authornamehash}{57e6654eaa8b02db8de92c3ecf7cbbae}
+      \strng{authorfullhash}{57e6654eaa8b02db8de92c3ecf7cbbae}
+      \strng{authorfullhashraw}{57e6654eaa8b02db8de92c3ecf7cbbae}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Decreto Supremo N.º 158. Fija peso máximo de los vehículos que pueden circular por caminos públicos}
+      \field{year}{1980}
+      \verb{urlraw}
+      \verb https://www.bcn.cl/leychile/navegar?idNorma=10212
+      \endverb
+      \verb{url}
+      \verb https://www.bcn.cl/leychile/navegar?idNorma=10212
+      \endverb
     \endentry
     \entry{ds298}{misc}{}{}
       \name{author}{1}{}{%
@@ -267,6 +357,36 @@
       \field{labeltitlesource}{title}
       \field{title}{Decreto Supremo N.º 298. Reglamento de transporte de cargas peligrosas por calles y caminos}
       \field{year}{1995}
+    \endentry
+    \entry{ley18290}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ec720493acab4c39dc36d616addff3be}{%
+           family={{Ministerio de Transportes y Telecomunicaciones}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{ec720493acab4c39dc36d616addff3be}
+      \strng{fullhash}{ec720493acab4c39dc36d616addff3be}
+      \strng{fullhashraw}{ec720493acab4c39dc36d616addff3be}
+      \strng{bibnamehash}{ec720493acab4c39dc36d616addff3be}
+      \strng{authorbibnamehash}{ec720493acab4c39dc36d616addff3be}
+      \strng{authornamehash}{ec720493acab4c39dc36d616addff3be}
+      \strng{authorfullhash}{ec720493acab4c39dc36d616addff3be}
+      \strng{authorfullhashraw}{ec720493acab4c39dc36d616addff3be}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Decreto con Fuerza de Ley N.º 1. Fija texto refundido, coordinado y sistematizado de la Ley de Tránsito N.º 18.290}
+      \field{year}{2009}
+      \verb{urlraw}
+      \verb https://www.bcn.cl/leychile/navegar?idNorma=1007469
+      \endverb
+      \verb{url}
+      \verb https://www.bcn.cl/leychile/navegar?idNorma=1007469
+      \endverb
     \endentry
     \entry{codigo_trabajo_25bis}{misc}{}{}
       \name{author}{1}{}{%
