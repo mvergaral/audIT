@@ -309,11 +309,11 @@ Artículo 29° en el Formulario T-19.
 | **1** | Producto o servicio | D2 | Portal del transportista con viajes y liquidación en curso |
 | **2** | Proceso | **D4** | Despliegue camión por camión con ventana de 6 días; actualización remota del parque |
 | **3** | Tecnológica / arquitectura | **D3** | Operación desconectada 72 h y unificación de las tres plataformas GPS |
-| **4** | Modelo de negocio o contratación | **⚠ en disputa** | Quién paga el dispositivo, consentimiento revocable, incentivos por adhesión |
-| **5** | UX / sostenibilidad / impacto social | **⚠ sin dueño efectivo** | Interfaz con guantes sin interacción en marcha; alerta de jornada |
+| **4** | Modelo de negocio o contratación | **D2** | Comodato del dispositivo, ventana de consentimiento en firmware, incentivos por adhesión |
+| **5** | UX / sostenibilidad / impacto social | **D1** | Alerta de jornada con lugar seguro alcanzable, interfaz sin interacción en marcha |
 
-> ⚠ **Ver §7.1: los tipos 4 y 5 tienen un conflicto de asignación sin resolver.** Es el riesgo más
-> caro de este informe.
+> ✔ **Reparto zanjado el 6 de septiembre de 2026.** Los cinco tipos tienen dueño único y ninguno se
+> repite, conforme al Artículo 28.1. Ver §7.1.
 
 ### Innovación tipo 3 — D3 · Operación desconectada 72 h y unificación GPS
 
@@ -345,18 +345,25 @@ Artículo 29° en el Formulario T-19.
 Verificado con `tools/buscar.py` contra las tres bases. **Esto es lo que hay que corregir antes de
 la entrega.**
 
-### 7.1 ⛔ Las innovaciones tipo 4 y 5 no tienen dueño único
+### 7.1 ✔ Reparto de innovaciones resuelto
 
-| Fuente | Tipo 4 | Tipo 5 |
-|---|---|---|
-| `equipo/asignacion-duplas.md` (archivo oficial del equipo) | **D1** | **D2** |
-| `equipo/D2/plan-trabajo-d2-v2.md` | **D2** (entregable D2-10, responsable Matías V., con fecha) | D1 |
-| Archivos de D1 | *sin ninguna mención a innovaciones* | *sin mención* |
+El conflicto entre `equipo/asignacion-duplas.md`, que asignaba a D2 los tipos 1 y 5 y a D1 el 4, y
+el plan de trabajo de D2, que asignaba los tipos 1 y 4, quedó zanjado por el equipo el 6 de
+septiembre de 2026. El archivo de asignación fue corregido.
 
-**Dos documentos internos se contradicen, D2 tiene la tipo 4 en su cronograma con responsable
-asignado, y D1 no ha escrito nada sobre innovaciones.** El resultado probable es que **la ficha
-tipo 5 no se escriba**. El Artículo 28° exige las cinco, una por tipo. Una ficha faltante es un
-hueco directo en el 17 % del informe.
+| Tipo | Dupla |
+|---|---|
+| 1 · Producto o servicio | **D2** |
+| 2 · Proceso | **D4** |
+| 3 · Tecnológica o de arquitectura | **D3** |
+| 4 · Modelo de negocio o contratación | **D2** |
+| 5 · Experiencia de usuario, sostenibilidad o impacto social | **D1** |
+
+Los cinco tipos quedan cubiertos sin repetición, conforme al Artículo 28.1. Las fichas tipo 1 y
+tipo 4 están desarrolladas con los siete elementos del Artículo 29°. **Las fichas tipo 2, 3 y 5
+conservan cuatro elementos**, y el Artículo 29° advierte que la omisión de cualquiera reduce la
+innovación a un enunciado. Como las cinco se entregan en un solo PDF, ese riesgo afecta al
+subdocumento 13 completo y no solo a la dupla responsable.
 
 → **Acción: resolverlo hoy y actualizar `asignacion-duplas.md` para que quede una sola fuente.**
 
@@ -419,8 +426,7 @@ $14.820 M) se identifiquen como cálculo propio sobre el 9 %, el 31 % y el 71 % 
 
 | # | Pendiente | Dueño | Bloquea |
 |---|---|---|---|
-| 1 | **Resolver la asignación de las innovaciones tipo 4 y 5** | Equipo | 17 % del informe |
-| 2 | Ficha T-19 tipo 5 — hoy sin dueño efectivo | Por definir | Art. 28° |
+| 1 | Completar las fichas T-19 tipo 2, 3 y 5 con los siete elementos del Artículo 29° | D3, D4 y D1 | 17 % del informe |
 | 3 | Tabla de emplazamiento T-11 con los 19 componentes del Eje 5 de D3 | D4 | Art. 16.2 |
 | 4 | Justificación de RAID frente a alternativas (RT-03.14) | D4 | Subdoc. 4.2 |
 | 5 | Corregir los seis puntos de §7.2 en `Para_D4.md` | D3 | Consistencia |

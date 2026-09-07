@@ -140,7 +140,7 @@ totalidad de los antecedentes de siniestros.
 RT-11.10 del Caso exige cifrado a nivel de campo para los datos personales de los 258 conductores
 que no son trabajadores de la compañía, para toda información de localización asociada a una
 persona identificable, para los antecedentes de jornada y para las tarifas pactadas con cada
-transportista. La Ley N.º 21.719 (Ministerio de Hacienda, 2024) gobierna ese tratamiento.
+transportista. La Ley N.º 21.719 (Congreso Nacional de Chile, 2024) gobierna ese tratamiento.
 
 De ahí se desprende una precisión de lenguaje que esta oferta sostiene. La solución no sabe dónde
 está una persona. Sabe dónde está un camión, con autorización revocable de su dueño. RT-16.30

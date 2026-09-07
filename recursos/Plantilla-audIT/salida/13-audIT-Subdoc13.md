@@ -71,10 +71,10 @@ tampoco cae en la exclusión del Capítulo 11 sobre administrar la contabilidad 
 transportistas, porque no administra nada. Devuelve a su titular una evidencia ya producida.
 
 **Madurez.** Escala de niveles de madurez tecnológica de uno a nueve
-(iso16290). La firma electrónica avanzada con verificación en línea está en nivel nueve,
-en operación productiva y regulada en Chile desde 2002 (ley19799), y es la línea base
+(ISO, 2013). La firma electrónica avanzada con verificación en línea está en nivel nueve,
+en operación productiva y regulada en Chile desde 2002 (Congreso Nacional de Chile, 2002), y es la línea base
 comprometida. La credencial verificable alcanzó el estado de recomendación en mayo de 2025
-(w3c_vcdm2) y se sitúa entre siete y ocho por su adopción todavía acotada en el
+(World Wide Web Consortium, 2025) y se sitúa entre siete y ocho por su adopción todavía acotada en el
 ecosistema logístico local. El modelo de datos se diseña para incorporarla sin rehacer la emisión.
 La composición del expediente sobre datos de jornada y mantenimiento está en nivel seis, porque el
 componente es convencional y lo nuevo es su uso probatorio por el titular.
@@ -194,15 +194,17 @@ dispositivo instalado en un camión de un tercero, y la restricción 2, que obli
 contrato, por incentivo o por diseño lo que dependa de terceros. Esta ficha agrega tres cosas que
 las bases no piden. La ventana de transmisión gobernada en el firmware, que convierte una promesa
 de privacidad en una propiedad verificable. El comodato con retiro sin costo, que elimina el riesgo
-patrimonial del transportista sobre un activo propio de más de cien millones de pesos. Y el
+patrimonial del transportista sobre un activo que es suyo, y que según el levantamiento del Caso
+alcanza los doscientos millones de pesos en el caso de un dueño de dos camiones
+(Escuela de Informática PUCV, 2026c). Y el
 financiamiento del incentivo con el recupero de un ingreso que hoy se pierde, de modo que la
 adhesión no compita con el margen operacional de nueve por ciento del mandante.
 
 **Madurez.** Los componentes técnicos se evalúan en la escala de niveles de madurez
-tecnológica (iso16290). El control de transmisión por ventana en el dispositivo está en
+tecnológica (ISO, 2013). El control de transmisión por ventana en el dispositivo está en
 nivel ocho, porque la gestión remota de configuración de equipos conectados es tecnología
 productiva y lo específico es la regla de negocio que la gobierna. El registro de consentimiento
-granular y revocable está en nivel ocho y su exigencia es normativa (Ministerio de Hacienda, 2024). El
+granular y revocable está en nivel ocho y su exigencia es normativa (Congreso Nacional de Chile, 2024). El
 componente contractual no se califica en esta escala porque no es una tecnología. El comodato de
 equipamiento a proveedores de servicio es figura de uso corriente y no requiere desarrollo. El
 reparto de recupero sobre evidencia aportada tiene precedente acotado y poca documentación pública
