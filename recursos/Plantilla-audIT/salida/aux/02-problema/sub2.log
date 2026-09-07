@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.8.26)  6 SEP 2026 22:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.8.26)  7 SEP 2026 00:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2255,13 +2255,12 @@ been already used, duplicate ignored
 l.10 
       [2
 
-]
+] [3]
 Underfull \hbox (badness 6396) in paragraph at lines 27--28
 []|\T1/cmr/m/n/10.95 18 trac-to-ca-mio-nes ha-bi-li-ta-dos
  []
 
-[3] [4]
-ignored: Infinite glue shrinkage found in box being split [5]
+[4] [5]
 Underfull \hbox (badness 2142) in paragraph at lines 74--75
 []|\T1/cmr/m/n/10.95 34 trac-to-ca-mio-nes de ter-ce-ros
  []
@@ -2281,6 +2280,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 106--107
 
 
 ignored: Infinite glue shrinkage found in box being split [8]
+Underfull \hbox (badness 4556) in paragraph at lines 119--120
+[]|\T1/cmr/m/n/10.95 D.S. N.\TS1/cmr/m/n/10.95 º \T1/cmr/m/n/10.95 158 ([]Mi-ni
+s-te-rio de
+ []
+
+
 Underfull \hbox (badness 2662) in paragraph at lines 122--122
 []|\T1/cmr/m/n/10.95 Exigencias con-di-cio-nan-tes del clien-te prin-ci-pal
  []
@@ -2473,17 +2478,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 177--178
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 177--178
-\T1/cmr/m/n/10.95 (([]Mi-nis-te-rio
+\T1/cmr/m/n/10.95 (Ley N.\TS1/cmr/m/n/10.95 º
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 177--178
-\T1/cmr/m/n/10.95 de Trans-
+\T1/cmr/m/n/10.95 18.290 ([]Mi-
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 177--178
-\T1/cmr/m/n/10.95 por-tes y
+\T1/cmr/m/n/10.95 nis-te-rio de
  []
 
 
@@ -2505,7 +2510,7 @@ hes de co-nec-ti-vi-dad sa-te-li-tal/celular.
  []
 
 [17]
-<subdocumentos/02-problema/Img.png, id=306, 1541.76pt x 1027.84pt>
+<subdocumentos/02-problema/Img.png, id=307, 1541.76pt x 1027.84pt>
 File: subdocumentos/02-problema/Img.png Graphic file (type png)
 <use subdocumentos/02-problema/Img.png>
 Package pdftex.def Info: subdocumentos/02-problema/Img.png  used on input line 
@@ -3161,13 +3166,13 @@ Underfull \hbox (badness 1019) in paragraph at lines 357--357
  []
 
 
-Underfull \hbox (badness 7238) in paragraph at lines 357--357
-\T1/cmr/m/n/10.95 dad sub-si-dia-ria
+Underfull \hbox (badness 10000) in paragraph at lines 357--357
+[]|\T1/cmr/m/n/10.95 Riesgo le-gal
  []
 
 
-Underfull \hbox (badness 2790) in paragraph at lines 357--357
-\T1/cmr/m/n/10.95 (([]Mi-nis-te-rio del
+Underfull \hbox (badness 10000) in paragraph at lines 357--357
+\T1/cmr/m/n/10.95 ([]Mi-nis-te-rio del
  []
 
 
@@ -3491,8 +3496,18 @@ Overfull \hbox (4.00818pt too wide) in paragraph at lines 378--378
  []
 
 
-Underfull \hbox (badness 1701) in paragraph at lines 378--378
-[]|\T1/cmr/m/n/10.95 Cálculo de emi-sio-nes de-
+Underfull \hbox (badness 5862) in paragraph at lines 378--378
+\T1/cmr/m/n/10.95 es-tan-da-ri-za-das in-ter-na-cio-
+ []
+
+
+Underfull \hbox (badness 6493) in paragraph at lines 378--378
+\T1/cmr/m/n/10.95 na-les del Mar-co GLEC
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 378--378
+\T1/cmr/m/n/10.95 ([]Smart Freight Cen-tre,
  []
 
 
@@ -3513,6 +3528,11 @@ Underfull \hbox (badness 1184) in paragraph at lines 378--378
 
 Underfull \hbox (badness 10000) in paragraph at lines 378--378
 \T1/cmr/m/n/10.95 in-gre-sos) no
+ []
+
+
+Underfull \hbox (badness 1817) in paragraph at lines 379--379
+[]|\T1/cmr/m/n/10.95 Visibilidad pa-ra man-dan-
  []
 
 
@@ -3599,7 +3619,7 @@ ignored: Infinite glue shrinkage found in box being split [27
 ignored: Infinite glue shrinkage found in box being split [28]) [29] [30
 
 ]
-runsystem(latexminted cleantemp  --timestamp 20260906224912 5FBEF65269A99BDDC21
+runsystem(latexminted cleantemp  --timestamp 20260907002829 5FBEF65269A99BDDC21
 06251DD89B1DC)...executed safely (allowed).
 
  (salida/aux/02-problema/sub2.aux
@@ -3625,13 +3645,13 @@ Package logreq Info: Writing requests to 'sub2.run.xml'.
 Here is how much of TeX's memory you used:
  57360 strings out of 469453
  1267518 string characters out of 5469037
- 2501805 words of memory out of 5000000
+ 2501803 words of memory out of 5000000
  85079 multiletter control sequences out of 15000+600000
  644977 words of font info for 80 fonts, out of 8000000 for 9000
  40 hyphenation exceptions out of 8191
- 133i,12n,139p,1282b,2815s stack positions out of 10000i,1000n,20000p,200000b,200000s
- </home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk
-> </home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk>
+ 133i,13n,139p,1338b,2815s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ </home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk
+> </home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk>
  </home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx5159.600pk> 
 </home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> <
 /home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </
@@ -3647,9 +3667,9 @@ onts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr
 /share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on salida/aux/02-problema/sub2.pdf (32 pages, 2095207 bytes).
+Output written on salida/aux/02-problema/sub2.pdf (32 pages, 2097001 bytes).
 PDF statistics:
- 965 PDF objects out of 1000 (max. 8388607)
+ 967 PDF objects out of 1000 (max. 8388607)
  87 named destinations out of 1000 (max. 500000)
  259 words of extra memory for PDF output out of 10000 (max. 10000000)
 

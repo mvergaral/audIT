@@ -27,6 +27,7 @@ CITAS = {
  "owasp_asvs": "OWASP, 2021",
  "w3c_vcdm2": "World Wide Web Consortium, 2025",
  "glec2023": "Smart Freight Centre, 2023", "iso14083": "ISO, 2023", "ley21663": "Congreso Nacional de Chile, 2024", "nfpa2001": "NFPA, 2022", "nist80088": "NIST, 2014",
+ "kleppmann2017": "Kleppmann, 2017", "iso25012": "ISO, 2008",
 }
 
 def limpia(t):

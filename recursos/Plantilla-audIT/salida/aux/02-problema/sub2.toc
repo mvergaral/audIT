@@ -1,7 +1,7 @@
 \babel@toc {spanish}{}\relax 
 \contentsline {section}{\numberline {1}Comprensión del problema}{2}{section.1}%
 \contentsline {subsection}{\numberline {1.1}Síntesis ejecutiva de la situación actual y dimensión del desafío}{2}{subsection.1.1}%
-\contentsline {subsection}{\numberline {1.2}Desglose cuantitativo y diagnóstico de los siete bloques de datos duros}{3}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.2}Desglose cuantitativo y diagnóstico de los siete bloques de datos duros}{4}{subsection.1.2}%
 \contentsline {subsubsection}{\numberline {1.2.1}Bloque 1: Flota y asimetría de tenencia}{4}{subsubsection.1.2.1}%
 \contentsline {subsubsection}{\numberline {1.2.2}Bloque 2: Fuerza conductora y brecha de jornada}{5}{subsubsection.1.2.2}%
 \contentsline {subsubsection}{\numberline {1.2.3}Bloque 3: Red, rutas y fricción logística}{5}{subsubsection.1.2.3}%

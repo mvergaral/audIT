@@ -7,9 +7,16 @@
 \contentsline {subsection}{\numberline {1.5}Catálogo de requisitos}{4}{subsection.1.5}%
 \contentsline {subsection}{\numberline {1.6}Alcance por etapas}{5}{subsection.1.6}%
 \contentsline {subsection}{\numberline {1.7}Tres poblaciones de camiones, tres tratamientos}{6}{subsection.1.7}%
-\contentsline {subsection}{\numberline {1.8}Lo que queda fuera del alcance}{6}{subsection.1.8}%
+\contentsline {subsection}{\numberline {1.8}Lo que queda fuera del alcance}{7}{subsection.1.8}%
 \contentsline {subsection}{\numberline {1.9}Plan de adhesión}{7}{subsection.1.9}%
-\contentsline {subsection}{\numberline {1.10}Consultas formuladas al mandante}{7}{subsection.1.10}%
-\contentsline {subsection}{\numberline {1.11}Contradicciones detectadas entre los documentos de la licitación}{8}{subsection.1.11}%
-\contentsline {subsection}{\numberline {1.12}Materias pendientes al cierre de esta instancia}{9}{subsection.1.12}%
-\contentsline {section}{Bibliografía}{10}{section*.1}%
+\contentsline {subsubsection}{\numberline {1.9.1}Qué se les pide y qué se les ofrece}{8}{subsubsection.1.9.1}%
+\contentsline {subsubsection}{\numberline {1.9.2}Régimen del dispositivo}{8}{subsubsection.1.9.2}%
+\contentsline {subsubsection}{\numberline {1.9.3}Instrumento contractual, enrolamiento y capacitación}{9}{subsubsection.1.9.3}%
+\contentsline {subsubsection}{\numberline {1.9.4}Modalidades y tratamiento de quien no adhiere}{10}{subsubsection.1.9.4}%
+\contentsline {subsubsection}{\numberline {1.9.5}Cómo se mide y qué ocurre si no alcanza}{10}{subsubsection.1.9.5}%
+\contentsline {subsection}{\numberline {1.10}Criterios de aceptación comprometidos}{11}{subsection.1.10}%
+\contentsline {subsection}{\numberline {1.11}Trazabilidad y matriz de cumplimiento}{12}{subsection.1.11}%
+\contentsline {subsection}{\numberline {1.12}Consultas formuladas al mandante}{13}{subsection.1.12}%
+\contentsline {subsection}{\numberline {1.13}Contradicciones detectadas entre los documentos de la licitación}{14}{subsection.1.13}%
+\contentsline {subsection}{\numberline {1.14}Materias pendientes al cierre de esta instancia}{14}{subsection.1.14}%
+\contentsline {section}{Bibliografía}{16}{section*.1}%

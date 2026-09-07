@@ -144,14 +144,36 @@ por familia de vehículo se mide en el piloto de la Etapa 1.
 **Idea.** Cuarenta y un millones de kilómetros al año con tramos de más de 80 kilómetros sin
 cobertura, 34 camiones sin dispositivo y 340 repartidos en tres plataformas incompatibles, una de
 las cuales no permite exportar. La innovación hace que el registro exista en el vehículo antes de
-que exista cualquier enlace, y que las tres plataformas se vean como una sola.
+que exista cualquier enlace, garantizando operatividad total durante desconexiones extremas, y que
+las tres plataformas se vean como una sola interfaz unificada.
 
-**Tecnología que la sustenta.** Almacenamiento local estructurado y cifrado a bordo con
-volcado diferido y reconciliación determinista, capa de ingestión que normaliza los eventos de las
-tres plataformas bajo un formato común, y emisión del documento de transporte con folio autorizado
-en memoria protegida del dispositivo para los puntos de carga sin señal.
+**Tecnología que la sustenta.** Arquitectura híbrida Edge-to-Cloud con almacenamiento local no
+volátil en cabina sobre memoria flash industrial ($\ge 8\text{ GB}$) con algoritmos de nivelación de
+desgaste (\textit{wear-leveling}) resistentes a choques térmicos ($-20^\circ\text{C}$ a $+70^\circ\text{C}$)
+y vibraciones severas (RT-08.11). Motor embebido SQLite en modo WAL (\textit{Write-Ahead Logging}) con
+serialización binaria ultracompacta en Protocol Buffers (Protobuf) sobre MQTT v5.0 / Kafka, requiriendo
+menos de 10 MB para 72 horas continuas y soportando hasta 288 horas (12 días) de aislamiento en el Paso
+Los Libertadores (RT-10.05). Capa de ingestión telemática unificada que normaliza eventos de las tres
+plataformas comerciales vía adaptadores API/Webhooks sin intervenir físicamente equipos de terceros
+(Restricción 3, Decisión D-02). Emisión tributaria offline de Documentos Electrónicos de Transporte (DET)
+con folios CAF pre-asignados y Timbre Electrónico DTE (TED) en memoria criptográfica antes del rodado (RF-014).
 
-**Resultado esperado.** Los indicadores parten de una línea base medida.
+**Madurez.** Nivel de Madurez Tecnológica TRL 8/9 (\cite{iso16290}), sustentado en componentes
+comerciales y estándares industriales maduros (MQTT v5.0, SAE J1939-71, OCI Runtime). La consistencia
+eventual y reconciliación determinista de estados tras particiones prolongadas se apoya formalmente en
+estructuras de datos replicadas libres de conflictos (CRDT) y modelos de replicación distribuida
+(Kleppmann, 2017).
+
+**Incorporación en la arquitectura y en el cronograma.** Se articula en la Capa 1 (Borde Terrestre:
+dispositivo con flash $\ge 8\text{ GB}$, SQLite WAL y acopladores inductivos FMS J1939 en 61 unidades
+propias sin alterar garantías), Capa 3 (APIM con mTLS y limitación elástica de tasa a 60 req/min por
+dispositivo para ráfagas de reconexión), Capa 5 (Event Ingestion Kafka con búfer de hasta 1.500 pings/min)
+y Capa 6 (TimescaleDB para series temporales y deduplicación en PostgreSQL 16 por \texttt{idempotency_key}).
+Su trazabilidad contractual con la EDT comprende los paquetes EDT 3.4 (Conector de Ingestión Telemática,
+Meses 3--6), EDT 4.2 (Homologación e Instalación de Búfer a Bordo $\ge 8\text{ GB}$, Meses 4--8) y EDT 4.5
+(Acopladores Inductivos FMS J1939 en 61 camiones, Meses 6--9).
+
+**Resultado esperado.** Los indicadores parten de una línea base medida:
 
 
 **Tabla. Indicadores de la innovación tipo 3**
@@ -159,15 +181,15 @@ en memoria protegida del dispositivo para los puntos de carga sin señal.
 | **Indicador** | **Línea base** | **Meta** |
 |---|---|---|
 | Pérdida de registros en desconexión de 72 horas | Pérdida total en sombras de más de dos horas | Cero pérdida |
-| Resistencia al cierre de Los Libertadores | Ceguera tras 24 a 48 horas | Preservación hasta 288 horas |
+| Resistencia al cierre de Los Libertadores | Ceguera tras 24 a 48 horas | Preservación hasta 288 horas (12 días) |
 | Visibilidad unificada de la flota | Tres plataformas separadas y 34 unidades ciegas | Totalidad de unidades en vista única |
 | Latencia de reconciliación tras la sombra | No existe sincronización | Supera el umbral de 20 minutos del Capítulo 15 |
 | Emisión del documento sin señal | Rezagada o inexistente | Emitido conforme antes de que el vehículo se mueva |
 
 
-**Investigación adicional requerida.** La factibilidad de exportación de la plataforma que hoy
-no la permite debe verificarse con ese proveedor. Es una dependencia de terceros con actividad
-propia en la Etapa 1.
+**Investigación adicional requerida.** La factibilidad técnica y SLA de los adaptadores de
+exportación de la plataforma que hoy no permite salida directa debe verificarse con ese proveedor
+durante la actividad EDT 3.4 en la Etapa 1.
 
 
 ### Tipo 4. Esquema de adhesión y propiedad del dispositivo

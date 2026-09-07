@@ -1,11 +1,14 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.6.14)  6 SEP 2026 21:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.8.26)  7 SEP 2026 00:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **\def\subdocRuta{subdocumentos/05-datos}\input{subdocumentos/05-datos/main.tex
 }
-(/mnt/NuevoVol/FEP/Plantilla-audIT/subdocumentos/05-datos/main.tex
-(/mnt/NuevoVol/FEP/Plantilla-audIT/comun/inf-pucv.cls
+
+(/home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recursos
+/Plantilla-audIT/subdocumentos/05-datos/main.tex
+(/home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recursos
+/Plantilla-audIT/comun/inf-pucv.cls
 Document Class: inf-pucv 2023/04/24 sgarciad.me v0.1, Clase para la plantilla L
 aTeX con formato escuela INF PUCV.
 (/usr/share/texmf-dist/tex/latex/extsizes/extarticle.cls
@@ -753,7 +756,8 @@ Now handling font encoding PU ...
    defining Unicode char U+2423 (decimal 9251)
    defining Unicode char U+FEFF (decimal 65279)
 )
-(/mnt/NuevoVol/FEP/Plantilla-audIT/comun/styles.sty
+(/home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recursos
+/Plantilla-audIT/comun/styles.sty
 (/usr/share/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2024/02/08 v1.3d Input encoding file
 )
@@ -2001,9 +2005,12 @@ Package hyperref Info: Option `colorlinks' set `true' on input line 69.
 \c@subactividadesii=\count568
 \enitdp@subactividades=\count569
 )
-(/mnt/NuevoVol/FEP/Plantilla-audIT/comun/instancia.tex)
-(/mnt/NuevoVol/FEP/Plantilla-audIT/subdocumentos/05-datos/meta.tex)
-(/mnt/NuevoVol/FEP/Plantilla-audIT/comun/preambulo.tex
+(/home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recursos
+/Plantilla-audIT/comun/instancia.tex)
+(/home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recursos
+/Plantilla-audIT/subdocumentos/05-datos/meta.tex)
+(/home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recursos
+/Plantilla-audIT/comun/preambulo.tex
 (/usr/share/texmf-dist/tex/latex/import/import.sty
 Package: import 2020/04/01  v 6.2
 )
@@ -2041,13 +2048,13 @@ Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
 \f@nch@widthR=\skip139
 \@temptokenb=\toks63
 ))
-(/mnt/NuevoVol/FEP/Plantilla-audIT/comun/portada.tex)
+(/home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recursos
+/Plantilla-audIT/comun/portada.tex)
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'spanish'.
-
-(salida/aux/05-datos/sub5.aux
+ (salida/aux/05-datos/sub5.aux
 LaTeX Info: Redefining \. on input line 12.
 LaTeX Info: Redefining \% on input line 12.
 Package babel Info: 'spanish' activates 'spanish' shorthands.
@@ -2171,7 +2178,7 @@ Package biblatex Info: Reference section=0 on input line 7.
 Package biblatex Info: Reference segment=0 on input line 7.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-<comun/assets/portada.jpeg, id=49, 1135.24126pt x 1606.0pt>
+<comun/assets/portada.jpeg, id=89, 1135.24126pt x 1606.0pt>
 File: comun/assets/portada.jpeg Graphic file (type jpg)
 <use comun/assets/portada.jpeg>
 Package pdftex.def Info: comun/assets/portada.jpeg  used on input line 8.
@@ -2187,9 +2194,8 @@ LaTeX Font Warning: Font shape `T1/cmr/bx/n' in size <19> not available
 
 [1
 
-{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/tex
-mf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} </mnt/NuevoVol/FEP/Plantilla
--audIT/comun/assets/portada.jpeg>]
+ </home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recurso
+s/Plantilla-audIT/comun/assets/portada.jpeg>]
 
 LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <28> not available
 (Font)              size <29.86> substituted on input line 9.
@@ -2231,7 +2237,8 @@ l.9 \fichaSubdocumento
                        [1
 
 ]
-(/mnt/NuevoVol/FEP/Plantilla-audIT/subdocumentos/05-datos/contenido.tex
+(/home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recursos
+/Plantilla-audIT/subdocumentos/05-datos/contenido.tex
 
 LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <86> not available
 (Font)              size <51.59> substituted on input line 1.
@@ -2241,56 +2248,487 @@ LaTeX Font Warning: Font shape `T1/cmr/bx/n' in size <86> not available
 (Font)              size <51.59> substituted on input line 1.
 
 
-Underfull \hbox (badness 1297) in paragraph at lines 18--18
-\T1/cmr/m/n/10.95 sis-ten-cia es-tric-ta y
+Underfull \hbox (badness 2781) in paragraph at lines 19--19
+[]|\T1/cmr/bx/n/10.95 Enfoque De-fi-ni-ti-vo au-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 18--18
-\T1/cmr/m/n/10.95 al-ta dis-po-ni-bi-li-dad
+Underfull \hbox (badness 3428) in paragraph at lines 19--19
+[]|\T1/cmr/bx/n/10.95 Impacto en Cu-ri-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 19--19
-\T1/cmr/m/n/10.95 par-ti-cio-na-mien-to
+Underfull \hbox (badness 10000) in paragraph at lines 20--20
+[]|\T1/cmr/m/n/10.95 Domain-Driven De-sign
  []
 
 
-Underfull \hbox (badness 2302) in paragraph at lines 20--20
-[]|\T1/cmr/m/n/10.95 Base em-be-bi-da ci-
+Underfull \hbox (badness 7907) in paragraph at lines 20--20
+[]|\T1/cmr/m/n/10.95 Valida en me-mo-ria;
  []
 
 
-ignored: Infinite glue shrinkage found in box being split
+Underfull \hbox (badness 10000) in paragraph at lines 21--21
+[]|\T1/cmr/m/n/10.95 Arquitectura Fast-Data
+ []
+
+
+Underfull \hbox (badness 1210) in paragraph at lines 21--21
+[]|\T1/cmr/m/n/10.95 Aísla pings GPS del
+ []
+
+
+Underfull \hbox (badness 3780) in paragraph at lines 22--22
+\T1/cmr/m/n/10.95 cru-za-dos y com-pa-ti-
+ []
+
+
+Underfull \hbox (badness 3977) in paragraph at lines 22--22
+\T1/cmr/m/n/10.95 bi-li-dad quí-mi-ca (DS
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--23
+[]|\T1/cmr/m/n/10.95 Datos Maes-tros
+ []
+
+
+Underfull \hbox (badness 1496) in paragraph at lines 23--23
+[]|\T1/cmr/m/n/10.95 Entidades dis-per-sas sin
+ []
+
+
+Underfull \hbox (badness 6396) in paragraph at lines 23--23
+[]|\T1/cmr/m/n/10.95 Evita du-pli-ci-dad de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--24
+[]|\T1/cmr/m/n/10.95 Particionamiento men-sual,
+ []
+
+
+Underfull \hbox (badness 2828) in paragraph at lines 24--24
+\T1/cmr/m/n/10.95 ín-di-ces GiST y BRIN, y
+ []
+
+
+Underfull \hbox (badness 5460) in paragraph at lines 24--24
+[]|\T1/cmr/m/n/10.95 Geocercas en $\OML/cmm/m/it/10.95 < \OT1/cmr/m/n/10.95 5$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--25
+[]|\T1/cmr/m/n/10.95 Saneamiento Vi-
+ []
+
+
+Underfull \hbox (badness 1024) in paragraph at lines 25--25
+[]|\T1/cmr/m/n/10.95 Sanea 4 pla-ni-llas ($\OMS/cmsy/m/n/10.95 ^^Y
+ []
+
+
+Underfull \hbox (badness 1237) in paragraph at lines 26--26
+[]|\T1/cmr/m/n/10.95 Cifrado a ni-vel de cam-po
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--26
+[]|\T1/cmr/m/n/10.95 Cumplimiento irres-
+ []
+
+
+Overfull \hbox (33.4392pt too wide) in alignment at lines 18--28
+ [] [] [] [] 
+ []
+
+
 pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.23 \end{tablaAudit}
+l.28 \end{tablaAudit}
                       [2
 
 ]
-<comun/assets/figuras/Persistencia.pdf, id=97, 845.40843pt x 597.73312pt>
+Overfull \hbox (9.29941pt too wide) in paragraph at lines 30--30
+|[]\T1/cmr/bx/n/17.28 Modelo de do-mi-nio y fron-te-ras tran-sac-cio-na-les (DD
+D)| 
+ []
+
+[3]
+Overfull \hbox (17.16069pt too wide) in paragraph at lines 35--36
+[]\T1/cmr/bx/n/12 Agregado Via-je (Co-re Do-main): \T1/cmr/m/n/12 Or-ques-ta la
+ má-qui-na de es-ta-dos fi-ni-ta (\T1/cmtt/m/n/12 PROGRAMADO
+ []
+
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 67--67
+[]|\T1/cmr/bx/n/10.95 Dimensión ISO
+ []
+
+
+Underfull \hbox (badness 2512) in paragraph at lines 70--70
+[]|\T1/cmr/m/n/10.95 Consistencia (\T1/cmr/m/it/10.95 Con-sis-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]|\T1/cmr/m/n/10.95 100$ $% co-rres-pon-den-cia
+ []
+
+
+Underfull \hbox (badness 1270) in paragraph at lines 71--71
+[]|\T1/cmr/m/n/10.95 Credibilidad (\T1/cmr/m/it/10.95 Cre-di-bi-
+ []
+
+
+Underfull \hbox (badness 4193) in paragraph at lines 72--72
+\T1/cmr/m/n/10.95 pa-ra 22 des-pa-cha-do-res
+ []
+
+
+Overfull \hbox (27.12967pt too wide) in alignment at lines 66--73
+ [] [] [] 
+ []
+
+
+ignored: Infinite glue shrinkage found in box being split [5]
+Underfull \hbox (badness 1881) in paragraph at lines 85--85
+[]|\T1/cmr/m/n/10.95 Búfer a Bor-do en
+ []
+
+
+Underfull \hbox (badness 4467) in paragraph at lines 85--85
+[]|\T1/cmr/m/n/10.95 Sistema AP
+ []
+
+
+Overfull \hbox (39.12923pt too wide) in alignment at lines 81--88
+ [] [] [] [] 
+ []
+
+
+ignored: Infinite glue shrinkage found in box being split [6]
+<comun/assets/figuras/Persistencia.pdf, id=211, 845.40843pt x 597.73312pt>
 File: comun/assets/figuras/Persistencia.pdf Graphic file (type pdf)
 <use comun/assets/figuras/Persistencia.pdf>
 Package pdftex.def Info: comun/assets/figuras/Persistencia.pdf  used on input l
-ine 25.
+ine 90.
 (pdftex.def)             Requested size: 457.80374pt x 323.68314pt.
- [3 </mnt/NuevoVol/FEP/Plantilla-audIT/comun/assets/figuras/Persistencia.pdf>] 
-[4] [5]
-<comun/assets/figuras/Costo.pdf, id=144, 845.40843pt x 597.73312pt>
+
+Overfull \hbox (31.1767pt too wide) in paragraph at lines 97--98
+[]\T1/cmr/bx/n/12 Indexación es-pe-cia-li-za-da: \T1/cmr/m/n/12 Ín-di-ces B-Tre
+e en cla-ves fo-rá-neas (\T1/cmtt/m/n/12 id_tracto\T1/cmr/m/n/12 , \T1/cmtt/m/n
+/12 id_conductor\T1/cmr/m/n/12 ,
+ []
+
+[7 </home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recur
+sos/Plantilla-audIT/comun/assets/figuras/Persistencia.pdf>]
+Underfull \hbox (badness 2409) in paragraph at lines 120--121
+[]|\T1/cmr/m/n/10.95 Operacional. Cla-ve pri-ma-ria B-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 122--122
+[]|\T1/cmr/m/n/10.95 Formato na-cio-nal
+ []
+
+
+Overfull \hbox (5.84209pt too wide) in paragraph at lines 123--123
+[]|\T1/cmr/m/n/10.95 VARCHAR(120)| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 125--125
+[]|\T1/cmr/m/n/10.95 'HABILITADO',
+ []
+
+
+Overfull \hbox (51.12965pt too wide) in alignment at lines 118--126
+ [] [] [] [] [] 
+ []
+
+
+ignored: Infinite glue shrinkage found in box being split [8]
+Underfull \hbox (badness 2111) in paragraph at lines 132--132
+[]|\T1/cmr/m/n/10.95 'PROPIO', 'TER-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 135--135
+[]|\T1/cmr/m/n/10.95 'RAMPLA', 'ES-
+ []
+
+
+Underfull \hbox (badness 1297) in paragraph at lines 135--135
+\T1/cmr/m/n/10.95 TAN-QUE', 'TOL-
+ []
+
+
+Overfull \hbox (1.91312pt too wide) in paragraph at lines 136--136
+[]|\T1/cmr/m/n/10.95 NUMERIC(5,2)| 
+ []
+
+
+Overfull \hbox (51.12965pt too wide) in alignment at lines 128--137
+ [] [] [] [] [] 
+ []
+
+
+ignored: Infinite glue shrinkage found in box being split [9]
+Underfull \hbox (badness 10000) in paragraph at lines 142--142
+[]|\T1/cmr/m/n/10.95 FK po-li-mór-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 142--142
+\T1/cmr/m/n/10.95 fi-ca (Trac-
+ []
+
+
+Overfull \hbox (2.55453pt too wide) in paragraph at lines 142--142
+\T1/cmr/m/n/10.95 to/Rampla/Chofer)| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 143--143
+[]|\T1/cmr/m/n/10.95 'TRACTO',
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 143--143
+\T1/cmr/m/n/10.95 'RAM-PLA',
+ []
+
+
+Overfull \hbox (0.96172pt too wide) in paragraph at lines 146--146
+[]|\T1/cmr/m/n/10.95 estado_verificacion| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 146--146
+[]|\T1/cmr/m/n/10.95 'VERIFICADO',
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 147--147
+[]|\T1/cmr/m/n/10.95 FK ha-cia
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 147--147
+\T1/cmr/m/n/10.95 DO-CU-MEN-
+ []
+
+
+Overfull \hbox (51.12965pt too wide) in alignment at lines 139--148
+ [] [] [] [] [] 
+ []
+
+
+Underfull \hbox (badness 1226) in paragraph at lines 153--153
+[]|\T1/cmr/m/n/10.95 Hash crip-to-grá-fi-co
+ []
+
+
+Overfull \hbox (7.24435pt too wide) in paragraph at lines 154--154
+[]|\T1/cmr/m/n/10.95 uri_almacenamiento| 
+ []
+
+
+Overfull \hbox (5.84209pt too wide) in paragraph at lines 154--154
+[]|\T1/cmr/m/n/10.95 VARCHAR(500)| 
+ []
+
+
+Overfull \hbox (8.25618pt too wide) in paragraph at lines 155--155
+[]|\T1/cmr/m/n/10.95 TIMESTAMPTZ| 
+ []
+
+
+Overfull \hbox (51.12965pt too wide) in alignment at lines 150--156
+ [] [] [] [] [] 
+ []
+
+[10]
+Underfull \hbox (badness 1142) in paragraph at lines 161--162
+[]|\T1/cmr/m/n/10.95 Operacional. Ti-tu-lar del ca-mión
+ []
+
+
+Overfull \hbox (9.36383pt too wide) in paragraph at lines 163--163
+[]|\T1/cmr/m/n/10.95 comparte_telemetria| 
+ []
+
+
+Underfull \hbox (badness 3635) in paragraph at lines 164--164
+[]|\T1/cmr/m/n/10.95 Lista de IDs de
+ []
+
+
+Overfull \hbox (4.22205pt too wide) in paragraph at lines 165--165
+[]|\T1/cmr/m/n/10.95 fecha_otorgamiento| 
+ []
+
+
+Overfull \hbox (8.25618pt too wide) in paragraph at lines 165--165
+[]|\T1/cmr/m/n/10.95 TIMESTAMPTZ| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 165--166
+[]|\T1/cmr/m/n/10.95 Operacional. Tra-za-bi-li-dad le-gal
+ []
+
+
+Overfull \hbox (8.25618pt too wide) in paragraph at lines 166--166
+[]|\T1/cmr/m/n/10.95 TIMESTAMPTZ| 
+ []
+
+
+Underfull \hbox (badness 1701) in paragraph at lines 166--167
+[]|\T1/cmr/m/n/10.95 Operacional. Ce-se in-me-dia-to de
+ []
+
+
+Overfull \hbox (51.12965pt too wide) in alignment at lines 158--167
+ [] [] [] [] [] 
+ []
+
+
+ignored: Infinite glue shrinkage found in box being split [11]
+Underfull \hbox (badness 10000) in paragraph at lines 172--172
+[]|\T1/cmr/m/n/10.95 Formato VJ-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 172--172
+\T1/cmr/m/n/10.95 YYYYMM-
+ []
+
+
+Underfull \hbox (badness 1152) in paragraph at lines 173--173
+[]|\T1/cmr/m/n/10.95 FK ha-cia TRAC-
+ []
+
+
+Underfull \hbox (badness 6592) in paragraph at lines 173--174
+[]|\T1/cmr/m/n/10.95 Operacional. Va-li-da-ción téc-ni-ca
+ []
+
+
+Underfull \hbox (badness 4024) in paragraph at lines 174--174
+[]|\T1/cmr/m/n/10.95 FK ha-cia SE-MI-
+ []
+
+
+Underfull \hbox (badness 7504) in paragraph at lines 175--175
+[]|\T1/cmr/m/n/10.95 FK ha-cia CON-
+ []
+
+
+Underfull \hbox (badness 3568) in paragraph at lines 175--176
+[]|\T1/cmr/m/n/10.95 Operacional. Va-li-da-ción jor-na-da
+ []
+
+
+Overfull \hbox (1.91312pt too wide) in paragraph at lines 176--176
+[]|\T1/cmr/m/n/10.95 NUMERIC(8,2)| 
+ []
+
+
+Overfull \hbox (51.12965pt too wide) in alignment at lines 169--178
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (12.85292pt too wide) in paragraph at lines 180--180
+|[]\T1/cmr/bx/n/17.28 Auditoría inal-te-ra-ble de mo-di-fi-ca-cio-nes (Append-O
+nly
+ []
+
+[12]
+Overfull \hbox (1.8533pt too wide) in paragraph at lines 186--187
+[]\T1/cmr/bx/n/12 Estructura fo-ren-se del re-gis-tro: \T1/cmr/m/n/12 Cap-tu-ra
+ iden-ti-fi-ca-dor de ope-ra-dor (\T1/cmtt/m/n/12 usuario_id\T1/cmr/m/n/12 ),
+ []
+
+
+Overfull \hbox (19.35518pt too wide) in paragraph at lines 189--190
+[]\T1/cmtt/m/n/10.95 REVOKE UPDATE, DELETE, TRUNCATE ON TABLE auditoria_evento 
+FROM PUBLIC,
+ []
+
+
+Underfull \hbox (badness 1881) in paragraph at lines 208--208
+[]|\T1/cmr/bx/n/10.95 Retención Exi-gi-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 211--211
+[]|\T1/cmr/m/n/10.95 Diaria con-so-li-da-da +
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 213--213
+[]|\T1/cmr/m/n/10.95 Diaria con-so-li-da-da +
+ []
+
+
+Overfull \hbox (39.12967pt too wide) in alignment at lines 207--217
+ [] [] [] [] 
+ []
+
+[13]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 225.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 225.
+
+[14]
+Underfull \hbox (badness 1097) in paragraph at lines 240--240
+[]|\T1/cmr/m/n/10.95 Conciliación de RUTs y con-tra-tos
+ []
+
+
+Underfull \hbox (badness 3240) in paragraph at lines 242--242
+[]|\T1/cmr/m/n/10.95 Verificación do-cu-men-tal in-di-vi-dual
+ []
+
+
+Overfull \hbox (27.12968pt too wide) in alignment at lines 237--246
+ [] [] [] 
+ []
+
+
+ignored: Infinite glue shrinkage found in box being split [15] [16]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 272.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 272.
+
+<comun/assets/figuras/Costo.pdf, id=307, 845.40843pt x 597.73312pt>
 File: comun/assets/figuras/Costo.pdf Graphic file (type pdf)
 <use comun/assets/figuras/Costo.pdf>
-Package pdftex.def Info: comun/assets/figuras/Costo.pdf  used on input line 120
+Package pdftex.def Info: comun/assets/figuras/Costo.pdf  used on input line 285
 .
 (pdftex.def)             Requested size: 457.80374pt x 323.68314pt.
- [6]) [7 </mnt/NuevoVol/FEP/Plantilla-audIT/comun/assets/figuras/Costo.pdf>] [8
+[17]) [18 </home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/rep
+o/recursos/Plantilla-audIT/comun/assets/figuras/Costo.pdf>] [19
 
 ]
-runsystem(latexminted cleantemp  --timestamp 20260906215109 B11AAC2C5399F4D0982
+runsystem(latexminted cleantemp  --timestamp 20260907003011 B11AAC2C5399F4D0982
 15C166DC5B5D9)...executed safely (allowed).
 
- (salida/aux/05-datos/sub5.aux
+
+(salida/aux/05-datos/sub5.aux
 LaTeX Info: Redefining \sptext on input line 12.
 LaTeX Info: Redefining \. on input line 12.
 LaTeX Info: Redefining \% on input line 12.
@@ -2305,29 +2743,47 @@ LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 34.41pt have occurred.
 
 Package rerunfilecheck Info: File `sub5.out' has not changed.
-(rerunfilecheck)             Checksum: C3F94A629F169FEBC84F4DC07703571B;1708.
+(rerunfilecheck)             Checksum: DD5F73A08EE88DECA7FBFFFB807CF61F;6586.
 Package logreq Info: Writing requests to 'sub5.run.xml'.
 \openout1 = `sub5.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 57172 strings out of 469453
- 1262919 string characters out of 5469037
- 2451906 words of memory out of 5000000
- 84951 multiletter control sequences out of 15000+600000
- 641886 words of font info for 72 fonts, out of 8000000 for 9000
+ 57378 strings out of 469453
+ 1267362 string characters out of 5469037
+ 2461777 words of memory out of 5000000
+ 85080 multiletter control sequences out of 15000+600000
+ 655012 words of font info for 110 fonts, out of 8000000 for 9000
  40 hyphenation exceptions out of 8191
- 133i,12n,139p,1251b,2815s stack positions out of 10000i,1000n,20000p,200000b,200000s
- </home/disco/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx5159.600pk><
-/usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/share/texm
-f-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf-dist/fonts/ty
-pe1/public/cm-super/sfbx1728.pfb></usr/share/texmf-dist/fonts/type1/public/cm-s
-uper/sfbx2986.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1000.p
-fb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/
-texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on salida/aux/05-datos/sub5.pdf (10 pages, 533683 bytes).
+ 133i,13n,139p,1251b,2815s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ </home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcbx1728.600pk
+> </home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1095.600pk>
+ </home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk> 
+</home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcbx1440.600pk> <
+/home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbi1200.600pk> </
+home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1200.600pk> </h
+ome/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1200.600pk> </ho
+me/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1095.600pk> </hom
+e/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </home
+/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx5159.600pk> </home/
+carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </home/c
+arlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk> </home/ca
+rlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/car
+losa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/carl
+osa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1095.600pk> </home/carlo
+sa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.600pk> </home/carlos
+a/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx2986.600pk> </home/carlosa
+/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk> </home/carlosa/
+.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcbx1095.600pk> </home/carlosa/.
+texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1095.600pk></usr/share/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.p
+fb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on salida/aux/05-datos/sub5.pdf (21 pages, 734522 bytes).
 PDF statistics:
- 224 PDF objects out of 1000 (max. 8388607)
- 27 named destinations out of 1000 (max. 500000)
- 120 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1137 PDF objects out of 1200 (max. 8388607)
+ 91 named destinations out of 1000 (max. 500000)
+ 200 words of extra memory for PDF output out of 10000 (max. 10000000)
 

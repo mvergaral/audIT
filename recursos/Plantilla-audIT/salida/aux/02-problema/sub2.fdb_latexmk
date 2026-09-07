@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber salida/aux/02-problema/sub2"] 1788744954.79269 "salida/aux/02-problema/sub2.bcf" "salida/aux/02-problema/sub2.bbl" "salida/aux/02-problema/sub2" 1788745754.30055 0
-  "comun/referencias.bib" 1788744493.90006 7283 4fefef77bdc83ebbaf66a5fe0a62b0dd ""
-  "salida/aux/02-problema/sub2.bcf" 1788745754.10328 135879 1cde7998ef61f692209745802027b09b "pdflatex"
+["biber salida/aux/02-problema/sub2"] 1788751704.73329 "salida/aux/02-problema/sub2.bcf" "salida/aux/02-problema/sub2.bbl" "salida/aux/02-problema/sub2" 1788751711.92193 0
+  "comun/referencias.bib" 1788751614.4198 8425 7d8bddb880a576e9759fa6e79b786f98 ""
+  "salida/aux/02-problema/sub2.bcf" 1788751711.70868 135879 1cde7998ef61f692209745802027b09b "pdflatex"
   (generated)
   "salida/aux/02-problema/sub2.bbl"
   "salida/aux/02-problema/sub2.blg"
   (rewritten before read)
-["pdflatex"] 1788745752.14975 "subdocumentos/02-problema/main.tex" "salida/aux/02-problema/sub2.pdf" "sub2" 1788745754.30083 0
+["pdflatex"] 1788751709.7111 "subdocumentos/02-problema/main.tex" "salida/aux/02-problema/sub2.pdf" "sub2" 1788751711.92222 0
   "/home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1095.600pk" 1787243221.20692 28952 456a939cc7820666d14dbd81e991005f ""
   "/home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk" 1787243223.82597 31928 2338bbd01c68c6b68f343dd7ac2dd286 ""
   "/home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk" 1787243222.49894 40112 a178bba1001b3230773bde0c4dd3c717 ""
@@ -332,15 +332,15 @@
   "comun/instancia.tex" 1788743233.89999 1579 b747bf1406b7cf681eb883a71e121517 ""
   "comun/portada.tex" 1788743233.89999 1885 17302419ae19358e34946a27a1e03826 ""
   "comun/preambulo.tex" 1788743233.89999 1300 e2c67134be8afe9b31627b2eb43c8b9b ""
-  "comun/styles.sty" 1788744811.79382 1994 f687c7d63ac99a8a50583cd7989f02fe ""
-  "salida/aux/02-problema/pdfa.xmpi" 1788745752.45552 5042 adf1aac4742a9c5e77f25594934379d5 "pdflatex"
-  "salida/aux/02-problema/sub2.aux" 1788745754.09704 16632 f65345acfc2825e8e68a13eac5bf301b "pdflatex"
-  "salida/aux/02-problema/sub2.bbl" 1788744955.43197 21502 46220b8e8117a64a5925161cc6df4d1a "biber salida/aux/02-problema/sub2"
-  "salida/aux/02-problema/sub2.out" 1788745754.10204 8856 a2a9803fc42578d22e81852ee7d28c79 "pdflatex"
-  "salida/aux/02-problema/sub2.run.xml" 1788745754.10572 2366 d461616106c55f231549078b8479685e "pdflatex"
-  "salida/aux/02-problema/sub2.toc" 1788745754.10572 3609 6e861eae53bfdf422225b04e59fe5aa3 "pdflatex"
-  "subdocumentos/02-problema/Img.png" 1788745543.38622 1465502 10145385a5499fb7faa93a5f4231c0d2 ""
-  "subdocumentos/02-problema/contenido.tex" 1788745739.70605 60663 ab5045c0a8b1ec1b22e7a7d47d3a91bc ""
+  "comun/styles.sty" 1788745869.69712 1994 f687c7d63ac99a8a50583cd7989f02fe ""
+  "salida/aux/02-problema/pdfa.xmpi" 1788751710.02568 5042 8fb25561854f8f0d74fa4c842bc9786b "pdflatex"
+  "salida/aux/02-problema/sub2.aux" 1788751711.70268 16632 8dcef4db8b7436112fcefb2d2767aa2b "pdflatex"
+  "salida/aux/02-problema/sub2.bbl" 1788751705.36572 22098 4ff022148e676880dd2ea72446f16faa "biber salida/aux/02-problema/sub2"
+  "salida/aux/02-problema/sub2.out" 1788751711.70668 8856 a2a9803fc42578d22e81852ee7d28c79 "pdflatex"
+  "salida/aux/02-problema/sub2.run.xml" 1788751711.71028 2366 d461616106c55f231549078b8479685e "pdflatex"
+  "salida/aux/02-problema/sub2.toc" 1788751711.71028 3609 5986f3cf5ca10e6ae4c07bc69268d7a0 "pdflatex"
+  "subdocumentos/02-problema/Img.png" 1788745869.71218 1465502 10145385a5499fb7faa93a5f4231c0d2 ""
+  "subdocumentos/02-problema/contenido.tex" 1788751484.84897 61884 2e6fcdea0e0c1c5cd1e37bb98c4dddad ""
   "subdocumentos/02-problema/main.tex" 1788743233.91383 439 76522e938e48eac199105b44ea1a91e9 ""
   "subdocumentos/02-problema/meta.tex" 1788743233.91388 261 3686a2766a5b19cec79fa85acf53f445 ""
   (generated)

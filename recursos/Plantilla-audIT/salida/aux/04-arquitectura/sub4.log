@@ -1,11 +1,14 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.6.14)  6 SEP 2026 21:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.8.26)  7 SEP 2026 00:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **\def\subdocRuta{subdocumentos/04-arquitectura}\input{subdocumentos/04-arquite
 ctura/main.tex}
-(/mnt/NuevoVol/FEP/Plantilla-audIT/subdocumentos/04-arquitectura/main.tex
-(/mnt/NuevoVol/FEP/Plantilla-audIT/comun/inf-pucv.cls
+
+(/home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recursos
+/Plantilla-audIT/subdocumentos/04-arquitectura/main.tex
+(/home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recursos
+/Plantilla-audIT/comun/inf-pucv.cls
 Document Class: inf-pucv 2023/04/24 sgarciad.me v0.1, Clase para la plantilla L
 aTeX con formato escuela INF PUCV.
 (/usr/share/texmf-dist/tex/latex/extsizes/extarticle.cls
@@ -753,7 +756,8 @@ Now handling font encoding PU ...
    defining Unicode char U+2423 (decimal 9251)
    defining Unicode char U+FEFF (decimal 65279)
 )
-(/mnt/NuevoVol/FEP/Plantilla-audIT/comun/styles.sty
+(/home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recursos
+/Plantilla-audIT/comun/styles.sty
 (/usr/share/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2024/02/08 v1.3d Input encoding file
 )
@@ -2001,9 +2005,12 @@ Package hyperref Info: Option `colorlinks' set `true' on input line 69.
 \c@subactividadesii=\count568
 \enitdp@subactividades=\count569
 )
-(/mnt/NuevoVol/FEP/Plantilla-audIT/comun/instancia.tex)
-(/mnt/NuevoVol/FEP/Plantilla-audIT/subdocumentos/04-arquitectura/meta.tex)
-(/mnt/NuevoVol/FEP/Plantilla-audIT/comun/preambulo.tex
+(/home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recursos
+/Plantilla-audIT/comun/instancia.tex)
+(/home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recursos
+/Plantilla-audIT/subdocumentos/04-arquitectura/meta.tex)
+(/home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recursos
+/Plantilla-audIT/comun/preambulo.tex
 (/usr/share/texmf-dist/tex/latex/import/import.sty
 Package: import 2020/04/01  v 6.2
 )
@@ -2041,13 +2048,13 @@ Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
 \f@nch@widthR=\skip139
 \@temptokenb=\toks63
 ))
-(/mnt/NuevoVol/FEP/Plantilla-audIT/comun/portada.tex)
+(/home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recursos
+/Plantilla-audIT/comun/portada.tex)
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'spanish'.
-
-(salida/aux/04-arquitectura/sub4.aux
+ (salida/aux/04-arquitectura/sub4.aux
 LaTeX Info: Redefining \. on input line 12.
 LaTeX Info: Redefining \% on input line 12.
 Package babel Info: 'spanish' activates 'spanish' shorthands.
@@ -2187,9 +2194,8 @@ LaTeX Font Warning: Font shape `T1/cmr/bx/n' in size <19> not available
 
 [1
 
-{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/tex
-mf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} </mnt/NuevoVol/FEP/Plantilla
--audIT/comun/assets/portada.jpeg>]
+ </home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recurso
+s/Plantilla-audIT/comun/assets/portada.jpeg>]
 
 LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <28> not available
 (Font)              size <29.86> substituted on input line 9.
@@ -2231,7 +2237,8 @@ l.9 \fichaSubdocumento
                        [1
 
 ]
-(/mnt/NuevoVol/FEP/Plantilla-audIT/subdocumentos/04-arquitectura/contenido.tex
+(/home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recursos
+/Plantilla-audIT/subdocumentos/04-arquitectura/contenido.tex
 
 LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <86> not available
 (Font)              size <51.59> substituted on input line 1.
@@ -2314,8 +2321,9 @@ le (type png)
 Package pdftex.def Info: comun/assets/figuras/D3-diagrama12_integracion_acl_erp
 2013.png  used on input line 108.
 (pdftex.def)             Requested size: 222.79268pt x 522.16357pt.
- [6 </mnt/NuevoVol/FEP/Plantilla-audIT/comun/assets/figuras/D3-diagrama12_integ
-racion_acl_erp2013.png (PNG copy)>]
+ [6 </home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recu
+rsos/Plantilla-audIT/comun/assets/figuras/D3-diagrama12_integracion_acl_erp2013
+.png (PNG copy)>]
 <comun/assets/figuras/D3-diagrama13_arquitectura_analitica_lakehouse_bi.png, id
 =246, 1280.785pt x 3297.31876pt>
 File: comun/assets/figuras/D3-diagrama13_arquitectura_analitica_lakehouse_bi.pn
@@ -2325,8 +2333,9 @@ g Graphic file (type png)
 Package pdftex.def Info: comun/assets/figuras/D3-diagrama13_arquitectura_analit
 ica_lakehouse_bi.png  used on input line 129.
 (pdftex.def)             Requested size: 202.81912pt x 522.14798pt.
- [7] [8 </mnt/NuevoVol/FEP/Plantilla-audIT/comun/assets/figuras/D3-diagrama13_a
-rquitectura_analitica_lakehouse_bi.png (PNG copy)>]
+ [7] [8 </home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/
+recursos/Plantilla-audIT/comun/assets/figuras/D3-diagrama13_arquitectura_analit
+ica_lakehouse_bi.png (PNG copy)>]
 <comun/assets/figuras/D3-diagrama2_arquitectura_tactica_ddd.png, id=256, 1533.7
 3pt x 1056.94875pt>
 File: comun/assets/figuras/D3-diagrama2_arquitectura_tactica_ddd.png Graphic fi
@@ -2343,21 +2352,22 @@ hic file (type png)
 Package pdftex.def Info: comun/assets/figuras/D3-diagrama11_patrones_resilienci
 a_despacho.png  used on input line 155.
 (pdftex.def)             Requested size: 457.77896pt x 276.49464pt.
- [9 </mnt/NuevoVol/FEP/Plantilla-audIT/comun/assets/figuras/D3-diagrama2_arquit
-ectura_tactica_ddd.png (PNG copy)>]
+ [9 </home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/recu
+rsos/Plantilla-audIT/comun/assets/figuras/D3-diagrama2_arquitectura_tactica_ddd
+.png (PNG copy)>]
 Underfull \hbox (badness 4328) in paragraph at lines 168--168
 []|\T1/cmr/m/n/10.95 On-premise dis-tri-bui-
  []
 
 
-ignored: Infinite glue shrinkage found in box being split [10 </mnt/NuevoVol/FEP/Plantil
-la-audIT/comun/assets/figuras/D3-diagrama11_patrones_resiliencia_despacho.png (
-PNG copy)>]
-ignored: Infinite glue shrinkage found in box being split [11] [12]
-ignored: Infinite g
-lue shrinkage found in box being split [13]
-ignored: Infinite glue shrinkage found in box
- being split [14]
+ignored: Infinite glue shrinkage found in box being split [10 </home/carlosa/Documentos/
+Universidad/Actual/FEP/Proyecto/Informe/repo/recursos/Plantilla-audIT/comun/ass
+ets/figuras/D3-diagrama11_patrones_resiliencia_despacho.png (PNG copy)>]
+ignored: Infinit
+e glue shrinkage found in box being split [11] [12]
+ignored: Infinite glue shrinkage foun
+d in box being split [13]
+ignored: Infinite glue shrinkage found in box being split [14]
 Underfull \hbox (badness 1371) in paragraph at lines 285--286
 []|\T1/cmr/m/n/10.95 RT-07.02 exi-ge dis-tan-cia su-fi-
  []
@@ -2419,7 +2429,8 @@ File: comun/assets/figuras/Contextos.pdf Graphic file (type pdf)
 Package pdftex.def Info: comun/assets/figuras/Contextos.pdf  used on input line
  408.
 (pdftex.def)             Requested size: 457.80374pt x 323.68314pt.
- [20 </mnt/NuevoVol/FEP/Plantilla-audIT/comun/assets/figuras/LogicaCapas.pdf>]
+ [20 </home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/rec
+ursos/Plantilla-audIT/comun/assets/figuras/LogicaCapas.pdf>]
 <comun/assets/figuras/LogicaIntegraciones.pdf, id=350, 845.40843pt x 597.73312p
 t>
 File: comun/assets/figuras/LogicaIntegraciones.pdf Graphic file (type pdf)
@@ -2427,37 +2438,40 @@ File: comun/assets/figuras/LogicaIntegraciones.pdf Graphic file (type pdf)
 Package pdftex.def Info: comun/assets/figuras/LogicaIntegraciones.pdf  used on 
 input line 410.
 (pdftex.def)             Requested size: 457.80374pt x 323.68314pt.
- [21 </mnt/NuevoVol/FEP/Plantilla-audIT/comun/assets/figuras/Contextos.pdf>]
+ [21 </home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/rec
+ursos/Plantilla-audIT/comun/assets/figuras/Contextos.pdf>]
 <comun/assets/figuras/Main.pdf, id=377, 845.40843pt x 597.73312pt>
 File: comun/assets/figuras/Main.pdf Graphic file (type pdf)
 <use comun/assets/figuras/Main.pdf>
 Package pdftex.def Info: comun/assets/figuras/Main.pdf  used on input line 412.
 
 (pdftex.def)             Requested size: 457.80374pt x 323.68314pt.
- [22 </mnt/NuevoVol/FEP/Plantilla-audIT/comun/assets/figuras/LogicaIntegracione
-s.pdf>]
+ [22 </home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/rec
+ursos/Plantilla-audIT/comun/assets/figuras/LogicaIntegraciones.pdf>]
 <comun/assets/figuras/Camion.pdf, id=404, 845.40843pt x 597.73312pt>
 File: comun/assets/figuras/Camion.pdf Graphic file (type pdf)
 <use comun/assets/figuras/Camion.pdf>
 Package pdftex.def Info: comun/assets/figuras/Camion.pdf  used on input line 41
 4.
 (pdftex.def)             Requested size: 457.80374pt x 323.68314pt.
- [23 </mnt/NuevoVol/FEP/Plantilla-audIT/comun/assets/figuras/Main.pdf>]
+ [23 </home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/rec
+ursos/Plantilla-audIT/comun/assets/figuras/Main.pdf>]
 <comun/assets/figuras/DosEjes.pdf, id=431, 845.40843pt x 597.73312pt>
 File: comun/assets/figuras/DosEjes.pdf Graphic file (type pdf)
 <use comun/assets/figuras/DosEjes.pdf>
 Package pdftex.def Info: comun/assets/figuras/DosEjes.pdf  used on input line 4
 16.
 (pdftex.def)             Requested size: 457.80374pt x 323.68314pt.
- [24 </mnt/NuevoVol/FEP/Plantilla-audIT/comun/assets/figuras/Camion.pdf>]
+ [24 </home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/rec
+ursos/Plantilla-audIT/comun/assets/figuras/Camion.pdf>]
 <comun/assets/figuras/Flujo.pdf, id=457, 845.40843pt x 597.73312pt>
 File: comun/assets/figuras/Flujo.pdf Graphic file (type pdf)
 <use comun/assets/figuras/Flujo.pdf>
 Package pdftex.def Info: comun/assets/figuras/Flujo.pdf  used on input line 418
 .
 (pdftex.def)             Requested size: 457.80374pt x 323.68314pt.
-
-[25 </mnt/NuevoVol/FEP/Plantilla-audIT/comun/assets/figuras/DosEjes.pdf>]
+ [25 </home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/rec
+ursos/Plantilla-audIT/comun/assets/figuras/DosEjes.pdf>]
 <comun/assets/figuras/LogicaEmplazamiento.pdf, id=490, 845.40843pt x 597.73312p
 t>
 File: comun/assets/figuras/LogicaEmplazamiento.pdf Graphic file (type pdf)
@@ -2465,10 +2479,10 @@ File: comun/assets/figuras/LogicaEmplazamiento.pdf Graphic file (type pdf)
 Package pdftex.def Info: comun/assets/figuras/LogicaEmplazamiento.pdf  used on 
 input line 420.
 (pdftex.def)             Requested size: 457.80374pt x 323.68314pt.
-
-[26 </mnt/NuevoVol/FEP/Plantilla-audIT/comun/assets/figuras/Flujo.pdf>]
-[27 </mnt/NuevoVol/FEP/Plantilla-audIT/comun/assets/figuras/LogicaEmplazamiento
-.pdf>]
+ [26 </home/carlosa/Documentos/Universidad/Actual/FEP/Proyecto/Informe/repo/rec
+ursos/Plantilla-audIT/comun/assets/figuras/Flujo.pdf>] [27 </home/carlosa/Docum
+entos/Universidad/Actual/FEP/Proyecto/Informe/repo/recursos/Plantilla-audIT/com
+un/assets/figuras/LogicaEmplazamiento.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 436--437
 []|\T1/cmr/m/n/10.95 RT-03.01 y RT-
  []
@@ -2815,7 +2829,7 @@ ignored: Infinite glue shrinkag
 e found in box being split [33]) [34] [35
 
 ]
-runsystem(latexminted cleantemp  --timestamp 20260906215057 0939BFF1FC348B3EF42
+runsystem(latexminted cleantemp  --timestamp 20260907002841 0939BFF1FC348B3EF42
 65810B6127B25)...executed safely (allowed).
 
  (salida/aux/04-arquitectura/sub4.aux
@@ -2839,26 +2853,30 @@ Package logreq Info: Writing requests to 'sub4.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 57456 strings out of 469453
- 1271296 string characters out of 5469037
- 2488507 words of memory out of 5000000
- 85153 multiletter control sequences out of 15000+600000
+ 57458 strings out of 469453
+ 1272411 string characters out of 5469037
+ 2488690 words of memory out of 5000000
+ 85157 multiletter control sequences out of 15000+600000
  644977 words of font info for 80 fonts, out of 8000000 for 9000
  40 hyphenation exceptions out of 8191
  133i,12n,139p,1265b,2815s stack positions out of 10000i,1000n,20000p,200000b,200000s
- </home/disco/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx5159.600pk><
-/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/tex
-mf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/share/texmf-dist/fonts/t
-ype1/public/cm-super/sfbx1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-
-super/sfbx1440.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1728.
-pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx2986.pfb></usr/share
-/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf-dist/fon
-ts/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf-dist/fonts/type1/public
-/cm-super/sfrm1200.pfb>
-Output written on salida/aux/04-arquitectura/sub4.pdf (37 pages, 1651206 bytes)
+ </home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk
+> </home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk>
+ </home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx5159.600pk> 
+</home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> <
+/home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </
+home/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </h
+ome/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1095.600pk> </ho
+me/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.600pk> </hom
+e/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx2986.600pk> </home
+/carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk> </home/
+carlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcbx1095.600pk> </home/c
+arlosa/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1095.600pk></usr/shar
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on salida/aux/04-arquitectura/sub4.pdf (37 pages, 1607759 bytes)
 .
 PDF statistics:
- 668 PDF objects out of 1000 (max. 8388607)
+ 1095 PDF objects out of 1200 (max. 8388607)
  107 named destinations out of 1000 (max. 500000)
  330 words of extra memory for PDF output out of 10000 (max. 10000000)
 
