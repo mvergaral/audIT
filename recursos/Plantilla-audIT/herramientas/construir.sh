@@ -51,3 +51,10 @@ for d in "${SEL[@]}"; do
 done
 echo "  ─────────────────────────────"
 printf "  %s compilados, %s con error\n" "$ok" "$fail"
+
+# Los .md se regeneran siempre desde el mismo contenido.tex, para que nunca
+# queden desfasados respecto de los PDF.
+echo ""
+echo "  Markdown"
+python3 herramientas/tex2md.py
+

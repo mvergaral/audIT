@@ -22,6 +22,31 @@
 ### Arquitectura lógica
 
 
+#### Punto de partida
+
+
+El Capítulo 5 del Caso resume el problema en una frase. El sistema de gestión de transporte de 2013
+conoce el viaje que la compañía encargó y no conoce el viaje que efectivamente ocurrió, página 13.
+El dato existe repartido en tres plataformas de posicionamiento, en una telemetría que nadie
+descarga, en una liquidación de combustible que llega con cuarenta días de atraso y en papeles que
+viajan en la cabina, y nunca se junta. Esa dispersión no se corrige configurando el sistema
+existente, porque nace de cómo está construido.
+
+
+**Tabla. Rasgos del sistema de 2013 y respuesta de esta arquitectura**
+
+| **Rasgo** | **Efecto que produce hoy** | **Respuesta de esta arquitectura** |
+|---|---|---|
+| Base única compartida por tráfico, facturación y contabilidad | La consulta de gestión compite con la operación de la torre por el mismo motor | Separación del almacenamiento transaccional y del analítico, obligatoria por RT-05.05 |
+| Integración con el sistema contable por consultas y tablas compartidas | Todo cambio contable alcanza el núcleo operacional sin traducción | Capa anticorrupción, obligatoria por RT-05.20 |
+| Ausencia de costo por kilómetro por ruta | Tres de los ocho contratos principales se sirven bajo costo, el peor a menos catorce por ciento sostenido durante cuatro años, numeral 7.3 página 15 | Costo por viaje en doble versión, preliminar y consolidada |
+| Puerto de telemetría de fábrica inactivo | La lectura del motor de 61 tractocamiones no se aprovecha por temor a la garantía | Acoplamiento sin contacto sobre el arnés original |
+| Módulos operativos acoplados entre sí | El sistema no distingue el viaje encargado del viaje ocurrido | Seis contextos delimitados, cada uno con sus propios datos |
+
+
+#### Las ocho capas
+
+
 La solución se organiza en las ocho capas del modelo de referencia, cuya existencia es obligatoria
 conforme al numeral 2.1 de las Bases Técnicas Transversales. RT-02.01 exige el diagrama que
 identifica cada capa, sus componentes y las interfaces entre ellas, y la descripción se ajusta a
@@ -45,6 +70,25 @@ ISO/IEC/IEEE 42010 (ISO, 2022).
 Ninguna interfaz accede directamente a la base de datos. Una petición desciende atravesando las
 seis capas de la pila y la respuesta asciende por el mismo camino. Seguridad y observabilidad no
 ocupan un lugar en esa pila, la atraviesan entera.
+
+
+**Tabla. Componentes declarados por capa**
+
+| **Capa** | **Componentes** |
+|---|---|
+| Presentación | Portal web con representación en servidor, aplicación móvil en los cuatro perfiles que exige RT-17.01 del Caso, conductor, torre, terminal y taller, y transportista subcontratado, y vistas de portería y de taller de alto contraste |
+| Borde y exposición | Distribución de contenidos con presencia global, cortafuegos de aplicación y protección volumétrica en las capas de red, transporte y aplicación |
+| Puerta de enlace | Gestión de interfaces con identidad federada, certificado mutuo entre máquinas, límites de tasa por perfil y catálogo publicado |
+| Servicios de negocio | Contenedores orquestados sobre nodos repartidos en tres zonas de disponibilidad, con un despliegue independiente por contexto delimitado |
+| Integración y eventos | Flujo de telemetría para la ingesta masiva, bus transaccional con orden garantizado dentro de la partición y cola de mensajes fallidos, y capa anticorrupción frente al sistema contable |
+| Datos | Motor relacional multizona, base de series de tiempo, caché en memoria, almacenamiento inmutable y repositorio analítico. El diseño detallado es materia del Subdocumento 5 |
+| Seguridad | Bóveda de claves en módulo criptográfico, identidad federada con control por rol y por atributo, y bitácora que permite reconstruir quién, qué, cuándo y con qué valores anteriores, según RT-05.03 |
+| Observabilidad | Instrumentación única con trazas, métricas y registros correlacionados por el identificador común que RT-05.19 exige a toda integración |
+
+
+![Las ocho capas obligatorias del numeral 2.1 transversal, con sus componentes e interfaces, conforme a RT-02.01](LogicaCapas.pdf)
+
+*Figura. Las ocho capas obligatorias del numeral 2.1 transversal, con sus componentes e interfaces, conforme a RT-02.01*
 
 
 #### Los seis contextos delimitados
@@ -90,12 +134,44 @@ estructurales de la arquitectura lógica.
 
 **Tabla. Decisiones de arquitectura lógica registradas**
 
-| **ADR** | **Decisión** | **Alternativa descartada** | **Criterio** |
-|---|---|---|---|
-| 01 | Microservicios en contenedores orquestados | Monolito modular con escalado vertical | Aislamiento de fallas y escalado independiente. La ingesta telemática no compite por recursos con el despacho |
-| 02 | Arquitectura dirigida por eventos | Cadena síncrona de llamadas entre servicios | Desacoplamiento temporal. El despacho confirma y libera al operador sin esperar los efectos derivados |
-| 03 | Segregación por captura de cambios hacia el analítico | Consultas analíticas sobre réplicas de lectura | Aislamiento total de recursos. RT-05.05 prohíbe que la analítica degrade la operación |
-| 04 | Autenticación federada y autenticación mutua entre servicios | Claves de interfaz de larga duración | RT-05.18 prohíbe la clave estática en la ruta. Ningún servicio confía en otro sin verificación criptográfica |
+| **ADR** | **Contexto** | **Decisión** | **Alternativa descartada** | **Criterio** |
+|---|---|---|---|---|
+| 01 | Cientos de unidades salen a la vez de una misma zona de sombra y vuelcan su registro acumulado mientras la torre despacha | Contenedores orquestados con despliegue independiente por contexto | Monolito modular con escalado vertical | Aislamiento de fallas y escalado independiente. La ingesta no compite por recursos con el despacho |
+| 02 | Asignar un viaje dispara notificación, geocerca, costeo preliminar y aviso al cliente | Publicación de eventos de dominio | Cadena síncrona de llamadas entre servicios | Desacoplamiento temporal. El despacho confirma y libera al operador sin esperar los efectos derivados |
+| 03 | Finanzas necesita costo por ruta sobre los mismos datos que la torre usa para operar | Captura de cambios hacia el repositorio analítico | Consultas analíticas sobre réplicas de lectura | RT-05.05 prohíbe que la consulta analítica degrade la operación |
+| 04 | Conviven 84 clientes, 148 transportistas, terminales y el sistema contable de 2013 | Identidad federada y certificado mutuo entre servicios | Claves de interfaz de larga duración | RT-05.18 prohíbe la clave estática en la ruta de la dirección web |
+
+
+Estas cuatro son las decisiones estructurales de la capa lógica. El registro completo es entregable
+contractual y se actualiza durante toda la ejecución, según ordena el mismo RT-02.04.
+
+
+#### Degradación, escalamiento y puntos únicos de falla
+
+
+Tres requisitos obligatorios de la misma sección exigen declaraciones que conviene no dejar
+implícitas. RT-02.09 obliga a degradar de forma elegante, de modo que la caída de un componente no
+crítico deje la solución operando en modo reducido y avisando de la degradación, y nunca falle de
+forma total. La aplicación de esa regla en esta operación es directa. Si el repositorio analítico
+no responde, la torre sigue despachando. Si el sistema contable no responde, la operación sigue y
+la emisión tributaria se encola. Si el enlace satelital no está disponible, el registro sigue
+acumulándose a bordo.
+
+RT-02.10 exige que las capas de aplicación e integración escalen horizontalmente de forma
+automática, con umbrales, límites superiores y costo asociado declarados en la oferta. Los umbrales
+y los límites se declaran en esta sección. El costo asociado se remite al Sobre N.º
+3, porque el Artículo 50.2 excluye toda cifra de precio de la Oferta Técnica.
+
+RT-02.11 evalúa como observación grave omitir la declaración de los puntos únicos de falla que
+subsistan. Esta oferta declara dos.
+
+
+**Tabla. Puntos únicos de falla declarados**
+
+| **Punto** | **Por qué subsiste** | **Por qué es aceptable** |
+|---|---|---|
+| El sistema contable de 2013 como emisor único de documentos tributarios | La restricción 8 lo fija y no es negociable | La capa anticorrupción aísla su indisponibilidad. La operación no se detiene y la emisión se recupera al restablecerse |
+| El dispositivo a bordo de cada camión | Hay uno por unidad y solo puede intervenirse cuando el camión pasa por un terminal, según RT-06.01 del Caso | La falla afecta a una unidad y no a la flota. Se mitiga con repuestos precargados y con el procedimiento supletorio declarado más adelante |
 
 
 #### Resiliencia
@@ -107,6 +183,25 @@ límite explícitos en toda llamada remota, cortacircuitos y mamparos para aisla
 integraciones externas, y reintento exponencial con variación aleatoria. La escritura es
 idempotente con ventana de deduplicación dimensionada para tolerar la desconexión prolongada en
 ruta.
+
+El estado de sesión y el estado de proceso residen en almacenes externos de alta disponibilidad,
+como exige RT-02.05. Allí viven las sesiones concurrentes de los 22 operadores de la torre, las
+credenciales activas y las geocercas de los 1.400 puntos distintos de carga y descarga que declara
+el numeral 14.1. Cualquier instancia puede destruirse y reemplazarse sin pérdida de transacciones
+en curso.
+
+Los parámetros que siguen son de diseño de audIT y se ajustan con la medición de la Etapa 1.
+
+
+**Tabla. Parámetros de los patrones de resiliencia**
+
+| **Patrón** | **Parámetro declarado** |
+|---|---|
+| Cortacircuito | Se abre al superarse la mitad de las llamadas fallidas en una ventana deslizante de diez peticiones, permanece abierto 30 segundos y admite tres llamadas de prueba antes de restablecer el tráfico |
+| Mamparo | La verificación bloqueante del despacho tiene su propio conjunto de hilos y de conexiones. La saturación de la consulta de liquidaciones o de reportes no le quita capacidad |
+| Tiempo de espera | Validación en memoria, 800 milisegundos. Consulta transaccional del despacho, 5 segundos. Llamada al sistema contable a través de la capa anticorrupción, 10 segundos. Emisión del documento electrónico de transporte, 90 segundos, que es el techo que fija RT-09.01 del Caso |
+| Reintento | Tres intentos sobre operaciones idempotentes, con retroceso exponencial y variación aleatoria. La variación evita que cientos de unidades que recuperan cobertura a la vez reintenten sincronizadas |
+| Límite de tasa | Declarado por perfil en la puerta de enlace, según se detalla en la gobernanza de interfaces |
 
 
 #### Verificación bloqueante del despacho
@@ -126,10 +221,39 @@ admite excepción automática.
 | Semirremolque y carga peligrosa | Curso vigente del conductor y correspondencia entre la documentación y lo efectivamente cargado | Decreto Supremo N.º 298 (Ministerio de Transportes, 1995) |
 
 
-La secuencia bloquea la clave de idempotencia, evalúa las tres invariantes, persiste en una única
-transacción y responde. Ante rechazo devuelve un documento de error estructurado que nombra la
-invariante incumplida, de modo que el operador sepa qué falta y no reintente a ciegas. El
-presupuesto de 30 segundos se cumple con holgura porque la evaluación ocurre sobre datos en memoria.
+La secuencia bloquea la clave de idempotencia, evalúa las tres invariantes en paralelo, persiste en
+una única transacción y responde.
+
+
+**Tabla. Reparto del presupuesto de 30 segundos**
+
+| **Paso** | **Presupuesto** | **Dónde se resuelve** |
+|---|---|---|
+| Validación del contrato de entrada y bloqueo de la clave de idempotencia | 10 milisegundos | Puerta de enlace y caché en memoria |
+| Evaluación paralela de las tres invariantes | 450 milisegundos | Caché en memoria, con respaldo en el motor transaccional |
+| Persistencia atómica del viaje asignado | 200 milisegundos | Motor transaccional, aislamiento serializable |
+| Publicación de los efectos derivados | Fuera del camino bloqueante | Bus transaccional |
+| Total comprometido | Por debajo de 2 segundos | Frente al techo de 30 segundos de RT-09.01 del Caso |
+
+
+Ante rechazo el sistema responde en menos de un segundo con un documento de error estructurado que
+nombra la invariante incumplida, de modo que el operador sepa qué falta y no reintente a ciegas.
+
+
+**Tabla. Contenido del documento de error ante un despacho rechazado**
+
+| **Campo** | **Contenido** |
+|---|---|
+| Tipo | Identificador estable de la causal, resoluble a su documentación |
+| Título | Enunciado breve de la invariante incumplida |
+| Estado | Código que distingue el rechazo por regla de negocio del error técnico |
+| Detalle | Valor medido y umbral aplicado, para que el operador sepa cuánto falta |
+| Instancia | Identificador del viaje y del intento de asignación, correlacionable con la bitácora |
+
+
+El presupuesto se cumple con holgura porque la evaluación ocurre sobre datos en memoria. Esa
+holgura es deliberada. RT-09.03 obliga a soportar tres veces la volumetría inicial sin rediseño, y
+un margen estrecho hoy sería un rediseño mañana.
 
 
 #### Idempotencia y ventana de deduplicación
@@ -141,6 +265,56 @@ prolongados del paso fronterizo. La clave se bloquea en el almacén en memoria y
 restricción de unicidad duradera en el motor transaccional, de modo que un reintento tras la
 reconexión masiva no duplica un viaje ni un documento.
 
+La ventana opera en dos niveles con propósitos distintos. El nivel en memoria resuelve la
+concurrencia inmediata. Si la clave ya está tomada y la operación sigue en curso, la petición se
+rechaza como conflicto. Si ya se completó, se devuelve la respuesta guardada en lugar de repetir la
+escritura. El nivel duradero resuelve el caso que importa aquí, el mensaje que llega desde el búfer
+de un camión después de días sin cobertura, cuando la clave ya expiró en memoria. La restricción de
+unicidad lo descarta sin importar cuánto tiempo pasó. RT-02.07 exige además deduplicación en el
+consumidor y orden garantizado dentro de la partición, y ambos se aplican al flujo de telemetría.
+
+
+#### Gobernanza de interfaces y contratos
+
+
+RT-05.16 obliga a documentar los servicios síncronos en OpenAPI 3.1 y los flujos dirigidos por
+eventos en AsyncAPI 2.6 o superior, y exige que esa documentación se genere desde el código y se
+mantenga actualizada de forma automática. La consecuencia práctica es que no se admite discrepancia
+entre el contrato publicado y la implementación viva, porque el contrato no se escribe aparte.
+
+RT-05.17 obliga a versionar semánticamente los contratos, con compatibilidad hacia atrás y política
+de obsolescencia con preaviso mínimo de seis meses. RT-05.18 fija el mecanismo de autenticación
+entre sistemas y prohíbe la clave estática en la ruta de la dirección web. RT-05.19 exige registrar
+la transacción de entrada y la de salida de toda integración con un identificador de correlación
+común, que es lo que permite seguir una operación de negocio a través de todos los sistemas que
+toca. Ese identificador es el mismo que usa la capa de observabilidad.
+
+RT-05.21 obliga a declarar, por cada integración, el modo, el volumen esperado, la ventana de
+disponibilidad de la contraparte y el comportamiento de la solución cuando esa contraparte no
+responde. Esa declaración se entrega a continuación.
+
+
+**Tabla. Declaración por integración conforme a RT-05.21**
+
+| **Contraparte** | **Modo** | **Volumen esperado** | **Ventana de la contraparte** | **Si no responde** |
+|---|---|---|---|---|
+| Sistema contable de 2013 | Asíncrono | Documentos y asientos de 96.000 viajes al año | Horario administrativo, sin compromiso 24x7 | Cortacircuito y encolado. La operación no se detiene |
+| Plataformas de posicionamiento de terceros | Asíncrono | Posición de los camiones de terceros con dispositivo | No declarada por el Caso | Última posición conocida con su antigüedad visible, nunca una posición sin fecha |
+| Telemetría de fábrica | Asíncrono | 61 tractocamiones, solo lectura | Sujeta a la autorización de cada fabricante | El viaje se registra igual con el dispositivo a bordo |
+| Red de estaciones de servicio | Por lotes | 74.000 abastecimientos al año | Mensual, con hasta 40 días de desfase | El costo se emite preliminar y se marca como pendiente |
+| Concesionarias de peaje | Por lotes | 620.000 pasadas al año | Mensual | Peaje estimado por la traza, marcado como estimado |
+| Autoridad tributaria | Síncrono | 128.000 documentos al año | Según disponibilidad del servicio | Emisión de contingencia y envío diferido |
+| Clientes y autoridad aduanera | Ambos | Según contrato y cruce | Variable | Reintento con retroceso y aviso a la torre |
+
+
+Los volúmenes de esta tabla provienen del numeral 14.1 del Caso, página 29. La ventana de
+disponibilidad de las plataformas de terceros y de la autoridad tributaria no está declarada en las
+bases y se consulta al mandante.
+
+RT-05.22 exige además carga y descarga masiva en formatos abiertos, con validación previa, informe
+de errores por registro y procesamiento parcial. Esa capacidad es la que sostiene la migración de
+las cerca de 6.000 vigencias y la ingesta mensual de combustible y peajes.
+
 
 #### Convivencia con el sistema contable heredado
 
@@ -149,6 +323,35 @@ La capa anticorrupción sustituye los módulos operativos de 2013, tráfico, des
 liquidación, y encapsula el sistema contable, que se conserva como único emisor de documentos
 tributarios. El aislamiento es bidireccional. Un cambio en el sistema externo no propaga su modelo
 al núcleo, y el núcleo no escribe directamente sobre el legado.
+
+RT-02.14 valora la aplicación documentada de patrones de arquitectura evolutiva que permitan
+sustituir un componente sin reescribir la solución, y nombra tres. Esta oferta aplica los tres. La
+capa anticorrupción frente al sistema heredado, el estrangulamiento progresivo con que los módulos
+operativos de 2013 se van sustituyendo función por función en lugar de en un corte único, y la
+abstracción de proveedores, que es lo que permite declarar la estrategia de reversibilidad que exige
+RT-03.07.
+
+
+**Tabla. Piezas de la capa anticorrupción**
+
+| **Pieza** | **Función** |
+|---|---|
+| Adaptador de dominio | Traduce el evento de negocio, viaje cerrado o liquidación aprobada, a la estructura plana que el sistema contable espera |
+| Transformador de esquemas | Homologa formatos en ambos sentidos, de modo que las convenciones de 2013 no lleguen al modelo nuevo |
+| Protector de resiliencia | Cortacircuito y cola de mensajes fallidos. Si el sistema contable no responde, las transacciones se acumulan y la operación 24x7 continúa |
+| Reconciliador | Verifica que todo evento encolado terminó registrado, y expone el pendiente en lugar de dejarlo silencioso |
+
+
+RT-03.10 del Caso dejan expresamente abierta la emisión del documento electrónico de transporte en
+un punto de carga sin cobertura, y advierten que debe resolverse y no omitirse. La solución no puede
+ser diferir la emisión, porque el camión no puede rodar sin el documento. Esta oferta la resuelve
+adelantando el acto de emisión, no posponiéndolo. El dispositivo a bordo o el terminal de despacho
+de faena recibe por anticipado un lote de folios autorizados y el certificado de contingencia, y
+genera y firma el documento localmente antes de que el camión se mueva. Al recuperarse el enlace, el
+evento viaja por la capa anticorrupción hacia el sistema contable y hacia la autoridad tributaria,
+con la misma clave de idempotencia que impide duplicar el folio. La factibilidad de este mecanismo
+depende de una gestión que corresponde al mandante ante la autoridad tributaria, y está consultada
+en el pliego del Artículo 43 bajo el número 15.
 
 
 ![Integración con el sistema contable heredado a través de la capa anticorrupción](D3-diagrama12_integracion_acl_erp2013.png)
@@ -160,15 +363,47 @@ al núcleo, y el núcleo no escribe directamente sobre el legado.
 
 
 Dos integraciones no entregan datos en el momento en que ocurren y la arquitectura las trata como
-tales. El consumo de combustible llega con hasta 40 días de desfase y los peajes se liquidan
-mensualmente. Ambas se ingieren de forma desacoplada, preparadas para evolucionar a entrega diaria
-sin rediseño.
+tales. El consumo de combustible llega con hasta 40 días de desfase, numeral 7.3 página 15, y los
+peajes se liquidan mensualmente. Ambas se ingieren por lotes desde un depósito seguro, con
+validación sintáctica y verificación de totales, y ambas quedan detrás de un adaptador, de modo que
+el día en que una de esas contrapartes publique una interfaz en línea baste conectar el adaptador
+nuevo sin tocar el modelo de costeo.
+
+Ingerir el archivo no basta. Cada carga de combustible se cruza contra la posición del camión en
+ese instante y cada pasada de peaje contra la traza del viaje. Ese cruce es lo que convierte un
+archivo de cobros en costo imputable a un viaje, y es también lo que deja a la vista la carga que
+se registró en una estación por la que el camión no pasó. Son 74.000 abastecimientos y 620.000
+pasadas de peaje al año según el numeral 14.1, volumen que no admite revisión manual.
+
+Un tercer frente es la posición de la flota de terceros. El Caso declara 340 de 374 camiones con
+dispositivo repartidos en tres plataformas distintas, numeral 14.1 página 29, dos de ellas con
+acceso de solo consulta y una que ni siquiera permite exportar, página 34. Unificar esa vista es
+obligación de esta oferta y reemplazar esos equipos está excluido, página 24. Lo que se entrega es
+la vista unificada y el estándar de homologación contra el cual clasificar cada equipo, no un
+inventario de un parque que el Caso no describe.
 
 La telemetría de fábrica de los 61 tractocamiones se lee por acoplamiento sin contacto sobre la
-interfaz del vehículo. Esa elección no es de conveniencia técnica. La restricción 6 prohíbe que el
+interfaz del vehículo, en modo de solo lectura y sujeta a la autorización de cada fabricante que
+exige RT-17.06 del Caso. Esa elección no es de conveniencia técnica. La restricción 6 prohíbe que el
 equipamiento a bordo afecte la garantía del vehículo o interfiera con sus sistemas de seguridad, y
 el Capítulo 11 excluye intervenir la electrónica de fábrica. Una conexión que no corta ni empalma
 el arnés original es lo que permite cumplir ambas.
+
+
+**Tabla. Parámetros leídos de la telemetría de fábrica**
+
+| **Parámetro** | **Para qué se usa** |
+|---|---|
+| Consumo instantáneo y acumulado | Componente medido del costo por kilómetro de la flota propia |
+| Nivel de estanque | Contraste con el abastecimiento facturado por la red de estaciones |
+| Revoluciones y aceleraciones bruscas | Conducción eficiente y explicación de la dispersión de rendimiento de 19 por ciento entre camiones del mismo modelo y ruta |
+| Odómetro del vehículo | Kilómetro efectivo del viaje, denominador del costo |
+| Horas de funcionamiento y de ralentí | Consumo que no produce kilómetro |
+| Uso de freno de servicio y freno motor | Insumo del mantenimiento por condición |
+
+
+Todos son parámetros de lectura. Ninguno escribe sobre el bus del vehículo, y esa restricción es de
+diseño y no de configuración.
 
 
 #### Capa analítica y costo real por kilómetro
@@ -176,7 +411,18 @@ el arnés original es lo que permite cumplir ambas.
 
 La segregación entre lo transaccional y lo analítico se resuelve por captura de cambios hacia un
 repositorio organizado en capas sucesivas de refinamiento, desde el dato crudo hasta el modelo
-dimensional que consume la gerencia.
+dimensional que consume la gerencia. La replicación lee la bitácora del motor transaccional y no
+consulta sus tablas, que es la única forma de cumplir RT-05.05 sin que la analítica toque la
+operación.
+
+
+**Tabla. Capas del repositorio analítico**
+
+| **Capa** | **Qué contiene** | **Qué garantiza** |
+|---|---|---|
+| Cruda | El registro tal como llegó, replicación transaccional, posición telemática y archivos mensuales de combustible y peaje | Reproceso completo sin volver a la fuente y trazabilidad del origen de cada indicador |
+| Depurada | Deduplicación, validación de coordenadas, corrección de marcas de tiempo y cruce de la telemetría con el tramo de la orden | Un mismo hecho con una sola representación |
+| De negocio | Modelo dimensional con el hecho de costo por viaje y por tramo, y las dimensiones de ruta, cliente, tracto, conductor, régimen de propiedad y tiempo | Consulta de gerencia sin conocimiento del modelo transaccional |
 
 
 ![Capa analítica por niveles de refinamiento y explotación del costo por kilómetro](D3-diagrama13_arquitectura_analitica_lakehouse_bi.png)
@@ -192,13 +438,75 @@ imputa. Esa diferencia hay que declararla, porque comparar flota propia con flot
 declararla es comparar cosas distintas, y esa comparación gobierna la decisión de crecer con una u
 otra.
 
-El mecanismo es dual. Se emite un costo preliminar dentro de las 24 horas del cierre del viaje,
-declarando qué componentes faltan, y una versión definitiva cuando llegan el combustible y los
-peajes. Sin ese doble paso el costo por viaje se convierte en un cierre contable tardío, que es
-exactamente la condición que permitió que un contrato operara cuatro años bajo costo.
+
+**Tabla. Componentes del costo por viaje y su origen**
+
+| **Componente** | **Flota propia** | **Flota subcontratada** |
+|---|---|---|
+| Combustible | Medido por telemetría y valorizado con la liquidación mensual | No observable. La compañía solo conoce el anticipo que otorga |
+| Peajes | Pasada efectiva cruzada con la traza | Igual, cuando el peaje lo asume la compañía |
+| Conductor | Jornada imputada al tramo | Incluida en la tarifa pactada, no descomponible |
+| Mantenimiento y neumáticos | Cuota por kilómetro sobre la orden de taller y la posición de neumático | No observable |
+| Sobreestadía | Horas de espera acreditadas por geocerca | Igual |
+| Tarifa a terceros | No aplica | Costo directo contractual |
+| Denominador | Kilómetro del odómetro telemático | Kilómetro de la traza de posición |
+
+
+El mecanismo es dual y no es una elección de diseño, es lo que el propio Caso fija. RT-05.29,
+Capítulo 15 página 31, exige el costo consolidado de un viaje en no más de 24 horas tras su cierre,
+con los componentes que a esa fecha estén disponibles y con indicación explícita de los que aún no
+lo están. Se emite entonces una versión preliminar dentro de esas 24 horas, marcada como tal y
+enumerando qué falta, y una versión definitiva cuando llegan el combustible y los peajes. La
+primera no se sobrescribe. Ambas coexisten, y la desviación entre una y otra mide la calidad de la
+estimación. Sin ese doble paso el costo por viaje se convierte en un cierre contable tardío, que es
+exactamente la condición que permitió servir tres contratos bajo costo, el peor durante cuatro años.
+
+El mismo RT-05.29 fija el resto de las latencias analíticas, y conviene tenerlas juntas porque
+gobiernan el diseño de la capa.
+
+
+**Tabla. Latencias de la capa analítica fijadas por RT-05.29 del Caso**
+
+| **Dato** | **Latencia máxima** |
+|---|---|
+| Posición de un camión con cobertura | 2 minutos |
+| Jornada acumulada de un conductor | Tiempo real, disponible en el momento de asignar |
+| Tiempo de llegada y de salida en un punto de cliente | Registrado en el momento del evento |
+| Costo consolidado de un viaje | 24 horas tras su cierre, con indicación de los componentes pendientes |
+| Emisiones | Consolidación mensual |
+
+
+La jornada acumulada es la fila que condiciona la arquitectura. Exigirla en tiempo real en el
+momento de asignar significa que no puede leerse del repositorio analítico, y por eso vive en la
+caché en memoria que evalúa la invariante del despacho.
+
+
+#### Explotación analítica y autoservicio
+
+
+RT-05.25 obliga a proveer tableros operacionales y de gestión sobre los indicadores que el Caso
+define. RT-05.26 exige poder filtrar por período y por dimensión propia del caso y profundizar
+desde el indicador agregado hasta la transacción de origen. Esa navegación termina en el viaje
+individual con su traza, su documento de transporte y su respaldo de entrega, y no en un subtotal.
+
+RT-05.27 obliga a que el cliente construya sus propios informes sin intervención del adjudicatario,
+mediante una herramienta de autoservicio con modelo semántico documentado. El modelo semántico se
+entrega validado con la gerencia de administración y finanzas, con las métricas nombradas y
+definidas una sola vez, de modo que margen por ruta signifique lo mismo en todos los tableros.
+RT-05.28 exige que todo informe sea exportable en formatos abiertos y programable para envío
+automático por calendario.
+
+RT-05.30 valora la analítica predictiva con el modelo, sus variables, su métrica de desempeño y su
+plan de reentrenamiento documentados. Es un requisito deseable y esta oferta lo aborda en el
+Subdocumento 13.
 
 
 #### Modelo táctico del dominio
+
+
+RT-02.13 exige presentar el modelo de dominio del negocio con las entidades principales, sus
+relaciones y los eventos de negocio que las modifican. El modelo táctico que sigue lo entrega
+organizado por contexto delimitado, de modo que cada agregado quede bajo el contexto que lo posee.
 
 
 ![Modelo táctico del dominio. Agregados, entidades y servicios por contexto](D3-diagrama2_arquitectura_tactica_ddd.png)
@@ -210,9 +518,79 @@ exactamente la condición que permitió que un contrato operara cuatro años baj
 
 
 El Artículo 16.2 obliga a justificar el emplazamiento componente por componente. El inventario
-lógico clasifica cada componente por capa, latencia exigida, criticidad operacional, volumen y
-dependencia de conectividad, y es el insumo directo de la tabla de emplazamiento que se desarrolla
-en la sección física y se detalla en el Anexo A.
+lógico clasifica cada componente por capa, latencia exigida, criticidad operacional y volumen. Es
+el insumo directo de la tabla de emplazamiento, que se desarrolla en la sección física y se detalla
+componente por componente en el Anexo A.
+
+
+**Tabla. Inventario de componentes lógicos**
+
+| **Componente** | **Capa** | **Latencia** | **Criticidad** | **Volumen** |
+|---|---|---|---|---|
+| Distribución de contenidos y cortafuegos | Borde | 50 ms | Crítica | Todo el tráfico web entrante |
+| Puerta de enlace | Borde | 30 ms | Crítica | Toda petición de portal, aplicación e integración |
+| Despacho y asignación | Negocio | 500 ms | Máxima, bloqueante | 96.000 viajes al año |
+| Flota y activos | Negocio | 1 s | Alta | 374 tractocamiones y 210 semirremolques |
+| Personas y cumplimiento | Negocio | 500 ms | Máxima | 454 conductores y cerca de 6.000 vigencias |
+| Gestión documental | Negocio | 2 s | Alta | 128.000 documentos de transporte al año |
+| Tarifas y liquidación | Negocio | 3 s | Media alta | 148 transportistas y 84 clientes |
+| Bus de telemetría | Eventos | 100 ms | Crítica | Ingesta continua con peak de reconexión masiva |
+| Bus transaccional | Eventos | 200 ms | Crítica | Eventos de negocio del ciclo del viaje |
+| Capa anticorrupción | Integración | 500 ms | Alta | Asientos y documentos tributarios |
+| Motor transaccional | Datos | 15 ms | Máxima | 96.000 viajes al año, particionado |
+| Series de tiempo | Datos | 20 ms | Alta | Cerca de 120 millones de registros al año |
+| Caché en memoria | Datos | 5 ms | Crítica | Geocercas de 1.400 puntos, sesiones y vigencias |
+| Almacenamiento inmutable | Datos | 1 s | Alta | Conformidades, certificados y siniestros |
+| Repositorio analítico | Analítica | Segundos | Media | Retención de RT-05.10 del Caso |
+| Capa semántica y tableros | Analítica | 2 s | Media | Gerencia, finanzas y operaciones |
+| Búfer a bordo | Terreno | Inmediata | Máxima | 374 unidades, mínimo 8 GB cada una |
+| Ingesta de plataformas de terceros | Integración | 500 ms | Alta | Tres plataformas existentes |
+| Aplicación móvil | Presentación | 1 s | Media alta | Cuatro perfiles de RT-17.01 del Caso |
+| Lector de portería y terminal | Terreno | 2 s | Alta | Cinco terminales y dos talleres |
+| Sistema contable de 2013 | Heredado | No aplica | Externa | Contabilidad y documentos tributarios |
+
+
+Las latencias de esta tabla son objetivos de diseño de audIT derivados de los umbrales del numeral
+9.1 transversal y de RT-09.01 del Caso, salvo las que esos requisitos fijan de manera expresa.
+
+
+#### Concurrencia y volumen declarados
+
+
+RT-09.02 del Caso no fija un número. Ordena derivarlo de la volumetría del numeral 14.1 y
+declararlo conforme al numeral 14.2, considerando de manera expresa la reconexión simultánea de
+unidades al salir de zonas de sombra. La derivación es la siguiente.
+
+
+**Tabla. Concurrencia derivada de la volumetría del Caso**
+
+| **Población** | **En hora punta** | **Base de la derivación** |
+|---|---|---|
+| Personal interno con acceso a sistemas | 50 a 80 | Torre de 22 personas en turno, despacho de terminal, finanzas, facturación y taller, sobre los 336 con acceso del numeral 14.1 |
+| Conductores en aplicación móvil | 100 a 150 | Accesos breves de inicio y cierre de turno sobre 454 conductores |
+| Transportistas subcontratados en portal | 30 a 50 | Consulta de viajes y de liquidación sobre 148 |
+| Clientes en seguimiento | 50 a 100 | Sesiones de seguimiento sobre 84 clientes activos |
+| Suma aritmética de los rangos | 230 a 380 | Extremo inferior y superior de las cuatro filas |
+| Concurrencia de dimensionamiento | 350 | Se dimensiona sobre el extremo superior redondeado, y la prueba de carga de RT-09.06 se ejecuta sobre 1,5 veces ese valor |
+
+
+**Tabla. Volumen anual de telemetría derivado**
+
+| **Magnitud** | **Valor** | **Derivación** |
+|---|---|---|
+| Kilómetros recorridos al año | 41.000.000 | Numeral 14.1, dato del Caso |
+| Horas de marcha al año | Cerca de 745.000 | Kilómetros sobre la velocidad comercial del supuesto S-01 |
+| Registros de posición en marcha | Cerca de 89 millones al año | Muestreo de 30 segundos sobre las horas de marcha |
+| Registros de posición en detención | Cerca de 30 millones al año | Muestreo de 5 minutos sobre el resto de las horas del año |
+| Volumen de posición en crudo | Cerca de 8 GB al año | 64 bytes por registro, supuesto S-03 |
+| Volumen de telemetría de motor en crudo | Cerca de 7 GB al año | 160 bytes por muestra, una por minuto en marcha |
+| Volumen almacenado | 30 a 40 GB al año | Con índices y tablas de estado sobre los dos anteriores |
+
+
+RT-05.10 del Caso fija dos años en línea para las series de posición y telemetría, con política de
+agregación declarada para el resto. Ese requisito es el que dimensiona la capa caliente. Conviene
+dejar constancia de que el mismo código, en las Bases Técnicas Transversales, corresponde a una
+materia distinta y de carácter deseable, y que esta oferta se rige por el texto del Caso.
 
 
 ![Patrones de resiliencia y flujo de la asignación bloqueante](D3-diagrama11_patrones_resiliencia_despacho.png)
@@ -443,8 +821,15 @@ las tecnologías de información se elaboran conforme a ISO 22301 (ISO, 2019) e 
 #### Funciones no disponibles en modo desconectado
 
 
-RT-03.13 obliga a declarar qué funciones no estarán disponibles sin enlace y qué procedimiento
-manual las suple, y evalúa como observación grave la ausencia de esta declaración.
+RT-03.13 transversal obliga a declarar qué funciones no estarán disponibles sin enlace y qué
+procedimiento manual las suple, y evalúa como observación grave la ausencia de esta declaración. El
+mismo código en el Capítulo 15 del Caso, página 31, regula otra materia y fija un compromiso
+adicional que esta oferta asume. La sincronización tras la reconexión no debe superar 20 minutos por
+camión después de 72 horas sin cobertura, sin perder ningún evento de jornada ni ningún registro de
+tiempo en instalaciones de cliente, y con un diseño que soporte la reconexión simultánea de varios
+cientos de unidades al salir de una zona de sombra. Ese es el requisito que obliga a la ventana de
+sincronización escalonada y al retroceso aleatorizado descritos más arriba, y la razón por la que la
+ingesta se dimensiona sobre el peak de reconexión y no sobre el promedio.
 
 
 **Tabla. Disponibilidad de funciones sin enlace y procedimiento supletorio**
@@ -490,6 +875,11 @@ declaran aquí con su cierre.
 | S-10 | Tarificación satelital por mensaje y no por byte | Modelo de ráfaga corta | Cotización |
 | S-11 | Umbral de latencia del botón de emergencia en modo satelital | Por declarar y fundamentar | El requisito limita los 15 segundos al caso con cobertura |
 | S-12 | Tipología del recinto de San Bernardo | Sala técnica de sitio | Consulta C-03 |
+| S-13 | Concurrencia simultánea en hora punta | 300 a 350 sesiones | Derivada del numeral 14.1 y medida en la Etapa 1 |
+| S-14 | Registros de posición al año | Cerca de 120 millones, de los cuales 89 millones en marcha | Derivada de S-01 y de la frecuencia adaptativa. Supone el dispositivo muestreando también con el camión detenido |
+| S-15 | Volumen almacenado de series de tiempo | 30 a 40 GB al año | Ajuste con el modelo de datos del Subdocumento 5 |
+| S-16 | Parámetros de cortacircuito, mamparo y tiempo de espera | Declarados en la Sección 4 | Ajuste con la prueba de carga de RT-09.06 |
+| S-17 | Ventana de disponibilidad de las plataformas de terceros y de la autoridad tributaria | No declarada por las bases | Consulta al mandante |
 
 
 #### Brechas que esta oferta reconoce
@@ -505,6 +895,12 @@ declaran aquí con su cierre.
     terceros.
 - **El conductor que manejó otro camión sin dispositivo no deja rastro
     instrumental.** Esa brecha se cierra por responsabilidad contractual y no por tecnología.
+- **Las consultas del Artículo 43 están enviadas y no respondidas.** Las
+    interpretaciones que esta oferta adopta sobre la sustitución de los módulos operativos de 2013,
+    la autorización de los fabricantes para leer la telemetría, el mecanismo digital de la red de
+    estaciones de servicio y el alcance del costo consolidado en 24 horas son propuestas de audIT
+    consignadas en el pliego, no respuestas del mandante. Si el Acta de Respuestas las modifica,
+    esta arquitectura se ajusta en el Informe 2.
 - **El producto satelital evaluado declara 40 horas de almacenamiento**
     (Webfleet Solutions, 2025) frente a las 72 horas exigidas. La especificación de esta oferta fija
     la capacidad mínima en 8 GB precisamente para no depender de ese límite.
@@ -514,11 +910,6 @@ declaran aquí con su cierre.
 
 
 Los diagramas que siguen se presentan en orientación horizontal a página completa. Sus versiones a resolución de trabajo acompañan esta oferta como archivos independientes.
-
-
-![Arquitectura lógica. Las ocho capas obligatorias del numeral 2.1 transversal](LogicaCapas.pdf)
-
-*Figura. Arquitectura lógica. Las ocho capas obligatorias del numeral 2.1 transversal*
 
 
 ![Contextos delimitados del dominio y sistemas con los que convive la solución](Contextos.pdf)
@@ -593,7 +984,7 @@ componente equivale a no declarar. Por eso cada fila lleva su justificación pro
 | 3 | Servicio de despacho y asignación | Negocio | N | Orquesta recursos de toda la red. requiere la vista completa de flota y jornada |
 | 4 | Nodo de continuidad operacional | Negocio | SB | RT-21.06: asignar viaje, emitir DET y recibir pánico son severidad máxima. No pueden depender del enlace a la nube |
 | 5 | Servicio de flota y mantenimiento | Negocio | N | Administración centralizada de activos. tolera latencia de segundos |
-| 6 | Servicio de jornada | Negocio | N | Validación bloqueante $\leq$ 30 s (RT-09.01) contra el dato consolidado |
+| 6 | Servicio de jornada | Negocio | N | Validación bloqueante ≤ 30 s (RT-09.01) contra el dato consolidado |
 | 7 | Servicio de gestión documental | Negocio | N | Sellado y control de retención centralizados |
 | 8 | Servicio de tarifas y liquidación | Negocio | N | Proceso por lotes mensual. sin exigencia de latencia operacional |
 | 9 | Bus de eventos de telemetría | Eventos | N | Absorbe la ráfaga de cientos de unidades saliendo de la misma sombra |
@@ -605,7 +996,7 @@ componente equivale a no declarar. Por eso cada fila lleva su justificación pro
 | 15 | Base de series de tiempo | Datos | N | Volumen y patrón de escritura masiva. 2 años en línea (RT-05.10 del Caso) |
 | 16 | Caché distribuida | Datos | N | Sesiones, vigencias y geocercas de consulta. no sustituye la evaluación a bordo |
 | 17 | Repositorio documental inmutable | Datos | N | Evidencia probatoria con retención de 5 a 10 años (RT-07.11, RT-05.10) |
-| 18 | Lakehouse analítico | Analítica | N | Aislamiento OLTP/OLAP. costo por km en $\leq$ 24 h (RT-05.29) |
+| 18 | Lakehouse analítico | Analítica | N | Aislamiento OLTP/OLAP. costo por km en ≤ 24 h (RT-05.29) |
 | 19 | Capa semántica de autoservicio | Analítica | N | Explotación por Finanzas sin intervención de TI (RT-05.27) |
 | 20 | Gestión del parque de dispositivos | Terreno | N | Inventario, configuración, firmware, bloqueo y borrado remotos (RT-03.18) |
 | 21 | Identidad, secretos y cifrado de campo | Seguridad | N | Clave gestionada independiente de la infraestructura respaldada (RT-07.10, RT-11.10) |
@@ -616,7 +1007,7 @@ componente equivale a no declarar. Por eso cada fila lleva su justificación pro
 | 26 | Custodia de medios de respaldo | Datos | SB | Medio físico transportable fuera de sitio (RT-06.26, esquema 3-2-1-1-0 de RT-07.09) |
 | 27 | Nodo de terminal | Negocio | GT | RT-03.10 del Caso: «Los terminales deben operar 12 horas sin enlace hacia el exterior» |
 | 28 | Lector de portería y enrolamiento | Terreno | GT + SB | Verificación local de vigencias en los 5 terminales. el enrolamiento biométrico se centraliza (RT-06.22) |
-| 29 | Buffer no volátil $\geq$ 8 GB | Terreno | DB | RT-03.10: 72 h sin cobertura sin pérdida de registro. RT-10.05: hasta 12 días (288 h) de cierre fronterizo |
+| 29 | Buffer no volátil ≥ 8 GB | Terreno | DB | RT-03.10: 72 h sin cobertura sin pérdida de registro. RT-10.05: hasta 12 días (288 h) de cierre fronterizo |
 | 30 | Motor de geocercas a bordo | Terreno | DB | RT-09.01: registro de llegada y salida automático, sin intervención del conductor y sin equipamiento en instalaciones del cliente |
 | 31 | Cálculo de alerta de jornada a bordo | Terreno | DB | Criterio 28: la alerta debe llegar aunque no haya enlace, con anticipación al lugar seguro |
 | 32 | Identificación del conductor | Terreno | DB | RT-12.11: sin manipular un dispositivo y sin recordar una credencial |
@@ -628,21 +1019,21 @@ componente equivale a no declarar. Por eso cada fila lleva su justificación pro
 
 | **N.º** | **Componente** | **Latencia** | **Criticidad** | **Volumen** | **Regulación** | **Conectividad** | **TCO** |
 |---|---|---|---|---|---|---|---|
-| 3 | Despacho y asignación | $\leq$ 30 s extremo a extremo | Máxima | 96.000 viajes/año | , | Requiere enlace | Elástico |
-| 4 | Nodo de continuidad | $\leq$ 30 s local | Máxima | Ventana de 12 h | , | Opera sin enlace | Fijo, dos nodos |
-| 6 | Servicio de jornada | $\leq$ 30 s | Máxima | 454 conductores | Datos personales de 258 externos | Requiere enlace | Elástico |
-| 9 | Bus de telemetría | $\leq$ 100 ms | Crítica | Peak de reconexión masiva | , | Requiere enlace | Elástico por partición |
-| 14 | Base transaccional | $\leq$ 15 ms | Máxima | Particionado mensual | Retención 5-10 años | Requiere enlace | Reservado |
-| 15 | Series de tiempo | $\leq$ 20 ms | Alta | 2 años en línea + agregación | , | Requiere enlace | Por capa hot/cold |
-| 17 | Repositorio inmutable | $\leq$ 1 s | Alta | Evidencia probatoria | WORM, 10 años siniestros | Requiere enlace | Por capa de acceso |
-| 21 | Identidad y cifrado | $\leq$ 50 ms | Crítica | , | RT-11.10 cifrado a nivel de campo . Ley 21.719 | Requiere enlace | Fijo por HSM |
-| 23 | Réplica de DR | RPO $\leq$ 15 min | Crítica | Espejo de producción | , | Enlace entre regiones | Activo-pasivo |
+| 3 | Despacho y asignación | ≤ 30 s extremo a extremo | Máxima | 96.000 viajes/año | Sin exigencia específica | Requiere enlace | Elástico |
+| 4 | Nodo de continuidad | ≤ 30 s local | Máxima | Ventana de 12 h | Sin exigencia específica | Opera sin enlace | Fijo, dos nodos |
+| 6 | Servicio de jornada | ≤ 30 s | Máxima | 454 conductores | Datos personales de 258 externos | Requiere enlace | Elástico |
+| 9 | Bus de telemetría | ≤ 100 ms | Crítica | Peak de reconexión masiva | Sin exigencia específica | Requiere enlace | Elástico por partición |
+| 14 | Base transaccional | ≤ 15 ms | Máxima | Particionado mensual | Retención 5-10 años | Requiere enlace | Reservado |
+| 15 | Series de tiempo | ≤ 20 ms | Alta | 2 años en línea + agregación | Sin exigencia específica | Requiere enlace | Por capa hot/cold |
+| 17 | Repositorio inmutable | ≤ 1 s | Alta | Evidencia probatoria | WORM, 10 años siniestros | Requiere enlace | Por capa de acceso |
+| 21 | Identidad y cifrado | ≤ 50 ms | Crítica | Sin exigencia específica | RT-11.10 cifrado a nivel de campo . Ley 21.719 | Requiere enlace | Fijo por HSM |
+| 23 | Réplica de DR | RPO ≤ 15 min | Crítica | Espejo de producción | Sin exigencia específica | Enlace entre regiones | Activo-pasivo |
 | 24 | ERP heredado | N/A | Externa | Contabilidad y DTE | Único emisor tributario | Local | Existente |
-| 27 | Nodo de terminal | Local | Alta | 12 h de operación autónoma | , | Opera sin enlace 12 h | 4 gabinetes |
-| 29 | Buffer a bordo | Inmediata | Máxima | $\approx$ 0,8 MB en 72 h . $\geq$ 8 GB de capacidad | Evidencia de jornada | Opera sin cobertura | Por unidad |
-| 30 | Geocercas a bordo | Inmediata | Alta | Eventos discretos | , | Opera sin cobertura | Sin costo marginal |
-| 33 | Módulo satelital | $\leq$ decenas de s | Alta | Ráfagas cortas | , | Sin cobertura celular | Por mensaje |
-| 34 | App móvil | $\leq$ 1 s | Media, no bloqueante | 454 potenciales | Consentimiento revocable | Requiere enlace | Por desarrollo |
+| 27 | Nodo de terminal | Local | Alta | 12 h de operación autónoma | Sin exigencia específica | Opera sin enlace 12 h | 4 gabinetes |
+| 29 | Buffer a bordo | Inmediata | Máxima | $\approx$ 0,8 MB en 72 h . ≥ 8 GB de capacidad | Evidencia de jornada | Opera sin cobertura | Por unidad |
+| 30 | Geocercas a bordo | Inmediata | Alta | Eventos discretos | Sin exigencia específica | Opera sin cobertura | Sin costo marginal |
+| 33 | Módulo satelital | ≤ decenas de s | Alta | Ráfagas cortas | Sin exigencia específica | Sin cobertura celular | Por mensaje |
+| 34 | App móvil | ≤ 1 s | Media, no bloqueante | 454 potenciales | Consentimiento revocable | Requiere enlace | Por desarrollo |
 
 
 ### Reparto resultante

@@ -36,6 +36,8 @@ def limpia(t):
     t = re.sub(r"\\textbf\{([^{}]*)\}", r"**\1**", t)
     t = re.sub(r"\\emph\{([^{}]*)\}", r"*\1*", t)
     t = re.sub(r"\\leyendaFont\{([^{}]*)\}", r"\1", t)
+    t = t.replace("$\\leq$", "\u2264").replace("$\\geq$", "\u2265")
+    t = t.replace("\\leq", "\u2264").replace("\\geq", "\u2265")
     t = t.replace("\\midrule", "").replace("\\toprule", "").replace("\\bottomrule", "")
     t = t.replace("\\%", "%").replace("\\&", "&").replace("\\_", "_").replace("\\#", "#")
     t = re.sub(r"\\label\{[^}]*\}", "", t)
