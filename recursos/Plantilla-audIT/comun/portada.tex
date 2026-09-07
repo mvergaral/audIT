@@ -1,6 +1,6 @@
 % Portada de empresa con el rotulo del subdocumento sobre la zona libre
 \newcommand{\portadaSubdocumento}{%
-  \thispagestyle{empty}%
+  \thispagestyle{folioportada}%
   \begin{tikzpicture}[remember picture,overlay]
     \node[anchor=north west,inner sep=0pt] at (current page.north west)
       {\includegraphics[width=\paperwidth,height=\paperheight]{portada.jpeg}};
@@ -8,26 +8,21 @@
       {\color{audITteal}\fontsize{11}{11}\selectfont\bfseries SUBDOCUMENTO N.\textordmasculine{}\,\elNumero};
     \node[anchor=north west,text width=9cm,inner sep=0pt] at ($(current page.north west)+(1.45cm,-21.0cm)$)
       {\color{white}\fontsize{19}{22}\selectfont\bfseries \elTitulo};
-    % Foliacion en extremo inferior derecho (Art. 40.1)
-    \node[anchor=south east,inner sep=0pt] at ($(current page.south east)+(-1.8cm,1.4cm)$) {
-      {\color{audITteal}\fontsize{11}{13}\selectfont\bfseries Pág. 1}
-    };
   \end{tikzpicture}%
   \clearpage}
 
 % Ficha del documento en pagina propia
 \newcommand{\fichaSubdocumento}{%
-  \thispagestyle{plain}%
-  \vspace*{0.8cm}
-  {\color{audITnavy}\fontsize{26}{30}\selectfont\bfseries Ficha del documento}
+  \thispagestyle{folioficha}
+  \vspace*{1.2cm}
+  {\color{audITnavy}\fontsize{28}{32}\selectfont\bfseries Ficha del documento}
 
-  \vspace{8pt}
+  \vspace{10pt}
   {\color{audITteal}\rule{\linewidth}{2pt}}
 
-  \vspace{12pt}
+  \vspace{22pt}
   {\small
-  \renewcommand{\arraystretch}{1.2}%
-  \begin{tabular}{@{}p{3.5cm}p{10.5cm}@{}}
+  \begin{longtable}{@{}p{3.5cm}p{10.5cm}@{}}
   \color{audITgris}EMPRESA & \color{black}\laEmpresa, Empresa N.\textordmasculine{}\,\elNumeroEmpresa \\
   \color{audITgris}SUBDOCUMENTO & \color{black}N.\textordmasculine{}\,\elNumero. \elTitulo \\
   \color{audITgris}PROYECTO & \color{black}\elProyecto \\
@@ -38,20 +33,7 @@
   \color{audITgris}VERSIÓN & \color{black}\laVersion \\
   \color{audITgris}FECHA & \color{black}\laFecha \\
   \color{audITgris}LUGAR & \color{black}\elLugar \\
-  \end{tabular}}
-
-  \vspace{0.4cm}
-  \noindent
-  \begin{flushright}
-    \begin{tabular}[b]{c}
-      \makebox[0pt][c]{\raisebox{0.1cm}{\includegraphics[height=1.3cm,keepaspectratio]{Firma.png}}} \\[-0.2cm]
-      \rule{6.2cm}{0.6pt} \\
-      \footnotesize\bfseries Firma Completa Representante Legal / Apoderado \\
-      \footnotesize\laEmpresa\ $\cdot$ Oferta Técnica Sobre N.\textordmasculine{}\,2 \\
-      \footnotesize Fecha de suscripción: \laFecha
-    \end{tabular}
-  \end{flushright}
-
+  \end{longtable}}
   \clearpage
   \renewcommand{\contentsname}{Índice}
   \tableofcontents

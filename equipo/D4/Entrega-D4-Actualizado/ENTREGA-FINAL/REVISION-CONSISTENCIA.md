@@ -109,6 +109,19 @@ cuando existen, y RT-02.13 sobre el modelo de dominio.
 | Retención de series de posición | RT-05.10 sin distinguir documento | RT-05.10 del Caso fija dos años en línea. El mismo código transversal es otra materia y solo deseable. Queda anotado en el texto |
 | Sincronización tras la reconexión | No aparece | RT-03.13 del Caso fija 20 minutos por camión tras 72 horas sin cobertura. Incorporado |
 
+#### Contradicciones internas del subdocumento 4, corregidas el 07-09-2026
+
+| Punto | Decía | Dice ahora |
+|---|---|---|
+| Figura de arquitectura física general | Rotulaba la flota como Propios 148, Terceros 192 y Sin equipo 34, un reparto que el Caso no entrega y que el propio texto del documento declara desconocido en el supuesto S-09 | Propios 148, Terceros 226 y Sin dispositivo 34 de 374, que son los valores del numeral 14.1 página 29. El 192 exigía suponer que las 34 unidades sin equipo son todas de terceros y que los 148 propios están todos equipados, y el Caso no afirma ninguna de las dos cosas |
+| Pie de cuatro figuras | Llevaba la marca Dupla 4 · Subdoc. 4.2, que es reparto interno del equipo | audIT · TFEP-01/2026 |
+
+Corregidas en el generador `equipo/D4/canvas-d4/build.py`, no solo en la salida, de modo que no
+reaparezcan al regenerar. Afecta a `Main.pdf`, `Camion.pdf`, `DosEjes.pdf` y `Flujo.pdf`.
+
+El subdocumento 3 conserva el 192 en una tabla y es material de D2. Queda fuera de esta corrección
+y se avisa al equipo.
+
 #### Material de D3 que no se incorporó
 
 | Elemento | Motivo |
@@ -150,16 +163,22 @@ nadie aplique el límite de 15 páginas a la oferta ni el Artículo 40 al inform
 
 ## 4. Cumplimiento del Artículo 40 en el documento generado
 
+Actualizado el 07-09-2026 y verificado sobre los PDF renderizados, no sobre el fuente.
+
 | Exigencia | Estado |
 |---|---|
-| Foliación correlativa sin saltos | Cumple desde el índice. La portada no lleva número |
-| Media firma en cada página | Marca de posición incorporada en el pie. Requiere la firma real |
-| Índice detallado | Cumple, con índices de figuras y tablas |
-| PDF con texto seleccionable | Cumple |
-| Cuerpo de al menos 11 puntos | Cumple, cuerpo a 12 puntos |
-| Tablas de al menos 9 puntos | Cumple, tablas a 10 puntos |
-| Referencias en norma APA séptima edición | Cumple, con 18 fuentes |
-| Ausencia de cifras de precio de la oferta | Cumple. Las cifras en pesos son del mandante y provienen del Caso |
+| 40.1 Foliación correlativa, sin páginas sin numerar | Cumple. Folio 1 en la portada y correlativo hasta la última página en los seis documentos |
+| 40.1 Folio en el extremo inferior derecho | Cumple. Estaba centrado y se corrigió. El estilo `plain` del índice, que lo forzaba al centro, también se redefinió |
+| 40.2 Media firma en cada página y firma en carátula | **No cumple.** No hay espacio de firma. Requiere la firma real del representante legal |
+| 40.3 Correspondencia exacta entre índice y foliación | Cumple. Antes el índice contaba dos páginas menos que la foliación real |
+| 40.4 PDF con texto seleccionable | Cumple |
+| 40.4 Tamaño carta y orientación vertical | Cumple. Cero páginas apaisadas |
+| 40.4 Cuerpo de al menos 11 puntos | Cumple, cuerpo a 12 puntos |
+| 40.4 Tablas de al menos 9 puntos | Cumple, tablas a 11 puntos y leyendas a 10 |
+| 40.4 Figuras de al menos 9 puntos | **No cumple.** Las diez figuras vectoriales son A4 apaisadas escaladas al 52 %, y su texto interior queda entre 4 y 6 puntos. El propio 40.4 permite anexos gráficos horizontales, que es la salida natural |
+| 40.4 Referencias en norma APA séptima edición | Cumple en cinco de los seis. El subdocumento 13 no tiene ninguna fuente y el 1 tiene una entrada sin cita en el texto |
+| 40.4 Nomenclatura de los Artículos 49 a 51 | **Por resolver.** Los archivos se llaman `10-audIT-SubdocNN.pdf`, que no sigue el patrón del 50.3 ni el `INFORME1_AUDIT_AAAAMMDD` asumido en la consulta 3 |
+| 50.2 Ausencia de cifras de precio de la oferta | Cumple. La única cifra en pesos es la facturación del mandante, tomada del Caso |
 
 ## 5. Materias pendientes antes de la entrega
 

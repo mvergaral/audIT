@@ -38,11 +38,30 @@
 \renewcommand{\headrulewidth}{0.4pt}
 \fancyhead[L]{\footnotesize\color{audITgris}audIT}
 \fancyhead[R]{\footnotesize\color{audITgris}\subdocCorto}
-\fancyfoot[C]{\thepage}
+\fancyfoot[R]{\thepage}
+
+% Articulo 40.1: todas las paginas numeradas, sin excepcion, en el extremo
+% inferior derecho. La portada y la ficha llevan folio pero no encabezado.
+\fancypagestyle{folioportada}{%
+  \fancyhf{}%
+  \renewcommand{\headrulewidth}{0pt}%
+  \fancyfoot[R]{\color{white}\thepage}}
+% El indice y el inicio de la bibliografia usan el estilo plain de LaTeX, que
+% coloca el folio al centro. Se redefine para que queden como el resto.
+\fancypagestyle{plain}{%
+  \fancyhf{}%
+  \renewcommand{\headrulewidth}{0.4pt}%
+  \fancyhead[L]{\footnotesize\color{audITgris}audIT}%
+  \fancyhead[R]{\footnotesize\color{audITgris}\subdocCorto}%
+  \fancyfoot[R]{\thepage}}
+\fancypagestyle{folioficha}{%
+  \fancyhf{}%
+  \renewcommand{\headrulewidth}{0pt}%
+  \fancyfoot[R]{\thepage}}
 
 % Portada de la empresa con el rotulo del subdocumento sobre la zona libre
 \newcommand{\portadaImagen}[2]{%
-  \thispagestyle{empty}%
+  \thispagestyle{folioportada}%
   \begin{tikzpicture}[remember picture,overlay]
     \node[anchor=north west,inner sep=0pt] at (current page.north west)
       {\includegraphics[width=\paperwidth,height=\paperheight]{assets/images/portada.jpeg}};
