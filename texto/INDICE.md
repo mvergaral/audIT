@@ -1,6 +1,6 @@
 # Índice del corpus
 
-399 secciones. Generado por `tools/buscar.py -r`.
+422 secciones. Generado por `tools/buscar.py -r`.
 
 Para el detalle de una sección: `./tools/buscar.py -v <id>`.
 
@@ -405,13 +405,36 @@ Para el detalle de una sección: `./tools/buscar.py -v <id>`.
 - ` 390` p.46  **CAPÍTULO B CALENDARIO Y PERFIL OPERACIONAL DE REFERENCIA** — 602 palabras
 - ` 391` p.47  **CAPÍTULO C GLOSARIO DE LA INDUSTRIA** — 690 palabras
 
-## Indicaciones — `Indicaciones_Trabajo_de_Investigacion_2026.txt`
+## Indicaciones — `Indicaciones_Trabajo_de_Investigacion_2026.md`
 
-- ` 392` p.1   **1. Objetivo y alcance del trabajo** — 114 palabras
-- ` 393` p.1   **2. Entrega, formato y exposición** — 151 palabras
-- ` 394` p.1   **3. Cuestionario de evaluación de conocimientos** — 128 palabras
-- ` 395` p.1   **4. Aporte propio del grupo** — 246 palabras
-- ` 396` p.1   **5. Precios y fuentes** — 220 palabras
-- ` 397` p.1   **6. Declaración de uso de inteligencia artificial** — 580 palabras
-- ` 398` p.1   **7. Asignación de temas** — 188 palabras
-- ` 399` p.1   **8. Fichas de los temas** — 5245 palabras
+- ` 392` p.1   **ICI-5444 · Taller de Formulación de Proyectos Informáticos** — 0 palabras
+- ` 393` p.1   **Trabajo de Investigación 2026** — 25 palabras
+- ` 394` p.1   **1. Objetivo y alcance del trabajo** — 114 palabras
+- ` 395` p.1   **2. Entrega, formato y exposición** — 151 palabras
+- ` 396` p.1   **3. Cuestionario de evaluación de conocimientos** — 118 palabras
+- ` 397` p.2   **4. Aporte propio del grupo** — 246 palabras
+- ` 398` p.2   **5. Precios y fuentes** — 222 palabras
+- ` 399` p.2   **6. Declaración de uso de inteligencia artificial** — 562 palabras
+- ` 400` p.4   **7. Asignación de temas** — 251 palabras
+- ` 401` p.5   **8. Fichas de los temas** — 0 palabras
+- ` 402` p.5   **TI-01 · IA generativa aplicada en la empresa: LLM, RAG y agentes** — 421 palabras
+- ` 403` p.6   **TI-02 · LLMOps: evaluación, observabilidad y gobierno de modelos en producción** — 427 palabras
+- ` 404` p.7   **TI-03 · Desarrollo asistido por IA y plataformas low-code: productividad, calidad y estimación** — 420 palabras
+- ` 405` p.8   **TI-04 · Kubernetes, GitOps e ingeniería de plataformas** — 383 palabras
+- ` 406` p.9   **TI-05 · Serverless y computación en el borde (edge computing)** — 381 palabras
+- ` 407` p.10  **TI-06 · FinOps: economía y optimización de costos en la nube** — 436 palabras
+- ` 408` p.11  **TI-07 · Plataformas de datos modernas: lakehouse, formatos abiertos de tabla y gobierno del dato** — 398 palabras
+- ` 409` p.12  **TI-08 · Arquitecturas dirigidas por eventos y procesamiento de flujos en tiempo real** — 362 palabras
+- ` 410` p.13  **TI-09 · Observabilidad y prácticas SRE: OpenTelemetry, SLI/SLO y costo de la telemetría** — 401 palabras
+- ` 411` p.14  **TI-10 · Zero Trust, gestión de identidades (IAM/CIAM) y arquitecturas SASE/ZTNA** — 424 palabras
+- ` 412` p.15  **TI-11 · DevSecOps y seguridad de la cadena de suministro de software** — 408 palabras
+- ` 413` p.16  **TI-12 · Cumplimiento normativo en proyectos TIC: Ley 21.719, Ley 21.663 (ANCI) y marco internacional** — 435 palabras
+- ` 414` p.17  **Anexo. Formulario de declaración de uso de inteligencia artificial** — 266 palabras
+- ` 415` p.1   **1. Objetivo y alcance del trabajo** — 114 palabras
+- ` 416` p.1   **2. Entrega, formato y exposición** — 151 palabras
+- ` 417` p.1   **3. Cuestionario de evaluación de conocimientos** — 128 palabras
+- ` 418` p.1   **4. Aporte propio del grupo** — 246 palabras
+- ` 419` p.1   **5. Precios y fuentes** — 220 palabras
+- ` 420` p.1   **6. Declaración de uso de inteligencia artificial** — 580 palabras
+- ` 421` p.1   **7. Asignación de temas** — 188 palabras
+- ` 422` p.1   **8. Fichas de los temas** — 5245 palabras
