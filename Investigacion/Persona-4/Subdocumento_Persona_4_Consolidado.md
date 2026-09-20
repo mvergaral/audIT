@@ -77,12 +77,12 @@ En estricto cumplimiento del Formulario E-26 (`FEP01.26`, Art. 13.5) y cotizacio
 | **Delegado de Privacidad (DPO)** | Jefe de Proyecto Proxy (L2467) | 1,5 – 3,0 UF/h | **2,00 UF/h** ($80.000) | 16/09/2026 · Chile · Michael Page | Autonomía técnica y reporte a Directorio (Art. 48 Ley 21.719). Margen 39,5%. |
 | **Analista QA y Cumplimiento** | Analista QA Experto (L2484) | 0,8 – 1,0 UF/h | **1,00 UF/h** ($40.000) | 16/09/2026 · Chile · Hays IT | Control de evidencias documentales, logs y auditorías Art. 49. Margen 37,1%. |
 | **Asesor Legal Externo TIC** | Perfil Especializado (L2488) | 2,0 – 4,0 UF/h | **2,00 UF/h** ($80.000) | 16/09/2026 · Chile · Col. Abogados | Redacción 148 DPAs, EIPD y cláusulas transfronterizas Mendoza. Margen 38,0%. |
-| **CISO Assistant Pro Cloud** | Norad Security (SaaS Cloud GRC)| €2.400/año (60,0 UF/a) | **60,00 UF/año** (5,00 UF/m) | 16/09/2026 · ciso-assistant.com | Reemplazo eficiente de OneTrust (ahorro 1.075 UF). Módulos RAT, ISO 27001 y ANCI. |
-| **Certificación ISO 27001** | BSI Group / SGS Chile | $15.500.000 / $4.500.000 | **387,5 UF** / **112,5 UF/a** | 28/08/2026 · Chile · bsigroup.com | Certificación inicial Fases 1+2 Mes 18 (14 días-auditor) y 3 vigilancias anuales. |
+| **CISO Assistant Pro Cloud** | Norad Security (SaaS Cloud GRC)| EUR 2.400/año (60,0 UF/a) | **60,00 UF/año** (5,00 UF/m) | 16/09/2026 · ciso-assistant.com | Reemplazo eficiente de OneTrust (ahorro 1.075 UF). Módulos RAT, ISO 27001 y ANCI. |
+| **Certificación ISO 27001** | BSI Group / SGS Chile | $15.500.000 / $4.500.000 | **387,5 UF** / **112,5 UF/a** | 28/08/2026 · Chile · bsigroup.com | Certificación inicial Fases 1+2 Mes 18 (14 días-auditor según directriz IAF MD 5) y 3 vigilancias anuales. |
 | **Póliza Cyber Insurance** | Chubb Seguros Chile S.A. | Prima anual corporativa | **90,00 UF/año** (7,5 UF/m) | 16/09/2026 · Chile · chubb.com | Cobertura agregada 50.000 UF (ransomware, forense DFIR y multas regulatorias). |
 | **Azure Key Vault** | Microsoft Azure Inc. | Tier Estándar HSM Cloud | **0,00 UF/mes** (Marginal) | 16/09/2026 · Azure Chile Central | Región: Chile Central. 100% absorbido en créditos y tiers CSP provistos por P5. |
 
-*Nota de Arquitectura y Regularización:* CISO Assistant Pro Cloud (€2.400/año = 60,0 UF/año) reduce en 1.075 UF el sobrecosto de suites cerradas, garantizando interoperabilidad con Persona 3. Azure Key Vault opera en la región Azure Chile Central sin costo marginal para cumplimiento (0,00 UF), coordinado 1:1 con la arquitectura cloud de Persona 5.
+*Nota de Arquitectura y Regularización:* CISO Assistant Pro Cloud (EUR 2.400/año = 60,0 UF/año) reduce en 1.075 UF el sobrecosto de suites cerradas, garantizando interoperabilidad con Persona 3. Azure Key Vault opera en la región Azure Chile Central sin costo marginal para cumplimiento (0,00 UF), coordinado 1:1 con la arquitectura cloud de Persona 5 mediante Envelope Encryption (KEK maestra protegida y DEKs locales), descartando el sobrecosto prescindible de un clúster dedicado Managed HSM (52,56 UF/mes = 2.680,6 UF a 51 meses).
 
 ---
 
@@ -97,10 +97,14 @@ Para evaluar la estabilidad financiera ante fluctuaciones del mercado, se model�
 
 La variación máxima simétrica de **$\pm 6,14\%$** confirma que las partidas base invariables (5.409,00 UF, 70,20% del TCO) blindan contractualmente a Curimón S.A. Asimismo, los cuadrantes asimétricos cruzados confirman la estabilidad del modelo: el Escenario Asimétrico A (DPO +20% / GRC -25%) resulta en un TCO de 8.038,20 UF (+4,32%), mientras que el Escenario Asimétrico B (DPO -20% / GRC +25%) sitúa el TCO en 7.371,80 UF (-4,32%), demostrando que las variaciones inversas se amortiguan mutuamente sin amenazar la viabilidad económica.
 
-#### Modelado del Retorno sobre la Inversión en Seguridad (RoSI) y Valor Esperado
+#### Modelado del Retorno sobre la Inversión en Seguridad (RoSI) y Regla de Gordon-Loeb
 Bajo el marco normativo chileno, una contingencia severa en Curimón S.A. expone a la empresa a: **Multa Gravísima Ley N° 21.719 (Art. 46)** de hasta 20.000 UTM ($35.000,00\text{ UF}$ = \$1.400.000.000 CLP) y **Sanción ANCI Ley N° 21.663 (Art. 14)** de hasta 10.000 UTM ($17.500,00\text{ UF}$), mitigables hasta un 70% mediante la atenuante del Art. 49.
 
 Aplicando la formulación estandarizada de ingeniería económica:
 $$\text{RoSI}_1 = \frac{(35.000,00\text{ UF} \times 0,85) - 7.705,00\text{ UF}}{7.705,00\text{ UF}} \times 100\% = \frac{29.750,00 - 7.705,00}{7.705,00} \times 100\% = \mathbf{286,11\%}\quad(\mathbf{416,70\%}\text{ sobre }\text{VAN}_{\text{costo}})$$
 
-En un escenario de contingencia integral multicuerpo (datos, ciberseguridad y costos forenses por 55.000,00 UF = \$2.200M CLP mitigados al 90%), el retorno alcanza $\mathbf{RoSI}_2 = \mathbf{542,44\%}$ ($\mathbf{759,72\%}$ sobre $\text{VAN}_{\text{costo}}$). El presupuesto completo de cumplimiento (**7.705,0 UF**) representa apenas el **22,01% del valor de una sola multa gravísima máxima**. Con una probabilidad de indiferencia de solo **2,80% anual** frente al riesgo multicuerpo, el programa de cumplimiento de AudIT constituye una decisión de alta racionalidad financiera y blindaje patrimonial para Transportes Curimón S.A.
+En un escenario de contingencia integral multicuerpo (datos, ciberseguridad y costos forenses por 55.000,00 UF = \$2.200M CLP mitigados al 90%), el retorno alcanza $\mathbf{RoSI}_2 = \mathbf{542,44\%}$ ($\mathbf{759,72\%}$ sobre $\text{VAN}_{\text{costo}}$).
+
+De acuerdo con el modelo económico de **Gordon y Loeb (2002)**, la inversión óptima en ciberseguridad se acota a un techo del $37\%$ de la pérdida esperada:
+$$\text{Presupuesto Óptimo} \le 0,37 \times \text{Pérdida Esperada} = 0,37 \times 55.000,00\text{ UF} = \mathbf{20.350,00\text{ UF}}$$
+El costo total del programa AudIT (**7.705,0 UF**) representa solo el **$14,01\%$ de la exposición patrimonial agregada** y apenas el **$22,01\%$ del valor de una sola multa gravísima máxima ($35.000\text{ UF}$)**, situándose holgadamente bajo la cota de sobreinversión. Con una probabilidad de indiferencia de solo **2,80% anual** ($2,09\%$ anual sobre $\text{VAN}_{\text{costo}}$) frente al riesgo multicuerpo, el programa de cumplimiento de AudIT constituye una decisión de alta racionalidad financiera y blindaje patrimonial para Transportes Curimón S.A.
