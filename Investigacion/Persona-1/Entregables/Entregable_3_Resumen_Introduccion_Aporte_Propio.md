@@ -1,0 +1,54 @@
+# Entregable 3: Resumen, Introducción y Aporte Propio
+
+## Restricción de autoría
+
+El punto 6.1 de las indicaciones exige autoría humana para el párrafo de aporte propio y la discusión crítica. Este documento organiza los insumos, pero Persona 1 debe redactar la versión entregable con su propio razonamiento y conservar historial de cambios.
+
+## Ficha de insumos para el resumen ejecutivo
+
+Antes de redactar, completar manualmente:
+
+| Elemento | Respuesta validada |
+| :--- | :--- |
+| Problema concreto del Caso 10 | Tratamiento de datos, ciberseguridad y costos que deben incorporarse al proyecto. |
+| Principal obligación bajo Ley 21.719 | Completar desde entrega final de P2. |
+| Principal obligación bajo Ley 21.663 | Completar desde entrega final de P2. |
+| Hallazgo internacional más relevante | Completar desde comparación de P3. |
+| Control técnico determinante | Completar desde arquitectura final de P5. |
+| Impacto económico principal | Completar desde modelo validado de P4. |
+| Recomendación del grupo | Redactar humanamente tras discusión del equipo. |
+
+## Estructura recomendada del resumen
+
+1. Contexto y problema en dos oraciones.
+2. Alcance normativo estudiado.
+3. Aplicación a Curimón.
+4. Hallazgo principal.
+5. Recomendación comprometida.
+
+## Estructura recomendada de la introducción
+
+1. Relevancia del cumplimiento en proyectos TIC.
+2. Objetivo exigido por la ficha TI-12.
+3. Descripción breve del Caso 10 y por qué activa obligaciones.
+4. Método de investigación: fuentes oficiales, comparación, matriz y costeo.
+5. Párrafo final de aporte propio.
+
+## Pauta humana para el aporte propio
+
+El párrafo final debe responder sin vaguedades:
+
+- ¿Qué contenidos provienen literalmente de la ficha?
+- ¿Qué dos o más alternativas añadió el grupo en cada lista que decía “otros”?
+- ¿Qué subtema propio se incorporó?
+- ¿Qué aplicación concreta se hizo al Caso 10?
+- ¿Qué comparación, medición o prueba realizó el equipo?
+- ¿Qué recomendación está dispuesto a defender?
+
+## Control de calidad
+
+- [ ] El resumen no contiene citas ni cifras no verificadas.
+- [ ] El aporte propio menciona contribuciones reales, no intenciones.
+- [ ] Curimón aparece como caso de aplicación y TI-12 como tema principal.
+- [ ] No se promete contenido inexistente en el cuerpo.
+- [ ] Persona 1 puede reconstruir oralmente el razonamiento.
