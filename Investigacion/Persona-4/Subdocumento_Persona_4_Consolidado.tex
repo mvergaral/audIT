@@ -1,0 +1,210 @@
+\documentclass[7.5pt,letterpaper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-tabla]{babel}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb}
+\usepackage[top=0.95cm, bottom=1.05cm, left=1.05cm, right=1.05cm, headheight=11pt, headsep=5pt, footskip=10pt]{geometry}
+
+\usepackage{xcolor}
+\definecolor{NavyPrimary}{RGB}{15, 44, 89}
+\definecolor{SlateSecondary}{RGB}{41, 74, 110}
+\definecolor{TealAccent}{RGB}{13, 148, 136}
+\definecolor{LightBg}{RGB}{248, 250, 252}
+\definecolor{BorderGray}{RGB}{203, 213, 225}
+\definecolor{DarkText}{RGB}{30, 41, 59}
+\definecolor{TableHeadBg}{RGB}{234, 240, 248}
+\definecolor{RowAltBg}{RGB}{248, 250, 253}
+
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{colortbl}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{lastpage}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=NavyPrimary,
+    urlcolor=TealAccent,
+    citecolor=SlateSecondary,
+    pdftitle={Capítulo 5: Impacto Económico, TCO y Modelo Financiero del Cumplimiento Normativo},
+    pdfauthor={Persona 4 - AudIT Consultores},
+    pdfsubject={Caso 10: Transportes Curimón S.A. - TI-12}
+}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\scriptsize\color{SlateSecondary}\textbf{AudIT Consultores} · Caso 10: Transportes Curimón S.A.}
+\fancyhead[R]{\scriptsize\color{SlateSecondary}\textbf{TI-12} · Cumplimiento Normativo en Proyectos TIC}
+\fancyfoot[L]{\tiny\color{SlateSecondary}ICI-5444 Taller de Formulación de Proyectos Informáticos · Escuela de Informática, PUCV}
+\fancyfoot[R]{\scriptsize\color{NavyPrimary}\textbf{Página \thepage\ de \pageref{LastPage}}}
+\renewcommand{\headrulewidth}{0.3pt}
+\renewcommand{\footrulewidth}{0.3pt}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1.2pt}
+\linespread{0.91}
+\renewcommand{\arraystretch}{0.80}
+\setlength{\tabcolsep}{2.2pt}
+
+\begin{document}
+
+{\color{NavyPrimary}\normalsize\textbf{Capítulo 5: Impacto Económico, TCO y Modelo Financiero del Cumplimiento Normativo}} \\[1.5pt]
+{\color{SlateSecondary}\scriptsize\textbf{Caso 10:} Transportes Curimón S.A. $\cdot$ \textbf{Consultora AudIT}} \hfill
+{\scriptsize\textbf{Paridades Oficiales E-24:} 1 UF = \$40.000 $\cdot$ 1 USD = \$900 $\cdot$ 1 EUR = \$1.000 $\cdot$ 1 UTM = \$70.000 CLP $\cdot$ $i=0,9\%$ m (11,351\% EA)}
+\vspace{1.0pt}
+\hrule height 0.5pt
+\vspace{2.0pt}
+
+\subsection*{\scriptsize\color{NavyPrimary}5.1 Enfoque Metodológico de Ingeniería Económica y Delimitación del Caso}
+\vspace{-4.5pt}
+\tiny
+El dimensionamiento financiero del cumplimiento normativo para \textbf{Transportes Curimón S.A.} traduce las exigencias de la \textbf{Ley N° 21.719} (Protección de Datos Personales, reforma Ley N° 19.628), la \textbf{Ley N° 21.663} (Marco de Ciberseguridad), la doctrina vinculante de la Dirección del Trabajo y la norma \textbf{ISO/IEC 27001:2022} en un presupuesto riguroso de Costo Total de Propiedad (\textit{Total Cost of Ownership} - TCO). El modelo abarca el ciclo contractual de \textbf{56 meses} de las Bases Técnicas (\texttt{FEP03.10}, Art. 17): \textbf{Etapa 1 de Implementación} (M1-12), \textbf{Etapa 2 de Pruebas y Certificación} (M13-20) y \textbf{Etapa 3 de Operación Continua} (M21-56, 36 meses en régimen). La formulación se gobierna bajo la volumetría inmutable del caso: \textbf{374 camiones} (340 con GPS previo y 34 subcontratados integrados mediante app móvil), \textbf{454 conductores} (196 de planta protegidos por Dictámenes DT Ord. N° 569/020 y Ord. N° 2328/130 que consagran el derecho a la desconexión del GPS fuera de jornada, y 258 externos subcontratados con consentimiento explícito en RT-16.30), \textbf{148 transportistas subcontratados} (62 pymes con DPA marco y 86 dueños-choferes con anexos simplificados), \textbf{84 clientes corporativos} (acceso telemático RT-16.09 y notificación en $<$2h/$<$24h RT-11.18/19) y \textbf{$\sim$1.900 cruces anuales a Mendoza (Argentina)} con cláusulas SCC (RT-05.23). Tarifas sujetas al \textbf{Formulario E-26} (\texttt{FEP01.26}, Art. 13.5).
+
+\vspace{-4.5pt}
+\subsection*{\scriptsize\color{NavyPrimary}5.2 Matriz Sintética de Obligaciones Normativas y Valorización de Cumplimiento}
+\vspace{-4.5pt}
+\fontsize{5.2pt}{6.1pt}\selectfont
+\begin{tabularx}{\textwidth}{@{} c >{\raggedright\arraybackslash}p{2.5cm} >{\raggedright\arraybackslash}p{3.2cm} >{\raggedright\arraybackslash}p{3.5cm} >{\raggedright\arraybackslash}X >{\raggedleft\arraybackslash}p{1.9cm} @{}}
+\toprule
+\rowcolor{TableHeadBg}
+\textbf{ID} & \textbf{Mandato, Vigencia \& Art.} & \textbf{Aplicación Fáctica al Caso Curimón S.A.} & \textbf{Solución Técnica AudIT y Rol E-26} & \textbf{Plazo Normativo \& Hito Operativo} & \textbf{Costo (UF / CLP)} \\
+\midrule
+\textbf{OB-01} & \textbf{Ley 21.719 (inc. 3° bis, sust. 12-13 19.628)} \newline \textit{DO 13/12/24 $\cdot$ Vacatio 24m $\cdot$ BCN 16/09/26} & 258 choferes externos sin vínculo laboral requieren base de licitud explícita y revocable. & Módulo Consentimiento Móvil (RT-17.01). Diseñador (20h) + QA (15h) + DPO (5h). & Ex ante al tratamiento (Art. 12 Ley 19.628) / Hito: Mes 12 & \textbf{CAPEX: 45,0 UF} \newline (\$1.800.000) \\
+\rowcolor{RowAltBg}
+\textbf{OB-02} & \textbf{Ley 21.719 (inc. 3° sexies, 14 bis 19.628)} \newline \textit{DO 13/12/24 $\cdot$ Vacatio 24m $\cdot$ BCN 16/09/26} & Cifrado mandatorio RT-11.10 de choferes externos, tarifas 148 pymes y telemetría. & Cifrado campo en BD con Azure Key Vault (Chile Central). CISO (40h) + Arq. (20h). & Seguridad desde el diseño y por defecto (Art. 14 bis) / Meses 6-12 & \textbf{CAPEX: 120,0 UF} \newline (\$4.800.000) \\
+\textbf{OB-03} & \textbf{Ley 21.719 (inc. Art. 14 ter Ley 19.628)} \newline \textit{DO 13/12/24 $\cdot$ Vacatio 24m $\cdot$ BCN 16/09/26} & Inventario de datos dispersos en 4 Excel; trazabilidad accesos clientes (RT-16.09). & RAT con revisiones semestrales en CISO Assistant. DPO (15h/a: 15 UF E1, 10 UF E2, 45 UF E3). & Actualización semestral permanente (Art. 14 ter) / Continuo (56 meses) & \textbf{OPEX: 70,0 UF} \newline (\$2.800.000) \\
+\rowcolor{RowAltBg}
+\textbf{OB-04} & \textbf{Ley 21.719 (inc. Art. 15 ter Ley 19.628)} \newline \textit{DO 13/12/24 $\cdot$ Vacatio 24m $\cdot$ BCN 16/09/26} & Monitoreo continuous GPS cada 30s sobre flota íntegra de 374 unidades. & Evaluación de Impacto en Protección de Datos (EIPD / DPIA). Asesor Legal (30h) + DPO (10h). & Previo a tratamiento masivo y alto riesgo (Art. 15 ter) / Mes 10 & \textbf{CAPEX: 80,0 UF} \newline (\$3.200.000) \\
+\textbf{OB-05} & \textbf{Ley 21.719 (inc. Art. 48 Ley 19.628)} \newline \textit{DO 13/12/24 $\cdot$ Vacatio 24m $\cdot$ BCN 16/09/26} & Obligación de DPO autónomo con reporte a Directorio y canal de derechos ARCO. & Retainer DPO Fraccional amortizado (18 h/mes a 2,0 UF/h). Proxy Jefe Proyecto E-26. & Vacatio legis 24 meses (Diciembre 2026, Art. 48) / Vigencia perm. 56m & \textbf{OPEX: 2.016,0 UF} \newline (\$80.640.000) \\
+\rowcolor{RowAltBg}
+\textbf{OB-06} & \textbf{Ley 21.719 (sust. Arts. 25-26 Ley 19.628)} \newline \textit{DO 13/12/24 $\cdot$ Vacatio 24m $\cdot$ BCN 16/09/26} & 148 transportistas subcontratados tratan tracking sin acuerdos legales de privacidad. & Estandarización y firma de contratos DPA marco y anexos chofer-dueño. Asesor Legal (47,5h). & Previo a transferencia a encargados (Arts. 25-26) / Meses 3-8 & \textbf{CAPEX: 95,0 UF} \newline (\$3.800.000) \\
+\textbf{OB-07} & \textbf{Ley 21.719 (inc. 26 bis a 26 quáter 19.628)} \newline \textit{DO 13/12/24 $\cdot$ Vacatio 24m $\cdot$ BCN 16/09/26} & $\sim$1.900 viajes anuales a Mendoza configuran transferencia internacional transfronteriza. & Cláusulas Contractuales Tipo (SCC) Chile-Argentina (RT-05.23). Asesor Legal TIC (17,5h). & Previo a flujo transfronterizo (Arts. 26 bis a 26 quáter) / Mes 12 & \textbf{CAPEX: 35,0 UF} \newline (\$1.400.000) \\
+\rowcolor{RowAltBg}
+\textbf{OB-08} & \textbf{Ley 21.663 ANCI, Arts. 5, 8, 14 y 25} \newline \textit{DO 08/04/24 $\cdot$ Plenamente vigente $\cdot$ BCN 16/09/26} & Flota 24/7/365 (RT-10.05). Deber de reporte perentorio CSIRT en menos de 3h. & Retainer CISO 24/7 y mesa de triaje ante ciberincidentes (24 h/mes a 2,0 UF/h). CISO E-26. & Plazo perentorio $<$ 3h notificación preliminar CSIRT / Guardia 24/7 & \textbf{OPEX: 2.688,0 UF} \newline (\$107.520.000) \\
+\textbf{OB-09} & \textbf{ISO/IEC 27001:2022 (Cláusulas 4-10)} \newline \textit{Estándar vigente $\cdot$ Verificación 16/09/26} & Exigencia de licitación certificar SGSI para resiliencia torre de control y nube. & Certificación externa Fases 1+2 (Mes 18) y 3 vigilancias anuales (Años 3-5). BSI / SGS Chile. & Exigencia contractual bases / Mes 18 (Cert.) y Años 3-5 (Vig.) & \textbf{CAP: 387,5 UF} $\cdot$ \$15,5M \newline \textbf{OP: 337,5 UF} $\cdot$ \$13,5M \\
+\rowcolor{RowAltBg}
+\textbf{OB-10} & \textbf{Ley 21.719 (inc. Art. 49 Ley 19.628)} \newline \textit{DO 13/12/24 $\cdot$ Vacatio 24m $\cdot$ BCN 16/09/26} & Blindaje patrimonial para mitigar multas de hasta 20.000 UTM ante fallas de seguridad. & 4 auditorías anuales del Modelo de Prevención de Infracciones. DPO (20h) + QA (20h)/ciclo. & Anual para conservar atenuante calificada Art. 49 / Meses 20, 32, 44, 56 & \textbf{OPEX: 240,0 UF} \newline (\$9.600.000) \\
+\textbf{OB-11} & \textbf{Ley 21.719 (inc. Art. 8° bis Ley 19.628)} \newline \textit{DO 13/12/24 $\cdot$ Vacatio 24m $\cdot$ BCN 16/09/26} & Algoritmo fatiga en cabina con bloqueo telemático de despacho (RT-10.05). & Protocolo de explicabilidad algorítmica y revisión humana de decisiones automatizadas. & Ex ante a producción / Hito: Mes 11 y operación continua & \textbf{OPEX: 0,00 UF} \newline (Absorbido Retainer DPO) \\
+\rowcolor{RowAltBg}
+\textbf{OB-12} & \textbf{Ley 21.719 (mod. Arts. 2° g y 16 19.628)} \newline \textit{DO 13/12/24 $\cdot$ Vacatio 24m $\cdot$ BCN 16/09/26} & Enrolamiento biométrico facial/dactilar de 454 choferes en app móvil y sensores. & Consentimiento explícito reforzado y provisión obligatoria de alternativa credencial PIN. & Previo a enrolamiento / Hito: Mes 8 & \textbf{CAPEX: 0,00 UF} \newline (Embebido App Móvil) \\
+\textbf{OB-13} & \textbf{Bases Técnicas FEP02 (RT-11.18 y 11.19)} \newline \textit{Exigencia contractual $\cdot$ Rige desde adjudicación} & Aviso perentorio a 84 clientes corporativos ante incidentes y brechas. & Protocolo de notificación multicanal ($<$2h incidentes críticos y $<$24h brechas privacidad). & Contractual perentorio: $<$2h y $<$24h / Hito: Mes 12 y guardia & \textbf{OPEX: 0,00 UF} \newline (Absorbido Guardia CISO) \\
+\midrule
+\multicolumn{5}{@{}l}{\textbf{SUBTOTAL MATRIZ: Suma Directa de 13 Obligaciones Normativas (56 Meses de Contrato)}} & \textbf{6.114,0 UF} (\$244,56M) \\
+\bottomrule
+\end{tabularx}
+
+\clearpage
+
+\subsection*{\scriptsize\color{NavyPrimary}5.3 Modelo Presupuestario TCO a 56 Meses y Flujo de Caja Consolidado}
+\vspace{-4.5pt}
+\fontsize{5.4pt}{6.4pt}\selectfont
+\begin{tabularx}{\textwidth}{@{} l >{\raggedright\arraybackslash}X r r r r r r @{}}
+\toprule
+\rowcolor{TableHeadBg}
+\textbf{Cat.} & \textbf{Partida Presupuestaria / Código TCO} & \textbf{Etapa 1 (M1-12)} & \textbf{Etapa 2 (M13-20)} & \textbf{Etapa 3 (M21-56)} & \textbf{Total UF} & \textbf{Total CLP} & \textbf{\% TCO} \\
+\midrule
+\textbf{CAPEX} & C-01 a C-05: Ingeniería, Cifrado, EIPD, DPAs y Mendoza & 375,0 UF & 0,0 UF & 0,0 UF & \textbf{375,0 UF} & \$15.000.000 & 4,87\% \\
+\rowcolor{RowAltBg}
+& C-06: Certificación Inicial ISO/IEC 27001:2022 (Fases 1+2 Mes 18) & 0,0 UF & 387,5 UF & 0,0 UF & \textbf{387,5 UF} & \$15.500.000 & 5,03\% \\
+\rowcolor{TableHeadBg}
+\multicolumn{2}{@{}l}{\textbf{SUBTOTAL GASTOS DE CAPITAL (CAPEX)}} & \textbf{375,0 UF} & \textbf{387,5 UF} & \textbf{0,0 UF} & \textbf{762,5 UF} & \textbf{\$30.500.000} & \textbf{9,90\%} \\
+\midrule
+\textbf{OPEX} & O-01: Actualización Semestral RAT (Art. 14 ter) & 15,0 UF & 10,0 UF & 45,0 UF & \textbf{70,0 UF} & \$2.800.000 & 0,91\% \\
+\rowcolor{RowAltBg}
+& O-02: Retainer Mensual DPO Fraccional E-26 (36 UF/mes) & 432,0 UF & 288,0 UF & 1.296,0 UF & \textbf{2.016,0 UF} & \$80.640.000 & 26,16\% \\
+& O-03: Retainer CISO 24/7 y Reporte ANCI 3h (48 UF/mes) & 576,0 UF & 384,0 UF & 1.728,0 UF & \textbf{2.688,0 UF} & \$107.520.000 & 34,89\% \\
+\rowcolor{RowAltBg}
+& O-04: Auditorías Anuales de Vigilancia ISO 27001 (BSI/SGS) & 0,0 UF & 0,0 UF & 337,5 UF & \textbf{337,5 UF} & \$13.500.000 & 4,38\% \\
+& O-05: Modelo Prevención Infracciones Art. 49 (4 ciclos) & 0,0 UF & 60,0 UF & 180,0 UF & \textbf{240,0 UF} & \$9.600.000 & 3,11\% \\
+\rowcolor{RowAltBg}
+& O-06: Plataforma SaaS GRC CISO Assistant Pro Cloud & 60,0 UF & 40,0 UF & 180,0 UF & \textbf{280,0 UF} & \$11.200.000 & 3,63\% \\
+& O-07: Póliza Corporativa Cyber Insurance (Chubb Seguros) & 90,0 UF & 60,0 UF & 270,0 UF & \textbf{420,0 UF} & \$16.800.000 & 5,45\% \\
+\rowcolor{RowAltBg}
+& O-08: Fondo de Reserva para Contingencias Legales & 50,0 UF & 30,0 UF & 90,0 UF & \textbf{170,0 UF} & \$6.800.000 & 2,21\% \\
+& O-09: Soporte Operativo QA (516 UF), App (135 UF) y Legal (70 UF) & 12,0 UF & 148,0 UF & 561,0 UF & \textbf{721,0 UF} & \$28.840.000 & 9,36\% \\
+\rowcolor{TableHeadBg}
+\multicolumn{2}{@{}l}{\textbf{SUBTOTAL COSTOS OPERACIONALES (OPEX)}} & \textbf{1.235,0 UF} & \textbf{1.020,0 UF} & \textbf{4.687,5 UF} & \textbf{6.942,5 UF} & \textbf{\$277.700.000} & \textbf{90,10\%} \\
+\midrule
+\rowcolor{NavyPrimary!15}
+\multicolumn{2}{@{}l}{\textbf{TOTAL TCO CONSOLIDADO (56 MESES)}} & \textbf{1.610,0 UF} & \textbf{1.407,5 UF} & \textbf{4.687,5 UF} & \textbf{7.705,0 UF} & \textbf{\$308.200.000} & \textbf{100,00\%} \\
+\bottomrule
+\end{tabularx}
+
+\vspace{1.0pt}
+\begin{tabularx}{\textwidth}{@{} >{\raggedright\arraybackslash}X r r r r r r r @{}}
+\toprule
+\rowcolor{TableHeadBg}
+\textbf{Flujo Desembolsos Calendario (A1-A5)} & \textbf{Año 1 (M1-12)} & \textbf{Año 2 (M13-24)} & \textbf{Año 3 (M25-36)} & \textbf{Año 4 (M37-48)} & \textbf{Año 5 (M49-56)} & \textbf{Total 56 Meses} & \textbf{Total CLP} \\
+\midrule
+\textbf{Inversión de Capital (CAPEX)} & 375,0 UF & 387,5 UF & 0,0 UF & 0,0 UF & 0,0 UF & \textbf{762,5 UF} & \$30.500.000 \\
+\rowcolor{RowAltBg}
+\textbf{Gasto Operacional (OPEX)} & 1.235,0 UF & 1.540,83 UF & 1.562,50 UF & 1.562,50 UF & 1.041,67 UF & \textbf{6.942,5 UF} & \$277.700.000 \\
+\rowcolor{NavyPrimary!10}
+\textbf{Flujo Anual Total (UF / CLP)} & \textbf{1.610,0 UF} (\$64,4M) & \textbf{1.928,33 UF} (\$77,1M) & \textbf{1.562,50 UF} (\$62,5M) & \textbf{1.562,50 UF} (\$62,5M) & \textbf{1.041,67 UF} (\$41,7M) & \textbf{7.705,0 UF} & \textbf{\$308.200.000} \\
+\bottomrule
+\end{tabularx}
+
+\vspace{0.8pt}
+\tiny
+\textit{Evaluación Financiera y Valor Esperado (Flujo Puro de Egresos, TIR Inaplicable):} Actualizando al costo de capital contractual $i = 0,9\%$ mensual ($11,351\%$ anual efectivo E-24), el Valor Actual Neto del costo es $\text{VAN}_{\text{costo}} = \mathbf{5.757,68\text{ UF}}$ (\$230,3M CLP). Frente a una exposición punitiva multicuerpo de 55.000,00 UF (\$2.200M CLP), el umbral de indiferencia es $p^* = 7.705,0 / 55.000,0 = \mathbf{14,01\%\text{ a 56m}} \implies \mathbf{2,80\%\text{ anual calendario}}$ ($\mathbf{2,09\%}$ sobre $\text{VAN}_{\text{costo}}$). Superada esa probabilidad mínima, el valor esperado del daño excede el TCO total.
+
+\vspace{-4.5pt}
+\subsection*{\scriptsize\color{NavyPrimary}5.4 Matriz Consolidada de Tarifas, Metadatos Arancelarios y Benchmark Salarial}
+\vspace{-4.5pt}
+\fontsize{5.2pt}{6.2pt}\selectfont
+\begin{tabularx}{\textwidth}{@{} >{\raggedright\arraybackslash}p{2.0cm} >{\raggedright\arraybackslash}p{2.0cm} c c >{\raggedright\arraybackslash}p{2.3cm} >{\raggedright\arraybackslash}X @{}}
+\toprule
+\rowcolor{TableHeadBg}
+\textbf{Perfil / Insumo Técnico} & \textbf{Clasificación / Proveedor} & \textbf{Banda / Base} & \textbf{Tarifa Homologada} & \textbf{Captura / Respaldo} & \textbf{Justificación Técnica y Régimen Contractual} \\
+\midrule
+\textbf{Oficial Seg. (CISO)} & Encargado Seg. TI (E-26 L2479) & 1,5--2,5 UF/h & \textbf{2,00 UF/h} (\$80.000) & 16/09/2026 $\cdot$ Chile $\cdot$ Robert Half & Guardia pasiva 24/7 y reporte ANCI $<$ 3h (Ley 21.663 Art. 14). Margen 42,8\%. \\
+\rowcolor{RowAltBg}
+\textbf{Delegado Priv. (DPO)} & Jefe Proyecto Proxy (L2467) & 1,5--3,0 UF/h & \textbf{2,00 UF/h} (\$80.000) & 16/09/2026 $\cdot$ Chile $\cdot$ Michael Page & Autonomía técnica y reporte a Directorio (Art. 48 Ley 21.719). Margen 39,5\%. \\
+\textbf{Analista QA Cumplimiento} & Analista QA Experto (L2484) & 0,8--1,0 UF/h & \textbf{1,00 UF/h} (\$40.000) & 16/09/2026 $\cdot$ Chile $\cdot$ Hays IT & Control evidencias documentales, logs y auditorías Art. 49. Margen 37,1\%. \\
+\rowcolor{RowAltBg}
+\textbf{Asesor Legal Externo} & Perfil Especializado (L2488) & 2,0--4,0 UF/h & \textbf{2,00 UF/h} (\$80.000) & 16/09/2026 $\cdot$ Chile $\cdot$ Col. Abogados & Redacción 148 DPAs, EIPD y cláusulas transfronterizas Mendoza. Margen 38,0\%. \\
+\textbf{CISO Assistant Pro Cloud} & Norad Security (SaaS GRC) & €2.400/a (60,0 UF/a) & \textbf{60,00 UF/año} (5,00 UF/m) & 16/09/2026 $\cdot$ ciso-assistant.com & Reemplazo eficiente de OneTrust (ahorro 1.075 UF); módulos RAT, ISO y ANCI. \\
+\rowcolor{RowAltBg}
+\textbf{Certificación ISO 27001} & BSI Group / SGS Chile & \$15,5M / \$4,5M CLP & \textbf{387,5 UF} / \textbf{112,5 UF/a} & 28/08/2026 $\cdot$ Chile $\cdot$ bsigroup.com & Certificación inicial Fases 1+2 Mes 18 (14 días-auditor) y 3 vigilancias anuales. \\
+\textbf{Póliza Cyber Insurance} & Chubb Seguros Chile S.A. & Prima corporativa & \textbf{90,00 UF/año} (7,5 UF/m) & 16/09/2026 $\cdot$ Chile $\cdot$ chubb.com & Cobertura agregada 50.000 UF (ransomware, forense DFIR y multas regulatorias). \\
+\rowcolor{RowAltBg}
+\textbf{Azure Key Vault} & Microsoft Azure Inc. & HSM Cloud Tier Estándar & \textbf{0,00 UF/mes} (Marginal) & 16/09/2026 $\cdot$ Azure Chile Central & Región: Chile Central. 100\% absorbido en créditos y tiers CSP de Persona 5. \\
+\bottomrule
+\end{tabularx}
+
+\vspace{-4.5pt}
+\subsection*{\scriptsize\color{NavyPrimary}5.5 Sensibilidad Bidimensional, RoSI y Absorción del Riesgo Sancionatorio}
+\vspace{-4.5pt}
+\fontsize{5.3pt}{6.3pt}\selectfont
+\begin{tabularx}{\textwidth}{@{} >{\raggedright\arraybackslash}p{3.7cm} c c r >{\raggedright\arraybackslash}X @{}}
+\toprule
+\rowcolor{TableHeadBg}
+\textbf{Escenario de Sensibilidad} & \textbf{DPO Fraccional ($V_1$)} & \textbf{GRC CISO Assistant ($V_2$)} & \textbf{TCO Resultante} & \textbf{Impacto Porcentual \& Comportamiento Estructural} \\
+\midrule
+\textbf{Optimista (-20\% / -25\%)} & 1.612,8 UF (1,60 UF/h) & 210,0 UF (45,0 UF/a) & \textbf{7.231,8 UF} (\$289,3M) & \textbf{-6,14\%} (Ahorro de 473,2 UF por volumen y descuento multianual). \\
+\rowcolor{RowAltBg}
+\textbf{Base Central (0\% / 0\%)} & \textbf{2.016,0 UF (2,00 UF/h)} & \textbf{280,0 UF (60,0 UF/a)} & \textbf{7.705,0 UF} (\$308,2M) & \textbf{0,00\%} (Presupuesto auditado de ingeniería; 70,2\% en partidas invariables). \\
+\textbf{Pesimista (+20\% / +25\%)} & 2.419,2 UF (2,40 UF/h) & 350,0 UF (75,0 UF/a) & \textbf{8.178,2 UF} (\$327,1M) & \textbf{+6,14\%} (Incremento de 473,2 UF; absorbible sin comprometer margen de oferta). \\
+\bottomrule
+\end{tabularx}
+
+\vspace{1.5pt}
+\noindent\fontsize{5.1pt}{6.7pt}\selectfont
+\textbf{Análisis de Resiliencia, RoSI y Blindaje Patrimonial ante Multas Regulatorias:} \newline
+La simulación asimétrica cruzada valida una alta absorción: Escenario A (DPO +20\% / GRC -25\%) arroja $8.038,20\text{ UF}$ (+4,32\%) y Escenario B (DPO -20\% / GRC +25\%) arroja $7.371,80\text{ UF}$ (-4,32\%), demostrando compensación mutua. Frente al riesgo sancionatorio, Curimón S.A. enfrentaría una infracción gravísima de la Ley N° 21.719 (Art. 46) de hasta 20.000 UTM ($35.000,00\text{ UF} = \$1.400\text{M CLP}$) y sanciones ANCI (Ley N° 21.663) de hasta 10.000 UTM ($17.500,00\text{ UF}$), mitigables al 70\% mediante el Modelo de Prevención de Infracciones acreditado (Art. 49).\par
+
+\vspace{1.5pt}
+{\centering\fontsize{5.1pt}{6.5pt}\selectfont
+$\mathbf{RoSI_1}\text{ (Pérdida Evitada 85\%)} = \dfrac{(35.000,00\text{ UF} \times 0,85) - 7.705,0\text{ UF}}{7.705,0\text{ UF}} \times 100\% = \mathbf{286,11\%}\quad\left(\mathbf{416,70\%}\text{ sobre }\text{VAN}_{\text{costo}} = 5.757,68\text{ UF}\right)$\par}
+\vspace{1.5pt}
+
+\noindent\fontsize{5.1pt}{6.7pt}\selectfont
+Bajo exposición multicuerpo con riesgo operacional acumulado ($55.000,00\text{ UF} = \$2.200\text{M CLP}$ mitigados al 90\%), el retorno asciende a $\mathbf{RoSI_2 = 542,44\%}$ ($\mathbf{759,72\%}$ sobre $\text{VAN}_{\text{costo}}$). El costo integral del programa ($7.705,0\text{ UF}$) representa exactamente el $22,01\%$ de una sola sanción gravísima máxima, estableciendo una probabilidad de indiferencia anual de $p^* = \mathbf{2,80\%}$ ($2,09\%$ sobre $\text{VAN}_{\text{costo}}$), lo que otorga solvencia matemática irrebatible ante la Comisión Evaluadora.\par
+
+\end{document}
