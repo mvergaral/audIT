@@ -92,10 +92,12 @@ El presupuesto del programa de cumplimiento para los **56 meses** contractuales 
 
 El presupuesto maestro suma **8.375,4 UF netas** ($335,0\text{ millones de CLP}$ o $\text{USD } 372.240$). Aplicando la tasa contractual del $0,9\%$ mensual del Formulario E-24 ($11,351\%\text{ anual}$), el **Valor Actual Neto del costo es $\text{VAN}_{\text{costo}} = \mathbf{6.582,3\text{ UF}}$**. En los primeros 20 meses (fase de implementación previa a la explotación comercial) se concentra una inversión de $3.209,0\text{ UF}$ ($38,3\%$), estabilizándose en la fase operativa en un gasto promedio de $144,8\text{ UF/mes}$.
 
-> **Puente de Conciliación Presupuestaria y Proporcionalidad en Licitación:**  
-> El TCO total de **8.375,4 UF** concilia de manera exacta:  
-> $$\text{TCO} = \underbrace{4.768,4\text{ UF}}_{\text{Obligaciones Directas (OB-01 a OB-10)}} + \underbrace{3.607,0\text{ UF}}_{\text{Gobernanza DPO, SaaS GRC, Seguro Chubb y Soporte QA/Legal}} = \mathbf{8.375,4\text{ UF}}$$  
-> Esta inversión representa aproximadamente un **3,9% del presupuesto total estimado para la licitación del Caso 10 Curimón S.A.** (estimada en ~215.000 UF a 56 meses), situándose dentro de los estándares de la industria logística (rango 3%–5%) para proyectos que manejan infraestructura crítica, decisiones algorítmicas y tratamiento intensivo de datos de localización.
+#### Puente de Conciliación Presupuestaria y Proporcionalidad en Licitación
+El TCO total de **8.375,4 UF** concilia de manera exacta:
+
+$$\text{TCO} = \underbrace{4.768,4\text{ UF}}_{\text{Obligaciones Directas (OB-01 a OB-10)}} + \underbrace{3.607,0\text{ UF}}_{\text{Gobernanza DPO, SaaS GRC, Seguro Chubb y Soporte QA/Legal}} = \mathbf{8.375,4\text{ UF}}$$
+
+Esta inversión representa aproximadamente un **3,9% del presupuesto total estimado para la licitación del Caso 10 Curimón S.A.** (estimada en ~215.000 UF a 56 meses), situándose dentro de los estándares de la industria logística (rango 3%–5%) para proyectos que manejan infraestructura crítica, decisiones algorítmicas y tratamiento intensivo de datos de localización.
 
 ## 4. Análisis de Sensibilidad Bidimensional y Estabilidad Presupuestaria
 
