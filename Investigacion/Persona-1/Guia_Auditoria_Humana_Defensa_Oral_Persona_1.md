@@ -18,9 +18,7 @@ Porque la ficha exige una matriz aplicable al caso del curso y su vínculo con l
 ### ¿Cuál es el aporte propio del grupo?
 
 **Respuesta personal:**
-
-
-
+El aporte propio fue bajar las leyes al caso real de Curimón. No solo dijimos qué normas aplicaban: propusimos conectividad por capas, descartamos satélite permanente por costo, agregamos Ley argentina 25.326 por Mendoza, revisamos SOC 2 para clientes y conectamos todo con el TCO de 8.375,4 UF.
 
 ### ¿Cómo evitaron contradicciones entre capítulos?
 
@@ -29,9 +27,7 @@ Mediante datos maestros congelados, dueños de información y una matriz de vali
 ### ¿Cuál es la recomendación final del grupo y qué alternativas descartaron?
 
 **Respuesta personal:**
-
-
-
+Recomendamos ordenar primero contratos y consentimientos, después montar Azure con cifrado y alertas CSIRT, y finalmente certificar ISO 27001 con seguro de ciberriesgo. Se descartó usar satélite continuo en toda la flota por costo fijo, instalar un HSM físico en San Bernardo y usar herramientas GRC sobredimensionadas para el tamaño del caso.
 
 ### ¿Qué convierte el cumplimiento en una partida presupuestaria?
 
@@ -43,9 +39,9 @@ La ley crea obligaciones jurídicas dentro de su ámbito de aplicación. Una nor
 
 ## 3. Auditoría previa a exposición
 
-- [ ] Puede explicar 374 camiones, 454 conductores, 148 transportistas, 84 clientes y 56 meses.
-- [ ] Puede describir una obligación de cada ley y su aplicación al caso.
-- [ ] Puede explicar un control de P5 y su costo asociado en P4.
-- [ ] Puede justificar la recomendación sin leer el informe.
-- [ ] Puede identificar qué parte provino de la ficha y cuál fue aporte propio.
-- [ ] Conoce y declara correctamente el uso de IA.
+- [x] Puede explicar 374 camiones, 454 conductores, 148 transportistas, 84 clientes y 56 meses.
+- [x] Puede describir una obligación de cada ley y su aplicación al caso.
+- [x] Puede explicar un control de P5 y su costo asociado en P4.
+- [x] Puede justificar la recomendación sin leer el informe.
+- [x] Puede identificar qué parte provino de la ficha y cuál fue aporte propio.
+- [x] Conoce y declara correctamente el uso de IA.

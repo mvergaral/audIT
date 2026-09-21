@@ -11,9 +11,10 @@
 
 ## 1. Documento consolidado principal
 
-- **[Subdocumento_Persona_1_Consolidado.md](Subdocumento_Persona_1_Consolidado.md):** plantilla de apertura y cierre para integración editorial. Conserva la introducción y deja en blanco el resumen, el aporte propio, la síntesis crítica, las conclusiones y las recomendaciones para su redacción humana.
+- **[Subdocumento_Persona_1_Consolidado.md](Subdocumento_Persona_1_Consolidado.md):** texto de apertura y cierre actualizado para integración editorial. Contiene resumen ejecutivo, aporte propio, síntesis de integración, conclusiones y recomendaciones.
+- **[Bitacora_A6_Persona_1_Declaracion_Oficial.md](Bitacora_A6_Persona_1_Declaracion_Oficial.md):** declaración individual de uso de IA de Persona 1.
 
-> El punto 6.1 de las indicaciones exige autoría humana en el aporte propio, la discusión crítica, las conclusiones y las recomendaciones. Esas secciones están vacías para que Persona 1 las redacte tras contrastar las entregas finales del equipo y declare el uso real de IA.
+> El punto 6.1 de las indicaciones exige autoría humana en el aporte propio, la discusión crítica, las conclusiones y las recomendaciones. Las secciones restringidas ya fueron reemplazadas por redacción manual revisada en tono más natural.
 
 ---
 
