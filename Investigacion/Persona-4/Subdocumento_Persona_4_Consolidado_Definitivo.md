@@ -141,7 +141,7 @@ Basta con que la probabilidad anual de sufrir un incidente sancionable supere el
 
 | Perfil Profesional | Perfil E-26 Homólogo | Rango Costo E-26 (UF/h) | Tarifa Media E-26 (UF/h) | Tarifa Adoptada | Dedicación Impl. (M1-20) | Dedicación Régimen (M21-56) | Justificación y Base Contractual |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :--- |
-| **Oficial de Seguridad (CISO)** | Encargado de Seguridad TI | 0,8 – 1,4 | 1,5 – 2,5 | **2,00 UF/h** | $24\text{ h/mes}$ guardia y diseño | $24\text{ h/mes}$ guardia pasiva 24/7 | Reporte preliminar CSIRT $<3\text{ h}$ (Ley 21.663 Art. 14). Margen: 42,8%. |
+| **Oficial de Seguridad (CISO)** | Encargado de Seguridad TI | 0,8 – 1,4 | 1,5 – 2,5 | **2,00 UF/h** | $24\text{ h/mes}$ guardia y diseño | $24\text{ h/mes}$ guardia pasiva 24/7 | Reporte preliminar CSIRT $<3\text{ h}$ (Ley 21.663, Art. 9 y D.S. N° 295/2024). Margen: 42,8%. |
 | **Delegado de Privacidad (DPO)** | Jefe de Proyecto (proxy) | 0,8 – 2,1 | 1,5 – 3,0 | **2,00 UF/h** | $18\text{ h/mes}$ gobernanza inicial | $18\text{ h/mes}$ gestión ARCO y RAT | Autonomía técnica y reporte a Directorio (Art. 48 Ley 21.719). Margen: 39,5%. |
 | **Analista QA y Cumplimiento** | Analista QA Experto | 0,5 – 0,7 | 0,8 – 1,0 | **1,00 UF/h** | $40\text{ h/mes}$ pruebas y evidencias | $20\text{ h/mes}$ auditoría interna | Evidencias documentales SGSI y auditorías Art. 49. Margen: 37,1%. |
 | **Asesor Legal Externo TIC** | Director Proyecto (proxy no listado)| 1,5 – 2,8 | 2,0 – 4,0 | **2,00 UF/h** | $10\text{ h/mes}$ (M1-4) / $2\text{ h/mes}$ | $2\text{ h/mes}$ contractual | Redacción 148 DPAs, EIPD y SCC transfronterizas Mendoza. Margen: 38,0%. |

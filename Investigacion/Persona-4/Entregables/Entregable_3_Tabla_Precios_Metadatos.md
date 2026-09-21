@@ -73,7 +73,7 @@ El presente documento constituye el **Catálogo Exhaustivo de Precios de Mercado
   * Salario bruto mensual de mercado para *CISO / Security Manager* en empresas de logística y tecnología: **\$5.000.000 a \$7.800.000 CLP**.
   * Calculando una base de 160 horas mensuales, el costo directo por hora se ubica entre 0,78 y 1,22 UF/h (con leyes sociales y beneficios corporativos: 0,90 a 1,40 UF/h).
   * La tarifa facturada de 2,00 UF/h se encuentra en el punto medio exacto de la banda E-26, garantizando un margen de contribución operacional estándar del 35% al 45% sobre el costo directo.
-* **Justificación Operativa en Caso Curimón:** Exigencia mandatoria de la **Ley N° 21.663 (Marco de Ciberseguridad, Art. 14)** para actuar como Oficial de Seguridad responsable del reporte perentorio de ciberincidentes al CSIRT Nacional en **menos de 3 horas**, liderando la mesa de triaje y la resiliencia de la torre de control de 374 camiones (operación 24/7/365, RT-10.05).
+* **Justificación Operativa en Caso Curimón:** Exigencia mandatoria de la **Ley N° 21.663 (Marco de Ciberseguridad, Art. 9, y D.S. N° 295/2024)** para actuar como Oficial de Seguridad responsable del reporte perentorio de ciberincidentes al CSIRT Nacional en **menos de 3 horas**, liderando la mesa de triaje y la resiliencia de la torre de control de 374 camiones (operación 24/7/365, RT-10.05).
 
 #### Ficha A-2: Delegado de Protección de Datos (DPO Fraccional)
 * **Denominación Homologada en Formulario E-26:** `Jefe de Proyecto` (Proxy Oficial, `FEP01.26`, Línea 2467).
@@ -121,7 +121,7 @@ El presente documento constituye el **Catálogo Exhaustivo de Precios de Mercado
 * **Región Geográfica / Cloud:** Global / Aprovisionamiento en contenedores sobre Microsoft Azure Chile Central.
 * **Módulos Cotizados e Incluidos:**
   1. *Data Privacy & Records of Processing Activities (RAT - Art. 14 ter Ley 19.628 reformada).*
-  2. *Incident Management & Escalation Workflow (Protocolo perentorio de reporte ANCI < 3h - Ley 21.663, Art. 14).*
+  2. *Incident Management & Escalation Workflow (Protocolo perentorio de reporte ANCI < 3h - Ley 21.663, Art. 9, y D.S. N° 295/2024).*
   3. *Vendor Risk Management / DPA Lifecycle (Gestión y auditoría de 148 contratos de transportistas subcontratados).*
   4. *Compliance Multi-Framework (ISO/IEC 27001:2022, NIST CSF, Ley 21.719 y Modelo Prevención Art. 49).*
 * **Cotización Oficial de Lista y Conversión E-24:**

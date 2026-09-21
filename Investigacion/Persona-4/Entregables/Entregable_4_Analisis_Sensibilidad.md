@@ -95,7 +95,7 @@ La reforma a la Ley N° 19.628 introduce tres tramos sancionatorios pecuniarios 
    $$\text{Multa Gravísima Máxima} = 20.000 \times 1,75\text{ UF/UTM} = \mathbf{35.000,00\text{ UF}}\quad(1.400.000.000\text{ CLP})$$
 
 ### 4.2 Régimen Sancionatorio de la Ley N° 21.663 (Marco de Ciberseguridad / ANCI)
-Para Operadores de Importancia Vital (OIV) y prestadores de servicios esenciales, el incumplimiento de la obligación de notificación de incidentes dentro de las 3 horas (Art. 14) o la inobservancia de medidas técnicas de seguridad faculta a la Agencia Nacional de Ciberseguridad (ANCI) a aplicar sanciones de hasta:
+Para Operadores de Importancia Vital (OIV) y prestadores de servicios esenciales, el incumplimiento de la obligación de notificación de incidentes dentro de las 3 horas (Art. 9 de la Ley N° 21.663 y D.S. N° 295/2024) o la inobservancia de medidas técnicas de seguridad faculta a la Agencia Nacional de Ciberseguridad (ANCI) a aplicar sanciones de hasta:
 $$\text{Multa ANCI Máxima} = 10.000\text{ UTM} = 10.000 \times 1,75\text{ UF/UTM} = \mathbf{17.500,00\text{ UF}}\quad(700.000.000\text{ CLP})$$
 
 ### 4.3 La Atenuante Calificada del Artículo 49 (Modelo de Prevención de Infracciones)
