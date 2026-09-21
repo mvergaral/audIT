@@ -10,13 +10,13 @@ Antes de redactar, completar manualmente:
 
 | Elemento | Respuesta validada |
 | :--- | :--- |
-| Problema concreto del Caso 10 | Tratamiento de datos, ciberseguridad y costos que deben incorporarse al proyecto. |
-| Principal obligación bajo Ley 21.719 | Completar desde entrega final de P2. |
-| Principal obligación bajo Ley 21.663 | Completar desde entrega final de P2. |
-| Hallazgo internacional más relevante | Completar desde comparación de P3. |
-| Control técnico determinante | Completar desde arquitectura final de P5. |
-| Impacto económico principal | Completar desde modelo validado de P4. |
-| Recomendación del grupo | Redactar humanamente tras discusión del equipo. |
+| Problema concreto del Caso 10 |  |
+| Principal obligación bajo Ley 21.719 |  |
+| Principal obligación bajo Ley 21.663 |  |
+| Hallazgo internacional más relevante |  |
+| Control técnico determinante |  |
+| Impacto económico principal |  |
+| Recomendación del grupo |  |
 
 ## Estructura recomendada del resumen
 
@@ -44,6 +44,13 @@ El párrafo final debe responder sin vaguedades:
 - ¿Qué aplicación concreta se hizo al Caso 10?
 - ¿Qué comparación, medición o prueba realizó el equipo?
 - ¿Qué recomendación está dispuesto a defender?
+
+### Redacción manual
+
+
+
+
+
 
 ## Control de calidad
 

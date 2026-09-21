@@ -17,11 +17,21 @@ Porque la ficha exige una matriz aplicable al caso del curso y su vínculo con l
 
 ### ¿Cuál es el aporte propio del grupo?
 
-La respuesta final debe nombrar ampliaciones reales, evidencia y decisiones. No basta decir “aplicamos las leyes al caso”. Debe explicarse qué normas, organismos o herramientas adicionales se investigaron, cómo se construyó la matriz y qué recomendación adoptó el equipo.
+**Respuesta personal:**
+
+
+
 
 ### ¿Cómo evitaron contradicciones entre capítulos?
 
 Mediante datos maestros congelados, dueños de información y una matriz de validación cruzada. P2 controla vigencia; P3, aplicabilidad internacional y herramientas; P4, costos; P5, arquitectura. P1 integra sin alterar unilateralmente esos datos.
+
+### ¿Cuál es la recomendación final del grupo y qué alternativas descartaron?
+
+**Respuesta personal:**
+
+
+
 
 ### ¿Qué convierte el cumplimiento en una partida presupuestaria?
 

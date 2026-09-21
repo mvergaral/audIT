@@ -11,9 +11,9 @@
 
 ## 1. Documento consolidado principal
 
-- **[Subdocumento_Persona_1_Consolidado.md](Subdocumento_Persona_1_Consolidado.md):** capítulo de apertura y cierre listo para integración editorial. Contiene resumen ejecutivo, introducción, delimitación del aporte propio, síntesis del caso y conclusiones orientadas a la propuesta técnico-económica.
+- **[Subdocumento_Persona_1_Consolidado.md](Subdocumento_Persona_1_Consolidado.md):** plantilla de apertura y cierre para integración editorial. Conserva la introducción y deja en blanco el resumen, el aporte propio, la síntesis crítica, las conclusiones y las recomendaciones para su redacción humana.
 
-> El punto 6.1 de las indicaciones exige autoría humana en el aporte propio, la discusión crítica, las conclusiones y las recomendaciones. El consolidado es un borrador de trabajo: Persona 1 debe contrastarlo con las entregas finales del equipo, reescribir esas secciones y declarar el uso real de IA.
+> El punto 6.1 de las indicaciones exige autoría humana en el aporte propio, la discusión crítica, las conclusiones y las recomendaciones. Esas secciones están vacías para que Persona 1 las redacte tras contrastar las entregas finales del equipo y declare el uso real de IA.
 
 ---
 
