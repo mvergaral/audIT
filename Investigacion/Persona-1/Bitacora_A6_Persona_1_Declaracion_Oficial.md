@@ -28,7 +28,7 @@ Estas secciones fueron redactadas y ajustadas para que pudieran ser defendidas o
 
 ### Nivel 1 — Apoyo de formato
 
-Se utilizó apoyo de IA únicamente para tareas de nivel superficial: ordenar ideas, revisar ortografía, mejorar puntuación, mantener consistencia de formato Markdown y detectar marcadores pendientes. No se delegó el criterio final ni la decisión del contenido sustantivo.
+Se utilizó apoyo de IA únicamente para tareas de nivel superficial: ordenar ideas, revisar ortografía, mejorar puntuación, mantener consistencia de formato Markdown y detectar marcadores pendientes. La herramienta utilizada fue OpenCode con modelo OpenAI GPT-5.5 (`openai/gpt-5.5`), durante la sesión de trabajo del 21 de septiembre de 2026. No se delegó el criterio final ni la decisión del contenido sustantivo.
 
 ---
 
@@ -36,10 +36,10 @@ Se utilizó apoyo de IA únicamente para tareas de nivel superficial: ordenar id
 
 | Sección | Nivel declarado | Aporte humano | Apoyo de IA |
 | :--- | :---: | :--- | :--- |
-| Resumen ejecutivo | Nivel 0 + 1 | Redacción del problema, marco legal, solución y costo final. | Revisión ortográfica y de formato. |
-| Delimitación del aporte propio | Nivel 0 + 1 | Identificación de aportes del grupo frente a la ficha. | Ordenamiento de lista y puntuación. |
-| Síntesis de integración | Nivel 0 + 1 | Conexión entre marco legal, arquitectura y presupuesto. | Corrección menor de concordancia. |
-| Conclusiones y recomendaciones | Nivel 0 + 1 | Redacción en tono directo y defendible oralmente. | Revisión de claridad y consistencia. |
+| Resumen ejecutivo | Nivel 0 + 1 | Redacción del problema, marco legal, solución y costo final. | OpenCode / OpenAI GPT-5.5 (`openai/gpt-5.5`): revisión ortográfica y de formato. |
+| Delimitación del aporte propio | Nivel 0 + 1 | Identificación de aportes del grupo frente a la ficha. | OpenCode / OpenAI GPT-5.5 (`openai/gpt-5.5`): ordenamiento de lista y puntuación. |
+| Síntesis de integración | Nivel 0 + 1 | Conexión entre marco legal, arquitectura y presupuesto. | OpenCode / OpenAI GPT-5.5 (`openai/gpt-5.5`): corrección menor de concordancia. |
+| Conclusiones y recomendaciones | Nivel 0 + 1 | Redacción en tono directo y defendible oralmente. | OpenCode / OpenAI GPT-5.5 (`openai/gpt-5.5`): revisión de claridad y consistencia. |
 | Defensa oral | Nivel 0 | Respuestas personales breves. | Sin apoyo sustantivo. |
 
 ---
