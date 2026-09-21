@@ -172,7 +172,7 @@ de todo el corpus.
 | **«~215.000 UF» de presupuesto total de la licitación** | `…Definitivo.md` §3.3 | Búsqueda sobre las tres bases (FEP01, FEP02, FEP03) con `tools/buscar.py`: **no hay monto total publicado**. De esta cifra se deriva el 3,9 % de proporcionalidad |
 | **«rango 3 %–5 % de la industria logística»** | `…Definitivo.md` §3.3 | Sin fuente |
 | **«rebaja de la sanción entre un 50 % y un 70 %»** | `E-4:103` y `Subdocumento:101` | Persona 2 verificó (DC-07) que **ninguna fuente atribuye porcentaje** al Art. 49. Sigue sin corregir |
-| **Azure Key Vault** | Tres valores | **0,00 UF marginal** (P4 subdocumento antiguo y README, «absorbido en tier CSP»), **725,4 UF** (P4 definitivo), **845,4 UF** (P5, `Bitacora_A6_Persona_5:36`) |
+| **Azure Key Vault** | Un residuo, no una contradicción | **0,00 UF marginal** en el subdocumento antiguo y su README («absorbido en tier CSP»), superado por el definitivo. Las cifras **725,4 UF** (claves) y **845,4 UF** (claves + 120 UF de ingeniería) son dos alcances coherentes, y Persona 5 cita la segunda. Detalle en `Verificacion_Aritmetica_P4.md`, §6 |
 
 Una cifra porcentual sin respaldo dentro de un modelo financiero es el supuesto literal
 de la letra b) del Comunicado 9.
