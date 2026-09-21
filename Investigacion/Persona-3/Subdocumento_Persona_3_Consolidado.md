@@ -128,14 +128,14 @@ categoría.
 
 | Herramienta | Cubre Ley 21.719 con plantilla propia | Cubre ISO 27001 / 27701 / 42001 | Descubrimiento de datos | Consentimiento | Precio publicado | URL oficial consultada | Fecha consulta |
 | :--- | :---: | :---: | :---: | :---: | :---: | :--- | :---: |
-| OneTrust | No | Sí | Sí | Sí | No, solo por cotización  | https://www.onetrust.com/pricing/#accordion-b4d6a3b6f6-accordionitem_2 | [20-10-2026] |
-| Vanta | No | Sí | Parcial | No | No, solo por cotización | https://www.vanta.com/pricing | [20-10-2026] |
-| Drata | No | Sí | Parcial | No | No, solo por cotización (Demo) | https://drata.com/contact-sales | [20-10-2026] |
-| BigID | No | Sí | Sí | Parcial | No, solo por cotización (Demo) | https://home.bigid.com/demo | [20-10-2026] |
-| Microsoft Purview | No | Sí | Sí | No | Sí, por plan de licenciamiento | https://azure.microsoft.com/es-mx/pricing/details/purview/ | [20-10-2026] |
-| Securiti.ai | No | Sí | Sí | Sí | No, solo por cotización (Demo) | https://securiti.ai/request-demo/ | [20-10-2026] |
-| Osano | No | Sí | Parcial | Sí | No, solo por cotización (Demo) | https://www.osano.com/plans | [20-10-2026] |
-| Eramba | No | Sí | No | No | Sí, edición comunitaria y suscripción | https://www.eramba.org/get-started-grc | [20-10-2026] |
+| OneTrust | No | Sí | Sí | Sí | No, solo por cotización  | https://www.onetrust.com/pricing/#accordion-b4d6a3b6f6-accordionitem_2 | [20-9-2026] |
+| Vanta | No | Sí | Parcial | No | No, solo por cotización | https://www.vanta.com/pricing | [20-9-2026] |
+| Drata | No | Sí | Parcial | No | No, solo por cotización (Demo) | https://drata.com/contact-sales | [20-9-2026] |
+| BigID | No | Sí | Sí | Parcial | No, solo por cotización (Demo) | https://home.bigid.com/demo | [20-9-2026] |
+| Microsoft Purview | No | Sí | Sí | No | Sí, por plan de licenciamiento | https://azure.microsoft.com/es-mx/pricing/details/purview/ | [20-9-2026] |
+| Securiti.ai | No | Sí | Sí | Sí | No, solo por cotización (Demo) | https://securiti.ai/request-demo/ | [20-9-2026] |
+| Osano | No | Sí | Parcial | Sí | No, solo por cotización (Demo) | https://www.osano.com/plans | [20-9-2026] |
+| Eramba | No | Sí | No | No | Sí, edición comunitaria y suscripción | https://www.eramba.org/get-started-grc | [20-9-2026] |
 
 
 
