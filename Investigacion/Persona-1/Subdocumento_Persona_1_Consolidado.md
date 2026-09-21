@@ -54,7 +54,7 @@ Tercero, cada control técnico exigido por las bases queda conectado con una par
 
 1. **El cumplimiento es necesario para operar:** La investigación dejó en claro que cumplir con las leyes no es solo un trámite legal o papeleo, sino algo indispensable para que el proyecto funcione en la práctica. Si no se cuenta con bases legales claras o no se avisa a tiempo de incidentes, Curimón se arriesga a multas muy graves que pueden llegar a 20.000 UTM por datos personales o 40.000 UTM por ciberseguridad.
 2. **Solución a la desorganización de datos:** El problema de fondo en Curimón era que la información de los camiones y choferes estaba repartida en planillas Excel sin ningún orden ni seguridad. La propuesta de conectar la flota por capas y unificarla en una sola vista resuelve este desorden de raíz, asegurando que los datos viajen protegidos y que no se pierda información en las zonas sin señal.
-3. **Inversión justificada:** Gastar **8.375,4 UF netas** ($\text{VAN}_{\text{costo}} = \mathbf{6.582,3\text{ UF}}$) representa apenas el 3,9% de lo que cuesta toda la licitación. Con solo un 2,80% de probabilidad al año de recibir una fiscalización con sanción, el plan de seguridad ya se paga completamente solo, logrando un retorno sobre la inversión (RoSI) superior al $+250\%$.
+3. **Inversión justificada:** Gastar **8.375,4 UF netas** ($\text{VAN}_{\text{costo}} = \mathbf{6.559,64\text{ UF}}$) representa apenas el 3,9% de lo que cuesta toda la licitación. Con solo un 2,80% de probabilidad al año de recibir una fiscalización con sanción, el plan de seguridad ya se paga completamente solo, logrando un retorno sobre la inversión (RoSI) superior al $+250\%$.
 
 ### Recomendaciones estratégicas priorizadas
 
