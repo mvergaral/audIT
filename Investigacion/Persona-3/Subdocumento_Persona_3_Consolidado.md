@@ -3,7 +3,7 @@
 
 ## 1. Marco internacional aplicable al proyecto
 
-### 1.1 Aapertura
+### 1.1 Apertura
 
 El proyecto de Transportes Curimón S.A. se ejecuta en Chile, pero su cadena de obligaciones no termina en la
 frontera. Tres situaciones lo internacionalizan. La primera es la ruta Antofagasta a Puerto Montt con cruce a
@@ -37,7 +37,8 @@ como patrón de diseño de la regulación chilena, como ocurre con la Ley 21.719
 | Transferencia internacional | Capítulo V del RGPD, decisiones de adecuación y cláusulas tipo | Ley 21.719, arts. 27 y 28 | La Agencia aún no publica cláusulas modelo. La réplica en East US 2 y el cruce a Mendoza quedan sin instrumento estándar disponible |
 
 
-# Análisis de la asimetría normativa: 
+#### 1.4 Análisis de la asimetría normativa
+
  La falta de cláusulas del modelo chileno crea un riesgo critico a la continuidad operativa de Curimon, lo que puede resultar en plazos extendidos ya que los contratos ya firmados con el proveedor de nube y con los transportistas externos deben rehacerse,aumento de costo al tener que redactar clausulas propias y someterlas a revisión legal y problemas de arquitectura al tener plataformas internacionales y nacionales como Azure Chile Central.
  Mientras no existan cláusulas modelo nacionales, la propuesta incorpora cláusulas contractuales basadas en el capítulo V del RGPD como diseño de preferencia, declarando expresamente que se trata de un instrumento provisorio, y reserva en el presupuesto las horas de revisión legal para su reemplazo.
 
@@ -77,7 +78,7 @@ corporativos en contratos de servicios tecnológicos. Curimón atiende a 84 empr
 lo que lo hace complementario y no sustituto.
 
 
-### Justificación del aporte.
+#### Justificación del aporte
 El grupo evaluó cinco marcos adicionales y decidió incorporar dos. La Ley argentina 25.326 entra porque el Caso 10 contempla operación con cruce a Mendoza, y ninguno de los marcos de la ficha alcanza el tratamiento de datos que ocurre del lado argentino de esa ruta. Es el único marco adicional que resulta obligatorio y no voluntario para Curimón. El informe SOC 2 Type II entra por una razón distinta. Curimón atiende a 84 empresas cliente, y el aseguramiento que esos clientes exigen en contratos de servicios no es una certificación de sistema de gestión sino un informe sobre la operación efectiva de controles durante un periodo. Si el grupo se hubiera limitado a la ficha, el informe habría descrito un proyecto sin jurisdicción argentina y sin el mecanismo contractual que sus propios clientes le van a pedir.
 
 ### 2.3 Costo de certificación
@@ -128,21 +129,22 @@ categoría.
 
 | Herramienta | Cubre Ley 21.719 con plantilla propia | Cubre ISO 27001 / 27701 / 42001 | Descubrimiento de datos | Consentimiento | Precio publicado | URL oficial consultada | Fecha consulta |
 | :--- | :---: | :---: | :---: | :---: | :---: | :--- | :---: |
-| OneTrust | No | Sí | Sí | Sí | No, solo por cotización  | https://www.onetrust.com/pricing/#accordion-b4d6a3b6f6-accordionitem_2 | [20-9-2026] |
-| Vanta | No | Sí | Parcial | No | No, solo por cotización | https://www.vanta.com/pricing | [20-9-2026] |
-| Drata | No | Sí | Parcial | No | No, solo por cotización (Demo) | https://drata.com/contact-sales | [20-9-2026] |
-| BigID | No | Sí | Sí | Parcial | No, solo por cotización (Demo) | https://home.bigid.com/demo | [20-9-2026] |
-| Microsoft Purview | No | Sí | Sí | No | Sí, por plan de licenciamiento | https://azure.microsoft.com/es-mx/pricing/details/purview/ | [20-9-2026] |
-| Securiti.ai | No | Sí | Sí | Sí | No, solo por cotización (Demo) | https://securiti.ai/request-demo/ | [20-9-2026] |
-| Osano | No | Sí | Parcial | Sí | No, solo por cotización (Demo) | https://www.osano.com/plans | [20-9-2026] |
-| Eramba | No | Sí | No | No | Sí, edición comunitaria y suscripción | https://www.eramba.org/get-started-grc | [20-9-2026] |
+| OneTrust | No | Sí | Sí | Sí | No, solo por cotización  | https://www.onetrust.com/pricing/#accordion-b4d6a3b6f6-accordionitem_2 | 20-09-2026 |
+| Vanta | No | Sí | Parcial | No | No, solo por cotización | https://www.vanta.com/pricing | 20-09-2026 |
+| Drata | No | Sí | Parcial | No | No, solo por cotización (Demo) | https://drata.com/contact-sales | 20-09-2026 |
+| BigID | No | Sí | Sí | Parcial | No, solo por cotización (Demo) | https://home.bigid.com/demo | 20-09-2026 |
+| Microsoft Purview | No | Sí | Sí | No | Sí, por plan de licenciamiento | https://azure.microsoft.com/es-mx/pricing/details/purview/ | 20-09-2026 |
+| Securiti.ai | No | Sí | Sí | Sí | No, solo por cotización (Demo) | https://securiti.ai/request-demo/ | 20-09-2026 |
+| Osano | No | Sí | Parcial | Sí | No, solo por cotización (Demo) | https://www.osano.com/plans | 20-09-2026 |
+| Eramba | No | Sí | No | No | Sí, edición comunitaria y suscripción | https://www.eramba.org/get-started-grc | 20-09-2026 |
 
 
 
 ### 3.3 Criterios, ponderación y análisis
 
 
-#### 1. Criterios ponderados (los que sí distinguen)
+
+#### 3.3.1 Criterios ponderados (los que sí distinguen)
  
 | Criterio | Peso | Por qué pesa lo que pesa | De dónde sale el dato |
 | :--- | :---: | :--- | :--- |
@@ -156,7 +158,7 @@ Suma: 100 %. La ponderación es una decisión del equipo y admite revisión: si 
 pasará igualmente por cotización, el 25 % de transparencia del precio pierde poder discriminante y se traslada
 al encaje con la arquitectura, que es el criterio de mayor efecto económico en este caso.
 
-#### 2. Matriz de puntuación
+#### 3.3.2 Matriz de puntuación
  
 Escala 1 a 5. Regla de conversión: Sí = 5, Parcial o «Demo» = 3, No = 1. Precio: publicado = 5, solo
 cotización = 1 (sin matices, porque el punto 5 trata ambos casos igual: si no hay precio de lista, no hay
@@ -189,10 +191,10 @@ Formato APA 7. P3 entrega a P1 la entrada completa de cada fuente que cite, con 
 | :-: | :--- | :--- | :--- |
 | 1 | Reglamento (UE) 2016/679 (RGPD), EUR-Lex | Texto legal oficial | https://eur-lex.europa.eu/legal-content/ES/TXT/?uri=CELEX:32016R0679 enlace CELEX |
 | 2 | Directiva (UE) 2022/2555 (NIS2), EUR-Lex | Texto legal oficial | https://eur-lex.europa.eu/legal-content/ES/TXT/?uri=CELEX:32022L2555 enlace CELEX |
-| 3 | Reglamento (UE) 2024/1689 (IA), EUR-Lex | Texto legal oficial | https://eur-lex.europa.eu/legal-content/ES/TXT/?uri=CELEX:32024R1689` enlace CELEX |
+| 3 | Reglamento (UE) 2024/1689 (IA), EUR-Lex | Texto legal oficial | https://eur-lex.europa.eu/legal-content/ES/TXT/?uri=CELEX:32024R1689 enlace CELEX |
 | 4 | Reglamento (UE) 2026/1744 (Ómnibus digital sobre IA), DOUE Serie L, 24-07-2026, CELEX 32026R1744 | Texto legal oficial | https://eur-lex.europa.eu/legal-content/ES/TXT/?uri=CELEX:32026R1744 enlace CELEX |
 | 5 | Reglamento (UE) 2024/2847 (Ciberresiliencia), EUR-Lex | Texto legal oficial | https://eur-lex.europa.eu/legal-content/ES/TXT/?uri=CELEX:32024R2847 enlace CELEX |
-| 6 | ISO/IEC 27001:2022 | Norma técnica | https://www.iso.org/standard/27701 Ficha oficial en iso.org |
+| 6 | ISO/IEC 27001:2022 | Norma técnica | https://www.iso.org/standard/27001 Ficha oficial en iso.org |
 | 7 | ISO/IEC 27701:2025 | Norma técnica | https://www.iso.org/standard/27701 Ficha oficial en iso.org |
 | 8 | ISO/IEC 42001:2023 | Norma técnica | https://www.iso.org/standard/42001 Ficha oficial en iso.org |
 | 9 | NIST Cybersecurity Framework 2.0 | Marco oficial | nist.gov, DOI del NIST CSWP 29 |

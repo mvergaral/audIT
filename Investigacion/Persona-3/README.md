@@ -10,7 +10,7 @@ Caso aplicado: **Transportes Curimón S.A. (Caso 10)**. Entrega: **lunes 21-09-2
 | `Subdocumento_Persona_3_Consolidado.md` | Texto que P3 entrega a P1 para el informe. Contiene los recuadros `[HUMANO]` que P3 debe escribir a mano. |
 | `Manual_Operativo_Persona_3.md` | Cómo trabajar: reglas del punto 6.1, orden de tareas, checklist de cierre y preguntas de defensa oral. |
 | `Tabla_Vigencias_Internacionales_P3.md` | Dato congelado que P3 es dueño según la sección 3.4 del plan. Nadie más puede cambiar estas fechas. |
-| `Bitacora_Alternativas_GRC_P3.md` | Bitácora de búsqueda y descarte de herramientas y marcos. Alimenta el Anexo C del informe. |
+| `Bitacora_Alternativas_GRC_P3.md` | Bitácora de búsqueda y descarte de herramientas y marcos. Alimenta el Anexo C del informe. **PENDIENTE: el archivo aún no existe.** Exigido por el §4 de las Indicaciones («documentar la búsqueda realizada: fuentes consultadas, criterios de descarte y fecha»). |
 | `Entregables/` | Capturas de pantalla con fecha visible y PDF de fuentes oficiales descargadas. |
 
 ## Estado

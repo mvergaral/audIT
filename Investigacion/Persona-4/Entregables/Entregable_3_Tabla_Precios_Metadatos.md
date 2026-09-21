@@ -254,8 +254,8 @@ En cumplimiento de las normas de evaluación solidaria del curso, ante una event
 
 ## 7. Bibliografía y Fuentes Primarias Verificables
 
-1. **Escuela de Informática, PUCV.** (2026). *Bases Administrativas de la Licitación: Formulario E-24 (Paridades de Evaluación Económica y Financiera) y Formulario E-26 (Rango de Valores Aceptados para Perfiles Profesionales, Art. 13.5)*. Archivo local: `Proyecto/Informe/repo/texto/FEP01_26_Bases_Administrativas_TFEP_01_2026_3.md`.
-2. **Escuela de Informática, PUCV.** (2026). *Bases Técnicas del Caso 10: Transportes Curimón S.A. (Código FEP03.10)*. Archivo local: `Proyecto/Informe/repo/texto/FEP03_10_26_Caso_10_Transporte_de_Carga_Bases_Tecnicas_del_Caso.md`.
+1. **Escuela de Informática, PUCV.** (2026). *Bases Administrativas de la Licitación: Formulario E-24 (Paridades de Evaluación Económica y Financiera) y Formulario E-26 (Rango de Valores Aceptados para Perfiles Profesionales, Art. 13.5)*.
+2. **Escuela de Informática, PUCV.** (2026). *Bases Técnicas del Caso 10: Transportes Curimón S.A. (Código FEP03.10)*.
 3. **Robert Half Chile.** (2025/2026). *Guía Salarial 2025/2026: Tendencias del Mercado Laboral y Remuneraciones en Tecnología y Ciberseguridad*. Santiago de Chile. Disponible en: [https://www.roberthalf.cl/guia-salarial](https://www.roberthalf.cl/guia-salarial).
 4. **Michael Page Chile.** (2025). *Estudio de Remuneraciones Chile 2025: Sector Legal, Compliance y Riesgo Tecnológico*. Santiago de Chile. Disponible en: [https://www.michaelpage.cl/estudios-y-tendencias/estudio-de-remuneraciones](https://www.michaelpage.cl/estudios-y-tendencias/estudio-de-remuneraciones).
 5. **Colegio de Abogados de Chile A.G.** (2024/2025). *Arancel Referencial de Honorarios Profesionales para Consultoría Corporativa y Tecnologías de Información*. Santiago de Chile. Disponible en: [https://www.colegiodeabogados.cl/](https://www.colegiodeabogados.cl/).

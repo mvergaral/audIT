@@ -1,4 +1,12 @@
 # Capítulo 5: Impacto Económico, TCO y Modelo Financiero del Cumplimiento Normativo
+
+> [!CAUTION]
+> **Documento superado.** Este archivo corresponde a la línea base de **7.705,00 UF**,
+> abandonada durante la corrección E-24. La versión vigente del capítulo de Persona 4 es
+> [`Subdocumento_Persona_4_Consolidado_Definitivo.md`](Subdocumento_Persona_4_Consolidado_Definitivo.md),
+> con un TCO de **8.375,40 UF**. **No ensamblar el informe desde aquí.**
+> Se conserva únicamente como respaldo de la trazabilidad del modelo.
+
 ## Caso de Aplicación: Transportes Curimón S.A. (Caso 10) · Empresa Consultora AudIT
 
 **Autor:** Persona 4 (*Compliance Cost Modeler & Financial Impact Analyst*)  

@@ -373,8 +373,8 @@ En cumplimiento de los estándares de excelencia del curso y las directrices del
 
 ## 8. Bibliografía y Referencias de Respaldo
 
-1. **Escuela de Informática, PUCV.** (2026). *Bases Administrativas de la Licitación: Formulario E-24 (Paridades Contractuales y Evaluación Económica) y Formulario E-26 (Rango de Valores Aceptados para Perfiles Profesionales, Código FEP01.26, Arts. 9.3 y 13.5)*. Archivo: `FEP01_26_Bases_Administrativas_TFEP_01_2026_3.md`.
-2. **Escuela de Informática, PUCV.** (2026). *Bases Técnicas del Caso 10: Transportes Curimón S.A. (Código FEP03.10)*. Archivo: `FEP03_10_26_Caso_10_Transporte_de_Carga_Bases_Tecnicas_del_Caso.md`.
+1. **Escuela de Informática, PUCV.** (2026). *Bases Administrativas de la Licitación: Formulario E-24 (Paridades Contractuales y Evaluación Económica) y Formulario E-26 (Rango de Valores Aceptados para Perfiles Profesionales, Código FEP01.26, Arts. 9.3 y 13.5)*.
+2. **Escuela de Informática, PUCV.** (2026). *Bases Técnicas del Caso 10: Transportes Curimón S.A. (Código FEP03.10)*.
 3. **Biblioteca del Congreso Nacional de Chile (BCN).** (2024). *Ley N° 21.719: Regula la protección y el tratamiento de los datos personales y crea la Agencia de Protección de Datos Personales*. Diario Oficial, 13 de diciembre de 2024.
 4. **Biblioteca del Congreso Nacional de Chile (BCN).** (2024). *Ley N° 21.663: Ley Marco de Ciberseguridad e Infraestructura Crítica de la Información*. Diario Oficial, 8 de abril de 2024.
 5. **Dirección del Trabajo de Chile (DT).** (2020). *Dictamen Ord. N° 569/020: Límites al uso de dispositivos de geolocalización satelital (GPS) en el ámbito laboral y respeto a la privacidad del trabajador*. Santiago de Chile.

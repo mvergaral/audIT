@@ -196,7 +196,7 @@ Desde la perspectiva de la ingeniería financiera y gestión del riesgo operacio
 
 ## 8. Bibliografía y Referencias de Respaldo
 
-1. **Escuela de Informática, PUCV.** (2026). *Bases Administrativas de la Licitación: Formulario E-24 (Paridades Contractuales y Evaluación Económica) y Formulario E-26 (Rango de Valores Aceptados para Perfiles Profesionales, Código FEP01.26, Arts. 9.3 y 13.5)*. Archivo: `FEP01_26_Bases_Administrativas_TFEP_01_2026_3.md`.
+1. **Escuela de Informática, PUCV.** (2026). *Bases Administrativas de la Licitación: Formulario E-24 (Paridades Contractuales y Evaluación Económica) y Formulario E-26 (Rango de Valores Aceptados para Perfiles Profesionales, Código FEP01.26, Arts. 9.3 y 13.5)*.
 2. **Biblioteca del Congreso Nacional de Chile (BCN).** (2024). *Ley N° 21.719: Regula la protección y el tratamiento de los datos personales y crea la Agencia de Protección de Datos Personales*. Diario Oficial, 13 de diciembre de 2024.
 3. **Biblioteca del Congreso Nacional de Chile (BCN).** (2024). *Ley N° 21.663: Ley Marco de Ciberseguridad e Infraestructura Crítica de la Información*. Diario Oficial, 8 de abril de 2024.
 4. **Sonnenreich, W., Albanese, J., & Stout, B.** (2006). *Return on Security Investment (ROSI) - A Practical Quantitative Model*. Journal of Research and Practice in Information Technology, 38(1), 45-56.

@@ -1,0 +1,126 @@
+% =============================================================================
+%  informe-ti12.sty
+%  Macros del cuestionario de evaluación (Anexo E) — TI-12 · audIT (Empresa 10)
+%
+%  Provee:
+%    \pregunta{formato}{dificultad}{sección}{enunciado}{respuesta}{justificación}
+%    \controlCuestionario   — tabla de cuadratura contra la Sección 3 de las
+%                             Indicaciones FEP00.3.26
+%    \indiceTematico        — índice temático de las 30 preguntas
+%
+%  Formatos admitidos    : seleccion · vf · completar · corta
+%  Dificultades admitidas: basica · intermedia · avanzada
+% =============================================================================
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{informe-ti12}[2026/09/21 v1.0 Macros del cuestionario TI-12]
+
+\RequirePackage{xcolor}
+\RequirePackage{longtable}
+\RequirePackage{array}
+\RequirePackage{etoolbox}
+
+% ----------------------------------------------------------------------------
+%  Contadores
+% ----------------------------------------------------------------------------
+\newcounter{preguntaN}
+\newcounter{preguntaBasica}
+\newcounter{preguntaIntermedia}
+\newcounter{preguntaAvanzada}
+\newcounter{fmtSeleccion}
+\newcounter{fmtVF}
+\newcounter{fmtCompletar}
+\newcounter{fmtCorta}
+
+% Acumulador de filas del índice temático
+\newtoks\filasIndiceTematico
+\filasIndiceTematico={}
+\newcommand{\anadirFilaIndice}[1]{%
+  \filasIndiceTematico=\expandafter{\the\filasIndiceTematico #1}%
+}
+
+% ----------------------------------------------------------------------------
+%  Etiquetas legibles
+% ----------------------------------------------------------------------------
+\newcommand{\etiquetaFormato}[1]{%
+  \ifstrequal{#1}{seleccion}{Selección múltiple}{%
+  \ifstrequal{#1}{vf}{Verdadero o falso}{%
+  \ifstrequal{#1}{completar}{Completar}{%
+  \ifstrequal{#1}{corta}{Respuesta corta}{#1}}}}%
+}
+\newcommand{\etiquetaDificultad}[1]{%
+  \ifstrequal{#1}{basica}{Básica}{%
+  \ifstrequal{#1}{intermedia}{Intermedia}{%
+  \ifstrequal{#1}{avanzada}{Avanzada}{#1}}}%
+}
+
+% ----------------------------------------------------------------------------
+%  \pregunta{formato}{dificultad}{sección}{enunciado}{respuesta}{justificación}
+% ----------------------------------------------------------------------------
+\newcommand{\pregunta}[6]{%
+  \stepcounter{preguntaN}%
+  % contador por dificultad
+  \ifstrequal{#2}{basica}{\stepcounter{preguntaBasica}}{}%
+  \ifstrequal{#2}{intermedia}{\stepcounter{preguntaIntermedia}}{}%
+  \ifstrequal{#2}{avanzada}{\stepcounter{preguntaAvanzada}}{}%
+  % contador por formato
+  \ifstrequal{#1}{seleccion}{\stepcounter{fmtSeleccion}}{}%
+  \ifstrequal{#1}{vf}{\stepcounter{fmtVF}}{}%
+  \ifstrequal{#1}{completar}{\stepcounter{fmtCompletar}}{}%
+  \ifstrequal{#1}{corta}{\stepcounter{fmtCorta}}{}%
+  % fila del índice temático
+  \edef\numActual{\thepreguntaN}%
+  \anadirFilaIndice{\numActual & #3 & \etiquetaDificultad{#2} & \etiquetaFormato{#1} \\ \hline}%
+  % salida
+  \par\medskip\noindent
+  \textbf{P\numActual.}\quad
+  {\small\color{gray!70!black}[\etiquetaFormato{#1} · \etiquetaDificultad{#2} · #3]}\par
+  \nopagebreak\smallskip\noindent #4\par
+  \nopagebreak\smallskip\noindent\textbf{Respuesta:} #5\par
+  \nopagebreak\smallskip\noindent\textit{Justificación:} #6\par
+  \medskip
+}
+
+% ----------------------------------------------------------------------------
+%  \controlCuestionario — cuadratura contra la Sección 3 de las Indicaciones
+% ----------------------------------------------------------------------------
+\newcommand{\marcaCuadra}[2]{\ifnum#1=#2 \textbf{OK}\else \textbf{REVISAR}\fi}
+
+\newcommand{\controlCuestionario}{%
+  \par\bigskip\noindent\textbf{Control de cuadratura del cuestionario}\par\smallskip
+  \noindent\begin{tabular}{|l|c|c|c|}\hline
+  \textbf{Criterio} & \textbf{Exigido} & \textbf{Actual} & \textbf{Estado} \\ \hline
+  Total de preguntas      & 30 & \thepreguntaN          & \marcaCuadra{\value{preguntaN}}{30} \\ \hline
+  Básicas (40\%)          & 12 & \thepreguntaBasica     & \marcaCuadra{\value{preguntaBasica}}{12} \\ \hline
+  Intermedias (40\%)      & 12 & \thepreguntaIntermedia & \marcaCuadra{\value{preguntaIntermedia}}{12} \\ \hline
+  Avanzadas (20\%)        & 6  & \thepreguntaAvanzada   & \marcaCuadra{\value{preguntaAvanzada}}{6} \\ \hline
+  Selección múltiple      & 8  & \thefmtSeleccion       & \marcaCuadra{\value{fmtSeleccion}}{8} \\ \hline
+  Verdadero o falso       & 8  & \thefmtVF              & \marcaCuadra{\value{fmtVF}}{8} \\ \hline
+  Completar               & 7  & \thefmtCompletar       & \marcaCuadra{\value{fmtCompletar}}{7} \\ \hline
+  Respuesta corta         & 7  & \thefmtCorta           & \marcaCuadra{\value{fmtCorta}}{7} \\ \hline
+  \end{tabular}\par\medskip
+}
+
+% ----------------------------------------------------------------------------
+%  \indiceTematico — las 30 filas acumuladas por \pregunta
+% ----------------------------------------------------------------------------
+\newcommand{\indiceTematico}{%
+  \par\bigskip\noindent\textbf{Índice temático del cuestionario}\par\smallskip
+  \begin{longtable}{|c|p{6.2cm}|l|l|}\hline
+  \textbf{N.º} & \textbf{Sección del informe} & \textbf{Dificultad} & \textbf{Formato} \\ \hline
+  \endhead
+  \the\filasIndiceTematico
+  \end{longtable}\par\medskip
+}
+
+% ----------------------------------------------------------------------------
+%  \pendienteHumano{titulo}{altura}{nota} — marcador de sección por redactar
+%  a mano. Sólo visible en borradores: no debe quedar ninguno en la entrega.
+% ----------------------------------------------------------------------------
+\newcommand{\pendienteHumano}[3]{%
+  \par\medskip\noindent
+  \fcolorbox{red!60!black}{red!5}{%
+    \parbox{0.95\linewidth}{\small\textbf{PENDIENTE (redacción humana):} #1\par #3}%
+  }\par\medskip
+}
+
+\endinput

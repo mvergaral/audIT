@@ -1,4 +1,12 @@
 # Persona 4: Marco Normativo, TCO y Modelo Financiero
+
+> [!CAUTION]
+> **Documento superado.** Este archivo corresponde a la línea base de **7.705,00 UF**,
+> abandonada durante la corrección E-24. La versión vigente del capítulo de Persona 4 es
+> [`Subdocumento_Persona_4_Consolidado_Definitivo.md`](Subdocumento_Persona_4_Consolidado_Definitivo.md),
+> con un TCO de **8.375,40 UF**. **No ensamblar el informe desde aquí.**
+> Se conserva únicamente como respaldo de la trazabilidad del modelo.
+
 **Licitación TFEP-01/2026 · Caso 10: Transportes Curimón S.A. · Empresa Consultora AudIT**
 **Tema de Investigación:** TI-12 (Cumplimiento Normativo en Proyectos TIC)
 

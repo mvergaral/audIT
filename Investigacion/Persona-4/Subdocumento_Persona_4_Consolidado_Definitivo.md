@@ -33,7 +33,7 @@ Asimismo, este modelo adopta las siguientes **cinco decisiones de blindaje anti-
 * **Sincronización con Formulario E-25:** Anclaje estricto a hitos contractuales (**H2** Mes 4, **H3** Mes 6, **H5** Mes 12, **H7** Mes 16 y Mes 20).
 * **Bandas Salariales Formulario E-26:** Homologación explícita de perfiles (DPO $\to$ Jefe de Proyecto, CISO $\to$ Encargado Seguridad TI, Analista $\to$ QA Experto, Asesor Legal $\to$ Director de Proyecto proxy).
 * **Cotizaciones Formales:** Auditoría inicial ISO 27001 por 14 días-auditor bajo directriz IAF MD 5 ($387,5\text{ UF}$ inicial + $337,5\text{ UF}$ vigilancia) y póliza Cyber Insurance Chubb ($90,0\text{ UF/año}$).
-* **Racionalidad Financiera:** Demostración cuantitativa bajo el modelo Gordon-Loeb ($\le 37\%$ de la pérdida esperada), $\text{RoSI} = 459,68\%$ y probabilidad de indiferencia $p^* = 3,05\%$ anual.
+* **Racionalidad Financiera:** Demostración cuantitativa bajo el modelo Gordon-Loeb ($\le 37\%$ de la pérdida esperada), $\text{RoSI} = 458,18\%$ y probabilidad de indiferencia $p^* = 3,05\%$ anual.
 
 ---
 
@@ -90,7 +90,7 @@ El presupuesto del programa de cumplimiento para los **56 meses** contractuales 
 
 *Fuente:* Elaboración propia basada en parámetros E-24/E-26, cotizaciones BSI Group, Chubb Seguros, CISO Assistant e informes de precios de Azure. Precios verificados al 16/09/2026.
 
-El presupuesto maestro suma **8.375,4 UF netas** ($335,0\text{ millones de CLP}$ o $\text{USD } 372.240$). Aplicando la tasa contractual del $0,9\%$ mensual del Formulario E-24 ($11,351\%\text{ anual}$), el **Valor Actual Neto del costo es $\text{VAN}_{\text{costo}} = \mathbf{6.582,3\text{ UF}}$**. En los primeros 20 meses (fase de implementación previa a la explotación comercial) se concentra una inversión de $3.209,0\text{ UF}$ ($38,3\%$), estabilizándose en la fase operativa en un gasto promedio de $144,8\text{ UF/mes}$.
+El presupuesto maestro suma **8.375,4 UF netas** ($335,0\text{ millones de CLP}$ o $\text{USD } 372.240$). Aplicando la tasa contractual del $0,9\%$ mensual del Formulario E-24 ($11,351\%\text{ anual}$), el **Valor Actual Neto del costo es $\text{VAN}_{\text{costo}} = \mathbf{6.559,64\text{ UF}}$**. En los primeros 20 meses (fase de implementación previa a la explotación comercial) se concentra una inversión de $3.209,0\text{ UF}$ ($38,3\%$), estabilizándose en la fase operativa en un gasto promedio de $144,8\text{ UF/mes}$.
 
 #### Puente de Conciliación Presupuestaria y Proporcionalidad en Licitación
 El TCO total de **8.375,4 UF** concilia de manera exacta:
@@ -112,11 +112,11 @@ Para contrastar el impacto operacional directo sobre el baseline optimizado de g
 
 | Escenario de Sensibilidad | DPO Retainer ($V_1$) | Plataforma SaaS GRC ($V_2$) | TCO Final (UF) | TCO Final (CLP) | Variación vs Base |
 | :--- | :---: | :---: | :---: | :---: | :---: |
-| **Escenario Optimista (-20% / -25%)** | 1.612,80 UF (DPO 1,60 UF/h) | 210,00 UF (GRC con desc. multianual) | **7.231,80 UF** | $289.272.000 CLP | **$-6,14\%$** ($-473,20$ UF) |
-| **Escenario Base (Línea Central)** | **2.016,00 UF (DPO 2,00 UF/h)** | **280,00 UF (CISO Assistant Pro)** | **7.705,00 UF** | **$308.200.000 CLP** | **Baseline (0,00%)** |
-| **Escenario Pesimista (+20% / +25%)** | 2.419,20 UF (DPO 2,40 UF/h) | 350,00 UF (GRC con módulos extra) | **8.178,20 UF** | $327.128.000 CLP | **$+6,14\%$** ($+473,20$ UF) |
+| **Escenario Optimista (-20% / -25%)** | 1.612,80 UF (DPO 1,60 UF/h) | 210,00 UF (GRC con desc. multianual) | **7.902,20 UF** | $316.088.000 CLP | **$-5,65\%$** ($-473,20$ UF) |
+| **Escenario Base (Línea Central)** | **2.016,00 UF (DPO 2,00 UF/h)** | **280,00 UF (CISO Assistant Pro)** | **8.375,40 UF** | **$335.016.000 CLP** | **Baseline (0,00%)** |
+| **Escenario Pesimista (+20% / +25%)** | 2.419,20 UF (DPO 2,40 UF/h) | 350,00 UF (GRC con módulos extra) | **8.848,60 UF** | $353.944.000 CLP | **$+5,65\%$** ($+473,20$ UF) |
 
-Asimismo, la modelación de los cuadrantes asimétricos cruzados confirma la alta resiliencia y capacidad de absorción del modelo presupuestario: el **Escenario Asimétrico A** (DPO $+20\%$ / GRC $-25\%$) arroja un TCO de **8.038,20 UF** ($+4,32\%$), mientras que el **Escenario Asimétrico B** (DPO $-20\%$ / GRC $+25\%$) sitúa el TCO en **7.371,80 UF** ($-4,32\%$). Esto demuestra que las variaciones inversas entre capital humano y licenciamiento tecnológico se amortiguan mutuamente dentro de una banda estrecha de $\pm 6,14\%$, blindando la viabilidad económica del contrato frente a desviaciones operacionales.
+Asimismo, la modelación de los cuadrantes asimétricos cruzados confirma la alta resiliencia y capacidad de absorción del modelo presupuestario: el **Escenario Asimétrico A** (DPO $+20\%$ / GRC $-25\%$) arroja un TCO de **8.708,60 UF** ($+3,98\%$), mientras que el **Escenario Asimétrico B** (DPO $-20\%$ / GRC $+25\%$) sitúa el TCO en **8.042,20 UF** ($-3,98\%$). Esto demuestra que las variaciones inversas entre capital humano y licenciamiento tecnológico se amortiguan mutuamente dentro de una banda estrecha de $\pm 5,65\%$, blindando la viabilidad económica del contrato frente a desviaciones operacionales.
 
 ---
 
@@ -128,7 +128,7 @@ $$\text{Presupuesto Óptimo} \le 0,37 \times \text{Pérdida Esperada} = 0,37 \ti
 El costo total del programa AudIT ($8.375,4\text{ UF}$) representa solo el **$15,2\%$ de la exposición patrimonial**, situándose holgadamente bajo la cota de sobreinversión.
 
 Evaluando el Retorno sobre la Inversión en Seguridad ($\text{RoSI}$):
-$$\text{RoSI} = \frac{(\text{Exposición Punitiva} \times \text{Eficacia Mitigación}) - \text{TCO}}{\text{TCO}} \times 100\% = \frac{(55.000\text{ UF} \times 0,85) - 8.375,4\text{ UF}}{8.375,4\text{ UF}} \times 100\% = \mathbf{459,68\%}$$
+$$\text{RoSI} = \frac{(\text{Exposición Punitiva} \times \text{Eficacia Mitigación}) - \text{TCO}}{\text{TCO}} \times 100\% = \frac{(55.000\text{ UF} \times 0,85) - 8.375,4\text{ UF}}{8.375,4\text{ UF}} \times 100\% = \mathbf{458,18\%}$$
 El **umbral de probabilidad de indiferencia** es:
 $$p^* = \frac{\text{TCO}}{\text{Exposición Punitiva}} = \frac{8.375,4\text{ UF}}{55.000,0\text{ UF}} = \mathbf{15,23\%\text{ en 56 meses}} \implies \mathbf{3,05\%\text{ anual}}$$
 Basta con que la probabilidad anual de sufrir un incidente sancionable supere el **$3,05\%$** para que el programa de cumplimiento genere un beneficio económico neto directo para Transportes Curimón S.A., blindando el flujo de caja del consorcio adjudicatario.

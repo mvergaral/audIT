@@ -407,10 +407,10 @@ Conforme al Comunicado 9, el docente puede pedirle a Persona 4 (o a cualquier in
 Persona 4 debe respaldar sus números con los siguientes documentos oficiales:
 
 1. **Bases Administrativas del Curso (FEP01.26):**
-   * Archivo local: `Proyecto/Informe/repo/texto/FEP01_26_Bases_Administrativas_TFEP_01_2026_3.md`
+   *.
    * Sección clave: Art. 13.5 y tabla del Formulario E-26 (L2458–L2488).
 2. **Bases Técnicas del Caso 10 — Transportes Curimón S.A.:**
-   * Archivo local: `Proyecto/Informe/repo/texto/FEP03_10_26_Caso_10_Transporte_de_Carga_Bases_Tecnicas_del_Caso.md`
+   *.
    * Secciones clave: Volumetría (L29, L131, L164), Marco normativo Ley 21.719 (L718), Cifrado mandatorio RT-11.10 (L882), Retención histórica RT-05.10 (L869).
 3. **Biblioteca del Congreso Nacional (BCN) — Textos Legales:**
    * Ley N° 21.719 (Protección de Datos Personales): [bcn.cl/leychile](https://www.bcn.cl/leychile)
