@@ -19,8 +19,9 @@ Los cuatro análisis de arquitectura, privacidad y gobernanza que sustentan el s
 
 ---
 
-## 3. Guías Operativas y de Blindaje Anti-Comunicado 9
-* **[Guia_Auditoria_Humana_Defensa_Oral_Martin.md](Guia_Auditoria_Humana_Defensa_Oral_Martin.md)**: Balotario de las 5 preguntas críticas de examen oral que el docente puede realizar a Martín, respuestas auditadas basadas en las leyes y bases, y pauta para completar el Formulario A-6 (declaración de IA Nivel 2).
+## 3. Guías Operativas y Declaración Oficial A-6
+* **[Bitacora_A6_Persona_5_Declaracion_Oficial.md](Bitacora_A6_Persona_5_Declaracion_Oficial.md)**: Formulario oficial A-6 de declaración de uso de IA bajo Nivel 3 oficial, amparado en las Secciones 6.1 a 6.4 de las Indicaciones del Curso.
+* **[Bitacora_IA_A6_Persona_5.md](Bitacora_IA_A6_Persona_5.md)**: Registro exhaustivo de interacciones con IA, transcripción de prompts y control humano crítico.
 * **[Directrices_Validacion_Cruzada_P4.md](Directrices_Validacion_Cruzada_P4.md)**: Acta de verificación de calce biunívoco 1:1 entre los componentes de arquitectura diseñados por Persona 5 y el presupuesto TCO de Persona 4. Cero componentes huérfanos y cero gastos no justificados.
 
 ---
