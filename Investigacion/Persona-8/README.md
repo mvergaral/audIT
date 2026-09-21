@@ -13,6 +13,7 @@ comprometería la credibilidad de toda la declaración.
 | Archivo | Qué es | Estado |
 | :--- | :--- | :---: |
 | [`Auditoria_C9_Preentrega.md`](Auditoria_C9_Preentrega.md) | Barrido de los seis capítulos contra los cuatro indicios del Comunicado 9. 12 hallazgos con archivo y línea | Cerrado |
+| [`Fact_Checking_Referencias.md`](Fact_Checking_Referencias.md) | Inventario de las 92 URL y de las referencias bibliográficas del corpus, clasificadas por prioridad de verificación. Incluye seis referencias de Persona 4 con forma de fuente no verificada | **Por verificar** |
 | [`Verificacion_Vigencia_Normativa.md`](Verificacion_Vigencia_Normativa.md) | Entregable exigido por nombre en la ficha TI-12: 38 filas de norma, estado, fuente oficial y fecha de consulta | **En blanco, por llenar a mano** |
 | [`Formulario_A6_Consolidado.md`](Formulario_A6_Consolidado.md) | Anexo de declaración de IA de los ocho integrantes | 3 de 8 recibidas |
 
