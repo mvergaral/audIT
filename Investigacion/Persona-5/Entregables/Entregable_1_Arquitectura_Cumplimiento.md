@@ -60,7 +60,7 @@ flowchart TB
     end
 
     subgraph AUTORIDADES["5. Canales Perentorios de Notificación de Incidentes"]
-        CSIRT["CSIRT Nacional (Ley 21.663 Art. 14)<br>• Alerta temprana: <= 3 horas<br>• Actualización técnica: 72 horas<br>• Informe forense conclusivo: 15 días"]
+        CSIRT["CSIRT Nacional (Ley 21.663 Art. 9 y D.S. 295/2024)<br>• Alerta temprana: <= 3 horas<br>• Actualización técnica: 72 horas<br>• Informe forense conclusivo: 15 días"]
         APDP["Agencia Protección de Datos (Art. 14 sexies)<br>• Notificación sin dilación indebida<br>• Comunicación a titulares afectados"]
         CUR_NOTIF["Transportes Curimón S.A. (Mandante)<br>• Falla crítica operacional: <= 2 h (RT-11.18)<br>• Brecha de seguridad/datos: <= 24 h (RT-11.19)"]
     end
@@ -96,11 +96,11 @@ flowchart TB
 Conforme a la exigencia **RT-11.10 de las Bases Técnicas Transversales**, la plataforma rechaza el cifrado genérico de disco completo (*Transparent Data Encryption* - TDE) por considerarlo insuficiente para aislar accesos internos indebidos. En su lugar se implementa **Cifrado a Nivel de Campo (Field-Level Encryption - FLE)**:
 * **Mecanismo:** Las columnas sensibles (`rut_conductor`, `nombre`, `coordenadas_gps`, `tarifa_pactada`) se cifran en el cliente de aplicación antes de enviarse al motor de base de datos PostgreSQL 16 mediante el algoritmo simétrico **AES-256-GCM**.
 * **Gestión de Llaves en Nube (Azure Key Vault Managed HSM):** Las llaves maestras de cifrado de llaves (KEK) residen en módulos HSM dedicados con certificación **FIPS 140-2 Nivel 3** desplegados en la región Azure Chile Central. Ninguna llave privada reside en memoria de disco sin cifrar.
-* **Borrado Criptográfico por Titular (Art. 8 ter Ley 19.628 reformada):** Cada uno de los 454 conductores y 148 transportistas dispone de una llave criptográfica única de derivación. Cuando un titular ejerce su derecho de supresión/cancelación y la ley laboral exige conservar los registros históricos por 5 años (pero impidiendo su reidentificación), el sistema destruye la llave en el HSM, convirtiendo los datos personales almacenados en texto cifrado irrecuperable (pseudoanonimización irreversible).
+* **Borrado Criptográfico por Titular (Arts. 7 y 8 ter Ley N.º 19.628 reformada por Ley 21.719):** Cada uno de los 454 conductores y 148 transportistas dispone de una llave criptográfica única de derivación. Cuando un titular ejerce su derecho de supresión/cancelación (Art. 7) o bloqueo temporal (Art. 8 ter) y la ley laboral exige conservar los registros históricos por 5 años (pero impidiendo su reidentificación), el sistema destruye la llave en el HSM, convirtiendo los datos personales almacenados en texto cifrado irrecuperable (pseudoanonimización irreversible).
 
 ### 3.3 Protocolos de Notificación de Incidentes en Tres Canales
 El sistema integra una máquina de estados para la gestión de ciberincidentes y filtraciones, sincronizada con el rol de CISO (Formulario E-26):
-1. **Canal CSIRT Nacional (Ley 21.663, Art. 14 y D.S. 295):**
+1. **Canal CSIRT Nacional (Ley 21.663, Art. 9 y D.S. N.º 295/2024):**
    * *Alerta Preliminar ($\le 3$ horas):* Notificación perentoria de incidentes significativos con impacto operacional o compromiso de confidencialidad.
    * *Informe de Estado (72 horas):* Evaluación de alcance, mitigaciones aplicadas e indicadores de compromiso (IoC).
    * *Informe Conclusivo (15 días corridos):* Análisis forense de causa raíz y plan de cierre remediado.

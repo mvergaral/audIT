@@ -60,7 +60,7 @@ En estricto cumplimiento de las Bases Administrativas (`FEP01.26`, Art. 13.5) y 
 
 1. **Encargado de Seguridad TI (CISO Fraccional):**
    * *Código E-26:* Línea 2479 (tarifa 1,5 a 2,5 UF/h; modelado a **2,00 UF/h**).
-   * *Responsabilidad Contractual:* Liderazgo del Sistema de Gestión de Seguridad de la Información (SGSI), operación de la mesa de ciberseguridad 24/7 y ejecución material de la notificación perentoria al CSIRT Nacional en **menos de 3 horas** (Ley N.º 21.663, Art. 14).
+   * *Responsabilidad Contractual:* Liderazgo del Sistema de Gestión de Seguridad de la Información (SGSI), operación de la mesa de ciberseguridad 24/7 y ejecución material de la notificación perentoria al CSIRT Nacional en **menos de 3 horas** (Ley N.º 21.663, Art. 9 y D.S. N.º 295/2024).
 2. **Delegado de Protección de Datos (DPO Fraccional):**
    * *Código E-26:* Línea 2467 (Proxy "Jefe de Proyecto", tarifa 1,5 a 3,0 UF/h; modelado a **2,00 UF/h**).
    * *Responsabilidad Contractual:* Supervisión autónoma del RAT, dictamen de la EIPD, resolución de solicitudes ARCO de conductores y clientes, e interlocución directa con la Agencia de Protección de Datos (Ley N.º 21.719, Art. 48).

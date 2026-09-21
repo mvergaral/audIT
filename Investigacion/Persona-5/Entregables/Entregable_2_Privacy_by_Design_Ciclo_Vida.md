@@ -9,7 +9,7 @@
 
 ## 1. Principio Rector: Privacidad por Arquitectura (PbD)
 
-En cumplimiento de los **Artículos 3.º sexies y 14 bis de la Ley N.º 21.719**, la plataforma no concibe la seguridad como una capa administrativa superficial posterior, sino como un principio de ingeniería integrado desde la fase de concepción de software (*Privacy by Design and by Default*). Conforme a Spiekermann & Cranor (2009), se aplica el enfoque de **privacidad por arquitectura**, minimizando la identificabilidad de los sujetos en reposo y en tránsito.
+En cumplimiento del **principio de seguridad (Art. 3° letra f) y el deber de medidas de seguridad del Art. 14 quinquies de la Ley N.º 21.719**, la plataforma no concibe la seguridad como una capa administrativa superficial posterior, sino como un principio de ingeniería integrado desde la fase de concepción de software (*Privacy by Design and by Default*). Conforme a Spiekermann & Cranor (2009), se aplica el enfoque de **privacidad por arquitectura**, minimizando la identificabilidad de los sujetos en reposo y en tránsito.
 
 ---
 
