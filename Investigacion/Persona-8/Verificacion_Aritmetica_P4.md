@@ -178,3 +178,26 @@ pasada final de consistencia.
 ---
 
 **Firma del verificador:** ______________________  **Fecha:** ____________
+
+---
+
+## Anexo · Estado tras la aplicación de los hallazgos (21-09-2026)
+
+| Hallazgo | Estado |
+| :--- | :--- |
+| **A-01** Tramo 3 cobrado como 12 meses | **Aplicado.** Key Vault 725,4 → 787,16 UF · Chubb 390,0 → 420,0 UF · GRC 255,0 → 280,0 UF. TCO 8.375,40 → **8.492,16 UF** ($339.686.400 CLP · USD 377.429) |
+| **A-02** El script no reproducía el VAN | **Aplicado.** Actualizadas las tres tarifas en `modelo_costos.py`; el script vuelve a reproducir el TCO al centavo y entrega **VAN = 6.651,24 UF**, que es la cifra que ahora figura en el texto |
+| **A-03** RoSI 459,68 % | **Aplicado.** Recalculado sobre la base vigente: **450,51 %** |
+| **A-04** Base de 215.000 UF sin fuente | **Abierto.** La proporción se actualizó a 3,95 %, pero el denominador sigue sin respaldo |
+
+Indicadores recalculados sobre 8.492,16 UF: puente de conciliación 4.855,16 + 3.637,0;
+$p^* = 15,44\,\%$; alternativa Managed HSM 10.385,6 UF; matriz de sensibilidad del §4.2
+reanclada en 8.018,96 / 8.492,16 / 8.965,36 UF con banda de ±5,57 % y cuadrantes asimétricos
+en ±3,92 %.
+
+La tabla de flujo vuelve a cuadrar en las tres direcciones: las diez filas suman 8.492,16 UF,
+las cinco columnas suman 8.492,16 UF y ambos caminos coinciden.
+
+**Propagación:** la cifra se actualizó en Persona 1 (subdocumento, Entregables 3 y 4 y guía
+de defensa), Persona 6 (banco avanzado, subdocumento y `.tex`) y el manual operativo de
+Persona 4.

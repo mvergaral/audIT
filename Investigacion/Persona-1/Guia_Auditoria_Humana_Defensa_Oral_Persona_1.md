@@ -18,7 +18,7 @@ Porque la ficha exige una matriz aplicable al caso del curso y su vínculo con l
 ### ¿Cuál es el aporte propio del grupo?
 
 **Respuesta personal:**
-El aporte propio fue bajar las leyes al caso real de Curimón. No solo dijimos qué normas aplicaban: propusimos conectividad por capas, descartamos satélite permanente por costo, agregamos Ley argentina 25.326 por Mendoza, revisamos SOC 2 para clientes y conectamos todo con el TCO de 8.375,4 UF.
+El aporte propio fue bajar las leyes al caso real de Curimón. No solo dijimos qué normas aplicaban: propusimos conectividad por capas, descartamos satélite permanente por costo, agregamos Ley argentina 25.326 por Mendoza, revisamos SOC 2 para clientes y conectamos todo con el TCO de 8.492,16 UF.
 
 ### ¿Cómo evitaron contradicciones entre capítulos?
 

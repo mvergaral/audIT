@@ -12,7 +12,7 @@ Las conclusiones y recomendaciones deben ser de autoría humana. Este entregable
 | Ley 21.663 | Obliga a reportar incidentes al CSIRT Nacional en $\le 3\text{ h}$ bajo D.S. 295/2024. | La operación debe tener alertas y responsables definidos; no basta con reaccionar manualmente después del incidente. |
 | Marco internacional | El cruce a Mendoza activa la Ley argentina 25.326 y la réplica East US 2 exige cláusulas contractuales preventivas. | La solución debe funcionar legalmente en Chile y también cuando los datos cruzan frontera o se respaldan fuera del país. |
 | Herramientas GRC | CISO Assistant Pro y Purview permiten gestionar RAT, evidencias y seguimiento de cumplimiento. | La herramienta elegida debe ser defendible por costo y utilidad, no solo por reputación de mercado. |
-| Impacto económico | El cumplimiento cuesta 8.375,4 UF netas, equivalente al 3,9% del contrato, con RoSI mayor a +250%. | El costo es alto, pero es proporcional frente al tamaño de la licitación y al riesgo de multas. |
+| Impacto económico | El cumplimiento cuesta 8.492,16 UF netas, equivalente al 3,9% del contrato, con RoSI mayor a +250%. | El costo es alto, pero es proporcional frente al tamaño de la licitación y al riesgo de multas. |
 | Arquitectura | La solución usa Azure Chile Central, réplica East US 2, cifrado RT-11.10, 686 claves HSM y conectividad por capas. | La arquitectura resuelve el problema operacional sin pagar satélite masivo en toda la flota. |
 
 ## Estructura de conclusión
@@ -37,7 +37,7 @@ Si una oración no puede clasificarse o no tiene antecedente, debe eliminarse.
 
 1. **El cumplimiento es necesario para operar:** La investigación dejó en claro que cumplir con las leyes no es solo un trámite legal o papeleo, sino algo indispensable para que el proyecto funcione en la práctica. Si no se cuenta con bases legales claras o no se avisa a tiempo de incidentes, Curimón se arriesga a multas muy graves que pueden llegar a 20.000 UTM por datos personales o 40.000 UTM por ciberseguridad.
 2. **Solución a la desorganización de datos:** El problema de fondo en Curimón era que la información de los camiones y choferes estaba repartida en planillas Excel sin ningún orden ni seguridad. La propuesta de conectar la flota por capas y unificarla en una sola vista resuelve este desorden de raíz, asegurando que los datos viajen protegidos y que no se pierda información en las zonas sin señal.
-3. **Inversión justificada:** Gastar **8.375,4 UF netas** ($\text{VAN}_{\text{costo}} = \mathbf{6.559,64\text{ UF}}$) representa apenas el 3,9% de lo que cuesta toda la licitación. Con solo un 2,80% de probabilidad al año de recibir una fiscalización con sanción, el plan de seguridad ya se paga completamente solo, logrando un retorno sobre la inversión (RoSI) superior al $+250\%$.
+3. **Inversión justificada:** Gastar **8.492,16 UF netas** ($\text{VAN}_{\text{costo}} = \mathbf{6.651,24\text{ UF}}$) representa apenas el 3,9% de lo que cuesta toda la licitación. Con solo un 2,80% de probabilidad al año de recibir una fiscalización con sanción, el plan de seguridad ya se paga completamente solo, logrando un retorno sobre la inversión (RoSI) superior al $+250\%$.
 
 ## Recomendaciones - redacción manual
 

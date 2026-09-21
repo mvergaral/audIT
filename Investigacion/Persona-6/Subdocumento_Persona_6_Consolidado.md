@@ -198,7 +198,7 @@ El presente subdocumento formaliza el cuestionario de **30 preguntas de autoría
 * **Justificación técnica:** La US CLOUD Act obliga a matrices estadounidenses a entregar datos bajo su custodia sin importar su ubicación física en el mundo. La única mitigación técnica real es que el cliente retenga el control absoluto de las llaves en un HSM (Bring/Hold Your Own Key): si Microsoft es compelido legalmente a entregar los datos, solo podrá suministrar bloques de texto cifrado matemáticamente ininteligibles.
 
 #### Pregunta 26 (Verdadero o Falso · Avanzada · Sección: 3.3 Impacto económico)
-* **Enunciado:** En el modelo TCO a 56 meses formulado para el cumplimiento normativo de Curimón (8.375,4 UF), la partida presupuestaria que introduce la mayor variabilidad y riesgo financiero es el costo de adquisición de licencias de software y servidores en la nube.
+* **Enunciado:** En el modelo TCO a 56 meses formulado para el cumplimiento normativo de Curimón (8.492,16 UF), la partida presupuestaria que introduce la mayor variabilidad y riesgo financiero es el costo de adquisición de licencias de software y servidores en la nube.
 * **Respuesta:** Falso.
 * **Justificación técnica:** Las suscripciones de software GRC y el consumo cloud representan una fracción menor y predecible ($<30\%$). Más del 70% del TCO proviene de las horas profesionales de perfiles expertos de alta renta (CISO a 2,0 UF/h, DPO y Asesor Legal externo bajo los aranceles del Formulario E-26), donde cualquier retraso en auditorías o fiscalizaciones impacta severamente el presupuesto.
 

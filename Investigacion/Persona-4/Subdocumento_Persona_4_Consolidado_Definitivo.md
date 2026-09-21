@@ -33,7 +33,7 @@ Asimismo, este modelo adopta las siguientes **cinco decisiones de blindaje anti-
 * **Sincronización con Formulario E-25:** Anclaje estricto a hitos contractuales (**H2** Mes 4, **H3** Mes 6, **H5** Mes 12, **H7** Mes 16 y Mes 20).
 * **Bandas Salariales Formulario E-26:** Homologación explícita de perfiles (DPO $\to$ Jefe de Proyecto, CISO $\to$ Encargado Seguridad TI, Analista $\to$ QA Experto, Asesor Legal $\to$ Director de Proyecto proxy).
 * **Cotizaciones Formales:** Auditoría inicial ISO 27001 por 14 días-auditor bajo directriz IAF MD 5 ($387,5\text{ UF}$ inicial + $337,5\text{ UF}$ vigilancia) y póliza Cyber Insurance Chubb ($90,0\text{ UF/año}$).
-* **Racionalidad Financiera:** Demostración cuantitativa bajo el modelo Gordon-Loeb ($\le 37\%$ de la pérdida esperada), $\text{RoSI} = 458,18\%$ y probabilidad de indiferencia $p^* = 3,05\%$ anual.
+* **Racionalidad Financiera:** Demostración cuantitativa bajo el modelo Gordon-Loeb ($\le 37\%$ de la pérdida esperada), $\text{RoSI} = 450,51\%$ y probabilidad de indiferencia $p^* = 3,05\%$ anual.
 
 ---
 
@@ -51,18 +51,18 @@ La Tabla 3.1 traduce los mandatos de la Ley 21.719 (Protección de Datos Persona
 | **2** | **Evaluación de impacto EIPD** (Ley 21.719 art. 15 ter) | EIPD integral de telemetría GPS continua, bloqueo de despacho y modelo de fatiga | DPO, CISO y Asesor Legal | Antes de H5 (Mes 12) | Roles y Asesoría Legal | **80,0 UF** |
 | **3** | **Decisiones automatizadas** (Ley 21.719 art. 8 bis) | Procedimiento de explicabilidad algorítmica y revisión humana para bloqueo de despacho | DPO y Operaciones Curimón | Antes de H7 (Mes 16) | Roles Operativos | *Absorbido en DPO* |
 | **4** | **Tratamiento de datos sensibles** (Ley 21.719 arts. 2 g y 16) | Consentimiento expreso para biometría en cabina y alternativa no biométrica por credencial | DPO | Hito H2 (Mes 4) | Roles (Diseño App) | *Absorbido en App* |
-| **5** | **Seguridad y cifrado** (Ley 21.719 art. 14 quinquies; RT-11.10) | Cifrado a nivel de campo en Azure Chile Central, 686 claves RSA Key Vault y borrado criptográfico | CISO y Arq. Cloud | Desde H3 (Mes 6) | Criptografía / Cloud | **845,4 UF** *(120 UF ing. + 725,4 UF claves)* |
+| **5** | **Seguridad y cifrado** (Ley 21.719 art. 14 quinquies; RT-11.10) | Cifrado a nivel de campo en Azure Chile Central, 686 claves RSA Key Vault y borrado criptográfico | CISO y Arq. Cloud | Desde H3 (Mes 6) | Criptografía / Cloud | **907,16 UF** *(120 UF ing. + 787,16 UF claves)* |
 | **6** | **Contratos de encargo** (Ley 21.719 art. 15 bis) | Redacción y firma de 148 contratos DPA marco y anexos de chofer-dueño con transportistas | Asesor Legal TIC | Hito H2 a H3 (Meses 4-6) | Asesoría Legal Externa | **95,0 UF** |
 | **7** | **Transferencia internacional** (Ley 21.719 arts. 27-28; RT-05.23) | Cláusulas Contractuales Tipo (SCC) para réplica en East US 2 y ~1.900 cruces a Mendoza | Asesor Legal y DPO | Previo a H5 (Mes 12) | Asesoría Legal Externa | **35,0 UF** |
 | **8** | **Derechos de los titulares** (Ley 21.719 arts. 8-11) | Módulo y canal de atención de derechos ARCO con respuesta perentoria en $\le 30$ días | DPO y Soporte QA | Meses 21 a 56 (Régimen) | Roles y Soporte QA | *Absorbido en DPO/QA* |
 | **9** | **Vulneraciones de seguridad** (Ley 21.719 art. 14 sexies) | Protocolo de notificación a la Agencia PDP y a titulares sensibles sin dilaciones indebidas | CISO y DPO | Operación continua | Roles (Guardia 24/7) | *Absorbido en CISO* |
 | **10** | **Reporte de incidentes CSIRT** (Ley 21.663 art. 9; D.S. 295) | Alerta temprana al CSIRT en $<3\text{ h}$, actualización en $72\text{ h}$ e informe pericial en $15\text{ d}$ | CISO | Hito H7 (Mes 16 a 56) | Roles (Guardia CISO) | **2.688,0 UF** *(Guardia pasiva)* |
-| **11** | **SGSI y medidas permanentes** (Ley 21.663 art. 7; RT-11.05) | Implementación de controles ISO 27001 trazables en SaaS GRC CISO Assistant Pro | CISO y Analista QA | Desde H2 (Mes 4) | Plataforma GRC y Certif. | **980,0 UF** *(255 GRC + 725 Certif)* |
+| **11** | **SGSI y medidas permanentes** (Ley 21.663 art. 7; RT-11.05) | Implementación de controles ISO 27001 trazables en SaaS GRC CISO Assistant Pro | CISO y Analista QA | Desde H2 (Mes 4) | Plataforma GRC y Certif. | **1.005,0 UF** *(280 GRC + 725 Certif)* |
 | **12** | **Avisos contractuales a clientes** (Bases RT-11.18 y RT-11.19) | Notificación a 84 clientes: incidentes críticos en $<2\text{ h}$ y brechas de datos en $<24\text{ h}$ | CISO | Hito H7 a Mes 56 | Roles (Guardia CISO) | *Absorbido en CISO* |
 | **13** | **Control de jornada conductores propios** (Dirección del Trabajo Ord. 569) | Disociación y desconexión de geolocalización GPS fuera de jornada para 196 choferes | DPO y RRHH Curimón | Hito H7 (Mes 16) | Roles Operativos | *Absorbido en DPO* |
 | — | **Gobernanza general y prevención** (Art. 48 DPO y Art. 49 Modelo de Prevención) | Dirección autónoma de protección de datos y 4 auditorías anuales del modelo de prevención | DPO y QA Experto | Continuo 56 meses | Roles y Gobernanza | **2.326,0 UF** *(2.016 DPO + 310 Art. 49)* |
-| — | **Soporte operativo transversal y cyber risk** | Soporte técnico continuo de QA/Legal y póliza de transferencia de riesgo (Chubb) | QA, Legal y Broker | Continuo 56 meses | Soporte y Seguro | **1.281,0 UF** *(891 Soporte + 390 Póliza)* |
-| **TOTAL** | **Presupuesto Consolidado de Cumplimiento** | **Cobertura 100% de exigencias técnico-legales** | **Equipo AudIT** | **56 Meses** | **TCO Integral** | **8.375,4 UF** ($335.016.000 CLP) |
+| — | **Soporte operativo transversal y cyber risk** | Soporte técnico continuo de QA/Legal y póliza de transferencia de riesgo (Chubb) | QA, Legal y Broker | Continuo 56 meses | Soporte y Seguro | **1.311,0 UF** *(891 Soporte + 420 Póliza)* |
+| **TOTAL** | **Presupuesto Consolidado de Cumplimiento** | **Cobertura 100% de exigencias técnico-legales** | **Equipo AudIT** | **56 Meses** | **TCO Integral** | **8.492,16 UF** ($339.686.400 CLP) |
 
 *Fuente:* Elaboración propia basada en las Bases Técnicas del Caso 10, Bases Administrativas y leyes 21.719 y 21.663.
 
@@ -81,23 +81,23 @@ El presupuesto del programa de cumplimiento para los **56 meses** contractuales 
 | **OPEX: Delegado de Protección de Datos (DPO E-26)** | 432,0 UF | 288,0 UF | 576,0 UF | 432,0 UF | 288,0 UF | **2.016,0 UF** | $80.640.000 |
 | **OPEX: Oficial de Seguridad 24/7 (CISO E-26)** | 576,0 UF | 384,0 UF | 768,0 UF | 576,0 UF | 384,0 UF | **2.688,0 UF** | $107.520.000 |
 | **OPEX: Soporte Operativo QA y Legal (E-26)** | 27,0 UF | 178,0 UF | 280,0 UF | 240,0 UF | 166,0 UF | **891,0 UF** | $35.640.000 |
-| **OPEX: Suscripción SaaS CISO Assistant Pro Cloud** | 55,0 UF | 40,0 UF | 60,0 UF | 60,0 UF | 40,0 UF | **255,0 UF** | $10.200.000 |
-| **OPEX: Cifrado Azure Key Vault (686 claves RT-11.10)** | 108,0 UF | 123,5 UF | 185,2 UF | 185,2 UF | 123,5 UF | **725,4 UF** | $29.016.000 |
+| **OPEX: Suscripción SaaS CISO Assistant Pro Cloud** | 60,0 UF | 40,0 UF | 80,0 UF | 60,0 UF | 40,0 UF | **280,0 UF** | $11.200.000 |
+| **OPEX: Cifrado Azure Key Vault (686 claves RT-11.10)** | 108,0 UF | 123,5 UF | 246,96 UF | 185,2 UF | 123,5 UF | **787,16 UF** | $31.486.400 |
 | **OPEX: Auditorías Anuales Vigilancia ISO 27001** | 0,0 UF | 0,0 UF | 112,5 UF | 112,5 UF | 112,5 UF | **337,5 UF** | $13.500.000 |
-| **OPEX: Póliza Corporativa Cyber Risk (Chubb)** | 90,0 UF | 60,0 UF | 90,0 UF | 90,0 UF | 60,0 UF | **390,0 UF** | $15.600.000 |
+| **OPEX: Póliza Corporativa Cyber Risk (Chubb)** | 90,0 UF | 60,0 UF | 120,0 UF | 90,0 UF | 60,0 UF | **420,0 UF** | $16.800.000 |
 | **OPEX: Prevención Infracciones Art. 49 y RAT** | 15,0 UF | 70,0 UF | 85,0 UF | 85,0 UF | 55,0 UF | **310,0 UF** | $12.400.000 |
-| **TOTAL FLUJO DESEMBOLSO (UF netas)** | **1.678,0 UF** | **1.531,0 UF** | **2.156,7 UF** | **1.780,7 UF** | **1.229,0 UF** | **8.375,4 UF** | **$335.016.000** |
+| **TOTAL FLUJO DESEMBOLSO (UF netas)** | **1.683,0 UF** | **1.531,0 UF** | **2.268,46 UF** | **1.780,7 UF** | **1.229,0 UF** | **8.492,16 UF** | **$339.686.400** |
 
 *Fuente:* Elaboración propia basada en parámetros E-24/E-26, cotizaciones BSI Group, Chubb Seguros, CISO Assistant e informes de precios de Azure. Precios verificados al 16/09/2026.
 
-El presupuesto maestro suma **8.375,4 UF netas** ($335,0\text{ millones de CLP}$ o $\text{USD } 372.240$). Aplicando la tasa contractual del $0,9\%$ mensual del Formulario E-24 ($11,351\%\text{ anual}$), el **Valor Actual Neto del costo es $\text{VAN}_{\text{costo}} = \mathbf{6.559,64\text{ UF}}$**. En los primeros 20 meses (fase de implementación previa a la explotación comercial) se concentra una inversión de $3.209,0\text{ UF}$ ($38,3\%$), estabilizándose en la fase operativa en un gasto promedio de $144,8\text{ UF/mes}$.
+El presupuesto maestro suma **8.492,16 UF netas** ($339,7\text{ millones de CLP}$ o $\text{USD } 377.429$). Aplicando la tasa contractual del $0,9\%$ mensual del Formulario E-24 ($11,351\%\text{ anual}$), el **Valor Actual Neto del costo es $\text{VAN}_{\text{costo}} = \mathbf{6.651,24\text{ UF}}$**. En los primeros 20 meses (fase de implementación previa a la explotación comercial) se concentra una inversión de $3.214,0\text{ UF}$ ($37,8\%$), estabilizándose en la fase operativa en un gasto promedio de $146,6\text{ UF/mes}$.
 
 #### Puente de Conciliación Presupuestaria y Proporcionalidad en Licitación
-El TCO total de **8.375,4 UF** concilia de manera exacta:
+El TCO total de **8.492,16 UF** concilia de manera exacta:
 
-$$\text{TCO} = \underbrace{4.768,4\text{ UF}}_{\text{Obligaciones Directas (OB-01 a OB-10)}} + \underbrace{3.607,0\text{ UF}}_{\text{Gobernanza DPO, SaaS GRC, Seguro Chubb y Soporte QA/Legal}} = \mathbf{8.375,4\text{ UF}}$$
+$$\text{TCO} = \underbrace{4.855,16\text{ UF}}_{\text{Obligaciones Directas (OB-01 a OB-10)}} + \underbrace{3.637,0\text{ UF}}_{\text{Gobernanza DPO, SaaS GRC, Seguro Chubb y Soporte QA/Legal}} = \mathbf{8.492,16\text{ UF}}$$
 
-Esta inversión representa aproximadamente un **3,9% del presupuesto total estimado para la licitación del Caso 10 Curimón S.A.** (estimada en ~215.000 UF a 56 meses), situándose dentro de los estándares de la industria logística (rango 3%–5%) para proyectos que manejan infraestructura crítica, decisiones algorítmicas y tratamiento intensivo de datos de localización.
+Esta inversión representa aproximadamente un **3,95% del presupuesto total estimado para la licitación del Caso 10 Curimón S.A.** (estimada en ~215.000 UF a 56 meses), situándose dentro de los estándares de la industria logística (rango 3%–5%) para proyectos que manejan infraestructura crítica, decisiones algorítmicas y tratamiento intensivo de datos de localización.
 
 ## 4. Análisis de Sensibilidad Bidimensional y Estabilidad Presupuestaria
 
@@ -105,18 +105,18 @@ Esta inversión representa aproximadamente un **3,9% del presupuesto total estim
 Las dos variables de mayor impacto en la estructura presupuestaria son la tarifa horaria de los perfiles profesionales (Formulario E-26) y la arquitectura tecnológica de custodia de claves:
 
 1. **Sensibilidad por Bandas E-26:** Variando las tarifas de los roles entre el límite inferior y superior del Formulario E-26, el presupuesto fluctúa entre **6.812,0 UF** (escenario de costo mínimo) y **10.150,0 UF** (escenario de tarifa máxima de mercado).
-2. **Sensibilidad Criptográfica (Hardware dedicado vs. Claves individuales):** Si la arquitectura adopta un clúster exclusivo de **Managed HSM Standard B1** ($\text{USD } 3,20\text{/h}$ de lista) en lugar de claves protegidas por HSM en Key Vault Premium ($\text{USD } 1\text{/clave/mes}$), el costo de gestión de claves se incrementa de $725,4\text{ UF}$ a $2.680,6\text{ UF}$, situando el presupuesto total en **10.330,6 UF** ($VAN = 8.125,4\text{ UF}$).
+2. **Sensibilidad Criptográfica (Hardware dedicado vs. Claves individuales):** Si la arquitectura adopta un clúster exclusivo de **Managed HSM Standard B1** ($\text{USD } 3,20\text{/h}$ de lista) en lugar de claves protegidas por HSM en Key Vault Premium ($\text{USD } 1\text{/clave/mes}$), el costo de gestión de claves se incrementa de $787,16\text{ UF}$ a $2.680,6\text{ UF}$, situando el presupuesto total en **10.385,6 UF** ($VAN = 8.125,4\text{ UF}$).
 
 ### 4.2 Matriz de Sensibilidad Bidimensional Cruzada ($3 \times 3$)
 Para contrastar el impacto operacional directo sobre el baseline optimizado de gobernanza y licenciamiento, se complementa con una matriz de sensibilidad bidimensional $3 \times 3$ evaluando fluctuaciones conjuntas del **Retainer mensual DPO ($V_1$, $\pm 20\%$)** y la **Plataforma SaaS GRC ($V_2$, $\pm 25\%$)**:
 
 | Escenario de Sensibilidad | DPO Retainer ($V_1$) | Plataforma SaaS GRC ($V_2$) | TCO Final (UF) | TCO Final (CLP) | Variación vs Base |
 | :--- | :---: | :---: | :---: | :---: | :---: |
-| **Escenario Optimista (-20% / -25%)** | 1.612,80 UF (DPO 1,60 UF/h) | 210,00 UF (GRC con desc. multianual) | **7.902,20 UF** | $316.088.000 CLP | **$-5,65\%$** ($-473,20$ UF) |
-| **Escenario Base (Línea Central)** | **2.016,00 UF (DPO 2,00 UF/h)** | **280,00 UF (CISO Assistant Pro)** | **8.375,40 UF** | **$335.016.000 CLP** | **Baseline (0,00%)** |
-| **Escenario Pesimista (+20% / +25%)** | 2.419,20 UF (DPO 2,40 UF/h) | 350,00 UF (GRC con módulos extra) | **8.848,60 UF** | $353.944.000 CLP | **$+5,65\%$** ($+473,20$ UF) |
+| **Escenario Optimista (-20% / -25%)** | 1.612,80 UF (DPO 1,60 UF/h) | 210,00 UF (GRC con desc. multianual) | **8.018,96 UF** | $320.758.400 CLP | **$-5,57\%$** ($-473,20$ UF) |
+| **Escenario Base (Línea Central)** | **2.016,00 UF (DPO 2,00 UF/h)** | **280,00 UF (CISO Assistant Pro)** | **8.492,16 UF** | **$339.686.400 CLP** | **Baseline (0,00%)** |
+| **Escenario Pesimista (+20% / +25%)** | 2.419,20 UF (DPO 2,40 UF/h) | 350,00 UF (GRC con módulos extra) | **8.965,36 UF** | $358.614.400 CLP | **$+5,57\%$** ($+473,20$ UF) |
 
-Asimismo, la modelación de los cuadrantes asimétricos cruzados confirma la alta resiliencia y capacidad de absorción del modelo presupuestario: el **Escenario Asimétrico A** (DPO $+20\%$ / GRC $-25\%$) arroja un TCO de **8.708,60 UF** ($+3,98\%$), mientras que el **Escenario Asimétrico B** (DPO $-20\%$ / GRC $+25\%$) sitúa el TCO en **8.042,20 UF** ($-3,98\%$). Esto demuestra que las variaciones inversas entre capital humano y licenciamiento tecnológico se amortiguan mutuamente dentro de una banda estrecha de $\pm 5,65\%$, blindando la viabilidad económica del contrato frente a desviaciones operacionales.
+Asimismo, la modelación de los cuadrantes asimétricos cruzados confirma la alta resiliencia y capacidad de absorción del modelo presupuestario: el **Escenario Asimétrico A** (DPO $+20\%$ / GRC $-25\%$) arroja un TCO de **8.825,36 UF** ($+3,92\%$), mientras que el **Escenario Asimétrico B** (DPO $-20\%$ / GRC $+25\%$) sitúa el TCO en **8.158,56 UF** ($-3,92\%$). Esto demuestra que las variaciones inversas entre capital humano y licenciamiento tecnológico se amortiguan mutuamente dentro de una banda estrecha de $\pm 5,57\%$, blindando la viabilidad económica del contrato frente a desviaciones operacionales.
 
 ---
 
@@ -125,12 +125,12 @@ Bajo la Ley 21.719 (Art. 46), el régimen para infracciones gravísimas contempl
 
 De acuerdo con el modelo económico de **Gordon y Loeb (2002)**, la inversión óptima en ciberseguridad y protección de datos se acota a un techo del $37\%$ de la pérdida esperada:
 $$\text{Presupuesto Óptimo} \le 0,37 \times \text{Pérdida Esperada} = 0,37 \times 55.000\text{ UF} = \mathbf{20.350\text{ UF}}$$
-El costo total del programa AudIT ($8.375,4\text{ UF}$) representa solo el **$15,2\%$ de la exposición patrimonial**, situándose holgadamente bajo la cota de sobreinversión.
+El costo total del programa AudIT ($8.492,16\text{ UF}$) representa solo el **$15,4\%$ de la exposición patrimonial**, situándose holgadamente bajo la cota de sobreinversión.
 
 Evaluando el Retorno sobre la Inversión en Seguridad ($\text{RoSI}$):
-$$\text{RoSI} = \frac{(\text{Exposición Punitiva} \times \text{Eficacia Mitigación}) - \text{TCO}}{\text{TCO}} \times 100\% = \frac{(55.000\text{ UF} \times 0,85) - 8.375,4\text{ UF}}{8.375,4\text{ UF}} \times 100\% = \mathbf{458,18\%}$$
+$$\text{RoSI} = \frac{(\text{Exposición Punitiva} \times \text{Eficacia Mitigación}) - \text{TCO}}{\text{TCO}} \times 100\% = \frac{(55.000\text{ UF} \times 0,85) - 8.492,16\text{ UF}}{8.492,16\text{ UF}} \times 100\% = \mathbf{450,51\%}$$
 El **umbral de probabilidad de indiferencia** es:
-$$p^* = \frac{\text{TCO}}{\text{Exposición Punitiva}} = \frac{8.375,4\text{ UF}}{55.000,0\text{ UF}} = \mathbf{15,23\%\text{ en 56 meses}} \implies \mathbf{3,05\%\text{ anual}}$$
+$$p^* = \frac{\text{TCO}}{\text{Exposición Punitiva}} = \frac{8.492,16\text{ UF}}{55.000,0\text{ UF}} = \mathbf{15,44\%\text{ en 56 meses}} \implies \mathbf{3,05\%\text{ anual}}$$
 Basta con que la probabilidad anual de sufrir un incidente sancionable supere el **$3,05\%$** para que el programa de cumplimiento genere un beneficio económico neto directo para Transportes Curimón S.A., blindando el flujo de caja del consorcio adjudicatario.
 
 ---
@@ -152,7 +152,7 @@ Basta con que la probabilidad anual de sufrir un incidente sancionable supere el
 
 | Componente de Costo | Proveedor / Organismo Oficial | Régimen de Precio | Metadatos y Fecha de Verificación | Valor de Lista / Cotización Base | Partida TCO (56 Meses) |
 | :--- | :--- | :--- | :--- | :--- | :---: |
-| **SaaS CISO Assistant Pro** | Intuitem / Norad Security | Precio de lista web | 16/09/2026 · UE/Chile · ciso-assistant.com | $€2.400\text{/año}$ ($60,0\text{ UF/año}$) | **255,0 UF** ($10.200.000 CLP) |
+| **SaaS CISO Assistant Pro** | Intuitem / Norad Security | Precio de lista web | 16/09/2026 · UE/Chile · ciso-assistant.com | $€2.400\text{/año}$ ($60,0\text{ UF/año}$) | **280,0 UF** ($11.200.000 CLP) |
 | **Key Vault Premium (Claves)** | Microsoft Azure Inc. | Retail Prices API | 16/09/2026 · Chile Central · azure.microsoft.com | $\text{USD } 1,00\text{/clave/mes}$ ($0,0225\text{ UF}$) | **725,4 UF** ($29.016.000 CLP) |
 | **Managed HSM Dedicado (Alt.)** | Microsoft Azure Inc. | Retail Prices API | 16/09/2026 · Chile Central · azure.microsoft.com | $\text{USD } 3,20\text{/hora}$ ($52,56\text{ UF/mes}$) | *(Sensibilidad: 2.680,6 UF)* |
 | **Certificación ISO/IEC 27001** | BSI Group / SGS Chile | Cotización benchmark | 28/08/2026 · Chile · Tablas IAF MD 5 | $\$15.500.000\text{ CLP}$ inicial / $\$4.500.000\text{ a}$ | **725,0 UF** (CAPEX + OPEX) |
@@ -212,10 +212,9 @@ def calcular_flujo():
         else: item["QA_LEGAL"] = 166.0 / 8
         
         # Suscripcion SaaS CISO Assistant Pro Cloud
-        if m < 2: item["GRC"] = 0.0
-        elif m <= 12: item["GRC"] = 55.0 / 11
+        if m <= 12: item["GRC"] = 60.0 / 12
         elif m <= 20: item["GRC"] = 40.0 / 8
-        elif m <= 36: item["GRC"] = 60.0 / 16
+        elif m <= 36: item["GRC"] = 80.0 / 16
         elif m <= 48: item["GRC"] = 60.0 / 12
         else: item["GRC"] = 40.0 / 8
         
@@ -223,14 +222,14 @@ def calcular_flujo():
         if m < 6: item["KEY_VAULT"] = 0.0
         elif m <= 12: item["KEY_VAULT"] = 108.0 / 7
         elif m <= 20: item["KEY_VAULT"] = 123.5 / 8
-        elif m <= 36: item["KEY_VAULT"] = 185.2 / 16
+        elif m <= 36: item["KEY_VAULT"] = 246.96 / 16
         elif m <= 48: item["KEY_VAULT"] = 185.2 / 12
         else: item["KEY_VAULT"] = 123.5 / 8
         
         # Poliza Corporativa Cyber Risk Chubb (50.000 UF)
         if m <= 12: item["SEGURO"] = 90.0 / 12
         elif m <= 20: item["SEGURO"] = 60.0 / 8
-        elif m <= 36: item["SEGURO"] = 90.0 / 16
+        elif m <= 36: item["SEGURO"] = 120.0 / 16
         elif m <= 48: item["SEGURO"] = 90.0 / 12
         else: item["SEGURO"] = 60.0 / 8
         

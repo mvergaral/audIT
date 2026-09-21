@@ -442,7 +442,7 @@ Cualquier integrante puede ser interrogado sobre la procedencia de cualquier cif
 3. **¿Por qué la certificación ISO 27001 y el seguro de ciberriesgo no se descartaron como en borradores previos?**  
    *Respuesta:* Descartar estas partidas vulneraba el alcance obligatorio de la Persona 4 fijado en el plan operativo (`Division.md`). Se subsanó aplicando la directriz internacional IAF MD 5 (14 días-auditor para el dimensionamiento de Fase 1 y 2 en BSI/SGS por $\$15.500.000\text{ CLP}$) y una prima técnica corporativa del $0,18\%$ sobre la suma asegurada de $50.000\text{ UF}$ en Chubb Seguros Chile.
 
-4. **¿Cómo se demuestra que $8.375,4\text{ UF}$ no es un gasto excesivo en cumplimiento?**  
+4. **¿Cómo se demuestra que $8.492,16\text{ UF}$ no es un gasto excesivo en cumplimiento?**  
    *Respuesta:* Mediante la regla económica de Gordon-Loeb (2002). Frente a una exposición punitiva multicuerpo de $55.000\text{ UF}$ (Ley 21.719 + Ley 21.663 + forense), el techo de sobreinversión es del $37\%$ ($20.350\text{ UF}$). El programa de AudIT representa apenas el $15,23\%$ de la exposición, logrando un $\text{RoSI} = 458,18\%$ con un umbral de indiferencia de solo $3,05\%$ de probabilidad anual de incidente.
 
 5. **¿Cuál es la tasa de descuento utilizada para el VAN y de dónde proviene?**  

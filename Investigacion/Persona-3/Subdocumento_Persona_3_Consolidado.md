@@ -209,29 +209,46 @@ propio, que es precisamente lo que el proyecto no tiene holgura para absorber.
 
 #### 3.3.4 Recomendación y riesgo residual
 
-**Se recomienda Microsoft Purview como plataforma base de cumplimiento**, por las dos
-razones que la matriz aísla: es la única cuyo costo puede llevarse al flujo de caja con una
-cifra verificable, y es nativa de la región Azure Chile Central que la propuesta ya
-comprometió, lo que evita una integración adicional entre la plataforma de cumplimiento y la
-de datos.
+Dentro de las ocho alternativas comparadas, la mejor evaluada es **Microsoft Purview**. La
+propuesta, sin embargo, **adopta CISO Assistant Pro**, y la razón está en el propio criterio
+que la matriz pondera con el mayor peso junto al descubrimiento: la transparencia del precio.
 
-La recomendación arrastra un riesgo que hay que declarar y no disimular: **Purview no
-resuelve la gestión de consentimiento**, y el Caso 10 la necesita de forma concreta para los
-258 conductores externos y los 148 transportistas subcontratados, que no tienen vínculo
-laboral con Curimón y cuya base de licitud es el consentimiento revocable. Ese tramo no queda
-cubierto por la herramienta recomendada y debe resolverse por separado, ya sea con el módulo
-de consentimiento en la app móvil que contempla la arquitectura del proyecto o con una
-segunda pieza especializada.
+La columna «Precio publicado» del §3.2 registra que Purview publica **por plan de
+licenciamiento**, no una tarifa autónoma. Llevado al flujo de caja, eso significa que la
+partida dependería del plan Microsoft 365 o Azure que se contrate, y ese plan no está fijado
+en la propuesta. **CISO Assistant Pro, en cambio, tiene precio anual firme y público por ser
+software libre bajo licencia AGPLv3**, lo que permite presupuestarlo sin declarar un supuesto.
+El punto 5 de las Indicaciones es categórico: una cifra que no puede verificarse no entra en
+una estimación.
 
-El equipo asume esa decisión de forma deliberada: prefiere una plataforma verificable en
-precio y nativa en arquitectura, con una brecha funcional identificada y acotada, antes que
-una suite completa cuyo costo no podría sostenerse ante el punto 5 de las Indicaciones.
+Corresponde declarar con la misma franqueza las dos consecuencias de esa decisión.
+
+La primera es que **CISO Assistant Pro no formó parte del universo de ocho herramientas
+comparadas**. Entró después, por la vía del modelo económico, cuando se constató que seis de
+las ocho operaban solo por cotización. No se le asignó puntuación porque no fue evaluada
+contra los cinco criterios, y presentarla como ganadora de una matriz que no corrió sería
+falsear la comparación. Lo que la matriz sí acredita es el hallazgo que la hizo necesaria:
+**en el mercado GRC la verificabilidad del precio es escasa**, y eso reordena la decisión.
+
+La segunda es que **ninguna de las dos resuelve la gestión de consentimiento**. Purview
+puntúa 1 en ese criterio y CISO Assistant Pro es un registro de cumplimiento y evidencia de
+controles, no una plataforma de consentimiento. El Caso 10 lo necesita de forma concreta para
+los 258 conductores externos y los 148 transportistas subcontratados, que no tienen vínculo
+laboral con Curimón y cuya base de licitud es el consentimiento revocable. Ese tramo se
+resuelve en la arquitectura del proyecto, mediante el módulo de consentimiento de la app móvil
+del conductor, y no por la vía de la herramienta GRC.
+
+El equipo asume la decisión de forma deliberada: entre una plataforma mejor puntuada cuyo
+costo no puede sostenerse ante el punto 5 y una de precio firme que cubre el registro de
+cumplimiento y la evidencia ISO/IEC 27001, opta por la segunda y deja declarada tanto la
+brecha de consentimiento como el hecho de que la herramienta adoptada no fue parte de la
+comparación original.
 
 ---
 
 ## 4. Cierre del subdocumento
 
-Este capítulo entrega tres partidas al modelo económico. La primera es la **licencia anual de Microsoft Purview**, única de las ocho alternativas evaluadas con precio publicado y por tanto la única que ingresa al flujo de caja con cifra verificable. La segunda son las **horas de revisión legal** para las cláusulas de transferencia internacional, necesarias mientras la Agencia no publique cláusulas modelo nacionales y la propuesta opere con instrumentos basados en el capítulo V del RGPD. La tercera es la **auditoría de certificación ISO/IEC 27001:2022** con su mantención a tres años. Las dos últimas se rigen por cotización y ninguna certificadora que opera en Chile publica precio de lista, de modo que ingresan al flujo de caja como supuesto declarado, conforme al punto 5 de las Indicaciones.
+Este capítulo entrega tres partidas al modelo económico. La primera es la **suscripción anual de CISO Assistant Pro**, la única de las herramientas consideradas con precio anual firme y público, y por tanto la única que ingresa al flujo de caja sin declarar un supuesto. La segunda son las **horas de revisión legal** para las cláusulas de transferencia internacional, necesarias mientras la Agencia no publique cláusulas modelo nacionales y la propuesta opere con instrumentos basados en el capítulo V del RGPD. La tercera es la **auditoría de certificación ISO/IEC 27001:2022** con su mantención a tres años. Las dos últimas se rigen por cotización y ninguna certificadora que opera en Chile publica precio de lista, de modo que ingresan al flujo de caja como supuesto declarado, conforme al punto 5 de las Indicaciones.
 
 ---
 
