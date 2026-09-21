@@ -36,7 +36,6 @@ En cumplimiento estricto del Artículo 13.5 de las Bases Administrativas, las di
 | **Banco de Preguntas Avanzadas (20%)** | `Entregables/P_Avanzadas.md` | **Nivel 0 + 1** | Redacción manual de P25 a P30: US CLOUD Act vs BYOK/HYOK, análisis de sensibilidad del TCO, borrado criptográfico (*crypto-shredding*), resiliencia contractual, perfilamiento y cota 37% de Gordon-Loeb. | Formateo de expresiones matemáticas KaTeX/LaTeX ($1/e \approx 36,79\%$). |
 | **Índice Temático y Matriz Multidimensional** | `Entregables/P_Indice_Tematico.md` | **Nivel 0 + 1** | Mapeo biunívoco de las 30 preguntas contra las 14 secciones del informe final y los 6 subtemas obligatorios de la Ficha TI-12. | Tabulación de la matriz cruzada de 5 columnas en Markdown. |
 | **Subdocumento Consolidado en LaTeX** | `Subdocumento_Persona_6_Consolidado.tex` | **Nivel 0 + 1** | Definición de los 6 argumentos de cada macro `\pregunta` `{formato}{dificultad}{sección}{enunciado}{respuesta}{justificación}`. | Verificación de sintaxis de cierre de llaves, comillas tipográficas y escape de `\%`. |
-| **Guía de Defensa Oral y Auditoría Humana** | `Guia_Auditoria_Humana_Defensa_Oral_Persona_6.md` | **Nivel 0** | Desarrollo autónomo de las respuestas estratégicas a las 5 preguntas complejas de defensa oral para acreditar dominio Nivel 0. | Ninguno (100% redacción y estudio humano). |
 
 ---
 
