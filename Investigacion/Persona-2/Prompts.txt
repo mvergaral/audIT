@@ -1,0 +1,6 @@
+
+-quiero que me ayudes a corregir mi parte de un trabajo de investigacion, toda mi investigacion esta en @"Persona2/Normativa chilena datos y ciberseguridad.md"  y quiero que cumpla con lo que se dividio en @Division.md de persona 2, ya tengo toda la informacion escrita y revisada por mi parte, pero quiero que arregles ortografia y concistencia que exista, trata de dejarlo como @audIT/Investigacion/  en estilo de orden y documentos
+
+-puedes editar para que sea nivel 2, con uso de ia para ayuda a la busqueda de informacion pero que esta escrito desde mi base y luego fue corregido de ortografia y concistencia
+
+-Le añadi cosas al punto 6 del subdocumento, puedes arreglarlo para que suene mejor? y con eso bastaria?
