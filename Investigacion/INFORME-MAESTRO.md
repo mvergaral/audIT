@@ -42,19 +42,6 @@ En cumplimiento del Punto 4 de las Indicaciones, AudIT delimita su aporte propio
 
 # 1. Marco legal chileno
 
-### Licitación TFEP-01/2026 · Caso 10: Transportes Curimón S.A. · Empresa Consultora AudIT
-
-**Rol Responsable:** Persona 2 (*Chilean Regulatory Research Specialist*)  
-
-**Presupuesto asignado por P1:** 2,0–2,5 págs. — **reserva de recorte declarada** (ver nota editorial)
-
-> [!NOTE]
-
-> [!IMPORTANT]
-> **Convención de certeza aplicada en todo el capítulo.** **[V]** = verificado contra fuente primaria (Diario Oficial, ficha oficial de tramitación del Senado, repositorio normativo de la ANCI, Ley de Presupuestos de DIPRES). **[S]** = apoyado solo en fuente secundaria (síntesis de la Biblioteca del Congreso Nacional, estudios jurídicos, compilaciones especializadas). **[NV]** = no verificado. Ninguna afirmación de este capítulo eleva su nivel de certeza por conveniencia narrativa.
-
----
-
 ### 1. La Asimetría Regulatoria que Condiciona Toda la Propuesta
 
 Al 20 de septiembre de 2026 el ordenamiento chileno presenta una asimetría que define el diseño de cumplimiento de este proyecto: **la Ley N° 21.663 está plenamente operativa, mientras que la Ley N° 21.719 está publicada pero no vigente, y la autoridad que ella crea no existe**.
@@ -80,9 +67,7 @@ El **Artículo 2° letra g)** incorpora al catálogo de datos sensibles la **sit
 
 Dos hallazgos verificados corrigen supuestos difundidos en el mercado de cumplimiento. Primero, el **Artículo 14 sexies** obliga a reportar brechas **«por los medios más expeditos posibles y sin dilaciones indebidas»** y **no fija un plazo de 72 horas** **[V]**: esa cifra es un traslado indebido del Artículo 33 del RGPD. Segundo, el **Artículo 27** admite la transferencia internacional por país adecuado, cláusulas contractuales tipo, normas corporativas vinculantes, modelos certificados o excepciones puntuales, pero **al 20 de septiembre de 2026 no hay ningún país declarado con nivel adecuado**, porque esa declaración compete a una Agencia inexistente **[V]**.
 
-El régimen sancionatorio (Arts. 34 bis a 37) escala hasta **5.000, 10.000 y 20.000 UTM** según gravedad, con techo del **2 % y 4 % de los ingresos anuales** para empresas que no son de menor tamaño conforme a la Ley N° 20.416 **[S]**. **Todo ello es hoy derecho suspendido**: lo exigible son las multas de 1 a 10 UTM de la Ley N° 19.628.
-
----
+El régimen sancionatorio (Arts. 34 bis a 37) escala hasta **5.000, 10.000 y 20.000 UTM** según la gravedad de la infracción, y su desarrollo íntegro consta en el entregable de marco legal chileno. Su relevancia para la propuesta es la magnitud: la exposición patrimonial que justifica el programa de cumplimiento del capítulo 3.
 
 ### 3. Ley N° 21.663: El Único Marco Plenamente Exigible Hoy
 
@@ -149,11 +134,7 @@ Aplicando los hallazgos a la volumetría congelada del Caso 10 —**374 camiones
 
 2. **La localización GPS tiene régimen agravado.** El **Artículo 16 sexies** sitúa la geolocalización en el bloque de categorías especiales, de modo que el monitoreo continuo de los 374 camiones no se rige por la regla general. Es el fundamento normativo del corte de telemetría fuera de servicio que implementa la arquitectura. La restricción no elimina la finalidad operacional: Curimón necesita trazabilidad del estado de cada camión en ruta, de manera que el control debe **acotar la ventana de monitoreo al servicio**, no suprimirlo.
 
-3. **Las tarifas de los 148 transportistas pueden constituir dato sensible.** Tratándose en parte de personas naturales, la tarifa revela **situación socioeconómica**, categoría sensible sin equivalente en el RGPD. Esto sostiene por vía legal —y no solo contractual— el cifrado a nivel de campo **RT-11.10** exigido por las Bases Técnicas. De ello se sigue una regla de segregación: **los datos de quienes no pertenecen a Curimón no se almacenan junto a los de la dotación propia**, sino en repositorios cifrados y de acceso diferenciado.
-
-4. **El cruce a Mendoza activa el Artículo 27 sin red de seguridad regulatoria.** Como **no hay país declarado con nivel adecuado**, la transferencia debe sostenerse en **cláusulas contractuales tipo** o en una excepción puntual, documentadas caso a caso **con cada transportista empleador** cuyos conductores crucen la frontera.
-
-5. **La calificación como OIV está abierta.** No consta que Curimón figure en las nóminas publicadas **[NV]**, pero la segunda etapa incorporó **40 entidades de transporte** y el **Artículo 6** obliga a revisar la calificación **al menos cada tres años**. La propuesta debe prever la calificación sobreviniente: su efecto inmediato es la **duplicación de los topes de multa** y la exigibilidad del Artículo 8 a los sesenta días corridos de la resolución. Ese plazo de sesenta días permite además **programar la adecuación en temporadas de menor carga operacional**, de modo que la certificación y los ensayos no compitan con los períodos de mayor demanda de transporte.
+3. **La calificación como OIV está abierta.** No consta que Curimón figure en las nóminas publicadas **[NV]**, pero la segunda etapa incorporó **40 entidades de transporte** y el **Artículo 6** obliga a revisar la calificación **al menos cada tres años**. La propuesta debe prever la calificación sobreviniente: su efecto inmediato es la **duplicación de los topes de multa** y la exigibilidad del Artículo 8 a los sesenta días corridos de la resolución. Ese plazo de sesenta días permite además **programar la adecuación en temporadas de menor carga operacional**, de modo que la certificación y los ensayos no compitan con los períodos de mayor demanda de transporte.
 
 **Conclusión del capítulo.** Chile construyó dos agencias en paralelo con arquitecturas casi idénticas y reglas de designación opuestas: la ANCI se instaló por decreto del Ejecutivo en **once semanas** y lleva veinte meses operando; la Agencia de Protección de Datos exige dos tercios del Senado y lleva veintiún meses sin existir. El resultado es que **Chile es más exigente que la Unión Europea para reportar un ciberincidente —tres horas— y menos exigente para notificar una brecha de datos personales —sin plazo determinado—**, y a la vez prohíbe que el reporte de incidentes contenga datos personales. La lectura operativa para este proyecto es directa: **el cumplimiento debe diseñarse sobre el marco que hoy se fiscaliza y sobre las obligaciones que el 1 de diciembre de 2026 se vuelven exigibles con o sin autoridad que las reciba.**
 
@@ -189,23 +170,7 @@ De ahí que el marco europeo no aparezca aquí como referencia académica sino p
 directa, cuando la norma europea se aplica por sí misma. La otra es indirecta, cuando la norma europea opera
 como patrón de diseño de la regulación chilena, como ocurre con la Ley 21.719 respecto del RGPD.
 
-#### 1.2 Tabla de vigencias
-
-| Norma | Identificador | Estado a septiembre de 2026 | Fecha crítica siguiente | Aplicabilidad a Curimón |
-| :--- | :--- | :--- | :--- | :--- |
-| RGPD | Reglamento (UE) 2016/679 | Aplicable desde el 25-05-2018 | Sin hito pendiente | Indirecta. Modelo de la Ley 21.719 y exigencia contractual probable de clientes con matriz europea |
-| Directiva NIS2 | Directiva (UE) 2022/2555 | Plazo de transposición vencido el 17-10-2024. Varios Estados siguen en procedimiento de infracción | Depende de cada Estado miembro | Indirecta. Referente del diseño de la Ley 21.663 y de su régimen de reporte |
-| Reglamento de IA | Reglamento (UE) 2024/1689, modificado por el Reglamento (UE) 2026/1744 | Prohibiciones y alfabetización desde el 02-02-2025. Transparencia del art. 50 desde el 02-08-2026. Alto riesgo del Anexo III aplazado | 02-12-2027 (Anexo III) y 02-08-2028 (Anexo I) | Indirecta hoy. Relevante si el modelo predictivo de fatiga se ofreciera en la UE |
-| Reglamento de Ciberresiliencia | Reglamento (UE) 2024/2847 | Obligaciones de reporte del art. 14 aplicables desde el 11-09-2026 | 11-12-2027 aplicación completa | Indirecta. Afecta a los fabricantes de los componentes telemáticos que Curimón incorpore |
-
-#### 1.3 Lectura comparada Chile frente a la Unión Europea
-
-| Dimensión | Unión Europea | Chile | Consecuencia para el proyecto |
-| :--- | :--- | :--- | :--- |
-| Plazo de notificación de brechas | 72 horas al supervisor (RGPD art. 33) | «Sin dilaciones indebidas» (Ley 21.719, art. 14 sexies) | El informe no puede afirmar que Chile exige 72 horas. Las Bases sí fijan 2 h y 24 h al cliente en RT-11.18 y RT-11.19, que es una obligación contractual, no legal |
-| Decisiones automatizadas | RGPD art. 22 | Ley 21.719, art. 8 bis | El bloqueo automático del despacho cae en este supuesto y arrastra EIPD del art. 15 ter |
-| Reporte de incidentes de ciberseguridad | NIS2, 24 h de alerta temprana | Ley 21.663 y su reglamento | Curimón queda obligado por ser servicio esencial de transporte terrestre aunque no figure como OIV |
-| Transferencia internacional | Capítulo V del RGPD, decisiones de adecuación y cláusulas tipo | Ley 21.719, arts. 27 y 28 | La Agencia aún no publica cláusulas modelo. La réplica en East US 2 y el cruce a Mendoza quedan sin instrumento estándar disponible |
+El estado de vigencia de cada una de estas normas, con su fuente oficial y su fecha de consulta, se documenta en el **Anexo B**. De esa verificación se desprende el hallazgo que ordena el resto del capítulo: **ninguna de las normas europeas obliga hoy a Curimón por sí misma**, pero todas operan como patrón de diseño de la regulación chilena o como exigencia contractual probable de sus clientes.
 
 ##### 1.4 Análisis de la asimetría normativa
 
@@ -250,59 +215,28 @@ lo que lo hace complementario y no sustituto.
 ##### Justificación del aporte
 El grupo evaluó cinco marcos adicionales y decidió incorporar dos. La Ley argentina 25.326 entra porque el Caso 10 contempla operación con cruce a Mendoza, y ninguno de los marcos de la ficha alcanza el tratamiento de datos que ocurre del lado argentino de esa ruta. Es el único marco adicional que resulta obligatorio y no voluntario para Curimón. El informe SOC 2 Type II entra por una razón distinta. Curimón atiende a 84 empresas cliente, y el aseguramiento que esos clientes exigen en contratos de servicios no es una certificación de sistema de gestión sino un informe sobre la operación efectiva de controles durante un periodo. Si el grupo se hubiera limitado a la ficha, el informe habría descrito un proyecto sin jurisdicción argentina y sin el mecanismo contractual que sus propios clientes le van a pedir.
 
-#### 2.3 Costo de certificación
-
-Ninguna de las certificadoras que operan en Chile publica precio de lista para auditoría de certificación. El
-régimen aplicable es **«solo por cotización»** conforme al punto 5 de las Indicaciones, y así debe declararse.
-Lo que sí se documenta es la estructura del costo, que tiene cuatro componentes separables.
-
-| Componente | Naturaleza | Fuente a usar | Régimen |
-| :--- | :--- | :--- | :--- |
-| Compra del texto de la norma | Precio publicado | Tienda oficial de ISO o del INN | Precio de lista CHF 155.00 (181,021.40 Peso chileno)|
-| Consultoría de implantación | Horas profesionales | Formulario E-26, perfil a declarar por P4 | Rango UF/h del E-26 |
-| Auditoría de certificación (etapas 1 y 2) | Servicio de organismo acreditado | Cotización a BSI, Bureau Veritas, SGS, AENOR Chile, TÜV | Solo por cotización |
-| Mantención (vigilancia anual y recertificación a 3 años) | Servicio recurrente | Misma cotización | Solo por cotización |
-
----
+Ninguna de las certificadoras que operan en Chile publica precio de lista para la auditoría de certificación: el régimen aplicable es **«solo por cotización»** conforme al punto 5 de las Indicaciones, y así se declara. Las cuatro componentes separables del costo —compra del texto de la norma, consultoría de implantación, auditoría de certificación y mantención— se incorporan al modelo económico del capítulo 3.
 
 ### 3. Comparativa de herramientas GRC y de apoyo al cumplimiento
 
 #### 3.1 Universo evaluado
 
-Ocho plataformas analizadas y una descartada con declaración expresa. Las seis primeras provienen de la
-lista de la ficha. Las dos últimas son aporte propio del grupo.
+Se compararon **ocho plataformas**: las seis de la ficha —OneTrust, Vanta, Drata, BigID,
+Microsoft Purview Compliance Manager y Securiti.ai— más dos de aporte propio, **Osano** y
+**Eramba**. Osano cubre el tramo de la organización mediana que necesita gestión de
+consentimiento y no una suite completa, que ninguna de las seis atiende. Eramba introduce la
+única alternativa **autoalojada** del conjunto, lo que permite incorporar el eje construir
+frente a comprar en vez de limitar la comparación a proveedores SaaS; sin ella el universo
+habría tenido un sesgo de categoría.
 
-| # | Herramienta | Categoría funcional | Modelo de despliegue | Origen |
-| :-: | :--- | :--- | :--- | :--- |
-| 1 | OneTrust | Privacidad, consentimiento y GRC integrado | SaaS | Ficha |
-| 2 | Vanta | Automatización de cumplimiento y evidencia continua | SaaS | Ficha |
-| 3 | Drata | Automatización de cumplimiento y evidencia continua | SaaS | Ficha |
-| 4 | BigID | Descubrimiento y clasificación de datos personales | SaaS e instalable | Ficha |
-| 5 | Microsoft Purview Compliance Manager | Cumplimiento dentro del ecosistema Microsoft 365 y Azure | SaaS | Ficha |
-| 6 | Securiti.ai | Gobierno de datos y privacidad con foco en IA | SaaS | Ficha |
-| 7 | **Osano** | Gestión de consentimiento y privacidad para organizaciones medianas | SaaS | **Aporte propio** |
-| 8 | **Eramba** | GRC de código abierto, autoalojable | Autoalojado | **Aporte propio** |
+Cada una se caracterizó con cinco columnas objetivas —cobertura de la Ley 21.719 con
+plantilla propia, cobertura ISO 27001/27701/42001, descubrimiento de datos, gestión de
+consentimiento y publicación de precio— tomadas de su página oficial el 20-09-2026. **El
+dato decisivo es que solo dos de las ocho publican precio**: Purview por plan de
+licenciamiento y Eramba por edición comunitaria. Las seis restantes operan exclusivamente
+por cotización.
 
-**Por qué estas dos de aporte propio.** Osano cubre un tramo de mercado que las seis de la ficha no atienden,
-el de la organización mediana que necesita consentimiento y no una suite completa. Eramba introduce la única
-alternativa autoalojada del conjunto, lo que permite que la comparación incluya el eje construir frente a
-comprar y no solo la elección entre proveedores SaaS. Sin ella, la comparativa habría tenido un sesgo de
-categoría.
-
-#### 3.2 Ficha de datos por herramienta (columnas objetivas)
-
-| Herramienta | Cubre Ley 21.719 con plantilla propia | Cubre ISO 27001 / 27701 / 42001 | Descubrimiento de datos | Consentimiento | Precio publicado | URL oficial consultada | Fecha consulta |
-| :--- | :---: | :---: | :---: | :---: | :---: | :--- | :---: |
-| OneTrust | No | Sí | Sí | Sí | No, solo por cotización  | https://www.onetrust.com/pricing/#accordion-b4d6a3b6f6-accordionitem_2 | 20-09-2026 |
-| Vanta | No | Sí | Parcial | No | No, solo por cotización | https://www.vanta.com/pricing | 20-09-2026 |
-| Drata | No | Sí | Parcial | No | No, solo por cotización (Demo) | https://drata.com/contact-sales | 20-09-2026 |
-| BigID | No | Sí | Sí | Parcial | No, solo por cotización (Demo) | https://home.bigid.com/demo | 20-09-2026 |
-| Microsoft Purview | No | Sí | Sí | No | Sí, por plan de licenciamiento | https://azure.microsoft.com/es-mx/pricing/details/purview/ | 20-09-2026 |
-| Securiti.ai | No | Sí | Sí | Sí | No, solo por cotización (Demo) | https://securiti.ai/request-demo/ | 20-09-2026 |
-| Osano | No | Sí | Parcial | Sí | No, solo por cotización (Demo) | https://www.osano.com/plans | 20-09-2026 |
-| Eramba | No | Sí | No | No | Sí, edición comunitaria y suscripción | https://www.eramba.org/get-started-grc | 20-09-2026 |
-
-#### 3.3 Criterios, ponderación y análisis
+### 3.3 Criterios, ponderación y análisis
 
 ##### 3.3.1 Criterios ponderados (los que sí distinguen)
  
@@ -335,76 +269,36 @@ precio de lista).
 | Osano | 3 | 5 | 1 | 1 | 4 | **2,65** |
 | Eramba | 1 | 1 | **5** | 1 | 1 | **1,60** |
 
-##### 3.3.3 Lectura de la matriz
+##### 3.3.3 Lectura de la matriz y recomendación
 
-La herramienta mejor evaluada es **Microsoft Purview, con 3,70 puntos**, y gana por una vía
-que conviene explicitar porque no es la esperable: **no es la más completa funcionalmente**.
-Puntúa 1 en gestión de consentimiento, el peor valor posible en un criterio que pesa 20 %, y
-aun así se impone. La razón es que es la única del universo evaluado que obtiene el máximo
-simultáneo en los dos criterios que concentran el 45 % de la ponderación —transparencia del
-precio y encaje con la arquitectura comprometida—, y ambos son criterios donde la mayoría de
-las alternativas puntúa el mínimo.
+La mejor evaluada es **Microsoft Purview, con 3,70 puntos**, y gana por una vía que conviene
+explicitar porque no es la esperable: **no es la más completa funcionalmente**. Puntúa 1 en
+gestión de consentimiento, el peor valor posible en un criterio que pesa 20 %, y aun así se
+impone, porque es la única que obtiene el máximo simultáneo en los dos criterios que
+concentran el 45 % de la ponderación: transparencia del precio y encaje con la arquitectura
+comprometida. El segundo lugar lo comparten OneTrust y Securiti.ai con 3,05; ambas son
+funcionalmente superiores —5 en descubrimiento y 5 en consentimiento— y pierden porque
+ninguna publica precio ni es nativa del ecosistema ya fijado. **La distancia entre 3,70 y
+3,05 no mide capacidad técnica: mide verificabilidad y costo de integración.** Eramba
+ilustra el límite por el otro extremo: única con precio íntegramente público, obtiene el peor
+total (1,60) porque puntúa el mínimo en descubrimiento, consentimiento y encaje, de modo que
+el ahorro de licencia se traslada íntegro a esfuerzo de operación propio.
 
-El segundo lugar lo comparten **OneTrust y Securiti.ai con 3,05**. Las dos son
-funcionalmente superiores a Purview: puntúan 5 en descubrimiento y 5 en consentimiento, es
-decir, cubren enteramente los dos criterios operativos. Pierden por los otros dos: ninguna
-publica precio y ninguna es nativa del ecosistema ya comprometido. La distancia entre 3,70 y
-3,05 no mide capacidad técnica, mide **verificabilidad y costo de integración**.
+La propuesta, sin embargo, **adopta CISO Assistant Pro**, y la razón está en el criterio que
+la matriz pondera más alto. Purview publica **por plan de licenciamiento**, no una tarifa
+autónoma: su partida dependería del plan Microsoft 365 o Azure que se contrate, y ese plan no
+está fijado. CISO Assistant Pro tiene **precio anual firme y público por ser software libre
+AGPLv3**, lo que permite presupuestarlo sin declarar un supuesto, y el punto 5 de las
+Indicaciones es categórico en que una cifra que no puede verificarse no entra en una
+estimación.
 
-El hallazgo más incómodo de la tabla del §3.2 no está en la matriz sino en una de sus
-columnas: **solo dos de las ocho herramientas publican precio**, Purview por plan de
-licenciamiento y Eramba por edición comunitaria. Las seis restantes operan exclusivamente
-por cotización. Esto no es un detalle de método: el punto 5 de las Indicaciones impide
-llevar al flujo de caja una cifra no verificable, de modo que **para seis de ocho
-alternativas el proyecto no podría presupuestar sin declarar un supuesto**. Que la
-transparencia del precio pese un 25 % no es una preferencia del equipo, es el reflejo de una
-restricción real del mercado GRC.
-
-Eramba ilustra el límite del criterio por el otro extremo. Es la única autoalojada y la única
-con precio íntegramente público, lo que le da el máximo en transparencia, pero obtiene 1,60
-—el peor total— porque puntúa el mínimo en descubrimiento, consentimiento y encaje. Sirve
-para mostrar que el eje construir frente a comprar fue evaluado y descartado con criterio, no
-omitido: en este caso el ahorro de licencia se traslada íntegro a esfuerzo de operación
-propio, que es precisamente lo que el proyecto no tiene holgura para absorber.
-
-##### 3.3.4 Recomendación y riesgo residual
-
-Dentro de las ocho alternativas comparadas, la mejor evaluada es **Microsoft Purview**. La
-propuesta, sin embargo, **adopta CISO Assistant Pro**, y la razón está en el propio criterio
-que la matriz pondera con el mayor peso junto al descubrimiento: la transparencia del precio.
-
-La columna «Precio publicado» del §3.2 registra que Purview publica **por plan de
-licenciamiento**, no una tarifa autónoma. Llevado al flujo de caja, eso significa que la
-partida dependería del plan Microsoft 365 o Azure que se contrate, y ese plan no está fijado
-en la propuesta. **CISO Assistant Pro, en cambio, tiene precio anual firme y público por ser
-software libre bajo licencia AGPLv3**, lo que permite presupuestarlo sin declarar un supuesto.
-El punto 5 de las Indicaciones es categórico: una cifra que no puede verificarse no entra en
-una estimación.
-
-Corresponde declarar con la misma franqueza las dos consecuencias de esa decisión.
-
-La primera es que **CISO Assistant Pro no formó parte del universo de ocho herramientas
-comparadas**. Entró después, por la vía del modelo económico, cuando se constató que seis de
-las ocho operaban solo por cotización. No se le asignó puntuación porque no fue evaluada
-contra los cinco criterios, y presentarla como ganadora de una matriz que no corrió sería
-falsear la comparación. Lo que la matriz sí acredita es el hallazgo que la hizo necesaria:
-**en el mercado GRC la verificabilidad del precio es escasa**, y eso reordena la decisión.
-
-La segunda es que **ninguna de las dos resuelve la gestión de consentimiento**. Purview
-puntúa 1 en ese criterio y CISO Assistant Pro es un registro de cumplimiento y evidencia de
-controles, no una plataforma de consentimiento. El Caso 10 lo necesita de forma concreta para
-los 258 conductores externos y los 148 transportistas subcontratados, que no tienen vínculo
-laboral con Curimón y cuya base de licitud es el consentimiento revocable. Ese tramo se
-resuelve en la arquitectura del proyecto, mediante el módulo de consentimiento de la app móvil
-del conductor, y no por la vía de la herramienta GRC.
-
-El equipo asume la decisión de forma deliberada: entre una plataforma mejor puntuada cuyo
-costo no puede sostenerse ante el punto 5 y una de precio firme que cubre el registro de
-cumplimiento y la evidencia ISO/IEC 27001, opta por la segunda y deja declarada tanto la
-brecha de consentimiento como el hecho de que la herramienta adoptada no fue parte de la
-comparación original.
-
----
+Dos consecuencias se declaran con la misma franqueza. La primera: **CISO Assistant Pro no
+formó parte del universo de ocho comparadas**; entró por la vía del modelo económico al
+constatarse que seis de las ocho operan solo por cotización, y no se le asigna puntuación de
+una matriz que no corrió. La segunda: **ninguna de las dos resuelve la gestión de
+consentimiento**, que el caso necesita para los 258 conductores externos y los 148
+transportistas sin vínculo laboral; ese tramo se resuelve en el módulo de consentimiento de
+la app móvil del conductor, no por la vía de la herramienta GRC.
 
 ### 4. Cierre del subdocumento
 
@@ -420,55 +314,39 @@ Este capítulo entrega tres partidas al modelo económico. La primera es la **su
 
 El dimensionamiento financiero del cumplimiento normativo para **Transportes Curimón S.A.** traduce las exigencias de la **Ley N° 21.719** (Protección de Datos Personales, que reforma sustantivamente la Ley N° 19.628), la **Ley N° 21.663** (Ley Marco de Ciberseguridad), la doctrina vinculante de la Dirección del Trabajo (DT) y el estándar internacional **ISO/IEC 27001:2022** en un presupuesto riguroso de Costo Total de Propiedad (*Total Cost of Ownership* - TCO).
 
-Toda formulación cuantitativa se gobierna bajo la **volumetría inmutable del Caso 10**, congelada en el Baseline del Día 2:
-1. **Flota vehicular gestionada:** **374 camiones** (340 con telemetría GPS previa distribuida en 3 plataformas incompatibles y 34 camiones subcontratados integrados vía app móvil).
-2. **Conductores totales:** **454 conductores**, clasificados legalmente en:
-   - **196 conductores propios (de planta):** Sujetos al Código del Trabajo y protegidos por los Dictámenes de la Dirección del Trabajo **Ord. N° 569/020** y **Ord. N° 2328/130**, que prohíben la geolocalización fuera de la jornada laboral y consagran el derecho a la desconexión telemática al finalizar el turno.
-   - **258 conductores externos (subcontratados):** Sin vínculo laboral de subordinación con Curimón; su tratamiento de localización GPS y jornada exige consentimiento expreso, granular y revocable (RT-16.30 / Ley 21.719, Art. 12).
-3. **Empresas transportistas asociadas:** **148 empresas externas** (62 pymes consolidadas sujetas a acuerdos de encargo de tratamiento DPA marco y 86 dueños-choferes independientes con anexos contractuales directos).
-4. **Clientes corporativos:** **84 empresas mandantes**, con perfiles de acceso telemático restringido (RT-16.09) y acuerdos de nivel de servicio que imponen avisos perentorios ante incidentes ($<2\text{ h}$ incidentes críticos, $<24\text{ h}$ brechas de privacidad, RT-11.18 y RT-11.19).
-5. **Operación transfronteriza:** **~1.900 viajes anuales a Mendoza (Argentina)**, configurando transferencia internacional de datos personales sujeta a Cláusulas Contractuales Tipo (SCC) bajo el Art. 27 de la Ley 21.719 y concordancia con la Ley 25.326 de Argentina (RT-05.23).
-6. **Requisitos técnicos de seguridad:** Cifrado a nivel de campo mandatorio para datos personales de choferes externos, tarifas de los 148 transportistas y telemetría (RT-11.10).
-
-Asimismo, este modelo adopta las siguientes **cinco decisiones de blindaje anti-Comunicado 9**:
-* **Subsanación de Azure Key Vault:** Se elimina la falsa presunción de costo cero; se modela *Key Vault Premium* (claves individuales RSA 2048 respaldadas por HSM para los 686 titulares a $\text{USD } 1\text{/clave/mes} = 725,4\text{ UF}$) como baseline, y el clúster *Managed HSM Standard B1* ($2.680,6\text{ UF}$) en la sensibilidad.
-* **Sincronización con Formulario E-25:** Anclaje estricto a hitos contractuales (**H2** Mes 4, **H3** Mes 6, **H5** Mes 12, **H7** Mes 16 y Mes 20).
-* **Bandas Salariales Formulario E-26:** Homologación explícita de perfiles (DPO $\to$ Jefe de Proyecto, CISO $\to$ Encargado Seguridad TI, Analista $\to$ QA Experto, Asesor Legal $\to$ Director de Proyecto proxy).
-* **Cotizaciones Formales:** Auditoría inicial ISO 27001 por 14 días-auditor bajo directriz IAF MD 5 ($387,5\text{ UF}$ inicial + $337,5\text{ UF}$ vigilancia) y póliza Cyber Insurance Chubb ($90,0\text{ UF/año}$).
-* **Racionalidad Financiera:** Demostración cuantitativa bajo el modelo Gordon-Loeb ($\le 37\%$ de la pérdida esperada), $\text{RoSI} = 450,51\%$ y probabilidad de indiferencia $p^* = 3,05\%$ anual.
+Toda formulación cuantitativa se ancla a la **volumetría congelada del Caso 10**: 374
+camiones —340 con telemetría previa en tres plataformas incompatibles y 34 subcontratados
+vía app móvil—, **454 conductores** repartidos en 196 de planta, sujetos al Código del
+Trabajo y a los Dictámenes Ord. N° 569/020 y Ord. N° 2328/130 de la Dirección del Trabajo, y
+258 externos sin vínculo de subordinación, cuyo monitoreo exige consentimiento explícito y
+revocable; **148 empresas transportistas** (62 pymes con DPA marco y 86 dueños-choferes con
+anexo simplificado), **84 clientes corporativos** con acceso telemático restringido (RT-16.09)
+y avisos contractuales perentorios, y **~1.900 viajes anuales a Mendoza**, que configuran
+transferencia internacional bajo Cláusulas Contractuales Tipo.
 
 ---
 
-### 2. Matriz de Obligaciones Normativas Aplicables (Sección 3.2 del Informe)
+### 2. Matriz de obligaciones normativas aplicables
 
-#### 3.2 Matriz de Obligaciones Aplicables al Caso Curimón S.A.
+Del cruce entre el marco legal y la volumetría del Caso 10 resultan **trece obligaciones
+exigibles**, cada una con su actividad, rol responsable, plazo y partida de costo. La matriz
+completa constituye el **Anexo A**; el cuerpo recoge las cinco de mayor impacto
+presupuestario, que concentran el 97 % del gasto.
 
-La Tabla 3.1 traduce los mandatos de la Ley 21.719 (Protección de Datos Personales), la Ley 21.663 (Marco de Ciberseguridad), la doctrina de la Dirección del Trabajo y las Bases Técnicas del Caso 10 en actividades operativas de ingeniería, asignando el rol profesional según el Formulario E-26, el hito contractual de exigibilidad según el Formulario E-25 y la partida de financiamiento respectiva:
+| # | Obligación | Actividad | Rol | Plazo | Costo |
+| :-: | :--- | :--- | :--- | :--- | ---: |
+| **10** | Reporte de incidentes al CSIRT (Ley 21.663 art. 9; D.S. 295/2024) | Guardia pasiva 24/7: alerta temprana en $<3$ h, actualización en 72 h e informe pericial en 15 d | CISO | Mes 16 a 56 | **2.688,0 UF** |
+| **—** | Gobernanza y prevención (DPO y modelo de prevención de infracciones) | Dirección autónoma de protección de datos y cuatro auditorías anuales del modelo | DPO y QA | Continuo, 56 meses | **2.326,0 UF** |
+| **—** | Soporte operativo transversal y transferencia de riesgo | Soporte continuo QA y legal, más póliza corporativa de ciberriesgo | QA, Legal y Broker | Continuo, 56 meses | **1.311,0 UF** |
+| **11** | SGSI y medidas permanentes (Ley 21.663 art. 7; RT-11.05) | Controles ISO 27001 trazables en plataforma GRC, certificación inicial y vigilancia | CISO y QA | Desde el mes 4 | **1.005,0 UF** |
+| **5** | Seguridad y cifrado (Ley 21.719 art. 14 quinquies; RT-11.10) | Cifrado a nivel de campo en Azure Chile Central, 686 claves RSA en Key Vault y borrado criptográfico | CISO y Arq. Cloud | Desde el mes 6 | **907,16 UF** |
 
-**Tabla 3.1:** Matriz de obligaciones aplicables a la plataforma de Transportes Curimón S.A.
-
-| N.º | Obligación y Fuente Legal | Actividad de Ingeniería | Rol Resp. (E-26) | Hito / Plazo (E-25) | Partida Presupuestaria | Costo Estimado (UF) |
-| :---: | :--- | :--- | :--- | :--- | :--- | :---: |
-| **1** | **Base de licitud choferes externos** (Ley 21.719 arts. 12-13; Bases cap. 12) | Registro de consentimiento granular y revocable para 258 choferes en app móvil (RT-17.01) | DPO y Analista QA | Hito H2 (Mes 4) | Roles (CAPEX/OPEX) | **45,0 UF** |
-| **2** | **Evaluación de impacto EIPD** (Ley 21.719 art. 15 ter) | EIPD integral de telemetría GPS continua, bloqueo de despacho y modelo de fatiga | DPO, CISO y Asesor Legal | Antes de H5 (Mes 12) | Roles y Asesoría Legal | **80,0 UF** |
-| **3** | **Decisiones automatizadas** (Ley 21.719 art. 8 bis) | Procedimiento de explicabilidad algorítmica y revisión humana para bloqueo de despacho | DPO y Operaciones Curimón | Antes de H7 (Mes 16) | Roles Operativos | *Absorbido en DPO* |
-| **4** | **Tratamiento de datos sensibles** (Ley 21.719 arts. 2 g y 16) | Consentimiento expreso para biometría en cabina y alternativa no biométrica por credencial | DPO | Hito H2 (Mes 4) | Roles (Diseño App) | *Absorbido en App* |
-| **5** | **Seguridad y cifrado** (Ley 21.719 art. 14 quinquies; RT-11.10) | Cifrado a nivel de campo en Azure Chile Central, 686 claves RSA Key Vault y borrado criptográfico | CISO y Arq. Cloud | Desde H3 (Mes 6) | Criptografía / Cloud | **907,16 UF** *(120 UF ing. + 787,16 UF claves)* |
-| **6** | **Contratos de encargo** (Ley 21.719 art. 15 bis) | Redacción y firma de 148 contratos DPA marco y anexos de chofer-dueño con transportistas | Asesor Legal TIC | Hito H2 a H3 (Meses 4-6) | Asesoría Legal Externa | **95,0 UF** |
-| **7** | **Transferencia internacional** (Ley 21.719 arts. 27-28; RT-05.23) | Cláusulas Contractuales Tipo (SCC) para réplica en East US 2 y ~1.900 cruces a Mendoza | Asesor Legal y DPO | Previo a H5 (Mes 12) | Asesoría Legal Externa | **35,0 UF** |
-| **8** | **Derechos de los titulares** (Ley 21.719 arts. 8-11) | Módulo y canal de atención de derechos ARCO con respuesta perentoria en $\le 30$ días | DPO y Soporte QA | Meses 21 a 56 (Régimen) | Roles y Soporte QA | *Absorbido en DPO/QA* |
-| **9** | **Vulneraciones de seguridad** (Ley 21.719 art. 14 sexies) | Protocolo de notificación a la Agencia PDP y a titulares sensibles sin dilaciones indebidas | CISO y DPO | Operación continua | Roles (Guardia 24/7) | *Absorbido en CISO* |
-| **10** | **Reporte de incidentes CSIRT** (Ley 21.663 art. 9; D.S. 295) | Alerta temprana al CSIRT en $<3\text{ h}$, actualización en $72\text{ h}$ e informe pericial en $15\text{ d}$ | CISO | Hito H7 (Mes 16 a 56) | Roles (Guardia CISO) | **2.688,0 UF** *(Guardia pasiva)* |
-| **11** | **SGSI y medidas permanentes** (Ley 21.663 art. 7; RT-11.05) | Implementación de controles ISO 27001 trazables en SaaS GRC CISO Assistant Pro | CISO y Analista QA | Desde H2 (Mes 4) | Plataforma GRC y Certif. | **1.005,0 UF** *(280 GRC + 725 Certif)* |
-| **12** | **Avisos contractuales a clientes** (Bases RT-11.18 y RT-11.19) | Notificación a 84 clientes: incidentes críticos en $<2\text{ h}$ y brechas de datos en $<24\text{ h}$ | CISO | Hito H7 a Mes 56 | Roles (Guardia CISO) | *Absorbido en CISO* |
-| **13** | **Control de jornada conductores propios** (Dirección del Trabajo Ord. 569) | Disociación y desconexión de geolocalización GPS fuera de jornada para 196 choferes | DPO y RRHH Curimón | Hito H7 (Mes 16) | Roles Operativos | *Absorbido en DPO* |
-| — | **Gobernanza general y prevención** (Art. 48 DPO y Art. 49 Modelo de Prevención) | Dirección autónoma de protección de datos y 4 auditorías anuales del modelo de prevención | DPO y QA Experto | Continuo 56 meses | Roles y Gobernanza | **2.326,0 UF** *(2.016 DPO + 310 Art. 49)* |
-| — | **Soporte operativo transversal y cyber risk** | Soporte técnico continuo de QA/Legal y póliza de transferencia de riesgo (Chubb) | QA, Legal y Broker | Continuo 56 meses | Soporte y Seguro | **1.311,0 UF** *(891 Soporte + 420 Póliza)* |
-| **TOTAL** | **Presupuesto Consolidado de Cumplimiento** | **Cobertura 100% de exigencias técnico-legales** | **Equipo AudIT** | **56 Meses** | **TCO Integral** | **8.492,16 UF** ($339.686.400 CLP) |
-
-*Fuente:* Elaboración propia basada en las Bases Técnicas del Caso 10, Bases Administrativas y leyes 21.719 y 21.663.
-
----
+Las ocho restantes —base de licitud de los 258 choferes externos, evaluación de impacto,
+decisiones automatizadas, datos sensibles, contratos de encargo con los 148 transportistas,
+transferencia internacional, derechos de los titulares y avisos contractuales a los 84
+clientes— suman **255,0 UF** y se detallan en el Anexo A. Cuatro de ellas no generan costo
+marginal porque quedan absorbidas en las partidas de dedicación ya presupuestadas, lo que se
+explicita en cada fila.
 
 #### 3.3 Impacto Económico del Cumplimiento, Flujo de Caja y Justificación del Riesgo
 
@@ -509,18 +387,7 @@ Las dos variables de mayor impacto en la estructura presupuestaria son la tarifa
 1. **Sensibilidad por Bandas E-26:** Variando las tarifas de los roles entre el límite inferior y superior del Formulario E-26, el presupuesto fluctúa entre **6.812,0 UF** (escenario de costo mínimo) y **10.150,0 UF** (escenario de tarifa máxima de mercado).
 2. **Sensibilidad Criptográfica (Hardware dedicado vs. Claves individuales):** Si la arquitectura adopta un clúster exclusivo de **Managed HSM Standard B1** ($\text{USD } 3,20\text{/h}$ de lista) en lugar de claves protegidas por HSM en Key Vault Premium ($\text{USD } 1\text{/clave/mes}$), el costo de gestión de claves se incrementa de $787,16\text{ UF}$ a $2.680,6\text{ UF}$, situando el presupuesto total en **10.385,6 UF** ($VAN = 8.125,4\text{ UF}$).
 
-#### 4.2 Matriz de Sensibilidad Bidimensional Cruzada ($3 \times 3$)
-Para contrastar el impacto operacional directo sobre el baseline optimizado de gobernanza y licenciamiento, se complementa con una matriz de sensibilidad bidimensional $3 \times 3$ evaluando fluctuaciones conjuntas del **Retainer mensual DPO ($V_1$, $\pm 20\%$)** y la **Plataforma SaaS GRC ($V_2$, $\pm 25\%$)**:
-
-| Escenario de Sensibilidad | DPO Retainer ($V_1$) | Plataforma SaaS GRC ($V_2$) | TCO Final (UF) | TCO Final (CLP) | Variación vs Base |
-| :--- | :---: | :---: | :---: | :---: | :---: |
-| **Escenario Optimista (-20% / -25%)** | 1.612,80 UF (DPO 1,60 UF/h) | 210,00 UF (GRC con desc. multianual) | **8.018,96 UF** | $320.758.400 CLP | **$-5,57\%$** ($-473,20$ UF) |
-| **Escenario Base (Línea Central)** | **2.016,00 UF (DPO 2,00 UF/h)** | **280,00 UF (CISO Assistant Pro)** | **8.492,16 UF** | **$339.686.400 CLP** | **Baseline (0,00%)** |
-| **Escenario Pesimista (+20% / +25%)** | 2.419,20 UF (DPO 2,40 UF/h) | 350,00 UF (GRC con módulos extra) | **8.965,36 UF** | $358.614.400 CLP | **$+5,57\%$** ($+473,20$ UF) |
-
-Asimismo, la modelación de los cuadrantes asimétricos cruzados confirma la alta resiliencia y capacidad de absorción del modelo presupuestario: el **Escenario Asimétrico A** (DPO $+20\%$ / GRC $-25\%$) arroja un TCO de **8.825,36 UF** ($+3,92\%$), mientras que el **Escenario Asimétrico B** (DPO $-20\%$ / GRC $+25\%$) sitúa el TCO en **8.158,56 UF** ($-3,92\%$). Esto demuestra que las variaciones inversas entre capital humano y licenciamiento tecnológico se amortiguan mutuamente dentro de una banda estrecha de $\pm 5,57\%$, blindando la viabilidad económica del contrato frente a desviaciones operacionales.
-
----
+Sobre esa base, la variación conjunta del retainer del DPO ($\pm 20\,\%$) y de la plataforma GRC ($\pm 25\,\%$) mueve el presupuesto dentro de una banda de $\pm 5{,}57\,\%$ —entre 8.018,96 y 8.965,36 UF—, lo que confirma que ninguna de las dos variables de mayor incertidumbre compromete la viabilidad económica del contrato.
 
 ### 5. Racionalidad Financiera: Regla de Gordon-Loeb, RoSI y Umbral de Indiferencia
 Bajo la Ley 21.719 (Art. 46), el régimen para infracciones gravísimas contempla multas de hasta **20.000 UTM** ($35.000\text{ UF}$ o $\$1.400\text{ millones de CLP}$), a las cuales se suma la potestad punitiva de la Ley 21.663 (hasta 10.000 UTM) y los costos de remediación forense DFIR, totalizando una exposición contingente agregada de **55.000 UF** ($\$2.200\text{ millones de CLP}$).
@@ -540,12 +407,6 @@ Basta con que la probabilidad anual de sufrir un incidente sancionable supere el
 ---
 
 # 4. Arquitectura de cumplimiento y aplicación al Caso 10
-
-### Licitación TFEP-01/2026 · Caso 10: Transportes Curimón S.A. · Empresa Consultora audIT
-
-**Autor:** Martín (Persona 5 · *Compliance Architecture Designer & Case Integrator*)  
-
----
 
 #### 1. Delimitación de Fronteras de Responsabilidad y Modelo Multicapa
 
@@ -613,24 +474,9 @@ El análisis de flujos transfronterizos bajo los **Artículos 27 y 28 de la Ley 
 
 ---
 
-#### 4. Vínculo con la Propuesta Técnico-Económica (Caso Curimón S.A.)
+#### 4. Vínculo con la propuesta técnico-económica
 
-Dando estricto cumplimiento a la **Ficha Oficial TI-12**, el cumplimiento normativo deja de ser un costo oculto y se formaliza como una partida estructural de la propuesta:
-
-1. **Trazabilidad con la Estructura de Desglose de Trabajo (EDT):**
-   * *EDT 1.3:* Elaboración y validación del RAT corporativo en OpenMetadata (Meses 1-4).
-   * *EDT 2.4:* Desarrollo del Módulo de Consentimiento Móvil y Enclavamiento Cinético en `audIT Mobile` (Meses 4-7).
-   * *EDT 3.4:* Implementación del Cifrado a Nivel de Campo FLE con Azure Key Vault HSM (Meses 3-6).
-   * *EDT 7.2:* Marcha blanca operacional con conductores reales, EIPD y pruebas de reporte CSIRT $\le 3\text{ h}$ (Meses 13-15).
-2. **Hitos Contractuales en la Carta Gantt:**
-   * *Mes 4 (H2):* RAT formalizado y consentimientos digitales iniciales.
-   * *Mes 6 (H3):* Cifrado RT-11.10 operativo y contratos DPA suscritos con las 148 pymes transportistas.
-   * *Mes 12 (H5):* Aprobación definitiva de la EIPD y formalización de Cláusulas Contractuales Tipo para Mendoza y EE.UU.
-   * *Mes 20:* Certificación de conformidad del SGSI (ISO/IEC 27001 Fases 1+2) previo al paso a producción comercial (Mes 21).
-3. **Calce con Perfiles del Formulario E-26:** Las actividades se valorizan con precisión biunívoca en el presupuesto de Persona 4, asignando roles auditados del Formulario E-26: CISO (Encargado Seguridad TI, Línea 2479 a 2,0 UF/h), DPO (Proxy Jefe de Proyecto, Línea 2467 a 2,0 UF/h), Analista QA y Cumplimiento (Línea 2484 a 1,0 UF/h) y Asesor Legal TIC (Línea 2488 a 2,0 UF/h).
-4. **Respaldo de Criterios de Aceptación:** Garantiza el **Criterio 4** (cadena inalterable de custodia SHA-256 en WORM), el **Criterio 11** (recupero de \$241,4 millones en sobreestadías objetadas mediante geocercas satelitales auditadas) y el requisito **RF-014** (emisión de Documentos Electrónicos de Transporte sin cobertura celular).
-
----
+Cada control descrito se ancla a un paquete de trabajo de la EDT y a un hito de pago del Formulario E-25, y se valoriza con los perfiles auditados del Formulario E-26 —CISO, DPO, Analista QA y Asesor Legal TIC— que sostienen el modelo del capítulo 3. La correspondencia es biunívoca: **no hay control sin partida ni partida sin control**, lo que permite que el cumplimiento normativo entre al flujo de caja como obligación contractual trazable y no como una provisión genérica.
 
 ## Síntesis de integración con el Caso 10
 
