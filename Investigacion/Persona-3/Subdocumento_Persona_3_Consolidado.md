@@ -149,14 +149,14 @@ categoría.
 | Descubrimiento de datos personales | 25 % | Curimón no tiene inventario de tratamientos. Sin esto, el registro de actividades se levanta a mano sobre la base operativa completa | Columna «Descubrimiento de datos» |
 | Gestión de consentimiento | 20 % | 258 conductores externos y 148 transportistas generan solicitudes de acceso y supresión que alguien debe resolver en plazo | Columna «Consentimiento» |
 | Transparencia del precio | 25 % | El punto 5 de las Indicaciones impide llevar al flujo de caja una cifra no verificable. Solo 2 de 8 publican precio real | Columna «Precio publicado» |
-| Encaje con la arquitectura comprometida | 20 % | La propuesta ya fijó Azure y Key Vault con HSM en el Informe 1. Una herramienta nativa del mismo ecosistema reduce costo de integración | Solo aplica para azure |
-| Esfuerzo de operación | 10 % | La única autoalojada del conjunto es Eramba. Ahí el esfuerzo de operación es el criterio que decide si conviene frente a comprar SaaS | Se infiere del modelo de despliegue, no está como columna en tu tabla actual |
+| Encaje con la arquitectura comprometida | 20 % | La propuesta ya fijó Azure y Key Vault con HSM en el Informe 1. Una herramienta nativa del mismo ecosistema reduce costo de integración | Modelo de despliegue y región declarada por el proveedor |
+| Esfuerzo de operación | 10 % | La única autoalojada del conjunto es Eramba. Ahí el esfuerzo de operación es el criterio que decide si conviene frente a comprar SaaS | Inferido del modelo de despliegue; no figura como columna en la ficha del §3.2 |
  
-Suma: 100 %. Si al reunirse con P2 deciden que la transparencia del precio pesa menos porque de todas formas
-van a cotizar, bájenla y suban encaje con arquitectura, que es el criterio con más peso económico real en este
-caso.
+Suma: 100 %. La ponderación es una decisión del equipo y admite revisión: si se asume que toda contratación
+pasará igualmente por cotización, el 25 % de transparencia del precio pierde poder discriminante y se traslada
+al encaje con la arquitectura, que es el criterio de mayor efecto económico en este caso.
 
-### 2. Matriz de puntuación con tus datos
+#### 2. Matriz de puntuación
  
 Escala 1 a 5. Regla de conversión: Sí = 5, Parcial o «Demo» = 3, No = 1. Precio: publicado = 5, solo
 cotización = 1 (sin matices, porque el punto 5 trata ambos casos igual: si no hay precio de lista, no hay
