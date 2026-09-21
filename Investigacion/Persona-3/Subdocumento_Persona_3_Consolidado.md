@@ -175,11 +175,63 @@ precio de lista).
 | Osano | 3 | 5 | 1 | 1 | 4 | **2,65** |
 | Eramba | 1 | 1 | **5** | 1 | 1 | **1,60** |
 
+#### 3.3.3 Lectura de la matriz
+
+La herramienta mejor evaluada es **Microsoft Purview, con 3,70 puntos**, y gana por una vía
+que conviene explicitar porque no es la esperable: **no es la más completa funcionalmente**.
+Puntúa 1 en gestión de consentimiento, el peor valor posible en un criterio que pesa 20 %, y
+aun así se impone. La razón es que es la única del universo evaluado que obtiene el máximo
+simultáneo en los dos criterios que concentran el 45 % de la ponderación —transparencia del
+precio y encaje con la arquitectura comprometida—, y ambos son criterios donde la mayoría de
+las alternativas puntúa el mínimo.
+
+El segundo lugar lo comparten **OneTrust y Securiti.ai con 3,05**. Las dos son
+funcionalmente superiores a Purview: puntúan 5 en descubrimiento y 5 en consentimiento, es
+decir, cubren enteramente los dos criterios operativos. Pierden por los otros dos: ninguna
+publica precio y ninguna es nativa del ecosistema ya comprometido. La distancia entre 3,70 y
+3,05 no mide capacidad técnica, mide **verificabilidad y costo de integración**.
+
+El hallazgo más incómodo de la tabla del §3.2 no está en la matriz sino en una de sus
+columnas: **solo dos de las ocho herramientas publican precio**, Purview por plan de
+licenciamiento y Eramba por edición comunitaria. Las seis restantes operan exclusivamente
+por cotización. Esto no es un detalle de método: el punto 5 de las Indicaciones impide
+llevar al flujo de caja una cifra no verificable, de modo que **para seis de ocho
+alternativas el proyecto no podría presupuestar sin declarar un supuesto**. Que la
+transparencia del precio pese un 25 % no es una preferencia del equipo, es el reflejo de una
+restricción real del mercado GRC.
+
+Eramba ilustra el límite del criterio por el otro extremo. Es la única autoalojada y la única
+con precio íntegramente público, lo que le da el máximo en transparencia, pero obtiene 1,60
+—el peor total— porque puntúa el mínimo en descubrimiento, consentimiento y encaje. Sirve
+para mostrar que el eje construir frente a comprar fue evaluado y descartado con criterio, no
+omitido: en este caso el ahorro de licencia se traslada íntegro a esfuerzo de operación
+propio, que es precisamente lo que el proyecto no tiene holgura para absorber.
+
+#### 3.3.4 Recomendación y riesgo residual
+
+**Se recomienda Microsoft Purview como plataforma base de cumplimiento**, por las dos
+razones que la matriz aísla: es la única cuyo costo puede llevarse al flujo de caja con una
+cifra verificable, y es nativa de la región Azure Chile Central que la propuesta ya
+comprometió, lo que evita una integración adicional entre la plataforma de cumplimiento y la
+de datos.
+
+La recomendación arrastra un riesgo que hay que declarar y no disimular: **Purview no
+resuelve la gestión de consentimiento**, y el Caso 10 la necesita de forma concreta para los
+258 conductores externos y los 148 transportistas subcontratados, que no tienen vínculo
+laboral con Curimón y cuya base de licitud es el consentimiento revocable. Ese tramo no queda
+cubierto por la herramienta recomendada y debe resolverse por separado, ya sea con el módulo
+de consentimiento en la app móvil que contempla la arquitectura del proyecto o con una
+segunda pieza especializada.
+
+El equipo asume esa decisión de forma deliberada: prefiere una plataforma verificable en
+precio y nativa en arquitectura, con una brecha funcional identificada y acotada, antes que
+una suite completa cuyo costo no podría sostenerse ante el punto 5 de las Indicaciones.
+
 ---
 
 ## 4. Cierre del subdocumento
 
-En este capítulo se crean tres puntos que se deben abordar. La licencia anual de la herramienta recomendada, las horas de revisión legal para las cláusulas de transferencia internacional, y la auditoría de certificación ISO/IEC 27001:2022 con su mantención a tres años. Las dos últimas se rigen por cotización, de modo que ingresan al flujo de caja como supuesto declarado.
+Este capítulo entrega tres partidas al modelo económico. La primera es la **licencia anual de Microsoft Purview**, única de las ocho alternativas evaluadas con precio publicado y por tanto la única que ingresa al flujo de caja con cifra verificable. La segunda son las **horas de revisión legal** para las cláusulas de transferencia internacional, necesarias mientras la Agencia no publique cláusulas modelo nacionales y la propuesta opere con instrumentos basados en el capítulo V del RGPD. La tercera es la **auditoría de certificación ISO/IEC 27001:2022** con su mantención a tres años. Las dos últimas se rigen por cotización y ninguna certificadora que opera en Chile publica precio de lista, de modo que ingresan al flujo de caja como supuesto declarado, conforme al punto 5 de las Indicaciones.
 
 ---
 
