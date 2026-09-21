@@ -47,7 +47,7 @@ flowchart TB
         end
 
         subgraph CRIPTO["Bóveda Criptográfica y Almacenamiento (RT-11.10)"]
-            KMS["Azure Key Vault Managed HSM<br>• FIPS 140-2 Nivel 3<br>• Llave KEK por Titular (Borrado Cripto)"]
+            KMS["Azure Key Vault Premium<br>• Claves RSA respaldadas por HSM<br>• Llave KEK por Titular (Borrado Cripto)"]
             BD_TRANS["PostgreSQL 16 Multi-AZ<br>(Cifrado a Nivel de Campo FLE)"]
             BD_TIME["TimescaleDB (Telemetría)<br>(Datos agregados y pseudoanonimizados)"]
             WORM["Azure Blob Storage WORM<br>(Logs inmutables SHA-256)"]
@@ -95,7 +95,7 @@ flowchart TB
 ### 3.2 Controles Criptográficos y Borrado Criptográfico (RT-11.10)
 Conforme a la exigencia **RT-11.10 de las Bases Técnicas Transversales**, la plataforma rechaza el cifrado genérico de disco completo (*Transparent Data Encryption* - TDE) por considerarlo insuficiente para aislar accesos internos indebidos. En su lugar se implementa **Cifrado a Nivel de Campo (Field-Level Encryption - FLE)**:
 * **Mecanismo:** Las columnas sensibles (`rut_conductor`, `nombre`, `coordenadas_gps`, `tarifa_pactada`) se cifran en el cliente de aplicación antes de enviarse al motor de base de datos PostgreSQL 16 mediante el algoritmo simétrico **AES-256-GCM**.
-* **Gestión de Llaves en Nube (Azure Key Vault Managed HSM):** Las llaves maestras de cifrado de llaves (KEK) residen en módulos HSM dedicados con certificación **FIPS 140-2 Nivel 3** desplegados en la región Azure Chile Central. Ninguna llave privada reside en memoria de disco sin cifrar.
+* **Gestión de Llaves en Nube (Azure Key Vault Premium):** Las llaves maestras de cifrado de llaves (KEK) residen en módulos **respaldados por HSM** desplegados en la región Azure Chile Central. Ninguna llave privada reside en memoria de disco sin cifrar.
 * **Borrado Criptográfico por Titular (Arts. 7 y 8 ter Ley N.º 19.628 reformada por Ley 21.719):** Cada uno de los 454 conductores y 148 transportistas dispone de una llave criptográfica única de derivación. Cuando un titular ejerce su derecho de supresión/cancelación (Art. 7) o bloqueo temporal (Art. 8 ter) y la ley laboral exige conservar los registros históricos por 5 años (pero impidiendo su reidentificación), el sistema destruye la llave en el HSM, convirtiendo los datos personales almacenados en texto cifrado irrecuperable (pseudoanonimización irreversible).
 
 ### 3.3 Protocolos de Notificación de Incidentes en Tres Canales

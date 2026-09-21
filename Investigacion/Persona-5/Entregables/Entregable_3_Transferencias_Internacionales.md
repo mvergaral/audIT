@@ -53,6 +53,6 @@ El Caso 10 documenta **~1.900 cruces internacionales al año** a través del pas
 
 | Proveedor Cloud | Región Primaria en Chile | Modelo de HSM Dedicado en Chile | Cumplimiento ISO/IEC 27018 | Compatibilidad Caso Curimón |
 | :--- | :--- | :--- | :---: | :--- |
-| **Microsoft Azure (Seleccionado)** | **Chile Central** (Santiago, 3 Zonas Multi-AZ operativas) | **Azure Key Vault Managed HSM** (FIPS 140-2 Nivel 3 local) | **Sí** (Acreditado auditoría BSI) | **Óptima:** Coherente 100% con Subdoc 4 y Subdoc 5 de audIT. |
+| **Microsoft Azure (Seleccionado)** | **Chile Central** (Santiago, 3 Zonas Multi-AZ operativas) | **Azure Key Vault Premium** (claves RSA respaldadas por HSM, región local) | **Sí** (Acreditado auditoría BSI) | **Óptima:** Coherente 100% con Subdoc 4 y Subdoc 5 de audIT. |
 | **Amazon Web Services (AWS)** | Local Zone Santiago / sa-east-1 (São Paulo) | CloudHSM (solo en Brasil; KMS multitenant en Chile) | Sí (Acreditado) | Subóptima: Requiere transferir llaves maestras a Brasil o EE.UU. |
 | **Google Cloud Platform (GCP)** | southamerica-west1 (Santiago, 3 Zonas) | Cloud KMS / Cloud HSM local | Sí (Acreditado) | Descartada: Mayor costo en enlace privado ExpressRoute vs terminales. |

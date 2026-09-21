@@ -31,7 +31,7 @@ La implantación de una plataforma digital de misión crítica para **Transporte
 │   │ Azure API Management (mTLS, WAF, Cuotas reconexión masiva)                           │  │
 │   ├──────────────────────────────────────────┬───────────────────────────────────────────┤  │
 │   │ LÓGICA DE NEGOCIO Y GOBERNANZA           │ CRIPTOGRAFÍA Y DATOS (RT-11.10)           │  │
-│   │ • Servicio Jornada (Art. 25 bis DT)      │ • Azure Key Vault Managed HSM (FIPS 140-3)│  │
+│   │ • Servicio Jornada (Art. 25 bis DT)      │ • Azure Key Vault Premium (claves RSA/HSM) │  │
 │   │ • Despacho Bloqueante (<= 30 s RT-09.01) │ • Cifrado de Campo FLE (AES-256-GCM)      │  │
 │   │ • Módulo RAT y Derechos ARCO (GRC)       │ • Llave individual por Titular (Borrado)  │  │
 │   │ • Revisión Humana Despacho (Art. 8 bis)  │ • Repositorio Inmutable WORM (SHA-256)    │  │
@@ -48,7 +48,7 @@ La implantación de una plataforma digital de misión crítica para **Transporte
 └─────────────────────────────────────────────────────────────────────────────────────────────┘
 ```
 
-*Explicación Integral de la Arquitectura:* La figura ilustra el ciclo de vida del dato desde su captura en terreno hasta su persistencia y fiscalización. En el borde izquierdo, los titulares interactúan mediante terminales diferenciados: la aplicación móvil recaba el consentimiento explícito de los 258 choferes externos antes de iniciar el flete, mientras que la unidad telemática de cabina almacena la cinemática en un búfer SQLite WAL de 8 GB con autonomía de hasta 288 horas (12 días, RT-10.05). La información ingresa a la región **Azure Chile Central** bajo terminación mTLS y protección WAF. En el núcleo transaccional, los datos sensibles no se guardan en texto plano: el requisito **RT-11.10** se satisface mediante Cifrado a Nivel de Campo (FLE) respaldado por **Azure Key Vault Managed HSM**, asignando una clave simétrica por titular para garantizar el derecho a la supresión y borrado criptográfico (Art. 7) y al bloqueo temporal (Art. 8 ter). Ante contingencias, la arquitectura activa canales diferenciados: replicación cifrada hacia **Azure East US 2** mediante Cláusulas Contractuales Tipo, y reporte perentorio de ciberincidentes al **CSIRT Nacional en menos de 3 horas** (Ley N.º 21.663, Art. 9 y D.S. N.º 295/2024).
+*Explicación Integral de la Arquitectura:* La figura ilustra el ciclo de vida del dato desde su captura en terreno hasta su persistencia y fiscalización. En el borde izquierdo, los titulares interactúan mediante terminales diferenciados: la aplicación móvil recaba el consentimiento explícito de los 258 choferes externos antes de iniciar el flete, mientras que la unidad telemática de cabina almacena la cinemática en un búfer SQLite WAL de 8 GB con autonomía de hasta 288 horas (12 días, RT-10.05). La información ingresa a la región **Azure Chile Central** bajo terminación mTLS y protección WAF. En el núcleo transaccional, los datos sensibles no se guardan en texto plano: el requisito **RT-11.10** se satisface mediante Cifrado a Nivel de Campo (FLE) respaldado por **Azure Key Vault Premium**, asignando una clave simétrica por titular para garantizar el derecho a la supresión y borrado criptográfico (Art. 7) y al bloqueo temporal (Art. 8 ter). Ante contingencias, la arquitectura activa canales diferenciados: replicación cifrada hacia **Azure East US 2** mediante Cláusulas Contractuales Tipo, y reporte perentorio de ciberincidentes al **CSIRT Nacional en menos de 3 horas** (Ley N.º 21.663, Art. 9 y D.S. N.º 295/2024).
 
 ---
 
