@@ -52,3 +52,14 @@ En conformidad con las exigencias de verificación del curso:
 1. **Bitácora Exhaustiva de Prompts:** En el archivo [`Bitacora_IA_A6_Persona_5.md`](./Bitacora_IA_A6_Persona_5.md) se encuentra el registro cronológico íntegro de las 13 interacciones reales mantenidas durante el proyecto, con transcripción de los prompts empleados, actividades ejecutadas y control humano.
 2. **Historial de Commits en Git:** Todo el proceso de creación, refinamiento y auditoría se encuentra respaldado de manera inmutable en el historial de commits del repositorio GitHub oficial `https://github.com/mvergaral/audIT` en la rama `main`, dentro de la carpeta `Investigacion/Persona-5/`.
 3. **Capacidad de Defensa Oral:** El estudiante **Martín Cevallos** asume la responsabilidad intelectual íntegra de los conceptos expuestos, encontrándose plenamente capacitado para responder y fundamentar oralmente ante el docente cada una de las decisiones arquitectónicas adoptadas.
+
+---
+
+## Firma
+
+
+<img src="../Persona-8/firmas/P5_Martin_Cevallos.png" alt="Firma de Martín Cevallos" height="80">
+
+**Martín Cevallos**  
+Persona 5 — Arquitectura de cumplimiento técnico-legal  
+AudIT (Empresa N.º 10) · TI-12 · 21 de septiembre de 2026

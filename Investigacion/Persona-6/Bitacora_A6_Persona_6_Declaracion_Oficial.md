@@ -178,7 +178,8 @@ El suscrito declara bajo juramento académico que el presente registro refleja c
 
 Todo el contenido sustantivo, las 30 preguntas, alternativas, respuestas clave, interpretaciones normativas (Leyes 21.719 y 21.663) y justificaciones del Caso Curimón son de responsabilidad intelectual y autoría exclusiva del estudiante.
 
-\
+<img src="../Persona-8/firmas/P6_Marcel.png" alt="Firma de Marcel" height="80">
+
 **Marcel**  
 Persona 6 — *Assessment & Knowledge Verification Lead*  
 audIT Soluciones de Software SpA (Empresa N.º 10)  

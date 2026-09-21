@@ -34,18 +34,25 @@ Comunicado 9.
 
 ## 2. Declaración individual de los ocho integrantes
 
-| # | Integrante | Rol en el informe | Nivel predominante | Declaración entregada | Firma |
+| # | Integrante | Rol en el informe | Nivel | Declaración | Firma |
 | :-: | :--- | :--- | :---: | :---: | :---: |
-| 1 | **Ignacio C.** | Liderazgo editorial, introducción, aporte propio y conclusiones | | ☐ | ____________ |
-| 2 | **Alonso** | Marco legal chileno | Nivel 2 | ☐ | ____________ |
-| 3 | **Ignacio V.** | Marco internacional, normas técnicas y herramientas GRC | | ☐ | ____________ |
-| 4 | **Carlos** | Matriz de obligaciones, TCO y sensibilidad | Nivel 0 + 1 | ☑ | ____________ |
-| 5 | **Martín C.** | Arquitectura de cumplimiento y vínculo con el Caso 10 | Nivel 3 | ☑ | ____________ |
-| 6 | **Marcel** | Cuestionario de 30 preguntas e índice temático | Nivel 0 + 1 | ☑ | ____________ |
-| 7 | **Naomi** | Presentación ejecutiva y defensa oral | | ☐ | ____________ |
-| 8 | **Matías V.** | Auditoría de calidad, verificación de vigencia y custodia del A-6 | Nivel 0 | ☐ | ____________ |
+| 1 | **Ignacio Cuevas** | Liderazgo editorial, introducción, aporte propio y conclusiones | 0 + 1 | ✅ | <img src="firmas/P1_Ignacio_Cuevas.png" height="55"> |
+| 2 | **Alonso** | Marco legal chileno | 2 | ⬜ | *pendiente de declaración* |
+| 3 | **Ignacio Vergara** | Marco internacional, normas técnicas y herramientas GRC | — | ⬜ | *pendiente de declaración* |
+| 4 | **Carlos Abarza** | Matriz de obligaciones, TCO y sensibilidad | 0 + 1 | ✅ | <img src="firmas/P4_Carlos_A.png" height="55"> |
+| 5 | **Martín Cevallos** | Arquitectura de cumplimiento y vínculo con el Caso 10 | 3 | ✅ | <img src="firmas/P5_Martin_Cevallos.png" height="55"> |
+| 6 | **Marcel** | Cuestionario de 30 preguntas e índice temático | 0 + 1 | ✅ | <img src="firmas/P6_Marcel.png" height="55"> |
+| 7 | **Naomi** | Presentación ejecutiva y defensa oral | — | ⬜ | *pendiente de declaración* |
+| 8 | **Matías Vergara** | Auditoría de calidad, verificación de vigencia y custodia del A-6 | 0 | ⬜ | *pendiente de declaración* |
 
-**Estado al 21-09-2026:** 3 de 8 declaraciones recibidas.
+> [!CAUTION]
+> **Las firmas solo se estampan sobre una declaración existente.** El §6.3 es explícito:
+> «*Cada uno declara su propio uso: nadie declara por otro*». Las cuatro firmas pendientes
+> están digitalizadas y disponibles en `firmas/`, y se incorporan **en cuanto su titular
+> entregue su declaración**, no antes. Estampar la firma de alguien sobre un formulario que
+> no ha completado equivale a declarar por él.
+
+**Estado al 21-09-2026:** 4 de 8 declaraciones recibidas y firmadas. Las 8 firmas están digitalizadas en `firmas/`.
 
 ---
 

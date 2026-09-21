@@ -166,7 +166,8 @@ En cumplimiento estricto del Artículo 13.5 de las Bases Administrativas y las d
 
 El suscrito declara bajo juramento académico que el presente registro refleja fielmente la totalidad de las interacciones realizadas con herramientas de inteligencia artificial durante el desarrollo del subdocumento de la Persona 4. Todo el contenido sustantivo, las interpretaciones legales, los cálculos económicos y las conclusiones son de responsabilidad exclusiva del autor.
 
-\
+<img src="../Persona-8/firmas/P4_Carlos_A.png" alt="Firma de Carlos Abarza" height="80">
+
 **Carlos Abarza**  
 Persona 4 — Modelado Económico e Impacto Financiero  
 AudIT (Empresa 10) · Taller de Formulación de Proyectos Informáticos  

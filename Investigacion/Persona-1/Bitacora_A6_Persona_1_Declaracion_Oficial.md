@@ -47,3 +47,14 @@ Se utilizó apoyo de IA únicamente para tareas de nivel superficial: ordenar id
 ## 3. Declaración de cierre
 
 Persona 1 puede explicar sin apoyo externo los datos maestros del Caso 10, el aporte propio del grupo, la recomendación final, las alternativas descartadas y la relación entre cumplimiento normativo, arquitectura y presupuesto.
+
+---
+
+## Firma
+
+
+<img src="../Persona-8/firmas/P1_Ignacio_Cuevas.png" alt="Firma de Ignacio Cuevas" height="80">
+
+**Ignacio Cuevas**  
+Persona 1 — Liderazgo editorial, introducción y conclusiones  
+AudIT (Empresa N.º 10) · TI-12 · 21 de septiembre de 2026
