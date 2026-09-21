@@ -37,8 +37,7 @@ La distribución de formatos en este bloque es exactamente simétrica: **3 Selec
     
 3.  Bajo el régimen general sancionatorio de la Ley de la Protección de Datos Personales, el tope máximo de multa para infracciones calificadas como gravísimas cometidas por un responsable del tratamiento alcanza hasta \_\_\_\_\_\_\_\_ UTM.
     
-4.  ¿Cuál es el estado de vigencia real de la Ley 21.719 sobre protección de datos personales a septiembre de 2026?  
-      
+4.  ¿Cuál es el estado de vigencia real de la Ley 21.719 sobre protección de datos personales a septiembre de 2026?
     
 5.  Al auditar la seguridad de la información de una empresa, ¿cuál de los siguientes instrumentos internacionales corresponde a una norma de requisitos auditable y certificable por una casa acreditadora independiente?  
     a) NIST Cybersecurity Framework (CSF 2.0).  
@@ -50,10 +49,9 @@ La distribución de formatos en este bloque es exactamente simétrica: **3 Selec
     a) Verdadero  
     b) Falso
     
-7.  Conforme al artículo 33 del RGPD de la Unión Europea, ante una violación de seguridad que comprometa datos personales, el responsable debe notificar a la autoridad de control en un plazo perentorio que no exceda las \_\_\_\_\_\_\_\_ horas tras tomar conocimiento de ella.
+7.  Conforme al artículo 33 del RGPD de la Unión Europea, ante una violación de seguridad que comprometa datos personales, el responsable debe notificar a la autoridad de control en un plazo perentorio que no exceda las \_\_\_\_\_\_\_\_  horas tras tomar conocimiento de ella.
     
-8.  ¿Cuál es la diferencia práctica entre calificar como «Servicio Esencial» y ser declarado «Operador de Importancia Vital» (OIV) bajo la Ley 21.663 de Ciberseguridad?  
-      
+8.  ¿Cuál es la diferencia práctica entre calificar como «Servicio Esencial» y ser declarado “Operador de Importancia Vital” (OIV) bajo la Ley 21.663 de Ciberseguridad?
     
 9.  ¿Bajo qué esquema de licenciamiento opera la herramienta de gestión de cumplimiento CISO Assistant evaluada como alternativa GRC en el proyecto?  
     a) Software SaaS propietario de código cerrado con cobro mensual por activo monitoreado.  
@@ -65,10 +63,9 @@ La distribución de formatos en este bloque es exactamente simétrica: **3 Selec
      a) Verdadero  
      b) Falso
      
-11.  El estándar internacional auditable que define los requisitos para establecer, implementar, mantener y mejorar un Sistema de Gestión de Inteligencia Artificial (SGIA) corresponde a la norma ISO/IEC \_\_\_\_\_\_\_\_.
+11.  El estándar internacional auditable que define los requisitos para establecer, implementar, mantener y mejorar un Sistema de Gestión de Inteligencia Artificial (SGIA) corresponde a la norma ISO/IEC \_\_\_\_\_\_\_\_ .
      
-12.  En la Ley 21.719 que reforma la Ley 19.628, ¿bajo qué categoría legal quedan los datos biométricos (como reconocimiento facial o huella dactilar) y qué condición de licitud general se les exige?  
-       
+12.  En la Ley 21.719 que reforma la Ley 19.628, ¿bajo qué categoría legal quedan los datos biométricos (como reconocimiento facial o huella dactilar) y qué condición de licitud general se les exige?
      
 
 ---
