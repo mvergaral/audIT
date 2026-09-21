@@ -55,7 +55,7 @@ autoría humana, y de que asumo una de estas dos vías antes del despacho:
 
 - [ ] **Reescribir las tres secciones con mis propias palabras**, partiendo de mi matriz y
       mis datos, y rebajar entonces el nivel declarado a **0**.
-- [ ] **Mantener el texto** y sostener esta declaración en **Nivel 3**.
+- [x] **Mantener el texto** y sostener esta declaración en **Nivel 3**.
 
 Con independencia de la vía elegida, asumo la obligación del Comunicado 9 de poder explicar
 oralmente y sin apoyo de texto: por qué la transparencia del precio pondera 25 %, por qué el
@@ -96,4 +96,6 @@ puedo reconstruir oralmente el razonamiento de cada decisión.
 Persona 3 — Marco internacional, normas técnicas y herramientas GRC
 AudIT (Empresa N.º 10) · TI-12 · 21 de septiembre de 2026
 
-Firma: ______________________   Fecha: ____________
+<img src="../Persona-8/firmas/P3_Ignacio_Vergara.png" alt="Firma de Ignacio Vergara" height="80">
+
+Fecha: 21 de septiembre de 2026

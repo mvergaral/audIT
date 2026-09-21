@@ -38,7 +38,7 @@ Comunicado 9.
 | :-: | :--- | :--- | :---: | :---: | :---: |
 | 1 | **Ignacio Cuevas** | Liderazgo editorial, introducción, aporte propio y conclusiones | 0 + 1 | ✅ | <img src="firmas/P1_Ignacio_Cuevas.png" height="55"> |
 | 2 | **Alonso** | Marco legal chileno | 0/1/2 | 🟡 | *transcrita de su manual; falta herramienta y firma* |
-| 3 | **Ignacio Vergara** | Marco internacional, normas técnicas y herramientas GRC | 0/1/2/3 | 🟡 | *entregada; falta herramienta y firma* |
+| 3 | **Ignacio Vergara** | Marco internacional, normas técnicas y herramientas GRC | 0/1/2/3 | ✅ | <img src="firmas/P3_Ignacio_Vergara.png" height="55"> |
 | 4 | **Carlos Abarza** | Matriz de obligaciones, TCO y sensibilidad | 0 + 1 | ✅ | <img src="firmas/P4_Carlos_A.png" height="55"> |
 | 5 | **Martín Cevallos** | Arquitectura de cumplimiento y vínculo con el Caso 10 | 3 | ✅ | <img src="firmas/P5_Martin_Cevallos.png" height="55"> |
 | 6 | **Marcel** | Cuestionario de 30 preguntas e índice temático | 0 + 1 | ✅ | <img src="firmas/P6_Marcel.png" height="55"> |
@@ -49,7 +49,7 @@ Comunicado 9.
 
 | Integrante | Situación |
 | :--- | :--- |
-| **Ignacio Vergara (P3)** | Declaración entregada el 21-09-2026. Quedan por completar la herramienta y versión de los niveles 1 y 2 (§4) y la firma. Debe además marcar en el §3 cuál de las dos vías adopta respecto de las secciones §3.3.3 y §3.3.4, declaradas en Nivel 3 |
+| **Ignacio Vergara (P3)** | Declaración entregada y firmada el 21-09-2026. **Queda un único campo abierto:** la herramienta y versión de los niveles 1 y 2 en el §4 de su declaración, que solo él puede consignar |
 | **Naomi (P7)** | **No aporta secciones al informe.** Su entregable es la presentación ejecutiva, que se despacha por separado y no forma parte del cuerpo del informe ni de sus anexos. El Formulario A-6 declara el uso por sección del informe, de modo que no le corresponde fila en la matriz del §3 |
 
 > [!CAUTION]
