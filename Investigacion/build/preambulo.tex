@@ -1,0 +1,36 @@
+% Preámbulo para la exportación del informe TI-12 con pandoc + xelatex
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{ragged2e}
+\usepackage{fancyhdr}
+
+% Tablas: se reducen y se permite el salto de línea dentro de la celda
+\AtBeginEnvironment{longtable}{\footnotesize\setlength{\tabcolsep}{3pt}}
+\AtBeginEnvironment{tabular}{\footnotesize\setlength{\tabcolsep}{3pt}}
+\renewcommand{\arraystretch}{1.08}
+
+% Bloques de código: los diagramas ASCII necesitan interlineado justo y no partirse
+\usepackage{fvextra}
+% pandoc define sus propios Verbatim más abajo: se fuerza al inicio del documento
+\AtBeginDocument{\fvset{fontsize=\scriptsize,breaklines=false,breakanywhere=false,samepage=false}}
+
+% Encabezado y pie
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\scriptsize TI-12 · Cumplimiento normativo en proyectos TIC}
+\fancyhead[R]{\scriptsize audIT · Empresa N.º 10}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+
+% Títulos algo más compactos
+\usepackage{titlesec}
+\titlespacing*{\section}{0pt}{1.4ex plus .2ex}{0.8ex}
+\titlespacing*{\subsection}{0pt}{1.1ex plus .2ex}{0.6ex}
+\titlespacing*{\subsubsection}{0pt}{0.9ex plus .2ex}{0.5ex}
+
+% Sin sangría, con separación entre párrafos
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.55em}

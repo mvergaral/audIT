@@ -387,7 +387,7 @@ Las dos variables de mayor impacto en la estructura presupuestaria son la tarifa
 1. **Sensibilidad por Bandas E-26:** Variando las tarifas de los roles entre el límite inferior y superior del Formulario E-26, el presupuesto fluctúa entre **6.812,0 UF** (escenario de costo mínimo) y **10.150,0 UF** (escenario de tarifa máxima de mercado).
 2. **Sensibilidad Criptográfica (Hardware dedicado vs. Claves individuales):** Si la arquitectura adopta un clúster exclusivo de **Managed HSM Standard B1** ($\text{USD } 3,20\text{/h}$ de lista) en lugar de claves protegidas por HSM en Key Vault Premium ($\text{USD } 1\text{/clave/mes}$), el costo de gestión de claves se incrementa de $787,16\text{ UF}$ a $2.680,6\text{ UF}$, situando el presupuesto total en **10.385,6 UF** ($VAN = 8.125,4\text{ UF}$).
 
-Sobre esa base, la variación conjunta del retainer del DPO ($\pm 20\,\%$) y de la plataforma GRC ($\pm 25\,\%$) mueve el presupuesto dentro de una banda de $\pm 5{,}57\,\%$ —entre 8.018,96 y 8.965,36 UF—, lo que confirma que ninguna de las dos variables de mayor incertidumbre compromete la viabilidad económica del contrato.
+Sobre esa base, la variación conjunta del retainer del DPO ($\pm 20\%$) y de la plataforma GRC ($\pm 25\%$) mueve el presupuesto dentro de una banda de $\pm 5{,}57\%$ —entre 8.018,96 y 8.965,36 UF—, lo que confirma que ninguna de las dos variables de mayor incertidumbre compromete la viabilidad económica del contrato.
 
 ### 5. Racionalidad Financiera: Regla de Gordon-Loeb, RoSI y Umbral de Indiferencia
 Bajo la Ley 21.719 (Art. 46), el régimen para infracciones gravísimas contempla multas de hasta **20.000 UTM** ($35.000\text{ UF}$ o $\$1.400\text{ millones de CLP}$), a las cuales se suma la potestad punitiva de la Ley 21.663 (hasta 10.000 UTM) y los costos de remediación forense DFIR, totalizando una exposición contingente agregada de **55.000 UF** ($\$2.200\text{ millones de CLP}$).
@@ -397,7 +397,9 @@ $$\text{Presupuesto Óptimo} \le 0,37 \times \text{Pérdida Esperada} = 0,37 \ti
 El costo total del programa AudIT ($8.492,16\text{ UF}$) representa solo el **$15,4\%$ de la exposición patrimonial**, situándose holgadamente bajo la cota de sobreinversión.
 
 Evaluando el Retorno sobre la Inversión en Seguridad ($\text{RoSI}$):
-$$\text{RoSI} = \frac{(\text{Exposición Punitiva} \times \text{Eficacia Mitigación}) - \text{TCO}}{\text{TCO}} \times 100\% = \frac{(55.000\text{ UF} \times 0,85) - 8.492,16\text{ UF}}{8.492,16\text{ UF}} \times 100\% = \mathbf{450,51\%}$$
+$$\text{RoSI} = \frac{(\text{Exposición Punitiva} \times \text{Eficacia de Mitigación}) - \text{TCO}}{\text{TCO}} \times 100\%$$
+
+$$\text{RoSI} = \frac{(55.000\text{ UF} \times 0,85) - 8.492,16\text{ UF}}{8.492,16\text{ UF}} \times 100\% = \mathbf{450,51\%}$$
 El **umbral de probabilidad de indiferencia** es:
 $$p^* = \frac{\text{TCO}}{\text{Exposición Punitiva}} = \frac{8.492,16\text{ UF}}{55.000,0\text{ UF}} = \mathbf{15,44\%\text{ en 56 meses}} \implies \mathbf{3,05\%\text{ anual}}$$
 Basta con que la probabilidad anual de sufrir un incidente sancionable supere el **$3,05\%$** para que el programa de cumplimiento genere un beneficio económico neto directo para Transportes Curimón S.A., blindando el flujo de caja del consorcio adjudicatario.
