@@ -15,9 +15,9 @@
 En cumplimiento estricto del Artículo 13.5 de las Bases Administrativas y las directrices de la Escuela de Informática:
 
 1. **Autoría Intelectual y Cálculos Propios (Nivel 0 - 100% Humano):**
-   * El levantamiento de la normativa legal (Ley 21.719, Ley 21.663, Código del Trabajo y estándar ISO/IEC 27001:2022) fue realizado directamente por el estudiante a partir de las fuentes oficiales de la Biblioteca del Congreso Nacional (BCN), el Diario Oficial y el Instituto Nacional de Normalización (INN).
-   * La formulación y el cálculo de todos los costos del modelo TCO (Total Cost of Ownership a 56 meses / 5 años por un valor total de $8.375,4\text{ UF}$), los flujos de caja proyectados, el Valor Actual Neto del costo ($6.537,13\text{ UF}$), la tasa de descuento contractual ($0,9\%\text{ mensual}$), el modelo de optimización de Gordon-Loeb ($z^* = 8.758,71\text{ UF}$) y el retorno sobre la inversión en seguridad (RoSI de $+255,5\%$) fueron desarrollados íntegramente por el estudiante mediante hojas de cálculo y scripts de verificación propios.
-   * La selección y dimensionamiento de insumos de mercado (cotizaciones de casas certificadoras BSI/SGS, pólizas de ciberseguridad Chubb y servicios Microsoft Azure en región Chile Central) fueron consultados y validados manualmente por el alumno en los portales oficiales de los proveedores.
+   * El levantamiento de la normativa legal (Ley N° 21.719, Ley N° 21.663, doctrina laboral de la Dirección del Trabajo y estándar ISO/IEC 27001:2022) fue realizado directamente por el estudiante a partir de las fuentes oficiales de la Biblioteca del Congreso Nacional (BCN), el Diario Oficial y el Instituto Nacional de Normalización (INN).
+   * La formulación y el cálculo de todos los costos del modelo TCO (*Total Cost of Ownership* a 56 meses / 5 años por un valor total de $8.375,4\text{ UF}$ o $\$335.016.000\text{ CLP}$), los flujos de caja proyectados por etapas y períodos, el Valor Actual Neto del costo ($\text{VAN}_{\text{costo}} = \mathbf{6.582,3\text{ UF}}$ a la tasa contractual de $0,9\%\text{ mensual}$ / $11,351\%\text{ anual}$ del Formulario E-24), el modelo de optimización de Gordon-Loeb (con cota de sobreinversión de hasta $20.350\text{ UF}$, representando el programa AudIT solo el $15,2\%$ de la exposición patrimonial contingente de $55.000\text{ UF}$) y el retorno sobre la inversión en seguridad ($\text{RoSI} = \mathbf{459,68\%}$ con un umbral de probabilidad anual de indiferencia de solo $3,05\%$) fueron desarrollados íntegramente por el estudiante mediante hojas de cálculo y scripts de verificación propios.
+   * La selección y dimensionamiento de insumos de mercado (cotizaciones de casas certificadoras BSI/SGS bajo directriz IAF MD 5, pólizas de ciberseguridad Chubb y servicios Microsoft Azure Key Vault Premium en región Chile Central para las 686 entidades) fueron consultados y validados manualmente por el alumno en los portales oficiales de los proveedores.
 
 2. **Alcance de la Asistencia de IA (Nivel 1 - Asistencia Estilística y Formato):**
    * El uso de herramientas de inteligencia artificial generativa se restringió exclusivamente a labores de apoyo técnico superficial: corrección de ortografía y gramática, formateo de tablas en sintaxis Markdown/LaTeX, depuración de etiquetas matemáticas en KaTeX y traducción de especificaciones técnicas en inglés de fichas de proveedores cloud.
@@ -29,11 +29,11 @@ En cumplimiento estricto del Artículo 13.5 de las Bases Administrativas y las d
 
 | Sección del Capítulo 5 (Persona 4) | Nivel Declarado | Descripción del Aporte Humano (Nivel 0) | Alcance del Apoyo de IA (Nivel 1) |
 | :--- | :---: | :--- | :--- |
-| **5.1 Enfoque Metodológico e Integración Económica** | **Nivel 0 + 1** | Formulación de la metodología TCO, definición del horizonte a 56 meses y selección de paridades contractuales Formulario E-24. | Revisión de coherencia gramatical y fluidez en la redacción técnica. |
-| **5.2 Matriz de Obligaciones Normativas y Costeo Directo** | **Nivel 0 + 1** | Identificación de las 13 obligaciones legales, asignación de roles E-26, cálculo de horas hombre y plazos de ejecución. | Alineación y tabulación de la estructura de 5 columnas en Markdown. |
-| **5.3 Modelo TCO a 5 Años y Flujo de Caja Proyectado** | **Nivel 0 + 1** | Modelado financiero en planilla, estructuración de flujos CAPEX/OPEX período a período y cálculo de VAN con $r=0,9\%\text{ mensual}$. | Formateo visual de tablas y verificación de delimitadores KaTeX. |
-| **5.4 Precios de Mercado, Insumos Externos y Validación** | **Nivel 0 + 1** | Búsqueda de cotizaciones reales (OneTrust, BSI/SGS, Chubb, Azure), cálculo de paridades fijas ($1\text{ UF} = \$40.000$, $1\text{ USD} = \$900$). | Traducción al español de especificaciones técnicas de fichas de productos. |
-| **5.5 Análisis de Sensibilidad, Gordon-Loeb y RoSI** | **Nivel 0 + 1** | Formulación de ecuaciones estocásticas, cálculo de intervalos $\pm 20\%$, deducción del modelo Gordon-Loeb y métrica RoSI. | Formateo de expresiones matemáticas display KaTeX y maquetación final. |
+| **5.1 Enfoque Metodológico e Integración Económica** | **Nivel 0 + 1** | Formulación de la metodología TCO, delimitación de la flota del Caso 10 (374 camiones, 454 conductores, 148 transportistas) y selección de paridades contractuales Formulario E-24 ($1\text{ UF} = \$40.000$, $1\text{ USD} = \$900$). | Revisión de coherencia gramatical y fluidez en la redacción técnica. |
+| **5.2 Matriz de Obligaciones Normativas y Costeo Directo** | **Nivel 0 + 1** | Identificación de las 13 obligaciones legales, asignación de roles E-26, cálculo de horas hombre, plazos de ejecución y costos directos ($4.768,4\text{ UF}$). | Alineación y tabulación de la estructura de 5 columnas en Markdown. |
+| **5.3 Modelo TCO a 5 Años y Flujo de Caja Proyectado** | **Nivel 0 + 1** | Modelado financiero en planilla por etapas (Etapa 1: $1.678,0\text{ UF}$; Etapa 2: $1.531,0\text{ UF}$; Etapa 3: $5.166,4\text{ UF}$ = $8.375,4\text{ UF}$ total) y cálculo de $\text{VAN}_{\text{costo}} = 6.582,3\text{ UF}$ con $r=0,9\%\text{ mensual}$. | Formateo visual de tablas y verificación de delimitadores KaTeX. |
+| **5.4 Precios de Mercado, Insumos Externos y Validación** | **Nivel 0 + 1** | Búsqueda de cotizaciones reales (CISO Assistant Pro, BSI/SGS, Chubb, Azure Key Vault Premium a USD 1/clave/mes = $725,4\text{ UF}$). | Traducción al español de especificaciones técnicas de fichas de productos. |
+| **5.5 Análisis de Sensibilidad, Gordon-Loeb y RoSI** | **Nivel 0 + 1** | Formulación de rangos E-26 ($6.812,0\text{ a }10.150,0\text{ UF}$), hardware dedicado ($10.330,6\text{ UF}$), cota Gordon-Loeb ($20.350\text{ UF}$) y métrica $\text{RoSI} = 459,68\%$. | Formateo de expresiones matemáticas display KaTeX y maquetación final. |
 
 ---
 
@@ -50,8 +50,8 @@ En cumplimiento estricto del Artículo 13.5 de las Bases Administrativas y las d
 │ 03 │ 16-09 16:30│ Revisión ortográfica y redacción técnica │ Nivel 1      │ Estilo     │
 │ 04 │ 17-09 11:20│ Traducción de especificaciones Azure KMS │ Nivel 1      │ Traducción │
 │ 05 │ 17-09 15:45│ Depuración de sintaxis KaTeX en fórmulas │ Nivel 1      │ Formato    │
-│ 06 │ 18-09 10:30│ Formateo de tabla de Flujo de Caja A1-A5 │ Nivel 1      │ Tabulación │
-│ 07 │ 18-09 16:00│ Ajuste de tabla de Sensibilidad (±20%)   │ Nivel 1      │ Diagramación│
+│ 06 │ 18-09 10:30│ Formateo de tabla de Flujo de Desembolso │ Nivel 1      │ Tabulación │
+│ 07 │ 18-09 16:00│ Ajuste de tabla de Sensibilidad E-26/GRC │ Nivel 1      │ Diagramación│
 │ 08 │ 19-09 18:20│ Compilación y maquetación de plantilla   │ Nivel 1      │ LaTeX      │
 └────┴────────────┴──────────────────────────────────────────┴──────────────┴────────────┘
 ```
@@ -65,7 +65,7 @@ En cumplimiento estricto del Artículo 13.5 de las Bases Administrativas y las d
 * **Herramienta y Versión:** Asistente IA (Motor Claude / Gemini 3.8).
 * **Nivel de Uso:** Nivel 1 (Formato y diagramación).
 * **Prompt Empleado:**
-  > *"Organiza en una tabla Markdown clara y compacta los siguientes parámetros económicos obligatorios del Formulario E-24 que calculé para el proyecto: 1 UF = $40.000 CLP, 1 USD = $900 CLP, 1 EUR = $1.000 CLP, tasa de descuento mensual = 0,9% y horizonte de evaluación = 56 meses."*
+  > *"Organiza en una tabla Markdown clara y compacta los siguientes parámetros económicos obligatorios del Formulario E-24 que calculé para el proyecto: 1 UF = $40.000 CLP, 1 USD = $900 CLP, 1 EUR = $1.000 CLP, 1 UTM = $70.000 CLP, tasa de descuento mensual = 0,9% (11,351% anual) y horizonte de evaluación = 56 meses."*
 * **Uso del Resultado:** Se incorporó la tabla formateada en la sección metodológica. Los valores y fuentes provienen 100% de la revisión de las bases del estudiante.
 * **Verificación Humana:** El estudiante verificó que los números coincidieran exactamente con los requerimientos contractuales.
 
@@ -117,35 +117,35 @@ En cumplimiento estricto del Artículo 13.5 de las Bases Administrativas y las d
 * **Herramienta y Versión:** Asistente IA (Motor Claude / Gemini 3.8).
 * **Nivel de Uso:** Nivel 1 (Formateo y resolución de errores de renderizado).
 * **Prompt Empleado:**
-  > *"Esta fórmula matemática de retorno sobre la inversión en seguridad me arroja error de renderizado KaTeX en Obsidian: RoSI = \frac{\Delta ALE - \text{Costo}}{\text{Costo}} \times 100. Corrige los delimitadores para que compile limpiamente en display math con doble signo peso."*
+  > *"Esta fórmula matemática de retorno sobre la inversión en seguridad me arroja error de renderizado KaTeX en Obsidian: RoSI = \frac{(\text{Exposición Punitiva} \times \text{Eficacia}) - \text{TCO}}{\text{TCO}} \times 100. Corrige los delimitadores para que compile limpiamente en display math con doble signo peso."*
 * **Uso del Resultado:** Se reemplazó la sintaxis en el archivo Markdown para asegurar su correcta visualización.
 * **Verificación Humana:** Comprobación visual directa del renderizado de la fórmula en el visualizador Markdown.
 
 ---
 
-### Registro A6-06: Formateo de Tabla de Flujo de Caja Proyectado (Años 1 al 5)
+### Registro A6-06: Formateo de Tabla de Flujo de Desembolso y Proyecciones por Etapas
 * **Fecha y Hora:** 18-09-2026 10:30 hrs.
 * **Integrante:** Carlos Abarza (Persona 4).
-* **Sección del Informe:** 5.3 Modelo TCO a 5 Años.
+* **Sección del Informe:** 5.3 Modelo TCO a 5 Años y Flujo de Desembolso.
 * **Herramienta y Versión:** Asistente IA (Motor Claude / Gemini 3.8).
 * **Nivel de Uso:** Nivel 1 (Tabulación y diagramación).
 * **Prompt Empleado:**
-  > *"Tengo los valores de flujo de caja anualizados que calculé (Año 1: 1.840,0 UF; Año 2: 1.555,0 UF; Años 3, 4 y 5: 1.660,13 UF cada uno; Total: 8.375,4 UF). Ordénalos en una tabla comparativa Markdown que desglose CAPEX, OPEX y Total Anual en UF y CLP a paridad $40.000."*
+  > *"Tengo los valores de flujo de desembolso por etapas y períodos que calculé para los 56 meses: Etapa 1 (Meses 1-12): 1.678,0 UF; Etapa 2 (Meses 13-20): 1.531,0 UF; Meses 21-36 (Año 3): 2.156,7 UF; Meses 37-48 (Año 4): 1.780,7 UF; Meses 49-56 (Año 5 / 8 meses): 1.229,0 UF; totalizando exactamente 8.375,4 UF ($335.016.000 CLP a paridad $40.000). Ordénalos en una tabla comparativa Markdown que desglose CAPEX, OPEX y Total por período en UF y CLP."*
 * **Uso del Resultado:** Se insertó la tabla de flujos en el capítulo de dimensionamiento financiero.
 * **Verificación Humana:** El alumno sumó y recalculó manualmente todas las filas y columnas para certificar cuadratura aritmética total.
 
 ---
 
-### Registro A6-07: Diagramación de Tabla de Análisis de Sensibilidad
+### Registro A6-07: Diagramación de Tabla de Análisis de Sensibilidad y Estabilidad Presupuestaria
 * **Fecha y Hora:** 18-09-2026 16:00 hrs.
 * **Integrante:** Carlos Abarza (Persona 4).
 * **Sección del Informe:** 5.5 Análisis de Sensibilidad y Riesgo Financiero.
 * **Herramienta y Versión:** Asistente IA (Motor Claude / Gemini 3.8).
 * **Nivel de Uso:** Nivel 1 (Formato de tabla).
 * **Prompt Empleado:**
-  > *"Genera una tabla Markdown limpia con los resultados de mi análisis de sensibilidad para los escenarios Pesimista (+20% con 10.050,48 UF), Base (8.375,40 UF) y Optimista (-20% con 6.700,32 UF), incluyendo las columnas de Variación, TCO Total UF, TCO CLP y RoSI Resultante."*
-* **Uso del Resultado:** Se empleó la tabla para ilustrar los rangos de tolerancia presupuestaria del proyecto.
-* **Verificación Humana:** Verificación de consistencia entre los porcentajes de variación y los montos totales.
+  > *"Genera una tabla Markdown limpia con los resultados de mi análisis de sensibilidad para los escenarios de fluctuación conjunta de DPO (+-20%) y SaaS GRC (+-25%): Escenario Optimista (7.231,80 UF / -6,14%), Escenario Base (8.375,40 UF TCO integral) y Escenario Pesimista (8.178,20 UF / +6,14%), así como los cuadrantes asimétricos A (+4,32%) y B (-4,32%), y la sensibilidad por bandas salariales E-26 entre 6.812,0 UF y 10.150,0 UF."*
+* **Uso del Resultado:** Se empleó la tabla para ilustrar los rangos de tolerancia presupuestaria del proyecto y la alta capacidad de absorción del modelo.
+* **Verificación Humana:** Verificación de consistencia entre los porcentajes de variación y los montos totales calculados.
 
 ---
 
