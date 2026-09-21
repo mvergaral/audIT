@@ -37,13 +37,20 @@ Comunicado 9.
 | # | Integrante | Rol en el informe | Nivel | Declaración | Firma |
 | :-: | :--- | :--- | :---: | :---: | :---: |
 | 1 | **Ignacio Cuevas** | Liderazgo editorial, introducción, aporte propio y conclusiones | 0 + 1 | ✅ | <img src="firmas/P1_Ignacio_Cuevas.png" height="55"> |
-| 2 | **Alonso** | Marco legal chileno | 2 | ⬜ | *pendiente de declaración* |
+| 2 | **Alonso** | Marco legal chileno | 2 | 🟡 | *transcrita; falta herramienta y firma* |
 | 3 | **Ignacio Vergara** | Marco internacional, normas técnicas y herramientas GRC | — | ⬜ | *pendiente de declaración* |
 | 4 | **Carlos Abarza** | Matriz de obligaciones, TCO y sensibilidad | 0 + 1 | ✅ | <img src="firmas/P4_Carlos_A.png" height="55"> |
 | 5 | **Martín Cevallos** | Arquitectura de cumplimiento y vínculo con el Caso 10 | 3 | ✅ | <img src="firmas/P5_Martin_Cevallos.png" height="55"> |
 | 6 | **Marcel** | Cuestionario de 30 preguntas e índice temático | 0 + 1 | ✅ | <img src="firmas/P6_Marcel.png" height="55"> |
-| 7 | **Naomi** | Presentación ejecutiva y defensa oral | — | ⬜ | *pendiente de declaración* |
+| 7 | **Naomi** | Presentación ejecutiva y defensa oral | n/a | — | *no aporta secciones al informe (ver §2.1)* |
 | 8 | **Matías Vergara** | Auditoría de calidad, verificación de vigencia y custodia del A-6 | 0 | ⬜ | *pendiente de declaración* |
+
+### 2.1 Declaraciones no recibidas al cierre
+
+| Integrante | Situación |
+| :--- | :--- |
+| **Ignacio Vergara (P3)** | Se le solicitó su declaración el 21-09-2026. **No recibida al cierre de esta acta.** Su capítulo está en el repositorio y su firma está digitalizada, pero **el custodio no declara por él**: el §6.3 exige que cada integrante declare su propio uso. Se deja constancia para que, conforme al §6.4, la responsabilidad individual quede acreditada y no alcance al resto del grupo |
+| **Naomi (P7)** | **No aporta secciones al informe.** Su entregable es la presentación ejecutiva, que se despacha por separado y no forma parte del cuerpo del informe ni de sus anexos. El Formulario A-6 declara el uso por sección del informe, de modo que no le corresponde fila en la matriz del §3 |
 
 > [!CAUTION]
 > **Las firmas solo se estampan sobre una declaración existente.** El §6.3 es explícito:
@@ -52,7 +59,7 @@ Comunicado 9.
 > entregue su declaración**, no antes. Estampar la firma de alguien sobre un formulario que
 > no ha completado equivale a declarar por él.
 
-**Estado al 21-09-2026:** 4 de 8 declaraciones recibidas y firmadas. Las 8 firmas están digitalizadas en `firmas/`.
+**Estado al 21-09-2026:** 4 declaraciones recibidas y firmadas, 1 transcrita a la espera de su titular, 1 no recibida y 1 sin secciones en el informe. Falta la del propio custodio. Las 8 firmas están digitalizadas en `firmas/`.
 
 ---
 
