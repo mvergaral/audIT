@@ -265,29 +265,3 @@ if __name__ == "__main__":
     print(f"Total TCO: {total_tco:,.2f} UF (${total_tco * CLP_POR_UF:,.0f} CLP)")
     print(f"VAN Costo (0.9% m): {van:,.2f} UF (${van * CLP_POR_UF:,.0f} CLP)")
 ```
-
----
-
-## 8. Guía de Defensa Oral y Blindaje Anti-Comunicado 9 (Para Persona 4)
-
-Conforme a las reglas del Comunicado 9, el docente evaluador puede interrogar aleatoriamente a cualquier integrante sobre la procedencia de cualquier cifra. La Persona 4 debe dominar con soltura las siguientes 5 respuestas clave:
-
-1. **¿Por qué se adoptó Key Vault Premium ($725,4\text{ UF}$) en lugar de Managed HSM ($2.680,6\text{ UF}$)?**  
-   *Respuesta:* Managed HSM Standard B1 exige un clúster dedicado de 3 instancias físicas con un costo fijo de $\text{USD } 3,20\text{/h}$ ($52,56\text{ UF/mes}$), sobredimensionado para una volumetría de 686 entidades. Key Vault Premium ofrece custodia de claves RSA respaldada por módulos HSM certificados FIPS 140-2 Level 3 bajo un modelo por clave individual ($\text{USD } 1\text{/clave/mes}$ = $15,44\text{ UF/mes}$), satisfaciendo el estándar RT-11.10 y el borrado criptográfico con un ahorro de $1.955,2\text{ UF}$.
-
-2. **¿Cómo se justifica el costo del DPO si el Formulario E-26 no tiene esa categoría?**  
-   *Respuesta:* El Formulario E-26 permite expresamente perfiles no contenidos en la lista respetando rangos coherentes. Se adoptó el perfil de *Jefe de Proyecto* (rango costo: $0,8 - 2,1\text{ UF/h}$; tarifa: $1,5 - 3,0\text{ UF/h}$) como proxy técnico homologado, fijando una tarifa de $2,00\text{ UF/h}$ plenamente validada por las encuestas salariales de Robert Half y Michael Page Chile 2025/2026.
-
-3. **¿Por qué la certificación ISO 27001 y el seguro de ciberriesgo no se descartaron como en borradores previos?**  
-   *Respuesta:* Descartar estas partidas vulneraba el alcance obligatorio de la Persona 4 fijado en el plan operativo (`Division.md`). Se subsanó aplicando la directriz internacional IAF MD 5 (14 días-auditor para el dimensionamiento de Fase 1 y 2 en BSI/SGS por $\$15.500.000\text{ CLP}$) y una prima técnica corporativa del $0,18\%$ sobre la suma asegurada de $50.000\text{ UF}$ en Chubb Seguros Chile.
-
-4. **¿Cómo se demuestra que $8.375,4\text{ UF}$ no es un gasto excesivo en cumplimiento?**  
-   *Respuesta:* Mediante la regla económica de Gordon-Loeb (2002). Frente a una exposición punitiva multicuerpo de $55.000\text{ UF}$ (Ley 21.719 + Ley 21.663 + forense), el techo de sobreinversión es del $37\%$ ($20.350\text{ UF}$). El programa de AudIT representa apenas el $15,23\%$ de la exposición, logrando un $\text{RoSI} = 458,18\%$ con un umbral de indiferencia de solo $3,05\%$ de probabilidad anual de incidente.
-
-5. **¿Cuál es la tasa de descuento utilizada para el VAN y de dónde proviene?**  
-   *Respuesta:* Se utiliza estrictamente el $0,9\%\text{ mensual}$ ($11,351\%\text{ efectivo anual}$), parámetro oficial mandatado en el Formulario E-24 de las Bases Administrativas para créditos de consumo y actualización de flujos en la licitación.
-
----
-
-### Conclusión Operativa para el Equipo AudIT:
-Este documento unifica **la completitud y profundidad financiera de los borradores de la Persona 4** con **la pulcritud editorial, el rigor de paridades y el blindaje anti-Comunicado 9**, constituyendo el artefacto de entrega definitivo 100% autocontenido en Markdown.
