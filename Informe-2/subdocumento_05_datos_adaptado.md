@@ -39,7 +39,7 @@ Como evidencia la Tabla 5.1, las decisiones de modelado blindan la operación fr
 
 La arquitectura de datos se estructura en seis contextos delimitados con límites explícitos. En la Figura 5.1 se despliega el modelo conceptual y relacional de persistencia de datos.
 
-![Figura 5.1. Modelo conceptual y relacional de persistencia de datos](figuras/05-datos/D3-diagrama5_modelo_erd_persistencia.png)
+![Figura 5.1. Modelo conceptual y relacional de persistencia de datos](../recursos/Formato-Oferta-audIT/figuras/05-datos/D3-diagrama5_modelo_erd_persistencia.png)
 
 *Figura 5.1. Modelo conceptual y relacional de persistencia de datos*
 
@@ -55,7 +55,7 @@ Los seis agregados raíz gobiernan las reglas de negocio de la operación:
 
 En cumplimiento de FEP02, RT-05.09, p. 9, se implementa un marco centralizado de Master Data Management (MDM) con principio de Registro Maestro Único (*Golden Record*), visualizado en la Figura 5.2.
 
-![Figura 5.2. Gestión de Datos Maestros (MDM) y Capa Anticorrupción](figuras/05-datos/D3-diagrama8_gestion_datos_maestros_mdm.png)
+![Figura 5.2. Gestión de Datos Maestros (MDM) y Capa Anticorrupción](../recursos/Formato-Oferta-audIT/figuras/05-datos/D3-diagrama8_gestion_datos_maestros_mdm.png)
 
 *Figura 5.2. Gestión de Datos Maestros (MDM) y Capa Anticorrupción*
 
@@ -165,7 +165,7 @@ En cumplimiento de FEP02, RT-05.02, p. 8, audIT adopta una arquitectura de persi
 
 La selección políglota de la Tabla 5.8 garantiza que cargas analíticas y masivas de telemetría no degraden las transacciones críticas del negocio.
 
-![Figura 5.3. Clasificación de motores y almacenamiento bajo el Teorema CAP](figuras/05-datos/D3-diagrama3_teorema_cap.png)
+![Figura 5.3. Clasificación de motores y almacenamiento bajo el Teorema CAP](../recursos/Formato-Oferta-audIT/figuras/05-datos/D3-diagrama3_teorema_cap.png)
 
 *Figura 5.3. Clasificación de motores y almacenamiento bajo el Teorema CAP*
 
@@ -173,7 +173,7 @@ La selección políglota de la Tabla 5.8 garantiza que cargas analíticas y masi
 
 Para dar cumplimiento a FEP02, RT-05.05, p. 9, se aísla de raíz la base transaccional de producción respecto del consumo analítico de reportería y cálculo de costo por kilómetro. La propagación de datos ocurre en tiempo casi real ($< 60$ s) mediante captura de cambios (CDC Debezium) y Kafka hacia el repositorio analítico (Delta Lake), como esquematiza la Figura 5.4.
 
-![Figura 5.4. Segregación transaccional OLTP y analítica OLAP mediante CDC](figuras/05-datos/D3-diagrama7_oltp_olap_cdc.png)
+![Figura 5.4. Segregación transaccional OLTP y analítica OLAP mediante CDC](../recursos/Formato-Oferta-audIT/figuras/05-datos/D3-diagrama7_oltp_olap_cdc.png)
 
 *Figura 5.4. Segregación transaccional OLTP y analítica OLAP mediante CDC*
 
@@ -236,7 +236,7 @@ La volumetría de la Tabla 5.11 se procesa a través de cuatro fases cronológic
 - **Fase 3: Acreditación Documental y Hash Criptográfico (Días 36 a 50):** Carga de archivos digitalizados, sellado SHA-256 en WORM y clasificación de pendientes bajo cuarentena.
 - **Fase 4: Ensayos de Migración (Mock Runs) y Transición Final (Días 51 a 65):** Ensayos en seco (*dry-run*) en Preproducción (FEP02, RT-05.13, p. 9), prueba de estrés de validación bloqueante y conciliación matemática al peso con firma de Acta formal (FEP02, RT-05.14, p. 9).
 
-![Figura 5.5. Metodología de extracción, saneamiento, carga y conciliación histórica](figuras/05-datos/D3-diagrama6_migracion_datos.png)
+![Figura 5.5. Metodología de extracción, saneamiento, carga y conciliación histórica](../recursos/Formato-Oferta-audIT/figuras/05-datos/D3-diagrama6_migracion_datos.png)
 
 *Figura 5.5. Metodología de extracción, saneamiento, carga y conciliación histórica*
 
@@ -244,7 +244,7 @@ La volumetría de la Tabla 5.11 se procesa a través de cuatro fases cronológic
 
 Para garantizar que la verificación de despacho resuelva en menos de dos segundos (Caso, RT-09.01, p. 32) frente a 96.000 viajes anuales, se implementa una estrategia cuádruple de optimización, esquematizada en la Figura 5.6.
 
-![Figura 5.6. Estrategia integral de desempeño de base de datos](figuras/05-datos/D3-diagrama9_estrategia_desempeno.png)
+![Figura 5.6. Estrategia integral de desempeño de base de datos](../recursos/Formato-Oferta-audIT/figuras/05-datos/D3-diagrama9_estrategia_desempeno.png)
 
 *Figura 5.6. Estrategia integral de desempeño de base de datos*
 

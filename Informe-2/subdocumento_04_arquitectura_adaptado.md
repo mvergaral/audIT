@@ -66,7 +66,7 @@ El modelo de capas establece una jerarquía estricta de llamadas descendentes y 
 
 La organización de componentes expuesta en la Tabla 4.3 asegura la total independencia operativa y el confinamiento de cargas de trabajo pesadas respecto del camino crítico transaccional.
 
-![Figura 4.1. Las ocho capas obligatorias del numeral 2.1 transversal, con sus componentes e interfaces](figuras/04-arquitectura/LogicaCapas.pdf)
+![Figura 4.1. Las ocho capas obligatorias del numeral 2.1 transversal, con sus componentes e interfaces](../recursos/Formato-Oferta-audIT/figuras/04-arquitectura/LogicaCapas.png)
 
 *Figura 4.1. Las ocho capas obligatorias del numeral 2.1 transversal, con sus componentes e interfaces*
 
@@ -87,13 +87,13 @@ En cumplimiento de FEP02, RT-02.02, p. 7, que prohíbe las arquitecturas monolí
 
 La partición funcional de la Tabla 4.4 previene el acoplamiento cruzado: un cambio en las fórmulas de liquidación jamás afectará la capacidad de la torre de control de monitorear o despachar camiones.
 
-![Figura 4.2. Contextos delimitados del dominio y mapa de relaciones de negocio](figuras/04-arquitectura/D3-diagrama1_bounded_contexts.png)
+![Figura 4.2. Contextos delimitados del dominio y mapa de relaciones de negocio](../recursos/Formato-Oferta-audIT/figuras/04-arquitectura/D3-diagrama1_bounded_contexts.png)
 
 *Figura 4.2. Contextos delimitados del dominio y mapa de relaciones de negocio*
 
 Como ilustra la Figura 4.2, los contextos se comunican mediante eventos de dominio asíncronos y contratos formalizados, erradicando los accesos directos a bases de datos compartidas. El modelo táctico derivado se despliega en la Figura 4.3, identificando los agregados raíz que custodian la coherencia transaccional.
 
-![Figura 4.3. Modelo táctico del dominio. Agregados, entidades y servicios por contexto](figuras/04-arquitectura/D3-diagrama2_arquitectura_tactica_ddd.png)
+![Figura 4.3. Modelo táctico del dominio. Agregados, entidades y servicios por contexto](../recursos/Formato-Oferta-audIT/figuras/04-arquitectura/D3-diagrama2_arquitectura_tactica_ddd.png)
 
 *Figura 4.3. Modelo táctico del dominio. Agregados, entidades y servicios por contexto*
 
@@ -101,7 +101,7 @@ Como ilustra la Figura 4.2, los contextos se comunican mediante eventos de domin
 
 La solución interactúa con una red compleja de actores internos y externos: el sistema contable heredado de 2013, plataformas telemáticas preexistentes, redes de estaciones de combustible, concesionarias de autopistas y organismos reguladores. La Figura 4.4 esquematiza el mapa integral de integraciones.
 
-![Figura 4.4. Mapa de integraciones. Sistemas internos, fuentes de terreno y contrapartes externas](figuras/04-arquitectura/LogicaIntegraciones.png)
+![Figura 4.4. Mapa de integraciones. Sistemas internos, fuentes de terreno y contrapartes externas](../recursos/Formato-Oferta-audIT/figuras/04-arquitectura/LogicaIntegraciones.png)
 
 *Figura 4.4. Mapa de integraciones. Sistemas internos, fuentes de terreno y contrapartes externas*
 
@@ -118,7 +118,7 @@ En cumplimiento de FEP02, RT-05.20, p. 9, la interacción con el ERP contable de
 
 La arquitectura de la Tabla 4.5 garantiza que la obsolescencia o indisponibilidad del ERP no degrade el núcleo operacional 24x7 de Transportes Curimón S.A.
 
-![Figura 4.5. Integración con el sistema contable heredado a través de la capa anticorrupción](figuras/04-arquitectura/D3-diagrama12_integracion_acl_erp2013.png)
+![Figura 4.5. Integración con el sistema contable heredado a través de la capa anticorrupción](../recursos/Formato-Oferta-audIT/figuras/04-arquitectura/D3-diagrama12_integracion_acl_erp2013.png)
 
 *Figura 4.5. Integración con el sistema contable heredado a través de la capa anticorrupción*
 
@@ -189,7 +189,7 @@ Como evidencia la Tabla 4.9, el sistema audIT ofrece un margen de seguridad de m
 
 La respuesta estructurada de la Tabla 4.10 previene intentos a ciegas por parte de la torre de control, facilitando la toma de decisiones inmediata. La secuencia completa de resiliencia y asignación se detalla en la Figura 4.6.
 
-![Figura 4.6. Patrones de resiliencia y flujo de la asignación bloqueante](figuras/04-arquitectura/D3-diagrama11_patrones_resiliencia_despacho.png)
+![Figura 4.6. Patrones de resiliencia y flujo de la asignación bloqueante](../recursos/Formato-Oferta-audIT/figuras/04-arquitectura/D3-diagrama11_patrones_resiliencia_despacho.png)
 
 *Figura 4.6. Patrones de resiliencia y flujo de la asignación bloqueante*
 
@@ -213,7 +213,7 @@ Para cumplir con la prohibición expresa de que las consultas analíticas degrad
 
 La organización de la Tabla 4.11 sustenta la explotación analítica sin introducir latencias en la operación de tráfico.
 
-![Figura 4.7. Capa analítica por niveles de refinamiento y explotación del costo por kilómetro](figuras/04-arquitectura/D3-diagrama13_arquitectura_analitica_lakehouse_bi.png)
+![Figura 4.7. Capa analítica por niveles de refinamiento y explotación del costo por kilómetro](../recursos/Formato-Oferta-audIT/figuras/04-arquitectura/D3-diagrama13_arquitectura_analitica_lakehouse_bi.png)
 
 *Figura 4.7. Capa analítica por niveles de refinamiento y explotación del costo por kilómetro*
 
@@ -341,11 +341,11 @@ El FEP01, Artículo 16.1, p. 12 de las Bases Administrativas desestima ofertas q
 
 Como sintetiza la Tabla 4.19, la parte on-premise es sustantiva y sostiene las operaciones de severidad máxima (FEP02, RT-21.06, p. 12) en caso de corte total de comunicaciones.
 
-![Figura 4.12. Arquitectura física general. Nube, sitio de continuidad, gabinetes de terminal y flota](figuras/04-arquitectura/Main.pdf)
+![Figura 4.12. Arquitectura física general. Nube, sitio de continuidad, gabinetes de terminal y flota](../recursos/Formato-Oferta-audIT/figuras/04-arquitectura/Main.png)
 
 *Figura 4.12. Arquitectura física general. Nube, sitio de continuidad, gabinetes de terminal y flota*
 
-![Figura 4.8. Correspondencia entre capa lógica y emplazamiento físico](figuras/04-arquitectura/LogicaEmplazamiento.png)
+![Figura 4.8. Correspondencia entre capa lógica y emplazamiento físico](../recursos/Formato-Oferta-audIT/figuras/04-arquitectura/LogicaEmplazamiento.png)
 
 *Figura 4.8. Correspondencia entre capa lógica y emplazamiento físico*
 
@@ -379,11 +379,11 @@ La adopción de acopladores inductivos sobre el bus CAN del tractocamión da est
 
 El dispositivo a bordo constituye la primera línea de captura de datos, cuya arquitectura física de instalación se visualiza en la Figura 4.10. En la Figura 4.11 se ilustra cómo se gestiona un evento de jornada cuando la unidad transita en zonas de silencio celular.
 
-![Figura 4.9. El camión como componente on-premise distribuido](figuras/04-arquitectura/Camion.png)
+![Figura 4.9. El camión como componente on-premise distribuido](../recursos/Formato-Oferta-audIT/figuras/04-arquitectura/Camion.png)
 
 *Figura 4.9. El camión como componente on-premise distribuido*
 
-![Figura 4.10. Flujo de un evento de jornada registrado sin cobertura](figuras/04-arquitectura/Flujo.png)
+![Figura 4.10. Flujo de un evento de jornada registrado sin cobertura](../recursos/Formato-Oferta-audIT/figuras/04-arquitectura/Flujo.png)
 
 *Figura 4.10. Flujo de un evento de jornada registrado sin cobertura*
 
@@ -629,7 +629,7 @@ En la Tabla 4.33 se sintetiza la separación formal entre los dos ejes de contin
 
 La delimitación de la Tabla 4.33 garantiza que San Bernardo no sea confundido con un centro de datos de respaldo de nube, sino como el nodo de continuidad de borde que mantiene viva la torre de control.
 
-![Figura 4.11. Separación entre recuperación ante desastres y continuidad operacional en el borde](figuras/04-arquitectura/DosEjes.png)
+![Figura 4.11. Separación entre recuperación ante desastres y continuidad operacional en el borde](../recursos/Formato-Oferta-audIT/figuras/04-arquitectura/DosEjes.png)
 
 *Figura 4.11. Separación entre recuperación ante desastres y continuidad operacional en el borde*
 
