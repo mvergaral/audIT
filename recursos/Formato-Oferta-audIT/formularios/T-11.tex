@@ -1,0 +1,83 @@
+% ============================================================================
+%  Formulario T-11. Especificaciones técnicas ofertadas (FEP01 p. 62)
+%  Subdocumento 4.2 según el Formulario T-21.
+%
+%  Qué se compra, cuánto y con qué características (Caso, capítulo 11, p. 24,
+%  y FEP02, capítulo 8, pp. 18 a 20). Cada componente es un registro:
+%
+%  \componenteTOnce{
+%    componente      = Dispositivo a bordo,
+%    producto        = marca y modelo de referencia, o servicio ofertado,
+%    caracteristicas = características mínimas (RT-08.01, RT-08.10 a RT-08.12),
+%    ubicacion       = lugar de instalación,
+%    cantidad        = cantidad total, con repuestos si corresponde,
+%    adquiere        = CLIENTE o audIT,
+%    ciclo           = ciclo de vida y reposición (RT-08.13),
+%    justificacion   = por qué este componente, aquí y en esta cantidad
+%  }
+%
+%  No hay columna de costo. RT-08.10 pide «costo unitario estimado», pero el
+%  Artículo 50.2 prohíbe toda cifra que permita inferir la oferta económica:
+%  la nota al pie de la tabla remite ese dato al Sobre N.º 3.
+% ============================================================================
+
+\DefinirFormulario{T-11}{Especificaciones técnicas ofertadas}{62}
+  {Detalle de los componentes de infraestructura, plataforma, licenciamiento
+   y hardware especificado, con su ubicación o lugar y su justificación. El
+   hardware lo adquiere el CLIENTE y el PROPONENTE debe especificar
+   exactamente qué comprar, cuánto y con qué características
+   (Caso, capítulo 11, p. 24).}
+
+\newcommand\componenteTOnce[1]{\RegistroNuevo{t11}{#1}}
+
+\ExplSyntaxOn
+\NewDocumentEnvironment { formularioTOnce } { O{} }
+  { \ReiniciarRegistros { t11 } }
+  {
+    \IniciarFilas
+    \int_step_inline:nn { \CantidadRegistros { t11 } }
+      {
+        \tl_gput_right:Ne \g_audit_filas_tl
+          {
+            ##1 &
+            \exp_not:N \textbf { \audit_campo:nnn { t11 } {##1} { componente } }
+            \exp_not:N \par
+            \exp_not:N \audit@rotuloceldas { Adquiere } ~
+            \audit_campo:nnn { t11 } {##1} { adquiere } &
+            \audit_campo:nnn { t11 } {##1} { producto }
+            \exp_not:N \par
+            \exp_not:N \audit@rotuloceldas { Características } ~
+            \audit_campo:nnn { t11 } {##1} { caracteristicas }
+            \exp_not:N \par
+            \exp_not:N \audit@rotuloceldas { Ciclo~de~vida } ~
+            \audit_campo:nnn { t11 } {##1} { ciclo } &
+            \audit_campo:nnn { t11 } {##1} { ubicacion } &
+            \audit_campo:nnn { t11 } {##1} { cantidad } &
+            \audit_campo:nnn { t11 } {##1} { justificacion } \exp_not:N \\
+          }
+      }
+    \TablaAcumulada [ ancho = completo , fuente = condensada , #1 ]
+      { Formulario~T-11.~Especificaciones~técnicas~ofertadas } { t11 }
+      { R{6mm} L{28mm} L{50mm} L{22mm} L{17mm} X }
+      { N.º & Componente & Producto~o~servicio~ofertado & Ubicación & Cantidad & Justificación \\ \midrule }
+    \notaTabla
+      {
+        Costo~unitario~estimado~(\transv{RT-08.10}{19}):~se~declara~en~el~
+        Sobre~N.º~3,~Oferta~Económica,~conforme~a~\art{50.2}{29}.~Esta~oferta~
+        técnica~no~contiene~precios,~tarifas~ni~valores~unitarios.
+      }
+  }
+\ExplSyntaxOff
+
+% Rótulo dentro de una celda
+\newcommand\audit@rotuloceldas[1]{{\color{audit-secundario}#1.}}
+
+% Esqueleto: filas vacías, con todos los campos por completar
+\expandafter\def\csname esqueleto@T-11\endcsname{%
+  \begin{formulario}{T-11}
+    \begin{formularioTOnce}
+      \componenteTOnce{}
+      \componenteTOnce{}
+      \componenteTOnce{}
+    \end{formularioTOnce}
+  \end{formulario}}

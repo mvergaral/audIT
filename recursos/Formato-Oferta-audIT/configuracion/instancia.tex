@@ -1,0 +1,26 @@
+% ============================================================================
+%  Instancia de entrega. Es el único archivo que se edita al pasar de un
+%  informe al siguiente. La herramienta de compilación también lo lee.
+%
+%  \Instancia       informe1 | informe2 | informe3 | final
+%  \FechaEntrega    AAAA-MM-DD, según el Formulario T-20
+%  \ModoFolio       subdocumento  cada PDF empieza en el folio 1 (informes)
+%                   continuo      un correlativo único a través de todos los
+%                                 PDF del sobre (oferta final)
+%  \AnexoHorizontal hoja    la página se gira con pdflscape y el folio queda
+%                           en el extremo inferior derecho de la hoja física
+%                   pagina  la página es apaisada de verdad y el folio queda
+%                           abajo a la derecha tal como se ve en pantalla
+% ============================================================================
+
+\Instancia{informe2}
+\Version{2.0}
+\FechaEntrega{2026-10-05}
+\ModoFolio{subdocumento}
+\AnexoHorizontal{pagina}
+
+% Valores de las otras instancias (Formulario T-20, FEP01 p.65):
+%   informe1  2026-09-07   ModoFolio subdocumento
+%   informe2  2026-10-05   ModoFolio subdocumento
+%   informe3  2026-11-13   ModoFolio subdocumento
+%   final     2026-11-25   ModoFolio continuo

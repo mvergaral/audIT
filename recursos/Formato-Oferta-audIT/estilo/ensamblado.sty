@@ -1,0 +1,214 @@
+% ============================================================================
+%  ensamblado.sty
+%  Cómo se arma cada entrega a partir del mismo contenido.
+%
+%  \OfertaUnica            documento único: portada, ficha, hoja resumen,
+%                          índice general, observaciones de la instancia
+%                          anterior, cada subdocumento de la instancia con su
+%                          apertura, índice detallado y formularios,
+%                          referencias y contraportada
+%  \DocumentoSubdocumento{4}   un subdocumento como PDF propio: portada de
+%                          subdocumento, ficha, observaciones que le tocan,
+%                          apertura, contenido, formularios y referencias
+%  \DocumentoCaratulaSobre     carátula del sobre cuando va en varios PDF:
+%                          portada, ficha, hoja resumen y tabla completa de
+%                          observaciones
+%
+%  El contenido de cada subdocumento vive una sola vez, en
+%  \RaizSubdocumentos/<carpeta>/contenido.tex. La muestra usa otra raíz.
+% ============================================================================
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{ensamblado}[2026/09/26 Ensamblado de entregas]
+
+% Raíces donde se buscan los archivos de cada subdocumento, en orden. La
+% muestra antepone muestra/subdocumentos: lo que no encuentra ahí lo toma de
+% subdocumentos/.
+\providecommand\RaizSubdocumentos{subdocumentos}
+
+\ExplSyntaxOn
+% Lista de subdocumentos que entran, si no es la de la instancia (la muestra)
+\NewDocumentCommand \UsarSubdocumentos { m }
+  { \prop_gput:Nen \g_audit_instancia_lista_prop { \instancia } {#1} }
+\cs_generate_variant:Nn \prop_gput:Nnn { Nen }
+
+\tl_new:N \l_audit_carpeta_tl
+\tl_new:N \l_audit_ruta_tl
+% Primera ruta existente de <carpeta>/<archivo> entre las raíces
+\cs_new_protected:Npn \audit_buscar:nn #1#2
+  {
+    \tl_clear:N \l_audit_ruta_tl
+    \clist_map_inline:en { \RaizSubdocumentos }
+      {
+        \file_if_exist:nT { ##1 / #1 / #2 }
+          { \tl_set:Nn \l_audit_ruta_tl { ##1 / #1 / #2 } \clist_map_break: }
+      }
+  }
+\NewDocumentCommand \BuscarArchivoSubdoc { m m } { \audit_buscar:nn {#1} {#2} }
+\NewExpandableDocumentCommand \rutaEncontrada { } { \tl_use:N \l_audit_ruta_tl }
+% El número del subdocumento en curso lo fija \aperturaSubdocumento, después
+% de cerrar el anterior. Fijarlo aquí dejaba la última página del anterior con
+% el número nuevo en el encabezado y su conteo de figuras anotado a otro.
+\NewDocumentCommand \IncluirSubdocumento { m }
+  {
+    \tl_set:Ne \l_audit_carpeta_tl { \carpetaDeSubdocumento {#1} }
+    \audit_buscar:Vn \l_audit_carpeta_tl { meta.tex }
+    \tl_if_empty:NF \l_audit_ruta_tl { \file_input:V \l_audit_ruta_tl }
+    \aperturaSubdocumento {#1}
+    \audit_buscar:Vn \l_audit_carpeta_tl { contenido.tex }
+    \tl_if_empty:NTF \l_audit_ruta_tl
+      { \msg_error:nnV { ensamblado } { sin-contenido } \l_audit_carpeta_tl }
+      { \file_input:V \l_audit_ruta_tl }
+    \exp_args:NnV \IncluirFormularios {#1} \l_audit_carpeta_tl
+    \EmitirAnexosGraficos
+  }
+\cs_generate_variant:Nn \audit_buscar:nn { Vn }
+\msg_new:nnn { ensamblado } { sin-contenido } { No~hay~contenido.tex~para~#1. }
+
+% Texto de la ficha para el documento único
+\tl_new:N \l_audit_ficha_subdocs_tl
+\tl_new:N \l_audit_ficha_forms_tl
+\seq_new:N \l_audit_ficha_seq
+\cs_new_protected:Npn \audit_ficha_unica:
+  {
+    \seq_set_from_clist:Ne \l_audit_ficha_seq
+      { \prop_item:Ne \g_audit_instancia_lista_prop { \instancia } }
+    \tl_set:Ne \l_audit_ficha_subdocs_tl
+      { \seq_use:Nnnn \l_audit_ficha_seq { ~y~ } { ,~ } { ~y~ } }
+    \seq_clear:N \l_tmpa_seq
+    \seq_map_inline:Nn \l_audit_ficha_seq
+      {
+        \clist_map_inline:en { \formulariosDeSubdocumento {##1} }
+          { \seq_put_right:Nn \l_tmpa_seq {####1} }
+      }
+    \tl_set:Ne \l_audit_ficha_forms_tl
+      { \seq_use:Nnnn \l_tmpa_seq { ~y~ } { ,~ } { ~y~ } }
+  }
+\cs_generate_variant:Nn \seq_set_from_clist:Nn { Ne }
+\cs_generate_variant:Nn \prop_item:Nn { Ne }
+
+\NewDocumentCommand \ListaFormulariosSubdoc { m }
+  {
+    \tl_if_blank:eTF { \formulariosDeSubdocumento {#1} }
+      { El~Formulario~T-21~no~asigna~formularios~a~este~subdocumento }
+      {
+        \seq_set_from_clist:Ne \l_tmpa_seq { \formulariosDeSubdocumento {#1} }
+        \seq_use:Nnnn \l_tmpa_seq { ~y~ } { ,~ } { ~y~ }
+      }
+  }
+
+% Observaciones de la instancia anterior (FEP01, Artículo 46)
+\tl_new:N \l_audit_obs_archivo_tl
+\cs_new_protected:Npn \audit_archivo_obs:
+  {
+    \str_case:enF { \instancia }
+      {
+        { informe2 } { \tl_set:Nn \l_audit_obs_archivo_tl { anexos/observaciones-informe1.tex } }
+        { informe3 } { \tl_set:Nn \l_audit_obs_archivo_tl { anexos/observaciones-informe2.tex } }
+        { final }    { \tl_set:Nn \l_audit_obs_archivo_tl { anexos/observaciones-informe3.tex } }
+      }
+      { \tl_clear:N \l_audit_obs_archivo_tl }
+    \cs_if_exist:NT \ArchivoObservaciones
+      { \tl_set:Ne \l_audit_obs_archivo_tl { \ArchivoObservaciones } }
+  }
+\NewDocumentCommand \ObservacionesInstancia { O{} }
+  {
+    \audit_archivo_obs:
+    \tl_if_empty:NF \l_audit_obs_archivo_tl
+      {
+        % Sin archivo, la tabla sale vacía con sus columnas en el documento
+        % que lleva la tabla completa (el Artículo 46 es obligatorio desde el
+        % Informe 2 y no puede faltar sin que se note). Un PDF de un solo
+        % subdocumento no la lleva.
+        \bool_lazy_or:nnT
+          { \file_if_exist_p:V \l_audit_obs_archivo_tl }
+          { \tl_if_empty_p:n {#1} || \str_if_eq_p:nn {#1} { E } }
+          { \audit_observaciones:n {#1} }
+      }
+  }
+\cs_new_protected:Npn \audit_observaciones:n #1
+  {
+    \clearpage
+    \begin{paginaAncha}
+    \tituloPagina { Artículo~46 } { Resolución~de~observaciones } { observaciones }
+    \tl_set:Nn \l_audit_obs_filtro_tl {#1}
+    \bool_lazy_and:nnT
+      { \tl_if_empty_p:N \l_audit_obs_filtro_tl }
+      { \str_if_eq_p:ee { \instancia } { final } }
+      { \tl_set:Nn \l_audit_obs_filtro_tl { tecnico } }
+    \file_if_exist:VTF \l_audit_obs_archivo_tl
+      { \file_input:V \l_audit_obs_archivo_tl }
+      {
+        \begin{tablaObservaciones} { \audit_obs_instancia_anterior: }
+          \observacion [ sub = \l_audit_obs_filtro_tl ]
+            { \marcador{n} } { \marcador{observación~de~la~comisión} }
+            { \marcador{respuesta} } { \marcador{sección~modificada} }
+        \end{tablaObservaciones}
+        \msg_warning:nnV { ensamblado } { sin-observaciones } \l_audit_obs_archivo_tl
+      }
+    \end{paginaAncha}
+    \clearpage
+  }
+\prg_generate_conditional_variant:Nnn \file_if_exist:n { V } { p }
+\cs_new:Npn \audit_obs_instancia_anterior:
+  {
+    \str_case:en { \instancia }
+      { { informe2 } { Informe~1 } { informe3 } { Informe~2 } { final } { Informe~3 } }
+  }
+\msg_new:nnn { ensamblado } { sin-observaciones }
+  { Falta~#1.~La~tabla~del~Artículo~46~sale~vacía. }
+\cs_generate_variant:Nn \msg_warning:nnn { nnV }
+\tl_new:N \l_audit_obs_filtro_tl
+\NewExpandableDocumentCommand \filtroObservaciones { } { \tl_use:N \l_audit_obs_filtro_tl }
+\prg_generate_conditional_variant:Nnn \file_if_exist:n { V } { T , TF }
+\cs_generate_variant:Nn \file_input:n { V }
+\cs_new_protected:Npn \audit@fichaunica { \audit_ficha_unica: }
+\cs_new:Npn \audit@subdocslista { \tl_use:N \l_audit_ficha_subdocs_tl }
+\cs_new:Npn \audit@formslista { \tl_use:N \l_audit_ficha_forms_tl }
+\ExplSyntaxOff
+
+% ----------------------------------------------------------------------------
+%  Entregas
+% ----------------------------------------------------------------------------
+\providecommand\NombreArchivo{\jobname}
+
+\NewDocumentCommand\OfertaUnica{}{%
+  %
+  \audit@fichacitasfalse
+  \portadaOferta
+  \audit@fichaunica
+  \fichaDocumento{\dato{licitacioncorta}, oferta técnica en documento único:
+      subdocumentos \audit@subdocslista}%
+    {\SiDato{descripcion}{\dato{descripcion}}{Los subdocumentos que el
+      Formulario T-22 asigna a esta instancia, en el orden del Formulario T-7,
+      con los formularios que les asigna el Formulario T-21.}}%
+    {\audit@formslista}%
+  \hojaResumen
+  \indiceGeneral
+  \ObservacionesInstancia
+  \ParaCadaSubdocumento{\IncluirSubdocumento{##1}}%
+  \anexoReferencias
+  \contraportada}
+
+\NewDocumentCommand\DocumentoSubdocumento{m}{%
+  \FijarSubdocumento{#1}%
+  \BuscarArchivoSubdoc{\carpetaDeSubdocumento{#1}}{meta.tex}%
+  \InputIfFileExists{\rutaEncontrada}{}{}%
+  \portadaSubdocumento
+  \fichaDocumento{Subdocumento N.º #1. \tituloDeSubdocumento{#1}}%
+    {\SiDato{descripcion}{\dato{descripcion}}{\marcador{descripción del subdocumento en meta.tex}}}%
+    {\ListaFormulariosSubdoc{#1}}%
+  \ObservacionesInstancia[#1]%
+  \IncluirSubdocumento{#1}%
+  \anexoReferencias}
+
+\NewDocumentCommand\DocumentoCaratulaSobre{}{%
+  \FijarSubdocumento{}%
+  \portadaOferta
+  \fichaDocumento{Carátula, hoja resumen y resolución de observaciones del sobre}%
+    {Identificación de la oferta, hoja resumen con el folio inicial de cada
+     sección de los documentos del sobre y tabla del Artículo 46.}%
+    {Los de cada subdocumento, según el Formulario T-21}%
+  \hojaResumen
+  \ObservacionesInstancia}
+
+\endinput

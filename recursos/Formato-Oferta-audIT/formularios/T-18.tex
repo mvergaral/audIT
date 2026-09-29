@@ -1,0 +1,18 @@
+% ============================================================================
+%  Formulario T-18. Propuesta de implantación y puesta en marcha controlada (FEP01 p. 64)
+%  Formulario de contenido adjunto: lista cada exigencia de las bases y dice
+%  dónde se presenta, con \verSeccionFolio{etiqueta}.
+% ============================================================================
+
+\DefinirFormulario{T-18}{Propuesta de implantación y puesta en marcha controlada}{64}
+  {El Proponente adjuntará a este formulario la propuesta de implantación y puesta en marcha controlada que asegure el éxito del paso a producción, cubriendo por separado la Etapa 1 y la Etapa 2, con el plan de convivencia entre ambas y el procedimiento de reversión.}
+
+\expandafter\def\csname esqueleto@T-18\endcsname{%
+  \begin{formulario}{T-18}
+    \begin{contenidoExigido}{T-18}
+      \exigencia{Etapa 1: marcha blanca de los meses 13 a 15 y producción desde el mes 16.}{}
+      \exigencia{Etapa 2: marcha blanca de los meses 19 y 20 y producción desde el mes 21.}{}
+      \exigencia{Plan de convivencia entre ambas etapas.}{}
+      \exigencia{Procedimiento de reversión.}{}
+    \end{contenidoExigido}
+  \end{formulario}}

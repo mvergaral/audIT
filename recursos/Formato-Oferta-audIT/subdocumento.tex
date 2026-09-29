@@ -1,0 +1,15 @@
+% ============================================================================
+%  Un subdocumento como PDF propio. La herramienta de compilación lo llama
+%  con el número de subdocumento, el folio inicial y el nombre de archivo:
+%    -usepretex="\def\NumeroSubdoc{4}\def\FolioInicialExterno{57}..."
+%  Compilar desde la raíz:  python3 herramientas/compilar.py subdocs 04
+% ============================================================================
+\providecommand\NumeroSubdoc{1}
+\documentclass{audit-oferta}
+\input{configuracion/metadatos}
+\input{configuracion/instancia}
+\input{configuracion/subdocumentos}
+
+\begin{document}
+\expandafter\DocumentoSubdocumento\expandafter{\NumeroSubdoc}
+\end{document}

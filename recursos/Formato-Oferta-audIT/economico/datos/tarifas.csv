@@ -1,0 +1,6 @@
+perfil;costo;tarifa
+# Costo y tarifa horaria ofertados por perfil, en UF, con decimales con coma
+# o punto. El perfil se escribe igual que en configuracion/economico.tex
+# (Formulario E-26). Un valor fuera del rango del E-26 detiene la
+# compilación. Un perfil que no está en el E-26 deja un aviso: las bases piden
+# declararlo en la hoja de tarifas del modelo financiero.

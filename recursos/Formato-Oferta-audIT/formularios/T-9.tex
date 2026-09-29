@@ -1,0 +1,17 @@
+% ============================================================================
+%  Formulario T-9. Metodología para la administración y gestión del proyecto (FEP01 p. 61)
+%  Formulario de contenido adjunto: lista cada exigencia de las bases y dice
+%  dónde se presenta, con \verSeccionFolio{etiqueta}.
+% ============================================================================
+
+\DefinirFormulario{T-9}{Metodología para la administración y gestión del proyecto}{61}
+  {El Proponente adjuntará a este formulario la información solicitada en el Subdocumento 6, letra a.}
+
+\expandafter\def\csname esqueleto@T-9\endcsname{%
+  \begin{formulario}{T-9}
+    \begin{contenidoExigido}{T-9}
+      \exigencia{Metodología de gestión del proyecto: aplicación del PMBOK adaptada a la complejidad del proyecto, integrando enfoques ágiles donde corresponda.}{}
+      \exigencia{Gestión de interesados, comunicaciones, adquisiciones e integración.}{}
+      \exigencia{Ceremonias, artefactos, cadencias y mecanismos de decisión.}{}
+    \end{contenidoExigido}
+  \end{formulario}}

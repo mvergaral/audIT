@@ -21,3 +21,16 @@ __pycache__/
 
 # salida de compilación del informe
 Investigacion/*.pdf
+
+# Archivos auxiliares de compilación LaTeX
+*/salida/aux/
+*.aux
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.bcf
+*.blg
+*.run.xml
+
+# Permitir PDF de muestra del nuevo formato
+!**/salida/muestra.pdf

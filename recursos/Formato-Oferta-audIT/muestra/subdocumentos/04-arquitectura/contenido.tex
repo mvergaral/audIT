@@ -1,0 +1,151 @@
+% ============================================================================
+%  Muestra del formato. Subdocumento 4: demostración de componentes.
+%
+%  Todo el texto es marcador. No hay contenido del proyecto.
+%  Extractos copiados tal cual, solo para probar el comportamiento:
+%    - la tabla del Anexo A de Entrega/contenido/c4.tex (tabla larga, con su
+%      entorno tablaAudit del formato anterior, que prueba la compatibilidad)
+%    - las figuras LogicaCapas.pdf y Main.pdf, con sus leyendas de c4.tex
+% ============================================================================
+
+\begin{resumenApertura}
+\marcador{Resumen de apertura: qué resuelve el subdocumento, en cuatro o cinco
+líneas, con el dato que lo dimensiona}
+\begin{recibe}
+  \item \marcador{Qué recibe el mandante, primer punto}
+  \item \marcador{Qué recibe el mandante, segundo punto}
+\end{recibe}
+\end{resumenApertura}
+
+\section{Arquitectura lógica}\label{sec:4-logica}
+
+\marcador{Párrafo de contexto de la sección: qué se va a ver y en qué orden}
+
+\subsection{\marcador{Título de nivel 2}}\label{sec:4-tabla-corta}
+
+\marcador{Párrafo de contexto: qué muestra la \tabref{muestra-corta} y por qué
+importa para el mandante}
+
+\begin{tabla}{\marcador{Leyenda de la tabla}}{muestra-corta}{L{34mm}L{42mm}X}
+\marcador{Columna} & \marcador{Columna} & \marcador{Columna} \\ \midrule
+\marcador{Dato} & \marcador{Dato} & \marcador{Dato de texto largo, alineado a la izquierda, que ocupa más de una línea en la columna flexible} \\
+\marcador{Dato} & \marcador{Dato} & \marcador{Dato} \\
+\marcador{Dato} & \marcador{Dato} & \marcador{Dato} \\
+\end{tabla}
+
+\marcador{Conclusión: qué se desprende de la tabla y qué decide la oferta a
+partir de ella}
+
+\subsubsection{\marcador{Título de nivel 3}}
+
+\marcador{Párrafo que presenta la \figref{capasfig} antes de que aparezca: qué
+muestra y cómo se lee}
+
+\figuraAncha{figuras/04-arquitectura/LogicaCapas.pdf}{Las ocho capas obligatorias del numeral 2.1 transversal, con sus componentes e interfaces, conforme a RT-02.01}{capasfig}
+
+\marcador{Párrafo que recorre la figura y dice qué concluye}
+
+\paragraph{\marcador{Título de nivel 4}} \marcador{Texto que sigue en la misma
+línea del título de cuarto nivel}
+
+\subsection{\marcador{Dispositivos de venta}}\label{sec:4-dispositivos}
+
+\marcador{Párrafo de contexto antes de un compromiso: qué obligación asume la
+oferta en este punto}
+
+\begin{compromiso}[
+  metrica  = {\marcador{Métrica y umbral}},
+  verifica = {\marcador{Dónde se verifica: criterio, prueba o hito}},
+  fuente   = {\marcador{Requisito y fuente: código, documento y página}}]
+\marcador{Obligación que audIT asume, en una oración verificable}
+\end{compromiso}
+
+\marcador{Párrafo de contexto antes de una decisión de arquitectura o de
+alcance}
+
+\decision{
+  titulo   = {\marcador{Tema de la decisión}},
+  decide   = {\marcador{Alternativa escogida}},
+  descarta = {\marcador{Alternativa descartada}},
+  criterio = {\marcador{Criterio de selección}},
+  fuente   = {\marcador{Requisito, artículo o numeral que la funda}}}
+
+\cifraMargen{\marcador{cifra}}{\marcador{qué mide}}{\marcador{documento, numeral
+y página}}\marcador{Párrafo junto a una cifra destacada en el carril. Se usa pocas veces
+por subdocumento y nunca sin su fuente. Necesita texto debajo: la cifra ocupa unas
+seis líneas del carril y no debe quedar junto al título siguiente}
+
+\reqMargen{RT-XX.XX}\marcador{Párrafo que atiende un requisito. El código va en el
+carril, a la altura del párrafo, o en línea dentro del texto, como}
+\req{RT-XX.XX}\marcador{. Con el Formulario T-12 completo, el código enlaza a su
+fila}
+
+\marcador{Párrafo con una cifra del Caso:}
+\cifra{\marcador{cifra}}{\marcador{documento, numeral y página}}
+\marcador{y el contexto que la explica. La fuente queda en el carril, a la
+misma altura}
+
+\marcador{Párrafo de cierre de la sección}
+
+\subsection{\marcador{Citas}}\label{sec:4-citas}
+
+\marcador{Párrafo que cita las bases por artículo y página, siempre con la
+misma forma:} \art{40.1}{26}\marcador{, o entre paréntesis} \caso*{numeral
+14.1}{29}\marcador{. Una fuente externa se cita en APA 7} \parencite{muestra-fuente}%
+\marcador{ y aparece en el anexo de referencias}
+
+\section{Arquitectura física}\label{sec:4-fisica}
+
+\marcador{Párrafo de contexto de la sección}
+
+\subsection{\marcador{Título de nivel 2}}\label{sec:4-tabla-larga}
+
+\marcador{Párrafo de contexto: qué muestra la \tabref{t11a}, que cruza páginas
+con su cabecera repetida}
+
+\begin{tablaAudit}{Tabla de emplazamiento de componentes}{t11a}{@{}r p{4.3cm} p{1.7cm} c p{5.6cm}@{}}
+\textbf{N.\textordmasculine{}} & \textbf{Componente lógico} & \textbf{Capa} & \textbf{Empl.} & \textbf{Justificación de la decisión} \\ \midrule
+1 & CDN y protección perimetral & Borde & N & Punto de presencia distribuido. no tiene sentido físico fuera de la nube \\
+2 & Puerta de enlace de servicios & Borde & N & Autenticación y enrutamiento centralizados. escala con el peak de reconexión \\
+3 & Servicio de despacho y asignación & Negocio & N & Orquesta recursos de toda la red. requiere la vista completa de flota y jornada \\
+4 & Nodo de continuidad operacional & Negocio & SB & RT-21.06: asignar viaje, emitir DET y recibir pánico son severidad máxima. No pueden depender del enlace a la nube \\
+5 & Servicio de flota y mantenimiento & Negocio & N & Administración centralizada de activos. tolera latencia de segundos \\
+6 & Servicio de jornada & Negocio & N & Validación bloqueante $\leq$ 30 s (RT-09.01) contra el dato consolidado \\
+7 & Servicio de gestión documental & Negocio & N & Sellado y control de retención centralizados \\
+8 & Servicio de tarifas y liquidación & Negocio & N & Proceso por lotes mensual. sin exigencia de latencia operacional \\
+9 & Bus de eventos de telemetría & Eventos & N & Absorbe la ráfaga de cientos de unidades saliendo de la misma sombra \\
+10 & Bus transaccional & Eventos & N & Entrega garantizada con cola de mensajes fallidos \\
+11 & Pasarela de la capa anticorrupción & Integración & SB & Debe alcanzar el ERP heredado, que está físicamente en San Bernardo \\
+12 & Integración telemática de terceros & Integración & N & Consume APIs de los dos proveedores externos. cero intervención física (restricción 3) \\
+13 & Integración rFMS de fábrica & Integración & N & API del fabricante, solo lectura, autorización por OEM (RT-17.06) \\
+14 & Base transaccional & Datos & N & Consistencia estricta con alta disponibilidad multizona \\
+15 & Base de series de tiempo & Datos & N & Volumen y patrón de escritura masiva. 2 años en línea (RT-05.10 del Caso) \\
+16 & Caché distribuida & Datos & N & Sesiones, vigencias y geocercas de consulta. no sustituye la evaluación a bordo \\
+17 & Repositorio documental inmutable & Datos & N & Evidencia probatoria con retención de 5 a 10 años (RT-07.11, RT-05.10) \\
+18 & Lakehouse analítico & Analítica & N & Aislamiento OLTP/OLAP. costo por km en $\leq$ 24 h (RT-05.29) \\
+19 & Capa semántica de autoservicio & Analítica & N & Explotación por Finanzas sin intervención de TI (RT-05.27) \\
+20 & Gestión del parque de dispositivos & Terreno & N & Inventario, configuración, firmware, bloqueo y borrado remotos (RT-03.18) \\
+21 & Identidad, secretos y cifrado de campo & Seguridad & N & Clave gestionada independiente de la infraestructura respaldada (RT-07.10, RT-11.10) \\
+22 & Observabilidad & Observab. & N & Cobertura unificada de nube y on-premise, sin puntos ciegos (RT-03.16) \\
+23 & Réplica de recuperación ante desastres & Todas & N2 & RT-07.02: distancia suficiente para no compartir el evento de fuerza mayor \\
+24 & ERP contable heredado 2013 & Legado & SB & Sistema existente no reemplazable y único emisor de documentos tributarios (Cap. 11) \\
+25 & Terminación de enlaces y borde de red & Red & SB & Punto de entrada de ExpressRoute y VPN por rutas físicas distintas (RT-03.17, RT-06.32) \\
+26 & Custodia de medios de respaldo & Datos & SB & Medio físico transportable fuera de sitio (RT-06.26, esquema 3-2-1-1-0 de RT-07.09) \\
+27 & Nodo de terminal & Negocio & GT & RT-03.10 del Caso: «Los terminales deben operar 12 horas sin enlace hacia el exterior» \\
+28 & Lector de portería y enrolamiento & Terreno & GT + SB & Verificación local de vigencias en los 5 terminales. el enrolamiento biométrico se centraliza (RT-06.22) \\
+29 & Buffer no volátil $\geq$ 8 GB & Terreno & DB & RT-03.10: 72 h sin cobertura sin pérdida de registro. RT-10.05: hasta 12 días (288 h) de cierre fronterizo \\
+30 & Motor de geocercas a bordo & Terreno & DB & RT-09.01: registro de llegada y salida automático, sin intervención del conductor y sin equipamiento en instalaciones del cliente \\
+31 & Cálculo de alerta de jornada a bordo & Terreno & DB & Criterio 28: la alerta debe llegar aunque no haya enlace, con anticipación al lugar seguro \\
+32 & Identificación del conductor & Terreno & DB & RT-12.11: sin manipular un dispositivo y sin recordar una credencial \\
+33 & Módulo satelital de ráfaga corta & Terreno & DB & Subconjunto por riesgo. Población no estimable hasta la medición de RT-03.24 \\
+34 & App móvil del conductor & Borde & BM & RT-17.01. Canal voluntario e incentivado. la trazabilidad obligatoria no depende de él (restricciones 1 y 2) \\
+\end{tablaAudit}
+
+\marcador{Conclusión de la tabla}
+
+\subsection{\marcador{Título de nivel 2}}\label{sec:4-anexo}
+
+\marcador{Párrafo que presenta la \figref{fisica}. Por su ancho va como anexo
+gráfico en página horizontal al final del subdocumento}
+
+\anexoGrafico{figuras/04-arquitectura/Main.pdf}{Arquitectura física general. Nube, sitio de continuidad, gabinetes de terminal y flota}{fisica}

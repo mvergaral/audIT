@@ -1,0 +1,21 @@
+% ============================================================================
+%  Un documento económico como PDF propio. La herramienta de compilación lo
+%  llama con la clave del documento y el nombre de archivo:
+%    -usepretex="\def\DocumentoEco{oferta}..."
+%  costos    documento de costos frente a venta (Informe 3, Formulario T-22)
+%  oferta    entregable 1 del Sobre N.º 3 (Formulario E-21)
+%  analisis  entregable 2 del Sobre N.º 3 (Formulario E-21)
+%  Compilar desde la raíz:  python3 herramientas/compilar.py economico
+% ============================================================================
+\providecommand\DocumentoEco{costos}
+\documentclass{audit-oferta}
+\input{configuracion/metadatos}
+\input{configuracion/instancia}
+\input{configuracion/subdocumentos}
+\input{configuracion/economico}
+% La muestra económica arma documentos de otra instancia
+\ifdefined\InstanciaForzada\AplicarInstancia{\InstanciaForzada}\fi
+
+\begin{document}
+\expandafter\DocumentoEconomico\expandafter{\DocumentoEco}
+\end{document}

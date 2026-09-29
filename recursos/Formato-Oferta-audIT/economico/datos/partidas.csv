@@ -1,0 +1,59 @@
+clave;concepto;moneda;valor;iva;planilla
+# ============================================================================
+#  Partidas de la oferta económica. Única fuente de las cifras de los
+#  documentos económicos (PDF, Markdown y DOCX) y del modelo financiero.
+#  Una cifra que no esté aquí no puede aparecer en un documento: el
+#  verificador marca toda cifra en dinero escrita a mano.
+#
+#  clave     identificador que usan \montoPartida{clave} y \tablaMontos
+#  concepto  texto que aparece en las tablas
+#  moneda    CLP, UF o USD: moneda en que se escribe el valor
+#  valor     número sin separador de miles (decimales con coma o punto),
+#            vacío si está por completar, o =clave1+clave2 para una suma
+#  iva       si (afecta a IVA) o no (no aplica, por ejemplo un costo interno)
+#  planilla  celda del modelo financiero del mandante donde va el valor
+#            neto en pesos, como Resumen!C5. herramientas/planilla.py la
+#            compara con la planilla entregada
+#  Las líneas que empiezan con # son comentarios.
+# ============================================================================
+#
+# Formulario E-21, 1.1: valores totales del proyecto
+implementacion;Valor total de la fase de implementación (Etapa 1 y Etapa 2);CLP;;si;
+operacion;Valor total de la fase de Operación por los 36 meses;CLP;;si;
+proyecto;Valor total del proyecto;CLP;=implementacion+operacion;si;
+#
+# Formulario T-22, Informe 3: gastos que pide la planilla del mandante. Los
+# gastos asociados a proveedores se explicitan aparte y se suman a operación.
+gasto-operacion-directo;Gastos de operación propios;CLP;;no;
+gasto-proveedores;Gastos asociados a proveedores, sumados a operación;CLP;;no;
+gasto-operacion;Gastos de operación;CLP;=gasto-operacion-directo+gasto-proveedores;no;
+gasto-inversion;Gastos de inversión;CLP;;no;
+gasto-administracion;Gastos administrativos;CLP;;no;
+gasto-rrhh;Gastos de recursos humanos;CLP;;no;
+gasto-total;Costo total de la solución;CLP;=gasto-operacion+gasto-inversion+gasto-administracion+gasto-rrhh;no;
+#
+# Formulario E-21, 2.1: cuadro maestro de costos
+costo-directo-implementacion;Costos directos de implementación;CLP;;no;
+costo-directo-operacion;Costos directos de operación;CLP;;no;
+costo-indirecto;Costos indirectos y overhead;CLP;;no;
+costo-total;Costo total;CLP;=costo-directo-implementacion+costo-directo-operacion+costo-indirecto;no;
+#
+# Formulario E-21, 2.2: evaluación financiera
+van;Valor actual neto (VAN);CLP;;no;
+#
+# Formulario T-22 y E-21, 2.7: valorización de las cinco innovaciones
+innovacion-1-inversion;Innovación tipo 1, inversión;CLP;;no;
+innovacion-1-costo;Innovación tipo 1, costo operacional incremental;CLP;;no;
+innovacion-1-beneficio;Innovación tipo 1, beneficio esperado;CLP;;no;
+innovacion-2-inversion;Innovación tipo 2, inversión;CLP;;no;
+innovacion-2-costo;Innovación tipo 2, costo operacional incremental;CLP;;no;
+innovacion-2-beneficio;Innovación tipo 2, beneficio esperado;CLP;;no;
+innovacion-3-inversion;Innovación tipo 3, inversión;CLP;;no;
+innovacion-3-costo;Innovación tipo 3, costo operacional incremental;CLP;;no;
+innovacion-3-beneficio;Innovación tipo 3, beneficio esperado;CLP;;no;
+innovacion-4-inversion;Innovación tipo 4, inversión;CLP;;no;
+innovacion-4-costo;Innovación tipo 4, costo operacional incremental;CLP;;no;
+innovacion-4-beneficio;Innovación tipo 4, beneficio esperado;CLP;;no;
+innovacion-5-inversion;Innovación tipo 5, inversión;CLP;;no;
+innovacion-5-costo;Innovación tipo 5, costo operacional incremental;CLP;;no;
+innovacion-5-beneficio;Innovación tipo 5, beneficio esperado;CLP;;no;

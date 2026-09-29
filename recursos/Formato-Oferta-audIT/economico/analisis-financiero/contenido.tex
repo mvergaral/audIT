@@ -1,0 +1,94 @@
+% ============================================================================
+%  Entregable 2. Análisis económico-financiero (Formulario E-21, FEP01 p.71).
+%  Apartados 2.1 a 2.7 del formulario. Las cifras salen de
+%  economico/datos/partidas.csv: aquí no se escribe ningún monto a mano.
+% ============================================================================
+
+\begin{resumenApertura}
+\marcador{Qué justifica este análisis, en cuatro o cinco líneas, con el costo
+total frente al valor ofertado}
+\begin{recibe}
+  \item \marcador{Qué recibe el mandante}
+\end{recibe}
+\end{resumenApertura}
+
+\section{Análisis comparativo de costos frente a precio}\label{sec:eco-costo-precio}
+
+\marcador{Párrafo de contexto: qué muestra la \tabref{eco-maestro}, el cuadro
+maestro de costos por categoría}
+
+\tablaMontos{Cuadro maestro de costos}{eco-maestro}%
+  {costo-directo-implementacion, costo-directo-operacion, costo-indirecto}
+
+\marcador{Párrafo de contexto: qué muestra la \tabref{eco-precio}, el precio de
+venta con el margen aplicado a cada componente}
+
+\begin{tabla}{Precio de venta y margen por componente}{eco-precio}{X R{30mm} R{22mm} R{30mm}}
+Componente & Costo & Margen & Precio de venta \\ \midrule
+\marcador{componente} & \marcador{partida de costo} & \marcador{porcentaje} & \marcador{partida de precio} \\
+\end{tabla}
+
+\marcador{Conclusión que se saca de las dos tablas}
+
+\section{Evaluación financiera}\label{sec:eco-evaluacion}
+
+\marcador{Párrafo de contexto: qué muestra la \tabref{eco-indicadores}. VAN con
+la tasa de descuento y su justificación, flujo de caja proyectado, TIR,
+sensibilidad y punto de equilibrio}
+
+\begin{tabla}{Indicadores de la evaluación financiera}{eco-indicadores}{L{60mm} X}
+Indicador & Valor \\ \midrule
+Horizonte de evaluación & 56 meses, \form{E-24}{73} \\
+Tasa de descuento & \marcador{tasa y justificación} \\
+Valor actual neto (VAN) & \montoPartida{van} \\
+Tasa interna de retorno (TIR) & \marcador{porcentaje} \\
+Punto de equilibrio & \marcador{mes} \\
+\end{tabla}
+
+\marcador{Análisis de sensibilidad: qué variables se mueven y cuánto cambia el VAN}
+
+\section{Curva S}\label{sec:eco-curva}
+
+\marcador{Costos acumulados, ingresos acumulados y análisis del flujo de caja
+mensual. La figura se cita con \textbackslash figref antes de aparecer}
+
+\section{Estrategia de adquisiciones}\label{sec:eco-estrategia}
+
+\marcador{Matriz de adquisiciones principales, cronograma de compras alineado con
+el plan de proyecto, estrategia de negociación, contratos críticos, plan de
+importaciones si aplica y análisis de hacer o comprar}
+
+\section{Modelo de costos operacionales}\label{sec:eco-operacion}
+
+\marcador{Recursos humanos, infraestructura y alojamiento, licenciamiento y
+suscripciones, conectividad, energía e instalaciones, seguros y garantías, y
+optimizaciones previstas en el tiempo}
+
+\subsection{Costo y tarifa por perfil}\label{sec:eco-tarifas}
+
+\marcador{Párrafo de contexto: qué muestra la \tabref{tarifas-e26}. El costo y la
+tarifa ofertados van en economico/datos/tarifas.csv y deben caer en los rangos
+del Formulario E-26}
+
+\tablaTarifas
+
+\section{Estructura de mantención y soporte}\label{sec:eco-mantencion}
+
+\marcador{Modelo de costeo, recursos dedicados frente a compartidos, mantención
+preventiva programada, provisión para mantención correctiva, presupuesto de
+mejora continua y costos de actualización tecnológica}
+
+\section{Valorización de las cinco innovaciones}\label{sec:eco-innovaciones}
+
+\marcador{Párrafo de contexto: qué muestra la \tabref{eco-innovaciones}, la
+inversión, el costo operacional incremental y el beneficio esperado de cada
+innovación, reflejados en el flujo de caja}
+
+\tablaMontos*[fuente=condensada]{Valorización de las cinco innovaciones}{eco-innovaciones}%
+  {innovacion-1-inversion, innovacion-1-costo, innovacion-1-beneficio,
+   innovacion-2-inversion, innovacion-2-costo, innovacion-2-beneficio,
+   innovacion-3-inversion, innovacion-3-costo, innovacion-3-beneficio,
+   innovacion-4-inversion, innovacion-4-costo, innovacion-4-beneficio,
+   innovacion-5-inversion, innovacion-5-costo, innovacion-5-beneficio}
+
+\marcador{Conclusión que se saca de la tabla}

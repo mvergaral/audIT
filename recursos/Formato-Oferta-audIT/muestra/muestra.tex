@@ -1,0 +1,21 @@
+% ============================================================================
+%  Muestra del formato. Documento único con los subdocumentos 2, 3, 4 y 13
+%  de la instancia vigente. El Subdocumento 4 viene de muestra/subdocumentos
+%  y demuestra cada componente con marcadores. Los demás son los esqueletos
+%  de subdocumentos/. No contiene texto del proyecto.
+%
+%  Compilar:  python3 herramientas/compilar.py muestra
+% ============================================================================
+\PassOptionsToClass{compatibilidad}{audit-oferta}
+\def\RaizSubdocumentos{muestra/subdocumentos,subdocumentos}
+\def\ArchivoObservaciones{muestra/observaciones-informe1.tex}
+\def\BibliografiaAdicional{muestra/referencias-muestra.bib}
+\documentclass{audit-oferta}
+\input{configuracion/metadatos}
+\input{configuracion/instancia}
+\input{configuracion/subdocumentos}
+\UsarSubdocumentos{2,3,4,13}
+
+\begin{document}
+\OfertaUnica
+\end{document}

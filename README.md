@@ -17,20 +17,21 @@ un marcador de página en cada salto para poder citar contra el PDF original.
 ## Estructura
 
 ```
-Informe-1/        entregables y trabajo consolidado del Informe 1 (D1-D4, anexos)
-Informe-2/        trabajo en desarrollo para la Entrega 2 (Plan Maestro, subdocs S6-S9)
-Investigacion/    trabajo de investigación individual TI-12 por persona (Persona 1 a 8)
-texto/            el texto de las bases, en Markdown
-  FEP01_…md         Bases Administrativas (77 pág., 94 artículos)
-  FEP02_…md         Bases Técnicas Transversales (51 pág.)
-  FEP03_…md         Bases Técnicas del Caso 10 (49 pág.)
-  Indicaciones…txt  Indicaciones del trabajo de investigación
-  INDICE.md         listado de las 377 secciones del corpus
+Informe-1/           entregables y trabajo consolidado del Informe 1 (D1-D4, anexos)
+Informe-2/           trabajo en desarrollo para la Entrega 2 (Plan Maestro, subdocs S6-S9)
+Investigacion/       trabajo de investigación individual TI-12 por persona (Persona 1 a 8)
+Formato-Oferta-audIT/ nuevo formato LaTeX oficial de la oferta técnica (compilador y verificador)
+texto/               el texto de las bases, en Markdown
+  FEP01_…md            Bases Administrativas (77 pág., 94 artículos)
+  FEP02_…md            Bases Técnicas Transversales (51 pág.)
+  FEP03_…md            Bases Técnicas del Caso 10 (49 pág.)
+  Indicaciones…txt     Indicaciones del trabajo de investigación
+  INDICE.md            listado de las 377 secciones del corpus
 tools/
-  pdf_ocr.sh        PDF escaneado -> Markdown
-  page_to_md.py     reconstrucción de una página (tablas, títulos, listas)
-  buscar.py         búsqueda sobre el corpus
-recursos/         logos, plantillas e imágenes del equipo
+  pdf_ocr.sh           PDF escaneado -> Markdown
+  page_to_md.py        reconstrucción de una página (tablas, títulos, listas)
+  buscar.py            búsqueda sobre el corpus
+recursos/            logos, plantillas e imágenes del equipo
 ```
 
 ## Buscar en las bases
@@ -94,11 +95,21 @@ Vale la pena saberlo si algún día hay que tocarlo:
   contra todo el corpus: el signo ordinal (`Artículo 32°` salía `32*`), los números
   romanos de los índices, `ISO`/`IEC`, y el signo de número.
 
+## Compilación de la Oferta (Formato-Oferta-audIT)
+
+La propuesta técnica se elabora en LaTeX en `Formato-Oferta-audIT/`:
+
+```bash
+cd Formato-Oferta-audIT
+./herramientas/preparar.sh                      # entorno inicial
+python3 herramientas/compilar.py subdocs 04     # compila subdocumento 04
+python3 herramientas/verificar.py               # auditoría de formato y bases
+```
+
+Ver detalles completos en `Formato-Oferta-audIT/LEEME-EQUIPO.md` y `Formato-Oferta-audIT/GUIA.md`.
+
 ## Fechas
 
-- **Lunes 21 de septiembre de 2026** — entrega del informe (10 a 15 páginas) y la
-  presentación, impresos y por correo.
-- El asunto del correo va como `[ICI544] - Nro. Empresa - nombre de la empresa y el
-  código del tema`.
-- Sin el anexo de declaración de uso de inteligencia artificial la entrega no se
-  recibe conforme.
+- **Lunes 05 de octubre de 2026 (18:00 CLT)** — Entrega del **Informe 2** de la Licitación TFEP-01/2026 (Formulario T-20).
+- Cada subdocumento se compila como PDF independiente conforme a las bases.
+- Sin el anexo de declaración de uso de inteligencia artificial (Formulario A-6) la entrega no se recibe conforme (Comunicado 09).

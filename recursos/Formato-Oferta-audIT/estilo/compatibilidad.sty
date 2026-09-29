@@ -1,0 +1,69 @@
+% ============================================================================
+%  compatibilidad.sty
+%  Macros del formato anterior (Plantilla-audIT y Entrega) para que sus
+%  contenido.tex entren con cambios mínimos. Se activa con la opción
+%  «compatibilidad» de la clase. La herramienta herramientas/migrar.py hace
+%  los cambios que no se pueden resolver con macros (niveles de título y
+%  rutas de figuras).
+%
+%    \figuraAncha{archivo}{leyenda}{etiqueta}   pasa a \figura
+%    \begin{tablaAudit}{leyenda}{etiqueta}{columnas} pasa al entorno tabla
+%    \leyendaFont{texto}                        queda como texto
+%    \parencite{bases_...}                      cita a las bases sin página:
+%        imprime «(FEP01)», «(FEP02)» o «(Caso)» y deja un aviso en el
+%        registro, porque las bases se citan con artículo y página
+%        (\art, \caso, \transv). Toda otra clave sigue en APA.
+% ============================================================================
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{compatibilidad}[2026/09/26 Compatibilidad con el formato anterior]
+
+\newcommand\figuraAncha[3]{\figura{#1}{#2}{#3}}
+% Las columnas del formato anterior se pensaron para un texto de 16,1 cm. Si
+% la suma de sus anchos no cabe en el texto de este formato, la tabla pasa
+% sola al ancho completo (texto más carril).
+\ExplSyntaxOn
+\seq_new:N \l_audit_compat_anchos_seq
+\dim_new:N \l_audit_compat_suma_dim
+\NewDocumentEnvironment { tablaAudit } { m m m +b }
+  {
+    \regex_extract_all:nnN { [pmbLCR] \{ ([^\}]*) \} } {#3} \l_audit_compat_anchos_seq
+    \dim_zero:N \l_audit_compat_suma_dim
+    \int_step_inline:nnnn { 2 } { 2 } { \seq_count:N \l_audit_compat_anchos_seq }
+      {
+        \dim_add:Nn \l_audit_compat_suma_dim
+          { \seq_item:Nn \l_audit_compat_anchos_seq {##1} + 2 \tabcolsep }
+      }
+    \dim_compare:nNnTF { \l_audit_compat_suma_dim + 60pt } > { \linewidth }
+      { \TablaDesdeCuerpo { ancho = completo } {#1} {#2} {#3} {#4} }
+      { \TablaDesdeCuerpo { } {#1} {#2} {#3} {#4} }
+  }
+  { }
+\ExplSyntaxOff
+\newcommand\leyendaFont[1]{#1}
+
+\ExplSyntaxOn
+\cs_set_eq:NN \audit_parencite_original:w \parencite
+\RenewDocumentCommand \parencite { o o m }
+  {
+    \str_case:nnF {#3}
+      {
+        { bases_admin_2026 } { \audit_cita_bases:n { FEP01 } }
+        { bases_transversales_2026 } { \audit_cita_bases:n { FEP02 } }
+        { bases_caso10_2026 } { \audit_cita_bases:n { Caso } }
+      }
+      {
+        \IfValueTF {#2}
+          { \audit_parencite_original:w [#1] [#2] {#3} }
+          { \IfValueTF {#1}
+              { \audit_parencite_original:w [#1] {#3} }
+              { \audit_parencite_original:w {#3} } }
+      }
+  }
+\cs_new_protected:Npn \audit_cita_bases:n #1
+  {
+    (#1)
+    \iow_log:n { AUDIT-CITA-BASES-SIN-PAGINA:~#1~en~\thesection }
+  }
+\ExplSyntaxOff
+
+\endinput
