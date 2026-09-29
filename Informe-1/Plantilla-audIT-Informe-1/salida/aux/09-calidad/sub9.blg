@@ -1,9 +1,0 @@
-[0] Config.pm:329> INFO - This is Biber 2.22
-[0] Config.pm:332> INFO - Logfile is 'salida/aux/09-calidad/sub9.blg'
-[46] biber:342> INFO - === lun sep  7, 2026, 01:39:08
-[57] Biber.pm:421> INFO - Reading 'salida/aux/09-calidad/sub9.bcf'
-[112] Biber.pm:1002> INFO - Found 0 citekeys in bib section 0
-[126] bbl.pm:676> INFO - Writing 'salida/aux/09-calidad/sub9.bbl' with encoding 'UTF-8'
-[127] bbl.pm:779> INFO - Output to salida/aux/09-calidad/sub9.bbl
-[127] Biber.pm:132> WARN - The file 'salida/aux/09-calidad/sub9.bcf' does not contain any citations!
-[127] Biber.pm:134> INFO - WARNINGS: 1
