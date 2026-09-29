@@ -24,6 +24,9 @@ Investigacion/*.pdf
 
 # Archivos auxiliares de compilación LaTeX
 */salida/aux/
+**/salida/migracion/
+.venv/
+**/herramientas/.venv/
 *.aux
 *.fls
 *.fdb_latexmk
@@ -34,3 +37,4 @@ Investigacion/*.pdf
 
 # Permitir PDF de muestra del nuevo formato
 !**/salida/muestra.pdf
+
