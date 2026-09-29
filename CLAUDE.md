@@ -1,16 +1,19 @@
-# Notas para Claude
+# Guía para Asistentes IA (Claude / Antigravity)
 
-Trabajo de investigación del ramo ICI-5444 (PUCV). Caso 10, **Transporte de Carga**,
-licitación ficticia TFEP-01/2026. El entregable es un informe de 10 a 15 páginas más
-una presentación, para el **21 de septiembre de 2026**.
+Trabajo del ramo ICI-5444 (PUCV). Caso 10, **Transporte de Carga**, licitación ficticia
+TFEP-01/2026 para la empresa **Transportes Curimón S.A.**, postulando bajo la empresa
+consultora **audIT Soluciones Tecnológicas SpA**.
 
-El repositorio no es de software: el código que hay (`tools/`) existe solo para poder
-consultar las bases. El producto final es el informe.
+El hito actual es la **Entrega del Informe 2**, fijada para el **05 de octubre de 2026**
+(Formulario T-20, FEP01 p.65).
+
+El repositorio no es de software aplicativo: el código en `tools/` existe para consultar
+las bases y procesar planillas. El producto central son los informes técnicos y económicos.
 
 ## Regla principal: no leer el corpus completo
 
-Los tres documentos de las bases suman ~100.000 tokens. **Nunca los leas enteros ni
-los adjuntes.** Para cualquier consulta, empieza por:
+Los documentos de las bases suman ~100.000 tokens. **Nunca los leas enteros ni los
+adjuntes.** Para cualquier consulta, empieza por:
 
 ```bash
 ./tools/buscar.py "términos de la consulta"
@@ -21,7 +24,7 @@ Cuesta ~330 tokens y devuelve extractos con su cita. Para ver una sección compl
 
 ```bash
 ./tools/buscar.py -v A:45      # por artículo
-./tools/buscar.py -v 304       # por id de sección
+./tools/buscar.py -v 221       # por id de sección
 ```
 
 Solo si de verdad hace falta más contexto, abre el `.md` con `sed -n '1200,1260p'`.
@@ -31,69 +34,83 @@ Los PDF originales **no están en el repo** y no debes intentar leerlos aunque
 aparezcan localmente: son escaneos de 88 MB sin capa de texto.
 
 Otras opciones útiles: `-o` (cualquiera de las palabras), `-p` (frase literal),
-`-f FEP01|FEP02|FEP03` (un documento), `-l` (mapa por capítulos, ~750 tokens, sirve
-para orientarse al empezar).
+`-f FEP01|FEP02|FEP03` (un documento), `-l` (mapa por capítulos, ~750 tokens).
 
 ## Cómo citar
 
 Cada resultado trae documento, página, tipo y número. Cita así: `FEP01 · Artículo 35°
 · p.24`. Los `.md` llevan marcadores `<!-- ===== página N / M ===== -->` que
-corresponden a la página del PDF original, así que la cita es verificable contra el
-documento impreso.
+corresponden a la página del PDF original, verificable contra el documento impreso.
 
 ## Qué hay dónde
 
-| | |
+| Directorio / Archivo | Propósito y Contenido |
 |---|---|
-| `texto/FEP01_…md` | Bases Administrativas — 77 pág., 94 artículos, garantías, plazos, evaluación |
-| `texto/FEP02_…md` | Bases Técnicas Transversales — 51 pág., requisitos RT-xx comunes a todas las industrias |
-| `texto/FEP03_…md` | Bases Técnicas del Caso 10 — 49 pág., la empresa, la operación, las entrevistas |
-| `texto/Indicaciones…txt` | reglas del trabajo: formato, extensión, entrega |
-| `texto/INDICE.md` | listado de las 377 secciones |
-| `Informe-1/asignacion-duplas.md` | quién hace qué, con las ponderaciones verificadas |
+| `Informe-1/` | Entregables y consolidados del Informe 1 (D1 a D4, consultas, anexos) |
+| `Informe-2/` | Espacio activo de la Entrega 2 (`plan_maestro_consolidado_entrega_2.md`, borradores S6–S9) |
+| `Investigacion/` | Trabajo de investigación individual TI-12 (Persona 1 a 8, bitácoras A-6 y consolidados) |
+| `texto/` | Bases de licitación (`FEP01`, `FEP02`, `FEP03`), `Comunicado_09.md`, `Comunicado_10.md`, DB `secciones.db` |
+| `tools/` | Herramientas de consulta (`buscar.py`), exportador (`consultas_xlsx.py`) y OCR |
+| `recursos/` | Identidad corporativa, logos, plantillas LaTeX y portadas |
 
-La ponderación de la evaluación técnica está en `FEP01 p.67`
-(`./tools/buscar.py -v 172`). Es la tabla que decide cuánto vale cada subdocumento, y
-los pesos **cambian entre el Informe 1, el Informe 2 y la ponderación final**. Al
-razonar sobre esfuerzo o prioridades, di siempre a qué informe corresponde el
-porcentaje.
+## Directrices Críticas de Entrega (Comunicados 09 y 10)
 
-## Las herramientas
+1. **Régimen de Ficción de Licitación (Art. 46 Obs. 12 / Comunicado 10):**
+   Queda terminantemente prohibido consignar nombres reales de integrantes o referencias
+   académicas en los documentos de la propuesta técnica. La autoría se formaliza
+   exclusivamente mediante códigos de dupla (`D1`, `D2`, `D3`, `D4`) y roles corporativos.
 
-- `tools/pdf_ocr.sh` — PDF escaneado a Markdown. Solo se corre si cambian los PDF.
-- `tools/page_to_md.py` — reconstruye una página: tablas por detección de filetes,
-  párrafos y listas por geometría, y reglas de corrección de OCR.
-- `tools/buscar.py` — índice FTS5 que se arma en memoria en cada invocación. No se
-  persiste a propósito: muchos visores de SQLite vienen sin el módulo fts5.
+2. **Estructura Técnica Obligatoria (Comunicado 10):**
+   Los subdocumentos deben contener análisis, síntesis y justificación de ingeniería.
+   Los inventarios exhaustivos van en sus respectivos Formularios `T-xx`. Prohibido
+   incluir bitácoras personales, diarios de trabajo o prosa inflada en la propuesta.
 
-Si tocas las reglas de corrección de OCR en `page_to_md.py`, **verifica siempre la
-regla contra todo el corpus antes de aplicarla**. Así se hicieron las que ya están: se
-contaron las apariciones y se revisaron los contextos para descartar falsos positivos.
-Un caso concreto: los porcentajes sin espacio (`17%`) son pesos de evaluación
-legítimos y una regla de ordinales ingenua los habría destruido.
+3. **Uso de IA y Bitácoras A-6 (Comunicado 09):**
+   Todo uso sustancial de IA debe registrarse con transparencia y asociarse a la bitácora
+   individual A-6 del integrante responsable en `Investigacion/`. A partir del Informe 2,
+   la detección de contenido generado no declarado o indicios de IA (alucinaciones
+   normativas, prosa vacía) acarrea sanciones severas sobre el capítulo evaluado.
 
-## Estado del texto
+## Ponderaciones Técnicas de la Entrega 2
 
-177 páginas, 208 tablas, 4.507 celdas, cero filas malformadas. Quedan dos rarezas
-conocidas y sin corregir: el signo `≈` se leyó como `=` en 3 lugares (`las = 6.000
-vigencias`) y `m²` como `m?` en 2.
+La tabla de evaluación técnica está en `FEP01 p.66` (`./tools/buscar.py -v 221`). Los pesos
+cambian entre informes. En el **Informe 2**, los pesos son:
+
+| Subdocumento | Nombre / Foco | Peso Informe 2 |
+|:---:|---|:---:|
+| **S7** | Plan de trabajo, EDT, Cronograma (Forms T-14, T-15, T-18) | **15 %** |
+| **S3** | Esquema de solución y alcance (Formulario T-12) | **12 %** |
+| **S4.2** | Arquitectura física, Data Center y Hardware (Form T-11) | **11 %** |
+| **S8** | Plan de riesgos (Formulario T-16 - AMFE) | **10 %** |
+| **S13** | Innovaciones (Formulario T-19) | **10 %** |
+| **S6** | Metodologías de gestión y desarrollo (Forms T-9, T-10) | **8 %** |
+| **S9** | Plan de calidad y pruebas (Forms T-13, T-17) | **8 %** |
+| **S4.1** | Arquitectura lógica e integraciones | **7 %** |
+| **S2** | Resumen Ejecutivo y comprensión del problema | **6 %** |
+| **S5** | Modelo y gestión de datos | **6 %** |
+| **S1** | Presentación empresa y experiencia (Form T-6) | **3 %** |
+| **Transversal** | Formalidad y cumplimiento de instrucciones | **3 %** |
+| **TOTAL** | Evaluación Técnica | **100 %** |
+
+Al razonar sobre prioridades o esfuerzo, especifica siempre a qué informe corresponde
+el porcentaje.
+
+## Gobernanza por Duplas (Entrega 2)
+
+El avance se articula en dos frentes simultáneos (ver `Informe-2/plan_maestro_consolidado_entrega_2.md`):
+- **D1 (QA & Gobernanza):** Frente A: S1, S2, Form T-6. Frente B: S9, Form T-13, Form T-17.
+- **D2 (PMO & Requerimientos):** Frente A: S3, Form T-12. Frente B: S7, Forms T-14, T-15, T-18.
+- **D3 (DevSecOps & Software/Datos):** Frente A: S4.1, S5. Frente B: S6, Forms T-9, T-10, Ficha T-19.
+- **D4 (Infraestructura, IoT & Riesgos):** Frente A: S4.2/4.3, Form T-11. Frente B: S8, Form T-16, Ficha T-19.
+
+## Herramientas de Soporte
+
+- `tools/buscar.py` — índice FTS5 en memoria para buscar en las bases sin consumir contexto.
+- `tools/consultas_xlsx.py` — genera la planilla oficial de consultas desde `Informe-1/D2/`.
+- `tools/pdf_ocr.sh` y `tools/page_to_md.py` — canal de reconstrucción de bases desde PDF original.
 
 ## Convenciones
 
 - Todo en español, incluidos comentarios y mensajes de commit.
 - Los porcentajes y cifras del caso se citan con su fuente; no los repitas de memoria
   sin verificarlos con `buscar.py`.
-
-## Trabajo de la dupla D2
-
-`Informe-1/D2/` tiene el plan y las consultas de Ignacio C. y Matías V. (subdocumento 3,
-21 % del Informe 1). Las innovaciones de D2 son los tipos **1** (producto o servicio) y
-**4** (modelo de negocio); D1 queda con el tipo 5.
-
-`tools/consultas_xlsx.py` genera la planilla oficial desde
-`Informe-1/D2/consultas-d2-v2.md`, valida que la columna Tipo solo use los tres valores
-del Artículo 43.2 y nombra el archivo según el 43.3:
-
-```bash
-./tools/consultas_xlsx.py AUDIT 20260831
-```
