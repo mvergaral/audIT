@@ -17,6 +17,9 @@ un marcador de página en cada salto para poder citar contra el PDF original.
 ## Estructura
 
 ```
+Informe-1/        entregables y trabajo consolidado del Informe 1 (D1-D4, anexos)
+Informe-2/        trabajo en desarrollo para la Entrega 2 (Plan Maestro, subdocs S6-S9)
+Investigacion/    trabajo de investigación individual TI-12 por persona (Persona 1 a 8)
 texto/            el texto de las bases, en Markdown
   FEP01_…md         Bases Administrativas (77 pág., 94 artículos)
   FEP02_…md         Bases Técnicas Transversales (51 pág.)
@@ -27,8 +30,7 @@ tools/
   pdf_ocr.sh        PDF escaneado -> Markdown
   page_to_md.py     reconstrucción de una página (tablas, títulos, listas)
   buscar.py         búsqueda sobre el corpus
-equipo/
-  asignacion-duplas.md   quién hace qué, con las ponderaciones verificadas
+recursos/         logos, plantillas e imágenes del equipo
 ```
 
 ## Buscar en las bases

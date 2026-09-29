@@ -100,12 +100,12 @@ if __name__ == "__main__":
     envio = sys.argv[2] if len(sys.argv) > 2 else date.today().strftime("%Y%m%d")
     fecha = f"{envio[6:8]}-{envio[4:6]}-{envio[0:4]}"
 
-    origen = RAIZ / "equipo/D2/consultas-d2-v2.md"
+    origen = RAIZ / "Informe-1/D2/consultas-d2-v2.md"
     filas = filas_del_md(origen, empresa, fecha)
     malos = [f[0] for f in filas if f[3] not in TIPOS]
     if malos:
         sys.exit(f"tipo no permitido por el Art. 43.2 en las consultas: {malos}")
 
-    destino = RAIZ / f"equipo/D2/CONSULTAS_{empresa}_{envio}.XLSX"
+    destino = RAIZ / f"Informe-1/D2/CONSULTAS_{empresa}_{envio}.XLSX"
     escribir(destino, filas)
     print(f"{len(filas)} consultas -> {destino.relative_to(RAIZ)}")

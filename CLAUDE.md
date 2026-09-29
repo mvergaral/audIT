@@ -50,7 +50,7 @@ documento impreso.
 | `texto/FEP03_…md` | Bases Técnicas del Caso 10 — 49 pág., la empresa, la operación, las entrevistas |
 | `texto/Indicaciones…txt` | reglas del trabajo: formato, extensión, entrega |
 | `texto/INDICE.md` | listado de las 377 secciones |
-| `equipo/asignacion-duplas.md` | quién hace qué, con las ponderaciones verificadas |
+| `Informe-1/asignacion-duplas.md` | quién hace qué, con las ponderaciones verificadas |
 
 La ponderación de la evaluación técnica está en `FEP01 p.67`
 (`./tools/buscar.py -v 172`). Es la tabla que decide cuánto vale cada subdocumento, y
@@ -86,12 +86,12 @@ vigencias`) y `m²` como `m?` en 2.
 
 ## Trabajo de la dupla D2
 
-`equipo/D2/` tiene el plan y las consultas de Ignacio C. y Matías V. (subdocumento 3,
+`Informe-1/D2/` tiene el plan y las consultas de Ignacio C. y Matías V. (subdocumento 3,
 21 % del Informe 1). Las innovaciones de D2 son los tipos **1** (producto o servicio) y
 **4** (modelo de negocio); D1 queda con el tipo 5.
 
 `tools/consultas_xlsx.py` genera la planilla oficial desde
-`equipo/D2/consultas-d2-v2.md`, valida que la columna Tipo solo use los tres valores
+`Informe-1/D2/consultas-d2-v2.md`, valida que la columna Tipo solo use los tres valores
 del Artículo 43.2 y nombra el archivo según el 43.3:
 
 ```bash
