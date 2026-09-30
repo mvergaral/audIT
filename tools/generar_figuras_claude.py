@@ -281,38 +281,38 @@ def build_logica_capas():
 # Generación y compilación
 # =============================================================================
 def main():
+    import subprocess
     fig_dir = "recursos/Formato-Oferta-audIT/figuras/04-arquitectura"
-    
+
     diagrams = [
         ("Main", build_main()),
         ("LogicaCapas", build_logica_capas())
     ]
-    
+
     for name, svg_content in diagrams:
         svg_path = os.path.join(fig_dir, f"{name}.svg")
         pdf_path = os.path.join(fig_dir, f"{name}.pdf")
         png_path = os.path.join(fig_dir, f"{name}.png")
-        
+
         # 1. Guardar SVG
         with open(svg_path, "w", encoding="utf-8") as f:
             f.write(svg_content)
         print(f"SVG guardado: {svg_path}")
-        
-        # 2. Convertir a PDF con PyMuPDF
-        doc = pymupdf.open(svg_path)
-        pdf_bytes = doc.convert_to_pdf()
-        doc_pdf = pymupdf.open("pdf", pdf_bytes)
-        doc_pdf.save(pdf_path)
-        doc_pdf.close()
-        doc.close()
-        print(f"PDF generado: {pdf_path}")
-        
-        # 3. Generar PNG alta definición (150 DPI)
-        doc = pymupdf.open(pdf_path)
-        pix = doc[0].get_pixmap(dpi=150)
-        pix.save(png_path)
-        doc.close()
+
+        # 2. PNG con rsvg-convert (soporta <marker> y stroke-dasharray correctamente)
+        # PyMuPDF no renderiza flechas ni líneas punteadas SVG.
+        subprocess.run(
+            ["rsvg-convert", "-d", "150", "-p", "150", svg_path, "-o", png_path],
+            check=True
+        )
         print(f"PNG generado: {png_path}")
+
+        # 3. PDF vectorial con rsvg-convert (para LaTeX)
+        subprocess.run(
+            ["rsvg-convert", "--format=pdf", svg_path, "-o", pdf_path],
+            check=True
+        )
+        print(f"PDF generado: {pdf_path}")
 
 if __name__ == "__main__":
     main()
