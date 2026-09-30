@@ -52,7 +52,7 @@ El modelo de capas establece una jerarquía estricta de llamadas descendentes y 
 
 \begin{tablaAudit}{Componentes declarados por capa}{4-componentes-capa}{p{3.2cm}p{10.8cm}}
 \textbf{Capa} & \textbf{Componentes declarados} \\ \midrule
-Presentación & Portal web responsivo, aplicación móvil en los cuatro perfiles de \caso{RT-17.01}{33} (conductor, torre, terminal y taller, y transportista externo), y terminales de patio de alto contraste \\
+Presentación & Portal web responsivo en React y Next.js, aplicación móvil en Flutter para los cuatro perfiles de \caso{RT-17.01}{33} (conductor, torre, terminal y taller, y transportista externo), y terminales de patio de alto contraste \\
 Borde y exposición & Servicio de entrega perimetral distribuido, WAF con protección volumétrica anti-DDoS en capas 3, 4 y 7 \\
 Puerta de enlace & API Gateway con autenticación OAuth 2.0 / OpenID Connect, mTLS entre microservicios y limitación de tasa por perfil \\
 Servicios de negocio & Microservicios contenerizados en clúster multizona, con despliegue independiente por contexto delimitado \\
@@ -154,7 +154,7 @@ Validación sintáctica y bloqueo de idempotencia & 10 ms & API Gateway y Azure 
 Evaluación concurrente de las 3 invariantes & 450 ms & Caché Redis (con fallback en PostgreSQL) \\
 Persistencia atómica del viaje & 200 ms & Motor PostgreSQL multizona (Serializable) \\
 Publicación de eventos derivados & Asíncrono (fuera de banda) & Bus de eventos Kafka \\
-\textbf{Tiempo total comprometido} & \textbf{$<$ 2 segundos} & \textbf{Frente a 30 s de norma \caso{RT-09.01}{32}} \\
+\textbf{Tiempo total comprometido} & \textbf{menos de 2 segundos} & \textbf{Frente a 30 s de norma \caso{RT-09.01}{32}} \\
 \end{tablaAudit}
 
 Como evidencia la \tabref{4-presupuesto}, el sistema audIT ofrece un margen de seguridad de más de 15 veces respecto del techo contractual, garantizando que futuras expansiones volumétricas (\transv{RT-09.03}{11}) no requieran rediseños. Ante un rechazo, el sistema emite inmediatamente el documento de error de la \tabref{4-error}.
@@ -271,6 +271,9 @@ Conforme a la exigencia expresa del Comunicado 10 (numeral 4.1.1), se definen fo
 
 \begin{tablaAudit}{Tecnologías de software, versiones y soporte ofertado a 56 meses}{4-software}{@{}p{3.2cm}p{3.0cm}p{2.6cm}p{5.0cm}@{}}
 \textbf{Componente} & \textbf{Producto y versión} & \textbf{Fin de soporte} & \textbf{Plan a 56 meses y justificación} \\ \midrule
+Aplicación móvil de conductores & Flutter 3.x (Dart) & Soporte LTS continuo & Compilación nativa Android/iOS, UI ergonómica de alto contraste (\caso{RT-13.08}{32}) y SQLite local \\
+Portales web y torre de control & React 18+ / Next.js (TS) & Soporte LTS continuo & SPA modular responsiva con renderizado híbrido y accesibilidad WCAG 2.2 AA (\art{4.3}{5}) \\
+Servicios backend y APIs & .NET 8 LTS / Go 1.22+ & Noviembre 2026 / LTS & Microservicios de alto desempeño sobre Linux en contenedores distroless \\
 Orquestación y cómputo & Azure Kubernetes Service (AKS) 1.30+ & Soporte N-2 continuo & Servicio administrado PaaS con actualizaciones automáticas fuera de hora punta \\
 Motor transaccional & PostgreSQL 16 Flexible Server & Noviembre 2028 & Motor relacional con alta disponibilidad zonal y extensión PostGIS \\
 Series temporales y eventos & TimescaleDB 2.15 / Event Hubs Kafka & Mayo 2029 & Particionado por rango temporal y compresión columnar para 120M eventos \\
@@ -285,7 +288,7 @@ La selección tecnológica de la \tabref{4-software} prioriza servicios gestiona
 \begin{tablaAudit}{Decisiones de arquitectura lógica registradas (ADR 01 a 04)}{4-adr}{@{}p{1.0cm}p{3.5cm}p{3.3cm}p{3.0cm}p{3.3cm}@{}}
 \textbf{ADR} & \textbf{Contexto del problema} & \textbf{Alternativa escogida} & \textbf{Alternativa descartada} & \textbf{Criterio de ingeniería} \\ \midrule
 01 & Ingesta masiva tras sombra celular compitiendo con la torre & Microservicios contenerizados (AKS) independientes & Monolito modular escalable verticalmente & Aislamiento de fallas y elasticidad horizontal por partición (\transv{RT-02.10}{7}) \\
-02 & Asignación de viaje dispara geocercas, alertas y costeo & Coreografía reactiva con eventos de dominio & Cadena síncrona de llamadas REST entre servicios & Desacoplamiento temporal; el despacho confirma en $<$ 2 s sin esperar procesos derivados \\
+02 & Asignación de viaje dispara geocercas, alertas y costeo & Coreografía reactiva con eventos de dominio & Cadena síncrona de llamadas REST entre servicios & Desacoplamiento temporal; el despacho confirma en menos de 2~s sin esperar procesos derivados \\
 03 & Cálculo de costo por km compitiendo con la torre & Replicación asíncrona CDC hacia Lakehouse Delta & Consultas analíticas sobre réplicas de lectura OLTP & Prohibición de degradar el motor transaccional (\transv{RT-05.05}{9}) \\
 04 & Coexistencia con 84 clientes, 148 terceros y ERP 2013 & Identidad federada (mTLS y OAuth 2.0) & Claves fijas en cadenas de conexión o cabeceras & Prohibición de credenciales estáticas (\transv{RT-05.18}{9}) y norma Zero Trust \\
 \end{tablaAudit}
@@ -315,7 +318,7 @@ Como sintetiza la \tabref{4-planos}, la parte on-premise es sustantiva y sostien
 
 \subsection{El dispositivo a bordo como infraestructura on-premise distribuida}\label{sec:4-dispositivo-bordo}
 
-En virtud de \caso{RT-06.01}{30}, el equipamiento a bordo se trata como infraestructura on-premise distribuida. En las 148 unidades propias y las 34 unidades sin equipo que adhieran al programa (totalizando 182 unidades intervenidas), se instala equipamiento de grado industrial con almacenamiento no volátil de 8 GB. En las 192 unidades de terceros que cuentan con equipamiento preexistente (hipótesis técnica: $340 - 148 = 192$), la integración se realiza a nivel lógico vía APIs sin intervenir físicamente el hardware privado (Restricción 3). En la \tabref{4-dispositivo} se detallan las especificaciones del componente a bordo.
+En virtud de \caso{RT-06.01}{30}, el equipamiento a bordo se trata como infraestructura on-premise distribuida. En las 148 unidades propias y las 34 unidades sin equipo que adhieran al programa (totalizando 182 unidades intervenidas), se instala equipamiento de grado industrial con almacenamiento no volátil de 8 GB. En las unidades de flota subcontratada que cuentan con equipamiento GPS preexistente (340 unidades con telemetría menos las 148 propias), la integración se realiza a nivel lógico vía APIs sin intervenir físicamente el hardware privado (Restricción 3). En la \tabref{4-dispositivo} se detallan las especificaciones del componente a bordo.
 
 \begin{tablaAudit}{Especificación del componente a bordo}{4-dispositivo}{p{4.4cm}p{9.6cm}}
 \textbf{Atributo físico} & \textbf{Especificación de ingeniería} \\ \midrule
@@ -431,7 +434,7 @@ S-02 & Horas efectivas de marcha en 72 h & 30 h (descanso Art.~25 bis) & Validad
 S-03 & Tamaño de mensaje GPS comprimido & 64 bytes & Homologación de hardware a bordo \\
 S-04 & Capacidad mínima de buffer a bordo & Flash industrial $\ge 8$~GB & Validación de hoja de datos fabricante \\
 S-05 & Consumo celular por camión & 13 a 16 MB/mes & Telemetría en marcha blanca Etapa 1 \\
-S-06 & Parque de terceros pre-equipado & 192 unidades con GPS & Censo de flota en Etapa 1 \\
+S-06 & Subconjunto de terceros pre-equipado & Unidades con GPS homologado (340 menos 148) & Censo de flota en Etapa 1 \\
 S-07 & Concurrencia de operadores de torre & 50 a 80 concurrentes peak & Monitoreo en despliegue Etapa 1 \\
 \end{tablaAudit}
 
