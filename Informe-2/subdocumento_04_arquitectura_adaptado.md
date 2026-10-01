@@ -55,7 +55,7 @@ El modelo de capas establece una jerarquía estricta de llamadas descendentes y 
 
 | **Capa** | **Componentes declarados** |
 |---|---|
-| Presentación | Portal web responsivo, aplicación móvil en los cuatro perfiles de Caso, RT-17.01, p. 33 (conductor, torre, terminal y taller, y transportista externo), y terminales de patio de alto contraste |
+| Presentación | Portal web responsivo en React y Next.js, aplicación móvil en Flutter para los cuatro perfiles de Caso, RT-17.01, p. 33 (conductor, torre, terminal y taller, y transportista externo), y terminales de patio de alto contraste |
 | Borde y exposición | Servicio de entrega perimetral distribuido, WAF con protección volumétrica anti-DDoS en capas 3, 4 y 7 |
 | Puerta de enlace | API Gateway con autenticación OAuth 2.0 / OpenID Connect, mTLS entre microservicios y limitación de tasa por perfil |
 | Servicios de negocio | Microservicios contenerizados en clúster multizona, con despliegue independiente por contexto delimitado |
@@ -302,6 +302,9 @@ Conforme a la exigencia expresa del Comunicado 10 (numeral 4.1.1), se definen fo
 
 | **Componente** | **Producto y versión** | **Fin de soporte** | **Plan a 56 meses y justificación** |
 |---|---|---|---|
+| Aplicación móvil de conductores | Flutter 3.x (Dart) | Soporte LTS continuo | Compilación nativa Android/iOS, UI ergonómica de alto contraste (FEP03, RT-13.08, p. 32) y SQLite local |
+| Portales web y torre de control | React 18+ / Next.js (TS) | Soporte LTS continuo | SPA modular responsiva con renderizado híbrido y accesibilidad WCAG 2.2 AA (FEP01, Art. 4.3, p. 5) |
+| Servicios backend y APIs | .NET 8 LTS / Go 1.22+ | Noviembre 2026 / LTS | Microservicios de alto desempeño sobre Linux en contenedores distroless |
 | Orquestación y cómputo | Azure Kubernetes Service (AKS) 1.30+ | Soporte N-2 continuo | Servicio administrado PaaS con actualizaciones automáticas fuera de hora punta |
 | Motor transaccional | PostgreSQL 16 Flexible Server | Noviembre 2028 | Motor relacional con alta disponibilidad zonal y extensión PostGIS |
 | Series temporales y eventos | TimescaleDB 2.15 / Event Hubs Kafka | Mayo 2029 | Particionado por rango temporal y compresión columnar para 120M eventos |
@@ -351,7 +354,7 @@ Como sintetiza la Tabla 4.19, la parte on-premise es sustantiva y sostiene las o
 
 ### 4.2.2 El dispositivo a bordo como infraestructura on-premise distribuida
 
-En virtud de Caso, RT-06.01, p. 30, el equipamiento a bordo se trata como infraestructura on-premise distribuida. En las 148 unidades propias y las 34 unidades sin equipo que adhieran al programa (totalizando 182 unidades intervenidas), se instala equipamiento de grado industrial con almacenamiento no volátil de 8 GB. En las 192 unidades de terceros que cuentan con equipamiento preexistente (hipótesis técnica: $340 - 148 = 192$), la integración se realiza a nivel lógico vía APIs sin intervenir físicamente el hardware privado (Restricción 3). En la Tabla 4.20 se detallan las especificaciones del componente a bordo.
+En virtud de Caso, RT-06.01, p. 30, el equipamiento a bordo se trata como infraestructura on-premise distribuida. En las 148 unidades propias y las 34 unidades sin equipo que adhieran al programa (totalizando 182 unidades intervenidas), se instala equipamiento de grado industrial con almacenamiento no volátil de 8 GB. En las unidades de flota subcontratada que cuentan con equipamiento GPS preexistente (340 unidades con telemetría menos las 148 propias), la integración se realiza a nivel lógico vía APIs sin intervenir físicamente el hardware privado (Restricción 3). En la Tabla 4.20 se detallan las especificaciones del componente a bordo.
 
 **Tabla 4.20.** Especificación del componente a bordo
 
@@ -481,7 +484,7 @@ En la Tabla 4.28 se formalizan los supuestos de cálculo empleados por audIT y e
 | S-03 | Tamaño de mensaje GPS comprimido | 64 bytes | Homologación de hardware a bordo |
 | S-04 | Capacidad mínima de buffer a bordo | Flash industrial $\ge 8$ GB | Validación de hoja de datos fabricante |
 | S-05 | Consumo celular por camión | 13 a 16 MB/mes | Telemetría en marcha blanca Etapa 1 |
-| S-06 | Parque de terceros pre-equipado | 192 unidades con GPS | Censo de flota en Etapa 1 |
+| S-06 | Subconjunto de terceros pre-equipado | Unidades con GPS homologado (340 menos 148) | Censo de flota en Etapa 1 |
 | S-07 | Concurrencia de operadores de torre | 50 a 80 concurrentes peak | Monitoreo en despliegue Etapa 1 |
 
 Asimismo, la propuesta declara cinco brechas técnicas objetivas:

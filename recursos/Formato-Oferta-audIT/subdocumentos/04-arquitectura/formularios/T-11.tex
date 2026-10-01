@@ -1,0 +1,60 @@
+\begin{formulario}{T-11}
+  \begin{formularioTOnce}
+
+    \componenteTOnce{
+      componente      = Nodo de Continuidad Operacional,
+      producto        = Servidor 2U Clúster de Alta Disponibilidad,
+      caracteristicas = Doble fuente de poder, arreglos de almacenamiento redundante,
+      ubicacion       = Sala técnica San Bernardo,
+      cantidad        = 2 unidades (1 activo + 1 testigo),
+      adquiere        = CLIENTE,
+      ciclo           = 60 meses con soporte de fabricante (RT-08.13),
+      justificacion   = Sostiene las funciones de severidad máxima (despacho, emergencia y DET) sin enlace a la nube (RT-21.06).
+    }
+
+    \componenteTOnce{
+      componente      = Equipamiento de Borde (Gabinete),
+      producto        = Gabinete industrial climatizado con nodo de cómputo,
+      caracteristicas = Autonomía de 12 horas, terminación de enlaces redundantes,
+      ubicacion       = 4 Terminales Regionales,
+      cantidad        = 4 unidades,
+      adquiere        = CLIENTE,
+      ciclo           = 60 meses,
+      justificacion   = Garantiza operación autónoma sin conexión hacia el exterior por hasta 12 horas (RT-03.10).
+    }
+
+    \componenteTOnce{
+      componente      = Dispositivo de Terreno a Bordo,
+      producto        = Equipo telemático de grado industrial (IP67),
+      caracteristicas = Memoria flash $\ge 8$~GB no volátil, doble puerto CANbus, NFC, batería de respaldo (RT-08.01, RT-08.10),
+      ubicacion       = Flota propia y adherida (Tractocamiones),
+      cantidad        = 200 unidades (182 activas + 18 repuesto 10\,\%),
+      adquiere        = audIT,
+      ciclo           = Reposición a los 36 meses o ante falla (RT-08.13),
+      justificacion   = Soporta operación desconectada por 72 h a 12 días (RT-10.05), registrando eventos de jornada e hitos.
+    }
+
+    \componenteTOnce{
+      componente      = Acoplador Inductivo de Telemetría,
+      producto        = Interfaz CAN/FMS sin contacto físico,
+      caracteristicas = Lectura no intrusiva de telemetría de fábrica,
+      ubicacion       = Flota propia (Tractocamiones),
+      cantidad        = 163 unidades (148 activas + 15 repuesto 10\,\%),
+      adquiere        = audIT,
+      ciclo           = 60 meses,
+      justificacion   = Permite extraer variables de motor (consumo, odómetro) sin invalidar garantías OEM (Restricción 6).
+    }
+
+    \componenteTOnce{
+      componente      = Equipamiento de Energía Crítica,
+      producto        = UPS en línea y Grupo Electrógeno,
+      caracteristicas = UPS $\ge 30$ min, estanque de diésel $\ge 24$ h,
+      ubicacion       = Sala técnica San Bernardo,
+      cantidad        = 1 conjunto (UPS + Generador),
+      adquiere        = CLIENTE,
+      ciclo           = 60 meses,
+      justificacion   = Eleva la sala de 26\,m$^2$ al estándar requerido por numeral 6.1 ante el nuevo alcance del nodo.
+    }
+
+  \end{formularioTOnce}
+\end{formulario}
