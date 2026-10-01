@@ -1,0 +1,314 @@
+% ============================================================================
+%  formularios.sty
+%  Infraestructura de los formularios técnicos del Anexo B (FEP01 pp. 56 a
+%  65), la hoja resumen del Artículo 40.3 y la tabla del Artículo 46.
+%
+%  Cada formulario vive en su archivo formularios/T-NN.tex, con su título,
+%  su página en las bases, la instrucción de las bases y su esqueleto. Los
+%  datos de cada oferta van en la carpeta del subdocumento que el Formulario
+%  T-21 le asigna: subdocumentos/04-arquitectura/formularios/T-11.tex. Si el
+%  subdocumento no trae datos, se imprime el esqueleto con sus campos por
+%  completar, de modo que ningún formulario puede faltar sin que se note.
+%
+%  Regla del Artículo 50.2: ningún formulario tiene campos de monto. Donde
+%  el formulario de las bases pide costo, el campo remite al Sobre N.º 3.
+% ============================================================================
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{formularios}[2026/09/26 Formularios]
+
+\ExplSyntaxOn
+\prop_new:N \g_audit_form_titulo_prop
+\prop_new:N \g_audit_form_pagina_prop
+\prop_new:N \g_audit_form_instruccion_prop
+
+% \DefinirFormulario{T-11}{título}{página en FEP01}{instrucción de las bases}
+\NewDocumentCommand \DefinirFormulario { m m m +m }
+  {
+    \prop_gput:Nnn \g_audit_form_titulo_prop {#1} {#2}
+    \prop_gput:Nnn \g_audit_form_pagina_prop {#1} {#3}
+    \prop_gput:Nnn \g_audit_form_instruccion_prop {#1} {#4}
+  }
+\NewExpandableDocumentCommand \tituloFormulario { m }
+  { \prop_item:Nn \g_audit_form_titulo_prop {#1} }
+\NewExpandableDocumentCommand \paginaFormulario { m }
+  { \prop_item:Nn \g_audit_form_pagina_prop {#1} }
+\NewDocumentCommand \instruccionFormulario { m }
+  { \prop_item:Nn \g_audit_form_instruccion_prop {#1} }
+
+% Incluye los formularios que el T-21 asigna al subdocumento en curso
+\NewDocumentCommand \IncluirFormularios { m m }
+  {
+    % #1 número de subdocumento, #2 carpeta
+    \clist_map_inline:en { \formulariosDeSubdocumento {#1} }
+      {
+        \BuscarArchivoSubdoc {#2} { formularios/##1.tex }
+        \tl_if_empty:NTF \l_audit_ruta_tl
+          { \EsqueletoFormulario {##1} }
+          { \file_input:V \l_audit_ruta_tl }
+      }
+  }
+\NewDocumentCommand \EsqueletoFormulario { m }
+  {
+    \cs_if_exist_use:cF { esqueleto@#1 }
+      { \msg_error:nnn { formularios } { sin-esqueleto } {#1} }
+  }
+\msg_new:nnn { formularios } { sin-esqueleto }
+  { El~formulario~#1~no~está~definido~en~formularios/. }
+
+% ----------------------------------------------------------------------------
+%  Tabla armada a partir de filas acumuladas. La usan los formularios de
+%  registros (T-11, T-12, T-16) y las tablas generadas (hoja resumen, Art. 46).
+% ----------------------------------------------------------------------------
+\tl_new:N \g_audit_filas_tl
+\NewDocumentCommand \IniciarFilas { } { \tl_gclear:N \g_audit_filas_tl }
+\NewDocumentCommand \AgregarFila { +m } { \tl_gput_right:Nn \g_audit_filas_tl {#1} }
+\cs_new_protected:Npn \audit_tabla_acumulada:nnnnn #1#2#3#4#5
+  {
+    \tl_set:Nn \l_tmpa_tl {#5}
+    \tl_put_right:NV \l_tmpa_tl \g_audit_filas_tl
+    \audit_tabla:nnnnV {#1} {#2} {#3} {#4} \l_tmpa_tl
+  }
+\cs_generate_variant:Nn \audit_tabla:nnnnn { nnnnV }
+% \TablaAcumulada[opciones]{leyenda}{etiqueta}{columnas}{cabecera \\ \midrule}
+\NewDocumentCommand \TablaAcumulada { O{} m m m +m }
+  { \audit_tabla_acumulada:nnnnn {#1} {#2} {#3} {#4} {#5} }
+
+% ----------------------------------------------------------------------------
+%  Registros clave-valor. Cada formulario de filas (T-11, T-12, T-16...)
+%  guarda sus registros con \audit_registro:nn {t11} {campo = valor, ...}
+%  y los lee con \CampoRegistro{t11}{n}{campo}. Un campo ausente se imprime
+%  como marcador por completar.
+% ----------------------------------------------------------------------------
+\tl_new:N \l_audit_reg_prop_tl
+\cs_new_protected:Npn \audit_registro:nn #1#2
+  {
+    \int_if_exist:cF { g_audit_reg_#1_int } { \int_new:c { g_audit_reg_#1_int } }
+    \int_gincr:c { g_audit_reg_#1_int }
+    \tl_set:Ne \l_audit_reg_prop_tl
+      { g_audit_reg_#1_ \int_use:c { g_audit_reg_#1_int } _prop }
+    \prop_gclear_new:c { \l_audit_reg_prop_tl }
+    \keyval_parse:nnn
+      { \audit_reg_sin_valor:n }
+      { \audit_reg_valor:nn }
+      {#2}
+  }
+\cs_new_protected:Npn \audit_reg_sin_valor:n #1
+  { \prop_gput:cnn { \l_audit_reg_prop_tl } {#1} { } }
+\cs_new_protected:Npn \audit_reg_valor:nn #1#2
+  { \prop_gput:cnn { \l_audit_reg_prop_tl } {#1} {#2} }
+\NewDocumentCommand \RegistroNuevo { m +m } { \audit_registro:nn {#1} {#2} }
+\NewDocumentCommand \ReiniciarRegistros { m }
+  { \int_if_exist:cT { g_audit_reg_#1_int } { \int_gzero:c { g_audit_reg_#1_int } } }
+\NewExpandableDocumentCommand \CantidadRegistros { m }
+  { \int_if_exist:cTF { g_audit_reg_#1_int } { \int_use:c { g_audit_reg_#1_int } } { 0 } }
+% Valor de un campo, listo para usarse dentro de \tl_gput_right:Ne
+\cs_new:Npn \audit_campo:nnn #1#2#3
+  {
+    \prop_if_exist:cTF { g_audit_reg_#1_#2_prop }
+      {
+        \prop_if_in:cnTF { g_audit_reg_#1_#2_prop } {#3}
+          {
+            \tl_if_blank:eTF { \prop_item:cn { g_audit_reg_#1_#2_prop } {#3} }
+              { \exp_not:N \porCompletar }
+              { \prop_item:cn { g_audit_reg_#1_#2_prop } {#3} }
+          }
+          { \exp_not:N \porCompletar }
+      }
+      { \exp_not:N \porCompletar }
+  }
+\cs_new:Npn \audit_campo_crudo:nnn #1#2#3
+  {
+    \prop_if_exist:cT { g_audit_reg_#1_#2_prop }
+      { \prop_item:cn { g_audit_reg_#1_#2_prop } {#3} }
+  }
+\NewExpandableDocumentCommand \CampoRegistro { m m m } { \audit_campo:nnn {#1} {#2} {#3} }
+
+\ExplSyntaxOff
+
+% Campo vacío de un esqueleto
+\newcommand\porCompletar{\marcador{por completar}}
+
+% ----------------------------------------------------------------------------
+%  Página de formulario
+%  \begin{formulario}{T-11} ... \end{formulario}
+% ----------------------------------------------------------------------------
+\newenvironment{formulario}[1]
+  {% el formulario empieza donde haya lugar para su encabezado, su
+   % instrucción y las primeras filas, sin forzar página nueva
+   \par\Needspace{16\baselineskip}\vspace{14pt plus 4pt}%
+   \audit@enformulariotrue
+   \phantomsection
+   \addcontentsline{toc}{section}{\protect\numberline{#1}\tituloFormulario{#1}}%
+   \registrarFolio{form-#1}{Formulario #1. \tituloFormulario{#1}}%
+   \markright{Formulario #1}%
+   \noindent\hspace*{-\desplazamientoCarril}%
+   \makebox[\desplazamientoCarril][r]{%
+     {\ttfamily\bfseries\fontsize{17bp}{21bp}\selectfont\color{audit-marino}#1}%
+     \hspace{\separacionCarril}}%
+   {\sffamily\bfseries\fontsize{17bp}{21bp}\selectfont\color{audit-marino}%
+     \tituloFormulario{#1}}\par\vspace{4pt}%
+   \noindent{\sffamily\fontsize{9.5bp}{12.5bp}\selectfont\color{audit-secundario}%
+     Formulario #1 de las bases (\form{#1}{\paginaFormulario{#1}}).
+     Asignado al Subdocumento \subdocActual\ por el Formulario T-21.}\par
+   \vspace{5pt}%
+   \begin{audit@cajainstruccion}\instruccionFormulario{#1}\end{audit@cajainstruccion}%
+   \vspace{3pt}\@afterheading}
+  {\par}
+
+\newtcolorbox{audit@cajainstruccion}{enhanced, frame hidden,
+  colback=audit-gris-claro, boxrule=0pt, arc=0pt, outer arc=0pt,
+  left=7pt, right=7pt, top=4pt, bottom=4pt, boxsep=0pt,
+  fontupper=\sffamily\fontsize{9.5bp}{12.5bp}\selectfont\color{audit-tinta},
+  before upper={\noindent{\color{audit-secundario}Instrucción de las bases.\enspace}},
+  before skip=1pt, after skip=4pt}
+
+% ----------------------------------------------------------------------------
+%  Hoja resumen del sobre (FEP01, Artículo 40.3)
+%  Se arma con el folio real de cada punto de inicio. En documento único las
+%  entradas vienen del .aux de la corrida anterior. Cuando el sobre va en
+%  varios PDF, la herramienta junta las entradas de todos en un archivo y lo
+%  entrega con -usepretex="\def\FoliosSobre{ruta}".
+% ----------------------------------------------------------------------------
+\ExplSyntaxOn
+\seq_new:N \g_audit_folios_seq
+\bool_new:N \g_audit_folios_externos_bool
+\cs_new_protected:Npn \audit_entrada_folio:nnnn #1#2#3#4
+  { \seq_gput_right:Nn \g_audit_folios_seq { {#1}{#2}{#3}{#4} } }
+% Lectura: del .aux (documento único) o del archivo que junta la herramienta
+% (varios PDF). El .aux se lee antes de los ganchos de \begin{document}, así
+% que primero entran sus entradas y, si hay archivo externo, se reemplazan.
+% Las funciones se definen fuera de los ganchos: dentro de un gancho los
+% parámetros # no se pueden declarar.
+\cs_new_protected:Npn \audit_entrada_aux:nnnn #1#2#3#4
+  {
+    \bool_if:NF \g_audit_folios_externos_bool
+      { \audit_entrada_folio:nnnn {#1}{#2}{#3}{#4} }
+  }
+\cs_set_eq:NN \entradaFolio \audit_entrada_aux:nnnn
+\AtBeginDocument
+  {
+    \cs_if_exist:NT \FoliosSobre
+      {
+        \bool_gset_true:N \g_audit_folios_externos_bool
+        \seq_gclear:N \g_audit_folios_seq
+        \cs_set_eq:NN \entradaFolio \audit_entrada_folio:nnnn
+        \file_if_exist_input:n { \FoliosSobre }
+        \cs_set_eq:NN \entradaFolio \audit_entrada_aux:nnnn
+      }
+  }
+
+\tl_new:N \l_audit_hr_archivo_tl
+\bool_new:N \l_audit_hr_varios_bool
+\int_new:N \l_audit_hr_n_int
+\cs_new_protected:Npn \audit_hoja_resumen:
+  {
+    % ¿hay más de un archivo?
+    \bool_set_false:N \l_audit_hr_varios_bool
+    \tl_clear:N \l_audit_hr_archivo_tl
+    \seq_map_inline:Nn \g_audit_folios_seq
+      {
+        \tl_set:Ne \l_tmpb_tl { \use_iv:nnnn ##1 }
+        \tl_if_empty:NTF \l_audit_hr_archivo_tl
+          { \tl_set_eq:NN \l_audit_hr_archivo_tl \l_tmpb_tl }
+          { \tl_if_eq:NNF \l_audit_hr_archivo_tl \l_tmpb_tl { \bool_set_true:N \l_audit_hr_varios_bool } }
+      }
+    \IniciarFilas
+    \int_zero:N \l_audit_hr_n_int
+    \seq_map_inline:Nn \g_audit_folios_seq
+      {
+        \int_incr:N \l_audit_hr_n_int
+        \audit_fila_resumen:nnnnn { \int_use:N \l_audit_hr_n_int } ##1
+      }
+    \seq_if_empty:NT \g_audit_folios_seq
+      { \AgregarFila { & \marcador{se~completa~en~la~segunda~compilación} & \\ } }
+    \bool_if:NT \l_audit_hr_varios_bool
+      { \seq_if_empty:NT \g_audit_folios_seq { \AgregarFila { & & \\ } } }
+    \bool_if:NTF \l_audit_hr_varios_bool
+      {
+        \TablaAcumulada [ ancho = completo, numerada = false ] { Folio~inicial~de~cada~sección~del~sobre } { hoja-resumen }
+          { R{7mm} X L{62mm} R{15mm} }
+          { N.º & Sección & Archivo & Folio~inicial \\ \midrule }
+      }
+      {
+        \TablaAcumulada [ numerada = false ] { Folio~inicial~de~cada~sección~del~documento } { hoja-resumen }
+          { R{8mm} X R{22mm} }
+          { N.º & Sección & Folio~inicial \\ \midrule }
+      }
+  }
+\cs_new_protected:Npn \audit_fila_resumen:nnnnn #1#2#3#4#5
+  {
+    % #1 n, #2 clave, #3 título, #4 folio, #5 archivo
+    \tl_clear:N \l_tmpa_tl
+    \tl_if_in:nnT {#2} { form- } { \tl_set:Nn \l_tmpa_tl { \hspace*{5mm} } }
+    \tl_if_in:nnT {#2} { anexo- } { \tl_set:Nn \l_tmpa_tl { \hspace*{5mm} } }
+    \tl_if_in:nnT {#2} { sd- }
+      { \tl_set:Nn \l_tmpa_tl { \color{audit-marino}\bfseries } }
+    \bool_if:NTF \l_audit_hr_varios_bool
+      {
+        % el nombre de archivo se puede cortar después de cada guion bajo
+        \tl_set:Ne \l_tmpb_tl { \tl_to_str:n {#5} .pdf }
+        \regex_replace_all:nnN { _ } { \cO\_ \c{allowbreak} } \l_tmpb_tl
+        \tl_gput_right:Ne \g_audit_filas_tl
+          {
+            #1 & \exp_not:V \l_tmpa_tl \exp_not:n {#3} &
+            \exp_not:n { \ttfamily\fontsize{9bp}{11.5bp}\selectfont } \exp_not:V \l_tmpb_tl &
+            \exp_not:n {#4} \exp_not:N \\
+          }
+      }
+      {
+        \tl_gput_right:Ne \g_audit_filas_tl
+          { #1 & \exp_not:V \l_tmpa_tl \exp_not:n {#3} & \exp_not:n {#4} \exp_not:N \\ }
+      }
+  }
+\NewDocumentCommand \hojaResumen { }
+  {
+    \clearpage
+    \begin{paginaAncha}
+    \tituloPagina { \dato{sobre} } { Hoja~resumen } { hoja-resumen }
+    \noindent Folio~inicial~de~cada~sección~de~la~\dato{nombreoferta},~conforme~a~
+    \art{40.3}{26}.~Los~folios~se~toman~del~documento~compilado,~de~modo~que~
+    corresponden~exactamente~a~la~foliación~impresa~en~el~extremo~inferior~
+    derecho~de~cada~página.
+    \par \vspace { 5pt }
+    \audit_hoja_resumen:
+    \end{paginaAncha}
+    \clearpage
+  }
+\ExplSyntaxOff
+
+% ----------------------------------------------------------------------------
+%  Formularios de contenido adjunto (T-9, T-10, T-13, T-14, T-17, T-18)
+%  Las bases piden «adjuntar la información solicitada en el subdocumento».
+%  El formulario lista cada exigencia y dice dónde se presenta, con sección
+%  y folio reales:  \exigencia{texto de las bases}{\verSeccionFolio{sec:x}}
+% ----------------------------------------------------------------------------
+\newcommand\exigencia[2]{\RegistroNuevo{adj}{texto={#1},donde={#2}}}
+\ExplSyntaxOn
+\NewDocumentEnvironment { contenidoExigido } { m }
+  { \ReiniciarRegistros { adj } \tl_set:Nn \l_tmpb_tl {#1} }
+  {
+    \IniciarFilas
+    \int_step_inline:nn { \CantidadRegistros { adj } }
+      {
+        \tl_gput_right:Ne \g_audit_filas_tl
+          {
+            \audit_campo:nnn { adj } {##1} { texto } &
+            \audit_campo:nnn { adj } {##1} { donde } \exp_not:N \\
+          }
+      }
+    \exp_args:NnV \audit@tablaadjunto { #1 } \l_tmpb_tl
+  }
+\cs_new_protected:Npn \audit@tablaadjunto #1#2
+  {
+    \TablaAcumulada
+      { Formulario~#1.~Contenido~exigido~y~dónde~se~presenta } { #1 }
+      { X L{42mm} }
+      { Contenido~exigido~por~las~bases & Dónde~se~presenta \\ \midrule }
+  }
+\ExplSyntaxOff
+
+% Definiciones de cada formulario
+\@for\audit@f:={T-6,T-8,T-9,T-10,T-11,T-12,T-13,T-14,T-15,T-16,T-17,T-18,T-19,art46}\do{%
+  \InputIfFileExists{\audit@f.tex}{}{\PackageError{formularios}{Falta \audit@f.tex}{}}}
+
+\endinput

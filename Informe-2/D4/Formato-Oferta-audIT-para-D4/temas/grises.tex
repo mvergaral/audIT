@@ -1,0 +1,25 @@
+% ============================================================================
+%  Tema de prueba en escala de grises. Reemplaza cada color de marca por su
+%  luminancia (Rec. 709), que es aproximadamente lo que entrega una impresora
+%  monocroma. Se activa con la opción «grises» de la clase:
+%      \documentclass[grises]{audit-oferta}
+%  Sirve para revisar que nada dependa del color para leerse. No se entrega.
+% ============================================================================
+
+\definecolor{audit-marino}{gray}{0.16}
+\definecolor{audit-turquesa}{gray}{0.62}
+\definecolor{audit-gris-claro}{gray}{0.92}
+\definecolor{audit-tinta}{gray}{0.14}
+\definecolor{audit-secundario}{gray}{0.40}
+\definecolor{audit-filete}{gray}{0.81}
+\definecolor{audit-fila}{gray}{0.96}
+
+\definecolor{fig-nube}{gray}{0.30}
+\definecolor{fig-sitio}{gray}{0.40}
+\definecolor{fig-terminal}{gray}{0.36}
+\definecolor{fig-flota}{gray}{0.32}
+\definecolor{fig-red}{gray}{0.28}
+
+% Todo color definido con xcolor sale en grises. Las imágenes y los diagramas
+% importados conservan su color, porque son archivos externos.
+\selectcolormodel{gray}

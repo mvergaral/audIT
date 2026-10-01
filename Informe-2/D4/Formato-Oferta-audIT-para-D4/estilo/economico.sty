@@ -1,0 +1,408 @@
+% ============================================================================
+%  economico.sty
+%  Documentos económicos: el documento de costos frente a venta del Informe 3
+%  (Formulario T-22, FEP01 p.69) y los entregables 1 y 2 del Sobre N.º 3
+%  (Formulario E-21, FEP01 pp.70 a 72). Misma identidad visual que la oferta
+%  técnica, con folio, media firma, hoja resumen e índice detallado.
+%
+%  Montos (Artículo 51.2: CLP, UF y USD, valores netos, IVA desglosado,
+%  totales por ítem y total general, tipo de cambio del Formulario E-24):
+%    \monto{40000}            CLP 40.000 · UF 1,00 · USD 44,44
+%    \monto[UF]{1}            el valor se da en UF
+%    \montoPartida{clave}     el valor sale de economico/datos/partidas.csv
+%    \tablaMontos{leyenda}{etiqueta}{clave1, clave2}
+%                             neto, IVA y total de cada partida en las tres
+%                             monedas, y el total general
+%    \tablaHitosPago          hitos del Formulario E-25 con su monto
+%    \tablaParametros      tipos de cambio y parámetros del E-24
+%    \tablaTarifas         costo y tarifa por perfil contra los rangos del
+%                             E-26 (economico/datos/tarifas.csv)
+%  El cálculo está en economico.lua. Los tipos de cambio salen solo de
+%  configuracion/economico.tex. Artículo 50.2: en un documento técnico
+%  cualquiera de estos comandos detiene la compilación.
+% ============================================================================
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{economico}[2026/09/27 Documentos economicos]
+
+\directlua{
+  local ruta = kpse.find_file("economico.lua", "lua") or kpse.find_file("economico.lua")
+  dofile(ruta)
+}
+
+% Las cifras que se imprimen quedan en el .aux para el Markdown y el
+% verificador. Al leer el .aux no hacen nada.
+\providecommand\audit@cifraeco[5]{}
+\providecommand\audit@ivaeco[5]{}
+
+\ExplSyntaxOn
+% ----------------------------------------------------------------------------
+%  Configuración (configuracion/economico.tex)
+% ----------------------------------------------------------------------------
+\seq_new:N \g_audit_eco_tc_seq
+\seq_new:N \g_audit_eco_param_seq
+\tl_new:N \g_audit_eco_iva_tl
+\tl_new:N \g_audit_eco_fecha_tl
+\prop_new:N \g_audit_eco_docs_prop
+\NewDocumentCommand \TipoCambio { m m m }
+  {
+    \seq_gput_right:Nn \g_audit_eco_tc_seq { {#1} {#2} {#3} }
+    \lua_now:e
+      {
+        audit_eco.tipo_cambio("\lua_escape:e{#1}", "\lua_escape:e{\tl_to_str:n {#2}}",
+          "\int_eval:n {#3}")
+      }
+  }
+\NewDocumentCommand \TasaIVA { m }
+  {
+    \tl_gset:Nn \g_audit_eco_iva_tl {#1}
+    \lua_now:e { audit_eco.iva = math.tointeger(\int_eval:n {#1}) }
+  }
+% Texto de la configuración hacia Lua, sin expandir (Lua convierte \% en %)
+\cs_new:Npn \audit_eco_texto:n #1 { \lua_escape:e { \tl_to_str:n {#1} } }
+\NewDocumentCommand \FechaTipoCambio { m }
+  { \lua_now:e { audit_eco.fecha_tc = "\audit_eco_texto:n {#1}" } }
+\NewDocumentCommand \ParametroEconomico { m m }
+  {
+    \lua_now:e
+      { audit_eco.parametro("\audit_eco_texto:n {#1}", "\audit_eco_texto:n {#2}") }
+  }
+\NewDocumentCommand \ParametroEconomicoMonto { m m }
+  { \lua_now:e { audit_eco.parametro_monto("\audit_eco_texto:n {#1}", "#2") } }
+\NewDocumentCommand \HitoPago { m m m m m }
+  {
+    \lua_now:e
+      {
+        audit_eco.hito("\lua_escape:e{#1}", "#2", "#3", "#4",
+          "\lua_escape:e{\tl_to_str:n {#5}}")
+      }
+  }
+\NewDocumentCommand \RangoPerfil { m m m m m }
+  {
+    \lua_now:e
+      { audit_eco.rango("\lua_escape:e{\tl_to_str:n {#1}}", "#2", "#3", "#4", "#5") }
+  }
+\NewDocumentCommand \DocumentosEconomicosDeInstancia { m m }
+  { \prop_gput:Nnn \g_audit_eco_docs_prop {#1} {#2} }
+\NewExpandableDocumentCommand \tasaIVA { } { \tl_use:N \g_audit_eco_iva_tl }
+
+% ----------------------------------------------------------------------------
+%  Tipo de documento. Artículo 50.2: la oferta técnica no puede contener
+%  cifras de dinero, así que los comandos de montos exigen un documento
+%  económico.
+% ----------------------------------------------------------------------------
+\bool_new:N \g_audit_eco_bool
+\msg_new:nnn { economico } { tecnico }
+  {
+    #1~solo~se~usa~en~los~documentos~económicos.~La~oferta~técnica~no~puede~
+    contener~precios,~tarifas,~valores~unitarios~ni~cifra~alguna~que~permita~
+    inferir~el~monto~de~la~oferta~económica~(FEP01,~Artículo~50.2,~p.~29).
+  }
+\cs_new_protected:Npn \audit_eco_guardia:n #1
+  { \bool_if:NF \g_audit_eco_bool { \msg_error:nne { economico } { tecnico } {#1} } }
+
+% Datos: datos/partidas.csv y datos/tarifas.csv de cada raíz, en orden. La
+% muestra antepone muestra/economico: sus partidas se suman a las de la
+% plantilla y, si repiten una clave, ganan.
+\providecommand \RaizEconomico { economico }
+\cs_new_protected:Npn \audit_eco_cargar:
+  {
+    \clist_map_inline:en { \RaizEconomico }
+      {
+        \file_if_exist:nT { ##1 / datos / partidas.csv }
+          { \lua_now:e { audit_eco.cargar("##1/datos/partidas.csv") } }
+        \file_if_exist:nT { ##1 / datos / tarifas.csv }
+          { \lua_now:e { audit_eco.cargar_tarifas("##1/datos/tarifas.csv") } }
+      }
+  }
+
+% ----------------------------------------------------------------------------
+%  Montos
+% ----------------------------------------------------------------------------
+\NewDocumentCommand \monto { O{CLP} m }
+  {
+    \audit_eco_guardia:n { \token_to_str:N \monto }
+    \lua_now:e { audit_eco.monto("\lua_escape:e{#1}", "\lua_escape:e{#2}") }
+  }
+\NewDocumentCommand \montoPartida { m }
+  {
+    \audit_eco_guardia:n { \token_to_str:N \montoPartida }
+    \lua_now:e { audit_eco.monto_partida("\lua_escape:e{#1}") }
+  }
+
+% \tablaMontos[opciones de tabla]{leyenda}{etiqueta}{clave1, clave2, ...}
+% \tablaMontos* no suma un total general (por ejemplo, inversión y beneficio
+% de las innovaciones, que no se suman entre sí)
+\NewDocumentCommand \tablaMontos { s O{} m m m }
+  {
+    \audit_eco_guardia:n { \token_to_str:N \tablaMontos }
+    \IniciarFilas
+    \lua_now:e
+      {
+        audit_eco.filas_montos("\lua_escape:e{#4}", "\lua_escape:e{#5}",
+          \IfBooleanTF {#1} { false } { true })
+        audit_eco.terminar_tabla("N.º|Concepto|Moneda|Valor~neto|IVA~(\tasaIVA \c_space_tl \c_percent_str)|Total")
+      }
+    \TablaAcumulada [ ancho = completo , filetes = false , #2 ] {#3} {#4}
+      { R{7mm} X C{14mm} R{31mm} R{27mm} R{31mm} }
+      {
+        N.º & Concepto & Moneda & Valor~neto & IVA~(\tasaIVA~\%) & Total \\ \midrule
+      }
+  }
+
+% Hitos del Formulario E-25 sobre el valor de la implementación
+\NewDocumentCommand \tablaHitosPago { O{implementacion} }
+  {
+    \audit_eco_guardia:n { \token_to_str:N \tablaHitosPago }
+    \IniciarFilas
+    \lua_now:e
+      {
+        audit_eco.filas_hitos("\lua_escape:e{#1}")
+        audit_eco.terminar_tabla("Hito|Descripción~y~entregable~que~lo~gatilla|Mes|\c_percent_str|CLP|UF|USD")
+      }
+    \TablaAcumulada [ ancho = completo , fuente = condensada ]
+      { Hitos~de~pago~de~la~fase~de~implementación,~conforme~al~\form{E-25}{74},~
+        con~su~monto~neto }
+      { hitos-e25 }
+      { L{9mm} X C{9mm} R{10mm} R{28mm} R{21mm} R{21mm} }
+      {
+        Hito & Descripción~y~entregable~que~lo~gatilla & Mes & \% & CLP & UF & USD
+        \\ \midrule
+      }
+  }
+
+% Tipos de cambio y parámetros del Formulario E-24
+\NewDocumentCommand \tablaParametros { }
+  {
+    \audit_eco_guardia:n { \token_to_str:N \tablaParametros }
+    \IniciarFilas
+    \lua_now:e
+      {
+        audit_eco.filas_parametros()
+        audit_eco.terminar_tabla("Indicador|Valor~a~utilizar")
+      }
+    \TablaAcumulada [ ancho = completo , numerada = false ]
+      { Condiciones~y~parámetros~para~la~preparación~de~la~oferta~económica,~
+        conforme~al~\form{E-24}{73} }
+      { parametros-e24 }
+      { X L{80mm} }
+      { Indicador & Valor~a~utilizar \\ \midrule }
+  }
+
+% Costo y tarifa horaria por perfil contra los rangos del Formulario E-26
+\NewDocumentCommand \tablaTarifas { }
+  {
+    \audit_eco_guardia:n { \token_to_str:N \tablaTarifas }
+    \IniciarFilas
+    \lua_now:e
+      {
+        audit_eco.filas_tarifas()
+        audit_eco.terminar_tabla("Perfil|Costo~(E-26)|Costo~ofertado|Tarifa~(E-26)|Tarifa~ofertada")
+      }
+    \TablaAcumulada [ ancho = completo , fuente = condensada ]
+      { Costo~y~tarifa~horaria~por~perfil,~dentro~de~los~rangos~del~\form{E-26}{76} }
+      { tarifas-e26 }
+      { X R{27mm} R{27mm} R{27mm} R{27mm} }
+      {
+        Perfil & Costo~(E-26) & Costo~ofertado & Tarifa~(E-26) & Tarifa~ofertada
+        \\ \midrule
+      }
+  }
+
+% ----------------------------------------------------------------------------
+%  Documentos
+%  clave     título                                   instancia
+%  costos    Documento de costos frente a venta       informe3 (T-22)
+%  oferta    Entregable 1. Propuesta económica formal final (E-21)
+%  analisis  Entregable 2. Análisis económico-financiero final (E-21)
+% ----------------------------------------------------------------------------
+\prop_const_from_keyval:Nn \c_audit_eco_titulo_prop
+  {
+    costos = Costos~frente~a~venta ,
+    oferta = Propuesta~económica~formal ,
+    analisis = Análisis~económico-financiero ,
+  }
+\prop_const_from_keyval:Nn \c_audit_eco_rotulo_prop
+  {
+    costos = Informe~Preparatorio~3 ,
+    oferta = Entregable~1 ,
+    analisis = Entregable~2 ,
+  }
+\prop_const_from_keyval:Nn \c_audit_eco_numero_prop
+  { costos = {} , oferta = 1 , analisis = 2 }
+\tl_new:N \g_audit_eco_clave_tl
+\NewExpandableDocumentCommand \tituloEconomico { }
+  { \prop_item:NV \c_audit_eco_titulo_prop \g_audit_eco_clave_tl }
+\NewExpandableDocumentCommand \rotuloEconomico { }
+  { \prop_item:NV \c_audit_eco_rotulo_prop \g_audit_eco_clave_tl }
+\NewExpandableDocumentCommand \numeroEconomico { }
+  { \prop_item:NV \c_audit_eco_numero_prop \g_audit_eco_clave_tl }
+\cs_generate_variant:Nn \prop_item:Nn { NV }
+
+% Rótulos del sobre según la instancia
+\cs_new_protected:Npn \audit_eco_preparar:n #1
+  {
+    \prop_if_in:NnF \c_audit_eco_titulo_prop {#1}
+      { \msg_error:nnn { economico } { clave } {#1} }
+    \tl_gset:Nn \g_audit_eco_clave_tl {#1}
+    \bool_gset_true:N \g_audit_eco_bool
+    \str_if_eq:eeTF { \instancia } { final }
+      {
+        \TextoSobre { Oferta~Económica,~Sobre~N.º~3 }
+        \TituloSobre { Oferta~Económica \\ Sobre~N.º~3 }
+        \NombreOferta { oferta~económica }
+      }
+      {
+        \TextoSobre { Propuesta~Económica }
+        \TituloSobre { Propuesta~Económica \\ \tituloEconomico }
+        \NombreOferta { propuesta~económica }
+      }
+    \audit_eco_cargar:
+  }
+\AtEndDocument { \bool_if:NT \g_audit_eco_bool { \lua_now:n { audit_eco.guardar() } } }
+\msg_new:nnn { economico } { clave }
+  { «#1»~no~es~un~documento~económico.~Usar~costos,~oferta~o~analisis. }
+\ExplSyntaxOff
+
+% Apertura del documento económico: número grande (1 o 2, como en el E-21),
+% rótulo y título. Los apartados numeran 1.1, 1.2 en el Entregable 1 y 2.1,
+% 2.2 en el Entregable 2, igual que el Formulario E-21. El documento de
+% costos numera 1, 2, 3.
+\newcommand\aperturaEconomica{%
+  \clearpage
+  \thispagestyle{plain}%
+  \audit@marcasubdoc{\rotuloEconomico}%
+  \edef\audit@num{\numeroEconomico}%
+  \ifx\audit@num\@empty
+    \setcounter{chapter}{0}%
+    \renewcommand\thesection{\arabic{section}}%
+    \renewcommand\thetable{\arabic{table}}%
+    \renewcommand\thefigure{\arabic{figure}}%
+  \else
+    \setcounter{chapter}{\numexpr\audit@num-1\relax}%
+    \refstepcounter{chapter}%
+  \fi
+  \setcounter{section}{0}%
+  % el índice general de un documento económico ya es su índice detallado
+  \global\audit@indicelocaltrue
+  \addcontentsline{toc}{chapter}{\protect\numberline{\audit@num}\tituloEconomico}%
+  \markboth{\tituloEconomico}{}\markright{}%
+  \registrarFolio{doc-eco}{\rotuloEconomico. \tituloEconomico}%
+  % cada apartado de nivel 1 entra en la hoja resumen con su folio
+  \let\audit@sectionmarkorig\sectionmark
+  \renewcommand\sectionmark[1]{\audit@sectionmarkorig{##1}%
+    \registrarFolio{sec-\thesection}{\thesection\space##1}}%
+  \noindent\hspace*{-\desplazamientoCarril}%
+  \begin{minipage}[t]{\desplazamientoCarril}%
+    \raggedleft\vspace{-3pt}%
+    {\plexligera\fontsize{66bp}{60bp}\selectfont\color{audit-marino}\audit@num}%
+    \hspace*{\separacionCarril}%
+  \end{minipage}%
+  \begin{minipage}[t]{\textwidth}%
+    \vspace{0pt}\motivoApertura
+    \audit@rotulo{\dato{sobre}\enspace\textperiodcentered\enspace\rotuloEconomico}\par\vspace{4pt}%
+    {\sffamily\bfseries\fontsize{26bp}{30bp}\selectfont\color{audit-marino}%
+      \raggedright\tituloEconomico\par}%
+    \vspace{6pt}%
+    {\color{audit-turquesa}\rule{30mm}{1.2pt}}%
+  \end{minipage}\par
+  \vspace{11pt}\@afterheading}
+
+% Página del tipo de cambio y los parámetros del E-24. El E-21 pide el tipo
+% de cambio «claramente indicado» en los documentos.
+\newcommand\paginaParametros{%
+  \clearpage
+  \begin{paginaAncha}%
+  \tituloPagina[Tipo de cambio y parámetros]{Formulario E-24}%
+    {Tipo de cambio y parámetros}{parametros}%
+  \noindent Todos los valores de este documento están en pesos chilenos, Unidades
+  de Fomento y dólares de los Estados Unidos, con los tipos de cambio del
+  \form{E-24}{73}, conforme a \art{51.2}{29}. Son valores netos, con el IVA
+  desglosado. Cada valor en UF y en USD se calcula a partir de su valor en
+  pesos y se redondea a dos decimales. Las sumas se hacen en pesos.
+  \par\vspace{6pt}%
+  \tablaParametros
+  \end{paginaAncha}%
+  \clearpage}
+
+\ExplSyntaxOn
+\NewDocumentCommand \BuscarContenidoEconomico { m }
+  {
+    \tl_clear:N \l_audit_ruta_tl
+    \clist_map_inline:en { \RaizEconomico }
+      {
+        \file_if_exist:nT { ##1 / #1 / contenido.tex }
+          { \tl_set:Nn \l_audit_ruta_tl { ##1 / #1 / contenido.tex } \clist_map_break: }
+      }
+    \tl_if_empty:NTF \l_audit_ruta_tl
+      { \msg_error:nnn { economico } { sin-contenido } {#1} }
+      { \file_input:V \l_audit_ruta_tl }
+  }
+\msg_new:nnn { economico } { sin-contenido } { No~hay~#1/contenido.tex~en~\RaizEconomico. }
+\ExplSyntaxOff
+
+% Carpeta de cada documento
+\newcommand\carpetaEconomica[1]{\csname audit@carpetaeco@#1\endcsname}
+\@namedef{audit@carpetaeco@costos}{costos-venta}
+\@namedef{audit@carpetaeco@oferta}{oferta-economica}
+\@namedef{audit@carpetaeco@analisis}{analisis-financiero}
+
+% \DocumentoEconomico{clave}: el documento completo. La hoja resumen va al
+% inicio del sobre (Artículo 40.3): en el documento de costos y en el
+% entregable 1, que abre el Sobre N.º 3 y lista también los folios del
+% entregable 2.
+\ExplSyntaxOn
+\NewDocumentCommand \DocumentoEconomico { m }
+  {
+    \audit_eco_preparar:n {#1}
+    \FijarSubdocumento { }
+    \portadaEconomica
+    \fichaDocumento { \rotuloEconomico .~\tituloEconomico }
+      { \use:c { audit@fichaeco@#1 } }
+      { \use:c { audit@formseco@#1 } }
+    \str_if_eq:nnF {#1} { analisis } { \hojaResumen }
+    \tl_set:Nn \audit@profundidadindice { 3 }
+    \tl_set:Nn \audit@rotuloindice { \dato{sobre} }
+    \indiceGeneral
+    \paginaParametros
+    % En la propuesta final las observaciones económicas (sub=E) van en el
+    % Sobre N.º 3 y las técnicas en el Sobre N.º 2. En el Informe 3 va la
+    % tabla entera.
+    \str_if_eq:nnF {#1} { analisis }
+      {
+        \str_if_eq:eeTF { \instancia } { final }
+          { \ObservacionesInstancia [ E ] }
+          { \ObservacionesInstancia }
+      }
+    \aperturaEconomica
+    \BuscarContenidoEconomico { \carpetaEconomica {#1} }
+    \anexoReferencias
+    \contraportada
+  }
+\ExplSyntaxOff
+
+\@namedef{audit@fichaeco@costos}{Documento de costos frente a venta que el
+  Formulario T-22 pide al Informe 3: proveedores y adquisiciones clave, curva
+  S, análisis de costos, VAN y TIR, y valorización de las cinco innovaciones
+  en el flujo de caja.}
+\@namedef{audit@formseco@costos}{La planilla de cálculo que entrega el
+  mandante va en archivo aparte, con los mismos valores}
+\@namedef{audit@fichaeco@oferta}{Entregable 1 del Formulario E-21: propuesta
+  de valor económico, estructura de pagos y resumen ejecutivo de valor.}
+\@namedef{audit@formseco@oferta}{E-24, E-25 y E-26. El modelo financiero
+  (entregable 3) va en planilla aparte, con los mismos valores}
+\@namedef{audit@fichaeco@analisis}{Entregable 2 del Formulario E-21: costos
+  frente a precio, evaluación financiera, curva S, adquisiciones, costos
+  operacionales, mantención y soporte, y valorización de las innovaciones.}
+\@namedef{audit@formseco@analisis}{E-24 y E-26. El modelo financiero
+  (entregable 3) va en planilla aparte, con los mismos valores}
+
+\newcommand\portadaEconomica{%
+  \audit@portadaimagen{portada}%
+  \audit@portadatexto{\audit@rotuloportada}
+    {\dato{titulosobre}}
+    {\rotuloEconomico. \tituloEconomico}
+    {\audit@datoportada{Entrega}{\dato{sobre}. \rotuloInstancia}%
+     \audit@datoportada{Proyecto}{\dato{proyecto}}%
+     \audit@datoportada{Mandante}{\dato{cliente}}}}
+
+\endinput

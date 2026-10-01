@@ -1,0 +1,16 @@
+% ============================================================================
+%  Formulario T-10. Metodología para el desarrollo (FEP01 p. 61)
+%  Formulario de contenido adjunto: lista cada exigencia de las bases y dice
+%  dónde se presenta, con \verSeccionFolio{etiqueta}.
+% ============================================================================
+
+\DefinirFormulario{T-10}{Metodología para el desarrollo}{61}
+  {El Proponente adjuntará a este formulario la información solicitada en el Subdocumento 6, letra b.}
+
+\expandafter\def\csname esqueleto@T-10\endcsname{%
+  \begin{formulario}{T-10}
+    \begin{contenidoExigido}{T-10}
+      \exigencia{Metodología de desarrollo coherente con la naturaleza del proyecto, con sus implicancias en gestión de requerimientos, arquitectura evolutiva, refactorización, deuda técnica y tiempo de salida al mercado.}{}
+      \exigencia{Prácticas de DevSecOps, integración y entrega continuas, infraestructura como código y automatización de pruebas.}{}
+    \end{contenidoExigido}
+  \end{formulario}}

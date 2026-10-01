@@ -1,0 +1,57 @@
+% ============================================================================
+%  Formulario T-15. Nivelación de recursos (FEP01 p. 63)
+%  Subdocumento 7 según el Formulario T-21.
+%
+%  Es el único formulario donde las bases piden horas hombre. Se declaran
+%  aquí y en ninguna otra parte de la oferta técnica, sin tarifas ni
+%  valores, que van al Sobre N.º 3 (FEP01, Artículo 50.2). El verificador
+%  admite la expresión solo en las páginas de este formulario.
+%
+%  \etapaTQuince{etapa, hh, personas, frentes, meses}
+%  Si no se declara ninguna, salen las cinco etapas de las bases.
+% ============================================================================
+
+\DefinirFormulario{T-15}{Nivelación de recursos}{63}
+  {Horas hombre por tarea, paquete de trabajo y etapa; curva de horas hombre
+   por etapa y total, y aparte la de continuidad operacional; número de
+   personas en implementación y en operación; ruta crítica y holguras;
+   frentes de trabajo, con detalle del solapamiento de los meses 13 a 15 y
+   19 a 20.}
+
+\newcommand\etapaTQuince[1]{\RegistroNuevo{t15}{#1}}
+
+\ExplSyntaxOn
+\NewDocumentEnvironment { formularioTQuince } { }
+  { \ReiniciarRegistros { t15 } }
+  {
+    \int_compare:nNnT { \CantidadRegistros { t15 } } = { 0 }
+      {
+        \RegistroNuevo { t15 } { etapa = {Etapa~1,~desarrollo}, meses = {1~a~12} }
+        \RegistroNuevo { t15 } { etapa = {Etapa~1,~marcha~blanca}, meses = {13~a~15} }
+        \RegistroNuevo { t15 } { etapa = {Etapa~2,~desarrollo}, meses = {13~a~18} }
+        \RegistroNuevo { t15 } { etapa = {Etapa~2,~marcha~blanca}, meses = {19~y~20} }
+        \RegistroNuevo { t15 } { etapa = {Operación}, meses = {21~a~56} }
+      }
+    \IniciarFilas
+    \int_step_inline:nn { \CantidadRegistros { t15 } }
+      {
+        \tl_gput_right:Ne \g_audit_filas_tl
+          {
+            \audit_campo:nnn { t15 } {##1} { etapa } &
+            \audit_campo:nnn { t15 } {##1} { hh } &
+            \audit_campo:nnn { t15 } {##1} { personas } &
+            \audit_campo:nnn { t15 } {##1} { frentes } &
+            \audit_campo:nnn { t15 } {##1} { meses } \exp_not:N \\
+          }
+      }
+    \TablaAcumulada
+      { Formulario~T-15.~Nivelación~de~recursos~por~etapa } { t15 }
+      { L{40mm} R{20mm} R{20mm} R{20mm} X }
+      { Etapa & HH~totales & Personas~(peak) & Frentes & Meses \\ \midrule }
+  }
+\ExplSyntaxOff
+
+\expandafter\def\csname esqueleto@T-15\endcsname{%
+  \begin{formulario}{T-15}
+    \begin{formularioTQuince}\end{formularioTQuince}
+  \end{formulario}}

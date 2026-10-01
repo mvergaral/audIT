@@ -1,0 +1,39 @@
+{
+  "grupo": "informe2",
+  "instancia": "informe2",
+  "modo_folio": "subdocumento",
+  "archivos": [
+    {
+      "clave": "04",
+      "nombre": "AUDIT-Subdocumento4.pdf",
+      "folio_inicial": 1,
+      "paginas": 64,
+      "aux": "salida/aux/informe2/04/AUDIT-Subdocumento4.aux",
+      "log": "salida/aux/informe2/04/AUDIT-Subdocumento4.log",
+      "fuentes": [
+        [
+          "subdocumentos"
+        ],
+        [
+          "subdocumentos/04-arquitectura"
+        ]
+      ]
+    },
+    {
+      "clave": "04T-11",
+      "nombre": "AUDIT-Formulario-T-11.pdf",
+      "folio_inicial": 1,
+      "paginas": 13,
+      "aux": "salida/aux/informe2/04T-11/AUDIT-Formulario-T-11.aux",
+      "log": "salida/aux/informe2/04T-11/AUDIT-Formulario-T-11.log",
+      "fuentes": [
+        [
+          "subdocumentos"
+        ],
+        [
+          "subdocumentos/04-arquitectura"
+        ]
+      ]
+    }
+  ]
+}

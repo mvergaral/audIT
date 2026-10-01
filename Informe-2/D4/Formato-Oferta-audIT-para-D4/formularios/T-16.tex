@@ -1,0 +1,50 @@
+% ============================================================================
+%  Formulario T-16. Plan de riesgos (FEP01 p. 63)
+%  Subdocumento 8 según el Formulario T-21.
+%
+%  \riesgoTDieciseis{id, riesgo, categoria, probabilidad, impacto,
+%                    exposicion, mitigacion, responsable}
+%  Los riesgos deben ser los de la solución propuesta, no un catálogo
+%  genérico (FEP01, Formulario T-7, subdocumento 8).
+% ============================================================================
+
+\DefinirFormulario{T-16}{Plan de riesgos}{63}
+  {Identificación, categoría, probabilidad, impacto y exposición de cada
+   riesgo, con su mitigación y su responsable. Los riesgos deben
+   corresponder a la solución efectivamente propuesta y no a un catálogo
+   genérico.}
+
+\newcommand\riesgoTDieciseis[1]{\RegistroNuevo{t16}{#1}}
+
+\ExplSyntaxOn
+\NewDocumentEnvironment { formularioTDieciseis } { }
+  { \ReiniciarRegistros { t16 } }
+  {
+    \int_compare:nNnT { \CantidadRegistros { t16 } } = { 0 }
+      { \int_step_inline:nn { 6 } { \RegistroNuevo { t16 } { id = ##1 } } }
+    \IniciarFilas
+    \int_step_inline:nn { \CantidadRegistros { t16 } }
+      {
+        \tl_gput_right:Ne \g_audit_filas_tl
+          {
+            \audit_campo:nnn { t16 } {##1} { id } &
+            \audit_campo:nnn { t16 } {##1} { riesgo } &
+            \audit_campo:nnn { t16 } {##1} { categoria } &
+            \audit_campo:nnn { t16 } {##1} { probabilidad } &
+            \audit_campo:nnn { t16 } {##1} { impacto } &
+            \audit_campo:nnn { t16 } {##1} { exposicion } &
+            \audit_campo:nnn { t16 } {##1} { mitigacion } &
+            \audit_campo:nnn { t16 } {##1} { responsable } \exp_not:N \\
+          }
+      }
+    \TablaAcumulada [ ancho = completo , fuente = condensada ]
+      { Formulario~T-16.~Plan~de~riesgos } { t16 }
+      { L{9mm} L{36mm} L{18mm} L{11mm} L{12mm} L{11mm} X L{20mm} }
+      { ID & Riesgo & Categoría & Prob. & Impacto & Expos. & Mitigación & Responsable \\ \midrule }
+  }
+\ExplSyntaxOff
+
+\expandafter\def\csname esqueleto@T-16\endcsname{%
+  \begin{formulario}{T-16}
+    \begin{formularioTDieciseis}\end{formularioTDieciseis}
+  \end{formulario}}

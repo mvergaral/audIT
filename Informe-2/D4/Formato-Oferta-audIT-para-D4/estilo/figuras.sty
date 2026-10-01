@@ -1,0 +1,332 @@
+% ============================================================================
+%  figuras.sty
+%
+%  \figura[opciones]{archivo}{leyenda}{etiqueta}
+%     Figura en página vertical, en la sección que la explica. Se ajusta al
+%     ancho y al alto útil sin deformarse ni cortarse.
+%     Opciones: ancho=completo (texto más carril), alto=0.8 (fracción del
+%     alto de texto), lugar=tbp (posiciones de flotante)
+%
+%  \anexoGrafico{archivo}{leyenda}{etiqueta}
+%     Página horizontal para diagramas anchos (FEP01, Artículo 40.4). En modo
+%     «pagina» (el de configuracion/instancia.tex) el diagrama dispone de
+%     257,4 x 167 mm. En modo «hoja», de 250 x 164 mm.
+%
+%  \begin{figuraNativa}{leyenda}{etiqueta} ... \end{figuraNativa}
+%     Figura dibujada en TikZ con las fuentes del documento. La letra del
+%     diagrama es la del documento, así que se controla igual que el texto.
+%
+%  Cada figura deja en el .aux su escala real (\figuraMedida). El
+%  verificador multiplica esa escala por la letra más chica del diagrama de
+%  origen y avisa si el resultado baja de 9 pt.
+%
+%  Citar: \figref{etiqueta} da «Figura 4.1». \tabref{etiqueta} da «Tabla 4.1».
+% ============================================================================
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{figuras}[2026/09/26 Figuras]
+
+\graphicspath{{./}{figuras/}}
+\setlength\floatsep{10pt plus 3pt minus 2pt}
+\setlength\textfloatsep{12pt plus 3pt minus 3pt}
+\setlength\intextsep{10pt plus 3pt minus 2pt}
+\renewcommand\topfraction{0.9}
+\renewcommand\bottomfraction{0.8}
+\renewcommand\textfraction{0.1}
+\renewcommand\floatpagefraction{0.75}
+\setcounter{topnumber}{2}
+\setcounter{totalnumber}{3}
+
+\providecommand\refx{\ref}
+\newcommand\figrefs[2]{Figuras~\refx{fig:#1} y~\refx{fig:#2}}
+\newcommand\tabrefs[2]{Tablas~\refx{tab:#1} y~\refx{tab:#2}}
+
+\providecommand\figuraMedida[5]{}
+\providecommand\figuraCaja[5]{}
+
+\ExplSyntaxOn
+\box_new:N \l_audit_fig_natural_box
+\box_new:N \l_audit_fig_final_box
+\tl_new:N \l_audit_fig_escala_tl
+\bool_new:N \l_audit_fig_completa_bool
+\keys_define:nn { audit/figura }
+  {
+    ancho .choices:nn = { texto, completo }
+      { \bool_set:Nn \l_audit_fig_completa_bool { \int_compare_p:nNn \l_keys_choice_int = 2 } } ,
+    alto .tl_set:N = \l_audit_fig_alto_tl ,
+    alto .initial:n = 0.82 ,
+    lugar .tl_set:N = \l_audit_fig_lugar_tl ,
+    lugar .initial:n = tbp ,
+  }
+
+% Arma la imagen en la caja final y calcula la escala respecto de su tamaño
+% natural
+\cs_new_protected:Npn \audit_fig_medir:nnn #1#2#3
+  {
+    \hbox_set:Nn \l_audit_fig_natural_box { \includegraphics {#1} }
+    \hbox_set:Nn \l_audit_fig_final_box
+      { \includegraphics [ width = #2 , height = #3 , keepaspectratio ] {#1} }
+    \tl_set:Ne \l_audit_fig_escala_tl
+      {
+        \fp_eval:n
+          {
+            round ( \dim_to_fp:n { \box_wd:N \l_audit_fig_final_box } /
+                    \dim_to_fp:n { \box_wd:N \l_audit_fig_natural_box } , 4 )
+          }
+      }
+  }
+% Pone la caja de la figura y anota en el .aux dónde quedó en la página
+% (\figuraCaja{etiqueta}{x}{y}{ancho}{alto}: esquina inferior izquierda en sp
+% desde el borde inferior izquierdo, medidas en bp). El verificador separa así
+% el texto del diagrama del texto del documento, aunque usen la misma fuente.
+\cs_new_protected:Npn \audit_fig_caja:nN #1#2
+  {
+    \hbox:n
+      {
+        \tex_savepos:D
+        \use:e
+          {
+            \exp_not:N \tex_write:D \exp_not:N \@auxout
+              {
+                \token_to_str:N \figuraCaja { #1 }
+                { \exp_not:N \int_use:N \exp_not:N \tex_lastxpos:D }
+                { \exp_not:N \int_use:N \exp_not:N \tex_lastypos:D }
+                { \dim_to_decimal_in_bp:n { \box_wd:N #2 } }
+                { \dim_to_decimal_in_bp:n { \box_ht:N #2 + \box_dp:N #2 } }
+              }
+          }
+        \box_use:N #2
+      }
+  }
+\cs_new_protected:Npn \audit_fig_registrar:nnn #1#2#3
+  {
+    \protected@write \@auxout { }
+      {
+        \string \figuraMedida {#1} { \l_audit_fig_escala_tl } { \thepage } {#2} {#3}
+      }
+  }
+
+\NewDocumentCommand \figura { O{} m m m }
+  {
+    \group_begin:
+    \keys_set:nn { audit/figura } {#1}
+    \use:e { \exp_not:N \begin{figure} [ \l_audit_fig_lugar_tl ] }
+      \bool_if:NTF \l_audit_fig_completa_bool
+        {
+          \audit_fig_medir:nnn {#2} { \anchoCompleto } { \l_audit_fig_alto_tl \textheight }
+          \hspace* { -\desplazamientoCarril }
+          \makebox [ \anchoCompleto ] [ c ] { \audit_fig_caja:nN { fig:#4 } \l_audit_fig_final_box }
+        }
+        {
+          \audit_fig_medir:nnn {#2} { \linewidth } { \l_audit_fig_alto_tl \textheight }
+          \centering
+          \audit_fig_caja:nN { fig:#4 } \l_audit_fig_final_box
+        }
+      \caption {#3} \label { fig:#4 }
+      \audit@leyendafuente
+      \audit_fig_registrar:nnn {#2} { vertical } { fig:#4 }
+    \end{figure}
+    \group_end:
+  }
+
+% ----------------------------------------------------------------------------
+%  Anexo gráfico horizontal
+%  Dentro de landscape el bloque de texto mide \textheight x \textwidth
+%  (239,2 x 148,9 mm). La caja del anexo se extiende hacia los márgenes que en
+%  esa página quedan libres (sin encabezado ni carril) y respeta la zona del
+%  pie, donde siguen el folio y la media firma.
+% ----------------------------------------------------------------------------
+\dim_const:Nn \c_audit_anexo_ancho_dim { 250mm }
+\dim_const:Nn \c_audit_anexo_alto_dim { 194mm }
+\int_new:N \g_audit_anexo_int
+
+% Los anexos gráficos se acumulan y se imprimen al final del subdocumento,
+% después de sus formularios: una página horizontal en medio del texto
+% dejaría media página vacía antes. El texto los cita con \figref.
+\tl_new:N \g_audit_anexos_tl
+\NewDocumentCommand \anexoGrafico { m m m }
+  { \tl_gput_right:Nn \g_audit_anexos_tl { \audit_anexo_emitir:nnn {#1} {#2} {#3} } }
+\cs_new_protected:Npn \audit_anexo_emitir:nnn #1#2#3
+  {
+    \str_if_eq:eeTF { \dato{anexohorizontal} } { pagina }
+      { \audit_anexo_pagina:nnn {#1} {#2} {#3} }
+      { \audit_anexo_hoja:nnn {#1} {#2} {#3} }
+  }
+\NewDocumentCommand \EmitirAnexosGraficos { }
+  {
+    \tl_if_empty:NF \g_audit_anexos_tl
+      {
+        \tl_set_eq:NN \l_tmpa_tl \g_audit_anexos_tl
+        \tl_gclear:N \g_audit_anexos_tl
+        \tl_use:N \l_tmpa_tl
+      }
+  }
+\AtEndDocument { \EmitirAnexosGraficos }
+
+% Contenido común del anexo: encabezado, figura, leyenda y registro
+\cs_new_protected:Npn \audit_anexo_contenido:nnnn #1#2#3#4
+  {
+    % #4 alto disponible para la figura
+    \audit@encabezadoanexo {#2}
+    \par \vspace { 3mm }
+    \audit_fig_medir:nnn {#1} { \c_audit_anexo_ancho_dim } {#4}
+    \centering
+    \audit_fig_caja:nN { fig:#3 } \l_audit_fig_final_box
+    \captionsetup { type = figure }
+    \caption {#2} \label { fig:#3 }
+    \audit_fig_registrar:nnn {#1} { horizontal } { fig:#3 }
+  }
+\cs_new_protected:Npn \audit_anexo_entrada:nn #1#2
+  {
+    \phantomsection
+    \addcontentsline { toc } { section }
+      { \protect \numberline { \thechapter . \Alph { audit@anexo } } Anexo~gráfico.~#1 }
+    \registrarFolio { anexo-#2 } { Anexo~gráfico~\thechapter.\Alph{audit@anexo}.~#1 }
+  }
+
+% Modo «hoja» (pdflscape): la página se gira para mostrarse apaisada y el pie
+% queda en la hoja física
+\cs_new_protected:Npn \audit_anexo_hoja:nnn #1#2#3
+  {
+    \clearpage
+    \int_gincr:N \g_audit_anexo_int
+    \stepcounter { audit@anexo }
+    \begin{landscape}
+      \thispagestyle{empty}
+      \audit_anexo_entrada:nn {#2} {#3}
+      \noindent
+      \makebox [ 0pt ] [ l ]
+        {
+          \hspace* { -3mm }
+          \raisebox { 0pt } [ 0pt ] [ 0pt ]
+            {
+              \begin{minipage} [ t ] [ \c_audit_anexo_alto_dim ] [ t ] { \c_audit_anexo_ancho_dim }
+                \vspace* { -37mm }
+                \audit_anexo_contenido:nnnn {#1} {#2} {#3} { \c_audit_anexo_alto_dim - 30mm }
+              \end{minipage}
+            }
+        }
+    \end{landscape}
+  }
+
+% Modo «pagina»: la hoja misma es apaisada (279,4 x 215,9 mm). El pie se
+% dibuja con las medidas de esa hoja, así el folio y la media firma quedan
+% abajo a la derecha tal como se ve en pantalla y en la impresión, y la cabeza
+% del anexo no repite el folio.
+%
+% Área del anexo en la hoja apaisada:
+%   ancho  279,4 - 12 (carril) - 10 (borde del folio)          = 257,4 mm
+%   alto   215,9 - 8 (arriba) - 22 (el filete del pie va a 19)  = 185,9 mm
+% Del alto se descuentan la cabeza del anexo y la leyenda, medidas en cada
+% anexo. Con una leyenda de hasta dos líneas el diagrama dispone de
+% 257,4 x 167 mm (el registro lo informa con «AUDIT-ANEXO»).
+\dim_const:Nn \c_audit_anexo_pag_ancho_dim { 257.4mm }
+\dim_const:Nn \c_audit_anexo_pag_caja_dim { 185.9mm }
+\dim_const:Nn \c_audit_anexo_pag_x_dim { 12mm }
+\dim_const:Nn \c_audit_anexo_pag_y_dim { 8mm }
+\dim_const:Nn \c_audit_anexo_pag_sep_dim { 3mm }
+\dim_new:N \g_audit_anexo_pw_dim
+\dim_new:N \g_audit_anexo_ph_dim
+\dim_new:N \l_audit_anexo_alto_dim
+\box_new:N \l_audit_anexo_cabeza_box
+\box_new:N \l_audit_anexo_leyenda_box
+\box_new:N \l_audit_anexo_todo_box
+\cs_new_protected:Npn \audit_anexo_pagina:nnn #1#2#3
+  {
+    \clearpage
+    \int_gincr:N \g_audit_anexo_int
+    \stepcounter { audit@anexo }
+    \dim_gset:Nn \g_audit_anexo_pw_dim { \paperwidth }
+    \dim_gset:Nn \g_audit_anexo_ph_dim { \paperheight }
+    \global \paperwidth = \g_audit_anexo_ph_dim
+    \global \paperheight = \g_audit_anexo_pw_dim
+    \global \pagewidth = \paperwidth
+    \global \pageheight = \paperheight
+    \thispagestyle{empty}
+    \audit_anexo_entrada:nn {#2} {#3}
+    % cabeza y leyenda se arman primero para saber cuánto alto queda
+    \vbox_set:Nn \l_audit_anexo_cabeza_box
+      {
+        \hsize = \c_audit_anexo_pag_ancho_dim \linewidth = \hsize
+        \audit@foliocabezafalse
+        \audit@encabezadoanexo {#2}
+      }
+    \vbox_set:Nn \l_audit_anexo_leyenda_box
+      {
+        \hsize = \c_audit_anexo_pag_ancho_dim \linewidth = \hsize
+        \captionsetup { type = figure }
+        \caption {#2} \label { fig:#3 }
+        \audit@leyendafuente
+      }
+    \dim_set:Nn \l_audit_anexo_alto_dim
+      {
+        \c_audit_anexo_pag_caja_dim
+        - \box_ht_plus_dp:N \l_audit_anexo_cabeza_box
+        - \c_audit_anexo_pag_sep_dim
+        - \box_ht_plus_dp:N \l_audit_anexo_leyenda_box
+      }
+    \audit_fig_medir:nnn {#1} { \c_audit_anexo_pag_ancho_dim } { \l_audit_anexo_alto_dim }
+    \iow_log:e
+      {
+        AUDIT-ANEXO:~#1~área~\dim_to_decimal_in_unit:nn { \c_audit_anexo_pag_ancho_dim } { 1mm }~x~
+        \dim_to_decimal_in_unit:nn { \l_audit_anexo_alto_dim } { 1mm }~mm,~
+        escala~\l_audit_fig_escala_tl
+      }
+    \vbox_set:Nn \l_audit_anexo_todo_box
+      {
+        \box_use_drop:N \l_audit_anexo_cabeza_box
+        \skip_vertical:N \c_audit_anexo_pag_sep_dim
+        \hbox_to_wd:nn { \c_audit_anexo_pag_ancho_dim }
+          { \hfil \audit_fig_caja:nN { fig:#3 } \l_audit_fig_final_box \hfil }
+        \box_use_drop:N \l_audit_anexo_leyenda_box
+      }
+    \audit_fig_registrar:nnn {#1} { horizontal } { fig:#3 }
+    \begin{tikzpicture} [ remember~picture , overlay ]
+      \node [ anchor = north~west , inner~sep = 0pt ]
+        at ( $ (current~page.north~west)
+               + ( \dim_use:N \c_audit_anexo_pag_x_dim , - \dim_use:N \c_audit_anexo_pag_y_dim ) $ )
+        { \box_use_drop:N \l_audit_anexo_todo_box };
+    \end{tikzpicture}
+    \AddToHookNext { shipout / after }
+      {
+        \global \paperwidth = \g_audit_anexo_pw_dim
+        \global \paperheight = \g_audit_anexo_ph_dim
+        \global \pagewidth = \paperwidth
+        \global \pageheight = \paperheight
+      }
+    \null \clearpage
+  }
+\ExplSyntaxOff
+
+\newcounter{audit@anexo}[chapter]
+% Leyenda de fuente bajo cada figura (Comunicado 10, sección 4.6). Por defecto
+% «Elaboración propia». \fuenteFigura{...} la cambia solo para la figura que
+% sigue.
+\newcommand\audit@fuentefigdef{Elaboración propia}
+\let\audit@fuentefig\audit@fuentefigdef
+\newcommand\fuenteFigura[1]{\gdef\audit@fuentefig{#1}}
+\newcommand\audit@leyendafuente{%
+  \par\vspace{1pt}%
+  {\raggedright\sffamily\fontsize{9.5bp}{12bp}\selectfont\color{audit-secundario}%
+    Fuente: \audit@fuentefig.\par}%
+  \global\let\audit@fuentefig\audit@fuentefigdef}
+% Cabeza del anexo. En modo «hoja» repite el folio arriba, porque en pantalla
+% el folio de la hoja física queda girado. En modo «pagina» no: el folio se ve
+% abajo a la derecha y la página no debe llevar dos números.
+\newif\ifaudit@foliocabeza \audit@foliocabezatrue
+\newcommand\audit@encabezadoanexo[1]{%
+  \noindent{\color{audit-filete}\rule{\linewidth}{0.4pt}}\par
+  \nointerlineskip\vspace{3pt}%
+  \noindent{\sffamily\fontsize{9bp}{11bp}\selectfont\color{audit-secundario}%
+    \MakeUppercase{Anexo gráfico \thechapter.\Alph{audit@anexo}}\enspace
+    \textperiodcentered\enspace Subdocumento \thechapter\enspace
+    \textperiodcentered\enspace Página horizontal conforme a FEP01, Artículo 40.4%
+    \ifaudit@foliocabeza\hfill Folio \thepage\fi\strut\par}}
+
+% Figura dibujada en TikZ
+\NewDocumentEnvironment{figuraNativa}{O{tbp} m m}
+  {\begin{figure}[#1]\centering\sffamily\fontsize{9.5bp}{12bp}\selectfont}
+  {\caption{#2}\label{fig:#3}%
+   \protected@write\@auxout{}{\string\figuraMedida{nativa}{1}{\thepage}{nativa}{fig:#3}}%
+   \end{figure}}
+
+\endinput

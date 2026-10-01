@@ -1,0 +1,18 @@
+\babel@toc {spanish}{}\relax 
+\ttl@starttoc {subdoc@1}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Las ocho capas obligatorias del numeral 2.1 transversal, con sus componentes e interfaces, conforme a RT-02.01}}{14}{figure.caption.6}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Contextos delimitados del dominio y sistemas con los que convive la solución}}{15}{figure.caption.7}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Patrones de resiliencia y flujo de la asignación bloqueante}}{20}{figure.caption.8}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Mapa de integraciones. Sistemas internos, fuentes de terreno y contrapartes externas}}{22}{figure.caption.9}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Integración con el sistema contable heredado a través de la capa anticorrupción}}{24}{figure.caption.10}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Capa analítica por niveles de refinamiento y explotación del costo por kilómetro}}{26}{figure.caption.11}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Modelo táctico del dominio. Agregados, entidades y servicios por contexto}}{29}{figure.caption.12}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Vista general de la arquitectura física: nube primaria y secundaria, San Bernardo, terminales regionales y flota, con los enlaces y su capacidad}}{33}{figure.caption.14}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Equipo a bordo: iWave G26I, periféricos, interfaces y particiones de la memoria}}{36}{figure.caption.16}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Ambientes de la solución, cada uno en su suscripción, y promoción desde desarrollo hasta producción}}{42}{figure.caption.19}%
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Región primaria Azure Chile Central: red central, red de producción, subredes, servicios con su nivel y conexiones con San Bernardo y los terminales}}{43}{figure.caption.21}%
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Reconexión masiva: del búfer del camión a la base de datos, con los límites de cada tramo}}{47}{figure.caption.22}%
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Plano de la sala de San Bernardo con sus zonas, a proporción de 26 m²}}{54}{figure.caption.25}%
+\contentsline {figure}{\numberline {4.14}{\ignorespaces Gabinete de un terminal regional, con sus enlaces, el punto de acceso de patio y el lector de portería}}{55}{figure.caption.27}%
+\contentsline {figure}{\numberline {4.15}{\ignorespaces Recuperación ante desastres entre Chile Central y Brazil South, y eje separado de continuidad en San Bernardo, los terminales y los camiones}}{58}{figure.caption.29}%
+\contentsfinish 

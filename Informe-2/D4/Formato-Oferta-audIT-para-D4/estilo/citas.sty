@@ -1,0 +1,100 @@
+% ============================================================================
+%  citas.sty
+%
+%  Las bases y el Caso no son bibliografía. Se citan por documento, artículo
+%  o numeral y página, siempre con la misma forma, y nunca generan entrada en
+%  la lista de referencias:
+%
+%    \art{40.1}{26}                 FEP01, Artículo 40.1, p. 26
+%    \form{T-7}{57}                 FEP01, Formulario T-7, p. 57
+%    \transv{numeral 2.1}{6}        FEP02, numeral 2.1, p. 6
+%    \caso{numeral 14.1}{29}        Caso, numeral 14.1, p. 29
+%    \caso{RT-09.01}{32}            Caso, RT-09.01, p. 32
+%    \bases{FEP01}{Artículo 50.2}{29}   forma general
+%  Con asterisco la cita sale entre paréntesis: \caso*{numeral 14.1}{29}
+%  Si la página tiene más de un número («66 y 67») sale «pp.».
+%
+%  Las fuentes externas reales (leyes, normas ISO, documentación de un
+%  fabricante) se citan en APA 7.ª edición con \parencite{clave} o
+%  \textcite{clave} y van al anexo «Referencias normativas y técnicas».
+%  El archivo es referencias/referencias.bib.
+% ============================================================================
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{citas}[2026/09/26 Citas]
+
+\ExplSyntaxOn
+\tl_new:N \l_audit_pagina_tl
+\cs_new_protected:Npn \audit_pagina:n #1
+  {
+    \tl_set:Ne \l_audit_pagina_tl {#1}
+    \regex_match:nVTF { \A \d+ \Z } \l_audit_pagina_tl
+      { p.\nobreakspace \l_audit_pagina_tl } { pp.\nobreakspace \l_audit_pagina_tl }
+  }
+\prg_generate_conditional_variant:Nnn \regex_match:nn { nV } { TF }
+\cs_new_protected:Npn \audit_bases:nnnn #1#2#3#4
+  {
+    \bool_if:nT {#1} { ( }
+    #2 ,~ #3 ,~ \audit_pagina:n {#4}
+    \bool_if:nT {#1} { ) }
+  }
+\NewDocumentCommand \bases { s m m m }
+  { \audit_bases:nnnn { #1 } {#2} {#3} {#4} }
+\NewDocumentCommand \art { s m m }
+  { \audit_bases:nnnn { #1 } { FEP01 } { Artículo~#2 } {#3} }
+\NewDocumentCommand \form { s m m }
+  { \audit_bases:nnnn { #1 } { FEP01 } { Formulario~#2 } {#3} }
+\NewDocumentCommand \transv { s m m }
+  { \audit_bases:nnnn { #1 } { FEP02 } {#2} {#3} }
+\NewDocumentCommand \caso { s m m }
+  { \audit_bases:nnnn { #1 } { Caso } {#2} {#3} }
+\ExplSyntaxOff
+
+% Nota que explica la convención, para la ficha del documento
+\newcommand\convencionCitas{%
+  Las bases se citan por documento, artículo o numeral y página impresa:
+  FEP01 son las Bases Administrativas, FEP02 las Bases Técnicas
+  Transversales y Caso las Bases Técnicas del Caso 10. Las fuentes externas
+  se citan en norma APA 7.ª edición y se listan en el anexo de referencias
+  normativas y técnicas.}
+
+% ----------------------------------------------------------------------------
+%  APA 7 con biblatex y biber
+% ----------------------------------------------------------------------------
+\RequirePackage[style=apa, backend=biber, backref=true, backrefstyle=none,
+  uniquename=false]{biblatex}
+\addbibresource{referencias/referencias.bib}
+\ifdefined\BibliografiaAdicional\addbibresource{\BibliografiaAdicional}\fi
+\DefineBibliographyStrings{spanish}{%
+  backrefpage  = {citada en el folio},
+  backrefpages = {citada en los folios}}
+\renewcommand*{\bibfont}{\normalfont\normalsize}
+\setlength\bibitemsep{5pt}
+\setlength\bibhang{16.5pt}
+% Las direcciones largas se cortan en cualquier carácter antes de desbordar
+\setcounter{biburlnumpenalty}{9000}
+\setcounter{biburllcpenalty}{7000}
+\setcounter{biburlucpenalty}{8000}
+\appto\bibsetup{\emergencystretch=2em\hfuzz=1pt}
+
+% Anexo de referencias. Solo se imprime si hubo citas.
+\newcommand\anexoReferencias{%
+  \ifnum\value{audit@citas}>0
+    \clearpage
+    \begin{paginaAncha}%
+    \tituloPagina[Referencias normativas y técnicas]{Anexo}%
+      {Referencias normativas y técnicas}{referencias}%
+    \noindent Fuentes externas citadas en esta oferta, en norma APA 7.ª
+    edición. Cada entrada indica el folio donde se usa.\par\vspace{8pt}%
+    \printbibliography[heading=none]%
+    \end{paginaAncha}%
+  \fi}
+% Si hubo al menos una cita en la corrida, queda anotado en el .aux para la
+% siguiente. Se escribe en cada corrida que tenga citas, no solo en la
+% primera, para que el anexo no aparezca y desaparezca entre corridas.
+\newcounter{audit@citas}
+\newif\ifaudit@citaescrita
+\AtEveryCitekey{\ifaudit@citaescrita\else
+  \immediate\write\@auxout{\string\setcounter{audit@citas}{1}}%
+  \global\audit@citaescritatrue\fi}
+
+\endinput

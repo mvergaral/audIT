@@ -1,0 +1,107 @@
+% ============================================================================
+%  Documento de costos frente a venta. Informe 3.
+%  Formulario T-22 (FEP01 p.69): proveedores clave, adquisiciones clave,
+%  curva S, análisis de costos, VAN y TIR, y valorización de las cinco
+%  innovaciones en el flujo de caja. Las cifras salen de
+%  economico/datos/partidas.csv: aquí no se escribe ningún monto a mano.
+% ============================================================================
+
+\begin{resumenApertura}
+\marcador{Qué muestra este documento, en cuatro o cinco líneas, con el valor
+ofertado frente al costo total: \textbackslash montoPartida\{proyecto\} y
+\textbackslash montoPartida\{gasto-total\}}
+\begin{recibe}
+  \item \marcador{Qué recibe el mandante}
+\end{recibe}
+\end{resumenApertura}
+
+\section{Proveedores clave de la solución}\label{sec:eco-proveedores}
+
+\marcador{Párrafo de contexto: qué muestra la \tabref{eco-proveedores} y por qué
+esos proveedores son clave}
+
+\begin{tabla}{Proveedores clave de la solución}{eco-proveedores}{L{38mm} X L{38mm} L{34mm}}
+Proveedor & Qué provee & Componente o servicio & Criterio de selección \\ \midrule
+\marcador{proveedor} & \marcador{producto o servicio} & \marcador{componente} & \marcador{criterio} \\
+\end{tabla}
+
+\marcador{Conclusión que se saca de la tabla}
+
+\section{Adquisiciones clave o relevantes}\label{sec:eco-adquisiciones}
+
+\marcador{Párrafo de contexto: qué muestra la \tabref{eco-adquisiciones}. El
+monto de cada adquisición va en partidas.csv y se imprime con
+\textbackslash montoPartida}
+
+\begin{tabla}{Adquisiciones clave o relevantes de la solución}{eco-adquisiciones}{L{40mm} X C{14mm} L{36mm}}
+Adquisición & Para qué & Mes & Modalidad \\ \midrule
+\marcador{adquisición} & \marcador{uso en la solución} & \marcador{mes} & \marcador{compra, arriendo o suscripción} \\
+\end{tabla}
+
+\marcador{Conclusión que se saca de la tabla}
+
+\section{Curva S del proyecto}\label{sec:eco-curva-s}
+
+\marcador{Párrafo de contexto: costos e ingresos acumulados por mes, del mes 1
+al 56, horizonte de evaluación del Formulario E-24. La figura sale de la
+planilla y se cita con \textbackslash figref antes de aparecer}
+
+\section{Análisis de costos de la solución}\label{sec:eco-costos}
+
+\marcador{Párrafo de contexto: qué muestra la \tabref{eco-gastos}. El Formulario
+T-22 pide los gastos desglosados en operación, inversión, administrativos y
+recursos humanos, con los gastos de proveedores sumados a operación}
+
+\tablaMontos{Costos de la solución por categoría de gasto}{eco-gastos}%
+  {gasto-operacion-directo, gasto-proveedores, gasto-inversion, gasto-administracion, gasto-rrhh}
+
+\marcador{Justificación de cada ítem y su coherencia con el plan de
+actividades: las bases evalúan con severidad un presupuesto sobreestimado o
+subestimado}
+
+\subsection{Costos frente a venta}\label{sec:eco-venta}
+
+\marcador{Párrafo de contexto: qué muestra la \tabref{eco-venta}, el valor
+ofertado que se compara con el costo total de la \tabref{eco-gastos}}
+
+\tablaMontos{Valor ofertado por fase}{eco-venta}{implementacion, operacion}
+
+\marcador{Margen resultante y de dónde sale}
+
+\section{VAN y TIR de la solución}\label{sec:eco-van}
+
+\marcador{Párrafo de contexto: qué muestra la \tabref{eco-van} y con qué tasa de
+descuento se calcula el VAN}
+
+\begin{tabla}{Indicadores de la evaluación financiera}{eco-van}{L{60mm} X}
+Indicador & Valor \\ \midrule
+Horizonte de evaluación & 56 meses, \form{E-24}{73} \\
+Tasa de descuento & \marcador{tasa y justificación} \\
+Valor actual neto (VAN) & \montoPartida{van} \\
+Tasa interna de retorno (TIR) & \marcador{porcentaje} \\
+\end{tabla}
+
+\marcador{Conclusión que se saca de los indicadores}
+
+\section{Valorización de las cinco innovaciones}\label{sec:eco-innovaciones}
+
+\marcador{Párrafo de contexto: qué muestra la \tabref{eco-innovaciones}, la
+inversión, el costo operacional y el beneficio esperado de cada innovación en
+el flujo de caja}
+
+\tablaMontos*[fuente=condensada]{Valorización de las cinco innovaciones en el flujo de caja}{eco-innovaciones}%
+  {innovacion-1-inversion, innovacion-1-costo, innovacion-1-beneficio,
+   innovacion-2-inversion, innovacion-2-costo, innovacion-2-beneficio,
+   innovacion-3-inversion, innovacion-3-costo, innovacion-3-beneficio,
+   innovacion-4-inversion, innovacion-4-costo, innovacion-4-beneficio,
+   innovacion-5-inversion, innovacion-5-costo, innovacion-5-beneficio}
+
+\marcador{Conclusión que se saca de la tabla}
+
+\section{Planilla de cálculo}\label{sec:eco-planilla}
+
+\marcador{Qué contiene la planilla que entrega el mandante: gastos de operación,
+inversión, administrativos y recursos humanos, una hoja con los gastos de
+proveedores sumados a operación y el flujo de caja mensual con total del mes y
+monto acumulado. Nombre del archivo y hoja donde está cada valor de este
+documento}

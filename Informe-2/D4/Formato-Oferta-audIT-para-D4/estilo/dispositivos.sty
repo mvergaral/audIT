@@ -1,0 +1,244 @@
+% ============================================================================
+%  dispositivos.sty
+%  Los cinco componentes de venta. Cada uno exige un dato verificable con su
+%  fuente: si falta, la compilación se detiene con un error que lo dice.
+%
+%  resumenApertura  qué resuelve el subdocumento y qué recibe el mandante.
+%                   Abre cada subdocumento. Al cerrarse imprime el índice
+%                   detallado del subdocumento.
+%  compromiso       obligación medible: métrica, dónde se verifica y fuente.
+%  \decision        decisión, alternativa descartada, criterio y fuente.
+%  \req, \reqMargen código de requisito en letra monoespaciada, enlazado al
+%                   Formulario T-12. Deja la sección donde se atiende para
+%                   que el T-12 la complete solo.
+%  \cifra,          número del Caso con su fuente al lado, en el carril.
+%  \cifraMargen
+%
+%  Quedan fuera, porque se leen como folleto o como texto generado: tarjetas
+%  en grilla, íconos, insignias, píldoras, degradados, sombras, recuadros de
+%  «conclusión clave» y eslóganes. Las frases de marca van solo en portada y
+%  contraportada.
+% ============================================================================
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{dispositivos}[2026/09/26 Dispositivos de venta]
+
+\RequirePackage[most]{tcolorbox}
+\RequirePackage{tabularx}
+
+\newcommand\audit@rotulodisp[1]{%
+  {\plexrotulo\fontsize{9bp}{11bp}\selectfont\color{audit-secundario}\MakeUppercase{#1}}}
+
+% ----------------------------------------------------------------------------
+%  Resumen de apertura
+% ----------------------------------------------------------------------------
+\newtcolorbox{audit@cajaresumen}{enhanced, frame hidden,
+  colback=white, boxrule=0pt, arc=0pt, outer arc=0pt,
+  left=11pt, right=0pt, top=1pt, bottom=1pt, boxsep=0pt,
+  borderline west={2pt}{0pt}{audit-turquesa},
+  before skip=1pt, after skip=2pt}
+
+\newenvironment{resumenApertura}
+  {\par\noindent\audit@rotulodisp{Resumen de apertura}\par\vspace{3pt}%
+   \begin{audit@cajaresumen}\setlength\parindent{0pt}\setlength\parskip{3pt}}
+  {\end{audit@cajaresumen}\indiceSubdocumento}
+
+% Qué recibe el mandante: lista sobria dentro del resumen
+\newenvironment{recibe}
+  {\par\vspace{2pt}\noindent{\sffamily\bfseries\fontsize{10bp}{13bp}\selectfont
+    \color{audit-marino}Qué recibe \dato{cliente}}\par\vspace{1pt}%
+   \begin{itemize}[leftmargin=12pt, itemsep=1pt, topsep=1pt, parsep=0pt,
+     label={\color{audit-turquesa}\rule[0.2ex]{4pt}{4pt}}]}
+  {\end{itemize}}
+
+% ----------------------------------------------------------------------------
+%  Compromiso
+%  \begin{compromiso}[metrica={...}, verifica={...}, fuente={...}]
+%    Texto de la obligación.
+%  \end{compromiso}
+% ----------------------------------------------------------------------------
+\newcounter{compromiso}
+\renewcommand\thecompromiso{C-\two@digits{\value{compromiso}}}
+\newtcolorbox{audit@cajacompromiso}{enhanced, breakable, frame hidden,
+  colback=white, boxrule=0pt, arc=0pt, outer arc=0pt,
+  left=11pt, right=0pt, top=2pt, bottom=2pt, boxsep=0pt,
+  borderline west={2pt}{0pt}{audit-marino},
+  before skip=6pt plus 2pt, after skip=6pt plus 2pt}
+
+\ExplSyntaxOn
+\prg_generate_conditional_variant:Nnn \tl_if_blank:n { V } { T , F , TF }
+\keys_define:nn { audit/compromiso }
+  {
+    metrica .tl_set:N = \l_audit_comp_metrica_tl ,
+    verifica .tl_set:N = \l_audit_comp_verifica_tl ,
+    fuente .tl_set:N = \l_audit_comp_fuente_tl ,
+  }
+\msg_new:nnn { dispositivos } { falta-dato }
+  { El~#1~en~#2~no~trae~'#3'.~Sin~dato~verificable~no~se~usa~el~dispositivo. }
+
+\NewDocumentEnvironment { compromiso } { O{} }
+  {
+    \keys_set:nn { audit/compromiso } {#1}
+    \tl_if_blank:VT \l_audit_comp_metrica_tl
+      { \msg_error:nnnnn { dispositivos } { falta-dato } { compromiso } { \thesection } { metrica } }
+    \tl_if_blank:VT \l_audit_comp_fuente_tl
+      { \msg_error:nnnnn { dispositivos } { falta-dato } { compromiso } { \thesection } { fuente } }
+    \refstepcounter { compromiso }
+    \addcontentsline { loc } { compromiso }
+      { \protect\numberline { \thecompromiso } \exp_not:V \l_audit_comp_metrica_tl }
+    \begin{audit@cajacompromiso}
+      \audit@rotulodisp { Compromiso~\thecompromiso } \par \vspace { 3pt }
+      \setlength \parindent { 0pt }
+  }
+  {
+      \par \vspace { 4pt }
+      { \color { audit-filete } \hrule height 0.4pt } \vspace { 3pt }
+      \audit@metadatos
+        { Métrica } { \l_audit_comp_metrica_tl }
+        { Se~verifica~en } { \l_audit_comp_verifica_tl }
+        { Fuente } { \l_audit_comp_fuente_tl }
+    \end{audit@cajacompromiso}
+  }
+\ExplSyntaxOff
+
+% Tres pares rótulo y valor en columnas
+\newcommand\audit@metadatos[6]{%
+  {\sffamily\fontsize{9.5bp}{12.5bp}\selectfont\color{audit-tinta}%
+   \setlength\tabcolsep{0pt}%
+   \begin{tabularx}{\linewidth}{@{}>{\RaggedRight}X@{\hspace{10pt}}>{\RaggedRight}X@{\hspace{10pt}}>{\RaggedRight}X@{}}
+     {\color{audit-secundario}#1} & {\color{audit-secundario}#3} & {\color{audit-secundario}#5}\tabularnewline
+     \color{audit-marino}\bfseries #2 & #4 & #6\tabularnewline
+   \end{tabularx}\par}}
+
+% ----------------------------------------------------------------------------
+%  Decisión
+%  \decision{titulo={...}, decide={...}, descarta={...}, criterio={...},
+%            fuente={...}}
+%  Reemplaza las tablas sueltas de registro de decisiones.
+% ----------------------------------------------------------------------------
+\newcounter{decision}
+\renewcommand\thedecision{D-\two@digits{\value{decision}}}
+\ExplSyntaxOn
+\keys_define:nn { audit/decision }
+  {
+    titulo .tl_set:N = \l_audit_dec_titulo_tl ,
+    decide .tl_set:N = \l_audit_dec_decide_tl ,
+    descarta .tl_set:N = \l_audit_dec_descarta_tl ,
+    criterio .tl_set:N = \l_audit_dec_criterio_tl ,
+    fuente .tl_set:N = \l_audit_dec_fuente_tl ,
+  }
+\NewDocumentCommand \decision { +m }
+  {
+    \group_begin:
+    \keys_set:nn { audit/decision } {#1}
+    \clist_map_inline:nn { decide , descarta , criterio , fuente }
+      {
+        \tl_if_blank:vT { l_audit_dec_##1_tl }
+          { \msg_error:nnnnn { dispositivos } { falta-dato } { decision } { \thesection } {##1} }
+      }
+    \refstepcounter { decision }
+    \addcontentsline { lod } { decision }
+      { \protect\numberline { \thedecision } \exp_not:V \l_audit_dec_titulo_tl }
+    \par \Needspace { 7\baselineskip } \vspace { 5pt plus 2pt }
+    \noindent \audit@rotulodisp { Decisión~\thedecision }
+    \tl_if_blank:VF \l_audit_dec_titulo_tl
+      {
+        \enspace { \sffamily \bfseries \fontsize{10.5bp}{13bp}\selectfont \color{audit-marino}
+          \l_audit_dec_titulo_tl }
+      }
+    \par \vspace { 3pt }
+    \noindent { \color { audit-marino } \rule { \linewidth } { 0.8pt } } \par
+    \audit@filadecision { Se~decide } { \bfseries \l_audit_dec_decide_tl }
+    \audit@filadecision { Se~descarta } { \l_audit_dec_descarta_tl }
+    \audit@filadecision { Criterio } { \l_audit_dec_criterio_tl }
+    \audit@filadecision { Fuente } { \l_audit_dec_fuente_tl }
+    \noindent { \color { audit-filete } \rule { \linewidth } { 0.4pt } } \par
+    \vspace { 5pt plus 2pt }
+    \group_end:
+    \@afterindentfalse \@afterheading
+  }
+\prg_generate_conditional_variant:Nnn \tl_if_blank:n { v } { T }
+\ExplSyntaxOff
+\newcommand\audit@filadecision[2]{%
+  \par\vspace{2pt}\noindent
+  \parbox[t]{24mm}{\sffamily\fontsize{9.5bp}{12.5bp}\selectfont\color{audit-secundario}#1}%
+  \parbox[t]{\dimexpr\linewidth-24mm\relax}{\RaggedRight #2}\par\vspace{2pt}}
+
+% ----------------------------------------------------------------------------
+%  Requisito atendido
+%  \req{RT-09.01}       en línea, en el párrafo que lo cumple
+%  \reqMargen{RT-09.01} en el carril, junto al párrafo
+%  Si el Formulario T-12 trae la fila del requisito, el código enlaza a ella.
+% ----------------------------------------------------------------------------
+\newcommand\audit@registrarreq[1]{%
+  \protected@write\@auxout{}{\string\reqUsado{#1}{\thesection}{\thepage}}}
+\newcommand\audit@codigo[1]{%
+  \ifcsname r@req:#1\endcsname\hyperref[req:#1]{#1}\else#1\fi}
+\DeclareRobustCommand\req[1]{%
+  \audit@registrarreq{#1}%
+  {\ttfamily\color{audit-marino}\audit@codigo{#1}}}
+\newcommand\reqMargen[1]{%
+  \@for\audit@r:=#1\do{\expandafter\audit@registrarreq\expandafter{\audit@r}}%
+  \marginpar{\raggedleft\ttfamily\fontsize{9.5bp}{12bp}\selectfont\color{audit-marino}%
+    \@for\audit@r:=#1\do{\expandafter\audit@codigo\expandafter{\audit@r}\par}}}
+
+% Secciones donde se atiende cada requisito, para el T-12. Cada \req deja en
+% el .aux \reqUsado{código}{sección}{folio}. Al leer el .aux se arma la lista
+% de secciones sin repetir.
+\ExplSyntaxOn
+\NewDocumentCommand \reqUsado { m m m }
+  {
+    \clist_if_exist:cF { g_audit_req_#1_clist } { \clist_new:c { g_audit_req_#1_clist } }
+    \clist_gput_right:cn { g_audit_req_#1_clist } {#2}
+    \clist_gremove_duplicates:c { g_audit_req_#1_clist }
+  }
+\NewDocumentCommand \seccionesReq { m }
+  {
+    \clist_if_exist:cTF { g_audit_req_#1_clist }
+      { \clist_use:cn { g_audit_req_#1_clist } { ,~ } }
+      { { \color{audit-secundario} sin~referencia~en~el~texto } }
+  }
+\ExplSyntaxOff
+
+% ----------------------------------------------------------------------------
+%  Cifra con fuente
+%  \cifra{340 de 374}{Caso, numeral 14.1, p. 29}
+%      la cifra en el texto y su fuente en el carril, a la misma altura
+%  \cifraMargen{374}{camiones gestionados}{Caso, numeral 14.1, p. 29}
+%      la cifra destacada en el carril. Pocas veces por subdocumento.
+% ----------------------------------------------------------------------------
+\newcommand\audit@exigirfuente[2]{%
+  \if\relax\detokenize{#2}\relax
+    \PackageError{dispositivos}{La cifra '#1' no trae fuente. Sin fuente no
+      se usa el dispositivo}{}%
+  \fi}
+\newcommand\cifra[2]{%
+  \audit@exigirfuente{#1}{#2}%
+  {\sffamily\bfseries\color{audit-marino}#1}%
+  \marginpar{\raggedleft\sffamily\fontsize{9.5bp}{12bp}\selectfont
+    {\color{audit-marino}\bfseries #1}\par
+    {\color{audit-secundario}#2}}}
+\newcommand\cifraMargen[3]{%
+  \audit@exigirfuente{#1}{#3}%
+  \marginpar{\raggedleft
+    {\plexligera\fontsize{22bp}{24bp}\selectfont\color{audit-marino}#1}\par\vspace{1pt}%
+    {\sffamily\fontsize{9.5bp}{12bp}\selectfont\color{audit-tinta}#2\par}\vspace{2pt}%
+    {\color{audit-turquesa}\rule{12mm}{0.8pt}}\par\vspace{1pt}%
+    {\sffamily\fontsize{9bp}{11bp}\selectfont\color{audit-secundario}#3\par}}}
+
+% Notas del carril: alineadas hacia el texto
+\setlength\marginparpush{8pt}
+
+% ----------------------------------------------------------------------------
+%  Listados de compromisos y decisiones de la oferta
+% ----------------------------------------------------------------------------
+\newcommand\l@compromiso[2]{\audit@lineadispositivo{#1}{#2}}
+\newcommand\l@decision[2]{\audit@lineadispositivo{#1}{#2}}
+\newcommand\audit@lineadispositivo[2]{%
+  \par\noindent{\sffamily\fontsize{10bp}{13bp}\selectfont\color{audit-tinta}%
+    \def\numberline##1{\makebox[14mm][l]{\ttfamily\color{audit-marino}##1}}%
+    \parbox[t]{\dimexpr\linewidth-18mm\relax}{\hangindent14mm #1}%
+    \hfill\makebox[14mm][r]{#2}}\par\vspace{2pt}}
+\newcommand\listaCompromisos{\@starttoc{loc}}
+\newcommand\listaDecisiones{\@starttoc{lod}}
+
+\endinput

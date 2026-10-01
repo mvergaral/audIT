@@ -1,0 +1,106 @@
+% ============================================================================
+%  Tabla de trazabilidad de observaciones (FEP01, Artículo 46, p. 28)
+%  «Cada informe deberá incorporar la resolución explícita de las
+%  observaciones formuladas en la instancia anterior, mediante una tabla de
+%  trazabilidad observación, respuesta y sección modificada.»
+%
+%  \begin{tablaObservaciones}{Informe 1}
+%    \grupoObservaciones{General, formalidad y cumplimiento de instrucciones}
+%    \observacion[tipo=acepta, sub=0]{01}{observación}{respuesta}{sección}
+%    \observacion[tipo=aclara, sub=1]{17}{...}{...}{...}
+%  \end{tablaObservaciones}
+%
+%  tipo  acepta | aclara | mixta  antepone el rótulo a la respuesta. Si se omite,
+%        la respuesta se imprime tal como se escribe.
+%  sub   subdocumento al que corresponde la observación (0 para las generales)
+%  Con \begin{tablaObservaciones}[solo=4]{Informe 1} la tabla muestra solo las
+%  filas del subdocumento 4, para cuando el informe va en varios PDF.
+%  sub=E marca una observación sobre la propuesta económica. En la propuesta
+%  final esas filas van solo en el Sobre N.º 3 (solo=E) y el Sobre N.º 2
+%  muestra las demás (solo=tecnico): el Artículo 50.2 no admite en la oferta
+%  técnica nada que permita inferir el monto.
+% ============================================================================
+
+\ExplSyntaxOn
+\tl_new:N \l_audit_obs_solo_tl
+\tl_new:N \l_audit_obs_tipo_tl
+\tl_new:N \l_audit_obs_sub_tl
+\keys_define:nn { audit/obs }
+  {
+    tipo .tl_set:N = \l_audit_obs_tipo_tl ,
+    tipo .initial:n = {} ,
+    sub .tl_set:N = \l_audit_obs_sub_tl ,
+    sub .initial:n = 0 ,
+  }
+\keys_define:nn { audit/tablaobs }
+  { solo .tl_set:N = \l_audit_obs_solo_tl , solo .initial:n = {} }
+
+\NewDocumentEnvironment { tablaObservaciones } { O{} m }
+  {
+    \keys_set:nn { audit/tablaobs } {#1}
+    \tl_if_empty:NT \l_audit_obs_solo_tl
+      { \cs_if_exist:NT \filtroObservaciones { \tl_set:Ne \l_audit_obs_solo_tl { \filtroObservaciones } } }
+    \tl_gset:Nn \g_audit_obs_instancia_tl {#2}
+    \IniciarFilas
+  }
+  {
+    \tl_if_empty:NT \g_audit_filas_tl
+      {
+        \AgregarFila
+          { & \multicolumn { 3 } { l }
+              { Sin~observaciones~del~\g_audit_obs_instancia_tl{}~para~este~subdocumento } \\ }
+      }
+    \TablaAcumulada [ ancho = completo , numerada = false ]
+      { Resolución~de~las~observaciones~del~\g_audit_obs_instancia_tl ,~
+        conforme~a~\art{46}{28} }
+      { art46 }
+      { R{7mm} X X L{30mm} }
+      { N.º & Observación & Respuesta & Sección~modificada \\ \midrule }
+  }
+\tl_new:N \g_audit_obs_instancia_tl
+
+\NewDocumentCommand \grupoObservaciones { m }
+  {
+    \tl_if_empty:NT \l_audit_obs_solo_tl
+      {
+        \AgregarFila
+          {
+            \rowcolor { audit-fila }
+            \multicolumn { 4 } { l } { \color{audit-marino} \bfseries #1 } \\
+          }
+      }
+  }
+
+\NewDocumentCommand \observacion { O{} m m m m }
+  {
+    \group_begin:
+    \keys_set:nn { audit/obs } {#1}
+    \bool_lazy_any:nT
+      {
+        { \tl_if_empty_p:N \l_audit_obs_solo_tl }
+        { \tl_if_eq_p:NN \l_audit_obs_solo_tl \l_audit_obs_sub_tl }
+        {
+          \bool_lazy_and_p:nn
+            { \str_if_eq_p:Vn \l_audit_obs_solo_tl { tecnico } }
+            { ! \str_if_eq_p:Vn \l_audit_obs_sub_tl { E } }
+        }
+      }
+      {
+        \tl_gput_right:Ne \g_audit_filas_tl
+          {
+            \exp_not:n { #2 & #3 & }
+            \tl_if_empty:NF \l_audit_obs_tipo_tl
+              { \exp_not:N \audit@tiporespuesta { \l_audit_obs_tipo_tl } ~ }
+            \exp_not:n { #4 & #5 \\ }
+          }
+      }
+    \group_end:
+  }
+\ExplSyntaxOff
+
+\newcommand\audit@tiporespuesta[1]{%
+  {\color{audit-marino}\bfseries
+   \ifcsname audit@tipo@#1\endcsname\csname audit@tipo@#1\endcsname\else #1\fi}}
+\def\audit@tipo@acepta{Se acepta.}
+\def\audit@tipo@aclara{Se aclara.}
+\def\audit@tipo@mixta{Se acepta y se aclara.}

@@ -1,0 +1,117 @@
+% ============================================================================
+%  Formulario T-19. Cartera de innovaciones (FEP01 p. 64)
+%  Subdocumento 13 según el Formulario T-21.
+%
+%  Una ficha por cada una de las cinco innovaciones, con los 17 campos del
+%  T-19 agrupados en los siete elementos del Artículo 29 (FEP01 p. 19). La
+%  omisión de cualquier elemento «reduce la innovación a un enunciado», por
+%  eso un campo vacío se imprime como marcador y el verificador lo cuenta.
+%
+%  \fichaInnovacion{
+%    tipo, nombre,                                  identificación
+%    problema,                                      elemento 1
+%    tecnologia,                                    elemento 2
+%    madurez, fuentes,                              elemento 3
+%    arquitectura, edt, mes,                        elemento 4
+%    inversion, costooperacional, beneficio,        elemento 5
+%    indicador, medicion,                           elemento 6
+%    riesgo, mitigacion, contingencia               elemento 7
+%  }
+%
+%  Elemento 5 y Artículo 50.2: «inversion» y «costooperacional» describen las
+%  partidas sin montos. El formulario agrega siempre la remisión al Sobre
+%  N.º 3, donde la innovación se valoriza (FEP01, Artículo 30.1, p. 20).
+%  «beneficio» se cuantifica en unidades de operación, no en dinero.
+% ============================================================================
+
+\DefinirFormulario{T-19}{Cartera de innovaciones}{64}
+  {Una ficha por cada una de las cinco innovaciones obligatorias del
+   Artículo 28, con los siete elementos del Artículo 29: problema,
+   tecnología, madurez, diseño de la incorporación, impacto económico,
+   indicador de verificación y riesgo de adopción.}
+
+\newcommand\fichaInnovacion[1]{\RegistroNuevo{t19}{#1}\audit@emitirficha}
+
+\ExplSyntaxOn
+\cs_new_protected:Npn \audit_tdiecinueve_grupo:n #1
+  {
+    \tl_gput_right:Nn \g_audit_filas_tl
+      {
+        \rowcolor { audit-fila }
+        \multicolumn { 2 } { l } { \color{audit-marino} \bfseries #1 } \\
+      }
+  }
+\cs_new_protected:Npn \audit_tdiecinueve_campo:nn #1#2
+  {
+    \tl_gput_right:Ne \g_audit_filas_tl
+      {
+        \exp_not:n { \color{audit-secundario} #1 } &
+        \audit_campo:nnn { t19 } { \int_use:c { g_audit_reg_t19_int } } {#2}
+        \exp_not:N \\
+      }
+  }
+\cs_new_protected:Npn \audit_tdiecinueve_campo_costo:nn #1#2
+  {
+    \tl_gput_right:Ne \g_audit_filas_tl
+      {
+        \exp_not:n { \color{audit-secundario} #1 } &
+        \audit_campo:nnn { t19 } { \int_use:c { g_audit_reg_t19_int } } {#2}
+        \exp_not:N \par \exp_not:N \audit@remisionsobre \exp_not:N \\
+      }
+  }
+\NewDocumentCommand \audit@emitirficha { }
+  {
+    \IniciarFilas
+    \audit_tdiecinueve_campo:nn { Tipo~de~innovación~(1~a~5) } { tipo }
+    \audit_tdiecinueve_campo:nn { Nombre~de~la~innovación } { nombre }
+    \audit_tdiecinueve_grupo:n { 1.~Problema~u~oportunidad }
+    \audit_tdiecinueve_campo:nn { Problema~u~oportunidad~del~caso~que~resuelve } { problema }
+    \audit_tdiecinueve_grupo:n { 2.~Tecnología }
+    \audit_tdiecinueve_campo:nn { Tecnología,~práctica~o~modelo~que~la~sustenta } { tecnologia }
+    \audit_tdiecinueve_grupo:n { 3.~Madurez }
+    \audit_tdiecinueve_campo:nn { Nivel~de~madurez~y~escala~utilizada } { madurez }
+    \audit_tdiecinueve_campo:nn { Fuentes~citadas~(APA~7.ª~ed.) } { fuentes }
+    \audit_tdiecinueve_grupo:n { 4.~Diseño~de~la~incorporación }
+    \audit_tdiecinueve_campo:nn { Dónde~se~inserta~en~la~arquitectura } { arquitectura }
+    \audit_tdiecinueve_campo:nn { Paquetes~de~la~EDT~que~la~ejecutan } { edt }
+    \audit_tdiecinueve_campo:nn { Mes~del~cronograma~en~que~se~materializa } { mes }
+    \audit_tdiecinueve_grupo:n { 5.~Impacto~económico }
+    \audit_tdiecinueve_campo_costo:nn { Inversión~requerida } { inversion }
+    \audit_tdiecinueve_campo_costo:nn { Efecto~en~el~costo~operacional } { costooperacional }
+    \audit_tdiecinueve_campo:nn { Beneficio~esperado~y~su~cuantificación } { beneficio }
+    \audit_tdiecinueve_grupo:n { 6.~Indicador~de~verificación }
+    \audit_tdiecinueve_campo:nn { Indicador~de~verificación,~línea~base~y~meta } { indicador }
+    \audit_tdiecinueve_campo:nn { Momento~de~medición } { medicion }
+    \audit_tdiecinueve_grupo:n { 7.~Riesgo~de~adopción }
+    \audit_tdiecinueve_campo:nn { Riesgo~de~adopción,~probabilidad~e~impacto } { riesgo }
+    \audit_tdiecinueve_campo:nn { Estrategia~de~mitigación } { mitigacion }
+    \audit_tdiecinueve_campo:nn { Plan~de~contingencia~si~no~rinde~lo~esperado } { contingencia }
+    \tl_set:Ne \l_tmpa_tl
+      {
+        Ficha~T-19.~Innovación~tipo~
+        \audit_campo_crudo:nnn { t19 } { \int_use:c { g_audit_reg_t19_int } } { tipo } .~
+        \audit_campo_crudo:nnn { t19 } { \int_use:c { g_audit_reg_t19_int } } { nombre }
+      }
+    \exp_args:NnV \audit@tablaficha { t19-\int_use:c { g_audit_reg_t19_int } } \l_tmpa_tl
+  }
+\cs_new_protected:Npn \audit@tablaficha #1#2
+  {
+    \TablaAcumulada [ espacio = 12 ] {#2} {#1}
+      { L{44mm} X }
+      { Campo & Contenido \\ \midrule }
+  }
+\ExplSyntaxOff
+
+\newcommand\audit@remisionsobre{%
+  {\color{audit-secundario}Valorización en el Sobre N.º 3, Entregable 2 de
+  la Oferta Económica (\art{30.1}{20}). Sin cifras en esta oferta técnica
+  (\art{50.2}{29}).}}
+
+\expandafter\def\csname esqueleto@T-19\endcsname{%
+  \begin{formulario}{T-19}
+    \fichaInnovacion{tipo=1}
+    \fichaInnovacion{tipo=2}
+    \fichaInnovacion{tipo=3}
+    \fichaInnovacion{tipo=4}
+    \fichaInnovacion{tipo=5}
+  \end{formulario}}

@@ -1,0 +1,163 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{apa/apasortcite//global/global/global}
+    \entry{bases-fep01}{report}{}{}
+      \name{author}{1}{}{%
+        {{hash=05834e46fd17449e232b4d09ac505ddd}{%
+           family={{Transportes Curimón S.A.}},
+           familyi={T\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Transportes Curimón S.A.}%
+      }
+      \strng{namehash}{05834e46fd17449e232b4d09ac505ddd}
+      \strng{fullhash}{05834e46fd17449e232b4d09ac505ddd}
+      \strng{fullhashraw}{05834e46fd17449e232b4d09ac505ddd}
+      \strng{bibnamehash}{05834e46fd17449e232b4d09ac505ddd}
+      \strng{authorbibnamehash}{05834e46fd17449e232b4d09ac505ddd}
+      \strng{authornamehash}{05834e46fd17449e232b4d09ac505ddd}
+      \strng{authorfullhash}{05834e46fd17449e232b4d09ac505ddd}
+      \strng{authorfullhashraw}{05834e46fd17449e232b4d09ac505ddd}
+      \field{extraname}{1}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{18}
+      \field{month}{8}
+      \field{title}{Bases administrativas para la preparación de la propuesta: Licitación Pública Internacional N.º TFEP-01/2026}
+      \field{type}{Documento FEP01}
+      \field{year}{2026}
+      \field{dateera}{ce}
+      \true{nocite}
+    \endentry
+    \entry{bases-fep02}{report}{}{}
+      \name{author}{1}{}{%
+        {{hash=05834e46fd17449e232b4d09ac505ddd}{%
+           family={{Transportes Curimón S.A.}},
+           familyi={T\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Transportes Curimón S.A.}%
+      }
+      \strng{namehash}{05834e46fd17449e232b4d09ac505ddd}
+      \strng{fullhash}{05834e46fd17449e232b4d09ac505ddd}
+      \strng{fullhashraw}{05834e46fd17449e232b4d09ac505ddd}
+      \strng{bibnamehash}{05834e46fd17449e232b4d09ac505ddd}
+      \strng{authorbibnamehash}{05834e46fd17449e232b4d09ac505ddd}
+      \strng{authornamehash}{05834e46fd17449e232b4d09ac505ddd}
+      \strng{authorfullhash}{05834e46fd17449e232b4d09ac505ddd}
+      \strng{authorfullhashraw}{05834e46fd17449e232b4d09ac505ddd}
+      \field{extraname}{2}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{18}
+      \field{month}{8}
+      \field{title}{Bases técnicas transversales para la preparación de la propuesta: Licitación Pública Internacional N.º TFEP-01/2026}
+      \field{type}{Documento FEP02}
+      \field{year}{2026}
+      \field{dateera}{ce}
+      \true{nocite}
+    \endentry
+  \enddatalist
+  \datalist[entry]{apa/global//global/global/global}
+    \entry{bases-fep01}{report}{}{}
+      \name{author}{1}{}{%
+        {{hash=05834e46fd17449e232b4d09ac505ddd}{%
+           family={{Transportes Curimón S.A.}},
+           familyi={T\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Transportes Curimón S.A.}%
+      }
+      \strng{namehash}{05834e46fd17449e232b4d09ac505ddd}
+      \strng{fullhash}{05834e46fd17449e232b4d09ac505ddd}
+      \strng{fullhashraw}{05834e46fd17449e232b4d09ac505ddd}
+      \strng{bibnamehash}{05834e46fd17449e232b4d09ac505ddd}
+      \strng{authorbibnamehash}{05834e46fd17449e232b4d09ac505ddd}
+      \strng{authornamehash}{05834e46fd17449e232b4d09ac505ddd}
+      \strng{authorfullhash}{05834e46fd17449e232b4d09ac505ddd}
+      \strng{authorfullhashraw}{05834e46fd17449e232b4d09ac505ddd}
+      \field{extraname}{1}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{18}
+      \field{month}{8}
+      \field{title}{Bases administrativas para la preparación de la propuesta: Licitación Pública Internacional N.º TFEP-01/2026}
+      \field{type}{Documento FEP01}
+      \field{year}{2026}
+      \field{dateera}{ce}
+      \true{nocite}
+    \endentry
+    \entry{bases-fep02}{report}{}{}
+      \name{author}{1}{}{%
+        {{hash=05834e46fd17449e232b4d09ac505ddd}{%
+           family={{Transportes Curimón S.A.}},
+           familyi={T\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Transportes Curimón S.A.}%
+      }
+      \strng{namehash}{05834e46fd17449e232b4d09ac505ddd}
+      \strng{fullhash}{05834e46fd17449e232b4d09ac505ddd}
+      \strng{fullhashraw}{05834e46fd17449e232b4d09ac505ddd}
+      \strng{bibnamehash}{05834e46fd17449e232b4d09ac505ddd}
+      \strng{authorbibnamehash}{05834e46fd17449e232b4d09ac505ddd}
+      \strng{authornamehash}{05834e46fd17449e232b4d09ac505ddd}
+      \strng{authorfullhash}{05834e46fd17449e232b4d09ac505ddd}
+      \strng{authorfullhashraw}{05834e46fd17449e232b4d09ac505ddd}
+      \field{extraname}{2}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{18}
+      \field{month}{8}
+      \field{title}{Bases técnicas transversales para la preparación de la propuesta: Licitación Pública Internacional N.º TFEP-01/2026}
+      \field{type}{Documento FEP02}
+      \field{year}{2026}
+      \field{dateera}{ce}
+      \true{nocite}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

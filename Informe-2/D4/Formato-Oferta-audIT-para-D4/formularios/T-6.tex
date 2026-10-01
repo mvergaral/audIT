@@ -1,0 +1,73 @@
+% ============================================================================
+%  Formulario T-6. Experiencia en proyectos similares (FEP01 p. 56)
+%  Subdocumento 1 según el Formulario T-21.
+%
+%  \proyectoTSeis{nombre, cliente, industria, periodo, monto, alcance,
+%                 arquitectura, servicio, volumen, rol, contacto}
+%  Hasta tres proyectos por tabla, uno por columna.
+%
+%  «Monto del contrato (rango)»: el T-6 lo pide, pero es una cifra de dinero.
+%  Por defecto el formulario remite al Sobre N.º 1, donde va la nómina de
+%  contratos del proponente (FEP01, Artículo 39, numeral 4, p. 25). Si el
+%  equipo decide declarar el rango aquí, escribe monto={...} en el proyecto.
+%  Es una decisión abierta (ver GUIA.md).
+% ============================================================================
+
+\DefinirFormulario{T-6}{Experiencia en proyectos similares}{56}
+  {Se deberán declarar al menos tres proyectos finalizados y en operación en
+   los últimos cinco años. El CLIENTE verificará directamente con las
+   contrapartes declaradas.}
+
+\newcommand\proyectoTSeis[1]{\RegistroNuevo{t6}{#1}}
+\newcommand\audit@remisionmonto{{\color{audit-secundario}Declarado en la
+  nómina de contratos del Sobre N.º 1 (\art{39}{25})}}
+
+\ExplSyntaxOn
+\cs_new_protected:Npn \audit_tseis_fila:nn #1#2
+  {
+    \tl_gput_right:Ne \g_audit_filas_tl
+      {
+        \exp_not:n { \color{audit-secundario} #1 }
+        & \audit_tseis_valor:nn {1} {#2}
+        & \audit_tseis_valor:nn {2} {#2}
+        & \audit_tseis_valor:nn {3} {#2}
+        \exp_not:N \\
+      }
+  }
+\cs_new:Npn \audit_tseis_valor:nn #1#2
+  {
+    \str_if_eq:nnTF {#2} { monto }
+      {
+        \tl_if_blank:eTF { \audit_campo_crudo:nnn { t6 } {#1} { monto } }
+          { \exp_not:N \audit@remisionmonto }
+          { \audit_campo:nnn { t6 } {#1} { monto } }
+      }
+      { \audit_campo:nnn { t6 } {#1} {#2} }
+  }
+\NewDocumentEnvironment { formularioTSeis } { }
+  { \ReiniciarRegistros { t6 } }
+  {
+    \IniciarFilas
+    \clist_map_inline:nn
+      {
+        {Nombre~del~proyecto}{nombre}, {Cliente~o~mandante}{cliente},
+        {Industria}{industria}, {Año~de~inicio~y~de~término}{periodo},
+        {Monto~del~contrato~(rango)}{monto}, {Alcance~ejecutado}{alcance},
+        {Arquitectura~(nube,~on-premise~o~híbrida)}{arquitectura},
+        {Nivel~de~servicio~comprometido}{servicio},
+        {Volumen~de~operación~soportado}{volumen},
+        {Rol~de~la~empresa~(principal~o~socio)}{rol},
+        {Contraparte~de~referencia~y~contacto}{contacto}
+      }
+      { \audit_tseis_fila:nn ##1 }
+    \TablaAcumulada [ ancho = completo , fuente = condensada ]
+      { Formulario~T-6.~Experiencia~en~proyectos~similares } { t6 }
+      { L{34mm} X X X }
+      { Campo & Proyecto~1 & Proyecto~2 & Proyecto~3 \\ \midrule }
+  }
+\ExplSyntaxOff
+
+\expandafter\def\csname esqueleto@T-6\endcsname{%
+  \begin{formulario}{T-6}
+    \begin{formularioTSeis}\end{formularioTSeis}
+  \end{formulario}}

@@ -1,0 +1,20 @@
+% ============================================================================
+%  Formulario T-17. Protocolo de aceptación (FEP01 p. 64)
+%  Formulario de contenido adjunto: lista cada exigencia de las bases y dice
+%  dónde se presenta, con \verSeccionFolio{etiqueta}.
+% ============================================================================
+
+\DefinirFormulario{T-17}{Protocolo de aceptación}{64}
+  {El Proponente adjuntará a este formulario la propuesta de Protocolo de Aceptación de cada hito y del producto final, indicando entregables, criterios de aceptación objetivos, evidencia requerida, plazos de revisión, procedimiento de observaciones y acta de conformidad.}
+
+\expandafter\def\csname esqueleto@T-17\endcsname{%
+  \begin{formulario}{T-17}
+    \begin{contenidoExigido}{T-17}
+      \exigencia{Entregables de cada hito y del producto final.}{}
+      \exigencia{Criterios de aceptación objetivos.}{}
+      \exigencia{Evidencia requerida.}{}
+      \exigencia{Plazos de revisión.}{}
+      \exigencia{Procedimiento de observaciones.}{}
+      \exigencia{Acta de conformidad.}{}
+    \end{contenidoExigido}
+  \end{formulario}}
