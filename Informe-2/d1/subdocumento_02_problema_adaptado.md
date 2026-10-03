@@ -1,12 +1,4 @@
-# Subdocumento 2: Comprensión del Problema y de la Necesidad
-**Licitación Pública TFEP-01/2026 — Solución Integral de Transporte de Carga Terrestre**  
-**Cliente:** Transportes Curimón S.A.  
-**Proponente:** audIT Soluciones Tecnológicas SpA  
-**Ponderación Técnica Informe 2:** 8 % (FEP01 p. 66)  
-**Documentos Asociados:** Anexos Subdocumento 2 (`subdocumento_02_anexos.md`)  
-**Dupla Responsable:** D1 (QA, Gobernanza y Aseguramiento Normativo)
-
----
+# SUBDOCUMENTO 2 — COMPRENSIÓN DEL PROBLEMA Y DE LA NECESIDAD
 
 El presente subdocumento expone el diagnóstico pericial, técnico, operacional, normativo y comercial realizado por **audIT Soluciones Tecnológicas SpA** sobre la situación actual de **Transportes Curimón S.A.**, en el marco de la Licitación Pública Nacional e Internacional N.° TFEP-01/2026. A partir del levantamiento de antecedentes y la evaluación rigurosa de los procesos logísticos en terreno, este documento desglosa la complejidad del desafío de transporte de carga por carretera, delimitando con precisión ingenieril las causas raíz de las ineficiencias observadas y las restricciones que condicionan la operación.
 
@@ -18,7 +10,7 @@ Este capítulo se articula orgánicamente con la totalidad de los subdocumentos 
 5. Establece los umbrales basales de calidad, niveles de servicio y soporte continuado a 36 meses detallados en los **Subdocumentos 9, 10 y 11**.
 6. Se vincula de forma directa con la asignación de roles y perfiles del **Subdocumento 12**, la justificación del catálogo de innovaciones del **Subdocumento 13** y la demostración de beneficios cuantificados en el **Subdocumento 14**.
 
-Asimismo, para asegurar la legibilidad del cuerpo principal conforme a lo normado en el Comunicado 10, los inventarios detallados de requerimientos preliminares, el desglose pormenorizado del parque vehicular y conductores, la matriz exhaustiva de restricciones legales y las fichas completas de caracterización de actores se trasladan al documento complementario `subdocumento_02_anexos.md`, el cual se referencia formalmente a lo largo de este texto.
+Asimismo, para asegurar la legibilidad del cuerpo principal conforme a lo normado en el Comunicado 10, los inventarios detallados de requerimientos preliminares, el desglose pormenorizado del parque vehicular y conductores, la matriz exhaustiva de restricciones legales y las fichas completas de caracterización de actores se trasladan al documento complementario `AUDIT-Subdocumento2-Anexos.md`, el cual se referencia formalmente a lo largo de este texto.
 
 ---
 
@@ -484,32 +476,37 @@ A continuación, la Tabla 2.3 resume las características, expectativas y riesgo
 | **12. Transportistas Terceros** | 148 dueños (Nolberto Sandoval). | Vulneración de soberanía de activo, liquidaciones tardías y errores. | **Muy Alta** (Colectiva) | Desabastecimiento 60% |
 | **13. Cliente Exportador Mayor** | Andrea Lecaros (19% facturación). | Incumplimiento de exigencias 2029 (CO2e GLEC, e-Docs, trazabilidad).| **Extrema** (Comercial) | Quiebre de facturación |
 
-*(Para consultar las fichas de caracterización pormenorizadas de cada actor, véase el **Anexo 2.D** en `subdocumento_02_anexos.md`).*
+*(Para consultar las fichas de caracterización pormenorizadas de cada actor, véase el **Anexo 2.D** en `AUDIT-Subdocumento2-Anexos.md`).*
 
 El desglose de la Tabla 2.3 pone de manifiesto que los tres actores incorporados en este informe introducen restricciones vinculantes: el Fondo de Inversión impone el resguardo estricto del EBITDA y la reducción de pasivos contingentes; la Dirección del Trabajo no tolera la ceguera probatoria de jornada; y las compañías aseguradoras exigen registros inalterables para cursar indemnizaciones ante volcamientos o pérdida de cadena de frío en carga refrigerada.
 
-### 2.4.1 Arbitraje Técnico Fundado de las Seis Tensiones Estructurales
+### 2.4.1 Principios de Arbitraje Operacional de las Seis Tensiones Estructurales
 
-La coexistencia de estos trece actores genera seis tensiones operacionales de gobernanza que históricamente se han gestionado mediante fricción verbal. audIT SpA formaliza a continuación el arbitraje técnico fundado de cada tensión, subordinando las posturas particulares a la legislación vigente y a principios objetivos de ingeniería de procesos:
+La coexistencia de estos trece actores genera seis tensiones operacionales de gobernanza que históricamente se han administrado mediante fricción verbal e ineficiencia administrativa. Para asegurar la viabilidad de la transformación logística de Transportes Curimón S.A., se definen a continuación los criterios y principios objetivos de conciliación operacional, fundamentados estrictamente en el marco regulatorio vigente y en las restricciones del negocio:
 
 1. **Privacidad del Conductor y Transportista Externo frente al Deber de Fiscalización Patronal:**
-   * *Naturaleza del Conflicto:* La Jefa de Prevención y la DT exigen el monitoreo continuo de jornada y posición. Sin embargo, los transportistas externos (Sandoval) advierten que no permitirán el rastreo satelital de sus activos patrimoniales cuando operan para clientes distintos a Curimón o durante sus descansos privados, amparándose en la **Ley N.° 21.719 de Protección de Datos Personales**.
-   * *Arbitraje Técnico audIT:* El conflicto se resuelve implementando **Geofencing Temporal Disociado y Cifrado a Nivel de Campo (FLE)**. La geolocalización y los estados de motor del tractocamión de un tercero solo se transmitirán y vincularán operativamente a Curimón durante la ventana temporal estricta en que la orden de transporte asignada se encuentre en ejecución activa. Fuera de dicha ventana (estado de viaje cerrado o suspendido), el canal de telemetría hacia Curimón se desconecta automáticamente, resguardando la soberanía del transportista y cumpliendo con el principio de finalidad de la Ley N.° 21.719, sin vulnerar la fiscalización patronal durante el servicio.
-2. **Flexibilidad de Despacho Manual frente a Asignación Algorítmica y Seguridad:**
-   * *Naturaleza del Conflicto:* Operaciones busca preservar la autonomía de los 22 despachadores para autorizar salidas de camiones con trámites pendientes y así cumplir itinerarios comerciales, mientras que Prevención de Riesgos exige el bloqueo estricto de cualquier viaje que presente anomalías en vigencias o jornada.
-   * *Arbitraje Técnico audIT:* Se establece un **Bloqueo Algorítmico Inviolable (*Fail-Safe*) en pre-despacho** con tiempo de respuesta en memoria $\le 30\text{ segundos}$. El sistema informático validará síncronamente los cuatro requisitos basales: jornada disponible del chofer, vigencia de documentos, idoneidad mecánica y compatibilidad SUSPEL/frío. La falta de datos se procesará como bloqueo por defecto. Cualquier excepción operacional requerirá la autorización digital dual e indelegable de la Gerencia de Operaciones y la Jefatura de Prevención, registrando una pista de auditoría inmutable que fije la responsabilidad personal del funcionario autorizante.
-3. **Autonomía del Transportista Tercero frente a Estandarización de Calidad y Telemetría:**
-   * *Naturaleza del Conflicto:* Curimón requiere visibilidad sobre el 60,4% de la flota subcontratada, pero no tiene potestad jurídica para forzar a 148 empresarios a sustituir sus equipos de seguimiento existentes ni a adquirir hardware adicional.
-   * *Arbitraje Técnico audIT:* Se resuelve mediante un esquema de **Cascada Probatoria de Seis Niveles y Homologación Progresiva**. Para los 192 camiones que ya poseen GPS comercial, se implementa una ingesta en modalidad "solo datos" vía APIs hacia la Capa Anticorrupción de audIT, confiriendo un *Nivel 5 de Atestación Comercial y Piso Contractual*. Para los 34 camiones que carecen de todo dispositivo satelital, se suministra e instala una pasarela telemática estándar con pinzas inductivas CANclick financiada en el despliegue del proyecto, otorgando *Nivel 2 de Evidencia Instrumental Directa*. A cambio de compartir datos, los terceros reciben beneficios concretos: acceso a portal web de pre-liquidación en tiempo real y anticipos de abastecimiento diésel, resolviendo la fricción mediante incentivos de valor compartido.
+   * *Naturaleza del Conflicto:* La Jefa de Prevención de Riesgos y la Dirección del Trabajo exigen fiscalización continua de jornada y geolocalización. Sin embargo, los transportistas externos advierten que no admitirán el rastreo de sus activos patrimoniales cuando presten servicios a terceros o durante sus descansos privados, amparándose en la **Ley N.° 21.719 de Protección de Datos Personales**.
+   * *Criterio de Arbitraje y Principio Rector:* La captura y tratamiento de datos telemáticos debe supeditarse estrictamente a la existencia de una orden de transporte activa y consentida. Fuera de la ventana temporal del viaje asignado por Curimón, la tuición informativa debe cesar para salvaguardar la soberanía del transportista tercero, requiriéndose el anonimizado o disociación de coordenadas conforme al principio de finalidad legal.
+
+2. **Flexibilidad de Despacho Manual frente a Asignación Rigurosa y Seguridad Vial:**
+   * *Naturaleza del Conflicto:* Operaciones busca preservar la discrecionalidad de los 22 despachadores para autorizar salidas con documentación en trámite y así cumplir itinerarios comerciales, mientras que Prevención de Riesgos exige el bloqueo estricto ante cualquier vencimiento de vigencias o límites de jornada.
+   * *Criterio de Arbitraje y Principio Rector:* Primacía absoluta de la seguridad y la legalidad sobre la urgencia comercial. El proceso de asignación debe operar bajo una política preventiva donde la ausencia de acreditación documental vigente o la falta de descanso certificado impida por defecto la liberación de la carga, exigiendo que cualquier excepción operacional requiera autorización formal dual y registro auditable de responsabilidad indelegable.
+
+3. **Autonomía del Transportista Tercero frente a Estandarización de Datos de Flota:**
+   * *Naturaleza del Conflicto:* Curimón requiere visibilidad sobre el 60,4% de la flota subcontratada, pero carece de potestad jurídica para forzar a 148 empresarios independientes a sustituir sus sistemas GPS actuales o a realizar inversiones obligatorias de modernización.
+   * *Criterio de Arbitraje y Principio Rector:* Integración no traumática basada en homologación progresiva e incentivos. El modelo de gestión debe admitir la heterogeneidad de fuentes preexistentes mediante interfaces estandarizadas de datos, focalizando la provisión de nuevo equipamiento exclusivamente en las unidades desprovistas de seguimiento, y recompensando la entrega fidedigna de información operativa con transparencia en las liquidaciones mensuales de fletes.
+
 4. **Presión Comercial de Entrega Inmediata frente a Restricciones Operativas de Descanso:**
-   * *Naturaleza del Conflicto:* La fuerza de ventas y los clientes exigen tiempos de tránsito acelerados para cumplir ventanas de descarga portuaria o faenas mineras, induciendo a los choferes a exceder las 5 horas continuas de conducción (Art. 25 bis).
-   * *Arbitraje Técnico audIT:* El despacho comercial queda **estrictamente subordinado a la viabilidad física y legal del trayecto**. El cálculo del itinerario del viaje deberá computar de forma mandatoria la distancia hacia el área de descanso autorizada más próxima en la ruta, programando alertas dinámicas anticipadas de detención ($\ge 45\text{ minutos}$ previo al cumplimiento de la quinta hora). Se prohíbe despachar cualquier viaje cuya promesa de entrega exija velocidades promedio superiores a los límites legales del D.S. N.° 158 y la Ley N.° 18.290.
+   * *Naturaleza del Conflicto:* La fuerza de ventas y los clientes exigen tiempos de tránsito acelerados para cumplir ventanas de descarga portuaria o faenas mineras, induciendo indirectamente a los choferes a exceder las 5 horas continuas de conducción (**Art. 25 bis del Código del Trabajo**).
+   * *Criterio de Arbitraje y Principio Rector:* Subordinación inexcusable del compromiso comercial a la viabilidad física del trayecto. La promesa de entrega debe calcularse considerando de forma obligatoria las áreas de detención habilitadas en la ruta y los descansos legales imperativos, prohibiendo la programación de despachos que induzcan velocidades de circulación incompatibles con la Ley de Tránsito y el D.S. N.° 158.
+
 5. **Costeo Real por Ruta frente a Prorrateo Ciego de Tarifas:**
-   * *Naturaleza del Conflicto:* La inercia administrativa ha mantenido el costeo histórico por prorrateo de ingresos por comodidad contable, ocultando las pérdidas de los 3 contratos deficitarios (-14%) y postergando las decisiones de renegociación contractual.
-   * *Arbitraje Técnico audIT:* Se erradica de forma definitiva el prorrateo ciego, sustituyéndolo por un **Costeo Analítico Marginal por Kilómetro y Tonelada**. Se consolidan de manera diaria (< 24 horas) los datos de consumo de combustible capturados por bus CAN, los peajes de TAG devengados por tramo y las tarifas directas pagadas a terceros para cada orden de transporte. Esto dota a la Gerencia de Finanzas de la evidencia contable granular necesaria para renegociar o desestimar los contratos deficitarios antes de su vencimiento en 2027.
-6. **Exigencia de Trazabilidad Integral del Cliente Exportador frente a Heterogeneidad Tecnológica de la Flota:**
-   * *Naturaleza del Conflicto:* El cliente estratégico (19% de ingresos) exige un estándar unificado de datos para 2029, mientras que Curimón opera con un parque mixto compuesto por camiones propios con y sin CAN bus activo, y unidades de terceros distribuidas en tres plataformas comerciales diversas.
-   * *Arbitraje Técnico audIT:* Se establece una **Capa Anticorrupción (ACL) y Normalización de Eventos** en la nube de audIT. La arquitectura desacopla el origen físico del dato respecto a su explotación: las señales dispares provenientes de APIs de terceros (Wialon, Wisetrack, Webfleet) y las tramas de los gateways propios se homologan a un modelo de eventos común, permitiendo emitir reportes estandarizados de posicionamiento, e-Docs y cálculo de emisiones GEI bajo norma GLEC / ISO 14083 con total independencia de la marca o equipamiento del vehículo.
+   * *Naturaleza del Conflicto:* La inercia administrativa ha mantenido el costeo histórico por prorrateo de ingresos por comodidad contable, encubriendo las pérdidas de los contratos deficitarios (hasta un -14% de margen) y postergando decisiones comerciales estratégicas.
+   * *Criterio de Arbitraje y Principio Rector:* Transición obligatoria hacia el costeo analítico y marginal por servicio. La empresa requiere imputar los costos directos (diésel, peajes y fletes a terceros) de manera unívoca a la orden de transporte que los devengó, erradicando los subsidios cruzados y proveyendo a la Gerencia de Finanzas la evidencia cuantitativa necesaria para renegociar las tarifas de los contratos bajo costo.
+
+6. **Exigencia de Trazabilidad Integral del Cliente Exportador frente a Heterogeneidad Tecnológica:**
+   * *Naturaleza del Conflicto:* El cliente principal (19% de la facturación) exige un estándar unificado de datos para la renovación contractual de 2029, mientras que Curimón opera con un parque mixto compuesto por camiones propios y de terceros con dispares niveles de sensorización y plataformas aisladas.
+   * *Criterio de Arbitraje y Principio Rector:* Desacoplamiento funcional entre la captura de campo y la reportabilidad corporativa. El ecosistema de información de Curimón requiere un modelo canónico unificado que normalice las distintas señales operacionales, permitiendo emitir atestaciones de servicio, documentación digital y métricas de emisiones de GEI bajo marco GLEC / ISO 14083 con total independencia del dispositivo de captura utilizado en ruta.
 
 ---
 
@@ -531,7 +528,7 @@ En el plano de los **Requerimientos No Funcionales Canónicos y de Resiliencia**
 * **Objetivo de Punto de Recuperación (RPO):** $\text{RPO} \le 15\text{ minutos}$ de pérdida máxima de datos transaccionales mediante replicación asíncrona permanente.
 * **Autonomía Telemática Desconectada:** Capacidad de almacenamiento persistente a bordo de cada vehículo $\ge 288\text{ horas}$ continuas (12 días de operación en memoria eMMC industrial $\ge 8\text{ GB}$), resistiendo sin desbordamiento los cortes de frontera en el Paso Los Libertadores.
 
-*(El catálogo exhaustivo de requerimientos de negocio y no funcionales, clasificados por código unívoco, fuente y criticidad, se encuentra desarrollado en el **Anexo 2.A** de `subdocumento_02_anexos.md`).*
+*(El catálogo exhaustivo de requerimientos de negocio y no funcionales, clasificados por código unívoco, fuente y criticidad, se encuentra desarrollado en el **Anexo 2.A** de `AUDIT-Subdocumento2-Anexos.md`).*
 
 ### 2.5.2 Matriz de Supuestos Auténticos de Ingeniería de Proyectos
 
@@ -565,7 +562,7 @@ Para fijar la frontera formal del proyecto y evitar desviaciones de alcance, se 
   2. **Restricción de Cadena de Frío:** Registro térmico ininterrumpido en el rango de -30 °C a +30 °C con resolución de 0,1 °C para las 44 ramplas refrigeradas.
   3. **Restricción de Blindaje Económico (Art. 50.2):** Prohibición terminante de incorporar tarifas, honorarios de desarrollo o costos de la oferta técnica de audIT SpA en la propuesta técnica.
 
-*(La matriz exhaustiva de restricciones legales, operacionales y exclusiones de alcance se detalla en el **Anexo 2.C** de `subdocumento_02_anexos.md`).*
+*(La matriz exhaustiva de restricciones legales, operacionales y exclusiones de alcance se detalla en el **Anexo 2.C** de `AUDIT-Subdocumento2-Anexos.md`).*
 
 ---
 
@@ -602,7 +599,7 @@ En cumplimiento de lo normado en la sección 7.2 del Comunicado 10 y en concorda
 | **2.1 Resumen Ejecutivo** | Asistente de edición LLM | Síntesis ejecutiva de la problemática | Bajo | Ninguno | Dirección Técnica / PMO: Verificación de datos de facturación ($78.000M CLP) y blindaje económico Art. 50.2. |
 | **2.2 Comprensión del problema**| Asistente de edición LLM | Redacción de diagnóstico holístico y marco legal | Bajo | Medio (Fig. 2.1 y Fig. 2.2) | Área Legal y Prevención de Riesgos: Comprobación de Ley 20.123, Art. 25 bis, D.S. 298 vs 43 y marco GLEC. |
 | **2.3 Dimensionamiento** | Asistente de edición LLM | Estructuración tabular y análisis causal | Bajo | Medio (Fig. 2.3) | Jefatura de IoT y Terreno: Verificación de volumetría (96k viajes, 41M km, 26% vacío) y buffer eMMC 288 h. |
-| **2.4 Actores y Grupos de Interés**| Asistente de edición LLM | Mapeo de 13 actores y arbitraje de 6 tensiones | Bajo | Medio (Fig. 2.4) | Gerencia de Operaciones y TI: Validación de matriz de poder/interés y arbitraje FLE / bloqueo algorítmico. |
+| **2.4 Actores y Grupos de Interés**| Asistente de edición LLM | Mapeo de 13 actores y arbitraje de 6 tensiones | Bajo | Medio (Fig. 2.4) | Gerencia de Operaciones y TI: Validación de matriz de poder/interés y principios de arbitraje operacional. |
 | **2.5 Requerimientos y Supuestos**| Asistente de edición LLM | Estandarización de matriz de supuestos de proyecto| Bajo | Ninguno | Dirección de Arquitectura y Datos: Verificación de supuestos de ingeniería, probabilidad, impacto y mitigación. |
 | **Referencias Bibliográficas** | Formateador bibliográfico | Validación de estilo de citación APA 7.ª edición | Bajo | Ninguno | Oficina PMO y Soporte: Comprobación de correspondencia unívoca entre citas en texto y nómina final. |
 | **Anexos 2.A, 2.B, 2.C y 2.D** | Asistente de edición LLM | Estructuración tabular de inventarios y fichas | Bajo | Ninguno | Jefaturas de Terreno, Software y Legal: Verificación de inventario de 374 tractos, 454 choferes y 13 fichas completas. |
