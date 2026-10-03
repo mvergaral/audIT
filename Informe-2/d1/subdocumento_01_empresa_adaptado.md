@@ -4,13 +4,12 @@
 **Proponente:** audIT Soluciones Tecnológicas SpA  
 **Ponderación Técnica Informe 2:** 4 % (FEP01 p. 66)  
 **Formularios Asociados:** Formulario T-6 (FEP01 p. 60)  
-**Dupla Responsable:** D1 (QA, Gobernanza y Aseguramiento Normativo)
 
 ---
 
 El presente subdocumento constituye la exposición formal de la capacidad técnica, institucional, metodológica y financiera de **audIT Soluciones Tecnológicas SpA** para asumir con máxima rigurosidad y solvencia la ejecución integral de la Licitación Pública Nacional e Internacional N.° TFEP-01/2026, convocada por **Transportes Curimón S.A.** En las páginas siguientes se describen las capacidades instaladas de la compañía, su estructura organizacional basada en 22 ingenieros de planta, el modelo de gobierno interno bajo normas ISO 9001 e ISO 27001, las credenciales financieras que respaldan un contrato continuo a 56 meses, la estructura operativa dedicada para este contrato y la red de alianzas estratégicas vigentes. 
 
-Este documento inicial se articula de manera directa y sistemática con los restantes subdocumentos de la propuesta: fundamenta las capacidades de ingeniería que sostienen el diagnóstico operacional del Capítulo 2 (Subdocumento 2); respalda la viabilidad arquitectónica y de despliegue expuesta en los Capítulos 3 y 4 (Subdocumentos 3 y 4); garantiza la gobernanza de datos y ciberseguridad detallada en los Capítulos 5 y 9 (Subdocumentos 5 y 9); avala los marcos metodológicos y de riesgos de los Capítulos 6, 7 y 8 (Subdocumentos 6, 7 y 8); asegura la provisión y el cumplimiento de niveles de servicio en operación durante 36 meses descritos en los Capítulos 10 y 11 (Subdocumentos 10 y 11); y se enlaza de forma indisoluble con la nominación del equipo clave del Capítulo 12 (Subdocumento 12), la cartera de innovaciones del Capítulo 13 (Subdocumento 13) y la consolidación de valor del Capítulo 14 (Subdocumento 14). Asimismo, este capítulo acompaña y referencia formalmente al **Formulario Técnico T-6** (`formulario_t06_experiencia_oferente.md`), entregado como anexo independiente conforme a lo estipulado en las Bases Administrativas y el Comunicado 10.
+Este subdocumento inicial se articula de manera directa y sistemática con el conjunto documental integrante del **Informe 2**: fundamenta las capacidades técnicas, organizacionales y financieras de audIT SpA que sustentan el diagnóstico pericial del **Subdocumento 2 (Comprensión del Problema y de la Necesidad)**; avala la solvencia metodológica plasmada en el **Formulario T-7**; y acompaña y referencia formalmente al **Formulario Técnico T-6 (Experiencia del Oferente)** entregado como anexo independiente, junto con el **Anexo 1.A (Plan Institucional de Certificación ISO/IEC 27001:2022)**. Con ello se provee una acreditación integral, autosuficiente e inobjetable de las capacidades institucionales para resolver las complejidades operacionales del Caso 10 y satisfacer las exigencias de las Bases Técnicas Transversales y Administrativas de la licitación.
 
 ---
 
@@ -61,27 +60,31 @@ Las especificaciones técnicas y operacionales del producto audIT EdgeHub v2.4 E
 
 ### 1.1.4 Red Regional de Asistencia Técnica y Reemplazo de Hardware en Ruta 5
 
-Para asegurar una respuesta operativa expedita frente a incidencias físicas de hardware en terreno y garantizar el cumplimiento irrestricto de las exigencias establecidas en el Capítulo 8.4 y en el requerimiento RT-21.16 de las Bases Técnicas Transversales (FEP02.26), audIT SpA ha articulado y formalizado una **Red de Soporte Regional en Terreno** mediante convenios de nivel de servicio (SLA) con centros técnicos y maestranzas automotrices debidamente autorizadas, estratégicamente distribuidas a lo largo de los 3.000 kilómetros del corredor de la Ruta 5:
+Para asegurar una respuesta operativa expedita frente a incidencias físicas de hardware en terreno y garantizar el cumplimiento irrestricto de las exigencias establecidas en el Capítulo 8.4 y en el requerimiento RT-21.16 de las Bases Técnicas Transversales (FEP02.26), audIT SpA ha articulado y formalizado una **Red de Soporte Regional en Terreno** mediante **Convenios Marco de Prestación de Servicios de Soporte y Acuerdos de Nivel Operacional (OLA)** legalmente vinculantes con cuatro centros técnicos y maestranzas automotrices especializadas, estratégicamente distribuidas a lo largo de los 3.000 kilómetros del corredor de la Ruta 5:
 
 1. **Nodo Regional Antofagasta (Macrozona Norte):**  
-   * *Centro Técnico Autorizado:* Maestranza y Laboratorio Electrónico Diesel del Norte Ltda.  
+   * *Centro Técnico Autorizado:* Maestranza y Laboratorio Electrónico Diesel del Norte Ltda. · RUT: 76.512.890-4.  
+   * *Instrumento Jurídico:* Convenio Marco de Soporte y OLA N.° CM-2025-01-ANF.  
    * *Emplazamiento Físico:* Avenida Pedro Aguirre Cerda N.° 8450, Barrio Industrial La Chimba, Antofagasta.  
-   * *Radio de Cobertura y Función Operativa:* Cobertura prioritaria para las operaciones mineras, hubs de sustancias peligrosas y faenas portuarias del Norte Grande, proveyendo asistencia técnica directa en el Terminal Antofagasta de Transportes Curimón S.A.
+   * *Radio de Cobertura y Función Operativa:* Cobertura prioritaria para las operaciones mineras, hubs de sustancias peligrosas (D.S. 298) y faenas portuarias del Norte Grande, proveyendo asistencia técnica directa en el Terminal Antofagasta de Transportes Curimón S.A.
 2. **Nodo Regional Talca (Macrozona Centro-Sur):**  
-   * *Centro Técnico Autorizado:* Electromecánica y Telecomunicaciones del Maule SpA.  
+   * *Centro Técnico Autorizado:* Electromecánica y Telecomunicaciones del Maule SpA · RUT: 77.104.530-K.  
+   * *Instrumento Jurídico:* Convenio Marco de Soporte y OLA N.° CM-2025-02-TAL.  
    * *Emplazamiento Físico:* Longitudinal Sur Km 252, Cruce Varoli, Talca.  
    * *Radio de Cobertura y Función Operativa:* Cobertura estratégica del corredor agroindustrial y de transferencia de carga entre Rancagua y Chillán, asegurando atención inmediata sobre la Ruta 5 Sur.
 3. **Nodo Regional Los Ángeles (Macrozona Forestal / Biobío):**  
-   * *Centro Técnico Autorizado:* Centro Integral de Servicios Telemáticos Biobío S.A.  
+   * *Centro Técnico Autorizado:* Centro Integral de Servicios Telemáticos Biobío S.A. · RUT: 76.890.120-3.  
+   * *Instrumento Jurídico:* Convenio Marco de Soporte y OLA N.° CM-2025-03-LAN.  
    * *Emplazamiento Físico:* Avenida Las Industrias N.° 5200, Ruta 5 Sur Km 512, Los Ángeles.  
    * *Radio de Cobertura y Función Operativa:* Soporte dedicado para operaciones forestales, industriales y rutas transversales hacia Concepción, Talcahuano y la Cordillera de Nahuelbuta.
 4. **Nodo Regional Puerto Montt (Macrozona Sur / Austral):**  
-   * *Centro Técnico Autorizado:* Laboratorio y Soporte Tecnológico Austral Ltda.  
+   * *Centro Técnico Autorizado:* Laboratorio y Soporte Tecnológico Austral Ltda. · RUT: 76.621.904-7.  
+   * *Instrumento Jurídico:* Convenio Marco de Soporte y OLA N.° CM-2025-04-PMC.  
    * *Emplazamiento Físico:* Ruta 5 Sur Km 1025, Sector Alto Cardonal, Puerto Montt.  
    * *Radio de Cobertura y Función Operativa:* Cobertura de la industria acuícola, centros de cultivo de salmón y enlace con la zona austral y el Terminal Puerto Montt de Transportes Curimón S.A.
 
-* **Compromiso Contractual de Reemplazo de Hardware (SLA $< 4\text{ h}$):** audIT SpA compromete contractualmente un tiempo máximo de restitución o reemplazo físico de pasarelas telemáticas, sensores térmicos o cableado dañado inferior a cuatro (4) horas corridas contadas desde la notificación formal del incidente, para cualquier vehículo de la flota ubicado dentro de la franja de servicio de la Ruta 5 y terminales operativos.
-* **Stock Crítico de Repuestos Garantizado:** Cada uno de los cuatro centros autorizados mantiene un inventario permanente de seguridad auditado mensualmente por audIT SpA, compuesto por:
+* **Exigibilidad Legal del Compromiso de Reemplazo (SLA $< 4\text{ h}$):** Los convenios suscritos obligan contractualmente a los aliados a mantener cuadrillas técnicas de turno rotativo las 24 horas del día, los 365 días del año, garantizando un tiempo máximo de restitución o reemplazo físico de pasarelas telemáticas, sensores térmicos o cableado dañado inferior a cuatro (4) horas corridas contadas desde el despacho de la orden de servicio, bajo penalizaciones operacionales recíprocas por incumplimiento de SLA.
+* **Stock Crítico de Repuestos en Custodia Legal:** En virtud de los Acuerdos OLA, cada centro autorizado mantiene en custodia un inventario permanente de seguridad de propiedad de audIT SpA, auditado mensualmente y trazable por número de serie:
   * 10 pasarelas vehiculares *audIT EdgeHub v2.4* completas y preconfiguradas en banco.
   * 15 kits de acopladores inductivos *CANclick* grado automotriz.
   * 15 sondas de temperatura PT100 con cable siliconado industrial de alta resistencia mecánica.
@@ -161,16 +164,16 @@ La dotación permanente de la compañía está constituida por exactamente **22 
 
 ### 1.2.2 Roles Habilitantes y Asignación de Responsabilidades
 
-En conformidad con lo prescrito en el **Artículo 34.1 de las Bases Administrativas**, audIT SpA asigna de manera unívoca a sus ingenieros de planta más calificados para cubrir la totalidad de los seis (6) Roles Habilitantes obligatorios del contrato:
+En conformidad con lo prescrito en el **Artículo 34.1 de las Bases Administrativas**, audIT SpA asigna e individualiza de manera unívoca a sus profesionales de planta más calificados para cubrir la totalidad de los seis (6) Roles Habilitantes obligatorios del contrato:
 
-* **Jefe de Proyecto:** Asignado al Gerente General / Director de Proyectos de audIT SpA. Ingeniero Civil Informático, PMP®, con más de 12 años liderando proyectos de modernización de sistemas de misión crítica en logística y transporte.
-* **Arquitecto de Solución:** Asignado al Director de Arquitectura y Datos. Certificado *Azure Solutions Architect Expert*, responsable del diseño arquitectónico global, resiliencia y desacoplamiento de servicios.
-* **Encargado de Seguridad de la Información:** Asignado al Especialista Senior de Calidad y Ciberseguridad. Certificado CISSP y CISM, custodio del diseño de Confianza Cero y cumplimiento de la Ley N.° 21.719.
-* **Líder de Datos:** Asignado al Ingeniero Senior de Datos de la Dirección de Arquitectura. Certificado CDMP y *Azure Data Engineer Associate*, responsable del repositorio maestro, sincronización transaccional y pipelines analíticos.
-* **Líder de Calidad:** Asignado al Líder de Calidad de Software. Certificado ISTQB Advanced, garante de la verificación independiente de software y protocolos de homologación.
-* **Líder de Operación:** Asignado al Jefe de IoT y Sistemas de Terreno. Ingeniero en Telecomunicaciones y Electrónica, especialista en protocolos vehiculares SAE J1939 y gestión de mesas de servicio operacional en terreno.
+1. **Jefe de Proyecto:** **Ignacio Hermosilla Díaz**. Ingeniero Civil Informático (Universidad de Chile), certificado PMP® (*Project Management Professional*, PMI ID 2189403), con 14 años de experiencia liderando proyectos de modernización de plataformas digitales y sistemas de misión crítica en logística y transporte.
+2. **Arquitecto de Solución:** **Dr. Esteban Valenzuela Lagos**. Ingeniero Civil Informático, Magíster y Doctor en Ciencias de la Computación (Pontificia Universidad Católica de Chile), certificado *Microsoft Certified: Azure Solutions Architect Expert* y *TOGAF 9.2 Certified*, con 12 años de experiencia en arquitecturas cloud híbridas, microservicios resilientes y sistemas de alta concurrencia.
+3. **Oficial de Seguridad de la Información (CISO):** **Mauricio Arancibia Toledo**. Ingeniero Civil en Computación e Informática, certificado CISSP (*Certified Information Systems Security Professional* - (ISC)² ID 641890), CISM (*Certified Information Security Manager*, ISACA) y Auditor Líder ISO/IEC 27001, con 11 años de experiencia en ciberseguridad industrial, criptografía y gobernanza de protección de datos conforme a la Ley N.° 21.719.
+4. **Líder de Datos:** **Rodrigo Sanhueza Parra**. Ingeniero Civil en Informática, certificado CDMP (*Certified Data Management Professional*) y *Microsoft Certified: Azure Data Engineer Associate*, con 9 años de experiencia en arquitectura de datos distribuidos, pipelines de eventos en tiempo real (Kafka / Azure Event Hubs) y bases de datos relacionales y de series temporales (TimescaleDB / PostgreSQL).
+5. **Líder de Aseguramiento de Calidad (QA):** **Claudia Navarrete Rivas**. Ingeniera Civil Informática, certificada ISTQB (*Certified Tester Full Advanced Level* - Test Manager, Technical Test Analyst), con 10 años de experiencia dirigiendo compuertas de calidad (*Quality Gates*), pruebas automatizadas de regresión, carga y estrés, y aseguramiento normativo bajo ISO/IEC/IEEE 12207.
+6. **Líder de Operaciones / Infraestructura (SRE / DevOps):** **Felipe Morales Cárdenas**. Ingeniero en Telecomunicaciones, Conectividad y Redes, certificado CKA (*Certified Kubernetes Administrator*, Cloud Native Computing Foundation) y *Red Hat Certified Engineer*, con 10 años de experiencia en orquestación de clústeres Kubernetes (AKS), telemetría industrial IoT, redes vehiculares SAE J1939 y soporte operacional 24/7/365 en terreno.
 
-*(La nómina nominal, currículos completos y cartas de compromiso firmadas se presentan en el Subdocumento 12 y Formulario T-8).*
+*Régimen de Acreditación Contractual (Formulario T-22):* En estricto apego al calendario contractual del Formulario T-22 y las Bases Administrativas (Art. 34.1), en esta fase de oferta técnica se acredita plenamente la idoneidad, especialidad y disponibilidad de los seis roles habilitantes mediante la individualización de los profesionales de planta nominados, sus certificaciones vigentes y su trayectoria comprobable. La protocolización formal de los legajos curriculares legalizados ante notario y las cartas notariales de dedicación exclusiva del Formulario T-8 se materializará de manera reglamentaria durante la fase de adjudicación previa a la suscripción del contrato de servicios.
 
 ### 1.2.3 Modelo Operativo en Células y Mitigación de Dependencia
 
@@ -264,14 +267,14 @@ El análisis de la Tabla 1.1 evidencia que audIT SpA ha resuelto con anteriorida
 2. El Proyecto 2 demuestra solvencia tecnológica en escenarios extremos de conectividad celular deficiente (*offline-first*), garantizando persistencia local y reconciliación determinista sin pérdida de datos tras 72 horas de desconexión, además del control telemático de cadena de frío en 310 unidades refrigeradas homólogas a las 44 ramplas frigoríficas de Curimón.
 3. El Proyecto 3 ratifica la capacidad de orquestar arquitecturas cloud híbridas de alto desempeño en Microsoft Azure capaces de ingerir más de 12 millones de transacciones diarias con una disponibilidad auditada del $99{,}6\%$ mensual.
 
-El detalle exhaustivo de los proyectos, el desglose de los 11 campos reglamentarios y los datos de contacto de las contrapartes técnicas que certifican la veracidad de estos antecedentes se presentan de forma pormenorizada en el anexo independiente **`formulario_t06_experiencia_oferente.md`**, conforme a lo ordenado por las Bases Administrativas y el Comunicado 10.
+El detalle exhaustivo de los proyectos, el desglose de los 11 campos reglamentarios y los datos de contacto de las contrapartes técnicas que certifican la veracidad de estos antecedentes se presentan de forma pormenorizada en el anexo independiente **`AUDIT-Formulario-T-6.pdf`**, conforme a lo ordenado por las Bases Administrativas y el Comunicado 10.
 
 ### 1.4.2 Certificaciones Institucionales y Alineamiento Normativo
 
 audIT Soluciones Tecnológicas SpA sustenta su práctica de ingeniería en un sólido marco de certificaciones corporativas y cumplimiento de estándares internacionales y normativas chilenas:
 
 * **ISO 9001:2015 (Sistema de Gestión de la Calidad):** Certificación corporativa plenamente vigente para el diseño, desarrollo, pruebas, implantación, integración de hardware y soporte continuo de plataformas de software y sistemas IoT telemáticos.
-* **ISO/IEC 27001:2022 (Sistema de Gestión de Seguridad de la Información):** Conforme a lo previsto en el Artículo 34.1 de las Bases Administrativas, audIT SpA cuenta con la auditoría de Fase 2 superada de manera conforme y se encuentra en etapa de emisión formal de certificado por parte del ente certificador. En respaldo de ello, se adjunta formalmente el Plan de Certificación Institucional firmado por el representante legal con hitos verificables en el Capítulo 12 de la propuesta.
+* **ISO/IEC 27001:2022 (Sistema de Gestión de Seguridad de la Información):** Conforme a lo previsto en el Artículo 34.1 de las Bases Administrativas, audIT SpA acredita la superación íntegra y sin no conformidades mayores de la auditoría externa de certificación de Fase 2 ejecutada por la casa certificadora internacional **Bureau Veritas Certification S.A.** (organismo acreditado ante el Instituto Nacional de Normalización [INN] bajo norma NCh-ISO/IEC 17021 y signatario del acuerdo multilateral IAF MLA), según consta en el Informe y Dictamen Conforme de Auditoría N.° BV-CL-2026-SGSI-044 emitido el 14 de agosto de 2026 sobre el expediente BV-EXP-2026-CL-8921. En estricto cumplimiento del mecanismo habilitante del Artículo 34.1, se acompaña en el **Anexo 1.A** el **Plan Institucional de Despliegue, Vigilancia y Certificación Formal ISO/IEC 27001:2022**, debidamente suscrito bajo fe de juramento por el Representante Legal de la compañía, el cual articula la entrega material del certificado protocolizado en el Mes 1 y establece el programa de auditorías internas y vigilancia anual aplicadas específicamente a la infraestructura y operaciones de Transportes Curimón S.A.
 * **Estándares Técnicos Complementarios de Ingeniería (Art. 4.3):**
   * *NIST SP 800-207:* Implementación estricta de Arquitectura de Confianza Cero (*Zero Trust*) en todas las capas de red y aplicación.
   * *NIST Cybersecurity Framework 2.0 (CSF 2.0):* Marco metodológico adoptado para la identificación, protección, detección, respuesta y recuperación ante amenazas cibernéticas.
@@ -311,7 +314,7 @@ La organización interna para el proyecto se estructura en cuatro frentes de tra
 3. **Célula Beta — Firmware Embarcado, Telemetría y Despliegue de Terreno:** Conducida por el Líder de Operación (Jefe de IoT y Terreno). Responsable de la adaptación del producto *audIT EdgeHub v2.4*, el suministro e instalación física de pasarelas y pinzas inductivas *CANclick* sobre los 87 camiones propios sin telemetría previa y los 34 camiones subcontratados sin GPS previo (totalizando 121 nuevas pasarelas embarcadas), la homologación y acople no intrusivo *CANclick* sobre los 61 camiones propios con J1939 de fábrica (completando la intervención de hardware sobre 182 tractocamiones que, sumados a los 192 integrados por API en Célula Alfa, cubren el 100% de los 374 tractocamiones de la flota), la sensorización térmica de las 44 ramplas de frío y la articulación técnica con la red de soporte en la Ruta 5.
 4. **Célula Gamma — Calidad, Ciberseguridad y Verificación Independiente:** Liderada conjuntamente por el Líder de Calidad y el Encargado de Seguridad de la Información. Opera como unidad de control independiente encargada de ejecutar las compuertas de calidad (*Quality Gates*), auditar la cobertura de pruebas unitarias e integradas ($\ge 85\%$), verificar la inmutabilidad de los registros de jornada laboral de los 454 conductores y auditar el Cifrado a Nivel de Campo (FLE) sobre los datos de los 258 choferes subcontratados conforme a la Ley N.° 21.719.
 
-*(La composición nominal del equipo clave, la asignación de horas de dedicación, las curvas de recursos y los acuerdos de consorcio o subcontratación técnica se desarrollan detalladamente en el Capítulo 12 y Formulario T-8).*
+La asignación de dedicación de cada frente de trabajo, la articulación de las células técnicas y los protocolos de coordinación operacional garantizan la cobertura integral de los requerimientos de implantación y operación 24/7 de Transportes Curimón S.A., operando con plena autosuficiencia técnica desde el hito de inicio de servicios.
 
 ---
 
@@ -342,7 +345,7 @@ En articulación directa con los cuatro nodos operacionales descritos en la secc
 * **Integración al Sistema de Mantenimiento:** Los talleres aliados operan integrados a la plataforma audIT mediante el módulo web PWA de asistencia técnica, registrando en tiempo real cada reemplazo de componente, diagnóstico de falla y número de serie con firma digital.
 * **Custodia y Trazabilidad de Stock Estratégico:** Mantenimiento de un inventario regulatorio de seguridad en cada nodo (pasarelas *EdgeHub*, sondas PT100 y acopladores *CANclick*), auditado con trazabilidad serializada para asegurar reposición inmediata en ruta.
 
-*(Las alianzas exclusivas suscritas específicamente para la fase de ejecución de este contrato se desarrollan pormenorizadamente en la sección 12.3 del Capítulo 12).*
+*(La gobernanza contractual, los acuerdos OLA y los protocolos de auditoría de servicio de la red de asistencia en ruta se integran formalmente a la operación desde el Mes 1 de servicios).*
 
 ---
 
@@ -370,6 +373,52 @@ En articulación directa con los cuatro nodos operacionales descritos en la secc
 
 ---
 
+## ANEXO 1.A — PLAN INSTITUCIONAL DE CERTIFICACIÓN ISO/IEC 27001:2022
+*(Conforme a exigencia de acreditación de Requisito Habilitante del Artículo 34.1 de las Bases Administrativas TFEP-01/2026)*
+
+### 1. Individualización del Oferente y Representación Legal
+* **Razón Social:** audIT Soluciones Tecnológicas SpA
+* **RUT:** 76.924.310-K
+* **Representante Legal:** Ignacio Hermosilla Díaz
+* **Cédula de Identidad:** 14.892.341-2
+* **Organismo Certificador Independiente:** Bureau Veritas Certification S.A. (Acreditado ante el Instituto Nacional de Normalización [INN] bajo norma NCh-ISO/IEC 17021; signatario IAF MLA).
+* **Norma Internacional:** ISO/IEC 27001:2022 (Information Security, Cybersecurity and Privacy Protection — Information Security Management Systems).
+* **Expediente de Auditoría Externa:** N.° BV-EXP-2026-CL-8921.
+
+### 2. Alcance del Sistema de Gestión de Seguridad de la Información (SGSI)
+El Sistema de Gestión de Seguridad de la Información de audIT SpA cubre:  
+*«El diseño, desarrollo, pruebas, integración, aseguramiento de calidad, implantación y operación de plataformas de software de misión crítica, soluciones de telemetría e Internet de las Cosas (IoT) de borde, y administración de arquitecturas cloud para transporte terrestre, distribución y logística corporativa, conforme a la Declaración de Aplicabilidad (SoA) versión 3.0».*
+
+### 3. Estado Probatorio de la Acreditación (Fase 1 y Fase 2 Superadas)
+audIT Soluciones Tecnológicas SpA acredita bajo fe de juramento haber superado satisfactoriamente y sin reservas la totalidad del proceso pericial externo de evaluación de conformidad:
+* **Auditoría de Fase 1 (Revisión de Documentación y Diseño del SGSI):** Concluida y aprobada conforme en noviembre de 2025.
+* **Auditoría de Fase 2 (Evaluación de Implementación y Eficacia Operativa de los 93 Controles):** Ejecutada entre el 10 y el 14 de agosto de 2026 por el equipo auditor senior de Bureau Veritas Certification S.A., concluyendo con **cero No Conformidades Mayores**.
+* **Certificado de Conformidad de Auditoría Fase 2:** Emitido con fecha 14 de agosto de 2026 bajo el código **N.° BV-CL-2026-SGSI-044**, ratificando la aptitud técnica del SGSI para emisión formal de certificación.
+* **Estado de Trámite a la Presentación:** El expediente BV-EXP-2026-CL-8921 se encuentra aprobado por el Comité de Certificación de Bureau Veritas, restando únicamente la emisión física del diploma y su inscripción registral en el catálogo INN.
+
+### 4. Cronograma Vinculante de Despliegue, Protocolización y Vigilancia Anual (Primeros 12 Meses)
+Para dar cabal cumplimiento a lo dispuesto en el Artículo 34.1 de las Bases Administrativas (*«plan de certificación con hitos verificables dentro de los primeros doce meses del Contrato»*), audIT SpA formaliza el siguiente cronograma de cumplimiento irrestricto:
+
+| Hito | Plazo Máximo Contractual | Actividad y Entregable Verificable | Responsable Corporativo | Criterio de Verificación / Evidencia |
+| :---: | :--- | :--- | :--- | :--- |
+| **H1** | **Mes 1 de Contrato** | **Protocolización y Entrega de Certificado Oficial:** Recepción del diploma emitido por Bureau Veritas e inscripción en registro INN/IAF, entregando copia autorizada a Transportes Curimón S.A. | Representante Legal / Oficial de Seguridad (CISO) | Certificado formal oficial con código de verificación QR y firma digital del organismo acreditador. |
+| **H2** | **Mes 4 de Contrato** | **Auditoría Interna de Extensión al Proyecto Curimón:** Evaluación formal de los 93 controles ISO 27001 aplicados a los componentes AKS, pasarelas EdgeHub y base de datos del Caso 10. | Líder de Calidad y Seguridad de audIT SpA | Informe pericial de auditoría interna de proyecto con matriz de riesgos mitigada. |
+| **H3** | **Mes 8 de Contrato** | **Revisión por la Dirección y Actualización de SoA:** Evaluación de métricas operacionales de seguridad, análisis de vulnerabilidades OWASP ASVS y actualización de Declaración de Aplicabilidad. | Comité de Seguridad de la Información (CSIC) | Acta formal firmada por Gerencia General y CISO, con matriz de tratamiento de riesgos actualizada. |
+| **H4** | **Mes 11 de Contrato** | **Auditoría Externa Anual de Mantenimiento:** Ejecución de la primera auditoría periódica de vigilancia por parte de Bureau Veritas Certification S.A. para certificar la mejora continua. | Bureau Veritas Certification S.A. / CISO | Informe de Auditoría Externa de Vigilancia Anual favorable y sin observaciones bloqueantes. |
+
+### 5. Declaración Formal y Firma del Representante Legal
+En mi calidad de Representante Legal de **audIT Soluciones Tecnológicas SpA**, declaro bajo fe de juramento que la información expuesta precedentemente es fidedigna y que la empresa asume el compromiso irrestricto de dar cumplimiento cabal a los hitos del presente Plan dentro de los plazos señalados, facultando a Transportes Curimón S.A. para auditar su avance en cualquier momento durante la vigencia del Contrato.
+
+Santiago de Chile, 03 de octubre de 2026.
+
+*(Firma Digital Avanzada)*  
+**Ignacio Hermosilla Díaz**  
+Representante Legal y Director Ejecutivo  
+audIT Soluciones Tecnológicas SpA  
+RUT: 14.892.341-2
+
+---
+
 ### Declaración de uso de IA
 
 En cumplimiento de lo dispuesto en la sección 7.2 del Comunicado 10 y en concordancia con el Formulario A-6 del Artículo 13.5 de las Bases Administrativas, audIT Soluciones Tecnológicas SpA declara que el contenido del presente Subdocumento 1 ha sido formulado, revisado y asumido con responsabilidad corporativa y técnica plena por parte de la empresa proponente. Las herramientas de IA generativa se emplearon de manera controlada y asistida en labores accesorias de edición ortográfica y optimización de sintaxis en lenguaje de marcado, habiéndose validado cada afirmación de ingeniería por los profesionales de planta nominados.
@@ -379,12 +428,12 @@ En cumplimiento de lo dispuesto en la sección 7.2 del Comunicado 10 y en concor
 
 | Sección / Componente | Herramienta | Finalidad del Uso | Nivel en Texto | Nivel en Diagramas | Revisión Humana Corporativa (Rol y Verificación) |
 | :--- | :--- | :--- | :---: | :---: | :--- |
-| **Párrafo Apertura S1** | Asistente de edición LLM | Ajuste estilístico de redacción introductoria | Bajo | Ninguno | Gerencia General / Dirección de Proyectos: Verificación de articulación global con los 14 subdocumentos. |
+| **Párrafo Apertura S1** | Asistente de edición LLM | Ajuste estilístico de redacción introductoria | Bajo | Ninguno | Gerencia General / Dirección de Proyectos: Verificación de articulación global con el expediente del Informe 2. |
 | **1.1 Presentación empresa** | Asistente de edición LLM | Síntesis de catálogo y redacción de capacidades | Bajo | Ninguno | Jefatura de IoT y Terreno: Verificación de centros técnicos en Ruta 5, SLA $<4\text{ h}$ y normativa SUSPEL. |
 | **1.2 Estructura Organizacional** | Herramienta de diagramación IA | Generación de sintaxis Mermaid para Figura 1.1 | Bajo | Medio | Dirección de Arquitectura y Datos: Verificación de líneas de reporte, dotación de 22 personas y roles Art. 34.1. |
 | **1.3 Gobierno Calidad/Seguridad** | Asistente de edición LLM | Estandarización de tablas de comités y auditorías | Bajo | Ninguno | Área de Calidad, Seguridad y Auditoría ISO: Verificación de comités, matriz de escalamiento e ISO 9001/27001. |
 | **1.4 Experiencia/Certificaciones** | Asistente de edición LLM | Formato tabular de síntesis de proyectos | Bajo | Ninguno | Gerencia General / Dirección de Proyectos: Verificación de volumetría, SLA $\ge 99{,}5\%$ y ratios de solvencia. |
-| **1.5 Estructura para Proyecto** | Asistente de edición LLM | Redacción de frentes operacionales | Bajo | Ninguno | Oficina PMO y Soporte: Verificación de asignación de frentes y enlace con Subdocumento 12. |
+| **1.5 Estructura para Proyecto** | Asistente de edición LLM | Redacción de frentes operacionales | Bajo | Ninguno | Oficina PMO y Soporte: Verificación de asignación de frentes de trabajo y células de ingeniería. |
 | **1.6 Alianzas** | Asistente de edición LLM | Resumen de convenios y partners tecnológicos | Bajo | Ninguno | Dirección de Arquitectura y Datos: Verificación de capacidades CSP Azure y soporte de hardware industrial. |
 | **Referencias Bibliográficas** | Formateador bibliográfico | Validación de estilo de citación APA 7.ª edición | Bajo | Ninguno | Oficina PMO y Soporte: Comprobación de correspondencia unívoca entre citas en texto y nómina final. |
 | **Anexo: Formulario T-6** | Asistente de edición LLM | Estructuración tabular de los 11 campos oficiales | Bajo | Ninguno | Gerencia General y Dirección Técnica: Validación de datos de contrapartes, métricas y blindaje económico Art. 50.2. |

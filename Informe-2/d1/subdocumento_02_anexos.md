@@ -31,7 +31,7 @@ El catálogo compendia las necesidades preliminares de negocio levantadas desde 
 | **REQ-NEG-03** | Asignación y Despacho | Verificar la aptitud física del equipo asignado respecto al tipo de carga requerida (semirremolque refrigerado para perecibles, tolva para granel, o autorización D.S. N.° 298 para sustancias peligrosas). | Caso 10, Cap. 4.5; Entrevista R. Mansilla | **Crítica** |
 | **REQ-NEG-04** | Sustancias Peligrosas | Comprobar de forma obligatoria que el conductor asignado a una de las 18 unidades SUSPEL cuente con el curso específico vigente del D.S. N.° 298 y que el vehículo porte Hoja de Datos de Seguridad y rotulación NCh 2190. | Caso 10, Cap. 4.5; Entrevista D. Aguayo | **Crítica** |
 | **REQ-NEG-05** | Trazabilidad y Geocercas | Detectar automáticamente mediante geocercas poligonales la entrada, tiempo de permanencia y salida en los ~1.400 puntos de clientes, sin requerir intervención manual del conductor ni instalación de equipos en predios ajenos. | Caso 10, Cap. 4.7; Entrevista E. Valdebenito | **Alta** |
-| **REQ-NEG-06** | Cobro de Sobreestadías | Generar reportes cronológicos certificados e inalterables con estampa de tiempo y coordenadas GPS del tiempo de espera en andén, proveyendo sustento probatorio irrefutable para recuperar los $241,4 millones CLP objetados. | Caso 10, Cap. 4.7; Entrevista G. Ossandón | **Alta** |
+| **REQ-NEG-06** | Cobro de Sobreestadías | Generar reportes cronológicos certificados e inalterables con estampa de tiempo y coordenadas GPS del tiempo de espera en andén, proveyendo sustento probatorio irrefutable para recuperar el 71% de los cobros por sobreestadías hoy objetados. | Caso 10, Cap. 4.7; Entrevista G. Ossandón | **Alta** |
 | **REQ-NEG-07** | Retornos en Vacío | Identificar en tiempo real los tractocamiones que finalizarán su descarga para sugerir triangulaciones con cargas de retorno compatibles, reduciendo el 26% de kilómetros recorridos en vacío (10,66 millones de km anuales). | Caso 10, Cap. 4.2; Entrevista R. Mansilla | **Alta** |
 | **REQ-NEG-08** | Cadena de Frío | Monitorear en tiempo real la temperatura interna de las 44 ramplas refrigeradas (-30 °C a +30 °C), emitiendo alertas inmediatas a la Torre 24x7 ante desviaciones térmicas de $\pm 1{,}5\text{ }^\circ\text{C}$ o apertura no autorizada de puertas. | Caso 10, Cap. 2.1 y 4.8; Entrevista A. Lecaros | **Crítica** |
 | **REQ-NEG-09** | Documentación Digital | Emitir Documentos Electrónicos de Transporte (DET para ~128.000 guías anuales) integrados con el ERP contable y el SII, habilitando la emisión offline pre-firmada en zonas de carga sin cobertura celular. | Caso 10, Cap. 4.6; Entrevista M. Riquelme | **Alta** |
@@ -67,10 +67,10 @@ El parque de tractocamiones se clasifica de acuerdo con su titularidad jurídica
 
 | Segmento de Flota | Cantidad | Participación | Antigüedad Media | Equipamiento Telemático Actual | Estrategia de Homologación e Integración audIT |
 | :--- | :---: | :---: | :---: | :--- | :--- |
-| **Flota Propia CAN bus Fábrica** | 61 | 16,3% | 3,2 años | Módulo telemático de fábrica con bus CAN J1939 inactivo. Nunca consultado. | Lectura pasiva no intrusiva mediante acopladores inductivos CANclick. Nivel 3 + Nivel 2. |
-| **Flota Propia sin Telemetría Fábrica**| 87 | 23,3% | 8,6 años | Sin telemetría de bus de datos. Dispositivos GPS básicos de primera generación. | Suministro e instalación de Gateway IoT audIT industrial + pinzas CANclick. Nivel 2 directo. |
+| **Flota Propia CAN bus Fábrica** | 61 | 16,3% | 3,2 años | Módulo telemático de fábrica con bus CAN J1939 inactivo. Nunca consultado. | Lectura pasiva no intrusiva mediante acopladores inductivos. Nivel 3 + Nivel 2. |
+| **Flota Propia sin Telemetría Fábrica**| 87 | 23,3% | 8,6 años | Sin telemetría de bus de datos. Dispositivos GPS básicos de primera generación. | Suministro e instalación de dispositivo telemático industrial con acoplamiento inductivo. Nivel 2 directo. |
 | **Flota Terceros con GPS Previo** | 192 | 51,3% | Variable (4-12 años)| Dispositivos GPS de 3 proveedores comerciales dispares (Wialon, Wisetrack, Webfleet). | Ingesta vía API REST/Webhooks a Capa Anticorrupción en modalidad "solo datos". Nivel 5 de atestación. |
-| **Flota Terceros sin Dispositivo GPS** | 34 | 9,1% | Variable (>10 años) | Cero equipamiento tecnológico. Monitoreo puramente telefónico por voz. | Provisión e instalación de Gateway IoT audIT estándar + pinzas CANclick. Nivel 2 instrumental. |
+| **Flota Terceros sin Dispositivo GPS** | 34 | 9,1% | Variable (>10 años) | Cero equipamiento tecnológico. Monitoreo puramente telefónico por voz. | Provisión e instalación de dispositivo telemático estándar con acoplamiento inductivo. Nivel 2 instrumental. |
 | **TOTAL PARQUE TRACTOCAMIONES** | **374** | **100,0%** | **6,4 años (media)** | **Parque altamente asimétrico y heterogéneo.** | **Integración unificada bajo modelo agnóstico de ingesta.** |
 
 ### 2.B.2 Inventario de Semirremolques y Equipos de Arrastre Propios (210 Unidades)
@@ -274,7 +274,7 @@ A continuación se presentan las fichas completas de caracterización de los tre
 * **Nivel de Interés:** **Medio-Alto (Orientado a la confiabilidad mecánica).**
 * **Cuadrante de Gestión:** **Cuadrante 3: Monitorear y Coordinar (Soporte Técnico de Despliegue).**
 * **Riesgo Operacional si no se Resuelve:** Fallas de motor masivas en carretera, sobrecostos de reparación reactiva y desgaste acelerado de flota propia.
-* **Mecanismo de Interacción y Mitigación de Fricción:** Acopladores CANclick no intrusivos en taller San Bernardo coordinados según la cadencia regular de pasadas de mantenimiento cada 6 días.
+* **Mecanismo de Interacción y Mitigación de Fricción:** Acopladores inductivos no intrusivos en taller San Bernardo coordinados según la cadencia regular de pasadas de mantenimiento cada 6 días.
 
 ---
 
@@ -326,7 +326,7 @@ A continuación se presentan las fichas completas de caracterización de los tre
 ### FICHA N.° 12: Nolberto Sandoval Pinto y Colectivo de Transportistas Subcontratados (148 Dueños)
 
 * **Identificación y Emplazamiento:** Representa a los 148 pequeños y medianos transportistas subcontratados (dueños de 1 a 4 camiones), quienes aportan 226 tractocamiones (60,4% de la capacidad rodante) y 258 conductores externos.
-* **Objetivos Estratégicos:** Preservación de la autonomía sobre su activo patrimonial ($150M-$250M CLP por tracto), cobro oportuno y transparente de fletes y sobreestadías, certeza en pre-liquidaciones mensuales y protección de su información comercial frente a otros clientes.
+* **Objetivos Estratégicos:** Preservación de la autonomía sobre su activo patrimonial de alto valor por tractocamión, cobro oportuno y transparente de fletes y sobreestadías, certeza en pre-liquidaciones mensuales y protección de su información comercial frente a otros clientes.
 * **Dolores Operacionales:** Invasión de su privacidad cuando se pretende monitorearlos fuera de los viajes de Curimón; liquidaciones manuales que tardan 9 días con un 11% de errores; cobros indebidos de combustible; y temor a que la instalación de dispositivos telemáticos sea un mecanismo de vigilancia patronal sin compensación.
 * **Testimonio Representativo:** *«Cuando me dicen que me van a instalar un aparato en mi camión, yo pregunto tres cosas: quién lo paga, quién ve esa información y qué pasa cuando estoy trabajando para otro cliente. Si el aparato registra mis horas y me sirve para que me paguen rápido y demuestre que estoy en regla, bienvenido. Si es para que me vigilen todo el mes, me voy con mis camiones a otra empresa».*
 * **Dependencias y Necesidades de Información:** Portal de autogestión de pre-liquidaciones, transparencia en cargos de diésel por viaje y garantía estricta de desconexión de telemetría fuera de servicio (Ley N.° 21.719).
@@ -340,7 +340,7 @@ A continuación se presentan las fichas completas de caracterización de los tre
 
 ### FICHA N.° 13: Andrea Lecaros Vives y Grandes Clientes Estratégicos (Cliente 19% y Otros 7)
 
-* **Identificación y Emplazamiento:** Gerenta de Logística de la multinacional agroexportadora líder (representa el 19% del ingreso corporativo de Curimón = $14.820 millones CLP) y portavoz del grupo de los 8 clientes principales que concentran el 71% de la facturación.
+* **Identificación y Emplazamiento:** Gerenta de Logística de la multinacional agroexportadora líder (representa el 19% del ingreso corporativo de Curimón, superando holgadamente el margen total de la compañía) y portavoz del grupo de los 8 clientes principales que concentran el 71% de la facturación.
 * **Objetivos Estratégicos:** Visibilidad completa de su cadena de suministro de exportación, aseguramiento estricto de la cadena de frío para mercados de Norteamérica, Europa y Asia, descarbonización logística auditada bajo estándares globales y cero exposición a escándalos por trabajo ilegal de choferes en su cadena de valor.
 * **Dolores Operacionales:** Incapacidad de Curimón para proveer seguimiento en tiempo real unificado; soporte de entrega en guías físicas manchadas o demoradas; imposibilidad de auditar la huella de carbono de los camiones de terceros; y el riesgo reputacional de que un embarque de exportación sea detenido por choferes sin jornada legal.
 * **Testimonio Representativo:** *«Nosotros no estamos evaluando una mejora cosmética; pedimos cuatro compromisos intransigibles para la licitación de 2029: posición continua en tiempo real, digitalización documental sin papeles, certificación de jornada legal del conductor en cada viaje —incluyendo los camiones subcontratados— y auditoría de emisiones de CO2 equivalente por tonelada-kilómetro bajo el estándar internacional GLEC. No es una sugerencia, es la condición excluyente para renovar el contrato del diecinueve por ciento».*
@@ -348,7 +348,7 @@ A continuación se presentan las fichas completas de caracterización de los tre
 * **Poder Formal / Veto:** **Extremo (Comercial y Contractual).** La no renovación del contrato en 2029 destruye el resultado operacional de Curimón.
 * **Nivel de Interés:** **Máximo (Condiciona su propia operación logística de exportación).**
 * **Cuadrante de Gestión:** **Cuadrante 1: Gestionar de Cerca (Supervivencia del Negocio).**
-* **Riesgo Operacional si no se Resuelve:** Pérdida inmediata de $14.820 millones CLP anuales, insolvencia financiera corporativa y colapso del valor societario de la compañía.
+* **Riesgo Operacional si no se Resuelve:** Pérdida inmediata de su cliente principal (19% de la facturación anual), comprometiendo la solvencia financiera corporativa y provocando el colapso del resultado operacional.
 * **Mecanismo de Interacción y Mitigación de Fricción:** Entrega de portal cliente en tiempo real, integración documental e-Docs en Etapa 1 y motor de cálculo de emisiones GLEC basado en datos reales de telemetría CAN bus.
 
 ---
