@@ -69,6 +69,13 @@ quién la aprobó, cuándo y con qué texto. Lo que depende de otra dupla queda 
 | D4-58 | 2026-09-29 | ExpressRoute de 100 Mbit/s en Santiago con VPN de respaldo por el segundo proveedor de San Bernardo. Cierra J | Derivación en `sala_san_bernardo.py`. Caso p.12 | Usuario, opción «Apruebo todo» |
 | D4-59 | 2026-09-29 | Catálogo de nube: Event Hubs Premium y PostgreSQL Flexible con TimescaleDB según el plan maestro, Front Door y API Management Premium, Key Vault Premium, AKS e IoT Hub S1 × 2. Caché y confirmación del stack con marca para D3. Cierra F | Plan maestro, 3.3. Retiro de Azure Cache for Redis el 30-09-2028 | Usuario, opción «Plan + marca D3» |
 | D4-60 | 2026-09-29 | Plano de San Bernardo con las zonas del RT-06.03 proporcionado a 26 m², con nota de que las medidas de detalle se confirman en el levantamiento. Cierra I | Caso p.12 da solo la superficie | Usuario, opción «Zonas a escala de 26 m²» |
+| D4-61 | 2026-10-04 | Por encargo del usuario, D4 redacta las tareas D2-T07 y D2-T08 del plan maestro. La red PERT/CPM con ruta crítica y holguras va en el Formulario T-15 y su análisis en 7.3 del S7. El T-18 conserva su título y contenido de las bases | FEP01, T-15 p.63 (pide ruta crítica y holguras) y T-18 p.64 (implantación y puesta en marcha). Comunicado 10, capítulo 7 | Usuario, opción «En T-15 y §7.3» |
+| D4-62 | 2026-10-04 | La marcha blanca de la Etapa 1 dura tres meses (meses 13 a 15, 60 días hábiles) y la de la Etapa 2 dos meses (19 y 20). Se descarta los «60 días» de la Etapa 1 del plan maestro | FEP01, Art. 17.1, p.12 | Usuario, opción «3 meses, Art. 17.1» |
+| D4-63 | 2026-10-04 | Las dos escuadras del solapamiento se llaman Escuadra de Estabilización E1 y Escuadra de Construcción E2, para no chocar con las células Alfa, Beta y Gamma del S1 | Comunicado 10, 7.1 c) | Usuario, opción «Escuadra E1 y Escuadra E2» |
+| D4-64 | 2026-10-04 | Dotación del solapamiento: 21 de los 22 profesionales de planta del S1 más 16 de refuerzo declarado (37 personas, 21,5 FTE en E1, 14,1 en E2 y 1,4 de coordinación). Siete roles de dirección repartidos al 80 %, el resto en una sola escuadra | FEP01, Art. 17.2, p.13. FEP02, numeral 19.2, p.33. Weinberg (1992), Beyer et al. (2016) | Usuario, opción «22 de planta + refuerzo declarado» |
+| D4-65 | 2026-10-04 | El S7 del formato local sigue el índice del Comunicado 10 (7.1, 7.2.1 a 7.2.4, 7.3.1 a 7.3.4). D4 escribe 7.2.3 y 7.3.1. Lo demás lleva «[Información requerida por dupla 2]» | Comunicado 10, capítulo 7 | Usuario, opción «Índice Com. 10 + marcas D2» |
+| D4-66 | 2026-10-04 | La red PERT se dibuja en Lucid, en dos vistas (Etapa 1, y solapamiento y Etapa 2). En el documento va en PDF vectorial con la misma geometría, para que el verificador mida la letra, y queda una versión Mermaid para revisarla | Art. 40.4, FEP01 p.26. Comunicado 10, 4.3 y 4.4. D4-04 | Usuario: «lucid, pdf y mermaid para verlo» |
+| D4-67 | 2026-10-04 | En el cuerpo del S7 van el texto, una tabla resumen de escuadras, la figura, la tabla de reservas y la de hitos. En el T-15 van la tabla por etapa (HH para D2), las 23 filas de asignación y la malla CPM | Comunicado 10, secciones 5 y 7.1 a) | Usuario, opción «Resumen en cuerpo, detalle en T-15» |
 | D4-10 | 2026-09-28 | Diagramas en Lucid: vista general, región primaria con redes y SKU, región secundaria y conmutación, plano de la sala de San Bernardo, gabinete de terminal, dispositivo a bordo, enlaces con anchos de banda y SPOF, ambientes de desarrollo a DR | Comunicado 10, secciones 4 y 11 (4.2) | Usuario, las cuatro opciones |
 
 ## Diagramas en Lucid (D4-10)
@@ -83,15 +90,19 @@ quién la aprobó, cuándo y con qué texto. Lo que depende de otra dupla queda 
 | Sala de San Bernardo (4-planofig) | https://lucid.app/lucidchart/53f217fd-0b70-4a8c-987f-0b84da61f0a7/edit | `figuras/04-arquitectura/sala-san-bernardo.png` |
 | Gabinete de terminal (4-terminalfig) | https://lucid.app/lucidchart/a22bea8c-0975-4cfa-93e4-c917bc6a7853/edit | `figuras/04-arquitectura/gabinete-terminal.png` |
 | Recuperación y continuidad (4-drfig) | https://lucid.app/lucidchart/5ca729a7-9c53-42fb-a92f-4e5e728c154b/edit | `figuras/04-arquitectura/recuperacion.png` |
+| Cartera de innovaciones (13-carterafig) | https://lucid.app/lucidchart/3cfaabdb-6611-45f3-b66c-e450fac3dcc3/edit | `figuras/13-innovaciones/cartera.png` |
+| Semirremolque conectado (13-semirremolquefig) | https://lucid.app/lucidchart/c8a03ac8-1c08-4cc7-863a-38fcba953010/edit | `figuras/13-innovaciones/semirremolque.png` |
+| Red PERT, Etapa 1 (7-pert1) | https://lucid.app/lucidchart/ab9a4ad3-a1ff-4748-b9ea-9c9b624bbfe3/edit | `figuras/07-plan-trabajo/pert-etapa1.pdf` (y `.svg`) |
+| Red PERT, solapamiento y Etapa 2 (7-pert2) | https://lucid.app/lucidchart/d06506a8-e1b0-437d-8cc1-4e7a2776a015/edit | `figuras/07-plan-trabajo/pert-etapa2.pdf` (y `.svg`) |
 
 Se generan con `D4/lucid/lucidgen.py` y un guion por figura (`d1_general.py` a `d8_recuperacion.py`),
-con íconos Azure 2024 y la paleta del manual de marca. Se exportan como PNG a 160 DPI, casi 1:1 con la
+`d9_cartera.py` y `d10_semirremolque.py` para el 13, y `d11_pert.py` para las dos redes PERT del 7 (D4-66), con íconos Azure 2024 y la paleta del manual de marca. Se exportan como PNG a 160 DPI, casi 1:1 con la
 página, y `D4/lucid/recortar.sh` quita el margen. La letra es de 10 pt en Lucid y llega impresa sobre
 9 pt. Si el verificador necesita medir la letra en vectorial, se exportan a mano como PDF desde Lucid
 (Archivo, Exportar, PDF).
 
 Quedan en la cuenta de Lucid versiones intermedias que se pueden borrar: cfd65255, 198e3e82,
-0ca7a66f, 4dd665a7, c7cad875, 6e1e06f7, f658dacc, 14c577e5, 5fbda6c7, e6b553de (prueba de rótulos) y las de la
+0ca7a66f, 4dd665a7, c7cad875, 6e1e06f7, f658dacc, 14c577e5, 5fbda6c7, e6b553de (prueba de rótulos), 584a4242 (primer intento del semirremolque), adc7d5d3 (primer intento de la red PERT 2, con dos conectores que cruzaban actividades) y las de la
 sesión anterior d1726381, 234ae633 y 94c4400a.
 
 ## Lo que no es decisión porque lo fijan las bases
@@ -126,6 +137,16 @@ sesión anterior d1726381, 234ae633 y 94c4400a.
 | 2026-09-30 | `subdocumentos/04-arquitectura/contenido.tex`, 4.3.2 | Decía que São Paulo está en «otra placa tectónica»: Santiago y São Paulo están en la placa Sudamericana | «Lejos de la zona de subducción que concentra los grandes sismos de Chile». También se quitó «a unos 20 km de la región primaria», porque Microsoft no publica dónde están sus centros de datos |
 | 2026-09-30 | `subdocumentos/04-arquitectura/contenido.tex` y T-11 | «CO$_2$» imprimía el subíndice a 7,7 pt (punto 5) | «Dióxido de carbono», también en la leyenda del plano |
 | 2026-09-30 | `subdocumentos/04-arquitectura/formularios/T-11.tex` y `declaracion-ia.tex` | «dupla» en texto corrido fuera de un marcador | Pasado a marcador en el T-11 y reescrito en la declaración |
+| 2026-10-04 | S13, innovación 5 (texto del Informe 1) | Citaba RT-06.01 para el motor a bordo. En el Caso (p.32) RT-06.01 es la sala de San Bernardo | Se quitó. Las demás RT de la innovación 5 se verificaron y se citan con página: RT-08.11 (FEP02 p.19), RT-09.01 y RT-12.11 (Caso p.32), RT-13.08, RT-16.21 y RT-17.01 (Caso p.33), RT-03.24 (Caso p.31). RF-027 se quitó porque es del catálogo de D2 del Informe 1 |
+| 2026-10-04 | S13, innovación 2 (texto del Informe 1) | Citaba RT-08.04 como «stock de reemplazo». RT-08.04 (FEP02 p.18) son fuentes de poder redundantes | Se quitó la cita y se dejó la frase |
+| 2026-10-04 | S13, innovaciones 2, 4 y 5 | 22 % de la flota «Capítulo 6», 258 conductores «numeral 2.2» y margen del 9 % «capítulo 8» | Numeral 2.3, pp.6 y 7, que es donde están las tres cifras |
+| 2026-10-04 | S13, innovación 5 | Decía que el microsueño fue el «disparador» del accidente del 14 de febrero. El Caso (cap. 1, p.4) dice que el conductor no había completado su descanso | Ahora dice que el accidente ocurrió en esa franja, a las 04:40, con un conductor sin su descanso completo |
+| 2026-10-04 | S13, bibliografía | El informe de fatiga se atribuía a la FMCSA en 2020. El DOI 10.17226/21921 es de las National Academies, 2016 | Clave `nasem2016_fatiga` |
+| 2026-10-04 | S13, innovación 4 | Dimensionaba el hardware sobre la adhesión y no sobre los 226 camiones de terceros. El S4 4.2.1 dimensiona sobre las poblaciones del Caso | Alineado con 4.2.1 y marcado para D2 |
+| 2026-10-04 | Tabla del Art. 46, filas 94 y 100 | El texto de la observación traía «horas hombre» y «Escuela», que el verificador toma como residuo | Parafraseadas sin esas palabras |
+| 2026-10-04 | Formato, `herramientas/tex2md.py` y `herramientas/compilar.py` | El Markdown del T-15 dejaba `\begin{formulario}` y `\etapaTQuince` sin convertir, las citas salían con el nombre completo («Weinberg, Gerald M. (1992)») y las referencias con doble punto y sin edición, revista ni DOI. El título del capítulo 7 no era el del Comunicado 10 | Conversión del T-15 con su tabla por etapa, citas APA por apellido («Weinberg (1992)», «Rubinstein et al.»), referencias con iniciales, editores, edición, revista y DOI, y etiquetas del subdocumento en el Markdown del formulario. Proponer al mantenedor del formato, no subir por cuenta propia |
+| 2026-10-04 | Formato, `configuracion/subdocumentos.tex` | Faltaba el título del Comunicado 10 para el capítulo 7 | `\TituloComunicado{7}{Introducción al Plan de Trabajo}` (Comunicado 10, capítulo 7). Proponer al mantenedor del formato |
+| 2026-10-04 | `referencias/referencias.bib` | La edición de Kniberg y del PMI salía como superíndice de 7,7 pt («2.ª»), bajo el mínimo del Art. 40.4 | Edición escrita como texto literal («2.ª ed.»), que se imprime a 9 pt o más |
 
 ## En espera porque depende de otra dupla
 
@@ -136,17 +157,20 @@ sesión anterior d1726381, 234ae633 y 94c4400a.
 | Modelo Zero Trust (parte de la obs. 80) | D3 | El Comunicado 10 lo pone en 4.1. D4 solo refleja la segmentación de red |
 | Emisor del documento electrónico (obs. 76) | D3 y D2 | D4 solo asegura que ningún equipo del T-11 emita documentos |
 | Residencia del dato y región del respaldo en el S5 (obs. 83) | D3 | Tiene que coincidir con D4-02 |
-| Fichas 1, 4 y 5 del T-19 y texto común del capítulo 13 (obs. 99, 100 y 12) | Sin asignar en el plan | D4 solo escribe 13.3 y su ficha |
+| Innovaciones 1, 2, 4 y 5 y sus fichas del T-19 | D2 (1 y 4), D3 (2), D1 (5) | D4 las trasladó del Informe 1 (D4-52) y escribió la introducción y 13.3. Lo que falta lleva el marcador de su dupla |
 | Parámetros del plan maestro: SLA 99,5 %, East US 2, «374 gateways», desglose de 8 GB, terminales Valparaíso y Concepción | Todo el equipo | Chocan con las bases o con D4-01 y D4-02 |
 | Consolidación de la tabla del Artículo 46 | D1 | D4 solo actualiza las filas 64 a 80 y las de la innovación 3 |
 | Nombre del ZIP del Informe 2 (D4-31) y nombre del archivo con la tabla completa del Art. 46 (D4-26) | D1 | El formato los deja configurables |
 | Nombres con cargo en la Declaración de uso de IA (D4-28) | Todo el equipo | Choca con la regla del plan maestro que prohíbe nombres |
 | Apagado de 2G y 3G y los 192 equipos de terceros (D4-20) | D2 | Afecta el plan de adhesión y la modalidad «de datos» del Subdocumento 3 |
 | Chile Central sin región pareja, sin respaldo georredundante de PostgreSQL, riesgo de retraso de la réplica en el peak y base de licitud de la réplica en Brazil South | D3 | El Subdocumento 5 tiene que coincidir con 4.3.2 |
+| Marcha blanca de la Etapa 1 «de 60 días» en el S6 (línea 36), en el T-17 (hito «H-04, mes 15») y en el plan maestro. El T-17 tampoco sigue la numeración H1 a H12 del E-25 | D3 y D1 | Contradice D4-62 y el Art. 17.1 |
+| «Célula Alfa» con dos significados: Plataforma Cloud en el S1 (1.5) e «Hipercare» en el S9 (línea 356) | D1 | El S7 usa Escuadra E1 y E2 (D4-63) y no choca, pero S1 y S9 se contradicen |
+| HH por etapa, curvas de horas y periodo 19 a 20 del T-15. Refuerzo de 16 personas en el S12 y en la curva económica. Fecha de inicio del contrato frente a la ventana de diciembre a abril | D2 | D4 cubrió solo el solapamiento 13 a 15 y la red CPM (D4-61) |
 
 ## Decisiones pendientes
 
-Las decisiones E a L quedaron cerradas por D4-55 a D4-60. Estas están aplicadas en el Subdocumento 4
+Las decisiones E a L quedaron cerradas por D4-55 a D4-60. Estas están aplicadas en los Subdocumentos 4, 7 y 13
 y esperan aprobación explícita. Se mueven a «aprobadas» cuando la dupla responde.
 
 | N.º | Decisión aplicada | Dónde está |
@@ -165,15 +189,43 @@ y esperan aprobación explícita. Se mueven a «aprobadas» cuando la dupla resp
 | X | Diseñar San Bernardo y terminales para 24 horas sin enlace y declarar la diferencia entre Art. 16.4 (24 h) y RT-03.10 (12 h) | 4.3 |
 | Y | Planta supuesta de 6,5 × 4 m para el plano de 26 m² | 4.3.1, plano |
 | Z | Nivel «Medio» en diagramas en la Declaración de uso de IA: los ocho diagramas se escribieron como código para Lucid a partir de las decisiones aprobadas | Declaración de uso de IA del S4 |
+| AA | Indicadores de la innovación 3: asignaciones con semirremolque propio verificado 95 % o más antes del mes 16, kilometraje medido en el 100 % de los que tienen baliza al tercer mes de operación, temperatura continua en el 100 % de los viajes refrigerados en la primera temporada. Líneas base «no se registra», sin cifras | S13 13.3, T-19 ficha 3 |
+| AB | Balizas instaladas en la Etapa 1 al paso por terminal y los 44 refrigerados fuera de diciembre a abril (Caso 13.2, p.27). Meses exactos marcados para D2 | S13 13.3 |
+| AC | Cuatro riesgos de la innovación 3 (acople falso, frío bajo −20 °C en el paso, suplantación, batería) con su contingencia, y modelado de amenazas de la baliza marcado para D3 (RT-26.07) | S13 13.3 |
+| AD | Obs. 96: la innovación 5 remite al equipo a bordo de S4 4.2.2 y no define «audIT EdgeHub». La tabla del equipo decía «se define en el Subdocumento 1» | S13 13.5, Art. 46 fila 96 |
+| AE | Quitar las citas RT-06.01 y RT-08.04 del texto del Informe 1 por no corresponder (ver correcciones) | S13 13.2 y 13.5 |
+| AF | Introducción del 13 escrita por D4: tabla de la cartera, figura de capas y párrafo de trazabilidad | S13 introducción |
+| AG | Declaración de uso de IA del 13: «Medio» para el texto trasladado, «Alto» para la introducción, 13.3 y el T-19, «Medio» en los dos diagramas | Declaración de uso de IA del S13 |
+| AH | Compromiso C-01 del S7: un analista de implantación en cada terminal en el horario de relevo, todos los días, de la capacitación previa a la marcha blanca hasta el fin de la estabilización de la Etapa 1 (35 turnos por semana) | S7 7.2.3 |
+| AI | Decisión D-01 del S7: dos escuadras de composición fija y solo siete roles de dirección repartidos al 80 % | S7 7.2.3 |
+| AJ | Datos del T-15 para los meses 13 a 15: E1 con 26 personas en 6 frentes (cinco terminales y la guardia central), E2 con 18 personas en 2 frentes (software y firmware). Supuesto declarado: hay relevos todos los días en los cinco terminales | T-15, tabla por etapa, y S7 7.2.3 |
+| AK | Convenciones de la red: mes contractual de 20 días hábiles, revisión de 10 días hábiles del Art. 18.3 dentro de cada actividad que cierra un hito, reservas de dos desviaciones estándar, estabilización de la Etapa 1 de 30 días hábiles (meses 16 y 17) y las estimaciones de tres puntos de las 18 actividades | S7 7.3.1 y T-15 |
+| AL | Declaración de uso de IA del 7: «Alto» en texto para la introducción, 7.2.3, 7.3.1 y el T-15, y «Medio» en los dos diagramas | Declaración de uso de IA del S7 |
 
-## Estado al 2026-09-30
+## Estado al 2026-10-04
 
-Subdocumento 4 terminado en el formato local. `Formato-Oferta-audIT/salida/informe2/`:
-`AUDIT-Subdocumento4.pdf` (64 folios), `AUDIT-Formulario-T-11.pdf` (13 folios) y sus dos `.md`.
-Ocho diagramas en Lucid, tabla del Art. 46 del S4 (filas 53 a 80) en `anexos/observaciones-informe1.tex`,
-filas 64 a 80 actualizadas en `Informe/Tabla-Art46-Informe2.md`. El verificador da 21 puntos: no
-cumplen el 6 (figuras de D3 con letra de 3,2 pt, y los PNG de D4 no se pueden medir aunque imprimen a
-9,6 pt o más) y el 11 (solo los marcadores «[Información requerida por dupla N]» de D4-53).
+Subdocumentos 4 y 13 terminados en el formato local `/mnt/NuevoVol/FEP/Formato-Oferta-audIT`.
+En `salida/informe2/`: `AUDIT-Subdocumento4.pdf` (64 folios), `AUDIT-Formulario-T-11.pdf` (13),
+`AUDIT-Subdocumento13.pdf` (23), `AUDIT-Formulario-T-19.pdf` (11), cada uno con su `.md`.
+Diez diagramas en Lucid. Tabla del Art. 46 con las filas 53 a 80 y 88 a 100 en
+`anexos/observaciones-informe1.tex`. Filas 64 a 80, 88 y 92 actualizadas en
+`audIT/Informe-2/D4/Tabla-Art46-Informe2.md` y en su copia de `Nueva carpeta/D4/`.
 
-Falta: aprobación de M a Z, Subdocumento 13 con su T-19 y filas 88 a 100 del Art. 46, y retirar los
-marcadores antes del 05-10.
+El verificador da 21 puntos sobre los cuatro PDF. No cumplen el 6 (figuras de D3 con letra de 3,2 pt,
+y los PNG de D4 no se pueden medir aunque imprimen a 9,6 pt o más) y el 11 (solo los marcadores
+«[Información requerida por dupla N]» de D4-53). El aviso 15 son las cinco rayas de los títulos
+13.1 a 13.5, que exige el Comunicado 10 (D4-33).
+
+Falta: aprobación de M a Z y de AA a AG, completar y retirar los marcadores antes del 05-10, y
+sincronizar con el repo del equipo cuando el usuario lo pida.
+
+## Estado al 2026-10-04, tarde
+
+Subdocumento 7 armado en el formato local con el índice del Comunicado 10 (D4-65). D4 escribió 7.2.3, 7.3.1 y el
+Formulario T-15 (D4-61 a D4-67). Lo demás lleva «[Información requerida por dupla 2]»: 31 marcadores de D2 y 4 de
+D4 (firma de la revisión humana). En `salida/informe2/`: `AUDIT-Subdocumento7.pdf` (16 folios),
+`AUDIT-Formulario-T-15.pdf` (8), y `AUDIT-Formulario-T-14.pdf` y `AUDIT-Formulario-T-18.pdf` como plantillas vacías
+de D2. Las dos redes PERT miden 10 pt en el verificador. El verificador sobre los ocho PDF da lo mismo que antes:
+no cumplen el 6 (figuras de D3 y PNG de D4) y el 11 (marcadores de dupla). La red se calcula con
+`D4/lucid/d11_pert.py`, que genera el JSON de Lucid, el SVG y PDF de las figuras y el Mermaid
+(`D4/mermaid/10-pert-etapa1.mmd` y `11-pert-etapa2.mmd`, con su PNG). Las dos copias del formato están sincronizadas.

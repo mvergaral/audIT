@@ -39,6 +39,10 @@ Investigacion/*.pdf
 # Permitir PDF de muestra del nuevo formato
 !**/salida/muestra.pdf
 !**/Formato-Oferta-audIT-para-D4/salida/informe2/AUDIT-Formulario-T-11.pdf
+!**/Formato-Oferta-audIT-para-D4/salida/informe2/AUDIT-Formulario-T-14.pdf
+!**/Formato-Oferta-audIT-para-D4/salida/informe2/AUDIT-Formulario-T-15.pdf
+!**/Formato-Oferta-audIT-para-D4/salida/informe2/AUDIT-Formulario-T-18.pdf
+!**/Formato-Oferta-audIT-para-D4/salida/informe2/AUDIT-Formulario-T-19.pdf
 !**/Formato-Oferta-audIT-para-D4/salida/informe2/AUDIT-Subdocumento4.pdf
-
-
+!**/Formato-Oferta-audIT-para-D4/salida/informe2/AUDIT-Subdocumento7.pdf
+!**/Formato-Oferta-audIT-para-D4/salida/informe2/AUDIT-Subdocumento13.pdf

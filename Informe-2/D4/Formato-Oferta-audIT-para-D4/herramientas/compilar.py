@@ -350,7 +350,7 @@ def varios(cfg, perfil, lista, grupo, continuo, caratula, jobs, forzar):
             f.write(tex2md.subdocumento(cfg, n, perfil.raices, t.aux))
     for t in formularios:
         with open(os.path.join(destino, t.nombre + ".md"), "w", encoding="utf-8") as f:
-            f.write(tex2md.formulario(cfg, t.subdoc, t.formulario, perfil.raices))
+            f.write(tex2md.formulario(cfg, t.subdoc, t.formulario, perfil.raices, t.aux))
     print(f"  {len(orden)} PDF y {len(trabajos)} Markdown en {os.path.relpath(destino, RAIZ)}/")
     return orden
 

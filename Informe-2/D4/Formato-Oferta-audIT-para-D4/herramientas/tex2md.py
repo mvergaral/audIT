@@ -131,9 +131,11 @@ class Conversor:
                 continue
             for m in re.finditer(r"@\w+\{([^,]+),(.*?)\n\}", t, re.S):
                 cuerpo = m.group(2)
-                a = re.search(r"author\s*=\s*\{+([^}]*)\}+", cuerpo)
+                a = re.search(r"author\s*=\s*(\{+)([^}]*)\}+", cuerpo) or \
+                    re.search(r"editor\s*=\s*(\{+)([^}]*)\}+", cuerpo)
                 y = re.search(r"year\s*=\s*\{([^}]*)\}", cuerpo)
-                bib[m.group(1).strip()] = ((a.group(1) if a else "s. a."), (y.group(1) if y else "s. f."))
+                bib[m.group(1).strip()] = ((cita_autor(a.group(2), len(a.group(1)) > 1) if a else "s. a."),
+                                           (y.group(1) if y else "s. f."))
         return bib
 
     def leer_datos(self):
@@ -414,8 +416,34 @@ def leer_bib_completa():
     return bib
 
 
+def cita_autor(autor, corporativo=False):
+    """Autor en la cita: apellido, «A y B» o «A et al.» (APA 7)."""
+    if corporativo:
+        return autor.strip()
+    ap = [n.split(",")[0].strip() for n in autor.split(" and ")]
+    return ap[0] if len(ap) == 1 else (f"{ap[0]} y {ap[1]}" if len(ap) == 2 else f"{ap[0]} et al.")
+
+
+def autores_apa(nombres):
+    """«Apellido, N. N.» por persona, unidas con coma e «y» antes de la última."""
+    out = []
+    for n in nombres.split(" and "):
+        if "," not in n:
+            out.append(n.strip())
+            continue
+        ap, nom = [x.strip() for x in n.split(",", 1)]
+        ini = " ".join(w[0] + "." for w in re.split(r"[\s.]+", nom) if w)
+        out.append(f"{ap}, {ini}")
+    return out[0] if len(out) == 1 else ", ".join(out[:-1]) + " y " + out[-1]
+
+
 def apa(tipo, c):
-    autor = c.get("author", "s. a.").replace(" and ", ", ")
+    if c.get("author"):
+        autor = autores_apa(c["author"])
+    elif c.get("editor"):
+        autor = autores_apa(c["editor"]) + (" (Ed.)" if " and " not in c["editor"] else " (Eds.)")
+    else:
+        autor = "s. a."
     fecha = c.get("date", c.get("year", "s. f."))
     anio = fecha[:4]
     extra = ""
@@ -424,7 +452,23 @@ def apa(tipo, c):
                  "septiembre", "octubre", "noviembre", "diciembre"]
         extra = f", {int(fecha[8:10])} de {meses[int(fecha[5:7]) - 1]}"
     titulo = c.get("title", "")
-    partes = [f"{autor}. ({anio}{extra}). *{titulo}*"]
+    punto = "" if autor.endswith(".") else "."
+    if tipo == "article":
+        partes = [f"{autor}{punto} ({anio}{extra}). {titulo}."]
+        revista = f"*{c.get('journaltitle', c.get('journal', ''))}*"
+        if c.get("volume"):
+            revista += f", *{c['volume']}*"
+        if c.get("number"):
+            revista += f"({c['number']})"
+        if c.get("pages"):
+            revista += f", {c['pages']}"
+        partes.append(revista + ".")
+        if c.get("doi"):
+            partes.append(f"https://doi.org/{c['doi']}")
+        return " ".join(partes)
+    partes = [f"{autor}{punto} ({anio}{extra}). *{titulo}*"]
+    if c.get("edition"):
+        partes[-1] += f" ({c['edition']})"
     if c.get("type"):
         partes[-1] += f" ({c['type']})"
     partes[-1] += "."
@@ -531,6 +575,7 @@ def subdocumento(cfg, n, raices, aux=None):
     cuerpo = Conversor(cfg, n, etiquetas_aux(aux) if aux else None).convertir(fuente)
     rotulo = cfg.rotulos.get(cfg.instancia, ("",))[0]
     titulo_com = {4: "Introducción a la Arquitectura Lógica y Física de la Solución",
+                  7: "Introducción al Plan de Trabajo",
                   13: "Introducción a las Innovaciones"}.get(n, sd["titulo"])
     archivo = cfg.nombre_subdoc(n) + ".pdf"
     forms = ", ".join(f"Formulario {f} en el archivo {cfg.nombre_formulario(f)}.pdf" for f in sd["formularios"])
@@ -545,11 +590,14 @@ def subdocumento(cfg, n, raices, aux=None):
     return cabeza + obs + capitulo + cuerpo + refs + decl
 
 
-def formulario(cfg, n, f, raices):
+def formulario(cfg, n, f, raices, aux=None):
     sd = cfg.subdocs[n]
     ruta = buscar(sd["carpeta"], f"formularios/{f}.tex", raices)
     rotulo = cfg.rotulos.get(cfg.instancia, ("",))[0]
-    titulos = {"T-11": "Especificaciones técnicas ofertadas", "T-19": "Cartera de innovaciones"}
+    titulos = {"T-11": "Especificaciones técnicas ofertadas", "T-14": "Plan de trabajo, EDT y carta Gantt",
+               "T-15": "Nivelación de recursos",
+               "T-18": "Propuesta de implantación y puesta en marcha controlada",
+               "T-19": "Cartera de innovaciones"}
     cabeza = (f"# Formulario {f}. {titulos.get(f, '')}\n\n"
               f"audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. "
               f"Oferta Técnica, Sobre N.º 2. {rotulo}. Archivo {cfg.nombre_formulario(f)}.pdf. "
@@ -559,9 +607,33 @@ def formulario(cfg, n, f, raices):
         return cabeza + "[formulario sin datos]\n"
     t = open(ruta, encoding="utf-8").read()
     t = "\n".join(re.sub(r"(?<!\\)%.*$", "", l) for l in t.split("\n"))
-    conv = Conversor(cfg, n)
+    # etiquetas del propio formulario y las del subdocumento al que pertenece
+    etiq = {}
+    if aux:
+        sub = os.path.join(os.path.dirname(os.path.dirname(aux)), f"{n:02d}")
+        for r in sorted(os.listdir(sub)) if os.path.isdir(sub) else []:
+            if r.endswith(".aux"):
+                etiq.update(etiquetas_aux(os.path.join(sub, r)))
+        etiq.update(etiquetas_aux(aux))
+    conv = Conversor(cfg, n, etiq or None)
     out = []
-    if f == "T-11":
+    if f == "T-15":
+        # tabla por etapa del formulario y luego el resto del contenido
+        filas = []
+        for m in re.finditer(r"\\etapaTQuince", t):
+            kv, _ = arg(t, m.end())
+            d = claves(kv)
+            filas.append("| " + " | ".join(conv.en_linea(d.get(c, "")).replace("|", "\\|").strip()
+                                             for c in ("etapa", "hh", "personas", "frentes", "meses")) + " |")
+        conv.ntab += 1
+        tabla_etapas = (f"**Tabla {n}.{conv.ntab}.** Formulario T-15. Nivelación de recursos por etapa\n\n"
+                        "| Etapa | HH totales | Personas (peak) | Frentes | Meses |\n|---|---|---|---|---|\n"
+                        + "\n".join(filas) + "\n")
+        t = re.sub(r"\\begin\{formularioTQuince\}.*?\\end\{formularioTQuince\}",
+                   lambda m: "\n@@TABLAETAPAS@@\n", t, flags=re.S)
+        t = re.sub(r"\\(begin|end)\{formulario\}(\{[^}]*\})?", "", t)
+        out.append(conv.convertir(t).replace("@@TABLAETAPAS@@", tabla_etapas))
+    elif f == "T-11":
         cols = [("componente", "Componente"), ("producto", "Producto"), ("caracteristicas", "Características"),
                 ("ubicacion", "Ubicación"), ("cantidad", "Cantidad"), ("adquiere", "Adquiere"),
                 ("ciclo", "Ciclo de vida"), ("justificacion", "Justificación")]

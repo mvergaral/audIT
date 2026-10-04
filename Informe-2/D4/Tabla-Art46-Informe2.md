@@ -140,11 +140,11 @@ Dos advertencias de riesgo que no son observaciones pero condicionan el Informe 
 
 | Observación | Respuesta | Sección modificada |
 |---|---|---|
-| 88. La innovación tipo 3 es el RT-03.10, el RT-03.13, los criterios 8 y 9 y la decisión 4, es una funcionalidad exigida presentada como innovación y el Artículo 30 lo prohíbe | Se acepta. Se reemplaza la ficha | S13 1.3 |
+| 88. La innovación tipo 3 es el RT-03.10, el RT-03.13, los criterios 8 y 9 y la decisión 4, es una funcionalidad exigida presentada como innovación y el Artículo 30 lo prohíbe | Se acepta. La innovación 3 pasa a ser el semirremolque conectado, que ninguna exigencia de las bases pide. La operación sin cobertura queda como alcance base en la sección 4.2.2 del Subdocumento 4 | S13 13.3 y Formulario T-19 |
 | 89. La innovación tipo 2 es el método que imponen las restricciones del Capítulo 6 y el numeral 13.3 | Se acepta. Se revisa y se reformula o se reemplaza | S13 1.2 |
 | 90. Las fichas T-19 con los siete elementos del Artículo 29 se difieren a la propuesta final y el ítem del Informe 1 las incluye | Se acepta. Las cinco fichas completas | S13 anexo T-19 |
 | 91. Los tipos 2 y 3 no traen madurez, impacto económico ni riesgo de adopción, el tipo 5 no trae riesgo y el tipo 1 solo declara inversión incremental | Se acepta. Los siete elementos en las cinco | S13 anexo T-19 |
-| 92. En la tabla del tipo 3 las líneas base están inventadas y la meta está redactada al revés respecto del RT-03.13, que fija que no debe superar 20 minutos | Se acepta. Se corrige el sentido de la meta y se retiran las líneas base sin fuente | S13 1.3 |
+| 92. En la tabla del tipo 3 las líneas base están inventadas y la meta está redactada al revés respecto del RT-03.13, que fija que no debe superar 20 minutos | Se acepta. La nueva innovación 3 declara como línea base lo que el sistema actual no registra, sin cifras ajenas al Caso, y mide sus metas con datos de la propia solución | S13 13.3 |
 | 93. El tipo 5 usa cifras que nadie midió, la línea base NASA-TLX, el 22 % de adherencia, el 1,2 % de ahorro y el costo por evento, lo que roza el Artículo 13.4 | Se acepta. Se retiran o se sustituyen por una línea base a medir en la Etapa 1 | S13 1.5 |
 | 94. Las 280 horas hombre de desarrollo son información de esfuerzo de la oferta dentro de la Oferta Técnica, contra el Artículo 50.2 | Se acepta. Se retira | S13 1.5 |
 | 95. El tipo 4 cuantifica un recupero anual en pesos, son cifras del caso pero conviene retirarlas | Se acepta. Se retiran | S13 1.4 |
