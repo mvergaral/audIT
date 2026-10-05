@@ -1,60 +1,702 @@
+% ============================================================================
+%  Formulario T-11. Especificaciones técnicas ofertadas. Archivo propio
+%  AUDIT-Formulario-T-11.pdf (Comunicado 10, sección 1). Dupla 4.
+%  Filas 1 a 30: hardware que compra el mandante (Caso, capítulo 11, p. 24).
+%  Filas 31 a 45: servicios de nube. Filas 46 a 68: componentes con su
+%  emplazamiento y los seis criterios del Artículo 16.2 (antes Anexo A).
+% ============================================================================
 \begin{formulario}{T-11}
-  \begin{formularioTOnce}
-
-    \componenteTOnce{
-      componente      = Nodo de Continuidad Operacional,
-      producto        = Servidor 2U Clúster de Alta Disponibilidad,
-      caracteristicas = Doble fuente de poder, arreglos de almacenamiento redundante,
-      ubicacion       = Sala técnica San Bernardo,
-      cantidad        = 2 unidades (1 activo + 1 testigo),
-      adquiere        = CLIENTE,
-      ciclo           = 60 meses con soporte de fabricante (RT-08.13),
-      justificacion   = Sostiene las funciones de severidad máxima (despacho, emergencia y DET) sin enlace a la nube (RT-21.06).
-    }
-
-    \componenteTOnce{
-      componente      = Equipamiento de Borde (Gabinete),
-      producto        = Gabinete industrial climatizado con nodo de cómputo,
-      caracteristicas = Autonomía de 12 horas, terminación de enlaces redundantes,
-      ubicacion       = 4 Terminales Regionales,
-      cantidad        = 4 unidades,
-      adquiere        = CLIENTE,
-      ciclo           = 60 meses,
-      justificacion   = Garantiza operación autónoma sin conexión hacia el exterior por hasta 12 horas (RT-03.10).
-    }
-
-    \componenteTOnce{
-      componente      = Dispositivo de Terreno a Bordo,
-      producto        = Equipo telemático de grado industrial (IP67),
-      caracteristicas = Memoria flash $\ge 8$~GB no volátil, doble puerto CANbus, NFC, batería de respaldo (RT-08.01, RT-08.10),
-      ubicacion       = Flota propia y adherida (Tractocamiones),
-      cantidad        = 200 unidades (182 activas + 18 repuesto 10\,\%),
-      adquiere        = audIT,
-      ciclo           = Reposición a los 36 meses o ante falla (RT-08.13),
-      justificacion   = Soporta operación desconectada por 72 h a 12 días (RT-10.05), registrando eventos de jornada e hitos.
-    }
-
-    \componenteTOnce{
-      componente      = Acoplador Inductivo de Telemetría,
-      producto        = Interfaz CAN/FMS sin contacto físico,
-      caracteristicas = Lectura no intrusiva de telemetría de fábrica,
-      ubicacion       = Flota propia (Tractocamiones),
-      cantidad        = 163 unidades (148 activas + 15 repuesto 10\,\%),
-      adquiere        = audIT,
-      ciclo           = 60 meses,
-      justificacion   = Permite extraer variables de motor (consumo, odómetro) sin invalidar garantías OEM (Restricción 6).
-    }
-
-    \componenteTOnce{
-      componente      = Equipamiento de Energía Crítica,
-      producto        = UPS en línea y Grupo Electrógeno,
-      caracteristicas = UPS $\ge 30$ min, estanque de diésel $\ge 24$ h,
-      ubicacion       = Sala técnica San Bernardo,
-      cantidad        = 1 conjunto (UPS + Generador),
-      adquiere        = CLIENTE,
-      ciclo           = 60 meses,
-      justificacion   = Eleva la sala de 26\,m$^2$ al estándar requerido por numeral 6.1 ante el nuevo alcance del nodo.
-    }
-
-  \end{formularioTOnce}
+\begin{formularioTOnce}
+% ---------------------------------------------------------------- cabina
+\componenteTOnce{
+  componente = Equipo a bordo,
+  producto = iWave G26I con eMMC de 8 GB,
+  caracteristicas = {NXP i.MX 6ULL, 512 MB de RAM, 3 CAN con J1939, RS232, RS485, LTE Cat 4 o Cat M1, GNSS, Wi-Fi, Bluetooth 5.0, elemento seguro Microchip TA100, IP67, $-40$ a $+70$ °C, 9 a 32 V. Condición de compra: bandas LTE chilenas, homologación SUBTEL y E-Mark},
+  ubicacion = {Cabina de 148 camiones propios y 34 de terceros sin equipo},
+  cantidad = {182 más 19 de reposición},
+  adquiere = CLIENTE,
+  ciclo = {Longevidad de producto de 10 años declarada por el fabricante. Actualización solo en terminal. Reposición del 10 \%},
+  justificacion = {Registra 288 horas sin cobertura (RT-03.10 y RT-10.05 del Caso) con 2,4 GB requeridos sobre 8 GB. Sección 4.2.2}
+}
+\componenteTOnce{
+  componente = Equipo a bordo por crecimiento,
+  producto = iWave G26I con eMMC de 8 GB,
+  caracteristicas = Iguales a la fila 1,
+  ubicacion = {Camiones propios nuevos},
+  cantidad = {22, comprados durante la operación},
+  adquiere = CLIENTE,
+  ciclo = Igual a la fila 1,
+  justificacion = {La flota propia pasa de 148 a 170 camiones a tres años (Caso, numeral 14.1, p. 29)}
+}
+\componenteTOnce{
+  componente = Módem satelital de ráfaga corta,
+  producto = Iridium Edge,
+  caracteristicas = {Iridium SBD, mensajes de hasta 340 bytes de salida y 270 de entrada, IP67, $-40$ a $+70$ °C, 9 a 32 V, 1,6 W al transmitir, conectado por RS232},
+  ubicacion = Cabina junto al equipo a bordo,
+  cantidad = {182 más 19},
+  adquiere = CLIENTE,
+  ciclo = {Soporte del fabricante contratado por 56 meses. Reposición del 10 \%},
+  justificacion = {Tramos de más de 80 km sin señal (restricción 4, Caso p. 23). Se vende en Chile dentro de Webfleet SAT}
+}
+\componenteTOnce{
+  componente = Lector CAN sin contacto,
+  producto = Technoton CANCrocodile,
+  caracteristicas = {Lee el bus a través del aislamiento sin cortar cables, salida CAN 2.0B según SAE J1939, 10 a 50 V},
+  ubicacion = Cabina sobre el arnés original,
+  cantidad = {182 más 19},
+  adquiere = CLIENTE,
+  ciclo = {Soporte del fabricante contratado por 56 meses. Reposición del 10 \%},
+  justificacion = {No afecta la garantía del vehículo (restricción 6, Caso p. 24)}
+}
+\componenteTOnce{
+  componente = Lector de tarjeta del conductor,
+  producto = GAO RFID MIFARE DESFire de 13,56 MHz,
+  caracteristicas = {IP66, conexión RS485 al equipo a bordo},
+  ubicacion = Cabina al alcance del conductor detenido,
+  cantidad = {182 más 19},
+  adquiere = CLIENTE,
+  ciclo = {Soporte del fabricante contratado por 56 meses. Reposición del 10 \%},
+  justificacion = {Identifica sin manipular un dispositivo en marcha ni recordar una credencial (Caso, RT-12.11, p. 32)}
+}
+\componenteTOnce{
+  componente = Tarjeta de identificación del conductor,
+  producto = MIFARE DESFire,
+  caracteristicas = Tarjeta sin contacto con clave por aplicación,
+  ubicacion = Conductores,
+  cantidad = 572,
+  adquiere = CLIENTE,
+  ciclo = {Reposición por pérdida o egreso. Incluye el 10 \% de reserva},
+  justificacion = {520 conductores a tres años (Caso, numeral 14.1, p. 29) más 10 \%}
+}
+% ---------------------------------------------------------------- semirremolques
+\componenteTOnce{
+  componente = Baliza de semirremolque,
+  producto = Teltonika EYE Sensor BTSMP1,
+  caracteristicas = {Bluetooth 4.2 y 5.2, iBeacon y Eddystone, temperatura, humedad, acelerómetro y sensor magnético de puerta, IP67, $-20$ a $+60$ °C, E-mark},
+  ubicacion = {Chasis delantero de los semirremolques propios, a la sombra},
+  cantidad = {210 más 21},
+  adquiere = CLIENTE,
+  ciclo = {Batería no reemplazable de 5 años o más con emisión cada 10 segundos. Cubre los 56 meses},
+  justificacion = {Innovación tipo 3 del Subdocumento 13: identifica el semirremolque acoplado}
+}
+\componenteTOnce{
+  componente = Baliza por crecimiento,
+  producto = Teltonika EYE Sensor BTSMP1,
+  caracteristicas = Iguales a la fila 7,
+  ubicacion = Semirremolques propios nuevos,
+  cantidad = {35, compradas durante la operación},
+  adquiere = CLIENTE,
+  ciclo = Igual a la fila 7,
+  justificacion = {Los semirremolques propios pasan de 210 a 245 (Caso, numeral 14.1, p. 29)}
+}
+% ---------------------------------------------------------------- terminales
+\componenteTOnce{
+  componente = Computador de terminal,
+  producto = OnLogic Karbon 430,
+  caracteristicas = {Intel Atom x6425E, sin ventilador, $-40$ a $+70$ °C, 9 a 48 V, cerca de 35 W, dos puertos LAN},
+  ubicacion = {Gabinete de Antofagasta, Talca, Los Ángeles y Puerto Montt},
+  cantidad = {8, dos por terminal},
+  adquiere = CLIENTE,
+  ciclo = {Programa de soporte extendido con garantía de 5 años},
+  justificacion = {Opera 24 horas sin enlace (FEP01, Art. 16.4, p. 12) en activo y en espera}
+}
+\componenteTOnce{
+  componente = Router de respaldo,
+  producto = Teltonika RUTX50,
+  caracteristicas = {5G con dos SIM y conmutación automática, cinco puertos Gigabit, Wi-Fi de doble banda, $-40$ a $+75$ °C, menos de 18 W},
+  ubicacion = Gabinete de cada terminal regional,
+  cantidad = 4,
+  adquiere = CLIENTE,
+  ciclo = {Garantía de 24 meses extendible por acuerdo. Soporte contratado por 56 meses},
+  justificacion = {Respaldo de enlace que exige RT-03.24 del Caso, p. 31}
+}
+\componenteTOnce{
+  componente = Switch de gabinete,
+  producto = Teltonika TSW202,
+  caracteristicas = {8 puertos Gigabit con PoE+ de 240 W, 2 SFP, riel DIN, $-40$ a $+75$ °C},
+  ubicacion = Gabinete de cada terminal regional,
+  cantidad = 4,
+  adquiere = CLIENTE,
+  ciclo = {Garantía de 24 meses extendible por acuerdo},
+  justificacion = Conecta y alimenta los equipos del terminal
+}
+\componenteTOnce{
+  componente = UPS de gabinete,
+  producto = APC Smart-UPS SRT1000XLI,
+  caracteristicas = {Doble conversión, 1.000 VA, 293 VAh internos},
+  ubicacion = Gabinete de cada terminal regional,
+  cantidad = 4,
+  adquiere = CLIENTE,
+  ciclo = {Garantía de 3 años y 2 de batería. Un recambio de batería en 56 meses},
+  justificacion = {83 minutos con los 152 W del gabinete. Sección 4.3.1}
+}
+\componenteTOnce{
+  componente = Punto de acceso de patio,
+  producto = Fortinet FortiAP 234G,
+  caracteristicas = {Wi-Fi 6E, IP67, $-50$ a $+70$ °C, 28 W por PoE 802.3bt con inyector, radio Bluetooth, administración por FortiLAN Cloud},
+  ubicacion = {Patio de los cinco terminales},
+  cantidad = 5,
+  adquiere = CLIENTE,
+  ciclo = {Soporte FortiCare contratado por 56 meses},
+  justificacion = {Actualización del equipo a bordo solo en terminal (restricción 5, Caso p. 23)}
+}
+\componenteTOnce{
+  componente = Lector de portería,
+  producto = Minew G1,
+  caracteristicas = {Bluetooth 5.0 a Ethernet, MQTT sobre TLS, PoE, $-25$ a $+65$ °C, 200 equipos por segundo},
+  ubicacion = {Portería de los cinco terminales},
+  cantidad = 5,
+  adquiere = CLIENTE,
+  ciclo = {Soporte del fabricante contratado por 56 meses},
+  justificacion = {Lee la baliza del semirremolque que sale, también en camiones de terceros}
+}
+% ---------------------------------------------------------------- San Bernardo
+\componenteTOnce{
+  componente = Servidor del nodo de continuidad,
+  producto = Dell PowerEdge R360,
+  caracteristicas = {1U, Intel Xeon E-2400 de hasta 8 núcleos, dos fuentes redundantes, virtualización en alta disponibilidad},
+  ubicacion = Rack de servidores de San Bernardo,
+  cantidad = 2,
+  adquiere = CLIENTE,
+  ciclo = {Soporte del fabricante contratado por 56 meses},
+  justificacion = {Asignación y despacho sin enlace (Caso, RT-21.06, p. 34)}
+}
+\componenteTOnce{
+  componente = Firewall,
+  producto = Fortinet FortiGate 90G con segundo adaptador,
+  caracteristicas = {Par en alta disponibilidad, 19,9 W, dos entradas de alimentación},
+  ubicacion = Rack de comunicaciones de San Bernardo,
+  cantidad = 2,
+  adquiere = CLIENTE,
+  ciclo = {Soporte FortiCare contratado por 56 meses},
+  justificacion = {Alta disponibilidad sin punto único (FEP02, RT-08.03, p. 18)}
+}
+\componenteTOnce{
+  componente = Switch de sala,
+  producto = Fortinet FortiSwitch 124F-POE,
+  caracteristicas = {24 Gigabit, 4 SFP+, PoE de 185 W, administrado desde el FortiGate},
+  ubicacion = Rack de comunicaciones de San Bernardo,
+  cantidad = 2,
+  adquiere = CLIENTE,
+  ciclo = {Soporte FortiCare contratado por 56 meses},
+  justificacion = {Par en circuitos A y B. Un solo panel para un área de TI de 9 personas}
+}
+\componenteTOnce{
+  componente = UPS de sala,
+  producto = APC Smart-UPS SRT3000RMXLI con batería SRT96RMBP,
+  caracteristicas = {Doble conversión, 2.700 W, 505 más 1.010 VAh},
+  ubicacion = Rack de servidores de San Bernardo,
+  cantidad = {2, alimentación A y B},
+  adquiere = CLIENTE,
+  ciclo = {Garantía de 3 años y 2 de batería. Un recambio de batería en 56 meses},
+  justificacion = {66 minutos con toda la carga en una UPS (FEP02, RT-06.07, p. 15)}
+}
+\componenteTOnce{
+  componente = Clima de precisión,
+  producto = Vertiv Liebert Mini-Mate2 MMD12E,
+  caracteristicas = {3,55 kW, de cielo, con control de temperatura y humedad},
+  ubicacion = Muros opuestos de la sala,
+  cantidad = {2, N+1},
+  adquiere = CLIENTE,
+  ciclo = {Mantención preventiva y soporte contratados por 56 meses},
+  justificacion = {1,6 kW de calor. N+1 de FEP02, RT-06.13, p. 15}
+}
+\componenteTOnce{
+  componente = Detección temprana,
+  producto = Xtralis VESDA LaserFOCUS VLF-250,
+  caracteristicas = Aspiración con láser para recintos de menos de 250 m²,
+  ubicacion = Sala de San Bernardo,
+  cantidad = 1,
+  adquiere = CLIENTE,
+  ciclo = {Mantención semestral},
+  justificacion = {FEP02, RT-06.16, p. 15}
+}
+\componenteTOnce{
+  componente = Extinción automática,
+  producto = Kidde Fire Systems con agente Fluoro-K,
+  caracteristicas = {FK-5-1-12, UL y FM, dimensionado al volumen de la sala por el instalador},
+  ubicacion = Cilindro junto a la esclusa,
+  cantidad = 1,
+  adquiere = CLIENTE,
+  ciclo = {Mantención y recertificación anual},
+  justificacion = {FEP02, RT-06.17, p. 15. Reemplaza al Novec 1230, que dejó de fabricarse}
+}
+\componenteTOnce{
+  componente = Extintor portátil,
+  producto = Extintor de dióxido de carbono para equipos eléctricos,
+  caracteristicas = Con mantención y certificación vigentes,
+  ubicacion = Esclusa y zona de trabajo,
+  cantidad = 2,
+  adquiere = CLIENTE,
+  ciclo = Recarga y certificación según norma,
+  justificacion = {FEP02, RT-06.18, p. 15}
+}
+\componenteTOnce{
+  componente = Control de acceso biométrico,
+  producto = Suprema FaceStation F2 (FSF2-ODB),
+  caracteristicas = {Rostro con huella de respaldo, IP65, 50.000 usuarios de rostro},
+  ubicacion = Puertas exterior e interior de la esclusa,
+  cantidad = 2,
+  adquiere = CLIENTE,
+  ciclo = {Soporte del fabricante contratado por 56 meses},
+  justificacion = {FEP02, RT-06.20 y RT-06.23, p. 16}
+}
+\componenteTOnce{
+  componente = Cámara de videovigilancia,
+  producto = Axis M3215-LVE,
+  caracteristicas = {1080p, H.265, IP66, PoE clase 3, 4,8 W típicos},
+  ubicacion = Sala y esclusa,
+  cantidad = 4,
+  adquiere = CLIENTE,
+  ciclo = {Soporte del fabricante contratado por 56 meses},
+  justificacion = {FEP02, RT-06.24, p. 16}
+}
+\componenteTOnce{
+  componente = Grabador de video,
+  producto = Axis S3008 Mk II de 4 TB,
+  caracteristicas = {8 puertos PoE clase 3, 124 W de PoE},
+  ubicacion = Rack de comunicaciones,
+  cantidad = 1,
+  adquiere = CLIENTE,
+  ciclo = {Soporte del fabricante contratado por 56 meses},
+  justificacion = {2,59 TB para 30 días con 4 cámaras a 2 Mbit/s}
+}
+\componenteTOnce{
+  componente = Detección de agua,
+  producto = Vertiv Liebert LT460,
+  caracteristicas = {Detección por zona con cable sensor, contactos secos al controlador del clima},
+  ubicacion = Bajo las unidades de clima,
+  cantidad = 1,
+  adquiere = CLIENTE,
+  ciclo = {Mantención con el clima},
+  justificacion = {FEP02, RT-06.14, p. 15}
+}
+\componenteTOnce{
+  componente = Grupo electrógeno,
+  producto = Himoinsa HYW-8 T5 S5 insonorizado,
+  caracteristicas = {8,8 kVA de potencia continua, trifásico 400/230 V, 2,68 L/h a plena carga, estanque opcional de 100 L, tablero de transferencia automática},
+  ubicacion = Patio junto a la sala,
+  cantidad = 1,
+  adquiere = CLIENTE,
+  ciclo = {Mantención y prueba con carga mensual},
+  justificacion = {24 horas con 64,3 L a plena carga (FEP02, RT-06.08, p. 15)}
+}
+\componenteTOnce{
+  componente = Rack,
+  producto = Rack cerrado de 24 unidades,
+  caracteristicas = {Uno de servidores y uno de comunicaciones, con ocupación de 12 y 8 unidades},
+  ubicacion = Sala de San Bernardo,
+  cantidad = 2,
+  adquiere = CLIENTE,
+  ciclo = Vida útil superior al contrato,
+  justificacion = {Racks separados con margen declarado (FEP02, RT-06.05, p. 15)}
+}
+\componenteTOnce{
+  componente = Enlace dedicado a la nube,
+  producto = Circuito ExpressRoute de 100 Mbit/s,
+  caracteristicas = {Cirion Technologies, Equinix o PitChile en EdgeConnex SCL, con detección bidireccional de fallas},
+  ubicacion = {San Bernardo y Santiago},
+  cantidad = 1,
+  adquiere = CLIENTE,
+  ciclo = Contrato de servicio por 56 meses,
+  justificacion = {52 Mbit/s derivados. Sección 4.2.8}
+}
+\componenteTOnce{
+  componente = Enlace fijo de terminal,
+  producto = Enlace de 10 Mbit/s o más de un proveedor local,
+  caracteristicas = Con VPN IPsec hacia la red central de Azure,
+  ubicacion = Cuatro terminales regionales,
+  cantidad = 4,
+  adquiere = CLIENTE,
+  ciclo = Contrato de servicio por 56 meses,
+  justificacion = {Actualización del equipo a bordo. Sección 4.2.8}
+}
+% ---------------------------------------------------------------- nube
+\componenteTOnce{
+  componente = Distribución de contenidos y protección perimetral,
+  producto = Azure Front Door Premium,
+  caracteristicas = Cortafuegos de aplicación y protección volumétrica,
+  ubicacion = N,
+  cantidad = 1 perfil,
+  adquiere = {CLIENTE, suscripción a su nombre},
+  ciclo = Servicio administrado,
+  justificacion = {Punto de presencia global. Latencia 50 ms, criticidad crítica, requiere enlace}
+}
+\componenteTOnce{
+  componente = Puerta de enlace de servicios,
+  producto = Azure API Management Premium,
+  caracteristicas = Unidades en las tres zonas de Chile Central,
+  ubicacion = N,
+  cantidad = 1 instancia,
+  adquiere = {CLIENTE, suscripción a su nombre},
+  ciclo = Servicio administrado,
+  justificacion = {Autenticación y enrutamiento centralizados. Latencia 30 ms, crítica}
+}
+\componenteTOnce{
+  componente = Concentrador de dispositivos,
+  producto = Azure IoT Hub S1 y Device Provisioning Service,
+  caracteristicas = {2 unidades, 800.000 mensajes de 4 KB al día, enrolamiento X.509},
+  ubicacion = N,
+  cantidad = 2 unidades,
+  adquiere = {CLIENTE, suscripción a su nombre},
+  ciclo = Servicio administrado,
+  justificacion = {Reconexión de 300 camiones en 9,6 minutos (Caso, RT-03.13, p. 31)}
+}
+\componenteTOnce{
+  componente = Bus de eventos,
+  producto = Azure Event Hubs Premium,
+  caracteristicas = {Protocolo Kafka, réplica geográfica asíncrona con retraso máximo de 10 minutos},
+  ubicacion = N,
+  cantidad = {1 unidad de procesamiento, se ajusta con la prueba de carga},
+  adquiere = {CLIENTE, suscripción a su nombre},
+  ciclo = Servicio administrado,
+  justificacion = {Desacopla la llegada del procesamiento. de telemetría y eventos vehiculares asíncronos}
+}
+\componenteTOnce{
+  componente = Orquestador de contenedores,
+  producto = Azure Kubernetes Service,
+  caracteristicas = Nodos en las tres zonas con escalado automático,
+  ubicacion = N,
+  cantidad = {Clúster AKS de 6 nodos (Standard D4s v5)},
+  adquiere = {CLIENTE, suscripción a su nombre},
+  ciclo = {Versión con soporte, actualización programada},
+  justificacion = {Aloja los servicios de negocio (ADR 01)}
+}
+\componenteTOnce{
+  componente = Base transaccional,
+  producto = Azure Database for PostgreSQL Flexible,
+  caracteristicas = Alta disponibilidad entre zonas y réplica de lectura en Brazil South,
+  ubicacion = N y N2,
+  cantidad = {Instancia Flexible Server GP (8 vCores, 32 GB RAM, 1 TB SSD en HA)},
+  adquiere = {CLIENTE, suscripción a su nombre},
+  ciclo = Servicio administrado,
+  justificacion = {Consistencia estricta. Latencia 15 ms, máxima, retención de 5 a 10 años}
+}
+\componenteTOnce{
+  componente = Base de series de tiempo,
+  producto = PostgreSQL Flexible con TimescaleDB,
+  caracteristicas = Servidor propio con réplica en Brazil South,
+  ubicacion = N y N2,
+  cantidad = {1 servidor, nivel según el Subdocumento 5},
+  adquiere = {CLIENTE, suscripción a su nombre},
+  ciclo = Servicio administrado,
+  justificacion = {2 años en línea (Caso, RT-05.10, p. 31). Separada para no atrasar la réplica transaccional}
+}
+\componenteTOnce{
+  componente = Almacenamiento de objetos,
+  producto = Azure Storage con redundancia de zona,
+  caracteristicas = {Inmutabilidad por el período de retención, replicación de objetos a Brazil South con redundancia local o de zona},
+  ubicacion = N y N2,
+  cantidad = {Cerca de 290 GB de evidencia en 56 meses},
+  adquiere = {CLIENTE, suscripción a su nombre},
+  ciclo = Servicio administrado,
+  justificacion = {Evidencia probatoria y copia inmutable del esquema 3-2-1-1-0 (FEP02, RT-07.09, p. 18, y RT-06.26, p. 16)}
+}
+\componenteTOnce{
+  componente = {Identidad, secretos y cifrado de campo},
+  producto = {Entra ID y Azure Key Vault Premium},
+  caracteristicas = {Identidad federada, claves en módulo criptográfico, latencia 50 ms, criticidad crítica},
+  ubicacion = N y N2,
+  cantidad = 2 bóvedas,
+  adquiere = {CLIENTE, suscripción a su nombre},
+  ciclo = Servicio administrado,
+  justificacion = {Cifrado de campo de datos personales (Caso, RT-11.10, p. 32)}
+}
+\componenteTOnce{
+  componente = Cortafuegos de nube,
+  producto = Azure Firewall Premium,
+  caracteristicas = En la red central de cada región,
+  ubicacion = N y N2,
+  cantidad = 2,
+  adquiere = {CLIENTE, suscripción a su nombre},
+  ciclo = Servicio administrado,
+  justificacion = Todo el tráfico entre redes pasa por él
+}
+\componenteTOnce{
+  componente = Puertas de enlace de red,
+  producto = ErGw1AZ para ExpressRoute y VpnGw1AZ para VPN,
+  caracteristicas = Redundantes entre zonas,
+  ubicacion = N,
+  cantidad = {1 y 1},
+  adquiere = {CLIENTE, suscripción a su nombre},
+  ciclo = Servicio administrado,
+  justificacion = {Conexión de San Bernardo y de los terminales (FEP02, RT-03.17, p. 9)}
+}
+\componenteTOnce{
+  componente = Acceso administrativo,
+  producto = Azure Bastion,
+  caracteristicas = Sin dirección pública en las máquinas,
+  ubicacion = N,
+  cantidad = 1,
+  adquiere = {CLIENTE, suscripción a su nombre},
+  ciclo = Servicio administrado,
+  justificacion = {Solo la subred de borde se expone (FEP01, Art. 16.3, p. 11)}
+}
+\componenteTOnce{
+  componente = Observabilidad,
+  producto = Azure Monitor y Log Analytics,
+  caracteristicas = {12 meses en línea y 24 en archivo para eventos de seguridad},
+  ubicacion = N,
+  cantidad = 1 espacio de trabajo por ambiente,
+  adquiere = {CLIENTE, suscripción a su nombre},
+  ciclo = Servicio administrado,
+  justificacion = {FEP01, Art. 21.3, p. 15, y FEP02, RT-03.16, p. 9}
+}
+\componenteTOnce{
+  componente = Caché distribuida,
+  producto = {Azure Managed Redis (sustituto oficial Azure Cache for Redis)},
+  caracteristicas = Sesiones, vigencias y geocercas,
+  ubicacion = N,
+  cantidad = {Nivel Enterprise B10 en alta disponibilidad multizona},
+  adquiere = {CLIENTE, suscripción a su nombre},
+  ciclo = Servicio administrado,
+  justificacion = {Latencia 5 ms. Evalúa la invariante del despacho}
+}
+\componenteTOnce{
+  componente = Repositorio analítico y autoservicio,
+  producto = {Azure Synapse Analytics y Microsoft Power BI Embedded},
+  caracteristicas = Capas cruda y depurada y de negocio,
+  ubicacion = N,
+  cantidad = {Capacidad reservada DW100c y Power BI Pro},
+  adquiere = {CLIENTE, suscripción a su nombre},
+  ciclo = Servicio administrado,
+  justificacion = {Costo por kilómetro en 24 horas (Caso, RT-05.29, p. 32). Autoservicio de RT-05.27}
+}
+% ---------------------------------------------------------------- componentes y emplazamiento (Art. 16.2)
+\componenteTOnce{
+  componente = {Despacho y asignación},
+  producto = {Servicio de audIT en AKS},
+  caracteristicas = {Latencia 30 s de extremo a extremo, criticidad máxima, 96.000 viajes al año},
+  ubicacion = {N, con copia local en SB},
+  cantidad = 1 servicio,
+  adquiere = audIT,
+  ciclo = {Mantención evolutiva del contrato},
+  justificacion = {Necesita la vista completa de flota y jornada. Sin exigencia regulatoria. Requiere enlace. Costo elástico}
+}
+\componenteTOnce{
+  componente = Flota y mantenimiento,
+  producto = {Servicio de audIT en AKS},
+  caracteristicas = {Latencia 1 s, criticidad alta, 374 camiones y 210 semirremolques},
+  ubicacion = N,
+  cantidad = 1 servicio,
+  adquiere = audIT,
+  ciclo = {Mantención evolutiva del contrato},
+  justificacion = {Administración centralizada de activos. Tolera latencia de segundos}
+}
+\componenteTOnce{
+  componente = Jornada,
+  producto = {Servicio de audIT en AKS},
+  caracteristicas = {Latencia 30 s, criticidad máxima, 454 conductores},
+  ubicacion = N,
+  cantidad = 1 servicio,
+  adquiere = audIT,
+  ciclo = {Mantención evolutiva del contrato},
+  justificacion = {Validación bloqueante contra el dato consolidado. Datos personales de 258 conductores externos (Ley 21.719)}
+}
+\componenteTOnce{
+  componente = Gestión documental,
+  producto = {Servicio de audIT en AKS},
+  caracteristicas = {Latencia 2 s, criticidad alta, 128.000 documentos al año},
+  ubicacion = N,
+  cantidad = 1 servicio,
+  adquiere = audIT,
+  ciclo = {Mantención evolutiva del contrato},
+  justificacion = Sellado y control de retención centralizados
+}
+\componenteTOnce{
+  componente = Tarifas y liquidación,
+  producto = {Servicio de audIT en AKS},
+  caracteristicas = {Latencia 3 s, criticidad media alta, 148 liquidaciones al mes},
+  ubicacion = N,
+  cantidad = 1 servicio,
+  adquiere = audIT,
+  ciclo = {Mantención evolutiva del contrato},
+  justificacion = Proceso mensual sin exigencia de latencia operacional
+}
+\componenteTOnce{
+  componente = Integración telemática de terceros,
+  producto = {Adaptadores de audIT en AKS},
+  caracteristicas = {Dos plataformas, una sin exportación},
+  ubicacion = N,
+  cantidad = 1 servicio,
+  adquiere = audIT,
+  ciclo = {Mantención evolutiva del contrato},
+  justificacion = {Consume las plataformas de dos proveedores sin intervenir equipos (restricción 3)}
+}
+\componenteTOnce{
+  componente = Integración de telemetría de fábrica,
+  producto = {Adaptador de audIT en AKS},
+  caracteristicas = {61 tractocamiones, solo lectura},
+  ubicacion = N,
+  cantidad = 1 servicio,
+  adquiere = audIT,
+  ciclo = {Mantención evolutiva del contrato},
+  justificacion = {Interfaz del fabricante con su autorización (Caso, RT-17.06, p. 34)}
+}
+\componenteTOnce{
+  componente = Gestión del parque de dispositivos,
+  producto = {IoT Hub con actualización de dispositivos},
+  caracteristicas = {Inventario, configuración, firmware, bloqueo y borrado remotos},
+  ubicacion = N,
+  cantidad = 1 servicio,
+  adquiere = audIT,
+  ciclo = {Mantención evolutiva del contrato},
+  justificacion = {FEP02, RT-03.18, p. 9}
+}
+\componenteTOnce{
+  componente = Réplica de recuperación,
+  producto = {Brazil South en espera},
+  caracteristicas = {RPO de 15 minutos, activo-pasivo},
+  ubicacion = N2,
+  cantidad = 1 región,
+  adquiere = {CLIENTE, suscripción a su nombre},
+  ciclo = {Dos pruebas de conmutación al año},
+  justificacion = {Distancia suficiente para no compartir el evento (FEP02, RT-07.02, p. 17)}
+}
+\componenteTOnce{
+  componente = Nodo de continuidad operacional,
+  producto = {Dos Dell R360 en alta disponibilidad},
+  caracteristicas = {Asignación, emisión y emergencia sin enlace durante 24 horas},
+  ubicacion = SB,
+  cantidad = 1 nodo,
+  adquiere = CLIENTE,
+  ciclo = Igual a la fila 15,
+  justificacion = {Severidad máxima de RT-21.06 del Caso. No puede depender del enlace. Costo fijo de dos nodos}
+}
+\componenteTOnce{
+  componente = Pasarela de la capa anticorrupción,
+  producto = {Servicio de audIT en el nodo de San Bernardo},
+  caracteristicas = Junto al sistema contable,
+  ubicacion = SB,
+  cantidad = 1 servicio,
+  adquiere = audIT,
+  ciclo = {Mantención evolutiva del contrato},
+  justificacion = {Debe alcanzar el sistema contable heredado, que está en San Bernardo}
+}
+\componenteTOnce{
+  componente = Sistema contable de 2013,
+  producto = Sistema existente,
+  caracteristicas = Único emisor de documentos tributarios,
+  ubicacion = SB,
+  cantidad = 1,
+  adquiere = {Existente},
+  ciclo = {No se reemplaza (Caso, capítulo 11, p. 24)},
+  justificacion = {Restricción 8, Caso, p. 24}
+}
+\componenteTOnce{
+  componente = Terminación de enlaces y borde de red,
+  producto = {FortiGate 90G y FortiSwitch 124F-POE},
+  caracteristicas = Pares en circuitos A y B,
+  ubicacion = SB,
+  cantidad = {2 y 2},
+  adquiere = CLIENTE,
+  ciclo = Igual a las filas 16 y 17,
+  justificacion = {Entrada de ExpressRoute y VPN por rutas distintas (FEP02, RT-03.17 y RT-06.32)}
+}
+\componenteTOnce{
+  componente = Nodo de terminal,
+  producto = {Dos Karbon 430 en activo y en espera},
+  caracteristicas = {Salidas, llegadas y verificación con copia local},
+  ubicacion = GT,
+  cantidad = 4 nodos,
+  adquiere = CLIENTE,
+  ciclo = Igual a la fila 9,
+  justificacion = {24 horas sin enlace (FEP01, Art. 16.4, p. 12). El Caso pide 12 (RT-03.10, p. 31)}
+}
+\componenteTOnce{
+  componente = Lectura de portería,
+  producto = Minew G1,
+  caracteristicas = Baliza del semirremolque que sale,
+  ubicacion = GT y SB,
+  cantidad = 5,
+  adquiere = CLIENTE,
+  ciclo = Igual a la fila 14,
+  justificacion = Registra el semirremolque también en camiones sin equipo audIT
+}
+\componenteTOnce{
+  componente = Distribución de actualizaciones,
+  producto = FortiAP 234G y copia local de la imagen,
+  caracteristicas = {Wi-Fi 6E en el patio},
+  ubicacion = GT y SB,
+  cantidad = 5,
+  adquiere = CLIENTE,
+  ciclo = Igual a la fila 13,
+  justificacion = {Restricción 5, Caso, p. 23}
+}
+\componenteTOnce{
+  componente = Búfer no volátil a bordo,
+  producto = eMMC del iWave G26I,
+  caracteristicas = {38,4 MB para 288 horas dentro de 8 GB},
+  ubicacion = DB,
+  cantidad = 182,
+  adquiere = CLIENTE,
+  ciclo = Igual a la fila 1,
+  justificacion = {Latencia inmediata, criticidad máxima. Opera sin cobertura (Caso, RT-03.10, p. 31)}
+}
+\componenteTOnce{
+  componente = Motor de geocercas a bordo,
+  producto = {Software de audIT en el G26I},
+  caracteristicas = 1.400 puntos de carga y descarga,
+  ubicacion = DB,
+  cantidad = 182,
+  adquiere = audIT,
+  ciclo = {Actualización en terminal},
+  justificacion = {Registro de llegada y salida sin intervención (Caso, RT-09.01, p. 32)}
+}
+\componenteTOnce{
+  componente = Alerta de jornada a bordo,
+  producto = {Software de audIT en el G26I},
+  caracteristicas = Cálculo local de la jornada acumulada,
+  ubicacion = DB,
+  cantidad = 182,
+  adquiere = audIT,
+  ciclo = {Actualización en terminal},
+  justificacion = {La alerta debe llegar aunque no haya enlace (criterio 28 del Caso)}
+}
+\componenteTOnce{
+  componente = Identificación del conductor,
+  producto = Lector GAO RFID y tarjeta DESFire,
+  caracteristicas = Con el camión detenido,
+  ubicacion = DB,
+  cantidad = 182,
+  adquiere = CLIENTE,
+  ciclo = Igual a la fila 5,
+  justificacion = {Caso, RT-12.11, p. 32}
+}
+\componenteTOnce{
+  componente = Módulo satelital,
+  producto = Iridium Edge,
+  caracteristicas = Eventos críticos sin señal celular,
+  ubicacion = DB,
+  cantidad = 182,
+  adquiere = CLIENTE,
+  ciclo = Igual a la fila 3,
+  justificacion = {Latencia de decenas de segundos. Costo por mensaje. Restricción 4}
+}
+\componenteTOnce{
+  componente = Baliza de semirremolque,
+  producto = Teltonika EYE Sensor,
+  caracteristicas = Identificación y temperatura del semirremolque,
+  ubicacion = SR,
+  cantidad = 210,
+  adquiere = CLIENTE,
+  ciclo = Igual a la fila 7,
+  justificacion = {Innovación tipo 3. Los semirremolques son de la compañía, sin restricción 3}
+}
+\componenteTOnce{
+  componente = Aplicación móvil del conductor,
+  producto = {Aplicación de audIT},
+  caracteristicas = {Cuatro perfiles de RT-17.01 del Caso},
+  ubicacion = BM,
+  cantidad = {454 conductores posibles},
+  adquiere = audIT,
+  ciclo = {Mantención evolutiva del contrato},
+  justificacion = {Canal voluntario. La trazabilidad obligatoria no depende de él (restricciones 1 y 2)}
+}
+\end{formularioTOnce}
+\par\vspace{6pt}
+\noindent{\sffamily\fontsize{9.5bp}{12.5bp}\selectfont\color{audit-secundario}Códigos de
+emplazamiento: N, Azure Chile Central. N2, Azure Brazil South. SB, sala de San Bernardo. GT, gabinete
+de terminal. DB, equipo a bordo. SR, semirremolque. BM, teléfono del conductor. Las fuentes de las
+fichas de fabricante están en las Referencias del Subdocumento N.º 4.\par}
 \end{formulario}

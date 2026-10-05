@@ -4,130 +4,34 @@
   "modo_folio": "subdocumento",
   "archivos": [
     {
-      "clave": "04",
-      "nombre": "AUDIT-Subdocumento4.pdf",
+      "clave": "01",
+      "nombre": "AUDIT-Subdocumento1.pdf",
       "folio_inicial": 1,
-      "paginas": 64,
-      "aux": "salida/aux/informe2/04/AUDIT-Subdocumento4.aux",
-      "log": "salida/aux/informe2/04/AUDIT-Subdocumento4.log",
+      "paginas": 7,
+      "aux": "salida/aux/informe2/01/AUDIT-Subdocumento1.aux",
+      "log": "salida/aux/informe2/01/AUDIT-Subdocumento1.log",
       "fuentes": [
         [
           "subdocumentos"
         ],
         [
-          "subdocumentos/04-arquitectura"
+          "subdocumentos/01-empresa"
         ]
       ]
     },
     {
-      "clave": "07",
-      "nombre": "AUDIT-Subdocumento7.pdf",
-      "folio_inicial": 1,
-      "paginas": 16,
-      "aux": "salida/aux/informe2/07/AUDIT-Subdocumento7.aux",
-      "log": "salida/aux/informe2/07/AUDIT-Subdocumento7.log",
-      "fuentes": [
-        [
-          "subdocumentos"
-        ],
-        [
-          "subdocumentos/07-plan-trabajo"
-        ]
-      ]
-    },
-    {
-      "clave": "13",
-      "nombre": "AUDIT-Subdocumento13.pdf",
-      "folio_inicial": 1,
-      "paginas": 23,
-      "aux": "salida/aux/informe2/13/AUDIT-Subdocumento13.aux",
-      "log": "salida/aux/informe2/13/AUDIT-Subdocumento13.log",
-      "fuentes": [
-        [
-          "subdocumentos"
-        ],
-        [
-          "subdocumentos/13-innovaciones"
-        ]
-      ]
-    },
-    {
-      "clave": "04T-11",
-      "nombre": "AUDIT-Formulario-T-11.pdf",
-      "folio_inicial": 1,
-      "paginas": 13,
-      "aux": "salida/aux/informe2/04T-11/AUDIT-Formulario-T-11.aux",
-      "log": "salida/aux/informe2/04T-11/AUDIT-Formulario-T-11.log",
-      "fuentes": [
-        [
-          "subdocumentos"
-        ],
-        [
-          "subdocumentos/04-arquitectura"
-        ]
-      ]
-    },
-    {
-      "clave": "07T-14",
-      "nombre": "AUDIT-Formulario-T-14.pdf",
+      "clave": "01T-6",
+      "nombre": "AUDIT-Formulario-T-6.pdf",
       "folio_inicial": 1,
       "paginas": 4,
-      "aux": "salida/aux/informe2/07T-14/AUDIT-Formulario-T-14.aux",
-      "log": "salida/aux/informe2/07T-14/AUDIT-Formulario-T-14.log",
+      "aux": "salida/aux/informe2/01T-6/AUDIT-Formulario-T-6.aux",
+      "log": "salida/aux/informe2/01T-6/AUDIT-Formulario-T-6.log",
       "fuentes": [
         [
           "subdocumentos"
         ],
         [
-          "subdocumentos/07-plan-trabajo"
-        ]
-      ]
-    },
-    {
-      "clave": "07T-15",
-      "nombre": "AUDIT-Formulario-T-15.pdf",
-      "folio_inicial": 1,
-      "paginas": 8,
-      "aux": "salida/aux/informe2/07T-15/AUDIT-Formulario-T-15.aux",
-      "log": "salida/aux/informe2/07T-15/AUDIT-Formulario-T-15.log",
-      "fuentes": [
-        [
-          "subdocumentos"
-        ],
-        [
-          "subdocumentos/07-plan-trabajo"
-        ]
-      ]
-    },
-    {
-      "clave": "07T-18",
-      "nombre": "AUDIT-Formulario-T-18.pdf",
-      "folio_inicial": 1,
-      "paginas": 4,
-      "aux": "salida/aux/informe2/07T-18/AUDIT-Formulario-T-18.aux",
-      "log": "salida/aux/informe2/07T-18/AUDIT-Formulario-T-18.log",
-      "fuentes": [
-        [
-          "subdocumentos"
-        ],
-        [
-          "subdocumentos/07-plan-trabajo"
-        ]
-      ]
-    },
-    {
-      "clave": "13T-19",
-      "nombre": "AUDIT-Formulario-T-19.pdf",
-      "folio_inicial": 1,
-      "paginas": 11,
-      "aux": "salida/aux/informe2/13T-19/AUDIT-Formulario-T-19.aux",
-      "log": "salida/aux/informe2/13T-19/AUDIT-Formulario-T-19.log",
-      "fuentes": [
-        [
-          "subdocumentos"
-        ],
-        [
-          "subdocumentos/13-innovaciones"
+          "subdocumentos/01-empresa"
         ]
       ]
     }

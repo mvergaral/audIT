@@ -248,6 +248,21 @@ def varios(cfg, perfil, lista, grupo, continuo, caratula, jobs, forzar):
                      if os.path.isdir(os.path.join(RAIZ, r, sd["carpeta"]))]
                     + ([perfil.observaciones] if perfil.observaciones else []))
         trabajos.append(t)
+    # Comunicado 10, sección 1: cada formulario en su propio archivo
+    formularios = []
+    if cfg.instancia != "informe1":
+        for n in lista:
+            sd = cfg.subdocs[n]
+            for f in sd["formularios"]:
+                tf = Trabajo(f"{n:02d}{f}", "formulario.tex", cfg.nombre_formulario(f),
+                             os.path.join(auxbase, f"{n:02d}{f}"),
+                             pre + r"\def\NumeroSubdoc{%d}\def\FormularioActual{%s}" % (n, f),
+                             [os.path.join(r, sd["carpeta"]) for r in perfil.raices
+                              if os.path.isdir(os.path.join(RAIZ, r, sd["carpeta"]))])
+                tf.subdoc, tf.formulario = n, f
+                formularios.append(tf)
+    subdocs_trab = list(trabajos)
+    trabajos = trabajos + formularios
     car = None
     if continuo or caratula:
         car = Trabajo("00", "caratula.tex", cfg.nombre_caratula(), os.path.join(auxbase, "00"),
@@ -330,9 +345,12 @@ def varios(cfg, perfil, lista, grupo, continuo, caratula, jobs, forzar):
     guardar_json(os.path.join(destino, "manifiesto.json"), manifiesto)
     # Markdown equivalente de cada subdocumento, desde el mismo contenido.tex
     import tex2md
-    for n, t in zip(lista, trabajos):
+    for n, t in zip(lista, subdocs_trab):
         with open(os.path.join(destino, t.nombre + ".md"), "w", encoding="utf-8") as f:
-            f.write(tex2md.subdocumento(cfg, n, perfil.raices))
+            f.write(tex2md.subdocumento(cfg, n, perfil.raices, t.aux))
+    for t in formularios:
+        with open(os.path.join(destino, t.nombre + ".md"), "w", encoding="utf-8") as f:
+            f.write(tex2md.formulario(cfg, t.subdoc, t.formulario, perfil.raices, t.aux))
     print(f"  {len(orden)} PDF y {len(trabajos)} Markdown en {os.path.relpath(destino, RAIZ)}/")
     return orden
 
@@ -562,8 +580,8 @@ def orden_subdocs(cfg, args):
         lista = cfg.lista()
     modo = "continuo" if continuo else "por subdocumento"
     print(f"Subdocumentos de {cfg.instancia}: {lista}, folio {modo}")
-    caratula = args.caratula or os.path.exists(
-        os.path.join(RAIZ, "anexos", f"observaciones-{anterior(cfg.instancia)}.tex"))
+    # La carátula del sobre no se genera en los informes (D4-27): solo con --caratula
+    caratula = args.caratula
     # Un modo de folio distinto del configurado sale en otra carpeta, para no
     # pisar la entrega: salida/informe2-continuo/
     grupo = cfg.instancia

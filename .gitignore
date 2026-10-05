@@ -24,7 +24,7 @@ __pycache__/
 Investigacion/*.pdf
 
 # Archivos auxiliares de compilación LaTeX
-*/salida/aux/
+**/salida/aux/
 **/salida/migracion/
 .venv/
 **/herramientas/.venv/

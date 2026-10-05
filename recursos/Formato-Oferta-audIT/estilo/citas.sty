@@ -70,6 +70,11 @@
 \renewcommand*{\bibfont}{\normalfont\normalsize}
 \setlength\bibitemsep{5pt}
 \setlength\bibhang{16.5pt}
+% Las direcciones largas se cortan en cualquier carácter antes de desbordar
+\setcounter{biburlnumpenalty}{9000}
+\setcounter{biburllcpenalty}{7000}
+\setcounter{biburlucpenalty}{8000}
+\appto\bibsetup{\emergencystretch=2em\hfuzz=1pt}
 
 % Anexo de referencias. Solo se imprime si hubo citas.
 \newcommand\anexoReferencias{%

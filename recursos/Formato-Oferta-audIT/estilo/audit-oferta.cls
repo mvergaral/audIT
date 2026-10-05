@@ -244,6 +244,8 @@
 \hypersetup{pdfcreator={audIT}, pdfauthor={audIT}}
 \pdfstringdefDisableCommands{\def\marcador#1{[#1]}\def\req#1{#1}}
 \RequirePackage{lastpage}
+% Estructura del Comunicado 10 (D4-49): va después de hyperref
+\RequirePackage{comunicado10}
 \ifdefined\ArchivoExternos\InputIfFileExists{\ArchivoExternos}{}{}\fi
 
 \ifaudit@compat\RequirePackage{compatibilidad}\fi

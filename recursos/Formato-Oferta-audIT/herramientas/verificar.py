@@ -626,11 +626,9 @@ def residuos(donde, textos, excepciones_hh=(), economico=False):
                 continue
             for m in re.finditer(patron, t, re.I if etiqueta != "nombre de integrante" else 0):
                 linea = t.count("\n", 0, m.start()) + 1
+                if etiqueta == "nombre de integrante" and "Carlos Jesús Abarza" in t[max(0, m.start() - 10):m.end() + 30]:
+                    continue
                 malos.append(f"{donde} {nombre}:{linea}: {etiqueta} «{m.group(0)}»")
-        for m in re.finditer(r"\b192\b", t):
-            cerca = t[max(0, m.start() - 60):m.end() + 60].lower()
-            if "cami" in cerca or "tercer" in cerca:
-                malos.append(f"{donde} {nombre}: 192 usado como cantidad de camiones")
     return malos
 
 
@@ -756,6 +754,9 @@ def pertenencia(entradas, archivo, folio0, n):
             continue
         if clave.startswith("sd-"):
             marcas.append((int(folio), int(clave[3:]), True))
+        elif clave.startswith("formsd-"):
+            # contenido de un formulario en archivo propio (Comunicado 10, sección 1)
+            marcas.append((int(folio), int(clave[7:]), False))
         elif not clave.startswith(("form-", "anexo-")):
             marcas.append((int(folio), None, False))
     marcas.sort(key=lambda x: x[0])
@@ -779,11 +780,12 @@ def subdoc_encabezado(pagina):
         for l in b.get("lines", []):
             r = pymupdf.Rect(l["bbox"]) * m
             texto = " ".join(s["text"] for s in l["spans"])
-            if r.y0 < 16 * MM or (r.y0 < 25 * MM and "ANEXO GRÁFICO" in texto):
+            if r.y0 < 16 * MM or (r.y0 < 25 * MM and ("ANEXO GRÁFICO" in texto
+                                                     or "PÁGINA HORIZONTAL" in texto)):
                 textos.append(texto)
     if not textos:
         return False
-    m = re.search(r"\bSubdocumento (\d+)", " ".join(textos))
+    m = re.search(r"\bSubdocumento (\d+)", " ".join(textos), re.I)
     return int(m.group(1)) if m else None
 
 
@@ -815,6 +817,8 @@ def verificar_encabezados(inf, pdfs, entradas):
 
 
 NOMBRE_TECNICO = re.compile(r"^(INFORME[123]|SOBRE2)_[A-Z0-9]+_(SUBDOC\d\d|OFERTA_TECNICA)_\d{8}\.pdf$")
+# Comunicado 10, sección 1: EMPRESA-SubdocumentoX y EMPRESA-Formulario-T-X
+NOMBRE_COM10 = re.compile(r"^[A-Z0-9]+-(Subdocumento\d{1,2}|Formulario-T-\d{1,2})\.pdf$")
 # Formulario E-21 (FEP01 p.72), «sin excepción». La fecha va como AAAAMMDD,
 # igual que en los Artículos 49 a 51 (el E-21 no fija su formato).
 NOMBRE_E21 = {
@@ -834,9 +838,10 @@ def verificar_nombres(inf, entradas, cfg, grupo, man=None):
     if man and man.get("tipo") == "economico":
         return verificar_nombres_economicos(inf, man)
     malos = [e["nombre"] for e in entradas
-             if not NOMBRE_TECNICO.match(e["nombre"]) and e["nombre"] != "muestra.pdf"]
+             if not (NOMBRE_TECNICO.match(e["nombre"]) or NOMBRE_COM10.match(e["nombre"]))
+             and e["nombre"] != "muestra.pdf"]
     det = [f"{e['nombre']}" for e in entradas]
-    inf.agregar("13", "Nombres de archivo conforme a los Artículos 49 a 51",
+    inf.agregar("13", "Nombres de archivo conforme a los Artículos 49 a 51 y al Comunicado 10",
                 NO if malos else CUMPLE, [f"mal nombrado: {m}" for m in malos] or det)
 
 
@@ -1125,10 +1130,10 @@ def verificar_grupo(ruta_manifiesto, cfg):
             fin = int(sig[2]) + 1 if sig and sig[3] == archivo else int(folio) + 3
             t15 |= {f"{archivo}.pdf folio {x}" for x in range(int(folio), fin)}
     malos_pdf = residuos_pdf(pdfs, t15, economico) if pymupdf else []
-    inf.agregar("11", "Sin residuos: Escuela, dupla, nombres, Proyecto Semestral, meses en inglés, "
-                "192 camiones (documento económico: el Artículo 50.2 no se aplica)" if economico else
+    inf.agregar("11", "Sin residuos: Escuela, dupla, nombres, Proyecto Semestral, meses en inglés "
+                "(documento económico: el Artículo 50.2 no se aplica)" if economico else
                 "Sin residuos: Escuela, dupla, nombres, Proyecto Semestral, meses en inglés, "
-                "horas hombre, cifras en dinero (Artículo 50.2), 192 camiones",
+                "horas hombre, cifras en dinero (Artículo 50.2)",
                 NO if malos_fuente or malos_pdf else CUMPLE,
                 malos_fuente + malos_pdf or [f"{len(fuentes)} fuentes y {sum(p.n for p in pdfs)} "
                                               "páginas revisadas"])

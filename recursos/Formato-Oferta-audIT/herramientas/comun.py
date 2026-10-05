@@ -82,7 +82,15 @@ class Config:
 
     # Artículos 49 a 51 y patrón usado por el equipo en el Informe 1
     def nombre_subdoc(self, n):
-        return f"{self.prefijo}_{self.sigla}_SUBDOC{n:02d}_{self.fecha_archivo}"
+        # Comunicado 10, sección 1 (desde el Informe 2): EMPRESA-SubdocumentoX.
+        # El Informe 1 se entregó con el patrón anterior.
+        if self.instancia == "informe1":
+            return f"{self.prefijo}_{self.sigla}_SUBDOC{n:02d}_{self.fecha_archivo}"
+        return f"{self.sigla}-Subdocumento{n}"
+
+    def nombre_formulario(self, f):
+        # Comunicado 10, sección 1: EMPRESA-Formulario-T-X, un formulario por archivo
+        return f"{self.sigla}-Formulario-{f}"
 
     def nombre_caratula(self):
         return f"{self.prefijo}_{self.sigla}_SUBDOC00_{self.fecha_archivo}"

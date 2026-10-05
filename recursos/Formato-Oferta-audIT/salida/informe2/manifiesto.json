@@ -1,0 +1,135 @@
+{
+  "grupo": "informe2",
+  "instancia": "informe2",
+  "modo_folio": "subdocumento",
+  "archivos": [
+    {
+      "clave": "01",
+      "nombre": "AUDIT-Subdocumento1.pdf",
+      "folio_inicial": 1,
+      "paginas": 30,
+      "aux": "salida/aux/informe2/01/AUDIT-Subdocumento1.aux",
+      "log": "salida/aux/informe2/01/AUDIT-Subdocumento1.log",
+      "fuentes": [
+        [
+          "subdocumentos"
+        ],
+        [
+          "subdocumentos/01-empresa"
+        ]
+      ]
+    },
+    {
+      "clave": "02",
+      "nombre": "AUDIT-Subdocumento2.pdf",
+      "folio_inicial": 1,
+      "paginas": 39,
+      "aux": "salida/aux/informe2/02/AUDIT-Subdocumento2.aux",
+      "log": "salida/aux/informe2/02/AUDIT-Subdocumento2.log",
+      "fuentes": [
+        [
+          "subdocumentos"
+        ],
+        [
+          "subdocumentos/02-problema"
+        ]
+      ]
+    },
+    {
+      "clave": "04",
+      "nombre": "AUDIT-Subdocumento4.pdf",
+      "folio_inicial": 1,
+      "paginas": 66,
+      "aux": "salida/aux/informe2/04/AUDIT-Subdocumento4.aux",
+      "log": "salida/aux/informe2/04/AUDIT-Subdocumento4.log",
+      "fuentes": [
+        [
+          "subdocumentos"
+        ],
+        [
+          "subdocumentos/04-arquitectura"
+        ]
+      ]
+    },
+    {
+      "clave": "05",
+      "nombre": "AUDIT-Subdocumento5.pdf",
+      "folio_inicial": 1,
+      "paginas": 20,
+      "aux": "salida/aux/informe2/05/AUDIT-Subdocumento5.aux",
+      "log": "salida/aux/informe2/05/AUDIT-Subdocumento5.log",
+      "fuentes": [
+        [
+          "subdocumentos"
+        ],
+        [
+          "subdocumentos/05-datos"
+        ]
+      ]
+    },
+    {
+      "clave": "13",
+      "nombre": "AUDIT-Subdocumento13.pdf",
+      "folio_inicial": 1,
+      "paginas": 24,
+      "aux": "salida/aux/informe2/13/AUDIT-Subdocumento13.aux",
+      "log": "salida/aux/informe2/13/AUDIT-Subdocumento13.log",
+      "fuentes": [
+        [
+          "subdocumentos"
+        ],
+        [
+          "subdocumentos/13-innovaciones"
+        ]
+      ]
+    },
+    {
+      "clave": "01T-6",
+      "nombre": "AUDIT-Formulario-T-6.pdf",
+      "folio_inicial": 1,
+      "paginas": 4,
+      "aux": "salida/aux/informe2/01T-6/AUDIT-Formulario-T-6.aux",
+      "log": "salida/aux/informe2/01T-6/AUDIT-Formulario-T-6.log",
+      "fuentes": [
+        [
+          "subdocumentos"
+        ],
+        [
+          "subdocumentos/01-empresa"
+        ]
+      ]
+    },
+    {
+      "clave": "04T-11",
+      "nombre": "AUDIT-Formulario-T-11.pdf",
+      "folio_inicial": 1,
+      "paginas": 12,
+      "aux": "salida/aux/informe2/04T-11/AUDIT-Formulario-T-11.aux",
+      "log": "salida/aux/informe2/04T-11/AUDIT-Formulario-T-11.log",
+      "fuentes": [
+        [
+          "subdocumentos"
+        ],
+        [
+          "subdocumentos/04-arquitectura"
+        ]
+      ]
+    },
+    {
+      "clave": "13T-19",
+      "nombre": "AUDIT-Formulario-T-19.pdf",
+      "folio_inicial": 1,
+      "paginas": 11,
+      "aux": "salida/aux/informe2/13T-19/AUDIT-Formulario-T-19.aux",
+      "log": "salida/aux/informe2/13T-19/AUDIT-Formulario-T-19.log",
+      "fuentes": [
+        [
+          "subdocumentos"
+        ],
+        [
+          "subdocumentos/13-innovaciones"
+        ]
+      ]
+    }
+  ]
+}

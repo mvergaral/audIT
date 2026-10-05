@@ -1,108 +1,108 @@
 % ============================================================================
-%  Formulario T-19. Cartera de innovaciones
-%  audIT Soluciones Tecnológicas SpA - Licitación TFEP-01/2026
+%  Formulario T-19. Cartera de innovaciones. Archivo propio
+%  AUDIT-Formulario-T-19.pdf (Comunicado 10, sección 1).
+%  Sin montos (Artículo 50.2): el formulario agrega la
+%  remisión al Sobre N.º 3 en inversión y costo operacional.
 % ============================================================================
-
 \begin{formulario}{T-19}
-
+% ------------------------------------------------------------- innovación 1
 \fichaInnovacion{
-  tipo = {1},
-  nombre = {Portal del transportista con liquidación en curso y expediente exportable verificable},
-  problema = {El 60{,}4\,\% de la flota (226 de 374 tractocamiones) y el 56{,}8\,\% de los conductores (258 de 454) pertenecen a 148 transportistas subcontratados independientes (Caso, numeral 2.2). El 11\,\% de las liquidaciones mensuales se corrige con posterioridad a su emisión y el ciclo de cálculo demora 9 días tras el cierre de mes (Caso, numeral 7.3, p.~15). Los transportistas desconfían del equipamiento de monitoreo al percibirlo como una fiscalización punitiva unilateral si no les reporta un beneficio probatorio directo (Caso, p.~17).},
-  tecnologia = {Portal web responsivo con aislamiento criptográfico por tenant e identidad federada (Microsoft Entra ID / OAuth 2.0). Emisión de expediente digital firmado electrónicamente con estampado de tiempo RFC 3161 y mecanismo de verificación pública en línea mediante código QR y URI segura sin exponer credenciales internas ni datos comerciales sensibles.},
-  madurez = {Nivel TRL 9 para la firma electrónica avanzada y estampados cronológicos verificables en producción comercial en Chile bajo la Ley 19.799 \parencite{ley19799}. Nivel TRL 8 para la emisión de credenciales verificables descentralizadas conforme al estándar internacional W3C Verifiable Credentials Data Model v2.0 \parencite{w3c_vcdm2}.},
-  fuentes = {W3C (2025). Verifiable Credentials Data Model v2.0; Biblioteca del Congreso Nacional de Chile (2002). Ley N.º 19.799 sobre Documentos Electrónicos, Firma Electrónica y Servicios de Certificación.},
-  arquitectura = {Se inserta transversalmente entre la Capa 1 (Presentación: Portal Transportista), la Capa 4 (Servicios de Negocio: Servicio de Liquidación y Expediente Digital) y la Capa 7 (Seguridad: Azure Key Vault con módulo criptográfico HSM FIPS 140-2 Nivel 3 para sellado digital de evidencias).},
-  edt = {Paquetes EDT 3.5 (Portal Web de Clientes y Transportistas) y EDT 5.3 (Módulo de Liquidación en Curso y Expediente Digital).},
-  mes = {Mes 9 (prototipo funcional en laboratorio) y Mes 14 (habilitación en marcha blanca).},
-  inversion = {Desarrollo de módulos de visualización en tiempo real, pasarela de verificación pública y suscripción de certificados corporativos de firma electrónica avanzada.},
-  costooperacional = {Mantenimiento de infraestructura web, renovación anual de certificados criptográficos y soporte técnico a usuarios externos.},
-  beneficio = {Reducción de liquidaciones corregidas del 11\,\% actual a menos del 2\,\%; reducción del ciclo de liquidación de 9 días a disponibilidad continua viaje a viaje; y adopción activa por al menos el 40\,\% de los transportistas subcontratados durante la marcha blanca.},
-  indicador = {Línea base: 11\,\% de liquidaciones corregidas y 0 expedientes digitales. Meta: $\le 2\,\%$ de liquidaciones rectificadas y $\ge 40\,\%$ de transportistas emitiendo al menos un expediente probatorio al mes 15.},
-  medicion = {Tercer cierre mensual posterior al paso a producción en régimen normal.},
-  riesgo = {Desinterés inicial de los transportistas o baja comprensión de la utilidad probatoria del expediente digital (Probabilidad media, Impacto medio).},
-  mitigacion = {Taller de inducción práctico en terminal durante el enrolamiento de flota, asistiendo la primera descarga de liquidación y expediente.},
-  contingencia = {En caso de baja adopción en portal, el sistema despacha automáticamente el resumen mensual en PDF certificado vía correo electrónico y mensajería segura.}
+  tipo = {1. Producto o servicio},
+  nombre = {Portal del transportista con liquidación en curso},
+  problema = {La liquidación al transportista subcontratado toma nueve días, la hacen ocho personas y el 11 \% se corrige después de emitida (Caso, numeral 4.11, p. 12). Además, el transportista no puede probar ante terceros la evidencia que el sistema ya produce sobre él},
+  tecnologia = {Portal segregado por identidad alimentado por el motor de costeo de la liquidación oficial. Expediente exportable con jornada acreditada, habilitaciones y hoja de vida de los equipos, firmado y verificable por un tercero sin acceso al sistema},
+  madurez = {Escala de niveles de madurez tecnológica de 1 a 9. Firma electrónica avanzada con verificación en línea en nivel 9, línea base comprometida. Credencial verificable entre los niveles 7 y 8},
+  fuentes = {International Organization for Standardization (2013). Congreso Nacional de Chile (2002), Ley N.º 19.799. World Wide Web Consortium (2025)},
+  arquitectura = {Servicio de emisión de expediente en la capa de servicios de negocio, que consume control de jornada, gestión documental y gestión de flota. Servicio público de verificación. Firma desde la bóveda de claves de la capa de seguridad. Solicitud y descarga en el portal},
+  edt = {EDT 4.3 (Servicios de Liquidación) y EDT 7.3 (Portal y Expedientes)},
+  mes = {Decisión de firma en el mes 4. Construcción entre los meses 10 y 12. Disponible en la marcha blanca de la Etapa 1},
+  inversion = {Desarrollo incremental sobre el portal ya presupuestado y suscripción de certificados de firma del emisor},
+  costooperacional = {Reducción en horas de rectificación manual y soporte a transportistas; costo menor en certificados de firma digital},
+  beneficio = {Menos liquidaciones corregidas (de 11 \% a menos de 2 \%) y menor tiempo de cierre mensual. Reflejado en ahorros OPEX del flujo de caja},
+  indicador = {Transportistas adheridos que emiten al menos un expediente, de 0 \% a 40 \%. Liquidaciones corregidas después de emitidas, de 11 \% a menos de 2 \%},
+  medicion = {Cierre de la marcha blanca, mes 15. Tercer cierre mensual tras el paso a producción},
+  riesgo = {Que el transportista no perciba utilidad y no emita el expediente, probabilidad media e impacto alto. Que los destinatarios no acepten el documento como prueba},
+  mitigacion = {Asistir la primera emisión en el terminal durante el enrolamiento. Levantar destinatarios reales en el mes 4, antes de construir},
+  contingencia = {Generación asistida y despacho automático del expediente mensual por correo electrónico certificado ante baja adopción inicial}
 }
-
+% ------------------------------------------------------------- innovación 2
 \fichaInnovacion{
-  tipo = {2},
-  nombre = {Gemelo Digital operacional para simulación logística, ruteo predictivo y mantenimiento de flota},
-  problema = {Asimetría y dispersión del 19\,\% en el rendimiento de combustible entre tractocamiones del mismo modelo operando en rutas idénticas (Caso, numeral 7.3, p.~15), sumado a la falta de anticipación operativa ante cierres de pasos cordilleranos que alcanzan hasta 12 días continuos (RT-10.05). La torre asigna fletes mediante heurísticas estáticas sin proyectar en tiempo real el consumo térmico ni la degradación mecánica.},
-  tecnologia = {Plataforma Azure Digital Twins estructurada bajo el lenguaje Digital Twins Definition Language (DTDL v2), articulada con modelos cinemáticos vehiculares y telemetría de motor CAN/FMS (SAE J1939). Ingesta desacoplada mediante Azure IoT Hub y Apache Kafka, correlacionando perfil topográfico de elevación, gradiente térmico de montaña y carga transportada.},
-  madurez = {Nivel TRL 7 (sistema integrado y validado en entorno operativo). Sustentado en el estándar DTDL del Digital Twin Consortium y en la norma ISO 23247 para gemelos digitales en sistemas de transporte y manufactura.},
-  fuentes = {Digital Twin Consortium (2023). Digital Twin System Interoperability Framework; ISO (2021). ISO 23247 Automation systems and integration -- Digital twin framework for manufacturing.},
-  arquitectura = {Se inserta transversalmente entre la Capa 4 (Servicios de Negocio: Planificación, Despacho y Mantenimiento Predictivo), la Capa 5 (Integración y Eventos: bus Kafka) y la Capa 6 (Datos: Lakehouse analítico Delta Lake y series temporales TimescaleDB).},
-  edt = {Paquetes EDT 3.6 (Modelado DTDL de Flota y Rutas) y EDT 4.6 (Integración de Simulación en Torre de Control).},
-  mes = {Mes 10 (piloto con 61 tractocamiones propios) y Mes 14 (integración en marcha blanca).},
-  inversion = {Suscripción a servicios gestionados Azure Digital Twins, desarrollo de esquemas DTDL v2 y calibración de modelos predictivos de consumo.},
-  costooperacional = {Consumo de operaciones de grafo y cómputo de simulación en Azure; compensado con ahorros en consumo de combustible y mantenimiento preventivo.},
-  beneficio = {Reducción de la dispersión de combustible entre unidades idénticas del 19\,\% al 10\,\%; disminución del 15\,\% en fallas mecánicas en ruta; y anticipación de 6 horas en la reprogramación de convoyes ante contingencias climáticas.},
-  indicador = {Línea base: 19\,\% de dispersión de rendimiento y cero anticipación predictiva. Meta: dispersión $\le 10\,\%$ y alertas predictivas de falla con al menos 48 horas de anticipación.},
-  medicion = {Evaluación trimestral comparativa en régimen operativo sobre los 41 millones de km anuales.},
-  riesgo = {Inconsistencias en telemetría de motor CANbus en tractocamiones subcontratados con interfaces dispares (Probabilidad media, Impacto medio).},
-  mitigacion = {Entrenamiento del modelo predictivo acotado a los 61 tractocamiones propios con puerto FMS de fábrica activo antes de homologar terceros.},
-  contingencia = {Si un vehículo pierde telemetría FMS, el gemelo digital conmuta a perfiles cinemáticos basados exclusivamente en coordenadas GPS y velocidad comercial.}
+  tipo = {2. Proceso},
+  nombre = {Despliegue continuo y modular sin detención de flota},
+  problema = {Un camión detenido no produce (Caso, capítulo 10, restricción 10, p. 24). La intervención a bordo solo ocurre en terminal, cada seis días en promedio, y el 22 \% de la flota subcontratada pasa menos de una vez al mes (Caso, numeral 2.3, p. 7)},
+  tecnologia = {Aprovisionamiento remoto con Azure IoT Hub Device Update y Device Twins, configuración precargada en fábrica, kits de reemplazo con arneses de acople rápido por familia de tractocamión y anticipación de llegada a terminal desde la posición de la flota},
+  madurez = {Escala ISO 16290:2013 de 1 a 9. Metodología de sustitución modular y aprovisionamiento telemático en nivel 8},
+  fuentes = {International Organization for Standardization (2013). Microsoft Azure IoT (2024)},
+  arquitectura = {Capa de borde y servicio de aprovisionamiento Device Twins. Rutina de autodiagnóstico y enrolamiento con lectores CAN sin contacto del Formulario T-11 validada en barrera de salida},
+  edt = {EDT 4.2 (Instalación de Dispositivos a Bordo y Búfer) y EDT 4.5 (Integración Telemática y Lectores CAN)},
+  mes = {Piloto de 10 camiones en el mes 4. Flota propia completa al cierre del mes 8},
+  inversion = {Kits de arneses de acople rápido y stock de búferes de intercambio rápido en terminales},
+  costooperacional = {Supresión absoluta de horas improductivas y lucro cesante por mantención en patio},
+  beneficio = {Cero horas de inmovilización de flota comercialmente activa atribuible a la instalación},
+  indicador = {Ritmo de 35 a 45 tractocamiones por mes. 100 \% de los 148 propios al cierre del mes 8. Sustitución en terreno en menos de 30 minutos por camión},
+  medicion = {Mensual hasta el mes 8},
+  riesgo = {Dispersión de unidades en ruta que retrase el paso por terminal, probabilidad media e impacto medio},
+  mitigacion = {Monitoreo telemático de proximidad y asignación de kits en andén previo a la llegada},
+  contingencia = {Instalación en ruta coordinada durante paradas de mantención preventiva en talleres autorizados}
 }
-
+% ------------------------------------------------------------- innovación 3
 \fichaInnovacion{
-  tipo = {3},
-  nombre = {Operación desconectada resiliente con almacenamiento a bordo de 8 GB y vista única de flota},
-  problema = {41 millones de kilómetros anuales con rutas de más de 80 kilómetros en zonas de silencio celular absoluto (Caso, numeral 2.2, p.~6), 34 camiones sin equipo y 340 unidades dispersas en tres plataformas de posicionamiento incompatibles, una sin interfaz de exportación (p.~34). Esta dispersión produce ceguera en la torre y riesgo crítico de multas laborales por pérdida de evidencia de jornada.},
-  tecnologia = {Arquitectura híbrida Edge-to-Cloud con almacenamiento no volátil flash industrial $\ge 8$~GB en cabina, motor embebido SQLite 3 en modo WAL (\textit{Write-Ahead Logging}), compresión binaria Protocol Buffers y bus asíncrono MQTT v5.0 / Kafka. Emisión en contingencia de Documentos Electrónicos de Transporte (DET) con folios CAF y Timbre Electrónico DTE (TED) precargados en memoria criptográfica local antes del movimiento vehicular. Normalización de plataformas externas vía conectores API/Webhooks sin tocar hardware ajeno (Restricción 3).},
-  madurez = {Nivel TRL 8/9 conforme a ISO 16290 \parencite{iso16290}. Sustentado en estándares consolidados de comunicación vehicular (SAE J1939-71, MQTT v5.0) y modelos formales de replicación distribuida con consistencia eventual determinista \parencite{kleppmann2017}.},
-  fuentes = {Kleppmann, M. (2017). Designing Data-Intensive Applications; OASIS (2019). MQTT Version 5.0 Standard; FMS Standard (2025). Technical Specification rFMS version 5.0.0.},
-  arquitectura = {Se inserta en la Capa 1 (Borde Terrestre: flash 8 GB, SQLite WAL y acoplador inductivo CAN), Capa 2 (Borde y Exposición: API Gateway con mTLS), Capa 5 (Eventos: Kafka Event Hubs) y Capa 6 (Datos: TimescaleDB y deduplicación por clave de idempotencia en PostgreSQL 16).},
-  edt = {Paquetes EDT 3.4 (Conector Ingestión Telemática), EDT 4.2 (Instalación de Buffer a Bordo 8 GB) y EDT 4.5 (Acopladores Inductivos FMS J1939).},
-  mes = {Mes 8 (flota propia completa 148 unidades intervenidas) y Mes 12 (despliegue general).},
-  inversion = {Provisión de 182 computadores embarcados con flash industrial 8 GB, acopladores inductivos CAN sin contacto y desarrollo de adaptadores para 3 plataformas.},
-  costooperacional = {Tarjetas SIM celulares multicarrier con consumo adaptativo ($\approx 15$~MB/mes) y cargos por mensajes satelitales Iridium SBD en emergencias.},
-  beneficio = {Cero pérdida de registros de telemetría y jornada durante aislamientos de hasta 288 horas (12 días continuos de cierre invernal en Los Libertadores según RT-10.05); y visibilidad unificada del 100\,\% de los 374 tractocamiones en la consola de la torre de control.},
-  indicador = {Línea base: ceguera total en sombras celulares $> 2$ horas y 3 plataformas desconectadas. Meta: 0\,\% pérdida de registros tras 72 h offline y 100\,\% de flota visible en consola unificada.},
-  medicion = {Prueba destructiva de corte de enlace en marcha blanca (mes 14) y auditoría mensual de completitud de datos de viaje.},
-  riesgo = {Reticencia de un proveedor telemático de terceros a otorgar API de integración o bloqueo de exportación (Probabilidad media, Impacto alto).},
-  mitigacion = {Exigencia contractual de estándar técnico de homologación en convenio de adhesión y captura mediante reporte periódico automatizado.},
-  contingencia = {Si un camión de tercero carece de integración telemática, el conductor utiliza la app móvil de audIT como canal de posicionamiento de respaldo durante el flete.}
+  tipo = {3. Tecnológica o de arquitectura},
+  nombre = {Semirremolque conectado},
+  problema = {210 semirremolques propios, 245 a tres años y 44 refrigerados (Caso, numerales 2.2 y 14.1, pp. 6 y 29). La verificación bloqueante comprueba la revisión técnica del semirremolque (numeral 4.4, p. 10), pero el sistema no sabe cuál va enganchado. El plan preventivo usa el odómetro del camión (capítulo 8, p. 19) y el criterio 26 pide kilometraje real (capítulo 18, p. 43)},
+  tecnologia = {Baliza Bluetooth de baja energía Teltonika EYE Sensor BTSMP1 con identificador, temperatura, humedad, acelerómetro y sensor de puerta, IP67, de $-20$ a $+60$ °C. Lectura por el iWave G26I a bordo y por un lector Minew G1 en cada portería. Acople inferido por señal estable y movimiento conjunto},
+  madurez = {Escala de niveles de madurez tecnológica de 1 a 9. Balizas y lectura en nivel 9. Inferencia del acople dentro de la verificación bloqueante de nivel 6 a nivel 7 en la marcha blanca},
+  fuentes = {International Organization for Standardization (2013). Teltonika Telematics (2026a, 2026b). Minew (2023). iWave Global (2026)},
+  arquitectura = {Capa de borde con el G26I y el lector de portería. IoT Hub y Event Hubs en la capa de integración. Contextos Flota y activos (verificación bloqueante y kilometraje) y Telemetría y geocercas (temperatura y puerta). Consume el flujo de IoT Hub y expone el identificador del semirremolque acoplado. Sección 13.3},
+  edt = {EDT 3.4 (Instalación de Balizas BLE y Lectores de Portería) y EDT 4.4 (Integración con Verificación Bloqueante)},
+  mes = {Instalación en la Etapa 1 al paso por terminal (meses 4 a 9), con los 44 refrigerados fuera de diciembre a abril. Activación y primera medición en marcha blanca (meses 13 a 15)},
+  inversion = {Balizas y lectores de portería que compra el mandante (Caso, capítulo 11, p. 24) según el Formulario T-11, más la integración en tres servicios de negocio},
+  costooperacional = {Reposición de balizas al término de su batería y tráfico celular menor dentro de los mensajes del G26I},
+  beneficio = {Ningún semirremolque sale con la revisión técnica vencida. Mantención de semirremolques por kilometraje medido. Respaldo ante el cliente de la condición de la carga refrigerada},
+  indicador = {Asignaciones con semirremolque propio verificado por medición, de no registrado a 95 \% o más. Semirremolques propios con kilometraje medido, 100 \% de los que tienen baliza. Viajes refrigerados con temperatura continua, 100 \%},
+  medicion = {Marcha blanca antes del mes 16. Tercer mes de operación. Primera temporada de diciembre a abril},
+  riesgo = {Acople falso con la baliza de un semirremolque vecino, probabilidad media e impacto alto. Temperatura bajo $-20$ °C en el paso cordillerano. Suplantación del identificador. Batería de menor duración},
+  mitigacion = {Señal estable y movimiento conjunto en los primeros minutos de marcha. Montaje a la sombra y prueba invernal. Lectura de portería como segundo control. Vigilancia del nivel de batería},
+  contingencia = {La verificación vuelve a la declaración con la lectura de portería como control. Modelo de mayor rango térmico en los semirremolques que cruzan. Reposición desde reserva del 10 \%. Modelado STRIDE con mitigación criptográfica contra spoofing (RT-26.07)}
 }
-
+% ------------------------------------------------------------- innovación 4
 \fichaInnovacion{
-  tipo = {4},
-  nombre = {Esquema de adhesión tecnológica en comodato con soberanía de datos para el transportista},
-  problema = {226 camiones subcontratados cuyos dueños temen que el equipamiento telemático sea un mecanismo de fiscalización invasiva o que delate operaciones comerciales con la competencia (Caso, p.~17). 34 unidades no tienen ningún dispositivo y los transportistas carecen de capital para financiar hardware industrial de 8 GB.},
-  tecnologia = {Convenio contractual de adhesión tecnológica bajo figura de comodato con opción de transferencia de dominio al cumplimiento del contrato (56 meses). Gobernanza de datos basada en políticas de soberanía bajo la Ley 21.719 \parencite{ley21719}: el dispositivo sólo transmite coordenadas mientras el camión ejecuta una orden de transporte activa para Curimón S.A., cesando automáticamente fuera del flete.},
-  madurez = {Nivel TRL 9 en modelos contractuales y marcos de privacidad de datos personales regulados por la Ley 21.719 y el Código del Trabajo.},
-  fuentes = {Congreso Nacional de Chile (2024). Ley N.º 21.719 sobre Protección y Tratamiento de Datos Personales; Ministerio del Trabajo (2006). Ley N.º 20.123 sobre Subcontratación.},
-  arquitectura = {Se inserta en la Capa 4 (Servicios de Negocio: Módulo de Contratos y Consentimientos) y la Capa 7 (Seguridad: motor de políticas de privacidad ABAC y bitácora forense WORM).},
-  edt = {Paquetes EDT 1.4 (Estrategia de Adhesión y Convenios de Comodato) y EDT 2.3 (Programa de Capacitación y Enrolamiento de Terceros).},
-  mes = {Mes 4 (lanzamiento del programa de adhesión) y Mes 8 (cierre de suscripciones iniciales).},
-  inversion = {Redacción legal de convenios marco de comodato, material de difusión y gestión de entrega de equipos para las 34 unidades sin dispositivo.},
-  costooperacional = {Costo de administración de contratos y auditoría jurídica semestral de consentimientos de privacidad.},
-  beneficio = {Adhesión voluntaria del 100\,\% de las 34 unidades desprovistas de equipo; eliminación del riesgo de demandas laborales por intromisión ilegítima en la privacidad de 258 conductores externos.},
-  indicador = {Línea base: 0 convenios de adhesión y 34 unidades ciegas. Meta: 100\,\% de las 34 unidades incorporadas al programa y 0 reclamos por vulneración de privacidad de datos.},
-  medicion = {Auditoría de adhesión al cierre de la Etapa 1 (mes 12) y revisión semestral de conformidades.},
-  riesgo = {Desconfianza de gremios de transportistas o negativa a firmar el convenio de comodato (Probabilidad media, Impacto alto).},
-  mitigacion = {Mesa de diálogo inicial con las asociaciones de transportistas exhibiendo las cláusulas de cese automático de transmisión y entrega del expediente digital gratuito.},
-  contingencia = {Si un transportista rechaza el comodato, se le autoriza a homologar un equipo propio siempre que cumpla el estándar de exportación de telemetría de audIT.}
+  tipo = {4. Modelo de negocio o de contratación},
+  nombre = {Esquema de adhesión y propiedad del dispositivo},
+  problema = {Los dueños de camión preguntan de quién es el equipo, quién lo paga y si delatará cuándo trabajan para otro cliente. La decisión quinta del numeral 16.1 sigue abierta (Caso, p. 34) y la restricción 2 obliga a conseguirlo por contrato, incentivo o diseño (capítulo 10, p. 23)},
+  tecnologia = {Comodato sobre el equipamiento con retiro sin costo. Ventana de transmisión gobernada en el firmware. Consentimiento granular y revocable desde el portal con bitácora de accesos. Incentivo financiado con el recupero de los cobros de espera hoy objetados},
+  madurez = {Escala de niveles de madurez tecnológica de 1 a 9. Control de transmisión por ventana en nivel 8. Registro de consentimiento en nivel 8. El componente contractual no se califica en esta escala},
+  fuentes = {International Organization for Standardization (2013). Ministerio de Hacienda (2024), Ley N.º 21.719},
+  arquitectura = {Unidad telemática y búfer local, concentrador de dispositivos, servicios nuevos de consentimiento y de adhesión, y consola de permisos en el portal},
+  edt = {EDT 1.3 (Convenio de Comodato), EDT 5.2 (Campaña de Enrolamiento) y EDT 7.4 (Consola de Consentimiento)},
+  mes = {Adhesión desde el mes 1. Validación jurídica entre los meses 1 y 3. Cohorte piloto entre los meses 6 y 9. Consola entre los meses 9 y 12. Resultado en la marcha blanca},
+  inversion = {Diseño y validación jurídica del anexo, campaña de enrolamiento en cinco terminales y consola de consentimiento. El equipamiento lo compra el mandante (Caso, capítulo 11, p. 24)},
+  costooperacional = {Aumentan conectividad, soporte y reposición del parque en comodato. Disminuyen el costo de la liquidación y de gestionar objeciones de cobro},
+  beneficio = {Reducir la objeción de los cobros de espera desde el 71 \% (Caso, numeral 4.7, p. 11) bajo el 20 \%. Reflejado en ingresos por recupero operacional en el flujo de caja de la Oferta Económica},
+  indicador = {Transportistas adheridos sobre 148, de 0 \% a 70 \% en la Etapa 1 y 90 \% en la Etapa 2. Revocación bajo el 10 \%. Objeción de cobros de espera bajo el 20 \%},
+  medicion = {Anexos firmados desde el mes 3. Cierre de la Etapa 1 y de la Etapa 2},
+  riesgo = {Adhesión bajo el 70 \% en la Etapa 1, probabilidad media e impacto alto. Desconfianza en la ventana. Rechazo de la evidencia por los clientes. Anexo que no resista revisión jurídica, probabilidad baja e impacto alto},
+  mitigacion = {Comenzar en el mes 1 y mostrar beneficio antes de pedir el equipo. Ventana auditable por el dueño. Validación jurídica entre los meses 1 y 3},
+  contingencia = {Escalonar el incentivo y extender la modalidad de datos, que no requiere instalar nada. Financiar el incentivo con la reducción del costo de liquidación}
 }
-
+% ------------------------------------------------------------- innovación 5
 \fichaInnovacion{
-  tipo = {5},
-  nombre = {Sistema de bienestar, alerta preventiva de fatiga y ruteo hacia paradores seguros},
-  problema = {La fatiga y somnolencia al volante es la principal causa de accidentes graves en el transporte de carga interurbano (numeral 7.3 del Caso). Los conductores enfrentan dificultades para encontrar estacionamientos seguros con servicios básicos en la red vial chilena, exponiéndose a robos o extendiendo la conducción más allá del límite legal de 5 horas continuas del Art.~25 bis.},
-  tecnologia = {Algoritmo de ruteo preventivo y catálogo georreferenciado de Paradores Seguros certificados en las Rutas 5 Norte, 5 Sur y 68. Integración de tiempos de marcha acumulados en el dispositivo a bordo con alerta sonora y visual en cabina emitida con 45 minutos de anticipación al límite de descanso, indicando la ubicación del parador seguro más próximo con plazas disponibles.},
-  madurez = {Nivel TRL 8, sustentado en algoritmos geoespaciales consolidados de optimización de rutas (Open Source Routing Machine / PostGIS) y catálogos de infraestructura vial del MOP.},
-  fuentes = {Ministerio de Obras Públicas (2024). Catálogo Nacional de Áreas de Descanso y Servicios Viales; Dirección del Trabajo (2009). Resolución Exenta N.º 1213 sobre control de asistencia y descansos en transporte interurbano.},
-  arquitectura = {Se inserta en la Capa 1 (Borde Terrestre: display de cabina con alertas de descanso), Capa 4 (Servicios de Negocio: Servicio de Jornada y Ruteo Vial) y Capa 6 (Datos: base geoespacial PostGIS de paradores seguros).},
-  edt = {Paquetes EDT 3.7 (Módulo de Gestión de Jornada y Paradores Seguros) y EDT 4.7 (Piloto de Alertas en Cabina).},
-  mes = {Mes 6 (catálogo de paradores) y Mes 12 (activación de alertas en flota activa).},
-  inversion = {Levantamiento en terreno y certificación de paradores seguros en las rutas principales, desarrollo del motor de recomendación en cabina y app móvil.},
-  costooperacional = {Mantenimiento y actualización mensual de la base de datos de paradores y servicios viales habilitados.},
-  beneficio = {Reducción del 30\,\% en infracciones por exceso de jornada continua (Art.~25 bis); cero accidentes por volcamiento o colisión atribuibles a fatiga en la flota intervenida; y elevación del índice de satisfacción del conductor.},
-  indicador = {Línea base: 14 infracciones anuales de jornada y cero alertas preventivas en cabina. Meta: 0 infracciones de jornada continua y $\ge 95\,\%$ de descansos efectuados en paradores seguros certificados.},
-  medicion = {Monitoreo mensual de eventos de jornada y reporte semestral de siniestralidad vial en comités paritarios.},
-  riesgo = {Falta de plazas disponibles en los paradores recomendados en horario nocturno (Probabilidad media, Impacto medio).},
-  mitigacion = {Convenios preferenciales de reserva de estacionamiento con concesionarias de autopistas y servicentros de las rutas críticas.},
-  contingencia = {Si un parador se encuentra colapsado, el sistema recalcula en tiempo real la ruta hacia la siguiente instalación segura autorizada sin penalizar al conductor.}
+  tipo = {5. Experiencia de usuario, sostenibilidad o impacto social},
+  nombre = {Bienestar del conductor y descanso en parador seguro},
+  problema = {Una alerta de jornada entregada donde no hay dónde detenerse es inútil (Caso, capítulo 18, p. 43). Hay tramos sin lugar seguro para combinaciones de 45 toneladas (numeral 16.1, p. 35). 258 conductores externos no son trabajadores de la compañía (numeral 2.3, p. 6)},
+  tecnologia = {Motor predictivo a bordo que cruza jornada acumulada, topografía y ventana circadiana de 02:00 a 06:00 h. Catálogo local de paradores calificados. Enclavamiento cinético de pantalla y síntesis de voz local en español},
+  madurez = {Escala de niveles de madurez tecnológica de 1 a 9. Hardware de borde, almacenamiento local, síntesis de voz y enclavamiento en nivel 8. Modelo circadiano y ontología de paradores en nivel 7},
+  fuentes = {International Organization for Standardization (2013, 2017, 2019). National Academies of Sciences, Engineering, and Medicine (2016). Congreso Nacional de Chile (2021), Ley N.º 21.377. Ministerio del Trabajo (2003, 2006)},
+  arquitectura = {Capa de borde con el motor predictivo, el catálogo y la síntesis de voz. Servicio de gobernanza de paradores en la torre de control. Consulta pasiva en el portal},
+  edt = {EDT 2.4 (Diseño Ergonómico), EDT 3.7 (Catálogo de Paradores), EDT 4.6 (Software Bordo Circadiano) y EDT 7.2 (Validación Marcha Blanca)},
+  mes = {Talleres ergonómicos en el mes 4. Catálogo entre los meses 3 y 6. Software entre los meses 7 y 10. Validación con conductores entre los meses 13 y 15},
+  inversion = {Software de borde incremental y talleres ergonómicos participativos. El catálogo se levanta dentro de la campaña de cobertura},
+  costooperacional = {Menor búsqueda errática de estacionamiento en ruta, con un efecto en combustible que se mide en la Etapa 1},
+  beneficio = {Menor riesgo de siniestros graves por microsueño y supresión de multas por la Ley N.º 21.377 y el artículo 25 bis. Reflejado en mitigación de contingencias patrimoniales y ahorros de seguros},
+  indicador = {Alertas con parador calificado, de 0 a 98 \% o más. Bloqueo cinético del 100 \%. NASA-TLX con guantes bajo 35 puntos y adherencia voluntaria de 85 \% o más, con línea base medida en la Etapa 1},
+  medicion = {Mensual en la marcha blanca, antes del mes 16},
+  riesgo = {Que los 258 conductores externos lo perciban como vigilancia patronal encubierta, probabilidad media a alta e impacto alto},
+  mitigacion = {Diseño ergonómico participativo en horario de relevo en los cinco terminales y orientación al bienestar},
+  contingencia = {Notificación solo acústica por el altavoz del vehículo, sin teléfonos personales ni botones adicionales en cabina}
 }
-
 \end{formulario}

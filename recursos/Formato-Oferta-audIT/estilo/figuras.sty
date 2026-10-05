@@ -32,7 +32,7 @@
 \renewcommand\topfraction{0.9}
 \renewcommand\bottomfraction{0.8}
 \renewcommand\textfraction{0.1}
-\renewcommand\floatpagefraction{0.75}
+\renewcommand\floatpagefraction{0.3}
 \setcounter{topnumber}{2}
 \setcounter{totalnumber}{3}
 
@@ -122,6 +122,7 @@
           \audit_fig_caja:nN { fig:#4 } \l_audit_fig_final_box
         }
       \caption {#3} \label { fig:#4 }
+      \audit@leyendafuente
       \audit_fig_registrar:nnn {#2} { vertical } { fig:#4 }
     \end{figure}
     \group_end:
@@ -254,6 +255,7 @@
         \hsize = \c_audit_anexo_pag_ancho_dim \linewidth = \hsize
         \captionsetup { type = figure }
         \caption {#2} \label { fig:#3 }
+        \audit@leyendafuente
       }
     \dim_set:Nn \l_audit_anexo_alto_dim
       {
@@ -296,6 +298,17 @@
 \ExplSyntaxOff
 
 \newcounter{audit@anexo}[chapter]
+% Leyenda de fuente bajo cada figura (Comunicado 10, sección 4.6). Por defecto
+% «Elaboración propia». \fuenteFigura{...} la cambia solo para la figura que
+% sigue.
+\newcommand\audit@fuentefigdef{Elaboración propia}
+\let\audit@fuentefig\audit@fuentefigdef
+\newcommand\fuenteFigura[1]{\gdef\audit@fuentefig{#1}}
+\newcommand\audit@leyendafuente{%
+  \par\vspace{1pt}%
+  {\raggedright\sffamily\fontsize{9.5bp}{12bp}\selectfont\color{audit-secundario}%
+    Fuente: \audit@fuentefig.\par}%
+  \global\let\audit@fuentefig\audit@fuentefigdef}
 % Cabeza del anexo. En modo «hoja» repite el folio arriba, porque en pantalla
 % el folio de la hoja física queda girado. En modo «pagina» no: el folio se ve
 % abajo a la derecha y la página no debe llevar dos números.

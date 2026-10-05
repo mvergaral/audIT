@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="257.4mm" height="167.2mm" viewBox="0 0 1700 1104" font-family="IBM Plex Sans">
+<defs><marker id="fr" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#A32222"/></marker><marker id="fg" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#5B6675"/></marker></defs>
+<rect x="0" y="0" width="1700" height="1104" fill="#FFFFFF"/>
+<polyline points="231.0,115.0 254.0,115.0" fill="none" stroke="#5B6675" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#fg)"/>
+<polyline points="231.0,475.0 233.5,475.0 233.5,172.8 254.0,172.8" fill="none" stroke="#5B6675" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#fg)"/>
+<polyline points="231.0,475.0 242.5,475.0 242.5,295.0 254.0,295.0" fill="none" stroke="#5B6675" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#fg)"/>
+<polyline points="231.0,655.0 251.5,655.0 251.5,799.3 254.0,799.3" fill="none" stroke="#5B6675" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#fg)"/>
+<polyline points="231.0,835.0 254.0,835.0" fill="none" stroke="#5B6675" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#fg)"/>
+<polyline points="231.0,475.0 251.5,475.0 251.5,780.6 254.0,780.6" fill="none" stroke="#5B6675" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#fg)"/>
+<polyline points="474.0,115.0 497.0,115.0" fill="none" stroke="#5B6675" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#fg)"/>
+<polyline points="474.0,295.0 485.5,295.0 485.5,172.8 497.0,172.8" fill="none" stroke="#5B6675" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#fg)"/>
+<polyline points="717.0,115.0 740.0,115.0" fill="none" stroke="#5B6675" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#fg)"/>
+<polyline points="960.0,115.0 1214.5,115.0 1214.5,420.6 1226.0,420.6" fill="none" stroke="#5B6675" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#fg)"/>
+<polyline points="474.0,835.0 1457.5,835.0 1457.5,532.8 1469.0,532.8" fill="none" stroke="#5B6675" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#fg)"/>
+<polyline points="231.0,475.0 254.0,475.0" fill="none" stroke="#A32222" stroke-width="4" stroke-linejoin="round" marker-end="url(#fr)"/>
+<polyline points="474.0,475.0 497.0,475.0" fill="none" stroke="#A32222" stroke-width="4" stroke-linejoin="round" marker-end="url(#fr)"/>
+<polyline points="717.0,475.0 740.0,475.0" fill="none" stroke="#A32222" stroke-width="4" stroke-linejoin="round" marker-end="url(#fr)"/>
+<polyline points="960.0,475.0 983.0,475.0" fill="none" stroke="#A32222" stroke-width="4" stroke-linejoin="round" marker-end="url(#fr)"/>
+<polyline points="1203.0,475.0 1226.0,475.0" fill="none" stroke="#A32222" stroke-width="4" stroke-linejoin="round" marker-end="url(#fr)"/>
+<polyline points="1446.0,475.0 1469.0,475.0" fill="none" stroke="#A32222" stroke-width="4" stroke-linejoin="round" marker-end="url(#fr)"/>
+<rect x="11.0" y="30.0" width="220" height="170" rx="6" fill="#F6F8FB" stroke="#5B6675" stroke-width="1.8" stroke-dasharray="8,6"/>
+<text x="121.0" y="81.2" font-size="23.3" text-anchor="middle" fill="#1B2430" font-weight="600">A13</text>
+<text x="121.0" y="109.2" font-size="23.3" text-anchor="middle" fill="#1B2430">Capacitación</text>
+<text x="121.0" y="137.2" font-size="23.3" text-anchor="middle" fill="#1B2430">conductores</text>
+<text x="121.0" y="165.2" font-size="23.3" text-anchor="middle" fill="#1B2430">(vista Etapa 1)</text>
+<rect x="11.0" y="390.0" width="220" height="170" rx="6" fill="#FBECEC" stroke="#A32222" stroke-width="4"/>
+<text x="121.0" y="427.2" font-size="23.3" text-anchor="middle" fill="#1B2430" font-weight="600">A14</text>
+<text x="121.0" y="455.2" font-size="23.3" text-anchor="middle" fill="#1B2430">Reserva de</text>
+<text x="121.0" y="483.2" font-size="23.3" text-anchor="middle" fill="#1B2430">cronograma E1</text>
+<text x="121.0" y="511.2" font-size="23.3" text-anchor="middle" fill="#1B2430">14 d, ES 226</text>
+<text x="121.0" y="539.2" font-size="23.3" text-anchor="middle" fill="#1B2430">HT 0, HL 0</text>
+<rect x="11.0" y="570.0" width="220" height="170" rx="6" fill="#F6F8FB" stroke="#5B6675" stroke-width="1.8" stroke-dasharray="8,6"/>
+<text x="121.0" y="621.2" font-size="23.3" text-anchor="middle" fill="#1B2430" font-weight="600">A06</text>
+<text x="121.0" y="649.2" font-size="23.3" text-anchor="middle" fill="#1B2430">Adhesión de</text>
+<text x="121.0" y="677.2" font-size="23.3" text-anchor="middle" fill="#1B2430">transportistas</text>
+<text x="121.0" y="705.2" font-size="23.3" text-anchor="middle" fill="#1B2430">(vista Etapa 1)</text>
+<rect x="11.0" y="750.0" width="220" height="170" rx="6" fill="#F6F8FB" stroke="#5B6675" stroke-width="1.8" stroke-dasharray="8,6"/>
+<text x="121.0" y="801.2" font-size="23.3" text-anchor="middle" fill="#1B2430" font-weight="600">A11</text>
+<text x="121.0" y="829.2" font-size="23.3" text-anchor="middle" fill="#1B2430">Piloto a bordo</text>
+<text x="121.0" y="857.2" font-size="23.3" text-anchor="middle" fill="#1B2430">por familia</text>
+<text x="121.0" y="885.2" font-size="23.3" text-anchor="middle" fill="#1B2430">(vista Etapa 1)</text>
+<rect x="254.0" y="30.0" width="220" height="170" rx="6" fill="#FFFFFF" stroke="#5B6675" stroke-width="1.8"/>
+<text x="364.0" y="67.2" font-size="23.3" text-anchor="middle" fill="#1B2430" font-weight="600">A15 (H6)</text>
+<text x="364.0" y="95.2" font-size="23.3" text-anchor="middle" fill="#1B2430">Marcha blanca</text>
+<text x="364.0" y="123.2" font-size="23.3" text-anchor="middle" fill="#1B2430">Etapa 1</text>
+<text x="364.0" y="151.2" font-size="23.3" text-anchor="middle" fill="#1B2430">60 d, ES 240</text>
+<text x="364.0" y="179.2" font-size="23.3" text-anchor="middle" fill="#1B2430">HT 20, HL 0</text>
+<rect x="254.0" y="210.0" width="220" height="170" rx="6" fill="#FFFFFF" stroke="#5B6675" stroke-width="1.8"/>
+<text x="364.0" y="247.2" font-size="23.3" text-anchor="middle" fill="#1B2430" font-weight="600">A16</text>
+<text x="364.0" y="275.2" font-size="23.3" text-anchor="middle" fill="#1B2430">Transferencia</text>
+<text x="364.0" y="303.2" font-size="23.3" text-anchor="middle" fill="#1B2430">a TI mandante</text>
+<text x="364.0" y="331.2" font-size="23.3" text-anchor="middle" fill="#1B2430">50 d, ES 240</text>
+<text x="364.0" y="359.2" font-size="23.3" text-anchor="middle" fill="#1B2430">HT 30, HL 10</text>
+<rect x="254.0" y="390.0" width="220" height="170" rx="6" fill="#FBECEC" stroke="#A32222" stroke-width="4"/>
+<text x="364.0" y="427.2" font-size="23.3" text-anchor="middle" fill="#1B2430" font-weight="600">A17 (H8)</text>
+<text x="364.0" y="455.2" font-size="23.3" text-anchor="middle" fill="#1B2430">Diseño</text>
+<text x="364.0" y="483.2" font-size="23.3" text-anchor="middle" fill="#1B2430">Etapa 2</text>
+<text x="364.0" y="511.2" font-size="23.3" text-anchor="middle" fill="#1B2430">36 d, ES 240</text>
+<text x="364.0" y="539.2" font-size="23.3" text-anchor="middle" fill="#1B2430">HT 0, HL 0</text>
+<rect x="254.0" y="750.0" width="220" height="170" rx="6" fill="#FFFFFF" stroke="#5B6675" stroke-width="1.8"/>
+<text x="364.0" y="787.2" font-size="23.3" text-anchor="middle" fill="#1B2430" font-weight="600">A18</text>
+<text x="364.0" y="815.2" font-size="23.3" text-anchor="middle" fill="#1B2430">Instalación</text>
+<text x="364.0" y="843.2" font-size="23.3" text-anchor="middle" fill="#1B2430">progresiva</text>
+<text x="364.0" y="871.2" font-size="23.3" text-anchor="middle" fill="#1B2430">120 d, ES 240</text>
+<text x="364.0" y="899.2" font-size="23.3" text-anchor="middle" fill="#1B2430">HT 40, HL 40</text>
+<rect x="497.0" y="30.0" width="220" height="170" rx="6" fill="#FFFFFF" stroke="#5B6675" stroke-width="1.8"/>
+<text x="607.0" y="67.2" font-size="23.3" text-anchor="middle" fill="#1B2430" font-weight="600">A19 (H7)</text>
+<text x="607.0" y="95.2" font-size="23.3" text-anchor="middle" fill="#1B2430">Producción</text>
+<text x="607.0" y="123.2" font-size="23.3" text-anchor="middle" fill="#1B2430">Etapa 1</text>
+<text x="607.0" y="151.2" font-size="23.3" text-anchor="middle" fill="#1B2430">10 d, ES 300</text>
+<text x="607.0" y="179.2" font-size="23.3" text-anchor="middle" fill="#1B2430">HT 20, HL 0</text>
+<rect x="497.0" y="390.0" width="220" height="170" rx="6" fill="#FBECEC" stroke="#A32222" stroke-width="4"/>
+<text x="607.0" y="427.2" font-size="23.3" text-anchor="middle" fill="#1B2430" font-weight="600">A20 (H9)</text>
+<text x="607.0" y="455.2" font-size="23.3" text-anchor="middle" fill="#1B2430">Construcción</text>
+<text x="607.0" y="483.2" font-size="23.3" text-anchor="middle" fill="#1B2430">Etapa 2</text>
+<text x="607.0" y="511.2" font-size="23.3" text-anchor="middle" fill="#1B2430">50 d, ES 276</text>
+<text x="607.0" y="539.2" font-size="23.3" text-anchor="middle" fill="#1B2430">HT 0, HL 0</text>
+<rect x="740.0" y="30.0" width="220" height="170" rx="6" fill="#FFFFFF" stroke="#5B6675" stroke-width="1.8"/>
+<text x="850.0" y="67.2" font-size="23.3" text-anchor="middle" fill="#1B2430" font-weight="600">A21</text>
+<text x="850.0" y="95.2" font-size="23.3" text-anchor="middle" fill="#1B2430">Estabilización</text>
+<text x="850.0" y="123.2" font-size="23.3" text-anchor="middle" fill="#1B2430">Etapa 1</text>
+<text x="850.0" y="151.2" font-size="23.3" text-anchor="middle" fill="#1B2430">30 d, ES 310</text>
+<text x="850.0" y="179.2" font-size="23.3" text-anchor="middle" fill="#1B2430">HT 20, HL 20</text>
+<rect x="740.0" y="390.0" width="220" height="170" rx="6" fill="#FBECEC" stroke="#A32222" stroke-width="4"/>
+<text x="850.0" y="427.2" font-size="23.3" text-anchor="middle" fill="#1B2430" font-weight="600">A22 (H10)</text>
+<text x="850.0" y="455.2" font-size="23.3" text-anchor="middle" fill="#1B2430">Certificación</text>
+<text x="850.0" y="483.2" font-size="23.3" text-anchor="middle" fill="#1B2430">Etapa 2</text>
+<text x="850.0" y="511.2" font-size="23.3" text-anchor="middle" fill="#1B2430">24 d, ES 326</text>
+<text x="850.0" y="539.2" font-size="23.3" text-anchor="middle" fill="#1B2430">HT 0, HL 0</text>
+<rect x="983.0" y="390.0" width="220" height="170" rx="6" fill="#FBECEC" stroke="#A32222" stroke-width="4"/>
+<text x="1093.0" y="427.2" font-size="23.3" text-anchor="middle" fill="#1B2430" font-weight="600">A23</text>
+<text x="1093.0" y="455.2" font-size="23.3" text-anchor="middle" fill="#1B2430">Reserva de</text>
+<text x="1093.0" y="483.2" font-size="23.3" text-anchor="middle" fill="#1B2430">cronograma E2</text>
+<text x="1093.0" y="511.2" font-size="23.3" text-anchor="middle" fill="#1B2430">10 d, ES 350</text>
+<text x="1093.0" y="539.2" font-size="23.3" text-anchor="middle" fill="#1B2430">HT 0, HL 0</text>
+<rect x="1226.0" y="390.0" width="220" height="170" rx="6" fill="#FBECEC" stroke="#A32222" stroke-width="4"/>
+<text x="1336.0" y="427.2" font-size="23.3" text-anchor="middle" fill="#1B2430" font-weight="600">A24 (H11)</text>
+<text x="1336.0" y="455.2" font-size="23.3" text-anchor="middle" fill="#1B2430">Marcha blanca</text>
+<text x="1336.0" y="483.2" font-size="23.3" text-anchor="middle" fill="#1B2430">Etapa 2</text>
+<text x="1336.0" y="511.2" font-size="23.3" text-anchor="middle" fill="#1B2430">40 d, ES 360</text>
+<text x="1336.0" y="539.2" font-size="23.3" text-anchor="middle" fill="#1B2430">HT 0, HL 0</text>
+<rect x="1469.0" y="390.0" width="220" height="170" rx="6" fill="#FBECEC" stroke="#A32222" stroke-width="4"/>
+<text x="1579.0" y="427.2" font-size="23.3" text-anchor="middle" fill="#1B2430" font-weight="600">A25 (H12)</text>
+<text x="1579.0" y="455.2" font-size="23.3" text-anchor="middle" fill="#1B2430">Producción</text>
+<text x="1579.0" y="483.2" font-size="23.3" text-anchor="middle" fill="#1B2430">Etapa 2</text>
+<text x="1579.0" y="511.2" font-size="23.3" text-anchor="middle" fill="#1B2430">20 d, ES 400</text>
+<text x="1579.0" y="539.2" font-size="23.3" text-anchor="middle" fill="#1B2430">HT 0, HL 0</text>
+<text x="11.0" y="1040.0" font-size="23.3" fill="#5B6675">Rojo y trazo grueso: ruta crítica, con holgura total y libre igual a cero. Borde punteado: actividad dibujada en la otra vista.</text>
+<text x="11.0" y="1074.0" font-size="23.3" fill="#5B6675">d: días hábiles. ES: inicio temprano. HT: holgura total. HL: holgura libre. Entre paréntesis, el hito del Formulario E-25.</text>
+</svg>
