@@ -116,7 +116,7 @@ La estructura funcional de audIT SpA se encuentra dimensionada para asegurar gob
 #### Figura 1.1 — Organigrama Institucional y Estructura Operativa de audIT SpA
 *Fuente: Elaboración propia.*
 
-![Organigrama institucional](../../recursos/Formato-Oferta-audIT/figuras/01-empresa/Estructura_y_Organizacion.png)
+![Organigrama institucional](../../recursos/Formato-Oferta-audIT/figuras/01-empresa/figura_1_1_organigrama.png)
 
 La dotación permanente de la compañía está constituida por exactamente **22 profesionales de planta** contratados bajo régimen laboral indefinido, cuya distribución analítica por unidad organizativa corresponde a la siguiente:
 

@@ -42,7 +42,7 @@ Para comprender la raíz del problema operacional de Transportes Curimón S.A., 
 
 A continuación, la Figura 2.1 describe el flujo operacional y la cadena de valor característica del transporte de carga en Curimón, ilustrando la secuencia de procesos desde la recepción de la orden de transporte hasta la liquidación final y cierre de costos.
 
-![Diagrama macro](../../recursos/Formato-Oferta-audIT/figuras/02-problema/Flujo_Operacional.png)
+![Diagrama macro](../../recursos/Formato-Oferta-audIT/figuras/02-problema/figura_2_1_flujo_operacional.png)
 
 *Figura 2.1 — Flujo Operacional y Cadena de Valor del Transporte de Carga en Curimón.*
 *Fuente: Elaboración propia a partir de las Bases Técnicas del Caso 10 (Transportes Curimón S.A., 2026).*
@@ -188,7 +188,7 @@ audIT Soluciones Tecnológicas SpA ha incorporado en el análisis pericial del p
 
 Como se expone cuantitativamente a continuación en la Figura 2.2, la dinámica anual de la operación exhibe una marcada disparidad entre la regularidad basal de la carga general y los picos pronunciados de la temporada agrícola, superpuestos a las ventanas de riesgo climático en la alta cordillera.
 
-![Figura 2.2 — Calendario Operacional y Restricciones de Despliegue](../../recursos/Formato-Oferta-audIT/figuras/02-problema/figura_2_2_estacionalidad.png)
+![Figura 2.2 — Calendario Operacional y Restricciones de Despliegue](../../recursos/Formato-Oferta-audIT/figuras/02-problema/figura_2_2_calendario_operacional.png)
 
 *Figura 2.2 — Calendario Operacional y Restricciones de Despliegue.*
 *Fuente: Elaboración propia a partir de Bases Técnicas del Caso 10 y registros de cruces Los Libertadores (Transportes Curimón S.A., 2026).*
@@ -241,7 +241,7 @@ El análisis de la Tabla 2.1 evidencia la magnitud transaccional que debe ser go
 
 A continuación, la Figura 2.3 expone la cadena causal integrada que articula las diez patologías sistémicas diagnosticadas en Curimón, demostrando cómo los vacíos en la captura de datos primarios se propagan hasta comprometer el margen corporativo y amenazar la continuidad de los contratos comerciales.
 
-![Diagrama macro](../../recursos/Formato-Oferta-audIT/figuras/02-problema/Cadena_Causal.png)
+![Diagrama macro](../../recursos/Formato-Oferta-audIT/figuras/02-problema/figura_2_3_cadena_causal.png)
 
 *Figura 2.3 — Cadena Causal Integrada de Patologías Sistémicas y Pérdida de Valor.*
 *Fuente: Elaboración propia a partir de las Bases Técnicas del Caso 10 (Transportes Curimón S.A., 2026).*
@@ -291,7 +291,7 @@ La operación y gobernanza de Transportes Curimón S.A. involucra a un ecosistem
 
 A continuación, la Figura 2.4 ilustra el mapeo de actores en la Matriz de Poder e Influencia frente al Nivel de Interés, identificando la estrategia de gestión corporativa requerida para cada uno.
 
-![Matriz de los trece grupos de interés](../../recursos/Formato-Oferta-audIT/figuras/02-problema/Matriz_Interes_Poder_Stakeholders.png)
+![Matriz de los trece grupos de interés](../../recursos/Formato-Oferta-audIT/figuras/02-problema/figura_2_4_matriz_actores.png)
 
 *Figura 2.4 — Matriz de Poder vs. Interés de Actores y Mapa de Influencia Estratégica.*
 *Fuente: Elaboración propia conforme a metodología de gestión de stakeholders (PMBOK / Curimón S.A., 2026).*
