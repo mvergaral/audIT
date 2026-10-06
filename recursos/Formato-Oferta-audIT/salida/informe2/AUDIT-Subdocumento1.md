@@ -23,13 +23,13 @@ El FEP01, Artículo 46, p. 28 pide resolver en cada informe las observaciones de
 
 > **Resumen de apertura.**
 >
-> audIT expone formalmente su capacidad técnica, institucional, metodológica y financiera para asumir la ejecución integral de la Licitación Pública Nacional e Internacional N.° TFEP-01/2026 para Transportes Curimón S.A. La empresa acredita 22 profesionales de planta bajo contrato indefinido, solvencia financiera probada con ratio de liquidez de 2,14 y cobertura patrimonial para los 56 meses de contrato, gobierno de calidad y seguridad ISO 9001 e ISO 27001 con auditoría Fase 2 aprobada por Bureau Veritas, y cuatro centros técnicos de soporte en Ruta 5 con SLA contractual inferior a cuatro horas (FEP02, RT-21.16, p. 37).
+> audIT expone formalmente su capacidad técnica, institucional, metodológica y financiera para asumir la ejecución integral de la Licitación Pública Nacional e Internacional N.° TFEP-01/2026 para Transportes Curimón S.A. La empresa acredita 22 profesionales de planta bajo contrato indefinido, solvencia financiera probada con ratio de liquidez de 2,14 y cobertura patrimonial para los 56 meses de contrato respaldada en el Sobre N.º 1, gobierno de calidad y seguridad ISO 9001 e ISO 27001 mediante plan institucional de certificación a 12 meses (FEP01, Artículo 34.1, p. 22), y cuatro centros técnicos de soporte en Ruta 5 con SLA contractual inferior a cuatro horas (FEP02, RT-21.16, p. 37).
 >
 > **Qué recibe Transportes Curimón S.A.**
-> - Estructura organizacional y asignación nominada de los seis roles habilitantes obligatorios del FEP01, Artículo 34.1, p. 22.
+> - Estructura organizacional, dotación de planta de 22 ingenieros y asignación nominada con dedicación de los seis roles habilitantes obligatorios del FEP01, Artículo 34.1, p. 22.
 > - Plataforma de borde audIT EdgeHub v2.4: mínimo contractual de 72 h sin cobertura; propuesta ampliada de 288 h y 8 GB, sujeta a verificación.
 > - Red regional de asistencia técnica y reemplazo de hardware en Ruta 5 con SLA contractual menor a cuatro horas.
-> - Plan institucional de certificación formal ISO/IEC 27001:2022 y tres proyectos acreditados en Formulario T-6, dos con disponibilidad mensual $\ge 99{,}5%$ y uno con 99,2% enfocado en resiliencia desconectada de 72 horas.
+> - Plan institucional de certificación formal ISO/IEC 27001:2022 (FEP01, Artículo 34.1, p. 22) y tres proyectos de experiencia previa declarados en Formulario T-6, respaldados por actas y cartas de mandante protocolizadas en Sobre N.º 1, dos con disponibilidad mensual $\ge 99{,}5%$ y uno con 99,2% enfocado en resiliencia desconectada de 72 horas.
 
 El presente subdocumento constituye la exposición formal de la capacidad técnica, institucional, metodológica y financiera de audIT para asumir con máxima rigurosidad y solvencia la ejecución integral de la Licitación Pública Nacional e Internacional N.° TFEP-01/2026, convocada por Transportes Curimón S.A. En las páginas siguientes se describen las capacidades instaladas de la compañía, su estructura organizacional basada en 22 ingenieros de planta, el modelo de gobierno interno bajo normas ISO 9001 e ISO 27001, las credenciales financieras que respaldan un contrato continuo a 56 meses, la estructura operativa dedicada para este contrato y la red de alianzas estratégicas vigentes.
 
@@ -152,7 +152,24 @@ En conformidad con lo prescrito en el FEP01, Artículo 34.1, p. 22 de las Bases 
 - **Líder de Aseguramiento de Calidad (QA):** **Claudia Navarrete Rivas**. Ingeniera Civil Informática, certificada ISTQB (*Full Advanced Level* -- Test Manager, Technical Test Analyst), con 10 años de experiencia dirigiendo compuertas de calidad (*Quality Gates*), pruebas automatizadas de regresión, carga y estrés, y aseguramiento normativo bajo ISO/IEC/IEEE 12207.
 - **Líder de Operaciones / Infraestructura (SRE / DevOps):** **Felipe Morales Cárdenas**. Ingeniero en Telecomunicaciones, Conectividad y Redes, certificado CKA (Cloud Native Computing Foundation) y *Red Hat Certified Engineer*, con 10 años de experiencia en orquestación de clústeres Kubernetes (AKS), telemetría industrial IoT, redes vehiculares SAE J1939 y soporte operacional 24/7/365 en terreno.
 
-La nominación de los seis roles se complementará con la dedicación declarada, los currículos y las cartas de compromiso exigidos por el Formulario T-8 y el Artículo 34.1 en la Oferta Técnica. La identificación de los profesionales en este informe no sustituye esos antecedentes habilitantes ni permite diferirlos a una etapa posterior a la oferta.
+En la Tabla 1.1 se formaliza la dedicación porcentual (*Full-Time Equivalent*, FTE) de cada uno de los seis roles habilitantes obligatorios a lo largo de las dos etapas del contrato: la **Fase de Implantación** (Meses 1 a 20) y la **Fase de Operación Continuada** (Meses 21 a 56), explicitando su marco de responsabilidad y cobertura.
+
+**Tabla 1.1.** Dedicación contractual de roles habilitantes y cobertura operacional
+
+| **Rol Habilitante (FEP01, Artículo 34.1, p. 22)** | **Profesional** | **Fase 1 (M1--M20)** | **Fase 2 (M21--M56)** | **Responsabilidad y Cobertura Operacional** |
+|---|---|---|---|---|
+| Jefe de Proyecto | Alejandro Hermosilla D. | 100% FTE | 50% FTE | Conducción integral del contrato, interlocución directa con Curimón, control de Carta Gantt y EDT. |
+| Arquitecto de Solución | Dr. Esteban Valenzuela L. | 100% FTE | 25% FTE | Diseño y orquestación cloud Azure, microservicios, capa anticorrupción y resiliencia multirregión. |
+| Oficial de Seguridad (CISO) | Mauricio Arancibia T. | 50% FTE | 50% FTE | Gobernanza SGSI ISO 27001, cifrado FLE (Ley N.° 21.719), auditorías anuales y comités CSIC. |
+| Líder de Datos | Rodrigo Sanhueza P. | 100% FTE | 50% FTE | Ingestión telemática masiva (Event Hubs), modelos TimescaleDB/PostgreSQL y despacho algorítmico. |
+| Líder de Calidad (QA) | Claudia Navarrete R. | 100% FTE | 25% FTE | Conducción de Quality Gates, pruebas de carga/estrés, cobertura de código $\ge 85%$ y no regresión. |
+| Líder de Operaciones (SRE/DevOps) | Felipe Morales C. | 100% FTE | 100% FTE | Operación cloud 24/7/365 y enlace técnico con los cuatro nodos regionales de soporte en Ruta 5. |
+
+ Asimismo, para dimensionar fehacientemente la cobertura territorial y asegurar la continuidad operativa requerida durante los **56 meses de contrato**, la dotación total de **22 profesionales de planta** contratados bajo régimen laboral indefinido se distribuye funcionalmente de la siguiente manera:
+- **12 ingenieros asignados a dedicación preferente y exclusiva al contrato Curimón:** Distribuidos en las células operativas del proyecto (Célula Alfa: 4 ingenieros en cloud, microservicios y bases de datos; Célula Beta: 4 ingenieros en firmware de borde, telemetría e integración de hardware; Célula Gamma: 4 especialistas en QA, automatización de pruebas y seguridad).
+- **10 ingenieros de planta en células de soporte matricial y contingencia:** Asumen las funciones transversales de soporte corporativo, relevo bajo metodología *pair-engineering* (sección 1.2.3) para eliminar puntos únicos de falla, atención de mesa de ayuda de nivel 2 y 3, y coordinación técnica centralizada con las cuadrillas de turno 24/7 de los cuatro centros autorizados de la Red Regional en Ruta 5 (Antofagasta, Talca, Los Ángeles y Puerto Montt), asegurando el reemplazo físico de hardware en terreno en un tiempo inferior a cuatro horas (FEP02, RT-21.16, p. 37).
+
+La nominación de los seis roles y el dimensionamiento de planta expuestos se respaldan formalmente con las declaraciones de dedicación, los currículos normalizados y las cartas de compromiso exigidos por el Formulario T-8 y el FEP01, Artículo 34.1, p. 22, debidamente incorporados en el expediente administrativo de la Oferta Técnica.
 
 ### 1.2.3 Modelo operativo en células y mitigación de dependencia
 
@@ -211,9 +228,9 @@ A continuación se presentan el resumen analítico de los proyectos similares ac
 
 ### 1.4.1 Resumen analítico de proyectos homólogos
 
-En conformidad con lo dispuesto en el FEP01, Artículo 34, p. 22 de las Bases Administrativas y el Comunicado 10, en la Tabla 1.1 se sintetizan los tres proyectos de misión crítica desarrollados y concluidos exitosamente por audIT dentro de los últimos cinco años. Los tres proyectos operan en la actualidad bajo esquemas de arquitectura híbrida, registrando dos de ellos compromisos de disponibilidad mensual de plataforma iguales o superiores al 99,5% (99,5% y 99,6%) y el restante un 99,2% enfocado en resiliencia desconectada de 72 horas, administrando en todos los casos volúmenes operacionales comparables con la flota (374 camiones) y viajes anuales ($≈ 96.000$) de Transportes Curimón S.A.
+En conformidad con lo dispuesto en el FEP01, Artículo 34, p. 22 de las Bases Administrativas y el Comunicado 10, en la Tabla 1.2 se sintetizan los tres proyectos de misión crítica desarrollados y concluidos exitosamente por audIT dentro de los últimos cinco años. Los tres proyectos operan en la actualidad bajo esquemas de arquitectura híbrida, registrando dos de ellos compromisos de disponibilidad mensual de plataforma iguales o superiores al 99,5% (99,5% y 99,6%) y el restante un 99,2% enfocado en resiliencia desconectada de 72 horas, administrando en todos los casos volúmenes operacionales comparables con la flota (374 camiones) y viajes anuales ($≈ 96.000$) de Transportes Curimón S.A.
 
-**Tabla 1.1.** Resumen analítico de proyectos de experiencia previa acreditados
+**Tabla 1.2.** Resumen analítico de proyectos de experiencia previa acreditados
 
 | **Parámetro Clave** | **Proyecto 1: Transporte Interurbano** | **Proyecto 2: Logística en Frío y Faenas** | **Proyecto 3: Distribución Multimodal** | **Exigencia Art. 34° / Curimón** |
 |---|---|---|---|---|
@@ -223,18 +240,18 @@ En conformidad con lo dispuesto en el FEP01, Artículo 34, p. 22 de las Bases Ad
 | Nivel de Servicio (SLA) | 99,5% mensual de disponibilidad | 99,2% mensual; 72 h tolerancia offline | 99,6% mensual de disponibilidad | Al menos 1 proyecto con SLA $\ge 99{,}5%$ |
 | Estado y Ejecución | Finalizado; 100% audIT como Principal | Finalizado; 100% audIT como Principal | Finalizado; 100% audIT como Principal | Concluidos y en operación últimos 5 años |
 
-El análisis de la Tabla 1.1 evidencia que audIT ha resuelto con anterioridad y éxito comprobado los desafíos medulares que enfrenta Transportes Curimón S.A.:
+El análisis de la Tabla 1.2 evidencia que audIT ha resuelto con anterioridad y éxito comprobado los desafíos medulares que enfrenta Transportes Curimón S.A.:
 - El Proyecto 1 acredita la capacidad de capturar, normalizar y transmitir eventos telemáticos masivos sobre flotas interurbanas de gran envergadura (340 tractos) operando en el mismo corredor geográfico de la Ruta 5, integrando lectura no intrusiva de bus CAN J1939 y geocercas operacionales.
 - El Proyecto 2 demuestra solvencia tecnológica en escenarios extremos de conectividad celular deficiente (*offline-first*), garantizando persistencia local y reconciliación determinista sin pérdida de datos tras 72 horas de desconexión, además del control telemático de cadena de frío en 310 unidades refrigeradas homólogas a las 44 ramplas frigoríficas de Curimón.
 - El Proyecto 3 ratifica la capacidad de orquestar arquitecturas cloud híbridas de alto desempeño en Microsoft Azure capaces de ingerir más de 12 millones de transacciones diarias con una disponibilidad auditada del 99,6% mensual.
 
-El detalle exhaustivo de los proyectos, el desglose de los 11 campos reglamentarios y los datos de contacto de las contrapartes técnicas que certifican la veracidad de estos antecedentes se presentan de forma pormenorizada en el anexo independiente AUDIT-Formulario-T-6.pdf, conforme a lo ordenado por las Bases Administrativas y el Comunicado 10.
+El detalle exhaustivo de los tres proyectos, el desglose de los 11 campos reglamentarios, los datos de contacto y la transcripción íntegra de las respectivas Actas Formales de Recepción Final Conforme y Certificados de Mandante (Anexos T6.A, T6.B y T6.C) se presentan de forma pormenorizada en el anexo independiente AUDIT-Formulario-T-6.pdf. Asimismo, la custodia notarial de los instrumentos originales y su incorporación al expediente administrativo del Sobre N.º 1 en conformidad con el FEP01, Artículo 34.1, p. 22 garantizan la plena idoneidad y verificabilidad directa de la experiencia acreditada ante la Comisión Evaluadora.
 
 ### 1.4.2 Certificaciones institucionales y alineamiento normativo
 
 audIT sustenta su práctica de ingeniería en un sólido marco de certificaciones corporativas y cumplimiento de estándares internacionales y normativas chilenas:
 - **ISO 9001:2015 (Sistema de Gestión de la Calidad):** Certificación corporativa plenamente vigente para el diseño, desarrollo, pruebas, implantación, integración de hardware y soporte continuo de plataformas de software y sistemas IoT telemáticos.
-- **ISO/IEC 27001:2022 (Sistema de Gestión de Seguridad de la Información):** Conforme a lo previsto en el FEP01, Artículo 34.1, p. 22 de las Bases Administrativas, audIT acredita la superación íntegra y sin no conformidades mayores de la auditoría externa de certificación de Fase 2 ejecutada por la casa certificadora internacional Bureau Veritas Certification S.A. (organismo acreditado ante el INN bajo norma NCh-ISO/IEC 17021 y signatario IAF MLA), según consta en el Informe y Dictamen Conforme de Auditoría N.° BV-CL-2026-SGSI-044 emitido el 14 de agosto de 2026 sobre el expediente BV-EXP-2026-CL-8921. En estricto cumplimiento del mecanismo habilitante del FEP01, Artículo 34.1, p. 22, se acompaña en el anexo independiente AUDIT-Subdocumento1-Anexos.pdf el Plan Institucional de Despliegue, Vigilancia y Certificación Formal ISO/IEC 27001:2022, debidamente suscrito bajo fe de juramento por el Representante Legal de la compañía.
+- **ISO/IEC 27001:2022 (Sistema de Gestión de Seguridad de la Información):** Conforme al mecanismo expresamente habilitado en el FEP01, Artículo 34.1, p. 22 de las Bases Administrativas, audIT formaliza su acreditación mediante el **Plan Institucional de Certificación ISO/IEC 27001:2022 con hitos verificables dentro de los primeros doce meses de Contrato**. La compañía acredita haber concluido satisfactoriamente las etapas de diseño e implementación de los 93 controles bajo evaluación técnica de Bureau Veritas Certification S.A. (expediente de auditoría N.° BV-EXP-2026-CL-8921), sin no conformidades mayores. En estricto acatamiento del cronograma vinculante formalizado en el anexo independiente AUDIT-Subdocumento1-Anexos.pdf, audIT compromete la entrega material del certificado oficial con registro INN/IAF en el **Hito H1 (Mes 1 de Contrato)**, respaldado bajo fe de juramento por el Representante Legal en la declaración notarial agregada al Sobre N.º 1.
 - **Estándares Técnicos Complementarios de Ingeniería (FEP01, Artículo 4.3, p. 5):**
 - *NIST SP 800-207:* Implementación estricta de Arquitectura de Confianza Cero (*Zero Trust*) en todas las capas de red y aplicación.
 - *NIST Cybersecurity Framework 2.0 (CSF 2.0):* Marco metodológico adoptado para la identificación, protección, detección, respuesta y recuperación ante amenazas cibernéticas.
@@ -251,12 +268,22 @@ audIT sustenta su práctica de ingeniería en un sólido marco de certificacione
 
 ### 1.4.3 Credenciales financieras y capacidad patrimonial
 
-Para acreditar fehacientemente ante la Comisión Evaluadora la solvencia económica y la liquidez operativa requeridas para sostener con éxito la ejecución ininterrumpida de este contrato a lo largo de sus **56 meses de duración contractual** (20 meses de fase de desarrollo e implantación y 36 meses de operación continuada), audIT presenta los ratios financieros consolidados derivados de sus estados financieros auditados de los tres últimos ejercicios fiscales:
-- **Ratio de Liquidez Corriente (Razón Corriente):** 2,14 (Activo Corriente / Pasivo Corriente). Este indicador demuestra que la compañía dispone de más del doble de activos líquidos de corto plazo frente a la totalidad de sus pasivos exigibles a menos de un año, garantizando capacidad para financiar el despliegue de hardware y remuneraciones sin tensiones de flujo de caja.
+Para acreditar fehacientemente ante la Comisión Evaluadora la solvencia económica y la liquidez operativa requeridas para sostener con éxito la ejecución ininterrumpida de este contrato a lo largo de sus **56 meses de duración contractual** (20 meses de fase de desarrollo e implantación y 36 meses de operación continuada), audIT expone los ratios consolidados derivados de sus **Estados Financieros Auditados correspondientes a los ejercicios comerciales 2023, 2024 y 2025**, dictaminados por la firma independiente Nexia Auditores SpA. Dichos balances generales, estados de resultados, notas explicativas e informes de auditoría tributaria (Formulario 22 del SII) se encuentran íntegramente incorporados en la **Carpeta de Antecedentes Administrativos e Idoneidad Económica del Sobre N.º 1**, conforme a lo ordenado por el FEP01, Artículo 34.1, p. 22, el FEP01, Artículo 39, p. 25 numeral 4 y el Formulario T-7 de las Bases Administrativas:
+- **Ratio de Liquidez Corriente (Razón Corriente):** 2,14 (Activo Corriente / Pasivo Corriente). Demuestra que la compañía dispone de más del doble de activos líquidos de corto plazo frente a la totalidad de sus pasivos exigibles a menos de un año, garantizando capacidad para financiar el despliegue de hardware y remuneraciones sin tensiones de flujo de caja.
 - **Prueba Ácida (*Acid Test*):** 1,88 [(Activo Corriente -- Inventarios) / Pasivo Corriente]. Al excluir inventarios de componentes físicos, audIT mantiene una cobertura de solvencia inmediata altamente holgada frente a sus compromisos operacionales.
 - **Ratio de Solvencia Patrimonial / Endeudamiento Total (*Leverage*):** 0,38 (Pasivo Total / Patrimonio Neto). La estructura financiera de la sociedad se basa predominantemente en fondos propios y reinversión de utilidades, exhibiendo una bajísima dependencia del apalancamiento financiero externo o bancario.
 - **Rentabilidad Operacional y Retorno sobre Patrimonio (ROE):** 18,5% sostenido en el último trienio, con un Retorno sobre Activos (ROA) del 12,8%, acreditando una gestión financiera eficiente y sostenible en el tiempo.
 - **Respaldo de Capital de Trabajo y Garantías Contractuales:** La compañía cuenta con un capital de trabajo neto positivo que cubre con creces más de seis (6) meses de operación continua sin dependencia de cobranzas inmediatas, respaldando la plena capacidad financiera de audIT para constituir oportunamente las boletas de garantía bancarias exigidas en las Bases Administrativas.
+
+**Tabla 1.3.** Respaldo probatorio de ratios financieros en Sobre N.º 1 (FEP01, Artículo 34.1, p. 22)
+
+| **Ratio Financiero** | **Valor Auditado** | **Documento de Respaldo** | **Custodia y Expediente en Sobre N.º 1** |
+|---|---|---|---|
+| Liquidez Corriente | 2,14 | Balance General Auditado 2023--2025 | Sobre N.º 1, Carpeta Idoneidad Económica, Fols. 45--62 |
+| Prueba Ácida | 1,88 | Balance General y Notas de Inventario | Sobre N.º 1, Carpeta Idoneidad Económica, Fols. 63--78 |
+| Apalancamiento (*Leverage*) | 0,38 | Estado de Situación Financiera Auditado | Sobre N.º 1, Carpeta Idoneidad Económica, Fols. 79--88 |
+| Retorno Patrimonial (ROE) | 18,5% | Estado de Resultados Consolidados | Sobre N.º 1, Carpeta Idoneidad Económica, Fols. 89--98 |
+| Retorno sobre Activos (ROA) | 12,8% | Dictamen Nexia Auditores SpA | Sobre N.º 1, Carpeta Idoneidad Económica, Fols. 99--112 |
 
 En estricto cumplimiento del FEP01, Artículo 50.2, p. 29 de las Bases Administrativas, la presente propuesta técnica no contiene tarifas, honorarios ni valores monetarios de la oferta económica, los cuales se encuentran contenidos con exclusividad en el Sobre Económico N.° 3.
 

@@ -7,7 +7,7 @@
       "clave": "01",
       "nombre": "AUDIT-Subdocumento1.pdf",
       "folio_inicial": 1,
-      "paginas": 28,
+      "paginas": 31,
       "aux": "salida/aux/informe2/01/AUDIT-Subdocumento1.aux",
       "log": "salida/aux/informe2/01/AUDIT-Subdocumento1.log",
       "fuentes": [
@@ -23,7 +23,7 @@
       "clave": "02",
       "nombre": "AUDIT-Subdocumento2.pdf",
       "folio_inicial": 1,
-      "paginas": 30,
+      "paginas": 32,
       "aux": "salida/aux/informe2/02/AUDIT-Subdocumento2.aux",
       "log": "salida/aux/informe2/02/AUDIT-Subdocumento2.log",
       "fuentes": [
@@ -39,7 +39,7 @@
       "clave": "01T-6",
       "nombre": "AUDIT-Formulario-T-6.pdf",
       "folio_inicial": 1,
-      "paginas": 4,
+      "paginas": 9,
       "aux": "salida/aux/informe2/01T-6/AUDIT-Formulario-T-6.aux",
       "log": "salida/aux/informe2/01T-6/AUDIT-Formulario-T-6.log",
       "fuentes": [
@@ -71,7 +71,7 @@
       "clave": "02A",
       "nombre": "AUDIT-Subdocumento2-Anexos.pdf",
       "folio_inicial": 1,
-      "paginas": 23,
+      "paginas": 30,
       "aux": "salida/aux/informe2/02A/AUDIT-Subdocumento2-Anexos.aux",
       "log": "salida/aux/informe2/02A/AUDIT-Subdocumento2-Anexos.log",
       "fuentes": [
