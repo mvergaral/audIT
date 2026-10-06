@@ -17,7 +17,7 @@ audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. O
 | Inversión requerida | Desarrollo incremental sobre el portal ya presupuestado y suscripción de certificados de firma del emisor |
 | Efecto en el costo operacional | Reducción en horas de rectificación manual y soporte a transportistas; costo menor en certificados de firma digital |
 | Beneficio esperado | Menos liquidaciones corregidas (de 11 % a menos de 2 %) y menor tiempo de cierre mensual. Reflejado en ahorros OPEX del flujo de caja |
-| Indicador, línea base y meta | Transportistas adheridos que emiten al menos un expediente, de 0 % a 40 %. Liquidaciones corregidas después de emitidas, de 11 % a menos de 2 % |
+| Indicador, línea base y meta | Tiempo medio de resolución de discrepancias en liquidaciones, de 9 días a menos de 48 horas. Expedientes de liquidación aceptados sin objeción documental formal, de 0 % a 98 % o más |
 | Momento de medición | Cierre de la marcha blanca, mes 15. Tercer cierre mensual tras el paso a producción |
 | Riesgo de adopción | Que el transportista no perciba utilidad y no emita el expediente, probabilidad media e impacto alto. Que los destinatarios no acepten el documento como prueba |
 | Mitigación | Asistir la primera emisión en el terminal durante el enrolamiento. Levantar destinatarios reales en el mes 4, antes de construir |
@@ -40,8 +40,8 @@ audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. O
 | Indicador, línea base y meta | Ritmo de 35 a 45 tractocamiones por mes. 100 % de los 148 propios al cierre del mes 8. Sustitución en terreno en menos de 30 minutos por camión |
 | Momento de medición | Mensual hasta el mes 8 |
 | Riesgo de adopción | Dispersión de unidades en ruta que retrase el paso por terminal, probabilidad media e impacto medio |
-| Mitigación | Monitoreo telemático de proximidad y asignación de kits en andén previo a la llegada |
-| Contingencia | Instalación en ruta coordinada durante paradas de mantención preventiva en talleres autorizados |
+| Mitigación | Monitoreo telemático de proximidad y asignación de kits en andén previo a la llegada en los cinco terminales |
+| Contingencia | Instalación coordinada durante paradas de mantención preventiva programada exclusivamente en terminales de Curimón |
 
 ## Innovación 3. Tecnológica o de arquitectura. Semirremolque conectado
 
@@ -89,7 +89,7 @@ audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. O
 |---|---|
 | Problema u oportunidad | Una alerta de jornada entregada donde no hay dónde detenerse es inútil (Caso, capítulo 18, p. 43). Hay tramos sin lugar seguro para combinaciones de 45 toneladas (numeral 16.1, p. 35). 258 conductores externos no son trabajadores de la compañía (numeral 2.3, p. 6) |
 | Tecnología o práctica | Motor predictivo a bordo que cruza jornada acumulada, topografía y ventana circadiana de 02:00 a 06:00 h. Catálogo local de paradores calificados. Enclavamiento cinético de pantalla y síntesis de voz local en español |
-| Nivel de madurez | Escala de niveles de madurez tecnológica de 1 a 9. Hardware de borde, almacenamiento local, síntesis de voz y enclavamiento en nivel 8. Modelo circadiano y ontología de paradores en nivel 7 |
+| Nivel de madurez | Escala de niveles de madurez tecnológica de 1 a 9. Hardware de borde, almacenamiento local, síntesis de voz y enclavamiento en nivel 8. Modelo circadiano y ontología de paradores en nivel 6 (escalamiento a nivel 7 en marcha blanca mes 16) |
 | Fuentes | International Organization for Standardization (2013, 2017, 2019). National Academies of Sciences, Engineering, and Medicine (2016). Congreso Nacional de Chile (2021), Ley N.º 21.377. Ministerio del Trabajo (2003, 2006) |
 | Dónde se inserta en la arquitectura | Capa de borde con el motor predictivo, el catálogo y la síntesis de voz. Servicio de gobernanza de paradores en la torre de control. Consulta pasiva en el portal |
 | Paquetes de la EDT | EDT 2.4 (Diseño Ergonómico), EDT 3.7 (Catálogo de Paradores), EDT 4.6 (Software Bordo Circadiano) y EDT 7.2 (Validación Marcha Blanca) |

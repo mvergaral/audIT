@@ -7,7 +7,7 @@
       "clave": "01",
       "nombre": "AUDIT-Subdocumento1.pdf",
       "folio_inicial": 1,
-      "paginas": 7,
+      "paginas": 27,
       "aux": "salida/aux/informe2/01/AUDIT-Subdocumento1.aux",
       "log": "salida/aux/informe2/01/AUDIT-Subdocumento1.log",
       "fuentes": [
@@ -16,6 +16,54 @@
         ],
         [
           "subdocumentos/01-empresa"
+        ]
+      ]
+    },
+    {
+      "clave": "01-anexos",
+      "nombre": "AUDIT-Subdocumento1-Anexos.pdf",
+      "folio_inicial": 1,
+      "paginas": 7,
+      "aux": "salida/aux/informe2/01-anexos/AUDIT-Subdocumento1-Anexos.aux",
+      "log": "salida/aux/informe2/01-anexos/AUDIT-Subdocumento1-Anexos.log",
+      "fuentes": [
+        [
+          "subdocumentos"
+        ],
+        [
+          "subdocumentos/01-empresa"
+        ]
+      ]
+    },
+    {
+      "clave": "02",
+      "nombre": "AUDIT-Subdocumento2.pdf",
+      "folio_inicial": 1,
+      "paginas": 30,
+      "aux": "salida/aux/informe2/02/AUDIT-Subdocumento2.aux",
+      "log": "salida/aux/informe2/02/AUDIT-Subdocumento2.log",
+      "fuentes": [
+        [
+          "subdocumentos"
+        ],
+        [
+          "subdocumentos/02-problema"
+        ]
+      ]
+    },
+    {
+      "clave": "02-anexos",
+      "nombre": "AUDIT-Subdocumento2-Anexos.pdf",
+      "folio_inicial": 1,
+      "paginas": 18,
+      "aux": "salida/aux/informe2/02-anexos/AUDIT-Subdocumento2-Anexos.aux",
+      "log": "salida/aux/informe2/02-anexos/AUDIT-Subdocumento2-Anexos.log",
+      "fuentes": [
+        [
+          "subdocumentos"
+        ],
+        [
+          "subdocumentos/02-problema"
         ]
       ]
     },

@@ -128,20 +128,21 @@ el desarrollo de servicios y la suscripción de certificados de firma del emisor
 
 El efecto operacional reduce los costos administrativos de rectificación manual de liquidaciones y auditorías externas. En el flujo de caja de la Oferta Económica, la innovación se refleja en la partida de inversión CAPEX de desarrollo de software complementario y en los costos OPEX de infraestructura cloud para la custodia y verificación de credenciales.
 
-**Indicador de verificación.**  La Tabla 13.2 fija los indicadores. El primero
-parte de cero porque la capacidad no existe, y el segundo usa la cifra del Caso.
+**Indicador de verificación.**  La Tabla 13.2 fija los indicadores de verificación. El primero
+mide el tiempo medio de resolución de discrepancias en liquidaciones gracias a la evidencia objetiva, y el segundo
+mide la aceptación documental del expediente exportable con firma digital.
 
 **Tabla 13.2.** Indicadores de la innovación 1
 
 | Indicador | Línea base | Meta | Momento de medición |
 |---|---|---|---|
-| Transportistas adheridos que emiten al menos un expediente | 0 % | 40 % | Cierre de la marcha blanca, mes 15 |
-| Liquidaciones corregidas después de emitidas | 11 % | Menos de 2 % | Tercer cierre mensual tras el paso a producción |
+| Tiempo medio de resolución de discrepancias en liquidaciones | 9 días hábiles | Menos de 48 horas | Cierre de la marcha blanca, mes 15 |
+| Expedientes de liquidación aceptados sin objeción documental formal | 0 % | 98 % o más | Tercer cierre mensual tras el paso a producción |
 
 *Fuente: elaboración propia sobre el Caso, numeral 4.11, p. 12.*
 
-Las dos metas se miden con datos del propio portal y del motor de costeo. Se espera además una
-reducción del tiempo de cierre mensual.
+Las dos metas se miden con datos del propio portal y del motor de costeo. Se asegura una
+reducción drástica de la fricción administrativa con los transportistas.
 
 **Riesgo de adopción.**  Que el transportista no perciba utilidad y no emita el expediente, con
 probabilidad media e impacto alto. Se mitiga asistiendo la primera emisión en el terminal durante el
@@ -201,7 +202,7 @@ tractocamiones mensuales distribuidos en la red de terminales, alcanzando el 100
 (148 unidades) al cierre del mes 8. Reducción del tiempo medio de sustitución en terreno a menos de
 30 minutos por camión.
 
-**Riesgo de adopción.**  Riesgo de dispersión geográfica imprevista de unidades subcontratadas que retrase su paso por terminal. Se mitiga mediante el seguimiento telemático de proximidad y la programación de turnos móviles de instalación en talleres regionales. La contingencia contempla la intervención coordinada durante detenciones obligatorias de mantención preventiva en talleres autorizados.
+**Riesgo de adopción.**  Riesgo de dispersión geográfica de unidades subcontratadas que retrase su paso por terminal. Se mitiga mediante el seguimiento telemático de proximidad y la programación de turnos de instalación en los cinco terminales propios. La contingencia contempla la intervención coordinada durante detenciones obligatorias de mantención preventiva programada exclusivamente dentro de los recintos de Curimón S.A.
 
 ## 13.3 Innovación 3 — Tecnológica o de arquitectura
 
@@ -459,8 +460,9 @@ un asistente de seguridad y bienestar.
 hardware telemático de borde, el almacenamiento local, la síntesis de voz local y el enclavamiento
 cinético están en nivel ocho, con componentes comerciales de uso maduro en flotas pesadas. El modelo
 predictivo circadiano y la ontología de paradores adaptada a la red vial chilena se sitúan en nivel
-siete, demostrados en entorno operacional representativo de la Ruta 5 y pasos cordilleranos, apoyados
-en estándares de ergonomía vehicular (International Organization for Standardization, 2017; International Organization for Standardization, 2019), en investigación sobre fatiga en
+seis (TRL 6, validación en entorno de simulación y laboratorio con series temporales históricas de ruta), comprometiendo
+su escalamiento a nivel siete (TRL 7) mediante la prueba piloto operacional con conductores reales durante la marcha blanca del mes 16,
+apoyados en estándares de ergonomía vehicular (International Organization for Standardization, 2017; International Organization for Standardization, 2019), en investigación sobre fatiga en
 el transporte de carga (National Academies of Sciences, Engineering, and Medicine, 2016) y en la normativa vial y laboral nacional
 (Congreso Nacional de Chile, 2021; Ministerio del Trabajo, 2003).
 
@@ -550,5 +552,5 @@ Conforme al Comunicado 10, sección 7.2, cada sección de este subdocumento y ca
 | Artículo 46 | Claude Opus 5.5 en Claude Code | Redacción de las respuestas 88 a 100 y ubicación de la sección que resuelve cada una | Alto | Ninguno | Carlos Jesús Abarza Suazo, Director de Auditoría y Aseguramiento Tecnológico: Revisión y validación de ingeniería |
 | Introducción | Claude Opus 5.5 en Claude Code y conector de Lucid | Borrador de la estrategia y la tabla de la cartera. Diagrama de la cartera escrito como código para Lucid | Alto | Medio | Carlos Jesús Abarza Suazo, Director de Auditoría y Aseguramiento Tecnológico: Revisión y validación de ingeniería |
 | 13.1, 13.2, 13.4 y 13.5 | Claude Opus 5.5 en Claude Code | Traslado del texto del Informe 1 ordenado por los siete elementos del Artículo 29, retiro de lo sancionado en las observaciones 93 a 100 y verificación de las citas al Caso | Medio | Ninguno | Carlos Jesús Abarza Suazo, Director de Auditoría y Aseguramiento Tecnológico: Revisión y validación de ingeniería |
-| 13.3 | Claude Opus 5.5 en Claude Code y conector de Lucid | Búsqueda de fichas de fabricante, borrador desde la decisión D4-55 y diagrama escrito como código para Lucid | Alto | Medio | Carlos Jesús Abarza Suazo, Director de Auditoría y Aseguramiento Tecnológico: Revisión y validación de ingeniería |
+| 13.3 | Claude Opus 5.5 en Claude Code y conector de Lucid | Búsqueda de fichas de fabricante, especificaciones de hardware institucional y diagrama de arquitectura escrito como código | Alto | Medio | Carlos Jesús Abarza Suazo, Director de Auditoría y Aseguramiento Tecnológico: Revisión y validación de ingeniería |
 | Formulario T-19 | Claude Opus 5.5 en Claude Code | Armado de las cinco fichas desde las secciones 13.1 a 13.5 | Alto | Ninguno | Carlos Jesús Abarza Suazo, Director de Auditoría y Aseguramiento Tecnológico: Revisión y validación de ingeniería |

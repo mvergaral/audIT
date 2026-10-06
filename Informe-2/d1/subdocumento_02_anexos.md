@@ -3,7 +3,7 @@
 **Cliente:** Transportes Curimón S.A.  
 **Proponente:** audIT Soluciones Tecnológicas SpA  
 **Documento Principal Asociado:** Subdocumento 2 (`subdocumento_02_problema_adaptado.md`)  
-**Dupla Responsable:** D1 (QA, Gobernanza y Aseguramiento Normativo)
+**Área Técnica:** Gerencia de Aseguramiento de Calidad y Gobernanza
 
 ---
 
@@ -44,7 +44,7 @@ El catálogo compendia las necesidades preliminares de negocio levantadas desde 
 | **REQ-NEG-16** | Liquidación a Terceros | Automatizar el cálculo de pre-liquidaciones mensuales a los 148 transportistas terceros a partir de los viajes validados en sistema, reduciendo el ciclo de 9 días hábiles y la tasa de error del 11%. | Caso 10, Cap. 4.11; Entrevista G. Ossandón | **Alta** |
 | **REQ-NEG-17** | Privacidad de Terceros | Desconectar automáticamente la geolocalización y telemetría de los camiones subcontratados una vez finalizado el viaje asignado (Geofencing temporal), resguardando su privacidad conforme a la Ley N.° 21.719. | Bases Admin. Art. 4.3; Entrevista N. Sandoval | **Crítica** |
 | **REQ-NEG-18** | Homologación Plataformas | Ingerir y unificar en una vista de mapa única las posiciones GPS provenientes de las tres plataformas dispares existentes (Wialon, Wisetrack, Webfleet) para los 192 camiones terceros que cuentan con rastreo previo. | Caso 10, Cap. 5; Entrevista P. Kast | **Alta** |
-| **REQ-NEG-19** | Sensorización 34 Camiones | Proveer e instalar equipamiento telemático estándar en los 34 camiones de terceros que carecen de GPS, incorporándolos a la vista operacional sin costo de inversión inicial para los pequeños transportistas. | Caso 10, Cap. 2.1 y 5; Entrevista E. Valdebenito | **Alta** |
+| **REQ-NEG-19** | Sensorización 34 Camiones | Equipamiento telemático estándar en los 34 camiones de terceros que carecen de GPS, incorporándolos a la vista operacional de la Torre de Control. | Caso 10, Cap. 2.1 y 5; Entrevista E. Valdebenito | **Alta** |
 | **REQ-NEG-20** | Resiliencia Desconexión | Garantizar la persistencia y almacenamiento local en memoria industrial a bordo de al menos 288 horas continuas (12 días) de telemetría completa durante cierres climáticos del Paso Los Libertadores. | Caso 10, RT-03.10; Entrevista M. Riquelme | **Crítica** |
 | **REQ-NEG-21** | Seguridad en Cabina | Restringir cualquier interacción táctil del chofer con dispositivos en cabina cuando el camión se encuentre en movimiento ($v > 0\text{ km/h}$), canalizando alertas exclusivamente por síntesis vocal pasiva (Ley No Chat). | Ley N.° 21.377; Entrevista Y. Colipán | **Crítica** |
 | **REQ-NEG-22** | Alerta Anticipada Fatiga | Calcular la alerta de descanso del Art. 25 bis considerando la distancia y tiempo estimado hacia el próximo punto seguro de detención (berma o servicentro), evitando que la alarma venza en zonas desérticas sin servicios. | Caso 10, Cap. 4.3; Entrevista Y. Colipán | **Alta** |
@@ -65,13 +65,13 @@ El parque de tractocamiones se clasifica de acuerdo con su titularidad jurídica
 #### Tabla A2.2 — Inventario Clasificado de Tractocamiones
 *Fuente: Elaboración propia a partir de Bases Técnicas del Caso 10 (Transportes Curimón S.A., 2026).*
 
-| Segmento de Flota | Cantidad | Participación | Antigüedad Media | Equipamiento Telemático Actual | Estrategia de Homologación e Integración audIT |
+| Segmento de Flota | Cantidad | Participación | Antigüedad Media | Equipamiento Telemático Actual | Requerimiento de Homologación e Integración |
 | :--- | :---: | :---: | :---: | :--- | :--- |
-| **Flota Propia CAN bus Fábrica** | 61 | 16,3% | 3,2 años | Módulo telemático de fábrica con bus CAN J1939 inactivo. Nunca consultado. | Lectura pasiva no intrusiva mediante acopladores inductivos. Nivel 3 + Nivel 2. |
-| **Flota Propia sin Telemetría Fábrica**| 87 | 23,3% | 8,6 años | Sin telemetría de bus de datos. Dispositivos GPS básicos de primera generación. | Suministro e instalación de dispositivo telemático industrial con acoplamiento inductivo. Nivel 2 directo. |
-| **Flota Terceros con GPS Previo** | 192 | 51,3% | Variable (4-12 años)| Dispositivos GPS de 3 proveedores comerciales dispares (Wialon, Wisetrack, Webfleet). | Ingesta vía API REST/Webhooks a Capa Anticorrupción en modalidad "solo datos". Nivel 5 de atestación. |
-| **Flota Terceros sin Dispositivo GPS** | 34 | 9,1% | Variable (>10 años) | Cero equipamiento tecnológico. Monitoreo puramente telefónico por voz. | Provisión e instalación de dispositivo telemático estándar con acoplamiento inductivo. Nivel 2 instrumental. |
-| **TOTAL PARQUE TRACTOCAMIONES** | **374** | **100,0%** | **6,4 años (media)** | **Parque altamente asimétrico y heterogéneo.** | **Integración unificada bajo modelo agnóstico de ingesta.** |
+| **Flota Propia CAN bus Fábrica** | 61 | 16,3% | 3,2 años | Módulo telemático de fábrica con bus CAN J1939 inactivo. Nunca consultado. | Requerimiento de captura pasiva no intrusiva mediante acopladores inductivos sin corte de cableado. |
+| **Flota Propia sin Telemetría Fábrica**| 87 | 23,3% | 8,6 años | Sin telemetría de bus de datos. Dispositivos GPS básicos de primera generación. | Instalación de dispositivo telemático estándar con acoplamiento inductivo no invasivo. |
+| **Flota Terceros con GPS Previo** | 192 | 51,3% | Variable (4-12 años)| Dispositivos GPS de 3 proveedores comerciales dispares (Wialon, Wisetrack, Webfleet). | Ingesta estandarizada mediante interfaces API/Webhooks en modalidad de intercambio de datos telemáticos. |
+| **Flota Terceros sin Dispositivo GPS** | 34 | 9,1% | Variable (>10 años) | Cero equipamiento tecnológico. Monitoreo puramente telefónico por voz. | Requerimiento de equipamiento telemático estándar e integración de posicionamiento georreferenciado. |
+| **TOTAL PARQUE TRACTOCAMIONES** | **374** | **100,0%** | **6,4 años (media)** | **Parque altamente asimétrico y heterogéneo.** | **Integración unificada bajo modelo agnóstico de ingesta telemática.** |
 
 ### 2.B.2 Inventario de Semirremolques y Equipos de Arrastre Propios (210 Unidades)
 
@@ -103,8 +103,8 @@ La operación de la flota requiere una fuerza laboral de 454 choferes, estructur
 | **Marco Jurídico Laboral** | Artículo 25 bis del Código del Trabajo (régimen especial de carga). | Art. 25 bis bajo régimen de subcontratación de la Ley N.° 20.123 (responsabilidad solidaria/subsidiaria). |
 | **Límites de Jornada Legal** | Máx. 5 h conducción continua; 2 h descanso; 8 h descanso diario; 180 h mensuales. | Mismos límites legales, pero con fiscalización histórica nula por parte de Curimón. |
 | **Régimen de Turnos y Descanso** | Controlado administrativamente por la empresa; turnos conocidos. | Desconocimiento total de turnos previos realizados para otros mandantes o clientes ajenos. |
-| **Mecanismo Probatorio audIT** | Entidad digital `EvidenciaJornada` con firma criptográfica SHA-256 en Azure Key Vault. | Cascada probatoria: Atestación firmada al aceptar despacho (Nivel 5) + Marcación voluntaria App (Nivel 0). |
-| **Resguardo de Privacidad** | Datos laborales procesados en virtud del contrato de trabajo y deber patronal. | Geofencing temporal y cifrado FLE: telemetría desvinculada fuera del viaje asignado (Ley 21.719). |
+| **Mecanismo Probatorio Requerido** | Registro digital inalterable de jornada con trazabilidad y custodia probatoria. | Atestación documental al aceptar despacho y registro de eventos operacionales del viaje. |
+| **Resguardo de Privacidad** | Datos laborales procesados en virtud del contrato de trabajo y deber patronal. | Geocercas temporales y disociación de coordenadas: telemetría desvinculada fuera del viaje asignado (Ley N.° 21.719). |
 | **Representante / Referente** | Yasna Colipán Marín (conductora de ruta norte, 7 años de antigüedad). | Nolberto Sandoval Pinto (transportista con 2 tractos y chofer a cargo, 9 años en Curimón). |
 
 ---
@@ -184,7 +184,7 @@ A continuación se presentan las fichas completas de caracterización de los tre
 * **Nivel de Interés:** **Bajo en la logística diaria / Crítico ante fiscalizaciones e incidentes viales.**
 * **Cuadrante de Gestión:** **Cuadrante 2: Mantener Satisfecho (Cumplimiento Legal Invariable).**
 * **Riesgo Operacional si no se Resuelve:** Paralización legal de terminales de Curimón, multas reiteradas por infracciones gravísimas y pérdida de la calidad de empleador habilitado para contratar con el Estado o grandes mandantes.
-* **Mecanismo de Interacción y Mitigación de Fricción:** Implementación de la entidad digital `EvidenciaJornada` con sellado criptográfico inmutable SHA-256 en Azure Key Vault y descarga periódica certificada de tacógrafos digitales.
+* **Mecanismo de Interacción y Mitigación de Fricción:** Implementación de registro electrónico de jornada inalterable con sellado cronológico y descarga periódica certificada de tacógrafos digitales.
 
 ---
 
@@ -229,7 +229,7 @@ A continuación se presentan las fichas completas de caracterización de los tre
 * **Nivel de Interés:** **Máximo en la totalidad de las dimensiones del proyecto.**
 * **Cuadrante de Gestión:** **Cuadrante 1: Gestionar de Cerca (Socio Estratégico Principal).**
 * **Riesgo Operacional si no se Resuelve:** Parálisis operacional por conflicto con la red de transportistas subcontratados o pérdida del 19% de ingresos corporativos.
-* **Mecanismo de Interacción y Mitigación de Fricción:** Modelo de gobernanza colaborativo con terceros, portal de liquidación transparente y equipamiento gratuito para las 34 unidades sin GPS.
+* **Mecanismo de Interacción y Mitigación de Fricción:** Modelo de gobernanza colaborativo con terceros, portal de liquidación transparente e integración estandarizada para las 34 unidades sin GPS.
 
 ---
 
@@ -299,12 +299,12 @@ A continuación se presentan las fichas completas de caracterización de los tre
 * **Objetivos Estratégicos:** Garantizar la continuidad de servicios informáticos, consolidar las 3 plataformas GPS en una vista cartográfica unificada, mantener la interoperabilidad con el legado TMS 2013 y soportar la resiliencia en zonas de sombra celular.
 * **Dolores Operacionales:** Monitorear 340 tractocamiones en tres sistemas comerciales que no conversan entre sí; 34 camiones fantasmas sin ningún GPS; zonas de desconexión celular de más de 80 kilómetros; y una sala de servidores de 26 m² precaria que incumple los estándares de misión crítica (RT-06).
 * **Testimonio Representativo:** *«Somos seis personas mirando tres pantallas distintas con mapas que no se integran. En una ni siquiera podemos exportar datos por API. Y hay treinta y cuatro camiones que no sabemos dónde están salvo que los llamemos por teléfono. En el norte hay más de ochenta kilómetros sin señal y el camión desaparece. Nuestro TMS de 2013 sabe qué viaje encargamos, no qué viaje ocurrió».*
-* **Dependencias y Necesidades de Información:** Arquitectura cloud elástica desacoplada de la sala local, Capa Anticorrupción (ACL) para estrangular progresivamente el TMS 2013 y conectores API unificados.
+* **Dependencias y Necesidades de Información:** Infraestructura tecnológica escalable desacoplada de la sala local, interfaces de integración progresiva con el TMS 2013 y conectores API unificados.
 * **Poder Formal / Veto:** **Alto (Viabilidad técnica y absorción de integraciones).**
 * **Nivel de Interés:** **Alto (Orientado a la estabilidad informática).**
 * **Cuadrante de Gestión:** **Cuadrante 3: Monitorear y Coordinar (Soporte de Arquitectura).**
 * **Riesgo Operacional si no se Resuelve:** Colapso de servidores locales ante fallas eléctricas, pérdida de datos por sombras de red y fragmentación de la información de tráfico.
-* **Mecanismo de Interacción y Mitigación de Fricción:** Migración de carga de misión crítica hacia Azure Multi-AZ y patrón Estrangulador (*Strangler Fig*) sobre el TMS 2013.
+* **Mecanismo de Interacción y Mitigación de Fricción:** Modernización de la infraestructura transaccional de misión crítica y coexistencia gradual no disruptiva con el TMS 2013.
 
 ---
 
@@ -334,7 +334,7 @@ A continuación se presentan las fichas completas de caracterización de los tre
 * **Nivel de Interés:** **Alto (Afecta directamente el flujo de caja de sus microempresas).**
 * **Cuadrante de Gestión:** **Cuadrante 4: Asegurar Adhesión e Incentivo Compartido.**
 * **Riesgo Operacional si no se Resuelve:** Fuga masiva de camiones hacia empresas competidoras, desabastecimiento de flota y colapso de la operación de Curimón.
-* **Mecanismo de Interacción y Mitigación de Fricción:** Geofencing temporal que respeta la privacidad, hardware gratuito para los 34 camiones sin GPS, y aceleración de liquidaciones a 48 horas tras viaje conforme.
+* **Mecanismo de Interacción y Mitigación de Fricción:** Geocercas temporales que respetan la privacidad, equipamiento estandarizado para los 34 camiones sin GPS, y aceleración de liquidaciones a 48 horas tras viaje conforme.
 
 ---
 

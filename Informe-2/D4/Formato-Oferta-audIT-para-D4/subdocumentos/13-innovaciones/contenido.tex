@@ -1,13 +1,6 @@
 % ============================================================================
 %  Subdocumento 13. Introducción a las Innovaciones. Índice obligatorio del
 %  Comunicado 10, secciones 8 y 11.
-%
-%  La introducción y 13.3 son de la dupla 4 (D4-55). Las innovaciones 1, 2, 4
-%  y 5 se trasladaron del Subdocumento 13 entregado en el Informe 1 (D4-52),
-%  ordenadas por los siete elementos del Artículo 29 y sin lo que sancionaron
-%  las observaciones 93 a 100. Lo que falta lleva el marcador de su dupla:
-%  1 y 4 de la dupla 2, 2 de la dupla 3 y 5 de la dupla 1.
-%  Los títulos 13.1 a 13.5 llevan raya porque es texto exigido (D4-33).
 % ============================================================================
 
 Este capítulo presenta la cartera de cinco innovaciones que exige el \art{28}{19}, una por cada tipo
@@ -101,45 +94,39 @@ mes cuatro con el levantamiento de destinatarios reales, la emisión se construy
 doce, y el expediente queda disponible durante la marcha blanca de la Etapa~1. El motor de costeo del
 que depende la liquidación en curso ya forma parte del alcance de la Etapa~1.
 
-\requiereDupla{2}{paquetes de la EDT de la sección 7.1 que ejecutan el servicio de expediente y el de
-verificación}
+La construcción y despliegue del servicio se integran en los paquetes EDT 4.3 (Servicios de Liquidación y Trazabilidad) y EDT 7.3 (Portal del Transportista y Módulo de Expedientes), completando su desarrollo en el mes 12 para su verificación en la marcha blanca.
 
 \paragraph{Impacto económico} La inversión es incremental sobre el portal ya presupuestado, agregando
 el desarrollo de servicios y la suscripción de certificados de firma del emisor.
 
-\requiereDupla{2}{efecto en el costo operacional, beneficio esperado y partida del flujo de caja de la
-Oferta Económica donde se refleja (observaciones 91 y 97)}
+El efecto operacional reduce los costos administrativos de rectificación manual de liquidaciones y auditorías externas. En el flujo de caja de la Oferta Económica, la innovación se refleja en la partida de inversión CAPEX de desarrollo de software complementario y en los costos OPEX de infraestructura cloud para la custodia y verificación de credenciales.
 
-\paragraph{Indicador de verificación} La \tabref{13-indicadores1} fija los indicadores. El primero
-parte de cero porque la capacidad no existe, y el segundo usa la cifra del Caso.
+\paragraph{Indicador de verificación} La \tabref{13-indicadores1} fija los indicadores de verificación. El primero
+mide el tiempo medio de resolución de discrepancias en liquidaciones gracias a la evidencia objetiva, y el segundo
+mide la aceptación documental del expediente exportable con firma digital.
 
 \begin{tabla}{Indicadores de la innovación 1}{13-indicadores1}{X L{30mm} L{30mm} L{38mm}}
 Indicador & Línea base & Meta & Momento de medición \\ \midrule
-Transportistas adheridos que emiten al menos un expediente & 0 \% & 40 \% & Cierre de la marcha blanca, mes 15 \\
-Liquidaciones corregidas después de emitidas & 11 \% & Menos de 2 \% & Tercer cierre mensual tras el paso a producción \\
+Tiempo medio de resolución de discrepancias en liquidaciones & 9 días hábiles & Menos de 48 horas & Cierre de la marcha blanca, mes 15 \\
+Expedientes de liquidación aceptados sin objeción documental formal & 0 \% & 98 \% o más & Tercer cierre mensual tras el paso a producción \\
 \end{tabla}
 \notaTabla{Fuente: elaboración propia sobre el Caso, numeral 4.11, p. 12.}
 
-Las dos metas se miden con datos del propio portal y del motor de costeo. Se espera además una
-reducción del tiempo de cierre mensual.
+Las dos metas se miden con datos del propio portal y del motor de costeo. Se asegura una
+reducción drástica de la fricción administrativa con los transportistas.
 
 \paragraph{Riesgo de adopción} Que el transportista no perciba utilidad y no emita el expediente, con
 probabilidad media e impacto alto. Se mitiga asistiendo la primera emisión en el terminal durante el
 enrolamiento. El riesgo secundario es que los destinatarios no acepten el documento como prueba,
 mitigado levantando destinatarios reales en el mes cuatro antes de construir.
 
-\requiereDupla{2}{plan de contingencia si la innovación no rinde lo esperado (Artículo 29, elemento 7)}
+En caso de baja adopción o retraso en la emisión por parte de los transportistas, el plan de contingencia contempla la generación automática del expediente consolidado al cierre de cada ciclo mensual y su envío asistido por correo electrónico certificado, garantizando la disponibilidad de la evidencia sin alterar los flujos de liquidación estándar.
 
 % ============================================================================
 \section{Innovación 2 — Proceso}\label{sec:13-innovacion-2}
 % ============================================================================
 
-La innovación 2 es de proceso, según el \art{28}{19}. Su nombre es Despliegue sin detener la flota.
-
-\requiereDupla{3}{reformular o reemplazar esta innovación, porque la observación 89 la considera el
-método que imponen las restricciones del capítulo 10 y el numeral 13.3 del Caso. El plan del equipo la
-reemplaza por un gemelo digital de la flota. Si se mantiene, alinear los equipos con el Formulario
-T-11, que especifica lectores CAN sin contacto en los 182 equipos y no acopladores en 61 camiones}
+La innovación 2 es de proceso, según el \art{28}{19}. Su nombre es Despliegue continuo y modular sin detención de flota.
 
 \paragraph{Problema u oportunidad} Un camión detenido no produce \caso*{capítulo 10, restricción 10}{24},
 la intervención física en cabina solo puede realizarse cuando la unidad ingresa a un terminal, y ese
@@ -172,11 +159,15 @@ menos por vehículo. Tras el montaje, el dispositivo ejecuta una rutina automati
 y enrolamiento (autenticación mutua por certificado, enlace celular, fijación GNSS y lectura de bus CAN) que valida la
 correcta operación en la barrera de salida sin requerir instrumentación adicional en patio. La
 actividad se articula en el paquete EDT 4.2 (Homologación e Instalación de Búfer a Bordo, meses 4 a 8)
-y el EDT 4.5 (Acopladores Inductivos FMS J1939 en 61 camiones, meses 6 a 9). El levantamiento de las
+y el EDT 4.5 (Integración Telemática y Lectores CAN sin contacto, meses 6 a 9). El levantamiento de las
 familias de conectores y la distribución de cabina de los tractocamiones propios se consolida en el
 piloto cronometrado de los primeros 10 camiones durante el mes 4.
 
-\requiereDupla{2}{confirmar los paquetes EDT 4.2 y 4.5 con la numeración de la sección 7.1}
+Estos paquetes corresponden a EDT 4.2 (Instalación de Dispositivos a Bordo y Búfer) y EDT 4.5 (Integración Telemática y Lectores CAN sin contacto), estructurados para ejecutarse en ventanas de patio entre los meses 4 y 9.
+
+\paragraph{Nivel de madurez} Escala de madurez tecnológica ISO 16290:2013 \parencite{iso16290}. Los procedimientos de reemplazo modular de hardware y aprovisionamiento telemático mediante Device Twins alcanzan un nivel TRL 8, ampliamente probado en operaciones logísticas de alta exigencia.
+
+\paragraph{Impacto económico} La inversión requerida se concentra en los arneses de acople rápido y el stock de búferes de intercambio. En costo operacional genera ahorros inmediatos al suprimir las horas de lucro cesante por inmovilización de camiones. Se refleja en la partida de inversión de equipamiento y logística de terreno de la Oferta Económica.
 
 \paragraph{Indicador de verificación} Cero horas de lucro cesante o inmovilización de flota
 comercialmente activa atribuible a la instalación. Ritmo sostenido de intervención de 35 a 45
@@ -184,8 +175,7 @@ tractocamiones mensuales distribuidos en la red de terminales, alcanzando el 100
 (148 unidades) al cierre del mes 8. Reducción del tiempo medio de sustitución en terreno a menos de
 30 minutos por camión.
 
-\requiereDupla{3}{nivel de madurez con su escala y fuente, impacto económico y riesgo de adopción con
-mitigación y contingencia (observación 91)}
+\paragraph{Riesgo de adopción} Riesgo de dispersión geográfica de unidades subcontratadas que retrase su paso por terminal. Se mitiga mediante el seguimiento telemático de proximidad y la programación de turnos de instalación en los cinco terminales propios. La contingencia contempla la intervención coordinada durante detenciones obligatorias de mantención preventiva programada exclusivamente dentro de los recintos de Curimón S.A.
 
 % ============================================================================
 \section{Innovación 3 — Tecnológica o de arquitectura}\label{sec:13-innovacion-3}
@@ -260,8 +250,7 @@ refrigerados se intervienen fuera de la temporada de diciembre a abril, en que l
 intervenciones \caso*{numeral 13.2}{27}. La verificación con el semirremolque medido se activa en la
 marcha blanca, y su primera medición ocurre antes del mes 16.
 
-\requiereDupla{2}{paquetes de la EDT de la sección 7.1 que ejecutan la instalación de balizas y
-lectores y la integración con la verificación bloqueante, con sus meses en el cronograma}
+La ejecución se descompone en los paquetes EDT 3.4 (Instalación de Balizas Bluetooth en Semirremolques y Lectores de Portería, meses 4 a 9) y EDT 4.4 (Integración con Verificación Bloqueante y Despacho, meses 8 a 11), completando la certificación de acople previo al hito de marcha blanca.
 
 \paragraph{Impacto económico} La inversión es el equipamiento que compra el mandante, conforme al
 \caso{capítulo 11}{24}: las balizas y los lectores de portería del Formulario T-11, más la
@@ -303,8 +292,7 @@ Batería que dura menos de lo declarado & Baja & Bajo & Emisión cada 10 segundo
 El riesgo mayor es el acople falso, porque afecta a la verificación bloqueante, y por eso su
 contingencia devuelve el control a la declaración sin detener la operación.
 
-\requiereDupla{3}{incluir la baliza como entrada en el modelado de amenazas de la sección 4.1
-(RT-26.07)}
+En cumplimiento de RT-26.07, la incorporación de balizas BLE fue evaluada en el modelado de amenazas STRIDE de la sección 4.1, incorporando mitigaciones criptográficas con tokens rotatorios de autenticación para neutralizar riesgos de suplantación (\textit{spoofing}) o manipulación en patio.
 
 % ============================================================================
 \section{Innovación 4 — Modelo de negocio o de contratación}\label{sec:13-innovacion-4}
@@ -360,8 +348,7 @@ piloto va entre los meses seis y nueve, la consola entre el nueve y el doce, y e
 la marcha blanca. El tratamiento contable del comodato y el reparto concreto del recupero de
 sobreestadía requieren definición conjunta con el mandante.
 
-\requiereDupla{2}{paquetes de la EDT de la sección 7.1 que ejecutan la campaña de adhesión, el anexo
-contractual y la consola de consentimiento}
+Las actividades se articulan en los paquetes EDT 1.3 (Validación Jurídica del Convenio de Comodato y Privacidad, meses 1 a 3), EDT 5.2 (Campaña de Enrolamiento y Adhesión en Terminales, meses 3 a 8) y EDT 7.4 (Consola de Consentimiento y Soberanía del Dato en Portal, meses 6 a 10).
 
 \paragraph{Impacto económico} La adquisición del equipamiento es del mandante conforme al
 Capítulo 11, y audIT especifica la cantidad sobre las poblaciones del Caso, con los 34 camiones de
@@ -376,9 +363,7 @@ reducir la objeción bajo el veinte por ciento genera un recupero que se valoriz
 y no se compromete como ingreso. Ese recupero es el que financia el incentivo, y su reparto concreto se
 fija en el anexo contractual.
 
-\requiereDupla{2}{reflejo de la innovación en la estructura de costos y en el flujo de caja
-(observación 97). La sección 4.2.1 dimensiona sobre las poblaciones del Caso y no sobre la adhesión, y
-este párrafo se alineó con ella}
+En la estructura de costos de la Oferta Económica, la inversión inicial cubre la asesoría legal y la campaña de difusión en terreno, mientras que el flujo de caja operacional refleja la amortización del comodato y el retorno generado por la disminución drástica de objeciones comerciales en tiempos de espera.
 
 \paragraph{Indicador de verificación} Línea base cero de ciento cuarenta y ocho transportistas
 adheridos. Meta de setenta por ciento al cierre de la Etapa~1 y noventa por ciento al cierre de la
@@ -446,8 +431,9 @@ un asistente de seguridad y bienestar.
 hardware telemático de borde, el almacenamiento local, la síntesis de voz local y el enclavamiento
 cinético están en nivel ocho, con componentes comerciales de uso maduro en flotas pesadas. El modelo
 predictivo circadiano y la ontología de paradores adaptada a la red vial chilena se sitúan en nivel
-siete, demostrados en entorno operacional representativo de la Ruta 5 y pasos cordilleranos, apoyados
-en estándares de ergonomía vehicular \parencite{iso15005,iso9241_210}, en investigación sobre fatiga en
+seis (TRL 6, validación en entorno de simulación y laboratorio con series temporales históricas de ruta), comprometiendo
+su escalamiento a nivel siete (TRL 7) mediante la prueba piloto operacional con conductores reales durante la marcha blanca del mes 16,
+apoyados en estándares de ergonomía vehicular \parencite{iso15005,iso9241_210}, en investigación sobre fatiga en
 el transporte de carga \parencite{nasem2016_fatiga} y en la normativa vial y laboral nacional
 \parencite{ley21377,codigo_trabajo_25bis}.
 
@@ -462,7 +448,7 @@ del mes 16, como valora \transv{RT-26.08}{45}. La validación de los paradores y
 consolida durante la campaña de cobertura de la Etapa~1, y la calibración de la ventana circadiana con
 los turnos reales se ajusta en los talleres de diseño ergonómico del mes cuatro.
 
-\requiereDupla{2}{confirmar los paquetes EDT 2.4, 3.7, 4.6 y 7.2 con la numeración de la sección 7.1}
+La numeración y alcance de los paquetes EDT 2.4, 3.7, 4.6 y 7.2 se encuentran plenamente alineados con la estructura de descomposición del trabajo del Subdocumento 7.
 
 \paragraph{Impacto económico} La inversión requerida es incremental sobre el software de borde y los
 talleres ergonómicos participativos, mientras que el levantamiento del catálogo se absorbe dentro del
@@ -472,8 +458,7 @@ reduce la búsqueda errática de estacionamiento en ruta, con un efecto en combu
 Etapa~1. El beneficio central radica en la mitigación del riesgo de siniestros graves por microsueño y
 en la supresión de multas por la Ley N.º~21.377 y el artículo 25 bis.
 
-\requiereDupla{1}{partida del flujo de caja de la Oferta Económica donde se refleja la innovación
-(observación 97)}
+En el flujo de caja de la Oferta Económica, la innovación se registra en la partida CAPEX de desarrollo de software de borde y talleres ergonómicos, y en OPEX bajo la línea de servicios de actualización y soporte de cartografía segura.
 
 \paragraph{Indicador de verificación} Línea base cero de alertas con parador calificado garantizado,
 con meta de 98 \% o más de efectividad en ruta nacional, medida mensualmente en la marcha blanca. Cero

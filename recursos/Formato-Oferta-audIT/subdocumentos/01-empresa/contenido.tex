@@ -9,7 +9,7 @@ audIT expone formalmente su capacidad técnica, institucional, metodológica y f
   \item Estructura organizacional y asignación nominada de los seis roles habilitantes obligatorios del \art{34.1}{24}.
   \item Plataforma de borde embarcado audIT EdgeHub v2.4 con almacenamiento no volátil de 8~GB y resiliencia de hasta 12 días en pasos fronterizos (\caso{RT-03.10}{31}).
   \item Red regional de asistencia técnica y reemplazo de hardware en Ruta 5 con SLA contractual menor a cuatro horas.
-  \item Plan institucional de certificación formal ISO/IEC 27001:2022 y tres proyectos acreditados en Formulario T-6 con SLA $\ge 99{,}5\%$.
+  \item Plan institucional de certificación formal ISO/IEC 27001:2022 y tres proyectos acreditados en Formulario T-6, dos con disponibilidad mensual $\ge 99{,}5\%$ y uno con 99,2\% enfocado en resiliencia desconectada de 72 horas.
 \end{recibe}
 \end{resumenApertura}
 
@@ -74,7 +74,7 @@ Las especificaciones técnicas y operacionales del producto audIT EdgeHub v2.4 E
 \begin{itemize}
   \item \textbf{Entorno de Ejecución y Sistema Operativo:} Basado en distribución Linux industrial embebida (\textit{Debian Embedded / Yocto Project}), con núcleo (\textit{kernel}) endurecido conforme a guías CIS Benchmarks, arranque seguro (\textit{Secure Boot}) y particionamiento de almacenamiento redundante A/B para permitir actualizaciones remotas de firmware (\textit{FOTA -- Firmware Over-The-Air}) a prueba de fallos y cortes intempestivos de energía.
   \item \textbf{Lenguajes y Módulos de Control:} Módulos de captura cinemática y comunicación con el bus CAN programados en lenguaje Rust y C/C++ optimizado, garantizando consumo ultrabajo de recursos de CPU y memoria, y ausencia de fallos por desbordamiento de memoria.
-  \item \textbf{Capacidades de Búfer Local Inalterable y Resiliencia Eléctrica:} El sistema implementa un motor de base de datos relacional ultraligero SQLite configurado obligatoriamente en modo \textit{Write-Ahead Logging} (WAL) sobre memoria flash eMMC de grado industrial con capacidad $\ge 8\text{ GB}$ (en cumplimiento del requerimiento \caso{RT-08.11}{32}). A diferencia de los esquemas convencionales de almacenamiento en archivos de texto plano o búferes volátiles en memoria RAM, el modo WAL escribe las transacciones secuencialmente en un archivo de bitácora dedicado sin bloquear lecturas concurrentes. Ante desconexiones abruptas del suministro eléctrico vehicular (12V/24V) causadas por vibraciones, cortes de encendido o accionamiento de corta-corrientes a alta velocidad, la base de datos se recupera atómicamente en un tiempo garantizado inferior a diez (10) milisegundos al reiniciar, sin truncamiento ni corrupción de datos.
+  \item \textbf{Capacidades de Búfer Local Inalterable y Resiliencia Eléctrica:} El sistema implementa un motor de base de datos relacional ultraligero SQLite configurado obligatoriamente en modo \textit{Write-Ahead Logging} (WAL) sobre memoria flash eMMC de grado industrial con capacidad $\ge 8\text{ GB}$ (en cumplimiento del requerimiento \caso{RT-08.11}{32}). A diferencia de los esquemas convencionales de almacenamiento en archivos de texto plano o búferes volátiles en memoria RAM, el modo WAL escribe las transacciones secuencialmente en un archivo de bitácora dedicado sin bloquear lecturas concurrentes. Ante desconexiones abruptas del suministro eléctrico vehicular (12V/24V) causadas por vibraciones, cortes de encendido o accionamiento de corta-corrientes a alta velocidad, la base de datos se recupera atómicamente al reiniciar mediante el mecanismo de WAL local en SQLite sobre memoria eMMC de grado industrial, garantizando cero truncamiento ni corrupción de datos ante cortes intempestivos de energía vehicular.
   \item \textbf{Autonomía Operacional y Sincronización Determinista (Cumplimiento RT-03.10):} El búfer local estructurado sobre memoria eMMC industrial de 8~GB garantiza el cumplimiento irrestricto del requerimiento no funcional \caso{RT-03.10}{31}, diseñado para soportar contingencias de aislamiento extremo en el Corredor Bioceánico Los Libertadores (Ruta 60 CH) y zonas de sombra celular desértica (>80 km), donde los vehículos pueden quedar varados hasta \textbf{12 días continuos (288 horas)}. Bajo la política de muestreo operacional del Caso 10 (1 evento cada 30 segundos en movimiento y 1 evento cada 5 minutos en detención/ralentí, complementado con ráfagas por eventos extraordinarios de acelerometría 3D y códigos de falla J1939), 288 horas generan $\approx 34.560$ paquetes serializados ($\sim 40\text{ MB}$ en formato binario protocolizado), ocupando menos del 1\% del búfer asignable y superando holgadamente el umbral contractual sin riesgo de pérdida ni sobrescritura FIFO. Incluso bajo condiciones de prueba de laboratorio a máxima frecuencia bruta ininterrumpida (1 Hz), la memoria almacena más de 2,5 millones de registros ($\ge 72\text{ horas}$ continuas de telemetría de ultra-alta resolución). Una vez detectado el restablecimiento de conectividad celular, el motor de sincronización de \textit{audIT EdgeHub} aplica compresión Zstandard (\textit{zstd}), transmitiendo paquetes por lotes (\textit{batch streaming}) ordenados por marcas de tiempo monotónicas hacia los buses de eventos centrales (\textit{Azure Event Hubs} / \textit{Kafka}), garantizando entrega determinista, deduplicación matemática e integridad referencial absoluta.
   \item \textbf{Seguridad Criptográfica en el Borde y Seguridad Vial:} El dispositivo incorpora claves criptográficas asimétricas almacenadas en un módulo criptográfico de hardware seguro (Secure Element / TPM 2.0) para firmar digitalmente cada paquete de datos emitido. En cumplimiento de la Ley N.° 21.719, las coordenadas georreferenciadas asociadas a la identidad del chofer se someten a cifrado a nivel de campo (FLE) antes de su transmisión o persistencia en el búfer. Asimismo, para salvaguardar la seguridad vial y acatar estrictamente la Ley N.° 21.377 (Ley No Chat), el software incorpora un mecanismo de enclavamiento cinético estricto: ante cualquier detección de velocidad vehicular ($v > 0\text{ km/h}$) o desenganche de freno de estacionamiento, se bloquea de forma inmediata cualquier interfaz visual en cabina, canalizando todas las alertas o notificaciones indispensables hacia el conductor mediante síntesis vocal pasiva fuera de línea (\textit{offline Text-to-Speech} en español chileno por altavoz vehicular), sin exigir manipulación táctil ni desvío de la atención visual.
 \end{itemize}
@@ -181,7 +181,7 @@ En estricto apego al calendario contractual del Formulario T-22 y las Bases Admi
 
 audIT opera mediante una metodología de ingeniería colaborativa en parejas (\textit{pair\allowbreak-engineering}) y células multifuncionales. Esta disciplina de diseño previene la generación de silos de conocimiento técnico y elimina el riesgo de dependencia de personas únicas (\textit{single} \textit{points} \textit{of} \textit{knowledge} \textit{failure}). Todo desarrollo de firmware, código backend o configuración de infraestructura en la nube es sometido a revisión cruzada obligatoria (\textit{peer review}) mediante solicitudes de integración (\textit{pull requests}) antes de incorporarse a la rama principal de compilación, resguardando la transferibilidad inmediata de funciones ante eventuales contingencias o reemplazos de personal.
 
-\section{Gobierno interno de calidad, seguridad y conocimiento}\label{sec:1-gobierno}
+\section{Gobierno interno Calidad, Seguridad y Conocimiento}\label{sec:1-gobierno}
 
 El gobierno institucional de audIT articula de manera sinérgica la calidad del ciclo de vida del software, la seguridad de la información y la gestión del conocimiento técnico. Este marco garantiza que cada producto de trabajo cumpla con estándares auditables antes de ser transferido al entorno operacional del mandante.
 
@@ -254,7 +254,7 @@ A continuación se presentan el resumen analítico de los proyectos similares ac
 
 \subsection{Resumen analítico de proyectos homólogos}\label{sec:1-proyectos-homologos}
 
-En conformidad con lo dispuesto en el \art{34}{24} de las Bases Administrativas y el Comunicado 10, en la \tabref{1-proyectos} se sintetizan los tres proyectos de misión crítica desarrollados y concluidos exitosamente por audIT dentro de los últimos cinco años. Los tres proyectos operan en la actualidad bajo esquemas de arquitectura híbrida, registran compromisos de disponibilidad mensual de plataforma iguales o superiores al 99,5\% y administran volúmenes operacionales comparables con la flota (374 camiones) y viajes anuales ($\approx 96.000$) de Transportes Curimón S.A.
+En conformidad con lo dispuesto en el \art{34}{24} de las Bases Administrativas y el Comunicado 10, en la \tabref{1-proyectos} se sintetizan los tres proyectos de misión crítica desarrollados y concluidos exitosamente por audIT dentro de los últimos cinco años. Los tres proyectos operan en la actualidad bajo esquemas de arquitectura híbrida, registrando dos de ellos compromisos de disponibilidad mensual de plataforma iguales o superiores al 99,5\% (99,5\% y 99,6\%) y el restante un 99,2\% enfocado en resiliencia desconectada de 72 horas, administrando en todos los casos volúmenes operacionales comparables con la flota (374 camiones) y viajes anuales ($\approx 96.000$) de Transportes Curimón S.A.
 
 \begin{tabla}[ancho=completo]{Resumen analítico de proyectos de experiencia previa acreditados}{1-proyectos}{L{34mm} X X X L{30mm}}
 \textbf{Parámetro Clave} & \textbf{Proyecto 1: Transporte Interurbano} & \textbf{Proyecto 2: Logística en Frío y Faenas} & \textbf{Proyecto 3: Distribución Multimodal} & \textbf{Exigencia Art. 34° / Curimón} \\ \midrule
@@ -281,7 +281,7 @@ audIT sustenta su práctica de ingeniería en un sólido marco de certificacione
 
 \begin{itemize}
   \item \textbf{ISO 9001:2015 (Sistema de Gestión de la Calidad):} Certificación corporativa plenamente vigente para el diseño, desarrollo, pruebas, implantación, integración de hardware y soporte continuo de plataformas de software y sistemas IoT telemáticos.
-  \item \textbf{ISO/IEC 27001:2022 (Sistema de Gestión de Seguridad de la Información):} Conforme a lo previsto en el \art{34.1}{24} de las Bases Administrativas, audIT acredita la superación íntegra y sin no conformidades mayores de la auditoría externa de certificación de Fase 2 ejecutada por la casa certificadora internacional Bureau Veritas Certification S.A. (organismo acreditado ante el INN bajo norma NCh-ISO/IEC 17021 y signatario IAF MLA), según consta en el Informe y Dictamen Conforme de Auditoría N.° BV-CL-2026-SGSI-044 emitido el 14 de agosto de 2026 sobre el expediente BV-EXP-2026-CL-8921. En estricto cumplimiento del mecanismo habilitante del \art{34.1}{24}, se acompaña en el Anexo 1.A el Plan Institucional de Despliegue, Vigilancia y Certificación Formal ISO/IEC 27001:2022, debidamente suscrito bajo fe de juramento por el Representante Legal de la compañía.
+  \item \textbf{ISO/IEC 27001:2022 (Sistema de Gestión de Seguridad de la Información):} Conforme a lo previsto en el \art{34.1}{24} de las Bases Administrativas, audIT acredita la superación íntegra y sin no conformidades mayores de la auditoría externa de certificación de Fase 2 ejecutada por la casa certificadora internacional Bureau Veritas Certification S.A. (organismo acreditado ante el INN bajo norma NCh-ISO/IEC 17021 y signatario IAF MLA), según consta en el Informe y Dictamen Conforme de Auditoría N.° BV-CL-2026-SGSI-044 emitido el 14 de agosto de 2026 sobre el expediente BV-EXP-2026-CL-8921. En estricto cumplimiento del mecanismo habilitante del \art{34.1}{24}, se acompaña en el anexo independiente AUDIT-Subdocumento1-Anexos.pdf el Plan Institucional de Despliegue, Vigilancia y Certificación Formal ISO/IEC 27001:2022, debidamente suscrito bajo fe de juramento por el Representante Legal de la compañía.
   \item \textbf{Estándares Técnicos Complementarios de Ingeniería (\art{4.3}{5}):}
   \begin{itemize}
     \item \textit{NIST SP 800-207:} Implementación estricta de Arquitectura de Confianza Cero (\textit{Zero Trust}) en todas las capas de red y aplicación.
@@ -310,12 +310,12 @@ Para acreditar fehacientemente ante la Comisión Evaluadora la solvencia económ
   \item \textbf{Prueba Ácida (\textit{Acid Test}):} 1,88 [(Activo Corriente -- Inventarios) / Pasivo Corriente]. Al excluir inventarios de componentes físicos, audIT mantiene una cobertura de solvencia inmediata altamente holgada frente a sus compromisos operacionales.
   \item \textbf{Ratio de Solvencia Patrimonial / Endeudamiento Total (\textit{Leverage}):} 0,38 (Pasivo Total / Patrimonio Neto). La estructura financiera de la sociedad se basa predominantemente en fondos propios y reinversión de utilidades, exhibiendo una bajísima dependencia del apalancamiento financiero externo o bancario.
   \item \textbf{Rentabilidad Operacional y Retorno sobre Patrimonio (ROE):} 18,5\% sostenido en el último trienio, con un Retorno sobre Activos (ROA) del 12,8\%, acreditando una gestión financiera eficiente y sostenible en el tiempo.
-  \item \textbf{Respaldo de Capital de Trabajo y Garantías Contractuales:} La compañía cuenta con un capital de trabajo neto positivo que cubre con creces más de seis (6) meses de operación continua sin dependencia de cobranzas inmediatas. Asimismo, se adjunta el certificado bancario emitido por una institución de primera plaza que acredita la plena capacidad de audIT para constituir las boletas de garantía bancarias de fiel cumplimiento de contrato y correcta ejecución del servicio exigidas en el Capítulo 7 de las Bases Administrativas.
+  \item \textbf{Respaldo de Capital de Trabajo y Garantías Contractuales:} La compañía cuenta con un capital de trabajo neto positivo que cubre con creces más de seis (6) meses de operación continua sin dependencia de cobranzas inmediatas, respaldando la plena capacidad financiera de audIT para constituir oportunamente las boletas de garantía bancarias exigidas en las Bases Administrativas.
 \end{itemize}
 
 En estricto cumplimiento del \art{50.2}{32} de las Bases Administrativas, la presente propuesta técnica no contiene tarifas, honorarios ni valores monetarios de la oferta económica, los cuales se encuentran contenidos con exclusividad en el Sobre Económico N.° 3.
 
-\section{Estructura para el proyecto}\label{sec:1-estructura-proyecto}
+\section{Estructura para Proyecto}\label{sec:1-estructura-proyecto}
 
 Para abordar el proyecto de Transporte de Carga para Transportes Curimón S.A., audIT adopta una estructura de proyecto dedicada y orientada a objetivos, concebida para maximizar la sincronización entre el desarrollo de software y el despliegue físico de campo.
 
@@ -330,7 +330,7 @@ La organización interna para el proyecto se estructura en cuatro frentes de tra
 
 La asignación de dedicación de cada frente de trabajo, la articulación de las células técnicas y los protocolos de coordinación operacional garantizan la cobertura integral de los requerimientos de implantación y operación 24/7 de Transportes Curimón S.A., operando con plena autosuficiencia técnica desde el hito de inicio de servicios.
 
-\section{Alianzas estratégicas}\label{sec:1-alianzas}
+\section{Alianzas}\label{sec:1-alianzas}
 
 audIT complementa sus capacidades internas de ingeniería mediante alianzas tecnológicas institucionales consolidadas y convenios de soporte vigentes, las cuales transfieren valor técnico y respaldo directo a la operación de Transportes Curimón S.A.
 
@@ -368,65 +368,5 @@ En articulación directa con los cuatro nodos operacionales descritos en la secc
 
 La gobernanza contractual, los acuerdos OLA y los protocolos de auditoría de servicio de la red de asistencia en ruta se integran formalmente a la operación desde el Mes 1 de servicios.
 
-% ============================================================================
-%  ANEXO 1.A — PLAN INSTITUCIONAL DE CERTIFICACIÓN ISO/IEC 27001:2022
-% ============================================================================
-\section*{Anexo 1.A --- Plan institucional de certificación ISO/IEC 27001:2022}\label{sec:1-anexo-iso}
-\addcontentsline{toc}{section}{Anexo 1.A --- Plan institucional de certificación ISO/IEC 27001:2022}
-
-Conforme a la exigencia de acreditación de Requisito Habilitante del \art{34.1}{24} de las Bases Administrativas TFEP-01/2026, audIT formaliza el siguiente plan institucional vinculante.
-
-\subsection*{1. Individualización del oferente y representación legal}
-\begin{itemize}
-  \item \textbf{Razón Social:} audIT Soluciones Tecnológicas SpA
-  \item \textbf{RUT:} 76.924.310-K
-  \item \textbf{Representante Legal:} Carlos Jesús Abarza Suazo
-  \item \textbf{Cédula de Identidad:} 21.108.465-0
-  \item \textbf{Organismo Certificador:} Bureau Veritas Certification S.A. (acreditado ante el Instituto Nacional de Normalización [INN] bajo norma NCh-ISO/IEC 17021, signatario IAF MLA).
-  \item \textbf{Norma Internacional:} ISO/IEC 27001:2022 (\textit{Information Security, Cybersecurity and Privacy Protection -- Information Security Management Systems}).
-  \item \textbf{Expediente de Auditoría Externa:} N.° BV-EXP-2026-CL-8921.
-\end{itemize}
-
-\subsection*{2. Alcance del Sistema de Gestión de Seguridad de la Información (SGSI)}
-El Sistema de Gestión de Seguridad de la Información de audIT cubre:
-\begin{quote}
-«El diseño, desarrollo, pruebas, integración, aseguramiento de calidad, implantación y operación de plataformas de software de misión crítica, soluciones de telemetría e Internet de las Cosas (IoT) de borde, y administración de arquitecturas cloud para transporte terrestre, distribución y logística corporativa, conforme a la Declaración de Aplicabilidad (SoA) versión 3.0».
-\end{quote}
-
-\subsection*{3. Estado probatorio de la acreditación (Fase 1 y Fase 2 superadas)}
-audIT acredita bajo fe de juramento haber superado satisfactoriamente y sin reservas la totalidad del proceso pericial externo de evaluación de conformidad:
-\begin{itemize}
-  \item \textbf{Auditoría de Fase 1 (Revisión Documental y Diseño del SGSI):} Concluida y aprobada conforme en noviembre de 2025.
-  \item \textbf{Auditoría de Fase 2 (Evaluación de Implementación de 93 Controles):} Ejecutada entre el 10 y el 14 de agosto de 2026 por Bureau Veritas Certification S.A., concluyendo con \textbf{cero No Conformidades Mayores}.
-  \item \textbf{Certificado de Conformidad de Auditoría Fase 2:} Emitido con fecha 14 de agosto de 2026 bajo el código \textbf{N.° BV-CL-2026-SGSI-044}, ratificando la aptitud técnica del SGSI para emisión formal de certificación.
-  \item \textbf{Estado de Trámite a la Presentación:} El expediente BV-EXP-2026-CL-8921 se encuentra aprobado por el Comité de Certificación de Bureau Veritas, restando únicamente la emisión física del diploma y su inscripción registral en el catálogo INN.
-\end{itemize}
-
-\subsection*{4. Cronograma vinculante de despliegue, protocolización y vigilancia anual}
-Para dar cabal cumplimiento a lo dispuesto en el \art{34.1}{24} de las Bases Administrativas (\textit{«plan de certificación con hitos verificables dentro de los primeros doce meses del Contrato»}), en la \tabref{1-iso27001-hitos} se formaliza el cronograma de cumplimiento irrestricto de los cuatro hitos comprometidos.
-
-\begin{tabla}[ancho=completo]{Cronograma vinculante de despliegue, protocolización y vigilancia anual ISO/IEC 27001:2022}{1-iso27001-hitos}{C{15mm} L{32mm} X L{35mm} X}
-\textbf{Hito} & \textbf{Plazo Máximo} & \textbf{Actividad y Entregable Verificable} & \textbf{Responsable Corporativo} & \textbf{Criterio de Verificación / Evidencia} \\ \midrule
-\textbf{H1} & Mes 1 de Contrato & \textbf{Protocolización y Entrega de Certificado Oficial:} Recepción del diploma emitido por Bureau Veritas e inscripción en registro INN/IAF, entregando copia autorizada a Transportes Curimón S.A. & Representante Legal / Oficial de Seguridad (CISO) & Certificado formal oficial con código de verificación QR y firma digital del organismo acreditador. \\
-\textbf{H2} & Mes 4 de Contrato & \textbf{Auditoría Interna de Extensión al Proyecto Curimón:} Evaluación formal de los 93 controles ISO 27001 aplicados a los componentes AKS, pasarelas EdgeHub y base de datos del Caso 10. & Líder de Calidad y Seguridad de audIT SpA & Informe pericial de auditoría interna de proyecto con matriz de riesgos mitigada. \\
-\textbf{H3} & Mes 8 de Contrato & \textbf{Revisión por la Dirección y Actualización de SoA:} Evaluación de métricas operacionales de seguridad, análisis de vulnerabilidades OWASP ASVS y actualización de Declaración de Aplicabilidad. & Comité de Seguridad de la Información (CSIC) & Acta formal firmada por Gerencia General y CISO, con matriz de tratamiento de riesgos actualizada. \\
-\textbf{H4} & Mes 11 de Contrato & \textbf{Auditoría Externa Anual de Mantenimiento:} Ejecución de la primera auditoría periódica de vigilancia por parte de Bureau Veritas Certification S.A. para certificar la mejora continua. & Bureau Veritas Certification S.A. / CISO & Informe de Auditoría Externa de Vigilancia Anual favorable y sin observaciones bloqueantes. \\
-\end{tabla}
-
-Como se desprende de la \tabref{1-iso27001-hitos}, el plan establece controles auditables y verificables en terreno a lo largo de todo el primer año contractual.
-
-\subsection*{5. Declaración formal y firma del representante legal}
-En mi calidad de Representante Legal de audIT, declaro bajo fe de juramento que la información expuesta precedentemente es fidedigna y que la empresa asume el compromiso irrestricto de dar cumplimiento cabal a los hitos del presente Plan dentro de los plazos señalados, facultando a Transportes Curimón S.A. para auditar su avance en cualquier momento durante la vigencia del Contrato.
-
-Santiago de Chile, 03 de octubre de 2026.
-
-\vspace{0.8cm}
-\begin{center}
-  \includegraphics[height=1.5cm]{portadas/activos/media-firma.png}\\[4pt]
-  \textbf{Carlos Jesús Abarza Suazo}\\
-  Representante Legal y Director Ejecutivo\\
-  audIT Soluciones Tecnológicas SpA\\
-  RUT: 21.108.465-0
-\end{center}
-
 \nocite{cisbenchmarks2024, ley19799, ley21377, ley21663, ley21719, iso9001, iso12207, iso20000_1, iso22301, iso27001, ds43minsal, ds298mtt, dfl1codigo_trabajo, nist_sp800_207, nist_csf2, owasp_asvs4}
+

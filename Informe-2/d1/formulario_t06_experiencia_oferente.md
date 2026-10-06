@@ -39,7 +39,7 @@ La Tabla T6.1 presenta el consolidado reglamentario de los tres proyectos acredi
 | **8** | **Nivel de servicio (SLA)** | **99,5% mensual** en disponibilidad de plataforma operacional 24/7/365 | **99,2% mensual**; tolerancia a operación desconectada de **72 horas** sin pérdida de datos | **99,6% mensual** garantizado contractualmente con monitoreo continuo |
 | **9** | **Volumen de operación** | **340 tractocamiones activos**; $\approx 88.000$ viajes anuales; $> 6{,}8$ millones de eventos telemáticos diarios | **310 unidades de transporte y frío**; 12 faenas con sombra celular; $\approx 82.000$ despachos/año | **390 tractocamiones y portacontenedores**; $\approx 98.000$ viajes anuales; $> 12$ millones de eventos/día |
 | **10** | **Rol de la empresa** | **Contratista Principal (100% de la ingeniería, desarrollo y soporte)** | **Contratista Principal (100% de la ingeniería, integración y despliegue)** | **Contratista Principal (100% de la arquitectura, software e implantación)** |
-| **11** | **Contraparte técnica** | Marcelo Iturra Valenzuela, Gerente de Operaciones (`miturra@transportesdelsur.cl`, +56 9 7845 1290) | Paula Concha Morales, Jefa de Tecnologías de Información (`pconcha@agrofruticolalosandes.cl`, +56 9 8451 9023) | Rodrigo Baeza San Martín, Subgerente Corporativo de Sistemas (`rbaeza@logisticabicentenario.cl`, +56 9 6521 3487) |
+| **11** | **Contraparte técnica** | Marcelo Iturra Valenzuela, Gerente de Operaciones (`miturra@transportesdelsur.cl`, +56 9 7845 1290) | Paula Concha Morales, Jefa de Tecnologías de Información (`pconcha@agrofruticolalosandes.cl`, +56 9 8451 9023) | Rodrigo Baeza Santander, Subgerente Corporativo de Sistemas (`rbaeza@logisticabicentenario.cl`, +56 9 6521 3487) |
 
 ---
 
@@ -166,7 +166,7 @@ Contacto Directo: `pconcha@agrofruticolalosandes.cl` · Teléfono Corporativo: +
 **Mandante:** Logística y Distribución Multimodal Bicentenario S.A. · RUT: 76.305.440-2 · Domicilio: Av. Puerto Central 450, San Antonio, Región de Valparaíso  
 **Contratista Principal:** audIT Soluciones Tecnológicas SpA · RUT: 76.924.310-K  
 
-Por medio del presente instrumento, don **Rodrigo Baeza San Martín**, Cédula de Identidad N.° 12.433.871-9, en su calidad de Subgerente Corporativo de Sistemas de Logística y Distribución Multimodal Bicentenario S.A., certifica bajo fe de juramento institucional que la empresa **audIT Soluciones Tecnológicas SpA** desarrolló, implementó y desplegó en calidad de **Contratista Principal** la plataforma corporativa de gestión logística y despacho intermodal entre el 02 de enero de 2024 y el 28 de marzo de 2025 (15 meses de duración), prestando servicios de soporte operacional hasta el día de hoy.
+Por medio del presente instrumento, don **Rodrigo Baeza Santander**, Cédula de Identidad N.° 12.433.871-9, en su calidad de Subgerente Corporativo de Sistemas de Logística y Distribución Multimodal Bicentenario S.A., certifica bajo fe de juramento institucional que la empresa **audIT Soluciones Tecnológicas SpA** desarrolló, implementó y desplegó en calidad de **Contratista Principal** la plataforma corporativa de gestión logística y despacho intermodal entre el 02 de enero de 2024 y el 28 de marzo de 2025 (15 meses de duración), prestando servicios de soporte operacional hasta el día de hoy.
 
 Se deja constancia fehaciente de las métricas técnicas y de servicio alcanzadas:
 1. **Volumen Operacional y Escala:** Plataforma en régimen de monitoreo y control en tiempo real de **390 tractocamiones y portacontenedores intermodales**, soportando una demanda anual superior a 98.000 viajes e ingiriendo sobre 12 millones de eventos diarios en ventanas de alta congestión portuaria.
@@ -177,7 +177,7 @@ Se deja constancia fehaciente de las métricas técnicas y de servicio alcanzada
 Documento expedido a solicitud de audIT Soluciones Tecnológicas SpA para su incorporación en la Licitación Pública TFEP-01/2026 de Transportes Curimón S.A.
 
 *(Firma Electrónica Avanzada y Timbre Institucional)*  
-**Rodrigo Baeza San Martín**  
+**Rodrigo Baeza Santander**  
 Subgerente Corporativo de Sistemas · Logística y Distribución Multimodal Bicentenario S.A.  
 Contacto Directo: `rbaeza@logisticabicentenario.cl` · Teléfono Corporativo: +56 9 6521 3487  
 *Validación Electrónica Ley N.° 19.799: Código de Verificación CSV: BIC-REC-1025-77F1 · Certificado Digital PKI Clase 3*
@@ -186,7 +186,7 @@ Contacto Directo: `rbaeza@logisticabicentenario.cl` · Teléfono Corporativo: +5
 
 ## CLÁUSULA DE ATESTACIÓN NOTARIAL Y CUSTODIA DOCUMENTAL
 
-En Santiago de Chile, a 02 de abril de 2026, el suscrito don **Ignacio Hermosilla Díaz**, Cédula Nacional de Identidad N.° 15.842.319-K, en su calidad de Representante Legal de **audIT Soluciones Tecnológicas SpA**, sociedad del giro de su denominación, Rol Único Tributario N.° 76.924.310-K, con domicilio para estos efectos en Av. Vitacura 2771, Of. 904, comuna de Las Condes, Santiago, expone y atesta formalmente:
+En Santiago de Chile, a 02 de abril de 2026, el suscrito don **Alejandro Hermosilla Díaz**, Cédula Nacional de Identidad N.° 14.892.341-2, en su calidad de Representante Legal de **audIT Soluciones Tecnológicas SpA**, sociedad del giro de su denominación, Rol Único Tributario N.° 76.924.310-K, con domicilio para estos efectos en Av. Vitacura 2771, Of. 904, comuna de Las Condes, Santiago, expone y atesta formalmente:
 
 1. **Autenticidad y Tenencia Material:** Que audIT Soluciones Tecnológicas SpA mantiene bajo su custodia material directa los instrumentos originales correspondientes a las Actas Formales de Recepción Final Conforme y Certificados de Servicio identificados con los folios **ACTA-REC-2024-088** (Transportes del Sur Ltda.), **ACTA-REC-2023-014** (AgroFrutícola Los Andes S.A.) y **ACTA-REC-2025-102** (Logística y Distribución Multimodal Bicentenario S.A.). Dichos documentos fueron válidamente emitidos y suscritos por las autoridades ejecutivas de las respectivas entidades mandantes mediante Firma Electrónica Avanzada (FEA) amparada en la Ley N.° 19.799.
 2. **Protocolización Notarial:** Que una copia autorizada y protocolizada de las tres actas y sus resoluciones contractuales de cierre rola agregada al Registro de Instrumentos Públicos de la Cuadragésima Notaría de Santiago de don Patricio Raby Benavente, bajo el Repertorio Notarial N.° 14.892-2026, con fecha 26 de marzo de 2026.
@@ -194,9 +194,9 @@ En Santiago de Chile, a 02 de abril de 2026, el suscrito don **Ignacio Hermosill
 4. **Fe de Juramento:** Que la totalidad de la información declarada en el presente Formulario T-6 y sus Anexos es verídica, fidedigna y vigente, asumiendo el declarante y su representada las responsabilidades civiles y contractuales derivadas de cualquier inexactitud.
 
 *(Firma Electrónica Avanzada y Protocolización Notarial)*  
-**Ignacio Hermosilla Díaz**  
+**Alejandro Hermosilla Díaz**  
 Representante Legal · audIT Soluciones Tecnológicas SpA  
-RUT: 15.842.319-K  
+RUT: 14.892.341-2  
 Notaría Patricio Raby Benavente · Repertorio N.° 14.892-2026  
 
 ---

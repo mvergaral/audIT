@@ -16,7 +16,7 @@ audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. O
       servicio     = 99{,}5 % mensual en disponibilidad de plataforma 24/7/365,
       volumen      = 340 tractocamiones activos; $≈ 88.000 viajes anuales; > 6{,}8$ millones de eventos/día,
       rol          = Contratista Principal (100 % ingeniería  desarrollo y soporte),
-      contacto     = Marcelo Iturra Valenzuela  Gerente de Operaciones
+      contacto     = Marcelo Iturra Valenzuela  Gerente de Operaciones (miturra@transportesdelsur.cl  +56 9 7845 1290)
     }
 
     \proyectoTSeis{
@@ -30,7 +30,7 @@ audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. O
       servicio     = 99{,}2 % mensual; tolerancia a operación desconectada de 72 horas,
       volumen      = 310 unidades de transporte y frío; 12 faenas remotas; $≈ 82.000$ despachos/año,
       rol          = Contratista Principal (100 % ingeniería  integración y despliegue),
-      contacto     = Paula Concha Morales  Jefa de Tecnologías de Información
+      contacto     = Paula Concha Morales  Jefa de Tecnologías de Información (pconcha@agrofruticolalosandes.cl  +56 9 8451 9023)
     }
 
     \proyectoTSeis{
@@ -44,7 +44,7 @@ audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. O
       servicio     = 99{,}6 % mensual garantizado contractualmente con monitoreo continuo,
       volumen      = 390 tractocamiones y portacontenedores; $≈ 98.000 viajes anuales; > 12$ millones de eventos/día,
       rol          = Contratista Principal (100 % arquitectura  software e implantación),
-      contacto     = Rodrigo Baeza S.  Subgerente Corporativo de Sistemas
+      contacto     = Rodrigo Baeza Santander  Subgerente Corporativo de Sistemas (rbaeza@logisticabicentenario.cl  +56 9 6521 3487)
     }
 
   \end{formularioTSeis}

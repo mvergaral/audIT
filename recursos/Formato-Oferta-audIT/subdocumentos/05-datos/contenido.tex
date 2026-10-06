@@ -17,17 +17,17 @@ audIT Soluciones Tecnológicas SpA presenta el modelo y gestión integral de dat
 
 El modelo de datos de audIT para Transportes Curimón S.A. define formalmente los dominios de información, límites transaccionales y entidades del negocio logístico. La estructura resuelve integralmente las patologías del software legado de 2013, reemplazando un esquema relacional plano por un modelo guiado por el dominio (DDD) que garantiza coherencia en tiempo real.
 
-\subsection{Diagnóstico del modelo inicial y evolución técnica}\label{sec:5-diagnostico}
+\subsection{Identificación y Descripción de Entidades del Modelo de Datos}\label{sec:5-entidades}
 
-La auditoría técnica identificó cuatro vulnerabilidades estructurales en la gestión de datos heredada: (i) modelo anémico monolítico sin encapsulamiento de invariantes de negocio (vulnerando el Artículo 25 bis del Código del Trabajo \parencite{codigo_trabajo_25bis}), (ii) saturación por telemetría masiva al escribir posiciones GPS sobre tablas transaccionales, (iii) omisión de la asimetría entre tractocamión y semirremolque para el control del D.S. N.\textordmasculine{} 298 \parencite{ds298}, y (iv) dispersión de datos maestros entre planillas y el ERP de 2013 (\transv{RT-05.09}{9}). En la \tabref{5-evolucion} se resume la evolución hacia el modelo audIT.
+El modelo de datos resuelve las exigencias operacionales y regulatorias del transporte de carga mediante cuatro definiciones arquitectónicas: (i) encapsulamiento de invariantes de negocio en agregados tácticos (asegurando el cumplimiento del Artículo 25 bis del Código del Trabajo \parencite{codigo_trabajo_25bis}), (ii) desacoplamiento estricto de la telemetría masiva respecto de las tablas transaccionales maestras, (iii) modelado explícito de la asimetría tractocamión versus semirremolque conforme al D.S. N.\textordmasculine{} 298 \parencite{ds298}, y (iv) consolidación y gobierno de datos maestros bajo principio de Registro Maestro Único (\transv{RT-05.09}{9}). En la \tabref{5-evolucion} se resume la arquitectura del modelo de datos audIT.
 
-\begin{tabla}[ancho=completo]{Evolución técnica del modelo de datos audIT}{5-evolucion}{@{}p{3.2cm}p{4.2cm}p{4.8cm}p{3.8cm}@{}}
-\textbf{Dimensión} & \textbf{Enfoque Anterior 2013} & \textbf{Enfoque Definitivo audIT} & \textbf{Impacto en Curimón} \\ \midrule
-Paradigma de modelado & Esquema ERD relacional plano & Domain-Driven Design (DDD) con agregados e invariantes (\transv{RT-02.13}{8}) & Validación en memoria; despachos conformes en $\le 2$ s \\
-Ingesta telemática & Tablas relacionales sobrecargadas & Arquitectura Fast-Data desacoplada (TimescaleDB / Kafka) y buffer offline & Aísla pings GPS del motor central; resiste sombras $> 80$ km \\
+\begin{tabla}[ancho=completo]{Arquitectura y capacidades del modelo de datos audIT}{5-evolucion}{@{}p{3.2cm}p{4.2cm}p{4.8cm}p{3.8cm}@{}}
+\textbf{Dimensión} & \textbf{Línea Base Heredada} & \textbf{Diseño Canónico audIT} & \textbf{Impacto Operacional en Curimón} \\ \midrule
+Paradigma de modelado & Esquema relacional sin agregados & Domain-Driven Design (DDD) con agregados e invariantes (\transv{RT-02.13}{8}) & Validación en memoria, respuesta de despacho en $\le 2$ s \\
+Ingesta telemática & Inserción síncrona en tablas OLTP & Arquitectura Fast-Data desacoplada (TimescaleDB / Kafka) y buffer offline & Aísla pings GPS del motor central, resiste sombras $> 80$ km \\
 Gobernanza de activos & Entidad única genérica CAMION & Disociación estricta TRACTOCAMION y SEMIRREMOLQUE & Controla vencimientos cruzados y compatibilidad química (DS 298) \\
 Datos maestros (MDM) & Entidades dispersas en planillas & MDM de Registro Único (\textit{Golden Record}) con Capa Anticorrupción & Elimina duplicidad en 454 choferes, 374 camiones y 84 clientes \\
-Estrategia desempeño & Índices básicos sin partición & Particionamiento mensual, índices GiST/BRIN y caché L2 Redis & Geocercas en $< 5$ ms y almacenamiento optimizado en 95\,\% \\
+Estrategia desempeño & Índices básicos sin partición & Particionamiento mensual, índices GiST/BRIN y caché L2 Redis & Geocercas en $< 5$ ms e indexación compacta con árboles BRIN \\
 Saneamiento vigencias & Carga masiva sin contraste & Verificación documental individual con hash SHA-256 en WORM & Sanea 4 planillas ($\approx 6.000$ fechas) y erradica multas \\
 Seguridad y datos & Cifrado de disco genérico & Cifrado a nivel de campo (FLE AES-256-GCM) y anonimización en QA & Cumplimiento irrestricto de Ley 21.719 en 258 choferes externos \\
 Retención legal & Plazos genéricos sin norma & Matriz ajustada a Capítulo 15 del Caso (10a, 6a, 5a, vigencia+5a, 2a) & Certeza probatoria laboral, tributaria (SII) y sobreestadías \\
@@ -39,11 +39,11 @@ Como evidencia la \tabref{5-evolucion}, las decisiones de modelado blindan la op
 
 La arquitectura de datos se estructura en seis contextos delimitados con límites explícitos. En la \figref{5-erdfig} se despliega el modelo conceptual y relacional de persistencia de datos.
 
-\figura{figuras/05-datos/D3-diagrama5_modelo_erd_persistencia.png}{Modelo conceptual y relacional de persistencia de datos}{5-erdfig}
+\figura{figuras/05-datos/audit-figura-5.1-erd.png}{Modelo conceptual y relacional de persistencia de datos}{5-erdfig}
 
 Los seis agregados raíz gobiernan las reglas de negocio de la operación:
 \begin{enumerate}
-  \item \textbf{Agregado Viaje (Core Domain):} Orquesta la máquina de estados (\texttt{PROGRAMADO} $\to$ \texttt{EN\_CARGA} $\to$ \texttt{EN\_RUTA} $\to$ \texttt{EN\_DESCARGA} $\to$ \texttt{CERRADO}). Ejecuta el método bloqueante \texttt{asignarRecursos()} validando en memoria: aptitud técnica del tracto, compatibilidad de rampla (DS 298) y descanso legal del conductor (Art.~25 bis). Cuenta con el método \texttt{suspenderPorTramiteAduanero()} para congelar sobreestadías durante cierres de Los Libertadores (\caso{RT-10.05}{32}).
+  \item \textbf{Agregado Viaje (Core Domain):} Orquesta la máquina de estados determinista de seis estados operacionales: el ciclo estándar \texttt{PROGRAMADO} $\to$ \texttt{EN\_CARGA} $\to$ \texttt{EN\_RUTA} $\to$ \texttt{EN\_DESCARGA} $\to$ \texttt{CERRADO}, y la transición de excepción terminal \texttt{CANCELADO\_RECHAZADO} (activada ante anomalías documentales insalvables, revocación del transportista o rechazo de carga en destino). Ejecuta el método bloqueante \texttt{asignarRecursos()} validando en memoria: aptitud técnica del tracto, compatibilidad de rampla (DS 298) y descanso legal del conductor (Art.~25 bis). Cuenta con el método \texttt{suspenderPorTramiteAduanero()} para congelar sobreestadías durante cierres de Los Libertadores (\caso{RT-10.05}{32}).
   \item \textbf{Agregado Tractocamion:} Custodia vigencias técnicas del vehículo motor (revisión técnica, SOAP, permiso de circulación) y administra el estado de telemetría CANbus/FMS (SAE J1939 activo en 61 unidades propias).
   \item \textbf{Agregado Semirremolque:} Modela los 210 equipos de arrastre propios y los de terceros, implementando la regla \texttt{cumpleNormaEstanqueDS298()} para asegurar que ninguna carga química o combustible sea despachada en carrocerías sin prueba de estanqueidad vigente.
   \item \textbf{Agregado Conductor:} Gobierna el control estricto de jornada bajo el Art.~25 bis (máximo 5 horas continuas de conducción y 2 horas de descanso mínimo) y custodia el consentimiento bajo la Ley 21.719 \parencite{ley21719}.
@@ -55,7 +55,7 @@ Los seis agregados raíz gobiernan las reglas de negocio de la operación:
 
 En cumplimiento de \transv{RT-05.09}{9}, se implementa un marco centralizado de Master Data Management (MDM) con principio de Registro Maestro Único (\textit{Golden Record}), visualizado en la \figref{5-mdmfig}.
 
-\figura[alto=0.42]{figuras/05-datos/D3-diagrama8_gestion_datos_maestros_mdm.png}{Gestión de Datos Maestros (MDM) y Capa Anticorrupción}{5-mdmfig}
+\figura[alto=0.42]{figuras/05-datos/audit-figura-5.2-mdm.png}{Gestión de Datos Maestros (MDM) y Capa Anticorrupción}{5-mdmfig}
 
 La plataforma audIT es la fuente exclusiva de verdad para Conductores, Habilitaciones y Flota, mientras que el ERP de 2013 retiene la tuición de razones sociales y datos bancarios de transportistas y clientes. La normalización se rige por claves naturales estrictas: RUT chileno validado por Módulo 11 para personas y Placa Patente Única (PPU) del Registro Civil para vehículos.
 
@@ -135,7 +135,8 @@ peso\_origen\_kg & NUMERIC(8,2) & Peso báscula de ticket & Sí & Operacional. C
 estado\_viaje & ENUM & 6 estados operacionales & Sí & Operacional. Máquina de estados finita \\
 \end{tabla}
 
-La entidad Viaje consolida el ciclo de vida de los 96.000 fletes anuales, garantizando trazabilidad de extremo a extremo.
+La entidad Viaje consolida el ciclo de vida de los 96.000 fletes anuales, garantizando trazabilidad integral en sus seis estados formales:
+\texttt{PROGRAMADO}, \texttt{EN\_CARGA}, \texttt{EN\_RUTA}, \texttt{EN\_DESCARGA}, \texttt{CERRADO} y el estado terminal \texttt{CANCELADO\_RECHAZADO}.
 
 \clearpage
 \section{Gestión de datos}\label{sec:5-gestion-datos}
@@ -150,20 +151,20 @@ En cumplimiento de \transv{RT-05.02}{8}, audIT adopta una arquitectura de persis
 \textbf{Capa / Dominio} & \textbf{Clase CAP} & \textbf{Motor Tecnológico} & \textbf{Justificación Operacional} \\ \midrule
 Transaccional Maestra & Sistema CP & PostgreSQL 16 Flexible Server & Consistencia estricta (ACID) en asignación, vigencias y DET. Preferible encolar a autorizar chofer fatigado \\
 Telemetría y Streaming & Sistema AP & TimescaleDB / Azure Event Hubs & Disponibilidad extrema y consistencia eventual (BASE) para absorber 120M eventos anuales \\
-Búfer a Bordo en Cabina & Sistema AP local & SQLite 3 embebido con WAL & Persistencia atómica local en flash industrial de 8 GB; 72 h a 288 h de autonomía offline \\
+Búfer a Bordo en Cabina & Persistencia Local ACID & SQLite 3 embebido con WAL & Persistencia transaccional local desacoplada de la red con modo WAL, 72 h a 288 h de autonomía offline y sincronización asíncrona hacia la nube \\
 Caché y Baja Latencia & En memoria & Azure Cache for Redis 7.2 & Evaluación de 1.400 geocercas y sesiones activas en $< 5$ ms sin contención de disco \\
 Documentos y Evidencia & Inmutable & Azure Blob Storage WORM & Custodia inalterable de DETs, firmas y actas con retención bloqueada contra administradores \\
 \end{tabla}
 
 La selección políglota de la \tabref{5-persistencia-cap} garantiza que cargas analíticas y masivas de telemetría no degraden las transacciones críticas del negocio.
 
-\figura[alto=0.28]{figuras/05-datos/D3-diagrama3_teorema_cap.png}{Clasificación de motores y almacenamiento bajo el Teorema CAP}{5-capfig}
+\figura[alto=0.28]{figuras/05-datos/audit-figura-5.3-cap.png}{Clasificación de motores y almacenamiento bajo el Teorema CAP}{5-capfig}
 
 \subsection{Segregación arquitectónica OLTP versus analítica (Lakehouse)}\label{sec:5-oltp-olap}
 
 Para dar cumplimiento a \transv{RT-05.05}{9}, se aísla de raíz la base transaccional de producción respecto del consumo analítico de reportería y cálculo de costo por kilómetro. La propagación de datos ocurre en tiempo casi real ($< 60$ s) mediante captura de cambios (CDC Debezium) y Kafka hacia el repositorio analítico (Delta Lake), como esquematiza la \figref{5-cdcfig}.
 
-\figura[alto=0.20]{figuras/05-datos/D3-diagrama7_oltp_olap_cdc.png}{Segregación transaccional OLTP y analítica OLAP mediante CDC}{5-cdcfig}
+\figura[alto=0.20]{figuras/05-datos/audit-figura-5.4-cdc.png}{Segregación transaccional OLTP y analítica OLAP mediante CDC}{5-cdcfig}
 
 El modelo de costeo por viaje (\caso{RT-05.29}{31}) administra el desfase inherente de las liquidaciones de combustible (hasta 40 días) y peajes mensuales, emitiendo una versión preliminar en no más de 24 horas y una versión consolidada definitiva post-cierre sin sobrescribir los registros originales.
 
@@ -184,7 +185,7 @@ La adhesión a la \tabref{5-calidad-iso} previene el ingreso de información cor
 
 \textbf{Auditoría forense inalterable Append-Only (\caso{RT-05.03}{30}).} Toda modificación sobre entidades de flota, conductores y viajes dispara un trigger que genera un registro JSONB inmutable en la tabla particionada \texttt{auditoria\_evento}. Los permisos \texttt{UPDATE}, \texttt{DELETE} y \texttt{TRUNCATE} se revocan formalmente a nivel de base de datos (\transv{RT-16.07}{12}). Cada registro incorpora un hash encadenado SHA-256 (\textit{hash chain}), replicándose periódicamente a almacenamiento WORM con bloqueo legal.
 
-\textbf{Respaldo 3-2-1-1-0 y matriz de retención legal.} Para asegurar RTO $\le 4$ horas y RPO $\le 15$ minutos (\transv{RT-07.02}{10}), se implementa la política 3-2-1-1-0. En la \tabref{5-matriz-rto} se define la matriz de retención legal y tiempos objetivos por dominio de datos.
+\textbf{Respaldo 3-2-1-1-0 y matriz de retención legal.} Para asegurar RTO $\le 4$ horas y RPO $\le 15$ minutos (\transv{RT-07.04}{17}), se implementa la política 3-2-1-1-0. En la \tabref{5-matriz-rto} se define la matriz de retención legal y tiempos objetivos por dominio de datos.
 
 \begin{tabla}[ancho=completo]{Matriz de respaldo, retención y RTO por dominio}{5-matriz-rto}{@{}p{5.6cm}p{3.4cm}p{4.8cm}p{2.4cm}@{}}
 \textbf{Dominio de Datos} & \textbf{Retención Exigida} & \textbf{Frecuencia y Estrategia} & \textbf{RTO} \\ \midrule
@@ -224,24 +225,25 @@ La volumetría de la \tabref{5-alcance-migracion} se procesa a través de cuatro
   \item \textbf{Fase 4: Ensayos de Migración (Mock Runs) y Transición Final (Días 51 a 65):} Ensayos en seco (\textit{dry-run}) en Preproducción (\transv{RT-05.13}{9}), prueba de estrés de validación bloqueante y conciliación matemática al peso con firma de Acta formal (\transv{RT-05.14}{9}).
 \end{enumerate}
 
-\figura[alto=0.38]{figuras/05-datos/D3-diagrama6_migracion_datos.png}{Metodología de extracción, saneamiento, carga y conciliación histórica}{5-migracionfig}
+\figura[alto=0.38]{figuras/05-datos/audit-figura-5.5-migracion.png}{Metodología de extracción, saneamiento, carga y conciliación histórica}{5-migracionfig}
 
 El procedimiento metodológico ilustrado en la \figref{5-migracionfig} asegura la trazabilidad y consistencia de los datos migrados desde las planillas y bases heredadas hacia la nueva arquitectura, garantizando que ninguna inconsistencia alcance el entorno de producción.
 \section{Estrategia de desempeño}\label{sec:5-desempeno}
 
-Para garantizar que la verificación de despacho resuelva en menos de dos segundos (\caso{RT-09.01}{32}) frente a 96.000 viajes anuales, se implementa una estrategia cuádruple de optimización, esquematizada en la \figref{5-desempenofig}.
+El pliego de licitación establece como requerimiento mandatorio de desempeño que el algoritmo de verificación de despacho debe resolver en no más de 30 segundos (\caso{RT-09.01}{32}). Como valor agregado de alta eficiencia para los 96.000 viajes anuales de Transportes Curimón S.A., audIT SpA optimiza dicho tiempo de respuesta a menos de 2 segundos mediante una arquitectura de indexación especializada, particionamiento declarativo y memoria distribuida L2 en Redis, esquematizada en la \figref{5-desempenofig}.
 
-\figura{figuras/05-datos/D3-diagrama9_estrategia_desempeno.png}{Estrategia integral de desempeño de base de datos}{5-desempenofig}
+\figura{figuras/05-datos/audit-figura-5.6-desempeno.png}{Estrategia integral de desempeño de base de datos}{5-desempenofig}
 
 Como se esquematiza en la \figref{5-desempenofig}, la combinación de indexación avanzada, particionamiento y memoria distribuida asegura tiempos de respuesta deterministas bajo alta demanda transaccional.
 
 La estrategia comprende cuatro mecanismos sinérgicos:
 \begin{enumerate}
-  \item \textbf{Indexación especializada:} Índices B-Tree en claves foráneas y RUTs; índices geoespaciales GiST/SP-GiST (PostGIS) sobre las 1.400 geocercas para optimizar \texttt{ST\_Contains()} en menos de 5 ms; e índices BRIN (\textit{Block Range Indexes}) en series de telemetría y auditoría, reduciendo el consumo de memoria en 95\,\% frente a árboles convencionales.
+  \item \textbf{Indexación especializada:} Índices B-Tree en claves foráneas y RUTs para consultas puntuales de verificación, índices geoespaciales GiST/SP-GiST (PostGIS) sobre las 1.400 geocercas para optimizar \texttt{ST\_Contains()} en menos de 5 ms, e índices BRIN (\textit{Block Range Indexes}) en series de telemetría y auditoría cronológica, los cuales agrupan metadatos por rangos físicos de bloques de disco en lugar de indexar cada tupla, reduciendo drásticamente la huella en memoria RAM respecto de índices B-Tree equivalentes.
   \item \textbf{Particionamiento horizontal declarativo:} La tabla transaccional \texttt{viaje} se particiona por rango mensual, concentrando el 90\,\% de las consultas en la partición activa. Las tablas de telemetría se particionan automáticamente en TimescaleDB (\textit{hypertables}), facilitando su archivado en frío sin bloqueos de tabla.
   \item \textbf{Caché distribuida de baja latencia:} Redis 7.2 Cluster multizona con persistencia AOF que mantiene en memoria RAM las sesiones, habilitaciones vigentes y geocercas, resolviendo invariantes en sub-milisegundos.
   \item \textbf{Vistas materializadas concurrentes:} Refrescadas de forma asincrónica en segundo plano mediante actualización concurrente de vistas materializadas para pre-liquidaciones y consumos de combustible, aislando el tráfico diurno de la torre.
 \end{enumerate}
 
 La arquitectura de datos de audIT SpA proporciona un marco robusto y escalable que asegura integridad transaccional, soberanía de información y alta fidelidad analítica para Transportes Curimón S.A.
+
 

@@ -1,0 +1,14 @@
+% ============================================================================
+%  Anexos técnicos de un subdocumento como PDF propio (Comunicado 10, sección 1).
+%  La herramienta de compilación lo llama con el número de subdocumento:
+%    -usepretex="\def\NumeroSubdoc{2}..."
+% ============================================================================
+\providecommand\NumeroSubdoc{1}
+\documentclass{audit-oferta}
+\input{configuracion/metadatos}
+\input{configuracion/instancia}
+\input{configuracion/subdocumentos}
+
+\begin{document}
+\expandafter\DocumentoAnexos\expandafter{\NumeroSubdoc}
+\end{document}

@@ -7,7 +7,7 @@
       "clave": "01",
       "nombre": "AUDIT-Subdocumento1.pdf",
       "folio_inicial": 1,
-      "paginas": 30,
+      "paginas": 28,
       "aux": "salida/aux/informe2/01/AUDIT-Subdocumento1.aux",
       "log": "salida/aux/informe2/01/AUDIT-Subdocumento1.log",
       "fuentes": [
@@ -23,7 +23,7 @@
       "clave": "02",
       "nombre": "AUDIT-Subdocumento2.pdf",
       "folio_inicial": 1,
-      "paginas": 39,
+      "paginas": 30,
       "aux": "salida/aux/informe2/02/AUDIT-Subdocumento2.aux",
       "log": "salida/aux/informe2/02/AUDIT-Subdocumento2.log",
       "fuentes": [
@@ -36,10 +36,26 @@
       ]
     },
     {
+      "clave": "03",
+      "nombre": "AUDIT-Subdocumento3.pdf",
+      "folio_inicial": 1,
+      "paginas": 17,
+      "aux": "salida/aux/informe2/03/AUDIT-Subdocumento3.aux",
+      "log": "salida/aux/informe2/03/AUDIT-Subdocumento3.log",
+      "fuentes": [
+        [
+          "subdocumentos"
+        ],
+        [
+          "subdocumentos/03-solucion"
+        ]
+      ]
+    },
+    {
       "clave": "04",
       "nombre": "AUDIT-Subdocumento4.pdf",
       "folio_inicial": 1,
-      "paginas": 66,
+      "paginas": 65,
       "aux": "salida/aux/informe2/04/AUDIT-Subdocumento4.aux",
       "log": "salida/aux/informe2/04/AUDIT-Subdocumento4.log",
       "fuentes": [
@@ -55,7 +71,7 @@
       "clave": "05",
       "nombre": "AUDIT-Subdocumento5.pdf",
       "folio_inicial": 1,
-      "paginas": 20,
+      "paginas": 22,
       "aux": "salida/aux/informe2/05/AUDIT-Subdocumento5.aux",
       "log": "salida/aux/informe2/05/AUDIT-Subdocumento5.log",
       "fuentes": [
@@ -96,6 +112,22 @@
         ],
         [
           "subdocumentos/01-empresa"
+        ]
+      ]
+    },
+    {
+      "clave": "03T-12",
+      "nombre": "AUDIT-Formulario-T-12.pdf",
+      "folio_inicial": 1,
+      "paginas": 11,
+      "aux": "salida/aux/informe2/03T-12/AUDIT-Formulario-T-12.aux",
+      "log": "salida/aux/informe2/03T-12/AUDIT-Formulario-T-12.log",
+      "fuentes": [
+        [
+          "subdocumentos"
+        ],
+        [
+          "subdocumentos/03-solucion"
         ]
       ]
     },
