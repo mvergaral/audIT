@@ -46,7 +46,25 @@ Cada producto ofertado se declara con su versión, su fecha de fin de soporte de
 de actualización para los 56 meses del contrato. \transv{RT-03.05}{8} obliga a privilegiar servicios
 administrados sobre autoadministrados cuando ello reduzca el riesgo operacional y a justificar cada
 excepción. El estilo arquitectónico se justifica con la volumetría del caso y no con la tendencia del
-mercado, tal como advierte el numeral 2.3 de las Bases Técnicas Transversales.
+mercado, tal como advierte el numeral 2.3 de las Bases Técnicas Transversales. En la \tabref{4-software}
+se especifica la matriz tecnológica oficial seleccionada para la solución.
+
+\begin{tabla}[ancho=completo]{Tecnologías de software, versiones y soporte ofertado a 56 meses}{4-software}{L{38mm} L{32mm} L{26mm} X}
+Componente & Producto y versión & Fin de soporte & Plan a 56 meses y justificación \\ \midrule
+Aplicación móvil de conductores & Flutter 3.x (Dart) & Soporte LTS continuo & Compilación nativa Android e iOS con interfaz ergonómica de alto contraste (\caso{RT-13.08}{32}) y almacenamiento local SQLite \\
+Portales web y torre de control & React 18+ / Next.js & Soporte LTS continuo & Arquitectura web modular responsiva con renderizado híbrido y accesibilidad WCAG 2.2 AA (\art{4.3}{5}) \\
+Servicios backend y APIs & .NET 8 LTS / Go 1.22+ & Noviembre 2026 / LTS & Microservicios contenerizados de alto rendimiento sobre Linux en imágenes sin herramientas sobrantes \\
+Orquestación y cómputo & AKS 1.30+ & Soporte N-2 continuo & Servicio administrado PaaS con actualizaciones programadas fuera de horario punta \\
+Motor transaccional & PostgreSQL 16 Flexible & Noviembre 2028 & Motor relacional con alta disponibilidad zonal y extensión geoespacial PostGIS \\
+Series temporales y eventos & TimescaleDB 2.15 / Event Hubs & Mayo 2029 & Particionamiento por rango temporal y compresión columnar para el flujo de telemetría \\
+Caché distribuida & Azure Cache for Redis 7.2 & Octubre 2028 & Almacenamiento en memoria con persistencia continua para geocercas y sesiones activas \\
+Persistencia a bordo & SQLite 3 con modo WAL & Soporte activo LTS & Motor embebido industrial sobre memoria flash de 8 GB con protección contra cortes de energía \\
+Lakehouse analítico & Delta Lake en ADLS Gen2 & Soporte activo continuo & Tablas con soporte ACID y aislamiento estricto respecto de la base transaccional \\
+Gestión de identidad & Microsoft Entra ID / Key Vault & Servicio administrado & Autenticación OAuth 2.0 y custodia criptográfica con certificación FIPS 140-2 Nivel 3 \\
+\end{tabla}
+\notaTabla{Fuente: Ciclos de vida oficiales de soporte (LTS) de los fabricantes.}
+
+La matriz de la \tabref{4-software} prioriza servicios administrados y plataformas con soporte de largo plazo garantizado, asegurando estabilidad operativa y ausencia de obsolescencia tecnológica durante la vigencia del contrato.
 
 
 % ----------------------------------------------------------------------------
