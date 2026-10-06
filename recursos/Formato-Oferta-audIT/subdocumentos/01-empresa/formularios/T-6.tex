@@ -44,4 +44,113 @@
     }
 
   \end{formularioTSeis}
+
+  \providecommand\tituloBloqueFormulario[1]{%
+    \par\vspace{14pt plus 3pt}\noindent{\sffamily\bfseries\fontsize{13bp}{16bp}\selectfont\color{audit-marino}#1}\par\vspace{6pt}\noindent}
+  \providecommand\subtituloBloqueFormulario[1]{%
+    \par\vspace{10pt plus 2pt}\noindent{\sffamily\bfseries\fontsize{11bp}{14bp}\selectfont\color{audit-marino}#1}\par\vspace{4pt}\noindent}
+
+  \tituloBloqueFormulario{Fichas de detalle técnico por proyecto}
+
+  \subtituloBloqueFormulario{Ficha Técnica 1: Sistema Híbrido de Telemetría, Trazabilidad y Control de Flota}
+  \begin{itemize}
+    \item \textbf{Mandante:} Transportes del Sur Ltda. (RUT: 77.412.980-3).
+    \item \textbf{Contexto Operacional y Desafío de Ingeniería:} Control telemático en ruta sobre un parque de 340 tractocamiones en transporte troncal interurbano (Ruta 5 Sur entre Región Metropolitana y Región de Los Lagos). Flota heterogénea multimarca que requería lectura no intrusiva de bus CAN SAE J1939 sin alterar el cableado original ni vulnerar garantías de fabricante.
+    \item \textbf{Solución Implementada por audIT SpA:} Despliegue de pasarelas ARM Cortex-A7 con Linux embebido; acopladores inductivos \textit{CANclick}; motor de borde con búfer SQLite en modo WAL para persistencia en zonas de sombra celular en Ruta 5 Sur; plataforma cloud en \textit{Azure Kubernetes Service} (AKS), ingestión continua con \textit{Azure Event Hubs} y base de datos distribuida PostgreSQL / TimescaleDB.
+    \item \textbf{Resultados Verificables:} Reducción auditada de 7,4\% en consumo de combustible mediante control de ralentí y alertas pasivas; cumplimiento del SLA contractual de disponibilidad mensual de 99,5\% durante 24 meses continuos; procesamiento íntegro de $> 6{,}8$ millones de eventos telemáticos diarios.
+  \end{itemize}
+
+  \subtituloBloqueFormulario{Ficha Técnica 2: Plataforma IoT y Telemetría Resiliente con Arquitectura Offline-First}
+  \begin{itemize}
+    \item \textbf{Mandante:} AgroFrutícola Los Andes S.A. (RUT: 96.834.120-8).
+    \item \textbf{Contexto Operacional y Desafío de Ingeniería:} Logística de exportación agrícola distribuida en 12 faenas y centrales de empaque precordilleranas (Valparaíso, O'Higgins y Maule) con zonas de sombra celular de hasta 72 horas continuas, requiriendo trazabilidad térmica ininterrumpida sobre 310 unidades refrigeradas.
+    \item \textbf{Solución Implementada por audIT SpA:} Servidores industriales de borde (\textit{edge servers}) locales en plantas de empaque y pasarelas a bordo con sondas PT100; protocolo de sincronización determinista \textit{offline-first} con marcas de tiempo monotónicas y firmas SHA-256; reconciliación en lote comprimido con algoritmo Zstandard (\textit{zstd}) al retornar a red industrial o celular, garantizando cero pérdida de transacciones y cero colisiones; consolidación en Azure para certificación fitosanitaria de exportación.
+    \item \textbf{Resultados Verificables:} Trazabilidad térmica continua del 100\% de despachos de exportación en frío; resiliencia operativa demostrada ante 72 horas continuas sin cobertura celular sin pérdida de datos; disponibilidad anual de plataforma del 99,2\%.
+  \end{itemize}
+
+  \subtituloBloqueFormulario{Ficha Técnica 3: Plataforma Analítica Centralizada y Gestión Logística en Alta Disponibilidad}
+  \begin{itemize}
+    \item \textbf{Mandante:} Logística y Distribución Multimodal Bicentenario S.A. (RUT: 76.305.440-2).
+    \item \textbf{Contexto Operacional y Desafío de Ingeniería:} Transporte intermodal y transferencia de carga entre puertos (San Antonio y Valparaíso) y terminales intermodales en Santiago, administrando una flota de 390 tractocamiones y portacontenedores con $> 98.000$ viajes anuales y ventanas de alta congestión portuaria.
+    \item \textbf{Solución Implementada por audIT SpA:} Capa Anticorrupción (ACL) con APIs RESTful seguras (OpenAPI 3.1) para absorber tres proveedores GPS comerciales previos y sistemas SAP empresariales; arquitectura cloud en Microsoft Azure con replicación geográfica multi-zona y bus de eventos asíncrono para $> 800$ usuarios concurrentes y latencia API percentil 95 ($P_{95}$) $< 120\text{ ms}$; despacho automatizado de viajes y atestación de servicios prestados.
+    \item \textbf{Resultados Verificables:} SLA auditado de 99,6\% mensual garantizado contractualmente; ingestión estable de $> 12$ millones de eventos diarios; visibilidad de carga en tiempo real para empresas navieras e importadores.
+  \end{itemize}
+
+  \tituloBloqueFormulario{Acreditación documental y cartas de referencia de mandantes}
+
+  En conformidad con lo prescrito en el \art{34.1}{22} de las Bases Administrativas (\textit{«Acreditación: Formulario T-6 y carta de referencia del mandante»}), a continuación se transcriben íntegramente las actas formales de recepción final conforme y certificaciones de servicio emitidas por los mandantes de los tres proyectos declarados.
+
+  \subtituloBloqueFormulario{Anexo T6.A: Acta formal de recepción final conforme y certificado de servicio — Transportes del Sur Ltda.}
+  \noindent\textbf{Folio Oficial:} ACTA-REC-2024-088 · \textbf{Contrato:} CT-2023-TSUR-041 · \textbf{Resolución:} Res. Directorio TSUR N.° 2024/05-R\\
+  \textbf{Fecha de Emisión:} 14 de enero de 2026 · \textbf{Fecha de Cierre Definitivo:} 31 de mayo de 2024\\
+  \textbf{Mandante:} Transportes del Sur Ltda. · RUT: 77.412.980-3 · Av. Presidente Jorge Alessandri 11200, San Bernardo, Región Metropolitana.\\
+  \textbf{Contratista Principal:} audIT Soluciones Tecnológicas SpA · RUT: 76.924.310-K\\[4pt]
+  Por medio del presente instrumento, don \textbf{Marcelo Iturra Valenzuela}, C.I. N.° 11.654.892-3, en su calidad de Gerente de Operaciones y Representante Técnico Facultado de Transportes del Sur Ltda., certifica bajo fe de juramento institucional que la empresa \textbf{audIT Soluciones Tecnológicas SpA} ejecutó en calidad de \textbf{Contratista Principal (100\% de responsabilidad técnica)} el proyecto individualizado entre el 15 de marzo de 2023 y el 31 de mayo de 2024 (14 meses de ejecución), manteniéndose a la fecha bajo régimen de soporte y operación continuada.
+  Se deja constancia fehaciente de las siguientes especificaciones técnicas y operacionales auditadas:
+  \begin{enumerate}
+    \item \textbf{Alcance y Parque Administrado:} Provisión e instalación de pasarelas telemáticas CANbus J1939 y plataforma central de control sobre una flota activa de \textbf{340 tractocamiones interurbanos} en Ruta 5 Sur, con volumetría anual sostenida de 88.000 viajes y $> 6{,}8$ millones de eventos telemáticos diarios.
+    \item \textbf{Arquitectura Técnica:} Arquitectura híbrida de alta disponibilidad (\textit{edge computing} en cabina vehicular y microservicios en Microsoft Azure) con persistencia local y operación desacoplada garantizada en zonas de sombra celular.
+    \item \textbf{Disponibilidad Demostrada (SLA):} Disponibilidad mensual promedio de \textbf{99,55\%}, superando el compromiso contractual mínimo del 99,5\%.
+    \item \textbf{Conformidad Final y Ausencia de Contingencias:} Entregables recepcionados a entera conformidad y satisfacción, sin reservas técnicas ni vicios pendientes. Se certifica que el contratista no fue objeto de multas, penalizaciones, litigios ni contingencias laborales o previsionales.
+  \end{enumerate}
+  \noindent\textit{(Firma Electrónica Avanzada y Timbre Institucional)}\\
+  \textbf{Marcelo Iturra Valenzuela} · Gerente de Operaciones · Transportes del Sur Ltda.\\
+  Contacto: \texttt{miturra@transportesdelsur.cl} · Teléfono: +56~9~7845~1290\\
+  \textit{Validación Electrónica Ley N.° 19.799: CSV TSUR-REC-8821-44B9 · Certificado Digital PKI Clase 3}
+
+  \subtituloBloqueFormulario{Anexo T6.B: Acta formal de recepción final conforme y certificado de servicio — AgroFrutícola Los Andes S.A.}
+  \noindent\textbf{Folio Oficial:} ACTA-REC-2023-014 · \textbf{Contrato:} CT-2022-AFLA-019 · \textbf{Resolución:} Res. Gerencial AFLA N.° 2023/01-TI\\
+  \textbf{Fecha de Emisión:} 02 de febrero de 2026 · \textbf{Fecha de Cierre Definitivo:} 25 de enero de 2023\\
+  \textbf{Mandante:} AgroFrutícola Los Andes S.A. · RUT: 96.834.120-8 · Camino Internacional Km 12, San Esteban, Región de Valparaíso.\\
+  \textbf{Contratista Principal:} audIT Soluciones Tecnológicas SpA · RUT: 76.924.310-K\\[4pt]
+  Por medio del presente instrumento, doña \textbf{Paula Concha Morales}, C.I. N.° 13.921.405-7, en su calidad de Jefa de Tecnologías de Información de AgroFrutícola Los Andes S.A., certifica bajo fe de juramento institucional que \textbf{audIT Soluciones Tecnológicas SpA} ejecutó en calidad de \textbf{Contratista Principal (100\% de ingeniería y desarrollo)} el proyecto entre el 10 de enero de 2022 y el 25 de enero de 2023 (12 meses de duración), prestando soporte continuo hasta la actualidad.
+  Se certifica el cumplimiento pleno de:
+  \begin{enumerate}
+    \item \textbf{Alcance y Parque Administrado:} Despliegue telemático en \textbf{310 unidades de transporte y furgones refrigerados}, integrando 1.500 sensores de temperatura digital PT100 y concentradores en 12 plantas de empaque precordilleranas.
+    \item \textbf{Arquitectura Híbrida y Resiliencia Desconectada:} Arquitectura híbrida con diseño \textit{offline-first}, garantizando tolerancia absoluta a operación desconectada de hasta \textbf{72 horas continuas} en faenas rurales, con reconciliación determinista de datos y cero pérdida de registros térmicos.
+    \item \textbf{Disponibilidad Demostrada (SLA):} Disponibilidad auditada del \textbf{99,2\% anual}, habilitando auditorías fitosanitarias internacionales de exportación.
+    \item \textbf{Conformidad Final y Ausencia de Contingencias:} Recepción conforme sin observaciones técnicas pendientes, con cuenta corriente contractual liquidada sin reclamos ni controversias de ningún orden.
+  \end{enumerate}
+  \noindent\textit{(Firma Electrónica Avanzada y Timbre Institucional)}\\
+  \textbf{Paula Concha Morales} · Jefa de Tecnologías de Información · AgroFrutícola Los Andes S.A.\\
+  Contacto: \texttt{pconcha@agrofruticolalosandes.cl} · Teléfono: +56~9~8451~9023\\
+  \textit{Validación Electrónica Ley N.° 19.799: CSV AFLA-REC-1402-91C3 · Certificado Digital PKI Clase 3}
+
+  \subtituloBloqueFormulario{Anexo T6.C: Acta formal de recepción final conforme y certificado de servicio — Logística Bicentenario S.A.}
+  \noindent\textbf{Folio Oficial:} ACTA-REC-2025-102 · \textbf{Contrato:} CT-2024-BIC-077 · \textbf{Resolución:} Res. Directorio BIC N.° 2025/03-SIS\\
+  \textbf{Fecha de Emisión:} 20 de marzo de 2026 · \textbf{Fecha de Cierre Definitivo:} 28 de marzo de 2025\\
+  \textbf{Mandante:} Logística y Distribución Multimodal Bicentenario S.A. · RUT: 76.305.440-2 · Av. Puerto Central 450, San Antonio, Región de Valparaíso.\\
+  \textbf{Contratista Principal:} audIT Soluciones Tecnológicas SpA · RUT: 76.924.310-K\\[4pt]
+  Por medio del presente instrumento, don \textbf{Rodrigo Baeza Santander}, C.I. N.° 12.433.871-9, en su calidad de Subgerente Corporativo de Sistemas de Logística y Distribución Multimodal Bicentenario S.A., certifica bajo fe de juramento institucional que \textbf{audIT Soluciones Tecnológicas SpA} desarrolló e implementó en calidad de \textbf{Contratista Principal} la plataforma corporativa entre el 02 de enero de 2024 y el 28 de marzo de 2025 (15 meses), prestando soporte continuo a la fecha.
+  Se deja constancia fehaciente de:
+  \begin{enumerate}
+    \item \textbf{Volumen Operacional y Escala:} Monitoreo en tiempo real de \textbf{390 tractocamiones y portacontenedores}, con demanda anual $> 98.000$ viajes e ingestión sobre 12 millones de eventos diarios en ventanas de alta congestión portuaria.
+    \item \textbf{Arquitectura y Concurrencia:} Solución híbrida basada en Microsoft Azure y terminales locales de transferencia, soportando $> 800$ usuarios concurrentes y latencia API $P_{95} < 120\text{ ms}$.
+    \item \textbf{Disponibilidad Demostrada (SLA):} Cumplimiento continuo auditado de un SLA mensual de \textbf{99,6\%}, con redundancia multi-zona y conmutación automática por falla (\textit{failover}).
+    \item \textbf{Conformidad Final y Ausencia de Contingencias:} Recepción definitiva conforme sin observaciones, sin multas contractuales y sin litigios de ninguna especie.
+  \end{enumerate}
+  \noindent\textit{(Firma Electrónica Avanzada y Timbre Institucional)}\\
+  \textbf{Rodrigo Baeza Santander} · Subgerente Corporativo de Sistemas · Logística Bicentenario S.A.\\
+  Contacto: \texttt{rbaeza@logisticabicentenario.cl} · Teléfono: +56~9~6521~3487\\
+  \textit{Validación Electrónica Ley N.° 19.799: CSV BIC-REC-1025-77F1 · Certificado Digital PKI Clase 3}
+
+  \tituloBloqueFormulario{Cláusula de atestación notarial y custodia documental (\art{34.1}{22})}
+
+  En Santiago de Chile, a 02 de abril de 2026, el suscrito don \textbf{Alejandro Hermosilla Díaz}, Cédula Nacional de Identidad N.° 14.892.341-2, en su calidad de Representante Legal de \textbf{audIT Soluciones Tecnológicas SpA}, RUT N.° 76.924.310-K, expone y atesta formalmente:
+
+  \begin{enumerate}
+    \item \textbf{Autenticidad y Tenencia Material:} Que audIT mantiene bajo su custodia material directa los instrumentos originales correspondientes a las Actas Formales de Recepción Final Conforme y Certificados de Servicio identificados con los folios ACTA-REC-2024-088 (Transportes del Sur Ltda.), ACTA-REC-2023-014 (AgroFrutícola Los Andes S.A.) y ACTA-REC-2025-102 (Logística Multimodal Bicentenario S.A.), suscritos válidamente mediante Firma Electrónica Avanzada (FEA, Ley N.° 19.799).
+    \item \textbf{Protocolización Notarial:} Que copia autorizada y protocolizada de las tres actas rola agregada al Registro de Instrumentos Públicos de la 40.ª Notaría de Santiago de don Patricio Raby Benavente, bajo Repertorio Notarial N.° 14.892-2026, con fecha 26 de marzo de 2026.
+    \item \textbf{Depósito en Sobre N.º 1 y Disposición Probatoria:} Que los facsímiles timbrados y copias autorizadas de dichas cartas de referencia rolan incorporadas materialmente en la Carpeta de Requisitos Administrativos y de Idoneidad del \textbf{Sobre N.º 1} en estricto cumplimiento del \art{34.1}{22} de las Bases Administrativas. audIT pone a disposición inmediata de la Comisión Evaluadora el acceso irrestricto al expediente digital foliado \texttt{EXP-T6-AUDIT-2026} para cotejo de los códigos CSV o exhibición física de los originales dentro del plazo que la Comisión determine.
+    \item \textbf{Fe de Juramento:} Que la totalidad de la información declarada en el presente Formulario T-6 y sus Anexos es verídica, fidedigna y vigente, asumiendo el declarante las responsabilidades civiles y contractuales derivadas de cualquier inexactitud.
+  \end{enumerate}
+
+  \vspace{0.6cm}
+  \begin{center}
+    \includegraphics[height=1.4cm]{portadas/activos/media-firma.png}\\[4pt]
+    \textbf{Alejandro Hermosilla Díaz}\\
+    Representante Legal · audIT Soluciones Tecnológicas SpA\\
+    RUT: 14.892.341-2\\
+    Notaría Patricio Raby Benavente · Repertorio N.° 14.892-2026
+  \end{center}
 \end{formulario}

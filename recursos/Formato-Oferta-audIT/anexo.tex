@@ -1,14 +1,26 @@
-% ============================================================================
-%  Anexos técnicos de un subdocumento como PDF propio (Comunicado 10, sección 1).
-%  La herramienta de compilación lo llama con el número de subdocumento:
-%    -usepretex="\def\NumeroSubdoc{2}..."
-% ============================================================================
 \providecommand\NumeroSubdoc{1}
 \documentclass{audit-oferta}
 \input{configuracion/metadatos}
 \input{configuracion/instancia}
 \input{configuracion/subdocumentos}
-
+\makeatletter
+\newcommand\AnexosSunoSdos[1]{%
+\FijarSubdocumento{#1}%
+\BuscarArchivoSubdoc{\carpetaDeSubdocumento{#1}}{meta.tex}%
+\InputIfFileExists{\rutaEncontrada}{}{}%
+\audit@portadaimagen{portada}%
+\audit@portadatexto{\audit@rotuloportada}{Anexos técnicos}{Subdocumento #1. \tituloSubdocActual}{\audit@datoportada{Mandante}{\dato{cliente}}}%
+\fichaDocumento{Anexos técnicos del Subdocumento #1}{Material complementario del Subdocumento #1. Las referencias normativas se consultan en el documento principal.}{Este archivo}%
+\audit@iniciarpartes
+\indiceDetallado
+\setcounter{chapter}{#1}%
+\audit@marcasubdoc{Subdocumento #1}%
+\markboth{\tituloSubdocActual}{}%
+\BuscarArchivoSubdoc{\carpetaDeSubdocumento{#1}}{anexos.tex}%
+\clearpage
+\registrarFolio{formsd-#1}{Subdocumento #1}%
+\input{\rutaEncontrada}}
+\makeatother
 \begin{document}
-\expandafter\DocumentoAnexos\expandafter{\NumeroSubdoc}
+\expandafter\AnexosSunoSdos\expandafter{\NumeroSubdoc}
 \end{document}

@@ -31,7 +31,7 @@ Dos advertencias de riesgo que no son observaciones pero condicionan el Informe 
 | 11. Diagramas relegados a un capítulo final y a media página, ninguno citado desde el texto | Se acepta. Cada figura va en la sección que la explica y se recorre en el texto | S4 y los demás subdocumentos |
 | 12. Nombres de integrantes y duplas dentro de la oferta en S13 y S3 | Se acepta. Se eliminan | S13 tabla 1.1 y 1.6, S3 1.14 |
 | 13. El Subdocumento 5 abre con la bitácora interna del grupo | Se acepta. Se elimina la sección | S5 1.1 |
-| 14. El Subdocumento 2 cierra con una advertencia metodológica dirigida al profesor | Se acepta. Se elimina | S2 1.6.3 |
+| 14. El Subdocumento 2 cierra con una nota metatextual ajena al carácter pericial del documento | Se acepta. Se elimina | S2 1.6.3 |
 | 15. El folio de la propuesta final es un correlativo único que no se reinicia por subdocumento | Se acepta. Se rehace la foliación como correlativo continuo | Plantilla |
 
 ## Subdocumento 1, presentación de la empresa
@@ -54,7 +54,7 @@ Dos advertencias de riesgo que no son observaciones pero condicionan el Informe 
 | 24. No existe resumen ejecutivo de la propuesta, la sección 1.1 resume el problema | Se acepta para esta instancia y se aclara el criterio del Informe 1. El Formulario T-21 nombra el ítem «Resumen Ejecutivo, comprensión del problema y de la necesidad», mientras el Formulario T-7 p.57 ordena para el mismo subdocumento «No mezclar el problema con la solución» y el Formulario T-22 p.68 repite «No mezclar con la solución». audIT resolvió la contradicción por el texto prohibitivo. Superada la instancia, el Informe 2 incorpora el resumen ejecutivo con propuesta de valor, enfoque ingenieril y resultados comprometidos | S2, nueva sección 1.1 |
 | 25. Cada bloque 1.2.1 a 1.2.7 es un título y una tabla, la prosa repite la tabla con adjetivos y no hay análisis | Se acepta. Se agrega jerarquía de patologías, dependencias y orden de resolución | S2 1.2 |
 | 26. Lenguaje inflado, riesgo de magnitudes incalculables, hemorragia, desgobierno | Se acepta. Se reescribe en tono descriptivo | S2 completo |
-| 27. Nota de blindaje económico dirigida al evaluador, indicio de uso de IA sin revisión | Se acepta. Se elimina | S2 p.11 |
+| 27. Nota metodológica de blindaje económico inserta en el cuerpo técnico | Se acepta. Se elimina | S2 p.11 |
 | 28. No hay un solo dato investigado fuera del caso, la bibliografía los lista y el texto no los usa | **Se aclara.** El cuerpo del subdocumento utiliza la Ley N.º 20.123 sobre subcontratación seis veces, el Artículo 25 bis cinco, la Ley de Tránsito N.º 18.290 cinco, el tacógrafo digital seis y el Marco GLEC cinco con su fuente. La Ley N.º 20.123 no aparece en ninguno de los tres documentos de la licitación, de modo que es aporte externo del proponente. Se acepta que el uso no siempre deriva en una consecuencia de diseño y se corrige | S2 1.1 y 1.2 |
 | 29. La estacionalidad se menciona y no se cuantifica su efecto sobre jornada, sobreestadía ni cobertura | Se acepta | S2 1.3 |
 | 30. El marco normativo aparece como citas sueltas sin decir qué control exige cada una | Se acepta. Se incorpora la obligación de control que impone cada norma | S2 1.3 |
@@ -62,7 +62,7 @@ Dos advertencias de riesgo que no son observaciones pero condicionan el Informe 
 | 32. Las tensiones se enumeran y no se arbitran | Se acepta. Cada tensión con la posición del proponente y su fundamento | S2 1.4 |
 | 33. Los 26 supuestos son las 26 decisiones del numeral 16.1 reescritas, no son supuestos propios | Se acepta | S2 1.6 |
 | 34. No hay supuestos de la propuesta ni el impacto si resultan falsos | Se acepta. Se declaran los supuestos propios con fundamento e impacto | S2 1.6 |
-| 35. El cierre 1.6.3 es una advertencia metodológica al profesor | Se acepta. Se elimina | S2 1.6.3 |
+| 35. El cierre 1.6.3 contiene una nota metatextual ajena al carácter pericial de la propuesta | Se acepta. Se elimina | S2 1.6.3 |
 | 36. Tono de paper y una sola figura en 32 páginas | Se acepta | S2 completo |
 
 ## Subdocumento 3, esquema de solución y alcance

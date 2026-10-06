@@ -818,7 +818,7 @@ def verificar_encabezados(inf, pdfs, entradas):
 
 NOMBRE_TECNICO = re.compile(r"^(INFORME[123]|SOBRE2)_[A-Z0-9]+_(SUBDOC\d\d|OFERTA_TECNICA)_\d{8}\.pdf$")
 # Comunicado 10, sección 1: EMPRESA-SubdocumentoX y EMPRESA-Formulario-T-X
-NOMBRE_COM10 = re.compile(r"^[A-Z0-9]+-(Subdocumento\d{1,2}|Formulario-T-\d{1,2})\.pdf$")
+NOMBRE_COM10 = re.compile(r"^[A-Z0-9]+-(Subdocumento\d{1,2}(-Anexos)?|Formulario-T-\d{1,2})\.pdf$")
 # Formulario E-21 (FEP01 p.72), «sin excepción». La fecha va como AAAAMMDD,
 # igual que en los Artículos 49 a 51 (el E-21 no fija su formato).
 NOMBRE_E21 = {

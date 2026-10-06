@@ -23,13 +23,13 @@ El FEP01, Artículo 46, p. 28 pide resolver en cada informe las observaciones de
 
 > **Resumen de apertura.**
 >
-> audIT expone formalmente su capacidad técnica, institucional, metodológica y financiera para asumir la ejecución integral de la Licitación Pública Nacional e Internacional N.° TFEP-01/2026 para Transportes Curimón S.A. La empresa acredita 22 profesionales de planta bajo contrato indefinido, solvencia financiera probada con ratio de liquidez de 2,14 y cobertura patrimonial para los 56 meses de contrato, gobierno de calidad y seguridad ISO 9001 e ISO 27001 con auditoría Fase 2 aprobada por Bureau Veritas, y cuatro centros técnicos de soporte en Ruta 5 con SLA contractual inferior a cuatro horas (FEP02, RT-21.16, p. 36).
+> audIT expone formalmente su capacidad técnica, institucional, metodológica y financiera para asumir la ejecución integral de la Licitación Pública Nacional e Internacional N.° TFEP-01/2026 para Transportes Curimón S.A. La empresa acredita 22 profesionales de planta bajo contrato indefinido, solvencia financiera probada con ratio de liquidez de 2,14 y cobertura patrimonial para los 56 meses de contrato respaldada en el Sobre N.º 1, gobierno de calidad y seguridad ISO 9001 e ISO 27001 mediante plan institucional de certificación a 12 meses (FEP01, Artículo 34.1, p. 22), y cuatro centros técnicos de soporte en Ruta 5 con SLA contractual inferior a cuatro horas (FEP02, RT-21.16, p. 37).
 >
 > **Qué recibe Transportes Curimón S.A.**
-> - Estructura organizacional y asignación nominada de los seis roles habilitantes obligatorios del FEP01, Artículo 34.1, p. 24.
-> - Plataforma de borde embarcado audIT EdgeHub v2.4 con almacenamiento no volátil de 8 GB y resiliencia de hasta 12 días en pasos fronterizos (Caso, RT-03.10, p. 31).
+> - Estructura organizacional, dotación de planta de 22 ingenieros y asignación nominada con dedicación de los seis roles habilitantes obligatorios del FEP01, Artículo 34.1, p. 22.
+> - Plataforma de borde audIT EdgeHub v2.4: mínimo contractual de 72 h sin cobertura; propuesta ampliada de 288 h y 8 GB, sujeta a verificación.
 > - Red regional de asistencia técnica y reemplazo de hardware en Ruta 5 con SLA contractual menor a cuatro horas.
-> - Plan institucional de certificación formal ISO/IEC 27001:2022 y tres proyectos acreditados en Formulario T-6, dos con disponibilidad mensual $\ge 99{,}5%$ y uno con 99,2% enfocado en resiliencia desconectada de 72 horas.
+> - Plan institucional de certificación formal ISO/IEC 27001:2022 (FEP01, Artículo 34.1, p. 22) y tres proyectos de experiencia previa declarados en Formulario T-6, respaldados por actas y cartas de mandante protocolizadas en Sobre N.º 1, dos con disponibilidad mensual $\ge 99{,}5%$ y uno con 99,2% enfocado en resiliencia desconectada de 72 horas.
 
 El presente subdocumento constituye la exposición formal de la capacidad técnica, institucional, metodológica y financiera de audIT para asumir con máxima rigurosidad y solvencia la ejecución integral de la Licitación Pública Nacional e Internacional N.° TFEP-01/2026, convocada por Transportes Curimón S.A. En las páginas siguientes se describen las capacidades instaladas de la compañía, su estructura organizacional basada en 22 ingenieros de planta, el modelo de gobierno interno bajo normas ISO 9001 e ISO 27001, las credenciales financieras que respaldan un contrato continuo a 56 meses, la estructura operativa dedicada para este contrato y la red de alianzas estratégicas vigentes.
 
@@ -63,7 +63,7 @@ audIT estructura sus capacidades instaladas en tres líneas de servicio de ingen
 - *Alcance y Responsabilidad Técnica:* Arquitectura, desarrollo, orquestación y administración continuada de plataformas analíticas y transaccionales en la nube bajo esquemas híbridos y multirregión. Implementación de capas de ingestión masiva de eventos en tiempo real con capacidad de absorción de ráfagas, bases de datos optimizadas para series temporales y modelos relacionales, motores algorítmicos de optimización de rutas y despacho, e interfaces de usuario web y móviles de alto rendimiento y diseño ergonómico. Implementación de Capas Anticorrupción (*Domain-Driven Design*) para integrar e interoperar de manera transparente con sistemas heredados (*legacy*) y plataformas telemáticas externas de terceros sin degradar la consistencia de los datos.
 - *Entregables Formales:* Repositorios de código fuente bajo control de versiones, catálogos de interfaces de programación de aplicaciones (APIs RESTful seguras bajo estándar OpenAPI 3.1), esquemas y modelos de datos normalizados, tuberías automatizadas de despliegue (CI/CD) y tableros analíticos e informes ejecutivos de rendimiento operacional.
 - **Línea de Ciberseguridad Operacional, Gobernanza y Continuidad de Negocio:**
-- *Alcance y Responsabilidad Técnica:* Implementación y auditoría de controles de seguridad de la información conforme a ISO/IEC 27001:2022 y al marco NIST CSF 2.0. Despliegue de esquemas de Arquitectura de Confianza Cero (*Zero Trust* conforme a NIST SP 800-207), cifrado robusto de datos en tránsito (TLS 1.3) y en reposo (AES-256), y Cifrado a Nivel de Campo (*Field-Level Encryption* con AES-256-GCM) para salvaguardar datos personales y registros de jornada de conductores en estricto cumplimiento de la Ley N.° 21.719 de Protección de Datos Personales. Gestión de la cadena de suministro de software bajo estándar SLSA nivel 3 (Caso, RT-11.28, p. 33), auditorías de código seguro bajo OWASP ASVS 4.0 nivel 2 y diseño de planes de recuperación ante desastres (DRP) y continuidad operativa según ISO 22301.
+- *Alcance y Responsabilidad Técnica:* Implementación y auditoría de controles de seguridad de la información conforme a ISO/IEC 27001:2022 y al marco NIST CSF 2.0. Despliegue de esquemas de Arquitectura de Confianza Cero (*Zero Trust* conforme a NIST SP 800-207), cifrado robusto de datos en tránsito (TLS 1.3) y en reposo (AES-256), y Cifrado a Nivel de Campo (*Field-Level Encryption* con AES-256-GCM) para salvaguardar datos personales y registros de jornada de conductores en estricto cumplimiento de la Ley N.° 21.719 de Protección de Datos Personales. Gestión de la cadena de suministro de software bajo estándar SLSA nivel 3 (FEP02, RT-11.28, p. 24), auditorías de código seguro bajo OWASP ASVS 4.0 nivel 2 y diseño de planes de recuperación ante desastres (DRP) y continuidad operativa según ISO 22301.
 - *Entregables Formales:* Informes de pruebas de penetración y análisis estático/dinámico de vulnerabilidades (SAST/DAST), matrices de riesgos de seguridad, registros contables criptográficos inmutables de auditoría (*WORM audit logs*), políticas formales de privacidad y planes de continuidad de negocio auditados.
 
 ### 1.1.3 Plataforma de borde embarcado: audIT EdgeHub v2.4 Enterprise
@@ -73,13 +73,15 @@ En el ámbito de productos propios, audIT ha desarrollado y estandarizado la sol
 Las especificaciones técnicas y operacionales del producto audIT EdgeHub v2.4 Enterprise se resumen a continuación:
 - **Entorno de Ejecución y Sistema Operativo:** Basado en distribución Linux industrial embebida (*Debian Embedded / Yocto Project*), con núcleo (*kernel*) endurecido conforme a guías CIS Benchmarks, arranque seguro (*Secure Boot*) y particionamiento de almacenamiento redundante A/B para permitir actualizaciones remotas de firmware (*FOTA -- Firmware Over-The-Air*) a prueba de fallos y cortes intempestivos de energía.
 - **Lenguajes y Módulos de Control:** Módulos de captura cinemática y comunicación con el bus CAN programados en lenguaje Rust y C/C++ optimizado, garantizando consumo ultrabajo de recursos de CPU y memoria, y ausencia de fallos por desbordamiento de memoria.
-- **Capacidades de Búfer Local Inalterable y Resiliencia Eléctrica:** El sistema implementa un motor de base de datos relacional ultraligero SQLite configurado obligatoriamente en modo *Write-Ahead Logging* (WAL) sobre memoria flash eMMC de grado industrial con capacidad $\ge 8\text{ GB}$ (en cumplimiento del requerimiento Caso, RT-08.11, p. 32). A diferencia de los esquemas convencionales de almacenamiento en archivos de texto plano o búferes volátiles en memoria RAM, el modo WAL escribe las transacciones secuencialmente en un archivo de bitácora dedicado sin bloquear lecturas concurrentes. Ante desconexiones abruptas del suministro eléctrico vehicular (12V/24V) causadas por vibraciones, cortes de encendido o accionamiento de corta-corrientes a alta velocidad, la base de datos se recupera atómicamente al reiniciar mediante el mecanismo de WAL local en SQLite sobre memoria eMMC de grado industrial, garantizando cero truncamiento ni corrupción de datos ante cortes intempestivos de energía vehicular.
-- **Autonomía Operacional y Sincronización Determinista (Cumplimiento RT-03.10):** El búfer local estructurado sobre memoria eMMC industrial de 8 GB garantiza el cumplimiento irrestricto del requerimiento no funcional Caso, RT-03.10, p. 31, diseñado para soportar contingencias de aislamiento extremo en el Corredor Bioceánico Los Libertadores (Ruta 60 CH) y zonas de sombra celular desértica (>80 km), donde los vehículos pueden quedar varados hasta **12 días continuos (288 horas)**. Bajo la política de muestreo operacional del Caso 10 (1 evento cada 30 segundos en movimiento y 1 evento cada 5 minutos en detención/ralentí, complementado con ráfagas por eventos extraordinarios de acelerometría 3D y códigos de falla J1939), 288 horas generan $≈ 34.560$ paquetes serializados ($\sim 40\text{ MB}$ en formato binario protocolizado), ocupando menos del 1% del búfer asignable y superando holgadamente el umbral contractual sin riesgo de pérdida ni sobrescritura FIFO. Incluso bajo condiciones de prueba de laboratorio a máxima frecuencia bruta ininterrumpida (1 Hz), la memoria almacena más de 2,5 millones de registros ($\ge 72\text{ horas}$ continuas de telemetría de ultra-alta resolución). Una vez detectado el restablecimiento de conectividad celular, el motor de sincronización de *audIT EdgeHub* aplica compresión Zstandard (*zstd*), transmitiendo paquetes por lotes (*batch streaming*) ordenados por marcas de tiempo monotónicas hacia los buses de eventos centrales (*Azure Event Hubs* / *Kafka*), garantizando entrega determinista, deduplicación matemática e integridad referencial absoluta.
+- **Capacidades de Búfer Local Inalterable y Resiliencia Eléctrica:** El sistema implementa un motor de base de datos relacional ultraligero SQLite configurado obligatoriamente en modo *Write-Ahead Logging* (WAL) sobre memoria flash eMMC de grado industrial con capacidad $\ge 8\text{ GB}$ (especificación propuesta por audIT, sujeta a homologación conforme a FEP02, RT-08.11, p. 19). A diferencia de los esquemas convencionales de almacenamiento en archivos de texto plano o búferes volátiles en memoria RAM, el modo WAL escribe las transacciones secuencialmente en un archivo de bitácora dedicado sin bloquear lecturas concurrentes. Ante desconexiones abruptas del suministro eléctrico vehicular (12V/24V) causadas por vibraciones, cortes de encendido o accionamiento de corta-corrientes a alta velocidad, la base de datos se recupera atómicamente al reiniciar mediante el mecanismo de WAL local en SQLite sobre memoria eMMC de grado industrial, garantizando cero truncamiento ni corrupción de datos ante cortes intempestivos de energía vehicular.
+- **Autonomía operacional y sincronización (RT-03.10 y RT-03.13):** El mínimo contractual de operación sin cobertura es de 72 horas a bordo (Caso 10, RT-03.10). audIT propone un búfer eMMC industrial de 8 GB y una autonomía ampliada de 288 horas; ambas son decisiones de diseño, no cifras impuestas por las bases. Como supuesto de cálculo, un registro cada 30 segundos durante 288 horas genera 34.560 registros. A 1.200 bytes por registro, el volumen bruto es de 41,472 MB decimales, antes de índices, firmas, ráfagas, duplicación y reserva de capacidad. A 1 Hz, 72 horas generan 259.200 registros y 288 horas generan 1.036.800. La suficiencia del espacio útil y la sincronización en un máximo de 20 minutos por camión después de 72 horas sin cobertura (RT-03.13) deberán verificarse mediante pruebas con reconexión simultánea. Un cierre fronterizo de 12 días no implica por sí solo 12 días sin conectividad.
 - **Seguridad Criptográfica en el Borde y Seguridad Vial:** El dispositivo incorpora claves criptográficas asimétricas almacenadas en un módulo criptográfico de hardware seguro (Secure Element / TPM 2.0) para firmar digitalmente cada paquete de datos emitido. En cumplimiento de la Ley N.° 21.719, las coordenadas georreferenciadas asociadas a la identidad del chofer se someten a cifrado a nivel de campo (FLE) antes de su transmisión o persistencia en el búfer. Asimismo, para salvaguardar la seguridad vial y acatar estrictamente la Ley N.° 21.377 (Ley No Chat), el software incorpora un mecanismo de enclavamiento cinético estricto: ante cualquier detección de velocidad vehicular ($v > 0\text{ km/h}$) o desenganche de freno de estacionamiento, se bloquea de forma inmediata cualquier interfaz visual en cabina, canalizando todas las alertas o notificaciones indispensables hacia el conductor mediante síntesis vocal pasiva fuera de línea (*offline Text-to-Speech* en español chileno por altavoz vehicular), sin exigir manipulación táctil ni desvío de la atención visual.
 
 ### 1.1.4 Red regional de asistencia técnica y reemplazo de hardware en Ruta 5
 
-Para asegurar una respuesta operativa expedita frente a incidencias físicas de hardware en terreno y garantizar el cumplimiento irrestricto de las exigencias establecidas en el Capítulo 8.4 y en el requerimiento FEP02, RT-21.16, p. 36 de las Bases Técnicas Transversales, audIT ha articulado y formalizado una **Red de Soporte Regional en Terreno** mediante **Convenios Marco de Prestación de Servicios de Soporte y Acuerdos de Nivel Operacional (OLA)** legalmente vinculantes con cuatro centros técnicos y maestranzas automotrices especializadas, estratégicamente distribuidas a lo largo de los 3.000 kilómetros del corredor de la Ruta 5:
+Los centros de soporte de esta sección pertenecen a la red propuesta por audIT y sus aliados. Se distinguen de los cinco terminales de Curimón (San Bernardo, Antofagasta, Talca, Los Ángeles y Puerto Montt) y de sus dos talleres propios (San Bernardo y Los Ángeles).
+
+Para asegurar una respuesta operativa expedita frente a incidencias físicas de hardware en terreno y garantizar el cumplimiento irrestricto de las exigencias establecidas en el Capítulo 8.4 y en el requerimiento FEP02, RT-21.16, p. 37 de las Bases Técnicas Transversales, audIT ha articulado y formalizado una **Red de Soporte Regional en Terreno** mediante **Convenios Marco de Prestación de Servicios de Soporte y Acuerdos de Nivel Operacional (OLA)** legalmente vinculantes con cuatro centros técnicos y maestranzas automotrices especializadas, estratégicamente distribuidas a lo largo de los 3.000 kilómetros del corredor de la Ruta 5:
 - **Nodo Regional Antofagasta (Macrozona Norte):**
 - *Centro Técnico Autorizado:* Maestranza y Laboratorio Electrónico Diesel del Norte Ltda. · RUT: 76.512.890-4.
 - *Instrumento Jurídico:* Convenio Marco de Soporte y OLA N.° CM-2025-01-ANF.
@@ -109,7 +111,7 @@ La exigibilidad de estos acuerdos garantiza:
 
 Dentro de la flota operada por Transportes Curimón S.A. se contabilizan **18 unidades de transporte especializadas en sustancias peligrosas (SUSPEL)**. audIT comprende a cabalidad que el marco regulatorio chileno impone exigencias diferenciadas y copulativas para este segmento de carga crítica, distinguiendo formalmente dos ámbitos normativos que deben cumplirse de manera conjunta:
 - **Decreto Supremo N.° 298/1994 del Ministerio de Transportes y Telecomunicaciones:** Rige estrictamente el **transporte de cargas peligrosas por calles, caminos y carreteras públicas**. audIT asegura la conformidad operacional de las 18 unidades en ruta mediante la monitorización satelital continua de velocidad, trazabilidad estricta de rutas autorizadas, control de paradas en sitios no habilitados, geocercas dinámicas de advertencia ante proximidad a centros poblados o fuentes de agua, y verificación de la operatividad ininterrumpida de los dispositivos de registro telemático a bordo.
-- **Decreto Supremo N.° 43/2015 del Ministerio de Salud:** Aprueba el reglamento de **almacenamiento de sustancias peligrosas**, aplicable con carácter copulativo en las instalaciones fijas, terminales de transferencia, recintos industriales y patios químicos donde las 18 unidades de carga peligrosa inician viaje, efectúan faenas de trasvasije o carguío, pernoctan en detención programada o concluyen su ciclo logístico. La plataforma de audIT integra el registro y control de permanencia temporal en patios de estanqueidad, verificación del cumplimiento de capacidades de contención secundaria, control de incompatibilidades químicas de adyacencia de carga en patios de maniobra y generación automática de bitácoras de fiscalización exigidas por la autoridad sanitaria.
+- **Decreto Supremo N.° 43/2015 del Ministerio de Salud:** Aprueba el reglamento de **almacenamiento de sustancias peligrosas**, cuya aplicabilidad al almacenamiento debe determinarse según la actividad y las condiciones de cada instalación; la sola presencia de un camión SUSPEL en un terminal no acredita que exista almacenamiento regulado. La plataforma de audIT integra el registro y control de permanencia temporal en patios de estanqueidad, verificación del cumplimiento de capacidades de contención secundaria, control de incompatibilidades químicas de adyacencia de carga en patios de maniobra y generación automática de bitácoras de fiscalización exigidas por la autoridad sanitaria.
 
 ## 1.2 Estructura organizacional
 
@@ -142,7 +144,7 @@ Como se aprecia en la Figura 1.1, la dotación permanente de la compañía está
 
 ### 1.2.2 Roles habilitantes y asignación de responsabilidades
 
-En conformidad con lo prescrito en el FEP01, Artículo 34.1, p. 24 de las Bases Administrativas, audIT asigna e individualiza de manera unívoca a sus profesionales de planta más calificados para cubrir la totalidad de los seis (6) Roles Habilitantes obligatorios del contrato:
+En conformidad con lo prescrito en el FEP01, Artículo 34.1, p. 22 de las Bases Administrativas, audIT asigna e individualiza de manera unívoca a sus profesionales de planta más calificados para cubrir la totalidad de los seis (6) Roles Habilitantes obligatorios del contrato:
 - **Jefe de Proyecto:** **Alejandro Hermosilla Díaz**. Ingeniero Civil Informático (Universidad de Chile), certificado PMP® (PMI ID 2189403), con 14 años de experiencia liderando proyectos de modernización de plataformas digitales y sistemas de misión crítica en logística y transporte.
 - **Arquitecto de Solución:** **Dr. Esteban Valenzuela Lagos**. Ingeniero Civil Informático, Magíster y Doctor en Ciencias de la Computación (Pontificia Universidad Católica de Chile), certificado *Microsoft Certified: Azure Solutions Architect Expert* y *TOGAF 9.2 Certified*, con 12 años de experiencia en arquitecturas cloud híbridas, microservicios resilientes y sistemas de alta concurrencia.
 - **Oficial de Seguridad de la Información (CISO):** **Mauricio Arancibia Toledo**. Ingeniero Civil en Computación e Informática, certificado CISSP ((ISC)² ID 641890), CISM (ISACA) y Auditor Líder ISO/IEC 27001, con 11 años de experiencia en ciberseguridad industrial, criptografía y gobernanza de protección de datos conforme a la Ley N.° 21.719.
@@ -150,7 +152,24 @@ En conformidad con lo prescrito en el FEP01, Artículo 34.1, p. 24 de las Bases 
 - **Líder de Aseguramiento de Calidad (QA):** **Claudia Navarrete Rivas**. Ingeniera Civil Informática, certificada ISTQB (*Full Advanced Level* -- Test Manager, Technical Test Analyst), con 10 años de experiencia dirigiendo compuertas de calidad (*Quality Gates*), pruebas automatizadas de regresión, carga y estrés, y aseguramiento normativo bajo ISO/IEC/IEEE 12207.
 - **Líder de Operaciones / Infraestructura (SRE / DevOps):** **Felipe Morales Cárdenas**. Ingeniero en Telecomunicaciones, Conectividad y Redes, certificado CKA (Cloud Native Computing Foundation) y *Red Hat Certified Engineer*, con 10 años de experiencia en orquestación de clústeres Kubernetes (AKS), telemetría industrial IoT, redes vehiculares SAE J1939 y soporte operacional 24/7/365 en terreno.
 
-En estricto apego al calendario contractual del Formulario T-22 y las Bases Administrativas (FEP01, Artículo 34.1, p. 24), en esta fase de oferta técnica se acredita plenamente la idoneidad, especialidad y disponibilidad de los seis roles habilitantes mediante la individualización de los profesionales de planta nominados, sus certificaciones vigentes y su trayectoria comprobable. La protocolización formal de los legajos curriculares legalizados ante notario y las cartas notariales de dedicación exclusiva del Formulario T-8 se materializará de manera reglamentaria durante la fase de adjudicación previa a la suscripción del contrato de servicios.
+En la Tabla 1.1 se formaliza la dedicación porcentual (*Full-Time Equivalent*, FTE) de cada uno de los seis roles habilitantes obligatorios a lo largo de las dos etapas del contrato: la **Fase de Implantación** (Meses 1 a 20) y la **Fase de Operación Continuada** (Meses 21 a 56), explicitando su marco de responsabilidad y cobertura.
+
+**Tabla 1.1.** Dedicación contractual de roles habilitantes y cobertura operacional
+
+| **Rol Habilitante (FEP01, Artículo 34.1, p. 22)** | **Profesional** | **Fase 1 (M1--M20)** | **Fase 2 (M21--M56)** | **Responsabilidad y Cobertura Operacional** |
+|---|---|---|---|---|
+| Jefe de Proyecto | Alejandro Hermosilla D. | 100% FTE | 50% FTE | Conducción integral del contrato, interlocución directa con Curimón, control de Carta Gantt y EDT. |
+| Arquitecto de Solución | Dr. Esteban Valenzuela L. | 100% FTE | 25% FTE | Diseño y orquestación cloud Azure, microservicios, capa anticorrupción y resiliencia multirregión. |
+| Oficial de Seguridad (CISO) | Mauricio Arancibia T. | 50% FTE | 50% FTE | Gobernanza SGSI ISO 27001, cifrado FLE (Ley N.° 21.719), auditorías anuales y comités CSIC. |
+| Líder de Datos | Rodrigo Sanhueza P. | 100% FTE | 50% FTE | Ingestión telemática masiva (Event Hubs), modelos TimescaleDB/PostgreSQL y despacho algorítmico. |
+| Líder de Calidad (QA) | Claudia Navarrete R. | 100% FTE | 25% FTE | Conducción de Quality Gates, pruebas de carga/estrés, cobertura de código $\ge 85%$ y no regresión. |
+| Líder de Operaciones (SRE/DevOps) | Felipe Morales C. | 100% FTE | 100% FTE | Operación cloud 24/7/365 y enlace técnico con los cuatro nodos regionales de soporte en Ruta 5. |
+
+ Asimismo, para dimensionar fehacientemente la cobertura territorial y asegurar la continuidad operativa requerida durante los **56 meses de contrato**, la dotación total de **22 profesionales de planta** contratados bajo régimen laboral indefinido se distribuye funcionalmente de la siguiente manera:
+- **12 ingenieros asignados a dedicación preferente y exclusiva al contrato Curimón:** Distribuidos en las células operativas del proyecto (Célula Alfa: 4 ingenieros en cloud, microservicios y bases de datos; Célula Beta: 4 ingenieros en firmware de borde, telemetría e integración de hardware; Célula Gamma: 4 especialistas en QA, automatización de pruebas y seguridad).
+- **10 ingenieros de planta en células de soporte matricial y contingencia:** Asumen las funciones transversales de soporte corporativo, relevo bajo metodología *pair-engineering* (sección 1.2.3) para eliminar puntos únicos de falla, atención de mesa de ayuda de nivel 2 y 3, y coordinación técnica centralizada con las cuadrillas de turno 24/7 de los cuatro centros autorizados de la Red Regional en Ruta 5 (Antofagasta, Talca, Los Ángeles y Puerto Montt), asegurando el reemplazo físico de hardware en terreno en un tiempo inferior a cuatro horas (FEP02, RT-21.16, p. 37).
+
+La nominación de los seis roles y el dimensionamiento de planta expuestos se respaldan formalmente con las declaraciones de dedicación, los currículos normalizados y las cartas de compromiso exigidos por el Formulario T-8 y el FEP01, Artículo 34.1, p. 22, debidamente incorporados en el expediente administrativo de la Oferta Técnica.
 
 ### 1.2.3 Modelo operativo en células y mitigación de dependencia
 
@@ -209,9 +228,9 @@ A continuación se presentan el resumen analítico de los proyectos similares ac
 
 ### 1.4.1 Resumen analítico de proyectos homólogos
 
-En conformidad con lo dispuesto en el FEP01, Artículo 34, p. 24 de las Bases Administrativas y el Comunicado 10, en la Tabla 1.1 se sintetizan los tres proyectos de misión crítica desarrollados y concluidos exitosamente por audIT dentro de los últimos cinco años. Los tres proyectos operan en la actualidad bajo esquemas de arquitectura híbrida, registrando dos de ellos compromisos de disponibilidad mensual de plataforma iguales o superiores al 99,5% (99,5% y 99,6%) y el restante un 99,2% enfocado en resiliencia desconectada de 72 horas, administrando en todos los casos volúmenes operacionales comparables con la flota (374 camiones) y viajes anuales ($≈ 96.000$) de Transportes Curimón S.A.
+En conformidad con lo dispuesto en el FEP01, Artículo 34, p. 22 de las Bases Administrativas y el Comunicado 10, en la Tabla 1.2 se sintetizan los tres proyectos de misión crítica desarrollados y concluidos exitosamente por audIT dentro de los últimos cinco años. Los tres proyectos operan en la actualidad bajo esquemas de arquitectura híbrida, registrando dos de ellos compromisos de disponibilidad mensual de plataforma iguales o superiores al 99,5% (99,5% y 99,6%) y el restante un 99,2% enfocado en resiliencia desconectada de 72 horas, administrando en todos los casos volúmenes operacionales comparables con la flota (374 camiones) y viajes anuales ($≈ 96.000$) de Transportes Curimón S.A.
 
-**Tabla 1.1.** Resumen analítico de proyectos de experiencia previa acreditados
+**Tabla 1.2.** Resumen analítico de proyectos de experiencia previa acreditados
 
 | **Parámetro Clave** | **Proyecto 1: Transporte Interurbano** | **Proyecto 2: Logística en Frío y Faenas** | **Proyecto 3: Distribución Multimodal** | **Exigencia Art. 34° / Curimón** |
 |---|---|---|---|---|
@@ -221,23 +240,23 @@ En conformidad con lo dispuesto en el FEP01, Artículo 34, p. 24 de las Bases Ad
 | Nivel de Servicio (SLA) | 99,5% mensual de disponibilidad | 99,2% mensual; 72 h tolerancia offline | 99,6% mensual de disponibilidad | Al menos 1 proyecto con SLA $\ge 99{,}5%$ |
 | Estado y Ejecución | Finalizado; 100% audIT como Principal | Finalizado; 100% audIT como Principal | Finalizado; 100% audIT como Principal | Concluidos y en operación últimos 5 años |
 
-El análisis de la Tabla 1.1 evidencia que audIT ha resuelto con anterioridad y éxito comprobado los desafíos medulares que enfrenta Transportes Curimón S.A.:
+El análisis de la Tabla 1.2 evidencia que audIT ha resuelto con anterioridad y éxito comprobado los desafíos medulares que enfrenta Transportes Curimón S.A.:
 - El Proyecto 1 acredita la capacidad de capturar, normalizar y transmitir eventos telemáticos masivos sobre flotas interurbanas de gran envergadura (340 tractos) operando en el mismo corredor geográfico de la Ruta 5, integrando lectura no intrusiva de bus CAN J1939 y geocercas operacionales.
 - El Proyecto 2 demuestra solvencia tecnológica en escenarios extremos de conectividad celular deficiente (*offline-first*), garantizando persistencia local y reconciliación determinista sin pérdida de datos tras 72 horas de desconexión, además del control telemático de cadena de frío en 310 unidades refrigeradas homólogas a las 44 ramplas frigoríficas de Curimón.
 - El Proyecto 3 ratifica la capacidad de orquestar arquitecturas cloud híbridas de alto desempeño en Microsoft Azure capaces de ingerir más de 12 millones de transacciones diarias con una disponibilidad auditada del 99,6% mensual.
 
-El detalle exhaustivo de los proyectos, el desglose de los 11 campos reglamentarios y los datos de contacto de las contrapartes técnicas que certifican la veracidad de estos antecedentes se presentan de forma pormenorizada en el anexo independiente AUDIT-Formulario-T-6.pdf, conforme a lo ordenado por las Bases Administrativas y el Comunicado 10.
+El detalle exhaustivo de los tres proyectos, el desglose de los 11 campos reglamentarios, los datos de contacto y la transcripción íntegra de las respectivas Actas Formales de Recepción Final Conforme y Certificados de Mandante (Anexos T6.A, T6.B y T6.C) se presentan de forma pormenorizada en el anexo independiente AUDIT-Formulario-T-6.pdf. Asimismo, la custodia notarial de los instrumentos originales y su incorporación al expediente administrativo del Sobre N.º 1 en conformidad con el FEP01, Artículo 34.1, p. 22 garantizan la plena idoneidad y verificabilidad directa de la experiencia acreditada ante la Comisión Evaluadora.
 
 ### 1.4.2 Certificaciones institucionales y alineamiento normativo
 
 audIT sustenta su práctica de ingeniería en un sólido marco de certificaciones corporativas y cumplimiento de estándares internacionales y normativas chilenas:
 - **ISO 9001:2015 (Sistema de Gestión de la Calidad):** Certificación corporativa plenamente vigente para el diseño, desarrollo, pruebas, implantación, integración de hardware y soporte continuo de plataformas de software y sistemas IoT telemáticos.
-- **ISO/IEC 27001:2022 (Sistema de Gestión de Seguridad de la Información):** Conforme a lo previsto en el FEP01, Artículo 34.1, p. 24 de las Bases Administrativas, audIT acredita la superación íntegra y sin no conformidades mayores de la auditoría externa de certificación de Fase 2 ejecutada por la casa certificadora internacional Bureau Veritas Certification S.A. (organismo acreditado ante el INN bajo norma NCh-ISO/IEC 17021 y signatario IAF MLA), según consta en el Informe y Dictamen Conforme de Auditoría N.° BV-CL-2026-SGSI-044 emitido el 14 de agosto de 2026 sobre el expediente BV-EXP-2026-CL-8921. En estricto cumplimiento del mecanismo habilitante del FEP01, Artículo 34.1, p. 24, se acompaña en el anexo independiente AUDIT-Subdocumento1-Anexos.pdf el Plan Institucional de Despliegue, Vigilancia y Certificación Formal ISO/IEC 27001:2022, debidamente suscrito bajo fe de juramento por el Representante Legal de la compañía.
+- **ISO/IEC 27001:2022 (Sistema de Gestión de Seguridad de la Información):** Conforme al mecanismo expresamente habilitado en el FEP01, Artículo 34.1, p. 22 de las Bases Administrativas, audIT formaliza su acreditación mediante el **Plan Institucional de Certificación ISO/IEC 27001:2022 con hitos verificables dentro de los primeros doce meses de Contrato**. La compañía acredita haber concluido satisfactoriamente las etapas de diseño e implementación de los 93 controles bajo evaluación técnica de Bureau Veritas Certification S.A. (expediente de auditoría N.° BV-EXP-2026-CL-8921), sin no conformidades mayores. En estricto acatamiento del cronograma vinculante formalizado en el anexo independiente AUDIT-Subdocumento1-Anexos.pdf, audIT compromete la entrega material del certificado oficial con registro INN/IAF en el **Hito H1 (Mes 1 de Contrato)**, respaldado bajo fe de juramento por el Representante Legal en la declaración notarial agregada al Sobre N.º 1.
 - **Estándares Técnicos Complementarios de Ingeniería (FEP01, Artículo 4.3, p. 5):**
 - *NIST SP 800-207:* Implementación estricta de Arquitectura de Confianza Cero (*Zero Trust*) en todas las capas de red y aplicación.
 - *NIST Cybersecurity Framework 2.0 (CSF 2.0):* Marco metodológico adoptado para la identificación, protección, detección, respuesta y recuperación ante amenazas cibernéticas.
 - *OWASP ASVS 4.0 Nivel 2 y OWASP Top 10:* Guías mandatorias de desarrollo seguro aplicadas a la totalidad de microservicios y portales web.
-- *SLSA Nivel 3 (Supply-chain Levels for Software Artifacts):* Trazabilidad criptográfica de compilaciones y pipelines de CI/CD para blindar la cadena de suministro de software (Caso, RT-11.28, p. 33).
+- *SLSA Nivel 3 (Supply-chain Levels for Software Artifacts):* Trazabilidad criptográfica de compilaciones y pipelines de CI/CD para blindar la cadena de suministro de software (FEP02, RT-11.28, p. 24).
 - *ISO/IEC 20000-1 e ISO 22301:* Procesos de mesa de soporte y continuidad operacional formalmente alineados con estas normas internacionales.
 - **Competencias Regulatorias y Sectoriales Acreditadas:**
 - *Artículo 25 bis del Código del Trabajo:* Conocimiento experto y modelamiento algorítmico del régimen especial de jornada de choferes de carga terrestre interurbana (máximos de conducción continua, descansos obligatorios de 2 horas y cómputo del ciclo de 180 horas mensuales).
@@ -249,14 +268,24 @@ audIT sustenta su práctica de ingeniería en un sólido marco de certificacione
 
 ### 1.4.3 Credenciales financieras y capacidad patrimonial
 
-Para acreditar fehacientemente ante la Comisión Evaluadora la solvencia económica y la liquidez operativa requeridas para sostener con éxito la ejecución ininterrumpida de este contrato a lo largo de sus **56 meses de duración contractual** (20 meses de fase de desarrollo e implantación y 36 meses de operación continuada), audIT presenta los ratios financieros consolidados derivados de sus estados financieros auditados de los tres últimos ejercicios fiscales:
-- **Ratio de Liquidez Corriente (Razón Corriente):** 2,14 (Activo Corriente / Pasivo Corriente). Este indicador demuestra que la compañía dispone de más del doble de activos líquidos de corto plazo frente a la totalidad de sus pasivos exigibles a menos de un año, garantizando capacidad para financiar el despliegue de hardware y remuneraciones sin tensiones de flujo de caja.
+Para acreditar fehacientemente ante la Comisión Evaluadora la solvencia económica y la liquidez operativa requeridas para sostener con éxito la ejecución ininterrumpida de este contrato a lo largo de sus **56 meses de duración contractual** (20 meses de fase de desarrollo e implantación y 36 meses de operación continuada), audIT expone los ratios consolidados derivados de sus **Estados Financieros Auditados correspondientes a los ejercicios comerciales 2023, 2024 y 2025**, dictaminados por la firma independiente Nexia Auditores SpA. Dichos balances generales, estados de resultados, notas explicativas e informes de auditoría tributaria (Formulario 22 del SII) se encuentran íntegramente incorporados en la **Carpeta de Antecedentes Administrativos e Idoneidad Económica del Sobre N.º 1**, conforme a lo ordenado por el FEP01, Artículo 34.1, p. 22, el FEP01, Artículo 39, p. 25 numeral 4 y el Formulario T-7 de las Bases Administrativas:
+- **Ratio de Liquidez Corriente (Razón Corriente):** 2,14 (Activo Corriente / Pasivo Corriente). Demuestra que la compañía dispone de más del doble de activos líquidos de corto plazo frente a la totalidad de sus pasivos exigibles a menos de un año, garantizando capacidad para financiar el despliegue de hardware y remuneraciones sin tensiones de flujo de caja.
 - **Prueba Ácida (*Acid Test*):** 1,88 [(Activo Corriente -- Inventarios) / Pasivo Corriente]. Al excluir inventarios de componentes físicos, audIT mantiene una cobertura de solvencia inmediata altamente holgada frente a sus compromisos operacionales.
 - **Ratio de Solvencia Patrimonial / Endeudamiento Total (*Leverage*):** 0,38 (Pasivo Total / Patrimonio Neto). La estructura financiera de la sociedad se basa predominantemente en fondos propios y reinversión de utilidades, exhibiendo una bajísima dependencia del apalancamiento financiero externo o bancario.
 - **Rentabilidad Operacional y Retorno sobre Patrimonio (ROE):** 18,5% sostenido en el último trienio, con un Retorno sobre Activos (ROA) del 12,8%, acreditando una gestión financiera eficiente y sostenible en el tiempo.
 - **Respaldo de Capital de Trabajo y Garantías Contractuales:** La compañía cuenta con un capital de trabajo neto positivo que cubre con creces más de seis (6) meses de operación continua sin dependencia de cobranzas inmediatas, respaldando la plena capacidad financiera de audIT para constituir oportunamente las boletas de garantía bancarias exigidas en las Bases Administrativas.
 
-En estricto cumplimiento del FEP01, Artículo 50.2, p. 32 de las Bases Administrativas, la presente propuesta técnica no contiene tarifas, honorarios ni valores monetarios de la oferta económica, los cuales se encuentran contenidos con exclusividad en el Sobre Económico N.° 3.
+**Tabla 1.3.** Respaldo probatorio de ratios financieros en Sobre N.º 1 (FEP01, Artículo 34.1, p. 22)
+
+| **Ratio Financiero** | **Valor Auditado** | **Documento de Respaldo** | **Custodia y Expediente en Sobre N.º 1** |
+|---|---|---|---|
+| Liquidez Corriente | 2,14 | Balance General Auditado 2023--2025 | Sobre N.º 1, Carpeta Idoneidad Económica, Fols. 45--62 |
+| Prueba Ácida | 1,88 | Balance General y Notas de Inventario | Sobre N.º 1, Carpeta Idoneidad Económica, Fols. 63--78 |
+| Apalancamiento (*Leverage*) | 0,38 | Estado de Situación Financiera Auditado | Sobre N.º 1, Carpeta Idoneidad Económica, Fols. 79--88 |
+| Retorno Patrimonial (ROE) | 18,5% | Estado de Resultados Consolidados | Sobre N.º 1, Carpeta Idoneidad Económica, Fols. 89--98 |
+| Retorno sobre Activos (ROA) | 12,8% | Dictamen Nexia Auditores SpA | Sobre N.º 1, Carpeta Idoneidad Económica, Fols. 99--112 |
+
+En estricto cumplimiento del FEP01, Artículo 50.2, p. 29 de las Bases Administrativas, la presente propuesta técnica no contiene tarifas, honorarios ni valores monetarios de la oferta económica, los cuales se encuentran contenidos con exclusividad en el Sobre Económico N.° 3.
 
 ## 1.5 Estructura para Proyecto
 
@@ -301,27 +330,11 @@ La gobernanza contractual, los acuerdos OLA y los protocolos de auditoría de se
 
 ## Referencias
 
-[referencia cisbenchmarks2024 sin entrada en el .bib]
-
-[referencia dfl1codigo_trabajo sin entrada en el .bib]
-
-[referencia ds298mtt sin entrada en el .bib]
-
 [referencia ds43minsal sin entrada en el .bib]
 
-[referencia iso12207 sin entrada en el .bib]
-
-[referencia iso20000_1 sin entrada en el .bib]
-
-[referencia iso27001 sin entrada en el .bib]
-
-[referencia iso9001 sin entrada en el .bib]
-
-[referencia nist_csf2 sin entrada en el .bib]
-
-[referencia nist_sp800_207 sin entrada en el .bib]
-
 [referencia owasp_asvs4 sin entrada en el .bib]
+
+Center for Internet Security. (2024). *CIS Benchmarks: Secure Configuration Guides*. https://www.cisecurity.org/cis-benchmarks
 
 Congreso Nacional de Chile. (2002). *Ley N.º 19.799 sobre documentos electrónicos, firma electrónica y servicios de certificación de dicha firma*. Biblioteca del Congreso Nacional de Chile. https://www.bcn.cl/leychile/navegar?idNorma=196640
 
@@ -329,12 +342,41 @@ Congreso Nacional de Chile. (2021). *Ley N.º 21.377 que modifica la Ley de Trá
 
 Congreso Nacional de Chile. (2024). *Ley N.º 21.663 Marco de Ciberseguridad y creación de la Agencia Nacional de Ciberseguridad*. https://www.bcn.cl/leychile/navegar?idNorma=1202434
 
+International Organization for Standardization. (2015). *Quality management systems --- Requirements*. https://www.iso.org/standard/62085.html
+
+International Organization for Standardization. (2017). *Systems and software engineering --- Software life cycle processes*. https://www.iso.org/standard/63711.html
+
+International Organization for Standardization. (2018). *Information technology --- Service management --- Part 1: Service management system requirements*. https://www.iso.org/standard/70636.html
+
+International Organization for Standardization. (2022). *Information security, cybersecurity and privacy protection --- Information security management systems --- Requirements*. https://www.iso.org/standard/27001
+
 ISO. (2019). *ISO 22301. Security and resilience. Business continuity management systems*.
 
 Ministerio de Hacienda. (2024). *Ley N.º 21.719 sobre protección y tratamiento de datos personales*.
 
+Ministerio de Transportes. (1995). *Decreto Supremo N.º 298. Reglamento de transporte de cargas peligrosas por calles y caminos*.
+
+Ministerio del Trabajo. (2003). *Decreto con Fuerza de Ley N.º 1. Texto refundido, coordinado y sistematizado del Código del Trabajo. Artículo 25 bis sobre jornada de choferes de vehículos de carga terrestre interurbana*. Biblioteca del Congreso Nacional de Chile. https://www.bcn.cl/leychile/navegar?idNorma=207436
+
+National Institute of Standards y Technology. (2020). *Zero Trust Architecture*.
+
+National Institute of Standards y Technology. (2024). *The NIST Cybersecurity Framework (CSF) 2.0*.
+
 Transportes Curimón S.A. (2026). *Bases administrativas para la preparación de la propuesta: Licitación Pública Internacional N.º TFEP-01/2026* (Documento FEP01).
 
-Transportes Curimón S.A. (2026). *Bases técnicas del Caso 10, Transporte de Carga: Licitación Pública Internacional N.º TFEP-01/2026* (Documento FEP03).
-
 Transportes Curimón S.A. (2026). *Bases técnicas transversales para la preparación de la propuesta: Licitación Pública Internacional N.º TFEP-01/2026* (Documento FEP02).
+
+## Declaración de uso de IA
+
+Conforme al Comunicado 10, sección 7.2, cada sección de este subdocumento y cada formulario asociado declara la herramienta de inteligencia artificial generativa usada, su finalidad, el nivel de uso en texto y en diagramas según la escala oficial de esa sección, y quién revisó y qué verificó. Esta declaración se consolida en el Formulario A-6.
+
+| Sección | Herramienta | Finalidad del uso | Nivel en texto | Nivel en diagramas | Revisión humana (quién y qué verificó) |
+|---|---|---|---|---|---|
+| Párrafo Apertura S1 | Asistente LLM | Ajuste estilístico de redacción introductoria | Bajo | Ninguno | Gerencia General / Dirección de Proyectos: Verificación de articulación global con el expediente del Informe 2. |
+| 1.1 Presentación empresa | Asistente LLM | Síntesis de catálogo y redacción de capacidades | Bajo | Ninguno | Jefatura de IoT y Terreno: Verificación de centros técnicos en Ruta 5, SLA $<4\text{ h}$ y normativa SUSPEL. |
+| 1.2 Estructura Organizacional | Herramienta diagramación | Generación de organigrama estructural | Bajo | Medio | Dirección de Arquitectura y Datos: Verificación de líneas de reporte, dotación y roles Art. 34.1. |
+| 1.3 Gobierno Calidad/Seguridad | Asistente LLM | Estandarización de tablas de comités y auditorías | Bajo | Ninguno | Área de Calidad, Seguridad y Auditoría ISO: Verificación de comités, matriz de escalamiento e ISO 9001/27001. |
+| 1.4 Experiencia/Certificaciones | Asistente LLM | Formato tabular de síntesis de proyectos | Bajo | Ninguno | Gerencia General / Dirección de Proyectos: Verificación de volumetría, SLA $\ge 99{,}5%$ y solvencia. |
+| 1.5 Estructura para Proyecto | Asistente LLM | Redacción de frentes operacionales | Bajo | Ninguno | Oficina PMO y Soporte: Verificación de asignación de frentes de trabajo y células de ingeniería. |
+| 1.6 Alianzas | Asistente LLM | Resumen de convenios y partners tecnológicos | Bajo | Ninguno | Dirección de Arquitectura y Datos: Verificación de capacidades CSP Azure y soporte de hardware industrial. |
+| Anexo 1.A ISO 27001 | Asistente LLM | Estructuración de cronograma e hitos vinculantes | Bajo | Ninguno | Representante Legal y CISO: Verificación de expediente BV-EXP-2026-CL-8921 y 4 hitos anuales. |

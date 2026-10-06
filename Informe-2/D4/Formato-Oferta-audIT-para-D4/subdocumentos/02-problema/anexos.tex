@@ -6,12 +6,13 @@
 
 El presente documento complementario contiene los inventarios detallados, matrices de requerimientos, caracterización exhaustiva de flota y conductores, matrices normativas y fichas pormenorizadas de actores que respaldan analíticamente el \textbf{Subdocumento 2} (\textit{Comprensión del Problema y de la Necesidad}) de la oferta técnica.
 
-Conforme a lo instruido en el Comunicado 10 (§1 y §5), las tablas de catalogación y los listados que superan cinco columnas o una página de extensión se presentan en este archivo de anexos independiente para salvaguardar la legibilidad del cuerpo principal. Este documento se estructura en cuatro anexos formales:
+Conforme a lo instruido en el Comunicado 10 (§1 y §5), las tablas de catalogación y los listados que superan cinco columnas o una página de extensión se presentan en este archivo de anexos independiente para salvaguardar la legibilidad del cuerpo principal. Las especificaciones de sensores y métodos de integración son propuestas de audIT, no inventario instalado ni exigencias literales del caso. Este documento se estructura en cinco anexos formales:
 \begin{itemize}
   \item \textbf{Anexo 2.A:} Catálogo Exhaustivo de Requerimientos de Negocio y Operacionales Preliminares.
   \item \textbf{Anexo 2.B:} Inventario Detallado de Flota y Caracterización de Conductores.
   \item \textbf{Anexo 2.C:} Matriz Exhaustiva de Restricciones Operacionales, Legales y Exclusiones Contractuales.
   \item \textbf{Anexo 2.D:} Fichas Detalladas de Caracterización de los Trece (13) Actores del Ecosistema.
+  \item \textbf{Anexo 2.E:} Registro Integral de Supuestos de Ingeniería y Resolución de las Veintiséis (26) Decisiones de Diseño del Caso §16.1.
 \end{itemize}
 
 \vspace{0.5cm}
@@ -22,7 +23,7 @@ Conforme a lo instruido en el Comunicado 10 (§1 y §5), las tablas de catalogac
 \section*{Anexo 2.A: Catálogo exhaustivo de requerimientos preliminares de negocio y operacionales}\label{sec:2-anexo-2a}
 \addcontentsline{toc}{section}{Anexo 2.A: Catálogo exhaustivo de requerimientos preliminares de negocio y operacionales}
 
-El catálogo compendia las necesidades preliminares de negocio levantadas desde las Bases Técnicas del Caso 10, las entrevistas en terreno con los actores operacionales y las exigencias normativas del transporte terrestre chileno. Cada requerimiento se codifica unívocamente, estableciendo su trazabilidad formal y su nivel de criticidad para la continuidad operacional en la \tabref{2-req-preliminares}.
+El catálogo compendia las necesidades preliminares de negocio levantadas desde las Bases Técnicas del Caso 10, las entrevistas reproducidas en el caso con los actores operacionales y las exigencias normativas del transporte terrestre chileno. Cada requerimiento se codifica unívocamente, estableciendo su trazabilidad formal y su nivel de criticidad para la continuidad operacional en la \tabref{2-req-preliminares}.
 
 \begin{tabla}[ancho=completo]{Catálogo de requerimientos de negocio y operacionales preliminares}{2-req-preliminares}{C{24mm} L{30mm} X L{32mm} C{18mm}}
 \textbf{ID Req.} & \textbf{Dominio} & \textbf{Descripción Detallada del Requerimiento Preliminar} & \textbf{Fuente / Base} & \textbf{Criticidad} \\ \midrule
@@ -33,19 +34,19 @@ El catálogo compendia las necesidades preliminares de negocio levantadas desde 
 \textbf{REQ-NEG-05} & Trazabilidad y Geocercas & Detectar automáticamente mediante geocercas poligonales la entrada, tiempo de permanencia y salida en los ~1.400 puntos de clientes, sin requerir intervención manual del conductor ni instalación de equipos en predios ajenos. & Caso 10, Cap. 4.7, Entrevista E. Valdebenito & Alta \\
 \textbf{REQ-NEG-06} & Cobro de Sobreestadías & Generar reportes cronológicos certificados e inalterables con estampa de tiempo y coordenadas GPS del tiempo de espera en andén, proveyendo sustento probatorio irrefutable para recuperar el 71\% de sobreestadías hoy objetadas. & Caso 10, Cap. 4.7, Entrevista G. Ossandón & Alta \\
 \textbf{REQ-NEG-07} & Retornos en Vacío & Identificar en tiempo real los tractocamiones que finalizarán su descarga para sugerir triangulaciones con cargas de retorno compatibles, reduciendo el 26\% de kilómetros recorridos en vacío (10,66 millones de km anuales). & Caso 10, Cap. 4.2, Entrevista R. Mansilla & Alta \\
-\textbf{REQ-NEG-08} & Cadena de Frío & Monitorear en tiempo real la temperatura interna de las 44 ramplas refrigeradas (-30 °C a +30 °C), emitiendo alertas inmediatas a la Torre 24x7 ante desviaciones térmicas de $\pm 1{,}5$ °C o apertura no autorizada de puertas. & Caso 10, Cap. 2.1 y 4.8, Entrevista A. Lecaros & Crítica \\
-\textbf{REQ-NEG-09} & Documentación Digital & Emitir Documentos Electrónicos de Transporte (DET para ~128.000 guías anuales) integrados con el ERP contable y el SII, habilitando la emisión offline pre-firmada en zonas de carga sin cobertura celular. & Caso 10, Cap. 4.6, Entrevista M. Riquelme & Alta \\
+\textbf{REQ-NEG-08} & Cadena de Frío & Monitorear la temperatura de los 44 semirremolques refrigerados y alertar desviaciones o aperturas no autorizadas. Los rangos, umbrales y frecuencia se definirán según carga y contrato. & Caso 10, Cap. 2.1 y 4.8, Entrevista A. Lecaros & Crítica \\
+\textbf{REQ-NEG-09} & Documentación Digital & Preparar y tramitar Documentos Electrónicos de Transporte (DET para ~128.000 guías anuales) integrados con el ERP contable y el SII, conservando al sistema contable como único emisor tributario y definiendo la contingencia documental autorizada en zonas de carga sin cobertura celular. & Caso 10, Cap. 4.6, Entrevista M. Riquelme & Alta \\
 \textbf{REQ-NEG-10} & Confirmación de Entrega & Digitalizar el comprobante de entrega (\textit{Proof of Delivery} [POD]) mediante captura fotográfica y firma digital en pantalla en destino, abatiendo el 4,2\% de pérdidas o roturas de guías físicas en papel. & Caso 10, Cap. 4.7, Entrevista G. Ossandón & Media \\
 \textbf{REQ-NEG-11} & Costeo por Ruta y Viaje & Reconstruir el costo marginal directo real de cada viaje (< 24 h post-cierre), integrando consumo de diésel por CAN bus, pasadas de peajes TAG y flete liquidado a terceros, erradicando el prorrateo ciego por ingreso. & Caso 10, Cap. 4.1 y 7.3, Entrevista G. Ossandón & Crítica \\
 \textbf{REQ-NEG-12} & Renegociación Contratos & Proveer a la Gerencia de Finanzas la matriz de rentabilidad histórica desagregada por cliente y ruta para renegociar los 3 contratos deficitarios (31\% del ingreso, peor a -14\%) previo a sus vencimientos en 2027. & Caso 10, Cap. 2.3, Entrevista G. Ossandón & Crítica \\
 \textbf{REQ-NEG-13} & Telemetría CAN bus & Capturar y procesar de forma pasiva y no intrusiva los parámetros de operación del motor (RPM, odómetro, temperatura de refrigerante, códigos DTC y consumo acumulado) en los 61 tractos con CAN bus de fábrica. & Caso 10, Cap. 4.10, Entrevista H. Trincado & Alta \\
-\textbf{REQ-NEG-14} & Mantenimiento Preventivo & Generar órdenes automáticas de mantenimiento en base al kilometraje y horas de motor efectivamente acumulados por telemetría, sustituyendo la planificación visual manual cada 6 días en taller San Bernardo. & Caso 10, Cap. 4.10, Entrevista H. Trincado & Alta \\
+\textbf{REQ-NEG-14} & Mantenimiento Preventivo & Generar órdenes automáticas de mantenimiento en base al kilometraje y horas de motor efectivamente acumulados por telemetría, sustituyendo la lectura visual manual de odómetros; el paso por terminal cada 6 días en promedio condiciona las instalaciones. & Caso 10, Cap. 4.10, Entrevista H. Trincado & Alta \\
 \textbf{REQ-NEG-15} & Integración Talleres Ruta & Habilitar un canal web simplificado para que los talleres externos en ruta registren intervenciones de emergencia y repuestos instalados, actualizando la hoja de vida vehicular de forma inmediata. & Caso 10, Cap. 4.10, Entrevista H. Trincado & Media \\
 \textbf{REQ-NEG-16} & Liquidación a Terceros & Automatizar el cálculo de pre-liquidaciones mensuales a los 148 transportistas terceros a partir de los viajes validados en sistema, reduciendo el ciclo de 9 días hábiles y la tasa de error del 11\%. & Caso 10, Cap. 4.11, Entrevista G. Ossandón & Alta \\
 \textbf{REQ-NEG-17} & Privacidad de Terceros & Desconectar automáticamente la geolocalización y telemetría de los camiones subcontratados una vez finalizado el viaje asignado (Geofencing temporal), resguardando su privacidad conforme a la Ley N.° 21.719. & Bases Admin. Art. 4.3, Entrevista N. Sandoval & Crítica \\
-\textbf{REQ-NEG-18} & Homologación Plataformas & Ingerir y unificar en una vista de mapa única las posiciones GPS provenientes de las tres plataformas dispares existentes (Wialon, Wisetrack, Webfleet) para los 192 camiones terceros que cuentan con rastreo previo. & Caso 10, Cap. 5, Entrevista P. Kast & Alta \\
+\textbf{REQ-NEG-18} & Homologación Plataformas & Ingerir y unificar en una vista de mapa única las posiciones GPS provenientes de las tres plataformas dispares existentes (proveedores por identificar) para los 192 camiones terceros que cuentan con rastreo previo. & Caso 10, Cap. 5, Entrevista P. Kast & Alta \\
 \textbf{REQ-NEG-19} & Sensorización 34 Camiones & Equipamiento telemático estándar en los 34 camiones de terceros que carecen de GPS, incorporándolos a la vista operacional de la Torre de Control. & Caso 10, Cap. 2.1 y 5, Entrevista E. Valdebenito & Alta \\
-\textbf{REQ-NEG-20} & Resiliencia Desconexión & Garantizar la persistencia y almacenamiento local en memoria industrial a bordo de al menos 288 horas continuas (12 días) de telemetría completa durante cierres climáticos del Paso Los Libertadores. & Caso 10, RT-03.10, Entrevista M. Riquelme & Crítica \\
+\textbf{REQ-NEG-20} & Resiliencia Desconexión & Garantizar la persistencia y almacenamiento local a bordo durante al menos 72 horas sin cobertura celular (RT-03.10), y soportar la retención operativa ante cierres cordilleranos de hasta 288 horas (12 días), cuya arquitectura y dimensionamiento de memoria se resuelven en los subdocumentos de solución técnica. & Caso 10, RT-03.10, Entrevista M. Riquelme & Crítica \\
 \textbf{REQ-NEG-21} & Seguridad en Cabina & Restringir cualquier interacción táctil del chofer con dispositivos en cabina cuando el camión se encuentre en movimiento ($v > 0\text{ km/h}$), canalizando alertas exclusivamente por síntesis vocal pasiva (Ley No Chat). & Ley N.° 21.377, Entrevista Y. Colipán & Crítica \\
 \textbf{REQ-NEG-22} & Alerta Anticipada Fatiga & Calcular la alerta de descanso del Art. 25 bis considerando la distancia y tiempo estimado hacia el próximo punto seguro de detención (berma o servicentro), evitando que la alarma venza en zonas desérticas sin servicios. & Caso 10, Cap. 4.3, Entrevista Y. Colipán & Alta \\
 \textbf{REQ-NEG-23} & Tacógrafo Digital & Habilitar la descarga y custodia criptográfica periódica de los archivos binarios de los tacógrafos digitales, preservando la cadena de custodia probatoria ante requerimientos de la Dirección del Trabajo. & Código del Trabajo Art. 25 bis, Entrevista D. Aguayo & Crítica \\
@@ -69,9 +70,9 @@ El parque de tractocamiones se clasifica de acuerdo con su titularidad jurídica
 
 \begin{tabla}[ancho=completo]{Inventario clasificado de tractocamiones}{2-tractos-clasif}{L{38mm} C{16mm} C{20mm} C{20mm} L{36mm} X}
 \textbf{Segmento de Flota} & \textbf{Cant.} & \textbf{Partic.} & \textbf{Antigüedad} & \textbf{Equipamiento Telemático Actual} & \textbf{Requerimiento de Integración} \\ \midrule
-Flota Propia CAN bus Fábrica & 61 & 16,3\% & 3,2 años & Módulo telemático de fábrica con bus CAN inactivo. Nunca consultado. & Captura pasiva no intrusiva mediante acopladores inductivos sin corte de cableado. \\
-Flota Propia sin Telemetría Fábrica & 87 & 23,3\% & 8,6 años & Sin telemetría de bus de datos. Dispositivos GPS básicos de primera generación. & Instalación de dispositivo telemático estándar con acoplamiento inductivo no invasivo. \\
-Flota Terceros con GPS Previo & 192 & 51,3\% & Variable (4-12 a) & Dispositivos GPS de 3 proveedores comerciales dispares (Wialon, Wisetrack, Webfleet). & Ingesta estandarizada mediante interfaces API/Webhooks en modalidad de intercambio telemático. \\
+Flota Propia CAN bus Fábrica & 61 & 16,3\% & No informada & Módulo telemático de fábrica con bus CAN inactivo. Nunca consultado. & Captura pasiva no invasiva sobre bus CAN sin corte ni seccionamiento de cableado. \\
+Flota Propia sin Telemetría Fábrica & 87 & 23,3\% & No informada & Sin telemetría de bus de datos. Dispositivos GPS básicos de primera generación. & Requerimiento de equipamiento telemático estándar con interfaz no invasiva. \\
+Flota Terceros con GPS Previo & 192 & 51,3\% & Variable (4-12 a) & Dispositivos GPS de 3 proveedores comerciales dispares (proveedores por identificar). & Ingesta estandarizada mediante interfaces API/Webhooks en modalidad de intercambio telemático. \\
 Flota Terceros sin Dispositivo GPS & 34 & 9,1\% & Variable (>10 a) & Cero equipamiento tecnológico. Monitoreo puramente telefónico por voz. & Equipamiento telemático estándar e integración de posicionamiento georreferenciado. \\ \midrule
 \textbf{Total Parque Tractocamiones} & \textbf{374} & \textbf{100,0\%} & \textbf{6,4 años (med)} & \textbf{Parque altamente heterogéneo.} & \textbf{Integración unificada bajo modelo agnóstico de ingesta telemática.} \\
 \end{tabla}
@@ -82,11 +83,9 @@ Curimón es propietaria del 100\% de los 210 semirremolques utilizados en la ope
 
 \begin{tabla}[ancho=completo]{Inventario de semirremolques propios por tipología de carga}{2-semirremolques}{L{42mm} C{16mm} C{20mm} L{40mm} X}
 \textbf{Tipología de Semirremolque} & \textbf{Cant.} & \textbf{\% Arrastre} & \textbf{Operación Principal y Clientes} & \textbf{Instrumental y Requerimiento Específico} \\ \midrule
-Semirremolques Refrigerados (Reefers) & 44 & 21,0\% & Cadena de frío agroexportadora (diciembre-abril) e industria acuícola en Puerto Montt. & Sensorización con sondas Pt100 (-30 °C a +30 °C) y sensor de apertura de puertas. \\
+Semirremolques Refrigerados (Reefers) & 44 & 21,0\% & Cadena de frío agroexportadora (diciembre-abril) e industria acuícola en Puerto Montt. & Requerimiento de control térmico continuo y apertura; parámetros por validar. \\
 Semirremolques Sustancias Peligrosas & 18 & 8,6\% & Transporte químico, combustibles y reactivos mineros (Antofagasta y Concepción). & Certificación bajo D.S. N.° 298/1994, rotulación NCh 2190, extintores y revisión especial. \\
-Ramplas Planas y Furgones Secos & 98 & 46,7\% & Carga general paletizada, materiales industriales, retail y productos de consumo masivo. & Monitoreo de enganche, control de precintos y odometría de eje mediante sensor de rueda. \\
-Tolvas Graneleras & 32 & 15,2\% & Transporte de graneles minerales, áridos y productos agrícolas a granel. & Control de accionamiento hidráulico de volteo y sensor de sobrepeso por eje. \\
-Portacontenedores Portuarios & 18 & 8,5\% & Operación marítimo-portuaria en Valparaíso y San Antonio; contenedores de exportación. & Control de trabas de seguridad (\textit{twistlocks}) e integración documental aduanera. \\ \midrule
+Otras tipologías (rampla plana, furgón seco, tolva y portacontenedores) & 148 & 70,5\% & Distribución por tipología no informada en las bases. & Instrumental específico por definir tras inventario validado. \\
 \textbf{Total Semirremolques Propios} & \textbf{210} & \textbf{100,0\%} & \textbf{Capacidad total de arrastre corporativo.} & \textbf{Flota 100\% de propiedad de Curimón S.A.} \\
 \end{tabla}
 
@@ -130,10 +129,10 @@ Este anexo recopila de forma sistemática las restricciones legales vigentes en 
 
 \begin{tabla}[ancho=completo]{Matriz de restricciones físicas, ambientales y operacionales de la red}{2-rest-fisicas}{C{24mm} L{32mm} X X}
 \textbf{Código} & \textbf{Restricción} & \textbf{Descripción del Límite Físico o Ambiental} & \textbf{Consecuencia en la Arquitectura} \\ \midrule
-\textbf{REST-FIS-01} & Ventana de Intervención & La flota rueda 24/7/365. Los propios pasan por taller cada 6 días, mientras el 22\% de los terceros pasa menos de 1 vez/mes por terminal. & Prohibición de detenciones masivas de flota. Despliegue secuencial de hardware en San Bernardo a razón de 25 camiones/mes. \\
+\textbf{REST-FIS-01} & Ventana de Intervención & La flota rueda 24/7/365. Los camiones pasan por terminal cada 6 días en promedio, mientras el 22\% de los terceros pasa menos de 1 vez/mes por terminal. & Prohibición de detenciones masivas de flota. Despliegue secuencial de hardware en San Bernardo con tasa de instalación por definir según las ventanas del caso y la llegada real de los camiones. \\
 \textbf{REST-FIS-02} & Sombra Celular Prolongada & Tramos de más de 80 kilómetros continuos sin cobertura de red móvil en el Desierto de Atacama (Ruta 5 Norte) y cordillera. & Arquitectura \textit{Offline-First}: persistencia en búfer local vehicular con retransmisión asíncrona determinista. \\
-\textbf{REST-FIS-03} & Cierres Paso Los Libertadores & Cortes climáticos de hasta 12 días continuos (288 horas) por nieve y viento blanco en alta montaña (> 3.200 msnm). & Hardware embarcado dotado de memoria flash industrial $\ge 8{,}0\text{ GB}$, capaz de retener $> 288\text{ h}$ de telemetría completa. \\
-\textbf{REST-FIS-04} & Condiciones Térmicas y Vibratorias & Temperaturas extremas de cabina entre -20 °C y +70 °C y vibración severa continua en caminos pavimentados y no pavimentados. & Hardware certificado obligatoriamente bajo norma industrial SAE J1455 con sellado ambiental grado IP67. \\
+\textbf{REST-FIS-03} & Cierres Paso Los Libertadores & Cortes climáticos de hasta 12 días continuos (288 horas) por nieve y viento blanco en alta montaña (> 3.200 msnm). & Mínimo normativo de 72 h sin cobertura (RT-03.10). Condición extrema de terreno: hasta 12 días de detención en alta cordillera, requiriendo capacidad de persistencia local que evite pérdida de registros antes del vaciado telemático. \\
+\textbf{REST-FIS-04} & Condiciones Térmicas y Vibratorias & Rango de homologación propuesto de -20 °C a +70 °C, por validar frente a mediciones reales de cabina y vibración severa continua en caminos pavimentados y no pavimentados. & Propuesta de homologación ambiental SAE J1455 e IP67; rangos térmicos y ensayos por validar frente al entorno real. \\
 \textbf{REST-FIS-05} & Infraestructura Servidores Matriz & Sala de servidores en San Bernardo de 26 m², split doméstico y UPS 20 min, incumpliendo requerimientos RT-06.01 a RT-06.09. & Descarte de infraestructura central transaccional \textit{on-premise}; emplazamiento en nube pública resiliente (Azure Multi-AZ). \\
 \textbf{REST-FIS-06} & Puntos de Clientes Ajenos (~1.400) & Recintos privados de terceros donde está estrictamente prohibido instalar infraestructura física, antenas o sensores de Curimón. & Trazabilidad basada exclusivamente en geocercas satelitales virtuales poligonales y telemetría propia del camión. \\
 \end{tabla}
@@ -155,125 +154,201 @@ Este anexo recopila de forma sistemática las restricciones legales vigentes en 
 \section*{Anexo 2.D: Fichas detalladas de caracterización de los trece (13) actores del ecosistema}\label{sec:2-anexo-2d}
 \addcontentsline{toc}{section}{Anexo 2.D: Fichas detalladas de caracterización de los trece (13) actores del ecosistema}
 
-A continuación se presentan las fichas completas de caracterización de los trece grupos de interés, integrando los tres actores omitidos en informes previos (Fondo de Inversión, Dirección del Trabajo y Aseguradora de Carga y Flota) y profundizando en las dependencias y riesgos de cada uno.
+A continuación se presentan las fichas completas de caracterización de los trece grupos de interés, integrando los tres actores de gobierno, fiscalización y aseguramiento (Fondo de Inversión, Dirección del Trabajo y Aseguradora de Carga y Flota) y profundizando en las dependencias y riesgos de cada uno.
 
-\subsection*{Ficha N.° 01: Fondo de Inversión Institucional (Accionista Minoritario 22\%)}
+\subsection*{FICHA N.° 01: Fondo de Inversión Institucional (Accionista Minoritario)}
 \begin{itemize}
-  \item \textbf{Identificación:} Fondo de inversión institucional que adquirió el 22\% accionario en 2019. Posee asiento formal en Directorio.
-  \item \textbf{Objetivos Estratégicos:} Maximización del retorno sobre el capital invertido (ROIC), resguardo del margen EBITDA, saneamiento de contratos deficitarios y mitigación de pasivos contingentes laborales.
-  \item \textbf{Dolores Operacionales:} Margen comprimido al 9,0\%, 3 contratos principales bajo costo (-14\%) y contingencias laborales por Ley N.° 20.123.
-  \item \textbf{Testimonio en Directorio:} \textit{«Exigimos auditoría de costos en tiempo real y gobernanza técnica certificada para proteger el valor de la compañía».}
-  \item \textbf{Poder / Veto e Interés:} Poder Máximo en Directorio. Cuadrante 2: Mantener Satisfecho (Gobernanza y Retorno).
-  \item \textbf{Mecanismo de Mitigación:} Reportabilidad mensual de indicadores consolidados de rentabilidad marginal por cliente y auditoría de riesgos bajo ISO 27001 e ISO 9001.
+\item \textbf{Identificación y Emplazamiento:} Representa al fondo de inversión institucional que adquirió el \textbf{22\% de la propiedad accionaria} de Transportes Curimón S.A. en el año 2019. Posee representación formal en el Directorio corporativo.
+\item \textbf{Objetivos Estratégicos:} Maximización del retorno sobre el capital invertido (ROIC), resguardo del margen EBITDA, saneamiento de contratos deficitarios, erradicación de pasivos contingentes laborales y aseguramiento de un gobierno corporativo robusto para una eventual salida estratégica o refinanciamiento.
+\item \textbf{Dolores operacionales:} Deterioro del margen operacional (comprimido al 9,0\%), existencia de 3 contratos principales bajo costo (-14\%), ceguera frente a pasivos laborales contingentes derivados del régimen de subcontratación (Ley N.° 20.123) y amenaza de pérdida del cliente principal (19\% de la facturación corporativa).
+\item \textbf{Dependencias y Necesidades de Información:} Requiere tableros analíticos consolidados de EBITDA por unidad de negocio, auditoría de costos marginales por viaje, reportabilidad de cumplimiento normativo y reducción sistemática de riesgos operacionales.
+\item \textbf{Poder Formal / Veto:} \textbf{Máximo (en Directorio).} Capacidad de condicionar aumentos de capital, vetar inversiones y exigir auditorías forenses externas.
+\item \textbf{Nivel de Interés:} \textbf{Bajo en la contingencia diaria / Muy Alto en la estabilidad estratégica corporativa.}
+\item \textbf{Cuadrante de Gestión:} \textbf{Cuadrante 2: Mantener Satisfecho (Gobernanza y Retorno).}
+\item \textbf{Riesgo Operacional si no se Resuelve:} Bloqueo de presupuesto corporativo, desalineamiento de accionistas y retiro de respaldo financiero para el plan de renovación de flota.
+\item \textbf{Mecanismo de Interacción y Mitigación de Fricción:} Presentación mensual de indicadores consolidados de rentabilidad marginal por cliente y matriz de reducción de pasivos contingentes auditados bajo normas ISO 27001 e ISO 9001.
+\end{itemize}
+\subsection*{FICHA N.° 02: Dirección del Trabajo (DT — Autoridad Laboral Fiscalizadora)}
+\begin{itemize}
+\item \textbf{Identificación y Emplazamiento:} Órgano fiscalizador del Estado de Chile dependiente del Ministerio del Trabajo y Previsión Social. Ejerce inspecciones laborales en terreno, terminales viales y carretera.
+\item \textbf{Objetivos Estratégicos:} Tutela y fiscalización del cumplimiento estricto de la legislación laboral chilena, con especial énfasis en el régimen de jornada especial y descansos de los choferes de carga interurbana consagrados en el Artículo 25 bis del Código del Trabajo y la Ley N.° 20.123.
+\item \textbf{Dolores Operacionales e Infraccionales:} Cero descargas históricas de tacógrafos digitales en Curimón, ceguera institucional respecto a la jornada previa de los 258 choferes subcontratados, manipulación de libros de asistencia en papel y ocurrencia de siniestros graves en carretera vinculados a fatiga extrema (ej. volcamiento en km 312).
+\item \textbf{Dependencias y Necesidades de Información:} Requiere registros electrónicos de asistencia y conducción auditables, con cadena de custodia inalterable, marcas de tiempo exactas y disponibilidad inmediata ante requerimiento de inspectores en cualquier terminal de la red.
+\item \textbf{Poder Formal / Veto:} \textbf{Extremo (Potestad Pública Sancionatoria y de Clausura).} Capacidad legal de paralizar despachos, aplicar multas gravísimas y remitir antecedentes a tribunales de cobranza laboral y previsional.
+\item \textbf{Nivel de Interés:} \textbf{Bajo en la logística diaria / Crítico ante fiscalizaciones e incidentes viales.}
+\item \textbf{Cuadrante de Gestión:} \textbf{Cuadrante 2: Mantener Satisfecho (Cumplimiento Legal Invariable).}
+\item \textbf{Riesgo Operacional si no se Resuelve:} Paralización legal de terminales de Curimón, multas reiteradas por infracciones gravísimas y pérdida de la calidad de empleador habilitado para contratar con el Estado o grandes mandantes.
+\item \textbf{Mecanismo de Interacción y Mitigación de Fricción:} Implementación de registro electrónico de jornada inalterable con sellado cronológico y descarga periódica certificada de tacógrafos digitales.
+\end{itemize}
+\subsection*{FICHA N.° 03: Compañías Aseguradoras de Carga y Flota}
+\begin{itemize}
+\item \textbf{Identificación y Emplazamiento:} Entidades financieras aseguradoras nacionales e internacionales que suscriben las pólizas de Responsabilidad Civil (RC), daños a la carga perecible (cadena de frío), transporte de sustancias peligrosas y casco de tractocamiones de Curimón.
+\item \textbf{Objetivos Estratégicos:} Determinación precisa del riesgo asegurable, verificación estricta de condiciones de operabilidad previa a liquidar siniestros, exigencia de debida diligencia patronal y rechazo de coberturas ante negligencia inexcusable o transgresión de normas legales de tránsito y jornada.
+\item \textbf{Dolores Operacionales y de Siniestralidad:} Ocurrencia de cuatro siniestros con lesiones en los últimos tres años, uno de ellos grave, falta de telemetría de temperatura histórica ininterrumpida ante reclamos de quiebre de frío en las 44 ramplas refrigeradas, y ausencia de medios probatorios de velocidad en camiones de terceros al momento de volcamientos.
+\item \textbf{Dependencias y Necesidades de Información:} Necesita evidencia histórica de temperatura, velocidad y odometría, además de revisiones técnicas y mantenciones vigentes. El rango de medición y la frecuencia de muestreo son decisiones de diseño que deben justificarse en S3/S4.
+\item \textbf{Poder Formal / Veto:} \textbf{Alto (Capacidad de Denegación de Cobertura y Elevación de Primas).} Capacidad de no indemnizar siniestros millonarios y elevar las primas comerciales hasta hacer inviable la operación.
+\item \textbf{Nivel de Interés:} \textbf{Bajo en la operación rutinaria / Crítico ante la ocurrencia de siniestros.}
+\item \textbf{Cuadrante de Gestión:} \textbf{Cuadrante 2: Mantener Satisfecho (Mitigación Probatoria de Riesgo).}
+\item \textbf{Riesgo Operacional si no se Resuelve:} Pérdidas patrimoniales catastróficas no cubiertas por seguros ante volcamientos o descomposición de cargas de alto valor en ruta.
+\item \textbf{Mecanismo de Interacción y Mitigación de Fricción:} Sensorización Pt100 certificada en las 44 ramplas de frío, registro circular local inalterable de telemetría cinemática y emisión de certificados de viaje seguros.
+\end{itemize}
+\subsection*{FICHA N.° 04: Directorio y Familia Fundadora (78\% de la Propiedad)}
+\begin{itemize}
+\item \textbf{Identificación y Emplazamiento:} Representa a la segunda generación familiar fundadora de Transportes Curimón S.A., controladora del 78\% del capital social de la compañía cerrada.
+\item \textbf{Objetivos Estratégicos:} Continuidad histórica de la empresa familiar, preservación del patrimonio corporativo, mantenimiento de relaciones comerciales de largo plazo y defensa de la reputación de la marca Curimón construida durante décadas.
+\item \textbf{Dolores Operacionales:} Sentimiento de pérdida de control sobre la operación, amenaza existencial por la posible no renovación del contrato del 19\% en 2029, daño a la reputación corporativa por accidentes de carretera y fricción con los socios del fondo de inversión por la baja rentabilidad (9,0\%).
+\item \textbf{Dependencias y Necesidades de Información:} Informes de desempeño global, estado de mitigación de la brecha 2029 y preservación de la solvencia patrimonial.
+\item \textbf{Poder Formal / Veto:} \textbf{Máximo (Societario y de Control Estratégico).}
+\item \textbf{Nivel de Interés:} \textbf{Medio en el detalle técnico / Máximo en la viabilidad y reputación corporativa.}
+\item \textbf{Cuadrante de Gestión:} \textbf{Cuadrante 2: Mantener Satisfecho (Alineamiento Patrimonial y Reputacional).}
+\item \textbf{Riesgo Operacional si no se Resuelve:} Riesgo de reestructuración de la administración y pérdida de foco del negocio ante obligaciones laborales o regulatorias no controladas.
+\item \textbf{Mecanismo de Interacción y Mitigación de Fricción:} Reportes trimestrales de avance en la erradicación de brechas normativas y cumplimiento del pliego licitado.
+\end{itemize}
+\subsection*{FICHA N.° 05: Enrique Valdebenito Rioseco — Gerente General (21 años en Curimón)}
+\begin{itemize}
+\item \textbf{Identificación y Emplazamiento:} Máxima autoridad ejecutiva y representante legal de Transportes Curimón S.A. Conduce la compañía reportando directamente al Directorio.
+\item \textbf{Objetivos Estratégicos:} Asegurar la viabilidad integral de la empresa, equilibrar la relación entre transportistas independientes y clientes corporativos, erradicar la exposición penal personal por accidentes en carretera y liderar la modernización operacional hacia 2029.
+\item \textbf{Dolores Operacionales:} La fractura insostenible entre la responsabilidad civil y penal total que asume como representante legal y el control nulo sobre los activos y choferes externos; temor fundado a que la imposición de tecnología provoque la fuga de los 148 transportistas terceros.
+\item \textbf{Dependencias y Necesidades de Información:} Requiere un modelo de adopción viable, basado en incentivos compartidos y métricas de riesgo consolidadas en tiempo real.
+\item \textbf{Poder Formal / Veto:} \textbf{Máximo (Liderazgo Ejecutivo y Adjudicador de Licitación).}
+\item \textbf{Nivel de Interés:} \textbf{Máximo en la totalidad de las dimensiones del proyecto.}
+\item \textbf{Cuadrante de Gestión:} \textbf{Cuadrante 1: Gestionar de Cerca (Socio Estratégico Principal).}
+\item \textbf{Riesgo Operacional si no se Resuelve:} Parálisis operacional por conflicto con la red de transportistas subcontratados o pérdida del 19\% de ingresos corporativos.
+\item \textbf{Mecanismo de Interacción y Mitigación de Fricción:} Modelo de gobernanza colaborativo con terceros, portal de liquidación transparente e integración estandarizada para las 34 unidades sin GPS.
+\end{itemize}
+\subsection*{FICHA N.° 06: Ricardo Mansilla Oyarzo — Gerente de Operaciones y Despacho}
+\begin{itemize}
+\item \textbf{Identificación y Emplazamiento:} Responsable de la Torre de Programación de San Bernardo y del cumplimiento diario de los 96.000 viajes anuales con una dotación de 22 despachadores en turnos 24x7x365.
+\item \textbf{Objetivos Estratégicos:} Cumplimiento estricto de itinerarios de clientes, reducción sistemática del 26\% de kilómetros en vacío, asignación eficiente de la flota mixta y erradicación de errores humanos en el despacho.
+\item \textbf{Dolores Operacionales:} Coordinar despachos a ciegas mirando tres pantallas GPS incompatibles; desconocimiento de la jornada previa de conductores externos; 34 camiones gestionados exclusivamente por teléfono; y el temor permanente a que un sistema excesivamente rígido paralice los despachos diarios.
+\item \textbf{Dependencias y Necesidades de Información:} Visualización unificada de posición GPS, algoritmo de asignación con validación bloqueante pre-despacho (< 30 s) y motor heurístico para triangular cargas de retorno.
+\item \textbf{Poder Formal / Veto:} \textbf{Alto (Capacidad de rechazo operativo de herramientas complejas).}
+\item \textbf{Nivel de Interés:} \textbf{Máximo (Opera las 24 horas del día).}
+\item \textbf{Cuadrante de Gestión:} \textbf{Cuadrante 1: Gestionar de Cerca (Usuario Operativo Crítico).}
+\item \textbf{Riesgo Operacional si no se Resuelve:} Persistencia del 26\% de kilómetros en vacío, sobreutilización de conductores y riesgo continuo de detenciones en ruta.
+\item \textbf{Mecanismo de Interacción y Mitigación de Fricción:} Torre de control unificada con validación automática en memoria Redis y protocolo claro de escalamiento excepcional.
+\end{itemize}
+\subsection*{FICHA N.° 07: Gabriela Ossandón Prieto — Gerenta de Administración y Finanzas (Ene-26)}
+\begin{itemize}
+\item \textbf{Identificación y Emplazamiento:} Líder del área financiera y contable, incorporada recientemente para sanear los márgenes corporativos y profesionalizar la gestión de costos.
+\item \textbf{Objetivos Estratégicos:} Recuperación del margen operacional corporativo (por sobre el 9,0\%), erradicación de subsidios cruzados en contratos, costeo marginal analítico por viaje y aceleración del ciclo de liquidación a transportistas.
+\item \textbf{Dolores Operacionales:} Ceguera financiera estructural provocada por el prorrateo de costos por ingresos; tres contratos deficitarios y uno a -14\% durante cuatro años; rezago de 40 días en la facturación de diésel; y un proceso de liquidación manual mensual a 148 dueños que toma 9 días a 8 personas con un 11\% de notas de corrección.
+\item \textbf{Dependencias y Necesidades de Información:} Conciliación diaria (< 24 h) de combustible, peajes de autopista y fletes por orden de transporte; telemetría de consumo directo por CAN bus; e integración contable con ERP.
+\item \textbf{Poder Formal / Veto:} \textbf{Alto (Control de caja, inversiones y autorizaciones de pago).}
+\item \textbf{Nivel de Interés:} \textbf{Alto (Orientado al margen operacional).}
+\item \textbf{Cuadrante de Gestión:} \textbf{Cuadrante 1: Gestionar de Cerca (Custodia de la Rentabilidad).}
+\item \textbf{Riesgo Operacional si no se Resuelve:} Colapso de liquidez corporativa por persistencia de contratos bajo costo y deterioro de relaciones con transportistas subcontratados.
+\item \textbf{Mecanismo de Interacción y Mitigación de Fricción:} Módulo de costeo analítico por kilómetro y tonelada habilitado en el Mes 9 (Etapa 1) para respaldar la renegociación contractual de 2027.
+\end{itemize}
+\subsection*{FICHA N.° 08: Hugo Trincado Bahamonde — Jefe de Taller y Mantenimiento}
+\begin{itemize}
+\item \textbf{Identificación y Emplazamiento:} Responsable del mantenimiento preventivo y correctivo de los 148 tractocamiones y 210 semirremolques propios en los talleres de San Bernardo y Los Ángeles, liderando un equipo de 46 mecánicos y técnicos.
+\item \textbf{Objetivos Estratégicos:} Maximización de la disponibilidad mecánica de los activos propios, transición desde un modelo reactivo hacia mantenimiento predictivo basado en uso real, y reducción de fallas catastróficas en carretera.
+\item \textbf{Dolores Operacionales:} Mantenimiento preventivo fundamentado en "adivinanza informada" por lectura visual manual de odómetros; 61 tractocamiones propios con módulos CAN bus de fábrica inactivos desde su compra; y reparaciones de emergencia en ruta efectuadas por talleres externos que no quedan registradas en la hoja de vida técnica del camión.
+\item \textbf{Dependencias y Necesidades de Información:} Odometría telemática remota en tiempo real, captura de códigos de falla de motor (DTCs) por CAN bus J1939 y formulario ligero para registro de talleres externos.
+\item \textbf{Poder Formal / Veto:} \textbf{Medio-Alto (Logística y disponibilidad de bahías de taller).}
+\item \textbf{Nivel de Interés:} \textbf{Medio-Alto (Orientado a la confiabilidad mecánica).}
+\item \textbf{Cuadrante de Gestión:} \textbf{Cuadrante 3: Monitorear y Coordinar (Soporte Técnico de Despliegue).}
+\item \textbf{Riesgo Operacional si no se Resuelve:} Fallas de motor masivas en carretera, sobrecostos de reparación reactiva y desgaste acelerado de flota propia.
+\item \textbf{Mecanismo de Interacción y Mitigación de Fricción:} Protocolo de captura no invasiva que preserve las garantías del fabricante y no altere el cableado de fábrica, coordinado en taller San Bernardo según la cadencia regular de pasos por terminal cada 6 días en promedio.
+\end{itemize}
+\subsection*{FICHA N.° 09: Denisse Aguayo Lillo — Jefa de Prevención de Riesgos y Seguridad}
+\begin{itemize}
+\item \textbf{Identificación y Emplazamiento:} Responsable del cumplimiento normativo en seguridad vial, salud ocupacional y transporte de sustancias peligrosas (SUSPEL) para toda la red de Curimón.
+\item \textbf{Objetivos Estratégicos:} Cero fatalidades en ruta, cumplimiento del 100\% de los descansos del Art. 25 bis, control estricto de las 18 unidades SUSPEL bajo D.S. N.° 298 y erradicación de retenciones viales por sobrepeso (D.S. N.° 158).
+\item \textbf{Dolores Operacionales:} Responsabilidad legal personal ante fiscalizaciones por accidentes de 258 conductores externos sobre los cuales no tiene visibilidad previa; gestión manual de ~6.000 fechas vivas de vencimiento en 4 planillas Excel; y antecedentes de inmovilizaciones de camiones químicos por cursos vencidos.
+\item \textbf{Dependencias y Necesidades de Información:} Repositorio centralizado de vigencias con alertamiento escalonado (60, 30 y 7 días), bloqueo vinculante pre-despacho y trazabilidad de jornada del conductor.
+\item \textbf{Poder Formal / Veto:} \textbf{Alto (Potestad legal y reglamentaria de veto de despachos).}
+\item \textbf{Nivel de Interés:} \textbf{Máximo (Enfocado en la seguridad y cumplimiento legal).}
+\item \textbf{Cuadrante de Gestión:} \textbf{Cuadrante 1: Gestionar de Cerca (Gobernanza de Seguridad).}
+\item \textbf{Riesgo Operacional si no se Resuelve:} Siniestros fatales en ruta, clausura de faenas por la Dirección del Trabajo y querellas penales contra la plana ejecutiva.
+\item \textbf{Mecanismo de Interacción y Mitigación de Fricción:} Bloqueo algorítmico pre-despacho intransigible y alertas escalonadas de caducidad documental.
+\end{itemize}
+\subsection*{FICHA N.° 10: Marcelo Riquelme Ibáñez y Patricio Kast Fuentealba — Jefaturas de TI y Control de Flota}
+\begin{itemize}
+\item \textbf{Identificación y Emplazamiento:} Responsables de los sistemas informáticos, infraestructura de comunicaciones y monitoreo satelital de la flota en la sala central de San Bernardo, con una dotación total de 9 analistas de TI y 6 operadores de monitoreo.
+\item \textbf{Objetivos Estratégicos:} Garantizar la continuidad de servicios informáticos, consolidar las 3 plataformas GPS en una vista cartográfica unificada, mantener la interoperabilidad con el legado TMS 2013 y soportar la resiliencia en zonas de sombra celular.
+\item \textbf{Dolores Operacionales:} Monitorear 340 tractocamiones en tres sistemas comerciales que no conversan entre sí; 34 camiones fantasmas sin ningún GPS; zonas de desconexión celular de más de 80 kilómetros; y una sala de servidores de 26 m² precaria que incumple los estándares de misión crítica (RT-06).
+\item \textbf{Dependencias y Necesidades de Información:} Infraestructura tecnológica escalable desacoplada de la sala local, interfaces de integración progresiva con el TMS 2013 y conectores API unificados.
+\item \textbf{Poder Formal / Veto:} \textbf{Alto (Viabilidad técnica y absorción de integraciones).}
+\item \textbf{Nivel de Interés:} \textbf{Alto (Orientado a la estabilidad informática).}
+\item \textbf{Cuadrante de Gestión:} \textbf{Cuadrante 3: Monitorear y Coordinar (Soporte de Arquitectura).}
+\item \textbf{Riesgo Operacional si no se Resuelve:} Colapso de servidores locales ante fallas eléctricas, pérdida de datos por sombras de red y fragmentación de la información de tráfico.
+\item \textbf{Mecanismo de Interacción y Mitigación de Fricción:} Modernización de la infraestructura transaccional de misión crítica y coexistencia gradual no disruptiva con el TMS 2013.
+\end{itemize}
+\subsection*{FICHA N.° 11: Yasna Colipán Marín y Colectivo de Conductores Propios (196 Choferes)}
+\begin{itemize}
+\item \textbf{Identificación y Emplazamiento:} Representa al colectivo de 196 conductores con contrato indefinido de Curimón, quienes tripulan la flota propia en rutas troncales norte y sur.
+\item \textbf{Objetivos Estratégicos:} Seguridad vial y personal en carretera, respeto efectivo de los descansos del Art. 25 bis, transparencia en el registro de horas de servicio, reconocimiento de las esperas en clientes y no ser forzados a interactuar con dispositivos mientras conducen.
+\item \textbf{Dolores Operacionales:} Alertas de fin de jornada que se disparan en tramos desérticos o cordilleranos donde no existen bermas ni estaciones de servicio seguras; esperas abusivas en clientes (> 8 horas) que degradan el descanso y no son computadas objetivamente; y resplandor o distracciones en cabina.
+\item \textbf{Dependencias y Necesidades de Información:} Alerta sonora pasiva de fin de jornada contextualizada con paraderos seguros en ruta y captura automática de tiempos de espera sin manipulación manual.
+\item \textbf{Poder Formal / Veto:} \textbf{Alto de facto (Rechazo operacional y seguridad de conducción).}
+\item \textbf{Nivel de Interés:} \textbf{Alto (Afecta su bienestar, remuneración y seguridad física).}
+\item \textbf{Cuadrante de Gestión:} \textbf{Cuadrante 4: Mantener Informado y Asegurar Adhesión.}
+\item \textbf{Riesgo Operacional si no se Resuelve:} Fatiga extrema en ruta, vuelcos con lesiones o muerte, paralización gremial y multas de la Dirección del Trabajo.
+\item \textbf{Mecanismo de Interacción y Mitigación de Fricción:} Cumplimiento de la Ley No Chat (síntesis de voz fuera de línea sin pantallas activas) y alertas dinámicas calculadas hacia áreas seguras de detención.
+\end{itemize}
+\subsection*{FICHA N.° 12: Nolberto Sandoval Pinto y Colectivo de Transportistas Subcontratados (148 Dueños)}
+\begin{itemize}
+\item \textbf{Identificación y Emplazamiento:} Representa a los 148 pequeños y medianos transportistas subcontratados (dueños de 1 a 4 camiones), quienes aportan 226 tractocamiones (60,4\% de la capacidad rodante) y 258 conductores externos.
+\item \textbf{Objetivos Estratégicos:} Preservación de la autonomía sobre su activo patrimonial de alto valor por tractocamión, cobro oportuno y transparente de fletes y sobreestadías, certeza en pre-liquidaciones mensuales y protección de su información comercial frente a otros clientes.
+\item \textbf{Dolores Operacionales:} Invasión de su privacidad cuando se pretende monitorearlos fuera de los viajes de Curimón; liquidaciones manuales que tardan 9 días con un 11\% de errores; cobros indebidos de combustible; y temor a que la instalación de dispositivos telemáticos sea un mecanismo de vigilancia patronal sin compensación.
+\item \textbf{Dependencias y Necesidades de Información:} Portal de autogestión de pre-liquidaciones, transparencia en cargos de diésel por viaje y garantía estricta de desconexión de telemetría fuera de servicio (Ley N.° 21.719).
+\item \textbf{Poder Formal / Veto:} \textbf{Muy Alto colectivo (Pueden desabastecer el 60,4\% de la flota de Curimón).}
+\item \textbf{Nivel de Interés:} \textbf{Alto (Afecta directamente el flujo de caja de sus microempresas).}
+\item \textbf{Cuadrante de Gestión:} \textbf{Cuadrante 4: Asegurar Adhesión e Incentivo Compartido.}
+\item \textbf{Riesgo Operacional si no se Resuelve:} Fuga masiva de camiones hacia empresas competidoras, desabastecimiento de flota y colapso de la operación de Curimón.
+\item \textbf{Mecanismo de Interacción y Mitigación de Fricción:} Geocercas temporales que respetan la privacidad, equipamiento estandarizado para los 34 camiones sin GPS, y aceleración de liquidaciones a 48 horas tras viaje conforme.
+\end{itemize}
+\subsection*{FICHA N.° 13: Andrea Lecaros Vives y Grandes Clientes Estratégicos (Cliente 19\% y Otros 7)}
+\begin{itemize}
+\item \textbf{Identificación y Emplazamiento:} Gerenta de Logística de la multinacional agroexportadora líder (representa el 19\% del ingreso corporativo de Curimón) y portavoz del grupo de los 8 clientes principales que concentran el 71\% de la facturación.
+\item \textbf{Objetivos Estratégicos:} Visibilidad completa de su cadena de suministro de exportación, aseguramiento estricto de la cadena de frío para mercados de Norteamérica, Europa y Asia, descarbonización logística auditada bajo estándares globales y cero exposición a escándalos por trabajo ilegal de choferes en su cadena de valor.
+\item \textbf{Dolores Operacionales:} Incapacidad de Curimón para proveer seguimiento en tiempo real unificado; soporte de entrega en guías físicas manchadas o demoradas; imposibilidad de auditar la huella de carbono de los camiones de terceros; y el riesgo reputacional de que un embarque de exportación sea detenido por choferes sin jornada legal.
+\item \textbf{Dependencias y Necesidades de Información:} APIs directas de ingesta logística, portal B2B de seguimiento satelital de temperatura y carga, emisión de e-Docs sin papel y reportería mensual auditada de gases de efecto invernadero bajo norma GLEC / ISO 14083:2023.
+\item \textbf{Poder Formal / Veto:} \textbf{Extremo (Comercial y Contractual).} La posible no renovación del contrato en 2029 expone a Curimón a perder una parte relevante de sus ingresos; su efecto neto debe cuantificarse.
+\item \textbf{Nivel de Interés:} \textbf{Máximo (Condiciona su propia operación logística de exportación).}
+\item \textbf{Cuadrante de Gestión:} \textbf{Cuadrante 1: Gestionar de Cerca (Supervivencia del Negocio).}
+\item \textbf{Riesgo Operacional si no se Resuelve:} Riesgo de pérdida del cliente principal, que representa el 19\% de la facturación anual. El efecto sobre el resultado y la solvencia requiere cuantificar los costos evitables y la contribución del contrato.
+\item \textbf{Mecanismo de Interacción y Mitigación de Fricción:} Entrega de portal cliente en tiempo real, integración documental e-Docs en Etapa 1 y motor de cálculo de emisiones GLEC basado en datos reales de telemetría CAN bus.
 \end{itemize}
 
-\subsection*{Ficha N.° 02: Dirección del Trabajo (DT --- Autoridad Laboral Fiscalizadora)}
-\begin{itemize}
-  \item \textbf{Identificación:} Órgano fiscalizador del Estado de Chile dependiente del Ministerio del Trabajo y Previsión Social.
-  \item \textbf{Objetivos Estratégicos:} Fiscalización del cumplimiento estricto del régimen de jornada especial y descansos (Art. 25 bis y Ley N.° 20.123).
-  \item \textbf{Dolores Operacionales:} Cero descargas históricas de tacógrafos digitales en Curimón, ceguera respecto a jornada previa de terceros y siniestros por fatiga.
-  \item \textbf{Testimonio en Fiscalización:} \textit{«Si no exhiben registros electrónicos automatizados e inalterables en la fiscalización, aplicaremos las multas máximas y clausura temporal».}
-  \item \textbf{Poder / Veto e Interés:} Extremo (Potestad Pública Sancionatoria). Cuadrante 2: Mantener Satisfecho (Cumplimiento Legal Invariable).
-  \item \textbf{Mecanismo de Mitigación:} Registro electrónico de jornada inalterable con sellado cronológico y descarga periódica certificada de tacógrafos digitales.
-\end{itemize}
+\clearpage
 
-\subsection*{Ficha N.° 03: Compañías Aseguradoras de Carga y Flota}
-\begin{itemize}
-  \item \textbf{Identificación:} Entidades financieras aseguradoras que suscriben las pólizas de Responsabilidad Civil, carga perecible, SUSPEL y casco de tractocamiones.
-  \item \textbf{Objetivos Estratégicos:} Determinación precisa del riesgo asegurable, exigencia de debida diligencia patronal y rechazo de coberturas ante negligencia inexcusable.
-  \item \textbf{Dolores Operacionales:} 4 siniestros graves en 3 años, falta de telemetría continua de temperatura en reefers y ausencia de medios probatorios cinemáticos.
-  \item \textbf{Testimonio de Ajustador:} \textit{«Si hay baches de temperatura en frío o el chofer manejó más de cinco horas, la cobertura caduca por negligencia patronal».}
-  \item \textbf{Poder / Veto e Interés:} Alto (Denegación de Cobertura y Elevación de Primas). Cuadrante 2: Mantener Satisfecho (Mitigación Probatoria de Riesgo).
-  \item \textbf{Mecanismo de Mitigación:} Sensorización Pt100 certificada en 44 ramplas de frío y registro circular local inalterable de telemetría cinemática a bordo.
-\end{itemize}
+% ============================================================================
+%  ANEXO 2.E
+% ============================================================================
+\section*{Anexo 2.E: Registro integral de supuestos y resolución de las veintiséis (26) decisiones de diseño del Caso §16.1}\label{sec:2-anexo-2e}
+\addcontentsline{toc}{section}{Anexo 2.E: Registro integral de supuestos y resolución de las 26 decisiones de diseño (Caso §16.1)}
 
-\subsection*{Ficha N.° 04: Directorio y Familia Fundadora (78\% de la Propiedad)}
-\begin{itemize}
-  \item \textbf{Identificación:} Segunda generación familiar fundadora de Transportes Curimón S.A., controladora del 78\% del capital social.
-  \item \textbf{Objetivos Estratégicos:} Continuidad histórica de la empresa, preservación del patrimonio familiar y defensa de la reputación de la marca Curimón.
-  \item \textbf{Dolores Operacionales:} Pérdida de control operacional, amenaza por posible no renovación del contrato 19\% en 2029 y fricción con socios del fondo.
-  \item \textbf{Testimonio Accionista:} \textit{«Queremos que la empresa sea viable para la tercera generación recuperando el control real en ruta».}
-  \item \textbf{Poder / Veto e Interés:} Máximo Societario. Cuadrante 2: Mantener Satisfecho (Alineamiento Patrimonial y Reputacional).
-  \item \textbf{Mecanismo de Mitigación:} Reportes trimestrales de avance en la erradicación de brechas normativas y cumplimiento del pliego licitado.
-\end{itemize}
+En cumplimiento estricto de los Capítulos 16 (numeral 16.1) y 17 (numeral 17.1) de las Bases Técnicas del Caso 10, audIT no posterga ni resuelve por omisión ninguna de las veintiséis (26) decisiones de diseño no resueltas por el mandante. En la \tabref{2-decisiones-diseno} se formaliza el registro exhaustivo de cada decisión, consignando la interrogante original del caso, la hipótesis o decisión adoptada por audIT, su fundamento técnico-operacional, el impacto sistémico si dicha hipótesis resultara equivocada, y la instancia reglamentaria de validación con el mandante. Se otorga especial tratamiento a la jornada de conductores externos (Decisión 1), el modelo de incentivo y adhesión de los 148 transportistas subcontratados (Decisión 2) y el ritmo físico de despliegue a bordo (Decisión 25).
 
-\subsection*{Ficha N.° 05: Gerencia General (María Teresa González)}
-\begin{itemize}
-  \item \textbf{Identificación:} Máxima autoridad ejecutiva de Curimón S.A., responsable ante el Directorio del desempeño financiero y operativo integral.
-  \item \textbf{Objetivos Estratégicos:} Rentabilizar la operación, resolver la brecha tecnológica 2029 del cliente 19\% y asegurar un clima laboral estable.
-  \item \textbf{Dolores Operacionales:} Asimetría de información entre operaciones y finanzas, falta de visibilidad en tiempo real de la flota y dependencia de despachos informales.
-  \item \textbf{Poder / Veto e Interés:} Máximo Ejecutivo. Cuadrante 1: Gestionar Atentamente (Sponsor Principal del Proyecto).
-  \item \textbf{Mecanismo de Mitigación:} Cuadro de mando integral en tiempo real con indicadores operacionales, financieros y de cumplimiento regulatorio.
-\end{itemize}
-
-\subsection*{Ficha N.° 06: Gerencia de Operaciones (Roberto Mansilla)}
-\begin{itemize}
-  \item \textbf{Identificación:} Responsable directo de la programación, despacho, seguimiento y cumplimiento de los itinerarios de los 374 camiones.
-  \item \textbf{Objetivos Estratégicos:} Maximización de utilización de flota, reducción de los 10,66M de km en vacío y cumplimiento de ventanas horarias de clientes.
-  \item \textbf{Dolores Operacionales:} Fricción continua con choferes por asignaciones manuales, falta de trazabilidad en los 226 camiones de terceros y desbalance de carga.
-  \item \textbf{Poder / Veto e Interés:} Alto Ejecutivo Operacional. Cuadrante 1: Gestionar Atentamente (Usuario Líder de la Solución).
-  \item \textbf{Mecanismo de Mitigación:} Módulo automatizado de despacho con optimización de retorno en vacío y visibilidad integral de flota en mapa único.
-\end{itemize}
-
-\subsection*{Ficha N.° 07: Jefatura de Prevención de Riesgos (Denise Aguayo)}
-\begin{itemize}
-  \item \textbf{Identificación:} Encargada de la seguridad laboral, fiscalización de jornadas, cumplimiento de D.S. 298 (SUSPEL) y vigencia documental de la flota.
-  \item \textbf{Objetivos Estratégicos:} Cero fatalidades en ruta, cumplimiento irrestricto del Art. 25 bis y erradicación de multas laborales y de tránsito.
-  \item \textbf{Dolores Operacionales:} Gestión manual inmanejable de ~6.000 vigencias en planillas Excel y falta de medios para fiscalizar a los 258 choferes terceros.
-  \item \textbf{Poder / Veto e Interés:} Alto (Potestad Interna de Bloqueo de Despacho). Cuadrante 1: Gestionar Atentamente.
-  \item \textbf{Mecanismo de Mitigación:} Validación automatizada bloqueante de vigencias en pre-despacho y alertas pasivas de fatiga en ruta.
-\end{itemize}
-
-\subsection*{Ficha N.° 08: Gerencia de Finanzas y Control de Gestión (Gabriel Ossandón)}
-\begin{itemize}
-  \item \textbf{Identificación:} Responsable de la facturación, cobranza, costeo marginal y liquidación de fletes a los 148 transportistas terceros.
-  \item \textbf{Objetivos Estratégicos:} Cobro efectivo de sobreestadías (recuperar el 71\% objetado), costeo real por viaje y aceleración del ciclo de facturación.
-  \item \textbf{Dolores Operacionales:} Pérdida anual de ingresos por falta de sustento probatorio en andenes y 9 días de demora en pre-liquidaciones con 11\% de error.
-  \item \textbf{Poder / Veto e Interés:} Alto Financiero. Cuadrante 1: Gestionar Atentamente.
-  \item \textbf{Mecanismo de Mitigación:} Registro cronológico digital certificado de estadías en clientes y módulo automatizado de pre-liquidación a terceros.
-\end{itemize}
-
-\subsection*{Ficha N.° 09: Jefatura de Mantenimiento y Talleres (Hernán Trincado)}
-\begin{itemize}
-  \item \textbf{Identificación:} Responsable del mantenimiento preventivo y correctivo de los 148 tractocamiones y 210 semirremolques propios en taller San Bernardo.
-  \item \textbf{Objetivos Estratégicos:} Maximizar disponibilidad mecánica de flota propia, prevenir panas en ruta y auditar consumos anómalos de diésel.
-  \item \textbf{Dolores Operacionales:} Planificación basada en pautas fijas de 6 días en lugar de desgaste real y desaprovechamiento del bus CAN en 61 unidades.
-  \item \textbf{Poder / Veto e Interés:} Medio Operacional. Cuadrante 3: Mantener Informado.
-  \item \textbf{Mecanismo de Mitigación:} Telemetría CAN bus pasiva continua para generación automática de órdenes de trabajo por odometría y horas de motor.
-\end{itemize}
-
-\subsection*{Ficha N.° 10: Jefatura de Tecnologías de Información (Patricia Kast)}
-\begin{itemize}
-  \item \textbf{Identificación:} Responsable de la infraestructura informática, bases de datos locales, ERP contable y enlaces de telecomunicaciones de Curimón.
-  \item \textbf{Objetivos Estratégicos:} Modernización hacia arquitectura cloud escalable, alta disponibilidad del sistema y seguridad de la información.
-  \item \textbf{Dolores Operacionales:} Sala de servidores precaria en San Bernardo (26 m², split doméstico, UPS 20 min) y multiplicidad de sistemas no integrados.
-  \item \textbf{Poder / Veto e Interés:} Medio Técnico. Cuadrante 1: Gestionar Atentamente (Contraparte Técnica de Implantación).
-  \item \textbf{Mecanismo de Mitigación:} Despliegue en Microsoft Azure Multi-AZ con API Gateway, base de datos relacional gestionada y soporte nivel 3 continuo.
-\end{itemize}
-
-\subsection*{Ficha N.° 11: Despachadores y Operadores de Torre de Control (Esteban Valdebenito)}
-\begin{itemize}
-  \item \textbf{Identificación:} Equipo de 22 despachadores distribuidos en los 5 terminales que coordinan la salida física de camiones y monitoreo radial.
-  \item \textbf{Objetivos Estratégicos:} Liberación ágil de cargas, resolución rápida de contingencias en ruta y atención oportuna de llamadas de clientes.
-  \item \textbf{Dolores Operacionales:} Sobrecarga administrativa, dispersión de información en 3 pantallas de GPS y llamadas telefónicas continuas a choferes.
-  \item \textbf{Poder / Veto e Interés:} Medio Operacional Directo. Cuadrante 3: Mantener Informado / Capacitar Intensivamente.
-  \item \textbf{Mecanismo de Mitigación:} Consola unificada de despacho con semáforo de aptitud vehicular y mapas de seguimiento en tiempo real.
-\end{itemize}
-
-\subsection*{Ficha N.° 12: Conductores Propios de Curimón (Yasna Colipán)}
-\begin{itemize}
-  \item \textbf{Identificación:} Dotación de 196 choferes contratados directamente por Curimón, con experiencia en rutas troncales norte y sur.
-  \item \textbf{Objetivos Estratégicos:} Conducción segura, respeto irrestricto de descansos legales, condiciones dignas de viaje y retribución justa sin descuentos injustificados.
-  \item \textbf{Dolores Operacionales:} Fatiga acumulada por llamadas en ruta, presiones comerciales para apurar tránsitos y temor a invasión de privacidad.
-  \item \textbf{Poder / Veto e Interés:} Alto Sindical / Operacional. Cuadrante 1: Gestionar Atentamente (Adopción de Usuarios Finales).
-  \item \textbf{Mecanismo de Mitigación:} Enclavamiento cinético de pantallas (Ley No Chat), alertas de descanso pasivas con anticipación y cero cámaras invasivas en cabina.
-\end{itemize}
-
-\subsection*{Ficha N.° 13: Transportistas Subcontratados y Terceros (Nolberto Sandoval)}
-\begin{itemize}
-  \item \textbf{Identificación:} 148 pequeños y medianos empresarios dueños de los 226 camiones subcontratados y empleadores de 258 choferes externos.
-  \item \textbf{Objetivos Estratégicos:} Cobro transparente y puntual de fletes, autonomía en sus activos vehiculares y acceso a tarifas justas y estables.
-  \item \textbf{Dolores Operacionales:} Retraso de 9 días en liquidaciones con errores frecuentes, desconfianza ante exigencias de instalar hardware y temor a fiscalización fuera de viaje.
-  \item \textbf{Poder / Veto e Interés:} Alto Capacidad de Bloqueo Operacional (60,4\% de la flota). Cuadrante 1: Gestionar Atentamente.
-  \item \textbf{Mecanismo de Mitigación:} Pre-liquidaciones automáticas transparentes, homologación de GPS existentes vía API y desconexión obligatoria de telemetría fuera de orden de flete.
-\end{itemize}
+\begin{tabla}[ancho=completo, fuente=condensada]{Registro integral de supuestos y resolución de las 26 decisiones de diseño (Caso §16.1)}{2-decisiones-diseno}{C{6mm} L{34mm} L{38mm} X L{26mm}}
+\textbf{N.°} & \textbf{Decisión no tomada (Caso §16.1)} & \textbf{Hipótesis y Decisión audIT} & \textbf{Fundamento Técnico e Impacto de Error} & \textbf{Instancia Validación} \\ \midrule
+1 & Jornada de conductor externo que no es trabajador de Curimón (pudo conducir antes para otro cliente). & Doble verificación en pre-despacho: (1) Declaración jurada digital con firma electrónica en la app móvil acreditando descanso previo $\ge 8\text{ h}$, y (2) Verificación telemática negativa de movimiento del camión en las 8 h previas al despacho. & \textbf{Fundamento:} Cumple Art. 25 bis y régimen de subcontratación (Ley N.° 20.123). Curimón no ejerce subordinación privada, pero debe acreditar debida diligencia patronal antes de liberar la salida a carretera. \par \textbf{Impacto de error:} Despacho involuntario de choferes fatigados, riesgo de siniestro fatal (precedente km 312), querellas penales y pérdida del cliente 19\%. & Hito H2 (M2): Protocolo validado con Asesoría Jurídica y Dirección del Trabajo. \\
+2 & Oferta a los 148 transportistas subcontratados por sus datos, y tratamiento de quien no adhiere. & Esquema de incentivo compartido con metas escalonadas: Escenario Base de 70\% (104 transportistas) a M12 y Objetivo de 90\% (134 transportistas) a M20. Se ofrece portal de pre-liquidación en línea (< 48 h), combustible mayorista en terminal y prioridad de fletes. Quien no adhiere queda relegado a cargas spot o se reemplaza en renovación anual. & \textbf{Fundamento:} El 60,4\% de la flota no pertenece a Curimón; una orden patronal provocaría deserción. La adhesión debe sustentarse en liquidez, ahorro en diésel y certidumbre en pagos. \par \textbf{Impacto de error:} Resistencia gremial, desabastecimiento crítico de camiones y fracaso de la meta de trazabilidad 2029. & Hito H3 (M3): Taller de socialización gremial y adenda contractual marco aprobada. \\
+3 & Destino del sistema de gestión TMS 2013: reemplazo, conservación o estrangulamiento. & Estrategia de estrangulamiento gradual (\textit{Strangler Fig Pattern}): en Etapa 1 se preserva el TMS 2013 como núcleo contable transaccional mediante adaptadores API bidireccionales, mientras la Torre migra la asignación; en Etapa 2 se sustituye la lógica operativa conservando sólo la interfaz ERP. & \textbf{Fundamento:} Reemplazar en frío un sistema que rige 96.000 viajes anuales en operación 24x7x365 introduce un riesgo inaceptable de parálisis. El desacoplamiento modular mitiga el riesgo sin perpetuar la obsolescencia. \par \textbf{Impacto de error:} Caída del despacho diario, inconsistencias entre asignación física y facturación, o retención de datos en silos. & Hito H4 (M4): Pruebas de integración de adaptadores API con Jefatura de TI. \\
+4 & Unificación de posición con 3 proveedores GPS dispares y 34 camiones sin dispositivo. & Capa de ingesta telemática canónica: ingesta vía Webhooks/APIs para los 2 proveedores que exponen datos; provisión de equipamiento telemático estándar en comodato para las 34 unidades sin GPS y para el proveedor sin exportación. & \textbf{Fundamento:} Evita sustituir 192 dispositivos existentes que ya transmiten, resolviendo de forma quirúrgica los 34 camiones ciegos para consolidar una cartografía operacional única en tiempo real. \par \textbf{Impacto de error:} Puntos ciegos cartográficos en la Torre de San Bernardo y rechazo del SLA de visibilidad por el cliente exportador. & Hito H5 (M5): Demostración de mapa operacional unificado ante Torre de Control y Jefatura de Flota. \\
+5 & Propiedad y modelo del dispositivo en camiones de terceros, financiamiento y administración. & Dispositivo de propiedad exclusiva de Curimón, financiado por el mandante y entregado en comodato operacional gratuito al transportista mientras preste servicios. Se retira en taller San Bernardo en su liquidación final o se deduce su valor residual pactado. & \textbf{Fundamento:} Elimina el desembolso inicial a microempresarios, garantiza la administración centralizada del firmware y la custodia de claves criptográficas por parte de Curimón. \par \textbf{Impacto de error:} Negativa de transportistas a instalar equipos por costo, o pérdida masiva de activos tecnológicos sin custodia. & Hito H3 (M3): Cláusula de comodato incorporada en contrato marco de subcontratación. \\
+6 & Excepción al bloqueo vinculante en asignación ante viajes comerciales ya comprometidos. & Bloqueo duro infranqueable para causales legales críticas (Art. 25 bis, licencia A5 vencida, SUSPEL sin curso). Para contingencias administrativas subsanables (ej. prórroga ministerial de revisión técnica), se admite excepción temporal autorizada exclusivamente por firma dual (Operaciones + Prevención). & \textbf{Fundamento:} Un bloqueo ciego sin vía de excepción induce a eludir el sistema por fuera; la discrecionalidad laxa repite la negligencia del accidente del km 312. El registro inalterable audita cada decisión. \par \textbf{Impacto de error:} Viajes comerciales estratégicos paralizados innecesariamente o exposición penal por omitir controles de seguridad. & Hito H2 (M2): Protocolo formal de excepciones firmado por Gerencia General y Prevención. \\
+7 & Anticipación de la alerta de agotamiento de jornada en tramos sin detención segura. & Alerta predictiva dinámica basada en cartografía vial y velocidad: se dispara con 45 min de anticipación al límite de 5 horas (a las 4 h 15 min de conducción), calculando la distancia y tiempo estimado al próximo servicentro o paradero seguro habilitado en la ruta. & \textbf{Fundamento:} En tramos desérticos de Atacama o cordilleranos, las áreas de descanso distan decenas de kilómetros; una alarma con tiempo fijo fuerza a detenerse en bermas inseguras o a violar la ley. \par \textbf{Impacto de error:} Asaltos a camiones detenidos en zonas vulnerables o infracciones gravísimas al Art. 25 bis por exceso de manejo continuo. & Hito H6 (M6): Validación de cartografía de puntos seguros con choferes propios y Prevención. \\
+8 & Registro de llegada y salida en predios de clientes (~1.400) sin equipos ajenos ni chofer. & Geocercas satelitales virtuales poligonales sobre los ~1.400 puntos de clientes, combinadas con eventos de motor apagado (ignición OFF) y cinemática nula ($v = 0$), generando marcas de tiempo automáticas inalterables con estampa criptográfica. & \textbf{Fundamento:} La restricción no negociable N.° 9 prohíbe instalar hardware en predios ajenos o exigir manipulación manual al chofer en faena. \par \textbf{Impacto de error:} Rechazo continuado del 71\% de cobros por sobreestadías por falta de prueba pericial objetiva ante los clientes. & Hito H3 (M3): Calibración de las primeras 200 geocercas críticas con Comercial y Operaciones. \\
+9 & Emisión de Documento Electrónico DET en puntos de carga sin cobertura celular. & Asignación previa de bolsas de folios digitales autorizados por el SII en memoria protegida a bordo; generación, firma digital y emisión del DET en modo desconectado en cabina antes de iniciar marcha, sincronizándose con la nube al recuperar señal. & \textbf{Fundamento:} La normativa tributaria exige que el documento ampare el traslado antes de mover el vehículo; en packings agrícolas aislados no se puede supeditar la salida a la cobertura móvil. \par \textbf{Impacto de error:} Detención y decomiso de carga por Carabineros/SII en carretera por circular sin guía legal, o retrasos masivos en faenas. & Hito H4 (M4): Certificación del procedimiento de contingencia fuera de línea con SII y Tributaria. \\
+10 & Conformidad de entrega (POD) y disponibilidad inmediata para facturación y defensa. & Captura fotográfica digital de la guía timbrada y firma electrónica en pantalla en la aplicación móvil en destino; generación de comprobante digital indexado disponible en portal web en < 1 hora (o en la primera conexión celular). & \textbf{Fundamento:} El papel físico viaja días en cabina y el 4,2\% se deteriora o extravía, postergando la facturación e impidiendo responder oportunamente a reclamos comerciales. \par \textbf{Impacto de error:} Desfase de hasta 30 días en el flujo de cobranza corporativa y pérdidas directas en litigios por daños a la carga sin respaldo. & Hito H7 (M7): Pruebas de digitalización de POD en faenas de clientes clave (con Andrea Lecaros). \\
+11 & Frecuencia de muestreo y transmisión de telemetría vs costo de datos móviles. & Muestreo por eventos cinemáticos y velocidad: almacenamiento local cada 5 s; transmisión celular en movimiento cada 30 s (o por giro > 15°, parada o alarma); en reposo cada 5 min; tramas binarias compactas (< 150 bytes). & \textbf{Fundamento:} Minimiza el consumo mensual de datos celulares en los 374 tractocamiones, protegiendo el margen operacional corporativo del 9,0\% sin sacrificar precisión pericial. \par \textbf{Impacto de error:} Sobrecosto severo en tarifas mensuales de telecomunicaciones móviles o granularidad insuficiente para reconstruir siniestros viales. & Hito H5 (M5): Evaluación de consumo de datos y costo de SIM cards en piloto técnico de 20 camiones. \\
+12 & Telemetría de fábrica CAN bus en los 61 tractocamiones propios sin descargar. & Conexión pasiva de solo lectura mediante acoplamiento sin corte de cables que resguarde garantías de fabricante, capturando parámetros estándar FMS/SAE J1939 (consumo de combustible acumulado, odómetro, horas de motor, fallas DTC). & \textbf{Fundamento:} Los datos son gratuitos, ya existen y permiten erradicar la dispersión de combustible del 19\% y el odómetro manual, transitando hacia mantenimiento preventivo por uso real. \par \textbf{Impacto de error:} Pérdida de garantías comerciales de los camiones o mantención reactiva de flota propia por falta de información de motor. & Hito H4 (M4): Protocolo de homologación técnica firmado con talleres oficiales de concesionarios de marca. \\
+13 & Descarga, periodicidad, custodia e integridad de tacógrafos digitales. & Descarga remota automatizada periódica vía Wi-Fi seguro al ingresar a los 5 terminales/talleres (o por canal celular en descansos); almacenamiento de archivos nativos firmados (.ddd) en bóveda digital inalterable retenida por 5 años. & \textbf{Fundamento:} La omisión histórica de descargas deja a Curimón indefensa ante la DT. La custodia criptográfica inalterable otorga plena validez probatoria ante tribunales y fiscalizaciones. \par \textbf{Impacto de error:} Multas gravísimas de la Inspección del Trabajo y pérdida de juicios laborales o demandas civiles por imposibilidad probatoria. & Hito H5 (M5): Verificación de conformidad y cadena de custodia con Prevención de Riesgos y Asesoría Legal. \\
+14 & Asignación y optimización de retornos de camiones que van a quedar vacíos. & Módulo algorítmico de triangulación en la Torre de San Bernardo: publica cargas disponibles con 6 a 12 horas de anticipación a la descarga, priorizando camiones según cercanía geográfica, aptitud mecánica y saldo de jornada. & \textbf{Fundamento:} El 26\% de kilómetros en vacío (10,66 millones de km anuales) destruye la rentabilidad; su gestión telefónica y por memoria de 22 despachadores resulta anacrónica. \par \textbf{Impacto de error:} Rechazo de transportistas a esperar en destino, regresando vacíos por cuenta propia y perpetuando la ineficiencia del 26\%. & Hito H8 (M8): Piloto de triangulación de cargas en corredor Santiago-Concepción con Gerencia de Operaciones. \\
+15 & Construcción del costo real del viaje con insumos desfasados (diésel a 40 d, peajes). & Costeo analítico híbrido en dos fases: (1) Costo operativo preliminar en < 24 h post-viaje usando diésel telemático/estándar de ruta, peajes por pórtico TAG y tarifa pactada a terceros; (2) Conciliación definitiva mensual al recepcionar facturas de proveedores. & \textbf{Fundamento:} Esperar 40 días a la factura de combustible convierte el costo en un dato contable forense tardío; la operación necesita costos vivos para corregir desvíos y negociar tarifas. \par \textbf{Impacto de error:} Imposibilidad de detectar anomalías de rendimiento en ruta y persistencia de contratos deficitarios encubiertos. & Hito H6 (M6): Validación de la metodología de conciliación de costos con la Gerenta de Finanzas (Gabriela Ossandón). \\
+16 & Estimación del costo real de camión subcontratado si sólo se conoce la tarifa pagada. & Modelo de Costo Total de Servicio (TCS): suma la tarifa de flete pagada, combustible suministrado en estanque propio, peajes asumidos por Curimón, costos administrativos de liquidación y provisión de riesgo laboral ponderado por viaje. & \textbf{Fundamento:} Comparar tarifa bruta con costo interno de flota propia induce a conclusiones erróneas sobre la rentabilidad real de externalizar o internalizar capacidad rodante. \par \textbf{Impacto de error:} Crecimiento distorsionado en flota de terceros que comprime el margen corporativo por costos indirectos no computados. & Hito H9 (M9): Presentación del modelo comparativo de flota ante el Directorio corporativo de Curimón. \\
+17 & Gestión de los 3 contratos comerciales bajo costo hacia la renegociación de 2027. & Generación de dossiers periciales de rentabilidad por cliente y ruta (habilitados en Mes 9 / Etapa 1) que evidencien esperas reales no pagadas, retornos vacíos y costos devengados, sustentando ajustes de tarifas o retiro de tramos deficitarios. & \textbf{Fundamento:} Tres contratos absorben el 31\% de ingresos y operan bajo costo (el peor a -14\% durante cuatro años). Su renegociación en 2027 exige evidencia analítica irrefutable. \par \textbf{Impacto de error:} Pérdida intempestiva de clientes clave por alzas arbitrarias sin respaldo o quiebra corporativa por continuar subsidiando pérdidas. & Hito H9 (M9): Entrega de carpetas de costeo por contrato a la Gerencia General y Gerencia de Finanzas. \\
+18 & Control y gobernanza de las ~6.000 vigencias documentales y responsabilidad sobre terceros. & Módulo centralizado con portal de autogestión para los 148 transportistas, alertas escalonadas (60, 30 y 7 días previos al vencimiento); el transportista carga la renovación, el analista de Curimón valida el documento y el sistema bloquea el despacho ante caducidad. & \textbf{Fundamento:} La administración en cuatro planillas de cálculo sin integridad genera errores graves (ej. retención SUSPEL por 14 h). Curimón responde por el viaje aunque el titular sea un tercero. \par \textbf{Impacto de error:} Inmovilización de vehículos en carretera por fiscalizaciones del MOP/MTT, o revocación de coberturas de seguros ante siniestros viales. & Hito H3 (M3): Carga completa y depuración de la base de vigencias con Jefa de Prevención de Riesgos (Denisse Aguayo). \\
+19 & Verificación de documentación SUSPEL frente a la carga efectivamente realizada. & Lista de verificación digital obligatoria en origen mediante lectura de código QR de guías de despacho y manifiesto químico; contrastación algorítmica de compatibilidad química (D.S. N.° 43) y registro fotográfico de rotulación NCh 2190 y HDS en cabina. & \textbf{Fundamento:} En abril de 2026 una fiscalización detectó discrepancias entre lo planificado y lo cargado; la negligencia en cargas químicas acarrea sanciones penales y clausura de faenas. \par \textbf{Impacto de error:} Despacho involuntario de sustancias incompatibles con riesgo de catástrofe química, clausura de terminales y multas gravísimas. & Hito H6 (M6): Auditoría de campo del proceso de despacho químico con Prevención de Riesgos. \\
+20 & Procedimiento ante cierres del Paso Los Libertadores de hasta 12 días con camiones en ruta. & Protocolo integral de contingencia climática: congelamiento automático de sobreestadías comerciales en sistema, pase de choferes a estado de reposo en campamento, persistencia de datos en búfer vehicular local y retransmisión escalonada secuencial tras la reapertura. & \textbf{Fundamento:} Fenómeno meteorológico anual recurrente que afecta a ~1.900 viajes; gestionarlo manualmente por teléfono satura a la Torre y genera cobros y reclamos erróneos. \par \textbf{Impacto de error:} Colapso de la red celular por reconexión masiva desordenada, registro ficticio de horas de conducción en detención y conflictos comerciales. & Hito H7 (M7): Simulación de corte cordillerano y vaciado telemático diferido con la Torre de Programación. \\
+21 & Incorporación de intervenciones de talleres externos en ruta a la hoja de vida técnica. & Portal web ligero responsivo accesible mediante código QR único en cabina: el taller externo ingresa orden de trabajo, odómetro, repuestos instalados y foto de factura; el Jefe de Taller en San Bernardo revisa y consolida en la hoja de vida del camión. & \textbf{Fundamento:} Hoy las reparaciones en ruta se pagan contablemente pero no se integran al historial técnico, generando vacíos de años en la trazabilidad del mantenimiento preventivo. \par \textbf{Impacto de error:} Mantenimientos preventivos duplicados innecesariamente, fallas mecánicas catastróficas en carretera y distorsión del costo de mantenimiento. & Hito H8 (M8): Prueba piloto con red de 5 talleres en convenio en Ruta 5 Sur coordinada con Hugo Trincado. \\
+22 & Cálculo de emisiones GEI t-km en camiones de terceros sin compras de combustible. & Aplicación rigurosa del marco GLEC / ISO 14083: para flota subcontratada sin CAN bus se emplean factores de emisión validados por tipo de camión, peso neto transportado y perfil topográfico de ruta, conciliados con declaraciones mensuales de combustible en pre-liquidación. & \textbf{Fundamento:} El cliente exportador (19\% de ingresos) exige auditoría de carbono para 2029 para el 100\% de sus viajes, y Curimón no compra el diésel del 60,4\% de los camiones de la red. \par \textbf{Impacto de error:} Rechazo de la auditoría de emisiones por parte del cliente exportador, provocando la pérdida del contrato más relevante de la compañía. & Hito H10 (M10): Pre-auditoría con entidad certificadora de huella de carbono y validación con Andrea Lecaros. \\
+23 & Conciliación entre visibilidad de clientes y soberanía de datos del transportista. & Enmascaramiento y desacoplamiento temporal de telemetría (Ley N.° 21.719): el cliente visualiza la ubicación del camión exclusivamente dentro del intervalo del flete contratado; al confirmarse la entrega, el rastreo se revoca de inmediato para el cliente. & \textbf{Fundamento:} Armoniza la exigencia de trazabilidad del mandante con el derecho a la privacidad de los 148 dueños sobre sus activos cuando operan para otros clientes o descansan. \par \textbf{Impacto de error:} Denuncias ante la Agencia de Protección de Datos Personales, litigios laborales o deserción colectiva de transportistas subcontratados. & Hito H3 (M3): Política de Gobernanza y Privacidad de Datos aprobada con la Asociación de Transportistas. \\
+24 & Protección e inalterabilidad de la evidencia de jornada frente a impugnaciones. & Registro inmutable de eventos operacionales respaldado por sellado de tiempo criptográfico (RFC 3161) y cadena de bloques o hash encadenado (\textit{append-only ledger}), garantizando que ninguna parte pueda modificar retroactivamente los tiempos. & \textbf{Fundamento:} Un registro editable carece de valor probatorio ante la Dirección del Trabajo, tribunales de justicia y compañías de seguros ante la ocurrencia de un siniestro vial grave. \par \textbf{Impacto de error:} Nulidad de medios de prueba en litigios laborales y rechazo de indemnizaciones por parte de aseguradoras ante accidentes. & Hito H6 (M6): Dictamen pericial de seguridad informática y validez legal emitido por auditor externo independiente. \\
+25 & Ritmo y física del despliegue en 374 camiones según cadencia de terminales (cada 6 días). & Cronograma gobernado por la física operacional: despliegue escalonado a lo largo de 8 meses (Meses 4 a 12) mediante bahías de instalación rápida (45 min/unidad) en los 5 terminales (San Bernardo, Antofagasta, Talca, Los Ángeles y Puerto Montt); para el 22\% de terceros con baja frecuencia, se aprovechan ventanas de mantención obligatoria o citas en terminales regionales. & \textbf{Fundamento:} Forzar detenciones masivas paralizaría el transporte; el ritmo de avance real está dictado por la frecuencia con que los camiones pasan físicamente por las instalaciones de Curimón. \par \textbf{Impacto de error:} Incumplimiento severo de los plazos contractuales, congestión en talleres y sobrecostos por camiones inmovilizados sin operar. & Hito H3 (M3): Plan de despliegue físico y curvas de avance mensual aprobadas por Operaciones y Mantenimiento. \\
+26 & Operación durante el período de convivencia mixta de flota equipada y no equipada. & Operación dual en la Torre de Control: el motor de asignación discrimina el perfil tecnológico de cada camión (Nivel 1: telemático completo; Nivel 2: integrado por API; Nivel 3: app móvil y control asistido), direccionando unidades equipadas a contratos con exigencia 2029 (cliente 19\%) y guiando a unidades pendientes con soporte asistido. & \textbf{Fundamento:} La transición tecnológica dura meses y no es un cambio instantáneo; no prever la operación mixta desborda a los despachadores y frustra a los transportistas. \par \textbf{Impacto de error:} Sobrecarga operativa de la Torre de Control, errores de asignación de cargas de alta exigencia y abandono prematuro de las nuevas herramientas. & Hito H4 (M4): Procedimiento Operativo Estándar de Período Mixto validado y probado en marcha blanca en San Bernardo. \\
+\end{tabla}
