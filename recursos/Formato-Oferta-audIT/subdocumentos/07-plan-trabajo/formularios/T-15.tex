@@ -14,18 +14,87 @@ del desarrollo de la Etapa 2 traen la dotación de los meses 13 a 15, que el \ar
 demostrar en este formulario.
 
 \begin{formularioTQuince}
-\etapaTQuince{etapa = {Etapa 1, desarrollo}, hh = {\requiereDupla{2}{HH}}, personas = {\requiereDupla{2}{peak}}, frentes = {\requiereDupla{2}{frentes}}, meses = {1 a 12}}
-\etapaTQuince{etapa = {Etapa 1, marcha blanca}, hh = {\requiereDupla{2}{HH}}, personas = {26}, frentes = {6}, meses = {13 a 15}}
-\etapaTQuince{etapa = {Etapa 2, desarrollo}, hh = {\requiereDupla{2}{HH}}, personas = {18 en los meses 13 a 15}, frentes = {2}, meses = {13 a 18}}
-\etapaTQuince{etapa = {Etapa 2, marcha blanca}, hh = {\requiereDupla{2}{HH}}, personas = {\requiereDupla{2}{peak}}, frentes = {\requiereDupla{2}{frentes}}, meses = {19 y 20}}
-\etapaTQuince{etapa = {Operación}, hh = {\requiereDupla{2}{HH}}, personas = {\requiereDupla{2}{peak}}, frentes = {\requiereDupla{2}{frentes}}, meses = {21 a 56}}
+\etapaTQuince{etapa = {Etapa 1, desarrollo}, hh = {51.040}, personas = {33}, frentes = {6}, meses = {1 a 12}}
+\etapaTQuince{etapa = {Etapa 1, marcha blanca}, hh = {10.656}, personas = {26}, frentes = {6}, meses = {13 a 15}}
+\etapaTQuince{etapa = {Etapa 1, producción y estabilización}, hh = {12.640}, personas = {26}, frentes = {6, luego 1}, meses = {16 a 20}}
+\etapaTQuince{etapa = {Etapa 2, desarrollo}, hh = {14.944}, personas = {18}, frentes = {2}, meses = {13 a 18}}
+\etapaTQuince{etapa = {Etapa 2, marcha blanca}, hh = {4.480}, personas = {14}, frentes = {2}, meses = {19 y 20}}
+\etapaTQuince{etapa = {Operación}, hh = {92.160}, personas = {16}, frentes = {4}, meses = {21 a 56}}
 \end{formularioTQuince}
 
-En los meses 13 a 15 trabajan 37 personas. Las 26 de la Escuadra de Estabilización E1 y las 18 de la
-Escuadra de Construcción E2 suman 44 porque los siete roles de dirección están en las dos. E1 trabaja
-en seis frentes, los cinco terminales y la guardia central, y E2 en dos, software y firmware.
-\requiereDupla{2}{horas hombre por tarea, paquete y etapa, curvas de horas hombre por etapa y de la
-continuidad operacional, y peak de personas de los meses 16 a 18}
+Las horas hombre de cada etapa resultan de la dotación mensual por 160 horas, que son 20 días hábiles
+de 8 horas, el mismo mes contractual de la red de la \verSeccion{sec:7-ruta}. La implementación suma
+93.760 horas hombre en los meses 1 a 20 y la operación 92.160 en los meses 21 a 56. En los meses 13 a 15
+trabajan 37 personas. Las 26 de la Escuadra de Estabilización E1 y las 18 de la Escuadra de Construcción
+E2 suman 44 porque los siete roles de dirección están en las dos. E1 trabaja en seis frentes, los cinco
+terminales y la guardia central, y E2 en dos, software y firmware. Las horas de esos tres meses se
+reparten según la capacidad de cada escuadra de la \tabref{7-asignacion}: 21,5 FTE a la Etapa 1, 14,1 a la
+Etapa 2 y la coordinación por mitades. Los meses 16 y 17 mantienen las 37 personas, con E1 en la
+estabilización de la Etapa 1. Desde el mes 18 el peak baja a 30 y en los meses 19 y 20 a 26.
+
+La \tabref{t15-curva} es la curva de horas hombre del proyecto por tramo de meses, con su acumulado.
+
+\begin{tabla}[ancho=completo, fuente=condensada]{Curva de horas hombre por tramo de meses}{t15-curva}{L{24mm} R{20mm} R{34mm} R{34mm} X}
+Meses & Personas & Horas hombre por mes & Horas hombre del tramo & Acumulado \\ \midrule
+1 y 2 & 14 & 2.240 & 4.480 & 4.480 \\
+3 a 5 & 24 & 3.840 & 11.520 & 16.000 \\
+6 a 9 & 30 & 4.800 & 19.200 & 35.200 \\
+10 a 12 & 33 & 5.280 & 15.840 & 51.040 \\
+13 a 17 & 37 & 5.920 & 29.600 & 80.640 \\
+18 & 30 & 4.800 & 4.800 & 85.440 \\
+19 y 20 & 26 & 4.160 & 8.320 & 93.760 \\
+21 a 56 & 16 & 2.560 & 92.160 & 185.920 \\
+\end{tabla}
+\notaTabla{Fuente: elaboración propia. Horas hombre por mes igual a personas por 160 horas.}
+
+La curva sube hasta el peak de los meses 13 a 17, cuando hay dos frentes abiertos, y baja a la dotación
+estable de la operación. El acumulado del mes 12 coincide con las horas de la Etapa 1 en desarrollo y el
+del mes 20 con el total de la implementación.
+
+La \tabref{t15-paquetes} reparte las 93.760 horas hombre de la implementación entre los elementos de la
+EDT del Formulario T-14.
+
+\begin{tabla}[ancho=completo, fuente=condensada]{Horas hombre de la implementación por elemento de la EDT}{t15-paquetes}{L{60mm} R{30mm} R{30mm} X}
+Elemento de la EDT & Meses-persona & Horas hombre & Etapa \\ \midrule
+1 Gestión del proyecto & 60 & 9.600 & 1 y 2 \\
+2 Levantamiento y diseño & 40 & 6.400 & 1 y 2 \\
+3 Plataforma & 45 & 7.200 & 1 \\
+4 Equipo a bordo & 55 & 8.800 & 1 y 2 \\
+5 Servicios de la Etapa 1 & 110 & 17.600 & 1 \\
+6 Integraciones & 40 & 6.400 & 1 y 2 \\
+7 Datos y migración & 30 & 4.800 & 1 y 2 \\
+8 Servicios de la Etapa 2 & 50 & 8.000 & 2 \\
+9 Adhesión de transportistas & 20 & 3.200 & 1 y 2 \\
+10 Calidad y pruebas & 40 & 6.400 & 1 y 2 \\
+11 Implantación & 80 & 12.800 & 1 y 2 \\
+12 Innovaciones & 16 & 2.560 & 1 y 2 \\
+Total & 586 & 93.760 & \\
+\end{tabla}
+\notaTabla{Fuente: elaboración propia. El elemento 13 es la operación y se declara en la \tabref{t15-operacion}.}
+
+Los servicios de la Etapa 1 concentran la mayor parte del esfuerzo, seguidos por la implantación, que
+incluye a los siete analistas en los terminales desde la capacitación hasta la estabilización. La
+adhesión tiene pocas horas y mucha duración: es una negociación de 120 días hábiles conducida por pocas
+personas, y por eso su riesgo es de plazo y no de capacidad.
+
+La \tabref{t15-operacion} es la curva de continuidad operacional, que el formulario pide aparte. Es
+constante durante los 36 meses.
+
+\begin{tabla}[ancho=completo, fuente=condensada]{Continuidad operacional por paquete, meses 21 a 56}{t15-operacion}{L{60mm} R{22mm} R{34mm} X}
+Paquete & Personas & Horas hombre por mes & Horas hombre en 36 meses \\ \midrule
+13.1 Mesa de servicio 24x7 & 6 & 960 & 34.560 \\
+13.2 Operación de la plataforma y gestión del servicio & 4 & 640 & 23.040 \\
+13.3 Ciclo de vida del equipo a bordo & 2 & 320 & 11.520 \\
+13.4 Mantención evolutiva & 4 & 640 & 23.040 \\
+Total & 16 & 2.560 & 92.160 \\
+\end{tabla}
+\notaTabla{Fuente: elaboración propia.}
+
+La mesa de servicio necesita seis personas porque un puesto atendido 24 horas todos los días suma unas
+730 horas al mes, 4,6 personas de 160 horas, y se agrega un segundo puesto en el horario de relevo de
+madrugada, cuando se concentran las consultas de conductores y terminales. Las cuatro personas de la
+operación de la plataforma, junto con las cuatro de mantención evolutiva, forman la rotación de guardia de
+ocho ingenieros que la \verSeccion{sec:7-particion} justifica para una cobertura 24x7.
 
 La \tabref{7-asignacion} reparte la capacidad de cada rol entre las dos escuadras en los meses 13 a 15,
 según la regla de asignación de la \verSeccion{sec:7-particion}. Cada valor está en FTE, una persona a

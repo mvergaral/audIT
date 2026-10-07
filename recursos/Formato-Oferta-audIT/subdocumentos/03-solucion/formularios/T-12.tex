@@ -1,488 +1,685 @@
 % ============================================================================
 %  Formulario T-12. Matriz de cumplimiento técnico y trazabilidad
-%  Subdocumento 3. Oferta Técnica audIT SpA
+%  Subdocumento 3. Archivo propio AUDIT-Formulario-T-12.pdf.
+%  Contiene los productos del numeral 17.1 del Caso: catálogo funcional y no
+%  funcional, matriz de trazabilidad (en el campo componente: contexto,
+%  paquete EDT y prueba), reglas de negocio, supuestos con las 26 decisiones
+%  del 16.1, criterios de aceptación y registro de consultas.
+%  Pruebas: identificadores del Formulario T-17 (Subdocumento 9).
+%  Paquetes: EDT del Subdocumento 7 y del Formulario T-14.
 % ============================================================================
 \begin{formulario}{T-12}
+
+\providecommand\tituloBloqueFormulario[1]{%
+  \par\vspace{14pt plus 3pt}\phantomsection\addcontentsline{toc}{section}{#1}\noindent{\sffamily\bfseries\fontsize{13bp}{16bp}\selectfont\color{audit-marino}#1}\par\vspace{6pt}\noindent}
+
+Este formulario detalla lo que el Subdocumento 3 resume. Trae el catálogo de los 42 requerimientos con
+los campos del \caso{numeral 17.1}{38} y, en la columna de trazabilidad, el contexto de la arquitectura
+lógica que atiende cada uno, su paquete de trabajo y los casos de prueba que lo verifican. Siguen el
+registro de reglas de negocio, el registro de supuestos con las veintiséis decisiones del
+\caso{numeral 16.1}{34 a 36}, los 29 criterios de aceptación con meta, mes y medición, y el registro de
+consultas y vacíos.
+
+\tituloBloqueFormulario{Glosario de códigos}
+
+Cada código se usa con el mismo significado en toda la oferta. La \tabref{t12-glosario} los define.
+
+\begin{tabla}[ancho=completo, fuente=condensada]{Códigos usados en el catálogo y su significado}{t12-glosario}{L{30mm} X}
+Código & Significado \\ \midrule
+RF-nnn y RNF-nnn & Requerimiento funcional y no funcional de este catálogo \\
+Caso n.n & Capítulo o numeral de las Bases Técnicas del Caso, con su página en el Subdocumento 3 \\
+CA-nn & Criterio de aceptación nn del \caso{capítulo 18}{41 a 43} \\
+R-nn & Restricción nn del \caso{capítulo 10}{23 y 24} \\
+DP-nn & Decisión nn de las que el Caso deja abiertas en el \caso{numeral 16.1}{34 a 36} \\
+RT-nn.nn & Requisito de las Bases Técnicas Transversales con su valor del \caso{capítulo 15}{31 a 34} \\
+REQ-NEG-nn & Requerimiento preliminar del Anexo 2.A del Subdocumento 2 \\
+SUP-nn y SA-nn & Supuesto del entorno, Subdocumento 2, y supuesto del alcance, este formulario \\
+RN-nn & Regla de negocio de este formulario \\
+E1-nn y E2-nn & Capacidad de la Etapa 1 y de la Etapa 2, \verSeccion{sec:3-etapa1} y \verSeccion{sec:3-etapa2} \\
+EDT n.n & Paquete de trabajo de la EDT del Subdocumento 7 y del Formulario T-14 \\
+CP-tipo-nn & Caso de prueba del Formulario T-17 del Subdocumento 9 \\
+Prioridad 1, 2 y 3 & 1: su falla deja salir un camión que no debía o pierde una prueba. 2: sostiene un criterio o una restricción. 3: optimiza sobre datos existentes \\
+\end{tabla}
+
+El requerimiento preliminar REQ-NEG-08 del Subdocumento 2, temperatura de los 44 semirremolques
+refrigerados, no tiene requerimiento en este catálogo porque ningún criterio ni restricción del Caso lo
+exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado, fuera del alcance base.
+
+\tituloBloqueFormulario{Catálogo de requerimientos y matriz de trazabilidad}
+
 \begin{formularioTDoce}
 
-% --- REQUERIMIENTOS FUNCIONALES (RF-001 a RF-028) ---
+% --- REQUERIMIENTOS FUNCIONALES --------------------------------------------
 \requisitoF{
   id           = RF-001,
-  descripcion  = {Antes de autorizar un viaje, comprobar jornada disponible, habilitaciones del conductor y equipos, y aptitud y compatibilidad del tractocamión y semirremolque. Todo incumplimiento legal o de seguridad deberá bloquear la asignación},
-  actor        = {Despachador / Sistema de Despacho},
-  precondicion = {Orden de transporte asignada y datos de conductor y equipos ingresados},
-  resultado    = {Autorización formal de salida o bloqueo estricto con registro auditable},
-  prioridad    = {Alta (Must) --- Etapa 1 (Mes 16)},
-  origen       = {CA-01; R-07; D-06},
+  descripcion  = {Antes de autorizar un viaje, comprobar jornada disponible y habilitaciones del conductor, y aptitud y compatibilidad del tractocamión y del semirremolque para la carga. Todo incumplimiento legal o de seguridad bloquea la asignación},
+  actor        = {Despachador de la torre},
+  precondicion = {Orden de transporte con conductor, tractocamión y semirremolque propuestos},
+  resultado    = {Veredicto en no más de 30 segundos: asigna, asigna con marca o bloquea, con registro auditable},
+  prioridad    = {1. Etapa 1, mes 16},
+  origen       = {Caso 4.3. CA-01. R-07. DP-06. RT-09.01. REQ-NEG-01 y 03},
   cumple       = {Sí},
-  componente   = {Servicios de Despacho, Jornada, Flota y Gestión Documental}
+  componente   = {Planificación y tráfico, que consulta a Personas y cumplimiento y a Flota y activos. EDT 5.3. CP-UNIT-01 y CP-SYS-01}
 }
 \requisitoF{
   id           = RF-002,
-  descripcion  = {Obtener, asociar al viaje y presentar evidencia de jornada efectiva de los 454 conductores, incluidos externos, distinguiendo dato declarado, tacógrafo y otras fuentes},
-  actor        = {Conductor / Prevención de Riesgos},
-  precondicion = {Viaje iniciado o programado con conductor asignado},
-  resultado    = {Expediente consolidado de jornada por conductor asociado al viaje},
-  prioridad    = {Alta (Must) --- Etapa 1 (Mes 16)},
-  origen       = {CA-02; R-02; R-07; D-01; D-13},
+  descripcion  = {Obtener, asociar al viaje y presentar la evidencia de jornada efectiva de los 454 conductores, propios y externos, con su fuente y su nivel en la cascada de evidencia},
+  actor        = {Prevención de riesgos},
+  precondicion = {Viaje programado o en curso con conductor identificado},
+  resultado    = {Expediente de jornada por conductor con el nivel de evidencia de cada tramo},
+  prioridad    = {1. Etapa 1, mes 16},
+  origen       = {Caso 4.3. CA-02. R-02 y R-07. DP-01 y DP-13. REQ-NEG-01},
   cumple       = {Sí},
-  componente   = {Control de Jornada; Conductor; Búfer a Bordo}
+  componente   = {Personas y cumplimiento. EDT 5.1. CP-UNIT-02 y CP-INT-02}
 }
 \requisitoF{
   id           = RF-003,
-  descripcion  = {Al asignar un viaje a un conductor externo, disponer de evidencia identificada y sellada de su jornada previa relevante, incluida la realizada para otros clientes cuando sea legal y contractualmente accesible},
-  actor        = {Despachador / Transportista Externo},
-  precondicion = {Conductor externo asignado con convenio de adhesión o registro previo},
-  resultado    = {Acreditación formal de descanso legal antes de la liberación del viaje},
-  prioridad    = {Alta (Must) --- Etapa 1 (Mes 16)},
-  origen       = {CA-03; R-02; R-07; D-01},
+  descripcion  = {Al asignar un viaje a un conductor externo, disponer de evidencia identificada y sellada de su jornada previa relevante, incluida la realizada para otros clientes en la medida que el anexo de adhesión lo autorice},
+  actor        = {Despachador y transportista subcontratado},
+  precondicion = {Transportista con anexo de adhesión firmado o atestación del viaje},
+  resultado    = {Veredicto de descanso disponible al asignar, con su nivel de evidencia},
+  prioridad    = {1. Etapa 1, mes 16},
+  origen       = {Caso 4.3. CA-03. R-02 y R-07. DP-01},
   cumple       = {Sí},
-  componente   = {Control de Jornada; Conductor; Consentimiento}
+  componente   = {Personas y cumplimiento. EDT 5.1 y EDT 9.2. CP-INT-03 y CP-SYS-05}
 }
 \requisitoF{
   id           = RF-004,
-  descripcion  = {Conservar evidencia de jornada con origen, sello temporal, integridad verificable e historial de correcciones sin sobrescritura},
-  actor        = {Auditor Interno / Fiscalizador},
-  precondicion = {Evento de jornada generado por conductor o sensor a bordo},
-  resultado    = {Evidencia firmada digitalmente e inalterable en almacenamiento WORM},
-  prioridad    = {Alta (Must) --- Etapa 1 (Mes 16)},
-  origen       = {CA-04; D-13; D-24},
+  descripcion  = {Conservar la evidencia de jornada con origen, sello de tiempo, integridad verificable e historial de correcciones como registros nuevos, sin sobrescribir el original},
+  actor        = {Fiscalizador, aseguradora o cliente que impugna},
+  precondicion = {Evento de jornada generado por el equipo a bordo, el tacógrafo o una atestación},
+  resultado    = {Evidencia con cadena de integridad verificable por un tercero durante cinco años},
+  prioridad    = {1. Etapa 1, mes 16},
+  origen       = {Caso 19. CA-04. DP-13 y DP-24. RT-05.10},
   cumple       = {Sí},
-  componente   = {Gestión Documental; Auditoría Append-Only; WORM}
+  componente   = {Personas y cumplimiento, sobre almacenamiento inmutable. EDT 5.1. CP-UNIT-06 y CP-SEC-08}
 }
 \requisitoF{
   id           = RF-005,
-  descripcion  = {Consolidar las aproximadamente 6.000 vigencias en un registro único con titular, responsable de renovación, custodio, vencimiento, respaldo, alertas y efecto sobre la asignación. Umbrales: meta por ratificar},
-  actor        = {Encargado de Flota / Prevención},
-  precondicion = {Documentos y habilitaciones cargados en la base documental},
-  resultado    = {Consolidación de las 6.000 vigencias con alertas automáticas preventivas},
-  prioridad    = {Alta (Must) --- Etapa 1 (Mes 16)},
-  origen       = {CA-05; D-18},
+  descripcion  = {Consolidar las cerca de 6.000 vigencias de conductores y equipos en un registro único con titular, responsable de renovación, vencimiento, respaldo y efecto sobre la asignación, con alertas a 60, 30 y 7 días},
+  actor        = {Prevención de riesgos y control de flota},
+  precondicion = {Vigencias migradas desde las cuatro planillas con verificación documental de cada una},
+  resultado    = {Registro único que bloquea la asignación con cualquier vigencia vencida},
+  prioridad    = {1. Etapa 1, mes 16},
+  origen       = {Caso 5. CA-05. DP-18. RT-05.15 y RT-16.21. REQ-NEG-02},
   cumple       = {Sí},
-  componente   = {Gestión Documental; MDM; Vigencias; WORM}
+  componente   = {Personas y cumplimiento, con las vigencias de equipos en Flota y activos. EDT 5.1 y EDT 7.1. CP-UNIT-01 y CP-SYS-08}
 }
 \requisitoF{
   id           = RF-006,
-  descripcion  = {Antes del despacho de carga peligrosa, verificar que la carga efectiva corresponda al manifiesto y vincular carga, vehículo, conductor, habilitaciones y evidencia del punto de carga},
-  actor        = {Despachador / Prevención de Riesgos},
-  precondicion = {Orden de transporte de sustancias peligrosas con manifiesto asociado},
-  resultado    = {Cotejo conforme de carga física vs manifiesto o detención de salida},
-  prioridad    = {Alta (Must) --- Etapa 1 (Mes 16)},
-  origen       = {CA-06; R-09; D-19},
+  descripcion  = {Antes de la salida de una carga peligrosa, verificar que la carga efectiva corresponda al documento emitido y vincular carga, vehículo, conductor, habilitaciones y lista de verificación firmada},
+  actor        = {Conductor habilitado y prevención de riesgos},
+  precondicion = {Viaje asignado a uno de los 18 camiones habilitados para sustancias peligrosas},
+  resultado    = {Salida autorizada sólo con lista firmada y coincidencia entre carga y documento},
+  prioridad    = {1. Etapa 1, mes 16},
+  origen       = {Caso 7.1. CA-06. DP-19. RT-16.14. REQ-NEG-04},
   cumple       = {Sí},
-  componente   = {Orden de Transporte; Semirremolque; Despacho}
+  componente   = {Operación de fletes. EDT 5.5. CP-UNIT-19 y CP-SYS-06}
 }
 \requisitoF{
   id           = RF-007,
-  descripcion  = {Descargar la información disponible de tacógrafos, asociarla con conductor y vehículo, conservar el original y permitir su consulta. Periodicidad: meta por ratificar},
-  actor        = {Jefe de Mantenimiento / Flota},
-  precondicion = {Vehículo equipado con tacógrafo digital compatible o interfaz DSRC},
-  resultado    = {Archivo original de tacógrafo resguardado y trazado al viaje},
-  prioridad    = {Alta (Must) --- Etapa 1 (Mes 16)},
-  origen       = {CA-07; R-02; R-03; D-13},
+  descripcion  = {Descargar la información de los tacógrafos digitales instalados, asociarla al conductor y al vehículo, conservar el archivo original con su integridad y permitir su consulta},
+  actor        = {Técnico de terminal y prevención de riesgos},
+  precondicion = {Camión con tacógrafo digital de paso por un terminal},
+  resultado    = {Archivo original conservado y jornada incorporada al expediente con nivel 1},
+  prioridad    = {2. Etapa 1, mes 16},
+  origen       = {Caso 4.3. CA-07. DP-13. REQ-NEG-23},
   cumple       = {Sí},
-  componente   = {Unidad Telemática; CAN/FMS; Gestión Documental}
+  componente   = {Personas y cumplimiento. EDT 6.3. CP-HW-15 y CP-INT-21}
 }
 \requisitoF{
   id           = RF-008,
-  descripcion  = {Entregar a la torre una vista única con posición, fuente, antigüedad y nivel de evidencia de los 374 camiones, explicitando unidades sin señal o sin adhesión},
-  actor        = {Operador de Torre de Control},
-  precondicion = {Camiones registrados en flota activa con o sin telemetría},
-  resultado    = {Despliegue unificado en mapa con indicador de fuente y frescura de dato},
-  prioridad    = {Alta (Must) --- Etapa 1 (Mes 16)},
-  origen       = {CA-08; R-02; R-03; D-04; D-26},
+  descripcion  = {Entregar a la torre una vista única con posición, fuente, antigüedad y nivel de evidencia de los 374 camiones, señalando los que no reportan y por qué},
+  actor        = {Operador de la torre de programación},
+  precondicion = {Factibilidad verificada con cada plataforma de posicionamiento},
+  resultado    = {Una pantalla con toda la flota, sin pantallas por proveedor},
+  prioridad    = {2. Etapa 1, mes 16},
+  origen       = {Caso 5. CA-08. DP-04 y DP-26. REQ-NEG-18 y 19},
   cumple       = {Sí},
-  componente   = {Portal; Broker Streaming; Base de Telemetría}
+  componente   = {Telemetría y geocercas. EDT 5.4 y EDT 6.2. CP-SYS-16 y CP-UAT-01}
 }
 \requisitoF{
   id           = RF-009,
-  descripcion  = {Cada unidad intervenida deberá registrar localmente al menos 72 horas de posición, eventos, jornada, permanencias y documentos, sin pérdida, y sincronizarlos después},
-  actor        = {Unidad Telemática Embarcada},
-  precondicion = {Unidad telemática energizada en operación de transporte},
-  resultado    = {Persistencia local sin pérdida de hasta 288 horas y sincronización ordenada},
-  prioridad    = {Alta (Must) --- Etapa 1 (Mes 16)},
-  origen       = {CA-09; R-03; R-04; D-11; D-26},
+  descripcion  = {Cada equipo audIT registra a bordo posición, conducción, jornada, permanencias y documentos del viaje durante al menos 72 horas sin cobertura, sin pérdida, y los sincroniza al reconectar},
+  actor        = {Equipo a bordo},
+  precondicion = {Camión con equipo audIT en un tramo sin cobertura},
+  resultado    = {Cero eventos perdidos y sincronización en no más de 20 minutos tras la reconexión},
+  prioridad    = {1. Etapa 1, mes 16},
+  origen       = {Caso 6. CA-09. R-04. DP-11. RT-03.10 y RT-03.13. REQ-NEG-20},
   cumple       = {Sí},
-  componente   = {Búfer a Bordo; Unidad Telemática; IoT Hub}
+  componente   = {Telemetría y geocercas, en el equipo a bordo. EDT 4.1. CP-HW-03 y CP-PERF-02}
 }
 \requisitoF{
   id           = RF-010,
-  descripcion  = {Registrar automáticamente llegada y salida en instalaciones de clientes, sin interacción del conductor ni equipos instalados allí, conservando fuente, precisión y sello temporal},
-  actor        = {Sistema de Gestión de Viajes},
-  precondicion = {Camión con posicionamiento aproximándose a geocerca de cliente},
-  resultado    = {Sellos temporales automáticos de entrada y salida sin intervención en destino},
-  prioridad    = {Alta (Must) --- Etapa 1 (Mes 16)},
-  origen       = {CA-10; R-01; R-09; D-08},
+  descripcion  = {Registrar automáticamente la llegada y la salida en los cerca de 1.400 puntos de carga y descarga, sin acción del conductor ni equipos instalados en ellos, con fuente y sello de tiempo},
+  actor        = {Equipo a bordo y torre},
+  precondicion = {Punto de cliente con geocerca virtual registrada},
+  resultado    = {Hora de llegada y salida sellada en el momento del evento},
+  prioridad    = {2. Etapa 1, mes 16},
+  origen       = {Caso 4.7. CA-10. R-01 y R-09. DP-08. RT-09.01. REQ-NEG-05},
   cumple       = {Sí},
-  componente   = {Unidad Telemática; Geocercas; Telemetría}
+  componente   = {Telemetría y geocercas. EDT 5.4. CP-UNIT-08 y CP-SYS-03}
 }
 \requisitoF{
   id           = RF-011,
-  descripcion  = {Generar evidencia consultable de tiempos de espera y relacionarla con viaje, reglas contractuales y cobro de sobreestadía. Meta D2 ratificada: objeciones ≤20 \% de cobros respaldados en E2},
-  actor        = {Administración y Finanzas},
-  precondicion = {Vehículo detenido en instalación de cliente fuera de tolerancia},
-  resultado    = {Expediente de sobreestadía con cálculo y evidencia para facturación},
-  prioridad    = {Alta (Must) --- Etapa 1 (Mes 16)},
-  origen       = {CA-11; D-08},
+  descripcion  = {Calcular el tiempo de espera de cada visita según el tiempo libre del contrato del cliente, regla RN-07, y dejar la evidencia consultable para el cobro},
+  actor        = {Área comercial y cliente},
+  precondicion = {Llegada y salida registradas por RF-010},
+  resultado    = {Cobro por espera respaldado por eventos sellados},
+  prioridad    = {2. Etapa 1, mes 16},
+  origen       = {Caso 4.7. CA-11. DP-08. REQ-NEG-06},
   cumple       = {Sí},
-  componente   = {Liquidaciones; Tarifas; Portal; WORM}
+  componente   = {Operación de fletes. EDT 5.5. CP-UNIT-12 y CP-SYS-03}
 }
 \requisitoF{
   id           = RF-012,
-  descripcion  = {Obtener conformidad mediante firma y OTP del receptor identificado, con sello temporal, ubicación y evidencia; operar offline y sincronizar después. Meta D2 ratificada: cero pérdidas y ≥99 \% disponible el mismo día},
-  actor        = {Conductor / Receptor de Carga},
-  precondicion = {Arribo a destino y entrega física de la carga},
-  resultado    = {Comprobante digital de entrega con OTP y firma en menos de 24 horas},
-  prioridad    = {Alta (Must) --- Etapa 1 (Mes 16)},
-  origen       = {CA-12; R-04; R-09; D-10},
+  descripcion  = {Obtener la conformidad de entrega con firma electrónica del destinatario identificado, sello de tiempo y ubicación, aun sin cobertura, y dejarla disponible el mismo día},
+  actor        = {Conductor y destinatario},
+  precondicion = {Entrega en el punto de descarga},
+  resultado    = {Conformidad disponible para facturar el mismo día, o al reconectar si no hay señal},
+  prioridad    = {2. Etapa 1, mes 16},
+  origen       = {Caso 4.5. CA-12. DP-10. RT-16.14. REQ-NEG-10},
   cumple       = {Sí},
-  componente   = {Aplicación Móvil; Búfer; WORM}
+  componente   = {Operación de fletes. EDT 5.5. CP-SYS-04 y CP-INT-20}
 }
 \requisitoF{
   id           = RF-013,
-  descripcion  = {Generar desde la orden la información requerida para el documento electrónico de transporte, sin redigitación y manteniendo al sistema contable como único emisor tributario},
-  actor        = {Sistema de Despacho / ERP Contable},
-  precondicion = {Asignación confirmada y validación bloqueante superada},
-  resultado    = {Payload generado para el ERP contable sin redigitación manual},
-  prioridad    = {Alta (Must) --- Etapa 1 (Mes 16)},
-  origen       = {CA-13; R-08; D-03; D-09},
+  descripcion  = {Generar desde la orden los datos del documento electrónico de transporte y entregarlos al sistema contable, que lo emite, sin redigitación},
+  actor        = {Despachador y sistema contable},
+  precondicion = {Viaje asignado con datos de carga},
+  resultado    = {Documento emitido por el sistema contable en no más de 90 segundos},
+  prioridad    = {1. Etapa 1, mes 16},
+  origen       = {Caso 9.10. CA-13. R-08. DP-03 y DP-09. RT-09.01. REQ-NEG-09},
   cumple       = {Sí},
-  componente   = {Orden; ACL; Adaptador ERP; Transformador}
+  componente   = {Operación de fletes y capa anticorrupción. EDT 6.1. CP-INT-11 y CP-INT-12}
 }
 \requisitoF{
   id           = RF-014,
-  descripcion  = {Disponer del documento electrónico de transporte conforme antes de iniciar el movimiento, incluso en puntos de carga sin cobertura, mediante un mecanismo declarado, validado y soportado por el sistema contable como único emisor. Una solicitud en cola para emisión posterior no satisface el requisito; sin documento conforme se bloquea la salida},
-  actor        = {Conductor / Sistema de Despacho},
-  precondicion = {Inicio de movimiento del camión en origen o faena remota},
-  resultado    = {Documento conforme previo al movimiento emitido por ERP contable},
-  prioridad    = {Alta (Must) --- Etapa 1 (Mes 16)},
-  origen       = {CA-14; R-04; R-08; D-09},
+  descripcion  = {Disponer del documento electrónico de transporte emitido por el sistema contable antes del movimiento, también en un punto de carga sin cobertura, por emisión anticipada o por datos enviados por enlace satelital},
+  actor        = {Conductor y sistema contable},
+  precondicion = {Punto de carga sin cobertura identificado en la caracterización en terreno},
+  resultado    = {Folio a bordo antes de que el camión se mueva, sin que ningún equipo emita},
+  prioridad    = {1. Etapa 1, mes 16},
+  origen       = {Caso 4.5. CA-14. R-04 y R-08. DP-09. REQ-NEG-09},
   cumple       = {Sí},
-  componente   = {Búfer; ACL; Broker; DLQ; mecanismo conforme por definir y validar}
+  componente   = {Operación de fletes, con enlace satelital del equipo a bordo. EDT 6.1 y EDT 4.1. CP-UNIT-21 y CP-HW-11}
 }
 \requisitoF{
   id           = RF-015,
-  descripcion  = {Recomendar retornos que maximicen el margen esperado después de respetar ubicación, jornada, habilitaciones, compatibilidad, plazo, nivel de servicio y aceptación. Meta D2 ratificada: kilómetros vacíos ≤18 \% en población comparable},
-  actor        = {Planificador de Tráfico},
-  precondicion = {Viaje troncal de ida finalizado o próximo a destino},
-  resultado    = {Recomendación de retornos optimizada reduciendo kilómetros en vacío},
-  prioridad    = {Media (Should) --- Etapa 2 (Mes 21)},
-  origen       = {CA-15; R-02; D-14},
+  descripcion  = {Proponer el retorno de un camión que va a quedar vacío con carga que la propia compañía gestiona, respetando jornada, habilitaciones, compatibilidad, plazo y la regla RN-09},
+  actor        = {Planificador de la torre},
+  precondicion = {Viaje en curso con descarga estimada y cargas pendientes compatibles},
+  resultado    = {Retorno propuesto antes de la descarga, con kilómetros en vacío evitados},
+  prioridad    = {3. Etapa 2, mes 21},
+  origen       = {Caso 7.2. CA-15. DP-14. REQ-NEG-07},
   cumple       = {Sí},
-  componente   = {Lakehouse; Capa Semántica; optimizador por definir}
+  componente   = {Planificación y tráfico. EDT 8.2. CP-UNIT-15 y CP-SYS-09}
 }
 \requisitoF{
   id           = RF-016,
-  descripcion  = {Conocer sistemáticamente el costo real por kilómetro y viaje, ruta y contrato; publicar el costo consolidado por viaje dentro de 24 horas de su cierre, con componentes disponibles y faltantes explícitos, y disponer del costo real por ruta antes de la renegociación de 2027. D2 ratifica versionado inicial/consolidado sin sobrescritura y meta E1 de ≥95 \% de viajes trazables y 100 \% de rutas y contratos modelados; debe validarse su equivalencia con RT-05.29},
-  actor        = {Control de Gestión y Finanzas},
-  precondicion = {Viaje concluido y eventos operacionales consolidados},
-  resultado    = {Costo consolidado publicado en 24 h post-cierre y costo por ruta},
-  prioridad    = {Alta (Must) --- Etapa 1 (Mes 16)},
-  origen       = {CA-16; CA-17; CA-19; FEP03 cap.15 RT-05.29; D-15; D-16; D-17},
+  descripcion  = {Calcular el costo real por kilómetro y por viaje, por ruta y por contrato, y publicar el costo de cada viaje dentro de 24 horas de su cierre con los componentes disponibles y la indicación de los faltantes},
+  actor        = {Gerencia de administración y finanzas},
+  precondicion = {Viaje cerrado con kilómetros, tiempos y peajes registrados},
+  resultado    = {Costo preliminar en 24 horas y definitivo al llegar el combustible},
+  prioridad    = {2. Etapa 1, mes 16, con estudio por ruta en el mes 6},
+  origen       = {Caso 4.1 y 7.3. CA-16, CA-17 y CA-19. DP-15 y DP-17. RT-05.29. REQ-NEG-11 y 12},
   cumple       = {Sí},
-  componente   = {ETL; Conciliación; Lakehouse; FACT\_COSTO\_VIAJE}
+  componente   = {Liquidación y costeo. EDT 5.6 y EDT 2.5. CP-INT-23 y CP-SYS-15}
 }
 \requisitoF{
   id           = RF-017,
-  descripcion  = {Distinguir costo interno de flota propia y costo contractual de usar flota subcontratada; incorporar costos internos del tercero solo con información open-book autorizada},
-  actor        = {Analista de Costos y Finanzas},
-  precondicion = {Liquidaciones de viaje cerradas para flota mixta},
-  resultado    = {Estructura analítica diferenciada entre costo interno y tarifa tercero},
-  prioridad    = {Alta (Must) --- Etapa 1 (Mes 16)},
-  origen       = {CA-16; R-02; D-16},
+  descripcion  = {Distinguir el costo interno de la flota propia del costo contractual de la flota subcontratada y compararlos a igualdad de componentes},
+  actor        = {Gerencia de administración y finanzas},
+  precondicion = {Costo de viaje calculado por RF-016},
+  resultado    = {Comparación entre flota propia y subcontratada por ruta},
+  prioridad    = {2. Etapa 1, mes 16},
+  origen       = {Caso 7.3. CA-16. R-02. DP-16. REQ-NEG-12},
   cumple       = {Sí},
-  componente   = {FACT\_COSTO\_VIAJE; DIM\_PROPIEDAD\_FLOTA; Tarifas}
+  componente   = {Liquidación y costeo. EDT 5.6. CP-INT-23 y CP-SYS-10}
 }
 \requisitoF{
   id           = RF-018,
-  descripcion  = {Relacionar kilometraje, consumo, ruta, vehículo, conductor y condiciones para explicar la dispersión de rendimiento entre camiones comparables. Meta D2 ratificada: explicar ≥80 \% de la variación comparable},
-  actor        = {Jefe de Flota y Operaciones},
-  precondicion = {Datos telemáticos de odometría y combustible sincronizados},
-  resultado    = {Explicación estadística del 80 \% de variación en consumo por cohorte},
-  prioridad    = {Media (Should) --- Etapa 2 (Mes 21)},
-  origen       = {CA-18; D-12; D-15},
+  descripcion  = {Relacionar kilometraje, consumo, ruta, vehículo, conductor y condiciones para explicar la dispersión de rendimiento entre camiones del mismo modelo y ruta},
+  actor        = {Control de flota},
+  precondicion = {Doce meses de consumo y kilometraje por viaje},
+  resultado    = {Modelo que explica la dispersión en población comparable},
+  prioridad    = {3. Etapa 2, mes 21},
+  origen       = {Caso 7.3. CA-18. DP-12 y DP-15},
   cumple       = {Sí},
-  componente   = {Lakehouse; Capa Semántica; Conciliación GPS}
+  componente   = {Liquidación y costeo, sobre el repositorio analítico. EDT 8.5. CP-INT-18 y CP-PERF-09}
 }
 \requisitoF{
   id           = RF-019,
-  descripcion  = {Calcular la liquidación del transportista desde viajes, tarifas, anticipos, peajes, sobreestadías y ajustes, dejando la intervención manual como excepción auditable. Meta D2 ratificada: ≤1 día hábil y ≤2 \% de correcciones en E1},
-  actor        = {Encargado de Liquidaciones},
-  precondicion = {Período mensual de viajes ejecutados cerrado},
-  resultado    = {Pre-liquidación automatizada con menos del 2 \% de correcciones},
-  prioridad    = {Alta (Must) --- Etapa 1 (Mes 16)},
-  origen       = {CA-20; D-03; D-16},
+  descripcion  = {Calcular la liquidación mensual de cada transportista desde viajes cerrados con evidencia, tarifas pactadas, espera recuperada y ajustes, según la regla RN-08, con la corrección manual como excepción registrada},
+  actor        = {Área de liquidaciones},
+  precondicion = {Cierre mensual con viajes conformes},
+  resultado    = {Liquidación en un día hábil con menos del 1 \% corregido},
+  prioridad    = {2. Etapa 1, mes 16},
+  origen       = {Caso 7.3. CA-20. DP-03 y DP-16. REQ-NEG-16},
   cumple       = {Sí},
-  componente   = {Liquidaciones; Transportista; ACL}
+  componente   = {Liquidación y costeo. EDT 5.6. CP-INT-24 y CP-SYS-10}
 }
 \requisitoF{
   id           = RF-020,
-  descripcion  = {Permitir a cada transportista autenticado consultar sus viajes, estados, evidencias y liquidación en curso, restringidos a su operación},
-  actor        = {Transportista Subcontratado},
-  precondicion = {Transportista con credenciales activas en portal},
-  resultado    = {Visualización segura y segregada de viajes y liquidaciones del tercero},
-  prioridad    = {Alta (Must) --- Etapa 1 (Mes 16)},
-  origen       = {CA-21; CA-29; D-02; D-23},
+  descripcion  = {Permitir a cada transportista consultar sus viajes, estados, evidencias y liquidación en curso, restringido a su propia operación},
+  actor        = {Transportista subcontratado},
+  precondicion = {Transportista autenticado con anexo firmado},
+  resultado    = {Liquidación en curso visible en cualquier momento},
+  prioridad    = {2. Etapa 1, mes 16},
+  origen       = {Caso 9. CA-21 y CA-29. DP-02. RT-16.30. REQ-NEG-16},
   cumple       = {Sí},
-  componente   = {Portal; Entra ID; Transportista}
+  componente   = {Liquidación y costeo, por el portal del transportista. EDT 5.7. CP-SEC-07 y CP-PERF-10}
 }
 \requisitoF{
   id           = RF-021,
-  descripcion  = {Permitir al cliente autorizado consultar posición y estado de su carga solo durante el servicio y dentro de lo autorizado por el titular de los datos},
-  actor        = {Cliente Corporativo},
-  precondicion = {Cliente con orden de transporte activa y consentimiento del titular},
-  resultado    = {Seguimiento seguro de posición limitado a la ventana del servicio},
-  prioridad    = {Alta (Must) --- Etapa 1 (Mes 16)},
-  origen       = {CA-22; R-02; R-03; D-23},
+  descripcion  = {Permitir al cliente autorizado ver la posición y el estado de su carga sólo durante el servicio y dentro de lo que cada dueño de camión autorizó},
+  actor        = {Cliente},
+  precondicion = {Consentimiento vigente del dueño del camión para ese cliente},
+  resultado    = {Posición publicada al cliente en no más de 2 minutos con cobertura},
+  prioridad    = {2. Etapa 2, mes 21},
+  origen       = {Caso 13.1 y 13.2. CA-22. R-02 y R-03. DP-23. RT-09.01. REQ-NEG-25},
   cumple       = {Sí},
-  componente   = {Portal; Entra ID; Consentimiento; Telemetría}
+  componente   = {Telemetría y geocercas, por el portal del cliente. EDT 8.1. CP-SYS-19 y CP-PERF-07}
 }
 \requisitoF{
   id           = RF-022,
-  descripcion  = {Permitir al dueño otorgar, consultar y revocar permisos por camión, viaje, dato, destinatario y periodo, manteniendo bitácora y distinguiendo captura futura, visibilidad y retención obligatoria. Meta D2 ratificada: revocación de datos futuros efectiva en ≤5 min},
-  actor        = {Dueño del Camión / Titular Datos},
-  precondicion = {Titular autenticado en módulo de gobernanza de privacidad},
-  resultado    = {Registro granular de consentimientos y revocación en menos de 5 minutos},
-  prioridad    = {Alta (Must) --- Etapa 1 (Mes 16)},
-  origen       = {CA-23; CA-29; R-02; R-03; D-23},
+  descripcion  = {Permitir al dueño del camión otorgar, consultar y revocar permisos por camión, dato, destinatario y período, con bitácora de cada acceso a localización},
+  actor        = {Transportista subcontratado},
+  precondicion = {Transportista autenticado},
+  resultado    = {Revocación efectiva en no más de cinco minutos, con registro},
+  prioridad    = {1. Etapa 1, mes 16},
+  origen       = {Caso 18. CA-23 y CA-29. DP-23. RT-16.09 y RT-16.30. REQ-NEG-17},
   cumple       = {Sí},
-  componente   = {Consentimiento; Portal; Auditoría; Entra ID}
+  componente   = {Personas y cumplimiento, por el portal del transportista. EDT 5.7. CP-SEC-04 y CP-SEC-05}
 }
 \requisitoF{
   id           = RF-023,
-  descripcion  = {Calcular emisiones de CO2e por tonelada-kilómetro con metodología ISO 14083/GLEC declarada y verificable, incluidos terceros, y consolidación mensual. Decisión D2 ratificada: base, línea base y método en E1; cálculo productivo completo en E2, con consumo real donde exista y factores documentados y versionados},
-  actor        = {Analista de Sostenibilidad / ESG},
-  precondicion = {Datos de tonelaje transportado y distancia recorrida consolidados},
-  resultado    = {Informe mensual de emisiones CO2e conforme a ISO 14083 / GLEC},
-  prioridad    = {Alta (Must) --- Etapa 1 (Mes 16)},
-  origen       = {CA-24; FEP03 cap.15 RT-05.29; R-02; D-22},
+  descripcion  = {Calcular las emisiones por tonelada-kilómetro con metodología declarada y verificable, incluidos los camiones subcontratados, con consolidación mensual},
+  actor        = {Gerencia general y cliente},
+  precondicion = {Método fijado en la Etapa 1 y consumo o rendimiento por viaje},
+  resultado    = {Reporte mensual de emisiones por cliente y contrato},
+  prioridad    = {2. Etapa 2, mes 21, con método en la Etapa 1},
+  origen       = {Caso 13.2. CA-24. DP-22. RT-05.29. REQ-NEG-24},
   cumple       = {Sí},
-  componente   = {Lakehouse; Capa Semántica; motor por definir}
+  componente   = {Liquidación y costeo, sobre el repositorio analítico. EDT 8.3. CP-UNIT-09 y CP-SYS-17}
 }
 \requisitoF{
   id           = RF-024,
-  descripcion  = {Permitir que un taller externo registre una intervención, incluso offline, identificando taller, técnico, activo, fecha, kilometraje, trabajo, repuestos y evidencia, con validación previa a la hoja de vida. Meta D2 ratificada: ≥95 \% recibidas y 100 \% de las validadas incorporadas},
-  actor        = {Taller Mecánico Externo},
-  precondicion = {Intervención mecánica requerida o ejecutada en taller externo},
-  resultado    = {Registro estandarizado de mantención incorporado a la hoja de vida},
-  prioridad    = {Media (Should) --- Etapa 2 (Mes 21)},
-  origen       = {CA-25; R-04; R-09; D-21},
+  descripcion  = {Permitir que un taller externo registre su intervención, incluso sin cobertura, con taller, activo, fecha, kilometraje, trabajo y repuestos},
+  actor        = {Taller externo},
+  precondicion = {Taller registrado como usuario externo},
+  resultado    = {Intervención incorporada a la hoja de vida del equipo},
+  prioridad    = {2. Etapa 2, mes 21},
+  origen       = {Caso 11. CA-25. R-04. DP-21. RT-12.12. REQ-NEG-15},
   cumple       = {Sí},
-  componente   = {Interfaz Taller; Aplicación Móvil; Gestión de Flota}
+  componente   = {Flota y activos. EDT 8.4. CP-INT-17 y CP-UAT-02}
 }
 \requisitoF{
   id           = RF-025,
-  descripcion  = {Gatillar mantenimiento preventivo con kilometraje real trazable y mostrar explícitamente el nivel de estimación cuando no exista telemetría},
-  actor        = {Jefe de Mantenimiento},
-  precondicion = {Lectura periódica de odometría o kilometraje estimado},
-  resultado    = {Planes preventivos gatillados por kilometraje real trazable},
-  prioridad    = {Alta (Must) --- Etapa 1 (Mes 16)},
-  origen       = {CA-26; R-03; R-06; D-12; D-21},
+  descripcion  = {Gatillar el mantenimiento preventivo con el kilometraje real del equipo a bordo o de la telemetría de fábrica, indicando cuando el dato es estimado},
+  actor        = {Jefatura de taller},
+  precondicion = {Kilometraje real disponible por viaje},
+  resultado    = {Orden preventiva generada por kilometraje real hacia el sistema de taller},
+  prioridad    = {2. Etapa 2, mes 21},
+  origen       = {Caso 5. CA-26. R-06. DP-12 y DP-21. REQ-NEG-13 y 14},
   cumple       = {Sí},
-  componente   = {Gestión de Flota; rFMS; Telemetría}
+  componente   = {Flota y activos. EDT 8.4 y EDT 6.4. CP-UNIT-14 y CP-HW-04}
 }
 \requisitoF{
   id           = RF-026,
-  descripcion  = {Administrar adhesión de los 148 transportistas, registrando invitación, condiciones, consentimiento, estado, fecha, equipos y capacidades habilitadas. Meta D2 ratificada: ≥70 \% (104/148) al cierre E1 y ≥90 \% (134/148) al cierre E2},
-  actor        = {Coordinador de Transportistas},
-  precondicion = {Transportista tercero invitado al proceso de enrolamiento},
-  resultado    = {Tablero de control de adhesión con avance hacia metas de 70 \% y 90 \%},
-  prioridad    = {Alta (Must) --- Etapa 1 (Mes 16)},
-  origen       = {CA-27; R-02; R-03; D-02; D-05},
+  descripcion  = {Registrar la adhesión de cada transportista: invitación, anexo, modalidad, camiones, consentimientos, capacidades habilitadas y fechas},
+  actor        = {Coordinación de adhesión},
+  precondicion = {Campaña de adhesión iniciada},
+  resultado    = {Ocho indicadores de adhesión medidos cada mes},
+  prioridad    = {2. Etapa 1, mes 16},
+  origen       = {Caso 19. CA-27. R-02 y R-03. DP-02 y DP-05. REQ-NEG-19},
   cumple       = {Sí},
-  componente   = {Portal; Transportista; Consentimiento}
+  componente   = {Flota y activos. EDT 9.2 y EDT 5.2. CP-SYS-05 y CP-UAT-09}
 }
 \requisitoF{
   id           = RF-027,
-  descripcion  = {Calcular a bordo una alerta anticipada según jornada restante, ubicación, ruta y tiempo hasta un lugar seguro. Margen mínimo: meta por ratificar},
-  actor        = {Conductor en Ruta},
-  precondicion = {Camión en ruta con registro activo de horas de conducción},
-  resultado    = {Alerta acústica/visual a bordo antes de agotar límite de conducción continua},
-  prioridad    = {Alta (Must) --- Etapa 1 (Mes 16)},
-  origen       = {CA-28; R-01; R-04; D-07},
+  descripcion  = {Calcular a bordo la alerta de jornada próxima a agotarse según jornada restante, posición, ruta y tiempo hasta el lugar seguro de detención más cercano},
+  actor        = {Conductor y torre},
+  precondicion = {Catálogo de lugares seguros de detención levantado en la Etapa 1},
+  resultado    = {Toda alerta indica un lugar alcanzable antes de agotar la jornada},
+  prioridad    = {2. Etapa 1, mes 16},
+  origen       = {Caso 8. CA-28. R-01 y R-04. DP-07. RT-09.01 y RT-16.21. REQ-NEG-22},
   cumple       = {Sí},
-  componente   = {Unidad Telemática; Búfer; Control de Jornada}
+  componente   = {Personas y cumplimiento, calculado en el equipo a bordo. EDT 4.1 y EDT 5.1. CP-UNIT-18 y CP-HW-06}
 }
 \requisitoF{
   id           = RF-028,
-  descripcion  = {Durante la transición, distinguir validación telemática completa y documental controlada, sin presentar el modo degradado como equivalente ni reducir controles legales o de seguridad},
-  actor        = {Despachador y Operador de Torre},
-  precondicion = {Proceso de asignación o despacho sobre flota con estado mixto},
-  resultado    = {Operación homogénea en torre distinguiendo niveles de evidencia},
-  prioridad    = {Alta (Must) --- Etapa 1 (Mes 16)},
-  origen       = {CA-01; CA-02; CA-08; CA-27; R-02; R-03; R-07; D-26},
+  descripcion  = {Durante el período mixto, mostrar y aplicar el nivel de evidencia de cada camión, completo, de datos o documental, sin presentar un nivel menor como equivalente},
+  actor        = {Despachador de la torre},
+  precondicion = {Flota con camiones en distintas modalidades de adhesión},
+  resultado    = {Una sola forma de despachar con niveles de evidencia distintos y visibles},
+  prioridad    = {2. Etapa 1, mes 16},
+  origen       = {Caso 13.3. CA-01, CA-02, CA-08 y CA-27. R-02 y R-03. DP-26},
   cumple       = {Sí},
-  componente   = {Despacho; Portal; Unidad; Gestión Documental}
+  componente   = {Planificación y tráfico. EDT 5.3. CP-SYS-05 y CP-UAT-09}
 }
 
-% --- REQUERIMIENTOS NO FUNCIONALES (RNF-001 a RNF-014) ---
+% --- REQUERIMIENTOS NO FUNCIONALES -----------------------------------------
 \requisitoNF{
-  id          = RNF-001,
-  descripcion = {Ninguna función exigirá interacción del conductor con un dispositivo mientras el vehículo esté en movimiento; toda captura y alerta en marcha será automática},
-  categoria   = {Seguridad y ergonomía},
-  umbral      = {Cero pulsaciones o interacción física del chofer con $v > 0$ km/h},
-  exigible    = {Compañía y terceros},
-  metodo      = {Prueba en vehículo y revisión de interfaces.},
-  prioridad   = {Alta (Must) --- Etapa 1 (Mes 16)},
-  origen      = {R-01; CA-10; CA-28},
-  cumple      = {Sí},
-  componente  = {Unidad Telemática; Identificación; Aplicación Móvil}
+  id           = RNF-001,
+  descripcion  = {Ninguna función exige interacción del conductor con un dispositivo mientras el vehículo se mueve. Toda captura y alerta en marcha es automática},
+  categoria    = {Usabilidad y seguridad de las personas},
+  umbral       = {Cero interacciones exigidas con el vehículo en movimiento},
+  metodo       = {Prueba en ruta con conductores reales y revisión de cada pantalla},
+  exigible     = {Compañía y terceros},
+  prioridad    = {1. Etapa 1, mes 16},
+  origen       = {R-01. CA-10 y CA-28. RT-13.08. REQ-NEG-21},
+  cumple       = {Sí},
+  componente   = {Telemetría y geocercas, equipo a bordo. EDT 4.1. CP-UNIT-11 y CP-HW-06}
 }
 \requisitoNF{
-  id          = RNF-002,
-  descripcion = {La operación esencial a bordo no dependerá de cobertura y conservará integridad, orden, sello temporal y ausencia de duplicados al sincronizar},
-  categoria   = {Disponibilidad y resiliencia},
-  umbral      = {Autonomía de 72 h (buffer vehicular de 288 h) sin pérdida ni duplicados},
-  exigible    = {Compañía y terceros adheridos},
-  metodo      = {Desconexión de 72 horas y reconciliación.},
-  prioridad   = {Alta (Must) --- Etapa 1 (Mes 16)},
-  origen      = {R-04; CA-09; D-11},
-  cumple      = {Sí},
-  componente  = {Búfer; SQLite WAL; Event Hubs; caché}
+  id           = RNF-002,
+  descripcion  = {La operación esencial a bordo no depende de la cobertura y conserva integridad, orden y ausencia de duplicados al sincronizar},
+  categoria    = {Disponibilidad},
+  umbral       = {72 horas sin cobertura con cero eventos perdidos y cero duplicados},
+  metodo       = {Prueba de 72 horas en banco y en ruta con reconexión simultánea},
+  exigible     = {Compañía y terceros con equipo audIT},
+  prioridad    = {1. Etapa 1, mes 16},
+  origen       = {R-04. CA-09. DP-11. RT-03.10. REQ-NEG-20},
+  cumple       = {Sí},
+  componente   = {Telemetría y geocercas, equipo a bordo. EDT 4.1. CP-UNIT-23 y CP-HW-03}
 }
 \requisitoNF{
-  id          = RNF-003,
-  descripcion = {No se intervendrán equipos de terceros sin acuerdo expreso; las capacidades no autorizadas permanecerán deshabilitadas y visibles como tales},
-  categoria   = {Interoperabilidad y soberanía},
-  umbral      = {Cero alteración o sobreescritura de dispositivos no homologados},
-  exigible    = {Compañía y contratista},
-  metodo      = {Revisión contractual y caso no adherido.},
-  prioridad   = {Alta (Must) --- Etapa 1 (Mes 16)},
-  origen      = {R-02; R-03; D-02; D-04},
-  cumple      = {Sí},
-  componente  = {Consentimiento; IoT Hub; Portal}
+  id           = RNF-003,
+  descripcion  = {Ningún equipo de un tercero se interviene, reconfigura o reemplaza sin su acuerdo expreso. Lo no autorizado queda deshabilitado y visible como tal},
+  categoria    = {Cumplimiento e interoperabilidad},
+  umbral       = {Cero cambios sobre equipos de terceros sin anexo firmado},
+  metodo       = {Auditoría de la ingesta de plataformas y del registro de adhesión},
+  exigible     = {Compañía y contratista},
+  prioridad    = {1. Etapa 1, mes 16},
+  origen       = {R-03. DP-02 y DP-04. REQ-NEG-18},
+  cumple       = {Sí},
+  componente   = {Telemetría y geocercas, ingesta de plataformas. EDT 6.2. CP-INT-07 y CP-INT-08}
 }
 \requisitoNF{
-  id          = RNF-004,
-  descripcion = {Toda intervención física a bordo ocurrirá durante el paso normal por terminal, sin inmovilización adicional no declarada. Duración y despliegue: metas por ratificar},
-  categoria   = {Mantenibilidad y operación},
-  umbral      = {Instalación en paso por terminal en $\le 45$ min por unidad},
-  exigible    = {Compañía y contratista},
-  metodo      = {Pilotos cronometrados por familia.},
-  prioridad   = {Alta (Must) --- Etapa 1 (Mes 16)},
-  origen      = {R-05; R-10; R-11; D-25},
-  cumple      = {Sí},
-  componente  = {Kits; IoT Update; despliegue progresivo}
+  id           = RNF-004,
+  descripcion  = {Toda intervención física a bordo ocurre durante el paso normal del camión por un terminal, sin inmovilizarlo más allá de ese tiempo},
+  categoria    = {Operabilidad},
+  umbral       = {Cero horas de inmovilización adicional a la estadía normal en terminal},
+  metodo       = {Registro de portería contra registro de montaje por camión},
+  exigible     = {Contratista},
+  prioridad    = {2. Etapa 1, mes 16},
+  origen       = {R-05, R-10 y R-11. DP-25},
+  cumple       = {Sí},
+  componente   = {Flota y activos. EDT 4.2. CP-UAT-02 y CP-HW-08}
 }
 \requisitoNF{
-  id          = RNF-005,
-  descripcion = {La integración vehicular será de solo lectura, no interferirá con seguridad y tendrá autorización del fabricante cuando pueda afectar la garantía},
-  categoria   = {Seguridad vehicular e integridad},
-  umbral      = {Lectura exclusiva (0 mensajes transmitidos en CAN bus)},
-  exigible    = {Compañía y contratista},
-  metodo      = {Autorización por modelo y prueba de no escritura.},
-  prioridad   = {Alta (Must) --- Etapa 1 (Mes 16)},
-  origen      = {R-06; D-12},
-  cumple      = {Sí},
-  componente  = {rFMS; acoplador; CAN/FMS}
+  id           = RNF-005,
+  descripcion  = {La lectura del vehículo es de solo lectura, sin contacto con el cableado y sin afectar garantía ni sistemas de seguridad},
+  categoria    = {Seguridad del vehículo},
+  umbral       = {Cero mensajes transmitidos al bus del vehículo},
+  metodo       = {Análisis del bus durante la prueba de montaje y autorización del fabricante cuando la pida},
+  exigible     = {Contratista},
+  prioridad    = {2. Etapa 1, mes 16},
+  origen       = {R-06. DP-12. REQ-NEG-13},
+  cumple       = {Sí},
+  componente   = {Flota y activos, equipo a bordo. EDT 4.1 y EDT 6.3. CP-UNIT-16 y CP-HW-04}
 }
 \requisitoNF{
-  id          = RNF-006,
-  descripcion = {El sistema contable seguirá como único emisor tributario; la integración evitará emisiones paralelas y será idempotente ante reintentos},
-  categoria   = {Consistencia e integración},
-  umbral      = {Cero duplicación de folios tributarios e idempotencia de emisión},
-  exigible    = {Compañía},
-  metodo      = {Prueba de emisión única y reintentos.},
-  prioridad   = {Alta (Must) --- Etapa 1 (Mes 16)},
-  origen      = {R-08; D-03; D-09},
-  cumple      = {Sí},
-  componente  = {ACL; Adaptador ERP; Broker; DLQ}
+  id           = RNF-006,
+  descripcion  = {El sistema contable sigue como único emisor tributario. La integración es idempotente y nunca produce dos documentos para un viaje},
+  categoria    = {Cumplimiento e integridad},
+  umbral       = {Cero folios duplicados ante reintentos o reconexiones},
+  metodo       = {Prueba de reintentos y conciliación diaria de folios contra viajes},
+  exigible     = {Compañía},
+  prioridad    = {1. Etapa 1, mes 16},
+  origen       = {R-08. DP-03 y DP-09},
+  cumple       = {Sí},
+  componente   = {Operación de fletes y capa anticorrupción. EDT 6.1. CP-INT-12 y CP-INT-11}
 }
 \requisitoNF{
-  id          = RNF-007,
-  descripcion = {La solución no requerirá equipamiento propio ni impondrá procedimientos en puntos de carga o descarga de terceros},
-  categoria   = {No invasividad externa},
-  umbral      = {Cero instalación de hardware en recintos de clientes},
-  exigible    = {Compañía y clientes},
-  metodo      = {Inspección y piloto en instalaciones externas.},
-  prioridad   = {Alta (Must) --- Etapa 1 (Mes 16)},
-  origen      = {R-09; CA-10; CA-12},
-  cumple      = {Sí},
-  componente  = {Unidad Telemática; Geocercas; Aplicación Móvil}
+  id           = RNF-007,
+  descripcion  = {La solución no instala equipamiento ni impone procedimientos en los puntos de carga y descarga de terceros},
+  categoria    = {Cumplimiento},
+  umbral       = {Cero equipos instalados en instalaciones de clientes},
+  metodo       = {Revisión del inventario del Formulario T-11 y del procedimiento de terreno},
+  exigible     = {Compañía y clientes},
+  prioridad    = {2. Etapa 1, mes 16},
+  origen       = {R-09. CA-10 y CA-12},
+  cumple       = {Sí},
+  componente   = {Telemetría y geocercas. EDT 5.4. CP-UNIT-08 y CP-SYS-03}
 }
 \requisitoNF{
-  id          = RNF-008,
-  descripcion = {La continuidad absorberá cierres de Los Libertadores de hasta 12 días, preservando evidencia y sincronizando al recuperarse la operación},
-  categoria   = {Continuidad de negocio},
-  umbral      = {Tolerancia de 12 días continuos (288 h) en pasos fronterizos cerrados},
-  exigible    = {Compañía y terceros},
-  metodo      = {Simulación de cierre y revisión del protocolo.},
-  prioridad   = {Alta (Must) --- Etapa 1 (Mes 16)},
-  origen      = {R-04; R-12; D-20},
-  cumple      = {Sí},
-  componente  = {Búfer; Unidad Telemática; sala secundaria}
+  id           = RNF-008,
+  descripcion  = {La solución absorbe cierres del paso Los Libertadores de hasta 12 días con camiones detenidos, conservando la evidencia y sincronizando al reanudar},
+  categoria    = {Continuidad},
+  umbral       = {288 horas de registro a bordo sin pérdida},
+  metodo       = {Prueba de capacidad del almacenamiento a bordo con carga de 288 horas},
+  exigible     = {Compañía y terceros con equipo audIT},
+  prioridad    = {2. Etapa 1, mes 16},
+  origen       = {R-12. DP-20. RT-10.05},
+  cumple       = {Sí},
+  componente   = {Telemetría y geocercas, equipo a bordo y nodo de San Bernardo. EDT 4.1 y EDT 3.4. CP-HW-03 y CP-PERF-02}
 }
 \requisitoNF{
-  id          = RNF-009,
-  descripcion = {La solución será administrable por el área TI de nueve personas; toda especialidad dedicada no disponible se entregará como servicio con responsabilidades y niveles explícitos},
-  categoria   = {Operabilidad y gobierno TI},
-  umbral      = {Administración por equipo TI de 9 personas con soporte N3 delegado},
-  exigible    = {Compañía y contratista},
-  metodo      = {Revisión RACI y prueba operativa.},
-  prioridad   = {Alta (Must) --- Etapa 1 (Mes 16)},
-  origen      = {R-13},
-  cumple      = {Sí},
-  componente  = {Azure administrado; Monitor; Grafana; Arc}
+  id           = RNF-009,
+  descripcion  = {La solución es administrable por un área de tecnología de nueve personas. Toda especialidad que el mandante no tiene se entrega como servicio},
+  categoria    = {Operabilidad},
+  umbral       = {Funciones de especialista dedicado cubiertas al 100 \% por servicio 24x7x365},
+  metodo       = {Matriz de responsabilidades revisada en la transferencia},
+  exigible     = {Compañía y contratista},
+  prioridad    = {2. Etapa 1, mes 16},
+  origen       = {R-13. RT-21.06},
+  cumple       = {Sí},
+  componente   = {Plataforma transversal, servicio de operación. EDT 13.1 y EDT 11.4. CP-SYS-16 y CP-UAT-01}
 }
 \requisitoNF{
-  id          = RNF-010,
-  descripcion = {Se declarará y evaluará el costo total de operación de 36 meses: suscripciones, conectividad, nube, soporte, mantención, reposición y retiro},
-  categoria   = {Viabilidad económica y TCO},
-  umbral      = {Horizonte de 36 meses de operación y 56 meses de contrato integral},
-  exigible    = {Compañía y contratista},
-  metodo      = {Revisión del TCO y trazabilidad económica.},
-  prioridad   = {Alta (Must) --- Etapa 1 (Mes 16)},
-  origen      = {R-14; D-05; D-11},
-  cumple      = {Sí},
-  componente  = {Cost Management; FinOps; modelo D4}
+  id           = RNF-010,
+  descripcion  = {El costo de operación de 36 meses se declara por componente: nube, conectividad a bordo, soporte, reposición de equipos y retiro},
+  categoria    = {Operabilidad y costo},
+  umbral       = {100 \% de los componentes de costo de operación declarados en la Oferta Económica},
+  metodo       = {Conciliación entre el Formulario T-11 y la Oferta Económica},
+  exigible     = {Contratista},
+  prioridad    = {2. Etapa 1, mes 16},
+  origen       = {R-14. DP-05 y DP-11},
+  cumple       = {Sí},
+  componente   = {Plataforma transversal. EDT 1.1. CP-PERF-08 y CP-SYS-01}
 }
 \requisitoNF{
-  id          = RNF-011,
-  descripcion = {Los despliegues no detendrán globalmente la flota y permitirán convivencia controlada entre unidades equipadas, homologadas y no adheridas},
-  categoria   = {Transición y convivencia},
-  umbral      = {Cero interrupción de la flota y convivencia en fases de despliegue},
-  exigible    = {Compañía y terceros},
-  metodo      = {Ensayo de despliegue progresivo.},
-  prioridad   = {Alta (Must) --- Etapa 1 (Mes 16)},
-  origen      = {R-05; R-10; R-11; D-25; D-26},
-  cumple      = {Sí},
-  componente  = {Device Twins; IoT Update; despliegue progresivo}
+  id           = RNF-011,
+  descripcion  = {Los despliegues nunca detienen la flota y permiten la convivencia de camiones equipados, homologados y no adheridos},
+  categoria    = {Disponibilidad y transición},
+  umbral       = {Cero detenciones de flota por despliegue},
+  metodo       = {Registro de cada liberación con su efecto en la operación},
+  exigible     = {Compañía y terceros},
+  prioridad    = {2. Etapa 1, mes 16},
+  origen       = {R-05, R-10 y R-11. DP-25 y DP-26},
+  cumple       = {Sí},
+  componente   = {Plataforma transversal. EDT 11.2. CP-INT-05 y CP-SYS-05}
 }
 \requisitoNF{
-  id          = RNF-012,
-  descripcion = {Los registros probatorios mostrarán autor, origen, fecha, valores anteriores/posteriores y cadena de custodia, sin sobrescribir el historial},
-  categoria   = {Integridad y no repudio},
-  umbral      = {Historial inmutable append-only con hash SHA-256 encadenado},
-  exigible    = {Compañía},
-  metodo      = {Pruebas de modificación/borrado y auditoría.},
-  prioridad   = {Alta (Must) --- Etapa 1 (Mes 16)},
-  origen      = {CA-04; D-24},
-  cumple      = {Sí},
-  componente  = {Auditoría Append-Only; auditoria\_evento; WORM}
+  id           = RNF-012,
+  descripcion  = {Los registros probatorios muestran autor, origen, fecha y valores anteriores, y nunca sobrescriben el historial},
+  categoria    = {Integridad y no repudio},
+  umbral       = {Cadena de integridad verificable en el 100 \% de los registros probatorios},
+  metodo       = {Prueba de manipulación simulada y verificación por un tercero},
+  exigible     = {Compañía},
+  prioridad    = {1. Etapa 1, mes 16},
+  origen       = {CA-04. DP-24},
+  cumple       = {Sí},
+  componente   = {Personas y cumplimiento, almacenamiento inmutable. EDT 5.1. CP-SEC-08 y CP-UNIT-07}
 }
 \requisitoNF{
-  id          = RNF-013,
-  descripcion = {Los datos personales y comerciales aplicarán minimización, acceso por rol y atributo, cifrado en tránsito/reposo y protección reforzada de geolocalización, jornada y tarifas},
-  categoria   = {Privacidad y protección de datos},
-  umbral      = {Cifrado TLS 1.3 en tránsito y AES-256 en reposo con cifrado de campo},
-  exigible    = {Compañía y terceros},
-  metodo      = {Pruebas de autorización y revisión criptográfica.},
-  prioridad   = {Alta (Must) --- Etapa 1 (Mes 16)},
-  origen      = {CA-23; CA-29; D-23; D-24},
-  cumple      = {Sí},
-  componente  = {Entra ID; Key Vault; APIM; AES-256-GCM}
+  id           = RNF-013,
+  descripcion  = {Los datos personales y comerciales se tratan con minimización, acceso por rol y atributo, cifrado en tránsito y en reposo, y cifrado de campo para conductores externos, localización y tarifas},
+  categoria    = {Seguridad y privacidad},
+  umbral       = {Cifrado de campo en el 100 \% de los atributos que exige RT-11.10 del Caso},
+  metodo       = {Revisión de esquema y prueba de acceso no autorizado},
+  exigible     = {Compañía y terceros},
+  prioridad    = {1. Etapa 1, mes 16},
+  origen       = {CA-23 y CA-29. DP-23 y DP-24. RT-11.10. REQ-NEG-17},
+  cumple       = {Sí},
+  componente   = {Personas y cumplimiento, y capa de seguridad. EDT 3.2. CP-SEC-04 y CP-SEC-05}
 }
 \requisitoNF{
-  id          = RNF-014,
-  descripcion = {La conservación y eliminación respetarán plazos por dominio; la revocación no eliminará evidencia cuya retención sea legal o contractualmente obligatoria},
-  categoria   = {Cumplimiento normativo y retención},
-  umbral      = {Retención legal de 5 años para datos laborales y tributarios},
-  exigible    = {Compañía},
-  metodo      = {Pruebas de archivo, eliminación y excepción legal.},
-  prioridad   = {Alta (Must) --- Etapa 1 (Mes 16)},
-  origen      = {CA-04; CA-23; D-13; D-23; D-24},
-  cumple      = {Sí},
-  componente  = {Matriz de Retención; WORM; crypto-shredding}
+  id           = RNF-014,
+  descripcion  = {La conservación y eliminación respetan los plazos de cada dominio. La revocación de un consentimiento detiene la captura futura y no elimina evidencia cuya conservación es obligatoria},
+  categoria    = {Cumplimiento},
+  umbral       = {Plazos de RT-05.10 del Caso: jornada 5 años, documento 6, siniestros 10, posición 2 en línea},
+  metodo       = {Prueba de ciclo de vida de datos y de borrado seguro},
+  exigible     = {Compañía},
+  prioridad    = {2. Etapa 1, mes 16},
+  origen       = {CA-04 y CA-23. DP-13, DP-23 y DP-24. RT-05.10},
+  cumple       = {Sí},
+  componente   = {Plataforma transversal, capa de datos. EDT 7.3. CP-SEC-08 y CP-INT-25}
 }
+
 \end{formularioTDoce}
+
+La matriz cumple las cuatro reglas de control del Subdocumento 3. Los 42 requerimientos tienen origen,
+contexto, paquete y prueba. Los 29 criterios de aceptación tienen al menos un requerimiento, y los
+veintiséis del numeral 16.1 aparecen en algún origen. Los seis contextos y la plataforma transversal
+tienen requerimientos que los justifican.
+
+\tituloBloqueFormulario{Registro de reglas de negocio}
+
+La \tabref{t12-reglas} enuncia las doce reglas que el Subdocumento 3 resume. Cada una indica quién puede
+cambiarla. Un cambio de regla sigue el procedimiento de control de cambios del Subdocumento 6 y queda versionado.
+
+\begin{tabla}[ancho=completo, fuente=condensada]{Reglas de negocio de la solución}{t12-reglas}{L{12mm} X L{30mm}}
+ID & Enunciado & Cambia \\ \midrule
+RN-01 & Jornada del conductor de carga interurbana: no más de cinco horas de conducción continua seguidas de un descanso de al menos dos horas, ocho horas de descanso ininterrumpido en cada veinticuatro y 180 horas mensuales como tope, según el Artículo 25 bis del Código del Trabajo & Prevención de riesgos \\
+RN-02 & Conducción es tiempo con el camión en movimiento fuera de una geocerca de punto de cliente. Espera es tiempo detenido dentro de ella. Los umbrales de velocidad y duración se calibran en la marcha blanca contra el tacógrafo & Prevención de riesgos \\
+RN-03 & Con evidencia de nivel 1 a 4 se asigna. Sólo con nivel 5 se asigna con marca y responsabilidad registrada del transportista. Sin fuente se bloquea & Comité Ejecutivo \\
+RN-04 & Ninguna causa legal admite excepción. Si el bloqueo se debe a una fuente que no responde, la excepción la autorizan el jefe de turno de la torre y prevención de riesgos, vale para un viaje, registra el motivo y se revisa cada mes & Comité Ejecutivo \\
+RN-05 & El equipo es apto si su tipo corresponde a la carga, sus revisiones y permisos están vigentes, su mantenimiento no está vencido y, para carga peligrosa, cumple el DS 298 & Control de flota \\
+RN-06 & Prelación al asignar: primero el veredicto favorable, luego la ventana comprometida con el cliente, luego la menor distancia en vacío. Los viajes que salen de puntos sin cobertura y sin datos de carga previos se asignan a camiones con equipo audIT & Operaciones \\
+RN-07 & Espera es el tiempo entre la llegada y la salida por geocerca menos el tiempo libre pactado en el contrato del cliente, parametrizado por contrato & Comercial \\
+RN-08 & La liquidación de un transportista suma los viajes cerrados con conformidad por la tarifa pactada, más la parte pactada de la espera recuperada, menos los descuentos del contrato. Toda corrección posterior es un registro nuevo con motivo & Finanzas \\
+RN-09 & El retorno se ofrece al camión que quedará vacío más cerca de una carga compatible de la propia compañía, con preferencia para la flota adherida dentro del contrato vigente & Operaciones \\
+RN-10 & El equipo audIT transmite posición sólo dentro de la ventana del viaje asignado por la compañía. La revocación detiene la captura futura en no más de cinco minutos y no elimina evidencia de conservación obligatoria & Comité Ejecutivo \\
+RN-11 & Ningún viaje inicia el movimiento sin documento de transporte emitido por el sistema contable & Finanzas \\
+RN-12 & Toda vigencia avisa a 60, 30 y 7 días al titular y a quien debe actuar. Vencida, bloquea la asignación & Prevención de riesgos \\
+\end{tabla}
+
+Las reglas RN-03, RN-04 y RN-10 sólo las cambia el Comité Ejecutivo porque alteran el equilibrio entre
+seguridad, operación y privacidad que el Caso pide arbitrar. Las demás las cambia el área dueña del
+proceso.
+
+\tituloBloqueFormulario{Registro de supuestos}
+
+La \tabref{t12-supuestos} declara los supuestos del alcance con su fundamento. Su efecto si fallan y su
+validación están en la \verSeccion{sec:3-supuestos} del Subdocumento 3.
+
+\begin{tabla}[ancho=completo, fuente=condensada]{Supuestos del alcance y su fundamento}{t12-supuestos}{L{12mm} L{60mm} X}
+ID & Supuesto & Fundamento \\ \midrule
+SA-01 & El mes 1 del contrato es febrero de 2027 & Adjudicación el 1 de diciembre de 2026 y firma en enero. Único inicio que deja los meses 16 y 21 fuera de diciembre a abril sin estabilizar en el congelamiento \\
+SA-02 & Paso por terminal cada 6 días y 22 \% de terceros bajo una vez al mes & Restricción 5 del Caso \\
+SA-03 & Dos de las tres plataformas entregan datos por interfaz & Capítulo 5 del Caso: dos con acceso de consulta y una sin exportación \\
+SA-04 & El sistema contable recibe datos por interfaz & Hoy recibe por redigitación, lo que muestra que el dato le llega \\
+SA-05 & La renegociación de 2027 es posterior a julio & El Caso no da la fecha. Se confirma con finanzas en el mes 1 \\
+SA-06 & La autoridad admite el registro electrónico de jornada & Resolución Exenta 1213 de 2009 de la Dirección del Trabajo y consulta C-10 \\
+SA-07 & El mandante firma los anexos de adhesión & El contrato de transporte es entre el mandante y el transportista \\
+SA-08 & Los terceros con equipo conservan su servicio de posicionamiento & Riesgo de apagado de redes 2G y 3G tratado en el Subdocumento 8 \\
+\end{tabla}
+
+La \tabref{t12-decisiones} resuelve las veintiséis decisiones del \caso{numeral 16.1}{34 a 36}, que el
+\caso{numeral 17.1}{38} obliga a incluir en este registro.
+
+\begin{tabla}[ancho=completo, fuente=condensada]{Decisiones del numeral 16.1 tomadas por audIT}{t12-decisiones}{L{12mm} X L{34mm}}
+DP & Decisión tomada & Dónde se sostiene \\ \midrule
+01 & La jornada del conductor externo la acredita el dueño del camión con la cascada de seis niveles y la regla RN-03 & RF-002, RF-003 y \verSeccion{sec:3-evidencia} \\
+02 & Al transportista se le ofrece liquidación visible, cálculo desde la evidencia, parte de la espera recuperada y preferencia en retornos. Quien no adhiere opera sin veredicto instrumental & RF-026 y \verSeccion{sec:3-adhesion} \\
+03 & El sistema de 2013 se sustituye por funciones y se retira en el mes 21, con consulta hasta el 24 & \verSeccion{sec:3-sistema2013} \\
+04 & Dos plataformas se integran por interfaz. Los camiones de la que no exporta se tratan como sin equipo y se les ofrece la modalidad completa & RF-008 y RNF-003 \\
+05 & El equipo lo compra el mandante, queda en comodato y audIT lo instala y retira en terminal sin costo para el transportista & RF-026 e innovación 4 \\
+06 & Excepción al bloqueo según la regla RN-04 & RF-001 \\
+07 & La alerta anticipa el tiempo hasta el lugar seguro más cercano más un margen fijado en la Etapa 1 & RF-027 \\
+08 & Llegada y salida por geocerca virtual evaluada a bordo & RF-010 y RNF-007 \\
+09 & Documento sin cobertura por emisión anticipada o por datos enviados por satélite. El sistema contable siempre emite & RF-014 y \verSeccion{sec:3-viaje} \\
+10 & Conformidad con firma electrónica del destinatario en la aplicación, disponible el mismo día & RF-012 \\
+11 & Frecuencia de muestreo y consumo de datos derivados en el Subdocumento 4 & \verSeccion{sec:4-bordo} \\
+12 & Telemetría de fábrica de los 61 tractocamiones por lectura sin contacto, sujeta a la autorización de cada fabricante & RNF-005 y RF-025 \\
+13 & audIT descarga el tacógrafo en el paso por terminal, con frecuencia fijada en la Etapa 1, y conserva el original & RF-007 \\
+14 & Retorno según la regla RN-09 & RF-015 \\
+15 & Costo preliminar en 24 horas con faltantes marcados y definitivo al llegar el combustible & RF-016 \\
+16 & Costo del camión subcontratado como costo contractual, comparado a igualdad de componentes & RF-017 \\
+17 & Estudio de costo por ruta y contrato en el mes 6, antes de la renegociación de 2027 & RF-016 y \verSeccion{sec:3-criterio} \\
+18 & El transportista es responsable de renovar las vigencias de sus conductores y camiones por el anexo. La compañía avisa y bloquea & RF-005 y RN-12 \\
+19 & Lista de verificación de carga peligrosa firmada en el punto de carga contra el documento emitido & RF-006 \\
+20 & Cierre del paso: registro a bordo de 288 horas, conductor en descanso registrado y reprogramación por la torre & RNF-008 \\
+21 & El taller externo registra su intervención en la aplicación, perfil terminal y taller & RF-024 \\
+22 & Emisiones de terceros con el rendimiento del tramo cuando no hay dato de combustible, declarado como estimación & RF-023 \\
+23 & Al cliente sólo se muestra lo que el dueño del camión autorizó, durante el servicio & RF-021 y RN-10 \\
+24 & Integridad por cadena de sellos y almacenamiento inmutable. Corrección como registro nuevo & RF-004 y RNF-012 \\
+25 & Flota propia en los meses 6 a 9, terceros desde el mes 7 con adhesión y pausa en los meses 11 a 15 & \verSeccion{sec:3-implantacion} \\
+26 & Una sola forma de despachar con el nivel de evidencia de cada camión visible & RF-028 \\
+\end{tabla}
+
+Ninguna de las veintiséis queda abierta. Las decisiones 11 y 12 dependen de lo que midan la
+caracterización en terreno y la factibilidad con los fabricantes, y su resultado ajusta parámetros, no
+la decisión.
+
+\tituloBloqueFormulario{Criterios de aceptación}
+
+La \tabref{t12-criterios} compromete los 29 criterios del \caso{capítulo 18}{41 a 43} con su meta, el mes
+del contrato en que se alcanza y la forma de medirlo.
+
+\begin{tabla}[ancho=completo, fuente=condensada]{Criterios de aceptación con meta, mes y medición}{t12-criterios}{R{8mm} X R{12mm} L{62mm}}
+CA & Meta comprometida & Mes & Medición \\ \midrule
+1 & Cero salidas con jornada, habilitación o equipo no apto & 16 & Auditoría mensual del 100 \% de las asignaciones \\
+2 & 100 \% de los viajes con veredicto de jornada y su nivel de evidencia & 16 & Reporte de viajes por nivel \\
+3 & 100 \% de las asignaciones a conductores externos con veredicto disponible & 16 & Registro de asignaciones \\
+4 & 100 \% de los registros probatorios con cadena de integridad verificable & 15 & Prueba de manipulación en marcha blanca \\
+5 & 100 \% de las vigencias migradas con verificación documental y con efecto sobre la asignación & 12 & Acta de conciliación de la migración \\
+6 & Cero salidas de carga peligrosa sin lista firmada y coincidente & 16 & Auditoría de los viajes de los 18 camiones \\
+7 & 100 \% de los tacógrafos descargados en la frecuencia fijada & 12 & Frecuencia fijada en el mes 12, medida desde el 16 \\
+8 & 100 \% de la flota en una vista, con los camiones sin reporte señalados & 16 & Reporte diario de la vista única \\
+9 & Cero eventos perdidos en 72 horas sin cobertura & 15 & Prueba de 72 horas en ruta \\
+10 & 100 \% de las visitas de camiones con equipo audIT registradas por geocerca & 12 & Precisión de geocerca fijada en el mes 12 \\
+11 & Objeciones bajo el 20 \% de los cobros por espera respaldados & 21 & Promedio móvil de tres meses \\
+12 & 100 \% de las conformidades disponibles el mismo día o al reconectar & 16 & Conciliación diaria \\
+13 & 100 \% de los documentos emitidos desde la orden, sin redigitación & 16 & Conciliación de folios contra viajes \\
+14 & 100 \% de las salidas sin cobertura con folio a bordo antes del movimiento & 16 & Registro de folio contra primera posición \\
+15 & Kilómetros en vacío bajo el 18 \% en población comparable & 33 & Medición trimestral desde el mes 21 \\
+16 & 95 \% de los viajes con costo trazable por componente & 16 & Reporte mensual de costo \\
+17 & 100 \% de los viajes con costo preliminar en 24 horas & 16 & Registro de cierre contra publicación \\
+18 & Modelo que explica el 80 \% de la variación en población comparable & 21 & Validación del modelo con datos de doce meses \\
+19 & Estudio de costo por ruta y contrato antes de la renegociación & 6 & Entrega del estudio a finanzas \\
+20 & Liquidación en un día hábil con menos del 1 \% corregido & 16 & Registro de correcciones por cierre \\
+21 & 100 \% de los transportistas adheridos con acceso a su liquidación en curso & 16 & Registro de acceso al portal \\
+22 & Posición al cliente en 2 minutos dentro de lo autorizado & 21 & Medición de latencia y registro de autorizaciones \\
+23 & Revocación efectiva en no más de cinco minutos & 16 & Prueba de revocación y bitácora \\
+24 & Método declarado en el mes 16 y cálculo mensual verificable & 21 & Revisión del método por un tercero antes de 2029 \\
+25 & 100 \% de las intervenciones de talleres externos informadas en la hoja de vida & 21 & Conciliación con facturas de talleres \\
+26 & 100 \% de los preventivos de la flota propia por kilometraje real & 21 & Registro de órdenes del sistema de taller \\
+27 & 104 transportistas adheridos en el mes 16 y 134 en el 21 & 16 y 21 & Ocho indicadores mensuales de adhesión \\
+28 & 100 \% de las alertas con lugar seguro alcanzable antes de agotar la jornada & 12 & Anticipación fijada en el mes 12 con el catálogo de lugares \\
+29 & El dueño del camión ve sus camiones, viajes y liquidación y decide qué comparte & 16 & Prueba de aceptación con transportistas \\
+\end{tabla}
+
+Los criterios 7, 10 y 28 fijan su parámetro en el mes 12 con datos medidos en la Etapa 1 y se cumplen
+desde el mes 16. El criterio 19 es el único que se alcanza antes de la producción, porque la
+renegociación de 2027 no espera al Artículo 17.
+
+\tituloBloqueFormulario{Registro de consultas y vacíos}
+
+La \tabref{t12-consultas} recoge las consultas formuladas en el período del \art{43}{27} y los vacíos que
+audIT encontró después y que el \caso{numeral 16.1}{36} invita a declarar.
+
+\begin{tabla}[ancho=completo, fuente=condensada]{Consultas al mandante y vacíos detectados}{t12-consultas}{L{12mm} X L{50mm}}
+ID & Materia & Qué desbloquea \\ \midrule
+C-01 & RT-08.10 pide costo unitario de cada equipo y el Artículo 50.2 prohíbe precios en la oferta técnica & Formato del Formulario T-11 \\
+C-02 & Alcance de las 72 horas sin cobertura frente a la restricción 3 & Población a la que se exige \\
+C-03 & Tipología a la que debe llevarse la sala de San Bernardo & Dimensionamiento de la sala \\
+C-04 & Instalaciones aptas para un sitio secundario & Emplazamiento del secundario \\
+C-05 & Ampliación de la sala más allá de 26 m² & Dimensionamiento de la sala \\
+C-06 & Mediciones previas de cobertura móvil & Plazo de la caracterización \\
+C-07 & Proveedor de cada uno de los 226 camiones de terceros & Estándar de homologación \\
+C-08 & Camiones de terceros con tacógrafo digital & Alcance de la descarga \\
+C-09 & Camiones de carga peligrosa propios y de terceros & Prioridad del enlace satelital \\
+C-10 & Autorización para sustituir el registro en papel por uno electrónico & Hito regulatorio de la jornada \\
+C-11 & Códigos del capítulo 15 del Caso que en las transversales tratan otra materia & Trazabilidad de toda la oferta \\
+V-01 & Los meses 16 y 21 sólo caben fuera de diciembre a abril con inicio en febrero o marzo, y la marcha blanca de la Etapa 1 cae siempre en la temporada de fruta & Supuesto SA-01 y plan de marcha blanca \\
+V-02 & La renegociación de 2027 ocurre antes de cualquier producción posible según el Artículo 17 & Estudio de costo del mes 6 \\
+\end{tabla}
+
+Los vacíos V-01 y V-02 no están en la lista del numeral 16.1 y condicionan el plan. Ambos se resuelven
+en esta oferta sin alterar el cronograma obligatorio.
+
 \end{formulario}
