@@ -1,32 +1,95 @@
-% ============================================================================
-%  Subdocumento 9. Contenido. Se usa igual en el documento único y en el
-%  PDF propio del subdocumento. Los formularios que le asigna el T-21 se
-%  agregan solos al final (datos en formularios/ de esta carpeta).
-% ============================================================================
+% Subdocumento 9. Plan de calidad.
 
 \begin{resumenApertura}
-\marcador{Qué resuelve este subdocumento, en cuatro o cinco líneas}
+Este plan define cómo se verificará la calidad del servicio, el software y los componentes telemáticos de la solución para Transportes Curimón S.A. Establece criterios de aceptación trazables, niveles de prueba, controles de calidad y evidencia de conformidad. La disponibilidad de servicio se fija en 99,9\,\%; la continuidad local considera el mínimo de 72 horas exigido en RT-03.10. Los perfiles de carga y el calendario quedan sujetos a su conciliación con D2 y D4.
 \begin{recibe}
-  \item \marcador{Qué recibe el mandante}
+  \item Criterios de calidad y aceptación vinculados a las bases y a la matriz de requerimientos.
+  \item Estrategia de verificación desde pruebas unitarias hasta aceptación operacional.
+  \item Registro de evidencias, defectos y decisiones para cada hito.
+  \item Parámetros de carga y fechas por confirmar mediante los handshakes de arquitectura, hardware y cronograma.
 \end{recibe}
 \end{resumenApertura}
 
-\section{Marco de aseguramiento de calidad}\label{sec:9-marco-de-aseguramiento-de-calida}
+\section{Plan de calidad}\label{sec:9-plan-calidad}
 
-\marcador{ISO/IEC 25010 y modelos de madurez}
+El plan aplica controles preventivos y verificaciones basadas en riesgo a cada incremento de software, configuración de infraestructura y equipo embarcado. Los criterios de servicio provienen de las bases; los umbrales adicionales de ingeniería se identifican como propuestas y solo pasan a ser bloqueantes después de su aprobación técnica y contractual.
 
-\section{Métricas y umbrales bloqueantes}\label{sec:9-metricas-y-umbrales-bloqueantes}
+\subsection{Objetivos y métricas de aceptación}\label{sec:9-metricas}
 
-\marcador{Calidad del código, cobertura, complejidad y acoplamiento}
+La \tabref{9-metricas-calidad} distingue los compromisos trazados de los objetivos internos que aún deben validarse. Los objetivos internos no sustituyen ni rebajan los umbrales contractuales.
 
-\section{Puertas de calidad y revisiones}\label{sec:9-puertas-de-calidad-y-revisiones}
+\begin{tabla}[ancho=completo]{Métricas de calidad y trazabilidad}{9-metricas-calidad}{L{31mm} X L{37mm} L{43mm}}
+Métrica & Criterio & Naturaleza y fuente & Evidencia \\ \midrule
+Disponibilidad de servicios críticos & $\ge 99{,}9\%$ mensual E2E & Contractual: Art. 20 FEP01, p. 14; RT-10.01 FEP02, p. 22 & Monitoreo sintético y reporte del período \\
+Recuperación ante desastre & RTO $\le 4$ h; RPO $\le 15$ min & Contractual: RT-07.04 FEP02, p. 17 & Informe fechado de ejercicio de recuperación \\
+Retención local sin conectividad & Al menos 72 h, sin pérdida ni corrupción & Contractual: RT-03.10, p. 31 & Registro de desconexión, almacenamiento y sincronización \\
+Cobertura de pruebas unitarias & Umbral propuesto $\ge 80\%$ de lógica de negocio; validar con D3 & Interno; sujeto al handshake H2 & Reporte de cobertura por versión \\
+Perfil de carga y latencia & Carga, concurrencia y umbrales por dimensionar con D2 & Propuesto; no fijar peak diario sin fuente & Script versionado, parámetros aprobados y resultados \\
+\end{tabla}
 
-\marcador{Revisión por pares, análisis estático y dinámico}
+La disponibilidad se medirá sobre el servicio punta a punta y con la ventana, exclusiones y método de cómputo que establezcan las bases. El requisito de retención local es 72 h; la capacidad ampliada de 288 h es una propuesta de D4 para S4 y su verificación depende del diseño y perfil de muestreo que se confirmen.
 
-\section{Estrategia de pruebas}\label{sec:9-estrategia-de-pruebas}
+\subsection{Responsabilidades de calidad}\label{sec:9-responsabilidades}
 
-\marcador{ISO/IEC/IEEE 29119. El Formulario T-13 indica dónde está cada exigencia}
+La jefatura de aseguramiento administra el plan, la matriz de trazabilidad y el registro de defectos. Desarrollo corrige hallazgos y adjunta evidencia; QA prepara o revisa los casos y comunica resultados; arquitectura y hardware confirman los parámetros de sus componentes. La aceptación del mandante permanece en la contraparte técnica designada. La asignación nominal de responsables y las segregaciones del pipeline se ratificarán en el handshake H2.
 
-\section{Verificación, validación y trazabilidad}\label{sec:9-verificacion-validacion-y-trazab}
+\section{Estrategia de aseguramiento de calidad}\label{sec:9-estrategia}
 
-\marcador{De requerimiento a despliegue}
+La verificación combina inspección, análisis automatizado y pruebas dinámicas. Se ejecutará sobre versiones identificadas y ambientes controlados. Las herramientas, los umbrales de seguridad y las autorizaciones de despliegue quedan sujetos a la definición de D3 en H2; no se declara que los controles descritos ya estén implantados ni que las pruebas se hayan ejecutado.
+
+\subsection{Niveles, ambientes y datos de prueba}\label{sec:9-ambientes}
+
+La secuencia propuesta es: pruebas unitarias en integración continua; pruebas de integración en QA; pruebas de sistema, rendimiento y seguridad en staging; ensayos de hardware en banco HIL; y aceptación de usuario en los terminales que confirme el plan de trabajo. Producción y recuperación ante desastres se usan solo en ejercicios autorizados, con ventana, respaldo y reversión aprobados.
+
+Los datos de prueba serán sintéticos o anonimizados. El uso de datos operacionales requiere autorización, minimización, control de acceso y retención acordada. Cada conjunto de datos y script conservará versión, origen, parámetros y responsable, sin exponer datos personales reales.
+
+\subsection{Criterios de entrada, salida y gestión de defectos}\label{sec:9-criterios}
+
+Antes de iniciar una prueba deben estar identificados el requisito y el caso de prueba; disponible la versión y el ambiente; aprobados los datos, parámetros, umbrales y responsables; y definidos los respaldos y la reversión cuando corresponda. La carga diaria, concurrencia, ráfagas, número de unidades y calendario se ratificarán contra S7/T-14/T-18 y la arquitectura de D4.
+
+Una prueba se cierra cuando se conserva el resultado reproducible, la evidencia, la versión y la evaluación contra criterios previamente aprobados. No se recomienda aceptar un hito con defectos bloqueantes o críticos abiertos. Los defectos restantes requieren responsable, severidad, plazo acordado y aceptación documentada de la contraparte. Las categorías y plazos definitivos deben concordar con el contrato y el protocolo aprobado.
+
+\subsection{Puertas de calidad propuestas}\label{sec:9-puertas}
+
+La \tabref{9-puertas-calidad} establece puntos de control propuestos. La plataforma CI, los escáneres, los roles autorizadores y los umbrales no contractuales requieren validación de D3 antes de cerrar T-13.
+
+\begin{tabla}[ancho=completo]{Puertas de calidad y evidencia de salida}{9-puertas-calidad}{L{22mm} X L{49mm} L{39mm}}
+Puerta & Control propuesto & Condición de salida & Evidencia \ \midrule
+G1 — Código & Revisión por pares y análisis estático & Compilación correcta; defectos bloqueantes corregidos; cobertura reportada & Revisión y reporte CI \\
+G2 — Dependencias & Análisis de dependencias y configuración & Hallazgos evaluados y tratamiento aprobado & SBOM y reporte de escaneo \\
+G3 — Integración & Contratos e intercambio entre servicios & Casos de integración trazados aprobados & Resultados y logs de integración \\
+G4 — Sistema & Rendimiento, resiliencia y seguridad & Umbrales acordados antes del ensayo y cumplidos & Reporte de ejecución y configuración \\
+G5 — Aceptación & Pruebas funcionales con usuarios designados & Acta de aceptación o lista de observaciones acordada & Casos ejecutados, incidencias y acta \\
+G6 — Recuperación & Restauración y continuidad & RTO/RPO exigidos demostrados en ejercicio autorizado & Bitácora, marcas de tiempo y reporte \\
+\end{tabla}
+
+Una puerta fallida detiene la promoción del incremento hasta que se documente la corrección o una excepción autorizada. La configuración concreta del pipeline GitLab, los servicios cloud y las herramientas mencionadas en los borradores se integrarán solo después de la confirmación H2.
+
+\section{Alineación con el plan de trabajo}\label{sec:9-plan-trabajo}
+
+Las pruebas deben preceder a los hitos de integración, despliegue y aceptación a los que dan evidencia. La siguiente secuencia es una línea de trabajo, no un calendario: D2 debe entregar las fechas y paquetes oficiales en H4 para sustituir los marcadores y reflejar la línea base T-14/T-15/T-18.
+
+\subsection{Secuencia de hitos de calidad}\label{sec:9-hitos}
+
+\begin{tabla}[ancho=completo]{Secuencia de aseguramiento y dependencias de cronograma}{9-hitos-calidad}{L{30mm} X L{46mm} L{39mm}}
+Hito & Actividad de calidad & Evidencia de salida & Dependencia \\ \midrule
+Diseño y construcción & Revisar requisitos, riesgos, arquitectura de prueba y datos & Matriz de trazabilidad y casos revisados & T-12 y definición de diseño \\
+Integración & Ejecutar pruebas unitarias, contratos e integración & Reportes identificados por versión & Handshake H2 con D3 \\
+Validación de sistema & Ejecutar seguridad, carga, resiliencia y recuperación en staging/HIL & Informes reproducibles y defectos asociados & Dimensionamiento D2/D4 y ambientes disponibles \\
+Aceptación de hito & Ejecutar protocolo, recopilar observaciones y emitir acta & Evidencias y pronunciamiento de contraparte & Cronograma oficial H4 de D2 \\
+Marcha blanca y cierre & Medir disponibilidad, incidencias y transferencia a soporte & Reporte del período y acta de conformidad & Ventana y criterios contractuales confirmados \\
+\end{tabla}
+
+Esta secuencia organiza las evidencias de calidad alrededor de los hitos, pero no asigna fechas ni declara pruebas ejecutadas. La línea base y las ventanas deben incorporarse desde el cronograma oficial de D2 antes de emitir la versión final.
+
+\subsection{Protocolo de aceptación, observaciones y acta}\label{sec:9-protocolo-aceptacion}
+
+Para cada hito se identificará el entregable, la versión sometida, el criterio objetivo, el responsable de ejecución y la evidencia. La contraparte revisará el paquete dentro de los plazos previstos en las bases; las observaciones se registrarán con identificador, requisito relacionado, severidad, evidencia y respuesta. La versión corregida se reevalúa contra el mismo criterio y se conserva la trazabilidad de ambas revisiones.
+
+El cierre se formaliza mediante acta de conformidad o acta con observaciones pendientes, según el procedimiento contractual. La disponibilidad contractual es al menos 99,9\,%; RTO máximo 4 h y RPO máximo 15 min; la retención local mínima es 72 h. Para el resto de los criterios, el valor medido, el umbral aprobado y la fuente deben constar en el acta, sin completar resultados antes de ejecutar las pruebas.
+
+\subsection{Registro de evidencia y control de cambios}\label{sec:9-evidencias}
+
+Cada evidencia incluirá identificador de requisito/caso, fecha, versión, ambiente, datos de prueba, herramienta, resultado, defectos y responsable. Los reportes y actas se almacenarán en el repositorio controlado del proyecto con permisos y retención definidos. Todo cambio de caso, parámetro o umbral conservará motivo, aprobador, impacto y versión afectada.
+
+\marcador{Completar el calendario con las fechas y paquetes T-14/T-15/T-18 de D2 (H4), confirmar ambientes y umbrales de integración con D3 (H2), y cerrar el dimensionamiento de pruebas de hardware con D4 (H3).}
