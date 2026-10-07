@@ -773,26 +773,24 @@ del G26I declara certificaciones CE, FCC, ISED, PTCRB y AT\&T, y no declara E-Ma
 que ambas quedan como condición de compra. El equipo a bordo no emite documentos tributarios: la
 restricción~8 deja al sistema contable como único emisor \caso*{capítulo 10}{24}.
 
-\paragraph{Capacidad de almacenamiento} La observación 73 del Informe~1 pidió derivar la capacidad en
-lugar de justificarla hacia atrás. La \tabref{4-emmc} suma lo que ocupa cada parte de la memoria.
+\paragraph{Capacidad de almacenamiento} La observación 73 exige derivar la memoria sin ajustar el cálculo a los 8 GB del producto. Se distingue volumen serializado, sobrecarga física, reserva y particiones del sistema. El perfil de 72 h se calcula en \verSeccionFolio{sec:4-dimensionamiento}; 288 h es ampliación propuesta por audIT, independiente de la duración del cierre fronterizo.
 
-\begin{tabla}{Capacidad de almacenamiento a bordo derivada por componente}{4-emmc}{X R{22mm} L{62mm}}
-Componente & Tamaño & Base \\ \midrule
-Partición de arranque & 16 MB & Valor por defecto del gestor de actualizaciones \\
-Sistema A y sistema B & 2.048 MB & Imagen de hasta 1 GB cada una, se verifica en la Etapa 1 \\
-Búfer de 288 horas & 38,4 MB & 3,2 MB por cada 72 horas con fotos, por 4 y por 3 de seguridad \\
-Registros de diagnóstico & 256 MB & Tope rotativo \\
-Geocercas y datos maestros & 16 MB & 1.400 puntos de carga a 1 KB, más vigencias \\
-Total requerido & 2.374 MB & Cerca de 2,4 GB \\
+La carga serializada del perfil suma 3.237.656 bytes por 72 h; cuatro repeticiones suman 12.950.624 bytes. Se presupuesta otro tanto para índices, WAL, cifrado y metadatos, y otro tanto como reserva: 38.851.872 bytes. Son presupuestos de ingeniería, no ocupación medida ni compresión conseguida. Una partición de 64 MiB aporta 67.108.864 bytes y deja 28.256.992 bytes adicionales sobre ese presupuesto; HIL debe comprobar ocupación, reinicio e integridad del perfil completo. Si la sobrecarga real supera el presupuesto, se recalcula antes de homologar.
+
+La \tabref{4-emmc} suma asignaciones físicas en MiB ($1\,\mathrm{MiB}=1.048.576$ bytes); GB comercial se expresa en decimal. Así se evita sumar MB y MiB como si fueran equivalentes.
+
+\begin{tabla}{Asignación de almacenamiento a bordo por componente}{4-emmc}{X R{27mm} L{58mm}}
+Componente & Asignación & Base de diseño \\ \midrule
+Partición de arranque & 16 MiB & Gestor de actualización \\
+Sistema A y sistema B & 2.048 MiB & Hasta 1 GiB por imagen \\
+Búfer propuesto de 288 h & 64 MiB & 38.851.872 bytes presupuestados \\
+Diagnóstico & 256 MiB & Tope rotativo independiente \\
+Geocercas y maestros & 16 MiB & Catálogo y vigencias \\
+Total asignado & 2.400 MiB & 2.516.582.400 bytes \\
 \end{tabla}
-\notaTabla{Fuente: elaboración propia sobre el Caso, RT-03.10, p. 31, y RT-10.05, p. 32, y \textcite{mender_variables}.}
+\notaTabla{Fuente: elaboración propia; mínimo de 72 h en Caso RT-03.10, p. 31. Hipótesis y reserva verificables mediante T-17.}
 
-El caso necesita cerca de 2,4~GB. El búfer de 288 horas, que cubre los 12 días de cierre del paso Los
-Libertadores de \caso{RT-10.05}{32}, pesa menos del 2~\% del total, y la mayor parte la ocupan las dos
-particiones de sistema. Los 8~GB que se declaran son la menor configuración del G26I
-\parencite{iwave_g26i} y dejan un margen de más de tres veces sobre lo requerido. Las escrituras suman
-unos 14~GB al año, casi todo por doce actualizaciones anuales de 1~GB, cifra baja para una memoria
-industrial durante los 56 meses del contrato.
+La asignación suma aproximadamente 2,52 GB decimales. Los 8 GB nominales del G26I \parencite{iwave_g26i} son una configuración de producto; la capacidad útil después de formateo y las reservas del controlador se verifican antes de compra. No se toma la capacidad nominal como toda la memoria disponible. El presupuesto contiene las dos imágenes y no se limita a los bytes de telemetría. La reserva para almacenamiento no demuestra vida útil de escritura: se contrastan escrituras, amplificación y resistencia del fabricante durante los 56 meses. Los plazos legales de conservación corresponden al repositorio central por dominio; el búfer local no reemplaza esos plazos.
 
 % ----------------------------------------------------------------------------
 \subsection{Emplazamiento de componentes}\label{sec:4-emplazamiento}
@@ -1044,33 +1042,36 @@ estimación usa los supuestos de muestreo de la sección~4.2.9: posición cada 3
 cada 5~minutos detenido, telemetría del motor cada 60~segundos y 30 horas de marcha en 72 horas. La
 \tabref{4-buffer} muestra lo que acumula un camión en 72 horas sin cobertura.
 
-\begin{tabla}{Volumen acumulado a bordo tras 72 horas sin cobertura}{4-buffer}{X R{24mm} R{28mm}}
-Componente & Registros & Volumen \\ \midrule
-Posiciones & 4.104 & 263 KB \\
-Telemetría del motor & 1.800 & 288 KB \\
-Eventos y documentos del viaje & Cerca de 50 & 227 KB \\
-Total sin fotos & Cerca de 5.950 & 0,78 MB \\
-Fotos de evidencia & 8 & 2,46 MB \\
+El perfil de ensayo es explícito y sintético: 30 h en marcha con posición cada 30 s y 42 h detenido cada 300 s producen $3.600+504=4.104$ posiciones de 64 bytes; 30 h de motor cada 60 s producen 1.800 muestras de 160 bytes. Se propone un fixture de 45 eventos de jornada/conducción/esperas de 600 bytes, cinco documentos de 40.000 bytes y ocho fotos de 307.500 bytes. Los tamaños incluyen la serialización del fixture y se contrastan con firmware y documentos homologados; no son mediciones ni cantidades universales del caso. No se presupone compresión.
+
+La \tabref{4-buffer} separa los componentes. Los eventos/documentos suman $45\times600+5\times40.000=227.000$ bytes; todo el lote sin fotos suma 777.656 bytes.
+
+\begin{tabla}{Perfil sintético serializado de un camión tras 72 h}{4-buffer}{X R{25mm} R{35mm}}
+Componente & Cantidad & Bytes \\ \midrule
+Posiciones & 4.104 & 262.656 \\
+Motor & 1.800 & 288.000 \\
+Eventos y documentos & 45 + 5 & 227.000 \\
+Total sin fotos & 5.954 & 777.656 \\
+Fotos adjuntas & 8 & 2.460.000 \\
+Total de datos y fotos & Un lote & 3.237.656 \\
 \end{tabla}
-\notaTabla{Fuente: elaboración propia basada en el modelo analítico de dimensionamiento y supuestos S-01 a S-04 del Caso 10.}
+\notaTabla{Fuente: hipótesis analíticas y fixture de audIT; frecuencias S-02/S-03 y variantes CP-PERF-02/CP-HW-03 de T-17.}
 
-Un camión junta cerca de 6.000 registros y 0,78~MB sin contar las fotos. Agrupados en mensajes de
-4~KB, que es la unidad con que IoT Hub cuenta su cuota \parencite{ms_iothub_cuotas}, son 192 mensajes
-por camión. La \tabref{4-reconexion} aplica eso a 300 camiones que salen a la vez de una sombra, y la
-\figref{4-reconexionfig} sigue el camino de esos mensajes.
+Trescientos camiones producen 1.786.200 registros y 971.296.800 bytes incluidos adjuntos. Dividir ese volumen por veinte minutos requiere 6,48 Mbit/s útiles agregados, antes de overhead. Como presupuesto adicional se incorpora 25\,\% de transporte/metadatos y se reserva 20\,\% de la ventana para reconexión, reintentos, persistencia y conciliación: $971.296.800\times1,25\times8/960=10,12$ Mbit/s. El porcentaje es una hipótesis declarada que se contrasta en pruebas; la garantía contractual solo se comprueba midiendo la confirmación íntegra de cada camión en hasta veinte minutos.
 
-\begin{tabla}{Reconexión simultánea de 300 camiones tras 72 horas}{4-reconexion}{X R{26mm} L{50mm}}
-Cálculo & Resultado & Base \\ \midrule
-Mensajes por sincronizar & 57.600 & 300 camiones por 192 mensajes \\
-Tiempo con 100 envíos por segundo & 9,6 min & Límite de IoT Hub S1 \\
-Conexiones nuevas & 3 s & 100 por segundo \\
-Fotos en un paquete por camión & 1,5 min & 1,67 cargas por segundo por unidad, con 2 unidades \\
+La \tabref{4-reconexion} distingue tasas de operaciones y cuotas. Los bloques de 4 KiB son una elección de empaquetado del ensayo y unidad de cuota diaria, no el tamaño máximo de un mensaje ni la tasa de operaciones \parencite{ms_iothub_cuotas}.
+
+\begin{tabla}{Reconexión de 300 camiones: estimación y límites}{4-reconexion}{X R{31mm} L{48mm}}
+Cálculo & Resultado & Alcance \\ \midrule
+Paquetes de 4 KiB sin fotos & 57.000 & 300 por $\lceil777.656/4.096\rceil$ \\
+Con presupuesto de 25\,\% & 71.400 & 238 paquetes por camión \\
+Envíos a 100 operaciones/s & 11,9 min & Límite de dos unidades S1 \\
+Nuevas conexiones a 100/s & Al menos 3 s & Solo admisión, sin reintentos \\
+Inicio de 300 archivos agrupados & Al menos 90 s & 100/min por unidad; dos unidades \\
 \end{tabla}
-\notaTabla{Fuente: elaboración propia sobre \textcite{ms_iothub_cuotas} y el Caso, numeral 14.2, p. 30.}
+\notaTabla{Fuente: elaboración propia y documentación de Microsoft IoT Hub consultada el 7 de octubre de 2026.}
 
-La reconexión termina en 9,6 minutos, dentro de los 20 que fija \caso{RT-03.13}{31}. Las fotos van en
-un solo paquete por camión: con una carga por foto el mismo cálculo da 12 minutos con dos unidades y se
-come la mitad de la ventana.
+Estas estimaciones no prueban el tiempo final: admitir un archivo no lo transfiere, y aceptar un mensaje no confirma escritura ni conciliación. La transferencia de fotos comparte presupuesto de enlace; sus huellas deben compararse antes de cerrar el cronómetro. Colas, escritura, reintentos y carga normal se incluyen en CP-PERF-02. El ensayo aplica a cada camión y falla si uno excede veinte minutos o pierde registros; 288 h se ensaya separadamente como ampliación de ingeniería.
 
 \figura{figuras/04-arquitectura/reconexion.png}{Reconexión masiva: del búfer del camión a la base de datos, con los límites de cada tramo}{4-reconexionfig}
 
@@ -1078,11 +1079,12 @@ La figura sigue los cinco tramos. Cada equipo espera un tiempo aleatorio antes d
 reintenta con retroceso exponencial, de modo que los 300 no golpean la puerta en el mismo segundo. Del
 IoT Hub los mensajes pasan a Event Hubs, que desacopla la llegada del procesamiento: los consumidores en
 AKS escriben en lotes a la base de series a su propio ritmo, y el mensaje queda retenido en el bus
-aunque la base se atrase. El tramo que se satura primero es la ingesta, y por eso la columna derecha de
-la figura marca la profundidad de la cola como indicador.
+aunque la base se atrase. La admisión de ingesta es el cuello de botella previsto por el cálculo de cuotas;
+el ensayo debe contrastarlo con transferencia de fotos, procesamiento y escritura.
+La figura identifica profundidad de cola y conciliación como indicadores, sin declarar una saturación medida.
 
 En operación normal cada camión manda 768 mensajes diarios, uno por minuto en marcha y uno cada cinco
-minutos detenido. Con los 430 camiones proyectados son unos 330.000 mensajes diarios, más 57.600 de una
+minutos detenido. Con los 430 camiones proyectados son unos 330.000 mensajes diarios, más 71.400 paquetes presupuestados de una
 reconexión, dentro de los 800.000 de las dos unidades. El resto de lo que pide el numeral 14.2 está en
 la \tabref{4-estimaciones}.
 
@@ -1129,9 +1131,10 @@ en producción medidos en el percentil 95 sobre la experiencia real de la person
 fila prevalece el umbral más exigente entre ese numeral y el Caso. \transv{RT-09.03}{21} obliga a
 soportar sin rediseño un crecimiento de tres veces la volumetría inicial, y la proyección del Caso llega
 a 1,2 veces, de modo que esta oferta dimensiona sobre el requisito transversal. \transv{RT-09.05}{21}
-pide identificar el primer cuello de botella: es la ingesta durante la reconexión masiva, se detecta por
-profundidad de cola y retraso de procesamiento en Event Hubs, y se resuelve con más unidades de IoT Hub y
-de procesamiento, sin rediseño. La disponibilidad comprometida es de 99,9~\% mensual para los servicios
+pide identificar el primer cuello de botella. El modelo propone la admisión de ingesta durante
+la reconexión masiva como limitación inicial; CP-PERF-02 debe verificarlo frente al enlace,
+las fotos y la persistencia, midiendo profundidad de cola y retraso de procesamiento.
+La ampliación de unidades de IoT Hub y de procesamiento se evalúa según el tramo medido, sin presuponer que elimine otro cuello de botella. La disponibilidad comprometida es de 99,9~\% mensual para los servicios
 críticos, medida sobre la transacción de negocio de extremo a extremo \art*{20}{14}.
 
 
@@ -1149,7 +1152,7 @@ S-01 & Velocidad comercial media & 55 km/h & Medición en la Etapa 1 \\
 S-02 & Horas de marcha dentro de 72 horas & 30 horas & Régimen de descansos del artículo 25 bis \\
 S-03 & Tamaño del registro de posición & 64 bytes & Ajuste con el firmware del G26I \\
 S-04 & Volumen acumulado a bordo tras 72 horas & 0,78 MB sin fotos y 2,46 MB de fotos & Derivado en la sección 4.2.8 \\
-S-05 & Capacidad de almacenamiento a bordo & 2,4 GB requeridos sobre 8 GB & Derivada en la sección 4.2.2 \\
+S-05 & Capacidad de almacenamiento a bordo & 2,52 GB asignados sobre 8 GB nominales & Derivada en la sección 4.2.2 \\
 S-06 & Consumo mensual de datos por camión & 13 a 16 MB & Campaña de medición \\
 S-07 & Imagen de actualización del equipo a bordo & 1 GB & Medición con el primer firmware \\
 S-08 & Población con módem satelital & Los 182 equipos audIT & Decisión de diseño, no depende de la medición \\

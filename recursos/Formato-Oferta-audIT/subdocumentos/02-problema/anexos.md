@@ -9,7 +9,7 @@ Conforme a lo instruido en el Comunicado 10 (§1 y §5), las tablas de catalogac
 - **Anexo 2.D:** Fichas Detalladas de Caracterización de los Trece (13) Actores del Ecosistema.
 - **Anexo 2.E:** Condicionantes de las Veintiséis (26) Decisiones de Diseño del Caso §16.1.
 
-## Anexo 2.A: Catálogo exhaustivo de requerimientos preliminares de negocio y operacionales
+## 2.1 Anexo 2.A: Catálogo exhaustivo de requerimientos preliminares de negocio y operacionales
 
 El catálogo compendia las necesidades preliminares de negocio levantadas desde las Bases Técnicas del Caso 10, las entrevistas reproducidas en el caso con los actores operacionales y las exigencias normativas del transporte terrestre chileno. Cada requerimiento se codifica unívocamente, estableciendo su trazabilidad formal y su nivel de criticidad para la continuidad operacional en la Tabla 2.1.
 
@@ -24,15 +24,15 @@ El catálogo compendia las necesidades preliminares de negocio levantadas desde 
 | **REQ-NEG-05** | Trazabilidad y Geocercas | Acreditar automáticamente entrada, permanencia y salida en los aproximadamente 1.400 puntos de clientes, sin intervención del conductor ni equipamiento instalado en predios ajenos. | Caso 10, Cap. 4.7, Entrevista E. Valdebenito | Alta |
 | **REQ-NEG-06** | Cobro de Sobreestadías | Conservar evidencia cronológica íntegra y atribuible de los tiempos de espera para sustentar cobros legítimos. El 71% de cobros objetados describe el problema, no una recuperación garantizada. | Caso 10, Cap. 4.7, Entrevista G. Ossandón | Alta |
 | **REQ-NEG-07** | Retornos en Vacío | Identificar en tiempo real los tractocamiones que finalizarán su descarga para sugerir triangulaciones con cargas de retorno compatibles, reduciendo el 26% de kilómetros recorridos en vacío (10,66 millones de km anuales). | Caso 10, Cap. 4.2, Entrevista R. Mansilla | Alta |
-| **REQ-NEG-08** | Cadena de Frío | Monitorear la temperatura de los 44 semirremolques refrigerados y alertar desviaciones o aperturas no autorizadas. Los rangos, umbrales y frecuencia se definirán según carga y contrato. | Caso 10, Cap. 2.1 y 4.8, Entrevista A. Lecaros | Crítica |
+| **REQ-NEG-08** | Cadena de Frío | Monitorear la temperatura de los 44 equipos refrigerados y alertar desviaciones o aperturas no autorizadas. Los rangos, umbrales y frecuencia se definirán según carga y contrato. | Caso 10, Cap. 2.1 y 4.8, Entrevista A. Lecaros | Crítica |
 | **REQ-NEG-09** | Documentación Digital | Disponer del DET conforme antes del movimiento, incluso en puntos de carga sin cobertura; mantener al sistema contable como único emisor tributario y resolver la contingencia en la solución. | Caso 10, Cap. 4.6, Entrevista M. Riquelme | Alta |
 | **REQ-NEG-10** | Confirmación de Entrega | Obtener conformidad de entrega atribuible al destinatario y disponible para facturación y reclamos, reduciendo pérdidas y daños de soportes en papel. | Caso 10, Cap. 4.7, Entrevista G. Ossandón | Media |
 | **REQ-NEG-11** | Costeo por Ruta y Viaje | Reconstruir el costo directo del viaje con fuentes de consumo, peajes y fletes, distinguiendo estimación operacional y conciliación definitiva. La oportunidad de información debe justificarse. | Caso 10, Cap. 4.1 y 7.3, Entrevista G. Ossandón | Crítica |
 | **REQ-NEG-12** | Renegociación Contratos | Proveer a la Gerencia de Finanzas la matriz de rentabilidad histórica desagregada por cliente y ruta para renegociar los 3 contratos deficitarios (31% del ingreso, peor a -14%) previo a sus vencimientos en 2027. | Caso 10, Cap. 2.3, Entrevista G. Ossandón | Crítica |
-| **REQ-NEG-13** | Telemetría CAN bus | Capturar y procesar de forma pasiva y no intrusiva los parámetros de operación del motor (RPM, odómetro, temperatura de refrigerante, códigos DTC y consumo acumulado) en los 61 tractos con CAN bus de fábrica. | Caso 10, Cap. 4.10, Entrevista H. Trincado | Alta |
+| **REQ-NEG-13** | Telemetría CAN bus | Capturar y procesar de forma pasiva y no intrusiva los parámetros de operación del motor (RPM, odómetro, temperatura de refrigerante, códigos DTC y consumo acumulado) en los 61 tractos con telemetría de fábrica, con señales e interfaces por verificar. | Caso 10, Cap. 4.10, Entrevista H. Trincado | Alta |
 | **REQ-NEG-14** | Mantenimiento Preventivo | Generar órdenes automáticas de mantenimiento en base al kilometraje y horas de motor efectivamente acumulados por telemetría, sustituyendo la lectura visual manual de odómetros; el paso por terminal cada 6 días en promedio condiciona las instalaciones. | Caso 10, Cap. 4.10, Entrevista H. Trincado | Alta |
 | **REQ-NEG-15** | Integración Talleres Ruta | Incorporar las intervenciones de talleres externos y sus repuestos a la hoja de vida del vehículo, con identificación de quien registra y valida. | Caso 10, Cap. 4.10, Entrevista H. Trincado | Media |
-| **REQ-NEG-16** | Liquidación a Terceros | Automatizar el cálculo de pre-liquidaciones mensuales a los 148 transportistas terceros a partir de los viajes validados en sistema, reduciendo el ciclo de 9 días hábiles y la tasa de error del 11%. | Caso 10, Cap. 4.11, Entrevista G. Ossandón | Alta |
+| **REQ-NEG-16** | Liquidación a Terceros | Automatizar el cálculo de pre-liquidaciones mensuales a los 148 transportistas terceros a partir de los viajes validados en sistema, reduciendo el ciclo de 9 días y la tasa de error del 11%. | Caso 10, Cap. 4.11, Entrevista G. Ossandón | Alta |
 | **REQ-NEG-17** | Privacidad de Terceros | Limitar el tratamiento y acceso a datos personales a finalidades y períodos autorizados; permitir consentimiento granular y revocable de terceros y registrar su ejercicio. | Bases Admin. Art. 4.3, Entrevista N. Sandoval | Crítica |
 | **REQ-NEG-18** | Homologación Plataformas | Unificar la información de posición de los tres proveedores existentes para los 192 terceros con GPS, verificando acceso, actualización y restricciones de consulta o exportación. | Caso 10, Cap. 5, Entrevista P. Kast | Alta |
 | **REQ-NEG-19** | Sensorización 34 Camiones | Incorporar al control de posición a los 34 terceros sin dispositivo, preservando las restricciones de adquisición y de intervención física del caso. | Caso 10, Cap. 2.1 y 5, Entrevista E. Valdebenito | Alta |
@@ -43,7 +43,7 @@ El catálogo compendia las necesidades preliminares de negocio levantadas desde 
 | **REQ-NEG-24** | Huella de Carbono GLEC | Computar y reportar de manera mensual las emisiones de gases de efecto invernadero (g CO2e/t-km) auditables bajo norma GLEC e ISO 14083 para responder a las exigencias 2029 del cliente exportador (19%). | Caso 10, Cap. 4.6, Entrevista A. Lecaros | Crítica |
 | **REQ-NEG-25** | Trazabilidad Cliente 19% | Proveer al cliente autorizado seguimiento de su carga y documentos del viaje, conforme a los permisos revocables del titular de los datos. | Caso 10, Cap. 4.6, Entrevista A. Lecaros | Alta |
 
-## Anexo 2.B: Inventario detallado de flota y caracterización de conductores
+## 2.2 Anexo 2.B: Inventario detallado de flota y caracterización de conductores
 
 Este anexo desglosa la infraestructura vehicular móvil y la fuerza laboral que compone la operación de Transportes Curimón S.A., diferenciando el régimen de propiedad, el nivel de equipamiento telemático basal y la estrategia de integración tecnológica requerida para cada segmento.
 
@@ -55,24 +55,24 @@ El parque de tractocamiones se clasifica de acuerdo con su titularidad jurídica
 
 | **Segmento de Flota** | **Cant.** | **Partic.** | **Antigüedad** | **Equipamiento Telemático Actual** | **Requerimiento de Integración** |
 |---|---|---|---|---|---|
-| Flota Propia CAN bus Fábrica | 61 | 16,3% | No informada | Módulo telemático de fábrica con bus CAN inactivo. Nunca consultado. | Captura pasiva no invasiva sobre bus CAN sin corte ni seccionamiento de cableado. |
-| Flota Propia sin Telemetría Fábrica | 87 | 23,3% | No informada | Sin telemetría de bus de datos. Dispositivos GPS básicos de primera generación. | Requerimiento de equipamiento telemático estándar con interfaz no invasiva. |
-| Flota Terceros con GPS Previo | 192 | 51,3% | Variable (4-12 a) | Dispositivos GPS de 3 proveedores comerciales dispares (proveedores por identificar). | Acceso a posición y eventos con derechos y mecanismos de intercambio por verificar. |
-| Flota Terceros sin Dispositivo GPS | 34 | 9,1% | Variable (>10 a) | Cero equipamiento tecnológico. Monitoreo puramente telefónico por voz. | Equipamiento telemático estándar e integración de posicionamiento georreferenciado. |
-| **Total Parque Tractocamiones** | **374** | **100,0%** | **6,4 años (med)** | **Parque altamente heterogéneo.** | **Vista operacional unificada con trazabilidad de las fuentes y sus limitaciones.** |
+| Flota Propia con Telemetría Fábrica | 61 | 16,3% | No informada | Telemetría de fábrica sin descargar; interfaces y señales por verificar. | Verificar interfaces, señales y permisos; lectura pasiva no invasiva si resulta técnicamente aplicable. |
+| Resto de la Flota Propia | 87 | 23,3% | No informada | GPS existente; capacidades y generación de dispositivos por verificar. | Requerimiento de equipamiento telemático estándar con interfaz no invasiva. |
+| Flota Terceros con GPS Previo | 192 | 51,3% | No informada | GPS existente; las tres plataformas corresponden al conjunto de 340 camiones, no solo a este segmento. | Acceso a posición y eventos con derechos y mecanismos de intercambio por verificar. |
+| Flota Terceros sin Dispositivo GPS | 34 | 9,1% | No informada | Sin GPS; otro equipamiento no informado. | Equipamiento telemático estándar e integración de posicionamiento georreferenciado. |
+| **Total Parque Tractocamiones** | **374** | **100,0%** | **6,4 años (solo propios)** | **Parque altamente heterogéneo.** | **Vista operacional unificada con trazabilidad de las fuentes y sus limitaciones.** |
 
 ### 2.B.2 Inventario de semirremolques y equipos de arrastre propios (210 unidades)
 
 Curimón es propietaria del 100% de los 210 semirremolques utilizados en la operación, asegurando el acople físico de la carga independientemente de si el tracto motriz es propio o subcontratado (Tabla 2.3):
 
-**Tabla 2.3.** Inventario de semirremolques propios por tipología de carga
+**Tabla 2.3.** Magnitudes de arrastre, frío y habilitación SUSPEL
 
-| **Tipología de Semirremolque** | **Cant.** | **% Arrastre** | **Operación Principal y Clientes** | **Instrumental y Requerimiento Específico** |
+| **Magnitud informada** | **Cant.** | **Universo** | **Operación Principal y Clientes** | **Instrumental y Requerimiento Específico** |
 |---|---|---|---|---|
-| Semirremolques Refrigerados (Reefers) | 44 | 21,0% | Cadena de frío agroexportadora (diciembre-abril) e industria acuícola en Puerto Montt. | Requerimiento de control térmico continuo y apertura; parámetros por validar. |
-| Semirremolques Sustancias Peligrosas | 18 | 8,6% | Transporte químico, combustibles y reactivos mineros (Antofagasta y Concepción). | Certificación bajo D.S. N.° 298/1994, rotulación NCh 2190, extintores y revisión especial. |
-| Otras tipologías (rampla plana, furgón seco, tolva y portacontenedores) | 148 | 70,5% | Distribución por tipología no informada en las bases. | Instrumental específico por definir tras inventario validado. |
-| **Total Semirremolques Propios** | **210** | **100,0%** | **Capacidad total de arrastre corporativo.** | **Flota 100% de propiedad de Curimón S.A.** |
+| Equipos refrigerados | 44 | Universo separado | Actividad concentrada de diciembre a abril; distribución por tipo y terminal no informada. | Control térmico e inventario por validar. |
+| Camiones habilitados SUSPEL | 18 | Universo de camiones | No constituyen una categoría de semirremolques. | Habilitación, señalización y curso vigente exigible. |
+| Semirremolques propios (todas las tipologías) | 210 | Total de arrastre | Rampla plana, furgón seco, refrigerado, tolva y portacontenedores; cantidades por tipo no informadas. | Inventario desagregado pendiente. |
+| **Universos no sumables** | --- | --- | **44 equipos y 18 camiones no particionan los 210 semirremolques.** | **Validar acoples y solapamientos por unidad.** |
 
 ### 2.B.3 Caracterización detallada de la dotación de conductores (454 operadores)
 
@@ -91,7 +91,7 @@ La operación de la flota requiere una fuerza laboral de 454 choferes, estructur
 | **Resguardo de Privacidad** | Datos laborales procesados en virtud del contrato de trabajo y deber patronal. | Geocercas temporales y disociación de coordenadas: telemetría desvinculada fuera del viaje (Ley N.° 21.719). |
 | **Representante / Referente** | Yasna Colipán Marín (conductora de ruta norte, 7 años antigüedad). | Nolberto Sandoval Pinto (transportista con 2 tractos y chofer a cargo, 9 años en Curimón). |
 
-## Anexo 2.C: Matriz exhaustiva de restricciones operacionales, legales y exclusiones contractuales
+## 2.3 Anexo 2.C: Matriz exhaustiva de restricciones operacionales, legales y exclusiones contractuales
 
 Este anexo recopila de forma sistemática las restricciones legales vigentes en Chile expuestas en la Tabla 2.5, las restricciones físicas y ambientales de la red en carretera detalladas en la Tabla 2.6 y las exclusiones explícitas de la propuesta técnica delimitadas en la Tabla 2.7.
 
@@ -129,7 +129,7 @@ Este anexo recopila de forma sistemática las restricciones legales vigentes en 
 | **EXC-04** | Obras civiles mayores en terminales | No se excluyen las adecuaciones necesarias para remediar o reemplazar la sala local conforme al Caso RT-06.01 y al carácter híbrido exigido. |
 | **EXC-05** | Honorarios y costos en Oferta Técnica | En cumplimiento del Artículo 50.2 de las Bases Administrativas, la propuesta técnica no contiene montos ni tarifas de audIT SpA. |
 
-## Anexo 2.D: Fichas detalladas de caracterización de los trece (13) actores del ecosistema
+## 2.4 Anexo 2.D: Fichas detalladas de caracterización de los trece (13) actores del ecosistema
 
 A continuación se presentan las fichas completas de caracterización de los trece grupos de interés, integrando los tres actores de gobierno, fiscalización y aseguramiento (Fondo de Inversión, Dirección del Trabajo y Aseguradora de Carga y Flota) y profundizando en las dependencias y riesgos de cada uno.
 
@@ -151,7 +151,7 @@ La ficha distingue intereses, necesidades de información y capacidad efectiva d
 La ficha distingue intereses, necesidades de información y capacidad efectiva de condicionar la operación.
 - **Identificación y Emplazamiento:** Órgano fiscalizador del Estado de Chile dependiente del Ministerio del Trabajo y Previsión Social. Ejerce inspecciones laborales en terreno, terminales viales y carretera.
 - **Objetivos Estratégicos:** Tutela y fiscalización del cumplimiento estricto de la legislación laboral chilena, con especial énfasis en el régimen de jornada especial y descansos de los choferes de carga interurbana consagrados en el Artículo 25 bis del Código del Trabajo y la Ley N.° 20.123.
-- **Dolores Operacionales e Infraccionales:** Cero descargas históricas de tacógrafos digitales en Curimón, ceguera institucional respecto a la jornada previa de los 258 choferes subcontratados, manipulación de libros de asistencia en papel y ocurrencia de siniestros graves en carretera vinculados a fatiga extrema (ej. volcamiento en km 312).
+- **Dolores Operacionales e Infraccionales:** Cero descargas históricas de tacógrafos digitales en Curimón, ceguera institucional respecto a la jornada previa de los 258 choferes subcontratados, brechas en la evidencia de jornada y cuatro siniestros con lesiones en tres años, uno grave. El incidente del km 312 se distingue del dato agregado; no se atribuye fatiga a todos los siniestros.
 - **Dependencias y Necesidades de Información:** Requiere registros electrónicos de asistencia y conducción auditables, con cadena de custodia inalterable, marcas de tiempo exactas y disponibilidad inmediata ante requerimiento de inspectores en cualquier terminal de la red.
 - **Poder Formal / Veto:** **Extremo (Potestad Pública Sancionatoria y de Clausura).** Capacidad legal de paralizar despachos, aplicar multas gravísimas y remitir antecedentes a tribunales de cobranza laboral y previsional.
 - **Nivel de Interés:** **Bajo en la logística diaria / Crítico ante fiscalizaciones e incidentes viales.**
@@ -164,7 +164,7 @@ La ficha distingue intereses, necesidades de información y capacidad efectiva d
 La ficha distingue intereses, necesidades de información y capacidad efectiva de condicionar la operación.
 - **Identificación y Emplazamiento:** Entidades financieras aseguradoras nacionales e internacionales que suscriben las pólizas de Responsabilidad Civil (RC), daños a la carga perecible (cadena de frío), transporte de sustancias peligrosas y casco de tractocamiones de Curimón.
 - **Objetivos Estratégicos:** Determinación precisa del riesgo asegurable, verificación estricta de condiciones de operabilidad previa a liquidar siniestros, exigencia de debida diligencia patronal y rechazo de coberturas ante negligencia inexcusable o transgresión de normas legales de tránsito y jornada.
-- **Dolores Operacionales y de Siniestralidad:** Ocurrencia de cuatro siniestros con lesiones en los últimos tres años, uno de ellos grave, falta de telemetría de temperatura histórica ininterrumpida ante reclamos de quiebre de frío en las 44 ramplas refrigeradas, y ausencia de medios probatorios de velocidad en camiones de terceros al momento de volcamientos.
+- **Dolores Operacionales y de Siniestralidad:** Ocurrencia de cuatro siniestros con lesiones en los últimos tres años, uno de ellos grave, falta de telemetría de temperatura histórica ininterrumpida ante reclamos de quiebre de frío en los 44 equipos refrigerados, y ausencia de medios probatorios de velocidad en camiones de terceros al momento de volcamientos.
 - **Dependencias y Necesidades de Información:** Necesita evidencia histórica de temperatura, velocidad y odometría, además de revisiones técnicas y mantenciones vigentes. El rango de medición y la frecuencia de muestreo son decisiones de diseño que deben justificarse en S3/S4.
 - **Poder Formal / Veto:** **Alto (Capacidad de Denegación de Cobertura y Elevación de Primas).** Capacidad de no indemnizar siniestros millonarios y elevar las primas comerciales hasta hacer inviable la operación.
 - **Nivel de Interés:** **Bajo en la operación rutinaria / Crítico ante la ocurrencia de siniestros.**
@@ -229,7 +229,7 @@ La ficha distingue intereses, necesidades de información y capacidad efectiva d
 La ficha distingue intereses, necesidades de información y capacidad efectiva de condicionar la operación.
 - **Identificación y Emplazamiento:** Responsable del mantenimiento preventivo y correctivo de los 148 tractocamiones y 210 semirremolques propios en los talleres de San Bernardo y Los Ángeles, liderando un equipo de 46 mecánicos y técnicos.
 - **Objetivos Estratégicos:** Maximización de la disponibilidad mecánica de los activos propios, transición desde un modelo reactivo hacia mantenimiento predictivo basado en uso real, y reducción de fallas catastróficas en carretera.
-- **Dolores Operacionales:** Mantenimiento preventivo fundamentado en "adivinanza informada" por lectura visual manual de odómetros; 61 tractocamiones propios con módulos CAN bus de fábrica inactivos desde su compra; y reparaciones de emergencia en ruta efectuadas por talleres externos que no quedan registradas en la hoja de vida técnica del camión.
+- **Dolores Operacionales:** Mantenimiento preventivo fundamentado en "adivinanza informada" por lectura visual manual de odómetros; 61 tractocamiones propios con módulos telemáticos de fábrica sin descargar; y reparaciones de emergencia en ruta efectuadas por talleres externos que no quedan registradas en la hoja de vida técnica del camión.
 - **Dependencias y Necesidades de Información:** Odometría telemática remota en tiempo real, captura de códigos de falla de motor (DTCs) por CAN bus J1939 y formulario ligero para registro de talleres externos.
 - **Poder Formal / Veto:** **Alto (Intervención y disponibilidad de bahías de taller).**
 - **Nivel de Interés:** **Medio-Alto (Orientado a la confiabilidad mecánica).**
@@ -292,7 +292,7 @@ La ficha distingue intereses, necesidades de información y capacidad efectiva d
 ### FICHA N.° 13: Andrea Lecaros Vives y Grandes Clientes Estratégicos (Cliente 19% y Otros 7)
 
 La ficha distingue intereses, necesidades de información y capacidad efectiva de condicionar la operación.
-- **Identificación y Emplazamiento:** Gerenta de Logística de la multinacional agroexportadora líder (representa el 19% del ingreso corporativo de Curimón) y portavoz del grupo de los 8 clientes principales que concentran el 71% de la facturación.
+- **Identificación y Emplazamiento:** Gerenta de Logística de la multinacional agroexportadora líder (representa el 19% del ingreso corporativo de Curimón); se analiza separadamente el grupo de los 8 clientes principales que concentra el 71% de la facturación, sin atribuirle representación de los demás clientes.
 - **Objetivos Estratégicos:** Visibilidad completa de su cadena de suministro de exportación, aseguramiento estricto de la cadena de frío para mercados de Norteamérica, Europa y Asia, descarbonización logística auditada bajo estándares globales y cero exposición a escándalos por trabajo ilegal de choferes en su cadena de valor.
 - **Dolores Operacionales:** Incapacidad de Curimón para proveer seguimiento en tiempo real unificado; soporte de entrega en guías físicas manchadas o demoradas; imposibilidad de auditar la huella de carbono de los camiones de terceros; y el riesgo reputacional de que un embarque de exportación sea detenido por choferes sin jornada legal.
 - **Dependencias y Necesidades de Información:** Seguimiento autorizado de carga y temperatura, documentos electrónicos y reporte verificable de emisiones según las exigencias del cliente para 2029.
@@ -302,7 +302,7 @@ La ficha distingue intereses, necesidades de información y capacidad efectiva d
 - **Riesgo Operacional si no se Resuelve:** Riesgo de pérdida del cliente principal, que representa el 19% de la facturación anual. El efecto sobre el resultado y la solvencia requiere cuantificar los costos evitables y la contribución del contrato.
 - **Mecanismo de Interacción y Mitigación de Fricción:** Seguimiento de carga, evidencia de entrega y emisiones verificables para la renovación de 2029.
 
-## Anexo 2.E: Condicionantes de las veintiséis decisiones de diseño del Caso §16.1
+## 2.5 Anexo 2.E: Condicionantes de las veintiséis decisiones de diseño del Caso §16.1
 
 El diagnóstico identifica las 26 decisiones del Caso §16.1 y sus restricciones. La Tabla 2.8 conserva la pregunta de origen, la necesidad que debe satisfacerse, el riesgo y los datos necesarios para diseñar. No declara implementaciones adoptadas ni hitos aprobados. La respuesta técnica y su trazabilidad corresponden a los subdocumentos de alcance y arquitectura, preservando especialmente jornada previa, adhesión y llegada física de la flota a terminales.
 
@@ -321,7 +321,7 @@ El diagnóstico identifica las 26 decisiones del Caso §16.1 y sus restricciones
 | 9 | Emisión de Documento Electrónico DET en puntos de carga sin cobertura celular. | DET conforme antes del movimiento en puntos sin cobertura; el sistema contable conserva emisión tributaria exclusiva. | Riesgo: movimiento sin documento conforme. | Posibilidades de emisión y contingencia del sistema contable. |
 | 10 | Conformidad de entrega (POD) y disponibilidad inmediata para facturación y defensa. | Conformidad atribuible al destinatario y disponible para facturación y reclamos. | Riesgo: entrega discutida o retraso de facturación. | Identidad, oportunidad y evidencia de aceptación. |
 | 11 | Frecuencia de muestreo y transmisión de telemetría vs costo de datos móviles. | Frecuencia y volumen de datos justificados por uso operacional, integridad y reconexión. | Riesgo: datos insuficientes o costo recurrente desproporcionado. | Eventos necesarios y restricciones de conectividad. |
-| 12 | Telemetría de fábrica CAN bus en los 61 tractocamiones propios sin descargar. | Aprovechar información disponible de los 61 propios con telemetría de fábrica respetando garantías y accesos. | Riesgo: suponer datos o intervención no autorizados. | Modelos, interfaces, permisos y señales disponibles. |
+| 12 | Telemetría de fábrica en los 61 tractocamiones propios sin descargar. | Aprovechar información disponible de los 61 propios con telemetría de fábrica respetando garantías y accesos. | Riesgo: suponer datos o intervención no autorizados. | Modelos, interfaces, permisos y señales disponibles. |
 | 13 | Descarga, periodicidad, custodia e integridad de tacógrafos digitales. | Descarga periódica y custodia íntegra de datos de tacógrafo con responsabilidades definidas. | Riesgo: pérdida de jornada histórica ante fiscalización. | Inventario, retención y procedimiento actual de descarga. |
 | 14 | Asignación y optimización de retornos de camiones que van a quedar vacíos. | Asignar retorno compatible con carga, ubicación, equipo y saldo de jornada. | Riesgo: mantener el 26% de kilómetros vacíos. | Demanda de retorno y restricciones de cada viaje. |
 | 15 | Construcción del costo real del viaje con insumos desfasados (diésel a 40 d, peajes). | Costo operacional oportuno, separado de conciliación definitiva de insumos desfasados. | Riesgo: estimaciones confundidas con costos ya conciliados. | Fuentes, fechas y calidad de combustible, peajes y fletes. |
@@ -338,19 +338,3 @@ El diagnóstico identifica las 26 decisiones del Caso §16.1 y sus restricciones
 | 26 | Operación durante el período de convivencia mixta de flota equipada y no equipada. | Convivencia de flota equipada y pendiente sin eludir requisitos de despacho y seguridad. | Riesgo: controles distintos o doble registro durante transición. | Cobertura por cohorte y procedimientos actuales que deben preservarse. |
 
 Las restricciones de la tabla no sustituyen la resolución de las decisiones que exigen las bases. Permiten comprobar que cada respuesta técnica posterior corresponde al problema y que no se convierte una hipótesis en un dato oficial.
-
-## Declaración de uso de IA
-
-
-
-Conforme al Comunicado 10, sección 7.2, cada sección de este subdocumento y cada formulario asociado declara la herramienta de inteligencia artificial generativa usada, su finalidad, el nivel de uso en texto y en diagramas según la escala oficial de esa sección, y quién revisó y qué verificó. Esta declaración se consolida en el Formulario A-6.
-
-| Sección | Herramienta | Finalidad del uso | Nivel en texto | Nivel en diagramas | Revisión humana (quién y qué verificó) |
-|---|---|---|---|---|---|
-| Párrafo Apertura S2 | Asistente LLM | Ajuste estilístico de redacción introductoria | Medio | Ninguno | Datos base confirmados para el ejercicio; correcciones de esta versión pendientes de revisión humana final. |
-| 2.1 Resumen Ejecutivo | Asistente LLM | Síntesis ejecutiva de la problemática | Medio | Ninguno | Datos base confirmados para el ejercicio; correcciones de esta versión pendientes de revisión humana final. |
-| 2.2 Comprensión del Problema | Asistente LLM y generación de imágenes | Redacción del diagnóstico y presentación gráfica del flujo y calendario | Medio | Medio | Datos base confirmados para el ejercicio; correcciones de esta versión pendientes de revisión humana final. |
-| 2.3 Dimensionamiento | Asistente LLM y generación de imágenes | Dimensionamiento y presentación gráfica de la cadena causal | Medio | Medio | Datos base confirmados para el ejercicio; correcciones de esta versión pendientes de revisión humana final. |
-| 2.4 Actores y Grupos de Interés | Asistente LLM y generación de imágenes | Mapeo de 13 actores y presentación gráfica de la matriz de poder e interés | Medio | Medio | Datos base confirmados para el ejercicio; correcciones de esta versión pendientes de revisión humana final. |
-| 2.5 Requerimientos y Supuestos | Asistente LLM | Estandarización de matriz de supuestos de proyecto | Medio | Ninguno | Datos base confirmados para el ejercicio; correcciones de esta versión pendientes de revisión humana final. |
-| Anexos 2.A a 2.E | Asistente LLM | Estructuración tabular de inventarios, fichas y registro de 26 decisiones | Medio | Ninguno | Datos base confirmados para el ejercicio; correcciones de esta versión pendientes de revisión humana final. |

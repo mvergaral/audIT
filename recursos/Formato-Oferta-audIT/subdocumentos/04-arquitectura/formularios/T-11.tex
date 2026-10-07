@@ -16,7 +16,7 @@
   cantidad = {182 más 19 de reposición},
   adquiere = CLIENTE,
   ciclo = {Longevidad de producto de 10 años declarada por el fabricante. Actualización solo en terminal. Reposición del 10 \%},
-  justificacion = {Registra 288 horas sin cobertura (RT-03.10 y RT-10.05 del Caso) con 2,4 GB requeridos sobre 8 GB. Sección 4.2.2}
+  justificacion = {Mínimo contractual 72 h (Caso RT-03.10, p. 31); ampliación propuesta 288 h, independiente del cierre vial. Asignación 2.400 MiB = 2,52 GB decimales sobre 8 GB nominales; capacidad útil y overhead verificados en HIL. Sección 4.2.2}
 }
 \componenteTOnce{
   componente = Equipo a bordo por crecimiento,
@@ -340,7 +340,7 @@
   cantidad = 2 unidades,
   adquiere = {CLIENTE, suscripción a su nombre},
   ciclo = Servicio administrado,
-  justificacion = {Reconexión de 300 camiones en 9,6 minutos (Caso, RT-03.13, p. 31)}
+  justificacion = {Perfil de 300 camiones/72 h: 71.400 paquetes con presupuesto de 25 \%; admisión teórica de 11,9 min. CP-PERF-02 mide confirmación completa por camión en hasta 20 min (Caso RT-03.13, p. 31).}
 }
 \componenteTOnce{
   componente = Bus de eventos,
@@ -626,7 +626,7 @@
 \componenteTOnce{
   componente = Búfer no volátil a bordo,
   producto = eMMC del iWave G26I,
-  caracteristicas = {38,4 MB para 288 horas dentro de 8 GB},
+  caracteristicas = {Partición 64 MiB; presupuesto de 38.851.872 bytes para perfil propuesto 288 h; mínimo obligatorio 72 h. Capacidad nominal del equipo 8 GB},
   ubicacion = DB,
   cantidad = 182,
   adquiere = CLIENTE,

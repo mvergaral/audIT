@@ -1,5 +1,5 @@
 {
-  "grupo": "informe2",
+  "grupo": "integracion-I-d1",
   "instancia": "informe2",
   "modo_folio": "individual",
   "archivos": [
@@ -115,7 +115,5 @@
         []
       ]
     }
-  ],
-  "revision_humana": "Pendiente para los cambios incrementales",
-  "limitaciones": "Cotejo con S3 final y acreditación tipográfica de PNG pendientes."
+  ]
 }
