@@ -1,7 +1,6 @@
 # Subdocumento 2. Resumen ejecutivo, comprensión del problema y de la necesidad
 
-audIT Soluciones Tecnológicas SpA — Transportes Curimón S.A.
-
+audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. Oferta Técnica, Sobre N.º 2. Informe Preparatorio 2. Archivo AUDIT-Subdocumento2.pdf.
 
 ## Resolución de observaciones del Informe 1
 
@@ -25,6 +24,8 @@ El FEP01, Artículo 46, p. 28 pide resolver en cada informe las observaciones de
 | 34 | No se declaran los supuestos propios de la propuesta técnica ni el impacto en caso de resultar falsos. | Se acepta. Los supuestos propios identifican fundamento, impacto y verificación; el perfil de carga es una hipótesis, no un registro histórico. El dimensionamiento de memoria y reconexión conserva frecuencias, bytes, overhead y reserva explícitos. | S2 2.5.2; S4 dimensionamiento; T-17 CP-PERF-02/CP-HW-03. |
 | 35 | El cierre de la sección 1.6.3 contiene una nota metatextual ajena al carácter pericial de la propuesta. | Se acepta. El cierre de S2 se limita a requerimientos, restricciones y remisiones del documento; los pendientes de integración se mantienen en el registro de trabajo. La comprobación editorial de la salida completa este control. | S2 2.5 y anexos técnicos. |
 | 36 | Tono de paper académico y una sola figura en 32 páginas de documento. | Se acepta. S2 integra flujo, calendario, relaciones operacionales y matriz de actores con análisis. Se corrigen cifras y se califica interpretación causal; la revisión de legibilidad se realiza en la salida actual. | S2, figuras de 2.2/2.3/2.4. |
+
+## 2 Resumen ejecutivo, comprensión del problema y de la necesidad
 
 > **Resumen de apertura.**
 >
@@ -144,7 +145,8 @@ El balance cuantitativo verifica la consistencia del modelo frente al volumen co
 \end{equation}
 La tasa exacta de temporada alta es 51.060/151, aproximadamente 338,15 viajes/día. El uso de 338,15 en el producto arrojaría 51.060,65 viajes; la ecuación utiliza la tasa sin redondear para conservar el total de 96.000.
 
-El factor entre las demandas medias de temporada alta y valle se sitúa en (51.060/151) / 210, aproximadamente 1,61, representando un incremento del 61% en la intensidad de tráfico diario durante la fruta. De conformidad con las directrices de rigor analítico, audIT declara que las bases no proveen el desglose transaccional mes a mes de los 96.000 viajes históricos; por tanto, los valores de demanda diaria expuestos constituyen la hipótesis ingenieril de dimensionamiento preliminar (con un umbral de diseño para la plataforma de 450 viajes/día), sujeta a calibración empírica en el Hito H1 (Mes 1) mediante la extracción masiva de registros del TMS 2013 (Caso, RT-05.15, p. 31).
+\begingroup\emergencystretch=3em
+El factor entre las demandas medias de temporada alta y valle se sitúa en (51.060/151) / 210, aproximadamente 1,61, representando un incremento del 61% en la intensidad de tráfico diario durante la fruta. De conformidad con las directrices de rigor analítico, audIT declara que las bases no proveen el desglose transaccional mes a mes de los 96.000 viajes históricos; por tanto, los valores de demanda diaria expuestos constituyen la hipótesis ingenieril de dimensionamiento preliminar (con un umbral de diseño para la plataforma de 450 viajes/día), sujeta a calibración empírica en el Hito H1 (Mes 1) mediante la extracción masiva de registros del TMS 2013 (Caso, RT-05.15, p. 31).\endgroup
 
 ## 2.3 Dimensionamiento del problema
 
@@ -273,7 +275,7 @@ Las necesidades levantadas a partir de las Bases Técnicas del Caso 10 y sus ent
 - **Dominio de Costeo y Sostenibilidad:** Reconstrucción analítica diaria ($< 24\text{ h}$) del costo directo por viaje (combustible por telemetría CAN bus, peajes y flete a terceros) y cálculo de huella de carbono (g CO2e/t-km) bajo estándar GLEC para el 100% de la flota.
 
 En el plano de los **Requerimientos No Funcionales Canónicos y de Resiliencia** (FEP01, Artículo 78, p. 40 y FEP02, Cap. 7, pp. 17--18), el diagnóstico fija los siguientes umbrales contractuales vinculantes para cualquier solución propuesta:
-- **Disponibilidad crítica (SLA):** Disponibilidad mensual $\ge 99,9%$ para servicios críticos, medida sobre la transacción de negocio de extremo a extremo en régimen continuo de 24 horas al día, 365 días al año.
+- **Disponibilidad crítica (SLA):** Disponibilidad mensual $\ge 99{,}9%$ para servicios críticos, medida sobre la transacción de negocio de extremo a extremo en régimen continuo de 24 horas al día, 365 días al año.
 - **Objetivo de Tiempo de Recuperación (RTO):** $\text{RTO} \le 4\text{ horas}$ ante contingencias mayores o eventos de desastre en el centro de datos principal.
 - **Objetivo de Punto de Recuperación (RPO):** $\text{RPO} \le 15\text{ minutos}$ de pérdida máxima de datos transaccionales con mecanismo de recuperación que deberá justificarse en la solución.
 - **Autonomía Telemática Desconectada:** Mínimo contractual exigido de 72 horas de persistencia autónoma a bordo sin conectividad celular (Caso 10, RT-03.10). La operación internacional documenta contingencias climáticas de hasta doce días continuos (288 horas) por cierres del Paso Los Libertadores (Caso, Cap. 4.6), sin que esa detención implique una pérdida de conectividad de igual duración. La gestión de jornada, carga y reprogramación debe absorber el cierre sin desplazar hitos contractuales.

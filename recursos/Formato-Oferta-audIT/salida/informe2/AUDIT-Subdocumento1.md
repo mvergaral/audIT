@@ -1,7 +1,6 @@
 # Subdocumento 1. Presentación de la empresa
 
-audIT Soluciones Tecnológicas SpA — Transportes Curimón S.A.
-
+audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. Oferta Técnica, Sobre N.º 2. Informe Preparatorio 2. Archivo AUDIT-Subdocumento1.pdf. Anexos: Formulario T-6 en el archivo AUDIT-Formulario-T-6.pdf.
 
 ## Resolución de observaciones del Informe 1
 
@@ -21,6 +20,8 @@ El FEP01, Artículo 46, p. 28 pide resolver en cada informe las observaciones de
 | 23 | La única figura del documento, el organigrama institucional, aparece reducida y no se explica en el texto. | Se acepta. El organigrama tiene siete unidades y seis líneas de mando; la suma es 22 personas. Figura y explicación están presentes y coherentes. La tipografía se verifica a escala final, sin dar por cumplido su mínimo antes de inspeccionar el PDF. | S1 1.2; figura_1_1_organigrama.png. |
 | 96 | El producto propio audIT EdgeHub se invoca sin definirlo en ningún subdocumento. | Se acepta. S1 define el producto EdgeHub v2.4; S4 y T-11 identifican el gateway de referencia y la asignación física. Hardware de catálogo no implica provisiones adicionales. La coherencia de S13/T-19 no se acredita sin su cotejo específico. | S1, producto; S4/T-11; S13/T-19. |
 
+## 1 Presentación de la empresa
+
 > **Resumen de apertura.**
 >
 > audIT expone formalmente su capacidad técnica, institucional, metodológica y financiera para asumir la ejecución integral de la Licitación Pública Nacional e Internacional N.° TFEP-01/2026 para Transportes Curimón S.A. La empresa declara 22 profesionales de planta bajo contrato indefinido y antecedentes de solvencia financiera con ratio de liquidez de 2,14 y cobertura patrimonial para los 56 meses de contrato respaldada en el Sobre N.º 1, certificación ISO 9001 vigente y proceso ISO/IEC 27001 en auditoría Fase 2, mediante plan institucional con entrega del certificado comprometida adicionalmente en M1, dentro del máximo permitido de doce meses (FEP01, Artículo 34.1, p. 22), y cuatro centros técnicos de soporte en Ruta 5 con SLA contractual inferior a cuatro horas (FEP02, RT-21.16, p. 37).
@@ -29,7 +30,7 @@ El FEP01, Artículo 46, p. 28 pide resolver en cada informe las observaciones de
 > - Estructura organizacional, dotación de planta de 22 ingenieros y asignación nominada con dedicación de los seis roles habilitantes obligatorios del FEP01, Artículo 34.1, p. 22.
 > - Plataforma de borde audIT EdgeHub v2.4: mínimo contractual de 72 h sin cobertura; propuesta ampliada de 288 h y 8 GB, sujeta a verificación.
 > - Red regional de asistencia técnica y reemplazo de hardware en Ruta 5 con SLA contractual menor a cuatro horas.
-> - Plan institucional de certificación formal ISO/IEC 27001:2022 (FEP01, Artículo 34.1, p. 22) y tres proyectos de experiencia previa declarados en Formulario T-6, respaldados por actas y cartas de mandante individualizadas en el Sobre N.º 1, dos con disponibilidad mensual $\ge 99,5%$ y uno con 99,2% mensual enfocado en resiliencia desconectada de 72 horas.
+> - Plan institucional de certificación formal ISO/IEC 27001:2022 (FEP01, Artículo 34.1, p. 22) y tres proyectos de experiencia previa declarados en Formulario T-6, respaldados por actas y cartas de mandante individualizadas en el Sobre N.º 1, dos con disponibilidad mensual $\ge 99{,}5%$ y uno con 99,2% mensual enfocado en resiliencia desconectada de 72 horas.
 
 Los antecedentes empresariales, ratios, certificaciones y convenios aquí individualizados son declaraciones del oferente. La revisión de esta propuesta no acredita examen externo de balances, certificados, cartas o instrumentos originales; su conformidad administrativa se verifica contra el expediente del Sobre N.º 1. Se conservan los antecedentes del escenario empresarial y la identidad de audIT sin atribuir al cliente infraestructura o servicios no declarados.
 
@@ -179,7 +180,7 @@ La nominación de los seis roles y el dimensionamiento de planta expuestos se re
 
 ### 1.2.3 Modelo operativo en células y mitigación de dependencia
 
-audIT opera mediante una metodología de ingeniería colaborativa en parejas (*pair-engineering*) y células multifuncionales. Esta disciplina de diseño previene la generación de silos de conocimiento técnico y elimina el riesgo de dependencia de personas únicas (*single* *points* *of* *knowledge* *failure*). Todo desarrollo de firmware, código backend o configuración de infraestructura en la nube es sometido a revisión cruzada obligatoria (*peer review*) mediante solicitudes de integración (*pull requests*) antes de incorporarse a la rama principal de compilación, resguardando la transferibilidad inmediata de funciones ante eventuales contingencias o reemplazos de personal.
+audIT opera mediante una metodología de ingeniería colaborativa en parejas (*pair\allowbreak-engineering*) y células multifuncionales. Esta disciplina de diseño previene la generación de silos de conocimiento técnico y elimina el riesgo de dependencia de personas únicas (*single* *points* *of* *knowledge* *failure*). Todo desarrollo de firmware, código backend o configuración de infraestructura en la nube es sometido a revisión cruzada obligatoria (*peer review*) mediante solicitudes de integración (*pull requests*) antes de incorporarse a la rama principal de compilación, resguardando la transferibilidad inmediata de funciones ante eventuales contingencias o reemplazos de personal.
 
 ## 1.3 Gobierno interno Calidad, Seguridad y Conocimiento
 
@@ -243,7 +244,7 @@ En conformidad con lo dispuesto en el FEP01, Artículo 34, p. 22 de las Bases Ad
 | Cliente y Giro | Transportes del Sur Ltda. (Carga pesada interurbana) | AgroFrutícola Los Andes S.A. (Logística en frío remota) | Logística Multimodal Bicentenario S.A. (Carga portuaria) | Industria del caso y afines (Transporte y Logística) |
 | Volumetría Operacional | 340 tractocamiones; ≈ 88.000 viajes/año | 310 unidades de frío; ≈ 82.000 viajes/año | 390 tractocamiones; ≈ 98.000 viajes/año | Comparable con 374 camiones y 96.000 viajes/año |
 | Arquitectura Tecnológica | Híbrida (Borde en cabina + Azure Cloud) | Híbrida (Edge on-premise + Azure Cloud) | Híbrida (Nube Azure + Servidores locales) | Al menos 1 proyecto con arquitectura híbrida |
-| Nivel de Servicio (SLA) | 99,5% mensual de disponibilidad | 99,2% mensual; 72 h tolerancia offline | 99,6% mensual de disponibilidad | Al menos 1 proyecto con SLA $\ge 99,5%$ |
+| Nivel de Servicio (SLA) | 99,5% mensual de disponibilidad | 99,2% mensual; 72 h tolerancia offline | 99,6% mensual de disponibilidad | Al menos 1 proyecto con SLA $\ge 99{,}5%$ |
 | Estado y Ejecución | Finalizado; 100% audIT como Principal | Finalizado; 100% audIT como Principal | Finalizado; 100% audIT como Principal | Concluidos y en operación últimos 5 años |
 
 Los porcentajes de la tabla son acuerdos de disponibilidad mensual de proyectos anteriores. El proyecto 2 conserva 99,2%; los proyectos 1 y 3 acreditan el umbral de experiencia de 99,5% del artículo 34.1. Estos antecedentes no reemplazan la disponibilidad crítica exigida a la oferta para Curimón.
@@ -338,7 +339,9 @@ En articulación directa con los cuatro nodos operacionales descritos en la secc
 
 La gobernanza contractual, los acuerdos OLA y los protocolos de auditoría de servicio de la red de asistencia en ruta se integran formalmente a la operación desde el Mes 1 de servicios.
 
+\begingroup\emergencystretch=3em
 La dotación permanente de audIT es de 22 profesionales. El solapamiento M13–M15 incorpora 15 refuerzos de proyecto según S7/T-15: 37 personas únicas, no 44; siete roles de dirección participan en ambos frentes sin duplicar su capacidad. T-15 asigna 21,5 FTE a E1, 14,1 a E2 y 1,4 a coordinación, sumando 37,0 FTE. Esta capacidad planificada no aumenta la dotación permanente declarada; su contratación y disponibilidad deben acreditarse antes del inicio del frente correspondiente.
+\endgroup
 
 ## Referencias
 
