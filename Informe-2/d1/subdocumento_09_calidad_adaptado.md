@@ -8,9 +8,9 @@
 
 ---
 
-El presente subdocumento constituye el **Plan Integral de Aseguramiento y Control de Calidad** de **audIT Soluciones Tecnológicas SpA** para la ejecución del contrato derivado de la Licitación Pública Nacional e Internacional N.° TFEP-01/2026, convocada por **Transportes Curimón S.A.** para la provisión de su nueva plataforma digital de misión crítica, telemetría distribuida y monitoreo operacional en ruta. El aseguramiento de la calidad en este proyecto trasciende el mero control reactivo de defectos de software: articula un marco metodológico preventivo y verificable que abarca tanto la calidad de los procesos de ingeniería como la calidad intrínseca del producto de software, el firmware embebido de borde y los dispositivos electrónicos de grado automotriz instalados en los 374 tractocamiones que componen el parque vehicular gestionado. 
+Este subdocumento define el plan de aseguramiento de calidad propuesto por audIT Soluciones Tecnológicas SpA para la licitación TFEP-01/2026 de Transportes Curimón S.A. El alcance considera los procesos de ingeniería, el software, el firmware de borde y los dispositivos telemáticos previstos para la flota. Los criterios descritos son objetivos de diseño y deberán comprobarse mediante las evidencias y procedimientos de aceptación correspondientes.
 
-Este subdocumento se encuentra estructurado en estricta consonancia con los estándares normativos internacionales vigentes y se articula de manera directa y sistemática con los restantes componentes de la propuesta técnica:
+El plan se relaciona con los siguientes componentes de la propuesta técnica:
 * Se sustenta en las capacidades institucionales, la gobernanza corporativa y el laboratorio de hardware formalizados en el **Capítulo 1 (Subdocumento 1)**.
 * Provee los mecanismos de verificación empírica para mitigar las patologías de control, la dispersión operativa y los riesgos de sobreestadías diagnosticados en el **Capítulo 2 (Subdocumento 2)**.
 * Asegura el cumplimiento verificable de los 42 requerimientos normalizados de la propuesta formalizados en el **Capítulo 3 (Subdocumento 3)** y su matriz externa de trazabilidad (**Formulario Técnico T-12**).
@@ -19,30 +19,30 @@ Este subdocumento se encuentra estructurado en estricta consonancia con los est�
 * Opera como el brazo ejecutor y el sistema de control de calidad para las metodologías híbridas de desarrollo DevSecOps y gestión PMBOK formalizadas en el **Capítulo 6 (Subdocumento 6)** y sus formularios metodológicos (**Formularios Técnicos T-9 y T-10**).
 * Sincroniza sus hitos de validación, compuertas bloqueantes y ventanas de certificación con la Estructura de Desglose del Trabajo (EDT), el cronograma maestro y las marchas blancas del **Capítulo 7 (Subdocumento 7)** y sus anexos de planificación (**Formularios Técnicos T-14, T-15 y T-18**).
 * Provee la batería de mitigaciones técnicas e instrumentales frente a los riesgos de falla física, ciberseguridad, indisponibilidad de enlaces celulares y degradación de servicio identificados en el **Capítulo 8 (Subdocumento 8)** y su matriz de riesgos (**Formulario Técnico T-16**).
-* Garantiza la observabilidad continua, la precisión telemática y la estabilidad requerida para sostener los niveles de servicio contractuales (SLA $\ge 99{,}5\%$ punta a punta, RTO $\le 4\text{ h}$ y RPO $\le 15\text{ min}$) y los modelos de soporte en régimen expuestos en los **Capítulos 10 y 11 (Subdocumentos 10 y 11)**.
+* Define controles de calidad vinculados a los niveles de servicio de disponibilidad E2E $\ge 99{,}9\%$ (Art. 20 FEP01, p. 14; RT-10.01 FEP02, p. 22), RTO $\le 4\text{ h}$ y RPO $\le 15\text{ min}$ (RT-07.04 FEP02, p. 17). La articulación con soporte y calendario queda sujeta al cotejo con los entregables vigentes de D2/D3.
 * Valida las calificaciones y certificaciones del equipo técnico clave nominado en el **Capítulo 12 (Subdocumento 12)**.
 * Establece los protocolos de validación en terreno para las cinco innovaciones obligatorias comprometidas en el **Capítulo 13 (Subdocumento 13)** y su formulario técnico (**Formulario Técnico T-19**).
 * Acredita la solidez y confiabilidad técnica que sustentan la síntesis de valor del **Capítulo 14 (Subdocumento 14)**.
 
-Asimismo, en acatamiento de las directrices del Comunicado 10 y de las Bases Administrativas (Art. 40.4), este capítulo cita expresamente, articula y deriva sus especificaciones exhaustivas a dos formularios técnicos independientes: el **Formulario Técnico T-13** (*Matriz de Calidad del Producto y Quality Gates*, entregado en el archivo `formulario_t13_calidad_producto_quality_gates.md`), y el **Formulario Técnico T-17** (*Plan de Pruebas Detallado y Catálogo de Casos de Prueba*, entregado en el archivo `formulario_t17_protocolo_aceptacion_plan_pruebas.md`).
+Este capítulo se complementa con los borradores de los formularios T-13 (*Matriz de Calidad del Producto y Quality Gates*) y T-17 (*Plan de Pruebas Detallado*), cuyas métricas, trazabilidad normativa y fechas quedan sujetas a revisión antes de su emisión.
 
 ---
 
 ## 9.1 Plan de Calidad
 
-El Plan de Calidad de audIT Soluciones Tecnológicas SpA establece el marco operativo y normativo mediante el cual se planifica, asegura, controla y certifica la excelencia técnica de la plataforma digital en todas sus capas de abstracción. Se fundamenta en la premisa ingenieril de que la calidad no es una propiedad sobrevenida que se inspecciona al término de un ciclo de desarrollo, sino un atributo estructural que debe incorporarse por diseño (*Quality by Design*) desde la concepción de los requerimientos y la arquitectura física hasta la operación continua en carretera.
+El Plan de Calidad de audIT Soluciones Tecnológicas SpA organiza las actividades propuestas para definir, asegurar y controlar la calidad de la plataforma. Los criterios se aplican desde la definición de requisitos y arquitectura hasta las pruebas de operación, y se registran como objetivos verificables, no como resultados ya alcanzados.
 
 A continuación se exponen el marco normativo adoptado, las estructuras de gobernanza técnica corporativa, la formulación matemática de las métricas de software, firmware y telemetría, y la especificación de las compuertas de calidad bloqueantes de paso entre entornos.
 
 ### 9.1.1 Marco Normativo ISO/IEC 25010 y Gobernanza de Calidad
 
-audIT SpA adopta formalmente como fundamento de su ingeniería la norma internacional **ISO/IEC 25010:2023** (*Systems and software engineering — Systems and software Quality Requirements and Evaluation [SQuaRE] — Product quality model*). Dicha norma, en su edición 2023, moderniza el modelo clásico al estructurarlo en **nueve características de calidad** de primer nivel, las cuales han sido específicamente adaptadas por audIT SpA para responder a la naturaleza distribuida, heterogénea y ciber-física del sistema de transporte de Transportes Curimón S.A.:
+Se propone utilizar como referencia el modelo de calidad de producto de **ISO/IEC 25010:2023** (*Systems and software engineering — Systems and software Quality Requirements and Evaluation [SQuaRE] — Product quality model*). Las características se relacionan con el sistema de transporte de Curimón de la siguiente forma:
 
 1. **Adecuación Funcional (*Functional Suitability*):** Grado en que el software provee funciones que satisfacen las necesidades declaradas bajo condiciones especificadas. Se subdivide en completitud, corrección y pertinencia funcional, garantizando que el 100% de los 42 requerimientos del pliego contractual se implementen de manera fáctica y sin omisiones.
 2. **Eficiencia de Desempeño (*Performance Efficiency*):** Comportamiento temporal, consumo de recursos y capacidad de procesamiento bajo condiciones nominales y de sobrecarga. Abarca la latencia sub-segundo en el clúster Redis para la validación bloqueante pre-despacho ($\le 30\text{ s}$), el procesamiento en streaming en Apache Kafka y la optimización de almacenamiento en series temporales de TimescaleDB.
 3. **Compatibilidad (*Compatibility*):** Grado en que un sistema puede intercambiar información con otros sistemas y compartir un entorno común. Incluye la coexistencia e interoperabilidad de la Capa Anticorrupción (ACL) con el TMS 2013 legacy de Curimón, con las tres plataformas GPS comerciales de terceros (Wialon, Wisetrack, Webfleet) y con el ERP contable para la emisión de documentos tributarios.
 4. **Capacidad de Interacción (*Interaction Capability* — antes Usabilidad):** Grado en que el sistema puede ser comprendido, aprendido y utilizado de manera eficiente y satisfactoria. Se orienta a la ergonomía de las interfaces web para despachadores y a la seguridad de la interfaz para conductores, garantizando el enclavamiento cinético estricto exigido por la **Ley N.° 21.377 (Ley No Chat)** mediante alertas sonoras pasivas (*Text-to-Speech*) fuera de línea sin manipulación táctil en movimiento.
-5. **Fiabilidad (*Reliability*):** Grado en que el sistema mantiene un nivel especificado de rendimiento bajo condiciones declaradas durante un período determinado. Comprende la madurez, tolerancia a fallos y recuperabilidad, sustentando el cumplimiento del SLA de disponibilidad mensual del $99{,}5\%$ punta a punta, la continuidad en sombra celular extrema mediante el buffer vehicular eMMC $\ge 288\text{ h}$ y los objetivos de recuperación ante desastres (RTO $\le 4\text{ h}$, RPO $\le 15\text{ min}$).
+5. **Fiabilidad (*Reliability*):** Grado en que el sistema mantiene un nivel especificado de rendimiento bajo condiciones declaradas durante un período determinado. Comprende la madurez, tolerancia a fallos y recuperabilidad, sustentando el SLA E2E de disponibilidad mensual $\ge 99{,}9\%$, el requisito mínimo de retención local de 72 h y los objetivos de recuperación ante desastres (RTO $\le 4\text{ h}$, RPO $\le 15\text{ min}$). La capacidad ampliada de 288 h es una propuesta de D4 para S4, sujeta a dimensionamiento y validación.
 6. **Seguridad (*Security*):** Grado en que el sistema protege la información y los datos de modo que personas o sistemas no autorizados no puedan leerlos ni modificarlos. Abarca confidencialidad, integridad, no repudio, autenticidad y responsabilidad, implementando cifrado TLS 1.3 en tránsito, AES-256 en reposo, sellado criptográfico SHA-256 en Azure Key Vault para la entidad `EvidenciaJornada` (Art. 25 bis del Código del Trabajo) y minimización de datos conforme a la **Ley N.° 21.719**.
 7. **Mantenibilidad (*Maintainability*):** Grado de efectividad y eficiencia con que el sistema puede ser modificado por los mantenedores. Se subdivide en modularidad, reusabilidad, analizabilidad, modificabilidad y capacidad de prueba, garantizando una arquitectura desacoplada basada en microservicios en Azure Kubernetes Service (AKS), alta cobertura de pruebas unitarias y bajo acoplamiento.
 8. **Flexibilidad (*Flexibility* — antes Portabilidad):** Grado en que el producto puede adaptarse eficazmente a cambios en sus requisitos, contextos de uso o entornos de ejecución. Abarca adaptabilidad, escalabilidad e instalabilidad, permitiendo la extensión del sistema a nuevos tractocamiones, semirremolques refrigerados y faenas mineras o forestales sin rediseño estructural.
@@ -77,21 +77,21 @@ A continuación, la Tabla 9.1 consolida las métricas cuantitativas que rigen el
 | **Eficiencia** | Latencia Asignación de Viaje | K6 / OpenTelemetry | $P_{95} \le 30\text{ s}$ (4 validaciones) | Bloqueo de Pase a Staging |
 | **Eficiencia** | Alerta Sonora Botón de Pánico | K6 / Broker EventHubs | $P_{99} \le 15\text{ s}$ en recepción | Bloqueo de Pase a Staging |
 | **Eficiencia** | Pre-emisión D.E.T. en Sombra | Banco Hardware audIT | $P_{99} \le 90\text{ s}$ en cabina | Bloqueo de Firmware OTA |
-| **Fiabilidad** | Disponibilidad Plataforma E2E | Datadog / Azure Monitor | $\ge 99{,}5\%$ mensual (Art. 78) | Penalización SLA / Auditoría |
+| **Fiabilidad** | Disponibilidad Plataforma E2E | Datadog / Azure Monitor | $\ge 99{,}9\%$ mensual (Art. 20 FEP01, p. 14; RT-10.01 FEP02, p. 22) | Verificar medición y evidencia contra el SLA |
 | **Fiabilidad** | Pérdida de paquetes en bus CAN | Analizador CAN J1939 | Pérdida $< 0{,}1\%$ de tramas | Rechazo de Instalación |
 | **Fiabilidad** | Persistencia atómica SQLite WAL | Test Suite Embebido | Latencia $< 10\text{ ms}$ post-corte | Rechazo de Firmware |
-| **Fiabilidad** | Autonomía Buffer Sombra Celular | Test de Carga Flash | $\ge 288\text{ h}$ (~40 MB zstd) | Rechazo de Lote eMMC |
+| **Fiabilidad** | Retención local sin conectividad | Test de desconexión y sincronización | Mínimo $\ge 72\text{ h}$; objetivo ampliado propuesto de 288 h sujeto a validación de D4 | Rechazo si no cumple el mínimo de 72 h; objetivo ampliado se evalúa tras confirmar diseño |
 | **Seguridad Fís.** | Consumo eléctrico en Standby | Multímetro Calibrado | $< 50\text{ mA}$ tras 30 min corte | Rechazo de Instalación |
 
 #### Análisis Técnico de las Métricas de Calidad
 
-El conjunto de métricas expuesto en la Tabla 9.1 establece una frontera de control infranqueable entre el desarrollo y la operación productiva. El umbral de **cobertura de pruebas unitarias $\ge 80\%$** focalizado en la lógica de negocio garantiza que los algoritmos deterministas de alta complejidad —específicamente el motor de verificación síncrona de 4 factores de asignación pre-despacho, el cálculo de jornada laboral del Artículo 25 bis y la heurística de retornos vacíos ALNS— se encuentren matemáticamente blindados frente a regresiones funcionales. Dicho umbral se complementa con el límite de **complejidad ciclomática de McCabe $v(G) \le 15$**, el cual restringe la densidad de bifurcaciones lógicas por función, previniendo la acumulación de caminos de ejecución no testeados y asegurando una mantenibilidad de largo plazo a costo controlado.
+La Tabla 9.1 propone umbrales de calidad para controlar el paso entre desarrollo y operación. El objetivo de cobertura unitaria de **$\ge 80\%$** se aplicaría a la lógica de negocio, incluidos los cálculos de jornada y los algoritmos de asignación. El umbral de complejidad ciclomática de McCabe **$v(G) \le 15$** se propone como guía de mantenibilidad. Ambos requieren validación contra el alcance, las herramientas y los criterios de aceptación del proyecto.
 
-En el dominio ciber-físico y de telemetría de borde, las métricas responden directamente a las condiciones geográficas severas de la red de transporte de Curimón. La tasa de **pérdida de paquetes en bus CAN menor a $0{,}1\%$** obtenida mediante pinzas inductivas no invasivas *CANclick* certifica que la captura pasiva de parámetros de motor (odometría, RPM, velocidad cinemática y códigos de falla DTC) es exacta y fidedigna, salvaguardando en un 100% las garantías de fábrica de los 148 tractocamiones propios y los 34 camiones de terceros equipados por audIT SpA. 
+Para telemetría de borde, se propone medir la pérdida de tramas CAN con un límite de **$<0{,}1\%$**. La prueba deberá confirmar el método de lectura y la compatibilidad del acoplador con cada vehículo; este umbral por sí solo no certifica garantías de fabricante.
 
-Por su parte, el requerimiento de **persistencia atómica en SQLite en modo Write-Ahead Logging (WAL) con recuperación inferior a 10 milisegundos** ante cortes abruptos de suministro eléctrico (12V/24V) garantiza que ningún evento de conducción, frenada de pánico o cambio de estado de jornada se pierda o corrompa ante desconexiones intempestivas de batería. 
+También se propone ensayar la recuperación de SQLite en modo Write-Ahead Logging (WAL) después de una interrupción de alimentación. El umbral de recuperación inferior a 10 ms requiere validación en un banco de pruebas; no implica por sí solo que no pueda perderse ningún evento.
 
-Finalmente, la métrica de **autonomía de almacenamiento local en memoria eMMC industrial $\ge 288\text{ horas}$ (12 días continuos)** sobre un buffer físico dedicado de 8,0 GB provee el soporte material indispensable para tolerar los cierres climáticos del Paso Los Libertadores por temporales de nieve en alta montaña, reteniendo de forma inalterable los aproximadamente 40 MB de telemetría comprimida con algoritmo *zstandard* hasta el momento en que el camión restablezca enlace celular con la plataforma central.
+Por último, la aceptación debe comprobar una retención local mínima de **72 horas**. D4 propone estudiar una capacidad ampliada de hasta 288 horas en una unidad eMMC de 8 GB; ese objetivo queda sujeto al perfil de muestreo, la carga de eventos, la compresión, el espacio reservado por el sistema operativo y los ensayos de hardware.
 
 ### 9.1.3 Umbrales de Aceptación y Quality Gates Bloqueantes de Paso a Producción
 
@@ -145,7 +145,7 @@ Las compuertas de calidad integradas en la tubería se definen taxativamente com
    * *Criterio de Rechazo:* Incumplimiento de contratos de interfaz entre microservicios o fallos de transaccionalidad relacional en bases de datos.
 4. **Quality Gate 4 (QG4) — Pruebas Dinámicas DAST, Ciberseguridad y Rendimiento K6:**  
    * *Momento de Ejecución:* En el entorno de Staging (preproducción), idéntico en dimensionamiento y configuración al entorno de Producción.
-   * *Controles Automatizados:* Análisis dinámico de seguridad de aplicaciones (DAST) con OWASP ZAP Enterprise; pruebas de rendimiento y estrés concurrente con K6 inyectando perfiles de carga de 450 viajes/día y reconexión masiva de 300 camiones saliendo de sombra celular.
+   * *Controles Automatizados:* Análisis dinámico de seguridad de aplicaciones (DAST) con OWASP ZAP Enterprise; pruebas de rendimiento y estrés con K6 sobre el perfil pico que se dimensione con D2; y reconexión masiva con el volumen de unidades definido por D2/D4. Los parámetros de carga quedan pendientes de trazabilidad.
    * *Criterio de Rechazo:* Latencia de asignación de viaje superior a 30 segundos en el percentil 95; alerta SOS superior a 15 segundos en el percentil 99; cualquier vulnerabilidad web crítica en OWASP Top 10.
 5. **Quality Gate 5 (QG5) — Certificación de Pruebas UAT y Dictamen Go/No-Go:**  
    * *Momento de Ejecución:* Previo a la ventana de paso a Producción.
@@ -268,7 +268,7 @@ A continuación, la Tabla 9.3 presenta la síntesis canónica de trazabilidad pr
 | **RF-006 / REQ-06** | Validación carga SUSPEL vs manifiesto (18 tractos) | Módulo SUSPEL / App PWA Móvil | `CP-SYS-SUSP-06` | CA-06 / D.S. 298 y 43 |
 | **RF-007 / REQ-07** | Descarga remota y archivo tacógrafo digital | Gateway audIT / Servicio Descarga | `CP-HW-TACO-07` | CA-07 / Descarga sin pérdida |
 | **RF-008 / REQ-08** | Vista única 374 tractocamiones en Torre 24x7 | Portal Web Torre / TimescaleDB | `CP-SYS-VIST-08` | CA-08 / Padrón conciliado |
-| **RF-009 / REQ-09** | Buffer local vehicular $\ge 72\text{ h}$ (compromiso $\ge 288\text{ h}$) | audIT EdgeHub / SQLite WAL | `CP-HW-BUFF-09` | CA-09 / Sombra 288 h OK |
+| **RF-009 / REQ-09** | Retención local mínima $\ge 72\text{ h}$; capacidad ampliada de hasta 288 h propuesta por D4 sujeta a validación | audIT EdgeHub / SQLite WAL | `CP-HW-BUFF-09` | Aceptación mínima 72 h; prueba ampliada condicionada a confirmar diseño D4 |
 | **RF-010 / REQ-10** | Detección geocercas en 1.400 clientes sin HW | Motor Geocercas / EventHubs | `CP-SYS-GEOC-10` | CA-10 / Polígonos auto |
 | **RF-011 / REQ-11** | Registro auditable esperas sobreestadías | TimescaleDB / Motor Tarifario | `CP-INT-ESPE-11` | CA-11 / Objeciones $\le 20\%$ |
 | **RF-012 / REQ-12** | Conformidad de entrega (POD) con OTP y firma | App PWA Móvil / Sync Service | `CP-SYS-EPOD-12` | CA-12 / Cero pérdidas POD |
@@ -295,7 +295,7 @@ A continuación, la Tabla 9.3 presenta la síntesis canónica de trazabilidad pr
 | **RNF-005 / REQ-33** | Integración CAN bus solo lectura sin perder garantía | Pinzas Inductivas CANclick | `CP-HW-CAN-33` | Pérdida $<0{,}1\%$, no corte |
 | **RNF-006 / REQ-34** | Sistema contable único emisor e idempotencia | Integración ERP / Colas Kafka | `CP-INT-IDEM-34` | Cero facturación duplicada |
 | **RNF-007 / REQ-35** | Cero hardware propio en recintos de clientes | Geocercas satelitales GPS | `CP-TER-CLIE-35` | Detección 100% remota |
-| **RNF-008 / REQ-36** | Absorción de cierres cordilleranos de 288 h | Memoria eMMC 8 GB industrial | `CP-HW-CORD-36` | Retención 12 días sin corte |
+| **RNF-008 / REQ-36** | Continuidad ante desconexión: mínimo 72 h conforme a RT-03.10; evaluar la propuesta ampliada D4 de 288 h | Memoria eMMC propuesta | `CP-HW-CORD-36` | Verificar mínimo contractual; ampliación condicionada a diseño y ensayo D4 |
 | **RNF-009 / REQ-37** | Operación delegada sin sobrecargar TI Curimón | Servicio audIT Managed Cloud | `CP-OPS-SERV-37` | Soporte L1/L2/L3 audIT |
 | **RNF-010 / REQ-38** | Evaluación integral de ciclo de vida (TCO 56 m) | Arquitectura Cloud FinOps | `CP-OPS-FIN-38` | Cumplimiento contractual |
 | **RNF-011 / REQ-39** | Convivencia controlada en transición de flota | Capa Anticorrupción (ACL) | `CP-SYS-CONV-39` | Modo mixto gobernado |
@@ -303,24 +303,24 @@ A continuación, la Tabla 9.3 presenta la síntesis canónica de trazabilidad pr
 | **RNF-013 / REQ-41** | Cifrado y minimización estricta (Ley 21.719) | Azure Key Vault / TLS 1.3 | `CP-SEC-CRIP-41` | FLE en datos sensibles |
 | **RNF-014 / REQ-42** | Políticas de retención y borrado seguro legal | Storage Lifecycle Management | `CP-SEC-RETE-42` | Custodia legal 5 años |
 
-*(El catálogo detallado de los más de 100 casos de prueba formalizados para validar cada uno de estos requerimientos, incluyendo precondiciones, pasos de ejecución y datos de entrada, se presenta de forma íntegra en el **Formulario Técnico T-17**, archivo `formulario_t17_protocolo_aceptacion_plan_pruebas.md`).*
+*(El borrador del catálogo de casos propuestos, con precondiciones, pasos y datos de entrada, se presenta en el **Formulario Técnico T-17**, archivo `formulario_t17_protocolo_aceptacion_plan_pruebas.md`. La cobertura debe verificarse con la matriz RTM.)*
 
 ---
 
 ## 9.3 Alineación con Plan de Trabajo
 
-El Plan de Calidad de audIT SpA se encuentra perfectamente articulado con los paquetes de trabajo de la Estructura de Desglose del Trabajo (EDT) y el cronograma maestro contractual del proyecto desarrollados en el Capítulo 7. Esta sincronización garantiza que las actividades de aseguramiento, control de calidad, ensayos en laboratorio y pruebas de campo no se ejecuten como hitos aislados, sino como condiciones precedentes obligatorias para el avance de las fases del proyecto.
+El plan de calidad se vinculará con los paquetes de trabajo de la EDT y el cronograma maestro del Capítulo 7. Como el borrador de la EDT y el calendario no están disponibles para este cruce, los códigos y fechas de la matriz siguiente son referencias provisionales y deben confirmarse antes de congelar la línea base.
 
-A continuación se detallan el mapeo de hitos de calidad con la EDT y el régimen operativo de pruebas UAT en terminales regionales y marcha blanca de 60 días.
+El mapeo propuesto a continuación es provisional y debe cotejarse con la EDT vigente. El régimen operativo de UAT y la marcha blanca también requieren confirmación de calendario y participantes.
 
 ### 9.3.1 Mapeo de Hitos de Calidad en los Paquetes de Trabajo de la EDT (Capítulo 7)
 
-Las actividades de calidad se distribuyen a lo largo de las cinco macro-fases de la EDT (`EDT-1.X` a `EDT-5.X`). Cada paquete de trabajo crítico posee asociado un hito de calidad formal, un entregable verificable y una compuerta bloqueante que condiciona el cierre del paquete correspondiente.
+La matriz de trabajo relaciona actividades de calidad con códigos preliminares `EDT-1.X` a `EDT-5.X`. Cada paquete deberá cotejarse con el diccionario T-14 antes de asociarle un hito o una compuerta.
 
 La Tabla 9.4 presenta el mapeo exhaustivo entre la estructura EDT y los hitos de aseguramiento de calidad del proyecto.
 
 #### Tabla 9.4 — Mapeo de Hitos de Calidad con Macro-Fases y Paquetes de la EDT
-*Fuente: Elaboración propia conforme a Capítulo 7 (EDT), Formulario T-14 y Plan de Calidad.*
+*Fuente: Propuesta de mapeo; requiere conciliación con Capítulo 7 y Formulario T-14.*
 
 | Fase EDT | Paquete de Trabajo | Hito de Calidad Asociado | Entregable Formal | Compuerta Bloqueante |
 | :--- | :--- | :--- | :--- | :--- |
@@ -339,11 +339,11 @@ La Tabla 9.4 presenta el mapeo exhaustivo entre la estructura EDT y los hitos de
 
 ### 9.3.2 Articulación de Pruebas UAT, Pruebas No Funcionales y Marchas Blancas en el Cronograma
 
-El despliegue de las pruebas finales y la transición operacional hacia el régimen productivo se planifican minuciosamente para absorber la estacionalidad del negocio de Curimón y garantizar cero disrupción en carretera.
+El despliegue de las pruebas finales y la transición operacional deberán coordinarse con el calendario aprobado y las restricciones operativas que confirme Transportes Curimón S.A.
 
 #### Protocolo Operativo de Pruebas UAT en los 5 Terminales Regionales
 
-Las Pruebas de Aceptación de Usuario (UAT) no se limitan a pruebas de laboratorio en Santiago: se ejecutan de manera descentralizada y simultánea en los **cinco terminales regionales** de Transportes Curimón S.A., validando los flujos específicos de cada zona:
+El plan propone Pruebas de Aceptación de Usuario (UAT) en cinco terminales de Transportes Curimón S.A. La programación, disponibilidad de usuarios y escenarios por terminal deben confirmarse antes de fijar su ejecución:
 1. **Terminal San Bernardo (Región Metropolitana - Matriz):** Validación de la Torre de Programación 24x7 con 22 operadores en turnos, taller central de mantenimiento, calibración de caudalímetro en estanque de diésel propio y asignación masiva de flota.
 2. **Terminal Valparaíso (Región de Valparaíso):** Validación del flujo portuario de contenedores secos y reefers, integración de precintos electrónicos y gestión documental rápida para agencias de aduana.
 3. **Terminal Concepción (Región del Biobío):** Validación de transporte forestal, tolvas graneleras y transferencias químicas industriales, incluyendo relevo de tripulaciones.
@@ -353,27 +353,20 @@ Las Pruebas de Aceptación de Usuario (UAT) no se limitan a pruebas de laborator
 #### Régimen de Marcha Blanca de 60 Días en Etapa 1 y Gobernanza de Solapamiento (M13–M15)
 
 En estricto cumplimiento del Artículo 17.3 de las Bases Administrativas, la Etapa 1 concluye con una **Marcha Blanca de sesenta (60) días corridos**, programada entre los meses 14 y 15 (M14–M15):
-* **Célula Alfa de Hipercare (Estabilización Operativa 24x7):** Durante este período, un equipo dedicado de ingenieros de software, especialistas telemáticos y soporte de audIT SpA opera en modalidad de guardia 24x7x365, monitoreando la telemetría en tiempo real, resolviendo incidencias en terreno y calibrando los modelos algorítmicos.
-* **Convivencia Desacoplada con Célula Beta (Desarrollo Etapa 2):** Durante el solapamiento crítico de los meses 13 a 15 (M13–M15), la Célula Alfa se encuentra totalmente blindada de tareas de desarrollo nuevo, mientras la Célula Beta avanza de forma independiente en la construcción de los módulos avanzados de la Etapa 2 (motor ALNS de retornos en vacío y portal de transportistas).
-* **Criterios Go/No-Go de Cierre de Marcha Blanca:** El paso definitivo a régimen de facturación y cierre de Etapa 1 exige el cumplimiento copulativo de:
-  1. Disponibilidad mensual del sistema $\ge 99{,}5\%$ durante los 60 días continuos.
+* **Célula Alfa de estabilización:** Durante este período, un equipo asignado atenderá la estabilización, el monitoreo de telemetría y la resolución de incidencias conforme al esquema de soporte que se acuerde.
+* **Convivencia con Célula Beta (desarrollo de Etapa 2):** El plan considera separar la atención de estabilización del desarrollo de Etapa 2 durante el solapamiento previsto en los meses 13 a 15 (M13–M15). La distribución de recursos y paquetes debe confirmarse con D2.
+* **Criterios propuestos Go/No-Go de cierre de marcha blanca:** La recomendación de paso de etapa requerirá, como mínimo, evaluar los siguientes criterios y adjuntar sus resultados:
+   1. Disponibilidad E2E mensual del sistema $\ge 99{,}9\%$, con medición y período conforme a bases, durante la marcha blanca; confirmar el método de cómputo y ventana con la contraparte.
   2. Cero incidentes abiertos de severidad P1 (Bloqueante) o P2 (Crítico).
   3. Tiempo de recuperación ante cortes eléctricos vehiculares $< 10\text{ ms}$ en el 100% de la flota equipada.
   4. Conciliación y migración exitosa del 100% de los datos históricos del TMS 2013.
-* **Respeto a la Ventana de Congelamiento Estacional (*Change Freeze*):** audIT SpA respeta de manera obligatoria la regla de negocio que prohíbe intervenciones masivas en flota o migraciones de software durante el **Peak Frutícola y de Agroexportación (Diciembre a Abril)**, período en que los 44 equipos de frío operan a máxima capacidad y las esperas en puertos se incrementan sensiblemente. Cualquier actualización mayor se programa exclusivamente fuera de dicha ventana crítica.
+* **Ventana de cambios estacionales (*Change Freeze*):** El borrador considera evitar intervenciones masivas en flota durante diciembre–abril. Debe confirmarse con la contraparte que esta ventana corresponde a una restricción de las bases o a un supuesto operativo del caso.
 
 ---
 
 ### Referencias Bibliográficas
 
-* Congreso Nacional de Chile. (2001). *Ley N.° 19.799 sobre Documentos Electrónicos, Firma Electrónica y Servicios de Certificación de dicha Firma*. Diario Oficial de la República de Chile. https://www.bcn.cl/leychile/navegar?idNorma=196640
-* Congreso Nacional de Chile. (2021). *Ley N.° 21.377: Modifica la Ley de Tránsito para sancionar la conducción de vehículos motorizados manipulando dispositivos de telefonía móvil o cualquier otro artefacto electrónico o digital (Ley No Chat)*. Diario Oficial de la República de Chile. https://www.bcn.cl/leychile/navegar?idNorma=1166274
-* Congreso Nacional de Chile. (2024). *Ley N.° 21.719 sobre Protección y Tratamiento de Datos Personales y Creación de la Agencia de Protección de Datos*. Diario Oficial de la República de Chile. https://www.bcn.cl/leychile/navegar?idNorma=1209272
-* Institute of Electrical and Electronics Engineers. (2016). *IEEE Standard for System, Software, and Hardware Verification and Validation* (IEEE Std 1012-2016). IEEE Computer Society. https://doi.org/10.1109/IEEESTD.2017.8055462
-* International Organization for Standardization. (2015). *Quality management systems — Requirements* (ISO Standard No. 9001:2015). https://www.iso.org/standard/62085.html
-* International Organization for Standardization. (2021). *Software and systems engineering — Software testing — Part 2: Test processes* (ISO/IEC/IEEE Standard No. 29119-2:2021). https://www.iso.org/standard/79368.html
-* International Organization for Standardization. (2022). *Information security, cybersecurity and privacy protection — Information security management systems — Requirements* (ISO/IEC Standard No. 27001:2022). https://www.iso.org/standard/27001
-* International Organization for Standardization. (2023). *Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — Product quality model* (ISO/IEC Standard No. 25010:2023). https://www.iso.org/standard/78176.html
+Las fuentes externas y referencias normativas de este borrador requieren revisión bibliográfica: confirmar edición, título, aplicabilidad y correspondencia con las citas del texto antes de la entrega.
 * Ministerio de Salud. (2016). *Decreto Supremo N.° 43: Aprueba el Reglamento de Almacenamiento de Sustancias Peligrosas*. Biblioteca del Congreso Nacional de Chile. https://www.bcn.cl/leychile/navegar?idNorma=1088802
 * Ministerio de Transportes y Telecomunicaciones. (1995). *Decreto Supremo N.° 298: Reglamenta el Transporte de Cargas Peligrosas por Calles y Caminos*. Biblioteca del Congreso Nacional de Chile. https://www.bcn.cl/leychile/navegar?idNorma=12087
 * Ministerio del Trabajo y Previsión Social. (2003). *Decreto con Fuerza de Ley N.° 1: Fija el texto refundido, coordinado y sistematizado del Código del Trabajo (Artículo 25 bis sobre jornada de choferes de carga interurbana)*. Biblioteca del Congreso Nacional de Chile. https://www.bcn.cl/leychile/navegar?idNorma=207436
@@ -388,25 +381,25 @@ En estricto cumplimiento del Artículo 17.3 de las Bases Administrativas, la Eta
 
 ### Declaración de uso de IA
 
-En cumplimiento de lo dispuesto en la sección 7.2 del Comunicado 10 y en concordancia con el Formulario A-6 del Artículo 13.5 de las Bases Administrativas, audIT Soluciones Tecnológicas SpA declara que el contenido del presente Subdocumento 9 ha sido formulado, revisado y asumido con responsabilidad corporativa y técnica plena por parte de la empresa proponente. Las herramientas de IA generativa se emplearon de manera controlada y asistida en labores accesorias de edición de sintaxis en lenguaje de marcado y maquetación de esquemas vectoriales, habiéndose validado cada umbral métrico, compuerta de calidad y protocolo de pruebas por los profesionales de planta nominados.
+Declaración provisional para revisión del equipo: la asistencia de IA se utilizó de forma sustantiva para estructurar, redactar y editar secciones del Subdocumento 9 y para preparar esquemas y tablas. La revisión humana de normas, métricas, supuestos, trazabilidad y alineación con otros subdocumentos está pendiente; no se declara aprobación ni validación técnica completada. El responsable debe incorporar este uso en su bitácora individual A-6 antes de la entrega.
 
 #### Tabla D9.1 — Declaración de Uso de Herramientas de IA en el Subdocumento 9
 *Fuente: Elaboración propia conforme a Comunicado 10, sección 7.2.*
 
 | Sección / Componente | Herramienta | Finalidad del Uso | Nivel en Texto | Nivel en Diagramas | Revisión Humana Corporativa (Rol y Verificación) |
 | :--- | :--- | :--- | :---: | :---: | :--- |
-| **Párrafo Apertura S9** | Asistente de edición LLM | Ajuste estilístico y articulación transversal con S1-S14 | Bajo | Ninguno | Gerencia de Proyecto / PMO: Validación de conexiones contractuales y citación formal de T-13 y T-17. |
-| **9.1 Plan de Calidad** | Asistente de edición LLM | Estandarización de definiciones ISO/IEC 25010:2023 | Bajo | Ninguno | Jefatura de Calidad y Procesos: Verificación de las 9 características y modelo de comités CCPI. |
-| **9.1.2 Métricas Cuantitativas** | Asistente de cálculo | Maquetación de Tabla 9.1 y formato de umbrales | Bajo | Ninguno | Arquitectura & Software y Hardware IoT: Verificación de cobertura $\ge 80\%$, $v(G) \le 15$ y CAN bus $<0{,}1\%$. |
-| **9.1.3 Quality Gates (QG1-6)** | Herramienta de diagramación IA | Generación de sintaxis Mermaid para Figura 9.1 | Bajo | Medio | Dirección de Arquitectura & Software: Validación de la tubería GitLab CI, compuertas bloqueantes y DR. |
-| **9.2 Estrategia QA y Testing** | Asistente de edición LLM | Redacción de protocolo Peer Review y SAST/DAST | Bajo | Ninguno | Jefatura de Calidad y Seguridad: Validación de checklist de revisión y cero vulnerabilidades críticas. |
-| **9.2.2 Pirámide ISO 29119** | Herramienta de diagramación IA | Generación de sintaxis Mermaid para Figura 9.2 | Bajo | Medio | Líder de Aseguramiento de Calidad: Verificación de proporciones de la pirámide y datos sintéticos Ley 21.719. |
-| **9.2.3 Verificación y V&V** | Asistente de edición LLM | Estructuración tabular de los 42 requerimientos | Bajo | Ninguno | Líder de QA y Analista de Requisitos: Comprobación de trazabilidad biunívoca con Ficha Canónica y T-12. |
-| **9.3 Alineación con Plan Trabajo** | Asistente de edición LLM | Mapeo de hitos QA con paquetes de la EDT | Bajo | Ninguno | Gerencia de Proyecto / PMO: Validación de sincronización con Subdocumento 7 y Diccionario T-14. |
-| **9.3.2 UAT y Marcha Blanca** | Asistente de edición LLM | Redacción de protocolo UAT en 5 nodos y 60 d | Bajo | Ninguno | Jefatura de Terreno y QA: Verificación de UAT en San Bernardo, Valparaíso, Concepción, Antofagasta y Pto Montt. |
-| **Referencias Bibliográficas** | Formateador bibliográfico | Validación de estilo de citación APA 7.ª edición | Bajo | Ninguno | Jefatura de Calidad y Procesos: Validación de correspondencia unívoca entre citas en texto y nómina final. |
-| **Anexo: Formulario T-13** | Asistente de edición LLM | Estructuración de matrices de métricas y gates | Bajo | Ninguno | Dirección Técnica y Jefatura de Hardware: Verificación de SAE J1455, IP67, standby y blindaje Art. 50.2. |
-| **Anexo: Formulario T-17** | Asistente de edición LLM | Estandarización de fichas de casos de prueba | Bajo | Ninguno | Líder de Aseguramiento de Calidad: Revisión de cobertura de los 42 requerimientos del pliego. |
+| **Subdocumento 9** | Asistente LLM | Apoyo sustantivo en estructura, redacción y edición de secciones | Medio | Ninguno | Pendiente de revisión humana; verificar normas, métricas, supuestos y conexiones con los demás subdocumentos. |
+| **9.1 Plan de Calidad** | Asistente LLM | Reescritura sustantiva y organización de criterios ISO/IEC 25010 | Medio | Ninguno | Pendiente de revisión humana; validar edición de la norma y su interpretación. |
+| **9.1.2 Métricas Cuantitativas** | Asistente LLM | Revisión y reformulación de métricas y umbrales | Medio | Ninguno | Pendiente de validar herramientas, umbrales y referencias con arquitectura y hardware. |
+| **9.1.3 Quality Gates (QG1-6)** | Asistente LLM | Edición de texto y esquemas Mermaid | Medio | Medio | Pendiente de revisión de pipeline, ambientes, autorización y continuidad. |
+| **9.2 Estrategia QA y Testing** | Asistente LLM | Redacción sustantiva de estrategia y criterios de prueba | Medio | Ninguno | Pendiente de revisión normativa, técnica y contractual. |
+| **9.2.2 Pirámide ISO 29119** | Asistente LLM | Preparación y edición de esquema Mermaid | Medio | Medio | Pendiente de validar niveles, proporciones y datos de prueba. |
+| **9.2.3 Verificación y V&V** | Asistente LLM | Estructuración de la matriz de trazabilidad | Medio | Ninguno | Pendiente de cotejo contra T-12 y T-17. |
+| **9.3 Alineación con Plan Trabajo** | Asistente LLM | Redacción y mapeo preliminar de hitos QA | Medio | Ninguno | Pendiente de conciliación con S7/T-14/T-18 y de confirmar calendario. |
+| **9.3.2 UAT y Marcha Blanca** | Asistente LLM | Redacción preliminar del protocolo UAT | Medio | Ninguno | Pendiente de programación y confirmación con los terminales. |
+| **Referencias Bibliográficas** | Asistente LLM | Formato y edición de referencias | Medio | Ninguno | Pendiente de verificar cada cita, dato bibliográfico y correspondencia textual. |
+| **Formulario T-13** | Asistente LLM | Estructuración y revisión sustantiva de matrices de métricas y gates | Medio | Ninguno | Pendiente de validación técnica y normativa. |
+| **Formulario T-17** | Asistente LLM | Estructuración y edición sustantiva de catálogo y criterios de aceptación | Medio | Ninguno | Pendiente de validar cobertura, casos, cronograma y evidencias. |
 
 ---
 

@@ -4,20 +4,20 @@
 **Proponente:** audIT Soluciones Tecnológicas SpA  
 **Documento Asociado:** Subdocumento 9 (`subdocumento_09_calidad_adaptado.md`)  
 **Dupla Responsable:** D1 (QA, Gobernanza y Aseguramiento Normativo)  
-**Control Documental:** Versión 2.0 Definitiva · Entrega 2
+**Control Documental:** Borrador de trabajo · sujeto a revisión técnica y validación normativa
 
 ---
 
 ## 1. Marco de Gobernanza del Formulario T-13 y Vinculación Normativa
 
-El presente documento constituye el **Formulario Técnico T-13 oficial de audIT Soluciones Tecnológicas SpA**, estructurado como documento técnico independiente en cumplimiento del Artículo 40.4 de las Bases Administrativas, las Bases Técnicas Transversales (FEP02.26) y las directrices del Comunicado 10. Su propósito es formalizar y desagregar con carácter vinculante y auditable:
+Este borrador del Formulario Técnico T-13 organiza criterios propuestos de calidad de producto, software, firmware y telemetría. Su correspondencia con el Artículo 40.4, las bases técnicas y el Comunicado 10 debe confirmarse antes de emitirlo como documento formal. El contenido no certifica resultados de pruebas ya ejecutadas. Incluye:
 1. La **Matriz Exhaustiva de Métricas de Calidad de Software, Firmware y Telemetría**, basada en el modelo internacional **ISO/IEC 25010:2023** (*Product Quality Model*).
 2. La especificación técnica y de ingeniería de las **Compuertas de Calidad Bloqueantes (*Quality Gates*, QG1 a QG6)** que gobiernan el flujo de integración y entrega continua (CI/CD) entre los entornos de Desarrollo, QA, Staging, Producción y Recuperación ante Desastres (DR).
 3. Los **Quality Gates de Hardware Telemático Vehicular (Grado Automotriz)**, aplicables a los dispositivos electrónicos embarcados a bordo de los 374 tractocamiones del parque vehicular de Transportes Curimón S.A.
 4. La **Matriz de Políticas de Severidad de Defectos y Tiempos Máximos de Resolución (SLA Defectos)** que regirá durante las etapas de implantación, marchas blancas y operación continuada a 36 meses.
 
-### Blindaje Económico Estricto (Art. 50.2 de las Bases Administrativas)
-En estricto acatamiento de lo estipulado en el Artículo 50.2 de las Bases Administrativas, este documento omite deliberadamente cualquier mención a precios, tarifas unitarias, costos de personal o valores económicos asociados a las actividades de aseguramiento y control de calidad. Todas las métricas, compuertas y niveles de servicio se expresan exclusivamente mediante unidades de ingeniería: porcentajes de cobertura, tiempos de latencia, tasas de error, ciclos de reloj, complejidad algorítmica y plazos cronológicos.
+### Tratamiento de información económica
+Este borrador expresa criterios mediante unidades técnicas. La revisión final debe comprobar que cumple las restricciones económicas de las bases y evitar referencias a unidades que puedan interpretarse como costos de personal.
 
 ---
 
@@ -44,11 +44,11 @@ audIT SpA adopta la taxonomía completa de la norma **ISO/IEC 25010:2023**, adap
 | **4. Capacidad Interacción**<br>• Enclavamiento cinético | Bloqueo automático de UI táctil ante detección de velocidad $v > 0$ | audIT EdgeHub Sensor HAL | Latencia enclavamiento $< 200\text{ ms}$ | **Bloqueante (P1)**<br>Ley No Chat 21.377 |
 | **4. Capacidad Interacción**<br>• Emisión audio pasivo | Tasa de éxito en sintetizador Text-to-Speech fuera de línea | Motor TTS audIT Edge | $\ge 99{,}9\%$ avisos emitidos | **Mayor (P3)**<br>Alerta audible |
 | **4. Capacidad Interacción**<br>• Accesibilidad y error | Tasa de tareas completadas sin error en primer intento (portal web) | Telemetría UI / Hotjar | $\ge 92\%$ despachadores | **Menor (P4)**<br>Ergonomía de uso |
-| **5. Fiabilidad / Confiabilidad**<br>• Disponibilidad E2E | $\text{SLA} = \frac{\text{Tiempo total} - \text{Indisponibilidad no programada}}{\text{Tiempo total mensual}} \times 100$ | Datadog Synthetic Monitoring | $\ge 99{,}5\%$ mensual (24/7) | **Bloqueante (P1)**<br>Art. 78 de Bases |
-| **5. Fiabilidad / Confiabilidad**<br>• Disponibilidad Cloud | Disponibilidad de clústeres AKS y bases de datos Azure HA | Azure Service Health | $\ge 99{,}95\%$ mensual | **Bloqueante (P1)**<br>RT-07.08 Transv. |
-| **5. Fiabilidad / Confiabilidad**<br>• Resiliencia RTO | Tiempo máximo de recuperación tras desastre hacia Brazil South | Script de Failover DRP | $\text{RTO} \le 4{,}0\text{ horas}$ | **Bloqueante (P1)**<br>RT-07.03 Transv. |
+| **5. Fiabilidad / Confiabilidad**<br>• Disponibilidad E2E | $\text{SLA} = \frac{\text{Tiempo total} - \text{Indisponibilidad no programada}}{\text{Tiempo total mensual}} \times 100$ | Datadog Synthetic Monitoring | $\ge 99{,}9\%$ mensual (24/7) | **Bloqueante (P1)**<br>Art. 20 FEP01, p. 14; RT-10.01 FEP02, p. 22 |
+| **5. Fiabilidad / Confiabilidad**<br>• Disponibilidad Cloud | Disponibilidad de clústeres AKS y bases de datos Azure HA | Azure Service Health | Objetivo interno propuesto: $\ge 99{,}95\%$ mensual, sujeto a validación de D4; no sustituye el SLA E2E | **Propuesto; validar**<br>Arquitectura D4 |
+| **5. Fiabilidad / Confiabilidad**<br>• Resiliencia RTO | Tiempo máximo de recuperación tras desastre hacia Brazil South | Script de Failover DRP | $\text{RTO} \le 4{,}0\text{ horas}$ | **Bloqueante (P1)**<br>RT-07.04 FEP02, p. 17 |
 | **5. Fiabilidad / Confiabilidad**<br>• Pérdida de datos RPO | Desfase de replicación continua de base de datos transaccional | Azure Replication Lag Monitor | $\text{RPO} \le 15{,}0\text{ minutos}$ | **Bloqueante (P1)**<br>RT-07.04 Transv. |
-| **5. Fiabilidad / Confiabilidad**<br>• Autonomía buffer sombra | Capacidad de almacenamiento continuo sin red celular (8 GB eMMC) | Test de Inyección Masiva | $\ge 288\text{ h}$ (12 días) | **Bloqueante (P1)**<br>Cierre Los Lib. |
+| **5. Fiabilidad / Confiabilidad**<br>• Autonomía buffer sombra | Capacidad de almacenamiento continuo sin red celular; dispositivo propuesto de 8 GB eMMC | Ensayo de desconexión y sincronización | Mínimo contractual: $\ge 72\text{ h}$; objetivo ampliado de 288 h sujeto a diseño y validación D4 | **72 h bloqueante (P1)**<br>288 h: objetivo propuesto, validar con D4 |
 | **5. Fiabilidad / Confiabilidad**<br>• Recuperación eléctrica | Tiempo de reapertura y consistencia atómica SQLite WAL post-corte | Test Suite Hardware | $< 10\text{ ms}$ post-energía | **Bloqueante (P1)**<br>Cero corrupción |
 | **6. Seguridad**<br>• Vulnerabilidades código | Densidad de fallos en análisis estático de código fuente (SAST) | SonarQube Enterprise | 0 Críticas / 0 Altas | **Bloqueante (P1)**<br>CVSS $\ge 7{,}0$ |
 | **6. Seguridad**<br>• Vulnerabilidades DAST | Hallazgos activos de penetración dinámica en endpoints web/API | OWASP ZAP Enterprise | 0 hallazgos abiertos | **Bloqueante (P1)**<br>OWASP Top 10 |
@@ -144,7 +144,7 @@ graph TD
 * **Disparador (*Trigger*):** Despliegue de un *Release Candidate* en el entorno de Staging (espejo productivo).
 * **Condiciones de Aceptación:**
   1. Escaneo dinámico DAST con OWASP ZAP Enterprise: Cero vulnerabilidades activas del OWASP Top 10.
-  2. Prueba de carga y estrés con K6 (450 viajes/día concurrentes): Latencia $P_{95}$ de asignación de viaje $\le 30{,}0\text{ segundos}$.
+  2. Prueba de carga y estrés con K6 sobre el perfil pico que se acuerde con D2; viajes/día, concurrencia y ráfagas quedan sujetos al dimensionamiento trazado. Medir latencia $P_{95}$; el umbral debe validarse antes de fijar la línea base.
   3. Prueba de inyección de ráfaga: Ingestión de 1,8 millones de registros telemáticos en Kafka en $< 15\text{ minutos}$ sin degradar transacciones en tiempo real.
 * **Acción ante Rechazo:** Reversión automática (*rollback*) en Staging; apertura obligatoria de defecto P1/P2 en Jira.
 * **Rol Autorizador:** Ingeniero Líder de QA / Especialista DevSecOps.
@@ -171,7 +171,7 @@ graph TD
 
 ## 4. Quality Gates de Hardware Telemático Vehicular (Grado Automotriz)
 
-El aseguramiento de calidad del hardware embarcado en los 374 tractocamiones exige controles físicos, electrónicos y ambientales de rigor industrial extremo, garantizando que los equipos operen ininterrumpidamente bajo las vibraciones severas de la carretera, el polvo del desierto de Atacama y la nieve de la cordillera.
+El aseguramiento de calidad del hardware previsto para la flota considera controles físicos, electrónicos y ambientales. Los métodos y límites propuestos deben contrastarse con las especificaciones del equipo y las normas aplicables.
 
 ### Tabla T13.2 — Quality Gates de Hardware Telemático Vehicular Grado Automotriz
 *Fuente: Elaboración propia conforme a normas SAE J1455, directiva UNECE R10 y Caso 10 Curimón.*
@@ -190,7 +190,7 @@ El aseguramiento de calidad del hardware embarcado en los 374 tractocamiones exi
 
 ## 5. Matriz de Políticas de Severidad de Defectos y Tiempos de Resolución (SLA Defectos)
 
-Para la gestión de no conformidades, bugs e incidentes operativos detectados durante la implantación, pruebas UAT, marchas blancas y régimen operacional, audIT SpA establece una política formal de clasificación de severidad basada en el impacto sobre la operación de Transportes Curimón S.A., asociando tiempos máximos de respuesta y resolución técnica garantizados:
+Para clasificar no conformidades detectadas durante implantación, pruebas UAT, marchas blancas y operación, se propone la siguiente escala basada en su impacto. Los tiempos son objetivos de servicio propuestos, sujetos a confirmación contractual:
 
 ### Tabla T13.3 — Taxonomía de Severidad de Defectos y Compromisos de Resolución (SLA)
 *Fuente: Elaboración propia conforme a ITIL 4 y Art. 78 de las Bases Administrativas.*
@@ -212,16 +212,19 @@ Ante todo defecto clasificado como **P1 (Bloqueante)** o **P2 (Crítico)**, el C
 
 ## 6. Cierre Formal y Aprobación Institucional
 
-El presente Formulario Técnico T-13 ha sido formulado, revisado y sancionado en conformidad con los más altos estándares de ingeniería de software, telemetría automotriz y aseguramiento normativo, constituyendo un compromiso contractual inalterable de **audIT Soluciones Tecnológicas SpA** para la ejecución de la Licitación Pública TFEP-01/2026.
+Este borrador del Formulario T-13 requiere revisión técnica, normativa y contractual antes de convertirse en compromiso de audIT Soluciones Tecnológicas SpA.
 
 | Rol Técnico Corporativo | Área de Responsabilidad | Firma Institucional y Fecha |
 | :--- | :--- | :---: |
-| **Gerencia de Proyecto / Oficina PMO** | Gobernanza Contractual y Control de Plazos | *audIT Soluciones Tecnológicas SpA*<br>30 de Septiembre de 2026 |
-| **Dirección de Arquitectura & Software** | Calidad de Software, Microservicios y Cloud | *audIT Soluciones Tecnológicas SpA*<br>30 de Septiembre de 2026 |
-| **Jefatura de Hardware IoT & Conectividad** | Certificación Hardware Automotriz y Red en Ruta | *audIT Soluciones Tecnológicas SpA*<br>30 de Septiembre de 2026 |
-| **Jefatura de Aseguramiento de Calidad & Procesos** | Metodología V&V, Testing y Auditoría ISO | *audIT Soluciones Tecnológicas SpA*<br>30 de Septiembre de 2026 |
+| **Gerencia de Proyecto / Oficina PMO** | Gobernanza Contractual y Control de Plazos | Pendiente de revisión y firma |
+| **Dirección de Arquitectura & Software** | Calidad de Software, Microservicios y Cloud | Pendiente de revisión y firma |
+| **Jefatura de Hardware IoT & Conectividad** | Certificación Hardware Automotriz y Red en Ruta | Pendiente de revisión y firma |
+| **Jefatura de Aseguramiento de Calidad & Procesos** | Metodología V&V, Testing y Auditoría ISO | Pendiente de revisión y firma |
 
 ---
 
 *Fin del Formulario Técnico T-13 — Matriz de Calidad del Producto y Quality Gates*  
 *audIT Soluciones Tecnológicas SpA · Licitación N.° TFEP-01/2026*
+
+### Declaración de uso de inteligencia artificial
+Se utilizó inteligencia artificial generativa de forma sustantiva como apoyo para redactar, estructurar y revisar este borrador. La revisión humana técnica, normativa y contractual está pendiente; no se declara validación independiente. Completar y conciliar el registro A-6 antes de la entrega.

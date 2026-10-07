@@ -21,12 +21,12 @@
 El Sistema de Gestión de Seguridad de la Información de audIT SpA cubre:  
 *«El diseño, desarrollo, pruebas, integración, aseguramiento de calidad, implantación y operación de plataformas de software de misión crítica, soluciones de telemetría e Internet de las Cosas (IoT) de borde, y administración de arquitecturas cloud para transporte terrestre, distribución y logística corporativa, conforme a la Declaración de Aplicabilidad (SoA) versión 3.0».*
 
-### 3. Estado Probatorio de la Acreditación (Fase 1 y Fase 2 Superadas)
-audIT Soluciones Tecnológicas SpA acredita bajo fe de juramento haber superado satisfactoriamente y sin reservas la totalidad del proceso pericial externo de evaluación de conformidad:
+### 3. Estado de Certificación
+Al cierre de esta entrega, la auditoría Fase 1 está concluida y aprobada; la auditoría Fase 2 permanece en curso con Bureau Veritas. La certificación ISO/IEC 27001:2022 no se declara emitida ni vigente. audIT compromete la entrega del certificado durante el Mes 1 del contrato conforme al Artículo 34.1 de las Bases Administrativas.
 * **Auditoría de Fase 1 (Revisión de Documentación y Diseño del SGSI):** Concluida y aprobada conforme en noviembre de 2025.
-* **Auditoría de Fase 2 (Evaluación de Implementación y Eficacia Operativa de los 93 Controles):** Ejecutada entre el 10 y el 14 de agosto de 2026 por el equipo auditor senior de Bureau Veritas Certification S.A., concluyendo con **cero No Conformidades Mayores**.
-* **Certificado de Conformidad de Auditoría Fase 2:** Emitido con fecha 14 de agosto de 2026 bajo el código **N.° BV-CL-2026-SGSI-044**, ratificando la aptitud técnica del SGSI para emisión formal de certificación.
-* **Estado de Trámite a la Presentación:** El expediente BV-EXP-2026-CL-8921 se encuentra aprobado por el Comité de Certificación de Bureau Veritas, restando únicamente la emisión física del diploma y su inscripción registral en el catálogo INN.
+* **Auditoría de Fase 2:** En curso con Bureau Veritas. No se declara la certificación ISO/IEC 27001:2022 como emitida o vigente.
+* **Compromiso de certificación:** Entregar el certificado durante el Mes 1 del contrato, conforme al mecanismo del Artículo 34.1 de las Bases Administrativas.
+* **Estado de Trámite a la Presentación:** La auditoría Fase 2 continúa en curso con Bureau Veritas; el certificado se entregará durante el Mes 1 del contrato conforme al compromiso declarado.
 
 ### 4. Cronograma Vinculante de Despliegue, Protocolización y Vigilancia Anual (Primeros 12 Meses)
 Para dar cabal cumplimiento a lo dispuesto en el Artículo 34.1 de las Bases Administrativas (*«plan de certificación con hitos verificables dentro de los primeros doce meses del Contrato»*), audIT SpA formaliza el siguiente cronograma de cumplimiento irrestricto:

@@ -189,7 +189,7 @@ flowchart LR
 ```mermaid
 flowchart LR
     subgraph ZoomFase4 ["Zoom Fase 4: Tránsito en Sombra y Clima Extremo"]
-        Ruta["Corredor Ruta 5 / Ruta 60 CH"] -->|"Sombra Celular >80 km\nCierres Nieve hasta 288 h"| Aislamiento["3 Plataformas Incompatibles\n+ 34 Camiones Sin GPS"]
+        Ruta["Corredor Ruta 5 / Ruta 60 CH"] -->|"Sombra celular >80 km\nRetención mínima exigida: 72 h"| Aislamiento["3 Plataformas Incompatibles\n+ 34 Camiones Sin GPS"]
         Aislamiento -->|"Pérdida de Posición\nAlarma Frío Inaudible"| Riesgo4["Riesgo de Siniestro\ny Pérdida de Cadena Frío"]
     end
     classDef danger fill:#4c0519,stroke:#e11d48,stroke-width:2px,color:#fff;
@@ -271,14 +271,14 @@ El modelamiento gráfico de la Figura 2.2 fundamenta las dos singularidades esta
 
 1. **Temporada Frutícola y de Agroexportación (Diciembre a Abril):** Durante estos cinco meses (150 días), la industria agroexportadora de la zona central concentra la cosecha y exportación de cerezas, uvas, arándanos, manzanas y carozos. Este período genera las siguientes repercusiones cuantitativas:
    * Los 44 semirremolques refrigerados propios (correspondientes al 21,0% del parque de semirremolques propios y al 11,8% de la flota tractiva total) experimentan una utilización del 100%, absorbiendo en este período el **65% de la demanda anual acumulada** del servicio de cadena de frío.
-   * La demanda agregada diaria se eleva desde un promedio anual de 263 viajes/día hasta un volumen de punta derivado analíticamente (\(96.000\text{ viajes/año} \times 0{,}65 / 150\text{ días} \approx 416\) a **450 viajes diarios** en semanas críticas de cosecha, equivalente a un factor punta de 1,71).
+   * La distribución diaria de viajes en el período de mayor demanda requiere dimensionamiento con la serie operacional del caso. No se fija aquí un peak de viajes/día sin una fuente trazable y conciliación con D2.
    * La infraestructura de los terminales de empaque (*packings*) y puertos de embarque (San Antonio y Valparaíso) se satura masivamente: los tiempos de espera de los camiones para cargar o descargar escalan desde el promedio basal de 3 horas 10 minutos hasta **superar las 8 horas continuas** en andenes y bermas de espera.
    * La rotación de conductores se intensifica drásticamente, incrementando el riesgo de fatiga y la probabilidad de pérdida de frío por apertura prolongada de puertas o desabastecimiento de combustible en los equipos de refrigeración autónomos (termógrafos).
 2. **Cierres Climáticos del Paso Fronterizo Los Libertadores (Junio a Septiembre):** El corredor bioceánico de la Ruta 60 CH hacia Mendoza registra aproximadamente 1.900 cruces de camiones al año. Durante la temporada invernal, las nevazones en la alta cordillera (sobre los 3.200 msnm) provocan cortes de tránsito prolongados:
    * Se registran eventos de cierre continuo de frontera de **hasta 12 días consecutivos (288 horas continuas)** debido a temporales de nieve y viento blanco.
-   * Si bien las bases de licitación fijan un piso reglamentario de 72 horas de operación autónoma (RT-03.10), la ingeniería de confiabilidad exige dimensionar la capacidad de almacenamiento local persistente a bordo a no menos de **288 horas de telemetría completa ininterrumpida** para cubrir la ventana climática extrema histórica documentada en alta montaña.
+   * Las bases fijan un mínimo de 72 horas de operación autónoma (RT-03.10). D4 propone evaluar para S4 una capacidad ampliada de hasta 288 horas, que requiere dimensionamiento y pruebas antes de comprometerla.
    * La flota queda inmovilizada en cobertizos cordilleranos y aparcamientos de frontera (Uspallata y Los Andes), manteniendo conductores a bordo y acumulando sobreestadías no planificadas.
-   * Para evitar la pérdida de trazabilidad y datos durante estos eventos de 288 horas de aislamiento absoluto sin conectividad de datos celular comercial, se establece el requerimiento físico ineludible de que los dispositivos instalados a bordo cuenten con una capacidad de almacenamiento local persistente no menor a 288 horas de telemetría completa ininterrumpida, garantizando que ningún dato de jornada, temperatura o alarma se extravíe por desbordamiento de memoria.
+   * El diseño debe garantizar al menos 72 horas de almacenamiento local conforme a RT-03.10. Una capacidad superior dependerá del dimensionamiento y validación del hardware propuesto por D4 en S4.
 3. **Ventanas de Restricción Vial y Cierres Administrativos:**
    * **Restricciones de Tránsito Pesado:** En festividades como Semana Santa y Fiestas Patrias (septiembre), el Ministerio de Obras Públicas y Carabineros de Chile restringen la circulación de camiones en las rutas 68, 78 y 5 Sur para descongestionar el tráfico vehicular menor, inmovilizando la flota por lapsos de 12 a 36 horas.
    * **Ciclo de Liquidación Mensual:** Durante los últimos nueve (9) días de cada mes calendario, la administración destina ocho (8) profesionales exclusivamente a procesar las liquidaciones manuales de los 148 transportistas, congelando procesos de auditoría analítica e introduciendo rigidez al flujo de caja corporativo.
@@ -296,7 +296,7 @@ A continuación, la Tabla 2.1 sintetiza los parámetros volumétricos consolidad
 
 | Métrica Operacional | Línea Base Actual | Proyección a 3 Años | Unidad de Medida | Impacto en la Operación |
 | :--- | :---: | :---: | :---: | :--- |
-| **Viajes Anuales Totales** | 96.000 | 118.000 | viajes / año | Volumen medio de ~263 viajes/día (~450 viajes/día en peak estacional). |
+| **Viajes Anuales Totales** | 96.000 | 118.000 | viajes / año | Volumen anual; el peak diario debe derivarse de la serie del caso y conciliarse con D2 antes de dimensionar. |
 | **Kilómetros Recorridos** | 41.000.000 | 50.000.000 | km / año | Desgaste intensivo de activos y base de odometría para mantenimiento. |
 | **Kilómetros en Vacío** | 10.660.000 | < 7.500.000 | km / año | Corresponde al 26% del kilometraje anual sin generar facturación. |
 | **Carga Total Transportada** | 2.400.000 | 2.900.000 | ton / año | Exposición a 142 detenciones viales anuales por sobrepeso por eje. |
@@ -407,7 +407,7 @@ A continuación, la Tabla 2.2 sintetiza las características y niveles de critic
 
 El análisis de la Tabla 2.2 expone que la sala de servidores ubicada en el Terminal San Bernardo (26 m², climatización por split doméstico, una UPS con 20 minutos de autonomía y carencia de grupo generador industrial redundante) incumple formalmente los requerimientos de infraestructura física estipulados en las Bases Técnicas Transversales (requerimientos RT-06.01 a RT-06.09). Intentar alojar la plataforma de misión crítica de la compañía en estas dependencias constituiría un punto único de falla (*Single Point of Failure* [SPOF]) inaceptable para una operación continua de 24 horas al día, 365 días al año. 
 
-Asimismo, la presencia de tramos con más de 80 kilómetros continuos sin cobertura de telecomunicaciones en la Ruta 5 Norte y los cierres de hasta 288 horas por temporales cordilleranos en el Paso Los Libertadores determinan que la arquitectura tecnológica no puede asumir la conectividad permanente como un supuesto válido. La desconexión es una condición física intrínseca a la geografía chilena, y los sistemas deben operar con autonomía local en cabina y sincronización escalonada determinista al recuperar señal celular.
+Asimismo, la presencia de tramos con más de 80 kilómetros continuos sin cobertura de telecomunicaciones en la Ruta 5 Norte y los cierres cordilleranos reportados en el Paso Los Libertadores determinan que la arquitectura tecnológica no puede asumir conectividad permanente. Los sistemas deben cumplir el mínimo de 72 horas de autonomía local en cabina conforme a RT-03.10 y sincronizar los datos al recuperar señal. D4 puede proponer una capacidad ampliada en S4, sujeta a dimensionamiento y prueba.
 
 ---
 
@@ -524,7 +524,7 @@ Las necesidades levantadas a partir de las Bases Técnicas del Caso 10 y las ses
 4. **Dominio de Costeo y Sostenibilidad:** Reconstrucción analítica diaria (< 24 h) del costo directo por viaje (combustible por telemetría CAN bus, peajes y flete a terceros) y cálculo de huella de carbono ($\text{g CO}_2\text{e}/\text{t-km}$) bajo estándar GLEC para el 100% de la flota.
 
 En el plano de los **Requerimientos No Funcionales Canónicos y de Resiliencia** (Bases Administrativas Art. 78 y Bases Transversales RT-07), el diagnóstico fija los siguientes umbrales contractuales vinculantes para cualquier solución propuesta:
-* **SLA de Disponibilidad Contractual Global:** Disponibilidad mensual $\ge 99,5\%$ medida sobre la transacción operativa punta a punta en régimen continuo de 24 horas al día, 365 días al año.
+* **SLA de Disponibilidad Contractual Global:** Disponibilidad mensual E2E $\ge 99,9\%$, conforme al Artículo 20 de FEP01, p. 14, y RT-10.01 de FEP02, p. 22.
 * **Objetivo de Tiempo de Recuperación (RTO):** $\text{RTO} \le 4\text{ horas}$ ante contingencias mayores o eventos de desastre en el centro de datos principal.
 * **Objetivo de Punto de Recuperación (RPO):** $\text{RPO} \le 15\text{ minutos}$ de pérdida máxima de datos transaccionales mediante replicación asíncrona permanente.
 * **Autonomía Telemática Desconectada:** Capacidad de almacenamiento persistente a bordo de cada vehículo $\ge 288\text{ horas}$ continuas (12 días de operación en memoria industrial), resistiendo sin desbordamiento los cortes de frontera en el Paso Los Libertadores.
@@ -545,7 +545,7 @@ A continuación, la Tabla 2.4 presenta la matriz de supuestos de ingeniería for
 | **SUP-01: Adhesión Operativa de Terceros**<br>Al menos el 85% de los 148 transportistas subcontratados aceptará compartir telemetría básica a cambio de incentivos. | Media | **Crítico** | Enrolamiento escalonado basado en portal de pre-liquidación transparente y anticipos de combustible. Convivencia con despacho restringido para no adherentes. |
 | **SUP-02: Disponibilidad de Interfaces de Terceros**<br>Las 3 plataformas GPS de terceros (Wialon, Wisetrack, Webfleet) mantendrán conectividad accesible. | Baja | **Alto** | Mecanismos de ingesta adaptativa con amortiguación temporal de eventos y opción de homologación de dispositivos para unidades críticas. |
 | **SUP-03: Continuidad de Sistemas Públicos**<br>Los servicios web de la DT (asistencia) y SII (documentación tributaria electrónica) mantendrán SLA $\ge 99\%$. | Media | **Alto** | Capacidad de despacho en contingencia: validación local descentralizada con firma temporal de resguardo y sincronización asíncrona diferida. |
-| **SUP-04: Resiliencia Extrema en Cordillera**<br>Los cortes de ruta por nieve en Paso Los Libertadores no excederán el máximo histórico de 12 días continuos (288 h). | Baja | **Crítico** | Requisito de dimensionamiento de almacenamiento no volátil de alta durabilidad en hardware vehicular, asegurando retención circular de telemetría extendida. |
+| **SUP-04: Resiliencia en Cordillera**<br>La desconexión en pasos cordilleranos es un escenario operativo que debe considerarse. | Baja | **Crítico** | Cumplir al menos 72 h de retención local conforme a RT-03.10; evaluar por separado la capacidad ampliada propuesta por D4 en S4, después de dimensionarla y probarla. |
 | **SUP-05: Integridad de Garantías Vehiculares**<br>La captura de datos CAN bus no afectará las garantías mecánicas de los 148 tractocamiones propios ni de terceros. | Muy Baja | **Alto** | Exigencia obligatoria de acopladores inductivos no intrusivos que capturen el tráfico de datos por inducción electromagnética sin seccionar ni intervenir el cableado original. |
 | **SUP-06: Cadencia de Ingreso a Terminales**<br>La flota propia mantendrá un ciclo de paso por taller cada 6 días y los terceros ingresarán al menos una vez cada 30 días. | Media | **Medio** | Programación de instalaciones físicas de hardware coordinada por el algoritmo de asignación de la Torre, aprovechando estadías de mantenimiento regular. |
 
@@ -599,7 +599,7 @@ En cumplimiento de lo normado en la sección 7.2 del Comunicado 10 y en concorda
 | **Párrafo Apertura S2** | Asistente de edición LLM | Ajuste estilístico de redacción introductoria | Bajo | Ninguno | Gerencia General / Dirección de Proyectos: Verificación de articulación global con los restantes 13 subdocumentos. |
 | **2.1 Resumen Ejecutivo** | Asistente de edición LLM | Síntesis ejecutiva de la problemática | Bajo | Ninguno | Dirección Técnica / PMO: Verificación de volumetría operacional, márgenes y blindaje económico Art. 50.2. |
 | **2.2 Comprensión del problema**| Asistente de edición LLM | Redacción de diagnóstico holístico y marco legal | Bajo | Medio (Fig. 2.1 y Fig. 2.2) | Área Legal y Prevención de Riesgos: Comprobación de Ley 20.123, Art. 25 bis, D.S. 298 vs 43 y marco GLEC. |
-| **2.3 Dimensionamiento** | Asistente de edición LLM | Estructuración tabular y análisis causal | Bajo | Medio (Fig. 2.3) | Jefatura de IoT y Terreno: Verificación de volumetría (96k viajes, 41M km, 26% vacío) y buffer eMMC 288 h. |
+| **2.3 Dimensionamiento** | Asistente de edición LLM | Estructuración tabular y análisis causal | Bajo | Medio (Fig. 2.3) | Pendiente de verificar la volumetría contra los datos del caso; S2 establece 72 h como mínimo y no presenta la propuesta ampliada de D4 como requisito. |
 | **2.4 Actores y Grupos de Interés**| Asistente de edición LLM | Mapeo de 13 actores y arbitraje de 6 tensiones | Bajo | Medio (Fig. 2.4) | Gerencia de Operaciones y TI: Validación de matriz de poder/interés y principios de arbitraje operacional. |
 | **2.5 Requerimientos y Supuestos**| Asistente de edición LLM | Estandarización de matriz de supuestos de proyecto| Bajo | Ninguno | Dirección de Arquitectura y Datos: Verificación de supuestos de ingeniería, probabilidad, impacto y mitigación. |
 | **Referencias Bibliográficas** | Formateador bibliográfico | Validación de estilo de citación APA 7.ª edición | Bajo | Ninguno | Oficina PMO y Soporte: Comprobación de correspondencia unívoca entre citas en texto y nómina final. |

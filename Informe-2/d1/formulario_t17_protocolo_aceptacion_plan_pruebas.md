@@ -1,24 +1,23 @@
 # Formulario T-17: Protocolo de Aceptación y Plan Detallado de Pruebas
-**Licitación Pública TFEP-01/2026 — Solución Integral de Transporte de Carga Terrestre**  
-**Cliente:** Transportes Curimón S.A.  
-**Proponente:** audIT Soluciones Tecnológicas SpA  
-**Documento Asociado:** Subdocumento 9 (`subdocumento_09_calidad_adaptado.md`)  
-**Dupla Responsable:** D1 (QA, Gobernanza y Aseguramiento Normativo)  
-**Control Documental:** Versión 2.0 Definitiva · Entrega 2
+**Licitación Pública TFEP-01/2026 — Solución Integral de Transporte de Carga Terrestre**
+**Cliente:** Transportes Curimón S.A.
+**Proponente:** audIT Soluciones Tecnológicas SpA
+**Documento Asociado:** Subdocumento 9 (`subdocumento_09_calidad_adaptado.md`)
+**Dupla Responsable:** D1 (QA, Gobernanza y Aseguramiento Normativo)
+**Control Documental:** Borrador de trabajo · sujeto a revisión técnica y validación normativa
 
 ---
 
-## 1. Marco Metodológico, Alcance y Gobernanza de Pruebas (ISO/IEC/IEEE 29119 e IEEE 829)
+## 1. Marco Metodológico, Alcance y Gobernanza de Pruebas
 
-El presente documento constituye el **Formulario Técnico T-17 oficial de audIT Soluciones Tecnológicas SpA**, estructurado conforme a las especificaciones del Artículo 40.4 y la página 64 de las Bases Administrativas (FEP01), las Bases Técnicas Transversales (FEP02.26) y las directrices metodológicas de la norma internacional **ISO/IEC/IEEE 29119:2021** (*Software and Systems Engineering — Software Testing*) y el estándar **IEEE 829:2008** (*Test and Master Test Documentation*).
+Este borrador del Formulario T-17 reúne un protocolo de aceptación y casos de prueba propuestos. La referencia a las Bases Administrativas, las Bases Técnicas Transversales y las normas de documentación de pruebas debe verificarse antes de emitir la versión formal. Los casos no han sido ejecutados. Los escenarios y datos numéricos de prueba son sintéticos; salvo los requisitos que citan expresamente las bases, las métricas y umbrales descritos en los casos son criterios propuestos, no resultados observados, y requieren fuente o aprobación de las duplas técnicas responsables antes de convertirse en criterios de aceptación.
 
-Su propósito es formalizar con carácter técnico y legal vinculante el **Protocolo de Aceptación por Hitos y de Producto Final**, así como el **Catálogo Exhaustivo de más de 100 Casos de Prueba Formalizados** que gobernarán los ciclos de verificación, validación, certificación en banco de simulación física (*Hardware-in-the-Loop*, HIL) y pruebas de aceptación de usuario (*User Acceptance Testing*, UAT) en las cinco instalaciones neurálgicas de Transportes Curimón S.A. (San Bernardo, Valparaíso, Concepción, Antofagasta y Puerto Montt).
+Su propósito es proponer un protocolo de aceptación por hitos y un catálogo de casos para pruebas de verificación, validación, banco de simulación (*Hardware-in-the-Loop*, HIL) y aceptación de usuario (*User Acceptance Testing*, UAT) en San Bernardo, Valparaíso, Concepción, Antofagasta y Puerto Montt. Los casos describen resultados esperados, no resultados ya ejecutados.
 
 ```mermaid
 graph TD
     subgraph MarcoNormativo ["Marco Normativo y Gobernanza de Pruebas (audIT SpA)"]
         ISO29119["ISO/IEC/IEEE 29119-3:2021\n(Test Documentation)"]
-        IEEE829["IEEE 829:2008\n(Master Test Plan)"]
         ISO25010["ISO/IEC 25010:2023\n(Product Quality Model)"]
         BasesFEP["Bases TFEP-01/2026\n(Art. 40.4 y Pág. 64 FEP01)"]
     end
@@ -32,28 +31,23 @@ graph TD
         UAT["Batería 6: Aceptación Terreno UAT\n(15 Casos: 5 Terminales Regionales)"]
     end
 
-    ISO29119 & IEEE829 --> Unit & Int & Sys
+    ISO29119 --> Unit & Int & Sys
     ISO25010 --> NonFunc
     BasesFEP --> HIL & UAT
 
     classDef norm fill:#1e293b,stroke:#3b82f6,stroke-width:2px,color:#fff;
     classDef test fill:#0f172a,stroke:#64748b,stroke-width:1px,color:#cbd5e1;
-    class ISO29119,IEEE829,ISO25010,BasesFEP norm;
+    class ISO29119,ISO25010,BasesFEP norm;
     class Unit,Int,Sys,NonFunc,HIL,UAT test;
 ```
 
-### 1.1 Blindaje Económico Estricto (Artículo 50.2 de las Bases Administrativas)
-En riguroso acatamiento de lo prescrito en el Artículo 50.2 de las Bases Administrativas de la Licitación Pública TFEP-01/2026, el presente Formulario T-17 **omite en forma total y absoluta cualquier mención a precios, costos de desarrollo, tarifas por hora-hombre, honorarios profesionales o valoraciones económicas de la propuesta técnica de audIT SpA**. 
+### 1.1 Tratamiento de información económica (Artículo 50.2)
+Este borrador expresa recursos y criterios mediante unidades técnicas. Antes de la entrega se debe contrastar el tratamiento de magnitudes de trabajo con el Artículo 50.2.
 
-Todas las magnitudes y recursos asignados al aseguramiento de la calidad se especifican exclusivamente mediante unidades técnicas y métricas objetivas de ingeniería:
-* Horas-hombre de ingeniería de pruebas y testing de campo.
-* Líneas de código ejecutadas y porcentajes de cobertura matemática.
-* Tiempos de latencia en percentiles $P_{95}$ y $P_{99}$.
-* Frecuencias de reloj, tasas de error y pérdida de paquetes en bus telemático.
-* Duraciones de ciclos de simulación, jornadas de prueba en terminales y marchas blancas.
+Las magnitudes de prueba propuestas incluyen duraciones, porcentajes de cobertura, percentiles de latencia, frecuencias y tasas de error. La definición final de métricas debe cotejarse con las bases y los equipos técnicos.
 
-### 1.2 Estándar de Documentación de Casos de Prueba (9 Campos Obligatorios)
-Conforme a la norma ISO/IEC/IEEE 29119-3:2021, cada caso de prueba catalogado en este documento se desagrega de manera homogénea y obligatoria a través de los siguientes nueve atributos normativos:
+### 1.2 Campos de control adoptados para los casos de prueba
+Para este catálogo se adoptan los siguientes campos de control. Su inclusión organiza el borrador y no afirma que una norma exija exactamente esta estructura:
 1. **ID del Caso de Prueba:** Identificador canónico único y unívoco por batería (`CP-UNIT-XX`, `CP-INT-XX`, `CP-SYS-XX`, `CP-PERF-XX`, `CP-SEC-XX`, `CP-HW-XX`, `CP-UAT-XX`).
 2. **Nivel de Prueba y Tipología:** Ubicación en la pirámide de pruebas (Unitaria, Integración, Sistema, No Funcional, Ciberseguridad, Hardware HIL, Aceptación UAT) y subtipo operacional.
 3. **Requerimiento Contractual Trazado:** Mapeo formal y bidireccional contra el catálogo canónico de 42 requerimientos del pliego (`RF-001` a `RF-028` y `RNF-001` a `RNF-014`).
@@ -61,18 +55,18 @@ Conforme a la norma ISO/IEC/IEEE 29119-3:2021, cada caso de prueba catalogado en
 5. **Pasos de Ejecución Detallados:** Secuencia algorítmica y numerada paso a paso, reproducible de manera determinista por cualquier ingeniero de QA o auditor del mandante.
 6. **Datos de Entrada Sintéticos:** Valores de prueba generados sintéticamente en estricto cumplimiento de la Ley N.º 21.719 de Protección de Datos Personales (RUTs de prueba, coordenadas ficticias dentro de la red vial, patentes sintéticas sin correlato con personas naturales o jurídicas reales).
 7. **Resultado Esperado y Criterio de Éxito:** Comportamiento determinista esperado del sistema, salidas de API, eventos Kafka generados, estados de base de datos o lecturas físicas de actuadores.
-8. **Criterio Pass/Fail y Severidad de Defecto:** Regla de aprobación estricta y asignación taxativa del nivel de severidad en caso de discrepancia (P1 Bloqueante, P2 Crítica, P3 Mayor, P4 Menor).
+8. **Criterio Pass/Fail y Severidad de Defecto:** Criterio de aceptación propuesto y clasificación de severidad pendiente de validación.
 9. **Entorno de Ejecución:** Ambiente de ejecución del ensayo (Local Dev, CI Runner Testcontainers, Staging AKS, Banco de Laboratorio HIL, Terreno en Terminal).
 
-### 1.3 Clasificación de Severidad de Defectos y Niveles de Servicio (SLA)
-La gestión de no conformidades detectadas durante la ejecución del Plan de Pruebas se rige por las políticas de severidad y tiempos de atención estipulados en el Formulario T-13 y el Subdocumento 9:
+### 1.3 Clasificación propuesta de severidad de defectos
+La siguiente clasificación se propone para priorizar defectos durante las pruebas. No fija plazos contractuales de respuesta o resolución; esos plazos deben corresponder a las bases y al contrato:
 
-| Nivel de Severidad | Denominación Operacional | Impacto en la Misión Crítica de Curimón S.A. | Tiempo Máximo de Respuesta (MTTR) | Acción Bloqueante en Pipeline / Despliegue |
-| :---: | :--- | :--- | :---: | :--- |
-| **P1** | **Bloqueante (*Blocker*)** | Compromete la seguridad física, incumple normativas legales (Art. 25 bis, D.S. 298), corrompe datos de jornada, o paraliza la Torre de Control y la asignación. | $\le 2\text{ horas}$ | **Bloqueo Inmediato (Stop-Ship).** Rechazo automático de MR y congelamiento de pase a producción. |
-| **P2** | **Crítica (*Critical*)** | Pérdida de funcionalidad operativa mayor (telemetría, sobreestadías, conciliación de combustible) sin *workaround* manual viable. | $\le 6\text{ horas}$ | Bloqueo de promoción a Staging y Producción hasta entrega de hotfix verificado. |
-| **P3** | **Mayor (*Major*)** | Falla en módulo de soporte, latencia degradada que no excede umbral de corte, o error en interfaz con alternativa operacional transitoria. | $\le 24\text{ horas}$ | Aceptación condicionada en Staging; remediación obligatoria antes del cierre del hito. |
-| **P4** | **Menor (*Minor*)** | Discrepancias cosméticas de interfaz, tipografía, ordenamiento menor de tablas o alertas informativas no bloqueantes. | $\le 72\text{ horas}$ | Programación en el backlog del siguiente sprint de estabilización. |
+| Nivel de Severidad | Denominación Operacional | Impacto operativo | Respuesta de prueba propuesta |
+| :---: | :--- | :--- | :--- |
+| **P1** | **Bloqueante (*Blocker*)** | Riesgo de seguridad, incumplimiento de requisito legal validado, corrupción de datos o interrupción de función crítica. | Impide recomendar aceptación mientras el defecto esté abierto, sujeto al proceso contractual. |
+| **P2** | **Crítica (*Critical*)** | Pérdida de una función operativa relevante sin alternativa viable. | Requiere evaluación de impacto y decisión documentada de la contraparte. |
+| **P3** | **Mayor (*Major*)** | Degradación funcional con alternativa temporal posible. | Requiere plan de resolución aprobado por las partes. |
+| **P4** | **Menor (*Minor*)** | Discrepancia cosmética o informativa sin impacto funcional significativo. | Se registra y gestiona según el mecanismo acordado contractualmente. |
 
 ---
 
@@ -96,7 +90,7 @@ Para garantizar la consistencia sistémica del Formulario T-17 frente a los subd
 | **RF-006 / REQ-06** | Validación carga SUSPEL vs manifiesto (18 tractos)| `[Handshake H3 — Hardware & Riesgos: AMFE Falla F-SUSPEL-01]` | `CP-UNIT-19` / `CP-SYS-06` | `[Handshake H4 — WBS: EDT-3.3]` |
 | **RF-007 / REQ-07** | Descarga remota y archivo tacógrafo digital | `[Handshake H3 — Hardware & Riesgos: Interfaz DSRC Tacógrafo]` | `CP-HW-15` / `CP-INT-21` | `[Handshake H4 — WBS: EDT-2.3]` |
 | **RF-008 / REQ-08** | Vista única 374 tractocamiones en Torre 24x7 | `[Handshake H2 — Software & Arquitectura: Portal Torre / Timescale]` | `CP-SYS-16` / `CP-UAT-01` | `[Handshake H4 — WBS: EDT-3.4]` |
-| **RF-009 / REQ-09** | Buffer local vehicular $\ge 72\text{ h}$ (compromiso 288 h)| `[Handshake H3 — Hardware & Riesgos: AMFE Sombra F-EMMC-02]` | `CP-HW-03` / `CP-PERF-02` | `[Handshake H4 — WBS: EDT-2.3]` |
+| **RF-009 / REQ-09** | Retención local mínima $\ge 72\text{ h}$; ampliación propuesta de hasta 288 h sujeta a validación D4 | `[Handshake H3 — Hardware & Riesgos: AMFE Sombra F-EMMC-02]` | `CP-HW-03` (mínimo 72 h; extensión condicionada) | `[Handshake H4 — WBS: EDT-2.3]` |
 | **RF-010 / REQ-10** | Detección geocercas en 1.400 clientes sin hardware| `[Handshake H2 — Software & Arquitectura: Motor Ray-Casting]` | `CP-UNIT-08` / `CP-SYS-03` | `[Handshake H4 — WBS: EDT-3.5]` |
 | **RF-011 / REQ-11** | Registro auditable esperas sobreestadías | `[Handshake H2 — Software & Arquitectura: Engine Liquidación]` | `CP-UNIT-12` / `CP-SYS-03` | `[Handshake H4 — WBS: EDT-3.5]` |
 | **RF-012 / REQ-12** | Conformidad de entrega (POD) con OTP y firma | `[Handshake H2 — Software & Arquitectura: App Móvil PWA e-POD]` | `CP-SYS-04` / `CP-INT-20` | `[Handshake H4 — WBS: EDT-3.6]` |
@@ -123,7 +117,7 @@ Para garantizar la consistencia sistémica del Formulario T-17 frente a los subd
 | **RNF-005 / REQ-33** | Integración CAN bus solo lectura sin perder garantía | `[Handshake H3 — Hardware & Riesgos: Pinza CANclick]` | `CP-UNIT-16` / `CP-HW-04` | `[Handshake H4 — WBS: EDT-2.3]` |
 | **RNF-006 / REQ-34** | Sistema contable único emisor e idempotencia | `[Handshake H2 — Software & Arquitectura: Kafka Transaccional]` | `CP-INT-12` / `CP-INT-11` | `[Handshake H4 — WBS: EDT-3.7]` |
 | **RNF-007 / REQ-35** | Cero hardware propio en recintos de clientes | `[Handshake H2 — Software & Arquitectura: Motor Geocercas GPS]` | `CP-UNIT-08` / `CP-SYS-03` | `[Handshake H4 — WBS: EDT-3.5]` |
-| **RNF-008 / REQ-36** | Absorción de cierres cordilleranos de 288 h | `[Handshake H3 — Hardware & Riesgos: Memoria eMMC 8 GB]` | `CP-HW-03` / `CP-PERF-02` | `[Handshake H4 — WBS: EDT-2.3]` |
+| **RNF-008 / REQ-36** | Retención mínima de 72 h; estudiar objetivo ampliado de 288 h propuesto por D4 | `[Handshake H3 — Hardware & Riesgos: Memoria eMMC 8 GB]` | `CP-HW-03` (ensayo de 72 h y extensión si se confirma) | `[Handshake H4 — WBS: EDT-2.3]` |
 | **RNF-009 / REQ-37** | Operación delegada sin sobrecargar TI Curimón | `[Handshake H2 — Software & Arquitectura: Managed Services]` | `CP-SYS-16` / `CP-UAT-01` | `[Handshake H4 — WBS: EDT-4.1]` |
 | **RNF-010 / REQ-38** | Evaluación integral de ciclo de vida (TCO 56 m) | `[Handshake H2 — Software & Arquitectura: FinOps Azure]` | `CP-PERF-08` / `CP-SYS-01` | `[Handshake H4 — WBS: EDT-1.2]` |
 | **RNF-011 / REQ-39** | Convivencia controlada en transición de flota | `[Handshake H2 — Software & Arquitectura: Capa Strangler Fig]` | `CP-INT-05` / `CP-SYS-05` | `[Handshake H4 — WBS: EDT-3.1]` |
@@ -135,64 +129,50 @@ Para garantizar la consistencia sistémica del Formulario T-17 frente a los subd
 
 ## 3. Protocolo General de Aceptación por Hitos y Producto Final (Bases FEP01 p. 64)
 
-Conforme a lo ordenado en la página 64 de las Bases Administrativas (FEP01), este capítulo detalla la estructura formal del **Protocolo de Aceptación**, especificando los entregables de cada hito contractual, los criterios de aceptación cuantitativos, la evidencia documental requerida, los plazos de revisión y el procedimiento reglado de formulación y subsanación de observaciones.
+Se propone un protocolo de aceptación por hitos con criterios cuantitativos, evidencias y plazos. Antes de tratarlo como procedimiento contractual, cada referencia y plazo debe cotejarse con las Bases Administrativas.
 
-### 3.1 Estructura Contractual de Hitos de Aceptación
-El proyecto se articula en seis hitos formales de aceptación (`H-01` a `H-06`), distribuidos armónicamente entre la Etapa 1 (Meses 1 a 15), la Etapa 2 (Meses 16 a 20) y el inicio de la Operación Continuada (Mes 21):
+### 3.1 Propuesta de hitos de aceptación
+El calendario se expresa en meses relativos para no fijar fechas sin la Carta Gantt de D2. Las duraciones y la ubicación de hitos son referencias del borrador y deben cotejarse con las bases y acordarse antes de establecer la línea base.
 
-```mermaid
-gantt
-    title Cronograma Contractual de Hitos de Aceptación (TFEP-01/2026)
-    dateFormat  YYYY-MM-DD
-    axisFormat  M%m
-    section Etapa 1 (M01-M15)
-    H-01 Kick-off y Aprobación de Plan de Calidad   :milestone, h1, 2026-01-15, 0d
-    Desarrollo Núcleo y Banco HIL                   :active, d1, 2026-01-16, 2026-06-30
-    H-02 Certificación Banco HIL y Núcleo Backend  :milestone, h2, 2026-06-30, 0d
-    Despliegue Hardware Taller y Conectores CDC     :active, d2, 2026-07-01, 2026-12-15
-    H-03 Integración TMS 2013 y Hardware Flota     :milestone, h3, 2026-12-15, 0d
-    Marcha Blanca Etapa 1 (60 Días M14-M15)         :crit, mb1, 2026-12-16, 2027-02-15
-    H-04 Aceptación Etapa 1 y Pase a Producción     :milestone, h4, 2027-02-15, 0d
-    section Etapa 2 (M16-M20)
-    Desarrollo Portales Web y Motor ALNS Retornos  :active, d3, 2027-02-16, 2027-05-30
-    Marcha Blanca Final Etapa 2 (60 Días M19-M20)   :crit, mb2, 2027-06-01, 2027-07-31
-    H-05 Aceptación Final de Producto y Apagado TMS :milestone, h5, 2027-07-31, 0d
-    section Operación Continuada (M21-M56)
-    H-06 Certificación de Estabilidad Operativa     :milestone, h6, 2027-10-31, 0d
-```
+| Fase de referencia | Ventana relativa del borrador | Hitos relacionados | Estado |
+| :--- | :---: | :--- | :--- |
+| Etapa 1 | M01–M15 | H-01 a H-04 | Duración por validar |
+| Marcha blanca de Etapa 1 | Pendiente | H-04 | Ventana por acordar con D2 |
+| Etapa 2 | M16–M20 | H-05 | Duración por validar |
+| Marcha blanca de Etapa 2 | Pendiente | H-05 | Ventana por acordar con D2 |
+| Operación continuada | M21–M56 | H-06 | Duración por validar |
+
+No se asignan ventanas de marcha blanca hasta cotejar la secuencia del proyecto con D2 y las bases.
 
 ### 3.2 Matriz de Entregables, Criterios y Evidencias por Hito
-La Tabla T17.2 compendia los requisitos objetivos que deberán cumplirse de manera acumulativa para la suscripción de cada acta:
+La Tabla T17.2 presenta criterios propuestos por hito. La codificación y secuencia de hitos y evidencias deben cotejarse contra FEP01 y la Carta Gantt de D2.
 
 #### Tabla T17.2 — Matriz General de Aceptación por Hitos Contractuales
 *Fuente: Elaboración propia audIT Soluciones Tecnológicas SpA conforme a Bases FEP01 p. 64.*
 
-| Hito Contractual | Entregables Formales Sujetos a Aceptación | Criterios de Aceptación Objetivos | Evidencia Probatoria Requerida | Plazo de Revisión Curimón S.A. |
+| Hito de referencia | Entregables propuestos | Criterios propuestos | Evidencia por recopilar | Plazo por validar |
 | :--- | :--- | :--- | :--- | :---: |
-| **H-01 (Mes 1)**<br>Plan de Aseguramiento y V&V | • Subdocumento 9 aprobado.<br>• Formulario T-13 y T-17 en línea base congelada.<br>• Matriz RTM consolidada. | • 100% de los 42 requerimientos cubiertos con casos de prueba.<br>• Cero observaciones P1/P2 abiertas en revisión de ingeniería. | • Acta de Aprobación de Plan de Calidad.<br>• Repositorio GitLab configurado con branch protection y QG1/QG2. | 10 días hábiles |
-| **H-02 (Mes 6)**<br>Certificación Banco HIL y Core | • Reporte de ensayos en banco HIL.<br>• Certificación de 100% pruebas unitarias (`CP-UNIT-01..25`).<br>• Infraestructura Cloud Azure desplegada. | • Cobertura unitaria $\ge 80\%$.<br>• 0 defectos P1/P2 abiertos.<br>• Conmutación eléctrica HIL $< 10\text{ ms}$.<br>• Consumo reposo $< 50\text{ mA}$. | • Reporte SonarQube SAST y Trivy SCA.<br>• Oscilogramas certificados del banco HIL.<br>• Certificado de despliegue IaC con Terraform verificado. | 10 días hábiles |
-| **H-03 (Mes 12)**<br>Integración Hardware y CDC | • 87 tractos propios retrofiteados.<br>• Conector CDC Debezium con TMS 2013 operativo.<br>• Capa ACL para Wialon/Wisetrack homologada. | • 100% pruebas `CP-INT-01..25` aprobadas.<br>• Tasa de ingesta CDC $\ge 99{,}9\%$.<br>• Pérdida de tramas CANclick $< 0{,}1\%$. | • Informes técnicos de instalación camión por camión en taller San Bernardo.<br>• Métricas Prometheus de eventos CDC y latencia Kafka. | 10 días hábiles |
-| **H-04 (Mes 15)**<br>Aceptación Etapa 1 | • Finalización de Marcha Blanca 1 (60 días).<br>• Validación bloqueante en producción.<br>• Reporte K6 carga sostenida (450 viajes/día). | • Disponibilidad $\ge 99{,}5\%$ mensual.<br>• $P_{95}$ validación bloqueante $\le 30\text{ s}$.<br>• Cero multas DT por jornada en flota propia durante marcha blanca. | • Bitácora de operaciones de la Torre 24x7.<br>• Logs inmutables sellados SHA-256 en Key Vault.<br>• Informe de resultados K6 y DAST OWASP ZAP sin CVEs. | 10 días hábiles |
-| **H-05 (Mes 20)**<br>Aceptación Producto Final | • Módulos de Etapa 2 desplegados (ALNS, Portales Clientes/Terceros, Emisiones).<br>• Finalización Marcha Blanca 2 (60 días).<br>• Apagado seguro de TMS 2013 legacy. | • Reducción de km en vacío a $<15\%$.<br>• Conciliación de sobreestadías con objeciones $<20\%$.<br>• 100% de los 110 casos de prueba formalmente aprobados. | • Actas de recepción UAT suscritas en los 5 terminales regionales.<br>• Reporte de migración histórica de 480.000 viajes.<br>• Certificación de failover DRP hacia Brazil South (RTO $\le 4\text{ h}$). | 15 días hábiles |
-| **H-06 (Mes 23)**<br>Estabilidad Operacional | • Auditoría de 90 días de operación continuada.<br>• Cumplimiento del SLA 99,5% consolidado.<br>• Traspaso definitivo a Mesa de Soporte 24/7. | • MTTR global $\le 2\text{ h}$ en P1.<br>• Disponibilidad acumulada $\ge 99{,}5\%$.<br>• Base de conocimiento operacional L1/L2/L3 completa. | • Reporte Datadog / Azure Monitor consolidado.<br>• Encuestas de satisfacción a 22 operadores de Torre y 148 transportistas. | 10 días hábiles |
+| H-01 (referencia) | • Revisión del borrador S9, T-13 y T-17.<br>• Confirmación de RTM. | • Cobertura de requisitos medida y documentada.<br>• Hallazgos de revisión registrados. | • Acta, RTM y configuración de pipeline, una vez disponibles. | Pendiente de validar en bases |
+| H-02 (referencia) | • Ejecución de pruebas unitarias y ensayos HIL del alcance acordado. | • Umbrales definidos en T-13 y validados antes de ejecutar. | • Reportes de prueba, escaneos y mediciones. | Pendiente de validar en bases |
+| H-03 (referencia) | • Integraciones y equipos previstos para la etapa. | • Casos aprobados según protocolos acordados. | • Informes de instalación e integración, cuando se ejecuten. | Pendiente de validar en bases |
+| H-04 (referencia) | • Pruebas y marcha blanca de Etapa 1, si corresponde al cronograma acordado. | • Criterios aprobados antes de la ejecución y medidos durante la ventana acordada. | • Informes de disponibilidad, carga, seguridad e incidencias. | Pendiente de validar en bases |
+| H-05 (referencia; fecha por conciliar) | • Módulos de la etapa correspondiente y pruebas del alcance acordado.<br>• Revisión de migración, si aplica al contrato. | • Metas y criterios aprobados antes de ejecutar.<br>• Casos aceptados según evidencias. | • Actas UAT si se ejecutan.<br>• Reporte de migración, si corresponde.<br>• Evidencia DRP con RTO/RPO conforme a línea base contractual. | Por validar en bases y Carta Gantt |
+| H-06 (referencia) | • Estabilidad y transferencia a soporte, si aplica al contrato. | • Objetivos de servicio medidos durante el período acordado. | • Reportes operacionales y acta de transferencia, una vez disponibles. | Pendiente de validar en bases |
 
 ### 3.3 Plazos de Revisión y Procedimiento Reglado de Observaciones
-De conformidad con las normas de las Bases Administrativas, la tramitación de entregables e hitos se sujetará al siguiente procedimiento:
+Como propuesta sujeta a conciliación con las Bases Administrativas, la tramitación de entregables e hitos podría considerar el siguiente procedimiento:
 1. **Presentación de Entregable:** audIT SpA ingresará formalmente la carpeta técnica del hito a la Contraparte Técnica de Transportes Curimón S.A., acompañada de la batería de pruebas y evidencias requeridas.
-2. **Plazo Ordinario de Revisión:** Transportes Curimón S.A. dispondrá de un plazo fatal de **diez (10) días hábiles** (quince días para el Hito H-05) contados desde el ingreso para auditar, verificar y emitir su pronunciamiento:
+2. **Plazo de revisión:** Aplicar el plazo establecido en las bases y el contrato:
    * **Conformidad Pura y Simple:** Si el entregable satisface la totalidad de los criterios objetivos de aceptación, la Contraparte Técnica suscribirá el Acta de Aceptación dentro del plazo estipulado.
-   * **Silencio Positivo / Aprobación Tácita:** Transcurrido el plazo sin que Curimón S.A. formule observaciones fundadas por escrito, el entregable o hito se entenderá legal y técnicamente aprobado en todas sus partes.
+   * **Falta de observaciones:** Cualquier efecto de no recibir observaciones dentro del plazo debe verificarse expresamente en las bases antes de describirse como aprobación.
    * **Formulación de Observaciones:** Si se detectaren defectos o incumplimientos objetivos, Curimón S.A. emitirá un Informe de Observaciones debidamente tipificado y sustentado.
-3. **Plazo de Subsanación y Remediación:** audIT SpA dispondrá de un plazo de **cinco (5) días hábiles** para corregir las no conformidades observadas, re-ejecutar las pruebas pertinentes y reingresar la carpeta con el informe de remediación.
-4. **Revisión Final de Subsanación:** La Contraparte Técnica dispondrá de **tres (3) días hábiles** adicionales para verificar exclusivamente los puntos objetados. Verificada la subsanación, se procederá a la firma inmediata del acta.
+3. **Subsanación:** Aplicar el procedimiento y plazo establecidos en las bases y el contrato.
+4. **Revisión de subsanación:** Revisar la corrección conforme al plazo y procedimiento que establezcan las bases y el contrato.
 
-### 3.4 Procedimiento de Resolución de Controversias Técnicas
-En caso de discrepancia en la interpretación de los criterios de éxito de un caso de prueba, operará el siguiente escalamiento reglado:
-* **Nivel 1 (Técnico):** Reunión extraordinaria entre el Jefe de QA de audIT SpA y el Coordinador Técnico de Curimón S.A. (plazo máximo: 24 horas).
-* **Nivel 2 (Directivo):** Sesión del Comité de Control de Proyecto e Integración (CCPI), integrado por el Gerente de Proyecto de audIT SpA y el Gerente de Operaciones de Curimón S.A. (plazo máximo: 48 horas).
-* **Nivel 3 (Peritaje Técnico Externo):** Si persiste el desacuerdo, las partes designarán de común acuerdo un perito independiente de reconocida trayectoria en ingeniería de software y sistemas de transporte, cuyo dictamen técnico será vinculante.
+### 3.4 Resolución de observaciones técnicas
+Las discrepancias sobre resultados, criterios o defectos se registrarán con sus evidencias y se tramitarán mediante el procedimiento y los plazos de revisión, observación y controversia establecidos en las bases y el contrato. No se propone aquí un arbitraje ni un plazo adicional.
 
-### 3.5 Modelo Canónico de Acta de Conformidad y Aceptación
+### 3.5 Plantilla de acta de conformidad y aceptación
 
 ```text
 ====================================================================================================
@@ -201,30 +181,28 @@ En caso de discrepancia en la interpretación de los criterios de éxito de un c
 ====================================================================================================
 
 IDENTIFICACIÓN DEL HITO:
-• Hito Evaluado: [ ] H-01  [ ] H-02  [ ] H-03  [ ] H-04  [ ] H-05  [ ] H-06
+• Hito Evaluado: ___________________________________________________________________________________
 • Denominación: ____________________________________________________________________________________
 • Fecha de Ingreso: ____ / ____ / ________   • Fecha de Aprobación: ____ / ____ / ________
 
 VERIFICACIÓN DE CRITERIOS OBJETIVOS Y CASOS DE PRUEBA:
 1. Total de Casos de Prueba Comprometidos en el Hito: _________ casos.
-2. Casos de Prueba Ejecutados: _________   • Aprobados (Pass): _________   • Fallidos (Fail): _________
+2. Casos de Prueba Ejecutados: _________   • Aprobados (Pass): _________   • Fallidos (Fail): _________   • No ejecutados: _________
 3. Estado de Defectos:
    • P1 (Bloqueante): [ 0 ] Abiertos   • P2 (Crítica): [ 0 ] Abiertos
-   • P3 (Mayor):      [   ] Abiertos (SLA de resolución acordado: ____ días hábiles)
-   • P4 (Menor):      [   ] Abiertos (Incorporados al backlog de mantenimiento)
-4. Cobertura Unitaria de Código (SonarQube): ________ % (Umbral exigido: >= 80,0%)
-5. Disponibilidad E2E Medida (Datadog):       ________ % (Umbral exigido: >= 99,5%)
+   • P3 (Mayor):      [   ] Abiertos
+   • P4 (Menor):      [   ] Abiertos
+4. Cobertura Unitaria de Código: ________ % (criterio aprobado aplicable: __________________________)
+5. Disponibilidad E2E Medida (Datadog):       ________ % (Umbral exigido: >= 99,9%; Art. 20 FEP01, p. 14)
 
 DOCUMENTACIÓN Y EVIDENCIAS ADJUNTAS:
-[X] Informe de Ejecución de Pruebas (Test Execution Summary Report).
-[X] Trazas de Logs selladas criptográficamente con SHA-256.
-[X] Certificados de Calibración de Hardware e Informes de Banco HIL.
-[X] Actas de Pruebas UAT en Terreno suscritas por Jefaturas de Terminal.
+[ ] Informe de Ejecución de Pruebas (Test Execution Summary Report).
+[ ] Trazas de Logs selladas criptográficamente con SHA-256.
+[ ] Certificados de Calibración de Hardware e Informes de Banco HIL.
+[ ] Actas de Pruebas UAT en Terreno suscritas por Jefaturas de Terminal.
 
 PRONUNCIAMIENTO FORMAL DE LA CONTRAPARTE TÉCNICA:
-Habiéndose verificado el cumplimiento estricto de la totalidad de los criterios objetivos de aceptación, 
-la Contraparte Técnica de Transportes Curimón S.A. declara formalmente la RECEPCIÓN CONFORME del hito 
-indicado precedentemente, autorizando el avance hacia la siguiente fase contractual.
+Pendiente de pronunciamiento de la Contraparte Técnica tras revisar los criterios y evidencias del hito.
 
 _____________________________________________         _____________________________________________
         POR TRANSPORTES CURIMÓN S.A.                        POR audIT TECNOLÓGICAS SpA
@@ -243,7 +221,7 @@ Esta batería valida en aislamiento estricto la lógica de negocio, las funcione
 ### CP-UNIT-01: Algoritmo de Asignación Bloqueante Pre-Despacho (4 Factores Síncronos)
 * **ID:** `CP-UNIT-01`
 * **Nivel y Tipología:** Prueba Unitaria Automatizada / Lógica de Negocio y Enclavamiento Bloqueante.
-* **Requerimiento Trazado:** `RF-001 / REQ-01` (Validación bloqueante pre-despacho en $\le 30\text{ s}$).  
+* **Requerimiento Trazado:** `RF-001 / REQ-01` (Validación bloqueante pre-despacho en $\le 30\text{ s}$).
   *[Handshake H2 — Software & Arquitectura: Microservicio Asignación]* · *[Handshake H4 — WBS: EDT-3.1]*
 * **Precondiciones:**
   1. Instancia mock del motor de asignación inicializada en memoria.
@@ -271,10 +249,12 @@ Esta batería valida en aislamiento estricto la lógica de negocio, las funcione
 
 ---
 
-### CP-UNIT-02: Límite de Conducción Continua de 5 Horas (Artículo 25 bis Código del Trabajo)
+Fuente normativa para los casos de jornada que siguen: Artículo 25 bis del Código del Trabajo, según la orientación de la Dirección del Trabajo sobre jornada y descansos de conductores de vehículos de carga terrestre interurbana ([Dirección del Trabajo](https://www.dt.gob.cl/portal/1628/w3-article-60075.html); consulta 6 de octubre de 2026). La configuración debe respetar la vigencia legal aplicable a la fecha de cada prueba.
+
+### CP-UNIT-02: Límite de Conducción Continua de 5 Horas para Transporte Interurbano de Carga (Artículo 25 bis Código del Trabajo)
 * **ID:** `CP-UNIT-02`
 * **Nivel y Tipología:** Prueba Unitaria Automatizada / Cumplimiento Legal y Algorítmico.
-* **Requerimiento Trazado:** `RF-002 / REQ-02` (Evidencia jornada 454 choferes).  
+* **Requerimiento Trazado:** `RF-002 / REQ-02` (Evidencia de jornada; aplicar a conductores de vehículos de carga terrestre interurbana conforme al Art. 25 bis).
   *[Handshake H2 — Software & Arquitectura: Microservicio Jornada]* · *[Handshake H4 — WBS: EDT-3.2]*
 * **Precondiciones:** Función `evaluateContinuousDriving(driverTimeline)` cargada.
 * **Pasos de Ejecución:**
@@ -291,16 +271,16 @@ Esta batería valida en aislamiento estricto la lógica de negocio, las funcione
     "speedReadingsAverageKmh": 78.4
   }
   ```
-* **Resultado Esperado:** Emisión inmediata de infracción `VIOLATION_CONTINUOUS_DRIVING_EXCEEDED` con estado `BLOCKED_FOR_DISPATCH`, registrando exceso de 60 segundos.
+* **Resultado Esperado:** Al superar cinco horas continuas, emisión de infracción `VIOLATION_CONTINUOUS_DRIVING_EXCEEDED` con estado `BLOCKED_FOR_DISPATCH`, registrando el exceso de 60 segundos.
 * **Pass/Fail y Severidad:** **Pass** si detecta la infracción en el minuto 301 exacto y bloquea al conductor. **Fail** si permite continuar sin alertar. **Severidad:** **P1 (Bloqueante)**.
 * **Entorno:** Local CI Runner / Go Test Runtime.
 
 ---
 
-### CP-UNIT-03: Descanso Mínimo Intermedio de 2 Horas tras 5 Horas de Conducción
+### CP-UNIT-03: Descanso Mínimo Intermedio de 2 Horas tras 5 Horas de Conducción Interurbana
 * **ID:** `CP-UNIT-03`
 * **Nivel y Tipología:** Prueba Unitaria Automatizada / Lógica de Regulación Laboral.
-* **Requerimiento Trazado:** `RF-002 / REQ-02` (Régimen de descanso Art. 25 bis).  
+* **Requerimiento Trazado:** `RF-002 / REQ-02` (Régimen de descanso del Art. 25 bis para transporte interurbano de carga).
   *[Handshake H2 — Software & Arquitectura: Microservicio Jornada]* · *[Handshake H4 — WBS: EDT-3.2]*
 * **Precondiciones:** Conductor ha completado bloque de 5 horas continuas de conducción a las 13:00:00Z.
 * **Pasos de Ejecución:**
@@ -317,34 +297,35 @@ Esta batería valida en aislamiento estricto la lógica de negocio, las funcione
 
 ---
 
-### CP-UNIT-04: Descanso Mínimo Diario de 8 Horas Continuas en Ciclo de 24 Horas
+### CP-UNIT-04: Descanso Mínimo Diario de 8 Horas Continuas dentro de cada Período de 24 Horas
 * **ID:** `CP-UNIT-04`
 * **Nivel y Tipología:** Prueba Unitaria Automatizada / Validación Cronológica de Jornada.
-* **Requerimiento Trazado:** `RF-002 / REQ-02` (Descanso diario de 8 horas Art. 25 bis).  
+* **Requerimiento Trazado:** `RF-002 / REQ-02` (Descanso de 8 horas ininterrumpidas dentro de cada período de 24 horas, Art. 25 bis).
   *[Handshake H2 — Software & Arquitectura: Microservicio Jornada]* · *[Handshake H4 — WBS: EDT-3.2]*
-* **Precondiciones:** Registro de 24 horas del conductor cargado con múltiples trayectos y pausas fraccionadas de 1 hora, sumando 10 horas de pausa pero ninguna continua $\ge 8$ horas.
+* **Precondiciones:** Registro sintético de 24 horas con múltiples trayectos y períodos clasificados como descanso que suman 10 horas, pero ninguno continuo de al menos 8 horas.
 * **Pasos de Ejecución:**
   1. Procesar la ventana deslizante de 24 horas mediante `verifyDailyRestPeriod(timeline)`.
-  2. Comprobar existencia de un bloque ininterrumpido de motor apagado e inactividad $\ge 8$ horas.
-* **Datos de Entrada Sintéticos:** Array de 1.440 minutos con actividades fraccionadas donde $\max(\text{bloque\_descanso}) = 6{,}5\text{ horas}$.
+  2. Comprobar existencia de un bloque ininterrumpido de descanso de al menos 8 horas dentro de la ventana.
+* **Datos de Entrada Sintéticos:** Array de 1.440 minutos con actividades y períodos de descanso sintéticos donde el máximo bloque continuo es de 6,5 horas.
 * **Resultado Esperado:** Función retorna `hasValidDailyRest: false`, `maxContinuousRestHours: 6.5`, `deficitHours: 1.5`, generando alerta de infracción legal.
 * **Pass/Fail y Severidad:** **Pass** si identifica la falta de descanso continuo de 8 horas. **Fail** si suma descansos fraccionados para validar el requisito. **Severidad:** **P1 (Bloqueante)**.
 * **Entorno:** Local CI Runner / Go Test.
 
 ---
 
-### CP-UNIT-05: Control Acumulativo de Tope Mensual de 180 Horas Ordinarias de Trabajo
+### CP-UNIT-05: Validación de Jornada Mensual conforme a la Regla Vigente en la Fecha de Prueba
 * **ID:** `CP-UNIT-05`
 * **Nivel y Tipología:** Prueba Unitaria Automatizada / Regulación Mensual Art. 25 bis.
-* **Requerimiento Trazado:** `RF-002 / REQ-02` (Tope mensual 180 horas).  
+* **Requerimiento Trazado:** `RF-002 / REQ-02` (Jornada ordinaria de conductores de carga terrestre interurbana; Art. 25 bis y sus modificaciones con vigencia gradual).
   *[Handshake H2 — Software & Arquitectura: Microservicio Jornada]* · *[Handshake H4 — WBS: EDT-3.2]*
-* **Precondiciones:** Chofer con 178 horas acumuladas en el mes en curso al día 28.
+* **Precondiciones:** Conductor de transporte interurbano de carga, con regla legal parametrizada según la fecha del ensayo. En el escenario sintético fechado en octubre de 2026, registra 178 horas de jornada imputable acumuladas al día 28 del mes.
 * **Pasos de Ejecución:**
-  1. Evaluar orden de transporte sintética de 4 horas estimadas de duración.
-  2. Invocar `validateMonthlyDrivingHoursCap(driverId, 4.0)`.
-* **Datos de Entrada Sintéticos:** `accumulatedMonthlyHours: 178.0`, `projectedTripHours: 4.0`, `monthlyCap: 180.0`.
-* **Resultado Esperado:** Rechazo de asignación con código `MONTHLY_CAP_OVERRUN_PREVENTED`, indicando exceso proyectado de 2,0 horas.
-* **Pass/Fail y Severidad:** **Pass** si previene la asignación que rebase 180 h. **Fail** si autoriza el viaje. **Severidad:** **P1 (Bloqueante)**.
+  1. Evaluar una orden sintética cuya duración estimada de jornada imputable es de 4 horas.
+  2. Invocar `validateMonthlyWorkingTime(driverId, projectedWorkHours, evaluationDate)` y comprobar que aplica la regla legal efectiva en la fecha evaluada, sin contar como jornada los descansos o esperas que la norma excluye.
+  3. Repetir el ensayo con fecha posterior al cambio legal programado para verificar que el motor aplique la regla efectiva para ese período.
+* **Datos de Entrada Sintéticos:** `accumulatedMonthlyWorkingHours: 178.0`, `projectedWorkHours: 4.0`, `evaluationDate: "2026-10-28"`; valores y resultados son un vector sintético de prueba.
+* **Resultado Esperado:** Para el escenario de octubre de 2026, rechazo de la asignación que excede las 180 horas, con código `MONTHLY_WORKING_TIME_LIMIT_EXCEEDED`. Para fechas posteriores, evaluación conforme a la regla y vigencia legal aplicables; el motor no debe extrapolar automáticamente el límite de 2026.
+* **Pass/Fail y Severidad:** **Pass** si valida jornada imputable y aplica la regla vigente en la fecha de evaluación, sin habilitar una asignación incompatible con ella. **Fail** si usa horas de conducción como sustituto de jornada o mantiene una regla legal fuera de su vigencia. **Severidad propuesta:** **P1 (Bloqueante)**.
 * **Entorno:** Local CI Runner / Jest.
 
 ---
@@ -352,7 +333,7 @@ Esta batería valida en aislamiento estricto la lógica de negocio, las funcione
 ### CP-UNIT-06: Generación y Sellado Criptográfico SHA-256 de la Entidad `EvidenciaJornada`
 * **ID:** `CP-UNIT-06`
 * **Nivel y Tipología:** Prueba Unitaria Automatizada / Criptografía y No Repudio Legal.
-* **Requerimiento Trazado:** `RF-004 / REQ-04` (Sellado inalterable SHA-256 `EvidenciaJornada`).  
+* **Requerimiento Trazado:** `RF-004 / REQ-04` (Sellado inalterable SHA-256 `EvidenciaJornada`).
   *[Handshake H2 — Software & Arquitectura: Azure Key Vault HSM]* · *[Handshake H4 — WBS: EDT-3.2]*
 * **Precondiciones:** Módulo criptográfico FIPS 140-2 inicializado con clave simulada.
 * **Pasos de Ejecución:**
@@ -381,7 +362,7 @@ Esta batería valida en aislamiento estricto la lógica de negocio, las funcione
 ### CP-UNIT-07: Encadenamiento Criptográfico de Bloques de Jornada (PrevHash y Timestamp RFC 3161)
 * **ID:** `CP-UNIT-07`
 * **Nivel y Tipología:** Prueba Unitaria Automatizada / Integridad WORM e Inmutabilidad.
-* **Requerimiento Trazado:** `RF-004 / REQ-04` y `RNF-012 / REQ-40` (Trazabilidad probatoria sin sobrescritura).  
+* **Requerimiento Trazado:** `RF-004 / REQ-04` y `RNF-012 / REQ-40` (Trazabilidad probatoria sin sobrescritura).
   *[Handshake H2 — Software & Arquitectura: Storage Inmutable WORM]* · *[Handshake H4 — WBS: EDT-3.2]*
 * **Precondiciones:** Cadena en memoria con 5 bloques de evidencia previamente sellados.
 * **Pasos de Ejecución:**
@@ -399,7 +380,7 @@ Esta batería valida en aislamiento estricto la lógica de negocio, las funcione
 ### CP-UNIT-08: Algoritmo de Detección de Geocercas Poligonales Complejas (Ray-Casting)
 * **ID:** `CP-UNIT-08`
 * **Nivel y Tipología:** Prueba Unitaria Automatizada / Geometría Computacional y Telemetría.
-* **Requerimiento Trazado:** `RF-010 / REQ-10` (Geocercas poligonales en 1.400 clientes sin hardware).  
+* **Requerimiento Trazado:** `RF-010 / REQ-10` (Geocercas poligonales en 1.400 clientes sin hardware).
   *[Handshake H2 — Software & Arquitectura: Motor Ray-Casting]* · *[Handshake H4 — WBS: EDT-3.5]*
 * **Precondiciones:** Polígono cóncavo de 12 vértices que delimita el patio de carga de un cliente agroexportador.
 * **Pasos de Ejecución:**
@@ -417,7 +398,7 @@ Esta batería valida en aislamiento estricto la lógica de negocio, las funcione
 ### CP-UNIT-09: Cálculo de Huella de Carbono GLEC Framework / ISO 14083 por Tonelada-Kilómetro
 * **ID:** `CP-UNIT-09`
 * **Nivel y Tipología:** Prueba Unitaria Automatizada / Algoritmo de Sostenibilidad y Emisiones.
-* **Requerimiento Trazado:** `RF-023 / REQ-23` (Emisiones CO2e ton-km ISO 14083).  
+* **Requerimiento Trazado:** `RF-023 / REQ-23` (Emisiones CO2e ton-km ISO 14083).
   *[Handshake H2 — Software & Arquitectura: Motor Sostenibilidad]* · *[Handshake H4 — WBS: EDT-3.14]*
 * **Precondiciones:** Factores de emisión Well-to-Wheel (WTW) para diésel B7 en Chile cargados en configuración ($3{,}18\text{ kg CO}_2\text{e / litro}$).
 * **Pasos de Ejecución:**
@@ -434,7 +415,7 @@ Esta batería valida en aislamiento estricto la lógica de negocio, las funcione
 ### CP-UNIT-10: Conciliación de Combustible Diésel por Flujo CAN J1939 vs Odometría
 * **ID:** `CP-UNIT-10`
 * **Nivel y Tipología:** Prueba Unitaria Automatizada / Telemetría y Detección de Desvíos.
-* **Requerimiento Trazado:** `RF-016 / REQ-16` y `RF-025 / REQ-25` (Costeo real y mantenimiento).  
+* **Requerimiento Trazado:** `RF-016 / REQ-16` y `RF-025 / REQ-25` (Costeo real y mantenimiento).
   *[Handshake H3 — Hardware & Riesgos: CANclick J1939]* · *[Handshake H4 — WBS: EDT-2.3]*
 * **Precondiciones:** Algoritmo de rendimiento nominal para motor Scania/Volvo 13L cargado (rango típico: $2{,}1$ a $2{,}6\text{ km/litro}$ con carga completa).
 * **Pasos de Ejecución:**
@@ -451,7 +432,7 @@ Esta batería valida en aislamiento estricto la lógica de negocio, las funcione
 ### CP-UNIT-11: Enclavamiento Cinético de Interfaz de Usuario (Ley No Chat 21.377)
 * **ID:** `CP-UNIT-11`
 * **Nivel y Tipología:** Prueba Unitaria Automatizada / Seguridad Vial y Cumplimiento Normativo.
-* **Requerimiento Trazado:** `RNF-001 / REQ-29` (Cero distracción en marcha ante $v > 0$).  
+* **Requerimiento Trazado:** `RNF-001 / REQ-29` (Cero distracción en marcha ante $v > 0$).
   *[Handshake H3 — Hardware & Riesgos: Enclavamiento HAL $v>0$]* · *[Handshake H4 — WBS: EDT-2.3]*
 * **Precondiciones:** Dispositivo en cabina con pantalla táctil activa en formulario de despacho.
 * **Pasos de Ejecución:**
@@ -469,7 +450,7 @@ Esta batería valida en aislamiento estricto la lógica de negocio, las funcione
 ### CP-UNIT-12: Cálculo Algorítmico de Sobreestadías en Andén de Clientes
 * **ID:** `CP-UNIT-12`
 * **Nivel y Tipología:** Prueba Unitaria Automatizada / Liquidación y Reglas de Negocio.
-* **Requerimiento Trazado:** `RF-011 / REQ-11` (Registro auditable de sobreestadías).  
+* **Requerimiento Trazado:** `RF-011 / REQ-11` (Registro auditable de sobreestadías).
   *[Handshake H2 — Software & Arquitectura: Engine Liquidación]* · *[Handshake H4 — WBS: EDT-3.5]*
 * **Precondiciones:** Parámetro contractual para Cliente Frutícola Sintético: Tiempo de espera libre (*free time*) = 2 horas; Tarifa de sobreestadía por tramo de 30 minutos configurada.
 * **Pasos de Ejecución:**
@@ -486,7 +467,7 @@ Esta batería valida en aislamiento estricto la lógica de negocio, las funcione
 ### CP-UNIT-13: Deserialización y Validación de Esquemas Protobuf de Telemetría Vehicular
 * **ID:** `CP-UNIT-13`
 * **Nivel y Tipología:** Prueba Unitaria Automatizada / Protocolos Binarios y Validación de Esquema.
-* **Requerimiento Trazado:** `RF-009 / REQ-09` y `RNF-002 / REQ-30` (Eficiencia de transmisión y buffer).  
+* **Requerimiento Trazado:** `RF-009 / REQ-09` y `RNF-002 / REQ-30` (Eficiencia de transmisión y buffer).
   *[Handshake H3 — Hardware & Riesgos: Protocolo Protobuf Edge]* · *[Handshake H4 — WBS: EDT-2.3]*
 * **Precondiciones:** Esquema `telemetry_v2.proto` compilado en clases binarias de deserialización.
 * **Pasos de Ejecución:**
@@ -503,7 +484,7 @@ Esta batería valida en aislamiento estricto la lógica de negocio, las funcione
 ### CP-UNIT-14: Detección de Discrepancias y Manipulación en Odómetro CAN vs GNSS
 * **ID:** `CP-UNIT-14`
 * **Nivel y Tipología:** Prueba Unitaria Automatizada / Detección de Fraude e Integridad.
-* **Requerimiento Trazado:** `RF-025 / REQ-25` (Mantenimiento preventivo por odometría real).  
+* **Requerimiento Trazado:** `RF-025 / REQ-25` (Mantenimiento preventivo por odometría real).
   *[Handshake H3 — Hardware & Riesgos: CANclick J1939]* · *[Handshake H4 — WBS: EDT-2.3]*
 * **Precondiciones:** Algoritmo de contraste cinemático inicializado.
 * **Pasos de Ejecución:**
@@ -520,7 +501,7 @@ Esta batería valida en aislamiento estricto la lógica de negocio, las funcione
 ### CP-UNIT-15: Algoritmo ALNS: Función de Costo de Inserción y Retornos en Vacío
 * **ID:** `CP-UNIT-15`
 * **Nivel y Tipología:** Prueba Unitaria Automatizada / Optimización Combinatoria y Retornos.
-* **Requerimiento Trazado:** `RF-015 / REQ-15` (Optimización retornos ALNS para reducir vacíos a $<15\%$).  
+* **Requerimiento Trazado:** `RF-015 / REQ-15` (Optimización retornos ALNS para reducir vacíos a $<15\%$).
   *[Handshake H2 — Software & Arquitectura: Microservicio ALNS]* · *[Handshake H4 — WBS: EDT-3.8]*
 * **Precondiciones:** Matriz de distancias viales entre Concepción, San Bernardo y Valparaíso precargada.
 * **Pasos de Ejecución:**
@@ -537,7 +518,7 @@ Esta batería valida en aislamiento estricto la lógica de negocio, las funcione
 ### CP-UNIT-16: Parser de Tramas J1939: PGN 65265 (Velocidad) y PGN 65266 (Combustible)
 * **ID:** `CP-UNIT-16`
 * **Nivel y Tipología:** Prueba Unitaria Automatizada / Parsing de Telecomunicaciones Automotrices.
-* **Requerimiento Trazado:** `RNF-005 / REQ-33` (Integración CAN bus solo lectura sin perder garantía).  
+* **Requerimiento Trazado:** `RNF-005 / REQ-33` (Integración CAN bus solo lectura sin perder garantía).
   *[Handshake H3 — Hardware & Riesgos: Pinza CANclick]* · *[Handshake H4 — WBS: EDT-2.3]*
 * **Precondiciones:** Especificación SAE J1939-71 cargada en decodificador binario.
 * **Pasos de Ejecución:**
@@ -554,7 +535,7 @@ Esta batería valida en aislamiento estricto la lógica de negocio, las funcione
 ### CP-UNIT-17: Validación de Integridad de Certificados X.509 y Tokens JWT en Cabina
 * **ID:** `CP-UNIT-17`
 * **Nivel y Tipología:** Prueba Unitaria Automatizada / Ciberseguridad y Autenticación Criptográfica.
-* **Requerimiento Trazado:** `RNF-013 / REQ-41` (Cifrado y autenticación segura).  
+* **Requerimiento Trazado:** `RNF-013 / REQ-41` (Cifrado y autenticación segura).
   *[Handshake H2 — Software & Arquitectura: Azure Key Vault FLE]* · *[Handshake H4 — WBS: EDT-3.13]*
 * **Precondiciones:** Certificado raíz de la Autoridad Certificadora (CA) de audIT SpA cargado en almacén de confianza.
 * **Pasos de Ejecución:**
@@ -571,7 +552,7 @@ Esta batería valida en aislamiento estricto la lógica de negocio, las funcione
 ### CP-UNIT-18: Algoritmo de Estimación Dinámica de Alerta de Fatiga según ETA a Área Segura
 * **ID:** `CP-UNIT-18`
 * **Nivel y Tipología:** Prueba Unitaria Automatizada / Lógica Predictiva y Seguridad Vial.
-* **Requerimiento Trazado:** `RF-027 / REQ-27` (Alerta anticipada de fin de jornada según descanso seguro).  
+* **Requerimiento Trazado:** `RF-027 / REQ-27` (Alerta anticipada de fin de jornada según descanso seguro).
   *[Handshake H3 — Hardware & Riesgos: Algoritmo Dinámico ETA]* · *[Handshake H4 — WBS: EDT-2.3]*
 * **Precondiciones:** Chofer en Ruta 5 Norte a 4 horas y 15 minutos de conducción continua.
 * **Pasos de Ejecución:**
@@ -588,7 +569,7 @@ Esta batería valida en aislamiento estricto la lógica de negocio, las funcione
 ### CP-UNIT-19: Validación de Incompatibilidad Química de Carga SUSPEL (D.S. 298 y NCh 2190)
 * **ID:** `CP-UNIT-19`
 * **Nivel y Tipología:** Prueba Unitaria Automatizada / Regulación de Sustancias Peligrosas.
-* **Requerimiento Trazado:** `RF-006 / REQ-06` (Validación de carga SUSPEL para 18 tractocamiones).  
+* **Requerimiento Trazado:** `RF-006 / REQ-06` (Validación de carga SUSPEL para 18 tractocamiones).
   *[Handshake H3 — Hardware & Riesgos: AMFE Falla F-SUSPEL-01]* · *[Handshake H4 — WBS: EDT-3.3]*
 * **Precondiciones:** Matriz de segregación e incompatibilidad química de la norma chilena NCh 382 y NCh 2190 cargada.
 * **Pasos de Ejecución:**
@@ -604,7 +585,7 @@ Esta batería valida en aislamiento estricto la lógica de negocio, las funcione
 ### CP-UNIT-20: Filtro de Kalman Unidimensional para Filtrado de Ruido y Deriva GNSS
 * **ID:** `CP-UNIT-20`
 * **Nivel y Tipología:** Prueba Unitaria Automatizada / Procesamiento de Señales Satelitales.
-* **Requerimiento Trazado:** `RF-010 / REQ-10` y `RNF-007 / REQ-35` (Precisión de geocercas sin hardware).  
+* **Requerimiento Trazado:** `RF-010 / REQ-10` y `RNF-007 / REQ-35` (Precisión de geocercas sin hardware).
   *[Handshake H2 — Software & Arquitectura: Motor Ray-Casting]* · *[Handshake H4 — WBS: EDT-3.5]*
 * **Precondiciones:** Filtro de Kalman configurado con varianza de proceso $Q = 10^{-5}$ y varianza de medición $R = 4{,}0\text{ m}^2$.
 * **Pasos de Ejecución:**
@@ -620,7 +601,7 @@ Esta batería valida en aislamiento estricto la lógica de negocio, las funcione
 ### CP-UNIT-21: Validación Criptográfica de Emisión de Contingencia D.E.T. Fuera de Línea
 * **ID:** `CP-UNIT-21`
 * **Nivel y Tipología:** Prueba Unitaria Automatizada / Documento Tributario Electrónico y Resiliencia.
-* **Requerimiento Trazado:** `RF-014 / REQ-14` (Emisión D.E.T. en cabina bajo sombra celular).  
+* **Requerimiento Trazado:** `RF-014 / REQ-14` (Emisión D.E.T. en cabina bajo sombra celular).
   *[Handshake H3 — Hardware & Riesgos: Token Criptográfico Edge]* · *[Handshake H4 — WBS: EDT-2.3]*
 * **Precondiciones:** Token de contingencia pre-firmado por el ERP contable y par de claves asimétricas cargadas en el gateway de cabina.
 * **Pasos de Ejecución:**
@@ -638,7 +619,7 @@ Esta batería valida en aislamiento estricto la lógica de negocio, las funcione
 ### CP-UNIT-22: Cálculo de Desgaste Predictivo de Neumáticos por Kilometraje y Eje RFID
 * **ID:** `CP-UNIT-22`
 * **Nivel y Tipología:** Prueba Unitaria Automatizada / Mantenimiento Predictivo de Activos.
-* **Requerimiento Trazado:** `RF-025 / REQ-25` (Gestión de 8.200 neumáticos activos).  
+* **Requerimiento Trazado:** `RF-025 / REQ-25` (Gestión de 8.200 neumáticos activos).
   *[Handshake H3 — Hardware & Riesgos: CANclick J1939]* · *[Handshake H4 — WBS: EDT-2.3]*
 * **Precondiciones:** Parámetro de tasa de desgaste de banda de rodado por tipo de eje (direccional, tracción, remolque) en mm/10.000 km.
 * **Pasos de Ejecución:**
@@ -651,20 +632,20 @@ Esta batería valida en aislamiento estricto la lógica de negocio, las funcione
 
 ---
 
-### CP-UNIT-23: Compresión de Paquetes con Algoritmo Zstandard para Buffer de 288 Horas
+### CP-UNIT-23: Compresión de Paquetes con Algoritmo Zstandard para el Buffer Mínimo y la Extensión Propuesta
 * **ID:** `CP-UNIT-23`
 * **Nivel y Tipología:** Prueba Unitaria Automatizada / Rendimiento de Almacenamiento y Compresión.
-* **Requerimiento Trazado:** `RF-009 / REQ-09` y `RNF-008 / REQ-36` (Buffer 288 h Los Libertadores).  
+* **Requerimiento Trazado:** `RF-009 / REQ-09` (mínimo contractual 72 h); ensayo de extensión de 288 h solo si D4 confirma su propuesta.
   *[Handshake H3 — Hardware & Riesgos: Memoria eMMC 8 GB]* · *[Handshake H4 — WBS: EDT-2.3]*
 * **Precondiciones:** Librería `zstd` configurada en nivel de compresión 3 (balance óptimo CPU/ratio).
 * **Pasos de Ejecución:**
-  1. Tomar lote de 34.560 paquetes de telemetría sin procesar (equivalente a 288 horas continuas, tamaño raw $\approx 4{,}15\text{ MB}$).
+  1. Tomar datos sintéticos con el perfil de muestreo aprobado y una duración mínima de 72 h; preparar además el escenario de 288 h únicamente si D4 confirma esa extensión y su dimensionamiento.
   2. Ejecutar compresión zstandard.
   3. Medir tamaño del buffer comprimido y tiempo de compresión en CPU de arquitectura ARM.
   4. Descomprimir el buffer y validar integridad bit a bit contra el original.
-* **Datos de Entrada Sintéticos:** Lote sintético de 288 h de telemetría de ruta de montaña.
-* **Resultado Esperado:** Tamaño comprimido final $< 1{,}2\text{ MB}$ (ratio de compresión $> 3{,}4 : 1$); descompresión idéntica al original al 100%.
-* **Pass/Fail y Severidad:** **Pass** si el ratio de compresión supera $3:1$ sin pérdida de bytes. **Fail** si hay corrupción o desborde de memoria. **Severidad:** **P1 (Bloqueante)**.
+* **Datos de Entrada Sintéticos:** Flujo de telemetría cuyo volumen se derive del intervalo de muestreo aprobado; registrar aparte el caso ampliado de 288 h, si procede.
+* **Resultado Esperado:** Descompresión idéntica al original y tamaño/tiempo dentro de umbrales que se definan con el perfil de datos y el hardware seleccionado.
+* **Pass/Fail y Severidad:** **Pass** si no hay corrupción de bytes y se cumplen los umbrales aprobados. **Fail** si hay corrupción o desborde de memoria. El ensayo de 288 h es adicional y condicionado a D4; no constituye por sí mismo bloqueo contractual.
 * **Entorno:** Local CI Runner / C/Go Test.
 
 ---
@@ -672,7 +653,7 @@ Esta batería valida en aislamiento estricto la lógica de negocio, las funcione
 ### CP-UNIT-24: Conversión y Calibración Térmica de Sensor PT100 (-30 °C a +30 °C) en Reefers
 * **ID:** `CP-UNIT-24`
 * **Nivel y Tipología:** Prueba Unitaria Automatizada / Metrología e IoT Industrial.
-* **Requerimiento Trazado:** `RF-001 / REQ-01` (44 equipos refrigerados / salmones y frutas).  
+* **Requerimiento Trazado:** `RF-001 / REQ-01` (44 equipos refrigerados / salmones y frutas).
   *[Handshake H3 — Hardware & Riesgos: Sensor PT100]* · *[Handshake H4 — WBS: EDT-2.3]*
 * **Precondiciones:** Curva de calibración Callendar-Van Dusen para sensor de platino PT100 ($\text{DIN EN 60751}$) programada.
 * **Pasos de Ejecución:**
@@ -688,7 +669,7 @@ Esta batería valida en aislamiento estricto la lógica de negocio, las funcione
 ### CP-UNIT-25: Validación Sintáctica de Códigos QR para Hojas de Datos de Seguridad (HDS)
 * **ID:** `CP-UNIT-25`
 * **Nivel y Tipología:** Prueba Unitaria Automatizada / Validación Documental y SUSPEL.
-* **Requerimiento Trazado:** `RF-006 / REQ-06` (Verificación de carga SUSPEL mediante código QR).  
+* **Requerimiento Trazado:** `RF-006 / REQ-06` (Verificación de carga SUSPEL mediante código QR).
   *[Handshake H3 — Hardware & Riesgos: AMFE Falla F-SUSPEL-01]* · *[Handshake H4 — WBS: EDT-3.3]*
 * **Precondiciones:** Expresión regular y esquema de carga peligrosa compilados.
 * **Pasos de Ejecución:**
@@ -711,7 +692,7 @@ Esta batería verifica el acoplamiento técnico, los contratos de interfaz OpenA
 ### CP-INT-01: Contrato OpenAPI 3.1 — Servicio de Despacho con Testcontainers PostgreSQL HA
 * **ID:** `CP-INT-01`
 * **Nivel y Tipología:** Prueba de Integración / Contratos de API REST y Persistencia Relacional ACID.
-* **Requerimiento Trazado:** `RF-001 / REQ-01` (Servicio de Despacho y validación bloqueante).  
+* **Requerimiento Trazado:** `RF-001 / REQ-01` (Servicio de Despacho y validación bloqueante).
   *[Handshake H2 — Software & Arquitectura: Microservicio Asignación]* · *[Handshake H4 — WBS: EDT-3.1]*
 * **Precondiciones:**
   1. Contenedor Docker efímero `postgres:16-alpine` levantado vía Testcontainers en pipeline.
@@ -741,7 +722,7 @@ Esta batería verifica el acoplamiento técnico, los contratos de interfaz OpenA
 ### CP-INT-02: Contrato OpenAPI 3.1 — Ingesta de Series Temporales con TimescaleDB Testcontainers
 * **ID:** `CP-INT-02`
 * **Nivel y Tipología:** Prueba de Integración / Base de Datos de Series Temporales y Hypertables.
-* **Requerimiento Trazado:** `RF-008 / REQ-08` y `RF-002 / REQ-02` (Telemetría de flota propia y terceros).  
+* **Requerimiento Trazado:** `RF-008 / REQ-08` y `RF-002 / REQ-02` (Telemetría de flota propia y terceros).
   *[Handshake H2 — Software & Arquitectura: TimescaleDB Hypertables]* · *[Handshake H4 — WBS: EDT-3.4]*
 * **Precondiciones:** Contenedor `timescale/timescaledb:latest-pg16` activo con hypertable `truck_telemetry` particionada por intervalos de 7 días.
 * **Pasos de Ejecución:**
@@ -758,7 +739,7 @@ Esta batería verifica el acoplamiento técnico, los contratos de interfaz OpenA
 ### CP-INT-03: Contrato OpenAPI 3.1 — Caché de Validación Pre-Despacho con Redis Cluster Testcontainers
 * **ID:** `CP-INT-03`
 * **Nivel y Tipología:** Prueba de Integración / Almacenamiento en Memoria de Alta Velocidad.
-* **Requerimiento Trazado:** `RF-001 / REQ-01` y `RF-005 / REQ-05` (Validación sub-30s y 6.000 vigencias vivas).  
+* **Requerimiento Trazado:** `RF-001 / REQ-01` y `RF-005 / REQ-05` (Validación sub-30s y 6.000 vigencias vivas).
   *[Handshake H2 — Software & Arquitectura: Redis Sentinel / PostgreSQL]* · *[Handshake H4 — WBS: EDT-3.1]*
 * **Precondiciones:** Instancia Redis 7.2 en contenedor Testcontainers con políticas de desalojo LRU configuradas.
 * **Pasos de Ejecución:**
@@ -775,7 +756,7 @@ Esta batería verifica el acoplamiento técnico, los contratos de interfaz OpenA
 ### CP-INT-04: Contrato OpenAPI 3.1 — Streaming de Telemetría con Apache Kafka Testcontainers
 * **ID:** `CP-INT-04`
 * **Nivel y Tipología:** Prueba de Integración / Mensajería Asíncrona Distribuida y Eventos.
-* **Requerimiento Trazado:** `RF-008 / REQ-08` y `RNF-002 / REQ-30` (Streaming de telemetría de 374 tractos).  
+* **Requerimiento Trazado:** `RF-008 / REQ-08` y `RNF-002 / REQ-30` (Streaming de telemetría de 374 tractos).
   *[Handshake H2 — Software & Arquitectura: EventHubs Kafka]* · *[Handshake H4 — WBS: EDT-3.4]*
 * **Precondiciones:** Broker Kafka efímero levantado con tópico `telemetry.raw.v1` con 6 particiones y factor de replicación 1.
 * **Pasos de Ejecución:**
@@ -792,7 +773,7 @@ Esta batería verifica el acoplamiento técnico, los contratos de interfaz OpenA
 ### CP-INT-05: Conector CDC Debezium con BD de TMS 2013 Legacy (Patrón Estrangulador)
 * **ID:** `CP-INT-05`
 * **Nivel y Tipología:** Prueba de Integración / Change Data Capture (CDC) y Migración Progresiva.
-* **Requerimiento Trazado:** `RNF-011 / REQ-39` y `RF-028 / REQ-28` (Patrón Estrangulador con TMS 2013).  
+* **Requerimiento Trazado:** `RNF-011 / REQ-39` y `RF-028 / REQ-28` (Patrón Estrangulador con TMS 2013).
   *[Handshake H2 — Software & Arquitectura: Capa Strangler Fig]* · *[Handshake H4 — WBS: EDT-3.1]*
 * **Precondiciones:** Contenedor simulando la BD relacional del TMS 2013 (Microsoft SQL Server / PostgreSQL legacy) con replicación lógica activa; Kafka Connect con plugin Debezium desplegado.
 * **Pasos de Ejecución:**
@@ -810,7 +791,7 @@ Esta batería verifica el acoplamiento técnico, los contratos de interfaz OpenA
 ### CP-INT-06: Interceptación y Ruteo de Órdenes TMS 2013 hacia Capa Anticorrupción (ACL)
 * **ID:** `CP-INT-06`
 * **Nivel y Tipología:** Prueba de Integración / Arquitectura de Software y Capa Anticorrupción.
-* **Requerimiento Trazado:** `RNF-011 / REQ-39` (Convivencia de sistemas durante Etapa 1).  
+* **Requerimiento Trazado:** `RNF-011 / REQ-39` (Convivencia de sistemas durante Etapa 1).
   *[Handshake H2 — Software & Arquitectura: Capa Strangler Fig]* · *[Handshake H4 — WBS: EDT-3.1]*
 * **Precondiciones:** Capa ACL configurada para interceptar llamadas de asignación y enrutar validaciones al microservicio en AKS.
 * **Pasos de Ejecución:**
@@ -828,7 +809,7 @@ Esta batería verifica el acoplamiento técnico, los contratos de interfaz OpenA
 ### CP-INT-07: Ingesta Normalizada de Telemetría Comercial Wialon vía Capa ACL
 * **ID:** `CP-INT-07`
 * **Nivel y Tipología:** Prueba de Integración / Adaptadores de Protocolo e Interoperabilidad GPS.
-* **Requerimiento Trazado:** `RF-008 / REQ-08` y `RNF-003 / REQ-31` (Homologación 192 camiones terceros Wialon).  
+* **Requerimiento Trazado:** `RF-008 / REQ-08` y `RNF-003 / REQ-31` (Homologación 192 camiones terceros Wialon).
   *[Handshake H2 — Software & Arquitectura: ACL API Gateway]* · *[Handshake H4 — WBS: EDT-3.1]*
 * **Precondiciones:** Servidor mock simulando la API de Wialon (`wialon.com/remoteapi`).
 * **Pasos de Ejecución:**
@@ -846,7 +827,7 @@ Esta batería verifica el acoplamiento técnico, los contratos de interfaz OpenA
 ### CP-INT-08: Ingesta Normalizada de Telemetría Comercial Wisetrack vía Capa ACL
 * **ID:** `CP-INT-08`
 * **Nivel y Tipología:** Prueba de Integración / Adaptadores de Terceros y Webhooks.
-* **Requerimiento Trazado:** `RF-008 / REQ-08` y `RNF-003 / REQ-31` (Homologación camiones terceros Wisetrack).  
+* **Requerimiento Trazado:** `RF-008 / REQ-08` y `RNF-003 / REQ-31` (Homologación camiones terceros Wisetrack).
   *[Handshake H2 — Software & Arquitectura: ACL API Gateway]* · *[Handshake H4 — WBS: EDT-3.1]*
 * **Precondiciones:** Endpoint Webhook `/api/v1/integrations/wisetrack/webhook` expuesto.
 * **Pasos de Ejecución:**
@@ -864,7 +845,7 @@ Esta batería verifica el acoplamiento técnico, los contratos de interfaz OpenA
 ### CP-INT-09: Ingesta Normalizada de Telemetría Comercial Webfleet vía Capa ACL
 * **ID:** `CP-INT-09`
 * **Nivel y Tipología:** Prueba de Integración / Conectores Telemáticos Internacionales.
-* **Requerimiento Trazado:** `RF-008 / REQ-08` y `RNF-003 / REQ-31` (Homologación camiones terceros Webfleet).  
+* **Requerimiento Trazado:** `RF-008 / REQ-08` y `RNF-003 / REQ-31` (Homologación camiones terceros Webfleet).
   *[Handshake H2 — Software & Arquitectura: ACL API Gateway]* · *[Handshake H4 — WBS: EDT-3.1]*
 * **Precondiciones:** Adaptador `WebfleetConnectAdapter` configurado con autenticación OAuth 2.0.
 * **Pasos de Ejecución:**
@@ -881,7 +862,7 @@ Esta batería verifica el acoplamiento técnico, los contratos de interfaz OpenA
 ### CP-INT-10: Resiliencia y Reintentos (*Exponential Backoff con Jitter*) ante Caída de APIs Externas
 * **ID:** `CP-INT-10`
 * **Nivel y Tipología:** Prueba de Integración / Tolerancia a Fallos y Circuit Breaker.
-* **Requerimiento Trazado:** `RNF-002 / REQ-30` (Resiliencia operacional).  
+* **Requerimiento Trazado:** `RNF-002 / REQ-30` (Resiliencia operacional).
   *[Handshake H2 — Software & Arquitectura: Microservicio Asignación]* · *[Handshake H4 — WBS: EDT-3.1]*
 * **Precondiciones:** WireMock configurado para responder con HTTP 503 Service Unavailable durante 3 intentos y HTTP 200 en el cuarto.
 * **Pasos de Ejecución:**
@@ -898,7 +879,7 @@ Esta batería verifica el acoplamiento técnico, los contratos de interfaz OpenA
 ### CP-INT-11: Conector ERP Tributario — Transmisión y Recepción de Folio Oficial D.E.T.
 * **ID:** `CP-INT-11`
 * **Nivel y Tipología:** Prueba de Integración / Integración Empresarial y Cumplimiento Tributario.
-* **Requerimiento Trazado:** `RF-013 / REQ-13` (Generación de datos DET hacia sistema contable).  
+* **Requerimiento Trazado:** `RF-013 / REQ-13` (Generación de datos DET hacia sistema contable).
   *[Handshake H2 — Software & Arquitectura: Conector ERP Contable]* · *[Handshake H4 — WBS: EDT-3.7]*
 * **Precondiciones:** Mock del ERP Contable de Curimón S.A. exponiendo API REST de facturación electrónica.
 * **Pasos de Ejecución:**
@@ -916,7 +897,7 @@ Esta batería verifica el acoplamiento técnico, los contratos de interfaz OpenA
 ### CP-INT-12: Idempotencia Estricta en Emisión de D.E.T. ante Reintentos de Red
 * **ID:** `CP-INT-12`
 * **Nivel y Tipología:** Prueba de Integración / Transaccionalidad Idempotente y Cero Duplicados.
-* **Requerimiento Trazado:** `RNF-006 / REQ-34` (Sistema contable único emisor e idempotencia).  
+* **Requerimiento Trazado:** `RNF-006 / REQ-34` (Sistema contable único emisor e idempotencia).
   *[Handshake H2 — Software & Arquitectura: Kafka Transaccional]* · *[Handshake H4 — WBS: EDT-3.7]*
 * **Precondiciones:** Tabla de control de idempotencia configurada con clave primaria `idempotency_key`.
 * **Pasos de Ejecución:**
@@ -934,7 +915,7 @@ Esta batería verifica el acoplamiento técnico, los contratos de interfaz OpenA
 ### CP-INT-13: Integración con Azure Key Vault HSM para Firma Digital de `EvidenciaJornada`
 * **ID:** `CP-INT-13`
 * **Nivel y Tipología:** Prueba de Integración / Seguridad Criptográfica en Hardware (Cloud HSM).
-* **Requerimiento Trazado:** `RF-004 / REQ-04` (Firma digital de jornada en Azure Key Vault).  
+* **Requerimiento Trazado:** `RF-004 / REQ-04` (Firma digital de jornada en Azure Key Vault).
   *[Handshake H2 — Software & Arquitectura: Key Vault HSM]* · *[Handshake H4 — WBS: EDT-3.2]*
 * **Precondiciones:** Conexión segura configurada hacia Azure Key Vault (o simulador LocalStack / Azure SDK Mock) con clave asimétrica RSA 2048 / ECC P-256 respaldada en hardware HSM.
 * **Pasos de Ejecución:**
@@ -951,7 +932,7 @@ Esta batería verifica el acoplamiento técnico, los contratos de interfaz OpenA
 ### CP-INT-14: Rotación Automática de Claves Simétricas en Azure Key Vault sin Caída de Servicio
 * **ID:** `CP-INT-14`
 * **Nivel y Tipología:** Prueba de Integración / Gestión de Claves y Cero Downtime.
-* **Requerimiento Trazado:** `RNF-013 / REQ-41` (Cifrado continuo bajo Ley 21.719).  
+* **Requerimiento Trazado:** `RNF-013 / REQ-41` (Cifrado continuo bajo Ley 21.719).
   *[Handshake H2 — Software & Arquitectura: Azure Key Vault FLE]* · *[Handshake H4 — WBS: EDT-3.13]*
 * **Precondiciones:** Microservicio de Privacidad configurado para cifrar datos con la versión activa de la clave de encriptación de datos (DEK).
 * **Pasos de Ejecución:**
@@ -969,7 +950,7 @@ Esta batería verifica el acoplamiento técnico, los contratos de interfaz OpenA
 ### CP-INT-15: Integración con API de Concesionarias Viales (TAG) para Conciliación de Peajes
 * **ID:** `CP-INT-15`
 * **Nivel y Tipología:** Prueba de Integración / Conciliación de Costos Operacionales.
-* **Requerimiento Trazado:** `RF-016 / REQ-16` (Imputación automática de pasadas de peaje TAG al viaje).  
+* **Requerimiento Trazado:** `RF-016 / REQ-16` (Imputación automática de pasadas de peaje TAG al viaje).
   *[Handshake H2 — Software & Arquitectura: Motor de Costos]* · *[Handshake H4 — WBS: EDT-3.9]*
 * **Precondiciones:** Archivo de liquidación sintético de Autopista Central / Ruta del Maipo con 50 pasadas de TAG con timestamp y pórtico.
 * **Pasos de Ejecución:**
@@ -986,7 +967,7 @@ Esta batería verifica el acoplamiento técnico, los contratos de interfaz OpenA
 ### CP-INT-16: Conciliación de Carga de Diésel con Surtidor y Caudalímetro en San Bernardo
 * **ID:** `CP-INT-16`
 * **Nivel y Tipología:** Prueba de Integración / IoT Industrial y Conciliación de Combustible.
-* **Requerimiento Trazado:** `RF-016 / REQ-16` y `RF-025 / REQ-25` (Conciliación de estanque matriz).  
+* **Requerimiento Trazado:** `RF-016 / REQ-16` y `RF-025 / REQ-25` (Conciliación de estanque matriz).
   *[Handshake H2 — Software & Arquitectura: Motor de Costos]* · *[Handshake H4 — WBS: EDT-3.9]*
 * **Precondiciones:** Dispositivo concentrador de patio en San Bernardo conectado al caudalímetro digital del estanque propio de diésel.
 * **Pasos de Ejecución:**
@@ -1003,7 +984,7 @@ Esta batería verifica el acoplamiento técnico, los contratos de interfaz OpenA
 ### CP-INT-17: Integración de Órdenes de Trabajo desde Formulario Web PWA de Talleres en Ruta
 * **ID:** `CP-INT-17`
 * **Nivel y Tipología:** Prueba de Integración / PWA Móvil y Hoja de Vida Vehicular.
-* **Requerimiento Trazado:** `RF-024 / REQ-24` (Registro de intervenciones mecánicas externas).  
+* **Requerimiento Trazado:** `RF-024 / REQ-24` (Registro de intervenciones mecánicas externas).
   *[Handshake H2 — Software & Arquitectura: Formulario PWA Talleres]* · *[Handshake H4 — WBS: EDT-3.15]*
 * **Precondiciones:** API REST `/api/v1/maintenance/external-work-orders` activa.
 * **Pasos de Ejecución:**
@@ -1021,7 +1002,7 @@ Esta batería verifica el acoplamiento técnico, los contratos de interfaz OpenA
 ### CP-INT-18: Sincronización Bidireccional entre TimescaleDB e Índices Analíticos de Costos
 * **ID:** `CP-INT-18`
 * **Nivel y Tipología:** Prueba de Integración / Pipeline ETL y Modelado Analítico de Datos.
-* **Requerimiento Trazado:** `RF-018 / REQ-18` (Análisis de dispersión de rendimiento y costos).  
+* **Requerimiento Trazado:** `RF-018 / REQ-18` (Análisis de dispersión de rendimiento y costos).
   *[Handshake H2 — Software & Arquitectura: TimescaleDB Analytics]* · *[Handshake H4 — WBS: EDT-3.10]*
 * **Precondiciones:** Vista continua materializada (*continuous aggregate*) en TimescaleDB calculando consumo de combustible por tramo vial.
 * **Pasos de Ejecución:**
@@ -1038,7 +1019,7 @@ Esta batería verifica el acoplamiento técnico, los contratos de interfaz OpenA
 ### CP-INT-19: Publicación y Suscripción de Eventos de Geocerca en Kafka Event Hubs
 * **ID:** `CP-INT-19`
 * **Nivel y Tipología:** Prueba de Integración / Arquitectura Orientada a Eventos (EDA).
-* **Requerimiento Trazado:** `RF-010 / REQ-10` y `RF-011 / REQ-11` (Detección de arribo y sobreestadías).  
+* **Requerimiento Trazado:** `RF-010 / REQ-10` y `RF-011 / REQ-11` (Detección de arribo y sobreestadías).
   *[Handshake H2 — Software & Arquitectura: EventHubs Kafka]* · *[Handshake H4 — WBS: EDT-3.5]*
 * **Precondiciones:** Tópico Kafka `geofence.events.v1` configurado con particionamiento por `truckId`.
 * **Pasos de Ejecución:**
@@ -1055,7 +1036,7 @@ Esta batería verifica el acoplamiento técnico, los contratos de interfaz OpenA
 ### CP-INT-20: Integración de Despacho de OTP para e-POD vía Mensajería SMS/Email
 * **ID:** `CP-INT-20`
 * **Nivel y Tipología:** Prueba de Integración / Notificaciones y Doble Factor de Conformidad.
-* **Requerimiento Trazado:** `RF-012 / REQ-12` (Conformidad de entrega POD con OTP).  
+* **Requerimiento Trazado:** `RF-012 / REQ-12` (Conformidad de entrega POD con OTP).
   *[Handshake H2 — Software & Arquitectura: App Móvil PWA e-POD]* · *[Handshake H4 — WBS: EDT-3.6]*
 * **Precondiciones:** Mock del proveedor de mensajería (Twilio / SendGrid) configurado.
 * **Pasos de Ejecución:**
@@ -1073,7 +1054,7 @@ Esta batería verifica el acoplamiento técnico, los contratos de interfaz OpenA
 ### CP-INT-21: Descarga Remota Automatizada de Tacógrafo Digital hacia Repositorio Cloud
 * **ID:** `CP-INT-21`
 * **Nivel y Tipología:** Prueba de Integración / Protocolos DSRC y Custodia de Evidencia Legal.
-* **Requerimiento Trazado:** `RF-007 / REQ-07` (Descarga y archivo de tacógrafo digital).  
+* **Requerimiento Trazado:** `RF-007 / REQ-07` (Descarga y archivo de tacógrafo digital).
   *[Handshake H3 — Hardware & Riesgos: Interfaz DSRC Tacógrafo]* · *[Handshake H4 — WBS: EDT-2.3]*
 * **Precondiciones:** Simulador de tacógrafo digital emitiendo tramas bajo estándar europeo/chileno VDO/Stoneridge vía socket TCP seguro.
 * **Pasos de Ejecución:**
@@ -1090,7 +1071,7 @@ Esta batería verifica el acoplamiento técnico, los contratos de interfaz OpenA
 ### CP-INT-22: API Gateway — Enrutamiento Seguro mTLS y Rate Limiting por Tenant
 * **ID:** `CP-INT-22`
 * **Nivel y Tipología:** Prueba de Integración / Seguridad Perimetral y Gestión de Tráfico.
-* **Requerimiento Trazado:** `RNF-013 / REQ-41` (Ciberseguridad y aislamiento multi-tenant).  
+* **Requerimiento Trazado:** `RNF-013 / REQ-41` (Ciberseguridad y aislamiento multi-tenant).
   *[Handshake H2 — Software & Arquitectura: WAF / API Gateway]* · *[Handshake H4 — WBS: EDT-3.12]*
 * **Precondiciones:** Instancia de API Gateway (Envoy / Traefik / Azure API Management Mock) con mTLS exigido en endpoints telemáticos y bucket de rate limiting de 100 req/s por cliente.
 * **Pasos de Ejecución:**
@@ -1107,7 +1088,7 @@ Esta batería verifica el acoplamiento técnico, los contratos de interfaz OpenA
 ### CP-INT-23: Servicio de Consolidación de Costo Diario Preliminar por Viaje en $\le 24\text{ h}$
 * **ID:** `CP-INT-23`
 * **Nivel y Tipología:** Prueba de Integración / Procesamiento de Cierre y Liquidación de Órdenes.
-* **Requerimiento Trazado:** `RF-016 / REQ-16` y `RF-017 / REQ-17` (Costeo real y segregación propio/tercero).  
+* **Requerimiento Trazado:** `RF-016 / REQ-16` y `RF-017 / REQ-17` (Costeo real y segregación propio/tercero).
   *[Handshake H2 — Software & Arquitectura: Motor de Costos]* · *[Handshake H4 — WBS: EDT-3.9]*
 * **Precondiciones:** Viaje finalizado con orden de entrega POD suscrita hace 6 horas.
 * **Pasos de Ejecución:**
@@ -1124,7 +1105,7 @@ Esta batería verifica el acoplamiento técnico, los contratos de interfaz OpenA
 ### CP-INT-24: Integración del Portal de Transportistas con Motor de Pre-Liquidaciones
 * **ID:** `CP-INT-24`
 * **Nivel y Tipología:** Prueba de Integración / Portal de Autoservicio y Transparencia Contractual.
-* **Requerimiento Trazado:** `RF-019 / REQ-19` y `RF-020 / REQ-20` (Liquidación a 148 transportistas).  
+* **Requerimiento Trazado:** `RF-019 / REQ-19` y `RF-020 / REQ-20` (Liquidación a 148 transportistas).
   *[Handshake H2 — Software & Arquitectura: Motor Liquidaciones]* · *[Handshake H4 — WBS: EDT-3.11]*
 * **Precondiciones:** Transportista tercero sintético con 8 viajes completados en la quincena.
 * **Pasos de Ejecución:**
@@ -1141,7 +1122,7 @@ Esta batería verifica el acoplamiento técnico, los contratos de interfaz OpenA
 ### CP-INT-25: Sincronización Asíncrona entre Azure East US 2 y Réplica Brazil South (DRP)
 * **ID:** `CP-INT-25`
 * **Nivel y Tipología:** Prueba de Integración / Recuperación ante Desastres y Replicación Cloud.
-* **Requerimiento Trazado:** `RNF-009 / REQ-37` y `RNF-014 / REQ-42` (Cumplimiento de RPO $\le 15\text{ min}$).  
+* **Requerimiento Trazado:** `RNF-009 / REQ-37` y `RNF-014 / REQ-42` (Cumplimiento de RPO $\le 15\text{ min}$).
   *[Handshake H2 — Software & Arquitectura: Managed Services]* · *[Handshake H4 — WBS: EDT-4.1]*
 * **Precondiciones:** Enlace de replicación configurado entre clúster primario (Virginia) y secundario (São Paulo).
 * **Pasos de Ejecución:**
@@ -1164,7 +1145,7 @@ Esta batería somete la solución completa a pruebas punta a punta (*End-to-End*
 ### CP-SYS-01: Flujo E2E Completo de Despacho — De Orden de Transporte a Cierre de Viaje
 * **ID:** `CP-SYS-01`
 * **Nivel y Tipología:** Prueba de Sistema E2E / Flujo Transaccional Troncal de Negocio.
-* **Requerimiento Trazado:** `RF-001 / REQ-01`, `RF-013 / REQ-13`, `RF-016 / REQ-16`.  
+* **Requerimiento Trazado:** `RF-001 / REQ-01`, `RF-013 / REQ-13`, `RF-016 / REQ-16`.
   *[Handshake H2 — Software & Arquitectura: Microservicio Asignación]* · *[Handshake H4 — WBS: EDT-3.1]*
 * **Precondiciones:**
   1. Chofer propio habilitado con 0 horas de conducción en el día y documentos al día.
@@ -1187,7 +1168,7 @@ Esta batería somete la solución completa a pruebas punta a punta (*End-to-End*
 ### CP-SYS-02: Flujo E2E de Viaje en Ruta y Detección Automática de Hitos Georreferenciados
 * **ID:** `CP-SYS-02`
 * **Nivel y Tipología:** Prueba de Sistema E2E / Georreferenciación y Máquina de Estados de Viaje.
-* **Requerimiento Trazado:** `RF-010 / REQ-10` y `RF-008 / REQ-08` (Hitos de viaje y visibilidad Torre).  
+* **Requerimiento Trazado:** `RF-010 / REQ-10` y `RF-008 / REQ-08` (Hitos de viaje y visibilidad Torre).
   *[Handshake H2 — Software & Arquitectura: Motor Ray-Casting]* · *[Handshake H4 — WBS: EDT-3.5]*
 * **Precondiciones:** Viaje activo en ruta Troncal Ruta 5 Sur (San Bernardo a Concepción, 510 km).
 * **Pasos de Ejecución:**
@@ -1204,7 +1185,7 @@ Esta batería somete la solución completa a pruebas punta a punta (*End-to-End*
 ### CP-SYS-03: Detección Automática de Sobreestadías en Patio de Cliente y Sustento Probatorio
 * **ID:** `CP-SYS-03`
 * **Nivel y Tipología:** Prueba de Sistema E2E / Registro Automatizado y Liquidación Comercial.
-* **Requerimiento Trazado:** `RF-011 / REQ-11` (Registro auditable de sobreestadías para sustentar cobros).  
+* **Requerimiento Trazado:** `RF-011 / REQ-11` (Registro auditable de sobreestadías para sustentar cobros).
   *[Handshake H2 — Software & Arquitectura: Engine Liquidación]* · *[Handshake H4 — WBS: EDT-3.5]*
 * **Precondiciones:** Geocerca de cliente agroexportador con tiempo de espera libre pactado de 2 horas.
 * **Pasos de Ejecución:**
@@ -1223,7 +1204,7 @@ Esta batería somete la solución completa a pruebas punta a punta (*End-to-End*
 ### CP-SYS-04: Emisión y Firma Digital de e-POD con OTP y Captura Fotográfica de Precintos
 * **ID:** `CP-SYS-04`
 * **Nivel y Tipología:** Prueba de Sistema E2E / Prueba de Entrega Digital (e-POD) y Cero Papel.
-* **Requerimiento Trazado:** `RF-012 / REQ-12` (Conformidad de entrega e-POD con firma y fotos).  
+* **Requerimiento Trazado:** `RF-012 / REQ-12` (Conformidad de entrega e-POD con firma y fotos).
   *[Handshake H2 — Software & Arquitectura: App Móvil PWA e-POD]* · *[Handshake H4 — WBS: EDT-3.6]*
 * **Precondiciones:** Chofer en andén de destino con la App Móvil PWA lista para entrega de carga.
 * **Pasos de Ejecución:**
@@ -1242,7 +1223,7 @@ Esta batería somete la solución completa a pruebas punta a punta (*End-to-End*
 ### CP-SYS-05: Operación en Modo Mixto — Convivencia de Flota Propia (Nivel 2/3) y Terceros (Nivel 5)
 * **ID:** `CP-SYS-05`
 * **Nivel y Tipología:** Prueba de Sistema E2E / Transición de Flota y Cascada Probatoria.
-* **Requerimiento Trazado:** `RF-028 / REQ-28` y `RNF-011 / REQ-39` (Modo mixto de 374 tractocamiones).  
+* **Requerimiento Trazado:** `RF-028 / REQ-28` y `RNF-011 / REQ-39` (Modo mixto de 374 tractocamiones).
   *[Handshake H2 — Software & Arquitectura: Capa Strangler Fig]* · *[Handshake H4 — WBS: EDT-3.1]*
 * **Precondiciones:** Torre de Programación operando simultáneamente con:
   * Camión Propio `TRK-010` (equipado con Gateway audIT + CANclick, Nivel 2 instrumental).
@@ -1262,7 +1243,7 @@ Esta batería somete la solución completa a pruebas punta a punta (*End-to-End*
 ### CP-SYS-06: Despacho Bloqueante para Unidades de Sustancias Peligrosas (D.S. 298 y D.S. 43)
 * **ID:** `CP-SYS-06`
 * **Nivel y Tipología:** Prueba de Sistema E2E / Seguridad Química y Cumplimiento Normativo SUSPEL.
-* **Requerimiento Trazado:** `RF-006 / REQ-06` (18 tractocamiones de sustancias peligrosas).  
+* **Requerimiento Trazado:** `RF-006 / REQ-06` (18 tractocamiones de sustancias peligrosas).
   *[Handshake H3 — Hardware & Riesgos: AMFE Falla F-SUSPEL-01]* · *[Handshake H4 — WBS: EDT-3.3]*
 * **Precondiciones:**
   1. Orden de transporte con carga química peligrosa (Ácido Sulfúrico UN 1830, Clase 8).
@@ -1283,9 +1264,9 @@ Esta batería somete la solución completa a pruebas punta a punta (*End-to-End*
 ### CP-SYS-07: Bloqueo Preventivo Pre-Despacho por Infracción de Jornada Laboral (Art. 25 bis CT)
 * **ID:** `CP-SYS-07`
 * **Nivel y Tipología:** Prueba de Sistema E2E / Enclavamiento Legal Laboral.
-* **Requerimiento Trazado:** `RF-001 / REQ-01` y `RF-002 / REQ-02` (Jornada y descanso Art. 25 bis).  
+* **Requerimiento Trazado:** `RF-001 / REQ-01` y `RF-002 / REQ-02` (Jornada y descanso Art. 25 bis).
   *[Handshake H2 — Software & Arquitectura: Microservicio Asignación]* · *[Handshake H4 — WBS: EDT-3.1]*
-* **Precondiciones:** Conductor propio que finalizó un viaje hace 4 horas, habiendo conducido 5 horas continuas (descanso obligatorio pendiente de 2 horas satisfecho, pero descanso diario de 8 horas incompleto en ventana de 24 h).
+* **Precondiciones:** Conductor propio de transporte interurbano de carga que finalizó un viaje hace 4 horas, habiendo conducido 5 horas continuas y completado el descanso intermedio mínimo de 2 horas. El descanso diario ininterrumpido de 8 horas dentro del período de 24 horas aún no está satisfecho.
 * **Pasos de Ejecución:**
   1. Despachador intenta programar al conductor en un viaje nocturno San Bernardo a Puerto Montt (12 horas estimadas).
   2. El motor de asignación bloqueante evalúa el historial del chofer en Redis y PostgreSQL.
@@ -1300,7 +1281,7 @@ Esta batería somete la solución completa a pruebas punta a punta (*End-to-End*
 ### CP-SYS-08: Bloqueo Preventivo Pre-Despacho por Vigencia Vencida (Revisión Técnica / SOAP)
 * **ID:** `CP-SYS-08`
 * **Nivel y Tipología:** Prueba de Sistema E2E / Control de 6.000 Vigencias Vivas de Flota.
-* **Requerimiento Trazado:** `RF-005 / REQ-05` (Control de vigencias de equipos y choferes).  
+* **Requerimiento Trazado:** `RF-005 / REQ-05` (Control de vigencias de equipos y choferes).
   *[Handshake H2 — Software & Arquitectura: Redis Sentinel / PostgreSQL]* · *[Handshake H4 — WBS: EDT-3.1]*
 * **Precondiciones:** Semirremolque portacontenedor `TRL-SYNTH-019` con Revisión Técnica caducada hace 48 horas.
 * **Pasos de Ejecución:**
@@ -1317,7 +1298,7 @@ Esta batería somete la solución completa a pruebas punta a punta (*End-to-End*
 ### CP-SYS-09: Optimización y Asignación Automática de Viaje de Retorno en Vacío (ALNS)
 * **ID:** `CP-SYS-09`
 * **Nivel y Tipología:** Prueba de Sistema E2E / Inteligencia Operacional y Reducción de Kilómetros Vacíos.
-* **Requerimiento Trazado:** `RF-015 / REQ-15` (Reducción del 26% de kilómetros vacíos a $<15\%$).  
+* **Requerimiento Trazado:** `RF-015 / REQ-15` (Reducción del 26% de kilómetros vacíos a $<15\%$).
   *[Handshake H2 — Software & Arquitectura: Microservicio ALNS]* · *[Handshake H4 — WBS: EDT-3.8]*
 * **Precondiciones:** Camión `TRK-055` descargando carga industrial en Puerto Montt; disponibilidad prevista en 2 horas. En la base de datos existen 3 solicitudes de carga hacia el norte (Osorno a Temuco, Llanquihue a Santiago, y Puerto Varas a Concepción).
 * **Pasos de Ejecución:**
@@ -1334,7 +1315,7 @@ Esta batería somete la solución completa a pruebas punta a punta (*End-to-End*
 ### CP-SYS-10: Ciclo E2E de Pre-Liquidación a Transportistas Subcontratados con Descuentos
 * **ID:** `CP-SYS-10`
 * **Nivel y Tipología:** Prueba de Sistema E2E / Cierre Financiero y Liquidación de Terceros.
-* **Requerimiento Trazado:** `RF-019 / REQ-19` y `RF-017 / REQ-17` (Liquidación a 148 transportistas).  
+* **Requerimiento Trazado:** `RF-019 / REQ-19` y `RF-017 / REQ-17` (Liquidación a 148 transportistas).
   *[Handshake H2 — Software & Arquitectura: Motor Liquidaciones]* · *[Handshake H4 — WBS: EDT-3.11]*
 * **Precondiciones:** Quincena contable cerrada. Transportista subcontratado con 6 viajes completados con e-POD conforme, 2 abastecimientos de combustible en estanque San Bernardo y 14 pasadas por pórticos TAG.
 * **Pasos de Ejecución:**
@@ -1353,7 +1334,7 @@ Esta batería somete la solución completa a pruebas punta a punta (*End-to-End*
 ### CP-SYS-11: Emisión de Documento D.E.T. en Cabina bajo Desconexión Absoluta (Sombra Celular)
 * **ID:** `CP-SYS-11`
 * **Nivel y Tipología:** Prueba de Sistema E2E / Operación en Modo Degradado y Resiliencia en Ruta.
-* **Requerimiento Trazado:** `RF-014 / REQ-14` y `RNF-002 / REQ-30` (Emisión D.E.T. offline en cabina).  
+* **Requerimiento Trazado:** `RF-014 / REQ-14` y `RNF-002 / REQ-30` (Emisión D.E.T. offline en cabina).
   *[Handshake H3 — Hardware & Riesgos: Token Criptográfico Edge]* · *[Handshake H4 — WBS: EDT-2.3]*
 * **Precondiciones:** Camión en faena minera en Antofagasta en zona de silencio radial absoluto (cero cobertura 3G/4G/5G). Gateway a bordo provisto de bolsa de tokens de contingencia pre-autorizados por el ERP.
 * **Pasos de Ejecución:**
@@ -1373,7 +1354,7 @@ Esta batería somete la solución completa a pruebas punta a punta (*End-to-End*
 ### CP-SYS-12: Flujo E2E de Gestión de Discrepancias en Entrega (Rechazo Parcial y Daño)
 * **ID:** `CP-SYS-12`
 * **Nivel y Tipología:** Prueba de Sistema E2E / Gestión de No Conformidades y Logística Inversa.
-* **Requerimiento Trazado:** `RF-012 / REQ-12` (Conformidad POD con excepciones y seguros).  
+* **Requerimiento Trazado:** `RF-012 / REQ-12` (Conformidad POD con excepciones y seguros).
   *[Handshake H2 — Software & Arquitectura: App Móvil PWA e-POD]* · *[Handshake H4 — WBS: EDT-3.6]*
 * **Precondiciones:** Chofer entregando 20 pallets de fruta fresca en Terminal Portuario de Valparaíso.
 * **Pasos de Ejecución:**
@@ -1392,7 +1373,7 @@ Esta batería somete la solución completa a pruebas punta a punta (*End-to-End*
 ### CP-SYS-13: Trazabilidad Térmica Continua y Alarma en Cadena de Frío (Rampla Reefer)
 * **ID:** `CP-SYS-13`
 * **Nivel y Tipología:** Prueba de Sistema E2E / Telemetría de Frío y Preservación de Carga.
-* **Requerimiento Trazado:** `RF-001 / REQ-01` (44 equipos de frío / salmones de exportación).  
+* **Requerimiento Trazado:** `RF-001 / REQ-01` (44 equipos de frío / salmones de exportación).
   *[Handshake H3 — Hardware & Riesgos: Sensor PT100]* · *[Handshake H4 — WBS: EDT-2.3]*
 * **Precondiciones:** Rampla reefer transportando salmón fresco desde Puerto Montt a Santiago. Rango térmico de consigna: $-1{,}5\text{ }^\circ\text{C}$ a $+1{,}5\text{ }^\circ\text{C}$.
 * **Pasos de Ejecución:**
@@ -1410,7 +1391,7 @@ Esta batería somete la solución completa a pruebas punta a punta (*End-to-End*
 ### CP-SYS-14: Flujo E2E de Relevo de Tripulación en Ruta con Cierre y Apertura de Sesión
 * **ID:** `CP-SYS-14`
 * **Nivel y Tipología:** Prueba de Sistema E2E / Operación en Doble Conducción y Relevos en Nodos.
-* **Requerimiento Trazado:** `RF-002 / REQ-02` (Evidencia individual de jornada en relevos).  
+* **Requerimiento Trazado:** `RF-002 / REQ-02` (Evidencia individual de jornada en relevos).
   *[Handshake H2 — Software & Arquitectura: Microservicio Jornada]* · *[Handshake H4 — WBS: EDT-3.2]*
 * **Precondiciones:** Tractocamión en viaje Santiago-Antofagasta deteniéndose en terminal intermedio (La Serena) para cambio de conductor.
 * **Pasos de Ejecución:**
@@ -1429,7 +1410,7 @@ Esta batería somete la solución completa a pruebas punta a punta (*End-to-End*
 ### CP-SYS-15: Registro y Conciliación E2E de Carga de Combustible en Estación de Ruta
 * **ID:** `CP-SYS-15`
 * **Nivel y Tipología:** Prueba de Sistema E2E / Control de Gastos en Ruta y Odometría.
-* **Requerimiento Trazado:** `RF-016 / REQ-16` (Conciliación de combustible y costo por viaje).  
+* **Requerimiento Trazado:** `RF-016 / REQ-16` (Conciliación de combustible y costo por viaje).
   *[Handshake H2 — Software & Arquitectura: Motor de Costos]* · *[Handshake H4 — WBS: EDT-3.9]*
 * **Precondiciones:** Camión en ruta cargando diésel en estación de servicio Copec / Shell autorizada.
 * **Pasos de Ejecución:**
@@ -1446,7 +1427,7 @@ Esta batería somete la solución completa a pruebas punta a punta (*End-to-End*
 ### CP-SYS-16: Vista Única Consolidada de 374 Tractocamiones en Torre de Programación 24x7
 * **ID:** `CP-SYS-16`
 * **Nivel y Tipología:** Prueba de Sistema E2E / Supervisión Operacional Centralizada.
-* **Requerimiento Trazado:** `RF-008 / REQ-08` y `RNF-009 / REQ-37` (Vista única 374 camiones en Torre 24x7).  
+* **Requerimiento Trazado:** `RF-008 / REQ-08` y `RNF-009 / REQ-37` (Vista única 374 camiones en Torre 24x7).
   *[Handshake H2 — Software & Arquitectura: Portal Torre / Timescale]* · *[Handshake H4 — WBS: EDT-3.4]*
 * **Precondiciones:** 374 tractocamiones activos reportando telemetría simultánea (148 propios vía Gateway audIT + 192 terceros vía APIs comerciales + 34 terceros retrofiteados).
 * **Pasos de Ejecución:**
@@ -1464,7 +1445,7 @@ Esta batería somete la solución completa a pruebas punta a punta (*End-to-End*
 ### CP-SYS-17: Generación Automatizada de Reporte Mensual de Huella de Carbono (ISO 14083)
 * **ID:** `CP-SYS-17`
 * **Nivel y Tipología:** Prueba de Sistema E2E / Reportería Corporativa y Sostenibilidad Ambiental.
-* **Requerimiento Trazado:** `RF-023 / REQ-23` (Cálculo de emisiones CO2e ton-km GLEC / ISO 14083).  
+* **Requerimiento Trazado:** `RF-023 / REQ-23` (Cálculo de emisiones CO2e ton-km GLEC / ISO 14083).
   *[Handshake H2 — Software & Arquitectura: Motor Sostenibilidad]* · *[Handshake H4 — WBS: EDT-3.14]*
 * **Precondiciones:** Cierre mensual con 8.000 viajes completados para los 84 clientes activos de Curimón S.A.
 * **Pasos de Ejecución:**
@@ -1482,7 +1463,7 @@ Esta batería somete la solución completa a pruebas punta a punta (*End-to-End*
 ### CP-SYS-18: Flujo Excepcional de Autorización de Despacho con Doble Firma Gerencial
 * **ID:** `CP-SYS-18`
 * **Nivel y Tipología:** Prueba de Sistema E2E / Gobernanza de Excepciones y Pistas de Auditoría.
-* **Requerimiento Trazado:** `RF-001 / REQ-01` (Decisión Canónica 06: Bloqueo estricto y excepción dual).  
+* **Requerimiento Trazado:** `RF-001 / REQ-01` (Decisión Canónica 06: Bloqueo estricto y excepción dual).
   *[Handshake H2 — Software & Arquitectura: Microservicio Asignación]* · *[Handshake H4 — WBS: EDT-3.1]*
 * **Precondiciones:** Despacho bloqueado automáticamente por falta de actualización documental menor no vinculada a seguridad crítica (ej. certificado de fumigación comercial demorado).
 * **Pasos de Ejecución:**
@@ -1500,7 +1481,7 @@ Esta batería somete la solución completa a pruebas punta a punta (*End-to-End*
 ### CP-SYS-19: Portal de Clientes con Tracking Activo y Geofencing Temporal (Ley 21.719)
 * **ID:** `CP-SYS-19`
 * **Nivel y Tipología:** Prueba de Sistema E2E / Portal Web Seguro y Privacidad por Diseño.
-* **Requerimiento Trazado:** `RF-021 / REQ-21` y `RF-022 / REQ-22` (Geofencing temporal y privacidad).  
+* **Requerimiento Trazado:** `RF-021 / REQ-21` y `RF-022 / REQ-22` (Geofencing temporal y privacidad).
   *[Handshake H2 — Software & Arquitectura: Portal Clientes / WAF]* · *[Handshake H4 — WBS: EDT-3.12]*
 * **Precondiciones:** Cliente institucional ingresa a su portal web corporativo (`clientes.curimon.audit.cl`).
 * **Pasos de Ejecución:**
@@ -1518,7 +1499,7 @@ Esta batería somete la solución completa a pruebas punta a punta (*End-to-End*
 ### CP-SYS-20: Actualización Masiva de Firmware FOTA en Flota Propia con Rollback Automático
 * **ID:** `CP-SYS-20`
 * **Nivel y Tipología:** Prueba de Sistema E2E / Mantenimiento Remoto de Firmware y Resiliencia FOTA.
-* **Requerimiento Trazado:** `RNF-002 / REQ-30` (Gestión remota de dispositivos embarcados).  
+* **Requerimiento Trazado:** `RNF-002 / REQ-30` (Gestión remota de dispositivos embarcados).
   *[Handshake H3 — Hardware & Riesgos: Memoria eMMC 8 GB]* · *[Handshake H4 — WBS: EDT-2.3]*
 * **Precondiciones:** Campaña FOTA de actualización de firmware v2.1.0 configurada para 10 camiones propios detenidos en terminales durante su ventana de mantenimiento.
 * **Pasos de Ejecución:**
@@ -1540,37 +1521,37 @@ Esta batería somete la infraestructura cloud, la capa de ingesta distribuida y 
 
 ---
 
-### CP-PERF-01: Carga Sostenida Peak Frutícola — 450 Viajes/Día Concurrentes
+### CP-PERF-01: Carga Sostenida en Perfil Pico — Parámetros por Dimensionar
 * **ID:** `CP-PERF-01`
 * **Nivel y Tipología:** Prueba No Funcional / Rendimiento y Carga Sostenida con K6.
-* **Requerimiento Trazado:** `RNF-010 / REQ-38` y `RF-001 / REQ-01` (450 viajes/día en peak estacional).  
+* **Requerimiento Trazado:** `RNF-010 / REQ-38` y `RF-001 / REQ-01`. El volumen pico y la concurrencia deben derivarse de los antecedentes del caso y validarse con D2 antes de fijar la línea base.
   *[Handshake H2 — Software & Arquitectura: Microservicio Asignación]* · *[Handshake H4 — WBS: EDT-1.2]*
 * **Precondiciones:** Clúster AKS en Staging con configuración nominal de producción (3 nodos primarios D8s_v5).
 * **Pasos de Ejecución:**
   1. Ejecutar script K6 simulando la jornada de mayor demanda estacional frutícola (diciembre a abril).
-  2. Generar carga concurrente sostenida de 450 viajes/día distribuidos en 14 horas de alta actividad (~32 viajes/hora, con ráfagas de 60 viajes/hora).
-  3. Mantener tasa constante de 1.200 peticiones/minuto en el API Gateway durante 4 horas continuas.
+  2. Generar la carga pico diaria, concurrencia y ráfagas acordadas a partir del dimensionamiento trazado por D2; registrar los parámetros y su fuente antes de ejecutar.
+  3. Mantener el perfil de peticiones por minuto definido en ese dimensionamiento durante la ventana aprobada.
   4. Monitorear consumo de CPU, memoria de pods, y latencia de base de datos PostgreSQL.
-* **Datos de Entrada Sintéticos:** K6 Virtual Users (VUs): 150 usuarios virtuales ejecutando flujos de despacho, consulta de mapas y tracking.
+* **Datos de Entrada Sintéticos:** Usuarios virtuales y flujos de despacho, consulta de mapas y tracking; cantidad por definir según la carga validada con D2.
 * **Resultado Esperado:** Tasa de error HTTP $< 0{,}01\%$; consumo medio de CPU en nodos AKS $< 65\%$; latencia media de endpoints transaccionales $< 180\text{ ms}$.
-* **Pass/Fail y Severidad:** **Pass** si sostiene la carga nominal con 0 caídas y latencia bajo umbral. **Fail** si la tasa de error excede $0{,}1\%$ o colapsan pods. **Severidad:** **P1 (Bloqueante)**.
+* **Pass/Fail y Severidad:** Los umbrales de error, latencia y recursos son criterios propuestos; fijarlos tras validar la carga nominal y el dimensionamiento. No declarar bloqueo contractual hasta aprobar perfil y umbrales.
 * **Entorno:** Staging AKS / K6 Distributed Runner.
 
 ---
 
-### CP-PERF-02: Ingestión en Ráfaga Masiva — 1,8 Millones de Eventos Post-Reconexión en $< 15\text{ min}$
+### CP-PERF-02: Ingestión Post-Reconexión — Perfil de Carga por Validar
 * **ID:** `CP-PERF-02`
 * **Nivel y Tipología:** Prueba No Funcional / Capacidad de Ingesta en Ráfaga y Streaming Kafka.
-* **Requerimiento Trazado:** `RNF-008 / REQ-36` y `RF-009 / REQ-09` (Absorción de buffer de 288 h Los Libertadores).  
+* **Requerimiento Trazado:** `RF-009 / REQ-09` (retención local mínima 72 h); el volumen post-reconexión depende del perfil aprobado y, para una extensión a 288 h, de la confirmación del diseño D4.
   *[Handshake H3 — Hardware & Riesgos: Memoria eMMC 8 GB]* · *[Handshake H4 — WBS: EDT-2.3]*
-* **Precondiciones:** Simulación de reapertura del Paso Los Libertadores tras 12 días de cierre por nieve: 60 camiones salen simultáneamente de la zona de sombra e inyectan su telemetría acumulada.
+* **Precondiciones:** Definir con D2/D4 el número de unidades, duración de desconexión, perfil de muestreo y volumen acumulado. El escenario de 288 h solo se ejecuta si D4 confirma la capacidad ampliada propuesta.
 * **Pasos de Ejecución:**
-  1. Inyectar un volumen de 1.800.000 eventos telemáticos serializados hacia los endpoints de ingesta en una ventana de 15 minutos.
-  2. Exigir un rendimiento medio de ingesta $\ge 2.000\text{ eventos/segundo}$ (pico de $3.500\text{ ev/s}$).
+  1. Inyectar el volumen de telemetría obtenido del perfil y cantidad de unidades validados, y registrar la ventana de recuperación acordada.
+  2. Medir el rendimiento medio y de pico; fijar umbrales después de validar el dimensionamiento con D2/D4.
   3. Monitorear el retraso de partición en Apache Kafka (*Consumer Lag*) y la tasa de escritura en TimescaleDB.
-* **Datos de Entrada Sintéticos:** Archivo sintético de 1,8 millones de registros de telemetría Protobuf zstd.
-* **Resultado Esperado:** Los 1,8 millones de eventos son completamente absorbidos e insertados en TimescaleDB en 13 minutos y 40 segundos ($< 15\text{ min}$); el lag de Kafka se normaliza a cero; cero pérdida de paquetes telemáticos.
-* **Pass/Fail y Severidad:** **Pass** si procesa el lote completo en $< 15\text{ minutos}$ sin pérdida de datos. **Fail** si la ingesta demora $> 20\text{ min}$ o descarta mensajes por desborde de búfer. **Severidad:** **P1 (Bloqueante)**.
+* **Datos de Entrada Sintéticos:** Archivo de registros Protobuf con volumen derivado del perfil aprobado.
+* **Resultado Esperado:** Procesa el lote de prueba sin pérdida ni corrupción; el tiempo de recuperación, el lag y el rendimiento se comparan con umbrales aprobados antes de la ejecución.
+* **Pass/Fail y Severidad:** **Pass** si procesa el lote aprobado dentro de los umbrales acordados, sin pérdida ni corrupción. **Fail** si pierde o corrompe datos. Capacidad y tiempo de la extensión son objetivos de diseño pendientes, no mínimos de aceptación contractual.
 * **Entorno:** Staging AKS / Apache Kafka Event Hubs.
 
 ---
@@ -1578,7 +1559,7 @@ Esta batería somete la infraestructura cloud, la capa de ingesta distribuida y 
 ### CP-PERF-03: Conmutación por Desastre (Failover DRP) a Azure Brazil South (RTO $\le 4\text{ h}$, RPO $\le 15\text{ min}$)
 * **ID:** `CP-PERF-03`
 * **Nivel y Tipología:** Prueba No Funcional / Continuidad Operacional y Resiliencia ante Desastres.
-* **Requerimiento Trazado:** `RNF-009 / REQ-37` y `RNF-014 / REQ-42` (Cumplimiento de RTO $\le 4\text{ h}$ y RPO $\le 15\text{ min}$).  
+* **Requerimiento Trazado:** `RNF-009 / REQ-37` y `RNF-014 / REQ-42` (Cumplimiento de RTO $\le 4\text{ h}$ y RPO $\le 15\text{ min}$).
   *[Handshake H2 — Software & Arquitectura: Managed Services]* · *[Handshake H4 — WBS: EDT-4.1]*
 * **Precondiciones:** Plataforma primaria en Azure East US 2 operando con carga activa. Sitio secundario Hot-Standby en Azure Brazil South sincronizado mediante replicación continua.
 * **Pasos de Ejecución:**
@@ -1598,7 +1579,7 @@ Esta batería somete la infraestructura cloud, la capa de ingesta distribuida y 
 ### CP-PERF-04: Latencia de Validación Bloqueante Pre-Despacho ($P_{95} \le 30{,}0\text{ s}$, $P_{50} \le 8{,}0\text{ s}$)
 * **ID:** `CP-PERF-04`
 * **Nivel y Tipología:** Prueba No Funcional / Desempeño y Latencia Sub-30s bajo Carga.
-* **Requerimiento Trazado:** `RF-001 / REQ-01` (Tiempo de respuesta pre-despacho $\le 30\text{ s}$).  
+* **Requerimiento Trazado:** `RF-001 / REQ-01` (Tiempo de respuesta pre-despacho $\le 30\text{ s}$).
   *[Handshake H2 — Software & Arquitectura: Microservicio Asignación]* · *[Handshake H4 — WBS: EDT-3.1]*
 * **Precondiciones:** 50 despachadores virtuales ejecutando asignaciones simultáneas pre-despacho en el sistema.
 * **Pasos de Ejecución:**
@@ -1614,7 +1595,7 @@ Esta batería somete la infraestructura cloud, la capa de ingesta distribuida y 
 ### CP-PERF-05: Emisión de Documento D.E.T. en Cabina bajo Demanda Concurrente ($P_{99} \le 90{,}0\text{ s}$)
 * **ID:** `CP-PERF-05`
 * **Nivel y Tipología:** Prueba No Funcional / Latencia de Generación Tributaria en Terminal.
-* **Requerimiento Trazado:** `RF-014 / REQ-14` (Tiempo emisión D.E.T. en cabina $\le 90\text{ s}$).  
+* **Requerimiento Trazado:** `RF-014 / REQ-14` (Tiempo emisión D.E.T. en cabina $\le 90\text{ s}$).
   *[Handshake H3 — Hardware & Riesgos: Token Criptográfico Edge]* · *[Handshake H4 — WBS: EDT-2.3]*
 * **Precondiciones:** Simulación de salida matinal masiva en Terminal San Bernardo (30 camiones despachándose en un lapso de 10 minutos).
 * **Pasos de Ejecución:**
@@ -1630,7 +1611,7 @@ Esta batería somete la infraestructura cloud, la capa de ingesta distribuida y 
 ### CP-PERF-06: Transmisión y Recepción Prioritaria de Alarma SOS en Torre 24x7 ($P_{99} \le 15{,}0\text{ s}$)
 * **ID:** `CP-PERF-06`
 * **Nivel y Tipología:** Prueba No Funcional / Latencia de Alerta Crítica de Pánico en Ruta.
-* **Requerimiento Trazado:** `RF-008 / REQ-08` y `RNF-001 / REQ-29` (Alerta SOS en $\le 15\text{ s}$).  
+* **Requerimiento Trazado:** `RF-008 / REQ-08` y `RNF-001 / REQ-29` (Alerta SOS en $\le 15\text{ s}$).
   *[Handshake H3 — Hardware & Riesgos: Alerta SOS Pánico]* · *[Handshake H4 — WBS: EDT-2.3]*
 * **Precondiciones:** Canal de red móvil degradado con ancho de banda restringido (simulación 2G/GPRS en ruta desértica).
 * **Pasos de Ejecución:**
@@ -1648,7 +1629,7 @@ Esta batería somete la infraestructura cloud, la capa de ingesta distribuida y 
 ### CP-PERF-07: Latencia de Refresco de Posición en Portal Clientes con 500 Usuarios Concurrentes
 * **ID:** `CP-PERF-07`
 * **Nivel y Tipología:** Prueba No Funcional / Concurrencia de Consultas y Latencia de Tracking.
-* **Requerimiento Trazado:** `RF-021 / REQ-21` (Latencia posición GPS en portal cliente $\le 2\text{ min}$).  
+* **Requerimiento Trazado:** `RF-021 / REQ-21` (Latencia posición GPS en portal cliente $\le 2\text{ min}$).
   *[Handshake H2 — Software & Arquitectura: Portal Clientes / WAF]* · *[Handshake H4 — WBS: EDT-3.12]*
 * **Precondiciones:** 500 clientes corporativos autenticados simultáneamente consultando el mapa de seguimiento de sus respectivas cargas activas.
 * **Pasos de Ejecución:**
@@ -1665,7 +1646,7 @@ Esta batería somete la infraestructura cloud, la capa de ingesta distribuida y 
 ### CP-PERF-08: Escalamiento Horizontal Automático de Pods (HPA) en AKS ante Picos Repentinos
 * **ID:** `CP-PERF-08`
 * **Nivel y Tipología:** Prueba No Funcional / Elasticidad Cloud y Autoescalado Horizontal.
-* **Requerimiento Trazado:** `RNF-010 / REQ-38` (Eficiencia de recursos y escalabilidad elástica).  
+* **Requerimiento Trazado:** `RNF-010 / REQ-38` (Eficiencia de recursos y escalabilidad elástica).
   *[Handshake H2 — Software & Arquitectura: Microservicio Asignación]* · *[Handshake H4 — WBS: EDT-1.2]*
 * **Precondiciones:** Microservicio de Asignación desplegado con Horizontal Pod Autoscaler (HPA) configurado: mínimo 2 pods, máximo 12 pods, umbral de CPU para escala = $70\%$.
 * **Pasos de Ejecución:**
@@ -1683,7 +1664,7 @@ Esta batería somete la infraestructura cloud, la capa de ingesta distribuida y 
 ### CP-PERF-09: Capacidad de Inserción Continua en TimescaleDB ($\ge 10.000\text{ métricas/segundo}$)
 * **ID:** `CP-PERF-09`
 * **Nivel y Tipología:** Prueba No Funcional / Rendimiento de Base de Datos de Series de Tiempo.
-* **Requerimiento Trazado:** `RF-018 / REQ-18` y `RF-008 / REQ-08` (Capacidad analítica e ingesta masiva).  
+* **Requerimiento Trazado:** `RF-018 / REQ-18` y `RF-008 / REQ-08` (Capacidad analítica e ingesta masiva).
   *[Handshake H2 — Software & Arquitectura: TimescaleDB Hypertables]* · *[Handshake H4 — WBS: EDT-3.4]*
 * **Precondiciones:** Instancia TimescaleDB en Azure PostgreSQL Flexible Server con disco SSD Premium v2.
 * **Pasos de Ejecución:**
@@ -1700,7 +1681,7 @@ Esta batería somete la infraestructura cloud, la capa de ingesta distribuida y 
 ### CP-PERF-10: Concurrencia Extrema en Cierre Quincenal — 148 Transportistas en Portal Web
 * **ID:** `CP-PERF-10`
 * **Nivel y Tipología:** Prueba No Funcional / Concurrencia de Usuarios y Transacciones Financieras.
-* **Requerimiento Trazado:** `RF-019 / REQ-19` y `RF-020 / REQ-20` (Portal de 148 transportistas terceros).  
+* **Requerimiento Trazado:** `RF-019 / REQ-19` y `RF-020 / REQ-20` (Portal de 148 transportistas terceros).
   *[Handshake H2 — Software & Arquitectura: Portal Transportistas]* · *[Handshake H4 — WBS: EDT-3.11]*
 * **Precondiciones:** 148 cuentas de transportistas subcontratados activas el día de cierre quincenal.
 * **Pasos de Ejecución:**
@@ -1717,7 +1698,7 @@ Esta batería somete la infraestructura cloud, la capa de ingesta distribuida y 
 ### CP-PERF-11: Resiliencia ante Red Móvil Degradada (Latencia 150 ms, Jitter 50 ms, Pérdida 2%)
 * **ID:** `CP-PERF-11`
 * **Nivel y Tipología:** Prueba No Funcional / Tolerancia a Inestabilidad de Telecomunicaciones.
-* **Requerimiento Trazado:** `RNF-002 / REQ-30` (Operación en condiciones de red degradada).  
+* **Requerimiento Trazado:** `RNF-002 / REQ-30` (Operación en condiciones de red degradada).
   *[Handshake H3 — Hardware & Riesgos: SQLite WAL Sincronizador]* · *[Handshake H4 — WBS: EDT-2.3]*
 * **Precondiciones:** Emulador de red WAN (NetEm / Toxiproxy) intercalado entre el gateway de cabina y el backend cloud, inyectando $150\text{ ms}$ de latencia base, $50\text{ ms}$ de jitter y $2\%$ de pérdida de paquetes aleatoria.
 * **Pasos de Ejecución:**
@@ -1733,7 +1714,7 @@ Esta batería somete la infraestructura cloud, la capa de ingesta distribuida y 
 ### CP-PERF-12: Prueba de Longevidad (*Soak Testing*) — 72 Horas Continuas a Carga Nominal
 * **ID:** `CP-PERF-12`
 * **Nivel y Tipología:** Prueba No Funcional / Estabilidad Temporal y Detección de Memory Leaks.
-* **Requerimiento Trazado:** `RNF-010 / REQ-38` (Estabilidad operativa de 56 meses).  
+* **Requerimiento Trazado:** `RNF-010 / REQ-38` (Estabilidad operativa de 56 meses).
   *[Handshake H2 — Software & Arquitectura: Microservicio Asignación]* · *[Handshake H4 — WBS: EDT-1.2]*
 * **Precondiciones:** Entorno de Staging aislado ejecutando tráfico sintetizado a tasa constante (100 peticiones/s).
 * **Pasos de Ejecución:**
@@ -1750,7 +1731,7 @@ Esta batería somete la infraestructura cloud, la capa de ingesta distribuida y 
 ### CP-SEC-01: DAST OWASP ZAP — Prevención de Inyecciones SQL (SQLi) en APIs
 * **ID:** `CP-SEC-01`
 * **Nivel y Tipología:** Prueba de Ciberseguridad / Análisis Dinámico de Seguridad (DAST).
-* **Requerimiento Trazado:** `RNF-013 / REQ-41` (Ciberseguridad y protección de datos).  
+* **Requerimiento Trazado:** `RNF-013 / REQ-41` (Ciberseguridad y protección de datos).
   *[Handshake H2 — Software & Arquitectura: WAF / API Gateway]* · *[Handshake H4 — WBS: EDT-3.12]*
 * **Precondiciones:** Escáner OWASP ZAP Enterprise integrado en el pipeline de GitLab CI apuntando al endpoint `/api/v1/dispatch/orders`.
 * **Pasos de Ejecución:**
@@ -1766,7 +1747,7 @@ Esta batería somete la infraestructura cloud, la capa de ingesta distribuida y 
 ### CP-SEC-02: DAST OWASP ZAP — Prevención de Cross-Site Scripting (XSS) y CSRF en Portales
 * **ID:** `CP-SEC-02`
 * **Nivel y Tipología:** Prueba de Ciberseguridad / Seguridad en Aplicaciones Web.
-* **Requerimiento Trazado:** `RNF-013 / REQ-41` (Seguridad en portales de autoservicio).  
+* **Requerimiento Trazado:** `RNF-013 / REQ-41` (Seguridad en portales de autoservicio).
   *[Handshake H2 — Software & Arquitectura: Portal Clientes / WAF]* · *[Handshake H4 — WBS: EDT-3.12]*
 * **Precondiciones:** Portales Web de Clientes y Transportistas en Staging.
 * **Pasos de Ejecución:**
@@ -1782,7 +1763,7 @@ Esta batería somete la infraestructura cloud, la capa de ingesta distribuida y 
 ### CP-SEC-03: Hardening de Cabeceras HTTP y Cifrado en Tránsito TLS 1.3 Estricto
 * **ID:** `CP-SEC-03`
 * **Nivel y Tipología:** Prueba de Ciberseguridad / Configuración Segura de Servidores y Criptografía.
-* **Requerimiento Trazado:** `RNF-013 / REQ-41` (Cifrado en tránsito y estándares bancarios).  
+* **Requerimiento Trazado:** `RNF-013 / REQ-41` (Cifrado en tránsito y estándares bancarios).
   *[Handshake H2 — Software & Arquitectura: WAF / API Gateway]* · *[Handshake H4 — WBS: EDT-3.12]*
 * **Precondiciones:** Azure Front Door y WAF configurados para dominios públicos `*.curimon.audit.cl`.
 * **Pasos de Ejecución:**
@@ -1799,7 +1780,7 @@ Esta batería somete la infraestructura cloud, la capa de ingesta distribuida y 
 ### CP-SEC-04: Cifrado a Nivel de Campo (FLE AES-256-GCM) para Datos de Choferes (Ley 21.719)
 * **ID:** `CP-SEC-04`
 * **Nivel y Tipología:** Prueba de Ciberseguridad / Protección de Datos Personales y Privacidad.
-* **Requerimiento Trazado:** `RNF-013 / REQ-41` y `RF-022 / REQ-22` (Ley N.º 21.719 de Datos Personales).  
+* **Requerimiento Trazado:** `RNF-013 / REQ-41` y `RF-022 / REQ-22` (Ley N.º 21.719 de Datos Personales).
   *[Handshake H2 — Software & Arquitectura: Azure Key Vault FLE]* · *[Handshake H4 — WBS: EDT-3.13]*
 * **Precondiciones:** Base de datos PostgreSQL con esquema de cifrado a nivel de campo configurado.
 * **Pasos de Ejecución:**
@@ -1816,7 +1797,7 @@ Esta batería somete la infraestructura cloud, la capa de ingesta distribuida y 
 ### CP-SEC-05: Revocación Inmediata de Consentimiento de Geolocalización ($\le 5\text{ min}$)
 * **ID:** `CP-SEC-05`
 * **Nivel y Tipología:** Prueba de Ciberseguridad / Derechos ARCO y Soberanía del Titular de Datos.
-* **Requerimiento Trazado:** `RF-022 / REQ-22` (Gestión de consentimiento Ley 21.719).  
+* **Requerimiento Trazado:** `RF-022 / REQ-22` (Gestión de consentimiento Ley 21.719).
   *[Handshake H2 — Software & Arquitectura: Módulo Privacidad]* · *[Handshake H4 — WBS: EDT-3.13]*
 * **Precondiciones:** Conductor subcontratado con consentimiento previo otorgado para uso de PWA.
 * **Pasos de Ejecución:**
@@ -1833,7 +1814,7 @@ Esta batería somete la infraestructura cloud, la capa de ingesta distribuida y 
 ### CP-SEC-06: Autenticación Mutua TLS (mTLS) entre Microservicios y Rotación de Certificados
 * **ID:** `CP-SEC-06`
 * **Nivel y Tipología:** Prueba de Ciberseguridad / Arquitectura Zero Trust y Red de Servicios.
-* **Requerimiento Trazado:** `RNF-013 / REQ-41` (Seguridad Zero Trust en AKS).  
+* **Requerimiento Trazado:** `RNF-013 / REQ-41` (Seguridad Zero Trust en AKS).
   *[Handshake H2 — Software & Arquitectura: WAF / API Gateway]* · *[Handshake H4 — WBS: EDT-3.12]*
 * **Precondiciones:** Service Mesh Istio desplegado en clúster AKS con política `PeerAuthentication` en modo `STRICT`.
 * **Pasos de Ejecución:**
@@ -1851,7 +1832,7 @@ Esta batería somete la infraestructura cloud, la capa de ingesta distribuida y 
 ### CP-SEC-07: Prevención de Broken Object Level Authorization (BOLA/IDOR) en Portales
 * **ID:** `CP-SEC-07`
 * **Nivel y Tipología:** Prueba de Ciberseguridad / Control de Acceso y Aislamiento Multi-Tenant.
-* **Requerimiento Trazado:** `RF-020 / REQ-20` y `RNF-013 / REQ-41` (Aislamiento de 148 transportistas).  
+* **Requerimiento Trazado:** `RF-020 / REQ-20` y `RNF-013 / REQ-41` (Aislamiento de 148 transportistas).
   *[Handshake H2 — Software & Arquitectura: Portal Transportistas]* · *[Handshake H4 — WBS: EDT-3.11]*
 * **Precondiciones:** Usuario transportista `USER-CARRIER-A` con sesión activa. Existencia de liquidación perteneciente al transportista `USER-CARRIER-B` con ID `LIQ-99882`.
 * **Pasos de Ejecución:**
@@ -1867,7 +1848,7 @@ Esta batería somete la infraestructura cloud, la capa de ingesta distribuida y 
 ### CP-SEC-08: Integridad WORM y Sellado Temporal RFC 3161 en Registro de `EvidenciaJornada`
 * **ID:** `CP-SEC-08`
 * **Nivel y Tipología:** Prueba de Ciberseguridad / Cadena de Custodia e Inmutabilidad Legal.
-* **Requerimiento Trazado:** `RF-004 / REQ-04` y `RNF-012 / REQ-40` (Trazabilidad probatoria estricta).  
+* **Requerimiento Trazado:** `RF-004 / REQ-04` y `RNF-012 / REQ-40` (Trazabilidad probatoria estricta).
   *[Handshake H2 — Software & Arquitectura: Storage Inmutable WORM]* · *[Handshake H4 — WBS: EDT-3.2]*
 * **Precondiciones:** Contenedor Azure Blob Storage configurado con política de inmutabilidad en nivel WORM (*Write Once, Read Many*) con bloqueo temporal de 5 años.
 * **Pasos de Ejecución:**
@@ -1890,7 +1871,7 @@ Esta batería somete los dispositivos físicos embarcados (*Gateway IoT audIT, P
 ### CP-HW-01: Corte Súbito de Energía Principal (12V/24V) — Conmutación a LiFePO4 en $< 10\text{ ms}$
 * **ID:** `CP-HW-01`
 * **Nivel y Tipología:** Prueba de Hardware HIL / Gestión de Potencia Eléctrica y Conmutación Transitoria.
-* **Requerimiento Trazado:** `RNF-002 / REQ-30` (Operación inalterable ante cortes eléctricos).  
+* **Requerimiento Trazado:** `RNF-002 / REQ-30` (Operación inalterable ante cortes eléctricos).
   *[Handshake H3 — Hardware & Riesgos: AMFE Falla F-ELEC-01]* · *[Handshake H4 — WBS: EDT-2.3]*
 * **Precondiciones:** Gateway telemático conectado en banco HIL a fuente de alimentación programable DC ajustada a $24{,}0\text{ V}$. Osciloscopio digital de almacenamiento conectado al carril de alimentación interno ($V_{cc} = 3{,}3\text{ V}$) y al contacto de entrada principal. Batería LiFePO4 conectada y cargada al $100\%$.
 * **Pasos de Ejecución:**
@@ -1908,7 +1889,7 @@ Esta batería somete los dispositivos físicos embarcados (*Gateway IoT audIT, P
 ### CP-HW-02: Autonomía de Batería Interna LiFePO4 — $\ge 6\text{ Horas}$ Transmitiendo Telemetría
 * **ID:** `CP-HW-02`
 * **Nivel y Tipología:** Prueba de Hardware HIL / Ensayo de Autonomía y Eficiencia Energética.
-* **Requerimiento Trazado:** `RNF-002 / REQ-30` (Autonomía de respaldo ante desconexión).  
+* **Requerimiento Trazado:** `RNF-002 / REQ-30` (Autonomía de respaldo ante desconexión).
   *[Handshake H3 — Hardware & Riesgos: Batería LiFePO4 3000mAh]* · *[Handshake H4 — WBS: EDT-2.3]*
 * **Precondiciones:** Batería LiFePO4 de 3.2V / 3.000 mAh en el gateway cargada al $100\%$. Desconexión permanente de la alimentación de 24V del camión.
 * **Pasos de Ejecución:**
@@ -1922,20 +1903,20 @@ Esta batería somete los dispositivos físicos embarcados (*Gateway IoT audIT, P
 
 ---
 
-### CP-HW-03: Resiliencia en Sombra Extrema — Retención 288 Horas en Memoria eMMC 8 GB
+### CP-HW-03: Resiliencia en Sombra — Mínimo 72 Horas y Extensión Propuesta de 288 Horas
 * **ID:** `CP-HW-03`
 * **Nivel y Tipología:** Prueba de Hardware HIL / Capacidad de Almacenamiento Masivo y Sombra Celular.
-* **Requerimiento Trazado:** `RF-009 / REQ-09` y `RNF-008 / REQ-36` (Buffer 288 h Los Libertadores).  
+* **Requerimiento Trazado:** `RF-009 / REQ-09` (mínimo contractual 72 h, RT-03.10); D4 propone estudiar una capacidad ampliada de 288 h.
   *[Handshake H3 — Hardware & Riesgos: Memoria eMMC 8 GB]* · *[Handshake H4 — WBS: EDT-2.3]*
-* **Precondiciones:** Gateway telemático con módulo de módem celular inhabilitado por software (emulación de desconexión absoluta durante 12 días continuos en alta montaña). Memoria industrial eMMC de 8,0 GB formateada con sistema de archivos ext4 transaccional con journaling.
+* **Precondiciones:** Gateway telemático con módem celular inhabilitado y almacenamiento seleccionado por D4. Ejecutar primero el mínimo de desconexión de 72 h. La extensión a 288 h se ensaya solo tras confirmar el diseño y el dimensionamiento de D4.
 * **Pasos de Ejecución:**
-  1. Inyectar mediante el simulador de bus CAN y generador de tramas GNSS un ciclo completo de 288 horas continuas de operación (muestreo: 1 paquete cada 30 s en movimiento, 1 paquete cada 5 min en detención).
+  1. Inyectar mediante el simulador CAN/GNSS un ciclo de operación que cubra al menos 72 h con el perfil de muestreo validado. Si D4 confirma la propuesta ampliada, ejecutar además el escenario de 288 h.
   2. Verificar que la base de datos local SQLite WAL almacene cada paquete secuencialmente.
   3. Comprobar que no exista sobreescritura de registros antiguos (*no ring-buffer overwrite*) y que el espacio en disco utilizado sea inferior a 100 MB.
   4. Habilitar la conexión celular y forzar la sincronización completa.
-* **Datos de Entrada Sintéticos:** Inyección acelerada de 34.560 paquetes de telemetría de ruta cordillerana.
-* **Resultado Esperado:** 34.560 paquetes almacenados íntegramente (espacio ocupado comprimido: $41{,}2\text{ MB}$ de los 8.192 MB disponibles, $< 0{,}6\%$ del disco); 100% de los paquetes sincronizados sin pérdida ni desorden cronológico.
-* **Pass/Fail y Severidad:** **Pass** si almacena las 288 horas sin pérdida ni corrupción. **Fail** if se satura la memoria o se pierden paquetes. **Severidad:** **P1 (Bloqueante)**.
+* **Datos de Entrada Sintéticos:** Perfil CAN/GNSS y volumen de eventos aprobados; el volumen debe derivarse del intervalo de muestreo y validarse con D4.
+* **Resultado Esperado:** Almacena y sincroniza sin pérdida ni corrupción los datos del mínimo contractual de 72 h. Para la extensión propuesta, registrar por separado capacidad ocupada, integridad y resultado del escenario de 288 h.
+* **Pass/Fail y Severidad:** Fallo si no cumple el mínimo de 72 h o hay corrupción/pérdida de datos. La extensión a 288 h es un criterio adicional condicionado a confirmación de D4, no un mínimo contractual.
 * **Entorno:** Banco HIL / Inyector de Tramas de Simulación.
 
 ---
@@ -1943,7 +1924,7 @@ Esta batería somete los dispositivos físicos embarcados (*Gateway IoT audIT, P
 ### CP-HW-04: Acopladores Inductivos CANclick — Lectura J1939 con Pérdida $< 0{,}1\%$
 * **ID:** `CP-HW-04`
 * **Nivel y Tipología:** Prueba de Hardware HIL / Adquisición Pasiva No Intrusiva en Bus CAN.
-* **Requerimiento Trazado:** `RNF-005 / REQ-33` (Integración CAN bus solo lectura sin perder garantía).  
+* **Requerimiento Trazado:** `RNF-005 / REQ-33` (Integración CAN bus solo lectura sin perder garantía).
   *[Handshake H3 — Hardware & Riesgos: Pinza CANclick]* · *[Handshake H4 — WBS: EDT-2.3]*
 * **Precondiciones:** Pinzas inductivas CANclick montadas sobre cables trenzados CAN_H y CAN_L sin pelar aislantes ni soldaduras. Generador de tráfico Vector CANoe emitiendo tramas SAE J1939 a $250\text{ kbps}$ con una carga de bus del $65\%$.
 * **Pasos de Ejecución:**
@@ -1961,7 +1942,7 @@ Esta batería somete los dispositivos físicos embarcados (*Gateway IoT audIT, P
 ### CP-HW-05: Eficiencia Energética y Consumo en Reposo — Standby $< 50\text{ mA}$ tras 30 min
 * **ID:** `CP-HW-05`
 * **Nivel y Tipología:** Prueba de Hardware HIL / Consumo Parásito y Preservación de Batería de Arranque.
-* **Requerimiento Trazado:** `RNF-004 / REQ-32` y `RNF-002 / REQ-30` (Eficiencia eléctrica automotriz).  
+* **Requerimiento Trazado:** `RNF-004 / REQ-32` y `RNF-002 / REQ-30` (Eficiencia eléctrica automotriz).
   *[Handshake H3 — Hardware & Riesgos: AMFE Falla F-ELEC-02]* · *[Handshake H4 — WBS: EDT-2.3]*
 * **Precondiciones:** Multímetro digital de precisión con muestreo continuo intercalado en la línea de alimentación de 24V. Gateway conectado a 24V DC.
 * **Pasos de Ejecución:**
@@ -1970,7 +1951,7 @@ Esta batería somete los dispositivos físicos embarcados (*Gateway IoT audIT, P
   3. A los 30 minutos, el gateway entra en modo *Deep Sleep*: CPU a 32 kHz, módem en eDRX/PSM, y solo el acelerómetro 3D activo para despertar ante movimiento.
   4. Medir la corriente de reposo durante las siguientes 2 horas.
 * **Datos de Entrada Sintéticos:** Corte de ignición emulado por señal digital en banco HIL.
-* **Resultado Esperado:** Corriente estabilizada en modo reposo $= 28{,}4\text{ mA}$ a 24V DC (límite máximo permitido: $50{,}0\text{ mA}$), garantizando que un camión detenido por 30 días no agote sus baterías de arranque.
+* **Resultado Esperado:** Corriente medida en modo reposo inferior al umbral propuesto de $50{,}0\text{ mA}$ a 24V DC. La autonomía de la batería del camión debe evaluarse por separado según sus especificaciones y condiciones de instalación.
 * **Pass/Fail y Severidad:** **Pass** si la corriente de reposo es $< 50\text{ mA}$. **Fail** if supera los $50\text{ mA}$. **Severidad:** **P2 (Crítica)**.
 * **Entorno:** Banco HIL / Multímetro Keysight 34461A 6½ dígitos.
 
@@ -1979,7 +1960,7 @@ Esta batería somete los dispositivos físicos embarcados (*Gateway IoT audIT, P
 ### CP-HW-06: Transmisión y Recepción Prioritaria de Alerta SOS en Torre 24x7 en $\le 15\text{ s}$
 * **ID:** `CP-HW-06`
 * **Nivel y Tipología:** Prueba de Hardware HIL / Respuesta Rápida de Pánico y Seguridad Vial.
-* **Requerimiento Trazado:** `RF-008 / REQ-08` y `RNF-001 / REQ-29` (Tiempo de respuesta SOS $\le 15\text{ s}$).  
+* **Requerimiento Trazado:** `RF-008 / REQ-08` y `RNF-001 / REQ-29` (Tiempo de respuesta SOS $\le 15\text{ s}$).
   *[Handshake H3 — Hardware & Riesgos: Alerta SOS Pánico]* · *[Handshake H4 — WBS: EDT-2.3]*
 * **Precondiciones:** Gateway en banco HIL conectado a la red celular real de pruebas mediante SIM card M2M multi-operador (Entel/Claro/Movistar).
 * **Pasos de Ejecución:**
@@ -1996,7 +1977,7 @@ Esta batería somete los dispositivos físicos embarcados (*Gateway IoT audIT, P
 ### CP-HW-07: Ensayos Térmicos y Vibratorios SAE J1455 en Cámara Climática (-20 °C a +70 °C)
 * **ID:** `CP-HW-07`
 * **Nivel y Tipología:** Prueba de Hardware HIL / Certificación Ambiental Automotriz y Estrés Físico.
-* **Requerimiento Trazado:** `RNF-002 / REQ-30` (Grado industrial automotriz SAE J1455).  
+* **Requerimiento Trazado:** `RNF-002 / REQ-30` (Grado industrial automotriz SAE J1455).
   *[Handshake H3 — Hardware & Riesgos: Certificación SAE J1455]* · *[Handshake H4 — WBS: EDT-2.3]*
 * **Precondiciones:** Dispositivo gateway instalado dentro de cámara climática de ciclado térmico con mesa de vibración electrodinámica integrada.
 * **Pasos de Ejecución:**
@@ -2013,7 +1994,7 @@ Esta batería somete los dispositivos físicos embarcados (*Gateway IoT audIT, P
 ### CP-HW-08: Grado de Estanqueidad IP67 — Resistencia a Polvo Minero y Sumersión Temporal
 * **ID:** `CP-HW-08`
 * **Nivel y Tipología:** Prueba de Hardware HIL / Ensayos de Estanqueidad y Protección Ambiental.
-* **Requerimiento Trazado:** `RNF-002 / REQ-30` (Sellado IP67 para entorno desértico y lavado).  
+* **Requerimiento Trazado:** `RNF-002 / REQ-30` (Sellado IP67 para entorno desértico y lavado).
   *[Handshake H3 — Hardware & Riesgos: Sellado Gabinete IP67]* · *[Handshake H4 — WBS: EDT-2.3]*
 * **Precondiciones:** Muestra de 3 gateways de producción cerrados con torque calibrado y empaquetadura de silicona perimetral.
 * **Pasos de Ejecución:**
@@ -2030,7 +2011,7 @@ Esta batería somete los dispositivos físicos embarcados (*Gateway IoT audIT, P
 ### CP-HW-09: Actualización de Firmware FOTA con Partición Dual A/B y Watchdog Hardware
 * **ID:** `CP-HW-09`
 * **Nivel y Tipología:** Prueba de Hardware HIL / Recuperación Autónoma y Firmware Dual.
-* **Requerimiento Trazado:** `RNF-002 / REQ-30` (Gestión FOTA sin riesgo de bricking).  
+* **Requerimiento Trazado:** `RNF-002 / REQ-30` (Gestión FOTA sin riesgo de bricking).
   *[Handshake H3 — Hardware & Riesgos: Memoria eMMC 8 GB]* · *[Handshake H4 — WBS: EDT-2.3]*
 * **Precondiciones:** Gateway con esquema de arranque U-Boot configurado con particiones de sistema duales `/dev/mmcblk0p2` (Slot A) y `/dev/mmcblk0p3` (Slot B), y temporizador Watchdog hardware activado (timeout: 60 s).
 * **Pasos de Ejecución:**
@@ -2049,7 +2030,7 @@ Esta batería somete los dispositivos físicos embarcados (*Gateway IoT audIT, P
 ### CP-HW-10: Calibración y Verificación Metrológica de Sensores PT100 (-30 °C a +30 °C)
 * **ID:** `CP-HW-10`
 * **Nivel y Tipología:** Prueba de Hardware HIL / Metrología Térmica y Cadena de Frío.
-* **Requerimiento Trazado:** `RF-001 / REQ-01` (44 semirremolques refrigerados / reefers).  
+* **Requerimiento Trazado:** `RF-001 / REQ-01` (44 semirremolques refrigerados / reefers).
   *[Handshake H3 — Hardware & Riesgos: Sensor PT100]* · *[Handshake H4 — WBS: EDT-2.3]*
 * **Precondiciones:** Sonda PT100 de 4 hilos conectada a la entrada analógica del gateway telemático. Baño térmico de calibración de alta precisión Fluke Calibration activo.
 * **Pasos de Ejecución:**
@@ -2065,7 +2046,7 @@ Esta batería somete los dispositivos físicos embarcados (*Gateway IoT audIT, P
 ### CP-HW-11: Emisión Fuera de Línea de Documento D.E.T. en Cabina Mediante Token Local
 * **ID:** `CP-HW-11`
 * **Nivel y Tipología:** Prueba de Hardware HIL / Firma Criptográfica Local y Desconexión.
-* **Requerimiento Trazado:** `RF-014 / REQ-14` (Emisión D.E.T. en cabina bajo sombra celular).  
+* **Requerimiento Trazado:** `RF-014 / REQ-14` (Emisión D.E.T. en cabina bajo sombra celular).
   *[Handshake H3 — Hardware & Riesgos: Token Criptográfico Edge]* · *[Handshake H4 — WBS: EDT-2.3]*
 * **Precondiciones:** Antena celular desconectada físicamente en banco HIL. Bolsa de 5 tokens de contingencia precargados en el chip criptográfico seguro (Secure Element) del gateway.
 * **Pasos de Ejecución:**
@@ -2083,7 +2064,7 @@ Esta batería somete los dispositivos físicos embarcados (*Gateway IoT audIT, P
 ### CP-HW-12: Detección Inmediata de Desconexión de Antena GNSS y Anti-Jamming RF
 * **ID:** `CP-HW-12`
 * **Nivel y Tipología:** Prueba de Hardware HIL / Detección de Sabotaje Físico y Seguridad de Activos.
-* **Requerimiento Trazado:** `RF-008 / REQ-08` y `RNF-002 / REQ-30` (Integridad de la señal satelital).  
+* **Requerimiento Trazado:** `RF-008 / REQ-08` y `RNF-002 / REQ-30` (Integridad de la señal satelital).
   *[Handshake H3 — Hardware & Riesgos: AMFE Falla F-SABOTAJE-01]* · *[Handshake H4 — WBS: EDT-2.3]*
 * **Precondiciones:** Antena GNSS activa conectada a la entrada coaxial SMA del gateway con circuito de detección de polarización de antena (*antenna supervisor*).
 * **Pasos de Ejecución:**
@@ -2101,7 +2082,7 @@ Esta batería somete los dispositivos físicos embarcados (*Gateway IoT audIT, P
 ### CP-HW-13: Acelerómetro 3D MEMS — Detección Inercial de Frenadas Bruscas y Volcamiento
 * **ID:** `CP-HW-13`
 * **Nivel y Tipología:** Prueba de Hardware HIL / Seguridad Vial Activa y Detección de Accidentes.
-* **Requerimiento Trazado:** `RF-027 / REQ-27` y `RNF-001 / REQ-29` (Telemetría de seguridad y maniobras).  
+* **Requerimiento Trazado:** `RF-027 / REQ-27` y `RNF-001 / REQ-29` (Telemetría de seguridad y maniobras).
   *[Handshake H3 — Hardware & Riesgos: Acelerómetro 3D MEMS]* · *[Handshake H4 — WBS: EDT-2.3]*
 * **Precondiciones:** Sensor acelerómetro/giróscopo triaxial MEMS de 16 bits muestreando internamente a $100\text{ Hz}$.
 * **Pasos de Ejecución:**
@@ -2118,7 +2099,7 @@ Esta batería somete los dispositivos físicos embarcados (*Gateway IoT audIT, P
 ### CP-HW-14: Interfaz de Identificación de Conductor (Lector RFID/iButton) y Bloqueo
 * **ID:** `CP-HW-14`
 * **Nivel y Tipología:** Prueba de Hardware HIL / Control de Acceso Físico y Enclavamiento de Partida.
-* **Requerimiento Trazado:** `RF-002 / REQ-02` (Acreditación biométrica/instrumental Nivel 2).  
+* **Requerimiento Trazado:** `RF-002 / REQ-02` (Acreditación biométrica/instrumental Nivel 2).
   *[Handshake H3 — Hardware & Riesgos: Lector RFID Chofer]* · *[Handshake H4 — WBS: EDT-2.3]*
 * **Precondiciones:** Lector RFID de 13,56 MHz (Mifare/NFC) y teclado de cabina conectados por bus RS-485 al gateway. Relé de corte de motor de partida conectado a salida digital controlada.
 * **Pasos de Ejecución:**
@@ -2135,7 +2116,7 @@ Esta batería somete los dispositivos físicos embarcados (*Gateway IoT audIT, P
 ### CP-HW-15: Descarga Remota Dedicada de Tacógrafo Digital Mediante Enlace DSRC
 * **ID:** `CP-HW-15`
 * **Nivel y Tipología:** Prueba de Hardware HIL / Interfaz Directa de Tacógrafo Digital y Descarga Legal.
-* **Requerimiento Trazado:** `RF-007 / REQ-07` (Descarga remota de tacógrafo digital auditado).  
+* **Requerimiento Trazado:** `RF-007 / REQ-07` (Descarga remota de tacógrafo digital auditado).
   *[Handshake H3 — Hardware & Riesgos: Interfaz DSRC Tacógrafo]* · *[Handshake H4 — WBS: EDT-2.3]*
 * **Precondiciones:** Tacógrafo digital de pruebas VDO DTCO 1381 conectado al puerto serie del gateway mediante cable K-Line / CAN-C dedicado. Tarjeta digital de empresa insertada en el lector remoto.
 * **Pasos de Ejecución:**
@@ -2152,14 +2133,14 @@ Esta batería somete los dispositivos físicos embarcados (*Gateway IoT audIT, P
 
 ## 9. Batería 6: Pruebas de Aceptación de Usuario (UAT) en Terreno (15 Casos: `CP-UAT-01` a `CP-UAT-15`)
 
-Esta batería formaliza los ensayos de aceptación en terreno ejecutados con usuarios operativos reales de Transportes Curimón S.A. en sus cinco nodos geográficos estratégicos: San Bernardo (Matriz), Valparaíso, Concepción, Antofagasta y Puerto Montt. Cada caso cuenta con la participación de despachadores, mecánicos de taller, conductores y jefaturas de terminal.
+Esta batería propone ensayos de aceptación en terreno con usuarios operativos de Transportes Curimón S.A. en cinco nodos: San Bernardo, Valparaíso, Concepción, Antofagasta y Puerto Montt. La ejecución y participación de usuarios quedan pendientes de programación y confirmación.
 
 ---
 
 ### CP-UAT-01: UAT Terminal San Bernardo — Operación de Torre de Control 24x7 con 22 Despachadores
 * **ID:** `CP-UAT-01`
 * **Nivel y Tipología:** Prueba de Aceptación de Usuario (UAT) / Operación en Tiempo Real y Ergonomía.
-* **Requerimiento Trazado:** `RF-008 / REQ-08` y `RNF-009 / REQ-37` (Torre 24x7 de San Bernardo).  
+* **Requerimiento Trazado:** `RF-008 / REQ-08` y `RNF-009 / REQ-37` (Torre 24x7 de San Bernardo).
   *[Handshake H2 — Software & Arquitectura: Portal Torre / Timescale]* · *[Handshake H4 — WBS: EDT-3.4]*
 * **Precondiciones:** Sala de control de Torre 24x7 en San Bernardo operativa. 22 despachadores en sus puestos de trabajo organizados en 3 turnos rotativos.
 * **Pasos de Ejecución:**
@@ -2176,7 +2157,7 @@ Esta batería formaliza los ensayos de aceptación en terreno ejecutados con usu
 ### CP-UAT-02: UAT Terminal San Bernardo — Protocolo de Instalación de Hardware en Taller Central
 * **ID:** `CP-UAT-02`
 * **Nivel y Tipología:** Prueba de Aceptación de Usuario (UAT) / Despliegue Físico y Mantenimiento.
-* **Requerimiento Trazado:** `RNF-004 / REQ-32` y `RNF-005 / REQ-33` (Instalación durante pasada regular).  
+* **Requerimiento Trazado:** `RNF-004 / REQ-32` y `RNF-005 / REQ-33` (Instalación durante pasada regular).
   *[Handshake H3 — Hardware & Riesgos: Protocolo Taller SBO]* · *[Handshake H4 — WBS: EDT-5.1]*
 * **Precondiciones:** Tractocamión propio ingresando a mantenimiento programado de 10.000 km en taller central San Bernardo. Cuadrilla de técnicos mecánicos de Curimón S.A. capacitada por audIT.
 * **Pasos de Ejecución:**
@@ -2195,7 +2176,7 @@ Esta batería formaliza los ensayos de aceptación en terreno ejecutados con usu
 ### CP-UAT-03: UAT Terminal San Bernardo — Conciliación de Carga de Diésel con Estanque Propio
 * **ID:** `CP-UAT-03`
 * **Nivel y Tipología:** Prueba de Aceptación de Usuario (UAT) / Control de Combustible y Caudalímetro.
-* **Requerimiento Trazado:** `RF-016 / REQ-16` (Conciliación de estanque matriz en $< 24\text{ h}$).  
+* **Requerimiento Trazado:** `RF-016 / REQ-16` (Conciliación de estanque matriz en $< 24\text{ h}$).
   *[Handshake H2 — Software & Arquitectura: Motor de Costos]* · *[Handshake H4 — WBS: EDT-3.9]*
 * **Precondiciones:** Estanque propio de diésel de San Bernardo equipado con caudalímetro digital y surtidor con identificación RFID.
 * **Pasos de Ejecución:**
@@ -2213,7 +2194,7 @@ Esta batería formaliza los ensayos de aceptación en terreno ejecutados con usu
 ### CP-UAT-04: UAT Terminal Valparaíso — Control de Semirremolques Portacontenedores y Precintos
 * **ID:** `CP-UAT-04`
 * **Nivel y Tipología:** Prueba de Aceptación de Usuario (UAT) / Logística Portuaria y Despacho Rápido.
-* **Requerimiento Trazado:** `RF-008 / REQ-08` y `RF-012 / REQ-12` (Operación portuaria ágil en Valparaíso).  
+* **Requerimiento Trazado:** `RF-008 / REQ-08` y `RF-012 / REQ-12` (Operación portuaria ágil en Valparaíso).
   *[Handshake H2 — Software & Arquitectura: Portal Torre / Timescale]* · *[Handshake H4 — WBS: EDT-3.4]*
 * **Precondiciones:** Terminal Valparaíso. Llegada de tractocamión a retirar contenedor marítimo de exportación de 40 pies.
 * **Pasos de Ejecución:**
@@ -2230,7 +2211,7 @@ Esta batería formaliza los ensayos de aceptación en terreno ejecutados con usu
 ### CP-UAT-05: UAT Terminal Valparaíso — Inspección de Conexión Reefer y Cadena Fría Portuaria
 * **ID:** `CP-UAT-05`
 * **Nivel y Tipología:** Prueba de Aceptación de Usuario (UAT) / Cadena de Frío y Conexión Eléctrica.
-* **Requerimiento Trazado:** `RF-001 / REQ-01` (44 equipos de frío / fruta congelada en puerto).  
+* **Requerimiento Trazado:** `RF-001 / REQ-01` (44 equipos de frío / fruta congelada en puerto).
   *[Handshake H3 — Hardware & Riesgos: Sensor PT100]* · *[Handshake H4 — WBS: EDT-2.3]*
 * **Precondiciones:** Patio de consolidación Valparaíso. Rampla reefer cargada con fruta de exportación conectada a torre eléctrica de patio (*reefer plug*).
 * **Pasos de Ejecución:**
@@ -2247,7 +2228,7 @@ Esta batería formaliza los ensayos de aceptación en terreno ejecutados con usu
 ### CP-UAT-06: UAT Terminal Valparaíso — Detección Automática de Esperas en Antepuerto (ZEAL)
 * **ID:** `CP-UAT-06`
 * **Nivel y Tipología:** Prueba de Aceptación de Usuario (UAT) / Detección Satelital de Esperas Portuarias.
-* **Requerimiento Trazado:** `RF-010 / REQ-10` y `RF-011 / REQ-11` (Sobreestadías en recintos portuarios).  
+* **Requerimiento Trazado:** `RF-010 / REQ-10` y `RF-011 / REQ-11` (Sobreestadías en recintos portuarios).
   *[Handshake H2 — Software & Arquitectura: Engine Liquidación]* · *[Handshake H4 — WBS: EDT-3.5]*
 * **Precondiciones:** Geocerca poligonal configurada sobre la Zona de Extensión de Apoyo Logístico (ZEAL) de Valparaíso.
 * **Pasos de Ejecución:**
@@ -2264,7 +2245,7 @@ Esta batería formaliza los ensayos de aceptación en terreno ejecutados con usu
 ### CP-UAT-07: UAT Terminal Concepción — Relevos de Tripulación Forestal y Descansos Art. 25 bis
 * **ID:** `CP-UAT-07`
 * **Nivel y Tipología:** Prueba de Aceptación de Usuario (UAT) / Operación Forestal y Jornada Laboral.
-* **Requerimiento Trazado:** `RF-002 / REQ-02` (Evidencia jornada choferes propios y forestales).  
+* **Requerimiento Trazado:** `RF-002 / REQ-02` (Evidencia de jornada; régimen de transporte interurbano de carga del Art. 25 bis).
   *[Handshake H2 — Software & Arquitectura: Microservicio Jornada]* · *[Handshake H4 — WBS: EDT-3.2]*
 * **Precondiciones:** Terminal Concepción. Arribo de tractocamión maderero tras 4 horas y 45 minutos de conducción continua desde faena cordillerana en Arauco.
 * **Pasos de Ejecución:**
@@ -2273,8 +2254,8 @@ Esta batería formaliza los ensayos de aceptación en terreno ejecutados con usu
   3. El sistema evalúa si el conductor relevo posee su descanso diario reglamentario de 8 horas cumplido.
   4. Autorizar la reanudación del viaje hacia el puerto de Coronel.
 * **Datos de Entrada Sintéticos:** Relevo de chofer forestal en Concepción.
-* **Resultado Esperado:** El sistema autoriza la salida del camión con el chofer relevo en $< 1\text{ minuto}$; el chofer saliente queda bloqueado para cualquier asignación durante las próximas 2 horas obligatorias.
-* **Pass/Fail y Severidad:** **Pass** si gobierna el relevo y protege el descanso del chofer saliente. **Fail** if permite que el chofer saliente continúe conduciendo. **Severidad:** **P1 (Bloqueante)**.
+* **Resultado Esperado:** El sistema autoriza la salida con el conductor de relevo si cumple sus propios requisitos de habilitación y jornada. El sistema registra para el conductor saliente el descanso correspondiente a 4 h 45 min de conducción continua (24 minutos por hora conducida: 1 h 54 min) antes de permitir una nueva conducción; no impone automáticamente el descanso de 2 horas aplicable después de 5 horas continuas.
+* **Pass/Fail y Severidad:** **Pass** si aplica al conductor saliente el descanso proporcional correspondiente y valida de manera independiente al relevo. **Fail** si permite reanudar antes del descanso debido o bloquea al relevo que sí cumple los controles. **Severidad propuesta:** **P1 (Bloqueante)**.
 * **Entorno:** Terreno / Terminal Concepción.
 
 ---
@@ -2282,7 +2263,7 @@ Esta batería formaliza los ensayos de aceptación en terreno ejecutados con usu
 ### CP-UAT-08: UAT Terminal Concepción — Integración de Órdenes y Control de Pesaje en Báscula
 * **ID:** `CP-UAT-08`
 * **Nivel y Tipología:** Prueba de Aceptación de Usuario (UAT) / Pesaje Industrial y Control de Sobrepeso.
-* **Requerimiento Trazado:** `RF-001 / REQ-01` y `RF-006 / REQ-06` (Prevención de detenciones viales por sobrepeso).  
+* **Requerimiento Trazado:** `RF-001 / REQ-01` y `RF-006 / REQ-06` (Prevención de detenciones viales por sobrepeso).
   *[Handshake H2 — Software & Arquitectura: Microservicio Asignación]* · *[Handshake H4 — WBS: EDT-3.1]*
 * **Precondiciones:** Báscula de pesaje de camiones del Terminal Concepción conectada vía interfaz TCP/IP a la red audIT.
 * **Pasos de Ejecución:**
@@ -2299,7 +2280,7 @@ Esta batería formaliza los ensayos de aceptación en terreno ejecutados con usu
 ### CP-UAT-09: UAT Terminal Concepción — Despacho en Modo Mixto con Transportistas de Biobío
 * **ID:** `CP-UAT-09`
 * **Nivel y Tipología:** Prueba de Aceptación de Usuario (UAT) / Gestión de Terceros en Macrozona Sur.
-* **Requerimiento Trazado:** `RF-026 / REQ-26` y `RF-028 / REQ-28` (Adhesión y despacho mixto de terceros).  
+* **Requerimiento Trazado:** `RF-026 / REQ-26` y `RF-028 / REQ-28` (Adhesión y despacho mixto de terceros).
   *[Handshake H2 — Software & Arquitectura: Portal Adhesión]* · *[Handshake H4 — WBS: EDT-3.16]*
 * **Precondiciones:** 5 transportistas subcontratados de la Región del Biobío registrados en el Portal de Adhesión (camiones homologados vía API Wisetrack).
 * **Pasos de Ejecución:**
@@ -2316,7 +2297,7 @@ Esta batería formaliza los ensayos de aceptación en terreno ejecutados con usu
 ### CP-UAT-10: UAT Terminal Antofagasta — Despacho Bloqueante SUSPEL, Código QR y Rótulos NCh 2190
 * **ID:** `CP-UAT-10`
 * **Nivel y Tipología:** Prueba de Aceptación de Usuario (UAT) / Sustancias Peligrosas y Minería.
-* **Requerimiento Trazado:** `RF-006 / REQ-06` (18 unidades SUSPEL bajo D.S. 298 y D.S. 43).  
+* **Requerimiento Trazado:** `RF-006 / REQ-06` (18 unidades SUSPEL bajo D.S. 298 y D.S. 43).
   *[Handshake H3 — Hardware & Riesgos: AMFE Falla F-SUSPEL-01]* · *[Handshake H4 — WBS: EDT-3.3]*
 * **Precondiciones:** Terminal Antofagasta. Unidad SUSPEL preparándose para despacho de Cianuro de Sodio (UN 1689, Clase 6.1 Tóxico) hacia faena minera en Calama.
 * **Pasos de Ejecución:**
@@ -2334,7 +2315,7 @@ Esta batería formaliza los ensayos de aceptación en terreno ejecutados con usu
 ### CP-UAT-11: UAT Terminal Antofagasta — Resiliencia en Sombra Extrema Ruta 5 Norte (>80 km)
 * **ID:** `CP-UAT-11`
 * **Nivel y Tipología:** Prueba de Aceptación de Usuario (UAT) / Prueba de Ruta Real en Desierto de Atacama.
-* **Requerimiento Trazado:** `RF-009 / REQ-09` y `RNF-008 / REQ-36` (Sombra celular $> 80\text{ km}$ en el norte).  
+* **Requerimiento Trazado:** `RF-009 / REQ-09` y `RNF-008 / REQ-36` (Sombra celular $> 80\text{ km}$ en el norte).
   *[Handshake H3 — Hardware & Riesgos: Memoria eMMC 8 GB]* · *[Handshake H4 — WBS: EDT-2.3]*
 * **Precondiciones:** Tractocamión equipado saliendo de Antofagasta en dirección sur por la Ruta 5 Norte atravesando el tramo de silencio celular de 85 km en el sector de Aguas Verdes / Domeyko.
 * **Pasos de Ejecución:**
@@ -2352,7 +2333,7 @@ Esta batería formaliza los ensayos de aceptación en terreno ejecutados con usu
 ### CP-UAT-12: UAT Terminal Antofagasta — Protocolo de Emergencia ante Derrame Químico / Botón SOS
 * **ID:** `CP-UAT-12`
 * **Nivel y Tipología:** Prueba de Aceptación de Usuario (UAT) / Simulacro de Emergencia Minera.
-* **Requerimiento Trazado:** `RF-008 / REQ-08` y `RF-006 / REQ-06` (Protocolo de emergencia química en ruta).  
+* **Requerimiento Trazado:** `RF-008 / REQ-08` y `RF-006 / REQ-06` (Protocolo de emergencia química en ruta).
   *[Handshake H3 — Hardware & Riesgos: Alerta SOS Pánico]* · *[Handshake H4 — WBS: EDT-2.3]*
 * **Precondiciones:** Simulacro programado de emergencia química con la mutualidad y Bomberos en Antofagasta.
 * **Pasos de Ejecución:**
@@ -2370,7 +2351,7 @@ Esta batería formaliza los ensayos de aceptación en terreno ejecutados con usu
 ### CP-UAT-13: UAT Terminal Puerto Montt — Monitoreo Térmico Continuo (-30 °C a +30 °C) en Reefers
 * **ID:** `CP-UAT-13`
 * **Nivel y Tipología:** Prueba de Aceptación de Usuario (UAT) / Cadena de Frío Acuícola y Láctea.
-* **Requerimiento Trazado:** `RF-001 / REQ-01` (44 semirremolques reefers / salmones en Puerto Montt).  
+* **Requerimiento Trazado:** `RF-001 / REQ-01` (44 semirremolques reefers / salmones en Puerto Montt).
   *[Handshake H3 — Hardware & Riesgos: Sensor PT100]* · *[Handshake H4 — WBS: EDT-2.3]*
 * **Precondiciones:** Terminal Puerto Montt. Rampla reefer cargando 24 toneladas de salmón congelado a $-20{,}0\text{ }^\circ\text{C}$ con destino a San Antonio para embarque naviero.
 * **Pasos de Ejecución:**
@@ -2388,7 +2369,7 @@ Esta batería formaliza los ensayos de aceptación en terreno ejecutados con usu
 ### CP-UAT-14: UAT Terminal Puerto Montt — Alerta Inmediata de Desviación Térmica ($\pm 1{,}5\text{ }^\circ\text{C}$)
 * **ID:** `CP-UAT-14`
 * **Nivel y Tipología:** Prueba de Aceptación de Usuario (UAT) / Alerta Temprana de Pérdida de Frío.
-* **Requerimiento Trazado:** `RF-001 / REQ-01` (Seguridad de carga de alto valor perecible).  
+* **Requerimiento Trazado:** `RF-001 / REQ-01` (Seguridad de carga de alto valor perecible).
   *[Handshake H3 — Hardware & Riesgos: Sensor PT100]* · *[Handshake H4 — WBS: EDT-2.3]*
 * **Precondiciones:** Rampla reefer en patio Puerto Montt. Se simula intencionalmente la apertura de puertas traseras sin apagar el equipo frigorífico.
 * **Pasos de Ejecución:**
@@ -2406,7 +2387,7 @@ Esta batería formaliza los ensayos de aceptación en terreno ejecutados con usu
 ### CP-UAT-15: UAT Terminal Puerto Montt — e-POD y Cierre de Viaje en Planta Procesadora Acuícola
 * **ID:** `CP-UAT-15`
 * **Nivel y Tipología:** Prueba de Aceptación de Usuario (UAT) / Entrega Conforme y Cierre de Ciclo en Cliente.
-* **Requerimiento Trazado:** `RF-012 / REQ-12` y `RF-016 / REQ-16` (e-POD y liquidación de viaje en origen sur).  
+* **Requerimiento Trazado:** `RF-012 / REQ-12` y `RF-016 / REQ-16` (e-POD y liquidación de viaje en origen sur).
   *[Handshake H2 — Software & Arquitectura: App Móvil PWA e-POD]* · *[Handshake H4 — WBS: EDT-3.6]*
 * **Precondiciones:** Chofer arribando a planta procesadora de salmónidos en Chinquihue (Puerto Montt) en zona de baja conectividad costera.
 * **Pasos de Ejecución:**
@@ -2422,73 +2403,44 @@ Esta batería formaliza los ensayos de aceptación en terreno ejecutados con usu
 
 ---
 
-## 10. Resumen Ejecutivo, Compendio de Métricas y Formalización Técnica
+## 10. Resumen de Casos de Prueba y Estado de Revisión
 
-El presente Plan de Pruebas Detallado formaliza **110 casos de prueba rigurosamente estructurados** bajo el estándar internacional ISO/IEC/IEEE 29119 e IEEE 829, cubriendo el 100% de los 42 requerimientos del pliego de la Licitación Pública TFEP-01/2026.
+Este borrador contiene 120 casos de prueba (25 unitarios, 25 de integración, 20 de sistema, 20 no funcionales y de seguridad, 15 HIL y 15 UAT). La cobertura de los 42 requerimientos debe comprobarse mediante una matriz de trazabilidad; el catálogo por sí solo no demuestra cobertura.
 
-### 10.1 Compendio Sinóptico de Casos de Prueba por Batería y Criticidad
-La Tabla T17.3 consolida la distribución cuantitativa de los 110 casos de prueba según su nivel de prueba y nivel de severidad de defecto:
+### 10.1 Compendio sinóptico de casos por batería y criticidad
+La Tabla T17.3 resume la distribución del catálogo por nivel de prueba y severidad propuesta:
 
-#### Tabla T17.3 — Distribución de Casos de Prueba por Batería y Severidad
-*Fuente: Elaboración propia audIT Soluciones Tecnológicas SpA.*
+#### Tabla T17.3 — Inventario de Casos de Prueba por Batería
 
-| Batería de Pruebas | Total Casos | P1 (Bloqueante) | P2 (Crítica) | P3 (Mayor) | Entorno Primario de Ejecución |
-| :--- | :---: | :---: | :---: | :---: | :--- |
-| **Batería 1: Unitarias Automatizadas** | **25** | 13 | 7 | 5 | GitLab CI / Test Runner Local |
-| **Batería 2: Integración y APIs** | **25** | 12 | 11 | 2 | CI Testcontainers (Docker) |
-| **Batería 3: Sistema y E2E** | **20** | 12 | 6 | 2 | Staging AKS / Emuladores IoT |
-| **Batería 4: No Funcionales y Seguridad** | **20** | 11 | 7 | 2 | Staging AKS / K6 / OWASP ZAP |
-| **Batería 5: Hardware en Banco HIL** | **15** | 12 | 3 | 0 | Banco HIL / Instrumental Lab |
-| **Batería 6: Aceptación Terreno (UAT)** | **15** | 6 | 9 | 0 | 5 Terminales (SBO, VAL, CON, ANF, PMC) |
-| **TOTAL CONSOLIDADO** | **110** | **66 (60%)** | **37 (34%)** | **7 (6%)** | **100% Cobertura de Requisitos** |
+| Batería de Pruebas | Casos catalogados | Casos ejecutados | Resultado |
+| :--- | :---: | :---: | :--- |
+| **Batería 1: Unitarias Automatizadas** | **25** | 0 | No ejecutados |
+| **Batería 2: Integración y APIs** | **25** | 0 | No ejecutados |
+| **Batería 3: Sistema y E2E** | **20** | 0 | No ejecutados |
+| **Batería 4: No Funcionales y Seguridad** | **20** | 0 | No ejecutados |
+| **Batería 5: Hardware en Banco HIL** | **15** | 0 | No ejecutados |
+| **Batería 6: Aceptación Terreno (UAT)** | **15** | 0 | No ejecutados |
+| **TOTAL CONSOLIDADO** | **120** | **0** | **Sin resultados registrados** |
 
-### 10.2 Cuadro de Cobertura de los 42 Requerimientos Canónicos
-* **Requerimientos Funcionales (`RF-001` a `RF-028`):** 28 requerimientos cubiertos por 82 casos de prueba cruzados (promedio de 2,93 casos de prueba por cada requerimiento funcional).
-* **Requerimientos No Funcionales (`RNF-001` a `RNF-014`):** 14 requerimientos cubiertos por 28 casos de prueba específicos en rendimiento, seguridad, hardware y resiliencia (promedio de 2,0 casos por requerimiento).
-* **Índice de Trazabilidad RTM:** **100,0%**. Cero requerimientos huérfanos sin caso de verificación asignado.
+### 10.2 Cobertura de los 42 Requerimientos Canónicos
+La matriz de trazabilidad contiene una referencia de caso para cada requerimiento, pero debe contrastarse con los identificadores definidos en este catálogo. No se declara un porcentaje de cobertura hasta completar esa revisión.
 
 ### 10.3 Criterios de Go / No-Go para la Marcha Blanca y Paso a Producción
-La autorización para el inicio de las marchas blancas de 60 días (Etapa 1 y Etapa 2) y el posterior traspaso definitivo a régimen de producción se sujeta a las siguientes compuertas bloqueantes (*Quality Gates*):
+Como criterios propuestos para recomendar el inicio de las marchas blancas y el paso a producción, se consideran las siguientes compuertas, sujetas a aprobación de las partes:
 1. **Defectos Bloqueantes (P1):** **CERO (0)** defectos P1 abiertos en el registro de incidencias.
 2. **Defectos Críticos (P2):** **CERO (0)** defectos P2 abiertos en funcionalidades de la etapa en evaluación.
 3. **Defectos Mayores (P3):** Máximo 3 defectos mayores abiertos, siempre que cuenten con plan de acción formal de resolución en $< 5\text{ días hábiles}$ aprobado por la Contraparte Técnica.
 4. **Cobertura de Pruebas Unitarias:** Cobertura de código fuente $\ge 80{,}0\%$ certificada por SonarQube.
 5. **Ciberseguridad:** 0 vulnerabilidades críticas o altas en SAST (SonarQube), SCA (Trivy) y DAST (OWASP ZAP).
-6. **Aprobación UAT en Terreno:** Actas de recepción de pruebas UAT formalmente suscritas en los 5 terminales regionales.
+6. **Aprobación UAT en terreno:** Actas de recepción de los cinco terminales regionales, una vez ejecutadas las pruebas.
 
 ---
 
-### 10.4 Bloque de Formalización Técnica y Aprobación Institucional
+### 10.4 Revisión pendiente
+Antes de emitir el formulario, confirmar los identificadores y cobertura RTM, validar todas las métricas y referencias de bases, conciliar fechas con la Carta Gantt de D2, y obtener las revisiones técnicas y aprobaciones institucionales requeridas. Este borrador no representa una aprobación ni una línea base congelada.
 
-El presente Plan de Pruebas Detallado y Protocolo de Aceptación (Formulario T-17) ha sido elaborado, revisado y formalizado por las jefaturas técnicas y de aseguramiento de calidad de **audIT Soluciones Tecnológicas SpA**, constituyendo un compromiso contractual inalterable frente a **Transportes Curimón S.A.** en el marco de la Licitación Pública Nacional e Internacional TFEP-01/2026.
-
-```text
-====================================================================================================
-                        FORMALIZACIÓN TÉCNICA INSTITUCIONAL audIT SpA
-               LICITACIÓN PÚBLICA TFEP-01/2026 — CASO 10: TRANSPORTES CURIMÓN S.A.
-====================================================================================================
-
-DOCUMENTO: Formulario Técnico T-17 (Protocolo de Aceptación y Plan Detallado de Pruebas)
-VERSIÓN: 2.0 Definitiva · Entrega 2
-ESTADO: LÍNEA BASE CONGELADA Y APROBADA PARA AUDITORÍA DE LICITACIÓN
-
-ELABORADO POR:
-Área de Aseguramiento de Calidad y Procesos (QA Lead)
-audIT Soluciones Tecnológicas SpA
-
-REVISADO Y AVALADO POR:
-Área de Arquitectura de Software y Sistemas Cloud
-Área de Hardware IoT, Conectividad y Redes
-audIT Soluciones Tecnológicas SpA
-
-APROBADO PARA PRESENTACIÓN OFICIAL:
-Gerencia de Proyecto / PMO
-audIT Soluciones Tecnológicas SpA
-
-Fecha de Emisión: 30 de Septiembre de 2026
-Santiago de Chile
-====================================================================================================
-```
+### Declaración de uso de inteligencia artificial
+Se utilizó inteligencia artificial generativa de forma sustantiva como apoyo para redactar, estructurar y revisar este borrador. La revisión humana técnica, normativa y contractual está pendiente; no se declara validación independiente. Completar y conciliar el registro A-6 antes de la entrega.
 
 
 
