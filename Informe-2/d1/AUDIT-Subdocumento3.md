@@ -23,6 +23,8 @@ independiente (`AUDIT-Formulario-T-12.pdf`), conforme al Comunicado 10, sección
 
 ## 3.1 Resumen Ejecutivo de la Solución
 
+La necesidad de compatibilizar fuentes heterogéneas y autonomía del transportista, diagnosticada en la sección 2.4 del Subdocumento 2, se atiende mediante ingesta por cada plataforma y homologación progresiva de compatibilidad. La adhesión se apoya en el expediente verificable y la transparencia de liquidaciones como incentivos, sin imponer el reemplazo de sistemas de terceros. Estos mecanismos son decisiones de solución: su cobertura depende de validar acceso, permisos y aptitud de los equipos, conforme a SUP-01 y SUP-02 del diagnóstico.
+
 La solución diseñada por audIT Soluciones Tecnológicas SpA para Transportes Curimón S.A.
 resuelve la brecha estructural de control identificada en el diagnóstico del negocio: la compañía
 responde solidariamente ante clientes, fiscalizadores y tribunales por una operación en la cual el
@@ -281,4 +283,4 @@ Conforme al Comunicado 10, sección 7.2, cada sección de este subdocumento y ca
 | 3.2 | Claude Opus 5.5 en Claude Code | Estructuración del alcance, corte E1/E2, catálogo de 42 requerimientos y criterios de aceptación | Medio | Ninguno | Carlos Jesús Abarza Suazo, Director de Auditoría y Aseguramiento Tecnológico: Auditoría de 42 requerimientos y coherencia con FEP01/FEP03 |
 | 3.3 | Claude Opus 5.5 en Claude Code y conector visual | Estructuración de diagramas conceptuales y descripción analítica de capas | Medio | Bajo | Carlos Jesús Abarza Suazo, Director de Auditoría y Aseguramiento Tecnológico: Validación de mapeo unívoco con arquitectura de S4 |
 | 3.4 | Claude Opus 5.5 en Claude Code | Articulación operacional de las 9 capacidades y estrategia de adopción de transportistas | Medio | Ninguno | Carlos Jesús Abarza Suazo, Director de Auditoría y Aseguramiento Tecnológico: Verificación de Ley 21.719 y reglas de comodato |
-| Formulario T-12 | Claude Opus 5.5 en Claude Code | Consolidación tabular de 42 requerimientos con campos normativos del numeral 17.1 del Caso | Alto | Ninguno | Carlos Jesús Abarza Suazo, Director de Auditoría y Aseguramiento Tecnológico: Certificación de campos normativos y trazabilidad |
+| Formulario T-12 | Claude Opus 5.5 en Claude Code y Codex | Reescritura del catálogo de 42 requerimientos y conciliación de RF-028 y RN-03 con las modalidades y evidencia de jornada definidas en S3 | Alto | Ninguno | Conciliación y controles documentales automatizados realizados; revisión humana final pendiente. |

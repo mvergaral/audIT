@@ -3,6 +3,8 @@
 \ifdefined\FormularioActual
 \makeatletter
 \audit@iniciarpartes
+% Folios de tres cifras: ajuste local del índice del catálogo.
+\renewcommand\@pnumwidth{2.2em}
 \makeatother
 {\renewcommand\textoEncabezado{\color{audit-marino}Índice}\indiceDetallado}
 \clearpage
@@ -22,7 +24,7 @@
   \exigencia{Plazos de revisión.}{Diez días hábiles de revisión y diez de subsanación. La segunda presentación con observaciones de igual naturaleza constituye atraso imputable (\art{18.3}{13}); véase \verSeccionFolio{sec:9-hitos}.}
   \exigencia{Procedimiento de observaciones.}{Las observaciones se registran con identificador, requisito relacionado, severidad, evidencia y respuesta; la subsanación se revisa contra el criterio aprobado y sin aceptación por silencio y con acta suscrita; véase \verSeccionFolio{sec:9-protocolo-aceptacion}.}
   \exigencia{Acta de conformidad.}{El cierre registra el hito y versión evaluados, casos ejecutados y su estado, defectos abiertos, métricas efectivamente medidas, evidencias y pronunciamiento de la contraparte; véase \verSeccionFolio{sec:9-protocolo-aceptacion}.}
-  \exigencia{Estado del catálogo de pruebas.}{El catálogo contiene 120 casos diseñados (25 unitarios, 25 de integración, 20 de sistema, 20 no funcionales y de seguridad, 15 HIL y 15 UAT), asegurando trazabilidad de extremo a extremo hacia los 42 requerimientos del sistema formalizados en el Formulario T-12 (32 funcionales RF-01 a RF-32 y 10 no funcionales RNF-01 a RNF-10) y los 54 paquetes de la EDT. No se declaran ejecutados ni aprobados. Los escenarios sintéticos y umbrales adicionales se fijan antes de ejecutar. Catálogo: \hyperref[sec:9-catalogo]{Catálogo detallado}, folio \pageref{sec:9-catalogo}.}
+  \exigencia{Estado del catálogo de pruebas.}{El catálogo contiene 120 casos diseñados (25 unitarios, 25 de integración, 20 de sistema, 20 no funcionales y de seguridad, 15 HIL y 15 UAT), con trazabilidad diseñada hacia los 42 requerimientos del sistema formalizados en el Formulario T-12 (28 funcionales RF-001 a RF-028 y 14 no funcionales RNF-001 a RNF-014) y sus paquetes EDT asociados. La matriz distingue cobertura diseñada de evidencia ejecutada; no afirma probar todos los 54 paquetes. No se declaran ejecutados ni aprobados. Los escenarios sintéticos y umbrales adicionales se fijan antes de ejecutar. Catálogo: \hyperref[sec:9-catalogo]{Catálogo detallado}, folio \pageref{sec:9-catalogo}.}
 \end{contenidoExigido}
 Véanse los mínimos en \verSeccionFolio{sec:9-minimos-trazados} y las seis condiciones acumulativas y calendario en \verSeccionFolio{sec:9-condiciones-contractuales}.
 \input{subdocumentos/09-calidad/formularios/catalogo-T-17.tex}

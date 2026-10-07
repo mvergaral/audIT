@@ -327,6 +327,9 @@
   \clearpage
   % Desde aquí las páginas pertenecen al subdocumento #1 (verificador, punto 20)
   \registrarFolio{formsd-#1}{Formulario #2. \tituloFormulario{#2}}%
+  \ifboolexpr{test {\ifstrequal{#2}{T-11}} or test {\ifstrequal{#2}{T-12}} or test {\ifstrequal{#2}{T-19}}}{%
+    \begingroup\renewcommand\contentsname{Índice detallado}\setcounter{tocdepth}{2}%
+    \tableofcontents\endgroup\clearpage}{}%
   \IncluirFormularioArchivo{\carpetaDeSubdocumento{#1}}{#2}}
 
 \endinput

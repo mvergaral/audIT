@@ -1,7 +1,8 @@
 # Subdocumento 9. Plan de calidad
 
-audIT Soluciones Tecnológicas SpA — Transportes Curimón S.A.
+audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. Oferta Técnica, Sobre N.º 2. Informe Preparatorio 2. Archivo AUDIT-Subdocumento9.pdf. Anexos: Formulario T-13 en el archivo AUDIT-Formulario-T-13.pdf, Formulario T-17 en el archivo AUDIT-Formulario-T-17.pdf.
 
+## 9 Plan de calidad
 
 > **Resumen de apertura.**
 >
@@ -19,9 +20,11 @@ El plan aplica controles preventivos y verificaciones basadas en riesgo a cada i
 
 ### 9.1.1 Modelo de calidad y controles verificables
 
-Se utiliza el modelo de calidad de producto ISO/IEC 25010:2023, con nueve características (iso25010_2023, ). No constituye una certificación de audIT ni demuestra conformidad por nombrarlo. Cada característica se transforma en una pregunta de ensayo y en evidencia conservada.
+Se utiliza el modelo de calidad de producto ISO/IEC 25010:2023, con nueve características (ISO/IEC, 2023). No constituye una certificación de audIT ni demuestra conformidad por nombrarlo. Cada característica se transforma en una pregunta de ensayo y en evidencia conservada.
 
 La adecuación funcional se verifica contrastando entradas, reglas de despacho, jornada, documentos y salidas contra un oráculo independiente; cualquier autorización ilegal es fallo, aunque otros casos aprueben. La eficiencia de desempeño se mide mediante percentiles y distribución por unidad: asignación p95 de hasta treinta segundos, DET hasta noventa segundos y sincronización hasta veinte minutos por camión tras setenta y dos horas sin cobertura. Una media favorable no compensa una unidad fuera del límite.
+
+El oráculo de jornada conserva la cascada de S3 y distingue su aplicación por modalidad: la completa aporta nivel 2; la de datos complementa el reposo del camión de nivel 4 con atestación firmada de nivel 5 y permite asignar con marca. Sin adhesión, la validación documental exige atestación firmada para obtener un veredicto habilitante; sin ella se bloquea la asignación. Modalidad, fuente, nivel y veredicto se verifican por separado en CP-SYS-05 y CP-UAT-09. Ninguna modalidad levanta bloqueos legales.
 
 La compatibilidad se prueba con contratos versionados de ERP, GPS, TMS y dispositivos; duplicados, cambios de esquema y respuesta ausente no pueden producir doble emisión o pérdida de evidencia. La capacidad de interacción se verifica con tareas representativas de despacho, taller y conductor detenido; se registran finalización, errores y necesidad de asistencia, sin inventar una tasa de éxito ya medida.
 
@@ -43,7 +46,7 @@ La Tabla 9.1 distingue los compromisos trazados de los objetivos internos que a�
 
 | Métrica | Criterio | Naturaleza y fuente | Evidencia |
 |---|---|---|---|
-| Disponibilidad de servicios críticos | $\ge 99,9%$ mensual E2E | Contractual: Art. 20 FEP01, p. 14; RT-10.01 FEP02, p. 22 | Medición real de transacciones E2E; monitoreo sintético complementario y reporte |
+| Disponibilidad de servicios críticos | $\ge 99{,}9%$ mensual E2E | Contractual: Art. 20 FEP01, p. 14; RT-10.01 FEP02, p. 22 | Medición real de transacciones E2E; monitoreo sintético complementario y reporte |
 | Recuperación ante desastre | RTO $\le 4 h; RPO \le 15$ min | Contractual: RT-07.04 FEP02, p. 17 | Informe fechado de ejercicio de recuperación |
 | Retención local sin conectividad | Al menos 72 h, sin pérdida ni corrupción | Contractual: RT-03.10, p. 31 | Registro de desconexión, almacenamiento y sincronización |
 | Cobertura de pruebas unitarias | Mínimo $\ge70%$; objetivo adicional $\ge80%$ | RT-04.11 FEP02, p. 11; 80% adicional | Reporte de cobertura por versión |
@@ -61,9 +64,17 @@ La verificación combina inspección, análisis automatizado y pruebas dinámica
 
 La Figura 9.1 muestra el recorrido general desde el criterio contractual hasta la aceptación. El detalle de niveles, datos y decisiones se desarrolla después de la figura.
 
-**Figura 9.1. Recorrido de calidad, evidencia y aceptación**
-
-Bases y riesgos (criterio y oráculo) → CI y QA (unitarias e integración) → Staging y HIL (sistema, carga, seguridad) → Evidencia identificada (resultado y defecto) → UAT y marcha blanca (volumen real y conciliación) → Contraparte Técnica (seis condiciones y acta).
+\begin{figuraNativa}{Recorrido de calidad, evidencia y aceptación}{9-proceso-calidad}
+\begin{tikzpicture}[x=1mm,y=1mm,every node/.style={font=\fontsize{10}{12}\selectfont\sffamily,align=center},bloque/.style={draw,rounded corners=1mm,text width=40mm,minimum height=21mm,inner sep=2mm}]
+\node[bloque] (r) at (0,0) {Bases y riesgos Criterio + oráculo};
+\node[bloque] (u) at (49,0) {CI y QA Unitarias + integración};
+\node[bloque] (h) at (98,0) {Staging y HIL Sistema, carga, seguridad};
+\node[bloque] (e) at (98,-32) {Evidencia identificada Resultado + defecto};
+\node[bloque] (a) at (49,-32) {UAT y marcha blanca Volumen real + conciliación};
+\node[bloque] (c) at (0,-32) {Contraparte Técnica Seis condiciones + acta};
+\draw[->] (r)--(u);\draw[->] (u)--(h);\draw[->] (h)--(e);\draw[->] (e)--(a);\draw[->] (a)--(c);
+\end{tikzpicture}
+\end{figuraNativa}
 
 El primer bloque fija el criterio antes de ejecutar; CI y QA detectan fallos de lógica y contratos antes de utilizar dispositivos o datos operacionales. Staging y HIL reproducen carga, desconexión y fallas con controles de reversión. El resultado conserva ambiente, versión, entradas y medición: una captura sin esos datos no permite reevaluar el ensayo. UAT comprueba tareas con usuarios designados; marcha blanca añade volumen real y estabilidad sostenida. La Contraparte Técnica formaliza el cierre solo cuando concurren las seis condiciones contractuales. Cualquier fallo devuelve el incremento a corrección y reevaluación, sin convertir la figura en evidencia de ejecución.
 
@@ -125,15 +136,16 @@ El calendario contractual establece las ventanas; la red vigente de S7/T-15 iden
 | Ventana | Actividad S7 | Ensayos | Salida verificable |
 |---|---|---|---|
 | Construcción E1 | A09/A10/A11 | Unitarias, integración y piloto HIL | Versión y regresión trazadas |
-| M12, hito H5 | A12 | Carga, resiliencia, DR, seguridad y UAT E1 | Informe y defectos de certificación |
+| M10--M12, hito H5 | A12 | Pruebas integrales E1: carga, resiliencia, DR, seguridad y UAT | Informe y defectos de certificación |
 | M13--M15 | A15 | Marcha blanca E1 | Cuatro semanas y seis condiciones |
 | M16, hito H7 | A19 | Producción E1 | Acta de su alcance |
 | Construcción E2 | A20 | Regresión E1 y ensayos del incremento | Evidencia sin degradación E1 |
-| M18, hito H10 | A22 | Carga, resiliencia, DR, seguridad y UAT E2 | Informe y defectos de certificación |
+| M17--M18, hito H10 | A22 | Certificación E2: carga, resiliencia, DR, seguridad y UAT | Informe y defectos de certificación |
 | M19--M20 | A24 | Marcha blanca E2 | Cuatro semanas y seis condiciones |
 | M21, hito H12 | A25 | Producto final | Acta e inicio de operación |
+| Operación (M21--M56) | A25/Operación | Simulacros semestrales DR (junio y noviembre) | Demostración RTO $\le 4 h, RPO \le 15$ min y conmutación |
 
-Las pruebas de carga utilizan el perfil aprobado de S4, conservando mezcla y concurrencia; resiliencia incluye desconexión embarcada de 72 h, terminal de 24 h y reconexión masiva. Cada ejercicio DR mide desde la declaración del incidente hasta servicio recuperado y contrasta el último dato recuperable con RPO; seguridad ofensiva se ejecuta con autorización, límites, datos de ensayo y reversión. Las cuatro familias producen informes independientes en A12/M12 y A22/M18, para evitar que un éxito funcional sustituya una comprobación no funcional. Antes de cada paso a producción y semestralmente en operación se ensayan resiliencia y DR; las pruebas de intrusión se ejecutan antes de cada paso a producción y anualmente, por tercero independiente de audIT, con informe íntegro y remediación (FEP02, 20.1, pp. 34--35; FEP02, RT-11.20, p. 24). La carga prueba los umbrales a 1,5 veces el peak declarado. La migración definitiva requiere dos ensayos previos con conciliación sin diferencias no explicadas. Estas comprobaciones complementan las certificaciones A12/A22 y conservan responsables, autorización y ventanas.
+Las pruebas de carga utilizan el perfil aprobado de S4, conservando mezcla y concurrencia; resiliencia incluye desconexión embarcada de 72 h, terminal de 24 h y reconexión masiva. Cada ejercicio DR mide desde la declaración del incidente hasta servicio recuperado y contrasta el último dato recuperable con RPO; seguridad ofensiva se ejecuta con autorización, límites, datos de ensayo y reversión. Las cuatro familias producen informes independientes en las ventanas de pruebas integrales A12 (meses 10 a 12) y A22 (meses 17 a 18), para evitar que un éxito funcional sustituya una comprobación no funcional. Antes de cada paso a producción y semestralmente durante los 36 meses de operación (M21 a M56) se ejecutan las pruebas de resiliencia y DR; estos ejercicios de recuperación ante desastres se programan en junio y noviembre de cada año operacional, distanciados por cinco meses y fuera de la temporada alta de fruta para resguardar la continuidad de negocio ((FEP02, RT-07.07, p. 17)), certificando el RTO $\le 4$ h y RPO $\le 15$ min hacia la región secundaria Azure Brazil South (FEP02, RT-07.04, p. 17). Las pruebas de intrusión se ejecutan antes de cada paso a producción y anualmente, por tercero independiente de audIT, con informe íntegro y remediación (FEP02, 20.1, pp. 34--35; FEP02, RT-11.20, p. 24). La carga prueba los umbrales a 1,5 veces el peak declarado. La migración definitiva requiere dos ensayos previos con conciliación sin diferencias no explicadas. Estas comprobaciones complementan las certificaciones A12/A22 y conservan responsables, autorización y ventanas.
 
 ### 9.3.3 Protocolo de aceptación, observaciones y acta
 
@@ -147,7 +159,8 @@ Cada evidencia incluirá identificador de requisito/caso, fecha, versión, ambie
 
 ### 9.3.5 Condiciones contractuales de calendario y aceptación
 
-El calendario de la Tabla 9.5 es obligatorio conforme al FEP01, Artículo 17.1, pp. 12--13. M1 se cuenta desde el origen contractual efectivo; no se convierte la fecha de entrega de la oferta en inicio del contrato. Los puntos de control técnicos no sustituyen los hitos ponderados de E-25.
+\begingroup\emergencystretch=3em
+El calendario de la Tabla 9.5 es obligatorio conforme al FEP01, Artículo 17.1, pp. 12--13. M1 se cuenta desde el origen contractual efectivo; no se convierte la fecha de entrega de la oferta en inicio del contrato. Los puntos de control técnicos no sustituyen los hitos ponderados de E-25.\endgroup
 
 **Tabla 9.5.** Calendario contractual y evidencia de transición
 
@@ -175,8 +188,8 @@ La Tabla 9.6 concreta los criterios que deben incorporarse al catálogo de prueb
 
 | Control | Umbral | Fuente y evidencia |
 |---|---|---|
-| Disponibilidad crítica E2E | $\ge99,9%$ mensual | FEP01, Artículo 20, p. 14, FEP02, RT-10.01, p. 22: intentos, éxito/fallo y duración de transacciones reales correlacionadas. Monitoreo sintético complementario. |
-| Red, cómputo, datos y portal | $\ge99,95%$ por componente | FEP02, Cap. 7, pp. 17--18; sala Cap. 6: métricas por componente y conciliación con incidencias de negocio. |
+| Disponibilidad crítica E2E | $\ge99{,}9%$ mensual | FEP01, Artículo 20, p. 14, FEP02, RT-10.01, p. 22: intentos, éxito/fallo y duración de transacciones reales correlacionadas. Monitoreo sintético complementario. |
+| Red, cómputo, datos y portal | $\ge99{,}95%$ por componente | FEP02, Cap. 7, pp. 17--18; sala Cap. 6: métricas por componente y conciliación con incidencias de negocio. |
 | Recuperación | RTO $\le4 h; RPO \le15$ min | FEP02, RT-07.04, p. 17: conmutación real autorizada, tiempos y datos recuperados. |
 | Asignación bloqueante | p95 $\le30$ s | Caso, RT-09.01, p. 32; FEP02 Cap. 9: jornada previa, habilitaciones y equipo bajo carga declarada. |
 | Documento de transporte | $\le90$ s | Caso, RT-09.01, p. 32: documento conforme antes de mover carga; ERP contable como emisor tributario. |
@@ -214,4 +227,4 @@ Conforme al Comunicado 10, sección 7.2, cada sección de este subdocumento y ca
 | 9.2 Estrategia de Aseguramiento de Calidad | Asistente LLM y Codex | Desarrollo de estrategia, controles y diagrama de proceso | Alto | Alto | Integración y controles documentales automatizados realizados; revisión humana final pendiente. |
 | 9.3 Alineación con Plan de Trabajo | Asistente LLM y Codex | Integración de secuencia de hitos y evidencias | Alto | Ninguno | Integración y controles documentales automatizados realizados; revisión humana final pendiente. |
 | Formulario T-13 | Asistente LLM y Codex | Desarrollo del plan de pruebas y sus cinco contenidos | Alto | Ninguno | Integración y controles documentales automatizados realizados; revisión humana final pendiente. |
-| Formulario T-17 | Asistente LLM y Codex | Desarrollo del protocolo, depuración e incorporación de 120 casos | Alto | Ninguno | Integración y controles documentales automatizados realizados; revisión humana final pendiente. |
+| Formulario T-17 | Asistente LLM y Codex | Desarrollo del protocolo, depuración de 120 casos y cotejo S3/T-12 con matriz de 42 requisitos y variantes de comprobación; conciliación de modalidades y veredictos con S3 | Alto | Ninguno | Integración y controles documentales automatizados realizados; revisión humana final pendiente. |

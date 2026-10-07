@@ -2,9 +2,84 @@
 
 audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. Oferta Técnica, Sobre N.º 2. Informe Preparatorio 2. Archivo AUDIT-Formulario-T-11.pdf. Anexo del Subdocumento N.º 4, Arquitectura lógica y física de la solución. Las fuentes están en las Referencias de ese subdocumento.
 
+## Índice detallado
+
+| Contenido | Página del PDF |
+|---|---:|
+| Ficha del documento | [3](AUDIT-Formulario-T-11.pdf#page=3) |
+| T-11 Especificaciones técnicas ofertadas | [6](AUDIT-Formulario-T-11.pdf#page=6) |
+| Componente 1. Equipo a bordo | [6](AUDIT-Formulario-T-11.pdf#page=6) |
+| Componente 2. Equipo a bordo por crecimiento | [6](AUDIT-Formulario-T-11.pdf#page=6) |
+| Componente 3. Módem satelital de ráfaga corta | [6](AUDIT-Formulario-T-11.pdf#page=6) |
+| Componente 4. Lector CAN sin contacto | [6](AUDIT-Formulario-T-11.pdf#page=6) |
+| Componente 5. Lector de tarjeta del conductor | [6](AUDIT-Formulario-T-11.pdf#page=6) |
+| Componente 6. Tarjeta de identificación del conductor | [7](AUDIT-Formulario-T-11.pdf#page=7) |
+| Componente 7. Baliza de semirremolque | [7](AUDIT-Formulario-T-11.pdf#page=7) |
+| Componente 8. Baliza por crecimiento | [7](AUDIT-Formulario-T-11.pdf#page=7) |
+| Componente 9. Computador de terminal | [7](AUDIT-Formulario-T-11.pdf#page=7) |
+| Componente 10. Router de respaldo | [7](AUDIT-Formulario-T-11.pdf#page=7) |
+| Componente 11. Switch de gabinete | [7](AUDIT-Formulario-T-11.pdf#page=7) |
+| Componente 12. UPS de gabinete | [7](AUDIT-Formulario-T-11.pdf#page=7) |
+| Componente 13. Punto de acceso de patio | [8](AUDIT-Formulario-T-11.pdf#page=8) |
+| Componente 14. Lector de portería | [8](AUDIT-Formulario-T-11.pdf#page=8) |
+| Componente 15. Servidor del nodo de continuidad | [8](AUDIT-Formulario-T-11.pdf#page=8) |
+| Componente 16. Firewall | [8](AUDIT-Formulario-T-11.pdf#page=8) |
+| Componente 17. Switch de sala | [8](AUDIT-Formulario-T-11.pdf#page=8) |
+| Componente 18. UPS de sala | [8](AUDIT-Formulario-T-11.pdf#page=8) |
+| Componente 19. Clima de precisión | [8](AUDIT-Formulario-T-11.pdf#page=8) |
+| Componente 20. Detección temprana | [9](AUDIT-Formulario-T-11.pdf#page=9) |
+| Componente 21. Extinción automática | [9](AUDIT-Formulario-T-11.pdf#page=9) |
+| Componente 22. Extintor portátil | [9](AUDIT-Formulario-T-11.pdf#page=9) |
+| Componente 23. Control de acceso biométrico | [9](AUDIT-Formulario-T-11.pdf#page=9) |
+| Componente 24. Cámara de videovigilancia | [9](AUDIT-Formulario-T-11.pdf#page=9) |
+| Componente 25. Grabador de video | [9](AUDIT-Formulario-T-11.pdf#page=9) |
+| Componente 26. Detección de agua | [9](AUDIT-Formulario-T-11.pdf#page=9) |
+| Componente 27. Grupo electrógeno | [9](AUDIT-Formulario-T-11.pdf#page=9) |
+| Componente 28. Rack | [10](AUDIT-Formulario-T-11.pdf#page=10) |
+| Componente 29. Enlace dedicado a la nube | [10](AUDIT-Formulario-T-11.pdf#page=10) |
+| Componente 30. Enlace fijo de terminal | [10](AUDIT-Formulario-T-11.pdf#page=10) |
+| Componente 31. Distribución de contenidos y protección perimetral | [10](AUDIT-Formulario-T-11.pdf#page=10) |
+| Componente 32. Puerta de enlace de servicios | [10](AUDIT-Formulario-T-11.pdf#page=10) |
+| Componente 33. Concentrador de dispositivos | [10](AUDIT-Formulario-T-11.pdf#page=10) |
+| Componente 34. Bus de eventos | [10](AUDIT-Formulario-T-11.pdf#page=10) |
+| Componente 35. Orquestador de contenedores | [11](AUDIT-Formulario-T-11.pdf#page=11) |
+| Componente 36. Base transaccional | [11](AUDIT-Formulario-T-11.pdf#page=11) |
+| Componente 37. Base de series de tiempo | [11](AUDIT-Formulario-T-11.pdf#page=11) |
+| Componente 38. Almacenamiento de objetos | [11](AUDIT-Formulario-T-11.pdf#page=11) |
+| Componente 39. Identidad, secretos y cifrado de campo | [11](AUDIT-Formulario-T-11.pdf#page=11) |
+| Componente 40. Cortafuegos de nube | [11](AUDIT-Formulario-T-11.pdf#page=11) |
+| Componente 41. Puertas de enlace de red | [11](AUDIT-Formulario-T-11.pdf#page=11) |
+| Componente 42. Acceso administrativo | [11](AUDIT-Formulario-T-11.pdf#page=11) |
+| Componente 43. Observabilidad | [12](AUDIT-Formulario-T-11.pdf#page=12) |
+| Componente 44. Caché distribuida | [12](AUDIT-Formulario-T-11.pdf#page=12) |
+| Componente 45. Repositorio analítico y autoservicio | [12](AUDIT-Formulario-T-11.pdf#page=12) |
+| Componente 46. Despacho y asignación | [12](AUDIT-Formulario-T-11.pdf#page=12) |
+| Componente 47. Flota y mantenimiento | [12](AUDIT-Formulario-T-11.pdf#page=12) |
+| Componente 48. Jornada | [12](AUDIT-Formulario-T-11.pdf#page=12) |
+| Componente 49. Gestión documental | [12](AUDIT-Formulario-T-11.pdf#page=12) |
+| Componente 50. Tarifas y liquidación | [12](AUDIT-Formulario-T-11.pdf#page=12) |
+| Componente 51. Integración telemática de terceros | [13](AUDIT-Formulario-T-11.pdf#page=13) |
+| Componente 52. Integración de telemetría de fábrica | [13](AUDIT-Formulario-T-11.pdf#page=13) |
+| Componente 53. Gestión del parque de dispositivos | [13](AUDIT-Formulario-T-11.pdf#page=13) |
+| Componente 54. Réplica de recuperación | [13](AUDIT-Formulario-T-11.pdf#page=13) |
+| Componente 55. Nodo de continuidad operacional | [13](AUDIT-Formulario-T-11.pdf#page=13) |
+| Componente 56. Pasarela de la capa anticorrupción | [13](AUDIT-Formulario-T-11.pdf#page=13) |
+| Componente 57. Sistema contable de 2013 | [13](AUDIT-Formulario-T-11.pdf#page=13) |
+| Componente 58. Terminación de enlaces y borde de red | [13](AUDIT-Formulario-T-11.pdf#page=13) |
+| Componente 59. Nodo de terminal | [14](AUDIT-Formulario-T-11.pdf#page=14) |
+| Componente 60. Lectura de portería | [14](AUDIT-Formulario-T-11.pdf#page=14) |
+| Componente 61. Distribución de actualizaciones | [14](AUDIT-Formulario-T-11.pdf#page=14) |
+| Componente 62. Búfer no volátil a bordo | [14](AUDIT-Formulario-T-11.pdf#page=14) |
+| Componente 63. Motor de geocercas a bordo | [14](AUDIT-Formulario-T-11.pdf#page=14) |
+| Componente 64. Alerta de jornada a bordo | [14](AUDIT-Formulario-T-11.pdf#page=14) |
+| Componente 65. Identificación del conductor | [14](AUDIT-Formulario-T-11.pdf#page=14) |
+| Componente 66. Módulo satelital | [14](AUDIT-Formulario-T-11.pdf#page=14) |
+| Componente 67. Baliza de semirremolque | [14](AUDIT-Formulario-T-11.pdf#page=14) |
+| Componente 68. Aplicación móvil del conductor | [14](AUDIT-Formulario-T-11.pdf#page=14) |
+
 | N.º | Componente | Producto | Características | Ubicación | Cantidad | Adquiere | Ciclo de vida | Justificación |
 |---|---|---|---|---|---|---|---|---|
-| 1 | Equipo a bordo | iWave G26I con eMMC de 8 GB | NXP i.MX 6ULL, 512 MB de RAM, 3 CAN con J1939, RS232, RS485, LTE Cat 4 o Cat M1, GNSS, Wi-Fi, Bluetooth 5.0, elemento seguro Microchip TA100, IP67, −40 a +70 °C, 9 a 32 V. Condición de compra: bandas LTE chilenas, homologación SUBTEL y E-Mark | Cabina de 148 camiones propios y 34 de terceros sin equipo | 182 más 19 de reposición | CLIENTE | Longevidad de producto de 10 años declarada por el fabricante. Actualización solo en terminal. Reposición del 10 % | Registra 288 horas sin cobertura (RT-03.10 y RT-10.05 del Caso) con 2,4 GB requeridos sobre 8 GB. Sección 4.2.2 |
+| 1 | Equipo a bordo | iWave G26I con eMMC de 8 GB | NXP i.MX 6ULL, 512 MB de RAM, 3 CAN con J1939, RS232, RS485, LTE Cat 4 o Cat M1, GNSS, Wi-Fi, Bluetooth 5.0, elemento seguro Microchip TA100, IP67, −40 a +70 °C, 9 a 32 V. Condición de compra: bandas LTE chilenas, homologación SUBTEL y E-Mark | Cabina de 148 camiones propios y 34 de terceros sin equipo | 182 más 19 de reposición | CLIENTE | Longevidad de producto de 10 años declarada por el fabricante. Actualización solo en terminal. Reposición del 10 % | Mínimo contractual 72 h (Caso RT-03.10, p. 31); ampliación propuesta 288 h, independiente del cierre vial. Asignación 2.400 MiB = 2,52 GB decimales sobre 8 GB nominales; capacidad útil y overhead verificados en HIL. Sección 4.2.2 |
 | 2 | Equipo a bordo por crecimiento | iWave G26I con eMMC de 8 GB | Iguales a la fila 1 | Camiones propios nuevos | 22, comprados durante la operación | CLIENTE | Igual a la fila 1 | La flota propia pasa de 148 a 170 camiones a tres años (Caso, numeral 14.1, p. 29) |
 | 3 | Módem satelital de ráfaga corta | Iridium Edge | Iridium SBD, mensajes de hasta 340 bytes de salida y 270 de entrada, IP67, −40 a +70 °C, 9 a 32 V, 1,6 W al transmitir, conectado por RS232 | Cabina junto al equipo a bordo | 182 más 19 | CLIENTE | Soporte del fabricante contratado por 56 meses. Reposición del 10 % | Tramos de más de 80 km sin señal (restricción 4, Caso p. 23). Se vende en Chile dentro de Webfleet SAT |
 | 4 | Lector CAN sin contacto | Technoton CANCrocodile | Lee el bus a través del aislamiento sin cortar cables, salida CAN 2.0B según SAE J1939, 10 a 50 V | Cabina sobre el arnés original | 182 más 19 | CLIENTE | Soporte del fabricante contratado por 56 meses. Reposición del 10 % | No afecta la garantía del vehículo (restricción 6, Caso p. 24) |
@@ -36,7 +111,7 @@ audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. O
 | 30 | Enlace fijo de terminal | Enlace de 10 Mbit/s o más de un proveedor local | Con VPN IPsec hacia la red central de Azure | Cuatro terminales regionales | 4 | CLIENTE | Contrato de servicio por 56 meses | Actualización del equipo a bordo. Sección 4.2.8 |
 | 31 | Distribución de contenidos y protección perimetral | Azure Front Door Premium | Cortafuegos de aplicación y protección volumétrica | N | 1 perfil | CLIENTE, suscripción a su nombre | Servicio administrado | Punto de presencia global. Latencia 50 ms, criticidad crítica, requiere enlace |
 | 32 | Puerta de enlace de servicios | Azure API Management Premium | Unidades en las tres zonas de Chile Central | N | 1 instancia | CLIENTE, suscripción a su nombre | Servicio administrado | Autenticación y enrutamiento centralizados. Latencia 30 ms, crítica |
-| 33 | Concentrador de dispositivos | Azure IoT Hub S1 y Device Provisioning Service | 2 unidades, 800.000 mensajes de 4 KB al día, enrolamiento X.509 | N | 2 unidades | CLIENTE, suscripción a su nombre | Servicio administrado | Reconexión de 300 camiones en 9,6 minutos (Caso, RT-03.13, p. 31) |
+| 33 | Concentrador de dispositivos | Azure IoT Hub S1 y Device Provisioning Service | 2 unidades, 800.000 mensajes de 4 KB al día, enrolamiento X.509 | N | 2 unidades | CLIENTE, suscripción a su nombre | Servicio administrado | Perfil de 300 camiones/72 h: 71.400 paquetes con presupuesto de 25 %; admisión teórica de 11,9 min. CP-PERF-02 mide confirmación completa por camión en hasta 20 min (Caso RT-03.13, p. 31). |
 | 34 | Bus de eventos | Azure Event Hubs Premium | Protocolo Kafka, réplica geográfica asíncrona con retraso máximo de 10 minutos | N | 1 unidad de procesamiento, se ajusta con la prueba de carga | CLIENTE, suscripción a su nombre | Servicio administrado | Desacopla la llegada del procesamiento. de telemetría y eventos vehiculares asíncronos |
 | 35 | Orquestador de contenedores | Azure Kubernetes Service | Nodos en las tres zonas con escalado automático | N | Clúster AKS de 6 nodos (Standard D4s v5) | CLIENTE, suscripción a su nombre | Versión con soporte, actualización programada | Aloja los servicios de negocio (ADR 01) |
 | 36 | Base transaccional | Azure Database for PostgreSQL Flexible | Alta disponibilidad entre zonas y réplica de lectura en Brazil South | N y N2 | Instancia Flexible Server GP (8 vCores, 32 GB RAM, 1 TB SSD en HA) | CLIENTE, suscripción a su nombre | Servicio administrado | Consistencia estricta. Latencia 15 ms, máxima, retención de 5 a 10 años |
@@ -65,7 +140,7 @@ audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. O
 | 59 | Nodo de terminal | Dos Karbon 430 en activo y en espera | Salidas, llegadas y verificación con copia local | GT | 4 nodos | CLIENTE | Igual a la fila 9 | 24 horas sin enlace (FEP01, Art. 16.4, p. 12). El Caso pide 12 (RT-03.10, p. 31) |
 | 60 | Lectura de portería | Minew G1 | Baliza del semirremolque que sale | GT y SB | 5 | CLIENTE | Igual a la fila 14 | Registra el semirremolque también en camiones sin equipo audIT |
 | 61 | Distribución de actualizaciones | FortiAP 234G y copia local de la imagen | Wi-Fi 6E en el patio | GT y SB | 5 | CLIENTE | Igual a la fila 13 | Restricción 5, Caso, p. 23 |
-| 62 | Búfer no volátil a bordo | eMMC del iWave G26I | 38,4 MB para 288 horas dentro de 8 GB | DB | 182 | CLIENTE | Igual a la fila 1 | Latencia inmediata, criticidad máxima. Opera sin cobertura (Caso, RT-03.10, p. 31) |
+| 62 | Búfer no volátil a bordo | eMMC del iWave G26I | Partición 64 MiB; presupuesto de 38.851.872 bytes para perfil propuesto 288 h; mínimo obligatorio 72 h. Capacidad nominal del equipo 8 GB | DB | 182 | CLIENTE | Igual a la fila 1 | Latencia inmediata, criticidad máxima. Opera sin cobertura (Caso, RT-03.10, p. 31) |
 | 63 | Motor de geocercas a bordo | Software de audIT en el G26I | 1.400 puntos de carga y descarga | DB | 182 | audIT | Actualización en terminal | Registro de llegada y salida sin intervención (Caso, RT-09.01, p. 32) |
 | 64 | Alerta de jornada a bordo | Software de audIT en el G26I | Cálculo local de la jornada acumulada | DB | 182 | audIT | Actualización en terminal | La alerta debe llegar aunque no haya enlace (criterio 28 del Caso) |
 | 65 | Identificación del conductor | Lector GAO RFID y tarjeta DESFire | Con el camión detenido | DB | 182 | CLIENTE | Igual a la fila 5 | Caso, RT-12.11, p. 32 |

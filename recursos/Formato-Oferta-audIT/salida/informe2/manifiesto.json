@@ -23,7 +23,7 @@
       "clave": "02",
       "nombre": "AUDIT-Subdocumento2.pdf",
       "folio_inicial": 1,
-      "paginas": 32,
+      "paginas": 34,
       "aux": "salida/aux/informe2/02/AUDIT-Subdocumento2.aux",
       "log": "salida/aux/informe2/02/AUDIT-Subdocumento2.log",
       "fuentes": [
@@ -52,46 +52,174 @@
       ]
     },
     {
-      "clave": "09",
-      "nombre": "AUDIT-Subdocumento9.pdf",
+      "clave": "13",
+      "nombre": "AUDIT-Subdocumento13.pdf",
       "folio_inicial": 1,
-      "paginas": 15,
-      "aux": "/home/carlosa/Documentos/Universidad/Actual/FEP/08_Post_Revision_y_Activos_Graficos/03_Auditoria_Forense_y_QA/evaluaciones/integracion_grupo_I_2026-10-07/compilacion/09/AUDIT-Subdocumento9.aux",
-      "log": "/home/carlosa/Documentos/Universidad/Actual/FEP/08_Post_Revision_y_Activos_Graficos/03_Auditoria_Forense_y_QA/evaluaciones/integracion_grupo_I_2026-10-07/compilacion/09/AUDIT-Subdocumento9.log",
+      "paginas": 26,
+      "aux": "salida/aux/informe2/13/AUDIT-Subdocumento13.aux",
+      "log": "salida/aux/informe2/13/AUDIT-Subdocumento13.log",
       "fuentes": [
         [
           "subdocumentos"
         ],
-        []
-      ]
+        [
+          "subdocumentos/13-innovaciones"
+        ]
+      ],
+      "sha256": "f0dd1983ee223b85ed09aa5ab69e61849a27b192479900853355ef1580b16dd0"
+    },
+    {
+      "clave": "13T-19",
+      "nombre": "AUDIT-Formulario-T-19.pdf",
+      "folio_inicial": 1,
+      "paginas": 12,
+      "aux": "salida/aux/informe2/13T-19/AUDIT-Formulario-T-19.aux",
+      "log": "salida/aux/informe2/13T-19/AUDIT-Formulario-T-19.log",
+      "fuentes": [
+        [
+          "subdocumentos"
+        ],
+        [
+          "subdocumentos/13-innovaciones"
+        ]
+      ],
+      "sha256": "1b021138b95f1a2085835b568f111f0f2ebdb52736291fd811033081e9054d1b"
+    },
+    {
+      "clave": "03",
+      "nombre": "AUDIT-Subdocumento3.pdf",
+      "folio_inicial": 1,
+      "paginas": 34,
+      "aux": "salida/aux/informe2/03/AUDIT-Subdocumento3.aux",
+      "log": "salida/aux/informe2/03/AUDIT-Subdocumento3.log",
+      "fuentes": [
+        [
+          "subdocumentos"
+        ],
+        [
+          "subdocumentos/03-solucion"
+        ]
+      ],
+      "sha256": "7e71a76d0fea86c24fbec64136dc7c94951e3bb277a4de5a210f317e69519782"
+    },
+    {
+      "clave": "03T-12",
+      "nombre": "AUDIT-Formulario-T-12.pdf",
+      "folio_inicial": 1,
+      "paginas": 17,
+      "aux": "salida/aux/informe2/03T-12/AUDIT-Formulario-T-12.aux",
+      "log": "salida/aux/informe2/03T-12/AUDIT-Formulario-T-12.log",
+      "fuentes": [
+        [
+          "subdocumentos"
+        ],
+        [
+          "subdocumentos/03-solucion"
+        ]
+      ],
+      "sha256": "ff9fea781084d106a60478e65628371fad81b01fc5b85986d5c168e810918706"
+    },
+    {
+      "clave": "04",
+      "nombre": "AUDIT-Subdocumento4.pdf",
+      "folio_inicial": 1,
+      "paginas": 70,
+      "aux": "salida/aux/informe2/04/AUDIT-Subdocumento4.aux",
+      "log": "salida/aux/informe2/04/AUDIT-Subdocumento4.log",
+      "fuentes": [
+        [
+          "subdocumentos"
+        ],
+        [
+          "subdocumentos/04-arquitectura"
+        ]
+      ],
+      "sha256": "877d6ee21e8a4a5f6a41e7699028ad1692017cd2c5500404fb5ef1912f50adb6"
+    },
+    {
+      "clave": "05",
+      "nombre": "AUDIT-Subdocumento5.pdf",
+      "folio_inicial": 1,
+      "paginas": 24,
+      "aux": "salida/aux/informe2/05/AUDIT-Subdocumento5.aux",
+      "log": "salida/aux/informe2/05/AUDIT-Subdocumento5.log",
+      "fuentes": [
+        [
+          "subdocumentos"
+        ],
+        [
+          "subdocumentos/05-datos"
+        ]
+      ],
+      "sha256": "9a255facb061aa39030cb3f5a14b1a71169c5c11171fce86a3bcafe2134d83bb"
+    },
+    {
+      "clave": "09",
+      "nombre": "AUDIT-Subdocumento9.pdf",
+      "folio_inicial": 1,
+      "paginas": 16,
+      "aux": "salida/aux/informe2/09/AUDIT-Subdocumento9.aux",
+      "log": "salida/aux/informe2/09/AUDIT-Subdocumento9.log",
+      "fuentes": [
+        [
+          "subdocumentos"
+        ],
+        [
+          "subdocumentos/09-calidad"
+        ]
+      ],
+      "sha256": "8a6378a03f0e84812f183a344a80cbfab53e67d4db38fcd05146b7b739bd7fab"
+    },
+    {
+      "clave": "04T-11",
+      "nombre": "AUDIT-Formulario-T-11.pdf",
+      "folio_inicial": 1,
+      "paginas": 15,
+      "aux": "salida/aux/informe2/04T-11/AUDIT-Formulario-T-11.aux",
+      "log": "salida/aux/informe2/04T-11/AUDIT-Formulario-T-11.log",
+      "fuentes": [
+        [
+          "subdocumentos"
+        ],
+        [
+          "subdocumentos/04-arquitectura"
+        ]
+      ],
+      "sha256": "a99ab61ccf75eff63fd44d18b8a96e5566dd97a8f43e665e22cd4eeb5326dcee"
     },
     {
       "clave": "09T-13",
       "nombre": "AUDIT-Formulario-T-13.pdf",
       "folio_inicial": 1,
       "paginas": 6,
-      "aux": "/home/carlosa/Documentos/Universidad/Actual/FEP/08_Post_Revision_y_Activos_Graficos/03_Auditoria_Forense_y_QA/evaluaciones/integracion_grupo_I_2026-10-07/compilacion/09T-13/AUDIT-Formulario-T-13.aux",
-      "log": "/home/carlosa/Documentos/Universidad/Actual/FEP/08_Post_Revision_y_Activos_Graficos/03_Auditoria_Forense_y_QA/evaluaciones/integracion_grupo_I_2026-10-07/compilacion/09T-13/AUDIT-Formulario-T-13.log",
+      "aux": "salida/aux/informe2/09T-13/AUDIT-Formulario-T-13.aux",
+      "log": "salida/aux/informe2/09T-13/AUDIT-Formulario-T-13.log",
       "fuentes": [
         [
           "subdocumentos"
         ],
-        []
-      ]
+        [
+          "subdocumentos/09-calidad"
+        ]
+      ],
+      "sha256": "8e121a4b6f81b432e9794fb917df85e5080dc7cf3f71a79468fa8a9d4be4d3fe"
     },
     {
       "clave": "09T-17",
       "nombre": "AUDIT-Formulario-T-17.pdf",
       "folio_inicial": 1,
-      "paginas": 90,
-      "aux": "/home/carlosa/Documentos/Universidad/Actual/FEP/08_Post_Revision_y_Activos_Graficos/03_Auditoria_Forense_y_QA/evaluaciones/integracion_grupo_I_2026-10-07/compilacion/09T-17/AUDIT-Formulario-T-17.aux",
-      "log": "/home/carlosa/Documentos/Universidad/Actual/FEP/08_Post_Revision_y_Activos_Graficos/03_Auditoria_Forense_y_QA/evaluaciones/integracion_grupo_I_2026-10-07/compilacion/09T-17/AUDIT-Formulario-T-17.log",
+      "paginas": 111,
+      "aux": "salida/aux/informe2/09T-17/AUDIT-Formulario-T-17.aux",
+      "log": "salida/aux/informe2/09T-17/AUDIT-Formulario-T-17.log",
       "fuentes": [
         [
           "subdocumentos"
         ],
-        []
-      ]
+        [
+          "subdocumentos/09-calidad"
+        ]
+      ],
+      "sha256": "4ebbf409aa4d952828c7942aba8782faa078068f602f58fa9007de2d0f21d251"
     },
     {
       "clave": "01A",

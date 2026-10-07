@@ -10,22 +10,25 @@ El FEP01, Artículo 46, p. 28 pide resolver en cada informe las observaciones de
 
 | N.º | Observación | Respuesta | Sección modificada |
 |---|---|---|---|
+| 01 | Formulario T-12 ausente pese a que el Subdocumento 3 pág. 6 indica que acompaña la oferta técnica. | Se acepta. Existe T-12 en archivo propio con 42 requerimientos: 28 funcionales y 14 no funcionales. Se cotejaron sus identificadores, campos, contextos, paquetes EDT y referencias con los 120 casos de T-17; la matriz de pruebas conserva cobertura diseñada y no declara ejecución. | S3 3.2.8; T-12; T-17, matriz de requisitos, casos y alcance de verificación. |
+| 12 | Nombres de integrantes y equipos internos de trabajo dentro de la oferta técnica en S13 y S3. | Se acepta. El cotejo de las fuentes de S1/S2/S9 y del cuerpo de S3/T-12 verifica voz corporativa sin delegación interna. Las declaraciones de uso de IA se conservan como obligación del formato y su revisión humana permanece pendiente; no se acredita purga integral de S13 ni de otros capítulos. | S1/S2/S9; cuerpo S3/T-12; declaraciones de uso de IA. |
 | 37 | No existe esquema de solución, cero figuras en 18 páginas | Se acepta. La sección 3.3 dibuja el esquema conceptual con usuarios, canales, los seis contextos, integración, borde y sistemas que se conservan, y lo recorre por partes. El capítulo trae cinco figuras propias, cada una citada antes y explicada después | 3.1, 3.2.8, 3.3 y 3.4.2 |
-| 38 | No hay modelo conceptual, componentes ni trazabilidad de requerimiento a componente | Se acepta. Cada contexto se describe con la decisión que toma. El Formulario T-12 asigna cada uno de los 42 requerimientos a un contexto, un paquete de trabajo y sus casos de prueba, y una figura sigue un requerimiento de extremo a extremo | 3.2.8, 3.3.1 y Formulario T-12 |
+| 38 | No hay modelo conceptual, componentes ni trazabilidad de requerimiento a componente | Se acepta. S3 describe seis contextos y T-12 vincula los 42 requerimientos con contexto, paquete EDT y casos. T-17 incorpora variantes específicas para esas referencias, distinguiendo el ensayo unitario de la verificación de integración, sistema y hardware. No se declara ejecución ni cobertura de los 54 paquetes por el solo conteo. | S3 3.2.8 y 3.3.1; T-12; T-17, matriz de trazabilidad. |
 | 39 | El capítulo abre sin explicar su objetivo ni su relación con el Subdocumento 2 | Se acepta. El capítulo abre con su resumen y una introducción que lo conecta con los subdocumentos 2, 4, 7 y 9 y con el Formulario T-12. La sección 3.4.1 cruza cada problema del Capítulo 2 con su capacidad, sus requerimientos y su criterio | Introducción y 3.4.1 |
 | 40 | La sección 1.4 remite a una sección 4 que no existe en el documento | Se acepta. Las referencias a otros subdocumentos se generan desde sus etiquetas y apuntan a la sección exacta del Subdocumento 4 | Subdocumento 3 completo |
 | 41 | La Etapa 1 es una tabla de capacidades sin identificador y la Etapa 2 un párrafo, sin dependencias, hitos externos ni capacidad de absorción del mandante | Se acepta. Diez capacidades E1-01 a E1-10 y seis E2-01 a E2-06 con contexto, dependencia e hito. El reparto se justifica por dependencias, riesgo, hitos del numeral 13.2, incluido el de 2029, y la capacidad de absorción de un área de tecnología de nueve personas | 3.2.1, 3.2.2 y 3.2.3 |
 | 42 | Exclusiones copiadas en parte, supuestos sin lista y restricciones no recogidas | Se acepta. Las diez exclusiones del Capítulo 11 con la dependencia que generan, ocho supuestos del alcance con su efecto y su validación, y las catorce restricciones agrupadas por lo que condicionan | 3.2.5, 3.2.6 y 3.2.7 |
-| 43 | La decisión sobre el sistema de gestión de 2013 no se menciona, y el Capítulo 5 del Caso la llama la decisión de arquitectura más importante | Se acepta. Se decide la sustitución función por función detrás de una capa anticorrupción, con retiro en el mes 21, frente a tres alternativas evaluadas por riesgo de corte, conocimiento del viaje real y costo recurrente, con el calendario de retiro de cada función | 3.2.4 |
+| 43 | La decisión sobre el sistema de gestión de 2013 no se menciona, y el Capítulo 5 del Caso la llama la decisión de arquitectura más importante | Se acepta. S3 decide sustitución por funciones detrás de capa anticorrupción: asignación, seguimiento y liquidación en M16, órdenes y tarifas cliente en M21, conservación de solo lectura hasta M24. El ERP contable permanece como único emisor tributario; T-17 incorpora convivencia y reintentos sin duplicación. | S3 3.2.4; T-17 CP-INT-05 y CP-SYS-05, variante RNF-011. |
 | 44 | Sin visión de arquitectura empresarial ni análisis de interoperabilidad, escalabilidad, seguridad o desempeño | Se acepta. El esquema parte de las capacidades del negocio y sus seis contextos, y analiza cinco atributos de calidad con el dato del Caso que dimensiona cada uno | 3.3 y 3.3.3 |
 | 45 | Se declaran 42 requisitos, se muestran 12 y el Formulario T-12 no se entregó | Se acepta. El Formulario T-12 va en archivo propio con los 42 requerimientos, y el capítulo resume su distribución por contexto, etapa y prioridad | 3.2.8 y Formulario T-12 |
 | 46 | Los requisitos mostrados no tienen actor, precondición, resultado esperado ni prioridad, que exige el numeral 17.1 del Caso | Se acepta. Cada requerimiento funcional trae actor, precondición, resultado esperado, prioridad y origen, y cada no funcional su categoría, umbral, método de verificación y a quién es exigible | Formulario T-12 |
 | 47 | No hay registro de reglas de negocio: cómputo de jornada, excepción al bloqueo, tiempo libre de espera ni asignación del retorno | Se acepta. Doce reglas de negocio con su fuente y quién puede cambiarlas, entre ellas el cómputo de jornada, la excepción al bloqueo, el tiempo libre de espera, la base de la liquidación y la asignación del retorno | 3.2.9 y Formulario T-12 |
-| 48 | No hay matriz de trazabilidad de origen a requerimiento, componente y prueba | Se acepta. Cada fila del Formulario T-12 une origen, requerimiento, contexto, paquete de trabajo y casos de prueba, y la tabla de criterios cierra la cadena con el criterio de aceptación | 3.2.8 y Formulario T-12 |
+| 48 | No hay matriz de trazabilidad de origen a requerimiento, componente y prueba | Se acepta. Se cotejaron los 42 códigos y todas sus referencias a casos existentes. La matriz de T-17 registra paquetes EDT y comprobaciones diseñadas, con límites de simulación y homologación. La correspondencia documental no acredita pruebas ejecutadas ni aprobación contractual. | S3 3.2.8; T-12; T-17, matriz de requisitos y variantes por caso. |
 | 49 | No existen implementación, implantación ni operación: ingeniería de software, integración continua, migración, corte, reversión, observabilidad ni recuperación | Se acepta y se aclara. Se incorporan las tres secciones con el ciclo de desarrollo, el montaje camión por camión, la prueba en paralelo del bloqueo, la reversión y la operación 24x7. Se aclara que el Formulario T-7 (p. 57) no las asigna al Subdocumento 3, y que su detalle está en los subdocumentos 6 y 7, que esta instancia entrega | 3.4.4, 3.4.5 y 3.4.6 |
-| 50 | La modalidad de datos promete jornada acreditada con un equipo que no identifica al conductor, cuando su evidencia real es la atestación del transportista | Se acepta. La tabla de modalidades declara el nivel real. La modalidad de datos aporta el reposo del camión y la atestación firmada, y acredita la jornada con marca, no con evidencia instrumental | 3.4.3 |
+| 50 | La modalidad de datos promete jornada acreditada con un equipo que no identifica al conductor, cuando su evidencia real es la atestación del transportista | Se acepta. S3 distingue fuente de posición y prueba de jornada; T-17 corrige la atribución de atestación a una API GPS. La atestación debe ser firmada por el transportista y genera marca; ausencia de fuente e incumplimiento legal bloquean. La modalidad de datos no identifica por sí sola al conductor. | S3 3.3.2 y 3.4.3; T-17 CP-INT-07, CP-SYS-05 y CP-UAT-09. |
 | 51 | Se dice que los 29 criterios están comprometidos y sólo ocho tienen meta, hito y medición | Se acepta. Los 29 criterios tienen meta, mes y medición en el Formulario T-12, clasificados en resultado del Caso, meta propuesta por audIT y parámetro fijado en la Etapa 1 | 3.2.10 y Formulario T-12 |
 | 52 | Códigos sin definir, como la decisión D-02 y el supuesto S-09 | Se acepta. Cada código se define en su primera mención y en el glosario del Formulario T-12. Las decisiones del numeral 16.1 se citan como DP para no confundirlas con las decisiones propias de la oferta | Subdocumento 3 y Formulario T-12 |
+| 76 | La restricción 8 fija al sistema contable como único emisor del DET y la consulta citada (15) no aparece en tabla de S3. | Se acepta y se aclara. S3/T-12 mantiene el ERP contable como único emisor y prevé DET anticipado desde la orden o solicitud por enlace satelital con folio de vuelta. T-17 incorpora ambas variantes, idempotencia, acceso local antes del movimiento y bloqueo ante documento no conforme. La prueba diseñada no acredita interfaz homologada ni conformidad tributaria obtenida. | S3 3.4.2; T-12 RF-013/RF-014/RNF-006; T-17 CP-UNIT-21, CP-INT-11/12, CP-SYS-11 y CP-HW-11. |
 
 ## 3 Esquema de solución y alcance
 
@@ -76,6 +79,8 @@ por contrato y por incentivo, nunca por orden (Caso, capítulo 10, restricción 
 operación desconectada: el registro del viaje vive a bordo del camión durante los tramos sin señal y se
 consolida en la nube al reconectarse, de modo que la cobertura móvil no condiciona la prueba.
 
+La necesidad de compatibilizar fuentes heterogéneas y autonomía del transportista, diagnosticada en la sección 2.4 del Subdocumento 2, se atiende mediante ingesta por cada plataforma y homologación progresiva de compatibilidad. La adhesión se apoya en el expediente verificable y la transparencia de liquidaciones como incentivos, sin imponer el reemplazo de sistemas de terceros. Estos mecanismos son decisiones de solución: su cobertura depende de validar acceso, permisos y aptitud de los equipos, conforme a SUP-01 y SUP-02 del diagnóstico y al estándar de homologación recogido en la sección 3.2.5.
+
 El contrato dura 56 meses y su cronograma es el del FEP01, Artículo 17.1, p. 12, sin alteración. La Etapa 1 se
 desarrolla entre los meses 1 y 12, convive con la operación vigente en marcha blanca entre los meses 13
 y 15 y pasa a producción en el mes 16. La Etapa 2 se desarrolla entre los meses 13 y 18, en paralelo
@@ -91,51 +96,11 @@ sección 3.2.6), la Etapa 1 pasa a producción en mayo de 2028, después de la t
 Etapa 2 en octubre de 2028, después de Fiestas Patrias y antes del congelamiento siguiente. La
 Figura 3.1 muestra los primeros 24 meses sobre el calendario.
 
-\begin{figuraNativa}[!htbp]{Ciclo contractual de los primeros 24 meses sobre el calendario, con inicio en febrero de 2027. En gris, la temporada de fruta de diciembre a abril}{3-ciclo}
-\begin{tikzpicture}[x=4.85mm,y=6.4mm,
-  lab/.style={anchor=east,font=\sffamily\fontsize{9.5bp}{11bp}\selectfont\color{audit-tinta}},
-  cel/.style={font=\sffamily\fontsize{9.5bp}{11bp}\selectfont\color{audit-tinta}},
-  bar/.style={draw=audit-marino,line width=0.5pt,minimum height=5mm,inner sep=0pt,
-              font=\sffamily\fontsize{9.5bp}{11bp}\selectfont}]
+**Figura 3.1. Ciclo contractual de los primeros 24 meses sobre el calendario, con inicio en febrero de 2027. En gris, la temporada de fruta de diciembre a abril**
 
-  \fill[audit-gris-claro] (0,1.6) rectangle (3,-4.9);
-  \fill[audit-gris-claro] (10,1.6) rectangle (15,-4.9);
-  \fill[audit-gris-claro] (22,1.6) rectangle (24,-4.9);
+Fuente: elaboración propia sobre el Artículo 17 de las Bases Administrativas y las restricciones estacionales del Caso, capítulos 4 y 10. Febrero de 2027 es el supuesto de inicio declarado en esta propuesta.
 
-  \node[lab] at (-0.2,1.15) {Año};
-  \draw[audit-filete] (0,0.8) -- (24,0.8);
-  \node[cel] at (5.5,1.15) {2027};
-  \node[cel] at (17,1.15) {2028};
-  \node[cel] at (23.5,1.15) {2029};
-  \draw[audit-filete] (11,1.6) -- (11,0.8);
-  \draw[audit-filete] (23,1.6) -- (23,0.8);
-
-  \node[lab] at (-0.2,0.35) {Mes calendario};
-  \node[lab] at (-0.2,-0.45) {Mes del contrato};
-  \foreach \m/\c in {1/F,2/M,3/A,4/M,5/J,6/J,7/A,8/S,9/O,10/N,11/D,12/E,
-                     13/F,14/M,15/A,16/M,17/J,18/J,19/A,20/S,21/O,22/N,23/D,24/E}{
-    \node[cel] at (\m-0.5,0.35) {\c};
-    \node[cel] at (\m-0.5,-0.45) {\m};
-  }
-  \draw[audit-filete] (0,-0.85) -- (24,-0.85);
-
-  \node[lab] at (-0.2,-1.55) {Etapa 1};
-  \node[bar,fill=white,minimum width=60mm] at (6,-1.55) {Desarrollo, meses 1 a 12};
-  \node[bar,fill=audit-turquesa!35,minimum width=15mm] at (13.5,-1.55) {MB};
-  \node[bar,fill=audit-marino,text=white,minimum width=5mm] at (15.5,-1.55) {P};
-
-  \node[lab] at (-0.2,-2.75) {Etapa 2};
-  \node[bar,fill=white,minimum width=30mm] at (15,-2.75) {Desarrollo, 13 a 18};
-  \node[bar,fill=audit-turquesa!35,minimum width=10mm] at (19,-2.75) {MB};
-  \node[bar,fill=audit-marino,text=white,minimum width=5mm] at (20.5,-2.75) {P};
-
-  \node[lab] at (-0.2,-3.95) {Operación};
-  \node[bar,fill=audit-gris-claro,minimum width=20mm] at (22,-3.95) {Mes 21 a 56};
-
-  \node[cel,anchor=west,text width=114mm,align=left] at (0,-5.6)
-    {MB marcha blanca. P paso a producción: mayo de 2028 (mes 16) y octubre de 2028 (mes 21). La operación termina en septiembre de 2031 (mes 56).};
-\end{tikzpicture}
-\end{figuraNativa}
+[Consultar diagrama en el PDF](AUDIT-Subdocumento3.pdf).
 
 La figura deja a la vista la consecuencia que el cronograma obligatorio impone y que el plan no puede
 eludir: la marcha blanca de la Etapa 1 cae entera en la temporada de fruta, entre febrero y abril de
@@ -465,25 +430,11 @@ La Figura 3.2 sigue un requerimiento de extremo a extremo para mostrar cómo se 
 el Caso, numeral 17.1, p. 38 exige: origen, requerimiento, componente, paquete de trabajo, prueba y
 criterio de aceptación.
 
-\begin{figuraNativa}[!htbp]{Cadena de trazabilidad del requerimiento RF-003, jornada previa del conductor externo}{3-traza}
-\begin{tikzpicture}[
-  caja/.style={draw=audit-marino,line width=0.5pt,fill=white,text width=40mm,minimum height=15mm,
-               align=left,inner sep=2.2mm,font=\sffamily\fontsize{9.5bp}{11.5bp}\selectfont\color{audit-tinta}},
-  rot/.style={font=\sffamily\bfseries\fontsize{9.5bp}{11.5bp}\selectfont\color{audit-marino}},
-  fl/.style={-stealth,line width=0.6pt,draw=audit-marino}]
-  \node[caja] (o) at (0,0)     {{\color{audit-marino}\bfseries Origen} Caso 4.3, p. 9. Decisión 1 del 16.1. Restricciones 2 y 7};
-  \node[caja] (r) at (49mm,0)  {{\color{audit-marino}\bfseries Requerimiento} RF-003. Jornada previa disponible al asignar};
-  \node[caja] (c) at (98mm,0)  {{\color{audit-marino}\bfseries Componente} Personas y cumplimiento, expediente de jornada};
-  \node[caja] (e) at (98mm,-24mm) {{\color{audit-marino}\bfseries Paquete de trabajo} EDT 5.1 y EDT 9.2, adhesión};
-  \node[caja] (p) at (49mm,-24mm) {{\color{audit-marino}\bfseries Prueba} CP-INT-03 y CP-SYS-05};
-  \node[caja] (a) at (0,-24mm) {{\color{audit-marino}\bfseries Criterio de aceptación} Criterio 3, desde el mes 16};
-  \draw[fl] (o) -- (r);
-  \draw[fl] (r) -- (c);
-  \draw[fl] (c) -- (e);
-  \draw[fl] (e) -- (p);
-  \draw[fl] (p) -- (a);
-\end{tikzpicture}
-\end{figuraNativa}
+**Figura 3.2. Cadena de trazabilidad del requerimiento RF-003, jornada previa del conductor externo**
+
+Fuente: elaboración propia sobre el Caso, numeral 4.3 y capítulo 18, y la trazabilidad RF-003 del Formulario T-12.
+
+[Consultar diagrama en el PDF](AUDIT-Subdocumento3.pdf).
 
 La cadena se lee en el sentido de las flechas. Arriba, el requerimiento nace de un párrafo del Caso y de
 una de las decisiones que el Caso deja abiertas, y se asigna a un único contexto de la arquitectura. Abajo, el contexto se
@@ -585,59 +536,11 @@ parte y con qué sistemas existentes convive. Es el modelo conceptual que la arq
 Subdocumento 4 desarrolla capa por capa, y usa sus mismos nombres. La Figura 3.3 presenta la vista
 general y las secciones siguientes la recorren por partes.
 
-\begin{figuraNativa}[!htbp]{Esquema conceptual de la solución: usuarios, canales, los seis contextos, integración, borde y sistemas que se conservan}{3-esquema}
-\begin{tikzpicture}[
-  t/.style={font=\sffamily\fontsize{9.5bp}{11.5bp}\selectfont\color{audit-tinta}},
-  usr/.style={t,draw=audit-secundario,line width=0.5pt,fill=white,text width=24mm,minimum height=11mm,align=center,inner sep=1.5mm},
-  ctx/.style={t,draw=audit-marino,line width=0.7pt,fill=white,text width=40mm,minimum height=12mm,align=center,inner sep=1.5mm},
-  ban/.style={t,draw=audit-marino,line width=0.5pt,fill=audit-gris-claro,text width=142mm,minimum height=8mm,align=center,inner sep=1.5mm},
-  bor/.style={t,draw=audit-turquesa,line width=0.7pt,fill=white,text width=40mm,minimum height=14mm,align=center,inner sep=1.5mm},
-  ext/.style={t,draw=audit-secundario,dashed,line width=0.5pt,fill=white,text width=40mm,minimum height=9mm,align=center,inner sep=1.2mm},
-  rot/.style={font=\sffamily\bfseries\fontsize{9.5bp}{11.5bp}\selectfont\color{audit-marino},anchor=west},
-  fl/.style={stealth-stealth,line width=0.6pt,draw=audit-marino}]
+**Figura 3.3. Esquema conceptual de la solución: usuarios, canales, los seis contextos, integración, borde y sistemas que se conservan**
 
-  \node[rot] at (-72mm,62mm) {Usuarios};
-  \node[usr] (u1) at (-58mm,52mm) {Torre de programación 24x7};
-  \node[usr] (u2) at (-29mm,52mm) {454 conductores};
-  \node[usr] (u3) at (0mm,52mm)   {148 transportistas};
-  \node[usr] (u4) at (29mm,52mm)  {84 clientes};
-  \node[usr] (u5) at (58mm,52mm)  {Terminales y talleres};
+Fuente: elaboración propia sobre las necesidades y restricciones del Caso, capítulos 4, 5 y 10, y los contextos de la sección 4.1 del Subdocumento 4.
 
-  \node[ban] (can) at (0,37mm) {Canales: portal web, aplicación móvil en cuatro perfiles y pantalla de cabina sin interacción en marcha};
-
-  \node[rot] at (-72mm,26mm) {Servicios de negocio, seis contextos};
-  \node[ctx] (c1) at (-48mm,15mm) {Planificación y tráfico\{\color{audit-secundario}qué carga, a quién}};
-  \node[ctx] (c2) at (0mm,15mm)   {Flota y activos\{\color{audit-secundario}si el equipo sale}};
-  \node[ctx] (c3) at (48mm,15mm)  {Personas y cumplimiento\{\color{audit-secundario}si la persona conduce}};
-  \node[ctx] (c4) at (-48mm,-1mm) {Telemetría y geocercas\{\color{audit-secundario}dónde está, cuándo llegó}};
-  \node[ctx] (c5) at (0mm,-1mm)   {Operación de fletes\{\color{audit-secundario}el viaje que ocurrió}};
-  \node[ctx] (c6) at (48mm,-1mm)  {Liquidación y costeo\{\color{audit-secundario}cuánto costó, a quién se paga}};
-
-  \node[ban] (int) at (0,-17mm) {Integración y eventos, con capa anticorrupción frente a cada sistema existente};
-  \node[ban] (dat) at (0,-28mm) {Datos: transaccional, series de tiempo, evidencia inmutable y analítica};
-
-  \node[rot] at (-72mm,-39mm) {Borde, sin depender del enlace};
-  \node[bor] (b1) at (-48mm,-51mm) {182 equipos audIT a bordo, 72 horas sin cobertura};
-  \node[bor] (b2) at (0mm,-51mm)   {192 equipos de terceros, leídos vía su plataforma};
-  \node[bor] (b3) at (48mm,-51mm)  {San Bernardo y cuatro gabinetes de terminal};
-
-  \node[rot] at (-72mm,-63mm) {Sistemas que se conservan o se retiran};
-  \node[ext] (s1) at (-48mm,-72mm) {Sistema contable, único emisor};
-  \node[ext] (s2) at (0mm,-72mm)   {Sistema de 2013, retiro en el mes 21};
-  \node[ext] (s3) at (48mm,-72mm)  {Taller 2017, combustible y peaje};
-  \node[ext] (s4) at (-24mm,-83mm) {Tres plataformas de posicionamiento};
-  \node[ext] (s5) at (24mm,-83mm)  {Telemetría de fábrica de 61 tractocamiones};
-
-  \foreach \u in {u1,u2,u3,u4,u5}{\draw[fl] (\u.south) -- (\u.south |- can.north);}
-  \draw[fl] (can.south) -- (c2.north);
-  \draw[fl] (int.north -| c4.south) -- (c4.south);
-  \draw[fl] (int.north -| c5.south) -- (c5.south);
-  \draw[fl] (int.north -| c6.south) -- (c6.south);
-  \draw[fl] (dat.south -| b1.north) -- (b1.north);
-  \draw[fl] (dat.south -| b2.north) -- (b2.north);
-  \draw[fl] (dat.south -| b3.north) -- (b3.north);
-\end{tikzpicture}
-\end{figuraNativa}
+[Consultar diagrama en el PDF](AUDIT-Subdocumento3.pdf).
 
 La figura se lee de arriba hacia abajo. Arriba están los cinco grupos de usuarios con su volumen. Los
 conductores y los transportistas son la mayoría y no son trabajadores de la compañía, y por eso su canal
@@ -673,28 +576,11 @@ la compañía. El mandante no necesita saber dónde estuvo ni para quién manej�
 asignar, apto o no apto, y poder acreditar después que lo verificó. La Figura 3.4 muestra las
 seis fuentes ordenadas por su valor probatorio y cómo se convierten en uno de tres resultados.
 
-\begin{figuraNativa}[!htbp]{Cascada de fuentes de jornada y veredicto de la asignación}{3-cascada}
-\begin{tikzpicture}[
-  t/.style={font=\sffamily\fontsize{9.5bp}{11.5bp}\selectfont\color{audit-tinta}},
-  niv/.style={t,draw=audit-marino,line width=0.5pt,text width=62mm,minimum height=9mm,align=left,inner sep=1.8mm},
-  res/.style={t,draw=audit-marino,line width=0.7pt,text width=52mm,minimum height=11mm,align=left,inner sep=2mm},
-  fl/.style={-stealth,line width=0.6pt,draw=audit-marino}]
-  \node[niv,fill=audit-gris-claro] (n1) at (0,0)      {Nivel 1. Tacógrafo digital descargado};
-  \node[niv,fill=audit-gris-claro] (n2) at (0,-11mm)  {Nivel 2. Equipo a bordo con conductor identificado};
-  \node[niv,fill=audit-gris-claro] (n3) at (0,-22mm)  {Nivel 3. Telemetría de fábrica, sólo lectura};
-  \node[niv,fill=audit-gris-claro] (n4) at (0,-33mm)  {Nivel 4. Reposo del camión, sin coordenadas};
-  \node[niv,fill=white] (n5) at (0,-46mm)  {Nivel 5. Atestación firmada del transportista};
-  \node[niv,fill=white,draw=audit-secundario,dashed] (n6) at (0,-59mm) {Ninguna de las fuentes anteriores};
-  \node[niv,fill=white,draw=audit-secundario,dashed] (n0) at (0,-74mm) {Nivel 0. Registro voluntario del conductor: beneficio, nunca requisito ni veredicto};
-  \node[res,fill=audit-turquesa!20] (r1) at (78mm,-16.5mm) {Asigna};
-  \node[res,fill=white] (r2) at (78mm,-46mm) {Asigna con marca y responsabilidad registrada del transportista};
-  \node[res,fill=audit-gris-claro] (r3) at (78mm,-59mm) {Bloquea. Excepción sólo según RN-04};
-  \draw[audit-marino,line width=0.6pt] ((n1.east)+(1mm,0)) -- ++(3mm,0) -- ((n4.east)+(4mm,0)) -- ((n4.east)+(1mm,0));
-  \draw[fl] ($(n1.east)!0.5!(n4.east)+(4mm,0)$) -- (r1.west);
-  \draw[fl] (n5.east) -- (r2.west);
-  \draw[fl] (n6.east) -- (r3.west);
-\end{tikzpicture}
-\end{figuraNativa}
+**Figura 3.4. Cascada de fuentes de jornada y veredicto de la asignación**
+
+Fuente: elaboración propia sobre el Caso, numeral 4.3, restricciones de jornada del capítulo 10 y criterio 2 del capítulo 18. Los niveles probatorios son decisiones de esta propuesta.
+
+[Consultar diagrama en el PDF](AUDIT-Subdocumento3.pdf).
 
 La figura se recorre de arriba hacia abajo y de izquierda a derecha. Los niveles 1 a 4 son evidencia
 instrumental: un tacógrafo descargado, el equipo a bordo que identifica al conductor con su tarjeta, la
@@ -773,28 +659,11 @@ no puede resolverse antes.
 Un viaje recorre los seis contextos en ocho pasos. La Figura 3.5 los muestra con el contexto que
 actúa en cada uno y el umbral que lo gobierna.
 
-\begin{figuraNativa}[!htbp]{Ocho pasos de un viaje con el contexto que actúa y su umbral}{3-viaje}
-\begin{tikzpicture}[
-  t/.style={font=\sffamily\fontsize{9.5bp}{11.5bp}\selectfont\color{audit-tinta}},
-  paso/.style={t,draw=audit-marino,line width=0.6pt,fill=white,text width=31mm,minimum height=27mm,align=left,inner sep=2mm,anchor=north},
-  fl/.style={-stealth,line width=0.6pt,draw=audit-marino}]
-  \node[paso] (p1) at (0,0)     {{\color{audit-marino}\bfseries 1. Orden} Planificación y tráfico. Desde el sistema de 2013 hasta el mes 21};
-  \node[paso] (p2) at (37mm,0)  {{\color{audit-marino}\bfseries 2. Asignación} Verificación bloqueante con Personas y Flota. 30 s};
-  \node[paso] (p3) at (74mm,0)  {{\color{audit-marino}\bfseries 3. Documento} Operación de fletes pide, el sistema contable emite. 90 s};
-  \node[paso] (p4) at (111mm,0) {{\color{audit-marino}\bfseries 4. En ruta} Telemetría. Posición en 2 min, 72 h sin señal};
-  \node[paso] (p8) at (0,-33mm)     {{\color{audit-marino}\bfseries 8. Liquidación} Liquidación y costeo. Mensual, un día hábil};
-  \node[paso] (p7) at (37mm,-33mm)  {{\color{audit-marino}\bfseries 7. Costo} Liquidación y costeo. 24 h tras el cierre};
-  \node[paso] (p6) at (74mm,-33mm)  {{\color{audit-marino}\bfseries 6. Conformidad} Operación de fletes. Firma del destinatario, mismo día};
-  \node[paso] (p5) at (111mm,-33mm) {{\color{audit-marino}\bfseries 5. Punto de cliente} Telemetría. Llegada y salida por geocerca};
-  \draw[fl] (p1.east) -- (p2.west);
-  \draw[fl] (p2.east) -- (p3.west);
-  \draw[fl] (p3.east) -- (p4.west);
-  \draw[fl] (p4.south) -- (p5.north);
-  \draw[fl] (p5.west) -- (p6.east);
-  \draw[fl] (p6.west) -- (p7.east);
-  \draw[fl] (p7.west) -- (p8.east);
-\end{tikzpicture}
-\end{figuraNativa}
+**Figura 3.5. Ocho pasos de un viaje con el contexto que actúa y su umbral**
+
+Fuente: elaboración propia sobre el Caso, capítulos 4 y 10, y el catálogo de requerimientos del Formulario T-12.
+
+[Consultar diagrama en el PDF](AUDIT-Subdocumento3.pdf).
 
 La fila superior es el despacho y la inferior el cierre. En el paso 1 la orden nace en Planificación y
 tráfico, que hasta el mes 21 la recibe del sistema de 2013 a través de la capa anticorrupción. En el paso
@@ -1009,4 +878,4 @@ Conforme al Comunicado 10, sección 7.2, cada sección de este subdocumento y ca
 | 3.2 | Claude Opus 5.5 en Claude Code | Redacción inicial del reparto entre etapas, la decisión sobre el sistema de 2013, exclusiones, supuestos, restricciones, catálogo, reglas y criterios, sobre las decisiones tomadas por el equipo | Alto | Medio | [nombre y cargo de quien revisó, y qué verificó] |
 | 3.3 | Claude Opus 5.5 en Claude Code | Redacción inicial del texto y diagramas escritos como código TikZ a partir del modelo de seis contextos del Subdocumento 4 | Alto | Medio | [nombre y cargo de quien revisó, y qué verificó] |
 | 3.4 | Claude Opus 5.5 en Claude Code | Redacción inicial del funcionamiento del viaje, el plan de adhesión traído del Informe 1, la implementación, la implantación y la operación | Alto | Medio | [nombre y cargo de quien revisó, y qué verificó] |
-| Formulario T-12 | Claude Opus 5.5 en Claude Code | Reescritura del catálogo de 42 requerimientos con sus campos, matriz de trazabilidad, reglas, supuestos, decisiones del numeral 16.1, criterios y consultas | Alto | Ninguno | [nombre y cargo de quien revisó, y qué verificó] |
+| Formulario T-12 | Claude Opus 5.5 en Claude Code y Codex | Reescritura del catálogo de 42 requerimientos y conciliación de RF-028 y RN-03 con las modalidades y evidencia de jornada definidas en S3 | Alto | Ninguno | Conciliación y controles documentales automatizados realizados; revisión humana final pendiente. |

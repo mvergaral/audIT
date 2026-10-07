@@ -1,0 +1,71 @@
+{
+  "grupo": "coherencia-I02-S3",
+  "instancia": "informe2",
+  "modo_folio": "subdocumento",
+  "archivos": [
+    {
+      "clave": "03",
+      "nombre": "AUDIT-Subdocumento3.pdf",
+      "folio_inicial": 1,
+      "paginas": 34,
+      "aux": "salida/aux/informe2/03/AUDIT-Subdocumento3.aux",
+      "log": "salida/aux/informe2/03/AUDIT-Subdocumento3.log",
+      "fuentes": [
+        [
+          "subdocumentos"
+        ],
+        [
+          "subdocumentos/03-solucion"
+        ]
+      ]
+    },
+    {
+      "clave": "03T-12",
+      "nombre": "AUDIT-Formulario-T-12.pdf",
+      "folio_inicial": 1,
+      "paginas": 17,
+      "aux": "salida/aux/informe2/03T-12/AUDIT-Formulario-T-12.aux",
+      "log": "salida/aux/informe2/03T-12/AUDIT-Formulario-T-12.log",
+      "fuentes": [
+        [
+          "subdocumentos"
+        ],
+        [
+          "subdocumentos/03-solucion"
+        ]
+      ]
+    },
+    {
+      "clave": "09",
+      "nombre": "AUDIT-Subdocumento9.pdf",
+      "folio_inicial": 1,
+      "paginas": 16,
+      "aux": "salida/aux/informe2/09/AUDIT-Subdocumento9.aux",
+      "log": "salida/aux/informe2/09/AUDIT-Subdocumento9.log",
+      "fuentes": [
+        [
+          "subdocumentos"
+        ],
+        [
+          "subdocumentos/09-calidad"
+        ]
+      ]
+    },
+    {
+      "clave": "09T-17",
+      "nombre": "AUDIT-Formulario-T-17.pdf",
+      "folio_inicial": 1,
+      "paginas": 111,
+      "aux": "salida/aux/informe2/09T-17/AUDIT-Formulario-T-17.aux",
+      "log": "salida/aux/informe2/09T-17/AUDIT-Formulario-T-17.log",
+      "fuentes": [
+        [
+          "subdocumentos"
+        ],
+        [
+          "subdocumentos/09-calidad"
+        ]
+      ]
+    }
+  ]
+}

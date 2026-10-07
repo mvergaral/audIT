@@ -10,34 +10,33 @@ El FEP01, Artículo 46, p. 28 pide resolver en cada informe las observaciones de
 
 | N.º | Observación | Respuesta | Sección modificada |
 |---|---|---|---|
-| 53 | El diagrama de las ocho capas no muestra interfaces y no se explica qué contiene cada capa ni cómo se conectan | Se acepta. Dos tablas declaran el contenido y los componentes de cada capa, y el texto explica que una petición atraviesa las seis capas de la pila sin acceso directo a la base de datos. Se incorpora: diagrama redibujado con las interfaces entre capas. | 4.1.3 |
-| 54 | Componentes que aparecen solo como ícono, terminal de torre y pantalla de terreno, sin decir qué equipo es, qué software ejecuta, quién lo usa ni con qué se conecta | Se acepta. La capa de presentación declara el portal, la aplicación en los cuatro perfiles de RT-17.01 del Caso y las vistas de portería y de taller. Se incorpora: explicación de cada componente, dónde corre y con qué se conecta. | 4.1.3 |
-| 55 | No hay matriz de requerimiento a componente, ningún requerimiento funcional del Subdocumento 3 se ubica en un componente | Se acepta. La trazabilidad cruza cada componente crítico entre la capa lógica, el nodo físico y el Formulario T-11. Se incorpora: matriz de requerimiento funcional del T-12 a componente. | 4.1 y 4.2.3 |
-| 56 | No se mencionan los principios SOLID, las arquitecturas de referencia se reducen a ISO 42010 y los ambientes del ciclo de desarrollo están ausentes | Se acepta. Los cinco ambientes, de desarrollo a recuperación, van cada uno en su suscripción y se levantan desde el mismo código de infraestructura. Se incorpora: principios SOLID y arquitecturas de referencia. | 4.1 y 4.2.6 |
-| 57 | El diagrama de secuencia de la asignación bloqueante está huérfano, el texto no lo cita ni lo recorre | Se acepta. El texto recorre la asignación desde la puerta de enlace hasta la persistencia, y la reconexión tras 72 horas se dimensiona tramo por tramo. Se incorpora: secuencias de emisión sin cobertura y de liquidación. | 4.1.9 y 4.2.8 |
-| 58 | Frameworks y tecnologías viven en las figuras, el texto no las decide ni las justifica | Se acepta. El catálogo de nube declara nivel, configuración y subred de cada servicio. Se incorpora: tabla de lenguajes, frameworks y middleware con versión, fin de soporte y alternativas descartadas. | 4.1.1 y 4.2.4 |
-| 59 | El modelo táctico no trae límites de contexto ni eventos, aunque la sección lo promete | Se acepta. Se incorpora: límites de contexto y eventos del modelo táctico. | 4.1.16 |
-| 60 | El estrangulamiento del sistema de 2013 no tiene registro de decisión ni compara alternativas ni fundamento económico | Se acepta. Se incorpora: registro de decisión con reemplazo completo, conservar e integrar y paquete de mercado, con su fundamento económico. | 4.1.6 |
-| 61 | El descarte de la banda ancha satelital queda registrado pero no aparece como registro de decisión | Se acepta. El equipo a bordo usa mensajería satelital Iridium de hasta 340 bytes en los tramos sin señal. Se incorpora: registro de decisión del descarte de la banda ancha satelital. | 4.1.6 y 4.2.2 |
-| 62 | Se afirma que el estilo arquitectónico se justifica con la volumetría sin justificarlo, y el numeral 2.3 de las Transversales pide comparar estilos | Se acepta. Se incorpora: comparación de estilos del numeral 2.3 transversal. | 4.1 y 4.1.1 |
-| 63 | El stack tecnológico no ha sido validado | Se acepta. La sección 4.1.1 confirma el bus y el motor de series que usa la arquitectura física y declara el retiro de Azure Cache for Redis en 2028. Se incorpora: versión, fin de soporte y prueba de concepto de cada producto. | 4.1.1 |
-| 64 | Falta el diagrama de arquitectura física, la figura son íconos y cajas sin nivel de servicio, redes virtuales, subredes, nodos, enlaces ni anchos de banda | Se acepta. Un diagrama general muestra los tres planos con sus enlaces y capacidades, y otro la región primaria con sus redes, subredes, servicios con su nivel y conexiones | 4.2 y 4.2.5 |
-| 65 | No se dice qué componentes de Azure se usan ni con qué configuración, y las figuras se contradicen entre motores de series y entre buses | Se acepta. El catálogo declara cada servicio con su nivel, configuración y subred. Las series van en PostgreSQL con TimescaleDB, en un servidor propio, y el bus es Event Hubs Premium con protocolo Kafka | 4.2.4 |
-| 66 | La sala de 26 m² se compara ítem por ítem pero falta plano, carga eléctrica y térmica | Se acepta. Se entregan el plano con las zonas del RT-06.03, el balance eléctrico y térmico con factor de potencia y PUE, y el dimensionamiento de las UPS y del grupo electrógeno | 4.3.1 |
-| 67 | Ningún diagrama se cita desde el texto | Se acepta. Cada figura se cita antes de aparecer y se explica después, en la sección que la usa | Subdocumento 4 completo |
-| 68 | La sección promete declarar cada producto con versión, fin de soporte y plan de actualización y no declara ninguno | Se acepta. El Formulario T-11 declara el ciclo de vida de cada equipo y servicio. Se incorpora: versión y fin de soporte del software. | 4.1.1 y Formulario T-11 |
-| 69 | El Anexo A no es el T-11, y el Capítulo 11 del Caso exige qué comprar, cuánto y con qué características | Se acepta. El Formulario T-11 va en archivo propio, con componente, producto, características, ubicación, cantidad, quién lo adquiere, ciclo de vida y justificación del emplazamiento | Formulario T-11 |
-| 70 | Sin cantidades, el parque oscila entre 374 y «según adhesión», y nunca se explicita que los equipos de terceros no se reemplazan | Se acepta. Las cantidades salen de las poblaciones del Caso: 182 equipos a bordo más 19 de reposición, 572 tarjetas y 210 balizas más 21. Los 192 equipos de terceros no se reemplazan, y el crecimiento a tres años va en filas aparte | 4.2.1 y Formulario T-11 |
-| 71 | Se dice que hay dieciocho componentes en la región primaria y la tabla suma veinte, y la matriz cubre 14 de los 34 | Se acepta. El conteo sale del Formulario T-11: 38 componentes, 23 de ellos en la región primaria, y la matriz de trazabilidad cruza los componentes críticos | 4.2.3 |
-| 72 | La región secundaria no tiene nombre y el Artículo 16.3 exige declararla | Se acepta. La región secundaria es Azure Brazil South, en espera, a unos 2.586 km de la primaria, con el mecanismo de réplica de cada servicio | 4.3.2 |
-| 73 | Los 8 GB del dispositivo no tienen cálculo, y las 288 horas de cierre fronterizo dan cerca de 40 MB | Se acepta. La capacidad se deriva por componente. Se requieren 2.374 MB, el búfer de 288 horas ocupa 38,4 MB y los 8 GB son la menor configuración del equipo | 4.2.2 |
-| 74 | La sincronización en 20 minutos se repite como requisito y no se dimensiona, y cientos de unidades saliendo de una sombra no caben en esa ventana | Se acepta. Trescientos camiones que salen a la vez de una sombra sincronizan 57.600 mensajes en 9,6 minutos con IoT Hub S1 de dos unidades, dentro de los 20 del RT-03.13 | 4.2.8 |
-| 75 | Faltan los eventos por segundo, el TPS del peak de asignación, el volumen transaccional anual, los datos a migrar, el ancho de banda por terminal y la mesa de ayuda | Se acepta. Se declaran los eventos por segundo, las transacciones de la asignación, el volumen transaccional anual con la evidencia almacenada y el ancho de banda de terminales y de San Bernardo. La mesa de ayuda se dimensiona en el Subdocumento 10. Se incorpora: volumen de los datos históricos a migrar. | 4.2.8 |
-| 76 | La restricción 8 fija al sistema contable como único emisor del documento electrónico y el mecanismo propuesto convierte al dispositivo en emisor | Se acepta. El sistema contable queda como único emisor y ningún equipo del Formulario T-11 emite documentos tributarios. Se incorpora: mecanismo de emisión sin cobertura. Se incorpora: aclaración sobre la numeración de la consulta citada. | 4.1 y 4.2.2 |
-| 77 | El equipo de TI de nueve personas no se menciona y el RT-03.05 se cita sin listar los servicios administrados | Se acepta. El catálogo lista los servicios administrados y los justifica con el tamaño del área de tecnología del mandante, nueve personas para cinco terminales, dos talleres y la flota | 4.2.4 |
-| 78 | Se tratan los tres proveedores de GPS y los 34 camiones sin equipo, pero no se dice qué se instala en esos 34 ni cómo conviven los dispositivos propios con los ajenos | Se acepta. Los 34 camiones de terceros sin equipo llevan el equipo audIT, igual que los 148 propios. Los 192 de terceros con equipo lo conservan, sus datos llegan por las plataformas de sus proveedores y se fija el estándar mínimo para homologarlos | 4.2 y 4.2.1 |
-| 79 | La recuperación ante desastres y la continuidad se separan con argumento sísmico, pero no se fundamenta su factibilidad | Se acepta. La recuperación usa Brazil South con réplica declarada por servicio, tres defensas para la telemetría y conmutación en cuatro pasos. La continuidad sin enlace descansa en San Bernardo, los terminales y los camiones, con cada función declarada y su procedimiento supletorio | 4.3.2 |
-| 80 | Los respaldos aparecen en una sola fila y no hay modelo Zero Trust explícito ni superficie de exposición | Se acepta. Los respaldos siguen el esquema 3-2-1-1-0 con copia inmutable fuera de sitio, y la segmentación deja las subredes de aplicación y datos sin exposición a Internet. Se incorpora: modelo Zero Trust y superficie expuesta. | 4.1, 4.2.5 y 4.2.6 |
+| 03 | El Anexo A del Subdocumento 4 no es el Formulario T-11, es una tabla de emplazamiento sin cantidades ni configuración. | Se acepta. Existe una fuente formal del T-11 con fichas de componentes, cantidades y configuración. La respuesta de almacenamiento y reconexión se reconcilia con S4; disponer del archivo no acredita por sí solo conformidad de todas las fichas. | S4, formularios/T-11.tex; dimensionamiento de S4. |
+| 53 | Diagrama de las 8 capas no muestra interfaces ni explica qué contiene cada capa ni cómo se conectan. | Se acepta. Se acoge la observación. La respuesta de trabajo propone la siguiente medida, cuya implementación no se acredita en este lote: «Se rediseña el diagrama de arquitectura lógica en capas con interfaces explícitas (REST, gRPC, Kafka, CDC Debezium) y descripción técnica componente a componente.». Su cierre requiere examen de la fuente y de la evidencia correspondiente; no se declara realizada esa revisión para capítulos ajenos al lote S1/S2/S9 y al cálculo de S4. | Sección 4.1.2 (Figura 4.1). |
+| 54 | Componentes representados solo como íconos genéricos (terminal de torre y pantalla de terreno sin especificar). | Se acepta. Se acoge la observación. La respuesta de trabajo propone la siguiente medida, cuya implementación no se acredita en este lote: «Se individualiza cada componente: sistema operativo, software ejecutado, protocolos de enlace, roles de usuario y hardware de soporte.». Su cierre requiere examen de la fuente y de la evidencia correspondiente; no se declara realizada esa revisión para capítulos ajenos al lote S1/S2/S9 y al cálculo de S4. | Sección 4.1.2. |
+| 55 | No hay matriz de requerimiento a componente; ningún RF del Subdocumento 3 se ubica en un componente. | Se acepta. T-12 asigna contexto y paquete EDT a cada uno de los 42 requerimientos, cotejados con S3. T-17 vincula esa matriz con casos y variantes verificables. No se acredita aquí la correspondencia física completa de cada componente de S4, que requiere revisión propia. | T-12, campo componente; S3 3.2.8 y 3.4.7; T-17, matriz de trazabilidad. S4 pendiente de examen integral. |
+| 56 | No se mencionan los principios SOLID, la referencia se reduce a ISO 42010 y los ambientes SDLC están ausentes. | Se acepta. Se acoge la observación. La respuesta de trabajo propone la siguiente medida, cuya implementación no se acredita en este lote: «Se fundamenta el diseño bajo principios SOLID, se estructura la vista lógica bajo ISO/IEC/IEEE 42010 y se documentan formalmente los ambientes del SDLC (Dev, QA, Staging, Producción, DR).». Su cierre requiere examen de la fuente y de la evidencia correspondiente; no se declara realizada esa revisión para capítulos ajenos al lote S1/S2/S9 y al cálculo de S4. | Sección 4.1.1 y Sección 4.1.6. |
+| 57 | Diagrama de secuencia de asignación bloqueante huérfano y faltan secuencias de reconexión, emisión y liquidación. | Se acepta. Se acoge la observación. La respuesta de trabajo propone la siguiente medida, cuya implementación no se acredita en este lote: «Se vincula el diagrama al texto analítico y se agregan las secuencias de reconexión masiva tras 288 h de sombra, emisión sin cobertura y liquidación a 148 transportistas.». Su cierre requiere examen de la fuente y de la evidencia correspondiente; no se declara realizada esa revisión para capítulos ajenos al lote S1/S2/S9 y al cálculo de S4. | Sección 4.1.8. |
+| 58 | Frameworks y tecnologías viven solo en las figuras; el texto no las decide ni las justifica técnicamente. | Se acepta. Se acoge la observación. La respuesta de trabajo propone la siguiente medida, cuya implementación no se acredita en este lote: «Se justifica la adopción de cada tecnología (C++/Go en borde, .NET Core/Node.js en backend, PostgreSQL/TimescaleDB) evaluando rendimiento, soporte y compatibilidad.». Su cierre requiere examen de la fuente y de la evidencia correspondiente; no se declara realizada esa revisión para capítulos ajenos al lote S1/S2/S9 y al cálculo de S4. | Sección 4.1.7. |
+| 59 | El modelo táctico DDD no trae límites de contexto (*Bounded Contexts*) ni eventos de dominio. | Se acepta. Se acoge la observación. La respuesta de trabajo propone la siguiente medida, cuya implementación no se acredita en este lote: «Se formaliza el diseño táctico DDD con especificación rigurosa de Bounded Contexts, agregados, comandos de negocio y eventos de dominio transmitidos por Kafka.». Su cierre requiere examen de la fuente y de la evidencia correspondiente; no se declara realizada esa revisión para capítulos ajenos al lote S1/S2/S9 y al cálculo de S4. | Sección 4.1.5. |
+| 60 | Estrangulamiento del sistema 2013 sin ADR ni comparación de alternativas ni fundamento económico. | Se acepta. Se acoge la observación. La respuesta de trabajo propone la siguiente medida, cuya implementación no se acredita en este lote: «Se formaliza el ADR-01 evaluando alternativas (Big Bang, Retiro total vs Strangler Fig) con justificación técnica de riesgos y preservación de continuidad operacional.». Su cierre requiere examen de la fuente y de la evidencia correspondiente; no se declara realizada esa revisión para capítulos ajenos al lote S1/S2/S9 y al cálculo de S4. | Sección 4.1.5 (ADR-01). |
+| 61 | El descarte de la banda ancha satelital queda registrado pero no aparece como ADR formal. | Se acepta. Se acoge la observación. La respuesta de trabajo propone la siguiente medida, cuya implementación no se acredita en este lote: «Se documenta el ADR-02 justificando el descarte de terminales satelitales de alta velocidad frente al computador de borde con buffer local eMMC de 8 GB y persistencia offline.». Su cierre requiere examen de la fuente y de la evidencia correspondiente; no se declara realizada esa revisión para capítulos ajenos al lote S1/S2/S9 y al cálculo de S4. | Sección 4.1.5 (ADR-02). |
+| 62 | Se afirma que el estilo arquitectónico se justifica con la volumetría sin justificarlo ni comparar estilos. | Se acepta. Se acoge la observación. La respuesta de trabajo propone la siguiente medida, cuya implementación no se acredita en este lote: «Se realiza análisis comparativo de estilos (Monolito, Microservicios, Event-Driven, SOA), fundamentando la adopción del estilo híbrido Event-Driven según la volumetría del Caso 10.». Su cierre requiere examen de la fuente y de la evidencia correspondiente; no se declara realizada esa revisión para capítulos ajenos al lote S1/S2/S9 y al cálculo de S4. | Sección 4.1.3. |
+| 63 | El stack tecnológico no ha sido validado formalmente. | Se acepta. Se acoge la observación. La respuesta de trabajo propone la siguiente medida, cuya implementación no se acredita en este lote: «Se presenta la matriz del stack tecnológico validando versiones estables LTS, fechas de fin de soporte (EOL) del fabricante y pruebas de concepto de laboratorio.». Su cierre requiere examen de la fuente y de la evidencia correspondiente; no se declara realizada esa revisión para capítulos ajenos al lote S1/S2/S9 y al cálculo de S4. | Sección 4.1.7. |
+| 64 | Falta diagrama de arquitectura física; la figura 1.8 son íconos y cajas sin SKU, vNets, subredes ni enlaces. | Se acepta. Se acoge la observación. La respuesta de trabajo propone la siguiente medida, cuya implementación no se acredita en este lote: «Se incorpora el diagrama de arquitectura física exhaustivo con servicios Azure, SKUs exactos, topología vNet/subredes, enlaces redundantes y dimensionamiento de ancho de banda.». Su cierre requiere examen de la fuente y de la evidencia correspondiente; no se declara realizada esa revisión para capítulos ajenos al lote S1/S2/S9 y al cálculo de S4. | Sección 4.2.1 (Figura 4.2). |
+| 65 | Contradicciones en componentes Azure (Data Explorer vs Timescale/Cosmos, Kafka vs Event Hubs). | Se acepta. Se acoge la observación. La respuesta de trabajo propone la siguiente medida, cuya implementación no se acredita en este lote: «Se unifica y congela la arquitectura: Apache Kafka en clúster Strimzi sobre AKS, TimescaleDB para telemetría de series temporales y PostgreSQL para datos transaccionales.». Su cierre requiere examen de la fuente y de la evidencia correspondiente; no se declara realizada esa revisión para capítulos ajenos al lote S1/S2/S9 y al cálculo de S4. | S4 §4.2.8 y S5 §5.5. |
+| 66 | La sala de servidores de 26 m² se compara ítem por ítem pero falta plano, carga eléctrica y balance térmico. | Se acepta. Se acoge la observación. La respuesta de trabajo propone la siguiente medida, cuya implementación no se acredita en este lote: «Se incorpora memoria técnica con plano de distribución en planta, consumo eléctrico estimado (kW) y balance térmico de disipación (BTU/h) de la sala técnica de Curimón S.A.». Su cierre requiere examen de la fuente y de la evidencia correspondiente; no se declara realizada esa revisión para capítulos ajenos al lote S1/S2/S9 y al cálculo de S4. | Sección 4.2.6. |
+| 67 | Ningún diagrama físico se cita desde el texto analítico. | Se acepta. Se acoge la observación. La respuesta de trabajo propone la siguiente medida, cuya implementación no se acredita en este lote: «Se referencian y recorren en profundidad todos los diagramas de arquitectura física desde el texto analítico del documento.». Su cierre requiere examen de la fuente y de la evidencia correspondiente; no se declara realizada esa revisión para capítulos ajenos al lote S1/S2/S9 y al cálculo de S4. | Subdocumento 4 completo. |
+| 68 | La sección 1.2.8 promete declarar cada producto con versión, fin de soporte y parches y no declara ninguno. | Se acepta. Se acoge la observación. La respuesta de trabajo propone la siguiente medida, cuya implementación no se acredita en este lote: «Se formaliza la matriz completa de hardware y software base con versión, ciclo de vida, soporte oficial y plan de actualización y parches de seguridad.». Su cierre requiere examen de la fuente y de la evidencia correspondiente; no se declara realizada esa revisión para capítulos ajenos al lote S1/S2/S9 y al cálculo de S4. | Sección 4.2.8. |
+| 70 | Sin cantidades, el parque oscila entre 374 y «según adhesión» y no se explicita el no reemplazo de terceros. | Se acepta. Se acoge la observación. La respuesta de trabajo propone la siguiente medida, cuya implementación no se acredita en este lote: «Se congelan las cantidades del parque: 374 camiones (148 propios retrofiteados con audIT EdgeHub v2.4, 192 terceros homologados por API y 34 terceros sin GPS equipados por audIT con pinzas CANclick).». Su cierre requiere examen de la fuente y de la evidencia correspondiente; no se declara realizada esa revisión para capítulos ajenos al lote S1/S2/S9 y al cálculo de S4. | Sección 4.2.2 y Anexo A. |
+| 71 | Se afirma que hay 18 componentes en la región primaria y la tabla suma 20; la matriz cubre 14 de 34. | Se acepta. Se acoge la observación. La respuesta de trabajo propone la siguiente medida, cuya implementación no se acredita en este lote: «Se corrigen los conteos de componentes cloud y se cuadra al 100 % la matriz de infraestructura y servicios de la región primaria.». Su cierre requiere examen de la fuente y de la evidencia correspondiente; no se declara realizada esa revisión para capítulos ajenos al lote S1/S2/S9 y al cálculo de S4. | Sección 4.2.4 y Anexo A. |
+| 72 | La región secundaria no tiene nombre y el Artículo 16.3 exige declararla formalmente. | Se acepta. Se acoge la observación. La respuesta de trabajo propone la siguiente medida, cuya implementación no se acredita en este lote: «Se formaliza a Brazil South (São Paulo) como la región secundaria de contingencia y réplica de datos de audIT SpA, en estricto cumplimiento del Art. 16.3.». Su cierre requiere examen de la fuente y de la evidencia correspondiente; no se declara realizada esa revisión para capítulos ajenos al lote S1/S2/S9 y al cálculo de S4. | S4 §4.2.5 y S5 §5.9. |
+| 73 | Los 8 GB del dispositivo embarcado no tienen cálculo; la derivación da 10 MB y 288 h dan cerca de 40 MB. | Se acepta. Se deriva el perfil de 72 h: 4.104 posiciones, 1.800 muestras de motor, 45 eventos y cinco documentos, 777.656 bytes sin fotos y 3.237.656 con ocho fotos. La ampliación propuesta 288 h suma 12.950.624 bytes brutos; overhead físico y reserva elevan el presupuesto a 38.851.872 bytes y se asignan 64 MiB. Sistemas A/B, arranque, diagnóstico y maestros llevan el total a 2.400 MiB (2,52 GB decimales). Capacidad útil, ocupación e integridad se verifican en HIL, sin presuponer compresión o equiparar cierre vial con desconexión. | S4, capacidad de almacenamiento y dimensionamiento; T-11; T-17 CP-HW-03. |
+| 74 | La sincronización en 20 min por camión se repite como requisito y no se dimensiona ante reconexión masiva. | Se acepta. El perfil simultáneo usa 300 camiones, 1.786.200 registros y 971.296.800 bytes con fotos. Se calculan 6,48 Mbit/s útiles mínimos; con 25 % de transporte y 20 % de reserva temporal, 10,12 Mbit/s. Dos unidades S1 permiten estimar admisión de 71.400 paquetes en 11,9 min; no demuestra transferencia/persistencia. CP-PERF-02 mide confirmación completa y conciliación por camión en hasta veinte minutos. | S4, dimensionamiento y figura de reconexión; T-11; T-17 CP-PERF-02. |
+| 75 | Ausentes eventos/segundo, TPS peak de asignación, volumen anual, datos a migrar y ancho de banda. | Se acepta. El perfil de carga mantiene hipótesis explícitas y no confunde concurrencia con viajes diarios. T-17 coteja con T-12 los 42 requisitos y separa ensayo de 72 h de ampliación propuesta de 288 h. La cantidad histórica a migrar y la medición operacional siguen sujetas al levantamiento; no se afirma disponer de 480.000 registros. | S2, supuestos; S3/T-12; T-17 CP-PERF-01, CP-PERF-02 y CP-HW-03. Volumetría integral de S4 pendiente. |
+| 77 | El equipo de TI de 9 personas no se menciona y el RT-03.05 se cita sin listar los servicios administrados. | Se acepta. Se acoge la observación. La respuesta de trabajo propone la siguiente medida, cuya implementación no se acredita en este lote: «Se modela la interacción operativa con el equipo de TI de 9 personas de Curimón S.A. y se detallan los servicios administrados provistos por audIT SpA bajo RT-03.05.». Su cierre requiere examen de la fuente y de la evidencia correspondiente; no se declara realizada esa revisión para capítulos ajenos al lote S1/S2/S9 y al cálculo de S4. | Sección 4.2.8. |
+| 78 | Se tratan los 3 proveedores GPS y 34 camiones sin equipo pero no se dice qué se instala ni cómo conviven. | Se acepta. Se acoge la observación. La respuesta de trabajo propone la siguiente medida, cuya implementación no se acredita en este lote: «Se especifica la arquitectura de coexistencia: capa de integración API (ACL) para Wialon/Wisetrack, e instalación de audIT EdgeHub v2.4 con pinzas CANclick en los 34 tractos desprovistos.». Su cierre requiere examen de la fuente y de la evidencia correspondiente; no se declara realizada esa revisión para capítulos ajenos al lote S1/S2/S9 y al cálculo de S4. | Sección 4.2.2. |
+| 79 | La recuperación ante desastres y continuidad se separan con argumento sísmico sin justificar factibilidad. | Se acepta. Se acoge la observación. La respuesta de trabajo propone la siguiente medida, cuya implementación no se acredita en este lote: «Se fundamenta la factibilidad técnica y latencia ($<50\text{ ms}$) del enlace hacia Brazil South, garantizando el cumplimiento estricto del RTO $\le 4\text{ h} y RPO \le 15\text{ min}$.». Su cierre requiere examen de la fuente y de la evidencia correspondiente; no se declara realizada esa revisión para capítulos ajenos al lote S1/S2/S9 y al cálculo de S4. | Sección 4.2.5. |
+| 80 | Los respaldos aparecen en una sola fila y no hay modelo Zero Trust explícito ni superficie de exposición. | Se acepta. Se acoge la observación. La respuesta de trabajo propone la siguiente medida, cuya implementación no se acredita en este lote: «Se diseña la arquitectura de ciberseguridad: modelo Zero Trust, microsegmentación de subredes, Azure Bastion, WAF y almacenamiento inmutable WORM.». Su cierre requiere examen de la fuente y de la evidencia correspondiente; no se declara realizada esa revisión para capítulos ajenos al lote S1/S2/S9 y al cálculo de S4. | Sección 4.2.7. |
 
 ## 4 Introducción a la Arquitectura Lógica y Física de la Solución
 
@@ -835,28 +834,26 @@ del G26I declara certificaciones CE, FCC, ISED, PTCRB y AT&T, y no declara E-Mar
 que ambas quedan como condición de compra. El equipo a bordo no emite documentos tributarios: la
 restricción 8 deja al sistema contable como único emisor (Caso, capítulo 10, p. 24).
 
-**Capacidad de almacenamiento.**  La observación 73 del Informe 1 pidió derivar la capacidad en
-lugar de justificarla hacia atrás. La Tabla 4.24 suma lo que ocupa cada parte de la memoria.
+**Capacidad de almacenamiento.**  La observación 73 exige derivar la memoria sin ajustar el cálculo a los 8 GB del producto. Se distingue volumen serializado, sobrecarga física, reserva y particiones del sistema. El perfil de 72 h se calcula en sección 4.2.8; 288 h es ampliación propuesta por audIT, independiente de la duración del cierre fronterizo.
 
-**Tabla 4.24.** Capacidad de almacenamiento a bordo derivada por componente
+La carga serializada del perfil suma 3.237.656 bytes por 72 h; cuatro repeticiones suman 12.950.624 bytes. Se presupuesta otro tanto para índices, WAL, cifrado y metadatos, y otro tanto como reserva: 38.851.872 bytes. Son presupuestos de ingeniería, no ocupación medida ni compresión conseguida. Una partición de 64 MiB aporta 67.108.864 bytes y deja 28.256.992 bytes adicionales sobre ese presupuesto; HIL debe comprobar ocupación, reinicio e integridad del perfil completo. Si la sobrecarga real supera el presupuesto, se recalcula antes de homologar.
 
-| Componente | Tamaño | Base |
+La Tabla 4.24 suma asignaciones físicas en MiB ($1 \mathrm{MiB}=1.048.576$ bytes); GB comercial se expresa en decimal. Así se evita sumar MB y MiB como si fueran equivalentes.
+
+**Tabla 4.24.** Asignación de almacenamiento a bordo por componente
+
+| Componente | Asignación | Base de diseño |
 |---|---|---|
-| Partición de arranque | 16 MB | Valor por defecto del gestor de actualizaciones |
-| Sistema A y sistema B | 2.048 MB | Imagen de hasta 1 GB cada una, se verifica en la Etapa 1 |
-| Búfer de 288 horas | 38,4 MB | 3,2 MB por cada 72 horas con fotos, por 4 y por 3 de seguridad |
-| Registros de diagnóstico | 256 MB | Tope rotativo |
-| Geocercas y datos maestros | 16 MB | 1.400 puntos de carga a 1 KB, más vigencias |
-| Total requerido | 2.374 MB | Cerca de 2,4 GB |
+| Partición de arranque | 16 MiB | Gestor de actualización |
+| Sistema A y sistema B | 2.048 MiB | Hasta 1 GiB por imagen |
+| Búfer propuesto de 288 h | 64 MiB | 38.851.872 bytes presupuestados |
+| Diagnóstico | 256 MiB | Tope rotativo independiente |
+| Geocercas y maestros | 16 MiB | Catálogo y vigencias |
+| Total asignado | 2.400 MiB | 2.516.582.400 bytes |
 
-*Fuente: elaboración propia sobre el Caso, RT-03.10, p. 31, y RT-10.05, p. 32, y Northern.tech (2026).*
+*Fuente: elaboración propia; mínimo de 72 h en Caso RT-03.10, p. 31. Hipótesis y reserva verificables mediante T-17.*
 
-El caso necesita cerca de 2,4 GB. El búfer de 288 horas, que cubre los 12 días de cierre del paso Los
-Libertadores de Caso, RT-10.05, p. 32, pesa menos del 2 % del total, y la mayor parte la ocupan las dos
-particiones de sistema. Los 8 GB que se declaran son la menor configuración del G26I
-(iWave Global, 2026) y dejan un margen de más de tres veces sobre lo requerido. Las escrituras suman
-unos 14 GB al año, casi todo por doce actualizaciones anuales de 1 GB, cifra baja para una memoria
-industrial durante los 56 meses del contrato.
+La asignación suma aproximadamente 2,52 GB decimales. Los 8 GB nominales del G26I (iWave Global, 2026) son una configuración de producto; la capacidad útil después de formateo y las reservas del controlador se verifican antes de compra. No se toma la capacidad nominal como toda la memoria disponible. El presupuesto contiene las dos imágenes y no se limita a los bytes de telemetría. La reserva para almacenamiento no demuestra vida útil de escritura: se contrastan escrituras, amplificación y resistencia del fabricante durante los 56 meses. Los plazos legales de conservación corresponden al repositorio central por dominio; el búfer local no reemplaza esos plazos.
 
 ### 4.2.3 Emplazamiento de componentes
 
@@ -1113,37 +1110,40 @@ estimación usa los supuestos de muestreo de la sección 4.2.9: posición cada 3
 cada 5 minutos detenido, telemetría del motor cada 60 segundos y 30 horas de marcha en 72 horas. La
 Tabla 4.31 muestra lo que acumula un camión en 72 horas sin cobertura.
 
-**Tabla 4.31.** Volumen acumulado a bordo tras 72 horas sin cobertura
+El perfil de ensayo es explícito y sintético: 30 h en marcha con posición cada 30 s y 42 h detenido cada 300 s producen 3.600+504=4.104 posiciones de 64 bytes; 30 h de motor cada 60 s producen 1.800 muestras de 160 bytes. Se propone un fixture de 45 eventos de jornada/conducción/esperas de 600 bytes, cinco documentos de 40.000 bytes y ocho fotos de 307.500 bytes. Los tamaños incluyen la serialización del fixture y se contrastan con firmware y documentos homologados; no son mediciones ni cantidades universales del caso. No se presupone compresión.
 
-| Componente | Registros | Volumen |
+La Tabla 4.31 separa los componentes. Los eventos/documentos suman $45\times600+5\times40.000=227.000$ bytes; todo el lote sin fotos suma 777.656 bytes.
+
+**Tabla 4.31.** Perfil sintético serializado de un camión tras 72 h
+
+| Componente | Cantidad | Bytes |
 |---|---|---|
-| Posiciones | 4.104 | 263 KB |
-| Telemetría del motor | 1.800 | 288 KB |
-| Eventos y documentos del viaje | Cerca de 50 | 227 KB |
-| Total sin fotos | Cerca de 5.950 | 0,78 MB |
-| Fotos de evidencia | 8 | 2,46 MB |
+| Posiciones | 4.104 | 262.656 |
+| Motor | 1.800 | 288.000 |
+| Eventos y documentos | 45 + 5 | 227.000 |
+| Total sin fotos | 5.954 | 777.656 |
+| Fotos adjuntas | 8 | 2.460.000 |
+| Total de datos y fotos | Un lote | 3.237.656 |
 
-*Fuente: elaboración propia basada en el modelo analítico de dimensionamiento y supuestos S-01 a S-04 del Caso 10.*
+*Fuente: hipótesis analíticas y fixture de audIT; frecuencias S-02/S-03 y variantes CP-PERF-02/CP-HW-03 de T-17.*
 
-Un camión junta cerca de 6.000 registros y 0,78 MB sin contar las fotos. Agrupados en mensajes de
-4 KB, que es la unidad con que IoT Hub cuenta su cuota (Microsoft, s. f.), son 192 mensajes
-por camión. La Tabla 4.32 aplica eso a 300 camiones que salen a la vez de una sombra, y la
-Figura 4.12 sigue el camino de esos mensajes.
+Trescientos camiones producen 1.786.200 registros y 971.296.800 bytes incluidos adjuntos. Dividir ese volumen por veinte minutos requiere 6,48 Mbit/s útiles agregados, antes de overhead. Como presupuesto adicional se incorpora 25 % de transporte/metadatos y se reserva 20 % de la ventana para reconexión, reintentos, persistencia y conciliación: $971.296.800\times1,25\times8/960=10,12$ Mbit/s. El porcentaje es una hipótesis declarada que se contrasta en pruebas; la garantía contractual solo se comprueba midiendo la confirmación íntegra de cada camión en hasta veinte minutos.
 
-**Tabla 4.32.** Reconexión simultánea de 300 camiones tras 72 horas
+La Tabla 4.32 distingue tasas de operaciones y cuotas. Los bloques de 4 KiB son una elección de empaquetado del ensayo y unidad de cuota diaria, no el tamaño máximo de un mensaje ni la tasa de operaciones (Microsoft, s. f.).
 
-| Cálculo | Resultado | Base |
+**Tabla 4.32.** Reconexión de 300 camiones: estimación y límites
+
+| Cálculo | Resultado | Alcance |
 |---|---|---|
-| Mensajes por sincronizar | 57.600 | 300 camiones por 192 mensajes |
-| Tiempo con 100 envíos por segundo | 9,6 min | Límite de IoT Hub S1 |
-| Conexiones nuevas | 3 s | 100 por segundo |
-| Fotos en un paquete por camión | 1,5 min | 1,67 cargas por segundo por unidad, con 2 unidades |
+| Paquetes de 4 KiB sin fotos | 57.000 | 300 por $\lceil777.656/4.096\rceil$ |
+| Con presupuesto de 25 % | 71.400 | 238 paquetes por camión |
+| Envíos a 100 operaciones/s | 11,9 min | Límite de dos unidades S1 |
+| Nuevas conexiones a 100/s | Al menos 3 s | Solo admisión, sin reintentos |
+| Inicio de 300 archivos agrupados | Al menos 90 s | 100/min por unidad; dos unidades |
 
-*Fuente: elaboración propia sobre Microsoft (s. f.) y el Caso, numeral 14.2, p. 30.*
+*Fuente: elaboración propia y documentación de Microsoft IoT Hub consultada el 7 de octubre de 2026.*
 
-La reconexión termina en 9,6 minutos, dentro de los 20 que fija Caso, RT-03.13, p. 31. Las fotos van en
-un solo paquete por camión: con una carga por foto el mismo cálculo da 12 minutos con dos unidades y se
-come la mitad de la ventana.
+Estas estimaciones no prueban el tiempo final: admitir un archivo no lo transfiere, y aceptar un mensaje no confirma escritura ni conciliación. La transferencia de fotos comparte presupuesto de enlace; sus huellas deben compararse antes de cerrar el cronómetro. Colas, escritura, reintentos y carga normal se incluyen en CP-PERF-02. El ensayo aplica a cada camión y falla si uno excede veinte minutos o pierde registros; 288 h se ensaya separadamente como ampliación de ingeniería.
 
 ![Figura 4.12. Reconexión masiva: del búfer del camión a la base de datos, con los límites de cada tramo](../../figuras/04-arquitectura/reconexion.png)
 
@@ -1155,11 +1155,12 @@ La figura sigue los cinco tramos. Cada equipo espera un tiempo aleatorio antes d
 reintenta con retroceso exponencial, de modo que los 300 no golpean la puerta en el mismo segundo. Del
 IoT Hub los mensajes pasan a Event Hubs, que desacopla la llegada del procesamiento: los consumidores en
 AKS escriben en lotes a la base de series a su propio ritmo, y el mensaje queda retenido en el bus
-aunque la base se atrase. El tramo que se satura primero es la ingesta, y por eso la columna derecha de
-la figura marca la profundidad de la cola como indicador.
+aunque la base se atrase. La admisión de ingesta es el cuello de botella previsto por el cálculo de cuotas;
+el ensayo debe contrastarlo con transferencia de fotos, procesamiento y escritura.
+La figura identifica profundidad de cola y conciliación como indicadores, sin declarar una saturación medida.
 
 En operación normal cada camión manda 768 mensajes diarios, uno por minuto en marcha y uno cada cinco
-minutos detenido. Con los 430 camiones proyectados son unos 330.000 mensajes diarios, más 57.600 de una
+minutos detenido. Con los 430 camiones proyectados son unos 330.000 mensajes diarios, más 71.400 paquetes presupuestados de una
 reconexión, dentro de los 800.000 de las dos unidades. El resto de lo que pide el numeral 14.2 está en
 la Tabla 4.33.
 
@@ -1210,9 +1211,10 @@ en producción medidos en el percentil 95 sobre la experiencia real de la person
 fila prevalece el umbral más exigente entre ese numeral y el Caso. FEP02, RT-09.03, p. 21 obliga a
 soportar sin rediseño un crecimiento de tres veces la volumetría inicial, y la proyección del Caso llega
 a 1,2 veces, de modo que esta oferta dimensiona sobre el requisito transversal. FEP02, RT-09.05, p. 21
-pide identificar el primer cuello de botella: es la ingesta durante la reconexión masiva, se detecta por
-profundidad de cola y retraso de procesamiento en Event Hubs, y se resuelve con más unidades de IoT Hub y
-de procesamiento, sin rediseño. La disponibilidad comprometida es de 99,9 % mensual para los servicios
+pide identificar el primer cuello de botella. El modelo propone la admisión de ingesta durante
+la reconexión masiva como limitación inicial; CP-PERF-02 debe verificarlo frente al enlace,
+las fotos y la persistencia, midiendo profundidad de cola y retraso de procesamiento.
+La ampliación de unidades de IoT Hub y de procesamiento se evalúa según el tramo medido, sin presuponer que elimine otro cuello de botella. La disponibilidad comprometida es de 99,9 % mensual para los servicios
 críticos, medida sobre la transacción de negocio de extremo a extremo (FEP01, Artículo 20, p. 14).
 
 ### 4.2.9 Supuestos declarados y brechas
@@ -1229,7 +1231,7 @@ Tabla 4.35 con la forma en que se cierran.
 | S-02 | Horas de marcha dentro de 72 horas | 30 horas | Régimen de descansos del artículo 25 bis |
 | S-03 | Tamaño del registro de posición | 64 bytes | Ajuste con el firmware del G26I |
 | S-04 | Volumen acumulado a bordo tras 72 horas | 0,78 MB sin fotos y 2,46 MB de fotos | Derivado en la sección 4.2.8 |
-| S-05 | Capacidad de almacenamiento a bordo | 2,4 GB requeridos sobre 8 GB | Derivada en la sección 4.2.2 |
+| S-05 | Capacidad de almacenamiento a bordo | 2,52 GB asignados sobre 8 GB nominales | Derivada en la sección 4.2.2 |
 | S-06 | Consumo mensual de datos por camión | 13 a 16 MB | Campaña de medición |
 | S-07 | Imagen de actualización del equipo a bordo | 1 GB | Medición con el primer firmware |
 | S-08 | Población con módem satelital | Los 182 equipos audIT | Decisión de diseño, no depende de la medición |
@@ -1626,4 +1628,4 @@ Conforme al Comunicado 10, sección 7.2, cada sección de este subdocumento y ca
 | 4.2 y 4.2.1 | Claude Opus 5.5 en Claude Code | Estructuración de arquitectura física híbrida, dimensionamiento de hardware y memoria eMMC | Medio | Bajo | Carlos Jesús Abarza Suazo, Director de Auditoría y Aseguramiento Tecnológico: Verificación de cálculos de concurrencia y T-11 |
 | 4.3, 4.3.1 y 4.3.2 | Claude Opus 5.5 en Claude Code | Estrategia de data center primaria y secundaria, balance de cargas y alta disponibilidad | Medio | Bajo | Carlos Jesús Abarza Suazo, Director de Auditoría y Aseguramiento Tecnológico: Certificación de estándares TIA-942 y ASHRAE |
 | Formulario T-11 | Claude Opus 5.5 en Claude Code | Consolidación tabular de las 68 partidas de hardware y software del Formulario T-11 | Alto | Ninguno | Carlos Jesús Abarza Suazo, Director de Auditoría y Aseguramiento Tecnológico: Auditoría de partidas industriales y ciclo de vida |
-
+| 4.2.2, 4.2.8 y Formulario T-11 — Conciliación incremental H | Codex; generación asistida de imágenes | Reconciliación de perfil, memoria en bytes/MiB, cuotas de reconexión, particiones y figura de reconexión | Alto | Medio | Revisión humana de estos cambios pendiente |

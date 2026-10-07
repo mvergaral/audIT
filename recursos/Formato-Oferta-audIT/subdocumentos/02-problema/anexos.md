@@ -24,7 +24,7 @@ El catálogo compendia las necesidades preliminares de negocio levantadas desde 
 | **REQ-NEG-05** | Trazabilidad y Geocercas | Acreditar automáticamente entrada, permanencia y salida en los aproximadamente 1.400 puntos de clientes, sin intervención del conductor ni equipamiento instalado en predios ajenos. | Caso 10, Cap. 4.7, Entrevista E. Valdebenito | Alta |
 | **REQ-NEG-06** | Cobro de Sobreestadías | Conservar evidencia cronológica íntegra y atribuible de los tiempos de espera para sustentar cobros legítimos. El 71% de cobros objetados describe el problema, no una recuperación garantizada. | Caso 10, Cap. 4.7, Entrevista G. Ossandón | Alta |
 | **REQ-NEG-07** | Retornos en Vacío | Identificar en tiempo real los tractocamiones que finalizarán su descarga para sugerir triangulaciones con cargas de retorno compatibles, reduciendo el 26% de kilómetros recorridos en vacío (10,66 millones de km anuales). | Caso 10, Cap. 4.2, Entrevista R. Mansilla | Alta |
-| **REQ-NEG-08** | Cadena de Frío | Monitorear la temperatura de los 44 equipos refrigerados y alertar desviaciones o aperturas no autorizadas. Los rangos, umbrales y frecuencia se definirán según carga y contrato. | Caso 10, Cap. 2.1 y 4.8, Entrevista A. Lecaros | Crítica |
+| **REQ-NEG-08** | Cadena de Frío | Monitorear la temperatura de los 44 equipos refrigerados y alertar desviaciones o aperturas no autorizadas. Necesidad preliminar atendida por la innovación 3 de S13, fuera del catálogo base S3/T-12; rangos y frecuencia según carga y contrato. | Caso 10, Cap. 2.1 y 4.8, Entrevista A. Lecaros | Crítica |
 | **REQ-NEG-09** | Documentación Digital | Disponer del DET conforme antes del movimiento, incluso en puntos de carga sin cobertura; mantener al sistema contable como único emisor tributario y resolver la contingencia en la solución. | Caso 10, Cap. 4.6, Entrevista M. Riquelme | Alta |
 | **REQ-NEG-10** | Confirmación de Entrega | Obtener conformidad de entrega atribuible al destinatario y disponible para facturación y reclamos, reduciendo pérdidas y daños de soportes en papel. | Caso 10, Cap. 4.7, Entrevista G. Ossandón | Media |
 | **REQ-NEG-11** | Costeo por Ruta y Viaje | Reconstruir el costo directo del viaje con fuentes de consumo, peajes y fletes, distinguiendo estimación operacional y conciliación definitiva. La oportunidad de información debe justificarse. | Caso 10, Cap. 4.1 y 7.3, Entrevista G. Ossandón | Crítica |
@@ -47,7 +47,7 @@ El catálogo compendia las necesidades preliminares de negocio levantadas desde 
 
 Este anexo desglosa la infraestructura vehicular móvil y la fuerza laboral que compone la operación de Transportes Curimón S.A., diferenciando el régimen de propiedad, el nivel de equipamiento telemático basal y la estrategia de integración tecnológica requerida para cada segmento.
 
-### 2.B.1 Inventario desagregado del parque vehicular (374 tractocamiones)
+### 2.2.1 2.B.1 Inventario desagregado del parque vehicular (374 tractocamiones)
 
 El parque de tractocamiones se clasifica de acuerdo con su titularidad jurídica y su madurez instrumental en la Tabla 2.2:
 
@@ -61,7 +61,7 @@ El parque de tractocamiones se clasifica de acuerdo con su titularidad jurídica
 | Flota Terceros sin Dispositivo GPS | 34 | 9,1% | No informada | Sin GPS; otro equipamiento no informado. | Equipamiento telemático estándar e integración de posicionamiento georreferenciado. |
 | **Total Parque Tractocamiones** | **374** | **100,0%** | **6,4 años (solo propios)** | **Parque altamente heterogéneo.** | **Vista operacional unificada con trazabilidad de las fuentes y sus limitaciones.** |
 
-### 2.B.2 Inventario de semirremolques y equipos de arrastre propios (210 unidades)
+### 2.2.2 2.B.2 Inventario de semirremolques y equipos de arrastre propios (210 unidades)
 
 Curimón es propietaria del 100% de los 210 semirremolques utilizados en la operación, asegurando el acople físico de la carga independientemente de si el tracto motriz es propio o subcontratado (Tabla 2.3):
 
@@ -74,7 +74,7 @@ Curimón es propietaria del 100% de los 210 semirremolques utilizados en la oper
 | Semirremolques propios (todas las tipologías) | 210 | Total de arrastre | Rampla plana, furgón seco, refrigerado, tolva y portacontenedores; cantidades por tipo no informadas. | Inventario desagregado pendiente. |
 | **Universos no sumables** | --- | --- | **44 equipos y 18 camiones no particionan los 210 semirremolques.** | **Validar acoples y solapamientos por unidad.** |
 
-### 2.B.3 Caracterización detallada de la dotación de conductores (454 operadores)
+### 2.2.3 2.B.3 Caracterización detallada de la dotación de conductores (454 operadores)
 
 La operación de la flota requiere una fuerza laboral de 454 choferes, estructurada en dos grupos con relaciones contractuales distintas (Tabla 2.4):
 
@@ -133,7 +133,7 @@ Este anexo recopila de forma sistemática las restricciones legales vigentes en 
 
 A continuación se presentan las fichas completas de caracterización de los trece grupos de interés, integrando los tres actores de gobierno, fiscalización y aseguramiento (Fondo de Inversión, Dirección del Trabajo y Aseguradora de Carga y Flota) y profundizando en las dependencias y riesgos de cada uno.
 
-### FICHA N.° 01: Fondo de Inversión Institucional (Accionista Minoritario)
+### 2.4.1 FICHA N.° 01: Fondo de Inversión Institucional (Accionista Minoritario)
 
 La ficha distingue intereses, necesidades de información y capacidad efectiva de condicionar la operación.
 - **Identificación y Emplazamiento:** Representa al fondo de inversión institucional que adquirió el **22% de la propiedad accionaria** de Transportes Curimón S.A. en el año 2019. Posee representación formal en el Directorio corporativo.
@@ -146,7 +146,7 @@ La ficha distingue intereses, necesidades de información y capacidad efectiva d
 - **Riesgo Operacional si no se Resuelve:** Bloqueo de presupuesto corporativo, desalineamiento de accionistas y retiro de respaldo financiero para el plan de renovación de flota.
 - **Mecanismo de Interacción y Mitigación de Fricción:** Informes de rentabilidad, riesgos y cumplimiento para las decisiones de capital.
 
-### FICHA N.° 02: Dirección del Trabajo (DT — Autoridad Laboral Fiscalizadora)
+### 2.4.2 FICHA N.° 02: Dirección del Trabajo (DT — Autoridad Laboral Fiscalizadora)
 
 La ficha distingue intereses, necesidades de información y capacidad efectiva de condicionar la operación.
 - **Identificación y Emplazamiento:** Órgano fiscalizador del Estado de Chile dependiente del Ministerio del Trabajo y Previsión Social. Ejerce inspecciones laborales en terreno, terminales viales y carretera.
@@ -159,7 +159,7 @@ La ficha distingue intereses, necesidades de información y capacidad efectiva d
 - **Riesgo Operacional si no se Resuelve:** Paralización legal de terminales de Curimón, multas reiteradas por infracciones gravísimas y pérdida de la calidad de empleador habilitado para contratar con el Estado o grandes mandantes.
 - **Mecanismo de Interacción y Mitigación de Fricción:** Registros de jornada y custodia disponibles ante requerimientos de fiscalización.
 
-### FICHA N.° 03: Compañías Aseguradoras de Carga y Flota
+### 2.4.3 FICHA N.° 03: Compañías Aseguradoras de Carga y Flota
 
 La ficha distingue intereses, necesidades de información y capacidad efectiva de condicionar la operación.
 - **Identificación y Emplazamiento:** Entidades financieras aseguradoras nacionales e internacionales que suscriben las pólizas de Responsabilidad Civil (RC), daños a la carga perecible (cadena de frío), transporte de sustancias peligrosas y casco de tractocamiones de Curimón.
@@ -172,7 +172,7 @@ La ficha distingue intereses, necesidades de información y capacidad efectiva d
 - **Riesgo Operacional si no se Resuelve:** Pérdidas patrimoniales catastróficas no cubiertas por seguros ante volcamientos o descomposición de cargas de alto valor en ruta.
 - **Mecanismo de Interacción y Mitigación de Fricción:** Evidencia térmica, cinemática, documental y de mantenimiento atribuible al viaje.
 
-### FICHA N.° 04: Directorio y Familia Fundadora (78% de la Propiedad)
+### 2.4.4 FICHA N.° 04: Directorio y Familia Fundadora (78% de la Propiedad)
 
 La ficha distingue intereses, necesidades de información y capacidad efectiva de condicionar la operación.
 - **Identificación y Emplazamiento:** Representa a la segunda generación familiar fundadora de Transportes Curimón S.A., controladora del 78% del capital social de la compañía cerrada.
@@ -185,7 +185,7 @@ La ficha distingue intereses, necesidades de información y capacidad efectiva d
 - **Riesgo Operacional si no se Resuelve:** Riesgo de reestructuración de la administración y pérdida de foco del negocio ante obligaciones laborales o regulatorias no controladas.
 - **Mecanismo de Interacción y Mitigación de Fricción:** Reportes de continuidad y tratamiento de riesgos a nivel corporativo.
 
-### FICHA N.° 05: Enrique Valdebenito Rioseco — Gerente General (21 años en Curimón)
+### 2.4.5 FICHA N.° 05: Enrique Valdebenito Rioseco — Gerente General (21 años en Curimón)
 
 La ficha distingue intereses, necesidades de información y capacidad efectiva de condicionar la operación.
 - **Identificación y Emplazamiento:** Máxima autoridad ejecutiva y representante legal de Transportes Curimón S.A. Conduce la compañía reportando directamente al Directorio.
@@ -198,7 +198,7 @@ La ficha distingue intereses, necesidades de información y capacidad efectiva d
 - **Riesgo Operacional si no se Resuelve:** Parálisis operacional por conflicto con la red de transportistas subcontratados o pérdida del 19% de ingresos corporativos.
 - **Mecanismo de Interacción y Mitigación de Fricción:** Criterios de aceptación, compromisos y riesgos que afectan la continuidad del negocio.
 
-### FICHA N.° 06: Ricardo Mansilla Oyarzo — Gerente de Operaciones y Despacho
+### 2.4.6 FICHA N.° 06: Ricardo Mansilla Oyarzo — Gerente de Operaciones y Despacho
 
 La ficha distingue intereses, necesidades de información y capacidad efectiva de condicionar la operación.
 - **Identificación y Emplazamiento:** Responsable de la Torre de Programación de San Bernardo y del cumplimiento diario de los 96.000 viajes anuales con una dotación de 22 despachadores en turnos 24x7x365.
@@ -211,7 +211,7 @@ La ficha distingue intereses, necesidades de información y capacidad efectiva d
 - **Riesgo Operacional si no se Resuelve:** Persistencia del 26% de kilómetros en vacío, sobreutilización de conductores y riesgo continuo de detenciones en ruta.
 - **Mecanismo de Interacción y Mitigación de Fricción:** Información confiable de despacho y reglas de excepción compatibles con seguridad y legalidad.
 
-### FICHA N.° 07: Gabriela Ossandón Prieto — Gerenta de Administración y Finanzas (Ene-26)
+### 2.4.7 FICHA N.° 07: Gabriela Ossandón Prieto — Gerenta de Administración y Finanzas (Ene-26)
 
 La ficha distingue intereses, necesidades de información y capacidad efectiva de condicionar la operación.
 - **Identificación y Emplazamiento:** Líder del área financiera y contable, incorporada recientemente para sanear los márgenes corporativos y profesionalizar la gestión de costos.
@@ -224,7 +224,7 @@ La ficha distingue intereses, necesidades de información y capacidad efectiva d
 - **Riesgo Operacional si no se Resuelve:** Colapso de liquidez corporativa por persistencia de contratos bajo costo y deterioro de relaciones con transportistas subcontratados.
 - **Mecanismo de Interacción y Mitigación de Fricción:** Costos por viaje y conciliación con insumos recibidos en fechas diferentes.
 
-### FICHA N.° 08: Hugo Trincado Bahamonde — Jefe de Taller y Mantenimiento
+### 2.4.8 FICHA N.° 08: Hugo Trincado Bahamonde — Jefe de Taller y Mantenimiento
 
 La ficha distingue intereses, necesidades de información y capacidad efectiva de condicionar la operación.
 - **Identificación y Emplazamiento:** Responsable del mantenimiento preventivo y correctivo de los 148 tractocamiones y 210 semirremolques propios en los talleres de San Bernardo y Los Ángeles, liderando un equipo de 46 mecánicos y técnicos.
@@ -237,7 +237,7 @@ La ficha distingue intereses, necesidades de información y capacidad efectiva d
 - **Riesgo Operacional si no se Resuelve:** Fallas de motor masivas en carretera, sobrecostos de reparación reactiva y desgaste acelerado de flota propia.
 - **Mecanismo de Interacción y Mitigación de Fricción:** Historial completo de mantenimiento y disponibilidad de los equipos para intervención.
 
-### FICHA N.° 09: Denisse Aguayo Lillo — Jefa de Prevención de Riesgos y Seguridad
+### 2.4.9 FICHA N.° 09: Denisse Aguayo Lillo — Jefa de Prevención de Riesgos y Seguridad
 
 La ficha distingue intereses, necesidades de información y capacidad efectiva de condicionar la operación.
 - **Identificación y Emplazamiento:** Responsable del cumplimiento normativo en seguridad vial, salud ocupacional y transporte de sustancias peligrosas (SUSPEL) para toda la red de Curimón.
@@ -250,7 +250,7 @@ La ficha distingue intereses, necesidades de información y capacidad efectiva d
 - **Riesgo Operacional si no se Resuelve:** Siniestros fatales en ruta, clausura de faenas por la Dirección del Trabajo y querellas penales contra la plana ejecutiva.
 - **Mecanismo de Interacción y Mitigación de Fricción:** Jornada previa, documentación vigente y aptitud del equipo acreditadas antes de despacho.
 
-### FICHA N.° 10: Marcelo Riquelme Ibáñez y Patricio Kast Fuentealba — Jefaturas de TI y Control de Flota
+### 2.4.10 FICHA N.° 10: Marcelo Riquelme Ibáñez y Patricio Kast Fuentealba — Jefaturas de TI y Control de Flota
 
 La ficha distingue intereses, necesidades de información y capacidad efectiva de condicionar la operación.
 - **Identificación y Emplazamiento:** Responsables de los sistemas informáticos, infraestructura de comunicaciones y monitoreo satelital de la flota en la sala central de San Bernardo, con una dotación total de 9 analistas de TI y 6 operadores de monitoreo.
@@ -263,7 +263,7 @@ La ficha distingue intereses, necesidades de información y capacidad efectiva d
 - **Riesgo Operacional si no se Resuelve:** Colapso de servidores locales ante fallas eléctricas, pérdida de datos por sombras de red y fragmentación de la información de tráfico.
 - **Mecanismo de Interacción y Mitigación de Fricción:** Accesos, calidad y mecanismos existentes de intercambio de información por verificar.
 
-### FICHA N.° 11: Yasna Colipán Marín y Colectivo de Conductores Propios (196 Choferes)
+### 2.4.11 FICHA N.° 11: Yasna Colipán Marín y Colectivo de Conductores Propios (196 Choferes)
 
 La ficha distingue intereses, necesidades de información y capacidad efectiva de condicionar la operación.
 - **Identificación y Emplazamiento:** Representa al colectivo de 196 conductores con contrato indefinido de Curimón, quienes tripulan la flota propia en rutas troncales norte y sur.
@@ -276,7 +276,7 @@ La ficha distingue intereses, necesidades de información y capacidad efectiva d
 - **Riesgo Operacional si no se Resuelve:** Fatiga extrema en ruta, vuelcos con lesiones o muerte, paralización gremial y multas de la Dirección del Trabajo.
 - **Mecanismo de Interacción y Mitigación de Fricción:** Alertas oportunas, descanso viable y ausencia de interacción exigida durante conducción.
 
-### FICHA N.° 12: Nolberto Sandoval Pinto y Colectivo de Transportistas Subcontratados (148 Dueños)
+### 2.4.12 FICHA N.° 12: Nolberto Sandoval Pinto y Colectivo de Transportistas Subcontratados (148 Dueños)
 
 La ficha distingue intereses, necesidades de información y capacidad efectiva de condicionar la operación.
 - **Identificación y Emplazamiento:** Representa a los 148 pequeños y medianos transportistas subcontratados (dueños de 1 a 4 camiones), quienes aportan 226 tractocamiones (60,4% de la capacidad rodante) y 258 conductores externos.
@@ -289,7 +289,7 @@ La ficha distingue intereses, necesidades de información y capacidad efectiva d
 - **Riesgo Operacional si no se Resuelve:** Fuga masiva de camiones hacia empresas competidoras, desabastecimiento de flota y colapso de la operación de Curimón.
 - **Mecanismo de Interacción y Mitigación de Fricción:** Condiciones de adhesión, permisos revocables y liquidaciones transparentes.
 
-### FICHA N.° 13: Andrea Lecaros Vives y Grandes Clientes Estratégicos (Cliente 19% y Otros 7)
+### 2.4.13 FICHA N.° 13: Andrea Lecaros Vives y Grandes Clientes Estratégicos (Cliente 19% y Otros 7)
 
 La ficha distingue intereses, necesidades de información y capacidad efectiva de condicionar la operación.
 - **Identificación y Emplazamiento:** Gerenta de Logística de la multinacional agroexportadora líder (representa el 19% del ingreso corporativo de Curimón); se analiza separadamente el grupo de los 8 clientes principales que concentra el 71% de la facturación, sin atribuirle representación de los demás clientes.
@@ -304,7 +304,7 @@ La ficha distingue intereses, necesidades de información y capacidad efectiva d
 
 ## 2.5 Anexo 2.E: Condicionantes de las veintiséis decisiones de diseño del Caso §16.1
 
-El diagnóstico identifica las 26 decisiones del Caso §16.1 y sus restricciones. La Tabla 2.8 conserva la pregunta de origen, la necesidad que debe satisfacerse, el riesgo y los datos necesarios para diseñar. No declara implementaciones adoptadas ni hitos aprobados. La respuesta técnica y su trazabilidad corresponden a los subdocumentos de alcance y arquitectura, preservando especialmente jornada previa, adhesión y llegada física de la flota a terminales.
+El diagnóstico identifica las 26 decisiones del Caso §16.1 y sus restricciones. La Tabla 2.8 conserva la pregunta de origen, la necesidad que debe satisfacerse, el riesgo y los datos necesarios para diseñar. No declara implementaciones adoptadas ni hitos aprobados. La respuesta técnica se encuentra en el registro DP-01 a DP-26 del Formulario T-12 y en S3; este anexo conserva los condicionantes del diagnóstico y no los confunde con SUP-01 a SUP-06 ni SA-01 a SA-08. Se preservan especialmente jornada previa, adhesión y llegada física de la flota a terminales.
 
 **Tabla 2.8.** Condicionantes de las 26 decisiones de diseño del Caso §16.1
 
