@@ -1,0 +1,217 @@
+# Formulario T-15. Nivelación de recursos
+
+audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. Oferta Técnica, Sobre N.º 2. Informe Preparatorio 2. Archivo AUDIT-Formulario-T-15.pdf. Anexo del Subdocumento N.º 7, Plan de trabajo, EDT, cronograma e implantación. Las fuentes están en las Referencias de ese subdocumento.
+
+La Tabla 7.1 resume cada etapa del FEP01, Artículo 17.1, p. 12. Las filas de la marcha blanca de la Etapa 1 y
+del desarrollo de la Etapa 2 traen la dotación de los meses 13 a 15, que el FEP01, Artículo 17.2, p. 13 pide
+demostrar en este formulario.
+
+**Tabla 7.1.** Formulario T-15. Nivelación de recursos por etapa
+
+| Etapa | HH totales | Personas (peak) | Frentes | Meses |
+|---|---|---|---|---|
+| Etapa 1, desarrollo | 51.040 | 33 | 6 | 1 a 12 |
+| Etapa 1, marcha blanca | 10.656 | 26 | 6 | 13 a 15 |
+| Etapa 1, producción y estabilización | 12.640 | 26 | 6, luego 1 | 16 a 20 |
+| Etapa 2, desarrollo | 14.944 | 18 | 2 | 13 a 18 |
+| Etapa 2, marcha blanca | 4.480 | 14 | 2 | 19 y 20 |
+| Operación | 92.160 | 16 | 4 | 21 a 56 |
+
+
+Las horas hombre de cada etapa resultan de la dotación mensual por 160 horas, que son 20 días hábiles
+de 8 horas, el mismo mes contractual de la red de la sección 7.3.1. La implementación suma
+93.760 horas hombre en los meses 1 a 20 y la operación 92.160 en los meses 21 a 56. En los meses 13 a 15
+trabajan 37 personas. Las 26 de la Escuadra de Estabilización E1 y las 18 de la Escuadra de Construcción
+E2 suman 44 porque los siete roles de dirección están en las dos. E1 trabaja en seis frentes, los cinco
+terminales y la guardia central, y E2 en dos, software y firmware. Las horas de esos tres meses se
+reparten según la capacidad de cada escuadra de la Tabla 7.5: 21,5 FTE a la Etapa 1, 14,1 a la
+Etapa 2 y la coordinación por mitades. Los meses 16 y 17 mantienen las 37 personas, con E1 en la
+estabilización de la Etapa 1. Desde el mes 18 el peak baja a 30 y en los meses 19 y 20 a 26.
+
+La Tabla 7.2 es la curva de horas hombre del proyecto por tramo de meses, con su acumulado.
+
+**Tabla 7.2.** Curva de horas hombre por tramo de meses
+
+| Meses | Personas | Horas hombre por mes | Horas hombre del tramo | Acumulado |
+|---|---|---|---|---|
+| 1 y 2 | 14 | 2.240 | 4.480 | 4.480 |
+| 3 a 5 | 24 | 3.840 | 11.520 | 16.000 |
+| 6 a 9 | 30 | 4.800 | 19.200 | 35.200 |
+| 10 a 12 | 33 | 5.280 | 15.840 | 51.040 |
+| 13 a 17 | 37 | 5.920 | 29.600 | 80.640 |
+| 18 | 30 | 4.800 | 4.800 | 85.440 |
+| 19 y 20 | 26 | 4.160 | 8.320 | 93.760 |
+| 21 a 56 | 16 | 2.560 | 92.160 | 185.920 |
+
+*Fuente: elaboración propia. Horas hombre por mes igual a personas por 160 horas.*
+
+La curva sube hasta el peak de los meses 13 a 17, cuando hay dos frentes abiertos, y baja a la dotación
+estable de la operación. El acumulado del mes 12 coincide con las horas de la Etapa 1 en desarrollo y el
+del mes 20 con el total de la implementación.
+
+La Tabla 7.3 reparte las 93.760 horas hombre de la implementación entre los elementos de la
+EDT del Formulario T-14.
+
+**Tabla 7.3.** Horas hombre de la implementación por elemento de la EDT
+
+| Elemento de la EDT | Meses-persona | Horas hombre | Etapa |
+|---|---|---|---|
+| 1 Gestión del proyecto | 60 | 9.600 | 1 y 2 |
+| 2 Levantamiento y diseño | 40 | 6.400 | 1 y 2 |
+| 3 Plataforma | 45 | 7.200 | 1 |
+| 4 Equipo a bordo | 55 | 8.800 | 1 y 2 |
+| 5 Servicios de la Etapa 1 | 110 | 17.600 | 1 |
+| 6 Integraciones | 40 | 6.400 | 1 y 2 |
+| 7 Datos y migración | 30 | 4.800 | 1 y 2 |
+| 8 Servicios de la Etapa 2 | 50 | 8.000 | 2 |
+| 9 Adhesión de transportistas | 20 | 3.200 | 1 y 2 |
+| 10 Calidad y pruebas | 40 | 6.400 | 1 y 2 |
+| 11 Implantación | 80 | 12.800 | 1 y 2 |
+| 12 Innovaciones | 16 | 2.560 | 1 y 2 |
+| Total | 586 | 93.760 |  |
+
+*Fuente: elaboración propia. El elemento 13 es la operación y se declara en la Tabla 7.4.*
+
+Los servicios de la Etapa 1 concentran la mayor parte del esfuerzo, seguidos por la implantación, que
+incluye a los siete analistas en los terminales desde la capacitación hasta la estabilización. La
+adhesión tiene pocas horas y mucha duración: es una negociación de 120 días hábiles conducida por pocas
+personas, y por eso su riesgo es de plazo y no de capacidad.
+
+La Tabla 7.4 es la curva de continuidad operacional, que el formulario pide aparte. Es
+constante durante los 36 meses.
+
+**Tabla 7.4.** Continuidad operacional por paquete, meses 21 a 56
+
+| Paquete | Personas | Horas hombre por mes | Horas hombre en 36 meses |
+|---|---|---|---|
+| 13.1 Mesa de servicio 24x7 | 6 | 960 | 34.560 |
+| 13.2 Operación de la plataforma y gestión del servicio | 4 | 640 | 23.040 |
+| 13.3 Ciclo de vida del equipo a bordo | 2 | 320 | 11.520 |
+| 13.4 Mantención evolutiva | 4 | 640 | 23.040 |
+| Total | 16 | 2.560 | 92.160 |
+
+*Fuente: elaboración propia.*
+
+La mesa de servicio necesita seis personas porque un puesto atendido 24 horas todos los días suma unas
+730 horas al mes, 4,6 personas de 160 horas, y se agrega un segundo puesto en el horario de relevo de
+madrugada, cuando se concentran las consultas de conductores y terminales. Las cuatro personas de la
+operación de la plataforma, junto con las cuatro de mantención evolutiva, forman la rotación de guardia de
+ocho ingenieros que la sección 7.2.3 justifica para una cobertura 24x7.
+
+La Tabla 7.5 reparte la capacidad de cada rol entre las dos escuadras en los meses 13 a 15,
+según la regla de asignación de la sección 7.2.3. Cada valor está en FTE, una persona a
+jornada completa, y entre paréntesis va el porcentaje sobre la capacidad del rol. «Planta» es personal
+de los 22 profesionales del Subdocumento 1 y «refuerzo» es personal que audIT incorpora para el
+proyecto.
+
+**Tabla 7.5.** Asignación de capacidad por rol en los meses 13 a 15
+
+| Rol (personas, origen) | Capacidad (FTE) | Escuadra E1 | Escuadra E2 | Total asignado |
+|---|---|---|---|---|
+| Jefe de Proyecto (1, planta) | 1,0 | 0,4 (40 %) | 0,4 (40 %) | 80 % |
+| Arquitecto de Solución (1, planta) | 1,0 | 0,3 (30 %) | 0,5 (50 %) | 80 % |
+| Encargado de Seguridad de la Información (1, planta) | 1,0 | 0,4 (40 %) | 0,4 (40 %) | 80 % |
+| Líder de Calidad y Pruebas (1, planta) | 1,0 | 0,3 (30 %) | 0,5 (50 %) | 80 % |
+| Líder de Datos (1, planta) | 1,0 | 0,3 (30 %) | 0,5 (50 %) | 80 % |
+| Líder de Operación / SRE (1, planta) | 1,0 | 1,0 (100 %) | 0,0 (0 %) | 100 % |
+| Analista PMO (3, planta) | 3,0 | 2,0 (67 %) | 1,0 (33 %) | 100 % |
+| Líder de Desarrollo (1, planta) | 1,0 | 0,0 (0 %) | 1,0 (100 %) | 100 % |
+| Ingeniero de software sénior (2, planta) | 2,0 | 1,0 (50 %) | 1,0 (50 %) | 100 % |
+| Ingeniero frontend y móvil (2, planta) | 2,0 | 1,0 (50 %) | 1,0 (50 %) | 100 % |
+| Ingeniero de datos (1, planta) | 1,0 | 1,0 (100 %) | 0,0 (0 %) | 100 % |
+| Ingeniero de pruebas y automatización (1, planta) | 1,0 | 1,0 (100 %) | 0,0 (0 %) | 100 % |
+| Ingeniero de firmware (3, planta) | 3,0 | 1,0 (33 %) | 2,0 (67 %) | 100 % |
+| Ingeniero electrónico (1, planta) | 1,0 | 0,0 (0 %) | 1,0 (100 %) | 100 % |
+| Ingeniero de telecomunicaciones y campo (1, planta) | 1,0 | 1,0 (100 %) | 0,0 (0 %) | 100 % |
+| Líder Funcional (1, refuerzo) | 1,0 | 0,4 (40 %) | 0,4 (40 %) | 80 % |
+| Líder de Integración (1, refuerzo) | 1,0 | 0,4 (40 %) | 0,4 (40 %) | 80 % |
+| Líder de Implantación y Gestión del Cambio (1, refuerzo) | 1,0 | 1,0 (100 %) | 0,0 (0 %) | 100 % |
+| Analista de implantación en terreno (7, refuerzo) | 7,0 | 7,0 (100 %) | 0,0 (0 %) | 100 % |
+| Ingeniero SRE / DevOps (2, refuerzo) | 2,0 | 2,0 (100 %) | 0,0 (0 %) | 100 % |
+| Desarrollador full-stack (2, refuerzo) | 2,0 | 0,0 (0 %) | 2,0 (100 %) | 100 % |
+| Ingeniero de datos y analítica (1, refuerzo) | 1,0 | 0,0 (0 %) | 1,0 (100 %) | 100 % |
+| Analista de QA (1, refuerzo) | 1,0 | 0,0 (0 %) | 1,0 (100 %) | 100 % |
+| Total (37 personas: 21 de planta y 16 de refuerzo) | 37,0 | 21,5 (58 %) | 14,1 (38 %) | 96 % |
+
+*Fuente: elaboración propia.*
+
+Ninguna fila supera el 100 % de la capacidad del rol, así que no hay sobreasignación. Las 16 filas de
+roles dedicados suman exactamente su capacidad. Las siete filas de roles de dirección suman 80 % y
+dejan 1,4 FTE para coordinar entre escuadras, por eso el total asignado es 96 % y no 100 %. Las
+cuentas cuadran: 21,5 FTE en E1, 14,1 en E2 y 1,4 de coordinación suman los 37,0 FTE del equipo. En los
+tres meses eso equivale a 64,5 meses-persona en E1, 42,3 en E2 y 4,2 de coordinación, 111 en total.
+
+La sección 7.3.1 calcula la ruta crítica y las holguras de la implementación con una red de
+25 actividades en días hábiles. La Tabla 7.6 trae las estimaciones de tres puntos de 18
+de ellas: optimista (a), más probable (m) y pesimista (b), con la duración esperada y la varianza. Las
+otras siete son las dos reservas, las dos marchas blancas, los dos pasos a producción y la
+estabilización de la Etapa 1, cuya duración fija el contrato o declara audIT.
+
+**Tabla 7.6.** Estimaciones de tres puntos, en días hábiles
+
+| Actividad | a | m | b | Duración esperada | Varianza |
+|---|---|---|---|---|---|
+| A01 | 4 | 5 | 6 | 5 | 0,11 |
+| A02 | 28 | 32 | 42 | 33 | 5,44 |
+| A03 | 38 | 44 | 56 | 45 | 9,00 |
+| A04 | 45 | 58 | 83 | 60 | 40,11 |
+| A05 | 32 | 37 | 48 | 38 | 7,11 |
+| A06 | 95 | 118 | 153 | 120 | 93,44 |
+| A07 | 29 | 35 | 47 | 36 | 9,00 |
+| A08 | 50 | 59 | 74 | 60 | 16,00 |
+| A09 | 70 | 78 | 98 | 80 | 21,78 |
+| A10 | 56 | 65 | 80 | 66 | 16,00 |
+| A11 | 50 | 59 | 74 | 60 | 16,00 |
+| A12 | 30 | 33 | 42 | 34 | 4,00 |
+| A13 | 36 | 40 | 44 | 40 | 1,78 |
+| A16 | 42 | 50 | 58 | 50 | 7,11 |
+| A17 | 31 | 35 | 45 | 36 | 5,44 |
+| A18 | 100 | 118 | 148 | 120 | 64,00 |
+| A20 | 42 | 48 | 66 | 50 | 16,00 |
+| A22 | 20 | 23 | 32 | 24 | 4,00 |
+
+*Fuente: elaboración propia. Duración esperada (a + 4m + b) / 6 y varianza ((b − a) / 6)².*
+
+Las varianzas más altas son las de la adhesión de los transportistas (A06), la instalación progresiva a
+bordo (A18) y la factibilidad con los proveedores (A04). Las tres dependen de terceros y ninguna está
+en la ruta crítica.
+
+La Tabla 7.7 es la malla de precedencias, con el inicio y el término tempranos (ES y EF), el
+inicio y el término tardíos (LS y LF), la holgura total (HT) y la holgura libre (HL) de cada actividad.
+La duración va en días hábiles y el día 0 es el inicio del mes 1.
+
+**Tabla 7.7.** Malla de precedencias y cálculo de holguras
+
+| ID | Descripción | Predecesoras | Duración | ES | EF | LS | LF | HT | HL | Ruta crítica |
+|---|---|---|---|---|---|---|---|---|---|---|
+| A01 | Inicio del proyecto: plan de dirección aprobado y equipo constituido | Ninguna | 5 | 0 | 5 | 0 | 5 | 0 | 0 | Sí |
+| A02 | Levantamiento de procesos en los cinco terminales, línea base de alcance y matriz de trazabilidad (H1) | A01 | 33 | 5 | 38 | 5 | 38 | 0 | 0 | Sí |
+| A03 | Caracterización en terreno de la cobertura móvil de las rutas | A01 | 45 | 5 | 50 | 87 | 132 | 82 | 62 | No |
+| A04 | Verificación de factibilidad con los tres proveedores de posicionamiento y con los fabricantes de los camiones con telemetría de fábrica | A01 | 60 | 5 | 65 | 66 | 126 | 61 | 47 | No |
+| A05 | Arquitectura, plan de seguridad y modelo de datos (H2) | A02 | 38 | 38 | 76 | 38 | 76 | 0 | 0 | Sí |
+| A06 | Plan de adhesión de los 148 transportistas subcontratados: contrato, incentivo y piloto | A02 | 120 | 38 | 158 | 100 | 220 | 62 | 34 | No |
+| A07 | Infraestructura híbrida y ambientes DEV, QA, PREPROD y PROD con observabilidad (H3) | A05 | 36 | 76 | 112 | 76 | 112 | 0 | 0 | Sí |
+| A08 | Migración y verificación documental de las 6.000 vigencias de cuatro planillas | A05, A07 | 60 | 112 | 172 | 132 | 192 | 20 | 20 | No |
+| A09 | Construcción de la Etapa 1 en ocho sprints de dos semanas y entrega para pruebas (H4) | A07 | 80 | 112 | 192 | 112 | 192 | 0 | 0 | Sí |
+| A10 | Integraciones con el sistema de gestión de transporte de 2013, el sistema contable y las tres plataformas de posicionamiento | A04, A07 | 66 | 112 | 178 | 126 | 192 | 14 | 14 | No |
+| A11 | Piloto de equipamiento a bordo por familia de camión, instalado en terminal camión por camión | A03, A07 | 60 | 112 | 172 | 132 | 192 | 20 | 20 | No |
+| A12 | Pruebas integrales y certificación de la Etapa 1: aceptación de usuario, carga, resiliencia y seguridad ofensiva (H5) | A08, A09, A10, A11 | 34 | 192 | 226 | 192 | 226 | 0 | 0 | Sí |
+| A13 | Capacitación de conductores en los terminales y de la torre 24x7 | A06, A09 | 40 | 192 | 232 | 220 | 260 | 28 | 8 | No |
+| A14 | Reserva de contingencia de cronograma de la Etapa 1 | A12 | 14 | 226 | 240 | 226 | 240 | 0 | 0 | Sí |
+| A15 | Marcha blanca de la Etapa 1, meses 13 a 15, con medición diaria y reversión activa (H6 al inicio) | A13, A14 | 60 | 240 | 300 | 260 | 320 | 20 | 0 | No |
+| A16 | Transferencia tecnológica y certificación del equipo de tecnologías de información del mandante | A14 | 50 | 240 | 290 | 270 | 320 | 30 | 10 | No |
+| A17 | Levantamiento y diseño detallado de la Etapa 2 (H8) | A14 | 36 | 240 | 276 | 240 | 276 | 0 | 0 | Sí |
+| A18 | Escalamiento telemático e instalación progresiva a bordo | A06, A11, A14 | 120 | 240 | 360 | 280 | 400 | 40 | 40 | No |
+| A19 | Paso a producción de la Etapa 1 y acta de cierre de la marcha blanca (H7) | A15, A16 | 10 | 300 | 310 | 320 | 330 | 20 | 0 | No |
+| A20 | Construcción de la Etapa 2 en cinco sprints de dos semanas y entrega para pruebas (H9) | A17 | 50 | 276 | 326 | 276 | 326 | 0 | 0 | Sí |
+| A21 | Estabilización posterior al paso a producción de la Etapa 1, con presencia en terminales en el relevo | A19 | 30 | 310 | 340 | 330 | 360 | 20 | 20 | No |
+| A22 | Certificación de la Etapa 2 y cierre del desarrollo (H10) | A20 | 24 | 326 | 350 | 326 | 350 | 0 | 0 | Sí |
+| A23 | Reserva de contingencia de cronograma de la Etapa 2 | A22 | 10 | 350 | 360 | 350 | 360 | 0 | 0 | Sí |
+| A24 | Marcha blanca de la Etapa 2 en convivencia con la Etapa 1 en producción (H11 al inicio) | A21, A23 | 40 | 360 | 400 | 360 | 400 | 0 | 0 | Sí |
+| A25 | Paso a producción de la Etapa 2 y aceptación final del proyecto (H12) | A18, A24 | 20 | 400 | 420 | 400 | 420 | 0 | 0 | Sí |
+
+*Fuente: elaboración propia.*
+
+Las 13 actividades de la ruta crítica tienen holgura total y libre igual a cero, y la red termina el día
+hábil 420, fin del mes 21, que es el hito H12. La sección 7.3.1 analiza la ruta y las holguras.
+

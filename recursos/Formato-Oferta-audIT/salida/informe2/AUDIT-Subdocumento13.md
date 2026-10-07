@@ -41,7 +41,7 @@ de la arquitectura del Subdocumento 4 donde se inserta.
 
 | Tipo | Innovación | Problema del Caso que resuelve | Dónde se inserta |
 |---|---|---|---|
-| 1 | Portal del transportista con liquidación en curso | El 11 % de las liquidaciones se corrige después de emitida | Portal y servicio de liquidación |
+| 1 | Expediente verificable del transportista | El transportista no puede probar ante terceros lo que el sistema ya sabe de él | Portal del transportista y servicio de verificación |
 | 2 | Despliegue sin detener la flota | La intervención a bordo solo ocurre cuando el camión pasa por un terminal | Actualización remota y terminales |
 | 3 | Semirremolque conectado | El sistema no sabe qué semirremolque va enganchado ni cuánto recorre | Equipo a bordo, portería y verificación bloqueante |
 | 4 | Esquema de adhesión y propiedad del dispositivo | Los dueños de camión no aceptan un equipo que delate cuándo trabajan para otros | Consentimiento, adhesión y equipo a bordo |
@@ -73,83 +73,91 @@ la 5 miden su indicador antes del mes 16.
 
 El capítulo se apoya en el esquema de solución del Subdocumento 3, en la arquitectura del
 Subdocumento 4, en el plan de trabajo del Subdocumento 7, que ubica los paquetes de cada innovación, y
-en el plan de riesgos del Subdocumento 8. La innovación 1 usa además el motor de costeo del
-Subdocumento 5. La 4 es contractual antes que técnica, y de su resultado depende cuántos de los 34
+en el plan de riesgos del Subdocumento 8. La innovación 1 usa además los registros de jornada, vigencias y
+hoja de vida que produce la Etapa 1. La 4 es contractual antes que técnica, y de su resultado depende cuántos de los 34
 camiones de terceros sin equipo llegan a intervenirse. Las fichas completas van en el Formulario T-19, que acompaña
 este capítulo como archivo propio (`AUDIT-Formulario-T-19.pdf`), conforme al
 Comunicado 10, sección 1.
 
 ## 13.1 Innovación 1 — Producto o servicio
 
-La innovación 1 es de producto o servicio, según el FEP01, Artículo 28, p. 19. Su nombre es Portal del
-transportista con liquidación en curso.
+La innovación 1 es de producto o servicio, según el FEP01, Artículo 28, p. 19. Su nombre es Expediente verificable
+del transportista: un documento que el dueño del camión descarga del portal y presenta a cualquier
+tercero, con la jornada acreditada de sus conductores, la vigencia de sus habilitaciones y la hoja de
+vida de sus equipos, y que ese tercero puede verificar sin acceso al sistema del mandante.
 
-**Problema u oportunidad.**  Hoy el transportista subcontratado espera nueve días a que ocho
-personas calculen su liquidación, y el once por ciento de esos cálculos se corrige después
-(Caso, numeral 4.11, p. 12). Durante ese tiempo no tiene forma de saber cuánto va a cobrar ni por qué. La
-innovación consiste en mostrarle su liquidación mientras se construye, viaje a viaje, en lugar de
-entregársela cerrada al final del mes.
+**Problema u oportunidad.**  Los 148 transportistas subcontratados operan 226 camiones y emplean
+258 conductores (Caso, numeral 14.1, p. 29), y muchos trabajan también para otros clientes
+(Caso, numeral 4.3, p. 9). Cada uno de esos clientes, la autoridad y la aseguradora le piden lo mismo que
+le pide Curimón: que acredite la jornada de sus conductores y la vigencia de sus documentos. Hoy no
+puede, porque nadie lleva ese registro. Desde la Etapa 1, la solución de audIT produce exactamente esa
+evidencia para los viajes que el transportista hace para Curimón, pero la evidencia queda dentro del
+sistema del mandante. La oportunidad es devolvérsela a su titular en una forma que tenga valor fuera
+de Curimón, y convertir así un dato que el transportista entrega en un activo que recibe. Esa es la
+contraprestación que menos cuesta al mandante y que más pesa en la decisión de adherir.
 
-**Tecnología que la sustenta.**  Portal segregado por identidad con vista propia de cada
-transportista, alimentado por el mismo motor de costeo que produce la liquidación oficial. Cada viaje
-aparece con su tarifa aplicada, sus tiempos de espera certificados por geocerca y sus descuentos, en el
-momento en que el dato entra al sistema y no cuando el mes cierra.
+**Tecnología que la sustenta.**  Documento electrónico firmado por el mandante con firma
+electrónica avanzada (Congreso Nacional de Chile, 2002), que contiene sólo datos del propio transportista, y un
+servicio público de verificación que recibe el código del documento y responde si es auténtico y si
+sigue vigente, sin revelar su contenido. Como alternativa de formato se evalúa la credencial
+verificable, que alcanzó el estado de recomendación en mayo de 2025 (World Wide Web Consortium, 2025). La jornada
+de cada conductor sólo entra al expediente con el consentimiento de ese conductor, porque es un dato
+personal que la Ley 21.719 protege (Ministerio de Hacienda, 2024).
 
-**Delimitación frente a las bases.**  Los criterios 21 y 29 obligan a que el transportista
-autenticado consulte sus viajes, evidencias y liquidación en curso dentro del portal del mandante
-(Caso, capítulo 18, p. 42). Eso está comprometido en el alcance y no se presenta como innovación. Lo que
-agrega esta ficha es que la evidencia salga del portal como un documento del transportista, verificable
-por un tercero que no tiene acceso al sistema del mandante. Un expediente exportable con la jornada
-acreditada de sus conductores, la vigencia de sus habilitaciones y la hoja de vida de sus equipos, que
-él presenta a sus otros clientes, a la autoridad o a su aseguradora. Las bases no lo piden, y tampoco
-cae en la exclusión del Capítulo 11 sobre administrar la contabilidad de los transportistas
-(Caso, capítulo 11, p. 24), porque no administra nada. Devuelve a su titular una evidencia ya producida.
+**Delimitación frente a las bases.**  Los criterios 21 y 29 del Caso obligan a que el
+transportista vea sus viajes y su liquidación en curso dentro del portal del mandante (Caso, capítulo
+18, pp. 42 y 43). Eso es alcance base del Subdocumento 3 (requerimientos RF-020 y RF-022) y no se presenta
+como innovación. Lo que agrega esta ficha es que la evidencia salga del portal con valor probatorio ante
+un tercero que no tiene cuenta en él. Ninguna exigencia de las bases lo pide. Tampoco cae en la
+exclusión del Capítulo 11 sobre administrar la contabilidad de los transportistas (Caso, capítulo
+11, p. 24), porque no administra nada: entrega a su titular una evidencia ya producida.
 
-**Nivel de madurez.**  Escala de niveles de madurez tecnológica de uno a nueve
+**Nivel de madurez.**  Se califica con la escala de niveles de madurez tecnológica de uno a nueve
 (International Organization for Standardization, 2013). La firma electrónica avanzada con verificación en línea está en nivel nueve, en
-operación productiva y regulada en Chile desde 2002 (Congreso Nacional de Chile, 2002), y es la línea base
-comprometida. La credencial verificable alcanzó el estado de recomendación en mayo de 2025
-(World Wide Web Consortium, 2025) y se sitúa entre siete y ocho por su adopción todavía acotada en el ecosistema
-logístico local.
+operación regulada en Chile desde 2002 (Congreso Nacional de Chile, 2002), y es el formato comprometido. La
+credencial verificable se ubica entre siete y ocho por su adopción todavía acotada en el transporte
+nacional, y sólo se adopta si los destinatarios reales la aceptan.
 
-**Diseño de la incorporación.**  Un servicio de emisión de expediente en la capa de servicios de
-negocio, que consume control de jornada, gestión documental y gestión de flota. Un servicio público de
-verificación sin autenticación, que recibe un código y responde válido o inválido sin revelar
-contenido. La firma la provee la bóveda de claves de la capa de seguridad. El portal expone la
-solicitud y la descarga. La decisión entre firma avanzada y credencial verificable se documenta en el
-mes cuatro con el levantamiento de destinatarios reales, la emisión se construye entre los meses diez y
-doce, y el expediente queda disponible durante la marcha blanca de la Etapa 1. El motor de costeo del
-que depende la liquidación en curso ya forma parte del alcance de la Etapa 1.
+**Diseño de la incorporación.**  El servicio de emisión vive en el contexto Personas y
+cumplimiento, que ya guarda la jornada con su nivel de evidencia, y consulta a Flota y activos por la
+hoja de vida de los camiones. El servicio de verificación es el único componente público sin
+autenticación, detrás de la misma puerta de enlace, y no expone datos. La firma la entrega la bóveda de
+claves de la capa de seguridad. El portal del transportista agrega el botón de emisión y la gestión del
+consentimiento de cada conductor. En la EDT es el paquete 12.1, que usa los paquetes 5.1 y 5.7. En el
+mes 4 se entrevista a destinatarios reales (dos clientes de transportistas, una aseguradora y la
+autoridad laboral) y se fija el formato. La construcción ocurre dentro de la Etapa 1, entre los meses 8
+y 10, y el expediente está disponible para la cohorte inicial de adherentes en la marcha blanca.
 
-La construcción y despliegue del servicio se integran en los paquetes EDT 4.3 (Servicios de Liquidación y Trazabilidad) y EDT 7.3 (Portal del Transportista y Módulo de Expedientes), completando su desarrollo en el mes 12 para su verificación en la marcha blanca.
+**Impacto económico.**  La inversión es el desarrollo de dos servicios pequeños sobre datos que la
+Etapa 1 ya produce, y el costo operacional es el certificado de firma del emisor y la operación del
+servicio de verificación. El beneficio para el mandante es indirecto y está en la adhesión: el
+expediente es un incentivo que no requiere pagar al transportista, y cada transportista adherido amplía
+la jornada acreditada y la evidencia de espera que sostiene los cobros. En el flujo de caja de la Oferta
+Económica, la innovación aparece como una partida de desarrollo en la Etapa 1 y una partida de
+operación mensual, sin ingresos atribuidos.
 
-**Impacto económico.**  La inversión es incremental sobre el portal ya presupuestado, agregando
-el desarrollo de servicios y la suscripción de certificados de firma del emisor.
-
-El efecto operacional reduce los costos administrativos de rectificación manual de liquidaciones y auditorías externas. En el flujo de caja de la Oferta Económica, la innovación se refleja en la partida de inversión CAPEX de desarrollo de software complementario y en los costos OPEX de infraestructura cloud para la custodia y verificación de credenciales.
-
-**Indicador de verificación.**  La Tabla 13.2 fija los indicadores de verificación. El primero
-mide el tiempo medio de resolución de discrepancias en liquidaciones gracias a la evidencia objetiva, y el segundo
-mide la aceptación documental del expediente exportable con firma digital.
+**Indicador de verificación.**  La Tabla 13.2 fija los dos indicadores. Ambos parten
+de cero porque el expediente no existe hoy.
 
 **Tabla 13.2.** Indicadores de la innovación 1
 
-| Indicador | Línea base | Meta | Momento de medición |
+| Indicador | Línea base | Meta | Medición |
 |---|---|---|---|
-| Tiempo medio de resolución de discrepancias en liquidaciones | 9 días hábiles | Menos de 48 horas | Cierre de la marcha blanca, mes 15 |
-| Expedientes de liquidación aceptados sin objeción documental formal | 0 % | 98 % o más | Tercer cierre mensual tras el paso a producción |
+| Transportistas adheridos que emitieron al menos un expediente | No existe | 50 % de los adheridos | Mes 21 |
+| Verificaciones de expedientes respondidas en no más de 5 segundos | No existe | 99 % | Mensual desde el mes 16 |
 
-*Fuente: elaboración propia sobre el Caso, numeral 4.11, p. 12.*
+*Fuente: elaboración propia. Datos del registro de emisiones y del servicio de verificación.*
 
-Las dos metas se miden con datos del propio portal y del motor de costeo. Se asegura una
-reducción drástica de la fricción administrativa con los transportistas.
+Las dos metas se miden con datos que la propia solución registra. La primera mide si el transportista lo
+valora, que es el riesgo de esta innovación, y la segunda si el tercero puede usarlo.
 
-**Riesgo de adopción.**  Que el transportista no perciba utilidad y no emita el expediente, con
-probabilidad media e impacto alto. Se mitiga asistiendo la primera emisión en el terminal durante el
-enrolamiento. El riesgo secundario es que los destinatarios no acepten el documento como prueba,
-mitigado levantando destinatarios reales en el mes cuatro antes de construir.
-
-En caso de baja adopción o retraso en la emisión por parte de los transportistas, el plan de contingencia contempla la generación automática del expediente consolidado al cierre de cada ciclo mensual y su envío asistido por correo electrónico certificado, garantizando la disponibilidad de la evidencia sin alterar los flujos de liquidación estándar.
+**Riesgo de adopción.**  Que el transportista no perciba utilidad y no lo emita, con probabilidad
+media e impacto medio, mitigado con la primera emisión asistida en el terminal durante el enrolamiento.
+Que los destinatarios no acepten el documento como prueba, con probabilidad media e impacto alto,
+mitigado con las entrevistas del mes 4, antes de construir. Que un conductor no consienta incluir su
+jornada, mitigado mostrando en el expediente la jornada de los conductores que sí consintieron. Si la
+adopción es baja, la contingencia es emitir el expediente automáticamente cada mes a los
+transportistas que lo pidan, sin acción de su parte.
 
 ## 13.2 Innovación 2 — Proceso
 
@@ -333,87 +341,84 @@ La innovación 4 es de modelo de negocio o de contratación, según el FEP01, Ar
 Esquema de adhesión y propiedad del dispositivo, y responde a lo que el Caso, capítulo 19, p. 44 pide
 para este tipo: hacerse cargo de la relación con los transportistas subcontratados.
 
-**Problema u oportunidad.**  Financiamiento del dispositivo, incentivos de adhesión,
-consentimiento granular y beneficios verificables. La primera pregunta que hace un dueño de camión es
-de quién es el equipo, quién lo paga y qué pasa con él si deja de trabajar con la compañía. La segunda
-es si el aparato va a delatar cuándo trabaja para la competencia. Mientras esas dos preguntas no tengan
-respuesta, ningún diseño técnico se despliega. La innovación separa la propiedad del equipo de la
-propiedad del dato, y le entrega la segunda al dueño del camión.
+**Problema u oportunidad.**  Las dos primeras preguntas que hace un dueño de camión son de quién
+es el equipo, quién lo paga y qué pasa con él si deja de trabajar con la compañía, y si el aparato va a
+delatar cuándo trabaja para la competencia. Son 148 dueños de 226 camiones (Caso, numeral 14.1, p. 29) que
+no dependen de la compañía, y sin su acuerdo nada de lo que dependa de ellos se despliega
+(Caso, capítulo 10, restricción 2, p. 23). La innovación separa la propiedad del equipo de la propiedad del
+dato, le entrega la segunda al dueño del camión y financia el incentivo con un ingreso que hoy se pierde.
 
-**Tecnología que la sustenta.**  Figura de comodato sobre el equipamiento, con condiciones de
-retiro y de traspaso definidas desde el inicio. Modo de privacidad implementado en el firmware del
-dispositivo y no en configuración de servidor, de modo que la posición deja de emitirse hacia el
-mandante cuando el camión trabaja para otro cliente, y esa garantía sea verificable por el dueño en
-lugar de prometida. Consentimiento granular y revocable administrado desde el portal, con registro
-auditable de cada acceso a la información de localización.
+**Tecnología que la sustenta.**  Ventana de transmisión aplicada en el firmware del equipo a bordo
+y no en la configuración del servidor: el equipo sólo emite posición mientras existe un viaje asignado
+por Curimón, y fuera de ella no transmite. El dueño del camión puede auditar esa regla desde su consola
+de permisos, que le muestra cada acceso a la localización de sus camiones. Comodato del equipo con
+retiro sin costo. Y reparto con el transportista de la espera recuperada que su propia evidencia permite
+cobrar.
 
-**Delimitación frente a las bases.**  El Capítulo 11 resuelve quién compra el hardware
-(Caso, capítulo 11, p. 24), y presentar esa regla como innovación sería presentar como propia una decisión
-que ya está en las bases. Lo que el Caso deja abierto es la decisión quinta del numeral 16.1, sobre el
-dispositivo instalado en un camión de un tercero (Caso, numeral 16.1, p. 34), y la restricción 2, que
-obliga a conseguir por contrato, por incentivo o por diseño lo que dependa de terceros
-(Caso, capítulo 10, p. 23). Esta ficha agrega tres cosas que las bases no piden. La ventana de transmisión
-gobernada en el firmware, que convierte una promesa de privacidad en una propiedad verificable. El
-comodato con retiro sin costo, que elimina el riesgo patrimonial del transportista sobre un activo que
-es suyo. Y el financiamiento del incentivo con el recupero de un ingreso que hoy se pierde, de modo que
-la adhesión no compita con el margen operacional de nueve por ciento del mandante
-(Caso, numeral 2.3, p. 7).
+**Delimitación frente a las bases.**  El plan de adhesión es alcance base: el criterio 27 del Caso
+lo exige y el Subdocumento 3 lo desarrolla (sección ?). Tampoco es innovación quién
+compra el equipo, porque el Capítulo 11 lo resuelve (Caso, capítulo 11, p. 24). Lo que el Caso deja abierto
+es la decisión 5 del Caso, numeral 16.1, p. 34, sobre el equipo en un camión ajeno, y la restricción 2, que
+obliga a conseguir por contrato, incentivo o diseño lo que dependa de terceros. Esta innovación es el
+mecanismo que hace viable el plan, y agrega tres cosas que las bases no piden: la ventana de transmisión
+gobernada en el firmware, que convierte una promesa de privacidad en una propiedad verificable por el
+dueño, el comodato con retiro sin costo, y el financiamiento del incentivo con el recupero de la espera,
+de modo que la adhesión no compita con el margen operacional del 9 % (Caso, numeral 2.3, p. 7).
 
-**Nivel de madurez.**  Los componentes técnicos se evalúan en la escala de niveles de madurez
-tecnológica (International Organization for Standardization, 2013). El control de transmisión por ventana en el dispositivo está en nivel
-ocho, porque la gestión remota de configuración de equipos conectados es tecnología productiva y lo
-específico es la regla de negocio que la gobierna. El registro de consentimiento granular y revocable
-está en nivel ocho y su exigencia es normativa (Ministerio de Hacienda, 2024). El componente contractual no se
-califica en esta escala porque no es una tecnología. El comodato de equipamiento a proveedores de
-servicio es figura de uso corriente y no requiere desarrollo. El reparto de recupero sobre evidencia
-aportada tiene precedente acotado y poca documentación pública en el sector nacional.
+**Nivel de madurez.**  Los componentes técnicos se califican con la escala de niveles de madurez
+tecnológica (International Organization for Standardization, 2013). El control de transmisión por ventana está en nivel ocho, porque la
+gestión remota de configuración de equipos conectados es tecnología productiva y lo propio es la regla
+que la gobierna. El registro de consentimiento granular y revocable está en nivel ocho y su exigencia es
+legal (Ministerio de Hacienda, 2024). El componente contractual no se califica en esa escala. El comodato de
+equipamiento es una figura de uso corriente, y el reparto del recupero sobre evidencia aportada por el
+proveedor tiene poco precedente documentado en el transporte nacional.
 
-**Diseño de la incorporación.**  La ventana se aplica en la unidad telemática y en el búfer
-local, que almacenan fuera de ella y no transmiten. El concentrador de dispositivos distribuye la
-configuración de ventana a cada equipo. Un servicio de consentimiento y un servicio de adhesión, ambos
-nuevos, definen la ventana desde la asignación del viaje y registran la revocación. El portal expone la
-consola de permisos con bitácora. La adhesión comienza en el mes uno, antes que cualquier construcción,
-porque el numeral 13.1 advierte que hay decisiones cuyo plazo no lo fija la tecnología sino una
-negociación con terceros, y las negociaciones no se paralelizan (Caso, numeral 13.1, p. 26). La cohorte
-piloto va entre los meses seis y nueve, la consola entre el nueve y el doce, y el resultado se mide en
-la marcha blanca. El tratamiento contable del comodato y el reparto concreto del recupero de
-sobreestadía requieren definición conjunta con el mandante.
+**Diseño de la incorporación.**  La ventana se aplica en el equipo a bordo y en su búfer local, que
+fuera de ella no guarda posición. La plataforma envía a cada equipo la ventana desde la asignación del
+viaje. El contexto Personas y cumplimiento registra el consentimiento y su revocación, el contexto Flota
+y activos registra la adhesión de cada camión y su modalidad, y Liquidación y costeo calcula la parte
+de la espera recuperada que corresponde a cada transportista según la regla RN-08 del Formulario T-12.
+En la EDT es el paquete 12.4, que usa los paquetes 9.1 y 9.2 de la adhesión, 4.1 del firmware y 5.7 del
+portal. El anexo se valida jurídicamente en los meses 2 y 3, la cohorte inicial firma entre los meses 6
+y 9, la ventana y la consola se construyen en la Etapa 1 entre los meses 6 y 10, y el resultado se mide
+en la marcha blanca. La proporción de la espera recuperada que va al transportista se fija en el anexo y
+la aprueba el Comité Ejecutivo en el mes 2, antes de la primera conversación con los transportistas.
 
-Las actividades se articulan en los paquetes EDT 1.3 (Validación Jurídica del Convenio de Comodato y Privacidad, meses 1 a 3), EDT 5.2 (Campaña de Enrolamiento y Adhesión en Terminales, meses 3 a 8) y EDT 7.4 (Consola de Consentimiento y Soberanía del Dato en Portal, meses 6 a 10).
+**Impacto económico.**  El equipo lo compra el mandante, y audIT especifica la cantidad sobre las
+poblaciones del Caso y no sobre la adhesión (sección ?). Las partidas propias son
+el diseño y la validación jurídica del anexo, la campaña en los cinco terminales y la consola de
+consentimiento, todas valorizadas en la Oferta Económica. En el costo operacional aumentan la
+conectividad, el soporte y la reposición de los equipos en comodato, y disminuye el costo de gestionar
+las objeciones de cobro. El recupero parte de una base del Caso: los clientes objetaron el 71 % de lo
+facturado en 2025 por tiempos de espera, porque la hora de llegada se anota en papel (Caso, numeral
+4.7, p. 11). Ese recupero financia el incentivo, se valoriza en la Oferta Económica y no se compromete
+como ingreso.
 
-**Impacto económico.**  La adquisición del equipamiento es del mandante conforme al
-Capítulo 11, y audIT especifica la cantidad sobre las poblaciones del Caso, con los 34 camiones de
-terceros sin equipo incluidos (sección 4.2.1). Las partidas propias son el diseño y la validación
-jurídica del anexo, la campaña de enrolamiento en cinco terminales con presencia en horario de relevo,
-y la consola de consentimiento, todas valorizadas en el flujo de caja de la Oferta Económica. En costo
-operacional aumentan la conectividad, el soporte y la reposición del parque en comodato, y disminuyen
-el costo de la liquidación mensual y el de gestionar las objeciones de cobro. El beneficio se apoya en
-una base verificada: los clientes objetaron el setenta y uno por ciento de lo facturado en 2025 por
-tiempos de espera (Caso, numeral 4.7, p. 11), porque la hora de llegada se anota en papel. La meta de
-reducir la objeción bajo el veinte por ciento genera un recupero que se valoriza en la Oferta Económica
-y no se compromete como ingreso. Ese recupero es el que financia el incentivo, y su reparto concreto se
-fija en el anexo contractual.
+**Indicador de verificación.**  La Tabla 13.5 fija los indicadores. El primero mide la
+propiedad que el dueño del camión necesita creer, y los otros dos si el mecanismo funciona.
 
-En la estructura de costos de la Oferta Económica, la inversión inicial cubre la asesoría legal y la campaña de difusión en terreno, mientras que el flujo de caja operacional refleja la amortización del comodato y el retorno generado por la disminución drástica de objeciones comerciales en tiempos de espera.
+**Tabla 13.5.** Indicadores de la innovación 4
 
-**Indicador de verificación.**  Línea base cero de ciento cuarenta y ocho transportistas
-adheridos. Meta de setenta por ciento al cierre de la Etapa 1 y noventa por ciento al cierre de la
-Etapa 2. La primera medición de anexos firmados ocurre desde el mes tres, mucho antes del paso a
-producción, lo que satisface con holgura el requisito deseable de que al menos una innovación sea
-verificable durante la marcha blanca. Indicadores complementarios: tasa de revocación del
-consentimiento bajo el diez por ciento de los adheridos, y objeción sobre cobros de espera respaldados
-bajo el veinte por ciento desde el setenta y uno actual.
+| Indicador | Línea base | Meta | Medición |
+|---|---|---|---|
+| Posiciones transmitidas fuera de la ventana de un viaje asignado | No existe | Cero | Auditoría mensual desde el mes 13 |
+| Transportistas adheridos que reciben parte de la espera recuperada | No existe | 100 % con cobro respaldado | Cada liquidación desde el mes 16 |
+| Consentimientos revocados sobre los otorgados | No existe | Menos de 10 % | Mensual desde el mes 13 |
 
-**Riesgo de adopción.**  Que la adhesión no alcance el setenta por ciento en la Etapa 1, con
-probabilidad media e impacto alto, porque limita jornada, posición y emisiones sobre el sesenta coma
-cuatro por ciento de la capacidad. Se mitiga comenzando en el mes uno y mostrando beneficio verificable
-antes de pedir el equipo, y la contingencia es escalonar el incentivo y extender la modalidad de datos,
-que no requiere instalar nada. Que el transportista desconfíe de la ventana de transmisión, que se
-mitiga haciéndola auditable por él mismo desde su consola de permisos. Que los clientes no acepten la
-evidencia telemática como respaldo del cobro, lo que eliminaría la fuente de financiamiento del
-incentivo, con contingencia de financiarlo con la reducción del costo de liquidación, que no depende
-del cliente. Y que el anexo no resista revisión jurídica, con probabilidad baja e impacto alto,
-mitigado por la validación entre los meses uno y tres, antes de construir.
+*Fuente: elaboración propia. Datos del registro de transmisiones, de la liquidación y del registro de consentimientos.*
+
+Las tres metas se miden desde la marcha blanca con datos de la propia solución. La adhesión de 104
+transportistas en el mes 16 y 134 en el mes 21 es el resultado que esta innovación sostiene, pero su
+meta pertenece al criterio 27 del alcance base y se mide allí.
+
+**Riesgo de adopción.**  Que la adhesión no alcance el 70 % en la Etapa 1, con probabilidad media e
+impacto alto, mitigado empezando la conversación en el mes 2 y mostrando el beneficio antes de pedir el
+equipo. La contingencia son las tres medidas del Subdocumento 3 si en el mes 9 la adhesión no llega al
+40 %. Que el transportista desconfíe de la ventana, mitigado haciéndola auditable por él mismo. Que los
+clientes no acepten la evidencia telemática para el cobro y desaparezca la fuente del incentivo, con la
+contingencia de financiarlo con el ahorro de la liquidación automática, que no depende del cliente. Y
+que el anexo no resista revisión jurídica, con probabilidad baja e impacto alto, mitigado validándolo
+antes de construir.
 
 ## 13.5 Innovación 5 — Experiencia de usuario, sostenibilidad o impacto social
 
@@ -550,7 +555,8 @@ Conforme al Comunicado 10, sección 7.2, cada sección de este subdocumento y ca
 | Sección | Herramienta | Finalidad del uso | Nivel en texto | Nivel en diagramas | Revisión humana (quién y qué verificó) |
 |---|---|---|---|---|---|
 | Artículo 46 | Claude Opus 5.5 en Claude Code | Redacción de las respuestas 88 a 100 y ubicación de la sección que resuelve cada una | Alto | Ninguno | Carlos Jesús Abarza Suazo, Director de Auditoría y Aseguramiento Tecnológico: Revisión y validación de ingeniería |
-| Introducción | Claude Opus 5.5 en Claude Code y conector de Lucid | Borrador de la estrategia y la tabla de la cartera. Diagrama de la cartera escrito como código para Lucid | Alto | Medio | Carlos Jesús Abarza Suazo, Director de Auditoría y Aseguramiento Tecnológico: Revisión y validación de ingeniería |
-| 13.1, 13.2, 13.4 y 13.5 | Claude Opus 5.5 en Claude Code | Traslado del texto del Informe 1 ordenado por los siete elementos del Artículo 29, retiro de lo sancionado en las observaciones 93 a 100 y verificación de las citas al Caso | Medio | Ninguno | Carlos Jesús Abarza Suazo, Director de Auditoría y Aseguramiento Tecnológico: Revisión y validación de ingeniería |
+| Introducción | Claude Opus 5.5 en Claude Code y conector de Lucid | Redacción inicial de la estrategia y la tabla de la cartera. Diagrama de la cartera escrito como código para Lucid | Alto | Medio | Carlos Jesús Abarza Suazo, Director de Auditoría y Aseguramiento Tecnológico: Revisión y validación de ingeniería |
+| 13.2 y 13.5 | Claude Opus 5.5 en Claude Code | Traslado del texto del Informe 1 ordenado por los siete elementos del Artículo 29, retiro de lo sancionado en las observaciones 93 a 100 y verificación de las citas al Caso | Medio | Ninguno | Carlos Jesús Abarza Suazo, Director de Auditoría y Aseguramiento Tecnológico: Revisión y validación de ingeniería |
 | 13.3 | Claude Opus 5.5 en Claude Code y conector de Lucid | Búsqueda de fichas de fabricante, especificaciones de hardware institucional y diagrama de arquitectura escrito como código | Alto | Medio | Carlos Jesús Abarza Suazo, Director de Auditoría y Aseguramiento Tecnológico: Revisión y validación de ingeniería |
 | Formulario T-19 | Claude Opus 5.5 en Claude Code | Armado de las cinco fichas desde las secciones 13.1 a 13.5 | Alto | Ninguno | Carlos Jesús Abarza Suazo, Director de Auditoría y Aseguramiento Tecnológico: Revisión y validación de ingeniería |
+| 13.1 y 13.4, y fichas 1 y 4 del Formulario T-19 | Claude Opus 5.5 en Claude Code | Rediseño de la innovación 1 como expediente verificable y de los indicadores de la innovación 4, sobre decisiones del equipo y la revisión del Informe 1 | Alto | Ninguno | [nombre y cargo de quien revisó, y qué verificó] |

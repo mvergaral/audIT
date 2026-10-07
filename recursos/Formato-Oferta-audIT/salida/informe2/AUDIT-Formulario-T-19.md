@@ -3,25 +3,25 @@
 audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. Oferta Técnica, Sobre N.º 2. Informe Preparatorio 2. Archivo AUDIT-Formulario-T-19.pdf. Anexo del Subdocumento N.º 13, Innovaciones. Las fuentes están en las Referencias de ese subdocumento.
 
 
-## Innovación 1. Producto o servicio. Portal del transportista con liquidación en curso
+## Innovación 1. Producto o servicio. Expediente verificable del transportista
 
 | Campo | Contenido |
 |---|---|
-| Problema u oportunidad | La liquidación al transportista subcontratado toma nueve días, la hacen ocho personas y el 11 % se corrige después de emitida (Caso, numeral 4.11, p. 12). Además, el transportista no puede probar ante terceros la evidencia que el sistema ya produce sobre él |
-| Tecnología o práctica | Portal segregado por identidad alimentado por el motor de costeo de la liquidación oficial. Expediente exportable con jornada acreditada, habilitaciones y hoja de vida de los equipos, firmado y verificable por un tercero sin acceso al sistema |
-| Nivel de madurez | Escala de niveles de madurez tecnológica de 1 a 9. Firma electrónica avanzada con verificación en línea en nivel 9, línea base comprometida. Credencial verificable entre los niveles 7 y 8 |
-| Fuentes | International Organization for Standardization (2013). Congreso Nacional de Chile (2002), Ley N.º 19.799. World Wide Web Consortium (2025) |
-| Dónde se inserta en la arquitectura | Servicio de emisión de expediente en la capa de servicios de negocio, que consume control de jornada, gestión documental y gestión de flota. Servicio público de verificación. Firma desde la bóveda de claves de la capa de seguridad. Solicitud y descarga en el portal |
-| Paquetes de la EDT | EDT 4.3 (Servicios de Liquidación) y EDT 7.3 (Portal y Expedientes) |
-| Mes del cronograma | Decisión de firma en el mes 4. Construcción entre los meses 10 y 12. Disponible en la marcha blanca de la Etapa 1 |
-| Inversión requerida | Desarrollo incremental sobre el portal ya presupuestado y suscripción de certificados de firma del emisor |
-| Efecto en el costo operacional | Reducción en horas de rectificación manual y soporte a transportistas; costo menor en certificados de firma digital |
-| Beneficio esperado | Menos liquidaciones corregidas (de 11 % a menos de 2 %) y menor tiempo de cierre mensual. Reflejado en ahorros OPEX del flujo de caja |
-| Indicador, línea base y meta | Tiempo medio de resolución de discrepancias en liquidaciones, de 9 días a menos de 48 horas. Expedientes de liquidación aceptados sin objeción documental formal, de 0 % a 98 % o más |
-| Momento de medición | Cierre de la marcha blanca, mes 15. Tercer cierre mensual tras el paso a producción |
-| Riesgo de adopción | Que el transportista no perciba utilidad y no emita el expediente, probabilidad media e impacto alto. Que los destinatarios no acepten el documento como prueba |
-| Mitigación | Asistir la primera emisión en el terminal durante el enrolamiento. Levantar destinatarios reales en el mes 4, antes de construir |
-| Contingencia | Generación asistida y despacho automático del expediente mensual por correo electrónico certificado ante baja adopción inicial |
+| Problema u oportunidad | 148 transportistas con 226 camiones y 258 conductores (Caso, numeral 14.1, p. 29), muchos de los cuales trabajan también para otros clientes (numeral 4.3, p. 9), no pueden acreditar ante terceros la jornada de sus conductores ni la vigencia de sus documentos. La solución produce esa evidencia para los viajes de Curimón, pero queda dentro del sistema del mandante |
+| Tecnología o práctica | Documento firmado por el mandante con firma electrónica avanzada, con datos sólo del propio transportista, y servicio público de verificación que responde si el documento es auténtico y vigente sin revelar su contenido. La jornada de cada conductor entra sólo con su consentimiento. Credencial verificable como formato alternativo |
+| Nivel de madurez | Escala de niveles de madurez tecnológica de 1 a 9. Firma electrónica avanzada con verificación en línea en nivel 9, formato comprometido. Credencial verificable entre los niveles 7 y 8, sólo si los destinatarios la aceptan |
+| Fuentes | International Organization for Standardization (2013). Congreso Nacional de Chile (2002), Ley N.º 19.799. World Wide Web Consortium (2025). Ley N.º 21.719 (2024) |
+| Dónde se inserta en la arquitectura | Servicio de emisión en el contexto Personas y cumplimiento, que consulta a Flota y activos. Servicio público de verificación detrás de la puerta de enlace. Firma desde la bóveda de claves. Emisión y consentimientos en el portal del transportista. Subdocumento 13, sección 13.1 |
+| Paquetes de la EDT | EDT 12.1, sobre los paquetes 5.1 (Personas y cumplimiento) y 5.7 (Portal del transportista) |
+| Mes del cronograma | Entrevistas a destinatarios y elección del formato en el mes 4. Construcción entre los meses 8 y 10. Disponible para la cohorte inicial en la marcha blanca de la Etapa 1 |
+| Inversión requerida | Desarrollo de los servicios de emisión y de verificación sobre datos que la Etapa 1 ya produce |
+| Efecto en el costo operacional | Certificado de firma del emisor y operación del servicio de verificación |
+| Beneficio esperado | Incentivo de adhesión que no requiere pagar al transportista. Cada adherido amplía la jornada acreditada y la evidencia de espera que sostiene los cobros. Sin ingresos atribuidos en el flujo de caja |
+| Indicador, línea base y meta | Transportistas adheridos que emitieron al menos un expediente, de no existente a 50 % de los adheridos. Verificaciones respondidas en no más de 5 segundos, 99 % |
+| Momento de medición | Mes 21 para el primer indicador. Mensual desde el mes 16 para el segundo |
+| Riesgo de adopción | Que el transportista no perciba utilidad, probabilidad media e impacto medio. Que los destinatarios no acepten el documento como prueba, probabilidad media e impacto alto. Que un conductor no consienta incluir su jornada |
+| Mitigación | Primera emisión asistida en el terminal durante el enrolamiento. Entrevistas a destinatarios reales en el mes 4, antes de construir. Expediente con la jornada de los conductores que consintieron |
+| Contingencia | Emisión automática mensual a los transportistas que lo pidan, sin acción de su parte |
 
 ## Innovación 2. Proceso. Despliegue continuo y modular sin detención de flota
 
@@ -67,21 +67,21 @@ audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. O
 
 | Campo | Contenido |
 |---|---|
-| Problema u oportunidad | Los dueños de camión preguntan de quién es el equipo, quién lo paga y si delatará cuándo trabajan para otro cliente. La decisión quinta del numeral 16.1 sigue abierta (Caso, p. 34) y la restricción 2 obliga a conseguirlo por contrato, incentivo o diseño (capítulo 10, p. 23) |
-| Tecnología o práctica | Comodato sobre el equipamiento con retiro sin costo. Ventana de transmisión gobernada en el firmware. Consentimiento granular y revocable desde el portal con bitácora de accesos. Incentivo financiado con el recupero de los cobros de espera hoy objetados |
+| Problema u oportunidad | 148 dueños de 226 camiones (Caso, numeral 14.1, p. 29) preguntan de quién es el equipo, quién lo paga y si delatará cuándo trabajan para otro cliente. La decisión 5 del numeral 16.1 está abierta (p. 34) y la restricción 2 obliga a conseguirlo por contrato, incentivo o diseño (capítulo 10, p. 23) |
+| Tecnología o práctica | Ventana de transmisión aplicada en el firmware del equipo a bordo, auditable por el dueño desde su consola de permisos. Comodato con retiro sin costo. Reparto con el transportista de la espera recuperada que su evidencia permite cobrar |
 | Nivel de madurez | Escala de niveles de madurez tecnológica de 1 a 9. Control de transmisión por ventana en nivel 8. Registro de consentimiento en nivel 8. El componente contractual no se califica en esta escala |
 | Fuentes | International Organization for Standardization (2013). Ministerio de Hacienda (2024), Ley N.º 21.719 |
-| Dónde se inserta en la arquitectura | Unidad telemática y búfer local, concentrador de dispositivos, servicios nuevos de consentimiento y de adhesión, y consola de permisos en el portal |
-| Paquetes de la EDT | EDT 1.3 (Convenio de Comodato), EDT 5.2 (Campaña de Enrolamiento) y EDT 7.4 (Consola de Consentimiento) |
-| Mes del cronograma | Adhesión desde el mes 1. Validación jurídica entre los meses 1 y 3. Cohorte piloto entre los meses 6 y 9. Consola entre los meses 9 y 12. Resultado en la marcha blanca |
-| Inversión requerida | Diseño y validación jurídica del anexo, campaña de enrolamiento en cinco terminales y consola de consentimiento. El equipamiento lo compra el mandante (Caso, capítulo 11, p. 24) |
-| Efecto en el costo operacional | Aumentan conectividad, soporte y reposición del parque en comodato. Disminuyen el costo de la liquidación y de gestionar objeciones de cobro |
-| Beneficio esperado | Reducir la objeción de los cobros de espera desde el 71 % (Caso, numeral 4.7, p. 11) bajo el 20 %. Reflejado en ingresos por recupero operacional en el flujo de caja de la Oferta Económica |
-| Indicador, línea base y meta | Transportistas adheridos sobre 148, de 0 % a 70 % en la Etapa 1 y 90 % en la Etapa 2. Revocación bajo el 10 %. Objeción de cobros de espera bajo el 20 % |
-| Momento de medición | Anexos firmados desde el mes 3. Cierre de la Etapa 1 y de la Etapa 2 |
-| Riesgo de adopción | Adhesión bajo el 70 % en la Etapa 1, probabilidad media e impacto alto. Desconfianza en la ventana. Rechazo de la evidencia por los clientes. Anexo que no resista revisión jurídica, probabilidad baja e impacto alto |
-| Mitigación | Comenzar en el mes 1 y mostrar beneficio antes de pedir el equipo. Ventana auditable por el dueño. Validación jurídica entre los meses 1 y 3 |
-| Contingencia | Escalonar el incentivo y extender la modalidad de datos, que no requiere instalar nada. Financiar el incentivo con la reducción del costo de liquidación |
+| Dónde se inserta en la arquitectura | Equipo a bordo y búfer local con la ventana. Consentimiento en Personas y cumplimiento, adhesión en Flota y activos y reparto de la espera en Liquidación y costeo, regla RN-08 del Formulario T-12. Consola de permisos en el portal. Subdocumento 13, sección 13.4 |
+| Paquetes de la EDT | EDT 12.4, sobre los paquetes 9.1 (Anexo de adhesión), 9.2 (Campaña y enrolamiento), 4.1 (Firmware) y 5.7 (Portal del transportista) |
+| Mes del cronograma | Reparto aprobado por el Comité Ejecutivo en el mes 2. Validación jurídica del anexo en los meses 2 y 3. Cohorte inicial entre los meses 6 y 9. Ventana y consola entre los meses 6 y 10. Medición desde la marcha blanca |
+| Inversión requerida | Diseño y validación jurídica del anexo, campaña en los cinco terminales y consola de consentimiento. El equipamiento lo compra el mandante (Caso, capítulo 11, p. 24) |
+| Efecto en el costo operacional | Aumentan conectividad, soporte y reposición de los equipos en comodato. Disminuye el costo de gestionar objeciones de cobro |
+| Beneficio esperado | Recupero de la espera hoy objetada en un 71 % (Caso, numeral 4.7, p. 11), que financia el incentivo. Se valoriza en la Oferta Económica y no se compromete como ingreso |
+| Indicador, línea base y meta | Posiciones transmitidas fuera de la ventana de un viaje, cero. Transportistas adheridos con cobro respaldado que reciben su parte, 100 %. Consentimientos revocados, menos de 10 % |
+| Momento de medición | Auditoría mensual desde el mes 13. Cada liquidación desde el mes 16. Mensual desde el mes 13 |
+| Riesgo de adopción | Adhesión bajo el 70 % en la Etapa 1, probabilidad media e impacto alto. Desconfianza en la ventana. Rechazo de la evidencia de espera por los clientes. Anexo que no resista revisión jurídica, probabilidad baja e impacto alto |
+| Mitigación | Conversación desde el mes 2 con el beneficio a la vista antes de pedir el equipo. Ventana auditable por el dueño. Validación jurídica antes de construir |
+| Contingencia | Tres medidas del Subdocumento 3 si la adhesión no llega al 40 % en el mes 9. Financiar el incentivo con el ahorro de la liquidación automática |
 
 ## Innovación 5. Experiencia de usuario, sostenibilidad o impacto social. Bienestar del conductor y descanso en parador seguro
 

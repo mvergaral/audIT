@@ -31,8 +31,7 @@ mismos de la arquitectura lógica del Subdocumento 4 (\verSeccion{sec:4-contexto
 del Subdocumento 7 usa los paquetes de trabajo que aquí se citan y el Subdocumento 9 prueba cada
 requerimiento con los casos que el Formulario T-12 le asigna.
 
-El Formulario T-12 acompaña este capítulo como archivo propio (\texttt{AUDIT-Formulario-T-12.pdf}),
-conforme al \comunicado{10}{sección 1}. Contiene el catálogo completo con los campos que exige el
+El Formulario T-12 acompaña este capítulo como archivo propio, conforme al \comunicado{10}{sección 1}. Contiene el catálogo completo con los campos que exige el
 \caso{numeral 17.1}{38}, la matriz de trazabilidad de cada requerimiento hasta su componente, su
 paquete de trabajo y su prueba, el registro de reglas de negocio, el registro de supuestos con las
 veintiséis decisiones del \caso{numeral 16.1}{34}, los 29 criterios de aceptación y el registro de
@@ -71,8 +70,8 @@ el 21 en octubre o noviembre. Con el inicio del contrato en febrero de 2027 (sup
 Etapa 2 en octubre de 2028, después de Fiestas Patrias y antes del congelamiento siguiente. La
 \figref{3-ciclo} muestra los primeros 24 meses sobre el calendario.
 
-\begin{figuraNativa}{Ciclo contractual de los primeros 24 meses sobre el calendario, con inicio en febrero de 2027. En gris, la temporada de fruta de diciembre a abril}{3-ciclo}
-\begin{tikzpicture}[x=5.0mm,y=6.4mm,
+\begin{figuraNativa}[!htbp]{Ciclo contractual de los primeros 24 meses sobre el calendario, con inicio en febrero de 2027. En gris, la temporada de fruta de diciembre a abril}{3-ciclo}
+\begin{tikzpicture}[x=4.85mm,y=6.4mm,
   lab/.style={anchor=east,font=\sffamily\fontsize{9.5bp}{11bp}\selectfont\color{audit-tinta}},
   cel/.style={font=\sffamily\fontsize{9.5bp}{11bp}\selectfont\color{audit-tinta}},
   bar/.style={draw=audit-marino,line width=0.5pt,minimum height=5mm,inner sep=0pt,
@@ -112,7 +111,7 @@ Etapa 2 en octubre de 2028, después de Fiestas Patrias y antes del congelamient
   \node[lab] at (-0.2,-3.95) {Operación};
   \node[bar,fill=audit-gris-claro,minimum width=20mm] at (22,-3.95) {Mes 21 a 56};
   % leyenda
-  \node[cel,anchor=west,text width=118mm,align=left] at (0,-5.6)
+  \node[cel,anchor=west,text width=114mm,align=left] at (0,-5.6)
     {MB marcha blanca. P paso a producción: mayo de 2028 (mes 16) y octubre de 2028 (mes 21). La operación termina en septiembre de 2031 (mes 56).};
 \end{tikzpicture}
 \end{figuraNativa}
@@ -449,7 +448,7 @@ La \figref{3-traza} sigue un requerimiento de extremo a extremo para mostrar có
 el \caso{numeral 17.1}{38} exige: origen, requerimiento, componente, paquete de trabajo, prueba y
 criterio de aceptación.
 
-\begin{figuraNativa}{Cadena de trazabilidad del requerimiento RF-003, jornada previa del conductor externo}{3-traza}
+\begin{figuraNativa}[!htbp]{Cadena de trazabilidad del requerimiento RF-003, jornada previa del conductor externo}{3-traza}
 \begin{tikzpicture}[
   caja/.style={draw=audit-marino,line width=0.5pt,fill=white,text width=40mm,minimum height=15mm,
                align=left,inner sep=2.2mm,font=\sffamily\fontsize{9.5bp}{11.5bp}\selectfont\color{audit-tinta}},
@@ -573,7 +572,7 @@ parte y con qué sistemas existentes convive. Es el modelo conceptual que la arq
 Subdocumento 4 desarrolla capa por capa, y usa sus mismos nombres. La \figref{3-esquema} presenta la vista
 general y las secciones siguientes la recorren por partes.
 
-\begin{figuraNativa}{Esquema conceptual de la solución: usuarios, canales, los seis contextos, integración, borde y sistemas que se conservan}{3-esquema}
+\begin{figuraNativa}[!htbp]{Esquema conceptual de la solución: usuarios, canales, los seis contextos, integración, borde y sistemas que se conservan}{3-esquema}
 \begin{tikzpicture}[
   t/.style={font=\sffamily\fontsize{9.5bp}{11.5bp}\selectfont\color{audit-tinta}},
   usr/.style={t,draw=audit-secundario,line width=0.5pt,fill=white,text width=24mm,minimum height=11mm,align=center,inner sep=1.5mm},
@@ -665,25 +664,26 @@ la compañía. El mandante no necesita saber dónde estuvo ni para quién manej�
 asignar, apto o no apto, y poder acreditar después que lo verificó. La \figref{3-cascada} muestra las
 seis fuentes ordenadas por su valor probatorio y cómo se convierten en uno de tres resultados.
 
-\begin{figuraNativa}{Cascada de fuentes de jornada y veredicto de la asignación}{3-cascada}
+\begin{figuraNativa}[!htbp]{Cascada de fuentes de jornada y veredicto de la asignación}{3-cascada}
 \begin{tikzpicture}[
   t/.style={font=\sffamily\fontsize{9.5bp}{11.5bp}\selectfont\color{audit-tinta}},
-  niv/.style={t,draw=audit-marino,line width=0.5pt,fill=white,text width=62mm,minimum height=9mm,align=left,inner sep=1.8mm},
-  res/.style={t,draw=audit-marino,line width=0.7pt,text width=52mm,minimum height=15mm,align=left,inner sep=2mm},
+  niv/.style={t,draw=audit-marino,line width=0.5pt,text width=62mm,minimum height=9mm,align=left,inner sep=1.8mm},
+  res/.style={t,draw=audit-marino,line width=0.7pt,text width=52mm,minimum height=11mm,align=left,inner sep=2mm},
   fl/.style={-stealth,line width=0.6pt,draw=audit-marino}]
   \node[niv,fill=audit-gris-claro] (n1) at (0,0)      {Nivel 1. Tacógrafo digital descargado};
   \node[niv,fill=audit-gris-claro] (n2) at (0,-11mm)  {Nivel 2. Equipo a bordo con conductor identificado};
   \node[niv,fill=audit-gris-claro] (n3) at (0,-22mm)  {Nivel 3. Telemetría de fábrica, sólo lectura};
   \node[niv,fill=audit-gris-claro] (n4) at (0,-33mm)  {Nivel 4. Reposo del camión, sin coordenadas};
-  \node[niv] (n5) at (0,-44mm)  {Nivel 5. Atestación firmada del transportista};
-  \node[niv,draw=audit-secundario,dashed] (n0) at (0,-55mm)  {Nivel 0. Registro voluntario del conductor, beneficio y nunca requisito};
-  \node[res,fill=audit-turquesa!20] (r1) at (78mm,-11mm) {Niveles 1 a 4 disponibles:\\asigna};
-  \node[res,fill=white] (r2) at (78mm,-30mm) {Sólo nivel 5:\\asigna con marca y responsabilidad registrada del transportista};
-  \node[res,fill=audit-gris-claro] (r3) at (78mm,-49mm) {Sin ninguna fuente:\\bloquea. Excepción sólo según RN-04};
-  \draw[audit-marino,line width=0.6pt] (n1.east) -- ++(4mm,0) |- (n4.east);
-  \draw[fl] ($(n1.east)+(4mm,-16.5mm)$) -- (r1.west);
-  \draw[fl] (n5.east) -- ++(6mm,0) |- (r2.west);
-  \draw[fl] ($(n5.east)+(6mm,-11mm)$) node[t,anchor=north west,xshift=1mm] {sin fuente} |- (r3.west);
+  \node[niv,fill=white] (n5) at (0,-46mm)  {Nivel 5. Atestación firmada del transportista};
+  \node[niv,fill=white,draw=audit-secundario,dashed] (n6) at (0,-59mm) {Ninguna de las fuentes anteriores};
+  \node[niv,fill=white,draw=audit-secundario,dashed] (n0) at (0,-74mm) {Nivel 0. Registro voluntario del conductor: beneficio, nunca requisito ni veredicto};
+  \node[res,fill=audit-turquesa!20] (r1) at (78mm,-16.5mm) {Asigna};
+  \node[res,fill=white] (r2) at (78mm,-46mm) {Asigna con marca y responsabilidad registrada del transportista};
+  \node[res,fill=audit-gris-claro] (r3) at (78mm,-59mm) {Bloquea. Excepción sólo según RN-04};
+  \draw[audit-marino,line width=0.6pt] ($(n1.east)+(1mm,0)$) -- ++(3mm,0) -- ($(n4.east)+(4mm,0)$) -- ($(n4.east)+(1mm,0)$);
+  \draw[fl] ($(n1.east)!0.5!(n4.east)+(4mm,0)$) -- (r1.west);
+  \draw[fl] (n5.east) -- (r2.west);
+  \draw[fl] (n6.east) -- (r3.west);
 \end{tikzpicture}
 \end{figuraNativa}
 
@@ -768,7 +768,7 @@ no puede resolverse antes.
 Un viaje recorre los seis contextos en ocho pasos. La \figref{3-viaje} los muestra con el contexto que
 actúa en cada uno y el umbral que lo gobierna.
 
-\begin{figuraNativa}{Ocho pasos de un viaje con el contexto que actúa y su umbral}{3-viaje}
+\begin{figuraNativa}[!htbp]{Ocho pasos de un viaje con el contexto que actúa y su umbral}{3-viaje}
 \begin{tikzpicture}[
   t/.style={font=\sffamily\fontsize{9.5bp}{11.5bp}\selectfont\color{audit-tinta}},
   paso/.style={t,draw=audit-marino,line width=0.6pt,fill=white,text width=31mm,minimum height=27mm,align=left,inner sep=2mm,anchor=north},

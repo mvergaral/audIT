@@ -50,6 +50,16 @@ EDT de primer nivel: 1 Gestión, 2 Levantamiento y diseño, 3 Plataforma, 4 Equi
 - Ficha T-19 de la innovación 5: sus códigos EDT deben pasar a 12.5 y a los paquetes 4.1 y 5.1.
 - Ventanas de prueba de S9: pruebas integrales en los meses 10 a 12 (A12), certificación E2 en los meses 17 y 18 (A22), pruebas de DR en junio y noviembre de cada año de operación.
 
+### Compilación (resultado del 07-10-2026)
+
+- Compilan S1, S2, S3, S4, S5, S7, S8, S9 y S13 con todos sus formularios. **S6 no compila**: `06-metodologias/contenido.tex` usa `\audIT`, que la clase no define (línea 8 y siguientes). Mientras falle, S7 queda con dos referencias sin resolver (`sec:6-gestion-pmbok` y `sec:6-gestion-ceremonias`) y `compilar.py subdocs` no copia ningún PDF a `salida/`.
+- Los PDF de las redes PERT de S7 están ignorados por git. Hay que generarlos antes de compilar S7:
+  `rsvg-convert -f pdf -o figuras/07-plan-trabajo/pert-etapa1.pdf figuras/07-plan-trabajo/pert-etapa1.svg` (y lo mismo con `pert-etapa2`).
+  Para que salgan en IBM Plex, enlazar las fuentes una vez:
+  `mkdir -p ~/.local/share/fonts/ibm-plex && ln -sf /usr/share/texmf-dist/fonts/opentype/ibm/plex/*.otf ~/.local/share/fonts/ibm-plex/ && fc-cache -f`.
+- `verificar.py` se cae si existe `salida/informe2/manifiesto-s1-s2.json` (D1) y no están sus PDF de anexos. Sin ese manifiesto, el resultado es: cumple todo salvo el punto 8 (referencias a S6) y los avisos de siempre (punto y coma del código TikZ, marcadores de revisión humana).
+- Paquetes de Arch necesarios: `texlive-binextra`, `texlive-fontsextra` y `texlive-luatex`.
+
 ### Todos
 - Las declaraciones de IA de S3, S7 y S13 tienen `\marcador{...}` en la columna de revisión humana. Hay que llenarlas después de revisar, nunca antes.
-- No se ha compilado S3, S7 ni S13. Falta instalar `texlive-luatex` (`sudo pacman -S --needed texlive-luatex`). Revisar al compilar que las figuras TikZ (EDT, Gantt, esquema conceptual) quepan en la página y que su letra sea de 9 pt o más.
+- Las figuras 3.4 (cascada) y 7.4 (Gantt) quedan en página propia con espacio libre. Revisarlo al armar la versión final.
