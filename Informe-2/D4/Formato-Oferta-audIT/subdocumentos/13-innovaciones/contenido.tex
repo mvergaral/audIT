@@ -1,0 +1,483 @@
+% ============================================================================
+%  Subdocumento 13. Introducción a las Innovaciones. Índice obligatorio del
+%  Comunicado 10, secciones 8 y 11.
+%
+%  La introducción y 13.3 son de la dupla 4 (D4-55). Las innovaciones 1, 2, 4
+%  y 5 se trasladaron del Subdocumento 13 entregado en el Informe 1 (D4-52),
+%  ordenadas por los siete elementos del Artículo 29 y sin lo que sancionaron
+%  las observaciones 93 a 100. Lo que falta lleva el marcador de su dupla:
+%  1 y 4 de la dupla 2, 2 de la dupla 3 y 5 de la dupla 1.
+%  Los títulos 13.1 a 13.5 llevan raya porque es texto exigido (D4-33).
+% ============================================================================
+
+Este capítulo presenta la cartera de cinco innovaciones que exige el \art{28}{19}, una por cada tipo
+y en el orden que fija el \comunicado{10}{sección 8}. Cada una responde a un problema medido del Caso.
+El \art{30.2}{20} valora la pertinencia por sobre la novedad, y el \caso{capítulo 19}{44} pide
+innovaciones pertinentes al transporte de carga y a los problemas de esta compañía, y no un catálogo de
+tecnologías de moda. Ninguna de las cinco es una funcionalidad que las bases ya exigen, que es la
+exclusión que declara el \art{30}{20}.
+
+Las cinco comparten una estrategia: convierten en un dato medido algo que hoy se declara, se anota en
+papel o se conoce tarde. La innovación 1, Expediente
+verificable del transportista, responde a que el transportista no puede probar ante terceros lo que el
+sistema ya sabe de él, y vive en el portal del transportista y en el servicio de verificación. La 2,
+Despliegue sin detener la flota, parte de que la intervención a bordo solo ocurre cuando el camión pasa
+por un terminal, y usa la actualización remota y los terminales. La 3, Semirremolque conectado, le dice
+al sistema qué semirremolque va enganchado y cuánto recorre, desde el equipo a bordo, la portería y la
+verificación bloqueante. La 4, Esquema de adhesión y propiedad del dispositivo, atiende a los dueños de
+camión que no aceptan un equipo que delate cuándo trabajan para otros, con consentimiento y adhesión.
+La 5, Bienestar del conductor y descanso en parador seguro, hace que la alerta de jornada llegue donde
+sí hay dónde detenerse, desde el equipo a bordo y la gobernanza de paradores. Los cinco problemas salen
+del \caso{numerales 2.3, 4.4, 4.11 y 16.1}{7, 10, 12 y 35} y del \caso*{capítulo 10}{23}.
+
+Cuatro de las cinco usan el equipo a bordo que especifica el Formulario T-11, y dos usan el portal del
+transportista. La \figref{13-carterafig} ubica cada innovación en las capas de la arquitectura.
+
+\figura{figuras/13-innovaciones/cartera.png}{Cartera de innovaciones sobre las capas de la arquitectura, con los componentes que usa cada una}{13-carterafig}
+
+En la figura, el equipo a bordo concentra las innovaciones 2, 3, 4 y 5, y el portal del transportista
+las innovaciones 1 y 4. Esa concentración permite montar el valor nuevo sobre componentes que la
+arquitectura ya necesita, sin agregar dispositivos al tractocamión.
+
+Cada sección declara los siete elementos del \art{29}{19}: el problema, la tecnología, la madurez, el
+diseño de la incorporación con su lugar en la arquitectura \transv*{RT-26.01}{44}, sus paquetes de la
+estructura de descomposición del trabajo y su mes del cronograma \transv*{RT-26.02}{44}, el impacto
+económico, el indicador y el riesgo de adopción. Los montos no aparecen en esta oferta técnica, porque
+el \art{50.2}{29} lo prohíbe, y la valorización va en el Entregable 2 de la Oferta Económica, como
+dispone el \art{30.1}{20}. Al menos una innovación es verificable en la marcha blanca, como valora
+\transv{RT-26.08}{45}: la innovación 4 mide sus primeros anexos firmados desde el mes tres, y la 3 y
+la 5 miden su indicador antes del mes 16.
+
+El capítulo se apoya en el esquema de solución del Subdocumento~3, en la arquitectura del
+Subdocumento~4, en el plan de trabajo del Subdocumento~7, que ubica los paquetes de cada innovación, y
+en el plan de riesgos del Subdocumento~8. La innovación 1 usa además los registros de jornada, vigencias y
+hoja de vida que produce la Etapa 1. La 4 es contractual antes que técnica, y de su resultado depende cuántos de los 34
+camiones de terceros sin equipo llegan a intervenirse. Las fichas completas van en el Formulario T-19, que acompaña
+este capítulo como archivo propio (\texttt{AUDIT-Formulario-T-19.pdf}), conforme al
+\comunicado{10}{sección 1}.
+
+% ============================================================================
+\section{Innovación 1 — Producto o servicio}\label{sec:13-innovacion-1}
+% ============================================================================
+
+La innovación 1 es de producto o servicio, según el \art{28}{19}. Su nombre es Expediente verificable
+del transportista: un documento que el dueño del camión descarga del portal y presenta a cualquier
+tercero, con la jornada acreditada de sus conductores, la vigencia de sus habilitaciones y la hoja de
+vida de sus equipos, y que ese tercero puede verificar sin acceso al sistema del mandante.
+
+\paragraph{Problema u oportunidad} Los 148 transportistas subcontratados operan 226 camiones y emplean
+258 conductores \caso*{numeral 14.1}{29}, y muchos trabajan también para otros clientes
+\caso*{numeral 4.3}{9}. Cada uno de esos clientes, la autoridad y la aseguradora le piden lo mismo que
+le pide Curimón: que acredite la jornada de sus conductores y la vigencia de sus documentos. Hoy no
+puede, porque nadie lleva ese registro. Desde la Etapa 1, la solución de audIT produce exactamente esa
+evidencia para los viajes que el transportista hace para Curimón, pero la evidencia queda dentro del
+sistema del mandante. La oportunidad es devolvérsela a su titular en una forma que tenga valor fuera
+de Curimón, y convertir así un dato que el transportista entrega en un activo que recibe. Esa es la
+contraprestación que menos cuesta al mandante y que más pesa en la decisión de adherir.
+
+\paragraph{Tecnología que la sustenta} Documento electrónico firmado por el mandante con firma
+electrónica avanzada \parencite{ley19799}, que contiene sólo datos del propio transportista, y un
+servicio público de verificación que recibe el código del documento y responde si es auténtico y si
+sigue vigente, sin revelar su contenido. Como alternativa de formato se evalúa la credencial
+verificable, que alcanzó el estado de recomendación en mayo de 2025 \parencite{w3c_vcdm2}. La jornada
+de cada conductor sólo entra al expediente con el consentimiento de ese conductor, porque es un dato
+personal que la Ley 21.719 protege \parencite{ley21719}.
+
+\paragraph{Delimitación frente a las bases} Los criterios 21 y 29 del Caso obligan a que el
+transportista vea sus viajes y su liquidación en curso dentro del portal del mandante \caso*{capítulo
+18}{42 y 43}. Eso es alcance base del Subdocumento 3 (requerimientos RF-020 y RF-022) y no se presenta
+como innovación. Lo que agrega esta ficha es que la evidencia salga del portal con valor probatorio ante
+un tercero que no tiene cuenta en él. Ninguna exigencia de las bases lo pide. Tampoco cae en la
+exclusión del Capítulo 11 sobre administrar la contabilidad de los transportistas \caso*{capítulo
+11}{24}, porque no administra nada: entrega a su titular una evidencia ya producida.
+
+\paragraph{Nivel de madurez} Se califica con la escala de niveles de madurez tecnológica de uno a nueve
+\parencite{iso16290}. La firma electrónica avanzada con verificación en línea está en nivel nueve, en
+operación regulada en Chile desde 2002 \parencite{ley19799}, y es el formato comprometido. La
+credencial verificable se ubica entre siete y ocho por su adopción todavía acotada en el transporte
+nacional, y sólo se adopta si los destinatarios reales la aceptan.
+
+\paragraph{Diseño de la incorporación} El servicio de emisión vive en el contexto Personas y
+cumplimiento, que ya guarda la jornada con su nivel de evidencia, y consulta a Flota y activos por la
+hoja de vida de los camiones. El servicio de verificación es el único componente público sin
+autenticación, detrás de la misma puerta de enlace, y no expone datos. La firma la entrega la bóveda de
+claves de la capa de seguridad. El portal del transportista agrega el botón de emisión y la gestión del
+consentimiento de cada conductor. En la EDT es el paquete 12.1, que usa los paquetes 5.1 y 5.7. En el
+mes 4 se entrevista a destinatarios reales (dos clientes de transportistas, una aseguradora y la
+autoridad laboral) y se fija el formato. La construcción ocurre dentro de la Etapa 1, entre los meses 8
+y 10, y el expediente está disponible para la cohorte inicial de adherentes en la marcha blanca.
+
+\paragraph{Impacto económico} La inversión es el desarrollo de dos servicios pequeños sobre datos que la
+Etapa 1 ya produce, y el costo operacional es el certificado de firma del emisor y la operación del
+servicio de verificación. El beneficio para el mandante es indirecto y está en la adhesión: el
+expediente es un incentivo que no requiere pagar al transportista, y cada transportista adherido amplía
+la jornada acreditada y la evidencia de espera que sostiene los cobros. En el flujo de caja de la Oferta
+Económica, la innovación aparece como una partida de desarrollo en la Etapa 1 y una partida de
+operación mensual, sin ingresos atribuidos.
+
+\paragraph{Indicador de verificación} La \tabref{13-indicadores1} fija los dos indicadores. Ambos parten
+de cero porque el expediente no existe hoy.
+
+\begin{tabla}{Indicadores de la innovación 1}{13-indicadores1}{X L{24mm} L{30mm} L{34mm}}
+Indicador & Línea base & Meta & Medición \\ \midrule
+Transportistas adheridos que emitieron al menos un expediente & No existe & 50 \% de los adheridos & Mes 21 \\
+Verificaciones de expedientes respondidas en no más de 5 segundos & No existe & 99 \% & Mensual desde el mes 16 \\
+\end{tabla}
+\notaTabla{Fuente: elaboración propia. Datos del registro de emisiones y del servicio de verificación.}
+
+Las dos metas se miden con datos que la propia solución registra. La primera mide si el transportista lo
+valora, que es el riesgo de esta innovación, y la segunda si el tercero puede usarlo.
+
+\paragraph{Riesgo de adopción} Que el transportista no perciba utilidad y no lo emita, con probabilidad
+media e impacto medio, mitigado con la primera emisión asistida en el terminal durante el enrolamiento.
+Que los destinatarios no acepten el documento como prueba, con probabilidad media e impacto alto,
+mitigado con las entrevistas del mes 4, antes de construir. Que un conductor no consienta incluir su
+jornada, mitigado mostrando en el expediente la jornada de los conductores que sí consintieron. Si la
+adopción es baja, la contingencia es emitir el expediente automáticamente cada mes a los
+transportistas que lo pidan, sin acción de su parte.
+
+% ============================================================================
+\section{Innovación 2 — Proceso}\label{sec:13-innovacion-2}
+% ============================================================================
+
+La innovación 2 es de proceso, según el \art{28}{19}. Su nombre es Despliegue sin detener la flota.
+
+\requiereDupla{3}{reformular o reemplazar esta innovación, porque la observación 89 la considera el
+método que imponen las restricciones del capítulo 10 y el numeral 13.3 del Caso. El plan del equipo la
+reemplaza por un gemelo digital de la flota. Si se mantiene, alinear los equipos con el Formulario
+T-11, que especifica lectores CAN sin contacto en los 182 equipos y no acopladores en 61 camiones}
+
+\paragraph{Problema u oportunidad} Un camión detenido no produce \caso*{capítulo 10, restricción 10}{24},
+la intervención física en cabina solo puede realizarse cuando la unidad ingresa a un terminal, y ese
+paso ocurre en promedio cada seis días mientras que el 22 por ciento de la flota subcontratada ingresa
+menos de una vez al mes \caso*{numeral 2.3}{7}. La innovación transforma el despliegue de hardware: deja
+de ser un proyecto de detención masiva que paraliza la operación comercial y pasa a ser un proceso
+continuo, no intrusivo, que aprovecha las ventanas naturales de estadía en terminal mediante kits
+modulares preconfigurados de sustitución rápida.
+
+\paragraph{Tecnología que la sustenta} Gestión centralizada y aprovisionamiento remoto del parque
+telemático mediante Azure IoT Hub Device Update y Device Twins, configuración precargada en fábrica y
+kits de reemplazo con arneses estandarizados de acople rápido por familia de tractocamión (Scania,
+Volvo, Mercedes-Benz, Freightliner). Anticipación de llegada a terminal a partir de la posición de la
+propia flota, de modo que el equipo técnico en terreno disponga del kit específico en el andén antes de
+que el camión ingrese a patio.
+
+\paragraph{Delimitación frente a las bases} El alcance comprende el despliegue directo de los
+dispositivos provistos por el mandante en las 148 unidades propias y en las 34 unidades sin equipo
+cuyos dueños suscriban el convenio de comodato de la innovación 4. No interviene físicamente los 192
+camiones de terceros que ya cuentan con dispositivos telemáticos preexistentes, los cuales se integran
+de manera lógica mediante adaptadores de interoperabilidad sin alterar su hardware privado, respetando la restricción 3 \caso*{capítulo 10}{23}. La
+delimitación frente a las bases radica en que el Caso exige disponer de stock de reemplazo, pero no
+resuelve el método operativo para instalar sin detener el flete comercial ni define la logística de
+intervención en tránsito.
+
+\paragraph{Diseño de la incorporación} La intervención se ejecuta en los cinco terminales operativos
+(San Bernardo, Antofagasta, Talca, Los Ángeles y Puerto Montt) durante las ventanas de relevo de
+conductor o pausas de carga y descarga, con un procedimiento estandarizado cronometrado en 30 minutos o
+menos por vehículo. Tras el montaje, el dispositivo ejecuta una rutina automatizada de autodiagnóstico
+y enrolamiento (autenticación mutua por certificado, enlace celular, fijación GNSS y lectura de bus CAN) que valida la
+correcta operación en la barrera de salida sin requerir instrumentación adicional en patio. En la EDT
+es el paquete 12.2, que se ejecuta con los paquetes 4.1, firmware con operación de 72 horas y
+actualización en terminal (meses 4 a 9), y 4.2, montaje camión por camión de los 182 equipos (meses 6 a
+10 y 16 a 18). El levantamiento de las familias de conectores y la distribución de cabina de los
+tractocamiones propios se consolida en el piloto cronometrado de los primeros 10 camiones, en el mes 6.
+
+\paragraph{Indicador de verificación} Cero horas de lucro cesante o inmovilización de flota
+comercialmente activa atribuible a la instalación. Ritmo sostenido de intervención de 35 a 45
+tractocamiones mensuales distribuidos en la red de terminales, alcanzando el 100 \% de la flota propia
+(148 unidades) al cierre del mes 8. Reducción del tiempo medio de sustitución en terreno a menos de
+30 minutos por camión.
+
+\requiereDupla{3}{nivel de madurez con su escala y fuente, impacto económico y riesgo de adopción con
+mitigación y contingencia (observación 91)}
+
+% ============================================================================
+\section{Innovación 3 — Tecnológica o de arquitectura}\label{sec:13-innovacion-3}
+% ============================================================================
+
+La innovación 3 es de tipo tecnológico o de arquitectura, según el \art{28}{19}. Su nombre es
+Semirremolque conectado: una baliza Bluetooth en cada semirremolque propio permite que el sistema sepa
+qué semirremolque va realmente enganchado, cuántos kilómetros recorre y en qué condición viaja la carga
+refrigerada.
+
+\paragraph{Problema u oportunidad} La compañía tiene 210 semirremolques propios de cinco tipos: rampla
+plana, furgón seco, furgón refrigerado, tolva y portacontenedores \caso*{numeral 2.2}{6}. En tres años
+llegan a 245 \caso*{numeral 14.1}{29}. De ellos, 44 son equipos refrigerados que concentran su
+actividad entre diciembre y abril \caso*{numeral 2.2}{6}. La revisión técnica rige para los 210
+semirremolques \caso*{capítulo 12}{25} y es una de las vigencias que la verificación bloqueante
+comprueba antes de asignar un viaje \caso*{numeral 4.4}{10}. Las bases piden esa comprobación, pero no
+dicen cómo sabe el sistema qué semirremolque va enganchado, y con una declaración del despachador el
+requisito se cumple. Si la declaración es errónea, la verificación aprueba la vigencia de un
+semirremolque que no es el que sale.
+
+El mantenimiento tiene el mismo vacío. El taller atiende 148 tractocamiones y 210 semirremolques con
+un plan preventivo por kilometraje, y el kilometraje se lee del odómetro cuando el camión pasa por el
+taller \caso*{capítulo 8}{19}. Cuando un semirremolque cambia de tractocamión, el odómetro del camión
+deja de reflejar su recorrido. El criterio 26 pide que el mantenimiento preventivo se gatille con
+kilometraje real y no con una estimación \caso*{capítulo 18}{43}.
+
+\paragraph{Tecnología que la sustenta} Balizas Bluetooth de baja energía Teltonika EYE Sensor BTSMP1,
+con identificador, temperatura, humedad, acelerómetro y sensor magnético de puerta, protección IP67,
+operación de $-20$ a $+60$~°C y batería de cinco años o más con una emisión cada 10 segundos
+\parencite{teltonika_eye}. La baliza se fija en el chasis delantero, a la sombra y sin cables. La lee
+el iWave G26I, que ya trae Bluetooth 5.0 \parencite{iwave_g26i}, y un lector Minew G1 en la portería de
+cada terminal \parencite{minew_g1}. El equipo a bordo infiere el acople cuando la señal de la baliza es
+fuerte y estable y su acelerómetro se mueve junto con el camión, práctica que el fabricante describe
+para el seguimiento de remolques \parencite{teltonika_trailer}. El lector de portería registra el
+semirremolque que sale aunque lo tire un camión sin equipo audIT.
+
+\paragraph{Delimitación frente a las bases} El seguimiento de remolques con balizas ya se vende en el
+mercado, así que la innovación no está en la baliza. Está en tres usos que cambian decisiones del caso.
+La verificación bloqueante comprueba el semirremolque que efectivamente sale y no el declarado. El
+kilometraje de cada semirremolque sale de su tiempo acoplado sobre la traza del tractocamión, lo que
+extiende a los semirremolques el kilometraje real que el criterio 26 pide y que la solución base mide
+solo en el camión. Y los 44 equipos refrigerados registran temperatura y apertura de puerta durante el
+viaje. Ninguno de los catorce asuntos que la arquitectura debe resolver \caso*{numeral 17.4}{39} ni
+ninguna de las decisiones pendientes \caso*{numeral 16.1}{34} pide identificar el semirremolque
+acoplado ni medir la condición de la carga, de modo que la innovación no cae en la exclusión del
+\art{30}{20}.
+
+\paragraph{Nivel de madurez} Escala de niveles de madurez tecnológica de uno a nueve
+\parencite{iso16290}. Las balizas y su lectura por Bluetooth están en nivel 9, porque son productos
+comerciales en operación \parencite{teltonika_eye,minew_g1}. La inferencia del acople y su uso dentro
+de la verificación bloqueante parten en nivel 6 y llegan a nivel 7 cuando se demuestran en la operación
+durante la marcha blanca, como pide \transv{RT-26.03}{44}.
+
+\paragraph{Diseño de la incorporación} La \figref{13-semirremolquefig} muestra dónde se inserta la
+innovación en la arquitectura.
+
+\figuraHorizontal{figuras/13-innovaciones/semirremolque.png}{Semirremolque conectado: la baliza, sus dos lectores y los tres servicios de negocio que usan el acople}{13-semirremolquefig}
+
+La baliza vive en el semirremolque y no agrega nada al tractocamión. En la capa de borde, el G26I y el
+lector de portería la leen por Bluetooth y envían el evento a IoT Hub, el primero por la red celular y
+el segundo por la red del terminal. En la capa de integración, Event Hubs distribuye el evento a tres
+servicios. El contexto Flota y activos usa el identificador del semirremolque acoplado en la
+verificación bloqueante y suma sus kilómetros para el plan preventivo. El contexto Telemetría y
+geocercas guarda la temperatura y la apertura de puerta en la base de series de tiempo. La innovación
+consume el flujo de telemetría de IoT Hub y expone a la verificación bloqueante el identificador del
+semirremolque acoplado, sin interfaces nuevas hacia terceros (secciones 4.1 y 4.2). El Formulario T-11
+declara el equipo: 210 balizas más 21 de reposición, 35 más por el crecimiento a 245 semirremolques y
+cinco lectores de portería.
+
+En la EDT es el paquete 12.3. Las balizas y los lectores de portería se instalan con el paquete 4.2,
+cuando cada semirremolque pasa por un terminal y en los mismos meses del montaje a bordo, 6 a 10 y 16
+a 18. Así ninguna instalación cae en la temporada de diciembre a abril, en que la operación no admite
+intervenciones \caso*{numeral 13.2}{27}, y los 44 refrigerados se intervienen fuera de su temporada. El
+paquete 5.2, Flota y activos, integra la baliza a la ficha del semirremolque. La verificación con el
+semirremolque medido se activa en la marcha blanca, y su primera medición ocurre antes del mes 16.
+
+\paragraph{Impacto económico} La inversión es el equipamiento que compra el mandante, conforme al
+\caso{capítulo 11}{24}: las balizas y los lectores de portería del Formulario T-11, más la
+integración en los tres servicios de negocio. En costo operacional agrega la reposición de balizas al
+término de su batería y un tráfico celular menor, porque el evento de acople viaja en los mensajes que
+el G26I ya envía. El beneficio tiene tres partes: impedir la salida de un semirremolque con la
+revisión técnica vencida, programar la mantención de los semirremolques con kilometraje medido en lugar
+de estimado, y respaldar ante el cliente la condición de la carga refrigerada. El flujo de caja de la
+Oferta Económica refleja la innovación como inversión en equipamiento en la Etapa~1 y como costo de
+reposición durante la operación.
+
+\paragraph{Indicador de verificación} La \tabref{13-indicadores3} fija los indicadores. La primera línea
+base sale del Caso, y las otras dos se miden en la Etapa 1 porque el Caso no las entrega.
+
+\begin{tabla}{Indicadores de la innovación 3}{13-indicadores3}{X L{32mm} L{30mm} L{36mm}}
+Indicador & Línea base & Meta & Momento de medición \\ \midrule
+Asignaciones con semirremolque propio verificado por medición & No se verifica al asignar & 95 \% o más & Marcha blanca, antes del mes 16 \\
+Semirremolques propios con kilometraje medido & Línea base a medir en la Etapa 1 & 100 \% de los que tienen baliza & Tercer mes de operación \\
+Viajes refrigerados con registro continuo de temperatura & Línea base a medir en la Etapa 1 & 100 \% & Primera temporada de diciembre a abril \\
+\end{tabla}
+\notaTabla{Fuente: elaboración propia sobre el Caso, numerales 2.2 y 4.4, pp. 6 y 10, y capítulo 18, p. 43.}
+
+La primera meta no llega al 100 \% porque un semirremolque propio tirado por un camión sin equipo
+audIT solo se lee en la portería. Los tres indicadores se miden con datos que la propia solución
+produce, de modo que su verificación no depende de terceros.
+
+\paragraph{Riesgo de adopción} Cada riesgo se declara con su probabilidad, su impacto, la mitigación y
+la contingencia, como pide \transv{RT-26.04}{44}. El mayor es el acople falso con la baliza de un
+semirremolque vecino en el patio, de probabilidad media e impacto alto, porque afecta a la verificación
+bloqueante. Se mitiga exigiendo señal estable y movimiento conjunto en los primeros minutos de marcha.
+Si aun así falla, la verificación vuelve a la declaración con la lectura de portería como control, sin
+detener la operación. La suplantación del identificador de la baliza tiene probabilidad baja e impacto
+alto: el acople ya exige movimiento conjunto y la lectura de portería, y en contingencia se trata como
+dato complementario y no como única prueba. La temperatura bajo $-20$~°C en el paso cordillerano tiene
+probabilidad baja e impacto medio. Se mitiga montando la baliza a la sombra del chasis y probándola en
+el invierno de 2027, que coincide con el inicio del montaje en los meses 6 y 7. Si no resiste, los
+semirremolques que cruzan llevan un modelo de mayor rango térmico. Una batería que dure menos de lo
+declarado tiene probabilidad e impacto bajos: la baliza emite cada 10 segundos e informa su nivel, y se
+repone desde la reserva del 10~\% del Formulario T-11 \parencite{teltonika_eye}.
+
+\requiereDupla{3}{incluir la baliza como entrada en el modelado de amenazas de la sección 4.1
+(RT-26.07)}
+
+% ============================================================================
+\section{Innovación 4 — Modelo de negocio o de contratación}\label{sec:13-innovacion-4}
+% ============================================================================
+
+La innovación 4 es de modelo de negocio o de contratación, según el \art{28}{19}. Su nombre es
+Esquema de adhesión y propiedad del dispositivo, y responde a lo que el \caso{capítulo 19}{44} pide
+para este tipo: hacerse cargo de la relación con los transportistas subcontratados.
+
+\paragraph{Problema u oportunidad} Las dos primeras preguntas que hace un dueño de camión son de quién
+es el equipo, quién lo paga y qué pasa con él si deja de trabajar con la compañía, y si el aparato va a
+delatar cuándo trabaja para la competencia. Son 148 dueños de 226 camiones \caso*{numeral 14.1}{29} que
+no dependen de la compañía, y sin su acuerdo nada de lo que dependa de ellos se despliega
+\caso*{capítulo 10, restricción 2}{23}. La innovación separa la propiedad del equipo de la propiedad del
+dato, le entrega la segunda al dueño del camión y financia el incentivo con un ingreso que hoy se pierde.
+
+\paragraph{Tecnología que la sustenta} Ventana de transmisión aplicada en el firmware del equipo a bordo
+y no en la configuración del servidor: el equipo sólo emite posición mientras existe un viaje asignado
+por Curimón, y fuera de ella no transmite. El dueño del camión puede auditar esa regla desde su consola
+de permisos, que le muestra cada acceso a la localización de sus camiones. Comodato del equipo con
+retiro sin costo. Y reparto con el transportista de la espera recuperada que su propia evidencia permite
+cobrar.
+
+\paragraph{Delimitación frente a las bases} El plan de adhesión es alcance base: el criterio 27 del Caso
+lo exige y el Subdocumento 3 lo desarrolla (\verSeccion{sec:3-adhesion}). Tampoco es innovación quién
+compra el equipo, porque el Capítulo 11 lo resuelve \caso*{capítulo 11}{24}. Lo que el Caso deja abierto
+es la decisión 5 del \caso{numeral 16.1}{34}, sobre el equipo en un camión ajeno, y la restricción 2, que
+obliga a conseguir por contrato, incentivo o diseño lo que dependa de terceros. Esta innovación es el
+mecanismo que hace viable el plan, y agrega tres cosas que las bases no piden: la ventana de transmisión
+gobernada en el firmware, que convierte una promesa de privacidad en una propiedad verificable por el
+dueño, el comodato con retiro sin costo, y el financiamiento del incentivo con el recupero de la espera,
+de modo que la adhesión no compita con el margen operacional del 9 \% \caso*{numeral 2.3}{7}.
+
+\paragraph{Nivel de madurez} Los componentes técnicos se califican con la escala de niveles de madurez
+tecnológica \parencite{iso16290}. El control de transmisión por ventana está en nivel ocho, porque la
+gestión remota de configuración de equipos conectados es tecnología productiva y lo propio es la regla
+que la gobierna. El registro de consentimiento granular y revocable está en nivel ocho y su exigencia es
+legal \parencite{ley21719}. El componente contractual no se califica en esa escala. El comodato de
+equipamiento es una figura de uso corriente, y el reparto del recupero sobre evidencia aportada por el
+proveedor tiene poco precedente documentado en el transporte nacional.
+
+\paragraph{Diseño de la incorporación} La ventana se aplica en el equipo a bordo y en su búfer local, que
+fuera de ella no guarda posición. La plataforma envía a cada equipo la ventana desde la asignación del
+viaje. El contexto Personas y cumplimiento registra el consentimiento y su revocación, el contexto Flota
+y activos registra la adhesión de cada camión y su modalidad, y Liquidación y costeo calcula la parte
+de la espera recuperada que corresponde a cada transportista según la regla RN-08 del Formulario T-12.
+En la EDT es el paquete 12.4, que usa los paquetes 9.1 y 9.2 de la adhesión, 4.1 del firmware y 5.7 del
+portal. El anexo se valida jurídicamente en los meses 2 y 3, la cohorte inicial firma entre los meses 6
+y 9, la ventana y la consola se construyen en la Etapa 1 entre los meses 6 y 10, y el resultado se mide
+en la marcha blanca. La proporción de la espera recuperada que va al transportista se fija en el anexo y
+la aprueba el Comité Ejecutivo en el mes 2, antes de la primera conversación con los transportistas.
+
+\paragraph{Impacto económico} El equipo lo compra el mandante, y audIT especifica la cantidad sobre las
+poblaciones del Caso y no sobre la adhesión (\verSeccion{sec:4-implementos}). Las partidas propias son
+el diseño y la validación jurídica del anexo, la campaña en los cinco terminales y la consola de
+consentimiento, todas valorizadas en la Oferta Económica. En el costo operacional aumentan la
+conectividad, el soporte y la reposición de los equipos en comodato, y disminuye el costo de gestionar
+las objeciones de cobro. El recupero parte de una base del Caso: los clientes objetaron el 71 \% de lo
+facturado en 2025 por tiempos de espera, porque la hora de llegada se anota en papel \caso*{numeral
+4.7}{11}. Ese recupero financia el incentivo, se valoriza en la Oferta Económica y no se compromete
+como ingreso.
+
+\paragraph{Indicador de verificación} La \tabref{13-indicadores4} fija los indicadores. El primero mide la
+propiedad que el dueño del camión necesita creer, y los otros dos si el mecanismo funciona.
+
+\begin{tabla}{Indicadores de la innovación 4}{13-indicadores4}{X L{24mm} L{30mm} L{34mm}}
+Indicador & Línea base & Meta & Medición \\ \midrule
+Posiciones transmitidas fuera de la ventana de un viaje asignado & No existe & Cero & Auditoría mensual desde el mes 13 \\
+Transportistas adheridos que reciben parte de la espera recuperada & No existe & 100 \% con cobro respaldado & Cada liquidación desde el mes 16 \\
+Consentimientos revocados sobre los otorgados & No existe & Menos de 10 \% & Mensual desde el mes 13 \\
+\end{tabla}
+\notaTabla{Fuente: elaboración propia. Datos del registro de transmisiones, de la liquidación y del registro de consentimientos.}
+
+Las tres metas se miden desde la marcha blanca con datos de la propia solución. La adhesión de 104
+transportistas en el mes 16 y 134 en el mes 21 es el resultado que esta innovación sostiene, pero su
+meta pertenece al criterio 27 del alcance base y se mide allí.
+
+\paragraph{Riesgo de adopción} Que la adhesión no alcance el 70 \% en la Etapa 1, con probabilidad media e
+impacto alto, mitigado empezando la conversación en el mes 2 y mostrando el beneficio antes de pedir el
+equipo. La contingencia son las tres medidas del Subdocumento 3 si en el mes 9 la adhesión no llega al
+40 \%. Que el transportista desconfíe de la ventana, mitigado haciéndola auditable por él mismo. Que los
+clientes no acepten la evidencia telemática para el cobro y desaparezca la fuente del incentivo, con la
+contingencia de financiarlo con el ahorro de la liquidación automática, que no depende del cliente. Y
+que el anexo no resista revisión jurídica, con probabilidad baja e impacto alto, mitigado validándolo
+antes de construir.
+
+% ============================================================================
+\section{Innovación 5 — Experiencia de usuario, sostenibilidad o impacto social}\label{sec:13-innovacion-5}
+% ============================================================================
+
+La innovación 5 es de experiencia de usuario, sostenibilidad o impacto social, según el \art{28}{19}.
+Su nombre es Bienestar del conductor y descanso en parador seguro.
+
+\paragraph{Problema u oportunidad} Una alerta que avisa al conductor cuando su cuota de cinco horas
+continuas está por agotarse \parencite{codigo_trabajo_25bis}, entregada en medio de una cuesta sin
+bermas o en un tramo desértico sin paraderos habilitados para combinaciones de 18,6 metros y 45
+toneladas, no soluciona nada: lo fuerza a detenerse en bermas peligrosas o a seguir rodando en
+infracción. La innovación abandona el temporizador pasivo e implementa un sistema sociotécnico de
+acompañamiento predictivo del descanso, que cruza la cinemática del camión con la curva biológica de
+alerta circadiana y un catálogo georreferenciado y calificado de paradores de carga pesada.
+
+\paragraph{Tecnología que la sustenta} Motor predictivo que corre sobre audIT EdgeHub, el software
+de borde de audIT que define el Subdocumento~1 (\verSeccion{sec:1-edgehub}), instalado en el equipo a bordo de la sección~4.2.2 \caso*{RT-06.01}{32}. Evalúa en tiempo real el tiempo de conducción acumulado, la
+topografía del tramo siguiente y la ventana de mínima alerta circadiana (\emph{Window of Circadian
+Low}, de 02:00 a 06:00~h). Catálogo georreferenciado local en SQLite, en modo de registro anticipado de escritura, sobre la
+memoria flash industrial de 8~GB del equipo, especificada para las condiciones reales de uso que pide
+\transv{RT-08.11}{19}. El catálogo califica
+capacidad geométrica de estacionamiento, servicios de higiene, duchas, agua potable y seguridad
+perimetral. Enclavamiento cinético estricto de pantalla ante cualquier movimiento del vehículo, con
+velocidad sobre 0~km/h o freno de mano liberado, conforme a la Ley N.º~21.377 \parencite{ley21377}.
+Las sugerencias llegan por síntesis de voz local en español por el altavoz del vehículo, que es el
+canal de la alerta de jornada \caso*{RT-16.21}{33}, sin exigir desviar la mirada ni admitir
+interacción táctil en marcha \caso*{RT-13.08}{33}. En modo detenido, interfaz ergonómica para guantes gruesos, con botones
+de 60~×~60~mm o más e iluminación ámbar de alto contraste.
+
+\paragraph{Delimitación frente a las bases} El cálculo reactivo de distancia al lugar seguro de
+detención \caso*{RT-09.01}{32}, la autenticación sin manipulación \caso*{RT-12.11}{32}, la interfaz
+para guantes sin interacción en marcha \caso*{RT-13.08}{33} y la resiliencia desconectada de 72 horas
+\caso*{RT-17.01}{33} constituyen el alcance base comprometido y no se presentan como
+innovación. Lo que agrega esta ficha son tres elementos. La anticipación predictiva circadiana, que
+sugiere pausas preventivas antes de que el conductor ingrese a tramos críticos sin infraestructura o
+enfrente el valle biológico de microsueño de madrugada. En esa franja, a las 04:40, ocurrió el
+accidente del 14 de febrero de 2026, con un conductor que no había completado su descanso
+\caso*{capítulo 1}{4}. La ontología, gobernanza y sincronización por actualización remota en terminales de un catálogo calificado para
+camiones de 45 toneladas con servicios dignos de descanso. Y un modelo social y ergonómico no punitivo
+para los 258 conductores externos subcontratados \caso*{numeral 2.3}{6}, conforme a las restricciones 1
+y 2 \caso*{capítulo 10}{23} y a la Ley N.º~20.123 \parencite{ley20123}, que transforma una herramienta de control patronal en
+un asistente de seguridad y bienestar.
+
+\paragraph{Nivel de madurez} Escala de madurez tecnológica de uno a nueve \parencite{iso16290}. El
+hardware telemático de borde, el almacenamiento local, la síntesis de voz local y el enclavamiento
+cinético están en nivel ocho, con componentes comerciales de uso maduro en flotas pesadas. El modelo
+predictivo circadiano y la ontología de paradores adaptada a la red vial chilena se sitúan en nivel
+seis (TRL 6, validación en entorno de simulación y laboratorio con series temporales históricas de ruta), comprometiendo
+su escalamiento a nivel siete (TRL 7) mediante la prueba piloto operacional con conductores reales durante la marcha blanca del mes 16,
+apoyados en estándares de ergonomía vehicular \parencite{iso15005,iso9241_210}, en investigación sobre fatiga en
+el transporte de carga \parencite{nasem2016_fatiga} y en la normativa vial y laboral nacional
+\parencite{ley21377,codigo_trabajo_25bis}.
+
+\paragraph{Diseño de la incorporación} Se articula en la capa de borde (motor predictivo a bordo,
+catálogo local y síntesis de voz), en la capa de servicios (servicio de gobernanza de paradores y
+seguridad vial en la torre de control) y en la de presentación (portal para consulta pasiva). En la
+EDT es el paquete 12.5, que se ejecuta con los paquetes 4.1, firmware a bordo (meses 4 a 9), y 5.1,
+contexto Personas y cumplimiento (meses 6 a 10). La validación con conductores reales ocurre en la
+marcha blanca de los meses 13 a 15. El beneficio es verificable antes
+del mes 16, como valora \transv{RT-26.08}{45}. La validación de los paradores y sus atributos se
+consolida durante la campaña de cobertura de la Etapa~1, y la calibración de la ventana circadiana con
+los turnos reales se ajusta en los talleres de diseño ergonómico del mes cuatro.
+
+\paragraph{Impacto económico} La inversión requerida es incremental sobre el software de borde y los
+talleres ergonómicos participativos, mientras que el levantamiento del catálogo se absorbe dentro del
+recorrido de la campaña de medición de cobertura que exige el \caso{RT-03.24}{31}, sin costo
+logístico adicional. En costo operacional
+reduce la búsqueda errática de estacionamiento en ruta, con un efecto en combustible que se mide en la
+Etapa~1. El beneficio central radica en la mitigación del riesgo de siniestros graves por microsueño y
+en la supresión de multas por la Ley N.º~21.377 y el artículo 25 bis.
+
+En el flujo de caja de la Oferta Económica, la innovación se registra en la partida CAPEX de desarrollo de software de borde y talleres ergonómicos, y en OPEX bajo la línea de servicios de actualización y soporte de cartografía segura.
+
+\paragraph{Indicador de verificación} Línea base cero de alertas con parador calificado garantizado,
+con meta de 98 \% o más de efectividad en ruta nacional, medida mensualmente en la marcha blanca. Cero
+eventos de interacción táctil con el vehículo en movimiento, sobre 0~km/h, con meta de 100 \% de
+bloqueo cinético.
+Carga cognitiva NASA-TLX con guantes bajo 35 puntos, con línea base que se mide en los talleres de la
+Etapa~1. Y adherencia voluntaria a paradas seguras de los conductores externos de 85 \% o más, con
+línea base que se mide en la misma etapa.
+
+\paragraph{Riesgo de adopción} Que los 258 conductores externos perciban el sistema como vigilancia
+patronal encubierta, con probabilidad media a alta e impacto alto. Se mitiga mediante diseño
+ergonómico participativo en horario de relevo en los cinco terminales y orientando la herramienta al
+bienestar, con recomendación de sitios con duchas, seguridad y convenios comerciales. La contingencia
+es que la unidad a bordo conmute a notificación puramente acústica por el altavoz del vehículo, sin
+requerir teléfonos personales ni botones adicionales en cabina, manteniendo la seguridad activa sin
+fricción sindical.

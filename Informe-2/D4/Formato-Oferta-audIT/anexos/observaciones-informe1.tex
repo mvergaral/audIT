@@ -1,0 +1,98 @@
+% ============================================================================
+%  Resolución de las observaciones del Informe 1 (FEP01, Artículo 46, p. 28)
+%  Filas de los subdocumentos 4 y 13. Cada subdocumento muestra solo las suyas
+%  (sub = N). La tabla completa con las generales y las de los demás
+%  subdocumentos la consolida quien arma el informe.
+% ============================================================================
+
+\begin{tablaObservaciones}{Informe 1}
+
+\grupoObservaciones{Subdocumento 4, arquitectura lógica}
+
+\observacion[tipo=acepta, sub=4]{53}{El diagrama de las ocho capas no muestra interfaces y no se explica qué contiene cada capa ni cómo se conectan}{La sección 4.1.3 describe el contenido y los componentes de cada capa, y explica que una petición atraviesa las seis capas de la pila sin acceso directo a la base de datos. \requiereDupla{3}{diagrama redibujado con las interfaces entre capas}}{4.1.3}
+
+\observacion[tipo=acepta, sub=4]{54}{Componentes que aparecen solo como ícono, terminal de torre y pantalla de terreno, sin decir qué equipo es, qué software ejecuta, quién lo usa ni con qué se conecta}{La capa de presentación declara el portal, la aplicación en los cuatro perfiles de RT-17.01 del Caso y las vistas de portería y de taller. \requiereDupla{3}{explicación de cada componente, dónde corre y con qué se conecta}}{4.1.3}
+
+\observacion[tipo=acepta, sub=4]{55}{No hay matriz de requerimiento a componente, ningún requerimiento funcional del Subdocumento 3 se ubica en un componente}{La trazabilidad cruza cada componente crítico entre la capa lógica, el nodo físico y el Formulario T-11. \requiereDupla{3}{matriz de requerimiento funcional del T-12 a componente}}{4.1 y 4.2.3}
+
+\observacion[tipo=acepta, sub=4]{56}{No se mencionan los principios SOLID, las arquitecturas de referencia se reducen a ISO 42010 y los ambientes del ciclo de desarrollo están ausentes}{Los cinco ambientes, de desarrollo a recuperación, van cada uno en su suscripción y se levantan desde el mismo código de infraestructura. \requiereDupla{3}{principios SOLID y arquitecturas de referencia}}{4.1 y 4.2.6}
+
+\observacion[tipo=acepta, sub=4]{57}{El diagrama de secuencia de la asignación bloqueante está huérfano, el texto no lo cita ni lo recorre}{El texto recorre la asignación desde la puerta de enlace hasta la persistencia, y la reconexión tras 72 horas se dimensiona tramo por tramo. \requiereDupla{3}{secuencias de emisión sin cobertura y de liquidación}}{4.1.9 y 4.2.8}
+
+\observacion[tipo=acepta, sub=4]{58}{Frameworks y tecnologías viven en las figuras, el texto no las decide ni las justifica}{El catálogo de nube declara nivel, configuración y subred de cada servicio. \requiereDupla{3}{tabla de lenguajes, frameworks y middleware con versión, fin de soporte y alternativas descartadas}}{4.1.1 y 4.2.4}
+
+\observacion[tipo=acepta, sub=4]{59}{El modelo táctico no trae límites de contexto ni eventos, aunque la sección lo promete}{\requiereDupla{3}{límites de contexto y eventos del modelo táctico}}{4.1.16}
+
+\observacion[tipo=acepta, sub=4]{60}{El estrangulamiento del sistema de 2013 no tiene registro de decisión ni compara alternativas ni fundamento económico}{\requiereDupla{3}{registro de decisión con reemplazo completo, conservar e integrar y paquete de mercado, con su fundamento económico}}{4.1.6}
+
+\observacion[tipo=acepta, sub=4]{61}{El descarte de la banda ancha satelital queda registrado pero no aparece como registro de decisión}{El equipo a bordo usa mensajería satelital Iridium de hasta 340 bytes en los tramos sin señal. \requiereDupla{3}{registro de decisión del descarte de la banda ancha satelital}}{4.1.6 y 4.2.2}
+
+\observacion[tipo=acepta, sub=4]{62}{Se afirma que el estilo arquitectónico se justifica con la volumetría sin justificarlo, y el numeral 2.3 de las Transversales pide comparar estilos}{\requiereDupla{3}{comparación de estilos del numeral 2.3 transversal}}{4.1 y 4.1.1}
+
+\observacion[tipo=acepta, sub=4]{63}{El stack tecnológico no ha sido validado}{La sección 4.1.1 confirma el bus y el motor de series que usa la arquitectura física y declara el retiro de Azure Cache for Redis en 2028. \requiereDupla{3}{versión, fin de soporte y prueba de concepto de cada producto}}{4.1.1}
+
+\grupoObservaciones{Subdocumento 4, arquitectura física}
+
+\observacion[tipo=acepta, sub=4]{64}{Falta el diagrama de arquitectura física, la figura son íconos y cajas sin nivel de servicio, redes virtuales, subredes, nodos, enlaces ni anchos de banda}{Un diagrama general muestra los tres planos con sus enlaces y capacidades, y otro la región primaria con sus redes, subredes, servicios con su nivel y conexiones}{4.2 y 4.2.5}
+
+\observacion[tipo=acepta, sub=4]{65}{No se dice qué componentes de Azure se usan ni con qué configuración, y las figuras se contradicen entre motores de series y entre buses}{El catálogo declara cada servicio con su nivel, configuración y subred. Las series van en PostgreSQL con TimescaleDB, en un servidor propio, y el bus es Event Hubs Premium con protocolo Kafka}{4.2.4}
+
+\observacion[tipo=acepta, sub=4]{66}{La sala de 26 m² se compara ítem por ítem pero falta plano, carga eléctrica y térmica}{Se entregan el plano con las zonas del RT-06.03, el balance eléctrico y térmico con factor de potencia y PUE, y el dimensionamiento de las UPS y del grupo electrógeno}{4.3.1}
+
+\observacion[tipo=acepta, sub=4]{67}{Ningún diagrama se cita desde el texto}{Cada figura se cita antes de aparecer y se explica después, en la sección que la usa}{Subdocumento 4 completo}
+
+\observacion[tipo=acepta, sub=4]{68}{La sección promete declarar cada producto con versión, fin de soporte y plan de actualización y no declara ninguno}{El Formulario T-11 declara el ciclo de vida de cada equipo y servicio. \requiereDupla{3}{versión y fin de soporte del software}}{4.1.1 y Formulario T-11}
+
+\observacion[tipo=acepta, sub=4]{69}{El Anexo A no es el T-11, y el Capítulo 11 del Caso exige qué comprar, cuánto y con qué características}{El Formulario T-11 va en archivo propio, con componente, producto, características, ubicación, cantidad, quién lo adquiere, ciclo de vida y justificación del emplazamiento}{Formulario T-11}
+
+\observacion[tipo=acepta, sub=4]{70}{Sin cantidades, el parque oscila entre 374 y «según adhesión», y nunca se explicita que los equipos de terceros no se reemplazan}{Las cantidades salen de las poblaciones del Caso: 182 equipos a bordo más 19 de reposición, 572 tarjetas y 210 balizas más 21. Los 192 equipos de terceros no se reemplazan, y el crecimiento a tres años va en filas aparte}{4.2.1 y Formulario T-11}
+
+\observacion[tipo=acepta, sub=4]{71}{Se dice que hay dieciocho componentes en la región primaria y la tabla suma veinte, y la matriz cubre 14 de los 34}{El conteo sale del Formulario T-11: 39 componentes, 24 de ellos en la región primaria, y la matriz de trazabilidad cruza los componentes críticos}{4.2.3}
+
+\observacion[tipo=acepta, sub=4]{72}{La región secundaria no tiene nombre y el Artículo 16.3 exige declararla}{La región secundaria es Azure Brazil South, en espera, a unos 2.586 km de la primaria, con el mecanismo de réplica de cada servicio}{4.3.2}
+
+\observacion[tipo=acepta, sub=4]{73}{Los 8 GB del dispositivo no tienen cálculo, y las 288 horas de cierre fronterizo dan cerca de 40 MB}{La capacidad se deriva por componente. Se requieren 2.374 MB, el búfer de 288 horas ocupa 38,4 MB y los 8 GB son la menor configuración del equipo}{4.2.2}
+
+\observacion[tipo=acepta, sub=4]{74}{La sincronización en 20 minutos se repite como requisito y no se dimensiona, y cientos de unidades saliendo de una sombra no caben en esa ventana}{Trescientos camiones que salen a la vez de una sombra sincronizan 57.600 mensajes en 9,6 minutos con IoT Hub S1 de dos unidades, dentro de los 20 del RT-03.13}{4.2.8}
+
+\observacion[tipo=acepta, sub=4]{75}{Faltan los eventos por segundo, el TPS del peak de asignación, el volumen transaccional anual, los datos a migrar, el ancho de banda por terminal y la mesa de ayuda}{Se declaran los eventos por segundo, las transacciones de la asignación, el volumen transaccional anual con la evidencia almacenada y el ancho de banda de terminales y de San Bernardo. La mesa de ayuda se dimensiona en el Subdocumento 10. \requiereDupla{3}{volumen de los datos históricos a migrar}}{4.2.8}
+
+\observacion[tipo=acepta, sub=4]{76}{La restricción 8 fija al sistema contable como único emisor del documento electrónico y el mecanismo propuesto convierte al dispositivo en emisor}{El sistema contable queda como único emisor y ningún equipo del Formulario T-11 emite documentos tributarios. En un punto de carga sin cobertura el documento se emite por anticipado desde la orden, o el equipo a bordo envía por satélite los datos mínimos y el folio vuelve por el mismo canal, como fija el Subdocumento 3 en su sección 3.4.2. El Subdocumento 4 ya no cita consultas por número, y las vigentes están en el registro de consultas del Formulario T-12}{4.1 y 4.2.2}
+
+\observacion[tipo=acepta, sub=4]{77}{El equipo de TI de nueve personas no se menciona y el RT-03.05 se cita sin listar los servicios administrados}{El catálogo lista los servicios administrados y los justifica con el tamaño del área de tecnología del mandante, nueve personas para cinco terminales, dos talleres y la flota}{4.2.4}
+
+\observacion[tipo=acepta, sub=4]{78}{Se tratan los tres proveedores de GPS y los 34 camiones sin equipo, pero no se dice qué se instala en esos 34 ni cómo conviven los dispositivos propios con los ajenos}{Los 34 camiones de terceros sin equipo llevan el equipo audIT, igual que los 148 propios. Los 192 de terceros con equipo lo conservan, sus datos llegan por las plataformas de sus proveedores y se fija el estándar mínimo para homologarlos}{4.2 y 4.2.1}
+
+\observacion[tipo=acepta, sub=4]{79}{La recuperación ante desastres y la continuidad se separan con argumento sísmico, pero no se fundamenta su factibilidad}{La recuperación usa Brazil South con réplica declarada por servicio, tres defensas para la telemetría y conmutación en cuatro pasos. La continuidad sin enlace descansa en San Bernardo, los terminales y los camiones, con cada función declarada y su procedimiento supletorio}{4.3.2}
+
+\observacion[tipo=acepta, sub=4]{80}{Los respaldos aparecen en una sola fila y no hay modelo Zero Trust explícito ni superficie de exposición}{Los respaldos siguen el esquema 3-2-1-1-0 con copia inmutable fuera de sitio, y la segmentación deja las subredes de aplicación y datos sin exposición a Internet. \requiereDupla{3}{modelo Zero Trust y superficie expuesta}}{4.1, 4.2.5 y 4.2.6}
+
+\grupoObservaciones{Subdocumento 13, innovaciones}
+
+\observacion[tipo=acepta, sub=13]{88}{La innovación tipo 3 es el RT-03.10, el RT-03.13, los criterios 8 y 9 y la decisión 4, una funcionalidad exigida presentada como innovación, que el Artículo 30 excluye}{La innovación 3 pasa a ser el semirremolque conectado, que ninguna exigencia de las bases pide. La operación sin cobertura queda como alcance base en la sección 4.2.2 del Subdocumento 4}{13.3}
+
+\observacion[tipo=acepta, sub=13]{89}{La innovación tipo 2 es el método que imponen las restricciones del Capítulo 6 y el numeral 13.3}{\requiereDupla{3}{reformulación o reemplazo de la innovación 2}}{13.2}
+
+\observacion[tipo=acepta, sub=13]{90}{Las fichas T-19 con los siete elementos del Artículo 29 se difieren a la propuesta final, aunque el Informe 1 las incluye}{Las cinco fichas van en el Formulario T-19, en archivo propio}{Formulario T-19}
+
+\observacion[tipo=acepta, sub=13]{91}{Los tipos 2 y 3 no traen madurez, impacto económico ni riesgo de adopción, el tipo 5 no trae riesgo y el tipo 1 solo declara inversión incremental}{Cada sección se ordena por los siete elementos del Artículo 29, y la innovación 3 los declara completos. La innovación 1 declara su costo operacional, que es el certificado de firma del emisor y la operación del servicio de verificación, y su contingencia, que es emitir el expediente automáticamente cada mes. \requiereDupla{3}{madurez, impacto y riesgo de la innovación 2}}{13.1 a 13.5 y Formulario T-19}
+
+\observacion[tipo=acepta, sub=13]{92}{En la tabla del tipo 3 las líneas base están inventadas y la meta está redactada al revés respecto del RT-03.13}{La nueva innovación 3 declara como línea base lo que el sistema actual no registra, sin cifras ajenas al Caso, y mide sus metas con datos de la propia solución}{13.3}
+
+\observacion[tipo=acepta, sub=13]{93}{El tipo 5 usa cifras que nadie midió, la línea base NASA-TLX, el 22 \% de adherencia, el 1,2 \% de ahorro y el costo por evento}{Se retiran las cuatro cifras. La carga NASA-TLX y la adherencia pasan a línea base medida en la Etapa 1, y el efecto en combustible se mide en la misma etapa}{13.5}
+
+\observacion[tipo=acepta, sub=13]{94}{Las 280 horas de desarrollo declaradas son información de esfuerzo dentro de la Oferta Técnica, contra el Artículo 50.2}{Se retiran}{13.5}
+
+\observacion[tipo=acepta, sub=13]{95}{El tipo 4 cuantifica un recupero anual en pesos}{Se retiran los montos. El recupero se valoriza en la Oferta Económica y no se compromete como ingreso}{13.4}
+
+\observacion[tipo=acepta, sub=13]{96}{El producto propio audIT EdgeHub se invoca sin definirlo en ningún subdocumento}{audIT EdgeHub es el software de borde de audIT y se define en el Subdocumento 1. La innovación 5 lo nombra como el software del equipo a bordo que especifica la sección 4.2.2 del Subdocumento 4}{13.5}
+
+\observacion[tipo=acepta, sub=13]{97}{No hay trazabilidad con el flujo de caja para ninguna innovación, y la tipo 4 debía reflejarse en la estructura de costos}{La innovación 3 se refleja como inversión en equipamiento en la Etapa 1 y como costo de reposición en la operación. La 1 aparece como una partida de desarrollo en la Etapa 1 y una de operación mensual, sin ingresos atribuidos. La 4 se refleja en la estructura de costos con el diseño y la validación jurídica del anexo, la campaña en los cinco terminales y la consola de consentimiento, y en la operación con la conectividad, el soporte y la reposición de los equipos en comodato. La 5 se registra como desarrollo de software de borde y talleres ergonómicos, y como servicio de actualización y soporte de la cartografía de paradores. \requiereDupla{3}{partida de la innovación 2}}{13.1 a 13.5}
+
+\observacion[tipo=aclara, sub=13]{98}{Declarar investigación adicional requerida en cada ficha equivale a declarar que la innovación no está diseñada}{Las bases ordenan que «si alguna requiere investigación adicional, debe declararse» (\form{T-22}{68}), y audIT usó esa figura sin reemplazar el diseño. En este informe cada pendiente queda dentro del elemento del Artículo 29 al que pertenece}{13.1 a 13.5}
+
+\observacion[tipo=acepta, sub=13]{99}{El punto 1.6 sobre estado de elaboración y responsables es organización interna, ininteligible para el mandante}{Se eliminan la sección y los nombres}{Subdocumento 13 completo}
+
+\observacion[tipo=acepta, sub=13]{100}{Cita al autor de las bases como fuente bibliográfica, tabla partida entre páginas y cero figuras}{Las bases se citan por documento, numeral y página. El capítulo trae dos figuras citadas antes y explicadas después}{Subdocumento 13 completo}
+
+\end{tablaObservaciones}
