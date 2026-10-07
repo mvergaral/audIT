@@ -40,17 +40,17 @@ El ciclo de vida del proyecto comprende tres fases claramente delimitadas en el 
   \item \textbf{Fase de Implementación de la Etapa 1 (Meses 1 a 15):} Construcción del núcleo operacional
   seguro, saneamiento de las 6.000 vigencias en un registro único, consolidación del expediente digital de
   jornada, módulo de pre-despacho con validación bloqueante, telemetría inicial y conector con el sistema
-  contable como único emisor tributario. Finaliza con una marcha blanca de 30 días continuos durante el mes 15.
-  \item \textbf{Paso a Producción de la Etapa 1 e Inicio de Operación Continuada (Mes 16):} Entrada en
+  contable como único emisor tributario. Desarrollo M1–M12 y marcha blanca de tres meses en M13–M15, con las seis condiciones acumulativas del Art. 17.3.
+  \item \textbf{Paso a Producción de la Etapa 1 (Mes 16):} Entrada en
   régimen productivo de las capacidades de seguridad, despacho, viaje, facturación y costeo básico por viaje,
-  iniciando el cómputo de los 36 meses de operación comprometidos \art{17}{12}.
-  \item \textbf{Fase de Implementación y Paso a Producción de la Etapa 2 (Meses 17 a 21):} Desarrollo y
+  sin anticipar los 36 meses de operación, que comienzan en M21 \art{17}{12}.
+  \item \textbf{Etapa 2: Desarrollo M13–M18, Marcha Blanca M19–M20 y Producción M21:} Desarrollo y
   despliegue de capacidades analíticas avanzadas, optimización heurística de retornos en vacío (ALNS),
   cálculo productivo integral de emisiones CO2e bajo norma ISO 14083 / GLEC y portal para talleres externos.
   Su paso a producción se formaliza en el mes 21 tras superar las pruebas de carga y aceptación de usuarios.
 \end{enumerate}
 
-La operación continuada se extiende por 36 meses a contar de la recepción provisoria de la Etapa 1,
+La operación continuada se extiende por 36 meses en M21–M56, a partir del paso a producción de la Etapa 2,
 garantizando la estabilidad de la plataforma, el soporte a los 148 transportistas terceros y el cumplimiento
 de los Acuerdos de Nivel de Servicio (SLA) de disponibilidad igual o superior al 99,5\,\% comprometidos en el Formulario T-6.
 
@@ -107,7 +107,7 @@ exclusiva del mandante o de terceros.
 \begin{enumerate}
   \item El mandante adquiere la totalidad del hardware a bordo (182 equipos principales y 19 de reposición) conforme al Capítulo 11 de las Bases Técnicas y el Formulario T-11.
   \item El mandante gestiona la suscripción del anexo contractual de adhesión con los 148 transportistas terceros con el apoyo técnico de audIT SpA.
-  \item El sistema contable existente dispone o implementará una interfaz oficial para emitir documentos de transporte en modo de contingencia desconectada.
+  \item La interfaz y la contingencia del sistema contable deben levantarse y homologarse con su proveedor. No se presume API ni modalidad offline disponible; cualquier solución mantendrá al ERP como único emisor y bloqueará salida sin documento conforme.
 \end{enumerate}
 
 \paragraph{Restricciones no negociables:}
@@ -231,12 +231,12 @@ de manera coordinada para garantizar la seguridad, la legalidad y la eficiencia 
   conformidad de entrega (POD) se obtiene en destino mediante firma digital y código OTP transmitido al receptor.
   \item \textbf{Operación Desconectada y Resiliencia en Frontera (\req{RF-009}, \req{RNF-002}, \req{RNF-008}):} El firmware
   embarcado almacena hasta 288 horas de eventos en memoria no volátil local, permitiendo operar sin pérdida de datos en zonas
-  sin cobertura celular y absorbiendo cierres de hasta 12 días en el Paso Los Libertadores. Al recuperar señal, la
+  sin cobertura celular como ampliación propuesta del mínimo de 72 h. El cierre fronterizo de hasta doce días no acredita igual período sin conectividad. Al recuperar señal, la
   sincronización se realiza de forma ordenada, idempotente y sin duplicados.
   \item \textbf{Integración Tributaria sin Fricción (\req{RF-013}, \req{RF-014}, \req{RNF-006}):} La orden de transporte
   aprobada genera la estructura de datos requerida por el software ERP contable de Curimón, el cual actúa como único emisor
-  autorizado ante el Servicio de Impuestos Internos. Para salidas en faenas remotas sin señal, se utiliza el mecanismo
-  offline certificado del ERP con folios preasignados, bloqueando la salida si el documento no está emitido conforme.
+  autorizado ante el Servicio de Impuestos Internos. Para salidas en faenas remotas sin señal, se verificará y homologará un mecanismo
+  de contingencia admitido por el ERP y la autoridad; no se presume existente ni certificado, bloqueando la salida si el documento no está emitido conforme.
   \item \textbf{Costeo por Viaje y Liquidación Automatizada (\req{RF-016}, \req{RF-017}, \req{RF-019}):} El motor de costos
   calcula el gasto real por kilómetro, tramo y ruta, publicando una versión preliminar en menos de 24 horas tras el cierre
   del viaje y consolidando mensualmente los ajustes de combustible y peajes. La liquidación mensual de los 148 transportistas

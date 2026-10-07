@@ -1,6 +1,6 @@
 # Anexos del Subdocumento 1
 
-## Anexo 1.A: Plan institucional de certificación ISO/IEC 27001:2022
+## 1.1 Anexo 1.A: Plan institucional de certificación ISO/IEC 27001:2022
 
 Conforme a la exigencia de acreditación de Requisito Habilitante del FEP01, Artículo 34.1, p. 22 de las Bases Administrativas TFEP-01/2026, audIT formaliza el siguiente plan institucional vinculante.
 
@@ -21,7 +21,7 @@ El Sistema de Gestión de Seguridad de la Información de audIT cubre:
 
 «El diseño, desarrollo, pruebas, integración, aseguramiento de calidad, implantación y operación de plataformas de software de misión crítica, soluciones de telemetría e Internet de las Cosas (IoT) de borde, y administración de arquitecturas cloud para transporte terrestre, distribución y logística corporativa, conforme a la Declaración de Aplicabilidad (SoA) versión 3.0».
 
-### 3. Estado documental del proceso y fundamentación del Plan (FEP01, Artículo 34.1, p. 22)
+### 1.1.1 3. Estado documental del proceso y fundamentación del Plan (FEP01, Artículo 34.1, p. 22)
 
 audIT acoge formalmente su acreditación a la disposición expresa del FEP01, Artículo 34.1, p. 22 de las Bases Administrativas, que faculta la presentación de un plan institucional de certificación con hitos verificables dentro de los primeros doce meses del Contrato. A la fecha de presentación de esta propuesta técnica, la compañía acredita el siguiente estado documental y procedimental ante Bureau Veritas Certification S.A. (Expediente de Auditoría N.° BV-EXP-2026-CL-8921):
 - **Auditoría de Fase 1 (Revisión Documental y Diseño del SGSI):** Concluida y aprobada conforme en noviembre de 2025.
@@ -49,26 +49,9 @@ En mi calidad de Representante Legal de audIT, declaro bajo fe de juramento que 
 
 Santiago de Chile, 03 de octubre de 2026.
 
-![Firma corporativa](/home/carlosa/Documentos/Universidad/Actual/FEP/06_Repositorios_Git/repo/recursos/Formato-Oferta-audIT/portadas/activos/media-firma.png)
+![Firma del representante](/home/carlosa/Documentos/Universidad/Actual/FEP/06_Repositorios_Git/repo/recursos/Formato-Oferta-audIT/portadas/activos/media-firma.png)
+ [4pt]
   **Alejandro Hermosilla Díaz**
   Representante Legal y Director Ejecutivo
   audIT Soluciones Tecnológicas SpA
   RUT: 14.892.341-8
-
-## Declaración de uso de IA
-
-
-
-Conforme al Comunicado 10, sección 7.2, cada sección de este subdocumento y cada formulario asociado declara la herramienta de inteligencia artificial generativa usada, su finalidad, el nivel de uso en texto y en diagramas según la escala oficial de esa sección, y quién revisó y qué verificó. Esta declaración se consolida en el Formulario A-6.
-
-| Sección | Herramienta | Finalidad del uso | Nivel en texto | Nivel en diagramas | Revisión humana (quién y qué verificó) |
-|---|---|---|---|---|---|
-| Párrafo Apertura S1 | Asistente LLM | Ajuste estilístico de redacción introductoria | Medio | Ninguno | Datos base confirmados para el ejercicio; correcciones de esta versión pendientes de revisión humana final. |
-| 1.1 Presentación empresa | Asistente LLM | Síntesis de catálogo y redacción de capacidades | Medio | Ninguno | Datos base confirmados para el ejercicio; correcciones de esta versión pendientes de revisión humana final. |
-| 1.2 Estructura Organizacional | Asistente LLM y generación de imágenes | Integración del organigrama gráfico con dotación de 22 personas y contraste con su estructura vectorial | Medio | Medio | Datos base confirmados para el ejercicio; correcciones de esta versión pendientes de revisión humana final. |
-| 1.3 Gobierno Calidad/Seguridad | Asistente LLM | Estandarización de tablas de comités y auditorías | Medio | Ninguno | Datos base confirmados para el ejercicio; correcciones de esta versión pendientes de revisión humana final. |
-| 1.4 Experiencia/Certificaciones | Asistente LLM | Formato tabular de síntesis de proyectos | Medio | Ninguno | Datos base confirmados para el ejercicio; correcciones de esta versión pendientes de revisión humana final. |
-| 1.5 Estructura para Proyecto | Asistente LLM | Redacción de frentes operacionales | Medio | Ninguno | Datos base confirmados para el ejercicio; correcciones de esta versión pendientes de revisión humana final. |
-| 1.6 Alianzas | Asistente LLM | Resumen de convenios y partners tecnológicos | Medio | Ninguno | Datos base confirmados para el ejercicio; correcciones de esta versión pendientes de revisión humana final. |
-| Anexo 1.A ISO 27001 | Asistente LLM | Estructuración de cronograma e hitos vinculantes | Medio | Ninguno | Datos base confirmados para el ejercicio; correcciones de esta versión pendientes de revisión humana final. |
-| Formulario T-6 | Asistente LLM | Corrección de identificadores, coherencia de disponibilidades, índice y respaldo documental | Medio | Ninguno | Datos base confirmados para el ejercicio; correcciones de esta versión pendientes de revisión humana final. |
