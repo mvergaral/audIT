@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="148.9mm" height="197.6mm" viewBox="0 0 422 560">
+<defs><marker id="fin-n" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="5.5" markerHeight="5.5" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#2B2B2B"/></marker><marker id="ini-n" viewBox="0 0 10 10" refX="0.5" refY="5" markerWidth="5.5" markerHeight="5.5" markerUnits="userSpaceOnUse" orient="auto"><path d="M10,0.8 L0,5 L10,9.2 z" fill="#2B2B2B"/></marker><marker id="fin-r" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="5.5" markerHeight="5.5" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#C0392B"/></marker><marker id="ini-r" viewBox="0 0 10 10" refX="0.5" refY="5" markerWidth="5.5" markerHeight="5.5" markerUnits="userSpaceOnUse" orient="auto"><path d="M10,0.8 L0,5 L10,9.2 z" fill="#C0392B"/></marker></defs>
+<rect x="0" y="0" width="422" height="560" fill="#FFFFFF"/>
+<g id="grupos">
+<rect x="8.00" y="6.00" width="406.00" height="24.00" rx="4" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="8.00" y="48.00" width="198.00" height="62.60" rx="6" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="8.00" y="113.60" width="198.00" height="89.00" rx="6" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="8.00" y="205.60" width="198.00" height="75.80" rx="6" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="8.00" y="284.40" width="198.00" height="62.60" rx="6" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="8.00" y="350.00" width="198.00" height="115.40" rx="6" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="8.00" y="468.40" width="198.00" height="89.00" rx="6" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="216.00" y="48.00" width="198.00" height="62.60" rx="6" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="216.00" y="113.60" width="198.00" height="89.00" rx="6" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="216.00" y="205.60" width="198.00" height="62.60" rx="6" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="216.00" y="271.20" width="198.00" height="62.60" rx="6" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="216.00" y="336.80" width="198.00" height="75.80" rx="6" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="216.00" y="415.60" width="198.00" height="36.20" rx="6" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="216.00" y="454.80" width="198.00" height="75.80" rx="6" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+</g>
+<g id="flechas">
+<path d="M211.00,30.00 L211.00,40.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter"/>
+<path d="M110.00,40.00 L312.00,40.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter"/>
+<path d="M110.00,40.00 L110.00,46.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" marker-end="url(#fin-n)"/>
+<path d="M318.00,40.00 L318.00,46.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" marker-end="url(#fin-n)"/>
+</g>
+<g id="iconos">
+<rect x="18.00" y="69.50" width="178.00" height="12.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="107.00" y="78.50" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">1.1 Dirección y control</text>
+<rect x="18.00" y="82.70" width="178.00" height="12.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="107.00" y="91.70" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">1.2 Interesados y comunicaciones</text>
+<rect x="18.00" y="95.90" width="178.00" height="12.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="107.00" y="104.90" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">1.3 Hardware del mandante</text>
+<rect x="18.00" y="135.10" width="178.00" height="12.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="107.00" y="144.10" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">2.1 Línea base y catálogo</text>
+<rect x="18.00" y="148.30" width="178.00" height="12.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="107.00" y="157.30" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">2.2 Cobertura móvil en terreno</text>
+<rect x="18.00" y="161.50" width="178.00" height="12.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="107.00" y="170.50" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">2.3 Factibilidad con terceros</text>
+<rect x="18.00" y="174.70" width="178.00" height="12.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="107.00" y="183.70" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">2.4 Arquitectura y datos</text>
+<rect x="18.00" y="187.90" width="178.00" height="12.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="107.00" y="196.90" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">2.5 Estudio de costo por ruta</text>
+<rect x="18.00" y="227.10" width="178.00" height="12.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="107.00" y="236.10" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">3.1 Ambientes y despliegue</text>
+<rect x="18.00" y="240.30" width="178.00" height="12.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="107.00" y="249.30" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">3.2 Seguridad e identidad</text>
+<rect x="18.00" y="253.50" width="178.00" height="12.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="107.00" y="262.50" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">3.3 Observabilidad</text>
+<rect x="18.00" y="266.70" width="178.00" height="12.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="107.00" y="275.70" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">3.4 San Bernardo y gabinetes</text>
+<rect x="18.00" y="305.90" width="178.00" height="12.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="107.00" y="314.90" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">4.1 Firmware y gestión remota</text>
+<rect x="18.00" y="319.10" width="178.00" height="12.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="107.00" y="328.10" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">4.2 Montaje camión por camión</text>
+<rect x="18.00" y="332.30" width="178.00" height="12.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="107.00" y="341.30" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">4.3 Integración de terceros</text>
+<rect x="18.00" y="371.50" width="178.00" height="12.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="107.00" y="380.50" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">5.1 Personas y cumplimiento</text>
+<rect x="18.00" y="384.70" width="178.00" height="12.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="107.00" y="393.70" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">5.2 Flota y activos</text>
+<rect x="18.00" y="397.90" width="178.00" height="12.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="107.00" y="406.90" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">5.3 Planificación y tráfico</text>
+<rect x="18.00" y="411.10" width="178.00" height="12.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="107.00" y="420.10" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">5.4 Telemetría y geocercas</text>
+<rect x="18.00" y="424.30" width="178.00" height="12.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="107.00" y="433.30" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">5.5 Operación de fletes</text>
+<rect x="18.00" y="437.50" width="178.00" height="12.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="107.00" y="446.50" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">5.6 Liquidación y costeo</text>
+<rect x="18.00" y="450.70" width="178.00" height="12.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="107.00" y="459.70" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">5.7 Portal del transportista</text>
+<rect x="18.00" y="489.90" width="178.00" height="12.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="107.00" y="498.90" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">6.1 Sistema contable</text>
+<rect x="18.00" y="503.10" width="178.00" height="12.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="107.00" y="512.10" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">6.2 Plataformas de posición</text>
+<rect x="18.00" y="516.30" width="178.00" height="12.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="107.00" y="525.30" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">6.3 Telemetría y tacógrafo</text>
+<rect x="18.00" y="529.50" width="178.00" height="12.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="107.00" y="538.50" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">6.4 Combustible, peaje y taller</text>
+<rect x="18.00" y="542.70" width="178.00" height="12.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="107.00" y="551.70" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">6.5 Sistema de 2013 y su retiro</text>
+<rect x="226.00" y="69.50" width="178.00" height="12.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="315.00" y="78.50" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">7.1 Migración de vigencias</text>
+<rect x="226.00" y="82.70" width="178.00" height="12.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="315.00" y="91.70" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">7.2 Migración histórica</text>
+<rect x="226.00" y="95.90" width="178.00" height="12.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="315.00" y="104.90" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">7.3 Repositorio analítico</text>
+<rect x="226.00" y="135.10" width="178.00" height="12.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="315.00" y="144.10" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">8.1 Portal del cliente</text>
+<rect x="226.00" y="148.30" width="178.00" height="12.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="315.00" y="157.30" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">8.2 Asignación de retornos</text>
+<rect x="226.00" y="161.50" width="178.00" height="12.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="315.00" y="170.50" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">8.3 Emisiones</text>
+<rect x="226.00" y="174.70" width="178.00" height="12.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="315.00" y="183.70" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">8.4 Talleres y mantenimiento</text>
+<rect x="226.00" y="187.90" width="178.00" height="12.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="315.00" y="196.90" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">8.5 Dispersión de rendimiento</text>
+<rect x="226.00" y="227.10" width="178.00" height="12.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="315.00" y="236.10" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">9.1 Anexo de adhesión</text>
+<rect x="226.00" y="240.30" width="178.00" height="12.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="315.00" y="249.30" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">9.2 Campaña y enrolamiento</text>
+<rect x="226.00" y="253.50" width="178.00" height="12.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="315.00" y="262.50" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">9.3 Medición y refuerzo</text>
+<rect x="226.00" y="292.70" width="178.00" height="12.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="315.00" y="301.70" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">10.1 Sistema e integración</text>
+<rect x="226.00" y="305.90" width="178.00" height="12.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="315.00" y="314.90" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">10.2 Desempeño y seguridad</text>
+<rect x="226.00" y="319.10" width="178.00" height="12.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="315.00" y="328.10" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">10.3 Aceptación de usuario</text>
+<rect x="226.00" y="358.30" width="178.00" height="12.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="315.00" y="367.30" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">11.1 Capacitación</text>
+<rect x="226.00" y="371.50" width="178.00" height="12.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="315.00" y="380.50" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">11.2 Marcha blanca, Etapa 1</text>
+<rect x="226.00" y="384.70" width="178.00" height="12.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="315.00" y="393.70" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">11.3 Marcha blanca, Etapa 2</text>
+<rect x="226.00" y="397.90" width="178.00" height="12.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="315.00" y="406.90" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">11.4 Estabilización y traspaso</text>
+<rect x="226.00" y="437.10" width="178.00" height="12.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="315.00" y="446.10" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">12.1 a 12.5, una por innovación</text>
+<rect x="226.00" y="476.30" width="178.00" height="12.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="315.00" y="485.30" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">13.1 Mesa de servicio 24x7</text>
+<rect x="226.00" y="489.50" width="178.00" height="12.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="315.00" y="498.50" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">13.2 Operación de la plataforma</text>
+<rect x="226.00" y="502.70" width="178.00" height="12.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="315.00" y="511.70" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">13.3 Ciclo de vida del equipo a bordo</text>
+<rect x="226.00" y="515.90" width="178.00" height="12.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="315.00" y="524.90" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">13.4 Mantención evolutiva</text>
+</g>
+<g id="textos">
+<text x="211.00" y="21.50" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="middle" fill="#000000">Plataforma de control de jornada, flota y viaje para Transportes Curimón</text>
+<text x="16.00" y="63.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">1 Gestión del proyecto</text>
+<text x="16.00" y="128.60" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">2 Levantamiento y diseño</text>
+<text x="16.00" y="220.60" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">3 Plataforma</text>
+<text x="16.00" y="299.40" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">4 Equipo a bordo</text>
+<text x="16.00" y="365.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">5 Servicios de la Etapa 1</text>
+<text x="16.00" y="483.40" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">6 Integraciones</text>
+<text x="224.00" y="63.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">7 Datos y migración</text>
+<text x="224.00" y="128.60" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">8 Servicios de la Etapa 2</text>
+<text x="224.00" y="220.60" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">9 Adhesión de transportistas</text>
+<text x="224.00" y="286.20" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">10 Calidad y pruebas</text>
+<text x="224.00" y="351.80" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">11 Implantación</text>
+<text x="224.00" y="430.60" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">12 Innovaciones</text>
+<text x="224.00" y="469.80" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">13 Operación de 36 meses</text>
+</g>
+</svg>

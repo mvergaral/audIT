@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="257.4mm" height="167.0mm" viewBox="0 0 729.6 473.4">
+<defs><marker id="fin-n" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="5.5" markerHeight="5.5" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#2B2B2B"/></marker><marker id="ini-n" viewBox="0 0 10 10" refX="0.5" refY="5" markerWidth="5.5" markerHeight="5.5" markerUnits="userSpaceOnUse" orient="auto"><path d="M10,0.8 L0,5 L10,9.2 z" fill="#2B2B2B"/></marker><marker id="fin-r" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="5.5" markerHeight="5.5" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#C0392B"/></marker><marker id="ini-r" viewBox="0 0 10 10" refX="0.5" refY="5" markerWidth="5.5" markerHeight="5.5" markerUnits="userSpaceOnUse" orient="auto"><path d="M10,0.8 L0,5 L10,9.2 z" fill="#C0392B"/></marker><symbol id="ic-flu-contable" viewBox="0 0 32 32" fill="none">
+<path d="M5 26H28V29C28 29.5523 27.5523 30 27 30H6C5.44772 30 5 29.5523 5 29V26Z" fill="#F9C23C"/>
+<path d="M6 26H27V27.5C27 28.3284 26.3284 29 25.5 29H7.5C6.67157 29 6 28.3284 6 27.5V26Z" fill="#D3D3D3"/>
+<path d="M5 3C5 2.44772 5.44772 2 6 2H27C27.5523 2 28 2.44772 28 3V26C28 26.5523 27.5523 27 27 27H6C5.44772 27 5 26.5523 5 26V3Z" fill="#FCD53F"/>
+<path d="M11 9C11 8.44772 11.4477 8 12 8H20C20.5523 8 21 8.44772 21 9V11C21 11.5523 20.5523 12 20 12H12C11.4477 12 11 11.5523 11 11V9Z" fill="#FFB02E"/>
+<path d="M7.48228 6C7.36097 5.15193 6.63162 4.5 5.75 4.5C4.7835 4.5 4 5.2835 4 6.25C4 6.9481 4.40876 7.55073 5 7.83159V8.33697C5.24076 8.28009 5.49187 8.25 5.75 8.25C7.46081 8.25 8.86287 9.57189 8.99053 11.25H9C9 11.3485 8.9806 11.446 8.94291 11.537C8.90522 11.628 8.84997 11.7107 8.78033 11.7803C8.71069 11.85 8.62801 11.9052 8.53701 11.9429C8.44602 11.9806 8.34849 12 8.25 12C8.15151 12 8.05398 11.9806 7.96299 11.9429C7.87199 11.9052 7.78931 11.85 7.71967 11.7803C7.65003 11.7107 7.59478 11.628 7.55709 11.537C7.5194 11.446 7.5 11.3485 7.5 11.25H7.48228C7.36097 10.4019 6.63162 9.75 5.75 9.75C4.7835 9.75 4 10.5335 4 11.5C4 12.1981 4.40876 12.8007 5 13.0816V13.587C5.24076 13.5301 5.49187 13.5 5.75 13.5C7.46081 13.5 8.86287 14.8219 8.99053 16.5H9C9 16.5985 8.9806 16.696 8.94291 16.787C8.90522 16.878 8.84997 16.9607 8.78033 17.0303C8.71069 17.1 8.62801 17.1552 8.53701 17.1929C8.44602 17.2306 8.34849 17.25 8.25 17.25C8.15151 17.25 8.05398 17.2306 7.96299 17.1929C7.87199 17.1552 7.78931 17.1 7.71967 17.0303C7.65003 16.9607 7.59478 16.878 7.55709 16.787C7.5194 16.696 7.5 16.5985 7.5 16.5H7.48228C7.36097 15.6519 6.63162 15 5.75 15C4.7835 15 4 15.7835 4 16.75C4 17.4481 4.40876 18.0507 5 18.3316V18.837C5.24076 18.7801 5.49187 18.75 5.75 18.75C7.46081 18.75 8.86287 20.0719 8.99053 21.75H9C9 21.8485 8.9806 21.946 8.94291 22.037C8.90522 22.128 8.84997 22.2107 8.78033 22.2803C8.71069 22.35 8.62801 22.4052 8.53701 22.4429C8.44602 22.4806 8.34849 22.5 8.25 22.5C8.15151 22.5 8.05398 22.4806 7.96299 22.4429C7.87199 22.4052 7.78931 22.35 7.71967 22.2803C7.65003 22.2107 7.59478 22.128 7.55709 22.037C7.5194 21.946 7.5 21.8485 7.5 21.75H7.48228C7.36097 20.9019 6.63162 20.25 5.75 20.25C4.7835 20.25 4 21.0335 4 22C4 22.6981 4.40876 23.3007 5 23.5816V25.163C3.56665 24.8245 2.5 23.5368 2.5 22C2.5 20.9218 3.02505 19.9662 3.83341 19.375C3.02505 18.7838 2.5 17.8282 2.5 16.75C2.5 15.6718 3.02505 14.7162 3.83341 14.125C3.02505 13.5338 2.5 12.5782 2.5 11.5C2.5 10.4218 3.02505 9.46622 3.83341 8.875C3.02505 8.28378 2.5 7.32821 2.5 6.25C2.5 4.45507 3.95507 3 5.75 3C7.46081 3 8.86287 4.32189 8.99053 6H9C9 6.09849 8.9806 6.19602 8.94291 6.28701C8.90522 6.37801 8.84997 6.46069 8.78033 6.53033C8.71069 6.59997 8.62801 6.65522 8.53701 6.69291C8.44602 6.7306 8.34849 6.75 8.25 6.75C8.15151 6.75 8.05398 6.7306 7.96299 6.69291C7.87199 6.65522 7.78931 6.59997 7.71967 6.53033C7.65003 6.46069 7.59478 6.37801 7.55709 6.28701C7.5194 6.19602 7.5 6.09849 7.5 6H7.48228Z" fill="#9B9B9B"/>
+</symbol><symbol id="ic-flu-edificio-publico" viewBox="0 0 32 32" fill="none">
+<path d="M24.0227 11.99H8.00269V27.98H24.0227V11.99Z" fill="#212121"/>
+<path d="M3.36262 10.2401L15.3226 3.50007C15.7426 3.26007 16.2626 3.26007 16.6826 3.50007L28.6426 10.2401C29.0026 10.4501 28.8626 11.0001 28.4426 11.0001H27.9926V12.36C27.9926 12.71 27.7126 12.99 27.3626 12.99H4.6626C4.3126 12.99 4.03259 12.71 4.03259 12.36V11.0001H3.56261C3.14261 11.0001 3.00262 10.4401 3.36262 10.2401ZM3.02258 29.97H28.9626H28.9726V27.6C28.9726 27.25 28.6926 26.97 28.3426 26.97H3.65257C3.30257 26.97 3.02258 27.25 3.02258 27.6V29.97ZM11.6626 13.96H14.6526V26.06H11.6626V13.96ZM6 14H9V26H6V14ZM20.3126 13.96H17.3226V26.06H20.3126V13.96ZM22.9826 13.96H25.9726V26.06H22.9826V13.96Z" fill="#9B9B9B"/>
+<path d="M16.2526 3.06L28.7726 10.17C29.0026 10.29 29.0726 10.57 28.9426 10.79C28.8626 10.93 28.7026 11.01 28.5426 11.01C28.4626 11.01 28.3726 10.99 28.3026 10.95L16.2326 4.1C16.0926 4.02 15.9126 4.02 15.7726 4.1L3.70261 10.95C3.62261 10.99 3.54261 11.01 3.46261 11.01C3.30261 11.01 3.15261 10.93 3.06261 10.79C2.93261 10.57 3.01261 10.3 3.23261 10.17L15.7526 3.06C15.8326 3.02 15.9226 3 16.0026 3C16.0926 3 16.1726 3.02 16.2526 3.06ZM10.0026 12.99H5.01257V13.18C5.01257 13.63 5.37257 13.99 5.82257 13.99H9.19258C9.64258 13.99 10.0026 13.63 10.0026 13.18V12.99ZM15.6526 12.99H10.6626V13.18C10.6626 13.63 11.0226 13.99 11.4726 13.99H14.8426C15.2926 13.99 15.6526 13.63 15.6526 13.18V12.99ZM16.3326 12.99H21.3226V13.18C21.3226 13.63 20.9626 13.99 20.5126 13.99H17.1426C16.6926 13.99 16.3326 13.63 16.3326 13.18V12.99ZM26.9826 12.99H21.9926V13.18C21.9926 13.63 22.3526 13.99 22.8026 13.99H26.1726C26.6226 13.99 26.9826 13.63 26.9826 13.18V12.99ZM26.9726 26.98H21.9826V26.79C21.9826 26.34 22.3426 25.98 22.7926 25.98H26.1626C26.6126 25.98 26.9726 26.34 26.9726 26.79V26.98ZM16.3326 26.98H21.3226V26.79C21.3226 26.34 20.9626 25.98 20.5126 25.98H17.1426C16.6926 25.98 16.3326 26.34 16.3326 26.79V26.98ZM15.6526 26.98H10.6626V26.79C10.6626 26.34 11.0226 25.98 11.4726 25.98H14.8426C15.2926 25.98 15.6526 26.34 15.6526 26.79V26.98ZM5.00262 26.98H9.99263V26.79C9.99263 26.34 9.63262 25.98 9.18262 25.98H5.81262C5.36262 25.98 5.00262 26.34 5.00262 26.79V26.98Z" fill="#D3D3D3"/>
+</symbol><symbol id="ic-flu-gestion2013" viewBox="0 0 32 32" fill="none">
+<path d="M27.8774 29.9491H4.12258C2.95017 29.9491 2 28.9989 2 27.8265L1.99998 15.7788C1.99998 13.6918 3.69181 12 5.77881 12H26.2212C28.3082 12 30 13.6918 30 15.7788L30 27.8265C30 28.9989 29.0492 29.9491 27.8774 29.9491Z" fill="#433B6B"/>
+<path d="M4.12258 5H27.8774C29.0492 5 30 5.95017 30 7.12258V16.3934C30 17.5658 29.0498 18.516 27.8774 18.516H4.12258C2.95017 18.516 2 17.5658 2 16.3934V7.12258C2 5.95017 2.95017 5 4.12258 5Z" fill="#8D65C5"/>
+<path d="M13.4995 21H18.5005C19.3277 21 20 21.6731 20 22.5V25.5C20 26.3269 19.3271 27 18.5005 27H13.4995C12.6729 27 12 26.3269 12 25.5V22.5C12 21.6731 12.6729 21 13.4995 21Z" fill="#8D65C5"/>
+<path d="M27.8774 6.51849C28.2214 6.51849 28.5017 6.7988 28.5017 7.14278V16.3757C28.5017 16.7197 28.2214 17 27.8774 17H27L16 15.5L5 17H4.12258C3.7786 17 3.49829 16.7197 3.49829 16.3757V7.14278C3.49829 6.7988 3.7786 6.51849 4.12258 6.51849H27.8774Z" fill="#321B41"/>
+<path d="M18.5002 26H13.4998C13.2237 26 13 25.7763 13 25.5V22.5C13 22.2237 13.2237 22 13.4998 22H18.5002C18.7763 22 19 22.2237 19 22.5V25.5C19 25.7763 18.7763 26 18.5002 26Z" fill="#F4F4F4"/>
+<path d="M22.9977 3H19.0023C18.4485 3 18 3.45388 18 4.01426V5L21 6L24 5V4.01426C24 3.45388 23.5515 3 22.9977 3Z" fill="#00D26A"/>
+<path d="M27 12V7.17802C27 5.97499 26.0488 5 24.875 5H7.125C5.95125 5 5 5.97499 5 7.17802V11.984L27 12Z" fill="#FFB02E"/>
+<path d="M17.9977 7H14.0023C13.4485 7 13 7.45388 13 8.01426V9L16 10L19 9V8.01426C19 7.45388 18.5515 7 17.9977 7Z" fill="#00A6ED"/>
+<path d="M27 15.5V11.1824C27 9.97693 26.0488 9 24.875 9H7.125C5.95125 9 5 9.97693 5 11.1824V15.484L27 15.5Z" fill="#F9C23C"/>
+<path d="M12.9977 11H9.0023C8.44853 11 8 11.4539 8 12.0143V13L11 14L14 13V12.0143C14 11.4539 13.5508 11 12.9977 11Z" fill="#F8312F"/>
+<path d="M27 17V15.1226C27 13.9502 26.0724 13 24.9 13H7.24024C5.99915 13 4.9928 14.0064 4.9928 15.2474L5 17H27Z" fill="#FCD53F"/>
+</symbol><symbol id="ic-pr-adaptador" viewBox="0 0 48 48"><rect x="4" y="15" width="15" height="18" rx="2.5" fill="#0074BA"/><rect x="19" y="19" width="7.5" height="2.8" rx="0.6" fill="#9B9B9B"/><rect x="19" y="26.2" width="7.5" height="2.8" rx="0.6" fill="#9B9B9B"/><rect x="29" y="15" width="15" height="18" rx="2.5" fill="#00A6ED"/><rect x="27.5" y="18.5" width="2" height="11" rx="0.5" fill="#433B6B"/></symbol><symbol id="ic-pr-cola" viewBox="0 0 48 48"><path d="M5 12 H43 M5 36 H43" fill="none" stroke="#433B6B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><rect x="8" y="16" width="9" height="16" rx="2" fill="#0074BA"/><rect x="19.5" y="16" width="9" height="16" rx="2" fill="#00A6ED"/><rect x="31" y="16" width="9" height="16" rx="2" fill="#26C9FC"/></symbol><symbol id="ic-pr-cortacircuito" viewBox="0 0 48 48"><rect x="12" y="5" width="24" height="38" rx="3" fill="#433B6B"/><rect x="18.5" y="12" width="11" height="22" rx="2" fill="#321B41"/><rect x="19.5" y="23" width="9" height="10" rx="1.6" fill="#FFFFFF"/><path d="M25.5 36.5 L22.5 40.5 H24.6 L23.8 43 L27 39 H24.9 Z" fill="#FFB02E"/></symbol><symbol id="ic-pr-reconciliador" viewBox="0 0 48 48"><rect x="11" y="5" width="26" height="38" rx="2.5" fill="#D3D3D3"/><rect x="18" y="3" width="12" height="5" rx="1.5" fill="#433B6B"/><path d="M16.5 25 L21.5 30 L32 19.5" fill="none" stroke="#00D26A" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/></symbol><symbol id="ic-pr-transformador" viewBox="0 0 48 48"><path d="M8 17 H38 M32 11 L38 17 L32 23" fill="none" stroke="#0074BA" stroke-width="3.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M40 31 H10 M16 25 L10 31 L16 37" fill="none" stroke="#00A6ED" stroke-width="3.0" stroke-linecap="round" stroke-linejoin="round"/></symbol></defs>
+<rect x="0" y="0" width="729.6" height="473.4" fill="#FFFFFF"/>
+<g id="grupos">
+<rect x="14.00" y="20.00" width="136.00" height="238.00" rx="10" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="22.00" y="42.00" width="120.00" height="29.00" rx="4" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="22.00" y="77.00" width="120.00" height="29.00" rx="4" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="22.00" y="112.00" width="120.00" height="29.00" rx="4" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="22.00" y="147.00" width="120.00" height="29.00" rx="4" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="22.00" y="182.00" width="120.00" height="29.00" rx="4" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="22.00" y="217.00" width="120.00" height="29.00" rx="4" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="214.00" y="20.00" width="330.00" height="238.00" rx="10" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="14.00" y="268.00" width="702.00" height="198.00" rx="10" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="500.00" y="303.00" width="150.00" height="6.00" rx="0" fill="#E6E6E6" stroke="#9B9B9B" stroke-width="0.5"/>
+</g>
+<g id="flechas">
+<path d="M150.00,104.00 L248.00,104.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" marker-end="url(#fin-n)"/>
+<path d="M275.00,104.00 L349.00,104.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" marker-end="url(#fin-n)"/>
+<path d="M375.00,104.00 L438.00,104.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" marker-end="url(#fin-n)"/>
+<path d="M393.00,196.00 L520.00,196.00 L520.00,112.00 L498.00,112.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" stroke-dasharray="3.5 2.5" marker-end="url(#fin-n)"/>
+<path d="M544.00,40.00 L627.00,40.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" marker-end="url(#fin-n)" marker-start="url(#ini-n)"/>
+<path d="M498.00,98.00 L580.00,98.00 L580.00,126.00 L627.00,126.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" marker-end="url(#fin-n)"/>
+<path d="M653.00,132.00 L690.00,132.00 L690.00,220.00 L652.00,220.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" marker-end="url(#fin-n)"/>
+<path d="M627.00,138.00 L596.00,138.00 L596.00,240.00 L200.00,240.00 L200.00,170.00 L150.00,170.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" marker-end="url(#fin-n)"/>
+<path d="M60.00,306.00 L700.00,306.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter"/>
+<path d="M240.00,300.00 L240.00,312.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter"/>
+<path d="M500.00,300.00 L500.00,312.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter"/>
+<path d="M650.00,300.00 L650.00,312.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter"/>
+<path d="M240.00,336.00 L240.00,346.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" marker-end="url(#fin-n)"/>
+<path d="M240.00,379.00 L240.00,389.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" marker-end="url(#fin-n)"/>
+<path d="M240.00,432.60 L240.00,442.60" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" marker-end="url(#fin-n)"/>
+<path d="M500.00,336.00 L500.00,346.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" marker-end="url(#fin-n)"/>
+<path d="M500.00,379.00 L500.00,389.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" marker-end="url(#fin-n)"/>
+<path d="M500.00,422.00 L500.00,432.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" marker-end="url(#fin-n)"/>
+</g>
+<g id="iconos">
+<rect x="152.68" y="88.80" width="58.64" height="9.90" fill="#FFFFFF"/>
+<rect x="158.28" y="99.40" width="47.44" height="9.90" fill="#FFFFFF"/>
+<rect x="161.19" y="110.00" width="41.62" height="9.90" fill="#FFFFFF"/>
+<use href="#ic-pr-adaptador" x="249.00" y="91.00" width="26.00" height="26.00"/>
+<use href="#ic-pr-transformador" x="349.00" y="91.00" width="26.00" height="26.00"/>
+<use href="#ic-pr-cortacircuito" x="438.00" y="92.00" width="24.00" height="24.00"/>
+<use href="#ic-pr-cola" x="474.00" y="92.00" width="24.00" height="24.00"/>
+<use href="#ic-pr-reconciliador" x="367.00" y="183.00" width="26.00" height="26.00"/>
+<rect x="441.24" y="191.80" width="53.51" height="9.90" fill="#FFFFFF"/>
+<use href="#ic-flu-gestion2013" x="627.00" y="31.00" width="26.00" height="26.00"/>
+<use href="#ic-flu-contable" x="627.00" y="119.00" width="26.00" height="26.00"/>
+<rect x="562.24" y="104.80" width="35.51" height="9.90" fill="#FFFFFF"/>
+<rect x="556.89" y="115.40" width="46.22" height="9.90" fill="#FFFFFF"/>
+<use href="#ic-flu-edificio-publico" x="628.00" y="208.00" width="24.00" height="24.00"/>
+<rect x="676.67" y="168.80" width="26.65" height="9.90" fill="#FFFFFF"/>
+<rect x="281.24" y="235.80" width="97.53" height="9.90" fill="#FFFFFF"/>
+<rect x="549.31" y="301.80" width="51.38" height="9.90" fill="#FFFFFF"/>
+<rect x="194.77" y="322.00" width="90.47" height="14.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="240.00" y="332.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Asignación de viajes</text>
+<rect x="190.41" y="346.00" width="99.18" height="14.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="240.00" y="356.00" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="middle" fill="#000000">Planificación y tráfico</text>
+<rect x="201.92" y="365.00" width="76.16" height="14.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="240.00" y="375.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Control de viajes</text>
+<rect x="194.89" y="389.00" width="90.23" height="14.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="240.00" y="399.00" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="middle" fill="#000000">Operación de fletes</text>
+<rect x="187.25" y="408.00" width="105.50" height="24.60" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="240.00" y="418.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Base de la liquidación y</text>
+<text x="240.00" y="428.60" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">tarifas de transportistas</text>
+<rect x="193.08" y="442.60" width="93.83" height="14.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="240.00" y="452.60" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="middle" fill="#000000">Liquidación y costeo</text>
+<rect x="449.95" y="322.00" width="100.11" height="14.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="500.00" y="332.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Órdenes de transporte</text>
+<rect x="450.41" y="346.00" width="99.18" height="14.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="500.00" y="356.00" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="middle" fill="#000000">Planificación y tráfico</text>
+<rect x="461.29" y="365.00" width="77.43" height="14.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="500.00" y="375.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Tarifas a clientes</text>
+<rect x="453.08" y="389.00" width="93.83" height="14.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="500.00" y="399.00" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="middle" fill="#000000">Liquidación y costeo</text>
+<rect x="459.20" y="408.00" width="81.60" height="14.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="500.00" y="418.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Consulta histórica</text>
+<rect x="452.45" y="432.00" width="95.10" height="14.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="500.00" y="442.00" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="middle" fill="#000000">Repositorio analítico</text>
+<rect x="611.61" y="325.70" width="76.79" height="24.60" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="650.00" y="335.70" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Retiro del</text>
+<text x="650.00" y="346.30" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">sistema de 2013</text>
+</g>
+<g id="textos">
+<text x="22.00" y="35.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">Contextos</text>
+<text x="82.00" y="59.65" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Planificación y tráfico</text>
+<text x="82.00" y="94.65" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Flota y activos</text>
+<text x="82.00" y="129.65" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Personas y cumplimiento</text>
+<text x="82.00" y="164.65" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Telemetría y geocercas</text>
+<text x="82.00" y="199.65" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Operación de fletes</text>
+<text x="82.00" y="234.65" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Liquidación y costeo</text>
+<text x="182.00" y="96.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Viaje cerrado,</text>
+<text x="182.00" y="106.60" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">liquidación</text>
+<text x="182.00" y="117.20" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">aprobada</text>
+<text x="222.00" y="35.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">Capa anticorrupción</text>
+<text x="262.00" y="128.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Adaptador</text>
+<text x="262.00" y="140.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">de dominio</text>
+<text x="362.00" y="128.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Transformador</text>
+<text x="362.00" y="140.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">de esquemas</text>
+<text x="468.00" y="128.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Protector de</text>
+<text x="468.00" y="140.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">resiliencia</text>
+<text x="468.00" y="151.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Cortacircuito y cola</text>
+<text x="380.00" y="220.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Reconciliador</text>
+<text x="380.00" y="231.50" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Expone lo pendiente</text>
+<text x="468.00" y="199.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Vigila la cola</text>
+<text x="640.00" y="68.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Sistema de gestión</text>
+<text x="640.00" y="80.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">de transporte 2013</text>
+<text x="640.00" y="156.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Sistema contable</text>
+<text x="640.00" y="168.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">y de facturación</text>
+<text x="640.00" y="179.50" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Único emisor</text>
+<text x="580.00" y="112.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Eventos</text>
+<text x="580.00" y="122.60" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">traducidos</text>
+<text x="640.00" y="243.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Autoridad</text>
+<text x="640.00" y="255.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">tributaria</text>
+<text x="690.00" y="176.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Emite</text>
+<text x="330.00" y="243.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Confirmación traducida</text>
+<text x="22.00" y="283.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">Retiro del sistema de 2013 función por función</text>
+<text x="240.00" y="297.00" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="middle" fill="#000000">Mes 16</text>
+<text x="500.00" y="297.00" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="middle" fill="#000000">Mes 21</text>
+<text x="650.00" y="297.00" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="middle" fill="#000000">Mes 24</text>
+<text x="575.00" y="309.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Solo lectura</text>
+</g>
+</svg>

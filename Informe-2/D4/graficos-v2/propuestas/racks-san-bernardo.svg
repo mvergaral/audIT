@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="148.9mm" height="159.5mm" viewBox="0 0 422 452">
+<defs><marker id="fin-n" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="5.5" markerHeight="5.5" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#2B2B2B"/></marker><marker id="ini-n" viewBox="0 0 10 10" refX="0.5" refY="5" markerWidth="5.5" markerHeight="5.5" markerUnits="userSpaceOnUse" orient="auto"><path d="M10,0.8 L0,5 L10,9.2 z" fill="#2B2B2B"/></marker><marker id="fin-r" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="5.5" markerHeight="5.5" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#C0392B"/></marker><marker id="ini-r" viewBox="0 0 10 10" refX="0.5" refY="5" markerWidth="5.5" markerHeight="5.5" markerUnits="userSpaceOnUse" orient="auto"><path d="M10,0.8 L0,5 L10,9.2 z" fill="#C0392B"/></marker></defs>
+<rect x="0" y="0" width="422" height="452" fill="#FFFFFF"/>
+<g id="grupos">
+<rect x="40.00" y="46.00" width="162.00" height="372.00" rx="2" fill="#FFFFFF" stroke="#2B2B2B" stroke-width="2.2"/>
+<rect x="46.00" y="397.00" width="150.00" height="15.00" rx="0" fill="#FFFFFF" stroke="#D3D3D3" stroke-width="0.4"/>
+<rect x="46.00" y="382.00" width="150.00" height="15.00" rx="0" fill="#FFFFFF" stroke="#D3D3D3" stroke-width="0.4"/>
+<rect x="46.00" y="367.00" width="150.00" height="15.00" rx="0" fill="#FFFFFF" stroke="#D3D3D3" stroke-width="0.4"/>
+<rect x="46.00" y="352.00" width="150.00" height="15.00" rx="0" fill="#FFFFFF" stroke="#D3D3D3" stroke-width="0.4"/>
+<rect x="46.00" y="337.00" width="150.00" height="15.00" rx="0" fill="#FFFFFF" stroke="#D3D3D3" stroke-width="0.4"/>
+<rect x="46.00" y="322.00" width="150.00" height="15.00" rx="0" fill="#FFFFFF" stroke="#D3D3D3" stroke-width="0.4"/>
+<rect x="46.00" y="307.00" width="150.00" height="15.00" rx="0" fill="#FFFFFF" stroke="#D3D3D3" stroke-width="0.4"/>
+<rect x="46.00" y="292.00" width="150.00" height="15.00" rx="0" fill="#FFFFFF" stroke="#D3D3D3" stroke-width="0.4"/>
+<rect x="46.00" y="277.00" width="150.00" height="15.00" rx="0" fill="#FFFFFF" stroke="#D3D3D3" stroke-width="0.4"/>
+<rect x="46.00" y="262.00" width="150.00" height="15.00" rx="0" fill="#FFFFFF" stroke="#D3D3D3" stroke-width="0.4"/>
+<rect x="46.00" y="247.00" width="150.00" height="15.00" rx="0" fill="#FFFFFF" stroke="#D3D3D3" stroke-width="0.4"/>
+<rect x="46.00" y="232.00" width="150.00" height="15.00" rx="0" fill="#FFFFFF" stroke="#D3D3D3" stroke-width="0.4"/>
+<rect x="46.00" y="217.00" width="150.00" height="15.00" rx="0" fill="#FFFFFF" stroke="#D3D3D3" stroke-width="0.4"/>
+<rect x="46.00" y="202.00" width="150.00" height="15.00" rx="0" fill="#FFFFFF" stroke="#D3D3D3" stroke-width="0.4"/>
+<rect x="46.00" y="187.00" width="150.00" height="15.00" rx="0" fill="#FFFFFF" stroke="#D3D3D3" stroke-width="0.4"/>
+<rect x="46.00" y="172.00" width="150.00" height="15.00" rx="0" fill="#FFFFFF" stroke="#D3D3D3" stroke-width="0.4"/>
+<rect x="46.00" y="157.00" width="150.00" height="15.00" rx="0" fill="#FFFFFF" stroke="#D3D3D3" stroke-width="0.4"/>
+<rect x="46.00" y="142.00" width="150.00" height="15.00" rx="0" fill="#FFFFFF" stroke="#D3D3D3" stroke-width="0.4"/>
+<rect x="46.00" y="127.00" width="150.00" height="15.00" rx="0" fill="#FFFFFF" stroke="#D3D3D3" stroke-width="0.4"/>
+<rect x="46.00" y="112.00" width="150.00" height="15.00" rx="0" fill="#FFFFFF" stroke="#D3D3D3" stroke-width="0.4"/>
+<rect x="46.00" y="97.00" width="150.00" height="15.00" rx="0" fill="#FFFFFF" stroke="#D3D3D3" stroke-width="0.4"/>
+<rect x="46.00" y="82.00" width="150.00" height="15.00" rx="0" fill="#FFFFFF" stroke="#D3D3D3" stroke-width="0.4"/>
+<rect x="46.00" y="67.00" width="150.00" height="15.00" rx="0" fill="#FFFFFF" stroke="#D3D3D3" stroke-width="0.4"/>
+<rect x="46.00" y="52.00" width="150.00" height="15.00" rx="0" fill="#FFFFFF" stroke="#D3D3D3" stroke-width="0.4"/>
+<rect x="48.00" y="383.00" width="146.00" height="28.00" rx="1.5" fill="#FFFFFF" stroke="#404040" stroke-width="0.9"/>
+<rect x="48.00" y="353.00" width="146.00" height="28.00" rx="1.5" fill="#FFFFFF" stroke="#404040" stroke-width="0.9"/>
+<rect x="48.00" y="323.00" width="146.00" height="28.00" rx="1.5" fill="#FFFFFF" stroke="#404040" stroke-width="0.9"/>
+<rect x="48.00" y="293.00" width="146.00" height="28.00" rx="1.5" fill="#FFFFFF" stroke="#404040" stroke-width="0.9"/>
+<rect x="48.00" y="263.00" width="146.00" height="13.00" rx="1.5" fill="#FFFFFF" stroke="#404040" stroke-width="0.9"/>
+<rect x="48.00" y="248.00" width="146.00" height="13.00" rx="1.5" fill="#FFFFFF" stroke="#404040" stroke-width="0.9"/>
+<rect x="48.00" y="53.00" width="146.00" height="193.00" rx="1.5" fill="#FFFFFF" stroke="#9B9B9B" stroke-width="0.6" stroke-dasharray="3.5 2.5"/>
+<rect x="250.00" y="46.00" width="162.00" height="372.00" rx="2" fill="#FFFFFF" stroke="#2B2B2B" stroke-width="2.2"/>
+<rect x="256.00" y="397.00" width="150.00" height="15.00" rx="0" fill="#FFFFFF" stroke="#D3D3D3" stroke-width="0.4"/>
+<rect x="256.00" y="382.00" width="150.00" height="15.00" rx="0" fill="#FFFFFF" stroke="#D3D3D3" stroke-width="0.4"/>
+<rect x="256.00" y="367.00" width="150.00" height="15.00" rx="0" fill="#FFFFFF" stroke="#D3D3D3" stroke-width="0.4"/>
+<rect x="256.00" y="352.00" width="150.00" height="15.00" rx="0" fill="#FFFFFF" stroke="#D3D3D3" stroke-width="0.4"/>
+<rect x="256.00" y="337.00" width="150.00" height="15.00" rx="0" fill="#FFFFFF" stroke="#D3D3D3" stroke-width="0.4"/>
+<rect x="256.00" y="322.00" width="150.00" height="15.00" rx="0" fill="#FFFFFF" stroke="#D3D3D3" stroke-width="0.4"/>
+<rect x="256.00" y="307.00" width="150.00" height="15.00" rx="0" fill="#FFFFFF" stroke="#D3D3D3" stroke-width="0.4"/>
+<rect x="256.00" y="292.00" width="150.00" height="15.00" rx="0" fill="#FFFFFF" stroke="#D3D3D3" stroke-width="0.4"/>
+<rect x="256.00" y="277.00" width="150.00" height="15.00" rx="0" fill="#FFFFFF" stroke="#D3D3D3" stroke-width="0.4"/>
+<rect x="256.00" y="262.00" width="150.00" height="15.00" rx="0" fill="#FFFFFF" stroke="#D3D3D3" stroke-width="0.4"/>
+<rect x="256.00" y="247.00" width="150.00" height="15.00" rx="0" fill="#FFFFFF" stroke="#D3D3D3" stroke-width="0.4"/>
+<rect x="256.00" y="232.00" width="150.00" height="15.00" rx="0" fill="#FFFFFF" stroke="#D3D3D3" stroke-width="0.4"/>
+<rect x="256.00" y="217.00" width="150.00" height="15.00" rx="0" fill="#FFFFFF" stroke="#D3D3D3" stroke-width="0.4"/>
+<rect x="256.00" y="202.00" width="150.00" height="15.00" rx="0" fill="#FFFFFF" stroke="#D3D3D3" stroke-width="0.4"/>
+<rect x="256.00" y="187.00" width="150.00" height="15.00" rx="0" fill="#FFFFFF" stroke="#D3D3D3" stroke-width="0.4"/>
+<rect x="256.00" y="172.00" width="150.00" height="15.00" rx="0" fill="#FFFFFF" stroke="#D3D3D3" stroke-width="0.4"/>
+<rect x="256.00" y="157.00" width="150.00" height="15.00" rx="0" fill="#FFFFFF" stroke="#D3D3D3" stroke-width="0.4"/>
+<rect x="256.00" y="142.00" width="150.00" height="15.00" rx="0" fill="#FFFFFF" stroke="#D3D3D3" stroke-width="0.4"/>
+<rect x="256.00" y="127.00" width="150.00" height="15.00" rx="0" fill="#FFFFFF" stroke="#D3D3D3" stroke-width="0.4"/>
+<rect x="256.00" y="112.00" width="150.00" height="15.00" rx="0" fill="#FFFFFF" stroke="#D3D3D3" stroke-width="0.4"/>
+<rect x="256.00" y="97.00" width="150.00" height="15.00" rx="0" fill="#FFFFFF" stroke="#D3D3D3" stroke-width="0.4"/>
+<rect x="256.00" y="82.00" width="150.00" height="15.00" rx="0" fill="#FFFFFF" stroke="#D3D3D3" stroke-width="0.4"/>
+<rect x="256.00" y="67.00" width="150.00" height="15.00" rx="0" fill="#FFFFFF" stroke="#D3D3D3" stroke-width="0.4"/>
+<rect x="256.00" y="52.00" width="150.00" height="15.00" rx="0" fill="#FFFFFF" stroke="#D3D3D3" stroke-width="0.4"/>
+<rect x="258.00" y="398.00" width="146.00" height="13.00" rx="1.5" fill="#FFFFFF" stroke="#404040" stroke-width="0.9"/>
+<rect x="258.00" y="383.00" width="146.00" height="13.00" rx="1.5" fill="#FFFFFF" stroke="#404040" stroke-width="0.9"/>
+<rect x="258.00" y="353.00" width="146.00" height="13.00" rx="1.5" fill="#FFFFFF" stroke="#404040" stroke-width="0.9"/>
+<rect x="258.00" y="338.00" width="146.00" height="13.00" rx="1.5" fill="#FFFFFF" stroke="#404040" stroke-width="0.9"/>
+<rect x="258.00" y="323.00" width="146.00" height="13.00" rx="1.5" fill="#FFFFFF" stroke="#404040" stroke-width="0.9"/>
+<rect x="258.00" y="308.00" width="146.00" height="13.00" rx="1.5" fill="#FFFFFF" stroke="#404040" stroke-width="0.9"/>
+<rect x="258.00" y="293.00" width="146.00" height="13.00" rx="1.5" fill="#FFFFFF" stroke="#404040" stroke-width="0.9"/>
+<rect x="258.00" y="53.00" width="146.00" height="238.00" rx="1.5" fill="#FFFFFF" stroke="#9B9B9B" stroke-width="0.6" stroke-dasharray="3.5 2.5"/>
+</g>
+<g id="flechas">
+</g>
+<g id="iconos">
+<rect x="67.58" y="431.00" width="106.84" height="14.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="121.00" y="441.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Cerca de 12 U ocupadas</text>
+<rect x="280.28" y="431.00" width="101.44" height="14.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="331.00" y="441.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Cerca de 8 U ocupadas</text>
+</g>
+<g id="textos">
+<text x="121.00" y="18.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="middle" fill="#000000">Rack de servidores</text>
+<text x="121.00" y="30.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">24 U</text>
+<text x="36.00" y="407.70" font-size="9" font-family="IBM Plex Sans" text-anchor="end" fill="#000000">1</text>
+<text x="36.00" y="392.70" font-size="9" font-family="IBM Plex Sans" text-anchor="end" fill="#000000">2</text>
+<text x="36.00" y="377.70" font-size="9" font-family="IBM Plex Sans" text-anchor="end" fill="#000000">3</text>
+<text x="36.00" y="362.70" font-size="9" font-family="IBM Plex Sans" text-anchor="end" fill="#000000">4</text>
+<text x="36.00" y="347.70" font-size="9" font-family="IBM Plex Sans" text-anchor="end" fill="#000000">5</text>
+<text x="36.00" y="332.70" font-size="9" font-family="IBM Plex Sans" text-anchor="end" fill="#000000">6</text>
+<text x="36.00" y="317.70" font-size="9" font-family="IBM Plex Sans" text-anchor="end" fill="#000000">7</text>
+<text x="36.00" y="302.70" font-size="9" font-family="IBM Plex Sans" text-anchor="end" fill="#000000">8</text>
+<text x="36.00" y="287.70" font-size="9" font-family="IBM Plex Sans" text-anchor="end" fill="#000000">9</text>
+<text x="36.00" y="272.70" font-size="9" font-family="IBM Plex Sans" text-anchor="end" fill="#000000">10</text>
+<text x="36.00" y="257.70" font-size="9" font-family="IBM Plex Sans" text-anchor="end" fill="#000000">11</text>
+<text x="36.00" y="242.70" font-size="9" font-family="IBM Plex Sans" text-anchor="end" fill="#000000">12</text>
+<text x="36.00" y="227.70" font-size="9" font-family="IBM Plex Sans" text-anchor="end" fill="#000000">13</text>
+<text x="36.00" y="212.70" font-size="9" font-family="IBM Plex Sans" text-anchor="end" fill="#000000">14</text>
+<text x="36.00" y="197.70" font-size="9" font-family="IBM Plex Sans" text-anchor="end" fill="#000000">15</text>
+<text x="36.00" y="182.70" font-size="9" font-family="IBM Plex Sans" text-anchor="end" fill="#000000">16</text>
+<text x="36.00" y="167.70" font-size="9" font-family="IBM Plex Sans" text-anchor="end" fill="#000000">17</text>
+<text x="36.00" y="152.70" font-size="9" font-family="IBM Plex Sans" text-anchor="end" fill="#000000">18</text>
+<text x="36.00" y="137.70" font-size="9" font-family="IBM Plex Sans" text-anchor="end" fill="#000000">19</text>
+<text x="36.00" y="122.70" font-size="9" font-family="IBM Plex Sans" text-anchor="end" fill="#000000">20</text>
+<text x="36.00" y="107.70" font-size="9" font-family="IBM Plex Sans" text-anchor="end" fill="#000000">21</text>
+<text x="36.00" y="92.70" font-size="9" font-family="IBM Plex Sans" text-anchor="end" fill="#000000">22</text>
+<text x="36.00" y="77.70" font-size="9" font-family="IBM Plex Sans" text-anchor="end" fill="#000000">23</text>
+<text x="36.00" y="62.70" font-size="9" font-family="IBM Plex Sans" text-anchor="end" fill="#000000">24</text>
+<text x="121.00" y="400.40" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">UPS SRT3000 A</text>
+<text x="121.00" y="370.40" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Batería SRT96RMBP A</text>
+<text x="121.00" y="340.40" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">UPS SRT3000 B</text>
+<text x="121.00" y="310.40" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Batería SRT96RMBP B</text>
+<text x="121.00" y="272.90" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Dell R360 A</text>
+<text x="121.00" y="257.90" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Dell R360 B</text>
+<text x="121.00" y="152.90" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Libre, unidades 12 a 24</text>
+<text x="331.00" y="18.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="middle" fill="#000000">Rack de comunicaciones</text>
+<text x="331.00" y="30.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">24 U</text>
+<text x="246.00" y="407.70" font-size="9" font-family="IBM Plex Sans" text-anchor="end" fill="#000000">1</text>
+<text x="246.00" y="392.70" font-size="9" font-family="IBM Plex Sans" text-anchor="end" fill="#000000">2</text>
+<text x="246.00" y="377.70" font-size="9" font-family="IBM Plex Sans" text-anchor="end" fill="#000000">3</text>
+<text x="246.00" y="362.70" font-size="9" font-family="IBM Plex Sans" text-anchor="end" fill="#000000">4</text>
+<text x="246.00" y="347.70" font-size="9" font-family="IBM Plex Sans" text-anchor="end" fill="#000000">5</text>
+<text x="246.00" y="332.70" font-size="9" font-family="IBM Plex Sans" text-anchor="end" fill="#000000">6</text>
+<text x="246.00" y="317.70" font-size="9" font-family="IBM Plex Sans" text-anchor="end" fill="#000000">7</text>
+<text x="246.00" y="302.70" font-size="9" font-family="IBM Plex Sans" text-anchor="end" fill="#000000">8</text>
+<text x="246.00" y="287.70" font-size="9" font-family="IBM Plex Sans" text-anchor="end" fill="#000000">9</text>
+<text x="246.00" y="272.70" font-size="9" font-family="IBM Plex Sans" text-anchor="end" fill="#000000">10</text>
+<text x="246.00" y="257.70" font-size="9" font-family="IBM Plex Sans" text-anchor="end" fill="#000000">11</text>
+<text x="246.00" y="242.70" font-size="9" font-family="IBM Plex Sans" text-anchor="end" fill="#000000">12</text>
+<text x="246.00" y="227.70" font-size="9" font-family="IBM Plex Sans" text-anchor="end" fill="#000000">13</text>
+<text x="246.00" y="212.70" font-size="9" font-family="IBM Plex Sans" text-anchor="end" fill="#000000">14</text>
+<text x="246.00" y="197.70" font-size="9" font-family="IBM Plex Sans" text-anchor="end" fill="#000000">15</text>
+<text x="246.00" y="182.70" font-size="9" font-family="IBM Plex Sans" text-anchor="end" fill="#000000">16</text>
+<text x="246.00" y="167.70" font-size="9" font-family="IBM Plex Sans" text-anchor="end" fill="#000000">17</text>
+<text x="246.00" y="152.70" font-size="9" font-family="IBM Plex Sans" text-anchor="end" fill="#000000">18</text>
+<text x="246.00" y="137.70" font-size="9" font-family="IBM Plex Sans" text-anchor="end" fill="#000000">19</text>
+<text x="246.00" y="122.70" font-size="9" font-family="IBM Plex Sans" text-anchor="end" fill="#000000">20</text>
+<text x="246.00" y="107.70" font-size="9" font-family="IBM Plex Sans" text-anchor="end" fill="#000000">21</text>
+<text x="246.00" y="92.70" font-size="9" font-family="IBM Plex Sans" text-anchor="end" fill="#000000">22</text>
+<text x="246.00" y="77.70" font-size="9" font-family="IBM Plex Sans" text-anchor="end" fill="#000000">23</text>
+<text x="246.00" y="62.70" font-size="9" font-family="IBM Plex Sans" text-anchor="end" fill="#000000">24</text>
+<text x="331.00" y="407.90" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Proveedor 1</text>
+<text x="331.00" y="392.90" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Proveedor 2</text>
+<text x="331.00" y="362.90" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Panel de conexión</text>
+<text x="331.00" y="347.90" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">FortiSwitch 124F-POE A</text>
+<text x="331.00" y="332.90" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">FortiSwitch 124F-POE B</text>
+<text x="331.00" y="317.90" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Panel de conexión</text>
+<text x="331.00" y="302.90" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">2 × FortiGate 90G, bandeja</text>
+<text x="331.00" y="175.40" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Libre, unidades 9 a 24</text>
+</g>
+</svg>

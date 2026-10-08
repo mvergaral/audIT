@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="257.4mm" height="167.0mm" viewBox="0 0 729.6 473.4">
+<defs><marker id="fin-n" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="5.5" markerHeight="5.5" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#2B2B2B"/></marker><marker id="ini-n" viewBox="0 0 10 10" refX="0.5" refY="5" markerWidth="5.5" markerHeight="5.5" markerUnits="userSpaceOnUse" orient="auto"><path d="M10,0.8 L0,5 L10,9.2 z" fill="#2B2B2B"/></marker><marker id="fin-r" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="5.5" markerHeight="5.5" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#C0392B"/></marker><marker id="ini-r" viewBox="0 0 10 10" refX="0.5" refY="5" markerWidth="5.5" markerHeight="5.5" markerUnits="userSpaceOnUse" orient="auto"><path d="M10,0.8 L0,5 L10,9.2 z" fill="#C0392B"/></marker><symbol id="ic-pr-aleta" viewBox="0 0 48 48"><path d="M9 38 C12 25 22 13 37 11 C33 20 34 30 39 38 Z" fill="#433B6B"/><rect x="5" y="37" width="38" height="4.5" rx="2" fill="#9B9B9B"/><path d="M37 3.5 Q42.5 5 43.5 10.5" fill="none" stroke="#00A6ED" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/></symbol><symbol id="ic-pr-baliza" viewBox="0 0 48 48"><rect x="14" y="14" width="20" height="20" rx="6" fill="#B4ACBC"/><circle cx="24" cy="24" r="5.2" fill="#FFFFFF"/><circle cx="24" cy="24" r="2.2" fill="#00A6ED"/><path d="M10 16.5 Q6.2 24 10 31.5 M5.8 12.8 Q0.8 24 5.8 35.2" fill="none" stroke="#00A6ED" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/><path d="M38 16.5 Q41.8 24 38 31.5 M42.2 12.8 Q47.2 24 42.2 35.2" fill="none" stroke="#00A6ED" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/></symbol><symbol id="ic-pr-can" viewBox="0 0 48 48"><path d="M2 30 H46" fill="none" stroke="#9B9B9B" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 30 H46" fill="none" stroke="#D3D3D3" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><rect x="14" y="18" width="20" height="21" rx="5" fill="#433B6B"/><path d="M14 30 H34" fill="none" stroke="#321B41" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="28.8" cy="23.3" r="1.5" fill="#00D26A"/><path d="M24 39 V46" fill="none" stroke="#433B6B" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></symbol><symbol id="ic-pr-g26i" viewBox="0 0 48 48"><rect x="3" y="31" width="6" height="4.5" rx="1" fill="#9B9B9B"/><rect x="39" y="31" width="6" height="4.5" rx="1" fill="#9B9B9B"/><rect x="12" y="9.5" width="4.6" height="6.5" rx="1" fill="#FFB02E"/><rect x="21.7" y="9.5" width="4.6" height="6.5" rx="1" fill="#FFB02E"/><rect x="31.4" y="9.5" width="4.6" height="6.5" rx="1" fill="#FFB02E"/><rect x="7" y="15" width="34" height="23" rx="4.5" fill="#321B41"/><circle cx="13.5" cy="26.5" r="1.7" fill="#00D26A"/><circle cx="18.5" cy="26.5" r="1.7" fill="#26C9FC"/><rect x="24" y="23.5" width="12.5" height="6" rx="1" fill="#533566"/></symbol><symbol id="ic-pr-iridium" viewBox="0 0 48 48"><rect x="8" y="30" width="32" height="10" rx="3" fill="#321B41"/><path d="M10.5 31 Q24 12 37.5 31 Z" fill="#D3D3D3"/><path d="M17 10.5 Q24 5.5 31 10.5 M12.8 7 Q24 -1 35.2 7" fill="none" stroke="#00A6ED" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol><symbol id="ic-pr-lector-tarjeta" viewBox="0 0 48 48"><rect x="14" y="5" width="20" height="38" rx="4" fill="#433B6B"/><path d="M19.5 18 Q22.5 22 19.5 26 M23 15.5 Q28 22 23 28.5 M26.5 13 Q33 22 26.5 31" fill="none" stroke="#FFFFFF" stroke-width="2.0" stroke-linecap="round" stroke-linejoin="round"/><circle cx="24" cy="37.5" r="1.7" fill="#00D26A"/></symbol></defs>
+<rect x="0" y="0" width="729.6" height="473.4" fill="#FFFFFF"/>
+<g id="grupos">
+<rect x="60.00" y="150.00" width="400.00" height="150.00" rx="3" fill="#E1D8EC" stroke="#9B9B9B" stroke-width="1"/>
+<rect x="60.00" y="300.00" width="400.00" height="10.00" rx="0" fill="#433B6B"/>
+<rect x="386.00" y="310.00" width="8.00" height="34.00" rx="0" fill="#433B6B"/>
+<rect x="452.00" y="296.00" width="214.00" height="16.00" rx="0" fill="#433B6B"/>
+<rect x="452.00" y="286.00" width="62.00" height="10.00" rx="0" fill="#9B9B9B"/>
+<rect x="515.00" y="160.00" width="8.00" height="120.00" rx="2" fill="#9B9B9B"/>
+</g>
+<g id="flechas">
+<path d="M40.00,352.00 L700.00,352.00" fill="none" stroke="#9B9B9B" stroke-width="1.0" stroke-linejoin="miter"/>
+<path d="M540.00,290.00 L660.00,290.00" fill="none" stroke="#9B9B9B" stroke-width="3" stroke-linejoin="miter"/>
+<path d="M568.00,129.00 L568.00,106.15 L470.00,106.15 L470.00,72.30" fill="none" stroke="#2B2B2B" stroke-width="0.6" stroke-linejoin="miter"/>
+<path d="M618.00,129.00 L618.00,72.30" fill="none" stroke="#2B2B2B" stroke-width="0.6" stroke-linejoin="miter"/>
+<path d="M583.00,220.00 L653.78,220.00 L653.78,160.00 L663.78,160.00" fill="none" stroke="#2B2B2B" stroke-width="0.6" stroke-linejoin="miter"/>
+<path d="M622.00,244.00 L621.95,244.00 L621.95,236.00 L631.95,236.00" fill="none" stroke="#2B2B2B" stroke-width="0.6" stroke-linejoin="miter"/>
+<path d="M620.00,290.00 L608.55,290.00 L608.55,400.00 L618.55,400.00" fill="none" stroke="#2B2B2B" stroke-width="0.6" stroke-linejoin="miter"/>
+<path d="M428.00,329.00 L428.00,360.20 L330.00,360.20 L330.00,402.40" fill="none" stroke="#2B2B2B" stroke-width="0.6" stroke-linejoin="miter"/>
+</g>
+<g id="iconos">
+<circle cx="120" cy="330" r="22" fill="#321B41"/><circle cx="120" cy="330" r="8" fill="#B4ACBC"/>
+<circle cx="182" cy="330" r="22" fill="#321B41"/><circle cx="182" cy="330" r="8" fill="#B4ACBC"/>
+<path d="M528,296 V176 Q528,150 556,150 H632 Q660,150 666,178 L676,232 V296 Z" fill="#00A6ED"/>
+<path d="M600,164 H640 Q652,164 656,180 L664,222 H600 Z" fill="#26C9FC"/>
+<circle cx="560" cy="330" r="22" fill="#321B41"/><circle cx="560" cy="330" r="8" fill="#B4ACBC"/>
+<circle cx="636" cy="330" r="22" fill="#321B41"/><circle cx="636" cy="330" r="8" fill="#B4ACBC"/>
+<rect x="557.00" y="129.00" width="22.00" height="22.00" rx="3" fill="#FFFFFF"/>
+<use href="#ic-pr-aleta" x="559.00" y="131.00" width="18.00" height="18.00"/>
+<rect x="426.63" y="47.70" width="86.74" height="24.60" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="470.00" y="57.70" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Antena LTE y GNSS</text>
+<text x="470.00" y="68.30" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Techo de la cabina</text>
+<rect x="607.00" y="129.00" width="22.00" height="22.00" rx="3" fill="#FFFFFF"/>
+<use href="#ic-pr-iridium" x="609.00" y="131.00" width="18.00" height="18.00"/>
+<rect x="597.86" y="47.70" width="84.28" height="24.60" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="640.00" y="57.70" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Iridium Edge</text>
+<text x="640.00" y="68.30" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Techo de la cabina</text>
+<rect x="561.00" y="209.00" width="22.00" height="22.00" rx="3" fill="#FFFFFF"/>
+<use href="#ic-pr-g26i" x="563.00" y="211.00" width="18.00" height="18.00"/>
+<rect x="663.78" y="147.70" width="56.22" height="24.60" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="691.89" y="157.70" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">iWave G26I</text>
+<text x="691.89" y="168.30" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Cabina</text>
+<rect x="602.00" y="234.00" width="20.00" height="20.00" rx="3" fill="#FFFFFF"/>
+<use href="#ic-pr-lector-tarjeta" x="604.00" y="236.00" width="16.00" height="16.00"/>
+<rect x="631.95" y="218.40" width="88.05" height="35.20" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="675.98" y="228.40" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Lector DESFire</text>
+<text x="675.98" y="239.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Al alcance del</text>
+<text x="675.98" y="249.60" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">conductor detenido</text>
+<rect x="596.00" y="278.00" width="24.00" height="24.00" rx="3" fill="#FFFFFF"/>
+<use href="#ic-pr-can" x="598.00" y="280.00" width="20.00" height="20.00"/>
+<rect x="618.55" y="382.40" width="101.45" height="35.20" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="669.28" y="392.40" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">CANCrocodile</text>
+<text x="669.28" y="403.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Sobre el arnés original,</text>
+<text x="669.28" y="413.60" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">sin cortarlo</text>
+<rect x="417.00" y="307.00" width="22.00" height="22.00" rx="3" fill="#FFFFFF"/>
+<use href="#ic-pr-baliza" x="419.00" y="309.00" width="18.00" height="18.00"/>
+<rect x="289.28" y="402.40" width="81.45" height="35.20" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="330.00" y="412.40" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Baliza EYE Sensor</text>
+<text x="330.00" y="423.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Chasis delantero,</text>
+<text x="330.00" y="433.60" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">a la sombra</text>
+</g>
+<g id="textos">
+<text x="260.00" y="230.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Semirremolque</text>
+<text x="596.00" y="268.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Tractocamión</text>
+</g>
+</svg>

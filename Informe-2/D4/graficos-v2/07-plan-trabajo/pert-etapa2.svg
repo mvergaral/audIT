@@ -1,0 +1,164 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="257.4mm" height="167.0mm" viewBox="0 0 729.6 473.4">
+<defs><marker id="fin-n" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="5.5" markerHeight="5.5" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#2B2B2B"/></marker><marker id="ini-n" viewBox="0 0 10 10" refX="0.5" refY="5" markerWidth="5.5" markerHeight="5.5" markerUnits="userSpaceOnUse" orient="auto"><path d="M10,0.8 L0,5 L10,9.2 z" fill="#2B2B2B"/></marker><marker id="fin-r" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="5.5" markerHeight="5.5" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#C0392B"/></marker><marker id="ini-r" viewBox="0 0 10 10" refX="0.5" refY="5" markerWidth="5.5" markerHeight="5.5" markerUnits="userSpaceOnUse" orient="auto"><path d="M10,0.8 L0,5 L10,9.2 z" fill="#C0392B"/></marker></defs>
+<rect x="0" y="0" width="729.6" height="473.4" fill="#FFFFFF"/>
+<g id="grupos">
+<rect x="8.00" y="26.00" width="92.00" height="70.00" rx="6" fill="#FFFFFF" stroke="#404040" stroke-width="0.75" stroke-dasharray="3.5 2.5"/>
+<rect x="8.00" y="204.00" width="92.00" height="70.00" rx="6" fill="#FFFFFF" stroke="#C0392B" stroke-width="1.5"/>
+<rect x="8.00" y="293.00" width="92.00" height="70.00" rx="6" fill="#FFFFFF" stroke="#404040" stroke-width="0.75" stroke-dasharray="3.5 2.5"/>
+<rect x="8.00" y="382.00" width="92.00" height="70.00" rx="6" fill="#FFFFFF" stroke="#404040" stroke-width="0.75" stroke-dasharray="3.5 2.5"/>
+<rect x="111.60" y="26.00" width="92.00" height="70.00" rx="6" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="111.60" y="115.00" width="92.00" height="70.00" rx="6" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="111.60" y="204.00" width="92.00" height="70.00" rx="6" fill="#FFFFFF" stroke="#C0392B" stroke-width="1.5"/>
+<rect x="111.60" y="382.00" width="92.00" height="70.00" rx="6" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="215.20" y="26.00" width="92.00" height="70.00" rx="6" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="215.20" y="204.00" width="92.00" height="70.00" rx="6" fill="#FFFFFF" stroke="#C0392B" stroke-width="1.5"/>
+<rect x="318.80" y="26.00" width="92.00" height="70.00" rx="6" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="318.80" y="204.00" width="92.00" height="70.00" rx="6" fill="#FFFFFF" stroke="#C0392B" stroke-width="1.5"/>
+<rect x="422.40" y="204.00" width="92.00" height="70.00" rx="6" fill="#FFFFFF" stroke="#C0392B" stroke-width="1.5"/>
+<rect x="526.00" y="204.00" width="92.00" height="70.00" rx="6" fill="#FFFFFF" stroke="#C0392B" stroke-width="1.5"/>
+<rect x="629.60" y="204.00" width="92.00" height="70.00" rx="6" fill="#FFFFFF" stroke="#C0392B" stroke-width="1.5"/>
+</g>
+<g id="flechas">
+<path d="M8.00,17.00 L721.60,17.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter"/>
+<path d="M54.00,14.00 L54.00,20.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter"/>
+<path d="M157.60,14.00 L157.60,20.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter"/>
+<path d="M261.20,14.00 L261.20,20.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter"/>
+<path d="M364.80,14.00 L364.80,20.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter"/>
+<path d="M468.40,14.00 L468.40,20.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter"/>
+<path d="M572.00,14.00 L572.00,20.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter"/>
+<path d="M675.60,14.00 L675.60,20.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter"/>
+<path d="M100.00,61.00 L111.60,61.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" marker-end="url(#fin-n)"/>
+<path d="M100.00,239.00 L104.00,239.00 L104.00,77.00 L111.60,77.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" marker-end="url(#fin-n)"/>
+<path d="M100.00,239.00 L104.00,239.00 L104.00,166.00 L111.60,166.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" marker-end="url(#fin-n)"/>
+<path d="M100.00,328.00 L107.60,328.00 L107.60,433.00 L111.60,433.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" marker-end="url(#fin-n)"/>
+<path d="M100.00,417.00 L111.60,417.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" marker-end="url(#fin-n)"/>
+<path d="M100.00,239.00 L107.60,239.00 L107.60,414.00 A3.0,3.0 0 0 0 107.60,420.00 L107.60,433.00 L111.60,433.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" marker-end="url(#fin-n)"/>
+<path d="M203.60,61.00 L215.20,61.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" marker-end="url(#fin-n)"/>
+<path d="M203.60,150.00 L209.40,150.00 L209.40,77.00 L215.20,77.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" marker-end="url(#fin-n)"/>
+<path d="M307.20,61.00 L318.80,61.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" marker-end="url(#fin-n)"/>
+<path d="M410.80,61.00 L520.20,61.00 L520.20,223.00 L526.00,223.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" marker-end="url(#fin-n)"/>
+<path d="M203.60,417.00 L623.80,417.00 L623.80,255.00 L629.60,255.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" marker-end="url(#fin-n)"/>
+<path d="M100.00,239.00 L111.60,239.00" fill="none" stroke="#C0392B" stroke-width="1.5" stroke-linejoin="miter" marker-end="url(#fin-r)"/>
+<path d="M203.60,239.00 L215.20,239.00" fill="none" stroke="#C0392B" stroke-width="1.5" stroke-linejoin="miter" marker-end="url(#fin-r)"/>
+<path d="M307.20,239.00 L318.80,239.00" fill="none" stroke="#C0392B" stroke-width="1.5" stroke-linejoin="miter" marker-end="url(#fin-r)"/>
+<path d="M410.80,239.00 L422.40,239.00" fill="none" stroke="#C0392B" stroke-width="1.5" stroke-linejoin="miter" marker-end="url(#fin-r)"/>
+<path d="M514.40,239.00 L526.00,239.00" fill="none" stroke="#C0392B" stroke-width="1.5" stroke-linejoin="miter" marker-end="url(#fin-r)"/>
+<path d="M618.00,239.00 L629.60,239.00" fill="none" stroke="#C0392B" stroke-width="1.5" stroke-linejoin="miter" marker-end="url(#fin-r)"/>
+</g>
+<g id="iconos">
+<path d="M178.73 31.80 L182.73 35.80 L178.73 39.80 L174.73 35.80 Z" fill="#000000"/>
+<rect x="130.73" y="98.00" width="53.75" height="14.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="157.60" y="108.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Holgura 20</text>
+<rect x="130.73" y="187.00" width="53.75" height="14.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="157.60" y="197.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Holgura 30</text>
+<path d="M178.73 209.80 L182.73 213.80 L178.73 217.80 L174.73 213.80 Z" fill="#000000"/>
+<rect x="130.73" y="454.00" width="53.75" height="14.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="157.60" y="464.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Holgura 40</text>
+<path d="M282.33 31.80 L286.33 35.80 L282.33 39.80 L278.33 35.80 Z" fill="#000000"/>
+<rect x="234.33" y="98.00" width="53.75" height="14.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="261.20" y="108.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Holgura 20</text>
+<path d="M282.33 209.80 L286.33 213.80 L282.33 217.80 L278.33 213.80 Z" fill="#000000"/>
+<rect x="337.93" y="98.00" width="53.75" height="14.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="364.80" y="108.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Holgura 20</text>
+<path d="M380.53 209.80 L384.53 213.80 L380.53 217.80 L376.53 213.80 Z" fill="#000000"/>
+<path d="M587.73 209.80 L591.73 213.80 L587.73 217.80 L583.73 213.80 Z" fill="#000000"/>
+<path d="M691.33 209.80 L695.33 213.80 L691.33 217.80 L687.33 213.80 Z" fill="#000000"/>
+</g>
+<g id="textos">
+<text x="54.00" y="10.50" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Mes 12</text>
+<text x="157.60" y="10.50" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Mes 13</text>
+<text x="261.20" y="10.50" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Mes 14</text>
+<text x="364.80" y="10.50" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Mes 16</text>
+<text x="468.40" y="10.50" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Mes 18</text>
+<text x="572.00" y="10.50" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Mes 19</text>
+<text x="675.60" y="10.50" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Mes 21</text>
+<text x="54.00" y="50.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="middle" fill="#000000">A13</text>
+<text x="54.00" y="64.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Capacitación de</text>
+<text x="54.00" y="76.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">conductores</text>
+<text x="14.00" y="217.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">A14</text>
+<text x="37.72" y="217.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">14 días</text>
+<text x="54.00" y="231.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Reserva de la</text>
+<text x="54.00" y="242.50" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Etapa 1</text>
+<text x="54.00" y="256.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">ES 226 · EF 240</text>
+<text x="54.00" y="267.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">LS 226 · LF 240</text>
+<text x="54.00" y="317.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="middle" fill="#000000">A06</text>
+<text x="54.00" y="331.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Plan de adhesión</text>
+<text x="54.00" y="343.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">de transportistas</text>
+<text x="54.00" y="406.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="middle" fill="#000000">A11</text>
+<text x="54.00" y="420.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Piloto de 10 y</text>
+<text x="54.00" y="432.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">flota propia</text>
+<text x="117.60" y="39.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">A15</text>
+<text x="141.32" y="39.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">60 días</text>
+<text x="197.60" y="39.00" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="end" fill="#000000">H6</text>
+<text x="157.60" y="53.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Marcha blanca</text>
+<text x="157.60" y="64.50" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">de la Etapa 1</text>
+<text x="157.60" y="78.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">ES 240 · EF 300</text>
+<text x="157.60" y="89.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">LS 260 · LF 320</text>
+<text x="117.60" y="128.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">A16</text>
+<text x="141.32" y="128.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">50 días</text>
+<text x="157.60" y="142.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Transferencia</text>
+<text x="157.60" y="153.50" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">tecnológica</text>
+<text x="157.60" y="167.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">ES 240 · EF 290</text>
+<text x="157.60" y="178.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">LS 270 · LF 320</text>
+<text x="117.60" y="217.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">A17</text>
+<text x="141.32" y="217.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">36 días</text>
+<text x="197.60" y="217.00" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="end" fill="#000000">H8</text>
+<text x="157.60" y="231.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Diseño detallado</text>
+<text x="157.60" y="242.50" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">de la Etapa 2</text>
+<text x="157.60" y="256.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">ES 240 · EF 276</text>
+<text x="157.60" y="267.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">LS 240 · LF 276</text>
+<text x="117.60" y="395.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">A18</text>
+<text x="141.32" y="395.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">120 días</text>
+<text x="157.60" y="409.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Terceros y</text>
+<text x="157.60" y="420.50" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">montaje restante</text>
+<text x="157.60" y="434.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">ES 240 · EF 360</text>
+<text x="157.60" y="445.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">LS 280 · LF 400</text>
+<text x="221.20" y="39.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">A19</text>
+<text x="244.92" y="39.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">10 días</text>
+<text x="301.20" y="39.00" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="end" fill="#000000">H7</text>
+<text x="261.20" y="53.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Paso a producción</text>
+<text x="261.20" y="64.50" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">de la Etapa 1</text>
+<text x="261.20" y="78.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">ES 300 · EF 310</text>
+<text x="261.20" y="89.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">LS 320 · LF 330</text>
+<text x="221.20" y="217.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">A20</text>
+<text x="244.92" y="217.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">50 días</text>
+<text x="301.20" y="217.00" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="end" fill="#000000">H9</text>
+<text x="261.20" y="231.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Construcción</text>
+<text x="261.20" y="242.50" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">de la Etapa 2</text>
+<text x="261.20" y="256.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">ES 276 · EF 326</text>
+<text x="261.20" y="267.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">LS 276 · LF 326</text>
+<text x="324.80" y="39.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">A21</text>
+<text x="348.52" y="39.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">30 días</text>
+<text x="364.80" y="53.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Estabilización</text>
+<text x="364.80" y="64.50" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">de la Etapa 1</text>
+<text x="364.80" y="78.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">ES 310 · EF 340</text>
+<text x="364.80" y="89.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">LS 330 · LF 360</text>
+<text x="324.80" y="217.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">A22</text>
+<text x="348.52" y="217.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">24 días</text>
+<text x="404.80" y="217.00" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="end" fill="#000000">H10</text>
+<text x="364.80" y="231.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Certificación</text>
+<text x="364.80" y="242.50" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">de la Etapa 2</text>
+<text x="364.80" y="256.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">ES 326 · EF 350</text>
+<text x="364.80" y="267.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">LS 326 · LF 350</text>
+<text x="428.40" y="217.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">A23</text>
+<text x="452.12" y="217.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">10 días</text>
+<text x="468.40" y="231.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Reserva de la</text>
+<text x="468.40" y="242.50" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Etapa 2</text>
+<text x="468.40" y="256.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">ES 350 · EF 360</text>
+<text x="468.40" y="267.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">LS 350 · LF 360</text>
+<text x="532.00" y="217.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">A24</text>
+<text x="555.72" y="217.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">40 días</text>
+<text x="612.00" y="217.00" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="end" fill="#000000">H11</text>
+<text x="572.00" y="231.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Marcha blanca</text>
+<text x="572.00" y="242.50" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">de la Etapa 2</text>
+<text x="572.00" y="256.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">ES 360 · EF 400</text>
+<text x="572.00" y="267.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">LS 360 · LF 400</text>
+<text x="635.60" y="217.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">A25</text>
+<text x="659.32" y="217.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">20 días</text>
+<text x="715.60" y="217.00" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="end" fill="#000000">H12</text>
+<text x="675.60" y="231.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Paso a producción</text>
+<text x="675.60" y="242.50" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">de la Etapa 2</text>
+<text x="675.60" y="256.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">ES 400 · EF 420</text>
+<text x="675.60" y="267.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">LS 400 · LF 420</text>
+</g>
+</svg>

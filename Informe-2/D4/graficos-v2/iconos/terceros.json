@@ -1,0 +1,556 @@
+{
+ "az-frontdoor": {
+  "nombre": "10073-icon-service-Front-Door-and-CDN-Profiles.svg",
+  "url": "https://arch-center.azureedge.net/icons/Azure_Public_Service_Icons_V24.zip",
+  "pagina": "https://learn.microsoft.com/azure/architecture/icons/",
+  "autor": "Microsoft",
+  "licencia": "Microsoft, Azure Architecture Icons V24. Uso permitido en diagramas de arquitectura según los términos del paquete (Microsoft_Terms_of_Use.pdf), sin deformar ni recolorear"
+ },
+ "az-apim": {
+  "nombre": "10042-icon-service-API-Management-Services.svg",
+  "url": "https://arch-center.azureedge.net/icons/Azure_Public_Service_Icons_V24.zip",
+  "pagina": "https://learn.microsoft.com/azure/architecture/icons/",
+  "autor": "Microsoft",
+  "licencia": "Microsoft, Azure Architecture Icons V24. Uso permitido en diagramas de arquitectura según los términos del paquete (Microsoft_Terms_of_Use.pdf), sin deformar ni recolorear"
+ },
+ "az-iothub": {
+  "nombre": "10182-icon-service-IoT-Hub.svg",
+  "url": "https://arch-center.azureedge.net/icons/Azure_Public_Service_Icons_V24.zip",
+  "pagina": "https://learn.microsoft.com/azure/architecture/icons/",
+  "autor": "Microsoft",
+  "licencia": "Microsoft, Azure Architecture Icons V24. Uso permitido en diagramas de arquitectura según los términos del paquete (Microsoft_Terms_of_Use.pdf), sin deformar ni recolorear"
+ },
+ "az-dps": {
+  "nombre": "10369-icon-service-Device-Provisioning-Services.svg",
+  "url": "https://arch-center.azureedge.net/icons/Azure_Public_Service_Icons_V24.zip",
+  "pagina": "https://learn.microsoft.com/azure/architecture/icons/",
+  "autor": "Microsoft",
+  "licencia": "Microsoft, Azure Architecture Icons V24. Uso permitido en diagramas de arquitectura según los términos del paquete (Microsoft_Terms_of_Use.pdf), sin deformar ni recolorear"
+ },
+ "az-deviceupdate": {
+  "nombre": "02475-icon-service-Device-Update-IoT-Hub.svg",
+  "url": "https://arch-center.azureedge.net/icons/Azure_Public_Service_Icons_V24.zip",
+  "pagina": "https://learn.microsoft.com/azure/architecture/icons/",
+  "autor": "Microsoft",
+  "licencia": "Microsoft, Azure Architecture Icons V24. Uso permitido en diagramas de arquitectura según los términos del paquete (Microsoft_Terms_of_Use.pdf), sin deformar ni recolorear"
+ },
+ "az-eventhubs": {
+  "nombre": "00039-icon-service-Event-Hubs.svg",
+  "url": "https://arch-center.azureedge.net/icons/Azure_Public_Service_Icons_V24.zip",
+  "pagina": "https://learn.microsoft.com/azure/architecture/icons/",
+  "autor": "Microsoft",
+  "licencia": "Microsoft, Azure Architecture Icons V24. Uso permitido en diagramas de arquitectura según los términos del paquete (Microsoft_Terms_of_Use.pdf), sin deformar ni recolorear"
+ },
+ "az-aks": {
+  "nombre": "10023-icon-service-Kubernetes-Services.svg",
+  "url": "https://arch-center.azureedge.net/icons/Azure_Public_Service_Icons_V24.zip",
+  "pagina": "https://learn.microsoft.com/azure/architecture/icons/",
+  "autor": "Microsoft",
+  "licencia": "Microsoft, Azure Architecture Icons V24. Uso permitido en diagramas de arquitectura según los términos del paquete (Microsoft_Terms_of_Use.pdf), sin deformar ni recolorear"
+ },
+ "az-postgres": {
+  "nombre": "10131-icon-service-Azure-Database-PostgreSQL-Server.svg",
+  "url": "https://arch-center.azureedge.net/icons/Azure_Public_Service_Icons_V24.zip",
+  "pagina": "https://learn.microsoft.com/azure/architecture/icons/",
+  "autor": "Microsoft",
+  "licencia": "Microsoft, Azure Architecture Icons V24. Uso permitido en diagramas de arquitectura según los términos del paquete (Microsoft_Terms_of_Use.pdf), sin deformar ni recolorear"
+ },
+ "az-storage": {
+  "nombre": "10086-icon-service-Storage-Accounts.svg",
+  "url": "https://arch-center.azureedge.net/icons/Azure_Public_Service_Icons_V24.zip",
+  "pagina": "https://learn.microsoft.com/azure/architecture/icons/",
+  "autor": "Microsoft",
+  "licencia": "Microsoft, Azure Architecture Icons V24. Uso permitido en diagramas de arquitectura según los términos del paquete (Microsoft_Terms_of_Use.pdf), sin deformar ni recolorear"
+ },
+ "az-datalake": {
+  "nombre": "10090-icon-service-Data-Lake-Storage-Gen1.svg",
+  "url": "https://arch-center.azureedge.net/icons/Azure_Public_Service_Icons_V24.zip",
+  "pagina": "https://learn.microsoft.com/azure/architecture/icons/",
+  "autor": "Microsoft",
+  "licencia": "Microsoft, Azure Architecture Icons V24. Uso permitido en diagramas de arquitectura según los términos del paquete (Microsoft_Terms_of_Use.pdf), sin deformar ni recolorear"
+ },
+ "az-keyvault": {
+  "nombre": "10245-icon-service-Key-Vaults.svg",
+  "url": "https://arch-center.azureedge.net/icons/Azure_Public_Service_Icons_V24.zip",
+  "pagina": "https://learn.microsoft.com/azure/architecture/icons/",
+  "autor": "Microsoft",
+  "licencia": "Microsoft, Azure Architecture Icons V24. Uso permitido en diagramas de arquitectura según los términos del paquete (Microsoft_Terms_of_Use.pdf), sin deformar ni recolorear"
+ },
+ "az-monitor": {
+  "nombre": "00001-icon-service-Monitor.svg",
+  "url": "https://arch-center.azureedge.net/icons/Azure_Public_Service_Icons_V24.zip",
+  "pagina": "https://learn.microsoft.com/azure/architecture/icons/",
+  "autor": "Microsoft",
+  "licencia": "Microsoft, Azure Architecture Icons V24. Uso permitido en diagramas de arquitectura según los términos del paquete (Microsoft_Terms_of_Use.pdf), sin deformar ni recolorear"
+ },
+ "az-loganalytics": {
+  "nombre": "00009-icon-service-Log-Analytics-Workspaces.svg",
+  "url": "https://arch-center.azureedge.net/icons/Azure_Public_Service_Icons_V24.zip",
+  "pagina": "https://learn.microsoft.com/azure/architecture/icons/",
+  "autor": "Microsoft",
+  "licencia": "Microsoft, Azure Architecture Icons V24. Uso permitido en diagramas de arquitectura según los términos del paquete (Microsoft_Terms_of_Use.pdf), sin deformar ni recolorear"
+ },
+ "az-firewall": {
+  "nombre": "10084-icon-service-Firewalls.svg",
+  "url": "https://arch-center.azureedge.net/icons/Azure_Public_Service_Icons_V24.zip",
+  "pagina": "https://learn.microsoft.com/azure/architecture/icons/",
+  "autor": "Microsoft",
+  "licencia": "Microsoft, Azure Architecture Icons V24. Uso permitido en diagramas de arquitectura según los términos del paquete (Microsoft_Terms_of_Use.pdf), sin deformar ni recolorear"
+ },
+ "az-vpngw": {
+  "nombre": "10063-icon-service-Virtual-Network-Gateways.svg",
+  "url": "https://arch-center.azureedge.net/icons/Azure_Public_Service_Icons_V24.zip",
+  "pagina": "https://learn.microsoft.com/azure/architecture/icons/",
+  "autor": "Microsoft",
+  "licencia": "Microsoft, Azure Architecture Icons V24. Uso permitido en diagramas de arquitectura según los términos del paquete (Microsoft_Terms_of_Use.pdf), sin deformar ni recolorear"
+ },
+ "az-expressroute": {
+  "nombre": "10079-icon-service-ExpressRoute-Circuits.svg",
+  "url": "https://arch-center.azureedge.net/icons/Azure_Public_Service_Icons_V24.zip",
+  "pagina": "https://learn.microsoft.com/azure/architecture/icons/",
+  "autor": "Microsoft",
+  "licencia": "Microsoft, Azure Architecture Icons V24. Uso permitido en diagramas de arquitectura según los términos del paquete (Microsoft_Terms_of_Use.pdf), sin deformar ni recolorear"
+ },
+ "az-bastion": {
+  "nombre": "02422-icon-service-Bastions.svg",
+  "url": "https://arch-center.azureedge.net/icons/Azure_Public_Service_Icons_V24.zip",
+  "pagina": "https://learn.microsoft.com/azure/architecture/icons/",
+  "autor": "Microsoft",
+  "licencia": "Microsoft, Azure Architecture Icons V24. Uso permitido en diagramas de arquitectura según los términos del paquete (Microsoft_Terms_of_Use.pdf), sin deformar ni recolorear"
+ },
+ "az-vnet": {
+  "nombre": "10061-icon-service-Virtual-Networks.svg",
+  "url": "https://arch-center.azureedge.net/icons/Azure_Public_Service_Icons_V24.zip",
+  "pagina": "https://learn.microsoft.com/azure/architecture/icons/",
+  "autor": "Microsoft",
+  "licencia": "Microsoft, Azure Architecture Icons V24. Uso permitido en diagramas de arquitectura según los términos del paquete (Microsoft_Terms_of_Use.pdf), sin deformar ni recolorear"
+ },
+ "az-subnet": {
+  "nombre": "02742-icon-service-Subnet.svg",
+  "url": "https://arch-center.azureedge.net/icons/Azure_Public_Service_Icons_V24.zip",
+  "pagina": "https://learn.microsoft.com/azure/architecture/icons/",
+  "autor": "Microsoft",
+  "licencia": "Microsoft, Azure Architecture Icons V24. Uso permitido en diagramas de arquitectura según los términos del paquete (Microsoft_Terms_of_Use.pdf), sin deformar ni recolorear"
+ },
+ "az-nsg": {
+  "nombre": "10067-icon-service-Network-Security-Groups.svg",
+  "url": "https://arch-center.azureedge.net/icons/Azure_Public_Service_Icons_V24.zip",
+  "pagina": "https://learn.microsoft.com/azure/architecture/icons/",
+  "autor": "Microsoft",
+  "licencia": "Microsoft, Azure Architecture Icons V24. Uso permitido en diagramas de arquitectura según los términos del paquete (Microsoft_Terms_of_Use.pdf), sin deformar ni recolorear"
+ },
+ "az-subscription": {
+  "nombre": "10002-icon-service-Subscriptions.svg",
+  "url": "https://arch-center.azureedge.net/icons/Azure_Public_Service_Icons_V24.zip",
+  "pagina": "https://learn.microsoft.com/azure/architecture/icons/",
+  "autor": "Microsoft",
+  "licencia": "Microsoft, Azure Architecture Icons V24. Uso permitido en diagramas de arquitectura según los términos del paquete (Microsoft_Terms_of_Use.pdf), sin deformar ni recolorear"
+ },
+ "az-region": {
+  "nombre": "10116-icon-service-Region-Management.svg",
+  "url": "https://arch-center.azureedge.net/icons/Azure_Public_Service_Icons_V24.zip",
+  "pagina": "https://learn.microsoft.com/azure/architecture/icons/",
+  "autor": "Microsoft",
+  "licencia": "Microsoft, Azure Architecture Icons V24. Uso permitido en diagramas de arquitectura según los términos del paquete (Microsoft_Terms_of_Use.pdf), sin deformar ni recolorear"
+ },
+ "az-redis": {
+  "nombre": "10137-icon-service-Cache-Redis.svg",
+  "url": "https://arch-center.azureedge.net/icons/Azure_Public_Service_Icons_V24.zip",
+  "pagina": "https://learn.microsoft.com/azure/architecture/icons/",
+  "autor": "Microsoft",
+  "licencia": "Microsoft, Azure Architecture Icons V24. Uso permitido en diagramas de arquitectura según los términos del paquete (Microsoft_Terms_of_Use.pdf), sin deformar ni recolorear"
+ },
+ "az-privateendpoint": {
+  "nombre": "02579-icon-service-Private-Endpoints.svg",
+  "url": "https://arch-center.azureedge.net/icons/Azure_Public_Service_Icons_V24.zip",
+  "pagina": "https://learn.microsoft.com/azure/architecture/icons/",
+  "autor": "Microsoft",
+  "licencia": "Microsoft, Azure Architecture Icons V24. Uso permitido en diagramas de arquitectura según los términos del paquete (Microsoft_Terms_of_Use.pdf), sin deformar ni recolorear"
+ },
+ "az-routetable": {
+  "nombre": "10082-icon-service-Route-Tables.svg",
+  "url": "https://arch-center.azureedge.net/icons/Azure_Public_Service_Icons_V24.zip",
+  "pagina": "https://learn.microsoft.com/azure/architecture/icons/",
+  "autor": "Microsoft",
+  "licencia": "Microsoft, Azure Architecture Icons V24. Uso permitido en diagramas de arquitectura según los términos del paquete (Microsoft_Terms_of_Use.pdf), sin deformar ni recolorear"
+ },
+ "entra-id": {
+  "nombre": "Microsoft Entra ID color icon.svg",
+  "url": "https://download.microsoft.com/download/3/1/a/31a56038-856a-4489-88e4-ee5a1c4352be/Microsoft%20Entra%20architecture%20icons%20-%20Oct%202023.zip",
+  "pagina": "https://learn.microsoft.com/entra/architecture/architecture-icons",
+  "autor": "Microsoft",
+  "licencia": "Microsoft, Microsoft Entra architecture icons (oct. 2023). Uso permitido en diagramas según los términos del paquete (Microsoft Terms of Use.docx)"
+ },
+ "dev-flutter": {
+  "nombre": "flutter-original.svg",
+  "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg",
+  "autor": "Proyecto Devicon y colaboradores",
+  "licencia": "MIT. Las marcas pertenecen a sus dueños"
+ },
+ "dev-react": {
+  "nombre": "react-original.svg",
+  "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
+  "autor": "Proyecto Devicon y colaboradores",
+  "licencia": "MIT. Las marcas pertenecen a sus dueños"
+ },
+ "dev-nextjs": {
+  "nombre": "nextjs-original.svg",
+  "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
+  "autor": "Proyecto Devicon y colaboradores",
+  "licencia": "MIT. Las marcas pertenecen a sus dueños"
+ },
+ "dev-dotnet": {
+  "nombre": "dotnetcore-original.svg",
+  "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dotnetcore/dotnetcore-original.svg",
+  "autor": "Proyecto Devicon y colaboradores",
+  "licencia": "MIT. Las marcas pertenecen a sus dueños"
+ },
+ "dev-go": {
+  "nombre": "go-original-wordmark.svg",
+  "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original-wordmark.svg",
+  "autor": "Proyecto Devicon y colaboradores",
+  "licencia": "MIT. Las marcas pertenecen a sus dueños"
+ },
+ "dev-postgresql": {
+  "nombre": "postgresql-original.svg",
+  "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg",
+  "autor": "Proyecto Devicon y colaboradores",
+  "licencia": "MIT. Las marcas pertenecen a sus dueños"
+ },
+ "dev-redis": {
+  "nombre": "redis-original.svg",
+  "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original.svg",
+  "autor": "Proyecto Devicon y colaboradores",
+  "licencia": "MIT. Las marcas pertenecen a sus dueños"
+ },
+ "dev-sqlite": {
+  "nombre": "sqlite-original.svg",
+  "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original.svg",
+  "autor": "Proyecto Devicon y colaboradores",
+  "licencia": "MIT. Las marcas pertenecen a sus dueños"
+ },
+ "dev-kafka": {
+  "nombre": "apachekafka-original.svg",
+  "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apachekafka/apachekafka-original.svg",
+  "autor": "Proyecto Devicon y colaboradores",
+  "licencia": "MIT. Las marcas pertenecen a sus dueños"
+ },
+ "dev-linux": {
+  "nombre": "linux-original.svg",
+  "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg",
+  "autor": "Proyecto Devicon y colaboradores",
+  "licencia": "MIT. Las marcas pertenecen a sus dueños"
+ },
+ "dev-azure": {
+  "nombre": "azure-original.svg",
+  "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg",
+  "autor": "Proyecto Devicon y colaboradores",
+  "licencia": "MIT. Las marcas pertenecen a sus dueños"
+ },
+ "dev-git": {
+  "nombre": "git-original.svg",
+  "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg",
+  "autor": "Proyecto Devicon y colaboradores",
+  "licencia": "MIT. Las marcas pertenecen a sus dueños"
+ },
+ "flu-camion": {
+  "nombre": "Fluent Emoji «Articulated lorry», estilo plano",
+  "url": "https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@main/assets/Articulated%20lorry/Flat/articulated_lorry_flat.svg",
+  "autor": "Microsoft",
+  "licencia": "MIT"
+ },
+ "flu-edificio-publico": {
+  "nombre": "Fluent Emoji «Classical building», estilo plano",
+  "url": "https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@main/assets/Classical%20building/Flat/classical_building_flat.svg",
+  "autor": "Microsoft",
+  "licencia": "MIT"
+ },
+ "flu-empresa": {
+  "nombre": "Fluent Emoji «Office building», estilo plano",
+  "url": "https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@main/assets/Office%20building/Flat/office_building_flat.svg",
+  "autor": "Microsoft",
+  "licencia": "MIT"
+ },
+ "flu-combustible": {
+  "nombre": "Fluent Emoji «Fuel pump», estilo plano",
+  "url": "https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@main/assets/Fuel%20pump/Flat/fuel_pump_flat.svg",
+  "autor": "Microsoft",
+  "licencia": "MIT"
+ },
+ "flu-peaje": {
+  "nombre": "Fluent Emoji «Motorway», estilo plano",
+  "url": "https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@main/assets/Motorway/Flat/motorway_flat.svg",
+  "autor": "Microsoft",
+  "licencia": "MIT"
+ },
+ "flu-fabrica": {
+  "nombre": "Fluent Emoji «Factory», estilo plano",
+  "url": "https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@main/assets/Factory/Flat/factory_flat.svg",
+  "autor": "Microsoft",
+  "licencia": "MIT"
+ },
+ "flu-satelite": {
+  "nombre": "Fluent Emoji «Satellite», estilo plano",
+  "url": "https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@main/assets/Satellite/Flat/satellite_flat.svg",
+  "autor": "Microsoft",
+  "licencia": "MIT"
+ },
+ "flu-internet": {
+  "nombre": "Fluent Emoji «Globe with meridians», estilo plano",
+  "url": "https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@main/assets/Globe%20with%20meridians/Flat/globe_with_meridians_flat.svg",
+  "autor": "Microsoft",
+  "licencia": "MIT"
+ },
+ "flu-movil": {
+  "nombre": "Fluent Emoji «Mobile phone», estilo plano",
+  "url": "https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@main/assets/Mobile%20phone/Flat/mobile_phone_flat.svg",
+  "autor": "Microsoft",
+  "licencia": "MIT"
+ },
+ "flu-portal": {
+  "nombre": "Fluent Emoji «Laptop», estilo plano",
+  "url": "https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@main/assets/Laptop/Flat/laptop_flat.svg",
+  "autor": "Microsoft",
+  "licencia": "MIT"
+ },
+ "flu-consola": {
+  "nombre": "Fluent Emoji «Desktop computer», estilo plano",
+  "url": "https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@main/assets/Desktop%20computer/Flat/desktop_computer_flat.svg",
+  "autor": "Microsoft",
+  "licencia": "MIT"
+ },
+ "flu-tablero": {
+  "nombre": "Fluent Emoji «Bar chart», estilo plano",
+  "url": "https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@main/assets/Bar%20chart/Flat/bar_chart_flat.svg",
+  "autor": "Microsoft",
+  "licencia": "MIT"
+ },
+ "flu-autoservicio": {
+  "nombre": "Fluent Emoji «Chart increasing», estilo plano",
+  "url": "https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@main/assets/Chart%20increasing/Flat/chart_increasing_flat.svg",
+  "autor": "Microsoft",
+  "licencia": "MIT"
+ },
+ "flu-repuestos": {
+  "nombre": "Fluent Emoji «Package», estilo plano",
+  "url": "https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@main/assets/Package/Flat/package_flat.svg",
+  "autor": "Microsoft",
+  "licencia": "MIT"
+ },
+ "flu-extintor": {
+  "nombre": "Fluent Emoji «Fire extinguisher», estilo plano",
+  "url": "https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@main/assets/Fire%20extinguisher/Flat/fire_extinguisher_flat.svg",
+  "autor": "Microsoft",
+  "licencia": "MIT"
+ },
+ "flu-agua": {
+  "nombre": "Fluent Emoji «Droplet», estilo plano",
+  "url": "https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@main/assets/Droplet/Flat/droplet_flat.svg",
+  "autor": "Microsoft",
+  "licencia": "MIT"
+ },
+ "flu-contable": {
+  "nombre": "Fluent Emoji «Ledger», estilo plano",
+  "url": "https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@main/assets/Ledger/Flat/ledger_flat.svg",
+  "autor": "Microsoft",
+  "licencia": "MIT"
+ },
+ "flu-gestion2013": {
+  "nombre": "Fluent Emoji «Card file box», estilo plano",
+  "url": "https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@main/assets/Card%20file%20box/Flat/card_file_box_flat.svg",
+  "autor": "Microsoft",
+  "licencia": "MIT"
+ },
+ "flu-ubicacion": {
+  "nombre": "Fluent Emoji «Round pushpin», estilo plano",
+  "url": "https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@main/assets/Round%20pushpin/Flat/round_pushpin_flat.svg",
+  "autor": "Microsoft",
+  "licencia": "MIT"
+ },
+ "flu-documento": {
+  "nombre": "Fluent Emoji «Page facing up», estilo plano",
+  "url": "https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@main/assets/Page%20facing%20up/Flat/page_facing_up_flat.svg",
+  "autor": "Microsoft",
+  "licencia": "MIT"
+ },
+ "flu-tarjeta": {
+  "nombre": "Fluent Emoji «Identification card», estilo plano",
+  "url": "https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@main/assets/Identification%20card/Flat/identification_card_flat.svg",
+  "autor": "Microsoft",
+  "licencia": "MIT"
+ },
+ "flu-candado": {
+  "nombre": "Fluent Emoji «Locked», estilo plano",
+  "url": "https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@main/assets/Locked/Flat/locked_flat.svg",
+  "autor": "Microsoft",
+  "licencia": "MIT"
+ },
+ "flu-reloj": {
+  "nombre": "Fluent Emoji «Stopwatch», estilo plano",
+  "url": "https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@main/assets/Stopwatch/Flat/stopwatch_flat.svg",
+  "autor": "Microsoft",
+  "licencia": "MIT"
+ },
+ "flu-parador": {
+  "nombre": "Fluent Emoji «Bed», estilo plano",
+  "url": "https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@main/assets/Bed/Flat/bed_flat.svg",
+  "autor": "Microsoft",
+  "licencia": "MIT"
+ },
+ "flu-engranaje": {
+  "nombre": "Fluent Emoji «Gear», estilo plano",
+  "url": "https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@main/assets/Gear/Flat/gear_flat.svg",
+  "autor": "Microsoft",
+  "licencia": "MIT"
+ },
+ "flu-peligro": {
+  "nombre": "Fluent Emoji «Warning», estilo plano",
+  "url": "https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@main/assets/Warning/Flat/warning_flat.svg",
+  "autor": "Microsoft",
+  "licencia": "MIT"
+ },
+ "flu-campana": {
+  "nombre": "Fluent Emoji «Bell», estilo plano",
+  "url": "https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@main/assets/Bell/Flat/bell_flat.svg",
+  "autor": "Microsoft",
+  "licencia": "MIT"
+ },
+ "flu-hombre": {
+  "nombre": "Fluent Emoji «Man», estilo plano",
+  "url": "https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@main/assets/Man/Medium-Light/Flat/man_flat_medium-light.svg",
+  "autor": "Microsoft",
+  "licencia": "MIT"
+ },
+ "flu-audifonos": {
+  "nombre": "Fluent Emoji «Headphone», estilo plano",
+  "url": "https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@main/assets/Headphone/Flat/headphone_flat.svg",
+  "autor": "Microsoft",
+  "licencia": "MIT"
+ },
+ "flu-maletin": {
+  "nombre": "Fluent Emoji «Briefcase», estilo plano",
+  "url": "https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@main/assets/Briefcase/Flat/briefcase_flat.svg",
+  "autor": "Microsoft",
+  "licencia": "MIT"
+ },
+ "flu-portapapeles": {
+  "nombre": "Fluent Emoji «Clipboard», estilo plano",
+  "url": "https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@main/assets/Clipboard/Flat/clipboard_flat.svg",
+  "autor": "Microsoft",
+  "licencia": "MIT"
+ },
+ "flu-obrero": {
+  "nombre": "Fluent Emoji «Construction worker», estilo plano",
+  "url": "https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@main/assets/Construction%20worker/Medium-Light/Flat/construction_worker_flat_medium-light.svg",
+  "autor": "Microsoft",
+  "licencia": "MIT"
+ },
+ "flu-usuarios": {
+  "nombre": "Fluent Emoji «Busts in silhouette», estilo plano",
+  "url": "https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@main/assets/Busts%20in%20silhouette/Flat/busts_in_silhouette_flat.svg",
+  "autor": "Microsoft",
+  "licencia": "MIT"
+ },
+ "flu-acuerdo": {
+  "nombre": "Fluent Emoji «Handshake», estilo plano",
+  "url": "https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@main/assets/Handshake/Flat/handshake_flat.svg",
+  "autor": "Microsoft",
+  "licencia": "MIT"
+ },
+ "flu-sello": {
+  "nombre": "Fluent Emoji «Rosette», estilo plano",
+  "url": "https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@main/assets/Rosette/Flat/rosette_flat.svg",
+  "autor": "Microsoft",
+  "licencia": "MIT"
+ },
+ "flu-corona": {
+  "nombre": "Fluent Emoji «Crown», estilo plano",
+  "url": "https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@main/assets/Crown/Flat/crown_flat.svg",
+  "autor": "Microsoft",
+  "licencia": "MIT"
+ },
+ "flu-enchufe": {
+  "nombre": "Fluent Emoji «Electric plug», estilo plano",
+  "url": "https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@main/assets/Electric%20plug/Flat/electric_plug_flat.svg",
+  "autor": "Microsoft",
+  "licencia": "MIT"
+ },
+ "flu-bateria": {
+  "nombre": "Fluent Emoji «Battery», estilo plano",
+  "url": "https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@main/assets/Battery/Flat/battery_flat.svg",
+  "autor": "Microsoft",
+  "licencia": "MIT"
+ },
+ "flu-bitacora": {
+  "nombre": "Fluent Emoji «Scroll», estilo plano",
+  "url": "https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@main/assets/Scroll/Flat/scroll_flat.svg",
+  "autor": "Microsoft",
+  "licencia": "MIT"
+ },
+ "flu-antena-tierra": {
+  "nombre": "Fluent Emoji «Satellite antenna», estilo plano",
+  "url": "https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@main/assets/Satellite%20antenna/Flat/satellite_antenna_flat.svg",
+  "autor": "Microsoft",
+  "licencia": "MIT"
+ },
+ "flu-espera": {
+  "nombre": "Fluent Emoji «Hourglass not done», estilo plano",
+  "url": "https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@main/assets/Hourglass%20not%20done/Flat/hourglass_not_done_flat.svg",
+  "autor": "Microsoft",
+  "licencia": "MIT"
+ },
+ "flu-reintento": {
+  "nombre": "Fluent Emoji «Counterclockwise arrows button», estilo plano",
+  "url": "https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@main/assets/Counterclockwise%20arrows%20button/Flat/counterclockwise_arrows_button_flat.svg",
+  "autor": "Microsoft",
+  "licencia": "MIT"
+ },
+ "flu-conductor": {
+  "nombre": "Fluent Emoji «Person», estilo plano",
+  "url": "https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@main/assets/Person/Medium-Light/Flat/person_flat_medium-light.svg",
+  "autor": "Microsoft",
+  "licencia": "MIT"
+ },
+ "flu-operador": {
+  "nombre": "Fluent Emoji «Technologist», estilo plano",
+  "url": "https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@main/assets/Technologist/Medium-Light/Flat/technologist_flat_medium-light.svg",
+  "autor": "Microsoft",
+  "licencia": "MIT"
+ },
+ "flu-taller": {
+  "nombre": "Fluent Emoji «Mechanic», estilo plano",
+  "url": "https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@main/assets/Mechanic/Medium-Light/Flat/mechanic_flat_medium-light.svg",
+  "autor": "Microsoft",
+  "licencia": "MIT"
+ },
+ "flu-transportista": {
+  "nombre": "Fluent Emoji «Office worker», estilo plano",
+  "url": "https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@main/assets/Office%20worker/Medium-Light/Flat/office_worker_flat_medium-light.svg",
+  "autor": "Microsoft",
+  "licencia": "MIT"
+ },
+ "flu-cliente": {
+  "nombre": "Fluent Emoji «Woman office worker», estilo plano",
+  "url": "https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@main/assets/Woman%20office%20worker/Medium-Light/Flat/woman_office_worker_flat_medium-light.svg",
+  "autor": "Microsoft",
+  "licencia": "MIT"
+ },
+ "flu-gerencia": {
+  "nombre": "Fluent Emoji «Man office worker», estilo plano",
+  "url": "https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@main/assets/Man%20office%20worker/Medium-Light/Flat/man_office_worker_flat_medium-light.svg",
+  "autor": "Microsoft",
+  "licencia": "MIT"
+ },
+ "fui-codigo": {
+  "nombre": "Fluent UI System Icons «Code», variante color",
+  "url": "https://cdn.jsdelivr.net/gh/microsoft/fluentui-system-icons@main/assets/Code/SVG/ic_fluent_code_24_color.svg",
+  "autor": "Microsoft",
+  "licencia": "MIT"
+ },
+ "si-timescale": {
+  "nombre": "Simple Icons «timescale», con el color de marca #FDB515 que publica el proyecto",
+  "url": "https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/timescale.svg",
+  "autor": "Proyecto Simple Icons y colaboradores",
+  "licencia": "CC0 1.0. La marca pertenece a su dueño"
+ }
+}

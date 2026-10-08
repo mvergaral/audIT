@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="148.9mm" height="148.2mm" viewBox="0 0 422 420">
+<defs><marker id="fin-n" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="5.5" markerHeight="5.5" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#2B2B2B"/></marker><marker id="ini-n" viewBox="0 0 10 10" refX="0.5" refY="5" markerWidth="5.5" markerHeight="5.5" markerUnits="userSpaceOnUse" orient="auto"><path d="M10,0.8 L0,5 L10,9.2 z" fill="#2B2B2B"/></marker><marker id="fin-r" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="5.5" markerHeight="5.5" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#C0392B"/></marker><marker id="ini-r" viewBox="0 0 10 10" refX="0.5" refY="5" markerWidth="5.5" markerHeight="5.5" markerUnits="userSpaceOnUse" orient="auto"><path d="M10,0.8 L0,5 L10,9.2 z" fill="#C0392B"/></marker><symbol id="ic-flu-agua" viewBox="0 0 32 32" fill="none">
+<path d="M18.2692 3.3875C17.2787 1.5375 14.6074 1.5375 13.6269 3.3875L7.35391 15.1875C3.51205 21.7675 8.30437 29.9975 15.9681 29.9975H16.1782C23.7318 29.9975 28.4441 21.8975 24.6723 15.4175L18.2692 3.3875Z" fill="#26C9FC"/>
+</symbol><symbol id="ic-flu-consola" viewBox="0 0 32 32" fill="none">
+<path d="M26.37 26H5.63C5.28 26 5 26.28 5 26.63V29.37C5 29.72 5.28 30 5.63 30H26.37C26.72 30 27 29.72 27 29.37V26.63C27 26.28 26.72 26 26.37 26Z" fill="#9B9B9B"/>
+<path d="M8.17333 23H9V23.29C9 23.68 9.32069 24 9.71152 24H22.2785C22.6793 24 23 23.68 23 23.29V23H23.8267C24.48 23 25 22.61 25 22.12V17H23V21H9V17H7V22.12C7 22.61 7.52 23 8.17333 23ZM5.63 25H26.37C26.72 25 27 25.28 27 25.63V28.37C27 28.72 26.72 29 26.37 29H5.63C5.28 29 5 28.72 5 28.37V25.63C5 25.28 5.28 25 5.63 25Z" fill="#BEBEBE"/>
+<path d="M29 19H3C2.45 19 2 18.55 2 18V3C2 2.45 2.45 2 3 2H29C29.55 2 30 2.45 30 3V18C30 18.55 29.55 19 29 19Z" fill="#7167A4"/>
+<path d="M3 17.75V3.25C3 3.11 3.11 3 3.25 3H28.75C28.89 3 29 3.11 29 3.25V17.75C29 17.89 28.89 18 28.75 18H3.25C3.11 18 3 17.89 3 17.75Z" fill="#26C9FC"/>
+<path d="M7 19H9V20H7V19ZM6.88 25.75H6.12C6.06 25.75 6 25.81 6 25.88V26.63C6 26.7 6.06 26.75 6.12 26.75H6.87C6.94 26.75 6.99 26.69 6.99 26.63V25.88C7 25.81 6.94 25.75 6.88 25.75ZM8.59998 25.75H7.84998C7.77998 25.75 7.72998 25.81 7.72998 25.87V26.62C7.72998 26.69 7.78998 26.74 7.84998 26.74H8.59998C8.66998 26.74 8.71998 26.68 8.71998 26.62V25.87C8.72998 25.81 8.66998 25.75 8.59998 25.75ZM9.58002 25.75H10.33C10.4 25.75 10.45 25.81 10.45 25.87V26.62C10.45 26.68 10.4 26.74 10.33 26.74H9.58002C9.52002 26.74 9.46002 26.69 9.46002 26.62V25.87C9.46002 25.81 9.51002 25.75 9.58002 25.75ZM12.06 25.75H11.31C11.24 25.75 11.19 25.81 11.19 25.87V26.62C11.19 26.69 11.25 26.74 11.31 26.74H12.06C12.13 26.74 12.18 26.68 12.18 26.62V25.87C12.18 25.81 12.13 25.75 12.06 25.75ZM13.03 25.75H13.78C13.85 25.75 13.91 25.81 13.9 25.87V26.62C13.9 26.68 13.85 26.74 13.78 26.74H13.03C12.97 26.74 12.91 26.69 12.91 26.62V25.87C12.91 25.81 12.96 25.75 13.03 25.75ZM15.51 25.75H14.76C14.69 25.75 14.64 25.81 14.64 25.87V26.62C14.64 26.69 14.7 26.74 14.76 26.74H15.51C15.58 26.74 15.63 26.68 15.63 26.62V25.87C15.64 25.81 15.58 25.75 15.51 25.75ZM16.49 25.75H17.24C17.31 25.75 17.36 25.81 17.36 25.87V26.62C17.36 26.68 17.31 26.74 17.24 26.74H16.49C16.43 26.74 16.37 26.69 16.37 26.62V25.87C16.37 25.81 16.42 25.75 16.49 25.75ZM18.97 25.75H18.22C18.15 25.75 18.1 25.81 18.1 25.87V26.62C18.1 26.69 18.16 26.74 18.22 26.74H18.97C19.04 26.74 19.09 26.68 19.09 26.62V25.87C19.09 25.81 19.03 25.75 18.97 25.75ZM19.94 25.75H20.69C20.76 25.75 20.82 25.81 20.81 25.87V26.62C20.81 26.68 20.76 26.74 20.69 26.74H19.94C19.88 26.74 19.82 26.69 19.82 26.62V25.87C19.82 25.81 19.87 25.75 19.94 25.75ZM22.42 25.75H21.67C21.6 25.75 21.55 25.81 21.55 25.87V26.62C21.55 26.69 21.61 26.74 21.67 26.74H22.42C22.49 26.74 22.54 26.68 22.54 26.62V25.87C22.55 25.81 22.49 25.75 22.42 25.75ZM23.4 25.75H24.15C24.22 25.75 24.27 25.81 24.27 25.87V26.62C24.27 26.68 24.22 26.74 24.15 26.74H23.4C23.34 26.74 23.28 26.69 23.28 26.62V25.87C23.28 25.81 23.33 25.75 23.4 25.75ZM25.88 25.75H25.13C25.06 25.75 25.01 25.81 25.01 25.87V26.62C25.01 26.69 25.07 26.74 25.13 26.74H25.88C25.95 26.74 26 26.68 26 26.62V25.87C26 25.81 25.94 25.75 25.88 25.75ZM6.12 27.25H6.88C6.94 27.25 7 27.31 6.99 27.38V28.13C6.99 28.19 6.94 28.25 6.87 28.25H6.12C6.06 28.25 6 28.2 6 28.13V27.38C6 27.31 6.06 27.25 6.12 27.25ZM8.59998 27.25H7.84998C7.77998 27.25 7.72998 27.31 7.72998 27.37V28.12C7.72998 28.19 7.78998 28.24 7.84998 28.24H8.59998C8.66998 28.24 8.71998 28.18 8.71998 28.12V27.37C8.72998 27.31 8.66998 27.25 8.59998 27.25ZM9.58002 27.25H10.33C10.4 27.25 10.45 27.31 10.45 27.37V28.12C10.45 28.18 10.4 28.24 10.33 28.24H9.58002C9.52002 28.24 9.46002 28.19 9.46002 28.12V27.37C9.46002 27.31 9.51002 27.25 9.58002 27.25ZM12.06 27.25H11.31C11.24 27.25 11.19 27.31 11.19 27.37V28.12C11.19 28.19 11.25 28.24 11.31 28.24H12.06C12.13 28.24 12.18 28.18 12.18 28.12V27.37C12.18 27.31 12.13 27.25 12.06 27.25ZM13.04 27.25H18.94C19.01 27.25 19.06 27.31 19.06 27.37V28.12C19.06 28.18 19.01 28.24 18.94 28.24H13.04C12.98 28.24 12.92 28.19 12.92 28.12V27.37C12.92 27.31 12.97 27.25 13.04 27.25ZM20.69 27.25H19.94C19.87 27.25 19.82 27.31 19.82 27.37V28.12C19.82 28.19 19.88 28.24 19.94 28.24H20.69C20.76 28.24 20.81 28.18 20.81 28.12V27.37C20.82 27.31 20.76 27.25 20.69 27.25ZM21.67 27.25H22.42C22.49 27.25 22.55 27.31 22.54 27.37V28.12C22.54 28.18 22.49 28.24 22.42 28.24H21.67C21.61 28.24 21.55 28.19 21.55 28.12V27.37C21.55 27.31 21.6 27.25 21.67 27.25ZM24.15 27.25H23.4C23.33 27.25 23.28 27.31 23.28 27.37V28.12C23.28 28.19 23.34 28.24 23.4 28.24H24.15C24.22 28.24 24.27 28.18 24.27 28.12V27.37C24.27 27.31 24.22 27.25 24.15 27.25ZM25.13 27.25H25.88C25.94 27.25 26 27.31 26 27.37V28.12C26 28.18 25.95 28.24 25.88 28.24H25.13C25.07 28.24 25.01 28.19 25.01 28.12V27.37C25.01 27.31 25.06 27.25 25.13 27.25ZM25 19H23V20H25V19Z" fill="#9B9B9B"/>
+</symbol><symbol id="ic-flu-repuestos" viewBox="0 0 32 32" fill="none">
+<path d="M15.35 2.1425C15.67 1.9525 16.06 1.9525 16.37 2.1425L27.29 8.7825C27.55 8.9425 27.71 9.2325 27.71 9.5325L15.86 17.5L4 9.63243V9.5325C4 9.2325 4.16 8.9425 4.42 8.7925L15.35 2.1425Z" fill="#F3C07B"/>
+<path d="M15.856 16.2463L27.216 9.34633C27.2658 9.31663 27.3227 9.30067 27.3807 9.30007C27.4387 9.29946 27.4958 9.31425 27.5462 9.34291C27.5966 9.37158 27.6385 9.41307 27.6676 9.46321C27.6968 9.51335 27.7121 9.57032 27.7121 9.62831V21.9683C27.7122 22.2655 27.6359 22.5577 27.4905 22.8169C27.3452 23.0761 27.1356 23.2934 26.882 23.4483L16.2421 29.9083C16.215 29.9232 16.1855 29.9334 16.155 29.9384C16.1281 29.9464 16.1001 29.9501 16.072 29.9494C15.9585 29.9812 15.8398 29.9903 15.7227 29.9761C15.6056 29.9618 15.4926 29.9245 15.39 29.8664H15.396L13 19L15.856 16.2463Z" fill="#FFCE7C"/>
+<path d="M15.86 29.6224V16.2524L4.51 9.35243C4.28 9.21243 4 9.37243 4 9.63243V21.9724C4 22.5824 4.32 23.1424 4.83 23.4524L15.4 29.8724C15.6 30.0024 15.86 29.8524 15.86 29.6224Z" fill="#E19747"/>
+<path d="M14.5 26.7824V24.8224C14.5 24.5924 14.38 24.3824 14.19 24.2624L11.39 22.5724C11.2 22.4624 10.96 22.5924 10.96 22.8124V24.7724C10.96 25.0024 11.08 25.2124 11.27 25.3324L14.07 27.0224C14.26 27.1324 14.5 27.0024 14.5 26.7824Z" fill="#D3D3D3"/>
+<path d="M11.76 16.5525V13.7625V11.9926L8.48001 11.7725V14.9325C8.48001 15.0325 8.53001 15.1325 8.62001 15.1925L11.3 16.8225C11.5 16.9325 11.76 16.7925 11.76 16.5525Z" fill="#8C5543"/>
+<path d="M20.34 4.5625L8.48001 11.7725L11.76 13.7725L23.62 6.5725L20.34 4.5625Z" fill="#A56953"/>
+</symbol><symbol id="ic-pr-camara" viewBox="0 0 48 48"><rect x="4" y="9" width="6" height="15" rx="1.5" fill="#9B9B9B"/><path d="M9 16.5 L16 20" fill="none" stroke="#9B9B9B" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><g transform="rotate(14 28 22)"><rect x="14" y="15.5" width="26" height="13" rx="4" fill="#D3D3D3"/><rect x="13" y="12.5" width="30" height="5.5" rx="2.5" fill="#B4ACBC"/><circle cx="39.5" cy="22" r="4.2" fill="#321B41"/><circle cx="38.4" cy="20.9" r="1.3" fill="#26C9FC"/></g></symbol><symbol id="ic-pr-generador" viewBox="0 0 48 48"><rect x="36" y="5" width="3.5" height="9" rx="1" fill="#9B9B9B"/><rect x="5" y="12" width="38" height="27" rx="3" fill="#FFB02E"/><path d="M9.5 18 H25 M9.5 22.5 H25 M9.5 27 H25 M9.5 31.5 H25" fill="none" stroke="#FF822D" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><rect x="29.5" y="17" width="10" height="12" rx="1.6" fill="#433B6B"/><rect x="31" y="19" width="7" height="3.6" rx="0.8" fill="#26C9FC"/><path d="M35.5 30.5 L32 35.5 H34.5 L33.5 38.5 L37.5 33.5 H35 Z" fill="#433B6B"/><rect x="3" y="38" width="42" height="4.5" rx="1.2" fill="#321B41"/></symbol><symbol id="ic-pr-lector-facial" viewBox="0 0 48 48"><rect x="13" y="3" width="22" height="42" rx="4" fill="#321B41"/><rect x="15.5" y="8" width="17" height="24" rx="2" fill="#26C9FC"/><circle cx="24" cy="17" r="4.2" fill="#FFFFFF"/><path d="M17 30.5 Q24 20.5 31 30.5 Z" fill="#FFFFFF"/><circle cx="24" cy="5.6" r="0.9" fill="#B4ACBC"/><rect x="19.5" y="36" width="9" height="4.5" rx="2.2" fill="#433B6B"/></symbol><symbol id="ic-pr-transferencia" viewBox="0 0 48 48"><rect x="11" y="4" width="26" height="40" rx="2" fill="#B4ACBC"/><rect x="14" y="8" width="20" height="32" rx="1.5" fill="#E1D8EC"/><rect x="19" y="15" width="10" height="18" rx="2" fill="#433B6B"/><rect x="21.5" y="12" width="5" height="11" rx="1.8" fill="#FFB02E"/><circle cx="24" cy="37" r="1.3" fill="#00D26A"/></symbol><symbol id="ic-pr-vesda" viewBox="0 0 48 48"><path d="M5 6.5 H43" fill="none" stroke="#F8312F" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 6.5 V16" fill="none" stroke="#F8312F" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="11" cy="6.5" r="0.9" fill="#FFFFFF"/><circle cx="18" cy="6.5" r="0.9" fill="#FFFFFF"/><circle cx="31" cy="6.5" r="0.9" fill="#FFFFFF"/><circle cx="38" cy="6.5" r="0.9" fill="#FFFFFF"/><rect x="9" y="16" width="30" height="24" rx="3" fill="#D3D3D3"/><rect x="13" y="20.5" width="22" height="8" rx="1.2" fill="#433B6B"/><rect x="15" y="25" width="3" height="2" rx="0.4" fill="#00D26A"/><rect x="19.5" y="24" width="3" height="3" rx="0.4" fill="#FFB02E"/><rect x="24" y="23" width="3" height="4" rx="0.4" fill="#FF822D"/><rect x="28.5" y="22" width="3" height="5" rx="0.4" fill="#F8312F"/><circle cx="17" cy="34.5" r="1.5" fill="#00D26A"/></symbol></defs>
+<rect x="0" y="0" width="422" height="420" fill="#FFFFFF"/>
+<g id="grupos">
+<path d="M55.50,53.50 L117.66,72.50 L74.50,115.66 Z" fill="#ECECEC"/>
+<path d="M365.50,53.50 L346.50,115.66 L303.34,72.50 Z" fill="#ECECEC"/>
+<path d="M365.50,238.50 L303.34,219.50 L346.50,176.34 Z" fill="#ECECEC"/>
+<path d="M55.50,173.50 L117.66,192.50 L74.50,235.66 Z" fill="#ECECEC"/>
+<rect x="48.00" y="46.00" width="325.00" height="200.00" rx="0" fill="none" stroke="#2B2B2B" stroke-width="4"/>
+<path d="M48.00,166.00 H118.00 V246.00" fill="none" stroke="#2B2B2B" stroke-width="3"/>
+<rect x="63.00" y="243.50" width="40.00" height="5.00" rx="0" fill="#FFFFFF"/>
+<path d="M63.00,246.00 V286.00 A40.0,40.0 0 0 0 103.00,246.00" fill="none" stroke="#7A7A7A" stroke-width="0.75"/>
+<rect x="63.00" y="163.50" width="40.00" height="5.00" rx="0" fill="#FFFFFF"/>
+<path d="M63.00,166.00 V126.00 A40.0,40.0 0 0 1 103.00,166.00" fill="none" stroke="#7A7A7A" stroke-width="0.75"/>
+<rect x="48.00" y="63.50" width="17.50" height="50.00" rx="0" fill="#FFFFFF" stroke="#404040" stroke-width="1.2"/>
+<rect x="355.50" y="146.00" width="17.50" height="50.00" rx="0" fill="#FFFFFF" stroke="#404040" stroke-width="1.2"/>
+<rect x="148.00" y="63.50" width="30.00" height="50.00" rx="0" fill="#FFFFFF" stroke="#404040" stroke-width="1.2"/>
+<rect x="228.00" y="63.50" width="30.00" height="50.00" rx="0" fill="#FFFFFF" stroke="#404040" stroke-width="1.2"/>
+<rect x="138.00" y="121.00" width="130.00" height="35.00" rx="3" fill="none" stroke="#9B9B9B" stroke-width="0.6" stroke-dasharray="3.5 2.5"/>
+<rect x="263.00" y="218.50" width="70.00" height="22.50" rx="0" fill="#FFFFFF" stroke="#404040" stroke-width="0.9"/>
+<rect x="183.00" y="228.50" width="75.00" height="15.00" rx="0" fill="#FFFFFF" stroke="#404040" stroke-width="0.9"/>
+<rect x="150.50" y="236.00" width="20.00" height="7.50" rx="0" fill="#FFFFFF" stroke="#404040" stroke-width="0.9"/>
+<rect x="289.00" y="32.00" width="8.00" height="16.00" rx="0" fill="#FFFFFF" stroke="#2B2B2B" stroke-width="0.9"/>
+<rect x="371.00" y="72.00" width="16.00" height="8.00" rx="0" fill="#FFFFFF" stroke="#2B2B2B" stroke-width="0.9"/>
+<rect x="48.00" y="298.00" width="230.00" height="112.00" rx="10" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+</g>
+<g id="flechas">
+<path d="M83.00,296.00 L83.00,250.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" marker-end="url(#fin-n)"/>
+<path d="M70.50,88.50 L70.50,106.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter"/>
+<path d="M350.50,171.00 L350.50,193.50" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter"/>
+<path d="M351.00,103.50 L305.50,103.50 L305.50,168.50 L128.00,168.50" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" stroke-dasharray="3.5 2.5"/>
+<path d="M48.00,14.00 L373.00,14.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" marker-end="url(#fin-n)" marker-start="url(#ini-n)"/>
+<path d="M24.00,46.00 L24.00,246.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" marker-end="url(#fin-n)" marker-start="url(#ini-n)"/>
+<path d="M323.00,272.00 L373.00,272.00" fill="none" stroke="#2B2B2B" stroke-width="2.2" stroke-linejoin="miter"/>
+<path d="M323.00,268.00 L323.00,276.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter"/>
+<path d="M373.00,268.00 L373.00,276.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter"/>
+<path d="M111.00,350.00 L196.00,350.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" marker-end="url(#fin-n)"/>
+<path d="M208.00,338.00 L208.00,286.00 L160.50,286.00 L160.50,243.50" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" marker-end="url(#fin-n)"/>
+</g>
+<g id="iconos">
+<use href="#ic-pr-lector-facial" x="108.50" y="254.00" width="14.00" height="14.00"/>
+<use href="#ic-pr-lector-facial" x="98.50" y="173.00" width="14.00" height="14.00"/>
+<rect x="65.57" y="287.80" width="34.85" height="9.90" fill="#FFFFFF"/>
+<circle cx="133.00" cy="227.00" r="8.00" fill="#E6E6E6" stroke="#404040" stroke-width="0.9"/>
+<use href="#ic-flu-agua" x="65.50" y="107.00" width="10.00" height="10.00"/>
+<use href="#ic-flu-agua" x="345.50" y="194.50" width="10.00" height="10.00"/>
+<path d="M148.00,113.50 h30.00" stroke="#2B2B2B" stroke-width="3"/>
+<path d="M228.00,113.50 h30.00" stroke="#2B2B2B" stroke-width="3"/>
+<use href="#ic-pr-vesda" x="351.00" y="95.50" width="16.00" height="16.00"/>
+<circle cx="148.00" cy="168.50" r="2.2" fill="#FFFFFF" stroke="#2B2B2B" stroke-width="0.9"/>
+<circle cx="198.00" cy="168.50" r="2.2" fill="#FFFFFF" stroke="#2B2B2B" stroke-width="0.9"/>
+<circle cx="248.00" cy="168.50" r="2.2" fill="#FFFFFF" stroke="#2B2B2B" stroke-width="0.9"/>
+<circle cx="298.00" cy="168.50" r="2.2" fill="#FFFFFF" stroke="#2B2B2B" stroke-width="0.9"/>
+<use href="#ic-pr-camara" x="49.50" y="47.50" width="12.00" height="12.00"/>
+<use href="#ic-pr-camara" x="359.50" y="47.50" width="12.00" height="12.00"/>
+<use href="#ic-pr-camara" x="359.50" y="232.50" width="12.00" height="12.00"/>
+<use href="#ic-pr-camara" x="49.50" y="167.50" width="12.00" height="12.00"/>
+<use href="#ic-flu-consola" x="291.00" y="222.50" width="14.00" height="14.00"/>
+<use href="#ic-flu-repuestos" x="214.50" y="230.00" width="12.00" height="12.00"/>
+<rect x="197.29" y="9.80" width="26.43" height="9.90" fill="#FFFFFF"/>
+<rect x="14.71" y="141.80" width="18.58" height="9.90" fill="#FFFFFF"/>
+<use href="#ic-pr-generador" x="85.00" y="337.00" width="26.00" height="26.00"/>
+<use href="#ic-pr-transferencia" x="196.00" y="338.00" width="24.00" height="24.00"/>
+<rect x="191.19" y="312.80" width="33.61" height="9.90" fill="#FFFFFF"/>
+</g>
+<g id="textos">
+<text x="84.00" y="227.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Esclusa</text>
+<text x="115.50" y="278.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Lector</text>
+<text x="105.50" y="197.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Lector</text>
+<text x="83.00" y="295.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Entrada</text>
+<text x="123.00" y="211.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">FK-5-1-12</text>
+<text x="73.00" y="78.50" font-size="10" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">Clima A</text>
+<text x="350.50" y="158.50" font-size="10" font-family="IBM Plex Sans" text-anchor="end" fill="#000000">Clima B</text>
+<text x="70.50" y="126.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Agua</text>
+<text x="350.50" y="213.50" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Agua</text>
+<text x="163.00" y="92.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">24 U</text>
+<text x="163.00" y="60.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Servidores</text>
+<text x="243.00" y="92.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">24 U</text>
+<text x="243.00" y="60.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Comunicaciones</text>
+<text x="203.00" y="142.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Pasillo de trabajo</text>
+<text x="359.00" y="122.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">VESDA</text>
+<text x="298.00" y="211.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Trabajo</text>
+<text x="220.50" y="221.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Respaldo</text>
+<text x="160.50" y="228.50" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Tablero</text>
+<text x="293.00" y="28.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Ducto ExpressRoute</text>
+<text x="391.00" y="74.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">Ducto</text>
+<text x="391.00" y="84.60" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">VPN</text>
+<text x="210.50" y="17.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">6,5 m</text>
+<text x="24.00" y="149.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">4 m</text>
+<text x="348.00" y="287.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">1 m</text>
+<text x="56.00" y="313.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">Patio, fuera de la sala</text>
+<text x="98.00" y="374.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Grupo</text>
+<text x="98.00" y="386.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">electrógeno</text>
+<text x="98.00" y="397.50" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Himoinsa 8,8 kVA</text>
+<text x="208.00" y="373.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Tablero de</text>
+<text x="208.00" y="385.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">transferencia</text>
+<text x="208.00" y="320.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Energía</text>
+</g>
+</svg>

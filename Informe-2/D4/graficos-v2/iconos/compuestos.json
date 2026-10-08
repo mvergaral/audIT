@@ -1,0 +1,12 @@
+{
+ "rol-conductor": "Conductor: persona y volante",
+ "rol-operador": "Operador de torre: persona frente a pantalla y audífonos",
+ "rol-taller": "Personal de terminal y taller: overol y llave",
+ "rol-transportista": "Transportista: dueño de camión",
+ "rol-cliente": "Cliente: empresa",
+ "rol-gerencia": "Gerencia: maletín",
+ "rol-finanzas": "Finanzas: gráfico",
+ "rol-operaciones": "Operaciones: casco y lista",
+ "rol-usuarios": "Usuarios en general",
+ "inn-expediente": "Documento con sello"
+}
