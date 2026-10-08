@@ -28,6 +28,8 @@
    exactamente qué comprar, cuánto y con qué características
    (Caso, capítulo 11, p. 24).}
 
+\newcommand\entradaIndiceComponente[2]{%
+  \ifdefined\FormularioActual\phantomsection\addcontentsline{toc}{subsection}{Componente #1. #2}\fi}
 \newcommand\componenteTOnce[1]{\RegistroNuevo{t11}{#1}}
 
 \ExplSyntaxOn
@@ -40,6 +42,8 @@
         \tl_gput_right:Ne \g_audit_filas_tl
           {
             ##1 &
+            \exp_not:N \entradaIndiceComponente {##1}
+              {\audit_campo:nnn { t11 } {##1} { componente }}
             \exp_not:N \textbf { \audit_campo:nnn { t11 } {##1} { componente } }
             \exp_not:N \par
             \exp_not:N \audit@rotuloceldas { Adquiere } ~

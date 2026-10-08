@@ -19,6 +19,7 @@ __pycache__/
 .idea/
 *.swp
 .DS_Store
+*.zip
 
 # salida de compilación del informe
 Investigacion/*.pdf

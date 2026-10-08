@@ -11,7 +11,7 @@
 \begin{formulario}{T-12}
 
 \providecommand\tituloBloqueFormulario[1]{%
-  \par\vspace{14pt plus 3pt}\phantomsection\addcontentsline{toc}{section}{#1}\noindent{\sffamily\bfseries\fontsize{13bp}{16bp}\selectfont\color{audit-marino}#1}\par\vspace{6pt}\noindent}
+  \par\Needspace{5\baselineskip}\vspace{14pt plus 3pt}\phantomsection\addcontentsline{toc}{section}{#1}\noindent{\sffamily\bfseries\fontsize{13bp}{16bp}\selectfont\color{audit-marino}#1}\par\vspace{6pt}\noindent}
 
 Este formulario detalla lo que el Subdocumento 3 resume. Trae el catálogo de los 42 requerimientos con
 los campos del \caso{numeral 17.1}{38} y, en la columna de trazabilidad, el contexto de la arquitectura
@@ -349,10 +349,10 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 }
 \requisitoF{
   id           = RF-028,
-  descripcion  = {Durante el período mixto, mostrar y aplicar el nivel de evidencia de cada camión, completo, de datos o documental, sin presentar un nivel menor como equivalente},
+  descripcion  = {Durante el período mixto, distinguir las modalidades completa, de datos y sin adhesión de S3. Mostrar por separado modalidad, fuente, nivel de evidencia y veredicto. La completa aporta nivel 2; la de datos combina reposo del camión de nivel 4 y atestación firmada de nivel 5, con asignación con marca. Sin adhesión se admite validación documental, pero sin atestación firmada el viaje no se asigna; una atestación válida permite asignar con marca conforme a RN-03. No presentar niveles menores como equivalentes},
   actor        = {Despachador de la torre},
   precondicion = {Flota con camiones en distintas modalidades de adhesión},
-  resultado    = {Una sola forma de despachar con niveles de evidencia distintos y visibles},
+  resultado    = {Despacho con modalidad, evidencia y veredicto visibles: asigna, asigna con marca o bloquea; todas las modalidades conservan los bloqueos legales},
   prioridad    = {2. Etapa 1, mes 16},
   origen       = {Caso 13.3. CA-01, CA-02, CA-08 y CA-27. R-02 y R-03. DP-26},
   cumple       = {Sí},
@@ -545,7 +545,7 @@ cambiarla. Un cambio de regla sigue el procedimiento de control de cambios del S
 ID & Enunciado & Cambia \\ \midrule
 RN-01 & Jornada del conductor de carga interurbana: no más de cinco horas de conducción continua seguidas de un descanso de al menos dos horas, ocho horas de descanso ininterrumpido en cada veinticuatro y 180 horas mensuales como tope, según el Artículo 25 bis del Código del Trabajo & Prevención de riesgos \\
 RN-02 & Conducción es tiempo con el camión en movimiento fuera de una geocerca de punto de cliente. Espera es tiempo detenido dentro de ella. Los umbrales de velocidad y duración se calibran en la marcha blanca contra el tacógrafo & Prevención de riesgos \\
-RN-03 & Con evidencia de nivel 1 a 4 se asigna. Sólo con nivel 5 se asigna con marca y responsabilidad registrada del transportista. Sin fuente se bloquea & Comité Ejecutivo \\
+RN-03 & Con evidencia de nivel 1 a 4 se asigna según la cascada de S3. En la modalidad de datos, el reposo del camión de nivel 4 se complementa con atestación firmada de nivel 5: se asigna con marca y responsabilidad registrada del transportista. La validación documental sin adhesión requiere esa atestación; sin ella no se asigna. Con nivel 5 se asigna con marca; sin fuente se bloquea, con excepción sólo según RN-04. Ninguna evidencia levanta un bloqueo legal & Comité Ejecutivo \\
 RN-04 & Ninguna causa legal admite excepción. Si el bloqueo se debe a una fuente que no responde, la excepción la autorizan el jefe de turno de la torre y prevención de riesgos, vale para un viaje, registra el motivo y se revisa cada mes & Comité Ejecutivo \\
 RN-05 & El equipo es apto si su tipo corresponde a la carga, sus revisiones y permisos están vigentes, su mantenimiento no está vencido y, para carga peligrosa, cumple el DS 298 & Control de flota \\
 RN-06 & Prelación al asignar: primero el veredicto favorable, luego la ventana comprometida con el cliente, luego la menor distancia en vacío. Los viajes que salen de puntos sin cobertura y sin datos de carga previos se asignan a camiones con equipo audIT & Operaciones \\

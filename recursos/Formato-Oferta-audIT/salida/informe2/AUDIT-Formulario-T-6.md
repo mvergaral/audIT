@@ -1,4 +1,4 @@
-# Formulario T-6. 
+# Formulario T-6. Experiencia en proyectos similares
 
 audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. Oferta Técnica, Sobre N.º 2. Informe Preparatorio 2. Archivo AUDIT-Formulario-T-6.pdf. Anexo del Subdocumento N.º 1, Presentación de la empresa. Las fuentes están en las Referencias de ese subdocumento.
 
@@ -15,6 +15,7 @@ audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. O
 \phantomsection
 \addcontentsline{toc}{section}{Formulario T-6: catálogo de experiencia}
 \begin{formulario}{T-6}
+Las tres fichas y sus instrumentos asociados representan la experiencia declarada por audIT y se cotejan con el expediente del Sobre N.º 1; este registro documental no acredita una revisión externa de los originales. Los once campos, tres proyectos y sus períodos se mantienen. Los SLA contractuales históricos son mensuales: 99,5 %, 99,2 % y 99,6 %; cualquier promedio medido informado en un acta es una magnitud distinta. Los rangos monetarios corresponden a esos contratos históricos, no al precio de la oferta para Curimón.
 \begingroup\emergencystretch=3em
   \begin{formularioTSeis}
 

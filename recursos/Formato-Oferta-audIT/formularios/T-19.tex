@@ -96,6 +96,7 @@
   }
 \cs_new_protected:Npn \audit@tablaficha #1#2
   {
+    \ifdefined\FormularioActual\Needspace{12\baselineskip}\phantomsection\addcontentsline{toc}{subsection}{#2}\fi
     \TablaAcumulada [ espacio = 12 ] {#2} {#1}
       { L{44mm} X }
       { Campo & Contenido \\ \midrule }

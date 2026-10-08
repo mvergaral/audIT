@@ -2,6 +2,18 @@
 
 audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. Oferta Técnica, Sobre N.º 2. Informe Preparatorio 2. Archivo AUDIT-Formulario-T-19.pdf. Anexo del Subdocumento N.º 13, Innovaciones. Las fuentes están en las Referencias de ese subdocumento.
 
+## Índice detallado
+
+| Contenido | Página del PDF |
+|---|---:|
+| Ficha del documento | [3](AUDIT-Formulario-T-19.pdf#page=3) |
+| T-19 Cartera de innovaciones | [5](AUDIT-Formulario-T-19.pdf#page=5) |
+| Ficha T-19. Innovación tipo 1. Producto o servicio. Expediente verificable del transportista | [5](AUDIT-Formulario-T-19.pdf#page=5) |
+| Ficha T-19. Innovación tipo 2. Proceso. Despliegue continuo y modular sin detención de flota | [6](AUDIT-Formulario-T-19.pdf#page=6) |
+| Ficha T-19. Innovación tipo 3. Tecnológica o de arquitectura. Semirremolque conectado | [8](AUDIT-Formulario-T-19.pdf#page=8) |
+| Ficha T-19. Innovación tipo 4. Modelo de negocio o de contratación. Esquema de adhesión y propiedad del dispositivo | [9](AUDIT-Formulario-T-19.pdf#page=9) |
+| Ficha T-19. Innovación tipo 5. Experiencia de usuario, sostenibilidad o impacto social. Bienestar del conductor y descanso en parador seguro | [11](AUDIT-Formulario-T-19.pdf#page=11) |
+
 
 ## Innovación 1. Producto o servicio. Expediente verificable del transportista
 
@@ -92,7 +104,7 @@ audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. O
 | Nivel de madurez | Escala de niveles de madurez tecnológica de 1 a 9. Hardware de borde, almacenamiento local, síntesis de voz y enclavamiento en nivel 8. Modelo circadiano y ontología de paradores en nivel 6 (escalamiento a nivel 7 en marcha blanca mes 16) |
 | Fuentes | International Organization for Standardization (2013, 2017, 2019). National Academies of Sciences, Engineering, and Medicine (2016). Congreso Nacional de Chile (2021), Ley N.º 21.377. Ministerio del Trabajo (2003, 2006) |
 | Dónde se inserta en la arquitectura | Capa de borde con el motor predictivo, el catálogo y la síntesis de voz. Servicio de gobernanza de paradores en la torre de control. Consulta pasiva en el portal |
-| Paquetes de la EDT | EDT 2.4 (Diseño Ergonómico), EDT 3.7 (Catálogo de Paradores), EDT 4.6 (Software Bordo Circadiano) y EDT 7.2 (Validación Marcha Blanca) |
+| Paquetes de la EDT | EDT 12.5, sobre los paquetes 4.1 (Firmware y software a bordo) y 5.1 (Personas y cumplimiento), articulado con 2.4 (Diseño ergonómico), 3.7 (Catálogo de paradores), 4.6 (Enclavamiento cinético) y 7.2 (Validación en marcha blanca) |
 | Mes del cronograma | Talleres ergonómicos en el mes 4. Catálogo entre los meses 3 y 6. Software entre los meses 7 y 10. Validación con conductores entre los meses 13 y 15 |
 | Inversión requerida | Software de borde incremental y talleres ergonómicos participativos. El catálogo se levanta dentro de la campaña de cobertura |
 | Efecto en el costo operacional | Menor búsqueda errática de estacionamiento en ruta, con un efecto en combustible que se mide en la Etapa 1 |

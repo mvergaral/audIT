@@ -1,0 +1,135 @@
+{
+  "grupo": "d1-cierre-s3",
+  "instancia": "informe2",
+  "modo_folio": "subdocumento",
+  "archivos": [
+    {
+      "clave": "01",
+      "nombre": "AUDIT-Subdocumento1.pdf",
+      "folio_inicial": 1,
+      "paginas": 31,
+      "aux": "salida/aux/informe2/01/AUDIT-Subdocumento1.aux",
+      "log": "salida/aux/informe2/01/AUDIT-Subdocumento1.log",
+      "fuentes": [
+        [
+          "subdocumentos"
+        ],
+        [
+          "subdocumentos/01-empresa"
+        ]
+      ]
+    },
+    {
+      "clave": "02",
+      "nombre": "AUDIT-Subdocumento2.pdf",
+      "folio_inicial": 1,
+      "paginas": 34,
+      "aux": "salida/aux/informe2/02/AUDIT-Subdocumento2.aux",
+      "log": "salida/aux/informe2/02/AUDIT-Subdocumento2.log",
+      "fuentes": [
+        [
+          "subdocumentos"
+        ],
+        [
+          "subdocumentos/02-problema"
+        ]
+      ]
+    },
+    {
+      "clave": "09",
+      "nombre": "AUDIT-Subdocumento9.pdf",
+      "folio_inicial": 1,
+      "paginas": 16,
+      "aux": "salida/aux/informe2/09/AUDIT-Subdocumento9.aux",
+      "log": "salida/aux/informe2/09/AUDIT-Subdocumento9.log",
+      "fuentes": [
+        [
+          "subdocumentos"
+        ],
+        [
+          "subdocumentos/09-calidad"
+        ]
+      ]
+    },
+    {
+      "clave": "01T-6",
+      "nombre": "AUDIT-Formulario-T-6.pdf",
+      "folio_inicial": 1,
+      "paginas": 10,
+      "aux": "salida/aux/informe2/01T-6/AUDIT-Formulario-T-6.aux",
+      "log": "salida/aux/informe2/01T-6/AUDIT-Formulario-T-6.log",
+      "fuentes": [
+        [
+          "subdocumentos"
+        ],
+        [
+          "subdocumentos/01-empresa"
+        ]
+      ]
+    },
+    {
+      "clave": "09T-13",
+      "nombre": "AUDIT-Formulario-T-13.pdf",
+      "folio_inicial": 1,
+      "paginas": 6,
+      "aux": "salida/aux/informe2/09T-13/AUDIT-Formulario-T-13.aux",
+      "log": "salida/aux/informe2/09T-13/AUDIT-Formulario-T-13.log",
+      "fuentes": [
+        [
+          "subdocumentos"
+        ],
+        [
+          "subdocumentos/09-calidad"
+        ]
+      ]
+    },
+    {
+      "clave": "09T-17",
+      "nombre": "AUDIT-Formulario-T-17.pdf",
+      "folio_inicial": 1,
+      "paginas": 111,
+      "aux": "salida/aux/informe2/09T-17/AUDIT-Formulario-T-17.aux",
+      "log": "salida/aux/informe2/09T-17/AUDIT-Formulario-T-17.log",
+      "fuentes": [
+        [
+          "subdocumentos"
+        ],
+        [
+          "subdocumentos/09-calidad"
+        ]
+      ]
+    },
+    {
+      "clave": "01A",
+      "nombre": "AUDIT-Subdocumento1-Anexos.pdf",
+      "folio_inicial": 1,
+      "paginas": 7,
+      "aux": "salida/aux/informe2/01A/AUDIT-Subdocumento1-Anexos.aux",
+      "log": "salida/aux/informe2/01A/AUDIT-Subdocumento1-Anexos.log",
+      "fuentes": [
+        [
+          "subdocumentos"
+        ],
+        [
+          "subdocumentos/01-empresa"
+        ]
+      ]
+    },
+    {
+      "clave": "02A",
+      "nombre": "AUDIT-Subdocumento2-Anexos.pdf",
+      "folio_inicial": 1,
+      "paginas": 26,
+      "aux": "salida/aux/informe2/02A/AUDIT-Subdocumento2-Anexos.aux",
+      "log": "salida/aux/informe2/02A/AUDIT-Subdocumento2-Anexos.log",
+      "fuentes": [
+        [
+          "subdocumentos"
+        ],
+        [
+          "subdocumentos/02-problema"
+        ]
+      ]
+    }
+  ]
+}

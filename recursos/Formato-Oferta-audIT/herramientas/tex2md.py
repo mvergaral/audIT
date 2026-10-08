@@ -311,6 +311,22 @@ class Conversor:
         # entornos de tabla
         t = re.sub(r"\\begin\{(tabla|tablaAudit)\}(\[[^\]]*\])?(.*?)\\end\{\1\}",
                    lambda m: self._tabla_env(m.group(3)), t, flags=re.S)
+        # Las figuras nativas con fuente explícita conservan caption y atribución.
+        def nativa_con_fuente(m):
+            body = m.group(1)
+            _, i = opcional(body, 0)
+            caption, i = arg(body, i)
+            etiqueta, i = arg(body, i)
+            src = re.search(r"Fuente: (.*?)\\par\}", body[i:], re.S)
+            if not src:
+                return m.group(0)
+            self.nfig += 1
+            num = self.etiquetas.get("fig:" + etiqueta, f"{self.n}.{self.nfig}")
+            return (f"\n**Figura {num}. {self.en_linea(caption)}**\n\n"
+                    f"Fuente: {self.en_linea(src.group(1))}\n\n"
+                    f"[Consultar diagrama en el PDF](AUDIT-Subdocumento{self.n}.pdf).\n")
+        t = re.sub(r"\\begin\{figuraNativa\}(.*?)\\end\{figuraNativa\}",
+                   nativa_con_fuente, t, flags=re.S)
         # figuras
         t = reemplazar(t, "figuraHorizontal", 3, lambda a, l, e, **k: self.figura(a, l, e))
         t = reemplazar(t, "figura", 3, lambda a, l, e, **k: self.figura(a, l, e), opt=True)
@@ -594,7 +610,8 @@ def formulario(cfg, n, f, raices, aux=None):
     sd = cfg.subdocs[n]
     ruta = buscar(sd["carpeta"], f"formularios/{f}.tex", raices)
     rotulo = cfg.rotulos.get(cfg.instancia, ("",))[0]
-    titulos = {"T-11": "Especificaciones técnicas ofertadas", "T-14": "Plan de trabajo, EDT y carta Gantt",
+    titulos = {"T-6": "Experiencia en proyectos similares", "T-12": "Matriz de cumplimiento técnico y trazabilidad",
+               "T-13": "Plan de calidad y verificación", "T-17": "Protocolo de aceptación", "T-11": "Especificaciones técnicas ofertadas", "T-14": "Plan de trabajo, EDT y carta Gantt",
                "T-15": "Nivelación de recursos",
                "T-18": "Propuesta de implantación y puesta en marcha controlada",
                "T-19": "Cartera de innovaciones"}
@@ -663,9 +680,51 @@ def formulario(cfg, n, f, raices, aux=None):
             out.append("| Campo | Contenido |\n|---|---|")
             for c, rot in nombres:
                 out.append(f"| {rot} | " + conv.en_linea(d.get(c, "")).replace("|", "\\|").replace("\n", " ").strip() + " |")
+    elif f == "T-12":
+        # La macro local es presentación; no forma parte del documento publicado.
+        m = re.search(r"\\providecommand\\tituloBloqueFormulario\[1\]", t)
+        if m:
+            _, end = arg(t, m.end())
+            t = t[:m.start()] + t[end:]
+        t = re.sub(r"\\(?:begin|end)\{(?:formulario|formularioTDoce)\}(?:\{T-12\})?", "", t)
+        t = reemplazar(t, "tituloBloqueFormulario", 1,
+                       lambda x, **k: "\n## " + conv.en_linea(x) + "\n")
+        fields = [("descripcion", "Descripción"), ("actor", "Actor"),
+                  ("precondicion", "Precondición"), ("resultado", "Resultado"),
+                  ("categoria", "Categoría"), ("umbral", "Umbral"),
+                  ("metodo", "Verificación"), ("exigible", "Exigible"),
+                  ("prioridad", "Prioridad"), ("origen", "Origen"),
+                  ("cumple", "Cumplimiento"), ("componente", "Componente y trazabilidad")]
+        def requisito_md(kv, **kwargs):
+            record = claves(kv)
+            rows = [f"\n### {conv.en_linea(record.get('id', ''))}\n",
+                    "| Campo | Contenido |\n|---|---|"]
+            for key, label in fields:
+                if key in record:
+                    rows.append(f"| {label} | {conv.en_linea(record[key]).replace('|', r'\|').replace(chr(10), ' ')} |")
+            rows.append("| Sección | " + conv.en_linea(record.get("seccion", "Sección sin referencia en el texto")) + " |\n")
+            return "\n".join(rows)
+        t = reemplazar(t, "requisitoF", 1, requisito_md)
+        t = reemplazar(t, "requisitoNF", 1, requisito_md)
+        out.append(conv.convertir(t))
     else:
         out.append(conv.convertir(t))
-    return cabeza + "\n".join(out) + "\n"
+    indice = ""
+    if aux and f in ("T-11", "T-12", "T-19"):
+        toc = os.path.splitext(aux)[0] + ".toc"
+        if os.path.exists(toc):
+            rows = []
+            for line in open(toc, encoding="utf-8"):
+                if not line.startswith(r"\contentsline"):
+                    continue
+                i = len(r"\contentsline")
+                level, i = arg(line, i)
+                title, i = arg(line, i)
+                page, i = arg(line, i)
+                title = reemplazar(title, "numberline", 1, lambda x, **k: x + " ")
+                rows.append(f"| {conv.en_linea(title)} | [{page}]({cfg.nombre_formulario(f)}.pdf#page={page}) |")
+            indice = "## Índice detallado\n\n| Contenido | Página del PDF |\n|---|---:|\n" + "\n".join(rows) + "\n\n"
+    return cabeza + indice + "\n".join(out) + "\n"
 
 
 # ----------------------------------------------------------------------------
