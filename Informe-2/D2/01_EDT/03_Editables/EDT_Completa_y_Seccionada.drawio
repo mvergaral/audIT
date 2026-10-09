@@ -1,0 +1,1071 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" type="device" version="25.0.3">
+  <diagram id="edt-completa" name="EDT completa · árbol de 54 paquetes">
+    <mxGraphModel page="1" pageWidth="4940" pageHeight="2260" grid="1" gridSize="10">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="project" value="&lt;b&gt;0 · Plataforma de control de jornada, flota y viaje&lt;/b&gt;&lt;br&gt;&lt;br&gt;Implementación de dos etapas y operación hasta el mes 56" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#17324d;strokeColor=#a7bccd;fontColor=#ffffff;fontSize=15;align=left;verticalAlign=top;spacing=15;">
+          <mxGeometry as="geometry" x="2020.0" y="105" width="900" height="85" />
+        </mxCell>
+        <mxCell id="a1" value="&lt;b&gt;1 · Gestión del proyecto&lt;/b&gt;&lt;br&gt;&lt;br&gt;" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#17324d;strokeColor=#a7bccd;fontColor=#ffffff;fontSize=15;align=left;verticalAlign=top;spacing=15;">
+          <mxGeometry as="geometry" x="35" y="250" width="335" height="85" />
+        </mxCell>
+        <mxCell id="root-1" edge="1" parent="1" source="project" target="a1" style="edgeStyle=orthogonalEdgeStyle;endArrow=none;strokeColor=#7e99ad;strokeWidth=2;exitX=0.5;exitY=1;entryX=0.5;entryY=0;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="2470.0" y="220" />
+              <mxPoint x="202.5" y="220" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p1.1" value="&lt;b&gt;1.1 · Dirección y control&lt;/b&gt;&lt;br&gt;&lt;br&gt;Plan de dirección e informes del proyecto&lt;br&gt;&lt;br&gt;Responsable: Jefe de Proyecto&lt;br&gt;Ventana: M1–M21" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#a7bccd;fontColor=#17324d;fontSize=15;align=left;verticalAlign=top;spacing=15;">
+          <mxGeometry as="geometry" x="35" y="375" width="335" height="238" />
+        </mxCell>
+        <mxCell id="e1.1" edge="1" parent="1" source="a1" target="p1.1" style="edgeStyle=orthogonalEdgeStyle;endArrow=none;rounded=0;strokeColor=#7e99ad;strokeWidth=2;exitX=0.5;exitY=1;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="202.5" y="352" />
+              <mxPoint x="21" y="352" />
+              <mxPoint x="21" y="494.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p1.2" value="&lt;b&gt;1.2 · Interesados y comunicaciones&lt;/b&gt;&lt;br&gt;&lt;br&gt;Plan de comunicaciones y registro de interesados&lt;br&gt;&lt;br&gt;Responsable: Jefe de Proyecto&lt;br&gt;Ventana: M1–M21" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#a7bccd;fontColor=#17324d;fontSize=15;align=left;verticalAlign=top;spacing=15;">
+          <mxGeometry as="geometry" x="35" y="640" width="335" height="238" />
+        </mxCell>
+        <mxCell id="e1.2" edge="1" parent="1" source="a1" target="p1.2" style="edgeStyle=orthogonalEdgeStyle;endArrow=none;rounded=0;strokeColor=#7e99ad;strokeWidth=2;exitX=0.5;exitY=1;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="202.5" y="352" />
+              <mxPoint x="21" y="352" />
+              <mxPoint x="21" y="759.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p1.3" value="&lt;b&gt;1.3 · Hardware del mandante&lt;/b&gt;&lt;br&gt;&lt;br&gt;Especificación de compra confirmada y actas de recepción del hardware del mandante&lt;br&gt;&lt;br&gt;Responsable: Líder de Implantación&lt;br&gt;Ventana: M1–M5" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#a7bccd;fontColor=#17324d;fontSize=15;align=left;verticalAlign=top;spacing=15;">
+          <mxGeometry as="geometry" x="35" y="905" width="335" height="238" />
+        </mxCell>
+        <mxCell id="e1.3" edge="1" parent="1" source="a1" target="p1.3" style="edgeStyle=orthogonalEdgeStyle;endArrow=none;rounded=0;strokeColor=#7e99ad;strokeWidth=2;exitX=0.5;exitY=1;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="202.5" y="352" />
+              <mxPoint x="21" y="352" />
+              <mxPoint x="21" y="1024.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a2" value="&lt;b&gt;2 · Levantamiento y diseño&lt;/b&gt;&lt;br&gt;&lt;br&gt;" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#17324d;strokeColor=#a7bccd;fontColor=#ffffff;fontSize=15;align=left;verticalAlign=top;spacing=15;">
+          <mxGeometry as="geometry" x="410" y="250" width="335" height="85" />
+        </mxCell>
+        <mxCell id="root-2" edge="1" parent="1" source="project" target="a2" style="edgeStyle=orthogonalEdgeStyle;endArrow=none;strokeColor=#7e99ad;strokeWidth=2;exitX=0.5;exitY=1;entryX=0.5;entryY=0;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="2470.0" y="220" />
+              <mxPoint x="577.5" y="220" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p2.1" value="&lt;b&gt;2.1 · Línea base y catálogo&lt;/b&gt;&lt;br&gt;&lt;br&gt;Línea base de alcance, catálogo y matriz de trazabilidad&lt;br&gt;&lt;br&gt;Responsable: Líder Funcional&lt;br&gt;Ventana: M1–M2" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#a7bccd;fontColor=#17324d;fontSize=15;align=left;verticalAlign=top;spacing=15;">
+          <mxGeometry as="geometry" x="410" y="375" width="335" height="238" />
+        </mxCell>
+        <mxCell id="e2.1" edge="1" parent="1" source="a2" target="p2.1" style="edgeStyle=orthogonalEdgeStyle;endArrow=none;rounded=0;strokeColor=#7e99ad;strokeWidth=2;exitX=0.5;exitY=1;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="577.5" y="352" />
+              <mxPoint x="396" y="352" />
+              <mxPoint x="396" y="494.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p2.2" value="&lt;b&gt;2.2 · Cobertura móvil en terreno&lt;/b&gt;&lt;br&gt;&lt;br&gt;Mapa de cobertura móvil medida por tramo y punto de carga&lt;br&gt;&lt;br&gt;Responsable: Ingeniero de telecomunicaciones y campo&lt;br&gt;Ventana: M1–M3" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#a7bccd;fontColor=#17324d;fontSize=15;align=left;verticalAlign=top;spacing=15;">
+          <mxGeometry as="geometry" x="410" y="640" width="335" height="238" />
+        </mxCell>
+        <mxCell id="e2.2" edge="1" parent="1" source="a2" target="p2.2" style="edgeStyle=orthogonalEdgeStyle;endArrow=none;rounded=0;strokeColor=#7e99ad;strokeWidth=2;exitX=0.5;exitY=1;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="577.5" y="352" />
+              <mxPoint x="396" y="352" />
+              <mxPoint x="396" y="759.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p2.3" value="&lt;b&gt;2.3 · Factibilidad con terceros&lt;/b&gt;&lt;br&gt;&lt;br&gt;Actas de factibilidad con los tres proveedores de posicionamiento y los fabricantes&lt;br&gt;&lt;br&gt;Responsable: Líder de Integración&lt;br&gt;Ventana: M1–M4" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#a7bccd;fontColor=#17324d;fontSize=15;align=left;verticalAlign=top;spacing=15;">
+          <mxGeometry as="geometry" x="410" y="905" width="335" height="238" />
+        </mxCell>
+        <mxCell id="e2.3" edge="1" parent="1" source="a2" target="p2.3" style="edgeStyle=orthogonalEdgeStyle;endArrow=none;rounded=0;strokeColor=#7e99ad;strokeWidth=2;exitX=0.5;exitY=1;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="577.5" y="352" />
+              <mxPoint x="396" y="352" />
+              <mxPoint x="396" y="1024.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p2.4" value="&lt;b&gt;2.4 · Arquitectura y datos&lt;/b&gt;&lt;br&gt;&lt;br&gt;Documento de arquitectura, plan de seguridad y modelo de datos&lt;br&gt;&lt;br&gt;Responsable: Arquitecto de Solución&lt;br&gt;Ventana: M2–M4" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#a7bccd;fontColor=#17324d;fontSize=15;align=left;verticalAlign=top;spacing=15;">
+          <mxGeometry as="geometry" x="410" y="1170" width="335" height="238" />
+        </mxCell>
+        <mxCell id="e2.4" edge="1" parent="1" source="a2" target="p2.4" style="edgeStyle=orthogonalEdgeStyle;endArrow=none;rounded=0;strokeColor=#7e99ad;strokeWidth=2;exitX=0.5;exitY=1;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="577.5" y="352" />
+              <mxPoint x="396" y="352" />
+              <mxPoint x="396" y="1289.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p2.5" value="&lt;b&gt;2.5 · Estudio de costo por ruta&lt;/b&gt;&lt;br&gt;&lt;br&gt;Estudio de costo real por ruta y por contrato con datos históricos&lt;br&gt;&lt;br&gt;Responsable: Líder de Datos&lt;br&gt;Ventana: M4–M6" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#a7bccd;fontColor=#17324d;fontSize=15;align=left;verticalAlign=top;spacing=15;">
+          <mxGeometry as="geometry" x="410" y="1435" width="335" height="238" />
+        </mxCell>
+        <mxCell id="e2.5" edge="1" parent="1" source="a2" target="p2.5" style="edgeStyle=orthogonalEdgeStyle;endArrow=none;rounded=0;strokeColor=#7e99ad;strokeWidth=2;exitX=0.5;exitY=1;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="577.5" y="352" />
+              <mxPoint x="396" y="352" />
+              <mxPoint x="396" y="1554.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a3" value="&lt;b&gt;3 · Plataforma&lt;/b&gt;&lt;br&gt;&lt;br&gt;" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#17324d;strokeColor=#a7bccd;fontColor=#ffffff;fontSize=15;align=left;verticalAlign=top;spacing=15;">
+          <mxGeometry as="geometry" x="785" y="250" width="335" height="85" />
+        </mxCell>
+        <mxCell id="root-3" edge="1" parent="1" source="project" target="a3" style="edgeStyle=orthogonalEdgeStyle;endArrow=none;strokeColor=#7e99ad;strokeWidth=2;exitX=0.5;exitY=1;entryX=0.5;entryY=0;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="2470.0" y="220" />
+              <mxPoint x="952.5" y="220" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p3.1" value="&lt;b&gt;3.1 · Ambientes y despliegue&lt;/b&gt;&lt;br&gt;&lt;br&gt;Ambientes de desarrollo, calidad, preproducción, producción y recuperación desde código&lt;br&gt;&lt;br&gt;Responsable: Líder de Operación&lt;br&gt;Ventana: M4–M6" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#a7bccd;fontColor=#17324d;fontSize=15;align=left;verticalAlign=top;spacing=15;">
+          <mxGeometry as="geometry" x="785" y="375" width="335" height="238" />
+        </mxCell>
+        <mxCell id="e3.1" edge="1" parent="1" source="a3" target="p3.1" style="edgeStyle=orthogonalEdgeStyle;endArrow=none;rounded=0;strokeColor=#7e99ad;strokeWidth=2;exitX=0.5;exitY=1;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="952.5" y="352" />
+              <mxPoint x="771" y="352" />
+              <mxPoint x="771" y="494.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p3.2" value="&lt;b&gt;3.2 · Seguridad e identidad&lt;/b&gt;&lt;br&gt;&lt;br&gt;Identidad federada, bóveda de claves y cifrado de campo&lt;br&gt;&lt;br&gt;Responsable: Encargado de Seguridad de la Información&lt;br&gt;Ventana: M4–M12" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#a7bccd;fontColor=#17324d;fontSize=15;align=left;verticalAlign=top;spacing=15;">
+          <mxGeometry as="geometry" x="785" y="640" width="335" height="238" />
+        </mxCell>
+        <mxCell id="e3.2" edge="1" parent="1" source="a3" target="p3.2" style="edgeStyle=orthogonalEdgeStyle;endArrow=none;rounded=0;strokeColor=#7e99ad;strokeWidth=2;exitX=0.5;exitY=1;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="952.5" y="352" />
+              <mxPoint x="771" y="352" />
+              <mxPoint x="771" y="759.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p3.3" value="&lt;b&gt;3.3 · Observabilidad&lt;/b&gt;&lt;br&gt;&lt;br&gt;Trazas, métricas y registros correlacionados&lt;br&gt;&lt;br&gt;Responsable: Líder de Operación&lt;br&gt;Ventana: M4–M6" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#a7bccd;fontColor=#17324d;fontSize=15;align=left;verticalAlign=top;spacing=15;">
+          <mxGeometry as="geometry" x="785" y="905" width="335" height="238" />
+        </mxCell>
+        <mxCell id="e3.3" edge="1" parent="1" source="a3" target="p3.3" style="edgeStyle=orthogonalEdgeStyle;endArrow=none;rounded=0;strokeColor=#7e99ad;strokeWidth=2;exitX=0.5;exitY=1;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="952.5" y="352" />
+              <mxPoint x="771" y="352" />
+              <mxPoint x="771" y="1024.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p3.4" value="&lt;b&gt;3.4 · San Bernardo y gabinetes&lt;/b&gt;&lt;br&gt;&lt;br&gt;Sala de San Bernardo remediada y cuatro gabinetes de terminal&lt;br&gt;&lt;br&gt;Responsable: Líder de Operación&lt;br&gt;Ventana: M4–M12" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#a7bccd;fontColor=#17324d;fontSize=15;align=left;verticalAlign=top;spacing=15;">
+          <mxGeometry as="geometry" x="785" y="1170" width="335" height="238" />
+        </mxCell>
+        <mxCell id="e3.4" edge="1" parent="1" source="a3" target="p3.4" style="edgeStyle=orthogonalEdgeStyle;endArrow=none;rounded=0;strokeColor=#7e99ad;strokeWidth=2;exitX=0.5;exitY=1;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="952.5" y="352" />
+              <mxPoint x="771" y="352" />
+              <mxPoint x="771" y="1289.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a4" value="&lt;b&gt;4 · Equipo a bordo&lt;/b&gt;&lt;br&gt;&lt;br&gt;" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#17324d;strokeColor=#a7bccd;fontColor=#ffffff;fontSize=15;align=left;verticalAlign=top;spacing=15;">
+          <mxGeometry as="geometry" x="1160" y="250" width="335" height="85" />
+        </mxCell>
+        <mxCell id="root-4" edge="1" parent="1" source="project" target="a4" style="edgeStyle=orthogonalEdgeStyle;endArrow=none;strokeColor=#7e99ad;strokeWidth=2;exitX=0.5;exitY=1;entryX=0.5;entryY=0;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="2470.0" y="220" />
+              <mxPoint x="1327.5" y="220" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p4.1" value="&lt;b&gt;4.1 · Firmware y gestión remota&lt;/b&gt;&lt;br&gt;&lt;br&gt;Firmware con operación de 72 horas y actualización en terminal&lt;br&gt;&lt;br&gt;Responsable: Ingeniero de firmware&lt;br&gt;Ventana: M4–M9" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#a7bccd;fontColor=#17324d;fontSize=15;align=left;verticalAlign=top;spacing=15;">
+          <mxGeometry as="geometry" x="1160" y="375" width="335" height="238" />
+        </mxCell>
+        <mxCell id="e4.1" edge="1" parent="1" source="a4" target="p4.1" style="edgeStyle=orthogonalEdgeStyle;endArrow=none;rounded=0;strokeColor=#7e99ad;strokeWidth=2;exitX=0.5;exitY=1;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1327.5" y="352" />
+              <mxPoint x="1146" y="352" />
+              <mxPoint x="1146" y="494.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p4.2" value="&lt;b&gt;4.2 · Montaje camión por camión&lt;/b&gt;&lt;br&gt;&lt;br&gt;182 equipos audIT montados camión por camión&lt;br&gt;&lt;br&gt;Responsable: Líder de Implantación&lt;br&gt;Ventana: M6–M10 / M16–M18" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#a7bccd;fontColor=#17324d;fontSize=15;align=left;verticalAlign=top;spacing=15;">
+          <mxGeometry as="geometry" x="1160" y="640" width="335" height="238" />
+        </mxCell>
+        <mxCell id="e4.2" edge="1" parent="1" source="a4" target="p4.2" style="edgeStyle=orthogonalEdgeStyle;endArrow=none;rounded=0;strokeColor=#7e99ad;strokeWidth=2;exitX=0.5;exitY=1;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1327.5" y="352" />
+              <mxPoint x="1146" y="352" />
+              <mxPoint x="1146" y="759.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p4.3" value="&lt;b&gt;4.3 · Integración de terceros&lt;/b&gt;&lt;br&gt;&lt;br&gt;192 camiones de terceros en la vista única por su plataforma&lt;br&gt;&lt;br&gt;Responsable: Líder de Integración&lt;br&gt;Ventana: M6–M10 / M13–M15" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#a7bccd;fontColor=#17324d;fontSize=15;align=left;verticalAlign=top;spacing=15;">
+          <mxGeometry as="geometry" x="1160" y="905" width="335" height="238" />
+        </mxCell>
+        <mxCell id="e4.3" edge="1" parent="1" source="a4" target="p4.3" style="edgeStyle=orthogonalEdgeStyle;endArrow=none;rounded=0;strokeColor=#7e99ad;strokeWidth=2;exitX=0.5;exitY=1;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1327.5" y="352" />
+              <mxPoint x="1146" y="352" />
+              <mxPoint x="1146" y="1024.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a5" value="&lt;b&gt;5 · Servicios de la Etapa 1&lt;/b&gt;&lt;br&gt;&lt;br&gt;" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#17324d;strokeColor=#a7bccd;fontColor=#ffffff;fontSize=15;align=left;verticalAlign=top;spacing=15;">
+          <mxGeometry as="geometry" x="1535" y="250" width="335" height="85" />
+        </mxCell>
+        <mxCell id="root-5" edge="1" parent="1" source="project" target="a5" style="edgeStyle=orthogonalEdgeStyle;endArrow=none;strokeColor=#7e99ad;strokeWidth=2;exitX=0.5;exitY=1;entryX=0.5;entryY=0;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="2470.0" y="220" />
+              <mxPoint x="1702.5" y="220" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p5.1" value="&lt;b&gt;5.1 · Personas y cumplimiento&lt;/b&gt;&lt;br&gt;&lt;br&gt;Contexto Personas y cumplimiento&lt;br&gt;&lt;br&gt;Responsable: Líder de Desarrollo&lt;br&gt;Ventana: M6–M10" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#a7bccd;fontColor=#17324d;fontSize=15;align=left;verticalAlign=top;spacing=15;">
+          <mxGeometry as="geometry" x="1535" y="375" width="335" height="238" />
+        </mxCell>
+        <mxCell id="e5.1" edge="1" parent="1" source="a5" target="p5.1" style="edgeStyle=orthogonalEdgeStyle;endArrow=none;rounded=0;strokeColor=#7e99ad;strokeWidth=2;exitX=0.5;exitY=1;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1702.5" y="352" />
+              <mxPoint x="1521" y="352" />
+              <mxPoint x="1521" y="494.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p5.2" value="&lt;b&gt;5.2 · Flota y activos&lt;/b&gt;&lt;br&gt;&lt;br&gt;Contexto Flota y activos&lt;br&gt;&lt;br&gt;Responsable: Líder de Desarrollo&lt;br&gt;Ventana: M6–M10" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#a7bccd;fontColor=#17324d;fontSize=15;align=left;verticalAlign=top;spacing=15;">
+          <mxGeometry as="geometry" x="1535" y="640" width="335" height="238" />
+        </mxCell>
+        <mxCell id="e5.2" edge="1" parent="1" source="a5" target="p5.2" style="edgeStyle=orthogonalEdgeStyle;endArrow=none;rounded=0;strokeColor=#7e99ad;strokeWidth=2;exitX=0.5;exitY=1;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1702.5" y="352" />
+              <mxPoint x="1521" y="352" />
+              <mxPoint x="1521" y="759.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p5.3" value="&lt;b&gt;5.3 · Planificación y tráfico&lt;/b&gt;&lt;br&gt;&lt;br&gt;Contexto Planificación y tráfico con verificación bloqueante&lt;br&gt;&lt;br&gt;Responsable: Líder de Desarrollo&lt;br&gt;Ventana: M6–M10" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#a7bccd;fontColor=#17324d;fontSize=15;align=left;verticalAlign=top;spacing=15;">
+          <mxGeometry as="geometry" x="1535" y="905" width="335" height="238" />
+        </mxCell>
+        <mxCell id="e5.3" edge="1" parent="1" source="a5" target="p5.3" style="edgeStyle=orthogonalEdgeStyle;endArrow=none;rounded=0;strokeColor=#7e99ad;strokeWidth=2;exitX=0.5;exitY=1;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1702.5" y="352" />
+              <mxPoint x="1521" y="352" />
+              <mxPoint x="1521" y="1024.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p5.4" value="&lt;b&gt;5.4 · Telemetría y geocercas&lt;/b&gt;&lt;br&gt;&lt;br&gt;Contexto Telemetría y geocercas&lt;br&gt;&lt;br&gt;Responsable: Líder de Desarrollo&lt;br&gt;Ventana: M6–M10" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#a7bccd;fontColor=#17324d;fontSize=15;align=left;verticalAlign=top;spacing=15;">
+          <mxGeometry as="geometry" x="1535" y="1170" width="335" height="238" />
+        </mxCell>
+        <mxCell id="e5.4" edge="1" parent="1" source="a5" target="p5.4" style="edgeStyle=orthogonalEdgeStyle;endArrow=none;rounded=0;strokeColor=#7e99ad;strokeWidth=2;exitX=0.5;exitY=1;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1702.5" y="352" />
+              <mxPoint x="1521" y="352" />
+              <mxPoint x="1521" y="1289.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p5.5" value="&lt;b&gt;5.5 · Operación de fletes&lt;/b&gt;&lt;br&gt;&lt;br&gt;Contexto Operación de fletes&lt;br&gt;&lt;br&gt;Responsable: Líder de Desarrollo&lt;br&gt;Ventana: M6–M10" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#a7bccd;fontColor=#17324d;fontSize=15;align=left;verticalAlign=top;spacing=15;">
+          <mxGeometry as="geometry" x="1535" y="1435" width="335" height="238" />
+        </mxCell>
+        <mxCell id="e5.5" edge="1" parent="1" source="a5" target="p5.5" style="edgeStyle=orthogonalEdgeStyle;endArrow=none;rounded=0;strokeColor=#7e99ad;strokeWidth=2;exitX=0.5;exitY=1;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1702.5" y="352" />
+              <mxPoint x="1521" y="352" />
+              <mxPoint x="1521" y="1554.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p5.6" value="&lt;b&gt;5.6 · Liquidación y costeo&lt;/b&gt;&lt;br&gt;&lt;br&gt;Contexto Liquidación y costeo&lt;br&gt;&lt;br&gt;Responsable: Líder de Desarrollo&lt;br&gt;Ventana: M6–M10" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#a7bccd;fontColor=#17324d;fontSize=15;align=left;verticalAlign=top;spacing=15;">
+          <mxGeometry as="geometry" x="1535" y="1700" width="335" height="238" />
+        </mxCell>
+        <mxCell id="e5.6" edge="1" parent="1" source="a5" target="p5.6" style="edgeStyle=orthogonalEdgeStyle;endArrow=none;rounded=0;strokeColor=#7e99ad;strokeWidth=2;exitX=0.5;exitY=1;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1702.5" y="352" />
+              <mxPoint x="1521" y="352" />
+              <mxPoint x="1521" y="1819.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p5.7" value="&lt;b&gt;5.7 · Portal del transportista&lt;/b&gt;&lt;br&gt;&lt;br&gt;Portal del transportista con consentimientos&lt;br&gt;&lt;br&gt;Responsable: Líder de Desarrollo&lt;br&gt;Ventana: M6–M10" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#a7bccd;fontColor=#17324d;fontSize=15;align=left;verticalAlign=top;spacing=15;">
+          <mxGeometry as="geometry" x="1535" y="1965" width="335" height="238" />
+        </mxCell>
+        <mxCell id="e5.7" edge="1" parent="1" source="a5" target="p5.7" style="edgeStyle=orthogonalEdgeStyle;endArrow=none;rounded=0;strokeColor=#7e99ad;strokeWidth=2;exitX=0.5;exitY=1;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1702.5" y="352" />
+              <mxPoint x="1521" y="352" />
+              <mxPoint x="1521" y="2084.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a6" value="&lt;b&gt;6 · Integraciones&lt;/b&gt;&lt;br&gt;&lt;br&gt;" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#17324d;strokeColor=#a7bccd;fontColor=#ffffff;fontSize=15;align=left;verticalAlign=top;spacing=15;">
+          <mxGeometry as="geometry" x="1910" y="250" width="335" height="85" />
+        </mxCell>
+        <mxCell id="root-6" edge="1" parent="1" source="project" target="a6" style="edgeStyle=orthogonalEdgeStyle;endArrow=none;strokeColor=#7e99ad;strokeWidth=2;exitX=0.5;exitY=1;entryX=0.5;entryY=0;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="2470.0" y="220" />
+              <mxPoint x="2077.5" y="220" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p6.1" value="&lt;b&gt;6.1 · Sistema contable&lt;/b&gt;&lt;br&gt;&lt;br&gt;Interfaz con el sistema contable para el documento de transporte&lt;br&gt;&lt;br&gt;Responsable: Líder de Integración&lt;br&gt;Ventana: M6–M9" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#a7bccd;fontColor=#17324d;fontSize=15;align=left;verticalAlign=top;spacing=15;">
+          <mxGeometry as="geometry" x="1910" y="375" width="335" height="238" />
+        </mxCell>
+        <mxCell id="e6.1" edge="1" parent="1" source="a6" target="p6.1" style="edgeStyle=orthogonalEdgeStyle;endArrow=none;rounded=0;strokeColor=#7e99ad;strokeWidth=2;exitX=0.5;exitY=1;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="2077.5" y="352" />
+              <mxPoint x="1896" y="352" />
+              <mxPoint x="1896" y="494.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p6.2" value="&lt;b&gt;6.2 · Plataformas de posición&lt;/b&gt;&lt;br&gt;&lt;br&gt;Ingesta de las plataformas de posicionamiento&lt;br&gt;&lt;br&gt;Responsable: Líder de Integración&lt;br&gt;Ventana: M6–M9" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#a7bccd;fontColor=#17324d;fontSize=15;align=left;verticalAlign=top;spacing=15;">
+          <mxGeometry as="geometry" x="1910" y="640" width="335" height="238" />
+        </mxCell>
+        <mxCell id="e6.2" edge="1" parent="1" source="a6" target="p6.2" style="edgeStyle=orthogonalEdgeStyle;endArrow=none;rounded=0;strokeColor=#7e99ad;strokeWidth=2;exitX=0.5;exitY=1;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="2077.5" y="352" />
+              <mxPoint x="1896" y="352" />
+              <mxPoint x="1896" y="759.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p6.3" value="&lt;b&gt;6.3 · Telemetría y tacógrafo&lt;/b&gt;&lt;br&gt;&lt;br&gt;Lectura de telemetría de fábrica y descarga de tacógrafos&lt;br&gt;&lt;br&gt;Responsable: Líder de Integración&lt;br&gt;Ventana: M6–M9" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#a7bccd;fontColor=#17324d;fontSize=15;align=left;verticalAlign=top;spacing=15;">
+          <mxGeometry as="geometry" x="1910" y="905" width="335" height="238" />
+        </mxCell>
+        <mxCell id="e6.3" edge="1" parent="1" source="a6" target="p6.3" style="edgeStyle=orthogonalEdgeStyle;endArrow=none;rounded=0;strokeColor=#7e99ad;strokeWidth=2;exitX=0.5;exitY=1;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="2077.5" y="352" />
+              <mxPoint x="1896" y="352" />
+              <mxPoint x="1896" y="1024.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p6.4" value="&lt;b&gt;6.4 · Combustible, peaje y taller&lt;/b&gt;&lt;br&gt;&lt;br&gt;Integración de combustible, peaje y sistema de taller&lt;br&gt;&lt;br&gt;Responsable: Líder de Integración&lt;br&gt;Ventana: M6–M9" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#a7bccd;fontColor=#17324d;fontSize=15;align=left;verticalAlign=top;spacing=15;">
+          <mxGeometry as="geometry" x="1910" y="1170" width="335" height="238" />
+        </mxCell>
+        <mxCell id="e6.4" edge="1" parent="1" source="a6" target="p6.4" style="edgeStyle=orthogonalEdgeStyle;endArrow=none;rounded=0;strokeColor=#7e99ad;strokeWidth=2;exitX=0.5;exitY=1;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="2077.5" y="352" />
+              <mxPoint x="1896" y="352" />
+              <mxPoint x="1896" y="1289.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p6.5" value="&lt;b&gt;6.5 · Sistema de 2013 y su retiro&lt;/b&gt;&lt;br&gt;&lt;br&gt;Capa anticorrupción frente al sistema de 2013 y su retiro&lt;br&gt;&lt;br&gt;Responsable: Líder de Integración&lt;br&gt;Ventana: M6–M9 / M16–M24" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#a7bccd;fontColor=#17324d;fontSize=15;align=left;verticalAlign=top;spacing=15;">
+          <mxGeometry as="geometry" x="1910" y="1435" width="335" height="238" />
+        </mxCell>
+        <mxCell id="e6.5" edge="1" parent="1" source="a6" target="p6.5" style="edgeStyle=orthogonalEdgeStyle;endArrow=none;rounded=0;strokeColor=#7e99ad;strokeWidth=2;exitX=0.5;exitY=1;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="2077.5" y="352" />
+              <mxPoint x="1896" y="352" />
+              <mxPoint x="1896" y="1554.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a7" value="&lt;b&gt;7 · Datos y migración&lt;/b&gt;&lt;br&gt;&lt;br&gt;" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#17324d;strokeColor=#a7bccd;fontColor=#ffffff;fontSize=15;align=left;verticalAlign=top;spacing=15;">
+          <mxGeometry as="geometry" x="2285" y="250" width="335" height="85" />
+        </mxCell>
+        <mxCell id="root-7" edge="1" parent="1" source="project" target="a7" style="edgeStyle=orthogonalEdgeStyle;endArrow=none;strokeColor=#7e99ad;strokeWidth=2;exitX=0.5;exitY=1;entryX=0.5;entryY=0;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="2470.0" y="220" />
+              <mxPoint x="2452.5" y="220" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p7.1" value="&lt;b&gt;7.1 · Migración de vigencias&lt;/b&gt;&lt;br&gt;&lt;br&gt;Migración de las cerca de 6.000 vigencias&lt;br&gt;&lt;br&gt;Responsable: Líder de Datos&lt;br&gt;Ventana: M6–M9" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#a7bccd;fontColor=#17324d;fontSize=15;align=left;verticalAlign=top;spacing=15;">
+          <mxGeometry as="geometry" x="2285" y="375" width="335" height="238" />
+        </mxCell>
+        <mxCell id="e7.1" edge="1" parent="1" source="a7" target="p7.1" style="edgeStyle=orthogonalEdgeStyle;endArrow=none;rounded=0;strokeColor=#7e99ad;strokeWidth=2;exitX=0.5;exitY=1;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="2452.5" y="352" />
+              <mxPoint x="2271" y="352" />
+              <mxPoint x="2271" y="494.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p7.2" value="&lt;b&gt;7.2 · Migración histórica&lt;/b&gt;&lt;br&gt;&lt;br&gt;Migración histórica de maestros, viajes, liquidaciones y siniestros&lt;br&gt;&lt;br&gt;Responsable: Líder de Datos&lt;br&gt;Ventana: M6–M12 / M19–M24" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#a7bccd;fontColor=#17324d;fontSize=15;align=left;verticalAlign=top;spacing=15;">
+          <mxGeometry as="geometry" x="2285" y="640" width="335" height="238" />
+        </mxCell>
+        <mxCell id="e7.2" edge="1" parent="1" source="a7" target="p7.2" style="edgeStyle=orthogonalEdgeStyle;endArrow=none;rounded=0;strokeColor=#7e99ad;strokeWidth=2;exitX=0.5;exitY=1;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="2452.5" y="352" />
+              <mxPoint x="2271" y="352" />
+              <mxPoint x="2271" y="759.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p7.3" value="&lt;b&gt;7.3 · Repositorio analítico&lt;/b&gt;&lt;br&gt;&lt;br&gt;Repositorio analítico&lt;br&gt;&lt;br&gt;Responsable: Líder de Datos&lt;br&gt;Ventana: M4–M10" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#a7bccd;fontColor=#17324d;fontSize=15;align=left;verticalAlign=top;spacing=15;">
+          <mxGeometry as="geometry" x="2285" y="905" width="335" height="238" />
+        </mxCell>
+        <mxCell id="e7.3" edge="1" parent="1" source="a7" target="p7.3" style="edgeStyle=orthogonalEdgeStyle;endArrow=none;rounded=0;strokeColor=#7e99ad;strokeWidth=2;exitX=0.5;exitY=1;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="2452.5" y="352" />
+              <mxPoint x="2271" y="352" />
+              <mxPoint x="2271" y="1024.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a8" value="&lt;b&gt;8 · Servicios de la Etapa 2&lt;/b&gt;&lt;br&gt;&lt;br&gt;" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#17324d;strokeColor=#a7bccd;fontColor=#ffffff;fontSize=15;align=left;verticalAlign=top;spacing=15;">
+          <mxGeometry as="geometry" x="2660" y="250" width="335" height="85" />
+        </mxCell>
+        <mxCell id="root-8" edge="1" parent="1" source="project" target="a8" style="edgeStyle=orthogonalEdgeStyle;endArrow=none;strokeColor=#7e99ad;strokeWidth=2;exitX=0.5;exitY=1;entryX=0.5;entryY=0;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="2470.0" y="220" />
+              <mxPoint x="2827.5" y="220" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p8.1" value="&lt;b&gt;8.1 · Portal del cliente&lt;/b&gt;&lt;br&gt;&lt;br&gt;Portal del cliente con posición autorizada&lt;br&gt;&lt;br&gt;Responsable: Líder de Desarrollo&lt;br&gt;Ventana: M13–M18" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#a7bccd;fontColor=#17324d;fontSize=15;align=left;verticalAlign=top;spacing=15;">
+          <mxGeometry as="geometry" x="2660" y="375" width="335" height="238" />
+        </mxCell>
+        <mxCell id="e8.1" edge="1" parent="1" source="a8" target="p8.1" style="edgeStyle=orthogonalEdgeStyle;endArrow=none;rounded=0;strokeColor=#7e99ad;strokeWidth=2;exitX=0.5;exitY=1;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="2827.5" y="352" />
+              <mxPoint x="2646" y="352" />
+              <mxPoint x="2646" y="494.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p8.2" value="&lt;b&gt;8.2 · Asignación de retornos&lt;/b&gt;&lt;br&gt;&lt;br&gt;Asignación de retornos&lt;br&gt;&lt;br&gt;Responsable: Líder de Desarrollo&lt;br&gt;Ventana: M13–M18" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#a7bccd;fontColor=#17324d;fontSize=15;align=left;verticalAlign=top;spacing=15;">
+          <mxGeometry as="geometry" x="2660" y="640" width="335" height="238" />
+        </mxCell>
+        <mxCell id="e8.2" edge="1" parent="1" source="a8" target="p8.2" style="edgeStyle=orthogonalEdgeStyle;endArrow=none;rounded=0;strokeColor=#7e99ad;strokeWidth=2;exitX=0.5;exitY=1;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="2827.5" y="352" />
+              <mxPoint x="2646" y="352" />
+              <mxPoint x="2646" y="759.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p8.3" value="&lt;b&gt;8.3 · Emisiones&lt;/b&gt;&lt;br&gt;&lt;br&gt;Cálculo mensual de emisiones&lt;br&gt;&lt;br&gt;Responsable: Líder de Desarrollo&lt;br&gt;Ventana: M13–M18" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#a7bccd;fontColor=#17324d;fontSize=15;align=left;verticalAlign=top;spacing=15;">
+          <mxGeometry as="geometry" x="2660" y="905" width="335" height="238" />
+        </mxCell>
+        <mxCell id="e8.3" edge="1" parent="1" source="a8" target="p8.3" style="edgeStyle=orthogonalEdgeStyle;endArrow=none;rounded=0;strokeColor=#7e99ad;strokeWidth=2;exitX=0.5;exitY=1;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="2827.5" y="352" />
+              <mxPoint x="2646" y="352" />
+              <mxPoint x="2646" y="1024.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p8.4" value="&lt;b&gt;8.4 · Talleres y mantenimiento&lt;/b&gt;&lt;br&gt;&lt;br&gt;Talleres externos y mantenimiento por kilometraje real&lt;br&gt;&lt;br&gt;Responsable: Líder de Desarrollo&lt;br&gt;Ventana: M13–M18" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#a7bccd;fontColor=#17324d;fontSize=15;align=left;verticalAlign=top;spacing=15;">
+          <mxGeometry as="geometry" x="2660" y="1170" width="335" height="238" />
+        </mxCell>
+        <mxCell id="e8.4" edge="1" parent="1" source="a8" target="p8.4" style="edgeStyle=orthogonalEdgeStyle;endArrow=none;rounded=0;strokeColor=#7e99ad;strokeWidth=2;exitX=0.5;exitY=1;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="2827.5" y="352" />
+              <mxPoint x="2646" y="352" />
+              <mxPoint x="2646" y="1289.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p8.5" value="&lt;b&gt;8.5 · Dispersión de rendimiento&lt;/b&gt;&lt;br&gt;&lt;br&gt;Modelo de dispersión de rendimiento&lt;br&gt;&lt;br&gt;Responsable: Líder de Datos&lt;br&gt;Ventana: M13–M18" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#a7bccd;fontColor=#17324d;fontSize=15;align=left;verticalAlign=top;spacing=15;">
+          <mxGeometry as="geometry" x="2660" y="1435" width="335" height="238" />
+        </mxCell>
+        <mxCell id="e8.5" edge="1" parent="1" source="a8" target="p8.5" style="edgeStyle=orthogonalEdgeStyle;endArrow=none;rounded=0;strokeColor=#7e99ad;strokeWidth=2;exitX=0.5;exitY=1;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="2827.5" y="352" />
+              <mxPoint x="2646" y="352" />
+              <mxPoint x="2646" y="1554.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a9" value="&lt;b&gt;9 · Adhesión de transportistas&lt;/b&gt;&lt;br&gt;&lt;br&gt;" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#17324d;strokeColor=#a7bccd;fontColor=#ffffff;fontSize=15;align=left;verticalAlign=top;spacing=15;">
+          <mxGeometry as="geometry" x="3035" y="250" width="335" height="85" />
+        </mxCell>
+        <mxCell id="root-9" edge="1" parent="1" source="project" target="a9" style="edgeStyle=orthogonalEdgeStyle;endArrow=none;strokeColor=#7e99ad;strokeWidth=2;exitX=0.5;exitY=1;entryX=0.5;entryY=0;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="2470.0" y="220" />
+              <mxPoint x="3202.5" y="220" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p9.1" value="&lt;b&gt;9.1 · Anexo de adhesión&lt;/b&gt;&lt;br&gt;&lt;br&gt;Anexo de adhesión al contrato de transporte&lt;br&gt;&lt;br&gt;Responsable: Líder Funcional&lt;br&gt;Ventana: M2–M3" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#a7bccd;fontColor=#17324d;fontSize=15;align=left;verticalAlign=top;spacing=15;">
+          <mxGeometry as="geometry" x="3035" y="375" width="335" height="238" />
+        </mxCell>
+        <mxCell id="e9.1" edge="1" parent="1" source="a9" target="p9.1" style="edgeStyle=orthogonalEdgeStyle;endArrow=none;rounded=0;strokeColor=#7e99ad;strokeWidth=2;exitX=0.5;exitY=1;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="3202.5" y="352" />
+              <mxPoint x="3021" y="352" />
+              <mxPoint x="3021" y="494.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p9.2" value="&lt;b&gt;9.2 · Campaña y enrolamiento&lt;/b&gt;&lt;br&gt;&lt;br&gt;Campaña y enrolamiento de transportistas&lt;br&gt;&lt;br&gt;Responsable: Líder Funcional&lt;br&gt;Ventana: M2–M21" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#a7bccd;fontColor=#17324d;fontSize=15;align=left;verticalAlign=top;spacing=15;">
+          <mxGeometry as="geometry" x="3035" y="640" width="335" height="238" />
+        </mxCell>
+        <mxCell id="e9.2" edge="1" parent="1" source="a9" target="p9.2" style="edgeStyle=orthogonalEdgeStyle;endArrow=none;rounded=0;strokeColor=#7e99ad;strokeWidth=2;exitX=0.5;exitY=1;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="3202.5" y="352" />
+              <mxPoint x="3021" y="352" />
+              <mxPoint x="3021" y="759.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p9.3" value="&lt;b&gt;9.3 · Medición y refuerzo&lt;/b&gt;&lt;br&gt;&lt;br&gt;Medición mensual y medidas de refuerzo&lt;br&gt;&lt;br&gt;Responsable: Líder Funcional&lt;br&gt;Ventana: M2–M21" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#a7bccd;fontColor=#17324d;fontSize=15;align=left;verticalAlign=top;spacing=15;">
+          <mxGeometry as="geometry" x="3035" y="905" width="335" height="238" />
+        </mxCell>
+        <mxCell id="e9.3" edge="1" parent="1" source="a9" target="p9.3" style="edgeStyle=orthogonalEdgeStyle;endArrow=none;rounded=0;strokeColor=#7e99ad;strokeWidth=2;exitX=0.5;exitY=1;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="3202.5" y="352" />
+              <mxPoint x="3021" y="352" />
+              <mxPoint x="3021" y="1024.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a10" value="&lt;b&gt;10 · Calidad y pruebas&lt;/b&gt;&lt;br&gt;&lt;br&gt;" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#17324d;strokeColor=#a7bccd;fontColor=#ffffff;fontSize=15;align=left;verticalAlign=top;spacing=15;">
+          <mxGeometry as="geometry" x="3410" y="250" width="335" height="85" />
+        </mxCell>
+        <mxCell id="root-10" edge="1" parent="1" source="project" target="a10" style="edgeStyle=orthogonalEdgeStyle;endArrow=none;strokeColor=#7e99ad;strokeWidth=2;exitX=0.5;exitY=1;entryX=0.5;entryY=0;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="2470.0" y="220" />
+              <mxPoint x="3577.5" y="220" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p10.1" value="&lt;b&gt;10.1 · Sistema e integración&lt;/b&gt;&lt;br&gt;&lt;br&gt;Pruebas de sistema e integración&lt;br&gt;&lt;br&gt;Responsable: Líder de Calidad y Pruebas&lt;br&gt;Ventana: M6–M10 / M15–M17" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#a7bccd;fontColor=#17324d;fontSize=15;align=left;verticalAlign=top;spacing=15;">
+          <mxGeometry as="geometry" x="3410" y="375" width="335" height="238" />
+        </mxCell>
+        <mxCell id="e10.1" edge="1" parent="1" source="a10" target="p10.1" style="edgeStyle=orthogonalEdgeStyle;endArrow=none;rounded=0;strokeColor=#7e99ad;strokeWidth=2;exitX=0.5;exitY=1;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="3577.5" y="352" />
+              <mxPoint x="3396" y="352" />
+              <mxPoint x="3396" y="494.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p10.2" value="&lt;b&gt;10.2 · Desempeño y seguridad&lt;/b&gt;&lt;br&gt;&lt;br&gt;Pruebas de desempeño, estrés, resiliencia y seguridad&lt;br&gt;&lt;br&gt;Responsable: Líder de Calidad y Pruebas&lt;br&gt;Ventana: M10–M12 / M17–M18" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#a7bccd;fontColor=#17324d;fontSize=15;align=left;verticalAlign=top;spacing=15;">
+          <mxGeometry as="geometry" x="3410" y="640" width="335" height="238" />
+        </mxCell>
+        <mxCell id="e10.2" edge="1" parent="1" source="a10" target="p10.2" style="edgeStyle=orthogonalEdgeStyle;endArrow=none;rounded=0;strokeColor=#7e99ad;strokeWidth=2;exitX=0.5;exitY=1;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="3577.5" y="352" />
+              <mxPoint x="3396" y="352" />
+              <mxPoint x="3396" y="759.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p10.3" value="&lt;b&gt;10.3 · Aceptación de usuario&lt;/b&gt;&lt;br&gt;&lt;br&gt;Pruebas de aceptación de usuario&lt;br&gt;&lt;br&gt;Responsable: Líder de Calidad y Pruebas&lt;br&gt;Ventana: M10–M12 / M17–M18" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#a7bccd;fontColor=#17324d;fontSize=15;align=left;verticalAlign=top;spacing=15;">
+          <mxGeometry as="geometry" x="3410" y="905" width="335" height="238" />
+        </mxCell>
+        <mxCell id="e10.3" edge="1" parent="1" source="a10" target="p10.3" style="edgeStyle=orthogonalEdgeStyle;endArrow=none;rounded=0;strokeColor=#7e99ad;strokeWidth=2;exitX=0.5;exitY=1;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="3577.5" y="352" />
+              <mxPoint x="3396" y="352" />
+              <mxPoint x="3396" y="1024.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a11" value="&lt;b&gt;11 · Implantación&lt;/b&gt;&lt;br&gt;&lt;br&gt;" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#17324d;strokeColor=#a7bccd;fontColor=#ffffff;fontSize=15;align=left;verticalAlign=top;spacing=15;">
+          <mxGeometry as="geometry" x="3785" y="250" width="335" height="85" />
+        </mxCell>
+        <mxCell id="root-11" edge="1" parent="1" source="project" target="a11" style="edgeStyle=orthogonalEdgeStyle;endArrow=none;strokeColor=#7e99ad;strokeWidth=2;exitX=0.5;exitY=1;entryX=0.5;entryY=0;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="2470.0" y="220" />
+              <mxPoint x="3952.5" y="220" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p11.1" value="&lt;b&gt;11.1 · Capacitación&lt;/b&gt;&lt;br&gt;&lt;br&gt;Capacitación de torre, terminales y conductores&lt;br&gt;&lt;br&gt;Responsable: Líder de Implantación&lt;br&gt;Ventana: M10–M12" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#a7bccd;fontColor=#17324d;fontSize=15;align=left;verticalAlign=top;spacing=15;">
+          <mxGeometry as="geometry" x="3785" y="375" width="335" height="238" />
+        </mxCell>
+        <mxCell id="e11.1" edge="1" parent="1" source="a11" target="p11.1" style="edgeStyle=orthogonalEdgeStyle;endArrow=none;rounded=0;strokeColor=#7e99ad;strokeWidth=2;exitX=0.5;exitY=1;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="3952.5" y="352" />
+              <mxPoint x="3771" y="352" />
+              <mxPoint x="3771" y="494.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p11.2" value="&lt;b&gt;11.2 · Marcha blanca, Etapa 1&lt;/b&gt;&lt;br&gt;&lt;br&gt;Marcha blanca y paso a producción de la Etapa 1&lt;br&gt;&lt;br&gt;Responsable: Líder de Implantación&lt;br&gt;Ventana: M13–M15 / M16–M16" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#a7bccd;fontColor=#17324d;fontSize=15;align=left;verticalAlign=top;spacing=15;">
+          <mxGeometry as="geometry" x="3785" y="640" width="335" height="238" />
+        </mxCell>
+        <mxCell id="e11.2" edge="1" parent="1" source="a11" target="p11.2" style="edgeStyle=orthogonalEdgeStyle;endArrow=none;rounded=0;strokeColor=#7e99ad;strokeWidth=2;exitX=0.5;exitY=1;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="3952.5" y="352" />
+              <mxPoint x="3771" y="352" />
+              <mxPoint x="3771" y="759.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p11.3" value="&lt;b&gt;11.3 · Marcha blanca, Etapa 2&lt;/b&gt;&lt;br&gt;&lt;br&gt;Marcha blanca y paso a producción de la Etapa 2&lt;br&gt;&lt;br&gt;Responsable: Líder de Implantación&lt;br&gt;Ventana: M19–M20 / M21–M21" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#a7bccd;fontColor=#17324d;fontSize=15;align=left;verticalAlign=top;spacing=15;">
+          <mxGeometry as="geometry" x="3785" y="905" width="335" height="238" />
+        </mxCell>
+        <mxCell id="e11.3" edge="1" parent="1" source="a11" target="p11.3" style="edgeStyle=orthogonalEdgeStyle;endArrow=none;rounded=0;strokeColor=#7e99ad;strokeWidth=2;exitX=0.5;exitY=1;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="3952.5" y="352" />
+              <mxPoint x="3771" y="352" />
+              <mxPoint x="3771" y="1024.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p11.4" value="&lt;b&gt;11.4 · Estabilización y traspaso&lt;/b&gt;&lt;br&gt;&lt;br&gt;Estabilización y traspaso al área de tecnología del mandante&lt;br&gt;&lt;br&gt;Responsable: Líder de Operación&lt;br&gt;Ventana: M13–M15 / M16–M17" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#a7bccd;fontColor=#17324d;fontSize=15;align=left;verticalAlign=top;spacing=15;">
+          <mxGeometry as="geometry" x="3785" y="1170" width="335" height="238" />
+        </mxCell>
+        <mxCell id="e11.4" edge="1" parent="1" source="a11" target="p11.4" style="edgeStyle=orthogonalEdgeStyle;endArrow=none;rounded=0;strokeColor=#7e99ad;strokeWidth=2;exitX=0.5;exitY=1;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="3952.5" y="352" />
+              <mxPoint x="3771" y="352" />
+              <mxPoint x="3771" y="1289.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a12" value="&lt;b&gt;12 · Innovaciones&lt;/b&gt;&lt;br&gt;&lt;br&gt;" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#17324d;strokeColor=#a7bccd;fontColor=#ffffff;fontSize=15;align=left;verticalAlign=top;spacing=15;">
+          <mxGeometry as="geometry" x="4160" y="250" width="335" height="85" />
+        </mxCell>
+        <mxCell id="root-12" edge="1" parent="1" source="project" target="a12" style="edgeStyle=orthogonalEdgeStyle;endArrow=none;strokeColor=#7e99ad;strokeWidth=2;exitX=0.5;exitY=1;entryX=0.5;entryY=0;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="2470.0" y="220" />
+              <mxPoint x="4327.5" y="220" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p12.1" value="&lt;b&gt;12.1 · Expediente verificable del transportista&lt;/b&gt;&lt;br&gt;&lt;br&gt;Innovación 1, producto o servicio&lt;br&gt;&lt;br&gt;Responsable: Arquitecto de Solución&lt;br&gt;Ventana: M4–M4 / M8–M10 / M13–M15" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#a7bccd;fontColor=#17324d;fontSize=15;align=left;verticalAlign=top;spacing=15;">
+          <mxGeometry as="geometry" x="4160" y="375" width="335" height="238" />
+        </mxCell>
+        <mxCell id="e12.1" edge="1" parent="1" source="a12" target="p12.1" style="edgeStyle=orthogonalEdgeStyle;endArrow=none;rounded=0;strokeColor=#7e99ad;strokeWidth=2;exitX=0.5;exitY=1;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="4327.5" y="352" />
+              <mxPoint x="4146" y="352" />
+              <mxPoint x="4146" y="494.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p12.2" value="&lt;b&gt;12.2 · Despliegue continuo y modular sin detención de flota&lt;/b&gt;&lt;br&gt;&lt;br&gt;Innovación 2, proceso&lt;br&gt;&lt;br&gt;Responsable: Arquitecto de Solución&lt;br&gt;Ventana: M4–M4 / M5–M8" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#a7bccd;fontColor=#17324d;fontSize=15;align=left;verticalAlign=top;spacing=15;">
+          <mxGeometry as="geometry" x="4160" y="640" width="335" height="238" />
+        </mxCell>
+        <mxCell id="e12.2" edge="1" parent="1" source="a12" target="p12.2" style="edgeStyle=orthogonalEdgeStyle;endArrow=none;rounded=0;strokeColor=#7e99ad;strokeWidth=2;exitX=0.5;exitY=1;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="4327.5" y="352" />
+              <mxPoint x="4146" y="352" />
+              <mxPoint x="4146" y="759.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p12.3" value="&lt;b&gt;12.3 · Semirremolque conectado&lt;/b&gt;&lt;br&gt;&lt;br&gt;Innovación 3, tecnológica o de arquitectura&lt;br&gt;&lt;br&gt;Responsable: Arquitecto de Solución&lt;br&gt;Ventana: M4–M9 / M13–M15" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#a7bccd;fontColor=#17324d;fontSize=15;align=left;verticalAlign=top;spacing=15;">
+          <mxGeometry as="geometry" x="4160" y="905" width="335" height="238" />
+        </mxCell>
+        <mxCell id="e12.3" edge="1" parent="1" source="a12" target="p12.3" style="edgeStyle=orthogonalEdgeStyle;endArrow=none;rounded=0;strokeColor=#7e99ad;strokeWidth=2;exitX=0.5;exitY=1;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="4327.5" y="352" />
+              <mxPoint x="4146" y="352" />
+              <mxPoint x="4146" y="1024.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p12.4" value="&lt;b&gt;12.4 · Esquema de adhesión y propiedad del dispositivo&lt;/b&gt;&lt;br&gt;&lt;br&gt;Innovación 4, modelo de negocio o de contratación&lt;br&gt;&lt;br&gt;Responsable: Líder Funcional&lt;br&gt;Ventana: M2–M3 / M6–M10 / M13–M21" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#a7bccd;fontColor=#17324d;fontSize=15;align=left;verticalAlign=top;spacing=15;">
+          <mxGeometry as="geometry" x="4160" y="1170" width="335" height="238" />
+        </mxCell>
+        <mxCell id="e12.4" edge="1" parent="1" source="a12" target="p12.4" style="edgeStyle=orthogonalEdgeStyle;endArrow=none;rounded=0;strokeColor=#7e99ad;strokeWidth=2;exitX=0.5;exitY=1;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="4327.5" y="352" />
+              <mxPoint x="4146" y="352" />
+              <mxPoint x="4146" y="1289.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p12.5" value="&lt;b&gt;12.5 · Bienestar del conductor y descanso en parador seguro&lt;/b&gt;&lt;br&gt;&lt;br&gt;Innovación 5, experiencia de usuario o impacto social&lt;br&gt;&lt;br&gt;Responsable: Arquitecto de Solución&lt;br&gt;Ventana: M3–M6 / M7–M10 / M13–M15" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#a7bccd;fontColor=#17324d;fontSize=15;align=left;verticalAlign=top;spacing=15;">
+          <mxGeometry as="geometry" x="4160" y="1435" width="335" height="238" />
+        </mxCell>
+        <mxCell id="e12.5" edge="1" parent="1" source="a12" target="p12.5" style="edgeStyle=orthogonalEdgeStyle;endArrow=none;rounded=0;strokeColor=#7e99ad;strokeWidth=2;exitX=0.5;exitY=1;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="4327.5" y="352" />
+              <mxPoint x="4146" y="352" />
+              <mxPoint x="4146" y="1554.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a13" value="&lt;b&gt;13 · Operación de 36 meses&lt;/b&gt;&lt;br&gt;&lt;br&gt;" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#17324d;strokeColor=#a7bccd;fontColor=#ffffff;fontSize=15;align=left;verticalAlign=top;spacing=15;">
+          <mxGeometry as="geometry" x="4535" y="250" width="335" height="85" />
+        </mxCell>
+        <mxCell id="root-13" edge="1" parent="1" source="project" target="a13" style="edgeStyle=orthogonalEdgeStyle;endArrow=none;strokeColor=#7e99ad;strokeWidth=2;exitX=0.5;exitY=1;entryX=0.5;entryY=0;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="2470.0" y="220" />
+              <mxPoint x="4702.5" y="220" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p13.1" value="&lt;b&gt;13.1 · Mesa de servicio 24x7&lt;/b&gt;&lt;br&gt;&lt;br&gt;Mesa de servicio 24x7x365&lt;br&gt;&lt;br&gt;Responsable: Líder de Operación&lt;br&gt;Ventana: M21–M56" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#a7bccd;fontColor=#17324d;fontSize=15;align=left;verticalAlign=top;spacing=15;">
+          <mxGeometry as="geometry" x="4535" y="375" width="335" height="238" />
+        </mxCell>
+        <mxCell id="e13.1" edge="1" parent="1" source="a13" target="p13.1" style="edgeStyle=orthogonalEdgeStyle;endArrow=none;rounded=0;strokeColor=#7e99ad;strokeWidth=2;exitX=0.5;exitY=1;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="4702.5" y="352" />
+              <mxPoint x="4521" y="352" />
+              <mxPoint x="4521" y="494.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p13.2" value="&lt;b&gt;13.2 · Operación de la plataforma&lt;/b&gt;&lt;br&gt;&lt;br&gt;Operación de la plataforma y gestión del servicio&lt;br&gt;&lt;br&gt;Responsable: Líder de Operación&lt;br&gt;Ventana: M21–M56" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#a7bccd;fontColor=#17324d;fontSize=15;align=left;verticalAlign=top;spacing=15;">
+          <mxGeometry as="geometry" x="4535" y="640" width="335" height="238" />
+        </mxCell>
+        <mxCell id="e13.2" edge="1" parent="1" source="a13" target="p13.2" style="edgeStyle=orthogonalEdgeStyle;endArrow=none;rounded=0;strokeColor=#7e99ad;strokeWidth=2;exitX=0.5;exitY=1;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="4702.5" y="352" />
+              <mxPoint x="4521" y="352" />
+              <mxPoint x="4521" y="759.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p13.3" value="&lt;b&gt;13.3 · Ciclo de vida del equipo a bordo&lt;/b&gt;&lt;br&gt;&lt;br&gt;Ciclo de vida del equipo a bordo&lt;br&gt;&lt;br&gt;Responsable: Líder de Operación&lt;br&gt;Ventana: M21–M56" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#a7bccd;fontColor=#17324d;fontSize=15;align=left;verticalAlign=top;spacing=15;">
+          <mxGeometry as="geometry" x="4535" y="905" width="335" height="238" />
+        </mxCell>
+        <mxCell id="e13.3" edge="1" parent="1" source="a13" target="p13.3" style="edgeStyle=orthogonalEdgeStyle;endArrow=none;rounded=0;strokeColor=#7e99ad;strokeWidth=2;exitX=0.5;exitY=1;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="4702.5" y="352" />
+              <mxPoint x="4521" y="352" />
+              <mxPoint x="4521" y="1024.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p13.4" value="&lt;b&gt;13.4 · Mantención evolutiva&lt;/b&gt;&lt;br&gt;&lt;br&gt;Mantención evolutiva&lt;br&gt;&lt;br&gt;Responsable: Líder de Desarrollo&lt;br&gt;Ventana: M21–M56" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#a7bccd;fontColor=#17324d;fontSize=15;align=left;verticalAlign=top;spacing=15;">
+          <mxGeometry as="geometry" x="4535" y="1170" width="335" height="238" />
+        </mxCell>
+        <mxCell id="e13.4" edge="1" parent="1" source="a13" target="p13.4" style="edgeStyle=orthogonalEdgeStyle;endArrow=none;rounded=0;strokeColor=#7e99ad;strokeWidth=2;exitX=0.5;exitY=1;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="4702.5" y="352" />
+              <mxPoint x="4521" y="352" />
+              <mxPoint x="4521" y="1289.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+<diagram id="p1" name="01 · Gestión del proyecto">
+    <mxGraphModel page="1" pageWidth="1560" pageHeight="540" grid="1" gridSize="10">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="p1.1" value="1.1 · Dirección y control&lt;br&gt;&lt;br&gt;Entregable: Plan de dirección e informes del proyecto&lt;br&gt;&lt;br&gt;Aceptación: Plan aprobado en H1 y un informe en cada Comité de Proyecto&lt;br&gt;&lt;br&gt;Responsable: Jefe de Proyecto&lt;br&gt;Ventana: M1–M21&lt;br&gt;Red: A01, 1 a 21&lt;br&gt;Requisitos: RNF-010" parent="1" vertex="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b9cbd7;fontColor=#17324d;fontSize=13;align=left;spacing=14;">
+          <mxGeometry as="geometry" x="35" y="110" width="490" height="330" />
+        </mxCell>
+        <mxCell id="p1.2" value="1.2 · Interesados y comunicaciones&lt;br&gt;&lt;br&gt;Entregable: Plan de comunicaciones y registro de interesados&lt;br&gt;&lt;br&gt;Aceptación: Aprobado por el Comité Ejecutivo en el mes 1&lt;br&gt;&lt;br&gt;Responsable: Jefe de Proyecto&lt;br&gt;Ventana: M1–M21&lt;br&gt;Red: A01, 1 a 21&lt;br&gt;Requisitos: Alcance transversal / T-14 / T-19" parent="1" vertex="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b9cbd7;fontColor=#17324d;fontSize=13;align=left;spacing=14;">
+          <mxGeometry as="geometry" x="545" y="110" width="490" height="330" />
+        </mxCell>
+        <mxCell id="p1.3" value="1.3 · Hardware del mandante&lt;br&gt;&lt;br&gt;Entregable: Especificación de compra confirmada y actas de recepción del hardware del mandante&lt;br&gt;&lt;br&gt;Aceptación: Equipos del Formulario T-11 recibidos conforme antes del mes 6&lt;br&gt;&lt;br&gt;Responsable: Líder de Implantación&lt;br&gt;Ventana: M1–M5&lt;br&gt;Red: A04, 1 a 5&lt;br&gt;Requisitos: Alcance transversal / T-14 / T-19" parent="1" vertex="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b9cbd7;fontColor=#17324d;fontSize=13;align=left;spacing=14;">
+          <mxGeometry as="geometry" x="1055" y="110" width="490" height="330" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="p2" name="02 · Levantamiento y diseño">
+    <mxGraphModel page="1" pageWidth="1560" pageHeight="890" grid="1" gridSize="10">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="p2.1" value="2.1 · Línea base y catálogo&lt;br&gt;&lt;br&gt;Entregable: Línea base de alcance, catálogo y matriz de trazabilidad&lt;br&gt;&lt;br&gt;Aceptación: Aprobación de la contraparte, hito H1&lt;br&gt;&lt;br&gt;Responsable: Líder Funcional&lt;br&gt;Ventana: M1–M2&lt;br&gt;Red: A02, 1 y 2&lt;br&gt;Requisitos: Alcance transversal / T-14 / T-19" parent="1" vertex="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b9cbd7;fontColor=#17324d;fontSize=13;align=left;spacing=14;">
+          <mxGeometry as="geometry" x="35" y="110" width="490" height="330" />
+        </mxCell>
+        <mxCell id="p2.2" value="2.2 · Cobertura móvil en terreno&lt;br&gt;&lt;br&gt;Entregable: Mapa de cobertura móvil medida por tramo y punto de carga&lt;br&gt;&lt;br&gt;Aceptación: Rutas de la compañía medidas en terreno, según RT-03.24 del Caso&lt;br&gt;&lt;br&gt;Responsable: Ingeniero de telecomunicaciones y campo&lt;br&gt;Ventana: M1–M3&lt;br&gt;Red: A03, 1 a 3&lt;br&gt;Requisitos: Alcance transversal / T-14 / T-19" parent="1" vertex="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b9cbd7;fontColor=#17324d;fontSize=13;align=left;spacing=14;">
+          <mxGeometry as="geometry" x="545" y="110" width="490" height="330" />
+        </mxCell>
+        <mxCell id="p2.3" value="2.3 · Factibilidad con terceros&lt;br&gt;&lt;br&gt;Entregable: Actas de factibilidad con los tres proveedores de posicionamiento y los fabricantes&lt;br&gt;&lt;br&gt;Aceptación: Respuesta escrita de cada uno sobre el acceso a sus datos&lt;br&gt;&lt;br&gt;Responsable: Líder de Integración&lt;br&gt;Ventana: M1–M4&lt;br&gt;Red: A04, 1 a 4&lt;br&gt;Requisitos: Alcance transversal / T-14 / T-19" parent="1" vertex="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b9cbd7;fontColor=#17324d;fontSize=13;align=left;spacing=14;">
+          <mxGeometry as="geometry" x="1055" y="110" width="490" height="330" />
+        </mxCell>
+        <mxCell id="p2.4" value="2.4 · Arquitectura y datos&lt;br&gt;&lt;br&gt;Entregable: Documento de arquitectura, plan de seguridad y modelo de datos&lt;br&gt;&lt;br&gt;Aceptación: Aprobación de la contraparte, hito H2&lt;br&gt;&lt;br&gt;Responsable: Arquitecto de Solución&lt;br&gt;Ventana: M2–M4&lt;br&gt;Red: A05, 2 a 4&lt;br&gt;Requisitos: Alcance transversal / T-14 / T-19" parent="1" vertex="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b9cbd7;fontColor=#17324d;fontSize=13;align=left;spacing=14;">
+          <mxGeometry as="geometry" x="35" y="460" width="490" height="330" />
+        </mxCell>
+        <mxCell id="p2.5" value="2.5 · Estudio de costo por ruta&lt;br&gt;&lt;br&gt;Entregable: Estudio de costo real por ruta y por contrato con datos históricos&lt;br&gt;&lt;br&gt;Aceptación: Entregado a finanzas antes de la renegociación de 2027&lt;br&gt;&lt;br&gt;Responsable: Líder de Datos&lt;br&gt;Ventana: M4–M6&lt;br&gt;Red: Fuera de la red, 4 a 6&lt;br&gt;Requisitos: RF-016" parent="1" vertex="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b9cbd7;fontColor=#17324d;fontSize=13;align=left;spacing=14;">
+          <mxGeometry as="geometry" x="545" y="460" width="490" height="330" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="p3" name="03 · Plataforma">
+    <mxGraphModel page="1" pageWidth="1560" pageHeight="890" grid="1" gridSize="10">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="p3.1" value="3.1 · Ambientes y despliegue&lt;br&gt;&lt;br&gt;Entregable: Ambientes de desarrollo, calidad, preproducción, producción y recuperación desde código&lt;br&gt;&lt;br&gt;Aceptación: Hito H3 con los cinco ambientes operativos&lt;br&gt;&lt;br&gt;Responsable: Líder de Operación&lt;br&gt;Ventana: M4–M6&lt;br&gt;Red: A07, 4 a 6&lt;br&gt;Requisitos: Alcance transversal / T-14 / T-19" parent="1" vertex="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b9cbd7;fontColor=#17324d;fontSize=13;align=left;spacing=14;">
+          <mxGeometry as="geometry" x="35" y="110" width="490" height="330" />
+        </mxCell>
+        <mxCell id="p3.2" value="3.2 · Seguridad e identidad&lt;br&gt;&lt;br&gt;Entregable: Identidad federada, bóveda de claves y cifrado de campo&lt;br&gt;&lt;br&gt;Aceptación: Prueba de seguridad ofensiva aprobada en H5&lt;br&gt;&lt;br&gt;Responsable: Encargado de Seguridad de la Información&lt;br&gt;Ventana: M4–M12&lt;br&gt;Red: A07 y A12, 4 a 12&lt;br&gt;Requisitos: RNF-013" parent="1" vertex="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b9cbd7;fontColor=#17324d;fontSize=13;align=left;spacing=14;">
+          <mxGeometry as="geometry" x="545" y="110" width="490" height="330" />
+        </mxCell>
+        <mxCell id="p3.3" value="3.3 · Observabilidad&lt;br&gt;&lt;br&gt;Entregable: Trazas, métricas y registros correlacionados&lt;br&gt;&lt;br&gt;Aceptación: Tablero operativo disponible en H3&lt;br&gt;&lt;br&gt;Responsable: Líder de Operación&lt;br&gt;Ventana: M4–M6&lt;br&gt;Red: A07, 4 a 6&lt;br&gt;Requisitos: Alcance transversal / T-14 / T-19" parent="1" vertex="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b9cbd7;fontColor=#17324d;fontSize=13;align=left;spacing=14;">
+          <mxGeometry as="geometry" x="1055" y="110" width="490" height="330" />
+        </mxCell>
+        <mxCell id="p3.4" value="3.4 · San Bernardo y gabinetes&lt;br&gt;&lt;br&gt;Entregable: Sala de San Bernardo remediada y cuatro gabinetes de terminal&lt;br&gt;&lt;br&gt;Aceptación: 24 horas sin enlace probadas en cada sitio&lt;br&gt;&lt;br&gt;Responsable: Líder de Operación&lt;br&gt;Ventana: M4–M12&lt;br&gt;Red: Paralelo a A07 a A12, 4 a 12&lt;br&gt;Requisitos: RNF-008" parent="1" vertex="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b9cbd7;fontColor=#17324d;fontSize=13;align=left;spacing=14;">
+          <mxGeometry as="geometry" x="35" y="460" width="490" height="330" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="p4" name="04 · Equipo a bordo">
+    <mxGraphModel page="1" pageWidth="1560" pageHeight="540" grid="1" gridSize="10">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="p4.1" value="4.1 · Firmware y gestión remota&lt;br&gt;&lt;br&gt;Entregable: Firmware con operación de 72 horas y actualización en terminal&lt;br&gt;&lt;br&gt;Aceptación: Prueba de 72 horas sin pérdida de eventos&lt;br&gt;&lt;br&gt;Responsable: Ingeniero de firmware&lt;br&gt;Ventana: M4–M9&lt;br&gt;Red: A11, 4 a 9&lt;br&gt;Requisitos: RF-009, RF-014, RF-027, RNF-001, RNF-002, RNF-005, RNF-008" parent="1" vertex="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b9cbd7;fontColor=#17324d;fontSize=13;align=left;spacing=14;">
+          <mxGeometry as="geometry" x="35" y="110" width="490" height="330" />
+        </mxCell>
+        <mxCell id="p4.2" value="4.2 · Montaje camión por camión&lt;br&gt;&lt;br&gt;Entregable: 182 equipos audIT montados camión por camión&lt;br&gt;&lt;br&gt;Aceptación: Acta de montaje por camión sin inmovilización adicional&lt;br&gt;&lt;br&gt;Responsable: Líder de Implantación&lt;br&gt;Ventana: M6–M10 / M16–M18&lt;br&gt;Red: A11 y A18, 6 a 10 y 16 a 18&lt;br&gt;Requisitos: RNF-004" parent="1" vertex="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b9cbd7;fontColor=#17324d;fontSize=13;align=left;spacing=14;">
+          <mxGeometry as="geometry" x="545" y="110" width="490" height="330" />
+        </mxCell>
+        <mxCell id="p4.3" value="4.3 · Integración de terceros&lt;br&gt;&lt;br&gt;Entregable: 192 camiones de terceros en la vista única por su plataforma&lt;br&gt;&lt;br&gt;Aceptación: Posición recibida de cada plataforma que exporta&lt;br&gt;&lt;br&gt;Responsable: Líder de Integración&lt;br&gt;Ventana: M6–M10 / M13–M15&lt;br&gt;Red: A10 y A18, 6 a 10 y 13 a 15&lt;br&gt;Requisitos: Alcance transversal / T-14 / T-19" parent="1" vertex="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b9cbd7;fontColor=#17324d;fontSize=13;align=left;spacing=14;">
+          <mxGeometry as="geometry" x="1055" y="110" width="490" height="330" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="p5" name="05 · Servicios de la Etapa 1">
+    <mxGraphModel page="1" pageWidth="1560" pageHeight="1240" grid="1" gridSize="10">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="p5.1" value="5.1 · Personas y cumplimiento&lt;br&gt;&lt;br&gt;Entregable: Contexto Personas y cumplimiento&lt;br&gt;&lt;br&gt;Aceptación: Pruebas de sistema aprobadas en H4&lt;br&gt;&lt;br&gt;Responsable: Líder de Desarrollo&lt;br&gt;Ventana: M6–M10&lt;br&gt;Red: A09, 6 a 10&lt;br&gt;Requisitos: RF-002, RF-003, RF-004, RF-005, RF-027, RNF-012" parent="1" vertex="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b9cbd7;fontColor=#17324d;fontSize=13;align=left;spacing=14;">
+          <mxGeometry as="geometry" x="35" y="110" width="490" height="330" />
+        </mxCell>
+        <mxCell id="p5.2" value="5.2 · Flota y activos&lt;br&gt;&lt;br&gt;Entregable: Contexto Flota y activos&lt;br&gt;&lt;br&gt;Aceptación: Pruebas de sistema aprobadas en H4&lt;br&gt;&lt;br&gt;Responsable: Líder de Desarrollo&lt;br&gt;Ventana: M6–M10&lt;br&gt;Red: A09, 6 a 10&lt;br&gt;Requisitos: RF-026" parent="1" vertex="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b9cbd7;fontColor=#17324d;fontSize=13;align=left;spacing=14;">
+          <mxGeometry as="geometry" x="545" y="110" width="490" height="330" />
+        </mxCell>
+        <mxCell id="p5.3" value="5.3 · Planificación y tráfico&lt;br&gt;&lt;br&gt;Entregable: Contexto Planificación y tráfico con verificación bloqueante&lt;br&gt;&lt;br&gt;Aceptación: Asignación en 30 segundos en el percentil 95&lt;br&gt;&lt;br&gt;Responsable: Líder de Desarrollo&lt;br&gt;Ventana: M6–M10&lt;br&gt;Red: A09, 6 a 10&lt;br&gt;Requisitos: RF-001, RF-028" parent="1" vertex="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b9cbd7;fontColor=#17324d;fontSize=13;align=left;spacing=14;">
+          <mxGeometry as="geometry" x="1055" y="110" width="490" height="330" />
+        </mxCell>
+        <mxCell id="p5.4" value="5.4 · Telemetría y geocercas&lt;br&gt;&lt;br&gt;Entregable: Contexto Telemetría y geocercas&lt;br&gt;&lt;br&gt;Aceptación: Vista única y geocercas probadas con 72 horas sin enlace&lt;br&gt;&lt;br&gt;Responsable: Líder de Desarrollo&lt;br&gt;Ventana: M6–M10&lt;br&gt;Red: A09, 6 a 10&lt;br&gt;Requisitos: RF-008, RF-010, RNF-007" parent="1" vertex="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b9cbd7;fontColor=#17324d;fontSize=13;align=left;spacing=14;">
+          <mxGeometry as="geometry" x="35" y="460" width="490" height="330" />
+        </mxCell>
+        <mxCell id="p5.5" value="5.5 · Operación de fletes&lt;br&gt;&lt;br&gt;Entregable: Contexto Operación de fletes&lt;br&gt;&lt;br&gt;Aceptación: Documento, conformidad y carga peligrosa probados&lt;br&gt;&lt;br&gt;Responsable: Líder de Desarrollo&lt;br&gt;Ventana: M6–M10&lt;br&gt;Red: A09, 6 a 10&lt;br&gt;Requisitos: RF-006, RF-011, RF-012" parent="1" vertex="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b9cbd7;fontColor=#17324d;fontSize=13;align=left;spacing=14;">
+          <mxGeometry as="geometry" x="545" y="460" width="490" height="330" />
+        </mxCell>
+        <mxCell id="p5.6" value="5.6 · Liquidación y costeo&lt;br&gt;&lt;br&gt;Entregable: Contexto Liquidación y costeo&lt;br&gt;&lt;br&gt;Aceptación: Costo en 24 horas y liquidación conciliada&lt;br&gt;&lt;br&gt;Responsable: Líder de Desarrollo&lt;br&gt;Ventana: M6–M10&lt;br&gt;Red: A09, 6 a 10&lt;br&gt;Requisitos: RF-016, RF-017, RF-019" parent="1" vertex="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b9cbd7;fontColor=#17324d;fontSize=13;align=left;spacing=14;">
+          <mxGeometry as="geometry" x="1055" y="460" width="490" height="330" />
+        </mxCell>
+        <mxCell id="p5.7" value="5.7 · Portal del transportista&lt;br&gt;&lt;br&gt;Entregable: Portal del transportista con consentimientos&lt;br&gt;&lt;br&gt;Aceptación: Revocación efectiva en cinco minutos&lt;br&gt;&lt;br&gt;Responsable: Líder de Desarrollo&lt;br&gt;Ventana: M6–M10&lt;br&gt;Red: A09, 6 a 10&lt;br&gt;Requisitos: RF-020, RF-022" parent="1" vertex="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b9cbd7;fontColor=#17324d;fontSize=13;align=left;spacing=14;">
+          <mxGeometry as="geometry" x="35" y="810" width="490" height="330" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="p6" name="06 · Integraciones">
+    <mxGraphModel page="1" pageWidth="1560" pageHeight="890" grid="1" gridSize="10">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="p6.1" value="6.1 · Sistema contable&lt;br&gt;&lt;br&gt;Entregable: Interfaz con el sistema contable para el documento de transporte&lt;br&gt;&lt;br&gt;Aceptación: Cero folios duplicados en la prueba de reintentos&lt;br&gt;&lt;br&gt;Responsable: Líder de Integración&lt;br&gt;Ventana: M6–M9&lt;br&gt;Red: A10, 6 a 9&lt;br&gt;Requisitos: RF-013, RF-014, RNF-006" parent="1" vertex="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b9cbd7;fontColor=#17324d;fontSize=13;align=left;spacing=14;">
+          <mxGeometry as="geometry" x="35" y="110" width="490" height="330" />
+        </mxCell>
+        <mxCell id="p6.2" value="6.2 · Plataformas de posición&lt;br&gt;&lt;br&gt;Entregable: Ingesta de las plataformas de posicionamiento&lt;br&gt;&lt;br&gt;Aceptación: Datos de cada plataforma factible en la vista única&lt;br&gt;&lt;br&gt;Responsable: Líder de Integración&lt;br&gt;Ventana: M6–M9&lt;br&gt;Red: A10, 6 a 9&lt;br&gt;Requisitos: RF-008, RNF-003" parent="1" vertex="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b9cbd7;fontColor=#17324d;fontSize=13;align=left;spacing=14;">
+          <mxGeometry as="geometry" x="545" y="110" width="490" height="330" />
+        </mxCell>
+        <mxCell id="p6.3" value="6.3 · Telemetría y tacógrafo&lt;br&gt;&lt;br&gt;Entregable: Lectura de telemetría de fábrica y descarga de tacógrafos&lt;br&gt;&lt;br&gt;Aceptación: Archivo original conservado con su integridad&lt;br&gt;&lt;br&gt;Responsable: Líder de Integración&lt;br&gt;Ventana: M6–M9&lt;br&gt;Red: A10, 6 a 9&lt;br&gt;Requisitos: RF-007, RNF-005" parent="1" vertex="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b9cbd7;fontColor=#17324d;fontSize=13;align=left;spacing=14;">
+          <mxGeometry as="geometry" x="1055" y="110" width="490" height="330" />
+        </mxCell>
+        <mxCell id="p6.4" value="6.4 · Combustible, peaje y taller&lt;br&gt;&lt;br&gt;Entregable: Integración de combustible, peaje y sistema de taller&lt;br&gt;&lt;br&gt;Aceptación: Componentes de costo recibidos por viaje&lt;br&gt;&lt;br&gt;Responsable: Líder de Integración&lt;br&gt;Ventana: M6–M9&lt;br&gt;Red: A10, 6 a 9&lt;br&gt;Requisitos: RF-025" parent="1" vertex="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b9cbd7;fontColor=#17324d;fontSize=13;align=left;spacing=14;">
+          <mxGeometry as="geometry" x="35" y="460" width="490" height="330" />
+        </mxCell>
+        <mxCell id="p6.5" value="6.5 · Sistema de 2013 y su retiro&lt;br&gt;&lt;br&gt;Entregable: Capa anticorrupción frente al sistema de 2013 y su retiro&lt;br&gt;&lt;br&gt;Aceptación: Funciones retiradas en los meses 16 y 21 y consulta cerrada en el 24&lt;br&gt;&lt;br&gt;Responsable: Líder de Integración&lt;br&gt;Ventana: M6–M9 / M16–M24&lt;br&gt;Red: A10, 6 a 9, y 16 a 24&lt;br&gt;Requisitos: Alcance transversal / T-14 / T-19" parent="1" vertex="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b9cbd7;fontColor=#17324d;fontSize=13;align=left;spacing=14;">
+          <mxGeometry as="geometry" x="545" y="460" width="490" height="330" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="p7" name="07 · Datos y migración">
+    <mxGraphModel page="1" pageWidth="1560" pageHeight="540" grid="1" gridSize="10">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="p7.1" value="7.1 · Migración de vigencias&lt;br&gt;&lt;br&gt;Entregable: Migración de las cerca de 6.000 vigencias&lt;br&gt;&lt;br&gt;Aceptación: Acta de conciliación con verificación documental de cada una&lt;br&gt;&lt;br&gt;Responsable: Líder de Datos&lt;br&gt;Ventana: M6–M9&lt;br&gt;Red: A08, 6 a 9&lt;br&gt;Requisitos: RF-005" parent="1" vertex="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b9cbd7;fontColor=#17324d;fontSize=13;align=left;spacing=14;">
+          <mxGeometry as="geometry" x="35" y="110" width="490" height="330" />
+        </mxCell>
+        <mxCell id="p7.2" value="7.2 · Migración histórica&lt;br&gt;&lt;br&gt;Entregable: Migración histórica de maestros, viajes, liquidaciones y siniestros&lt;br&gt;&lt;br&gt;Aceptación: Cinco años de viajes y seis de liquidaciones conciliados&lt;br&gt;&lt;br&gt;Responsable: Líder de Datos&lt;br&gt;Ventana: M6–M12 / M19–M24&lt;br&gt;Red: 6 a 12 y 19 a 24&lt;br&gt;Requisitos: Alcance transversal / T-14 / T-19" parent="1" vertex="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b9cbd7;fontColor=#17324d;fontSize=13;align=left;spacing=14;">
+          <mxGeometry as="geometry" x="545" y="110" width="490" height="330" />
+        </mxCell>
+        <mxCell id="p7.3" value="7.3 · Repositorio analítico&lt;br&gt;&lt;br&gt;Entregable: Repositorio analítico&lt;br&gt;&lt;br&gt;Aceptación: Costo por viaje en 24 horas y retención de RT-05.10&lt;br&gt;&lt;br&gt;Responsable: Líder de Datos&lt;br&gt;Ventana: M4–M10&lt;br&gt;Red: A09, 4 a 10&lt;br&gt;Requisitos: RNF-014" parent="1" vertex="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b9cbd7;fontColor=#17324d;fontSize=13;align=left;spacing=14;">
+          <mxGeometry as="geometry" x="1055" y="110" width="490" height="330" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="p8" name="08 · Servicios de la Etapa 2">
+    <mxGraphModel page="1" pageWidth="1560" pageHeight="890" grid="1" gridSize="10">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="p8.1" value="8.1 · Portal del cliente&lt;br&gt;&lt;br&gt;Entregable: Portal del cliente con posición autorizada&lt;br&gt;&lt;br&gt;Aceptación: Posición en 2 minutos sólo con autorización vigente&lt;br&gt;&lt;br&gt;Responsable: Líder de Desarrollo&lt;br&gt;Ventana: M13–M18&lt;br&gt;Red: A17, A20 y A22, 13 a 18&lt;br&gt;Requisitos: RF-021" parent="1" vertex="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b9cbd7;fontColor=#17324d;fontSize=13;align=left;spacing=14;">
+          <mxGeometry as="geometry" x="35" y="110" width="490" height="330" />
+        </mxCell>
+        <mxCell id="p8.2" value="8.2 · Asignación de retornos&lt;br&gt;&lt;br&gt;Entregable: Asignación de retornos&lt;br&gt;&lt;br&gt;Aceptación: Retorno propuesto antes de la descarga&lt;br&gt;&lt;br&gt;Responsable: Líder de Desarrollo&lt;br&gt;Ventana: M13–M18&lt;br&gt;Red: A17, A20 y A22, 13 a 18&lt;br&gt;Requisitos: RF-015" parent="1" vertex="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b9cbd7;fontColor=#17324d;fontSize=13;align=left;spacing=14;">
+          <mxGeometry as="geometry" x="545" y="110" width="490" height="330" />
+        </mxCell>
+        <mxCell id="p8.3" value="8.3 · Emisiones&lt;br&gt;&lt;br&gt;Entregable: Cálculo mensual de emisiones&lt;br&gt;&lt;br&gt;Aceptación: Método verificable aplicado a dos meses completos&lt;br&gt;&lt;br&gt;Responsable: Líder de Desarrollo&lt;br&gt;Ventana: M13–M18&lt;br&gt;Red: A17, A20 y A22, 13 a 18&lt;br&gt;Requisitos: RF-023" parent="1" vertex="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b9cbd7;fontColor=#17324d;fontSize=13;align=left;spacing=14;">
+          <mxGeometry as="geometry" x="1055" y="110" width="490" height="330" />
+        </mxCell>
+        <mxCell id="p8.4" value="8.4 · Talleres y mantenimiento&lt;br&gt;&lt;br&gt;Entregable: Talleres externos y mantenimiento por kilometraje real&lt;br&gt;&lt;br&gt;Aceptación: Intervención registrada en la hoja de vida&lt;br&gt;&lt;br&gt;Responsable: Líder de Desarrollo&lt;br&gt;Ventana: M13–M18&lt;br&gt;Red: A17, A20 y A22, 13 a 18&lt;br&gt;Requisitos: RF-024, RF-025" parent="1" vertex="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b9cbd7;fontColor=#17324d;fontSize=13;align=left;spacing=14;">
+          <mxGeometry as="geometry" x="35" y="460" width="490" height="330" />
+        </mxCell>
+        <mxCell id="p8.5" value="8.5 · Dispersión de rendimiento&lt;br&gt;&lt;br&gt;Entregable: Modelo de dispersión de rendimiento&lt;br&gt;&lt;br&gt;Aceptación: Modelo validado con doce meses de datos&lt;br&gt;&lt;br&gt;Responsable: Líder de Datos&lt;br&gt;Ventana: M13–M18&lt;br&gt;Red: A17, A20 y A22, 13 a 18&lt;br&gt;Requisitos: RF-018" parent="1" vertex="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b9cbd7;fontColor=#17324d;fontSize=13;align=left;spacing=14;">
+          <mxGeometry as="geometry" x="545" y="460" width="490" height="330" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="p9" name="09 · Adhesión de transportistas">
+    <mxGraphModel page="1" pageWidth="1560" pageHeight="540" grid="1" gridSize="10">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="p9.1" value="9.1 · Anexo de adhesión&lt;br&gt;&lt;br&gt;Entregable: Anexo de adhesión al contrato de transporte&lt;br&gt;&lt;br&gt;Aceptación: Validación jurídica del mandante&lt;br&gt;&lt;br&gt;Responsable: Líder Funcional&lt;br&gt;Ventana: M2–M3&lt;br&gt;Red: A06, 2 a 3&lt;br&gt;Requisitos: Alcance transversal / T-14 / T-19" parent="1" vertex="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b9cbd7;fontColor=#17324d;fontSize=13;align=left;spacing=14;">
+          <mxGeometry as="geometry" x="35" y="110" width="490" height="330" />
+        </mxCell>
+        <mxCell id="p9.2" value="9.2 · Campaña y enrolamiento&lt;br&gt;&lt;br&gt;Entregable: Campaña y enrolamiento de transportistas&lt;br&gt;&lt;br&gt;Aceptación: 104 anexos en el mes 16 y 134 en el 21&lt;br&gt;&lt;br&gt;Responsable: Líder Funcional&lt;br&gt;Ventana: M2–M21&lt;br&gt;Red: A06 y A18, 2 a 21&lt;br&gt;Requisitos: RF-003, RF-026" parent="1" vertex="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b9cbd7;fontColor=#17324d;fontSize=13;align=left;spacing=14;">
+          <mxGeometry as="geometry" x="545" y="110" width="490" height="330" />
+        </mxCell>
+        <mxCell id="p9.3" value="9.3 · Medición y refuerzo&lt;br&gt;&lt;br&gt;Entregable: Medición mensual y medidas de refuerzo&lt;br&gt;&lt;br&gt;Aceptación: Ocho indicadores mensuales y medidas activadas si el mes 9 baja del 40 %&lt;br&gt;&lt;br&gt;Responsable: Líder Funcional&lt;br&gt;Ventana: M2–M21&lt;br&gt;Red: 2 a 21&lt;br&gt;Requisitos: Alcance transversal / T-14 / T-19" parent="1" vertex="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b9cbd7;fontColor=#17324d;fontSize=13;align=left;spacing=14;">
+          <mxGeometry as="geometry" x="1055" y="110" width="490" height="330" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="p10" name="10 · Calidad y pruebas">
+    <mxGraphModel page="1" pageWidth="1560" pageHeight="540" grid="1" gridSize="10">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="p10.1" value="10.1 · Sistema e integración&lt;br&gt;&lt;br&gt;Entregable: Pruebas de sistema e integración&lt;br&gt;&lt;br&gt;Aceptación: Hitos H4 y H9&lt;br&gt;&lt;br&gt;Responsable: Líder de Calidad y Pruebas&lt;br&gt;Ventana: M6–M10 / M15–M17&lt;br&gt;Red: A09, A12, A20 y A22&lt;br&gt;Requisitos: Alcance transversal / T-14 / T-19" parent="1" vertex="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b9cbd7;fontColor=#17324d;fontSize=13;align=left;spacing=14;">
+          <mxGeometry as="geometry" x="35" y="110" width="490" height="330" />
+        </mxCell>
+        <mxCell id="p10.2" value="10.2 · Desempeño y seguridad&lt;br&gt;&lt;br&gt;Entregable: Pruebas de desempeño, estrés, resiliencia y seguridad&lt;br&gt;&lt;br&gt;Aceptación: Hitos H5 y H10&lt;br&gt;&lt;br&gt;Responsable: Líder de Calidad y Pruebas&lt;br&gt;Ventana: M10–M12 / M17–M18&lt;br&gt;Red: A12 y A22&lt;br&gt;Requisitos: Alcance transversal / T-14 / T-19" parent="1" vertex="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b9cbd7;fontColor=#17324d;fontSize=13;align=left;spacing=14;">
+          <mxGeometry as="geometry" x="545" y="110" width="490" height="330" />
+        </mxCell>
+        <mxCell id="p10.3" value="10.3 · Aceptación de usuario&lt;br&gt;&lt;br&gt;Entregable: Pruebas de aceptación de usuario&lt;br&gt;&lt;br&gt;Aceptación: Acta por perfil de usuario&lt;br&gt;&lt;br&gt;Responsable: Líder de Calidad y Pruebas&lt;br&gt;Ventana: M10–M12 / M17–M18&lt;br&gt;Red: A12 y A22&lt;br&gt;Requisitos: Alcance transversal / T-14 / T-19" parent="1" vertex="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b9cbd7;fontColor=#17324d;fontSize=13;align=left;spacing=14;">
+          <mxGeometry as="geometry" x="1055" y="110" width="490" height="330" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="p11" name="11 · Implantación">
+    <mxGraphModel page="1" pageWidth="1560" pageHeight="890" grid="1" gridSize="10">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="p11.1" value="11.1 · Capacitación&lt;br&gt;&lt;br&gt;Entregable: Capacitación de torre, terminales y conductores&lt;br&gt;&lt;br&gt;Aceptación: Torre y terminales certificados&lt;br&gt;&lt;br&gt;Responsable: Líder de Implantación&lt;br&gt;Ventana: M10–M12&lt;br&gt;Red: A13, 10 a 12&lt;br&gt;Requisitos: Alcance transversal / T-14 / T-19" parent="1" vertex="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b9cbd7;fontColor=#17324d;fontSize=13;align=left;spacing=14;">
+          <mxGeometry as="geometry" x="35" y="110" width="490" height="330" />
+        </mxCell>
+        <mxCell id="p11.2" value="11.2 · Marcha blanca, Etapa 1&lt;br&gt;&lt;br&gt;Entregable: Marcha blanca y paso a producción de la Etapa 1&lt;br&gt;&lt;br&gt;Aceptación: Seis condiciones del Art. 17.3, hitos H6 y H7&lt;br&gt;&lt;br&gt;Responsable: Líder de Implantación&lt;br&gt;Ventana: M13–M15 / M16–M16&lt;br&gt;Red: A15 y A19, 13 a 16&lt;br&gt;Requisitos: RNF-011" parent="1" vertex="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b9cbd7;fontColor=#17324d;fontSize=13;align=left;spacing=14;">
+          <mxGeometry as="geometry" x="545" y="110" width="490" height="330" />
+        </mxCell>
+        <mxCell id="p11.3" value="11.3 · Marcha blanca, Etapa 2&lt;br&gt;&lt;br&gt;Entregable: Marcha blanca y paso a producción de la Etapa 2&lt;br&gt;&lt;br&gt;Aceptación: Seis condiciones del Art. 17.3, hitos H11 y H12&lt;br&gt;&lt;br&gt;Responsable: Líder de Implantación&lt;br&gt;Ventana: M19–M20 / M21–M21&lt;br&gt;Red: A24 y A25, 19 a 21&lt;br&gt;Requisitos: Alcance transversal / T-14 / T-19" parent="1" vertex="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b9cbd7;fontColor=#17324d;fontSize=13;align=left;spacing=14;">
+          <mxGeometry as="geometry" x="1055" y="110" width="490" height="330" />
+        </mxCell>
+        <mxCell id="p11.4" value="11.4 · Estabilización y traspaso&lt;br&gt;&lt;br&gt;Entregable: Estabilización y traspaso al área de tecnología del mandante&lt;br&gt;&lt;br&gt;Aceptación: 30 días hábiles con dotación en terminales y traspaso certificado&lt;br&gt;&lt;br&gt;Responsable: Líder de Operación&lt;br&gt;Ventana: M13–M15 / M16–M17&lt;br&gt;Red: A16 y A21, 13 a 17&lt;br&gt;Requisitos: RNF-009" parent="1" vertex="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b9cbd7;fontColor=#17324d;fontSize=13;align=left;spacing=14;">
+          <mxGeometry as="geometry" x="35" y="460" width="490" height="330" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="p12" name="12 · Innovaciones">
+    <mxGraphModel page="1" pageWidth="1560" pageHeight="890" grid="1" gridSize="10">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="p12.1" value="12.1 · Expediente verificable del transportista&lt;br&gt;&lt;br&gt;Entregable: Innovación 1, producto o servicio&lt;br&gt;&lt;br&gt;Aceptación: Indicador y meta de su ficha del Formulario T-19&lt;br&gt;&lt;br&gt;Responsable: Arquitecto de Solución&lt;br&gt;Ventana: M4–M4 / M8–M10 / M13–M15&lt;br&gt;Red: Según su ficha&lt;br&gt;Requisitos: Alcance transversal / T-14 / T-19" parent="1" vertex="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b9cbd7;fontColor=#17324d;fontSize=13;align=left;spacing=14;">
+          <mxGeometry as="geometry" x="35" y="110" width="490" height="330" />
+        </mxCell>
+        <mxCell id="p12.2" value="12.2 · Despliegue continuo y modular sin detención de flota&lt;br&gt;&lt;br&gt;Entregable: Innovación 2, proceso&lt;br&gt;&lt;br&gt;Aceptación: Indicador y meta de su ficha del Formulario T-19&lt;br&gt;&lt;br&gt;Responsable: Arquitecto de Solución&lt;br&gt;Ventana: M4–M4 / M5–M8&lt;br&gt;Red: Según su ficha&lt;br&gt;Requisitos: Alcance transversal / T-14 / T-19" parent="1" vertex="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b9cbd7;fontColor=#17324d;fontSize=13;align=left;spacing=14;">
+          <mxGeometry as="geometry" x="545" y="110" width="490" height="330" />
+        </mxCell>
+        <mxCell id="p12.3" value="12.3 · Semirremolque conectado&lt;br&gt;&lt;br&gt;Entregable: Innovación 3, tecnológica o de arquitectura&lt;br&gt;&lt;br&gt;Aceptación: Indicador y meta de su ficha del Formulario T-19&lt;br&gt;&lt;br&gt;Responsable: Arquitecto de Solución&lt;br&gt;Ventana: M4–M9 / M13–M15&lt;br&gt;Red: Según su ficha&lt;br&gt;Requisitos: Alcance transversal / T-14 / T-19" parent="1" vertex="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b9cbd7;fontColor=#17324d;fontSize=13;align=left;spacing=14;">
+          <mxGeometry as="geometry" x="1055" y="110" width="490" height="330" />
+        </mxCell>
+        <mxCell id="p12.4" value="12.4 · Esquema de adhesión y propiedad del dispositivo&lt;br&gt;&lt;br&gt;Entregable: Innovación 4, modelo de negocio o de contratación&lt;br&gt;&lt;br&gt;Aceptación: Indicador y meta de su ficha del Formulario T-19&lt;br&gt;&lt;br&gt;Responsable: Líder Funcional&lt;br&gt;Ventana: M2–M3 / M6–M10 / M13–M21&lt;br&gt;Red: Según su ficha&lt;br&gt;Requisitos: Alcance transversal / T-14 / T-19" parent="1" vertex="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b9cbd7;fontColor=#17324d;fontSize=13;align=left;spacing=14;">
+          <mxGeometry as="geometry" x="35" y="460" width="490" height="330" />
+        </mxCell>
+        <mxCell id="p12.5" value="12.5 · Bienestar del conductor y descanso en parador seguro&lt;br&gt;&lt;br&gt;Entregable: Innovación 5, experiencia de usuario o impacto social&lt;br&gt;&lt;br&gt;Aceptación: Indicador y meta de su ficha del Formulario T-19&lt;br&gt;&lt;br&gt;Responsable: Arquitecto de Solución&lt;br&gt;Ventana: M3–M6 / M7–M10 / M13–M15&lt;br&gt;Red: Según su ficha&lt;br&gt;Requisitos: Alcance transversal / T-14 / T-19" parent="1" vertex="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b9cbd7;fontColor=#17324d;fontSize=13;align=left;spacing=14;">
+          <mxGeometry as="geometry" x="545" y="460" width="490" height="330" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="p13" name="13 · Operación de 36 meses">
+    <mxGraphModel page="1" pageWidth="1560" pageHeight="890" grid="1" gridSize="10">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="p13.1" value="13.1 · Mesa de servicio 24x7&lt;br&gt;&lt;br&gt;Entregable: Mesa de servicio 24x7x365&lt;br&gt;&lt;br&gt;Aceptación: Niveles del Artículo 78.2 cumplidos cada mes&lt;br&gt;&lt;br&gt;Responsable: Líder de Operación&lt;br&gt;Ventana: M21–M56&lt;br&gt;Red: 21 a 56&lt;br&gt;Requisitos: RNF-009" parent="1" vertex="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b9cbd7;fontColor=#17324d;fontSize=13;align=left;spacing=14;">
+          <mxGeometry as="geometry" x="35" y="110" width="490" height="330" />
+        </mxCell>
+        <mxCell id="p13.2" value="13.2 · Operación de la plataforma&lt;br&gt;&lt;br&gt;Entregable: Operación de la plataforma y gestión del servicio&lt;br&gt;&lt;br&gt;Aceptación: Disponibilidad y recuperación del Artículo 78.3&lt;br&gt;&lt;br&gt;Responsable: Líder de Operación&lt;br&gt;Ventana: M21–M56&lt;br&gt;Red: 21 a 56&lt;br&gt;Requisitos: Alcance transversal / T-14 / T-19" parent="1" vertex="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b9cbd7;fontColor=#17324d;fontSize=13;align=left;spacing=14;">
+          <mxGeometry as="geometry" x="545" y="110" width="490" height="330" />
+        </mxCell>
+        <mxCell id="p13.3" value="13.3 · Ciclo de vida del equipo a bordo&lt;br&gt;&lt;br&gt;Entregable: Ciclo de vida del equipo a bordo&lt;br&gt;&lt;br&gt;Aceptación: Actualización y reposición sólo en terminal&lt;br&gt;&lt;br&gt;Responsable: Líder de Operación&lt;br&gt;Ventana: M21–M56&lt;br&gt;Red: 21 a 56&lt;br&gt;Requisitos: Alcance transversal / T-14 / T-19" parent="1" vertex="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b9cbd7;fontColor=#17324d;fontSize=13;align=left;spacing=14;">
+          <mxGeometry as="geometry" x="1055" y="110" width="490" height="330" />
+        </mxCell>
+        <mxCell id="p13.4" value="13.4 · Mantención evolutiva&lt;br&gt;&lt;br&gt;Entregable: Mantención evolutiva&lt;br&gt;&lt;br&gt;Aceptación: Cambios con tasa de fallo bajo el 5 %&lt;br&gt;&lt;br&gt;Responsable: Líder de Desarrollo&lt;br&gt;Ventana: M21–M56&lt;br&gt;Red: 21 a 56&lt;br&gt;Requisitos: Alcance transversal / T-14 / T-19" parent="1" vertex="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b9cbd7;fontColor=#17324d;fontSize=13;align=left;spacing=14;">
+          <mxGeometry as="geometry" x="35" y="460" width="490" height="330" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

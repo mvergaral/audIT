@@ -1,0 +1,55 @@
+﻿codigo,nombre,entregable,aceptacion,responsable,red_meses,origen_ventana,requisitos
+1.1,Dirección y control,Plan de dirección e informes del proyecto,Plan aprobado en H1 y un informe en cada Comité de Proyecto,Jefe de Proyecto,"A01, 1 a 21",T-14 / T-18,RNF-010
+1.2,Interesados y comunicaciones,Plan de comunicaciones y registro de interesados,Aprobado por el Comité Ejecutivo en el mes 1,Jefe de Proyecto,"A01, 1 a 21",T-14 / T-18,
+1.3,Hardware del mandante,Especificación de compra confirmada y actas de recepción del hardware del mandante,Equipos del Formulario T-11 recibidos conforme antes del mes 6,Líder de Implantación,"A04, 1 a 5",T-14 / T-18,
+2.1,Línea base y catálogo,"Línea base de alcance, catálogo y matriz de trazabilidad","Aprobación de la contraparte, hito H1",Líder Funcional,"A02, 1 y 2",T-14 / T-18,
+2.2,Cobertura móvil en terreno,Mapa de cobertura móvil medida por tramo y punto de carga,"Rutas de la compañía medidas en terreno, según RT-03.24 del Caso",Ingeniero de telecomunicaciones y campo,"A03, 1 a 3",T-14 / T-18,
+2.3,Factibilidad con terceros,Actas de factibilidad con los tres proveedores de posicionamiento y los fabricantes,Respuesta escrita de cada uno sobre el acceso a sus datos,Líder de Integración,"A04, 1 a 4",T-14 / T-18,
+2.4,Arquitectura y datos,"Documento de arquitectura, plan de seguridad y modelo de datos","Aprobación de la contraparte, hito H2",Arquitecto de Solución,"A05, 2 a 4",T-14 / T-18,
+2.5,Estudio de costo por ruta,Estudio de costo real por ruta y por contrato con datos históricos,Entregado a finanzas antes de la renegociación de 2027,Líder de Datos,"Fuera de la red, 4 a 6",T-14 / T-18,RF-016
+3.1,Ambientes y despliegue,"Ambientes de desarrollo, calidad, preproducción, producción y recuperación desde código",Hito H3 con los cinco ambientes operativos,Líder de Operación,"A07, 4 a 6",T-14 / T-18,
+3.2,Seguridad e identidad,"Identidad federada, bóveda de claves y cifrado de campo",Prueba de seguridad ofensiva aprobada en H5,Encargado de Seguridad de la Información,"A07 y A12, 4 a 12",T-14 / T-18,RNF-013
+3.3,Observabilidad,"Trazas, métricas y registros correlacionados",Tablero operativo disponible en H3,Líder de Operación,"A07, 4 a 6",T-14 / T-18,
+3.4,San Bernardo y gabinetes,Sala de San Bernardo remediada y cuatro gabinetes de terminal,24 horas sin enlace probadas en cada sitio,Líder de Operación,"Paralelo a A07 a A12, 4 a 12",T-14 / T-18,RNF-008
+4.1,Firmware y gestión remota,Firmware con operación de 72 horas y actualización en terminal,Prueba de 72 horas sin pérdida de eventos,Ingeniero de firmware,"A11, 4 a 9",T-14 / T-18,"RF-009, RF-014, RF-027, RNF-001, RNF-002, RNF-005, RNF-008"
+4.2,Montaje camión por camión,182 equipos audIT montados camión por camión,Acta de montaje por camión sin inmovilización adicional,Líder de Implantación,"A11 y A18, 6 a 10 y 16 a 18",T-14 / T-18,RNF-004
+4.3,Integración de terceros,192 camiones de terceros en la vista única por su plataforma,Posición recibida de cada plataforma que exporta,Líder de Integración,"A10 y A18, 6 a 10 y 13 a 15",T-14 / T-18,
+5.1,Personas y cumplimiento,Contexto Personas y cumplimiento,Pruebas de sistema aprobadas en H4,Líder de Desarrollo,"A09, 6 a 10",T-14 / T-18,"RF-002, RF-003, RF-004, RF-005, RF-027, RNF-012"
+5.2,Flota y activos,Contexto Flota y activos,Pruebas de sistema aprobadas en H4,Líder de Desarrollo,"A09, 6 a 10",T-14 / T-18,RF-026
+5.3,Planificación y tráfico,Contexto Planificación y tráfico con verificación bloqueante,Asignación en 30 segundos en el percentil 95,Líder de Desarrollo,"A09, 6 a 10",T-14 / T-18,"RF-001, RF-028"
+5.4,Telemetría y geocercas,Contexto Telemetría y geocercas,Vista única y geocercas probadas con 72 horas sin enlace,Líder de Desarrollo,"A09, 6 a 10",T-14 / T-18,"RF-008, RF-010, RNF-007"
+5.5,Operación de fletes,Contexto Operación de fletes,"Documento, conformidad y carga peligrosa probados",Líder de Desarrollo,"A09, 6 a 10",T-14 / T-18,"RF-006, RF-011, RF-012"
+5.6,Liquidación y costeo,Contexto Liquidación y costeo,Costo en 24 horas y liquidación conciliada,Líder de Desarrollo,"A09, 6 a 10",T-14 / T-18,"RF-016, RF-017, RF-019"
+5.7,Portal del transportista,Portal del transportista con consentimientos,Revocación efectiva en cinco minutos,Líder de Desarrollo,"A09, 6 a 10",T-14 / T-18,"RF-020, RF-022"
+6.1,Sistema contable,Interfaz con el sistema contable para el documento de transporte,Cero folios duplicados en la prueba de reintentos,Líder de Integración,"A10, 6 a 9",T-14 / T-18,"RF-013, RF-014, RNF-006"
+6.2,Plataformas de posición,Ingesta de las plataformas de posicionamiento,Datos de cada plataforma factible en la vista única,Líder de Integración,"A10, 6 a 9",T-14 / T-18,"RF-008, RNF-003"
+6.3,Telemetría y tacógrafo,Lectura de telemetría de fábrica y descarga de tacógrafos,Archivo original conservado con su integridad,Líder de Integración,"A10, 6 a 9",T-14 / T-18,"RF-007, RNF-005"
+6.4,"Combustible, peaje y taller","Integración de combustible, peaje y sistema de taller",Componentes de costo recibidos por viaje,Líder de Integración,"A10, 6 a 9",T-14 / T-18,RF-025
+6.5,Sistema de 2013 y su retiro,Capa anticorrupción frente al sistema de 2013 y su retiro,Funciones retiradas en los meses 16 y 21 y consulta cerrada en el 24,Líder de Integración,"A10, 6 a 9, y 16 a 24",T-14 / T-18,
+7.1,Migración de vigencias,Migración de las cerca de 6.000 vigencias,Acta de conciliación con verificación documental de cada una,Líder de Datos,"A08, 6 a 9",T-14 / T-18,RF-005
+7.2,Migración histórica,"Migración histórica de maestros, viajes, liquidaciones y siniestros",Cinco años de viajes y seis de liquidaciones conciliados,Líder de Datos,6 a 12 y 19 a 24,T-14 / T-18,
+7.3,Repositorio analítico,Repositorio analítico,Costo por viaje en 24 horas y retención de RT-05.10,Líder de Datos,"A09, 4 a 10",T-14 / T-18,RNF-014
+8.1,Portal del cliente,Portal del cliente con posición autorizada,Posición en 2 minutos sólo con autorización vigente,Líder de Desarrollo,"A17, A20 y A22, 13 a 18",T-14 / T-18,RF-021
+8.2,Asignación de retornos,Asignación de retornos,Retorno propuesto antes de la descarga,Líder de Desarrollo,"A17, A20 y A22, 13 a 18",T-14 / T-18,RF-015
+8.3,Emisiones,Cálculo mensual de emisiones,Método verificable aplicado a dos meses completos,Líder de Desarrollo,"A17, A20 y A22, 13 a 18",T-14 / T-18,RF-023
+8.4,Talleres y mantenimiento,Talleres externos y mantenimiento por kilometraje real,Intervención registrada en la hoja de vida,Líder de Desarrollo,"A17, A20 y A22, 13 a 18",T-14 / T-18,"RF-024, RF-025"
+8.5,Dispersión de rendimiento,Modelo de dispersión de rendimiento,Modelo validado con doce meses de datos,Líder de Datos,"A17, A20 y A22, 13 a 18",T-14 / T-18,RF-018
+9.1,Anexo de adhesión,Anexo de adhesión al contrato de transporte,Validación jurídica del mandante,Líder Funcional,"A06, 2 a 3",T-14 / T-18,
+9.2,Campaña y enrolamiento,Campaña y enrolamiento de transportistas,104 anexos en el mes 16 y 134 en el 21,Líder Funcional,"A06 y A18, 2 a 21",T-14 / T-18,"RF-003, RF-026"
+9.3,Medición y refuerzo,Medición mensual y medidas de refuerzo,Ocho indicadores mensuales y medidas activadas si el mes 9 baja del 40 %,Líder Funcional,2 a 21,T-14 / T-18,
+10.1,Sistema e integración,Pruebas de sistema e integración,Hitos H4 y H9,Líder de Calidad y Pruebas,"A09, A12, A20 y A22",Propuesta mensual derivada de T-15,
+10.2,Desempeño y seguridad,"Pruebas de desempeño, estrés, resiliencia y seguridad",Hitos H5 y H10,Líder de Calidad y Pruebas,A12 y A22,Propuesta mensual derivada de T-15,
+10.3,Aceptación de usuario,Pruebas de aceptación de usuario,Acta por perfil de usuario,Líder de Calidad y Pruebas,A12 y A22,Propuesta mensual derivada de T-15,
+11.1,Capacitación,"Capacitación de torre, terminales y conductores",Torre y terminales certificados,Líder de Implantación,"A13, 10 a 12",T-14 / T-18,
+11.2,"Marcha blanca, Etapa 1",Marcha blanca y paso a producción de la Etapa 1,"Seis condiciones del Art. 17.3, hitos H6 y H7",Líder de Implantación,"A15 y A19, 13 a 16",T-14 / T-18,RNF-011
+11.3,"Marcha blanca, Etapa 2",Marcha blanca y paso a producción de la Etapa 2,"Seis condiciones del Art. 17.3, hitos H11 y H12",Líder de Implantación,"A24 y A25, 19 a 21",T-14 / T-18,
+11.4,Estabilización y traspaso,Estabilización y traspaso al área de tecnología del mandante,30 días hábiles con dotación en terminales y traspaso certificado,Líder de Operación,"A16 y A21, 13 a 17",T-14 / T-18,RNF-009
+12.1,Expediente verificable del transportista,"Innovación 1, producto o servicio",Indicador y meta de su ficha del Formulario T-19,Arquitecto de Solución,Según su ficha,T-19,
+12.2,Despliegue continuo y modular sin detención de flota,"Innovación 2, proceso",Indicador y meta de su ficha del Formulario T-19,Arquitecto de Solución,Según su ficha,T-19,
+12.3,Semirremolque conectado,"Innovación 3, tecnológica o de arquitectura",Indicador y meta de su ficha del Formulario T-19,Arquitecto de Solución,Según su ficha,T-19,
+12.4,Esquema de adhesión y propiedad del dispositivo,"Innovación 4, modelo de negocio o de contratación",Indicador y meta de su ficha del Formulario T-19,Líder Funcional,Según su ficha,T-19,
+12.5,Bienestar del conductor y descanso en parador seguro,"Innovación 5, experiencia de usuario o impacto social",Indicador y meta de su ficha del Formulario T-19,Arquitecto de Solución,Según su ficha,T-19,
+13.1,Mesa de servicio 24x7,Mesa de servicio 24x7x365,Niveles del Artículo 78.2 cumplidos cada mes,Líder de Operación,21 a 56,T-14 / T-18,RNF-009
+13.2,Operación de la plataforma,Operación de la plataforma y gestión del servicio,Disponibilidad y recuperación del Artículo 78.3,Líder de Operación,21 a 56,T-14 / T-18,
+13.3,Ciclo de vida del equipo a bordo,Ciclo de vida del equipo a bordo,Actualización y reposición sólo en terminal,Líder de Operación,21 a 56,T-14 / T-18,
+13.4,Mantención evolutiva,Mantención evolutiva,Cambios con tasa de fallo bajo el 5 %,Líder de Desarrollo,21 a 56,T-14 / T-18,

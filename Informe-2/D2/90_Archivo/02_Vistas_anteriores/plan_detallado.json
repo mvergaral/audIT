@@ -1,0 +1,1329 @@
+{
+  "paquetes": [
+    {
+      "codigo": "1.1",
+      "entregable": "Plan de dirección e informes del proyecto",
+      "aceptacion": "Plan aprobado en H1 y un informe en cada Comité de Proyecto",
+      "responsable": "Jefe de Proyecto",
+      "red_meses": "A01, 1 a 21",
+      "nombre": "Dirección y control",
+      "requisitos": "RNF-010",
+      "ventanas": [
+        [
+          1,
+          21
+        ]
+      ],
+      "origen_ventana": "T-14 / T-18"
+    },
+    {
+      "codigo": "1.2",
+      "entregable": "Plan de comunicaciones y registro de interesados",
+      "aceptacion": "Aprobado por el Comité Ejecutivo en el mes 1",
+      "responsable": "Jefe de Proyecto",
+      "red_meses": "A01, 1 a 21",
+      "nombre": "Interesados y comunicaciones",
+      "requisitos": "",
+      "ventanas": [
+        [
+          1,
+          21
+        ]
+      ],
+      "origen_ventana": "T-14 / T-18"
+    },
+    {
+      "codigo": "1.3",
+      "entregable": "Especificación de compra confirmada y actas de recepción del hardware del mandante",
+      "aceptacion": "Equipos del Formulario T-11 recibidos conforme antes del mes 6",
+      "responsable": "Líder de Implantación",
+      "red_meses": "A04, 1 a 5",
+      "nombre": "Hardware del mandante",
+      "requisitos": "",
+      "ventanas": [
+        [
+          1,
+          5
+        ]
+      ],
+      "origen_ventana": "T-14 / T-18"
+    },
+    {
+      "codigo": "2.1",
+      "entregable": "Línea base de alcance, catálogo y matriz de trazabilidad",
+      "aceptacion": "Aprobación de la contraparte, hito H1",
+      "responsable": "Líder Funcional",
+      "red_meses": "A02, 1 y 2",
+      "nombre": "Línea base y catálogo",
+      "requisitos": "",
+      "ventanas": [
+        [
+          1,
+          2
+        ]
+      ],
+      "origen_ventana": "T-14 / T-18"
+    },
+    {
+      "codigo": "2.2",
+      "entregable": "Mapa de cobertura móvil medida por tramo y punto de carga",
+      "aceptacion": "Rutas de la compañía medidas en terreno, según RT-03.24 del Caso",
+      "responsable": "Ingeniero de telecomunicaciones y campo",
+      "red_meses": "A03, 1 a 3",
+      "nombre": "Cobertura móvil en terreno",
+      "requisitos": "",
+      "ventanas": [
+        [
+          1,
+          3
+        ]
+      ],
+      "origen_ventana": "T-14 / T-18"
+    },
+    {
+      "codigo": "2.3",
+      "entregable": "Actas de factibilidad con los tres proveedores de posicionamiento y los fabricantes",
+      "aceptacion": "Respuesta escrita de cada uno sobre el acceso a sus datos",
+      "responsable": "Líder de Integración",
+      "red_meses": "A04, 1 a 4",
+      "nombre": "Factibilidad con terceros",
+      "requisitos": "",
+      "ventanas": [
+        [
+          1,
+          4
+        ]
+      ],
+      "origen_ventana": "T-14 / T-18"
+    },
+    {
+      "codigo": "2.4",
+      "entregable": "Documento de arquitectura, plan de seguridad y modelo de datos",
+      "aceptacion": "Aprobación de la contraparte, hito H2",
+      "responsable": "Arquitecto de Solución",
+      "red_meses": "A05, 2 a 4",
+      "nombre": "Arquitectura y datos",
+      "requisitos": "",
+      "ventanas": [
+        [
+          2,
+          4
+        ]
+      ],
+      "origen_ventana": "T-14 / T-18"
+    },
+    {
+      "codigo": "2.5",
+      "entregable": "Estudio de costo real por ruta y por contrato con datos históricos",
+      "aceptacion": "Entregado a finanzas antes de la renegociación de 2027",
+      "responsable": "Líder de Datos",
+      "red_meses": "Fuera de la red, 4 a 6",
+      "nombre": "Estudio de costo por ruta",
+      "requisitos": "RF-016",
+      "ventanas": [
+        [
+          4,
+          6
+        ]
+      ],
+      "origen_ventana": "T-14 / T-18"
+    },
+    {
+      "codigo": "3.1",
+      "entregable": "Ambientes de desarrollo, calidad, preproducción, producción y recuperación desde código",
+      "aceptacion": "Hito H3 con los cinco ambientes operativos",
+      "responsable": "Líder de Operación",
+      "red_meses": "A07, 4 a 6",
+      "nombre": "Ambientes y despliegue",
+      "requisitos": "",
+      "ventanas": [
+        [
+          4,
+          6
+        ]
+      ],
+      "origen_ventana": "T-14 / T-18"
+    },
+    {
+      "codigo": "3.2",
+      "entregable": "Identidad federada, bóveda de claves y cifrado de campo",
+      "aceptacion": "Prueba de seguridad ofensiva aprobada en H5",
+      "responsable": "Encargado de Seguridad de la Información",
+      "red_meses": "A07 y A12, 4 a 12",
+      "nombre": "Seguridad e identidad",
+      "requisitos": "RNF-013",
+      "ventanas": [
+        [
+          4,
+          12
+        ]
+      ],
+      "origen_ventana": "T-14 / T-18"
+    },
+    {
+      "codigo": "3.3",
+      "entregable": "Trazas, métricas y registros correlacionados",
+      "aceptacion": "Tablero operativo disponible en H3",
+      "responsable": "Líder de Operación",
+      "red_meses": "A07, 4 a 6",
+      "nombre": "Observabilidad",
+      "requisitos": "",
+      "ventanas": [
+        [
+          4,
+          6
+        ]
+      ],
+      "origen_ventana": "T-14 / T-18"
+    },
+    {
+      "codigo": "3.4",
+      "entregable": "Sala de San Bernardo remediada y cuatro gabinetes de terminal",
+      "aceptacion": "24 horas sin enlace probadas en cada sitio",
+      "responsable": "Líder de Operación",
+      "red_meses": "Paralelo a A07 a A12, 4 a 12",
+      "nombre": "San Bernardo y gabinetes",
+      "requisitos": "RNF-008",
+      "ventanas": [
+        [
+          4,
+          12
+        ]
+      ],
+      "origen_ventana": "T-14 / T-18"
+    },
+    {
+      "codigo": "4.1",
+      "entregable": "Firmware con operación de 72 horas y actualización en terminal",
+      "aceptacion": "Prueba de 72 horas sin pérdida de eventos",
+      "responsable": "Ingeniero de firmware",
+      "red_meses": "A11, 4 a 9",
+      "nombre": "Firmware y gestión remota",
+      "requisitos": "RF-009, RF-014, RF-027, RNF-001, RNF-002, RNF-005, RNF-008",
+      "ventanas": [
+        [
+          4,
+          9
+        ]
+      ],
+      "origen_ventana": "T-14 / T-18"
+    },
+    {
+      "codigo": "4.2",
+      "entregable": "182 equipos audIT montados camión por camión",
+      "aceptacion": "Acta de montaje por camión sin inmovilización adicional",
+      "responsable": "Líder de Implantación",
+      "red_meses": "A11 y A18, 6 a 10 y 16 a 18",
+      "nombre": "Montaje camión por camión",
+      "requisitos": "RNF-004",
+      "ventanas": [
+        [
+          6,
+          10
+        ],
+        [
+          16,
+          18
+        ]
+      ],
+      "origen_ventana": "T-14 / T-18"
+    },
+    {
+      "codigo": "4.3",
+      "entregable": "192 camiones de terceros en la vista única por su plataforma",
+      "aceptacion": "Posición recibida de cada plataforma que exporta",
+      "responsable": "Líder de Integración",
+      "red_meses": "A10 y A18, 6 a 10 y 13 a 15",
+      "nombre": "Integración de terceros",
+      "requisitos": "",
+      "ventanas": [
+        [
+          6,
+          10
+        ],
+        [
+          13,
+          15
+        ]
+      ],
+      "origen_ventana": "T-14 / T-18"
+    },
+    {
+      "codigo": "5.1",
+      "entregable": "Contexto Personas y cumplimiento",
+      "aceptacion": "Pruebas de sistema aprobadas en H4",
+      "responsable": "Líder de Desarrollo",
+      "red_meses": "A09, 6 a 10",
+      "nombre": "Personas y cumplimiento",
+      "requisitos": "RF-002, RF-003, RF-004, RF-005, RF-027, RNF-012",
+      "ventanas": [
+        [
+          6,
+          10
+        ]
+      ],
+      "origen_ventana": "T-14 / T-18"
+    },
+    {
+      "codigo": "5.2",
+      "entregable": "Contexto Flota y activos",
+      "aceptacion": "Pruebas de sistema aprobadas en H4",
+      "responsable": "Líder de Desarrollo",
+      "red_meses": "A09, 6 a 10",
+      "nombre": "Flota y activos",
+      "requisitos": "RF-026",
+      "ventanas": [
+        [
+          6,
+          10
+        ]
+      ],
+      "origen_ventana": "T-14 / T-18"
+    },
+    {
+      "codigo": "5.3",
+      "entregable": "Contexto Planificación y tráfico con verificación bloqueante",
+      "aceptacion": "Asignación en 30 segundos en el percentil 95",
+      "responsable": "Líder de Desarrollo",
+      "red_meses": "A09, 6 a 10",
+      "nombre": "Planificación y tráfico",
+      "requisitos": "RF-001, RF-028",
+      "ventanas": [
+        [
+          6,
+          10
+        ]
+      ],
+      "origen_ventana": "T-14 / T-18"
+    },
+    {
+      "codigo": "5.4",
+      "entregable": "Contexto Telemetría y geocercas",
+      "aceptacion": "Vista única y geocercas probadas con 72 horas sin enlace",
+      "responsable": "Líder de Desarrollo",
+      "red_meses": "A09, 6 a 10",
+      "nombre": "Telemetría y geocercas",
+      "requisitos": "RF-008, RF-010, RNF-007",
+      "ventanas": [
+        [
+          6,
+          10
+        ]
+      ],
+      "origen_ventana": "T-14 / T-18"
+    },
+    {
+      "codigo": "5.5",
+      "entregable": "Contexto Operación de fletes",
+      "aceptacion": "Documento, conformidad y carga peligrosa probados",
+      "responsable": "Líder de Desarrollo",
+      "red_meses": "A09, 6 a 10",
+      "nombre": "Operación de fletes",
+      "requisitos": "RF-006, RF-011, RF-012",
+      "ventanas": [
+        [
+          6,
+          10
+        ]
+      ],
+      "origen_ventana": "T-14 / T-18"
+    },
+    {
+      "codigo": "5.6",
+      "entregable": "Contexto Liquidación y costeo",
+      "aceptacion": "Costo en 24 horas y liquidación conciliada",
+      "responsable": "Líder de Desarrollo",
+      "red_meses": "A09, 6 a 10",
+      "nombre": "Liquidación y costeo",
+      "requisitos": "RF-016, RF-017, RF-019",
+      "ventanas": [
+        [
+          6,
+          10
+        ]
+      ],
+      "origen_ventana": "T-14 / T-18"
+    },
+    {
+      "codigo": "5.7",
+      "entregable": "Portal del transportista con consentimientos",
+      "aceptacion": "Revocación efectiva en cinco minutos",
+      "responsable": "Líder de Desarrollo",
+      "red_meses": "A09, 6 a 10",
+      "nombre": "Portal del transportista",
+      "requisitos": "RF-020, RF-022",
+      "ventanas": [
+        [
+          6,
+          10
+        ]
+      ],
+      "origen_ventana": "T-14 / T-18"
+    },
+    {
+      "codigo": "6.1",
+      "entregable": "Interfaz con el sistema contable para el documento de transporte",
+      "aceptacion": "Cero folios duplicados en la prueba de reintentos",
+      "responsable": "Líder de Integración",
+      "red_meses": "A10, 6 a 9",
+      "nombre": "Sistema contable",
+      "requisitos": "RF-013, RF-014, RNF-006",
+      "ventanas": [
+        [
+          6,
+          9
+        ]
+      ],
+      "origen_ventana": "T-14 / T-18"
+    },
+    {
+      "codigo": "6.2",
+      "entregable": "Ingesta de las plataformas de posicionamiento",
+      "aceptacion": "Datos de cada plataforma factible en la vista única",
+      "responsable": "Líder de Integración",
+      "red_meses": "A10, 6 a 9",
+      "nombre": "Plataformas de posición",
+      "requisitos": "RF-008, RNF-003",
+      "ventanas": [
+        [
+          6,
+          9
+        ]
+      ],
+      "origen_ventana": "T-14 / T-18"
+    },
+    {
+      "codigo": "6.3",
+      "entregable": "Lectura de telemetría de fábrica y descarga de tacógrafos",
+      "aceptacion": "Archivo original conservado con su integridad",
+      "responsable": "Líder de Integración",
+      "red_meses": "A10, 6 a 9",
+      "nombre": "Telemetría y tacógrafo",
+      "requisitos": "RF-007, RNF-005",
+      "ventanas": [
+        [
+          6,
+          9
+        ]
+      ],
+      "origen_ventana": "T-14 / T-18"
+    },
+    {
+      "codigo": "6.4",
+      "entregable": "Integración de combustible, peaje y sistema de taller",
+      "aceptacion": "Componentes de costo recibidos por viaje",
+      "responsable": "Líder de Integración",
+      "red_meses": "A10, 6 a 9",
+      "nombre": "Combustible, peaje y taller",
+      "requisitos": "RF-025",
+      "ventanas": [
+        [
+          6,
+          9
+        ]
+      ],
+      "origen_ventana": "T-14 / T-18"
+    },
+    {
+      "codigo": "6.5",
+      "entregable": "Capa anticorrupción frente al sistema de 2013 y su retiro",
+      "aceptacion": "Funciones retiradas en los meses 16 y 21 y consulta cerrada en el 24",
+      "responsable": "Líder de Integración",
+      "red_meses": "A10, 6 a 9, y 16 a 24",
+      "nombre": "Sistema de 2013 y su retiro",
+      "requisitos": "",
+      "ventanas": [
+        [
+          6,
+          9
+        ],
+        [
+          16,
+          24
+        ]
+      ],
+      "origen_ventana": "T-14 / T-18"
+    },
+    {
+      "codigo": "7.1",
+      "entregable": "Migración de las cerca de 6.000 vigencias",
+      "aceptacion": "Acta de conciliación con verificación documental de cada una",
+      "responsable": "Líder de Datos",
+      "red_meses": "A08, 6 a 9",
+      "nombre": "Migración de vigencias",
+      "requisitos": "RF-005",
+      "ventanas": [
+        [
+          6,
+          9
+        ]
+      ],
+      "origen_ventana": "T-14 / T-18"
+    },
+    {
+      "codigo": "7.2",
+      "entregable": "Migración histórica de maestros, viajes, liquidaciones y siniestros",
+      "aceptacion": "Cinco años de viajes y seis de liquidaciones conciliados",
+      "responsable": "Líder de Datos",
+      "red_meses": "6 a 12 y 19 a 24",
+      "nombre": "Migración histórica",
+      "requisitos": "",
+      "ventanas": [
+        [
+          6,
+          12
+        ],
+        [
+          19,
+          24
+        ]
+      ],
+      "origen_ventana": "T-14 / T-18"
+    },
+    {
+      "codigo": "7.3",
+      "entregable": "Repositorio analítico",
+      "aceptacion": "Costo por viaje en 24 horas y retención de RT-05.10",
+      "responsable": "Líder de Datos",
+      "red_meses": "A09, 4 a 10",
+      "nombre": "Repositorio analítico",
+      "requisitos": "RNF-014",
+      "ventanas": [
+        [
+          4,
+          10
+        ]
+      ],
+      "origen_ventana": "T-14 / T-18"
+    },
+    {
+      "codigo": "8.1",
+      "entregable": "Portal del cliente con posición autorizada",
+      "aceptacion": "Posición en 2 minutos sólo con autorización vigente",
+      "responsable": "Líder de Desarrollo",
+      "red_meses": "A17, A20 y A22, 13 a 18",
+      "nombre": "Portal del cliente",
+      "requisitos": "RF-021",
+      "ventanas": [
+        [
+          13,
+          18
+        ]
+      ],
+      "origen_ventana": "T-14 / T-18"
+    },
+    {
+      "codigo": "8.2",
+      "entregable": "Asignación de retornos",
+      "aceptacion": "Retorno propuesto antes de la descarga",
+      "responsable": "Líder de Desarrollo",
+      "red_meses": "A17, A20 y A22, 13 a 18",
+      "nombre": "Asignación de retornos",
+      "requisitos": "RF-015",
+      "ventanas": [
+        [
+          13,
+          18
+        ]
+      ],
+      "origen_ventana": "T-14 / T-18"
+    },
+    {
+      "codigo": "8.3",
+      "entregable": "Cálculo mensual de emisiones",
+      "aceptacion": "Método verificable aplicado a dos meses completos",
+      "responsable": "Líder de Desarrollo",
+      "red_meses": "A17, A20 y A22, 13 a 18",
+      "nombre": "Emisiones",
+      "requisitos": "RF-023",
+      "ventanas": [
+        [
+          13,
+          18
+        ]
+      ],
+      "origen_ventana": "T-14 / T-18"
+    },
+    {
+      "codigo": "8.4",
+      "entregable": "Talleres externos y mantenimiento por kilometraje real",
+      "aceptacion": "Intervención registrada en la hoja de vida",
+      "responsable": "Líder de Desarrollo",
+      "red_meses": "A17, A20 y A22, 13 a 18",
+      "nombre": "Talleres y mantenimiento",
+      "requisitos": "RF-024, RF-025",
+      "ventanas": [
+        [
+          13,
+          18
+        ]
+      ],
+      "origen_ventana": "T-14 / T-18"
+    },
+    {
+      "codigo": "8.5",
+      "entregable": "Modelo de dispersión de rendimiento",
+      "aceptacion": "Modelo validado con doce meses de datos",
+      "responsable": "Líder de Datos",
+      "red_meses": "A17, A20 y A22, 13 a 18",
+      "nombre": "Dispersión de rendimiento",
+      "requisitos": "RF-018",
+      "ventanas": [
+        [
+          13,
+          18
+        ]
+      ],
+      "origen_ventana": "T-14 / T-18"
+    },
+    {
+      "codigo": "9.1",
+      "entregable": "Anexo de adhesión al contrato de transporte",
+      "aceptacion": "Validación jurídica del mandante",
+      "responsable": "Líder Funcional",
+      "red_meses": "A06, 2 a 3",
+      "nombre": "Anexo de adhesión",
+      "requisitos": "",
+      "ventanas": [
+        [
+          2,
+          3
+        ]
+      ],
+      "origen_ventana": "T-14 / T-18"
+    },
+    {
+      "codigo": "9.2",
+      "entregable": "Campaña y enrolamiento de transportistas",
+      "aceptacion": "104 anexos en el mes 16 y 134 en el 21",
+      "responsable": "Líder Funcional",
+      "red_meses": "A06 y A18, 2 a 21",
+      "nombre": "Campaña y enrolamiento",
+      "requisitos": "RF-003, RF-026",
+      "ventanas": [
+        [
+          2,
+          21
+        ]
+      ],
+      "origen_ventana": "T-14 / T-18"
+    },
+    {
+      "codigo": "9.3",
+      "entregable": "Medición mensual y medidas de refuerzo",
+      "aceptacion": "Ocho indicadores mensuales y medidas activadas si el mes 9 baja del 40 %",
+      "responsable": "Líder Funcional",
+      "red_meses": "2 a 21",
+      "nombre": "Medición y refuerzo",
+      "requisitos": "",
+      "ventanas": [
+        [
+          2,
+          21
+        ]
+      ],
+      "origen_ventana": "T-14 / T-18"
+    },
+    {
+      "codigo": "10.1",
+      "entregable": "Pruebas de sistema e integración",
+      "aceptacion": "Hitos H4 y H9",
+      "responsable": "Líder de Calidad y Pruebas",
+      "red_meses": "A09, A12, A20 y A22",
+      "nombre": "Sistema e integración",
+      "requisitos": "",
+      "ventanas": [
+        [
+          6,
+          10
+        ],
+        [
+          15,
+          17
+        ]
+      ],
+      "origen_ventana": "Propuesta mensual derivada de T-15"
+    },
+    {
+      "codigo": "10.2",
+      "entregable": "Pruebas de desempeño, estrés, resiliencia y seguridad",
+      "aceptacion": "Hitos H5 y H10",
+      "responsable": "Líder de Calidad y Pruebas",
+      "red_meses": "A12 y A22",
+      "nombre": "Desempeño y seguridad",
+      "requisitos": "",
+      "ventanas": [
+        [
+          10,
+          12
+        ],
+        [
+          17,
+          18
+        ]
+      ],
+      "origen_ventana": "Propuesta mensual derivada de T-15"
+    },
+    {
+      "codigo": "10.3",
+      "entregable": "Pruebas de aceptación de usuario",
+      "aceptacion": "Acta por perfil de usuario",
+      "responsable": "Líder de Calidad y Pruebas",
+      "red_meses": "A12 y A22",
+      "nombre": "Aceptación de usuario",
+      "requisitos": "",
+      "ventanas": [
+        [
+          10,
+          12
+        ],
+        [
+          17,
+          18
+        ]
+      ],
+      "origen_ventana": "Propuesta mensual derivada de T-15"
+    },
+    {
+      "codigo": "11.1",
+      "entregable": "Capacitación de torre, terminales y conductores",
+      "aceptacion": "Torre y terminales certificados",
+      "responsable": "Líder de Implantación",
+      "red_meses": "A13, 10 a 12",
+      "nombre": "Capacitación",
+      "requisitos": "",
+      "ventanas": [
+        [
+          10,
+          12
+        ]
+      ],
+      "origen_ventana": "T-14 / T-18"
+    },
+    {
+      "codigo": "11.2",
+      "entregable": "Marcha blanca y paso a producción de la Etapa 1",
+      "aceptacion": "Seis condiciones del Art. 17.3, hitos H6 y H7",
+      "responsable": "Líder de Implantación",
+      "red_meses": "A15 y A19, 13 a 16",
+      "nombre": "Marcha blanca, Etapa 1",
+      "requisitos": "RNF-011",
+      "ventanas": [
+        [
+          13,
+          15
+        ],
+        [
+          16,
+          16
+        ]
+      ],
+      "origen_ventana": "T-14 / T-18"
+    },
+    {
+      "codigo": "11.3",
+      "entregable": "Marcha blanca y paso a producción de la Etapa 2",
+      "aceptacion": "Seis condiciones del Art. 17.3, hitos H11 y H12",
+      "responsable": "Líder de Implantación",
+      "red_meses": "A24 y A25, 19 a 21",
+      "nombre": "Marcha blanca, Etapa 2",
+      "requisitos": "",
+      "ventanas": [
+        [
+          19,
+          20
+        ],
+        [
+          21,
+          21
+        ]
+      ],
+      "origen_ventana": "T-14 / T-18"
+    },
+    {
+      "codigo": "11.4",
+      "entregable": "Estabilización y traspaso al área de tecnología del mandante",
+      "aceptacion": "30 días hábiles con dotación en terminales y traspaso certificado",
+      "responsable": "Líder de Operación",
+      "red_meses": "A16 y A21, 13 a 17",
+      "nombre": "Estabilización y traspaso",
+      "requisitos": "RNF-009",
+      "ventanas": [
+        [
+          13,
+          15
+        ],
+        [
+          16,
+          17
+        ]
+      ],
+      "origen_ventana": "T-14 / T-18"
+    },
+    {
+      "codigo": "12.1",
+      "entregable": "Innovación 1, producto o servicio",
+      "aceptacion": "Indicador y meta de su ficha del Formulario T-19",
+      "responsable": "Arquitecto de Solución",
+      "red_meses": "Según su ficha",
+      "nombre": "Expediente verificable del transportista",
+      "requisitos": "",
+      "ventanas": [
+        [
+          4,
+          4
+        ],
+        [
+          8,
+          10
+        ],
+        [
+          13,
+          15
+        ]
+      ],
+      "origen_ventana": "T-19"
+    },
+    {
+      "codigo": "12.2",
+      "entregable": "Innovación 2, proceso",
+      "aceptacion": "Indicador y meta de su ficha del Formulario T-19",
+      "responsable": "Arquitecto de Solución",
+      "red_meses": "Según su ficha",
+      "nombre": "Despliegue continuo y modular sin detención de flota",
+      "requisitos": "",
+      "ventanas": [
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          8
+        ]
+      ],
+      "origen_ventana": "T-19"
+    },
+    {
+      "codigo": "12.3",
+      "entregable": "Innovación 3, tecnológica o de arquitectura",
+      "aceptacion": "Indicador y meta de su ficha del Formulario T-19",
+      "responsable": "Arquitecto de Solución",
+      "red_meses": "Según su ficha",
+      "nombre": "Semirremolque conectado",
+      "requisitos": "",
+      "ventanas": [
+        [
+          4,
+          9
+        ],
+        [
+          13,
+          15
+        ]
+      ],
+      "origen_ventana": "T-19"
+    },
+    {
+      "codigo": "12.4",
+      "entregable": "Innovación 4, modelo de negocio o de contratación",
+      "aceptacion": "Indicador y meta de su ficha del Formulario T-19",
+      "responsable": "Líder Funcional",
+      "red_meses": "Según su ficha",
+      "nombre": "Esquema de adhesión y propiedad del dispositivo",
+      "requisitos": "",
+      "ventanas": [
+        [
+          2,
+          3
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          13,
+          21
+        ]
+      ],
+      "origen_ventana": "T-19"
+    },
+    {
+      "codigo": "12.5",
+      "entregable": "Innovación 5, experiencia de usuario o impacto social",
+      "aceptacion": "Indicador y meta de su ficha del Formulario T-19",
+      "responsable": "Arquitecto de Solución",
+      "red_meses": "Según su ficha",
+      "nombre": "Bienestar del conductor y descanso en parador seguro",
+      "requisitos": "",
+      "ventanas": [
+        [
+          3,
+          6
+        ],
+        [
+          7,
+          10
+        ],
+        [
+          13,
+          15
+        ]
+      ],
+      "origen_ventana": "T-19"
+    },
+    {
+      "codigo": "13.1",
+      "entregable": "Mesa de servicio 24x7x365",
+      "aceptacion": "Niveles del Artículo 78.2 cumplidos cada mes",
+      "responsable": "Líder de Operación",
+      "red_meses": "21 a 56",
+      "nombre": "Mesa de servicio 24x7",
+      "requisitos": "RNF-009",
+      "ventanas": [
+        [
+          21,
+          56
+        ]
+      ],
+      "origen_ventana": "T-14 / T-18"
+    },
+    {
+      "codigo": "13.2",
+      "entregable": "Operación de la plataforma y gestión del servicio",
+      "aceptacion": "Disponibilidad y recuperación del Artículo 78.3",
+      "responsable": "Líder de Operación",
+      "red_meses": "21 a 56",
+      "nombre": "Operación de la plataforma",
+      "requisitos": "",
+      "ventanas": [
+        [
+          21,
+          56
+        ]
+      ],
+      "origen_ventana": "T-14 / T-18"
+    },
+    {
+      "codigo": "13.3",
+      "entregable": "Ciclo de vida del equipo a bordo",
+      "aceptacion": "Actualización y reposición sólo en terminal",
+      "responsable": "Líder de Operación",
+      "red_meses": "21 a 56",
+      "nombre": "Ciclo de vida del equipo a bordo",
+      "requisitos": "",
+      "ventanas": [
+        [
+          21,
+          56
+        ]
+      ],
+      "origen_ventana": "T-14 / T-18"
+    },
+    {
+      "codigo": "13.4",
+      "entregable": "Mantención evolutiva",
+      "aceptacion": "Cambios con tasa de fallo bajo el 5 %",
+      "responsable": "Líder de Desarrollo",
+      "red_meses": "21 a 56",
+      "nombre": "Mantención evolutiva",
+      "requisitos": "",
+      "ventanas": [
+        [
+          21,
+          56
+        ]
+      ],
+      "origen_ventana": "T-14 / T-18"
+    }
+  ],
+  "red": [
+    {
+      "id": "A01",
+      "actividad": "Inicio del proyecto: plan de dirección aprobado y equipo constituido",
+      "predecesoras": "Ninguna",
+      "duracion": "5",
+      "inicio_temprano": "0",
+      "fin_temprano": "5",
+      "inicio_tardio": "0",
+      "fin_tardio": "5",
+      "holgura_total": "0",
+      "holgura_libre": "0",
+      "critica": "Sí"
+    },
+    {
+      "id": "A02",
+      "actividad": "Levantamiento de procesos en los cinco terminales, línea base de alcance y matriz de trazabilidad (H1)",
+      "predecesoras": "A01",
+      "duracion": "33",
+      "inicio_temprano": "5",
+      "fin_temprano": "38",
+      "inicio_tardio": "5",
+      "fin_tardio": "38",
+      "holgura_total": "0",
+      "holgura_libre": "0",
+      "critica": "Sí"
+    },
+    {
+      "id": "A03",
+      "actividad": "Caracterización en terreno de la cobertura móvil de las rutas",
+      "predecesoras": "A01",
+      "duracion": "45",
+      "inicio_temprano": "5",
+      "fin_temprano": "50",
+      "inicio_tardio": "87",
+      "fin_tardio": "132",
+      "holgura_total": "82",
+      "holgura_libre": "62",
+      "critica": "No"
+    },
+    {
+      "id": "A04",
+      "actividad": "Verificación de factibilidad con los tres proveedores de posicionamiento y con los fabricantes de los camiones con telemetría de fábrica",
+      "predecesoras": "A01",
+      "duracion": "60",
+      "inicio_temprano": "5",
+      "fin_temprano": "65",
+      "inicio_tardio": "66",
+      "fin_tardio": "126",
+      "holgura_total": "61",
+      "holgura_libre": "47",
+      "critica": "No"
+    },
+    {
+      "id": "A05",
+      "actividad": "Arquitectura, plan de seguridad y modelo de datos (H2)",
+      "predecesoras": "A02",
+      "duracion": "38",
+      "inicio_temprano": "38",
+      "fin_temprano": "76",
+      "inicio_tardio": "38",
+      "fin_tardio": "76",
+      "holgura_total": "0",
+      "holgura_libre": "0",
+      "critica": "Sí"
+    },
+    {
+      "id": "A06",
+      "actividad": "Plan de adhesión de los 148 transportistas subcontratados: contrato, incentivo y piloto",
+      "predecesoras": "A02",
+      "duracion": "120",
+      "inicio_temprano": "38",
+      "fin_temprano": "158",
+      "inicio_tardio": "100",
+      "fin_tardio": "220",
+      "holgura_total": "62",
+      "holgura_libre": "34",
+      "critica": "No"
+    },
+    {
+      "id": "A07",
+      "actividad": "Infraestructura híbrida y ambientes DEV, QA, PREPROD y PROD con observabilidad (H3)",
+      "predecesoras": "A05",
+      "duracion": "36",
+      "inicio_temprano": "76",
+      "fin_temprano": "112",
+      "inicio_tardio": "76",
+      "fin_tardio": "112",
+      "holgura_total": "0",
+      "holgura_libre": "0",
+      "critica": "Sí"
+    },
+    {
+      "id": "A08",
+      "actividad": "Migración y verificación documental de las 6.000 vigencias de cuatro planillas",
+      "predecesoras": "A05, A07",
+      "duracion": "60",
+      "inicio_temprano": "112",
+      "fin_temprano": "172",
+      "inicio_tardio": "132",
+      "fin_tardio": "192",
+      "holgura_total": "20",
+      "holgura_libre": "20",
+      "critica": "No"
+    },
+    {
+      "id": "A09",
+      "actividad": "Construcción de la Etapa 1 en ocho sprints de dos semanas y entrega para pruebas (H4)",
+      "predecesoras": "A07",
+      "duracion": "80",
+      "inicio_temprano": "112",
+      "fin_temprano": "192",
+      "inicio_tardio": "112",
+      "fin_tardio": "192",
+      "holgura_total": "0",
+      "holgura_libre": "0",
+      "critica": "Sí"
+    },
+    {
+      "id": "A10",
+      "actividad": "Integraciones con el sistema de gestión de transporte de 2013, el sistema contable y las tres plataformas de posicionamiento",
+      "predecesoras": "A04, A07",
+      "duracion": "66",
+      "inicio_temprano": "112",
+      "fin_temprano": "178",
+      "inicio_tardio": "126",
+      "fin_tardio": "192",
+      "holgura_total": "14",
+      "holgura_libre": "14",
+      "critica": "No"
+    },
+    {
+      "id": "A11",
+      "actividad": "Piloto de equipamiento a bordo por familia de camión, instalado en terminal camión por camión",
+      "predecesoras": "A03, A07",
+      "duracion": "60",
+      "inicio_temprano": "112",
+      "fin_temprano": "172",
+      "inicio_tardio": "132",
+      "fin_tardio": "192",
+      "holgura_total": "20",
+      "holgura_libre": "20",
+      "critica": "No"
+    },
+    {
+      "id": "A12",
+      "actividad": "Pruebas integrales y certificación de la Etapa 1: aceptación de usuario, carga, resiliencia y seguridad ofensiva (H5)",
+      "predecesoras": "A08, A09, A10, A11",
+      "duracion": "34",
+      "inicio_temprano": "192",
+      "fin_temprano": "226",
+      "inicio_tardio": "192",
+      "fin_tardio": "226",
+      "holgura_total": "0",
+      "holgura_libre": "0",
+      "critica": "Sí"
+    },
+    {
+      "id": "A13",
+      "actividad": "Capacitación de conductores en los terminales y de la torre 24x7",
+      "predecesoras": "A06, A09",
+      "duracion": "40",
+      "inicio_temprano": "192",
+      "fin_temprano": "232",
+      "inicio_tardio": "220",
+      "fin_tardio": "260",
+      "holgura_total": "28",
+      "holgura_libre": "8",
+      "critica": "No"
+    },
+    {
+      "id": "A14",
+      "actividad": "Reserva de contingencia de cronograma de la Etapa 1",
+      "predecesoras": "A12",
+      "duracion": "14",
+      "inicio_temprano": "226",
+      "fin_temprano": "240",
+      "inicio_tardio": "226",
+      "fin_tardio": "240",
+      "holgura_total": "0",
+      "holgura_libre": "0",
+      "critica": "Sí"
+    },
+    {
+      "id": "A15",
+      "actividad": "Marcha blanca de la Etapa 1, meses 13 a 15, con medición diaria y reversión activa (H6 al inicio)",
+      "predecesoras": "A13, A14",
+      "duracion": "60",
+      "inicio_temprano": "240",
+      "fin_temprano": "300",
+      "inicio_tardio": "260",
+      "fin_tardio": "320",
+      "holgura_total": "20",
+      "holgura_libre": "0",
+      "critica": "No"
+    },
+    {
+      "id": "A16",
+      "actividad": "Transferencia tecnológica y certificación del equipo de tecnologías de información del mandante",
+      "predecesoras": "A14",
+      "duracion": "50",
+      "inicio_temprano": "240",
+      "fin_temprano": "290",
+      "inicio_tardio": "270",
+      "fin_tardio": "320",
+      "holgura_total": "30",
+      "holgura_libre": "10",
+      "critica": "No"
+    },
+    {
+      "id": "A17",
+      "actividad": "Levantamiento y diseño detallado de la Etapa 2 (H8)",
+      "predecesoras": "A14",
+      "duracion": "36",
+      "inicio_temprano": "240",
+      "fin_temprano": "276",
+      "inicio_tardio": "240",
+      "fin_tardio": "276",
+      "holgura_total": "0",
+      "holgura_libre": "0",
+      "critica": "Sí"
+    },
+    {
+      "id": "A18",
+      "actividad": "Escalamiento telemático e instalación progresiva a bordo",
+      "predecesoras": "A06, A11, A14",
+      "duracion": "120",
+      "inicio_temprano": "240",
+      "fin_temprano": "360",
+      "inicio_tardio": "280",
+      "fin_tardio": "400",
+      "holgura_total": "40",
+      "holgura_libre": "40",
+      "critica": "No"
+    },
+    {
+      "id": "A19",
+      "actividad": "Paso a producción de la Etapa 1 y acta de cierre de la marcha blanca (H7)",
+      "predecesoras": "A15, A16",
+      "duracion": "10",
+      "inicio_temprano": "300",
+      "fin_temprano": "310",
+      "inicio_tardio": "320",
+      "fin_tardio": "330",
+      "holgura_total": "20",
+      "holgura_libre": "0",
+      "critica": "No"
+    },
+    {
+      "id": "A20",
+      "actividad": "Construcción de la Etapa 2 en cinco sprints de dos semanas y entrega para pruebas (H9)",
+      "predecesoras": "A17",
+      "duracion": "50",
+      "inicio_temprano": "276",
+      "fin_temprano": "326",
+      "inicio_tardio": "276",
+      "fin_tardio": "326",
+      "holgura_total": "0",
+      "holgura_libre": "0",
+      "critica": "Sí"
+    },
+    {
+      "id": "A21",
+      "actividad": "Estabilización posterior al paso a producción de la Etapa 1, con presencia en terminales en el relevo",
+      "predecesoras": "A19",
+      "duracion": "30",
+      "inicio_temprano": "310",
+      "fin_temprano": "340",
+      "inicio_tardio": "330",
+      "fin_tardio": "360",
+      "holgura_total": "20",
+      "holgura_libre": "20",
+      "critica": "No"
+    },
+    {
+      "id": "A22",
+      "actividad": "Certificación de la Etapa 2 y cierre del desarrollo (H10)",
+      "predecesoras": "A20",
+      "duracion": "24",
+      "inicio_temprano": "326",
+      "fin_temprano": "350",
+      "inicio_tardio": "326",
+      "fin_tardio": "350",
+      "holgura_total": "0",
+      "holgura_libre": "0",
+      "critica": "Sí"
+    },
+    {
+      "id": "A23",
+      "actividad": "Reserva de contingencia de cronograma de la Etapa 2",
+      "predecesoras": "A22",
+      "duracion": "10",
+      "inicio_temprano": "350",
+      "fin_temprano": "360",
+      "inicio_tardio": "350",
+      "fin_tardio": "360",
+      "holgura_total": "0",
+      "holgura_libre": "0",
+      "critica": "Sí"
+    },
+    {
+      "id": "A24",
+      "actividad": "Marcha blanca de la Etapa 2 en convivencia con la Etapa 1 en producción (H11 al inicio)",
+      "predecesoras": "A21, A23",
+      "duracion": "40",
+      "inicio_temprano": "360",
+      "fin_temprano": "400",
+      "inicio_tardio": "360",
+      "fin_tardio": "400",
+      "holgura_total": "0",
+      "holgura_libre": "0",
+      "critica": "Sí"
+    },
+    {
+      "id": "A25",
+      "actividad": "Paso a producción de la Etapa 2 y aceptación final del proyecto (H12)",
+      "predecesoras": "A18, A24",
+      "duracion": "20",
+      "inicio_temprano": "400",
+      "fin_temprano": "420",
+      "inicio_tardio": "400",
+      "fin_tardio": "420",
+      "holgura_total": "0",
+      "holgura_libre": "0",
+      "critica": "Sí"
+    }
+  ],
+  "hitos": [
+    [
+      "H1",
+      2,
+      "Línea base de alcance"
+    ],
+    [
+      "H2",
+      4,
+      "Arquitectura, seguridad y datos"
+    ],
+    [
+      "H3",
+      6,
+      "Ambientes habilitados"
+    ],
+    [
+      "H4",
+      10,
+      "Etapa 1 para pruebas"
+    ],
+    [
+      "H5",
+      12,
+      "Certificación Etapa 1"
+    ],
+    [
+      "H6",
+      13,
+      "Inicio marcha blanca Etapa 1"
+    ],
+    [
+      "H7",
+      16,
+      "Producción Etapa 1"
+    ],
+    [
+      "H8",
+      14,
+      "Línea base Etapa 2"
+    ],
+    [
+      "H9",
+      17,
+      "Etapa 2 para pruebas"
+    ],
+    [
+      "H10",
+      18,
+      "Certificación Etapa 2"
+    ],
+    [
+      "H11",
+      19,
+      "Inicio marcha blanca Etapa 2"
+    ],
+    [
+      "H12",
+      21,
+      "Producción E2 / aceptación final"
+    ]
+  ]
+}

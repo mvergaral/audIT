@@ -1,0 +1,26 @@
+﻿id,actividad,predecesoras,duracion,inicio_temprano,fin_temprano,inicio_tardio,fin_tardio,holgura_total,holgura_libre,critica
+A01,Inicio del proyecto: plan de dirección aprobado y equipo constituido,Ninguna,5,0,5,0,5,0,0,Sí
+A02,"Levantamiento de procesos en los cinco terminales, línea base de alcance y matriz de trazabilidad (H1)",A01,33,5,38,5,38,0,0,Sí
+A03,Caracterización en terreno de la cobertura móvil de las rutas,A01,45,5,50,87,132,82,62,No
+A04,Verificación de factibilidad con los tres proveedores de posicionamiento y con los fabricantes de los camiones con telemetría de fábrica,A01,60,5,65,66,126,61,47,No
+A05,"Arquitectura, plan de seguridad y modelo de datos (H2)",A02,38,38,76,38,76,0,0,Sí
+A06,"Plan de adhesión de los 148 transportistas subcontratados: contrato, incentivo y piloto",A02,120,38,158,100,220,62,34,No
+A07,"Infraestructura híbrida y ambientes DEV, QA, PREPROD y PROD con observabilidad (H3)",A05,36,76,112,76,112,0,0,Sí
+A08,Migración y verificación documental de las 6.000 vigencias de cuatro planillas,"A05, A07",60,112,172,132,192,20,20,No
+A09,Construcción de la Etapa 1 en ocho sprints de dos semanas y entrega para pruebas (H4),A07,80,112,192,112,192,0,0,Sí
+A10,"Integraciones con el sistema de gestión de transporte de 2013, el sistema contable y las tres plataformas de posicionamiento","A04, A07",66,112,178,126,192,14,14,No
+A11,"Piloto de equipamiento a bordo por familia de camión, instalado en terminal camión por camión","A03, A07",60,112,172,132,192,20,20,No
+A12,"Pruebas integrales y certificación de la Etapa 1: aceptación de usuario, carga, resiliencia y seguridad ofensiva (H5)","A08, A09, A10, A11",34,192,226,192,226,0,0,Sí
+A13,Capacitación de conductores en los terminales y de la torre 24x7,"A06, A09",40,192,232,220,260,28,8,No
+A14,Reserva de contingencia de cronograma de la Etapa 1,A12,14,226,240,226,240,0,0,Sí
+A15,"Marcha blanca de la Etapa 1, meses 13 a 15, con medición diaria y reversión activa (H6 al inicio)","A13, A14",60,240,300,260,320,20,0,No
+A16,Transferencia tecnológica y certificación del equipo de tecnologías de información del mandante,A14,50,240,290,270,320,30,10,No
+A17,Levantamiento y diseño detallado de la Etapa 2 (H8),A14,36,240,276,240,276,0,0,Sí
+A18,Escalamiento telemático e instalación progresiva a bordo,"A06, A11, A14",120,240,360,280,400,40,40,No
+A19,Paso a producción de la Etapa 1 y acta de cierre de la marcha blanca (H7),"A15, A16",10,300,310,320,330,20,0,No
+A20,Construcción de la Etapa 2 en cinco sprints de dos semanas y entrega para pruebas (H9),A17,50,276,326,276,326,0,0,Sí
+A21,"Estabilización posterior al paso a producción de la Etapa 1, con presencia en terminales en el relevo",A19,30,310,340,330,360,20,20,No
+A22,Certificación de la Etapa 2 y cierre del desarrollo (H10),A20,24,326,350,326,350,0,0,Sí
+A23,Reserva de contingencia de cronograma de la Etapa 2,A22,10,350,360,350,360,0,0,Sí
+A24,Marcha blanca de la Etapa 2 en convivencia con la Etapa 1 en producción (H11 al inicio),"A21, A23",40,360,400,360,400,0,0,Sí
+A25,Paso a producción de la Etapa 2 y aceptación final del proyecto (H12),"A18, A24",20,400,420,400,420,0,0,Sí
