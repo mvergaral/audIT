@@ -198,8 +198,8 @@ y los sistemas con los que conviven.
 
 Fuente: Elaboración propia.
 
-En la figura, cada contexto tiene su propio lenguaje y sus propios datos. Despacho puede bloquear un
-viaje sin conocer por dentro a Personas ni a Flota, porque les pregunta.
+En la figura, cada contexto tiene su propio lenguaje y sus propios datos. Planificación y tráfico puede bloquear un
+viaje sin conocer por dentro a Personas y cumplimiento ni a Flota y activos, porque les pregunta.
 
 ### 4.1.5 Convivencia con lo que ya existe
 
@@ -349,6 +349,16 @@ Fuente: Elaboración propia.
 La figura sigue la asignación desde la puerta de enlace hasta la persistencia, con los mamparos y
 cortacircuitos que la separan de las integraciones externas.
 
+El detalle paso a paso de los mensajes y validaciones concurrentes de la asignación se ilustra en la Figura 4.4.
+
+![Figura 4.4. Diagrama de secuencia de la verificación bloqueante del despacho](../../figuras/04-arquitectura/4-3-asignacion.png)
+
+*Figura 4.4. Diagrama de secuencia de la verificación bloqueante del despacho*
+
+Fuente: Elaboración propia.
+
+Como ilustra la Figura 4.4, la transacción ejecuta la validación paralela de jornada, tracto y rampla, persistiendo de manera atómica con aislamiento serializable en PostgreSQL y emitiendo el token de despacho únicamente tras confirmar la invariante.
+
 ### 4.1.10 Idempotencia y ventana de deduplicación
 
 RT-02.06 exige escrituras idempotentes. Cada operación lleva una clave única que se retiene durante
@@ -394,7 +404,7 @@ responde. Esa declaración se entrega en la Tabla 4.12.
 
 | Contraparte | Modo | Volumen esperado | Ventana de la contraparte | Si no responde |
 |---|---|---|---|---|
-| Sistema contable de 2013 | Asíncrono | Documentos y asientos de 96.000 viajes al año | Horario administrativo, sin compromiso 24x7 | Cortacircuito y encolado. La operación no se detiene |
+| Sistema contable y de facturación | Asíncrono | Documentos y asientos de 96.000 viajes al año | Horario administrativo, sin compromiso 24x7 | Cortacircuito y encolado. La operación no se detiene |
 | Plataformas de posicionamiento de terceros | Asíncrono | Posición de los camiones de terceros con dispositivo | No declarada por el Caso | Última posición conocida con su antigüedad visible, nunca una posición sin fecha |
 | Telemetría de fábrica | Asíncrono | 61 tractocamiones, solo lectura | Sujeta a la autorización de cada fabricante | El viaje se registra igual con el dispositivo a bordo |
 | Red de estaciones de servicio | Por lotes | 74.000 abastecimientos al año | Mensual, con hasta 40 días de desfase | El costo se emite preliminar y se marca como pendiente |
@@ -409,11 +419,11 @@ plataformas de terceros y de la autoridad tributaria no está declarada en las b
 mandante. RT-05.22 exige además carga y descarga masiva en formatos abiertos, con validación previa,
 informe de errores por registro y procesamiento parcial. Esa capacidad es la que sostiene la migración
 de las cerca de 6.000 vigencias y la ingesta mensual de combustible y peajes. La
-Figura 4.4 dibuja el mapa de integraciones.
+Figura 4.5 dibuja el mapa de integraciones.
 
-![Figura 4.4. Mapa de integraciones. Sistemas internos, fuentes de terreno y contrapartes externas](../../figuras/04-arquitectura/LogicaIntegraciones.png)
+![Figura 4.5. Mapa de integraciones. Sistemas internos, fuentes de terreno y contrapartes externas](../../figuras/04-arquitectura/LogicaIntegraciones.png)
 
-*Figura 4.4. Mapa de integraciones. Sistemas internos, fuentes de terreno y contrapartes externas*
+*Figura 4.5. Mapa de integraciones. Sistemas internos, fuentes de terreno y contrapartes externas*
 
 Fuente: Elaboración propia.
 
@@ -444,17 +454,39 @@ RT-03.07. Las piezas de la capa se listan en la Tabla 4.13.
 
 *Fuente: elaboración propia.*
 
-La Figura 4.5 muestra la integración con el sistema contable a través de esa capa.
+La Figura 4.6 muestra la integración con el sistema contable a través de esa capa.
 
-![Figura 4.5. Integración con el sistema contable heredado a través de la capa anticorrupción](../../figuras/04-arquitectura/audit-figura-4.4-acl.png)
+![Figura 4.6. Integración con el sistema contable heredado a través de la capa anticorrupción](../../figuras/04-arquitectura/audit-figura-4.4-acl.png)
 
-*Figura 4.5. Integración con el sistema contable heredado a través de la capa anticorrupción*
+*Figura 4.6. Integración con el sistema contable heredado a través de la capa anticorrupción*
 
 Fuente: Elaboración propia.
 
 El sistema contable queda detrás de la capa y solo recibe eventos ya traducidos.
 
-### 4.1.13 Fuentes con desfase y telemetría del vehículo
+### 4.1.13 Emisión del documento de transporte bajo Restricción 8
+
+La Restricción 8 de las Bases Técnicas (Caso, capítulo 10, p. 24) impone una regla absoluta: el sistema contable y de facturación existente de Curimón es el único emisor fiscal del documento tributario de transporte (DET). Ningún computador embarcado ni servidor de terminal de audIT emite documentos tributarios. El requerimiento RF-014 exige que el DET esté válidamente timbrado por el Servicio de Impuestos Internos (SII) antes de que el camión inicie el movimiento en la vía pública; de lo contrario, el despacho se bloquea determinísticamente.
+
+La Figura 4.7 muestra los dos caminos de emisión del documento de transporte conforme a la Restricción 8: la emisión anticipada desde la orden cuando los datos se conocen al programar el despacho, y la emisión interactiva por enlace satelital cuando la carga solo se conoce en faenas remotas sin cobertura.
+
+![Figura 4.7. Mecanismo de emisión del documento de transporte en puntos sin cobertura: emisión anticipada y vía enlace satelital Iridium](../../figuras/04-arquitectura/documento-sin-cobertura.png)
+
+*Figura 4.7. Mecanismo de emisión del documento de transporte en puntos sin cobertura: emisión anticipada y vía enlace satelital Iridium*
+
+Fuente: Elaboración propia.
+
+En ambos caminos se garantiza que el computador a bordo jamás custodie certificados de firma digital ni folios locales. En el camino satelital, el iWave G26I compacta una microtrama binaria de hasta 340 bytes hacia la constelación Iridium SBD, la cual ingresa por IoT Hub y la capa anticorrupción hacia el sistema contable corporativo, retornando el timbre fiscal comprimido antes de autorizar la salida legal del recinto. Complementariamente, la secuencia de interacción temporal y comprobación de pre-movimiento se formaliza en la Figura 4.8.
+
+![Figura 4.8. Secuencia de emisión del DET bajo Restricción 8 y comprobación antes del movimiento](../../figuras/04-arquitectura/4-4-documento.png)
+
+*Figura 4.8. Secuencia de emisión del DET bajo Restricción 8 y comprobación antes del movimiento*
+
+Fuente: Elaboración propia.
+
+Esta doble verificación garantiza trazabilidad fiscal completa ante el SII y cero detenciones de flota en faenas mineras o agrícolas desconectadas.
+
+### 4.1.14 Fuentes con desfase y telemetría del vehículo
 
 Dos integraciones no entregan datos en el momento en que ocurren y la arquitectura las trata como
 tales. El consumo de combustible llega con hasta 40 días de desfase (Caso, numeral 7.3, p. 15), y los
@@ -500,7 +532,7 @@ Tabla 4.14.
 Todos son parámetros de lectura. Ninguno escribe sobre el bus del vehículo, y esa restricción es de
 diseño y no de configuración.
 
-### 4.1.14 Capa analítica y costo real por kilómetro
+### 4.1.15 Capa analítica y costo real por kilómetro
 
 La segregación entre lo transaccional y lo analítico se resuelve por captura de cambios hacia un
 repositorio organizado en capas sucesivas de refinamiento, desde el dato crudo hasta el modelo
@@ -518,11 +550,11 @@ Las capas del repositorio se describen en la Tabla 4.15.
 
 *Fuente: elaboración propia.*
 
-La Figura 4.6 muestra la capa analítica y la explotación del costo por kilómetro.
+La Figura 4.9 muestra la capa analítica y la explotación del costo por kilómetro.
 
-![Figura 4.6. Capa analítica por niveles de refinamiento y explotación del costo por kilómetro](../../figuras/04-arquitectura/audit-figura-4.5-analitica.png)
+![Figura 4.9. Capa analítica por niveles de refinamiento y explotación del costo por kilómetro](../../figuras/04-arquitectura/audit-figura-4.5-analitica.png)
 
-*Figura 4.6. Capa analítica por niveles de refinamiento y explotación del costo por kilómetro*
+*Figura 4.9. Capa analítica por niveles de refinamiento y explotación del costo por kilómetro*
 
 Fuente: Elaboración propia.
 
@@ -576,7 +608,7 @@ La jornada acumulada es la fila que condiciona la arquitectura. Exigirla en tiem
 de asignar significa que no puede leerse del repositorio analítico, y por eso vive en la caché en
 memoria que evalúa la invariante del despacho.
 
-### 4.1.15 Explotación analítica y autoservicio
+### 4.1.16 Explotación analítica y autoservicio
 
 RT-05.25 obliga a proveer tableros operacionales y de gestión sobre los indicadores que el Caso define.
 RT-05.26 exige poder filtrar por período y por dimensión propia del caso y profundizar desde el
@@ -593,21 +625,33 @@ RT-05.30 valora la analítica predictiva con el modelo, sus variables, su métri
 de reentrenamiento documentados. Es un requisito deseable y esta oferta lo aborda en el
 Subdocumento 13.
 
-### 4.1.16 Modelo táctico del dominio
+### 4.1.17 Secuencia de liquidación y costeo por viaje
+
+El proceso de consolidación de costos operacionales y liquidación formal a transportistas se representa en la Figura 4.10.
+
+![Figura 4.10. Secuencia de estimación de costo por viaje, conciliación de insumos y liquidación ERP](../../figuras/04-arquitectura/4-6-liquidacion.png)
+
+*Figura 4.10. Secuencia de estimación de costo por viaje, conciliación de insumos y liquidación ERP*
+
+Fuente: Elaboración propia.
+
+Como ilustra la Figura 4.10, al finalizar el viaje el contexto de Liquidación emite la versión preliminar v1 en menos de 24 horas (Caso, RT-05.29, p. 31), incorporando versiones incrementales auditadas (v2 a vn) a medida que ingresan las cartolas de combustible y telepeaje TAG, hasta consolidar la liquidación mensual definitiva en el sistema contable.
+
+### 4.1.18 Modelo táctico del dominio
 
 RT-02.13 exige presentar el modelo de dominio del negocio con las entidades principales, sus relaciones
-y los eventos de negocio que las modifican. El modelo táctico de la Figura 4.7 lo entrega
+y los eventos de negocio que las modifican. El modelo táctico de la Figura 4.11 lo entrega
 organizado por contexto delimitado, de modo que cada agregado quede bajo el contexto que lo posee.
 
-![Figura 4.7. Modelo táctico del dominio. Agregados, entidades y servicios por contexto](../../figuras/04-arquitectura/audit-figura-4.6-tactico.png)
+![Figura 4.11. Modelo táctico del dominio. Agregados, entidades y servicios por contexto](../../figuras/04-arquitectura/audit-figura-4.6-tactico.png)
 
-*Figura 4.7. Modelo táctico del dominio. Agregados, entidades y servicios por contexto*
+*Figura 4.11. Modelo táctico del dominio. Agregados, entidades y servicios por contexto*
 
 Fuente: Elaboración propia.
 
 Cada agregado de la figura pertenece a un solo contexto delimitado.
 
-### 4.1.17 Inventario de componentes lógicos
+### 4.1.19 Inventario de componentes lógicos
 
 El FEP01, Artículo 16.2, p. 11 obliga a justificar el emplazamiento componente por componente. El inventario lógico
 de la Tabla 4.18 clasifica cada componente por capa, latencia exigida, criticidad operacional
@@ -638,7 +682,7 @@ Formulario T-11 detalla componente por componente.
 | Ingesta de plataformas de terceros | Integración | 500 ms | Alta | Tres plataformas existentes |
 | Aplicación móvil | Presentación | 1 s | Media alta | Cuatro perfiles de RT-17.01 del Caso |
 | Lector de portería y terminal | Terreno | 2 s | Alta | Cinco terminales y dos talleres |
-| Sistema contable de 2013 | Heredado | No aplica | Externa | Contabilidad y documentos tributarios |
+| Sistema contable y de facturación | Heredado | No aplica | Externa | Contabilidad y documentos tributarios |
 
 *Fuente: elaboración propia sobre el numeral 9.1 transversal y el Caso, numeral 14.1 y RT-09.01.*
 
@@ -646,7 +690,7 @@ Las latencias de esta tabla son objetivos de diseño de audIT derivados de los u
 transversal y de RT-09.01 del Caso, salvo las que esos requisitos fijan de manera expresa. La fila del
 búfer a bordo se actualizó a la población de equipos que define la sección 4.2.1.
 
-### 4.1.18 Concurrencia y volumen declarados
+### 4.1.20 Concurrencia y volumen declarados
 
 Caso, RT-09.02, p. 32 no fija un número. Ordena derivarlo de la volumetría del numeral 14.1 y declararlo
 conforme al numeral 14.2, considerando de manera expresa la reconexión simultánea de unidades al salir
@@ -708,12 +752,12 @@ El reparto de la flota sale del Caso, numeral 2.2, p. 6: 340 de los 374 camiones
 equipo, y 340 menos 192 da 148 propios, todos equipados. Los 148 propios y los 34 de terceros sin
 equipo llevan el equipo de audIT, 182 en total. Los 192 de terceros que ya tienen equipo lo conservan,
 porque la restricción 3 impide intervenirlo sin acuerdo de su dueño (Caso, capítulo 10, p. 23), y sus
-datos llegan por las plataformas de sus proveedores. La Figura 4.8 muestra los tres planos y
+datos llegan por las plataformas de sus proveedores. La Figura 4.12 muestra los tres planos y
 los enlaces que los unen.
 
-![Figura 4.8. Vista general de la arquitectura física: nube primaria y secundaria, San Bernardo, terminales regionales y flota, con los enlaces y su capacidad](../../figuras/04-arquitectura/fisica-general.png)
+![Figura 4.12. Vista general de la arquitectura física: nube primaria y secundaria, San Bernardo, terminales regionales y flota, con los enlaces y su capacidad](../../figuras/04-arquitectura/fisica-general.png)
 
-*Figura 4.8. Vista general de la arquitectura física: nube primaria y secundaria, San Bernardo, terminales regionales y flota, con los enlaces y su capacidad*
+*Figura 4.12. Vista general de la arquitectura física: nube primaria y secundaria, San Bernardo, terminales regionales y flota, con los enlaces y su capacidad*
 
 Fuente: Elaboración propia.
 
@@ -804,11 +848,11 @@ CAN con J1939, RS232 y RS485, red celular LTE Cat 4 o Cat M1, GNSS, Wi-Fi, Bluet
 seguro Microchip TA100 para arranque seguro y almacenamiento de claves. Funciona de 9 a 32 V, de
 −40 a +70 °C y con protección IP67 (iWave Global, 2026), lo que responde a la vibración, el polvo
 y la temperatura de cabina que piden FEP02, RT-08.11, p. 19 y FEP02, RT-08.12, p. 19. La
-Figura 4.9 muestra el equipo con sus periféricos.
+Figura 4.13 muestra el equipo con sus periféricos.
 
-![Figura 4.9. Equipo a bordo: iWave G26I, periféricos, interfaces y particiones de la memoria](../../figuras/04-arquitectura/equipo-a-bordo.png)
+![Figura 4.13. Equipo a bordo: iWave G26I, periféricos, interfaces y particiones de la memoria](../../figuras/04-arquitectura/equipo-a-bordo.png)
 
-*Figura 4.9. Equipo a bordo: iWave G26I, periféricos, interfaces y particiones de la memoria*
+*Figura 4.13. Equipo a bordo: iWave G26I, periféricos, interfaces y particiones de la memoria*
 
 Fuente: Elaboración propia.
 
@@ -826,7 +870,15 @@ al G26I, que sí guarda 288 horas. El Wi-Fi del equipo solo se usa en el patio d
 actualizaciones, que se aplican en dos particiones de sistema para volver a la anterior si la nueva
 falla (Northern.tech, 2026), y la restricción 5 queda cumplida porque nada se instala ni se
 actualiza fuera de un terminal. El Bluetooth lee la baliza del semirremolque acoplado, que es la base
-de la innovación tecnológica del Subdocumento 13.
+de la innovación tecnológica del Subdocumento 13. La Figura 4.14 ubica cada pieza en el tractocamión y en el semirremolque.
+
+![Figura 4.14. Distribución física del equipamiento embarcado en el tractocamión y en el semirremolque](../../figuras/04-arquitectura/instalacion-a-bordo.png)
+
+*Figura 4.14. Distribución física del equipamiento embarcado en el tractocamión y en el semirremolque*
+
+Fuente: Elaboración propia.
+
+Esta disposición física garantiza que los sensores y antenas operen con línea de vista y máxima cobertura sin alterar la garantía del fabricante del vehículo.
 
 La compra exige que el modelo cubra las bandas LTE que usan los operadores en Chile, de 700, 850,
 1.700, 1.900 y 2.600 MHz (Subsecretaría de Telecomunicaciones, 2026), y que cuente con la homologación de SUBTEL. La ficha
@@ -838,7 +890,7 @@ restricción 8 deja al sistema contable como único emisor (Caso, capítulo 10, 
 
 La carga serializada del perfil suma 3.237.656 bytes por 72 h; cuatro repeticiones suman 12.950.624 bytes. Se presupuesta otro tanto para índices, WAL, cifrado y metadatos, y otro tanto como reserva: 38.851.872 bytes. Son presupuestos de ingeniería, no ocupación medida ni compresión conseguida. Una partición de 64 MiB aporta 67.108.864 bytes y deja 28.256.992 bytes adicionales sobre ese presupuesto; HIL debe comprobar ocupación, reinicio e integridad del perfil completo. Si la sobrecarga real supera el presupuesto, se recalcula antes de homologar.
 
-La Tabla 4.24 suma asignaciones físicas en MiB ($1 \mathrm{MiB}=1.048.576$ bytes); GB comercial se expresa en decimal. Así se evita sumar MB y MiB como si fueran equivalentes.
+La Tabla 4.24 suma asignaciones físicas en MiB (\(1 \mathrm{MiB}=1.048.576\text{ bytes}\)); GB comercial se expresa en decimal. Así se evita sumar MB y MiB como si fueran equivalentes.
 
 **Tabla 4.24.** Asignación de almacenamiento a bordo por componente
 
@@ -987,12 +1039,12 @@ declara el plan de direcciones.
 *Fuente: elaboración propia. Rangos privados que no se superponen entre sí.*
 
 Los rangos no se superponen, de modo que cualquier sitio puede enrutar a cualquier red de Azure sin
-traducción de direcciones. La Figura 4.10 muestra la región primaria con sus redes, subredes y
+traducción de direcciones. La Figura 4.16 muestra la región primaria con sus redes, subredes y
 servicios.
 
-![Figura 4.10. Región primaria Azure Chile Central: red central, red de producción, subredes, servicios con su nivel y conexiones con San Bernardo y los terminales](../../figuras/04-arquitectura/region-primaria.png)
+![Figura 4.16. Región primaria Azure Chile Central: red central, red de producción, subredes, servicios con su nivel y conexiones con San Bernardo y los terminales](../../figuras/04-arquitectura/region-primaria.png)
 
-*Figura 4.10. Región primaria Azure Chile Central: red central, red de producción, subredes, servicios con su nivel y conexiones con San Bernardo y los terminales*
+*Figura 4.16. Región primaria Azure Chile Central: red central, red de producción, subredes, servicios con su nivel y conexiones con San Bernardo y los terminales*
 
 Fuente: Elaboración propia.
 
@@ -1005,11 +1057,11 @@ dirección pública en las máquinas.
 ### 4.2.6 Ambientes, alta disponibilidad y respaldos
 
 La solución tiene cinco ambientes y cada uno vive en su propia suscripción, como muestra la
-Figura 4.11.
+Figura 4.15.
 
-![Figura 4.11. Ambientes de la solución, cada uno en su suscripción, y promoción desde desarrollo hasta producción](../../figuras/04-arquitectura/ambientes.png)
+![Figura 4.15. Ambientes de la solución, cada uno en su suscripción, y promoción desde desarrollo hasta producción](../../figuras/04-arquitectura/ambientes.png)
 
-*Figura 4.11. Ambientes de la solución, cada uno en su suscripción, y promoción desde desarrollo hasta producción*
+*Figura 4.15. Ambientes de la solución, cada uno en su suscripción, y promoción desde desarrollo hasta producción*
 
 Fuente: Elaboración propia.
 
@@ -1110,9 +1162,9 @@ estimación usa los supuestos de muestreo de la sección 4.2.9: posición cada 3
 cada 5 minutos detenido, telemetría del motor cada 60 segundos y 30 horas de marcha en 72 horas. La
 Tabla 4.31 muestra lo que acumula un camión en 72 horas sin cobertura.
 
-El perfil de ensayo es explícito y sintético: 30 h en marcha con posición cada 30 s y 42 h detenido cada 300 s producen 3.600+504=4.104 posiciones de 64 bytes; 30 h de motor cada 60 s producen 1.800 muestras de 160 bytes. Se propone un fixture de 45 eventos de jornada/conducción/esperas de 600 bytes, cinco documentos de 40.000 bytes y ocho fotos de 307.500 bytes. Los tamaños incluyen la serialización del fixture y se contrastan con firmware y documentos homologados; no son mediciones ni cantidades universales del caso. No se presupone compresión.
+El perfil de ensayo es explícito y sintético: 30 h en marcha con posición cada 30 s y 42 h detenido cada 300 s producen \(3.600+504=4.104\) posiciones de 64 bytes; 30 h de motor cada 60 s producen 1.800 muestras de 160 bytes. Se propone un fixture de 45 eventos de jornada/conducción/esperas de 600 bytes, cinco documentos de 40.000 bytes y ocho fotos de 307.500 bytes. Los tamaños incluyen la serialización del fixture y se contrastan con firmware y documentos homologados; no son mediciones ni cantidades universales del caso. No se presupone compresión.
 
-La Tabla 4.31 separa los componentes. Los eventos/documentos suman $45\times600+5\times40.000=227.000$ bytes; todo el lote sin fotos suma 777.656 bytes.
+La Tabla 4.31 separa los componentes. Los eventos/documentos suman \(45\times600+5\times40.000=227.000\) bytes; todo el lote sin fotos suma 777.656 bytes.
 
 **Tabla 4.31.** Perfil sintético serializado de un camión tras 72 h
 
@@ -1127,7 +1179,7 @@ La Tabla 4.31 separa los componentes. Los eventos/documentos suman $45\times600+
 
 *Fuente: hipótesis analíticas y fixture de audIT; frecuencias S-02/S-03 y variantes CP-PERF-02/CP-HW-03 de T-17.*
 
-Trescientos camiones producen 1.786.200 registros y 971.296.800 bytes incluidos adjuntos. Dividir ese volumen por veinte minutos requiere 6,48 Mbit/s útiles agregados, antes de overhead. Como presupuesto adicional se incorpora 25 % de transporte/metadatos y se reserva 20 % de la ventana para reconexión, reintentos, persistencia y conciliación: $971.296.800\times1,25\times8/960=10,12$ Mbit/s. El porcentaje es una hipótesis declarada que se contrasta en pruebas; la garantía contractual solo se comprueba midiendo la confirmación íntegra de cada camión en hasta veinte minutos.
+Trescientos camiones producen 1.786.200 registros y 971.296.800 bytes incluidos adjuntos. Dividir ese volumen por veinte minutos requiere 6,48 Mbit/s útiles agregados, antes de overhead. Como presupuesto adicional se incorpora 25 % de transporte/metadatos y se reserva 20 % de la ventana para reconexión, reintentos, persistencia y conciliación: \(971.296.800\times1,25\times8/960=10,12\) Mbit/s. El porcentaje es una hipótesis declarada que se contrasta en pruebas; la garantía contractual solo se comprueba midiendo la confirmación íntegra de cada camión en hasta veinte minutos.
 
 La Tabla 4.32 distingue tasas de operaciones y cuotas. Los bloques de 4 KiB son una elección de empaquetado del ensayo y unidad de cuota diaria, no el tamaño máximo de un mensaje ni la tasa de operaciones (Microsoft, s. f.).
 
@@ -1143,11 +1195,11 @@ La Tabla 4.32 distingue tasas de operaciones y cuotas. Los bloques de 4 KiB son 
 
 *Fuente: elaboración propia y documentación de Microsoft IoT Hub consultada el 7 de octubre de 2026.*
 
-Estas estimaciones no prueban el tiempo final: admitir un archivo no lo transfiere, y aceptar un mensaje no confirma escritura ni conciliación. La transferencia de fotos comparte presupuesto de enlace; sus huellas deben compararse antes de cerrar el cronómetro. Colas, escritura, reintentos y carga normal se incluyen en CP-PERF-02. El ensayo aplica a cada camión y falla si uno excede veinte minutos o pierde registros; 288 h se ensaya separadamente como ampliación de ingeniería.
+Estas estimaciones no prueban el tiempo final: admitir un archivo no lo transfiere, y aceptar un mensaje no confirma escritura ni conciliación. La transferencia de fotos comparte presupuesto de enlace; sus huellas deben compararse antes de cerrar el cronómetro. Colas, escritura, reintentos y carga normal se incluyen en CP-PERF-02. El ensayo aplica a cada camión y falla si uno excede veinte minutos o pierde registros; 288 h se ensaya separadamente como ampliación de ingeniería. La secuencia de ingesta, desacoplamiento y confirmación duradera se ilustra en la Figura 4.17.
 
-![Figura 4.12. Reconexión masiva: del búfer del camión a la base de datos, con los límites de cada tramo](../../figuras/04-arquitectura/reconexion.png)
+![Figura 4.17. Reconexión masiva: del búfer del camión a la base de datos, con los límites de cada tramo](../../figuras/04-arquitectura/reconexion.png)
 
-*Figura 4.12. Reconexión masiva: del búfer del camión a la base de datos, con los límites de cada tramo*
+*Figura 4.17. Reconexión masiva: del búfer del camión a la base de datos, con los límites de cada tramo*
 
 Fuente: Elaboración propia.
 
@@ -1390,12 +1442,12 @@ de Azure, lo que suma 8 Mbit/s al enlace de San Bernardo, dentro de su capacidad
 **Plano de la sala.**  FEP02, RT-06.03, p. 14 pide el plano de distribución con las zonas de
 generadores, baterías, climatización, servidores, comunicaciones, trabajo y respaldo. El numeral 6.1 lo
 exige a la sala principal, y esta oferta lo entrega igual porque la revisión del Informe 1 lo pidió. La
-Figura 4.13 lo muestra sobre una planta supuesta de 6,5 por 4 metros, que suma los 26 m²
+Figura 4.18 lo muestra sobre una planta supuesta de 6,5 por 4 metros, que suma los 26 m²
 del Caso.
 
-![Figura 4.13. Plano de la sala de San Bernardo con sus zonas, a proporción de 26 m²](../../figuras/04-arquitectura/sala-san-bernardo.png)
+![Figura 4.18. Plano de la sala de San Bernardo con sus zonas, a proporción de 26 m²](../../figuras/04-arquitectura/sala-san-bernardo.png)
 
-*Figura 4.13. Plano de la sala de San Bernardo con sus zonas, a proporción de 26 m²*
+*Figura 4.18. Plano de la sala de San Bernardo con sus zonas, a proporción de 26 m²*
 
 Fuente: Elaboración propia.
 
@@ -1404,7 +1456,15 @@ una persona a la vez (FEP02, RT-06.23, p. 16). El rack de servidores y el de com
 como pide FEP02, RT-06.05, p. 15, y cada uno es de 24 unidades. El de servidores ocupa cerca de 12
 unidades con los dos R360, las dos UPS y sus baterías externas, y el de comunicaciones cerca de 8 con
 los firewalls, los switches, los paneles de conexión y los equipos de los proveedores, de modo que ambos
-quedan con la mitad o más libre para crecer. Las dos unidades de clima van en muros opuestos, el cilindro
+quedan con la mitad o más libre para crecer. La Figura 4.19 muestra la elevación de los dos racks, con las unidades que ocupa cada equipo y las que quedan libres.
+
+![Figura 4.19. Elevación frontal de los racks de servidores y comunicaciones en la sala técnica de San Bernardo](../../figuras/04-arquitectura/racks-san-bernardo.png)
+
+*Figura 4.19. Elevación frontal de los racks de servidores y comunicaciones en la sala técnica de San Bernardo*
+
+Fuente: Elaboración propia.
+
+La disponibilidad de más del 50% de espacio vertical asegura la escalabilidad y adición modular de hardware durante todo el período de concesión. Las dos unidades de clima van en muros opuestos, el cilindro
 de FK-5-1-12 junto a la esclusa, el puesto de trabajo con la consola en la zona de trabajo y los
 repuestos de sala en la zona de respaldo. El grupo electrógeno y su tablero de transferencia quedan en
 el patio, fuera de la sala, y los dos enlaces entran por ductos separados, como pide
@@ -1412,11 +1472,11 @@ FEP02, RT-06.32, p. 17. Las medidas de detalle se confirman en el levantamiento 
 Caso solo entrega la superficie.
 
 **Gabinetes de los terminales regionales.**  Cada terminal regional lleva el gabinete de la
-Figura 4.14.
+Figura 4.20.
 
-![Figura 4.14. Gabinete de un terminal regional, con sus enlaces, el punto de acceso de patio y el lector de portería](../../figuras/04-arquitectura/gabinete-terminal.png)
+![Figura 4.20. Gabinete de un terminal regional, con sus enlaces, el punto de acceso de patio y el lector de portería](../../figuras/04-arquitectura/gabinete-terminal.png)
 
-*Figura 4.14. Gabinete de un terminal regional, con sus enlaces, el punto de acceso de patio y el lector de portería*
+*Figura 4.20. Gabinete de un terminal regional, con sus enlaces, el punto de acceso de patio y el lector de portería*
 
 Fuente: Elaboración propia.
 
@@ -1476,11 +1536,11 @@ Event Hubs, cuya réplica frena la entrada si el retraso supera los 10 minutos (
 el equipo a bordo conserva lo enviado durante 72 horas, así que tras una conmutación reenvía el tramo que
 la réplica pudo no alcanzar, y la clave de idempotencia de siete días descarta los duplicados.
 
-La Figura 4.15 muestra la recuperación entre regiones y el eje separado de continuidad.
+La Figura 4.21 muestra la recuperación entre regiones y el eje separado de continuidad.
 
-![Figura 4.15. Recuperación ante desastres entre Chile Central y Brazil South, y eje separado de continuidad en San Bernardo, los terminales y los camiones](../../figuras/04-arquitectura/recuperacion.png)
+![Figura 4.21. Recuperación ante desastres entre Chile Central y Brazil South, y eje separado de continuidad en San Bernardo, los terminales y los camiones](../../figuras/04-arquitectura/recuperacion.png)
 
-*Figura 4.15. Recuperación ante desastres entre Chile Central y Brazil South, y eje separado de continuidad en San Bernardo, los terminales y los camiones*
+*Figura 4.21. Recuperación ante desastres entre Chile Central y Brazil South, y eje separado de continuidad en San Bernardo, los terminales y los camiones*
 
 Fuente: Elaboración propia.
 

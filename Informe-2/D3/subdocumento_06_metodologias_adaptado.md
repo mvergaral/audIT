@@ -1,221 +1,194 @@
-# 6. Introducción a las metodologías
+# Subdocumento 6. Metodologías
 
-Para el proyecto de modernización tecnológica de Transportes Curimón S.A. (licitación TFEP-01/2026, Caso 10 Transporte de Carga), audIT Soluciones Tecnológicas SpA aplica un esquema de trabajo híbrido. La gobernanza contractual, adquisiciones y control formal de cambios se administran bajo los estándares de PMBOK 7.ª Edición. En paralelo, el ciclo de construcción y entrega de software opera con Scrum, Kanban y un pipeline DevSecOps sobre GitLab CI Enterprise.
+audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. Oferta Técnica, Sobre N.º 2. Informe Preparatorio 2. Archivo AUDIT-Subdocumento6.pdf. Anexos: Formulario T-9 en el archivo AUDIT-Formulario-T-9.pdf, Formulario T-10 en el archivo AUDIT-Formulario-T-10.pdf.
 
-Este diseño responde a las restricciones operativas de Curimón: una flota de 374 camiones (61 con telemetría de fábrica), 96.000 viajes al año, servicio ininterrumpido 24x7 y un plazo contractual de 56 meses organizado en dos etapas con despliegue concurrente.
+## 6 Metodologías
 
-> **Resumen ejecutivo**
+> **Resumen de apertura.**
 >
-> El modelo de gestión compatibiliza compromisos contractuales de precio cerrado con el desarrollo iterativo del software. La Etapa 1 concluye y se estabiliza en el mes 15 tras tres meses de marcha blanca. La Etapa 2 finaliza su marcha blanca de dos meses en el mes 20; el mes 21 se establece como hito de aceptación final y de inicio formal de los 36 meses de operación y soporte continuo bajo los SLA vinculantes de las Bases (FEP01 · Artículo 20° · p. 14 y FEP01 · Artículo 78.2° · p. 40), correspondiente a un 99,9% de disponibilidad para servicios Críticos (despacho, telemetría y jornada) y 99,5% para servicios Altos.
+> El presente subdocumento formaliza el marco metodológico integrado de audIT para la dirección, construcción, aseguramiento y despliegue del sistema de gestión operacional y logística de Transportes Curimón S.A. Se establece un modelo de gestión híbrido que conjuga la previsibilidad y rigor de control del estándar PMBOK con la flexibilidad iterativa de Scrum y la eficiencia operativa de Kanban, asegurando el cumplimiento estricto del cronograma de 56 meses y los **42** requerimientos del contrato (Caso, numeral 17.1, p. 38). Asimismo, se institucionaliza una práctica de ingeniería DevSecOps unificada en GitLab CI Enterprise con certificación de procedencia SLSA Nivel 3 y puertas de calidad automáticas.
 >
-> Entre los meses 16 y 20, durante la coexistencia de la producción de Etapa 1 con el desarrollo y marcha blanca de Etapa 2, la operación en vivo de Etapa 1 está plenamente cubierta bajo un régimen de **Garantía Técnica e Hiperatención Operativa (Hypercare)** con los mismos SLA vinculantes de producción (99,9% crítico, 99,5% alto), célula de soporte técnico 24/7 y la matriz contractual de tiempos de respuesta de incidentes del Artículo 78°.
->
-> **Régimen de adquisiciones y hardware (Formulario T-11):** conforme al pliego de licitación (Caso 10, capítulo 11, p. 24), **todo el equipamiento físico (computadores a bordo, módems satelitales, lectores CAN, servidores y gabinetes) es adquirido directamente por el CLIENTE (Transportes Curimón S.A.)**. audIT provee la especificación técnica rigurosa de compra (Formulario T-11), supervisión, kits de instalación y despliegue técnico. La plataforma vehicular unificada corresponde al **iWave G26I con SoC NXP i.MX 6ULL, 512 MB de RAM y 8 GB de almacenamiento eMMC**.
->
-> **Cronograma riguroso de instalación a bordo (alineado con S7):** el montaje físico en la flota vehicular se ejecuta de forma modular sin detención de operaciones: piloto de 10 camiones propios en el mes 6; instalación en el resto de los 148 camiones propios entre los meses 6 y 9; instalación en 34 camiones de terceros en comodato entre los meses 7 y 10; **pausa contractual estricta de no intervención de camiones entre los meses 11 y 15 (temporada alta de fruta de Curimón, prohibición absoluta de inmovilizar flota)**; y reanudación de montaje de flota remanente entre los meses 16 y 18.
->
-> **Entregables y compromisos principales:**
-> - Gestión híbrida: PMBOK para gobernanza, contratos y control de cambios (Art. 72°), con sprints quincenales Scrum y flujo visual Kanban para desarrollo de software.
-> - Cumplimiento del Artículo 17°: Etapa 1 con 12 meses de desarrollo y 3 meses de marcha blanca (M13 a M15); Etapa 2 concurrente (M13 a M18) con 2 meses de marcha blanca (M19 a M20); paso a producción definitivo en el mes 21.
-> - Soporte ininterrumpido en producción: régimen de Garantía Técnica y Hypercare en meses 16 a 20 con SLA de 99,9% crítico, empalmando sin discontinuidad con los 36 meses de operación formal (M21 a M56).
-> - Métrica unificada de asignación: validación interna en memoria en menos de 2 segundos (camino nominal ~660 ms); presupuesto transaccional de extremo a extremo de 25 segundos (RT-09.01).
-> - Pipeline DevSecOps: integración y entrega continua en GitLab CI con runners efímeros, análisis SAST, escaneo de dependencias (SCA) y pruebas dinámicas DAST.
-> - Cuatro ambientes del ciclo de vida del software (DEV, QA, PREPROD y PROD) más DR como entorno operativo de recuperación en Azure Brazil South, promoviendo contenedores inmutables validados mediante firmas criptográficas (Cosign) y atestaciones SLSA Build L3.
-> - Gobierno del proyecto: cinco instancias formales de gobernanza (cuatro comités de gestión de proyecto y una mesa operativa diaria de terreno), emisión de actas en menos de 24 horas y control de cambios formal con tope del 20% del valor del contrato.
+> **Qué recibe Transportes Curimón S.A.**
+> - Marco de gobernanza estructurado en cinco comités mandantes con cadencias quincenales y mensuales (FEP01, Artículo 71, p. 37).
+> - Procedimiento formal de control de cambios con análisis de impacto multidimensional y tope contractual del 20 % (FEP01, Artículo 72, p. 38).
+> - Pipeline integral DevSecOps automatizado con análisis estático (SAST), escaneo de contenedores (Trivy) y pruebas dinámicas (DAST).
+> - Cadena de suministro de software protegida mediante firmas criptográficas Cosign y atestaciones SBOM CycloneDX (FEP01, Artículo 4.3, p. 5).
+> - Matrices estandarizadas de criterios de salida para Definición de Preparado (DoR) y Definición de Terminado (DoD).
 
-Este documento sintetiza la propuesta técnica para el Formulario T-9 (Metodología para la Administración y Gestión del Proyecto) y el Formulario T-10 (Metodología para el Desarrollo), en coordinación con el Subdocumento 4 (Arquitectura), Subdocumento 5 (Datos), Subdocumento 7 (Plan de Trabajo) y Subdocumento 9 (Calidad y Pruebas).
+La naturaleza multidimensional de la licitación TFEP-01/2026 exige articular actividades de distinta naturaleza: adquisiciones masivas de equipamiento de telemetría vehicular, obras civiles menores en terminales, configuraciones de infraestructura cloud de misión crítica, e ingeniería de software para componentes transaccionales, móviles y analíticos. Un enfoque metodológico homogéneo resultaría insuficiente. Por ello, la estrategia metodológica de audIT se articula como el núcleo operativo que conecta los requerimientos del Formulario T-12 con el Plan de Trabajo del Capítulo 7, el Plan de Riesgos del Capítulo 8 y el Sistema de Calidad del Capítulo 9.
 
-## 6.1 Metodología de gestión de proyectos
+## 6.1 Metodología de gestión del proyecto
 
-### 6.1.1 Gobierno, hitos y solapamiento contractual
+La gestión del proyecto adopta las directrices de la guía PMBOK ((Project Management Institute, 2021)), adaptada específicamente a las restricciones operativas y contractuales del transporte de carga por carretera y la logística interurbana (FEP01, Artículo 4.3, p. 5, FEP02, RT-19.01, p. 33). Este marco garantiza trazabilidad absoluta sobre la línea base de alcance, tiempo y costo, articulando la relación contractual con Transportes Curimón S.A. mediante canales formales de rendición de cuentas.
 
-La planificación cumple las restricciones de calendario del Artículo 17° de las Bases Administrativas (FEP01 p. 12) y las condiciones del Caso 10. La Figura 6.1 muestra la secuencia de etapas, los periodos de desarrollo y las ventanas de marcha blanca.
+### 6.1.1 Marco híbrido de gestión: PMBOK y enfoques ágiles
 
-![Figura 6.1. Hitos, solapamiento de etapas y marcha blanca](./figuras/6-1-hitos.png)
+La administración del contrato se fundamenta en un modelo de ciclo de vida híbrido, el cual combina procesos predictivos para los compromisos contractuales vinculantes con ciclos adaptativos para la construcción de los módulos de software. La justificación de este enfoque dual se resume en los siguientes ejes operativos:
+- **Capa Predictiva (PMBOK 7):** Aplica a la gestión de la Ruta Crítica contractual del Artículo 17°, la entrega de hitos del Formulario E-25, la logística de abastecimiento e instalación física del hardware vehicular en el parque de **374** (Caso, numeral 14.1, p. 29) camiones, las adecuaciones de salas técnicas y la obtención de recepciones provisorias y definitivas.
+- **Capa Adaptativa (Scrum):** Aplica al diseño y programación de los módulos aplicativos (torre de control, despacho, portal de transportistas, aplicación de conductores y analítica). Se estructura en iteraciones cortas (sprints de 2 semanas) con entregables potencialmente desplegables, lo que permite retroalimentación temprana de las contrapartes operativas de Curimón sin comprometer los plazos mayores de entrega.
+- **Capa de Flujo Continuo (Kanban):** Aplica a la atención de incidencias en etapa de marcha blanca (60 días para Etapa 1 y 60 días para Etapa 2, FEP01, Artículo 17.3, p. 12), gestión de parches de seguridad y solicitudes de servicio menores durante los 36 meses de operación continuada.
 
-Fuente: elaboración propia.
+**Decisión D-01. Adopción de marco de gestión híbrido predictivo-ágil**
 
-#### Cronograma de etapas y marcha blanca (Art. 17°)
-
-El plan se organiza en dos etapas secuenciales y concurrentes:
-
-- **Etapa 1 (meses 1 a 15):**
-  - *Desarrollo e implantación (meses 1 a 12):* levantamiento de procesos, arquitectura base e integración con el sistema de transporte de 2013 y sistema contable mediante la Capa Anticorrupción.
-  - *Montaje físico a bordo (meses 6 a 10):* piloto de 10 camiones propios en el mes 6; montaje en los 138 camiones propios restantes entre los meses 6 y 9; instalación en 34 camiones de terceros en comodato entre los meses 7 y 10.
-  - *Pausa obligatoria de montaje (meses 11 a 15):* **prohibición contractual absoluta de intervenir camiones durante la temporada alta de fruta (diciembre a abril)**. Durante esta ventana, las actividades sobre flota se limitan exclusivamente a integración de software y telemetría por plataforma sin tocar vehículos físicamente.
-  - *Marcha blanca de Etapa 1 (meses 13 a 15, 90 días):* operación en faena en paralelo al sistema legado, calibración de validaciones de despacho en memoria interna en menos de 2 segundos, estabilización de ingesta telemática y verificación documental.
-  - *Paso a producción de Etapa 1:* inicio del mes 16.
-- **Etapa 2 (meses 13 a 20):**
-  - *Desarrollo concurrente (meses 13 a 18):* se ejecuta en paralelo con la marcha blanca de la Etapa 1. Desarrolla el portal de liquidación y sobreestadías, optimización de retornos (RF-015), explicabilidad de dispersión de combustible (RF-018), mantenimiento por odómetro real y cálculo de CO2e (ISO 14083).
-  - *Reanudación de montaje físico remanente (meses 16 a 18):* instalación a bordo para transportistas terceros adheridos de forma rezagada al plan de comodato.
-  - *Marcha blanca de Etapa 2 (meses 19 a 20, 60 días):* pruebas de liquidación de fletes con transportistas externos y conciliación contable peso a peso con el sistema contable.
-  - *Paso a producción formal y aceptación final definitiva:* mes 21.
-
-#### Operación en producción de Etapa 1 durante los meses 16 a 20
-
-Entre los meses 16 y 20, el núcleo de despacho, telemetría y evidencia de jornada de la Etapa 1 se encuentra operando en producción comercial activa en faenas reales de Curimón, coexistiendo con el desarrollo y la marcha blanca de la Etapa 2. Para garantizar continuidad operacional absoluta sin vacíos de cobertura contractual, este período se rige formalmente bajo el siguiente marco:
-
-1. **Régimen de Garantía Técnica e Hiperatención Operativa (Hypercare):** el servicio en producción de la Etapa 1 está completamente respaldado por audIT bajo régimen de garantía técnica y soporte de estabilización, financiado dentro de la partida de implantación sin costos adicionales para Curimón.
-2. **SLA vinculantes de producción (FEP01, Art. 20° y Art. 78.2°):**
-   - **Servicios Críticos (99,9 % de disponibilidad mensual):** verificación bloqueante de despacho, ingesta telemática en tiempo real, registro de evidencia de jornada y enlace con el sistema contable para el DET.
-   - **Servicios Altos (99,5 % de disponibilidad mensual):** visualización en torre de control, consultas de geocercas y reportes operacionales diurnos.
-3. **Célula de Soporte de Producción 24/7:** equipo dedicado integrado por 4 ingenieros de soporte (Nivel 2 y Nivel 3) con cobertura ininterrumpida 24x7, monitoreo proactivo mediante Azure Monitor / Grafana y mesa de ayuda operativa para operadores de romana, despachadores y conductores.
-4. **Matriz de Severidad y Tiempos de Respuesta (Artículo 78°):**
-   - **Severidad 1 (Crítica - bloqueo de despacho o caída de ingesta telemática):** tiempo de respuesta inicial ≤ 15 minutos; tiempo de solución técnica o workaround seguro ≤ 2 horas.
-   - **Severidad 2 (Alta - degradación de servicios sin detención de romana):** tiempo de respuesta ≤ 30 minutos; resolución ≤ 4 horas.
-   - **Severidad 3 (Media - fallas parciales en reportes o pantallas secundarias):** tiempo de respuesta ≤ 2 horas; resolución ≤ 24 horas.
-   - **Severidad 4 (Baja - consultas operativas o ajustes menores de interfaz):** tiempo de respuesta ≤ 4 horas; resolución coordinada en el siguiente sprint programado.
-5. **Empalme con el Soporte Contractual Formal de 36 meses (meses 21 a 56):** al finalizar el mes 20 y obtenerse el acta de aceptación final conjunta de la solución integral (Etapas 1 y 2), el servicio empalma de forma inmediata e ininterrumpida con el período contractual de 36 meses de operación continua, soporte técnico y mantenimiento correctivo/evolutivo bajo los mismos SLA vinculantes del Artículo 78°.
-
-#### Hito de renegociación contractual de 2027 (mes 21)
-
-De acuerdo con el Caso 10 (numerales 13.2 y 17.5), dos de los tres principales contratos de clientes de Curimón operan con tarifas bajo costo por falta de trazabilidad en rutas y sobreestadías. Su renovación contractual debe realizarse durante 2027 (mes 21 del proyecto).
-
-Para esa fecha, el módulo de costeo por viaje (iniciado en Etapa 1 y consolidado en Etapa 2) proporcionará a la Gerencia de Curimón una estimación preliminar de costo por viaje y kilómetro en ≤ 24 h (RT-05.29), con faltantes identificados (`AUSENTE = NULL`), junto con el historial de versiones consolidadas después de conciliar peajes y combustible, proporcionando datos objetivos e inmutables para renegociar tarifas sobre servicios que representan el 31% de los ingresos de la compañía.
-
-#### Estructura de comités y cadencias de gobierno
-
-El modelo de gobernanza articula cinco instancias formales de coordinación y toma de decisiones: cuatro comités de gestión de proyecto orientados a la supervisión estratégica, seguimiento operativo, control contractual de cambios y calidad técnica, complementados por una mesa operativa diaria de terreno para la coordinación ágil en faena y romana:
-
-1. **Comité Directivo:** Gerencia General de Curimón, Director de Proyecto audIT y sponsor; mensual. Supervisa estrategia, hitos contractuales y escalamientos mayores.
-2. **Comité de Seguimiento Operacional:** Jefe de Proyecto Curimón, Project Manager audIT y Líder QA; quincenal. Revisa EDT, costos, riesgos y asignación de recursos.
-3. **Comité de Control de Cambios (CCB):** PM audIT, contraparte técnica Curimón y asesor legal; ordinario quincenal y, ante emergencia operativa, convocatoria dentro de 48 h. Resuelve RFC conforme al Art. 72°.
-4. **Comité Técnico y de Arquitectura:** arquitecto audIT, líder TI Curimón y DevSecOps; semanal. Revisa interfaces, contratos de integración, seguridad y pases a PREPROD.
-5. **Mesa de Operaciones y Romana:** despachadores Curimón y soporte de terreno audIT; diaria, 15 min. Coordina incidencias de terreno, enrolamiento de choferes y disponibilidad de dispositivos.
-
-Todas las sesiones de comités formales generan un acta de acuerdos distribuida en un plazo máximo de 24 horas hábiles.
-
-### 6.1.2 Interesados y plan de comunicaciones
-
-El plan de gestión de interesados atiende los requerimientos operativos del proyecto: la adopción voluntaria del comodato por parte de transportistas subcontratados, la claridad de los descansos para conductores según la normativa laboral y la continuidad operativa requerida por la administración de Curimón:
-
-- **Directorio y Gerencia General:** informe ejecutivo y reunión mensual del Director de Proyecto audIT sobre hitos, presupuesto y riesgos.
-- **Transportistas subcontratados:** portal web y talleres quincenales a cargo del Gestor de Adopción; difusión de ventajas del comodato, liquidación transparente y derechos de privacidad bajo Ley 21.719.
-- **Conductores:** aplicación móvil y charlas de inducción semanales o por enrolamiento, a cargo del Monitor de Terreno; uso de interfaz táctil, verificación de jornada y botón de modo privado.
-- **Equipo TI Curimón (9 personas):** repositorio y wiki técnica con transferencia continua de conocimiento y reuniones semanales; capacitación en runbooks, infraestructura como código y monitoreo.
-- **Jefes de Terminal y Romana:** consola operativa y coordinación diaria con el Líder de Despliegue; programación de ventanas de instalación y planes de contingencia.
-
-### 6.1.3 Adquisiciones y control de cambios
-
-#### Plan de adquisiciones de hardware físico (Formulario T-11)
-
-**Régimen de adquisición de hardware:**
-Conforme al pliego de licitación (Caso 10, capítulo 11, p. 24), **todo el hardware físico vehicular, de terminales y de sala técnica es adquirido directamente por el CLIENTE (Transportes Curimón S.A.)**. audIT especifica exactamente qué comprar, cuánto y con qué características en el Formulario T-11, además de ejecutar la homologación técnica, control de recepción, kits de montaje y puesta en servicio.
-
-Lista de materiales formal concordante con el Formulario T-11:
-1. **Equipos nuevos en flota (182 camiones):** 148 computadores a bordo industriales **iWave G26I (SoC NXP i.MX 6ULL, 512 MB RAM, 8 GB eMMC)** para la flota propia y 34 para transportistas terceros que ingresen al plan de comodato. Adquiere: CLIENTE.
-2. **Repuestos en pañol (19 unidades):** reserva en frío en los talleres de San Bernardo y terminales regionales, calculada como el 10% del parque instalado (182 × 0,10 ≈ 19 unidades). El total de computadores a bordo adquiridos corresponde a 201 unidades. Adquiere: CLIENTE.
-3. **Módems satelitales de contingencia (201 unidades):** 182 módems **Iridium Edge (SBD)** para cabina vehicular y 19 repuestos, conectados por RS232 al computador a bordo. Adquiere: CLIENTE.
-4. **Lectores CAN sin contacto (201 unidades):** 182 kits inductivos **Technoton CANCrocodile** (SAE J1939) y 19 repuestos para lectura no invasiva. Adquiere: CLIENTE.
-5. **Lectores de identificación del chofer (201 unidades):** 182 lectores **GAO RFID MIFARE DESFire 13,56 MHz** (RS485) y 19 repuestos. Adquiere: CLIENTE.
-6. **Flota homologada por software (192 camiones):** vehículos subcontratados con GPS operativo de las tres plataformas de mercado existentes. Se integran mediante conectores y APIs de software, sin intervenir hardware vehicular (Restricción 3).
-
-#### Procedimiento de control de cambios (Artículo 72°)
-
-Cualquier ajuste a requerimientos, cronograma, arquitectura o especificaciones técnicas sigue el flujo establecido en el Artículo 72° de las Bases Administrativas (FEP01 p. 38), formalizado en la Tabla 6.1.
-
-**Tabla 6.1.** Procedimiento de control de cambios (Artículo 72°)
-
-| Fase del proceso | Responsable | Plazo máximo | Actividad y criterio técnico |
+| Se decide | Se descarta | Criterio | Fuente |
 |---|---|---|---|
-| 1. Solicitud Formal (RFC) | Curimón o audIT | Día 1 | Ingreso de solicitud formal justificando necesidad operativa, técnica o legal en plataforma GitLab. |
-| 2. Evaluación de impacto | Equipo técnico audIT | Hasta 5 días hábiles | Análisis exhaustivo de impacto en alcance, cronograma (EDT), costos, SLA contractual (Art. 78°), seguridad y Ley 21.719. |
-| 3. Dictamen del CCB | Comité de Cambios (CCB) | Hasta 3 días hábiles | Sesión ordinaria con resolución fundada de aprobación, rechazo o solicitud de aclaraciones. |
-| 4. Aprobación del mandante | Representante Curimón | Hasta 5 días hábiles | Pronunciamiento formal, firma de la orden de cambio contractual e incorporación a la línea base. |
-| 5. Implementación y cierre | PM y líder técnico audIT | Según plan aprobado | Despliegue en ambientes DEV/QA, pase controlado a producción y actualización de la línea base en la EDT. |
+| Implementar gobernanza predictiva PMBOK para control contractual e hitos combinada con Scrum en iteraciones de dos semanas para software | Enfoque puramente predictivo tipo cascada y enfoque puramente ágil sin línea base | El transporte crítico exige certidumbre contractual de plazos de implantación junto con flexibilidad en diseño de interfaces y analítica | FEP01, Artículo 4.3, p. 5, FEP02, RT-19.01, p. 33 |
 
-Fuente: elaboración propia.
+La articulación temporal del marco de gestión y su integración con los hitos contractuales de la licitación se ilustra en la Figura 6.1.
 
-#### Diferenciación de circuitos: Trámite Ordinario versus Emergencia Operativa
+![Figura 6.1. Gobernanza temporal del proyecto y articulación de fases, etapas y marchas blancas](./figuras/6-1-hitos.png)
 
-1. **Circuito Ordinario (hasta 13 días hábiles en total):** aplica a modificaciones de alcance, mejoras funcionales o ajustes de cronograma no urgentes. Suma la evaluación técnica (5 días), el dictamen del CCB (3 días) y la aprobación del mandante (5 días).
-2. **Procedimiento Acelerado de Emergencia (máximo 48 horas):** ante incidentes críticos de producción (P1), detenciones imprevistas en romana o requerimientos normativos sobrevinientes con amenaza inminente a la continuidad del despacho, el CCB se autoconvoca en un plazo máximo de 48 horas, emitiendo una resolución preliminar de mitigación en menos de 24 horas y regularizando la orden de cambio administrativa en los 5 días subsiguientes.
+*Figura 6.1. Gobernanza temporal del proyecto y articulación de fases, etapas y marchas blancas*
 
-Criterios contractuales aplicables:
-- El valor acumulado de las órdenes de cambio no puede superar el 20% del valor total original del contrato (Artículo 72°).
-- Las políticas de escalamiento automático en Azure (HPA en AKS y particiones en Event Hubs) constituyen parámetros operativos y no requieren orden de cambio contractual.
-- Disponibilidad contractual del servicio: compromiso vinculante con los niveles de servicio de las Bases (FEP01 · Artículo 20° y Artículo 78.2°): **99,9% de disponibilidad para servicios Críticos** y **99,5% para servicios Altos**.
+Fuente: Elaboración propia.
 
-### 6.1.4 Cadencias, ceremonias y artefactos ágiles
+Como se desprende de la Figura 6.1, la sincronización entre los sprints ágiles de dos semanas y los hitos contractuales garantiza visibilidad continua para Transportes Curimón sin comprometer los plazos mayores de implantación.
 
-El equipo de desarrollo trabaja bajo Scrum con iteraciones de dos semanas:
-- **Sprint Planning (lunes de inicio, 4 horas):** el Product Owner y el equipo seleccionan ítems del Product Backlog priorizados por valor y riesgo, acordando el objetivo del sprint (*Sprint Goal*).
-- **Daily Standup (diario, 15 minutos):** reunión breve para coordinar el trabajo del día, detectar bloqueos y comprobar el estado de las ramas de desarrollo.
-- **Backlog Refinement (semanal, 2 horas):** partición de épicas en historias de usuario, estimación de esfuerzo y validación del criterio de preparación (*Definition of Ready*).
-- **Sprint Review (viernes de cierre, 2 horas):** demostración del incremento desplegado en Preproducción (PREPROD) ante el equipo técnico de Curimón.
-- **Sprint Retrospective (viernes de cierre, 1 hora):** revisión interna del proceso de trabajo y acuerdos de mejora técnica.
-- **Artefactos del marco:** Product Backlog en GitLab Issues, Sprint Backlog en tablero Kanban e Incremento de Software validado según la *Definition of Done* (cobertura unitaria ≥ 80%, escaneo SAST limpio de fallas críticas y contratos OpenAPI al día).
+### 6.1.2 Gobernanza de interesados y plan de comunicaciones
+
+La gestión eficaz de los grupos de interés resulta determinante debido a la dispersión geográfica de las faenas y la multiplicidad de actores involucrados en la cadena logística. Se identifican y clasifican los siguientes actores clave:
+- **Patrocinador Ejecutivo y Dirección de Transporte Curimón:** Enfocados en retorno de inversión, continuidad operacional del negocio y cumplimiento de contratos de flete minero, vitivinícola y retail.
+- **Supervisores de Tráfico y Operadores de Torre de Control:** Usuarios intensivos de la plataforma, orientados a la visibilidad en tiempo real, alertas de desvío y cumplimiento de itinerarios.
+- **Conductores de Flota Propia y Terceros:** **454** (Caso, numeral 14.1, p. 29) conductores que interactúan directamente con la aplicación móvil y los sensores de cabina, priorizando la ergonomía, simplicidad y registro certero de jornadas laborales conforme al Artículo 25 bis del Código del Trabajo.
+- **Transportistas Terceros y Dueños de Camiones:** Propietarios de los 226 camiones subcontratados, interesados en la liquidación expedita de servicios y visibilidad telemática homologada.
+- **Organismos Fiscalizadores (Dirección del Trabajo, MTT, SEC):** Entidades que auditan la legalidad del transporte, pesos por eje, transporte de sustancias peligrosas y registros de jornada.
+
+Conforme a la exigencia técnica de las bases (Caso, RT-19.05, p. 33), audIT implementará desde el primer mes del contrato un **Espacio Colaborativo Digital** unificado en la nube de acceso seguro 24/7 para el equipo del proyecto y la contraparte técnica de Curimón. Este repositorio centralizado alojará la documentación formal, especificaciones de diseño, minutas firmadas, registro vivo de riesgos conforme a la norma ISO 31000 ((ISO, 2018), FEP02, RT-19.04, p. 33) y el catálogo de solicitudes de cambio.
+
+### 6.1.3 Gestión de adquisiciones e integración contractual
+
+La gestión de adquisiciones se estructura para mitigar riesgos de desabastecimiento en la cadena de suministros tecnológicos que pudieran afectar la Ruta Crítica:
+- **Adquisición Temprana de Componentes Vehiculares:** Compra y resguardo inicial de los 148 computadores de a bordo industriales, 34 interfaces inductivas CANclick para terceros y antenas satelitales auxiliares durante los meses 1 y 2 de la Etapa 1, neutralizando fluctuaciones de comercio exterior y plazos de internación aduanera.
+- **Acuerdos de Nivel de Servicio con Nube Pública:** Contratación bajo régimen Enterprise Agreement con Microsoft Azure para la provisión garantizada de capacidad de cómputo en la región principal Chile Central y zona secundaria Brazil South, asegurando el SLA contractual de 99,5 % (FEP01, Artículo 78, p. 40).
+- **Conectividad Celular Multicarrier:** Contratos de conectividad telemática con SIM card industriales en modalidad APN privada sobre redes de telecomunicaciones de cobertura nacional, con conmutación automática entre operadores para minimizar zonas de silencio.
+
+### 6.1.4 Comités de gobernanza, cadencias y mecanismos de decisión
+
+El control directivo y operacional del contrato se estructura en estricto apego al marco de gobernanza mandatado por las bases de licitación (FEP01, Artículo 71, p. 37). La interacción formal entre audIT y Transportes Curimón S.A. se canaliza a través de las cinco instancias que se detallan en la Tabla 6.1.4.
+
+**Tabla 6.1.** Instancias formales de gobernanza, participantes y cadencias
+
+| Instancia | Frecuencia | Participantes obligatorios | Propósito y alcance decisional |
+|---|---|---|---|
+| Comité Ejecutivo | Mensual | Patrocinador de Curimón, Gerencia de audIT, Administrador del Contrato. | Dirección estratégica, resolución de bloqueos contractuales, aprobación de modificaciones de alcance y evaluación de riesgos mayores. |
+| Comité de Proyecto | Quincenal | Contraparte Técnica de Curimón, Jefe de Proyecto de audIT. | Seguimiento riguroso de la Carta Gantt, estado de paquetes de trabajo EDT, control de hitos y acuerdos de ejecución técnica. |
+| Comité de Arquitectura | Mensual | Arquitecto de Solución, Oficial de Ciberseguridad, referentes de TI de Curimón. | Aprobación formal de decisiones técnicas (ADR), control de deuda técnica, revisión de estándares de interoperabilidad y seguridad. |
+| Comité de Operación | Mensual (desde M13) | Líder de Operación, Jefatura de Mesa de Ayuda, Contraparte Técnica de Curimón. | Verificación del cumplimiento de acuerdos SLA, gestión de problemas recurrentes, indicadores de marcha blanca y mejora continua. |
+| Reunión de Seguimiento | Semanal | Equipos de ingeniería y especialistas de ambas partes. | Coordinación táctica operativa, revisión de impedimentos inmediatos y compromisos semanales de avance. |
+
+Las instancias descritas en la Tabla 6.1.4 garantizan que toda discrepancia técnica u operativa se resuelva en el nivel adecuado con plazos acotados, evitando que imprevistos de ingeniería escalen indebidamente a controversias contractuales. El escalamiento operacional transita de forma expedita desde la Reunión Semanal al Comité de Proyecto ante desviaciones operativas, elevándose al Comité Ejecutivo exclusivamente cuando existe impacto en el alcance, presupuesto o nivel de servicio convenido.
+
+Cuando surge una contingencia o solicitud de cambio que modifique el alcance o los plazos acordados, esta debe tramitarse obligatoriamente mediante el procedimiento de control de cambios regido por el Artículo 72° de las Bases Administrativas (FEP01, Artículo 72, p. 38). La secuencia de este proceso se detalla en la Tabla 6.1.4.
+
+**Tabla 6.2.** Procedimiento formal de gestión y control de cambios contractuales
+
+| Paso | Acción requerida | Responsable formal | Criterio y resultado verificable |
+|---|---|---|---|
+| 1. Registro | Solicitud Formal de Cambio (RFC) en espacio colaborativo. | Parte solicitante (Curimón o audIT). | Formulario normalizado con descripción técnica, justificación operativa y urgencia asignada. |
+| 2. Análisis | Evaluación técnica y multidimensional de impactos. | Jefe de Proyecto y Arquitecto de Solución. | Informe de impacto en alcance, cronograma de Ruta Crítica, matriz de riesgos y disponibilidad. |
+| 3. Revisión | Dictamen técnico del Comité de Arquitectura. | Contraparte Técnica y Líder Técnico de audIT. | Validación de viabilidad arquitectónica, compatibilidad con microservicios y seguridad. |
+| 4. Decisión | Aprobación o rechazo formal en acta. | Comité Ejecutivo (unanimidad de representantes). | Aprobación expresa previa a cualquier ejecución física o lógica. Límite acumulado del 20 %. |
+| 5. Ejecución | Actualización de línea base y despliegue controlado. | Equipos de ingeniería y PMO. | Incorporación a sprint de desarrollo o ventana de mantenimiento programada. |
+
+Conforme se establece en la Tabla 6.1.4, la ejecución de cualquier alteración sin la debida aprobación previa en acta del Comité Ejecutivo carecerá de validez contractual y no dará derecho a indemnización (FEP01, Artículo 72.5, p. 38). Si se suscitaren controversias no resueltas en sede del Comité Ejecutivo en un plazo de treinta días corridos, operarán los mecanismos de mediación y arbitraje de derecho ante el Centro de Arbitraje y Mediación de Santiago (FEP01, Artículo 87, p. 45).
+
+> **Compromiso C-01.** audIT formalizará las decisiones y acuerdos de cada sesión de comité en un plazo máximo de veinticuatro horas hábiles en el espacio colaborativo digital.
+>
+> Métrica: Emisión de minuta formal y registro en espacio digital en menos de 24 horas hábiles tras cada sesión de comité. Se verifica en: Registro de auditoría del repositorio colaborativo. Fuente: FEP01, Artículo 71, p. 37, FEP02, RT-19.05, p. 33.
 
 ## 6.2 Metodología de desarrollo de software
 
-### 6.2.1 Pipeline DevSecOps y separación de cuatro ambientes SDLC y DR
+El desarrollo de la solución tecnológica se estructura bajo un ciclo de vida evolutivo basado en ingeniería de software guiada por el dominio (Domain-Driven Design, DDD) y prácticas DevSecOps. Se garantiza la prevención sistemática de deuda técnica y un tiempo de salida al mercado optimizado para los frentes operativos del transporte.
 
-El ciclo de desarrollo utiliza un pipeline de integración y despliegue continuo implementado en GitLab CI Enterprise, según el flujo de la Figura 6.2.
+### 6.2.1 Ciclo de vida adaptado y evolución arquitectónica
 
-![Figura 6.2. Pipeline DevSecOps y promoción entre ambientes](./figuras/6-2-pipeline.png)
+Para conciliar la alta disponibilidad exigida con la continua evolución logística de Transportes Curimón, el desarrollo de software se organiza en torno a los límites de contexto definidos en el Subdocumento 4.1. Este diseño modular desacopla los servicios transaccionales de telemetría de las interfaces de usuario y los algoritmos analíticos.
+- **Gestión Evolutiva de Requerimientos:** Cada uno de los 42 requerimientos del Formulario T-12 se desglosa en Historias de Usuario documentadas en el repositorio colaborativo. Cada historia incluye criterios de aceptación redactados en formato estructurado (Gherkin: Dado, Cuando, Entonces), sirviendo de especificación viva ejecutable.
+- **Diseño de Interfaces API-First:** Todo intercambio de datos entre módulos internos y con sistemas legados del cliente se realiza mediante contratos formales: especificación OpenAPI 3.1 para servicios síncronos REST y especificación AsyncAPI 2.6 para eventos telemáticos sobre Apache Kafka (FEP01, Artículo 4.3, p. 5).
+- **Prevención y Mitigación de Deuda Técnica:** Cada sprint de construcción reserva un 15 % de la capacidad de desarrollo para refactorización, optimización de consultas en base de datos y actualización de librerías base. Se prohíbe la acumulación de advertencias de compilación y se somete el código a inspección estática continua.
 
-Fuente: elaboración propia.
+### 6.2.2 Ecosistema DevSecOps unificado en GitLab CI Enterprise
 
-#### Ambientes del ciclo de desarrollo (SDLC) y entorno operativo de recuperación (DR)
+audIT descarta configuraciones fragmentadas o herramientas dispersas, adoptando como estándar corporativo exclusivo la plataforma **GitLab CI Enterprise** para la orquestación íntegra del ciclo DevSecOps (FEP01, Artículo 4.3, p. 5).
 
-El sistema opera con cuatro ambientes segregados para el ciclo de vida del software (DEV, QA, PREPROD y PROD), complementados por un entorno operativo de contingencia y recuperación ante desastres (DR) en Azure Brazil South que replica la configuración inmutable de producción:
+**Decisión D-02. Ecosistema integral DevSecOps sobre GitLab CI Enterprise**
 
-1. **DEV (Desarrollo):** pruebas unitarias y trabajo sobre ramas de características. Utiliza bases de datos locales con datos sintéticos; no tiene acceso a datos de producción.
-2. **QA (Pruebas de calidad):** pruebas de integración, contratos OpenAPI/AsyncAPI y reglas de dominio. Utiliza datos sintéticos o bases anonimizadas.
-3. **PREPROD (Preproducción / Staging):** réplica exacta de Producción en capacidad de cómputo, red y topología. Alberga pruebas dinámicas DAST, pruebas de carga con k6 y ensayos previos de migración (*Mock Runs*).
-4. **PROD (Producción):** entorno activo en Azure Chile Central. Los pases a producción promueven la imagen validada en PREPROD y verifican su digest criptográfico SHA-256.
-5. **DR (Disaster Recovery):** entorno operativo espejo de contingencia y recuperación en Azure Brazil South (objetivos RTO ≤ 4 horas y RPO ≤ 15 minutos, sujetos a simulacro cronometrado). No recibe despliegues directos desde desarrollo, sino que replica la infraestructura inmutable mediante plantillas Terraform e imágenes firmadas de PROD, con claves maestras gestionadas bajo protocolo Break-Glass.
+| Se decide | Se descarta | Criterio | Fuente |
+|---|---|---|---|
+| Unificar todo el control de versiones, pipeline de CI/CD, escaneo SAST, gestión de artefactos y políticas de despliegue en GitLab CI Enterprise | Arquitecturas mixtas compuestas por herramientas independientes (Jenkins, SonarQube standalone sin integración nativa, scripts de despliegue aislados) | Reducir vectores de falla, garantizar trazabilidad auditable de la cadena de suministro de software y automatizar la aplicación de políticas SLSA Nivel 3 | FEP01, Artículo 4.3, p. 5 |
 
-#### Cadena de suministro de software y SLSA Build L3
+El pipeline de entrega continua se ejecuta automáticamente ante cada evento de integración en el repositorio, transitando obligatoriamente por seis fases de validación, ilustradas en la Figura 6.2.
 
-Para proteger la integridad de las aplicaciones frente a vulnerabilidades en dependencias y compilación, el pipeline adopta los lineamientos de SLSA Build v1.1 Nivel 3:
-- **Runners efímeros:** las compilaciones corren en contenedores temporales con privilegios mínimos, destruidos automáticamente tras finalizar cada tarea.
-- **Atestaciones de procedencia:** cada compilación genera un registro inmutable que certifica el repositorio de origen, commit SHA, parámetros y ambiente de construcción.
-- **Inventario de dependencias (SBOM):** generación automática de SBOM en formato CycloneDX v1.5 para catalogar librerías directas y transitivas.
-- **Firma con Cosign:** las imágenes de contenedor se firman criptográficamente mediante Cosign con llaves custodiadas en Azure Key Vault HSM. Los clústeres de AKS implementan políticas de admisión (Kyverno) que bloquean la ejecución de imágenes sin firma válida o sin atestación de origen.
+![Figura 6.2. Fases y puertas de calidad del pipeline DevSecOps unificado](./figuras/6-2-pipeline.png)
 
-### 6.2.2 Despliegue con reducción de interrupciones, canary y reversión automática
+*Figura 6.2. Fases y puertas de calidad del pipeline DevSecOps unificado*
 
-Para reducir el riesgo de interrupción durante las actualizaciones productivas, se aplican tres mecanismos:
-- **Despliegues canary:** las versiones nuevas se dirigen primero al 10% del tráfico o a un terminal específico. Durante 60 minutos se supervisan tasas de error y latencia antes de extender el despliegue al resto del sistema.
-- **Migraciones de base de datos con patrón Expand-Contract:** las modificaciones de esquema en PostgreSQL se dividen en adición de columnas, migración asíncrona de datos y retiro posterior de campos antiguos, permitiendo la coexistencia de versiones consecutivas de la aplicación.
-- **Reversión automática:** el controlador de despliegue en AKS revierte los pods a la versión previa si los errores HTTP 5xx superan el 1% o si la latencia transaccional del despacho excede los 25 segundos.
+Fuente: Elaboración propia.
 
-### 6.2.3 Criterios de entrada, salida y métricas DORA
+Como se representa en la Figura 6.2, ninguna versión de software puede alcanzar el ambiente de producción sin superar secuencialmente las seis etapas del pipeline. En la Tabla 6.2.2 se definen los umbrales bloqueantes parametrizados para garantizar la integridad y seguridad del software.
 
-El avance entre ambientes está regido por compuertas de calidad:
-- **Entrada a QA:** pruebas unitarias con cobertura de código ≥ 80%, análisis estático en SonarQube sin observaciones críticas o bloqueantes, y escaneo de vulnerabilidades en dependencias (Trivy) sin CVEs críticos.
-- **Entrada a PREPROD:** pruebas de integración completadas, contratos de interfaces verificados y compatibilidad de esquema de base de datos validada.
-- **Entrada a PROD:** escaneo dinámico DAST (OWASP ZAP) sin hallazgos altos o críticos, pruebas de rendimiento con k6 validando respuestas en memoria interna en menos de 2 segundos para 350 usuarios simultáneos, aprobación del Comité de Cambios y verificación de firma digital en el contenedor.
+**Tabla 6.3.** Umbrales y políticas de calidad bloqueantes en el pipeline DevSecOps
 
-#### Métricas de desempeño de ingeniería (DORA)
+| Fase del Pipeline | Herramienta ejecutora | Métrica evaluada | Umbral bloqueante de paso a producción |
+|---|---|---|---|
+| 1. Pruebas | GitLab Runner / PyTest | Cobertura de código | $Mayor o igual al 80 %$ de cobertura de ramas (branch coverage). Cero pruebas unitarias fallidas. |
+| 2. Análisis estático | SonarQube Enterprise | Calidad y seguridad | Quality Gate ``A'' en mantenibilidad, deuda técnica menor al 5 %, cero vulnerabilidades críticas o altas. |
+| 3. Contenedores | Trivy Container Scanner | Vulnerabilidades CVE | Cero vulnerabilidades críticas o altas en dependencias y capas base (imágenes Distroless / Alpine). |
+| 4. Cadena de valor | Cosign / Syft (Anchore) | Integridad de artefactos | Generación mandatoria de SBOM en formato CycloneDX. Firma criptográfica con clave corporativa HSM. |
+| 5. Infraestructura | HashiCorp Terraform | Drift y seguridad IaC | Ejecución de `tfsec` y `checkov`. Cero configuraciones inseguras en templates de Azure. |
+| 6. Análisis dinámico | OWASP ZAP | Vulnerabilidades web | Cobertura OWASP ASVS 4.0 Nivel 2 (FEP01, Artículo 4.3, p. 5). Cero hallazgos en Top 10 web y API. |
 
-La gestión de ingeniería se evalúa mediante cuatro indicadores:
-- **Frecuencia de despliegue (Deployment Frequency):** quincenal a producción (al cierre de cada iteración) y continua en entornos de prueba.
-- **Tiempo de entrega de cambios (Lead Time for Changes):** inferior a 5 días hábiles desde el commit hasta su disponibilidad en PREPROD.
-- **Tasa de fallos en cambios (Change Failure Rate):** menor al 10% de las publicaciones a producción.
-- **Tiempo medio de recuperación (MTTR):** inferior a 60 minutos ante incidentes productivos mediante reversión automatizada de versiones.
+Los parámetros descritos en la Tabla 6.2.2 actúan como barreras determinísticas automatizadas. La detección de un solo fallo en cualquiera de estos umbrales aborta inmediatamente el pipeline de despliegue, notificando al equipo responsable a través de los canales de ingeniería sin intervención manual.
 
-## 6.3 Correspondencia con los formularios T-9 y T-10
+### 6.2.3 Infraestructura como código y gestión de configuración
 
-La siguiente correspondencia permite ubicar los contenidos de los Formularios T-9 y T-10 en este subdocumento (FEP01, p. 61).
+Toda la infraestructura cloud alojada en Microsoft Azure se gestiona bajo el paradigma de Infraestructura como Código (IaC) mediante scripts de Terraform versionados en Git (FEP02, RT-10.02, p. 24). Se implementa un modelo de entornos rigurosamente aislados:
+- **Segregación de Ambientes:** Suscripciones independientes de Azure para Desarrollo, Pruebas/Staging y Producción, impidiendo cualquier cruce accidental de accesos o datos operacionales.
+- **Aprovisionamiento Inmutable:** Los servidores y clusters de Azure Kubernetes Service (AKS) no admiten modificaciones manuales en caliente vía consola. Cualquier cambio de configuración o escalamiento debe registrarse como código, someterse a revisión por pares y desplegarse mediante pipeline.
+- **Gestión Centralizada de Secretos:** Ninguna credencial, clave privada o cadena de conexión se almacena en el código fuente. Se utiliza Azure Key Vault integrado con identidades administradas (Managed Identities) y rotación programada automática.
 
-- **T-9 — Gobernanza, instancias y cadencias:** §6.1.1.
-- **T-9 — Interesados y comunicaciones:** §6.1.2.
-- **T-9 — Adquisiciones y control de cambios:** §6.1.3.
-- **T-9 — Ceremonias y artefactos ágiles:** §6.1.4.
-- **T-10 — Ciclo de vida, pipeline DevSecOps e infraestructura como código:** §6.2 y §6.2.1.
-- **T-10 — Ambientes segregados:** cuatro ambientes SDLC (DEV, QA, PREPROD y PROD), más DR como entorno operativo de contingencia; §6.2.1.
-- **T-10 — Despliegue canary, reversión, compuertas de calidad y métricas DORA:** §§6.2.2–6.2.3.
+### 6.2.4 Ceremonias técnicas, artefactos y criterios de salida
+
+El trabajo colaborativo del equipo de desarrollo se organiza en torno a un flujo de trabajo de control de versiones GitFlow adaptado. Las ramas principales son:
+- **Rama `main`:** Refleja exclusivamente el código en producción verificado. Es una rama protegida que requiere firma criptográfica de commits y aprobación de dos líderes técnicos.
+- **Rama `develop`:** Rama de integración continua donde convergen las nuevas funcionalidades validadas mediante pruebas unitarias.
+- **Ramas temáticas (`feature/*`, `bugfix/*`, `hotfix/*`):** Ramas de trabajo de corta duración, sujetas obligatoriamente a revisión por pares (Peer Review) mediante Merge Requests.
+
+Para garantizar un estándar riguroso de completitud en cada entrega de software, se establecen las matrices de Definition of Ready (DoR) y Definition of Done (DoD) que se detallan en la Tabla 6.2.4.
+
+**Tabla 6.4.** Criterios formales de salida: Definición de Preparado y Definición de Terminado
+
+| Nivel de control | Artefacto / Fase evaluada | Criterios de aceptación obligatorios |
+|---|---|---|
+| Definición de Preparado (DoR) | Historia de Usuario / Requerimiento funcional | Requerimiento trazado unívocamente al Formulario T-12. Criterios de aceptación definidos en Gherkin. Dependencias técnicas resueltas. Mockups de interfaz aprobados. |
+| Revisión por Pares | Merge Request (MR) en GitLab | Aprobación obligatoria de al menos un revisor senior. Verificación de adherencia a guías de estilo, comentarios arquitectónicos y ausencia de duplicidad de código. |
+| Definición de Terminado (DoD) | Incremento de Software / Release Candidate | Código fusionado en rama objetivo. Cobertura $Mayor o igual al 80 %$. Quality Gate SonarQube superado. Contenedor firmado con Cosign y registrado en Azure Container Registry con SBOM. Documentación OpenAPI actualizada. Despliegue exitoso en staging sin regresiones operativas. |
+
+La aplicación de los criterios de la Tabla 6.2.4 asegura que cada módulo tecnológico entregado a Transportes Curimón cumpla con los estándares industriales de mantenibilidad, solidez arquitectónica y ciberseguridad exigidos por las bases.
+
+> **Compromiso C-02.** audIT mantendrá un tiempo de despliegue continuo en ambiente de pruebas inferior a quince minutos para incrementos de software validados.
+>
+> Métrica: Despliegue automatizado en staging en menos de 15 minutos tras aprobación de Merge Request. Se verifica en: Métricas de ejecución del pipeline en GitLab CI Enterprise. Fuente: FEP01, Artículo 4.3, p. 5, FEP02, RT-10.02, p. 24.
 
 ## Referencias
 
-- Google. (2025). *Supply-chain Levels for Software Artifacts (SLSA)* (Build Track v1.1). OpenSSF. https://slsa.dev/spec/v1.1/
-- OWASP Foundation. (2021). *OWASP Application Security Verification Standard* (ASVS Version 4.0.3). OWASP. https://owasp.org/www-project-application-security-verification-standard/
-- Project Management Institute. (2021). *A Guide to the Project Management Body of Knowledge (PMBOK Guide)* (7.ª ed.). Project Management Institute.
-- Schwaber, K., & Sutherland, J. (2020). *The Scrum Guide: The Definitive Guide to Scrum: The Rules of the Game*. Scrum.org.
-- Forsgren, N., Humble, J., & Kim, G. (2018). *Accelerate: The Science of Lean Software and DevOps: Building and Scaling High Performing Technology Organizations*. IT Revolution Press.
+ISO. (2018). *ISO 31000:2018. Risk management -- Guidelines*.
+
+Project Management Institute. (2021). *A Guide to the Project Management Body of Knowledge (PMBOK Guide) and The Standard for Project Management* (7th).
+
+Transportes Curimón S.A. (2026). *Bases administrativas para la preparación de la propuesta: Licitación Pública Internacional N.º TFEP-01/2026* (Documento FEP01).
+
+Transportes Curimón S.A. (2026). *Bases técnicas del Caso 10, Transporte de Carga: Licitación Pública Internacional N.º TFEP-01/2026* (Documento FEP03).
+
+Transportes Curimón S.A. (2026). *Bases técnicas transversales para la preparación de la propuesta: Licitación Pública Internacional N.º TFEP-01/2026* (Documento FEP02).
 
 ## Declaración de uso de IA
 
-En conformidad con el Comunicado 09 y el Comunicado 10 (§7.2), se declara el uso asistido de herramientas de inteligencia artificial generativa durante la estructuración metodológica de este subdocumento. La definición de los marcos de gobierno, el cronograma de etapas alineado con las restricciones del Caso, el régimen de operación y soporte de Etapa 1, la especificación de compras del Formulario T-11 y los parámetros DevSecOps fueron realizados y aprobados por la Dupla 3 (DevSecOps & Software/Datos) en coordinación con la Dupla 2 (PMO) y la Dupla 4 (Infraestructura).
+Conforme al Comunicado 10, sección 7.2, cada sección de este subdocumento y cada formulario asociado declara la herramienta de inteligencia artificial generativa usada, su finalidad, el nivel de uso en texto y en diagramas según la escala oficial de esa sección, y quién revisó y qué verificó. Esta declaración se consolida en el Formulario A-6.
+
+| Sección | Herramienta | Finalidad del uso | Nivel en texto | Nivel en diagramas | Revisión humana (quién y qué verificó) |
+|---|---|---|---|---|---|
+| Introducción | Claude Opus 5.5 en Claude Code | Ajuste estilístico de redacción introductoria | Bajo | Ninguno | Carlos Jesús Abarza Suazo, Director de Auditoría y Aseguramiento Tecnológico: Verificación de consistencia con Caso 10 y FEP01 |
+| 6.1 Metodología de gestión del proyecto | Claude Opus 5.5 en Claude Code | Estructuración del marco híbrido PMBOK/ágil, comités y control de cambios | Medio | Bajo | Carlos Jesús Abarza Suazo, Director de Auditoría y Aseguramiento Tecnológico: Validación de Art. 71, Art. 72 y cadencias de gobernanza |
+| 6.2 Metodología de desarrollo de software | Claude Opus 5.5 en Claude Code | Diseño de pipeline DevSecOps en GitLab CI Enterprise y políticas de calidad | Medio | Bajo | Carlos Jesús Abarza Suazo, Director de Auditoría y Aseguramiento Tecnológico: Validación de SLSA 3, Quality Gates y DoD/DoR |
+| Formularios T-9 y T-10 | Claude Opus 5.5 en Claude Code | Mapeo formal de exigencias administrativas y de ingeniería hacia secciones del documento | Alto | Ninguno | Carlos Jesús Abarza Suazo, Director de Auditoría y Aseguramiento Tecnológico: Auditoría de cumplimiento FEP01 |

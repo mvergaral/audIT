@@ -24,7 +24,7 @@ El modelo de datos resuelve las exigencias operacionales y regulatorias del tran
 \begin{tabla}[ancho=completo]{Arquitectura y capacidades del modelo de datos audIT}{5-evolucion}{@{}p{3.2cm}p{4.2cm}p{4.8cm}p{3.8cm}@{}}
 \textbf{Dimensión} & \textbf{Línea Base Heredada} & \textbf{Diseño Canónico audIT} & \textbf{Impacto Operacional en Curimón} \\ \midrule
 Paradigma de modelado & Esquema relacional sin agregados & Domain-Driven Design (DDD) con agregados e invariantes (\transv{RT-02.13}{8}) & Validación en memoria, respuesta de despacho en $\le 2$ s \\
-Ingesta telemática & Inserción síncrona en tablas OLTP & Arquitectura Fast-Data desacoplada (TimescaleDB / Kafka) y buffer offline & Aísla pings GPS del motor central, resiste sombras $> 80$ km \\
+Ingesta telemática & Inserción síncrona en tablas OLTP & Arquitectura Fast-Data desacoplada (TimescaleDB / Azure Event Hubs) y buffer offline & Aísla pings GPS del motor central, resiste sombras $> 80$ km \\
 Gobernanza de activos & Entidad única genérica CAMION & Disociación estricta TRACTOCAMION y SEMIRREMOLQUE & Controla vencimientos cruzados y compatibilidad química (DS 298) \\
 Datos maestros (MDM) & Entidades dispersas en planillas & MDM de Registro Único (\textit{Golden Record}) con Capa Anticorrupción & Elimina duplicidad en 454 choferes, 374 camiones y 84 clientes \\
 Estrategia desempeño & Índices básicos sin partición & Particionamiento mensual, índices GiST/BRIN y caché L2 Redis & Geocercas en $< 5$ ms e indexación compacta con árboles BRIN \\
@@ -111,6 +111,47 @@ fecha\_carga & TIMESTAMPTZ & Sello UTC de subida & Sí & Operacional. Trazabilid
 
 El sellado con hash SHA-256 de la \tabref{5-dicc-documento} otorga validez legal ante fiscalizaciones laborales o peritajes judiciales en siniestros.
 
+\subsection{Evidencia de jornada, cascada probatoria y cadena de custodia}\label{sec:5-evidencia-jornada}
+
+Para garantizar la validez probatoria de las horas de conducción y descanso exigidas por el Artículo 25 bis del Código del Trabajo (\parencite{codigo_trabajo_25bis}), se implementa la entidad \texttt{EVIDENCIA\_JORNADA} y un esquema jerárquico de fidelidad instrumental de seis niveles, detallado en la \tabref{5-cascada-probatoria}.
+
+\begin{tabla}[ancho=completo]{Cascada probatoria de seis niveles instrumentales de jornada}{5-cascada-probatoria}{@{}p{2.6cm}p{3.8cm}p{5.8cm}p{3.8cm}@{}}
+\textbf{Nivel} & \textbf{Instrumento fuente} & \textbf{Mecanismo de captura y validación} & \textbf{Veredicto de asignación} \\ \midrule
+1. \texttt{INST\_TACO} & Tacógrafo digital homologado & Lectura directa de archivos .ddd y verificación de firma criptográfica & Asignación automática plena \\
+2. \texttt{INST\_EDGE} & Lector en cabina iWave G26I & Identificación por tarjeta MIFARE DESFire de alta seguridad & Asignación automática plena \\
+3. \texttt{INST\_CAN} & Sensor inductivo CANCrocodile & Telemetría SAE J1939 de rpm y odómetro sin contacto intrusivo & Asignación automática plena \\
+4. \texttt{EXT\_GPS} & Plataforma GPS de terceros & Ingesta webhook homologada contrastada con sesión móvil activa & Asignación con trazabilidad técnica \\
+5. \texttt{PORT\_TER} & Portería o romana de terminal & Registro biométrico de acceso a patio, pesaje o relevo & Acredita reposo o espera en patio \\
+6. \texttt{DECL\_JUR} & Declaración electrónica jurada & Atestación del transportista bajo Ley 19.799 con responsabilidad legal & Asignación supletoria auditada \\
+\end{tabla}
+
+La jerarquía de la \tabref{5-cascada-probatoria} define la prelación técnica para la autorización automatizada de despachos; el valor probatorio judicial en juicio queda sujeto a las reglas de la sana crítica de los tribunales chilenos.
+
+En la \tabref{5-dicc-evidencia} se especifican los atributos de la entidad \texttt{EVIDENCIA\_JORNADA}.
+
+\begin{tabla}[ancho=completo]{Entidad EVIDENCIA\_JORNADA (Custodia y fidelidad probatoria)}{5-dicc-evidencia}{@{}p{3.2cm}p{2.6cm}p{3.2cm}p{1.4cm}p{5.8cm}@{}}
+\textbf{Atributo} & \textbf{Tipo de Dato} & \textbf{Dominio / Formato} & \textbf{Req.} & \textbf{Sensibilidad y Tratamiento} \\ \midrule
+id\_evidencia & UUIDv4 & Identificador global & Sí & Operacional. Clave primaria \\
+id\_conductor & UUIDv4 & FK hacia CONDUCTOR & Sí & Operacional. Índice con marca temporal \\
+marca\_tiempo\_utc & TIMESTAMPTZ & Estampa UTC sincronizada & Sí & Operacional. Reloj atómico / GNSS a bordo \\
+nivel\_cascada & ENUM & 6 niveles instrumentales & Sí & Operacional. Clasificación de fidelidad probatoria \\
+odometro\_km & NUMERIC(9,2) & Kilometraje acumulado & Sí & Operacional. Odómetro vehicular / GPS \\
+velocidad\_kmh & NUMERIC(5,2) & Velocidad instantánea & Sí & Operacional. Detección de movimiento efectivo \\
+hash\_sha256 & CHAR(64) & Hash criptográfico actual & Sí & \textbf{Garantía de inalterabilidad encadenada} \\
+hash\_previo & CHAR(64) & Hash del registro anterior & Sí & \textbf{Encadenamiento criptográfico (Hash Chain)} \\
+evidencia\_rect\_id & UUIDv4 & FK autorreferencial (nullable) & No & Operacional. Enlace a rectificación auditable \\
+\end{tabla}
+
+Como se desprende de la \tabref{5-dicc-evidencia}, cualquier rectificación derivada de auditoría laboral se procesa mediante una nueva tupla vinculada, preservando el registro original inalterable. El mecanismo de preservación criptográfica y almacenamiento inmutable se ilustra en la \figref{5-custodiafig}.
+
+\figura[alto=0.34]{figuras/05-datos/5-2-custodia.png}{Cadena de custodia forense append-only y almacenamiento inmutable de jornada}{5-custodiafig}
+
+Como ilustra la \figref{5-custodiafig}, los privilegios de modificación y borrado (\texttt{UPDATE}, \texttt{DELETE}, \texttt{TRUNCATE}) se revocan a nivel de base de datos (\transv{RT-16.07}{12}), transfiriendo bloques consolidados a almacenamiento WORM con bloqueo legal.
+
+\subsection{Soberanía y permisos bajo la Ley N.\textordmasculine{} 21.719}\label{sec:5-soberania}
+
+En la \tabref{5-dicc-consentimiento} se parametrizan los permisos de consentimiento de transportistas y choferes bajo la Ley 21.719 (\parencite{ley21719}).
+
 \begin{tabla}[ancho=completo]{Entidad CONSENTIMIENTO\_DATOS (Soberanía y Ley N.\textordmasculine{} 21.719)}{5-dicc-consentimiento}{@{}p{3.2cm}p{2.6cm}p{3.2cm}p{1.4cm}p{5.8cm}@{}}
 \textbf{Atributo} & \textbf{Tipo de Dato} & \textbf{Dominio / Formato} & \textbf{Req.} & \textbf{Sensibilidad y Tratamiento} \\ \midrule
 id\_consentimiento & UUIDv4 & Identificador global & Sí & Operacional. Clave primaria \\
@@ -122,7 +163,11 @@ fecha\_otorgamiento & TIMESTAMPTZ & Sello UTC de autorización & Sí & Operacion
 fecha\_revocacion & TIMESTAMPTZ & Sello UTC (nullable) & No & Operacional. Cese inmediato de transmisión \\
 \end{tabla}
 
-La parametrización de la \tabref{5-dicc-consentimiento} garantiza el derecho de revocación del transportista externo sin comprometer la retención histórica legal.
+La parametrización de la \tabref{5-dicc-consentimiento} garantiza el derecho de revocación del transportista externo sin comprometer la retención histórica legal. El ciclo de vida de los datos personales y los mecanismos de supresión segura se representan en la \figref{5-permisosfig}.
+
+\figura[alto=0.34]{figuras/05-datos/5-3-permisos.png}{Soberanía de datos, gestión de consentimiento y ciclo de vida bajo la Ley 21.719}{5-permisosfig}
+
+Como se esquematiza en la \figref{5-permisosfig}, ante una solicitud de supresión de datos, los registros obligatorios por ley laboral (5 años), tributaria (6 años) o de siniestros (10 años) se bloquean operativamente sin destruirse anticipadamente. Concluido el período legal, se ejecuta la destrucción criptográfica irreversible (\textit{crypto-shredding}) de las llaves en Azure Key Vault bajo la norma NIST SP 800-88 Rev. 1 (\parencite{nist80088}).
 
 \begin{tabla}[ancho=completo]{Entidad VIAJE (Transacción Central, 96.000 viajes/año)}{5-dicc-viaje}{@{}p{3.2cm}p{2.6cm}p{3.2cm}p{1.4cm}p{5.8cm}@{}}
 \textbf{Atributo} & \textbf{Tipo de Dato} & \textbf{Dominio / Formato} & \textbf{Req.} & \textbf{Sensibilidad y Tratamiento} \\ \midrule

@@ -6,7 +6,7 @@ audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. O
 
 > **Resumen de apertura.**
 >
-> El presente subdocumento formaliza el marco metodológico integrado de \audIT para la dirección, construcción, aseguramiento y despliegue del sistema de gestión operacional y logística de Transportes Curimón S.A. Se establece un modelo de gestión híbrido que conjuga la previsibilidad y rigor de control del estándar PMBOK con la flexibilidad iterativa de Scrum y la eficiencia operativa de Kanban, asegurando el cumplimiento estricto del cronograma de 56 meses y los **42** (Caso, numeral 17.1, p. 38) requerimientos del contrato. Asimismo, se institucionaliza una práctica de ingeniería DevSecOps unificada en GitLab CI Enterprise con certificación de procedencia SLSA Nivel 3 y puertas de calidad automáticas.
+> El presente subdocumento formaliza el marco metodológico integrado de audIT para la dirección, construcción, aseguramiento y despliegue del sistema de gestión operacional y logística de Transportes Curimón S.A. Se establece un modelo de gestión híbrido que conjuga la previsibilidad y rigor de control del estándar PMBOK con la flexibilidad iterativa de Scrum y la eficiencia operativa de Kanban, asegurando el cumplimiento estricto del cronograma de 56 meses y los **42** requerimientos del contrato (Caso, numeral 17.1, p. 38). Asimismo, se institucionaliza una práctica de ingeniería DevSecOps unificada en GitLab CI Enterprise con certificación de procedencia SLSA Nivel 3 y puertas de calidad automáticas.
 >
 > **Qué recibe Transportes Curimón S.A.**
 > - Marco de gobernanza estructurado en cinco comités mandantes con cadencias quincenales y mensuales (FEP01, Artículo 71, p. 37).
@@ -15,7 +15,7 @@ audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. O
 > - Cadena de suministro de software protegida mediante firmas criptográficas Cosign y atestaciones SBOM CycloneDX (FEP01, Artículo 4.3, p. 5).
 > - Matrices estandarizadas de criterios de salida para Definición de Preparado (DoR) y Definición de Terminado (DoD).
 
-La naturaleza multidimensional de la licitación TFEP-01/2026 exige articular actividades de distinta naturaleza: adquisiciones masivas de equipamiento de telemetría vehicular, obras civiles menores en terminales, configuraciones de infraestructura cloud de misión crítica, e ingeniería de software para componentes transaccionales, móviles y analíticos. Un enfoque metodológico homogéneo resultaría insuficiente. Por ello, la estrategia metodológica de \audIT se articula como el núcleo operativo que conecta los requerimientos del Formulario T-12 con el Plan de Trabajo del Capítulo 7, el Plan de Riesgos del Capítulo 8 y el Sistema de Calidad del Capítulo 9.
+La naturaleza multidimensional de la licitación TFEP-01/2026 exige articular actividades de distinta naturaleza: adquisiciones masivas de equipamiento de telemetría vehicular, obras civiles menores en terminales, configuraciones de infraestructura cloud de misión crítica, e ingeniería de software para componentes transaccionales, móviles y analíticos. Un enfoque metodológico homogéneo resultaría insuficiente. Por ello, la estrategia metodológica de audIT se articula como el núcleo operativo que conecta los requerimientos del Formulario T-12 con el Plan de Trabajo del Capítulo 7, el Plan de Riesgos del Capítulo 8 y el Sistema de Calidad del Capítulo 9.
 
 ## 6.1 Metodología de gestión del proyecto
 
@@ -34,6 +34,16 @@ La administración del contrato se fundamenta en un modelo de ciclo de vida híb
 |---|---|---|---|
 | Implementar gobernanza predictiva PMBOK para control contractual e hitos combinada con Scrum en iteraciones de dos semanas para software | Enfoque puramente predictivo tipo cascada y enfoque puramente ágil sin línea base | El transporte crítico exige certidumbre contractual de plazos de implantación junto con flexibilidad en diseño de interfaces y analítica | FEP01, Artículo 4.3, p. 5, FEP02, RT-19.01, p. 33 |
 
+La articulación temporal del marco de gestión y su integración con los hitos contractuales de la licitación se ilustra en la Figura 6.1.
+
+![Figura 6.1. Gobernanza temporal del proyecto y articulación de fases, etapas y marchas blancas](../../figuras/06-metodologias/6-1-hitos.png)
+
+*Figura 6.1. Gobernanza temporal del proyecto y articulación de fases, etapas y marchas blancas*
+
+Fuente: Elaboración propia.
+
+Como se desprende de la Figura 6.1, la sincronización entre los sprints ágiles de dos semanas y los hitos contractuales garantiza visibilidad continua para Transportes Curimón sin comprometer los plazos mayores de implantación.
+
 ### 6.1.2 Gobernanza de interesados y plan de comunicaciones
 
 La gestión eficaz de los grupos de interés resulta determinante debido a la dispersión geográfica de las faenas y la multiplicidad de actores involucrados en la cadena logística. Se identifican y clasifican los siguientes actores clave:
@@ -43,7 +53,7 @@ La gestión eficaz de los grupos de interés resulta determinante debido a la di
 - **Transportistas Terceros y Dueños de Camiones:** Propietarios de los 226 camiones subcontratados, interesados en la liquidación expedita de servicios y visibilidad telemática homologada.
 - **Organismos Fiscalizadores (Dirección del Trabajo, MTT, SEC):** Entidades que auditan la legalidad del transporte, pesos por eje, transporte de sustancias peligrosas y registros de jornada.
 
-Conforme a la exigencia técnica de las bases (Caso, RT-19.05, p. 33), \audIT implementará desde el primer mes del contrato un **Espacio Colaborativo Digital** unificado en la nube de acceso seguro 24/7 para el equipo del proyecto y la contraparte técnica de Curimón. Este repositorio centralizado alojará la documentación formal, especificaciones de diseño, minutas firmadas, registro vivo de riesgos conforme a la norma ISO 31000 ((ISO, 2018), FEP02, RT-19.04, p. 33) y el catálogo de solicitudes de cambio.
+Conforme a la exigencia técnica de las bases (Caso, RT-19.05, p. 33), audIT implementará desde el primer mes del contrato un **Espacio Colaborativo Digital** unificado en la nube de acceso seguro 24/7 para el equipo del proyecto y la contraparte técnica de Curimón. Este repositorio centralizado alojará la documentación formal, especificaciones de diseño, minutas firmadas, registro vivo de riesgos conforme a la norma ISO 31000 ((ISO, 2018), FEP02, RT-19.04, p. 33) y el catálogo de solicitudes de cambio.
 
 ### 6.1.3 Gestión de adquisiciones e integración contractual
 
@@ -54,55 +64,35 @@ La gestión de adquisiciones se estructura para mitigar riesgos de desabastecimi
 
 ### 6.1.4 Comités de gobernanza, cadencias y mecanismos de decisión
 
-El control directivo y operacional del contrato se estructura en estricto apego al marco de gobernanza mandatado por las bases de licitación (FEP01, Artículo 71, p. 37). La interacción formal entre \audIT y Transportes Curimón S.A. se canaliza a través de las cinco instancias que se detallan en la Tabla 6.1.
+El control directivo y operacional del contrato se estructura en estricto apego al marco de gobernanza mandatado por las bases de licitación (FEP01, Artículo 71, p. 37). La interacción formal entre audIT y Transportes Curimón S.A. se canaliza a través de las cinco instancias que se detallan en la Tabla 6.1.4.
 
 **Tabla 6.1.** Instancias formales de gobernanza, participantes y cadencias
 
 | Instancia | Frecuencia | Participantes obligatorios | Propósito y alcance decisional |
 |---|---|---|---|
-| Comité Ejecutivo | Mensual | Patrocinador de Curimón, Gerencia de \audIT, Administrador del Contrato. | Dirección estratégica, resolución de bloqueos contractuales, aprobación de modificaciones de alcance y evaluación de riesgos mayores. |
-| Comité de Proyecto | Quincenal | Contraparte Técnica de Curimón, Jefe de Proyecto de \audIT. | Seguimiento riguroso de la Carta Gantt, estado de paquetes de trabajo EDT, control de hitos y acuerdos de ejecución técnica. |
+| Comité Ejecutivo | Mensual | Patrocinador de Curimón, Gerencia de audIT, Administrador del Contrato. | Dirección estratégica, resolución de bloqueos contractuales, aprobación de modificaciones de alcance y evaluación de riesgos mayores. |
+| Comité de Proyecto | Quincenal | Contraparte Técnica de Curimón, Jefe de Proyecto de audIT. | Seguimiento riguroso de la Carta Gantt, estado de paquetes de trabajo EDT, control de hitos y acuerdos de ejecución técnica. |
 | Comité de Arquitectura | Mensual | Arquitecto de Solución, Oficial de Ciberseguridad, referentes de TI de Curimón. | Aprobación formal de decisiones técnicas (ADR), control de deuda técnica, revisión de estándares de interoperabilidad y seguridad. |
 | Comité de Operación | Mensual (desde M13) | Líder de Operación, Jefatura de Mesa de Ayuda, Contraparte Técnica de Curimón. | Verificación del cumplimiento de acuerdos SLA, gestión de problemas recurrentes, indicadores de marcha blanca y mejora continua. |
 | Reunión de Seguimiento | Semanal | Equipos de ingeniería y especialistas de ambas partes. | Coordinación táctica operativa, revisión de impedimentos inmediatos y compromisos semanales de avance. |
 
-Las instancias descritas en la Tabla 6.1 garantizan que toda discrepancia técnica u operativa se resuelva en el nivel adecuado con plazos acotados, evitando que imprevistos de ingeniería escalen indebidamente a controversias contractuales. Para asegurar una resolución jerárquica y expedita, en la Figura ? se define el flujo estructurado de escalamiento operacional entre las instancias de decisión del proyecto.
+Las instancias descritas en la Tabla 6.1.4 garantizan que toda discrepancia técnica u operativa se resuelva en el nivel adecuado con plazos acotados, evitando que imprevistos de ingeniería escalen indebidamente a controversias contractuales. El escalamiento operacional transita de forma expedita desde la Reunión Semanal al Comité de Proyecto ante desviaciones operativas, elevándose al Comité Ejecutivo exclusivamente cuando existe impacto en el alcance, presupuesto o nivel de servicio convenido.
 
-\begin{figuraNativa}[tbp]{Flujo decisional y escalamiento de gobernanza contractual}{6-gobernanza-flujo}
-\begin{tikzpicture}[node distance=1.3cm, auto,
-  bloque/.style={rectangle, draw=auditAzul, fill=auditAzul!8, text width=42mm, text centered, rounded corners=2pt, minimum height=11mm, font=\sffamily\fontsize{8.5bp}{10.5bp}\selectfont},
-  linea/.style={draw=auditAzul, -latex, thick}]
-
-  \node[bloque] (semanal) {Reunión Semanal (Impedimentos operativos)};
-  \node[bloque, right=1.6cm of semanal] (proyecto) {Comité de Proyecto (Desviaciones $\le 5$ días)};
-  \node[bloque, right=1.6cm of proyecto] (ejecutivo) {Comité Ejecutivo (Cambios alcance y SLA)};
-
-  \node[bloque, below=1.2cm of proyecto] (arquitectura) {Comité de Arquitectura (Decisiones técnicas ADR)};
-  \node[bloque, below=1.2cm of ejecutivo] (resolucion) {Resolución Controversias (FEP01, Artículo 87, p. 45)};
-
-  \path[linea] (semanal) -- node[above, font=\sffamily\fontsize{7.5bp}{9bp}\selectfont]{Escalamiento} (proyecto);
-  \path[linea] (proyecto) -- node[above, font=\sffamily\fontsize{7.5bp}{9bp}\selectfont]{Impacto contractual} (ejecutivo);
-  \path[linea] (proyecto) -- node[left, font=\sffamily\fontsize{7.5bp}{9bp}\selectfont]{Duda técnica} (arquitectura);
-  \path[linea] (arquitectura) -| (ejecutivo);
-  \path[linea] (ejecutivo) -- node[right, font=\sffamily\fontsize{7.5bp}{9bp}\selectfont]{Sin acuerdo 30 d} (resolucion);
-\end{tikzpicture}
-\end{figuraNativa}
-
-Cuando surge una contingencia o solicitud de cambio que modifique el alcance o los plazos acordados, esta debe tramitarse obligatoriamente mediante el procedimiento de control de cambios regido por el Artículo 72° de las Bases Administrativas (FEP01, Artículo 72, p. 38). La secuencia de este proceso se detalla en la Tabla 6.2.
+Cuando surge una contingencia o solicitud de cambio que modifique el alcance o los plazos acordados, esta debe tramitarse obligatoriamente mediante el procedimiento de control de cambios regido por el Artículo 72° de las Bases Administrativas (FEP01, Artículo 72, p. 38). La secuencia de este proceso se detalla en la Tabla 6.1.4.
 
 **Tabla 6.2.** Procedimiento formal de gestión y control de cambios contractuales
 
 | Paso | Acción requerida | Responsable formal | Criterio y resultado verificable |
 |---|---|---|---|
-| 1. Registro | Solicitud Formal de Cambio (RFC) en espacio colaborativo. | Parte solicitante (Curimón o \audIT). | Formulario normalizado con descripción técnica, justificación operativa y urgencia asignada. |
+| 1. Registro | Solicitud Formal de Cambio (RFC) en espacio colaborativo. | Parte solicitante (Curimón o audIT). | Formulario normalizado con descripción técnica, justificación operativa y urgencia asignada. |
 | 2. Análisis | Evaluación técnica y multidimensional de impactos. | Jefe de Proyecto y Arquitecto de Solución. | Informe de impacto en alcance, cronograma de Ruta Crítica, matriz de riesgos y disponibilidad. |
-| 3. Revisión | Dictamen técnico del Comité de Arquitectura. | Contraparte Técnica y Líder Técnico de \audIT. | Validación de viabilidad arquitectónica, compatibilidad con microservicios y seguridad. |
+| 3. Revisión | Dictamen técnico del Comité de Arquitectura. | Contraparte Técnica y Líder Técnico de audIT. | Validación de viabilidad arquitectónica, compatibilidad con microservicios y seguridad. |
 | 4. Decisión | Aprobación o rechazo formal en acta. | Comité Ejecutivo (unanimidad de representantes). | Aprobación expresa previa a cualquier ejecución física o lógica. Límite acumulado del 20 %. |
 | 5. Ejecución | Actualización de línea base y despliegue controlado. | Equipos de ingeniería y PMO. | Incorporación a sprint de desarrollo o ventana de mantenimiento programada. |
 
-Conforme se establece en la Tabla 6.2, la ejecución de cualquier alteración sin la debida aprobación previa en acta del Comité Ejecutivo carecerá de validez contractual y no dará derecho a indemnización (FEP01, Artículo 72.5, p. 38). Si se suscitaren controversias no resueltas en sede del Comité Ejecutivo en un plazo de treinta días corridos, operarán los mecanismos de mediación y arbitraje de derecho ante el Centro de Arbitraje y Mediación de Santiago (FEP01, Artículo 87, p. 45).
+Conforme se establece en la Tabla 6.1.4, la ejecución de cualquier alteración sin la debida aprobación previa en acta del Comité Ejecutivo carecerá de validez contractual y no dará derecho a indemnización (FEP01, Artículo 72.5, p. 38). Si se suscitaren controversias no resueltas en sede del Comité Ejecutivo en un plazo de treinta días corridos, operarán los mecanismos de mediación y arbitraje de derecho ante el Centro de Arbitraje y Mediación de Santiago (FEP01, Artículo 87, p. 45).
 
-> **Compromiso C-01.** \audIT formalizará las decisiones y acuerdos de cada sesión de comité en un plazo máximo de veinticuatro horas hábiles en el espacio colaborativo digital.
+> **Compromiso C-01.** audIT formalizará las decisiones y acuerdos de cada sesión de comité en un plazo máximo de veinticuatro horas hábiles en el espacio colaborativo digital.
 >
 > Métrica: Emisión de minuta formal y registro en espacio digital en menos de 24 horas hábiles tras cada sesión de comité. Se verifica en: Registro de auditoría del repositorio colaborativo. Fuente: FEP01, Artículo 71, p. 37, FEP02, RT-19.05, p. 33.
 
@@ -119,7 +109,7 @@ Para conciliar la alta disponibilidad exigida con la continua evolución logíst
 
 ### 6.2.2 Ecosistema DevSecOps unificado en GitLab CI Enterprise
 
-\audIT descarta configuraciones fragmentadas o herramientas dispersas, adoptando como estándar corporativo exclusivo la plataforma **GitLab CI Enterprise** para la orquestación íntegra del ciclo DevSecOps (FEP01, Artículo 4.3, p. 5).
+audIT descarta configuraciones fragmentadas o herramientas dispersas, adoptando como estándar corporativo exclusivo la plataforma **GitLab CI Enterprise** para la orquestación íntegra del ciclo DevSecOps (FEP01, Artículo 4.3, p. 5).
 
 **Decisión D-02. Ecosistema integral DevSecOps sobre GitLab CI Enterprise**
 
@@ -127,43 +117,28 @@ Para conciliar la alta disponibilidad exigida con la continua evolución logíst
 |---|---|---|---|
 | Unificar todo el control de versiones, pipeline de CI/CD, escaneo SAST, gestión de artefactos y políticas de despliegue en GitLab CI Enterprise | Arquitecturas mixtas compuestas por herramientas independientes (Jenkins, SonarQube standalone sin integración nativa, scripts de despliegue aislados) | Reducir vectores de falla, garantizar trazabilidad auditable de la cadena de suministro de software y automatizar la aplicación de políticas SLSA Nivel 3 | FEP01, Artículo 4.3, p. 5 |
 
-El pipeline de entrega continua se ejecuta automáticamente ante cada evento de integración en el repositorio, transitando obligatoriamente por seis fases de validación, ilustradas en la Figura ?.
+El pipeline de entrega continua se ejecuta automáticamente ante cada evento de integración en el repositorio, transitando obligatoriamente por seis fases de validación, ilustradas en la Figura 6.2.
 
-\begin{figuraNativa}[tbp]{Fases y puertas de calidad del pipeline DevSecOps unificado}{6-pipeline-devsecops}
-\begin{tikzpicture}[node distance=1.2cm, auto,
-  fase/.style={rectangle, draw=auditAzul, fill=auditAzul!6, text width=23mm, text centered, rounded corners=2pt, minimum height=13mm, font=\sffamily\fontsize{7.5bp}{9bp}\selectfont},
-  gate/.style={diamond, draw=auditDorado, fill=auditDorado!15, text width=12mm, text centered, inner sep=0pt, font=\sffamily\fontsize{7bp}{8bp}\selectfont},
-  flecha/.style={draw=auditAzul, -latex, thick}]
+![Figura 6.2. Fases y puertas de calidad del pipeline DevSecOps unificado](../../figuras/06-metodologias/6-2-pipeline.png)
 
-  \node[fase] (f1) {**1. Build & Unit** Compilación y pruebas unitarias};
-  \node[fase, right=0.8cm of f1] (f2) {**2. SAST** SonarQube y Secrets};
-  \node[fase, right=0.8cm of f2] (f3) {**3. Container** Trivy CVEs};
-  \node[fase, below=1.2cm of f3] (f4) {**4. Supply Chain** SLSA 3, SBOM y Cosign};
-  \node[fase, left=0.8cm of f4] (f5) {**5. IaC Deploy** Terraform en AKS};
-  \node[fase, left=0.8cm of f5] (f6) {**6. DAST** OWASP ZAP Staging};
+*Figura 6.2. Fases y puertas de calidad del pipeline DevSecOps unificado*
 
-  \path[flecha] (f1) -- (f2);
-  \path[flecha] (f2) -- (f3);
-  \path[flecha] (f3) -- (f4);
-  \path[flecha] (f4) -- (f5);
-  \path[flecha] (f5) -- (f6);
-\end{tikzpicture}
-\end{figuraNativa}
+Fuente: Elaboración propia.
 
-Como se representa en la Figura ?, ninguna versión de software puede alcanzar el ambiente de producción sin superar secuencialmente las seis etapas del pipeline. En la Tabla 6.3 se definen los umbrales bloqueantes parametrizados para garantizar la integridad y seguridad del software.
+Como se representa en la Figura 6.2, ninguna versión de software puede alcanzar el ambiente de producción sin superar secuencialmente las seis etapas del pipeline. En la Tabla 6.2.2 se definen los umbrales bloqueantes parametrizados para garantizar la integridad y seguridad del software.
 
 **Tabla 6.3.** Umbrales y políticas de calidad bloqueantes en el pipeline DevSecOps
 
 | Fase del Pipeline | Herramienta ejecutora | Métrica evaluada | Umbral bloqueante de paso a producción |
 |---|---|---|---|
-| 1. Pruebas | GitLab Runner / PyTest | Cobertura de código | $\ge 80 %$ de cobertura de ramas (branch coverage). Cero pruebas unitarias fallidas. |
-| 2. Análisis estático | SonarQube Enterprise | Calidad y seguridad | Quality Gate ``A'' en mantenibilidad, deuda técnica <5 %, cero vulnerabilidades críticas o altas. |
+| 1. Pruebas | GitLab Runner / PyTest | Cobertura de código | $Mayor o igual al 80 %$ de cobertura de ramas (branch coverage). Cero pruebas unitarias fallidas. |
+| 2. Análisis estático | SonarQube Enterprise | Calidad y seguridad | Quality Gate ``A'' en mantenibilidad, deuda técnica menor al 5 %, cero vulnerabilidades críticas o altas. |
 | 3. Contenedores | Trivy Container Scanner | Vulnerabilidades CVE | Cero vulnerabilidades críticas o altas en dependencias y capas base (imágenes Distroless / Alpine). |
 | 4. Cadena de valor | Cosign / Syft (Anchore) | Integridad de artefactos | Generación mandatoria de SBOM en formato CycloneDX. Firma criptográfica con clave corporativa HSM. |
 | 5. Infraestructura | HashiCorp Terraform | Drift y seguridad IaC | Ejecución de `tfsec` y `checkov`. Cero configuraciones inseguras en templates de Azure. |
 | 6. Análisis dinámico | OWASP ZAP | Vulnerabilidades web | Cobertura OWASP ASVS 4.0 Nivel 2 (FEP01, Artículo 4.3, p. 5). Cero hallazgos en Top 10 web y API. |
 
-Los parámetros descritos en la Tabla 6.3 actúan como barreras determinísticas automatizadas. La detección de un solo fallo en cualquiera de estos umbrales aborta inmediatamente el pipeline de despliegue, notificando al equipo responsable a través de los canales de ingeniería sin intervención manual.
+Los parámetros descritos en la Tabla 6.2.2 actúan como barreras determinísticas automatizadas. La detección de un solo fallo en cualquiera de estos umbrales aborta inmediatamente el pipeline de despliegue, notificando al equipo responsable a través de los canales de ingeniería sin intervención manual.
 
 ### 6.2.3 Infraestructura como código y gestión de configuración
 
@@ -179,7 +154,7 @@ El trabajo colaborativo del equipo de desarrollo se organiza en torno a un flujo
 - **Rama `develop`:** Rama de integración continua donde convergen las nuevas funcionalidades validadas mediante pruebas unitarias.
 - **Ramas temáticas (`feature/*`, `bugfix/*`, `hotfix/*`):** Ramas de trabajo de corta duración, sujetas obligatoriamente a revisión por pares (Peer Review) mediante Merge Requests.
 
-Para garantizar un estándar riguroso de completitud en cada entrega de software, se establecen las matrices de Definition of Ready (DoR) y Definition of Done (DoD) que se detallan en la Tabla 6.4.
+Para garantizar un estándar riguroso de completitud en cada entrega de software, se establecen las matrices de Definition of Ready (DoR) y Definition of Done (DoD) que se detallan en la Tabla 6.2.4.
 
 **Tabla 6.4.** Criterios formales de salida: Definición de Preparado y Definición de Terminado
 
@@ -187,11 +162,11 @@ Para garantizar un estándar riguroso de completitud en cada entrega de software
 |---|---|---|
 | Definición de Preparado (DoR) | Historia de Usuario / Requerimiento funcional | Requerimiento trazado unívocamente al Formulario T-12. Criterios de aceptación definidos en Gherkin. Dependencias técnicas resueltas. Mockups de interfaz aprobados. |
 | Revisión por Pares | Merge Request (MR) en GitLab | Aprobación obligatoria de al menos un revisor senior. Verificación de adherencia a guías de estilo, comentarios arquitectónicos y ausencia de duplicidad de código. |
-| Definición de Terminado (DoD) | Incremento de Software / Release Candidate | Código fusionado en rama objetivo. Cobertura $\ge 80 %$. Quality Gate SonarQube superado. Contenedor firmado con Cosign y registrado en Azure Container Registry con SBOM. Documentación OpenAPI actualizada. Despliegue exitoso en staging sin regresiones operativas. |
+| Definición de Terminado (DoD) | Incremento de Software / Release Candidate | Código fusionado en rama objetivo. Cobertura $Mayor o igual al 80 %$. Quality Gate SonarQube superado. Contenedor firmado con Cosign y registrado en Azure Container Registry con SBOM. Documentación OpenAPI actualizada. Despliegue exitoso en staging sin regresiones operativas. |
 
-La aplicación de los criterios de la Tabla 6.4 asegura que cada módulo tecnológico entregado a Transportes Curimón cumpla con los estándares industriales de mantenibilidad, solidez arquitectónica y ciberseguridad exigidos por las bases.
+La aplicación de los criterios de la Tabla 6.2.4 asegura que cada módulo tecnológico entregado a Transportes Curimón cumpla con los estándares industriales de mantenibilidad, solidez arquitectónica y ciberseguridad exigidos por las bases.
 
-> **Compromiso C-02.** \audIT mantendrá un tiempo de despliegue continuo en ambiente de pruebas inferior a quince minutos para incrementos de software validados.
+> **Compromiso C-02.** audIT mantendrá un tiempo de despliegue continuo en ambiente de pruebas inferior a quince minutos para incrementos de software validados.
 >
 > Métrica: Despliegue automatizado en staging en menos de 15 minutos tras aprobación de Merge Request. Se verifica en: Métricas de ejecución del pipeline en GitLab CI Enterprise. Fuente: FEP01, Artículo 4.3, p. 5, FEP02, RT-10.02, p. 24.
 
@@ -213,7 +188,7 @@ Conforme al Comunicado 10, sección 7.2, cada sección de este subdocumento y ca
 
 | Sección | Herramienta | Finalidad del uso | Nivel en texto | Nivel en diagramas | Revisión humana (quién y qué verificó) |
 |---|---|---|---|---|---|
-| 6.1 Metodología de gestión | Claude Opus 5.5 en Claude Code | Estructuración de marco PMBOK 7 híbrido, comités de gobernanza y control de cambios | Medio | Bajo | Martín Ignacio Vergara Lara, Arquitecto de Software y Datos: Validación de cadencias operativas y alineamiento contractual |
-| 6.2 Metodología de desarrollo | Claude Opus 5.5 en Claude Code | Definición de pipeline DevSecOps de 6 fases, quality gates y criterios DoR/DoD | Medio | Bajo | Marcel Eduardo Morales Vergara, Especialista DevSecOps: Verificación de umbrales SonarQube, Trivy y Terraform |
+| Introducción | Claude Opus 5.5 en Claude Code | Ajuste estilístico de redacción introductoria | Bajo | Ninguno | Carlos Jesús Abarza Suazo, Director de Auditoría y Aseguramiento Tecnológico: Verificación de consistencia con Caso 10 y FEP01 |
+| 6.1 Metodología de gestión del proyecto | Claude Opus 5.5 en Claude Code | Estructuración del marco híbrido PMBOK/ágil, comités y control de cambios | Medio | Bajo | Carlos Jesús Abarza Suazo, Director de Auditoría y Aseguramiento Tecnológico: Validación de Art. 71, Art. 72 y cadencias de gobernanza |
+| 6.2 Metodología de desarrollo de software | Claude Opus 5.5 en Claude Code | Diseño de pipeline DevSecOps en GitLab CI Enterprise y políticas de calidad | Medio | Bajo | Carlos Jesús Abarza Suazo, Director de Auditoría y Aseguramiento Tecnológico: Validación de SLSA 3, Quality Gates y DoD/DoR |
 | Formularios T-9 y T-10 | Claude Opus 5.5 en Claude Code | Mapeo formal de exigencias administrativas y de ingeniería hacia secciones del documento | Alto | Ninguno | Carlos Jesús Abarza Suazo, Director de Auditoría y Aseguramiento Tecnológico: Auditoría de cumplimiento FEP01 |
-
