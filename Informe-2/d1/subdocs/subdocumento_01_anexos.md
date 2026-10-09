@@ -21,7 +21,7 @@ El Sistema de Gestión de Seguridad de la Información de audIT cubre:
 
 «El diseño, desarrollo, pruebas, integración, aseguramiento de calidad, implantación y operación de plataformas de software de misión crítica, soluciones de telemetría e Internet de las Cosas (IoT) de borde, y administración de arquitecturas cloud para transporte terrestre, distribución y logística corporativa, conforme a la Declaración de Aplicabilidad (SoA) versión 3.0».
 
-### 1.1.1 3. Estado documental del proceso y fundamentación del Plan (FEP01, Artículo 34.1, p. 22)
+### 3. Estado documental del proceso y fundamentación del Plan (FEP01, Artículo 34.1, p. 22)
 
 audIT acoge formalmente su acreditación a la disposición expresa del FEP01, Artículo 34.1, p. 22 de las Bases Administrativas, que faculta la presentación de un plan institucional de certificación con hitos verificables dentro de los primeros doce meses del Contrato. A la fecha de presentación de esta propuesta técnica, la compañía acredita el siguiente estado documental y procedimental ante Bureau Veritas Certification S.A. (Expediente de Auditoría N.° BV-EXP-2026-CL-8921):
 - **Auditoría de Fase 1 (Revisión Documental y Diseño del SGSI):** Concluida y aprobada conforme en noviembre de 2025.
@@ -30,7 +30,7 @@ audIT acoge formalmente su acreditación a la disposición expresa del FEP01, Ar
 
 ### 4. Cronograma vinculante de despliegue, protocolización y vigilancia anual
 
-Para dar cabal cumplimiento a lo dispuesto en el FEP01, Artículo 34.1, p. 22 de las Bases Administrativas (*«plan de certificación con hitos verificables dentro de los primeros doce meses del Contrato»*), en la Tabla 1.1 se formaliza el cronograma de cumplimiento irrestricto de los cuatro hitos comprometidos.
+Para dar cabal cumplimiento a lo dispuesto en el FEP01, Artículo 34.1, p. 22 de las Bases Administrativas (*«plan de certificación con hitos verificables dentro de los primeros doce meses del Contrato»*), en la Tabla 1.1 se formaliza el cronograma de cumplimiento de los cuatro hitos comprometidos.
 
 **Tabla 1.1.** Cronograma vinculante de despliegue, protocolización y vigilancia anual ISO/IEC 27001:2022
 
@@ -45,7 +45,7 @@ Como se desprende de la Tabla 1.1, la emisión se compromete en M1 y los control
 
 ### 5. Declaración formal y firma del representante legal
 
-En mi calidad de Representante Legal de audIT, declaro bajo fe de juramento que la información expuesta precedentemente es fidedigna y que la empresa asume el compromiso irrestricto de dar cumplimiento cabal a los hitos del presente Plan dentro de los plazos señalados, facultando a Transportes Curimón S.A. para auditar su avance en cualquier momento durante la vigencia del Contrato.
+En mi calidad de Representante Legal de audIT, declaro bajo fe de juramento que la información expuesta precedentemente es fidedigna y que la empresa asume la obligación de dar cumplimiento a los hitos del presente Plan dentro de los plazos señalados, facultando a Transportes Curimón S.A. para auditar su avance en cualquier momento durante la vigencia del Contrato.
 
 Santiago de Chile, 03 de octubre de 2026.
 

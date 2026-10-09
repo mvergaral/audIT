@@ -28,9 +28,9 @@ La Tabla 9.2 recorre el catálogo de S3/T-12 y localiza las variantes diseñadas
 
 | Requisito | Casos existentes | Paquete EDT | Comprobación diseñada | Estado |
 |---|---|---|---|---|
-| RF-001 | CP-UNIT-01, CP-SYS-01 | 5.3 | Preparar seis asignaciones con los cuatro factores presentes: fuentes de jornada 1, 2, 3, 4, 5 y ninguna | Diseñada; no ejecutada |
+| RF-001 | CP-UNIT-01, CP-SYS-01, CP-HW-14, CP-PERF-04 | 5.3 | Preparar seis asignaciones con los cuatro factores presentes: fuentes de jornada 1, 2, 3, 4, 5 y ninguna | Diseñada; no ejecutada |
 | RF-002 | CP-UNIT-02, CP-INT-02 | 5.1 | Construir un padrón sintético de 454 conductores identificados, 196 propios y 258 externos; asociar a cada tramo origen, conductor, vehículo y nivel 1–5, con muestras de todas las fuentes y ausencia de fuente | Diseñada; no ejecutada |
-| RF-003 | CP-INT-03, CP-SYS-05 | 5.1, 9.2 | Crear dos conductores externos con igual viaje propuesto y jornadas previas distintas: descanso continuo de 8 h y de 6 h en la ventana de 24 h del fixture | Diseñada; no ejecutada |
+| RF-003 | CP-INT-03, CP-SYS-05, CP-HW-14 | 5.1, 9.2 | Crear dos conductores externos con igual viaje propuesto y jornadas previas distintas: descanso continuo de 8 h y de 6 h en la ventana de 24 h del fixture | Diseñada; no ejecutada |
 | RF-004 | CP-UNIT-06, CP-SEC-08 | 5.1 | Sellar un evento original y una corrección que cambia un dato; conservar ambas versiones con autor, origen y fecha | Diseñada; no ejecutada |
 | RF-005 | CP-UNIT-01, CP-SYS-08 | 5.1, 7.1 | Generar 6.000 vigencias sintéticas con titular, responsable, fecha y respaldo | Diseñada; no ejecutada |
 | RF-006 | CP-UNIT-19, CP-SYS-06 | 5.5 | Preparar 18 unidades SUSPEL sintéticas, cada una con carga efectiva, DET emitido por ERP, conductor y lista firmada | Diseñada; no ejecutada |
@@ -366,7 +366,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 - Intentar deserialización mediante `TelemetryPacket.parseFrom(corruptBytes)`.
 - Construir un paquete válido de 118 bytes con telemetría completa y deserializarlo.
 
-**Datos de Entrada Sintéticos:** Buffer de bytes válidos conteniendo timestamp, coordenadas, velocidad, RPM, combustible y estado de sondas PT100.
+**Datos de Entrada Sintéticos:** Buffer de bytes válidos conteniendo timestamp, coordenadas, velocidad, RPM, combustible y temperatura y estado de balizas Bluetooth.
 **Resultado Esperado:** El paquete corrupto lanza `InvalidProtocolBufferException` gestionada limpiamente sin crash; el paquete válido se deserializa en $< 5\text{ }\mu\text{s}$ con valores de campos 100% exactos.
 **Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P2 (Crítica)**.
 **Entorno:** Local CI Runner / Go o Java Testcontainers.
@@ -426,7 +426,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 - Decodificar velocidad de rueda (bytes 2 y 3, resolución $1/256\text{ km/h por bit}$).
 - Suministrar trama raw PGN 65266 (Fuel Economy) y decodificar caudal instantáneo.
 
-**Datos de Entrada Sintéticos:** Bytes sintéticos, sin atribuir captura a CANclick ni a vehículos reales; mapa de caudal de laboratorio y patrón de dato no disponible versionados.
+**Datos de Entrada Sintéticos:** Bytes sintéticos, sin atribuir captura a Technoton CANCrocodile ni a vehículos reales; mapa de caudal de laboratorio y patrón de dato no disponible versionados.
 **Resultado Esperado:** Bajo el mapa sintético little-endian indicado, bytes 0x50 y 0x4E: entero 20.048; 20.048/256 = 78,3125 km/h. Añadir fixture de caudal: entero 2.000, resolución sintética 0,05 L/h por unidad, resultado 100 L/h. Verificar también valor no disponible según el mapa homologado, sin convertirlo en cero.
 **Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P2 (Crítica)**.
 **Entorno:** Local CI Runner / C / Go Test.
@@ -567,22 +567,23 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Variante trazada a RNF-002 (S3/T-12):** Repetir el conjunto de 72 h sin red, reinicios y reenvío de cada lote dos veces. Esperar mismos identificadores y huellas al final, ninguna pérdida ni duplicado, con bitácora de conciliación. La compresión unitaria comprueba reversibilidad y no acredita capacidad ni sincronización del equipo completo. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.
 
-#### 9.0.3.24 CP-UNIT-24 — Conversión y Calibración Térmica de Sensor PT100 (-30 °C a +30 °C) en Reefers
+#### 9.0.3.24 CP-UNIT-24 — Procesamiento de temperatura de baliza Bluetooth
 
-Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y el criterio siguiente.
+Este ensayo define entradas, controles y evidencia; no declara resultados ejecutados.
 
 **ID:** `CP-UNIT-24`
-**Nivel y Tipología:** Prueba Unitaria Automatizada / Metrología e IoT Industrial.
+**Nivel y Tipología:** Prueba unitaria / Decodificación y validación del dato térmico.
 **Requerimiento Trazado:** Ensayo adicional de ingeniería; no sustituye controles contractuales.
-**Precondiciones:** Curva de calibración Callendar-Van Dusen para sensor de platino PT100 ($\text{DIN EN 60751}$) programada.
+**Precondiciones:** Esquema de anuncio y conversión versionado del modelo de baliza ofertado; no usa resistencia eléctrica ni curva PT100.
 **Pasos de Ejecución:**
-- Inyectar valores de resistencia eléctrica: (a) $88{,}22\text{ }\Omega (−30 °C), (b) 100{,}00\text{ }\Omega (0 °C), (c) 111{,}67\text{ }\Omega$ (+30 °C).
-- Ejecutar rutina de conversión `convertResistanceToTemperature(ohms)`.
+- Decodificar anuncios sintéticos con identificador, temperatura, unidad y sello de recepción conocidos.
+- Probar temperaturas dentro y fuera del rango documentado, trama truncada, unidad inválida y dato ausente o antiguo.
+- Conservar origen y validez; no convertir ausencia en cero ni extrapolar fuera del rango.
 
-**Datos de Entrada Sintéticos:** Lecturas de resistencia simuladas en punto flotante.
-**Resultado Esperado:** Temperaturas convertidas: (a) $-30{,}00\text{ }^\circ\text{C}, (b) 0{,}00\text{ }^\circ\text{C}, (c) +30{,}00\text{ }^\circ\text{C} con error absoluto < 0{,}05\text{ }^\circ\text{C}$.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P1 (Bloqueante)**.
-**Entorno:** Local CI Runner / Go Test.
+**Datos de Entrada Sintéticos:** Anuncios conocidos con temperatura de referencia y casos inválidos; sin atribuir captura real.
+**Resultado Esperado:** La temperatura decodificada coincide con el oráculo a la resolución del formato; entradas inválidas se marcan y no generan lecturas válidas. Esta prueba no acredita precisión metrológica del sensor.
+**Pass/Fail y Severidad:** Pass solo si se cumplen todos los criterios y se conserva evidencia reproducible; cualquier pérdida, acceso no autorizado o salida incorrecta implica Fail. Severidad alta para seguridad y evidencia.
+**Entorno:** CI / Decodificador Bluetooth.
 
 #### 9.0.3.25 CP-UNIT-25 — Validación Sintáctica de Códigos QR para Hojas de Datos de Seguridad (HDS)
 
@@ -736,47 +737,43 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 **Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P1 (Bloqueante)**.
 **Entorno:** CI Testcontainers / WireMock Mock Server.
 
-#### 9.0.4.7 CP-INT-07 — Ingesta Normalizada de Telemetría Comercial Wialon vía Capa ACL
+#### 9.0.4.7 CP-INT-07 — Normalización de datos GPS por acceso autorizado
 
-Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y el criterio siguiente.
+Este ensayo define entradas, controles y evidencia; no declara resultados ejecutados.
 
 **ID:** `CP-INT-07`
-**Nivel y Tipología:** Prueba de Integración / Adaptadores de Protocolo e Interoperabilidad GPS.
+**Nivel y Tipología:** Prueba de integración / Interoperabilidad GPS.
 **Requerimiento Trazado:** RNF-003.
-**Precondiciones:** Servidor mock simulando la API de Wialon (`wialon.com/remoteapi`).
+**Precondiciones:** Inventario por plataforma y vehículo con permiso, mecanismo de acceso, campos y frecuencia; dos accesos de solo consulta y una plataforma sin exportación. Dobles versionados, sin fijar marca real.
 **Pasos de Ejecución:**
-- Invocar conector `WialonAdapter.fetchUnitTelemetry(unitId)`.
-- Recibir respuesta en formato JSON propietario Wialon (códigos `pos`, `t`, `f`).
-- Ejecutar pipeline de normalización al modelo unificado `NormalizedTelemetryEvent`.
-- Validar publicación en Kafka y mapeo a Nivel 5 de evidencia probatoria.
+- Probar consulta autorizada y rechazo con permiso ausente o revocado.
+- Introducir posición fechada, duplicada, antigua, ausente y cambio de esquema.
+- Simular prohibición de exportación: no ejecutar descarga ni suscripción Webhook; registrar cobertura no disponible.
+- Normalizar solo los datos obtenidos legalmente, conservar fuente y antigüedad y verificar deduplicación.
 
-**Datos de Entrada Sintéticos:** Payload JSON de Wialon con coordenadas en Santiago y estado de entradas digitales.
-**Resultado Esperado:** Evento normalizado con coordenadas lat/lon, velocidad en km/h, fuente comercial y antigüedad conservadas, sin inferir jornada, y publicación exitosa.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P2 (Crítica)**.
-**Entorno:** CI Testcontainers / MockServer.
+**Datos de Entrada Sintéticos:** Tres perfiles de plataforma simulados; eventos y denegaciones deterministas.
+**Resultado Esperado:** Cero accesos no autorizados, intervenciones de equipos o duplicados. La falta de datos queda visible y no se sustituye por posición o jornada inventada. Una consulta de posición no acredita jornada del conductor ni integración de los 192 vehículos; la aceptación real requiere muestra autorizada por plataforma.
+**Pass/Fail y Severidad:** Pass solo si se cumplen todos los criterios y se conserva evidencia reproducible; cualquier pérdida, acceso no autorizado o salida incorrecta implica Fail. Severidad alta para seguridad y evidencia.
+**Entorno:** QA / Dobles de plataforma y capa de integración.
 
-**Variante trazada a RNF-003 (S3/T-12):** Conservar inventario de equipos GPS de terceros y permisos de dos propietarios. Probar conectores con y sin anexo firmado; permitir solo el autorizado. Comparar inventario antes/después: cero sustituciones o intervenciones no consentidas; las marcas comerciales usadas en fixtures no fijan proveedor real. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.
+#### 9.0.4.8 CP-INT-08 — Consulta restringida y plataforma sin exportación
 
-#### 9.0.4.8 CP-INT-08 — Ingesta Normalizada de Telemetría Comercial Wisetrack vía Capa ACL
-
-Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y el criterio siguiente.
+Este ensayo define entradas, controles y evidencia; no declara resultados ejecutados.
 
 **ID:** `CP-INT-08`
-**Nivel y Tipología:** Prueba de Integración / Adaptadores de Terceros y Webhooks.
+**Nivel y Tipología:** Prueba de integración / Interoperabilidad GPS.
 **Requerimiento Trazado:** RNF-003.
-**Precondiciones:** Endpoint Webhook `/api/v1/integrations/wisetrack/webhook` expuesto.
+**Precondiciones:** Inventario por plataforma y vehículo con permiso, mecanismo de acceso, campos y frecuencia; dos accesos de solo consulta y una plataforma sin exportación. Dobles versionados, sin fijar marca real.
 **Pasos de Ejecución:**
-- Simular envío de lote de 20 eventos vía Webhook HTTP POST desde Wisetrack.
-- Validar autenticación por API Key en cabecera HTTP `X-Wisetrack-Signature`.
-- Procesar y transformar los eventos al formato estándar audIT.
-- Confirmar recepción con HTTP `200 OK`.
+- Probar consulta autorizada y rechazo con permiso ausente o revocado.
+- Introducir posición fechada, duplicada, antigua, ausente y cambio de esquema.
+- Simular prohibición de exportación: no ejecutar descarga ni suscripción Webhook; registrar cobertura no disponible.
+- Normalizar solo los datos obtenidos legalmente, conservar fuente y antigüedad y verificar deduplicación.
 
-**Datos de Entrada Sintéticos:** Petición Webhook con firma criptográfica HMAC-SHA256 y array de eventos de posición.
-**Resultado Esperado:** Respuesta HTTP 200 en $< 80\text{ ms}$; los 20 eventos son ingestados en Kafka sin duplicados.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P2 (Crítica)**.
-**Entorno:** CI Testcontainers.
-
-**Variante trazada a RNF-003 (S3/T-12):** Conservar inventario de equipos GPS de terceros y permisos de dos propietarios. Probar conectores con y sin anexo firmado; permitir solo el autorizado. Comparar inventario antes/después: cero sustituciones o intervenciones no consentidas; las marcas comerciales usadas en fixtures no fijan proveedor real. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.
+**Datos de Entrada Sintéticos:** Tres perfiles de plataforma simulados; eventos y denegaciones deterministas.
+**Resultado Esperado:** Cero accesos no autorizados, intervenciones de equipos o duplicados. La falta de datos queda visible y no se sustituye por posición o jornada inventada. Una consulta de posición no acredita jornada del conductor ni integración de los 192 vehículos; la aceptación real requiere muestra autorizada por plataforma.
+**Pass/Fail y Severidad:** Pass solo si se cumplen todos los criterios y se conserva evidencia reproducible; cualquier pérdida, acceso no autorizado o salida incorrecta implica Fail. Severidad alta para seguridad y evidencia.
+**Entorno:** QA / Dobles de plataforma y capa de integración.
 
 #### 9.0.4.9 CP-INT-09 — Ingesta Normalizada de Telemetría Comercial Webfleet vía Capa ACL
 
@@ -1098,7 +1095,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Variante trazada a RF-019 (S3/T-12):** Cerrar un mes para 148 transportistas sintéticos, con viajes, tarifas y descuentos de referencia. Esperar una liquidación por titular con sumas exactas dentro de un día hábil del cierre mensual, no mensual. Medir proporción de correcciones manuales sobre liquidaciones emitidas: con 148, una corrección cumple menos de 1 por ciento y dos no. Registrar calendario hábil y denominador. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.
 
-#### 9.0.4.25 CP-INT-25 — Sincronización Asíncrona entre Azure East US 2 y Réplica Brazil South (DRP)
+#### 9.0.4.25 CP-INT-25 — Sincronización Asíncrona entre Azure Chile Central y Réplica Brazil South (DRP)
 
 Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y el criterio siguiente.
 
@@ -1227,8 +1224,8 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 **Nivel y Tipología:** Prueba de Sistema E2E / Transición de Flota y Cascada Probatoria.
 **Requerimiento Trazado:** RF-003, RF-026, RF-028, RNF-003, RNF-011.
 **Precondiciones:** Torre de Programación operando simultáneamente con:
-   Camión Propio `TRK-010` (equipado con Gateway audIT + CANclick, Nivel 2 instrumental).
-   Camión Subcontratado `TRK-305` (homologado por API Wialon comercial, posición comercial; jornada por atestación separada del transportista).
+   Camión Propio `TRK-010` (equipado con Gateway audIT + Technoton CANCrocodile, Nivel 2 instrumental).
+   Camión Subcontratado `TRK-305` (con acceso autorizado a datos de posición de plataforma de ensayo, posición comercial; jornada por atestación separada del transportista).
 **Pasos de Ejecución:**
 - Despachar viaje simultáneo para ambos camiones en la misma ruta Santiago-San Fernando.
 - Monitorear la consola de la Torre de Control 24x7.
@@ -1411,7 +1408,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 - Verificar que la plataforma detecte la desviación térmica al superar $+2{,}0\text{ }^\circ\text{C}$.
 - Comprobar disparo de alerta sonora prioritaria en Torre de Control y notificación push en cabina del chofer.
 
-**Datos de Entrada Sintéticos:** Sonda PT100 reportando curva ascendente de temperatura cada 30 segundos.
+**Datos de Entrada Sintéticos:** Anuncios de baliza Bluetooth con curva térmica sintética, identificador y cadencia versionados; no se atribuye cadencia al fabricante sin comprobación.
 **Resultado Esperado:** Alarma crítica `COLD_CHAIN_BREACH_CRITICAL` disparada en $< 45\text{ segundos}$ tras el rebase térmico; despachador activa protocolo de desvío a taller técnico frigorífico en ruta.
 **Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P1 (Bloqueante)**.
 **Entorno:** Staging AKS / Banco HIL Térmico.
@@ -1463,7 +1460,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 **ID:** `CP-SYS-16`
 **Nivel y Tipología:** Prueba de Sistema E2E / Supervisión Operacional Centralizada.
 **Requerimiento Trazado:** RF-008, RNF-009.
-**Precondiciones:** 374 tractocamiones activos reportando telemetría simultánea (148 propios vía Gateway audIT + 192 terceros vía APIs comerciales + 34 terceros retrofiteados).
+**Precondiciones:** Simulación de cobertura funcional de 374 tractocamiones: 182 iWave G26I (148 propios y 34 terceros adheridos) y 192 terceros con dispositivos existentes. Los datos de estos últimos solo se incorporan por mecanismos autorizados y comprobados; incluir accesos de consulta restringida y exportación no disponible, sin declarar telemetría completa garantizada.
 **Pasos de Ejecución:**
 - Abrir la interfaz web de la Torre de Programación en pantalla mural y consolas de operadores.
 - Verificar la carga consolidada del mapa cartográfico nacional.
@@ -1503,7 +1500,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 #### 9.0.5.18 CP-SYS-18 — Excepción por indisponibilidad de fuente según RN-04
 
 La excepción verifica indisponibilidad de fuente, sin levantar incumplimientos legales o de seguridad.
-**ID:** CP-SYS-18.
+**ID:** `CP-SYS-18`
 **Nivel y Tipología:** Sistema E2E, gobernanza y auditoría.
 **Requerimiento Trazado:** RF-001, RF-028; RN-04.
 **Precondiciones:** Viaje sintético, cuatro factores legales y de seguridad conformes, fuente de jornada temporalmente indisponible; cuentas separadas de jefe de turno de torre y prevención de riesgos.
@@ -1543,41 +1540,44 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 **Requerimiento Trazado:** RNF-011.
 **Precondiciones:** Campaña FOTA de actualización de firmware v2.1.0 configurada para 10 camiones propios detenidos en terminales durante su ventana de mantenimiento.
 **Pasos de Ejecución:**
-- Despachar imagen de firmware firmada criptográficamente hacia los 10 gateways telemáticos.
+- Antes de transferir, instalar o activar, verificar ubicación, vehículo detenido, autorización y ventana. Repetir la solicitud con ubicación en ruta, velocidad positiva o permiso ausente: debe rechazarse sin escribir la partición ni reiniciar.
+- Despachar imagen de firmware firmada criptográficamente hacia los 10 gateways telemáticos habilitados en terminal.
 - Los dispositivos descargan la imagen en la partición inactiva (partición B) en segundo plano.
 - En 9 camiones el reinicio y verificación de arranque (watchdog health check) es exitoso.
-- En 1 camión se simula un fallo inducido de integridad en la partición B al iniciar.
+- En un equipo se utiliza una imagen de ensayo con firma y huella válidas, pero con fallo de arranque inducido en el fixture. Probar por separado una firma/huella inválida, que debe rechazarse antes de instalación; ese rechazo no equivale al ensayo de reversión de un arranque fallido.
 - Evaluar el comportamiento del mecanismo de recuperación dual A/B.
 
 **Datos de Entrada Sintéticos:** Paquete de firmware `.ota` de 45 MB firmado digitalmente.
-**Resultado Esperado:** Los 9 camiones actualizan a v2.1.0 sin incidencias; el camión con fallo ejecuta rollback automático a la partición A funcional en $< 30\text{ segundos}$, preservando la operatividad del camión sin bricking.
+**Resultado Esperado:** Los 9 camiones actualizan a v2.1.0 sin incidencias; el equipo con fallo revierte de forma autónoma a la partición A funcional, preservando registros, configuración e identidad. Las solicitudes fuera de terminal, en movimiento o sin permiso se rechazan sin instalación o reinicio. Se mide el tiempo completo desde activación hasta recuperación y conciliación; el perfil de watchdog es el de CP-HW-09 (60 s por intento). No se promete recuperación total en menos de 30 s cuando el watchdog por sí solo espera 60 s.
 **Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P1 (Bloqueante)**.
 **Entorno:** Staging / Banco HIL + Gateways Físicos.
+
+Los reportes del catálogo se incorporan al pipeline con los controles de T-13 Tabla 13.1: cero pruebas fallidas, líneas de lógica de negocio ≥70 % y ramas ≥80 % por separado; complejidad ≤15 por función y cero vulnerabilidades críticas o altas abiertas en el artefacto promovido. Las exclusiones requieren justificación y no pueden ocultar lógica de negocio. El catálogo diseñado no acredita que esos resultados se hayan obtenido.
 
 ### 9.0.6 Batería 4: Pruebas No Funcionales, Ciberseguridad y Estrés K6 (20 Casos: `CP-PERF-01` a `CP-PERF-12`, `CP-SEC-01` a `CP-SEC-08`)
 
 Esta batería somete la infraestructura cloud, la capa de ingesta distribuida y los portales web a ensayos rigurosos de carga sostenida, estrés extremo con K6, conmutación ante desastres (DRP) y penetración de ciberseguridad con OWASP ZAP y Trivy.
 
-#### 9.0.6.1 CP-PERF-01 — Carga Sostenida Peak Frutícola — Hipótesis de 450 Viajes/Día; Concurrencia por Dimensionar
+#### 9.0.6.1 CP-PERF-01 — Carga Sostenida Peak Frutícola — Hipótesis de 450 Viajes/Día; 380 Sesiones Nominales y 570 de Estrés
 
 Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y el criterio siguiente.
 
 **ID:** `CP-PERF-01`
 **Nivel y Tipología:** Prueba No Funcional / Rendimiento y Carga Sostenida con K6.
-**Requerimiento Trazado:** Ensayo adicional de ingeniería; no sustituye controles contractuales.
+**Requerimiento Trazado:** RF-001, RF-013 y RT-09.06; los volúmenes exploratorios adicionales no sustituyen umbrales contractuales.
 **Precondiciones:** Clúster AKS en Staging con configuración nominal de producción (3 nodos primarios D8s_v5).
 **Pasos de Ejecución:**
 - Ejecutar script K6 simulando la jornada de mayor demanda estacional frutícola (diciembre a abril).
 - Generar carga sintética con hipótesis de 450 viajes/día distribuidos en 14 horas de alta actividad (\textasciitilde{}32 viajes/hora, con ráfagas de 60 viajes/hora).
-- Mantener tasa constante de 1.200 peticiones/minuto en el API Gateway durante 4 horas continuas.
+- Ejecutar fases separadas de carga nominal (380) y estrés (570) durante cuatro horas por fase, preservando mezcla, tiempos de espera y operaciones. La tasa exploratoria de 1.200 peticiones/minuto se registra por separado y no reemplaza la concurrencia ni fuerza resultados artificialmente.
 - Monitorear consumo de CPU, memoria de pods, y latencia de base de datos PostgreSQL.
 
-**Datos de Entrada Sintéticos:** K6 Virtual Users (VUs): 150 usuarios virtuales ejecutando flujos de despacho, consulta de mapas y tracking.
-**Resultado Esperado:** Se debe verificar que sostiene la carga nominal con 0 caídas y latencia bajo umbral. Los tiempos, porcentajes y magnitudes observados se registrarán después del ensayo; no se anticipan mediciones ni actas suscritas.
+**Datos de Entrada Sintéticos:** K6 Virtual Users (VUs): 380 sesiones nominales y 570 de estrés, con mezcla de despacho, mapas y tracking versionada; no se atribuyen estas magnitudes al Caso.
+**Resultado Esperado:** Se debe verificar que sostiene ambas fases sin caídas, pérdida o doble procesamiento, cumpliendo los umbrales aplicables de S9 §9.3.6 a 1,5 veces el peak: asignación p95 ≤30 s y DET ≤90 s, medidos con sus relojes y oráculos de CP-PERF-04/05. Se conservan percentiles, errores y throughput por perfil; un promedio no compensa incumplimientos. Los tiempos, porcentajes y magnitudes observados se registrarán después del ensayo; no se anticipan mediciones ni actas suscritas.
 **Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P1 (Bloqueante)**.
 **Entorno:** Staging AKS / K6 Distributed Runner.
 
-**Perfil trazado a S4:** 380 usuarios de dimensionamiento (80 internos, 150 conductores, 50 transportistas y 100 sesiones de clientes); estrés a 570 sesiones, con mezcla proporcional declarada. La hipótesis de 450 viajes/día es una tasa diaria separada y no define esas sesiones.
+**Perfil de concurrencia de diseño:** 380 sesiones nominales y 570 de estrés (1,5 × 380), conforme a S4 compartido, «Concurrencia y volumen declarados». Se adopta el extremo superior de los rangos de diseño: 80 usuarios internos, 150 conductores, 50 transportistas y 100 clientes; estrés: 120, 225, 75 y 150 respectivamente. Esos rangos son hipótesis de simultaneidad sobre las poblaciones del Caso, no mediciones. La concurrencia de usuarios no modifica la población de vehículos. Versionar la mezcla de usuarios y operaciones en el manifiesto. Es una hipótesis de ingeniería, no un dato del Caso ni una equivalencia con viajes diarios.
 
 #### 9.0.6.2 CP-PERF-02 — Reconexión de 300 camiones — 1.786.200 registros y confirmación por unidad en hasta 20 min
 
@@ -1601,7 +1601,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Variante contractual obligatoria:** Generar 72 h de registros por unidad con el perfil de muestreo y tamaño versionado de la memoria de cálculo; reconectar 300 camiones simultáneamente. Medir desde recuperación de cobertura hasta confirmación conciliada de cada camión: todas las unidades deben sincronizar en ≤20 min, sin pérdida de jornada ni esperas, con deduplicación y conflictos registrados. El ensayo sintético de 60 unidades/288 h se conserva como ampliación separada y no sustituye este control.
 
-**Perfil principal trazado a S4:** 300 unidades, 72 h por unidad con 30 h de marcha. Por unidad: 4.104 posiciones de 64 bytes, 1.800 muestras de motor de 160 bytes, 50 eventos/documentos con 227.000 bytes agregados y ocho fotos con 2.460.000 bytes agregados. Son 5.954 registros y 3.237.656 bytes por unidad; conservar manifiesto de tipos, conteos y huellas. El lote nominal contiene 1.786.200 registros y 971.296.800 bytes, sin overhead. Separar la ampliación de 60 unidades/288 h; no mezclar ambos perfiles. Para 20 min se requiere al menos 6,48 Mbit/s útiles agregados; margen de transporte y almacenamiento se dimensiona explícitamente. Medir cada camión hasta confirmación completa, incluyendo datos y evidencia documental, y fallar si alguno supera veinte minutos o pierde jornada/esperas.
+**Perfil serializado de ensayo:** 300 unidades simuladas, 72 h por unidad con 30 h de marcha; este escenario de reconexión no implica comprar 300 equipos audIT. Por unidad: 4.104 posiciones de 64 bytes, 1.800 muestras de motor de 160 bytes, 50 eventos/documentos con 227.000 bytes agregados y ocho fotos con 2.460.000 bytes agregados. Son 5.954 registros y 3.237.656 bytes por unidad; conservar manifiesto de tipos, conteos y huellas. El lote nominal contiene 1.786.200 registros y 971.296.800 bytes, sin overhead. Separar la ampliación de 60 unidades/288 h; no mezclar ambos perfiles. Para 20 min se requiere al menos 6,48 Mbit/s útiles agregados; margen de transporte y almacenamiento se dimensiona explícitamente. Medir cada camión hasta confirmación completa, incluyendo datos y evidencia documental, y fallar si alguno supera veinte minutos o pierde jornada/esperas.
 
 **Variante de cierre fronterizo:** Simular doce días de cierre de ruta con períodos separados de conexión y sombra. Debe preservarse jornada real, custodia y reprogramación sin inventar descanso, congelar cobros ni desplazar fases contractuales; el cierre no activa automáticamente doce días de desconexión.
 
@@ -1618,9 +1618,9 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 **ID:** `CP-PERF-03`
 **Nivel y Tipología:** Prueba No Funcional / Continuidad Operacional y Resiliencia ante Desastres.
 **Requerimiento Trazado:** Ensayo adicional de ingeniería; no sustituye controles contractuales.
-**Precondiciones:** Plataforma primaria en Azure East US 2 operando con carga activa. Sitio secundario Hot-Standby en Azure Brazil South sincronizado mediante replicación continua.
+**Precondiciones:** Plataforma primaria en Azure Chile Central operando con carga activa. Sitio secundario Hot-Standby en Azure Brazil South sincronizado mediante replicación continua.
 **Pasos de Ejecución:**
-- Simular caída catastrófica no recuperable de la región Azure East US 2 (corte de red e inhabilitación de clúster primario).
+- Simular caída catastrófica no recuperable de la región Azure Chile Central (corte de red e inhabilitación de clúster primario).
 - El responsable de continuidad designado por el Comité de Operación declara el desastre y activa el runbook automatizado de conmutación DRP (`drp-failover.sh`).
 - Promover la base de datos réplica de PostgreSQL y TimescaleDB en Brazil South a nodo primario de lectura/escritura.
 - Escalar los microservicios en el clúster AKS de Brazil South de 2 a 8 pods por servicio.
@@ -1630,7 +1630,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 **Datos de Entrada Sintéticos:** Carga continua previa de 100 viajes/hora; script de failover automatizado con Terraform.
 **Resultado Esperado:** Se debe verificar que RTO $\le 4\text{ h} y RPO \le 15\text{ min}$. Los tiempos, porcentajes y magnitudes observados se registrarán después del ensayo; no se anticipan mediciones ni actas suscritas.
 **Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P1 (Bloqueante)**.
-**Entorno:** Azure East US 2 $\rightarrow$ Azure Brazil South.
+**Entorno:** Azure Chile Central $\rightarrow$ Azure Brazil South.
 
 #### 9.0.6.4 CP-PERF-04 — Latencia de Validación Bloqueante Pre-Despacho ($P_{95} \le 30{,}0\text{ s}, P_{50} \le 8{,}0\text{ s}$)
 
@@ -1639,9 +1639,9 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 **ID:** `CP-PERF-04`
 **Nivel y Tipología:** Prueba No Funcional / Desempeño y Latencia Sub-30s bajo Carga.
 **Requerimiento Trazado:** RF-001.
-**Precondiciones:** 50 despachadores virtuales ejecutando asignaciones simultáneas pre-despacho en el sistema.
+**Precondiciones:** Perfil común de CP-PERF-01, con 380 sesiones nominales y 570 en estrés. Los usuarios internos de cada fase ejecutan la mezcla versionada de operaciones, incluida asignación; no se confunden sesiones, solicitudes y candidatos de viaje.
 **Pasos de Ejecución:**
-- Lanzar 500 solicitudes concurrentes de validación pre-despacho (4 factores síncronos) a través de K6.
+- Ejecutar validaciones de cuatro factores en las dos fases del perfil común y conservar su mezcla con las demás operaciones. El lote de 500 candidatos alimenta las solicitudes; no equivale a 500 sesiones concurrentes. Una ráfaga exploratoria adicional de 500 solicitudes se mide por separado y no reemplaza el ensayo a 1,5 veces el peak.
 - Registrar la distribución percentílica de tiempos de respuesta (P_{50}, P_{90}, P_{95}, P_{99}).
 
 **Datos de Entrada Sintéticos:** Lote de 500 candidatos de viaje con datos de choferes, camiones y ramplas.
@@ -1655,10 +1655,10 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **ID:** `CP-PERF-05`
 **Nivel y Tipología:** Prueba No Funcional / Latencia de Generación Tributaria en Terminal.
-**Requerimiento Trazado:** RF-014.
-**Precondiciones:** Simulación de salida matinal masiva en Terminal San Bernardo (30 camiones despachándose en un lapso de 10 minutos).
+**Requerimiento Trazado:** RF-013 (emisión) y RF-014 (disponibilidad antes del movimiento).
+**Precondiciones:** Perfil común de CP-PERF-01 con 380 sesiones nominales y 570 en estrés, y fixture de salida matinal de 30 camiones en diez minutos en San Bernardo; esta cantidad es una entrada de ensayo, no una dotación inferida del Caso.
 **Pasos de Ejecución:**
-- Disparar 30 solicitudes simultáneas de generación y firmado de D.E.T. hacia los gateways telemáticos.
+- Disparar las 30 solicitudes de DET hacia el sistema contable, único emisor, conservando la carga de fondo y las fases nominal/estrés de CP-PERF-01. El equipo a bordo recibe y conserva el documento; no se transforma en emisor tributario.
 - Cronometrar el tiempo desde la confirmación de la orden hasta la disponibilidad del documento firmado con QR en cabina.
 
 **Datos de Entrada Sintéticos:** 30 solicitudes D.E.T. con tokens de contingencia.
@@ -1967,7 +1967,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 ### 9.0.7 Batería 5: Pruebas de Hardware Telemático en Banco HIL (15 Casos: `CP-HW-01` a `CP-HW-15`)
 
-Esta batería somete los dispositivos físicos embarcados (Gateway IoT audIT, Pinzas CANclick, Batería LiFePO4, Sensores PT100) a rigurosos ensayos en Banco de Simulación Física (Hardware-in-the-Loop, HIL) con instrumental calibrado de laboratorio, simulando las condiciones extremas de vibración, temperatura y cortes eléctricos de la flota de Transportes Curimón S.A.
+Esta batería somete los equipos y periféricos físicos embarcados (iWave G26I con audIT EdgeHub, lector Technoton CANCrocodile, alimentación y balizas Bluetooth del inventario ofertado) a rigurosos ensayos en Banco de Simulación Física (Hardware-in-the-Loop, HIL) con instrumental calibrado de laboratorio, simulando las condiciones extremas de vibración, temperatura y cortes eléctricos de la flota de Transportes Curimón S.A.
 
 **Variante de políticas de retención y correcciones (RNF-014):** Crear dominios separados: jornada ≥5 años, documento/viaje y liquidación 6, siniestro 10, habilitación vigencia+5, SUSPEL 5, esperas en cliente 3, series 2 en línea con agregación (Caso RT-05.10). Avanzar el reloj virtual antes y después del umbral de cada dominio y registrar el resultado esperado en el fixture. Mantener objetos con retención o suspensión de borrado; una revocación no elimina evidencia de conservación obligatoria. Toda corrección conserva valores previos, origen, autor y fecha, sin sobrescritura.
 
@@ -2031,7 +2031,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Conteo y capacidad del ensayo:** Para las 72 h se usa exactamente el perfil principal de CP-PERF-02 (3.237.656 bytes por unidad antes de overhead). Para 288 h se repite cuatro veces como hipótesis adicional (23.816 registros, 12.950.624 bytes), sin atribuirlo a datos del caso. Medir ocupación real con índices, WAL, adjuntos, cifrado y reserva. No se presupone ratio de compresión; comparar huellas de cada registro/adjunto tras reinicio y reconexión.
 
-**Presupuesto físico propuesto:** Los 45 eventos usan 600 bytes cada uno (27.000 bytes) y los cinco documentos 40.000 bytes cada uno (200.000 bytes). Para la ampliación de 288 h, 12.950.624 bytes brutos más igual presupuesto de overhead y de reserva suman 38.851.872 bytes. Se asignan 64 MiB (67.108.864 bytes), con 28.256.992 bytes de holgura sobre ese presupuesto. Las demás particiones llevan el total a 2.400 MiB (2.516.582.400 bytes, aproximadamente 2,52 GB decimales). Verificar capacidad útil y ocupación física en HIL; superar el presupuesto obliga a recalcular antes de homologar. No se presume compresión ni que 8 GB nominales sean totalmente utilizables.
+**Presupuesto físico propuesto:** El presupuesto de diseño usa 3,2 MB por 72 h con fotos, cuatro períodos para 288 h y factor de seguridad tres: 3,2 × 4 × 3 = 38,4 MB. Arranque 16 MB, sistemas A/B 2.048 MB, búfer 38,4 MB, diagnóstico rotativo 256 MB y geocercas/maestros 16 MB suman 2.374,4 MB, aproximadamente 2,4 GB. Son magnitudes aproximadas del presupuesto de arquitectura, no una conversión exacta del perfil serializado de prueba; la convención MB/GB y la ocupación efectiva de las imágenes se verifican al particionar. Los 8 GB nominales son la configuración mínima seleccionada del iWave G26I, no el volumen de telemetría ni una garantía de capacidad útil. No se presupone compresión; la homologación exige medir capacidad utilizable y ocupación con índices, WAL, adjuntos, cifrado y reserva, y recalcular ante desviaciones. Se conserva por separado el perfil serializado de CP-PERF-02 para conciliación de conteos y huellas; 38,4 MB no se presenta como su multiplicación exacta.
 
 **Variante trazada a RF-009 (S3/T-12):** Desconectar 72 h con el perfil versionado de CP-PERF-02, reiniciar equipo y reconectar. Conciliar identificadores, orden y huellas de registros y documentos, sin pérdidas ni duplicados. El reloj de sincronización por camión va de recuperación de cobertura a confirmación completa y debe ser como máximo 20 min. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.
 
@@ -2039,24 +2039,24 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Variante trazada a RNF-008 (S3/T-12):** Ensayar 288 h separadamente como compromiso propuesto para cierres fronterizos: cuatro repeticiones del perfil de 72 h, 23.816 registros y 12.950.624 bytes brutos por unidad antes de overhead. Conciliar registros y documentos tras reconexión; cualquier pérdida falla ese compromiso. No atribuir a las bases 288 h de desconexión ni sustituir la aprobación de 72 h por esta ampliación. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.
 
-#### 9.0.7.4 CP-HW-04 — Acopladores Inductivos CANclick — Lectura J1939 con Pérdida < 0{,}1%
+#### 9.0.7.4 CP-HW-04 — Lectura CAN sin contacto con Technoton CANCrocodile — Lectura J1939 con Pérdida < 0{,}1%
 
 Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y el criterio siguiente.
 
 **ID:** `CP-HW-04`
 **Nivel y Tipología:** Prueba de Hardware HIL / Adquisición Pasiva No Intrusiva en Bus CAN.
 **Requerimiento Trazado:** RF-025, RNF-005.
-**Precondiciones:** Pinzas inductivas CANclick montadas sobre cables trenzados CAN_H y CAN_L sin pelar aislantes ni soldaduras. Generador de tráfico Vector CANoe emitiendo tramas SAE J1939 a $250\text{ kbps}$ con una carga de bus del $65%$.
+**Precondiciones:** Lector sin contacto Technoton CANCrocodile montado sobre cables trenzados CAN_H y CAN_L sin pelar aislantes ni soldaduras. Generador de tráfico Vector CANoe emitiendo tramas SAE J1939 a $250\text{ kbps}$ con una carga de bus del $65%$.
 **Pasos de Ejecución:**
 - Emitir 1.000.000 de tramas CAN estándar SAE J1939 durante 2 horas.
-- El firmware del gateway recibe y decodifica las tramas a través del transceptor inductivo.
+- El firmware del gateway recibe y decodifica las tramas a través del lector sin contacto conectado al CAN del iWave G26I.
 - Comparar el contador de tramas transmitidas por el generador Vector contra el contador de tramas válidas recibidas en el gateway.
 - Calcular la tasa de pérdida de paquetes: $\text{Packet Loss Rate} = \dfrac{\text{Tramas Perdidas}}{\text{Tramas Emitidas}} \times 100$.
 
 **Datos de Entrada Sintéticos:** 1.000.000 de tramas SAE J1939 generadas sintéticamente por hardware.
 **Resultado Esperado:** Se debe verificar que la tasa de pérdida es $< 0{,}1%$. Los tiempos, porcentajes y magnitudes observados se registrarán después del ensayo; no se anticipan mediciones ni actas suscritas.
 **Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P1 (Bloqueante)**.
-**Entorno:** Banco HIL / Analizador de Bus Vector CANoe + Pinzas CANclick.
+**Entorno:** Banco HIL / Analizador de Bus Vector CANoe + lector Technoton CANCrocodile.
 
 **Variante trazada a RF-025 (S3/T-12):** Configurar mantenimiento a 100.000 km como dato sintético, no norma. Con odómetro real de 99.999 y 100.000 km esperar ausencia y presencia de aviso, respectivamente, enviado al sistema de talleres. Repetir con estimación: marcar incertidumbre y origen, sin presentar estimación como lectura real ni perder el aviso. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.
 
@@ -2069,11 +2069,11 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 **ID:** `CP-HW-05`
 **Nivel y Tipología:** Prueba de Hardware HIL / Consumo Parásito y Preservación de Batería de Arranque.
 **Requerimiento Trazado:** Ensayo adicional de ingeniería; no sustituye controles contractuales.
-**Precondiciones:** Multímetro digital de precisión con muestreo continuo intercalado en la línea de alimentación de 24V. Gateway conectado a 24V DC.
+**Precondiciones:** Instrumento de corriente calibrado con muestreo continuo en la alimentación de 24 V del conjunto ofertado. Registrar gateway, lectores y periféricos alimentados desde esa línea; no excluir cargas para alcanzar el umbral. Banco e instrumentos provistos o contratados por audIT.
 **Pasos de Ejecución:**
 - Simular apagado de ignición del motor (línea KL15 a 0V) a las 00:00.
-- Durante los primeros 10 minutos, el equipo permanece en modo Shutdown Preparation cerrando archivos y sockets (consumo típico \textasciitilde{}120 mA).
-- A los 30 minutos, el gateway entra en modo Deep Sleep: CPU a 32 kHz, módem en eDRX/PSM, y solo el acelerómetro 3D activo para despertar ante movimiento.
+- Durante los primeros 10 minutos, el equipo permanece en modo Shutdown Preparation cerrando archivos y sockets (consumo a medir, sin atribuir un valor típico no acreditado).
+- A los 30 minutos, el gateway entra en modo Deep Sleep: configuración de bajo consumo homologada para el iWave G26I y sus periféricos, sin presuponer frecuencia de CPU o estados de módem disponibles. Registrar funciones que permanecen activas y comprobar despertar y continuidad de captura exigidas.
 - Medir la corriente de reposo durante las siguientes 2 horas.
 
 **Datos de Entrada Sintéticos:** Corte de ignición emulado por señal digital en banco HIL.
@@ -2113,10 +2113,10 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 **Precondiciones:** Dispositivo gateway instalado dentro de cámara climática de ciclado térmico con mesa de vibración electrodinámica integrada.
 **Pasos de Ejecución:**
 - Someter el equipo a perfil de temperatura extrema: $-20\text{ }^\circ\text{C}$ durante 4 horas (emulación de noche cordillerana invernal), rampa a $+70\text{ }^\circ\text{C}$ durante 4 horas (emulación de cabina cerrada al sol en Desierto de Atacama).
-- Aplicar perfil de vibración aleatoria según SAE J1455 (espectro de cabina pesada: $10\text{ Hz} a 2.000\text{ Hz}, 3{,}2\text{ G}_{RMS}$ en los 3 ejes).
+- Aplicar el perfil de vibración aleatoria de ingeniería, sujeto a contraste del laboratorio con SAE J1455 (fixture de cabina pesada: $10\text{ Hz} a 2.000\text{ Hz}, 3{,}2\text{ G}_{RMS}$ en los 3 ejes).
 - Operar el equipo continuamente durante todo el ciclo transmitiendo datos.
 
-**Datos de Entrada Sintéticos:** Perfil térmico y dinámico estandarizado SAE J1455.
+**Datos de Entrada Sintéticos:** Perfil térmico y dinámico de ingeniería; protocolo de laboratorio identificado con edición y apartados aplicables de SAE J1455. El laboratorio debe contrastar y aprobar el espectro, duración, montaje y ejes antes del ensayo; el fixture por sí solo no acredita conformidad normativa.
 **Resultado Esperado:** Se debe verificar que supera el ciclo completo sin degradación funcional. Los tiempos, porcentajes y magnitudes observados se registrarán después del ensayo; no se anticipan mediciones ni actas suscritas.
 **Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P1 (Bloqueante)**.
 **Entorno:** Laboratorio de Ensayos / Cámara Climática y Mesa de Vibración.
@@ -2128,14 +2128,14 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 **ID:** `CP-HW-08`
 **Nivel y Tipología:** Prueba de Hardware HIL / Ensayos de Estanqueidad y Protección Ambiental.
 **Requerimiento Trazado:** RNF-004.
-**Precondiciones:** Muestra de 3 gateways de producción cerrados con torque calibrado y empaquetadura de silicona perimetral.
+**Precondiciones:** Muestra de tres conjuntos con gabinete, conectores y entradas de cableado exterior en su configuración ofertada, montados y sellados según procedimiento homologado. Registrar torque, juntas, modelo y montaje. El IP67 comprometido corresponde al conjunto expuesto, no a una certificación presumida del computador desnudo.
 **Pasos de Ejecución:**
 - Ensayo de Polvo (IP6X): Someter el equipo en cámara de polvo de talco circulante con presión negativa de 2 kPa durante 8 horas.
 - Ensayo de Agua (IPX7): Sumergir el equipo en estanque de agua a 1 metro de profundidad durante 30 minutos continuos.
 - Extraer el equipo, secar exteriormente, abrir el gabinete e inspeccionar presencia de humedad o partículas internas.
 
-**Datos de Entrada Sintéticos:** Protocolo estandarizado IEC 60529 / DIN 40050-9.
-**Resultado Esperado:** Se debe verificar que no ingresa polvo ni agua al circuito electrónico. Los tiempos, porcentajes y magnitudes observados se registrarán después del ensayo; no se anticipan mediciones ni actas suscritas.
+**Datos de Entrada Sintéticos:** Procedimiento de laboratorio con edición y apartados IP6X/IPX7 de IEC 60529 identificados; registrar su aplicabilidad al conjunto y configuración ensayados.
+**Resultado Esperado:** Se debe verificar conformidad IP6X/IPX7 del conjunto según el procedimiento identificado y funcionamiento posterior de captura, persistencia y enlace. Inspección, mediciones y criterios de ingreso se registran por muestra; no se declara certificación obtenida. Los tiempos, porcentajes y magnitudes observados se registrarán después del ensayo; no se anticipan mediciones ni actas suscritas.
 **Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P1 (Bloqueante)**.
 **Entorno:** Laboratorio de Certificación de Estanqueidad IP67.
 
@@ -2148,7 +2148,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 **ID:** `CP-HW-09`
 **Nivel y Tipología:** Prueba de Hardware HIL / Recuperación Autónoma y Firmware Dual.
 **Requerimiento Trazado:** Ensayo adicional de ingeniería; no sustituye controles contractuales.
-**Precondiciones:** Gateway con esquema de arranque U-Boot configurado con particiones de sistema duales `/dev/mmcblk0p2` (Slot A) y `/dev/mmcblk0p3` (Slot B), y temporizador Watchdog hardware activado (timeout: 60 s).
+**Precondiciones:** Equipo detenido en terminal autorizado y ventana de mantenimiento aprobada; probar además rechazo fuera de terminal o con vehículo en movimiento mediante ubicación/velocidad sintéticas. Gateway con esquema de arranque U-Boot configurado con particiones de sistema duales `/dev/mmcblk0p2` (Slot A) y `/dev/mmcblk0p3` (Slot B), y temporizador Watchdog hardware activado (timeout: 60 s).
 **Pasos de Ejecución:**
 - El sistema opera en Slot A. Flashear en Slot B una actualización corrupta con kernel panic intencional inducido.
 - Configurar U-Boot para arrancar en Slot B en el próximo reinicio (bootcount = 1).
@@ -2161,22 +2161,23 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 **Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P1 (Bloqueante)**.
 **Entorno:** Banco HIL / U-Boot Debug Port.
 
-#### 9.0.7.10 CP-HW-10 — Calibración y Verificación Metrológica de Sensores PT100 (-30 °C a +30 °C)
+#### 9.0.7.10 CP-HW-10 — Verificación térmica y recepción de baliza Bluetooth
 
-Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y el criterio siguiente.
+Este ensayo define entradas, controles y evidencia; no declara resultados ejecutados.
 
 **ID:** `CP-HW-10`
-**Nivel y Tipología:** Prueba de Hardware HIL / Metrología Térmica y Cadena de Frío.
+**Nivel y Tipología:** Prueba HIL / Medición y comunicación Bluetooth.
 **Requerimiento Trazado:** Ensayo adicional de ingeniería; no sustituye controles contractuales.
-**Precondiciones:** Sonda PT100 de 4 hilos conectada a la entrada analógica del gateway telemático. Baño térmico de calibración de alta precisión Fluke Calibration activo.
+**Precondiciones:** Baliza del modelo T-11 vinculada al semirremolque, iWave G26I y patrón térmico independiente calibrado. Rango, resolución y error máximo documentados y aprobados para el modelo.
 **Pasos de Ejecución:**
-- Calibrar a 3 puntos térmicos: $-25{,}00\text{ }^\circ\text{C}$ (salmón congelado), $0{,}00\text{ }^\circ\text{C} (punto de hielo), +15{,}00\text{ }^\circ\text{C}$ (fruta fresca).
-- Medir la temperatura reportada por el gateway telemático vía Modbus RTU / CAN bus contra el termómetro patrón del baño.
+- Seleccionar puntos de ensayo dentro del rango documentado y de la aplicación refrigerada.
+- Comparar lectura recibida por Bluetooth con patrón tras estabilización y registrar error por punto.
+- Probar pérdida de anuncio, batería baja si está disponible y cambio de baliza; conservar identidad, fecha y calidad.
 
-**Datos de Entrada Sintéticos:** Puntos de consigna del baño termostático: $-25\text{ }^\circ\text{C}, 0\text{ }^\circ\text{C}, +15\text{ }^\circ\text{C}$.
-**Resultado Esperado:** Se debe verificar que el error es inferior a $\pm 0{,}3\text{ }^\circ\text{C}$. Los tiempos, porcentajes y magnitudes observados se registrarán después del ensayo; no se anticipan mediciones ni actas suscritas.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P2 (Crítica)**.
-**Entorno:** Laboratorio de Metrología / Baño Térmico de Precisión.
+**Datos de Entrada Sintéticos:** Consignas dentro del rango aprobado; cada valor y tolerancia constan en el manifiesto.
+**Resultado Esperado:** Error dentro de la tolerancia aprobada del modelo y asociación correcta. Ausencia o antigüedad genera aviso de dato no disponible; no se mantiene una lectura antigua como actual. Si el rango no cubre la carga prevista, no se homologa esa aplicación. No se presupone precisión de ±0,3 °C ni operación a −30 °C.
+**Pass/Fail y Severidad:** Pass solo si se cumplen todos los criterios y se conserva evidencia reproducible; cualquier pérdida, acceso no autorizado o salida incorrecta implica Fail. Severidad alta para seguridad y evidencia.
+**Entorno:** HIL / Cámara térmica, patrón y receptor Bluetooth.
 
 #### 9.0.7.11 CP-HW-11 — Acceso Local al DET Conforme y Bloqueo ante Documento No Emitido
 
@@ -2237,25 +2238,26 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 **Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P1 (Bloqueante)**.
 **Entorno:** Banco HIL / Mesa de Giro Cinemático.
 
-#### 9.0.7.14 CP-HW-14 — Interfaz de Identificación de Conductor (Lector RFID/iButton) y Bloqueo
+#### 9.0.7.14 CP-HW-14 — Identificación del conductor y bloqueo administrativo de asignación
 
-Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y el criterio siguiente.
+Este ensayo verifica la identificación y la decisión de asignación sin actuar sobre el arranque, el motor o el bus del vehículo.
 
 **ID:** `CP-HW-14`
-**Nivel y Tipología:** Prueba de Hardware HIL / Control de Acceso Físico y Enclavamiento de Partida.
-**Requerimiento Trazado:** Ensayo adicional de ingeniería; no sustituye controles contractuales.
-**Precondiciones:** Lector RFID de 13,56 MHz (Mifare/NFC) y teclado de cabina conectados por bus RS-485 al gateway. Relé de corte de motor de partida conectado a salida digital controlada.
+**Nivel y Tipología:** Prueba HIL / Integración de identificación con Personas y cumplimiento y despacho.
+**Requerimiento Trazado:** RF-001 y RF-003 (veredicto de asignación), RNF-005 (interfaz pasiva); ensayo complementario, sin sustituir sus casos funcionales.
+**Precondiciones:** Banco provisto por audIT con el lector de identificación seleccionado y autorizado conforme a S4/T-11, conectado al iWave G26I mediante su interfaz homologada. Servicio de identificación y despacho en QA, reloj controlado y catálogo sintético de credenciales, vigencias y jornadas. Sin relé de corte, salida a motor ni escritura al CAN. Registrar modelo, firmware, interfaz y permisos; no se presupone RFID, iButton o RS-485 si no constan en el inventario.
 **Pasos de Ejecución:**
-- Intentar encender el camión sin presentar tarjeta RFID. El relé de partida permanece inhabilitado y suena buzzer de advertencia en cabina.
-- Presentar tarjeta RFID perteneciente a un chofer con licencia vencida. Verificar que el relé permanezca inhabilitado.
-- Presentar tarjeta RFID de chofer habilitado con descanso legal al día. Verificar liberación del relé de partida en $< 500\text{ ms}$.
+- Solicitar asignación sin identidad válida: verificar rechazo, causa y registro, sin habilitar despacho.
+- Presentar identificador desconocido y después uno revocado: verificar rechazo y conservación de origen/fecha del intento.
+- Presentar identidad válida con licencia vencida o descanso insuficiente: verificar identificación correcta y asignación bloqueada por la causa legal correspondiente.
+- Presentar identidad habilitada, jornada y vehículo conformes: verificar que la asignación procede únicamente después del veredicto favorable de todos los controles aplicables.
+- Repetir con lector desconectado o lectura inválida: no convertir ausencia de identidad en un conductor habilitado ni reutilizar el veredicto de otro usuario.
+- Observar las interfaces físicas durante la secuencia y el reinicio: no debe existir actuación sobre arranque ni transmisión de tramas de control al CAN.
 
-**Datos de Entrada Sintéticos:** Tarjetas RFID sintéticas (no asignada, conductor inhabilitado, conductor apto).
-**Resultado Esperado:** Se debe verificar que identifica al conductor y registra bloqueo administrativo de despacho cuando no está habilitado. Los tiempos, porcentajes y magnitudes observados se registrarán después del ensayo; no se anticipan mediciones ni actas suscritas.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P1 (Bloqueante)**.
-**Entorno:** Banco HIL / Tablero de Encendido Automotriz Simulado.
-
-La prueba no instala un inmovilizador ni escribe al bus: el bloqueo es de la asignación. La lectura de identificación y la interfaz pasiva deben preservar la garantía y los sistemas de seguridad.
+**Datos de Entrada Sintéticos:** Credenciales desconocida, revocada y vigente; estados de licencia, descanso y vehículo conformes/no conformes, con reloj y oráculo independientes.
+**Resultado Esperado:** Cada intento conserva identidad o motivo de ausencia, fuente, fecha, veredicto y causa. Solo la combinación de identidad válida y todos los controles conformes habilita asignación. Los casos no conformes bloquean el despacho administrativo; el vehículo no recibe órdenes de inmovilización. Lectura pasiva y montaje preservan garantía y sistemas de seguridad. No se impone un tiempo de liberación de relé ni se acredita una prueba ejecutada.
+**Pass/Fail y Severidad:** Pass si todas las decisiones coinciden con el oráculo, se conservan los registros y no existe actuación física sobre el vehículo. Cualquier autorización indebida, pérdida de trazabilidad o actuación sobre arranque/CAN es Fail. Severidad: **P1 (Bloqueante)**.
+**Entorno:** Banco HIL de identificación e iWave G26I, servicios de QA y analizador independiente de interfaces; sin tablero de encendido ni inmovilizador.
 
 #### 9.0.7.15 CP-HW-15 — Descarga Remota Dedicada de Tacógrafo Digital Mediante Enlace DSRC
 
@@ -2315,7 +2317,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 **Requerimiento Trazado:** RF-024, RNF-003, RNF-004, RNF-005.
 **Precondiciones:** Tractocamión propio ingresando a mantenimiento programado de 10.000 km en taller central San Bernardo. Cuadrilla de técnicos mecánicos de Curimón S.A. capacitada por audIT.
 **Pasos de Ejecución:**
-- Técnico mecánico ejecuta el procedimiento de montaje físico del gateway telemático, antena externa GNSS/4G y pinzas inductivas CANclick.
+- Técnico mecánico ejecuta el procedimiento de montaje físico del gateway telemático, antena externa GNSS/4G y lector sin contacto Technoton CANCrocodile.
 - Verificar que no se corten ni perforen cables del bus CAN original del camión.
 - Conectar equipo a la alimentación protegida por fusible aéreo automotriz.
 - Realizar encendido de motor y ejecutar autodiagnóstico en la PWA de taller audIT.
@@ -2326,7 +2328,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 **Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P2 (Crítica)**.
 **Entorno:** Terreno / Taller Central San Bernardo.
 
-**Autorización y alcance físico:** No intervenir un equipo de terceros sin acuerdo expreso. Ejecutar durante una pasada regular por terminal, sin detener globalmente la flota. Documentar duración medida, modelo, permisos, procedimiento no invasivo, señales y garantía; disponer del equipo de ensayo especificado por audIT, sin presumirlo propiedad del cliente. CANclick/PT100 del catálogo corporativo son opciones de laboratorio: no agregan compras al T-11. El criterio se aplica a la interfaz efectivamente seleccionada.
+**Autorización y alcance físico:** No intervenir un equipo de terceros sin acuerdo expreso. Ejecutar durante una pasada regular por terminal, sin detener globalmente la flota. Documentar duración medida, modelo, permisos, procedimiento no invasivo, señales y garantía; disponer del equipo de ensayo especificado por audIT, sin presumirlo propiedad del cliente. El banco reproduce CANCrocodile y las balizas Bluetooth seleccionadas en T-11, sin agregar sensores alternativos a la oferta. El criterio se aplica a la interfaz efectivamente seleccionada.
 
 **Variante trazada a RF-024 (S3/T-12):** Registrar una intervención offline de taller externo con técnico, equipo, fecha, odómetro, trabajo, repuestos y evidencia; reconectar dos veces. Esperar una sola intervención íntegra en hoja de vida e inventario actualizado una vez. Quitar técnico o repuesto obligatorio: rechazar o señalar registro incompleto, sin tratarlo como intervención válida. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.
 
@@ -2380,7 +2382,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 **Pasos de Ejecución:**
 - Técnico frigorista conecta la rampla a la toma de 440V del patio de Valparaíso.
 - Verificar que el gateway audIT registre el cambio de fuente de energía (del motor diésel de la rampla a la red eléctrica trifásica).
-- Monitorear las lecturas de las 2 sondas PT100 durante 3 horas de permanencia en patio.
+- Monitorear las lecturas de la baliza Bluetooth asociada al semirremolque durante 3 horas; registrar recepción, antigüedad y cortes de comunicación.
 
 **Datos de Entrada Sintéticos:** Parámetros de temperatura de pulpa de fruta a $-0{,}5\text{ }^\circ\text{C}$.
 **Resultado Esperado:** Se debe verificar que mantiene trazabilidad térmica continua en patio. Los tiempos, porcentajes y magnitudes observados se registrarán después del ensayo; no se anticipan mediciones ni actas suscritas.
@@ -2449,7 +2451,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 **ID:** `CP-UAT-09`
 **Nivel y Tipología:** Prueba de Aceptación de Usuario (UAT) / Gestión de Terceros en Macrozona Sur.
 **Requerimiento Trazado:** RF-026, RF-028.
-**Precondiciones:** 5 transportistas subcontratados de la zona de Talca (muestra sintética) registrados en el Portal de Adhesión (camiones homologados vía API Wisetrack).
+**Precondiciones:** 5 transportistas subcontratados de la zona de Talca (muestra sintética) registrados en el Portal de Adhesión (camiones con mecanismo autorizado de acceso a posición, sin presuponer API).
 **Pasos de Ejecución:**
 - Despachador de Talca asigna 5 órdenes de carga industrial a los camiones subcontratados.
 - Los transportistas aceptan el viaje desde la PWA móvil firmando electrónicamente la atestación de jornada (Nivel 5 de evidencia probatoria).
@@ -2523,24 +2525,24 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 **Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P1 (Bloqueante)**.
 **Entorno:** Terreno / Terminal Antofagasta.
 
-#### 9.0.8.13 CP-UAT-13 — UAT Terminal Puerto Montt — Monitoreo Térmico Continuo (-30 °C a +30 °C) en Reefers
+#### 9.0.8.13 CP-UAT-13 — Monitoreo térmico Bluetooth de semirremolque refrigerado
 
-Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y el criterio siguiente.
+Este ensayo define entradas, controles y evidencia; no declara resultados ejecutados.
 
 **ID:** `CP-UAT-13`
-**Nivel y Tipología:** Prueba de Aceptación de Usuario (UAT) / Cadena de Frío Acuícola y Láctea.
+**Nivel y Tipología:** Prueba UAT / Cadena de frío.
 **Requerimiento Trazado:** Ensayo adicional de ingeniería; no sustituye controles contractuales.
-**Precondiciones:** Terminal Puerto Montt. Rampla reefer cargando 24 toneladas de salmón congelado a $-20{,}0\text{ }^\circ\text{C}$ con destino a San Antonio para embarque naviero.
+**Precondiciones:** Terminal Puerto Montt, semirremolque de prueba con baliza T-11 e iWave G26I. Rango requerido de la carga íntegramente dentro del rango homologado del sensor; permisos de ruta y patrón independiente disponibles.
 **Pasos de Ejecución:**
-- Conectar las 2 sondas de temperatura PT100 del furgón térmico.
-- Iniciar viaje en la PWA indicando rango térmico obligatorio: $-22{,}0\text{ }^\circ\text{C} a -18{,}0\text{ }^\circ\text{C}$.
-- Realizar prueba de ruta en el tramo Puerto Montt a Osorno (110 km).
-- Verificar en el terminal de Puerto Montt y en la Torre Central el reporte térmico continuo cada 30 segundos.
+- Vincular baliza y semirremolque y comprobar identidad y ubicación de medida.
+- Configurar consigna, rango y cadencia aprobados; medir en terminal y ruta autorizada.
+- Provocar pérdida controlada de Bluetooth y reconexión, conservando fechas y señalando dato no disponible.
+- Conciliar lecturas con patrón y registros de torre, sin imputar temperatura de pulpa a una medida ambiental.
 
-**Datos de Entrada Sintéticos:** Carga congelada de salmón, temperatura de consigna $-20{,}0\text{ }^\circ\text{C}$.
-**Resultado Esperado:** Se debe verificar que el monitoreo térmico es continuo y sin fluctuaciones espurias. Los tiempos, porcentajes y magnitudes observados se registrarán después del ensayo; no se anticipan mediciones ni actas suscritas.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P1 (Bloqueante)**.
-**Entorno:** Terreno / Terminal Puerto Montt y Ruta 5 Sur.
+**Datos de Entrada Sintéticos:** Perfil de temperatura y carga de ensayo dentro del rango homologado, sin mercancía real expuesta.
+**Resultado Esperado:** Trazabilidad de identidad, temperatura, fecha y calidad; error y cadencia dentro de los límites aprobados. No se declara funcionamiento a −30 °C ni cobertura térmica inferior al mínimo documentado; cualquier incompatibilidad de aplicación impide aceptación.
+**Pass/Fail y Severidad:** Pass solo si se cumplen todos los criterios y se conserva evidencia reproducible; cualquier pérdida, acceso no autorizado o salida incorrecta implica Fail. Severidad alta para seguridad y evidencia.
+**Entorno:** Terminal Puerto Montt / Ruta autorizada y HIL térmico.
 
 #### 9.0.8.14 CP-UAT-14 — UAT Terminal Puerto Montt — Alerta Inmediata de Desviación Térmica ($\pm 1{,}5\text{ }^\circ\text{C}$)
 
@@ -2552,7 +2554,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 **Precondiciones:** Rampla reefer en patio Puerto Montt. Se simula intencionalmente la apertura de puertas traseras sin apagar el equipo frigorífico.
 **Pasos de Ejecución:**
 - Abrir puertas de la rampla reefer cargada.
-- La temperatura en la sonda posterior sube de $-19{,}0\text{ }^\circ\text{C} a -16{,}5\text{ }^\circ\text{C}$ en 8 minutos (desviación $> 1{,}5\text{ }^\circ\text{C}$ respecto a la consigna de $-18\text{ }^\circ\text{C}$).
+- La temperatura en la baliza Bluetooth vinculada al semirremolque sube de $-19{,}0\text{ }^\circ\text{C} a -16{,}5\text{ }^\circ\text{C}$ en 8 minutos (desviación $> 1{,}5\text{ }^\circ\text{C}$ respecto a la consigna de $-18\text{ }^\circ\text{C}$).
 - Verificar el tiempo de disparo de la alerta en el teléfono del chofer y en la consola del despachador de Puerto Montt.
 - Cerrar puertas y verificar retorno a la temperatura nominal y cierre del evento de alarma.
 
