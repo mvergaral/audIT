@@ -3,9 +3,9 @@
 La \tabref{9-rtm} recorre el catálogo de S3/T-12 y localiza las variantes diseñadas en los casos existentes. El detalle de cada variante establece entradas, salidas y límites. Se verifica conjuntamente la familia de pruebas: un mock no acredita proveedor real, una simulación temporal no acredita años operados y un examen documental no acredita conformidad externa. Todas las filas están diseñadas y pendientes de ejecución; la cobertura de código se mide separadamente.
 \begin{tabla}[ancho=completo, fuente=condensada]{Trazabilidad del catálogo S3/T-12 a pruebas diseñadas}{9-rtm}{L{18mm} L{39mm} L{24mm} X L{20mm}}
 Requisito & Casos existentes & Paquete EDT & Comprobación diseñada & Estado \\ \midrule
-RF-001 & CP-UNIT-01, CP-SYS-01 & 5.3 & Preparar seis asignaciones con los cuatro factores presentes: fuentes de jornada 1, 2, 3, 4, 5 y ninguna & Diseñada; no ejecutada \\
+RF-001 & CP-UNIT-01, CP-SYS-01, CP-HW-14, CP-PERF-04 & 5.3 & Preparar seis asignaciones con los cuatro factores presentes: fuentes de jornada 1, 2, 3, 4, 5 y ninguna & Diseñada; no ejecutada \\
 RF-002 & CP-UNIT-02, CP-INT-02 & 5.1 & Construir un padrón sintético de 454 conductores identificados, 196 propios y 258 externos; asociar a cada tramo origen, conductor, vehículo y nivel 1–5, con muestras de todas las fuentes y ausencia de fuente & Diseñada; no ejecutada \\
-RF-003 & CP-INT-03, CP-SYS-05 & 5.1, 9.2 & Crear dos conductores externos con igual viaje propuesto y jornadas previas distintas: descanso continuo de 8 h y de 6 h en la ventana de 24 h del fixture & Diseñada; no ejecutada \\
+RF-003 & CP-INT-03, CP-SYS-05, CP-HW-14 & 5.1, 9.2 & Crear dos conductores externos con igual viaje propuesto y jornadas previas distintas: descanso continuo de 8 h y de 6 h en la ventana de 24 h del fixture & Diseñada; no ejecutada \\
 RF-004 & CP-UNIT-06, CP-SEC-08 & 5.1 & Sellar un evento original y una corrección que cambia un dato; conservar ambas versiones con autor, origen y fecha & Diseñada; no ejecutada \\
 RF-005 & CP-UNIT-01, CP-SYS-08 & 5.1, 7.1 & Generar 6.000 vigencias sintéticas con titular, responsable, fecha y respaldo & Diseñada; no ejecutada \\
 RF-006 & CP-UNIT-19, CP-SYS-06 & 5.5 & Preparar 18 unidades SUSPEL sintéticas, cada una con carga efectiva, DET emitido por ERP, conductor y lista firmada & Diseñada; no ejecutada \\

@@ -2,9 +2,11 @@
 
 ## 1.1 Anexo 1.A: Plan institucional de certificación ISO/IEC 27001:2022
 
+\addcontentsline{toc}{section}{Anexo 1.A: Plan institucional de certificación ISO/IEC 27001:2022}
+
 Conforme a la exigencia de acreditación de Requisito Habilitante del FEP01, Artículo 34.1, p. 22 de las Bases Administrativas TFEP-01/2026, audIT formaliza el siguiente plan institucional vinculante.
 
-### 1. Individualización del oferente y representación legal
+### 1.1.1 1. Individualización del oferente y representación legal
 
 El plan identifica al proponente, a su representante y al organismo a cargo del proceso de certificación.
 - **Razón Social:** audIT Soluciones Tecnológicas SpA
@@ -15,22 +17,23 @@ El plan identifica al proponente, a su representante y al organismo a cargo del 
 - **Norma Internacional:** ISO/IEC 27001:2022 (*Information Security, Cybersecurity and Privacy Protection - Information Security Management Systems*).
 - **Expediente de Auditoría Externa:** N.° BV-EXP-2026-CL-8921.
 
-### 2. Alcance del Sistema de Gestión de Seguridad de la Información (SGSI)
+### 1.1.2 2. Alcance del Sistema de Gestión de Seguridad de la Información (SGSI)
 
 El Sistema de Gestión de Seguridad de la Información de audIT cubre:
-
+\begin{quote}
 «El diseño, desarrollo, pruebas, integración, aseguramiento de calidad, implantación y operación de plataformas de software de misión crítica, soluciones de telemetría e Internet de las Cosas (IoT) de borde, y administración de arquitecturas cloud para transporte terrestre, distribución y logística corporativa, conforme a la Declaración de Aplicabilidad (SoA) versión 3.0».
+\end{quote}
 
-### 1.1.1 3. Estado documental del proceso y fundamentación del Plan (FEP01, Artículo 34.1, p. 22)
+### 1.1.3 3. Estado documental del proceso y fundamentación del Plan (FEP01, Artículo 34.1, p. 22)
 
 audIT acoge formalmente su acreditación a la disposición expresa del FEP01, Artículo 34.1, p. 22 de las Bases Administrativas, que faculta la presentación de un plan institucional de certificación con hitos verificables dentro de los primeros doce meses del Contrato. A la fecha de presentación de esta propuesta técnica, la compañía acredita el siguiente estado documental y procedimental ante Bureau Veritas Certification S.A. (Expediente de Auditoría N.° BV-EXP-2026-CL-8921):
 - **Auditoría de Fase 1 (Revisión Documental y Diseño del SGSI):** Concluida y aprobada conforme en noviembre de 2025.
 - **Auditoría de Fase 2:** En curso ante Bureau Veritas Certification S.A. La evaluación, el cierre de observaciones y la recomendación del equipo auditor forman parte del expediente; no se declara la certificación como emitida.
 - **Estado del Expediente y Compromiso de Emisión:** El certificado oficial no se encuentra emitido a la fecha de la propuesta. audIT compromete su entrega en el **Mes 1 de Contrato**, como obligación de su plan institucional y no como una fecha impuesta por el artículo 34.1. El expediente BV-EXP-2026-CL-8921 y la declaración del representante se individualizan en el Sobre N.º 1.
 
-### 4. Cronograma vinculante de despliegue, protocolización y vigilancia anual
+### 1.1.4 4. Cronograma vinculante de despliegue, protocolización y vigilancia anual
 
-Para dar cabal cumplimiento a lo dispuesto en el FEP01, Artículo 34.1, p. 22 de las Bases Administrativas (*«plan de certificación con hitos verificables dentro de los primeros doce meses del Contrato»*), en la Tabla 1.1 se formaliza el cronograma de cumplimiento irrestricto de los cuatro hitos comprometidos.
+Para dar cabal cumplimiento a lo dispuesto en el FEP01, Artículo 34.1, p. 22 de las Bases Administrativas (*«plan de certificación con hitos verificables dentro de los primeros doce meses del Contrato»*), en la Tabla 1.1 se formaliza el cronograma de cumplimiento de los cuatro hitos comprometidos.
 
 **Tabla 1.1.** Cronograma vinculante de despliegue, protocolización y vigilancia anual ISO/IEC 27001:2022
 
@@ -43,15 +46,16 @@ Para dar cabal cumplimiento a lo dispuesto en el FEP01, Artículo 34.1, p. 22 de
 
 Como se desprende de la Tabla 1.1, la emisión se compromete en M1 y los controles de extensión y vigilancia se realizan en M4, M8 y M11. Los identificadores H1 a H4 de esta tabla son hitos del plan institucional ISO 27001; no sustituyen los hitos de aceptación o pago del contrato.
 
-### 5. Declaración formal y firma del representante legal
+### 1.1.5 5. Declaración formal y firma del representante legal
 
-En mi calidad de Representante Legal de audIT, declaro bajo fe de juramento que la información expuesta precedentemente es fidedigna y que la empresa asume el compromiso irrestricto de dar cumplimiento cabal a los hitos del presente Plan dentro de los plazos señalados, facultando a Transportes Curimón S.A. para auditar su avance en cualquier momento durante la vigencia del Contrato.
+En mi calidad de Representante Legal de audIT, declaro bajo fe de juramento que la información expuesta precedentemente es fidedigna y que la empresa asume la obligación de dar cumplimiento a los hitos del presente Plan dentro de los plazos señalados, facultando a Transportes Curimón S.A. para auditar su avance en cualquier momento durante la vigencia del Contrato.
 
 Santiago de Chile, 03 de octubre de 2026.
 
-![Firma del representante](/home/carlosa/Documentos/Universidad/Actual/FEP/06_Repositorios_Git/repo/recursos/Formato-Oferta-audIT/portadas/activos/media-firma.png)
- [4pt]
+\begin{center}
+  \includegraphics[height=1.5cm]{portadas/activos/media-firma.png} [4pt]
   **Alejandro Hermosilla Díaz**
   Representante Legal y Director Ejecutivo
   audIT Soluciones Tecnológicas SpA
   RUT: 14.892.341-8
+\end{center}

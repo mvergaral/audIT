@@ -11,39 +11,43 @@ Conforme a lo instruido en el Comunicado 10 (§1 y §5), las tablas de catalogac
 
 ## 2.1 Anexo 2.A: Catálogo exhaustivo de requerimientos preliminares de negocio y operacionales
 
-El catálogo compendia las necesidades preliminares de negocio levantadas desde las Bases Técnicas del Caso 10, las entrevistas reproducidas en el caso con los actores operacionales y las exigencias normativas del transporte terrestre chileno. Cada requerimiento se codifica unívocamente, estableciendo su trazabilidad formal y su nivel de criticidad para la continuidad operacional en la Tabla 2.1.
+\addcontentsline{toc}{section}{Anexo 2.A: Catálogo exhaustivo de requerimientos preliminares de negocio y operacionales}
 
-**Tabla 2.1.** Catálogo de requerimientos de negocio y operacionales preliminares
+El catálogo compendia las veinticinco (25) necesidades preliminares de negocio y operacionales levantadas desde las Bases Técnicas del Caso 10, las entrevistas en terreno con los actores del transporte y las exigencias normativas del ordenamiento jurídico chileno. Cada requerimiento se codifica unívocamente (`REQ-NEG-01` a `REQ-NEG-25`), declarando su fuente de origen, su nivel de criticidad y su trazabilidad biunívoca hacia los Requerimientos Funcionales (`RF`) y No Funcionales (`RNF`) formalizados en el Subdocumento 3 y en el Formulario T-12, conforme se detalla en la Tabla 2.1.
 
-| **ID Req.** | **Dominio** | **Descripción Detallada del Requerimiento Preliminar** | **Fuente / Base** | **Criticidad** |
-|---|---|---|---|---|
-| **REQ-NEG-01** | Asignación y Despacho | Validar síncronamente en pre-despacho ($\le 30\text{ s}$) que el conductor cuente con horas de jornada disponibles conforme al Art. 25 bis del Código del Trabajo, bloqueando la asignación si se superan las 5 h de manejo o no se acredita descanso previo. | Caso 10, Cap. 4.3, Entrevista R. Mansilla | Crítica |
-| **REQ-NEG-02** | Asignación y Despacho | Cotejar automáticamente el estado de vencimiento de las  6.000 vigencias vivas (licencias A5, revisiones técnicas, certificados de gases, permisos, seguros), impidiendo despachar vehículos o choferes con documentación caducada. | Caso 10, Cap. 4.4, Entrevista D. Aguayo | Crítica |
-| **REQ-NEG-03** | Asignación y Despacho | Verificar la aptitud física del equipo asignado respecto al tipo de carga requerida (semirremolque refrigerado para perecibles, tolva para granel, o autorización D.S. N.° 298 para sustancias peligrosas). | Caso 10, Cap. 4.5, Entrevista R. Mansilla | Crítica |
-| **REQ-NEG-04** | Sustancias Peligrosas | Comprobar de forma obligatoria que el conductor asignado a una de las 18 unidades SUSPEL cuente con el curso específico vigente del D.S. N.° 298 y que el vehículo porte Hoja de Datos de Seguridad y rotulación NCh 2190. | Caso 10, Cap. 4.5, Entrevista D. Aguayo | Crítica |
-| **REQ-NEG-05** | Trazabilidad y Geocercas | Acreditar automáticamente entrada, permanencia y salida en los aproximadamente 1.400 puntos de clientes, sin intervención del conductor ni equipamiento instalado en predios ajenos. | Caso 10, Cap. 4.7, Entrevista E. Valdebenito | Alta |
-| **REQ-NEG-06** | Cobro de Sobreestadías | Conservar evidencia cronológica íntegra y atribuible de los tiempos de espera para sustentar cobros legítimos. El 71% de cobros objetados describe el problema, no una recuperación garantizada. | Caso 10, Cap. 4.7, Entrevista G. Ossandón | Alta |
-| **REQ-NEG-07** | Retornos en Vacío | Identificar en tiempo real los tractocamiones que finalizarán su descarga para sugerir triangulaciones con cargas de retorno compatibles, reduciendo el 26% de kilómetros recorridos en vacío (10,66 millones de km anuales). | Caso 10, Cap. 4.2, Entrevista R. Mansilla | Alta |
-| **REQ-NEG-08** | Cadena de Frío | Monitorear la temperatura de los 44 equipos refrigerados y alertar desviaciones o aperturas no autorizadas. Necesidad preliminar atendida por la innovación 3 de S13, fuera del catálogo base S3/T-12; rangos y frecuencia según carga y contrato. | Caso 10, Cap. 2.1 y 4.8, Entrevista A. Lecaros | Crítica |
-| **REQ-NEG-09** | Documentación Digital | Disponer del DET conforme antes del movimiento, incluso en puntos de carga sin cobertura; mantener al sistema contable como único emisor tributario y resolver la contingencia en la solución. | Caso 10, Cap. 4.6, Entrevista M. Riquelme | Alta |
-| **REQ-NEG-10** | Confirmación de Entrega | Obtener conformidad de entrega atribuible al destinatario y disponible para facturación y reclamos, reduciendo pérdidas y daños de soportes en papel. | Caso 10, Cap. 4.7, Entrevista G. Ossandón | Media |
-| **REQ-NEG-11** | Costeo por Ruta y Viaje | Reconstruir el costo directo del viaje con fuentes de consumo, peajes y fletes, distinguiendo estimación operacional y conciliación definitiva. La oportunidad de información debe justificarse. | Caso 10, Cap. 4.1 y 7.3, Entrevista G. Ossandón | Crítica |
-| **REQ-NEG-12** | Renegociación Contratos | Proveer a la Gerencia de Finanzas la matriz de rentabilidad histórica desagregada por cliente y ruta para renegociar los 3 contratos deficitarios (31% del ingreso, peor a -14%) previo a sus vencimientos en 2027. | Caso 10, Cap. 2.3, Entrevista G. Ossandón | Crítica |
-| **REQ-NEG-13** | Telemetría CAN bus | Capturar y procesar de forma pasiva y no intrusiva los parámetros de operación del motor (RPM, odómetro, temperatura de refrigerante, códigos DTC y consumo acumulado) en los 61 tractos con telemetría de fábrica, con señales e interfaces por verificar. | Caso 10, Cap. 4.10, Entrevista H. Trincado | Alta |
-| **REQ-NEG-14** | Mantenimiento Preventivo | Generar órdenes automáticas de mantenimiento en base al kilometraje y horas de motor efectivamente acumulados por telemetría, sustituyendo la lectura visual manual de odómetros; el paso por terminal cada 6 días en promedio condiciona las instalaciones. | Caso 10, Cap. 4.10, Entrevista H. Trincado | Alta |
-| **REQ-NEG-15** | Integración Talleres Ruta | Incorporar las intervenciones de talleres externos y sus repuestos a la hoja de vida del vehículo, con identificación de quien registra y valida. | Caso 10, Cap. 4.10, Entrevista H. Trincado | Media |
-| **REQ-NEG-16** | Liquidación a Terceros | Automatizar el cálculo de pre-liquidaciones mensuales a los 148 transportistas terceros a partir de los viajes validados en sistema, reduciendo el ciclo de 9 días y la tasa de error del 11%. | Caso 10, Cap. 4.11, Entrevista G. Ossandón | Alta |
-| **REQ-NEG-17** | Privacidad de Terceros | Limitar el tratamiento y acceso a datos personales a finalidades y períodos autorizados; permitir consentimiento granular y revocable de terceros y registrar su ejercicio. | Bases Admin. Art. 4.3, Entrevista N. Sandoval | Crítica |
-| **REQ-NEG-18** | Homologación Plataformas | Unificar la información de posición de los tres proveedores existentes para los 192 terceros con GPS, verificando acceso, actualización y restricciones de consulta o exportación. | Caso 10, Cap. 5, Entrevista P. Kast | Alta |
-| **REQ-NEG-19** | Sensorización 34 Camiones | Incorporar al control de posición a los 34 terceros sin dispositivo, preservando las restricciones de adquisición y de intervención física del caso. | Caso 10, Cap. 2.1 y 5, Entrevista E. Valdebenito | Alta |
-| **REQ-NEG-20** | Resiliencia Desconexión | Conservar registros a bordo durante al menos 72 horas sin cobertura y sincronizarlos dentro del umbral exigido. Absorber cierres de tránsito de hasta doce días sin presumir igual duración de incomunicación. | Caso 10, RT-03.10, Entrevista M. Riquelme | Crítica |
-| **REQ-NEG-21** | Seguridad en Cabina | No exigir interacción táctil ni desvío de atención visual del conductor mientras conduce; las alertas necesarias deben respetar la seguridad vial. | Ley N.° 21.377, Entrevista Y. Colipán | Crítica |
-| **REQ-NEG-22** | Alerta Anticipada Fatiga | Calcular la alerta de descanso del Art. 25 bis considerando la distancia y tiempo estimado hacia el próximo punto seguro de detención (berma o servicentro), evitando que la alarma venza en zonas desérticas sin servicios. | Caso 10, Cap. 4.3, Entrevista Y. Colipán | Alta |
-| **REQ-NEG-23** | Tacógrafo Digital | Obtener y conservar la información del tacógrafo con atribución, integridad y custodia, para su disponibilidad ante fiscalización. | Código del Trabajo Art. 25 bis, Entrevista D. Aguayo | Crítica |
-| **REQ-NEG-24** | Huella de Carbono GLEC | Computar y reportar de manera mensual las emisiones de gases de efecto invernadero (g CO2e/t-km) auditables bajo norma GLEC e ISO 14083 para responder a las exigencias 2029 del cliente exportador (19%). | Caso 10, Cap. 4.6, Entrevista A. Lecaros | Crítica |
-| **REQ-NEG-25** | Trazabilidad Cliente 19% | Proveer al cliente autorizado seguimiento de su carga y documentos del viaje, conforme a los permisos revocables del titular de los datos. | Caso 10, Cap. 4.6, Entrevista A. Lecaros | Alta |
+**Tabla 2.1.** Catálogo de requerimientos de negocio y operacionales preliminares con trazabilidad
+
+| **ID Req.** | **Dominio** | **Descripción Detallada del Requerimiento Preliminar** | **Fuente / Base** | **Mapeo S3 / T-12** | **Criticidad** |
+|---|---|---|---|---|---|
+| **REQ-NEG-01** | Asignación y Despacho | Validar síncronamente en pre-despacho ($\le 30\text{ s}$) que el conductor cuente con horas de jornada disponibles conforme al Art. 25 bis del Código del Trabajo, bloqueando la asignación si se superan las 5 h de manejo o no se acredita descanso previo. | Caso 10, Cap. 4.3, Entrevista R. Mansilla | RF-001, RF-002 | Crítica |
+| **REQ-NEG-02** | Asignación y Despacho | Cotejar automáticamente el estado de vencimiento de las  6.000 vigencias vivas (licencias A5, revisiones técnicas, certificados de gases, permisos, seguros), impidiendo despachar vehículos o choferes con documentación caducada. | Caso 10, Cap. 4.4, Entrevista D. Aguayo | RF-005 | Crítica |
+| **REQ-NEG-03** | Asignación y Despacho | Verificar la aptitud física del equipo asignado respecto al tipo de carga requerida (semirremolque refrigerado para perecibles, tolva para granel, o autorización D.S. N.° 298 para sustancias peligrosas). | Caso 10, Cap. 4.5, Entrevista R. Mansilla | RF-001 | Crítica |
+| **REQ-NEG-04** | Sustancias Peligrosas | Comprobar de forma obligatoria que el conductor asignado a una de las 18 unidades SUSPEL cuente con el curso específico vigente del D.S. N.° 298 y que el vehículo porte Hoja de Datos de Seguridad y rotulación NCh 2190. | Caso 10, Cap. 4.5, Entrevista D. Aguayo | RF-006 | Crítica |
+| **REQ-NEG-05** | Trazabilidad y Geocercas | Acreditar automáticamente entrada, permanencia y salida en los aproximadamente 1.400 puntos de clientes, sin intervención del conductor ni equipamiento instalado en predios ajenos. | Caso 10, Cap. 4.7, Entrevista E. Valdebenito | RF-010 | Alta |
+| **REQ-NEG-06** | Cobro de Sobreestadías | Conservar evidencia cronológica íntegra y atribuible de los tiempos de espera para sustentar cobros legítimos. El 71% de cobros objetados describe el problema, no una recuperación garantizada. | Caso 10, Cap. 4.7, Entrevista G. Ossandón | RF-011 | Alta |
+| **REQ-NEG-07** | Retornos en Vacío | Identificar en tiempo real los tractocamiones que finalizarán su descarga para sugerir triangulaciones con cargas de retorno compatibles, reduciendo el 26% de kilómetros recorridos en vacío (10,66 millones de km anuales). | Caso 10, Cap. 4.2, Entrevista R. Mansilla | RF-015 | Alta |
+| **REQ-NEG-08** | Cadena de Frío | Monitorear la temperatura de los 44 equipos refrigerados y alertar desviaciones o aperturas no autorizadas. Necesidad preliminar atendida por la innovación 3 de S13, fuera del catálogo base S3/T-12; rangos y frecuencia según carga y contrato. | Caso 10, Cap. 2.1 y 4.8, Entrevista A. Lecaros | Innovación 3 (S13 / T-19) | Crítica |
+| **REQ-NEG-09** | Documentación Digital | Disponer del DET conforme antes del movimiento, incluso en puntos de carga sin cobertura; mantener al sistema contable como único emisor tributario y resolver la contingencia en la solución. | Caso 10, Cap. 4.6, Entrevista M. Riquelme | RF-013, RF-014 | Alta |
+| **REQ-NEG-10** | Confirmación de Entrega | Obtener conformidad de entrega atribuible al destinatario y disponible para facturación y reclamos, reduciendo pérdidas y daños de soportes en papel. | Caso 10, Cap. 4.7, Entrevista G. Ossandón | RF-012 | Media |
+| **REQ-NEG-11** | Costeo por Ruta y Viaje | Reconstruir el costo directo del viaje con fuentes de consumo, peajes y fletes, distinguiendo estimación operacional y conciliación definitiva. La oportunidad de información debe justificarse. | Caso 10, Cap. 4.1 y 7.3, Entrevista G. Ossandón | RF-016 | Crítica |
+| **REQ-NEG-12** | Renegociación Contratos | Proveer a la Gerencia de Finanzas la matriz de rentabilidad histórica desagregada por cliente y ruta para renegociar los 3 contratos deficitarios (31% del ingreso, peor a -14%) previo a sus vencimientos en 2027. | Caso 10, Cap. 2.3, Entrevista G. Ossandón | RF-016, RF-017 | Crítica |
+| **REQ-NEG-13** | Telemetría CAN bus | Capturar y procesar de forma pasiva y no intrusiva los parámetros de operación del motor (RPM, odómetro, temperatura de refrigerante, códigos DTC y consumo acumulado) en los 61 tractos con telemetría de fábrica, con señales e interfaces por verificar. | Caso 10, Cap. 4.10, Entrevista H. Trincado | RF-025, RNF-005 | Alta |
+| **REQ-NEG-14** | Mantenimiento Preventivo | Generar órdenes automáticas de mantenimiento en base al kilometraje y horas de motor efectivamente acumulados por telemetría, sustituyendo la lectura visual manual de odómetros; el paso por terminal cada 6 días en promedio condiciona las instalaciones. | Caso 10, Cap. 4.10, Entrevista H. Trincado | RF-025 | Alta |
+| **REQ-NEG-15** | Integración Talleres Ruta | Incorporar las intervenciones de talleres externos y sus repuestos a la hoja de vida del vehículo, con identificación de quien registra y valida. | Caso 10, Cap. 4.10, Entrevista H. Trincado | RF-024 | Media |
+| **REQ-NEG-16** | Liquidación a Terceros | Automatizar el cálculo de pre-liquidaciones mensuales a los 148 transportistas terceros a partir de los viajes validados en sistema, reduciendo el ciclo de 9 días y la tasa de error del 11%. | Caso 10, Cap. 4.11, Entrevista G. Ossandón | RF-019, RF-020 | Alta |
+| **REQ-NEG-17** | Privacidad de Terceros | Limitar el tratamiento y acceso a datos personales a finalidades y períodos autorizados; permitir consentimiento granular y revocable de terceros y registrar su ejercicio. | Bases Admin. Art. 4.3, Entrevista N. Sandoval | RF-022, RNF-013 | Crítica |
+| **REQ-NEG-18** | Homologación Plataformas | Unificar la información de posición de los tres proveedores existentes para los 192 terceros con GPS, verificando acceso, actualización y restricciones de consulta o exportación. | Caso 10, Cap. 5, Entrevista P. Kast | RF-008, RNF-003 | Alta |
+| **REQ-NEG-19** | Sensorización 34 Camiones | Incorporar al control de posición a los 34 terceros sin dispositivo, preservando las restricciones de adquisición y de intervención física del caso. | Caso 10, Cap. 2.1 y 5, Entrevista E. Valdebenito | RF-008, RF-026 | Alta |
+| **REQ-NEG-20** | Resiliencia Desconexión | Conservar registros a bordo durante al menos 72 horas sin cobertura y sincronizarlos dentro del umbral exigido. Absorber cierres de tránsito de hasta doce días sin presumir igual duración de incomunicación. | Caso 10, RT-03.10, Entrevista M. Riquelme | RF-009, RNF-002 | Crítica |
+| **REQ-NEG-21** | Seguridad en Cabina | No exigir interacción táctil ni desvío de atención visual del conductor mientras conduce; las alertas necesarias deben respetar la seguridad vial. | Ley N.° 21.377, Entrevista Y. Colipán | RNF-001 | Crítica |
+| **REQ-NEG-22** | Alerta Anticipada Fatiga | Calcular la alerta de descanso del Art. 25 bis considerando la distancia y tiempo estimado hacia el próximo punto seguro de detención (berma o servicentro), evitando que la alarma venza en zonas desérticas sin servicios. | Caso 10, Cap. 4.3, Entrevista Y. Colipán | RF-027 | Alta |
+| **REQ-NEG-23** | Tacógrafo Digital | Obtener y conservar la información del tacógrafo con atribución, integridad y custodia, para su disponibilidad ante fiscalización. | Código del Trabajo Art. 25 bis, Entrevista D. Aguayo | RF-007 | Crítica |
+| **REQ-NEG-24** | Huella de Carbono GLEC | Computar y reportar de manera mensual las emisiones de gases de efecto invernadero (g CO2e/t-km) auditables bajo norma GLEC e ISO 14083 para responder a las exigencias 2029 del cliente exportador (19%). | Caso 10, Cap. 4.6, Entrevista A. Lecaros | RF-023 | Crítica |
+| **REQ-NEG-25** | Trazabilidad Cliente 19% | Proveer al cliente autorizado seguimiento de su carga y documentos del viaje, conforme a los permisos revocables del titular de los datos. | Caso 10, Cap. 4.6, Entrevista A. Lecaros | RF-021 | Alta |
 
 ## 2.2 Anexo 2.B: Inventario detallado de flota y caracterización de conductores
+
+\addcontentsline{toc}{section}{Anexo 2.B: Inventario detallado de flota y caracterización de conductores}
 
 Este anexo desglosa la infraestructura vehicular móvil y la fuerza laboral que compone la operación de Transportes Curimón S.A., diferenciando el régimen de propiedad, el nivel de equipamiento telemático basal y la estrategia de integración tecnológica requerida para cada segmento.
 
@@ -93,6 +97,8 @@ La operación de la flota requiere una fuerza laboral de 454 choferes, estructur
 
 ## 2.3 Anexo 2.C: Matriz exhaustiva de restricciones operacionales, legales y exclusiones contractuales
 
+\addcontentsline{toc}{section}{Anexo 2.C: Matriz exhaustiva de restricciones operacionales, legales y exclusiones contractuales}
+
 Este anexo recopila de forma sistemática las restricciones legales vigentes en Chile expuestas en la Tabla 2.5, las restricciones físicas y ambientales de la red en carretera detalladas en la Tabla 2.6 y las exclusiones explícitas de la propuesta técnica delimitadas en la Tabla 2.7.
 
 **Tabla 2.5.** Matriz de restricciones legales, normativas y regulatorias
@@ -130,6 +136,8 @@ Este anexo recopila de forma sistemática las restricciones legales vigentes en 
 | **EXC-05** | Honorarios y costos en Oferta Técnica | En cumplimiento del Artículo 50.2 de las Bases Administrativas, la propuesta técnica no contiene montos ni tarifas de audIT SpA. |
 
 ## 2.4 Anexo 2.D: Fichas detalladas de caracterización de los trece (13) actores del ecosistema
+
+\addcontentsline{toc}{section}{Anexo 2.D: Fichas detalladas de caracterización de los trece (13) actores del ecosistema}
 
 A continuación se presentan las fichas completas de caracterización de los trece grupos de interés, integrando los tres actores de gobierno, fiscalización y aseguramiento (Fondo de Inversión, Dirección del Trabajo y Aseguradora de Carga y Flota) y profundizando en las dependencias y riesgos de cada uno.
 
@@ -303,6 +311,8 @@ La ficha distingue intereses, necesidades de información y capacidad efectiva d
 - **Mecanismo de Interacción y Mitigación de Fricción:** Seguimiento de carga, evidencia de entrega y emisiones verificables para la renovación de 2029.
 
 ## 2.5 Anexo 2.E: Condicionantes de las veintiséis decisiones de diseño del Caso §16.1
+
+\addcontentsline{toc}{section}{Anexo 2.E: Condicionantes de las 26 decisiones de diseño (Caso §16.1)}
 
 El diagnóstico identifica las 26 decisiones del Caso §16.1 y sus restricciones. La Tabla 2.8 conserva la pregunta de origen, la necesidad que debe satisfacerse, el riesgo y los datos necesarios para diseñar. No declara implementaciones adoptadas ni hitos aprobados. La respuesta técnica se encuentra en el registro DP-01 a DP-26 del Formulario T-12 y en S3; este anexo conserva los condicionantes del diagnóstico y no los confunde con SUP-01 a SUP-06 ni SA-01 a SA-08. Se preservan especialmente jornada previa, adhesión y llegada física de la flota a terminales.
 

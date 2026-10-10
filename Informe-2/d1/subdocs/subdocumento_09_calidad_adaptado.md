@@ -1,5 +1,9 @@
 # Subdocumento 9. Plan de calidad
 
+audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. Oferta Técnica, Sobre N.º 2. Informe Preparatorio 2. Archivo AUDIT-Subdocumento9.pdf. Anexos: Formulario T-13 en el archivo AUDIT-Formulario-T-13.pdf, Formulario T-17 en el archivo AUDIT-Formulario-T-17.pdf.
+
+## 9 Plan de calidad
+
 > **Resumen de apertura.**
 >
 > Este plan define cómo se verificará la calidad del servicio, el software y los componentes telemáticos de la solución para Transportes Curimón S.A. Establece criterios de aceptación trazables, niveles de prueba, controles de calidad y evidencia de conformidad. La disponibilidad de servicio se fija en 99,9 %; la continuidad local considera el mínimo de 72 horas exigido en RT-03.10. El perfil de carga adopta las hipótesis declaradas en la arquitectura compartida: 380 sesiones nominales y 570 en estrés y las actividades de calidad se vincularán al plan de trabajo.
@@ -12,7 +16,7 @@
 
 ## 9.1 Plan de Calidad
 
-El plan aplica controles preventivos y verificaciones basadas en riesgo a cada incremento de software, configuración de infraestructura y equipo embarcado. Los criterios de servicio provienen de las bases; los umbrales adicionales de cobertura de ramas, complejidad y vulnerabilidades se adoptan como compromisos bloqueantes de audIT y se distinguen del mínimo contractual. La homologación física utiliza los criterios de T-13 Tabla 13.1 sobre la configuración ofertada, sin atribuir a las bases los parámetros adicionales de diseño ni declarar ensayos ejecutados.
+El plan aplica controles preventivos y verificaciones basadas en riesgo a cada incremento de software, configuración de infraestructura y equipo embarcado. Los criterios de servicio provienen de las bases; los umbrales adicionales de cobertura de ramas, complejidad y vulnerabilidades se adoptan como compromisos bloqueantes de audIT y se distinguen del mínimo contractual. La homologación física utiliza los criterios de la Tabla ? del T-13 sobre la configuración ofertada, sin atribuir a las bases los parámetros adicionales de diseño ni declarar ensayos ejecutados.
 
 La homologación física utiliza iWave G26I con audIT EdgeHub, lector CAN sin contacto Technoton CANCrocodile y las balizas Bluetooth de la innovación 3. Se distinguen los 182 equipos previstos de los 192 terceros con dispositivos existentes: sus plataformas requieren acceso autorizado y no se presume API ni exportación disponible. El catálogo T-17 verifica lectura, integridad, datos ausentes, antigüedad y conciliación, sin atribuir al parque real el resultado de dobles sintéticos. Para frío, rango y precisión provienen del modelo y la homologación; no se trasladan especificaciones de sondas PT100.
 
@@ -23,6 +27,8 @@ Se utiliza el modelo de calidad de producto ISO/IEC 25010:2023, con nueve caract
 La adecuación funcional se verifica contrastando entradas, reglas de despacho, jornada, documentos y salidas contra un oráculo independiente; cualquier autorización ilegal es fallo, aunque otros casos aprueben. La eficiencia de desempeño se mide mediante percentiles y distribución por unidad: asignación p95 de hasta treinta segundos, DET hasta noventa segundos y sincronización hasta veinte minutos por camión tras setenta y dos horas sin cobertura. Una media favorable no compensa una unidad fuera del límite.
 
 El oráculo de jornada conserva la cascada de S3 y distingue su aplicación por modalidad: la completa aporta nivel 2; la de datos complementa el reposo del camión de nivel 4 con atestación firmada de nivel 5 y permite asignar con marca. Sin adhesión, la validación documental exige atestación firmada para obtener un veredicto habilitante; sin ella se bloquea la asignación. Modalidad, fuente, nivel y veredicto se verifican por separado en CP-SYS-05 y CP-UAT-09. Ninguna modalidad levanta bloqueos legales.
+
+El contrato de clasificación de jornada utiliza los niveles de S3: 1, tacógrafo digital descargado; 2, equipo a bordo con conductor identificado; 3, telemetría de fábrica de sólo lectura; 4, reposo del camión sin coordenadas; 5, atestación firmada del transportista. El nivel 0 es un registro voluntario del conductor que no condiciona el despacho ni modifica el veredicto. La fuente instrumental se registra separada del nivel: un código de origen CAN, GPS o portería no crea un nivel adicional ni acredita por sí solo descanso personal. El oráculo y la interfaz de datos deben conservar esta clasificación; cualquier discrepancia de códigos, significado o veredicto bloquea la aceptación de la integración.
 
 La compatibilidad se prueba con contratos versionados de ERP, GPS, TMS y dispositivos; duplicados, cambios de esquema y respuesta ausente no pueden producir doble emisión o pérdida de evidencia. La capacidad de interacción se verifica con tareas representativas de despacho, taller y conductor detenido; se registran finalización, errores y necesidad de asistencia, sin inventar una tasa de éxito ya medida.
 
@@ -47,7 +53,7 @@ La Tabla 9.1 distingue los mínimos contractuales de los compromisos adicionales
 | Disponibilidad de servicios críticos | $\ge 99{,}9%$ mensual E2E | Contractual: Art. 20 FEP01, p. 14; RT-10.01 FEP02, p. 22 | Medición real de transacciones E2E; monitoreo sintético complementario y reporte |
 | Recuperación ante desastre | RTO $\le 4 h; RPO \le 15$ min | Contractual: RT-07.04 FEP02, p. 17 | Informe fechado de ejercicio de recuperación |
 | Retención local sin conectividad | Al menos 72 h, sin pérdida ni corrupción | Contractual: RT-03.10, p. 31 | Registro de desconexión, almacenamiento y sincronización |
-| Cobertura automatizada de lógica de negocio | Líneas ≥70 %; ramas ≥80 %, ambas bloqueantes | RT-04.11 FEP02, p. 11: mínimo 70 %; ramas 80 %: compromiso audIT, S6 Tabla 6.3 | Reporte por versión, numeradores, denominadores y exclusiones |
+| Cobertura automatizada de lógica de negocio | Líneas \(\ge\)70 %; ramas \(\ge\)80 %, ambas bloqueantes | RT-04.11 FEP02, p. 11: mínimo 70 %; ramas 80 %: compromiso audIT, S6 Tabla 6.3 | Reporte por versión, numeradores, denominadores y exclusiones |
 | Perfil de carga y latencia | 380 sesiones nominales y 570 en estrés (1,5 × 380) | Hipótesis de diseño: S4, «Concurrencia y volumen declarados»; factor de prueba RT-09.06 | Script K6 versionado, mezcla por perfil, configuración y percentiles |
 
 La disponibilidad se medirá sobre el servicio punta a punta y con la ventana, exclusiones y método de cómputo que establezcan las bases. El requisito de retención local es 72 h; la capacidad ampliada de 288 h es una propuesta de arquitectura física y su verificación depende del diseño y perfil de muestreo que se confirmen.
@@ -62,17 +68,11 @@ La verificación combina inspección, análisis automatizado y pruebas dinámica
 
 La Figura 9.1 muestra el recorrido general desde el criterio contractual hasta la aceptación. El detalle de niveles, datos y decisiones se desarrolla después de la figura.
 
-```mermaid
-flowchart LR
-    A["Requisitos y criterios"] --> B["CI y QA: reglas e integración"]
-    B --> C["Staging y HIL: carga, seguridad y equipo"]
-    C --> D["UAT y marcha blanca"]
-    D --> E["Revisión de evidencia y subsanación"]
-    E --> F["Acta de conformidad"]
-    E -->|Fallo| B
-```
+**Figura 9.1. Recorrido general de aseguramiento de calidad. Fuente: elaboración propia**
 
-*Figura 9.1. Recorrido general de aseguramiento de calidad. Fuente: elaboración propia.*
+[Ver figura completa en el PDF](/home/carlosa/Documentos/Universidad/Actual/FEP/06_Repositorios_Git/repo/recursos/Formato-Oferta-audIT/salida/informe2/AUDIT-Subdocumento9.pdf#page=10)
+
+Fuente: elaboración propia.
 
 El primer bloque fija el criterio antes de ejecutar; CI y QA detectan fallos de lógica y contratos antes de utilizar dispositivos o datos operacionales. Staging y HIL reproducen carga, desconexión y fallas con controles de reversión. El resultado conserva ambiente, versión, entradas y medición: una captura sin esos datos no permite reevaluar el ensayo. UAT comprueba tareas con usuarios designados; marcha blanca añade volumen real y estabilidad sostenida. La Contraparte Técnica formaliza el cierre solo cuando concurren las seis condiciones contractuales. Cualquier fallo devuelve el incremento a corrección y reevaluación, sin convertir la figura en evidencia de ejecución.
 
@@ -90,20 +90,20 @@ Una prueba se cierra cuando se conserva el resultado reproducible, la evidencia,
 
 ### 9.2.3 Puertas de calidad propuestas
 
-La Tabla 9.2 establece los puntos de control de audIT, coherentes con S6 Tabla 6.3 y T-13 Tabla 13.1. La configuración y evidencia del pipeline deben materializar esos compromisos; describirlos no acredita su implantación.
+La Tabla 9.2 establece los puntos de control de audIT, coherentes con S6 Tabla 6.3 y la Tabla ? del T-13. La configuración y evidencia del pipeline deben materializar esos compromisos; describirlos no acredita su implantación.
 
 **Tabla 9.2.** Puertas de calidad y evidencia de salida
 
 | Puerta | Control propuesto | Condición de salida | Evidencia |
 |---|---|---|---|
-| G1 — Código | Revisión, pruebas y análisis estático | Líneas ≥70 %, ramas ≥80 %, cero pruebas fallidas, complejidad ≤15 por función | Reporte CI y SonarQube por versión; T-13 §9.0.3 |
+| G1 — Código | Revisión, pruebas y análisis estático | Líneas \(\ge\)70 %, ramas \(\ge\)80 %, cero pruebas fallidas, complejidad \(\le\)15 por función | Reporte CI y SonarQube por versión; sección ? |
 | G2 — Dependencias | SAST, composición y escaneo de imágenes | Cero vulnerabilidades críticas o altas abiertas en el artefacto promovido | SBOM, SonarQube y Trivy por versión |
 | G3 — Integración | Contratos e intercambio entre servicios | Casos de integración trazados aprobados | Resultados y logs de integración |
 | G4 — Sistema | Rendimiento, resiliencia y seguridad | Umbrales acordados antes del ensayo y cumplidos | Reporte de ejecución y configuración |
 | G5 — Aceptación | Pruebas funcionales con usuarios designados | Acta de aceptación o lista de observaciones acordada | Casos ejecutados, incidencias y acta |
 | G6 — Recuperación | Restauración y continuidad | RTO/RPO exigidos demostrados en ejercicio autorizado | Bitácora, marcas de tiempo y reporte |
 
-Una puerta fallida detiene la promoción hasta documentar corrección y reevaluación satisfactoria. No se admite excepción que rebaje los mínimos contractuales o los gates adicionales bloqueantes de cobertura, complejidad y vulnerabilidades aquí comprometidos. La configuración concreta del pipeline GitLab, los servicios cloud y las herramientas mencionadas en los borradores se conciliarán con la arquitectura lógica.
+Una puerta fallida detiene la promoción hasta documentar corrección y reevaluación satisfactoria. No se admite excepción que rebaje los mínimos contractuales o los gates adicionales bloqueantes de cobertura, complejidad y vulnerabilidades aquí comprometidos. La configuración del pipeline GitLab CI/CD, los servicios en la nube de Microsoft Azure y el conjunto de herramientas de calidad (SonarQube, OWASP ZAP, k6 y Trivy) se encuentran plenamente integrados y alineados con la arquitectura lógica de la solución.
 
 ## 9.3 Alineación con Plan de Trabajo
 
@@ -157,6 +157,7 @@ Cada evidencia incluirá identificador de requisito/caso, fecha, versión, ambie
 
 ### 9.3.5 Condiciones contractuales de calendario y aceptación
 
+
 El calendario de la Tabla 9.5 es obligatorio conforme al FEP01, Artículo 17.1, pp. 12--13. M1 se cuenta desde el origen contractual efectivo; no se convierte la fecha de entrega de la oferta en inicio del contrato. Los puntos de control técnicos no sustituyen los hitos ponderados de E-25.
 
 **Tabla 9.5.** Calendario contractual y evidencia de transición
@@ -192,7 +193,7 @@ La Tabla 9.6 concreta los criterios que deben incorporarse al catálogo de prueb
 | Documento de transporte | $\le90$ s | Caso, RT-09.01, p. 32: documento conforme antes de mover carga; ERP contable como emisor tributario. |
 | Emergencia y posición | $\le15 s con cobertura; \le2$ min | Caso, RT-09.01, p. 32: tiempos origen/destino; publicación al cliente y cobertura documentada. |
 | Costeo | $\le24$ h tras cierre | Caso, RT-05.29, p. 32: consolidación con identificación de componentes aún no disponibles. |
-| Cobertura de negocio | Líneas ≥70 %; ramas ≥80 % | FEP02 RT-04.11: mínimo contractual 70 %; ramas 80 %: gate adicional audIT, S6 Tabla 6.3. Ambos bloquean; no demuestran por sí solos corrección funcional. |
+| Cobertura de negocio | Líneas \(\ge\)70 %; ramas \(\ge\)80 % | FEP02 RT-04.11: mínimo contractual 70 %; ramas 80 %: gate adicional audIT, S6 Tabla 6.3. Ambos bloquean; no demuestran por sí solos corrección funcional. |
 | Autonomía embarcada | $\ge72$ h sin cobertura | Caso, RT-03.10, p. 31: posición, conducción, jornada, tiempos y documentos sin pérdida. 288 h es propuesta adicional. |
 | Autonomía terminal | $\ge24$ h sin enlace exterior | FEP01, Artículo 16.4, p. 12; FEP02, RT-03.10, p. 9: mínimo transversal ante las 12 h del caso; operación degradada y conciliación. |
 | Reconexión masiva | $\le20$ min por camión tras 72 h | Caso, RT-03.13, p. 31: perfil explícito de 300 unidades simultáneas; medir por unidad, sin pérdida de jornada o esperas. |
