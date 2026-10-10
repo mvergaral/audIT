@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="148.9mm" height="190.5mm" viewBox="0 0 422 540">
+<defs><marker id="fin-n" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="5.5" markerHeight="5.5" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#2B2B2B"/></marker><marker id="ini-n" viewBox="0 0 10 10" refX="0.5" refY="5" markerWidth="5.5" markerHeight="5.5" markerUnits="userSpaceOnUse" orient="auto"><path d="M10,0.8 L0,5 L10,9.2 z" fill="#2B2B2B"/></marker><marker id="fin-r" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="5.5" markerHeight="5.5" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#C0392B"/></marker><marker id="ini-r" viewBox="0 0 10 10" refX="0.5" refY="5" markerWidth="5.5" markerHeight="5.5" markerUnits="userSpaceOnUse" orient="auto"><path d="M10,0.8 L0,5 L10,9.2 z" fill="#C0392B"/></marker></defs>
+<rect x="0" y="0" width="422" height="540" fill="#FFFFFF"/>
+<g id="grupos">
+<rect x="8.00" y="8.00" width="406.00" height="52.00" rx="5" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="16.00" y="68.00" width="122.00" height="80.00" rx="4" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="146.00" y="68.00" width="130.00" height="80.00" rx="4" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="284.00" y="68.00" width="130.00" height="80.00" rx="4" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="16.00" y="160.00" width="390.00" height="136.00" rx="5" fill="#F8F9FA" stroke="#404040" stroke-width="0.75"/>
+<rect x="26.00" y="184.00" width="170.00" height="48.00" rx="3" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="226.00" y="184.00" width="170.00" height="48.00" rx="3" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="16.00" y="308.00" width="390.00" height="92.00" rx="4" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="8.00" y="410.00" width="406.00" height="120.00" rx="5" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+</g>
+<g id="flechas">
+<path d="M138.00,108.00 L146.00,108.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" marker-end="url(#fin-n)"/>
+<path d="M276.00,108.00 L284.00,108.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" marker-end="url(#fin-n)"/>
+<path d="M196.00,208.00 L226.00,208.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" marker-end="url(#fin-n)"/>
+</g>
+<g id="iconos">
+<rect x="195.86" y="196.80" width="30.28" height="9.90" fill="#FFFFFF"/>
+<rect x="40.49" y="249.00" width="331.01" height="14.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="206.00" y="259.00" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="middle" fill="#000000">Evaluación V2: Aplica reglas versionadas referenciando E1, E2 y E3 sin borrar</text>
+<circle cx="26.00" cy="434.00" r="6.8" fill="#FFFFFF" stroke="#000000" stroke-width="0.9"/>
+<text x="26.00" y="437.20" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="middle" fill="#000000">1</text>
+<circle cx="26.00" cy="458.00" r="6.8" fill="#FFFFFF" stroke="#000000" stroke-width="0.9"/>
+<text x="26.00" y="461.20" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="middle" fill="#000000">2</text>
+<circle cx="26.00" cy="482.00" r="6.8" fill="#FFFFFF" stroke="#000000" stroke-width="0.9"/>
+<text x="26.00" y="485.20" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="middle" fill="#000000">3</text>
+<circle cx="26.00" cy="506.00" r="6.8" fill="#FFFFFF" stroke="#000000" stroke-width="0.9"/>
+<text x="26.00" y="509.20" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="middle" fill="#000000">4</text>
+</g>
+<g id="textos">
+<text x="16.00" y="23.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">Cadena de custodia forense append-only y rectificación</text>
+<text x="16.00" y="32.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">Fuente y nivel 0-5 se conservan por separado; no prueban veracidad por sí mismos.</text>
+<text x="16.00" y="44.00" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">Inmutabilidad matemática: encadenamiento SHA-256 y bloqueo WORM (RT-16.07).</text>
+<text x="24.00" y="83.00" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">1. Captura identificada</text>
+<text x="154.00" y="83.00" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">2. Validación de esquema</text>
+<text x="292.00" y="83.00" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">3. Custodia inmutable</text>
+<text x="22.00" y="94.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">• Conductor + fuente</text>
+<text x="22.00" y="106.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">• Marca de tiempo UTC</text>
+<text x="22.00" y="118.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">• Secuencia monótona</text>
+<text x="22.00" y="130.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">• Nivel de certeza 0-5</text>
+<text x="152.00" y="94.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">• Esquema Protobuf/JSON</text>
+<text x="152.00" y="106.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">• Firma del dispositivo</text>
+<text x="152.00" y="118.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">• Canonicalización canónica</text>
+<text x="152.00" y="130.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">• Verificación de identidad</text>
+<text x="290.00" y="94.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">• Hash previo + actual</text>
+<text x="290.00" y="106.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">• Hash Chain SHA-256</text>
+<text x="290.00" y="118.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">• Acuse persistente</text>
+<text x="290.00" y="130.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">• Bloqueo append-only</text>
+<text x="24.00" y="175.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">Cadena de rectificación auditable (Modelo de tuplas inmutables)</text>
+<text x="32.00" y="198.00" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">E1 / E2: Registros originales</text>
+<text x="32.00" y="210.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">• Jornada de conducción y descanso</text>
+<text x="32.00" y="222.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">• Evaluación V1 inicial conforme</text>
+<text x="232.00" y="198.00" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">E3: Rectificación vinculada</text>
+<text x="232.00" y="210.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">• FK evidencia_rect_id -&gt; E1</text>
+<text x="232.00" y="222.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">• Motivo auditable preservado</text>
+<text x="211.00" y="204.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Enlace</text>
+<text x="24.00" y="323.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">Mecanismos de inmutabilidad física y lógica</text>
+<text x="26.00" y="334.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">• Base de datos: Revocación total de UPDATE, DELETE y TRUNCATE a roles de app.</text>
+<text x="26.00" y="348.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">• Azure Blob Storage WORM: Bloqueo de retención legal (Legal Hold) inmodificable.</text>
+<text x="26.00" y="362.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">• Prueba negativa forense: La alteración de 1 byte rompe la cadena criptográfica.</text>
+<text x="26.00" y="376.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">• Retención obligatoria: 5 años para jornada laboral (DT) y 6 años para DET (SII).</text>
+<text x="16.00" y="425.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">Garantías de validez probatoria ante fiscalización laboral</text>
+<text x="38.00" y="436.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">Cualquier rectificación de jornada genera un nuevo registro inmutable; no sobreescribe.</text>
+<text x="38.00" y="460.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">La cadena de hashes SHA-256 garantiza trazabilidad inalterable ante la Dirección del Trabajo.</text>
+<text x="38.00" y="484.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">La falta de evidencia suficiente mantiene el bloqueo del despacho del viaje.</text>
+<text x="38.00" y="508.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">Exportación forense independiente con certificados y firmas públicas de verificación.</text>
+</g>
+</svg>

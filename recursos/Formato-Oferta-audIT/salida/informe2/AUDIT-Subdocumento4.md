@@ -752,12 +752,12 @@ El reparto de la flota sale del Caso, numeral 2.2, p. 6: 340 de los 374 camiones
 equipo, y 340 menos 192 da 148 propios, todos equipados. Los 148 propios y los 34 de terceros sin
 equipo llevan el equipo de audIT, 182 en total. Los 192 de terceros que ya tienen equipo lo conservan,
 porque la restricción 3 impide intervenirlo sin acuerdo de su dueño (Caso, capítulo 10, p. 23), y sus
-datos llegan por las plataformas de sus proveedores. La Figura 4.12 muestra los tres planos y
+datos llegan por las plataformas de sus proveedores. La Figura 4.13 muestra los tres planos y
 los enlaces que los unen.
 
-![Figura 4.12. Vista general de la arquitectura física: nube primaria y secundaria, San Bernardo, terminales regionales y flota, con los enlaces y su capacidad](../../figuras/04-arquitectura/fisica-general.png)
+![Figura 4.13. Vista general de la arquitectura física: nube primaria y secundaria, San Bernardo, terminales regionales y flota, con los enlaces y su capacidad](../../figuras/04-arquitectura/fisica-general.png)
 
-*Figura 4.12. Vista general de la arquitectura física: nube primaria y secundaria, San Bernardo, terminales regionales y flota, con los enlaces y su capacidad*
+*Figura 4.13. Vista general de la arquitectura física: nube primaria y secundaria, San Bernardo, terminales regionales y flota, con los enlaces y su capacidad*
 
 Fuente: Elaboración propia.
 
@@ -848,11 +848,11 @@ CAN con J1939, RS232 y RS485, red celular LTE Cat 4 o Cat M1, GNSS, Wi-Fi, Bluet
 seguro Microchip TA100 para arranque seguro y almacenamiento de claves. Funciona de 9 a 32 V, de
 −40 a +70 °C y con protección IP67 (iWave Global, 2026), lo que responde a la vibración, el polvo
 y la temperatura de cabina que piden FEP02, RT-08.11, p. 19 y FEP02, RT-08.12, p. 19. La
-Figura 4.13 muestra el equipo con sus periféricos.
+Figura 4.12 muestra el equipo con sus periféricos.
 
-![Figura 4.13. Equipo a bordo: iWave G26I, periféricos, interfaces y particiones de la memoria](../../figuras/04-arquitectura/equipo-a-bordo.png)
+![Figura 4.12. Equipo a bordo: iWave G26I, periféricos, interfaces y particiones de la memoria](../../figuras/04-arquitectura/equipo-a-bordo.png)
 
-*Figura 4.13. Equipo a bordo: iWave G26I, periféricos, interfaces y particiones de la memoria*
+*Figura 4.12. Equipo a bordo: iWave G26I, periféricos, interfaces y particiones de la memoria*
 
 Fuente: Elaboración propia.
 
