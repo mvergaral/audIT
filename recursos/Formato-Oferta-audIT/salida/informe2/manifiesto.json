@@ -4,34 +4,50 @@
   "modo_folio": "subdocumento",
   "archivos": [
     {
-      "clave": "04",
-      "nombre": "AUDIT-Subdocumento4.pdf",
+      "clave": "06",
+      "nombre": "AUDIT-Subdocumento6.pdf",
       "folio_inicial": 1,
-      "paginas": 78,
-      "aux": "salida/aux/informe2/04/AUDIT-Subdocumento4.aux",
-      "log": "salida/aux/informe2/04/AUDIT-Subdocumento4.log",
+      "paginas": 17,
+      "aux": "salida/aux/informe2/06/AUDIT-Subdocumento6.aux",
+      "log": "salida/aux/informe2/06/AUDIT-Subdocumento6.log",
       "fuentes": [
         [
           "subdocumentos"
         ],
         [
-          "subdocumentos/04-arquitectura"
+          "subdocumentos/06-metodologias"
         ]
       ]
     },
     {
-      "clave": "04T-11",
-      "nombre": "AUDIT-Formulario-T-11.pdf",
+      "clave": "06T-9",
+      "nombre": "AUDIT-Formulario-T-9.pdf",
       "folio_inicial": 1,
-      "paginas": 15,
-      "aux": "salida/aux/informe2/04T-11/AUDIT-Formulario-T-11.aux",
-      "log": "salida/aux/informe2/04T-11/AUDIT-Formulario-T-11.log",
+      "paginas": 4,
+      "aux": "salida/aux/informe2/06T-9/AUDIT-Formulario-T-9.aux",
+      "log": "salida/aux/informe2/06T-9/AUDIT-Formulario-T-9.log",
       "fuentes": [
         [
           "subdocumentos"
         ],
         [
-          "subdocumentos/04-arquitectura"
+          "subdocumentos/06-metodologias"
+        ]
+      ]
+    },
+    {
+      "clave": "06T-10",
+      "nombre": "AUDIT-Formulario-T-10.pdf",
+      "folio_inicial": 1,
+      "paginas": 4,
+      "aux": "salida/aux/informe2/06T-10/AUDIT-Formulario-T-10.aux",
+      "log": "salida/aux/informe2/06T-10/AUDIT-Formulario-T-10.log",
+      "fuentes": [
+        [
+          "subdocumentos"
+        ],
+        [
+          "subdocumentos/06-metodologias"
         ]
       ]
     }
