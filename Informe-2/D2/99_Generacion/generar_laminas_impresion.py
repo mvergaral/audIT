@@ -55,7 +55,7 @@ def page(filename, title, subtitle):
     text(c, subtitle, 18, H-39, W-36)
     c.setStrokeColor(BLUE)
     c.line(18, H-66, W-18, H-66)
-    text(c, 'Fuente: T-14/T-15/T-18/T-19 y plan detallado D2. Red de capacitación y umbral de adhesión acordados; Monte Carlo pendiente de verificación.', 18, 27, W-36)
+    text(c, 'Fuente: elaboración propia a partir de los Formularios T-14, T-15, T-18 y T-19.', 18, 27, W-36)
     return c
 
 edt_files = []
