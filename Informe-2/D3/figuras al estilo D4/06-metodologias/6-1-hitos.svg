@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="148.9mm" height="183.4mm" viewBox="0 0 422 520">
+<defs><marker id="fin-n" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="5.5" markerHeight="5.5" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#2B2B2B"/></marker><marker id="ini-n" viewBox="0 0 10 10" refX="0.5" refY="5" markerWidth="5.5" markerHeight="5.5" markerUnits="userSpaceOnUse" orient="auto"><path d="M10,0.8 L0,5 L10,9.2 z" fill="#2B2B2B"/></marker><marker id="fin-r" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="5.5" markerHeight="5.5" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#C0392B"/></marker><marker id="ini-r" viewBox="0 0 10 10" refX="0.5" refY="5" markerWidth="5.5" markerHeight="5.5" markerUnits="userSpaceOnUse" orient="auto"><path d="M10,0.8 L0,5 L10,9.2 z" fill="#C0392B"/></marker></defs>
+<rect x="0" y="0" width="422" height="520" fill="#FFFFFF"/>
+<g id="grupos">
+<rect x="8.00" y="8.00" width="406.00" height="52.00" rx="5" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="16.00" y="68.00" width="390.00" height="36.00" rx="4" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="16.00" y="114.00" width="390.00" height="80.00" rx="4" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="24.00" y="136.00" width="120.00" height="46.00" rx="3" fill="#F8F9FA" stroke="#404040" stroke-width="0.75"/>
+<rect x="150.00" y="136.00" width="76.00" height="46.00" rx="3" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="232.00" y="136.00" width="164.00" height="46.00" rx="3" fill="#F8F9FA" stroke="#404040" stroke-width="0.75"/>
+<rect x="16.00" y="204.00" width="390.00" height="80.00" rx="4" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="150.00" y="226.00" width="92.00" height="46.00" rx="3" fill="#F8F9FA" stroke="#404040" stroke-width="0.75"/>
+<rect x="248.00" y="226.00" width="68.00" height="46.00" rx="3" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="322.00" y="226.00" width="74.00" height="46.00" rx="3" fill="#F8F9FA" stroke="#404040" stroke-width="0.75"/>
+<rect x="16.00" y="294.00" width="390.00" height="96.00" rx="5" fill="#F8F9FA" stroke="#404040" stroke-width="0.75"/>
+<rect x="8.00" y="400.00" width="406.00" height="114.00" rx="5" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+</g>
+<g id="flechas">
+</g>
+<g id="iconos">
+<circle cx="26.00" cy="424.00" r="6.8" fill="#FFFFFF" stroke="#000000" stroke-width="0.9"/>
+<text x="26.00" y="427.20" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="middle" fill="#000000">1</text>
+<circle cx="26.00" cy="444.00" r="6.8" fill="#FFFFFF" stroke="#000000" stroke-width="0.9"/>
+<text x="26.00" y="447.20" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="middle" fill="#000000">2</text>
+<circle cx="26.00" cy="464.00" r="6.8" fill="#FFFFFF" stroke="#000000" stroke-width="0.9"/>
+<text x="26.00" y="467.20" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="middle" fill="#000000">3</text>
+<circle cx="26.00" cy="484.00" r="6.8" fill="#FFFFFF" stroke="#000000" stroke-width="0.9"/>
+<text x="26.00" y="487.20" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="middle" fill="#000000">4</text>
+</g>
+<g id="textos">
+<text x="16.00" y="23.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">Gobernanza temporal del proyecto y articulación de hitos</text>
+<text x="16.00" y="32.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">Marco híbrido: Control contractual PMBOK + Scrum en iteraciones de 2 semanas.</text>
+<text x="16.00" y="44.00" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">Duración total: 56 meses (FEP01 Art. 17 y FEP03 Art. 17).</text>
+<text x="24.00" y="83.00" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">Escala temporal del contrato (Meses 1 al 56)</text>
+<text x="40.00" y="92.00" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="middle" fill="#000000">M1-12</text>
+<text x="110.00" y="92.00" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="middle" fill="#000000">M13-15</text>
+<text x="185.00" y="92.00" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="middle" fill="#000000">M16-18</text>
+<text x="255.00" y="92.00" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="middle" fill="#000000">M19-20</text>
+<text x="345.00" y="92.00" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="middle" fill="#000000">M21-56</text>
+<text x="24.00" y="129.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">Etapa 1: Implementación del Núcleo y Flota Propia</text>
+<text x="84.00" y="154.00" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="middle" fill="#000000">Desarrollo Núcleo</text>
+<text x="84.00" y="168.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Meses 1 al 12</text>
+<text x="188.00" y="154.00" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="middle" fill="#000000">Marcha blanca</text>
+<text x="188.00" y="168.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">M13 a M15</text>
+<text x="314.00" y="154.00" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="middle" fill="#000000">Operación en Régimen Etapa 1</text>
+<text x="314.00" y="168.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Desde Mes 16 hasta Mes 56</text>
+<text x="24.00" y="219.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">Etapa 2: Integraciones Extendidas y Transportistas Terceros</text>
+<text x="196.00" y="244.00" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="middle" fill="#000000">Desarrollo E2</text>
+<text x="196.00" y="258.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Meses 13 al 18</text>
+<text x="282.00" y="244.00" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="middle" fill="#000000">Marcha blanca</text>
+<text x="282.00" y="258.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">M19 a M20</text>
+<text x="359.00" y="244.00" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="middle" fill="#000000">Régimen Total</text>
+<text x="359.00" y="258.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">M21 a M56</text>
+<text x="24.00" y="309.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">Articulación de frentes simultáneos de trabajo</text>
+<text x="26.00" y="324.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">• Ventana M13-15: Soporte/adopción de Etapa 1 en marcha blanca convive con el</text>
+<text x="26.00" y="338.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">  desarrollo de Etapa 2 (asignaciones de recursos y perfiles segregados).</text>
+<text x="26.00" y="354.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">• Ventana M19-20: Producción en régimen de Etapa 1 opera en paralelo con la marcha</text>
+<text x="26.00" y="368.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">  blanca de Etapa 2, compartiendo la fuente maestra y el bus de eventos común.</text>
+<text x="26.00" y="382.00" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">• Sprints de software: Iteraciones de dos semanas sincronizadas con comités quincenales.</text>
+<text x="16.00" y="415.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">Criterios de salida y aceptación formal (Quality Gates)</text>
+<text x="38.00" y="426.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">Aceptación formal suscrita por la contraparte técnica de Transportes Curimón S.A.</text>
+<text x="38.00" y="446.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">Migración y conciliación del 100 % de las 6.000 vigencias documentales sin inconsistencias.</text>
+<text x="38.00" y="466.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">Cero defectos críticos (Severidad 1) abiertos en el sistema de gestión de incidentes.</text>
+<text x="38.00" y="486.00" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">Prueba de recuperación ante desastres (DR) ejecutada exitosamente con RPO &lt; 15 min.</text>
+</g>
+</svg>

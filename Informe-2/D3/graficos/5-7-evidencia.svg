@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="257.4mm" height="167.0mm" viewBox="0 0 729.6 473.4">
+<defs><marker id="fin-n" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="5.5" markerHeight="5.5" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#2B2B2B"/></marker><marker id="ini-n" viewBox="0 0 10 10" refX="0.5" refY="5" markerWidth="5.5" markerHeight="5.5" markerUnits="userSpaceOnUse" orient="auto"><path d="M10,0.8 L0,5 L10,9.2 z" fill="#2B2B2B"/></marker><marker id="fin-r" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="5.5" markerHeight="5.5" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#C0392B"/></marker><marker id="ini-r" viewBox="0 0 10 10" refX="0.5" refY="5" markerWidth="5.5" markerHeight="5.5" markerUnits="userSpaceOnUse" orient="auto"><path d="M10,0.8 L0,5 L10,9.2 z" fill="#C0392B"/></marker></defs>
+<rect x="0" y="0" width="729.6" height="473.4" fill="#FFFFFF"/>
+<g id="grupos">
+<rect x="14.00" y="48.00" width="200.00" height="76.00" rx="5" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="264.00" y="48.00" width="200.00" height="76.00" rx="5" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="514.00" y="48.00" width="200.00" height="76.00" rx="5" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="14.00" y="255.00" width="200.00" height="64.00" rx="5" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="264.00" y="255.00" width="200.00" height="76.00" rx="5" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="514.00" y="255.00" width="200.00" height="76.00" rx="5" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="14.00" y="399.00" width="701.60" height="61.00" rx="6" fill="#F7F8FA" stroke="#404040" stroke-width="0.75"/>
+</g>
+<g id="flechas">
+<path d="M14.00,70.00 L214.00,70.00" fill="none" stroke="#2B2B2B" stroke-width="0.6" stroke-linejoin="miter"/>
+<path d="M264.00,70.00 L464.00,70.00" fill="none" stroke="#2B2B2B" stroke-width="0.6" stroke-linejoin="miter"/>
+<path d="M514.00,70.00 L714.00,70.00" fill="none" stroke="#2B2B2B" stroke-width="0.6" stroke-linejoin="miter"/>
+<path d="M214.00,96.00 L264.00,96.00" fill="none" stroke="#2B2B2B" stroke-width="0.8" stroke-linejoin="miter"/>
+<path d="M514.00,96.00 L464.00,96.00" fill="none" stroke="#2B2B2B" stroke-width="0.8" stroke-linejoin="miter"/>
+<path d="M14.00,277.00 L214.00,277.00" fill="none" stroke="#2B2B2B" stroke-width="0.6" stroke-linejoin="miter"/>
+<path d="M264.00,277.00 L464.00,277.00" fill="none" stroke="#2B2B2B" stroke-width="0.6" stroke-linejoin="miter"/>
+<path d="M514.00,277.00 L714.00,277.00" fill="none" stroke="#2B2B2B" stroke-width="0.6" stroke-linejoin="miter"/>
+<path d="M114.00,255.00 L114.00,124.00" fill="none" stroke="#2B2B2B" stroke-width="0.8" stroke-linejoin="miter"/>
+<path d="M614.00,124.00 L614.00,208.00 L364.00,208.00 L364.00,255.00" fill="none" stroke="#2B2B2B" stroke-width="0.8" stroke-linejoin="miter"/>
+</g>
+<g id="iconos">
+<rect x="218.40" y="83.80" width="8.60" height="9.90" fill="#FFFFFF"/>
+<rect x="242.05" y="83.80" width="17.55" height="9.90" fill="#FFFFFF"/>
+<rect x="501.00" y="83.80" width="8.60" height="9.90" fill="#FFFFFF"/>
+<rect x="468.40" y="83.80" width="17.55" height="9.90" fill="#FFFFFF"/>
+<rect x="120.40" y="242.80" width="18.90" height="9.90" fill="#FFFFFF"/>
+<rect x="120.40" y="128.80" width="17.55" height="9.90" fill="#FFFFFF"/>
+<rect x="620.40" y="128.80" width="8.60" height="9.90" fill="#FFFFFF"/>
+<rect x="370.40" y="242.80" width="18.90" height="9.90" fill="#FFFFFF"/>
+</g>
+<g id="textos">
+<text x="14.00" y="18.00" font-size="11" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">Modelo lógico: evidencia y evaluación de asignación</text>
+<text x="22.00" y="63.00" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">EVIDENCIA_JORNADA</text>
+<text x="22.00" y="84.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">PK id_evidencia</text>
+<text x="22.00" y="96.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">fuente / estado / nivel?</text>
+<text x="22.00" y="108.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">conductor? / hora?</text>
+<text x="22.00" y="120.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">hash / original / rectifica?</text>
+<text x="272.00" y="63.00" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">EVALUACION_EVIDENCIA</text>
+<text x="272.00" y="84.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">PK (evaluacion, evidencia)</text>
+<text x="272.00" y="96.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">FK id_evaluacion</text>
+<text x="272.00" y="108.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">FK id_evidencia</text>
+<text x="272.00" y="120.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">uso: jornada / reposo / atestación</text>
+<text x="522.00" y="63.00" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">EVALUACION_ASIGNACION</text>
+<text x="522.00" y="84.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">PK id_evaluacion</text>
+<text x="522.00" y="96.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">FK id_asignacion</text>
+<text x="522.00" y="108.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">modalidad / veredicto</text>
+<text x="522.00" y="120.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">regla / causa / fecha</text>
+<text x="220.00" y="91.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">1</text>
+<text x="258.00" y="91.00" font-size="9" font-family="IBM Plex Sans" text-anchor="end" fill="#000000">0..*</text>
+<text x="508.00" y="91.00" font-size="9" font-family="IBM Plex Sans" text-anchor="end" fill="#000000">1</text>
+<text x="470.00" y="91.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">0..*</text>
+<text x="22.00" y="270.00" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">DOCUMENTO_RESPALDO</text>
+<text x="22.00" y="291.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">PK id_documento</text>
+<text x="22.00" y="303.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">hash / origen / recibido_utc</text>
+<text x="22.00" y="315.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">URI inmutable / retención</text>
+<text x="272.00" y="270.00" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">EXCEPCION_RN04</text>
+<text x="272.00" y="291.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">PK id_excepcion</text>
+<text x="272.00" y="303.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">FK id_evaluacion</text>
+<text x="272.00" y="315.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">dos aprobadores / motivo</text>
+<text x="272.00" y="327.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">un viaje / revisión mensual</text>
+<text x="522.00" y="270.00" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">PERMISO_COMPARTIR</text>
+<text x="522.00" y="291.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">PK id_permiso</text>
+<text x="522.00" y="303.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">transportista / recurso / destino</text>
+<text x="522.00" y="315.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">finalidad / versión / vigencia</text>
+<text x="522.00" y="327.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">revocación / respaldo</text>
+<text x="122.00" y="250.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">0..1</text>
+<text x="122.00" y="136.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">0..*</text>
+<text x="622.00" y="136.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">1</text>
+<text x="372.00" y="250.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">0..1</text>
+<text x="24.00" y="417.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">Una evaluación usa cero o varias evidencias. Reposo y atestación pueden coexistir sin perder su origen.</text>
+<text x="24.00" y="430.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">Sin fuente no se inventa una evidencia. Nivel 0 es voluntario; NULL expresa ausencia o invalidez.</text>
+<text x="24.00" y="443.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">El permiso de compartir datos y la modalidad de adhesión no sustituyen una base legal de tratamiento.</text>
+</g>
+</svg>

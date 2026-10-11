@@ -4,39 +4,22 @@ audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. O
 
 ## Resolución de observaciones del Informe 1
 
-El FEP01, Artículo 46, p. 28 pide resolver en cada informe las observaciones de la instancia anterior, con trazabilidad entre observación, respuesta y sección modificada. La tabla reúne las observaciones del Informe 1 que corresponden a este documento y la sección donde se resuelve cada una.
+La Tabla de resolución identifica los cambios de diseño de esta sección para el Informe 2. La comprobación documental no sustituye los ensayos de implementación ni la aceptación del CLIENTE (FEP01 · Artículo 46° · p.28).
 
-**Resolución de las observaciones del Informe 1, conforme a FEP01, Artículo 46, p. 28**
-
-| N.º | Observación | Respuesta | Sección modificada |
+| N.º | Observación atendida | Respuesta y evidencia de diseño | Sección |
 |---|---|---|---|
-| 03 | El Anexo A del Subdocumento 4 no es el Formulario T-11, es una tabla de emplazamiento sin cantidades ni configuración. | Se acepta. Existe una fuente formal del T-11 con fichas de componentes, cantidades y configuración. La respuesta de almacenamiento y reconexión se reconcilia con S4; disponer del archivo no acredita por sí solo conformidad de todas las fichas. | S4, formularios/T-11.tex; dimensionamiento de S4. |
-| 53 | Diagrama de las 8 capas no muestra interfaces ni explica qué contiene cada capa ni cómo se conectan. | Se acepta. Se acoge la observación. La respuesta de trabajo propone la siguiente medida, cuya implementación no se acredita en este lote: «Se rediseña el diagrama de arquitectura lógica en capas con interfaces explícitas (REST, gRPC, Kafka, CDC Debezium) y descripción técnica componente a componente.». Su cierre requiere examen de la fuente y de la evidencia correspondiente; no se declara realizada esa revisión para capítulos ajenos al lote S1/S2/S9 y al cálculo de S4. | Sección 4.1.2 (Figura 4.1). |
-| 54 | Componentes representados solo como íconos genéricos (terminal de torre y pantalla de terreno sin especificar). | Se acepta. Se acoge la observación. La respuesta de trabajo propone la siguiente medida, cuya implementación no se acredita en este lote: «Se individualiza cada componente: sistema operativo, software ejecutado, protocolos de enlace, roles de usuario y hardware de soporte.». Su cierre requiere examen de la fuente y de la evidencia correspondiente; no se declara realizada esa revisión para capítulos ajenos al lote S1/S2/S9 y al cálculo de S4. | Sección 4.1.2. |
-| 55 | No hay matriz de requerimiento a componente; ningún RF del Subdocumento 3 se ubica en un componente. | Se acepta. T-12 asigna contexto y paquete EDT a cada uno de los 42 requerimientos, cotejados con S3. T-17 vincula esa matriz con casos y variantes verificables. No se acredita aquí la correspondencia física completa de cada componente de S4, que requiere revisión propia. | T-12, campo componente; S3 3.2.8 y 3.4.7; T-17, matriz de trazabilidad. S4 pendiente de examen integral. |
-| 56 | No se mencionan los principios SOLID, la referencia se reduce a ISO 42010 y los ambientes SDLC están ausentes. | Se acepta. Se acoge la observación. La respuesta de trabajo propone la siguiente medida, cuya implementación no se acredita en este lote: «Se fundamenta el diseño bajo principios SOLID, se estructura la vista lógica bajo ISO/IEC/IEEE 42010 y se documentan formalmente los ambientes del SDLC (Dev, QA, Staging, Producción, DR).». Su cierre requiere examen de la fuente y de la evidencia correspondiente; no se declara realizada esa revisión para capítulos ajenos al lote S1/S2/S9 y al cálculo de S4. | Sección 4.1.1 y Sección 4.1.6. |
-| 57 | Diagrama de secuencia de asignación bloqueante huérfano y faltan secuencias de reconexión, emisión y liquidación. | Se acepta. Se acoge la observación. La respuesta de trabajo propone la siguiente medida, cuya implementación no se acredita en este lote: «Se vincula el diagrama al texto analítico y se agregan las secuencias de reconexión masiva tras 288 h de sombra, emisión sin cobertura y liquidación a 148 transportistas.». Su cierre requiere examen de la fuente y de la evidencia correspondiente; no se declara realizada esa revisión para capítulos ajenos al lote S1/S2/S9 y al cálculo de S4. | Sección 4.1.8. |
-| 58 | Frameworks y tecnologías viven solo en las figuras; el texto no las decide ni las justifica técnicamente. | Se acepta. Se acoge la observación. La respuesta de trabajo propone la siguiente medida, cuya implementación no se acredita en este lote: «Se justifica la adopción de cada tecnología (C++/Go en borde, .NET Core/Node.js en backend, PostgreSQL/TimescaleDB) evaluando rendimiento, soporte y compatibilidad.». Su cierre requiere examen de la fuente y de la evidencia correspondiente; no se declara realizada esa revisión para capítulos ajenos al lote S1/S2/S9 y al cálculo de S4. | Sección 4.1.7. |
-| 59 | El modelo táctico DDD no trae límites de contexto (*Bounded Contexts*) ni eventos de dominio. | Se acepta. Se acoge la observación. La respuesta de trabajo propone la siguiente medida, cuya implementación no se acredita en este lote: «Se formaliza el diseño táctico DDD con especificación rigurosa de Bounded Contexts, agregados, comandos de negocio y eventos de dominio transmitidos por Kafka.». Su cierre requiere examen de la fuente y de la evidencia correspondiente; no se declara realizada esa revisión para capítulos ajenos al lote S1/S2/S9 y al cálculo de S4. | Sección 4.1.5. |
-| 60 | Estrangulamiento del sistema 2013 sin ADR ni comparación de alternativas ni fundamento económico. | Se acepta. Se acoge la observación. La respuesta de trabajo propone la siguiente medida, cuya implementación no se acredita en este lote: «Se formaliza el ADR-01 evaluando alternativas (Big Bang, Retiro total vs Strangler Fig) con justificación técnica de riesgos y preservación de continuidad operacional.». Su cierre requiere examen de la fuente y de la evidencia correspondiente; no se declara realizada esa revisión para capítulos ajenos al lote S1/S2/S9 y al cálculo de S4. | Sección 4.1.5 (ADR-01). |
-| 61 | El descarte de la banda ancha satelital queda registrado pero no aparece como ADR formal. | Se acepta. Se acoge la observación. La respuesta de trabajo propone la siguiente medida, cuya implementación no se acredita en este lote: «Se documenta el ADR-02 justificando el descarte de terminales satelitales de alta velocidad frente al computador de borde con buffer local eMMC de 8 GB y persistencia offline.». Su cierre requiere examen de la fuente y de la evidencia correspondiente; no se declara realizada esa revisión para capítulos ajenos al lote S1/S2/S9 y al cálculo de S4. | Sección 4.1.5 (ADR-02). |
-| 62 | Se afirma que el estilo arquitectónico se justifica con la volumetría sin justificarlo ni comparar estilos. | Se acepta. Se acoge la observación. La respuesta de trabajo propone la siguiente medida, cuya implementación no se acredita en este lote: «Se realiza análisis comparativo de estilos (Monolito, Microservicios, Event-Driven, SOA), fundamentando la adopción del estilo híbrido Event-Driven según la volumetría del Caso 10.». Su cierre requiere examen de la fuente y de la evidencia correspondiente; no se declara realizada esa revisión para capítulos ajenos al lote S1/S2/S9 y al cálculo de S4. | Sección 4.1.3. |
-| 63 | El stack tecnológico no ha sido validado formalmente. | Se acepta. Se acoge la observación. La respuesta de trabajo propone la siguiente medida, cuya implementación no se acredita en este lote: «Se presenta la matriz del stack tecnológico validando versiones estables LTS, fechas de fin de soporte (EOL) del fabricante y pruebas de concepto de laboratorio.». Su cierre requiere examen de la fuente y de la evidencia correspondiente; no se declara realizada esa revisión para capítulos ajenos al lote S1/S2/S9 y al cálculo de S4. | Sección 4.1.7. |
-| 64 | Falta diagrama de arquitectura física; la figura 1.8 son íconos y cajas sin SKU, vNets, subredes ni enlaces. | Se acepta. Se acoge la observación. La respuesta de trabajo propone la siguiente medida, cuya implementación no se acredita en este lote: «Se incorpora el diagrama de arquitectura física exhaustivo con servicios Azure, SKUs exactos, topología vNet/subredes, enlaces redundantes y dimensionamiento de ancho de banda.». Su cierre requiere examen de la fuente y de la evidencia correspondiente; no se declara realizada esa revisión para capítulos ajenos al lote S1/S2/S9 y al cálculo de S4. | Sección 4.2.1 (Figura 4.2). |
-| 65 | Contradicciones en componentes Azure (Data Explorer vs Timescale/Cosmos, Kafka vs Event Hubs). | Se acepta. Se acoge la observación. La respuesta de trabajo propone la siguiente medida, cuya implementación no se acredita en este lote: «Se unifica y congela la arquitectura: Apache Kafka en clúster Strimzi sobre AKS, TimescaleDB para telemetría de series temporales y PostgreSQL para datos transaccionales.». Su cierre requiere examen de la fuente y de la evidencia correspondiente; no se declara realizada esa revisión para capítulos ajenos al lote S1/S2/S9 y al cálculo de S4. | S4 §4.2.8 y S5 §5.5. |
-| 66 | La sala de servidores de 26 m² se compara ítem por ítem pero falta plano, carga eléctrica y balance térmico. | Se acepta. Se acoge la observación. La respuesta de trabajo propone la siguiente medida, cuya implementación no se acredita en este lote: «Se incorpora memoria técnica con plano de distribución en planta, consumo eléctrico estimado (kW) y balance térmico de disipación (BTU/h) de la sala técnica de Curimón S.A.». Su cierre requiere examen de la fuente y de la evidencia correspondiente; no se declara realizada esa revisión para capítulos ajenos al lote S1/S2/S9 y al cálculo de S4. | Sección 4.2.6. |
-| 67 | Ningún diagrama físico se cita desde el texto analítico. | Se acepta. Se acoge la observación. La respuesta de trabajo propone la siguiente medida, cuya implementación no se acredita en este lote: «Se referencian y recorren en profundidad todos los diagramas de arquitectura física desde el texto analítico del documento.». Su cierre requiere examen de la fuente y de la evidencia correspondiente; no se declara realizada esa revisión para capítulos ajenos al lote S1/S2/S9 y al cálculo de S4. | Subdocumento 4 completo. |
-| 68 | La sección 1.2.8 promete declarar cada producto con versión, fin de soporte y parches y no declara ninguno. | Se acepta. Se acoge la observación. La respuesta de trabajo propone la siguiente medida, cuya implementación no se acredita en este lote: «Se formaliza la matriz completa de hardware y software base con versión, ciclo de vida, soporte oficial y plan de actualización y parches de seguridad.». Su cierre requiere examen de la fuente y de la evidencia correspondiente; no se declara realizada esa revisión para capítulos ajenos al lote S1/S2/S9 y al cálculo de S4. | Sección 4.2.8. |
-| 70 | Sin cantidades, el parque oscila entre 374 y «según adhesión» y no se explicita el no reemplazo de terceros. | Se acepta. Se acoge la observación. La respuesta de trabajo propone la siguiente medida, cuya implementación no se acredita en este lote: «Se congelan las cantidades del parque: 374 camiones (148 propios retrofiteados con audIT EdgeHub v2.4, 192 terceros homologados por API y 34 terceros sin GPS equipados por audIT con pinzas CANclick).». Su cierre requiere examen de la fuente y de la evidencia correspondiente; no se declara realizada esa revisión para capítulos ajenos al lote S1/S2/S9 y al cálculo de S4. | Sección 4.2.2 y Anexo A. |
-| 71 | Se afirma que hay 18 componentes en la región primaria y la tabla suma 20; la matriz cubre 14 de 34. | Se acepta. Se acoge la observación. La respuesta de trabajo propone la siguiente medida, cuya implementación no se acredita en este lote: «Se corrigen los conteos de componentes cloud y se cuadra al 100 % la matriz de infraestructura y servicios de la región primaria.». Su cierre requiere examen de la fuente y de la evidencia correspondiente; no se declara realizada esa revisión para capítulos ajenos al lote S1/S2/S9 y al cálculo de S4. | Sección 4.2.4 y Anexo A. |
-| 72 | La región secundaria no tiene nombre y el Artículo 16.3 exige declararla formalmente. | Se acepta. Se acoge la observación. La respuesta de trabajo propone la siguiente medida, cuya implementación no se acredita en este lote: «Se formaliza a Brazil South (São Paulo) como la región secundaria de contingencia y réplica de datos de audIT SpA, en estricto cumplimiento del Art. 16.3.». Su cierre requiere examen de la fuente y de la evidencia correspondiente; no se declara realizada esa revisión para capítulos ajenos al lote S1/S2/S9 y al cálculo de S4. | S4 §4.2.5 y S5 §5.9. |
-| 73 | Los 8 GB del dispositivo embarcado no tienen cálculo; la derivación da 10 MB y 288 h dan cerca de 40 MB. | Se acepta. Se deriva el perfil de 72 h: 4.104 posiciones, 1.800 muestras de motor, 45 eventos y cinco documentos, 777.656 bytes sin fotos y 3.237.656 con ocho fotos. La ampliación propuesta 288 h suma 12.950.624 bytes brutos; overhead físico y reserva elevan el presupuesto a 38.851.872 bytes y se asignan 64 MiB. Sistemas A/B, arranque, diagnóstico y maestros llevan el total a 2.400 MiB (2,52 GB decimales). Capacidad útil, ocupación e integridad se verifican en HIL, sin presuponer compresión o equiparar cierre vial con desconexión. | S4, capacidad de almacenamiento y dimensionamiento; T-11; T-17 CP-HW-03. |
-| 74 | La sincronización en 20 min por camión se repite como requisito y no se dimensiona ante reconexión masiva. | Se acepta. El perfil simultáneo usa 300 camiones, 1.786.200 registros y 971.296.800 bytes con fotos. Se calculan 6,48 Mbit/s útiles mínimos; con 25 % de transporte y 20 % de reserva temporal, 10,12 Mbit/s. Dos unidades S1 permiten estimar admisión de 71.400 paquetes en 11,9 min; no demuestra transferencia/persistencia. CP-PERF-02 mide confirmación completa y conciliación por camión en hasta veinte minutos. | S4, dimensionamiento y figura de reconexión; T-11; T-17 CP-PERF-02. |
-| 75 | Ausentes eventos/segundo, TPS peak de asignación, volumen anual, datos a migrar y ancho de banda. | Se acepta. El perfil de carga mantiene hipótesis explícitas y no confunde concurrencia con viajes diarios. T-17 coteja con T-12 los 42 requisitos y separa ensayo de 72 h de ampliación propuesta de 288 h. La cantidad histórica a migrar y la medición operacional siguen sujetas al levantamiento; no se afirma disponer de 480.000 registros. | S2, supuestos; S3/T-12; T-17 CP-PERF-01, CP-PERF-02 y CP-HW-03. Volumetría integral de S4 pendiente. |
-| 77 | El equipo de TI de 9 personas no se menciona y el RT-03.05 se cita sin listar los servicios administrados. | Se acepta. Se acoge la observación. La respuesta de trabajo propone la siguiente medida, cuya implementación no se acredita en este lote: «Se modela la interacción operativa con el equipo de TI de 9 personas de Curimón S.A. y se detallan los servicios administrados provistos por audIT SpA bajo RT-03.05.». Su cierre requiere examen de la fuente y de la evidencia correspondiente; no se declara realizada esa revisión para capítulos ajenos al lote S1/S2/S9 y al cálculo de S4. | Sección 4.2.8. |
-| 78 | Se tratan los 3 proveedores GPS y 34 camiones sin equipo pero no se dice qué se instala ni cómo conviven. | Se acepta. Se acoge la observación. La respuesta de trabajo propone la siguiente medida, cuya implementación no se acredita en este lote: «Se especifica la arquitectura de coexistencia: capa de integración API (ACL) para Wialon/Wisetrack, e instalación de audIT EdgeHub v2.4 con pinzas CANclick en los 34 tractos desprovistos.». Su cierre requiere examen de la fuente y de la evidencia correspondiente; no se declara realizada esa revisión para capítulos ajenos al lote S1/S2/S9 y al cálculo de S4. | Sección 4.2.2. |
-| 79 | La recuperación ante desastres y continuidad se separan con argumento sísmico sin justificar factibilidad. | Se acepta. Se acoge la observación. La respuesta de trabajo propone la siguiente medida, cuya implementación no se acredita en este lote: «Se fundamenta la factibilidad técnica y latencia ($<50\text{ ms}$) del enlace hacia Brazil South, garantizando el cumplimiento estricto del RTO $\le 4\text{ h} y RPO \le 15\text{ min}$.». Su cierre requiere examen de la fuente y de la evidencia correspondiente; no se declara realizada esa revisión para capítulos ajenos al lote S1/S2/S9 y al cálculo de S4. | Sección 4.2.5. |
-| 80 | Los respaldos aparecen en una sola fila y no hay modelo Zero Trust explícito ni superficie de exposición. | Se acepta. Se acoge la observación. La respuesta de trabajo propone la siguiente medida, cuya implementación no se acredita en este lote: «Se diseña la arquitectura de ciberseguridad: modelo Zero Trust, microsegmentación de subredes, Azure Bastion, WAF y almacenamiento inmutable WORM.». Su cierre requiere examen de la fuente y de la evidencia correspondiente; no se declara realizada esa revisión para capítulos ajenos al lote S1/S2/S9 y al cálculo de S4. | Sección 4.2.7. |
+| 53–54 | Capas sin interfaces ni responsabilidades | Ocho capas, canales por perfil, contratos y recorrido de una petición; figura y texto concordantes | 4.1.3, 4.1.11 y 4.1.24 |
+| 55 | Falta correspondencia RF → componente | Correspondencia de contextos y contratos con el catálogo T-12 | 4.1.23 y T-12 |
+| 56 | SOLID y ambientes ausentes | Aplicación concreta de SOLID; DEV, QA, PREPROD, PROD y DR con datos y accesos separados | 4.1.22 y 4.1.25 |
+| 57 | Secuencias incompletas o sin análisis | Asignación, documento, liquidación y reconexión con mensajes, confirmaciones y fallos | Figuras 4.4, 4.8, 4.10 y 4.12 |
+| 58, 63 | Stack sin fundamento ni validación | Productos decididos, políticas de soporte verificadas y pruebas de compatibilidad exigidas antes de congelar versiones | 4.1.1 y 4.1.6 |
+| 59 | DDD sin límites ni eventos | Seis contextos canónicos, agregados y contratos de comandos/eventos | 4.1.4, 4.1.18 y 4.1.22 |
+| 60–62 | Decisiones estructurales incompletas | Ocho ADR fechados: legado, satélite, servicios, eventos, analítica, identidad, persistencia y operación local; comparación de estilos | 4.1.6 y 4.1.22 |
+| 65, 70, 78 | Ambigüedad de motores, bus y acceso a terceros | Event Hubs Premium mediante protocolo Kafka, TimescaleDB separado y acceso a terceros limitado a permisos acreditados | 4.1.1, 4.1.11 y 4.1.14 |
+| 73–75 | Capacidad sin derivación | Perfil normal, ráfaga de reconexión, volumen anual y supuestos explícitos; cálculo de búfer enlazado con S4.2/T-11 | 4.1.20 y 4.1.26 |
+| 72, 79–80 | DR, exposición y seguridad | Condiciones de réplica a Brazil South, control de identidad y superficie expuesta; RPO/RTO se verifican en S9 | 4.1.21, 4.1.24 y S5 5.1.6 |
+
+Las observaciones de emplazamiento físico, sala técnica, cantidades y catálogo T-11 se resuelven en S4.2/4.3. Aquí se describe su interfaz con el software, sin atribuir a D3 una comprobación física ejecutada.
 
 ## 4 Introducción a la Arquitectura Lógica y Física de la Solución
 
@@ -69,31 +52,29 @@ configurando el sistema existente, porque nace de cómo está construido.
 
 ### 4.1.1 Especificaciones Tecnologías de Software a utilizar
 
-Cada producto ofertado se declara con su versión, su fecha de fin de soporte del fabricante y su plan
-de actualización para los 56 meses del contrato. FEP02, RT-03.05, p. 8 obliga a privilegiar servicios
-administrados sobre autoadministrados cuando ello reduzca el riesgo operacional y a justificar cada
-excepción. El estilo arquitectónico se justifica con la volumetría del caso y no con la tendencia del
-mercado, tal como advierte el numeral 2.3 de las Bases Técnicas Transversales. En la Tabla 4.1
-se especifica la matriz tecnológica oficial seleccionada para la solución.
+La selección sigue RT-03.05: servicios administrados cuando reducen el riesgo operacional, con separación entre datos de negocio, series de tiempo y análisis. La Tabla 4.1 fija productos y políticas de soporte. El contrato de 56 meses exige actualizaciones; una versión inicial no se presenta como soportada hasta el mes 56.
 
-**Tabla 4.1.** Tecnologías de software, versiones y soporte ofertado a 56 meses
+**Tabla 4.1.** Tecnologías seleccionadas y mantenimiento del soporte
 
-| Componente | Producto y versión | Fin de soporte | Plan a 56 meses y justificación |
-|---|---|---|---|
-| Aplicación móvil de conductores | Flutter 3.x (Dart) | Soporte LTS continuo | Compilación nativa Android e iOS con interfaz ergonómica de alto contraste (Caso, RT-13.08, p. 32) y almacenamiento local SQLite |
-| Portales web y torre de control | React 18+ / Next.js | Soporte LTS continuo | Arquitectura web modular responsiva con renderizado híbrido y accesibilidad WCAG 2.2 AA (FEP01, Artículo 4.3, p. 5) |
-| Servicios backend y APIs | .NET 8 LTS / Go 1.22+ | Noviembre 2026 / LTS | Microservicios contenerizados de alto rendimiento sobre Linux en imágenes sin herramientas sobrantes |
-| Orquestación y cómputo | AKS 1.30+ | Soporte N-2 continuo | Servicio administrado PaaS con actualizaciones programadas fuera de horario punta |
-| Motor transaccional | PostgreSQL 16 Flexible | Noviembre 2028 | Motor relacional con alta disponibilidad zonal y extensión geoespacial PostGIS |
-| Series temporales y eventos | TimescaleDB 2.15 / Event Hubs | Mayo 2029 | Particionamiento por rango temporal y compresión columnar para el flujo de telemetría |
-| Caché distribuida | Azure Cache for Redis 7.2 | Octubre 2028 | Almacenamiento en memoria con persistencia continua para geocercas y sesiones activas |
-| Persistencia a bordo | SQLite 3 con modo WAL | Soporte activo LTS | Motor embebido industrial sobre memoria flash de 8 GB con protección contra cortes de energía |
-| Lakehouse analítico | Delta Lake en ADLS Gen2 | Soporte activo continuo | Tablas con soporte ACID y aislamiento estricto respecto de la base transaccional |
-| Gestión de identidad | Microsoft Entra ID / Key Vault | Servicio administrado | Autenticación OAuth 2.0 y custodia criptográfica con certificación FIPS 140-2 Nivel 3 |
+| Componente | Selección y fundamento | Soporte y actualización |
+|---|---|---|
+| Aplicación móvil, cuatro perfiles | Flutter 3, Dart y SQLite local: una base de interfaz y operación desconectada. Se descartan interfaces exclusivamente web para cabina por integración local y pruebas con guantes | Canal estable; fijar versión exacta y plataformas mínimas en el manifiesto del hito de diseño. No se atribuye un LTS indefinido a Flutter |
+| Portales y torre | React y Next.js; separar consulta pública de estado y portales autenticados. WCAG 2.2 AA verificable en S9 | Versiones exactas, licencias y dependencias en SBOM; actualización y regresión antes del fin de soporte de la versión escogida |
+| Servicios de negocio | .NET 10 LTS; Go 1.27 para ingesta/borde. Se conserva separación de contextos y contratos | .NET 10 hasta 14-11-2028; Go mantiene cada versión hasta dos versiones mayores posteriores. .NET 8 termina 10-11-2026 y no es la base del inicio supuesto en febrero de 2027 |
+| Orquestación | Azure Kubernetes Service; despliegue independiente y aislamiento de recursos | Versión soportada por AKS en cada liberación; matriz exacta de Kubernetes e imágenes, actualización por grupos y pruebas de reversa |
+| Transaccional | PostgreSQL 16 Flexible Server con PostGIS, conforme a T-11; claves y restricciones para reservas y vigencias | PostgreSQL 16 hasta 09-11-2028. Ensayar actualización mayor antes de esa fecha; preservar compatibilidad de extensiones y CDC |
+| Series de tiempo | Instancia Flexible Server separada con TimescaleDB, edición Apache-2 disponible en Azure. Se descarta Cosmos DB para este dominio por conservar SQL y el modelo temporal elegido | Azure publica la matriz de versiones de extensión por versión de PostgreSQL. No se inventa un fin de soporte independiente en mayo de 2029 ni se presuponen funciones comerciales de compresión no incluidas |
+| Eventos | Azure Event Hubs Premium, compatible con clientes del protocolo Kafka; se descarta operar un clúster Strimzi adicional para el mismo flujo | Servicio administrado. Orden por partición y entrega al menos una vez; idempotencia propia. No depender de transacciones Kafka en vista previa |
+| Caché | Azure Managed Redis, producto de T-11; almacena datos derivados y sesiones, nunca la única prueba habilitante de despacho | Para una implantación nueva se provisiona el destino. Sólo si hay una instancia de Azure Cache for Redis efectivamente existente se programa su migración antes del retiro de su SKU |
+| Persistencia local | SQLite 3 en WAL; cola de salida transaccional y acuses duraderos | Fijar biblioteca e imagen Linux del equipo; probar cortes de energía y actualizar sin borrar registros no confirmados. No se denomina LTS al producto sin política aplicable |
+| Analítica | ADLS Gen2 y tablas Delta Lake; cómputo y modelo dimensional separados del OLTP | Manifiesto de versiones del motor de procesamiento, conectores y biblioteca Delta; exportación en formatos abiertos |
+| Identidad y secretos | Entra ID, identidades administradas y Key Vault; autorización por rol, atributo, transportista y viaje | Fijar edición y capacidades en T-11; no atribuir certificación de HSM a una bóveda o SKU sin comprobarlo |
 
-*Fuente: Ciclos de vida oficiales de soporte (LTS) de los fabricantes.*
+La Tabla 4.1 decide productos y evita dos buses alternativos o dos motores intercambiables. Las versiones exactas de los canales móviles y web se fijan en el hito de diseño con SBOM, licencia, prueba de compatibilidad, fecha o política de soporte y responsable. Esta es una especificación de mantenimiento, no una prueba de concepto ya ejecutada. Los servicios cloud y su disponibilidad regional se cotejan con S4.2/T-11 antes de su aprovisionamiento.
 
-La matriz de la Tabla 4.1 prioriza servicios administrados y plataformas con soporte de largo plazo garantizado, asegurando estabilidad operativa y ausencia de obsolescencia tecnológica durante la vigencia del contrato.
+Fuentes consultadas el 11-10-2026: [política de .NET](https://dotnet.microsoft.com/en-us/platform/support/policy), [política de Go](https://go.dev/doc/devel/release), [soporte de PostgreSQL](https://www.postgresql.org/support/versioning/), [extensiones de Azure](https://learn.microsoft.com/en-us/azure/postgresql/extensions/concepts-extensions-versions), [consideraciones de TimescaleDB](https://learn.microsoft.com/en-us/azure/postgresql/extensions/concepts-extensions-considerations) y [protocolo Kafka en Event Hubs](https://learn.microsoft.com/en-us/azure/event-hubs/azure-event-hubs-apache-kafka-overview).
+
+Microsoft lista tres zonas en Chile Central y no le asigna región emparejada ([regiones de Azure](https://learn.microsoft.com/en-us/azure/reliability/regions-list)). Brazil South es una elección de DR de la propuesta. La existencia de la región no acredita disponibilidad de cada SKU, extensión, modalidad HA o cuota: D3/D4 deben fijar la matriz por servicio y región en el diseño detallado y validar aprovisionamiento y recuperación antes de activar producción.
 
 ### 4.1.2 Punto de partida
 
@@ -104,10 +85,10 @@ cada uno se resumen en la Tabla 4.2.
 
 | Rasgo | Efecto que produce hoy | Respuesta de esta arquitectura |
 |---|---|---|
-| Base única compartida por tráfico, facturación y contabilidad | La consulta de gestión compite con la operación de la torre por el mismo motor | Separación del almacenamiento transaccional y del analítico, obligatoria por RT-05.05 |
+| Base operativa del sistema de gestión 2013 acoplada a consultas de gestión | La consulta de gestión compite con la operación de la torre por el mismo motor | Separación del almacenamiento transaccional y del analítico, obligatoria por RT-05.05 |
 | Integración con el sistema contable por consultas y tablas compartidas | Todo cambio contable alcanza el núcleo operacional sin traducción | Capa anticorrupción, obligatoria por RT-05.20 |
 | Ausencia de costo por kilómetro por ruta | Tres de los ocho contratos principales se sirven bajo costo, el peor a menos catorce por ciento sostenido durante cuatro años (Caso, numeral 7.3, p. 15) | Costo por viaje en doble versión, preliminar y consolidada |
-| Puerto de telemetría de fábrica inactivo | La lectura del motor de 61 tractocamiones no se aprovecha por temor a la garantía | Acoplamiento sin contacto sobre el arnés original |
+| Puerto de telemetría de fábrica inactivo | La lectura del motor de 61 tractocamiones no se aprovecha por temor a la garantía | Lectura de fábrica autorizada; protocolo y equipo homologados con cada fabricante |
 | Módulos operativos acoplados entre sí | El sistema no distingue el viaje encargado del viaje ocurrido | Seis contextos delimitados, cada uno con sus propios datos |
 
 *Fuente: Bases Técnicas del Caso, capítulos 5 y 7.*
@@ -137,8 +118,7 @@ componentes y las interfaces entre ellas, y la descripción se ajusta a ISO/IEC/
 
 *Fuente: Bases Técnicas Transversales, numeral 2.1, y elaboración propia.*
 
-Ninguna interfaz accede directamente a la base de datos. Una petición desciende atravesando las seis
-capas de la pila y la respuesta asciende por el mismo camino. Seguridad y observabilidad no ocupan un
+Ninguna interfaz accede directamente a la base de datos. Una petición entra por presentación, borde y puerta de enlace; el servicio invoca su repositorio o publica mediante outbox cuando corresponde. No toda consulta atraviesa el bus de eventos. La respuesta vuelve por la puerta de enlace y el canal de presentación. Seguridad y observabilidad no ocupan un
 lugar en esa pila, la atraviesan entera. Los componentes declarados en cada capa se listan en la
 Tabla 4.4.
 
@@ -159,7 +139,7 @@ Tabla 4.4.
 
 La Figura 4.1 dibuja las ocho capas con sus componentes.
 
-![Figura 4.1. Las ocho capas obligatorias del numeral 2.1 transversal, con sus componentes e interfaces, conforme a RT-02.01](./figuras/LogicaCapas.png)
+![Figura 4.1. Las ocho capas obligatorias del numeral 2.1 transversal, con sus componentes e interfaces, conforme a RT-02.01](./graficos/LogicaCapas.png)
 
 *Figura 4.1. Las ocho capas obligatorias del numeral 2.1 transversal, con sus componentes e interfaces, conforme a RT-02.01*
 
@@ -188,45 +168,40 @@ Tabla 4.5 declara qué decide cada uno.
 
 *Fuente: elaboración propia.*
 
-El sistema de gestión de 2013 mezcla los seis, y esa es la razón de fondo por la que conoce el viaje
-que se encargó y no conoce el viaje que ocurrió. La Figura 4.2 muestra los seis contextos
+La descomposición separa responsabilidades que hoy quedan dispersas entre el sistema de gestión, planillas, papeles y plataformas de posicionamiento. La Figura 4.2 muestra los seis contextos
 y los sistemas con los que conviven.
 
-![Figura 4.2. Contextos delimitados del dominio y sistemas con los que convive la solución](./figuras/audit-figura-4.2-contextos.png)
+![Figura 4.2. Contextos delimitados del dominio y sistemas con los que convive la solución](./graficos/audit-figura-4.2-contextos.png)
 
 *Figura 4.2. Contextos delimitados del dominio y sistemas con los que convive la solución*
 
-Fuente: Elaboración propia.
+Fuente: D4, figura conservada.
 
 En la figura, cada contexto tiene su propio lenguaje y sus propios datos. Planificación y tráfico puede bloquear un
 viaje sin conocer por dentro a Personas y cumplimiento ni a Flota y activos, porque les pregunta.
 
 ### 4.1.5 Convivencia con lo que ya existe
 
-RT-05.20 obliga a aislar mediante una capa anticorrupción las integraciones con sistemas heredados o
-de terceros, de modo que un cambio en el sistema externo no propague su modelo al núcleo. Esa capa
-sustituye los módulos operativos de 2013, tráfico, despacho, tarifas y liquidación, y encapsula el
-sistema contable, que se conserva como único emisor de documentos tributarios.
+El sistema de gestión de transporte de 2013 y el sistema contable son contrapartes distintas (FEP03 · capítulo 5 · pp.12–13). La capa anticorrupción traduce sus contratos, sin sustituir por sí sola sus módulos. Los servicios nuevos reemplazan asignación, control de viaje y liquidación en M16; órdenes y tarifas a clientes en M21. El sistema de gestión queda de consulta hasta M24, con conciliación y reversa según S3/S7. El contable permanece como único emisor tributario bajo la Restricción 8.
 
 ### 4.1.6 Registro de decisiones de arquitectura
 
-RT-02.04 y el FEP01, Artículo 19, p. 14 convierten el registro de decisiones en entregable contractual, con la
-alternativa escogida, las descartadas y el criterio de selección. Se registran cuatro decisiones
-estructurales de la arquitectura lógica en la Tabla 4.6.
+RT-02.04 exige ADR fechados y actualizados. La Tabla 4.6 registra ocho decisiones de diseño al 11-10-2026. Se preservan los identificadores de las cuatro decisiones previas para no romper las referencias de S4.2; los nuevos ADR 05–08 completan el análisis solicitado para el Informe 2.
 
-**Tabla 4.6.** Decisiones de arquitectura lógica registradas (ADR 01 a 04)
+**Tabla 4.6.** Registro de decisiones de arquitectura
 
-| ADR | Fecha | Contexto | Decisión | Alternativa descartada | Criterio y consecuencias |
-|---|---|---|---|---|---|
-| ADR-01 | 2026-08-14 | Ráfagas masivas de telemetría concurrente con la operación de despacho | Contenedores orquestados en AKS con microservicios desacoplados | Monolito modular con escalado vertical | Aislamiento estricto de fallas. La ingesta masiva no degrada el despacho |
-| ADR-02 | 2026-08-18 | Asignación de viaje dispara geocercas, alertas, costeo y notificación | Arquitectura dirigida por eventos con Azure Event Hubs / Kafka | Cadena síncrona de llamadas HTTP REST | Desacoplamiento temporal. Despacho confirma en sub-2s sin esperar procesos derivados |
-| ADR-03 | 2026-08-22 | Finanzas requiere costeo consolidado sin afectar latencia transaccional | Captura de datos en cambio (CDC) y Lakehouse Delta Lake | Consultas analíticas sobre réplica de lectura transaccional | RT-05.05 prohíbe degradar OLTP. Aislamiento total de analítica pesada |
-| ADR-04 | 2026-08-27 | Seguridad federada para clientes, transportistas y ERP 2013 | Autenticación mTLS, OAuth 2.0 y Entra ID federado | Tokens estáticos o API keys compartidas en URL | RT-05.18 prohíbe credenciales en URI. Rotación automática y Zero Trust |
+| ADR / fecha | Decisión | Alternativas evaluadas | Criterio, consecuencia y verificación |
+|---|---|---|---|
+| 01 / 11-10-2026 | Seis contextos desplegables en AKS | Monolito modular, SOA con orquestador central, servicios independientes | RT-02.02 exige independencia de componentes críticos. Separar ingesta del despacho; asumir mayor costo de operación, observabilidad y pruebas de contratos. Medir aislamiento y carga en S9 |
+| 02 / 11-10-2026 | Event Hubs Premium con protocolo Kafka y outbox transaccional | Cadena HTTP síncrona; Kafka autoadministrado sobre Strimzi | Aislar ráfagas y evitar que los efectos derivados alarguen el despacho. Deduplicar y reconciliar entrega al menos una vez; no confundir el endpoint Kafka con un clúster Kafka propio |
+| 03 / 11-10-2026 | CDC hacia ADLS/Delta y modelo dimensional | BI sobre OLTP; réplica operacional usada para BI | RT-05.05 exige separación. CDC también consume recursos: vigilar slots/WAL y medir su impacto; no prometer carga nula |
+| 04 / 11-10-2026 | Identidad federada y certificados por equipo; acceso por rol y atributos | Claves compartidas o parámetros secretos en URI | RT-05.18 y Zero Trust: revocación, mínima exposición, secreto fuera del código y autorización por viaje. Probar acceso cruzado entre transportistas |
+| 05 / 11-10-2026 | Reemplazar gestión 2013 función por función; conservar contable | Corte único; conservar sólo integrando; paquete de mercado sin integración demostrada | M16/M21/M24 de S3. Evitar interrupción y doble registro definitivo; presupuestar coexistencia, adaptadores y conciliación en los paquetes de S7 y Sobre 3, sin inventar ahorro monetario |
+| 06 / 11-10-2026 | Captura local y enlace satelital de mensajes; documento emitido en contable | Banda ancha satelital en toda la flota; generación fiscal en cabina | Restringir costo recurrente y equipos del T-11; la alternativa local infringe R-08. El descarte de banda ancha no prueba que SBD baste: validar entrega documental completa y 90 s; revisar esta decisión si el ensayo falla |
+| 07 / 11-10-2026 | PostgreSQL transaccional y TimescaleDB separado | Motor único; Cosmos DB; motor temporal autoadministrado adicional | Integridad referencial en el negocio, aislamiento de series y SQL conocido. Verificar extensión Apache-2, funciones efectivas, actualización y HA en Azure |
+| 08 / 11-10-2026 | SQLite local con outbox, acuses y conciliación determinista | Depender del enlace para cada evento; búfer sólo en RAM | 72 h a bordo, 24 h en terminal como mínimo transversal y confirmación ≤20 min tras 72 h. 288 h es ampliación propuesta: ensayos y capacidad separados |
 
-*Fuente: elaboración propia.*
-
-Estas cuatro son las decisiones estructurales de la capa lógica. El registro completo es entregable
-contractual y se actualiza durante toda la ejecución, según ordena el mismo RT-02.04.
+La Tabla 4.6 permite revisar la elección y sus costos operativos sin declarar pruebas ejecutadas. Cada cambio de proveedor, protocolo o estrategia de continuidad actualiza el ADR, los contratos, la EDT y los casos de aceptación.
 
 ### 4.1.7 Degradación, escalamiento y puntos únicos de falla
 
@@ -234,8 +209,7 @@ Tres requisitos obligatorios de la misma sección exigen declaraciones que convi
 implícitas. RT-02.09 obliga a degradar de forma elegante, de modo que la caída de un componente no
 crítico deje la solución operando en modo reducido y avisando de la degradación, y nunca falle de
 forma total. La aplicación de esa regla en esta operación es directa. Si el repositorio analítico no
-responde, la torre sigue despachando. Si el sistema contable no responde, la operación sigue y la
-emisión tributaria se encola. Si el enlace satelital no está disponible, el registro sigue
+responde, la torre sigue despachando. Si el sistema contable no responde, continúan la captura, el seguimiento y los viajes que ya disponen de documentación conforme. Se encola la solicitud pendiente, pero se bloquea la salida de un viaje que todavía requiere emisión. Si el enlace satelital no está disponible, el registro sigue
 acumulándose a bordo.
 
 RT-02.10 exige que las capas de aplicación e integración escalen horizontalmente de forma automática,
@@ -250,8 +224,8 @@ subsistan. Esta oferta declara dos en la capa lógica, que se listan en la Tabla
 
 | Punto | Por qué subsiste | Por qué es aceptable |
 |---|---|---|
-| El sistema contable de 2013 como emisor único de documentos tributarios | La restricción 8 lo fija y no es negociable | La capa anticorrupción aísla su indisponibilidad. La operación no se detiene y la emisión se recupera al restablecerse |
-| El dispositivo a bordo de cada camión | Hay uno por unidad y solo puede intervenirse cuando el camión pasa por un terminal, según RT-06.01 del Caso | La falla afecta a una unidad y no a la flota. Se mitiga con repuestos precargados y con el procedimiento supletorio de la sección 4.3.2 |
+| El sistema contable como emisor único de documentos tributarios | La restricción 8 lo fija y no es negociable | La captura y el seguimiento continúan. Una salida sin documento conforme queda bloqueada; se monitoriza la cola y se escala como incidente crítico |
+| El dispositivo a bordo de cada camión | Hay uno por unidad y solo puede intervenirse cuando el camión pasa por un terminal, según RT-06.01 del Caso | La falla afecta a una unidad y no a la flota. Se mitiga con repuestos precargados y con el procedimiento de contingencia aprobado, sin levantar bloqueos legales |
 
 *Fuente: elaboración propia sobre el Caso, capítulo 10 y RT-06.01.*
 
@@ -279,7 +253,7 @@ con la medición de la Etapa 1.
 | Cortacircuito | Se abre al superarse la mitad de las llamadas fallidas en una ventana deslizante de diez peticiones, permanece abierto 30 segundos y admite tres llamadas de prueba antes de restablecer el tráfico |
 | Mamparo | La verificación bloqueante del despacho tiene su propio conjunto de hilos y de conexiones. La saturación de la consulta de liquidaciones o de reportes no le quita capacidad |
 | Tiempo de espera | Validación en memoria, 800 milisegundos. Consulta transaccional del despacho, 5 segundos. Llamada al sistema contable a través de la capa anticorrupción, 10 segundos. Emisión del documento electrónico de transporte, 90 segundos, que es el techo que fija RT-09.01 del Caso |
-| Reintento | Tres intentos sobre operaciones idempotentes, con retroceso exponencial y variación aleatoria. La variación evita que cientos de unidades que recuperan cobertura a la vez reintenten sincronizadas |
+| Reintento | Hasta tres intentos sobre operaciones idempotentes sólo si caben en el plazo total, con retroceso exponencial y variación aleatoria. La variación evita que cientos de unidades que recuperan cobertura a la vez reintenten sincronizadas |
 | Límite de tasa | Declarado por perfil en la puerta de enlace, según se detalla en la gobernanza de interfaces |
 
 *Fuente: elaboración propia sobre RT-02.08 y RT-09.01 del Caso.*
@@ -295,75 +269,61 @@ Tabla 4.9, y ninguna admite excepción automática.
 
 **Tabla 4.9.** Invariantes de la verificación bloqueante
 
-| Invariante | Qué comprueba | Fundamento |
+| Invariante | Comprobación | Fuente y efecto |
 |---|---|---|
-| Conductor | Horas conducidas en el día, continuidad sin descanso y acumulado del período | Artículo 25 bis del Código del Trabajo (Ministerio del Trabajo, 2003) |
-| Tractocamión | Revisión técnica aprobada, seguro obligatorio vigente y permiso de circulación al día | Numeral 4.4 del Caso |
-| Semirremolque y carga peligrosa | Curso vigente del conductor y correspondencia entre la documentación y lo efectivamente cargado | Decreto Supremo N.º 298 (Ministerio de Transportes, 1995) |
+| Persona y jornada | Identidad del conductor, descanso y jornada acumulada, evidencia previa relevante y licencia vigente | S3 RN-01–04; FEP03 · RT-09.01 · p.32. Una causa legal bloquea siempre |
+| Equipo | Vigencias acreditadas de tracto y semirremolque, disponibilidad y compatibilidad con la carga | FEP03 · numerales 4.4 y 16.1; S3 RN-05. Sin respaldo vigente no habilita |
+| Carga y documentación | Documento de transporte conforme, requisitos y lista de verificación firmada para carga peligrosa | Restricción 8; RF-006/RF-013/RF-014. La asignación no sustituye la autorización de salida |
 
-*Fuente: elaboración propia sobre la normativa citada.*
+La Tabla 4.9 separa la elegibilidad de los recursos y la condición documental de salida. El conductor, tracto y semirremolque no pueden tener asignaciones activas superpuestas. El servicio obtiene evaluaciones versionadas de Personas y de Flota; Planificación confirma únicamente si esas versiones siguen vigentes. La autorización de salida exige además el documento y la comprobación de carga.
 
-La secuencia bloquea la clave de idempotencia, evalúa las tres invariantes en paralelo, persiste en
-una única transacción y responde. El presupuesto de tiempo de cada paso se reparte en la
-Tabla 4.10.
+Cada evaluación lleva sujeto, versión, instante y vencimiento. No basta leer una versión remota y después hacer commit en otra base: la revalidación y el protocolo de reserva deben impedir confirmar mientras cambia una habilitación. Planificación serializa las reservas de recursos y conserva el intento antes de consultar. Una modificación incompatible invalida los intentos afectados; ante falta de confirmación de vigencia se rechaza dentro del presupuesto total. S9 prueba especialmente una revocación concurrente, dos solicitudes para el mismo recurso y el vencimiento del token; no se afirma atomicidad global por usar una transacción local.
 
-**Tabla 4.10.** Reparto del presupuesto de 30 segundos
+La Tabla 4.10 distribuye el tiempo máximo de la decisión, incluyendo confirmación, auditoría y respuesta.
 
-| Paso | Presupuesto | Dónde se resuelve |
+**Tabla 4.10.** Presupuesto de diseño de la asignación, extremo a extremo
+
+| Paso | Máximo presupuestado | Control |
 |---|---|---|
-| Validación del contrato de entrada y bloqueo de la clave de idempotencia | 10 milisegundos | Puerta de enlace y caché en memoria |
-| Evaluación paralela de las tres invariantes | 450 milisegundos | Caché en memoria, con respaldo en el motor transaccional |
-| Persistencia atómica del viaje asignado | 200 milisegundos | Motor transaccional, aislamiento serializable |
-| Publicación de los efectos derivados | Fuera del camino bloqueante | Bus transaccional |
-| Total comprometido | Por debajo de 2 segundos | Frente al techo de 30 segundos de RT-09.01 del Caso |
+| Identidad, contrato y clave de idempotencia | 2 s | Autorización y unicidad duradera |
+| Jornada, vigencias y aptitud, en paralelo | 8 s | Evidencia vigente; retorno a fuente autoritativa si caché desactualizada |
+| Reserva y confirmación atómica | 8 s | Restricciones de exclusión/unicidad, versión y conflicto de concurrencia |
+| Composición del veredicto y auditoría | 4 s | Causal, evidencia, regla y correlación |
+| Respuesta al operador | 3 s | Incluye tránsito de red y puerta de enlace |
+| Total + margen | 25 s + 5 s = 30 s | Ningún reintento rebasa el plazo total |
 
-*Fuente: elaboración propia.*
+La Tabla 4.10 es una asignación de tiempo de diseño, no una medición. Los 660 ms nominales representados en la Figura 4.3 describen un caso favorable de caché; no acreditan extremo a extremo ni reemplazan este presupuesto. Un objetivo interno menor de 2 s se conserva como hipótesis de optimización y se mide en S9, sin presentarlo como resultado demostrado.
 
-Ante rechazo el sistema responde en menos de un segundo con un documento de error estructurado que
-nombra la invariante incumplida, de modo que el operador sepa qué falta y no reintente a ciegas. Los
-campos de ese documento se listan en la Tabla 4.11.
+Ante rechazo, la respuesta identifica causa, regla aplicada, valor evaluado, dato faltante y correlación; la Tabla 4.11 fija los campos. Una petición repetida devuelve el resultado ya confirmado y una operación aún en curso devuelve conflicto, sin emitir una segunda asignación.
 
-**Tabla 4.11.** Contenido del documento de error ante un despacho rechazado
+**Tabla 4.11.** Respuesta trazable ante rechazo
 
 | Campo | Contenido |
 |---|---|
-| Tipo | Identificador estable de la causal, resoluble a su documentación |
-| Título | Enunciado breve de la invariante incumplida |
-| Estado | Código que distingue el rechazo por regla de negocio del error técnico |
-| Detalle | Valor medido y umbral aplicado, para que el operador sepa cuánto falta |
-| Instancia | Identificador del viaje y del intento de asignación, correlacionable con la bitácora |
+| tipo / estado | Causal estable y categoría: regla, dato insuficiente, conflicto o error técnico |
+| detalle | Umbral, dato evaluado y motivo, sin divulgar antecedentes personales a un rol no autorizado |
+| instancia / correlacion | Viaje, intento y operaciones relacionadas |
+| versionRegla / evidencias | Versión normativa-operacional y referencias que sustentan el veredicto |
 
-*Fuente: elaboración propia.*
+La Tabla 4.11 permite al operador corregir la causa y conserva la decisión para auditoría. RN-04 permite una excepción sólo por fuente indisponible, con jefe de turno y prevención de riesgos, motivo, un viaje y revisión mensual; no admite jornada agotada ni documento legal faltante.
 
-El presupuesto se cumple con holgura porque la evaluación ocurre sobre datos en memoria. Esa holgura es
-deliberada. RT-09.03 obliga a soportar tres veces la volumetría inicial sin rediseño, y un margen
-estrecho hoy sería un rediseño mañana. La Figura 4.3 muestra los patrones de resiliencia
-y el flujo de la asignación bloqueante.
+La Figura 4.3 muestra los patrones que aíslan el despacho de las integraciones externas.
 
-![Figura 4.3. Patrones de resiliencia y flujo de la asignación bloqueante](./figuras/audit-figura-4.3-resiliencia.png)
+![Figura 4.3. Patrones de resiliencia y presupuesto nominal de diseño](./graficos/audit-figura-4.3-resiliencia.png)
 
-*Figura 4.3. Patrones de resiliencia y flujo de la asignación bloqueante*
+*Figura 4.3. Patrones de resiliencia. Fuente: D4, figura conservada. Los tiempos nominales son hipótesis de diseño, no mediciones.*
 
-Fuente: Elaboración propia.
+La Figura 4.4 detalla los mensajes de la asignación. La transacción incorpora reserva, asignación y outbox; sólo después del commit se devuelve confirmación. La publicación se reintenta desde outbox y el consumidor deduplica. Se elimina así la ventana de pérdida entre confirmar el viaje y publicar su evento.
 
-La figura sigue la asignación desde la puerta de enlace hasta la persistencia, con los mamparos y
-cortacircuitos que la separan de las integraciones externas.
+![Figura 4.4. Secuencia de asignación bloqueante y publicación con outbox](./graficos/4-3-asignacion.png)
 
-El detalle paso a paso de los mensajes y validaciones concurrentes de la asignación se ilustra en la Figura 4.4.
+*Figura 4.4. Secuencia de asignación bloqueante. Fuente: elaboración D3 con el lienzo gráfico de D4.*
 
-![Figura 4.4. Diagrama de secuencia de la verificación bloqueante del despacho](./figuras/4-3-asignacion.png)
-
-*Figura 4.4. Diagrama de secuencia de la verificación bloqueante del despacho*
-
-Fuente: Elaboración propia.
-
-Como ilustra la Figura 4.4, la transacción ejecuta la validación paralela de jornada, tracto y rampla, persistiendo de manera atómica con aislamiento serializable en PostgreSQL y emitiendo el token de despacho únicamente tras confirmar la invariante.
+La rama de rechazo de la Figura 4.4 conserva el bloqueo ante incumplimiento o plazo agotado. La excepción RN-04 es un procedimiento separado y aprobado, nunca un reintento que cambia silenciosamente el veredicto.
 
 ### 4.1.10 Idempotencia y ventana de deduplicación
 
-RT-02.06 exige escrituras idempotentes. Cada operación lleva una clave única que se retiene durante
-siete días, plazo dimensionado para cubrir las 72 horas de desconexión más el margen de los cierres
-prolongados del paso fronterizo. La clave se bloquea en el almacén en memoria y se respalda con una
+RT-02.06 exige escrituras idempotentes. Cada operación lleva una clave única. La caché puede retenerla siete días para acelerar reintentos frecuentes; siete días no cubren doce días. La unicidad duradera y la respuesta registrada permanecen durante la retención del registro de negocio, incluida cualquier reconexión de 288 h. La clave se bloquea en el almacén en memoria y se respalda con una
 restricción de unicidad duradera en el motor transaccional, de modo que un reintento tras la
 reconexión masiva no duplica un viaje ni un documento.
 
@@ -383,11 +343,11 @@ mantenga actualizada de forma automática. La consecuencia práctica es que no s
 entre el contrato publicado y la implementación viva, porque el contrato no se escribe aparte.
 A modo representativo, el servicio síncrono de verificación bloqueante pre-despacho expone el contrato
 `POST /api/v1/despacho/validar` documentado bajo OpenAPI 3.1, recibiendo en su esquema JSON
-los identificadores del viaje (`viajeId`), conductor (`conductorRut`), tracto
+los identificadores del viaje (`viajeId`), conductor (`conductorId`), tracto
 (`patenteTracto`), rampla (`patenteRampla`) y carga (`codigoSUSPEL`), retornando el
 veredicto (`autorizado`), latencia de validación (`latenciaMs`) y la bitácora auditable de
 factores. En paralelo, el evento asíncrono de notificación de salida se formaliza bajo AsyncAPI 2.6
-en el canal de eventos de operaciones, transportando payloads en formato CloudEvents con firma HMAC-SHA256.
+en el canal de eventos de operaciones, transportando eventos CloudEvents con identificador único, agregado, secuencia, versión de esquema y correlación. El transporte autenticado y el sellado de evidencias se especifican según el tipo de evento; un HMAC no se presenta como firma tributaria.
 
 RT-05.17 obliga a versionar semánticamente los contratos, con compatibilidad hacia atrás y política de
 obsolescencia con preaviso mínimo de seis meses. RT-05.18 fija el mecanismo de autenticación entre
@@ -404,12 +364,12 @@ responde. Esa declaración se entrega en la Tabla 4.12.
 
 | Contraparte | Modo | Volumen esperado | Ventana de la contraparte | Si no responde |
 |---|---|---|---|---|
-| Sistema contable y de facturación | Asíncrono | Documentos y asientos de 96.000 viajes al año | Horario administrativo, sin compromiso 24x7 | Cortacircuito y encolado. La operación no se detiene |
+| Sistema contable y de facturación | Solicitud/respuesta para emisión; asíncrono para asientos | Hasta 128.000 documentos y eventos de 96.000 viajes/año | Capacidad 24x7 de emisión por acordar y probar; no consta en el Caso | Cortacircuito y encolado. Sin documento conforme se bloquea la salida; captura y viajes ya documentados continúan |
 | Plataformas de posicionamiento de terceros | Asíncrono | Posición de los camiones de terceros con dispositivo | No declarada por el Caso | Última posición conocida con su antigüedad visible, nunca una posición sin fecha |
 | Telemetría de fábrica | Asíncrono | 61 tractocamiones, solo lectura | Sujeta a la autorización de cada fabricante | El viaje se registra igual con el dispositivo a bordo |
 | Red de estaciones de servicio | Por lotes | 74.000 abastecimientos al año | Mensual, con hasta 40 días de desfase | El costo se emite preliminar y se marca como pendiente |
 | Concesionarias de peaje | Por lotes | 620.000 pasadas al año | Mensual | Peaje estimado por la traza, marcado como estimado |
-| Autoridad tributaria | Síncrono | 128.000 documentos al año | Según disponibilidad del servicio | Emisión de contingencia y envío diferido |
+| Autoridad tributaria, a través del contable | Según contrato fiscal del emisor | 128.000 documentos/año | Según servicio de la autoridad | Aplicar contingencia fiscal admitida y documentada; audIT no se convierte en emisor |
 | Clientes y autoridad aduanera | Ambos | Según contrato y cruce | Variable | Reintento con retroceso y aviso a la torre |
 
 *Fuente: Caso, numeral 14.1, p. 29, y elaboración propia.*
@@ -421,18 +381,17 @@ informe de errores por registro y procesamiento parcial. Esa capacidad es la que
 de las cerca de 6.000 vigencias y la ingesta mensual de combustible y peajes. La
 Figura 4.5 dibuja el mapa de integraciones.
 
-![Figura 4.5. Mapa de integraciones. Sistemas internos, fuentes de terreno y contrapartes externas](./figuras/LogicaIntegraciones.png)
+![Figura 4.5. Mapa de integraciones. Sistemas internos, fuentes de terreno y contrapartes externas](./graficos/LogicaIntegraciones.png)
 
 *Figura 4.5. Mapa de integraciones. Sistemas internos, fuentes de terreno y contrapartes externas*
 
-Fuente: Elaboración propia.
+Fuente: D4, figura conservada.
 
-El sistema contable y de facturación heredado de 2013 se preserva íntegramente como único emisor tributario legal, integrándose a través de la Capa Anticorrupción (ACL), mientras que las funciones operacionales de tráfico, despacho y liquidación se desacoplan gradualmente mediante el patrón Estrangulador (Strangler Fig).
+La Figura 4.5 diferencia el sistema de gestión 2013, que se sustituye, del contable, que se conserva. Los 192 terceros con equipo son población de referencia; el dibujo no acredita acceso automático a las tres plataformas. La cobertura efectiva y su antigüedad se muestran por unidad.
 
 ### 4.1.12 Convivencia con el sistema contable heredado
 
-La capa anticorrupción sustituye los módulos operativos de 2013, tráfico, despacho, tarifas y
-liquidación, y encapsula el sistema contable, que se conserva como único emisor de documentos
+Los servicios de negocio sustituyen los módulos operativos del sistema de gestión 2013. La capa anticorrupción traduce los contratos y encapsula el sistema contable, que se conserva como único emisor de documentos
 tributarios. El aislamiento es bidireccional. Un cambio en el sistema externo no propaga su modelo al
 núcleo, y el núcleo no escribe directamente sobre el legado.
 
@@ -449,42 +408,44 @@ RT-03.07. Las piezas de la capa se listan en la Tabla 4.13.
 |---|---|
 | Adaptador de dominio | Traduce el evento de negocio, viaje cerrado o liquidación aprobada, a la estructura plana que el sistema contable espera |
 | Transformador de esquemas | Homologa formatos en ambos sentidos, de modo que las convenciones de 2013 no lleguen al modelo nuevo |
-| Protector de resiliencia | Cortacircuito y cola de mensajes fallidos. Si el sistema contable no responde, las transacciones se acumulan y la operación 24x7 continúa |
+| Protector de resiliencia | Cortacircuito y cola de mensajes fallidos. Si el contable no responde, las solicitudes quedan pendientes y las salidas sin documento conforme se bloquean |
 | Reconciliador | Verifica que todo evento encolado terminó registrado, y expone el pendiente en lugar de dejarlo silencioso |
 
 *Fuente: elaboración propia.*
 
 La Figura 4.6 muestra la integración con el sistema contable a través de esa capa.
 
-![Figura 4.6. Integración con el sistema contable heredado a través de la capa anticorrupción](./figuras/audit-figura-4.4-acl.png)
+![Figura 4.6. Integración con el sistema contable heredado a través de la capa anticorrupción](./graficos/audit-figura-4.4-acl.png)
 
 *Figura 4.6. Integración con el sistema contable heredado a través de la capa anticorrupción*
 
-Fuente: Elaboración propia.
+Fuente: D4, figura conservada.
 
 El sistema contable queda detrás de la capa y solo recibe eventos ya traducidos.
 
 ### 4.1.13 Emisión del documento de transporte bajo Restricción 8
 
-La Restricción 8 de las Bases Técnicas (Caso, capítulo 10, p. 24) impone una regla absoluta: el sistema contable y de facturación existente de Curimón es el único emisor fiscal del documento tributario de transporte (DET). Ningún computador embarcado ni servidor de terminal de audIT emite documentos tributarios. El requerimiento RF-014 exige que el DET esté válidamente timbrado por el Servicio de Impuestos Internos (SII) antes de que el camión inicie el movimiento en la vía pública; de lo contrario, el despacho se bloquea determinísticamente.
+El sistema contable y de facturación es el único emisor fiscal (FEP03 · capítulo 10 · Restricción 8 · p.24). Cabina y terminal no generan folios ni firman documentos tributarios. RF-013/RF-014 exigen documento conforme antes de iniciar el traslado; asignar recursos no habilita por sí solo la salida.
 
-La Figura 4.7 muestra los dos caminos de emisión del documento de transporte conforme a la Restricción 8: la emisión anticipada desde la orden cuando los datos se conocen al programar el despacho, y la emisión interactiva por enlace satelital cuando la carga solo se conoce en faenas remotas sin cobertura.
+La Figura 4.7 representa los dos caminos de S3: emisión anticipada cuando la carga definitiva se conoce, y solicitud satelital cuando sólo se conoce en el punto sin cobertura. En ambos, el contable emite y se entrega a cabina el contenido íntegro necesario para portar una representación conforme; un folio o una huella no bastan.
 
-![Figura 4.7. Mecanismo de emisión del documento de transporte en puntos sin cobertura: emisión anticipada y vía enlace satelital Iridium](./figuras/documento-sin-cobertura.png)
+![Figura 4.7. Emisión anticipada o solicitud satelital al único emisor](./graficos/documento-sin-cobertura.png)
 
-*Figura 4.7. Mecanismo de emisión del documento de transporte en puntos sin cobertura: emisión anticipada y vía enlace satelital Iridium*
+*Figura 4.7. Emisión sin cobertura, adaptada del diseño de D4 para explicitar entrega íntegra y bloqueo de salida.*
 
-Fuente: Elaboración propia.
+Para SBD de la familia 9603, la documentación de Iridium permite hasta 340 bytes de subida y 270 de bajada por mensaje. Es capacidad por mensaje, no tamaño garantizado de un documento completo ([Iridium, RockBLOCK 9603](https://www.iridium.com/products/rockblock-9603)). El protocolo propuesto usa solicitud correlacionada, versión, longitud, número de fragmento, integridad y reensamblado verificable. El original XML firmado se conserva en el contable y en su custodia; la cabina debe recibir todos los datos y el timbre necesarios para portar la representación válida aplicable, o el archivo de representación completo. No se exige transmitir todo el XML si no es necesario para esa representación; tampoco se acepta una representación incompleta generada desde folio/hash. El gateway satelital requiere un adaptador autorizado hacia la plataforma; no se presupone que Iridium hable directamente el protocolo de IoT Hub.
 
-En ambos caminos se garantiza que el computador a bordo jamás custodie certificados de firma digital ni folios locales. En el camino satelital, el iWave G26I compacta una microtrama binaria de hasta 340 bytes hacia la constelación Iridium SBD, la cual ingresa por IoT Hub y la capa anticorrupción hacia el sistema contable corporativo, retornando el timbre fiscal comprimido antes de autorizar la salida legal del recinto. Complementariamente, la secuencia de interacción temporal y comprobación de pre-movimiento se formaliza en la Figura 4.8.
+El límite total de emisión es 90 s (FEP03 · RT-09.01 · p.32). Debe medirse la solicitud, emisión, retorno fragmentado, verificación y disponibilidad portable con el documento de mayor tamaño previsto. Para tamaño comprimido B y cabecera de h bytes por mensaje, con 0 ≤h <270, la bajada requiere al menos `ceil(B / (270 − h))` mensajes; el ensayo debe incluir pérdidas, reintentos y tiempo satelital. No se supone que un timbre completo quepa en una única trama.
 
-![Figura 4.8. Secuencia de emisión del DET bajo Restricción 8 y comprobación antes del movimiento](./figuras/4-4-documento.png)
+La contingencia de falta de cobertura descrita por el SII no autoriza a audIT a emitir desde la cabina: la Restricción 8 conserva al contable como emisor. La representación y el envío fiscal deben seguir el régimen aplicable del contribuyente ([SII, contingencia de guía electrónica](https://www.sii.cl/preguntas_frecuentes/factura_electronica/001_003_8040.htm); [Resolución Exenta 99/2019](https://www.sii.cl/normativa_legislacion/resoluciones/2019/reso99.pdf)). La factibilidad del retorno SBD completo en 90 s queda como puerta de validación previa a aceptar ese camino; si no se logra, se revisan ADR-06 y T-11 con S3/D4. La regla inmediata es bloquear la salida sin documento conforme, sin afirmar cero detenciones.
 
-*Figura 4.8. Secuencia de emisión del DET bajo Restricción 8 y comprobación antes del movimiento*
+La Figura 4.8 detalla el intercambio y el cotejo previo al movimiento.
 
-Fuente: Elaboración propia.
+![Figura 4.8. Secuencia de emisión, entrega y comprobación previa a la salida](./graficos/4-4-documento.png)
 
-Esta doble verificación garantiza trazabilidad fiscal completa ante el SII y cero detenciones de flota en faenas mineras o agrícolas desconectadas.
+*Figura 4.8. Secuencia documental. Fuente: elaboración D3 con el lienzo de D4.*
+
+La salida sólo se habilita con carga coincidente, documento válido y representación portable disponible. Un cambio posterior de carga exige corregir mediante el emisor y volver a evaluar; la cabina no modifica la copia firmada ni reutiliza un folio para otro viaje.
 
 ### 4.1.14 Fuentes con desfase y telemetría del vehículo
 
@@ -510,10 +471,9 @@ un inventario de un parque que el Caso no describe.
 
 La telemetría de fábrica de los 61 tractocamiones se lee por acoplamiento sin contacto sobre la
 interfaz del vehículo, en modo de solo lectura y sujeta a la autorización de cada fabricante que exige
-RT-17.06 del Caso. Esa elección no es de conveniencia técnica. La restricción 6 prohíbe que el
+RT-17.06 del Caso. La ausencia de contacto eléctrico no demuestra por sí sola autorización ni disponibilidad de señales. Cada lectura requiere protocolo, PGN/parámetros, licencia de acceso y homologación del fabricante. Esa elección responde a las restricciones del Caso. La restricción 6 prohíbe que el
 equipamiento a bordo afecte la garantía del vehículo o interfiera con sus sistemas de seguridad, y el
-Capítulo 11 excluye intervenir la electrónica de fábrica. Una conexión que no corta ni empalma el arnés
-original es lo que permite cumplir ambas. Los parámetros que se leen se listan en la
+Capítulo 11 excluye intervenir la electrónica de fábrica. No cortar ni empalmar el arnés reduce la intervención, pero la conformidad de garantía y seguridad se verifica por modelo de vehículo; los 182 lectores previstos no implican 182 fuentes CAN disponibles. Los parámetros que se leen se listan en la
 Tabla 4.14.
 
 **Tabla 4.14.** Parámetros leídos de la telemetría de fábrica
@@ -537,7 +497,7 @@ diseño y no de configuración.
 La segregación entre lo transaccional y lo analítico se resuelve por captura de cambios hacia un
 repositorio organizado en capas sucesivas de refinamiento, desde el dato crudo hasta el modelo
 dimensional que consume la gerencia. La replicación lee la bitácora del motor transaccional y no
-consulta sus tablas, que es la única forma de cumplir RT-05.05 sin que la analítica toque la operación.
+consulta sus tablas, para evitar consultas analíticas sobre OLTP. La lectura de WAL y sus slots consumen recursos y se monitorizan; la separación se comprueba bajo carga.
 Las capas del repositorio se describen en la Tabla 4.15.
 
 **Tabla 4.15.** Capas del repositorio analítico
@@ -552,11 +512,11 @@ Las capas del repositorio se describen en la Tabla 4.15.
 
 La Figura 4.9 muestra la capa analítica y la explotación del costo por kilómetro.
 
-![Figura 4.9. Capa analítica por niveles de refinamiento y explotación del costo por kilómetro](./figuras/audit-figura-4.5-analitica.png)
+![Figura 4.9. Capa analítica por niveles de refinamiento y explotación del costo por kilómetro](./graficos/audit-figura-4.5-analitica.png)
 
 *Figura 4.9. Capa analítica por niveles de refinamiento y explotación del costo por kilómetro*
 
-Fuente: Elaboración propia.
+Fuente: D4, figura conservada.
 
 El costo por kilómetro se calcula distinto según el régimen de propiedad del equipo. Para la flota
 propia se compone de combustible medido por telemetría, peajes efectivamente transitados, neumáticos,
@@ -605,8 +565,7 @@ gobiernan el diseño de la capa. La Tabla 4.17 las reúne.
 *Fuente: Caso, RT-05.29, p. 32.*
 
 La jornada acumulada es la fila que condiciona la arquitectura. Exigirla en tiempo real en el momento
-de asignar significa que no puede leerse del repositorio analítico, y por eso vive en la caché en
-memoria que evalúa la invariante del despacho.
+de asignar significa que no puede leerse del repositorio analítico, y por eso la evaluación utiliza estado autoritativo o una proyección cuya versión y actualidad se comprueban antes del commit. Una caché antigua no habilita al conductor.
 
 ### 4.1.16 Explotación analítica y autoservicio
 
@@ -629,13 +588,13 @@ Subdocumento 13.
 
 El proceso de consolidación de costos operacionales y liquidación formal a transportistas se representa en la Figura 4.10.
 
-![Figura 4.10. Secuencia de estimación de costo por viaje, conciliación de insumos y liquidación ERP](./figuras/4-6-liquidacion.png)
+![Figura 4.10. Secuencia de estimación de costo por viaje, conciliación de insumos y liquidación ERP](./graficos/4-6-liquidacion.png)
 
 *Figura 4.10. Secuencia de estimación de costo por viaje, conciliación de insumos y liquidación ERP*
 
 Fuente: Elaboración propia.
 
-Como ilustra la Figura 4.10, al finalizar el viaje el contexto de Liquidación emite la versión preliminar v1 en menos de 24 horas (Caso, RT-05.29, p. 31), incorporando versiones incrementales auditadas (v2 a vn) a medida que ingresan las cartolas de combustible y telepeaje TAG, hasta consolidar la liquidación mensual definitiva en el sistema contable.
+Como ilustra la Figura 4.10, al finalizar el viaje el contexto de Liquidación emite la versión preliminar v1 en menos de 24 horas (Caso, RT-05.29, pp. 31–32), incorporando versiones incrementales auditadas (v2 a vn) a medida que ingresan las cartolas de combustible y telepeaje TAG, hasta consolidar la liquidación mensual definitiva en el sistema contable.
 
 ### 4.1.18 Modelo táctico del dominio
 
@@ -643,52 +602,33 @@ RT-02.13 exige presentar el modelo de dominio del negocio con las entidades prin
 y los eventos de negocio que las modifican. El modelo táctico de la Figura 4.11 lo entrega
 organizado por contexto delimitado, de modo que cada agregado quede bajo el contexto que lo posee.
 
-![Figura 4.11. Modelo táctico del dominio. Agregados, entidades y servicios por contexto](./figuras/audit-figura-4.6-tactico.png)
+![Figura 4.11. Modelo táctico del dominio. Agregados, entidades y servicios por contexto](./graficos/audit-figura-4.6-tactico.png)
 
 *Figura 4.11. Modelo táctico del dominio. Agregados, entidades y servicios por contexto*
 
-Fuente: Elaboración propia.
+Fuente: D4, figura conservada.
 
 Cada agregado de la figura pertenece a un solo contexto delimitado.
 
-### 4.1.19 Inventario de componentes lógicos
+### 4.1.19 Responsabilidad y emplazamiento de componentes lógicos
 
-El FEP01, Artículo 16.2, p. 11 obliga a justificar el emplazamiento componente por componente. El inventario lógico
-de la Tabla 4.18 clasifica cada componente por capa, latencia exigida, criticidad operacional
-y volumen. Es el insumo directo de la decisión de emplazamiento, que la sección 4.2.3 resume y el
-Formulario T-11 detalla componente por componente.
+La Tabla 4.18 sintetiza responsabilidades y emplazamiento; las cantidades y configuraciones exhaustivas corresponden a T-11. Cada contexto conserva sus datos bajo un propietario y expone contratos, sin acceder a las tablas de otro (FEP01 · Artículo 16.2° · p.11).
 
-**Tabla 4.18.** Inventario de componentes lógicos
+**Tabla 4.18.** Componentes lógicos y fundamento del emplazamiento
 
-| Componente | Capa | Latencia | Criticidad | Volumen |
-|---|---|---|---|---|
-| Distribución de contenidos y cortafuegos | Borde | 50 ms | Crítica | Todo el tráfico web entrante |
-| Puerta de enlace | Borde | 30 ms | Crítica | Toda petición de portal, aplicación e integración |
-| Despacho y asignación | Negocio | 500 ms | Máxima, bloqueante | 96.000 viajes al año |
-| Flota y activos | Negocio | 1 s | Alta | 374 tractocamiones y 210 semirremolques |
-| Personas y cumplimiento | Negocio | 500 ms | Máxima | 454 conductores y cerca de 6.000 vigencias |
-| Gestión documental | Negocio | 2 s | Alta | 128.000 documentos de transporte al año |
-| Tarifas y liquidación | Negocio | 3 s | Media alta | 148 transportistas y 84 clientes |
-| Bus de telemetría | Eventos | 100 ms | Crítica | Ingesta continua con peak de reconexión masiva |
-| Bus transaccional | Eventos | 200 ms | Crítica | Eventos de negocio del ciclo del viaje |
-| Capa anticorrupción | Integración | 500 ms | Alta | Asientos y documentos tributarios |
-| Motor transaccional | Datos | 15 ms | Máxima | 96.000 viajes al año, particionado |
-| Series de tiempo | Datos | 20 ms | Alta | Cerca de 120 millones de registros al año |
-| Caché en memoria | Datos | 5 ms | Crítica | Geocercas de 1.400 puntos, sesiones y vigencias |
-| Almacenamiento inmutable | Datos | 1 s | Alta | Conformidades, certificados y siniestros |
-| Repositorio analítico | Analítica | Segundos | Media | Retención de RT-05.10 del Caso |
-| Capa semántica y tableros | Analítica | 2 s | Media | Gerencia, finanzas y operaciones |
-| Búfer a bordo | Terreno | Inmediata | Máxima | 182 equipos audIT, con la capacidad derivada en la sección 4.2.2 |
-| Ingesta de plataformas de terceros | Integración | 500 ms | Alta | Tres plataformas existentes |
-| Aplicación móvil | Presentación | 1 s | Media alta | Cuatro perfiles de RT-17.01 del Caso |
-| Lector de portería y terminal | Terreno | 2 s | Alta | Cinco terminales y dos talleres |
-| Sistema contable y de facturación | Heredado | No aplica | Externa | Contabilidad y documentos tributarios |
+| Componente | Responsabilidad | Emplazamiento y motivo |
+|---|---|---|
+| Planificación y tráfico | Orden, asignación y retornos | Servicios en AKS; requiere estado coherente de todos los recursos y plazo de 30 s |
+| Flota y activos | Aptitud, semirremolque y taller | AKS; integra maestros acreditados y lectura autorizada. La captura instrumental reside a bordo |
+| Personas y cumplimiento | Evidencia, jornada, habilitaciones y permisos | AKS más registro local; decide con identidad y evidencia conservadas, no con BI |
+| Telemetría y geocercas | Captura, posición, llegada/salida y reconexión | Captura/evaluación de geocerca a bordo; ingesta y vista unificada en nube; funciona sin equipos en recintos del cliente |
+| Operación de fletes | Viaje ocurrido, documento, conformidad y carga peligrosa | AKS más aplicación de terreno; el emisor tributario permanece externo detrás de ACL |
+| Liquidación y costeo | Versiones de costo y liquidación | Servicio y repositorio analítico separado; contable recibe sólo registros aprobados y traducidos |
+| PostgreSQL / TimescaleDB / Redis | Negocio, series y caché, respectivamente | Instancias separadas conforme a S5 y T-11; Redis no es autoridad única de despacho |
+| IoT Hub / Event Hubs / outbox | Admisión, eventos y publicación duradera | Nube con identidad por dispositivo, cuotas, partición, reintento y deduplicación |
+| Búfer, móvil y terminal | Captura sin enlace y copia documental | Equipo local y aplicación por perfil; autonomía y conflictos descritos en 4.1.26 |
 
-*Fuente: elaboración propia sobre el numeral 9.1 transversal y el Caso, numeral 14.1 y RT-09.01.*
-
-Las latencias de esta tabla son objetivos de diseño de audIT derivados de los umbrales del numeral 9.1
-transversal y de RT-09.01 del Caso, salvo las que esos requisitos fijan de manera expresa. La fila del
-búfer a bordo se actualizó a la población de equipos que define la sección 4.2.1.
+La Tabla 4.18 usa los seis nombres canónicos de S3. Los objetivos de latencia son los del Caso; estimaciones de milisegundos de un componente se evalúan como hipótesis y no como prueba de cumplimiento extremo a extremo.
 
 ### 4.1.20 Concurrencia y volumen declarados
 
@@ -705,27 +645,120 @@ de zonas de sombra. La derivación de la concurrencia está en la Tabla 4.19.
 | Transportistas subcontratados en portal | 30 a 50 | Consulta de viajes y de liquidación sobre 148 |
 | Clientes en seguimiento | 50 a 100 | Sesiones de seguimiento sobre 84 clientes activos |
 | Suma aritmética de los rangos | 230 a 380 | Extremo inferior y superior de las cuatro filas |
-| Concurrencia de dimensionamiento | 380 | Se dimensiona sobre el extremo superior real (380 usuarios), y la prueba de carga de RT-09.06 se ejecuta sobre 1,5 veces ese valor (570 usuarios concurrentes) |
+| Concurrencia de dimensionamiento preliminar | 380 | Hipótesis de D3/D1 obtenida al sumar los extremos superiores de los cuatro rangos; no es una medición del Caso ni una concurrencia contractual. S4.2 de D4 mantiene 350 (525 en estrés), mientras D1/T-17 utiliza 380 (570); D3 y D4 deben acordar una única línea base y comunicarla a S7/S9 antes de dimensionar o declarar aceptación. |
 
 *Fuente: elaboración propia sobre el Caso, numeral 14.1, p. 29.*
 
-El volumen anual de telemetría se deriva en la Tabla 4.20.
+El volumen anual y los perfiles de ráfaga se distinguen en la Tabla 4.20. Son supuestos de capacidad solicitados por FEP03 · numeral 14.2 · p.30; se reemplazan por mediciones en el levantamiento.
 
-**Tabla 4.20.** Volumen anual de telemetría derivado
+**Tabla 4.20.** Derivación reproducible de la carga de datos
 
-| Magnitud | Valor | Derivación |
+| Magnitud | Fórmula y resultado | Alcance del supuesto |
 |---|---|---|
-| Kilómetros recorridos al año | 41.000.000 | Numeral 14.1, dato del Caso |
-| Horas de marcha al año | Cerca de 745.000 | Kilómetros sobre la velocidad comercial del supuesto S-01 |
-| Registros de posición en marcha | Cerca de 89 millones al año | Muestreo de 30 segundos sobre las horas de marcha |
-| Registros de posición en detención | Cerca de 30 millones al año | Muestreo de 5 minutos sobre el resto de las horas del año |
-| Volumen de posición en crudo | Cerca de 8 GB al año | 64 bytes por registro, supuesto S-03 |
-| Volumen de telemetría de motor en crudo | Cerca de 7 GB al año | 160 bytes por muestra, una por minuto en marcha |
-| Volumen almacenado | 30 a 40 GB al año | Con índices y tablas de estado sobre los dos anteriores |
+| Horas anuales en marcha | 41.000.000 km / 55 km/h = 745.455 h | Velocidad comercial de diseño; el kilometraje es dato de FEP03 14.1 |
+| Posición en marcha | 745.455 h × 120 muestras/h ≈ 89,45 millones | Cada 30 s; escenario de vista completa futura de 374 unidades, no acceso actual garantizado |
+| Posición detenida | (374 × 8.760 − 745.455) h × 12 muestras/h ≈ 30,37 millones | Cada 5 min; año de 365 días y unidades dentro del alcance autorizado |
+| Posición total y bytes crudos | 119,82 millones × 64 bytes ≈ 7,67 GB/año | Registro binario supuesto; JSON, índices, transporte y réplicas se miden aparte |
+| Motor, escenario inicial de 61 unidades | (745.455 × 61 / 374) h × 60 × 160 bytes ≈ 1,17 GB/año | Reparto proporcional de marcha; autorización y señales reales por fabricante. No se asume CAN activo en toda la flota |
+| Capacidad normal máxima de admisión | 374/30 + 182/60 ≈ 15,5 eventos/s, más eventos de negocio | Escenario simultáneo de diseño; no TPS de despacho ni cantidad de fuentes acreditadas |
+| Asignación en punta | 22 puestos × 1 asignación/30 s ≈ 0,73 TPS; ráfaga propuesta 10× ≈ 7,33 TPS | Hipótesis de carga; no se deriva dividiendo viajes anuales por usuarios |
+| Reconexión de 300 unidades, perfil 72 h de S4/T-17 | 1.786.200 registros y 971.296.800 bytes con fotos; ≥1.861 registros/s en 960 s útiles | 20 min menos 20 % de reserva; ancho útil con overhead/reserva ≈10,12 Mbit/s; prueba CP-PERF-02 |
+| Retención de series en línea | 2 años; posición cruda ≈15,34 GB y motor inicial ≈2,34 GB | Dimensionar además índices, WAL, réplicas, fotos, documentos y crecimiento. Factor físico provisional 3×, sujeto a medición |
 
-*Fuente: elaboración propia sobre el Caso, numeral 14.1, y los supuestos de la sección 4.2.9.*
+La Tabla 4.20 no equivale al tamaño de toda la base de datos: incluye supuestos de muestreo, población y tamaño de registro. Los volúmenes transaccionales e históricos se estiman en el anexo de S5. El perfil por camión de 72 h y la reserva de búfer propuesta de 288 h se conservan separados del volumen anual. El cierre vial de doce días no se equipara automáticamente a doce días sin enlace.
 
-Caso, RT-05.10, p. 31 fija dos años en línea para las series de posición y telemetría, con política de
-agregación declarada para el resto. Ese requisito es el que dimensiona la capa caliente. Conviene dejar
-constancia de que el mismo código, en las Bases Técnicas Transversales, corresponde a una materia
-distinta y de carácter deseable, y que esta oferta se rige por el texto del Caso.
+FEP03 · RT-05.10 · p.31 exige dos años en línea para posición/telemetría, con agregación declarada para el resto. La carga de crecimiento a tres veces la volumetría inicial se prueba según RT-09.03 transversal, además de estrés a 570 sesiones y ráfaga de 300 reconexiones; son ensayos distintos.
+
+### 4.1.21 Modelado de amenazas de la arquitectura
+
+Para la baliza Bluetooth asociada al semirremolque considerada en la innovación, se modelan a nivel de
+diseño las amenazas STRIDE de la Tabla 4.21. Este análisis responde a FEP02, RT-26.07, p. 44; define
+controles propuestos y no constituye evidencia de pruebas de seguridad ejecutadas. Si cambia el
+protocolo o el alcance de la baliza, el modelo debe actualizarse antes de su aprobación.
+
+**Tabla 4.21.** Amenazas y controles de diseño para la baliza y su integración
+
+| Categoría STRIDE | Amenaza considerada | Control de diseño y efecto esperado |
+|---|---|---|
+| Suplantación | Baliza desconocida o asociada a otro semirremolque/viaje | Vincular el identificador registrado con el activo y el viaje vigente; marcar eventos desconocidos o fuera de contexto y excluirlos de la evidencia habilitante |
+| Manipulación | Evento alterado, repetido o fuera de secuencia | Validar esquema y vigencia temporal, conservar procedencia, aplicar deduplicación e idempotencia; comprobar secuencia solo si el protocolo entrega ese dato |
+| Repudio | Disputa sobre el origen o tratamiento del evento | Registrar identificador de fuente, hora de recepción, correlación con viaje y acciones posteriores; enlazar las rectificaciones al registro original. La señal de baliza por sí sola no acredita jornada ni descanso legal |
+| Divulgación de información | Exposición de ubicación o asociación entre conductor y semirremolque | Limitar la consulta a roles autorizados y al viaje/cliente habilitado; minimizar los datos expuestos y proteger su transmisión y almacenamiento en la plataforma |
+| Denegación de servicio | Pérdida, retraso o ráfaga de eventos de baliza | Controlar tasa y vigencia, señalar explícitamente la ausencia o antigüedad de la última señal y degradar la vista sin inventar posiciones ni bloquear otras fuentes disponibles |
+| Elevación de privilegios | Evento de baliza usado para alterar despacho o controlar el vehículo | Mantener la ingesta como entrada de solo lectura; no otorgar a la baliza facultad de actuar sobre CAN ni de cambiar por sí sola estados del viaje o decisiones de despacho |
+
+La Tabla 4.21 acota la baliza como fuente auxiliar: la operación conserva la procedencia del evento y la evaluación independiente de las reglas de despacho y jornada.
+
+### 4.1.22 Estilo, principios de diseño y contratos de dominio
+
+El estilo combina servicios independientes, transacciones locales y eventos. Un monolito modular ofrece menor costo de operación, pero no satisface el despliegue independiente exigido para los componentes críticos; una cadena síncrona de servicios multiplica tiempos de espera; SOA con orquestación central concentra fallas. Los seis contextos con API para decisiones inmediatas y eventos para efectos derivados separan la carga de ~15,5 eventos/s normal de la ráfaga de reconexión de ~1.861 registros/s, sin deducir el estilo únicamente del volumen anual.
+
+Se aplica SOLID de forma verificable: cada servicio mantiene una responsabilidad de contexto (SRP); nuevos proveedores se incorporan mediante adaptadores del mismo contrato (OCP); todo adaptador debe superar las pruebas comunes de ese contrato (LSP); las interfaces de jornada, permisos y liquidación se segregan según su consumidor (ISP); el dominio depende de puertos de repositorio/mensajería y no del SDK cloud (DIP). Se documentan vistas y preocupaciones bajo ISO/IEC/IEEE 42010 y gobierno arquitectónico equivalente a TOGAF mediante ADR, Comité de Arquitectura y revisión mensual (FEP01 · Artículo 4.3° · p.5).
+
+La Tabla 4.22 completa la Figura 4.11 con comandos y eventos. Los nombres de contratos se proponen para implementación; cada evento lleva ID, agregado, versión, secuencia y correlación, con esquemas AsyncAPI y política de compatibilidad.
+
+**Tabla 4.22.** Responsabilidad, comandos y eventos por contexto
+
+| Contexto | Comando principal | Evento derivado y consumidor |
+|---|---|---|
+| Planificación y tráfico | AsignarRecursos / ReprogramarViaje | ViajeAsignado → Operación, Telemetría; rechazo conservado en auditoría |
+| Flota y activos | AcreditarVigencia / RegistrarIntervencion | AptitudEquipoActualizada → Planificación; invalida proyección afectada |
+| Personas y cumplimiento | EvaluarAsignacion / RevocarPermiso | JornadaActualizada y PermisoRevocado → Planificación y canales autorizados |
+| Telemetría y geocercas | IngerirLote / EvaluarGeocerca | LlegadaRegistrada / SalidaRegistrada → Operación; posición autorizada al portal |
+| Operación de fletes | SolicitarDocumento / CerrarViaje | DocumentoDisponible / ViajeCerrado → Planificación y Liquidación |
+| Liquidación y costeo | CalcularCosto / AprobarLiquidacion | CostoVersionado / LiquidacionAprobada → portal y ACL contable |
+
+La Tabla 4.22 no requiere una transacción distribuida entre seis bases. Planificación valida versiones y reservas en su transacción; los contextos conservan sus agregados y publican efectos desde outbox. Cambios invalidantes concurrentes fuerzan una nueva evaluación antes de confirmar.
+
+### 4.1.23 Trazabilidad del alcance de Informe 2
+
+El T-12 vigente mantiene los 28 RF y 14 RNF, sus paquetes EDT y casos CP asociados. Los contratos de S4.1 se corresponden con ese catálogo. Los componentes se ubican en la Tabla 4.18 y la Figura 4.1. RF-001 atraviesa Planificación, Personas y Flota; RF-013/RF-014 terminan en ACL y contable; RNF-008 atraviesa borde, ingesta y persistencia. Esta relación permite comprobar cobertura del alcance sin convertir el cuerpo en inventario de formularios.
+
+### 4.1.24 Seguridad lógica y superficie de exposición
+
+El acceso público termina en Front Door/WAF y API Management; bases, bus, secretos y servicios internos permanecen en red privada conforme a RT-03.04. El seguimiento sin autenticación muestra sólo el estado del envío mediante número de documento, sin posición personal ni historial del transportista (FEP03 · RT-16.30 · p.33). Los portales autenticados evalúan rol, transportista, recurso, cliente, viaje activo, finalidad y permiso vigente en cada petición.
+
+Entra ID autentica personas y los equipos usan identidad/certificado individual revocable. El conductor se identifica estando detenido, mediante tarjeta/token asignado y vinculación a persona y viaje; la validación con guantes y rotación de conductores pertenece a S9, sin exigir una contraseña recordada ni interacción en marcha (RT-12.11/RT-13.08 del Caso). Identidades administradas acceden a Key Vault; claves y secretos no aparecen en código ni URI. Se cifra el transporte y los campos exigidos por RT-11.10, con separación de claves y roles. Los accesos sensibles se registran con qué se mostró y autorización utilizada, conforme a RT-16.09 del Caso.
+
+Se verifican, como mínimo, suplantación de dispositivo y baliza, alteración/repetición de eventos, repudio de firma, consulta entre transportistas, saturación de reconexiones y elevación a administración. La Tabla 4.21 cubre STRIDE de la baliza; las pruebas del resto se trazan a S9/T-17. Ni el hash ni el cifrado por sí solos acreditan cumplimiento legal o seguridad integral.
+
+### 4.1.25 Ambientes y liberación
+
+DEV usa datos sintéticos; QA contiene escenarios y simuladores reproducibles; PREPROD reproduce integraciones y configuración sin accesos de producción; PROD contiene los datos autorizados y cambios aprobados; DR replica los componentes críticos bajo el mecanismo jurídico y de continuidad de S5/S4.3. Cada ambiente tiene identidades, secretos, redes, almacenes y permisos separados. La configuración se versiona como código y se promueve el mismo artefacto firmado según S6.
+
+La aceptación incluye pruebas de contratos, carga, reconexión, evidencia, permisos y reversión. Activar Brazil South con datos personales exige un mecanismo de transferencia documentado; deshabilitar esa réplica sin otro sitio secundario operativo tampoco acredita RPO ≤15 min/RTO ≤4 h. La revisión jurídica y la conmutación probada son puertas conjuntas de producción.
+
+### 4.1.26 Operación desconectada, reconexión y escalamiento
+
+A bordo se conservan posición, eventos de jornada, llegada/salida y documentos durante al menos 72 h. En terminal se adopta el mayor mínimo: 24 h del RT-03.10 transversal frente a 12 h del Caso. La captura local emplea SQLite/WAL y outbox; la aplicación comparte identidad y catálogos vigentes con el nodo autorizado. La operación local no inventa vigencias, permisos ni asignaciones globales. Toda nueva asignación requiere acceso al servicio autoritativo de reserva. RN-04 sólo excepciona una fuente de evidencia indisponible bajo sus controles; no sustituye la reserva, la legalidad ni el documento conforme necesario para el movimiento.
+
+La Figura 4.12 muestra la reconexión: autenticación, lotes numerados, admisión, deduplicación, commit y acuse duradero. Sólo el último acuse permite depurar el búfer. La conciliación conserva el original y la resolución de conflictos; el timestamp de recepción no reemplaza la hora del evento.
+
+![Figura 4.12. Reconexión con acuse posterior a persistencia y conciliación](./graficos/4-7-reconexion.png)
+
+*Figura 4.12. Reconexión. Fuente: elaboración D3 con el lienzo de D4.*
+
+CP-PERF-02 debe demostrar ≤20 min para cada camión después de 72 h, con 300 unidades simultáneas y sin pérdida de jornada ni tiempos de cliente. La admisión por IoT Hub no demuestra entrega final. Las 288 h propuestas y la capacidad de búfer de S4.2 requieren otro ensayo; no sustituyen esta prueba contractual.
+
+El escalamiento propuesto usa mínimo dos réplicas por contexto, aumento al superar CPU 65 % o retraso de consumo 30 s durante dos minutos, con reducción sólo tras diez minutos estables. Máximo inicial: ocho réplicas de ingesta y cuatro por servicio de negocio, sujeto al perfil y cuotas de S4.2/T-11. Los mamparos reservan recursos para despacho, documento y emergencia. Al alcanzar el máximo se alerta a operación y se limita carga no crítica; no se incrementa capacidad ni costo sin registro. El impacto económico de esos límites corresponde al Sobre 3. S9 mide latencia completa, saturación, costo de recursos y recuperación antes de aceptar el perfil.
+
+## Referencias
+
+Microsoft. (s.f.). *Políticas de soporte de .NET y documentación de Azure PostgreSQL, Event Hubs y Managed Redis*. Enlaces primarios junto a la Tabla 4.1; consulta 11-10-2026.
+
+PostgreSQL Global Development Group. (s.f.). *Versioning policy*. https://www.postgresql.org/support/versioning/
+
+The Go Authors. (s.f.). *Release history and release policy*. https://go.dev/doc/devel/release
+
+Iridium. (s.f.). *RockBLOCK 9603: tamaños de mensaje*. https://www.iridium.com/products/rockblock-9603
+
+Servicio de Impuestos Internos. (2019). *Resolución Exenta N.º 99*. https://www.sii.cl/normativa_legislacion/resoluciones/2019/reso99.pdf
+
+## Declaración de uso de IA
+
+Se conserva el diseño previo y se declaran los cambios asistidos del 11-10-2026. La revisión humana de ingeniería permanece pendiente; no se atribuyen ensayos ni conformidad humana al asistente (Comunicado 10, secciones 7.1–7.2).
+
+| Sección | Herramienta | Finalidad | Nivel en texto | Nivel en diagramas | Revisión humana |
+|---|---|---|---|---|---|
+| 4, 4.1 y 4.1.1–4.1.26 | OpenAI Codex (GPT-6), sobre fuentes previas del repositorio | Contraste con bases/S3/S5/S6/S7/S9; corrección de contratos, decisiones y capacidad | Alto | Alto en figuras regeneradas; incluye figuras D4 conservadas o adaptadas | Pendiente: D3 debe revisar decisiones y supuestos; D1/D2/D4 concilian interfaces antes de entrega |
+| Formulario T-11 | Sin intervención en esta revisión; responsabilidad de D4 | Consultado para concordancia de productos y cantidades | Ninguno | Ninguno | Declaración propia del formulario y validación de D4 |

@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="148.9mm" height="197.6mm" viewBox="0 0 422 560">
+<defs><marker id="fin-n" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="5.5" markerHeight="5.5" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#2B2B2B"/></marker><marker id="ini-n" viewBox="0 0 10 10" refX="0.5" refY="5" markerWidth="5.5" markerHeight="5.5" markerUnits="userSpaceOnUse" orient="auto"><path d="M10,0.8 L0,5 L10,9.2 z" fill="#2B2B2B"/></marker><marker id="fin-r" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="5.5" markerHeight="5.5" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#C0392B"/></marker><marker id="ini-r" viewBox="0 0 10 10" refX="0.5" refY="5" markerWidth="5.5" markerHeight="5.5" markerUnits="userSpaceOnUse" orient="auto"><path d="M10,0.8 L0,5 L10,9.2 z" fill="#C0392B"/></marker><symbol id="ic-flu-corona" viewBox="0 0 32 32" fill="none">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M6.93979 23.5C6.93979 24.3726 6.23239 25.08 5.35979 25.08C4.48718 25.08 3.77979 24.3726 3.77979 23.5C3.77979 22.6274 4.48718 21.92 5.35979 21.92C6.23239 21.92 6.93979 22.6274 6.93979 23.5ZM28.1998 23.5C28.1998 24.3726 27.4924 25.08 26.6198 25.08C25.7472 25.08 25.0398 24.3726 25.0398 23.5C25.0398 22.6274 25.7472 21.92 26.6198 21.92C27.4924 21.92 28.1998 22.6274 28.1998 23.5Z" fill="#00A6ED"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M10.2498 13.27L13.4298 17.54L6.83984 18.3L8.95984 13.41C8.44984 13.21 8.08984 12.71 8.08984 12.13C8.08984 11.37 8.70984 10.75 9.46984 10.75C10.2298 10.75 10.8498 11.37 10.8498 12.13C10.8498 12.61 10.6098 13.02 10.2498 13.27ZM23.01 13.41L25.13 18.3L18.54 17.54L21.72 13.27C21.36 13.02 21.12 12.6 21.12 12.13C21.12 11.37 21.74 10.75 22.5 10.75C23.26 10.75 23.88 11.37 23.88 12.13C23.88 12.71 23.52 13.21 23.01 13.41Z" fill="#E19747"/>
+<path d="M29.98 13.09C29.98 12.33 29.36 11.71 28.6 11.71C27.84 11.71 27.22 12.33 27.22 13.09C27.22 13.37 27.31 13.64 27.45 13.85C27.23 13.85 27.01 13.9 26.8 14.04L22.87 16.58C22.35 16.91 21.67 16.79 21.3 16.29L16.93 10.36C16.9 10.31 16.86 10.27 16.82 10.23C17.35 9.94001 17.71 9.37 17.71 8.72C17.71 7.77 16.94 7 15.99 7C15.04 7 14.27 7.77 14.27 8.72C14.27 9.37 14.63 9.94001 15.16 10.23C15.12 10.27 15.08 10.31 15.05 10.36L10.68 16.29C10.32 16.79 9.63 16.91 9.11 16.58L5.18 14.04C4.97 13.9 4.75 13.85 4.53 13.85C4.68 13.63 4.76 13.37 4.76 13.09C4.76 12.33 4.14 11.71 3.38 11.71C2.62 11.71 2 12.33 2 13.09C2 13.85 2.62 14.47 3.38 14.47C3.43 14.47 3.48 14.47 3.52 14.46C3.39 14.69 3.34 14.96 3.4 15.25L6 28.22C6.19 29.15 7.01 29.82 7.96 29.82H10.03H15.99H21.95H24.02C24.97 29.82 25.79 29.15 25.98 28.22L28.58 15.25C28.64 14.96 28.58 14.68 28.46 14.46C28.51 14.46 28.56 14.47 28.6 14.47C29.36 14.47 29.98 13.85 29.98 13.09Z" fill="#FFB02E"/>
+<path d="M15.99 26C17.3707 26 18.49 24.8807 18.49 23.5C18.49 22.1193 17.3707 21 15.99 21C14.6093 21 13.49 22.1193 13.49 23.5C13.49 24.8807 14.6093 26 15.99 26Z" fill="#00A6ED"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M11 23.5C11 24.3284 10.3284 25 9.5 25C8.67157 25 8 24.3284 8 23.5C8 22.6716 8.67157 22 9.5 22C10.3284 22 11 22.6716 11 23.5ZM24 23.5C24 24.3284 23.3284 25 22.5 25C21.6716 25 21 24.3284 21 23.5C21 22.6716 21.6716 22 22.5 22C23.3284 22 24 22.6716 24 23.5Z" fill="#F8312F"/>
+</symbol><symbol id="ic-pr-adaptador" viewBox="0 0 48 48"><rect x="4" y="15" width="15" height="18" rx="2.5" fill="#0074BA"/><rect x="19" y="19" width="7.5" height="2.8" rx="0.6" fill="#9B9B9B"/><rect x="19" y="26.2" width="7.5" height="2.8" rx="0.6" fill="#9B9B9B"/><rect x="29" y="15" width="15" height="18" rx="2.5" fill="#00A6ED"/><rect x="27.5" y="18.5" width="2" height="11" rx="0.5" fill="#433B6B"/></symbol></defs>
+<rect x="0" y="0" width="422" height="560" fill="#FFFFFF"/>
+<g id="grupos">
+<rect x="8.00" y="8.00" width="166.00" height="136.00" rx="10" fill="#FFFFFF" stroke="#404040" stroke-width="0.75" stroke-dasharray="3.5 2.5"/>
+<rect x="18.00" y="38.00" width="146.00" height="22.00" rx="4" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="18.00" y="68.00" width="146.00" height="22.00" rx="4" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="248.00" y="8.00" width="166.00" height="136.00" rx="10" fill="#FFFFFF" stroke="#404040" stroke-width="0.75" stroke-dasharray="3.5 2.5"/>
+<rect x="258.00" y="34.00" width="146.00" height="33.00" rx="4" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="258.00" y="80.00" width="146.00" height="33.00" rx="4" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="8.00" y="186.00" width="166.00" height="136.00" rx="10" fill="#FFFFFF" stroke="#404040" stroke-width="0.75" stroke-dasharray="3.5 2.5"/>
+<rect x="18.00" y="216.00" width="146.00" height="44.00" rx="4" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="248.00" y="186.00" width="166.00" height="136.00" rx="10" fill="#FFFFFF" stroke="#404040" stroke-width="0.75" stroke-dasharray="3.5 2.5"/>
+<rect x="258.00" y="216.00" width="146.00" height="22.00" rx="4" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="258.00" y="246.00" width="146.00" height="37.00" rx="4" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="8.00" y="364.00" width="166.00" height="136.00" rx="10" fill="#FFFFFF" stroke="#404040" stroke-width="0.75" stroke-dasharray="3.5 2.5"/>
+<rect x="18.00" y="394.00" width="146.00" height="22.00" rx="4" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="18.00" y="424.00" width="146.00" height="37.00" rx="4" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="248.00" y="364.00" width="166.00" height="136.00" rx="10" fill="#FFFFFF" stroke="#404040" stroke-width="0.75" stroke-dasharray="3.5 2.5"/>
+<rect x="258.00" y="394.00" width="146.00" height="55.00" rx="4" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+</g>
+<g id="flechas">
+<path d="M108.00,144.00 L108.00,186.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" stroke-dasharray="3.5 2.5" marker-end="url(#fin-n)"/>
+<path d="M331.00,186.00 L331.00,144.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" stroke-dasharray="3.5 2.5" marker-end="url(#fin-n)"/>
+<path d="M248.00,286.00 L174.00,286.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" stroke-dasharray="3.5 2.5" marker-end="url(#fin-n)"/>
+<path d="M331.00,364.00 L331.00,322.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" stroke-dasharray="3.5 2.5" marker-end="url(#fin-n)"/>
+<path d="M48.00,322.00 L48.00,364.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" stroke-dasharray="3.5 2.5" marker-end="url(#fin-n)"/>
+<path d="M138.00,322.00 L138.00,364.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" stroke-dasharray="3.5 2.5" marker-end="url(#fin-n)"/>
+<path d="M91.00,500.00 L91.00,516.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" stroke-dasharray="3.5 2.5" marker-end="url(#fin-n)"/>
+</g>
+<g id="iconos">
+<use href="#ic-flu-corona" x="386.00" y="39.00" width="12.00" height="12.00"/>
+<use href="#ic-flu-corona" x="386.00" y="85.00" width="12.00" height="12.00"/>
+<use href="#ic-flu-corona" x="146.00" y="221.00" width="12.00" height="12.00"/>
+<use href="#ic-flu-corona" x="386.00" y="399.00" width="12.00" height="12.00"/>
+<rect x="77.29" y="160.80" width="61.42" height="9.90" fill="#FFFFFF"/>
+<rect x="278.56" y="160.80" width="104.87" height="9.90" fill="#FFFFFF"/>
+<rect x="177.33" y="275.80" width="67.33" height="9.90" fill="#FFFFFF"/>
+<rect x="185.32" y="286.40" width="51.37" height="9.90" fill="#FFFFFF"/>
+<rect x="277.71" y="338.80" width="106.57" height="9.90" fill="#FFFFFF"/>
+<rect x="36.54" y="330.80" width="22.93" height="9.90" fill="#FFFFFF"/>
+<rect x="30.83" y="341.40" width="34.34" height="9.90" fill="#FFFFFF"/>
+<rect x="112.99" y="330.80" width="50.03" height="9.90" fill="#FFFFFF"/>
+<rect x="121.04" y="341.40" width="33.92" height="9.90" fill="#FFFFFF"/>
+<rect x="45.98" y="512.80" width="90.04" height="9.90" fill="#FFFFFF"/>
+<use href="#ic-pr-adaptador" x="79.00" y="518.00" width="24.00" height="24.00"/>
+</g>
+<g id="textos">
+<text x="16.00" y="23.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">Planificación y tráfico</text>
+<text x="26.00" y="53.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">Orden de transporte</text>
+<text x="158.00" y="53.00" font-size="9" font-family="IBM Plex Sans" text-anchor="end" fill="#000000">entidad</text>
+<text x="26.00" y="83.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">Asignación</text>
+<text x="158.00" y="83.00" font-size="9" font-family="IBM Plex Sans" text-anchor="end" fill="#000000">entidad</text>
+<text x="256.00" y="23.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">Flota y activos</text>
+<text x="266.00" y="49.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">Tractocamión</text>
+<text x="266.00" y="61.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">Vigencia, entidad</text>
+<text x="266.00" y="95.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">Semirremolque</text>
+<text x="266.00" y="107.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">Vigencia, entidad</text>
+<text x="16.00" y="201.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">Operación de fletes</text>
+<text x="26.00" y="231.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">Viaje</text>
+<text x="26.00" y="243.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">Sobreestadía, entidad</text>
+<text x="26.00" y="254.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">Gasto operacional, valor</text>
+<text x="256.00" y="201.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">Telemetría y geocercas</text>
+<text x="266.00" y="231.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">Posición</text>
+<text x="398.00" y="231.00" font-size="9" font-family="IBM Plex Sans" text-anchor="end" fill="#000000">entidad</text>
+<text x="266.00" y="261.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">Geocerca de</text>
+<text x="266.00" y="272.50" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">punto de carga</text>
+<text x="398.00" y="261.00" font-size="9" font-family="IBM Plex Sans" text-anchor="end" fill="#000000">entidad</text>
+<text x="16.00" y="379.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">Liquidación y costeo</text>
+<text x="26.00" y="409.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">Costo del viaje</text>
+<text x="158.00" y="409.00" font-size="9" font-family="IBM Plex Sans" text-anchor="end" fill="#000000">entidad</text>
+<text x="26.00" y="439.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">Liquidación del</text>
+<text x="26.00" y="450.50" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">transportista</text>
+<text x="158.00" y="439.00" font-size="9" font-family="IBM Plex Sans" text-anchor="end" fill="#000000">entidad</text>
+<text x="256.00" y="379.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">Personas y cumplimiento</text>
+<text x="266.00" y="409.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">Conductor</text>
+<text x="266.00" y="421.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">Vigencia, entidad</text>
+<text x="266.00" y="432.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">Jornada del conductor, entidad</text>
+<text x="266.00" y="443.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">Consentimiento de datos, valor</text>
+<text x="108.00" y="168.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Viaje asignado</text>
+<text x="331.00" y="168.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Semirremolque acoplado</text>
+<text x="211.00" y="283.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Llegada y salida</text>
+<text x="211.00" y="293.60" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">en un punto</text>
+<text x="331.00" y="346.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Consentimiento revocado</text>
+<text x="48.00" y="338.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Viaje</text>
+<text x="48.00" y="348.60" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">cerrado</text>
+<text x="138.00" y="338.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Documento</text>
+<text x="138.00" y="348.60" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">emitido</text>
+<text x="91.00" y="520.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Liquidación aprobada</text>
+<text x="91.00" y="553.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Capa anticorrupción</text>
+</g>
+</svg>

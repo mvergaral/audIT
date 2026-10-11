@@ -10,19 +10,19 @@ El FEP01, Artículo 46, p. 28 pide resolver en cada informe las observaciones de
 
 | N.º | Observación | Respuesta | Sección modificada |
 |---|---|---|---|
-| 02 | Formulario T-19 diferido a la propuesta final cuando el ítem 13 de las bases lo incluye en esta instancia. | Se acepta. Se acoge la observación. Se implementa en el Formulario T-19 y Secciones 13.2 a 13.6, entregando las cinco (5) fichas técnicas completas del Formulario T-19 estructuradas bajo los siete elementos mandatorios del Artículo 29 para cada innovación. Verificado y cerrado. | Anexo Formulario T-19 (Fichas Tipo 1 a 5) y Secciones 13.2 a 13.6. |
-| 88 | La innovación tipo 3 es el RT-03.10 y RT-03.13; es una exigencia base presentada como innovación (prohibido por Art. 30). | Se acepta. Se acoge la observación. Se implementa en la Sección 13.4 y Formulario T-19 (Ficha Tipo 3), reemplazando la propuesta por una innovación arquitectónica genuina (Arquitectura Híbrida de Ingesta y Búfer Desacoplado con Compresión Protobuf en Borde), respetando el Art. 30. Verificado y cerrado. | Sección 13.4 y Formulario T-19 (Ficha Tipo 3). |
-| 89 | La innovación tipo 2 es el método que imponen las restricciones del Capítulo 6 y el numeral 13.3. | Se acepta. La innovación 2 actual se denomina «Despliegue continuo y modular sin detención de flota» en S13 §13.2. Describe kits de reemplazo y aprovisionamiento, sobre restricciones obligatorias del Caso. El cierre exige demostrar qué mejora medible adicional aporta frente a ese cumplimiento mínimo; no se afirma diferenciación por renombrarla ni se remite a §13.3, que corresponde a innovación 3. | S13 §13.2 y ficha tipo 2 del T-19; restricciones del Caso y evidencia de mejora incremental. |
-| 90 | Las fichas T-19 con los 7 elementos del Art. 29 se difieren a la propuesta final en vez de entregarse. | Se acepta. Se acoge la observación. Se implementa en el Formulario T-19 (Fichas Tipo 1 a 5), entregando las cinco (5) fichas técnicas completas estructuradas rigurosamente según los siete elementos mandatorios del Art. 29. Verificado y cerrado. | Anexo Formulario T-19 (Fichas Tipo 1 a 5). |
-| 91 | Los tipos 2 y 3 no traen madurez, impacto económico ni riesgos; el tipo 5 no trae riesgo y el tipo 1 solo inversión. | Se acepta. S13 incorpora declaraciones de madurez e impacto para innovaciones 2/3 y riesgos para innovación 3. La ficha tipo 5 desarrolla madurez declarada, inversión, operación, método de beneficio, indicadores y riesgo de adopción. Es contenido documentado, no evidencia de ensayos ni valorización. La declaración STRIDE de innovación 3 remite a contenido no identificado en S4 y sus códigos EDT 3.4/4.4 discrepan del aviso de arquitectura; no se certifica cumplimiento de las cinco fichas. | S13 §§13.2/13.3 y fichas 2/3; ficha tipo 5 local §§4, 6, 7 y 8; conciliación económica en observación 97. |
-| 92 | En la tabla del tipo 3 las líneas base están inventadas y la meta está redactada al revés respecto del RT-03.13. | Se acepta. Se acoge la observación. Se implementa en la Sección 13.4, corrigiendo el sentido de la meta y eliminando las líneas base no sustentadas, comprometiendo calibración empírica en marcha blanca. Verificado y cerrado. | Sección 13.4. |
-| 93 | El tipo 5 usa cifras no medidas (NASA-TLX 68 pts, 1,2 % diésel, 22 % adherencia, costo por evento). | Se acepta. La ficha tipo 5 elimina la atribución de una línea base histórica cero sin medición, mantiene metas como compromisos de ensayo y condiciona datos GPS históricos a permisos. No acredita medición realizada ni actualización de S13. | Ficha T-19 tipo 5, sección 7; integración externa S13 §13.5. |
-| 94 | Las 280 horas de desarrollo son información de esfuerzo de la oferta dentro de la Oferta Técnica (contra Art. 50.2). | Se acepta. La ficha tipo 5 identifica conceptos y códigos de partidas sin precios, tarifas ni horas de desarrollo. Su contenido local no acredita depuración de la versión compilada de S13. | Ficha T-19 tipo 5, sección 6; cotejo externo S13. |
-| 95 | El tipo 4 cuantifica un recupero anual en pesos; son cifras del caso pero conviene retirarlas. | Se acepta. Se acoge la observación. Se implementa en la Sección 13.5 y Formulario T-19 (Ficha Tipo 4), retirando todas las cifras en moneda local (\$ CLP) y reformulando el análisis en porcentajes de optimización operativa y eficiencia de retorno. Verificado y cerrado. | Sección 13.5 y Formulario T-19 (Ficha Tipo 4). |
-| 97 | No hay trazabilidad con el flujo de caja para ninguna innovación y la tipo 4 debía reflejarse en estructura de costos. | Se acepta. La ficha tipo 5 desarrolla alcance incremental, períodos de inversión y soporte, método de beneficio, reglas contra duplicidades y conciliación entre partidas y celdas del modelo. Se identifican innovacion-5-inversion, innovacion-5-costo e innovacion-5-beneficio, con valores y referencias de planilla vacíos en los catálogos económicos de las dos versiones examinadas (formato compartido y copia de arquitectura); sus carpetas económicas no contienen modelo XLSX. La constatación se limita a esas fuentes y no prueba incorporación en otra versión. Se acredita trazabilidad conceptual, no incorporación al flujo de caja ni cierre. FEP01 T-22 exige valorización en Informe 3 y E-21 §2.7/Entregable 3 en Sobre 3. El cierre requiere estimaciones aprobadas, distribución mensual y concordancia de modelo y documentos; las otras innovaciones se verifican por separado. | Ficha T-19 tipo 5, §§6.1–6.5 y Tablas 19.3-A/B/C; FEP01 Art. 29.5, T-22 pp. 69–70, E-21 pp. 71–73; partidas de innovación 5 y modelo financiero. |
-| 98 | Declarar "investigación adicional requerida" en cada ficha equivale a declarar que la innovación no está diseñada. | Se aclara. La ficha tipo 5 declara TRL 6 para el modelo predictivo y objetivo TRL 7 tras piloto M13–M15, distinguiendo componentes comerciales. No afirma validación conseguida sin expediente. Este cambio no acredita revisión de las otras fichas ni actualización del S13 compilado. | Ficha T-19 tipo 5, sección 4 y Tabla 19.3; expediente de validación e integración externa S13. |
-| 99 | El punto 1.6 sobre estado de elaboración y responsables refleja organización interna, ininteligible para el mandante. | Se acepta. Se acoge la observación. Se implementa en la Sección 13.6 (eliminada), eliminando toda mención a la organización interna o división del trabajo entre proponentes; la titularidad se unifica en audIT SpA. Verificado y cerrado. | Sección 13.6 (eliminada). |
-| 100 | Cita al autor de las bases como autor, tabla partida entre páginas y cero figuras. | Se acepta. Se acoge la observación. Se implementa en el Subdocumento 13 completo, depurando la bibliografía bajo APA 7.ª edición, corrigiendo tablas e incorporando diagramas arquitectónicos explicativos. Verificado y cerrado. | Subdocumento 13 completo. |
+| 02 | Formulario T-19 diferido a la propuesta final cuando el ítem 13 de las bases lo incluye en esta instancia. | Se acepta. Se acoge la observación. La respuesta de trabajo propone la siguiente medida, cuya implementación no se acredita en este lote: «Se entregan las cinco (5) fichas técnicas completas del Formulario T-19, desglosando los siete elementos mandatorios del Artículo 29 para cada innovación.». Su cierre requiere examen de la fuente y de la evidencia correspondiente; no se declara realizada esa revisión para capítulos ajenos al lote S1/S2/S9 y al cálculo de S4. | Anexo Formulario T-19 (Fichas Tipo 1 a 5) y Secciones 13.2 a 13.6. |
+| 88 | La innovación tipo 3 es el RT-03.10 y RT-03.13; es una exigencia base presentada como innovación (prohibido por Art. 30). | Se acepta. Se acoge la observación. La respuesta de trabajo propone la siguiente medida, cuya implementación no se acredita en este lote: «Se reemplaza la ficha por una innovación arquitectónica genuina (Arquitectura Híbrida de Ingesta y Buffer Desacoplado con Compresión Protobuf en Borde), respetando el Art. 30.». Su cierre requiere examen de la fuente y de la evidencia correspondiente; no se declara realizada esa revisión para capítulos ajenos al lote S1/S2/S9 y al cálculo de S4. | Sección 13.4 y Formulario T-19 (Ficha Tipo 3). |
+| 89 | La innovación tipo 2 es el método que imponen las restricciones del Capítulo 6 y el numeral 13.3. | Se acepta. Se acoge la observación. La respuesta de trabajo propone la siguiente medida, cuya implementación no se acredita en este lote: «Se reformula la Innovación Tipo 2 como una optimización avanzada de procesos logísticos que supera las restricciones operativas básicas.». Su cierre requiere examen de la fuente y de la evidencia correspondiente; no se declara realizada esa revisión para capítulos ajenos al lote S1/S2/S9 y al cálculo de S4. | Sección 13.3 y Formulario T-19 (Ficha Tipo 2). |
+| 90 | Las fichas T-19 con los 7 elementos del Art. 29 se difieren a la propuesta final en vez de entregarse. | Se acepta. Se acoge la observación. La respuesta de trabajo propone la siguiente medida, cuya implementación no se acredita en este lote: «Se entregan las cinco (5) fichas técnicas completas del Formulario T-19 estructuradas rigurosamente según los siete elementos mandatorios del Art. 29.». Su cierre requiere examen de la fuente y de la evidencia correspondiente; no se declara realizada esa revisión para capítulos ajenos al lote S1/S2/S9 y al cálculo de S4. | Anexo Formulario T-19 (Fichas Tipo 1 a 5). |
+| 91 | Los tipos 2 y 3 no traen madurez, impacto económico ni riesgos; el tipo 5 no trae riesgo y el tipo 1 solo inversión. | Se acepta. Se acoge la observación. La respuesta de trabajo propone la siguiente medida, cuya implementación no se acredita en este lote: «Se desarrollan exhaustivamente los 7 elementos mandatorios en cada una de las 5 fichas (TRL ISO 16290, impacto económico cualitativo/relativo y matriz de riesgos de adopción con contingencia).». Su cierre requiere examen de la fuente y de la evidencia correspondiente; no se declara realizada esa revisión para capítulos ajenos al lote S1/S2/S9 y al cálculo de S4. | Anexo Formulario T-19 (Fichas Tipo 1 a 5). |
+| 92 | En la tabla del tipo 3 las líneas base están inventadas y la meta está redactada al revés respecto del RT-03.13. | Se acepta. Se acoge la observación. La respuesta de trabajo propone la siguiente medida, cuya implementación no se acredita en este lote: «Se corrigió el sentido de la meta y se eliminaron las líneas base no sustentadas, comprometiendo calibración empírica en marcha blanca.». Su cierre requiere examen de la fuente y de la evidencia correspondiente; no se declara realizada esa revisión para capítulos ajenos al lote S1/S2/S9 y al cálculo de S4. | Sección 13.4. |
+| 93 | El tipo 5 usa cifras no medidas (NASA-TLX 68 pts, 1,2 % diésel, 22 % adherencia, costo por evento). | Se acepta. Se acoge la observación. La respuesta de trabajo propone la siguiente medida, cuya implementación no se acredita en este lote: «Se purgan todas las cifras ficticias; se reemplazan por el compromiso formal de medición de línea base empírica en terminales (NASA-TLX) y validación en Marcha Blanca (combustible y paradores) según Art. 13.4.». Su cierre requiere examen de la fuente y de la evidencia correspondiente; no se declara realizada esa revisión para capítulos ajenos al lote S1/S2/S9 y al cálculo de S4. | S13 §13.6 y `AUDIT-Formulario-T-19-Tipo5.md` Secc. 6 y 7. |
+| 94 | Las 280 horas de desarrollo son información de esfuerzo de la oferta dentro de la Oferta Técnica (contra Art. 50.2). | Se acepta. Se acoge la observación. La respuesta de trabajo propone la siguiente medida, cuya implementación no se acredita en este lote: «Se purga totalmente cualquier mención a esfuerzo, tarifas o costos de desarrollo en la propuesta técnica, salvaguardando el secreto de la oferta económica.». Su cierre requiere examen de la fuente y de la evidencia correspondiente; no se declara realizada esa revisión para capítulos ajenos al lote S1/S2/S9 y al cálculo de S4. | S13 §13.6 y `AUDIT-Formulario-T-19-Tipo5.md` Secc. 6. |
+| 95 | El tipo 4 cuantifica un recupero anual en pesos; son cifras del caso pero conviene retirarlas. | Se acepta. Se acoge la observación. La respuesta de trabajo propone la siguiente medida, cuya implementación no se acredita en este lote: «Se retiran todas las cifras en moneda local (\$ CLP), reformulando el análisis en porcentajes de optimización operativa y eficiencia de retorno.». Su cierre requiere examen de la fuente y de la evidencia correspondiente; no se declara realizada esa revisión para capítulos ajenos al lote S1/S2/S9 y al cálculo de S4. | Sección 13.5 y Formulario T-19 (Ficha Tipo 4). |
+| 97 | No hay trazabilidad con el flujo de caja para ninguna innovación y la tipo 4 debía reflejarse en estructura de costos. | Se acepta. Se acoge la observación. La respuesta de trabajo propone la siguiente medida, cuya implementación no se acredita en este lote: «Se detalla la trazabilidad funcional de cada innovación con la estructura de costos operacionales y de soporte del servicio.». Su cierre requiere examen de la fuente y de la evidencia correspondiente; no se declara realizada esa revisión para capítulos ajenos al lote S1/S2/S9 y al cálculo de S4. | Sección 13.7. |
+| 98 | Declarar "investigación adicional requerida" en cada ficha equivale a declarar que la innovación no está diseñada. | Se aclara. La afirmación previa de madurez TRL 7/8 no se mantiene como acreditación: requiere evidencia de validación operacional que este lote no examina. La respuesta y las fichas de innovación de S13/T-19 quedan por cotejar; no se declara diseño completo, conformidad ni nivel TRL conseguido. El trabajo de investigación no forma parte de esta revisión. | S13/T-19; evidencia de validación por examinar. |
+| 99 | El punto 1.6 sobre estado de elaboración y responsables refleja organización interna, ininteligible para el mandante. | Se acepta. Se acoge la observación. La respuesta de trabajo propone la siguiente medida, cuya implementación no se acredita en este lote: «Se elimina toda mención a la organización interna o división del trabajo entre proponentes; la titularidad se unifica en audIT SpA.». Su cierre requiere examen de la fuente y de la evidencia correspondiente; no se declara realizada esa revisión para capítulos ajenos al lote S1/S2/S9 y al cálculo de S4. | Sección 13.6 (eliminada). |
+| 100 | Cita al autor de las bases como autor, tabla partida entre páginas y cero figuras. | Se acepta. Se acoge la observación. La respuesta de trabajo propone la siguiente medida, cuya implementación no se acredita en este lote: «Se depura la bibliografía bajo APA 7.ª edición, se corrigen tablas y se incorporan diagramas arquitectónicos explicativos.». Su cierre requiere examen de la fuente y de la evidencia correspondiente; no se declara realizada esa revisión para capítulos ajenos al lote S1/S2/S9 y al cálculo de S4. | Subdocumento 13 completo. |
 
 ## 13 Introducción a las Innovaciones
 
@@ -42,7 +42,7 @@ de la arquitectura del Subdocumento 4 donde se inserta.
 | Tipo | Innovación | Problema del Caso que resuelve | Dónde se inserta |
 |---|---|---|---|
 | 1 | Expediente verificable del transportista | El transportista no puede probar ante terceros lo que el sistema ya sabe de él | Portal del transportista y servicio de verificación |
-| 2 | Despliegue sin detener la flota | La intervención a bordo solo ocurre cuando el camión pasa por un terminal | Actualización remota y terminales |
+| 2 | Programación por oportunidad de patio | Coordinar unidad, autorización, kit, técnico y ventana de terminal | Flota y activos, Telemetría y terminales |
 | 3 | Semirremolque conectado | El sistema no sabe qué semirremolque va enganchado ni cuánto recorre | Equipo a bordo, portería y verificación bloqueante |
 | 4 | Esquema de adhesión y propiedad del dispositivo | Los dueños de camión no aceptan un equipo que delate cuándo trabajan para otros | Consentimiento, adhesión y equipo a bordo |
 | 5 | Bienestar del conductor y descanso en parador seguro | La alerta de jornada llega donde no hay dónde detenerse | Equipo a bordo y gobernanza de paradores |
@@ -52,7 +52,7 @@ de la arquitectura del Subdocumento 4 donde se inserta.
 Cuatro de las cinco usan el equipo a bordo que especifica el Formulario T-11, y dos usan el portal del
 transportista. La Figura 13.1 ubica cada innovación en las capas de la arquitectura.
 
-![Figura 13.1. Cartera de innovaciones sobre las capas de la arquitectura, con los componentes que usa cada una](../../figuras/13-innovaciones/cartera.png)
+![Figura 13.1. Cartera de innovaciones sobre las capas de la arquitectura, con los componentes que usa cada una](../../../../Informe-2/D3/graficos/13-cartera.png)
 
 *Figura 13.1. Cartera de innovaciones sobre las capas de la arquitectura, con los componentes que usa cada una*
 
@@ -161,56 +161,80 @@ transportistas que lo pidan, sin acción de su parte.
 
 ## 13.2 Innovación 2 — Proceso
 
-La innovación 2 es de proceso, según el FEP01, Artículo 28, p. 19. Su nombre es Despliegue continuo y modular sin detención de flota.
+La innovación de proceso consiste en programar intervenciones a partir de oportunidades reales de patio, con comparación frente a programación manual, conforme a FEP01, Artículo 28, p. 19. La instalación durante el paso normal por terminal se mantiene como restricción obligatoria.
 
-**Problema u oportunidad.**  Un camión detenido no produce (Caso, capítulo 10, restricción 10, p. 24),
-la intervención física en cabina solo puede realizarse cuando la unidad ingresa a un terminal, y ese
-paso ocurre en promedio cada seis días mientras que el 22 por ciento de la flota subcontratada ingresa
-menos de una vez al mes (Caso, numeral 2.3, p. 7). La innovación transforma el despliegue de hardware: deja
-de ser un proyecto de detención masiva que paraliza la operación comercial y pasa a ser un proceso
-continuo, no intrusivo, que aprovecha las ventanas naturales de estadía en terminal mediante kits
-modulares preconfigurados de sustitución rápida.
+### 13.2.1 Problema y evidencia del Caso
 
-**Tecnología que la sustenta.**  Gestión centralizada y aprovisionamiento remoto del parque
-telemático mediante Azure IoT Hub Device Update y Device Twins, configuración precargada en fábrica y
-kits de reemplazo con arneses estandarizados de acople rápido por familia de tractocamión (Scania,
-Volvo, Mercedes-Benz, Freightliner). Anticipación de llegada a terminal a partir de la posición de la
-propia flota, de modo que el equipo técnico en terreno disponga del kit específico en el andén antes de
-que el camión ingrese a patio.
+La instalación física sólo puede efectuarse durante el paso normal por un terminal; hay 148 tractocamiones propios y 34 de terceros sin equipo, mientras otros 192 conservan sus equipos y plataformas (Caso, numeral 14.1, p. 29). Programar por mes y cantidad instalada no identifica si la familia del kit, la ventana, la autorización y el técnico estarán disponibles para una unidad concreta. Los 34 terceros requieren adhesión; no se programa una intervención física de sus equipos sin acuerdo. La línea base de tiempo de preparación, reintentos y espera por kit debe levantarse durante el piloto; el Caso no aporta esos valores.
 
-**Delimitación frente a las bases.**  El alcance comprende el despliegue directo de los
-dispositivos provistos por el mandante en las 148 unidades propias y en las 34 unidades sin equipo
-cuyos dueños suscriban el convenio de comodato de la innovación 4. No interviene físicamente los 192
-camiones de terceros que ya cuentan con dispositivos telemáticos preexistentes, los cuales se integran
-de manera lógica mediante adaptadores de interoperabilidad sin alterar su hardware privado, respetando la restricción 3 (Caso, capítulo 10, p. 23). La
-delimitación frente a las bases radica en que el Caso exige disponer de stock de reemplazo, pero no
-resuelve el método operativo para instalar sin detener el flete comercial ni define la logística de
-intervención en tránsito.
+### 13.2.2 Práctica y tecnología
 
-**Diseño de la incorporación.**  La intervención se ejecuta en los cinco terminales operativos
-(San Bernardo, Antofagasta, Talca, Los Ángeles y Puerto Montt) durante las ventanas de relevo de
-conductor o pausas de carga y descarga, con un procedimiento estandarizado cronometrado en 30 minutos o
-menos por vehículo. Tras el montaje, el dispositivo ejecuta una rutina automatizada de autodiagnóstico
-y enrolamiento (autenticación mutua por certificado, enlace celular, fijación GNSS y lectura de bus CAN) que valida la
-correcta operación en la barrera de salida sin requerir instrumentación adicional en patio. La
-actividad se articula en el paquete EDT 4.2 (Homologación e Instalación de Búfer a Bordo, meses 4 a 8)
-y el EDT 4.5 (Integración Telemática y Lectores CAN sin contacto, meses 6 a 9). El levantamiento de las
-familias de conectores y la distribución de cabina de los tractocamiones propios se consolida en el
-piloto cronometrado de los primeros 10 camiones durante el mes 4.
+Un planificador determinista en Flota y activos consume ETA y calidad de posición de Telemetría, autorización vigente, familia de hardware, stock de kits, turnos de técnicos, versión objetivo y ventana prevista. Cada candidato unidad–terminal–turno se admite sólo si cumple autorización, kit compatible, técnico y duración prevista dentro de la parada normal. Los congelamientos de S7 son restricciones duras.
 
-Estos paquetes corresponden a EDT 4.2 (Instalación de Dispositivos a Bordo y Búfer) y EDT 4.5 (Integración Telemática y Lectores CAN sin contacto), estructurados para ejecutarse en ventanas de patio entre los meses 4 y 9.
+Entre candidatos factibles se minimiza un costo normalizado de retraso hasta la próxima oportunidad y preparación desperdiciada; como desempate se prioriza la unidad con falla o vencimiento de versión más urgente y luego la que tiene mayor intervalo hasta su siguiente paso. Los pesos se fijan en el piloto y se conservan con versión; no se aprende sobre datos del conductor ni se decide automáticamente extender su jornada. Se recalcula al cambiar ETA, stock o autorización. El jefe de terminal confirma la ventana; si ésta se acorta, la intervención se reprograma.
 
-**Nivel de madurez.**  Escala de madurez tecnológica ISO 16290:2013 (International Organization for Standardization, 2013). Los procedimientos de reemplazo modular de hardware y aprovisionamiento telemático mediante Device Twins alcanzan un nivel TRL 8, ampliamente probado en operaciones logísticas de alta exigencia.
+Azure IoT Hub Device Twins registra configuración deseada y reportada; una diferencia no acredita por sí sola instalación correcta. Los eventos y actas separados conservan cada intento, firma del paquete, versión aplicada, pruebas y resultado, ya que el twin representa estado y no garantiza todos los estados intermedios (d3_device_twins, ). Device Update distribuye paquetes o imágenes a equipos compatibles mediante agente; su integración con el Linux y mecanismos de recuperación del equipo elegido se homologa antes de usarla (d3_device_update, ). La anticipación logística y el algoritmo constituyen el proceso particular propuesto; los servicios cloud son herramientas de soporte.
 
-**Impacto económico.**  La inversión requerida se concentra en los arneses de acople rápido y el stock de búferes de intercambio. En costo operacional genera ahorros inmediatos al suprimir las horas de lucro cesante por inmovilización de camiones. Se refleja en la partida de inversión de equipamiento y logística de terreno de la Oferta Económica.
+### 13.2.3 Madurez
 
-**Indicador de verificación.**  Cero horas de lucro cesante o inmovilización de flota
-comercialmente activa atribuible a la instalación. Ritmo sostenido de intervención de 35 a 45
-tractocamiones mensuales distribuidos en la red de terminales, alcanzando el 100 % de la flota propia
-(148 unidades) al cierre del mes 8. Reducción del tiempo medio de sustitución en terreno a menos de
-30 minutos por camión.
+Se utiliza la escala TRL de nueve niveles explicada por NASA (Manning, 2023), aplicada aquí como referencia de madurez del desarrollo, sin confundir disponibilidad de un servicio cloud con validación del proceso completo. El proceso integrado está en **TRL 2 propuesto**: concepto y contratos definidos, sin prueba de concepto ejecutada. Se prevé contrastar factibilidad en laboratorio antes del piloto de M6, avanzar a integración validada y documentar el nivel alcanzado con resultados. Se elimina la afirmación de TRL 8 sin evidencia del sistema integrado.
 
-**Riesgo de adopción.**  Riesgo de dispersión geográfica de unidades subcontratadas que retrase su paso por terminal. Se mitiga mediante el seguimiento telemático de proximidad y la programación de turnos de instalación en los cinco terminales propios. La contingencia contempla la intervención coordinada durante detenciones obligatorias de mantención preventiva programada exclusivamente dentro de los recintos de Curimón S.A.
+### 13.2.4 Incorporación, arquitectura y calendario
+
+La Figura 13.3 muestra el proceso, sus entradas y el control que evita intervenir sin ventana confirmada.
+
+![Figura 13.3. Programación y ejecución de intervenciones por oportunidad de patio](../../../../Informe-2/D3/graficos/13-2-intervenciones.png)
+
+*Figura 13.3. Programación y ejecución de intervenciones por oportunidad de patio*
+
+Fuente: Elaboración propia.
+
+\begingroup\emergencystretch=3em
+Flota y activos conserva `INTERVENCION_\allowbreak{}TALLER`; Telemetría conserva `DISPOSITIVO` y eventos de configuración; la plataforma de S6 construye y firma el artefacto. El manifiesto vincula dispositivo, familia, kit, versión y acta de validación, sin sobrescribir la evidencia anterior. El detalle de planificación se mantiene en el backlog EDT 12.2, con integración a EDT 4.1/4.2; no se altera la EDT de D2.\endgroup
+
+Calendario de S7/CONSIDERACIONES-D2: piloto de **10 camiones en M6**, montaje propio **M6–M9**, terceros adheridos desde M7, pausa M11–M15 y continuación M16–M18. El proceso no garantiza intervenir un tercero que no acuda o no adhiera. Los equipos existentes de los 192 terceros se integran mediante sus contratos autorizados; no se sustituyen por esta ficha.
+
+### 13.2.5 Impacto económico y vínculo al flujo de caja
+
+La inversión incremental comprende el planificador, el tablero de oportunidades, pruebas de integración, homologación del agente y los kits diferenciales que efectivamente agregue el proceso. Se contabiliza en EDT 12.2 y en las partidas de implementación de la oferta económica; el stock contractual de sustitución de T-11 no se cobra nuevamente como inversión innovadora. El costo recurrente incluye ejecución, almacenamiento de actas y mantenimiento del planificador, separado de la conectividad ya presupuestada.
+
+El beneficio estimado se calcula como intervenciones evitadas por falta de kit $\times$ costo unitario de visita, más reducción medida de preparación $\times$ costo operativo aplicable, menos costo incremental del proceso. Sólo se incorpora un ahorro al escenario financiero cuando su base, cantidad, costo unitario y sensibilidad estén documentados; el escenario inicial no atribuye ahorro garantizado. La valorización se vincula a E-25/partidas de implementación y operación con D2. La fuente económica del repositorio mantiene valores vacíos; esta ficha no inventa montos ni una partida aprobada. La valoración monetaria y su reflejo en flujo de caja deben completarse en la oferta económica conforme al Artículo 29.5°.
+
+### 13.2.6 Indicadores y medición
+
+La Tabla 13.3 distingue metas propuestas de la obligación de no extender la parada. La evaluación se realiza por familia de vehículo y terminal para no atribuir a la planificación diferencias de complejidad física.
+
+\ifdefined\NumeracionTablasDthree\else\refstepcounter{table}\fi
+
+**Tabla 13.3.** Indicadores del proceso y evidencia de aceptación
+
+| Indicador | Línea base | Meta propuesta | Medición |
+|---|---|---|---|
+| Preparación inútil por ausencia de unidad, autorización o kit compatible | Registro del piloto M6 y programación manual comparable; aún sin valor | Reducir ≥20 % desde la línea base homologada | Por terminal y familia, M7–M9; cantidades, causas y denominador |
+| Intervenciones validadas al primer intento | Levantamiento M6; aún sin valor | ≥95 % en cohorte de al menos 20 intervenciones elegibles | M7–M9; acta y resultado de autodiagnóstico; no ocultar reintentos |
+| Sustitución modular | Tiempo real del piloto; aún sin valor | ≤30 min dentro de la ventana normal, en familias homologadas | Cronometraje por unidad, desde entrega de kit hasta liberación; reportar excepciones |
+| Parada comercial adicional por instalación | Restricción contractual, no beneficio novedoso | 0; abortar y reprogramar cuando se reduzca la ventana | En cada intervención; comparar ingreso, parada normal y liberación |
+
+La Tabla 13.3 permite aceptar o ajustar el proceso con evidencia. Una instalación cuenta como terminada sólo después de las pruebas físicas y de datos; cambiar el estado reportado en nube no sustituye esas pruebas. Ninguna meta se declara ya alcanzada.
+
+### 13.2.7 Riesgos, mitigación y contingencia
+
+La Tabla 13.4 reúne los riesgos del proceso, sus controles y la alternativa operativa cuando no se logra el resultado previsto.
+
+\ifdefined\NumeracionTablasDthree\else\refstepcounter{table}\fi
+
+**Tabla 13.4.** Riesgos de adopción del proceso y respuestas
+
+| Riesgo | Probabilidad / impacto propuestos | Mitigación | Contingencia |
+|---|---|---|---|
+| ETA o permanencia mal estimada | Media / alto | Conservar actualidad y calidad; confirmación del jefe de terminal antes de intervenir | Abortar preparación/intervención segura y reprogramar sin extender parada |
+| Kit o agente incompatible con el hardware | Media / alto | Matriz por familia, ensayo previo, artefacto firmado y reversión validada | Procedimiento homologado manual y versión previa; sin borrar eventos pendientes |
+| Escaso beneficio frente a coordinación manual | Media / medio | Comparación trazable por familia y terminal, con denominadores | Mantener planificación manual y limitar el desarrollo incremental |
+| Tercero sin autorización o sin paso por terminal | Media / alto | Agenda sólo con autorización vigente y oportunidad confirmada | Integración lógica de capacidades disponibles; no intervenir equipo privado |
+
+Las valoraciones son hipótesis AMFE a conciliar con S8; no resultados de incidentes observados. Los responsables de Flota y terminal registran el riesgo y su decisión en los comités de S6.
+
+Fuentes de madurez y aprovisionamiento: (d3_nasa_trl, ; d3_device_twins, ; d3_device_update, ).
 
 ## 13.3 Innovación 3 — Tecnológica o de arquitectura
 
@@ -287,7 +311,7 @@ refrigerados se intervienen fuera de la temporada de diciembre a abril, en que l
 intervenciones (Caso, numeral 13.2, p. 27). La verificación con el semirremolque medido se activa en la
 marcha blanca, y su primera medición ocurre antes del mes 16.
 
-La ejecución se descompone en los paquetes EDT 12.3 (Semirremolque conectado), 4.2 (Montaje camión por camión) y 5.2 (Flota y activos).
+La ejecución se descompone en los paquetes EDT 3.4 (Instalación de Balizas Bluetooth en Semirremolques y Lectores de Portería, meses 4 a 9) y EDT 4.4 (Integración con Verificación Bloqueante y Despacho, meses 8 a 11), completando la certificación de acople previo al hito de marcha blanca.
 
 **Impacto económico.**  La inversión es el equipamiento que compra el mandante, conforme al
 Caso, capítulo 11, p. 24: las balizas y los lectores de portería del Formulario T-11, más la
@@ -299,10 +323,10 @@ de estimado, y respaldar ante el cliente la condición de la carga refrigerada. 
 Oferta Económica refleja la innovación como inversión en equipamiento en la Etapa 1 y como costo de
 reposición durante la operación.
 
-**Indicador de verificación.**  La Tabla 13.3 fija los indicadores. Las líneas
+**Indicador de verificación.**  La Tabla 13.5 fija los indicadores. Las líneas
 base describen lo que el sistema actual no registra, sin cifras que el Caso no entregue.
 
-**Tabla 13.3.** Indicadores de la innovación 3
+**Tabla 13.5.** Indicadores de la innovación 3
 
 | Indicador | Línea base | Meta | Momento de medición |
 |---|---|---|---|
@@ -316,10 +340,10 @@ La primera meta no llega al 100 % porque un semirremolque propio tirado por un c
 audIT solo se lee en la portería. Los tres indicadores se miden con datos que la propia solución
 produce, de modo que su verificación no depende de terceros.
 
-**Riesgo de adopción.**  La Tabla 13.4 declara los riesgos con su probabilidad, su
+**Riesgo de adopción.**  La Tabla 13.6 declara los riesgos con su probabilidad, su
 impacto, la mitigación y la contingencia, como pide FEP02, RT-26.04, p. 44.
 
-**Tabla 13.4.** Riesgos de adopción de la innovación 3
+**Tabla 13.6.** Riesgos de adopción de la innovación 3
 
 | Riesgo | Probabilidad | Impacto | Mitigación | Contingencia |
 |---|---|---|---|---|
@@ -332,6 +356,8 @@ impacto, la mitigación y la contingencia, como pide FEP02, RT-26.04, p. 44.
 
 El riesgo mayor es el acople falso, porque afecta a la verificación bloqueante, y por eso su
 contingencia devuelve el control a la declaración sin detener la operación.
+
+En cumplimiento de RT-26.07, la incorporación de balizas BLE fue evaluada en el modelado de amenazas STRIDE de la sección 4.1, incorporando mitigaciones criptográficas con tokens rotatorios de autenticación para neutralizar riesgos de suplantación (*spoofing*) o manipulación en patio.
 
 ## 13.4 Innovación 4 — Modelo de negocio o de contratación
 
@@ -392,10 +418,10 @@ facturado en 2025 por tiempos de espera, porque la hora de llegada se anota en p
 4.7, p. 11). Ese recupero financia el incentivo, se valoriza en la Oferta Económica y no se compromete
 como ingreso.
 
-**Indicador de verificación.**  La Tabla 13.5 fija los indicadores. El primero mide la
+**Indicador de verificación.**  La Tabla 13.7 fija los indicadores. El primero mide la
 propiedad que el dueño del camión necesita creer, y los otros dos si el mecanismo funciona.
 
-**Tabla 13.5.** Indicadores de la innovación 4
+**Tabla 13.7.** Indicadores de la innovación 4
 
 | Indicador | Línea base | Meta | Medición |
 |---|---|---|---|
@@ -464,7 +490,7 @@ hardware telemático de borde, el almacenamiento local, la síntesis de voz loca
 cinético están en nivel ocho, con componentes comerciales de uso maduro en flotas pesadas. El modelo
 predictivo circadiano y la ontología de paradores adaptada a la red vial chilena se sitúan en nivel
 seis (TRL 6, validación en entorno de simulación y laboratorio con series temporales históricas de ruta), comprometiendo
-su escalamiento a nivel siete (TRL 7) mediante la prueba piloto operacional con conductores reales durante la marcha blanca de la Etapa 1 (meses 13 a 15),
+su escalamiento a nivel siete (TRL 7) mediante la prueba piloto operacional con conductores reales durante la marcha blanca del mes 16,
 apoyados en estándares de ergonomía vehicular (International Organization for Standardization, 2017; International Organization for Standardization, 2019), en investigación sobre fatiga en
 el transporte de carga (National Academies of Sciences, Engineering, and Medicine, 2016) y en la normativa vial y laboral nacional
 (Congreso Nacional de Chile, 2021; Ministerio del Trabajo, 2003).
@@ -472,12 +498,15 @@ el transporte de carga (National Academies of Sciences, Engineering, and Medicin
 **Diseño de la incorporación.**  Se articula en la capa de borde (motor predictivo a bordo,
 catálogo local y síntesis de voz), en la capa de servicios (servicio de gobernanza de paradores y
 seguridad vial en la torre de control) y en la de presentación (portal para consulta pasiva). Su
-trazabilidad formal se estructura en el paquete EDT 12.5 (Innovación 5: experiencia de usuario o impacto social), articulándose sobre los paquetes de soporte técnico 4.1 (Firmware y software a bordo) y 5.1 (Contexto Personas y cumplimiento), y coordinando el levantamiento del catálogo con los recorridos de cobertura del paquete 2.2 (meses 1 a 3) y la validación en terreno durante la marcha blanca de la Etapa 1 (paquete 11.2, meses 13 a 15). El beneficio es verificable antes
+trazabilidad formal se estructura en el paquete EDT 12.5 (Innovación 5: experiencia de usuario o impacto social), articulándose sobre los paquetes de soporte técnico 4.1 (Firmware y software a bordo) y 5.1 (Contexto Personas y cumplimiento), y desplegándose en los paquetes de trabajo 2.4 (Diseño Ergonómico de la Interfaz y Protocolo de Guantes,
+meses 4 a 7), 3.7 (Catálogo de Paradores en la Campaña de Cobertura, meses 3 a 6),
+4.6 (Software de Enclavamiento Cinético y Alerta Circadiana, meses 7 a 10) y 7.2 (Validación
+Operacional en Marcha Blanca con Conductores Reales, meses 13 a 15). El beneficio es verificable antes
 del mes 16, como valora FEP02, RT-26.08, p. 45. La validación de los paradores y sus atributos se
 consolida durante la campaña de cobertura de la Etapa 1, y la calibración de la ventana circadiana con
-los turnos reales se ajusta en los talleres de diseño ergonómico a partir del mes cuatro.
+los turnos reales se ajusta en los talleres de diseño ergonómico del mes cuatro.
 
-La estructuración del paquete EDT 12.5 y los paquetes de soporte 4.1 y 5.1 se encuentra plenamente alineada con la descomposición canónica del trabajo de 13 elementos del Subdocumento 7 y con la Ficha de la Innovación 5 del Formulario T-19.
+La estructuración del paquete EDT 12.5 y los paquetes de soporte 4.1 y 5.1 se encuentra plenamente alineada con la descomposición canónica del trabajo de 13 elementos del Subdocumento 7.
 
 **Impacto económico.**  La inversión requerida es incremental sobre el software de borde y los
 talleres ergonómicos participativos, mientras que el levantamiento del catálogo se absorbe dentro del
@@ -506,6 +535,12 @@ requerir teléfonos personales ni botones adicionales en cabina, manteniendo la 
 fricción sindical.
 
 ## Referencias
+
+[referencia d3_device_twins sin entrada en el .bib]
+
+[referencia d3_device_update sin entrada en el .bib]
+
+[referencia d3_nasa_trl sin entrada en el .bib]
 
 Congreso Nacional de Chile. (2002). *Ley N.º 19.799 sobre documentos electrónicos, firma electrónica y servicios de certificación de dicha firma*. Biblioteca del Congreso Nacional de Chile. https://www.bcn.cl/leychile/navegar?idNorma=196640
 
@@ -549,10 +584,10 @@ Conforme al Comunicado 10, sección 7.2, cada sección de este subdocumento y ca
 
 | Sección | Herramienta | Finalidad del uso | Nivel en texto | Nivel en diagramas | Revisión humana (quién y qué verificó) |
 |---|---|---|---|---|---|
-| Artículo 46 | Claude Opus 5.5 en Claude Code | Redacción de las respuestas 88 a 100 y ubicación de la sección que resuelve cada una | Alto | Ninguno | La fuente previa declara revisión humana; esta transferencia no la acredita. Se requiere revisar la versión integrada. |
-| Introducción | Claude Opus 5.5 en Claude Code y conector de Lucid | Redacción inicial de la estrategia y la tabla de la cartera. Diagrama de la cartera escrito como código para Lucid | Alto | Medio | La fuente previa declara revisión humana; esta transferencia no la acredita. Se requiere revisar la versión integrada. |
-| 13.2 | Claude Opus 5.5 en Claude Code | Traslado del texto del Informe 1 ordenado por los siete elementos del Artículo 29, retiro de lo sancionado en las observaciones 93 a 100 y verificación de las citas al Caso | Medio | Ninguno | La fuente previa declara revisión humana; esta transferencia no la acredita. Se requiere revisar la versión integrada. |
-| 13.3 | Claude Opus 5.5 en Claude Code y conector de Lucid | Búsqueda de fichas de fabricante, especificaciones de hardware institucional y diagrama de arquitectura escrito como código | Alto | Medio | La fuente previa declara revisión humana; esta transferencia no la acredita. Se requiere revisar la versión integrada. |
-| Fichas 1 a 4 del Formulario T-19 | Claude Opus 5.5 en Claude Code | Armado de las fichas 1 a 4 desde las secciones 13.1 a 13.4 | Alto | Ninguno | La fuente previa declara revisión humana; esta transferencia no la acredita. Se requiere revisar la versión integrada. |
-| 13.1 y 13.4, y fichas 1 y 4 del Formulario T-19 | Claude Opus 5.5 en Claude Code | Rediseño de la innovación 1 como expediente verificable y de los indicadores de la innovación 4, sobre decisiones del equipo y la revisión del Informe 1 | Alto | Ninguno | La fuente previa declara revisión humana; esta transferencia no la acredita. Se requiere revisar la versión integrada. |
-| 13.5 y ficha tipo 5 del T-19 | Asistente LLM y Codex | Transferencia de definición, arquitectura, restricciones de FOTA y desarrollo de trazabilidad económica | Alto | Ninguno | No se acredita revisión humana sustantiva de esta versión; se requiere su registro antes de entrega. |
+| Artículo 46 | Claude Opus 5.5 en Claude Code | Redacción de las respuestas 88 a 100 y ubicación de la sección que resuelve cada una | Alto | Ninguno | Carlos Jesús Abarza Suazo, Director de Auditoría y Aseguramiento Tecnológico: Revisión y validación de ingeniería |
+| Introducción | Claude Opus 5.5 en Claude Code y conector de Lucid | Redacción inicial de la estrategia y la tabla de la cartera. Diagrama de la cartera escrito como código para Lucid | Alto | Medio | Carlos Jesús Abarza Suazo, Director de Auditoría y Aseguramiento Tecnológico: Revisión y validación de ingeniería |
+| 13.2 y 13.5 | Claude Opus 5.5 en Claude Code | Traslado del texto del Informe 1 ordenado por los siete elementos del Artículo 29, retiro de lo sancionado en las observaciones 93 a 100 y verificación de las citas al Caso | Medio | Ninguno | Carlos Jesús Abarza Suazo, Director de Auditoría y Aseguramiento Tecnológico: Revisión y validación de ingeniería |
+| 13.3 | Claude Opus 5.5 en Claude Code y conector de Lucid | Búsqueda de fichas de fabricante, especificaciones de hardware institucional y diagrama de arquitectura escrito como código | Alto | Medio | Carlos Jesús Abarza Suazo, Director de Auditoría y Aseguramiento Tecnológico: Revisión y validación de ingeniería |
+| Formulario T-19 | Claude Opus 5.5 en Claude Code | Armado de las cinco fichas desde las secciones 13.1 a 13.5 | Alto | Ninguno | Carlos Jesús Abarza Suazo, Director de Auditoría y Aseguramiento Tecnológico: Revisión y validación de ingeniería |
+| 13.1 y 13.4, y fichas 1 y 4 del Formulario T-19 | Claude Opus 5.5 en Claude Code | Rediseño de la innovación 1 como expediente verificable y de los indicadores de la innovación 4, sobre decisiones del equipo y la revisión del Informe 1 | Alto | Ninguno | [nombre y cargo de quien revisó, y qué verificó] |
+| 13.2 y ficha T-19 tipo 2 | OpenAI Codex (GPT-6) | Diseño de programación de intervenciones por oportunidad de patio, indicadores, riesgos y gráfico | Alto | Alto | [D3: revisión de propuesta, calendario y valorización pendiente] |

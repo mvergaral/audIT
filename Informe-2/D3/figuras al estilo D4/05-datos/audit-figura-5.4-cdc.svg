@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="148.9mm" height="155.2mm" viewBox="0 0 422 440">
+<defs><marker id="fin-n" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="5.5" markerHeight="5.5" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#2B2B2B"/></marker><marker id="ini-n" viewBox="0 0 10 10" refX="0.5" refY="5" markerWidth="5.5" markerHeight="5.5" markerUnits="userSpaceOnUse" orient="auto"><path d="M10,0.8 L0,5 L10,9.2 z" fill="#2B2B2B"/></marker><marker id="fin-r" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="5.5" markerHeight="5.5" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#C0392B"/></marker><marker id="ini-r" viewBox="0 0 10 10" refX="0.5" refY="5" markerWidth="5.5" markerHeight="5.5" markerUnits="userSpaceOnUse" orient="auto"><path d="M10,0.8 L0,5 L10,9.2 z" fill="#C0392B"/></marker></defs>
+<rect x="0" y="0" width="422" height="440" fill="#FFFFFF"/>
+<g id="grupos">
+<rect x="8.00" y="8.00" width="406.00" height="52.00" rx="5" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="16.00" y="68.00" width="86.00" height="76.00" rx="4" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="114.00" y="68.00" width="88.00" height="76.00" rx="4" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="214.00" y="68.00" width="92.00" height="76.00" rx="4" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="318.00" y="68.00" width="88.00" height="76.00" rx="4" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="16.00" y="160.00" width="390.00" height="130.00" rx="5" fill="#F8F9FA" stroke="#404040" stroke-width="0.75"/>
+<rect x="8.00" y="306.00" width="406.00" height="114.00" rx="5" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+</g>
+<g id="flechas">
+<path d="M102.00,106.00 L114.00,106.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" marker-end="url(#fin-n)"/>
+<path d="M202.00,106.00 L214.00,106.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" marker-end="url(#fin-n)"/>
+<path d="M306.00,106.00 L318.00,106.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" marker-end="url(#fin-n)"/>
+</g>
+<g id="iconos">
+<circle cx="26.00" cy="330.00" r="6.8" fill="#FFFFFF" stroke="#000000" stroke-width="0.9"/>
+<text x="26.00" y="333.20" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="middle" fill="#000000">1</text>
+<circle cx="26.00" cy="352.00" r="6.8" fill="#FFFFFF" stroke="#000000" stroke-width="0.9"/>
+<text x="26.00" y="355.20" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="middle" fill="#000000">2</text>
+<circle cx="26.00" cy="374.00" r="6.8" fill="#FFFFFF" stroke="#000000" stroke-width="0.9"/>
+<text x="26.00" y="377.20" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="middle" fill="#000000">3</text>
+<circle cx="26.00" cy="396.00" r="6.8" fill="#FFFFFF" stroke="#000000" stroke-width="0.9"/>
+<text x="26.00" y="399.20" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="middle" fill="#000000">4</text>
+</g>
+<g id="textos">
+<text x="16.00" y="23.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">Segregación transaccional OLTP y analítica mediante CDC</text>
+<text x="16.00" y="32.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">Desacoplamiento total entre transacciones críticas y consultas pesadas de BI.</text>
+<text x="16.00" y="44.00" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">Ingesta basada en logs: Debezium + Apache Kafka / Event Hubs (RT-05.05).</text>
+<text x="24.00" y="83.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">1. OLTP</text>
+<text x="24.00" y="96.00" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">PostgreSQL 16</text>
+<text x="24.00" y="110.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">WAL Engine</text>
+<text x="24.00" y="124.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">ACID puro</text>
+<text x="122.00" y="83.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">2. Captura</text>
+<text x="122.00" y="96.00" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">Debezium</text>
+<text x="122.00" y="110.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">Lee el WAL</text>
+<text x="122.00" y="124.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">Cero impacto</text>
+<text x="222.00" y="83.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">3. Streaming</text>
+<text x="222.00" y="96.00" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">Kafka / Event</text>
+<text x="222.00" y="110.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">Event Hubs</text>
+<text x="222.00" y="124.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">Bus durable</text>
+<text x="326.00" y="83.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">4. OLAP</text>
+<text x="326.00" y="96.00" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">Delta Lake</text>
+<text x="326.00" y="110.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">Lakehouse</text>
+<text x="326.00" y="124.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">Power BI</text>
+<text x="24.00" y="175.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">Garantías de aislamiento operacional y latencia</text>
+<text x="26.00" y="184.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">• Cero contención de bloqueo: Las consultas de costo por km no bloquean tablas transaccionales.</text>
+<text x="26.00" y="198.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">• Replicación asíncrona sub-segundo: Los eventos de viaje se reflejan en el bus en &lt; 1 s.</text>
+<text x="26.00" y="212.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">• Trazabilidad histórica completa: CDC captura inserciones, actualizaciones y estados previos.</text>
+<text x="26.00" y="226.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">• Resiliencia ante caídas analíticas: Si el Lakehouse se detiene, el bus retiene eventos.</text>
+<text x="26.00" y="240.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">• Formato abierto Delta Lake: Consultas reproducibles y gobernadas por OpenMetadata.</text>
+<text x="26.00" y="254.00" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">• Cumple RT-05.05: Segregación física obligatoria entre bases transaccionales y analíticas.</text>
+<text x="16.00" y="321.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">Métricas y Acuerdos de Nivel de Servicio (SLA)</text>
+<text x="38.00" y="332.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">Costo por kilómetro y liquidación preliminar calculados en &lt; 24 horas (RT-05.29).</text>
+<text x="38.00" y="354.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">Telemetría de posición reflejada en torre de control en &lt;= 2 minutos.</text>
+<text x="38.00" y="376.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">Reportes de emisiones de CO2 y conciliación consolidada disponibles mensualmente.</text>
+<text x="38.00" y="398.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">El motor transaccional mantiene 100 % de su CPU dedicada al despacho de camiones.</text>
+</g>
+</svg>
