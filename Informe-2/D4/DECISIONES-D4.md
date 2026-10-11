@@ -108,6 +108,22 @@ quién la aprobó, cuándo y con qué texto. Lo que depende de otra dupla queda 
 | D4-97 | 2026-10-07 | En la 4.1 (contenido de D3) se pasan a texto 12 de sus 19 tablas: las de dos columnas o de pocas filas. Quedan 7: decisiones de arquitectura, presupuesto de 30 s, declaración por integración, costo por viaje, inventario, concurrencia y volumen. No cambia lo que dice D3, solo la forma. Se avisa a D3 | Comunicado 10, sección 5 (sin tablas «concepto y descripción»). Pedido del profesor | Usuario, opción «Reducir la 4.1» |
 | D4-98 | 2026-10-07 | El diagrama físico de la dupla en Mermaid (`/mnt/NuevoVol/FEP/message.txt`) queda como plano maestro. El asistente le aplicó once correcciones: sistema de gestión de 2013 separado del sistema contable, dos racks de 24 U, torre fuera del rack con «22 personas en turnos», plataformas de terceros sin homologar, Front Door global, spoke de producción y otros ambientes, audIT EdgeHub, Iridium con el DTE sin cobertura, sincronización al volver el enlace, rango de San Bernardo con LT460 y leyenda. Original respaldado en el directorio temporal de la sesión | Caso, cap. 5, p.12, y p.7 («veintidós personas en turnos»). Caso p.34. D4-47, D4-70, D4-86 y D4-95. Comunicado 10, sección 4 | Usuario: «puedes editarlo para arreglarlo» |
 | D4-99 | 2026-10-07 | D4-04 sigue vigente: el Mermaid es la base y las figuras finales las dibuja la dupla en Lucid. Las declaraciones de IA mantienen «Bajo» en diagramas (D4-80). **Condición:** vale solo si las figuras que se entregan las dibuja la dupla en Lucid. Si se entrega un render del Mermaid editado por el asistente, corresponde «Medio» (Comunicado 10, 7.2: «código Mermaid… a partir de un modelo definido por el grupo»). El diagrama completo imprime a unos 2 pt: hay que sacar la vista general y las vistas por parte | Comunicado 10, 7.2 y sección 4. Art. 40.4, FEP01 p.26 | Usuario: «Bajo» y «Mermaid como base, final en Lucid». Se le había recomendado «Medio» |
+| D4-100 | 2026-10-09 | S8: marco ISO 31000. En el T-16, probabilidad e impacto de 1 a 5 con escalas calibradas al proyecto y exposición = P × I. En 8.2, AMFE (S, O, D de 1 a 5, NPR = S × O × D, con la escala de detección del plan maestro) para los modos de falla técnicos. Contingencia obligatoria con exposición ≥ 12 o NPR ≥ 50 | FEP02, RT-19.04, p.33 (ISO 31000, obligatorio). FEP01, Formulario T-7, p.58, y T-16, p.63. Comunicado 10, capítulo 8 | Usuario, opción «ISO 31000 + 5×5 + AMFE» |
+| D4-101 | 2026-10-09 | Análisis cuantitativo: simulación Monte Carlo del cronograma con las estimaciones de tres puntos del T-15 (10.000 corridas) para la probabilidad de cumplir los hitos y validar las reservas A14 y A23, y árbol de fallas del riesgo de mayor exposición | FEP01, T-7, p.58 («árbol de fallas o simulación»). Comunicado 10, 8.2 | Usuario, opción «Monte Carlo + árbol» |
+| D4-102 | 2026-10-09 | Reservas en días hábiles, sin horas hombre: contingencia A14 (14 días) y A23 (10 días) del S7 más las holguras, cada una con los riesgos que cubre. Reserva de gestión fuera de la línea base, liberada por el Comité Ejecutivo. Su valor va en el Sobre N.º 3. Se descarta el «HH» del plan maestro | FEP01, Art. 50.2, p.29. Observación 94. El formato solo admite horas hombre en el T-15 | Usuario, opción «Días hábiles, sin HH» |
+| D4-103 | 2026-10-09 | Unos 20 riesgos, cada uno con su fuente en S3, S4, S7, S13 o el Caso. Tres figuras (RBS, mapa de calor antes y después, árbol de fallas) con el generador de `D4/graficos-v2`, declaradas «Alto» en diagramas. Pocas tablas en el cuerpo: el detalle va en el T-16 | FEP01, Art. 57.2, p.32. D4-96 | Usuario, opción «~20 riesgos y 3 figuras» |
+| D4-104 | 2026-10-09 | La capacitación de conductores (A13) empieza 10 días hábiles antes del fin de la construcción (A09), con la versión del último sprint en preproducción. Malla del T-15: A13 con ES 182, EF 222, HT 38, HL 18, y A06 con HL 24. La 7.3.1 cita el Monte Carlo del S8 (H6 96,2 %, H11 95,5 %, ambas 92,1 %) en lugar del 95,6 % calculado por cadena. Hay que regenerar las figuras PERT | Monte Carlo (`D4/riesgos/montecarlo.py`, semilla 2026): sin el adelanto, la A13 atrasaba el inicio de la marcha blanca en el 14,1 % de las corridas y ambas marchas blancas se cumplían en el 82,3 %. Comunicado 10, 7.1 c) | Usuario, opción «Adelantar A13 y corregir S7» |
+| D4-105 | 2026-10-10 | Registro de 27 riesgos en lugar de unos 20 (D4-103), renumerado por categoría. Se suman los que el Caso enumera y faltaban: telemetría de fábrica no autorizada (R-09), despliegue a bordo lento (R-19, que reemplaza a «Paso y temporada»), período mixto prolongado (R-20) y bloqueo que detiene viajes comprometidos (R-27). También la contraparte del mandante, que incluye la segunda revisión del Art. 18.3 (R-15). En el mapa de calor, cada celda muestra solo el número del riesgo (decisión AM) | FEP03, cap. 19, p.44. Comunicado 10, 8.2 («disponibilidad de contrapartes del CLIENTE»). FEP01, Art. 18.3, p.13 | Usuario, opción «Aprobar 27» |
+| D4-106 | 2026-10-10 | El árbol de fallas toma como evento tope «viaje asignado a un conductor no apto» y no R-06. Tiene una compuerta O y cuatro caminos con compuerta Y, es decir, cuatro cortes mínimos de orden 2. Es cualitativo porque el Caso no da tasas de falla, y se cuantifica con la prueba en paralelo de los meses 13 y 14. Reemplaza la parte de D4-101 que hablaba del «riesgo de mayor exposición» (decisión AN) | Caso, numeral 9.1, p.22. FEP01, T-7, p.58 | Usuario, opción «Aprobar el evento tope» |
+| D4-107 | 2026-10-10 | Estructura de desglose del S8 (`rbs`) sin íconos de Fluent Emoji y con un color por categoría, tomado de la paleta por dominio del formato: técnicos #1B4FA8, organizacionales y de contrapartes #96600B, gestión #0A6B45, ciberseguridad #A32222 y continuidad #5B3BB5. El borde del grupo y la franja del encabezado van en el color, el título en blanco sobre la franja, y las fichas con un tinte al 10 % y el texto negro | Pedido del usuario: «sacar emojis y ponerle colores». `Formato-Oferta-audIT/temas/marca.tex`, «Paleta por dominio. Solo dentro de figuras» | Usuario, opción «Franja y borde» |
+| D4-108 | 2026-10-10 | El Subdocumento 7 no es de la dupla 4. En el formato local, `07-plan-trabajo` vuelve a la plantilla del formato (contenido y meta del commit 96a8c1a). Se borran los formularios T-14, T-15 y T-18, la declaración de IA, `figuras_tikz.py`, las figuras PERT, las salidas del S7 y el `\TituloComunicado{7}`. Se replica en `Nueva carpeta`. Respaldo completo en `D4/respaldo-S7-2026-10-10/`. `montecarlo.py` y `graficos-v2/fuente/s7.py` leen el T-15 del respaldo, y `d11_pert.py` ya no escribe en el formato. Los demás subdocumentos no se tocaron | Pedido del usuario: «borrar el subdocumento 7 y su formulario respectivo ya que nos dimos cuenta de que no era de nuestra dupla» | Usuario, opción «Volver a la plantilla» |
+| D4-109 | 2026-10-10 | La parte lógica de la dupla 3 se sobrepone a la nuestra. El S4.1 sigue `audIT/Informe-2/D3/subdocumento_04_1_arquitectura_logica.md` (commit eef2475): tabla 4.1.1, OpenAPI, y las nuevas 4.1.13 (documento sin cobertura), 4.1.17 (liquidación) y 4.1.21 (amenazas de la baliza). Las tablas de tipo «concepto y descripción» siguen como texto (D4-97, Comunicado 10, 5.2) | Pedido del usuario: «TODA LA PARTE LÓGICA D3 SE SOBREPONE A LO NUESTRO» | Usuario, en el mensaje |
+| D4-110 | 2026-10-10 | Las figuras del S4 y del S13 pasan a las de `D4/graficos-v2` en PDF vectorial, con región secundaria y promoción de ambientes nuevas. Las verticales reservan su alto y se quedan donde se llaman (`\figuraAqui`), y las horizontales cierran la página para caer entre párrafos (`\figuraHorizontalAqui`). Las cuatro figuras horizontales de la 4.1 pasan a página apaisada y dejan de quedar bajo 9 pt | Pedido del usuario: «que no se pongan en medio de párrafos». Art. 40.4 | Usuario, en el mensaje |
+| D4-111 | 2026-10-10 | Versiones del 4.1.1 verificadas en la web: .NET 10 LTS (hasta el 14-11-2028) y Go 1.27 en lugar de .NET 8 y Go 1.22, PostgreSQL 16 hasta el 09-11-2028, con plan de actualización dentro del contrato. Caché: Azure Managed Redis desde la Etapa 1, disponible en Chile Central y Brazil South (API de precios), porque Azure Cache for Redis se retira el 31-03-2027 (Enterprise) y el 30-09-2028 | FEP02, numeral 1.6, p.5. dotnet.microsoft.com, go.dev, postgresql.org y Microsoft Learn, consultados el 2026-10-10 | Usuario, opción «Actualizar y avisar» |
+| D4-112 | 2026-10-10 | De D3 se toma lo que decide y se quitan sus notas de trabajo: concurrencia de 380 sesiones, 570 en estrés (también en el supuesto S-13), Event Hubs como bus, y las respuestas 53 a 63, 68, 75, 76 y 80 del Art. 46 apuntan a la sección donde quedó resuelta cada observación | Comunicado 10, sección 3 | Usuario, opción «Tomar lo que D3 decide» |
+| D4-113 | 2026-10-10 | Copia corregida de las tres secuencias de D3 en `D4/graficos-v2/fuente/s4_secuencias.py` (`secuencia-*`): sin título interno, «sistema contable» y no «ERP 2013», presupuesto de 10, 450 y 200 ms bajo 2 s, y nada que actúe sobre el vehículo. Los archivos de D3 no se tocan | Tabla `4-presupuesto` del S4. Restricción 6 y Caso cap. 11 (solo lectura del bus) | Usuario, opción «Corregir una copia» |
+| D4-114 | 2026-10-10 | Las figuras generadas por la IA con un guion se declaran «Medio» en diagramas en el S4 y el S13 (reemplaza a D4-80 y D4-99). El S8 queda en «Alto» (D4-103) | Comunicado 10, 7.2 | Usuario, opción «Medio» |
+| D4-115 | 2026-10-10 | Se mantienen la innovación 3 «Semirremolque conectado» (D4-55) y nuestras cifras calculadas frente al plan maestro (8,8 kVA, 66 min de UPS, 2,4 GB requeridos de 8 GB). Se agrega el compromiso de latencia a Brazil South bajo 60 ms, medido en la Etapa 1. Tamaños de AKS, PostgreSQL y Azure Managed Redis: se fijan con la prueba de carga de 1,5 × peak antes del H5. Repositorio analítico: Delta Lake en ADLS Gen2 | Plan maestro 3.4. RT-09.06, FEP02 p.21 | Usuario, opciones «Semirremolque conectado», «Mantener los cálculos» y «Fijarlos con la prueba de carga» |
 | D4-10 | 2026-09-28 | Diagramas en Lucid: vista general, región primaria con redes y SKU, región secundaria y conmutación, plano de la sala de San Bernardo, gabinete de terminal, dispositivo a bordo, enlaces con anchos de banda y SPOF, ambientes de desarrollo a DR | Comunicado 10, secciones 4 y 11 (4.2) | Usuario, las cuatro opciones |
 
 ## Diagramas en Lucid (D4-10)
@@ -188,6 +204,12 @@ sesión anterior d1726381, 234ae633 y 94c4400a.
 | 2026-10-07 | S4 4.2.1 | «Las dos plataformas que hoy usan los dueños de camión dan acceso de solo consulta» | Texto literal del Caso (p.34): de tres plataformas, dos de solo consulta y una que no exporta. Remite al supuesto SA-03 del S3 de D2 |
 | 2026-10-07 | Art. 46, filas 76, 91 y 97 | Marcadores de D1 y D2 | Llenadas con el S3 3.4.2 y el T-12 de D2 y con las innovaciones 1, 4 y 5. Quedan las marcas de D3 |
 | 2026-10-07 | S4 4.1 (D4-97) y Art. 46, fila 53 | Al pasar a texto los puntos únicos de falla de la capa lógica, el texto de D3 decía «sistema contable de 2013». La fila 53 decía «Dos tablas declaran el contenido y los componentes de cada capa» | «Sistema contable», como en la 4.2 (Caso p.12). Fila 53: «La sección 4.1.3 describe el contenido y los componentes de cada capa». S4 con 16 tablas y 58 folios |
+| 2026-10-10 | `D4/graficos-v2/fuente/s7.py` y `D4/lucid/d11_pert.py` | Con la A13 adelantada (D4-104), `s7.py` leía «A09 −10» como un código y no dibujaba la flecha de A09 a A13. `d11_pert.py` calculaba la A13 sin desfase (ES 192) | Los dos leen el desfase. La A13 queda con ES 182, EF 222, HT 38 y HL 18, y la A06 con HL 24, igual que el T-15 |
+| 2026-10-10 | T-11, integración telemática de terceros | «Dos plataformas, una sin exportación» | «Dos plataformas de solo consulta. La tercera no permite exportar» (Caso, numeral 16.1, p.34) |
+| 2026-10-10 | S4, tabla `4-buffer` | Eventos y documentos en 227 KB, que son KiB, junto a KB decimales | 232 KB. El total de 0,78 MB y los 192 mensajes no cambian |
+| 2026-10-10 | `fisica-general` | «Plataformas de 2 proveedores» y telemetría de fábrica como contraparte en línea | «3 proveedores, 2 de consulta y 1 sin exportar», y «Fabricantes» que autorizan la lectura, que se hace a bordo |
+| 2026-10-10 | `ambientes-promocion` y `reconexion` | El pipeline parecía terminar en la etapa 4 y el rótulo del límite de 20 min se leía como parte de PostgreSQL | Etapas numeradas que desembocan en la promoción a producción, y rótulo pegado a la línea del límite |
+| 2026-10-10 | Citas del texto de D3 | RT-26.07 en la p.44, RT-13.08 en la p.32 y WCAG en el Art. 4.3, p.5 | p.45, p.33 y p.6 |
 
 ## En espera porque depende de otra dupla
 
@@ -208,57 +230,35 @@ sesión anterior d1726381, 234ae633 y 94c4400a.
 | Marcha blanca de la Etapa 1 «de 60 días» en el S6 (línea 36), en el T-17 (hito «H-04, mes 15») y en el plan maestro. El T-17 tampoco sigue la numeración H1 a H12 del E-25 | D3 y D1 | Contradice D4-62 y el Art. 17.1 |
 | «Célula Alfa» con dos significados: Plataforma Cloud en el S1 (1.5) e «Hipercare» en el S9 (línea 356) | D1 | El S7 usa Escuadra E1 y E2 (D4-63) y no choca, pero S1 y S9 se contradicen |
 | HH por etapa, curvas de horas y periodo 19 a 20 del T-15. Refuerzo de 16 personas en el S12 y en la curva económica. Fecha de inicio del contrato frente a la ventana de diciembre a abril | D2 | D4 cubrió solo el solapamiento 13 a 15 y la red CPM (D4-61) |
+| Reemplazo de Azure Cache for Redis, que se retira el 30-09-2028 (mes 20, marcha blanca de la Etapa 2), y revisión de versiones. El borrador `audIT/Informe-2/subdocumento_04_arquitectura_adaptado.md`, línea 307, trae «.NET 8 LTS / Go 1.22+» con soporte hasta noviembre de 2026, antes del mes 1 | D3 | R-06 del S8 (exposición 15) depende del producto que elija D3 antes del hito H2. FEP02, numeral 1.6, p.5 |
+| Antigüedad del último registro de jornada visible en la verificación bloqueante, y tratamiento de los datos personales mientras la réplica a Brazil South esté detenida | D3 | Cortes del árbol de fallas y contingencia de R-24 del S8. Llevan `\requiereDupla{3}` |
 
-## Decisiones pendientes
+## Estado al 2026-10-10
 
-Las decisiones E a L quedaron cerradas por D4-55 a D4-60, M a U y W a Y por D4-68 a D4-79, Z, AA, AB, AC, AE y AF por D4-80 a D4-85, y AD y AG a AL por D4-86 a D4-92 (2026-10-07). Queda solo V, en investigación.
+Subdocumento 8 escrito en el formato local con el índice del Comunicado 10: introducción, 8.1, 8.2 y 8.3,
+tres tablas en el cuerpo y tres figuras (RBS, mapa de calor y árbol de fallas, 9 pt sin choques). El
+Formulario T-16 trae los 27 riesgos, la respuesta, el disparador y el plazo de cada uno y el AMFE de diez
+modos de falla. Todo sale de `D4/riesgos/registro.py` y `D4/riesgos/montecarlo.py`. Se agregaron
+`\TituloComunicado{8}`, la declaración de IA del S8 (diagramas en «Alto», D4-103) y las normas ISO 31000,
+IEC 31010, IEC 60812 e IEC 61025 a `referencias.bib`. El S8 compila sin cajas desbordadas y con todas sus
+referencias resueltas al compilar 4, 7, 8 y 13. Las figuras PERT del S7 (`D4/lucid/d11_pert.py`) y las de
+`D4/graficos-v2` se regeneraron con la A13 adelantada (D4-104), con los valores del T-15. El JSON de Lucid se
+regeneró en local, pero el documento de Lucid no se actualizó. El encargo para que las duplas 1, 2 y 3 validen
+`D4/graficos-v2` está en `D4/graficos-v2/VALIDACION-OTRAS-DUPLAS.md` y en `Nueva carpeta/D4/VALIDACION-GRAFICOS-D4-v2.md`.
+AM y AN se aprobaron (D4-105 y D4-106). Falta la firma de la revisión humana.
 
-| N.º | Decisión aplicada | Dónde está |
-|---|---|---|
-| V | RT-08.04 en el FortiSwitch 124F-POE de fuente única: la redundancia la da el par, cada equipo en otro circuito. **No aprobada el 2026-10-07.** RT-08.04 (FEP02 p.18) dice «Todo el equipamiento contará con fuentes de poder redundantes». El usuario pidió investigar con deep-research un switch y equipos de gabinete con doble fuente o fuente redundante externa, y presentarlos antes de cambiar nada | 4.2.7 |
+Por D4-108, el S7 volvió a la plantilla y las dos referencias del S8 a `sec:7-ruta` quedan sin resolver en
+el PDF local. La etiqueta existe en el S7 de D2 del repositorio, así que se resuelve al armar el documento
+completo. **Pendiente.** El S8 (8.2 «Simulación del cronograma» y 8.3 «Costo y beneficio») usa el
+adelanto de la A13 (D4-104): las dos marchas blancas a tiempo en el 92,1 % y la A13 atrasando en el 0,1 %.
+Ese adelanto solo estaba en el T-15 borrado. El T-15 de D2 del repo (8ed8d99) y su red del 9 de octubre
+(`D2/03_Apoyo/Red_Actividades_y_Holguras.csv`) tienen la A13 sin adelanto (ES 192), y con esa red da 82,3 % y
+14,1 %. El usuario dijo que la versión correcta del S7 está en la carpeta de D3, pero `audIT/Informe-2/D3/`
+solo trae S4.1, S5 y S6 (también revisado contra el remoto el 2026-10-10). Falta saber cuál es la versión
+correcta para ajustar el S8.
 
-## Estado al 2026-10-04
-
-Subdocumentos 4 y 13 terminados en el formato local `/mnt/NuevoVol/FEP/Formato-Oferta-audIT`.
-En `salida/informe2/`: `AUDIT-Subdocumento4.pdf` (64 folios), `AUDIT-Formulario-T-11.pdf` (13),
-`AUDIT-Subdocumento13.pdf` (23), `AUDIT-Formulario-T-19.pdf` (11), cada uno con su `.md`.
-Diez diagramas en Lucid. Tabla del Art. 46 con las filas 53 a 80 y 88 a 100 en
-`anexos/observaciones-informe1.tex`. Filas 64 a 80, 88 y 92 actualizadas en
-`audIT/Informe-2/D4/Tabla-Art46-Informe2.md` y en su copia de `Nueva carpeta/D4/`.
-
-El verificador da 21 puntos sobre los cuatro PDF. No cumplen el 6 (figuras de D3 con letra de 3,2 pt,
-y los PNG de D4 no se pueden medir aunque imprimen a 9,6 pt o más) y el 11 (solo los marcadores
-«[Información requerida por dupla N]» de D4-53). El aviso 15 son las cinco rayas de los títulos
-13.1 a 13.5, que exige el Comunicado 10 (D4-33).
-
-Falta: aprobación de M a Z y de AA a AG, completar y retirar los marcadores antes del 05-10, y
-sincronizar con el repo del equipo cuando el usuario lo pida.
-
-## Estado al 2026-10-04, tarde
-
-Subdocumento 7 armado en el formato local con el índice del Comunicado 10 (D4-65). D4 escribió 7.2.3, 7.3.1 y el
-Formulario T-15 (D4-61 a D4-67). Lo demás lleva «[Información requerida por dupla 2]»: 31 marcadores de D2 y 4 de
-D4 (firma de la revisión humana). En `salida/informe2/`: `AUDIT-Subdocumento7.pdf` (16 folios),
-`AUDIT-Formulario-T-15.pdf` (8), y `AUDIT-Formulario-T-14.pdf` y `AUDIT-Formulario-T-18.pdf` como plantillas vacías
-de D2. Las dos redes PERT miden 10 pt en el verificador. El verificador sobre los ocho PDF da lo mismo que antes:
-no cumplen el 6 (figuras de D3 y PNG de D4) y el 11 (marcadores de dupla). La red se calcula con
-`D4/lucid/d11_pert.py`, que genera el JSON de Lucid, el SVG y PDF de las figuras y el Mermaid
-(`D4/mermaid/10-pert-etapa1.mmd` y `11-pert-etapa2.mmd`, con su PNG). Las dos copias del formato están sincronizadas.
-
-## Estado al 2026-10-07
-
-Hubo prórroga: el Informe 2 se entrega el **12-10-2026** (dato del usuario). Se revisaron contra las bases y se
-aprobaron todas las decisiones pendientes menos V (D4-68 a D4-92). V queda en investigación: RT-08.04 (FEP02 p.18)
-exige fuentes redundantes en «todo el equipamiento». La dupla rehace los diagramas a mano. Las declaraciones de uso
-de IA ya dicen «Bajo» en diagramas (D4-80), y eso vale solo si las figuras actuales se reemplazan antes de entregar.
-
-## Estado al 2026-10-07, tarde
-
-Por pedido del usuario se integró en el formato local lo de D1 y D2 (D4-93 a D4-96): S7 completo de D2,
-innovaciones 1 y 4 de D2, innovación 5 de D1, códigos EDT de D2, documento por satélite, nombres
-canónicos, meses de montaje y EdgeHub. Las tablas de D4 bajaron: 4.2 y 4.3 de 21 a 9, S13 de 4 a 3, y
-las 2 de D4 en el S7 pasaron a texto. Solo se editó el formato local. El repo y su stash no se tocaron, y
-la copia del repo de este registro sigue en el stash. Quedan sin resolver en el PDF local las referencias
-a S1, S3 y S6, que se resuelven al compilar en `recursos/`. La marca de D3 en la 4.1 sobre el documento
-sin cobertura la resuelve el S3 3.4.2 de D2, pero es de D3 cerrarla. La figura `cartera.png` todavía trae
-el nombre viejo de la innovación 1.
+**2026-10-11.** S4 terminado en el formato local con la versión de D3 de la 4.1 y las figuras nuevas (D4-109 a
+D4-115): sin marcadores en el texto, el T-11 ni sus filas del Art. 46. Quedan solo la herramienta y el nivel del
+Informe 1 que debe declarar D3 y las firmas de la revisión humana. S8 sin marcadores, con el R-06 en Azure
+Managed Redis. S13 con sus figuras nuevas y la 13.3 enlazada al modelado de amenazas de la 4.1.21. El aviso a D3
+está en `audIT/Informe-2/D4/AVISO-D3.md`.
