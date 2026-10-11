@@ -541,6 +541,42 @@
   "autor": "Microsoft",
   "licencia": "MIT"
  },
+ "flu-termometro": {
+  "nombre": "Fluent Emoji «Thermometer», estilo plano",
+  "url": "https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@main/assets/Thermometer/Flat/thermometer_flat.svg",
+  "autor": "Microsoft",
+  "licencia": "MIT"
+ },
+ "flu-puerta": {
+  "nombre": "Fluent Emoji «Door», estilo plano",
+  "url": "https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@main/assets/Door/Flat/door_flat.svg",
+  "autor": "Microsoft",
+  "licencia": "MIT"
+ },
+ "flu-copo": {
+  "nombre": "Fluent Emoji «Snowflake», estilo plano",
+  "url": "https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@main/assets/Snowflake/Flat/snowflake_flat.svg",
+  "autor": "Microsoft",
+  "licencia": "MIT"
+ },
+ "flu-vibracion": {
+  "nombre": "Fluent Emoji «Vibration mode», estilo plano",
+  "url": "https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@main/assets/Vibration%20mode/Flat/vibration_mode_flat.svg",
+  "autor": "Microsoft",
+  "licencia": "MIT"
+ },
+ "flu-llave": {
+  "nombre": "Fluent Emoji «Wrench», estilo plano",
+  "url": "https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@main/assets/Wrench/Flat/wrench_flat.svg",
+  "autor": "Microsoft",
+  "licencia": "MIT"
+ },
+ "flu-foto": {
+  "nombre": "Fluent Emoji «Camera», estilo plano",
+  "url": "https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@main/assets/Camera/Flat/camera_flat.svg",
+  "autor": "Microsoft",
+  "licencia": "MIT"
+ },
  "fui-codigo": {
   "nombre": "Fluent UI System Icons «Code», variante color",
   "url": "https://cdn.jsdelivr.net/gh/microsoft/fluentui-system-icons@main/assets/Code/SVG/ic_fluent_code_24_color.svg",
@@ -552,5 +588,12 @@
   "url": "https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/timescale.svg",
   "autor": "Proyecto Simple Icons y colaboradores",
   "licencia": "CC0 1.0. La marca pertenece a su dueño"
+ },
+ "oc-satelite": {
+  "nombre": "Openclipart «satellite» (n.º 275127)",
+  "url": "https://openclipart.org/download/275127",
+  "pagina": "https://openclipart.org/detail/275127/satellite",
+  "autor": "Josh «Cheeseness» Bush",
+  "licencia": "CC0 1.0, dominio público"
  }
 }

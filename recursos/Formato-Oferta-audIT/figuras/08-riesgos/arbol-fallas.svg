@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="257.4mm" height="167.0mm" viewBox="0 0 729.6 473.4">
+<defs><marker id="fin-n" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="5.5" markerHeight="5.5" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#2B2B2B"/></marker><marker id="ini-n" viewBox="0 0 10 10" refX="0.5" refY="5" markerWidth="5.5" markerHeight="5.5" markerUnits="userSpaceOnUse" orient="auto"><path d="M10,0.8 L0,5 L10,9.2 z" fill="#2B2B2B"/></marker><marker id="fin-r" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="5.5" markerHeight="5.5" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#C0392B"/></marker><marker id="ini-r" viewBox="0 0 10 10" refX="0.5" refY="5" markerWidth="5.5" markerHeight="5.5" markerUnits="userSpaceOnUse" orient="auto"><path d="M10,0.8 L0,5 L10,9.2 z" fill="#C0392B"/></marker></defs>
+<rect x="0" y="0" width="729.6" height="473.4" fill="#FFFFFF"/>
+<g id="grupos">
+<rect x="234.80" y="63.00" width="260.00" height="36.00" rx="6" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="6.20" y="173.00" width="170.00" height="40.00" rx="6" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="3.20" y="289.00" width="86.00" height="56.00" rx="4" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="93.20" y="289.00" width="86.00" height="56.00" rx="4" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="188.60" y="173.00" width="170.00" height="40.00" rx="6" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="185.60" y="289.00" width="86.00" height="56.00" rx="4" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="275.60" y="289.00" width="86.00" height="56.00" rx="4" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="371.00" y="173.00" width="170.00" height="40.00" rx="6" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="368.00" y="289.00" width="86.00" height="56.00" rx="4" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="458.00" y="289.00" width="86.00" height="56.00" rx="4" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="553.40" y="173.00" width="170.00" height="40.00" rx="6" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="550.40" y="289.00" width="86.00" height="56.00" rx="4" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="640.40" y="289.00" width="86.00" height="56.00" rx="4" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+</g>
+<g id="flechas">
+<path d="M364.80,99.00 L364.80,124.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter"/>
+<path d="M364.80,144.00 L364.80,157.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter"/>
+<path d="M91.20,157.00 L638.40,157.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter"/>
+<path d="M91.20,157.00 L91.20,173.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter"/>
+<path d="M273.60,157.00 L273.60,173.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter"/>
+<path d="M456.00,157.00 L456.00,173.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter"/>
+<path d="M638.40,157.00 L638.40,173.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter"/>
+<path d="M91.20,213.00 L91.20,237.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter"/>
+<path d="M91.20,257.00 L91.20,273.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter"/>
+<path d="M46.20,273.00 L136.20,273.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter"/>
+<path d="M46.20,273.00 L46.20,289.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter"/>
+<path d="M136.20,273.00 L136.20,289.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter"/>
+<path d="M273.60,213.00 L273.60,237.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter"/>
+<path d="M273.60,257.00 L273.60,273.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter"/>
+<path d="M228.60,273.00 L318.60,273.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter"/>
+<path d="M228.60,273.00 L228.60,289.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter"/>
+<path d="M318.60,273.00 L318.60,289.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter"/>
+<path d="M456.00,213.00 L456.00,237.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter"/>
+<path d="M456.00,257.00 L456.00,273.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter"/>
+<path d="M411.00,273.00 L501.00,273.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter"/>
+<path d="M411.00,273.00 L411.00,289.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter"/>
+<path d="M501.00,273.00 L501.00,289.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter"/>
+<path d="M638.40,213.00 L638.40,237.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter"/>
+<path d="M638.40,257.00 L638.40,273.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter"/>
+<path d="M593.40,273.00 L683.40,273.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter"/>
+<path d="M593.40,273.00 L593.40,289.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter"/>
+<path d="M683.40,273.00 L683.40,289.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter"/>
+</g>
+<g id="iconos">
+<path d="M351.8,144 Q364.8,137 377.8,144 Q376.8,131 364.8,124 Q352.8,131 351.8,144 Z" fill="#FFFFFF" stroke="#2B2B2B" stroke-width="1"/>
+<path d="M79.2,257 L79.2,245 A12,12 0 0 1 103.2,245 L103.2,257 Z" fill="#FFFFFF" stroke="#2B2B2B" stroke-width="1"/>
+<rect x="25.20" y="356.00" width="42.00" height="14.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="46.20" y="366.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">R-02</text>
+<rect x="25.20" y="375.00" width="42.00" height="14.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="46.20" y="385.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">R-22</text>
+<path d="M261.6,257 L261.6,245 A12,12 0 0 1 285.6,245 L285.6,257 Z" fill="#FFFFFF" stroke="#2B2B2B" stroke-width="1"/>
+<path d="M444.0,257 L444.0,245 A12,12 0 0 1 468.0,245 L468.0,257 Z" fill="#FFFFFF" stroke="#2B2B2B" stroke-width="1"/>
+<path d="M626.4,257 L626.4,245 A12,12 0 0 1 650.4,245 L650.4,257 Z" fill="#FFFFFF" stroke="#2B2B2B" stroke-width="1"/>
+<rect x="572.40" y="356.00" width="42.00" height="14.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="593.40" y="366.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">R-08</text>
+<rect x="572.40" y="375.00" width="42.00" height="14.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="593.40" y="385.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">R-10</text>
+<rect x="572.40" y="394.00" width="42.00" height="14.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="593.40" y="404.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">R-11</text>
+</g>
+<g id="textos">
+<text x="364.80" y="84.50" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="middle" fill="#000000">Viaje asignado a un conductor no apto</text>
+<text x="91.20" y="190.50" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Registro de jornada incompleto</text>
+<text x="91.20" y="202.50" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">tomado como válido</text>
+<text x="46.20" y="308.15" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Registro</text>
+<text x="46.20" y="320.15" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">incompleto</text>
+<text x="46.20" y="332.15" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">en el equipo</text>
+<text x="136.20" y="308.15" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">No se muestra</text>
+<text x="136.20" y="320.15" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">la antigüedad</text>
+<text x="136.20" y="332.15" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">del dato</text>
+<text x="273.60" y="190.50" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Excepción RN-04</text>
+<text x="273.60" y="202.50" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">mal aplicada</text>
+<text x="228.60" y="308.15" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">La torre aplica</text>
+<text x="228.60" y="320.15" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">la excepción</text>
+<text x="228.60" y="332.15" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">RN-04</text>
+<text x="318.60" y="308.15" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Sin fuente caída,</text>
+<text x="318.60" y="320.15" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">aprobación</text>
+<text x="318.60" y="332.15" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">o registro</text>
+<text x="456.00" y="190.50" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Asignación sin la</text>
+<text x="456.00" y="202.50" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">reserva central</text>
+<text x="411.00" y="308.15" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Terminal o San</text>
+<text x="411.00" y="320.15" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Bernardo</text>
+<text x="411.00" y="332.15" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">sin enlace</text>
+<text x="501.00" y="308.15" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Asignación local</text>
+<text x="501.00" y="320.15" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">sin la torre</text>
+<text x="501.00" y="332.15" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">ni la reserva</text>
+<text x="638.40" y="190.50" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Conductor externo aprobado</text>
+<text x="638.40" y="202.50" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">sin evidencia</text>
+<text x="593.40" y="308.15" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Transportista no</text>
+<text x="593.40" y="320.15" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">adherido o en</text>
+<text x="593.40" y="332.15" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">modalidad de datos</text>
+<text x="683.40" y="308.15" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Atestación</text>
+<text x="683.40" y="320.15" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">documental</text>
+<text x="683.40" y="332.15" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">aceptada por error</text>
+</g>
+</svg>

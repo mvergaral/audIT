@@ -8,5 +8,6 @@
  "rol-finanzas": "Finanzas: gráfico",
  "rol-operaciones": "Operaciones: casco y lista",
  "rol-usuarios": "Usuarios en general",
- "inn-expediente": "Documento con sello"
+ "inn-expediente": "Documento con sello",
+ "cmp-elemento-seguro": "Elemento seguro: chip con candado"
 }

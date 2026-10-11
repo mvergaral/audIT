@@ -93,9 +93,12 @@ def _cruce(a, b):
 
 
 class Figura:
-    def __init__(self, nombre, carpeta, tipo, alto=None):
+    def __init__(self, nombre, carpeta, tipo, alto=None, ancho_pt=None):
         self.nombre, self.carpeta, self.tipo = nombre, carpeta, tipo
-        if tipo == "H":
+        if tipo == "L":            # lienzo libre: ancho y alto en puntos, a tamaño natural
+            self.W, self.H = ancho_pt, alto
+            self.mm = (round(ancho_pt / MM, 1), round(alto / MM, 1))
+        elif tipo == "H":
             self.W, self.H = 729.6, 473.4
             self.mm = (257.4, 167.0)
         else:
@@ -178,6 +181,22 @@ class Figura:
                            f'width="{s:.2f}" height="{s:.2f}"/>')
         if revisar:
             self.cajas_icono.append((cx - s / 2, cy - s / 2, cx + s / 2, cy + s / 2, clave))
+
+    def equipo(self, clave, cx, cy, w=None, h=None, revisar=True):
+        """Ilustración de hardware con su proporción real: se da el ancho o el alto y el
+        otro sale del viewBox. Devuelve (x0, y0, x1, y1)."""
+        self._simbolo(clave)
+        vb = [float(v) for v in re.search(r'viewBox="([^"]+)"', self.simbolos[clave]).group(1).split()]
+        a = vb[2] / vb[3]
+        if w is None:
+            w = h * a
+        else:
+            h = w / a
+        x0, y0 = cx - w / 2, cy - h / 2
+        self.frente.append(f'<use href="#ic-{clave}" x="{x0:.2f}" y="{y0:.2f}" width="{w:.2f}" height="{h:.2f}"/>')
+        if revisar:
+            self.cajas_icono.append((x0, y0, x0 + w, y0 + h, clave))
+        return (x0, y0, x0 + w, y0 + h)
 
     def nodo(self, clave, cx, cy, s, nombre, dato=None, tam=10):
         """Ícono con su nombre debajo (10 pt) y un dato técnico opcional (9 pt).
@@ -333,3 +352,19 @@ class Figura:
                         "-b", "white", "-o", base + ".png", base + ".svg"], check=True)
         REVISION[self.nombre] = self.revisar()
         return base
+
+    def guardar_escala(self, sufijo, ancho_mm, alto_mm, salida_raiz=RAIZ):
+        """Misma figura reducida para caber en ancho_mm x alto_mm: cambia solo el tamaño
+        impreso del SVG (el viewBox queda igual), así que la letra se achica en la misma
+        proporción. Devuelve la ruta base y el factor."""
+        k = min(ancho_mm / self.mm[0], alto_mm / self.mm[1])
+        d = os.path.join(salida_raiz, self.carpeta)
+        base = os.path.join(d, self.nombre + sufijo)
+        s = self.svg().replace(f'width="{self.mm[0]}mm" height="{self.mm[1]}mm"',
+                               f'width="{self.mm[0] * k:.1f}mm" height="{self.mm[1] * k:.1f}mm"', 1)
+        with open(base + ".svg", "w", encoding="utf-8") as f:
+            f.write(s)
+        subprocess.run(["rsvg-convert", "-f", "pdf", "-o", base + ".pdf", base + ".svg"], check=True)
+        subprocess.run(["rsvg-convert", "-f", "png", "--dpi-x", "300", "--dpi-y", "300",
+                        "-b", "white", "-o", base + ".png", base + ".svg"], check=True)
+        return base, k

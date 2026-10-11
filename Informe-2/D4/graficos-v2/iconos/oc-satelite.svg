@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   id="svg5332"
+   viewBox="0 0 256.00007 256.00002"
+   height="72.248894mm"
+   width="72.248909mm">
+  <title
+     id="title7223">Satellite</title>
+  <defs
+     id="defs5334" />
+  
+  <g
+     transform="translate(-362.5464,-406.21469)"
+     id="layer1">
+    <path
+       id="path9574"
+       d="m 477.69004,477.65545 c -1.2274,0 -2.2154,0.988 -2.2154,2.2154 l 0,28.541 c 0,1.2273 0.988,2.2154 2.2154,2.2154 l 2.1012,0 0,13.7616 -16.6642,0 0,-12.8391 c 0,-1.2274 -0.9881,-2.2154 -2.2155,-2.2154 l -96.14971,0 c -1.2273,0 -2.2154,0.988 -2.2154,2.2154 l 0,30.0659 c 0,1.2273 0.9881,2.2154 2.2154,2.2154 l 96.14971,0 c 1.2274,0 2.2155,-0.9881 2.2155,-2.2154 l 0,-12.8392 16.6642,0 0,19.932 c 0,1.2274 0.9881,2.2154 2.2154,2.2154 l 17.0779,0 c 1.2273,0 2.2154,-0.988 2.2154,-2.2154 l 0,-19.932 16.6659,0 0,12.8392 c 0,1.2273 0.9881,2.2154 2.2155,2.2154 l 96.1497,0 c 1.2273,0 2.2154,-0.9881 2.2154,-2.2154 l 0,-30.0659 c 0,-1.2274 -0.9881,-2.2154 -2.2154,-2.2154 l -96.1497,0 c -1.2274,0 -2.2155,0.988 -2.2155,2.2154 l 0,12.8391 -16.6659,0 0,-13.7616 2.1012,0 c 1.2274,0 2.2154,-0.9881 2.2154,-2.2154 l 0,-28.541 c 0,-1.2274 -0.988,-2.2154 -2.2154,-2.2154 l -25.7111,0 z m 12.8564,75.5929 c -9.512,0 -18.9661,1.9574 -25.6921,5.3205 -6.726,3.363 -10.641,8.09 -10.641,12.846 l 34.7563,0 1.5768,19.3591 1.5768,-19.3591 34.7563,0 c 0,-4.756 -3.915,-9.483 -10.641,-12.846 -6.726,-3.3631 -16.1801,-5.3205 -25.6921,-5.3205 z"
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;color-interpolation:sRGB;color-interpolation-filters:linearRGB;fill:#808080;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:15;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+  </g>
+</svg>

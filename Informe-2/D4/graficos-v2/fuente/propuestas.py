@@ -70,9 +70,11 @@ def instalacion_a_bordo():
               ("pr-lector-tarjeta", 612, 244, 16, ["Lector DESFire", "Al alcance del", "conductor detenido"], 720, 236),
               ("pr-can", 608, 290, 20, ["CANCrocodile", "Sobre el arnés original,", "sin cortarlo"], 720, 400),
               ("pr-baliza", 428, 318, 18, ["Baliza EYE Sensor", "Chasis delantero,", "a la sombra"], 330, 420)]
+    dibujo = {"pr-aleta": "hw-aleta", "pr-iridium": "hw-iridium", "pr-g26i": "hw-g26i",
+              "pr-lector-tarjeta": "hw-desfire", "pr-can": "hw-can", "pr-baliza": "hw-baliza"}
     for ic, x, y, s, texto, fx, fy in piezas:
         f.rect(x - s / 2 - 2, y - s / 2 - 2, s + 4, s + 4, relleno="#FFFFFF", borde=None, rx=3, capa="frente")
-        f.icono(ic, x, y, s)
+        f.equipo(dibujo[ic], x, y, w=s, h=None) if dibujo[ic] != "hw-desfire" else f.equipo(dibujo[ic], x, y, h=s)
         derecha = fx > 700
         x0, y0, x1, y1 = f.ficha(fx, fy, texto, anc="end" if derecha else "middle")
         if derecha:

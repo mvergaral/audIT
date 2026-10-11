@@ -184,7 +184,9 @@ laboral debe admitir el registro electrónico de jornada (supuesto SA-06 del Sub
 conductores externos pueden rechazar la medición. La adhesión de los 148 transportistas es el riesgo más
 alto del grupo (R-11, 12): el Caso dice que el plan de adhesión pesa en la evaluación tanto como la arquitectura
 (Caso, numeral 13.3, p. 28). La meta del Subdocumento 3 es de 104 anexos firmados en el mes 16 y 134 en el
-21, y el disparador es tener menos de 42 al cierre del mes 9, el 40 % de la primera meta. Por último
+21, sobre los 148 transportistas. El disparador usa la misma base: menos de 60 anexos firmados y
+vigentes al cierre del mes 9, el 40 % de 148. Cuenta como firmado el anexo que firmó el titular y que
+no fue revocado. Por último
 está el propio mandante (R-15). Sus usuarios clave de la torre y de los terminales tienen poco tiempo en
 la temporada, y un entregable que vuelve con observaciones abre una segunda revisión que el
 FEP01, Artículo 18.3, p. 13 cuenta como atraso de audIT. El plan del Subdocumento 7 ya incluye la primera revisión de
@@ -261,11 +263,20 @@ corridas, y por eso el control de la ruta se hace sprint a sprint sobre ella.
 
 Las dos marchas blancas empiezan a tiempo en el 92,1 % de las corridas. Es menos que el 95,6 % que
 resulta de multiplicar los dos cálculos por cadena del Subdocumento 7, porque en cada marcha blanca
-convergen varias rutas. La simulación encontró la causa principal de la diferencia. La capacitación de
-conductores (A13) atrasaba el inicio de la marcha blanca de la Etapa 1 en el 14,1 % de las corridas, y
-las dos marchas blancas se cumplían a la vez solo en el 82,3 %. La capacitación se adelantó para que
-empiece 10 días hábiles antes de que termine la A09, con la versión del último sprint en preproducción,
-y ese atraso bajó al 0,1 % (sección ?).
+convergen varias rutas. La simulación encontró la causa principal de la diferencia en la capacitación de
+conductores (A13). Si empieza después de terminar la A09, atrasa el inicio de la marcha blanca de la
+Etapa 1 en el 14,1 % de las corridas, y las dos marchas blancas se cumplen a la vez solo en el 82,3 %.
+Por eso el T-15 fija que la A13 empieza 10 días hábiles antes de que termine la A09, el día 182 de la
+línea base, y mantiene sus 40 días (sección ?). Solo empieza si están disponibles las
+funciones de entrenamiento probadas y congeladas en preproducción, los datos ficticios y el material por
+perfil. Si falta esa entrega, el inicio real se atrasa, el atraso se registra y se actualiza el riesgo
+R-16.
+
+La simulación toma esa disponibilidad como el cierre del séptimo de los ocho sprints de la A09 y supone
+que los datos y el material llegan con esa versión. Con esa regla, el inicio real de la A13 cae después
+del día 182 en el 49,0 % de las corridas, pero en el 95 % ocurre antes del día 194, y la capacitación
+no atrasa la marcha blanca en ninguna corrida (0,0 %). Lo que cambie el octavo sprint se cubre con un
+complemento antes de la marcha blanca.
 
 **Árbol de fallas de la verificación bloqueante.**
 El árbol se construye sobre el evento que dio origen a la licitación: que un camión salga cuando no puede
@@ -318,8 +329,9 @@ Una mitigación entra al plan cuando la exposición que quita vale más que lo q
 dotación o en productos. Aquí ambos lados se miden con las escalas de la sección 8.1 y en días hábiles.
 Su valor en dinero va en el Sobre N.º 3, porque el FEP01, Artículo 50.2, p. 29 no admite montos en la oferta técnica.
 Tres casos muestran el criterio. Adelantar la capacitación (A13) no cuesta días en la ruta, porque usa
-la versión que ya está en preproducción, y sube de 82,3 % a 92,1 % la probabilidad de empezar a tiempo
-las dos marchas blancas. Decidir el reemplazo de la caché antes del mes 4 cuesta una decisión temprana de
+la versión congelada en preproducción, pero obliga a tener listos los datos ficticios y el material por
+perfil al cierre del séptimo sprint. A cambio, sube de 82,3 % a 92,1 % la probabilidad de empezar a
+tiempo las dos marchas blancas. Decidir el reemplazo de la caché antes del mes 4 cuesta una decisión temprana de
 arquitectura y evita una migración durante la marcha blanca de la Etapa 2. Esa marcha blanca, si se
 extiende, se multa por semana (FEP01, Artículo 80, p. 41) y no mueve las fechas siguientes (FEP01, Artículo 17.3, p. 13). Mantener un
 analista en cada terminal en el horario de relevo cuesta la dotación que ya declara el Subdocumento 7 y
@@ -337,10 +349,10 @@ contingencia propia.
 | Riesgo | Disparador | Contingencia | Plazo | Responsable |
 |---|---|---|---|---|
 | R-06 Retiro de Redis | Un componente de la Etapa 1 que dependa de Azure Cache for Redis en el hito H2 | El Comité de Arquitectura lo pasa a Azure Managed Redis y la migración termina antes de la marcha blanca de la Etapa 1 | Meses 4 a 12 | Arquitecto de Solución |
-| R-11 Adhesión bajo la meta | Menos de 42 anexos firmados al cierre del mes 9 | El Comité Ejecutivo aprueba un plan por transportista, y quien no adhiere opera en modalidad de datos o documental con su evidencia visible | Meses 9 a 16 | Líder Funcional |
+| R-11 Adhesión bajo la meta | Menos de 60 anexos firmados y vigentes al cierre del mes 9 | El Comité Ejecutivo aprueba un plan por transportista, y quien no adhiere opera en modalidad de datos o documental con su evidencia visible | Meses 9 a 16 | Líder Funcional |
 | R-18 Cierre de la marcha blanca 1 | Una condición de cierre bajo su umbral al cierre del mes 14 | Refuerzo en el terminal afectado y, si no alcanza, extensión a costo de audIT sin mover las fechas siguientes | Meses 14 a 16 | Líder de Operación |
 | R-23 Ataque al portal | Vulnerabilidad crítica abierta o acceso anómalo | Plan de respuesta a incidentes con contención en Front Door, aviso al mandante en dos horas y remediación en siete días corridos | Inmediato | Encargado de Seguridad |
-| R-24 Licitud en Brazil South | Hito H2 sin aprobación del mandante | La réplica de datos personales no se activa y el Comité Ejecutivo resuelve con la base de licitud del Subdocumento 5 | Mes 4 | Arquitecto de Solución |
+| R-24 Licitud en Brazil South | Hito H2 sin aprobación del mandante | La réplica de datos personales a Brazil South no se activa y esos datos se replican en San Bernardo, que levanta los servicios críticos que los usan | Mes 4 | Arquitecto de Solución |
 | R-27 Bloqueo indebido | Viaje que la prueba en paralelo habría detenido sin causa válida | La regla que lo causó sigue en paralelo hasta corregirla, y las demás bloquean desde el mes 15 | Meses 13 a 15 | Líder Funcional |
 | R-28 Documento satelital sobre 90 s | Ensayo con un retorno sobre 90 segundos o con fragmentos perdidos | Los puntos sin cobertura quedan solo con emisión anticipada y el Comité de Arquitectura revisa la decisión 06 del Subdocumento 4 y el Formulario T-11 | Desde el mes 3 | Líder de Integración |
 
@@ -349,9 +361,11 @@ contingencia propia.
 Las siete contingencias aplican mecanismos que ya están en la arquitectura o en el plan, y agregan la
 regla de cuándo se activan y quién decide.
 Seis se activan antes del mes 15, cuando todavía hay margen para corregir sin tocar la operación. La de
-R-24 tiene un costo que se declara: mientras la réplica de datos personales esté detenida, esos datos se
-protegen solo dentro de Chile Central. El Subdocumento 5 lo fija así: sin una vía habilitante documentada,
-los datos personales no se replican fuera de Chile (sección ?).
+R-24 tiene un costo que se declara. El Subdocumento 5 fija que, sin una vía habilitante documentada,
+los datos personales no se replican fuera de Chile. Mientras tanto se replican en espera en San Bernardo
+con el mismo objetivo de 15 minutos, y si cae Chile Central, Personas y cumplimiento y la verificación
+bloqueante se levantan allí dentro de las 4 horas (sección ?). El costo es la
+capacidad de los dos servidores de San Bernardo, que la prueba de carga de la Etapa 1 confirma.
 
 **Reservas de contingencia.**
 Las reservas de contingencia cubren riesgos identificados y están dentro de la línea base del

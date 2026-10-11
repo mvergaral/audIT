@@ -23,6 +23,7 @@ ROLES = {
     "rol-operaciones": ("flu-obrero", "flu-portapapeles", "Operaciones: casco y lista"),
     "rol-usuarios": ("flu-usuarios", None, "Usuarios en general"),
     "inn-expediente": ("flu-documento", "flu-sello", "Documento con sello"),
+    "cmp-elemento-seguro": ("pr-memoria", "flu-candado", "Elemento seguro: chip con candado"),
 }
 
 
