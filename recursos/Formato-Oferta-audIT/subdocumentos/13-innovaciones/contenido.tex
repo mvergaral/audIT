@@ -17,7 +17,7 @@ de la arquitectura del Subdocumento~4 donde se inserta.
 \begin{tabla}{Cartera de innovaciones}{13-cartera}{R{8mm} L{44mm} X L{40mm}}
 Tipo & Innovación & Problema del Caso que resuelve & Dónde se inserta \\ \midrule
 1 & Expediente verificable del transportista & El transportista no puede probar ante terceros lo que el sistema ya sabe de él & Portal del transportista y servicio de verificación \\
-2 & Despliegue sin detener la flota & La intervención a bordo solo ocurre cuando el camión pasa por un terminal & Actualización remota y terminales \\
+2 & Programación por oportunidad de patio & Coordinar unidad, autorización, kit, técnico y ventana de terminal & Flota y activos, Telemetría y terminales \\
 3 & Semirremolque conectado & El sistema no sabe qué semirremolque va enganchado ni cuánto recorre & Equipo a bordo, portería y verificación bloqueante \\
 4 & Esquema de adhesión y propiedad del dispositivo & Los dueños de camión no aceptan un equipo que delate cuándo trabajan para otros & Consentimiento, adhesión y equipo a bordo \\
 5 & Bienestar del conductor y descanso en parador seguro & La alerta de jornada llega donde no hay dónde detenerse & Equipo a bordo y gobernanza de paradores \\
@@ -27,7 +27,7 @@ Tipo & Innovación & Problema del Caso que resuelve & Dónde se inserta \\ \midr
 Cuatro de las cinco usan el equipo a bordo que especifica el Formulario T-11, y dos usan el portal del
 transportista. La \figref{13-carterafig} ubica cada innovación en las capas de la arquitectura.
 
-\figura{figuras/13-innovaciones/cartera.png}{Cartera de innovaciones sobre las capas de la arquitectura, con los componentes que usa cada una}{13-carterafig}
+\figura{../../Informe-2/D3/graficos/13-cartera.png}{Cartera de innovaciones sobre las capas de la arquitectura, con los componentes que usa cada una}{13-carterafig}
 
 En la figura, el equipo a bordo concentra las innovaciones 2, 3, 4 y 5, y el portal del transportista
 las innovaciones 1 y 4. Esa concentración permite montar el valor nuevo sobre componentes que la
@@ -131,61 +131,75 @@ adopción es baja, la contingencia es emitir el expediente automáticamente cada
 transportistas que lo pidan, sin acción de su parte.
 
 % ============================================================================
-\section{Innovación 2 — Proceso}\label{sec:13-innovacion-2}
-% ============================================================================
+\section{Innovación 2 — Proceso}\label{sec:13-innovacion-2}\label{sec:13-proceso}
 
-La innovación 2 es de proceso, según el \art{28}{19}. Su nombre es Despliegue continuo y modular sin detención de flota.
+La innovación de proceso consiste en programar intervenciones a partir de oportunidades reales de patio, con comparación frente a programación manual, conforme a \art{28}{19}. La instalación durante el paso normal por terminal se mantiene como restricción obligatoria.
 
-\paragraph{Problema u oportunidad} Un camión detenido no produce \caso*{capítulo 10, restricción 10}{24},
-la intervención física en cabina solo puede realizarse cuando la unidad ingresa a un terminal, y ese
-paso ocurre en promedio cada seis días mientras que el 22 por ciento de la flota subcontratada ingresa
-menos de una vez al mes \caso*{numeral 2.3}{7}. La innovación transforma el despliegue de hardware: deja
-de ser un proyecto de detención masiva que paraliza la operación comercial y pasa a ser un proceso
-continuo, no intrusivo, que aprovecha las ventanas naturales de estadía en terminal mediante kits
-modulares preconfigurados de sustitución rápida.
+\subsection{Problema y evidencia del Caso}\label{sec:13-proceso-problema-y-evidencia-del-caso}
 
-\paragraph{Tecnología que la sustenta} Gestión centralizada y aprovisionamiento remoto del parque
-telemático mediante Azure IoT Hub Device Update y Device Twins, configuración precargada en fábrica y
-kits de reemplazo con arneses estandarizados de acople rápido por familia de tractocamión (Scania,
-Volvo, Mercedes-Benz, Freightliner). Anticipación de llegada a terminal a partir de la posición de la
-propia flota, de modo que el equipo técnico en terreno disponga del kit específico en el andén antes de
-que el camión ingrese a patio.
+La instalación física sólo puede efectuarse durante el paso normal por un terminal; hay 148 tractocamiones propios y 34 de terceros sin equipo, mientras otros 192 conservan sus equipos y plataformas (\caso{numeral 14.1}{29}). Programar por mes y cantidad instalada no identifica si la familia del kit, la ventana, la autorización y el técnico estarán disponibles para una unidad concreta. Los 34 terceros requieren adhesión; no se programa una intervención física de sus equipos sin acuerdo. La línea base de tiempo de preparación, reintentos y espera por kit debe levantarse durante el piloto; el Caso no aporta esos valores.
 
-\paragraph{Delimitación frente a las bases} El alcance comprende el despliegue directo de los
-dispositivos provistos por el mandante en las 148 unidades propias y en las 34 unidades sin equipo
-cuyos dueños suscriban el convenio de comodato de la innovación 4. No interviene físicamente los 192
-camiones de terceros que ya cuentan con dispositivos telemáticos preexistentes, los cuales se integran
-de manera lógica mediante adaptadores de interoperabilidad sin alterar su hardware privado, respetando la restricción 3 \caso*{capítulo 10}{23}. La
-delimitación frente a las bases radica en que el Caso exige disponer de stock de reemplazo, pero no
-resuelve el método operativo para instalar sin detener el flete comercial ni define la logística de
-intervención en tránsito.
+\subsection{Práctica y tecnología}\label{sec:13-proceso-practica-y-tecnologia}
 
-\paragraph{Diseño de la incorporación} La intervención se ejecuta en los cinco terminales operativos
-(San Bernardo, Antofagasta, Talca, Los Ángeles y Puerto Montt) durante las ventanas de relevo de
-conductor o pausas de carga y descarga, con un procedimiento estandarizado cronometrado en 30 minutos o
-menos por vehículo. Tras el montaje, el dispositivo ejecuta una rutina automatizada de autodiagnóstico
-y enrolamiento (autenticación mutua por certificado, enlace celular, fijación GNSS y lectura de bus CAN) que valida la
-correcta operación en la barrera de salida sin requerir instrumentación adicional en patio. La
-actividad se articula en el paquete EDT 4.2 (Homologación e Instalación de Búfer a Bordo, meses 4 a 8)
-y el EDT 4.5 (Integración Telemática y Lectores CAN sin contacto, meses 6 a 9). El levantamiento de las
-familias de conectores y la distribución de cabina de los tractocamiones propios se consolida en el
-piloto cronometrado de los primeros 10 camiones durante el mes 4.
+Un planificador determinista en Flota y activos consume ETA y calidad de posición de Telemetría, autorización vigente, familia de hardware, stock de kits, turnos de técnicos, versión objetivo y ventana prevista. Cada candidato unidad–terminal–turno se admite sólo si cumple autorización, kit compatible, técnico y duración prevista dentro de la parada normal. Los congelamientos de S7 son restricciones duras.
 
-Estos paquetes corresponden a EDT 4.2 (Instalación de Dispositivos a Bordo y Búfer) y EDT 4.5 (Integración Telemática y Lectores CAN sin contacto), estructurados para ejecutarse en ventanas de patio entre los meses 4 y 9.
+Entre candidatos factibles se minimiza un costo normalizado de retraso hasta la próxima oportunidad y preparación desperdiciada; como desempate se prioriza la unidad con falla o vencimiento de versión más urgente y luego la que tiene mayor intervalo hasta su siguiente paso. Los pesos se fijan en el piloto y se conservan con versión; no se aprende sobre datos del conductor ni se decide automáticamente extender su jornada. Se recalcula al cambiar ETA, stock o autorización. El jefe de terminal confirma la ventana; si ésta se acorta, la intervención se reprograma.
 
-\paragraph{Nivel de madurez} Escala de madurez tecnológica ISO 16290:2013 \parencite{iso16290}. Los procedimientos de reemplazo modular de hardware y aprovisionamiento telemático mediante Device Twins alcanzan un nivel TRL 8, ampliamente probado en operaciones logísticas de alta exigencia.
+Azure IoT Hub Device Twins registra configuración deseada y reportada; una diferencia no acredita por sí sola instalación correcta. Los eventos y actas separados conservan cada intento, firma del paquete, versión aplicada, pruebas y resultado, ya que el twin representa estado y no garantiza todos los estados intermedios \parencite{d3_device_twins}. Device Update distribuye paquetes o imágenes a equipos compatibles mediante agente; su integración con el Linux y mecanismos de recuperación del equipo elegido se homologa antes de usarla \parencite{d3_device_update}. La anticipación logística y el algoritmo constituyen el proceso particular propuesto; los servicios cloud son herramientas de soporte.
 
-\paragraph{Impacto económico} La inversión requerida se concentra en los arneses de acople rápido y el stock de búferes de intercambio. En costo operacional genera ahorros inmediatos al suprimir las horas de lucro cesante por inmovilización de camiones. Se refleja en la partida de inversión de equipamiento y logística de terreno de la Oferta Económica.
+\subsection{Madurez}\label{sec:13-proceso-madurez}
 
-\paragraph{Indicador de verificación} Cero horas de lucro cesante o inmovilización de flota
-comercialmente activa atribuible a la instalación. Ritmo sostenido de intervención de 35 a 45
-tractocamiones mensuales distribuidos en la red de terminales, alcanzando el 100 \% de la flota propia
-(148 unidades) al cierre del mes 8. Reducción del tiempo medio de sustitución en terreno a menos de
-30 minutos por camión.
+Se utiliza la escala TRL de nueve niveles explicada por NASA (Manning, 2023), aplicada aquí como referencia de madurez del desarrollo, sin confundir disponibilidad de un servicio cloud con validación del proceso completo. El proceso integrado está en \textbf{TRL 2 propuesto}: concepto y contratos definidos, sin prueba de concepto ejecutada. Se prevé contrastar factibilidad en laboratorio antes del piloto de M6, avanzar a integración validada y documentar el nivel alcanzado con resultados. Se elimina la afirmación de TRL 8 sin evidencia del sistema integrado.
 
-\paragraph{Riesgo de adopción} Riesgo de dispersión geográfica de unidades subcontratadas que retrase su paso por terminal. Se mitiga mediante el seguimiento telemático de proximidad y la programación de turnos de instalación en los cinco terminales propios. La contingencia contempla la intervención coordinada durante detenciones obligatorias de mantención preventiva programada exclusivamente dentro de los recintos de Curimón S.A.
+\subsection{Incorporación, arquitectura y calendario}\label{sec:13-proceso-incorporacion-arquitectura-y-calendario}
 
-% ============================================================================
+La \figref{13-proceso-13-2-intervenciones} muestra el proceso, sus entradas y el control que evita intervenir sin ventana confirmada.
+
+\anexoGrafico{../../Informe-2/D3/graficos/13-2-intervenciones.png}{Programación y ejecución de intervenciones por oportunidad de patio}{13-proceso-13-2-intervenciones}
+
+\begingroup\emergencystretch=3em
+Flota y activos conserva \texttt{INTERVENCION\_\allowbreak{}TALLER}; Telemetría conserva \texttt{DISPOSITIVO} y eventos de configuración; la plataforma de S6 construye y firma el artefacto. El manifiesto vincula dispositivo, familia, kit, versión y acta de validación, sin sobrescribir la evidencia anterior. El detalle de planificación se mantiene en el backlog EDT 12.2, con integración a EDT 4.1/4.2; no se altera la EDT de D2.\par\endgroup
+
+Calendario de S7/CONSIDERACIONES-D2: piloto de \textbf{10 camiones en M6}, montaje propio \textbf{M6–M9}, terceros adheridos desde M7, pausa M11–M15 y continuación M16–M18. El proceso no garantiza intervenir un tercero que no acuda o no adhiera. Los equipos existentes de los 192 terceros se integran mediante sus contratos autorizados; no se sustituyen por esta ficha.
+
+\subsection{Impacto económico y vínculo al flujo de caja}\label{sec:13-proceso-impacto-economico-y-vinculo-al-flujo-de-caja}
+
+La inversión incremental comprende el planificador, el tablero de oportunidades, pruebas de integración, homologación del agente y los kits diferenciales que efectivamente agregue el proceso. Se contabiliza en EDT 12.2 y en las partidas de implementación de la oferta económica; el stock contractual de sustitución de T-11 no se cobra nuevamente como inversión innovadora. El costo recurrente incluye ejecución, almacenamiento de actas y mantenimiento del planificador, separado de la conectividad ya presupuestada.
+
+El beneficio estimado se calcula como intervenciones evitadas por falta de kit $\times$ costo unitario de visita, más reducción medida de preparación $\times$ costo operativo aplicable, menos costo incremental del proceso. Sólo se incorpora un ahorro al escenario financiero cuando su base, cantidad, costo unitario y sensibilidad estén documentados; el escenario inicial no atribuye ahorro garantizado. La valorización se vincula a E-25/partidas de implementación y operación con D2. La fuente económica del repositorio mantiene valores vacíos; esta ficha no inventa montos ni una partida aprobada. La valoración monetaria y su reflejo en flujo de caja deben completarse en la oferta económica conforme al Artículo 29.5°.
+
+\subsection{Indicadores y medición}\label{sec:13-proceso-indicadores-y-medicion}
+
+La \tabref{13-proceso-tabla-13-2} distingue metas propuestas de la obligación de no extender la parada. La evaluación se realiza por familia de vehículo y terminal para no atribuir a la planificación diferencias de complejidad física.
+
+\ifdefined\NumeracionTablasDthree\else\refstepcounter{table}\fi
+\begin{tabla}[ancho=completo, fuente=condensada]{Indicadores del proceso y evidencia de aceptación}{13-proceso-tabla-13-2}{L{29mm} X X X}
+Indicador & Línea base & Meta propuesta & Medición \\ \midrule
+Preparación inútil por ausencia de unidad, autorización o kit compatible & Registro del piloto M6 y programación manual comparable; aún sin valor & Reducir $\geq$20 \% desde la línea base homologada & Por terminal y familia, M7–M9; cantidades, causas y denominador \\
+Intervenciones validadas al primer intento & Levantamiento M6; aún sin valor & $\geq$95 \% en cohorte de al menos 20 intervenciones elegibles & M7–M9; acta y resultado de autodiagnóstico; no ocultar reintentos \\
+Sustitución modular & Tiempo real del piloto; aún sin valor & $\leq$30 min dentro de la ventana normal, en familias homologadas & Cronometraje por unidad, desde entrega de kit hasta liberación; reportar excepciones \\
+Parada comercial adicional por instalación & Restricción contractual, no beneficio novedoso & 0; abortar y reprogramar cuando se reduzca la ventana & En cada intervención; comparar ingreso, parada normal y liberación \\
+\end{tabla}
+
+La \tabref{13-proceso-tabla-13-2} permite aceptar o ajustar el proceso con evidencia. Una instalación cuenta como terminada sólo después de las pruebas físicas y de datos; cambiar el estado reportado en nube no sustituye esas pruebas. Ninguna meta se declara ya alcanzada.
+
+\subsection{Riesgos, mitigación y contingencia}\label{sec:13-proceso-riesgos-mitigacion-y-contingencia}
+
+La \tabref{13-proceso-tabla-2} reúne los riesgos del proceso, sus controles y la alternativa operativa cuando no se logra el resultado previsto.
+
+\ifdefined\NumeracionTablasDthree\else\refstepcounter{table}\fi
+\begin{tabla}[ancho=completo, fuente=condensada]{Riesgos de adopción del proceso y respuestas}{13-proceso-tabla-2}{L{29mm} X X X}
+Riesgo & Probabilidad / impacto propuestos & Mitigación & Contingencia \\ \midrule
+ETA o permanencia mal estimada & Media / alto & Conservar actualidad y calidad; confirmación del jefe de terminal antes de intervenir & Abortar preparación/intervención segura y reprogramar sin extender parada \\
+Kit o agente incompatible con el hardware & Media / alto & Matriz por familia, ensayo previo, artefacto firmado y reversión validada & Procedimiento homologado manual y versión previa; sin borrar eventos pendientes \\
+Escaso beneficio frente a coordinación manual & Media / medio & Comparación trazable por familia y terminal, con denominadores & Mantener planificación manual y limitar el desarrollo incremental \\
+Tercero sin autorización o sin paso por terminal & Media / alto & Agenda sólo con autorización vigente y oportunidad confirmada & Integración lógica de capacidades disponibles; no intervenir equipo privado \\
+\end{tabla}
+
+Las valoraciones son hipótesis AMFE a conciliar con S8; no resultados de incidentes observados. Los responsables de Flota y terminal registran el riesgo y su decisión en los comités de S6.
+
+Fuentes de madurez y aprovisionamiento: \parencite{d3_nasa_trl,d3_device_twins,d3_device_update}.
+
 \section{Innovación 3 — Tecnológica o de arquitectura}\label{sec:13-innovacion-3}
 % ============================================================================
 

@@ -1,0 +1,173 @@
+[
+  {
+    "figura": "4-3-asignacion",
+    "fuentes": [
+      "IBMPlexSans",
+      "IBMPlexSans-SmBld"
+    ],
+    "medicion": "4-3-asignacion.svg: 22 textos, letra mínima 9.0 u = 9.00 pt; para 9 pt toda la letra x1.00; 0 pares de etiquetas chocan, 0 salen del lienzo; el texto ocuparía 8 % del lienzo",
+    "lineas_sobre_elementos": []
+  },
+  {
+    "figura": "4-4-documento",
+    "fuentes": [
+      "IBMPlexSans",
+      "IBMPlexSans-SmBld"
+    ],
+    "medicion": "4-4-documento.svg: 22 textos, letra mínima 9.0 u = 9.00 pt; para 9 pt toda la letra x1.00; 0 pares de etiquetas chocan, 0 salen del lienzo; el texto ocuparía 9 % del lienzo",
+    "lineas_sobre_elementos": []
+  },
+  {
+    "figura": "4-6-liquidacion",
+    "fuentes": [
+      "IBMPlexSans",
+      "IBMPlexSans-SmBld"
+    ],
+    "medicion": "4-6-liquidacion.svg: 20 textos, letra mínima 9.0 u = 9.00 pt; para 9 pt toda la letra x1.00; 0 pares de etiquetas chocan, 0 salen del lienzo; el texto ocuparía 7 % del lienzo",
+    "lineas_sobre_elementos": []
+  },
+  {
+    "figura": "4-7-reconexion",
+    "fuentes": [
+      "IBMPlexSans",
+      "IBMPlexSans-SmBld"
+    ],
+    "medicion": "4-7-reconexion.svg: 21 textos, letra mínima 9.0 u = 9.00 pt; para 9 pt toda la letra x1.00; 0 pares de etiquetas chocan, 0 salen del lienzo; el texto ocuparía 8 % del lienzo",
+    "lineas_sobre_elementos": []
+  },
+  {
+    "figura": "audit-figura-5.1-erd",
+    "fuentes": [
+      "IBMPlexSans",
+      "IBMPlexSans-SmBld"
+    ],
+    "medicion": "audit-figura-5.1-erd.svg: 61 textos, letra mínima 9.0 u = 9.00 pt; para 9 pt toda la letra x1.00; 0 pares de etiquetas chocan, 0 salen del lienzo; el texto ocuparía 8 % del lienzo",
+    "lineas_sobre_elementos": []
+  },
+  {
+    "figura": "audit-figura-5.2-mdm",
+    "fuentes": [
+      "IBMPlexSans",
+      "IBMPlexSans-SmBld"
+    ],
+    "medicion": "audit-figura-5.2-mdm.svg: 24 textos, letra mínima 9.0 u = 9.00 pt; para 9 pt toda la letra x1.00; 0 pares de etiquetas chocan, 0 salen del lienzo; el texto ocuparía 9 % del lienzo",
+    "lineas_sobre_elementos": []
+  },
+  {
+    "figura": "5-2-custodia",
+    "fuentes": [
+      "IBMPlexSans",
+      "IBMPlexSans-SmBld"
+    ],
+    "medicion": "5-2-custodia.svg: 21 textos, letra mínima 9.0 u = 9.00 pt; para 9 pt toda la letra x1.00; 0 pares de etiquetas chocan, 0 salen del lienzo; el texto ocuparía 8 % del lienzo",
+    "lineas_sobre_elementos": []
+  },
+  {
+    "figura": "5-3-permisos",
+    "fuentes": [
+      "IBMPlexSans",
+      "IBMPlexSans-SmBld"
+    ],
+    "medicion": "5-3-permisos.svg: 23 textos, letra mínima 9.0 u = 9.00 pt; para 9 pt toda la letra x1.00; 0 pares de etiquetas chocan, 0 salen del lienzo; el texto ocuparía 8 % del lienzo",
+    "lineas_sobre_elementos": []
+  },
+  {
+    "figura": "audit-figura-5.3-cap",
+    "fuentes": [
+      "IBMPlexSans",
+      "IBMPlexSans-SmBld"
+    ],
+    "medicion": "audit-figura-5.3-cap.svg: 19 textos, letra mínima 9.0 u = 9.00 pt; para 9 pt toda la letra x1.00; 0 pares de etiquetas chocan, 0 salen del lienzo; el texto ocuparía 8 % del lienzo",
+    "lineas_sobre_elementos": []
+  },
+  {
+    "figura": "audit-figura-5.4-cdc",
+    "fuentes": [
+      "IBMPlexSans",
+      "IBMPlexSans-SmBld"
+    ],
+    "medicion": "audit-figura-5.4-cdc.svg: 20 textos, letra mínima 9.0 u = 9.00 pt; para 9 pt toda la letra x1.00; 0 pares de etiquetas chocan, 0 salen del lienzo; el texto ocuparía 8 % del lienzo",
+    "lineas_sobre_elementos": []
+  },
+  {
+    "figura": "audit-figura-5.5-migracion",
+    "fuentes": [
+      "IBMPlexSans",
+      "IBMPlexSans-SmBld"
+    ],
+    "medicion": "audit-figura-5.5-migracion.svg: 20 textos, letra mínima 9.0 u = 9.00 pt; para 9 pt toda la letra x1.00; 0 pares de etiquetas chocan, 0 salen del lienzo; el texto ocuparía 8 % del lienzo",
+    "lineas_sobre_elementos": []
+  },
+  {
+    "figura": "audit-figura-5.6-desempeno",
+    "fuentes": [
+      "IBMPlexSans",
+      "IBMPlexSans-SmBld"
+    ],
+    "medicion": "audit-figura-5.6-desempeno.svg: 20 textos, letra mínima 9.0 u = 9.00 pt; para 9 pt toda la letra x1.00; 0 pares de etiquetas chocan, 0 salen del lienzo; el texto ocuparía 8 % del lienzo",
+    "lineas_sobre_elementos": []
+  },
+  {
+    "figura": "5-7-evidencia",
+    "fuentes": [
+      "IBMPlexSans",
+      "IBMPlexSans-SmBld"
+    ],
+    "medicion": "5-7-evidencia.svg: 41 textos, letra mínima 9.0 u = 9.00 pt; para 9 pt toda la letra x1.00; 0 pares de etiquetas chocan, 0 salen del lienzo; el texto ocuparía 11 % del lienzo",
+    "lineas_sobre_elementos": []
+  },
+  {
+    "figura": "6-1-hitos",
+    "fuentes": [
+      "IBMPlexSans",
+      "IBMPlexSans-SmBld"
+    ],
+    "medicion": "6-1-hitos.svg: 31 textos, letra mínima 9.0 u = 9.00 pt; para 9 pt toda la letra x1.00; 0 pares de etiquetas chocan, 0 salen del lienzo; el texto ocuparía 8 % del lienzo",
+    "lineas_sobre_elementos": []
+  },
+  {
+    "figura": "6-2-pipeline",
+    "fuentes": [
+      "IBMPlexSans",
+      "IBMPlexSans-SmBld"
+    ],
+    "medicion": "6-2-pipeline.svg: 26 textos, letra mínima 9.0 u = 9.00 pt; para 9 pt toda la letra x1.00; 0 pares de etiquetas chocan, 0 salen del lienzo; el texto ocuparía 9 % del lienzo",
+    "lineas_sobre_elementos": []
+  },
+  {
+    "figura": "LogicaCapas",
+    "fuentes": [
+      "IBMPlexSans",
+      "IBMPlexSans-SmBld"
+    ],
+    "medicion": "LogicaCapas.svg: 106 textos, letra mínima 9.0 u = 9.00 pt; para 9 pt toda la letra x1.00; 0 pares de etiquetas chocan, 0 salen del lienzo; el texto ocuparía 14 % del lienzo",
+    "lineas_sobre_elementos": []
+  },
+  {
+    "figura": "documento-sin-cobertura",
+    "fuentes": [
+      "IBMPlexSans",
+      "IBMPlexSans-SmBld"
+    ],
+    "medicion": "documento-sin-cobertura.svg: 19 textos, letra mínima 9.0 u = 9.00 pt; para 9 pt toda la letra x1.00; 0 pares de etiquetas chocan, 0 salen del lienzo; el texto ocuparía 8 % del lienzo",
+    "lineas_sobre_elementos": []
+  },
+  {
+    "figura": "13-2-intervenciones",
+    "fuentes": [
+      "IBMPlexSans",
+      "IBMPlexSans-SmBld"
+    ],
+    "medicion": "13-2-intervenciones.svg: 23 textos, letra mínima 9.0 u = 9.00 pt; para 9 pt toda la letra x1.00; 0 pares de etiquetas chocan, 0 salen del lienzo; el texto ocuparía 9 % del lienzo",
+    "lineas_sobre_elementos": []
+  },
+  {
+    "figura": "13-cartera",
+    "fuentes": [
+      "IBMPlexSans",
+      "IBMPlexSans-SmBld"
+    ],
+    "medicion": "13-cartera.svg: 61 textos, letra mínima 9.0 u = 9.00 pt; para 9 pt toda la letra x1.00; 0 pares de etiquetas chocan, 0 salen del lienzo; el texto ocuparía 12 % del lienzo",
+    "lineas_sobre_elementos": []
+  }
+]

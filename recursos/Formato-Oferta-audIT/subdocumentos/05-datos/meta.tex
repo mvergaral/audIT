@@ -1,3 +1,10 @@
 % Datos del subdocumento 5 para la ficha del documento.
 % El número, el título y los formularios salen de configuracion/subdocumentos.tex.
 \DescripcionFicha{Dominio de información, persistencia, migración, desempeño, separación transaccional y analítica, calidad y retención.}
+\TituloComunicado{5}{Modelo y gestión de datos}
+
+% Numeración compatible con el longtable instalado; una sola activación.
+\ifdefined\NumeracionTablasDthree\else
+  \AddToHook{env/tabla/before}[d3-tablas]{\refstepcounter{table}}
+  \global\let\NumeracionTablasDthree\empty
+\fi
