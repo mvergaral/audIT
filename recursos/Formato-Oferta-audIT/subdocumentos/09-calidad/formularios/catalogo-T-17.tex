@@ -2420,17 +2420,19 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 \par\noindent\textbf{ID:} \texttt{C\allowbreak{}P\allowbreak{}-\allowbreak{}S\allowbreak{}E\allowbreak{}C\allowbreak{}-\allowbreak{}0\allowbreak{}8\allowbreak{}}\par
 \par\noindent\textbf{Nivel y Tipología:} Prueba de Ciberseguridad / Cadena de Custodia e Inmutabilidad Legal.\par
 \par\noindent\textbf{Requerimiento Trazado:} RF-004, RNF-012, RNF-014.\par
-\par\noindent\textbf{Precondiciones:} Contenedor Azure Blob Storage configurado con política de inmutabilidad en nivel WORM (Write Once, Read Many) con bloqueo temporal de 5 años.\par
+\par\noindent\textbf{Precondiciones:} Contenedor de ensayo Azure Blob Storage con política de conservación WORM temporal de cinco años vigente y bloqueada, a nivel de contenedor, sobre blobs de bloques. Cuenta de prueba con el rol Storage Blob Data Contributor o permisos efectivos equivalentes de lectura, escritura y borrado sobre el contenedor protegido y un contenedor de control sin inmutabilidad, bajo condiciones de acceso equivalentes. Registrar identidad, alcance y permisos aplicados; disponer de datos exclusivamente sintéticos.\par
 \par\noindent\textbf{Pasos de Ejecución:} \par
 \begin{enumerate}
-\item Almacenar un lote de eventos de jornada laboral sellados con timestamp RFC 3161 en el blob inmutable.
-\item Intentar ejecutar una operación de modificación (overwrite) sobre el blob mediante credenciales de administrador de base de datos.
-\item Intentar ejecutar una operación de borrado (delete) sobre el blob.
+\item Con la cuenta de prueba, crear un blob sintético en el contenedor de control sin inmutabilidad, sobrescribirlo y borrarlo. Confirmar éxito de ambas operaciones para acreditar permisos efectivos; si fallan por autorización, corregir la preparación y no dar por comprobada la protección WORM.
+\item Almacenar un lote de eventos de jornada laboral con sellado temporal RFC 3161 en el contenedor protegido. Conservar identificador del objeto, contenido y huella criptográfica inicial, sello y configuración de la política vigente y bloqueada.
+\item Con la misma cuenta, intentar sobrescribir el contenido del blob protegido y después borrarlo, dentro del período de conservación. Registrar cada solicitud, fecha, respuesta HTTP, código del servicio e identificador de solicitud.
+\item Comprobar que ambas operaciones son rechazadas por la política de inmutabilidad. Volver a leer el objeto y contrastar contenido, huella y sello con los originales; conservar el control previo y las respuestas como evidencia del ensayo.
 \end{enumerate}
-\par\noindent\textbf{Datos de Entrada Sintéticos:} Bloque de auditoría de jornada laboral con sellado criptográfico.\par
-\par\noindent\textbf{Resultado Esperado:} Azure Storage rechaza ambas operaciones con error \texttt{S\allowbreak{}t\allowbreak{}o\allowbreak{}r\allowbreak{}a\allowbreak{}g\allowbreak{}e\allowbreak{}O\allowbreak{}p\allowbreak{}e\allowbreak{}r\allowbreak{}a\allowbreak{}t\allowbreak{}i\allowbreak{}o\allowbreak{}n\allowbreak{}F\allowbreak{}o\allowbreak{}r\allowbreak{}b\allowbreak{}i\allowbreak{}d\allowbreak{}d\allowbreak{}e\allowbreak{}n\allowbreak{}B\allowbreak{}y\allowbreak{}I\allowbreak{}m\allowbreak{}m\allowbreak{}u\allowbreak{}t\allowbreak{}a\allowbreak{}b\allowbreak{}i\allowbreak{}l\allowbreak{}i\allowbreak{}t\allowbreak{}y\allowbreak{}P\allowbreak{}o\allowbreak{}l\allowbreak{}i\allowbreak{}c\allowbreak{}y\allowbreak{}}; la evidencia permanece inalterada y lista para peritaje judicial o inspección de la Dirección del Trabajo.\par
-\par\noindent\textbf{Pass/Fail y Severidad:} Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: \textbf{P1 (Bloqueante)}.\par
-\par\noindent\textbf{Entorno:} Staging Azure Blob Storage Inmutable.\par
+\par\noindent\textbf{Datos de Entrada Sintéticos:} Lote sintético de eventos de jornada con sello RFC 3161 y blob de control sin protección; contenido alternativo para el intento de sobrescritura.\par
+\par\noindent\textbf{Resultado Esperado:} El control sin inmutabilidad permite sobrescritura y borrado con la cuenta de prueba. En el contenedor protegido, Azure Blob Storage rechaza ambas operaciones con HTTP 409 y código \texttt{Blob\allowbreak{}Immutable\allowbreak{}Due\allowbreak{}To\allowbreak{}Policy}; el objeto conserva contenido, huella criptográfica y sello originales durante la conservación. Registrar resultados solo después de ejecutar el ensayo.\par
+\par\noindent\textbf{Pass/Fail y Severidad:} Pass solo si el control previo acredita escritura y borrado, ambas operaciones sobre el objeto protegido son rechazadas por la política WORM y la evidencia permanece íntegra. Una denegación por autenticación o permisos no acredita inmutabilidad: el caso queda no aprobado hasta corregir la preparación y repetirlo. Sobrescritura o borrado efectivos, pérdida de integridad o cualquier incumplimiento de los criterios implican Fail. Severidad: \textbf{P1 (Bloqueante)}.\par
+\par\noindent\textbf{Entorno:} Staging Azure Blob Storage: contenedor protegido y contenedor de control sin inmutabilidad.\par
+
 
 
 

@@ -2,6 +2,18 @@
 
 audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. Oferta Técnica, Sobre N.º 2. Informe Preparatorio 2. Archivo AUDIT-Formulario-T-19.pdf. Anexo del Subdocumento N.º 13, Innovaciones. Las fuentes están en las Referencias de ese subdocumento.
 
+## Índice detallado
+
+| Contenido | Página del PDF |
+|---|---:|
+| Ficha del documento | [3](AUDIT-Formulario-T-19.pdf#page=3) |
+| T-19 Cartera de innovaciones | [5](AUDIT-Formulario-T-19.pdf#page=5) |
+| Ficha T-19. Innovación tipo 1. Producto o servicio. Expediente verificable del transportista | [5](AUDIT-Formulario-T-19.pdf#page=5) |
+| Ficha T-19. Innovación tipo 2. Proceso. Programación dinámica de intervenciones por oportunidad de patio | [7](AUDIT-Formulario-T-19.pdf#page=7) |
+| Ficha T-19. Innovación tipo 3. Tecnológica o de arquitectura. Semirremolque conectado | [8](AUDIT-Formulario-T-19.pdf#page=8) |
+| Ficha T-19. Innovación tipo 4. Modelo de negocio o de contratación. Esquema de adhesión y propiedad del dispositivo | [10](AUDIT-Formulario-T-19.pdf#page=10) |
+| Ficha T-19. Innovación tipo 5. Experiencia de usuario, sostenibilidad o impacto social. Bienestar del conductor y descanso en parador seguro | [11](AUDIT-Formulario-T-19.pdf#page=11) |
+
 
 ## Innovación 1. Producto o servicio. Expediente verificable del transportista
 
@@ -23,25 +35,25 @@ audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. O
 | Mitigación | Primera emisión asistida en el terminal durante el enrolamiento. Entrevistas a destinatarios reales en el mes 4, antes de construir. Expediente con la jornada de los conductores que consintieron |
 | Contingencia | Emisión automática mensual a los transportistas que lo pidan, sin acción de su parte |
 
-## Innovación 2. Proceso. Despliegue sin detener la flota **[Información requerida por dupla 3: reformular o reemplazar según la observación 89]**
+## Innovación 2. Proceso. Programación dinámica de intervenciones por oportunidad de patio
 
 | Campo | Contenido |
 |---|---|
-| Problema u oportunidad | Un camión detenido no produce (Caso, capítulo 10, restricción 10, p. 24). La intervención a bordo solo ocurre en terminal, cada seis días en promedio, y el 22 % de la flota subcontratada pasa menos de una vez al mes (Caso, numeral 2.3, p. 7) |
-| Tecnología o práctica | Aprovisionamiento remoto con Azure IoT Hub Device Update y Device Twins, configuración precargada en fábrica, kits de reemplazo con arneses de acople rápido por familia de tractocamión y anticipación de llegada a terminal desde la posición de la flota |
-| Nivel de madurez | **[Información requerida por dupla 3: nivel de madurez y escala]** |
-| Fuentes | **[Información requerida por dupla 3: fuentes en APA]** |
-| Dónde se inserta en la arquitectura | Capa de borde y servicio de actualización remota. Rutina de autodiagnóstico y enrolamiento validada en la barrera de salida del terminal. **[Información requerida por dupla 3: alinear con los lectores CAN del Formulario T-11]** |
-| Paquetes de la EDT | Paquete 12.2, con los paquetes 4.1 (firmware y actualización en terminal) y 4.2 (montaje de los 182 equipos) |
-| Mes del cronograma | Piloto de 10 camiones en el mes 6. Flota propia completa al cierre del mes 9 |
-| Inversión requerida | **[Información requerida por dupla 3: partidas de inversión]** |
-| Efecto en el costo operacional | **[Información requerida por dupla 3: efecto en el costo operacional]** |
-| Beneficio esperado | Cero horas de inmovilización de flota comercialmente activa atribuible a la instalación |
-| Indicador, línea base y meta | Ritmo de 35 a 45 tractocamiones por mes. 100 % de los 148 propios al cierre del mes 8. Sustitución en terreno en menos de 30 minutos por camión |
-| Momento de medición | Mensual hasta el mes 8 |
-| Riesgo de adopción | **[Información requerida por dupla 3: riesgo de adopción, probabilidad e impacto]** |
-| Mitigación | **[Información requerida por dupla 3: estrategia de mitigación]** |
-| Contingencia | **[Información requerida por dupla 3: plan de contingencia]** |
+| Problema u oportunidad | 148 unidades propias y 34 de terceros sin equipo requieren montaje durante el paso normal por terminal. La disponibilidad simultánea de unidad, autorización, kit, técnico y ventana debe coordinarse. La línea base se levanta en M6; no se atribuye un ahorro ya medido. |
+| Tecnología o práctica | Planificador determinista en Flota y activos: combina ETA y calidad de posición, autorización, compatibilidad del kit, stock, turnos, versión y ventana confirmada. Device Twins conserva configuración y Device Update distribuye paquetes a equipos homologados; las actas conservan intentos y resultados. |
+| Nivel de madurez | TRL 2 propuesto, en escala NASA de nueve niveles: concepto definido, sin prueba de concepto ejecutada. Se valida factibilidad antes del piloto de M6 y se documenta el nivel alcanzado. |
+| Fuentes | (NASA, s. f.; Microsoft, s. f.; Microsoft, s. f.) |
+| Dónde se inserta en la arquitectura | Flota y activos registra las intervenciones; Telemetría aporta actualidad y configuración; la plataforma DevSecOps construye y firma el artefacto. Manifiesto por unidad, familia, kit, versión y acta. |
+| Paquetes de la EDT | 12.2, con integración a 4.1 y 4.2; conciliación con S7 pendiente. |
+| Mes del cronograma | Piloto de 10 camiones en M6; propios M6–M9; terceros adheridos desde M7; pausa M11–M15 y continuación M16–M18. |
+| Inversión requerida | Planificador, tablero, integración, homologación del agente y kits diferenciales. No se cobra nuevamente el stock contractual de T-11. Valorización incremental y flujo de caja pendientes en la Oferta Económica. |
+| Efecto en el costo operacional | Ejecución, almacenamiento de actas y mantenimiento del planificador, separados de la conectividad ya presupuestada. |
+| Beneficio esperado | Reducción de preparación desperdiciada y visitas evitables. Se estima con cantidades y costos unitarios documentados, menos el costo incremental. Sin ahorro garantizado ni base inventada. |
+| Indicador, línea base y meta | Reducir preparación inútil al menos 20 % respecto de la línea base homologada. Validación al primer intento al menos 95 % en cohorte de 20 intervenciones elegibles. Sustitución modular en hasta 30 min, dentro de la ventana normal. Metas propuestas. |
+| Momento de medición | Línea base y contraste con planificación manual en M6; comparación por familia y terminal en M7–M9. Registro de causas, reintentos y denominadores. |
+| Riesgo de adopción | ETA incorrecta, kit o agente incompatible, escaso beneficio frente a coordinación manual y falta de adhesión o paso de terceros. Probabilidad media; impacto alto salvo beneficio insuficiente, de impacto medio. |
+| Mitigación | Calidad y actualidad de ETA, confirmación del jefe de terminal, matriz de familias, ensayo previo, paquete firmado, reversión validada y comparación trazable. |
+| Contingencia | Abortar de forma segura y reprogramar cuando la ventana se acorte; método manual homologado y versión previa sin borrar eventos. Integración lógica de terceros sin intervención física no autorizada. |
 
 ## Innovación 3. Tecnológica o de arquitectura. Semirremolque conectado
 

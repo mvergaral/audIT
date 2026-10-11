@@ -71,18 +71,7 @@ La verificación combina inspección, análisis automatizado y pruebas dinámica
 
 La \figref{9-proceso-calidad} muestra el recorrido general desde el criterio contractual hasta la aceptación. El detalle de niveles, datos y decisiones se desarrolla después de la figura.
 
-\begin{figuraNativa}[!ht]{Recorrido general de aseguramiento de calidad. Fuente: elaboración propia}{9-proceso-calidad}
-\begin{tikzpicture}[x=1mm,y=1mm,every node/.style={font=\fontsize{10}{12}\selectfont\sffamily,align=center},bloque/.style={draw,rounded corners=1mm,text width=40mm,minimum height=21mm,inner sep=2mm}]
-\node[bloque] (r) at (0,0) {Requisitos\\y criterios};
-\node[bloque] (u) at (49,0) {CI y QA\\Reglas e integración};
-\node[bloque] (h) at (98,0) {Staging y HIL\\Carga, seguridad y equipo};
-\node[bloque] (a) at (98,-32) {UAT y\\marcha blanca};
-\node[bloque] (e) at (49,-32) {Revisión de evidencia\\y subsanación};
-\node[bloque] (c) at (0,-32) {Acta de\\conformidad};
-\draw[->] (r)--(u);\draw[->] (u)--(h);\draw[->] (h)--(a);\draw[->] (a)--(e);\draw[->] (e)--(c);
-\draw[->] (e)--node[right,font=\fontsize{9}{11}\selectfont\sffamily]{Fallo}(u);
-\end{tikzpicture}
-\end{figuraNativa}
+\figura[ancho=completo,lugar=htp]{figuras/09-calidad/figura_9_1_flujo_calidad_validacion.png}{Recorrido general de aseguramiento de calidad}{9-proceso-calidad}
 
 El primer bloque fija el criterio antes de ejecutar; CI y QA detectan fallos de lógica y contratos antes de utilizar dispositivos o datos operacionales. Staging y HIL reproducen carga, desconexión y fallas con controles de reversión. El resultado conserva ambiente, versión, entradas y medición: una captura sin esos datos no permite reevaluar el ensayo. UAT comprueba tareas con usuarios designados; marcha blanca añade volumen real y estabilidad sostenida. La Contraparte Técnica formaliza el cierre solo cuando concurren las seis condiciones contractuales. Cualquier fallo devuelve el incremento a corrección y reevaluación, sin convertir la figura en evidencia de ejecución.
 

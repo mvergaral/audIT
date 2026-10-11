@@ -28,24 +28,25 @@
   contingencia = {Emisión automática mensual a los transportistas que lo pidan, sin acción de su parte}
 }
 % ------------------------------------------------------------- innovación 2
+\clearpage
 \fichaInnovacion{
   tipo = {2. Proceso},
-  nombre = {Despliegue sin detener la flota \requiereDupla{3}{reformular o reemplazar según la observación 89}},
-  problema = {Un camión detenido no produce (Caso, capítulo 10, restricción 10, p. 24). La intervención a bordo solo ocurre en terminal, cada seis días en promedio, y el 22 \% de la flota subcontratada pasa menos de una vez al mes (Caso, numeral 2.3, p. 7)},
-  tecnologia = {Aprovisionamiento remoto con Azure IoT Hub Device Update y Device Twins, configuración precargada en fábrica, kits de reemplazo con arneses de acople rápido por familia de tractocamión y anticipación de llegada a terminal desde la posición de la flota},
-  madurez = {\requiereDupla{3}{nivel de madurez y escala}},
-  fuentes = {\requiereDupla{3}{fuentes en APA}},
-  arquitectura = {Capa de borde y servicio de actualización remota. Rutina de autodiagnóstico y enrolamiento validada en la barrera de salida del terminal. \requiereDupla{3}{alinear con los lectores CAN del Formulario T-11}},
-  edt = {Paquete 12.2, con los paquetes 4.1 (firmware y actualización en terminal) y 4.2 (montaje de los 182 equipos)},
-  mes = {Piloto de 10 camiones en el mes 6. Flota propia completa al cierre del mes 9},
-  inversion = {\requiereDupla{3}{partidas de inversión}},
-  costooperacional = {\requiereDupla{3}{efecto en el costo operacional}},
-  beneficio = {Cero horas de inmovilización de flota comercialmente activa atribuible a la instalación},
-  indicador = {Ritmo de 35 a 45 tractocamiones por mes. 100 \% de los 148 propios al cierre del mes 8. Sustitución en terreno en menos de 30 minutos por camión},
-  medicion = {Mensual hasta el mes 8},
-  riesgo = {\requiereDupla{3}{riesgo de adopción, probabilidad e impacto}},
-  mitigacion = {\requiereDupla{3}{estrategia de mitigación}},
-  contingencia = {\requiereDupla{3}{plan de contingencia}}
+  nombre = {Programación dinámica de intervenciones por oportunidad de patio},
+  problema = {148 unidades propias y 34 de terceros sin equipo requieren montaje durante el paso normal por terminal. La disponibilidad simultánea de unidad, autorización, kit, técnico y ventana debe coordinarse. La línea base se levanta en M6; no se atribuye un ahorro ya medido.},
+  tecnologia = {Planificador determinista en Flota y activos: combina ETA y calidad de posición, autorización, compatibilidad del kit, stock, turnos, versión y ventana confirmada. Device Twins conserva configuración y Device Update distribuye paquetes a equipos homologados; las actas conservan intentos y resultados.},
+  madurez = {TRL 2 propuesto, en escala NASA de nueve niveles: concepto definido, sin prueba de concepto ejecutada. Se valida factibilidad antes del piloto de M6 y se documenta el nivel alcanzado.},
+  fuentes = {\parencite{d3_nasa_trl,d3_device_twins,d3_device_update}},
+  arquitectura = {Flota y activos registra las intervenciones; Telemetría aporta actualidad y configuración; la plataforma DevSecOps construye y firma el artefacto. Manifiesto por unidad, familia, kit, versión y acta.},
+  edt = {12.2, con integración a 4.1 y 4.2; conciliación con S7 pendiente.},
+  mes = {Piloto de 10 camiones en M6; propios M6–M9; terceros adheridos desde M7; pausa M11–M15 y continuación M16–M18.},
+  inversion = {Planificador, tablero, integración, homologación del agente y kits diferenciales. No se cobra nuevamente el stock contractual de T-11. Valorización incremental y flujo de caja pendientes en la Oferta Económica.},
+  costooperacional = {Ejecución, almacenamiento de actas y mantenimiento del planificador, separados de la conectividad ya presupuestada.},
+  beneficio = {Reducción de preparación desperdiciada y visitas evitables. Se estima con cantidades y costos unitarios documentados, menos el costo incremental. Sin ahorro garantizado ni base inventada.},
+  indicador = {Reducir preparación inútil al menos 20 \% respecto de la línea base homologada. Validación al primer intento al menos 95 \% en cohorte de 20 intervenciones elegibles. Sustitución modular en hasta 30 min, dentro de la ventana normal. Metas propuestas.},
+  medicion = {Línea base y contraste con planificación manual en M6; comparación por familia y terminal en M7–M9. Registro de causas, reintentos y denominadores.},
+  riesgo = {ETA incorrecta, kit o agente incompatible, escaso beneficio frente a coordinación manual y falta de adhesión o paso de terceros. Probabilidad media; impacto alto salvo beneficio insuficiente, de impacto medio.},
+  mitigacion = {Calidad y actualidad de ETA, confirmación del jefe de terminal, matriz de familias, ensayo previo, paquete firmado, reversión validada y comparación trazable.},
+  contingencia = {Abortar de forma segura y reprogramar cuando la ventana se acorte; método manual homologado y versión previa sin borrar eventos. Integración lógica de terceros sin intervención física no autorizada.}
 }
 % ------------------------------------------------------------- innovación 3
 \fichaInnovacion{
