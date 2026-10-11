@@ -648,7 +648,7 @@
     {
       "codigo": "9.3",
       "entregable": "Medición mensual y medidas de refuerzo",
-      "aceptacion": "Ocho indicadores mensuales y medidas activadas si el mes 9 baja del 40 %",
+      "aceptacion": "Ocho indicadores; refuerzo con 59 o menos RUT de 148 iniciales firmados, vigentes y registrados al 31-10-2027 (M9 bajo SA-01), en ambas modalidades",
       "responsable": "Líder Funcional",
       "red_meses": "2 a 21",
       "nombre": "Medición y refuerzo",
@@ -728,9 +728,9 @@
     {
       "codigo": "11.1",
       "entregable": "Capacitación de torre, terminales y conductores",
-      "aceptacion": "Torre y terminales certificados",
+      "aceptacion": "G13 disponible antes de A13; diez días de familiarización y treinta de práctica y evaluación por turnos, sin afectar la operación; usuarios certificados",
       "responsable": "Líder de Implantación",
-      "red_meses": "A13, 10 a 12",
+      "red_meses": "A13, 182 a 222 días hábiles; M10 a M12",
       "nombre": "Capacitación",
       "requisitos": "",
       "ventanas": [
@@ -1070,7 +1070,7 @@
       "inicio_tardio": "100",
       "fin_tardio": "220",
       "holgura_total": "62",
-      "holgura_libre": "34",
+      "holgura_libre": "24",
       "critica": "No"
     },
     {
@@ -1101,7 +1101,7 @@
     },
     {
       "id": "A09",
-      "actividad": "Construcción de la Etapa 1 en ocho sprints de dos semanas y entrega para pruebas (H4)",
+      "actividad": "Construcción de Etapa 1 en ocho sprints; entrega G13 al cierre del sprint 7 y entrega completa para pruebas (H4)",
       "predecesoras": "A07",
       "duracion": "80",
       "inicio_temprano": "112",
@@ -1152,16 +1152,29 @@
       "critica": "Sí"
     },
     {
+      "id": "G13",
+      "actividad": "Entrega probada y congelada de PREPROD y material por perfil para capacitación",
+      "predecesoras": "A09 FS-10",
+      "duracion": "0",
+      "inicio_temprano": "182",
+      "fin_temprano": "182",
+      "inicio_tardio": "220",
+      "fin_tardio": "220",
+      "holgura_total": "38",
+      "holgura_libre": "0",
+      "critica": "No"
+    },
+    {
       "id": "A13",
-      "actividad": "Capacitación de conductores en los terminales y de la torre 24x7",
-      "predecesoras": "A06, A09",
+      "actividad": "Capacitación por turnos: 10 días de familiarización y 30 de práctica y evaluación",
+      "predecesoras": "A06, A09 FS-10, G13",
       "duracion": "40",
-      "inicio_temprano": "192",
-      "fin_temprano": "232",
+      "inicio_temprano": "182",
+      "fin_temprano": "222",
       "inicio_tardio": "220",
       "fin_tardio": "260",
-      "holgura_total": "28",
-      "holgura_libre": "8",
+      "holgura_total": "38",
+      "holgura_libre": "18",
       "critica": "No"
     },
     {

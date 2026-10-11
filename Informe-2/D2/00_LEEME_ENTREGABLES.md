@@ -4,6 +4,23 @@
 
 ## Archivos para incorporar al informe
 
+**Actualización del 11 de octubre de 2026:** para impresión y anexos de S7, usar
+`03_Apoyo/Laminas_EDT_Gantt_PERT.pdf`: vistas generales, detalles de los 54 paquetes,
+Gantt M1–M24/M1–M56 y ambos PERT. Las láminas son vectoriales, con texto mínimo
+de 10 puntos en origen. Los PDF individuales están en
+`recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/` y S7 los referencia.
+La verificación de escala y referencias en el PDF oficial queda pendiente de compilarlo:
+el entorno Windows actual presenta errores de acceso/configuración de MiKTeX y de
+interpretación de la orden de compilación. El cuaderno de láminas es material de revisión,
+sin sustituir el documento oficial con folios y firmas.
+
+Para regenerar estas láminas, ejecutar
+`python Informe-2/d2/99_Generacion/generar_laminas_impresion.py` después de actualizar
+los datos del plan detallado. Usa la red CPM conciliada: A13 inicia en el día 182, condicionada a G13,
+con 40 días de duración. Adhesión: al menos 60 de 148 iniciales al corte de M9.
+La verificación de Monte Carlo con la fuente de D4 sigue pendiente. La fuente económica mantiene pendiente
+la valorización incremental de la innovación 2, sin duplicar T-11.
+
 | Entregable | Carpeta | Uso recomendado |
 |---|---|---|
 | EDT completa: árbol de 13 áreas y 54 paquetes | `01_EDT/01_Completa/` | Vista general o anexo amplio. El SVG conserva la calidad al ampliar; el PNG permite insertarlo como imagen. |
@@ -33,7 +50,7 @@ Para diagrams.net: **Archivo → Abrir desde → Dispositivo** y seleccionar el 
 `03_Apoyo/` contiene:
 
 - `Diccionario_EDT.csv`: código, nombre, entregable, aceptación, responsable, referencia a red, origen de ventana y requisitos asociados.
-- `Red_Actividades_y_Holguras.csv`: 25 actividades del T-15, precedencias, duración y holguras en días hábiles.
+- `Red_Actividades_y_Holguras.csv`: 25 actividades y el hito G13 del T-15, precedencias, duración y holguras en días hábiles.
 
 Estos archivos complementan los gráficos y facilitan su revisión.
 

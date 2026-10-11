@@ -808,8 +808,8 @@ tráfico, que hasta el mes 21 la recibe del sistema de 2013 a través de la capa
 2 la asignación pregunta a Personas y cumplimiento por la jornada y las habilitaciones del conductor, y a
 Flota y activos por la aptitud del tractocamión y del semirremolque. Si alguno responde que no, el viaje
 no sale. En el paso 3 Operación de fletes arma los datos del documento de transporte desde la orden y el
-sistema contable lo emite, sin redigitar \req{RF-013}. El camión no inicia el movimiento sin el folio
-emitido, regla RN-11.
+sistema contable lo emite, sin redigitar \req{RF-013}. El camión no inicia el movimiento sin una
+representación completa y conforme del documento disponible en cabina, regla RN-11.
 
 En el paso 4 el equipo a bordo registra posición, conducción y eventos, y los transmite con cobertura o
 los guarda hasta 72 horas sin ella \req{RF-009}. En el paso 5 la llegada y la salida en el punto del
@@ -823,14 +823,23 @@ de desfase \caso*{RT-05.29}{32}, y alimenta la liquidación mensual del transpor
 La emisión del documento en un punto de carga sin cobertura es la decisión 9 del numeral 16.1 y la
 restricción 8 no deja margen: el sistema contable es el único emisor. La solución lo resuelve sin que
 ningún equipo emita. Si los datos de la carga se conocen al asignar, el documento se emite antes de que
-el camión entre a la zona sin señal y viaja con su folio en el equipo. Si sólo se conocen en el punto, el
-equipo audIT envía el conjunto mínimo de datos por su enlace satelital de mensajes cortos, de hasta 340
-bytes \parencite{iridium_sbd}, el sistema contable emite y el folio vuelve por el mismo canal. Los
+el camión entre a la zona sin señal y su representación completa y conforme queda disponible en cabina.
+Si sólo se conocen en el punto, el equipo audIT envía los datos al sistema contable mediante el enlace
+satelital; el contable emite y devuelve el contenido íntegro necesario para portar la representación
+conforme o el archivo completo de representación. Un folio o una huella no bastan. El retorno debe
+verificarse y reensamblarse íntegramente antes de habilitar la salida. La capacidad por mensaje no
+acredita que el documento completo pueda transmitirse en una única trama.
+
+La comprobación integral del límite de 90 segundos permanece pendiente: debe incluir solicitud,
+emisión, retorno, reensamblado, verificación y disponibilidad en cabina con el documento de mayor tamaño
+previsto, pérdidas y reintentos. Esta puerta de validación concuerda con S4 y el riesgo R-28 de S8.
+Si la representación no está disponible o no es conforme, se bloquea la salida; no se considera
+validado el camino satelital por recibir solamente un folio. Los
 puntos de carga sin cobertura los identifica la caracterización en terreno de los meses 1 a 3, y la regla
 RN-06 asigna esos viajes a camiones con equipo audIT cuando los datos de la carga no se conocen antes.
 
 \decision{titulo={Documento de transporte en un punto de carga sin cobertura},
-  decide={Emisión anticipada desde la orden, o emisión por el sistema contable con datos enviados por enlace satelital, con el folio de vuelta antes del movimiento},
+  decide={Emisión anticipada desde la orden, o emisión por el sistema contable con datos enviados por enlace satelital y retorno de la representación completa y conforme a cabina antes del movimiento; comprobación integral de los 90 segundos pendiente},
   descarta={Folios preasignados al equipo a bordo o al terminal, que convierten a ese equipo en emisor},
   criterio={Restricción 8: el sistema contable es el único emisor. Ningún equipo del Formulario T-11 emite documentos},
   fuente={\caso{capítulo 10, restricción 8}{24} y decisión 9 del \caso{numeral 16.1}{35}}}
@@ -882,10 +891,19 @@ nivel 5. Esa modalidad acredita jornada con marca, no con evidencia instrumental
 Quien quiera subir de nivel pasa a la modalidad completa. Quien no adhiere sigue operando con validación
 documental, pero sin atestación firmada su conductor no obtiene veredicto y el viaje no se asigna.
 
+La adhesión firmada se calcula sobre los 148 transportistas de la población inicial del Caso.
+Se cuenta una vez por RUT, con anexo firmado por el mandante y el representante autorizado
+del transportista, vigente, no revocado y registrado al corte. Se incluyen las modalidades completa
+y de datos. La instalación de equipos, la activación técnica y los consentimientos de
+conductores se controlan por separado; la firma del transportista no sustituye esos consentimientos.
+El corte de M9 es el 31 de octubre de 2027 bajo SA-01 (inicio en febrero de 2027).
+El 40 \% corresponde a 59,2 transportistas: se requieren al menos 60 firmados y con
+59 o menos se activa el refuerzo. Las metas posteriores permanecen en 104 en M16 y 134 en M21.
+
 La adhesión se mide cada mes con ocho indicadores: transportistas contactados, anexos firmados, camiones
 por modalidad, conductores capacitados, viajes por nivel de evidencia, consultas a la liquidación en curso,
 revocaciones y tiempo entre firma y activación. Las metas son 104 transportistas al mes 16 y 134 al mes 21.
-Si en el mes 9 la adhesión firmada no llega al 40~\%, se activan tres medidas en orden: ampliar el reparto
+Si al cierre de M9 hay 59 o menos firmados de esa población, se activan tres medidas en orden: ampliar el reparto
 de la espera recuperada, priorizar los retornos para la flota adherida y extender la modalidad de datos,
 que no requiere instalar nada. Lo que no se hace es rebajar el estándar de prueba, porque la compañía
 responde por la jornada del conductor que despacha cualquiera sea la tasa de adhesión

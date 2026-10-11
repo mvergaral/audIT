@@ -1,0 +1,178 @@
+[
+  {
+    "archivo": "edt-general.pdf",
+    "minimo_pt": 10.0
+  },
+  {
+    "archivo": "edt-detalle-01-1.pdf",
+    "minimo_pt": 10.0
+  },
+  {
+    "archivo": "edt-detalle-02-1.pdf",
+    "minimo_pt": 10.0
+  },
+  {
+    "archivo": "edt-detalle-02-2.pdf",
+    "minimo_pt": 10.0
+  },
+  {
+    "archivo": "edt-detalle-03-1.pdf",
+    "minimo_pt": 10.0
+  },
+  {
+    "archivo": "edt-detalle-03-2.pdf",
+    "minimo_pt": 10.0
+  },
+  {
+    "archivo": "edt-detalle-04-1.pdf",
+    "minimo_pt": 10.0
+  },
+  {
+    "archivo": "edt-detalle-05-1.pdf",
+    "minimo_pt": 10.0
+  },
+  {
+    "archivo": "edt-detalle-05-2.pdf",
+    "minimo_pt": 10.0
+  },
+  {
+    "archivo": "edt-detalle-05-3.pdf",
+    "minimo_pt": 10.0
+  },
+  {
+    "archivo": "edt-detalle-06-1.pdf",
+    "minimo_pt": 10.0
+  },
+  {
+    "archivo": "edt-detalle-06-2.pdf",
+    "minimo_pt": 10.0
+  },
+  {
+    "archivo": "edt-detalle-07-1.pdf",
+    "minimo_pt": 10.0
+  },
+  {
+    "archivo": "edt-detalle-08-1.pdf",
+    "minimo_pt": 10.0
+  },
+  {
+    "archivo": "edt-detalle-08-2.pdf",
+    "minimo_pt": 10.0
+  },
+  {
+    "archivo": "edt-detalle-09-1.pdf",
+    "minimo_pt": 10.0
+  },
+  {
+    "archivo": "edt-detalle-10-1.pdf",
+    "minimo_pt": 10.0
+  },
+  {
+    "archivo": "edt-detalle-11-1.pdf",
+    "minimo_pt": 10.0
+  },
+  {
+    "archivo": "edt-detalle-11-2.pdf",
+    "minimo_pt": 10.0
+  },
+  {
+    "archivo": "edt-detalle-12-1.pdf",
+    "minimo_pt": 10.0
+  },
+  {
+    "archivo": "edt-detalle-12-2.pdf",
+    "minimo_pt": 10.0
+  },
+  {
+    "archivo": "edt-detalle-13-1.pdf",
+    "minimo_pt": 10.0
+  },
+  {
+    "archivo": "edt-detalle-13-2.pdf",
+    "minimo_pt": 10.0
+  },
+  {
+    "archivo": "gantt-general.pdf",
+    "minimo_pt": 10.0
+  },
+  {
+    "archivo": "gantt-m24-detalle-01.pdf",
+    "minimo_pt": 10.0
+  },
+  {
+    "archivo": "gantt-m24-detalle-02.pdf",
+    "minimo_pt": 10.0
+  },
+  {
+    "archivo": "gantt-m24-detalle-03.pdf",
+    "minimo_pt": 10.0
+  },
+  {
+    "archivo": "gantt-m24-detalle-04.pdf",
+    "minimo_pt": 10.0
+  },
+  {
+    "archivo": "gantt-m24-detalle-05.pdf",
+    "minimo_pt": 10.0
+  },
+  {
+    "archivo": "gantt-m24-detalle-06.pdf",
+    "minimo_pt": 10.0
+  },
+  {
+    "archivo": "gantt-m24-detalle-07.pdf",
+    "minimo_pt": 10.0
+  },
+  {
+    "archivo": "gantt-m24-detalle-08.pdf",
+    "minimo_pt": 10.0
+  },
+  {
+    "archivo": "gantt-m24-detalle-09.pdf",
+    "minimo_pt": 10.0
+  },
+  {
+    "archivo": "gantt-m56-detalle-01.pdf",
+    "minimo_pt": 10.0
+  },
+  {
+    "archivo": "gantt-m56-detalle-02.pdf",
+    "minimo_pt": 10.0
+  },
+  {
+    "archivo": "gantt-m56-detalle-03.pdf",
+    "minimo_pt": 10.0
+  },
+  {
+    "archivo": "gantt-m56-detalle-04.pdf",
+    "minimo_pt": 10.0
+  },
+  {
+    "archivo": "gantt-m56-detalle-05.pdf",
+    "minimo_pt": 10.0
+  },
+  {
+    "archivo": "gantt-m56-detalle-06.pdf",
+    "minimo_pt": 10.0
+  },
+  {
+    "archivo": "gantt-m56-detalle-07.pdf",
+    "minimo_pt": 10.0
+  },
+  {
+    "archivo": "gantt-m56-detalle-08.pdf",
+    "minimo_pt": 10.0
+  },
+  {
+    "archivo": "gantt-m56-detalle-09.pdf",
+    "minimo_pt": 10.0
+  },
+  {
+    "archivo": "pert-etapa1.pdf",
+    "minimo_pt": 10.0
+  },
+  {
+    "archivo": "pert-etapa2.pdf",
+    "minimo_pt": 10.0
+  }
+]

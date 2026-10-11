@@ -172,7 +172,22 @@ en la ruta crítica.
 
 La \tabref{7-malla} es la malla de precedencias, con el inicio y el término tempranos (ES y EF), el
 inicio y el término tardíos (LS y LF), la holgura total (HT) y la holgura libre (HL) de cada actividad.
-La duración va en días hábiles y el día 0 es el inicio del mes 1.
+La duración va en días hábiles y el día 0 es el inicio del mes 1. FS$-10$ indica
+una precedencia fin-inicio con adelanto de diez días hábiles. G13 es un hito de
+duración cero incluido en A09: entrega probada y congelada de la versión de
+entrenamiento en PREPROD, con datos ficticios y material por perfil. Debe estar
+disponible al día 182 de la línea base; su disponibilidad real es una condición
+de inicio de A13 y no una autorización automática derivada del calendario.
+D3 debe identificar las funciones certificadas al cierre del sprint 7 que
+habilitan la familiarización. No se da por ejecutada esa certificación.
+
+A13 mantiene 40 días hábiles: diez de familiarización con roles y permisos,
+jornada y bloqueo, privacidad, identificación y actuación ante alertas o falta
+de conexión; luego treinta de práctica sobre flujos completos de la Etapa 1 y
+evaluación, incluido el complemento de los cambios del sprint 8 antes de la
+marcha blanca, sin ampliar los 40 días. La práctica completa empieza después del término de A09 y de los
+diez días iniciales. Los turnos y relevos protegen la operación. Si G13 no está
+disponible, se registra el atraso, se recalcula el inicio y se actualiza el riesgo.
 
 \begin{tabla}[ancho=completo, fuente=condensada]{Malla de precedencias y cálculo de holguras}{7-malla}{L{8mm} X L{17mm} R{11mm} R{7mm} R{7mm} R{7mm} R{7mm} R{6mm} R{6mm} C{11mm}}
 ID & Descripción & Predecesoras & Duración & ES & EF & LS & LF & HT & HL & Ruta crítica \\ \midrule
@@ -181,14 +196,15 @@ A02 & Levantamiento de procesos en los cinco terminales, línea base de alcance 
 A03 & Caracterización en terreno de la cobertura móvil de las rutas & A01 & 45 & 5 & 50 & 87 & 132 & 82 & 62 & No \\
 A04 & Verificación de factibilidad con los tres proveedores de posicionamiento y con los fabricantes de los camiones con telemetría de fábrica & A01 & 60 & 5 & 65 & 66 & 126 & 61 & 47 & No \\
 A05 & Arquitectura, plan de seguridad y modelo de datos (H2) & A02 & 38 & 38 & 76 & 38 & 76 & 0 & 0 & Sí \\
-A06 & Plan de adhesión de los 148 transportistas subcontratados: contrato, incentivo y piloto & A02 & 120 & 38 & 158 & 100 & 220 & 62 & 34 & No \\
+A06 & Plan de adhesión de los 148 transportistas subcontratados: contrato, incentivo y piloto & A02 & 120 & 38 & 158 & 100 & 220 & 62 & 24 & No \\
 A07 & Infraestructura híbrida y ambientes DEV, QA, PREPROD y PROD con observabilidad (H3) & A05 & 36 & 76 & 112 & 76 & 112 & 0 & 0 & Sí \\
 A08 & Migración y verificación documental de las 6.000 vigencias de cuatro planillas & A05, A07 & 60 & 112 & 172 & 132 & 192 & 20 & 20 & No \\
-A09 & Construcción de la Etapa 1 en ocho sprints de dos semanas y entrega para pruebas (H4) & A07 & 80 & 112 & 192 & 112 & 192 & 0 & 0 & Sí \\
+A09 & Construcción de Etapa 1 en ocho sprints; entrega G13 al cierre del sprint 7 y entrega completa para pruebas (H4) & A07 & 80 & 112 & 192 & 112 & 192 & 0 & 0 & Sí \\
 A10 & Integraciones con el sistema de gestión de transporte de 2013, el sistema contable y las tres plataformas de posicionamiento & A04, A07 & 66 & 112 & 178 & 126 & 192 & 14 & 14 & No \\
 A11 & Piloto de equipamiento a bordo por familia de camión, instalado en terminal camión por camión & A03, A07 & 60 & 112 & 172 & 132 & 192 & 20 & 20 & No \\
 A12 & Pruebas integrales y certificación de la Etapa 1: aceptación de usuario, carga, resiliencia y seguridad ofensiva (H5) & A08, A09, A10, A11 & 34 & 192 & 226 & 192 & 226 & 0 & 0 & Sí \\
-A13 & Capacitación de conductores en los terminales y de la torre 24x7 & A06, A09 & 40 & 192 & 232 & 220 & 260 & 28 & 8 & No \\
+G13 & Entrega probada y congelada de PREPROD y material por perfil para capacitación & A09 FS$-10$ & 0 & 182 & 182 & 220 & 220 & 38 & 0 & No \\
+A13 & Capacitación por turnos: 10 días de familiarización y 30 de práctica y evaluación & A06, A09 FS$-10$, G13 & 40 & 182 & 222 & 220 & 260 & 38 & 18 & No \\
 A14 & Reserva de contingencia de cronograma de la Etapa 1 & A12 & 14 & 226 & 240 & 226 & 240 & 0 & 0 & Sí \\
 A15 & Marcha blanca de la Etapa 1, meses 13 a 15, con medición diaria y reversión activa (H6 al inicio) & A13, A14 & 60 & 240 & 300 & 260 & 320 & 20 & 0 & No \\
 A16 & Transferencia tecnológica y certificación del equipo de tecnologías de información del mandante & A14 & 50 & 240 & 290 & 270 & 320 & 30 & 10 & No \\

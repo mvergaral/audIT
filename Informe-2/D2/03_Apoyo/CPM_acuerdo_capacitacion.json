@@ -1,0 +1,352 @@
+{
+  "A01": {
+    "duracion": 5.0,
+    "actividad": "Inicio del proyecto: plan de dirección aprobado y equipo constituido",
+    "ES": 0,
+    "EF": 5.0,
+    "LF": 5.0,
+    "LS": 0.0,
+    "HT": 0.0,
+    "HL": 0.0,
+    "precedencias": {}
+  },
+  "A02": {
+    "duracion": 33.0,
+    "actividad": "Levantamiento de procesos en los cinco terminales, línea base de alcance y matriz de trazabilidad (H1)",
+    "ES": 5.0,
+    "EF": 38.0,
+    "LF": 38.0,
+    "LS": 5.0,
+    "HT": 0.0,
+    "HL": 0.0,
+    "precedencias": {
+      "A01": 0
+    }
+  },
+  "A03": {
+    "duracion": 45.0,
+    "actividad": "Caracterización en terreno de la cobertura móvil de las rutas",
+    "ES": 5.0,
+    "EF": 50.0,
+    "LF": 132.0,
+    "LS": 87.0,
+    "HT": 82.0,
+    "HL": 62.0,
+    "precedencias": {
+      "A01": 0
+    }
+  },
+  "A04": {
+    "duracion": 60.0,
+    "actividad": "Verificación de factibilidad con los tres proveedores de posicionamiento y con los fabricantes de los camiones con telemetría de fábrica",
+    "ES": 5.0,
+    "EF": 65.0,
+    "LF": 126.0,
+    "LS": 66.0,
+    "HT": 61.0,
+    "HL": 47.0,
+    "precedencias": {
+      "A01": 0
+    }
+  },
+  "A05": {
+    "duracion": 38.0,
+    "actividad": "Arquitectura, plan de seguridad y modelo de datos (H2)",
+    "ES": 38.0,
+    "EF": 76.0,
+    "LF": 76.0,
+    "LS": 38.0,
+    "HT": 0.0,
+    "HL": 0.0,
+    "precedencias": {
+      "A02": 0
+    }
+  },
+  "A06": {
+    "duracion": 120.0,
+    "actividad": "Plan de adhesión de los 148 transportistas subcontratados: contrato, incentivo y piloto",
+    "ES": 38.0,
+    "EF": 158.0,
+    "LF": 220.0,
+    "LS": 100.0,
+    "HT": 62.0,
+    "HL": 24.0,
+    "precedencias": {
+      "A02": 0
+    }
+  },
+  "A07": {
+    "duracion": 36.0,
+    "actividad": "Infraestructura híbrida y ambientes DEV, QA, PREPROD y PROD con observabilidad (H3)",
+    "ES": 76.0,
+    "EF": 112.0,
+    "LF": 112.0,
+    "LS": 76.0,
+    "HT": 0.0,
+    "HL": 0.0,
+    "precedencias": {
+      "A05": 0
+    }
+  },
+  "A08": {
+    "duracion": 60.0,
+    "actividad": "Migración y verificación documental de las 6.000 vigencias de cuatro planillas",
+    "ES": 112.0,
+    "EF": 172.0,
+    "LF": 192.0,
+    "LS": 132.0,
+    "HT": 20.0,
+    "HL": 20.0,
+    "precedencias": {
+      "A05": 0,
+      "A07": 0
+    }
+  },
+  "A09": {
+    "duracion": 80.0,
+    "actividad": "Construcción de la Etapa 1 en ocho sprints de dos semanas y entrega para pruebas (H4)",
+    "ES": 112.0,
+    "EF": 192.0,
+    "LF": 192.0,
+    "LS": 112.0,
+    "HT": 0.0,
+    "HL": 0.0,
+    "precedencias": {
+      "A07": 0
+    }
+  },
+  "A10": {
+    "duracion": 66.0,
+    "actividad": "Integraciones con el sistema de gestión de transporte de 2013, el sistema contable y las tres plataformas de posicionamiento",
+    "ES": 112.0,
+    "EF": 178.0,
+    "LF": 192.0,
+    "LS": 126.0,
+    "HT": 14.0,
+    "HL": 14.0,
+    "precedencias": {
+      "A04": 0,
+      "A07": 0
+    }
+  },
+  "A11": {
+    "duracion": 60.0,
+    "actividad": "Piloto de equipamiento a bordo por familia de camión, instalado en terminal camión por camión",
+    "ES": 112.0,
+    "EF": 172.0,
+    "LF": 192.0,
+    "LS": 132.0,
+    "HT": 20.0,
+    "HL": 20.0,
+    "precedencias": {
+      "A03": 0,
+      "A07": 0
+    }
+  },
+  "A12": {
+    "duracion": 34.0,
+    "actividad": "Pruebas integrales y certificación de la Etapa 1: aceptación de usuario, carga, resiliencia y seguridad ofensiva (H5)",
+    "ES": 192.0,
+    "EF": 226.0,
+    "LF": 226.0,
+    "LS": 192.0,
+    "HT": 0.0,
+    "HL": 0.0,
+    "precedencias": {
+      "A08": 0,
+      "A09": 0,
+      "A10": 0,
+      "A11": 0
+    }
+  },
+  "G13": {
+    "duracion": 0,
+    "actividad": "Versión de entrenamiento y material por perfil probados y congelados en PREPROD",
+    "ES": 182.0,
+    "EF": 182.0,
+    "LF": 220.0,
+    "LS": 220.0,
+    "HT": 38.0,
+    "HL": 0.0,
+    "precedencias": {
+      "A09": -10
+    }
+  },
+  "A13": {
+    "duracion": 40.0,
+    "actividad": "Capacitación por turnos: 10 días de familiarización y 30 de práctica y evaluación",
+    "ES": 182.0,
+    "EF": 222.0,
+    "LF": 260.0,
+    "LS": 220.0,
+    "HT": 38.0,
+    "HL": 18.0,
+    "precedencias": {
+      "A06": 0,
+      "A09": -10,
+      "G13": 0
+    }
+  },
+  "A14": {
+    "duracion": 14.0,
+    "actividad": "Reserva de contingencia de cronograma de la Etapa 1",
+    "ES": 226.0,
+    "EF": 240.0,
+    "LF": 240.0,
+    "LS": 226.0,
+    "HT": 0.0,
+    "HL": 0.0,
+    "precedencias": {
+      "A12": 0
+    }
+  },
+  "A15": {
+    "duracion": 60.0,
+    "actividad": "Marcha blanca de la Etapa 1, meses 13 a 15, con medición diaria y reversión activa (H6 al inicio)",
+    "ES": 240.0,
+    "EF": 300.0,
+    "LF": 320.0,
+    "LS": 260.0,
+    "HT": 20.0,
+    "HL": 0.0,
+    "precedencias": {
+      "A13": 0,
+      "A14": 0
+    }
+  },
+  "A16": {
+    "duracion": 50.0,
+    "actividad": "Transferencia tecnológica y certificación del equipo de tecnologías de información del mandante",
+    "ES": 240.0,
+    "EF": 290.0,
+    "LF": 320.0,
+    "LS": 270.0,
+    "HT": 30.0,
+    "HL": 10.0,
+    "precedencias": {
+      "A14": 0
+    }
+  },
+  "A17": {
+    "duracion": 36.0,
+    "actividad": "Levantamiento y diseño detallado de la Etapa 2 (H8)",
+    "ES": 240.0,
+    "EF": 276.0,
+    "LF": 276.0,
+    "LS": 240.0,
+    "HT": 0.0,
+    "HL": 0.0,
+    "precedencias": {
+      "A14": 0
+    }
+  },
+  "A18": {
+    "duracion": 120.0,
+    "actividad": "Escalamiento telemático e instalación progresiva a bordo",
+    "ES": 240.0,
+    "EF": 360.0,
+    "LF": 400.0,
+    "LS": 280.0,
+    "HT": 40.0,
+    "HL": 40.0,
+    "precedencias": {
+      "A06": 0,
+      "A11": 0,
+      "A14": 0
+    }
+  },
+  "A19": {
+    "duracion": 10.0,
+    "actividad": "Paso a producción de la Etapa 1 y acta de cierre de la marcha blanca (H7)",
+    "ES": 300.0,
+    "EF": 310.0,
+    "LF": 330.0,
+    "LS": 320.0,
+    "HT": 20.0,
+    "HL": 0.0,
+    "precedencias": {
+      "A15": 0,
+      "A16": 0
+    }
+  },
+  "A20": {
+    "duracion": 50.0,
+    "actividad": "Construcción de la Etapa 2 en cinco sprints de dos semanas y entrega para pruebas (H9)",
+    "ES": 276.0,
+    "EF": 326.0,
+    "LF": 326.0,
+    "LS": 276.0,
+    "HT": 0.0,
+    "HL": 0.0,
+    "precedencias": {
+      "A17": 0
+    }
+  },
+  "A21": {
+    "duracion": 30.0,
+    "actividad": "Estabilización posterior al paso a producción de la Etapa 1, con presencia en terminales en el relevo",
+    "ES": 310.0,
+    "EF": 340.0,
+    "LF": 360.0,
+    "LS": 330.0,
+    "HT": 20.0,
+    "HL": 20.0,
+    "precedencias": {
+      "A19": 0
+    }
+  },
+  "A22": {
+    "duracion": 24.0,
+    "actividad": "Certificación de la Etapa 2 y cierre del desarrollo (H10)",
+    "ES": 326.0,
+    "EF": 350.0,
+    "LF": 350.0,
+    "LS": 326.0,
+    "HT": 0.0,
+    "HL": 0.0,
+    "precedencias": {
+      "A20": 0
+    }
+  },
+  "A23": {
+    "duracion": 10.0,
+    "actividad": "Reserva de contingencia de cronograma de la Etapa 2",
+    "ES": 350.0,
+    "EF": 360.0,
+    "LF": 360.0,
+    "LS": 350.0,
+    "HT": 0.0,
+    "HL": 0.0,
+    "precedencias": {
+      "A22": 0
+    }
+  },
+  "A24": {
+    "duracion": 40.0,
+    "actividad": "Marcha blanca de la Etapa 2 en convivencia con la Etapa 1 en producción (H11 al inicio)",
+    "ES": 360.0,
+    "EF": 400.0,
+    "LF": 400.0,
+    "LS": 360.0,
+    "HT": 0.0,
+    "HL": 0.0,
+    "precedencias": {
+      "A21": 0,
+      "A23": 0
+    }
+  },
+  "A25": {
+    "duracion": 20.0,
+    "actividad": "Paso a producción de la Etapa 2 y aceptación final del proyecto (H12)",
+    "ES": 400.0,
+    "EF": 420.0,
+    "LF": 420.0,
+    "LS": 400.0,
+    "HT": 0.0,
+    "HL": 0.0,
+    "precedencias": {
+      "A18": 0,
+      "A24": 0
+    }
+  }
+}
