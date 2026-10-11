@@ -29,6 +29,8 @@ La homologación física utiliza iWave G26I con audIT EdgeHub, lector CAN sin co
 \addcontentsline{toc}{subsection}{Criterios de entrada y de salida.}
 Entrada: versión/configuración y ambiente identificados, requisito/caso/criterio fijados, datos y permisos disponibles, observabilidad y reversión verificadas. Salida: todos los criterios aplicables cumplidos, reporte reproducible y defectos relacionados, sin críticos/altos para cierre de marcha blanca. Se aplican los mínimos de sección 9.3.6; cuatro semanas sostenidas y las seis condiciones acumulativas de sección 9.3.5 gobiernan aceptación. Un promedio o cobertura de código no reemplaza otro criterio.
 
+Antes del ensayo se fijan los oráculos de evidencia multifuente y cambios concurrentes de vigencia o permiso. CP-SYS-01 y CP-PERF-04 incluyen reserva, confirmación y reintentos sin doble asignación en el plazo E2E. CP-HW-11 y CP-PERF-05 requieren representación completa y conforme disponible en cabina, con retorno satelital completo en hasta 90 s. CP-PERF-03 y CP-INT-25 concilian datos, documentos y eventos recuperados y permisos revocados. La falta de contrato, tamaño documental o mecanismo de recuperación homologado mantiene pendiente el criterio afectado; una simulación no acredita factibilidad del enlace ni del sitio real.
+
 Los controles siguientes complementan los criterios contractuales de S9 §9.3.6. La Tabla 9.2 relaciona umbral, método y evidencia; los controles físicos son compromisos de homologación de la configuración ofertada, no certificaciones ya obtenidas. audIT provee o contrata el banco y los instrumentos, sin presumir infraestructura del mandante.
 
 **Tabla 9.1.** Controles bloqueantes de software y homologación física

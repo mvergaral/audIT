@@ -37,8 +37,8 @@ La Tabla 9.2 recorre el catálogo de S3/T-12 y localiza las variantes diseñadas
 
 | Requisito | Casos existentes | Paquete EDT | Comprobación diseñada | Estado |
 |---|---|---|---|---|
-| RF-001 | CP-UNIT-01, CP-SYS-01, CP-HW-14, CP-PERF-04 | 5.3 | Preparar seis asignaciones con los cuatro factores presentes: fuentes de jornada 1, 2, 3, 4, 5 y ninguna | Diseñada; no ejecutada |
-| RF-002 | CP-UNIT-02, CP-INT-02 | 5.1 | Construir un padrón sintético de 454 conductores identificados, 196 propios y 258 externos; asociar a cada tramo origen, conductor, vehículo y nivel 1–5, con muestras de todas las fuentes y ausencia de fuente | Diseñada; no ejecutada |
+| RF-001 | CP-UNIT-01, CP-SYS-01, CP-HW-14, CP-PERF-04 | 5.3 | Fuentes 1–5 y ausencia; cambio concurrente de vigencia/permiso, reserva y reintentos sin doble asignación; p95 E2E hasta 30 s | Diseñada; no ejecutada |
+| RF-002 | CP-UNIT-02, CP-INT-02, CP-SYS-05 | 5.1 | Padrón sintético de 454 conductores; múltiples fuentes, estados de validez y evaluación registrada sin evidencia válida; nivel 0 informativo | Diseñada; no ejecutada |
 | RF-003 | CP-INT-03, CP-SYS-05, CP-HW-14 | 5.1, 9.2 | Crear dos conductores externos con igual viaje propuesto y jornadas previas distintas: descanso continuo de 8 h y de 6 h en la ventana de 24 h del fixture | Diseñada; no ejecutada |
 | RF-004 | CP-UNIT-06, CP-SEC-08 | 5.1 | Sellar un evento original y una corrección que cambia un dato; conservar ambas versiones con autor, origen y fecha | Diseñada; no ejecutada |
 | RF-005 | CP-UNIT-01, CP-SYS-08 | 5.1, 7.1 | Generar 6.000 vigencias sintéticas con titular, responsable, fecha y respaldo | Diseñada; no ejecutada |
@@ -49,8 +49,8 @@ La Tabla 9.2 recorre el catálogo de S3/T-12 y localiza las variantes diseñadas
 | RF-010 | CP-UNIT-08, CP-SYS-03 | 5.4 | Versionar 1.400 polígonos y puntos de entrada, límite interior y exterior en el mismo sistema de coordenadas; ejecutar replay automático | Diseñada; no ejecutada |
 | RF-011 | CP-UNIT-12, CP-SYS-03 | 5.5 | Usar un contrato sintético con 120 min libres y bloques facturables de 30 min, permanencias de 119, 120 y 330 min | Diseñada; no ejecutada |
 | RF-012 | CP-SYS-04, CP-INT-20 | 5.5 | Emitir e-POD con receptor identificado, fecha, viaje y conformidad, primero con conectividad y después sin ella | Diseñada; no ejecutada |
-| RF-013 | CP-INT-11, CP-INT-12 | 6.1 | Solicitar al ERP un DET desde una orden válida y repetir la misma clave con timeout y respuesta tardía | Diseñada; no ejecutada |
-| RF-014 | CP-UNIT-21, CP-HW-11 | 6.1, 4.1 | Ejecutar dos rutas de contingencia: DET anticipado por ERP desde la orden y datos enviados por enlace satelital al ERP con folio de vuelta al vehículo | Diseñada; no ejecutada |
+| RF-013 | CP-INT-11, CP-INT-12, CP-PERF-05 | 6.1 | Emisión única por ERP; representación conforme recibida en cabina, retorno completo y hasta 90 s bajo perfil común | Diseñada; no ejecutada |
+| RF-014 | CP-UNIT-21, CP-HW-11, CP-PERF-05 | 6.1, 4.1 | DET anticipado o retorno satelital completo; reensamblado y acceso local antes del movimiento; folio/hash aislados no habilitan | Diseñada; no ejecutada |
 | RF-015 | CP-UNIT-15, CP-SYS-09 | 8.2 | Usar las dos ofertas de retorno del fixture de CP-UNIT-15 con márgenes analíticos 970 y 780, en unidades sintéticas ajenas a precios de oferta | Diseñada; no ejecutada |
 | RF-016 | CP-INT-23, CP-SYS-15 | 5.6, 2.5 | Entregar dos viajes cerrados con factura de combustible tardía en uno | Diseñada; no ejecutada |
 | RF-017 | CP-INT-23, CP-SYS-10 | 5.6 | Usar un viaje propio y uno de tercero con los mismos tipos de componentes conocidos | Diseñada; no ejecutada |
@@ -78,7 +78,27 @@ La Tabla 9.2 recorre el catálogo de S3/T-12 y localiza las variantes diseñadas
 | RNF-011 | CP-INT-05, CP-SYS-05 | 11.2 | Durante convivencia TMS 2013/nuevo sistema, desviar por función y repetir una misma orden por ambas rutas; esperar un solo viaje y ningún despacho que eluda bloqueo | Diseñada; no ejecutada |
 | RNF-012 | CP-SEC-08, CP-UNIT-07 | 5.1 | Crear evidencia con autor, origen, fecha y contenido; añadir corrección como registro nuevo | Diseñada; no ejecutada |
 | RNF-013 | CP-SEC-04, CP-SEC-05 | 3.2 | Inventariar atributos que requieren protección y roles autorizados; leerlos desde disco y mediante API con rol permitido y ajeno | Diseñada; no ejecutada |
-| RNF-014 | CP-SEC-08, CP-INT-25 | 7.3 | Versionar dominios y plazos: jornada cinco años, documentos/viajes/liquidación seis, siniestros diez, habilitación vigencia más cinco, SUSPEL cinco, esperas tres, series dos en línea con agregación | Diseñada; no ejecutada |
+| RNF-014 | CP-SEC-08, CP-INT-25, CP-PERF-03 | 7.3 | Plazos por dominio, originales y rectificaciones; recuperación conjunta de datos/documentos/eventos y permisos, RTO hasta 4 h y RPO hasta 15 min | Diseñada; no ejecutada |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### 9.0.3 Batería 1: Pruebas unitarias (25 casos)
 
@@ -560,7 +580,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 **Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: Alta cuando afecta seguridad o evidencia; mayor en objetivos adicionales.
 **Entorno:** CI con doble de ERP. Homologación real del mecanismo de contingencia antes de despliegue; la falta de disponibilidad no se resuelve fingiendo certificación.
 
-**Variante trazada a RF-014 (S3/T-12):** Ejecutar dos rutas de contingencia: DET anticipado por ERP desde la orden y datos enviados por enlace satelital al ERP con folio de vuelta al vehículo. Antes del movimiento debe existir DET conforme accesible localmente; ausencia de folio, datos discordantes y respuesta fuera de plazo bloquean. Un PDF local firmado por audIT no sustituye emisión del ERP. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.
+**Variante trazada a RF-014 (S3/T-12):** Ejecutar dos rutas de contingencia: DET anticipado por ERP desde la orden y solicitud satelital al ERP con retorno de la representación completa y conforme a cabina. Antes del movimiento debe estar recibida, reensamblada, validada y accesible localmente en hasta 90 s; folio o hash aislados, fragmentos faltantes, datos discordantes y respuesta fuera de plazo bloquean. Un PDF local firmado por audIT no sustituye emisión del ERP. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.
 
 #### 9.0.3.22 CP-UNIT-22 — Cálculo de Desgaste Predictivo de Neumáticos por Kilometraje y Eje RFID
 
@@ -1169,7 +1189,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
  **ID:** `CP-\allowbreak{}INT-\allowbreak{}25`
  **Nivel y Tipología:** Prueba de Integración / Recuperación ante Desastres y Replicación Cloud.
  **Requerimiento Trazado:** RNF-014.
- **Precondiciones:** Enlace de replicación configurado entre clúster primario (Virginia) y secundario (São Paulo).
+ **Precondiciones:** Enlace y mecanismos de replicación de datos, documentos y eventos configurados entre las regiones primaria y secundaria aprobadas en S4/T-11; el fixture registra nombres y versiones, sin presumir replicación automática entre regiones.
  **Pasos de Ejecución:**
 - Insertar ráfaga transaccional de 50 órdenes de transporte en el clúster primario.
 - Monitorear el retraso de replicación (replication lag) en la réplica de lectura secundaria.
@@ -1181,6 +1201,8 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
  **Entorno:** Staging Azure Multi-Region.
 
  **Variante trazada a RNF-014 (S3/T-12):** Versionar dominios y plazos: jornada cinco años, documentos/viajes/liquidación seis, siniestros diez, habilitación vigencia más cinco, SUSPEL cinco, esperas tres, series dos en línea con agregación. Con reloj virtual antes/al cumplir cada umbral, retener mientras exista obligación o suspensión y aplicar después la política aprobada. Revocar permiso detiene captura/acceso comprendidos, sin borrado anticipado; cotejar réplica y original. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.
+
+**Variante de consistencia de réplica:** Replicar el conjunto vinculado de viajes, documentos y eventos de CP-PERF-03, incluidos originales, rectificaciones y revocación de permisos. Conciliar identificadores, secuencias, versiones y relaciones en el sitio alterno; medir retraso por componente y el punto consistente recuperable. La réplica de filas por sí sola no acredita disponibilidad de documentos ni recuperación de consumidores. El ejercicio de recuperación completo y sus límites RTO/RPO se comprueban en CP-PERF-03. El fixture usa la región primaria y secundaria aprobadas en S4/T-11, sin dar por homologado un mecanismo ausente.
 
 ### 9.0.5 Batería 3: Pruebas de Sistema y E2E (20 Casos: `C\allowbreak{}P\allowbreak{}-\allowbreak{}S\allowbreak{}Y\allowbreak{}S\allowbreak{}-\allowbreak{}0\allowbreak{}1\allowbreak{}` a `C\allowbreak{}P\allowbreak{}-\allowbreak{}S\allowbreak{}Y\allowbreak{}S\allowbreak{}-\allowbreak{}2\allowbreak{}0\allowbreak{}`)
 
@@ -1219,6 +1241,10 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 **Variante trazada a RF-001 (S3/T-12):** Preparar seis asignaciones con los cuatro factores presentes: fuentes de jornada 1, 2, 3, 4, 5 y ninguna. Con saldo y habilitaciones válidos, comprobar la cascada general: asigna en 1–4, asigna con marca y responsabilidad del transportista en 5, y bloquea sin fuente. Repetir el nivel 4 en la modalidad de datos de S3: sin atestación firmada no asignar; con atestación válida de nivel 5 asignar con marca. Aplicar RN-04 únicamente a su excepción de caída de fuente, nunca a un incumplimiento legal. Retirar por separado cada factor: todos deben bloquear aun con dos firmas. Medir las tres salidas de extremo a extremo en hasta 30 s; el tiempo unitario no acredita ese límite. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.
 
 **Variante trazada a RNF-010 (S3/T-12):** Conciliar inventario técnico y modelo económico de 36 meses: cantidades, unidades, periodicidad y cobertura de nube, enlaces, licencias, soporte, reposición, retiro y contingencia. Esperar cero partidas omitidas o duplicadas y horizonte íntegro; precios solo en oferta económica. El escalamiento de pods no demuestra exhaustividad del costo de operación. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.
+
+**Variante de reserva, concurrencia e idempotencia:** Usar barreras de sincronización para vencer una habilitación o revocar un permiso después de la consulta inicial y antes de confirmar. Esperar revalidación contra el estado autoritativo y rechazo de una confirmación basada en datos ya inválidos. Emitir dos solicitudes distintas que compiten por el mismo conductor y equipo: como máximo una reserva y asignación compatible puede confirmarse. Repetir la misma clave durante la operación y después de perder la respuesta de confirmación: devolver conflicto mientras siga en curso o el resultado ya confirmado, según el contrato de S4, sin segunda asignación ni segundo evento de confirmación. Conservar versiones, correlación, reserva, decisión y auditoría.
+
+**Reloj del proceso de asignación:** Medir desde recepción de la solicitud hasta respuesta definitiva y confirmación de su reserva/asignación, o rechazo. Consulta, revalidación, reserva y reintentos del escenario comparten el mismo presupuesto; no reiniciar el reloj ni conceder 30 s por intento. CP-PERF-04 comprueba p95 de hasta 30 s bajo las dos fases del perfil común.
 
 #### 9.0.5.2 CP-SYS-02 — Flujo E2E de Viaje en Ruta y Detección Automática de Hitos Georreferenciados
 
@@ -1323,6 +1349,8 @@ Camión Subcontratado `TRK-\allowbreak{}305` (con acceso autorizado a datos de p
  Comprobar además el contrato de datos contra el oráculo canónico: origen instrumental y nivel son campos distintos; la atestación firmada corresponde a nivel 5 y el registro voluntario a nivel 0. Un origen CAN, GPS o portería no se acepta como nivel adicional. Un código desconocido o un mapeo que altere el veredicto produce rechazo de la integración y defecto bloqueante, conservando el dato original para trazabilidad.
 
 **Variante trazada a RNF-011 (S3/T-12):** Durante convivencia TMS 2013/nuevo sistema, desviar por función y repetir una misma orden por ambas rutas; esperar un solo viaje y ningún despacho que eluda bloqueo. Restaurar ruta anterior sin detener la flota. Assignment, tracking y liquidación pasan en M16, órdenes y tarifas cliente en M21; solo lectura hasta M24 según S3. El ERP contable permanece separado. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.
+
+**Variante multifuente y evaluación sin evidencia válida:** Crear una evaluación con dos evidencias identificadas: reposo de nivel 4 y atestación firmada de nivel 5. Con modalidad de datos y factores legales conformes, esperar asignación con marca y ambos vínculos conservados; ninguna fuente sustituye el nivel de la otra. Repetir retirando la atestación, invalidando su firma y venciendo su vigencia: conservar estado, causa y veredicto de bloqueo. Repetir sin fuentes válidas y con registro voluntario de nivel 0: la evaluación sigue existiendo, registra la ausencia o invalidez y el nivel 0 no modifica el veredicto. Una excepción RN-04 aprobada registra sus propias condiciones sin inventar evidencia ni levantar impedimentos legales.
 
 #### 9.0.5.6 CP-SYS-06 — Despacho Bloqueante para Unidades de Sustancias Peligrosas (D.S. 298 y D.S. 43)
 
@@ -1734,6 +1762,10 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
  **Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P1 (Bloqueante)**.
  **Entorno:** Azure Chile Central $\rightarrow$ Azure Brazil South.
 
+**Recuperación conjunta y permisos:** Preparar viajes sintéticos con filas transaccionales, originales/representaciones documentales, eventos pendientes y confirmados, evidencia original y rectificación como nuevo registro vinculado. Registrar un manifiesto independiente de identificadores, versiones, secuencias, huellas, relaciones y marcas de tiempo. Revocar un permiso antes del incidente y conservar otro vigente. Recuperar bases, objetos documentales y eventos mediante el mecanismo aprobado en S4/S5; reanudar consumidores y conciliar los tres conjuntos con el manifiesto, sin referencias huérfanas, pérdidas fuera del RPO, duplicados ni sobrescritura del original. Comprobar que el permiso revocado sigue denegado incluso con token/caché anterior y que el acceso legítimo conserva su alcance.
+
+**Medición y criterio de recuperación:** RTO se mide desde declaración del incidente hasta servicio utilizable con datos, documentos y eventos conciliados, en hasta 4 h; promover PostgreSQL o redirigir tráfico no cierra el reloj. Determinar el último punto recuperable consistente entre los tres conjuntos y contrastarlo con RPO de hasta 15 min. Un hash aislado o copia diaria no prueba recuperación conjunta. Conservar bitácora y diferencias; sin mecanismo homologado de objetos y eventos, el criterio permanece pendiente. El sitio y la transferencia se validan contra S4/T-11 antes de acreditar el ambiente real.
+
 #### 9.0.6.4 CP-PERF-04 — Latencia de Validación Bloqueante Pre-Despacho ($P_{95} \le 30{,}0\text{ s}, P_{50} \le 8{,}0\text{ s}$)
 
 \addcontentsline{toc}{subsubsection}{CP-PERF-04}
@@ -1752,6 +1784,8 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
  **Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P1 (Bloqueante)**.
  **Entorno:** Staging AKS / K6.
 
+**Alcance E2E y variantes bajo carga:** Repetir las barreras y claves de CP-SYS-01 en fases nominal y estrés: cambio de vigencia, revocación de permiso, competencia por recursos y respuesta perdida. Medir desde recepción inicial hasta respuesta definitiva y reserva/asignación confirmada o rechazo, incluyendo consulta autoritativa y todos los reintentos internos. Conservar percentiles, errores y causas por fase y variante; exigir p95 de hasta 30 s y cero confirmaciones con condiciones inválidas o asignaciones duplicadas. El plazo agotado mantiene el bloqueo, sin reintento que reinicie el presupuesto.
+
 #### 9.0.6.5 CP-PERF-05 — Emisión de Documento D.E.T. en Cabina bajo Demanda Concurrente ($P_{99} \le 90{,}0\text{ s}$)
 
 \addcontentsline{toc}{subsubsection}{CP-PERF-05}
@@ -1769,6 +1803,8 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
  **Resultado Esperado:** Se debe verificar que $P_{99} \le 90\text{ s}$. Los tiempos, porcentajes y magnitudes observados se registrarán después del ensayo; no se anticipan mediciones ni actas suscritas.
  **Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P1 (Bloqueante)**.
  **Entorno:** Staging / Banco HIL Multidispositivo.
+
+**Camino satelital bajo carga:** Repetir CP-HW-11 sin cobertura terrestre, con el contenido y tamaño máximo homologados y las fases 380/570 como carga de fondo del servicio central. El límite de 90 s termina en representación completa y conforme accesible en cabina e incluye emisión, retorno, reensamblado y validación; no termina en la obtención del folio. Registrar cada recepción y las variantes incompletas o tardías, que mantienen bloqueo. El control del percentil no autoriza movimiento sin documento conforme ni acredita por sí solo factibilidad del enlace.
 
 #### 9.0.6.6 CP-PERF-06 — Transmisión y Recepción Prioritaria de Alarma SOS en Torre 24x7 (\(P_{99} \le 15{,}0\text{ s}\))
 
@@ -2333,7 +2369,11 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 **Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: Alta cuando afecta seguridad o evidencia; mayor en objetivos adicionales.
 **Entorno:** staging/HIL con dispositivo y contrato ERP de ensayo. Homologación real del mecanismo de contingencia antes de despliegue; la falta de disponibilidad no se resuelve fingiendo certificación.
 
-**Variante trazada a RF-014 (S3/T-12):** Ejecutar dos rutas de contingencia: DET anticipado por ERP desde la orden y datos enviados por enlace satelital al ERP con folio de vuelta al vehículo. Antes del movimiento debe existir DET conforme accesible localmente; ausencia de folio, datos discordantes y respuesta fuera de plazo bloquean. Un PDF local firmado por audIT no sustituye emisión del ERP. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.
+**Variante trazada a RF-014 (S3/T-12):** Ejecutar dos rutas de contingencia: DET anticipado por ERP desde la orden y solicitud satelital al ERP con retorno de la representación completa y conforme a cabina. Antes del movimiento debe estar recibida, reensamblada, validada y accesible localmente en hasta 90 s; folio o hash aislados, fragmentos faltantes, datos discordantes y respuesta fuera de plazo bloquean. Un PDF local firmado por audIT no sustituye emisión del ERP. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.
+
+**Variante de retorno satelital completo:** Iniciar sin cobertura terrestre y sin documento precargado, con carga definitiva conocida en ese punto. El fixture versiona contenido fiscal requerido, representación, tamaño máximo, cabeceras, fragmentación, reensamblado y adaptador autorizado. Cronometrar desde confirmación de la orden y solicitud al ERP hasta recepción íntegra, validación y acceso local en cabina: hasta 90 s antes de mover la carga. Conservar trazas del emisor, enlace y dispositivo, correlación, conteo de bytes/fragmentos y validación. Repetir con sólo folio, sólo hash, fragmento ausente, duplicado o desordenado, contenido discordante y plazo agotado: no habilitar salida mientras falte una representación completa y conforme; duplicados y desorden sólo pueden aprobar tras reensamblado íntegro sin doble emisión.
+
+**Condición de homologación documental:** Antes de aceptar el camino satelital, S3/S4 y T-11 deben fijar contenido y tamaño de la representación y acreditar la factibilidad del retorno completo con el enlace elegido. El ensayo contra dobles valida lógica y bloqueo; no demuestra latencia del proveedor real. Si falta esa definición o el enlace no cumple, la aceptación de ese camino permanece pendiente y se revisa el diseño, sin sustituir el documento por folio/hash.
 
 #### 9.0.7.12 CP-HW-12 — Detección Inmediata de Desconexión de Antena GNSS y Anti-Jamming RF
 
