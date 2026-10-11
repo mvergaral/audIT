@@ -36,7 +36,9 @@ EDT de primer nivel: 1 Gestión, 2 Levantamiento y diseño, 3 Plataforma, 4 Equi
 - S6 dice «marcha blanca de 60 días» en ambas etapas. El Art. 17.1 fija 3 meses (E1) y 2 meses (E2).
 - S6 dice que audIT compra «148 computadores y 34 CANclick» en los meses 1 y 2. El hardware lo compra el mandante (Caso, cap. 11) y el T-11 declara 182 equipos.
 - S6 cita «SLA 99,5 %». El Art. 78.2 exige 99,9 % para lo crítico.
-- Ficha T-19 de la innovación 2: piloto en el mes 4 y flota completa en el mes 8. El plan dice meses 6 y 9. Sus códigos EDT deben pasar a 12.2 y a los paquetes 4.1 y 4.2.
+- Ficha T-19 de la innovación 2: D2 adopta piloto de 10 camiones en M6, montaje propio M6–M9, terceros adheridos desde M7, pausa M11–M15 y continuación M16–M18. La planificación la ubica en EDT 12.2 y la relaciona con los paquetes 4.1 y 4.2. D3 debe reflejar este acuerdo en su ficha consolidada.
+- Documento sin cobertura: queda pendiente acordar con D3 y D4 la representación completa que vuelve a cabina, su tamaño máximo y la factibilidad del retorno satelital dentro de 90 s. D2 mantiene al sistema contable como emisor fiscal.
+- Innovación 2: quedan pendientes los costos incrementales del planificador, integración, homologación y operación. La valorización no debe duplicar el stock contractual de T-11 ni presentar ahorros medidos sin línea base.
 
 ### D4 (S4 física, S8, innovación 3)
 - En la malla del T-15 (`7-malla`), la actividad A18 «Escalamiento telemático e instalación progresiva a bordo» (días 240 a 360) se interpretó en S7 así: meses 13 a 15, integración por plataforma sin tocar camiones. Meses 16 a 18, montaje físico. Conviene ajustar su descripción para que no parezca montaje en temporada de fruta.
