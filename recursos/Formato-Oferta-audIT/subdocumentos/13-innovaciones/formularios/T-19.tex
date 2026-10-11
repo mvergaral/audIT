@@ -5,6 +5,8 @@
 %  remisión al Sobre N.º 3 en inversión y costo operacional.
 % ============================================================================
 \begin{formulario}{T-19}
+% Numeración de las fichas con el longtable instalado.
+\AddToHook{cmd/fichaInnovacion/before}[d3-fichas]{\refstepcounter{table}}
 % ------------------------------------------------------------- innovación 1
 \fichaInnovacion{
   tipo = {1. Producto o servicio},
@@ -26,26 +28,28 @@
   contingencia = {Emisión automática mensual a los transportistas que lo pidan, sin acción de su parte}
 }
 % ------------------------------------------------------------- innovación 2
+\clearpage
 \fichaInnovacion{
   tipo = {2. Proceso},
-  nombre = {Despliegue continuo y modular sin detención de flota},
-  problema = {Un camión detenido no produce (Caso, capítulo 10, restricción 10, p. 24). La intervención a bordo solo ocurre en terminal, cada seis días en promedio, y el 22 \% de la flota subcontratada pasa menos de una vez al mes (Caso, numeral 2.3, p. 7)},
-  tecnologia = {Aprovisionamiento remoto con Azure IoT Hub Device Update y Device Twins, configuración precargada en fábrica, kits de reemplazo con arneses de acople rápido por familia de tractocamión y anticipación de llegada a terminal desde la posición de la flota},
-  madurez = {Escala ISO 16290:2013 de 1 a 9. Metodología de sustitución modular y aprovisionamiento telemático en nivel 8},
-  fuentes = {International Organization for Standardization (2013). Microsoft Azure IoT (2024)},
-  arquitectura = {Capa de borde y servicio de aprovisionamiento Device Twins. Rutina de autodiagnóstico y enrolamiento con lectores CAN sin contacto del Formulario T-11 validada en barrera de salida},
-  edt = {EDT 4.2 (Instalación de Dispositivos a Bordo y Búfer) y EDT 4.5 (Integración Telemática y Lectores CAN)},
-  mes = {Piloto de 10 camiones en el mes 4. Flota propia completa al cierre del mes 8},
-  inversion = {Kits de arneses de acople rápido y stock de búferes de intercambio rápido en terminales},
-  costooperacional = {Supresión absoluta de horas improductivas y lucro cesante por mantención en patio},
-  beneficio = {Cero horas de inmovilización de flota comercialmente activa atribuible a la instalación},
-  indicador = {Ritmo de 35 a 45 tractocamiones por mes. 100 \% de los 148 propios al cierre del mes 8. Sustitución en terreno en menos de 30 minutos por camión},
-  medicion = {Mensual hasta el mes 8},
-  riesgo = {Dispersión de unidades en ruta que retrase el paso por terminal, probabilidad media e impacto medio},
-  mitigacion = {Monitoreo telemático de proximidad y asignación de kits en andén previo a la llegada en los cinco terminales},
-  contingencia = {Instalación coordinada durante paradas de mantención preventiva programada exclusivamente en terminales de Curimón}
+  nombre = {Programación dinámica de intervenciones por oportunidad de patio},
+  problema = {148 unidades propias y 34 de terceros sin equipo requieren montaje durante el paso normal por terminal. La disponibilidad simultánea de unidad, autorización, kit, técnico y ventana debe coordinarse. La línea base se levanta en M6; no se atribuye un ahorro ya medido.},
+  tecnologia = {Planificador determinista en Flota y activos: combina ETA y calidad de posición, autorización, compatibilidad del kit, stock, turnos, versión y ventana confirmada. Device Twins conserva configuración y Device Update distribuye paquetes a equipos homologados; las actas conservan intentos y resultados.},
+  madurez = {TRL 2 propuesto, en escala NASA de nueve niveles: concepto definido, sin prueba de concepto ejecutada. Se valida factibilidad antes del piloto de M6 y se documenta el nivel alcanzado.},
+  fuentes = {\parencite{d3_nasa_trl,d3_device_twins,d3_device_update}},
+  arquitectura = {Flota y activos registra las intervenciones; Telemetría aporta actualidad y configuración; la plataforma DevSecOps construye y firma el artefacto. Manifiesto por unidad, familia, kit, versión y acta.},
+  edt = {12.2, con integración a 4.1 y 4.2; conciliación con S7 pendiente.},
+  mes = {Piloto de 10 camiones en M6; propios M6–M9; terceros adheridos desde M7; pausa M11–M15 y continuación M16–M18.},
+  inversion = {Planificador, tablero, integración, homologación del agente y kits diferenciales. No se cobra nuevamente el stock contractual de T-11. Valorización incremental y flujo de caja pendientes en la Oferta Económica.},
+  costooperacional = {Ejecución, almacenamiento de actas y mantenimiento del planificador, separados de la conectividad ya presupuestada.},
+  beneficio = {Reducción de preparación desperdiciada y visitas evitables. Se estima con cantidades y costos unitarios documentados, menos el costo incremental. Sin ahorro garantizado ni base inventada.},
+  indicador = {Reducir preparación inútil al menos 20 \% respecto de la línea base homologada. Validación al primer intento al menos 95 \% en cohorte de 20 intervenciones elegibles. Sustitución modular en hasta 30 min, dentro de la ventana normal. Metas propuestas.},
+  medicion = {Línea base y contraste con planificación manual en M6; comparación por familia y terminal en M7–M9. Registro de causas, reintentos y denominadores.},
+  riesgo = {ETA incorrecta, kit o agente incompatible, escaso beneficio frente a coordinación manual y falta de adhesión o paso de terceros. Probabilidad media; impacto alto salvo beneficio insuficiente, de impacto medio.},
+  mitigacion = {Calidad y actualidad de ETA, confirmación del jefe de terminal, matriz de familias, ensayo previo, paquete firmado, reversión validada y comparación trazable.},
+  contingencia = {Abortar de forma segura y reprogramar cuando la ventana se acorte; método manual homologado y versión previa sin borrar eventos. Integración lógica de terceros sin intervención física no autorizada.}
 }
 % ------------------------------------------------------------- innovación 3
+\clearpage
 \fichaInnovacion{
   tipo = {3. Tecnológica o de arquitectura},
   nombre = {Semirremolque conectado},
@@ -105,4 +109,5 @@
   mitigacion = {Diseño ergonómico participativo en horario de relevo en los cinco terminales y orientación al bienestar},
   contingencia = {Notificación solo acústica por el altavoz del vehículo, sin teléfonos personales ni botones adicionales en cabina}
 }
+\RemoveFromHook{cmd/fichaInnovacion/before}[d3-fichas]
 \end{formulario}
