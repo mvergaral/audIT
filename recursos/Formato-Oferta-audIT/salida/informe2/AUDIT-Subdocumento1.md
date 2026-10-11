@@ -141,7 +141,7 @@ A continuación se presenta el organigrama corporativo, seguido de un análisis 
 
 La estructura funcional de audIT se encuentra dimensionada para asegurar gobernanza centralizada, separación de responsabilidades y ejecución técnica pareada. En la Figura 1.1 se ilustra la articulación orgánica de la compañía y sus líneas de mando.
 
-![Figura 1.1. Organigrama institucional y estructura operativa de audIT SpA](/home/carlosa/Documentos/Universidad/Actual/FEP/06_Repositorios_Git/repo/recursos/Formato-Oferta-audIT/figuras/01-empresa/figura_1_1_organigrama.png)
+![Figura 1.1. Organigrama institucional y estructura operativa de audIT SpA](../../figuras/01-empresa/figura_1_1_organigrama.png)
 
 *Figura 1.1. Organigrama institucional y estructura operativa de audIT SpA*
 
@@ -353,9 +353,9 @@ En articulación directa con los cuatro nodos operacionales descritos en la secc
 
 La gobernanza contractual, los acuerdos OLA y los protocolos de auditoría de servicio de la red de asistencia en ruta se integran formalmente a la operación desde el Mes 1 de servicios.
 
-
+\begingroup\emergencystretch=3em
 La dotación permanente de audIT es de 22 profesionales. En el período de máxima carga M13--M17, T-15 prevé 21 personas de planta asignadas al proyecto y 16 refuerzos de proyecto: 37 personas únicas. La persona restante de la planta institucional no integra ese máximo de asignación. T-15 distribuye 21,5 FTE a E1, 14,1 a E2 y 1,4 a coordinación, sumando 37,0 FTE; las funciones compartidas no se contabilizan dos veces. Personas y FTE son magnitudes distintas, conciliadas para este período de máxima carga. Los refuerzos no aumentan la planta permanente; su contratación y disponibilidad se acreditan antes del inicio del frente correspondiente.
-
+\endgroup
 
 ## Referencias
 

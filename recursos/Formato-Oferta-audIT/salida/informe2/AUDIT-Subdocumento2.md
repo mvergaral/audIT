@@ -78,7 +78,7 @@ Para comprender la raíz del problema operacional de Transportes Curimón S.A., 
 
 En la Figura 2.1 se describe el flujo operacional y la cadena de valor característica del transporte de carga en Curimón, ilustrando la secuencia de procesos desde la recepción de la orden de transporte hasta la liquidación final y cierre de costos.
 
-![Figura 2.1. Flujo operacional y cadena de valor del transporte de carga en Curimón](/home/carlosa/Documentos/Universidad/Actual/FEP/06_Repositorios_Git/repo/recursos/Formato-Oferta-audIT/figuras/02-problema/figura_2_1_flujo_operacional.png)
+![Figura 2.1. Flujo operacional y cadena de valor del transporte de carga en Curimón](../../figuras/02-problema/figura_2_1_flujo_operacional.png)
 
 *Figura 2.1. Flujo operacional y cadena de valor del transporte de carga en Curimón*
 
@@ -116,7 +116,7 @@ audIT Soluciones Tecnológicas SpA ha incorporado en el análisis pericial del p
 
 La dinámica anual de la operación exhibe una marcada disparidad entre la regularidad basal de la carga general y los picos pronunciados de la temporada agrícola, superpuestos a las ventanas de riesgo climático en la alta cordillera. En la Figura 2.2 se sintetiza el modelo estacional de demanda y se distinguen las restricciones de tránsito y conectividad.
 
-![Figura 2.2. Calendario operacional y restricciones de despliegue](/home/carlosa/Documentos/Universidad/Actual/FEP/06_Repositorios_Git/repo/recursos/Formato-Oferta-audIT/figuras/02-problema/figura_2_2_calendario_operacional.png)
+![Figura 2.2. Calendario operacional y restricciones de despliegue](../../figuras/02-problema/figura_2_2_calendario_operacional.png)
 
 *Figura 2.2. Calendario operacional y restricciones de despliegue*
 
@@ -145,8 +145,8 @@ El balance cuantitativo verifica la consistencia del modelo frente al volumen co
 \end{equation}
 La tasa exacta de temporada alta es 51.060/151, aproximadamente 338,15 viajes/día. El uso de 338,15 en el producto arrojaría 51.060,65 viajes; la ecuación utiliza la tasa sin redondear para conservar el total de 96.000.
 
-
-El factor entre las demandas medias de temporada alta y valle se sitúa en (51.060/151) / 210, aproximadamente 1,61. Las bases aportan 96.000 viajes anuales y el período protegido, pero no su distribución mensual. El valor de 210 viajes/día en valle es un escenario de menor actividad, aproximadamente 20,2% bajo la media anual de 263,01; no es una medición ni una consecuencia única del total anual. Elegido ese parámetro, la media alta se obtiene por balance: D alta = (96.000 - 214 × D valle) / 151. Con D valle de 178,5 y 241,5 viajes/día (variación de ±15%), D alta resulta 382,79 y 293,50 viajes/día, respectivamente. El umbral de 450 viajes/día es una cota preliminar de ensayo, aproximadamente 33,1% sobre la media alta basal de 338,15; no representa un máximo histórico demostrado ni una garantía frente a cualquier punta. En H1 se extraerán los registros diarios del TMS 2013, se documentarán completitud, días sin actividad, máximos y distribución estacional y se calibrará la cota antes de aprobar el perfil de carga. Si los datos exceden la cota, se actualizarán el dimensionamiento y los ensayos de aceptación. Viajes diarios y sesiones concurrentes se validan por separado.
+\begingroup\emergencystretch=3em
+El factor entre las demandas medias de temporada alta y valle se sitúa en (51.060/151) / 210, aproximadamente 1,61. Las bases aportan 96.000 viajes anuales y el período protegido, pero no su distribución mensual. El valor de 210 viajes/día en valle es un escenario de menor actividad, aproximadamente 20,2% bajo la media anual de 263,01; no es una medición ni una consecuencia única del total anual. Elegido ese parámetro, la media alta se obtiene por balance: D alta = (96.000 - 214 × D valle) / 151. Con D valle de 178,5 y 241,5 viajes/día (variación de ±15%), D alta resulta 382,79 y 293,50 viajes/día, respectivamente. El umbral de 450 viajes/día es una cota preliminar de ensayo, aproximadamente 33,1% sobre la media alta basal de 338,15; no representa un máximo histórico demostrado ni una garantía frente a cualquier punta. En H1 se extraerán los registros diarios del TMS 2013, se documentarán completitud, días sin actividad, máximos y distribución estacional y se calibrará la cota antes de aprobar el perfil de carga. Si los datos exceden la cota, se actualizarán el dimensionamiento y los ensayos de aceptación. Viajes diarios y sesiones concurrentes se validan por separado.\endgroup
 
 ## 2.3 Dimensionamiento del problema
 
@@ -172,7 +172,7 @@ El análisis de la Tabla 2.1 evidencia la magnitud transaccional que debe ser go
 
 En la Figura 2.3 se expone la cadena operacional que articula los principales problemas diagnosticados en Curimón, planteando el análisis del proponente sobre cómo los vacíos en la captura de datos primarios podrían propagarse hasta comprometer el margen corporativo y amenazar la continuidad de los contratos comerciales.
 
-![Figura 2.3. Relaciones operacionales entre registros, decisiones e impactos](/home/carlosa/Documentos/Universidad/Actual/FEP/06_Repositorios_Git/repo/recursos/Formato-Oferta-audIT/figuras/02-problema/figura_2_3_cadena_causal.png)
+![Figura 2.3. Relaciones operacionales entre registros, decisiones e impactos](../../figuras/02-problema/figura_2_3_cadena_causal.png)
 
 *Figura 2.3. Relaciones operacionales entre registros, decisiones e impactos*
 
@@ -216,7 +216,7 @@ La operación y gobernanza de Transportes Curimón S.A. involucra a un ecosistem
 
 En la Figura 2.4 se ilustra el mapeo de actores en la Matriz de Poder e Influencia frente al Nivel de Interés, identificando la estrategia de gestión corporativa requerida para cada uno.
 
-![Figura 2.4. Poder efectivo e interés operativo de los 13 actores de Curimón](/home/carlosa/Documentos/Universidad/Actual/FEP/06_Repositorios_Git/repo/recursos/Formato-Oferta-audIT/figuras/02-problema/figura_2_4_matriz_actores.png)
+![Figura 2.4. Poder efectivo e interés operativo de los 13 actores de Curimón](../../figuras/02-problema/figura_2_4_matriz_actores.png)
 
 *Figura 2.4. Poder efectivo e interés operativo de los 13 actores de Curimón*
 
