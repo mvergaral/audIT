@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="148.9mm" height="190.5mm" viewBox="0 0 422 540">
+<defs><marker id="fin-n" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="5.5" markerHeight="5.5" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#2B2B2B"/></marker><marker id="ini-n" viewBox="0 0 10 10" refX="0.5" refY="5" markerWidth="5.5" markerHeight="5.5" markerUnits="userSpaceOnUse" orient="auto"><path d="M10,0.8 L0,5 L10,9.2 z" fill="#2B2B2B"/></marker><marker id="fin-r" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="5.5" markerHeight="5.5" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#C0392B"/></marker><marker id="ini-r" viewBox="0 0 10 10" refX="0.5" refY="5" markerWidth="5.5" markerHeight="5.5" markerUnits="userSpaceOnUse" orient="auto"><path d="M10,0.8 L0,5 L10,9.2 z" fill="#C0392B"/></marker></defs>
+<rect x="0" y="0" width="422" height="540" fill="#FFFFFF"/>
+<g id="grupos">
+<rect x="8.00" y="8.00" width="406.00" height="52.00" rx="5" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="12.00" y="68.00" width="76.00" height="44.00" rx="4" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="94.00" y="68.00" width="80.00" height="44.00" rx="4" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="180.00" y="68.00" width="78.00" height="44.00" rx="4" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="264.00" y="68.00" width="72.00" height="44.00" rx="4" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="342.00" y="68.00" width="68.00" height="44.00" rx="4" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="8.00" y="412.00" width="406.00" height="118.00" rx="5" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+</g>
+<g id="flechas">
+<path d="M50.00,112.00 L50.00,396.00" fill="none" stroke="#7A7A7A" stroke-width="0.7" stroke-linejoin="miter" stroke-dasharray="3.5 2.5"/>
+<path d="M134.00,112.00 L134.00,396.00" fill="none" stroke="#7A7A7A" stroke-width="0.7" stroke-linejoin="miter" stroke-dasharray="3.5 2.5"/>
+<path d="M219.00,112.00 L219.00,396.00" fill="none" stroke="#7A7A7A" stroke-width="0.7" stroke-linejoin="miter" stroke-dasharray="3.5 2.5"/>
+<path d="M300.00,112.00 L300.00,396.00" fill="none" stroke="#7A7A7A" stroke-width="0.7" stroke-linejoin="miter" stroke-dasharray="3.5 2.5"/>
+<path d="M376.00,112.00 L376.00,396.00" fill="none" stroke="#7A7A7A" stroke-width="0.7" stroke-linejoin="miter" stroke-dasharray="3.5 2.5"/>
+<path d="M50.00,136.00 L134.00,136.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" marker-end="url(#fin-n)"/>
+<path d="M134.00,168.00 L219.00,168.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" marker-end="url(#fin-n)"/>
+<path d="M219.00,232.00 L300.00,232.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" marker-end="url(#fin-n)"/>
+<path d="M300.00,268.00 L219.00,268.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" marker-end="url(#fin-n)"/>
+<path d="M219.00,304.00 L297.00,304.00 A3.0,3.0 0 0 1 303.00,304.00 L376.00,304.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" marker-end="url(#fin-n)"/>
+<path d="M376.00,342.00 L303.00,342.00 A3.0,3.0 0 0 0 297.00,342.00 L219.00,342.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" marker-end="url(#fin-n)"/>
+</g>
+<g id="iconos">
+<rect x="7.93" y="124.80" width="168.14" height="9.90" fill="#FFFFFF"/>
+<rect x="95.72" y="156.80" width="161.56" height="9.90" fill="#FFFFFF"/>
+<rect x="42.28" y="191.00" width="268.44" height="14.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="176.50" y="201.00" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="middle" fill="#000000">REAL / ESTIMADO exigen fuente · AUSENTE -&gt; NULL (nunca 0)</text>
+<rect x="182.31" y="220.80" width="154.38" height="9.90" fill="#FFFFFF"/>
+<rect x="182.59" y="256.80" width="153.82" height="9.90" fill="#FFFFFF"/>
+<rect x="215.23" y="292.80" width="164.53" height="9.90" fill="#FFFFFF"/>
+<rect x="209.36" y="330.80" width="176.28" height="9.90" fill="#FFFFFF"/>
+<rect x="182.44" y="365.00" width="230.12" height="14.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="297.50" y="375.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Reintentos idempotentes evitan duplicar pagos en ERP</text>
+<circle cx="26.00" cy="436.00" r="6.8" fill="#FFFFFF" stroke="#000000" stroke-width="0.9"/>
+<text x="26.00" y="439.20" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="middle" fill="#000000">1</text>
+<circle cx="26.00" cy="460.00" r="6.8" fill="#FFFFFF" stroke="#000000" stroke-width="0.9"/>
+<text x="26.00" y="463.20" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="middle" fill="#000000">2</text>
+<circle cx="26.00" cy="484.00" r="6.8" fill="#FFFFFF" stroke="#000000" stroke-width="0.9"/>
+<text x="26.00" y="487.20" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="middle" fill="#000000">3</text>
+<circle cx="26.00" cy="508.00" r="6.8" fill="#FFFFFF" stroke="#000000" stroke-width="0.9"/>
+<text x="26.00" y="511.20" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="middle" fill="#000000">4</text>
+</g>
+<g id="textos">
+<text x="16.00" y="23.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">Liquidación trazable e integración ERP</text>
+<text x="16.00" y="32.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">La liquidación conserva fuente, calidad, reglas versionadas y revisión humana.</text>
+<text x="16.00" y="44.00" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">ERP contable de 2013 actúa como emisor único de órdenes de pago (RT-05.29).</text>
+<text x="20.00" y="83.00" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">1. Terreno</text>
+<text x="50.00" y="104.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Conductor / G26I</text>
+<text x="102.00" y="83.00" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">2. Evidencias</text>
+<text x="134.00" y="104.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Jornada y Peajes</text>
+<text x="188.00" y="83.00" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">3. Costeo</text>
+<text x="219.00" y="104.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Liquidación audIT</text>
+<text x="272.00" y="83.00" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">4. Revisor</text>
+<text x="300.00" y="104.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Operaciones / QA</text>
+<text x="350.00" y="83.00" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">5. ACL / ERP</text>
+<text x="376.00" y="104.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">ERP 2013 Contable</text>
+<text x="92.00" y="132.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">1. Odómetro + peajes + ticket de entrega</text>
+<text x="176.50" y="164.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">2. Evidencia validada · Fuente y calidad</text>
+<text x="259.50" y="228.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">3. Costo preliminar &lt; 24 h (RT-05.29)</text>
+<text x="259.50" y="264.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">4. Aprobación con reglas versionadas</text>
+<text x="297.50" y="300.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">5. id_operacion estable + patrón outbox</text>
+<text x="297.50" y="338.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">6. Folio contable + comprobante retornado</text>
+<text x="16.00" y="427.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">Políticas de costeo y conciliación financiera</text>
+<text x="38.00" y="438.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">El cierre del viaje y las fórmulas versionadas permiten reproducir el costo exacto.</text>
+<text x="38.00" y="462.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">Evidencia insuficiente deja el componente en NULL y abre excepción para revisión.</text>
+<text x="38.00" y="486.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">El ERP 2013 es el único facultado para emitir transferencias y liquidaciones finales.</text>
+<text x="38.00" y="510.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">Costo consolidado disponible a 24 h; conciliación definitiva a cierre mensual.</text>
+</g>
+</svg>

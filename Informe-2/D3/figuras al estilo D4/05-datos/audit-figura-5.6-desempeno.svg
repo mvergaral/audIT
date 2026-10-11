@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="148.9mm" height="169.3mm" viewBox="0 0 422 480">
+<defs><marker id="fin-n" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="5.5" markerHeight="5.5" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#2B2B2B"/></marker><marker id="ini-n" viewBox="0 0 10 10" refX="0.5" refY="5" markerWidth="5.5" markerHeight="5.5" markerUnits="userSpaceOnUse" orient="auto"><path d="M10,0.8 L0,5 L10,9.2 z" fill="#2B2B2B"/></marker><marker id="fin-r" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="5.5" markerHeight="5.5" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#C0392B"/></marker><marker id="ini-r" viewBox="0 0 10 10" refX="0.5" refY="5" markerWidth="5.5" markerHeight="5.5" markerUnits="userSpaceOnUse" orient="auto"><path d="M10,0.8 L0,5 L10,9.2 z" fill="#C0392B"/></marker></defs>
+<rect x="0" y="0" width="422" height="480" fill="#FFFFFF"/>
+<g id="grupos">
+<rect x="8.00" y="8.00" width="406.00" height="52.00" rx="5" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="16.00" y="68.00" width="390.00" height="80.00" rx="4" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="16.00" y="156.00" width="390.00" height="80.00" rx="4" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="16.00" y="244.00" width="390.00" height="80.00" rx="4" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="16.00" y="332.00" width="390.00" height="72.00" rx="4" fill="#F8F9FA" stroke="#404040" stroke-width="0.75"/>
+</g>
+<g id="flechas">
+</g>
+<g id="iconos">
+<rect x="40.04" y="435.00" width="341.91" height="14.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="211.00" y="445.00" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="middle" fill="#000000">Escalabilidad probada: soporta el triple de demanda sin alterar el modelo lógico</text>
+</g>
+<g id="textos">
+<text x="16.00" y="23.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">Estrategia integral de desempeño de base de datos</text>
+<text x="16.00" y="32.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">Particionamiento, índices BRIN/B-Tree y tiering de almacenamiento.</text>
+<text x="16.00" y="44.00" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">Diseñado para sostener 41 millones de km anuales y 3x volumetría inicial (RT-09.03).</text>
+<text x="24.00" y="83.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">Particionamiento Temporal de Tablas</text>
+<text x="26.00" y="96.00" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">• Telemetría (POSICION_GPS): Particionamiento por rango mensual (TimescaleDB chunks).</text>
+<text x="26.00" y="110.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">• Transacciones (VIAJE / DESPACHO): Particionamiento por año calendario.</text>
+<text x="26.00" y="124.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">• Beneficio: Mantenimiento modular; borrado instantáneo vía DROP PARTITION sin vaciado.</text>
+<text x="26.00" y="138.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">• Compresión automática de chunks antiguos: Reduce hasta 85 % el volumen en disco.</text>
+<text x="24.00" y="171.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">Estrategia de Indexación Especializada</text>
+<text x="26.00" y="184.00" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">• Índices BRIN (Block Range Index): En marcas temporales telemáticas (uso mínimo de RAM).</text>
+<text x="26.00" y="198.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">• Índices B-Tree parciales: En viajes con estado activo (acelera despacho bloqueante).</text>
+<text x="26.00" y="212.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">• Índices GIN: En columnas de datos semiestructurados JSONB y atributos de auditoría.</text>
+<text x="26.00" y="226.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">• Regla: Prohibición de índices redundantes para evitar degradación de escritura.</text>
+<text x="24.00" y="259.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">Tiering de Almacenamiento y Ciclo de Vida</text>
+<text x="26.00" y="272.00" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">• Capa Caliente (Hot SSD Premium): Datos transaccionales y telemetría de últimos 90 días.</text>
+<text x="26.00" y="286.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">• Capa Tibia (Warm Cool Blob): Historial de viajes cerrados entre 90 días y 2 años.</text>
+<text x="26.00" y="300.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">• Capa Fría (Archive WORM): Retención legal inmutable hasta 10 años (DT, SII, siniestros).</text>
+<text x="26.00" y="314.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">• Optimización económica: Minimiza costo de almacenamiento cloud respetando SLA.</text>
+<text x="24.00" y="347.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">Conexiones y Caché en Memoria</text>
+<text x="26.00" y="358.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">• PgBouncer integrado: Agrupamiento de conexiones con modo de transacción.</text>
+<text x="26.00" y="372.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">• Redis L2 Cache: Claves de idempotencia y tablas de referencia maestras en RAM.</text>
+<text x="26.00" y="386.00" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">• Límite: Mantiene uso de CPU transaccional por debajo del 65 % bajo carga pico.</text>
+</g>
+</svg>
