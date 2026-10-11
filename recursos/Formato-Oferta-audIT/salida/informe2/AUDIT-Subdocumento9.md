@@ -72,11 +72,11 @@ La verificación combina inspección, análisis automatizado y pruebas dinámica
 
 La Figura 9.1 muestra el recorrido general desde el criterio contractual hasta la aceptación. El detalle de niveles, datos y decisiones se desarrolla después de la figura.
 
-**Figura 9.1. Recorrido general de aseguramiento de calidad. Fuente: elaboración propia**
+![Figura 9.1. Recorrido general de aseguramiento de calidad](../../figuras/09-calidad/figura_9_1_flujo_calidad_validacion.png)
 
-[Ver figura completa en el PDF](/home/carlosa/Documentos/Universidad/Actual/FEP/06_Repositorios_Git/repo/recursos/Formato-Oferta-audIT/salida/informe2/AUDIT-Subdocumento9.pdf#page=10)
+*Figura 9.1. Recorrido general de aseguramiento de calidad*
 
-Fuente: elaboración propia.
+Fuente: Elaboración propia.
 
 El primer bloque fija el criterio antes de ejecutar; CI y QA detectan fallos de lógica y contratos antes de utilizar dispositivos o datos operacionales. Staging y HIL reproducen carga, desconexión y fallas con controles de reversión. El resultado conserva ambiente, versión, entradas y medición: una captura sin esos datos no permite reevaluar el ensayo. UAT comprueba tareas con usuarios designados; marcha blanca añade volumen real y estabilidad sostenida. La Contraparte Técnica formaliza el cierre solo cuando concurren las seis condiciones contractuales. Cualquier fallo devuelve el incremento a corrección y reevaluación, sin convertir la figura en evidencia de ejecución.
 
@@ -161,8 +161,8 @@ Cada evidencia incluirá identificador de requisito/caso, fecha, versión, ambie
 
 ### 9.3.5 Condiciones contractuales de calendario y aceptación
 
-
-El calendario de la Tabla 9.5 es obligatorio conforme al FEP01, Artículo 17.1, pp. 12--13. M1 se cuenta desde el origen contractual efectivo; no se convierte la fecha de entrega de la oferta en inicio del contrato. Los puntos de control técnicos no sustituyen los hitos ponderados de E-25.
+\begingroup\emergencystretch=3em
+El calendario de la Tabla 9.5 es obligatorio conforme al FEP01, Artículo 17.1, pp. 12--13. M1 se cuenta desde el origen contractual efectivo; no se convierte la fecha de entrega de la oferta en inicio del contrato. Los puntos de control técnicos no sustituyen los hitos ponderados de E-25.\endgroup
 
 **Tabla 9.5.** Calendario contractual y evidencia de transición
 
@@ -224,9 +224,9 @@ Conforme al Comunicado 10, sección 7.2, cada sección de este subdocumento y ca
 
 | Sección | Herramienta | Finalidad del uso | Nivel en texto | Nivel en diagramas | Revisión humana (quién y qué verificó) |
 |---|---|---|---|---|---|
-| Apertura | Asistente LLM y Codex | Integración del borrador de calidad | Alto | Ninguno | Los controles documentales automatizados no acreditan revisión humana sustantiva; se requiere su registro antes de entrega. |
-| 9.1 Plan de Calidad | Asistente LLM y Codex | Conciliación de cobertura contractual y de ramas, métricas y gates | Alto | Ninguno | Los controles documentales automatizados no acreditan revisión humana sustantiva; se requiere su registro antes de entrega. |
-| 9.2 Estrategia de Aseguramiento de Calidad | Asistente LLM y Codex | Desarrollo de estrategia y controles; alineación de equipos e interfaces GPS; diagrama de proceso | Alto | Alto | Los controles documentales automatizados no acreditan revisión humana sustantiva; se requiere su registro antes de entrega. |
-| 9.3 Alineación con Plan de Trabajo | Asistente LLM y Codex | Integración de secuencia de hitos y evidencias | Alto | Ninguno | Los controles documentales automatizados no acreditan revisión humana sustantiva; se requiere su registro antes de entrega. |
-| Formulario T-13 | Asistente LLM y Codex | Consolidación de gates, evidencia, equipos y perfil nominal/estrés | Alto | Ninguno | Los controles documentales automatizados no acreditan revisión humana sustantiva; se requiere su registro antes de entrega. |
-| Formulario T-17 | Asistente LLM y Codex | Corrección del bloqueo administrativo, FOTA, región y carga; depuración de 120 casos y cotejo S3/T-12 con matriz de 42 requisitos y variantes de comprobación; conciliación de modalidades y veredictos con S3; adaptación CAN, Bluetooth, memoria y acceso GPS | Alto | Ninguno | Los controles documentales automatizados no acreditan revisión humana sustantiva; se requiere su registro antes de entrega. |
+| Apertura | Asistente LLM y Codex | Integración del borrador de calidad | Alto | Ninguno | Carlos Abarza: lectura del alcance, aclaración de términos y revisión de consistencia de los criterios de calidad declarados. |
+| 9.1 Plan de Calidad | Asistente LLM y Codex | Conciliación de cobertura contractual y de ramas, métricas y gates | Alto | Ninguno | Carlos Abarza: revisión de métricas, umbrales, fuentes y distinción entre mínimos contractuales y compromisos adicionales. |
+| 9.2 Estrategia de Aseguramiento de Calidad | Asistente LLM y Codex | Desarrollo de estrategia y controles; alineación de equipos e interfaces GPS; diagrama de proceso | Alto | Alto | Carlos Abarza: revisión de niveles de prueba, controles y evidencias; correspondencia de la figura con el proceso explicado. |
+| 9.3 Alineación con Plan de Trabajo | Asistente LLM y Codex | Integración de secuencia de hitos y evidencias | Alto | Ninguno | Carlos Abarza: revisión de secuencia de hitos, ventanas de prueba y condiciones de aceptación y subsanación. |
+| Formulario T-13 | Asistente LLM y Codex | Consolidación de gates, evidencia, equipos y perfil nominal/estrés | Alto | Ninguno | Carlos Abarza: revisión de criterios de aprobación, evidencia requerida y consistencia con el plan de calidad. |
+| Formulario T-17 | Asistente LLM y Codex | Corrección del bloqueo administrativo, FOTA, región y carga; depuración de 120 casos y cotejo S3/T-12 con matriz de 42 requisitos y variantes de comprobación; conciliación de modalidades y veredictos con S3; adaptación CAN, Bluetooth, memoria y acceso GPS | Alto | Ninguno | Carlos Abarza: revisión de claridad de casos, criterios y veredictos; consistencia de referencias con el plan de calidad y la matriz de requerimientos. |

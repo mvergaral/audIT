@@ -6,31 +6,408 @@ audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. O
 
 > **Resumen de apertura.**
 >
-> [Qué resuelve este subdocumento, en cuatro o cinco líneas]
+> Este capítulo trata los riesgos propios de la solución que propone audIT. Sigue la norma ISO 31000 que exige RT-19.04 y parte de los seis riesgos que el Caso pide mirar:
+> transportistas que no adhieren, proveedores que no exponen sus datos, fabricantes que no autorizan la
+> telemetría, un montaje a bordo más lento que lo planificado, un bloqueo que detiene viajes comprometidos
+> y un período mixto que se alarga. Cada riesgo tiene responsable, disparador y plazo. Los siete de
+> exposición alta tienen además plan de contingencia.
 >
 > **Qué recibe Transportes Curimón S.A.**
-> - [Qué recibe el mandante]
+> - Un registro vivo de 28 riesgos en cinco categorías, con su probabilidad, impacto, respuesta, responsable, disparador y plazo, en el Formulario T-16.
+> - Escalas de probabilidad e impacto calibradas en días hábiles, en efecto sobre la flota y en cumplimiento, con el mapa de calor antes y después de mitigar.
+> - Un análisis de modos de falla de diez componentes técnicos, una simulación Monte Carlo del cronograma con 10.000 corridas y un árbol de fallas de la verificación bloqueante.
+> - Contingencias para los siete riesgos altos y reservas de contingencia y de gestión expresadas en días hábiles.
 
-## 8.1 Identificación y cuantificación
+Este capítulo presenta el plan con que audIT identifica, analiza, trata y vigila los riesgos durante los
+56 meses del contrato. La sección 8.1 fija el método, los roles, las escalas y las cadencias de revisión.
+La 8.2 identifica los riesgos con una estructura de desglose y los analiza con tres técnicas, cada una
+para una clase de problema: el análisis de modos de falla para los componentes físicos, la simulación
+Monte Carlo para el cronograma y el árbol de fallas para el proceso que dio origen a la licitación. La
+8.3 asigna a cada riesgo su respuesta y define las reservas.
 
-[Riesgos técnicos, organizacionales, de proyecto, de seguridad y de operación]
+El plan es preventivo porque se apoya en el resto de la oferta. Cada riesgo sale de algo concreto de la
+propuesta: un supuesto del Subdocumento 3, un punto único de falla o un modo degradado del
+Subdocumento 4, una actividad o una holgura de la red del Subdocumento 7, una innovación del
+Subdocumento 13 o una restricción del Caso. Por eso la mitigación suele ser una decisión que ya
+está en la arquitectura o en el plan, y este capítulo la mide y le asigna un disparador. El Caso, capítulo 19, p. 44 pide que los riesgos sean de este proyecto y nombra
+seis, que el registro trata como R-11, R-08, R-09, R-19, R-27 y R-20.
 
-## 8.2 Análisis cualitativo y cuantitativo
+El Formulario T-16 acompaña este capítulo como archivo propio, conforme al Comunicado 10, sección 1,
+con el nombre `AUDIT-Formulario-T-16.pdf`. Trae el registro completo, la respuesta, el
+disparador y el plazo de cada riesgo, y la tabla del análisis de modos de falla.
 
-[Modos de falla, árbol de fallas o simulación]
+## 8.1 Plan de riesgos
 
-## 8.3 Estrategias de mitigación
+La gestión del riesgo sigue la norma ISO 31000 (International Organization for Standardization, 2018), como exige FEP02, RT-19.04, p. 33.
+Cada etapa del proceso de la norma tiene su lugar en este plan. El alcance, el contexto y los criterios
+son las escalas y los umbrales de esta sección. La evaluación, que abarca identificar, analizar y valorar,
+es la sección 8.2. El tratamiento es la sección 8.3. El seguimiento y la revisión son las cadencias de
+esta sección, la comunicación y la consulta pasan por los comités del FEP01, Artículo 71, p. 37, y el registro es el
+Formulario T-16. Las técnicas de análisis se toman de la norma IEC 31010 (International Electrotechnical Commission, 2019) según lo
+que hay que medir. El análisis de modos de falla y efectos (International Electrotechnical Commission, 2018) sirve para un componente
+físico que puede fallar de varias maneras. La simulación Monte Carlo sirve para un cronograma de
+duraciones inciertas. El árbol de fallas (International Electrotechnical Commission, 2006) sirve para un evento que solo ocurre
+cuando se combinan varias causas.
 
-[Costo beneficio, responsable, plazo y disparador]
+**Roles.**
+El Jefe de Proyecto es dueño del proceso y del registro. Cada riesgo tiene un responsable nominado entre
+los roles del Formulario T-14, que vigila el disparador y ejecuta la respuesta. El Líder de Implantación
+tiene seis riesgos, casi todos del montaje y del terreno, y el Arquitecto de Solución, el Líder de
+Integración, el Líder Funcional y el Jefe de Proyecto tienen cuatro cada uno. El Arquitecto de Solución lleva los riesgos de arquitectura
+y el Encargado de Seguridad los de ciberamenazas, y los dos integran el Comité de Arquitectura. La
+Contraparte Técnica del mandante consulta el registro cuando quiere y valida en el Comité de Proyecto el
+cierre de cada riesgo. Aceptar un riesgo alto sin tratarlo, o usar la reserva de gestión, lo decide el
+Comité Ejecutivo, que según el mismo artículo revisa los riesgos mayores.
 
-## 8.4 Riesgos tecnológicos y de contraparte
+**Escalas calibradas.**
+La probabilidad y el impacto se miden de 1 a 5 con las escalas de la Tabla 8.1. El impacto se
+calibra en las tres cosas que este contrato castiga. La primera es el plazo, porque el FEP01, Artículo 80, p. 41 multa
+el atraso de un hito y la extensión de una marcha blanca. La segunda es la operación de la flota, porque
+un error en este proceso se traduce en un camión que sale cuando no debía salir
+(Caso, numeral 13.3, p. 28). La tercera es el cumplimiento legal y contractual. Cuando un riesgo toca más de
+una, vale el nivel más alto.
 
-[Obsolescencia, bloqueo por proveedor, escalabilidad, ciberseguridad y disponibilidad de contrapartes]
+**Tabla 8.1.** Escalas de probabilidad y de impacto
 
-## 8.5 Reservas de contingencia y de gestión
+| Nivel | Probabilidad | Impacto en el plazo | Impacto en la operación | Impacto en el cumplimiento |
+|---|---|---|---|---|
+| 1 | Menos de 10 % | Se absorbe en la holgura de la actividad | Sin efecto visible para la torre | Sin efecto |
+| 2 | 10 a 30 % | Consume parte de una reserva o del margen de un hito | Un terminal o unos pocos camiones en procedimiento supletorio | Observación de la Contraparte Técnica |
+| 3 | 30 a 50 % | Atrasa un hito de pago | Un proceso degradado en varios terminales o en un segmento de la flota | Desviación de un hito que se informa al mandante, con multa por atraso |
+| 4 | 50 a 80 % | Atrasa el inicio o el cierre de una marcha blanca | Un proceso crítico, como la verificación bloqueante o la jornada, perdido para parte de la flota | Incumplimiento legal o brecha de datos personales |
+| 5 | Más de 80 % o fecha anunciada | Desplaza un paso a producción o el calendario completo | Solución detenida para toda la flota | Causal de término anticipado del contrato |
 
-[Reflejo en cronograma y flujo de caja, sin montos]
+*Fuente: elaboración propia sobre el FEP01, Artículo 80, p. 41, FEP02, RT-19.10, p. 34 y el Caso, numeral 13.3, p. 28.*
+
+La probabilidad se estima para la ventana en que el riesgo puede ocurrir y no para todo el contrato. La
+exposición es el producto de los dos niveles y fija la respuesta mínima. De 1 a 5 es baja y basta con
+vigilar el disparador. De 6 a 11 es media y pide mitigación con responsable y revisión quincenal. De 12 a
+25 es alta y pide además plan de contingencia y revisión mensual en el Comité Ejecutivo. Las escalas se
+contrastan con datos cuando los hay. El hito H1 se cumple en el 78,4 % de las corridas de la simulación
+de la sección 8.2, es decir, se atrasa en el 21,6 %, y por eso el R-17 tiene probabilidad 2.
+
+**Modos de falla.**
+Los componentes técnicos se analizan además modo por modo. Cada modo de falla se califica de 1 a 5 en
+severidad, con la escala de impacto, en ocurrencia, con la de probabilidad, y en detección. La detección
+vale 1 si la telemetría la avisa sola en menos de 30 segundos, 2 si la detecta el monitoreo en la nube en
+menos de 5 minutos, 3 si se ve en la inspección física en un terminal, 4 si depende del aviso tardío del
+conductor y 5 si no se nota hasta que la falla ocurre en ruta. El número de prioridad es el producto de
+los tres y va de 1 a 125. Un valor de 50 o más exige plan de contingencia, igual que una exposición alta.
+
+**Cadencias de monitoreo.**
+El registro está siempre actualizado y abierto al mandante en el espacio colaborativo que exige
+FEP02, RT-19.05, p. 33. Cada riesgo tiene una instancia principal de revisión. La reunión semanal de seguimiento mira
+los disparadores semanales, como el margen de los hitos H1 a H4. El Comité de Proyecto quincenal revisa
+el registro completo y el consumo de las reservas, como pide RT-19.04. El Comité de Arquitectura mensual
+revisa los riesgos técnicos y de seguridad, y el Comité Ejecutivo mensual los de exposición alta. Desde
+el mes 13, el Comité de Operación (FEP01, Artículo 71, p. 38) toma los de continuidad operativa. El informe mensual de
+avance de FEP02, RT-19.06, p. 34 trae el estado de los riesgos, y toda desviación de más de 10 % en un
+hito se comunica dentro de cinco días hábiles con su plan de recuperación (FEP02, RT-19.10, p. 34). El
+registro completo se reevalúa antes de cada marcha blanca, en los meses 12 y 18, al inicio de la
+operación en el mes 21 y después una vez al año.
+
+## 8.2 Identificación y Análisis de Riesgos
+
+Los riesgos se identificaron recorriendo la oferta pieza por pieza: los supuestos del Subdocumento 3,
+los puntos únicos de falla y los modos degradados del Subdocumento 4, la red y las holguras del
+Subdocumento 7, las innovaciones del Subdocumento 13 y las restricciones del Caso. La Figura 8.1 los
+ordena en una estructura de desglose con las cinco categorías que pide el Comunicado 10, sección 11.
+
+![Figura 8.1. Estructura de desglose de los 28 riesgos de la solución en cinco categorías. Los de exposición alta van en negrita](../../figuras/08-riesgos/rbs.png)
+
+*Figura 8.1. Estructura de desglose de los 28 riesgos de la solución en cinco categorías. Los de exposición alta van en negrita*
+
+Fuente: Elaboración propia.
+
+Las categorías más pobladas son la técnica y la de riesgos organizacionales y de contrapartes, con
+ocho cada una. La segunda refleja el Caso: los viajes los hacen en su mayoría camiones que no son de la
+compañía y personas que no son sus trabajadoras (Caso, numeral 13.3, p. 28), y buena parte de lo que puede
+fallar depende de alguien que audIT no controla. Los siete riesgos altos se reparten en las cinco
+categorías. Uno de ellos, R-28, nace de la emisión sin cobertura. El documento completo debe volver por
+satélite a la cabina dentro de los 90 segundos de Caso, RT-09.01, p. 32, y eso todavía no se ha medido
+(sección ?). Hasta medirlo, los puntos de carga sin cobertura usan la emisión
+anticipada siempre que la carga se conozca al programar, y sin documento conforme la salida se
+bloquea. El Comunicado 10 pide énfasis en cinco materias, que se analizan a
+continuación.
+
+**Obsolescencia del software.**
+El FEP02, numeral 1.6, p. 5 deja la obsolescencia de cargo del adjudicatario: si un componente pierde
+soporte antes del mes 56, su reemplazo debe estar previsto en la oferta. El caso concreto es Azure Cache
+for Redis, que Microsoft retira el 30 de septiembre de 2028 (Microsoft, 2026). Con el mes 1 en
+febrero de 2027, esa fecha cae en el mes 20, el último de la marcha blanca de la Etapa 2. Es el riesgo de
+mayor exposición del registro (R-06, 15). Su probabilidad es 5 porque Microsoft ya anunció la
+fecha. La caché acelera la verificación bloqueante, aunque la autoridad queda en la base transaccional
+(sección ?). La respuesta es evitarlo. El Subdocumento 4 fija Azure Managed
+Redis, el servicio de reemplazo, desde la Etapa 1 (sección ?), de modo que nunca haya
+una migración durante una marcha blanca. Así la solución tampoco toca la edición Enterprise, que se
+retira el 31 de marzo de 2027, en el mes 2. La misma sección declara la versión, el fin de soporte y el
+plan de actualización de cada producto. .NET 10 y PostgreSQL 16 se actualizan antes de noviembre de 2028
+dentro de la mantención evolutiva, así que su fin de soporte no abre un riesgo de exposición alta.
+
+**Bloqueo por proveedor de nube.**
+La solución corre en Azure, y el riesgo es que el mandante no pueda cambiar de proveedor sin rehacerla
+(R-07). La arquitectura lo acota con piezas que existen en cualquier nube: los servicios corren en
+contenedores sobre Kubernetes, los datos en PostgreSQL, el bus habla el protocolo Kafka y la
+infraestructura se declara como código. Las suscripciones quedan a nombre del mandante. Lo que no se
+traslada sin trabajo son los servicios administrados sin equivalente directo, como IoT Hub y Entra ID,
+y por eso la exposición baja de 6 a 4 y no a 1. El disparador es una decisión de arquitectura sin
+alternativa portable, y lo vigila el Comité de Arquitectura.
+
+**Escalabilidad elástica.**
+FEP02, RT-09.03, p. 21 obliga a soportar tres veces la volumetría inicial sin rediseño. El crecimiento
+(R-05) se mitiga con el dimensionamiento del Subdocumento 4, que ya parte de ese múltiplo, con el escalado
+automático de AKS y con unidades adicionales de IoT Hub. Su disparador es un uso diario de IoT Hub sobre
+el 75 % de la cuota. El caso más exigente es el pico: cientos de camiones
+que salen a la vez de una zona de sombra y vuelcan su registro acumulado (R-01). Para eso el equipo a
+bordo espera un tiempo aleatorio antes de reconectar, Event Hubs desacopla la llegada del procesamiento y
+la prueba de carga se ejecuta sobre 1,5 veces el pico (FEP02, RT-09.06, p. 21), con la reconexión
+simultánea de 300 camiones que dimensiona la sección ?.
+
+**Ciberamenazas.**
+Tres riesgos vienen de las amenazas. El portal queda expuesto a internet con datos de localización de
+conductores que no son trabajadores de la compañía (R-23). Un equipo a bordo o una baliza suplantados
+podrían falsear la posición, la jornada o el acople (R-22). La réplica de datos personales en Brazil
+South podría no tener base de licitud (R-24). El FEP01, Artículo 23, p. 17 exige que el mandante apruebe la residencia
+de los datos y que toda transferencia internacional tenga base de licitud y resguardos conforme a la Ley
+N.º 21.719 (Ministerio de Hacienda, 2024). El portal y la licitud tienen exposición alta. El portal se protege con
+cortafuegos de aplicación en Front Door, control de acceso por rol y atributo en Entra ID, cifrado de
+campo y pruebas de seguridad ofensiva antes de la marcha blanca. La licitud se resuelve con la base del
+Subdocumento 5 y la aprobación de la región secundaria antes del hito H2. La suplantación se cierra con
+un elemento seguro y un certificado por equipo, que IoT Hub exige en cada conexión.
+
+**Contrapartes del mandante.**
+Ocho riesgos dependen de otros. De los tres proveedores de posicionamiento, dos dan solo acceso de
+consulta y uno no permite exportar (Caso, numeral 16.1, p. 34). La lectura de la telemetría de fábrica de
+61 tractocamiones necesita la autorización de cada fabricante (Caso, RT-17.06, p. 34), y los operadores
+van a apagar las redes 2G y 3G. El sistema contable puede no recibir datos por interfaz, la autoridad
+laboral debe admitir el registro electrónico de jornada (supuesto SA-06 del Subdocumento 3) y los 258
+conductores externos pueden rechazar la medición. La adhesión de los 148 transportistas es el riesgo más
+alto del grupo (R-11, 12): el Caso dice que el plan de adhesión pesa en la evaluación tanto como la arquitectura
+(Caso, numeral 13.3, p. 28). La meta del Subdocumento 3 es de 104 anexos firmados en el mes 16 y 134 en el
+21, y el disparador es tener menos de 42 al cierre del mes 9, el 40 % de la primera meta. Por último
+está el propio mandante (R-15). Sus usuarios clave de la torre y de los terminales tienen poco tiempo en
+la temporada, y un entregable que vuelve con observaciones abre una segunda revisión que el
+FEP01, Artículo 18.3, p. 13 cuenta como atraso de audIT. El plan del Subdocumento 7 ya incluye la primera revisión de
+10 días hábiles, pero la segunda no cabe en los márgenes de 2 y 4 días de los hitos H1 y H2.
+
+**Análisis cualitativo.**
+La Figura 8.2 ubica los 28 riesgos en la matriz de probabilidad e impacto antes y después de
+mitigar.
+
+![Figura 8.2. Mapa de calor de los riesgos antes y después de mitigar. Cada número es el identificador del riesgo en el Formulario T-16, y el gris más oscuro es la zona de exposición alta](../../figuras/08-riesgos/mapa-calor.png)
+
+*Figura 8.2. Mapa de calor de los riesgos antes y después de mitigar. Cada número es el identificador del riesgo en el Formulario T-16, y el gris más oscuro es la zona de exposición alta*
+
+Fuente: Elaboración propia.
+
+Antes de mitigar hay siete riesgos altos, veinte medios y uno bajo. Después quedan quince medios y trece
+bajos, y la suma de las exposiciones baja de 248 a 147. El que más baja es R-06, de 15 a 3, porque decidir
+el reemplazo a tiempo le quita casi toda la probabilidad aunque el retiro siga en su fecha. Cinco quedan
+en 8 (R-11, R-18, R-23, R-24 y R-28) y conservan impacto 4, porque la mitigación baja su probabilidad y deja igual
+su consecuencia. Por eso mantienen su plan de contingencia aunque ya no sean altos. La mayoría de los
+riesgos se concentra en la columna de impacto 3, donde caen los procesos degradados de un segmento de la
+flota.
+
+**Análisis de modos de falla.**
+El análisis cubre diez modos de falla de los componentes físicos y de plataforma cuya falla deja un hueco
+en los datos: el equipo a bordo, el módem satelital, el grupo electrógeno de San Bernardo, la baliza del
+semirremolque, el lector del vehículo, el lector de tarjeta, el búfer, la réplica, la ingesta y el enlace
+de cada terminal. Incluye los dos puntos únicos de falla que declara la sección ?, que
+son el grupo electrógeno y el equipo a bordo. Los dos números de prioridad más altos son 36, del equipo a
+bordo que deja de registrar, y 32, del módem satelital sin servicio en una zona de sombra. Ninguno llega
+a 50. En los dos, lo que sube el número es la detección, que llega tarde, en el terminal o por aviso del
+conductor. La mitigación apunta a detectar antes, con la alerta por camión que llega
+al terminal sin reporte reciente. La tabla completa está en el Formulario T-16.
+
+**Simulación del cronograma.**
+La red del Subdocumento 7 calcula sus reservas cadena por cadena. Para ver el efecto de todas las rutas a
+la vez, la red completa se simuló 10.000 veces con el método de Monte Carlo. En cada corrida, cada
+actividad toma una duración al azar de una distribución Beta-PERT armada con sus tres estimaciones del
+Formulario T-15 (Malcolm et al., 1959). Las dos marchas blancas empiezan en su fecha fija, los días 240
+y 360, salvo que algo llegue tarde. La semilla es fija, 2026, para que el resultado se pueda repetir. La
+Tabla 8.2 da la probabilidad de cumplir cada hito del FEP01, Formulario E-25, p. 74.
+
+**Tabla 8.2.** Probabilidad de cumplir cada hito en 10.000 corridas
+
+| Hito | Actividad | Límite contractual | Margen planificado | Cumple |
+|---|---|---|---|---|
+| H1 | Fin de A02 | Día 40, mes 2 | 2 días | 78,4 % |
+| H2 | Fin de A05 | Día 80, mes 4 | 4 días | 83,9 % |
+| H3 | Fin de A07 | Día 120, mes 6 | 8 días | 93,6 % |
+| H4 | Fin de A09 | Día 200, mes 10 | 8 días | 86,2 % |
+| H5 | Fin de A12 | Día 240, mes 12 | 14 días | 96,2 % |
+| H6 | Inicio de A15 | Día 240, mes 13 | Reserva A14 | 96,2 % |
+| H8 | Fin de A17 | Día 280, mes 14 | 4 días | 91,8 % |
+| H7 | Fin de A19 | Día 320, mes 16 | 10 días | 99,9 % |
+| H9 | Fin de A20 | Día 340, mes 17 | 14 días | 99,5 % |
+| H10 | Fin de A22 | Día 360, mes 18 | 10 días | 95,5 % |
+| H11 | Inicio de A24 | Día 360, mes 19 | Reserva A23 | 95,5 % |
+| H12 | Fin de A25 | Día 420, mes 21 | Reserva A23 | 95,5 % |
+
+*Fuente: elaboración propia con las estimaciones de tres puntos y la malla del Formulario T-15. Márgenes en días hábiles.*
+
+Los hitos menos probables son los primeros. H1 se cumple en el 78,4 %, H2 en el 83,9 % y H4 en el
+86,2 %, porque sus márgenes son de 2 a 8 días hábiles y la construcción de la Etapa 1 (A09) es la
+actividad de mayor varianza de su ruta crítica. Ese es el R-17, que se acepta con seguimiento semanal
+del margen.
+
+Sin las reservas, las pruebas de la Etapa 1 terminarían a tiempo para el día
+226 planificado solo en el 51,4 % de las corridas, y la Etapa 2 llegaría al día 350 en el 51,7 %. La
+fecha planificada es casi la mediana. Con la reserva A14 de 14 días, la marcha blanca de la Etapa 1
+empieza a tiempo en el 96,2 %, y con la A23 de 10 días la de la Etapa 2 empieza a tiempo en el 95,5 %.
+El percentil 95 del término de las pruebas de la Etapa 1 es el día 239, uno antes del inicio fijo de la
+marcha blanca. La A09 define el inicio de las pruebas en el 98,6 % de las
+corridas, y por eso el control de la ruta se hace sprint a sprint sobre ella.
+
+Las dos marchas blancas empiezan a tiempo en el 92,1 % de las corridas. Es menos que el 95,6 % que
+resulta de multiplicar los dos cálculos por cadena del Subdocumento 7, porque en cada marcha blanca
+convergen varias rutas. La simulación encontró la causa principal de la diferencia. La capacitación de
+conductores (A13) atrasaba el inicio de la marcha blanca de la Etapa 1 en el 14,1 % de las corridas, y
+las dos marchas blancas se cumplían a la vez solo en el 82,3 %. La capacitación se adelantó para que
+empiece 10 días hábiles antes de que termine la A09, con la versión del último sprint en preproducción,
+y ese atraso bajó al 0,1 % (sección ?).
+
+**Árbol de fallas de la verificación bloqueante.**
+El árbol se construye sobre el evento que dio origen a la licitación: que un camión salga cuando no puede
+salir (Caso, numeral 9.1, p. 22). El evento tope es un viaje asignado a un conductor no apto, y la
+Figura 8.3 lo descompone. R-06 tiene más exposición, pero su causa es una sola fecha anunciada,
+sin causas que combinar, y su tratamiento ya se explicó en la obsolescencia.
+
+![Figura 8.3. Árbol de fallas del evento «viaje asignado a un conductor no apto», con sus cuatro caminos y los riesgos del registro que alimentan los eventos básicos](../../figuras/08-riesgos/arbol-fallas.png)
+
+*Figura 8.3. Árbol de fallas del evento «viaje asignado a un conductor no apto», con sus cuatro caminos y los riesgos del registro que alimentan los eventos básicos*
+
+Fuente: Elaboración propia.
+
+Una compuerta O une cuatro caminos hacia el tope. Cada camino es una compuerta Y de dos eventos básicos,
+así que el árbol tiene cuatro cortes mínimos, todos de dos eventos, y ningún evento lleva al tope por sí
+solo. Esa es la propiedad que busca el diseño, en el que ninguna invariante de la verificación admite
+excepción automática (sección ?).
+
+El primer camino es un registro de jornada incompleto en el equipo a bordo que se toma por válido. Lo
+alimentan R-02 y R-22, y se corta porque la plataforma muestra la antigüedad de toda señal y nunca un
+dato sin fecha, como fija el Subdocumento 4 para las posiciones de terceros y para la baliza
+(sección ? y sección ?).
+El segundo es una excepción RN-04 mal aplicada. Se corta porque esa regla solo admite la excepción ante
+una fuente de evidencia no disponible, la aprueban el jefe de turno y prevención de riesgos para un solo
+viaje, deja registro y nunca cubre una jornada agotada (sección ?). El tercero es
+un terminal sin enlace que asigna por su cuenta. Se corta porque la copia local no inventa vigencias ni
+asignaciones: toda asignación nueva pasa por el servicio central de reserva, y sin enlace la hace la
+torre (sección ?). El cuarto
+es un conductor externo aprobado sin evidencia, cuando el transportista no adhirió u opera en modalidad
+de datos y una atestación documental se acepta por error. Lo alimentan R-08, R-10 y R-11. Es el camino
+más probable mientras dure el período mixto, y por eso el R-20 vigila cuántos camiones quedan sin
+equipar.
+
+El árbol todavía no tiene probabilidades porque el Caso no da tasas de falla. La prueba en paralelo de los meses 13 y 14 registra cada asignación con su evidencia y entrega la frecuencia
+de cada evento básico, y con esa frecuencia se cuantifica el árbol antes de bloquear en el mes 15.
+
+## 8.3 Plan de Acción a Riesgos
+
+Cada riesgo tiene una de cuatro respuestas. Veintidós se mitigan, es decir, se baja su probabilidad, su
+impacto o ambos. Tres se evitan cambiando el plan para que no puedan ocurrir: la homologación del equipo
+se verifica antes de comprarlo (R-03), el reemplazo de la caché se decide antes del hito H2 (R-06) y el
+contrato fija febrero de 2027 como mes 1 (R-21). La caída de la región se transfiere a la infraestructura
+del proveedor de nube, con la región secundaria en espera, y audIT conserva la conmutación y sus pruebas
+(R-25). Dos se aceptan con seguimiento. Uno es el registro electrónico de jornada, porque si la
+autoridad no lo admite sigue el respaldo en papel firmado (R-13). El otro es el margen de los hitos H1 a
+H4 (R-17).
+
+**Costo y beneficio.**
+Una mitigación entra al plan cuando la exposición que quita vale más que lo que cuesta en plazo, en
+dotación o en productos. Aquí ambos lados se miden con las escalas de la sección 8.1 y en días hábiles.
+Su valor en dinero va en el Sobre N.º 3, porque el FEP01, Artículo 50.2, p. 29 no admite montos en la oferta técnica.
+Tres casos muestran el criterio. Adelantar la capacitación (A13) no cuesta días en la ruta, porque usa
+la versión que ya está en preproducción, y sube de 82,3 % a 92,1 % la probabilidad de empezar a tiempo
+las dos marchas blancas. Decidir el reemplazo de la caché antes del mes 4 cuesta una decisión temprana de
+arquitectura y evita una migración durante la marcha blanca de la Etapa 2. Esa marcha blanca, si se
+extiende, se multa por semana (FEP01, Artículo 80, p. 41) y no mueve las fechas siguientes (FEP01, Artículo 17.3, p. 13). Mantener un
+analista en cada terminal en el horario de relevo cuesta la dotación que ya declara el Subdocumento 7 y
+baja la probabilidad de no cerrar la marcha blanca de la Etapa 1 en tres meses (R-18). Los dos riesgos
+aceptados siguen la regla inversa: mitigarlos costaría más que su exposición, que es media.
+
+**Planes de contingencia.**
+Los siete riesgos que empiezan con exposición alta tienen un plan de contingencia, que se activa cuando
+se cumple su disparador. La Tabla 8.3 los resume, y el Formulario T-16 trae el disparador
+y el plazo de los 28. Ningún modo de falla llega al número de prioridad 50, así que ninguno agrega una
+contingencia propia.
+
+**Tabla 8.3.** Contingencias de los riesgos de exposición alta
+
+| Riesgo | Disparador | Contingencia | Plazo | Responsable |
+|---|---|---|---|---|
+| R-06 Retiro de Redis | Un componente de la Etapa 1 que dependa de Azure Cache for Redis en el hito H2 | El Comité de Arquitectura lo pasa a Azure Managed Redis y la migración termina antes de la marcha blanca de la Etapa 1 | Meses 4 a 12 | Arquitecto de Solución |
+| R-11 Adhesión bajo la meta | Menos de 42 anexos firmados al cierre del mes 9 | El Comité Ejecutivo aprueba un plan por transportista, y quien no adhiere opera en modalidad de datos o documental con su evidencia visible | Meses 9 a 16 | Líder Funcional |
+| R-18 Cierre de la marcha blanca 1 | Una condición de cierre bajo su umbral al cierre del mes 14 | Refuerzo en el terminal afectado y, si no alcanza, extensión a costo de audIT sin mover las fechas siguientes | Meses 14 a 16 | Líder de Operación |
+| R-23 Ataque al portal | Vulnerabilidad crítica abierta o acceso anómalo | Plan de respuesta a incidentes con contención en Front Door, aviso al mandante en dos horas y remediación en siete días corridos | Inmediato | Encargado de Seguridad |
+| R-24 Licitud en Brazil South | Hito H2 sin aprobación del mandante | La réplica de datos personales no se activa y el Comité Ejecutivo resuelve con la base de licitud del Subdocumento 5 | Mes 4 | Arquitecto de Solución |
+| R-27 Bloqueo indebido | Viaje que la prueba en paralelo habría detenido sin causa válida | La regla que lo causó sigue en paralelo hasta corregirla, y las demás bloquean desde el mes 15 | Meses 13 a 15 | Líder Funcional |
+| R-28 Documento satelital sobre 90 s | Ensayo con un retorno sobre 90 segundos o con fragmentos perdidos | Los puntos sin cobertura quedan solo con emisión anticipada y el Comité de Arquitectura revisa la decisión 06 del Subdocumento 4 y el Formulario T-11 | Desde el mes 3 | Líder de Integración |
+
+*Fuente: elaboración propia sobre el FEP01, Artículo 17.3, p. 13, el FEP01, Artículo 21.1, p. 15 y el FEP01, Artículo 21.3, p. 15.*
+
+Las siete contingencias aplican mecanismos que ya están en la arquitectura o en el plan, y agregan la
+regla de cuándo se activan y quién decide.
+Seis se activan antes del mes 15, cuando todavía hay margen para corregir sin tocar la operación. La de
+R-24 tiene un costo que se declara: mientras la réplica de datos personales esté detenida, esos datos se
+protegen solo dentro de Chile Central. El Subdocumento 5 lo fija así: sin una vía habilitante documentada,
+los datos personales no se replican fuera de Chile (sección ?).
+
+**Reservas de contingencia.**
+Las reservas de contingencia cubren riesgos identificados y están dentro de la línea base del
+cronograma. Son dos actividades de la red del Subdocumento 7 y las holguras que la red deja a propósito.
+La reserva A14, de 14 días hábiles, protege el inicio de la marcha blanca de la Etapa 1 en el día 240.
+Absorbe los atrasos de la construcción y de las pruebas, incluido el retrabajo si fallan la prueba de
+carga de R-01 o las pruebas de seguridad ofensiva de R-23, y es la respuesta a R-16. La reserva A23, de
+10 días hábiles, protege el inicio de la marcha blanca de la Etapa 2 en el día 360 frente a la
+construcción y la certificación de la Etapa 2, y a una segunda revisión de sus entregables (R-15). Las
+holguras de 20 días del montaje de la flota propia (A11) y de 40 días de la integración de los terceros
+y el montaje restante (A18) cubren el despliegue lento y las plataformas de terceros (R-19, R-08 y R-10).
+La holgura de 20 días de la marcha blanca de la Etapa 1 (A15) cubre parte de su cierre (R-18), y la de 38
+días de la capacitación (A13) cubre el rechazo de los conductores (R-14). El Jefe de Proyecto informa el
+consumo de cada reserva en el Comité de Proyecto. Si una baja de la mitad cuando a su cadena le queda más
+de la mitad de su duración, el caso sube al Comité Ejecutivo con un plan de recuperación
+(sección ?).
+
+**Reserva de gestión.**
+La reserva de gestión cubre lo que el registro no identificó. Queda fuera de la línea base y no se asigna
+a ninguna actividad. Solo la libera el Comité Ejecutivo, que es la instancia que el FEP01, Artículo 71, p. 37 encarga
+del escalamiento y de los cambios de alcance. Cada uso entra como cambio por el procedimiento del
+FEP01, Artículo 72, p. 38 y de FEP02, RT-19.03, p. 33, con su análisis de impacto, y el riesgo que la consume entra al
+registro con responsable, disparador y plazo, como cualquier otro. La valorización de las dos reservas y
+su reflejo en el flujo de caja van en el Sobre N.º 3 (FEP01, Artículo 50.2, p. 29).
 
 ## Referencias
 
+International Electrotechnical Commission. (2006). *IEC 61025:2006. Fault tree analysis (FTA)*.
 
+International Electrotechnical Commission. (2018). *IEC 60812:2018. Failure modes and effects analysis (FMEA and FMECA)*.
+
+International Electrotechnical Commission. (2019). *IEC 31010:2019. Risk management. Risk assessment techniques*.
+
+International Organization for Standardization. (2018). *ISO 31000:2018. Risk management. Guidelines*.
+
+Malcolm, D. G., Roseboom, J. H., Clark, C. E. y Fazar, W. (1959). Application of a Technique for Research and Development Program Evaluation. *Operations Research*, *7*(5), 646-669. https://doi.org/10.1287/opre.7.5.646
+
+Microsoft. (2026). *Frequently asked questions on the retirement of Azure Cache for Redis*. Microsoft Learn. https://learn.microsoft.com/en-us/azure/azure-cache-for-redis/retirement-faq
+
+Ministerio de Hacienda. (2024). *Ley N.º 21.719 sobre protección y tratamiento de datos personales*.
+
+Transportes Curimón S.A. (2026). *Bases administrativas para la preparación de la propuesta: Licitación Pública Internacional N.º TFEP-01/2026* (Documento FEP01).
+
+Transportes Curimón S.A. (2026). *Bases técnicas del Caso 10, Transporte de Carga: Licitación Pública Internacional N.º TFEP-01/2026* (Documento FEP03).
+
+Transportes Curimón S.A. (2026). *Bases técnicas transversales para la preparación de la propuesta: Licitación Pública Internacional N.º TFEP-01/2026* (Documento FEP02).
+
+Transportes Curimón S.A. (2026). *Comunicado 10: Estructura obligatoria de las propuestas preparatorias y técnica final* (Comunicado de la licitación TFEP-01/2026).
+
+## Declaración de uso de IA
+
+Conforme al Comunicado 10, sección 7.2, cada sección de este subdocumento y cada formulario asociado declara la herramienta de inteligencia artificial generativa usada, su finalidad, el nivel de uso en texto y en diagramas según la escala oficial de esa sección, y quién revisó y qué verificó. Esta declaración se consolida en el Formulario A-6.
+
+| Sección | Herramienta | Finalidad del uso | Nivel en texto | Nivel en diagramas | Revisión humana (quién y qué verificó) |
+|---|---|---|---|---|---|
+| Introducción y 8.1 | Claude Opus 5.5 en Claude Code | Redacción inicial del método, los roles, las escalas y las cadencias desde las decisiones D4-100 y D4-102, y verificación de las citas a las bases | Alto | Ninguno | **[Información requerida por dupla 4: nombre, cargo y qué verificó]** |
+| 8.2 | Claude Opus 5.5 en Claude Code | Identificación de los riesgos sobre los subdocumentos 3, 4, 7 y 13 y el Caso, guion de la simulación Monte Carlo sobre el Formulario T-15, redacción inicial del análisis y generación de la estructura de desglose, el mapa de calor y el árbol de fallas con un guion | Alto | Alto | **[Información requerida por dupla 4: nombre, cargo y qué verificó]** |
+| 8.3 | Claude Opus 5.5 en Claude Code | Redacción inicial de las respuestas, las contingencias y las reservas desde el registro de riesgos | Alto | Ninguno | **[Información requerida por dupla 4: nombre, cargo y qué verificó]** |
+| Formulario T-16 | Claude Opus 5.5 en Claude Code | Generación del registro, de la tabla de respuesta y del análisis de modos de falla con un guion desde el registro de riesgos | Alto | Ninguno | **[Información requerida por dupla 4: nombre, cargo y qué verificó]** |

@@ -1,7 +1,16 @@
 % ============================================================================
 %  Subdocumento 13. Introducción a las Innovaciones. Índice obligatorio del
 %  Comunicado 10, secciones 8 y 11.
+%
+%  La introducción y 13.3 son de la dupla 4 (D4-55). Las innovaciones 1, 2, 4
+%  y 5 se trasladaron del Subdocumento 13 entregado en el Informe 1 (D4-52),
+%  ordenadas por los siete elementos del Artículo 29 y sin lo que sancionaron
+%  las observaciones 93 a 100. Lo que falta lleva el marcador de su dupla:
+%  1 y 4 de la dupla 2, 2 de la dupla 3 y 5 de la dupla 1.
+%  Los títulos 13.1 a 13.5 llevan raya porque es texto exigido (D4-33).
 % ============================================================================
+\ProvideDocumentCommand\figuraAqui{O{}mmmm}{\par\Needspace{#2}\figura[lugar=h!,#1]{#3}{#4}{#5}}
+\ProvideDocumentCommand\figuraHorizontalAqui{mmm}{\par\figuraHorizontal{#1}{#2}{#3}\clearpage}
 
 Este capítulo presenta la cartera de cinco innovaciones que exige el \art{28}{19}, una por cada tipo
 y en el orden que fija el \comunicado{10}{sección 8}. Cada una responde a un problema medido del Caso.
@@ -11,23 +20,22 @@ tecnologías de moda. Ninguna de las cinco es una funcionalidad que las bases ya
 exclusión que declara el \art{30}{20}.
 
 Las cinco comparten una estrategia: convierten en un dato medido algo que hoy se declara, se anota en
-papel o se conoce tarde. La \tabref{13-cartera} resume el problema que resuelve cada una y el lugar
-de la arquitectura del Subdocumento~4 donde se inserta.
-
-\begin{tabla}{Cartera de innovaciones}{13-cartera}{R{8mm} L{44mm} X L{40mm}}
-Tipo & Innovación & Problema del Caso que resuelve & Dónde se inserta \\ \midrule
-1 & Expediente verificable del transportista & El transportista no puede probar ante terceros lo que el sistema ya sabe de él & Portal del transportista y servicio de verificación \\
-2 & Programación por oportunidad de patio & Coordinar unidad, autorización, kit, técnico y ventana de terminal & Flota y activos, Telemetría y terminales \\
-3 & Semirremolque conectado & El sistema no sabe qué semirremolque va enganchado ni cuánto recorre & Equipo a bordo, portería y verificación bloqueante \\
-4 & Esquema de adhesión y propiedad del dispositivo & Los dueños de camión no aceptan un equipo que delate cuándo trabajan para otros & Consentimiento, adhesión y equipo a bordo \\
-5 & Bienestar del conductor y descanso en parador seguro & La alerta de jornada llega donde no hay dónde detenerse & Equipo a bordo y gobernanza de paradores \\
-\end{tabla}
-\notaTabla{Fuente: elaboración propia sobre el Caso, numerales 2.3, 4.4, 4.11 y 16.1, pp. 7, 10, 12 y 35, y capítulo 10, p. 23.}
+papel o se conoce tarde. La innovación 1, Expediente
+verificable del transportista, responde a que el transportista no puede probar ante terceros lo que el
+sistema ya sabe de él, y vive en el portal del transportista y en el servicio de verificación. La 2,
+Programación dinámica de intervenciones por oportunidad de patio, coordina unidad, autorización,
+kit, técnico y ventana confirmada, con actualización remota como soporte del proceso. La 3, Semirremolque conectado, le dice
+al sistema qué semirremolque va enganchado y cuánto recorre, desde el equipo a bordo, la portería y la
+verificación bloqueante. La 4, Esquema de adhesión y propiedad del dispositivo, atiende a los dueños de
+camión que no aceptan un equipo que delate cuándo trabajan para otros, con consentimiento y adhesión.
+La 5, Bienestar del conductor y descanso en parador seguro, hace que la alerta de jornada llegue donde
+sí hay dónde detenerse, desde el equipo a bordo y la gobernanza de paradores. Los cinco problemas salen
+del \caso{numerales 2.3, 4.4, 4.11 y 16.1}{7, 10, 12 y 35} y del \caso*{capítulo 10}{23}.
 
 Cuatro de las cinco usan el equipo a bordo que especifica el Formulario T-11, y dos usan el portal del
 transportista. La \figref{13-carterafig} ubica cada innovación en las capas de la arquitectura.
 
-\figura{../../Informe-2/D3/graficos/13-cartera.png}{Cartera de innovaciones sobre las capas de la arquitectura, con los componentes que usa cada una}{13-carterafig}
+\figuraAqui{200mm}{figuras/13-innovaciones/cartera.png}{Cartera de innovaciones sobre las capas de la arquitectura, con los componentes que usa cada una}{13-carterafig}
 
 En la figura, el equipo a bordo concentra las innovaciones 2, 3, 4 y 5, y el portal del transportista
 las innovaciones 1 y 4. Esa concentración permite montar el valor nuevo sobre componentes que la
@@ -172,7 +180,6 @@ El beneficio estimado se calcula como intervenciones evitadas por falta de kit $
 
 La \tabref{13-proceso-tabla-13-2} distingue metas propuestas de la obligación de no extender la parada. La evaluación se realiza por familia de vehículo y terminal para no atribuir a la planificación diferencias de complejidad física.
 
-\ifdefined\NumeracionTablasDthree\else\refstepcounter{table}\fi
 \begin{tabla}[ancho=completo, fuente=condensada]{Indicadores del proceso y evidencia de aceptación}{13-proceso-tabla-13-2}{L{29mm} X X X}
 Indicador & Línea base & Meta propuesta & Medición \\ \midrule
 Preparación inútil por ausencia de unidad, autorización o kit compatible & Registro del piloto M6 y programación manual comparable; aún sin valor & Reducir $\geq$20 \% desde la línea base homologada & Por terminal y familia, M7–M9; cantidades, causas y denominador \\
@@ -187,7 +194,6 @@ La \tabref{13-proceso-tabla-13-2} permite aceptar o ajustar el proceso con evide
 
 La \tabref{13-proceso-tabla-2} reúne los riesgos del proceso, sus controles y la alternativa operativa cuando no se logra el resultado previsto.
 
-\ifdefined\NumeracionTablasDthree\else\refstepcounter{table}\fi
 \begin{tabla}[ancho=completo, fuente=condensada]{Riesgos de adopción del proceso y respuestas}{13-proceso-tabla-2}{L{29mm} X X X}
 Riesgo & Probabilidad / impacto propuestos & Mitigación & Contingencia \\ \midrule
 ETA o permanencia mal estimada & Media / alto & Conservar actualidad y calidad; confirmación del jefe de terminal antes de intervenir & Abortar preparación/intervención segura y reprogramar sin extender parada \\
@@ -254,7 +260,7 @@ durante la marcha blanca, como pide \transv{RT-26.03}{44}.
 \paragraph{Diseño de la incorporación} La \figref{13-semirremolquefig} muestra dónde se inserta la
 innovación en la arquitectura.
 
-\figuraHorizontal{figuras/13-innovaciones/semirremolque.png}{Semirremolque conectado: la baliza, sus dos lectores y los tres servicios de negocio que usan el acople}{13-semirremolquefig}
+\figuraHorizontalAqui{figuras/13-innovaciones/semirremolque.png}{Semirremolque conectado: la baliza, sus dos lectores y los tres servicios de negocio que usan el acople}{13-semirremolquefig}
 
 La baliza vive en el semirremolque y no agrega nada al tractocamión. En la capa de borde, el G26I y el
 lector de portería la leen por Bluetooth y envían el evento a IoT Hub, el primero por la red celular y
@@ -267,12 +273,12 @@ semirremolque acoplado, sin interfaces nuevas hacia terceros (secciones 4.1 y 4.
 declara el equipo: 210 balizas más 21 de reposición, 35 más por el crecimiento a 245 semirremolques y
 cinco lectores de portería.
 
-Las balizas se instalan en la Etapa~1 cuando cada semirremolque pasa por un terminal. Los 44
-refrigerados se intervienen fuera de la temporada de diciembre a abril, en que la operación no admite
-intervenciones \caso*{numeral 13.2}{27}. La verificación con el semirremolque medido se activa en la
-marcha blanca, y su primera medición ocurre antes del mes 16.
-
-La ejecución se descompone en los paquetes EDT 12.3 (Semirremolque conectado), 4.2 (Montaje camión por camión) y 5.2 (Flota y activos).
+En la EDT es el paquete 12.3. Las balizas y los lectores de portería se instalan con el paquete 4.2,
+cuando cada semirremolque pasa por un terminal y en los mismos meses del montaje a bordo, 6 a 10 y 16
+a 18. Así ninguna instalación cae en la temporada de diciembre a abril, en que la operación no admite
+intervenciones \caso*{numeral 13.2}{27}, y los 44 refrigerados se intervienen fuera de su temporada. El
+paquete 5.2, Flota y activos, integra la baliza a la ficha del semirremolque. La verificación con el
+semirremolque medido se activa en la marcha blanca, y su primera medición ocurre antes del mes 16.
 
 \paragraph{Impacto económico} La inversión es el equipamiento que compra el mandante, conforme al
 \caso{capítulo 11}{24}: las balizas y los lectores de portería del Formulario T-11, más la
@@ -284,14 +290,14 @@ de estimado, y respaldar ante el cliente la condición de la carga refrigerada. 
 Oferta Económica refleja la innovación como inversión en equipamiento en la Etapa~1 y como costo de
 reposición durante la operación.
 
-\paragraph{Indicador de verificación} La \tabref{13-indicadores3} fija los indicadores. Las líneas
-base describen lo que el sistema actual no registra, sin cifras que el Caso no entregue.
+\paragraph{Indicador de verificación} La \tabref{13-indicadores3} fija los indicadores. La primera línea
+base sale del Caso, y las otras dos se miden en la Etapa 1 porque el Caso no las entrega.
 
 \begin{tabla}{Indicadores de la innovación 3}{13-indicadores3}{X L{32mm} L{30mm} L{36mm}}
 Indicador & Línea base & Meta & Momento de medición \\ \midrule
-Asignaciones con semirremolque propio verificado por medición & No se registra & 95 \% o más & Marcha blanca, antes del mes 16 \\
-Semirremolques propios con kilometraje medido & No se registra & 100 \% de los que tienen baliza & Tercer mes de operación \\
-Viajes refrigerados con registro continuo de temperatura & No se registra en el sistema & 100 \% & Primera temporada de diciembre a abril \\
+Asignaciones con semirremolque propio verificado por medición & No se verifica al asignar & 95 \% o más & Marcha blanca, antes del mes 16 \\
+Semirremolques propios con kilometraje medido & Línea base a medir en la Etapa 1 & 100 \% de los que tienen baliza & Tercer mes de operación \\
+Viajes refrigerados con registro continuo de temperatura & Línea base a medir en la Etapa 1 & 100 \% & Primera temporada de diciembre a abril \\
 \end{tabla}
 \notaTabla{Fuente: elaboración propia sobre el Caso, numerales 2.2 y 4.4, pp. 6 y 10, y capítulo 18, p. 43.}
 
@@ -299,20 +305,24 @@ La primera meta no llega al 100 \% porque un semirremolque propio tirado por un 
 audIT solo se lee en la portería. Los tres indicadores se miden con datos que la propia solución
 produce, de modo que su verificación no depende de terceros.
 
-\paragraph{Riesgo de adopción} La \tabref{13-riesgos3} declara los riesgos con su probabilidad, su
-impacto, la mitigación y la contingencia, como pide \transv{RT-26.04}{44}.
+\paragraph{Riesgo de adopción} Cada riesgo se declara con su probabilidad, su impacto, la mitigación y
+la contingencia, como pide \transv{RT-26.04}{44}. El mayor es el acople falso con la baliza de un
+semirremolque vecino en el patio, de probabilidad media e impacto alto, porque afecta a la verificación
+bloqueante. Se mitiga exigiendo señal estable y movimiento conjunto en los primeros minutos de marcha.
+Si aun así falla, la verificación vuelve a la declaración con la lectura de portería como control, sin
+detener la operación. La suplantación del identificador de la baliza tiene probabilidad baja e impacto
+alto: el acople ya exige movimiento conjunto y la lectura de portería, y en contingencia se trata como
+dato complementario y no como única prueba. La temperatura bajo $-20$~°C en el paso cordillerano tiene
+probabilidad baja e impacto medio. Se mitiga montando la baliza a la sombra del chasis y probándola en
+el invierno de 2027, que coincide con el inicio del montaje en los meses 6 y 7. Si no resiste, los
+semirremolques que cruzan llevan un modelo de mayor rango térmico. Una batería que dure menos de lo
+declarado tiene probabilidad e impacto bajos: la baliza emite cada 10 segundos e informa su nivel, y se
+repone desde la reserva del 10~\% del Formulario T-11 \parencite{teltonika_eye}.
 
-\begin{tabla}[espacio=22]{Riesgos de adopción de la innovación 3}{13-riesgos3}{L{30mm} L{16mm} L{14mm} X X}
-Riesgo & Probabilidad & Impacto & Mitigación & Contingencia \\ \midrule
-Acople falso con la baliza de un semirremolque vecino en el patio & Media & Alto & Exigir señal estable y movimiento conjunto en los primeros minutos de marcha & La verificación vuelve a la declaración con la lectura de portería como control \\
-Temperatura bajo $-20$~°C en el paso cordillerano & Baja & Medio & Montaje a la sombra del chasis y prueba en el invierno de la marcha blanca & Un modelo de mayor rango térmico en los semirremolques que cruzan \\
-Suplantación del identificador de la baliza & Baja & Alto & El acople exige movimiento conjunto y la lectura de portería & El acople se trata como dato complementario y no como única prueba \\
-Batería que dura menos de lo declarado & Baja & Bajo & Emisión cada 10 segundos y vigilancia del nivel que reporta la baliza & Reposición desde la reserva del 10 \% del Formulario T-11 \\
-\end{tabla}
-\notaTabla{Fuente: elaboración propia sobre \textcite{teltonika_eye}.}
-
-El riesgo mayor es el acople falso, porque afecta a la verificación bloqueante, y por eso su
-contingencia devuelve el control a la declaración sin detener la operación.
+La baliza agrega una fuente de datos a la arquitectura, y por eso tiene su propio modelado de amenazas,
+como exige \transv{RT-26.07}{45}. La sección~4.1.21 del Subdocumento~4 lo hace con la clasificación
+STRIDE y fija sus controles de diseño: la ingesta es de solo lectura, la señal sola no acredita jornada
+ni descanso y la baliza no actúa sobre el vehículo (\verSeccion{sec:4-amenazas}).
 
 % ============================================================================
 \section{Innovación 4 — Modelo de negocio o de contratación}\label{sec:13-innovacion-4}
@@ -414,8 +424,8 @@ infracción. La innovación abandona el temporizador pasivo e implementa un sist
 acompañamiento predictivo del descanso, que cruza la cinemática del camión con la curva biológica de
 alerta circadiana y un catálogo georreferenciado y calificado de paradores de carga pesada.
 
-\paragraph{Tecnología que la sustenta} Motor predictivo embebido en el equipo a bordo de la
-sección~4.2.2, que evalúa en tiempo real el tiempo de conducción acumulado, la
+\paragraph{Tecnología que la sustenta} Motor predictivo que corre sobre audIT EdgeHub, el software
+de borde de audIT que define el Subdocumento~1 (\verSeccion{sec:1-edgehub}), instalado en el equipo a bordo de la sección~4.2.2 \caso*{RT-06.01}{32}. Evalúa en tiempo real el tiempo de conducción acumulado, la
 topografía del tramo siguiente y la ventana de mínima alerta circadiana (\emph{Window of Circadian
 Low}, de 02:00 a 06:00~h). Catálogo georreferenciado local en SQLite, en modo de registro anticipado de escritura, sobre la
 memoria flash industrial de 8~GB del equipo, especificada para las condiciones reales de uso que pide
@@ -447,20 +457,20 @@ hardware telemático de borde, el almacenamiento local, la síntesis de voz loca
 cinético están en nivel ocho, con componentes comerciales de uso maduro en flotas pesadas. El modelo
 predictivo circadiano y la ontología de paradores adaptada a la red vial chilena se sitúan en nivel
 seis (TRL 6, validación en entorno de simulación y laboratorio con series temporales históricas de ruta), comprometiendo
-su escalamiento a nivel siete (TRL 7) mediante la prueba piloto operacional con conductores reales durante la marcha blanca de la Etapa~1 (meses 13 a 15),
+su escalamiento a nivel siete (TRL 7) mediante la prueba piloto operacional con conductores reales durante la marcha blanca del mes 16,
 apoyados en estándares de ergonomía vehicular \parencite{iso15005,iso9241_210}, en investigación sobre fatiga en
 el transporte de carga \parencite{nasem2016_fatiga} y en la normativa vial y laboral nacional
 \parencite{ley21377,codigo_trabajo_25bis}.
 
 \paragraph{Diseño de la incorporación} Se articula en la capa de borde (motor predictivo a bordo,
 catálogo local y síntesis de voz), en la capa de servicios (servicio de gobernanza de paradores y
-seguridad vial en la torre de control) y en la de presentación (portal para consulta pasiva). Su
-trazabilidad formal se estructura en el paquete EDT 12.5 (Innovación 5: experiencia de usuario o impacto social), articulándose sobre los paquetes de soporte técnico 4.1 (Firmware y software a bordo) y 5.1 (Contexto Personas y cumplimiento), y coordinando el levantamiento del catálogo con los recorridos de cobertura del paquete 2.2 (meses 1 a 3) y la validación en terreno durante la marcha blanca de la Etapa~1 (paquete 11.2, meses 13 a 15). El beneficio es verificable antes
+seguridad vial en la torre de control) y en la de presentación (portal para consulta pasiva). En la
+EDT es el paquete 12.5, que se ejecuta con los paquetes 4.1, firmware a bordo (meses 4 a 9), y 5.1,
+contexto Personas y cumplimiento (meses 6 a 10). La validación con conductores reales ocurre en la
+marcha blanca de los meses 13 a 15. El beneficio es verificable antes
 del mes 16, como valora \transv{RT-26.08}{45}. La validación de los paradores y sus atributos se
 consolida durante la campaña de cobertura de la Etapa~1, y la calibración de la ventana circadiana con
-los turnos reales se ajusta en los talleres de diseño ergonómico a partir del mes cuatro.
-
-La estructuración del paquete EDT 12.5 y los paquetes de soporte 4.1 y 5.1 se encuentra plenamente alineada con la descomposición canónica del trabajo de 13 elementos del Subdocumento 7 y con la Ficha de la Innovación 5 del Formulario T-19.
+los turnos reales se ajusta en los talleres de diseño ergonómico del mes cuatro.
 
 \paragraph{Impacto económico} La inversión requerida es incremental sobre el software de borde y los
 talleres ergonómicos participativos, mientras que el levantamiento del catálogo se absorbe dentro del

@@ -53,3 +53,12 @@ documento completo en 90 segundos siguen pendientes de esa integración.
 
 El uso de IA se declara en los subdocumentos afectados. La revisión humana
 y asociación a la bitácora A-6 del responsable siguen pendientes.
+
+## Integración durante el push
+
+El merge con origin/main incorporó el catálogo completo de 28 riesgos y T-16
+de D4. Las condiciones acordadas se integraron en S8/T-16, conservando R-11,
+R-16 y R-28. Los registros parciales AC-CAP/AC-ADH quedan sustituidos por
+esta integración, sin renumerar el catálogo. El código de Monte Carlo sigue
+sin estar disponible; los porcentajes se conservan como resultados reportados
+por el equipo, con verificación del adelanto condicionado pendiente.

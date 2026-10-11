@@ -23,7 +23,7 @@
       "clave": "13T-19",
       "nombre": "AUDIT-Formulario-T-19.pdf",
       "folio_inicial": 1,
-      "paginas": 17,
+      "paginas": 13,
       "aux": "salida/aux/informe2/13T-19/AUDIT-Formulario-T-19.aux",
       "log": "salida/aux/informe2/13T-19/AUDIT-Formulario-T-19.log",
       "fuentes": [
@@ -32,6 +32,70 @@
         ],
         [
           "subdocumentos/13-innovaciones"
+        ]
+      ]
+    },
+    {
+      "clave": "07",
+      "nombre": "AUDIT-Subdocumento7.pdf",
+      "folio_inicial": 1,
+      "paginas": 25,
+      "aux": "salida/aux/informe2/07/AUDIT-Subdocumento7.aux",
+      "log": "salida/aux/informe2/07/AUDIT-Subdocumento7.log",
+      "fuentes": [
+        [
+          "subdocumentos"
+        ],
+        [
+          "subdocumentos/07-plan-trabajo"
+        ]
+      ]
+    },
+    {
+      "clave": "07T-14",
+      "nombre": "AUDIT-Formulario-T-14.pdf",
+      "folio_inicial": 1,
+      "paginas": 7,
+      "aux": "salida/aux/informe2/07T-14/AUDIT-Formulario-T-14.aux",
+      "log": "salida/aux/informe2/07T-14/AUDIT-Formulario-T-14.log",
+      "fuentes": [
+        [
+          "subdocumentos"
+        ],
+        [
+          "subdocumentos/07-plan-trabajo"
+        ]
+      ]
+    },
+    {
+      "clave": "07T-15",
+      "nombre": "AUDIT-Formulario-T-15.pdf",
+      "folio_inicial": 1,
+      "paginas": 9,
+      "aux": "salida/aux/informe2/07T-15/AUDIT-Formulario-T-15.aux",
+      "log": "salida/aux/informe2/07T-15/AUDIT-Formulario-T-15.log",
+      "fuentes": [
+        [
+          "subdocumentos"
+        ],
+        [
+          "subdocumentos/07-plan-trabajo"
+        ]
+      ]
+    },
+    {
+      "clave": "07T-18",
+      "nombre": "AUDIT-Formulario-T-18.pdf",
+      "folio_inicial": 1,
+      "paginas": 6,
+      "aux": "salida/aux/informe2/07T-18/AUDIT-Formulario-T-18.aux",
+      "log": "salida/aux/informe2/07T-18/AUDIT-Formulario-T-18.log",
+      "fuentes": [
+        [
+          "subdocumentos"
+        ],
+        [
+          "subdocumentos/07-plan-trabajo"
         ]
       ]
     },
@@ -71,7 +135,7 @@
       "clave": "09T-17",
       "nombre": "AUDIT-Formulario-T-17.pdf",
       "folio_inicial": 1,
-      "paginas": 115,
+      "paginas": 114,
       "aux": "salida/aux/informe2/09T-17/AUDIT-Formulario-T-17.aux",
       "log": "salida/aux/informe2/09T-17/AUDIT-Formulario-T-17.log",
       "fuentes": [
@@ -80,6 +144,70 @@
         ],
         [
           "subdocumentos/09-calidad"
+        ]
+      ]
+    },
+    {
+      "clave": "01",
+      "nombre": "AUDIT-Subdocumento1.pdf",
+      "folio_inicial": 1,
+      "paginas": 30,
+      "aux": "salida/aux/informe2/01/AUDIT-Subdocumento1.aux",
+      "log": "salida/aux/informe2/01/AUDIT-Subdocumento1.log",
+      "fuentes": [
+        [
+          "subdocumentos"
+        ],
+        [
+          "subdocumentos/01-empresa"
+        ]
+      ]
+    },
+    {
+      "clave": "02",
+      "nombre": "AUDIT-Subdocumento2.pdf",
+      "folio_inicial": 1,
+      "paginas": 34,
+      "aux": "salida/aux/informe2/02/AUDIT-Subdocumento2.aux",
+      "log": "salida/aux/informe2/02/AUDIT-Subdocumento2.log",
+      "fuentes": [
+        [
+          "subdocumentos"
+        ],
+        [
+          "subdocumentos/02-problema"
+        ]
+      ]
+    },
+    {
+      "clave": "01T-6",
+      "nombre": "AUDIT-Formulario-T-6.pdf",
+      "folio_inicial": 1,
+      "paginas": 11,
+      "aux": "salida/aux/informe2/01T-6/AUDIT-Formulario-T-6.aux",
+      "log": "salida/aux/informe2/01T-6/AUDIT-Formulario-T-6.log",
+      "fuentes": [
+        [
+          "subdocumentos"
+        ],
+        [
+          "subdocumentos/01-empresa"
+        ]
+      ]
+    },
+    {
+      "clave": "02A",
+      "nombre": "AUDIT-Subdocumento2-Anexos.pdf",
+      "folio_inicial": 1,
+      "paginas": 27,
+      "aux": "salida/aux/informe2/02A/AUDIT-Subdocumento2-Anexos.aux",
+      "log": "salida/aux/informe2/02A/AUDIT-Subdocumento2-Anexos.log",
+      "fuentes": [
+        [
+          "subdocumentos"
+        ],
+        [
+          "subdocumentos/02-problema"
         ]
       ]
     }

@@ -2,19 +2,33 @@
 
 audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. Oferta Técnica, Sobre N.º 2. Informe Preparatorio 2. Archivo AUDIT-Formulario-T-17.pdf. Anexo del Subdocumento N.º 9, Plan de calidad. Las fuentes están en las Referencias de ese subdocumento.
 
-**Entregables de cada hito y del producto final.** La secuencia de actividades, dependencias y evidencias por hito se articula con la estructura canónica de la EDT de 13 elementos y 54 paquetes de trabajo (con especial foco en el elemento 10 «Calidad y pruebas», paquetes 10.1 a 10.3) y el cronograma contractual de actividades A01 a A25 de S7 (Formularios T-14, T-15 y T-18). La verificación integral de la Etapa 1 se concentra en la actividad A12 (meses 10 a 12), la certificación de la Etapa 2 en la actividad A22 (meses 17 a 18), y los ejercicios semestrales de recuperación ante desastres (DR) se programan en junio y noviembre de cada año operacional (M21 a M56); véanse sección 9.3.1 y sección 9.3.2.
+### Entregables de cada hito y del producto final
 
-**Criterios de aceptación objetivos.** Se aplican la disponibilidad mínima de 99,9 % (FEP01, Artículo 20, p. 14), RTO máximo de 4 h y RPO máximo de 15 min (FEP02, RT-07.04, p. 17), y retención local mínima de 72 h (Caso, RT-03.10, p. 31); véase también sección 9.1.2 y sección 9.2.2. Los demás umbrales se aprueban y documentan antes de ejecutar las pruebas.
+La secuencia de actividades, dependencias y evidencias por hito se articula con la estructura canónica de la EDT de 13 elementos y 54 paquetes de trabajo (con especial foco en el elemento 10 «Calidad y pruebas», paquetes 10.1 a 10.3) y el cronograma contractual de actividades A01 a A25 de S7 (Formularios T-14, T-15 y T-18). La verificación integral de la Etapa 1 se concentra en la actividad A12 (meses 10 a 12), la certificación de la Etapa 2 en la actividad A22 (meses 17 a 18), y los ejercicios semestrales de recuperación ante desastres (DR) se programan en junio y noviembre de cada año operacional (M21 a M56); véanse sección 9.3.1 y sección 9.3.2.
 
-**Evidencia requerida.** Cada evidencia registra requisito y caso, fecha, versión, ambiente, datos y parámetros, herramienta, resultado, defectos y responsable; véase sección 9.3.4.
+### Criterios de aceptación objetivos
 
-**Plazos de revisión.** Diez días hábiles de revisión y diez de subsanación. La segunda presentación con observaciones de igual naturaleza constituye atraso imputable (FEP01, Artículo 18.3, p. 13); véase sección 9.3.1.
+Se aplican la disponibilidad mínima de 99,9 % (FEP01, Artículo 20, p. 14), RTO máximo de 4 h y RPO máximo de 15 min (FEP02, RT-07.04, p. 17), y retención local mínima de 72 h (Caso, RT-03.10, p. 31); véase también sección 9.1.2 y sección 9.2.2. Los demás umbrales se aprueban y documentan antes de ejecutar las pruebas.
 
-**Procedimiento de observaciones.** Las observaciones se registran con identificador, requisito relacionado, severidad, evidencia y respuesta; la subsanación se revisa contra el criterio aprobado y sin aceptación por silencio y con acta suscrita; véase sección 9.3.3.
+### Evidencia requerida
 
-**Acta de conformidad.** El cierre registra el hito y versión evaluados, casos ejecutados y su estado, defectos abiertos, métricas efectivamente medidas, evidencias y pronunciamiento de la contraparte; véase sección 9.3.3.
+Cada evidencia registra requisito y caso, fecha, versión, ambiente, datos y parámetros, herramienta, resultado, defectos y responsable; véase sección 9.3.4.
 
-**Estado del catálogo de pruebas.** El catálogo contiene 120 casos diseñados (25 unitarios, 25 de integración, 20 de sistema, 20 no funcionales y de seguridad, 15 HIL y 15 UAT), con trazabilidad diseñada hacia los 42 requerimientos del sistema formalizados en el Formulario T-12 (28 funcionales RF-001 a RF-028 y 14 no funcionales RNF-001 a RNF-014) y sus paquetes EDT asociados. La matriz distingue cobertura diseñada de evidencia ejecutada; no afirma probar todos los 54 paquetes. No se declaran ejecutados ni aprobados. Los escenarios sintéticos y umbrales adicionales se fijan antes de ejecutar. Catálogo: \hyperref[sec:9-catalogo]{Catálogo detallado}, folio \pageref{sec:9-catalogo}.
+### Plazos de revisión
+
+Diez días hábiles de revisión y diez de subsanación. La segunda presentación con observaciones de igual naturaleza constituye atraso imputable (FEP01, Artículo 18.3, p. 13); véase sección 9.3.1.
+
+### Procedimiento de observaciones
+
+Las observaciones se registran con identificador, requisito relacionado, severidad, evidencia y respuesta; la subsanación se revisa contra el criterio aprobado y sin aceptación por silencio y con acta suscrita; véase sección 9.3.3.
+
+### Acta de conformidad
+
+El cierre registra el hito y versión evaluados, casos ejecutados y su estado, defectos abiertos, métricas efectivamente medidas, evidencias y pronunciamiento de la contraparte; véase sección 9.3.3.
+
+### Estado del catálogo de pruebas
+
+El catálogo contiene 120 casos diseñados (25 unitarios, 25 de integración, 20 de sistema, 20 no funcionales y de seguridad, 15 HIL y 15 UAT), con trazabilidad diseñada hacia los 42 requerimientos del sistema formalizados en el Formulario T-12 (28 funcionales RF-001 a RF-028 y 14 no funcionales RNF-001 a RNF-014) y sus paquetes EDT asociados. La matriz distingue cobertura diseñada de evidencia ejecutada; no afirma probar todos los 54 paquetes. No se declaran ejecutados ni aprobados. Los escenarios sintéticos y umbrales adicionales se fijan antes de ejecutar. Catálogo: \hyperref[sec:9-catalogo]{Catálogo detallado}, folio \pageref{sec:9-catalogo}.
 
 Véanse los mínimos en sección 9.3.6 y las seis condiciones acumulativas y calendario en sección 9.3.5.
 
@@ -31,7 +45,7 @@ Este catálogo conserva los identificadores por batería. No se declara ejecuci�
 ### 9.0.2 Matriz de requisitos, casos y alcance de verificación
 
 \addcontentsline{toc}{subsection}{Matriz de requisitos, casos y alcance de verificación}
-La Tabla 9.2 recorre el catálogo de S3/T-12 y localiza las variantes diseñadas en los casos existentes. El detalle de cada variante establece entradas, salidas y límites. Se verifica conjuntamente la familia de pruebas: un mock no acredita proveedor real, una simulación temporal no acredita años operados y un examen documental no acredita conformidad externa. Todas las filas están diseñadas y pendientes de ejecución; la cobertura de código se mide separadamente.
+La Tabla 9.1 recorre el catálogo de S3/T-12 y localiza las variantes diseñadas en los casos existentes. El detalle de cada variante establece entradas, salidas y límites. Se verifica conjuntamente la familia de pruebas: un mock no acredita proveedor real, una simulación temporal no acredita años operados y un examen documental no acredita conformidad externa. Todas las filas están diseñadas y pendientes de ejecución; la cobertura de código se mide separadamente.
 
 **Tabla 9.1.** Trazabilidad del catálogo S3/T-12 a pruebas diseñadas
 
@@ -2103,16 +2117,21 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 **ID:** `C\allowbreak{}P\allowbreak{}-\allowbreak{}S\allowbreak{}E\allowbreak{}C\allowbreak{}-\allowbreak{}0\allowbreak{}8\allowbreak{}`
 **Nivel y Tipología:** Prueba de Ciberseguridad / Cadena de Custodia e Inmutabilidad Legal.
 **Requerimiento Trazado:** RF-004, RNF-012, RNF-014.
-**Precondiciones:** Contenedor Azure Blob Storage configurado con política de inmutabilidad en nivel WORM (Write Once, Read Many) con bloqueo temporal de 5 años.
-**Pasos de Ejecución:**
-- Almacenar un lote de eventos de jornada laboral sellados con timestamp RFC 3161 en el blob inmutable.
-- Intentar ejecutar una operación de modificación (overwrite) sobre el blob mediante credenciales de administrador de base de datos.
-- Intentar ejecutar una operación de borrado (delete) sobre el blob.
+**Precondiciones:** Contenedor de ensayo Azure Blob Storage con política de conservación WORM temporal de cinco años vigente y bloqueada, a nivel de contenedor, sobre blobs de bloques. Cuenta de prueba con el rol Storage Blob Data Contributor o permisos efectivos equivalentes de lectura, escritura y borrado sobre el contenedor protegido y un contenedor de control sin inmutabilidad, bajo condiciones de acceso equivalentes. Registrar identidad, alcance y permisos aplicados; disponer de datos exclusivamente sintéticos.
 
-**Datos de Entrada Sintéticos:** Bloque de auditoría de jornada laboral con sellado criptográfico.
-**Resultado Esperado:** Azure Storage rechaza ambas operaciones con error `S\allowbreak{}t\allowbreak{}o\allowbreak{}r\allowbreak{}a\allowbreak{}g\allowbreak{}e\allowbreak{}O\allowbreak{}p\allowbreak{}e\allowbreak{}r\allowbreak{}a\allowbreak{}t\allowbreak{}i\allowbreak{}o\allowbreak{}n\allowbreak{}F\allowbreak{}o\allowbreak{}r\allowbreak{}b\allowbreak{}i\allowbreak{}d\allowbreak{}d\allowbreak{}e\allowbreak{}n\allowbreak{}B\allowbreak{}y\allowbreak{}I\allowbreak{}m\allowbreak{}m\allowbreak{}u\allowbreak{}t\allowbreak{}a\allowbreak{}b\allowbreak{}i\allowbreak{}l\allowbreak{}i\allowbreak{}t\allowbreak{}y\allowbreak{}P\allowbreak{}o\allowbreak{}l\allowbreak{}i\allowbreak{}c\allowbreak{}y\allowbreak{}`; la evidencia permanece inalterada y lista para peritaje judicial o inspección de la Dirección del Trabajo.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P1 (Bloqueante)**.
-**Entorno:** Staging Azure Blob Storage Inmutable.
+**Pasos de Ejecución:**
+- Con la cuenta de prueba, crear un blob sintético en el contenedor de control sin inmutabilidad, sobrescribirlo y borrarlo. Confirmar éxito de ambas operaciones para acreditar permisos efectivos; si fallan por autorización, corregir la preparación y no dar por comprobada la protección WORM.
+- Almacenar un lote de eventos de jornada laboral con sellado temporal RFC 3161 en el contenedor protegido. Conservar identificador del objeto, contenido y huella criptográfica inicial, sello y configuración de la política vigente y bloqueada.
+- Con la misma cuenta, intentar sobrescribir el contenido del blob protegido y después borrarlo, dentro del período de conservación. Registrar cada solicitud, fecha, respuesta HTTP, código del servicio e identificador de solicitud.
+- Comprobar que ambas operaciones son rechazadas por la política de inmutabilidad. Volver a leer el objeto y contrastar contenido, huella y sello con los originales; conservar el control previo y las respuestas como evidencia del ensayo.
+
+**Datos de Entrada Sintéticos:** Lote sintético de eventos de jornada con sello RFC 3161 y blob de control sin protección; contenido alternativo para el intento de sobrescritura.
+
+**Resultado Esperado:** El control sin inmutabilidad permite sobrescritura y borrado con la cuenta de prueba. En el contenedor protegido, Azure Blob Storage rechaza ambas operaciones con HTTP 409 y código `BlobImmutableDueToPolicy`; el objeto conserva contenido, huella criptográfica y sello originales durante la conservación. Registrar resultados solo después de ejecutar el ensayo.
+
+**Pass/Fail y Severidad:** Pass solo si el control previo acredita escritura y borrado, ambas operaciones sobre el objeto protegido son rechazadas por la política WORM y la evidencia permanece íntegra. Una denegación por autenticación o permisos no acredita inmutabilidad: el caso queda no aprobado hasta corregir la preparación y repetirlo. Sobrescritura o borrado efectivos, pérdida de integridad o cualquier incumplimiento de los criterios implican Fail. Severidad: **P1 (Bloqueante)**.
+
+**Entorno:** Staging Azure Blob Storage: contenedor protegido y contenedor de control sin inmutabilidad.
 
 **Variante trazada a RF-004 (S3/T-12):** Sellar un evento original y una corrección que cambia un dato; conservar ambas versiones con autor, origen y fecha. Alterar el original y verificar fallo de integridad. Avanzar reloj virtual hasta cinco años de conservación y comprobar disponibilidad e integridad antes de su término; la simulación verifica la política y no acredita cinco años de operación real. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.
 

@@ -13,7 +13,7 @@ Conforme a lo instruido en el Comunicado 10 (§1 y §5), las tablas de catalogac
 
 \addcontentsline{toc}{section}{Anexo 2.A: Catálogo exhaustivo de requerimientos preliminares de negocio y operacionales}
 
-El catálogo compendia las veinticinco (25) necesidades preliminares de negocio y operacionales levantadas desde las Bases Técnicas del Caso 10, las entrevistas en terreno con los actores del transporte y las exigencias normativas del ordenamiento jurídico chileno. Cada requerimiento se codifica unívocamente (`REQ-NEG-01` a `REQ-NEG-25`), declarando su fuente de origen, su nivel de criticidad y su trazabilidad biunívoca hacia los Requerimientos Funcionales (`RF`) y No Funcionales (`RNF`) formalizados en el Subdocumento 3 y en el Formulario T-12, conforme se detalla en la Tabla 2.1.
+El catálogo compendia las veinticinco (25) necesidades preliminares de negocio y operacionales levantadas desde las Bases Técnicas del Caso 10, las entrevistas en terreno con los actores del transporte y las exigencias normativas del ordenamiento jurídico chileno. Cada requerimiento se codifica unívocamente (`REQ-NEG-01` a `REQ-NEG-25`), declarando su fuente de origen, su nivel de criticidad y su trazabilidad hacia los requerimientos base de S3/T-12 o las prestaciones adicionales de S13/T-19, según corresponda, conforme se detalla en la Tabla 2.1.
 
 **Tabla 2.1.** Catálogo de requerimientos de negocio y operacionales preliminares con trazabilidad
 
@@ -26,7 +26,7 @@ El catálogo compendia las veinticinco (25) necesidades preliminares de negocio 
 | **REQ-NEG-05** | Trazabilidad y Geocercas | Acreditar automáticamente entrada, permanencia y salida en los aproximadamente 1.400 puntos de clientes, sin intervención del conductor ni equipamiento instalado en predios ajenos. | Caso 10, Cap. 4.7, Entrevista E. Valdebenito | RF-010 | Alta |
 | **REQ-NEG-06** | Cobro de Sobreestadías | Conservar evidencia cronológica íntegra y atribuible de los tiempos de espera para sustentar cobros legítimos. El 71% de cobros objetados describe el problema, no una recuperación garantizada. | Caso 10, Cap. 4.7, Entrevista G. Ossandón | RF-011 | Alta |
 | **REQ-NEG-07** | Retornos en Vacío | Identificar en tiempo real los tractocamiones que finalizarán su descarga para sugerir triangulaciones con cargas de retorno compatibles, reduciendo el 26% de kilómetros recorridos en vacío (10,66 millones de km anuales). | Caso 10, Cap. 4.2, Entrevista R. Mansilla | RF-015 | Alta |
-| **REQ-NEG-08** | Cadena de Frío | Monitorear la temperatura de los 44 equipos refrigerados y alertar desviaciones o aperturas no autorizadas. Necesidad preliminar atendida por la innovación 3 de S13, fuera del catálogo base S3/T-12; rangos y frecuencia según carga y contrato. | Caso 10, Cap. 2.1 y 4.8, Entrevista A. Lecaros | Innovación 3 (S13 / T-19) | Crítica |
+| **REQ-NEG-08** | Cadena de Frío | Monitorear la temperatura de los 44 equipos refrigerados y alertar desviaciones o aperturas no autorizadas. Necesidad preliminar atendida por la innovación 3 de S13, fuera del catálogo base S3/T-12 pero incluida en la oferta; rangos y frecuencia según carga, contrato y homologación. No se identifica como obligación literal de instrumentación de las bases. | Caso 10, Cap. 2.1 y 4.8, Entrevista A. Lecaros | Innovación 3 (S13 / T-19) | Crítica |
 | **REQ-NEG-09** | Documentación Digital | Disponer del DET conforme antes del movimiento, incluso en puntos de carga sin cobertura; mantener al sistema contable como único emisor tributario y resolver la contingencia en la solución. | Caso 10, Cap. 4.6, Entrevista M. Riquelme | RF-013, RF-014 | Alta |
 | **REQ-NEG-10** | Confirmación de Entrega | Obtener conformidad de entrega atribuible al destinatario y disponible para facturación y reclamos, reduciendo pérdidas y daños de soportes en papel. | Caso 10, Cap. 4.7, Entrevista G. Ossandón | RF-012 | Media |
 | **REQ-NEG-11** | Costeo por Ruta y Viaje | Reconstruir el costo directo del viaje con fuentes de consumo, peajes y fletes, distinguiendo estimación operacional y conciliación definitiva. La oportunidad de información debe justificarse. | Caso 10, Cap. 4.1 y 7.3, Entrevista G. Ossandón | RF-016 | Crítica |
@@ -99,7 +99,7 @@ La operación de la flota requiere una fuerza laboral de 454 choferes, estructur
 
 \addcontentsline{toc}{section}{Anexo 2.C: Matriz exhaustiva de restricciones operacionales, legales y exclusiones contractuales}
 
-Este anexo recopila de forma sistemática las restricciones legales vigentes en Chile expuestas en la Tabla 2.5, las restricciones físicas y ambientales de la red en carretera detalladas en la Tabla 2.6 y las exclusiones explícitas de la propuesta técnica delimitadas en la Tabla 2.7.
+Este anexo recopila las restricciones normativas consideradas en el diagnóstico expuestas en la Tabla 2.5, las restricciones físicas y ambientales de la red en carretera detalladas en la Tabla 2.6 y las exclusiones explícitas de la propuesta técnica delimitadas en la Tabla 2.7.
 
 **Tabla 2.5.** Matriz de restricciones legales, normativas y regulatorias
 
@@ -125,12 +125,12 @@ Este anexo recopila de forma sistemática las restricciones legales vigentes en 
 | **REST-FIS-05** | Infraestructura Servidores Matriz | Sala de servidores en San Bernardo de 26 m², split doméstico y UPS 20 min, incumpliendo requerimientos RT-06.01 a RT-06.09. | La sala de San Bernardo debe remediarse o reemplazarse para cumplir el estándar físico; la solución debe conservar el carácter híbrido obligatorio. |
 | **REST-FIS-06** | Puntos de Clientes Ajenos ( 1.400) | Recintos privados de terceros donde está estrictamente prohibido instalar infraestructura física, antenas o sensores de Curimón. | Acreditar llegada y permanencia sin instalar infraestructura en predios de clientes; la técnica debe justificarse en la arquitectura. |
 
-**Tabla 2.7.** Matriz de exclusiones contractuales explícitas
+**Tabla 2.7.** Límites de prestación y condiciones de infraestructura y presentación
 
 | **Código** | **Objeto Excluido** | **Justificación Técnica y Delimitación de Responsabilidad** |
 |---|---|---|
 | **EXC-01** | Suministro de combustible diésel y lubricantes | La provisión física del carburante corresponde a los convenios de Curimón con distribuidoras mayoristas, auditando audIT el consumo. |
-| **EXC-02** | Mantenimiento mecánico y repuestos de taller | El recambio físico de piezas, neumáticos y reparaciones mecánicas es potestad exclusiva del personal de talleres de Curimón. |
+| **EXC-02** | Mantenimiento mecánico y repuestos de taller | audIT no ofrece reparación mecánica; se mantiene el registro de intervenciones de talleres propios y externos y la hoja de vida. La exclusión no comprende el recambio del equipamiento tecnológico comprometido. |
 | **EXC-03** | Modificación del código fuente del ERP contable | El sistema contable se conserva como único emisor tributario; deben comprobarse los derechos y posibilidades de acceso a información. |
 | **EXC-04** | Obras civiles mayores en terminales | No se excluyen las adecuaciones necesarias para remediar o reemplazar la sala local conforme al Caso RT-06.01 y al carácter híbrido exigido. |
 | **EXC-05** | Honorarios y costos en Oferta Técnica | En cumplimiento del Artículo 50.2 de las Bases Administrativas, la propuesta técnica no contiene montos ni tarifas de audIT SpA. |
@@ -138,6 +138,8 @@ Este anexo recopila de forma sistemática las restricciones legales vigentes en 
 ## 2.4 Anexo 2.D: Fichas detalladas de caracterización de los trece (13) actores del ecosistema
 
 \addcontentsline{toc}{section}{Anexo 2.D: Fichas detalladas de caracterización de los trece (13) actores del ecosistema}
+
+La clasificación de poder e interés corresponde a grupos colectivos y a su influencia efectiva e interés en la operación diaria; no describe automáticamente el poder de cada integrante. Los cuadrantes de bajo poder quedan sin grupos asignados bajo ese criterio.
 
 A continuación se presentan las fichas completas de caracterización de los trece grupos de interés, integrando los tres actores de gobierno, fiscalización y aseguramiento (Fondo de Inversión, Dirección del Trabajo y Aseguradora de Carga y Flota) y profundizando en las dependencias y riesgos de cada uno.
 

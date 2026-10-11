@@ -55,3 +55,23 @@ que corresponda en sus archivos, para que el S4, el S5 y el S6 digan lo mismo.
 - **Filas 73 y 74 de su tabla.** Recalculan el almacenamiento y la reconexión con otras cifras (2.400 MiB,
   71.400 paquetes en 11,9 min). Son de la parte física de la dupla 4, que mantiene sus cálculos aprobados:
   2.374 MB y 57.600 mensajes en 9,6 min. Si tienen una observación al cálculo, conviene revisarla juntos.
+
+## Integración de la versión del 11 de octubre (commit f86e240)
+
+La dupla 4 integró al Subdocumento 4 la versión nueva completa, con sus 26 subsecciones. El punto 5 de
+arriba ya no aplica: el S4 usa ahora su presupuesto de 25 s más 5 s y sus figuras nuevas. Al integrar se
+cambió lo siguiente, sin tocar sus archivos:
+
+1. **Figuras.** Las secuencias 4-3, 4-4, 4-6 y 4-7 y el documento sin cobertura se usan desde una copia en
+   `D4/graficos-v2/fuente/s4_secuencias.py`, sin el título interno (lo da la leyenda) y sin punto y coma en
+   las notas. LogicaCapas se usa tal cual.
+2. **Notas de trabajo.** Se quitaron la fila «S4.2 de D4 mantiene 350 (525 en estrés)» de la tabla 4.19, que
+   ya no es cierta (la 4.2 usa 380 y 570), y las menciones a duplas en fuentes de figuras y en 4.1.1.
+3. **Citas.** RT-05.29 está en la p.32 del Caso. El numeral 16.1 del Caso son las decisiones de diseño
+   pendientes, así que no respalda la compatibilidad del equipo con la carga (tabla 4.9). El Art. 4.3 del
+   FEP01 está en la p.6. RT-26.07 sigue en la p.45 del FEP02.
+4. **Tablas.** La de campos del rechazo (4.11) pasó a texto. Las demás quedaron con una frase por celda.
+5. **Parte física.** Para que calce con su 4.1, la 4.3.2 ya no dice que el terminal asigna con la copia local:
+   sin enlace, el viaje nuevo lo asigna la torre en el sistema central. El S8 sumó el riesgo R-28 (retorno
+   satelital del documento sobre 90 s), que es el acuerdo pendiente entre D2, D3 y D4.
+
