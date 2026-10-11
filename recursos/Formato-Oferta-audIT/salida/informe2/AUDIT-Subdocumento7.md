@@ -721,7 +721,7 @@ volumetría proyectada a tres años: 430 camiones y 118.000 viajes al año (Caso
 prueba de estrés lleva la carga al triple de la volumetría inicial, que es lo que la solución debe
 soportar sin rediseño (FEP02, RT-09.03, p. 21), y repite la reconexión simultánea de 300 camiones que
 dimensiona la sección ?. La prueba de resiliencia corta el enlace de un terminal
-durante doce horas y el de un camión durante 72.
+durante 24 horas (en estricto cumplimiento del umbral transversal del Art. 16.4 y la Tabla 9.6 de calidad) y el de un camión durante 72.
 
 **Métricas de éxito.**
 Un paso a producción es exitoso si en sus primeros 30 días hábiles no hay incidentes críticos atribuibles

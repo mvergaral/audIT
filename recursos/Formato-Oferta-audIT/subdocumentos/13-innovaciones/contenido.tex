@@ -258,7 +258,7 @@ refrigerados se intervienen fuera de la temporada de diciembre a abril, en que l
 intervenciones \caso*{numeral 13.2}{27}. La verificación con el semirremolque medido se activa en la
 marcha blanca, y su primera medición ocurre antes del mes 16.
 
-La ejecución se descompone en los paquetes EDT 3.4 (Instalación de Balizas Bluetooth en Semirremolques y Lectores de Portería, meses 4 a 9) y EDT 4.4 (Integración con Verificación Bloqueante y Despacho, meses 8 a 11), completando la certificación de acople previo al hito de marcha blanca.
+La ejecución se descompone en los paquetes EDT 12.3 (Semirremolque conectado), 4.2 (Montaje camión por camión) y 5.2 (Flota y activos).
 
 \paragraph{Impacto económico} La inversión es el equipamiento que compra el mandante, conforme al
 \caso{capítulo 11}{24}: las balizas y los lectores de portería del Formulario T-11, más la
@@ -299,8 +299,6 @@ Batería que dura menos de lo declarado & Baja & Bajo & Emisión cada 10 segundo
 
 El riesgo mayor es el acople falso, porque afecta a la verificación bloqueante, y por eso su
 contingencia devuelve el control a la declaración sin detener la operación.
-
-En cumplimiento de RT-26.07, la incorporación de balizas BLE fue evaluada en el modelado de amenazas STRIDE de la sección 4.1, incorporando mitigaciones criptográficas con tokens rotatorios de autenticación para neutralizar riesgos de suplantación (\textit{spoofing}) o manipulación en patio.
 
 % ============================================================================
 \section{Innovación 4 — Modelo de negocio o de contratación}\label{sec:13-innovacion-4}
@@ -435,7 +433,7 @@ hardware telemático de borde, el almacenamiento local, la síntesis de voz loca
 cinético están en nivel ocho, con componentes comerciales de uso maduro en flotas pesadas. El modelo
 predictivo circadiano y la ontología de paradores adaptada a la red vial chilena se sitúan en nivel
 seis (TRL 6, validación en entorno de simulación y laboratorio con series temporales históricas de ruta), comprometiendo
-su escalamiento a nivel siete (TRL 7) mediante la prueba piloto operacional con conductores reales durante la marcha blanca del mes 16,
+su escalamiento a nivel siete (TRL 7) mediante la prueba piloto operacional con conductores reales durante la marcha blanca de la Etapa~1 (meses 13 a 15),
 apoyados en estándares de ergonomía vehicular \parencite{iso15005,iso9241_210}, en investigación sobre fatiga en
 el transporte de carga \parencite{nasem2016_fatiga} y en la normativa vial y laboral nacional
 \parencite{ley21377,codigo_trabajo_25bis}.
@@ -443,15 +441,12 @@ el transporte de carga \parencite{nasem2016_fatiga} y en la normativa vial y lab
 \paragraph{Diseño de la incorporación} Se articula en la capa de borde (motor predictivo a bordo,
 catálogo local y síntesis de voz), en la capa de servicios (servicio de gobernanza de paradores y
 seguridad vial en la torre de control) y en la de presentación (portal para consulta pasiva). Su
-trazabilidad formal se estructura en el paquete EDT 12.5 (Innovación 5: experiencia de usuario o impacto social), articulándose sobre los paquetes de soporte técnico 4.1 (Firmware y software a bordo) y 5.1 (Contexto Personas y cumplimiento), y desplegándose en los paquetes de trabajo 2.4 (Diseño Ergonómico de la Interfaz y Protocolo de Guantes,
-meses 4 a 7), 3.7 (Catálogo de Paradores en la Campaña de Cobertura, meses 3 a 6),
-4.6 (Software de Enclavamiento Cinético y Alerta Circadiana, meses 7 a 10) y 7.2 (Validación
-Operacional en Marcha Blanca con Conductores Reales, meses 13 a 15). El beneficio es verificable antes
+trazabilidad formal se estructura en el paquete EDT 12.5 (Innovación 5: experiencia de usuario o impacto social), articulándose sobre los paquetes de soporte técnico 4.1 (Firmware y software a bordo) y 5.1 (Contexto Personas y cumplimiento), y coordinando el levantamiento del catálogo con los recorridos de cobertura del paquete 2.2 (meses 1 a 3) y la validación en terreno durante la marcha blanca de la Etapa~1 (paquete 11.2, meses 13 a 15). El beneficio es verificable antes
 del mes 16, como valora \transv{RT-26.08}{45}. La validación de los paradores y sus atributos se
 consolida durante la campaña de cobertura de la Etapa~1, y la calibración de la ventana circadiana con
-los turnos reales se ajusta en los talleres de diseño ergonómico del mes cuatro.
+los turnos reales se ajusta en los talleres de diseño ergonómico a partir del mes cuatro.
 
-La estructuración del paquete EDT 12.5 y los paquetes de soporte 4.1 y 5.1 se encuentra plenamente alineada con la descomposición canónica del trabajo de 13 elementos del Subdocumento 7.
+La estructuración del paquete EDT 12.5 y los paquetes de soporte 4.1 y 5.1 se encuentra plenamente alineada con la descomposición canónica del trabajo de 13 elementos del Subdocumento 7 y con la Ficha de la Innovación 5 del Formulario T-19.
 
 \paragraph{Impacto económico} La inversión requerida es incremental sobre el software de borde y los
 talleres ergonómicos participativos, mientras que el levantamiento del catálogo se absorbe dentro del

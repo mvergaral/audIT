@@ -85,24 +85,110 @@
   mitigacion = {Conversación desde el mes 2 con el beneficio a la vista antes de pedir el equipo. Ventana auditable por el dueño. Validación jurídica antes de construir},
   contingencia = {Tres medidas del Subdocumento 3 si la adhesión no llega al 40 \% en el mes 9. Financiar el incentivo con el ahorro de la liquidación automática}
 }
-% ------------------------------------------------------------- innovación 5
+% Innovación 5: ficha sincronizada con el desarrollo de D1.
 \fichaInnovacion{
   tipo = {5. Experiencia de usuario, sostenibilidad o impacto social},
   nombre = {Bienestar del conductor y descanso en parador seguro},
-  problema = {Una alerta de jornada entregada donde no hay dónde detenerse es inútil (Caso, capítulo 18, p. 43). Hay tramos sin lugar seguro para combinaciones de 45 toneladas (numeral 16.1, p. 35). 258 conductores externos no son trabajadores de la compañía (numeral 2.3, p. 6)},
-  tecnologia = {Motor predictivo a bordo que cruza jornada acumulada, topografía y ventana circadiana de 02:00 a 06:00 h. Catálogo local de paradores calificados. Enclavamiento cinético de pantalla y síntesis de voz local en español},
-  madurez = {Escala de niveles de madurez tecnológica de 1 a 9. Hardware de borde, almacenamiento local, síntesis de voz y enclavamiento en nivel 8. Modelo circadiano y ontología de paradores en nivel 6 (escalamiento a nivel 7 en marcha blanca mes 16)},
-  fuentes = {International Organization for Standardization (2013, 2017, 2019). National Academies of Sciences, Engineering, and Medicine (2016). Congreso Nacional de Chile (2021), Ley N.º 21.377. Ministerio del Trabajo (2003, 2006)},
-  arquitectura = {Capa de borde con el motor predictivo, el catálogo y la síntesis de voz. Servicio de gobernanza de paradores en la torre de control. Consulta pasiva en el portal},
-  edt = {EDT 12.5, sobre los paquetes 4.1 (Firmware y software a bordo) y 5.1 (Personas y cumplimiento), articulado con 2.4 (Diseño ergonómico), 3.7 (Catálogo de paradores), 4.6 (Enclavamiento cinético) y 7.2 (Validación en marcha blanca)},
-  mes = {Talleres ergonómicos en el mes 4. Catálogo entre los meses 3 y 6. Software entre los meses 7 y 10. Validación con conductores entre los meses 13 y 15},
-  inversion = {Software de borde incremental y talleres ergonómicos participativos. El catálogo se levanta dentro de la campaña de cobertura},
-  costooperacional = {Menor búsqueda errática de estacionamiento en ruta, con un efecto en combustible que se mide en la Etapa 1},
-  beneficio = {Menor riesgo de siniestros graves por microsueño y supresión de multas por la Ley N.º 21.377 y el artículo 25 bis. Reflejado en mitigación de contingencias patrimoniales y ahorros de seguros},
-  indicador = {Alertas con parador calificado, de 0 a 98 \% o más. Bloqueo cinético del 100 \%. NASA-TLX con guantes bajo 35 puntos y adherencia voluntaria de 85 \% o más, con línea base medida en la Etapa 1},
-  medicion = {Mensual en la marcha blanca, antes del mes 16},
-  riesgo = {Que los 258 conductores externos lo perciban como vigilancia patronal encubierta, probabilidad media a alta e impacto alto},
-  mitigacion = {Diseño ergonómico participativo en horario de relevo en los cinco terminales y orientación al bienestar},
-  contingencia = {Notificación solo acústica por el altavoz del vehículo, sin teléfonos personales ni botones adicionales en cabina}
+  problema = {Una alerta de jornada donde no existe parada segura no resuelve el descanso. La propuesta vincula jornada, topografía y bienestar de conductores propios y externos.},
+  tecnologia = {audIT EdgeHub, software definido en S1 §1.1.3, sobre iWave G26I; motor predictivo circadiano, catálogo local, bloqueo de interacción en marcha y voz local. 182 equipos previstos; 192 terceros con GPS conservan dispositivos y requieren datos autorizados. La transferencia, instalación, activación y reinicio de firmware del iWave G26I se limitan al vehículo detenido en terminal autorizado y a su ventana de mantenimiento; se distinguen de las actualizaciones del catálogo. CP-SYS-20 y CP-HW-09 verifican rechazo fuera de esa condición y recuperación A/B.},
+  madurez = {TRL 6 declarado para el modelo y ontología; objetivo TRL 7 tras piloto M13–M15, sujeto a expediente. Componentes comerciales no acreditan madurez global.},
+  fuentes = {ISO 16290:2013; ISO 15005:2017; ISO 9241-210:2019; bases FEP01 Art.29, FEP02 RT-26.05 y Caso 10.},
+  arquitectura = {Borde en iWave G26I con audIT EdgeHub, lectura Technoton CANCrocodile, servicio de gobernanza de paradores y consulta en portal. S1 §1.1.3 y S4 §4.2.2.},
+  edt = {12.5, con apoyo de 4.1 y 5.1; sin asignar talleres o catálogo a paquetes ajenos.},
+  mes = {Catálogo M3–M6; talleres desde M4; software M4–M9; integración M6–M10; piloto M13–M15 en equipos ya instalados.},
+  inversion = {Motor, integración, catálogo, talleres y piloto: innovacion-5-inversion. Solo alcance incremental; equipos base y recorridos compartidos se concilian sin duplicidades.},
+  costooperacional = {Actualización y soporte: innovacion-5-costo, consolidado M16–M56; transición M16–M20 separada de operación contractual M21–M56.},
+  beneficio = {innovacion-5-beneficio: beneficio bruto monetizable del mandante con medición, cobertura y adopción justificadas. No es ingreso de audIT; riesgos sin evidencia se evalúan cualitativamente.},
+  indicador = {Parada segura oportuna \(\ge\)98 \%; cero interacción táctil en marcha; NASA-TLX <35 puntos; adherencia voluntaria \(\ge\)85 \%. Líneas base medidas en Etapa 1; no se declaran resultados previos.},
+  medicion = {M13–M15 y seguimiento desde M16, con muestras autorizadas y versión de protocolos.},
+  riesgo = {Percepción de vigilancia patronal por conductores externos; probabilidad media a alta, impacto alto.},
+  mitigacion = {Diseño ergonómico participativo y orientación al bienestar en los cinco terminales.},
+  contingencia = {Notificación acústica sin teléfonos personales ni botones adicionales; conservar bloqueo de interacción en marcha.}
 }
+\subsection*{Desarrollo y trazabilidad económica de la innovación 5}\label{sec:13-t19-i5-economia}
+\subsubsection*{6. Impacto Operacional, Económico y Supuestos del Negocio (Art. 29.5 / RT-26.05)}
+
+El impacto económico se organiza en inversión incremental, costo de operación y beneficio esperado. La siguiente matriz relaciona los tres conceptos con las actividades de EDT 12.5 y sus apoyos 4.1 y 5.1. En esta ficha se documentan alcance, calendario, insumos y reglas de conciliación; los precios, tarifas y valorizaciones de esfuerzo corresponden a la documentación económica separada, conforme a FEP01, Art. 50.2, p. 30.
+
+
+La \tabref{13-t19-i5-tabla-104} presenta los criterios y su correspondencia documental.
+\begin{tabla}[fuente=condensada]{Relación entre diseño y componentes económicos de la innovación 5}{13-t19-i5-tabla-104}{X X X X}
+Componente & Alcance incremental & Período previsto & Partida económica \\ \midrule
+Inversión & Motor predictivo, integración, catálogo, talleres y piloto & M3–M10; validación M13–M15 & \texttt{inno\allowbreak{}vacion-\allowbreak{}5-\allowbreak{}inversion} \\
+Operación & Actualización del catálogo y software, soporte y medición & Desde puesta en servicio M16; operación contractual M21–M56 & \texttt{inno\allowbreak{}vacion-\allowbreak{}5-\allowbreak{}costo} \\
+Beneficio & Eficiencia de búsqueda de paradores, usabilidad y mitigación de riesgos & Medición M13–M15; seguimiento desde M16 & \texttt{inno\allowbreak{}vacion-\allowbreak{}5-\allowbreak{}beneficio} \\
+\end{tabla}
+
+\textit{Fuente: elaboración propia, ficha tipo 5 del T-19; FEP01, Art. 29.5, Formulario T-22 y Formulario E-21 §2.7; FEP02, RT-26.05.}
+
+\subsubsection*{6.1 Inversión incremental y frontera con el alcance base}
+
+La inversión comprende el trabajo adicional que incorpora el acompañamiento predictivo respecto del software y equipamiento base. La madurez o disponibilidad de audIT EdgeHub no implica que adaptar el motor, mantener el catálogo o validar la interacción tenga costo cero. Cada componente se vincula a un entregable y se valoriza en la hoja de costos con un método documentado.
+
+
+La \tabref{13-t19-i5-tabla-105} presenta los criterios y su correspondencia documental.
+\begin{tabla}[fuente=condensada]{Desglose de inversión y control de duplicidades}{13-t19-i5-tabla-105}{X X X X}
+Componente & Entregable y período & Insumo para valorizar & Regla de conciliación \\ \midrule
+Motor e integración & Versión de borde M4–M9; integración con Personas y cumplimiento M6–M10 & Estimación aprobada por entregable, roles e integración & Separar adaptación incremental de firmware y servicios base 4.1/5.1 \\
+Catálogo de paradores & Catálogo calificado y gobernanza M3–M6 & Cobertura, puntos inspeccionados, validación y carga & Compartir recorridos RT-03.24 sin duplicar traslados; considerar trabajo adicional de calificación \\
+Talleres ergonómicos & Protocolo y resultados desde M4 & Sesiones, participantes, facilitación, materiales y logística & Distinguir actividades de innovación de capacitación general; justificar cantidades y distribución \\
+Piloto y validación & Evaluación e indicadores M13–M15 & Unidades autorizadas, instrumentos, análisis y aceptación & Separar evaluación adicional de innovación de pruebas contractuales ya presupuestadas \\
+\end{tabla}
+
+\textit{Fuente: elaboración propia sobre la incorporación de la innovación tipo 5, sección 5.}
+
+El suministro de los 182 iWave G26I, CANCrocodile y periféricos del alcance base se concilia con T-11 y las adquisiciones generales. No se vuelve a sumar su compra a esta innovación. Una licencia, accesorio o servicio adicional solo integra su inversión cuando el diseño lo requiere, consta en el inventario y no está incluido en otra partida. La cobertura funcional de 374 vehículos tampoco genera por sí sola una adquisición de 374 computadores.
+
+Los recorridos de cobertura compartidos y el uso de personal común requieren un criterio explícito de distribución. Para una actividad compartida, se identifica su partida principal y la proporción o costo incremental atribuible a la innovación; no se suma el importe completo simultáneamente al proyecto base y a \texttt{inno\allowbreak{}vacion-\allowbreak{}5-\allowbreak{}inversion}. Un valor incremental cero requiere demostrar absorción en otra partida y suficiencia del recurso.
+
+\subsubsection*{6.2 Costo de operación y soporte}
+
+La operación comprende mantener calificados los paradores y sus atributos, revisar cambios de ruta, distribuir actualizaciones firmadas en terminal, mantener y corregir el motor, atender incidencias y producir los indicadores comprometidos. La actualización por Wi-Fi puede reducir tráfico móvil, pero no elimina el trabajo de mantenimiento, la infraestructura de distribución ni el soporte.
+
+El cálculo económico desglosa servicio, unidad de consumo, cantidad, frecuencia, cobertura y fuente del valor unitario. Los cambios se programan por versión y su periodicidad se justifica por la variación real del catálogo y la cobertura de soporte, sin fijar una frecuencia arbitraria. Se distinguen recursos dedicados, compartidos y servicios de proveedores; estos últimos se identifican en la hoja correspondiente y se suman una sola vez a operación.
+
+El servicio comienza con la puesta en producción de Etapa 1 en M16. El soporte de M16–M20 se concilia con las obligaciones y costos de implementación; M21–M56 corresponde a los 36 meses de operación contractual. \texttt{inno\allowbreak{}vacion-\allowbreak{}5-\allowbreak{}costo} consolida el costo incremental de servicio de M16–M56, con ambos tramos identificados. Esto no amplía la fase contractual de operación ni permite cobrar dos veces el soporte de transición. Para cada mes se documentan el concepto y la partida general que lo absorbe.
+
+\subsubsection*{6.3 Beneficio esperado y método de comprobación}
+
+Los indicadores Ind-5.1 a Ind-5.4 de la sección 7 verifican oportunidad de parada, bloqueo de interacción en marcha, carga cognitiva y adherencia voluntaria. Sus metas describen compromisos de evaluación; no se convierten automáticamente en ahorro monetario. La inversión y el soporte se presupuestan aunque el beneficio todavía requiera medición.
+
+La eficiencia de búsqueda de paradores se evalúa con una muestra de viajes autorizados, comparando desvíos, tiempo de búsqueda y consumo antes y después de la intervención. El contraste conserva ruta, carga, horario y condiciones comparables, así como cantidad de viajes elegibles y proporción que usa efectivamente la recomendación. Se separa el efecto atribuible a esta innovación de cambios de despacho, mejoras de conducción o ahorro ya asignado a otra iniciativa. La posición por sí sola no acredita consumo de combustible; cuando falten mediciones, se identifica la incertidumbre.
+
+La eventual valorización del ahorro utiliza cantidades medidas de actividad evitada y valores unitarios documentados exclusivamente en el modelo económico. La proyección registra período, cobertura efectiva y adopción; no aplica el ahorro observado en una muestra a los 374 vehículos por defecto. El beneficio bruto y el beneficio después de costos incrementales se distinguen, descontando inversión y operación una sola vez según la perspectiva y el horizonte de evaluación.
+
+La reducción de siniestros, sanciones o interrupciones de contratos se trata como beneficio potencial sujeto a causalidad, exposición y evidencia. No se presume que toda sanción o pérdida histórica sea evitable, ni que mejorar un indicador elimine ese riesgo. Sin una estimación sustentada de frecuencia y efecto atribuible, estos beneficios se presentan cualitativamente y no se incorporan como ahorro cierto al escenario económico base. Un cambio de prima de seguro requiere respaldo contractual o cotización; no se deduce de la mejora prevista en seguridad.
+
+El ahorro del mandante se distingue de los ingresos y cobros de audIT. \texttt{inno\allowbreak{}vacion-\allowbreak{}5-\allowbreak{}beneficio} registra el beneficio bruto monetizable para el mandante durante el horizonte de evaluación declarado; excluye beneficios cualitativos no valorizados. La evaluación de ese beneficio se mantiene identificada por perspectiva: no se utiliza como ingreso del oferente ni como efectivo disponible para financiar desarrollo o soporte. La falta de una medición no equivale a un resultado demostrado de cero.
+
+\subsubsection*{6.4 Trazabilidad con la Oferta Económica y el modelo financiero}
+
+FEP01, Art. 29.5, exige reflejar inversión, efecto operacional y beneficio en el flujo de caja. El Formulario T-22 sitúa su valorización y la planilla del mandante en el Informe 3 (pp. 69–70). El Formulario E-21, §2.7 y Entregable 3 (pp. 71–73), los incorpora a la oferta económica y al modelo financiero del Sobre N.º 3. La preparación del alcance en Informe 2 no acredita que esas entregas económicas estén completadas.
+
+En el formato documental examinado, \texttt{economico/\allowbreak{}datos/\allowbreak{}partidas.csv} contiene los tres identificadores y es la fuente de valores de los documentos económicos. Su columna \texttt{planilla} vincula cada total con una celda del modelo; esa celda debe contener o referenciar un cálculo reproducible. El texto de costos frente a venta y el de análisis financiero utilizan los mismos identificadores para las tablas de valorización. La tabla de totales no sustituye el desglose mensual.
+
+
+La \tabref{13-t19-i5-tabla-106} presenta los criterios y su correspondencia documental.
+\begin{tabla}[fuente=condensada]{Evidencia necesaria para conciliar los tres totales}{13-t19-i5-tabla-106}{X X X X}
+Identificador & Origen del total & Distribución temporal & Evidencia de correspondencia \\ \midrule
+\texttt{inno\allowbreak{}vacion-\allowbreak{}5-\allowbreak{}inversion} & Suma de componentes incrementales aprobados de 6.1 & Actividades M3–M10 y piloto M13–M15; pagos según acuerdos & Costos, fuente de estimación y celda de total de inversión \\
+\texttt{inno\allowbreak{}vacion-\allowbreak{}5-\allowbreak{}costo} & Suma del soporte incremental M16–M56 de 6.2 & Transición M16–M20 y operación M21–M56 & Costos/proveedores, frecuencia y celda de total de servicio \\
+\texttt{inno\allowbreak{}vacion-\allowbreak{}5-\allowbreak{}beneficio} & Suma del beneficio bruto monetizable del mandante de 6.3 & Meses con cobertura y adopción justificadas & Supuestos, medición, sensibilidad y celda de beneficio por perspectiva \\
+\end{tabla}
+
+\textit{Fuente: elaboración propia; FEP01, Formularios T-22 y E-21; estructura del formato económico examinado.}
+
+Para cada componente, el modelo registra alcance y paquete EDT, cantidad y unidad, fuente y fecha del valor, criterio de reparto si es compartido, mes de ejecución y mes de pago. Las fechas de los pagos se sustentan en acuerdos o hipótesis expresas, no se igualan automáticamente al mes de entrega del software. En ingresos se documentan las condiciones e hitos de pago de la oferta, sin imputar como cobro los ahorros del mandante.
+
+La conciliación requiere que las sumas mensuales reproduzcan los totales por componente y los acumulados del horizonte; que los totales de las tres partidas coincidan con sus celdas y tablas económicas; y que el proyecto incorpore cada costo una sola vez en su categoría. La etiqueta de inversión describe su lugar en el presupuesto de implementación, sin sustituir el tratamiento contable aprobado. La planilla documenta supuestos, usa fórmulas y referencias trazables y permite variar cantidades, periodicidad, cobertura y adopción sin incrustar importes en las fórmulas.
+
+\subsubsection*{6.5 Estado de acreditación y condiciones de cierre}
+
+La revisión documental identifica las partidas de innovación 5 tanto en el formato compartido como en la copia de arquitectura: sus valores y referencias a celdas de planilla están vacíos. Esta constatación se limita al catálogo \texttt{economico/\allowbreak{}datos/\allowbreak{}partidas.csv} y las carpetas económicas del formato compartido y de la copia de arquitectura examinados; no acredita incorporación en otra versión. Esas carpetas no contienen el modelo XLSX requerido; los archivos de muestra no constituyen una valorización de esta innovación. Se acredita el desarrollo del alcance y de su trazabilidad conceptual en esta ficha, sin acreditar presupuesto aprobado, incorporación mensual ni beneficio medido.
+
+El cierre de la trazabilidad económica de innovación 5 requiere: estimaciones o cotizaciones identificadas y aprobadas; desglose mensual de inversión y soporte; tratamiento sustentado del beneficio y su perspectiva; celdas del modelo vinculadas con las tres partidas; conciliación sin duplicidades con el proyecto base; y concordancia de los documentos económicos. La revisión humana y aceptación del modelo se registran con su versión y evidencias.
+
+La observación 97 permanece abierta hasta comprobar esas condiciones. Su cierre integral requiere además revisar las otras cuatro innovaciones y el efecto de la tipo 4 sobre la estructura de costos; esta ficha no acredita su valorización.
+
+
 \end{formulario}

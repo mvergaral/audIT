@@ -99,18 +99,18 @@ audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. O
 
 | Campo | Contenido |
 |---|---|
-| Problema u oportunidad | Una alerta de jornada entregada donde no hay dónde detenerse es inútil (Caso, capítulo 18, p. 43). Hay tramos sin lugar seguro para combinaciones de 45 toneladas (numeral 16.1, p. 35). 258 conductores externos no son trabajadores de la compañía (numeral 2.3, p. 6) |
-| Tecnología o práctica | Motor predictivo a bordo que cruza jornada acumulada, topografía y ventana circadiana de 02:00 a 06:00 h. Catálogo local de paradores calificados. Enclavamiento cinético de pantalla y síntesis de voz local en español |
-| Nivel de madurez | Escala de niveles de madurez tecnológica de 1 a 9. Hardware de borde, almacenamiento local, síntesis de voz y enclavamiento en nivel 8. Modelo circadiano y ontología de paradores en nivel 6 (escalamiento a nivel 7 en marcha blanca mes 16) |
-| Fuentes | International Organization for Standardization (2013, 2017, 2019). National Academies of Sciences, Engineering, and Medicine (2016). Congreso Nacional de Chile (2021), Ley N.º 21.377. Ministerio del Trabajo (2003, 2006) |
-| Dónde se inserta en la arquitectura | Capa de borde con el motor predictivo, el catálogo y la síntesis de voz. Servicio de gobernanza de paradores en la torre de control. Consulta pasiva en el portal |
-| Paquetes de la EDT | EDT 12.5, sobre los paquetes 4.1 (Firmware y software a bordo) y 5.1 (Personas y cumplimiento), articulado con 2.4 (Diseño ergonómico), 3.7 (Catálogo de paradores), 4.6 (Enclavamiento cinético) y 7.2 (Validación en marcha blanca) |
-| Mes del cronograma | Talleres ergonómicos en el mes 4. Catálogo entre los meses 3 y 6. Software entre los meses 7 y 10. Validación con conductores entre los meses 13 y 15 |
-| Inversión requerida | Software de borde incremental y talleres ergonómicos participativos. El catálogo se levanta dentro de la campaña de cobertura |
-| Efecto en el costo operacional | Menor búsqueda errática de estacionamiento en ruta, con un efecto en combustible que se mide en la Etapa 1 |
-| Beneficio esperado | Menor riesgo de siniestros graves por microsueño y supresión de multas por la Ley N.º 21.377 y el artículo 25 bis. Reflejado en mitigación de contingencias patrimoniales y ahorros de seguros |
-| Indicador, línea base y meta | Alertas con parador calificado, de 0 a 98 % o más. Bloqueo cinético del 100 %. NASA-TLX con guantes bajo 35 puntos y adherencia voluntaria de 85 % o más, con línea base medida en la Etapa 1 |
-| Momento de medición | Mensual en la marcha blanca, antes del mes 16 |
-| Riesgo de adopción | Que los 258 conductores externos lo perciban como vigilancia patronal encubierta, probabilidad media a alta e impacto alto |
-| Mitigación | Diseño ergonómico participativo en horario de relevo en los cinco terminales y orientación al bienestar |
-| Contingencia | Notificación solo acústica por el altavoz del vehículo, sin teléfonos personales ni botones adicionales en cabina |
+| Problema u oportunidad | Una alerta de jornada donde no existe parada segura no resuelve el descanso. La propuesta vincula jornada, topografía y bienestar de conductores propios y externos. |
+| Tecnología o práctica | audIT EdgeHub, software definido en S1 §1.1.3, sobre iWave G26I; motor predictivo circadiano, catálogo local, bloqueo de interacción en marcha y voz local. 182 equipos previstos; 192 terceros con GPS conservan dispositivos y requieren datos autorizados. La transferencia, instalación, activación y reinicio de firmware del iWave G26I se limitan al vehículo detenido en terminal autorizado y a su ventana de mantenimiento; se distinguen de las actualizaciones del catálogo. CP-SYS-20 y CP-HW-09 verifican rechazo fuera de esa condición y recuperación A/B. |
+| Nivel de madurez | TRL 6 declarado para el modelo y ontología; objetivo TRL 7 tras piloto M13–M15, sujeto a expediente. Componentes comerciales no acreditan madurez global. |
+| Fuentes | ISO 16290:2013; ISO 15005:2017; ISO 9241-210:2019; bases FEP01 Art.29, FEP02 RT-26.05 y Caso 10. |
+| Dónde se inserta en la arquitectura | Borde en iWave G26I con audIT EdgeHub, lectura Technoton CANCrocodile, servicio de gobernanza de paradores y consulta en portal. S1 §1.1.3 y S4 §4.2.2. |
+| Paquetes de la EDT | 12.5, con apoyo de 4.1 y 5.1; sin asignar talleres o catálogo a paquetes ajenos. |
+| Mes del cronograma | Catálogo M3–M6; talleres desde M4; software M4–M9; integración M6–M10; piloto M13–M15 en equipos ya instalados. |
+| Inversión requerida | Motor, integración, catálogo, talleres y piloto: innovacion-5-inversion. Solo alcance incremental; equipos base y recorridos compartidos se concilian sin duplicidades. |
+| Efecto en el costo operacional | Actualización y soporte: innovacion-5-costo, consolidado M16–M56; transición M16–M20 separada de operación contractual M21–M56. |
+| Beneficio esperado | innovacion-5-beneficio: beneficio bruto monetizable del mandante con medición, cobertura y adopción justificadas. No es ingreso de audIT; riesgos sin evidencia se evalúan cualitativamente. |
+| Indicador, línea base y meta | Parada segura oportuna \(\ge\)98 %; cero interacción táctil en marcha; NASA-TLX <35 puntos; adherencia voluntaria \(\ge\)85 %. Líneas base medidas en Etapa 1; no se declaran resultados previos. |
+| Momento de medición | M13–M15 y seguimiento desde M16, con muestras autorizadas y versión de protocolos. |
+| Riesgo de adopción | Percepción de vigilancia patronal por conductores externos; probabilidad media a alta, impacto alto. |
+| Mitigación | Diseño ergonómico participativo y orientación al bienestar en los cinco terminales. |
+| Contingencia | Notificación acústica sin teléfonos personales ni botones adicionales; conservar bloqueo de interacción en marcha. |

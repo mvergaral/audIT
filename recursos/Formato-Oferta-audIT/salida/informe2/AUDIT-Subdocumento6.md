@@ -64,7 +64,7 @@ La gestión de adquisiciones se estructura para mitigar riesgos de desabastecimi
 
 ### 6.1.4 Comités de gobernanza, cadencias y mecanismos de decisión
 
-El control directivo y operacional del contrato se estructura en estricto apego al marco de gobernanza mandatado por las bases de licitación (FEP01, Artículo 71, p. 37). La interacción formal entre audIT y Transportes Curimón S.A. se canaliza a través de las cinco instancias que se detallan en la Tabla 6.1.4.
+El control directivo y operacional del contrato se estructura en estricto apego al marco de gobernanza mandatado por las bases de licitación (FEP01, Artículo 71, p. 37). La interacción formal entre audIT y Transportes Curimón S.A. se canaliza a través de las cinco instancias que se detallan en la Tabla 6.1.
 
 **Tabla 6.1.** Instancias formales de gobernanza, participantes y cadencias
 
@@ -76,9 +76,9 @@ El control directivo y operacional del contrato se estructura en estricto apego 
 | Comité de Operación | Mensual (desde M13) | Líder de Operación, Jefatura de Mesa de Ayuda, Contraparte Técnica de Curimón. | Verificación del cumplimiento de acuerdos SLA, gestión de problemas recurrentes, indicadores de marcha blanca y mejora continua. |
 | Reunión de Seguimiento | Semanal | Equipos de ingeniería y especialistas de ambas partes. | Coordinación táctica operativa, revisión de impedimentos inmediatos y compromisos semanales de avance. |
 
-Las instancias descritas en la Tabla 6.1.4 garantizan que toda discrepancia técnica u operativa se resuelva en el nivel adecuado con plazos acotados, evitando que imprevistos de ingeniería escalen indebidamente a controversias contractuales. El escalamiento operacional transita de forma expedita desde la Reunión Semanal al Comité de Proyecto ante desviaciones operativas, elevándose al Comité Ejecutivo exclusivamente cuando existe impacto en el alcance, presupuesto o nivel de servicio convenido.
+Las instancias descritas en la Tabla 6.1 garantizan que toda discrepancia técnica u operativa se resuelva en el nivel adecuado con plazos acotados, evitando que imprevistos de ingeniería escalen indebidamente a controversias contractuales. El escalamiento operacional transita de forma expedita desde la Reunión Semanal al Comité de Proyecto ante desviaciones operativas, elevándose al Comité Ejecutivo exclusivamente cuando existe impacto en el alcance, presupuesto o nivel de servicio convenido.
 
-Cuando surge una contingencia o solicitud de cambio que modifique el alcance o los plazos acordados, esta debe tramitarse obligatoriamente mediante el procedimiento de control de cambios regido por el Artículo 72° de las Bases Administrativas (FEP01, Artículo 72, p. 38). La secuencia de este proceso se detalla en la Tabla 6.1.4.
+Cuando surge una contingencia o solicitud de cambio que modifique el alcance o los plazos acordados, esta debe tramitarse obligatoriamente mediante el procedimiento de control de cambios regido por el Artículo 72° de las Bases Administrativas (FEP01, Artículo 72, p. 38). La secuencia de este proceso se detalla en la Tabla 6.2.
 
 **Tabla 6.2.** Procedimiento formal de gestión y control de cambios contractuales
 
@@ -90,7 +90,7 @@ Cuando surge una contingencia o solicitud de cambio que modifique el alcance o l
 | 4. Decisión | Aprobación o rechazo formal en acta. | Comité Ejecutivo (unanimidad de representantes). | Aprobación expresa previa a cualquier ejecución física o lógica. Límite acumulado del 20 %. |
 | 5. Ejecución | Actualización de línea base y despliegue controlado. | Equipos de ingeniería y PMO. | Incorporación a sprint de desarrollo o ventana de mantenimiento programada. |
 
-Conforme se establece en la Tabla 6.1.4, la ejecución de cualquier alteración sin la debida aprobación previa en acta del Comité Ejecutivo carecerá de validez contractual y no dará derecho a indemnización (FEP01, Artículo 72.5, p. 38). Si se suscitaren controversias no resueltas en sede del Comité Ejecutivo en un plazo de treinta días corridos, operarán los mecanismos de mediación y arbitraje de derecho ante el Centro de Arbitraje y Mediación de Santiago (FEP01, Artículo 87, p. 45).
+Conforme se establece en la Tabla 6.2, la ejecución de cualquier alteración sin la debida aprobación previa en acta del Comité Ejecutivo carecerá de validez contractual y no dará derecho a indemnización (FEP01, Artículo 72.5, p. 38). Si se suscitaren controversias no resueltas en sede del Comité Ejecutivo en un plazo de treinta días corridos, operarán los mecanismos de mediación y arbitraje de derecho ante el Centro de Arbitraje y Mediación de Santiago (FEP01, Artículo 87, p. 45).
 
 > **Compromiso C-01.** audIT formalizará las decisiones y acuerdos de cada sesión de comité en un plazo máximo de veinticuatro horas hábiles en el espacio colaborativo digital.
 >
@@ -125,7 +125,7 @@ El pipeline de entrega continua se ejecuta automáticamente ante cada evento de 
 
 Fuente: Elaboración propia.
 
-Como se representa en la Figura 6.2, ninguna versión de software puede alcanzar el ambiente de producción sin superar secuencialmente las seis etapas del pipeline. En la Tabla 6.2.2 se definen los umbrales bloqueantes parametrizados para garantizar la integridad y seguridad del software.
+Como se representa en la Figura 6.2, ninguna versión de software puede alcanzar el ambiente de producción sin superar secuencialmente las seis etapas del pipeline. En la Tabla 6.3 se definen los umbrales bloqueantes parametrizados para garantizar la integridad y seguridad del software.
 
 **Tabla 6.3.** Umbrales y políticas de calidad bloqueantes en el pipeline DevSecOps
 
@@ -138,7 +138,7 @@ Como se representa en la Figura 6.2, ninguna versión de software puede alcanzar
 | 5. Infraestructura | HashiCorp Terraform | Drift y seguridad IaC | Ejecución de `tfsec` y `checkov`. Cero configuraciones inseguras en templates de Azure. |
 | 6. Análisis dinámico | OWASP ZAP | Vulnerabilidades web | Cobertura OWASP ASVS 4.0 Nivel 2 (FEP01, Artículo 4.3, p. 5). Cero hallazgos en Top 10 web y API. |
 
-Los parámetros descritos en la Tabla 6.2.2 actúan como barreras determinísticas automatizadas. La detección de un solo fallo en cualquiera de estos umbrales aborta inmediatamente el pipeline de despliegue, notificando al equipo responsable a través de los canales de ingeniería sin intervención manual.
+Los parámetros descritos en la Tabla 6.3 actúan como barreras determinísticas automatizadas. La detección de un solo fallo en cualquiera de estos umbrales aborta inmediatamente el pipeline de despliegue, notificando al equipo responsable a través de los canales de ingeniería sin intervención manual.
 
 ### 6.2.3 Infraestructura como código y gestión de configuración
 
@@ -154,7 +154,7 @@ El trabajo colaborativo del equipo de desarrollo se organiza en torno a un flujo
 - **Rama `develop`:** Rama de integración continua donde convergen las nuevas funcionalidades validadas mediante pruebas unitarias.
 - **Ramas temáticas (`feature/*`, `bugfix/*`, `hotfix/*`):** Ramas de trabajo de corta duración, sujetas obligatoriamente a revisión por pares (Peer Review) mediante Merge Requests.
 
-Para garantizar un estándar riguroso de completitud en cada entrega de software, se establecen las matrices de Definition of Ready (DoR) y Definition of Done (DoD) que se detallan en la Tabla 6.2.4.
+Para garantizar un estándar riguroso de completitud en cada entrega de software, se establecen las matrices de Definition of Ready (DoR) y Definition of Done (DoD) que se detallan en la Tabla 6.4.
 
 **Tabla 6.4.** Criterios formales de salida: Definición de Preparado y Definición de Terminado
 
@@ -164,7 +164,7 @@ Para garantizar un estándar riguroso de completitud en cada entrega de software
 | Revisión por Pares | Merge Request (MR) en GitLab | Aprobación obligatoria de al menos un revisor senior. Verificación de adherencia a guías de estilo, comentarios arquitectónicos y ausencia de duplicidad de código. |
 | Definición de Terminado (DoD) | Incremento de Software / Release Candidate | Código fusionado en rama objetivo. Cobertura $Mayor o igual al 80 %$. Quality Gate SonarQube superado. Contenedor firmado con Cosign y registrado en Azure Container Registry con SBOM. Documentación OpenAPI actualizada. Despliegue exitoso en staging sin regresiones operativas. |
 
-La aplicación de los criterios de la Tabla 6.2.4 asegura que cada módulo tecnológico entregado a Transportes Curimón cumpla con los estándares industriales de mantenibilidad, solidez arquitectónica y ciberseguridad exigidos por las bases.
+La aplicación de los criterios de la Tabla 6.4 asegura que cada módulo tecnológico entregado a Transportes Curimón cumpla con los estándares industriales de mantenibilidad, solidez arquitectónica y ciberseguridad exigidos por las bases.
 
 > **Compromiso C-02.** audIT mantendrá un tiempo de despliegue continuo en ambiente de pruebas inferior a quince minutos para incrementos de software validados.
 >

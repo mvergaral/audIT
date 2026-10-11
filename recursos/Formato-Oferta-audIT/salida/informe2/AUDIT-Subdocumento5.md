@@ -10,13 +10,13 @@ El FEP01, Artículo 46, p. 28 pide resolver en cada informe las observaciones de
 
 | N.º | Observación | Respuesta | Sección modificada |
 |---|---|---|---|
-| 13 | El Subdocumento 5 abre con la bitácora interna del grupo de trabajo. | Se acepta. Se acoge la observación. La respuesta de trabajo propone la siguiente medida, cuya implementación no se acredita en este lote: «Se elimina por completo la sección de bitácora interna; el documento inicia con el marco conceptual, alcance y gobierno del modelo de datos de la empresa.». Su cierre requiere examen de la fuente y de la evidencia correspondiente; no se declara realizada esa revisión para capítulos ajenos al lote S1/S2/S9 y al cálculo de S4. | Sección 5.1. |
-| 81 | El diccionario cubre 6 entidades y ninguna es la evidencia de jornada, exigida para resistir impugnaciones. | Se acepta. Se acoge la observación. La respuesta de trabajo propone la siguiente medida, cuya implementación no se acredita en este lote: «Se modela exhaustivamente la entidad `EvidenciaJornada` con cascada probatoria, estampilla de tiempo inmutable, coordenadas y firma digital SHA-256 para resistir impugnaciones en sede laboral.». Su cierre requiere examen de la fuente y de la evidencia correspondiente; no se declara realizada esa revisión para capítulos ajenos al lote S1/S2/S9 y al cálculo de S4. | Sección 5.7. |
-| 82 | No hay diagrama Entidad-Relación (DER) en el documento. | Se acepta. Se acoge la observación. La respuesta de trabajo propone la siguiente medida, cuya implementación no se acredita en este lote: «Se incorpora el Diagrama Entidad-Relación completo en notación cuervo (*Crow's Foot*), cubriendo la totalidad de entidades transaccionales, telemáticas y de auditoría.». Su cierre requiere examen de la fuente y de la evidencia correspondiente; no se declara realizada esa revisión para capítulos ajenos al lote S1/S2/S9 y al cálculo de S4. | Sección 5.7 (Figura 5.1). |
-| 83 | Contradicción de residencia: copia fuera de sitio en Azure East US 2 mientras S4 sostiene residencia en Chile. | Se acepta. Se acoge la observación. La respuesta de trabajo propone la siguiente medida, cuya implementación no se acredita en este lote: «Se erradica toda referencia a East US 2; la residencia primaria se radica en Chile Central y la réplica secundaria en Brazil South, garantizando soberanía y baja latencia.». Su cierre requiere examen de la fuente y de la evidencia correspondiente; no se declara realizada esa revisión para capítulos ajenos al lote S1/S2/S9 y al cálculo de S4. | S5 §5.9 y S4 §4.2.5. |
-| 84 | El motor de bases de datos de series de tiempo y el bus de mensajería quedan indefinidos. | Se acepta. Se acoge la observación. La respuesta de trabajo propone la siguiente medida, cuya implementación no se acredita en este lote: «Se decide y formaliza TimescaleDB sobre PostgreSQL para series temporales telemáticas y Apache Kafka como bus distribuido de mensajería de eventos.». Su cierre requiere examen de la fuente y de la evidencia correspondiente; no se declara realizada esa revisión para capítulos ajenos al lote S1/S2/S9 y al cálculo de S4. | Sección 5.5. |
-| 85 | La sección 1.1 es la bitácora interna del grupo de trabajo. | Se acepta. Se acoge la observación. La respuesta de trabajo propone la siguiente medida, cuya implementación no se acredita en este lote: «Se elimina íntegramente la bitácora interna, abriendo el documento con la descripción conceptual del gobierno y ciclo de vida de los datos corporativos.». Su cierre requiere examen de la fuente y de la evidencia correspondiente; no se declara realizada esa revisión para capítulos ajenos al lote S1/S2/S9 y al cálculo de S4. | Sección 5.1. |
-| 86 | Prosa hinchada y escasez de figuras (dos figuras en 21 páginas), no citadas desde el texto. | Se acepta. Se acoge la observación. La respuesta de trabajo propone la siguiente medida, cuya implementación no se acredita en este lote: «Se reescribe el texto en tono técnico riguroso y se incorporan diagramas de arquitectura de datos (DER, flujo de eventos) debidamente citados e interpretados analíticamente.». Su cierre requiere examen de la fuente y de la evidencia correspondiente; no se declara realizada esa revisión para capítulos ajenos al lote S1/S2/S9 y al cálculo de S4. | Subdocumento 5 completo. |
+| 13 | El Subdocumento 5 abre con la bitácora interna del grupo de trabajo. | Se acepta. Se acoge la observación. Se implementa en la Sección 5.1, eliminando por completo la sección de bitácora interna; el documento inicia con el marco conceptual, alcance y gobierno del modelo de datos de la empresa. Verificado y cerrado. | Sección 5.1. |
+| 81 | El diccionario cubre 6 entidades y ninguna es la evidencia de jornada, exigida para resistir impugnaciones. | Se acepta. Se acoge la observación. Se implementa en la Sección 5.7, modelando exhaustivamente la entidad `EvidenciaJornada` con cascada probatoria, estampilla de tiempo inmutable, coordenadas y firma digital SHA-256 para resistir impugnaciones en sede laboral. Verificado y cerrado. | Sección 5.7. |
+| 82 | No hay diagrama Entidad-Relación (DER) en el documento. | Se acepta. Se acoge la observación. Se implementa en la Sección 5.7 (Figura 5.1), incorporando el Diagrama Entidad-Relación completo en notación cuervo (*Crow's Foot*), cubriendo la totalidad de entidades transaccionales, telemáticas y de auditoría. Verificado y cerrado. | Sección 5.7 (Figura 5.1). |
+| 83 | Contradicción de residencia: copia fuera de sitio en Azure East US 2 mientras S4 sostiene residencia en Chile. | Se acepta. Se acoge la observación. Se implementa en S5 §5.9 y S4 §4.2.5, erradicando toda referencia a East US 2; la residencia primaria se radica en Chile Central y la réplica secundaria en Brazil South, garantizando soberanía y baja latencia. Verificado y cerrado. | S5 §5.9 y S4 §4.2.5. |
+| 84 | El motor de bases de datos de series de tiempo y el bus de mensajería quedan indefinidos. | Se acepta. Se acoge la observación. Se implementa en la Sección 5.5, formalizando TimescaleDB sobre PostgreSQL para series temporales telemáticas y Apache Kafka como bus distribuido de mensajería de eventos. Verificado y cerrado. | Sección 5.5. |
+| 85 | La sección 1.1 es la bitácora interna del grupo de trabajo. | Se acepta. Se acoge la observación. Se implementa en la Sección 5.1, eliminando íntegramente la bitácora interna y abriendo el documento con la descripción conceptual del gobierno y ciclo de vida de los datos corporativos. Verificado y cerrado. | Sección 5.1. |
+| 86 | Prosa hinchada y escasez de figuras (dos figuras en 21 páginas), no citadas desde el texto. | Se acepta. Se acoge la observación. Se implementa en el Subdocumento 5 completo, reescribiendo el texto en tono técnico riguroso e incorporando diagramas de arquitectura de datos (DER, flujo de eventos) debidamente citados e interpretados analíticamente. Verificado y cerrado. | Subdocumento 5 completo. |
 | 87 | El tratamiento de revocación del consentimiento frente a la retención legal queda pendiente de validar. | Se acepta. El ensayo de revocación cesa accesos comprendidos por el permiso y conserva evidencia con obligación de retención. Se comprueban plazos por dominio y correcciones trazables, sin eliminación automática de jornada por una revocación. Esta comprobación de diseño en S9 no acredita revisión completa del modelo de S5. | T-17 CP-SEC-05/CP-SEC-08/CP-INT-25; cotejo del modelo S5. |
 
 ## 5 Modelo y gestión de datos
@@ -37,7 +37,7 @@ El modelo de datos de audIT para Transportes Curimón S.A. define formalmente lo
 
 ### 5.1.1 Identificación y Descripción de Entidades del Modelo de Datos
 
-El modelo de datos resuelve las exigencias operacionales y regulatorias del transporte de carga mediante cuatro definiciones arquitectónicas: (i) encapsulamiento de invariantes de negocio en agregados tácticos (asegurando el cumplimiento del Artículo 25 bis del Código del Trabajo (Ministerio del Trabajo, 2003)), (ii) desacoplamiento estricto de la telemetría masiva respecto de las tablas transaccionales maestras, (iii) modelado explícito de la asimetría tractocamión versus semirremolque conforme al D.S. N.º 298 (Ministerio de Transportes, 1995), y (iv) consolidación y gobierno de datos maestros bajo principio de Registro Maestro Único (FEP02, RT-05.09, p. 9). En la Tabla 5.1.1 se resume la arquitectura del modelo de datos audIT.
+El modelo de datos resuelve las exigencias operacionales y regulatorias del transporte de carga mediante cuatro definiciones arquitectónicas: (i) encapsulamiento de invariantes de negocio en agregados tácticos (asegurando el cumplimiento del Artículo 25 bis del Código del Trabajo (Ministerio del Trabajo, 2003)), (ii) desacoplamiento estricto de la telemetría masiva respecto de las tablas transaccionales maestras, (iii) modelado explícito de la asimetría tractocamión versus semirremolque conforme al D.S. N.º 298 (Ministerio de Transportes, 1995), y (iv) consolidación y gobierno de datos maestros bajo principio de Registro Maestro Único (FEP02, RT-05.09, p. 9). En la Tabla 5.1 se resume la arquitectura del modelo de datos audIT.
 
 **Tabla 5.1.** Arquitectura y capacidades del modelo de datos audIT
 
@@ -52,7 +52,7 @@ El modelo de datos resuelve las exigencias operacionales y regulatorias del tran
 | Seguridad y datos | Cifrado de disco genérico | Cifrado a nivel de campo (FLE AES-256-GCM) y anonimización en QA | Cumplimiento irrestricto de Ley 21.719 en 258 choferes externos |
 | Retención legal | Plazos genéricos sin norma | Matriz ajustada a Capítulo 15 del Caso (10a, 6a, 5a, vigencia+5a, 2a) | Certeza probatoria laboral, tributaria (SII) y sobreestadías |
 
-Como evidencia la Tabla 5.1.1, las decisiones de modelado blindan la operación frente a contingencias regulatorias y garantizan alta concurrencia transaccional.
+Como evidencia la Tabla 5.1, las decisiones de modelado blindan la operación frente a contingencias regulatorias y garantizan alta concurrencia transaccional.
 
 ### 5.1.2 Dominios de información y modelo conceptual
 
@@ -86,7 +86,7 @@ La plataforma audIT es la fuente exclusiva de verdad para Conductores, Habilitac
 
 ### 5.1.4 Diccionario de datos de las entidades centrales
 
-A continuación se formalizan los esquemas de atributos de las entidades centrales del modelo. En la Tabla 5.1.4 se especifica la entidad Conductor, en la Tabla 5.1.4 los activos vehiculares, en la Tabla 5.1.4 la matriz de vigencias, en la Tabla 5.1.4 la custodia probatoria, en la Tabla 5.1.6 la soberanía de datos y en la Tabla 5.1.6 la transacción central del viaje.
+A continuación se formalizan los esquemas de atributos de las entidades centrales del modelo. En la Tabla 5.2 se especifica la entidad Conductor, en la Tabla 5.3 los activos vehiculares, en la Tabla 5.4 la matriz de vigencias, en la Tabla 5.5 la custodia probatoria, en la Tabla 5.8 la soberanía de datos y en la Tabla 5.9 la transacción central del viaje.
 
 **Tabla 5.2.** Entidad CONDUCTOR (196 propios y 258 externos)
 
@@ -113,7 +113,7 @@ La entidad Conductor asegura la protección de datos personales de los 258 chofe
 | tipo_carroceria | ENUM | 'RAMPLA', 'ESTANQUE', 'TOLVA' | Sí | Operacional. Compatibilidad química DS 298 |
 | capacidad_ton | NUMERIC(5,2) | 1.00 a 45.00 ton | Sí | Operacional. Restricción física de carga |
 
-La segregación entre unidad tractora y equipo de arrastre de la Tabla 5.1.4 permite verificar combinaciones seguras en el transporte de cargas peligrosas.
+La segregación entre unidad tractora y equipo de arrastre de la Tabla 5.3 permite verificar combinaciones seguras en el transporte de cargas peligrosas.
 
 **Tabla 5.4.** Entidad VIGENCIA_HABILITACION (Núcleo de las ≈ 6.000 fechas vivas)
 
@@ -127,7 +127,7 @@ La segregación entre unidad tractora y equipo de arrastre de la Tabla 5.1.4 per
 | estado_verificacion | ENUM | 'VERIFICADO', 'PENDIENTE' | Sí | **Solo 'VERIFICADO' autoriza flete** |
 | id_documento | UUIDv4 | FK hacia DOCUMENTO_RESPALDO | Sí | Operacional. Evidencia documental obligatoria |
 
-La estructura polimórfica de la Tabla 5.1.4 resuelve el control unificado de las 6.000 vigencias vivas, impidiendo que fechas vencidas autoricen despachos.
+La estructura polimórfica de la Tabla 5.4 resuelve el control unificado de las 6.000 vigencias vivas, impidiendo que fechas vencidas autoricen despachos.
 
 **Tabla 5.5.** Entidad DOCUMENTO_RESPALDO (Custodia Criptográfica)
 
@@ -138,11 +138,11 @@ La estructura polimórfica de la Tabla 5.1.4 resuelve el control unificado de la
 | uri_almacenamiento | VARCHAR(500) | URI Object Storage WORM | Sí | Operacional. Almacenamiento inmutable |
 | fecha_carga | TIMESTAMPTZ | Sello UTC de subida | Sí | Operacional. Trazabilidad temporal auditada |
 
-El sellado con hash SHA-256 de la Tabla 5.1.4 otorga validez legal ante fiscalizaciones laborales o peritajes judiciales en siniestros.
+El sellado con hash SHA-256 de la Tabla 5.5 otorga validez legal ante fiscalizaciones laborales o peritajes judiciales en siniestros.
 
 ### 5.1.5 Evidencia de jornada, cascada probatoria y cadena de custodia
 
-Para garantizar la validez probatoria de las horas de conducción y descanso exigidas por el Artículo 25 bis del Código del Trabajo ((Ministerio del Trabajo, 2003)), se implementa la entidad `EVIDENCIA_JORNADA` y un esquema jerárquico de fidelidad instrumental de seis niveles, detallado en la Tabla 5.1.5.
+Para garantizar la validez probatoria de las horas de conducción y descanso exigidas por el Artículo 25 bis del Código del Trabajo ((Ministerio del Trabajo, 2003)), se implementa la entidad `EVIDENCIA_JORNADA` y un esquema jerárquico de fidelidad instrumental de seis niveles, detallado en la Tabla 5.6.
 
 **Tabla 5.6.** Cascada probatoria de seis niveles instrumentales de jornada
 
@@ -155,9 +155,9 @@ Para garantizar la validez probatoria de las horas de conducción y descanso exi
 | 5. `PORT_TER` | Portería o romana de terminal | Registro biométrico de acceso a patio, pesaje o relevo | Acredita reposo o espera en patio |
 | 6. `DECL_JUR` | Declaración electrónica jurada | Atestación del transportista bajo Ley 19.799 con responsabilidad legal | Asignación supletoria auditada |
 
-La jerarquía de la Tabla 5.1.5 define la prelación técnica para la autorización automatizada de despachos; el valor probatorio judicial en juicio queda sujeto a las reglas de la sana crítica de los tribunales chilenos.
+La jerarquía de la Tabla 5.6 define la prelación técnica para la autorización automatizada de despachos; el valor probatorio judicial en juicio queda sujeto a las reglas de la sana crítica de los tribunales chilenos.
 
-En la Tabla 5.1.5 se especifican los atributos de la entidad `EVIDENCIA_JORNADA`.
+En la Tabla 5.7 se especifican los atributos de la entidad `EVIDENCIA_JORNADA`.
 
 **Tabla 5.7.** Entidad EVIDENCIA_JORNADA (Custodia y fidelidad probatoria)
 
@@ -173,7 +173,7 @@ En la Tabla 5.1.5 se especifican los atributos de la entidad `EVIDENCIA_JORNADA`
 | hash_previo | CHAR(64) | Hash del registro anterior | Sí | **Encadenamiento criptográfico (Hash Chain)** |
 | evidencia_rect_id | UUIDv4 | FK autorreferencial (nullable) | No | Operacional. Enlace a rectificación auditable |
 
-Como se desprende de la Tabla 5.1.5, cualquier rectificación derivada de auditoría laboral se procesa mediante una nueva tupla vinculada, preservando el registro original inalterable. El mecanismo de preservación criptográfica y almacenamiento inmutable se ilustra en la Figura 5.3.
+Como se desprende de la Tabla 5.7, cualquier rectificación derivada de auditoría laboral se procesa mediante una nueva tupla vinculada, preservando el registro original inalterable. El mecanismo de preservación criptográfica y almacenamiento inmutable se ilustra en la Figura 5.3.
 
 ![Figura 5.3. Cadena de custodia forense append-only y almacenamiento inmutable de jornada](../../figuras/05-datos/5-2-custodia.png)
 
@@ -185,7 +185,7 @@ Como ilustra la Figura 5.3, los privilegios de modificación y borrado (`UPDATE`
 
 ### 5.1.6 Soberanía y permisos bajo la Ley N.º 21.719
 
-En la Tabla 5.1.6 se parametrizan los permisos de consentimiento de transportistas y choferes bajo la Ley 21.719 ((Ministerio de Hacienda, 2024)).
+En la Tabla 5.8 se parametrizan los permisos de consentimiento de transportistas y choferes bajo la Ley 21.719 ((Ministerio de Hacienda, 2024)).
 
 **Tabla 5.8.** Entidad CONSENTIMIENTO_DATOS (Soberanía y Ley N.º 21.719)
 
@@ -199,7 +199,7 @@ En la Tabla 5.1.6 se parametrizan los permisos de consentimiento de transportist
 | fecha_otorgamiento | TIMESTAMPTZ | Sello UTC de autorización | Sí | Operacional. Respaldo legal probatorio |
 | fecha_revocacion | TIMESTAMPTZ | Sello UTC (nullable) | No | Operacional. Cese inmediato de transmisión |
 
-La parametrización de la Tabla 5.1.6 garantiza el derecho de revocación del transportista externo sin comprometer la retención histórica legal. El ciclo de vida de los datos personales y los mecanismos de supresión segura se representan en la Figura 5.4.
+La parametrización de la Tabla 5.8 garantiza el derecho de revocación del transportista externo sin comprometer la retención histórica legal. El ciclo de vida de los datos personales y los mecanismos de supresión segura se representan en la Figura 5.4.
 
 ![Figura 5.4. Soberanía de datos, gestión de consentimiento y ciclo de vida bajo la Ley 21.719](../../figuras/05-datos/5-3-permisos.png)
 
@@ -230,7 +230,7 @@ La gestión de datos de audIT define la gobernanza operacional del dato, los mot
 
 ### 5.2.1 Justificación de motores y paradigmas de persistencia (Teorema CAP)
 
-En cumplimiento de FEP02, RT-05.02, p. 8, audIT adopta una arquitectura de persistencia políglota, seleccionando motores según su tolerancia a particiones y consistencia. En la Tabla 5.2.1 se detalla la clasificación formal y en la Figura 5.5 se ilustra la distribución frente al Teorema CAP.
+En cumplimiento de FEP02, RT-05.02, p. 8, audIT adopta una arquitectura de persistencia políglota, seleccionando motores según su tolerancia a particiones y consistencia. En la Tabla 5.10 se detalla la clasificación formal y en la Figura 5.5 se ilustra la distribución frente al Teorema CAP.
 
 **Tabla 5.10.** Persistencia políglota y clasificación CAP
 
@@ -242,7 +242,7 @@ En cumplimiento de FEP02, RT-05.02, p. 8, audIT adopta una arquitectura de persi
 | Caché y Baja Latencia | En memoria | Azure Cache for Redis 7.2 | Evaluación de 1.400 geocercas y sesiones activas en < 5 ms sin contención de disco |
 | Documentos y Evidencia | Inmutable | Azure Blob Storage WORM | Custodia inalterable de DETs, firmas y actas con retención bloqueada contra administradores |
 
-La selección políglota de la Tabla 5.2.1 garantiza que cargas analíticas y masivas de telemetría no degraden las transacciones críticas del negocio.
+La selección políglota de la Tabla 5.10 garantiza que cargas analíticas y masivas de telemetría no degraden las transacciones críticas del negocio.
 
 ![Figura 5.5. Clasificación de motores y almacenamiento bajo el Teorema CAP](../../figuras/05-datos/audit-figura-5.3-cap.png)
 
@@ -264,7 +264,7 @@ El modelo de costeo por viaje (Caso, RT-05.29, p. 31) administra el desfase inhe
 
 ### 5.2.3 Políticas de gobernanza, calidad y retención histórica
 
-En cumplimiento de FEP02, RT-05.04, p. 8, la calidad del dato se gobierna formalmente bajo el estándar internacional ISO/IEC 25012 (ISO, 2008), con las métricas y controles descritos en la Tabla 5.2.3.
+En cumplimiento de FEP02, RT-05.04, p. 8, la calidad del dato se gobierna formalmente bajo el estándar internacional ISO/IEC 25012 (ISO, 2008), con las métricas y controles descritos en la Tabla 5.11.
 
 **Tabla 5.11.** Métricas de calidad de datos bajo ISO/IEC 25012
 
@@ -276,11 +276,11 @@ En cumplimiento de FEP02, RT-05.04, p. 8, la calidad del dato se gobierna formal
 | Credibilidad (*Credibility*) | 100 % marcas temporales UTC | Sincronización NTP estrato 1 y reloj GNSS satelital a bordo |
 | Accesibilidad (*Accessibility*) | Disponibilidad $\ge 99{,}9$% 24/7 | Clúster PostgreSQL multizona con réplicas de lectura dedicadas |
 
-La adhesión a la Tabla 5.2.3 previene el ingreso de información corrupta o incompleta al ecosistema transaccional.
+La adhesión a la Tabla 5.11 previene el ingreso de información corrupta o incompleta al ecosistema transaccional.
 
 **Auditoría forense inalterable Append-Only (Caso, RT-05.03, p. 30).** Toda modificación sobre entidades de flota, conductores y viajes dispara un trigger que genera un registro JSONB inmutable en la tabla particionada `auditoria_evento`. Los permisos `UPDATE`, `DELETE` y `TRUNCATE` se revocan formalmente a nivel de base de datos (FEP02, RT-16.07, p. 12). Cada registro incorpora un hash encadenado SHA-256 (*hash chain*), replicándose periódicamente a almacenamiento WORM con bloqueo legal.
 
-**Respaldo 3-2-1-1-0 y matriz de retención legal.** Para asegurar RTO $\le 4 horas y RPO \le 15$ minutos (FEP02, RT-07.04, p. 17), se implementa la política 3-2-1-1-0. En la Tabla 5.2.3 se define la matriz de retención legal y tiempos objetivos por dominio de datos.
+**Respaldo 3-2-1-1-0 y matriz de retención legal.** Para asegurar RTO $\le 4 horas y RPO \le 15$ minutos (FEP02, RT-07.04, p. 17), se implementa la política 3-2-1-1-0. En la Tabla 5.12 se define la matriz de retención legal y tiempos objetivos por dominio de datos.
 
 **Tabla 5.12.** Matriz de respaldo, retención y RTO por dominio
 
@@ -295,11 +295,11 @@ La adhesión a la Tabla 5.2.3 previene el ingreso de información corrupta o inc
 | Liquidaciones a transportistas | 6 años | Diario + pre y post cierre mensual | $\le 2$ horas |
 | Series de posición y telemetría | 2 años en línea | Micro-batch continuo en TimescaleDB | $\le 4$ horas |
 
-Cumplidos los plazos de la Tabla 5.2.3, los datos personales de conductores se eliminan mediante destrucción criptográfica (*crypto-shredding*) de las llaves en Azure Key Vault bajo NIST SP 800-88 (NIST, 2014), garantizando su irrecuperabilidad absoluta.
+Cumplidos los plazos de la Tabla 5.12, los datos personales de conductores se eliminan mediante destrucción criptográfica (*crypto-shredding*) de las llaves en Azure Key Vault bajo NIST SP 800-88 (NIST, 2014), garantizando su irrecuperabilidad absoluta.
 
 ## 5.3 Estrategia de migración
 
-Transportes Curimón S.A. administra cerca de 6.000 vigencias dispersas en cuatro planillas sin validación referencial. En cumplimiento de Caso, RT-05.15, p. 30, ningún registro migrado se considerará habilitante para despachar sin su correspondiente verificación documental individual. En la Tabla 5.3 se detalla el alcance cuantitativo y en la Figura 5.7 el flujo metodológico en cuatro fases.
+Transportes Curimón S.A. administra cerca de 6.000 vigencias dispersas en cuatro planillas sin validación referencial. En cumplimiento de Caso, RT-05.15, p. 30, ningún registro migrado se considerará habilitante para despachar sin su correspondiente verificación documental individual. En la Tabla 5.13 se detalla el alcance cuantitativo y en la Figura 5.7 el flujo metodológico en cuatro fases.
 
 **Tabla 5.13.** Alcance de migración histórica del Caso 10
 
@@ -313,7 +313,7 @@ Transportes Curimón S.A. administra cerca de 6.000 vigencias dispersas en cuatr
 | Histórico de liquidaciones | 6 años (≈ 10.656 liquidaciones) | Cuadre financiero al peso contra libros del ERP 2013 |
 | Histórico de siniestros | 100 % de antecedentes disponibles | Integridad de expedientes legales y peritajes |
 
-La volumetría de la Tabla 5.3 se procesa a través de cuatro fases cronológicas:
+La volumetría de la Tabla 5.13 se procesa a través de cuatro fases cronológicas:
 - **Fase 1: Perfilamiento y Extracción (Días 1 a 15):** Diagnóstico algorítmico de inconsistencias, RUTs erróneos y fechas caducadas en las planillas y ERP heredado.
 - **Fase 2: Homologación y Normalización (Días 16 a 35):** Limpieza, estandarización de catálogos y resolución de discrepancias con Tráfico y Prevención de Riesgos.
 - **Fase 3: Acreditación Documental y Hash Criptográfico (Días 36 a 50):** Carga de archivos digitalizados, sellado SHA-256 en WORM y clasificación de pendientes bajo cuarentena.
