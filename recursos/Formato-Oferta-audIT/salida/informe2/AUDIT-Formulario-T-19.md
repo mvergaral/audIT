@@ -2,18 +2,6 @@
 
 audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. Oferta Técnica, Sobre N.º 2. Informe Preparatorio 2. Archivo AUDIT-Formulario-T-19.pdf. Anexo del Subdocumento N.º 13, Innovaciones. Las fuentes están en las Referencias de ese subdocumento.
 
-## Índice detallado
-
-| Contenido | Página del PDF |
-|---|---:|
-| Ficha del documento | [3](AUDIT-Formulario-T-19.pdf#page=3) |
-| T-19 Cartera de innovaciones | [5](AUDIT-Formulario-T-19.pdf#page=5) |
-| Ficha T-19. Innovación tipo 1. Producto o servicio. Expediente verificable del transportista | [5](AUDIT-Formulario-T-19.pdf#page=5) |
-| Ficha T-19. Innovación tipo 2. Proceso. Programación dinámica de intervenciones por oportunidad de patio | [7](AUDIT-Formulario-T-19.pdf#page=7) |
-| Ficha T-19. Innovación tipo 3. Tecnológica o de arquitectura. Semirremolque conectado | [9](AUDIT-Formulario-T-19.pdf#page=9) |
-| Ficha T-19. Innovación tipo 4. Modelo de negocio o de contratación. Esquema de adhesión y propiedad del dispositivo | [10](AUDIT-Formulario-T-19.pdf#page=10) |
-| Ficha T-19. Innovación tipo 5. Experiencia de usuario, sostenibilidad o impacto social. Bienestar del conductor y descanso en parador seguro | [12](AUDIT-Formulario-T-19.pdf#page=12) |
-
 
 ## Innovación 1. Producto o servicio. Expediente verificable del transportista
 
@@ -35,25 +23,25 @@ audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. O
 | Mitigación | Primera emisión asistida en el terminal durante el enrolamiento. Entrevistas a destinatarios reales en el mes 4, antes de construir. Expediente con la jornada de los conductores que consintieron |
 | Contingencia | Emisión automática mensual a los transportistas que lo pidan, sin acción de su parte |
 
-## Innovación 2. Proceso. Programación dinámica de intervenciones por oportunidad de patio
+## Innovación 2. Proceso. Despliegue sin detener la flota **[Información requerida por dupla 3: reformular o reemplazar según la observación 89]**
 
 | Campo | Contenido |
 |---|---|
-| Problema u oportunidad | 148 unidades propias y 34 de terceros sin equipo requieren montaje durante el paso normal por terminal. La disponibilidad simultánea de unidad, autorización, kit, técnico y ventana debe coordinarse. La línea base se levanta en M6; no se atribuye un ahorro ya medido. |
-| Tecnología o práctica | Planificador determinista en Flota y activos: combina ETA y calidad de posición, autorización, compatibilidad del kit, stock, turnos, versión y ventana confirmada. Device Twins conserva configuración y Device Update distribuye paquetes a equipos homologados; las actas conservan intentos y resultados. |
-| Nivel de madurez | TRL 2 propuesto, en escala NASA de nueve niveles: concepto definido, sin prueba de concepto ejecutada. Se valida factibilidad antes del piloto de M6 y se documenta el nivel alcanzado. |
-| Fuentes | (d3_nasa_trl, ; d3_device_twins, ; d3_device_update, ) |
-| Dónde se inserta en la arquitectura | Flota y activos registra las intervenciones; Telemetría aporta actualidad y configuración; la plataforma DevSecOps construye y firma el artefacto. Manifiesto por unidad, familia, kit, versión y acta. |
-| Paquetes de la EDT | 12.2, con integración a 4.1 y 4.2; conciliación con S7 pendiente. |
-| Mes del cronograma | Piloto de 10 camiones en M6; propios M6–M9; terceros adheridos desde M7; pausa M11–M15 y continuación M16–M18. |
-| Inversión requerida | Planificador, tablero, integración, homologación del agente y kits diferenciales. No se cobra nuevamente el stock contractual de T-11. Valorización incremental y flujo de caja pendientes en la Oferta Económica. |
-| Efecto en el costo operacional | Ejecución, almacenamiento de actas y mantenimiento del planificador, separados de la conectividad ya presupuestada. |
-| Beneficio esperado | Reducción de preparación desperdiciada y visitas evitables. Se estima con cantidades y costos unitarios documentados, menos el costo incremental. Sin ahorro garantizado ni base inventada. |
-| Indicador, línea base y meta | Reducir preparación inútil al menos 20 % respecto de la línea base homologada. Validación al primer intento al menos 95 % en cohorte de 20 intervenciones elegibles. Sustitución modular en hasta 30 min, dentro de la ventana normal. Metas propuestas. |
-| Momento de medición | Línea base y contraste con planificación manual en M6; comparación por familia y terminal en M7–M9. Registro de causas, reintentos y denominadores. |
-| Riesgo de adopción | ETA incorrecta, kit o agente incompatible, escaso beneficio frente a coordinación manual y falta de adhesión o paso de terceros. Probabilidad media; impacto alto salvo beneficio insuficiente, de impacto medio. |
-| Mitigación | Calidad y actualidad de ETA, confirmación del jefe de terminal, matriz de familias, ensayo previo, paquete firmado, reversión validada y comparación trazable. |
-| Contingencia | Abortar de forma segura y reprogramar cuando la ventana se acorte; método manual homologado y versión previa sin borrar eventos. Integración lógica de terceros sin intervención física no autorizada. |
+| Problema u oportunidad | Un camión detenido no produce (Caso, capítulo 10, restricción 10, p. 24). La intervención a bordo solo ocurre en terminal, cada seis días en promedio, y el 22 % de la flota subcontratada pasa menos de una vez al mes (Caso, numeral 2.3, p. 7) |
+| Tecnología o práctica | Aprovisionamiento remoto con Azure IoT Hub Device Update y Device Twins, configuración precargada en fábrica, kits de reemplazo con arneses de acople rápido por familia de tractocamión y anticipación de llegada a terminal desde la posición de la flota |
+| Nivel de madurez | **[Información requerida por dupla 3: nivel de madurez y escala]** |
+| Fuentes | **[Información requerida por dupla 3: fuentes en APA]** |
+| Dónde se inserta en la arquitectura | Capa de borde y servicio de actualización remota. Rutina de autodiagnóstico y enrolamiento validada en la barrera de salida del terminal. **[Información requerida por dupla 3: alinear con los lectores CAN del Formulario T-11]** |
+| Paquetes de la EDT | Paquete 12.2, con los paquetes 4.1 (firmware y actualización en terminal) y 4.2 (montaje de los 182 equipos) |
+| Mes del cronograma | Piloto de 10 camiones en el mes 6. Flota propia completa al cierre del mes 9 |
+| Inversión requerida | **[Información requerida por dupla 3: partidas de inversión]** |
+| Efecto en el costo operacional | **[Información requerida por dupla 3: efecto en el costo operacional]** |
+| Beneficio esperado | Cero horas de inmovilización de flota comercialmente activa atribuible a la instalación |
+| Indicador, línea base y meta | Ritmo de 35 a 45 tractocamiones por mes. 100 % de los 148 propios al cierre del mes 8. Sustitución en terreno en menos de 30 minutos por camión |
+| Momento de medición | Mensual hasta el mes 8 |
+| Riesgo de adopción | **[Información requerida por dupla 3: riesgo de adopción, probabilidad e impacto]** |
+| Mitigación | **[Información requerida por dupla 3: estrategia de mitigación]** |
+| Contingencia | **[Información requerida por dupla 3: plan de contingencia]** |
 
 ## Innovación 3. Tecnológica o de arquitectura. Semirremolque conectado
 
@@ -64,16 +52,16 @@ audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. O
 | Nivel de madurez | Escala de niveles de madurez tecnológica de 1 a 9. Balizas y lectura en nivel 9. Inferencia del acople dentro de la verificación bloqueante de nivel 6 a nivel 7 en la marcha blanca |
 | Fuentes | International Organization for Standardization (2013). Teltonika Telematics (2026a, 2026b). Minew (2023). iWave Global (2026) |
 | Dónde se inserta en la arquitectura | Capa de borde con el G26I y el lector de portería. IoT Hub y Event Hubs en la capa de integración. Contextos Flota y activos (verificación bloqueante y kilometraje) y Telemetría y geocercas (temperatura y puerta). Consume el flujo de IoT Hub y expone el identificador del semirremolque acoplado. Sección 13.3 |
-| Paquetes de la EDT | EDT 3.4 (Instalación de Balizas BLE y Lectores de Portería) y EDT 4.4 (Integración con Verificación Bloqueante) |
-| Mes del cronograma | Instalación en la Etapa 1 al paso por terminal (meses 4 a 9), con los 44 refrigerados fuera de diciembre a abril. Activación y primera medición en marcha blanca (meses 13 a 15) |
+| Paquetes de la EDT | Paquete 12.3, con los paquetes 4.2 (instalación de balizas y lectores de portería) y 5.2 (Flota y activos) |
+| Mes del cronograma | Instalación al paso por terminal en los meses 6 a 10 y 16 a 18, fuera de la temporada de diciembre a abril. Activación y primera medición en la marcha blanca, antes del mes 16 |
 | Inversión requerida | Balizas y lectores de portería que compra el mandante (Caso, capítulo 11, p. 24) según el Formulario T-11, más la integración en tres servicios de negocio |
 | Efecto en el costo operacional | Reposición de balizas al término de su batería y tráfico celular menor dentro de los mensajes del G26I |
 | Beneficio esperado | Ningún semirremolque sale con la revisión técnica vencida. Mantención de semirremolques por kilometraje medido. Respaldo ante el cliente de la condición de la carga refrigerada |
-| Indicador, línea base y meta | Asignaciones con semirremolque propio verificado por medición, de no registrado a 95 % o más. Semirremolques propios con kilometraje medido, 100 % de los que tienen baliza. Viajes refrigerados con temperatura continua, 100 % |
+| Indicador, línea base y meta | Asignaciones con semirremolque propio verificado por medición, de no verificado al asignar a 95 % o más. Semirremolques propios con kilometraje medido, 100 % de los que tienen baliza. Viajes refrigerados con temperatura continua, 100 %. Las dos últimas líneas base se miden en la Etapa 1 |
 | Momento de medición | Marcha blanca antes del mes 16. Tercer mes de operación. Primera temporada de diciembre a abril |
 | Riesgo de adopción | Acople falso con la baliza de un semirremolque vecino, probabilidad media e impacto alto. Temperatura bajo −20 °C en el paso cordillerano. Suplantación del identificador. Batería de menor duración |
-| Mitigación | Señal estable y movimiento conjunto en los primeros minutos de marcha. Montaje a la sombra y prueba invernal. Lectura de portería como segundo control. Vigilancia del nivel de batería |
-| Contingencia | La verificación vuelve a la declaración con la lectura de portería como control. Modelo de mayor rango térmico en los semirremolques que cruzan. Reposición desde reserva del 10 %. Modelado STRIDE con mitigación criptográfica contra spoofing (RT-26.07) |
+| Mitigación | Señal estable y movimiento conjunto en los primeros minutos de marcha. Montaje a la sombra y prueba en el invierno de 2027 (meses 6 y 7). Lectura de portería como segundo control. Vigilancia del nivel de batería |
+| Contingencia | La verificación vuelve a la declaración con la lectura de portería como control. Modelo de mayor rango térmico en los semirremolques que cruzan. Reposición desde la reserva del 10 %. **[Información requerida por dupla 3: modelado de amenazas de la baliza (RT-26.07)]** |
 
 ## Innovación 4. Modelo de negocio o de contratación. Esquema de adhesión y propiedad del dispositivo
 
@@ -99,18 +87,18 @@ audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. O
 
 | Campo | Contenido |
 |---|---|
-| Problema u oportunidad | Una alerta de jornada donde no existe parada segura no resuelve el descanso. La propuesta vincula jornada, topografía y bienestar de conductores propios y externos. |
-| Tecnología o práctica | audIT EdgeHub, software definido en S1 §1.1.3, sobre iWave G26I; motor predictivo circadiano, catálogo local, bloqueo de interacción en marcha y voz local. 182 equipos previstos; 192 terceros con GPS conservan dispositivos y requieren datos autorizados. La transferencia, instalación, activación y reinicio de firmware del iWave G26I se limitan al vehículo detenido en terminal autorizado y a su ventana de mantenimiento; se distinguen de las actualizaciones del catálogo. CP-SYS-20 y CP-HW-09 verifican rechazo fuera de esa condición y recuperación A/B. |
-| Nivel de madurez | TRL 6 declarado para el modelo y ontología; objetivo TRL 7 tras piloto M13–M15, sujeto a expediente. Componentes comerciales no acreditan madurez global. |
-| Fuentes | ISO 16290:2013; ISO 15005:2017; ISO 9241-210:2019; bases FEP01 Art.29, FEP02 RT-26.05 y Caso 10. |
-| Dónde se inserta en la arquitectura | Borde en iWave G26I con audIT EdgeHub, lectura Technoton CANCrocodile, servicio de gobernanza de paradores y consulta en portal. S1 §1.1.3 y S4 §4.2.2. |
-| Paquetes de la EDT | 12.5, con apoyo de 4.1 y 5.1; sin asignar talleres o catálogo a paquetes ajenos. |
-| Mes del cronograma | Catálogo M3–M6; talleres desde M4; software M4–M9; integración M6–M10; piloto M13–M15 en equipos ya instalados. |
-| Inversión requerida | Motor, integración, catálogo, talleres y piloto: innovacion-5-inversion. Solo alcance incremental; equipos base y recorridos compartidos se concilian sin duplicidades. |
-| Efecto en el costo operacional | Actualización y soporte: innovacion-5-costo, consolidado M16–M56; transición M16–M20 separada de operación contractual M21–M56. |
-| Beneficio esperado | innovacion-5-beneficio: beneficio bruto monetizable del mandante con medición, cobertura y adopción justificadas. No es ingreso de audIT; riesgos sin evidencia se evalúan cualitativamente. |
-| Indicador, línea base y meta | Parada segura oportuna \(\ge\)98 %; cero interacción táctil en marcha; NASA-TLX <35 puntos; adherencia voluntaria \(\ge\)85 %. Líneas base medidas en Etapa 1; no se declaran resultados previos. |
-| Momento de medición | M13–M15 y seguimiento desde M16, con muestras autorizadas y versión de protocolos. |
-| Riesgo de adopción | Percepción de vigilancia patronal por conductores externos; probabilidad media a alta, impacto alto. |
-| Mitigación | Diseño ergonómico participativo y orientación al bienestar en los cinco terminales. |
-| Contingencia | Notificación acústica sin teléfonos personales ni botones adicionales; conservar bloqueo de interacción en marcha. |
+| Problema u oportunidad | Una alerta de jornada entregada donde no hay dónde detenerse es inútil (Caso, capítulo 18, p. 43). Hay tramos sin lugar seguro para combinaciones de 45 toneladas (numeral 16.1, p. 35). 258 conductores externos no son trabajadores de la compañía (numeral 2.3, p. 6) |
+| Tecnología o práctica | Motor predictivo sobre audIT EdgeHub, en el equipo a bordo, que cruza jornada acumulada, topografía y ventana circadiana de 02:00 a 06:00 h. Catálogo local de paradores calificados. Enclavamiento cinético de pantalla y síntesis de voz local en español |
+| Nivel de madurez | Escala de niveles de madurez tecnológica de 1 a 9. Hardware de borde, almacenamiento local, síntesis de voz y enclavamiento en nivel 8. Modelo circadiano y ontología de paradores en nivel 6 (escalamiento a nivel 7 en marcha blanca mes 16) |
+| Fuentes | International Organization for Standardization (2013, 2017, 2019). National Academies of Sciences, Engineering, and Medicine (2016). Congreso Nacional de Chile (2021), Ley N.º 21.377. Ministerio del Trabajo (2003, 2006) |
+| Dónde se inserta en la arquitectura | Capa de borde con el motor predictivo, el catálogo y la síntesis de voz. Servicio de gobernanza de paradores en la torre de control. Consulta pasiva en el portal |
+| Paquetes de la EDT | Paquete 12.5, con los paquetes 4.1 (firmware a bordo) y 5.1 (Personas y cumplimiento) |
+| Mes del cronograma | Talleres ergonómicos en el mes 4. Catálogo entre los meses 3 y 6. Software a bordo entre los meses 4 y 9. Validación con conductores entre los meses 13 y 15 |
+| Inversión requerida | Software de borde incremental y talleres ergonómicos participativos. El catálogo se levanta dentro de la campaña de cobertura |
+| Efecto en el costo operacional | Menor búsqueda errática de estacionamiento en ruta, con un efecto en combustible que se mide en la Etapa 1 |
+| Beneficio esperado | Menor riesgo de siniestros graves por microsueño y supresión de multas por la Ley N.º 21.377 y el artículo 25 bis. Reflejado en mitigación de contingencias patrimoniales y ahorros de seguros |
+| Indicador, línea base y meta | Alertas con parador calificado, de 0 a 98 % o más. Bloqueo cinético del 100 %. NASA-TLX con guantes bajo 35 puntos y adherencia voluntaria de 85 % o más, con línea base medida en la Etapa 1 |
+| Momento de medición | Mensual en la marcha blanca, antes del mes 16 |
+| Riesgo de adopción | Que los 258 conductores externos lo perciban como vigilancia patronal encubierta, probabilidad media a alta e impacto alto |
+| Mitigación | Diseño ergonómico participativo en horario de relevo en los cinco terminales y orientación al bienestar |
+| Contingencia | Notificación solo acústica por el altavoz del vehículo, sin teléfonos personales ni botones adicionales en cabina |

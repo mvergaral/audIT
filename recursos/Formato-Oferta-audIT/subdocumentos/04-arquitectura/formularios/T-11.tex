@@ -16,7 +16,7 @@
   cantidad = {182 más 19 de reposición},
   adquiere = CLIENTE,
   ciclo = {Longevidad de producto de 10 años declarada por el fabricante. Actualización solo en terminal. Reposición del 10 \%},
-  justificacion = {Mínimo contractual 72 h (Caso RT-03.10, p. 31); ampliación propuesta 288 h, independiente del cierre vial. Asignación 2.400 MiB = 2,52 GB decimales sobre 8 GB nominales; capacidad útil y overhead verificados en HIL. Sección 4.2.2}
+  justificacion = {Registra 288 horas sin cobertura (RT-03.10 y RT-10.05 del Caso) con 2,4 GB requeridos sobre 8 GB. Sección 4.2.2}
 }
 \componenteTOnce{
   componente = Equipo a bordo por crecimiento,
@@ -340,7 +340,7 @@
   cantidad = 2 unidades,
   adquiere = {CLIENTE, suscripción a su nombre},
   ciclo = Servicio administrado,
-  justificacion = {Perfil de 300 camiones/72 h: 71.400 paquetes con presupuesto de 25 \%; admisión teórica de 11,9 min. CP-PERF-02 mide confirmación completa por camión en hasta 20 min (Caso RT-03.13, p. 31).}
+  justificacion = {Reconexión de 300 camiones en 9,6 minutos (Caso, RT-03.13, p. 31)}
 }
 \componenteTOnce{
   componente = Bus de eventos,
@@ -350,14 +350,14 @@
   cantidad = {1 unidad de procesamiento, se ajusta con la prueba de carga},
   adquiere = {CLIENTE, suscripción a su nombre},
   ciclo = Servicio administrado,
-  justificacion = {Desacopla la llegada del procesamiento. de telemetría y eventos vehiculares asíncronos}
+  justificacion = {Desacopla la llegada del procesamiento (ADR 02, sección 4.1.6)}
 }
 \componenteTOnce{
   componente = Orquestador de contenedores,
   producto = Azure Kubernetes Service,
   caracteristicas = Nodos en las tres zonas con escalado automático,
   ubicacion = N,
-  cantidad = {Clúster AKS de 6 nodos (Standard D4s v5)},
+  cantidad = {Tamaño fijado con la prueba de carga de 1,5 × peak antes del hito H5, con escalado automático},
   adquiere = {CLIENTE, suscripción a su nombre},
   ciclo = {Versión con soporte, actualización programada},
   justificacion = {Aloja los servicios de negocio (ADR 01)}
@@ -367,7 +367,7 @@
   producto = Azure Database for PostgreSQL Flexible,
   caracteristicas = Alta disponibilidad entre zonas y réplica de lectura en Brazil South,
   ubicacion = N y N2,
-  cantidad = {Instancia Flexible Server GP (8 vCores, 32 GB RAM, 1 TB SSD en HA)},
+  cantidad = {Nivel y almacenamiento fijados con la prueba de carga antes del hito H5, sobre el modelo del Subdocumento 5},
   adquiere = {CLIENTE, suscripción a su nombre},
   ciclo = Servicio administrado,
   justificacion = {Consistencia estricta. Latencia 15 ms, máxima, retención de 5 a 10 años}
@@ -375,7 +375,7 @@
 \componenteTOnce{
   componente = Base de series de tiempo,
   producto = PostgreSQL Flexible con TimescaleDB,
-  caracteristicas = Servidor propio con réplica en Brazil South,
+  caracteristicas = {Servidor propio, TimescaleDB en edición Apache-2, con réplica en Brazil South},
   ubicacion = N y N2,
   cantidad = {1 servidor, nivel según el Subdocumento 5},
   adquiere = {CLIENTE, suscripción a su nombre},
@@ -444,27 +444,27 @@
 }
 \componenteTOnce{
   componente = Caché distribuida,
-  producto = {Azure Managed Redis (sustituto oficial Azure Cache for Redis)},
-  caracteristicas = Sesiones, vigencias y geocercas,
+  producto = Azure Managed Redis,
+  caracteristicas = {Sesiones, vigencias y geocercas, con redundancia entre zonas},
   ubicacion = N,
-  cantidad = {Nivel Enterprise B10 en alta disponibilidad multizona},
+  cantidad = {Nivel fijado con la prueba de carga antes del hito H5},
   adquiere = {CLIENTE, suscripción a su nombre},
-  ciclo = Servicio administrado,
-  justificacion = {Latencia 5 ms. Evalúa la invariante del despacho}
+  ciclo = {Servicio administrado. Reemplaza a Azure Cache for Redis, que se retira en 2027 y 2028},
+  justificacion = {Acelera la invariante del despacho sin ser su única autoridad, que queda en la base transaccional}
 }
 \componenteTOnce{
   componente = Repositorio analítico y autoservicio,
-  producto = {Azure Synapse Analytics y Microsoft Power BI Embedded},
+  producto = {Delta Lake en Azure Data Lake Storage Gen2, con capa semántica de autoservicio},
   caracteristicas = Capas cruda y depurada y de negocio,
   ubicacion = N,
-  cantidad = {Capacidad reservada DW100c y Power BI Pro},
+  cantidad = {Capacidad según la volumetría de la sección 4.1.20 y la retención de RT-05.10 del Caso},
   adquiere = {CLIENTE, suscripción a su nombre},
   ciclo = Servicio administrado,
   justificacion = {Costo por kilómetro en 24 horas (Caso, RT-05.29, p. 32). Autoservicio de RT-05.27}
 }
 % ---------------------------------------------------------------- componentes y emplazamiento (Art. 16.2)
 \componenteTOnce{
-  componente = {Despacho y asignación},
+  componente = {Planificación y tráfico},
   producto = {Servicio de audIT en AKS},
   caracteristicas = {Latencia 30 s de extremo a extremo, criticidad máxima, 96.000 viajes al año},
   ubicacion = {N, con copia local en SB},
@@ -474,7 +474,7 @@
   justificacion = {Necesita la vista completa de flota y jornada. Sin exigencia regulatoria. Requiere enlace. Costo elástico}
 }
 \componenteTOnce{
-  componente = Flota y mantenimiento,
+  componente = {Flota y activos},
   producto = {Servicio de audIT en AKS},
   caracteristicas = {Latencia 1 s, criticidad alta, 374 camiones y 210 semirremolques},
   ubicacion = N,
@@ -484,7 +484,7 @@
   justificacion = {Administración centralizada de activos. Tolera latencia de segundos}
 }
 \componenteTOnce{
-  componente = Jornada,
+  componente = {Personas y cumplimiento},
   producto = {Servicio de audIT en AKS},
   caracteristicas = {Latencia 30 s, criticidad máxima, 454 conductores},
   ubicacion = N,
@@ -494,7 +494,17 @@
   justificacion = {Validación bloqueante contra el dato consolidado. Datos personales de 258 conductores externos (Ley 21.719)}
 }
 \componenteTOnce{
-  componente = Gestión documental,
+  componente = {Telemetría y geocercas},
+  producto = {Servicio de audIT en AKS},
+  caracteristicas = {Vista única de los 374 camiones y llegada y salida en cerca de 1.400 puntos, con 8,5 eventos por segundo en promedio},
+  ubicacion = N,
+  cantidad = 1 servicio,
+  adquiere = audIT,
+  ciclo = {Mantención evolutiva del contrato},
+  justificacion = {Unifica los 182 equipos audIT y las plataformas de terceros. Absorbe con elasticidad el peak de la reconexión}
+}
+\componenteTOnce{
+  componente = {Operación de fletes},
   producto = {Servicio de audIT en AKS},
   caracteristicas = {Latencia 2 s, criticidad alta, 128.000 documentos al año},
   ubicacion = N,
@@ -504,7 +514,7 @@
   justificacion = Sellado y control de retención centralizados
 }
 \componenteTOnce{
-  componente = Tarifas y liquidación,
+  componente = {Liquidación y costeo},
   producto = {Servicio de audIT en AKS},
   caracteristicas = {Latencia 3 s, criticidad media alta, 148 liquidaciones al mes},
   ubicacion = N,
@@ -516,12 +526,12 @@
 \componenteTOnce{
   componente = Integración telemática de terceros,
   producto = {Adaptadores de audIT en AKS},
-  caracteristicas = {Dos plataformas, una sin exportación},
+  caracteristicas = {Dos plataformas de solo consulta. La tercera no permite exportar (Caso, numeral 16.1, p. 34)},
   ubicacion = N,
   cantidad = 1 servicio,
   adquiere = audIT,
   ciclo = {Mantención evolutiva del contrato},
-  justificacion = {Consume las plataformas de dos proveedores sin intervenir equipos (restricción 3)}
+  justificacion = {Consume las dos plataformas que dan acceso, sin intervenir equipos (restricción 3)}
 }
 \componenteTOnce{
   componente = Integración de telemetría de fábrica,
@@ -571,10 +581,10 @@
   cantidad = 1 servicio,
   adquiere = audIT,
   ciclo = {Mantención evolutiva del contrato},
-  justificacion = {Debe alcanzar el sistema contable heredado, que está en San Bernardo}
+  justificacion = {Debe alcanzar el sistema de gestión de transporte de 2013, que se sustituye por funciones detrás de ella, y el sistema contable, que sigue como único emisor}
 }
 \componenteTOnce{
-  componente = Sistema contable de 2013,
+  componente = {Sistema contable y de facturación},
   producto = Sistema existente,
   caracteristicas = Único emisor de documentos tributarios,
   ubicacion = SB,
@@ -626,7 +636,7 @@
 \componenteTOnce{
   componente = Búfer no volátil a bordo,
   producto = eMMC del iWave G26I,
-  caracteristicas = {Partición 64 MiB; presupuesto de 38.851.872 bytes para perfil propuesto 288 h; mínimo obligatorio 72 h. Capacidad nominal del equipo 8 GB},
+  caracteristicas = {38,4 MB para 288 horas dentro de 8 GB},
   ubicacion = DB,
   cantidad = 182,
   adquiere = CLIENTE,
