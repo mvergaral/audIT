@@ -2,8 +2,6 @@
 # Se obtienen del material del curso y se dejan en la raíz para poder reejecutar
 # el pipeline de OCR. Ver README.
 
-*.pdf
-
 # Directorio temporal del OCR (imágenes de página a 300 dpi).
 .ocr_work/
 
