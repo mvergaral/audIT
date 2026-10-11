@@ -75,3 +75,19 @@ cambió lo siguiente, sin tocar sus archivos:
    sin enlace, el viaje nuevo lo asigna la torre en el sistema central. El S8 sumó el riesgo R-28 (retorno
    satelital del documento sobre 90 s), que es el acuerdo pendiente entre D2, D3 y D4.
 
+
+## Arreglos del 11 de octubre en la noche
+
+1. **Numeración de tablas.** El commit «Todo lo de D4» borró su ajuste de los `meta.tex`. Lo repusimos con
+   uno que sirve en las dos máquinas: al cerrar cada tabla numerada mira si longtable avanzó el contador, y
+   solo si no lo hizo lo avanza desde ahí, con una marca en el `.aux` para la corrida siguiente. Su ajuste
+   lo avanzaba siempre, y con longtable 2025-10-13 contaba doble (4.2, 4.4, 4.6…). En el T-19, su gancho
+   de `fichaInnovacion` llama ahora a `\AuditAntesDeTabla`. Las líneas `\ifdefined\NumeracionTablasDthree`
+   de su innovación 2 quedan sin efecto y no hace falta tocarlas.
+2. **Innovación 2.** Se recuperó su versión del commit 71f1cd9 en el S13 y en el T-19. Cambian solo la ruta
+   de la figura, que pasa a `figuras/13-innovaciones/intervenciones.pdf` (copia sin título interno ni punto
+   y coma), y las tres citas `d3_*`, que ahora están en `referencias/referencias.bib`, porque
+   `referencias-d3.bib` solo lo carga su `compilar_d3.py`.
+3. **Generadores.** `Informe-2/D4/graficos-v2/fuente` quedó actualizado. Sus 19 figuras se generan igual
+   con el lienzo nuevo (probado). Nuestro `s4_secuencias.py` se llama ahora `s4_copias_d3.py`, para no
+   chocar con el suyo.

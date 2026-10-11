@@ -7,6 +7,7 @@ Azure y Entra salen de los paquetes oficiales de Microsoft, que se bajan una vez
 y se descomprimen en una carpeta temporal (argumento 1).
 """
 import json
+import re
 import os
 import shutil
 import sys
@@ -115,16 +116,35 @@ FLU = {
     "flu-transportista": ("Office worker", "Medium-Light/Flat/office_worker_flat_medium-light.svg"),
     "flu-cliente": ("Woman office worker", "Medium-Light/Flat/woman_office_worker_flat_medium-light.svg"),
     "flu-gerencia": ("Man office worker", "Medium-Light/Flat/man_office_worker_flat_medium-light.svg"),
+    "flu-termometro": ("Thermometer", "Flat/thermometer_flat.svg"),
+    "flu-puerta": ("Door", "Flat/door_flat.svg"),
+    "flu-copo": ("Snowflake", "Flat/snowflake_flat.svg"),
+    "flu-vibracion": ("Vibration mode", "Flat/vibration_mode_flat.svg"),
+    "flu-llave": ("Wrench", "Flat/wrench_flat.svg"),
+    "flu-foto": ("Camera", "Flat/camera_flat.svg"),
 }
 FLUENT_UI = "https://cdn.jsdelivr.net/gh/microsoft/fluentui-system-icons@main/assets/{}"
 FUI = {"fui-codigo": "Code/SVG/ic_fluent_code_24_color.svg"}
 SIMPLE = {"si-timescale": ("timescale", "#FDB515")}
+# Openclipart: todo su catálogo es de dominio público (CC0 1.0)
+OPENCLIPART = {"oc-satelite": ("275127", "satellite", "Josh «Cheeseness» Bush")}
 
 
 def bajar(url, destino):
+    if os.path.exists(destino):
+        return
     req = urllib.request.Request(url, headers={"User-Agent": "audit-graficos/1.0"})
     with urllib.request.urlopen(req) as r, open(destino, "wb") as f:
         f.write(r.read())
+
+
+def limpiar_inkscape(dest):
+    """Quita metadatos y atributos de Inkscape, que traen espacios de nombres que el
+    símbolo incrustado no declara."""
+    t = open(dest, encoding="utf-8").read()
+    t = re.sub(r"<metadata.*?</metadata>|<sodipodi:namedview.*?(/>|</sodipodi:namedview>)", "", t, flags=re.S)
+    t = re.sub(r'\s(inkscape|sodipodi|rdf|cc|dc):[\w-]+="[^"]*"', "", t)
+    open(dest, "w", encoding="utf-8").write(t)
 
 
 def main():
@@ -169,11 +189,21 @@ def main():
         url = f"https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/{slug}.svg"
         dest = os.path.join(ICONOS, k + ".svg")
         bajar(url, dest)
-        t = open(dest, encoding="utf-8").read().replace("<path ", f'<path fill="{color}" ', 1)
+        t = open(dest, encoding="utf-8").read()
+        if "fill=" not in t:
+            t = t.replace("<path ", f'<path fill="{color}" ', 1)
         open(dest, "w", encoding="utf-8").write(t)
         ficha[k] = dict(nombre=f"Simple Icons «{slug}», con el color de marca {color} que publica el proyecto",
                         url=url, autor="Proyecto Simple Icons y colaboradores",
                         licencia="CC0 1.0. La marca pertenece a su dueño")
+    for k, (n, slug, autor) in OPENCLIPART.items():
+        url = f"https://openclipart.org/download/{n}"
+        dest = os.path.join(ICONOS, k + ".svg")
+        bajar(url, dest)
+        limpiar_inkscape(dest)
+        ficha[k] = dict(nombre=f"Openclipart «{slug}» (n.º {n})", url=url,
+                        pagina=f"https://openclipart.org/detail/{n}/{slug}", autor=autor,
+                        licencia="CC0 1.0, dominio público")
     with open(os.path.join(ICONOS, "terceros.json"), "w", encoding="utf-8") as f:
         json.dump(ficha, f, ensure_ascii=False, indent=1)
     print(len(ficha), "íconos de terceros")

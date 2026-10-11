@@ -9,10 +9,12 @@ import os
 import re
 
 from lienzo import Figura, ROJO, BORDE, ancho
+import rutas
 
 C7 = "07-plan-trabajo"
-T15 = "/mnt/NuevoVol/FEP/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/formularios/T-15.tex"
-PERT_PY = "/mnt/NuevoVol/FEP/D4/lucid/d11_pert.py"
+# El S7 es de la dupla 2 (D4-108): se lee su T-15 vigente en el repositorio
+T15 = rutas.T15
+PERT_PY = os.path.join(rutas.D4, "lucid", "d11_pert.py")
 
 # Nombre corto de cada actividad, con palabras de su descripción en el T-15. La
 # descripción completa no cabe en un nodo a 10 pt; la equivalencia va en el informe.
@@ -42,7 +44,10 @@ def leer_t15():
     for m in patron.finditer(t):
         k, desc, pred = m.group(1), m.group(2), m.group(3)
         hito = re.search(r"\((H\d+)", desc)
-        filas[k] = dict(desc=desc, pred=[] if pred == "Ninguna" else [p.strip() for p in pred.split(",")],
+        # «A09 −10»: la actividad empieza 10 días hábiles antes de que termine la A09 (D4-104)
+        pred = [] if pred == "Ninguna" else [p.strip() for p in pred.split(",")]
+        filas[k] = dict(desc=desc, pred=[p.split()[0] for p in pred],
+                        desfase={p.split()[0]: p.split()[1] for p in pred if len(p.split()) > 1},
                         dur=int(m.group(4)), ES=int(m.group(5)), EF=int(m.group(6)), LS=int(m.group(7)),
                         LF=int(m.group(8)), HT=int(m.group(9)), HL=int(m.group(10)), crit=m.group(11) == "Sí",
                         hito=hito.group(1) if hito else None, linea=num[m.start()])
@@ -232,7 +237,7 @@ FIGURAS = [pert_etapa1, pert_etapa2]
 
 
 # ---------------------------------------------------------------------------- EDT y Gantt (dupla 2)
-S7TEX = "/mnt/NuevoVol/FEP/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/contenido.tex"
+S7TEX = os.path.join(rutas.D4, "respaldo-S7-2026-10-10", "subdocumentos", "07-plan-trabajo", "contenido.tex")
 
 
 def _tikz(etiqueta):

@@ -13,7 +13,7 @@ import propios  # noqa: E402
 
 uso = {}
 for svg in sorted(glob.glob(os.path.join(RAIZ, "*", "*.svg"))):
-    if "/iconos/" in svg:
+    if "/iconos/" in svg or svg.endswith("-oficio.svg"):
         continue
     fig = os.path.relpath(svg, RAIZ)[:-4]
     for k in set(re.findall(r'<symbol id="ic-([^"]+)"', open(svg, encoding="utf-8").read())):
@@ -63,6 +63,37 @@ QUE = {"pr-router": "Router 5G (RUTX50)", "pr-switch": "Switch (TSW202, FortiSwi
 for k in sorted(propios.I):
     figs = ", ".join(f"`{x.split('/')[-1]}`" for x in uso.get(k, [])) or "No se usa"
     o.append(f"| `{k}.svg` | {QUE.get(k, k)} | {figs} |")
+HW = {"hw-fortiswitch": "FortiSwitch 124F-POE, 1 U", "hw-r360": "Dell PowerEdge R360, 1 U",
+      "hw-proveedor": "Equipo de un proveedor de enlace, 1 U", "hw-patch": "Panel de conexión, 1 U",
+      "hw-bandeja-fortigate": "Dos FortiGate 90G sobre una bandeja de 1 U", "hw-fortigate": "FortiGate 90G de escritorio",
+      "hw-bandeja-grabador": "Grabador Axis S3008 Mk II sobre una bandeja de 1 U",
+      "hw-ups-rack": "APC Smart-UPS SRT3000, 2 U", "hw-bateria-rack": "Batería externa SRT96RMBP, 2 U",
+      "hw-rutx50": "Teltonika RUTX50 con sus antenas", "hw-tsw202": "Teltonika TSW202 en riel DIN",
+      "hw-karbon": "OnLogic Karbon 430, sin ventilador", "hw-ups-torre": "APC Smart-UPS SRT1000XLI, torre",
+      "hw-inyector": "Inyector PoE 802.3bt", "hw-fortiap": "FortiAP 234G de exterior",
+      "hw-minew": "Lector de portería Minew G1", "hw-g26i": "Computador vehicular iWave G26I",
+      "hw-iridium": "Módem satelital Iridium Edge", "hw-aleta": "Antena de aleta LTE y GNSS",
+      "hw-can": "Technoton CANCrocodile sobre el arnés", "hw-desfire": "Lector de tarjeta DESFire",
+      "hw-baliza": "Baliza Teltonika EYE Sensor", "hw-bateria": "Batería del camión",
+      "hw-generador": "Grupo electrógeno insonorizado Himoinsa HYW-8", "hw-tablero": "Tablero de transferencia",
+      "hw-clima": "Clima de precisión de cielo Liebert Mini-Mate2", "hw-camara": "Cámara de mini domo Axis M3215-LVE",
+      "hw-facial": "Lector facial Suprema FaceStation F2", "hw-vesda": "Detector por aspiración VESDA VLF-250",
+      "hw-cilindro": "Cilindro del agente FK-5-1-12", "hw-torre": "Torre de telefonía con antenas de panel",
+      "hw-rack": "Rack cerrado de 24 U"}
+o += ["", "## Ilustraciones de hardware", "",
+      "Vista frontal de cada equipo del T-11, dibujada en vector para esta entrega a partir de la forma",
+      "del modelo real (proporciones, puertos, luces y antenas), sin marca ni logo del fabricante",
+      "(`fuente/hardware.py`). Se buscaron imágenes en Openclipart, que es de dominio público: no trae",
+      "estos modelos y lo que trae es genérico y de estilos dispares, así que de ahí solo se tomó el",
+      "satélite (`oc-satelite.svg`, en la tabla de terceros). Las fotos de los fabricantes tienen",
+      "derechos y no se usaron.", "",
+      "Licencia: dibujo propio de esta entrega, sin elementos de terceros ni marcas. Uso libre para el",
+      "equipo audIT.", "",
+      "| Archivo | Representa | Figuras |", "|---|---|---|"]
+for ruta in sorted(glob.glob(os.path.join(RAIZ, "iconos", "hw-*.svg"))):
+    k = os.path.basename(ruta)[:-4]
+    figs = ", ".join(f"`{x.split('/')[-1]}`" for x in uso.get(k, [])) or "No se usa (queda de reserva)"
+    o.append(f"| `{k}.svg` | {HW.get(k, k)} | {figs} |")
 comp = json.load(open(os.path.join(RAIZ, "iconos", "compuestos.json"), encoding="utf-8"))
 o += ["", "## Íconos compuestos", "",
       "Cada rol es una persona de Fluent Emoji con un distintivo chico (otro emoji de Fluent o un ícono propio)",

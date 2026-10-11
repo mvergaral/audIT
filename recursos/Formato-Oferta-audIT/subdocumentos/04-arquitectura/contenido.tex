@@ -855,8 +855,9 @@ firmado, según el Subdocumento~6.
 La aceptación incluye pruebas de contratos, de carga, de reconexión, de evidencia, de permisos y de
 reversa. Activar la réplica en Brazil South con datos personales exige un mecanismo de transferencia
 documentado, y deshabilitarla sin otro sitio secundario operativo tampoco acredita un RPO de 15 minutos
-ni un RTO de 4 horas. La revisión jurídica y la conmutación probada son, juntas, condiciones para entrar
-en producción.
+ni un RTO de 4 horas. Por eso, sin ese mecanismo, los datos personales se replican en San Bernardo, que
+levanta los servicios críticos que los usan (\verSeccion{sec:4-dc-secundario}). La revisión jurídica y
+la conmutación probada son, juntas, condiciones para entrar en producción.
 
 % ----------------------------------------------------------------------------
 \subsection{Operación desconectada, reconexión y escalamiento}\label{sec:4-desconectada}
@@ -877,9 +878,10 @@ deduplicación, commit y acuse duradero. Solo el último acuse permite depurar e
 \figuraHorizontalAqui{figuras/04-arquitectura/secuencia-reconexion.pdf}{Secuencia de la reconexión, con el acuse posterior a la persistencia y la conciliación por camión}{4-reconexionsecfig}
 
 La conciliación conserva el original y la resolución de cada conflicto, y la hora de recepción no
-reemplaza la hora del evento. La prueba CP-PERF-02 debe demostrar que cada camión queda conciliado en
-20 minutos después de 72 horas sin cobertura \caso*{RT-03.13}{31}, con 300 unidades simultáneas y sin
-perder jornada ni tiempos de cliente. Que IoT Hub admita los mensajes no prueba su entrega final. Las
+reemplaza la hora del evento. La prueba CP-PERF-02 debe demostrar que cada camión, después de 72 horas
+sin cobertura, deja en 20 minutos todos sus datos transferidos, persistidos y conciliados, fotos
+incluidas \caso*{RT-03.13}{31}, con 300 unidades simultáneas y sin perder jornada ni tiempos de
+cliente. Que IoT Hub admita los mensajes no prueba su entrega final. Las
 288 horas propuestas y la capacidad del búfer de la sección~\ref{sec:4-bordo} requieren otro ensayo y no
 reemplazan esta prueba contractual. Los límites de cada tramo de la reconexión se dimensionan en la
 sección~\ref{sec:4-dimensionamiento}.
@@ -1064,9 +1066,13 @@ componentes, 24 quedan en la región primaria, en las tres zonas de Azure Chile 
 réplica de recuperación, en Brazil South. Los otros 14 están fuera de la nube: cuatro en la sala de San
 Bernardo, tres en el gabinete de cada terminal regional, cinco en el equipo a bordo de los 182 camiones,
 uno en la baliza de los semirremolques y uno en el teléfono del conductor. La propuesta cumple el
-\art{16.1}{11}, porque no es exclusivamente en nube ni exclusivamente on-premise, y la parte on-premise
-sostiene las tres funciones que \caso{RT-21.06}{34} clasifica en severidad máxima cuando cae el enlace:
-asignar un viaje, emitir un documento de transporte y recibir un evento de emergencia. El Informe~1
+\art{16.1}{11}, porque no es exclusivamente en nube ni exclusivamente on-premise. \caso{RT-21.06}{34}
+clasifica en severidad máxima todo incidente que impida asignar un viaje, emitir un documento de
+transporte o recibir un evento de emergencia. Cuando cae el enlace, la parte on-premise sostiene el
+registro de lo que ocurre, la consulta de vigencias en portería y la recepción de emergencias. La
+asignación de un viaje nuevo y la emisión del documento pasan siempre por el servicio central y el
+sistema contable, como fija la sección~4.1.26 (\verSeccion{sec:4-desconectada}), y la torre llega a
+ellos por sus enlaces de respaldo (\verSeccion{sec:4-enlaces}). El Informe~1
 declaraba 18 componentes en nube y su tabla sumaba 20 (observación 71). La cuenta actual sale de la
 lista del T-11.
 
@@ -1077,14 +1083,14 @@ críticos.
 
 \begin{tabla}{Trazabilidad de los componentes críticos del esquema de solución al nodo físico}{4-trazabilidad}{L{29mm} L{23mm} X L{38mm} L{11mm}}
 Componente & Capa lógica (4.1) & Nodo físico (4.2) & Esquema (3.3) y Formulario T-12 & T-11 \\ \midrule
-Planificación y tráfico & Servicios de negocio & AKS en tres zonas de Chile Central, con copia local en San Bernardo & Planificación y tráfico: RF-001, RF-015 y RF-028 & N y SB \\
+Planificación y tráfico & Servicios de negocio & AKS en tres zonas de Chile Central, con copia de consulta en San Bernardo & Planificación y tráfico: RF-001, RF-015 y RF-028 & N y SB \\
 Personas y cumplimiento & Servicios de negocio & AKS en tres zonas de Chile Central & Personas y cumplimiento: RF-002 a RF-005, RF-007, RF-022 y RF-027 & N \\
 Bus de telemetría & Integración y eventos & IoT Hub S1 y Event Hubs Premium en la subred de integración & Telemetría y geocercas: RF-008 y RNF-003 & N \\
 Motor transaccional & Datos & PostgreSQL Flexible con alta disponibilidad entre zonas & Datos de los seis contextos: RNF-014 & N \\
 Series de tiempo & Datos & PostgreSQL Flexible con TimescaleDB, servidor propio & Telemetría y geocercas: RF-010 y RF-021 & N \\
 Almacenamiento inmutable & Datos & Almacenamiento con redundancia de zona e inmutabilidad & Evidencia: RNF-012 y RNF-014 & N \\
 Capa anticorrupción & Integración y eventos & Pasarela en el nodo de San Bernardo & Capa anticorrupción: RF-013 y RNF-006 & SB \\
-Nodo de terminal & Servicios de negocio & Dos Karbon 430 en activo y en espera & Gabinetes de terminal: RF-001 sin enlace & GT \\
+Nodo de terminal & Servicios de negocio & Dos Karbon 430 en activo y en espera & Gabinetes de terminal: control en portería de RF-001 sin enlace & GT \\
 Búfer a bordo & Datos, versión reducida & eMMC del iWave G26I & Equipos a bordo: RF-009, RF-027 y RNF-002 & DB \\
 Réplica de recuperación & Todas & Brazil South, en espera & Todos los elementos, por RT-07.04 & N2 \\
 \end{tabla}
@@ -1290,20 +1296,30 @@ Fotos de evidencia & 8 & 2,46 MB \\
 Un camión junta cerca de 6.000 registros y 0,78~MB sin contar las fotos. Agrupados en mensajes de
 4~KB (4.096 bytes), que es la unidad con que IoT Hub cuenta su cuota \parencite{ms_iothub_cuotas}, son 192 mensajes
 por camión. La \tabref{4-reconexion} aplica eso a 300 camiones que salen a la vez de una sombra, y la
-\figref{4-reconexionfig} sigue el camino de esos mensajes.
+\figref{4-reconexionfig} sigue el camino de esos mensajes. Son estimaciones de diseño, y la prueba de los
+20 minutos sigue pendiente.
 
-\begin{tabla}{Reconexión simultánea de 300 camiones tras 72 horas}{4-reconexion}{X R{26mm} L{50mm}}
+\begin{tabla}{Estimación de la reconexión simultánea de 300 camiones tras 72 horas}{4-reconexion}{X R{28mm} L{50mm}}
 Cálculo & Resultado & Base \\ \midrule
-Mensajes por sincronizar & 57.600 & 300 camiones por 192 mensajes \\
-Tiempo con 100 envíos por segundo & 9,6 min & Límite de IoT Hub S1 \\
+Mensajes por admitir & 57.600 & 300 camiones por 192 mensajes \\
+Admisión de los mensajes en IoT Hub & 9,6 min & 100 envíos por segundo, límite de IoT Hub S1 \\
 Conexiones nuevas & 3 s & 100 por segundo \\
-Fotos en un paquete por camión & 1,5 min & 1,67 cargas por segundo por unidad, con 2 unidades \\
+Inicio de las 300 cargas de fotos & 1,5 min & 1,67 cargas por segundo por unidad, con 2 unidades \\
+Registros por persistir & 1.786.200 & 300 camiones por 5.954 registros \\
+Persistencia mínima para cumplir & 1.861 por segundo & 20 minutos con 20~\% de reserva \\
+Transferencia de 971 MB con fotos & Por medir & Enlace móvil de cada camión al salir de la sombra \\
 \end{tabla}
 \notaTabla{Fuente: elaboración propia sobre \textcite{ms_iothub_cuotas} y el Caso, numeral 14.2, p. 30.}
 
-La reconexión termina en 9,6 minutos, dentro de los 20 que fija \caso{RT-03.13}{31}. Las fotos van en
-un solo paquete por camión: con una carga por foto el mismo cálculo da 12 minutos con dos unidades y se
-come la mitad de la ventana.
+Los 9,6 minutos son lo que tarda IoT Hub en admitir los mensajes, y el minuto y medio, lo que tarda en
+iniciar las 300 cargas de fotos. Ninguno de los dos mide cuándo termina de llegar cada foto, cuándo
+queda guardado cada registro ni cuándo se concilia cada camión. La transferencia depende del enlace
+móvil de cada camión al salir de la sombra, que esta oferta no supone (sección~4.2.9), y la persistencia
+exige sostener al menos 1.861 registros por segundo en la base de series. El plazo de 20 minutos de
+\caso{RT-03.13}{31} se demuestra con la prueba CP-PERF-02 del Formulario T-17, que mide el proceso
+completo, fotos, persistencia y conciliación incluidas (\verSeccion{sec:4-desconectada}). Hasta
+ejecutarla, el cumplimiento es una estimación. Las fotos van en un solo paquete por camión: con una carga
+por foto, solo iniciar las cargas tomaría 12 minutos con dos unidades.
 
 \figuraAqui[alto=0.84]{228mm}{figuras/04-arquitectura/reconexion.pdf}{Reconexión masiva: del búfer del camión a la base de datos, con los límites de cada tramo}{4-reconexionfig}
 
@@ -1577,8 +1593,8 @@ SIM y conmutación automática, opera de $-40$ a $+75$~°C y consume menos de 18
 patio con Wi-Fi para actualizar los camiones \parencite{fortinet_fap}, y el Minew G1 lee en la portería
 las balizas de los semirremolques \parencite{minew_g1}. El gabinete suma 152~W, y la UPS APC SRT1000XLI,
 con 293~VAh \parencite{apc_srt1000}, lo sostiene 83 minutos al final de la vida de su batería. Sin enlace,
-el terminal sigue registrando salidas y llegadas, verifica la aptitud contra la copia local de vigencias
-y jornada, y actualiza los camiones con la imagen que guarda, durante las 24 horas que fija el
+el terminal sigue registrando salidas y llegadas, consulta la copia local de vigencias y jornada para
+controlar en portería los viajes ya asignados, y actualiza los camiones con la imagen que guarda, durante las 24 horas que fija el
 \art{16.4}{12}.
 
 El monitoreo de San Bernardo y de los terminales se integra a la misma plataforma de observabilidad que
@@ -1655,6 +1671,15 @@ se identifican el responsable y el destinatario y se documenta la vía que habil
 28 de la Ley N.º~21.719 \parencite{ley21719}. Si esa vía no se documenta, los datos personales no se
 replican fuera de Chile. El Subdocumento~5 trata la base de licitud, y la residencia de los datos queda
 sujeta a la aprobación del mandante que exige el \art{23}{17}.
+
+Sin esa vía, los datos personales se replican en espera a los dos servidores del nodo de San Bernardo,
+por ExpressRoute y con el mismo objetivo de 15 minutos. \transv{RT-07.04}{17} fija el RTO y el RPO para
+los servicios críticos. Si cae Chile Central, Brazil South recupera los servicios y los datos que no son
+personales, y Personas y cumplimiento y la verificación bloqueante se levantan en San Bernardo desde esa
+réplica, dentro de las 4 horas. La verificación responde desde allí con su veredicto, y los antecedentes
+personales que lo sustentan no salen de Chile. La revisión jurídica del Subdocumento~5 confirma ese
+intercambio antes del hito H5, y la prueba de carga de la Etapa~1 confirma que los dos R360 sostienen
+esa carga.
 
 La parte inferior de la figura es el otro eje. La recuperación y la continuidad son ejes separados:
 Brazil South recupera la nube si cae la región primaria, y San Bernardo, los terminales y los camiones

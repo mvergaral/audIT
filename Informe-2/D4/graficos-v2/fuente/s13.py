@@ -1,10 +1,10 @@
 """Subdocumento 13: cartera de innovaciones y semirremolque conectado (segunda vuelta)."""
-from lienzo import Figura, ancho
+from lienzo import Figura, ancho, SUBRED
 
 C13 = "13-innovaciones"
 
 INNOVACIONES = [(1, "inn-expediente", ["Expediente verificable", "del transportista"]),
-                (2, "az-deviceupdate", ["Despliegue sin detener", "la flota"]),
+                (2, "az-deviceupdate", ["Programación por", "oportunidad de patio"]),
                 (3, "pr-semirremolque", ["Semirremolque", "conectado"]),
                 (4, "flu-acuerdo", ["Esquema de adhesión y", "propiedad del dispositivo"]),
                 (5, "flu-parador", ["Bienestar del conductor y", "descanso en parador seguro"])]
@@ -31,6 +31,7 @@ def cartera():
                                     ("flu-movil", "App móvil", []),
                                     ("flu-consola", ["Vistas de", "portería y taller"], [])]),
              ("Servicios", 182, [("pr-servicio", ["Servicio de", "verificación"], [1]),
+                                 ("pr-servicio", ["Planificación", "de patio"], [2]),
                                  ("flu-candado", ["Verificación", "bloqueante"], [3]),
                                  ("flu-documento", "Consentimiento", [4]),
                                  ("flu-parador", ["Gobernanza", "de paradores"], [5])]),
@@ -51,53 +52,120 @@ def cartera():
 
 def semirremolque():
     f = Figura("semirremolque", C13, "H")
-    f.grupo(14, 20, 328, 446, "Borde")
-    f.grupo(360, 20, 128, 446, "Integración")
-    f.grupo(506, 20, 210, 446, "Servicios")
+    f.grupo(10, 10, 392, 454, "Borde")
+    f.grupo(412, 32, 106, 432, "Integración")
+    f.grupo(528, 10, 192, 454, "Servicios")
+
+    # ------------------------------------------------ en ruta: la baliza y el G26I que la lee
+    f.grupo(20, 32, 372, 260, "En ruta", rx=8)
+    g = f.equipo("hw-g26i", 84, 92, w=64)
+    f.texto(84, g[3] + 12, "iWave G26I", 10, anc="middle")
+    b = f.equipo("hw-baliza", 204, 92, w=32)
+    f.texto(204, b[3] + 12, "Baliza EYE Sensor", 10, anc="middle")
+    f.linea([(b[0], 92), (g[2], 92)])
+    f.rotulo(152, 95, "Bluetooth")
+    f.texto(146, 152, "Acople: señal estable y", 9, anc="middle")
+    f.texto(146, 162.6, "movimiento junto al camión", 9, anc="middle")
     # tractocamión con el semirremolque acoplado
-    f.nodo("pr-g26i", 84, 82, 22, "iWave G26I")
-    f.nodo("pr-baliza", 150, 82, 22, "Baliza")
-    f.linea([(139, 82), (96, 82)])
-    f.rotulo(118, 85, "Bluetooth")
-    f.linea([(84, 108), (84, 150)], flecha=None)
-    f.rotulo(84, 130, "Cabina")
-    f.linea([(150, 108), (150, 148)], flecha=None)
-    f.rotulo(150, 130, "Chasis")
-    f.icono("pr-tracto", 92, 172, 46)
-    f.icono("pr-semirremolque", 140, 172, 50)
-    f.texto(80, 212, "Tractocamión", 10, anc="middle")
-    f.texto(160, 226, "Semirremolque", 10, anc="middle")
-    for i, s in enumerate(["Temperatura", "Puerta", "Acelerómetro", "44 refrigerados", "210 + 21"]):
-        f.ficha(268, 64 + i * 19, s, w=86)
-    # portería: barrera y lector
-    f.grupo(24, 252, 308, 168, "Portería", rx=8)
-    f.nodo("pr-ble", 150, 296, 24, "Minew G1")
-    f.nodo("pr-barrera", 150, 356, 34, "Barrera")
-    f.nodo("pr-semirremolque", 262, 356, 40, ["Semirremolque", "que sale"])
-    f.linea([(262, 336), (262, 296), (162, 296)])
-    f.rotulo(214, 299, "Bluetooth")
-    # al IoT Hub por dos redes
-    f.linea([(84, 71), (84, 40), (424, 40), (424, 167)])
-    f.rotulo(250, 43, "Red celular")
-    f.linea([(138, 296), (36, 296), (36, 440), (372, 440), (372, 186), (411, 186)])
-    f.rotulo(220, 443, "Red del terminal")
-    f.nodo("az-iothub", 424, 180, 26, "IoT Hub")
-    f.linea([(424, 214), (424, 262)])
-    f.nodo("az-eventhubs", 424, 276, 26, "Event Hubs", "Reparte el evento")
-    # tres servicios
-    f.linea([(437, 276), (494, 276)], flecha=None)
-    f.linea([(494, 96), (494, 380)], flecha=None)
-    for y in (96, 236, 380):
-        f.linea([(494, y), (550, y)])
-    f.nodo("pr-servicio", 564, 96, 26, "Flota y activos")
-    f.ficha(608, 138, "Kilómetros → plan preventivo")
-    f.nodo("flu-candado", 564, 236, 26, ["Verificación", "bloqueante"])
-    f.ficha(608, 288, ["Semirremolque que sale", "= asignado"])
-    f.nodo("pr-servicio", 564, 380, 26, ["Telemetría", "y geocercas"])
-    f.linea([(577, 380), (650, 380)])
-    f.nodo("az-postgres", 664, 380, 26, ["Series", "de tiempo"])
-    f.ficha(664, 438, "Temperatura y puerta")
+    f.icono("pr-tracto", 86, 232, 64)
+    f.icono("pr-semirremolque", 166, 232, 74)
+    f.texto(74, 280, "Tractocamión", 10, anc="middle")
+    f.texto(186, 280, "Semirremolque", 10, anc="middle")
+    f.linea([(84, g[3] + 16), (84, 196)], flecha=None, grosor=0.6, saltos=False)
+    f.rotulo(84, 186, "Cabina")
+    f.linea([(204, b[3] + 16), (204, 194)], flecha=None, grosor=0.6, saltos=False)
+    f.rotulo(204, 186, "Chasis delantero")
+    # lo que trae y mide la baliza, en íconos
+    f.grupo(258, 42, 126, 242, "La baliza", rx=6)
+    datos = [("flu-termometro", "Temperatura"), ("flu-agua", "Humedad"),
+             ("flu-puerta", "Puerta"), ("flu-vibracion", "Acelerómetro"),
+             ("flu-bateria", "Batería 5 años"), ("flu-reloj", "Cada 10 s"),
+             ("flu-copo", "44 refrigerados"), ("hw-baliza", "210 + 21")]
+    for i, (ic, n) in enumerate(datos):
+        x, y = 290 + (i % 2) * 64, 80 + (i // 2) * 54
+        if ic.startswith("hw-"):
+            f.equipo(ic, x, y, w=19)
+        else:
+            f.icono(ic, x, y, 20)
+        f.texto(x, y + 23, n, 9, anc="middle")
+
+    # ------------------------------------------------ portería: el lector registra el que sale
+    f.grupo(20, 302, 372, 152, "Portería", rx=8)
+    m = f.equipo("hw-minew", 84, 362, w=44)
+    f.texto(84, m[3] + 12, "Minew G1", 10, anc="middle")
+    f.texto(84, m[3] + 23, "Lector de portería", 9, anc="middle")
+    f.nodo("pr-barrera", 200, 360, 30, "Barrera")
+    f.icono("pr-tracto", 290, 356, 46)
+    f.icono("pr-semirremolque", 346, 356, 54)
+    f.texto(330, 394, "Semirremolque que sale", 10, anc="middle")
+    f.texto(330, 405.5, "aunque el camión no", 9, anc="middle")
+    f.texto(330, 416, "tenga equipo audIT", 9, anc="middle")
+    f.linea([(346, 329), (346, 322), (84, 322), (84, m[1])])
+    f.rotulo(215, 325, "Bluetooth")
+
+    # ------------------------------------------------ integración: dos redes a IoT Hub
+    f.nodo("az-iothub", 465, 156, 26, "IoT Hub")
+    f.linea([(84, g[1]), (84, 22), (504, 22), (504, 156), (478, 156)])
+    f.rotulo(290, 25, "Red celular")
+    f.linea([(m[0], 362), (30, 362), (30, 446), (426, 446), (426, 156), (452, 156)])
+    f.rotulo(220, 449, "Red del terminal")
+    f.linea([(465, 184), (465, 282)])
+    f.nodo("az-eventhubs", 465, 296, 26, "Event Hubs", ["Reparte el", "evento"])
+
+    # ------------------------------------------------ servicios: tres usos del acople
+    filas = [(32, 128, "pr-servicio", "Flota y activos", None,
+              "flu-llave", ["Kilómetros para el", "plan preventivo"]),
+             (170, 128, "flu-candado", "Verificación", "bloqueante",
+              "pr-semirremolque", ["Sale el asignado,", "no el declarado"]),
+             (308, 146, "pr-servicio", "Telemetría", "y geocercas",
+              "si-timescale", ["Series de tiempo", "TimescaleDB"])]
+    f.linea([(478, 296), (524, 296)], flecha=None)
+    ys = [y + 46 for y, *_ in filas]
+    f.linea([(524, ys[0]), (524, ys[-1])], flecha=None)
+    for (y, h, ic, n1, n2, ic2, res), yc in zip(filas, ys):
+        f.rect(536, y, 176, h, rx=6)
+        f.linea([(524, yc), (557, yc)])
+        f.nodo(ic, 570, yc, 26, [n1, n2] if n2 else n1)
+        f.linea([(583, yc), (644, yc)])
+        f.nodo(ic2, 662, yc, 28 if ic2.startswith("si-") else 30, res[0])
+        f.texto(662, yc + 15 + 11 + 12 - 0.5, res[1], 9 if ic2.startswith("si-") else 10, anc="middle")
+    # lo que guarda la base de series de tiempo
+    yt = ys[-1] + 66
+    f.icono("flu-termometro", 646, yt, 16)
+    f.icono("flu-puerta", 668, yt, 16)
+    f.texto(657, yt + 20, "Temperatura y puerta", 9, anc="middle")
     return f.guardar()
 
 
-FIGURAS = [cartera, semirremolque]
+
+def intervenciones():
+    """Copia de la figura 13-2-intervenciones de la dupla 3 (generadores_graficos/s13_proceso.py,
+    commit f86e240), sin título interno y sin punto y coma. Todo sube 45 puntos y el lienzo se acorta
+    en lo mismo, porque el título ya no ocupa la parte de arriba."""
+    dy = 45
+    f = Figura("intervenciones", "13-innovaciones", "L", alto=473.4 - dy, ancho_pt=729.6)
+    pasos = [(122, 65, "1. Observar", "flu-ubicacion", ["ETA y paso por terminal", "Permiso y actualidad"]),
+             (365, 65, "2. Preparar", "flu-documento", ["Familia de equipo / kit", "Versión y pruebas previas"]),
+             (608, 65, "3. Programar", "pr-servicio", ["Ventana, técnico y stock", "Prioridad + plan manual"]),
+             (122, 249, "4. Autorizar", "flu-candado", ["Vehículo detenido en terminal", "Ventana y kit confirmados"]),
+             (365, 249, "5. Intervenir", "pr-g26i", ["Configurar / instalar", "Validar antes de liberar"]),
+             (608, 249, "6. Aprender", "pr-reconciliador", ["Acta y tiempos reales", "Recalibrar el próximo plan"])]
+    for x, y, t, ic, ls in pasos:
+        f.grupo(x - 105, y - dy, 210, 122, t, rx=6)
+        f.nodo(ic, x, y + 48 - dy, 28, ls)
+    for y in (126, 310):
+        f.linea([(227, y - dy), (260, y - dy)])
+        f.linea([(470, y - dy), (503, y - dy)])
+    f.linea([(608, 187 - dy), (608, 216 - dy), (122, 216 - dy), (122, 249 - dy)])
+    f.rotulo(365, 211 - dy, "Plan factible → confirmar ventana, y si no existe, reprogramar")
+    lineas = ["La instalación por unidad en terminal es obligatoria. El aporte es la planificación dinámica verificable.",
+              "Piloto: 10 unidades en M6 y flota propia de M6 a M9. Metas y línea base se miden, sin inventar resultados.",
+              "El twin conserva el estado deseado y el reportado. Eventos y actas guardan el historial de cada intervención."]
+    y0 = 405 - dy
+    f.grupo(14, y0, f.W - 28, 22 + 13 * len(lineas), None, rx=6, relleno=SUBRED)
+    for i, t in enumerate(lineas):
+        f.texto(24, y0 + 18 + i * 13, t, 9)
+    return f.guardar()
+
+
+FIGURAS = [cartera, semirremolque, intervenciones]

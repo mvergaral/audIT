@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="148.9mm" height="189.8mm" viewBox="0 0 422 538">
+<defs><marker id="fin-n" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="5.5" markerHeight="5.5" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#2B2B2B"/></marker><marker id="ini-n" viewBox="0 0 10 10" refX="0.5" refY="5" markerWidth="5.5" markerHeight="5.5" markerUnits="userSpaceOnUse" orient="auto"><path d="M10,0.8 L0,5 L10,9.2 z" fill="#2B2B2B"/></marker><marker id="fin-r" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="5.5" markerHeight="5.5" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#C0392B"/></marker><marker id="ini-r" viewBox="0 0 10 10" refX="0.5" refY="5" markerWidth="5.5" markerHeight="5.5" markerUnits="userSpaceOnUse" orient="auto"><path d="M10,0.8 L0,5 L10,9.2 z" fill="#C0392B"/></marker></defs>
+<rect x="0" y="0" width="422" height="538" fill="#FFFFFF"/>
+<g id="grupos">
+<rect x="111.00" y="8.00" width="200.00" height="34.00" rx="6" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="34.00" y="62.00" width="380.00" height="106.00" rx="8" fill="#FFFFFF" stroke="#1B4FA8" stroke-width="1.2"/>
+<path d="M34,84 L34,70 A8,8 0 0 1 42,62 L406,62 A8,8 0 0 1 414,70 L414,84 Z" fill="#1B4FA8"/>
+<rect x="34.00" y="174.00" width="380.00" height="106.00" rx="8" fill="#FFFFFF" stroke="#96600B" stroke-width="1.2"/>
+<path d="M34,196 L34,182 A8,8 0 0 1 42,174 L406,174 A8,8 0 0 1 414,182 L414,196 Z" fill="#96600B"/>
+<rect x="34.00" y="286.00" width="380.00" height="88.00" rx="8" fill="#FFFFFF" stroke="#0A6B45" stroke-width="1.2"/>
+<path d="M34,308 L34,294 A8,8 0 0 1 42,286 L406,286 A8,8 0 0 1 414,294 L414,308 Z" fill="#0A6B45"/>
+<rect x="34.00" y="380.00" width="380.00" height="70.00" rx="8" fill="#FFFFFF" stroke="#A32222" stroke-width="1.2"/>
+<path d="M34,402 L34,388 A8,8 0 0 1 42,380 L406,380 A8,8 0 0 1 414,388 L414,402 Z" fill="#A32222"/>
+<rect x="34.00" y="456.00" width="380.00" height="70.00" rx="8" fill="#FFFFFF" stroke="#5B3BB5" stroke-width="1.2"/>
+<path d="M34,478 L34,464 A8,8 0 0 1 42,456 L406,456 A8,8 0 0 1 414,464 L414,478 Z" fill="#5B3BB5"/>
+</g>
+<g id="flechas">
+<path d="M18.00,73.00 L34.00,73.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" marker-end="url(#fin-n)"/>
+<path d="M18.00,185.00 L34.00,185.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" marker-end="url(#fin-n)"/>
+<path d="M18.00,297.00 L34.00,297.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" marker-end="url(#fin-n)"/>
+<path d="M18.00,391.00 L34.00,391.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" marker-end="url(#fin-n)"/>
+<path d="M18.00,467.00 L34.00,467.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" marker-end="url(#fin-n)"/>
+<path d="M211.00,42.00 L211.00,52.00 L18.00,52.00 L18.00,467.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter"/>
+</g>
+<g id="iconos">
+<rect x="42.00" y="88.00" width="180.00" height="14.00" rx="3" fill="#E8EDF6" stroke="#1B4FA8" stroke-width="0.6"/>
+<text x="132.00" y="98.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">R-01  Reconexión masiva</text>
+<rect x="228.00" y="88.00" width="180.00" height="14.00" rx="3" fill="#E8EDF6" stroke="#1B4FA8" stroke-width="0.6"/>
+<text x="318.00" y="98.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">R-02  Falla del equipo a bordo</text>
+<rect x="42.00" y="106.00" width="180.00" height="14.00" rx="3" fill="#E8EDF6" stroke="#1B4FA8" stroke-width="0.6"/>
+<text x="132.00" y="116.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">R-03  Homologación del equipo</text>
+<rect x="228.00" y="106.00" width="180.00" height="14.00" rx="3" fill="#E8EDF6" stroke="#1B4FA8" stroke-width="0.6"/>
+<text x="318.00" y="116.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">R-04  Cobertura móvil real</text>
+<rect x="42.00" y="124.00" width="180.00" height="14.00" rx="3" fill="#E8EDF6" stroke="#1B4FA8" stroke-width="0.6"/>
+<text x="132.00" y="134.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">R-05  Crecimiento de volumetría</text>
+<rect x="228.00" y="124.00" width="180.00" height="14.00" rx="3" fill="#E8EDF6" stroke="#1B4FA8" stroke-width="0.6"/>
+<text x="318.00" y="134.00" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="middle" fill="#000000">R-06  Retiro de Redis en 2028</text>
+<rect x="42.00" y="142.00" width="180.00" height="14.00" rx="3" fill="#E8EDF6" stroke="#1B4FA8" stroke-width="0.6"/>
+<text x="132.00" y="152.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">R-07  Bloqueo por proveedor</text>
+<rect x="228.00" y="142.00" width="180.00" height="14.00" rx="3" fill="#E8EDF6" stroke="#1B4FA8" stroke-width="0.6"/>
+<text x="318.00" y="152.00" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="middle" fill="#000000">R-28  Documento satelital sobre 90 s</text>
+<rect x="42.00" y="200.00" width="180.00" height="14.00" rx="3" fill="#F4EFE7" stroke="#96600B" stroke-width="0.6"/>
+<text x="132.00" y="210.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">R-08  Plataformas sin interfaz</text>
+<rect x="228.00" y="200.00" width="180.00" height="14.00" rx="3" fill="#F4EFE7" stroke="#96600B" stroke-width="0.6"/>
+<text x="318.00" y="210.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">R-09  Telemetría de fábrica</text>
+<rect x="42.00" y="218.00" width="180.00" height="14.00" rx="3" fill="#F4EFE7" stroke="#96600B" stroke-width="0.6"/>
+<text x="132.00" y="228.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">R-10  Apagado de 2G y 3G</text>
+<rect x="228.00" y="218.00" width="180.00" height="14.00" rx="3" fill="#F4EFE7" stroke="#96600B" stroke-width="0.6"/>
+<text x="318.00" y="228.00" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="middle" fill="#000000">R-11  Adhesión bajo la meta</text>
+<rect x="42.00" y="236.00" width="180.00" height="14.00" rx="3" fill="#F4EFE7" stroke="#96600B" stroke-width="0.6"/>
+<text x="132.00" y="246.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">R-12  Contable sin interfaz</text>
+<rect x="228.00" y="236.00" width="180.00" height="14.00" rx="3" fill="#F4EFE7" stroke="#96600B" stroke-width="0.6"/>
+<text x="318.00" y="246.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">R-13  Registro electrónico de jornada</text>
+<rect x="42.00" y="254.00" width="180.00" height="14.00" rx="3" fill="#F4EFE7" stroke="#96600B" stroke-width="0.6"/>
+<text x="132.00" y="264.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">R-14  Rechazo de conductores</text>
+<rect x="228.00" y="254.00" width="180.00" height="14.00" rx="3" fill="#F4EFE7" stroke="#96600B" stroke-width="0.6"/>
+<text x="318.00" y="264.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">R-15  Contraparte del mandante</text>
+<rect x="42.00" y="312.00" width="180.00" height="14.00" rx="3" fill="#E6F0EC" stroke="#0A6B45" stroke-width="0.6"/>
+<text x="132.00" y="322.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">R-16  Inicio de la marcha blanca 1</text>
+<rect x="228.00" y="312.00" width="180.00" height="14.00" rx="3" fill="#E6F0EC" stroke="#0A6B45" stroke-width="0.6"/>
+<text x="318.00" y="322.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">R-17  Hitos H1 a H4</text>
+<rect x="42.00" y="330.00" width="180.00" height="14.00" rx="3" fill="#E6F0EC" stroke="#0A6B45" stroke-width="0.6"/>
+<text x="132.00" y="340.00" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="middle" fill="#000000">R-18  Cierre de la marcha blanca 1</text>
+<rect x="228.00" y="330.00" width="180.00" height="14.00" rx="3" fill="#E6F0EC" stroke="#0A6B45" stroke-width="0.6"/>
+<text x="318.00" y="340.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">R-19  Despliegue a bordo lento</text>
+<rect x="42.00" y="348.00" width="180.00" height="14.00" rx="3" fill="#E6F0EC" stroke="#0A6B45" stroke-width="0.6"/>
+<text x="132.00" y="358.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">R-20  Período mixto prolongado</text>
+<rect x="228.00" y="348.00" width="180.00" height="14.00" rx="3" fill="#E6F0EC" stroke="#0A6B45" stroke-width="0.6"/>
+<text x="318.00" y="358.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">R-21  Inicio en enero</text>
+<rect x="42.00" y="406.00" width="180.00" height="14.00" rx="3" fill="#F6E9E9" stroke="#A32222" stroke-width="0.6"/>
+<text x="132.00" y="416.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">R-22  Suplantación de equipos</text>
+<rect x="228.00" y="406.00" width="180.00" height="14.00" rx="3" fill="#F6E9E9" stroke="#A32222" stroke-width="0.6"/>
+<text x="318.00" y="416.00" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="middle" fill="#000000">R-23  Ataque al portal</text>
+<rect x="42.00" y="424.00" width="180.00" height="14.00" rx="3" fill="#F6E9E9" stroke="#A32222" stroke-width="0.6"/>
+<text x="132.00" y="434.00" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="middle" fill="#000000">R-24  Licitud en Brazil South</text>
+<rect x="42.00" y="482.00" width="180.00" height="14.00" rx="3" fill="#EFEBF8" stroke="#5B3BB5" stroke-width="0.6"/>
+<text x="132.00" y="492.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">R-25  Caída de la región</text>
+<rect x="228.00" y="482.00" width="180.00" height="14.00" rx="3" fill="#EFEBF8" stroke="#5B3BB5" stroke-width="0.6"/>
+<text x="318.00" y="492.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">R-26  Retraso de la réplica</text>
+<rect x="42.00" y="500.00" width="180.00" height="14.00" rx="3" fill="#EFEBF8" stroke="#5B3BB5" stroke-width="0.6"/>
+<text x="132.00" y="510.00" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="middle" fill="#000000">R-27  Bloqueo indebido</text>
+</g>
+<g id="textos">
+<text x="211.00" y="22.50" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="middle" fill="#000000">Riesgos de la solución</text>
+<text x="211.00" y="34.50" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">28 riesgos en cinco categorías</text>
+<text x="44.00" y="77.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#FFFFFF">Técnicos</text>
+<text x="90.90" y="77.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#FFFFFF">8 riesgos</text>
+<text x="44.00" y="189.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#FFFFFF">Organizacionales y de contrapartes</text>
+<text x="213.47" y="189.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#FFFFFF">8 riesgos</text>
+<text x="44.00" y="301.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#FFFFFF">Gestión del proyecto</text>
+<text x="145.82" y="301.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#FFFFFF">6 riesgos</text>
+<text x="44.00" y="395.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#FFFFFF">Ciberseguridad y datos</text>
+<text x="156.78" y="395.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#FFFFFF">3 riesgos</text>
+<text x="44.00" y="471.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#FFFFFF">Continuidad operativa</text>
+<text x="152.96" y="471.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#FFFFFF">3 riesgos</text>
+</g>
+</svg>

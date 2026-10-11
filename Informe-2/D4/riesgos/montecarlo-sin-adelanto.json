@@ -1,0 +1,52 @@
+{
+  "corridas": 10000,
+  "semilla": 2026,
+  "modo_A13": "sin",
+  "hitos": {
+    "H1": 78.4,
+    "H2": 83.9,
+    "H3": 93.6,
+    "H4": 86.2,
+    "H5": 96.2,
+    "H6": 85.8,
+    "H8": 91.8,
+    "H7": 99.1,
+    "H9": 99.5,
+    "H10": 95.5,
+    "H11": 95.5,
+    "H12": 95.5
+  },
+  "sin_reserva": {
+    "A12 en el día 226": 51.4,
+    "A22 en el día 350": 51.7
+  },
+  "percentiles_fin_A12": {
+    "50": 225.7,
+    "80": 232.3,
+    "95": 239.0
+  },
+  "percentiles_inicio_A15": {
+    "50": 240.0,
+    "80": 240.0,
+    "95": 244.8
+  },
+  "define_inicio_A12": {
+    "A08": 0.0,
+    "A09": 98.6,
+    "A10": 1.4,
+    "A11": 0.0
+  },
+  "A13_retrasa_marcha_blanca": 14.1,
+  "A13_empieza_despues_del_dia_182": 92.5,
+  "percentiles_inicio_A13": {
+    "50": 191.7,
+    "80": 198.1,
+    "95": 204.6
+  },
+  "holgura_A13_a_marcha_blanca": {
+    "5": -3.9,
+    "50": 8.3
+  },
+  "A18_define_H12": 0.0,
+  "ambas_marchas_blancas_a_tiempo": 82.3
+}
