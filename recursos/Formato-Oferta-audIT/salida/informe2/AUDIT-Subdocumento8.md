@@ -370,7 +370,7 @@ contingencia propia.
 | R-11 Adhesión bajo la meta | 59 o menos RUT de los 148 iniciales firmados, vigentes, no revocados y registrados al 31-10-2027 (M9 bajo SA-01) | El Comité Ejecutivo aprueba un plan por transportista, y quien no adhiere opera en modalidad de datos o documental con su evidencia visible | Meses 9 a 16 | Líder Funcional |
 | R-18 Cierre de la marcha blanca 1 | Una condición de cierre bajo su umbral al cierre del mes 14 | Refuerzo en el terminal afectado y, si no alcanza, extensión a costo de audIT sin mover las fechas siguientes | Meses 14 a 16 | Líder de Operación |
 | R-23 Ataque al portal | Vulnerabilidad crítica abierta o acceso anómalo | Plan de respuesta a incidentes con contención en Front Door, aviso al mandante en dos horas y remediación en siete días corridos | Inmediato | Encargado de Seguridad |
-| R-24 Licitud en Brazil South | Hito H2 sin aprobación del mandante | La réplica de datos personales a Brazil South no se activa y esos datos se replican en San Bernardo, que levanta los servicios críticos que los usan | Mes 4 | Arquitecto de Solución |
+| R-24 Licitud en Brazil South | Hito H2 sin aprobación del mandante | El Comité Ejecutivo acelera la firma de las cláusulas contractuales tipo con el proveedor de nube, y sin ellas el paso a producción espera | Mes 4 | Arquitecto de Solución |
 | R-27 Bloqueo indebido | Viaje que la prueba en paralelo habría detenido sin causa válida | La regla que lo causó sigue en paralelo hasta corregirla, y las demás bloquean desde el mes 15 | Meses 13 a 15 | Líder Funcional |
 | R-28 Documento satelital sobre 90 s | Ensayo con un retorno sobre 90 segundos o con fragmentos perdidos | Los puntos sin cobertura quedan solo con emisión anticipada y el Comité de Arquitectura revisa la decisión 06 del Subdocumento 4 y el Formulario T-11 | Desde el mes 3 | Líder de Integración |
 
@@ -379,11 +379,11 @@ contingencia propia.
 Las siete contingencias aplican mecanismos que ya están en la arquitectura o en el plan, y agregan la
 regla de cuándo se activan y quién decide.
 Seis se activan antes del mes 15, cuando todavía hay margen para corregir sin tocar la operación. La de
-R-24 tiene un costo que se declara. El Subdocumento 5 fija que, sin una vía habilitante documentada,
-los datos personales no se replican fuera de Chile. Mientras tanto se replican en espera en San Bernardo
-con el mismo objetivo de 15 minutos, y si cae Chile Central, Personas y cumplimiento y la verificación
-bloqueante se levantan allí dentro de las 4 horas (sección 4.3.2). El costo es la
-capacidad de los dos servidores de San Bernardo, que la prueba de carga de la Etapa 1 confirma.
+R-24 tiene un costo que se declara. Sin una vía habilitante documentada, los datos personales no se
+replican fuera de Chile, y San Bernardo no puede reemplazar a Brazil South porque comparte con Chile
+Central el riesgo sísmico y la red eléctrica. Por eso la vía, las cláusulas contractuales tipo del
+artículo 27 de la Ley N.º 21.719, se firma antes del hito H2, y sin ella no se entra en producción
+(sección 4.3.2).
 
 **Reservas de contingencia.**
 Las reservas de contingencia cubren riesgos identificados y están dentro de la línea base del

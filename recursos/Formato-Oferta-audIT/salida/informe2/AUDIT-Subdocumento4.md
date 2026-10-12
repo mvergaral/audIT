@@ -864,9 +864,10 @@ firmado, según el Subdocumento 6.
 La aceptación incluye pruebas de contratos, de carga, de reconexión, de evidencia, de permisos y de
 reversa. Activar la réplica en Brazil South con datos personales exige un mecanismo de transferencia
 documentado, y deshabilitarla sin otro sitio secundario operativo tampoco acredita un RPO de 15 minutos
-ni un RTO de 4 horas. Por eso, sin ese mecanismo, los datos personales se replican en San Bernardo, que
-levanta los servicios críticos que los usan (sección 4.3.2). La revisión jurídica y
-la conmutación probada son, juntas, condiciones para entrar en producción.
+ni un RTO de 4 horas. La vía prevista son las cláusulas contractuales tipo del artículo 27 de la Ley
+N.º 21.719, que el mandante firma con el proveedor de nube antes del hito H2
+(sección 4.3.2). La revisión jurídica y la conmutación probada son, juntas,
+condiciones para entrar en producción.
 
 ### 4.1.26 Operación desconectada, reconexión y escalamiento
 
@@ -1263,9 +1264,14 @@ que solo se cambia cuando el camión pasa por un terminal, cada seis días en pr
 (Caso, capítulo 10, p. 23). Mientras tanto, el búfer guarda lo registrado.
 
 FEP02, RT-08.04, p. 18 pide fuentes de poder redundantes conectadas a circuitos distintos. Los servidores
-R360 tienen dos fuentes, una en cada alimentación, y el FortiGate 90G admite un segundo adaptador, que
-se compra (Fortinet, 2026). El FortiSwitch 124F-POE y los equipos de gabinete tienen una sola
-fuente, y en ellos la redundancia la da el par: cada equipo del par va en un circuito distinto.
+R360 tienen dos fuentes, una en cada alimentación, y cada FortiGate 90G lleva su segundo adaptador, con
+un adaptador en cada circuito (Fortinet, 2026). En cada terminal, los dos Karbon 430, el router
+RUTX50 y el conmutador TSW202 reciben corriente continua desde dos fuentes de riel DIN conectadas a
+circuitos distintos, una a la UPS del gabinete y otra a un segundo circuito del tablero, unidas por un
+módulo de redundancia. Hay dos buses de este tipo, uno de 24 V para los equipos de cómputo y el router y
+otro de 48 V para el conmutador, que lo necesita para entregar PoE. El punto de acceso y el lector de
+portería se alimentan por PoE desde ese conmutador. Si falla una fuente o un circuito, la otra sostiene
+toda la carga del gabinete.
 
 ### 4.2.8 Dimensionamiento y capacidad
 
@@ -1668,14 +1674,12 @@ se identifican el responsable y el destinatario y se documenta la vía que habil
 replican fuera de Chile. El Subdocumento 5 trata la base de licitud, y la residencia de los datos queda
 sujeta a la aprobación del mandante que exige el FEP01, Artículo 23, p. 17.
 
-Sin esa vía, los datos personales se replican en espera a los dos servidores del nodo de San Bernardo,
-por ExpressRoute y con el mismo objetivo de 15 minutos. FEP02, RT-07.04, p. 17 fija el RTO y el RPO para
-los servicios críticos. Si cae Chile Central, Brazil South recupera los servicios y los datos que no son
-personales, y Personas y cumplimiento y la verificación bloqueante se levantan en San Bernardo desde esa
-réplica, dentro de las 4 horas. La verificación responde desde allí con su veredicto, y los antecedentes
-personales que lo sustentan no salen de Chile. La revisión jurídica del Subdocumento 5 confirma ese
-intercambio antes del hito H5, y la prueba de carga de la Etapa 1 confirma que los dos R360 sostienen
-esa carga.
+La vía prevista son las cláusulas contractuales tipo del artículo 27 de la Ley N.º 21.719
+(Ministerio de Hacienda, 2024), que el mandante firma con el proveedor de nube antes del hito H2. Con ellas,
+Brazil South recupera todos los datos, también los personales, con el RPO de 15 minutos y el RTO de 4
+horas de FEP02, RT-07.04, p. 17. San Bernardo no es sitio de recuperación de ningún dato, porque comparte
+con Chile Central el riesgo sísmico y la red eléctrica (FEP02, RT-07.02, p. 17). Sin las cláusulas
+firmadas no se entra en producción, como fija la sección 4.1.25.
 
 La parte inferior de la figura es el otro eje. La recuperación y la continuidad son ejes separados:
 Brazil South recupera la nube si cae la región primaria, y San Bernardo, los terminales y los camiones

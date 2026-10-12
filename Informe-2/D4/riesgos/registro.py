@@ -143,7 +143,7 @@ R = [
     ("R-24", "S", "Licitud en Brazil South",
      "La réplica de datos personales en Brazil South no cuenta con base de licitud ni con la aprobación del mandante",
      3, 4, 2, 4,
-     "Base de licitud del Subdocumento 5 y aprobación del mandante que exige el Artículo 23. Sin ellas, los datos personales se replican en San Bernardo, que levanta los servicios críticos que los usan",
+     "Base de licitud del Subdocumento 5, aprobación del mandante que exige el Artículo 23 y cláusulas contractuales tipo del artículo 27 de la Ley 21.719 firmadas antes del hito H2",
      "Arquitecto de Solución", "Mitigar", "Hito H2 sin aprobación del mandante", "Mes 4"),
     ("R-25", "O", "Caída de la región",
      "La región Azure Chile Central deja de responder por un desastre",
