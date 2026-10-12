@@ -1,0 +1,110 @@
+{
+  "fecha_declaracion": "2026-10-12",
+  "origen": "Revisión humana declarada por el responsable en la conversación; reparto por registros autorizado",
+  "bitacoras_vinculadas": {
+    "Ignacio Cuevas": "Investigacion/Persona-1/Bitacora_A6_Persona_1_Declaracion_Oficial.md",
+    "Matías Vergara": "Investigacion/Persona-8/Bitacora_A6_Persona_8_Declaracion_Oficial.md"
+  },
+  "reparto": {
+    "I": 8,
+    "M": 8
+  },
+  "registros": [
+    {
+      "subdocumento": "03-solucion",
+      "seccion": "Artículo 46, filas 01, 12 y 37 a 52",
+      "revisor": "Matías Vergara, Analista de Planificación y Calidad",
+      "alcance": "revisión de las respuestas del Artículo 46 y sus referencias a la solución y los formularios"
+    },
+    {
+      "subdocumento": "03-solucion",
+      "seccion": "Introducción y 3.1",
+      "revisor": "Ignacio Cuevas, Analista de Requerimientos",
+      "alcance": "revisión del resumen, comprensión del alcance y correspondencia de los meses contractuales"
+    },
+    {
+      "subdocumento": "03-solucion",
+      "seccion": "3.2",
+      "revisor": "Ignacio Cuevas, Analista de Requerimientos",
+      "alcance": "revisión del reparto por etapas, exclusiones, supuestos, restricciones, catálogo y criterios de aceptación"
+    },
+    {
+      "subdocumento": "03-solucion",
+      "seccion": "3.3",
+      "revisor": "Ignacio Cuevas, Analista de Requerimientos",
+      "alcance": "revisión del esquema de solución, contextos, evidencia de jornada y atributos de calidad"
+    },
+    {
+      "subdocumento": "03-solucion",
+      "seccion": "3.4",
+      "revisor": "Ignacio Cuevas, Analista de Requerimientos",
+      "alcance": "revisión del funcionamiento del viaje, adhesión, implementación, implantación y operación"
+    },
+    {
+      "subdocumento": "03-solucion",
+      "seccion": "Formulario T-12",
+      "revisor": "Matías Vergara, Analista de Planificación y Calidad",
+      "alcance": "revisión de los 42 requerimientos, campos, referencias de sección, trazabilidad y casos de prueba del T-12"
+    },
+    {
+      "subdocumento": "03-solucion",
+      "seccion": "3.4.2 y RF-014/RN-11 del T-12",
+      "revisor": "Matías Vergara, Analista de Planificación y Calidad",
+      "alcance": "revisión de la representación completa y conforme en cabina y del ensayo programado de 90 segundos en A12"
+    },
+    {
+      "subdocumento": "03-solucion",
+      "seccion": "3.4.3 y RF-026 del T-12",
+      "revisor": "Matías Vergara, Analista de Planificación y Calidad",
+      "alcance": "revisión del denominador de adhesión, umbral, corte, firmas, modalidades y separación de estados técnicos y consentimientos"
+    },
+    {
+      "subdocumento": "07-plan-trabajo",
+      "seccion": "Introducción",
+      "revisor": "Ignacio Cuevas, Analista de Requerimientos",
+      "alcance": "revisión del propósito del plan y su correspondencia con las fases y obligaciones de la oferta"
+    },
+    {
+      "subdocumento": "07-plan-trabajo",
+      "seccion": "7.2.3",
+      "revisor": "Ignacio Cuevas, Analista de Requerimientos",
+      "alcance": "revisión de la dotación, asignación por rol y cobertura durante los solapamientos"
+    },
+    {
+      "subdocumento": "07-plan-trabajo",
+      "seccion": "7.3.1",
+      "revisor": "Ignacio Cuevas, Analista de Requerimientos",
+      "alcance": "revisión de la secuencia PERT/CPM, precedencias, ruta crítica y reservas"
+    },
+    {
+      "subdocumento": "07-plan-trabajo",
+      "seccion": "Formulario T-15",
+      "revisor": "Ignacio Cuevas, Analista de Requerimientos",
+      "alcance": "revisión de la dotación, esfuerzo, estimaciones de tres puntos y malla del T-15"
+    },
+    {
+      "subdocumento": "07-plan-trabajo",
+      "seccion": "Resumen de apertura, 7.1, 7.2, 7.2.1, 7.2.2, 7.2.4 y 7.3.2 a 7.3.4",
+      "revisor": "Matías Vergara, Analista de Planificación y Calidad",
+      "alcance": "revisión de cobertura de la EDT, partición del trabajo, cronograma, implantación y correspondencia de las figuras con el plan"
+    },
+    {
+      "subdocumento": "07-plan-trabajo",
+      "seccion": "Formularios T-14 y T-18, y esfuerzo del T-15",
+      "revisor": "Matías Vergara, Analista de Planificación y Calidad",
+      "alcance": "revisión del diccionario de los 54 paquetes, secuencias de implantación, reversión y esfuerzo de T-14, T-15 y T-18"
+    },
+    {
+      "subdocumento": "07-plan-trabajo",
+      "seccion": "7.1 y 7.3.3",
+      "revisor": "Matías Vergara, Analista de Planificación y Calidad",
+      "alcance": "revisión de las vistas generales y detalles de EDT/Gantt, sus códigos, leyendas y referencias PERT"
+    },
+    {
+      "subdocumento": "07-plan-trabajo",
+      "seccion": "7.3.1, T-15 y T-18",
+      "revisor": "Matías Vergara, Analista de Planificación y Calidad",
+      "alcance": "revisión del adelanto condicionado de A13, entrega G13, holguras, duración y complemento del sprint 8 dentro de los 40 días"
+    }
+  ]
+}

@@ -830,16 +830,17 @@ conforme o el archivo completo de representación. Un folio o una huella no bast
 verificarse y reensamblarse íntegramente antes de habilitar la salida. La capacidad por mensaje no
 acredita que el documento completo pueda transmitirse en una única trama.
 
-La comprobación integral del límite de 90 segundos permanece pendiente: debe incluir solicitud,
-emisión, retorno, reensamblado, verificación y disponibilidad en cabina con el documento de mayor tamaño
-previsto, pérdidas y reintentos. Esta puerta de validación concuerda con S4 y el riesgo R-28 de S8.
+La comprobación integral del límite de 90 segundos se realiza en CP-HW-11 y CP-PERF-05
+durante la certificación A12. Incluye solicitud, emisión, retorno, reensamblado,
+verificación y disponibilidad en cabina con el documento de mayor tamaño previsto,
+pérdidas y reintentos. Esta puerta de validación concuerda con S4 y el riesgo R-28 de S8.
 Si la representación no está disponible o no es conforme, se bloquea la salida; no se considera
 validado el camino satelital por recibir solamente un folio. Los
 puntos de carga sin cobertura los identifica la caracterización en terreno de los meses 1 a 3, y la regla
 RN-06 asigna esos viajes a camiones con equipo audIT cuando los datos de la carga no se conocen antes.
 
 \decision{titulo={Documento de transporte en un punto de carga sin cobertura},
-  decide={Emisión anticipada desde la orden, o emisión por el sistema contable con datos enviados por enlace satelital y retorno de la representación completa y conforme a cabina antes del movimiento; comprobación integral de los 90 segundos pendiente},
+  decide={Emisión anticipada desde la orden, o emisión por el sistema contable con datos enviados por enlace satelital y retorno de la representación completa y conforme a cabina antes del movimiento; comprobación integral del límite de 90 segundos en CP-HW-11 y CP-PERF-05 durante A12},
   descarta={Folios preasignados al equipo a bordo o al terminal, que convierten a ese equipo en emisor},
   criterio={Restricción 8: el sistema contable es el único emisor. Ningún equipo del Formulario T-11 emite documentos},
   fuente={\caso{capítulo 10, restricción 8}{24} y decisión 9 del \caso{numeral 16.1}{35}}}

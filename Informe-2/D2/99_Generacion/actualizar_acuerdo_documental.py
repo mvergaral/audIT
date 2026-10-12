@@ -16,9 +16,11 @@ for folder,purpose in [('03-solucion','Definición común de adhesión: 148 inic
                        ('07-plan-trabajo','Precedencia A09 FS-10 de A13 y puerta G13; recálculo de holguras y actualización de PERT y gráficos; sprint 7 y complemento de sprint 8 dentro de 40 días'),
                        ('09-calidad','Ampliación de variantes RF-026 con conteo único por RUT, corte, ambas modalidades, vigencia y no revocación; instalación, activación y consentimientos separados')]:
     p=BASE/folder/'declaracion-ia.tex'
-    line=f'\\usoIA{{Conciliación de capacitación y adhesión}}{{OpenAI Codex}}{{{purpose}}}{{Alto}}{{Ninguno}}{{\\marcador{{Revisión humana y asociación a bitácora A-6 del responsable pendientes}}}}\n'
+    section={'03-solucion':'3.4.3 y RF-026 del T-12','07-plan-trabajo':'7.3.1, T-15 y T-18'}.get(folder,'Conciliación de capacitación y adhesión')
+    review='Nombre, cargo y alcance de la revisión humana' if folder in ('03-solucion','07-plan-trabajo') else 'Revisión humana y asociación a bitácora A-6 del responsable pendientes'
+    line=f'\\usoIA{{{section}}}{{OpenAI Codex}}{{{purpose}}}{{Alto}}{{Ninguno}}{{\\marcador{{{review}}}}}\n'
     text=p.read_text(encoding='utf-8')
-    if line not in text:
+    if f'\\usoIA{{{section}}}{{OpenAI Codex}}' not in text:
         p.write_text(text+'\n'+line,encoding='utf-8')
 
 p=ROOT/'Informe-2/d2/99_Generacion/generar_plan_detallado.py'

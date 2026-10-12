@@ -8,6 +8,7 @@
 %  Pruebas: identificadores del Formulario T-17 (Subdocumento 9).
 %  Paquetes: EDT del Subdocumento 7 y del Formulario T-14.
 % ============================================================================
+\input{subdocumentos/03-solucion/formularios/trazabilidad-secciones.tex}
 \begin{formulario}{T-12}
 
 \providecommand\tituloBloqueFormulario[1]{%
@@ -52,6 +53,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 % --- REQUERIMIENTOS FUNCIONALES --------------------------------------------
 \requisitoF{
   id           = RF-001,
+  seccion      = {Sección 3.3.2},
   descripcion  = {Antes de autorizar un viaje, comprobar jornada disponible y habilitaciones del conductor, y aptitud y compatibilidad del tractocamión y del semirremolque para la carga. Todo incumplimiento legal o de seguridad bloquea la asignación},
   actor        = {Despachador de la torre},
   precondicion = {Orden de transporte con conductor, tractocamión y semirremolque propuestos},
@@ -63,6 +65,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 }
 \requisitoF{
   id           = RF-002,
+  seccion      = {Sección 3.3.2},
   descripcion  = {Obtener, asociar al viaje y presentar la evidencia de jornada efectiva de los 454 conductores, propios y externos, con su fuente y su nivel en la cascada de evidencia},
   actor        = {Prevención de riesgos},
   precondicion = {Viaje programado o en curso con conductor identificado},
@@ -74,6 +77,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 }
 \requisitoF{
   id           = RF-003,
+  seccion      = {Sección 3.3.2},
   descripcion  = {Al asignar un viaje a un conductor externo, disponer de evidencia identificada y sellada de su jornada previa relevante, incluida la realizada para otros clientes en la medida que el anexo de adhesión lo autorice},
   actor        = {Despachador y transportista subcontratado},
   precondicion = {Transportista con anexo de adhesión firmado o atestación del viaje},
@@ -85,6 +89,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 }
 \requisitoF{
   id           = RF-004,
+  seccion      = {Sección 3.3.2},
   descripcion  = {Conservar la evidencia de jornada con origen, sello de tiempo, integridad verificable e historial de correcciones como registros nuevos, sin sobrescribir el original},
   actor        = {Fiscalizador, aseguradora o cliente que impugna},
   precondicion = {Evento de jornada generado por el equipo a bordo, el tacógrafo o una atestación},
@@ -96,6 +101,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 }
 \requisitoF{
   id           = RF-005,
+  seccion      = {Sección 3.2.2},
   descripcion  = {Consolidar las cerca de 6.000 vigencias de conductores y equipos en un registro único con titular, responsable de renovación, vencimiento, respaldo y efecto sobre la asignación, con alertas a 60, 30 y 7 días},
   actor        = {Prevención de riesgos y control de flota},
   precondicion = {Vigencias migradas desde las cuatro planillas con verificación documental de cada una},
@@ -107,6 +113,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 }
 \requisitoF{
   id           = RF-006,
+  seccion      = {Sección 3.4.2},
   descripcion  = {Antes de la salida de una carga peligrosa, verificar que la carga efectiva corresponda al documento emitido y vincular carga, vehículo, conductor, habilitaciones y lista de verificación firmada},
   actor        = {Conductor habilitado y prevención de riesgos},
   precondicion = {Viaje asignado a uno de los 18 camiones habilitados para sustancias peligrosas},
@@ -118,6 +125,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 }
 \requisitoF{
   id           = RF-007,
+  seccion      = {Sección 3.2.2},
   descripcion  = {Descargar la información de los tacógrafos digitales instalados, asociarla al conductor y al vehículo, conservar el archivo original con su integridad y permitir su consulta},
   actor        = {Técnico de terminal y prevención de riesgos},
   precondicion = {Camión con tacógrafo digital de paso por un terminal},
@@ -129,6 +137,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 }
 \requisitoF{
   id           = RF-008,
+  seccion      = {Sección 3.3.1},
   descripcion  = {Entregar a la torre una vista única con posición, fuente, antigüedad y nivel de evidencia de los 374 camiones, señalando los que no reportan y por qué},
   actor        = {Operador de la torre de programación},
   precondicion = {Factibilidad verificada con cada plataforma de posicionamiento},
@@ -140,6 +149,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 }
 \requisitoF{
   id           = RF-009,
+  seccion      = {Sección 3.4.2},
   descripcion  = {Cada equipo audIT registra a bordo posición, conducción, jornada, permanencias y documentos del viaje durante al menos 72 horas sin cobertura, sin pérdida, y los sincroniza al reconectar},
   actor        = {Equipo a bordo},
   precondicion = {Camión con equipo audIT en un tramo sin cobertura},
@@ -151,6 +161,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 }
 \requisitoF{
   id           = RF-010,
+  seccion      = {Sección 3.4.2},
   descripcion  = {Registrar automáticamente la llegada y la salida en los cerca de 1.400 puntos de carga y descarga, sin acción del conductor ni equipos instalados en ellos, con fuente y sello de tiempo},
   actor        = {Equipo a bordo y torre},
   precondicion = {Punto de cliente con geocerca virtual registrada},
@@ -162,6 +173,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 }
 \requisitoF{
   id           = RF-011,
+  seccion      = {Sección 3.4.2},
   descripcion  = {Calcular el tiempo de espera de cada visita según el tiempo libre del contrato del cliente, regla RN-07, y dejar la evidencia consultable para el cobro},
   actor        = {Área comercial y cliente},
   precondicion = {Llegada y salida registradas por RF-010},
@@ -173,6 +185,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 }
 \requisitoF{
   id           = RF-012,
+  seccion      = {Sección 3.4.2},
   descripcion  = {Obtener la conformidad de entrega con firma electrónica del destinatario identificado, sello de tiempo y ubicación, aun sin cobertura, y dejarla disponible el mismo día},
   actor        = {Conductor y destinatario},
   precondicion = {Entrega en el punto de descarga},
@@ -184,6 +197,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 }
 \requisitoF{
   id           = RF-013,
+  seccion      = {Sección 3.4.2},
   descripcion  = {Generar desde la orden los datos del documento electrónico de transporte y entregarlos al sistema contable, que lo emite, sin redigitación},
   actor        = {Despachador y sistema contable},
   precondicion = {Viaje asignado con datos de carga},
@@ -195,17 +209,19 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 }
 \requisitoF{
   id           = RF-014,
+  seccion      = {Sección 3.4.2},
   descripcion  = {Disponer del documento electrónico de transporte emitido por el sistema contable antes del movimiento, también en un punto de carga sin cobertura, por emisión anticipada o por datos enviados por enlace satelital},
   actor        = {Conductor y sistema contable},
   precondicion = {Punto de carga sin cobertura identificado en la caracterización en terreno},
-  resultado    = {Representación completa y conforme disponible en cabina antes del movimiento; sólo emite el sistema contable. Comprobación integral de los 90 segundos pendiente, incluida solicitud, emisión, retorno, reensamblado y verificación (S4 y S8, R-28)},
+  resultado    = {Representación completa y conforme disponible en cabina antes del movimiento; sólo emite el sistema contable. Comprobación integral del límite de 90 segundos en CP-HW-11 y CP-PERF-05 durante A12, incluida solicitud, emisión, retorno, reensamblado y verificación (S4 y S8, R-28)},
   prioridad    = {1. Etapa 1, mes 16},
   origen       = {Caso 4.5. CA-14. R-04 y R-08. DP-09. REQ-NEG-09},
   cumple       = {Sí},
-  componente   = {Operación de fletes, con enlace satelital del equipo a bordo. EDT 6.1 y EDT 4.1. CP-UNIT-21 y CP-HW-11}
+  componente   = {Operación de fletes, con enlace satelital del equipo a bordo. EDT 6.1 y EDT 4.1. CP-UNIT-21, CP-HW-11 y CP-PERF-05}
 }
 \requisitoF{
   id           = RF-015,
+  seccion      = {Sección 3.2.3},
   descripcion  = {Proponer el retorno de un camión que va a quedar vacío con carga que la propia compañía gestiona, respetando jornada, habilitaciones, compatibilidad, plazo y la regla RN-09},
   actor        = {Planificador de la torre},
   precondicion = {Viaje en curso con descarga estimada y cargas pendientes compatibles},
@@ -217,6 +233,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 }
 \requisitoF{
   id           = RF-016,
+  seccion      = {Sección 3.2.2},
   descripcion  = {Calcular el costo real por kilómetro y por viaje, por ruta y por contrato, y publicar el costo de cada viaje dentro de 24 horas de su cierre con los componentes disponibles y la indicación de los faltantes},
   actor        = {Gerencia de administración y finanzas},
   precondicion = {Viaje cerrado con kilómetros, tiempos y peajes registrados},
@@ -228,6 +245,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 }
 \requisitoF{
   id           = RF-017,
+  seccion      = {Sección 3.2.2},
   descripcion  = {Distinguir el costo interno de la flota propia del costo contractual de la flota subcontratada y compararlos a igualdad de componentes},
   actor        = {Gerencia de administración y finanzas},
   precondicion = {Costo de viaje calculado por RF-016},
@@ -239,6 +257,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 }
 \requisitoF{
   id           = RF-018,
+  seccion      = {Sección 3.2.3},
   descripcion  = {Relacionar kilometraje, consumo, ruta, vehículo, conductor y condiciones para explicar la dispersión de rendimiento entre camiones del mismo modelo y ruta},
   actor        = {Control de flota},
   precondicion = {Doce meses de consumo y kilometraje por viaje},
@@ -250,6 +269,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 }
 \requisitoF{
   id           = RF-019,
+  seccion      = {Sección 3.4.2},
   descripcion  = {Calcular la liquidación mensual de cada transportista desde viajes cerrados con evidencia, tarifas pactadas, espera recuperada y ajustes, según la regla RN-08, con la corrección manual como excepción registrada},
   actor        = {Área de liquidaciones},
   precondicion = {Cierre mensual con viajes conformes},
@@ -261,6 +281,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 }
 \requisitoF{
   id           = RF-020,
+  seccion      = {Sección 3.4.3},
   descripcion  = {Permitir a cada transportista consultar sus viajes, estados, evidencias y liquidación en curso, restringido a su propia operación},
   actor        = {Transportista subcontratado},
   precondicion = {Transportista autenticado con anexo firmado},
@@ -272,6 +293,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 }
 \requisitoF{
   id           = RF-021,
+  seccion      = {Sección 3.2.3},
   descripcion  = {Permitir al cliente autorizado ver la posición y el estado de su carga sólo durante el servicio y dentro de lo que cada dueño de camión autorizó},
   actor        = {Cliente},
   precondicion = {Consentimiento vigente del dueño del camión para ese cliente},
@@ -283,6 +305,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 }
 \requisitoF{
   id           = RF-022,
+  seccion      = {Sección 3.4.3},
   descripcion  = {Permitir al dueño del camión otorgar, consultar y revocar permisos por camión, dato, destinatario y período, con bitácora de cada acceso a localización},
   actor        = {Transportista subcontratado},
   precondicion = {Transportista autenticado},
@@ -294,6 +317,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 }
 \requisitoF{
   id           = RF-023,
+  seccion      = {Sección 3.2.3},
   descripcion  = {Calcular las emisiones por tonelada-kilómetro con metodología declarada y verificable, incluidos los camiones subcontratados, con consolidación mensual},
   actor        = {Gerencia general y cliente},
   precondicion = {Método fijado en la Etapa 1 y consumo o rendimiento por viaje},
@@ -305,6 +329,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 }
 \requisitoF{
   id           = RF-024,
+  seccion      = {Sección 3.2.3},
   descripcion  = {Permitir que un taller externo registre su intervención, incluso sin cobertura, con taller, activo, fecha, kilometraje, trabajo y repuestos},
   actor        = {Taller externo},
   precondicion = {Taller registrado como usuario externo},
@@ -316,6 +341,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 }
 \requisitoF{
   id           = RF-025,
+  seccion      = {Sección 3.3.1},
   descripcion  = {Gatillar el mantenimiento preventivo con el kilometraje real del equipo a bordo o de la telemetría de fábrica, indicando cuando el dato es estimado},
   actor        = {Jefatura de taller},
   precondicion = {Kilometraje real disponible por viaje},
@@ -327,6 +353,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 }
 \requisitoF{
   id           = RF-026,
+  seccion      = {Sección 3.4.3},
   descripcion  = {Registrar invitación, anexo, modalidad, camiones, consentimientos, capacidades habilitadas y fechas. Adhesión firmada: una vez por RUT de los 148 transportistas iniciales, anexo firmado por mandante y representante autorizado, vigente, no revocado y registrado al corte. Contar modalidades completa y de datos; instalación, activación y consentimientos de conductores se controlan por separado},
   actor        = {Coordinación de adhesión},
   precondicion = {Campaña de adhesión iniciada},
@@ -338,6 +365,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 }
 \requisitoF{
   id           = RF-027,
+  seccion      = {Sección 3.2.2},
   descripcion  = {Calcular a bordo la alerta de jornada próxima a agotarse según jornada restante, posición, ruta y tiempo hasta el lugar seguro de detención más cercano},
   actor        = {Conductor y torre},
   precondicion = {Catálogo de lugares seguros de detención levantado en la Etapa 1},
@@ -349,6 +377,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 }
 \requisitoF{
   id           = RF-028,
+  seccion      = {Sección 3.3.2},
   descripcion  = {Durante el período mixto, distinguir las modalidades completa, de datos y sin adhesión de S3. Mostrar por separado modalidad, fuente, nivel de evidencia y veredicto. La completa aporta nivel 2; la de datos combina reposo del camión de nivel 4 y atestación firmada de nivel 5, con asignación con marca. Sin adhesión se admite validación documental, pero sin atestación firmada el viaje no se asigna; una atestación válida permite asignar con marca conforme a RN-03. No presentar niveles menores como equivalentes},
   actor        = {Despachador de la torre},
   precondicion = {Flota con camiones en distintas modalidades de adhesión},
@@ -362,6 +391,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 % --- REQUERIMIENTOS NO FUNCIONALES -----------------------------------------
 \requisitoNF{
   id           = RNF-001,
+  seccion      = {Sección 3.2.7},
   descripcion  = {Ninguna función exige interacción del conductor con un dispositivo mientras el vehículo se mueve. Toda captura y alerta en marcha es automática},
   categoria    = {Usabilidad y seguridad de las personas},
   umbral       = {Cero interacciones exigidas con el vehículo en movimiento},
@@ -374,6 +404,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 }
 \requisitoNF{
   id           = RNF-002,
+  seccion      = {Sección 3.3.3},
   descripcion  = {La operación esencial a bordo no depende de la cobertura y conserva integridad, orden y ausencia de duplicados al sincronizar},
   categoria    = {Disponibilidad},
   umbral       = {72 horas sin cobertura con cero eventos perdidos y cero duplicados},
@@ -386,6 +417,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 }
 \requisitoNF{
   id           = RNF-003,
+  seccion      = {Sección 3.2.5},
   descripcion  = {Ningún equipo de un tercero se interviene, reconfigura o reemplaza sin su acuerdo expreso. Lo no autorizado queda deshabilitado y visible como tal},
   categoria    = {Cumplimiento e interoperabilidad},
   umbral       = {Cero cambios sobre equipos de terceros sin anexo firmado},
@@ -398,6 +430,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 }
 \requisitoNF{
   id           = RNF-004,
+  seccion      = {Sección 3.4.5},
   descripcion  = {Toda intervención física a bordo ocurre durante el paso normal del camión por un terminal, sin inmovilizarlo más allá de ese tiempo},
   categoria    = {Operabilidad},
   umbral       = {Cero horas de inmovilización adicional a la estadía normal en terminal},
@@ -410,6 +443,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 }
 \requisitoNF{
   id           = RNF-005,
+  seccion      = {Sección 3.2.7},
   descripcion  = {La lectura del vehículo es de solo lectura, sin contacto con el cableado y sin afectar garantía ni sistemas de seguridad},
   categoria    = {Seguridad del vehículo},
   umbral       = {Cero mensajes transmitidos al bus del vehículo},
@@ -422,6 +456,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 }
 \requisitoNF{
   id           = RNF-006,
+  seccion      = {Sección 3.4.2},
   descripcion  = {El sistema contable sigue como único emisor tributario. La integración es idempotente y nunca produce dos documentos para un viaje},
   categoria    = {Cumplimiento e integridad},
   umbral       = {Cero folios duplicados ante reintentos o reconexiones},
@@ -434,6 +469,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 }
 \requisitoNF{
   id           = RNF-007,
+  seccion      = {Sección 3.2.7},
   descripcion  = {La solución no instala equipamiento ni impone procedimientos en los puntos de carga y descarga de terceros},
   categoria    = {Cumplimiento},
   umbral       = {Cero equipos instalados en instalaciones de clientes},
@@ -446,6 +482,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 }
 \requisitoNF{
   id           = RNF-008,
+  seccion      = {Sección 3.3.3},
   descripcion  = {La solución absorbe cierres del paso Los Libertadores de hasta 12 días con camiones detenidos, conservando la evidencia y sincronizando al reanudar},
   categoria    = {Continuidad},
   umbral       = {288 horas de registro a bordo sin pérdida},
@@ -458,6 +495,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 }
 \requisitoNF{
   id           = RNF-009,
+  seccion      = {Sección 3.4.6},
   descripcion  = {La solución es administrable por un área de tecnología de nueve personas. Toda especialidad que el mandante no tiene se entrega como servicio},
   categoria    = {Operabilidad},
   umbral       = {Funciones de especialista dedicado cubiertas al 100 \% por servicio 24x7x365},
@@ -470,6 +508,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 }
 \requisitoNF{
   id           = RNF-010,
+  seccion      = {Sección 3.2.7},
   descripcion  = {El costo de operación de 36 meses se declara por componente: nube, conectividad a bordo, soporte, reposición de equipos y retiro},
   categoria    = {Operabilidad y costo},
   umbral       = {100 \% de los componentes de costo de operación declarados en la Oferta Económica},
@@ -482,6 +521,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 }
 \requisitoNF{
   id           = RNF-011,
+  seccion      = {Sección 3.4.5},
   descripcion  = {Los despliegues nunca detienen la flota y permiten la convivencia de camiones equipados, homologados y no adheridos},
   categoria    = {Disponibilidad y transición},
   umbral       = {Cero detenciones de flota por despliegue},
@@ -494,6 +534,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 }
 \requisitoNF{
   id           = RNF-012,
+  seccion      = {Sección 3.3.2},
   descripcion  = {Los registros probatorios muestran autor, origen, fecha y valores anteriores, y nunca sobrescriben el historial},
   categoria    = {Integridad y no repudio},
   umbral       = {Cadena de integridad verificable en el 100 \% de los registros probatorios},
@@ -506,6 +547,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 }
 \requisitoNF{
   id           = RNF-013,
+  seccion      = {Sección 3.3.3},
   descripcion  = {Los datos personales y comerciales se tratan con minimización, acceso por rol y atributo, cifrado en tránsito y en reposo, y cifrado de campo para conductores externos, localización y tarifas},
   categoria    = {Seguridad y privacidad},
   umbral       = {Cifrado de campo en el 100 \% de los atributos que exige RT-11.10 del Caso},
@@ -518,6 +560,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 }
 \requisitoNF{
   id           = RNF-014,
+  seccion      = {Sección 3.4.6},
   descripcion  = {La conservación y eliminación respetan los plazos de cada dominio. La revocación de un consentimiento detiene la captura futura y no elimina evidencia cuya conservación es obligatoria},
   categoria    = {Cumplimiento},
   umbral       = {Plazos de RT-05.10 del Caso: jornada 5 años, documento 6, siniestros 10, posición 2 en línea},
@@ -635,7 +678,7 @@ CA & Meta comprometida & Mes & Medición \\ \midrule
 11 & Objeciones bajo el 20 \% de los cobros por espera respaldados & 21 & Promedio móvil de tres meses \\
 12 & 100 \% de las conformidades disponibles el mismo día o al reconectar & 16 & Conciliación diaria \\
 13 & 100 \% de los documentos emitidos desde la orden, sin redigitación & 16 & Conciliación de folios contra viajes \\
-14 & 100 \% de las salidas sin cobertura con representación completa y conforme en cabina antes del movimiento & 16 & Registro de disponibilidad y conformidad de la representación contra primera posición; ensayo integral de 90 segundos pendiente \\
+14 & 100 \% de las salidas sin cobertura con representación completa y conforme en cabina antes del movimiento & 16 & Registro de disponibilidad y conformidad de la representación contra primera posición; ensayo integral del límite de 90 segundos en CP-HW-11 y CP-PERF-05 durante A12 \\
 15 & Kilómetros en vacío bajo el 18 \% en población comparable & 33 & Medición trimestral desde el mes 21 \\
 16 & 95 \% de los viajes con costo trazable por componente & 16 & Reporte mensual de costo \\
 17 & 100 \% de los viajes con costo preliminar en 24 horas & 16 & Registro de cierre contra publicación \\
