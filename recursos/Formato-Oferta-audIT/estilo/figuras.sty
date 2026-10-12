@@ -23,6 +23,7 @@
 %  Citar: \figref{etiqueta} da «Figura 4.1». \tabref{etiqueta} da «Tabla 4.1».
 % ============================================================================
 \NeedsTeXFormat{LaTeX2e}
+\RequirePackage{alphalph}
 \ProvidesPackage{figuras}[2026/09/26 Figuras]
 
 \graphicspath{{./}{figuras/}}
@@ -179,8 +180,8 @@
   {
     \phantomsection
     \addcontentsline { toc } { section }
-      { \protect \numberline { \thechapter . \Alph { audit@anexo } } Anexo~gráfico.~#1 }
-    \registrarFolio { anexo-#2 } { Anexo~gráfico~\thechapter.\Alph{audit@anexo}.~#1 }
+      { \protect \numberline { \thechapter . \AlphAlph{\value{audit@anexo}} } Anexo~gráfico.~#1 }
+    \registrarFolio { anexo-#2 } { Anexo~gráfico~\thechapter.\AlphAlph{\value{audit@anexo}}.~#1 }
   }
 
 % Modo «hoja» (pdflscape): la página se gira para mostrarse apaisada y el pie
@@ -317,7 +318,7 @@
   \noindent{\color{audit-filete}\rule{\linewidth}{0.4pt}}\par
   \nointerlineskip\vspace{3pt}%
   \noindent{\sffamily\fontsize{9bp}{11bp}\selectfont\color{audit-secundario}%
-    \MakeUppercase{Anexo gráfico \thechapter.\Alph{audit@anexo}}\enspace
+    \MakeUppercase{Anexo gráfico \thechapter.\AlphAlph{\value{audit@anexo}}}\enspace
     \textperiodcentered\enspace Subdocumento \thechapter\enspace
     \textperiodcentered\enspace Página horizontal conforme a FEP01, Artículo 40.4%
     \ifaudit@foliocabeza\hfill Folio \thepage\fi\strut\par}}
