@@ -22,7 +22,7 @@ frentes paralelos y el cronograma con la ruta crítica, la implantación y las d
 Sigue el cronograma contractual del FEP01, Artículo 17.1, p. 12, que fija la Etapa 1 entre los meses 1 y 16, la
 Etapa 2 entre los meses 13 y 21 y la operación entre los meses 21 y 56. Toma el alcance, las
 capacidades y los supuestos del Subdocumento 3, en particular el inicio del contrato en febrero de 2027
-(sección ?), y aplica el marco de gestión del Subdocumento 6: los paquetes que
+(sección 3.2.6), y aplica el marco de gestión del Subdocumento 6: los paquetes que
 dependen de terceros, del terreno o de un hito contractual se planifican de forma predictiva, y los
 paquetes de software se construyen en iteraciones de dos semanas. El Subdocumento 8 toma de este
 capítulo las actividades y holguras sobre las que calcula sus riesgos, y el Subdocumento 9 las ventanas
@@ -40,162 +40,152 @@ La EDT está orientada a entregables y no a fases: cada paquete termina en algo 
 recibir y verificar. Sigue la regla del 100 %, según la cual la suma del trabajo de los elementos
 hijos es igual al trabajo del padre, y nada queda fuera ni se cuenta dos veces
 (Project Management Institute, 2019). Tiene 13 elementos de primer nivel y 54 paquetes de trabajo. La
-Figura 7.1 la muestra completa.
+Figura 7.3 la muestra completa.
 
-\begin{figuraNativa}[!htbp]{Estructura de descomposición del trabajo con sus 13 elementos y 54 paquetes}{7-edt}
-\begin{tikzpicture}[
-  t/.style={font=\sffamily\fontsize{9.5bp}{11bp}\selectfont\color{audit-tinta},anchor=west,inner sep=0.6mm},
-  n1/.style={font=\sffamily\bfseries\fontsize{9.5bp}{11bp}\selectfont\color{audit-marino},anchor=west,inner sep=0.6mm},
-  ln/.style={draw=audit-filete,line width=0.6pt}]
-  \node[draw=audit-marino,line width=0.7pt,fill=audit-gris-claro,font=\sffamily\bfseries\fontsize{9.5bp}{11bp}\selectfont\color{audit-marino},minimum width=146mm,minimum height=8mm] (raiz) at (73mm,6mm) {Plataforma de control de jornada, flota y viaje para Transportes Curimón};
-  \draw[ln] (2mm,-4.0mm) -- (5mm,-4.0mm);
-  \node[n1] at (5mm,-4.0mm) {1 Gestión del proyecto};
-  \draw[ln] (8mm,-8.3mm) -- (10mm,-8.3mm);
-  \node[t] at (10mm,-8.3mm) {1.1 Dirección y control};
-  \draw[ln] (8mm,-12.6mm) -- (10mm,-12.6mm);
-  \node[t] at (10mm,-12.6mm) {1.2 Interesados y comunicaciones};
-  \draw[ln] (8mm,-16.9mm) -- (10mm,-16.9mm);
-  \node[t] at (10mm,-16.9mm) {1.3 Hardware del mandante};
-  \draw[ln] (8mm,-6.0mm) -- (8mm,-16.9mm);
-  \draw[ln] (2mm,-23.4mm) -- (5mm,-23.4mm);
-  \node[n1] at (5mm,-23.4mm) {2 Levantamiento y diseño};
-  \draw[ln] (8mm,-27.7mm) -- (10mm,-27.7mm);
-  \node[t] at (10mm,-27.7mm) {2.1 Línea base y catálogo};
-  \draw[ln] (8mm,-32.0mm) -- (10mm,-32.0mm);
-  \node[t] at (10mm,-32.0mm) {2.2 Cobertura móvil en terreno};
-  \draw[ln] (8mm,-36.3mm) -- (10mm,-36.3mm);
-  \node[t] at (10mm,-36.3mm) {2.3 Factibilidad con terceros};
-  \draw[ln] (8mm,-40.6mm) -- (10mm,-40.6mm);
-  \node[t] at (10mm,-40.6mm) {2.4 Arquitectura y datos};
-  \draw[ln] (8mm,-44.9mm) -- (10mm,-44.9mm);
-  \node[t] at (10mm,-44.9mm) {2.5 Estudio de costo por ruta};
-  \draw[ln] (8mm,-25.4mm) -- (8mm,-44.9mm);
-  \draw[ln] (2mm,-51.4mm) -- (5mm,-51.4mm);
-  \node[n1] at (5mm,-51.4mm) {3 Plataforma};
-  \draw[ln] (8mm,-55.7mm) -- (10mm,-55.7mm);
-  \node[t] at (10mm,-55.7mm) {3.1 Ambientes y despliegue};
-  \draw[ln] (8mm,-60.0mm) -- (10mm,-60.0mm);
-  \node[t] at (10mm,-60.0mm) {3.2 Seguridad e identidad};
-  \draw[ln] (8mm,-64.3mm) -- (10mm,-64.3mm);
-  \node[t] at (10mm,-64.3mm) {3.3 Observabilidad};
-  \draw[ln] (8mm,-68.6mm) -- (10mm,-68.6mm);
-  \node[t] at (10mm,-68.6mm) {3.4 San Bernardo y gabinetes};
-  \draw[ln] (8mm,-53.4mm) -- (8mm,-68.6mm);
-  \draw[ln] (2mm,-75.1mm) -- (5mm,-75.1mm);
-  \node[n1] at (5mm,-75.1mm) {4 Equipo a bordo};
-  \draw[ln] (8mm,-79.4mm) -- (10mm,-79.4mm);
-  \node[t] at (10mm,-79.4mm) {4.1 Firmware y gestión remota};
-  \draw[ln] (8mm,-83.7mm) -- (10mm,-83.7mm);
-  \node[t] at (10mm,-83.7mm) {4.2 Montaje camión por camión};
-  \draw[ln] (8mm,-88.0mm) -- (10mm,-88.0mm);
-  \node[t] at (10mm,-88.0mm) {4.3 Integración de terceros};
-  \draw[ln] (8mm,-77.1mm) -- (8mm,-88.0mm);
-  \draw[ln] (2mm,-94.5mm) -- (5mm,-94.5mm);
-  \node[n1] at (5mm,-94.5mm) {5 Servicios de la Etapa 1};
-  \draw[ln] (8mm,-98.8mm) -- (10mm,-98.8mm);
-  \node[t] at (10mm,-98.8mm) {5.1 Personas y cumplimiento};
-  \draw[ln] (8mm,-103.1mm) -- (10mm,-103.1mm);
-  \node[t] at (10mm,-103.1mm) {5.2 Flota y activos};
-  \draw[ln] (8mm,-107.4mm) -- (10mm,-107.4mm);
-  \node[t] at (10mm,-107.4mm) {5.3 Planificación y tráfico};
-  \draw[ln] (8mm,-111.7mm) -- (10mm,-111.7mm);
-  \node[t] at (10mm,-111.7mm) {5.4 Telemetría y geocercas};
-  \draw[ln] (8mm,-116.0mm) -- (10mm,-116.0mm);
-  \node[t] at (10mm,-116.0mm) {5.5 Operación de fletes};
-  \draw[ln] (8mm,-120.3mm) -- (10mm,-120.3mm);
-  \node[t] at (10mm,-120.3mm) {5.6 Liquidación y costeo};
-  \draw[ln] (8mm,-124.6mm) -- (10mm,-124.6mm);
-  \node[t] at (10mm,-124.6mm) {5.7 Portal del transportista};
-  \draw[ln] (8mm,-96.5mm) -- (8mm,-124.6mm);
-  \draw[ln] (2mm,-131.1mm) -- (5mm,-131.1mm);
-  \node[n1] at (5mm,-131.1mm) {6 Integraciones};
-  \draw[ln] (8mm,-135.4mm) -- (10mm,-135.4mm);
-  \node[t] at (10mm,-135.4mm) {6.1 Sistema contable};
-  \draw[ln] (8mm,-139.7mm) -- (10mm,-139.7mm);
-  \node[t] at (10mm,-139.7mm) {6.2 Plataformas de posición};
-  \draw[ln] (8mm,-144.0mm) -- (10mm,-144.0mm);
-  \node[t] at (10mm,-144.0mm) {6.3 Telemetría y tacógrafo};
-  \draw[ln] (8mm,-148.3mm) -- (10mm,-148.3mm);
-  \node[t] at (10mm,-148.3mm) {6.4 Combustible, peaje y taller};
-  \draw[ln] (8mm,-152.6mm) -- (10mm,-152.6mm);
-  \node[t] at (10mm,-152.6mm) {6.5 Sistema de 2013 y su retiro};
-  \draw[ln] (8mm,-133.1mm) -- (8mm,-152.6mm);
-  \draw[ln] (2mm,2mm) -- (2mm,-131.1mm);
-  \draw[ln] (77mm,-4.0mm) -- (80mm,-4.0mm);
-  \node[n1] at (80mm,-4.0mm) {7 Datos y migración};
-  \draw[ln] (83mm,-8.3mm) -- (85mm,-8.3mm);
-  \node[t] at (85mm,-8.3mm) {7.1 Migración de vigencias};
-  \draw[ln] (83mm,-12.6mm) -- (85mm,-12.6mm);
-  \node[t] at (85mm,-12.6mm) {7.2 Migración histórica};
-  \draw[ln] (83mm,-16.9mm) -- (85mm,-16.9mm);
-  \node[t] at (85mm,-16.9mm) {7.3 Repositorio analítico};
-  \draw[ln] (83mm,-6.0mm) -- (83mm,-16.9mm);
-  \draw[ln] (77mm,-23.4mm) -- (80mm,-23.4mm);
-  \node[n1] at (80mm,-23.4mm) {8 Servicios de la Etapa 2};
-  \draw[ln] (83mm,-27.7mm) -- (85mm,-27.7mm);
-  \node[t] at (85mm,-27.7mm) {8.1 Portal del cliente};
-  \draw[ln] (83mm,-32.0mm) -- (85mm,-32.0mm);
-  \node[t] at (85mm,-32.0mm) {8.2 Asignación de retornos};
-  \draw[ln] (83mm,-36.3mm) -- (85mm,-36.3mm);
-  \node[t] at (85mm,-36.3mm) {8.3 Emisiones};
-  \draw[ln] (83mm,-40.6mm) -- (85mm,-40.6mm);
-  \node[t] at (85mm,-40.6mm) {8.4 Talleres y mantenimiento};
-  \draw[ln] (83mm,-44.9mm) -- (85mm,-44.9mm);
-  \node[t] at (85mm,-44.9mm) {8.5 Dispersión de rendimiento};
-  \draw[ln] (83mm,-25.4mm) -- (83mm,-44.9mm);
-  \draw[ln] (77mm,-51.4mm) -- (80mm,-51.4mm);
-  \node[n1] at (80mm,-51.4mm) {9 Adhesión de transportistas};
-  \draw[ln] (83mm,-55.7mm) -- (85mm,-55.7mm);
-  \node[t] at (85mm,-55.7mm) {9.1 Anexo de adhesión};
-  \draw[ln] (83mm,-60.0mm) -- (85mm,-60.0mm);
-  \node[t] at (85mm,-60.0mm) {9.2 Campaña y enrolamiento};
-  \draw[ln] (83mm,-64.3mm) -- (85mm,-64.3mm);
-  \node[t] at (85mm,-64.3mm) {9.3 Medición y refuerzo};
-  \draw[ln] (83mm,-53.4mm) -- (83mm,-64.3mm);
-  \draw[ln] (77mm,-70.8mm) -- (80mm,-70.8mm);
-  \node[n1] at (80mm,-70.8mm) {10 Calidad y pruebas};
-  \draw[ln] (83mm,-75.1mm) -- (85mm,-75.1mm);
-  \node[t] at (85mm,-75.1mm) {10.1 Sistema e integración};
-  \draw[ln] (83mm,-79.4mm) -- (85mm,-79.4mm);
-  \node[t] at (85mm,-79.4mm) {10.2 Desempeño y seguridad};
-  \draw[ln] (83mm,-83.7mm) -- (85mm,-83.7mm);
-  \node[t] at (85mm,-83.7mm) {10.3 Aceptación de usuario};
-  \draw[ln] (83mm,-72.8mm) -- (83mm,-83.7mm);
-  \draw[ln] (77mm,-90.2mm) -- (80mm,-90.2mm);
-  \node[n1] at (80mm,-90.2mm) {11 Implantación};
-  \draw[ln] (83mm,-94.5mm) -- (85mm,-94.5mm);
-  \node[t] at (85mm,-94.5mm) {11.1 Capacitación};
-  \draw[ln] (83mm,-98.8mm) -- (85mm,-98.8mm);
-  \node[t] at (85mm,-98.8mm) {11.2 Marcha blanca, Etapa 1};
-  \draw[ln] (83mm,-103.1mm) -- (85mm,-103.1mm);
-  \node[t] at (85mm,-103.1mm) {11.3 Marcha blanca, Etapa 2};
-  \draw[ln] (83mm,-107.4mm) -- (85mm,-107.4mm);
-  \node[t] at (85mm,-107.4mm) {11.4 Estabilización y traspaso};
-  \draw[ln] (83mm,-92.2mm) -- (83mm,-107.4mm);
-  \draw[ln] (77mm,-113.9mm) -- (80mm,-113.9mm);
-  \node[n1] at (80mm,-113.9mm) {12 Innovaciones};
-  \draw[ln] (83mm,-118.2mm) -- (85mm,-118.2mm);
-  \node[t] at (85mm,-118.2mm) {12.1 a 12.5, una por innovación};
-  \draw[ln] (83mm,-115.9mm) -- (83mm,-118.2mm);
-  \draw[ln] (77mm,-124.7mm) -- (80mm,-124.7mm);
-  \node[n1] at (80mm,-124.7mm) {13 Operación de 36 meses};
-  \draw[ln] (83mm,-129.0mm) -- (85mm,-129.0mm);
-  \node[t] at (85mm,-129.0mm) {13.1 Mesa de servicio 24x7};
-  \draw[ln] (83mm,-133.3mm) -- (85mm,-133.3mm);
-  \node[t] at (85mm,-133.3mm) {13.2 Operación de la plataforma};
-  \draw[ln] (83mm,-137.6mm) -- (85mm,-137.6mm);
-  \node[t] at (85mm,-137.6mm) {13.3 Ciclo de vida del equipo a bordo};
-  \draw[ln] (83mm,-141.9mm) -- (85mm,-141.9mm);
-  \node[t] at (85mm,-141.9mm) {13.4 Mantención evolutiva};
-  \draw[ln] (83mm,-126.7mm) -- (83mm,-141.9mm);
-  \draw[ln] (77mm,2mm) -- (77mm,-124.7mm);
-\end{tikzpicture}
-\end{figuraNativa}
+Los detalles se presentan en Figura 7.4, Figura 7.5, Figura 7.6, Figura 7.7, Figura 7.8, Figura 7.9, Figura 7.10, Figura 7.11, Figura 7.12, Figura 7.13, Figura 7.14, Figura 7.15, Figura 7.16, Figura 7.17, Figura 7.18, Figura 7.19, Figura 7.20, Figura 7.21, Figura 7.22, Figura 7.23, Figura 7.24, Figura 7.25.
 
-La columna izquierda reúne lo que construye la Etapa 1: gestión, levantamiento, plataforma, equipo a
-bordo, los seis contextos de la arquitectura lógica y sus integraciones. La columna derecha reúne lo
-que la acompaña o la sigue: datos y migración, la Etapa 2, la adhesión de los transportistas, la
-calidad, la implantación, las innovaciones y la operación de 36 meses. Los paquetes 5.1 a 5.6 llevan el
+![Figura 7.3. EDT general: trece elementos](../../subdocumentos/07-plan-trabajo/graficos/edt-general.pdf)
+
+*Figura 7.3. EDT general: trece elementos*
+
+Fuente: Elaboración propia.
+
+![Figura 7.4. EDT 1: Gestión del proyecto, detalle 1](../../subdocumentos/07-plan-trabajo/graficos/edt-detalle-01-1.pdf)
+
+*Figura 7.4. EDT 1: Gestión del proyecto, detalle 1*
+
+Fuente: Elaboración propia.
+
+![Figura 7.5. EDT 2: Levantamiento y diseño, detalle 1](../../subdocumentos/07-plan-trabajo/graficos/edt-detalle-02-1.pdf)
+
+*Figura 7.5. EDT 2: Levantamiento y diseño, detalle 1*
+
+Fuente: Elaboración propia.
+
+![Figura 7.6. EDT 2: Levantamiento y diseño, detalle 2](../../subdocumentos/07-plan-trabajo/graficos/edt-detalle-02-2.pdf)
+
+*Figura 7.6. EDT 2: Levantamiento y diseño, detalle 2*
+
+Fuente: Elaboración propia.
+
+![Figura 7.7. EDT 3: Plataforma, detalle 1](../../subdocumentos/07-plan-trabajo/graficos/edt-detalle-03-1.pdf)
+
+*Figura 7.7. EDT 3: Plataforma, detalle 1*
+
+Fuente: Elaboración propia.
+
+![Figura 7.8. EDT 3: Plataforma, detalle 2](../../subdocumentos/07-plan-trabajo/graficos/edt-detalle-03-2.pdf)
+
+*Figura 7.8. EDT 3: Plataforma, detalle 2*
+
+Fuente: Elaboración propia.
+
+![Figura 7.9. EDT 4: Equipo a bordo, detalle 1](../../subdocumentos/07-plan-trabajo/graficos/edt-detalle-04-1.pdf)
+
+*Figura 7.9. EDT 4: Equipo a bordo, detalle 1*
+
+Fuente: Elaboración propia.
+
+![Figura 7.10. EDT 5: Servicios Etapa 1, detalle 1](../../subdocumentos/07-plan-trabajo/graficos/edt-detalle-05-1.pdf)
+
+*Figura 7.10. EDT 5: Servicios Etapa 1, detalle 1*
+
+Fuente: Elaboración propia.
+
+![Figura 7.11. EDT 5: Servicios Etapa 1, detalle 2](../../subdocumentos/07-plan-trabajo/graficos/edt-detalle-05-2.pdf)
+
+*Figura 7.11. EDT 5: Servicios Etapa 1, detalle 2*
+
+Fuente: Elaboración propia.
+
+![Figura 7.12. EDT 5: Servicios Etapa 1, detalle 3](../../subdocumentos/07-plan-trabajo/graficos/edt-detalle-05-3.pdf)
+
+*Figura 7.12. EDT 5: Servicios Etapa 1, detalle 3*
+
+Fuente: Elaboración propia.
+
+![Figura 7.13. EDT 6: Integraciones, detalle 1](../../subdocumentos/07-plan-trabajo/graficos/edt-detalle-06-1.pdf)
+
+*Figura 7.13. EDT 6: Integraciones, detalle 1*
+
+Fuente: Elaboración propia.
+
+![Figura 7.14. EDT 6: Integraciones, detalle 2](../../subdocumentos/07-plan-trabajo/graficos/edt-detalle-06-2.pdf)
+
+*Figura 7.14. EDT 6: Integraciones, detalle 2*
+
+Fuente: Elaboración propia.
+
+![Figura 7.15. EDT 7: Datos y migración, detalle 1](../../subdocumentos/07-plan-trabajo/graficos/edt-detalle-07-1.pdf)
+
+*Figura 7.15. EDT 7: Datos y migración, detalle 1*
+
+Fuente: Elaboración propia.
+
+![Figura 7.16. EDT 8: Servicios Etapa 2, detalle 1](../../subdocumentos/07-plan-trabajo/graficos/edt-detalle-08-1.pdf)
+
+*Figura 7.16. EDT 8: Servicios Etapa 2, detalle 1*
+
+Fuente: Elaboración propia.
+
+![Figura 7.17. EDT 8: Servicios Etapa 2, detalle 2](../../subdocumentos/07-plan-trabajo/graficos/edt-detalle-08-2.pdf)
+
+*Figura 7.17. EDT 8: Servicios Etapa 2, detalle 2*
+
+Fuente: Elaboración propia.
+
+![Figura 7.18. EDT 9: Adhesión de transportistas, detalle 1](../../subdocumentos/07-plan-trabajo/graficos/edt-detalle-09-1.pdf)
+
+*Figura 7.18. EDT 9: Adhesión de transportistas, detalle 1*
+
+Fuente: Elaboración propia.
+
+![Figura 7.19. EDT 10: Calidad y pruebas, detalle 1](../../subdocumentos/07-plan-trabajo/graficos/edt-detalle-10-1.pdf)
+
+*Figura 7.19. EDT 10: Calidad y pruebas, detalle 1*
+
+Fuente: Elaboración propia.
+
+![Figura 7.20. EDT 11: Implantación, detalle 1](../../subdocumentos/07-plan-trabajo/graficos/edt-detalle-11-1.pdf)
+
+*Figura 7.20. EDT 11: Implantación, detalle 1*
+
+Fuente: Elaboración propia.
+
+![Figura 7.21. EDT 11: Implantación, detalle 2](../../subdocumentos/07-plan-trabajo/graficos/edt-detalle-11-2.pdf)
+
+*Figura 7.21. EDT 11: Implantación, detalle 2*
+
+Fuente: Elaboración propia.
+
+![Figura 7.22. EDT 12: Innovaciones, detalle 1](../../subdocumentos/07-plan-trabajo/graficos/edt-detalle-12-1.pdf)
+
+*Figura 7.22. EDT 12: Innovaciones, detalle 1*
+
+Fuente: Elaboración propia.
+
+![Figura 7.23. EDT 12: Innovaciones, detalle 2](../../subdocumentos/07-plan-trabajo/graficos/edt-detalle-12-2.pdf)
+
+*Figura 7.23. EDT 12: Innovaciones, detalle 2*
+
+Fuente: Elaboración propia.
+
+![Figura 7.24. EDT 13: Operación, detalle 1](../../subdocumentos/07-plan-trabajo/graficos/edt-detalle-13-1.pdf)
+
+*Figura 7.24. EDT 13: Operación, detalle 1*
+
+Fuente: Elaboración propia.
+
+![Figura 7.25. EDT 13: Operación, detalle 2](../../subdocumentos/07-plan-trabajo/graficos/edt-detalle-13-2.pdf)
+
+*Figura 7.25. EDT 13: Operación, detalle 2*
+
+Fuente: Elaboración propia.
+
+La vista general reúne los trece elementos de primer nivel. Las láminas de detalle desarrollan
+los mismos 54 paquetes, con su entregable, aceptación y responsable; no añaden alcance. La
+organización distingue gestión, diseño, plataforma, equipo a bordo, servicios, integraciones,
+datos, adhesión, calidad, implantación, innovaciones y operación de 36 meses. Los paquetes 5.1 a 5.6 llevan el
 nombre de los seis contextos del Subdocumento 4, de modo que cada componente de la arquitectura tiene
 un solo paquete que lo construye. La adhesión es un elemento propio, con duración, responsable y riesgo,
 porque el Caso exige tratarla como actividad y no como supuesto (Caso, numeral 17.5, p. 40).
@@ -212,7 +202,7 @@ muestra el resultado.
 | Innovaciones del Subdocumento 13 | 5 | 12.1 a 12.5 | Ninguna |
 | Exigencias del numeral 17.5 del Caso | 11 | 2.2, 2.3, 4.2, 7.1, 9.2, 11.1 y otros | Ninguna |
 
-*Fuente: Formulario T-12, sección ?, Subdocumento 13 y Caso, numeral 17.5, p. 40.*
+*Fuente: Formulario T-12, sección 4.1.4, Subdocumento 13 y Caso, numeral 17.5, p. 40.*
 
 Ningún elemento del alcance queda sin paquete. Cuatro paquetes no nacen de un requerimiento sino de una
 exigencia del Caso sobre el plan: la caracterización de la cobertura móvil en terreno (2.2), que el
@@ -259,7 +249,7 @@ la capacidad en el solapamiento de los meses 13 a 15 y cómo se trabaja en los m
 ### 7.2.1 Alineación con las metodologías
 
 El Subdocumento 6 combina una capa predictiva para los compromisos contractuales con una capa adaptativa
-para el software (sección ?). El plan aplica esa división paquete por paquete. Los
+para el software (sección 6.1.1). El plan aplica esa división paquete por paquete. Los
 elementos 1, 2, 3, 4, 7, 9 y 11 son predictivos: tienen fecha fija en la red, dependen del terreno, de
 terceros o de un hito del Formulario E-25, y se controlan contra la línea base. Los elementos 5, 6 y 8 son
 adaptativos: se construyen en iteraciones de dos semanas, ocho en la Etapa 1 (actividad A09, 80 días
@@ -272,13 +262,13 @@ que lo que varía dentro de ella es el contenido de cada iteración y no su fech
 instancias de gobierno son las del Subdocumento 6: el Comité de Proyecto quincenal revisa el avance de
 la EDT y el consumo de las reservas de la ruta crítica, el Comité Ejecutivo mensual revisa los
 indicadores de adhesión y aprueba los cambios de alcance, y el Comité de Operación sigue la marcha
-blanca desde el mes 13 (sección ?).
+blanca desde el mes 13 (sección 6.1.4).
 
 ### 7.2.2 Secuenciamiento y estimación del esfuerzo
 
 La secuencia sale de tres clases de dependencia. Las técnicas son las de la cadena de capacidades del
 Subdocumento 3: sin registro de vigencias y expediente de jornada no hay asignación con bloqueo, y sin
-asignación no hay documento ni costo (sección ?). Las físicas son las del terreno: un
+asignación no hay documento ni costo (sección 3.2.2). Las físicas son las del terreno: un
 equipo sólo se monta cuando el camión pasa por un terminal y nunca entre diciembre y abril
 (Caso, numeral 13.2, p. 27). Las contractuales son los hitos del FEP01, Formulario E-25, p. 74, que fijan qué debe estar
 aceptado en cada mes. La red de 25 actividades de la sección 7.3.1 combina las tres.
@@ -461,12 +451,12 @@ incluyen los 10 días hábiles que el mandante tiene para revisar el entregable 
 holgura total es el inicio tardío menos el inicio temprano. La holgura libre es el menor inicio
 temprano de los sucesores menos el término temprano (Project Management Institute, 2019).
 
-La Figura 7.2 muestra la red de la Etapa 1 hasta el inicio de la marcha blanca, y la
-Figura 7.3 el solapamiento de los meses 13 a 15 y la Etapa 2.
+La Figura 7.1 muestra la red de la Etapa 1 hasta el inicio de la marcha blanca, y la
+Figura 7.2 el solapamiento de los meses 13 a 15 y la Etapa 2.
 
-![Figura 7.2. Red PERT de la Etapa 1 hasta el inicio de la marcha blanca, con la ruta crítica en rojo](../../figuras/07-plan-trabajo/pert-etapa1.pdf)
+![Figura 7.1. Red PERT de la Etapa 1 hasta el inicio de la marcha blanca, con la ruta crítica en rojo](../../subdocumentos/07-plan-trabajo/graficos/pert-etapa1.pdf)
 
-*Figura 7.2. Red PERT de la Etapa 1 hasta el inicio de la marcha blanca, con la ruta crítica en rojo*
+*Figura 7.1. Red PERT de la Etapa 1 hasta el inicio de la marcha blanca, con la ruta crítica en rojo*
 
 Fuente: Elaboración propia.
 
@@ -474,15 +464,15 @@ La fila central de la figura es la ruta crítica. Arriba y abajo corren las acti
 del terreno y de terceros: la cobertura móvil, la factibilidad con los proveedores de posicionamiento,
 la adhesión de los transportistas y el piloto a bordo.
 
-![Figura 7.3. Red PERT del solapamiento de los meses 13 a 15 y de la Etapa 2, con la ruta crítica en rojo](../../figuras/07-plan-trabajo/pert-etapa2.pdf)
+![Figura 7.2. Red PERT del solapamiento de los meses 13 a 15 y de la Etapa 2, con la ruta crítica en rojo](../../subdocumentos/07-plan-trabajo/graficos/pert-etapa2.pdf)
 
-*Figura 7.3. Red PERT del solapamiento de los meses 13 a 15 y de la Etapa 2, con la ruta crítica en rojo*
+*Figura 7.2. Red PERT del solapamiento de los meses 13 a 15 y de la Etapa 2, con la ruta crítica en rojo*
 
 Fuente: Elaboración propia.
 
 La ruta sigue por la fila central. En la fila superior van la marcha blanca, la transferencia y la
 estabilización de la Etapa 1, y en la inferior la instalación progresiva a bordo. Las actividades con
-borde punteado vienen de la Figura 7.2.
+borde punteado vienen de la Figura 7.1.
 
 Las dos reservas de contingencia de la ruta, A14 y A23, se calculan con la varianza de la cadena que
 protegen. Cada una mide dos desviaciones estándar, redondeado al entero más cercano. La
@@ -549,7 +539,16 @@ demás actividades no críticas absorben las restricciones físicas del Caso. El
 tiene 20 días hábiles de holgura y la instalación progresiva (A18) tiene 40. Un cierre del paso Los
 Libertadores por nieve dura hasta 12 días corridos (Caso, numeral 13.2, p. 27), unos 9 días hábiles, de
 modo que un cierre completo cabe en la holgura de ambas actividades. La adhesión de los 148
-transportistas (A06) tiene 34 días hábiles de holgura libre antes de la capacitación (A13). La
+transportistas (A06) tiene 24 días hábiles de holgura libre antes de la capacitación (A13). A13
+conserva 40 días hábiles y comienza en el día 182, diez días antes del término de A09;
+termina en el día 222, con 38 días de holgura total y 18 de holgura libre. El hito G13,
+incluido en la construcción A09, exige la versión de entrenamiento probada y congelada
+en PREPROD, datos ficticios y material por perfil antes de iniciar. Los primeros diez días
+cubren familiarización con roles, permisos, jornada y bloqueo, privacidad, identificación,
+alertas y falta de conexión. Los treinta restantes cubren práctica de flujos completos
+y evaluación, después de terminar A09. La capacitación se organiza por turnos y relevos
+sin afectar la operación. La falta de G13 retrasa el inicio real y obliga a registrar
+el atraso y actualizar el riesgo; el desfase no acredita disponibilidad. La
 verificación con los proveedores de posicionamiento (A04), que no depende de audIT, puede atrasarse 61
 días hábiles sin atrasar el fin del proyecto.
 
@@ -566,91 +565,124 @@ plan de recuperación.
 
 La carta Gantt cubre los 56 meses del contrato sobre el calendario real, con el inicio en febrero de
 2027. Muestra los 13 elementos de la EDT, las dos marchas blancas, los dos pasos a producción, el inicio
-de la operación y los doce hitos del Formulario E-25. La Figura 7.4 la presenta con la temporada de
+de la operación y los doce hitos del Formulario E-25. La Figura 7.26 la presenta con la temporada de
 fruta en gris.
 
-\begin{figuraNativa}[!htbp]{Carta Gantt de los 56 meses por elemento de la EDT, con inicio en febrero de 2027}{7-gantt}
-\begin{tikzpicture}[
-  t/.style={font=\sffamily\fontsize{9.5bp}{11bp}\selectfont\color{audit-tinta}},
-  lab/.style={t,anchor=west,inner sep=0pt}]
-  \fill[audit-gris-claro] (40.00mm,9.0mm) rectangle (45.70mm,-78.4mm);
-  \fill[audit-gris-claro] (59.00mm,9.0mm) rectangle (68.50mm,-78.4mm);
-  \fill[audit-gris-claro] (81.80mm,9.0mm) rectangle (91.30mm,-78.4mm);
-  \fill[audit-gris-claro] (104.60mm,9.0mm) rectangle (114.10mm,-78.4mm);
-  \fill[audit-gris-claro] (127.40mm,9.0mm) rectangle (136.90mm,-78.4mm);
-  \node[t] at (50.45mm,6.5mm) {2027};
-  \draw[audit-filete] (40.00mm,9.0mm) -- (40.00mm,4.5mm);
-  \node[t] at (72.30mm,6.5mm) {2028};
-  \draw[audit-filete] (60.90mm,9.0mm) -- (60.90mm,4.5mm);
-  \node[t] at (95.10mm,6.5mm) {2029};
-  \draw[audit-filete] (83.70mm,9.0mm) -- (83.70mm,4.5mm);
-  \node[t] at (117.90mm,6.5mm) {2030};
-  \draw[audit-filete] (106.50mm,9.0mm) -- (106.50mm,4.5mm);
-  \node[t] at (137.85mm,6.5mm) {2031};
-  \draw[audit-filete] (129.30mm,9.0mm) -- (129.30mm,4.5mm);
-  \node[t] at (40.95mm,2.2mm) {1};
-  \node[t] at (63.75mm,2.2mm) {13};
-  \node[t] at (69.45mm,2.2mm) {16};
-  \node[t] at (78.95mm,2.2mm) {21};
-  \node[t] at (101.75mm,2.2mm) {33};
-  \node[t] at (124.55mm,2.2mm) {45};
-  \node[t] at (145.45mm,2.2mm) {56};
-  \node[lab] at (0mm,6.5mm) {Año};
-  \node[lab] at (0mm,2.2mm) {Mes del contrato};
-  \node[lab] at (0mm,-2.80mm) {1 Gestión};
-  \draw[fill=audit-marino!55,draw=audit-marino,line width=0.4pt] (40.00mm,-4.40mm) rectangle (79.90mm,-1.20mm);
-  \node[lab] at (0mm,-8.40mm) {2 Levantamiento};
-  \draw[fill=audit-marino!55,draw=audit-marino,line width=0.4pt] (40.00mm,-10.00mm) rectangle (51.40mm,-6.80mm);
-  \draw[fill=audit-marino!55,draw=audit-marino,line width=0.4pt] (62.80mm,-10.00mm) rectangle (66.60mm,-6.80mm);
-  \node[lab] at (0mm,-14.00mm) {3 Plataforma};
-  \draw[fill=audit-marino!55,draw=audit-marino,line width=0.4pt] (45.70mm,-15.60mm) rectangle (62.80mm,-12.40mm);
-  \node[lab] at (0mm,-19.60mm) {4 Equipo a bordo};
-  \draw[fill=audit-marino!55,draw=audit-marino,line width=0.4pt] (49.50mm,-21.20mm) rectangle (59.00mm,-18.00mm);
-  \draw[fill=audit-marino!55,draw=audit-marino,line width=0.4pt] (62.80mm,-21.20mm) rectangle (74.20mm,-18.00mm);
-  \node[lab] at (0mm,-25.20mm) {5 Servicios Etapa 1};
-  \draw[fill=audit-marino!55,draw=audit-marino,line width=0.4pt] (49.50mm,-26.80mm) rectangle (59.00mm,-23.60mm);
-  \node[lab] at (0mm,-30.80mm) {6 Integraciones};
-  \draw[fill=audit-marino!55,draw=audit-marino,line width=0.4pt] (49.50mm,-32.40mm) rectangle (59.00mm,-29.20mm);
-  \draw[fill=audit-marino!55,draw=audit-marino,line width=0.4pt] (68.50mm,-32.40mm) rectangle (79.90mm,-29.20mm);
-  \node[lab] at (0mm,-36.40mm) {7 Datos y migración};
-  \draw[fill=audit-marino!55,draw=audit-marino,line width=0.4pt] (49.50mm,-38.00mm) rectangle (62.80mm,-34.80mm);
-  \draw[fill=audit-marino!55,draw=audit-marino,line width=0.4pt] (74.20mm,-38.00mm) rectangle (85.60mm,-34.80mm);
-  \node[lab] at (0mm,-42.00mm) {8 Servicios Etapa 2};
-  \draw[fill=audit-marino!55,draw=audit-marino,line width=0.4pt] (62.80mm,-43.60mm) rectangle (74.20mm,-40.40mm);
-  \node[lab] at (0mm,-47.60mm) {9 Adhesión};
-  \draw[fill=audit-marino!55,draw=audit-marino,line width=0.4pt] (40.00mm,-49.20mm) rectangle (79.90mm,-46.00mm);
-  \node[lab] at (0mm,-53.20mm) {10 Calidad y pruebas};
-  \draw[fill=audit-marino!55,draw=audit-marino,line width=0.4pt] (57.10mm,-54.80mm) rectangle (62.80mm,-51.60mm);
-  \draw[fill=audit-marino!55,draw=audit-marino,line width=0.4pt] (70.40mm,-54.80mm) rectangle (74.20mm,-51.60mm);
-  \node[lab] at (0mm,-58.80mm) {11 Implantación};
-  \draw[fill=audit-marino!55,draw=audit-marino,line width=0.4pt] (57.10mm,-60.40mm) rectangle (62.80mm,-57.20mm);
-  \draw[fill=audit-turquesa!45,draw=audit-marino,line width=0.4pt] (62.80mm,-60.40mm) rectangle (68.50mm,-57.20mm);
-  \draw[fill=audit-marino,draw=audit-marino,line width=0.4pt] (68.50mm,-60.40mm) rectangle (70.40mm,-57.20mm);
-  \draw[fill=audit-marino!55,draw=audit-marino,line width=0.4pt] (70.40mm,-60.40mm) rectangle (74.20mm,-57.20mm);
-  \draw[fill=audit-turquesa!45,draw=audit-marino,line width=0.4pt] (74.20mm,-60.40mm) rectangle (78.00mm,-57.20mm);
-  \draw[fill=audit-marino,draw=audit-marino,line width=0.4pt] (78.00mm,-60.40mm) rectangle (79.90mm,-57.20mm);
-  \node[lab] at (0mm,-64.40mm) {12 Innovaciones};
-  \draw[fill=audit-marino!55,draw=audit-marino,line width=0.4pt] (45.70mm,-66.00mm) rectangle (68.50mm,-62.80mm);
-  \node[lab] at (0mm,-70.00mm) {13 Operación};
-  \draw[fill=audit-gris-claro!60!audit-marino!25,draw=audit-marino,line width=0.4pt] (78.00mm,-71.60mm) rectangle (146.40mm,-68.40mm);
-  \node[lab] at (0mm,-75.60mm) {Hitos del E-25};
-  \fill[audit-marino] (42.85mm,-74.00mm) -- (41.75mm,-76.80mm) -- (43.95mm,-76.80mm) -- cycle;
-  \fill[audit-marino] (46.65mm,-74.00mm) -- (45.55mm,-76.80mm) -- (47.75mm,-76.80mm) -- cycle;
-  \fill[audit-marino] (50.45mm,-74.00mm) -- (49.35mm,-76.80mm) -- (51.55mm,-76.80mm) -- cycle;
-  \fill[audit-marino] (58.05mm,-74.00mm) -- (56.95mm,-76.80mm) -- (59.15mm,-76.80mm) -- cycle;
-  \fill[audit-marino] (61.85mm,-74.00mm) -- (60.75mm,-76.80mm) -- (62.95mm,-76.80mm) -- cycle;
-  \fill[audit-marino] (63.75mm,-74.00mm) -- (62.65mm,-76.80mm) -- (64.85mm,-76.80mm) -- cycle;
-  \fill[audit-marino] (65.65mm,-74.00mm) -- (64.55mm,-76.80mm) -- (66.75mm,-76.80mm) -- cycle;
-  \fill[audit-marino] (69.45mm,-74.00mm) -- (68.35mm,-76.80mm) -- (70.55mm,-76.80mm) -- cycle;
-  \fill[audit-marino] (71.35mm,-74.00mm) -- (70.25mm,-76.80mm) -- (72.45mm,-76.80mm) -- cycle;
-  \fill[audit-marino] (73.25mm,-74.00mm) -- (72.15mm,-76.80mm) -- (74.35mm,-76.80mm) -- cycle;
-  \fill[audit-marino] (75.15mm,-74.00mm) -- (74.05mm,-76.80mm) -- (76.25mm,-76.80mm) -- cycle;
-  \fill[audit-marino] (78.95mm,-74.00mm) -- (77.85mm,-76.80mm) -- (80.05mm,-76.80mm) -- cycle;
-  \draw[fill=audit-turquesa!45,draw=audit-marino] (0mm,-84.8mm) rectangle (4mm,-82.0mm); \node[lab] at (5mm,-83.4mm) {Marcha blanca};
-  \draw[fill=audit-marino,draw=audit-marino] (36mm,-84.8mm) rectangle (40mm,-82.0mm); \node[lab] at (41mm,-83.4mm) {Paso a producción};
-  \fill[audit-gris-claro] (78mm,-84.8mm) rectangle (82mm,-82.0mm); \node[lab] at (83mm,-83.4mm) {Diciembre a abril};
-\end{tikzpicture}
-\end{figuraNativa}
+Los detalles se presentan en Figura 7.27, Figura 7.28, Figura 7.29, Figura 7.30, Figura 7.31, Figura 7.32, Figura 7.33, Figura 7.34, Figura 7.35, Figura 7.36, Figura 7.37, Figura 7.38, Figura 7.39, Figura 7.40, Figura 7.41, Figura 7.42, Figura 7.43, Figura 7.44.
+
+![Figura 7.26. Gantt general M1-M56](../../subdocumentos/07-plan-trabajo/graficos/gantt-general.pdf)
+
+*Figura 7.26. Gantt general M1-M56*
+
+Fuente: Elaboración propia.
+
+![Figura 7.27. Gantt M1-M24: detalle 1](../../subdocumentos/07-plan-trabajo/graficos/gantt-m24-detalle-01.pdf)
+
+*Figura 7.27. Gantt M1-M24: detalle 1*
+
+Fuente: Elaboración propia.
+
+![Figura 7.28. Gantt M1-M24: detalle 2](../../subdocumentos/07-plan-trabajo/graficos/gantt-m24-detalle-02.pdf)
+
+*Figura 7.28. Gantt M1-M24: detalle 2*
+
+Fuente: Elaboración propia.
+
+![Figura 7.29. Gantt M1-M24: detalle 3](../../subdocumentos/07-plan-trabajo/graficos/gantt-m24-detalle-03.pdf)
+
+*Figura 7.29. Gantt M1-M24: detalle 3*
+
+Fuente: Elaboración propia.
+
+![Figura 7.30. Gantt M1-M24: detalle 4](../../subdocumentos/07-plan-trabajo/graficos/gantt-m24-detalle-04.pdf)
+
+*Figura 7.30. Gantt M1-M24: detalle 4*
+
+Fuente: Elaboración propia.
+
+![Figura 7.31. Gantt M1-M24: detalle 5](../../subdocumentos/07-plan-trabajo/graficos/gantt-m24-detalle-05.pdf)
+
+*Figura 7.31. Gantt M1-M24: detalle 5*
+
+Fuente: Elaboración propia.
+
+![Figura 7.32. Gantt M1-M24: detalle 6](../../subdocumentos/07-plan-trabajo/graficos/gantt-m24-detalle-06.pdf)
+
+*Figura 7.32. Gantt M1-M24: detalle 6*
+
+Fuente: Elaboración propia.
+
+![Figura 7.33. Gantt M1-M24: detalle 7](../../subdocumentos/07-plan-trabajo/graficos/gantt-m24-detalle-07.pdf)
+
+*Figura 7.33. Gantt M1-M24: detalle 7*
+
+Fuente: Elaboración propia.
+
+![Figura 7.34. Gantt M1-M24: detalle 8](../../subdocumentos/07-plan-trabajo/graficos/gantt-m24-detalle-08.pdf)
+
+*Figura 7.34. Gantt M1-M24: detalle 8*
+
+Fuente: Elaboración propia.
+
+![Figura 7.35. Gantt M1-M24: detalle 9](../../subdocumentos/07-plan-trabajo/graficos/gantt-m24-detalle-09.pdf)
+
+*Figura 7.35. Gantt M1-M24: detalle 9*
+
+Fuente: Elaboración propia.
+
+![Figura 7.36. Gantt M1-M56: detalle 1](../../subdocumentos/07-plan-trabajo/graficos/gantt-m56-detalle-01.pdf)
+
+*Figura 7.36. Gantt M1-M56: detalle 1*
+
+Fuente: Elaboración propia.
+
+![Figura 7.37. Gantt M1-M56: detalle 2](../../subdocumentos/07-plan-trabajo/graficos/gantt-m56-detalle-02.pdf)
+
+*Figura 7.37. Gantt M1-M56: detalle 2*
+
+Fuente: Elaboración propia.
+
+![Figura 7.38. Gantt M1-M56: detalle 3](../../subdocumentos/07-plan-trabajo/graficos/gantt-m56-detalle-03.pdf)
+
+*Figura 7.38. Gantt M1-M56: detalle 3*
+
+Fuente: Elaboración propia.
+
+![Figura 7.39. Gantt M1-M56: detalle 4](../../subdocumentos/07-plan-trabajo/graficos/gantt-m56-detalle-04.pdf)
+
+*Figura 7.39. Gantt M1-M56: detalle 4*
+
+Fuente: Elaboración propia.
+
+![Figura 7.40. Gantt M1-M56: detalle 5](../../subdocumentos/07-plan-trabajo/graficos/gantt-m56-detalle-05.pdf)
+
+*Figura 7.40. Gantt M1-M56: detalle 5*
+
+Fuente: Elaboración propia.
+
+![Figura 7.41. Gantt M1-M56: detalle 6](../../subdocumentos/07-plan-trabajo/graficos/gantt-m56-detalle-06.pdf)
+
+*Figura 7.41. Gantt M1-M56: detalle 6*
+
+Fuente: Elaboración propia.
+
+![Figura 7.42. Gantt M1-M56: detalle 7](../../subdocumentos/07-plan-trabajo/graficos/gantt-m56-detalle-07.pdf)
+
+*Figura 7.42. Gantt M1-M56: detalle 7*
+
+Fuente: Elaboración propia.
+
+![Figura 7.43. Gantt M1-M56: detalle 8](../../subdocumentos/07-plan-trabajo/graficos/gantt-m56-detalle-08.pdf)
+
+*Figura 7.43. Gantt M1-M56: detalle 8*
+
+Fuente: Elaboración propia.
+
+![Figura 7.44. Gantt M1-M56: detalle 9](../../subdocumentos/07-plan-trabajo/graficos/gantt-m56-detalle-09.pdf)
+
+*Figura 7.44. Gantt M1-M56: detalle 9*
+
+Fuente: Elaboración propia.
 
 La figura muestra tres cosas que el plan no puede cambiar y que ordenan todo lo demás. La primera es que
 ningún montaje a bordo cae en gris: el elemento 4 trabaja en los meses 6 a 10 y vuelve en los meses 16 a 18,
@@ -720,7 +752,7 @@ terceros, terminal, taller, finanzas y transportistas. La prueba de desempeño v
 volumetría proyectada a tres años: 430 camiones y 118.000 viajes al año (Caso, numeral 14.1, p. 29). La
 prueba de estrés lleva la carga al triple de la volumetría inicial, que es lo que la solución debe
 soportar sin rediseño (FEP02, RT-09.03, p. 21), y repite la reconexión simultánea de 300 camiones que
-dimensiona la sección ?. La prueba de resiliencia corta el enlace de un terminal
+dimensiona la sección 4.2.8. La prueba de resiliencia corta el enlace de un terminal
 durante 24 horas (en estricto cumplimiento del umbral transversal del Art. 16.4 y la Tabla 9.6 de calidad) y el de un camión durante 72.
 
 **Métricas de éxito.**
@@ -736,7 +768,7 @@ operando en paralelo. Después del paso a producción, la reversión de un servi
 de tráfico del despliegue azul-verde y la autoriza el Jefe de Proyecto con el Líder de Operación. Nada se
 pierde al revertir. Los documentos de transporte ya emitidos son del sistema contable y no dependen de la
 plataforma, y los equipos a bordo conservan lo enviado durante 72 horas para reenviarlo. La reversión de
-un firmware usa la imagen anterior que guarda el gabinete del terminal (sección ?).
+un firmware usa la imagen anterior que guarda el gabinete del terminal (sección 4.3.2).
 
 > **Compromiso C-02.** audIT ensaya la reversión de cada servicio antes de cada paso a producción y la mantiene disponible durante la estabilización posterior.
 >
@@ -787,6 +819,12 @@ Si una marcha blanca no cumple las seis condiciones, se extiende por cuenta de a
 siguientes (FEP01, Artículo 17.3, p. 13). La de la Etapa 1 tiene 20 días hábiles de holgura antes de afectar la marcha
 blanca de la Etapa 2, según la sección 7.3.1. La de la Etapa 2 no tiene holgura y por eso está
 protegida por la reserva A23.
+y evaluación, después de terminar A09. La capacitación se organiza por turnos y relevos
+y evaluación, después de terminar A09. D3 debe definir las funciones certificadas al
+cierre del sprint 7 que estarán disponibles en PREPROD para familiarización; no se
+presupone que esa certificación ya ocurrió. Los cambios del sprint 8 se cubren con
+un complemento antes de la marcha blanca, dentro de los treinta días restantes.
+La capacitación se organiza por turnos y relevos
 
 ## Referencias
 
@@ -828,3 +866,5 @@ Conforme al Comunicado 10, sección 7.2, cada sección de este subdocumento y ca
 | Formulario T-15 | Claude Opus 5.5 en Claude Code | Tablas de dotación, asignación, estimaciones de tres puntos y malla generadas desde el mismo cálculo | Alto | Ninguno | [nombre y cargo de quien revisó, y qué verificó] |
 | Resumen de apertura, 7.1, 7.2, 7.2.1, 7.2.2, 7.2.4 y 7.3.2 a 7.3.4 | Claude Opus 5.5 en Claude Code | Redacción inicial sobre las decisiones del equipo, cálculo de la dotación por tramo y de la cobertura a bordo, y figuras de la EDT y de la carta Gantt escritas como código TikZ con un guion | Alto | Medio | [nombre y cargo de quien revisó, y qué verificó] |
 | Formularios T-14 y T-18, y esfuerzo del T-15 | Claude Opus 5.5 en Claude Code | Diccionario de los 54 paquetes, secuencias de implantación, procedimiento de reversión y curvas de esfuerzo | Alto | Ninguno | [nombre y cargo de quien revisó, y qué verificó] |
+| 7.1 y 7.3.3 | OpenAI Codex | Actualización de descripción de EDT y generación de vistas generales y detalles legibles de EDT/Gantt; recuperación de PERT sin modificar precedencias | Alto | Alto | [Revisión humana final y asociación a bitácora A-6 del responsable pendientes] |
+| Conciliación de capacitación y adhesión | OpenAI Codex | Precedencia A09 FS-10 de A13 y puerta G13; recálculo de holguras y actualización de PERT y gráficos; sprint 7 y complemento de sprint 8 dentro de 40 días | Alto | Ninguno | [Revisión humana y asociación a bitácora A-6 del responsable pendientes] |

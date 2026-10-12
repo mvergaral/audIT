@@ -4,6 +4,10 @@ audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. O
 
 \begin{formulario}{T-16}
 
+La adhesión firmada se cuenta una vez por RUT de los 148 transportistas iniciales, con anexo firmado por mandante y representante autorizado, vigente, no revocado y registrado al corte. Ambas modalidades cuentan. M9 cierra el 31 de octubre de 2027 bajo SA-01; refuerzo con 59 o menos; metas de 104 en M16 y 134 en M21. Instalación, activación y consentimientos se controlan por separado; la firma del transportista no sustituye los consentimientos de conductores.
+
+A13 mantiene 40 días: diez de familiarización y treinta de práctica y evaluación, incluido el complemento del sprint 8. Su inicio diez días antes del término de A09 depende de G13: funciones certificadas del sprint 7, PREPROD probado y congelado, datos ficticios y material por perfil. Si falta G13, no inicia y se registra el atraso para actualizar R-16 y la simulación.
+
 \providecommand\tituloBloqueFormulario[1]{
   \phantomsection\addcontentsline{toc}{section}{#1}{\sffamily\bfseries\fontsize{13bp}{16bp}\selectfont\color{audit-marino}#1}}
 
@@ -37,7 +41,7 @@ y exige plan de contingencia, que está en la sección 8.3.
   \riesgoTDieciseis{id=R-13, riesgo={La autoridad no admite el registro electrónico de jornada}, categoria={Organizacionales y de contrapartes}, probabilidad=2, impacto=3, exposicion=6, mitigacion={Consulta C-10 en el mes 2. Si la respuesta es negativa, se mantiene el respaldo en papel firmado}, responsable={Líder Funcional}}
   \riesgoTDieciseis{id=R-14, riesgo={Los conductores rechazan la medición o la perciben como vigilancia, en especial los 258 externos}, categoria={Organizacionales y de contrapartes}, probabilidad=3, impacto=3, exposicion=9, mitigacion={Plan de gestión del cambio, consentimiento revocable por dato y período, y capacitación en los terminales (A13)}, responsable={Líder de Implantación}}
   \riesgoTDieciseis{id=R-15, riesgo={Los usuarios clave de la torre y de los terminales no tienen tiempo para el levantamiento, las pruebas y la capacitación, sobre todo en la temporada, o un entregable vuelve con observaciones y la segunda revisión del Artículo 18.3 consume el margen del hito}, categoria={Organizacionales y de contrapartes}, probabilidad=3, impacto=3, exposicion=9, mitigacion={Calendario de participación de los usuarios clave acordado en el arranque, revisión previa de cada entregable con la Contraparte Técnica en el Comité de Proyecto y entregables con la evidencia y la trazabilidad del Artículo 18.2}, responsable={Jefe de Proyecto}}
-  \riesgoTDieciseis{id=R-16, riesgo={La ruta crítica o la capacitación atrasan el inicio de la marcha blanca de la Etapa 1, fijado en el día 240}, categoria={Gestión del proyecto}, probabilidad=2, impacto=4, exposicion=8, mitigacion={Reserva A14 de 14 días y capacitación que empieza 10 días antes del fin de la construcción, solo con la versión congelada en preproducción, los datos ficticios y el material por perfil disponibles}, responsable={Jefe de Proyecto}}
+  \riesgoTDieciseis{id=R-16, riesgo={La ruta crítica o la capacitación atrasan el inicio de la marcha blanca de la Etapa 1, fijado en el día 240}, categoria={Gestión del proyecto}, probabilidad=2, impacto=4, exposicion=8, mitigacion={Reserva A14 de 14 días y A13 adelantada 10 días respecto del fin de A09, condicionada a G13; registrar atraso si PREPROD o material no están disponibles}, responsable={Jefe de Proyecto}}
   \riesgoTDieciseis{id=R-17, riesgo={Los primeros hitos de pago se atrasan, porque su margen es de 2 a 8 días hábiles}, categoria={Gestión del proyecto}, probabilidad=2, impacto=3, exposicion=6, mitigacion={Levantamiento en los cinco terminales en paralelo y seguimiento semanal del margen de cada hito}, responsable={Jefe de Proyecto}}
   \riesgoTDieciseis{id=R-18, riesgo={La marcha blanca de la Etapa 1, que cae en la temporada de fruta, no cumple las condiciones del Artículo 17.3 en tres meses}, categoria={Gestión del proyecto}, probabilidad=3, impacto=4, exposicion=12, mitigacion={Analistas en los cinco terminales en el horario de relevo, medición diaria y reversión activa}, responsable={Líder de Operación}}
   \riesgoTDieciseis{id=R-19, riesgo={El montaje a bordo avanza más lento que la cobertura declarada mes a mes, por un cierre del paso Los Libertadores, por la temporada de diciembre a abril o porque un camión pasa poco por los terminales}, categoria={Gestión del proyecto}, probabilidad=3, impacto=2, exposicion=6, mitigacion={Montaje en los meses 6 a 10 y 16 a 18, con holguras de 20 días (A11) y 40 días (A18)}, responsable={Líder de Implantación}}
@@ -123,4 +127,3 @@ Ningún modo de falla llega a 50. Los dos más altos, el equipo a bordo que deja
 satelital sin servicio, tienen detección tardía. Su mitigación apunta a detectar antes la falla.
 
 \end{formulario}
-

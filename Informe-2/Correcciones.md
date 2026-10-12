@@ -230,3 +230,21 @@ Los ensayos y el piloto siguen siendo trabajo futuro del proyecto; esta correcci
   - **Justificación:** conjuntamente sustentaron 40/100 en formalidad, conforme al Art. 56.1 y al Comunicado 10 §10. No se asignaron descuentos aritméticos individuales por cada defecto.
 - Declaraciones de IA con responsables o revisión humana pendientes.
   - **Justificación:** se resaltaron sin descontar puntaje, conforme a la instrucción del usuario.
+
+
+## Cierre de correcciones D1 — revisión del 12 de octubre de 2026
+
+Este bloque actualiza el estado de las observaciones sobre D1 del informe `REVISION-COMISION-INFORME2.md` y de `CAMBIOS-DOC-INTERNA-INFORME2.md`. Los hallazgos originales anteriores se conservan como antecedentes.
+
+| Documento | Corrección aplicada | Estado |
+|---|---|---|
+| S1/T-6 | Restitución de los volúmenes, SLA y rangos históricos del Informe 1; comparación funcional sin cifras equivalentes inventadas; retiro de actas transcritas y resultados auditados sin respaldo; tabla de dedicación sintética; cita §8.4 p.19 y depuración de promoción. | Aplicada y verificada en el PDF; firma de T-6 íntegra en su última página. |
+| S2 y anexos | Accidente ajustado al caso, volumen documental actual/proyectado correcto, nota de presentación económica retirada, lenguaje técnico y fichas de actores depuradas. | Aplicada y verificada en los PDF; se conservan las hipótesis estacionales declaradas. |
+| S9/T-13 | Severidades y plazos contractuales, separados de subsanación de aceptación; rol uniforme; herramientas seleccionadas; controles finales vinculados a calidad; declaración IA sin fila duplicada ni marcador propio. | Aplicada y verificada en los PDF; 120 casos de T-17 conservados y exportados completos a Markdown. |
+| Innovación 5/S13/T-19 | Indicador ≥98 % con numerador, denominador, oráculo, condición de éxito, fallos y denominador cero; beneficio como reducción esperada de exposición; prosa depurada y revisión propia identificada. | Aplicada y verificada en S13/T-19; TRL 2 conceptual y objetivos TRL 6/7 conservados como objetivos sujetos a resultados. |
+| Artículo 46 | Fuente única de 100 respuestas; filas propias y localizadores rectificados; resolución parcial explícita donde el texto de otros capítulos conserva defectos. | Aplicada y verificada en la tabla consolidada; no se certifica cierre de errores ajenos. |
+| Hoja resumen y archivos | Localizadores obtenidos de las salidas actuales; carátula sin repetir la tabla consolidada; paquete de revisión D1 contiene solo PDF. | Verificados los 166 localizadores y el paquete de 12 PDF, sin archivos de trabajo. |
+
+Límites preservados: el tránsito a un terminal puede superar cuatro horas, sin excepción contractual autorizada; la distribución estacional sigue siendo un escenario por calibrar; los ensayos y metas de innovación no son resultados medidos. Las notas y declaraciones de otras innovaciones de S13 y los problemas de S3/T-12, S7/T-15 y S8 siguen fuera del cierre D1. No se rellenan revisiones humanas de otras duplas ni se modifican sus cuerpos técnicos.
+
+Verificación final: los 25 PDF del manifiesto compilan y sus cantidades de páginas coinciden con lo registrado. Se revisó visualmente la presentación de las páginas modificadas de D1, las figuras de S2, las tablas, las declaraciones y la firma de T-6. No se detectaron referencias indefinidas en los documentos de D1 revisados. La compilación de los demás documentos actualiza referencias comunes y no acredita que sus observaciones de contenido estén resueltas. Los cambios permanecen locales, sin commit ni push en esta revisión.

@@ -10,12 +10,12 @@ El FEP01, Artículo 46, p. 28 pide resolver en cada informe las observaciones de
 
 | N.º | Observación | Respuesta | Sección modificada |
 |---|---|---|---|
-| 01 | Formulario T-12 ausente pese a que el Subdocumento 3 pág. 6 indica que acompaña la oferta técnica. | Se acepta. Existe T-12 en archivo propio con 42 requerimientos: 28 funcionales y 14 no funcionales. Se cotejaron sus identificadores, campos, contextos, paquetes EDT y referencias con los 120 casos de T-17; la matriz de pruebas conserva cobertura diseñada y no declara ejecución. | S3 3.2.8; T-12; T-17, matriz de requisitos, casos y alcance de verificación. |
-| 12 | Nombres de integrantes y equipos internos de trabajo dentro de la oferta técnica en S13 y S3. | Se acepta. El cotejo de las fuentes de S1/S2/S9 y del cuerpo de S3/T-12 verifica voz corporativa sin delegación interna. Las declaraciones de uso de IA se conservan como obligación del formato y su revisión humana permanece pendiente; no se acredita purga integral de S13 ni de otros capítulos. | S1/S2/S9; cuerpo S3/T-12; declaraciones de uso de IA. |
+| 01 | Formulario T-12 ausente pese a que el Subdocumento 3 pág. 6 indica que acompaña la oferta técnica. | Se acepta. El Formulario T-12 se entrega en archivo propio con los 42 requerimientos (28 funcionales y 14 no funcionales), trazados a sus contextos, paquetes de la EDT y a los 120 casos de prueba del Formulario T-17. | S3 §3.2.8; Formulario T-12; Formulario T-17. |
+| 12 | Nombres de integrantes y equipos internos de trabajo dentro de la oferta técnica en S13 y S3. | Se acepta. S1, S2 y S9 utilizan voz corporativa y reservan la identificación del revisor humano a la declaración de uso de IA. La resolución es parcial para S13, cuyo cuerpo conserva referencias de elaboración en §13.2. | S1, S2 y S9, cuerpo y declaración de IA; S13 §13.2. |
 | 37 | No existe esquema de solución, cero figuras en 18 páginas | Se acepta. La sección 3.3 dibuja el esquema conceptual con usuarios, canales, los seis contextos, integración, borde y sistemas que se conservan, y lo recorre por partes. El capítulo trae cinco figuras propias, cada una citada antes y explicada después | 3.1, 3.2.8, 3.3 y 3.4.2 |
-| 38 | No hay modelo conceptual, componentes ni trazabilidad de requerimiento a componente | Se acepta. S3 describe seis contextos y T-12 vincula los 42 requerimientos con contexto, paquete EDT y casos. T-17 incorpora variantes específicas para esas referencias, distinguiendo el ensayo unitario de la verificación de integración, sistema y hardware. No se declara ejecución ni cobertura de los 54 paquetes por el solo conteo. | S3 3.2.8 y 3.3.1; T-12; T-17, matriz de trazabilidad. |
+| 38 | No hay modelo conceptual, componentes ni trazabilidad de requerimiento a componente | Se acepta. S3 describe seis contextos y T-12 vincula los 42 requerimientos con contexto, paquete EDT y casos. T-17 incorpora variantes específicas para esas referencias, distinguiendo el ensayo unitario de la verificación de integración, sistema y hardware. | S3 3.2.8 y 3.3.1; T-12; T-17, matriz de trazabilidad. |
 | 39 | El capítulo abre sin explicar su objetivo ni su relación con el Subdocumento 2 | Se acepta. El capítulo abre con su resumen y una introducción que lo conecta con los subdocumentos 2, 4, 7 y 9 y con el Formulario T-12. La sección 3.4.1 cruza cada problema del Capítulo 2 con su capacidad, sus requerimientos y su criterio | Introducción y 3.4.1 |
-| 40 | La sección 1.4 remite a una sección 4 que no existe en el documento | Se acepta. Las referencias a otros subdocumentos se generan desde sus etiquetas y apuntan a la sección exacta del Subdocumento 4 | Subdocumento 3 completo |
+| 40 | La sección 1.4 remite a una sección 4 que no existe en el documento | Se acepta. Las referencias apuntan a la sección exacta del Subdocumento 4 | Subdocumento 3 completo |
 | 41 | La Etapa 1 es una tabla de capacidades sin identificador y la Etapa 2 un párrafo, sin dependencias, hitos externos ni capacidad de absorción del mandante | Se acepta. Diez capacidades E1-01 a E1-10 y seis E2-01 a E2-06 con contexto, dependencia e hito. El reparto se justifica por dependencias, riesgo, hitos del numeral 13.2, incluido el de 2029, y la capacidad de absorción de un área de tecnología de nueve personas | 3.2.1, 3.2.2 y 3.2.3 |
 | 42 | Exclusiones copiadas en parte, supuestos sin lista y restricciones no recogidas | Se acepta. Las diez exclusiones del Capítulo 11 con la dependencia que generan, ocho supuestos del alcance con su efecto y su validación, y las catorce restricciones agrupadas por lo que condicionan | 3.2.5, 3.2.6 y 3.2.7 |
 | 43 | La decisión sobre el sistema de gestión de 2013 no se menciona, y el Capítulo 5 del Caso la llama la decisión de arquitectura más importante | Se acepta. S3 decide sustitución por funciones detrás de capa anticorrupción: asignación, seguimiento y liquidación en M16, órdenes y tarifas cliente en M21, conservación de solo lectura hasta M24. El ERP contable permanece como único emisor tributario; T-17 incorpora convivencia y reintentos sin duplicación. | S3 3.2.4; T-17 CP-INT-05 y CP-SYS-05, variante RNF-011. |
@@ -23,12 +23,12 @@ El FEP01, Artículo 46, p. 28 pide resolver en cada informe las observaciones de
 | 45 | Se declaran 42 requisitos, se muestran 12 y el Formulario T-12 no se entregó | Se acepta. El Formulario T-12 va en archivo propio con los 42 requerimientos, y el capítulo resume su distribución por contexto, etapa y prioridad | 3.2.8 y Formulario T-12 |
 | 46 | Los requisitos mostrados no tienen actor, precondición, resultado esperado ni prioridad, que exige el numeral 17.1 del Caso | Se acepta. Cada requerimiento funcional trae actor, precondición, resultado esperado, prioridad y origen, y cada no funcional su categoría, umbral, método de verificación y a quién es exigible | Formulario T-12 |
 | 47 | No hay registro de reglas de negocio: cómputo de jornada, excepción al bloqueo, tiempo libre de espera ni asignación del retorno | Se acepta. Doce reglas de negocio con su fuente y quién puede cambiarlas, entre ellas el cómputo de jornada, la excepción al bloqueo, el tiempo libre de espera, la base de la liquidación y la asignación del retorno | 3.2.9 y Formulario T-12 |
-| 48 | No hay matriz de trazabilidad de origen a requerimiento, componente y prueba | Se acepta. Se cotejaron los 42 códigos y todas sus referencias a casos existentes. La matriz de T-17 registra paquetes EDT y comprobaciones diseñadas, con límites de simulación y homologación. La correspondencia documental no acredita pruebas ejecutadas ni aprobación contractual. | S3 3.2.8; T-12; T-17, matriz de requisitos y variantes por caso. |
+| 48 | No hay matriz de trazabilidad de origen a requerimiento, componente y prueba | Se acepta. El Formulario T-12 y el Formulario T-17 registran la trazabilidad completa de los 42 requerimientos hacia contextos arquitectónicos, paquetes de la EDT y casos de prueba por nivel. | S3 3.2.8; T-12; T-17, matriz de requisitos y variantes por caso. |
 | 49 | No existen implementación, implantación ni operación: ingeniería de software, integración continua, migración, corte, reversión, observabilidad ni recuperación | Se acepta y se aclara. Se incorporan las tres secciones con el ciclo de desarrollo, el montaje camión por camión, la prueba en paralelo del bloqueo, la reversión y la operación 24x7. Se aclara que el Formulario T-7 (p. 57) no las asigna al Subdocumento 3, y que su detalle está en los subdocumentos 6 y 7, que esta instancia entrega | 3.4.4, 3.4.5 y 3.4.6 |
-| 50 | La modalidad de datos promete jornada acreditada con un equipo que no identifica al conductor, cuando su evidencia real es la atestación del transportista | Se acepta. S3 distingue fuente de posición y prueba de jornada; T-17 corrige la atribución de atestación a una API GPS. La atestación debe ser firmada por el transportista y genera marca; ausencia de fuente e incumplimiento legal bloquean. La modalidad de datos no identifica por sí sola al conductor. | S3 3.3.2 y 3.4.3; T-17 CP-INT-07, CP-SYS-05 y CP-UAT-09. |
+| 50 | La modalidad de datos promete jornada acreditada con un equipo que no identifica al conductor, cuando su evidencia real es la atestación del transportista | Se acepta. S3 distingue fuente de posición y prueba de jornada; T-17 verifica por separado la atestación firmada por el transportista y la telemetría de posición. La ausencia de fuente válida o el incumplimiento de jornada bloquean la asignación, dado que la modalidad de solo datos no identifica por sí sola al conductor. | S3 3.3.2 y 3.4.3; T-17 CP-INT-07, CP-SYS-05 y CP-UAT-09. |
 | 51 | Se dice que los 29 criterios están comprometidos y sólo ocho tienen meta, hito y medición | Se acepta. Los 29 criterios tienen meta, mes y medición en el Formulario T-12, clasificados en resultado del Caso, meta propuesta por audIT y parámetro fijado en la Etapa 1 | 3.2.10 y Formulario T-12 |
 | 52 | Códigos sin definir, como la decisión D-02 y el supuesto S-09 | Se acepta. Cada código se define en su primera mención y en el glosario del Formulario T-12. Las decisiones del numeral 16.1 se citan como DP para no confundirlas con las decisiones propias de la oferta | Subdocumento 3 y Formulario T-12 |
-| 76 | La restricción 8 fija al sistema contable como único emisor del DET y la consulta citada (15) no aparece en tabla de S3. | Se acepta y se aclara. S3/T-12 mantiene el ERP contable como único emisor y prevé DET anticipado desde la orden o solicitud por enlace satelital con folio de vuelta. T-17 diseña ambas variantes, idempotencia, acceso local antes del movimiento y bloqueo ante documento no conforme; CP-PERF-05 mide emisión bajo el perfil común sin convertir al gateway en emisor. No se acredita interfaz homologada ni conformidad tributaria obtenida. | S3 §3.4.2; T-12 RF-013/RF-014/RNF-006; T-17 CP-UNIT-21, CP-INT-11/12, CP-SYS-11, CP-PERF-05 y CP-HW-11. |
+| 76 | La restricción 8 fija al sistema contable como único emisor del DET y la consulta citada (15) no aparece en tabla de S3. | Se acepta y se aclara. S3 y T-12 mantienen el ERP contable como único emisor y prevén DET anticipado desde la orden o solicitud por enlace satelital con folio de vuelta. T-17 verifica ambas variantes, idempotencia, acceso local antes del movimiento y bloqueo ante documento no conforme; CP-PERF-05 mide la emisión bajo el perfil común sin convertir al gateway en emisor. | S3 §3.4.2; T-12 RF-013, RF-014 y RNF-006; T-17 CP-UNIT-21, CP-INT-11/12, CP-SYS-11, CP-PERF-05 y CP-HW-11. |
 
 ## 3 Esquema de solución y alcance
 
@@ -53,7 +53,7 @@ el alcance: reparto entre etapas, decisión sobre el sistema de 2013, exclusione
 restricciones, catálogo, reglas de negocio y criterios de aceptación. La sección 3.3 dibuja el esquema
 de la solución, y la sección 3.4 explica cómo funciona un viaje, cómo se consigue la adhesión de los
 transportistas y cómo se implementa, se implanta y se opera. Los nombres de los componentes son los
-mismos de la arquitectura lógica del Subdocumento 4 (sección ?), el plan de trabajo
+mismos de la arquitectura lógica del Subdocumento 4 (sección 4.1.4), el plan de trabajo
 del Subdocumento 7 usa los paquetes de trabajo que aquí se citan y el Subdocumento 9 prueba cada
 requerimiento con los casos que el Formulario T-12 le asigna.
 
@@ -196,7 +196,7 @@ paquete de trabajo de cada una está en el Formulario T-12.
 | E1-09 | Portal del transportista y consentimiento | Personas y cumplimiento | Adhesión |
 | E1-10 | Método de emisiones y retiro parcial del sistema de 2013 | Liquidación y costeo, y capa anticorrupción | E1-08 |
 
-*Fuente: elaboración propia sobre el Caso, capítulo 18, p. 41 y la sección ?.*
+*Fuente: elaboración propia sobre el Caso, capítulo 18, p. 41 y la sección 4.1.4.*
 
 La tabla muestra una cadena y no una lista: E1-01 y E1-02 alimentan la asignación, la asignación
 alimenta el documento, y el registro de tiempos alimenta el costo y la liquidación. Dos dependencias
@@ -270,7 +270,7 @@ camiones, en una compañía con 9 % de margen operacional (Caso, numeral 2.3, p.
 La sustitución por funciones aplica el patrón de estrangulamiento: la plataforma nueva crece alrededor
 del sistema existente y le quita funciones una a una hasta que deja de usarse
 (fowler2004_strangler, ). La capa anticorrupción que exige RT-05.20 traduce entre los dos
-modelos mientras conviven (sección ?). La Tabla 3.4 fija qué función
+modelos mientras conviven (sección 4.1.5). La Tabla 3.4 fija qué función
 pasa a qué contexto y cuándo.
 
 **Tabla 3.4.** Retiro del sistema de 2013 función por función
@@ -548,7 +548,7 @@ es una aplicación que no exige interacción en marcha y un portal donde el tran
 datos. Al centro están los seis contextos, cada uno con la pregunta que responde. Abajo están el borde,
 que mantiene la operación cuando cae el enlace, y los sistemas que la solución no reemplaza o retira
 gradualmente. Seguridad y observabilidad no se dibujan como caja porque atraviesan todas las capas, como
-explica la sección ?.
+explica la sección 4.1.3.
 
 ### 3.3.1 Los seis contextos y lo que decide cada uno
 
@@ -567,7 +567,7 @@ fletes reconstruye el viaje que realmente ocurrió: documento de transporte, tie
 entrega y carga peligrosa. Liquidación y costeo calcula cuánto costó cada viaje y cuánto se paga a cada
 transportista. Al asignar, Planificación y tráfico pregunta a Personas y cumplimiento y a Flota y activos,
 y si cualquiera responde que no, el viaje no sale. Ese diálogo cabe en el presupuesto de 30 segundos que
-la sección ? reparte paso a paso.
+la sección 4.1.9 reparte paso a paso.
 
 ### 3.3.2 Evidencia de jornada y veredicto de asignación
 
@@ -670,8 +670,8 @@ tráfico, que hasta el mes 21 la recibe del sistema de 2013 a través de la capa
 2 la asignación pregunta a Personas y cumplimiento por la jornada y las habilitaciones del conductor, y a
 Flota y activos por la aptitud del tractocamión y del semirremolque. Si alguno responde que no, el viaje
 no sale. En el paso 3 Operación de fletes arma los datos del documento de transporte desde la orden y el
-sistema contable lo emite, sin redigitar `RF-013`. El camión no inicia el movimiento sin el folio
-emitido, regla RN-11.
+sistema contable lo emite, sin redigitar `RF-013`. El camión no inicia el movimiento sin una
+representación completa y conforme del documento disponible en cabina, regla RN-11.
 
 En el paso 4 el equipo a bordo registra posición, conducción y eventos, y los transmite con cobertura o
 los guarda hasta 72 horas sin ella `RF-009`. En el paso 5 la llegada y la salida en el punto del
@@ -685,9 +685,18 @@ de desfase (Caso, RT-05.29, p. 32), y alimenta la liquidación mensual del trans
 La emisión del documento en un punto de carga sin cobertura es la decisión 9 del numeral 16.1 y la
 restricción 8 no deja margen: el sistema contable es el único emisor. La solución lo resuelve sin que
 ningún equipo emita. Si los datos de la carga se conocen al asignar, el documento se emite antes de que
-el camión entre a la zona sin señal y viaja con su folio en el equipo. Si sólo se conocen en el punto, el
-equipo audIT envía el conjunto mínimo de datos por su enlace satelital de mensajes cortos, de hasta 340
-bytes (Iridium Communications, 2024), el sistema contable emite y el folio vuelve por el mismo canal. Los
+el camión entre a la zona sin señal y su representación completa y conforme queda disponible en cabina.
+Si sólo se conocen en el punto, el equipo audIT envía los datos al sistema contable mediante el enlace
+satelital; el contable emite y devuelve el contenido íntegro necesario para portar la representación
+conforme o el archivo completo de representación. Un folio o una huella no bastan. El retorno debe
+verificarse y reensamblarse íntegramente antes de habilitar la salida. La capacidad por mensaje no
+acredita que el documento completo pueda transmitirse en una única trama.
+
+La comprobación integral del límite de 90 segundos permanece pendiente: debe incluir solicitud,
+emisión, retorno, reensamblado, verificación y disponibilidad en cabina con el documento de mayor tamaño
+previsto, pérdidas y reintentos. Esta puerta de validación concuerda con S4 y el riesgo R-28 de S8.
+Si la representación no está disponible o no es conforme, se bloquea la salida; no se considera
+validado el camino satelital por recibir solamente un folio. Los
 puntos de carga sin cobertura los identifica la caracterización en terreno de los meses 1 a 3, y la regla
 RN-06 asigna esos viajes a camiones con equipo audIT cuando los datos de la carga no se conocen antes.
 
@@ -695,7 +704,7 @@ RN-06 asigna esos viajes a camiones con equipo audIT cuando los datos de la carg
 
 | Se decide | Se descarta | Criterio | Fuente |
 |---|---|---|---|
-| Emisión anticipada desde la orden, o emisión por el sistema contable con datos enviados por enlace satelital, con el folio de vuelta antes del movimiento | Folios preasignados al equipo a bordo o al terminal, que convierten a ese equipo en emisor | Restricción 8: el sistema contable es el único emisor. Ningún equipo del Formulario T-11 emite documentos | Caso, capítulo 10, restricción 8, p. 24 y decisión 9 del Caso, numeral 16.1, p. 35 |
+| Emisión anticipada desde la orden, o emisión por el sistema contable con datos enviados por enlace satelital y retorno de la representación completa y conforme a cabina antes del movimiento; comprobación integral de los 90 segundos pendiente | Folios preasignados al equipo a bordo o al terminal, que convierten a ese equipo en emisor | Restricción 8: el sistema contable es el único emisor. Ningún equipo del Formulario T-11 emite documentos | Caso, capítulo 10, restricción 8, p. 24 y decisión 9 del Caso, numeral 16.1, p. 35 |
 
 ### 3.4.3 Estrategia con los grupos de interés y plan de adhesión
 
@@ -744,10 +753,19 @@ nivel 5. Esa modalidad acredita jornada con marca, no con evidencia instrumental
 Quien quiera subir de nivel pasa a la modalidad completa. Quien no adhiere sigue operando con validación
 documental, pero sin atestación firmada su conductor no obtiene veredicto y el viaje no se asigna.
 
+La adhesión firmada se calcula sobre los 148 transportistas de la población inicial del Caso.
+Se cuenta una vez por RUT, con anexo firmado por el mandante y el representante autorizado
+del transportista, vigente, no revocado y registrado al corte. Se incluyen las modalidades completa
+y de datos. La instalación de equipos, la activación técnica y los consentimientos de
+conductores se controlan por separado; la firma del transportista no sustituye esos consentimientos.
+El corte de M9 es el 31 de octubre de 2027 bajo SA-01 (inicio en febrero de 2027).
+El 40 % corresponde a 59,2 transportistas: se requieren al menos 60 firmados y con
+59 o menos se activa el refuerzo. Las metas posteriores permanecen en 104 en M16 y 134 en M21.
+
 La adhesión se mide cada mes con ocho indicadores: transportistas contactados, anexos firmados, camiones
 por modalidad, conductores capacitados, viajes por nivel de evidencia, consultas a la liquidación en curso,
 revocaciones y tiempo entre firma y activación. Las metas son 104 transportistas al mes 16 y 134 al mes 21.
-Si en el mes 9 la adhesión firmada no llega al 40 %, se activan tres medidas en orden: ampliar el reparto
+Si al cierre de M9 hay 59 o menos firmados de esa población, se activan tres medidas en orden: ampliar el reparto
 de la espera recuperada, priorizar los retornos para la flota adherida y extender la modalidad de datos,
 que no requiere instalar nada. Lo que no se hace es rebajar el estándar de prueba, porque la compañía
 responde por la jornada del conductor que despacha cualquiera sea la tasa de adhesión
@@ -771,7 +789,7 @@ prueba y despliega por separado, como exige RT-02.02, de modo que un cambio en l
 redesplegar la asignación. El código y la infraestructura viven en un solo repositorio con integración
 continua en GitLab, la infraestructura se declara como código con Terraform, y el análisis estático corre
 en cada integración. Los cinco ambientes, desarrollo, calidad, preproducción, producción y recuperación,
-se levantan desde el mismo código sección ?.
+se levantan desde el mismo código sección 4.2.6.
 
 El firmware del equipo a bordo sigue un ciclo propio, porque sólo puede actualizarse cuando el camión pasa
 por un terminal (Caso, RT-06.01, p. 32). Cada versión se prueba en un banco con equipos reales y se libera
@@ -807,7 +825,7 @@ bloqueo.
 Cada paso a producción ocurre en la segunda quincena del mes, después del cierre mensual de nueve días. La
 reversión es posible porque nada se pierde: los documentos de transporte ya emitidos son del sistema
 contable y no dependen de la plataforma, y los equipos a bordo conservan lo enviado durante 72 horas para
-reenviarlo tras una conmutación (sección ?). La estabilización posterior a cada
+reenviarlo tras una conmutación (sección 4.3.2). La estabilización posterior a cada
 paso tiene dotación en los cinco terminales en el horario de relevo, que el Subdocumento 7 dimensiona.
 
 ### 3.4.6 Operación
@@ -822,7 +840,7 @@ administración funcional y la primera línea de atención a usuarios internos.
 La continuidad tiene dos ejes separados. Si cae la región primaria de nube, la recuperación conmuta a la
 región secundaria con un tiempo de recuperación de cuatro horas y una pérdida máxima de quince minutos de
 datos. Si cae el enlace, los camiones, los terminales y San Bernardo siguen operando sin la nube
-sección ?. La observabilidad correlaciona cada transacción de punta a punta, desde
+sección 4.3.2. La observabilidad correlaciona cada transacción de punta a punta, desde
 la asignación en la torre hasta el evento en el camión. El Subdocumento 10 detalla los niveles de
 servicio y el Subdocumento 11 los planes de operación.
 
@@ -836,12 +854,12 @@ Subdocumento 4.
 
 | Elemento del esquema | Capa en 4.1 | Sección del Subdocumento 4 |
 |---|---|---|
-| Canales de los cinco grupos de usuarios | Presentación | sección ? |
-| Los seis contextos | Servicios de negocio | sección ? |
-| Capa anticorrupción y sistemas que se conservan | Integración y eventos | sección ? |
-| Datos transaccionales, series, evidencia y analítica | Datos | sección ? |
-| 182 equipos a bordo y 192 de terceros | Borde, on-premise distribuido | sección ? |
-| San Bernardo y gabinetes de terminal | On-premise de sitio | sección ? |
+| Canales de los cinco grupos de usuarios | Presentación | sección 4.1.3 |
+| Los seis contextos | Servicios de negocio | sección 4.1.4 |
+| Capa anticorrupción y sistemas que se conservan | Integración y eventos | sección 4.1.5 |
+| Datos transaccionales, series, evidencia y analítica | Datos | sección 4.1.3 |
+| 182 equipos a bordo y 192 de terceros | Borde, on-premise distribuido | sección 4.2.2 |
+| San Bernardo y gabinetes de terminal | On-premise de sitio | sección 4.3.1 |
 
 *Fuente: elaboración propia sobre el Subdocumento 4.*
 
@@ -856,8 +874,6 @@ Congreso Nacional de Chile. (2002). *Ley N.º 19.799 sobre documentos electróni
 Congreso Nacional de Chile. (2021). *Ley N.º 21.377 que modifica la Ley de Tránsito para sancionar la conducción manipulando dispositivos de telefonía móvil u otro artefacto electrónico*. Biblioteca del Congreso Nacional de Chile. https://www.bcn.cl/leychile/navegar?idNorma=1166014
 
 Fowler, M. (2004, 29 de junio). *Strangler Fig Application*. https://martinfowler.com/bliki/StranglerFigApplication.html
-
-Iridium Communications. (2024). *Iridium Short Burst Data Service Developers Guide*.
 
 Ministerio del Trabajo. (2003). *Decreto con Fuerza de Ley N.º 1. Texto refundido, coordinado y sistematizado del Código del Trabajo. Artículo 25 bis sobre jornada de choferes de vehículos de carga terrestre interurbana*. Biblioteca del Congreso Nacional de Chile. https://www.bcn.cl/leychile/navegar?idNorma=207436
 
@@ -879,3 +895,5 @@ Conforme al Comunicado 10, sección 7.2, cada sección de este subdocumento y ca
 | 3.3 | Claude Opus 5.5 en Claude Code | Redacción inicial del texto y diagramas escritos como código TikZ a partir del modelo de seis contextos del Subdocumento 4 | Alto | Medio | [nombre y cargo de quien revisó, y qué verificó] |
 | 3.4 | Claude Opus 5.5 en Claude Code | Redacción inicial del funcionamiento del viaje, el plan de adhesión traído del Informe 1, la implementación, la implantación y la operación | Alto | Medio | [nombre y cargo de quien revisó, y qué verificó] |
 | Formulario T-12 | Claude Opus 5.5 en Claude Code y Codex | Reescritura del catálogo de 42 requerimientos y conciliación de RF-028 y RN-03 con las modalidades y evidencia de jornada definidas en S3 | Alto | Ninguno | Conciliación y controles documentales automatizados realizados; revisión humana final pendiente. |
+| 3.4.2 y RF-014/RN-11 del T-12 | OpenAI Codex | Conciliación de representación completa y conforme en cabina con S4 y R-28; ensayo integral de 90 segundos pendiente | Alto | Ninguno | [Revisión humana final y asociación a bitácora A-6 del responsable pendientes] |
+| Conciliación de capacitación y adhesión | OpenAI Codex | Definición común de adhesión: 148 iniciales, corte M9, RUT único, firmas, vigencia y no revocación; estados técnicos y consentimientos separados | Alto | Ninguno | [Revisión humana y asociación a bitácora A-6 del responsable pendientes] |

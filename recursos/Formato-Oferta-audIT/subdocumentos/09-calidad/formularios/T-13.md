@@ -2,15 +2,28 @@
 
 audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. Oferta Técnica, Sobre N.º 2. Informe Preparatorio 2. Archivo AUDIT-Formulario-T-13.pdf. Anexo del Subdocumento N.º 9, Plan de calidad. Las fuentes están en las Referencias de ese subdocumento.
 
-**Niveles y tipos de prueba conforme a ISO/IEC/IEEE 29119.** \hyperref[sec:9-t13-1]{Apartado 1}, folio \pageref{sec:9-t13-1}
+\ifdefined\FormularioActual
+\makeatletter
+\audit@iniciarpartes
+\makeatother
+{\renewcommand\textoEncabezado{\color{audit-marino}Índice}\indiceDetallado}
 
-**Ambientes y datos de prueba.** \hyperref[sec:9-t13-2]{Apartado 2}, folio \pageref{sec:9-t13-2}
-
-**Criterios de entrada y de salida.** \hyperref[sec:9-t13-3]{Apartado 3}, folio \pageref{sec:9-t13-3}
-
-**Automatización de pruebas.** \hyperref[sec:9-t13-4]{Apartado 4}, folio \pageref{sec:9-t13-4}
-
-**Calendario de las pruebas de carga, resiliencia, recuperación ante desastres y seguridad ofensiva.** \hyperref[sec:9-t13-5]{Apartado 5}, folio \pageref{sec:9-t13-5}
+\makeatletter
+\audit@marcasubdoc{Subdocumento 9}
+\makeatother
+\markboth{Formulario T-13}{}
+\registrarFolio{formsd-9}{Formulario T-13}
+\phantomsection
+\addcontentsline{toc}{section}{Formulario T-13}
+\fi
+\begin{formulario}{T-13}
+\begin{contenidoExigido}{T-13}
+\exigencia{Niveles y tipos de prueba conforme a ISO/IEC/IEEE 29119.}{\hyperref[sec:9-t13-1]{Apartado 1}, folio \pageref{sec:9-t13-1}}
+\exigencia{Ambientes y datos de prueba.}{\hyperref[sec:9-t13-2]{Apartado 2}, folio \pageref{sec:9-t13-2}}
+\exigencia{Criterios de entrada y de salida.}{\hyperref[sec:9-t13-3]{Apartado 3}, folio \pageref{sec:9-t13-3}}
+\exigencia{Automatización de pruebas.}{\hyperref[sec:9-t13-4]{Apartado 4}, folio \pageref{sec:9-t13-4}}
+\exigencia{Calendario de las pruebas de carga, resiliencia, recuperación ante desastres y seguridad ofensiva.}{\hyperref[sec:9-t13-5]{Apartado 5}, folio \pageref{sec:9-t13-5}}
+\end{contenidoExigido}
 
 ### 9.0.1 Niveles y tipos de prueba conforme a ISO/IEC/IEEE 29119.
 
@@ -22,12 +35,12 @@ Se aplica planificación, seguimiento, diseño, preparación, ejecución y cierr
 \addcontentsline{toc}{subsection}{Ambientes y datos de prueba.}
 CI utiliza dobles y fixtures sintéticos; QA integra contratos; staging reproduce configuración/carga; HIL conserva modelo, firmware, señales y permisos; UAT usa terminales y usuarios designados con autorización. Producción se utiliza solo en ejercicio autorizado, con respaldo y reversión. Se versionan entradas, semilla/reloj, oráculo y manifiesto. No se atribuyen marcas o API ensayadas al parque existente sin homologación. Datos operacionales requieren acceso autorizado y minimización. Véase sección 9.2.1.
 
-La homologación física utiliza iWave G26I con audIT EdgeHub, lector CAN sin contacto Technoton CANCrocodile y las balizas Bluetooth de la innovación 3. Se distinguen los 182 equipos previstos de los 192 terceros con dispositivos existentes: sus plataformas requieren acceso autorizado y no se presume API ni exportación disponible. El catálogo T-17 verifica lectura, integridad, datos ausentes, antigüedad y conciliación, sin atribuir al parque real el resultado de dobles sintéticos. Para frío, rango y precisión provienen del modelo y la homologación; no se trasladan especificaciones de sondas PT100.
+La configuración física sometida a homologación comprende iWave G26I con audIT EdgeHub, lector CAN sin contacto Technoton CANCrocodile y las balizas Bluetooth de la innovación 3. Los 182 equipos previstos se ensayan por modelo y montaje; para los 192 terceros con dispositivos existentes se verifican las interfaces y permisos de acceso disponibles. T-17 comprueba lectura, integridad, datos ausentes, antigüedad y conciliación mediante pruebas de integración y hardware. El control térmico utiliza el rango y la precisión del modelo homologado.
 
 ### 9.0.3 Criterios de entrada y de salida.
 
 \addcontentsline{toc}{subsection}{Criterios de entrada y de salida.}
-Entrada: versión/configuración y ambiente identificados, requisito/caso/criterio fijados, datos y permisos disponibles, observabilidad y reversión verificadas. Salida: todos los criterios aplicables cumplidos, reporte reproducible y defectos relacionados, sin críticos/altos para cierre de marcha blanca. Se aplican los mínimos de sección 9.3.6; cuatro semanas sostenidas y las seis condiciones acumulativas de sección 9.3.5 gobiernan aceptación. Un promedio o cobertura de código no reemplaza otro criterio.
+Entrada: versión/configuración y ambiente identificados, requisito/caso/criterio fijados, datos y permisos disponibles, observabilidad y reversión verificadas. Salida: todos los criterios aplicables cumplidos, reporte reproducible y defectos relacionados, sin críticos/altos para cierre de marcha blanca. Se aplican los mínimos de sección 9.3.6; cuatro semanas sostenidas y las seis condiciones acumulativas de sección 9.3.5 gobiernan aceptación. Un promedio o cobertura de código no reemplaza otro criterio. La gestión de defectos utiliza las cuatro severidades de FEP01, Artículo 78.1: crítica, alta, media y baja. Toda observación formal de aceptación se subsana en diez días hábiles; los críticos y altos bloquean promoción y cierre de marcha blanca hasta corrección y reevaluación. El Líder de Calidad y Pruebas registra responsable, plazo y evidencia. Los tiempos de respuesta y resolución de operación se aplican según Artículo 78.2 y se detallan en S9 §9.2.2, separados del plazo de aceptación.
 
 La revisión de trazabilidad exige localizar cada RT aplicable en la solución y relacionarlo con su método y evidencia; cubrir los 42 RF/RNF del catálogo propio no demuestra toda la cobertura normativa. Los localizadores ausentes se registran como pendientes y bloquean el cierre de esa revisión. Para la capacitación, la entrada requiere G13 aceptado con PREPROD y funciones probadas por perfil, datos de ensayo y material; la familiarización no acredita disponibilidad de funciones aún no entregadas. La salida requiere usuarios certificados según plan aprobado, compatible con A15 en M13--M15 y producción E1 en M16. Véase sección 9.3.1.
 
@@ -63,3 +76,4 @@ El perfil de carga común es 380 sesiones nominales (80 internas, 150 conductore
 Antes de ejecutar la carga se aprobará un manifiesto que identifique versiones de S2 y del perfil de arquitectura, poblaciones de referencia, proporciones de simultaneidad, operaciones por actor, tiempos de espera, rampa, duración, volumen de datos y ambiente. H1 contrastará las hipótesis con sesiones y actividad observadas; sin ese contraste, 380 y 570 siguen siendo escenarios sintéticos y el resultado no acredita representatividad de la operación real. El perfil incluye por separado la cota de viajes diarios de S2 y la concurrencia; no convierte una magnitud en la otra. Los umbrales contractuales se mantienen aunque la calibración obligue a ajustar la capacidad.
 
 Construcción E1: A09/A10/A11; certificación E1 A12, M12/H5, con informes separados de las cuatro familias y UAT. Marcha blanca A15, M13--M15; producción A19, M16/H7. Construcción E2 A20 y certificación A22, M18/H10, incluyendo regresión E1 y las cuatro familias. Marcha blanca A24, M19--M20; aceptación final A25, M21/H12. DR y seguridad ofensiva requieren autorización previa y reversión; las ventanas contractuales no se desplazan por ensayos. Resiliencia y DR se repiten semestralmente en operación; intrusión anual y antes de producción por tercero independiente, con informe íntegro y remediación. Se realizan dos ensayos de migración antes de la definitiva (FEP02, 20.1, pp. 34--35; RT-11.20, p. 24). Véase sección 9.3.2.
+\end{formulario}

@@ -12,7 +12,7 @@ audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. O
 | Ficha T-19. Innovación tipo 2. Proceso. Programación dinámica de intervenciones por oportunidad de patio | [7](AUDIT-Formulario-T-19.pdf#page=7) |
 | Ficha T-19. Innovación tipo 3. Tecnológica o de arquitectura. Semirremolque conectado | [8](AUDIT-Formulario-T-19.pdf#page=8) |
 | Ficha T-19. Innovación tipo 4. Modelo de negocio o de contratación. Esquema de adhesión y propiedad del dispositivo | [10](AUDIT-Formulario-T-19.pdf#page=10) |
-| Ficha T-19. Innovación tipo 5. Experiencia de usuario, sostenibilidad o impacto social. Bienestar del conductor y descanso en parador seguro | [11](AUDIT-Formulario-T-19.pdf#page=11) |
+| Ficha T-19. Innovación tipo 5. Experiencia de usuario, sostenibilidad o impacto social. Bienestar del conductor y descanso en parador seguro | [12](AUDIT-Formulario-T-19.pdf#page=12) |
 
 
 ## Innovación 1. Producto o servicio. Expediente verificable del transportista
@@ -44,8 +44,8 @@ audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. O
 | Nivel de madurez | TRL 2 propuesto, en escala NASA de nueve niveles: concepto definido, sin prueba de concepto ejecutada. Se valida factibilidad antes del piloto de M6 y se documenta el nivel alcanzado. |
 | Fuentes | (NASA, s. f.; Microsoft, s. f.; Microsoft, s. f.) |
 | Dónde se inserta en la arquitectura | Flota y activos registra las intervenciones; Telemetría aporta actualidad y configuración; la plataforma DevSecOps construye y firma el artefacto. Manifiesto por unidad, familia, kit, versión y acta. |
-| Paquetes de la EDT | 12.2, con integración a 4.1 y 4.2; conciliación con S7 pendiente. |
-| Mes del cronograma | Piloto de 10 camiones en M6; propios M6–M9; terceros adheridos desde M7; pausa M11–M15 y continuación M16–M18. |
+| Paquetes de la EDT | 12.2, con integración a 4.1 y 4.2; calendario acordado con S7. |
+| Mes del cronograma | Piloto de 10 camiones en M6; propios M6–M9, flota propia completa en M9; terceros adheridos desde M7; pausa M11–M15 y continuación M16–M18. |
 | Inversión requerida | Planificador, tablero, integración, homologación del agente y kits diferenciales. No se cobra nuevamente el stock contractual de T-11. Valorización incremental y flujo de caja pendientes en la Oferta Económica. |
 | Efecto en el costo operacional | Ejecución, almacenamiento de actas y mantenimiento del planificador, separados de la conectividad ya presupuestada. |
 | Beneficio esperado | Reducción de preparación desperdiciada y visitas evitables. Se estima con cantidades y costos unitarios documentados, menos el costo incremental. Sin ahorro garantizado ni base inventada. |
@@ -108,8 +108,8 @@ audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. O
 | Mes del cronograma | Talleres ergonómicos M4; catálogo M3--M6; software a bordo M4--M9. Ensayos del prototipo integrado M10--M12. Piloto y validación con conductores en marcha blanca M13--M15; producción E1 en M16 |
 | Inversión requerida | Software de borde incremental y talleres ergonómicos participativos. El catálogo se levanta dentro de la campaña de cobertura |
 | Efecto en el costo operacional | Menor búsqueda errática de estacionamiento en ruta, con un efecto en combustible que se mide en la Etapa 1 |
-| Beneficio esperado | Menor riesgo de siniestros graves por microsueño y supresión de multas por la Ley N.º 21.377 y el artículo 25 bis. Reflejado en mitigación de contingencias patrimoniales y ahorros de seguros |
-| Indicador, línea base y meta | Alertas con parador calificado, de 0 a 98 % o más. Bloqueo cinético del 100 %. NASA-TLX con guantes bajo 35 puntos y adherencia voluntaria de 85 % o más, con línea base medida en la Etapa 1 |
+| Beneficio esperado | Reducción esperada de exposición a detenciones inseguras, incumplimientos de jornada y uso de dispositivos en marcha. Su magnitud se evalúa con indicadores de seguridad y adopción; sin garantía de eliminar siniestros o multas |
+| Indicador, línea base y meta | Efectividad: 100 × episodios con recomendación válida y oportuna / episodios en que el oráculo exige parada; meta $\ge98%$. Parador verificado, compatible y alcanzable dentro del tiempo legal remanente; aviso acústico oportuno. Falta de parador y aviso tardío cuentan como fallos; denominador cero sin tasa. Línea base medida antes del piloto. Controles separados: bloqueo 100%, NASA-TLX <35, adherencia $\ge85%$, con sus líneas base en Etapa 1 |
 | Momento de medición | Mensual durante la marcha blanca M13--M15, antes de producción E1 en M16; nivel alcanzado respaldado por informe de resultados |
 | Riesgo de adopción | Que los 258 conductores externos lo perciban como vigilancia patronal encubierta, probabilidad media a alta e impacto alto |
 | Mitigación | Diseño ergonómico participativo en horario de relevo en los cinco terminales y orientación al bienestar |

@@ -4,6 +4,23 @@
   "modo_folio": "subdocumento",
   "archivos": [
     {
+      "clave": "00",
+      "nombre": "INFORME2_AUDIT_SUBDOC00_20261005.pdf",
+      "folio_inicial": 1,
+      "paginas": 9,
+      "aux": "salida/aux/informe2/00/INFORME2_AUDIT_SUBDOC00_20261005.aux",
+      "log": "salida/aux/informe2/00/INFORME2_AUDIT_SUBDOC00_20261005.log",
+      "fuentes": [
+        [
+          "subdocumentos"
+        ],
+        [
+          "subdocumentos",
+          "anexos"
+        ]
+      ]
+    },
+    {
       "clave": "01",
       "nombre": "AUDIT-Subdocumento1.pdf",
       "folio_inicial": 1,
@@ -87,7 +104,7 @@
       "clave": "06",
       "nombre": "AUDIT-Subdocumento6.pdf",
       "folio_inicial": 1,
-      "paginas": 19,
+      "paginas": 20,
       "aux": "salida/aux/informe2/06/AUDIT-Subdocumento6.aux",
       "log": "salida/aux/informe2/06/AUDIT-Subdocumento6.log",
       "fuentes": [
@@ -167,7 +184,7 @@
       "clave": "01T-6",
       "nombre": "AUDIT-Formulario-T-6.pdf",
       "folio_inicial": 1,
-      "paginas": 11,
+      "paginas": 6,
       "aux": "salida/aux/informe2/01T-6/AUDIT-Formulario-T-6.aux",
       "log": "salida/aux/informe2/01T-6/AUDIT-Formulario-T-6.log",
       "fuentes": [
@@ -367,7 +384,7 @@
           "subdocumentos"
         ],
         [
-          "subdocumentos/01-empresa"
+          "/home/carlosa/Documentos/Universidad/Actual/FEP/06_Repositorios_Git/repo/recursos/Formato-Oferta-audIT/subdocumentos/01-empresa"
         ]
       ]
     },
@@ -383,7 +400,7 @@
           "subdocumentos"
         ],
         [
-          "subdocumentos/02-problema"
+          "/home/carlosa/Documentos/Universidad/Actual/FEP/06_Repositorios_Git/repo/recursos/Formato-Oferta-audIT/subdocumentos/02-problema"
         ]
       ]
     }

@@ -10,19 +10,19 @@ El FEP01, Artículo 46, p. 28 pide resolver en cada informe las observaciones de
 
 | N.º | Observación | Respuesta | Sección modificada |
 |---|---|---|---|
-| 02 | Formulario T-19 diferido a la propuesta final cuando el ítem 13 de las bases lo incluye en esta instancia. | Se acepta. Se acoge la observación. Se implementa en el Formulario T-19 y Secciones 13.2 a 13.6, entregando las cinco (5) fichas técnicas completas del Formulario T-19 estructuradas bajo los siete elementos mandatorios del Artículo 29 para cada innovación. Verificado y cerrado. | Anexo Formulario T-19 (Fichas Tipo 1 a 5) y Secciones 13.2 a 13.6. |
-| 88 | La innovación tipo 3 es el RT-03.10 y RT-03.13; es una exigencia base presentada como innovación (prohibido por Art. 30). | Se acepta. Se acoge la observación. Se implementa en la Sección 13.4 y Formulario T-19 (Ficha Tipo 3), reemplazando la propuesta por una innovación arquitectónica genuina (Arquitectura Híbrida de Ingesta y Búfer Desacoplado con Compresión Protobuf en Borde), respetando el Art. 30. Verificado y cerrado. | Sección 13.4 y Formulario T-19 (Ficha Tipo 3). |
-| 89 | La innovación tipo 2 es el método que imponen las restricciones del Capítulo 6 y el numeral 13.3. | Se acepta. La innovación 2 actual se denomina «Despliegue continuo y modular sin detención de flota» en S13 §13.2. Describe kits de reemplazo y aprovisionamiento, sobre restricciones obligatorias del Caso. El cierre exige demostrar qué mejora medible adicional aporta frente a ese cumplimiento mínimo; no se afirma diferenciación por renombrarla ni se remite a §13.3, que corresponde a innovación 3. | S13 §13.2 y ficha tipo 2 del T-19; restricciones del Caso y evidencia de mejora incremental. |
-| 90 | Las fichas T-19 con los 7 elementos del Art. 29 se difieren a la propuesta final en vez de entregarse. | Se acepta. Se acoge la observación. Se implementa en el Formulario T-19 (Fichas Tipo 1 a 5), entregando las cinco (5) fichas técnicas completas estructuradas rigurosamente según los siete elementos mandatorios del Art. 29. Verificado y cerrado. | Anexo Formulario T-19 (Fichas Tipo 1 a 5). |
-| 91 | Los tipos 2 y 3 no traen madurez, impacto económico ni riesgos; el tipo 5 no trae riesgo y el tipo 1 solo inversión. | Se acepta. S13 incorpora declaraciones de madurez e impacto para innovaciones 2/3 y riesgos para innovación 3. La ficha tipo 5 desarrolla madurez declarada, inversión, operación, método de beneficio, indicadores y riesgo de adopción. Es contenido documentado, no evidencia de ensayos ni valorización. La declaración STRIDE de innovación 3 remite a contenido no identificado en S4 y sus códigos EDT 3.4/4.4 discrepan del aviso de arquitectura; no se certifica cumplimiento de las cinco fichas. | S13 §§13.2/13.3 y fichas 2/3; ficha tipo 5 local §§4, 6, 7 y 8; conciliación económica en observación 97. |
-| 92 | En la tabla del tipo 3 las líneas base están inventadas y la meta está redactada al revés respecto del RT-03.13. | Se acepta. Se acoge la observación. Se implementa en la Sección 13.4, corrigiendo el sentido de la meta y eliminando las líneas base no sustentadas, comprometiendo calibración empírica en marcha blanca. Verificado y cerrado. | Sección 13.4. |
-| 93 | El tipo 5 usa cifras no medidas (NASA-TLX 68 pts, 1,2 % diésel, 22 % adherencia, costo por evento). | Se acepta. La ficha tipo 5 elimina la atribución de una línea base histórica cero sin medición, mantiene metas como compromisos de ensayo y condiciona datos GPS históricos a permisos. No acredita medición realizada ni actualización de S13. | Ficha T-19 tipo 5, sección 7; integración externa S13 §13.5. |
-| 94 | Las 280 horas de desarrollo son información de esfuerzo de la oferta dentro de la Oferta Técnica (contra Art. 50.2). | Se acepta. La ficha tipo 5 identifica conceptos y códigos de partidas sin precios, tarifas ni horas de desarrollo. Su contenido local no acredita depuración de la versión compilada de S13. | Ficha T-19 tipo 5, sección 6; cotejo externo S13. |
-| 95 | El tipo 4 cuantifica un recupero anual en pesos; son cifras del caso pero conviene retirarlas. | Se acepta. Se acoge la observación. Se implementa en la Sección 13.5 y Formulario T-19 (Ficha Tipo 4), retirando todas las cifras en moneda local (\$ CLP) y reformulando el análisis en porcentajes de optimización operativa y eficiencia de retorno. Verificado y cerrado. | Sección 13.5 y Formulario T-19 (Ficha Tipo 4). |
-| 97 | No hay trazabilidad con el flujo de caja para ninguna innovación y la tipo 4 debía reflejarse en estructura de costos. | Se acepta. La ficha tipo 5 desarrolla alcance incremental, períodos de inversión y soporte, método de beneficio, reglas contra duplicidades y conciliación entre partidas y celdas del modelo. Se identifican innovacion-5-inversion, innovacion-5-costo e innovacion-5-beneficio, con valores y referencias de planilla vacíos en los catálogos económicos de las dos versiones examinadas (formato compartido y copia de arquitectura); sus carpetas económicas no contienen modelo XLSX. La constatación se limita a esas fuentes y no prueba incorporación en otra versión. Se acredita trazabilidad conceptual, no incorporación al flujo de caja ni cierre. FEP01 T-22 exige valorización en Informe 3 y E-21 §2.7/Entregable 3 en Sobre 3. El cierre requiere estimaciones aprobadas, distribución mensual y concordancia de modelo y documentos; las otras innovaciones se verifican por separado. | Ficha T-19 tipo 5, §§6.1–6.5 y Tablas 19.3-A/B/C; FEP01 Art. 29.5, T-22 pp. 69–70, E-21 pp. 71–73; partidas de innovación 5 y modelo financiero. |
-| 98 | Declarar "investigación adicional requerida" en cada ficha equivale a declarar que la innovación no está diseñada. | Se aclara. La ficha tipo 5 declara TRL 6 para el modelo predictivo y objetivo TRL 7 tras piloto M13–M15, distinguiendo componentes comerciales. No afirma validación conseguida sin expediente. Este cambio no acredita revisión de las otras fichas ni actualización del S13 compilado. | Ficha T-19 tipo 5, sección 4 y Tabla 19.3; expediente de validación e integración externa S13. |
-| 99 | El punto 1.6 sobre estado de elaboración y responsables refleja organización interna, ininteligible para el mandante. | Se acepta. Se acoge la observación. Se implementa en la Sección 13.6 (eliminada), eliminando toda mención a la organización interna o división del trabajo entre proponentes; la titularidad se unifica en audIT SpA. Verificado y cerrado. | Sección 13.6 (eliminada). |
-| 100 | Cita al autor de las bases como autor, tabla partida entre páginas y cero figuras. | Se acepta. Se acoge la observación. Se implementa en el Subdocumento 13 completo, depurando la bibliografía bajo APA 7.ª edición, corrigiendo tablas e incorporando diagramas arquitectónicos explicativos. Verificado y cerrado. | Subdocumento 13 completo. |
+| 02 | Formulario T-19 diferido a la propuesta final cuando el ítem 13 de las bases lo incluye en esta instancia. | Se acepta. Se implementa en el Formulario T-19 y en las secciones 13.1 a 13.5 del Subdocumento 13, entregando las cinco fichas técnicas completas estructuradas bajo los siete elementos del Artículo 29 para cada innovación. | Formulario T-19 (Fichas Tipo 1 a 5) y S13, secciones 13.1 a 13.5. |
+| 88 | La innovación tipo 3 es el RT-03.10 y RT-03.13; es una exigencia base presentada como innovación (prohibido por Art. 30). | Se acepta. Se implementa en la Sección 13.3 y en el Formulario T-19 (Ficha Tipo 3), reemplazando la propuesta por la innovación de Semirremolque conectado mediante balizas BLE e identificación automática de acople, respetando el Artículo 30. | S13, sección 13.3 y Formulario T-19 (Ficha Tipo 3). |
+| 89 | La innovación tipo 2 es el método que imponen las restricciones del Capítulo 6 y el numeral 13.3. | Se acepta. La innovación 2 en S13 §13.2 (Programación dinámica de intervenciones por oportunidad de patio) desarrolla un modelo de coordinación que cruza telemetría de arribo, estado de bahías y disponibilidad de técnicos para aprovechar detenciones operacionales sin inmovilizar la flota, detallando su mejora incremental sobre las restricciones del Caso en las subsecciones 13.2.1 a 13.2.7. | S13 §13.2 (13.2.1 a 13.2.7) y Formulario T-19 (Ficha Tipo 2). |
+| 90 | Las fichas T-19 con los 7 elementos del Art. 29 se difieren a la propuesta final en vez de entregarse. | Se acepta. Se implementa en el Formulario T-19 (Fichas Tipo 1 a 5), entregando las cinco fichas técnicas completas estructuradas según los siete elementos del Artículo 29. | Formulario T-19 (Fichas Tipo 1 a 5). |
+| 91 | Los tipos 2 y 3 no traen madurez, impacto económico ni riesgos; el tipo 5 no trae riesgo y el tipo 1 solo inversión. | Se acepta. S13 y el Formulario T-19 incorporan niveles de madurez tecnológica (TRL), partidas de inversión y costo operacional, indicadores y análisis de riesgos para las cinco innovaciones, vinculando el modelado de amenazas STRIDE de la baliza con S4 §4.1.21. | S13 §§13.1 a 13.5; S4 §4.1.21; Formulario T-19 (Fichas 1 a 5). |
+| 92 | En la tabla del tipo 3 las líneas base están inventadas y la meta está redactada al revés respecto del RT-03.13. | Se acepta. Se implementa en la Sección 13.3, formulando los indicadores de la nueva innovación tipo 3 con línea base verificable y calibración en marcha blanca. | S13, sección 13.3 y Formulario T-19 (Ficha Tipo 3). |
+| 93 | El tipo 5 usa cifras no medidas (NASA-TLX 68 pts, 1,2 % diésel, 22 % adherencia, costo por evento). | Se acepta. La innovación 5 en S13 §13.5 y en la ficha 5 del Formulario T-19 establece que la línea base de carga cognitiva NASA-TLX y de desempeño operacional se mide durante los talleres de la Etapa 1, fijando las metas como compromisos verificables en marcha blanca. | S13 §13.5 y Formulario T-19, ficha 5. |
+| 94 | Las 280 horas de desarrollo son información de esfuerzo de la oferta dentro de la Oferta Técnica (contra Art. 50.2). | Se acepta. S13 §13.5 y la ficha 5 del Formulario T-19 identifican los conceptos y partidas de implementación y operación sin incluir precios, tarifas ni horas de desarrollo en la oferta técnica. | S13 §13.5 y Formulario T-19, ficha 5. |
+| 95 | El tipo 4 cuantifica un recupero anual en pesos; son cifras del caso pero conviene retirarlas. | Se acepta. La innovación 4 describe reparto de espera recuperada y permisos de transmisión. Sus indicadores son posiciones fuera de ventana, transportistas que reciben su participación en cobros respaldados y revocaciones; se expresan sin importes monetarios en la oferta técnica. | S13 §13.4, indicadores; T-19, ficha 4. |
+| 97 | No hay trazabilidad con el flujo de caja para ninguna innovación y la tipo 4 debía reflejarse en estructura de costos. | Se acepta. El Subdocumento 13 y el Formulario T-19 detallan el alcance incremental, los períodos de inversión y operación, el método de cálculo de beneficios y las reglas contra doble contabilización para cada innovación, remitiendo su valorización monetaria y flujo de caja al Informe 3 y al Sobre N.º 3 conforme al Artículo 50.2. | S13 §§13.1 a 13.5; Formulario T-19; FEP01 Art. 29.5, Art. 50.2, T-22 y E-21. |
+| 98 | Declarar "investigación adicional requerida" en cada ficha equivale a declarar que la innovación no está diseñada. | Se aclara. La innovación 5 se autoevalúa en TRL 2 conceptual. TRL 6 es objetivo de ensayos del prototipo en M10–M12 y TRL 7 de demostración operacional en M13–M15, antes de producción E1 en M16; los niveles alcanzados se determinan con resultados reproducibles. | S13 §13.5, madurez; T-19, ficha 5. |
+| 99 | El punto 1.6 sobre estado de elaboración y responsables refleja organización interna, ininteligible para el mandante. | Se acepta. La cartera de S13 se estructura en las cinco secciones 13.1 a 13.5; no contiene un apartado adicional de estado de elaboración o reparto de autores. La titularidad de las innovaciones se presenta como audIT. | S13 §§13.1–13.5. |
+| 100 | Cita al autor de las bases como autor, tabla partida entre páginas y cero figuras. | Se acepta. Se implementa en el Subdocumento 13 completo, aplicando el sistema de citación documental para las bases y APA 7.ª edición para fuentes externas, ajustando las tablas e incorporando figuras explicativas citadas en el texto. | Subdocumento 13 completo. |
 
 ## 13 Introducción a las Innovaciones
 
@@ -200,7 +200,7 @@ Fuente: Elaboración propia.
 \begingroup\emergencystretch=3em
 Flota y activos conserva `INTERVENCION_\allowbreak{}TALLER`; Telemetría conserva `DISPOSITIVO` y eventos de configuración; la plataforma de S6 construye y firma el artefacto. El manifiesto vincula dispositivo, familia, kit, versión y acta de validación, sin sobrescribir la evidencia anterior. El detalle de planificación se mantiene en el backlog EDT 12.2, con integración a EDT 4.1/4.2; no se altera la EDT de D2.\endgroup
 
-Calendario de S7/CONSIDERACIONES-D2: piloto de **10 camiones en M6**, montaje propio **M6–M9**, terceros adheridos desde M7, pausa M11–M15 y continuación M16–M18. El proceso no garantiza intervenir un tercero que no acuda o no adhiera. Los equipos existentes de los 192 terceros se integran mediante sus contratos autorizados; no se sustituyen por esta ficha.
+Calendario de S7/CONSIDERACIONES-D2: piloto de **10 camiones en M6**, montaje propio **M6–M9**, con **flota propia completa en M9**, terceros adheridos desde M7, pausa M11–M15 y continuación M16–M18. El proceso no garantiza intervenir un tercero que no acuda o no adhiera. Los equipos existentes de los 192 terceros se integran mediante sus contratos autorizados; no se sustituyen por esta ficha.
 
 ### 13.2.5 Impacto económico y vínculo al flujo de caja
 
@@ -357,7 +357,7 @@ repone desde la reserva del 10 % del Formulario T-11 (Teltonika Telematics, 2026
 La baliza agrega una fuente de datos a la arquitectura, y por eso tiene su propio modelado de amenazas,
 como exige FEP02, RT-26.07, p. 45. La sección 4.1.21 del Subdocumento 4 lo hace con la clasificación
 STRIDE y fija sus controles de diseño: la ingesta es de solo lectura, la señal sola no acredita jornada
-ni descanso y la baliza no actúa sobre el vehículo (sección ?).
+ni descanso y la baliza no actúa sobre el vehículo (sección 4.1.21).
 
 ## 13.4 Innovación 4 — Modelo de negocio o de contratación
 
@@ -380,7 +380,7 @@ retiro sin costo. Y reparto con el transportista de la espera recuperada que su 
 cobrar.
 
 **Delimitación frente a las bases.**  El plan de adhesión es alcance base: el criterio 27 del Caso
-lo exige y el Subdocumento 3 lo desarrolla (sección ?). Tampoco es innovación quién
+lo exige y el Subdocumento 3 lo desarrolla (sección 3.4.3). Tampoco es innovación quién
 compra el equipo, porque el Capítulo 11 lo resuelve (Caso, capítulo 11, p. 24). Lo que el Caso deja abierto
 es la decisión 5 del Caso, numeral 16.1, p. 34, sobre el equipo en un camión ajeno, y la restricción 2, que
 obliga a conseguir por contrato, incentivo o diseño lo que dependa de terceros. Esta innovación es el
@@ -409,7 +409,7 @@ en la marcha blanca. La proporción de la espera recuperada que va al transporti
 la aprueba el Comité Ejecutivo en el mes 2, antes de la primera conversación con los transportistas.
 
 **Impacto económico.**  El equipo lo compra el mandante, y audIT especifica la cantidad sobre las
-poblaciones del Caso y no sobre la adhesión (sección ?). Las partidas propias son
+poblaciones del Caso y no sobre la adhesión (sección 4.2.1). Las partidas propias son
 el diseño y la validación jurídica del anexo, la campaña en los cinco terminales y la consola de
 consentimiento, todas valorizadas en la Oferta Económica. En el costo operacional aumentan la
 conectividad, el soporte y la reposición de los equipos en comodato, y disminuye el costo de gestionar
@@ -458,7 +458,7 @@ acompañamiento predictivo del descanso, que cruza la cinemática del camión co
 alerta circadiana y un catálogo georreferenciado y calificado de paradores de carga pesada.
 
 **Tecnología que la sustenta.**  Motor predictivo que corre sobre audIT EdgeHub, el software
-de borde de audIT que define el Subdocumento 1 (sección ?), instalado en el equipo a bordo de la sección 4.2.2 (Caso, RT-06.01, p. 32). Evalúa en tiempo real el tiempo de conducción acumulado, la
+de borde de audIT que define el Subdocumento 1 (sección 1.1.3), instalado en el equipo a bordo de la sección 4.2.2 (Caso, RT-06.01, p. 32). Evalúa en tiempo real el tiempo de conducción acumulado, la
 topografía del tramo siguiente y la ventana de mínima alerta circadiana (*Window of Circadian
 Low*, de 02:00 a 06:00 h). Catálogo georreferenciado local en SQLite, en modo de registro anticipado de escritura, sobre la
 memoria flash industrial de 8 GB del equipo, especificada para las condiciones reales de uso que pide
@@ -480,14 +480,14 @@ sugiere pausas preventivas antes de que el conductor ingrese a tramos críticos 
 enfrente el valle biológico de microsueño de madrugada. En esa franja, a las 04:40, ocurrió el
 accidente del 14 de febrero de 2026, con un conductor que no había completado su descanso
 (Caso, capítulo 1, p. 4). La ontología, gobernanza y sincronización por actualización remota en terminales de un catálogo calificado para
-camiones de 45 toneladas con servicios dignos de descanso. Y un modelo social y ergonómico no punitivo
+camiones de 45 toneladas con servicios de higiene, agua potable y seguridad para el descanso. Y un modelo social y ergonómico no punitivo
 para los 258 conductores externos subcontratados (Caso, numeral 2.3, p. 6), conforme a las restricciones 1
 y 2 (Caso, capítulo 10, p. 23) y a la Ley N.º 20.123 (Ministerio del Trabajo, 2006), que transforma una herramienta de control patronal en
 un asistente de seguridad y bienestar.
 
-**Nivel de madurez.** Se utiliza la escala tecnológica de uno a nueve (ISO, 2013). El desarrollo integrado del modelo circadiano y del catálogo calificado de paradores se autoevalúa en TRL 2 conceptual: el concepto, sus entradas y su incorporación están definidos, pero no se aporta evidencia de una prueba de concepto o validación del prototipo. La disponibilidad comercial del equipo de borde, almacenamiento y síntesis de voz no acredita la madurez del conjunto ni de su integración con el enclavamiento.
+**Nivel de madurez.**  Se utiliza la escala tecnológica de uno a nueve (International Organization for Standardization, 2013). El desarrollo integrado del modelo circadiano y del catálogo calificado de paradores se autoevalúa en TRL 2 conceptual: el concepto, sus entradas y su incorporación están definidos, pero no se aporta evidencia de una prueba de concepto o validación del prototipo. La disponibilidad comercial del equipo de borde, almacenamiento y síntesis de voz no acredita la madurez del conjunto ni de su integración con el enclavamiento.
 
-TRL 6 es un objetivo de validación del prototipo integrado en entorno representativo durante las pruebas de Etapa 1 (M10--M12); TRL 7 es un objetivo de demostración operacional con conductores durante la marcha blanca M13--M15, antes de producción E1 en M16. El nivel alcanzado se determinará con versión y configuración, datos de entrada autorizados o sintéticos identificados, protocolo, entorno y resultados reproducibles, junto con evidencia del piloto. No se declaran ensayos realizados ni niveles 6 o 7 ya alcanzados. Las normas ergonómicas (ISO, 2017, 2019), los estudios de fatiga (National Academies of Sciences, Engineering, and Medicine, 2016) y la normativa aplicable (Congreso Nacional de Chile, 2021; Ministerio del Trabajo, 2003) fundamentan el diseño; no sustituyen los resultados de validación de audIT.
+TRL 6 es un objetivo de validación del prototipo integrado en entorno representativo durante las pruebas de Etapa 1 (M10--M12); TRL 7 es un objetivo de demostración operacional con conductores durante la marcha blanca M13--M15, antes de producción E1 en M16. El nivel alcanzado se determinará con versión y configuración, datos de entrada autorizados o sintéticos identificados, protocolo, entorno y resultados reproducibles, junto con evidencia del piloto. No se declaran ensayos realizados ni niveles 6 o 7 ya alcanzados. Las normas ergonómicas (International Organization for Standardization, 2017; International Organization for Standardization, 2019), los estudios de fatiga (National Academies of Sciences, Engineering, and Medicine, 2016) y la normativa aplicable (Congreso Nacional de Chile, 2021; Ministerio del Trabajo, 2003) fundamentan el diseño; no sustituyen los resultados de validación de audIT.
 
 **Diseño de la incorporación.**  Se articula en la capa de borde (motor predictivo a bordo,
 catálogo local y síntesis de voz), en la capa de servicios (servicio de gobernanza de paradores y
@@ -504,26 +504,20 @@ talleres ergonómicos participativos, mientras que el levantamiento del catálog
 recorrido de la campaña de medición de cobertura que exige el Caso, RT-03.24, p. 31, sin costo
 logístico adicional. En costo operacional
 reduce la búsqueda errática de estacionamiento en ruta, con un efecto en combustible que se mide en la
-Etapa 1. El beneficio central radica en la mitigación del riesgo de siniestros graves por microsueño y
-en la supresión de multas por la Ley N.º 21.377 y el artículo 25 bis.
+Etapa 1. El beneficio esperado es reducir la exposición a detenciones inseguras, incumplimientos de jornada y uso de dispositivos en marcha. Su magnitud se evaluará con los indicadores de seguridad y adopción; no se garantiza eliminación de siniestros ni de multas.
 
 En el flujo de caja de la Oferta Económica, la innovación se registra en la partida CAPEX de desarrollo de software de borde y talleres ergonómicos, y en OPEX bajo la línea de servicios de actualización y soporte de cartografía segura.
 
-**Indicador de verificación.**  Línea base cero de alertas con parador calificado garantizado,
-con meta de 98 % o más de efectividad en ruta nacional, medida mensualmente en la marcha blanca. Cero
-eventos de interacción táctil con el vehículo en movimiento, sobre 0 km/h, con meta de 100 % de
-bloqueo cinético.
-Carga cognitiva NASA-TLX con guantes bajo 35 puntos, con línea base que se mide en los talleres de la
-Etapa 1. Y adherencia voluntaria a paradas seguras de los conductores externos de 85 % o más, con
-línea base que se mide en la misma etapa.
+**Indicador de verificación.**  La efectividad de recomendación se calcula como 100 × episodios con recomendación válida y oportuna / total de episodios en que el oráculo del protocolo exige recomendar una parada, con meta de al menos 98%. Una recomendación es válida y oportuna si identifica un parador con atributos de acceso y servicios verificados, compatible con el vehículo y alcanzable antes de agotar el tiempo legal de conducción, y emite el aviso acústico con la anticipación necesaria. El protocolo fija ruta, vehículo, tiempo remanente, catálogo y estado conocido del parador; un oráculo independiente determina el resultado esperado. La falta de un parador alcanzable y una alerta tardía cuentan como fallos, no se excluyen para mejorar el porcentaje. Se informa además el número total de episodios, fallos por causa y resultados por corredor. Con denominador cero no se informa una tasa de éxito.
+
+La línea base de efectividad se medirá antes del piloto; la operación actual carece del servicio propuesto, lo que no equivale a una tasa histórica de cero medida. La evaluación se realiza mensualmente en la marcha blanca M13--M15. Se mantienen como controles separados cero interacciones táctiles en movimiento y bloqueo cinético del 100%, carga cognitiva NASA-TLX con guantes inferior a 35 puntos y adherencia voluntaria a paradas seguras de al menos 85%. Las líneas base de carga cognitiva y adherencia se obtienen en los talleres de Etapa 1. Los resultados permiten comprobar metas; no se presentan como mediciones obtenidas.
 
 **Riesgo de adopción.**  Que los 258 conductores externos perciban el sistema como vigilancia
 patronal encubierta, con probabilidad media a alta e impacto alto. Se mitiga mediante diseño
 ergonómico participativo en horario de relevo en los cinco terminales y orientando la herramienta al
 bienestar, con recomendación de sitios con duchas, seguridad y convenios comerciales. La contingencia
 es que la unidad a bordo conmute a notificación puramente acústica por el altavoz del vehículo, sin
-requerir teléfonos personales ni botones adicionales en cabina, manteniendo la seguridad activa sin
-fricción sindical.
+requerir teléfonos personales ni botones adicionales en cabina, manteniendo la seguridad activa y respetando la participación voluntaria del conductor externo.
 
 ## Referencias
 
@@ -577,7 +571,9 @@ Conforme al Comunicado 10, sección 7.2, cada sección de este subdocumento y ca
 |---|---|---|---|---|---|
 | Artículo 46 | Claude Opus 5.5 en Claude Code | Redacción de las respuestas 88 a 100 y ubicación de la sección que resuelve cada una | Alto | Ninguno | **[Información requerida por dupla 4: nombre, cargo y qué verificó]** |
 | Introducción | Claude Opus 5.5 en Claude Code | Redacción inicial de la estrategia y la tabla de la cartera. Diagrama de la cartera generado con un guion desde el modelo definido por el equipo | Alto | Medio | **[Información requerida por dupla 4: nombre, cargo y qué verificó]** |
-| 13.1, 13.4 y 13.5 | Claude Opus 5.5 en Claude Code | Traslado del texto del Informe 1 ordenado por los siete elementos del Artículo 29, retiro de lo sancionado en las observaciones 93 a 100 y verificación de las citas al Caso | Medio | Ninguno | **[Información requerida por dupla 4: nombre, cargo y qué verificó]** |
+| 13.1 y 13.4 | Claude Opus 5.5 en Claude Code | Traslado del texto del Informe 1 ordenado por los siete elementos del Artículo 29, retiro de lo sancionado en las observaciones 93 a 100 y verificación de las citas al Caso | Medio | Ninguno | **[Información requerida por dupla 4: nombre, cargo y qué verificó]** |
 | 13.3 | Claude Opus 5.5 en Claude Code | Búsqueda de fichas de fabricante, redacción inicial desde la decisión D4-55 y diagrama del semirremolque generado con un guion desde el modelo definido por el equipo | Alto | Medio | **[Información requerida por dupla 4: nombre, cargo y qué verificó]** |
-| Formulario T-19 | Claude Opus 5.5 en Claude Code | Armado de las cinco fichas desde las secciones 13.1 a 13.5 | Alto | Ninguno | **[Información requerida por dupla 4: nombre, cargo y qué verificó]** |
+| Formulario T-19, fichas 1 a 4 | Claude Opus 5.5 en Claude Code | Armado de las cinco fichas desde las secciones 13.1 a 13.5 | Alto | Ninguno | **[Información requerida por dupla 4: nombre, cargo y qué verificó]** |
 | 13.2 y ficha T-19 tipo 2 | OpenAI Codex (GPT-6) | Diseño de programación de intervenciones por oportunidad de patio, indicadores, riesgos y gráfico | Alto | Alto | [D3: revisión de propuesta, calendario y valorización pendiente] |
+| 13.2 y ficha T-19 tipo 2 | OpenAI Codex | Explicitación del cierre de flota propia en M9 y conservación del calendario acordado; valorización incremental pendiente | Alto | Ninguno | [Revisión humana final y asociación a bitácora A-6 del responsable pendientes] |
+| 13.5 y ficha T-19 tipo 5 | Asistente LLM y OpenAI Codex | Integración del texto de experiencia de usuario; depuración de madurez y calendario; definición del indicador de recomendación y alcance del beneficio | Alto | Ninguno | Carlos Abarza: revisión de claridad y consistencia de la innovación 5, madurez actual y objetivos, ventanas de validación y producción, fórmula de efectividad y distinción entre metas y resultados. |

@@ -16,9 +16,9 @@ audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. O
 
 ## 9.1 Plan de Calidad
 
-El plan aplica controles preventivos y verificaciones basadas en riesgo a cada incremento de software, configuración de infraestructura y equipo embarcado. Los criterios de servicio provienen de las bases; los umbrales adicionales de cobertura de ramas, complejidad y vulnerabilidades se adoptan como compromisos bloqueantes de audIT y se distinguen del mínimo contractual. La homologación física utiliza los criterios de la Tabla ? del T-13 sobre la configuración ofertada, sin atribuir a las bases los parámetros adicionales de diseño ni declarar ensayos ejecutados.
+El plan aplica controles preventivos y verificaciones basadas en riesgo a cada incremento de software, configuración de infraestructura y equipo embarcado. Los criterios de servicio provienen de las bases; los umbrales adicionales de cobertura de ramas, complejidad y vulnerabilidades se adoptan como compromisos bloqueantes de audIT y se distinguen del mínimo contractual. La homologación física utiliza los criterios de la Tabla 9.2 del T-13 sobre la configuración ofertada.
 
-La homologación física utiliza iWave G26I con audIT EdgeHub, lector CAN sin contacto Technoton CANCrocodile y las balizas Bluetooth de la innovación 3. Se distinguen los 182 equipos previstos de los 192 terceros con dispositivos existentes: sus plataformas requieren acceso autorizado y no se presume API ni exportación disponible. El catálogo T-17 verifica lectura, integridad, datos ausentes, antigüedad y conciliación, sin atribuir al parque real el resultado de dobles sintéticos. Para frío, rango y precisión provienen del modelo y la homologación; no se trasladan especificaciones de sondas PT100.
+La configuración física sometida a homologación comprende iWave G26I con audIT EdgeHub, lector CAN sin contacto Technoton CANCrocodile y las balizas Bluetooth de la innovación 3. Los 182 equipos previstos se ensayan por modelo y montaje; para los 192 terceros con dispositivos existentes se verifican las interfaces y permisos de acceso disponibles. T-17 comprueba lectura, integridad, datos ausentes, antigüedad y conciliación mediante pruebas de integración y hardware. El control térmico utiliza el rango y la precisión del modelo homologado.
 
 ### 9.1.1 Modelo de calidad y controles verificables
 
@@ -36,11 +36,11 @@ La compatibilidad se prueba con contratos versionados de ERP, GPS, TMS y disposi
 
 La fiabilidad se verifica con disponibilidad real E2E de al menos 99,9 %, continuidad local y ejercicios de recuperación con RTO de hasta cuatro horas y RPO de hasta quince minutos. La seguridad se comprueba mediante autorización por titular, alcance y vigencia, revocación efectiva, aislamiento entre clientes y protección de evidencia; un acceso no autorizado bloquea la promoción.
 
-La aceptación de asignación mide el proceso completo hasta reserva y confirmación, incluidos reintentos, dentro del p95 de 30 s; exige revalidación ante cambios concurrentes de vigencia o permiso y una única asignación por solicitud. La contingencia documental mide hasta la recepción, reensamblado, validación y disponibilidad local de la representación completa y conforme en cabina, en hasta 90 s; folio o hash aislados no acreditan recepción. La recuperación conjunta concilia datos, documentos y eventos, sus vínculos, versiones y permisos vigentes o revocados, con RTO de hasta 4 h y RPO de hasta 15 min. Estos criterios se verifican en CP-SYS-01, CP-PERF-03/04/05 y CP-HW-11; no se declaran ensayos ejecutados.
+La aceptación de asignación mide el proceso completo hasta reserva y confirmación, incluidos reintentos, dentro del p95 de 30 s; exige revalidación ante cambios concurrentes de vigencia o permiso y una única asignación por solicitud. La contingencia documental mide hasta la recepción, reensamblado, validación y disponibilidad local de la representación completa y conforme en cabina, en hasta 90 s; folio o hash aislados no acreditan recepción. La recuperación conjunta concilia datos, documentos y eventos, sus vínculos, versiones y permisos vigentes o revocados, con RTO de hasta 4 h y RPO de hasta 15 min. Estos criterios se verifican en CP-SYS-01, CP-PERF-03/04/05 y CP-HW-11.
 
 La mantenibilidad se verifica con revisión, análisis estático, pruebas de regresión y cobertura automatizada de líneas ejecutables de lógica de negocio de al menos 70 % (mínimo contractual RT-04.11) y de ramas de al menos 80 % (compromiso adicional bloqueante de audIT, coherente con S6 §6.2.2, Tabla 6.6). Se calculan por separado líneas cubiertas/líneas ejecutables y ramas cubiertas/ramas instrumentadas; el manifiesto identifica módulos de negocio y exclusiones justificadas. No se promedian ambos porcentajes ni se incluyen dependencias o código generado para elevar la cobertura. La flexibilidad se comprueba en los modelos e interfaces homologados, con actualización/reversión y perfiles nominales y de estrés: no se presume compatibilidad con cualquier camión. La seguridad operacional se verifica mediante bloqueo ante jornada ausente, habilitación vencida o documento no conforme; la interacción del conductor se admite únicamente detenido. Dos autorizaciones comerciales no levantan esos bloqueos legales.
 
-La madurez del desarrollo seguro se gestiona mediante evaluación inicial y reevaluación anual con OWASP SAMM o marco equivalente (FEP02, RT-11.28, p. 24, carácter deseable). El resultado identifica práctica, evidencia, brecha, responsable y acción; no se declara una madurez alcanzada ni una certificación CMMI. Como controles adicionales de ingeniería, audIT adopta complejidad ciclomática $v(G)\le15$ por función, duplicación menor que 3 % del código analizado y cero ciclos en el grafo de dependencias entre módulos de negocio. Se conservan versión del analizador, exclusiones justificadas, denominador y grafo. Una función que excede quince caminos independientes requiere refactorización o descomposición antes de promocionar; un ciclo o acceso directo a datos ajenos incumple el límite de contexto. Estos controles bloquean promoción como compromisos de audIT, sin atribuir los números a las bases. La revisión por pares verifica que reducir una métrica no oculte lógica o suprima pruebas.
+La madurez del desarrollo seguro se gestiona mediante evaluación inicial y reevaluación anual con OWASP SAMM o marco equivalente (FEP02, RT-11.28, p. 24, carácter deseable). El resultado identifica práctica, evidencia, brecha, responsable y acción. Como controles adicionales de ingeniería, audIT adopta complejidad ciclomática $v(G)\le15$ por función, duplicación menor que 3 % del código analizado y cero ciclos en el grafo de dependencias entre módulos de negocio. Se conservan versión del analizador, exclusiones justificadas, denominador y grafo. Una función que excede quince caminos independientes requiere refactorización o descomposición antes de promocionar; un ciclo o acceso directo a datos ajenos incumple el límite de contexto. Estos controles bloquean promoción como compromisos de audIT, sin atribuir los números a las bases. La revisión por pares verifica que reducir una métrica no oculte lógica o suprima pruebas.
 
 El flujo incorpora SAST, composición, DAST y escaneo de imágenes con bloqueo de hallazgos críticos (FEP02, RT-11.22, p. 24); entrega SBOM por versión (RT-11.23) y firma/procedencia conforme a SLSA nivel 3 o superior (RT-11.24). El reporte relaciona artefacto, huella, pipeline y promoción autorizada; una firma aislada no demuestra cumplimiento de SLSA.
 
@@ -66,11 +66,11 @@ La disponibilidad se medirá sobre el servicio punta a punta y con la ventana, e
 
 La trazabilidad distingue el catálogo de 42 RF/RNF de S3/T-12 del universo de requisitos RT oficiales. La matriz de casos de T-17 cubre el catálogo propio en diseño; no acredita por sí sola la cobertura normativa completa. Para cada RT aplicable se conservarán fuente y código, estado de cumplimiento, componente responsable, sección y folio de la solución, método de verificación y evidencia prevista o ejecutada. Un localizador ausente o no resoluble mantiene el requisito pendiente de acreditación. QA comprobará la cadena RT--diseño--caso o inspección--evidencia antes de cerrar la revisión de trazabilidad; un requisito sin correspondencia no se considerará cubierto por el porcentaje de pruebas del catálogo propio.
 
-La jefatura de aseguramiento administra el plan, la matriz de trazabilidad y el registro de defectos. Desarrollo corrige hallazgos y adjunta evidencia; QA prepara o revisa los casos y comunica resultados; arquitectura y hardware confirman los parámetros de sus componentes. La aceptación del mandante permanece en la contraparte técnica designada. La asignación de responsables y la segregación de funciones del flujo de integración se vinculan a las funciones y dedicaciones de S7/T-15.
+El Líder de Calidad y Pruebas administra el plan, la matriz de trazabilidad y el registro de defectos. Desarrollo corrige hallazgos y adjunta evidencia; QA prepara o revisa los casos y comunica resultados; arquitectura y hardware confirman los parámetros de sus componentes. La aceptación del mandante permanece en la contraparte técnica designada. La asignación de responsables y la segregación de funciones del flujo de integración se vinculan a las funciones y dedicaciones de S7/T-15.
 
 ## 9.2 Estrategia de Aseguramiento de Calidad
 
-La verificación combina inspección, análisis automatizado y pruebas dinámicas. Se ejecutará sobre versiones identificadas y ambientes controlados. Las herramientas, los umbrales de seguridad y las autorizaciones de despliegue se especificarán en el diseño del flujo de integración; no se declara que los controles descritos ya estén implantados ni que las pruebas se hayan ejecutado.
+La verificación combina inspección, análisis automatizado y pruebas dinámicas. Se ejecutará sobre versiones identificadas y ambientes controlados. El flujo utiliza GitLab CI/CD, SonarQube, OWASP ZAP, k6 y Trivy; sus umbrales bloqueantes, responsables y evidencias de promoción se establecen en las puertas de calidad de §9.2.3.
 
 La Figura 9.1 muestra el recorrido general desde el criterio contractual hasta la aceptación. El detalle de niveles, datos y decisiones se desarrolla después de la figura.
 
@@ -92,24 +92,37 @@ Los datos de prueba serán sintéticos o anonimizados. El uso de datos operacion
 
 Antes de iniciar una prueba deben estar identificados el requisito y el caso de prueba; disponible la versión y el ambiente; aprobados los datos, parámetros, umbrales y responsables; y definidos los respaldos y la reversión cuando corresponda. La concurrencia y las ráfagas se fijan con el perfil de S4; las ventanas de ensayo son las de sección 9.3.2.
 
-Una prueba se cierra cuando se conserva el resultado reproducible, la evidencia, la versión y la evaluación contra criterios previamente aprobados. No se acepta el cierre de marcha blanca con incidentes críticos o altos abiertos atribuibles a la solución. Los defectos restantes requieren responsable, severidad, plazo acordado y aceptación documentada de la contraparte. Las categorías y plazos definitivos deben concordar con el contrato y el protocolo aprobado.
+Una prueba se cierra cuando se conserva el resultado reproducible, la evidencia, la versión y la evaluación contra criterios previamente aprobados. El Líder de Calidad y Pruebas clasifica cada defecto por impacto, asigna responsable y fecha límite y mantiene su relación con el requisito, la versión y la prueba de regresión. La severidad sigue FEP01, Artículo 78.1, p. 40: crítica, interrupción total, proceso crítico sin alternativa o compromiso de datos; alta, degradación severa, función crítica con alternativa costosa o afectación de un grupo relevante; media, función no crítica o degradación con alternativa disponible; baja, incidencia menor, defecto cosmético o consulta. Durante las pruebas se aplica el impacto que produciría el defecto en la operación.
+
+En aceptación de entregables, toda observación formal debe subsanarse dentro de diez días hábiles desde su formulación, cualquiera sea su severidad (FEP01, Artículo 18.3, p. 13). Los defectos críticos y altos detienen la promoción afectada y deben corregirse y reevaluarse antes del cierre de marcha blanca; los medios y bajos conservan responsable, fecha dentro del plazo de subsanación y pronunciamiento documentado de la contraparte. La segunda presentación con observaciones de igual naturaleza constituye atraso imputable. La respuesta registra diagnóstico y acción; la resolución incorpora la corrección y su reevaluación satisfactoria. Los SLA siguientes se aplican a incidentes durante operación y no sustituyen el plazo de aceptación ni el RTO/RPO de continuidad.
+
+**Tabla 9.2.** Plazos de atención de incidentes durante operación
+
+| Severidad | Respuesta máxima | Resolución máxima | Cobertura |
+|---|---|---|---|
+| Crítica | 15 min | 4 h | 24x7x365 |
+| Alta | 1 h | 8 h | 24x7x365 |
+| Media | 4 h | 24 h | Horario hábil extendido |
+| Baja | 8 h | 48 h | Horario hábil |
+
+Los plazos y coberturas de la Tabla 9.2 provienen de FEP01, Artículo 78.2, p. 40. El registro conserva inicio, respuesta, resolución y verificación; no se cierran defectos por una corrección sin prueba de regresión. El informe de causa raíz de incidentes críticos se entrega en cinco días hábiles y el de altos en diez; para medios se emite a solicitud.
 
 ### 9.2.3 Puertas de calidad propuestas
 
-La Tabla 9.2 establece los puntos de control de audIT, coherentes con S6, Tabla 6.6 y la Tabla ? del T-13. La configuración y evidencia del pipeline deben materializar esos compromisos; describirlos no acredita su implantación.
+La Tabla 9.3 establece los puntos de control de audIT, coherentes con S6, Tabla 6.6 y la Tabla 9.2 del T-13. Cada ejecución del pipeline conserva su configuración versionada, los resultados de los controles y la decisión de promoción.
 
-**Tabla 9.2.** Puertas de calidad y evidencia de salida
+**Tabla 9.3.** Puertas de calidad y evidencia de salida
 
 | Puerta | Control propuesto | Condición de salida | Evidencia |
 |---|---|---|---|
-| G1 — Código | Revisión, pruebas y análisis estático | Líneas \(\ge\)70 %, ramas \(\ge\)80 %, cero pruebas fallidas, complejidad \(\le\)15 por función | Reporte CI y SonarQube por versión; sección ? |
+| G1 — Código | Revisión, pruebas y análisis estático | Líneas \(\ge\)70 %, ramas \(\ge\)80 %, cero pruebas fallidas, complejidad \(\le\)15 por función | Reporte CI y SonarQube por versión; sección |
 | G2 — Dependencias | SAST, composición y escaneo de imágenes | Cero vulnerabilidades críticas o altas abiertas en el artefacto promovido | SBOM, SonarQube y Trivy por versión |
 | G3 — Integración | Contratos e intercambio entre servicios | Casos de integración trazados aprobados | Resultados y logs de integración |
 | G4 — Sistema | Rendimiento, resiliencia y seguridad | Umbrales acordados antes del ensayo y cumplidos | Reporte de ejecución y configuración |
 | G5 — Aceptación | Pruebas funcionales con usuarios designados | Acta de aceptación o lista de observaciones acordada | Casos ejecutados, incidencias y acta |
 | G6 — Recuperación | Restauración y continuidad | RTO/RPO exigidos demostrados en ejercicio autorizado | Bitácora, marcas de tiempo y reporte |
 
-Una puerta fallida detiene la promoción hasta documentar corrección y reevaluación satisfactoria. No se admite excepción que rebaje los mínimos contractuales o los gates adicionales bloqueantes de cobertura, complejidad y vulnerabilidades aquí comprometidos. La configuración propuesta del pipeline GitLab CI/CD, los servicios de Microsoft Azure y las herramientas SonarQube, OWASP ZAP, k6 y Trivy se verificará contra la arquitectura lógica antes de su uso. La integración efectiva requiere configuración versionada y evidencia de ejecución; no se considera demostrada por describir sus componentes.
+Una puerta fallida detiene la promoción hasta documentar corrección y reevaluación satisfactoria. No se admite excepción que rebaje los mínimos contractuales o los gates adicionales bloqueantes de cobertura, complejidad y vulnerabilidades aquí comprometidos. La configuración propuesta del pipeline GitLab CI/CD, los servicios de Microsoft Azure y las herramientas SonarQube, OWASP ZAP, k6 y Trivy se verificará contra la arquitectura lógica antes de su uso. Cada ejecución vincula configuración, versión del artefacto, informes y autorización de promoción.
 
 ## 9.3 Alineación con Plan de Trabajo
 
@@ -117,9 +130,9 @@ Las pruebas deben preceder a los hitos de integración, despliegue y aceptación
 
 ### 9.3.1 Secuencia de hitos de calidad
 
-La Tabla 9.3 relaciona cada hito con su actividad de aseguramiento, la evidencia de salida y la dependencia que permite ejecutarla.
+La Tabla 9.4 relaciona cada hito con su actividad de aseguramiento, la evidencia de salida y la dependencia que permite ejecutarla.
 
-**Tabla 9.3.** Secuencia de aseguramiento y dependencias de cronograma
+**Tabla 9.4.** Secuencia de aseguramiento y dependencias de cronograma
 
 | Hito | Actividad de calidad | Evidencia de salida | Dependencia |
 |---|---|---|---|
@@ -130,17 +143,17 @@ La Tabla 9.3 relaciona cada hito con su actividad de aseguramiento, la evidencia
 | Aceptación de hito | Ejecutar protocolo, recopilar observaciones y emitir acta | Evidencias y pronunciamiento de contraparte | Cronograma contractual y plan de trabajo |
 | Marcha blanca y cierre | Medir disponibilidad, incidencias y transferencia a soporte | Reporte del período y acta de conformidad | Ventana y criterios contractuales confirmados |
 
-Esta secuencia organiza las evidencias de calidad alrededor de los hitos, pero se aplica a las ventanas contractuales detalladas a continuación, sin declarar pruebas ejecutadas.
+Esta secuencia organiza las evidencias de calidad en las ventanas contractuales detalladas a continuación.
 
 G13 se acepta antes de iniciar la capacitación A13: identifica versión y configuración congeladas de PREPROD, funciones disponibles por perfil, datos de ensayo, material de formación y pruebas superadas. Los diez días iniciales de familiarización solo utilizan las funciones certificadas al cierre del sprint 7; la práctica completa y evaluación requieren la entrega completa de A09. Una función pendiente no se presenta como disponible por figurar en el cronograma. La certificación de usuarios y el cierre de A13 deben permitir la marcha blanca A15 dentro de M13--M15 y producción E1 en M16. Si falta esa evidencia, se registra el bloqueo y se revisa la secuencia de trabajo; no se acredita capacitación ni se desplazan por defecto los hitos contractuales.
 
-La alineación con S7 y la gestión de riesgos se comprueba con versiones identificadas del cronograma, dependencias y evidencias de preparación. Los porcentajes de simulación no sustituyen la entrega de G13, la certificación de usuarios ni un cálculo reproducible sobre la red vigente. Este plan no declara validados esos resultados por remitir a S7/S8.
+La alineación con S7 y la gestión de riesgos se comprueba con versiones identificadas del cronograma, dependencias y evidencias de preparación.
 
 ### 9.3.2 Actividades de calidad ubicadas en el calendario
 
-El calendario contractual establece las ventanas; la red vigente de S7/T-15 identifica las actividades A09 a A25 utilizadas aquí. Los códigos A son actividades verificables del cronograma, sin atribuirles la condición de diccionario completo de la EDT. La Tabla 9.4 sintetiza dónde se produce la evidencia de cada transición.
+El calendario contractual establece las ventanas; la red vigente de S7/T-15 identifica las actividades A09 a A25 utilizadas aquí. Los códigos A identifican las actividades verificables del cronograma. La Tabla 9.5 sintetiza dónde se produce la evidencia de cada transición.
 
-**Tabla 9.4.** Ventanas de ensayo y actividad de cronograma
+**Tabla 9.5.** Ventanas de ensayo y actividad de cronograma
 
 | Ventana | Actividad S7 | Ensayos | Salida verificable |
 |---|---|---|---|
@@ -154,7 +167,7 @@ El calendario contractual establece las ventanas; la red vigente de S7/T-15 iden
 | M21, hito H12 | A25 | Producto final | Acta e inicio de operación |
 | Operación (M21--M56) | A25/Operación | Simulacros semestrales DR (junio y noviembre) | Demostración RTO $\le 4 h, RPO \le 15$ min y conmutación |
 
-Las pruebas de carga utilizan el perfil aprobado de S4, conservando mezcla y concurrencia; resiliencia incluye desconexión embarcada de 72 h, terminal de 24 h y reconexión masiva. Cada ejercicio DR mide desde la declaración del incidente hasta servicio recuperado y contrasta el último dato recuperable con RPO; seguridad ofensiva se ejecuta con autorización, límites, datos de ensayo y reversión. Las cuatro familias producen informes independientes en las ventanas de pruebas integrales A12 (meses 10 a 12) y A22 (meses 17 a 18), para evitar que un éxito funcional sustituya una comprobación no funcional. Antes de cada paso a producción y semestralmente durante los 36 meses de operación (M21 a M56) se ejecutan las pruebas de resiliencia y DR; estos ejercicios de recuperación ante desastres se programan en junio y noviembre de cada año operacional, distanciados por cinco meses y fuera de la temporada alta de fruta para resguardar la continuidad de negocio ((FEP02, RT-07.07, p. 17)), certificando el RTO $\le 4$ h y RPO $\le 15$ min hacia la región secundaria Azure Brazil South (FEP02, RT-07.04, p. 17). Las pruebas de intrusión se ejecutan antes de cada paso a producción y anualmente, por tercero independiente de audIT, con informe íntegro y remediación (FEP02, 20.1, pp. 34--35; FEP02, RT-11.20, p. 24). La carga prueba los umbrales a 1,5 veces el peak declarado. La migración definitiva requiere dos ensayos previos con conciliación sin diferencias no explicadas. Estas comprobaciones complementan las certificaciones A12/A22 y conservan responsables, autorización y ventanas.
+Las pruebas de carga utilizan el perfil aprobado de S4, conservando mezcla y concurrencia; resiliencia incluye desconexión embarcada de 72 h, terminal de 24 h y reconexión masiva. Cada ejercicio DR mide desde la declaración del incidente hasta servicio recuperado y contrasta el último dato recuperable con RPO; seguridad ofensiva se ejecuta con autorización, límites, datos de ensayo y reversión. Las cuatro familias producen informes independientes en las ventanas de pruebas integrales A12 (meses 10 a 12) y A22 (meses 17 a 18), para evitar que un éxito funcional sustituya una comprobación no funcional. Antes de cada paso a producción y semestralmente durante los 36 meses de operación (M21 a M56) se ejecutan las pruebas de resiliencia y DR; estos ejercicios de recuperación ante desastres se programan en junio y noviembre de cada año operacional, distanciados por cinco meses y fuera de la temporada alta de fruta para resguardar la continuidad de negocio (FEP02, RT-07.07, p. 17), certificando el RTO $\le 4$ h y RPO $\le 15$ min hacia la región secundaria Azure Brazil South (FEP02, RT-07.04, p. 17). Las pruebas de intrusión se ejecutan antes de cada paso a producción y anualmente, por tercero independiente de audIT, con informe íntegro y remediación (FEP02, 20.1, pp. 34--35; FEP02, RT-11.20, p. 24). La carga prueba los umbrales a 1,5 veces el peak declarado. La migración definitiva requiere dos ensayos previos con conciliación sin diferencias no explicadas. Estas comprobaciones complementan las certificaciones A12/A22 y conservan responsables, autorización y ventanas.
 
 ### 9.3.3 Protocolo de aceptación, observaciones y acta
 
@@ -169,9 +182,9 @@ Cada evidencia incluirá identificador de requisito/caso, fecha, versión, ambie
 ### 9.3.5 Condiciones contractuales de calendario y aceptación
 
 \begingroup\emergencystretch=3em
-El calendario de la Tabla 9.5 es obligatorio conforme al FEP01, Artículo 17.1, pp. 12--13. M1 se cuenta desde el origen contractual efectivo; no se convierte la fecha de entrega de la oferta en inicio del contrato. Los puntos de control técnicos no sustituyen los hitos ponderados de E-25.\endgroup
+El calendario de la Tabla 9.6 es obligatorio conforme al FEP01, Artículo 17.1, pp. 12--13. M1 se cuenta desde el origen contractual efectivo; no se convierte la fecha de entrega de la oferta en inicio del contrato. Los puntos de control técnicos no sustituyen los hitos ponderados de E-25.\endgroup
 
-**Tabla 9.5.** Calendario contractual y evidencia de transición
+**Tabla 9.6.** Calendario contractual y evidencia de transición
 
 | Fase | Meses | Control y evidencia |
 |---|---|---|
@@ -191,9 +204,9 @@ El cliente dispone de diez días hábiles para revisar y pronunciarse y audIT de
 
 ### 9.3.6 Controles mínimos trazados y método de medición
 
-La Tabla 9.6 concreta los criterios que deben incorporarse al catálogo de pruebas y sus reportes. Los parámetros adicionales no rebajan estos mínimos.
+La Tabla 9.7 concreta los criterios que deben incorporarse al catálogo de pruebas y sus reportes. Los parámetros adicionales no rebajan estos mínimos.
 
-**Tabla 9.6.** Criterios contractuales de servicio y continuidad
+**Tabla 9.7.** Criterios contractuales de servicio y continuidad
 
 | Control | Umbral | Fuente y evidencia |
 |---|---|---|
@@ -209,11 +222,11 @@ La Tabla 9.6 concreta los criterios que deben incorporarse al catálogo de prueb
 | Autonomía terminal | $\ge24$ h sin enlace exterior | FEP01, Artículo 16.4, p. 12; FEP02, RT-03.10, p. 9: mínimo transversal ante las 12 h del caso; operación degradada y conciliación. |
 | Reconexión masiva | $\le20$ min por camión tras 72 h | Caso, RT-03.13, p. 31: perfil explícito de 300 unidades simultáneas; medir por unidad, sin pérdida de jornada o esperas. |
 
-Los mínimos de infraestructura no acreditan éxito de la transacción: se mide la experiencia real de la persona usuaria, conforme a FEP02, Cap. 9. Los SLA del T-6 corresponden a experiencia histórica y no se alteran. El perfil de 300 unidades responde al escenario de varios cientos del Caso, numeral 14.2; la tasa de generación, tamaño y ráfaga se justifican en la memoria de cálculo.
+Los mínimos de infraestructura no acreditan éxito de la transacción: se mide la experiencia real de la persona usuaria, conforme a FEP02, Cap. 9. El perfil de 300 unidades responde al escenario de varios cientos del Caso, numeral 14.2; la tasa de generación, tamaño y ráfaga se justifican en la memoria de cálculo.
 
-En marcha la captura es automática y no se admite interacción manual. Solo se habilita interacción con el vehículo detenido. El titular controla autorización, alcance, vigencia y revocación de datos; la jornada previa de un conductor externo requiere evidencia autorizada y su ausencia no equivale a jornada cero ni habilita despacho. Llegada y salida se registran automáticamente sin instalar equipos en recintos de clientes (Caso, RT-09.01, p. 32).
+Los controles de seguridad operacional incluyen ensayos de captura automática en marcha y rechazo de interacción manual hasta que el vehículo esté detenido. Las pruebas de autorización verifican titular, alcance, vigencia y revocación; la ausencia de evidencia autorizada de jornada previa del conductor externo debe impedir el despacho. Las pruebas de llegada y salida comprueban el registro automático sin instalar equipos en recintos de clientes (Caso, RT-09.01, p. 32).
 
-El cliente adquiere el hardware; audIT especifica cantidades, características, interoperabilidad, seguridad y reposición (Caso, Cap. 11; FEP02, Cap. 8). La sala de San Bernardo debe remediarse o reemplazarse y EXC-04 no excluye sus adecuaciones necesarias (Caso, RT-06.01, p. 32). No se presupone equipamiento, API del ERP ni acceso autorizado a interfaces de fábrica.
+La liberación de componentes físicos requiere cotejar cantidades, características, interoperabilidad, seguridad y reposición con las especificaciones de adquisición del cliente (Caso, Cap. 11; FEP02, Cap. 8). El control de preparación del sitio comprueba las adecuaciones de la sala de San Bernardo o su reemplazo antes de utilizarla; EXC-04 conserva esas adecuaciones en el alcance (Caso, RT-06.01, p. 32). Las pruebas de ERP y telemetría de fábrica requieren interfaces identificadas y acceso autorizado.
 
 ## Referencias
 
@@ -231,9 +244,9 @@ Conforme al Comunicado 10, sección 7.2, cada sección de este subdocumento y ca
 
 | Sección | Herramienta | Finalidad del uso | Nivel en texto | Nivel en diagramas | Revisión humana (quién y qué verificó) |
 |---|---|---|---|---|---|
-| Apertura | Asistente LLM y Codex | Integración del borrador de calidad | Alto | Ninguno | Carlos Abarza: lectura del alcance, aclaración de términos y revisión de consistencia de los criterios de calidad declarados. |
+| Apertura | Asistente LLM y Codex | Integración del capítulo de aseguramiento de calidad | Alto | Ninguno | Carlos Abarza: lectura del alcance, aclaración de términos y revisión de consistencia de los criterios de calidad declarados. |
 | 9.1 Plan de Calidad | Asistente LLM y Codex | Conciliación de cobertura contractual y de ramas, métricas y gates | Alto | Ninguno | Carlos Abarza: revisión de métricas, umbrales, fuentes y distinción entre mínimos contractuales y compromisos adicionales. |
 | 9.2 Estrategia de Aseguramiento de Calidad | Asistente LLM y Codex | Desarrollo de estrategia y controles; alineación de equipos e interfaces GPS; diagrama de proceso | Alto | Alto | Carlos Abarza: revisión de niveles de prueba, controles y evidencias; correspondencia de la figura con el proceso explicado. |
 | 9.3 Alineación con Plan de Trabajo | Asistente LLM y Codex | Integración de secuencia de hitos y evidencias | Alto | Ninguno | Carlos Abarza: revisión de secuencia de hitos, ventanas de prueba y condiciones de aceptación y subsanación. |
 | Formulario T-13 | Asistente LLM y Codex | Consolidación de gates, evidencia, equipos y perfil nominal/estrés | Alto | Ninguno | Carlos Abarza: revisión de criterios de aprobación, evidencia requerida y consistencia con el plan de calidad. |
-| Formulario T-17 | Asistente LLM y Codex | Corrección del bloqueo administrativo, FOTA, región y carga; depuración de 120 casos y cotejo S3/T-12 con matriz de 42 requisitos y variantes de comprobación; conciliación de modalidades y veredictos con S3; adaptación CAN, Bluetooth, memoria y acceso GPS | Alto | Ninguno | Carlos Abarza: revisión de claridad de casos, criterios y veredictos; consistencia de referencias con el plan de calidad y la matriz de requerimientos. |
+| Formulario T-17 | Asistente LLM y Codex | Diseño y depuración de 120 casos; trazabilidad con 42 requisitos; controles de interfaces, carga, recuperación, permisos y adhesión por modalidad | Alto | Ninguno | Carlos Abarza: revisión de claridad de casos, criterios y veredictos; consistencia de referencias con el plan de calidad y la matriz de requerimientos; revisión de modalidades, denominadores, vigencia, revocación y condiciones de capacitación y adhesión. |

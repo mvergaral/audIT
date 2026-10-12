@@ -10,5 +10,16 @@
 \input{configuracion/subdocumentos}
 
 \begin{document}
-\DocumentoCaratulaSobre
+\ExplSyntaxOn
+\str_if_eq:eeTF { \instancia } { informe2 }
+  {
+    \FijarSubdocumento{}
+    \portadaOferta
+    \fichaDocumento{Carátula~y~hoja~resumen~del~Informe~2}
+      {Identificación~de~la~oferta~y~localizadores~de~sus~documentos.~La~resolución~consolidada~del~Artículo~46~se~entrega~en~el~archivo~Tabla-Art46-Informe2.pdf.}
+      {Los~de~cada~subdocumento,~según~el~Formulario~T-21}
+    \hojaResumen
+  }
+  { \DocumentoCaratulaSobre }
+\ExplSyntaxOff
 \end{document}

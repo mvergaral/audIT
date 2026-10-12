@@ -11,8 +11,8 @@ audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. O
 | Glosario de códigos | [5](AUDIT-Formulario-T-12.pdf#page=5) |
 | Catálogo de requerimientos y matriz de trazabilidad | [5](AUDIT-Formulario-T-12.pdf#page=5) |
 | Registro de reglas de negocio | [13](AUDIT-Formulario-T-12.pdf#page=13) |
-| Registro de supuestos | [13](AUDIT-Formulario-T-12.pdf#page=13) |
-| Criterios de aceptación | [15](AUDIT-Formulario-T-12.pdf#page=15) |
+| Registro de supuestos | [14](AUDIT-Formulario-T-12.pdf#page=14) |
+| Criterios de aceptación | [16](AUDIT-Formulario-T-12.pdf#page=16) |
 | Registro de consultas y vacíos | [17](AUDIT-Formulario-T-12.pdf#page=17) |
 
 Este formulario detalla lo que el Subdocumento 3 resume. Trae el catálogo de los 42 requerimientos con
@@ -239,7 +239,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 | Descripción | Disponer del documento electrónico de transporte emitido por el sistema contable antes del movimiento, también en un punto de carga sin cobertura, por emisión anticipada o por datos enviados por enlace satelital |
 | Actor | Conductor y sistema contable |
 | Precondición | Punto de carga sin cobertura identificado en la caracterización en terreno |
-| Resultado | Folio a bordo antes de que el camión se mueva, sin que ningún equipo emita |
+| Resultado | Representación completa y conforme disponible en cabina antes del movimiento; sólo emite el sistema contable. Comprobación integral de los 90 segundos pendiente, incluida solicitud, emisión, retorno, reensamblado y verificación (S4 y S8, R-28) |
 | Prioridad | 1. Etapa 1, mes 16 |
 | Origen | Caso 4.5. CA-14. R-04 y R-08. DP-09. REQ-NEG-09 |
 | Cumplimiento | Sí |
@@ -404,10 +404,10 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 
 | Campo | Contenido |
 |---|---|
-| Descripción | Registrar la adhesión de cada transportista: invitación, anexo, modalidad, camiones, consentimientos, capacidades habilitadas y fechas |
+| Descripción | Registrar invitación, anexo, modalidad, camiones, consentimientos, capacidades habilitadas y fechas. Adhesión firmada: una vez por RUT de los 148 transportistas iniciales, anexo firmado por mandante y representante autorizado, vigente, no revocado y registrado al corte. Contar modalidades completa y de datos; instalación, activación y consentimientos de conductores se controlan por separado |
 | Actor | Coordinación de adhesión |
 | Precondición | Campaña de adhesión iniciada |
-| Resultado | Ocho indicadores de adhesión medidos cada mes |
+| Resultado | Ocho indicadores mensuales; al cierre de M9, 31 de octubre de 2027 bajo SA-01, al menos 60 firmados (40
 | Prioridad | 2. Etapa 1, mes 16 |
 | Origen | Caso 19. CA-27. R-02 y R-03. DP-02 y DP-05. REQ-NEG-19 |
 | Cumplimiento | Sí |
@@ -676,7 +676,7 @@ cambiarla. Un cambio de regla sigue el procedimiento de control de cambios del S
 | RN-08 | La liquidación de un transportista suma los viajes cerrados con conformidad por la tarifa pactada, más la parte pactada de la espera recuperada, menos los descuentos del contrato. Toda corrección posterior es un registro nuevo con motivo | Finanzas |
 | RN-09 | El retorno se ofrece al camión que quedará vacío más cerca de una carga compatible de la propia compañía, con preferencia para la flota adherida dentro del contrato vigente | Operaciones |
 | RN-10 | El equipo audIT transmite posición sólo dentro de la ventana del viaje asignado por la compañía. La revocación detiene la captura futura en no más de cinco minutos y no elimina evidencia de conservación obligatoria | Comité Ejecutivo |
-| RN-11 | Ningún viaje inicia el movimiento sin documento de transporte emitido por el sistema contable | Finanzas |
+| RN-11 | Ningún viaje inicia el movimiento sin documento de transporte emitido por el sistema contable y su representación completa y conforme disponible en cabina | Finanzas |
 | RN-12 | Toda vigencia avisa a 60, 30 y 7 días al titular y a quien debe actuar. Vencida, bloquea la asignación | Prevención de riesgos |
 
 Las reglas RN-03, RN-04 y RN-10 sólo las cambia el Comité Ejecutivo porque alteran el equilibrio entre
@@ -718,7 +718,7 @@ Caso, numeral 17.1, p. 38 obliga a incluir en este registro.
 | 08 | Llegada y salida por geocerca virtual evaluada a bordo | RF-010 y RNF-007 |
 | 09 | Documento sin cobertura por emisión anticipada o por datos enviados por satélite. El sistema contable siempre emite | RF-014 y sección 3.4.2 |
 | 10 | Conformidad con firma electrónica del destinatario en la aplicación, disponible el mismo día | RF-012 |
-| 11 | Frecuencia de muestreo y consumo de datos derivados en el Subdocumento 4 | sección ? |
+| 11 | Frecuencia de muestreo y consumo de datos derivados en el Subdocumento 4 | sección 4.2.2 |
 | 12 | Telemetría de fábrica de los 61 tractocamiones por lectura sin contacto, sujeta a la autorización de cada fabricante | RNF-005 y RF-025 |
 | 13 | audIT descarga el tacógrafo en el paso por terminal, con frecuencia fijada en la Etapa 1, y conserva el original | RF-007 |
 | 14 | Retorno según la regla RN-09 | RF-015 |
@@ -761,7 +761,7 @@ del contrato en que se alcanza y la forma de medirlo.
 | 11 | Objeciones bajo el 20 % de los cobros por espera respaldados | 21 | Promedio móvil de tres meses |
 | 12 | 100 % de las conformidades disponibles el mismo día o al reconectar | 16 | Conciliación diaria |
 | 13 | 100 % de los documentos emitidos desde la orden, sin redigitación | 16 | Conciliación de folios contra viajes |
-| 14 | 100 % de las salidas sin cobertura con folio a bordo antes del movimiento | 16 | Registro de folio contra primera posición |
+| 14 | 100 % de las salidas sin cobertura con representación completa y conforme en cabina antes del movimiento | 16 | Registro de disponibilidad y conformidad de la representación contra primera posición; ensayo integral de 90 segundos pendiente |
 | 15 | Kilómetros en vacío bajo el 18 % en población comparable | 33 | Medición trimestral desde el mes 21 |
 | 16 | 95 % de los viajes con costo trazable por componente | 16 | Reporte mensual de costo |
 | 17 | 100 % de los viajes con costo preliminar en 24 horas | 16 | Registro de cierre contra publicación |
@@ -807,4 +807,3 @@ audIT encontró después y que el Caso, numeral 16.1, p. 36 invita a declarar.
 
 Los vacíos V-01 y V-02 no están en la lista del numeral 16.1 y condicionan el plan. Ambos se resuelven
 en esta oferta sin alterar el cronograma obligatorio.
-

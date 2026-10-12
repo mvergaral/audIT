@@ -147,10 +147,10 @@ A continuación se presentan las fichas completas de caracterización de los tre
 
 La ficha distingue intereses, necesidades de información y capacidad efectiva de condicionar la operación.
 - **Identificación y Emplazamiento:** Representa al fondo de inversión institucional que adquirió el **22% de la propiedad accionaria** de Transportes Curimón S.A. en el año 2019. Posee representación formal en el Directorio corporativo.
-- **Objetivos Estratégicos:** Maximización del retorno sobre el capital invertido (ROIC), resguardo del margen EBITDA, saneamiento de contratos deficitarios, erradicación de pasivos contingentes laborales y aseguramiento de un gobierno corporativo robusto para una eventual salida estratégica o refinanciamiento.
-- **Dolores operacionales:** Deterioro del margen operacional (comprimido al 9,0%), existencia de 3 contratos principales bajo costo (-14%), ceguera frente a pasivos laborales contingentes derivados del régimen de subcontratación (Ley N.° 20.123) y amenaza de pérdida del cliente principal (19% de la facturación corporativa).
+- **Objetivos Estratégicos:** Retorno sobre el capital invertido, margen operacional, revisión de contratos deficitarios e información sobre riesgos y cumplimiento para las decisiones de inversión.
+- **Dolores operacionales:** Margen operacional de 9,0%, existencia de tres contratos principales bajo costo (uno con margen de -14%) y falta de información sobre contingencias laborales derivadas del régimen de subcontratación (Ley N.° 20.123) y amenaza de pérdida del cliente principal (19% de la facturación corporativa).
 - **Dependencias y Necesidades de Información:** Requiere tableros analíticos consolidados de EBITDA por unidad de negocio, auditoría de costos marginales por viaje, reportabilidad de cumplimiento normativo y reducción sistemática de riesgos operacionales.
-- **Poder Formal / Veto:** **Máximo (en Directorio).** Capacidad de condicionar aumentos de capital, vetar inversiones y exigir auditorías forenses externas.
+- **Poder Formal / Veto:** **Máximo (en Directorio).** Participación en las decisiones de inversión y solicitud de información y auditorías mediante su representación en el Directorio.
 - **Nivel de Interés:** **Bajo en la contingencia diaria / Muy Alto en la estabilidad estratégica corporativa.**
 - **Cuadrante de Gestión:** **Cuadrante 2: Mantener Satisfecho (Gobernanza y Retorno).**
 - **Riesgo Operacional si no se Resuelve:** Bloqueo de presupuesto corporativo, desalineamiento de accionistas y retiro de respaldo financiero para el plan de renovación de flota.
@@ -161,25 +161,25 @@ La ficha distingue intereses, necesidades de información y capacidad efectiva d
 La ficha distingue intereses, necesidades de información y capacidad efectiva de condicionar la operación.
 - **Identificación y Emplazamiento:** Órgano fiscalizador del Estado de Chile dependiente del Ministerio del Trabajo y Previsión Social. Ejerce inspecciones laborales en terreno, terminales viales y carretera.
 - **Objetivos Estratégicos:** Tutela y fiscalización del cumplimiento estricto de la legislación laboral chilena, con especial énfasis en el régimen de jornada especial y descansos de los choferes de carga interurbana consagrados en el Artículo 25 bis del Código del Trabajo y la Ley N.° 20.123.
-- **Dolores Operacionales e Infraccionales:** Cero descargas históricas de tacógrafos digitales en Curimón, ceguera institucional respecto a la jornada previa de los 258 choferes subcontratados, brechas en la evidencia de jornada y cuatro siniestros con lesiones en tres años, uno grave. El incidente del km 312 se distingue del dato agregado; no se atribuye fatiga a todos los siniestros.
+- **Dolores Operacionales e Infraccionales:** Cero descargas históricas de tacógrafos digitales en Curimón, falta de información respecto a la jornada previa de los 258 choferes subcontratados, brechas en la evidencia de jornada y cuatro siniestros con lesiones en tres años, uno grave. El incidente del km 312 se distingue del dato agregado; no se atribuye fatiga a todos los siniestros.
 - **Dependencias y Necesidades de Información:** Requiere registros electrónicos de asistencia y conducción auditables, con cadena de custodia inalterable, marcas de tiempo exactas y disponibilidad inmediata ante requerimiento de inspectores en cualquier terminal de la red.
-- **Poder Formal / Veto:** **Extremo (Potestad Pública Sancionatoria y de Clausura).** Capacidad legal de paralizar despachos, aplicar multas gravísimas y remitir antecedentes a tribunales de cobranza laboral y previsional.
+- **Poder Formal / Veto:** **Alto (Fiscalización y sanciones).** Puede requerir registros y adoptar las medidas de fiscalización y sanción que correspondan según los hechos y la normativa aplicable.
 - **Nivel de Interés:** **Bajo en la logística diaria / Crítico ante fiscalizaciones e incidentes viales.**
 - **Cuadrante de Gestión:** **Cuadrante 2: Mantener Satisfecho (Cumplimiento Legal Invariable).**
-- **Riesgo Operacional si no se Resuelve:** Paralización legal de terminales de Curimón, multas reiteradas por infracciones gravísimas y pérdida de la calidad de empleador habilitado para contratar con el Estado o grandes mandantes.
+- **Riesgo Operacional si no se Resuelve:** Investigaciones y eventuales sanciones laborales ante incumplimientos, además de dificultad para acreditar jornada y descanso durante una fiscalización.
 - **Mecanismo de Interacción y Mitigación de Fricción:** Registros de jornada y custodia disponibles ante requerimientos de fiscalización.
 
 ### 2.4.3 FICHA N.° 03: Compañías Aseguradoras de Carga y Flota
 
 La ficha distingue intereses, necesidades de información y capacidad efectiva de condicionar la operación.
 - **Identificación y Emplazamiento:** Entidades financieras aseguradoras nacionales e internacionales que suscriben las pólizas de Responsabilidad Civil (RC), daños a la carga perecible (cadena de frío), transporte de sustancias peligrosas y casco de tractocamiones de Curimón.
-- **Objetivos Estratégicos:** Determinación precisa del riesgo asegurable, verificación estricta de condiciones de operabilidad previa a liquidar siniestros, exigencia de debida diligencia patronal y rechazo de coberturas ante negligencia inexcusable o transgresión de normas legales de tránsito y jornada.
-- **Dolores Operacionales y de Siniestralidad:** Ocurrencia de cuatro siniestros con lesiones en los últimos tres años, uno de ellos grave, falta de telemetría de temperatura histórica ininterrumpida ante reclamos de quiebre de frío en los 44 equipos refrigerados, y ausencia de medios probatorios de velocidad en camiones de terceros al momento de volcamientos.
+- **Objetivos Estratégicos:** Determinación precisa del riesgo asegurable, verificación estricta de condiciones de operabilidad previa a liquidar siniestros, verificación de las obligaciones de la póliza y de los antecedentes de tránsito y jornada relevantes para evaluar cada siniestro.
+- **Dolores Operacionales y de Siniestralidad:** Ocurrencia de cuatro siniestros con lesiones en los últimos tres años, uno de ellos grave, falta de telemetría de temperatura histórica ininterrumpida ante reclamos de quiebre de frío en los 44 equipos refrigerados, y ausencia de medios probatorios de velocidad en camiones de terceros ante siniestros en ruta.
 - **Dependencias y Necesidades de Información:** Necesita evidencia histórica de temperatura, velocidad y odometría, además de revisiones técnicas y mantenciones vigentes. El rango de medición y la frecuencia de muestreo son decisiones de diseño que deben justificarse en S3/S4.
-- **Poder Formal / Veto:** **Alto (Capacidad de Denegación de Cobertura y Elevación de Primas).** Capacidad de no indemnizar siniestros millonarios y elevar las primas comerciales hasta hacer inviable la operación.
+- **Poder Formal / Veto:** **Alto (Capacidad de Denegación de Cobertura y Elevación de Primas).** Determina la cobertura de cada siniestro según la póliza y puede modificar las condiciones y primas en la renovación.
 - **Nivel de Interés:** **Bajo en la operación rutinaria / Crítico ante la ocurrencia de siniestros.**
 - **Cuadrante de Gestión:** **Cuadrante 2: Mantener Satisfecho (Mitigación Probatoria de Riesgo).**
-- **Riesgo Operacional si no se Resuelve:** Pérdidas patrimoniales catastróficas no cubiertas por seguros ante volcamientos o descomposición de cargas de alto valor en ruta.
+- **Riesgo Operacional si no se Resuelve:** Dificultad para reconstruir siniestros o reclamos por deterioro de carga y para acreditar las condiciones de la operación durante su evaluación por la aseguradora. La cobertura depende de la póliza y de la evaluación de cada caso.
 - **Mecanismo de Interacción y Mitigación de Fricción:** Evidencia térmica, cinemática, documental y de mantenimiento atribuible al viaje.
 
 ### 2.4.4 FICHA N.° 04: Directorio y Familia Fundadora (78% de la Propiedad)
@@ -187,7 +187,7 @@ La ficha distingue intereses, necesidades de información y capacidad efectiva d
 La ficha distingue intereses, necesidades de información y capacidad efectiva de condicionar la operación.
 - **Identificación y Emplazamiento:** Representa a la segunda generación familiar fundadora de Transportes Curimón S.A., controladora del 78% del capital social de la compañía cerrada.
 - **Objetivos Estratégicos:** Continuidad histórica de la empresa familiar, preservación del patrimonio corporativo, mantenimiento de relaciones comerciales de largo plazo y defensa de la reputación de la marca Curimón construida durante décadas.
-- **Dolores Operacionales:** Sentimiento de pérdida de control sobre la operación, amenaza existencial por la posible no renovación del contrato del 19% en 2029, daño a la reputación corporativa por accidentes de carretera y fricción con los socios del fondo de inversión por la baja rentabilidad (9,0%).
+- **Dolores Operacionales:** Sentimiento de pérdida de control sobre la operación, riesgo comercial por la posible no renovación en 2029 del contrato que aporta el 19% de los ingresos, daño a la reputación corporativa por accidentes de carretera y fricción con los socios del fondo de inversión por la baja rentabilidad (9,0%).
 - **Dependencias y Necesidades de Información:** Informes de desempeño global, estado de mitigación de la brecha 2029 y preservación de la solvencia patrimonial.
 - **Poder Formal / Veto:** **Máximo (Societario y de Control Estratégico).**
 - **Nivel de Interés:** **Medio en el detalle técnico / Máximo en la viabilidad y reputación corporativa.**
@@ -226,7 +226,7 @@ La ficha distingue intereses, necesidades de información y capacidad efectiva d
 La ficha distingue intereses, necesidades de información y capacidad efectiva de condicionar la operación.
 - **Identificación y Emplazamiento:** Líder del área financiera y contable, incorporada recientemente para sanear los márgenes corporativos y profesionalizar la gestión de costos.
 - **Objetivos Estratégicos:** Recuperación del margen operacional corporativo (por sobre el 9,0%), erradicación de subsidios cruzados en contratos, costeo marginal analítico por viaje y aceleración del ciclo de liquidación a transportistas.
-- **Dolores Operacionales:** Ceguera financiera estructural provocada por el prorrateo de costos por ingresos; tres contratos deficitarios y uno a -14% durante cuatro años; rezago de 40 días en la facturación de diésel; y un proceso de liquidación manual mensual a 148 dueños que toma 9 días a 8 personas con un 11% de notas de corrección.
+- **Dolores Operacionales:** Falta de visibilidad de los costos por contrato debido al prorrateo por ingresos; tres contratos deficitarios y uno a -14% durante cuatro años; rezago de 40 días en la facturación de diésel; y un proceso de liquidación manual mensual a 148 dueños que toma 9 días a 8 personas con un 11% de notas de corrección.
 - **Dependencias y Necesidades de Información:** Conciliación diaria (< 24 h) de combustible, peajes de autopista y fletes por orden de transporte; telemetría de consumo directo por CAN bus; e integración contable con ERP.
 - **Poder Formal / Veto:** **Alto (Control de caja, inversiones y autorizaciones de pago).**
 - **Nivel de Interés:** **Alto (Orientado al margen operacional).**
@@ -283,7 +283,7 @@ La ficha distingue intereses, necesidades de información y capacidad efectiva d
 - **Poder Formal / Veto:** **Alto de facto (Rechazo operacional y seguridad de conducción).**
 - **Nivel de Interés:** **Alto (Afecta su bienestar, remuneración y seguridad física).**
 - **Cuadrante de Gestión:** **Cuadrante 1: Gestionar de Cerca (Alto poder efectivo / Alto interés operativo).**
-- **Riesgo Operacional si no se Resuelve:** Fatiga extrema en ruta, vuelcos con lesiones o muerte, paralización gremial y multas de la Dirección del Trabajo.
+- **Riesgo Operacional si no se Resuelve:** Riesgo de asignar viajes sin comprobar descanso suficiente, incidentes viales, conflictos con conductores y eventuales sanciones laborales.
 - **Mecanismo de Interacción y Mitigación de Fricción:** Alertas oportunas, descanso viable y ausencia de interacción exigida durante conducción.
 
 ### 2.4.12 FICHA N.° 12: Nolberto Sandoval Pinto y Colectivo de Transportistas Subcontratados (148 Dueños)

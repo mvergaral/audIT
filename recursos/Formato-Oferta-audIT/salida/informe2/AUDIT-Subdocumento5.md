@@ -10,14 +10,14 @@ El FEP01, Artículo 46, p. 28 pide resolver en cada informe las observaciones de
 
 | N.º | Observación | Respuesta | Sección modificada |
 |---|---|---|---|
-| 13 | El Subdocumento 5 abre con la bitácora interna del grupo de trabajo. | Se acepta. Se acoge la observación. La respuesta de trabajo propone la siguiente medida, cuya implementación no se acredita en este lote: «Se elimina por completo la sección de bitácora interna; el documento inicia con el marco conceptual, alcance y gobierno del modelo de datos de la empresa.». Su cierre requiere examen de la fuente y de la evidencia correspondiente; no se declara realizada esa revisión para capítulos ajenos al lote S1/S2/S9 y al cálculo de S4. | Sección 5.1. |
-| 81 | El diccionario cubre 6 entidades y ninguna es la evidencia de jornada, exigida para resistir impugnaciones. | Se acepta. S5 incorpora EVIDENCIA_JORNADA en su modelo. S9/T-17 conservan el contrato de S3: niveles 1 a 5 y nivel 0 exclusivamente voluntario; origen instrumental, modalidad, nivel y veredicto se comprueban por separado. La Tabla 5.6 y el dominio de nivel_cascada de la Tabla 5.7 de S5 mantienen una clasificación distinta y requieren alineación. La existencia de la entidad no cierra esa discrepancia ni acredita automáticamente valor judicial. | S5 §5.1.5, Tablas 5.6 y 5.7; S3, evidencia y veredicto; S9 §9.1.1; T-17 CP-SYS-05 y CP-UAT-09. |
-| 82 | No hay diagrama Entidad-Relación (DER) en el documento. | Se acepta. Se acoge la observación. La respuesta de trabajo propone la siguiente medida, cuya implementación no se acredita en este lote: «Se incorpora el Diagrama Entidad-Relación completo en notación cuervo (*Crow's Foot*), cubriendo la totalidad de entidades transaccionales, telemáticas y de auditoría.». Su cierre requiere examen de la fuente y de la evidencia correspondiente; no se declara realizada esa revisión para capítulos ajenos al lote S1/S2/S9 y al cálculo de S4. | Sección 5.7 (Figura 5.1). |
-| 83 | Contradicción de residencia: copia fuera de sitio en Azure East US 2 mientras S4 sostiene residencia en Chile. | Se acepta. Se acoge la observación. La respuesta de trabajo propone la siguiente medida, cuya implementación no se acredita en este lote: «Se erradica toda referencia a East US 2; la residencia primaria se radica en Chile Central y la réplica secundaria en Brazil South, garantizando soberanía y baja latencia.». Su cierre requiere examen de la fuente y de la evidencia correspondiente; no se declara realizada esa revisión para capítulos ajenos al lote S1/S2/S9 y al cálculo de S4. | S5 §5.9 y S4 §4.2.5. |
-| 84 | El motor de bases de datos de series de tiempo y el bus de mensajería quedan indefinidos. | Se acepta. Se acoge la observación. La respuesta de trabajo propone la siguiente medida, cuya implementación no se acredita en este lote: «Se decide y formaliza TimescaleDB sobre PostgreSQL para series temporales telemáticas y Apache Kafka como bus distribuido de mensajería de eventos.». Su cierre requiere examen de la fuente y de la evidencia correspondiente; no se declara realizada esa revisión para capítulos ajenos al lote S1/S2/S9 y al cálculo de S4. | Sección 5.5. |
-| 85 | La sección 1.1 es la bitácora interna del grupo de trabajo. | Se acepta. Se acoge la observación. La respuesta de trabajo propone la siguiente medida, cuya implementación no se acredita en este lote: «Se elimina íntegramente la bitácora interna, abriendo el documento con la descripción conceptual del gobierno y ciclo de vida de los datos corporativos.». Su cierre requiere examen de la fuente y de la evidencia correspondiente; no se declara realizada esa revisión para capítulos ajenos al lote S1/S2/S9 y al cálculo de S4. | Sección 5.1. |
-| 86 | Prosa hinchada y escasez de figuras (dos figuras en 21 páginas), no citadas desde el texto. | Se acepta. Se acoge la observación. La respuesta de trabajo propone la siguiente medida, cuya implementación no se acredita en este lote: «Se reescribe el texto en tono técnico riguroso y se incorporan diagramas de arquitectura de datos (DER, flujo de eventos) debidamente citados e interpretados analíticamente.». Su cierre requiere examen de la fuente y de la evidencia correspondiente; no se declara realizada esa revisión para capítulos ajenos al lote S1/S2/S9 y al cálculo de S4. | Subdocumento 5 completo. |
-| 87 | El tratamiento de revocación del consentimiento frente a la retención legal queda pendiente de validar. | Se acepta. T-17 diseña la comprobación de revocación: cesan accesos comprendidos por el permiso y se conserva evidencia con obligación de retención, con rectificaciones trazables y sin eliminación automática de jornada. Son criterios y casos de ensayo, no resultados ejecutados. La integración con S5 exige preservar estas reglas y la correspondencia de sus códigos con los niveles de S3. | T-17 CP-SEC-05, CP-SEC-08 y CP-INT-25; S9 §9.1.1; modelo de S5. |
+| 13 | El Subdocumento 5 abre con la bitácora interna del grupo de trabajo. | Se acepta. Se implementa en la Sección 5.1, eliminando por completo la sección de bitácora interna; el documento inicia con el marco conceptual, alcance y gobierno del modelo de datos de la solución. | S5, sección 5.1. |
+| 81 | El diccionario cubre 6 entidades y ninguna es la evidencia de jornada, exigida para resistir impugnaciones. | Se acepta. S5 incorpora la entidad EVIDENCIA_JORNADA en la sección 5.1.5 y la Tabla 5.4 con la clasificación canónica de niveles 1 a 5 y nivel 0 voluntario, en correspondencia con el contrato del Subdocumento 3 y las comprobaciones de S9 y T-17 sobre origen instrumental, modalidad, nivel y veredicto. | S5 §5.1.5 y Tabla 5.4; S3 §3.3.2; S9 §9.1.1; T-17 CP-SYS-05 y CP-UAT-09. |
+| 82 | No hay diagrama Entidad-Relación (DER) en el documento. | Se acepta. Se implementa en la Sección 5.1.2 (Figura 5.1), incorporando el Diagrama Entidad-Relación completo en notación pata de gallo (*Crow's Foot*), cubriendo las entidades transaccionales, telemáticas y de auditoría. | S5, sección 5.1.2 (Figura 5.1). |
+| 83 | Contradicción de residencia: copia fuera de sitio en Azure East US 2 mientras S4 sostiene residencia en Chile. | Se acepta. Se implementa en S5 §5.1.6 y S4 §4.3.2: la residencia primaria se ubica en Azure Chile Central y la réplica secundaria en Azure Brazil South. | S5 §5.1.6 y S4 §4.3.2. |
+| 84 | El motor de bases de datos de series de tiempo y el bus de mensajería quedan indefinidos. | Se acepta. Se implementa en la Sección 5.2.1, formalizando TimescaleDB sobre PostgreSQL para series temporales telemáticas y Azure Event Hubs Premium con protocolo Kafka como bus de mensajería de eventos, en coherencia con el Subdocumento 4. | S5, sección 5.2.1; S4 §4.1.1 y §4.2.4. |
+| 85 | La sección 1.1 es la bitácora interna del grupo de trabajo. | Se acepta. Se implementa en la Sección 5.1, eliminando íntegramente la bitácora interna y abriendo el documento con la descripción conceptual del gobierno y ciclo de vida de los datos corporativos. | S5, sección 5.1. |
+| 86 | Prosa hinchada y escasez de figuras (dos figuras en 21 páginas), no citadas desde el texto. | Se acepta. Se implementa en el Subdocumento 5 completo, redactando el texto en registro técnico e incorporando diagramas de arquitectura de datos (DER, ciclo maestro, custodia y flujo de eventos) citados y analizados en cada sección. | Subdocumento 5 completo. |
+| 87 | El tratamiento de revocación del consentimiento frente a la retención legal queda pendiente de validar. | Se acepta. S5 y T-17 especifican el mecanismo de revocación de consentimiento conforme a la Ley 21.719: cesan los accesos operacionales comprendidos por el permiso revocado y se conserva bloqueada la evidencia sujeta a obligación legal de retención, con rectificaciones trazables y sin eliminación automática de registros de jornada. | S5 §5.1.5 y §5.4; S9 §9.1.1; T-17 CP-SEC-05, CP-SEC-08 y CP-INT-25. |
 
 ## 5 Modelo y gestión de datos
 
@@ -29,7 +29,7 @@ Los seis contextos canónicos tienen propietarios explícitos. Compartir una ide
 
 ### 5.1.1 Decisiones del modelo
 
-La Tabla 5.1 vincula cada decisión con una necesidad del Caso, sin atribuir al legado un esquema que no se ha levantado.
+La Tabla 5.2 vincula cada decisión con una necesidad del Caso, sin atribuir al legado un esquema que no se ha levantado.
 
 **Tabla 5.1.** Decisiones de modelado y efecto operacional
 
@@ -42,7 +42,7 @@ La Tabla 5.1 vincula cada decisión con una necesidad del Caso, sin atribuir al 
 | Separar negocio, series y análisis | Asignación ≤30 s y ráfagas de reconexión | Ensayar cargas simultáneas y consultas de BI aisladas del OLTP |
 | Versionar costo y liquidación | Combustible tardío y liquidación mensual | v1 ≤24 h con faltantes; posteriores versiones sin sobrescritura |
 
-La Tabla 5.1 fija la estructura que se comprueba en S9. El cifrado y los índices son controles complementarios; ninguno acredita por sí solo cumplimiento legal, exactitud documental o latencia.
+La Tabla 5.2 fija la estructura que se comprueba en S9. El cifrado y los índices son controles complementarios; ninguno acredita por sí solo cumplimiento legal, exactitud documental o latencia.
 
 ### 5.1.2 Dominios de información y modelo conceptual
 
@@ -88,7 +88,7 @@ El viaje puede programarse sin recursos ni peso definitivo. La asignación sólo
 
 ### 5.1.5 Evidencia de jornada, cascada y cadena de custodia
 
-La evidencia se clasifica conforme al contrato de S3 y a la corrección de D1: fuente instrumental, nivel, estado, modalidad y veredicto son dimensiones distintas. La Tabla 5.2 conserva la correspondencia canónica.
+La evidencia se clasifica conforme al contrato de S3 y a la corrección de D1: fuente instrumental, nivel, estado, modalidad y veredicto son dimensiones distintas. La Tabla 5.4 conserva la correspondencia canónica.
 
 **Tabla 5.2.** Niveles de evidencia de jornada y uso en la validación
 
@@ -134,7 +134,7 @@ La Figura 5.4 separa evaluación y evidencia mediante \textsf{EVALUACION_\allowb
 
 Fuente: Elaboración propia.
 
-La Tabla 5.2 y la Figura 5.4 se cotejan con CP-SYS-05/CP-UAT-09: nivel 0, nivel 5, modalidad de datos, atestación ausente, fuente desconocida y bloqueo legal. Una base migrada conserva los códigos anteriores, su tabla de correspondencia y la versión del mapeo; no altera la evidencia original para hacerla coincidir con el nuevo esquema.
+La Tabla 5.4 y la Figura 5.4 se cotejan con CP-SYS-05/CP-UAT-09: nivel 0, nivel 5, modalidad de datos, atestación ausente, fuente desconocida y bloqueo legal. Una base migrada conserva los códigos anteriores, su tabla de correspondencia y la versión del mapeo; no altera la evidencia original para hacerla coincidir con el nuevo esquema.
 
 ### 5.1.6 Soberanía, permisos y bases de tratamiento
 
@@ -150,11 +150,11 @@ Fuente: Elaboración propia.
 
 La revocación cesa nuevas consultas y emisiones cubiertas por el permiso, invalida caché/credenciales de acceso y propaga una versión al dispositivo. Durante falta de enlace no puede recibir una revocación nueva: el permiso local tiene vencimiento y sólo se transmiten datos tras comprobar la versión al reconectar. La transmisión de emergencia y los registros obligatorios siguen su base específica y minimización; revocar compartición comercial no borra evidencia de jornada ni elimina obligaciones de seguridad.
 
-FEP01, Artículo 4.2, p. 5 exige Ley 21.719 y, mientras esté vigente, Ley 19.628. La Ley 21.719 entra en vigor el 01-12-2026; el inicio supuesto de febrero de 2027 cae bajo el régimen nuevo. Curimón debe documentar finalidad, base, derechos, encargos, plazos y transferencias. El cifrado de campo exigido por RT-11.10 no reemplaza esos deberes (BCN, Ley 21.719 (d3_ley21719, )).
+FEP01, Artículo 4.2, p. 5 exige Ley 21.719 y, mientras esté vigente, Ley 19.628. La Ley 21.719 entra en vigor el 01-12-2026; el inicio supuesto de febrero de 2027 cae bajo el régimen nuevo. Curimón debe documentar finalidad, base, derechos, encargos, plazos y transferencias. El cifrado de campo exigido por RT-11.10 no reemplaza esos deberes (BCN, Ley 21.719 (Biblioteca del Congreso Nacional de Chile, s. f.)).
 
 Chile Central es primario y Brazil South es secundario propuesto en S4.3. Una réplica de datos personales es transferencia internacional: requiere identificar responsable y destinatario y documentar una vía aplicable del artículo 27 y las salvaguardias del artículo 28. Ubicación sudamericana y cifrado no acreditan por sí solos licitud. Si no se documenta el mecanismo, no se activa esa réplica; tampoco se declara satisfecho el DR hasta disponer de un sitio secundario admisible que supere RPO $≤15 min y RTO ≤$4 h. La revisión jurídica y la prueba de recuperación son condiciones de puesta en operación.
 
-Una supresión solicitada se resuelve por dato y finalidad: conservar protegido lo sujeto a retención o litigio, cesar usos no autorizados y eliminar cuando proceda. El procedimiento incluye BD, originales, índices, cachés, exportaciones autorizadas, réplicas y respaldos; registra alcance, retenciones vigentes y fecha efectiva. NIST SP 800-88 Rev. 2 sustituye la revisión 1 desde septiembre de 2025. La destrucción criptográfica sólo se usa cuando el diseño de claves y todas sus copias lo permite; no se promete irrecuperabilidad absoluta ni purga instantánea de Key Vault (NIST, SP 800-88 Rev. 2 (d3_nist88r2, )).
+Una supresión solicitada se resuelve por dato y finalidad: conservar protegido lo sujeto a retención o litigio, cesar usos no autorizados y eliminar cuando proceda. El procedimiento incluye BD, originales, índices, cachés, exportaciones autorizadas, réplicas y respaldos; registra alcance, retenciones vigentes y fecha efectiva. NIST SP 800-88 Rev. 2 sustituye la revisión 1 desde septiembre de 2025. La destrucción criptográfica sólo se usa cuando el diseño de claves y todas sus copias lo permite; no se promete irrecuperabilidad absoluta ni purga instantánea de Key Vault (NIST, SP 800-88 Rev. 2 (Ramaswamy Chandramouli y Eric Hibbard, s. f.)).
 
 ## 5.2 Gestión de datos
 
@@ -162,7 +162,7 @@ La gestión de datos de audIT define la gobernanza operacional del dato, los mot
 
 ### 5.2.1 Motores, transacciones y decisión ante partición
 
-FEP02, RT-05.02, p. 11 exige justificar por dominio consistencia y disponibilidad. CAP se aplica al comportamiento de un sistema distribuido durante una partición; ACID describe transacciones y no clasifica automáticamente un producto como CP/AP. La Tabla 5.3 y la Figura 5.6 concretan la decisión operacional.
+FEP02, RT-05.02, p. 11 exige justificar por dominio consistencia y disponibilidad. CAP se aplica al comportamiento de un sistema distribuido durante una partición; ACID describe transacciones y no clasifica automáticamente un producto como CP/AP. La Tabla 5.6 y la Figura 5.6 concretan la decisión operacional.
 
 **Tabla 5.3.** Persistencia y conducta ante pérdida de enlace
 
@@ -175,7 +175,7 @@ FEP02, RT-05.02, p. 11 exige justificar por dominio consistencia y disponibilida
 | Documentos y auditoría | Blob Storage con retención inmutable y manifiestos | Conservar original local cifrado hasta confirmar custodia; estado pendiente visible. No afirmar inmutabilidad sólo por un hash |
 | Analítica | ADLS Gen2 / Delta y modelo dimensional | Aceptar actualización diferida sin degradar el despacho; publicar antigüedad, faltantes y versiones |
 
-La Tabla 5.3 mantiene una base de negocio consistente y una captura local que resiste particiones. El documento fiscal permanece en el contable y requiere entrega conforme antes del movimiento; el búfer local no habilita emisión propia.
+La Tabla 5.6 mantiene una base de negocio consistente y una captura local que resiste particiones. El documento fiscal permanece en el contable y requiere entrega conforme antes del movimiento; el búfer local no habilita emisión propia.
 
 ![Figura 5.6. Consistencia del despacho y continuidad de captura durante una partición](../../../../Informe-2/D3/graficos/audit-figura-5.3-cap.png)
 
@@ -201,7 +201,7 @@ El modelo de costeo por viaje (Caso, RT-05.29, p. 31) administra el desfase inhe
 
 ### 5.2.3 Políticas de gobernanza, calidad y retención histórica
 
-La calidad se mide en captura y migración según FEP02, RT-05.04, p. 11 e ISO/IEC 25012. La Tabla 5.4 distingue los atributos que habilitan una transacción de los campos opcionales de una fuente.
+La calidad se mide en captura y migración según FEP02, RT-05.04, p. 11 e ISO/IEC 25012. La Tabla 5.8 distingue los atributos que habilitan una transacción de los campos opcionales de una fuente.
 
 **Tabla 5.4.** Calidad y método de comprobación
 
@@ -213,11 +213,11 @@ La calidad se mide en captura y migración según FEP02, RT-05.04, p. 11 e ISO/I
 | Credibilidad | Origen, versión y horas de evento/recepción conservados; deriva visible | Contraste de reloj y orden de secuencia; cuarentena cuando no hay interpretación fiable |
 | Accesibilidad | 99,9 % mensual en servicios críticos durante operación | Indicadores de servicio extremo a extremo; HA del motor sola no acredita SLA |
 
-La Tabla 5.4 produce un tablero con errores por fuente, antigüedad, registros en cuarentena y resolución responsable. Las modificaciones y consultas sensibles conservan actor, dispositivo, valores anteriores/posteriores, motivo y correlación (RT-05.03 transversal y RT-16.09 del Caso).
+La Tabla 5.8 produce un tablero con errores por fuente, antigüedad, registros en cuarentena y resolución responsable. Las modificaciones y consultas sensibles conservan actor, dispositivo, valores anteriores/posteriores, motivo y correlación (RT-05.03 transversal y RT-16.09 del Caso).
 
 La auditoría es append-only, encadenada y anclada en WORM bajo administración separada. La cuenta de negocio no modifica ni elimina registros de evidencia; una cuenta de administración de BD no puede modificar el original WORM. Los ensayos de integridad comprueban también omisión de eventos y eliminación de segmentos, con manifiestos firmados; el hash de una fila aislada no detecta por sí solo que esa fila desapareció.
 
-La Tabla 5.5 recoge los mínimos de Caso, RT-05.10, p. 31. No se atribuye a la ley tributaria una retención que aquí procede del contrato. El punto inicial del cómputo y las retenciones por litigio se documentan por dominio.
+La Tabla 5.10 recoge los mínimos de Caso, RT-05.10, p. 31. No se atribuye a la ley tributaria una retención que aquí procede del contrato. El punto inicial del cómputo y las retenciones por litigio se documentan por dominio.
 
 **Tabla 5.5.** Retención y recuperación por dominio
 
@@ -232,13 +232,13 @@ La Tabla 5.5 recoge los mínimos de Caso, RT-05.10, p. 31. No se atribuye a la l
 | Liquidaciones | 6 años | Versiones, aceptación y acuse contable; RTO de diseño ≤2 h |
 | Posición y telemetría | 2 años en línea | Después, agregado diario por unidad/viaje para distancia y consumo según finalidad; sin destruir evidencia sujeta a otros plazos; RTO ≤4 h |
 
-La Tabla 5.5 conserva mínimos y diferencia objetivos internos de los contractuales. Para servicios críticos, RPO $≤15 min y RTO ≤$4 h (FEP02, RT-07.04, p. 17). El desfase real de WAL, objetos y eventos debe medirse conjuntamente; un respaldo diario aislado no cumple RPO de quince minutos.
+La Tabla 5.10 conserva mínimos y diferencia objetivos internos de los contractuales. Para servicios críticos, RPO $≤15 min y RTO ≤$4 h (FEP02, RT-07.04, p. 17). El desfase real de WAL, objetos y eventos debe medirse conjuntamente; un respaldo diario aislado no cumple RPO de quince minutos.
 
 La política 3-2-1-1-0 incluye producción, copia recuperable localmente segregada y copia fuera de sitio, con almacenamiento de BD y objetos, al menos una copia inmutable y restauración sin errores verificada. Replicación continua no sustituye respaldo recuperable frente a corrupción. Se prueban restauración, conmutación y retorno al menos dos veces al año; el 0 es criterio de aceptación del ensayo, no resultado ya obtenido. La copia extranjera queda sujeta a 5.1.6 y S4.3. Al vencer retenciones y ausentes litigios, la sanitización se documenta con eliminación efectiva de todas las copias o expiración controlada de respaldos, sin reintroducir datos suprimidos al restaurar.
 
 ## 5.3 Estrategia de migración
 
-Transportes Curimón S.A. administra cerca de 6.000 vigencias dispersas en cuatro planillas sin validación referencial. En cumplimiento de Caso, RT-05.15, p. 31, ningún registro migrado se considerará habilitante para despachar sin su correspondiente verificación documental individual. En la Tabla 5.6 se detalla el alcance cuantitativo y en la Figura 5.8 el flujo metodológico en cuatro fases.
+Transportes Curimón S.A. administra cerca de 6.000 vigencias dispersas en cuatro planillas sin validación referencial. En cumplimiento de Caso, RT-05.15, p. 31, ningún registro migrado se considerará habilitante para despachar sin su correspondiente verificación documental individual. En la Tabla 5.12 se detalla el alcance cuantitativo y en la Figura 5.8 el flujo metodológico en cuatro fases.
 
 **Tabla 5.6.** Alcance de migración histórica del Caso 10
 
@@ -252,7 +252,7 @@ Transportes Curimón S.A. administra cerca de 6.000 vigencias dispersas en cuatr
 | Histórico de liquidaciones | 6 años; ≈10.656 si hubo 148/mes, estimación | Cuadre de importes, moneda y redondeo contra registros del sistema fuente y contable |
 | Histórico de siniestros | 100 % de antecedentes disponibles | Integridad de expedientes legales y peritajes |
 
-La Tabla 5.6 distingue alcance obligatorio de estimaciones derivadas: el Caso aporta una tasa anual actual, no el número real de filas de los últimos cinco/seis años. En el levantamiento se cuentan registros, adjuntos y bytes, incluidos históricos sin persona/vehículo homologado; el archivo original se conserva en cuarentena hasta resolverlos.
+La Tabla 5.12 distingue alcance obligatorio de estimaciones derivadas: el Caso aporta una tasa anual actual, no el número real de filas de los últimos cinco/seis años. En el levantamiento se cuentan registros, adjuntos y bytes, incluidos históricos sin persona/vehículo homologado; el archivo original se conserva en cuarentena hasta resolverlos.
 
 La Figura 5.8 muestra cuatro fases: extracción/perfilamiento con copia y hash del origen; homologación y deduplicación con mapeos aprobados; acreditación de cada vigencia y custodia del respaldo; ensayos en PREPROD, conciliación y carga final de diferencias. La ventana se estima con conteos/bytes reales y tasas de los ensayos; se concilia con S7 antes del corte. Los paquetes de datos EDT 7.x y cortes por función M16/M21 gobiernan la ejecución.
 
@@ -298,7 +298,7 @@ UUID identifica globalmente sin renumerar un original. TIMESTAMPTZ conserva un i
 
 Propietario de atributos: Contable (identidad comercial); Planificación (atributos operacionales). La tabla define el contrato del registro.
 
-La Tabla 5.7 detalla los atributos y controles del registro.
+La Tabla 5.14 detalla los atributos y controles del registro.
 
 **Tabla 5.7.** Atributos y controles de CLIENTE
 
@@ -316,7 +316,7 @@ Estos atributos concretan las referencias, campos obligatorios y controles de ac
 
 Propietario de atributos: Contable (identidad comercial); Personas y Flota (adhesión y recursos). La tabla define el contrato del registro.
 
-La Tabla 5.8 detalla los atributos y controles del registro.
+La Tabla 5.16 detalla los atributos y controles del registro.
 
 **Tabla 5.8.** Atributos y controles de TRANSPORTISTA
 
@@ -337,7 +337,7 @@ Estos atributos concretan las referencias, campos obligatorios y controles de ac
 
 Propietario de atributos: Personas y cumplimiento. La tabla define el contrato del registro.
 
-La Tabla 5.9 detalla los atributos y controles del registro.
+La Tabla 5.18 detalla los atributos y controles del registro.
 
 **Tabla 5.9.** Atributos y controles de CONDUCTOR
 
@@ -358,7 +358,7 @@ Estos atributos concretan las referencias, campos obligatorios y controles de ac
 
 Propietario de atributos: Flota y activos. La tabla define el contrato del registro.
 
-La Tabla 5.10 detalla los atributos y controles del registro.
+La Tabla 5.20 detalla los atributos y controles del registro.
 
 **Tabla 5.10.** Atributos y controles de TRACTOCAMION
 
@@ -380,7 +380,7 @@ Estos atributos concretan las referencias, campos obligatorios y controles de ac
 
 Propietario de atributos: Flota y activos. La tabla define el contrato del registro.
 
-La Tabla 5.11 detalla los atributos y controles del registro.
+La Tabla 5.22 detalla los atributos y controles del registro.
 
 **Tabla 5.11.** Atributos y controles de SEMIRREMOLQUE
 
@@ -401,7 +401,7 @@ Estos atributos concretan las referencias, campos obligatorios y controles de ac
 
 Propietario de atributos: Planificación y tráfico. La tabla define el contrato del registro.
 
-La Tabla 5.12 detalla los atributos y controles del registro.
+La Tabla 5.24 detalla los atributos y controles del registro.
 
 **Tabla 5.12.** Atributos y controles de PUNTO_\allowbreak{}SERVICIO
 
@@ -421,7 +421,7 @@ Estos atributos concretan las referencias, campos obligatorios y controles de ac
 
 Propietario de atributos: Planificación y tráfico. La tabla define el contrato del registro.
 
-La Tabla 5.13 detalla los atributos y controles del registro.
+La Tabla 5.26 detalla los atributos y controles del registro.
 
 **Tabla 5.13.** Atributos y controles de ORDEN_\allowbreak{}TRANSPORTE
 
@@ -443,7 +443,7 @@ Estos atributos concretan las referencias, campos obligatorios y controles de ac
 
 Propietario de atributos: Operación de fletes. La tabla define el contrato del registro.
 
-La Tabla 5.14 detalla los atributos y controles del registro.
+La Tabla 5.28 detalla los atributos y controles del registro.
 
 **Tabla 5.14.** Atributos y controles de VIAJE
 
@@ -466,7 +466,7 @@ Estos atributos concretan las referencias, campos obligatorios y controles de ac
 
 Propietario de atributos: Planificación y tráfico. La tabla define el contrato del registro.
 
-La Tabla 5.15 detalla los atributos y controles del registro.
+La Tabla 5.30 detalla los atributos y controles del registro.
 
 **Tabla 5.15.** Atributos y controles de ASIGNACION
 
@@ -491,7 +491,7 @@ Estos atributos concretan las referencias, campos obligatorios y controles de ac
 
 Propietario de atributos: Propietario del dominio que aporta el documento. La tabla define el contrato del registro.
 
-La Tabla 5.16 detalla los atributos y controles del registro.
+La Tabla 5.32 detalla los atributos y controles del registro.
 
 **Tabla 5.16.** Atributos y controles de DOCUMENTO_\allowbreak{}RESPALDO
 
@@ -513,7 +513,7 @@ Estos atributos concretan las referencias, campos obligatorios y controles de ac
 
 Propietario de atributos: Personas y cumplimiento (conductor); Flota y activos (equipos). La tabla define el contrato del registro.
 
-La Tabla 5.17 detalla los atributos y controles del registro.
+La Tabla 5.34 detalla los atributos y controles del registro.
 
 **Tabla 5.17.** Atributos y controles de VIGENCIA_\allowbreak{}HABILITACION
 
@@ -537,7 +537,7 @@ Estos atributos concretan las referencias, campos obligatorios y controles de ac
 
 Propietario de atributos: Telemetría y geocercas. La tabla define el contrato del registro.
 
-La Tabla 5.18 detalla los atributos y controles del registro.
+La Tabla 5.36 detalla los atributos y controles del registro.
 
 **Tabla 5.18.** Atributos y controles de DISPOSITIVO
 
@@ -558,7 +558,7 @@ Estos atributos concretan las referencias, campos obligatorios y controles de ac
 
 Propietario de atributos: Personas y cumplimiento. La tabla define el contrato del registro.
 
-La Tabla 5.19 detalla los atributos y controles del registro.
+La Tabla 5.38 detalla los atributos y controles del registro.
 
 **Tabla 5.19.** Atributos y controles de EVIDENCIA_\allowbreak{}JORNADA
 
@@ -592,7 +592,7 @@ Estos atributos concretan las referencias, campos obligatorios y controles de ac
 
 Propietario de atributos: Personas y cumplimiento. La tabla define el contrato del registro.
 
-La Tabla 5.20 detalla los atributos y controles del registro.
+La Tabla 5.40 detalla los atributos y controles del registro.
 
 **Tabla 5.20.** Atributos y controles de EVALUACION_\allowbreak{}ASIGNACION
 
@@ -614,7 +614,7 @@ Estos atributos concretan las referencias, campos obligatorios y controles de ac
 
 Propietario de atributos: Personas y cumplimiento. La tabla define el contrato del registro.
 
-La Tabla 5.21 detalla los atributos y controles del registro.
+La Tabla 5.42 detalla los atributos y controles del registro.
 
 **Tabla 5.21.** Atributos y controles de EVALUACION_\allowbreak{}EVIDENCIA
 
@@ -631,7 +631,7 @@ Estos atributos concretan las referencias, campos obligatorios y controles de ac
 
 Propietario de atributos: Personas y cumplimiento. La tabla define el contrato del registro.
 
-La Tabla 5.22 detalla los atributos y controles del registro.
+La Tabla 5.44 detalla los atributos y controles del registro.
 
 **Tabla 5.22.** Atributos y controles de EXCEPCION_\allowbreak{}RN04
 
@@ -652,7 +652,7 @@ Estos atributos concretan las referencias, campos obligatorios y controles de ac
 
 Propietario de atributos: Personas y cumplimiento. La tabla define el contrato del registro.
 
-La Tabla 5.23 detalla los atributos y controles del registro.
+La Tabla 5.46 detalla los atributos y controles del registro.
 
 **Tabla 5.23.** Atributos y controles de PERMISO_\allowbreak{}COMPARTIR
 
@@ -677,7 +677,7 @@ Estos atributos concretan las referencias, campos obligatorios y controles de ac
 
 Propietario de atributos: Seguridad y auditoría. La tabla define el contrato del registro.
 
-La Tabla 5.24 detalla los atributos y controles del registro.
+La Tabla 5.48 detalla los atributos y controles del registro.
 
 **Tabla 5.24.** Atributos y controles de ACCESO_\allowbreak{}DATO
 
@@ -698,7 +698,7 @@ Estos atributos concretan las referencias, campos obligatorios y controles de ac
 
 Propietario de atributos: Telemetría y geocercas. La tabla define el contrato del registro.
 
-La Tabla 5.25 detalla los atributos y controles del registro.
+La Tabla 5.50 detalla los atributos y controles del registro.
 
 **Tabla 5.25.** Atributos y controles de TELEMETRIA_\allowbreak{}EVENTO
 
@@ -724,7 +724,7 @@ Estos atributos concretan las referencias, campos obligatorios y controles de ac
 
 Propietario de atributos: Operación de fletes. La tabla define el contrato del registro.
 
-La Tabla 5.26 detalla los atributos y controles del registro.
+La Tabla 5.52 detalla los atributos y controles del registro.
 
 **Tabla 5.26.** Atributos y controles de ESTANCIA_\allowbreak{}CLIENTE
 
@@ -746,7 +746,7 @@ Estos atributos concretan las referencias, campos obligatorios y controles de ac
 
 Propietario de atributos: Operación de fletes; emisor fiscal externo contable. La tabla define el contrato del registro.
 
-La Tabla 5.27 detalla los atributos y controles del registro.
+La Tabla 5.54 detalla los atributos y controles del registro.
 
 **Tabla 5.27.** Atributos y controles de DOCUMENTO_\allowbreak{}TRANSPORTE
 
@@ -769,7 +769,7 @@ Estos atributos concretan las referencias, campos obligatorios y controles de ac
 
 Propietario de atributos: Operación de fletes. La tabla define el contrato del registro.
 
-La Tabla 5.28 detalla los atributos y controles del registro.
+La Tabla 5.56 detalla los atributos y controles del registro.
 
 **Tabla 5.28.** Atributos y controles de CONFORMIDAD_\allowbreak{}ENTREGA
 
@@ -790,7 +790,7 @@ Estos atributos concretan las referencias, campos obligatorios y controles de ac
 
 Propietario de atributos: Operación de fletes. La tabla define el contrato del registro.
 
-La Tabla 5.29 detalla los atributos y controles del registro.
+La Tabla 5.58 detalla los atributos y controles del registro.
 
 **Tabla 5.29.** Atributos y controles de CHECKLIST_\allowbreak{}CARGA_\allowbreak{}PELIGROSA
 
@@ -810,7 +810,7 @@ Estos atributos concretan las referencias, campos obligatorios y controles de ac
 
 Propietario de atributos: Liquidación y costeo; terceros desde M16 y clientes desde M21. La tabla define el contrato del registro.
 
-La Tabla 5.30 detalla los atributos y controles del registro.
+La Tabla 5.60 detalla los atributos y controles del registro.
 
 **Tabla 5.30.** Atributos y controles de TARIFA_\allowbreak{}CONTRATO
 
@@ -833,7 +833,7 @@ Estos atributos concretan las referencias, campos obligatorios y controles de ac
 
 Propietario de atributos: Liquidación y costeo. La tabla define el contrato del registro.
 
-La Tabla 5.31 detalla los atributos y controles del registro.
+La Tabla 5.62 detalla los atributos y controles del registro.
 
 **Tabla 5.31.** Atributos y controles de COSTO_\allowbreak{}VERSION
 
@@ -856,7 +856,7 @@ Estos atributos concretan las referencias, campos obligatorios y controles de ac
 
 Propietario de atributos: Liquidación y costeo. La tabla define el contrato del registro.
 
-La Tabla 5.32 detalla los atributos y controles del registro.
+La Tabla 5.64 detalla los atributos y controles del registro.
 
 **Tabla 5.32.** Atributos y controles de LIQUIDACION
 
@@ -878,7 +878,7 @@ Estos atributos concretan las referencias, campos obligatorios y controles de ac
 
 Propietario de atributos: Liquidación y costeo. La tabla define el contrato del registro.
 
-La Tabla 5.33 detalla los atributos y controles del registro.
+La Tabla 5.66 detalla los atributos y controles del registro.
 
 **Tabla 5.33.** Atributos y controles de LIQUIDACION_\allowbreak{}DETALLE
 
@@ -897,7 +897,7 @@ Estos atributos concretan las referencias, campos obligatorios y controles de ac
 
 Propietario de atributos: Liquidación y costeo. La tabla define el contrato del registro.
 
-La Tabla 5.34 detalla los atributos y controles del registro.
+La Tabla 5.68 detalla los atributos y controles del registro.
 
 **Tabla 5.34.** Atributos y controles de LOTE_\allowbreak{}COSTO
 
@@ -918,7 +918,7 @@ Estos atributos concretan las referencias, campos obligatorios y controles de ac
 
 Propietario de atributos: Flota y activos. La tabla define el contrato del registro.
 
-La Tabla 5.35 detalla los atributos y controles del registro.
+La Tabla 5.70 detalla los atributos y controles del registro.
 
 **Tabla 5.35.** Atributos y controles de INTERVENCION_\allowbreak{}TALLER
 
@@ -940,7 +940,7 @@ Estos atributos concretan las referencias, campos obligatorios y controles de ac
 
 Propietario de atributos: Flota y activos. La tabla define el contrato del registro.
 
-La Tabla 5.36 detalla los atributos y controles del registro.
+La Tabla 5.72 detalla los atributos y controles del registro.
 
 **Tabla 5.36.** Atributos y controles de POSICION_\allowbreak{}NEUMATICO
 
@@ -962,7 +962,7 @@ Estos atributos concretan las referencias, campos obligatorios y controles de ac
 
 Propietario de atributos: Operación de fletes. La tabla define el contrato del registro.
 
-La Tabla 5.37 detalla los atributos y controles del registro.
+La Tabla 5.74 detalla los atributos y controles del registro.
 
 **Tabla 5.37.** Atributos y controles de SINIESTRO
 
@@ -983,7 +983,7 @@ Estos atributos concretan las referencias, campos obligatorios y controles de ac
 
 Propietario de atributos: Seguridad y auditoría. La tabla define el contrato del registro.
 
-La Tabla 5.38 detalla los atributos y controles del registro.
+La Tabla 5.76 detalla los atributos y controles del registro.
 
 **Tabla 5.38.** Atributos y controles de AUDITORIA_\allowbreak{}EVENTO
 
@@ -1008,7 +1008,7 @@ Estos atributos concretan las referencias, campos obligatorios y controles de ac
 
 Propietario de atributos: Contexto productor del evento. La tabla define el contrato del registro.
 
-La Tabla 5.39 detalla los atributos y controles del registro.
+La Tabla 5.78 detalla los atributos y controles del registro.
 
 **Tabla 5.39.** Atributos y controles de OUTBOX_\allowbreak{}EVENTO
 
@@ -1039,9 +1039,9 @@ Se indexan FK locales y claves de consulta. RUT cifrado utiliza índice ciego de
 
 ### 5.5.35 Supuestos de capacidad y migración
 
-Caso, numeral 14.2, p. 30 pide estimación; la Tabla 5.40 diferencia tasas del Caso, tamaños supuestos y conteos históricos no entregados.
+Caso, numeral 14.2, p. 30 pide estimación; la Tabla 5.80 diferencia tasas del Caso, tamaños supuestos y conteos históricos no entregados.
 
-La Tabla 5.40 detalla los atributos y controles del registro.
+La Tabla 5.80 detalla los atributos y controles del registro.
 
 **Tabla 5.40.** Presupuesto lógico inicial de datos, sin índices ni réplicas
 
@@ -1057,13 +1057,13 @@ La Tabla 5.40 detalla los atributos y controles del registro.
 | Liquidaciones históricas | 148/mes $\times12 \times$6 sólo como extrapolación | ≈10.656 registros; verificar períodos, versiones y transportistas reales |
 | Siniestros y maestros | Totalidad de la fuente según RT-05.15 | No hay conteo/bytes entregados; inventariar todos y preservar pendientes |
 
-La Tabla 5.40 no es tamaño físico ni cifra medida. Un factor provisional 3$\times$ sobre registros cubre índices/estructura de manera aproximada, pero WAL, originales grandes, fotos, copias WORM, respaldos y réplicas se dimensionan explícitamente por separado. No se multiplica por un factor sin indicar qué incluye. El volumen de jornada se registra por eventos semánticos, sin convertir cada ping de GPS en prueba de descanso. Se ensayan extracción, transformación, carga y conciliación con tasa medida; volumen/tasa más delta final determina la ventana, conciliada con S7.
+La Tabla 5.80 no es tamaño físico ni cifra medida. Un factor provisional 3$\times$ sobre registros cubre índices/estructura de manera aproximada, pero WAL, originales grandes, fotos, copias WORM, respaldos y réplicas se dimensionan explícitamente por separado. No se multiplica por un factor sin indicar qué incluye. El volumen de jornada se registra por eventos semánticos, sin convertir cada ping de GPS en prueba de descanso. Se ensayan extracción, transformación, carga y conciliación con tasa medida; volumen/tasa más delta final determina la ventana, conciliada con S7.
 
 ## Referencias
 
-[referencia d3_ley21719 sin entrada en el .bib]
+Biblioteca del Congreso Nacional de Chile. (2024). *Ley N.º 21.719: regula la protección y el tratamiento de los datos personales y crea la Agencia de Protección de Datos Personales*. https://www.bcn.cl/leychile/navegar?i=1209272
 
-[referencia d3_nist88r2 sin entrada en el .bib]
+Ramaswamy Chandramouli y Eric Hibbard. (2025). *Guidelines for Media Sanitization (NIST SP 800-88 Rev. 2)*. https://csrc.nist.gov/pubs/sp/800/88/r2/final
 
 Transportes Curimón S.A. (2026). *Bases administrativas para la preparación de la propuesta: Licitación Pública Internacional N.º TFEP-01/2026* (Documento FEP01).
 

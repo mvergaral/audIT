@@ -116,7 +116,8 @@ class Conversor:
         self.ncomp = 0
         self.ndec = 0
         # etiquetas del .aux, si las hay: mandan sobre la numeración propia
-        self.aux = etiquetas or {}
+        self.aux = etiquetas_del_expediente(cfg)
+        self.aux.update(etiquetas or {})
         self.etiquetas = dict(self.aux)
         self.eco = eco
         self.bib = self.leer_bib()
@@ -563,7 +564,7 @@ def declaracion_md(cfg, n, carpeta, raices):
     ruta = buscar(carpeta, "declaracion-ia.tex", raices)
     if not ruta:
         return ""
-    t = open(ruta, encoding="utf-8").read()
+    t = leer_inputs_locales(ruta)
     t = "\n".join(re.sub(r"(?<!\\)%.*$", "", l) for l in t.split("\n"))
     conv = Conversor(cfg, n)
     filas = []
@@ -622,7 +623,7 @@ def formulario(cfg, n, f, raices, aux=None):
               f"de ese subdocumento.\n\n")
     if not ruta:
         return cabeza + "[formulario sin datos]\n"
-    t = open(ruta, encoding="utf-8").read()
+    t = leer_inputs_locales(ruta)
     t = "\n".join(re.sub(r"(?<!\\)%.*$", "", l) for l in t.split("\n"))
     # etiquetas del propio formulario y las del subdocumento al que pertenece
     etiq = {}
@@ -735,6 +736,38 @@ CARPETAS_ECO = {"costos": "costos-venta", "oferta": "oferta-economica",
 TITULOS_ECO = {"costos": ("Informe Preparatorio 3", "Costos frente a venta"),
                "oferta": ("Entregable 1", "Propuesta económica formal"),
                "analisis": ("Entregable 2", "Análisis económico-financiero")}
+
+
+
+def etiquetas_del_expediente(cfg):
+    """Localizadores de los archivos compilados del mismo expediente."""
+    ruta = os.path.join(RAIZ, "salida", cfg.instancia, "manifiesto.json")
+    try:
+        entradas = json.load(open(ruta, encoding="utf-8"))["archivos"]
+    except (OSError, ValueError, KeyError):
+        return {}
+    etiquetas = {}
+    for entrada in entradas:
+        aux = entrada.get("aux")
+        if aux:
+            etiquetas.update(etiquetas_aux(os.path.join(RAIZ, aux)))
+    return etiquetas
+
+
+def leer_inputs_locales(ruta, activos=None):
+    """Expande catálogos locales; rechaza rutas fuera del proyecto y ciclos."""
+    activos = set() if activos is None else set(activos)
+    ruta = os.path.realpath(ruta)
+    if os.path.commonpath([ruta, RAIZ]) != RAIZ or ruta in activos:
+        raise ValueError("Input de formulario fuera del proyecto o cíclico")
+    activos.add(ruta)
+    texto = open(ruta, encoding="utf-8").read()
+    def incluir(match):
+        destino = os.path.join(RAIZ, match.group(1))
+        if not os.path.exists(destino):
+            destino = os.path.join(os.path.dirname(ruta), match.group(1))
+        return leer_inputs_locales(destino, activos)
+    return re.sub(r"\\input\{([^}]+)\}", incluir, texto)
 
 
 def etiquetas_aux(ruta):

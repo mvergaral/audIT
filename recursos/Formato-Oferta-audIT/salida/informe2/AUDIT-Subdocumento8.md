@@ -38,7 +38,7 @@ disparador y el plazo de cada riesgo, y la tabla del análisis de modos de falla
 
 ## 8.1 Plan de riesgos
 
-La gestión del riesgo sigue la norma ISO 31000 (International Organization for Standardization, 2018), como exige FEP02, RT-19.04, p. 33.
+La gestión del riesgo sigue la norma ISO 31000 (ISO, 2018), como exige FEP02, RT-19.04, p. 33.
 Cada etapa del proceso de la norma tiene su lugar en este plan. El alcance, el contexto y los criterios
 son las escalas y los umbrales de esta sección. La evaluación, que abarca identificar, analizar y valorar,
 es la sección 8.2. El tratamiento es la sección 8.3. El seguimiento y la revisión son las cadencias de
@@ -125,7 +125,7 @@ compañía y personas que no son sus trabajadoras (Caso, numeral 13.3, p. 28), y
 fallar depende de alguien que audIT no controla. Los siete riesgos altos se reparten en las cinco
 categorías. Uno de ellos, R-28, nace de la emisión sin cobertura. El documento completo debe volver por
 satélite a la cabina dentro de los 90 segundos de Caso, RT-09.01, p. 32, y eso todavía no se ha medido
-(sección ?). Hasta medirlo, los puntos de carga sin cobertura usan la emisión
+(sección 4.1.13). Hasta medirlo, los puntos de carga sin cobertura usan la emisión
 anticipada siempre que la carga se conozca al programar, y sin documento conforme la salida se
 bloquea. El Comunicado 10 pide énfasis en cinco materias, que se analizan a
 continuación.
@@ -137,8 +137,8 @@ for Redis, que Microsoft retira el 30 de septiembre de 2028 (Microsoft, 2026). C
 febrero de 2027, esa fecha cae en el mes 20, el último de la marcha blanca de la Etapa 2. Es el riesgo de
 mayor exposición del registro (R-06, 15). Su probabilidad es 5 porque Microsoft ya anunció la
 fecha. La caché acelera la verificación bloqueante, aunque la autoridad queda en la base transaccional
-(sección ?). La respuesta es evitarlo. El Subdocumento 4 fija Azure Managed
-Redis, el servicio de reemplazo, desde la Etapa 1 (sección ?), de modo que nunca haya
+(sección 4.1.9). La respuesta es evitarlo. El Subdocumento 4 fija Azure Managed
+Redis, el servicio de reemplazo, desde la Etapa 1 (sección 4.1.1), de modo que nunca haya
 una migración durante una marcha blanca. Así la solución tampoco toca la edición Enterprise, que se
 retira el 31 de marzo de 2027, en el mes 2. La misma sección declara la versión, el fin de soporte y el
 plan de actualización de cada producto. .NET 10 y PostgreSQL 16 se actualizan antes de noviembre de 2028
@@ -161,7 +161,7 @@ el 75 % de la cuota. El caso más exigente es el pico: cientos de camiones
 que salen a la vez de una zona de sombra y vuelcan su registro acumulado (R-01). Para eso el equipo a
 bordo espera un tiempo aleatorio antes de reconectar, Event Hubs desacopla la llegada del procesamiento y
 la prueba de carga se ejecuta sobre 1,5 veces el pico (FEP02, RT-09.06, p. 21), con la reconexión
-simultánea de 300 camiones que dimensiona la sección ?.
+simultánea de 300 camiones que dimensiona la sección 4.2.8.
 
 **Ciberamenazas.**
 Tres riesgos vienen de las amenazas. El portal queda expuesto a internet con datos de localización de
@@ -184,9 +184,7 @@ laboral debe admitir el registro electrónico de jornada (supuesto SA-06 del Sub
 conductores externos pueden rechazar la medición. La adhesión de los 148 transportistas es el riesgo más
 alto del grupo (R-11, 12): el Caso dice que el plan de adhesión pesa en la evaluación tanto como la arquitectura
 (Caso, numeral 13.3, p. 28). La meta del Subdocumento 3 es de 104 anexos firmados en el mes 16 y 134 en el
-21, sobre los 148 transportistas. El disparador usa la misma base: menos de 60 anexos firmados y
-vigentes al cierre del mes 9, el 40 % de 148. Cuenta como firmado el anexo que firmó el titular y que
-no fue revocado. Por último
+21, y el disparador es tener menos de 60 al cierre del mes 9, el 40 % de los 148 transportistas iniciales. Por último
 está el propio mandante (R-15). Sus usuarios clave de la torre y de los terminales tienen poco tiempo en
 la temporada, y un entregable que vuelve con observaciones abre una segunda revisión que el
 FEP01, Artículo 18.3, p. 13 cuenta como atraso de audIT. El plan del Subdocumento 7 ya incluye la primera revisión de
@@ -214,14 +212,50 @@ flota.
 El análisis cubre diez modos de falla de los componentes físicos y de plataforma cuya falla deja un hueco
 en los datos: el equipo a bordo, el módem satelital, el grupo electrógeno de San Bernardo, la baliza del
 semirremolque, el lector del vehículo, el lector de tarjeta, el búfer, la réplica, la ingesta y el enlace
-de cada terminal. Incluye los dos puntos únicos de falla que declara la sección ?, que
+de cada terminal. Incluye los dos puntos únicos de falla que declara la sección 4.2.7, que
 son el grupo electrógeno y el equipo a bordo. Los dos números de prioridad más altos son 36, del equipo a
 bordo que deja de registrar, y 32, del módem satelital sin servicio en una zona de sombra. Ninguno llega
 a 50. En los dos, lo que sube el número es la detección, que llega tarde, en el terminal o por aviso del
 conductor. La mitigación apunta a detectar antes, con la alerta por camión que llega
 al terminal sin reporte reciente. La tabla completa está en el Formulario T-16.
 
+### 8.2.1 Línea base acordada para capacitación y adhesión
+
+La capacitación A13 conserva 40 días hábiles y usa la precedencia A06,
+A09 FS−10 y G13 del T-15: inicio temprano en el día 182 y término en el 222.
+G13 exige versión de entrenamiento probada y congelada en PREPROD, datos ficticios
+y material por perfil. Las funciones certificadas al cierre del sprint 7 deben
+ser identificadas antes de liberar ese hito. Los diez primeros días cubren
+familiarización; los treinta restantes cubren práctica completa, evaluaciones y
+complemento del sprint 8 antes de la marcha blanca. Los turnos y relevos protegen
+la operación. La falta de disponibilidad de G13 retrasa A13 y debe registrarse
+como atraso y actualizarse en el análisis de riesgo. La holgura total de A13 es
+38 días y su holgura libre, 18; A06 tiene 24 días de holgura libre. El término
+determinista de la red permanece en el día 420.
+
+La simulación debe utilizar esta misma red y comprobar la disponibilidad de G13,
+sin tratar la liberación de entrenamiento como cierta por el solo adelanto.
+[Incorporar y verificar código, distribuciones, correlaciones, número de corridas,
+semilla y tratamiento del atraso de G13 de la simulación de riesgos; resultados no verificados en este checkout].
+
+La adhesión firmada usa como denominador los 148 transportistas de la población
+inicial. Se cuenta una vez por RUT, con anexo firmado por el mandante y el
+representante autorizado, vigente, no revocado y registrado al corte. Se incluyen
+las modalidades completa y de datos. Al cierre de M9, 31 de octubre de 2027 bajo
+SA-01, se requieren al menos 60 firmados: con 59 o menos se activa el refuerzo.
+Las metas posteriores son 104 en M16 y 134 en M21. Instalación, activación técnica
+y consentimientos de conductores se controlan por separado; la firma del
+transportista no sustituye esos consentimientos. El Formulario T-16 conserva
+el catálogo y las evaluaciones originales del equipo de riesgos e incorpora
+estas condiciones; la verificación cuantitativa del adelanto condicionado
+permanece pendiente.
+
 **Simulación del cronograma.**
+Los resultados cuantitativos que siguen son los reportados por el equipo de riesgos.
+El código de Monte Carlo referenciado no está disponible en este checkout y no se ha
+verificado aquí su tratamiento de la disponibilidad de G13. No acreditan una nueva
+simulación ejecutada con el adelanto condicionado.
+
 La red del Subdocumento 7 calcula sus reservas cadena por cadena. Para ver el efecto de todas las rutas a
 la vez, la red completa se simuló 10.000 veces con el método de Monte Carlo. En cada corrida, cada
 actividad toma una duración al azar de una distribución Beta-PERT armada con sus tres estimaciones del
@@ -267,7 +301,7 @@ convergen varias rutas. La simulación encontró la causa principal de la difere
 conductores (A13). Si empieza después de terminar la A09, atrasa el inicio de la marcha blanca de la
 Etapa 1 en el 14,1 % de las corridas, y las dos marchas blancas se cumplen a la vez solo en el 82,3 %.
 Por eso el T-15 fija que la A13 empieza 10 días hábiles antes de que termine la A09, el día 182 de la
-línea base, y mantiene sus 40 días (sección ?). Solo empieza si están disponibles las
+línea base, y mantiene sus 40 días (sección 7.3.1). Solo empieza si están disponibles las
 funciones de entrenamiento probadas y congeladas en preproducción, los datos ficticios y el material por
 perfil. Si falta esa entrega, el inicio real se atrasa, el atraso se registra y se actualiza el riesgo
 R-16.
@@ -276,7 +310,7 @@ La simulación toma esa disponibilidad como el cierre del séptimo de los ocho s
 que los datos y el material llegan con esa versión. Con esa regla, el inicio real de la A13 cae después
 del día 182 en el 49,0 % de las corridas, pero en el 95 % ocurre antes del día 194, y la capacitación
 no atrasa la marcha blanca en ninguna corrida (0,0 %). Lo que cambie el octavo sprint se cubre con un
-complemento antes de la marcha blanca.
+complemento antes de la marcha blanca, dentro de los treinta días restantes de A13, sin ampliar su duración total de 40 días.
 
 **Árbol de fallas de la verificación bloqueante.**
 El árbol se construye sobre el evento que dio origen a la licitación: que un camión salga cuando no puede
@@ -293,18 +327,18 @@ Fuente: Elaboración propia.
 Una compuerta O une cuatro caminos hacia el tope. Cada camino es una compuerta Y de dos eventos básicos,
 así que el árbol tiene cuatro cortes mínimos, todos de dos eventos, y ningún evento lleva al tope por sí
 solo. Esa es la propiedad que busca el diseño, en el que ninguna invariante de la verificación admite
-excepción automática (sección ?).
+excepción automática (sección 4.1.9).
 
 El primer camino es un registro de jornada incompleto en el equipo a bordo que se toma por válido. Lo
 alimentan R-02 y R-22, y se corta porque la plataforma muestra la antigüedad de toda señal y nunca un
 dato sin fecha, como fija el Subdocumento 4 para las posiciones de terceros y para la baliza
-(sección ? y sección ?).
+(sección 4.1.11 y sección 4.1.21).
 El segundo es una excepción RN-04 mal aplicada. Se corta porque esa regla solo admite la excepción ante
 una fuente de evidencia no disponible, la aprueban el jefe de turno y prevención de riesgos para un solo
-viaje, deja registro y nunca cubre una jornada agotada (sección ?). El tercero es
+viaje, deja registro y nunca cubre una jornada agotada (sección 4.1.9). El tercero es
 un terminal sin enlace que asigna por su cuenta. Se corta porque la copia local no inventa vigencias ni
 asignaciones: toda asignación nueva pasa por el servicio central de reserva, y sin enlace la hace la
-torre (sección ?). El cuarto
+torre (sección 4.1.26). El cuarto
 es un conductor externo aprobado sin evidencia, cuando el transportista no adhirió u opera en modalidad
 de datos y una atestación documental se acepta por error. Lo alimentan R-08, R-10 y R-11. Es el camino
 más probable mientras dure el período mixto, y por eso el R-20 vigila cuántos camiones quedan sin
@@ -349,7 +383,7 @@ contingencia propia.
 | Riesgo | Disparador | Contingencia | Plazo | Responsable |
 |---|---|---|---|---|
 | R-06 Retiro de Redis | Un componente de la Etapa 1 que dependa de Azure Cache for Redis en el hito H2 | El Comité de Arquitectura lo pasa a Azure Managed Redis y la migración termina antes de la marcha blanca de la Etapa 1 | Meses 4 a 12 | Arquitecto de Solución |
-| R-11 Adhesión bajo la meta | Menos de 60 anexos firmados y vigentes al cierre del mes 9 | El Comité Ejecutivo aprueba un plan por transportista, y quien no adhiere opera en modalidad de datos o documental con su evidencia visible | Meses 9 a 16 | Líder Funcional |
+| R-11 Adhesión bajo la meta | 59 o menos RUT de los 148 iniciales firmados, vigentes, no revocados y registrados al 31-10-2027 (M9 bajo SA-01) | El Comité Ejecutivo aprueba un plan por transportista, y quien no adhiere opera en modalidad de datos o documental con su evidencia visible | Meses 9 a 16 | Líder Funcional |
 | R-18 Cierre de la marcha blanca 1 | Una condición de cierre bajo su umbral al cierre del mes 14 | Refuerzo en el terminal afectado y, si no alcanza, extensión a costo de audIT sin mover las fechas siguientes | Meses 14 a 16 | Líder de Operación |
 | R-23 Ataque al portal | Vulnerabilidad crítica abierta o acceso anómalo | Plan de respuesta a incidentes con contención en Front Door, aviso al mandante en dos horas y remediación en siete días corridos | Inmediato | Encargado de Seguridad |
 | R-24 Licitud en Brazil South | Hito H2 sin aprobación del mandante | La réplica de datos personales a Brazil South no se activa y esos datos se replican en San Bernardo, que levanta los servicios críticos que los usan | Mes 4 | Arquitecto de Solución |
@@ -364,7 +398,7 @@ Seis se activan antes del mes 15, cuando todavía hay margen para corregir sin t
 R-24 tiene un costo que se declara. El Subdocumento 5 fija que, sin una vía habilitante documentada,
 los datos personales no se replican fuera de Chile. Mientras tanto se replican en espera en San Bernardo
 con el mismo objetivo de 15 minutos, y si cae Chile Central, Personas y cumplimiento y la verificación
-bloqueante se levantan allí dentro de las 4 horas (sección ?). El costo es la
+bloqueante se levantan allí dentro de las 4 horas (sección 4.3.2). El costo es la
 capacidad de los dos servidores de San Bernardo, que la prueba de carga de la Etapa 1 confirma.
 
 **Reservas de contingencia.**
@@ -381,7 +415,7 @@ La holgura de 20 días de la marcha blanca de la Etapa 1 (A15) cubre parte de su
 días de la capacitación (A13) cubre el rechazo de los conductores (R-14). El Jefe de Proyecto informa el
 consumo de cada reserva en el Comité de Proyecto. Si una baja de la mitad cuando a su cadena le queda más
 de la mitad de su duración, el caso sube al Comité Ejecutivo con un plan de recuperación
-(sección ?).
+(sección 7.3.1).
 
 **Reserva de gestión.**
 La reserva de gestión cubre lo que el registro no identificó. Queda fuera de la línea base y no se asigna
@@ -399,7 +433,7 @@ International Electrotechnical Commission. (2018). *IEC 60812:2018. Failure mode
 
 International Electrotechnical Commission. (2019). *IEC 31010:2019. Risk management. Risk assessment techniques*.
 
-International Organization for Standardization. (2018). *ISO 31000:2018. Risk management. Guidelines*.
+ISO. (2018). *ISO 31000:2018. Risk management -- Guidelines*.
 
 Malcolm, D. G., Roseboom, J. H., Clark, C. E. y Fazar, W. (1959). Application of a Technique for Research and Development Program Evaluation. *Operations Research*, *7*(5), 646-669. https://doi.org/10.1287/opre.7.5.646
 
@@ -425,3 +459,4 @@ Conforme al Comunicado 10, sección 7.2, cada sección de este subdocumento y ca
 | 8.2 | Claude Opus 5.5 en Claude Code | Identificación de los riesgos sobre los subdocumentos 3, 4, 7 y 13 y el Caso, guion de la simulación Monte Carlo sobre el Formulario T-15, redacción inicial del análisis y generación de la estructura de desglose, el mapa de calor y el árbol de fallas con un guion | Alto | Alto | **[Información requerida por dupla 4: nombre, cargo y qué verificó]** |
 | 8.3 | Claude Opus 5.5 en Claude Code | Redacción inicial de las respuestas, las contingencias y las reservas desde el registro de riesgos | Alto | Ninguno | **[Información requerida por dupla 4: nombre, cargo y qué verificó]** |
 | Formulario T-16 | Claude Opus 5.5 en Claude Code | Generación del registro, de la tabla de respuesta y del análisis de modos de falla con un guion desde el registro de riesgos | Alto | Ninguno | **[Información requerida por dupla 4: nombre, cargo y qué verificó]** |
+| Acuerdo de capacitación y adhesión y registros parciales de T-16 | OpenAI Codex | Incorporación de la línea base acordada de A13/G13 y de la definición común de adhesión; no se acredita ejecución de Monte Carlo ni integración del catálogo original ausente | Alto | Ninguno | [Revisión humana y asociación a bitácora A-6 del responsable pendientes] |

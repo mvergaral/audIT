@@ -25,7 +25,7 @@ calendario que resulta del inicio en febrero de 2027.
 | Meses | Calendario | Qué se habilita | Condición para avanzar |
 |---|---|---|---|
 | 6 a 10 | Julio a noviembre 2027 | Montaje de la flota propia y de los terceros adheridos | Acta de montaje por camión |
-| 10 a 12 | Noviembre 2027 a enero 2028 | Capacitación de torre, terminales y conductores en el relevo | Usuarios certificados |
+| 10 a 12 | Noviembre 2027 a enero 2028 | A13: 40 días hábiles, días 182 a 222; familiarización diez días antes del fin de A09 y luego práctica completa y evaluación por turnos y relevos | G13 disponible: PREPROD probado y congelado, datos ficticios y material por perfil; usuarios certificados al cierre |
 | 13 | Febrero 2028 | Vigencias, jornada, viaje y posición en registro paralelo, primero en San Bernardo | Conciliación diaria sin diferencias |
 | 13 y 14 | Febrero y marzo 2028 | Documento de transporte y verificación bloqueante en paralelo, sin bloquear | Motivos de bloqueo explicados |
 | 14 | Marzo 2028 | Liquidación por las dos vías, transportista por transportista | Diferencias explicadas |
@@ -92,4 +92,3 @@ paso del camión. Durante la marcha blanca la reversión es más simple: la form
 operando en paralelo y basta con dejar de usar el proceso nuevo.
 
 \end{formulario}
-
