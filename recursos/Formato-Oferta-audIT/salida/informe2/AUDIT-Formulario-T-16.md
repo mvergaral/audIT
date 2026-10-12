@@ -4,10 +4,6 @@ audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. O
 
 \begin{formulario}{T-16}
 
-La adhesión firmada se cuenta una vez por RUT de los 148 transportistas iniciales, con anexo firmado por mandante y representante autorizado, vigente, no revocado y registrado al corte. Ambas modalidades cuentan. M9 cierra el 31 de octubre de 2027 bajo SA-01; refuerzo con 59 o menos; metas de 104 en M16 y 134 en M21. Instalación, activación y consentimientos se controlan por separado; la firma del transportista no sustituye los consentimientos de conductores.
-
-A13 mantiene 40 días: diez de familiarización y treinta de práctica y evaluación, incluido el complemento del sprint 8. Su inicio diez días antes del término de A09 depende de G13: funciones certificadas del sprint 7, PREPROD probado y congelado, datos ficticios y material por perfil. Si falta G13, no inicia y se registra el atraso para actualizar R-16 y la simulación.
-
 \providecommand\tituloBloqueFormulario[1]{
   \phantomsection\addcontentsline{toc}{section}{#1}{\sffamily\bfseries\fontsize{13bp}{16bp}\selectfont\color{audit-marino}#1}}
 
@@ -41,7 +37,7 @@ y exige plan de contingencia, que está en la sección 8.3.
   \riesgoTDieciseis{id=R-13, riesgo={La autoridad no admite el registro electrónico de jornada}, categoria={Organizacionales y de contrapartes}, probabilidad=2, impacto=3, exposicion=6, mitigacion={Consulta C-10 en el mes 2. Si la respuesta es negativa, se mantiene el respaldo en papel firmado}, responsable={Líder Funcional}}
   \riesgoTDieciseis{id=R-14, riesgo={Los conductores rechazan la medición o la perciben como vigilancia, en especial los 258 externos}, categoria={Organizacionales y de contrapartes}, probabilidad=3, impacto=3, exposicion=9, mitigacion={Plan de gestión del cambio, consentimiento revocable por dato y período, y capacitación en los terminales (A13)}, responsable={Líder de Implantación}}
   \riesgoTDieciseis{id=R-15, riesgo={Los usuarios clave de la torre y de los terminales no tienen tiempo para el levantamiento, las pruebas y la capacitación, sobre todo en la temporada, o un entregable vuelve con observaciones y la segunda revisión del Artículo 18.3 consume el margen del hito}, categoria={Organizacionales y de contrapartes}, probabilidad=3, impacto=3, exposicion=9, mitigacion={Calendario de participación de los usuarios clave acordado en el arranque, revisión previa de cada entregable con la Contraparte Técnica en el Comité de Proyecto y entregables con la evidencia y la trazabilidad del Artículo 18.2}, responsable={Jefe de Proyecto}}
-  \riesgoTDieciseis{id=R-16, riesgo={La ruta crítica o la capacitación atrasan el inicio de la marcha blanca de la Etapa 1, fijado en el día 240}, categoria={Gestión del proyecto}, probabilidad=2, impacto=4, exposicion=8, mitigacion={Reserva A14 de 14 días y A13 adelantada 10 días respecto del fin de A09, condicionada a G13; registrar atraso si PREPROD o material no están disponibles}, responsable={Jefe de Proyecto}}
+  \riesgoTDieciseis{id=R-16, riesgo={La ruta crítica o la capacitación atrasan el inicio de la marcha blanca de la Etapa 1, fijado en el día 240}, categoria={Gestión del proyecto}, probabilidad=2, impacto=4, exposicion=8, mitigacion={Reserva A14 de 14 días y A13 diez días antes del fin de A09, condicionada a la entrega G13, con registro del atraso si faltan la versión de preproducción, los datos o el material}, responsable={Jefe de Proyecto}}
   \riesgoTDieciseis{id=R-17, riesgo={Los primeros hitos de pago se atrasan, porque su margen es de 2 a 8 días hábiles}, categoria={Gestión del proyecto}, probabilidad=2, impacto=3, exposicion=6, mitigacion={Levantamiento en los cinco terminales en paralelo y seguimiento semanal del margen de cada hito}, responsable={Jefe de Proyecto}}
   \riesgoTDieciseis{id=R-18, riesgo={La marcha blanca de la Etapa 1, que cae en la temporada de fruta, no cumple las condiciones del Artículo 17.3 en tres meses}, categoria={Gestión del proyecto}, probabilidad=3, impacto=4, exposicion=12, mitigacion={Analistas en los cinco terminales en el horario de relevo, medición diaria y reversión activa}, responsable={Líder de Operación}}
   \riesgoTDieciseis{id=R-19, riesgo={El montaje a bordo avanza más lento que la cobertura declarada mes a mes, por un cierre del paso Los Libertadores, por la temporada de diciembre a abril o porque un camión pasa poco por los terminales}, categoria={Gestión del proyecto}, probabilidad=3, impacto=2, exposicion=6, mitigacion={Montaje en los meses 6 a 10 y 16 a 18, con holguras de 20 días (A11) y 40 días (A18)}, responsable={Líder de Implantación}}
@@ -75,12 +71,12 @@ respuesta, el disparador que la activa y el plazo, más la exposición antes y d
 | R-08 | Mitigar | Proveedor sin interfaz de salida en la factibilidad | Meses 1 a 4 | 9 a 6 |
 | R-09 | Mitigar | Fabricante sin autorización escrita al cierre de A04 | Mes 4 | 9 a 6 |
 | R-10 | Mitigar | Caída de posiciones de un proveedor en el seguimiento mensual | Mensual | 9 a 6 |
-| R-11 | Mitigar | Menos de 60 anexos firmados y vigentes al cierre del mes 9, el 40 % de los 148 transportistas | Mes 9 | 12 a 8 |
+| R-11 | Mitigar | 59 o menos RUT de los 148 iniciales con anexo firmado, vigente, no revocado y registrado al cierre del mes 9 (31-10-2027) | Mes 9 | 12 a 8 |
 | R-12 | Mitigar | Prueba técnica fallida | Mes 3 | 6 a 4 |
 | R-13 | Aceptar | Respuesta negativa a la consulta C-10 | Mes 2 | 6 a 4 |
 | R-14 | Mitigar | Aumento de revocaciones en el indicador mensual de adhesión | Mensual desde el mes 6 | 9 a 6 |
 | R-15 | Mitigar | Sesión con usuarios clave suspendida dos veces o entregable con observaciones | Cada entregable | 9 a 6 |
-| R-16 | Mitigar | Entrega de entrenamiento incompleta el día 182 o consumo de más de la mitad de la reserva A14 | Quincenal hasta el día 240 | 8 a 4 |
+| R-16 | Mitigar | Entrega G13 incompleta el día 182 o consumo de más de la mitad de la reserva A14 | Quincenal hasta el día 240 | 8 a 4 |
 | R-17 | Aceptar | Margen de un hito bajo 2 días hábiles | Semanal hasta H4 | 6 a 6 |
 | R-18 | Mitigar | Condición de cierre bajo su umbral al cierre del mes 14 | Mes 14 | 12 a 8 |
 | R-19 | Mitigar | Cobertura acumulada bajo la declarada para el mes | Meses 6 a 10 y 16 a 18 | 6 a 3 |

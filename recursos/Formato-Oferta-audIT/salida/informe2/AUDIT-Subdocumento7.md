@@ -753,7 +753,7 @@ volumetría proyectada a tres años: 430 camiones y 118.000 viajes al año (Caso
 prueba de estrés lleva la carga al triple de la volumetría inicial, que es lo que la solución debe
 soportar sin rediseño (FEP02, RT-09.03, p. 21), y repite la reconexión simultánea de 300 camiones que
 dimensiona la sección 4.2.8. La prueba de resiliencia corta el enlace de un terminal
-durante 24 horas (en estricto cumplimiento del umbral transversal del Art. 16.4 y la Tabla 9.6 de calidad) y el de un camión durante 72.
+durante 24 horas (FEP01, Artículo 16.4, p. 12) y el de un camión durante 72.
 
 **Métricas de éxito.**
 Un paso a producción es exitoso si en sus primeros 30 días hábiles no hay incidentes críticos atribuibles
@@ -819,12 +819,6 @@ Si una marcha blanca no cumple las seis condiciones, se extiende por cuenta de a
 siguientes (FEP01, Artículo 17.3, p. 13). La de la Etapa 1 tiene 20 días hábiles de holgura antes de afectar la marcha
 blanca de la Etapa 2, según la sección 7.3.1. La de la Etapa 2 no tiene holgura y por eso está
 protegida por la reserva A23.
-y evaluación, después de terminar A09. La capacitación se organiza por turnos y relevos
-y evaluación, después de terminar A09. D3 debe definir las funciones certificadas al
-cierre del sprint 7 que estarán disponibles en PREPROD para familiarización; no se
-presupone que esa certificación ya ocurrió. Los cambios del sprint 8 se cubren con
-un complemento antes de la marcha blanca, dentro de los treinta días restantes.
-La capacitación se organiza por turnos y relevos
 
 ## Referencias
 
@@ -860,11 +854,11 @@ Conforme al Comunicado 10, sección 7.2, cada sección de este subdocumento y ca
 
 | Sección | Herramienta | Finalidad del uso | Nivel en texto | Nivel en diagramas | Revisión humana (quién y qué verificó) |
 |---|---|---|---|---|---|
-| Introducción | Claude Opus 5.5 en Claude Code | Redacción inicial de los dos párrafos de apertura desde el Artículo 17 y el Comunicado 10 | Alto | Ninguno | [nombre y cargo de quien revisó, y qué verificó] |
-| 7.2.3 | Claude Opus 5.5 en Claude Code | Cálculo de la dotación y de la asignación por rol con un guion, búsqueda de fuentes y redacción inicial del texto desde las decisiones D4-61 a D4-67 | Alto | Ninguno | [nombre y cargo de quien revisó, y qué verificó] |
-| 7.3.1 | Claude Opus 5.5 en Claude Code y conector de Lucid | Cálculo de la red PERT y CPM con un guion, redacción inicial del análisis y dos diagramas escritos como código para Lucid | Alto | Medio | [nombre y cargo de quien revisó, y qué verificó] |
-| Formulario T-15 | Claude Opus 5.5 en Claude Code | Tablas de dotación, asignación, estimaciones de tres puntos y malla generadas desde el mismo cálculo | Alto | Ninguno | [nombre y cargo de quien revisó, y qué verificó] |
-| Resumen de apertura, 7.1, 7.2, 7.2.1, 7.2.2, 7.2.4 y 7.3.2 a 7.3.4 | Claude Opus 5.5 en Claude Code | Redacción inicial sobre las decisiones del equipo, cálculo de la dotación por tramo y de la cobertura a bordo, y figuras de la EDT y de la carta Gantt escritas como código TikZ con un guion | Alto | Medio | [nombre y cargo de quien revisó, y qué verificó] |
-| Formularios T-14 y T-18, y esfuerzo del T-15 | Claude Opus 5.5 en Claude Code | Diccionario de los 54 paquetes, secuencias de implantación, procedimiento de reversión y curvas de esfuerzo | Alto | Ninguno | [nombre y cargo de quien revisó, y qué verificó] |
-| 7.1 y 7.3.3 | OpenAI Codex | Actualización de descripción de EDT y generación de vistas generales y detalles legibles de EDT/Gantt; recuperación de PERT sin modificar precedencias | Alto | Alto | [Revisión humana final y asociación a bitácora A-6 del responsable pendientes] |
-| Conciliación de capacitación y adhesión | OpenAI Codex | Precedencia A09 FS-10 de A13 y puerta G13; recálculo de holguras y actualización de PERT y gráficos; sprint 7 y complemento de sprint 8 dentro de 40 días | Alto | Ninguno | [Revisión humana y asociación a bitácora A-6 del responsable pendientes] |
+| Introducción | Claude Opus 5.5 en Claude Code | Redacción inicial de los dos párrafos de apertura desde el Artículo 17 y el Comunicado 10 | Alto | Ninguno | Ignacio Cuevas, Analista de Requerimientos: revisión del propósito del plan y su correspondencia con las fases y obligaciones de la oferta. |
+| 7.2.3 | Claude Opus 5.5 en Claude Code | Cálculo de la dotación y de la asignación por rol con un guion, búsqueda de fuentes y redacción inicial del texto desde las decisiones de diseño del equipo | Alto | Ninguno | Ignacio Cuevas, Analista de Requerimientos: revisión de la dotación, asignación por rol y cobertura durante los solapamientos. |
+| 7.3.1 | Claude Opus 5.5 en Claude Code y conector de Lucid | Cálculo de la red PERT y CPM con un guion, redacción inicial del análisis y dos diagramas escritos como código para Lucid | Alto | Medio | Ignacio Cuevas, Analista de Requerimientos: revisión de la secuencia PERT/CPM, precedencias, ruta crítica y reservas. |
+| Formulario T-15 | Claude Opus 5.5 en Claude Code | Tablas de dotación, asignación, estimaciones de tres puntos y malla generadas desde el mismo cálculo | Alto | Ninguno | Ignacio Cuevas, Analista de Requerimientos: revisión de la dotación, esfuerzo, estimaciones de tres puntos y malla del T-15. |
+| Resumen de apertura, 7.1, 7.2, 7.2.1, 7.2.2, 7.2.4 y 7.3.2 a 7.3.4 | Claude Opus 5.5 en Claude Code y OpenAI Codex | Redacción inicial sobre las decisiones del equipo, cálculo de la dotación por tramo y de la cobertura a bordo, y figuras de la EDT y de la carta Gantt escritas como código TikZ con un guion | Alto | Medio | Matías Vergara, Analista de Planificación y Calidad: revisión de cobertura de la EDT, partición del trabajo, cronograma, implantación y correspondencia de las figuras con el plan. |
+| Formularios T-14 y T-18, y esfuerzo del T-15 | Claude Opus 5.5 en Claude Code | Diccionario de los 54 paquetes, secuencias de implantación, procedimiento de reversión y curvas de esfuerzo | Alto | Ninguno | Matías Vergara, Analista de Planificación y Calidad: revisión del diccionario de los 54 paquetes, secuencias de implantación, reversión y esfuerzo de T-14, T-15 y T-18. |
+| 7.1 y 7.3.3 | OpenAI Codex | Actualización de descripción de EDT y generación de vistas generales y detalles legibles de EDT/Gantt; recuperación de PERT conservando el alcance de los paquetes | Alto | Alto | Matías Vergara, Analista de Planificación y Calidad: revisión de las vistas generales y detalles de EDT/Gantt, sus códigos, leyendas y referencias PERT. |
+| 7.3.1, T-15 y T-18 | OpenAI Codex | Precedencia A09 FS-10 de A13 y puerta G13; recálculo de holguras y actualización de PERT y gráficos; sprint 7 y complemento de sprint 8 dentro de 40 días | Alto | Ninguno | Matías Vergara, Analista de Planificación y Calidad: revisión del adelanto condicionado de A13, entrega G13, holguras, duración y complemento del sprint 8 dentro de los 40 días. |

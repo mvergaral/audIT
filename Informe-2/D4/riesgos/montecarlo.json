@@ -36,16 +36,22 @@
     "A10": 1.4,
     "A11": 0.0
   },
-  "A13_retrasa_marcha_blanca": 0.0,
-  "A13_empieza_despues_del_dia_182": 49.0,
+  "A13_retrasa_marcha_blanca": 0.1,
+  "A13_empieza_despues_del_dia_182": 50.0,
   "percentiles_inicio_A13": {
-    "50": 181.8,
-    "80": 187.7,
-    "95": 193.8
+    "50": 182.0,
+    "80": 188.2,
+    "95": 194.6
+  },
+  "G13_despues_del_dia_182": 49.4,
+  "percentiles_G13": {
+    "50": 181.9,
+    "80": 188.2,
+    "95": 194.6
   },
   "holgura_A13_a_marcha_blanca": {
-    "5": 6.9,
-    "50": 18.1
+    "5": 6.1,
+    "50": 18.0
   },
   "A18_define_H12": 0.0,
   "ambas_marchas_blancas_a_tiempo": 92.1

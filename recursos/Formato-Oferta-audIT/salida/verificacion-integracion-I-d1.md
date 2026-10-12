@@ -1,3 +1,5 @@
+> Antecedente de una ejecución anterior a la integración remota del 12 de octubre de 2026. Para el estado de esa integración, consultar `verificacion-integracion-remoto-d1.md`.
+
 # Verificación de integracion-I-d1
 
 | Estado | Punto | Detalle |

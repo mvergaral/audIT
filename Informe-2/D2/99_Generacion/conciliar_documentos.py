@@ -42,15 +42,16 @@ replace_file(BASE / '07-plan-trabajo/contenido.tex', [
      'datos, adhesión, calidad, implantación, innovaciones y operación de 36 meses.'),
 ])
 for folder, section, purpose, diagrams in [
-    ('03-solucion', '3.4.2 y RF-014/RN-11 del T-12', 'Conciliación de representación completa y conforme en cabina con S4 y R-28; ensayo integral de 90 segundos pendiente', 'Ninguno'),
-    ('07-plan-trabajo', '7.1 y 7.3.3', 'Actualización de descripción de EDT y generación de vistas generales y detalles legibles de EDT/Gantt; recuperación de PERT sin modificar precedencias', 'Alto'),
+    ('03-solucion', '3.4.2 y RF-014/RN-11 del T-12', 'Conciliación de representación completa y conforme en cabina con S4 y R-28; definición del ensayo integral de 90 segundos', 'Ninguno'),
+    ('07-plan-trabajo', '7.1 y 7.3.3', 'Actualización de descripción de EDT y generación de vistas generales y detalles legibles de EDT/Gantt; recuperación de PERT conservando el alcance de los paquetes', 'Alto'),
     ('13-innovaciones', '13.2 y ficha T-19 tipo 2', 'Explicitación del cierre de flota propia en M9 y conservación del calendario acordado; valorización incremental pendiente', 'Ninguno'),
 ]:
     p = BASE / folder / 'declaracion-ia.tex'
+    review = 'Nombre, cargo y alcance de la revisión humana' if folder in ('03-solucion','07-plan-trabajo') else 'Revisión humana final y asociación a bitácora A-6 del responsable pendientes'
     line = (f'\\usoIA{{{section}}}{{OpenAI Codex}}{{{purpose}}}{{Alto}}{{{diagrams}}}'
-            '{\\marcador{Revisión humana final y asociación a bitácora A-6 del responsable pendientes}}\n')
+            f'{{\\marcador{{{review}}}}}\n')
     text = p.read_text(encoding='utf-8')
-    if line not in text:
+    if f'\\usoIA{{{section}}}{{OpenAI Codex}}' not in text:
         p.write_text(text + '\n' + line, encoding='utf-8')
 
 replace_file(ROOT / 'Informe-2/d2/99_Generacion/generar_plan_detallado.py', [

@@ -57,7 +57,7 @@ El viaje puede programarse sin recursos ni peso definitivo. La asignación sólo
 
 \subsection{Evidencia de jornada, cascada y cadena de custodia}\label{sec:5-evidencia-jornada}\label{sec:05-evidencia-de-jornada-cascada-y-cadena-de-custodia}
 
-La evidencia se clasifica conforme al contrato de S3 y a la corrección de D1: fuente instrumental, nivel, estado, modalidad y veredicto son dimensiones distintas. La \tabref{05-tabla-5-2} conserva la correspondencia canónica.
+La evidencia se clasifica conforme al Subdocumento 3: fuente instrumental, nivel, estado, modalidad y veredicto son dimensiones distintas. La \tabref{05-tabla-5-2} conserva la correspondencia canónica.
 
 \begin{tabla}[ancho=completo, fuente=condensada]{Niveles de evidencia de jornada y uso en la validación}{05-tabla-5-2}{L{29mm} X X X}
 \textbf{Origen o código conservado} & \textbf{Nivel canónico} & \textbf{Condición de interpretación} & \textbf{Modalidad y veredicto esperado} \\ \midrule
@@ -220,13 +220,13 @@ Con $\approx$96.000 viajes/año, \texttt{VIAJE} se mantiene sin partición inici
 
 Redis conserva versiones, vencimiento y permisos. Revocar una habilitación o autorización invalida la proyección; un TTL aislado no asegura actualidad. El caché no es el único registro de idempotencia. Vistas y consultas de preliquidación/BI residen en la capa analítica, con refresco y marca de antigüedad; no compiten con la base de despacho.
 
-S4.1.20 deriva \textasciitilde{}119,82 millones de posiciones/año en el escenario completo y distingue las 61 fuentes iniciales de motor del resto. El anexo de S5 estima bytes de negocio, evidencia y migración con tamaños supuestos. La aceptación mide máximos y percentiles del despacho, retraso de CDC, consumo de WAL, CPU/IO, reconstrucción de evidencia y confirmación de cada camión. Se separan 380 sesiones provisionales, 570 en estrés, crecimiento 3$\times$ y 300 reconexiones: no son la misma prueba ni equivalen a TPS. La línea base concurrente se concilia con D4 antes de congelar dimensionamiento.
+S4.1.20 deriva \textasciitilde{}119,82 millones de posiciones/año en el escenario completo y distingue las 61 fuentes iniciales de motor del resto. El anexo de S5 estima bytes de negocio, evidencia y migración con tamaños supuestos. La aceptación mide máximos y percentiles del despacho, retraso de CDC, consumo de WAL, CPU/IO, reconstrucción de evidencia y confirmación de cada camión. Se separan 380 sesiones nominales, 570 en estrés, crecimiento 3$\times$ y 300 reconexiones: no son la misma prueba ni equivalen a TPS. La línea base concurrente coincide con el perfil de carga del Subdocumento 4: 380 sesiones nominales y 570 en estrés.
 
 \clearpage
 \section*{Anexo. Diccionario de datos y supuestos de capacidad}\label{sec:05-anexo-diccionario}
 \addcontentsline{toc}{section}{Anexo. Diccionario de datos y supuestos de capacidad}
 \markright{Anexo. Diccionario de datos}
-El diccionario especifica el modelo propuesto de D3, por dominio, conforme a \transv{RT-05.01}{11} y Comunicado 10 · capítulo 5. Las figuras del cuerpo seleccionan relaciones críticas para mantener legibilidad; aquí se explicitan atributos y controles. El catálogo se valida con los propietarios y fuentes del CLIENTE antes de congelar el esquema.
+El diccionario especifica el modelo propuesto, por dominio, conforme a \transv{RT-05.01}{11} y Comunicado 10 · capítulo 5. Las figuras del cuerpo seleccionan relaciones críticas para mantener legibilidad; aquí se explicitan atributos y controles. El catálogo se valida con los propietarios y fuentes del CLIENTE antes de congelar el esquema.
 
 UUID identifica globalmente sin renumerar un original. TIMESTAMPTZ conserva un instante normalizado; la zona/offset de origen se registra aparte cuando importa; el valor original de fuente se guarda cuando su interpretación sea incierta. NULL significa ausente/desconocido cuando corresponde y nunca se rellena con cero. Las referencias entre contextos son lógicas y se validan por contratos; las FK físicas se implementan en las tablas locales del contexto. Una etiqueta PK/FK en el modelo no impone acceso directo a otra base. Los campos condicionales se exigen al confirmar su estado; una recepción incompleta se conserva sin habilitar operación. Los catálogos TEXT se validan con CHECK o catálogo versionado; JSONB requiere esquema y versión explícitos.
 

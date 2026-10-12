@@ -157,24 +157,24 @@ Azure IoT Hub Device Twins registra configuración deseada y reportada; una dife
 
 \subsection{Madurez}\label{sec:13-proceso-madurez}
 
-Se utiliza la escala TRL de nueve niveles explicada por NASA (Manning, 2023), aplicada aquí como referencia de madurez del desarrollo, sin confundir disponibilidad de un servicio cloud con validación del proceso completo. El proceso integrado está en \textbf{TRL 2 propuesto}: concepto y contratos definidos, sin prueba de concepto ejecutada. Se prevé contrastar factibilidad en laboratorio antes del piloto de M6, avanzar a integración validada y documentar el nivel alcanzado con resultados. Se elimina la afirmación de TRL 8 sin evidencia del sistema integrado.
+Se utiliza la escala TRL de nueve niveles explicada por NASA (Manning, 2023), aplicada aquí como referencia de madurez del desarrollo, sin confundir disponibilidad de un servicio cloud con validación del proceso completo. El proceso integrado está en \textbf{TRL 2 propuesto}: concepto y contratos definidos, sin prueba de concepto ejecutada. Se prevé contrastar factibilidad en laboratorio antes del piloto de M6, avanzar a integración validada y documentar el nivel alcanzado con resultados.
 
 \subsection{Incorporación, arquitectura y calendario}\label{sec:13-proceso-incorporacion-arquitectura-y-calendario}
 
 La \figref{13-proceso-13-2-intervenciones} muestra el proceso, sus entradas y el control que evita intervenir sin ventana confirmada.
 
-\anexoGrafico{../../Informe-2/D3/graficos/13-2-intervenciones.png}{Programación y ejecución de intervenciones por oportunidad de patio}{13-proceso-13-2-intervenciones}
+\anexoGrafico{figuras/13-innovaciones/intervenciones.pdf}{Programación y ejecución de intervenciones por oportunidad de patio}{13-proceso-13-2-intervenciones}
 
 \begingroup\emergencystretch=3em
-Flota y activos conserva \texttt{INTERVENCION\_\allowbreak{}TALLER}; Telemetría conserva \texttt{DISPOSITIVO} y eventos de configuración; la plataforma de S6 construye y firma el artefacto. El manifiesto vincula dispositivo, familia, kit, versión y acta de validación, sin sobrescribir la evidencia anterior. El detalle de planificación se mantiene en el backlog EDT 12.2, con integración a EDT 4.1/4.2; no se altera la EDT de D2.\par\endgroup
+Flota y activos conserva \texttt{INTERVENCION\_\allowbreak{}TALLER}; Telemetría conserva \texttt{DISPOSITIVO} y eventos de configuración; la plataforma de S6 construye y firma el artefacto. El manifiesto vincula dispositivo, familia, kit, versión y acta de validación, sin sobrescribir la evidencia anterior. El detalle de planificación se mantiene en el backlog EDT 12.2, con integración a EDT 4.1/4.2; no se altera la EDT del Subdocumento 7.\par\endgroup
 
-Calendario de S7/CONSIDERACIONES-D2: piloto de \textbf{10 camiones en M6}, montaje propio \textbf{M6–M9}, con \textbf{flota propia completa en M9}, terceros adheridos desde M7, pausa M11–M15 y continuación M16–M18. El proceso no garantiza intervenir un tercero que no acuda o no adhiera. Los equipos existentes de los 192 terceros se integran mediante sus contratos autorizados; no se sustituyen por esta ficha.
+Calendario del Subdocumento 7: piloto de \textbf{10 camiones en M6}, montaje propio \textbf{M6–M9}, con \textbf{flota propia completa en M9}, terceros adheridos desde M7, pausa M11–M15 y continuación M16–M18. El proceso no garantiza intervenir un tercero que no acuda o no adhiera. Los equipos existentes de los 192 terceros se integran mediante sus contratos autorizados; no se sustituyen por esta ficha.
 
 \subsection{Impacto económico y vínculo al flujo de caja}\label{sec:13-proceso-impacto-economico-y-vinculo-al-flujo-de-caja}
 
 La inversión incremental comprende el planificador, el tablero de oportunidades, pruebas de integración, homologación del agente y los kits diferenciales que efectivamente agregue el proceso. Se contabiliza en EDT 12.2 y en las partidas de implementación de la oferta económica; el stock contractual de sustitución de T-11 no se cobra nuevamente como inversión innovadora. El costo recurrente incluye ejecución, almacenamiento de actas y mantenimiento del planificador, separado de la conectividad ya presupuestada.
 
-El beneficio estimado se calcula como intervenciones evitadas por falta de kit $\times$ costo unitario de visita, más reducción medida de preparación $\times$ costo operativo aplicable, menos costo incremental del proceso. Sólo se incorpora un ahorro al escenario financiero cuando su base, cantidad, costo unitario y sensibilidad estén documentados; el escenario inicial no atribuye ahorro garantizado. La valorización se vincula a E-25/partidas de implementación y operación con D2. La fuente económica del repositorio mantiene valores vacíos; esta ficha no inventa montos ni una partida aprobada. La valoración monetaria y su reflejo en flujo de caja deben completarse en la oferta económica conforme al Artículo 29.5°.
+El beneficio estimado se calcula como intervenciones evitadas por falta de kit $\times$ costo unitario de visita, más reducción medida de preparación $\times$ costo operativo aplicable, menos costo incremental del proceso. Sólo se incorpora un ahorro al escenario financiero cuando su base, cantidad, costo unitario y sensibilidad estén documentados; el escenario inicial no atribuye ahorro garantizado. La valoración monetaria y su reflejo en el flujo de caja van en la oferta económica, conforme al Artículo 29.5°.
 
 \subsection{Indicadores y medición}\label{sec:13-proceso-indicadores-y-medicion}
 
@@ -202,7 +202,7 @@ Escaso beneficio frente a coordinación manual & Media / medio & Comparación tr
 Tercero sin autorización o sin paso por terminal & Media / alto & Agenda sólo con autorización vigente y oportunidad confirmada & Integración lógica de capacidades disponibles; no intervenir equipo privado \\
 \end{tabla}
 
-Las valoraciones son hipótesis AMFE a conciliar con S8; no resultados de incidentes observados. Los responsables de Flota y terminal registran el riesgo y su decisión en los comités de S6.
+Las valoraciones siguen la escala del Subdocumento 8 (sección 8.1). Los responsables de Flota y terminal registran el riesgo y su decisión en los comités de S6.
 
 Fuentes de madurez y aprovisionamiento: \parencite{d3_nasa_trl,d3_device_twins,d3_device_update}.
 
@@ -454,7 +454,7 @@ un asistente de seguridad y bienestar.
 
 \paragraph{Nivel de madurez} Se utiliza la escala tecnológica de uno a nueve \parencite{iso16290}. El desarrollo integrado del modelo circadiano y del catálogo calificado de paradores se autoevalúa en TRL 2 conceptual: el concepto, sus entradas y su incorporación están definidos, pero no se aporta evidencia de una prueba de concepto o validación del prototipo. La disponibilidad comercial del equipo de borde, almacenamiento y síntesis de voz no acredita la madurez del conjunto ni de su integración con el enclavamiento.
 
-TRL 6 es un objetivo de validación del prototipo integrado en entorno representativo durante las pruebas de Etapa 1 (M10--M12); TRL 7 es un objetivo de demostración operacional con conductores durante la marcha blanca M13--M15, antes de producción E1 en M16. El nivel alcanzado se determinará con versión y configuración, datos de entrada autorizados o sintéticos identificados, protocolo, entorno y resultados reproducibles, junto con evidencia del piloto. No se declaran ensayos realizados ni niveles 6 o 7 ya alcanzados. Las normas ergonómicas \parencite{iso15005,iso9241_210}, los estudios de fatiga \parencite{nasem2016_fatiga} y la normativa aplicable \parencite{ley21377,codigo_trabajo_25bis} fundamentan el diseño; no sustituyen los resultados de validación de audIT.
+TRL 6 es un objetivo de validación del prototipo integrado en entorno representativo durante las pruebas de Etapa 1 (M10--M12); TRL 7 es un objetivo de demostración operacional con conductores durante la marcha blanca M13--M15, antes de producción E1 en M16. El nivel alcanzado se determinará con versión y configuración, datos de entrada autorizados o sintéticos identificados, protocolo, entorno y resultados reproducibles, junto con evidencia del piloto. Los niveles 6 y 7 se acreditan con ese expediente. Las normas ergonómicas \parencite{iso15005,iso9241_210}, los estudios de fatiga \parencite{nasem2016_fatiga} y la normativa aplicable \parencite{ley21377,codigo_trabajo_25bis} fundamentan el diseño; no sustituyen los resultados de validación de audIT.
 
 \paragraph{Diseño de la incorporación} Se articula en la capa de borde (motor predictivo a bordo,
 catálogo local y síntesis de voz), en la capa de servicios (servicio de gobernanza de paradores y

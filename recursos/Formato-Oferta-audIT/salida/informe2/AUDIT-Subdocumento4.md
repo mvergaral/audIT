@@ -10,7 +10,7 @@ El FEP01, Artículo 46, p. 28 pide resolver en cada informe las observaciones de
 
 | N.º | Observación | Respuesta | Sección modificada |
 |---|---|---|---|
-| 03 | El Anexo A del Subdocumento 4 no es el Formulario T-11, es una tabla de emplazamiento sin cantidades ni configuración. | Se acepta. El Formulario T-11 se entrega en archivo propio con fichas de componentes, cantidades y configuración, en coherencia con el dimensionamiento de almacenamiento y reconexión del Subdocumento 4. | Formulario T-11; S4 §4.2.1 y §4.2.8. |
+| 03 | El Anexo A del Subdocumento 4 no es el Formulario T-11, es una tabla de emplazamiento sin cantidades ni configuración. | Se acepta. El Formulario T-11 se entrega en archivo propio, con las fichas de cada componente, sus cantidades y su configuración | Formulario T-11; S4 §4.2.1 y §4.2.8 |
 | 53 | El diagrama de las ocho capas no muestra interfaces y no se explica qué contiene cada capa ni cómo se conectan | Se acepta. La sección 4.1.3 describe el contenido y los componentes de cada capa, y su figura dibuja las interfaces entre capas con letra de 9 pt. Una petición entra por la presentación, el borde y la puerta de enlace, sin acceso directo a la base de datos | 4.1.3, 4.1.11 y 4.1.24 |
 | 54 | Componentes que aparecen solo como ícono, terminal de torre y pantalla de terreno, sin decir qué equipo es, qué software ejecuta, quién lo usa ni con qué se conecta | Se acepta. La capa de presentación declara el portal, la aplicación en los cuatro perfiles de RT-17.01 del Caso y las vistas de portería y de taller, y la sección 4.1.24 fija cómo se identifica cada perfil | 4.1.3 y 4.1.24 |
 | 55 | No hay matriz de requerimiento a componente, ningún requerimiento funcional del Subdocumento 3 se ubica en un componente | Se acepta. El Formulario T-12 asigna contexto y paquete de la EDT a cada uno de los 42 requerimientos, y la sección 4.1.23 relaciona sus contratos con los componentes, que la trazabilidad física cruza con el nodo y el Formulario T-11 | 4.1.19, 4.1.23, 4.2.3 y Formulario T-12 |
@@ -32,7 +32,7 @@ El FEP01, Artículo 46, p. 28 pide resolver en cada informe las observaciones de
 | 71 | Se dice que hay dieciocho componentes en la región primaria y la tabla suma veinte, y la matriz cubre 14 de los 34 | Se acepta. El conteo sale del Formulario T-11: 39 componentes, 24 de ellos en la región primaria, y la matriz de trazabilidad cruza los componentes críticos | 4.2.3 |
 | 72 | La región secundaria no tiene nombre y el Artículo 16.3 exige declararla | Se acepta. La región secundaria es Azure Brazil South, en espera, a unos 2.586 km de la primaria, con el mecanismo de réplica de cada servicio | 4.3.2 |
 | 73 | Los 8 GB del dispositivo no tienen cálculo, y las 288 horas de cierre fronterizo dan cerca de 40 MB | Se acepta. La capacidad se deriva por componente. Se requieren 2.374 MB, el búfer de 288 horas ocupa 38,4 MB y los 8 GB son la menor configuración del equipo, mientras la sección 4.1.20 deriva aparte el volumen anual de las series | 4.1.20 y 4.2.2 |
-| 74 | La sincronización en 20 minutos se repite como requisito y no se dimensiona, y cientos de unidades saliendo de una sombra no caben en esa ventana | Se acepta. S4 calcula una admisión de 57.600 mensajes en 9,6 minutos para 300 camiones. Ese cálculo cubre ingreso de mensajes; CP-PERF-02 define la verificación del proceso completo, incluidas fotos, persistencia y conciliación, en hasta veinte minutos por camión tras 72 horas sin cobertura. | S4 §§4.1.26 y 4.2.8; T-17 CP-PERF-02. |
+| 74 | La sincronización en 20 minutos se repite como requisito y no se dimensiona, y cientos de unidades saliendo de una sombra no caben en esa ventana | Se acepta. S4 estima la admisión de 57.600 mensajes en 9,6 minutos para 300 camiones con IoT Hub S1 de dos unidades y exige al menos 1.861 registros por segundo para persistencia. Son criterios de dimensionamiento; CP-PERF-02 define la verificación del proceso completo, incluidas fotos, persistencia y conciliación, en hasta veinte minutos por camión tras 72 horas sin cobertura, durante la certificación de Etapa 1. | S4 §§4.1.26 y 4.2.8; T-17 CP-PERF-02. |
 | 75 | Faltan los eventos por segundo, el TPS del peak de asignación, el volumen transaccional anual, los datos a migrar, el ancho de banda por terminal y la mesa de ayuda | Se acepta. Se declaran los eventos por segundo, las transacciones de la asignación en punta y en ráfaga, el volumen transaccional anual con la evidencia almacenada y el ancho de banda de terminales, de San Bernardo y de la reconexión. Los datos históricos a migrar se dimensionan en el Subdocumento 5, sección 5.3, y la mesa de ayuda en el Subdocumento 10 de la oferta final | 4.1.20 y 4.2.8 |
 | 77 | El equipo de TI de nueve personas no se menciona y el RT-03.05 se cita sin listar los servicios administrados | Se acepta. El catálogo lista los servicios administrados y los justifica con el tamaño del área de tecnología del mandante, nueve personas para cinco terminales, dos talleres y la flota | 4.2.4 |
 | 78 | Se tratan los tres proveedores de GPS y los 34 camiones sin equipo, pero no se dice qué se instala en esos 34 ni cómo conviven los dispositivos propios con los ajenos | Se acepta. Los 34 camiones de terceros sin equipo llevan el equipo audIT, igual que los 148 propios. Los 192 de terceros con equipo lo conservan, sus datos llegan por las plataformas de sus proveedores con acceso limitado a los permisos acreditados, y se fija el estándar mínimo para homologarlos | 4.1.14, 4.2 y 4.2.1 |
@@ -251,8 +251,7 @@ física, y las cuatro nuevas completan el análisis que pidió el Informe 1.
 
 *Fuente: elaboración propia sobre FEP02, RT-02.04, p. 7.*
 
-La tabla permite revisar cada elección con sus costos de operación, sin declarar pruebas ya
-ejecutadas. Un cambio de proveedor, de protocolo o de estrategia de continuidad actualiza el ADR, los
+La tabla permite revisar cada elección con sus costos de operación. Un cambio de proveedor, de protocolo o de estrategia de continuidad actualiza el ADR, los
 contratos, la EDT y los casos de aceptación. La mensajería satelital de la decisión 06 se dimensiona
 en la sección 4.2.2.
 
@@ -1287,13 +1286,13 @@ Tabla 4.13 muestra lo que acumula un camión en 72 horas sin cobertura.
 | Total sin fotos | Cerca de 5.950 | 0,78 MB |
 | Fotos de evidencia | 8 | 2,46 MB |
 
-*Fuente: elaboración propia sobre los supuestos S-01 a S-04. Cálculo en D4, dimensionamiento.py.*
+*Fuente: elaboración propia sobre los supuestos S-01 a S-04.*
 
 Un camión junta cerca de 6.000 registros y 0,78 MB sin contar las fotos. Agrupados en mensajes de
 4 KB (4.096 bytes), que es la unidad con que IoT Hub cuenta su cuota (Microsoft, s. f.), son 192 mensajes
 por camión. La Tabla 4.14 aplica eso a 300 camiones que salen a la vez de una sombra, y la
-Figura 4.18 sigue el camino de esos mensajes. Son estimaciones de diseño, y la prueba de los
-20 minutos sigue pendiente.
+Figura 4.18 sigue el camino de esos mensajes. Son estimaciones de diseño que se comprueban
+en la prueba CP-PERF-02 de la certificación de la Etapa 1.
 
 **Tabla 4.14.** Estimación de la reconexión simultánea de 300 camiones tras 72 horas
 
@@ -1349,7 +1348,7 @@ la Tabla 4.15.
 | Ancho de banda por terminal | 10 Mbit/s | 12,5 visitas diarias con imagen de 1 GB |
 | Ancho de banda de San Bernardo | 52 Mbit/s | 80 usuarios internos a 0,5 Mbit/s, más continuidad, por el crecimiento a 390 usuarios |
 
-*Fuente: elaboración propia. Cálculos en D4, dimensionamiento.py y sala_san_bernardo.py.*
+*Fuente: elaboración propia.*
 
 La carga fuerte de esta operación es la ingesta en la reconexión, unas 350 veces el promedio. La
 ventana de 20 minutos, con un 20 % de reserva, exige al menos 1.861 registros por segundo, y el diseño
@@ -1528,7 +1527,7 @@ equipo y los supuestos declarados.
 | Clima, una unidad en servicio | 640 | 1,6 kW de calor con COP 3,27, más 149 W de ventilador |
 | Carga total | 1.944 | PUE de 1,95 |
 
-*Fuente: Fortinet (2026), Fortinet (2026), Schneider Electric (2023), Stulz (2024), Vertiv (2026). Cálculo en D4, sala_san_bernardo.py.*
+*Fuente: Fortinet (2026), Fortinet (2026), Schneider Electric (2023), Stulz (2024), Vertiv (2026).*
 
 La carga de TI es de cerca de 1 kW y la total de 1,94 kW, con un PUE estimado de 1,95. El PUE es alto
 porque en una sala de 26 m² el clima y la iluminación pesan mucho frente a una carga de TI chica. El
@@ -1817,22 +1816,21 @@ Conforme al Comunicado 10, sección 7.2, cada sección de este subdocumento y ca
 
 | Sección | Herramienta | Finalidad del uso | Nivel en texto | Nivel en diagramas | Revisión humana (quién y qué verificó) |
 |---|---|---|---|---|---|
-| Artículo 46 | Claude Opus 5.5 en Claude Code | Redacción de las respuestas 53 a 80, su ajuste a la versión final del 4.1 y ubicación de la sección que resuelve cada una | Alto | Ninguno | **[Información requerida por dupla 4: nombre, cargo y qué verificó]** |
-| Introducción | Claude Opus 5.5 (Anthropic) en Claude Code | Redacción inicial del resumen a partir de las decisiones de diseño aprobadas | Alto | Ninguno | **[Información requerida por dupla 4: nombre, cargo y qué verificó]** |
-| 4.1 y 4.1.2 a 4.1.19, texto del Informe 1 | **[Información requerida por dupla 3: herramienta usada en el Informe 1]** | Traslado sin cambios del texto del Informe 1 al formato nuevo, hecho con Claude | **[Información requerida por dupla 3: nivel]** | **[Información requerida por dupla 3: nivel]** | **[Información requerida por dupla 3: nombre, cargo y qué verificó]** |
-| 4 y 4.1.1 a 4.1.26, revisión del 11 de octubre de 2026 | OpenAI Codex (GPT-6), sobre las fuentes previas del repositorio | Contraste con las bases y con los Subdocumentos 3, 5, 6, 7 y 9, corrección de contratos, decisiones y capacidad, y figuras de capas, secuencias y documento sin cobertura regeneradas | Alto | Alto | **[Información requerida por dupla 3: nombre, cargo y qué verificó]** |
-| 4.1, integración de la versión final | Claude Opus 5.5 en Claude Code | Integración al formato del texto final del 2026-10-11 con verificación de citas y versiones, copia de las cuatro secuencias y del documento sin cobertura ajustada al formato, y diagramas de contextos, integraciones, resiliencia, capa anticorrupción, analítica y modelo táctico generados antes con un guion sobre los modelos del equipo de arquitectura lógica | Alto | Medio | **[Información requerida por dupla 4: nombre, cargo y qué verificó]** |
-| 4.2 | Claude Opus 5.5 en Claude Code | Redacción inicial del texto desde las decisiones D4-01 a D4-60, y diagrama general generado con un guion desde el modelo definido por el equipo | Alto | Medio | **[Información requerida por dupla 4: nombre, cargo y qué verificó]** |
-| 4.2.1 | Claude Opus 5.5 en Claude Code | Búsqueda de fichas de fabricante, cantidades desde el Caso y redacción inicial | Alto | Ninguno | **[Información requerida por dupla 4: nombre, cargo y qué verificó]** |
-| 4.2.2 | Claude Opus 5.5 en Claude Code | Fichas del equipo a bordo y cálculo del almacenamiento, y diagrama generado con un guion desde el modelo definido por el equipo | Alto | Medio | **[Información requerida por dupla 4: nombre, cargo y qué verificó]** |
-| 4.2.3 | Claude Opus 5.5 en Claude Code | Conteo del emplazamiento y matriz de trazabilidad | Alto | Ninguno | **[Información requerida por dupla 4: nombre, cargo y qué verificó]** |
-| 4.2.4 | Claude Opus 5.5 en Claude Code | Verificación de servicios y niveles en la documentación de Microsoft | Alto | Ninguno | **[Información requerida por dupla 4: nombre, cargo y qué verificó]** |
-| 4.2.5 | Claude Opus 5.5 en Claude Code | Plan de direcciones y diagrama de la región primaria generado con un guion desde el modelo definido por el equipo | Alto | Medio | **[Información requerida por dupla 4: nombre, cargo y qué verificó]** |
-| 4.2.6 | Claude Opus 5.5 en Claude Code | Redacción inicial de ambientes, promoción y respaldos, y los dos diagramas generados con un guion desde el modelo definido por el equipo | Alto | Medio | **[Información requerida por dupla 4: nombre, cargo y qué verificó]** |
-| 4.2.7 | Claude Opus 5.5 en Claude Code | Enlaces, puntos únicos de falla y tiempos de conmutación con fuente | Alto | Ninguno | **[Información requerida por dupla 4: nombre, cargo y qué verificó]** |
-| 4.2.8 | Claude Opus 5.5 en Claude Code | Cálculo del dimensionamiento con script y diagrama de la reconexión generado con un guion desde el modelo definido por el equipo | Alto | Medio | **[Información requerida por dupla 4: nombre, cargo y qué verificó]** |
-| 4.2.9 | Claude Opus 5.5 en Claude Code | Actualización de los supuestos y brechas del Informe 1 | Medio | Ninguno | **[Información requerida por dupla 4: nombre, cargo y qué verificó]** |
-| 4.3 | Claude Opus 5.5 en Claude Code | Redacción inicial de tipologías | Alto | Ninguno | **[Información requerida por dupla 4: nombre, cargo y qué verificó]** |
-| 4.3.1 | Claude Opus 5.5 en Claude Code | Fichas y balance eléctrico con script, y plano de la sala y gabinete generados con un guion desde el modelo definido por el equipo | Alto | Medio | **[Información requerida por dupla 4: nombre, cargo y qué verificó]** |
-| 4.3.2 | Claude Opus 5.5 en Claude Code | Réplicas con fuente, protocolo de conmutación y compromiso de latencia, y diagramas de la recuperación y de la región secundaria generados con un guion desde el modelo definido por el equipo | Alto | Medio | **[Información requerida por dupla 4: nombre, cargo y qué verificó]** |
-| Formulario T-11 | Claude Opus 5.5 en Claude Code | Armado de las filas desde las fichas y decisiones aprobadas | Alto | Ninguno | **[Información requerida por dupla 4: nombre, cargo y qué verificó]** |
+| Artículo 46 | Claude Opus 5.5 en Claude Code | Redacción de las respuestas 03 y 53 a 80 y ubicación de la sección que resuelve cada una | Alto | Ninguno | Ignacio Vera, Arquitecto de Solución: correspondencia de cada respuesta con la sección que la resuelve. |
+| Introducción | Claude Opus 5.5 en Claude Code | Redacción inicial del resumen a partir de las decisiones de diseño del equipo | Alto | Ninguno | Ignacio Vera, Arquitecto de Solución: alcance del resumen y su coherencia con las secciones 4.1 a 4.3. |
+| 4 y 4.1.1 a 4.1.26 | OpenAI Codex (GPT-6) | Contraste con las bases y con los Subdocumentos 3, 5, 6, 7 y 9, corrección de contratos, decisiones y capacidad, y figuras de capas, secuencias y documento sin cobertura | Alto | Alto | Marcel Gutierrez, Arquitecto de Solución: decisiones de arquitectura, contratos, presupuesto de la asignación y supuestos de capacidad de la arquitectura lógica. |
+| 4.1 | Claude Opus 5.5 en Claude Code | Integración al formato con verificación de citas y versiones, ajuste al formato de las cuatro secuencias y del documento sin cobertura, y diagramas de contextos, integraciones, resiliencia, capa anticorrupción, analítica y modelo táctico generados con un guion sobre los modelos del equipo | Alto | Medio | Ignacio Vera, Arquitecto de Solución: citas a las bases, versiones de cada fabricante y correspondencia de las figuras con el texto. |
+| 4.2 | Claude Opus 5.5 en Claude Code | Redacción inicial del texto desde las decisiones de diseño del equipo, y diagrama general generado con un guion desde el modelo definido por el equipo | Alto | Medio | Ignacio Vera, Arquitecto de Solución: emplazamiento de cada componente y correspondencia del diagrama general con el Formulario T-11. |
+| 4.2.1 | Claude Opus 5.5 en Claude Code | Búsqueda de fichas de fabricante, cantidades desde el Caso y redacción inicial | Alto | Ninguno | Ignacio Vera, Arquitecto de Solución: fichas de fabricante y cantidades frente a las poblaciones del Caso. |
+| 4.2.2 | Claude Opus 5.5 en Claude Code | Fichas del equipo a bordo y cálculo del almacenamiento, y diagrama generado con un guion desde el modelo definido por el equipo | Alto | Medio | Ignacio Vera, Arquitecto de Solución: cálculo del almacenamiento a bordo, especificaciones del equipo y figura. |
+| 4.2.3 | Claude Opus 5.5 en Claude Code | Conteo del emplazamiento y matriz de trazabilidad | Alto | Ninguno | Ignacio Vera, Arquitecto de Solución: conteo de componentes y matriz de trazabilidad. |
+| 4.2.4 | Claude Opus 5.5 en Claude Code | Verificación de servicios y niveles en la documentación de Microsoft | Alto | Ninguno | Ignacio Vera, Arquitecto de Solución: servicios, niveles y disponibilidad regional en la documentación de Microsoft. |
+| 4.2.5 | Claude Opus 5.5 en Claude Code | Plan de direcciones y diagrama de la región primaria generado con un guion desde el modelo definido por el equipo | Alto | Medio | Ignacio Vera, Arquitecto de Solución: plan de direcciones, segmentación y figura de la región primaria. |
+| 4.2.6 | Claude Opus 5.5 en Claude Code | Redacción inicial de ambientes, promoción y respaldos, y los dos diagramas generados con un guion desde el modelo definido por el equipo | Alto | Medio | Ignacio Vera, Arquitecto de Solución: ambientes, promoción y respaldos, y correspondencia de los dos diagramas. |
+| 4.2.7 | Claude Opus 5.5 en Claude Code | Enlaces, puntos únicos de falla y tiempos de conmutación con fuente | Alto | Ninguno | Ignacio Vera, Arquitecto de Solución: enlaces, puntos únicos de falla y tiempos de conmutación con su fuente. |
+| 4.2.8 | Claude Opus 5.5 en Claude Code | Cálculo del dimensionamiento con un guion y diagrama de la reconexión generado con un guion desde el modelo definido por el equipo | Alto | Medio | Ignacio Vera, Arquitecto de Solución: cálculos del dimensionamiento y de la reconexión, y su tratamiento como estimación. |
+| 4.2.9 | Claude Opus 5.5 en Claude Code | Actualización de los supuestos y brechas del Informe 1 | Medio | Ninguno | Ignacio Vera, Arquitecto de Solución: supuestos y brechas frente a las bases. |
+| 4.3 | Claude Opus 5.5 en Claude Code | Redacción inicial de tipologías | Alto | Ninguno | Ignacio Vera, Arquitecto de Solución: tipología de los centros de datos frente al numeral 6.1 transversal. |
+| 4.3.1 | Claude Opus 5.5 en Claude Code | Fichas y balance eléctrico con un guion, y plano de la sala y gabinete generados con un guion desde el modelo definido por el equipo | Alto | Medio | Ignacio Vera, Arquitecto de Solución: fichas, balance eléctrico, plano de la sala y gabinete. |
+| 4.3.2 | Claude Opus 5.5 en Claude Code | Réplicas con fuente, protocolo de conmutación y compromiso de latencia, y diagramas de la recuperación y de la región secundaria generados con un guion desde el modelo definido por el equipo | Alto | Medio | Ignacio Vera, Arquitecto de Solución: réplicas, conmutación, compromiso de latencia y réplica de datos personales en San Bernardo. |
+| Formulario T-11 | Claude Opus 5.5 en Claude Code | Armado de las filas desde las fichas y las decisiones de diseño del equipo | Alto | Ninguno | Ignacio Vera, Arquitecto de Solución: cantidades, ubicación y justificación de cada componente. |

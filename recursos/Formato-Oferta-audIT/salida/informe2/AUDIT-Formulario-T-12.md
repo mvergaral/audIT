@@ -15,6 +15,49 @@ audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. O
 | Criterios de aceptación | [16](AUDIT-Formulario-T-12.pdf#page=16) |
 | Registro de consultas y vacíos | [17](AUDIT-Formulario-T-12.pdf#page=17) |
 
+\reqUsado{RF-001}{3.3.2}{}
+\reqUsado{RF-002}{3.3.2}{}
+\reqUsado{RF-003}{3.3.2}{}
+\reqUsado{RF-004}{3.3.2}{}
+\reqUsado{RF-005}{3.2.2}{}
+\reqUsado{RF-006}{3.4.2}{}
+\reqUsado{RF-007}{3.2.2}{}
+\reqUsado{RF-008}{3.3.1}{}
+\reqUsado{RF-009}{3.4.2}{}
+\reqUsado{RF-010}{3.4.2}{}
+\reqUsado{RF-011}{3.4.2}{}
+\reqUsado{RF-012}{3.4.2}{}
+\reqUsado{RF-013}{3.4.2}{}
+\reqUsado{RF-014}{3.4.2}{}
+\reqUsado{RF-015}{3.2.3}{}
+\reqUsado{RF-016}{3.2.2}{}
+\reqUsado{RF-017}{3.2.2}{}
+\reqUsado{RF-018}{3.2.3}{}
+\reqUsado{RF-019}{3.4.2}{}
+\reqUsado{RF-020}{3.4.3}{}
+\reqUsado{RF-021}{3.2.3}{}
+\reqUsado{RF-022}{3.4.3}{}
+\reqUsado{RF-023}{3.2.3}{}
+\reqUsado{RF-024}{3.2.3}{}
+\reqUsado{RF-025}{3.3.1}{}
+\reqUsado{RF-026}{3.4.3}{}
+\reqUsado{RF-027}{3.2.2}{}
+\reqUsado{RF-028}{3.3.2}{}
+\reqUsado{RNF-001}{3.2.7}{}
+\reqUsado{RNF-002}{3.3.3}{}
+\reqUsado{RNF-003}{3.2.5}{}
+\reqUsado{RNF-004}{3.4.5}{}
+\reqUsado{RNF-005}{3.2.7}{}
+\reqUsado{RNF-006}{3.4.2}{}
+\reqUsado{RNF-007}{3.2.7}{}
+\reqUsado{RNF-008}{3.3.3}{}
+\reqUsado{RNF-009}{3.4.6}{}
+\reqUsado{RNF-010}{3.2.7}{}
+\reqUsado{RNF-011}{3.4.5}{}
+\reqUsado{RNF-012}{3.3.2}{}
+\reqUsado{RNF-013}{3.3.3}{}
+\reqUsado{RNF-014}{3.4.6}{}
+
 Este formulario detalla lo que el Subdocumento 3 resume. Trae el catálogo de los 42 requerimientos con
 los campos del Caso, numeral 17.1, p. 38 y, en la columna de trazabilidad, el contexto de la arquitectura
 lógica que atiende cada uno, su paquete de trabajo y los casos de prueba que lo verifican. Siguen el
@@ -62,7 +105,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 | Origen | Caso 4.3. CA-01. R-07. DP-06. RT-09.01. REQ-NEG-01 y 03 |
 | Cumplimiento | Sí |
 | Componente y trazabilidad | Planificación y tráfico, que consulta a Personas y cumplimiento y a Flota y activos. EDT 5.3. CP-UNIT-01 y CP-SYS-01 |
-| Sección | Sección sin referencia en el texto |
+| Sección | Sección 3.3.2 |
 
 ### RF-002
 
@@ -76,7 +119,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 | Origen | Caso 4.3. CA-02. R-02 y R-07. DP-01 y DP-13. REQ-NEG-01 |
 | Cumplimiento | Sí |
 | Componente y trazabilidad | Personas y cumplimiento. EDT 5.1. CP-UNIT-02 y CP-INT-02 |
-| Sección | Sección sin referencia en el texto |
+| Sección | Sección 3.3.2 |
 
 ### RF-003
 
@@ -90,7 +133,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 | Origen | Caso 4.3. CA-03. R-02 y R-07. DP-01 |
 | Cumplimiento | Sí |
 | Componente y trazabilidad | Personas y cumplimiento. EDT 5.1 y EDT 9.2. CP-INT-03 y CP-SYS-05 |
-| Sección | Sección sin referencia en el texto |
+| Sección | Sección 3.3.2 |
 
 ### RF-004
 
@@ -104,7 +147,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 | Origen | Caso 19. CA-04. DP-13 y DP-24. RT-05.10 |
 | Cumplimiento | Sí |
 | Componente y trazabilidad | Personas y cumplimiento, sobre almacenamiento inmutable. EDT 5.1. CP-UNIT-06 y CP-SEC-08 |
-| Sección | Sección sin referencia en el texto |
+| Sección | Sección 3.3.2 |
 
 ### RF-005
 
@@ -118,7 +161,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 | Origen | Caso 5. CA-05. DP-18. RT-05.15 y RT-16.21. REQ-NEG-02 |
 | Cumplimiento | Sí |
 | Componente y trazabilidad | Personas y cumplimiento, con las vigencias de equipos en Flota y activos. EDT 5.1 y EDT 7.1. CP-UNIT-01 y CP-SYS-08 |
-| Sección | Sección sin referencia en el texto |
+| Sección | Sección 3.2.2 |
 
 ### RF-006
 
@@ -132,7 +175,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 | Origen | Caso 7.1. CA-06. DP-19. RT-16.14. REQ-NEG-04 |
 | Cumplimiento | Sí |
 | Componente y trazabilidad | Operación de fletes. EDT 5.5. CP-UNIT-19 y CP-SYS-06 |
-| Sección | Sección sin referencia en el texto |
+| Sección | Sección 3.4.2 |
 
 ### RF-007
 
@@ -146,7 +189,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 | Origen | Caso 4.3. CA-07. DP-13. REQ-NEG-23 |
 | Cumplimiento | Sí |
 | Componente y trazabilidad | Personas y cumplimiento. EDT 6.3. CP-HW-15 y CP-INT-21 |
-| Sección | Sección sin referencia en el texto |
+| Sección | Sección 3.2.2 |
 
 ### RF-008
 
@@ -160,7 +203,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 | Origen | Caso 5. CA-08. DP-04 y DP-26. REQ-NEG-18 y 19 |
 | Cumplimiento | Sí |
 | Componente y trazabilidad | Telemetría y geocercas. EDT 5.4 y EDT 6.2. CP-SYS-16 y CP-UAT-01 |
-| Sección | Sección sin referencia en el texto |
+| Sección | Sección 3.3.1 |
 
 ### RF-009
 
@@ -174,7 +217,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 | Origen | Caso 6. CA-09. R-04. DP-11. RT-03.10 y RT-03.13. REQ-NEG-20 |
 | Cumplimiento | Sí |
 | Componente y trazabilidad | Telemetría y geocercas, en el equipo a bordo. EDT 4.1. CP-HW-03 y CP-PERF-02 |
-| Sección | Sección sin referencia en el texto |
+| Sección | Sección 3.4.2 |
 
 ### RF-010
 
@@ -188,7 +231,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 | Origen | Caso 4.7. CA-10. R-01 y R-09. DP-08. RT-09.01. REQ-NEG-05 |
 | Cumplimiento | Sí |
 | Componente y trazabilidad | Telemetría y geocercas. EDT 5.4. CP-UNIT-08 y CP-SYS-03 |
-| Sección | Sección sin referencia en el texto |
+| Sección | Sección 3.4.2 |
 
 ### RF-011
 
@@ -202,7 +245,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 | Origen | Caso 4.7. CA-11. DP-08. REQ-NEG-06 |
 | Cumplimiento | Sí |
 | Componente y trazabilidad | Operación de fletes. EDT 5.5. CP-UNIT-12 y CP-SYS-03 |
-| Sección | Sección sin referencia en el texto |
+| Sección | Sección 3.4.2 |
 
 ### RF-012
 
@@ -216,7 +259,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 | Origen | Caso 4.5. CA-12. DP-10. RT-16.14. REQ-NEG-10 |
 | Cumplimiento | Sí |
 | Componente y trazabilidad | Operación de fletes. EDT 5.5. CP-SYS-04 y CP-INT-20 |
-| Sección | Sección sin referencia en el texto |
+| Sección | Sección 3.4.2 |
 
 ### RF-013
 
@@ -230,7 +273,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 | Origen | Caso 9.10. CA-13. R-08. DP-03 y DP-09. RT-09.01. REQ-NEG-09 |
 | Cumplimiento | Sí |
 | Componente y trazabilidad | Operación de fletes y capa anticorrupción. EDT 6.1. CP-INT-11 y CP-INT-12 |
-| Sección | Sección sin referencia en el texto |
+| Sección | Sección 3.4.2 |
 
 ### RF-014
 
@@ -239,12 +282,12 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 | Descripción | Disponer del documento electrónico de transporte emitido por el sistema contable antes del movimiento, también en un punto de carga sin cobertura, por emisión anticipada o por datos enviados por enlace satelital |
 | Actor | Conductor y sistema contable |
 | Precondición | Punto de carga sin cobertura identificado en la caracterización en terreno |
-| Resultado | Representación completa y conforme disponible en cabina antes del movimiento; sólo emite el sistema contable. Comprobación integral de los 90 segundos pendiente, incluida solicitud, emisión, retorno, reensamblado y verificación (S4 y S8, R-28) |
+| Resultado | Representación completa y conforme disponible en cabina antes del movimiento; sólo emite el sistema contable. Comprobación integral del límite de 90 segundos en CP-HW-11 y CP-PERF-05 durante A12, incluida solicitud, emisión, retorno, reensamblado y verificación (S4 y S8, R-28) |
 | Prioridad | 1. Etapa 1, mes 16 |
 | Origen | Caso 4.5. CA-14. R-04 y R-08. DP-09. REQ-NEG-09 |
 | Cumplimiento | Sí |
-| Componente y trazabilidad | Operación de fletes, con enlace satelital del equipo a bordo. EDT 6.1 y EDT 4.1. CP-UNIT-21 y CP-HW-11 |
-| Sección | Sección sin referencia en el texto |
+| Componente y trazabilidad | Operación de fletes, con enlace satelital del equipo a bordo. EDT 6.1 y EDT 4.1. CP-UNIT-21, CP-HW-11 y CP-PERF-05 |
+| Sección | Sección 3.4.2 |
 
 ### RF-015
 
@@ -258,7 +301,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 | Origen | Caso 7.2. CA-15. DP-14. REQ-NEG-07 |
 | Cumplimiento | Sí |
 | Componente y trazabilidad | Planificación y tráfico. EDT 8.2. CP-UNIT-15 y CP-SYS-09 |
-| Sección | Sección sin referencia en el texto |
+| Sección | Sección 3.2.3 |
 
 ### RF-016
 
@@ -272,7 +315,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 | Origen | Caso 4.1 y 7.3. CA-16, CA-17 y CA-19. DP-15 y DP-17. RT-05.29. REQ-NEG-11 y 12 |
 | Cumplimiento | Sí |
 | Componente y trazabilidad | Liquidación y costeo. EDT 5.6 y EDT 2.5. CP-INT-23 y CP-SYS-15 |
-| Sección | Sección sin referencia en el texto |
+| Sección | Sección 3.2.2 |
 
 ### RF-017
 
@@ -286,7 +329,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 | Origen | Caso 7.3. CA-16. R-02. DP-16. REQ-NEG-12 |
 | Cumplimiento | Sí |
 | Componente y trazabilidad | Liquidación y costeo. EDT 5.6. CP-INT-23 y CP-SYS-10 |
-| Sección | Sección sin referencia en el texto |
+| Sección | Sección 3.2.2 |
 
 ### RF-018
 
@@ -300,7 +343,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 | Origen | Caso 7.3. CA-18. DP-12 y DP-15 |
 | Cumplimiento | Sí |
 | Componente y trazabilidad | Liquidación y costeo, sobre el repositorio analítico. EDT 8.5. CP-INT-18 y CP-PERF-09 |
-| Sección | Sección sin referencia en el texto |
+| Sección | Sección 3.2.3 |
 
 ### RF-019
 
@@ -314,7 +357,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 | Origen | Caso 7.3. CA-20. DP-03 y DP-16. REQ-NEG-16 |
 | Cumplimiento | Sí |
 | Componente y trazabilidad | Liquidación y costeo. EDT 5.6. CP-INT-24 y CP-SYS-10 |
-| Sección | Sección sin referencia en el texto |
+| Sección | Sección 3.4.2 |
 
 ### RF-020
 
@@ -328,7 +371,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 | Origen | Caso 9. CA-21 y CA-29. DP-02. RT-16.30. REQ-NEG-16 |
 | Cumplimiento | Sí |
 | Componente y trazabilidad | Liquidación y costeo, por el portal del transportista. EDT 5.7. CP-SEC-07 y CP-PERF-10 |
-| Sección | Sección sin referencia en el texto |
+| Sección | Sección 3.4.3 |
 
 ### RF-021
 
@@ -342,7 +385,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 | Origen | Caso 13.1 y 13.2. CA-22. R-02 y R-03. DP-23. RT-09.01. REQ-NEG-25 |
 | Cumplimiento | Sí |
 | Componente y trazabilidad | Telemetría y geocercas, por el portal del cliente. EDT 8.1. CP-SYS-19 y CP-PERF-07 |
-| Sección | Sección sin referencia en el texto |
+| Sección | Sección 3.2.3 |
 
 ### RF-022
 
@@ -356,7 +399,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 | Origen | Caso 18. CA-23 y CA-29. DP-23. RT-16.09 y RT-16.30. REQ-NEG-17 |
 | Cumplimiento | Sí |
 | Componente y trazabilidad | Personas y cumplimiento, por el portal del transportista. EDT 5.7. CP-SEC-04 y CP-SEC-05 |
-| Sección | Sección sin referencia en el texto |
+| Sección | Sección 3.4.3 |
 
 ### RF-023
 
@@ -370,7 +413,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 | Origen | Caso 13.2. CA-24. DP-22. RT-05.29. REQ-NEG-24 |
 | Cumplimiento | Sí |
 | Componente y trazabilidad | Liquidación y costeo, sobre el repositorio analítico. EDT 8.3. CP-UNIT-09 y CP-SYS-17 |
-| Sección | Sección sin referencia en el texto |
+| Sección | Sección 3.2.3 |
 
 ### RF-024
 
@@ -384,7 +427,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 | Origen | Caso 11. CA-25. R-04. DP-21. RT-12.12. REQ-NEG-15 |
 | Cumplimiento | Sí |
 | Componente y trazabilidad | Flota y activos. EDT 8.4. CP-INT-17 y CP-UAT-02 |
-| Sección | Sección sin referencia en el texto |
+| Sección | Sección 3.2.3 |
 
 ### RF-025
 
@@ -398,7 +441,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 | Origen | Caso 5. CA-26. R-06. DP-12 y DP-21. REQ-NEG-13 y 14 |
 | Cumplimiento | Sí |
 | Componente y trazabilidad | Flota y activos. EDT 8.4 y EDT 6.4. CP-UNIT-14 y CP-HW-04 |
-| Sección | Sección sin referencia en el texto |
+| Sección | Sección 3.3.1 |
 
 ### RF-026
 
@@ -412,7 +455,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 | Origen | Caso 19. CA-27. R-02 y R-03. DP-02 y DP-05. REQ-NEG-19 |
 | Cumplimiento | Sí |
 | Componente y trazabilidad | Flota y activos. EDT 9.2 y EDT 5.2. CP-SYS-05 y CP-UAT-09 |
-| Sección | Sección sin referencia en el texto |
+| Sección | Sección 3.4.3 |
 
 ### RF-027
 
@@ -426,7 +469,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 | Origen | Caso 8. CA-28. R-01 y R-04. DP-07. RT-09.01 y RT-16.21. REQ-NEG-22 |
 | Cumplimiento | Sí |
 | Componente y trazabilidad | Personas y cumplimiento, calculado en el equipo a bordo. EDT 4.1 y EDT 5.1. CP-UNIT-18 y CP-HW-06 |
-| Sección | Sección sin referencia en el texto |
+| Sección | Sección 3.2.2 |
 
 ### RF-028
 
@@ -440,7 +483,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 | Origen | Caso 13.3. CA-01, CA-02, CA-08 y CA-27. R-02 y R-03. DP-26 |
 | Cumplimiento | Sí |
 | Componente y trazabilidad | Planificación y tráfico. EDT 5.3. CP-SYS-05 y CP-UAT-09 |
-| Sección | Sección sin referencia en el texto |
+| Sección | Sección 3.3.2 |
 
 ### RNF-001
 
@@ -455,7 +498,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 | Origen | R-01. CA-10 y CA-28. RT-13.08. REQ-NEG-21 |
 | Cumplimiento | Sí |
 | Componente y trazabilidad | Telemetría y geocercas, equipo a bordo. EDT 4.1. CP-UNIT-11 y CP-HW-06 |
-| Sección | Sección sin referencia en el texto |
+| Sección | Sección 3.2.7 |
 
 ### RNF-002
 
@@ -470,7 +513,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 | Origen | R-04. CA-09. DP-11. RT-03.10. REQ-NEG-20 |
 | Cumplimiento | Sí |
 | Componente y trazabilidad | Telemetría y geocercas, equipo a bordo. EDT 4.1. CP-UNIT-23 y CP-HW-03 |
-| Sección | Sección sin referencia en el texto |
+| Sección | Sección 3.3.3 |
 
 ### RNF-003
 
@@ -485,7 +528,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 | Origen | R-03. DP-02 y DP-04. REQ-NEG-18 |
 | Cumplimiento | Sí |
 | Componente y trazabilidad | Telemetría y geocercas, ingesta de plataformas. EDT 6.2. CP-INT-07 y CP-INT-08 |
-| Sección | Sección sin referencia en el texto |
+| Sección | Sección 3.2.5 |
 
 ### RNF-004
 
@@ -500,7 +543,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 | Origen | R-05, R-10 y R-11. DP-25 |
 | Cumplimiento | Sí |
 | Componente y trazabilidad | Flota y activos. EDT 4.2. CP-UAT-02 y CP-HW-08 |
-| Sección | Sección sin referencia en el texto |
+| Sección | Sección 3.4.5 |
 
 ### RNF-005
 
@@ -515,7 +558,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 | Origen | R-06. DP-12. REQ-NEG-13 |
 | Cumplimiento | Sí |
 | Componente y trazabilidad | Flota y activos, equipo a bordo. EDT 4.1 y EDT 6.3. CP-UNIT-16 y CP-HW-04 |
-| Sección | Sección sin referencia en el texto |
+| Sección | Sección 3.2.7 |
 
 ### RNF-006
 
@@ -530,7 +573,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 | Origen | R-08. DP-03 y DP-09 |
 | Cumplimiento | Sí |
 | Componente y trazabilidad | Operación de fletes y capa anticorrupción. EDT 6.1. CP-INT-12 y CP-INT-11 |
-| Sección | Sección sin referencia en el texto |
+| Sección | Sección 3.4.2 |
 
 ### RNF-007
 
@@ -545,7 +588,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 | Origen | R-09. CA-10 y CA-12 |
 | Cumplimiento | Sí |
 | Componente y trazabilidad | Telemetría y geocercas. EDT 5.4. CP-UNIT-08 y CP-SYS-03 |
-| Sección | Sección sin referencia en el texto |
+| Sección | Sección 3.2.7 |
 
 ### RNF-008
 
@@ -560,7 +603,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 | Origen | R-12. DP-20. RT-10.05 |
 | Cumplimiento | Sí |
 | Componente y trazabilidad | Telemetría y geocercas, equipo a bordo y nodo de San Bernardo. EDT 4.1 y EDT 3.4. CP-HW-03 y CP-PERF-02 |
-| Sección | Sección sin referencia en el texto |
+| Sección | Sección 3.3.3 |
 
 ### RNF-009
 
@@ -575,7 +618,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 | Origen | R-13. RT-21.06 |
 | Cumplimiento | Sí |
 | Componente y trazabilidad | Plataforma transversal, servicio de operación. EDT 13.1 y EDT 11.4. CP-SYS-16 y CP-UAT-01 |
-| Sección | Sección sin referencia en el texto |
+| Sección | Sección 3.4.6 |
 
 ### RNF-010
 
@@ -590,7 +633,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 | Origen | R-14. DP-05 y DP-11 |
 | Cumplimiento | Sí |
 | Componente y trazabilidad | Plataforma transversal. EDT 1.1. CP-PERF-08 y CP-SYS-01 |
-| Sección | Sección sin referencia en el texto |
+| Sección | Sección 3.2.7 |
 
 ### RNF-011
 
@@ -605,7 +648,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 | Origen | R-05, R-10 y R-11. DP-25 y DP-26 |
 | Cumplimiento | Sí |
 | Componente y trazabilidad | Plataforma transversal. EDT 11.2. CP-INT-05 y CP-SYS-05 |
-| Sección | Sección sin referencia en el texto |
+| Sección | Sección 3.4.5 |
 
 ### RNF-012
 
@@ -620,7 +663,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 | Origen | CA-04. DP-24 |
 | Cumplimiento | Sí |
 | Componente y trazabilidad | Personas y cumplimiento, almacenamiento inmutable. EDT 5.1. CP-SEC-08 y CP-UNIT-07 |
-| Sección | Sección sin referencia en el texto |
+| Sección | Sección 3.3.2 |
 
 ### RNF-013
 
@@ -635,7 +678,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 | Origen | CA-23 y CA-29. DP-23 y DP-24. RT-11.10. REQ-NEG-17 |
 | Cumplimiento | Sí |
 | Componente y trazabilidad | Personas y cumplimiento, y capa de seguridad. EDT 3.2. CP-SEC-04 y CP-SEC-05 |
-| Sección | Sección sin referencia en el texto |
+| Sección | Sección 3.3.3 |
 
 ### RNF-014
 
@@ -650,7 +693,7 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
 | Origen | CA-04 y CA-23. DP-13, DP-23 y DP-24. RT-05.10 |
 | Cumplimiento | Sí |
 | Componente y trazabilidad | Plataforma transversal, capa de datos. EDT 7.3. CP-SEC-08 y CP-INT-25 |
-| Sección | Sección sin referencia en el texto |
+| Sección | Sección 3.4.6 |
 
 La matriz cumple las cuatro reglas de control del Subdocumento 3. Los 42 requerimientos tienen origen,
 contexto, paquete y prueba. Los 29 criterios de aceptación tienen al menos un requerimiento, y los
@@ -761,7 +804,7 @@ del contrato en que se alcanza y la forma de medirlo.
 | 11 | Objeciones bajo el 20 % de los cobros por espera respaldados | 21 | Promedio móvil de tres meses |
 | 12 | 100 % de las conformidades disponibles el mismo día o al reconectar | 16 | Conciliación diaria |
 | 13 | 100 % de los documentos emitidos desde la orden, sin redigitación | 16 | Conciliación de folios contra viajes |
-| 14 | 100 % de las salidas sin cobertura con representación completa y conforme en cabina antes del movimiento | 16 | Registro de disponibilidad y conformidad de la representación contra primera posición; ensayo integral de 90 segundos pendiente |
+| 14 | 100 % de las salidas sin cobertura con representación completa y conforme en cabina antes del movimiento | 16 | Registro de disponibilidad y conformidad de la representación contra primera posición; ensayo integral del límite de 90 segundos en CP-HW-11 y CP-PERF-05 durante A12 |
 | 15 | Kilómetros en vacío bajo el 18 % en población comparable | 33 | Medición trimestral desde el mes 21 |
 | 16 | 95 % de los viajes con costo trazable por componente | 16 | Reporte mensual de costo |
 | 17 | 100 % de los viajes con costo preliminar en 24 horas | 16 | Registro de cierre contra publicación |
