@@ -11,6 +11,22 @@
 - Formulario T-6 y S1-Anexos sin un defecto formal determinante identificado.
   - **Justificación:** no se aplicó un descuento independiente a estos archivos. Los SLA históricos de los proyectos declarados no se confundieron con el SLA de la oferta actual.
 
+
+### Revisión de S1 — 11 de octubre de 2026
+
+Las observaciones anteriores se conservan como registro de la evaluación; el siguiente estado corresponde a la revisión de las fuentes actuales.
+
+| Observación | Estado | Tratamiento |
+|---|---|---|
+| Dedicación de Seguridad | Corregida en S1 | Se alinea la capacidad de implantación a 1,0 FTE. En M13–M15: 0,4 E1 + 0,4 E2 + 0,2 coordinación, según T-15. Se mantiene 0,5 FTE en operación. No se modifica T-15 ni se agrega personal. |
+| Reemplazo en cuatro horas | Limitación explicitada; cumplimiento no demostrado en tránsito alejado | Se prepara el recambio desde el diagnóstico y se ejecuta al llegar a un terminal, lo antes posible dentro de su ventana autorizada. Se añaden revisiones preventivas en terminal. La espera no reinicia el plazo y una superación no se considera cumplimiento ni excepción autorizada. |
+| Acreditación de certificaciones, convenios y finanzas | No verificable con los originales disponibles | S1 ya distingue declaraciones y acreditación. Los originales se cotejan en el Sobre N.º 1 de la oferta final; su ausencia no se presenta como defecto formal adicional del Informe 2. No se considera comprobada su autenticidad. |
+| T-6 y S1-Anexos | Sin corrección derivada de esta lista | La evaluación no identifica un defecto independiente que requiera modificar estos documentos. |
+
+La corrección de dedicación resuelve la discrepancia concreta con T-15; no constituye una validación del resto de su estimación de horas o nivelación. Esta revisión no recalcula el puntaje de la evaluación original.
+
+Se cotejó la ampliación preventiva con S4 §4.2.2, T-11 y los controles de actualización en terminal de T-17. No añade equipos ni stock sobre T-11, no permite intervención en carretera y no confunde reposición física con RTO de recuperación de servicios. La falta de una excepción oficial al plazo de cuatro horas permanece abierta.
+
 ## S2
 
 - Reparto estacional construido como hipótesis sin calibración demostrada: páginas PDF 16–17.
@@ -23,6 +39,20 @@
   - **Justificación:** el capítulo debe distinguir el problema y la necesidad de las decisiones de solución.
 - Puntaje del ítem: 70/100.
   - **Justificación:** se aplicó la categoría de más de dos observaciones del Art. 56.1. S2-Anexos no recibió un descuento independiente.
+
+
+### Revisión de S2 — 11 de octubre de 2026
+
+Se conserva la evaluación original. El estado siguiente corresponde a las fuentes revisadas, sin recalcular su puntaje.
+
+| Observación | Estado | Tratamiento |
+|---|---|---|
+| Reparto estacional sin calibración | Redacción aclarada; calibración pendiente | Se distingue la media calculada de 263,01 viajes/día de un escenario ilustrativo. Valle de 210 y punta de ensayo de 450 no se presentan como registros observados. Se mantiene el balance y la sensibilidad, sin declarar validado el reparto. La extracción diaria del TMS 2013 y la calibración antes de H1 siguen pendientes. |
+| Prosa en Tabla 2.1 | Corregida | La tabla conserva cuatro columnas de magnitudes; sus efectos y dependencias se explican en párrafos posteriores. |
+| Tablas de nodos y actores extensas | Corregida | Se reducen a comparaciones breves y se desarrolla el análisis en prosa. Se conservan los seis tipos de nodo, trece grupos y sus fichas completas en el Anexo 2.D. |
+| CAN bus como solución dentro del diagnóstico | Corregida | El dominio de costeo expresa la necesidad de consumo de combustible atribuible. La elección de la interfaz queda en los documentos de solución. |
+
+No se modifica la clasificación colectiva de Q1/Q2 ni se crean actores en Q3/Q4. El Anexo 2 y los subdocumentos de otras duplas conservan su contenido. La cota preliminar de 450 se mantiene para no introducir otra cifra incompatible con los perfiles de carga existentes, sin convertirla en una punta acreditada.
 
 ## S3
 
@@ -137,6 +167,21 @@
 - T-17 contiene 120 casos diseñados, sin ejecución acreditada.
   - **Justificación:** no se descontó por no estar ejecutados. Tampoco se descontó por la limitación de esta revisión para comprobar exhaustivamente todos los fixtures y oráculos.
 
+
+### Revisión de S9 y formularios — 11 de octubre de 2026
+
+Se conserva la evaluación original; no se recalcula el puntaje.
+
+| Observación | Estado | Tratamiento |
+|---|---|---|
+| Localizador S6 Tabla 6.3 | Corregido en S9 y T-13 | Se utiliza la etiqueta de la tabla de umbrales de S6 para resolver automáticamente su número, actualmente 6.6. |
+| Cobertura de RF/RNF frente a RT oficiales | Aclarada en documentos propios; dependencia abierta | S9, T-13 y T-17 distinguen cobertura diseñada del catálogo propio y acreditación normativa por RT. Se exige código/fuente, componente, localizador, método y evidencia; una relación incompleta queda pendiente. T-12 todavía imprime 42 localizadores fallidos. |
+| Dependencia de capacitación y cronograma | Controles propios reforzados; dependencia abierta | Se exige G13 aceptado antes de A13, con PREPROD identificado y congelado, funciones probadas por perfil, datos y material. Se distingue familiarización del sprint 7 y práctica completa tras A09. Certificación de usuarios compatible con A15 M13–M15 y producción M16. No se validan resultados de simulación por remisión. |
+| T-13 | Plan conservado y criterios reforzados | La lista original no identifica ausencia formal del plan. Se añaden condiciones de trazabilidad y capacitación, sin inventar ejecución. |
+| T-17 y sus 120 casos | Estado de diseño conservado | No se modifican identificadores ni se presentan pruebas diseñadas como ejecutadas. La revisión no acredita aprobación ni ejecución de los casos. |
+
+Cambios externos que permanecen pendientes: S3/T-12, campo de sección de las 42 fichas y matriz individual por RT; S7 §7.3, definición de funciones certificadas para G13 y secuencia de A13; T-15, párrafos de G13 anteriores a la red CPM; S7/S8, conciliación y reproducción de los porcentajes de simulación de la red vigente. No se modifican estos documentos durante la revisión de S9.
+
 ## S13
 
 - Referencias de coordinación interna: “no se altera la EDT de D2” y “Calendario de S7/CONSIDERACIONES-D2”, página PDF 13.
@@ -157,6 +202,18 @@
   - **Justificación:** no se descontó por ausencia de fichas, por falta de montos económicos en Informe 2 ni por las antiguas cifras históricas retiradas.
 - Diagnóstico técnico complementario: 50/100.
   - **Justificación:** corresponde a la lectura sin la causal especial; los demás hallazgos no generaron descuentos adicionales sobre el cero.
+
+
+### Revisión de S13/T-19 — Innovación 5 — 11 de octubre de 2026
+
+La revisión se limita a «Bienestar del conductor y descanso en parador seguro»; se conservan las observaciones originales y las otras cuatro innovaciones.
+
+| Observación | Estado | Tratamiento |
+|---|---|---|
+| TRL 6 atribuido sin validación aportada | Afirmación corregida | S13, T-19 y la ficha ampliada de D1 declaran autoevaluación TRL 2 conceptual. TRL 6 y 7 son objetivos sujetos a resultados, no madurez ya alcanzada. La disponibilidad comercial de componentes y las fuentes normativas no acreditan el prototipo integrado. |
+| Marcha blanca «mes 16» frente a M13–M15 | Corregida | Ensayos del prototipo M10–M12; piloto operacional y medición M13–M15; producción E1 en M16. S13 y T-19 usan el mismo calendario. |
+
+Los ensayos y el piloto siguen siendo trabajo futuro del proyecto; esta corrección no crea resultados ni acredita TRL 6/7. La planificación detallada y el esfuerzo del paquete 12.5 deben mantenerse alineados en S7/T-14/T-15, sin modificar esos documentos en esta revisión.
 
 ## Tabla-Art46-Informe2
 

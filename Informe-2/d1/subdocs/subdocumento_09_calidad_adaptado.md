@@ -38,7 +38,7 @@ La fiabilidad se verifica con disponibilidad real E2E de al menos 99,9 %, contin
 
 La aceptación de asignación mide el proceso completo hasta reserva y confirmación, incluidos reintentos, dentro del p95 de 30 s; exige revalidación ante cambios concurrentes de vigencia o permiso y una única asignación por solicitud. La contingencia documental mide hasta la recepción, reensamblado, validación y disponibilidad local de la representación completa y conforme en cabina, en hasta 90 s; folio o hash aislados no acreditan recepción. La recuperación conjunta concilia datos, documentos y eventos, sus vínculos, versiones y permisos vigentes o revocados, con RTO de hasta 4 h y RPO de hasta 15 min. Estos criterios se verifican en CP-SYS-01, CP-PERF-03/04/05 y CP-HW-11; no se declaran ensayos ejecutados.
 
-La mantenibilidad se verifica con revisión, análisis estático, pruebas de regresión y cobertura automatizada de líneas ejecutables de lógica de negocio de al menos 70 % (mínimo contractual RT-04.11) y de ramas de al menos 80 % (compromiso adicional bloqueante de audIT, coherente con S6 §6.2, Tabla 6.3). Se calculan por separado líneas cubiertas/líneas ejecutables y ramas cubiertas/ramas instrumentadas; el manifiesto identifica módulos de negocio y exclusiones justificadas. No se promedian ambos porcentajes ni se incluyen dependencias o código generado para elevar la cobertura. La flexibilidad se comprueba en los modelos e interfaces homologados, con actualización/reversión y perfiles nominales y de estrés: no se presume compatibilidad con cualquier camión. La seguridad operacional se verifica mediante bloqueo ante jornada ausente, habilitación vencida o documento no conforme; la interacción del conductor se admite únicamente detenido. Dos autorizaciones comerciales no levantan esos bloqueos legales.
+La mantenibilidad se verifica con revisión, análisis estático, pruebas de regresión y cobertura automatizada de líneas ejecutables de lógica de negocio de al menos 70 % (mínimo contractual RT-04.11) y de ramas de al menos 80 % (compromiso adicional bloqueante de audIT, coherente con S6 §6.2.2, Tabla 6.6). Se calculan por separado líneas cubiertas/líneas ejecutables y ramas cubiertas/ramas instrumentadas; el manifiesto identifica módulos de negocio y exclusiones justificadas. No se promedian ambos porcentajes ni se incluyen dependencias o código generado para elevar la cobertura. La flexibilidad se comprueba en los modelos e interfaces homologados, con actualización/reversión y perfiles nominales y de estrés: no se presume compatibilidad con cualquier camión. La seguridad operacional se verifica mediante bloqueo ante jornada ausente, habilitación vencida o documento no conforme; la interacción del conductor se admite únicamente detenido. Dos autorizaciones comerciales no levantan esos bloqueos legales.
 
 La madurez del desarrollo seguro se gestiona mediante evaluación inicial y reevaluación anual con OWASP SAMM o marco equivalente (FEP02, RT-11.28, p. 24, carácter deseable). El resultado identifica práctica, evidencia, brecha, responsable y acción; no se declara una madurez alcanzada ni una certificación CMMI. Como controles adicionales de ingeniería, audIT adopta complejidad ciclomática $v(G)\le15$ por función, duplicación menor que 3 % del código analizado y cero ciclos en el grafo de dependencias entre módulos de negocio. Se conservan versión del analizador, exclusiones justificadas, denominador y grafo. Una función que excede quince caminos independientes requiere refactorización o descomposición antes de promocionar; un ciclo o acceso directo a datos ajenos incumple el límite de contexto. Estos controles bloquean promoción como compromisos de audIT, sin atribuir los números a las bases. La revisión por pares verifica que reducir una métrica no oculte lógica o suprima pruebas.
 
@@ -57,12 +57,14 @@ La Tabla 9.1 distingue los mínimos contractuales de los compromisos adicionales
 | Disponibilidad de servicios críticos | $\ge 99{,}9%$ mensual E2E | Contractual: Art. 20 FEP01, p. 14; RT-10.01 FEP02, p. 22 | Medición real de transacciones E2E; monitoreo sintético complementario y reporte |
 | Recuperación ante desastre | RTO $\le 4 h; RPO \le 15$ min | Contractual: RT-07.04 FEP02, p. 17 | Informe fechado de ejercicio de recuperación |
 | Retención local sin conectividad | Al menos 72 h, sin pérdida ni corrupción | Contractual: RT-03.10, p. 31 | Registro de desconexión, almacenamiento y sincronización |
-| Cobertura automatizada de lógica de negocio | Líneas \(\ge\)70 %; ramas \(\ge\)80 %, ambas bloqueantes | RT-04.11 FEP02, p. 11: mínimo 70 %; ramas 80 %: compromiso audIT, S6 Tabla 6.3 | Reporte por versión, numeradores, denominadores y exclusiones |
+| Cobertura automatizada de lógica de negocio | Líneas \(\ge\)70 %; ramas \(\ge\)80 %, ambas bloqueantes | RT-04.11 FEP02, p. 11: mínimo 70 %; ramas 80 %: compromiso audIT, S6, Tabla 6.6 | Reporte por versión, numeradores, denominadores y exclusiones |
 | Perfil de carga y latencia | 380 sesiones nominales y 570 en estrés (1,5 × 380) | Hipótesis de diseño: S4, «Concurrencia y volumen declarados»; factor de prueba RT-09.06 | Script K6 versionado, mezcla por perfil, configuración y percentiles |
 
 La disponibilidad se medirá sobre el servicio punta a punta y con la ventana, exclusiones y método de cómputo que establezcan las bases. El requisito de retención local es 72 h; la capacidad ampliada de 288 h es una propuesta de arquitectura física y su verificación depende del diseño y perfil de muestreo que se confirmen.
 
 ### 9.1.3 Responsabilidades de calidad
+
+La trazabilidad distingue el catálogo de 42 RF/RNF de S3/T-12 del universo de requisitos RT oficiales. La matriz de casos de T-17 cubre el catálogo propio en diseño; no acredita por sí sola la cobertura normativa completa. Para cada RT aplicable se conservarán fuente y código, estado de cumplimiento, componente responsable, sección y folio de la solución, método de verificación y evidencia prevista o ejecutada. Un localizador ausente o no resoluble mantiene el requisito pendiente de acreditación. QA comprobará la cadena RT--diseño--caso o inspección--evidencia antes de cerrar la revisión de trazabilidad; un requisito sin correspondencia no se considerará cubierto por el porcentaje de pruebas del catálogo propio.
 
 La jefatura de aseguramiento administra el plan, la matriz de trazabilidad y el registro de defectos. Desarrollo corrige hallazgos y adjunta evidencia; QA prepara o revisa los casos y comunica resultados; arquitectura y hardware confirman los parámetros de sus componentes. La aceptación del mandante permanece en la contraparte técnica designada. La asignación de responsables y la segregación de funciones del flujo de integración se vinculan a las funciones y dedicaciones de S7/T-15.
 
@@ -94,7 +96,7 @@ Una prueba se cierra cuando se conserva el resultado reproducible, la evidencia,
 
 ### 9.2.3 Puertas de calidad propuestas
 
-La Tabla 9.2 establece los puntos de control de audIT, coherentes con S6 Tabla 6.3 y la Tabla ? del T-13. La configuración y evidencia del pipeline deben materializar esos compromisos; describirlos no acredita su implantación.
+La Tabla 9.2 establece los puntos de control de audIT, coherentes con S6, Tabla 6.6 y la Tabla ? del T-13. La configuración y evidencia del pipeline deben materializar esos compromisos; describirlos no acredita su implantación.
 
 **Tabla 9.2.** Puertas de calidad y evidencia de salida
 
@@ -107,7 +109,7 @@ La Tabla 9.2 establece los puntos de control de audIT, coherentes con S6 Tabla 6
 | G5 — Aceptación | Pruebas funcionales con usuarios designados | Acta de aceptación o lista de observaciones acordada | Casos ejecutados, incidencias y acta |
 | G6 — Recuperación | Restauración y continuidad | RTO/RPO exigidos demostrados en ejercicio autorizado | Bitácora, marcas de tiempo y reporte |
 
-Una puerta fallida detiene la promoción hasta documentar corrección y reevaluación satisfactoria. No se admite excepción que rebaje los mínimos contractuales o los gates adicionales bloqueantes de cobertura, complejidad y vulnerabilidades aquí comprometidos. La configuración del pipeline GitLab CI/CD, los servicios en la nube de Microsoft Azure y el conjunto de herramientas de calidad (SonarQube, OWASP ZAP, k6 y Trivy) se encuentran plenamente integrados y alineados con la arquitectura lógica de la solución.
+Una puerta fallida detiene la promoción hasta documentar corrección y reevaluación satisfactoria. No se admite excepción que rebaje los mínimos contractuales o los gates adicionales bloqueantes de cobertura, complejidad y vulnerabilidades aquí comprometidos. La configuración propuesta del pipeline GitLab CI/CD, los servicios de Microsoft Azure y las herramientas SonarQube, OWASP ZAP, k6 y Trivy se verificará contra la arquitectura lógica antes de su uso. La integración efectiva requiere configuración versionada y evidencia de ejecución; no se considera demostrada por describir sus componentes.
 
 ## 9.3 Alineación con Plan de Trabajo
 
@@ -122,12 +124,17 @@ La Tabla 9.3 relaciona cada hito con su actividad de aseguramiento, la evidencia
 | Hito | Actividad de calidad | Evidencia de salida | Dependencia |
 |---|---|---|---|
 | Diseño y construcción | Revisar requisitos, riesgos, arquitectura de prueba y datos | Matriz de trazabilidad y casos revisados | T-12 y definición de diseño |
+| Habilitación de capacitación | Revisar entrega G13 antes de A13 | Versión PREPROD, funciones probadas y material por perfil | G13 aceptado y usuarios disponibles |
 | Integración | Ejecutar pruebas unitarias, contratos e integración | Reportes identificados por versión | Diseño del flujo de integración |
 | Validación de sistema | Ejecutar seguridad, carga, resiliencia y recuperación en staging/HIL | Informes reproducibles y defectos asociados | Dimensionamiento y ambientes disponibles |
 | Aceptación de hito | Ejecutar protocolo, recopilar observaciones y emitir acta | Evidencias y pronunciamiento de contraparte | Cronograma contractual y plan de trabajo |
 | Marcha blanca y cierre | Medir disponibilidad, incidencias y transferencia a soporte | Reporte del período y acta de conformidad | Ventana y criterios contractuales confirmados |
 
 Esta secuencia organiza las evidencias de calidad alrededor de los hitos, pero se aplica a las ventanas contractuales detalladas a continuación, sin declarar pruebas ejecutadas.
+
+G13 se acepta antes de iniciar la capacitación A13: identifica versión y configuración congeladas de PREPROD, funciones disponibles por perfil, datos de ensayo, material de formación y pruebas superadas. Los diez días iniciales de familiarización solo utilizan las funciones certificadas al cierre del sprint 7; la práctica completa y evaluación requieren la entrega completa de A09. Una función pendiente no se presenta como disponible por figurar en el cronograma. La certificación de usuarios y el cierre de A13 deben permitir la marcha blanca A15 dentro de M13--M15 y producción E1 en M16. Si falta esa evidencia, se registra el bloqueo y se revisa la secuencia de trabajo; no se acredita capacitación ni se desplazan por defecto los hitos contractuales.
+
+La alineación con S7 y la gestión de riesgos se comprueba con versiones identificadas del cronograma, dependencias y evidencias de preparación. Los porcentajes de simulación no sustituyen la entrega de G13, la certificación de usuarios ni un cálculo reproducible sobre la red vigente. Este plan no declara validados esos resultados por remitir a S7/S8.
 
 ### 9.3.2 Actividades de calidad ubicadas en el calendario
 
@@ -197,7 +204,7 @@ La Tabla 9.6 concreta los criterios que deben incorporarse al catálogo de prueb
 | Documento de transporte | $\le90$ s | Caso, RT-09.01, p. 32: documento conforme antes de mover carga; ERP contable como emisor tributario. |
 | Emergencia y posición | $\le15 s con cobertura; \le2$ min | Caso, RT-09.01, p. 32: tiempos origen/destino; publicación al cliente y cobertura documentada. |
 | Costeo | $\le24$ h tras cierre | Caso, RT-05.29, p. 32: consolidación con identificación de componentes aún no disponibles. |
-| Cobertura de negocio | Líneas \(\ge\)70 %; ramas \(\ge\)80 % | FEP02 RT-04.11: mínimo contractual 70 %; ramas 80 %: gate adicional audIT, S6 Tabla 6.3. Ambos bloquean; no demuestran por sí solos corrección funcional. |
+| Cobertura de negocio | Líneas \(\ge\)70 %; ramas \(\ge\)80 % | FEP02 RT-04.11: mínimo contractual 70 %; ramas 80 %: gate adicional audIT, S6, Tabla 6.6. Ambos bloquean; no demuestran por sí solos corrección funcional. |
 | Autonomía embarcada | $\ge72$ h sin cobertura | Caso, RT-03.10, p. 31: posición, conducción, jornada, tiempos y documentos sin pérdida. 288 h es propuesta adicional. |
 | Autonomía terminal | $\ge24$ h sin enlace exterior | FEP01, Artículo 16.4, p. 12; FEP02, RT-03.10, p. 9: mínimo transversal ante las 12 h del caso; operación degradada y conciliación. |
 | Reconexión masiva | $\le20$ min por camión tras 72 h | Caso, RT-03.13, p. 31: perfil explícito de 300 unidades simultáneas; medir por unidad, sin pérdida de jornada o esperas. |
