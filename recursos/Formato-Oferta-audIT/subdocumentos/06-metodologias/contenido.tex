@@ -182,6 +182,25 @@ Restauración tras cambio fallido & Objetivo $\leq$30 min para reversa de aplica
 
 La \tabref{06-tabla-6-5} distingue despliegue en pruebas (<15 min propuesto en C-02), lead time, reversa de una aplicación y recuperación completa de un sitio. Ninguno se infiere del éxito del pipeline. Los objetivos se verifican con S9; la aceptación E1/E2 mantiene sus marchas blancas y el régimen crítico 99,9 \% del Artículo 78.2.
 
+\subsection{Puerta de salida G13 y funciones de sprint 7}\label{sec:06-liberacion-g13}
+
+G13 libera la versión de entrenamiento probada y congelada en PREPROD, con datos ficticios y material por perfil. Para habilitar los diez días iniciales de familiarización de A13, el candidato debe incluir los cinco flujos de la \tabref{06-tabla-6-6-g13}. Esta definición complementa el acuerdo de capacitación de D2; conserva la duración de A13 y el adelanto condicionado ya incorporado en S7. Los casos trazados en T-17 figuran como diseñados y no ejecutados, por lo que su inclusión aquí no declara una certificación actual.
+
+\begin{tabla}[ancho=completo, fuente=condensada]{Funciones mínimas de familiarización y criterios previstos para liberar G13}{06-tabla-6-6-g13}{L{31mm} L{24mm} L{31mm} X}
+Función & Requisito T-12 & Casos T-17 & Criterio previsto para G13 \\ \midrule
+Acceso por rol y privacidad & RF-022, RNF-013 & CP-SEC-04, CP-SEC-05 & Cuenta ficticia: el rol autorizado accede y el ajeno es rechazado; concesión y revocación quedan registradas. \\
+Asignación de personal elegible & RF-001, RF-002 & CP-UNIT-01, CP-UNIT-02, CP-SYS-01, CP-SYS-05 & Datos sintéticos: se asigna personal habilitado; vigencia inválida y doble asignación se rechazan. \\
+Jornada y descanso & RF-003 & CP-INT-03, CP-SYS-05 & Datos sintéticos de 8 h y 6 h de descanso en 24 h producen decisión y causa registradas. \\
+Alerta de conducción & RF-027 & CP-UNIT-18 & Reproducir 4 h 15 min y área segura alcanzable en 35 min; alertar antes de cinco horas, con diez minutos de margen. \\
+Eventos con conectividad intermitente & RNF-002 & CP-UNIT-23 & Desconexión simulada, reinicio y reenvío doble: conservar un evento íntegro y sincronizarlo sin duplicados. \\
+\end{tabla}
+
+La \tabref{06-tabla-6-6-g13} limita el certificado de familiarización a cinco flujos de software con datos ficticios. G13 se cumple cuando todos pasan en el mismo candidato de PREPROD destinado a capacitación y no quedan defectos bloqueantes abiertos; T-17 mantiene estos casos como diseñados hasta que existan informes de ejecución.
+
+D3 conserva el identificador y digest del artefacto, configuración de PREPROD, versión del conjunto ficticio, informes de ejecución y reejecución de defectos, materiales por perfil y acta de congelamiento. D1 revisa la trazabilidad de la evidencia. Un cambio posterior al congelamiento obliga a repetir los casos afectados. CP-HW-03/06/14, la autonomía de 72 h y la validación en ruta requieren evidencia propia en S9/T-17; la simulación en PREPROD no las sustituye.
+
+G13 habilita los diez días iniciales de familiarización; los flujos completos, las evaluaciones y el complemento del sprint 8 se mantienen en los treinta días restantes de A13.
+
 \subsection{Evidencia asociada a T-9 y T-10}\label{sec:06-evidencia-asociada-a-t-9-y-t-10}
 
 El \form{T-9}{61} remite a 6.1, interesados, comités, adquisiciones, cambios y calendario; el \form{T-10}{61} remite a 6.2, ciclo de vida, herramientas, ambientes, criterios, cadencias y reversión. Los anexos son índices de evidencia del capítulo, no inventarios que reemplacen el análisis.
