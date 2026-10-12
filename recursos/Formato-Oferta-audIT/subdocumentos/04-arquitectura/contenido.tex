@@ -219,8 +219,7 @@ ADR & Decisión & Alternativas evaluadas & Criterio & Consecuencia y verificaci�
 \end{tabla}
 \notaTabla{Fuente: elaboración propia sobre \transv{RT-02.04}{7}.}
 
-La tabla permite revisar cada elección con sus costos de operación, sin declarar pruebas ya
-ejecutadas. Un cambio de proveedor, de protocolo o de estrategia de continuidad actualiza el ADR, los
+La tabla permite revisar cada elección con sus costos de operación. Un cambio de proveedor, de protocolo o de estrategia de continuidad actualiza el ADR, los
 contratos, la EDT y los casos de aceptación. La mensajería satelital de la decisión 06 se dimensiona
 en la sección~4.2.2.
 
@@ -1291,13 +1290,13 @@ Eventos y documentos del viaje & Cerca de 50 & 232 KB \\
 Total sin fotos & Cerca de 5.950 & 0,78 MB \\
 Fotos de evidencia & 8 & 2,46 MB \\
 \end{tabla}
-\notaTabla{Fuente: elaboración propia sobre los supuestos S-01 a S-04. Cálculo en D4, dimensionamiento.py.}
+\notaTabla{Fuente: elaboración propia sobre los supuestos S-01 a S-04.}
 
 Un camión junta cerca de 6.000 registros y 0,78~MB sin contar las fotos. Agrupados en mensajes de
 4~KB (4.096 bytes), que es la unidad con que IoT Hub cuenta su cuota \parencite{ms_iothub_cuotas}, son 192 mensajes
 por camión. La \tabref{4-reconexion} aplica eso a 300 camiones que salen a la vez de una sombra, y la
-\figref{4-reconexionfig} sigue el camino de esos mensajes. Son estimaciones de diseño, y la prueba de los
-20 minutos sigue pendiente.
+\figref{4-reconexionfig} sigue el camino de esos mensajes. Son estimaciones de diseño que se comprueban
+en la prueba CP-PERF-02 de la certificación de la Etapa~1.
 
 \begin{tabla}{Estimación de la reconexión simultánea de 300 camiones tras 72 horas}{4-reconexion}{X R{28mm} L{50mm}}
 Cálculo & Resultado & Base \\ \midrule
@@ -1349,7 +1348,7 @@ Datos móviles de los equipos audIT & 2,4 a 2,9 GB al mes & 182 equipos por el v
 Ancho de banda por terminal & 10 Mbit/s & 12,5 visitas diarias con imagen de 1 GB \\
 Ancho de banda de San Bernardo & 52 Mbit/s & 80 usuarios internos a 0,5 Mbit/s, más continuidad, por el crecimiento a 390 usuarios \\
 \end{tabla}
-\notaTabla{Fuente: elaboración propia. Cálculos en D4, dimensionamiento.py y sala\_san\_bernardo.py.}
+\notaTabla{Fuente: elaboración propia.}
 
 La carga fuerte de esta operación es la ingesta en la reconexión, unas 350 veces el promedio. La
 ventana de 20 minutos, con un 20~\% de reserva, exige al menos 1.861 registros por segundo, y el diseño
@@ -1529,7 +1528,7 @@ Iluminación & 208 & 8 W/m² en 26 m² \\
 Clima, una unidad en servicio & 640 & 1,6 kW de calor con COP 3,27, más 149 W de ventilador \\
 Carga total & 1.944 & PUE de 1,95 \\
 \end{tabla}
-\notaTabla{Fuente: \textcite{fortinet_fg90g}, \textcite{fortinet_fs124f}, \textcite{apc_srt3000}, \textcite{stulz_minispace}, \textcite{vertiv_minimate}. Cálculo en D4, sala\_san\_bernardo.py.}
+\notaTabla{Fuente: \textcite{fortinet_fg90g}, \textcite{fortinet_fs124f}, \textcite{apc_srt3000}, \textcite{stulz_minispace}, \textcite{vertiv_minimate}.}
 
 La carga de TI es de cerca de 1~kW y la total de 1,94~kW, con un PUE estimado de 1,95. El PUE es alto
 porque en una sala de 26~m² el clima y la iluminación pesan mucho frente a una carga de TI chica. El

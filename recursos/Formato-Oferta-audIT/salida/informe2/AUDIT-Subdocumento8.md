@@ -38,7 +38,7 @@ disparador y el plazo de cada riesgo, y la tabla del análisis de modos de falla
 
 ## 8.1 Plan de riesgos
 
-La gestión del riesgo sigue la norma ISO 31000 (International Organization for Standardization, 2018), como exige FEP02, RT-19.04, p. 33.
+La gestión del riesgo sigue la norma ISO 31000 (ISO, 2018), como exige FEP02, RT-19.04, p. 33.
 Cada etapa del proceso de la norma tiene su lugar en este plan. El alcance, el contexto y los criterios
 son las escalas y los umbrales de esta sección. La evaluación, que abarca identificar, analizar y valorar,
 es la sección 8.2. El tratamiento es la sección 8.3. El seguimiento y la revisión son las cadencias de
@@ -184,9 +184,7 @@ laboral debe admitir el registro electrónico de jornada (supuesto SA-06 del Sub
 conductores externos pueden rechazar la medición. La adhesión de los 148 transportistas es el riesgo más
 alto del grupo (R-11, 12): el Caso dice que el plan de adhesión pesa en la evaluación tanto como la arquitectura
 (Caso, numeral 13.3, p. 28). La meta del Subdocumento 3 es de 104 anexos firmados en el mes 16 y 134 en el
-21, sobre los 148 transportistas. El disparador usa la misma base: menos de 60 anexos firmados y
-vigentes al cierre del mes 9, el 40 % de 148. Cuenta como firmado el anexo que firmó el titular y que
-no fue revocado. Por último
+21, y el disparador es tener menos de 60 al cierre del mes 9, el 40 % de los 148 transportistas iniciales. Por último
 está el propio mandante (R-15). Sus usuarios clave de la torre y de los terminales tienen poco tiempo en
 la temporada, y un entregable que vuelve con observaciones abre una segunda revisión que el
 FEP01, Artículo 18.3, p. 13 cuenta como atraso de audIT. El plan del Subdocumento 7 ya incluye la primera revisión de
@@ -220,6 +218,25 @@ bordo que deja de registrar, y 32, del módem satelital sin servicio en una zona
 a 50. En los dos, lo que sube el número es la detección, que llega tarde, en el terminal o por aviso del
 conductor. La mitigación apunta a detectar antes, con la alerta por camión que llega
 al terminal sin reporte reciente. La tabla completa está en el Formulario T-16.
+
+### 8.2.1 Línea base de capacitación y adhesión
+
+La capacitación (A13) conserva 40 días hábiles, y su precedencia en el T-15 es A06, A09 FS−10 y G13:
+empieza el día 182 y termina el 222 en la línea base. G13 es la entrega probada y congelada de la versión
+de entrenamiento en preproducción, con datos ficticios y material por perfil, y en ella se identifican
+las funciones certificadas al cierre del sprint 7. Los diez primeros días de la A13 son de
+familiarización, y los treinta restantes, de práctica completa, evaluación y complemento del sprint 8
+antes de la marcha blanca. Los turnos y relevos protegen la operación. Si G13 no está disponible, la A13
+no empieza, el atraso se registra y se actualiza el riesgo R-16. La A13 tiene 38 días de holgura total y
+18 de holgura libre, la A06 tiene 24 de holgura libre, y el término de la red sigue en el día 420.
+
+La adhesión firmada usa como denominador los 148 transportistas de la población inicial. Cada uno cuenta
+una vez por RUT, con el anexo firmado por el mandante y el representante autorizado, vigente, no revocado
+y registrado al corte, en modalidad completa o de datos. Al cierre del mes 9, el 31 de octubre de 2027
+con el inicio del supuesto SA-01, se requieren al menos 60 firmados, y con 59 o menos se activa el
+refuerzo de R-11. Las metas posteriores son 104 en el mes 16 y 134 en el mes 21. La instalación, la
+activación técnica y los consentimientos de los conductores se controlan aparte, porque la firma del
+transportista no los reemplaza.
 
 **Simulación del cronograma.**
 La red del Subdocumento 7 calcula sus reservas cadena por cadena. Para ver el efecto de todas las rutas a
@@ -266,17 +283,18 @@ resulta de multiplicar los dos cálculos por cadena del Subdocumento 7, porque e
 convergen varias rutas. La simulación encontró la causa principal de la diferencia en la capacitación de
 conductores (A13). Si empieza después de terminar la A09, atrasa el inicio de la marcha blanca de la
 Etapa 1 en el 14,1 % de las corridas, y las dos marchas blancas se cumplen a la vez solo en el 82,3 %.
-Por eso el T-15 fija que la A13 empieza 10 días hábiles antes de que termine la A09, el día 182 de la
-línea base, y mantiene sus 40 días (sección ?). Solo empieza si están disponibles las
-funciones de entrenamiento probadas y congeladas en preproducción, los datos ficticios y el material por
-perfil. Si falta esa entrega, el inicio real se atrasa, el atraso se registra y se actualiza el riesgo
-R-16.
+Por eso la A13 empieza 10 días hábiles antes de que termine la A09, condicionada a la entrega G13
+(sección 8.2.1 y sección ?).
 
-La simulación toma esa disponibilidad como el cierre del séptimo de los ocho sprints de la A09 y supone
-que los datos y el material llegan con esa versión. Con esa regla, el inicio real de la A13 cae después
-del día 182 en el 49,0 % de las corridas, pero en el 95 % ocurre antes del día 194, y la capacitación
-no atrasa la marcha blanca en ninguna corrida (0,0 %). Lo que cambie el octavo sprint se cubre con un
-complemento antes de la marcha blanca.
+La simulación usa la red completa del T-15, con el hito G13 y el desfase de 10 días, y no da por cierta
+la entrega G13 por el solo calendario. La simula como el cierre del séptimo de los ocho sprints de la
+A09, que depende de cómo avance la construcción, y supone que los datos y el material llegan con esa
+versión. G13 queda lista después del día 182 en el 49,4 % de las corridas. Con esa regla, el inicio
+real de la A13 cae después del día 182 en el 50,0 % de las corridas y en el 95 % ocurre antes del día
+195, y la capacitación atrasa la marcha blanca solo en el 0,1 %. En el 95 % de las corridas a la A13
+le sobran al menos 6 días antes de la marcha blanca, que es lo que G13 puede atrasarse sin moverla. Lo
+que cambie el octavo sprint se cubre dentro de los treinta días de práctica de la A13, sin ampliar sus
+40 días.
 
 **Árbol de fallas de la verificación bloqueante.**
 El árbol se construye sobre el evento que dio origen a la licitación: que un camión salga cuando no puede
@@ -349,7 +367,7 @@ contingencia propia.
 | Riesgo | Disparador | Contingencia | Plazo | Responsable |
 |---|---|---|---|---|
 | R-06 Retiro de Redis | Un componente de la Etapa 1 que dependa de Azure Cache for Redis en el hito H2 | El Comité de Arquitectura lo pasa a Azure Managed Redis y la migración termina antes de la marcha blanca de la Etapa 1 | Meses 4 a 12 | Arquitecto de Solución |
-| R-11 Adhesión bajo la meta | Menos de 60 anexos firmados y vigentes al cierre del mes 9 | El Comité Ejecutivo aprueba un plan por transportista, y quien no adhiere opera en modalidad de datos o documental con su evidencia visible | Meses 9 a 16 | Líder Funcional |
+| R-11 Adhesión bajo la meta | 59 o menos RUT de los 148 iniciales firmados, vigentes, no revocados y registrados al 31-10-2027 (M9 bajo SA-01) | El Comité Ejecutivo aprueba un plan por transportista, y quien no adhiere opera en modalidad de datos o documental con su evidencia visible | Meses 9 a 16 | Líder Funcional |
 | R-18 Cierre de la marcha blanca 1 | Una condición de cierre bajo su umbral al cierre del mes 14 | Refuerzo en el terminal afectado y, si no alcanza, extensión a costo de audIT sin mover las fechas siguientes | Meses 14 a 16 | Líder de Operación |
 | R-23 Ataque al portal | Vulnerabilidad crítica abierta o acceso anómalo | Plan de respuesta a incidentes con contención en Front Door, aviso al mandante en dos horas y remediación en siete días corridos | Inmediato | Encargado de Seguridad |
 | R-24 Licitud en Brazil South | Hito H2 sin aprobación del mandante | La réplica de datos personales a Brazil South no se activa y esos datos se replican en San Bernardo, que levanta los servicios críticos que los usan | Mes 4 | Arquitecto de Solución |
@@ -399,7 +417,7 @@ International Electrotechnical Commission. (2018). *IEC 60812:2018. Failure mode
 
 International Electrotechnical Commission. (2019). *IEC 31010:2019. Risk management. Risk assessment techniques*.
 
-International Organization for Standardization. (2018). *ISO 31000:2018. Risk management. Guidelines*.
+ISO. (2018). *ISO 31000:2018. Risk management -- Guidelines*.
 
 Malcolm, D. G., Roseboom, J. H., Clark, C. E. y Fazar, W. (1959). Application of a Technique for Research and Development Program Evaluation. *Operations Research*, *7*(5), 646-669. https://doi.org/10.1287/opre.7.5.646
 
@@ -421,7 +439,8 @@ Conforme al Comunicado 10, sección 7.2, cada sección de este subdocumento y ca
 
 | Sección | Herramienta | Finalidad del uso | Nivel en texto | Nivel en diagramas | Revisión humana (quién y qué verificó) |
 |---|---|---|---|---|---|
-| Introducción y 8.1 | Claude Opus 5.5 en Claude Code | Redacción inicial del método, los roles, las escalas y las cadencias desde las decisiones D4-100 y D4-102, y verificación de las citas a las bases | Alto | Ninguno | **[Información requerida por dupla 4: nombre, cargo y qué verificó]** |
-| 8.2 | Claude Opus 5.5 en Claude Code | Identificación de los riesgos sobre los subdocumentos 3, 4, 7 y 13 y el Caso, guion de la simulación Monte Carlo sobre el Formulario T-15, redacción inicial del análisis y generación de la estructura de desglose, el mapa de calor y el árbol de fallas con un guion | Alto | Alto | **[Información requerida por dupla 4: nombre, cargo y qué verificó]** |
-| 8.3 | Claude Opus 5.5 en Claude Code | Redacción inicial de las respuestas, las contingencias y las reservas desde el registro de riesgos | Alto | Ninguno | **[Información requerida por dupla 4: nombre, cargo y qué verificó]** |
-| Formulario T-16 | Claude Opus 5.5 en Claude Code | Generación del registro, de la tabla de respuesta y del análisis de modos de falla con un guion desde el registro de riesgos | Alto | Ninguno | **[Información requerida por dupla 4: nombre, cargo y qué verificó]** |
+| Introducción y 8.1 | Claude Opus 5.5 en Claude Code | Redacción inicial del método, los roles, las escalas y las cadencias desde las decisiones de diseño del equipo, y verificación de las citas a las bases | Alto | Ninguno | Ignacio Vera, Arquitecto de Solución: escalas, umbrales, roles y citas a ISO 31000 y a las bases. |
+| 8.2 | Claude Opus 5.5 en Claude Code | Identificación de los riesgos sobre los subdocumentos 3, 4, 7 y 13 y el Caso, guion de la simulación Monte Carlo sobre la red del Formulario T-15, redacción inicial del análisis y generación de la estructura de desglose, el mapa de calor y el árbol de fallas con un guion | Alto | Alto | Ignacio Vera, Arquitecto de Solución: riesgos frente al Caso y los subdocumentos, simulación sobre la red del T-15 con el hito G13 y correspondencia de las tres figuras. |
+| 8.2.1, y riesgos R-11 y R-16 del Formulario T-16 | OpenAI Codex | Incorporación de la línea base de capacitación y de la definición común de adhesión | Alto | Ninguno | Marcel Gutierrez, Arquitecto de Solución: línea base de la A13 y del hito G13 frente al T-15, y definición de adhesión firmada. |
+| 8.3 | Claude Opus 5.5 en Claude Code | Redacción inicial de las respuestas, las contingencias y las reservas desde el registro de riesgos | Alto | Ninguno | Ignacio Vera, Arquitecto de Solución: respuestas, contingencias y reservas frente al registro de riesgos. |
+| Formulario T-16 | Claude Opus 5.5 en Claude Code | Generación del registro, de la tabla de respuesta y del análisis de modos de falla con un guion desde el registro de riesgos | Alto | Ninguno | Ignacio Vera, Arquitecto de Solución: correspondencia del formulario con el registro y con la sección 8.3. |

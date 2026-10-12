@@ -1,5 +1,62 @@
 \begin{formulario}{T-10}
-\refstepcounter{table}
+% Numeración de tablas con cualquier versión de longtable (sobre el ajuste anterior).
+% El estilo supone que longtable avanza el contador de tablas al abrir cada tabla, como la
+% versión de 2025. Hay versiones que no lo hacen, y entonces la primera tabla sale «4.0» y su
+% etiqueta toma el número de la sección. Al cerrar cada tabla numerada se mira cuánto avanzó el
+% contador: si no avanzó, desde la tabla siguiente se avanza aquí, y si avanzó dos veces, se deja
+% de hacerlo. La marca queda en el .aux, así que en la corrida siguiente se numera bien desde la
+% primera tabla, y una marca que ya no corresponde se borra sola. Donde longtable sí avanza el
+% contador no cambia nada. Una sola activación por documento.
+\ifdefined\AuditNumeracionTablas\else
+\global\let\AuditNumeracionTablas\empty
+\global\let\NumeracionTablasDthree\empty
+\ExplSyntaxOn
+\bool_new:N \g_audit_lt_avanzar_bool
+\bool_new:N \g_audit_lt_paso_bool
+\bool_new:N \g_audit_lt_pendiente_bool
+\bool_new:N \g_audit_lt_numerada_bool
+\bool_new:N \g_audit_lt_anotado_bool
+\int_new:N \g_audit_lt_antes_int
+\cs_if_exist:NT \AuditLongtableSinPaso { \bool_gset_true:N \g_audit_lt_avanzar_bool }
+\cs_gset_protected:Npn \AuditEvaluarTabla
+  {
+    \bool_if:NT \g_audit_lt_pendiente_bool
+      {
+        \bool_gset_false:N \g_audit_lt_pendiente_bool
+        \bool_if:NTF \g_audit_lt_numerada_bool
+          {
+            \int_set:Nn \l_tmpa_int { \value { table } - \g_audit_lt_antes_int }
+            \bool_if:NTF \g_audit_lt_paso_bool
+              { \int_compare:nNnT { \l_tmpa_int } > { 1 } { \bool_gset_false:N \g_audit_lt_avanzar_bool } }
+              { \int_compare:nNnT { \l_tmpa_int } < { 1 } { \bool_gset_true:N \g_audit_lt_avanzar_bool } }
+          }
+          { \bool_if:NT \g_audit_lt_paso_bool { \addtocounter { table } { -1 } } }
+        \bool_lazy_and:nnT { \g_audit_lt_avanzar_bool } { ! \g_audit_lt_anotado_bool }
+          {
+            \bool_gset_true:N \g_audit_lt_anotado_bool
+            \exp_args:Nc \iow_now:Nn { @auxout } { \gdef \AuditLongtableSinPaso { } }
+          }
+      }
+  }
+\cs_gset_protected:Npn \AuditAntesDeTabla
+  {
+    \AuditEvaluarTabla
+    \int_gset:Nn \g_audit_lt_antes_int { \value { table } }
+    \bool_gset_false:N \g_audit_lt_numerada_bool
+    \bool_gset_true:N \g_audit_lt_pendiente_bool
+    \bool_gset_eq:NN \g_audit_lt_paso_bool \g_audit_lt_avanzar_bool
+    \bool_if:NT \g_audit_lt_paso_bool { \refstepcounter { table } }
+  }
+\cs_gset_protected:Npn \AuditMarcarNumerada
+  { \bool_if:NT \g_audit_lt_pendiente_bool { \bool_gset_true:N \g_audit_lt_numerada_bool } }
+\ExplSyntaxOff
+\AddToHook{env/tabla/before}[audit-numeracion]{\AuditAntesDeTabla}
+\AddToHook{env/tabla/after}[audit-numeracion]{\AuditEvaluarTabla}
+\AddToHook{cmd/addcontentsline/before}[audit-numeracion]{\AuditMarcarNumerada}
+\fi
+% El contenido exigido es una tabla numerada que no pasa por el entorno tabla.
+\AddToHook{env/contenidoExigido/before}[audit-exigido]{\AuditAntesDeTabla}
+\AddToHook{env/contenidoExigido/after}[audit-exigido]{\AuditEvaluarTabla}
 \begin{contenidoExigido}{T-10}
 \exigencia{Ciclo de vida, requerimientos, arquitectura evolutiva y deuda técnica}{\verSeccionFolio{sec:6-desarrollo-ciclovida}}
 \exigencia{DevSecOps y automatización de pruebas}{\verSeccionFolio{sec:6-desarrollo-devsecops}}

@@ -91,3 +91,16 @@ cambió lo siguiente, sin tocar sus archivos:
 3. **Generadores.** `Informe-2/D4/graficos-v2/fuente` quedó actualizado. Sus 19 figuras se generan igual
    con el lienzo nuevo (probado). Nuestro `s4_secuencias.py` se llama ahora `s4_copias_d3.py`, para no
    chocar con el suyo.
+
+## Cambios del 12 de octubre en su S5 y su S6
+
+A pedido del equipo, D4 aplicó en el repositorio los hallazgos de `CAMBIOS-DOC-INTERNA-INFORME2.md` para el
+S5 y el S6:
+
+- **S5:** se quitaron las menciones a D1, D3 y D4 del cuerpo. Las filas 13 y 81 a 87 del Art. 46 citan
+  ahora secciones que existen y el bus Event Hubs con protocolo Kafka.
+- **S6:** la sección de G13 ya no nombra a D1, D2 ni D3 y no trae notas sobre casos «no ejecutados».
+- **Numeración de tablas:** en el S5, el S6, el T-9 y el T-10 su ajuste se reemplazó por el que se adapta a
+  cada versión de longtable, porque con longtable 2025 contaba doble.
+- **Declaraciones de IA:** las firma Marcel Gutierrez, Arquitecto de Solución. El texto de «qué verificó»
+  lo debe confirmar él.

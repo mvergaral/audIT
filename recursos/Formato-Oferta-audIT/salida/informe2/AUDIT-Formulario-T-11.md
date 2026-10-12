@@ -2,6 +2,82 @@
 
 audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. Oferta Técnica, Sobre N.º 2. Informe Preparatorio 2. Archivo AUDIT-Formulario-T-11.pdf. Anexo del Subdocumento N.º 4, Arquitectura lógica y física de la solución. Las fuentes están en las Referencias de ese subdocumento.
 
+## Índice detallado
+
+| Contenido | Página del PDF |
+|---|---:|
+| Ficha del documento | [3](AUDIT-Formulario-T-11.pdf#page=3) |
+| T-11 Especificaciones técnicas ofertadas | [6](AUDIT-Formulario-T-11.pdf#page=6) |
+| Componente 1. Equipo a bordo | [6](AUDIT-Formulario-T-11.pdf#page=6) |
+| Componente 2. Equipo a bordo por crecimiento | [6](AUDIT-Formulario-T-11.pdf#page=6) |
+| Componente 3. Módem satelital de ráfaga corta | [6](AUDIT-Formulario-T-11.pdf#page=6) |
+| Componente 4. Lector CAN sin contacto | [6](AUDIT-Formulario-T-11.pdf#page=6) |
+| Componente 5. Lector de tarjeta del conductor | [6](AUDIT-Formulario-T-11.pdf#page=6) |
+| Componente 6. Tarjeta de identificación del conductor | [7](AUDIT-Formulario-T-11.pdf#page=7) |
+| Componente 7. Baliza de semirremolque | [7](AUDIT-Formulario-T-11.pdf#page=7) |
+| Componente 8. Baliza por crecimiento | [7](AUDIT-Formulario-T-11.pdf#page=7) |
+| Componente 9. Computador de terminal | [7](AUDIT-Formulario-T-11.pdf#page=7) |
+| Componente 10. Router de respaldo | [7](AUDIT-Formulario-T-11.pdf#page=7) |
+| Componente 11. Switch de gabinete | [7](AUDIT-Formulario-T-11.pdf#page=7) |
+| Componente 12. UPS de gabinete | [7](AUDIT-Formulario-T-11.pdf#page=7) |
+| Componente 13. Punto de acceso de patio | [8](AUDIT-Formulario-T-11.pdf#page=8) |
+| Componente 14. Lector de portería | [8](AUDIT-Formulario-T-11.pdf#page=8) |
+| Componente 15. Servidor del nodo de continuidad | [8](AUDIT-Formulario-T-11.pdf#page=8) |
+| Componente 16. Firewall | [8](AUDIT-Formulario-T-11.pdf#page=8) |
+| Componente 17. Switch de sala | [8](AUDIT-Formulario-T-11.pdf#page=8) |
+| Componente 18. UPS de sala | [8](AUDIT-Formulario-T-11.pdf#page=8) |
+| Componente 19. Clima de precisión | [8](AUDIT-Formulario-T-11.pdf#page=8) |
+| Componente 20. Detección temprana | [9](AUDIT-Formulario-T-11.pdf#page=9) |
+| Componente 21. Extinción automática | [9](AUDIT-Formulario-T-11.pdf#page=9) |
+| Componente 22. Extintor portátil | [9](AUDIT-Formulario-T-11.pdf#page=9) |
+| Componente 23. Control de acceso biométrico | [9](AUDIT-Formulario-T-11.pdf#page=9) |
+| Componente 24. Cámara de videovigilancia | [9](AUDIT-Formulario-T-11.pdf#page=9) |
+| Componente 25. Grabador de video | [9](AUDIT-Formulario-T-11.pdf#page=9) |
+| Componente 26. Detección de agua | [9](AUDIT-Formulario-T-11.pdf#page=9) |
+| Componente 27. Grupo electrógeno | [9](AUDIT-Formulario-T-11.pdf#page=9) |
+| Componente 28. Rack | [10](AUDIT-Formulario-T-11.pdf#page=10) |
+| Componente 29. Enlace dedicado a la nube | [10](AUDIT-Formulario-T-11.pdf#page=10) |
+| Componente 30. Enlace fijo de terminal | [10](AUDIT-Formulario-T-11.pdf#page=10) |
+| Componente 31. Distribución de contenidos y protección perimetral | [10](AUDIT-Formulario-T-11.pdf#page=10) |
+| Componente 32. Puerta de enlace de servicios | [10](AUDIT-Formulario-T-11.pdf#page=10) |
+| Componente 33. Concentrador de dispositivos | [10](AUDIT-Formulario-T-11.pdf#page=10) |
+| Componente 34. Bus de eventos | [10](AUDIT-Formulario-T-11.pdf#page=10) |
+| Componente 35. Orquestador de contenedores | [11](AUDIT-Formulario-T-11.pdf#page=11) |
+| Componente 36. Base transaccional | [11](AUDIT-Formulario-T-11.pdf#page=11) |
+| Componente 37. Base de series de tiempo | [11](AUDIT-Formulario-T-11.pdf#page=11) |
+| Componente 38. Almacenamiento de objetos | [11](AUDIT-Formulario-T-11.pdf#page=11) |
+| Componente 39. Identidad, secretos y cifrado de campo | [11](AUDIT-Formulario-T-11.pdf#page=11) |
+| Componente 40. Cortafuegos de nube | [11](AUDIT-Formulario-T-11.pdf#page=11) |
+| Componente 41. Puertas de enlace de red | [12](AUDIT-Formulario-T-11.pdf#page=12) |
+| Componente 42. Acceso administrativo | [12](AUDIT-Formulario-T-11.pdf#page=12) |
+| Componente 43. Observabilidad | [12](AUDIT-Formulario-T-11.pdf#page=12) |
+| Componente 44. Caché distribuida | [12](AUDIT-Formulario-T-11.pdf#page=12) |
+| Componente 45. Repositorio analítico y autoservicio | [12](AUDIT-Formulario-T-11.pdf#page=12) |
+| Componente 46. Planificación y tráfico | [12](AUDIT-Formulario-T-11.pdf#page=12) |
+| Componente 47. Flota y activos | [12](AUDIT-Formulario-T-11.pdf#page=12) |
+| Componente 48. Personas y cumplimiento | [12](AUDIT-Formulario-T-11.pdf#page=12) |
+| Componente 49. Telemetría y geocercas | [13](AUDIT-Formulario-T-11.pdf#page=13) |
+| Componente 50. Operación de fletes | [13](AUDIT-Formulario-T-11.pdf#page=13) |
+| Componente 51. Liquidación y costeo | [13](AUDIT-Formulario-T-11.pdf#page=13) |
+| Componente 52. Integración telemática de terceros | [13](AUDIT-Formulario-T-11.pdf#page=13) |
+| Componente 53. Integración de telemetría de fábrica | [13](AUDIT-Formulario-T-11.pdf#page=13) |
+| Componente 54. Gestión del parque de dispositivos | [13](AUDIT-Formulario-T-11.pdf#page=13) |
+| Componente 55. Réplica de recuperación | [13](AUDIT-Formulario-T-11.pdf#page=13) |
+| Componente 56. Nodo de continuidad operacional | [14](AUDIT-Formulario-T-11.pdf#page=14) |
+| Componente 57. Pasarela de la capa anticorrupción | [14](AUDIT-Formulario-T-11.pdf#page=14) |
+| Componente 58. Sistema contable y de facturación | [14](AUDIT-Formulario-T-11.pdf#page=14) |
+| Componente 59. Terminación de enlaces y borde de red | [14](AUDIT-Formulario-T-11.pdf#page=14) |
+| Componente 60. Nodo de terminal | [14](AUDIT-Formulario-T-11.pdf#page=14) |
+| Componente 61. Lectura de portería | [14](AUDIT-Formulario-T-11.pdf#page=14) |
+| Componente 62. Distribución de actualizaciones | [14](AUDIT-Formulario-T-11.pdf#page=14) |
+| Componente 63. Búfer no volátil a bordo | [14](AUDIT-Formulario-T-11.pdf#page=14) |
+| Componente 64. Motor de geocercas a bordo | [14](AUDIT-Formulario-T-11.pdf#page=14) |
+| Componente 65. Alerta de jornada a bordo | [15](AUDIT-Formulario-T-11.pdf#page=15) |
+| Componente 66. Identificación del conductor | [15](AUDIT-Formulario-T-11.pdf#page=15) |
+| Componente 67. Módulo satelital | [15](AUDIT-Formulario-T-11.pdf#page=15) |
+| Componente 68. Baliza de semirremolque | [15](AUDIT-Formulario-T-11.pdf#page=15) |
+| Componente 69. Aplicación móvil del conductor | [15](AUDIT-Formulario-T-11.pdf#page=15) |
+
 | N.º | Componente | Producto | Características | Ubicación | Cantidad | Adquiere | Ciclo de vida | Justificación |
 |---|---|---|---|---|---|---|---|---|
 | 1 | Equipo a bordo | iWave G26I con eMMC de 8 GB | NXP i.MX 6ULL, 512 MB de RAM, 3 CAN con J1939, RS232, RS485, LTE Cat 4 o Cat M1, GNSS, Wi-Fi, Bluetooth 5.0, elemento seguro Microchip TA100, IP67, −40 a +70 °C, 9 a 32 V. Condición de compra: bandas LTE chilenas, homologación SUBTEL y E-Mark | Cabina de 148 camiones propios y 34 de terceros sin equipo | 182 más 19 de reposición | CLIENTE | Longevidad de producto de 10 años declarada por el fabricante. Actualización solo en terminal. Reposición del 10 % | Registra 288 horas sin cobertura (RT-03.10 y RT-10.05 del Caso) con 2,4 GB requeridos sobre 8 GB. Sección 4.2.2 |

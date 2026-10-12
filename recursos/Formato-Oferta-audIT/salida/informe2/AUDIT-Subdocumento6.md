@@ -114,7 +114,7 @@ GitLab CI Enterprise centraliza repositorio, incidencias, revisión, ejecución 
 |---|---|---|---|
 | Un solo control de versión y orquestación, con herramientas especializadas integradas | Pipelines independientes por equipo con despliegues sin registro común | Mantener ID de requisito, commit, prueba, artefacto y despliegue; asumir operación y licencias de las herramientas declaradas | FEP02, RT-04.03–05, p. 10 |
 
-El control de cadena de suministro adopta SLSA v1.2 Build L3: plataforma alojada y endurecida, ejecuciones aisladas entre sí y secretos de firma de procedencia inaccesibles a los pasos definidos por el proyecto. El builder genera la procedencia; un script del propio repositorio que crea una atestación y usa Cosign no basta para L3. Se verifican identidad del builder, parámetros, entradas y digest en la admisión. Es un requisito de implementación a acreditar, no una certificación ya obtenida (SLSA, Build Track (d3_slsa12, )).
+El control de cadena de suministro adopta SLSA v1.2 Build L3: plataforma alojada y endurecida, ejecuciones aisladas entre sí y secretos de firma de procedencia inaccesibles a los pasos definidos por el proyecto. El builder genera la procedencia; un script del propio repositorio que crea una atestación y usa Cosign no basta para L3. Se verifican identidad del builder, parámetros, entradas y digest en la admisión. Es un requisito de implementación a acreditar, no una certificación ya obtenida (SLSA, Build Track (SLSA, s. f.)).
 
 El pipeline de entrega continua se ejecuta automáticamente ante cada evento de integración en el repositorio, transitando obligatoriamente por seis fases de validación, ilustradas en la Figura 6.2.
 
@@ -190,13 +190,31 @@ La Tabla 6.5 declara metas de entrega propuestas para RT-04.12; se miden por con
 
 La Tabla 6.5 distingue despliegue en pruebas (<15 min propuesto en C-02), lead time, reversa de una aplicación y recuperación completa de un sitio. Ninguno se infiere del éxito del pipeline. Los objetivos se verifican con S9; la aceptación E1/E2 mantiene sus marchas blancas y el régimen crítico 99,9 % del Artículo 78.2.
 
-### 6.2.6 Evidencia asociada a T-9 y T-10
+### 6.2.6 Puerta de salida G13 y funciones de sprint 7
+
+G13 libera la versión de entrenamiento probada y congelada en PREPROD, con datos ficticios y material por perfil. Para habilitar los diez días iniciales de familiarización de A13, el candidato debe incluir los cinco flujos de la Tabla 6.6. Esta definición complementa la línea base de capacitación del Subdocumento 7 y conserva la duración de A13 y su adelanto condicionado. Los casos trazados en el Formulario T-17 se ejecutan sobre el candidato de PREPROD antes de liberar G13.
+
+**Tabla 6.6.** Funciones mínimas de familiarización y criterios previstos para liberar G13
+
+| Función | Requisito T-12 | Casos T-17 | Criterio previsto para G13 |
+|---|---|---|---|
+| Acceso por rol y privacidad | RF-022, RNF-013 | CP-SEC-04, CP-SEC-05 | Cuenta ficticia: el rol autorizado accede y el ajeno es rechazado; concesión y revocación quedan registradas. |
+| Asignación de personal elegible | RF-001, RF-002 | CP-UNIT-01, CP-UNIT-02, CP-SYS-01, CP-SYS-05 | Datos sintéticos: se asigna personal habilitado; vigencia inválida y doble asignación se rechazan. |
+| Jornada y descanso | RF-003 | CP-INT-03, CP-SYS-05 | Datos sintéticos de 8 h y 6 h de descanso en 24 h producen decisión y causa registradas. |
+| Alerta de conducción | RF-027 | CP-UNIT-18 | Reproducir 4 h 15 min y área segura alcanzable en 35 min; alertar antes de cinco horas, con diez minutos de margen. |
+| Eventos con conectividad intermitente | RNF-002 | CP-UNIT-23 | Desconexión simulada, reinicio y reenvío doble: conservar un evento íntegro y sincronizarlo sin duplicados. |
+
+La Tabla 6.6 limita el certificado de familiarización a cinco flujos de software con datos ficticios. G13 se cumple cuando todos pasan en el mismo candidato de PREPROD destinado a capacitación y no quedan defectos bloqueantes abiertos.
+
+El equipo de desarrollo conserva el identificador y digest del artefacto, configuración de PREPROD, versión del conjunto ficticio, informes de ejecución y reejecución de defectos, materiales por perfil y acta de congelamiento. El equipo de aseguramiento de calidad revisa la trazabilidad de la evidencia. Un cambio posterior al congelamiento obliga a repetir los casos afectados. CP-HW-03/06/14, la autonomía de 72 h y la validación en ruta requieren evidencia propia en S9/T-17; la simulación en PREPROD no las sustituye.
+
+G13 habilita los diez días iniciales de familiarización; los flujos completos, las evaluaciones y el complemento del sprint 8 se mantienen en los treinta días restantes de A13.
+
+### 6.2.7 Evidencia asociada a T-9 y T-10
 
 El FEP01, Formulario T-9, p. 61 remite a 6.1, interesados, comités, adquisiciones, cambios y calendario; el FEP01, Formulario T-10, p. 61 remite a 6.2, ciclo de vida, herramientas, ambientes, criterios, cadencias y reversión. Los anexos son índices de evidencia del capítulo, no inventarios que reemplacen el análisis.
 
 ## Referencias
-
-[referencia d3_slsa12 sin entrada en el .bib]
 
 ISO. (2008). *ISO/IEC 25012. Software engineering. Software product Quality Requirements and Evaluation (SQuaRE). Data quality model*.
 
@@ -205,6 +223,8 @@ ISO. (2018). *ISO 31000:2018. Risk management -- Guidelines*.
 ISO. (2022). *ISO/IEC/IEEE 42010. Systems and software engineering. Architecture description*.
 
 Project Management Institute. (2021). *A Guide to the Project Management Body of Knowledge (PMBOK Guide) and The Standard for Project Management* (7th).
+
+SLSA. (s. f). *Version 1.2: Build track basics*. https://slsa.dev/spec/v1.2/build-track-basics
 
 Transportes Curimón S.A. (2026). *Bases administrativas para la preparación de la propuesta: Licitación Pública Internacional N.º TFEP-01/2026* (Documento FEP01).
 
@@ -218,6 +238,6 @@ Conforme al Comunicado 10, sección 7.2, cada sección de este subdocumento y ca
 
 | Sección | Herramienta | Finalidad del uso | Nivel en texto | Nivel en diagramas | Revisión humana (quién y qué verificó) |
 |---|---|---|---|---|---|
-| 6.1 | OpenAI Codex (GPT-6), sobre diseño previo | Calendario, comités, comunicaciones, adquisiciones y cambios | Alto | Alto | [D3: revisión de ingeniería de esta actualización pendiente] |
-| 6.2 | OpenAI Codex (GPT-6), sobre diseño previo | Ingeniería DevSecOps, ambientes, cadencias y reversión | Alto | Alto | [D3: revisión de ingeniería de esta actualización pendiente] |
-| T-9 y T-10 | OpenAI Codex (GPT-6), sobre diseño previo | Correspondencia de exigencias con metodología y evidencia | Alto | Ninguno | [D3: revisión de ingeniería de esta actualización pendiente] |
+| 6.1 | OpenAI Codex (GPT-6) | Calendario, comités, comunicaciones, adquisiciones y cambios | Alto | Alto | Marcel Gutierrez, Arquitecto de Solución: calendario, comités, comunicaciones, adquisiciones y control de cambios. |
+| 6.2 | OpenAI Codex (GPT-6) | Ingeniería DevSecOps, ambientes, cadencias y reversión | Alto | Alto | Marcel Gutierrez, Arquitecto de Solución: ciclo DevSecOps, ambientes, puertas de calidad, cadencias, reversión y figura del pipeline. |
+| T-9 y T-10 | OpenAI Codex (GPT-6) | Correspondencia de exigencias con metodología y evidencia | Alto | Ninguno | Marcel Gutierrez, Arquitecto de Solución: correspondencia de cada exigencia con su sección. |

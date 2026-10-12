@@ -44,9 +44,9 @@ audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. O
 | Nivel de madurez | TRL 2 propuesto, en escala NASA de nueve niveles: concepto definido, sin prueba de concepto ejecutada. Se valida factibilidad antes del piloto de M6 y se documenta el nivel alcanzado. |
 | Fuentes | (NASA, s. f.; Microsoft, s. f.; Microsoft, s. f.) |
 | Dónde se inserta en la arquitectura | Flota y activos registra las intervenciones; Telemetría aporta actualidad y configuración; la plataforma DevSecOps construye y firma el artefacto. Manifiesto por unidad, familia, kit, versión y acta. |
-| Paquetes de la EDT | 12.2, con integración a 4.1 y 4.2; conciliación con S7 pendiente. |
-| Mes del cronograma | Piloto de 10 camiones en M6; propios M6–M9; terceros adheridos desde M7; pausa M11–M15 y continuación M16–M18. |
-| Inversión requerida | Planificador, tablero, integración, homologación del agente y kits diferenciales. No se cobra nuevamente el stock contractual de T-11. Valorización incremental y flujo de caja pendientes en la Oferta Económica. |
+| Paquetes de la EDT | 12.2, con integración a 4.1 y 4.2; calendario del Subdocumento 7. |
+| Mes del cronograma | Piloto de 10 camiones en M6; propios M6–M9, flota propia completa en M9; terceros adheridos desde M7; pausa M11–M15 y continuación M16–M18. |
+| Inversión requerida | Planificador, tablero, integración, homologación del agente y kits diferenciales. No se cobra nuevamente el stock contractual de T-11. |
 | Efecto en el costo operacional | Ejecución, almacenamiento de actas y mantenimiento del planificador, separados de la conectividad ya presupuestada. |
 | Beneficio esperado | Reducción de preparación desperdiciada y visitas evitables. Se estima con cantidades y costos unitarios documentados, menos el costo incremental. Sin ahorro garantizado ni base inventada. |
 | Indicador, línea base y meta | Reducir preparación inútil al menos 20 % respecto de la línea base homologada. Validación al primer intento al menos 95 % en cohorte de 20 intervenciones elegibles. Sustitución modular en hasta 30 min, dentro de la ventana normal. Metas propuestas. |
@@ -73,7 +73,7 @@ audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. O
 | Momento de medición | Marcha blanca antes del mes 16. Tercer mes de operación. Primera temporada de diciembre a abril |
 | Riesgo de adopción | Acople falso con la baliza de un semirremolque vecino, probabilidad media e impacto alto. Temperatura bajo −20 °C en el paso cordillerano. Suplantación del identificador. Batería de menor duración |
 | Mitigación | Señal estable y movimiento conjunto en los primeros minutos de marcha. Montaje a la sombra y prueba en el invierno de 2027 (meses 6 y 7). Lectura de portería como segundo control. Vigilancia del nivel de batería |
-| Contingencia | La verificación vuelve a la declaración con la lectura de portería como control. Modelo de mayor rango térmico en los semirremolques que cruzan. Reposición desde la reserva del 10 %. **[Información requerida por dupla 3: modelado de amenazas de la baliza (RT-26.07)]** |
+| Contingencia | La verificación vuelve a la declaración con la lectura de portería como control. Modelo de mayor rango térmico en los semirremolques que cruzan. Reposición desde la reserva del 10 %. Modelado de amenazas STRIDE en el Subdocumento 4, sección 4.1.21 (RT-26.07) |
 
 ## Innovación 4. Modelo de negocio o de contratación. Esquema de adhesión y propiedad del dispositivo
 
@@ -101,7 +101,7 @@ audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. O
 |---|---|
 | Problema u oportunidad | Una alerta de jornada entregada donde no hay dónde detenerse es inútil (Caso, capítulo 18, p. 43). Hay tramos sin lugar seguro para combinaciones de 45 toneladas (numeral 16.1, p. 35). 258 conductores externos no son trabajadores de la compañía (numeral 2.3, p. 6) |
 | Tecnología o práctica | Motor predictivo sobre audIT EdgeHub, en el equipo a bordo, que cruza jornada acumulada, topografía y ventana circadiana de 02:00 a 06:00 h. Catálogo local de paradores calificados. Enclavamiento cinético de pantalla y síntesis de voz local en español |
-| Nivel de madurez | Escala ISO 16290 de 1 a 9. Autoevaluación TRL 2 conceptual del modelo circadiano y catálogo integrado; sin evidencia aportada de prueba de concepto o validación del prototipo. Componentes comerciales no acreditan madurez del conjunto. Objetivos: TRL 6 tras ensayos en entorno representativo M10--M12 y TRL 7 tras piloto operacional M13--M15, sujetos a versión, protocolo, datos y resultados reproducibles. No se declaran alcanzados |
+| Nivel de madurez | Escala ISO 16290 de 1 a 9. Autoevaluación TRL 2 conceptual del modelo circadiano y catálogo integrado; sin evidencia aportada de prueba de concepto o validación del prototipo. Componentes comerciales no acreditan madurez del conjunto. Objetivos: TRL 6 tras ensayos en entorno representativo M10--M12 y TRL 7 tras piloto operacional M13--M15, sujetos a versión, protocolo, datos y resultados reproducibles. Se acreditan con el expediente de validación |
 | Fuentes | International Organization for Standardization (2013, 2017, 2019). National Academies of Sciences, Engineering, and Medicine (2016). Congreso Nacional de Chile (2021), Ley N.º 21.377. Ministerio del Trabajo (2003, 2006) |
 | Dónde se inserta en la arquitectura | Capa de borde con el motor predictivo, el catálogo y la síntesis de voz. Servicio de gobernanza de paradores en la torre de control. Consulta pasiva en el portal |
 | Paquetes de la EDT | Paquete 12.5, con los paquetes 4.1 (firmware a bordo) y 5.1 (Personas y cumplimiento) |
