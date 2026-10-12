@@ -190,7 +190,25 @@ La Tabla 6.5 declara metas de entrega propuestas para RT-04.12; se miden por con
 
 La Tabla 6.5 distingue despliegue en pruebas (<15 min propuesto en C-02), lead time, reversa de una aplicación y recuperación completa de un sitio. Ninguno se infiere del éxito del pipeline. Los objetivos se verifican con S9; la aceptación E1/E2 mantiene sus marchas blancas y el régimen crítico 99,9 % del Artículo 78.2.
 
-### 6.2.6 Evidencia asociada a T-9 y T-10
+### 6.2.6 Puerta de salida G13 y funciones de sprint 7
+
+G13 libera la versión de entrenamiento probada y congelada en PREPROD, con datos ficticios y material por perfil. Para habilitar los diez días iniciales de familiarización de A13, el candidato debe incluir los cinco flujos de la tabla. La definición complementa el acuerdo de capacitación de D2; conserva la duración de A13 y el adelanto condicionado ya incorporado en S7.
+
+| Función de familiarización | Requisito de T-12 | Casos trazados en T-17 | Criterio previsto para G13 |
+|---|---|---|---|
+| Acceso por rol y privacidad | RF-022, RNF-013 | CP-SEC-04, CP-SEC-05 | Una cuenta ficticia con rol autorizado accede; un rol ajeno es rechazado; concesión y revocación quedan registradas. |
+| Selección y asignación de personal elegible | RF-001, RF-002 | CP-UNIT-01, CP-UNIT-02, CP-SYS-01, CP-SYS-05 | Con datos sintéticos, se asigna una persona habilitada; una vigencia inválida y una doble asignación se rechazan. |
+| Jornada y descanso | RF-003 | CP-INT-03, CP-SYS-05 | Registros sintéticos con 8 h y 6 h de descanso en la ventana de 24 h producen decisión y causa registradas. |
+| Alerta de conducción | RF-027 | CP-UNIT-18 | Reproducir 4 h 15 min de conducción y un área segura alcanzable en 35 min; alertar antes de cinco horas y conservar diez minutos de margen. |
+| Eventos con conectividad intermitente | RNF-002 | CP-UNIT-23 | Simular desconexión, reinicio y reenvío doble; conservar un evento íntegro y sincronizarlo sin duplicados. No acredita 72 h ni hardware. |
+
+Los casos de T-17 asociados figuran como “Diseñada; no ejecutada”. Por tanto, esta tabla define criterios futuros y no declara certificación actual. La puerta se cumple cuando las cinco funciones pasan sus casos en el mismo candidato de PREPROD destinado a capacitación, sin defectos bloqueantes abiertos.
+
+D3 conserva para la liberación el identificador y digest del artefacto, configuración de PREPROD, versión del conjunto ficticio, informes de ejecución y reejecución de defectos, materiales por perfil y acta de congelamiento. D1 revisa la trazabilidad de la evidencia. Cualquier cambio posterior al congelamiento obliga a repetir los casos afectados. Pruebas de hardware CP-HW-03/06/14, autonomía de 72 h y validación en ruta requieren su evidencia propia en S9/T-17; una simulación de PREPROD no las sustituye.
+
+La liberación de G13 habilita la familiarización inicial; los flujos completos, evaluaciones y complemento de sprint 8 se mantienen en los treinta días restantes de A13.
+
+### 6.2.7 Evidencia asociada a T-9 y T-10
 
 El [borrador Markdown de T-9](./formulario_t09_metodologia_gestion.md) remite a 6.1, interesados, comités, adquisiciones, cambios y calendario; el [de T-10](./formulario_t10_metodologia_desarrollo.md) remite a 6.2, ciclo de vida, herramientas, ambientes, criterios, cadencias y reversión. Los anexos son índices de evidencia del capítulo, no inventarios que reemplacen el análisis.
 
@@ -213,3 +231,4 @@ La revisión del 11-10-2026 corrige el diseño previo y sus figuras. La aprobaci
 | 6 y 6.1 | OpenAI Codex (GPT-6), sobre diseño previo | Conciliar comités, cambios, cantidades y fases con las bases y S7 | Alto | Alto | Pendiente: D3/D2 cotejan calendario, recursos y comunicaciones |
 | 6.2 | OpenAI Codex (GPT-6) | Corregir herramientas, SLSA, puertas de calidad, métricas y reversión | Alto | Alto | Pendiente: D3/D1 verifican T-13/T-17 y controles de implementación |
 | Formularios T-9 y T-10 en Markdown | OpenAI Codex (GPT-6) | Preparar correspondencia entre exigencia y sección/evidencia | Alto | Ninguno | Pendiente: D3 verifica referencias y aceptación del capítulo |
+| 6.2.6 y Formulario T-10 (puerta G13) | OpenAI Codex (GPT-6) | Definir funciones previstas para familiarización, su trazabilidad T-12/T-17 y evidencia de liberación; no afirmar ejecución ni certificación | Alto | Ninguno | Pendiente: revisión humana de D3 y asociación a bitácora A-6 del responsable |
