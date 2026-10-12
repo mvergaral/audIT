@@ -485,15 +485,9 @@ para los 258 conductores externos subcontratados (Caso, numeral 2.3, p. 6), conf
 y 2 (Caso, capítulo 10, p. 23) y a la Ley N.º 20.123 (Ministerio del Trabajo, 2006), que transforma una herramienta de control patronal en
 un asistente de seguridad y bienestar.
 
-**Nivel de madurez.**  Escala de madurez tecnológica de uno a nueve (International Organization for Standardization, 2013). El
-hardware telemático de borde, el almacenamiento local, la síntesis de voz local y el enclavamiento
-cinético están en nivel ocho, con componentes comerciales de uso maduro en flotas pesadas. El modelo
-predictivo circadiano y la ontología de paradores adaptada a la red vial chilena se sitúan en nivel
-seis (TRL 6, validación en entorno de simulación y laboratorio con series temporales históricas de ruta), comprometiendo
-su escalamiento a nivel siete (TRL 7) mediante la prueba piloto operacional con conductores reales durante la marcha blanca del mes 16,
-apoyados en estándares de ergonomía vehicular (International Organization for Standardization, 2017; International Organization for Standardization, 2019), en investigación sobre fatiga en
-el transporte de carga (National Academies of Sciences, Engineering, and Medicine, 2016) y en la normativa vial y laboral nacional
-(Congreso Nacional de Chile, 2021; Ministerio del Trabajo, 2003).
+**Nivel de madurez.** Se utiliza la escala tecnológica de uno a nueve (ISO, 2013). El desarrollo integrado del modelo circadiano y del catálogo calificado de paradores se autoevalúa en TRL 2 conceptual: el concepto, sus entradas y su incorporación están definidos, pero no se aporta evidencia de una prueba de concepto o validación del prototipo. La disponibilidad comercial del equipo de borde, almacenamiento y síntesis de voz no acredita la madurez del conjunto ni de su integración con el enclavamiento.
+
+TRL 6 es un objetivo de validación del prototipo integrado en entorno representativo durante las pruebas de Etapa 1 (M10--M12); TRL 7 es un objetivo de demostración operacional con conductores durante la marcha blanca M13--M15, antes de producción E1 en M16. El nivel alcanzado se determinará con versión y configuración, datos de entrada autorizados o sintéticos identificados, protocolo, entorno y resultados reproducibles, junto con evidencia del piloto. No se declaran ensayos realizados ni niveles 6 o 7 ya alcanzados. Las normas ergonómicas (ISO, 2017, 2019), los estudios de fatiga (National Academies of Sciences, Engineering, and Medicine, 2016) y la normativa aplicable (Congreso Nacional de Chile, 2021; Ministerio del Trabajo, 2003) fundamentan el diseño; no sustituyen los resultados de validación de audIT.
 
 **Diseño de la incorporación.**  Se articula en la capa de borde (motor predictivo a bordo,
 catálogo local y síntesis de voz), en la capa de servicios (servicio de gobernanza de paradores y

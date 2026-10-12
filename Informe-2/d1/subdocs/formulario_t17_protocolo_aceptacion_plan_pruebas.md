@@ -6,6 +6,8 @@ audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. O
 
 La secuencia de actividades, dependencias y evidencias por hito se articula con la estructura canónica de la EDT de 13 elementos y 54 paquetes de trabajo (con especial foco en el elemento 10 «Calidad y pruebas», paquetes 10.1 a 10.3) y el cronograma contractual de actividades A01 a A25 de S7 (Formularios T-14, T-15 y T-18). La verificación integral de la Etapa 1 se concentra en la actividad A12 (meses 10 a 12), la certificación de la Etapa 2 en la actividad A22 (meses 17 a 18), y los ejercicios semestrales de recuperación ante desastres (DR) se programan en junio y noviembre de cada año operacional (M21 a M56); véanse sección 9.3.1 y sección 9.3.2.
 
+La evidencia de capacitación se acepta conforme a G13: versión y configuración de PREPROD congeladas, funciones por perfil con pruebas superadas, datos y material de formación. A13 distingue familiarización con lo certificado al cierre del sprint 7 de práctica completa y evaluación después de A09. El acta de usuarios certificados es necesaria para cerrar la marcha blanca; una fecha prevista o una probabilidad de simulación no acredita estas entregas. Se mantienen M13--M15 para A15 y M16 para producción E1.
+
 ### Criterios de aceptación objetivos
 
 Se aplican la disponibilidad mínima de 99,9 % (FEP01, Artículo 20, p. 14), RTO máximo de 4 h y RPO máximo de 15 min (FEP02, RT-07.04, p. 17), y retención local mínima de 72 h (Caso, RT-03.10, p. 31); véase también sección 9.1.2 y sección 9.2.2. Los demás umbrales se aprueban y documentan antes de ejecutar las pruebas.
@@ -29,6 +31,8 @@ El cierre registra el hito y versión evaluados, casos ejecutados y su estado, d
 ### Estado del catálogo de pruebas
 
 El catálogo contiene 120 casos diseñados (25 unitarios, 25 de integración, 20 de sistema, 20 no funcionales y de seguridad, 15 HIL y 15 UAT), con trazabilidad diseñada hacia los 42 requerimientos del sistema formalizados en el Formulario T-12 (28 funcionales RF-001 a RF-028 y 14 no funcionales RNF-001 a RNF-014) y sus paquetes EDT asociados. La matriz distingue cobertura diseñada de evidencia ejecutada; no afirma probar todos los 54 paquetes. No se declaran ejecutados ni aprobados. Los escenarios sintéticos y umbrales adicionales se fijan antes de ejecutar. Catálogo: \hyperref[sec:9-catalogo]{Catálogo detallado}, folio \pageref{sec:9-catalogo}.
+
+La correspondencia RF/RNF--casos no sustituye la matriz oficial por RT. Cada RT aplicable requiere componente, localizador verificable en la solución, método y evidencia. Las relaciones incompletas se registran como pendientes de acreditación; no se declara cobertura normativa completa a partir de los 120 casos diseñados. Un método de inspección o análisis puede acreditar requisitos documentales, sin forzar un caso dinámico para cada obligación.
 
 Véanse los mínimos en sección 9.3.6 y las seis condiciones acumulativas y calendario en sección 9.3.5.
 

@@ -101,16 +101,16 @@ audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. O
 |---|---|
 | Problema u oportunidad | Una alerta de jornada entregada donde no hay dónde detenerse es inútil (Caso, capítulo 18, p. 43). Hay tramos sin lugar seguro para combinaciones de 45 toneladas (numeral 16.1, p. 35). 258 conductores externos no son trabajadores de la compañía (numeral 2.3, p. 6) |
 | Tecnología o práctica | Motor predictivo sobre audIT EdgeHub, en el equipo a bordo, que cruza jornada acumulada, topografía y ventana circadiana de 02:00 a 06:00 h. Catálogo local de paradores calificados. Enclavamiento cinético de pantalla y síntesis de voz local en español |
-| Nivel de madurez | Escala de niveles de madurez tecnológica de 1 a 9. Hardware de borde, almacenamiento local, síntesis de voz y enclavamiento en nivel 8. Modelo circadiano y ontología de paradores en nivel 6 (escalamiento a nivel 7 en marcha blanca mes 16) |
+| Nivel de madurez | Escala ISO 16290 de 1 a 9. Autoevaluación TRL 2 conceptual del modelo circadiano y catálogo integrado; sin evidencia aportada de prueba de concepto o validación del prototipo. Componentes comerciales no acreditan madurez del conjunto. Objetivos: TRL 6 tras ensayos en entorno representativo M10--M12 y TRL 7 tras piloto operacional M13--M15, sujetos a versión, protocolo, datos y resultados reproducibles. No se declaran alcanzados |
 | Fuentes | International Organization for Standardization (2013, 2017, 2019). National Academies of Sciences, Engineering, and Medicine (2016). Congreso Nacional de Chile (2021), Ley N.º 21.377. Ministerio del Trabajo (2003, 2006) |
 | Dónde se inserta en la arquitectura | Capa de borde con el motor predictivo, el catálogo y la síntesis de voz. Servicio de gobernanza de paradores en la torre de control. Consulta pasiva en el portal |
 | Paquetes de la EDT | Paquete 12.5, con los paquetes 4.1 (firmware a bordo) y 5.1 (Personas y cumplimiento) |
-| Mes del cronograma | Talleres ergonómicos en el mes 4. Catálogo entre los meses 3 y 6. Software a bordo entre los meses 4 y 9. Validación con conductores entre los meses 13 y 15 |
+| Mes del cronograma | Talleres ergonómicos M4; catálogo M3--M6; software a bordo M4--M9. Ensayos del prototipo integrado M10--M12. Piloto y validación con conductores en marcha blanca M13--M15; producción E1 en M16 |
 | Inversión requerida | Software de borde incremental y talleres ergonómicos participativos. El catálogo se levanta dentro de la campaña de cobertura |
 | Efecto en el costo operacional | Menor búsqueda errática de estacionamiento en ruta, con un efecto en combustible que se mide en la Etapa 1 |
 | Beneficio esperado | Menor riesgo de siniestros graves por microsueño y supresión de multas por la Ley N.º 21.377 y el artículo 25 bis. Reflejado en mitigación de contingencias patrimoniales y ahorros de seguros |
 | Indicador, línea base y meta | Alertas con parador calificado, de 0 a 98 % o más. Bloqueo cinético del 100 %. NASA-TLX con guantes bajo 35 puntos y adherencia voluntaria de 85 % o más, con línea base medida en la Etapa 1 |
-| Momento de medición | Mensual en la marcha blanca, antes del mes 16 |
+| Momento de medición | Mensual durante la marcha blanca M13--M15, antes de producción E1 en M16; nivel alcanzado respaldado por informe de resultados |
 | Riesgo de adopción | Que los 258 conductores externos lo perciban como vigilancia patronal encubierta, probabilidad media a alta e impacto alto |
 | Mitigación | Diseño ergonómico participativo en horario de relevo en los cinco terminales y orientación al bienestar |
 | Contingencia | Notificación solo acústica por el altavoz del vehículo, sin teléfonos personales ni botones adicionales en cabina |

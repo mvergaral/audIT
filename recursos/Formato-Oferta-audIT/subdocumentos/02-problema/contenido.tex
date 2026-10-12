@@ -92,20 +92,20 @@ La dinámica anual de la operación exhibe una marcada disparidad entre la regul
 
 \figura[ancho=completo,lugar=hp]{figuras/02-problema/figura_2_2_calendario_operacional.png}{Calendario operacional y restricciones de despliegue}{2-estacionalidad}
 
-La \figref{2-estacionalidad} se apoya en el período protegido del Caso (\caso{RT-10.05}{32}) y en su volumetría anual (\caso{numeral 14.1}{29--30}). A partir de esos antecedentes, audIT formula una hipótesis analítica de comportamiento de la demanda, pendiente de calibración y distinta de una medición de concurrencia, que cuantifica la operación normal frente a los períodos de saturación de punta:
+La \figref{2-estacionalidad} se apoya en el período protegido del Caso (\caso{RT-10.05}{32}) y en su volumetría anual (\caso{numeral 14.1}{29--30}). A partir de esos antecedentes, audIT formula una hipótesis analítica de comportamiento de la demanda, pendiente de calibración y distinta de una medición de concurrencia, que explora posibles repartos entre temporadas. La figura muestra un escenario calculado, no una distribución histórica acreditada; sumar 96.000 viajes no valida por sí solo su reparto:
 
 \begin{enumerate}
   \item \textbf{Temporada Frutícola de Alta Demanda (Diciembre a Abril, 151 días):} Corresponde al ciclo de cosecha y exportación hortofrutícola hacia los terminales portuarios de Valparaíso y San Antonio. En este período se genera la máxima tensión sobre la flota rodante:
   \begin{itemize}
-    \item \textit{Demanda diaria promedio en temporada alta (D alta):} Se modela en aproximadamente 338 viajes/día, lo que representa una concentración de 51.060 viajes en los 5 meses (53,2\% del volumen anual en el 41,4\% de los días del año).
-    \item \textit{Picos de demanda extrema (D punta):} Durante las semanas de saturación de cosecha e inspección fitosanitaria (enero-marzo) y coincidencia con ventanas de zarpe de buques refrigerados, se plantea como hipótesis de diseño una punta de entre 410 y 450 viajes/día, pendiente de calibración; no representa concurrencia.
+    \item \textit{Demanda diaria promedio en temporada alta (D alta):} En el escenario ilustrativo con valle de 210 viajes/día, el balance resulta en aproximadamente 338,15 viajes/día, lo que representa una concentración de 51.060 viajes en los 5 meses (53,2\% del volumen anual en el 41,4\% de los días del año).
+    \item \textit{Picos de demanda extrema (D punta):} Durante las semanas de saturación de cosecha e inspección fitosanitaria (enero-marzo) y coincidencia con ventanas de zarpe de buques refrigerados, se conserva una cota preliminar de ensayo de 450 viajes/día, compartida con el dimensionamiento de la oferta y pendiente de calibración. Las bases no acreditan esa punta ni su frecuencia; no representa concurrencia.
     \item \textit{Utilización de la flota de frío (44 equipos refrigerados):} La demanda de frío debe dimensionarse con el número de equipos, la duración real de los viajes y las esperas en andén y packings, que sobrepasan las 8 horas. Las bases no permiten deducir una cifra diaria de despachos refrigerados sin esos registros.
     \item \textit{Restricción de despliegue (Congelamiento operacional):} Los camiones minimizan su paso por terminales centrales, lo que impone un congelamiento estricto sobre instalaciones o intervenciones físicas en cabina durante esta ventana.
   \end{itemize}
   \item \textbf{Temporada Valle y Operación Regular (Mayo a Noviembre, 214 días):} Caracterizada por flujos estables de carga general seca, graneles mineros e industriales, insumos químicos (18 camiones SUSPEL bajo D.S. N.° 298) y rutas troncales regulares:
   \begin{itemize}
-    \item \textit{Demanda diaria promedio basal (D valle):} Se sitúa en 210 viajes/d, totalizando 44.940 viajes durante los 7 meses de operación regular.
-    \item \textit{Comportamiento de la flota de frío:} Como hipótesis por validar, puede presentar menor actividad relativa en la zona central y reorientarse parcialmente a la industria salmonera y acuícola en la macrozona sur (Puerto Montt) sin un desglose diario de despachos refrigerados respaldado en las bases.
+    \item \textit{Demanda diaria promedio basal (D valle):} Se adopta, exclusivamente como parámetro del escenario ilustrativo, 210 viajes/día; de ello resultan 44.940 viajes en 214 días. No es una tasa observada ni un valor impuesto por las bases.
+    \item \textit{Comportamiento de la flota de frío:} Las bases no entregan un desglose estacional de los despachos refrigerados. Su utilización y destinos deben verificarse con registros de viajes; no se presume una reasignación estacional a otra industria.
     \item \textit{Menor demanda relativa (Mayo a Agosto):} La menor demanda puede facilitar intervenciones, pero no constituye una ventana de implantación aprobada. Su disponibilidad depende de la llegada real de camiones, el calendario contractual y los congelamientos del caso.
   \end{itemize}
   \item \textbf{Cierres Invernales del Paso Los Libertadores (Junio a Septiembre):} El corredor internacional a Mendoza ($\approx 1.900$ viajes anuales) enfrenta temporales de nieve y viento blanco con cortes impredecibles de hasta 12 días continuos (288 horas). audIT identifica riesgos de espera, custodia de carga y reprogramación; el número de camiones inmovilizados, su emplazamiento y el cómputo de jornada deben verificarse para cada contingencia. El cierre interrumpe el tránsito y exige continuidad del registro de jornada y de las decisiones de operación. No implica por sí solo pérdida de conectividad durante los doce días; se distingue de las 72 horas mínimas sin cobertura a bordo.
@@ -113,7 +113,7 @@ La \figref{2-estacionalidad} se apoya en el período protegido del Caso (\caso{R
 \end{enumerate}
 
 \paragraph{Ecuación de balance anual y declaración de incertidumbre paramétrica:}
-El balance cuantitativo verifica la consistencia del modelo frente al volumen consolidado de las bases; V representa el volumen anual y d, días:
+La media anual calculable es 96.000/365 = 263,01 viajes/día en un año de 365 días; no es una tasa de punta. Para el escenario ilustrativo se toman 151 días de diciembre a abril y 214 del resto del año, sin suponer un año bisiesto. El balance comprueba únicamente la suma anual; V representa volumen anual y d, días:
 \begin{equation}
   \begin{array}{r@{\,}l}
     V & = (151\text{ d} \times (51.060/151)\text{ viajes/d}) + (214\text{ d} \times 210\text{ viajes/d}) \\
@@ -130,20 +130,24 @@ El factor entre las demandas medias de temporada alta y valle se sitúa en (51.0
 
 El dimensionamiento cuantitativo del problema operacional de Transportes Curimón S.A. se sustenta en el análisis riguroso de las magnitudes físicas, financieras, territoriales y de seguridad que componen la actividad de la empresa. En la \tabref{2-volumetria} se sintetizan los parámetros volumétricos consolidados que caracterizan la escala de la operación actual y las proyecciones requeridas para la estabilidad del servicio.
 
-\begin{tabla}[ancho=completo]{Volumetría operacional y magnitudes del desafío logístico}{2-volumetria}{L{40mm} C{22mm} C{22mm} L{20mm} X}
-\textbf{Métrica Operacional} & \textbf{Línea Base} & \textbf{Proyección 3 Años} & \textbf{Unidad} & \textbf{Impacto en la Operación} \\ \midrule
-Viajes Anuales Totales & 96.000 & 118.000 & viajes / año & Media: 263 viajes/día (hipótesis estacional: valle 210, alta aproximadamente 338,15 y punta de diseño 450 viajes/día; no son medidas de concurrencia). \\
-Kilómetros Recorridos & 41.000.000 & 50.000.000 & km / año & Desgaste intensivo de activos y base de odometría para mantenimiento. \\
-Kilómetros en Vacío & 10.660.000 & No informada & km / año & Corresponde al 26\% del kilometraje anual sin generar facturación. \\
-Carga Total Transportada & 2.400.000 & 2.900.000 & ton / año & Exposición a 142 detenciones viales anuales por sobrepeso por eje. \\
-Documentación D.E.T. & 128.000 & 157.000 & docs / año & Guías y documentos tributarios a emitir y respaldar sin papel. \\
-Puntos de Carga y Descarga & 1.400 & 1.700 & recintos & Recintos de clientes donde se producen esperas medias de 3 h 10 min. \\
-Vigencias Documentales & 6.000 & 7.000 & fechas & Fechas críticas de conductores y vehículos gestionadas en 4 Excel. \\
-Cruces Paso Los Libertadores & 1.900 & 2.400 & cruces / año & Operación binacional sujeta a cierres climáticos de hasta 12 días. \\
-Abastecimientos Diésel & 74.000 & 90.000 & eventos / año & Carga en estanque de San Bernardo y estaciones externas en ruta. \\
-Pasadas de Peajes (TAG) & 620.000 & 760.000 & transacciones & Conciliación de peajes interurbanos desfasada sin costeo por ruta. \\
-Migración Histórica TMS 2013 & A estimar & N/A & viajes & Cinco años de viajes a migrar; volumen real por verificar según \caso{RT-05.15}{31}. \\
+\begin{tabla}[ancho=completo]{Volumetría operacional y magnitudes del desafío logístico}{2-volumetria}{X R{27mm} R{27mm} L{26mm}}
+\textbf{Métrica operacional} & \textbf{Actual} & \textbf{Proyección a 3 años} & \textbf{Unidad} \\ \midrule
+Viajes Anuales Totales & 96.000 & 118.000 & viajes / año \\
+Kilómetros Recorridos & 41.000.000 & 50.000.000 & km / año \\
+Kilómetros en Vacío & 10.660.000 & No informada & km / año \\
+Carga Total Transportada & 2.400.000 & 2.900.000 & ton / año \\
+Documentación D.E.T. & 128.000 & 157.000 & docs / año \\
+Puntos de Carga y Descarga & 1.400 & 1.700 & recintos \\
+Vigencias Documentales & 6.000 & 7.000 & fechas \\
+Cruces Paso Los Libertadores & 1.900 & 2.400 & cruces / año \\
+Abastecimientos Diésel & 74.000 & 90.000 & eventos / año \\
+Pasadas de Peajes (TAG) & 620.000 & 760.000 & transacciones \\
+Migración Histórica TMS 2013 & A estimar & N/A & viajes \\
 \end{tabla}
+
+Los 96.000 viajes anuales equivalen a una media de 263,01 viajes diarios; su reparto estacional y punta se tratan como escenarios en la sección~\ref{sec:2-estacionalidad}, separados de las magnitudes informadas. Los 41 millones de kilómetros fundamentan la exposición al desgaste; los 10,66 millones en vacío se calculan como 41.000.000 × 26\%. Las 2,4 millones de toneladas conviven con 142 detenciones por sobrepeso por eje, lo que evidencia una necesidad de control de la carga, sin convertir el volumen transportado en causa única de las infracciones.
+
+Los 128.000 documentos y las 6.000 vigencias administradas en cuatro planillas muestran la escala documental. Los 1.400 recintos de clientes concentran esperas medias de 3 h 10 min. Los 1.900 cruces fronterizos exponen la operación a cierres de hasta doce días; esto no equivale a doce días sin conectividad. Los 74.000 abastecimientos y 620.000 pasadas de peaje requieren relacionar fuentes dispersas con cada viaje. La migración comprende cinco años de registros del TMS 2013, pero su volumen real debe estimarse con el inventario de datos, conforme a \caso{RT-05.15}{31}.
 
 El análisis de la \tabref{2-volumetria} evidencia la magnitud transaccional que debe ser gobernada. La persistencia de un 26\% de kilómetros en vacío (10,66 millones de km) consume combustible, tiempo y capacidad sin carga transportada; su efecto monetario requiere los costos y condiciones de cada recorrido.
 
@@ -173,15 +177,21 @@ A partir de la cadena causal expuesta, se dimensiona el impacto numérico de los
 
 El despliegue territorial de Transportes Curimón S.A. abarca una red física y logística compleja compuesta por seis tipologías de nodos operacionales, cuya infraestructura actual impone severas restricciones técnicas que deben ser consideradas en el diagnóstico. En la \tabref{2-nodos-criticos} se sintetizan las características y niveles de criticidad de los nodos que conforman la red operacional de la empresa.
 
-\begin{tabla}[ancho=completo]{Síntesis de nodos críticos de la red operacional}{2-nodos-criticos}{L{28mm} L{32mm} L{26mm} X C{16mm}}
-\textbf{Nodo Operacional} & \textbf{Tipología e Instalación} & \textbf{Enlaces} & \textbf{Restricción Crítica Identificada} & \textbf{Criticidad} \\ \midrule
-Terminal San Bernardo & Casa matriz, torre 24x7, taller central, estanque diésel. & Dos enlaces de proveedores distintos; tecnologías por verificar. & Sala servidores 26 m², split doméstico y UPS 20 min (\transv{Cap. 6}{14--16}). & Máxima \\
-Terminales Regionales (4) & Antofagasta, Talca, Los Ángeles y Puerto Montt. & Enlaces comerciales locales; 3 de 4 sin respaldo. & Vulnerabilidad de enlace; puntos de relevo macrozonas norte, centro y sur. & Alta \\
-Talleres Propios (2) & San Bernardo y Los Ángeles; 46 operarios técnicos. & Dos talleres propios; intervenciones en ruta por talleres externos. & Paso por terminal cada 6 días en promedio; 22\% de terceros pasa menos de una vez al mes. & Alta \\
-Paso Los Libertadores & Corredor binacional a Mendoza ($\approx 1.900$ viajes). & Conectividad celular precaria de montaña. & Cierres fronterizos de hasta doce días; no implican necesariamente falta de señal. & Crítica \\
-Zonas de Sombra Celular & Ruta 5 Norte (Atacama) y tramos cordilleranos. & Cero cobertura en tramos $> 80$ km. & Pérdida de transmisión telemática en tiempo real y bloqueo e-Docs. & Crítica \\
-Puntos de Clientes ($\approx 1.400$) & Plantas, packings, mineras y recintos portuarios. & Infraestructura ajena; sin equipos fijos. & Esperas no acreditadas (3 h 10 min a $> 8$ h); 71\% sobreestadías objetadas. & Alta \\
+\begin{tabla}[ancho=completo]{Síntesis de nodos críticos de la red operacional}{2-nodos-criticos}{L{38mm} X L{48mm} L{20mm}}
+\textbf{Nodo} & \textbf{Escala o condición} & \textbf{Riesgo principal} & \textbf{Criticidad} \\ \midrule
+San Bernardo & Sala 26 m²; UPS 20 min & Continuidad de la operación central & Máxima \\
+Terminales regionales & 4; 3 sin enlace de respaldo & Interrupción de servicios locales & Alta \\
+Talleres propios & 2; 46 operarios & Escasez de ventanas de intervención & Alta \\
+Los Libertadores & 1.900 cruces/año & Cierres de hasta 12 días & Crítica \\
+Zonas sin cobertura & Tramos de más de 80 km & Indisponibilidad de transmisión & Crítica \\
+Recintos de clientes & Aproximadamente 1.400 & Esperas sin evidencia suficiente & Alta \\
 \end{tabla}
+
+San Bernardo concentra casa matriz, torre 24x7, taller y estanque de diésel. Sus dos enlaces pertenecen a proveedores distintos; sus tecnologías deben verificarse. Antofagasta, Talca, Los Ángeles y Puerto Montt cubren las macrozonas norte, centro y sur, pero tres de los cuatro terminales regionales carecen de respaldo de enlace.
+
+Los talleres propios están en San Bernardo y Los Ángeles. El paso medio por terminal cada seis días, y la frecuencia inferior a una visita mensual del 22\% de terceros, condicionan las intervenciones; las reparaciones mecánicas en ruta por talleres externos no autorizan intervenir fuera de terminal el equipo embarcado. En Los Libertadores, un cierre de tránsito y una pérdida de conectividad son condiciones diferentes. En los tramos sin señal no puede presumirse transmisión inmediata ni disponibilidad de documentos dependientes del enlace.
+
+Los recintos de clientes son infraestructura ajena, sin equipos fijos de la oferta. Las esperas de 3 h 10 min a más de ocho horas y el 71\% de sobreestadías objetadas requieren evidencia atribuible de permanencia; no demuestran una pérdida definitiva del monto objetado.
 
 El análisis de la \tabref{2-nodos-criticos} expone que la sala de servidores ubicada en el Terminal San Bernardo (26 m², climatización por split doméstico, una UPS con 20 minutos de autonomía y condiciones de respaldo energético que deben verificarse) incumple formalmente los requerimientos de infraestructura física estipulados en las Bases Técnicas Transversales (\caso{RT-06.01}{32} a \transv{RT-06.09}{15}). La sala debe remediarse o reemplazarse para cumplir el estándar exigido; su estado actual no permite presumir una infraestructura apta para la operación de misión crítica.
 
@@ -199,24 +209,28 @@ El poder de la \figref{2-matriz-actores} mide la capacidad efectiva de condicion
 
 Los nueve actores de alto interés operativo se gestionan de cerca; las cuatro entidades de capital, fiscalización y aseguramiento se mantienen satisfechas mediante evidencia de riesgos y cumplimiento. No se fuerza presencia en los cuadrantes de bajo poder. En el Anexo 2.D se distinguen autoridad formal, veto operacional, expectativas y mecanismo de interacción de cada actor.
 
-En la \tabref{2-actores-sintesis} se sintetizan las características, expectativas y riesgos asociados a cada uno de los trece actores del ecosistema.
+En la \tabref{2-actores-sintesis} se comparan las necesidades principales, fuentes de influencia e interés operativo de los trece grupos. Las dotaciones, identificación de responsables, expectativas y riesgos detallados se conservan en las fichas del Anexo 2.D.
 
-\begin{tabla}[ancho=completo]{Matriz sintética de actores y grupos de interés}{2-actores-sintesis}{L{30mm} L{26mm} X L{24mm} L{24mm}}
-\textbf{Actor} & \textbf{Dotación / Poder} & \textbf{Dolor Operacional Principal} & \textbf{Capacidad Bloqueo} & \textbf{Nivel de Riesgo} \\ \midrule
-1. Fondo Inversión & 22\% propiedad. & Pasivos laborales contingentes y caída del margen (9,0\%). & Máxima (Directorio) & Financiero / Gobierno \\
-2. Dirección Trabajo & Ente fiscalizador. & Cero descargas de tacógrafos e infracción Art. 25 bis. & Extrema (Clausura) & Legal / Regulatorio \\
-3. Aseguradora Carga & Cobertura pólizas. & Opacidad en siniestros y falta de registro térmico. & Alta (Cobertura) & Financiero / Pólizas \\
-4. Familia Fundadora & 78\% propiedad. & Daño reputacional y amenaza existencial ultimátum 2029. & Máxima (Societaria) & Estratégico \\
-5. Gerencia General & E. Valdebenito. & Fractura entre responsabilidad 100\% y control terceros. & Máxima (Ejecutiva) & Operacional y penal \\
-6. Gerencia Operaciones & R. Mansilla. & Asignación a ciegas, 26\% de kilómetros vacíos y 3 GPS. & Alta (Despacho) & Fricción operacional \\
-7. Gerencia Finanzas & G. Ossandón. & 3 contratos a pérdida (-14\%), diésel con 40 d desfase. & Alta (Financiera) & Rentabilidad \\
-8. Mantenimiento & H. Trincado. & Preventivo por adivinanza; 61 módulos telemáticos de fábrica sin descargar. & Alta (Intervención) & Falla en ruta \\
-9. Prevención Riesgos & D. Aguayo. & Responsabilidad solidaria; 6.000 vigencias en Excel. & Alta (Veto legal) & Siniestralidad / Multas \\
-10. TI y Flota & M. Riquelme / P. Kast. & TMS 2013 rígido, 34 camiones sin GPS y 9 personas TI. & Alta (Técnica) & Obsolescencia / Silos \\
-11. Choferes Propios & 196 choferes. & Fatiga en ruta, bermas inseguras, esperas >8 h andén. & Alta (De facto) & Seguridad / Sindical \\
-12. Terceros Externos & 148 dueños. & Vulneración soberanía activo, liquidación lenta y errores. & Muy Alta (Colectiva) & Desabastecimiento 60\% \\
-13. Cliente Exportador & A. Lecaros (19\%). & Incumplimiento exigencias 2029 (CO2e GLEC, e-Docs). & Extrema (Comercial) & Quiebre facturación \\
+\begin{tabla}[ancho=completo]{Matriz sintética de actores y grupos de interés}{2-actores-sintesis}{L{37mm} X L{26mm} L{20mm}}
+\textbf{Actor} & \textbf{Necesidad principal} & \textbf{Fuente de influencia} & \textbf{Interés operativo} \\ \midrule
+Fondo de inversión & Solvencia y pasivos laborales & Societaria & Bajo \\
+Dirección del Trabajo & Evidencia de jornada & Fiscalizadora & Bajo \\
+Aseguradora de carga & Evidencia de siniestros & Cobertura & Bajo \\
+Familia fundadora & Continuidad y reputación & Societaria & Bajo \\
+Gerencia General & Control del viaje contratado & Ejecutiva & Alto \\
+Operaciones & Asignación y retornos & Despacho & Alto \\
+Finanzas & Costo y liquidaciones & Financiera & Alto \\
+Mantenimiento & Historial y datos del vehículo & Intervención & Alto \\
+Prevención de Riesgos & Aptitud y vigencias & Veto legal & Alto \\
+TI y Control de Flota & Integración y posición & Técnica & Alto \\
+Conductores propios & Jornada y descanso seguro & Colectiva & Alto \\
+Transportistas terceros & Privacidad y liquidación & Colectiva & Alto \\
+Cliente exportador & Trazabilidad y emisiones & Comercial & Alto \\
 \end{tabla}
+
+El poder es alto para los trece grupos bajo el criterio colectivo ya definido, aunque procede de fuentes distintas. El fondo y la familia fundadora condicionan el gobierno y la continuidad financiera; el fiscalizador y la aseguradora requieren evidencia de cumplimiento. Las gerencias y áreas técnicas determinan la viabilidad diaria del despacho, la información y la intervención. Los conductores y transportistas pueden condicionar colectivamente la ejecución del viaje, mientras el cliente exportador concentra el 19\% de los ingresos y condiciona la continuidad comercial.
+
+Esta clasificación no convierte el interés operativo bajo en falta de importancia. Su consecuencia es una relación de seguimiento y evidencia para los cuatro grupos de Q2, y participación cercana para los nueve grupos de Q1. Las tensiones siguientes explican cómo conciliar necesidades incompatibles sin prescribir aquí mecanismos de solución.
 
 \subsection{Principios de arbitraje de las seis tensiones operacionales}\label{sec:2-arbitraje}
 
@@ -243,7 +257,7 @@ El Anexo 2.A reúne 25 necesidades preliminares, \texttt{REQ-NEG-01} a \texttt{R
   \item \textbf{Dominio de Asignación y Control Operacional:} Capacidad de verificar en tiempo real ($< 30\text{ s}$) la disponibilidad legal del conductor (Art. 25 bis), idoneidad mecánica del camión, vigencia de 6.000 fechas documentales y compatibilidad de carga antes de liberar una orden de transporte.
   \item \textbf{Dominio de Trazabilidad y Gestión de Esperas:} Acreditación automática de arribos, esperas y salidas en los 1.400 puntos de clientes, generando registros íntegros y atribuibles para sustentar los cobros que correspondan según cada contrato, sin garantizar su aceptación o recuperación.
   \item \textbf{Dominio de Documentación Digital y Continuidad en Sombra:} Disponibilidad de Documentos Electrónicos de Transporte conformes (DET para $\approx 128.000$ emisiones anuales) antes del movimiento, incluso en puntos de carga sin cobertura, conservando al sistema contable como único emisor tributario.
-  \item \textbf{Dominio de Costeo y Sostenibilidad:} Reconstrucción analítica diaria ($< 24\text{ h}$) del costo directo por viaje (combustible por telemetría CAN bus, peajes y flete a terceros) y cálculo de huella de carbono (g~CO2e/t-km) bajo estándar GLEC para el 100\% de la flota.
+  \item \textbf{Dominio de Costeo y Sostenibilidad:} Reconstrucción analítica diaria ($< 24\text{ h}$) del costo directo por viaje (consumo de combustible atribuible, peajes y flete a terceros) y cálculo de huella de carbono (g~CO2e/t-km) bajo estándar GLEC para el 100\% de la flota.
 \end{enumerate}
 
 En el plano de los \textbf{Requerimientos No Funcionales Canónicos y de Resiliencia} (\art{78}{40} y \transv{Cap. 7}{17--18}), el diagnóstico fija los siguientes umbrales contractuales vinculantes para cualquier solución propuesta:
