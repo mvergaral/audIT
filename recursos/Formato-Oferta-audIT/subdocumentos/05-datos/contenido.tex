@@ -5,6 +5,7 @@ El modelo conserva el viaje ocurrido y sus respaldos sin mezclarlo con el costo 
 
 Los seis contextos canónicos tienen propietarios explícitos. Compartir una identidad o referenciar un viaje no autoriza a un servicio a escribir en la base de otro. Las claves globales facilitan correlación y deduplicación; las restricciones de negocio se implementan en el contexto responsable.
 
+\FloatBarrier
 \subsection{Decisiones del modelo}\label{sec:5-entidades}\label{sec:05-decisiones-del-modelo}
 
 La \tabref{05-tabla-5-1} vincula cada decisión con una necesidad del Caso, sin atribuir al legado un esquema que no se ha levantado.
@@ -21,13 +22,12 @@ Versionar costo y liquidación & Combustible tardío y liquidación mensual & v1
 
 La \tabref{05-tabla-5-1} fija la estructura que se comprueba en S9. El cifrado y los índices son controles complementarios; ninguno acredita por sí solo cumplimiento legal, exactitud documental o latencia.
 
+\FloatBarrier
 \subsection{Dominios de información y modelo conceptual}\label{sec:5-dominios}\label{sec:05-dominios-de-informacion-y-modelo-conceptual}
 
 La arquitectura de datos se estructura en seis contextos delimitados con límites explícitos. En la \figref{05-audit-figura-5-1-erd} se despliega el modelo conceptual y relacional de persistencia de datos.
 
-\anexoGrafico{../../Informe-2/D3/graficos/audit-figura-5.1-erd.png}{Modelo lógico de las relaciones críticas del viaje}{05-audit-figura-5-1-erd}
-
-Fuente: elaboración de audIT.
+\figura[ancho=completo,alto=0.88,lugar=htbp]{figuras/05-datos/vertical/audit-figura-5.1-erd.pdf}{Modelo lógico de las relaciones críticas del viaje}{05-audit-figura-5-1-erd}
 
 La \figref{05-audit-figura-5-1-erd} separa el ciclo del viaje de las asignaciones: una orden genera cero o varios viajes y cada viaje conserva cero o varias asignaciones históricas. Cada asignación confirmada identifica conductor, tracto y, cuando la carga lo exige, semirremolque; no puede solaparse con otra activa para esos recursos. Documento, costo y evaluación mantienen su identificador y relación con el viaje o la asignación. En el gráfico, EVAL\_\allowbreak{}ASIGNACION abrevia EVALUACION\_\allowbreak{}ASIGNACION y DOCUMENTO\_\allowbreak{}TRANSP. abrevia DOCUMENTO\_\allowbreak{}TRANSPORTE.
 
@@ -35,18 +35,18 @@ Los contextos gobiernan estos agregados: Planificación conserva OrdenTransporte
 
 El ciclo propuesto del viaje es \texttt{PROGRAMADO $\rightarrow$ EN\_\allowbreak{}CARGA $\rightarrow$ EN\_\allowbreak{}RUTA $\rightarrow$ EN\_\allowbreak{}DESCARGA $\rightarrow$ CERRADO}, con \texttt{CANCELADO} como excepción trazable. \texttt{BLOQUEADA} es resultado de una evaluación de asignación, no un sexto estado que termine el viaje por fatiga: puede buscarse otro recurso y volver a evaluar. El rechazo de carga en destino conserva evento, motivo y resolución; no elimina recorrido ni costos ya incurridos. Un cierre de frontera registra demora y causa; su efecto sobre cobros depende de la regla contractual, sin congelar sobreestadías automáticamente por RT-10.05.
 
+\FloatBarrier
 \subsection{Estrategia de Gestión de Datos Maestros (MDM)}\label{sec:5-mdm}\label{sec:05-estrategia-de-gestion-de-datos-maestros-mdm}
 
 En cumplimiento de \transv{RT-05.09}{11}, se implementa un marco centralizado de Master Data Management (MDM) con principio de Registro Maestro Único (\emph{Golden Record}), visualizado en la \figref{05-audit-figura-5-2-mdm}.
 
-\anexoGrafico{../../Informe-2/D3/graficos/audit-figura-5.2-mdm.png}{Gestión de Datos Maestros (MDM) y Capa Anticorrupción}{05-audit-figura-5-2-mdm}
-
-Fuente: elaboración de audIT.
+\figura[ancho=completo,alto=0.88,lugar=htbp]{figuras/05-datos/vertical/audit-figura-5.2-mdm.pdf}{Gestión de Datos Maestros (MDM) y Capa Anticorrupción}{05-audit-figura-5-2-mdm}
 
 La \figref{05-audit-figura-5-2-mdm} identifica propietarios y conciliación: Personas gobierna conductor/evidencia/habilitación; Flota, activos y taller; Planificación, órdenes y puntos de servicio; el contable conserva identidad comercial y de facturación según el contrato de integración. Las tarifas operacionales cambian de autoridad por función en M16/M21 según S3; no existe doble escritura maestra.
 
 Cada registro mantiene ID global y clave natural validada. El RUT usa validación sintáctica de dígito verificador y contraste documental; la patente se normaliza y contrasta con antecedentes autorizados. No se promete una API del Registro Civil ni una consulta oficial automática sin acceso acreditado. Los duplicados o fuentes contradictorias quedan en cuarentena con resolución del propietario y trazabilidad del origen.
 
+\FloatBarrier
 \subsection{Diccionario de datos y restricciones}\label{sec:5-diccionario}\label{sec:05-diccionario-de-datos-y-restricciones}
 
 El \hyperref[sec:05-anexo-diccionario]{anexo de diccionario} entrega por atributo nombre, tipo, dominio, obligatoriedad, propietario y sensibilidad, conforme a \transv{RT-05.01}{11} y Comunicado 10 · capítulo 5. Las \figref{05-audit-figura-5-1-erd} y \figref{05-5-7-evidencia} muestran relaciones legibles; el cuerpo analiza las restricciones que determinan la operación.
@@ -55,6 +55,7 @@ Una vigencia referencia exactamente un conductor, un tracto o un semirremolque m
 
 El viaje puede programarse sin recursos ni peso definitivo. La asignación sólo se confirma con recursos y evaluación válida; pasar a \texttt{EN\_\allowbreak{}RUTA} requiere además carga definitiva y documento conforme. La posición se almacena con latitud y longitud ambas presentes o ambas ausentes. Identidad, velocidad, odómetro y hora del evento se dejan nulos cuando la fuente no los proporciona; la hora de recepción y la procedencia siempre quedan registradas. No se generan ceros para representar desconocimiento.
 
+\FloatBarrier
 \subsection{Evidencia de jornada, cascada y cadena de custodia}\label{sec:5-evidencia-jornada}\label{sec:05-evidencia-de-jornada-cascada-y-cadena-de-custodia}
 
 La evidencia se clasifica conforme al Subdocumento 3: fuente instrumental, nivel, estado, modalidad y veredicto son dimensiones distintas. La \tabref{05-tabla-5-2} conserva la correspondencia canónica.
@@ -83,7 +84,7 @@ El origen recibido se conserva sin renumeración silenciosa. Una descarga de tac
 
 La \figref{05-5-2-custodia} recorre recepción, validación, sellado, conservación y rectificación.
 
-\anexoGrafico{../../Informe-2/D3/graficos/5-2-custodia.png}{Cadena de custodia de evidencias y tratamiento de fuentes inválidas}{05-5-2-custodia}
+\figura[ancho=completo,alto=0.88,lugar=htbp]{figuras/05-datos/vertical/5-2-custodia.pdf}{Cadena de custodia de evidencias y tratamiento de fuentes inválidas}{05-5-2-custodia}
 
 El hash permite detectar alteración; no es firma electrónica ni vuelve inmutable una fila por sí solo. Se conserva el original firmado cuando procede, se encadenan registros con identificador de cadena y secuencia, y se anclan segmentos y manifiestos en almacenamiento WORM con retención bloqueada, bajo administración separada. Las cuentas de aplicación carecen de UPDATE/DELETE/TRUNCATE sobre evidencia. La protección frente al administrador se acredita en el almacenamiento inmutable y con verificación independiente; revocar permisos SQL al usuario aplicativo no restringe por sí solo a un superusuario.
 
@@ -92,23 +93,24 @@ Las rectificaciones generan un registro nuevo que referencia el original, sin so
 \begingroup\emergencystretch=2em
 La \figref{05-5-7-evidencia} separa evaluación y evidencia mediante \textsf{EVALUACION\_\allowbreak{}EVIDENCIA}: una evaluación puede usar reposo de nivel 4 y atestación de nivel 5 simultáneamente. El veredicto siempre se registra, aun sin evidencia válida. Una excepción RN-04 conserva dos aprobadores, motivo, un viaje y revisión mensual; no levanta una causa legal. Las restricciones y nulabilidad se detallan en el anexo.\par\endgroup
 
-\anexoGrafico{../../Informe-2/D3/graficos/5-7-evidencia.png}{Modelo lógico de evidencia, evaluación, excepción y permiso}{05-5-7-evidencia}
+\figura[ancho=completo,alto=0.88,lugar=htbp]{figuras/05-datos/vertical/5-7-evidencia.pdf}{Modelo lógico de evidencia, evaluación, excepción y permiso}{05-5-7-evidencia}
 
 La \tabref{05-tabla-5-2} y la \figref{05-5-7-evidencia} se cotejan con CP-SYS-05/CP-UAT-09: nivel 0, nivel 5, modalidad de datos, atestación ausente, fuente desconocida y bloqueo legal. Una base migrada conserva los códigos anteriores, su tabla de correspondencia y la versión del mapeo; no altera la evidencia original para hacerla coincidir con el nuevo esquema.
 
+\FloatBarrier
 \subsection{Soberanía, permisos y bases de tratamiento}\label{sec:5-soberania}\label{sec:05-soberania-permisos-y-bases-de-tratamiento}
 
 El permiso del transportista controla qué datos de sus recursos comparte, con quién, para qué finalidad y durante qué servicio (\caso{RT-16.30}{33}). No sustituye la base de tratamiento de datos personales del conductor. El modelo distingue permiso comercial, adhesión contractual y base jurídica; la localización es dato personal cuando identifica o permite identificar a una persona, sin clasificar automáticamente toda localización como categoría legal de dato sensible.
 
 La \figref{05-5-3-permisos} muestra concesión, evaluación por petición, revocación y decisión de conservación. \texttt{PERMISO\_\allowbreak{}COMPARTIR} mantiene recurso, destinatario, alcance, finalidad, vigencia, versión y respaldo; \texttt{ACCESO\_\allowbreak{}DATO} conserva qué se mostró y bajo qué versión. Una lista JSON de clientes no reemplaza relaciones verificables ni la auditoría de cada acceso.
 
-\anexoGrafico{../../Informe-2/D3/graficos/5-3-permisos.png}{Compartición autorizada, revocación y conservación}{05-5-3-permisos}
+\figura[ancho=completo,alto=0.88,lugar=htbp]{figuras/05-datos/vertical/5-3-permisos.pdf}{Compartición autorizada, revocación y conservación}{05-5-3-permisos}
 
 La revocación cesa nuevas consultas y emisiones cubiertas por el permiso, invalida caché/credenciales de acceso y propaga una versión al dispositivo. Durante falta de enlace no puede recibir una revocación nueva: el permiso local tiene vencimiento y sólo se transmiten datos tras comprobar la versión al reconectar. La transmisión de emergencia y los registros obligatorios siguen su base específica y minimización; revocar compartición comercial no borra evidencia de jornada ni elimina obligaciones de seguridad.
 
 \art{4.2}{5} exige Ley 21.719 y, mientras esté vigente, Ley 19.628. La Ley 21.719 entra en vigor el 01-12-2026; el inicio supuesto de febrero de 2027 cae bajo el régimen nuevo. Curimón debe documentar finalidad, base, derechos, encargos, plazos y transferencias. El cifrado de campo exigido por RT-11.10 no reemplaza esos deberes (BCN, Ley 21.719 \parencite{d3_ley21719}).
 
-Chile Central es primario y Brazil South es secundario propuesto en S4.3. Una réplica de datos personales es transferencia internacional: requiere identificar responsable y destinatario y documentar una vía aplicable del artículo 27 y las salvaguardias del artículo 28. Ubicación sudamericana y cifrado no acreditan por sí solos licitud. Si no se documenta el mecanismo, no se activa esa réplica; tampoco se declara satisfecho el DR hasta disponer de un sitio secundario admisible que supere RPO $\leq$15 min y RTO $\leq$4 h. La revisión jurídica y la prueba de recuperación son condiciones de puesta en operación.
+Chile Central es primario y Brazil South es secundario propuesto en S4.3. Una réplica de datos personales es transferencia internacional: requiere identificar responsable y destinatario y documentar una vía aplicable del artículo 27 y las salvaguardias del artículo 28. Ubicación sudamericana y cifrado no acreditan por sí solos licitud. Si no se documenta el mecanismo, no se activa esa réplica; tampoco se declara satisfecho el DR hasta disponer de un sitio secundario admisible que supere RPO $\leq$15 min y RTO $\leq$4 h. San Bernardo puede sostener continuidad local ante una pérdida de enlace, pero no se acredita como recuperación frente a un desastre de la región primaria: comparte el área metropolitana y sus riesgos, conforme a RT-07.02. Mientras no exista una vía habilitante documentada para Brazil South o un sitio secundario admisible con independencia de fallos, la recuperación de esos datos queda sin acreditar. La revisión jurídica y la prueba de recuperación son condiciones de puesta en operación.
 
 Una supresión solicitada se resuelve por dato y finalidad: conservar protegido lo sujeto a retención o litigio, cesar usos no autorizados y eliminar cuando proceda. El procedimiento incluye BD, originales, índices, cachés, exportaciones autorizadas, réplicas y respaldos; registra alcance, retenciones vigentes y fecha efectiva. NIST SP 800-88 Rev. 2 sustituye la revisión 1 desde septiembre de 2025. La destrucción criptográfica sólo se usa cuando el diseño de claves y todas sus copias lo permite; no se promete irrecuperabilidad absoluta ni purga instantánea de Key Vault (NIST, SP 800-88 Rev. 2 \parencite{d3_nist88r2}).
 
@@ -116,6 +118,7 @@ Una supresión solicitada se resuelve por dato y finalidad: conservar protegido 
 
 La gestión de datos de audIT define la gobernanza operacional del dato, los motores de persistencia justificados frente a los compromisos de disponibilidad y latencia, y las políticas de retención, respaldo y seguridad.
 
+\FloatBarrier
 \subsection{Motores, transacciones y decisión ante partición}\label{sec:5-motores}\label{sec:05-motores-transacciones-y-decision-ante-particion}
 
 \transv{RT-05.02}{11} exige justificar por dominio consistencia y disponibilidad. CAP se aplica al comportamiento de un sistema distribuido durante una partición; ACID describe transacciones y no clasifica automáticamente un producto como CP/AP. La \tabref{05-tabla-5-3} y la \figref{05-audit-figura-5-3-cap} concretan la decisión operacional.
@@ -132,20 +135,20 @@ Analítica & ADLS Gen2 / Delta y modelo dimensional & Aceptar actualización dif
 
 La \tabref{05-tabla-5-3} mantiene una base de negocio consistente y una captura local que resiste particiones. El documento fiscal permanece en el contable y requiere entrega conforme antes del movimiento; el búfer local no habilita emisión propia.
 
-\anexoGrafico{../../Informe-2/D3/graficos/audit-figura-5.3-cap.png}{Consistencia del despacho y continuidad de captura durante una partición}{05-audit-figura-5-3-cap}
+\figura[ancho=completo,alto=0.88,lugar=htbp]{figuras/05-datos/vertical/audit-figura-5.3-cap.pdf}{Consistencia del despacho y continuidad de captura durante una partición}{05-audit-figura-5-3-cap}
 
 El protocolo Kafka de Event Hubs no implica un segundo clúster Apache Kafka ni transacciones exactamente una vez. Se usan outbox, entrega al menos una vez, orden por agregado y deduplicación duradera, conforme a S4.1.
 
+\FloatBarrier
 \subsection{Segregación arquitectónica OLTP versus analítica (Lakehouse)}\label{sec:5-oltp-olap}\label{sec:05-segregacion-arquitectonica-oltp-versus-analitica-lakehouse}
 
 Para dar cumplimiento a \transv{RT-05.05}{11}, se separa la base transaccional de producción respecto del consumo analítico de reportería y cálculo de costo por kilómetro. La propagación usa captura de cambios (CDC Debezium) y Event Hubs Premium mediante protocolo Kafka. El objetivo propuesto de retraso CDC <60 s se verifica bajo carga antes de aceptarse; el flujo avanza hacia el repositorio analítico (Delta Lake), como esquematiza la \figref{05-audit-figura-5-4-cdc}.
 
-\anexoGrafico{../../Informe-2/D3/graficos/audit-figura-5.4-cdc.png}{Segregación transaccional OLTP y analítica OLAP mediante CDC}{05-audit-figura-5-4-cdc}
-
-Fuente: elaboración de audIT.
+\figura[ancho=completo,alto=0.88,lugar=htbp]{figuras/05-datos/vertical/audit-figura-5.4-cdc.pdf}{Segregación transaccional OLTP y analítica OLAP mediante CDC}{05-audit-figura-5-4-cdc}
 
 El modelo de costeo por viaje (\caso{RT-05.29}{31}) administra el desfase inherente de las liquidaciones de combustible (hasta 40 días) y peajes mensuales, emitiendo una versión preliminar en no más de 24 horas y una versión consolidada definitiva post-cierre sin sobrescribir los registros originales.
 
+\FloatBarrier
 \subsection{Políticas de gobernanza, calidad y retención histórica}\label{sec:5-gobernanza}\label{sec:05-politicas-de-gobernanza-calidad-y-retencion-historica}
 
 La calidad se mide en captura y migración según \transv{RT-05.04}{11} e ISO/IEC 25012. La \tabref{05-tabla-5-4} distingue los atributos que habilitan una transacción de los campos opcionales de una fuente.
@@ -202,9 +205,7 @@ La \figref{05-audit-figura-5-5-migracion} muestra cuatro fases: extracción/perf
 
 La aceptación exige conciliación de totales, referencias y documentos, ausencia de vigencias habilitantes sin respaldo y cuadratura de liquidaciones con diferencias justificadas. Toda inconsistencia se identifica por registro, propietario y resolución, sin afirmar que una carga masiva elimina errores. Se prueban reversa, delta final e idempotencia; nunca se borran documentos fiscales ya emitidos ni evidencias válidas generadas durante la convivencia. Los cortes respetan los congelamientos y la implantación por terminal/unidad de S7 (\caso{RT-10.05}{32}).
 
-\anexoGrafico{../../Informe-2/D3/graficos/audit-figura-5.5-migracion.png}{Metodología de extracción, saneamiento, carga y conciliación histórica}{05-audit-figura-5-5-migracion}
-
-Fuente: elaboración de audIT.
+\figura[ancho=completo,alto=0.88,lugar=htbp]{figuras/05-datos/vertical/audit-figura-5.5-migracion.pdf}{Metodología de extracción, saneamiento, carga y conciliación histórica}{05-audit-figura-5-5-migracion}
 
 La \figref{05-audit-figura-5-5-migracion} muestra las puertas de acreditación y conciliación. Un registro en cuarentena no habilita despacho; el corte requiere acta y aceptación de los casos vinculados en T-17, con discrepancias resueltas o excluidas explícitamente del uso habilitante.
 
@@ -212,7 +213,7 @@ La \figref{05-audit-figura-5-5-migracion} muestra las puertas de acreditación y
 
 La meta contractual de asignación es $\leq$30 s extremo a extremo (\caso{RT-09.01}{32}). Menos de 2 s es objetivo interno de un caso nominal, no medición ni garantía derivada de usar caché. La \figref{05-audit-figura-5-6-desempeno} muestra que una proyección sólo habilita cuando su versión y actualidad se validan contra el estado autoritativo; si hay conflicto se reevalúa o rechaza dentro del plazo total.
 
-\anexoGrafico{../../Informe-2/D3/graficos/audit-figura-5.6-desempeno.png}{Estado autoritativo, caché e índices especializados}{05-audit-figura-5-6-desempeno}
+\figura[ancho=completo,alto=0.88,lugar=htbp]{figuras/05-datos/vertical/audit-figura-5.6-desempeno.pdf}{Estado autoritativo, caché e índices especializados}{05-audit-figura-5-6-desempeno}
 
 La \figref{05-audit-figura-5-6-desempeno} separa consultas puntuales del histórico y la analítica. Se proponen B-tree sobre IDs/FK y rangos de asignación, GiST en geocercas y BRIN sólo donde el orden físico temporal lo justifique. Un RUT cifrado no se indexa como texto en claro: la deduplicación usa un índice ciego HMAC con clave separada, alcance documentado y acceso restringido; se evalúa el riesgo de correlación. Las búsquedas parciales no se ofrecen sobre ciphertext como si fueran equivalentes a texto.
 

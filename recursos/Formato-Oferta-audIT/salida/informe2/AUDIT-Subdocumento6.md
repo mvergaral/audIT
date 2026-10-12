@@ -10,7 +10,7 @@ El CLIENTE recibe una línea base controlada, responsables y decisiones registra
 
 La infraestructura y el montaje requieren planificación predictiva por terminal y unidad; las interfaces, contratos y modelos de costo requieren validación iterativa con usuarios; los incidentes 24x7 requieren flujo con prioridad y escalamiento. Los frentes se sincronizan mediante los comités contractuales y las puertas de S9, sin alterar hitos obligatorios.
 
-## 6.1 Metodología de gestión del proyecto
+## 6.1 Metodología de Gestión de Proyectos
 
 La gestión del proyecto adopta las directrices de la guía PMBOK (Project Management Institute, 2021), adaptada específicamente a las restricciones operativas y contractuales del transporte de carga por carretera y la logística interurbana (FEP01, Artículo 4.3, p. 5, FEP02, RT-19.01, p. 33). Este marco mantiene trazabilidad verificable sobre la línea base de alcance, tiempo y costo, articulando la relación contractual con Transportes Curimón S.A. mediante canales formales de rendición de cuentas.
 
@@ -29,13 +29,11 @@ La administración del contrato se fundamenta en un modelo de ciclo de vida híb
 
 La articulación temporal del marco de gestión y su integración con los hitos contractuales de la licitación se ilustra en la Figura 6.1.
 
-![Figura 6.1. Gobernanza temporal del proyecto y articulación de fases, etapas y marchas blancas](../../../../Informe-2/D3/graficos/6-1-hitos.png)
+![Figura 6.1. Gobernanza temporal del proyecto y articulación de fases, etapas y marchas blancas](../../figuras/06-metodologias/vertical/6-1-hitos.pdf)
 
 *Figura 6.1. Gobernanza temporal del proyecto y articulación de fases, etapas y marchas blancas*
 
 Fuente: Elaboración propia.
-
-Fuente: elaboración de audIT.
 
 La Figura 6.1 representa el solapamiento desde M13: la estabilización de E1 y la construcción de E2 usan equipos y capacidad segregados. M25–56 aparece como tramo comprimido, identificado expresamente; el detalle mensual y las fechas derivadas de SA-01 corresponden a S7.
 
@@ -91,7 +89,7 @@ Conforme se establece en la Tabla 6.2, la ejecución de cualquier alteración si
 
 **Compromiso C-01.** audIT formalizará las decisiones y acuerdos de cada sesión de comité en un plazo máximo de veinticuatro horas hábiles en el espacio colaborativo digital.  Métrica: Emisión de minuta formal y registro en espacio digital en menos de 24 horas hábiles tras cada sesión de comité. Se verifica en: Registro de auditoría del repositorio colaborativo. Fuente: compromiso adicional audIT sobre las instancias de FEP01, Artículo 71, p. 37 y el espacio de RT-19.05; las bases no fijan ese plazo de minuta.
 
-## 6.2 Metodología de desarrollo de software
+## 6.2 Metodología de Desarrollo Software
 
 El desarrollo de la solución tecnológica se estructura bajo un ciclo de vida evolutivo basado en ingeniería de software guiada por el dominio (Domain-Driven Design, DDD) y prácticas DevSecOps. Se controla deuda técnica, dependencias y tamaño de liberaciones mediante criterios de aceptación verificables.
 
@@ -118,13 +116,11 @@ El control de cadena de suministro adopta SLSA v1.2 Build L3: plataforma alojada
 
 El pipeline de entrega continua se ejecuta automáticamente ante cada evento de integración en el repositorio, transitando obligatoriamente por seis fases de validación, ilustradas en la Figura 6.2.
 
-![Figura 6.2. Fases y puertas de calidad del pipeline DevSecOps unificado](../../../../Informe-2/D3/graficos/6-2-pipeline.png)
+![Figura 6.2. Fases y puertas de calidad del pipeline DevSecOps unificado](../../figuras/06-metodologias/vertical/6-2-pipeline.pdf)
 
 *Figura 6.2. Fases y puertas de calidad del pipeline DevSecOps unificado*
 
 Fuente: Elaboración propia.
-
-Fuente: elaboración de audIT.
 
 Como se representa en la Figura 6.2, ninguna versión de software puede alcanzar el ambiente de producción sin superar secuencialmente las seis etapas del pipeline. En la Tabla 6.3 se definen los umbrales bloqueantes parametrizados para comprobar los criterios de calidad y seguridad del artefacto.
 
@@ -177,7 +173,7 @@ DEV, QA, PREPROD, PROD y DR deben estar operativos en H3 (FEP02, RT-04.01, p. 10
 
 Se elige canario para servicios y actualización por unidad para equipos a bordo. Antes de cada pase se comprueban métricas, reversa, esquema compatible y preservación de evidencia. La reversión automática retorna a la versión previa compatible, mantiene eventos no confirmados y conserva documentos emitidos; después reconcilia diferencias. Las migraciones de esquema siguen expandir–migrar–contraer y son versionadas/reversibles (RT-04.10). Contraer columnas o transformar datos de forma irreversible se posterga hasta que la versión anterior deje de necesitarlas; no se promete que toda transformación se deshaga con un rollback de contenedor.
 
-La Tabla 6.5 declara metas de entrega propuestas para RT-04.12; se miden por contexto en operación y se ajusta capacidad si fallan, sin alterar mínimos de seguridad ni congelamientos de S7.
+La Tabla 6.5 declara metas de entrega para RT-04.12 y conserva el máximo contractual de cambios fallidos del Artículo 78.3; se miden por contexto en operación y se ajusta capacidad si fallan, sin alterar mínimos de seguridad ni congelamientos de S7.
 
 **Tabla 6.5.** Indicadores de entrega y restauración
 
@@ -185,7 +181,7 @@ La Tabla 6.5 declara metas de entrega propuestas para RT-04.12; se miden por con
 |---|---|---|
 | Frecuencia de despliegue | Incremento disponible cada sprint; producción sólo en ventanas aprobadas sin congelamiento | Historial de liberaciones por servicio y calendario S7 |
 | Tiempo desde commit aceptado hasta producción | ≤5 días hábiles fuera de congelamientos, con pruebas/gates completos | Marcas de commit, aceptación y despliegue; exclusiones justificadas |
-| Cambios fallidos | ≤10 % de liberaciones en ventana móvil de 90 días | Reversas/incidentes ligados a digest y total de liberaciones |
+| Cambios fallidos en producción | ≤5 % de los despliegues del mes (FEP01, Art. 78.3, p. 40) | Despliegues con fallo, reversa o incidente atribuible / total de despliegues en producción del mes, ligados al digest |
 | Restauración tras cambio fallido | Objetivo ≤30 min para reversa de aplicación, sin sustituir SLA de incidente ni RTO de DR | Cronómetro de detección, reversa y verificación de integridad |
 
 La Tabla 6.5 distingue despliegue en pruebas (<15 min propuesto en C-02), lead time, reversa de una aplicación y recuperación completa de un sitio. Ninguno se infiere del éxito del pipeline. Los objetivos se verifican con S9; la aceptación E1/E2 mantiene sus marchas blancas y el régimen crítico 99,9 % del Artículo 78.2.

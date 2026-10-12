@@ -48,3 +48,7 @@ Investigacion/*.pdf
 
 # Figuras PDF vectoriales requeridas por la oferta; los entregables siguen ignorados.
 !/recursos/Formato-Oferta-audIT/figuras/**/*.pdf
+
+# Copias locales para cargar la entrega; los PDF originales siguen en salida/informe2.
+**/salida/Entrega-Informe2-*/
+*.ZIP

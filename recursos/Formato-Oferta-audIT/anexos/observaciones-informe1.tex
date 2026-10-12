@@ -174,7 +174,7 @@
 
 \observacion[tipo=acepta, sub=5]{81}{El diccionario cubre 6 entidades y ninguna es la evidencia de jornada, exigida para resistir impugnaciones.}{S5 incorpora la entidad EVIDENCIA\_JORNADA. Sus niveles siguen el contrato del Subdocumento 3: niveles 1 a 5, nivel 0 solo para el registro voluntario del conductor y nulo para la fuente desconocida o inválida, y el dominio nivel\_cascada del anexo de diccionario usa los mismos niveles. Origen instrumental, modalidad, nivel y veredicto se registran por separado}{S5 §5.1.5 y anexo de diccionario, EVIDENCIA\_JORNADA; S3, evidencia y veredicto; S9 §9.1.1; T-17 CP-SYS-05 y CP-UAT-09}
 
-\observacion[tipo=acepta, sub=5]{82}{No hay diagrama Entidad-Relación (DER) en el documento.}{La sección 5.1.2 incluye el diagrama entidad-relación en notación de pata de gallo (Figura 5.1), con las entidades transaccionales, telemáticas y de auditoría}{Sección 5.1.2 (Figura 5.1)}
+\observacion[tipo=acepta, sub=5]{82}{No hay diagrama Entidad-Relación (DER) en el documento.}{La sección 5.1.2 incluye la Figura 5.1 en el cuerpo del documento, con entidades, claves, relaciones y multiplicidades del modelo lógico; la sección 5.1.5 detalla el modelo de evidencia y evaluación en la Figura 5.4}{Sección 5.1.2 (Figura 5.1)}
 
 \observacion[tipo=acepta, sub=5]{83}{Contradicción de residencia: copia fuera de sitio en Azure East US 2 mientras S4 sostiene residencia en Chile.}{La residencia primaria es Chile Central y la réplica secundaria es Brazil South, sin referencias a East US 2. La réplica de datos personales a Brazil South es una transferencia internacional y se activa solo con la vía habilitante documentada}{S5 §5.1.6 y S4 §4.3.2}
 
@@ -182,7 +182,7 @@
 
 \observacion[tipo=acepta, sub=5]{85}{La sección 1.1 es la bitácora interna del grupo de trabajo.}{Se acoge la observación. Se implementa en la Sección 5.1, eliminando íntegramente la bitácora interna y abriendo el documento con la descripción conceptual del gobierno y ciclo de vida de los datos corporativos.}{Sección 5.1.}
 
-\observacion[tipo=acepta, sub=5]{86}{Prosa hinchada y escasez de figuras (dos figuras en 21 páginas), no citadas desde el texto.}{Se acoge la observación. Se implementa en el Subdocumento 5 completo, reescribiendo el texto en tono técnico riguroso e incorporando diagramas de arquitectura de datos (DER, flujo de eventos) debidamente citados e interpretados analíticamente.}{Subdocumento 5 completo.}
+\observacion[tipo=acepta, sub=5]{86}{Prosa hinchada y escasez de figuras (dos figuras en 21 páginas), no citadas desde el texto.}{S5 integra nueve figuras verticales en las secciones que las explican, sin leyendas sueltas ni remisión de todos los gráficos al final. Las figuras muestran relaciones, maestros, custodia, permisos, partición de red, CDC, migración y desempeño, con cita y análisis.}{S5 §§5.1.2–5.1.6, 5.2.1–5.2.2, 5.3 y 5.4; Figuras 5.1–5.9.}
 
 \observacion[tipo=acepta, sub=5]{87}{El tratamiento de revocación del consentimiento frente a la retención legal queda pendiente de validar.}{La revocación cesa los accesos cubiertos por el permiso y conserva la evidencia sujeta a retención legal, con rectificaciones trazables y sin eliminación automática de la jornada. S5 lo modela en la sección 5.1.6 y el Formulario T-17 lo comprueba en CP-SEC-05, CP-SEC-08 y CP-INT-25}{S5 §5.1.6; T-17 CP-SEC-05, CP-SEC-08 y CP-INT-25; S9 §9.1.1}
 

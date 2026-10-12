@@ -12,11 +12,11 @@ El FEP01, Artículo 46, p. 28 pide resolver en cada informe las observaciones de
 |---|---|---|---|
 | 13 | El Subdocumento 5 abre con la bitácora interna del grupo de trabajo. | Se acepta. Se acoge la observación. Se implementa en la Sección 5.1, eliminando por completo la sección de bitácora interna; el documento inicia con el marco conceptual, alcance y gobierno del modelo de datos de la empresa. | Sección 5.1. |
 | 81 | El diccionario cubre 6 entidades y ninguna es la evidencia de jornada, exigida para resistir impugnaciones. | Se acepta. S5 incorpora la entidad EVIDENCIA_JORNADA. Sus niveles siguen el contrato del Subdocumento 3: niveles 1 a 5, nivel 0 solo para el registro voluntario del conductor y nulo para la fuente desconocida o inválida, y el dominio nivel_cascada del anexo de diccionario usa los mismos niveles. Origen instrumental, modalidad, nivel y veredicto se registran por separado | S5 §5.1.5 y anexo de diccionario, EVIDENCIA_JORNADA; S3, evidencia y veredicto; S9 §9.1.1; T-17 CP-SYS-05 y CP-UAT-09 |
-| 82 | No hay diagrama Entidad-Relación (DER) en el documento. | Se acepta. La sección 5.1.2 incluye el diagrama entidad-relación en notación de pata de gallo (Figura 5.1), con las entidades transaccionales, telemáticas y de auditoría | Sección 5.1.2 (Figura 5.1) |
+| 82 | No hay diagrama Entidad-Relación (DER) en el documento. | Se acepta. La sección 5.1.2 incluye la Figura 5.1 en el cuerpo del documento, con entidades, claves, relaciones y multiplicidades del modelo lógico; la sección 5.1.5 detalla el modelo de evidencia y evaluación en la Figura 5.4 | Sección 5.1.2 (Figura 5.1) |
 | 83 | Contradicción de residencia: copia fuera de sitio en Azure East US 2 mientras S4 sostiene residencia en Chile. | Se acepta. La residencia primaria es Chile Central y la réplica secundaria es Brazil South, sin referencias a East US 2. La réplica de datos personales a Brazil South es una transferencia internacional y se activa solo con la vía habilitante documentada | S5 §5.1.6 y S4 §4.3.2 |
 | 84 | El motor de bases de datos de series de tiempo y el bus de mensajería quedan indefinidos. | Se acepta. La sección 5.2.1 fija TimescaleDB sobre PostgreSQL, en un servidor separado, para las series de tiempo, y Azure Event Hubs Premium con protocolo Kafka como bus de eventos, sin un clúster Apache Kafka propio | S5 §5.2.1 y S4 §4.1.1 |
 | 85 | La sección 1.1 es la bitácora interna del grupo de trabajo. | Se acepta. Se acoge la observación. Se implementa en la Sección 5.1, eliminando íntegramente la bitácora interna y abriendo el documento con la descripción conceptual del gobierno y ciclo de vida de los datos corporativos. | Sección 5.1. |
-| 86 | Prosa hinchada y escasez de figuras (dos figuras en 21 páginas), no citadas desde el texto. | Se acepta. Se acoge la observación. Se implementa en el Subdocumento 5 completo, reescribiendo el texto en tono técnico riguroso e incorporando diagramas de arquitectura de datos (DER, flujo de eventos) debidamente citados e interpretados analíticamente. | Subdocumento 5 completo. |
+| 86 | Prosa hinchada y escasez de figuras (dos figuras en 21 páginas), no citadas desde el texto. | Se acepta. S5 integra nueve figuras verticales en las secciones que las explican, sin leyendas sueltas ni remisión de todos los gráficos al final. Las figuras muestran relaciones, maestros, custodia, permisos, partición de red, CDC, migración y desempeño, con cita y análisis. | S5 §§5.1.2–5.1.6, 5.2.1–5.2.2, 5.3 y 5.4; Figuras 5.1–5.9. |
 | 87 | El tratamiento de revocación del consentimiento frente a la retención legal queda pendiente de validar. | Se acepta. La revocación cesa los accesos cubiertos por el permiso y conserva la evidencia sujeta a retención legal, con rectificaciones trazables y sin eliminación automática de la jornada. S5 lo modela en la sección 5.1.6 y el Formulario T-17 lo comprueba en CP-SEC-05, CP-SEC-08 y CP-INT-25 | S5 §5.1.6; T-17 CP-SEC-05, CP-SEC-08 y CP-INT-25; S9 §9.1.1 |
 
 ## 5 Modelo y gestión de datos
@@ -48,13 +48,11 @@ La Tabla 5.1 fija la estructura que se comprueba en S9. El cifrado y los índice
 
 La arquitectura de datos se estructura en seis contextos delimitados con límites explícitos. En la Figura 5.1 se despliega el modelo conceptual y relacional de persistencia de datos.
 
-![Figura 5.1. Modelo lógico de las relaciones críticas del viaje](../../../../Informe-2/D3/graficos/audit-figura-5.1-erd.png)
+![Figura 5.1. Modelo lógico de las relaciones críticas del viaje](../../figuras/05-datos/vertical/audit-figura-5.1-erd.pdf)
 
 *Figura 5.1. Modelo lógico de las relaciones críticas del viaje*
 
 Fuente: Elaboración propia.
-
-Fuente: elaboración de audIT.
 
 La Figura 5.1 separa el ciclo del viaje de las asignaciones: una orden genera cero o varios viajes y cada viaje conserva cero o varias asignaciones históricas. Cada asignación confirmada identifica conductor, tracto y, cuando la carga lo exige, semirremolque; no puede solaparse con otra activa para esos recursos. Documento, costo y evaluación mantienen su identificador y relación con el viaje o la asignación. En el gráfico, EVAL_\allowbreak{}ASIGNACION abrevia EVALUACION_\allowbreak{}ASIGNACION y DOCUMENTO_\allowbreak{}TRANSP. abrevia DOCUMENTO_\allowbreak{}TRANSPORTE.
 
@@ -66,13 +64,11 @@ El ciclo propuesto del viaje es `PROGRAMADO $\rightarrow$ EN_\allowbreak{}CARGA 
 
 En cumplimiento de FEP02, RT-05.09, p. 11, se implementa un marco centralizado de Master Data Management (MDM) con principio de Registro Maestro Único (*Golden Record*), visualizado en la Figura 5.2.
 
-![Figura 5.2. Gestión de Datos Maestros (MDM) y Capa Anticorrupción](../../../../Informe-2/D3/graficos/audit-figura-5.2-mdm.png)
+![Figura 5.2. Gestión de Datos Maestros (MDM) y Capa Anticorrupción](../../figuras/05-datos/vertical/audit-figura-5.2-mdm.pdf)
 
 *Figura 5.2. Gestión de Datos Maestros (MDM) y Capa Anticorrupción*
 
 Fuente: Elaboración propia.
-
-Fuente: elaboración de audIT.
 
 La Figura 5.2 identifica propietarios y conciliación: Personas gobierna conductor/evidencia/habilitación; Flota, activos y taller; Planificación, órdenes y puntos de servicio; el contable conserva identidad comercial y de facturación según el contrato de integración. Las tarifas operacionales cambian de autoridad por función en M16/M21 según S3; no existe doble escritura maestra.
 
@@ -115,7 +111,7 @@ El origen recibido se conserva sin renumeración silenciosa. Una descarga de tac
 
 La Figura 5.3 recorre recepción, validación, sellado, conservación y rectificación.
 
-![Figura 5.3. Cadena de custodia de evidencias y tratamiento de fuentes inválidas](../../../../Informe-2/D3/graficos/5-2-custodia.png)
+![Figura 5.3. Cadena de custodia de evidencias y tratamiento de fuentes inválidas](../../figuras/05-datos/vertical/5-2-custodia.pdf)
 
 *Figura 5.3. Cadena de custodia de evidencias y tratamiento de fuentes inválidas*
 
@@ -128,7 +124,7 @@ Las rectificaciones generan un registro nuevo que referencia el original, sin so
 \begingroup\emergencystretch=2em
 La Figura 5.4 separa evaluación y evidencia mediante \textsf{EVALUACION_\allowbreak{}EVIDENCIA}: una evaluación puede usar reposo de nivel 4 y atestación de nivel 5 simultáneamente. El veredicto siempre se registra, aun sin evidencia válida. Una excepción RN-04 conserva dos aprobadores, motivo, un viaje y revisión mensual; no levanta una causa legal. Las restricciones y nulabilidad se detallan en el anexo.\endgroup
 
-![Figura 5.4. Modelo lógico de evidencia, evaluación, excepción y permiso](../../../../Informe-2/D3/graficos/5-7-evidencia.png)
+![Figura 5.4. Modelo lógico de evidencia, evaluación, excepción y permiso](../../figuras/05-datos/vertical/5-7-evidencia.pdf)
 
 *Figura 5.4. Modelo lógico de evidencia, evaluación, excepción y permiso*
 
@@ -142,7 +138,7 @@ El permiso del transportista controla qué datos de sus recursos comparte, con q
 
 La Figura 5.5 muestra concesión, evaluación por petición, revocación y decisión de conservación. `PERMISO_\allowbreak{}COMPARTIR` mantiene recurso, destinatario, alcance, finalidad, vigencia, versión y respaldo; `ACCESO_\allowbreak{}DATO` conserva qué se mostró y bajo qué versión. Una lista JSON de clientes no reemplaza relaciones verificables ni la auditoría de cada acceso.
 
-![Figura 5.5. Compartición autorizada, revocación y conservación](../../../../Informe-2/D3/graficos/5-3-permisos.png)
+![Figura 5.5. Compartición autorizada, revocación y conservación](../../figuras/05-datos/vertical/5-3-permisos.pdf)
 
 *Figura 5.5. Compartición autorizada, revocación y conservación*
 
@@ -152,7 +148,7 @@ La revocación cesa nuevas consultas y emisiones cubiertas por el permiso, inval
 
 FEP01, Artículo 4.2, p. 5 exige Ley 21.719 y, mientras esté vigente, Ley 19.628. La Ley 21.719 entra en vigor el 01-12-2026; el inicio supuesto de febrero de 2027 cae bajo el régimen nuevo. Curimón debe documentar finalidad, base, derechos, encargos, plazos y transferencias. El cifrado de campo exigido por RT-11.10 no reemplaza esos deberes (BCN, Ley 21.719 (Biblioteca del Congreso Nacional de Chile, s. f.)).
 
-Chile Central es primario y Brazil South es secundario propuesto en S4.3. Una réplica de datos personales es transferencia internacional: requiere identificar responsable y destinatario y documentar una vía aplicable del artículo 27 y las salvaguardias del artículo 28. Ubicación sudamericana y cifrado no acreditan por sí solos licitud. Si no se documenta el mecanismo, no se activa esa réplica; tampoco se declara satisfecho el DR hasta disponer de un sitio secundario admisible que supere RPO $≤15 min y RTO ≤$4 h. La revisión jurídica y la prueba de recuperación son condiciones de puesta en operación.
+Chile Central es primario y Brazil South es secundario propuesto en S4.3. Una réplica de datos personales es transferencia internacional: requiere identificar responsable y destinatario y documentar una vía aplicable del artículo 27 y las salvaguardias del artículo 28. Ubicación sudamericana y cifrado no acreditan por sí solos licitud. Si no se documenta el mecanismo, no se activa esa réplica; tampoco se declara satisfecho el DR hasta disponer de un sitio secundario admisible que supere RPO $≤15 min y RTO ≤$4 h. San Bernardo puede sostener continuidad local ante una pérdida de enlace, pero no se acredita como recuperación frente a un desastre de la región primaria: comparte el área metropolitana y sus riesgos, conforme a RT-07.02. Mientras no exista una vía habilitante documentada para Brazil South o un sitio secundario admisible con independencia de fallos, la recuperación de esos datos queda sin acreditar. La revisión jurídica y la prueba de recuperación son condiciones de puesta en operación.
 
 Una supresión solicitada se resuelve por dato y finalidad: conservar protegido lo sujeto a retención o litigio, cesar usos no autorizados y eliminar cuando proceda. El procedimiento incluye BD, originales, índices, cachés, exportaciones autorizadas, réplicas y respaldos; registra alcance, retenciones vigentes y fecha efectiva. NIST SP 800-88 Rev. 2 sustituye la revisión 1 desde septiembre de 2025. La destrucción criptográfica sólo se usa cuando el diseño de claves y todas sus copias lo permite; no se promete irrecuperabilidad absoluta ni purga instantánea de Key Vault (NIST, SP 800-88 Rev. 2 (Ramaswamy Chandramouli y Eric Hibbard, s. f.)).
 
@@ -177,7 +173,7 @@ FEP02, RT-05.02, p. 11 exige justificar por dominio consistencia y disponibilida
 
 La Tabla 5.3 mantiene una base de negocio consistente y una captura local que resiste particiones. El documento fiscal permanece en el contable y requiere entrega conforme antes del movimiento; el búfer local no habilita emisión propia.
 
-![Figura 5.6. Consistencia del despacho y continuidad de captura durante una partición](../../../../Informe-2/D3/graficos/audit-figura-5.3-cap.png)
+![Figura 5.6. Consistencia del despacho y continuidad de captura durante una partición](../../figuras/05-datos/vertical/audit-figura-5.3-cap.pdf)
 
 *Figura 5.6. Consistencia del despacho y continuidad de captura durante una partición*
 
@@ -189,13 +185,11 @@ El protocolo Kafka de Event Hubs no implica un segundo clúster Apache Kafka ni 
 
 Para dar cumplimiento a FEP02, RT-05.05, p. 11, se separa la base transaccional de producción respecto del consumo analítico de reportería y cálculo de costo por kilómetro. La propagación usa captura de cambios (CDC Debezium) y Event Hubs Premium mediante protocolo Kafka. El objetivo propuesto de retraso CDC <60 s se verifica bajo carga antes de aceptarse; el flujo avanza hacia el repositorio analítico (Delta Lake), como esquematiza la Figura 5.7.
 
-![Figura 5.7. Segregación transaccional OLTP y analítica OLAP mediante CDC](../../../../Informe-2/D3/graficos/audit-figura-5.4-cdc.png)
+![Figura 5.7. Segregación transaccional OLTP y analítica OLAP mediante CDC](../../figuras/05-datos/vertical/audit-figura-5.4-cdc.pdf)
 
 *Figura 5.7. Segregación transaccional OLTP y analítica OLAP mediante CDC*
 
 Fuente: Elaboración propia.
-
-Fuente: elaboración de audIT.
 
 El modelo de costeo por viaje (Caso, RT-05.29, p. 31) administra el desfase inherente de las liquidaciones de combustible (hasta 40 días) y peajes mensuales, emitiendo una versión preliminar en no más de 24 horas y una versión consolidada definitiva post-cierre sin sobrescribir los registros originales.
 
@@ -258,13 +252,11 @@ La Figura 5.8 muestra cuatro fases: extracción/perfilamiento con copia y hash d
 
 La aceptación exige conciliación de totales, referencias y documentos, ausencia de vigencias habilitantes sin respaldo y cuadratura de liquidaciones con diferencias justificadas. Toda inconsistencia se identifica por registro, propietario y resolución, sin afirmar que una carga masiva elimina errores. Se prueban reversa, delta final e idempotencia; nunca se borran documentos fiscales ya emitidos ni evidencias válidas generadas durante la convivencia. Los cortes respetan los congelamientos y la implantación por terminal/unidad de S7 (Caso, RT-10.05, p. 32).
 
-![Figura 5.8. Metodología de extracción, saneamiento, carga y conciliación histórica](../../../../Informe-2/D3/graficos/audit-figura-5.5-migracion.png)
+![Figura 5.8. Metodología de extracción, saneamiento, carga y conciliación histórica](../../figuras/05-datos/vertical/audit-figura-5.5-migracion.pdf)
 
 *Figura 5.8. Metodología de extracción, saneamiento, carga y conciliación histórica*
 
 Fuente: Elaboración propia.
-
-Fuente: elaboración de audIT.
 
 La Figura 5.8 muestra las puertas de acreditación y conciliación. Un registro en cuarentena no habilita despacho; el corte requiere acta y aceptación de los casos vinculados en T-17, con discrepancias resueltas o excluidas explícitamente del uso habilitante.
 
@@ -272,7 +264,7 @@ La Figura 5.8 muestra las puertas de acreditación y conciliación. Un registro 
 
 La meta contractual de asignación es ≤30 s extremo a extremo (Caso, RT-09.01, p. 32). Menos de 2 s es objetivo interno de un caso nominal, no medición ni garantía derivada de usar caché. La Figura 5.9 muestra que una proyección sólo habilita cuando su versión y actualidad se validan contra el estado autoritativo; si hay conflicto se reevalúa o rechaza dentro del plazo total.
 
-![Figura 5.9. Estado autoritativo, caché e índices especializados](../../../../Informe-2/D3/graficos/audit-figura-5.6-desempeno.png)
+![Figura 5.9. Estado autoritativo, caché e índices especializados](../../figuras/05-datos/vertical/audit-figura-5.6-desempeno.pdf)
 
 *Figura 5.9. Estado autoritativo, caché e índices especializados*
 

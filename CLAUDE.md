@@ -4,8 +4,8 @@ Trabajo del ramo ICI-5444 (PUCV). Caso 10, **Transporte de Carga**, licitación 
 TFEP-01/2026 para la empresa **Transportes Curimón S.A.**, postulando bajo la empresa
 consultora **audIT Soluciones Tecnológicas SpA**.
 
-El hito actual es la **Entrega del Informe 2**, fijada para el **05 de octubre de 2026**
-(Formulario T-20, FEP01 p.65).
+El hito actual es la **Entrega del Informe 2**, reprogramada para el **12 de octubre de 2026**
+por el profesor, según instrucción del usuario. La fecha original del Formulario T-20 era el 5 de octubre.
 
 El repositorio no es de software aplicativo: el código en `tools/` existe para consultar
 las bases y procesar planillas. El producto central son los informes técnicos y económicos.

@@ -5,11 +5,11 @@
   "archivos": [
     {
       "clave": "00",
-      "nombre": "INFORME2_AUDIT_SUBDOC00_20261005.pdf",
+      "nombre": "INFORME2_AUDIT_SUBDOC00_20261012.pdf",
       "folio_inicial": 1,
       "paginas": 9,
-      "aux": "salida/aux/informe2/00/INFORME2_AUDIT_SUBDOC00_20261005.aux",
-      "log": "salida/aux/informe2/00/INFORME2_AUDIT_SUBDOC00_20261005.log",
+      "aux": "salida/aux/informe2/00/INFORME2_AUDIT_SUBDOC00_20261012.aux",
+      "log": "salida/aux/informe2/00/INFORME2_AUDIT_SUBDOC00_20261012.log",
       "fuentes": [
         [
           "subdocumentos"
@@ -104,7 +104,7 @@
       "clave": "06",
       "nombre": "AUDIT-Subdocumento6.pdf",
       "folio_inicial": 1,
-      "paginas": 20,
+      "paginas": 21,
       "aux": "salida/aux/informe2/06/AUDIT-Subdocumento6.aux",
       "log": "salida/aux/informe2/06/AUDIT-Subdocumento6.log",
       "fuentes": [

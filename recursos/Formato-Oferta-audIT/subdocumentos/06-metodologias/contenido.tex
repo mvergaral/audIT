@@ -5,10 +5,11 @@ El CLIENTE recibe una línea base controlada, responsables y decisiones registra
 
 La infraestructura y el montaje requieren planificación predictiva por terminal y unidad; las interfaces, contratos y modelos de costo requieren validación iterativa con usuarios; los incidentes 24x7 requieren flujo con prioridad y escalamiento. Los frentes se sincronizan mediante los comités contractuales y las puertas de S9, sin alterar hitos obligatorios.
 
-\section{Metodología de gestión del proyecto}\label{sec:6-gestion}\label{sec:06-metodologia-de-gestion-del-proyecto}
+\section{Metodología de Gestión de Proyectos}\label{sec:6-gestion}\label{sec:06-metodologia-de-gestion-del-proyecto}
 
 La gestión del proyecto adopta las directrices de la guía PMBOK \parencite{pmbok7}, adaptada específicamente a las restricciones operativas y contractuales del transporte de carga por carretera y la logística interurbana (\art{4.3}{5}, \transv{RT-19.01}{33}). Este marco mantiene trazabilidad verificable sobre la línea base de alcance, tiempo y costo, articulando la relación contractual con Transportes Curimón S.A. mediante canales formales de rendición de cuentas.
 
+\FloatBarrier
 \subsection{Marco híbrido de gestión: PMBOK y enfoques ágiles}\label{sec:6-gestion-pmbok}\label{sec:06-marco-hibrido-de-gestion-pmbok-y-enfoques-agiles}
 
 La administración del contrato se fundamenta en un modelo de ciclo de vida híbrido, el cual combina procesos predictivos para los compromisos contractuales vinculantes con ciclos adaptativos para la construcción de los módulos de software. La justificación de este enfoque dual se resume en los siguientes ejes operativos:
@@ -23,12 +24,11 @@ La administración del contrato se fundamenta en un modelo de ciclo de vida híb
 
 La articulación temporal del marco de gestión y su integración con los hitos contractuales de la licitación se ilustra en la \figref{06-6-1-hitos}.
 
-\anexoGrafico{../../Informe-2/D3/graficos/6-1-hitos.png}{Gobernanza temporal del proyecto y articulación de fases, etapas y marchas blancas}{06-6-1-hitos}
-
-Fuente: elaboración de audIT.
+\figura[ancho=completo,alto=0.88,lugar=htbp]{figuras/06-metodologias/vertical/6-1-hitos.pdf}{Gobernanza temporal del proyecto y articulación de fases, etapas y marchas blancas}{06-6-1-hitos}
 
 La \figref{06-6-1-hitos} representa el solapamiento desde M13: la estabilización de E1 y la construcción de E2 usan equipos y capacidad segregados. M25–56 aparece como tramo comprimido, identificado expresamente; el detalle mensual y las fechas derivadas de SA-01 corresponden a S7.
 
+\FloatBarrier
 \subsection{Gobernanza de interesados y plan de comunicaciones}\label{sec:6-gestion-interesados}\label{sec:06-gobernanza-de-interesados-y-plan-de-comunicaciones}
 
 La gestión eficaz de los grupos de interés resulta determinante debido a la dispersión geográfica de las faenas y la multiplicidad de actores involucrados en la cadena logística. Se identifican y clasifican los siguientes actores clave:
@@ -45,6 +45,7 @@ Conforme a la exigencia técnica de las bases (\transv{RT-19.05}{33}), audIT imp
 
 El jefe de proyecto tiene dedicación exclusiva durante la implementación y centraliza línea base, cambios, riesgos y seguimiento, conforme a RT-19.01. S7/T-15 dimensiona esa dedicación y los frentes simultáneos; las actas identifican contraparte, responsable de acción y plazo de cierre.
 
+\FloatBarrier
 \subsection{Gestión de adquisiciones e integración contractual}\label{sec:6-gestion-adquisiciones}\label{sec:06-gestion-de-adquisiciones-e-integracion-contractual}
 
 La gestión de adquisiciones se estructura para mitigar riesgos de desabastecimiento en la cadena de suministros tecnológicos que pudieran afectar la Ruta Crítica:
@@ -55,6 +56,7 @@ La gestión de adquisiciones se estructura para mitigar riesgos de desabastecimi
 \item Conectividad Celular Multicarrier: Contratos de conectividad telemática con SIM card industriales en modalidad APN privada sobre redes de telecomunicaciones de cobertura nacional, con conmutación automática entre operadores para minimizar zonas de silencio.
 \end{itemize}
 
+\FloatBarrier
 \subsection{Comités de gobernanza, cadencias y mecanismos de decisión}\label{sec:6-gestion-ceremonias}\label{sec:06-comites-de-gobernanza-cadencias-y-mecanismos-de-decision}
 
 El control directivo y operacional del contrato se estructura en estricto apego al marco de gobernanza mandatado por las bases de licitación (\art{71}{37}). La interacción formal entre audIT y Transportes Curimón S.A. se canaliza a través de las cinco instancias que se detallan en la \tabref{06-tabla-6-1}.
@@ -85,10 +87,11 @@ Conforme se establece en la \tabref{06-tabla-6-2}, la ejecución de cualquier al
 
 \textbf{Compromiso C-01.} audIT formalizará las decisiones y acuerdos de cada sesión de comité en un plazo máximo de veinticuatro horas hábiles en el espacio colaborativo digital.  Métrica: Emisión de minuta formal y registro en espacio digital en menos de 24 horas hábiles tras cada sesión de comité. Se verifica en: Registro de auditoría del repositorio colaborativo. Fuente: compromiso adicional audIT sobre las instancias de \art{71}{37} y el espacio de RT-19.05; las bases no fijan ese plazo de minuta.
 
-\section{Metodología de desarrollo de software}\label{sec:6-desarrollo}\label{sec:06-metodologia-de-desarrollo-de-software}
+\section{Metodología de Desarrollo Software}\label{sec:6-desarrollo}\label{sec:06-metodologia-de-desarrollo-de-software}
 
 El desarrollo de la solución tecnológica se estructura bajo un ciclo de vida evolutivo basado en ingeniería de software guiada por el dominio (Domain-Driven Design, DDD) y prácticas DevSecOps. Se controla deuda técnica, dependencias y tamaño de liberaciones mediante criterios de aceptación verificables.
 
+\FloatBarrier
 \subsection{Ciclo de vida adaptado y evolución arquitectónica}\label{sec:6-desarrollo-ciclovida}\label{sec:06-ciclo-de-vida-adaptado-y-evolucion-arquitectonica}
 
 Para conciliar la alta disponibilidad exigida con la continua evolución logística de Transportes Curimón, el desarrollo de software se organiza en torno a los límites de contexto definidos en el Subdocumento 4.1. Este diseño modular desacopla los servicios transaccionales de telemetría de las interfaces de usuario y los algoritmos analíticos.
@@ -101,6 +104,7 @@ Para conciliar la alta disponibilidad exigida con la continua evolución logíst
 
 La \verSeccion{sec:13-innovacion-2} se incorpora como backlog de EDT 12.2, integrado con 4.1/4.2. Sus criterios y métricas se trazan por separado de los 42 requisitos de T-12; no se modifica el significado de un requisito obligatorio para presentarlo como innovación. El piloto y las intervenciones mantienen las ventanas de S7.
 
+\FloatBarrier
 \subsection{Ecosistema DevSecOps unificado en GitLab CI Enterprise}\label{sec:6-desarrollo-devsecops}\label{sec:06-ecosistema-devsecops-unificado-en-gitlab-ci-enterprise}
 
 GitLab CI Enterprise centraliza repositorio, incidencias, revisión, ejecución y registro de liberaciones. SonarQube, Trivy, Cosign, herramientas de prueba y Terraform se integran al mismo flujo; usar GitLab no elimina su necesidad ni acredita automáticamente SLSA nivel 3.
@@ -111,9 +115,7 @@ El control de cadena de suministro adopta SLSA v1.2 Build L3: plataforma alojada
 
 El pipeline de entrega continua se ejecuta automáticamente ante cada evento de integración en el repositorio, transitando obligatoriamente por seis fases de validación, ilustradas en la \figref{06-6-2-pipeline}.
 
-\anexoGrafico{../../Informe-2/D3/graficos/6-2-pipeline.png}{Fases y puertas de calidad del pipeline DevSecOps unificado}{06-6-2-pipeline}
-
-Fuente: elaboración de audIT.
+\figura[ancho=completo,alto=0.88,lugar=htbp]{figuras/06-metodologias/vertical/6-2-pipeline.pdf}{Fases y puertas de calidad del pipeline DevSecOps unificado}{06-6-2-pipeline}
 
 Como se representa en la \figref{06-6-2-pipeline}, ninguna versión de software puede alcanzar el ambiente de producción sin superar secuencialmente las seis etapas del pipeline. En la \tabref{06-tabla-6-3} se definen los umbrales bloqueantes parametrizados para comprobar los criterios de calidad y seguridad del artefacto.
 
@@ -129,6 +131,7 @@ Fase del Pipeline & Herramienta ejecutora & Métrica evaluada & Umbral bloqueant
 
 Los parámetros descritos en la \tabref{06-tabla-6-3} bloquean automáticamente la promoción cuando no se cumplen. La detección de un solo fallo en cualquiera de estos umbrales aborta inmediatamente el pipeline de despliegue, notificando al equipo responsable a través de los canales de ingeniería sin intervención manual.
 
+\FloatBarrier
 \subsection{Infraestructura como código y gestión de configuración}\label{sec:6-desarrollo-iac}\label{sec:06-infraestructura-como-codigo-y-gestion-de-configuracion}
 
 Toda la infraestructura cloud alojada en Microsoft Azure se gestiona bajo el paradigma de Infraestructura como Código (IaC) mediante scripts de Terraform versionados en Git (\transv{RT-03.03}{8}). Se implementa un modelo de entornos rigurosamente aislados:
@@ -139,6 +142,7 @@ Toda la infraestructura cloud alojada en Microsoft Azure se gestiona bajo el par
 \item Gestión Centralizada de Secretos: Ninguna credencial, clave privada o cadena de conexión se almacena en el código fuente. Se utiliza Azure Key Vault integrado con identidades administradas (Managed Identities) y rotación programada automática.
 \end{itemize}
 
+\FloatBarrier
 \subsection{Ceremonias técnicas, artefactos y criterios de salida}\label{sec:6-desarrollo-ceremonias}\label{sec:06-ceremonias-tecnicas-artefactos-y-criterios-de-salida}
 
 El trabajo colaborativo del equipo de desarrollo se organiza en torno a un flujo de trabajo de control de versiones GitFlow adaptado. Las ramas principales son:
@@ -162,6 +166,7 @@ La aplicación de los criterios de la \tabref{06-tabla-6-4} asegura que cada mó
 
 \textbf{Compromiso C-02.} audIT mantendrá un tiempo de despliegue continuo en ambiente de pruebas inferior a quince minutos para incrementos de software validados.  Métrica: Despliegue automatizado en staging en menos de 15 minutos tras aprobación de Merge Request. Se verifica en: Métricas de ejecución del pipeline en GitLab CI Enterprise. Fuente: objetivo adicional audIT, trazado a FEP02 RT-04.12 y RT-03.03; no es plazo impuesto por las bases.
 
+\FloatBarrier
 \subsection{Cadencia, entrega y reversión verificable}\label{sec:06-cadencia-entrega-y-reversion-verificable}
 
 Cada sprint de dos semanas incluye planificación con objetivo y criterios, reunión diaria de quince minutos, refinamiento de dependencias, revisión con representantes de torre/conductores/transportistas y retrospectiva. Se conservan backlog, diseño de interfaz, ADR, contratos, código, pruebas, SBOM y decisión de liberación. El Comité de Proyecto quincenal recibe avance por paquete, riesgos y desviaciones; la revisión de sprint es validación de producto y no reemplaza aceptación contractual.
@@ -170,18 +175,19 @@ DEV, QA, PREPROD, PROD y DR deben estar operativos en H3 (\transv{RT-04.01}{10})
 
 Se elige canario para servicios y actualización por unidad para equipos a bordo. Antes de cada pase se comprueban métricas, reversa, esquema compatible y preservación de evidencia. La reversión automática retorna a la versión previa compatible, mantiene eventos no confirmados y conserva documentos emitidos; después reconcilia diferencias. Las migraciones de esquema siguen expandir–migrar–contraer y son versionadas/reversibles (RT-04.10). Contraer columnas o transformar datos de forma irreversible se posterga hasta que la versión anterior deje de necesitarlas; no se promete que toda transformación se deshaga con un rollback de contenedor.
 
-La \tabref{06-tabla-6-5} declara metas de entrega propuestas para RT-04.12; se miden por contexto en operación y se ajusta capacidad si fallan, sin alterar mínimos de seguridad ni congelamientos de S7.
+La \tabref{06-tabla-6-5} declara metas de entrega para RT-04.12 y conserva el máximo contractual de cambios fallidos del Artículo 78.3; se miden por contexto en operación y se ajusta capacidad si fallan, sin alterar mínimos de seguridad ni congelamientos de S7.
 
 \begin{tabla}[ancho=completo, fuente=condensada]{Indicadores de entrega y restauración}{06-tabla-6-5}{L{36mm} X X}
 Indicador & Meta propuesta & Evidencia \\ \midrule
 Frecuencia de despliegue & Incremento disponible cada sprint; producción sólo en ventanas aprobadas sin congelamiento & Historial de liberaciones por servicio y calendario S7 \\
 Tiempo desde commit aceptado hasta producción & $\leq$5 días hábiles fuera de congelamientos, con pruebas/gates completos & Marcas de commit, aceptación y despliegue; exclusiones justificadas \\
-Cambios fallidos & $\leq$10 \% de liberaciones en ventana móvil de 90 días & Reversas/incidentes ligados a digest y total de liberaciones \\
+Cambios fallidos en producción & $\leq$5 \% de los despliegues del mes (FEP01, Art. 78.3, p. 40) & Despliegues con fallo, reversa o incidente atribuible / total de despliegues en producción del mes, ligados al digest \\
 Restauración tras cambio fallido & Objetivo $\leq$30 min para reversa de aplicación, sin sustituir SLA de incidente ni RTO de DR & Cronómetro de detección, reversa y verificación de integridad \\
 \end{tabla}
 
 La \tabref{06-tabla-6-5} distingue despliegue en pruebas (<15 min propuesto en C-02), lead time, reversa de una aplicación y recuperación completa de un sitio. Ninguno se infiere del éxito del pipeline. Los objetivos se verifican con S9; la aceptación E1/E2 mantiene sus marchas blancas y el régimen crítico 99,9 \% del Artículo 78.2.
 
+\FloatBarrier
 \subsection{Puerta de salida G13 y funciones de sprint 7}\label{sec:06-liberacion-g13}
 
 G13 libera la versión de entrenamiento probada y congelada en PREPROD, con datos ficticios y material por perfil. Para habilitar los diez días iniciales de familiarización de A13, el candidato debe incluir los cinco flujos de la \tabref{06-tabla-6-6-g13}. Esta definición complementa la línea base de capacitación del Subdocumento 7 y conserva la duración de A13 y su adelanto condicionado. Los casos trazados en el Formulario T-17 se ejecutan sobre el candidato de PREPROD antes de liberar G13.
@@ -201,6 +207,7 @@ El equipo de desarrollo conserva el identificador y digest del artefacto, config
 
 G13 habilita los diez días iniciales de familiarización; los flujos completos, las evaluaciones y el complemento del sprint 8 se mantienen en los treinta días restantes de A13.
 
+\FloatBarrier
 \subsection{Evidencia asociada a T-9 y T-10}\label{sec:06-evidencia-asociada-a-t-9-y-t-10}
 
 El \form{T-9}{61} remite a 6.1, interesados, comités, adquisiciones, cambios y calendario; el \form{T-10}{61} remite a 6.2, ciclo de vida, herramientas, ambientes, criterios, cadencias y reversión. Los anexos son índices de evidencia del capítulo, no inventarios que reemplacen el análisis.
