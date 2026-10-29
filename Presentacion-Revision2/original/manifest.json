@@ -1,0 +1,263 @@
+{
+  "slides": [
+    {
+      "sceneId": "s01",
+      "notes": "Presentar el alcance de la revisión: correcciones del Informe 1, riesgos de solución, proyecto e implantación, EDT, planificación e hitos. La exposición dura 15 minutos y deja 15 minutos para preguntas.",
+      "fragments": [
+        1
+      ]
+    },
+    {
+      "sceneId": "s02",
+      "notes": "Abrir desde la operación real. El camión se desplaza sobre un carril dedicado mientras se activan los tres controles bloqueantes inferiores: conductor, vehículo y documento deben aportar evidencia válida antes de autorizar la salida.",
+      "fragments": [
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "sceneId": "s03",
+      "notes": "Recorrer el viaje del dato desde la cabina hasta la torre de control. El terminal aporta validación y sincronización. La torre coordina la operación y se integra mediante bus con el ERP contable (emisor tributario), posicionamiento y transportistas.",
+      "fragments": [
+        21,
+        23,
+        25
+      ]
+    },
+    {
+      "sceneId": "s04",
+      "notes": "Explicar las tres capas técnicas del Informe 2: en el borde (S4.2/T-11), 374 gateways, 61 interfaces CANclick no invasivas y buffer local de 8 GB; en la nube (S4.1), ingesta asíncrona y continuidad en San Bernardo advirtiendo su condición de contingencia regional; en datos (S5), la entidad EvidenciaJornada y la migración de 96.000 viajes/año.",
+      "fragments": [
+        31,
+        33,
+        35
+      ]
+    },
+    {
+      "sceneId": "s05",
+      "notes": "Unificar las tres correcciones estructurales del Informe 1: las observaciones 37 y 43 quedan resueltas en S3 con el esquema conceptual y el calendario de retiro del legado 2013. Para la observación 48, mostrar la cadena completa RNF-011 → 11.2 → CP-INT-05 → CP-SYS-05 advirtiendo que las pruebas están diseñadas, no ejecutadas.",
+      "fragments": [
+        41,
+        43,
+        45
+      ]
+    },
+    {
+      "sceneId": "s06",
+      "notes": "Cubrir los capítulos S6 y S9 del Informe 2: ciclo iterativo con control de cambios formal y umbral de <=5% de cambios fallidos en producción; compuertas de calidad para hardware (SAE J1455, IP67, pérdida CAN <0,1%) y 120 casos de prueba diseñados en T-17 bajo ISO 29119.",
+      "fragments": [
+        51,
+        53,
+        55
+      ]
+    },
+    {
+      "sceneId": "s07",
+      "notes": "Presentar los tres ámbitos de riesgo y la escala ordinal P×I a la izquierda. A la derecha, mostrar cómo los controles reducen la exposición estimada de R-28 (12→8), R-16 (8→4) y R-11 (12→8), recalcando que no son porcentajes y que el impacto sigue exigiendo contingencia.",
+      "fragments": [
+        61,
+        63,
+        65
+      ]
+    },
+    {
+      "sceneId": "s08",
+      "notes": "Explicar que se exige el retorno del documento íntegro a la cabina dentro de 90 segundos, separado en un medidor dedicado. La pre-emisión aplica cuando la carga se conoce. El ensayo extremo a extremo sigue pendiente de acreditación en terreno.",
+      "fragments": [
+        71,
+        73,
+        75,
+        77,
+        79
+      ]
+    },
+    {
+      "sceneId": "s09",
+      "notes": "Presentar el AMFE promovido al recorrido principal: severidad, ocurrencia y detección para equipo a bordo (NPR 36), módem satelital (NPR 32) y respaldo eléctrico (NPR 18). Todos quedan bajo el umbral 50 gracias a controles de detección anticipada.",
+      "fragments": [
+        81,
+        83,
+        85
+      ]
+    },
+    {
+      "sceneId": "s10",
+      "notes": "Mostrar cómo las tres corrientes operativas (adhesión de al menos 60 de 148 transportistas en M9, montaje mensual por flota y marcha blanca con reversión disponible) convergen directamente en el nodo de producción con aceptación formal.",
+      "fragments": [
+        91,
+        93,
+        95,
+        97
+      ]
+    },
+    {
+      "sceneId": "s11",
+      "notes": "Presentar la descomposición de 54 paquetes en 13 áreas. Destacar el área 11 (Implantación) que conectaremos en la lámina siguiente y el área 12 (S13/T-19) con las 5 innovaciones propuestas y su piloto entre M13 y M15.",
+      "fragments": [
+        101,
+        103,
+        105
+      ]
+    },
+    {
+      "sceneId": "s12",
+      "notes": "Conectar la ficha del paquete 11.1 con su control en el cronograma: G13 exige versión probada en PREPROD, datos ficticios y material antes de iniciar los 40 días hábiles de A13 (10 de familiarización y 30 prácticos). Sin G13 disponible, A13 no comienza.",
+      "fragments": [
+        111,
+        113,
+        115
+      ]
+    },
+    {
+      "sceneId": "s13",
+      "notes": "Explicar el cronograma en escala proporcional M1–M24 con extensión a M56: E1 entra a marcha blanca en M13–M15 y producción en M16; E2 hace marcha blanca en M19–M20 y producción en M21. Destacar la partición en Células Alfa y Beta durante M13–M15 para evitar sobreasignación.",
+      "fragments": [
+        121,
+        123,
+        125
+      ]
+    },
+    {
+      "sceneId": "s14",
+      "notes": "Explicar la cadena de compuertas e hitos: G13 habilita capacitación, H6 y H11 abren las marchas blancas, y H7/H12 formalizan la aceptación. Distinguir claramente entre fecha contractual de hito, holgura de actividad y las reservas explícitas A14 (14 días) y A23 (10 días).",
+      "fragments": [
+        131,
+        133,
+        135
+      ]
+    },
+    {
+      "sceneId": "s15",
+      "notes": "Cerrar sintetizando los tres pilares verificables de la propuesta: arquitectura y correcciones trazables, riesgos y calidad con umbrales explícitos, y ejecución controlada por compuertas y reservas. Queda abierta la sesión de preguntas con apoyo del respaldo técnico.",
+      "fragments": [
+        141,
+        143,
+        145
+      ]
+    },
+    {
+      "sceneId": "s16",
+      "notes": "Abrir los 15 minutos de preguntas. Usar el respaldo técnico para profundizar en riesgos, trazabilidad, cronograma y criterios de aceptación.",
+      "fragments": [
+        151
+      ]
+    }
+  ],
+  "slideSequences": [
+    {
+      "id": "respaldo",
+      "label": "Respaldo técnico",
+      "slides": [
+        {
+          "sceneId": "s17",
+          "notes": "Usar ante preguntas sobre el alcance de las afirmaciones: distinguimos con rigor entre diseño documental verificado y resultados de ejecución en terreno.",
+          "fragments": [
+            161,
+            163,
+            165
+          ]
+        },
+        {
+          "sceneId": "s18",
+          "notes": "Respaldo directo para preguntas de gobernanza de riesgos: muestra quién responde, qué umbral numérico dispara la alerta y qué contingencia se activa en cada ámbito.",
+          "fragments": [
+            171,
+            173,
+            175
+          ]
+        },
+        {
+          "sceneId": "s19",
+          "notes": "Usar ante consultas sobre la Sección 13 (Innovaciones): detalla los 5 paquetes del área 12 de la EDT, diferenciando la madurez comercial del componente respecto del TRL de integración en Curimón.",
+          "fragments": [
+            181,
+            183,
+            185
+          ]
+        },
+        {
+          "sceneId": "s20",
+          "notes": "Explicar la estructura lógica del árbol de fallas de S8 §8.2: el evento tope ocurre por una compuerta OR superior alimentada por cuatro ramas, donde cada rama requiere la conjunción (compuerta AND) de una falla técnica y una falla de control.",
+          "fragments": [
+            191,
+            193,
+            195
+          ]
+        },
+        {
+          "sceneId": "s21",
+          "notes": "Detallar el protocolo de reversión de T-18 en cuatro pasos con sus ventanas operativas y responsables, advirtiendo que no deben sumarse como un RTO único.",
+          "fragments": [
+            201,
+            203,
+            205
+          ]
+        },
+        {
+          "sceneId": "s22",
+          "notes": "Los criterios de aceptación completos permanecen en T-14 y en el diccionario CSV. Esta vista paginada permite localizar cualquier paquete durante las preguntas de la comisión.",
+          "fragments": [
+            211
+          ]
+        },
+        {
+          "sceneId": "s23",
+          "notes": "Los criterios de aceptación completos permanecen en T-14 y en el diccionario CSV. Esta vista paginada permite localizar cualquier paquete durante las preguntas de la comisión.",
+          "fragments": [
+            221
+          ]
+        },
+        {
+          "sceneId": "s24",
+          "notes": "Los criterios de aceptación completos permanecen en T-14 y en el diccionario CSV. Esta vista paginada permite localizar cualquier paquete durante las preguntas de la comisión.",
+          "fragments": [
+            231
+          ]
+        },
+        {
+          "sceneId": "s25",
+          "notes": "Los criterios de aceptación completos permanecen en T-14 y en el diccionario CSV. Esta vista paginada permite localizar cualquier paquete durante las preguntas de la comisión.",
+          "fragments": [
+            241
+          ]
+        },
+        {
+          "sceneId": "s26",
+          "notes": "Los criterios de aceptación completos permanecen en T-14 y en el diccionario CSV. Esta vista paginada permite localizar cualquier paquete durante las preguntas de la comisión.",
+          "fragments": [
+            251
+          ]
+        },
+        {
+          "sceneId": "s27",
+          "notes": "Los criterios de aceptación completos permanecen en T-14 y en el diccionario CSV. Esta vista paginada permite localizar cualquier paquete durante las preguntas de la comisión.",
+          "fragments": [
+            261
+          ]
+        },
+        {
+          "sceneId": "s28",
+          "notes": "Los criterios de aceptación completos permanecen en T-14 y en el diccionario CSV. Esta vista paginada permite localizar cualquier paquete durante las preguntas de la comisión.",
+          "fragments": [
+            271
+          ]
+        },
+        {
+          "sceneId": "s29",
+          "notes": "Los criterios de aceptación completos permanecen en T-14 y en el diccionario CSV. Esta vista paginada permite localizar cualquier paquete durante las preguntas de la comisión.",
+          "fragments": [
+            281
+          ]
+        },
+        {
+          "sceneId": "s30",
+          "notes": "Los criterios de aceptación completos permanecen en T-14 y en el diccionario CSV. Esta vista paginada permite localizar cualquier paquete durante las preguntas de la comisión.",
+          "fragments": [
+            291
+          ]
+        }
+      ]
+    }
+  ]
+}
