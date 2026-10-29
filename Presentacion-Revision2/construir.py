@@ -1023,21 +1023,21 @@ v += group(
     1,
 )
 CTX = [
-    ('Planificación y tráfico', 'qué mover y hacia dónde'),
-    ('Flota y activos', '¿el equipo puede salir hoy?'),
-    ('Personas y cumplimiento', '¿la persona puede conducir hoy?'),
-    ('Telemetría y geocercas', 'dónde está y cuándo llegó'),
-    ('Operación de fletes', 'el viaje que realmente ocurrió'),
-    ('Liquidación y costeo', 'cuánto costó y a quién se paga'),
+    ('5.1', 'Personas y cumplimiento', '¿la persona puede conducir hoy?'),
+    ('5.2', 'Flota y activos', '¿el equipo puede salir hoy?'),
+    ('5.3', 'Planificación y tráfico', 'qué mover y hacia dónde'),
+    ('5.4', 'Telemetría y geocercas', 'dónde está y cuándo llegó'),
+    ('5.5', 'Operación de fletes', 'el viaje que realmente ocurrió'),
+    ('5.6', 'Liquidación y costeo', 'cuánto costó y a quién se paga'),
 ]
-CTX_IC = ['tower', 'truck', 'people', 'satellite', 'doc', 'db']
+CTX_IC = ['people', 'truck', 'tower', 'satellite', 'doc', 'db']
 ctx = text(1300, 22, 'SEIS CONTEXTOS · QUÉ DECIDE CADA UNO', 15, NUBE, 700, extra='letter-spacing="1.5"')
-for k, (name, q) in enumerate(CTX):
+for k, (codigo_edt, name, q) in enumerate(CTX):
     y = 44 + k * 84
     ctx += item(
         f'<rect x="1300" y="{y}" width="428" height="74" rx="10" fill="#ffffff" stroke="{NUBE}" stroke-width="1.5"/>'
         + icon(CTX_IC[k], 1312, y + 17, 0.25, NUBE)
-        + text(1364, y + 32, f'5.{k + 1}  {name}', 19, NUBE, 700)
+        + text(1364, y + 32, f'{codigo_edt}  {name}', 19, NUBE, 700)
         + text(1364, y + 58, q, 17, WHITE)
     )
 v += group(ctx + line(1120, 3 * LH2 + 40, 1300, 300, NUBE, 2, dash='5 4'), 2)
