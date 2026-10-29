@@ -23,6 +23,17 @@
   },
   {
     "id": "s03",
+    "title": "Cambios principales del Informe 2",
+    "eyebrow": "CORRECCIONES DEL INFORME 1 / ART. 46 · T-22",
+    "source": "Matriz Art. 46 · S3 · S4 · S13 · T-11 / T-12 / T-17 / T-19",
+    "notes": "Síntesis de 40 segundos. [Vista inicial: requisitos y arquitectura.] El Informe 2 incorpora el catálogo T-12 de 42 requerimientos trazados a componentes, paquetes y pruebas diseñadas; S3 §3.2.8 y T-17 responden a las observaciones 01, 38, 45 y 48. El esquema conceptual de S3 §3.3 y las capas, interfaces y arquitectura física de S4 §§4.1.3 y 4.2 responden a 37, 53, 64 y 65, con el catálogo T-11. [Revelar legado y capacidad.] S3 §3.2.4 resuelve la observación 43 con sustitución por funciones en M16 y M21, consulta hasta M24 y conservación del ERP contable como único emisor tributario. S4 §§4.2.2 y 4.2.8 deriva memoria y reconexión para 73 y 74; T-17 CP-PERF-02 define el ensayo del proceso completo. [Revelar innovaciones.] Para 88–91, S13 §§13.2–13.3 reformula la programación por oportunidad de patio y el semirremolque conectado; T-19 entrega cinco fichas con los elementos exigidos. Se priorizan cambios que definen el alcance, la viabilidad y la verificación de la propuesta. Las correcciones editoriales permanecen en la matriz completa y las novedades de EDT y riesgos se explican en sus bloques. La selección no acredita cierre integral de las 100 observaciones ni ejecución de las pruebas. El respaldo de correcciones amplía 37, 43 y 48.",
+    "seconds": 40,
+    "steps": 3,
+    "backup": false,
+    "kind": ""
+  },
+  {
+    "id": "s04",
     "title": "Qué construimos",
     "eyebrow": "ACTO 1 DE 3",
     "source": "S4 y S5",
@@ -33,29 +44,29 @@
     "kind": "section"
   },
   {
-    "id": "s04",
+    "id": "s05",
     "title": "La solución es híbrida: nube, sitio y flota.",
     "eyebrow": "ARQUITECTURA · CONTEXTO Y TRES PLANOS / S4 §4.2 · §4.2.3 · T-11 · FEP01 Art. 16",
     "source": "S4 §4.2, Tabla de planos y §4.2.3: 39 componentes (24 + 1 + 14) · T-11 · FEP01 Art. 16.1 a 16.4 · Caso RT-06.01 · íconos: Azure Architecture Icons y Simple Icons",
     "notes": "Abrir con el mapa completo. [Nube.] El núcleo vive en Azure Chile Central, en tres zonas: Front Door, API Management, los seis contextos en AKS, IoT Hub y Event Hubs para la ingesta, PostgreSQL con TimescaleDB, Managed Redis y Storage; Brazil South espera como recuperación. [Sitio.] San Bernardo no aloja el núcleo: mantiene viva la torre si cae el enlace y aloja la capa anticorrupción junto al sistema contable, que sigue siendo el único emisor. Cada terminal tiene dos nodos en activo y espera y un router 5G. [Flota.] 182 camiones llevan el equipo audIT; los 192 de terceros no se intervienen y llegan por la plataforma de su proveedor. [Componentes.] Son 39 componentes: 24 en la región primaria, uno en la secundaria y 14 fuera de la nube. Por eso es híbrida, como exige el Artículo 16.",
-    "seconds": 45,
-    "steps": 4,
-    "backup": false,
-    "kind": ""
-  },
-  {
-    "id": "s05",
-    "title": "Ocho capas, cada una con su producto.",
-    "eyebrow": "ARQUITECTURA LÓGICA / S4 §4.1.1 · §4.1.3 · §4.1.4 · FEP02 numeral 2.1",
-    "source": "S4 §4.1.1: productos y soporte · §4.1.3: las ocho capas (FEP02 2.1, RT-02.01) · §4.1.4: seis contextos delimitados · ISO/IEC/IEEE 42010",
-    "notes": "Recorrer la pila de arriba abajo, nombrando el producto, no el concepto. [Capas.] Portales en Next.js y React, app Flutter; Front Door con cortafuegos como único punto público; API Management con certificado mutuo; los servicios de negocio en AKS en tres zonas sobre .NET 10 LTS; IoT Hub y Event Hubs con protocolo Kafka para la ingesta, escrita en Go; y una capa de datos políglota. [Transversales.] Seguridad, con Entra ID y Key Vault, y observabilidad, con Azure Monitor, no son un piso más: atraviesan todos. [Contextos.] El negocio son seis contextos; cada uno decide una sola cosa y tiene sus propios datos: Planificación pregunta a Personas y a Flota, no lee sus bases. Son los mismos nombres de los paquetes 5.1 a 5.6 de la EDT.",
-    "seconds": 50,
+    "seconds": 40,
     "steps": 4,
     "backup": false,
     "kind": ""
   },
   {
     "id": "s06",
+    "title": "Ocho capas, cada una con su producto.",
+    "eyebrow": "ARQUITECTURA LÓGICA / S4 §4.1.1 · §4.1.3 · §4.1.4 · FEP02 numeral 2.1",
+    "source": "S4 §4.1.1: productos y soporte · §4.1.3: las ocho capas (FEP02 2.1, RT-02.01) · §4.1.4: seis contextos delimitados · ISO/IEC/IEEE 42010",
+    "notes": "Recorrer la pila de arriba abajo, nombrando el producto, no el concepto. [Capas.] Portales en Next.js y React, app Flutter; Front Door con cortafuegos como único punto público; API Management con certificado mutuo; los servicios de negocio en AKS en tres zonas sobre .NET 10 LTS; IoT Hub y Event Hubs con protocolo Kafka para la ingesta, escrita en Go; y una capa de datos políglota. [Transversales.] Seguridad, con Entra ID y Key Vault, y observabilidad, con Azure Monitor, no son un piso más: atraviesan todos. [Contextos.] El negocio son seis contextos; cada uno decide una sola cosa y tiene sus propios datos: Planificación pregunta a Personas y a Flota, no lee sus bases. Son los mismos nombres de los paquetes 5.1 a 5.6 de la EDT.",
+    "seconds": 45,
+    "steps": 4,
+    "backup": false,
+    "kind": ""
+  },
+  {
+    "id": "s07",
     "title": "Un viaje se autoriza o se bloquea en 30 segundos.",
     "eyebrow": "ARQUITECTURA LÓGICA · VERIFICACIÓN BLOQUEANTE / S4 §4.1.9 · Caso RT-09.01",
     "source": "S4 §4.1.9 y Tabla 4.3: presupuesto de diseño de la asignación · Caso RT-09.01, p. 32 · S3: RN-01 a RN-04",
@@ -66,7 +77,7 @@
     "kind": ""
   },
   {
-    "id": "s07",
+    "id": "s08",
     "title": "Cada nodo declara su hardware y su enlace.",
     "eyebrow": "ARQUITECTURA FÍSICA / S4 §4.2.1 · §4.2.4 · §4.2.6 · §4.2.7 · T-11",
     "source": "S4 §4.2.1: implementos que compra el mandante · §4.2.4: catálogo Azure · §4.2.6: ambientes y respaldos · §4.2.7: enlaces y conmutación · T-11",
@@ -77,7 +88,7 @@
     "kind": ""
   },
   {
-    "id": "s08",
+    "id": "s09",
     "title": "El camión es un nodo que opera sin red.",
     "eyebrow": "ARQUITECTURA FÍSICA · EQUIPO A BORDO / S4 §4.2.2 · T-11 · Caso RT-06.01",
     "source": "S4 §4.2.2: equipo a bordo y Tabla de capacidad derivada (2.374 MB) · Caso RT-03.10, RT-06.01, RT-10.05, RT-12.11 · restricciones 5 y 6",
@@ -88,18 +99,18 @@
     "kind": ""
   },
   {
-    "id": "s09",
+    "id": "s10",
     "title": "Cada dato vive en el motor que su uso exige.",
     "eyebrow": "ARQUITECTURA DE DATOS / S5 §5.2 · §5.3 · S4 §4.1.20 · Caso RT-05.10",
     "source": "S5 Tabla 5.3: persistencia y conducta ante partición · Tabla 5.5: retención · Tabla 5.6: migración · S4 §4.1.20: volumen declarado",
     "notes": "El dato no está en una sola base. [Dominios.] Asignación y vigencias van en PostgreSQL con transacciones: si no hay estado autoritativo, no se confirma una reserva. A bordo, SQLite sigue capturando y sincroniza después. La telemetría entra por Event Hubs a TimescaleDB. La caché, en Managed Redis, nunca habilita con una copia vieja. Documentos y auditoría quedan inmutables en Blob Storage, y la analítica se separa del despacho en Delta Lake. [Volumen.] 96 mil viajes y cerca de 120 millones de posiciones al año, con la retención que fija el Caso. [Migración.] Cuatro fases; las 6.000 vigencias se acreditan una a una con hash, y nada en cuarentena habilita un despacho.",
-    "seconds": 45,
+    "seconds": 40,
     "steps": 3,
     "backup": false,
     "kind": ""
   },
   {
-    "id": "s10",
+    "id": "s11",
     "title": "Si se corta el enlace, la operación sigue.",
     "eyebrow": "ARQUITECTURA · OPERACIÓN DESCONECTADA / S4 §4.1.26 · §4.2.3 · §4.3",
     "source": "S4 §4.1.26: operación desconectada y reconexión · §4.2.3: funciones on-premise · §4.3: plazos sin enlace · FEP01 Art. 16.4 · Caso RT-03.10 y RT-03.13",
@@ -110,7 +121,7 @@
     "kind": ""
   },
   {
-    "id": "s11",
+    "id": "s12",
     "title": "Cómo lo ejecutamos",
     "eyebrow": "ACTO 2 DE 3",
     "source": "S7 · T-14 · T-15",
@@ -121,7 +132,7 @@
     "kind": "section"
   },
   {
-    "id": "s12",
+    "id": "s13",
     "title": "La EDT cubre todo el alcance en 13 elementos.",
     "eyebrow": "EDT · NIVELES 0 Y 1 / S7 §7.1 · T-14",
     "source": "S7 §7.1, Figura 7.1 y Tabla 7.2 · T-14: diccionario de 54 paquetes · PMI (2019): regla del 100 %",
@@ -132,7 +143,7 @@
     "kind": ""
   },
   {
-    "id": "s13",
+    "id": "s14",
     "title": "Cada elemento baja a paquetes que se pueden aceptar.",
     "eyebrow": "EDT · NIVEL 2: 54 PAQUETES / S7 §7.1 · T-14 · T-19",
     "source": "S7 Figura 7.1 · T-14: 54 paquetes · S4: seis contextos · T-19: cinco innovaciones · Caso §17.5, p. 40",
@@ -143,7 +154,7 @@
     "kind": ""
   },
   {
-    "id": "s14",
+    "id": "s15",
     "title": "El diccionario hace verificable cada paquete.",
     "eyebrow": "EDT · DICCIONARIO Y REGLA DEL 100 % / S7 §7.1 · T-12 · T-14 · T-17",
     "source": "T-14: paquete 11.2 · S7 Tabla 7.1: cobertura contra el alcance · T-12: RNF-011 · T-17: CP-INT-05 y CP-SYS-05",
@@ -154,7 +165,7 @@
     "kind": ""
   },
   {
-    "id": "s15",
+    "id": "s16",
     "title": "La red de 25 actividades define la ruta crítica.",
     "eyebrow": "CARTA GANTT Y DEPENDENCIAS / S7 §7.3.1 · T-15 · FEP01 E-25",
     "source": "T-15: malla de precedencias, ES/EF/LS/LF y holguras (PERT, días hábiles) · S7 §7.3.1, Tabla 7.7: hitos frente a la red",
@@ -165,7 +176,7 @@
     "kind": ""
   },
   {
-    "id": "s16",
+    "id": "s17",
     "title": "¿Y si la construcción de la Etapa 1 se atrasa 10 días?",
     "eyebrow": "CARTA GANTT · QUÉ PASA SI / T-15 · S7 §7.3.1 · S8 Monte Carlo · T-16",
     "source": "Cálculo sobre la red del T-15 (A09 +10 días hábiles) · S7 §7.3.1: reserva A14 · S8: Monte Carlo de 10.000 corridas · T-16: R-16 y R-17",
@@ -176,7 +187,7 @@
     "kind": ""
   },
   {
-    "id": "s17",
+    "id": "s18",
     "title": "El paquete 11.1 se controla con la compuerta G13.",
     "eyebrow": "DEL ALCANCE AL CONTROL / T-14: 11.1 · T-15: G13/A13 · T-16: R-16",
     "source": "T-14: paquete 11.1 · T-15: compuerta G13, actividad A13 (40 d) y reserva A14 · T-16: riesgo R-16",
@@ -187,7 +198,7 @@
     "kind": ""
   },
   {
-    "id": "s18",
+    "id": "s19",
     "title": "La transición se ejecuta en dos etapas niveladas.",
     "eyebrow": "CRONOGRAMA Y CAPACIDAD / S3 §3.2.4 · S7 §§7.2–7.3 · T-15 · T-18",
     "source": "S3 §3.2.4 · S7 §§7.2–7.3 · T-15: nivelación Células Alfa/Beta · T-18: etapas E1/E2 y legado hasta M24",
@@ -198,7 +209,7 @@
     "kind": ""
   },
   {
-    "id": "s19",
+    "id": "s20",
     "title": "Cómo lo protegemos",
     "eyebrow": "ACTO 3 DE 3",
     "source": "S8 · T-16",
@@ -209,7 +220,7 @@
     "kind": "section"
   },
   {
-    "id": "s20",
+    "id": "s21",
     "title": "Veintiocho riesgos evaluados; ninguno queda alto.",
     "eyebrow": "RIESGOS · MAPA P×I / S8 §8.1–8.2 · T-16",
     "source": "T-16: 28 riesgos con probabilidad, impacto, exposición inicial y residual · S8 §8.1: escalas y umbrales",
@@ -220,7 +231,7 @@
     "kind": ""
   },
   {
-    "id": "s21",
+    "id": "s22",
     "title": "Siete riesgos altos, cada uno con su disparador.",
     "eyebrow": "RIESGOS · EXPOSICIÓN ALTA / T-16 · S8 §8.3",
     "source": "T-16: riesgos con exposición ≥ 12, respuesta, disparador, plazo y exposición residual · S8 §8.3: plan de acción",
@@ -231,7 +242,7 @@
     "kind": ""
   },
   {
-    "id": "s22",
+    "id": "s23",
     "title": "R-28: cuatro causas, cuatro barreras antes del evento.",
     "eyebrow": "RIESGOS · CORBATÍN DE R-28 / S4 §4.1.13 · S8 · T-16",
     "source": "S4 §4.1.13: emisión del documento sin cobertura · T-16: R-28 y análisis de modos de falla · Caso RT-09.01 (90 s) · restricción 8",
@@ -242,7 +253,7 @@
     "kind": ""
   },
   {
-    "id": "s23",
+    "id": "s24",
     "title": "Las reservas y holguras absorben el riesgo del plan.",
     "eyebrow": "RIESGOS DEL CRONOGRAMA / S7 §7.3.1 · TABLAS 7.6 Y 7.7 · T-15",
     "source": "S7 §7.3.1: reservas A14 y A23 (PERT, 2σ), probabilidad conjunta 95,6 % y holguras de A04, A06, A11, A15 y A18 · Caso §13.2, p. 27",
@@ -253,18 +264,18 @@
     "kind": ""
   },
   {
-    "id": "s24",
+    "id": "s25",
     "title": "Tres compromisos que se pueden verificar.",
     "eyebrow": "CIERRE / UNA PROPUESTA EN TRES ACTOS",
     "source": "Síntesis del Informe 2: S4, S5, S7, S8 y formularios T-11 a T-19",
     "notes": "Cerrar con tres frases, una por acto, sin repetir las láminas. Qué construimos: una arquitectura híbrida que sigue operando sin enlace. Cómo lo ejecutamos: 54 paquetes y una ruta crítica protegida por reservas. Cómo lo protegemos: 28 riesgos con disparador, ninguno alto después de mitigar. Mencionar que la calidad tiene 120 casos diseñados y abrir las preguntas.",
-    "seconds": 30,
+    "seconds": 20,
     "steps": 3,
     "backup": false,
     "kind": ""
   },
   {
-    "id": "s25",
+    "id": "s26",
     "title": "Preguntas y discusión",
     "eyebrow": "CIERRE / REVISIÓN 2",
     "source": "Transportes Curimón · TFEP-01/2026 · audIT Soluciones Tecnológicas SpA",
@@ -275,7 +286,7 @@
     "kind": "closing"
   },
   {
-    "id": "s26",
+    "id": "s27",
     "title": "Registro de riesgos · R-01 a R-14.",
     "eyebrow": "RESPALDO / T-16 · REGISTRO COMPLETO",
     "source": "T-16: identificación, evaluación P×I, respuesta, disparador y exposición residual",
@@ -286,7 +297,7 @@
     "kind": ""
   },
   {
-    "id": "s27",
+    "id": "s28",
     "title": "Registro de riesgos · R-15 a R-28.",
     "eyebrow": "RESPALDO / T-16 · REGISTRO COMPLETO",
     "source": "T-16: identificación, evaluación P×I, respuesta, disparador y exposición residual",
@@ -297,7 +308,7 @@
     "kind": ""
   },
   {
-    "id": "s28",
+    "id": "s29",
     "title": "El AMFE completo: diez modos bajo NPR 50.",
     "eyebrow": "RESPALDO / T-16 · ANÁLISIS DE MODOS DE FALLA",
     "source": "T-16: análisis de modos de falla y efectos (S × O × D = NPR, umbral 50)",
@@ -308,7 +319,7 @@
     "kind": ""
   },
   {
-    "id": "s29",
+    "id": "s30",
     "title": "El árbol de fallas modela compuertas OR y AND.",
     "eyebrow": "RESPALDO 04 / ÁRBOL DE FALLAS DE VERIFICACIÓN BLOQUEANTE · S8 §8.2",
     "source": "S8 §8.2: árbol de fallas con compuerta OR superior y cuatro compuertas AND inferiores",
@@ -319,7 +330,7 @@
     "kind": ""
   },
   {
-    "id": "s30",
+    "id": "s31",
     "title": "Sin documento conforme, el viaje no puede salir.",
     "eyebrow": "RIESGOS DE LA SOLUCIÓN / R-28 · S8 §8.2 · CASO RT-09.01",
     "source": "T-16: R-28 · S8 §8.2 · Caso RT-09.01: presupuesto de retorno documental en 90 s",
@@ -330,7 +341,7 @@
     "kind": ""
   },
   {
-    "id": "s31",
+    "id": "s32",
     "title": "La implantación converge en producción aceptada.",
     "eyebrow": "RIESGOS DE IMPLANTACIÓN / R-11 · R-19 · R-18 · T-16 · T-18",
     "source": "T-16: R-11 (adhesión), R-19 (montaje), R-18 (marcha blanca) · T-18: criterios de salida y reversión",
@@ -341,7 +352,7 @@
     "kind": ""
   },
   {
-    "id": "s32",
+    "id": "s33",
     "title": "Los hitos avanzan por evidencia y protegen fechas.",
     "eyebrow": "PLANIFICACIÓN / COMPUERTAS, HITOS Y RESERVAS · S7 §7.3.1 · T-15 · T-18",
     "source": "S7 §7.3.1 · T-15: G13 y reservas A14 (14 d) / A23 (10 d) · T-18: hitos H6, H7, H11 y H12",
@@ -352,7 +363,7 @@
     "kind": ""
   },
   {
-    "id": "s33",
+    "id": "s34",
     "title": "La reversión opera con tiempos y roles definidos.",
     "eyebrow": "RESPALDO 05 / PROCEDIMIENTO DE REVERSIÓN · FORMULARIO T-18",
     "source": "T-18: procedimiento de reversión en 4 fases (15 min, 30 min, 15 min + 20 min/camión, 24 h / 5 d)",
@@ -363,7 +374,7 @@
     "kind": ""
   },
   {
-    "id": "s34",
+    "id": "s35",
     "title": "La calidad se controla desde el código hasta terreno.",
     "eyebrow": "METODOLOGÍA Y CALIDAD / S6 · S9 · T-9 · T-10 · T-13 · T-17",
     "source": "S6 / T-9 / T-10: metodología y control de cambios · S9 / T-13 / T-17: aseguramiento de calidad y 120 casos de prueba",
@@ -374,7 +385,7 @@
     "kind": ""
   },
   {
-    "id": "s35",
+    "id": "s36",
     "title": "Las correcciones vinculan decisiones y pruebas.",
     "eyebrow": "CORRECCIONES / OBSERVACIONES 37, 43 Y 48 · S3 · T-12 · T-14 · T-17",
     "source": "S3 §§3.2.4 y 3.3 · T-12: RNF-011 · T-14: 11.2 · T-17: CP-INT-05 y CP-SYS-05",
@@ -385,7 +396,7 @@
     "kind": ""
   },
   {
-    "id": "s36",
+    "id": "s37",
     "title": "Las cinco innovaciones distinguen TRL y condiciones.",
     "eyebrow": "RESPALDO 03 / DETALLE DE INNOVACIONES S13 · FORMULARIO T-19",
     "source": "S13 · T-19: fichas de innovación 12.1 a 12.5, niveles TRL y supuestos de validación",
@@ -396,7 +407,7 @@
     "kind": ""
   },
   {
-    "id": "s37",
+    "id": "s38",
     "title": "La evidencia mantiene límites metodológicos explícitos.",
     "eyebrow": "RESPALDO 01 / ALCANCE Y FRONTERAS DE VERIFICACIÓN",
     "source": "S3 · S7 · S8 · T-12 / T-15 / T-17 / T-18",
@@ -407,7 +418,7 @@
     "kind": ""
   },
   {
-    "id": "s38",
+    "id": "s39",
     "title": "Diccionario EDT · paquetes 1.1 a 2.3.",
     "eyebrow": "RESPALDO 06 / DICCIONARIO EDT · T-14",
     "source": "T-14: diccionario de la EDT, entregable, criterio, responsable, red y meses por paquete",
@@ -418,7 +429,7 @@
     "kind": ""
   },
   {
-    "id": "s39",
+    "id": "s40",
     "title": "Diccionario EDT · paquetes 2.4 a 3.4.",
     "eyebrow": "RESPALDO 07 / DICCIONARIO EDT · T-14",
     "source": "T-14: diccionario de la EDT, entregable, criterio, responsable, red y meses por paquete",
@@ -429,7 +440,7 @@
     "kind": ""
   },
   {
-    "id": "s40",
+    "id": "s41",
     "title": "Diccionario EDT · paquetes 4.1 a 5.3.",
     "eyebrow": "RESPALDO 08 / DICCIONARIO EDT · T-14",
     "source": "T-14: diccionario de la EDT, entregable, criterio, responsable, red y meses por paquete",
@@ -440,7 +451,7 @@
     "kind": ""
   },
   {
-    "id": "s41",
+    "id": "s42",
     "title": "Diccionario EDT · paquetes 5.4 a 6.2.",
     "eyebrow": "RESPALDO 09 / DICCIONARIO EDT · T-14",
     "source": "T-14: diccionario de la EDT, entregable, criterio, responsable, red y meses por paquete",
@@ -451,7 +462,7 @@
     "kind": ""
   },
   {
-    "id": "s42",
+    "id": "s43",
     "title": "Diccionario EDT · paquetes 6.3 a 7.3.",
     "eyebrow": "RESPALDO 10 / DICCIONARIO EDT · T-14",
     "source": "T-14: diccionario de la EDT, entregable, criterio, responsable, red y meses por paquete",
@@ -462,7 +473,7 @@
     "kind": ""
   },
   {
-    "id": "s43",
+    "id": "s44",
     "title": "Diccionario EDT · paquetes 8.1 a 9.1.",
     "eyebrow": "RESPALDO 11 / DICCIONARIO EDT · T-14",
     "source": "T-14: diccionario de la EDT, entregable, criterio, responsable, red y meses por paquete",
@@ -473,7 +484,7 @@
     "kind": ""
   },
   {
-    "id": "s44",
+    "id": "s45",
     "title": "Diccionario EDT · paquetes 9.2 a 11.1.",
     "eyebrow": "RESPALDO 12 / DICCIONARIO EDT · T-14",
     "source": "T-14: diccionario de la EDT, entregable, criterio, responsable, red y meses por paquete",
@@ -484,7 +495,7 @@
     "kind": ""
   },
   {
-    "id": "s45",
+    "id": "s46",
     "title": "Diccionario EDT · paquetes 11.2 a 12.3.",
     "eyebrow": "RESPALDO 13 / DICCIONARIO EDT · T-14",
     "source": "T-14: diccionario de la EDT, entregable, criterio, responsable, red y meses por paquete",
@@ -495,7 +506,7 @@
     "kind": ""
   },
   {
-    "id": "s46",
+    "id": "s47",
     "title": "Diccionario EDT · paquetes 12.4 a 13.4.",
     "eyebrow": "RESPALDO 14 / DICCIONARIO EDT · T-14",
     "source": "T-14: diccionario de la EDT, entregable, criterio, responsable, red y meses por paquete",

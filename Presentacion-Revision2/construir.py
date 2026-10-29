@@ -1392,6 +1392,53 @@ def separador(num, title, sub, items):
     return group(body, 0)
 
 
+# Síntesis Art. 46: brechas del Informe 1 y cambios documentados en el repo vigente.
+# La matriz completa permanece en recursos/Formato-Oferta-audIT/anexos/observaciones-informe1.tex.
+cambios = [
+    ('01 · 38 · 45 · 48', 'Requisitos sin trazabilidad', '42 requisitos trazados', 'hasta pruebas diseñadas', 'S3 §3.2.8', 'T-12 / T-17', 'doc', 0),
+    ('37 · 53 · 64 · 65', 'Arquitectura incompleta', 'Esquema, capas y equipos', 'definidos', 'S3 §3.3 · S4 §4.1.3', 'S4 §4.2 / T-11', 'cloud', 0),
+    ('43', 'Sistema de 2013 sin decisión', 'Sustitución gradual', 'consulta hasta M24', 'S3 §3.2.4', '', 'server', 1),
+    ('73 · 74', 'Capacidad sin justificar', 'Memoria y reconexión', 'dimensionadas', 'S4 §§4.2.2 / 4.2.8', 'T-17 · CP-PERF-02', 'db', 1),
+    ('88–91', 'Innovaciones y fichas insuficientes', 'Tipos 2 y 3 reformulados', 'cinco fichas completas', 'S13 §§13.2–13.3', 'T-19', 'chip', 2),
+]
+estructura = (
+    text(105, 28, 'OBSERVACIÓN', 20, MUTED, 700)
+    + text(654, 28, 'CAMBIO INCORPORADO', 20, C, 700)
+    + text(1342, 28, 'UBICACIÓN', 20, MUTED, 700)
+    + line(20, 45, 1710, 45, C, 2)
+)
+filas = {0: '', 1: '', 2: ''}
+for i, (obs, brecha, cambio, detalle, ref1, ref2, pictograma, paso) in enumerate(cambios):
+    y = 58 + i * 100
+    estructura += f'<rect x="20" y="{y}" width="1690" height="92" rx="10" fill="{CARD_BG if i % 2 == 0 else CARD_ALT}"/>'
+    estructura += line(630, y + 14, 630, y + 78, STROKE, 1)
+    estructura += line(1320, y + 14, 1320, y + 78, STROKE, 1)
+    filas[paso] += item(
+        icon(pictograma, 42, y + 22, .30, C)
+        + text(105, y + 30, obs, 21, AMBER, 700)
+        + text(105, y + 65, brecha, 27, WHITE, 600)
+        + text(654, y + 36, cambio, 33, C, 700)
+        + text(654, y + 70, detalle, 27, WHITE)
+        + text(1342, y + 36, ref1, 23, MUTED, 600)
+        + text(1342, y + 70, ref2, 23, MUTED)
+    )
+v = group(
+    estructura
+    + line(20, 580, 1710, 580, STROKE, 1)
+    + text(20, 621, 'Selección de cambios · Detalle en matriz Art. 46 · Pruebas pendientes de ejecución', 23, MUTED),
+    0,
+)
+v += ''.join(group(filas[paso], paso) for paso in range(3))
+add(
+    'Cambios principales del Informe 2',
+    'CORRECCIONES DEL INFORME 1 / ART. 46 · T-22',
+    v,
+    'Matriz Art. 46 · S3 · S4 · S13 · T-11 / T-12 / T-17 / T-19',
+    'Síntesis de 40 segundos. [Vista inicial: requisitos y arquitectura.] El Informe 2 incorpora el catálogo T-12 de 42 requerimientos trazados a componentes, paquetes y pruebas diseñadas; S3 §3.2.8 y T-17 responden a las observaciones 01, 38, 45 y 48. El esquema conceptual de S3 §3.3 y las capas, interfaces y arquitectura física de S4 §§4.1.3 y 4.2 responden a 37, 53, 64 y 65, con el catálogo T-11. [Revelar legado y capacidad.] S3 §3.2.4 resuelve la observación 43 con sustitución por funciones en M16 y M21, consulta hasta M24 y conservación del ERP contable como único emisor tributario. S4 §§4.2.2 y 4.2.8 deriva memoria y reconexión para 73 y 74; T-17 CP-PERF-02 define el ensayo del proceso completo. [Revelar innovaciones.] Para 88–91, S13 §§13.2–13.3 reformula la programación por oportunidad de patio y el semirremolque conectado; T-19 entrega cinco fichas con los elementos exigidos. Se priorizan cambios que definen el alcance, la viabilidad y la verificación de la propuesta. Las correcciones editoriales permanecen en la matriz completa y las novedades de EDT y riesgos se explican en sus bloques. La selección no acredita cierre integral de las 100 observaciones ni ejecución de las pruebas. El respaldo de correcciones amplía 37, 43 y 48.',
+    40,
+    3,
+)
+
 add('Qué construimos', 'ACTO 1 DE 3', separador('01', 'Qué construimos', 'Arquitectura física, lógica y de datos', ['Tres planos', 'Ocho capas', 'Datos y desconexión', 'Correcciones']),
     'S4 y S5', 'Separador. Cambio de voz: el expositor 1 presenta el problema y la arquitectura de alto nivel.', 3, 1, kind='section')
 add('Cómo lo ejecutamos', 'ACTO 2 DE 3', separador('02', 'Cómo lo ejecutamos', 'EDT, carta Gantt y compuertas', ['EDT en 3 niveles', 'Red y ruta crítica', 'Qué pasa si', 'Transición']),
@@ -2581,13 +2628,14 @@ for page_idx, offset in enumerate(range(0, len(packages), 6)):
 RECORRIDO = [
     ('Revisión 2 · Caso Transporte de Carga', 10),
     ('Una salida segura exige información confiable.', 25),
+    ('Cambios principales del Informe 2', 40),
     ('Qué construimos', 3),
-    ('La solución es híbrida: nube, sitio y flota.', 45),
-    ('Ocho capas, cada una con su producto.', 50),
+    ('La solución es híbrida: nube, sitio y flota.', 40),
+    ('Ocho capas, cada una con su producto.', 45),
     ('Un viaje se autoriza o se bloquea en 30 segundos.', 40),
     ('Cada nodo declara su hardware y su enlace.', 45),
     ('El camión es un nodo que opera sin red.', 35),
-    ('Cada dato vive en el motor que su uso exige.', 45),
+    ('Cada dato vive en el motor que su uso exige.', 40),
     ('Si se corta el enlace, la operación sigue.', 30),
     ('Cómo lo ejecutamos', 3),
     ('La EDT cubre todo el alcance en 13 elementos.', 40),
@@ -2602,7 +2650,7 @@ RECORRIDO = [
     ('Siete riesgos altos, cada uno con su disparador.', 50),
     ('R-28: cuatro causas, cuatro barreras antes del evento.', 50),
     ('Las reservas y holguras absorben el riesgo del plan.', 40),
-    ('Tres compromisos que se pueden verificar.', 30),
+    ('Tres compromisos que se pueden verificar.', 20),
     ('Preguntas y discusión', 10),
 ]
 RESPALDO_ORDEN = [
@@ -2641,6 +2689,8 @@ for s in rest:
     s['backup'] = True
 rest.sort(key=lambda s: RESPALDO_ORDEN.index(s['title']) if s['title'] in RESPALDO_ORDEN else len(RESPALDO_ORDEN))
 SLIDES[:] = main + rest
+EXPOSICION_SEGUNDOS = sum(s['seconds'] for s in main)
+MARGEN_SEGUNDOS = 15 * 60 - EXPOSICION_SEGUNDOS
 for n, s in enumerate(SLIDES, 1):
     s['id'] = f's{n:02}'
 import base64
@@ -2890,9 +2940,9 @@ wrapper = wrapper.replace('<script src="harness.js">', '<script type="applicatio
 (BASE / 'index.html').write_text(wrapper, encoding='utf-8')
 (BASE / 'escenas.json').write_text(json.dumps([{k: v for k, v in s.items() if k != 'content'} for s in SLIDES], ensure_ascii=False, indent=2), encoding='utf-8')
 (BASE / 'NOTAS-EXPOSICION.md').write_text(
-    '# Guion de exposición\n\nObjetivo: 14 minutos y 34 segundos + 26 segundos de margen. No hay asignación ficticia de expositores.\n\n'
+    f'# Guion de exposición\n\nObjetivo: {EXPOSICION_SEGUNDOS // 60} minutos y {EXPOSICION_SEGUNDOS % 60} segundos + {MARGEN_SEGUNDOS} segundos de margen. No hay asignación ficticia de expositores.\n\n'
     + '\n\n'.join(
-        f"## {i + 1}. {s['title']}\n\nTiempo: {s['seconds']} s. {'Respaldo.' if s['backup'] else ''}\n\n{s['notes']}\n\nFuente: {s['source']}"
+        f"## {i + 1}. {s['title']}\n\nTiempo: {s['seconds']} s.{' Respaldo.' if s['backup'] else ''}\n\n{s['notes']}\n\nFuente: {s['source']}"
         for i, s in enumerate(SLIDES)
     ),
     encoding='utf-8',

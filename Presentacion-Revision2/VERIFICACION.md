@@ -1,13 +1,23 @@
 # Verificación de la presentación
 
-Revisión del 22 de octubre de 2026.
+Revisión del 29 de octubre de 2026: incorporación de la síntesis de cambios como lámina 3.
 
-- Chromium local: 16 diapositivas principales y 14 de respaldo localizadas mediante apertura directa de `index.html`.
-- Comprobados: avance por teclado y clic; retroceso de fragmentos antes de cambiar de diapositiva; portada, cierre, respaldo con B y regreso con Escape.
-- Movimiento continuo del camión de portada comprobado. En implantación, las tres entradas aparecen antes de las flechas.
-- Capturadas las 30 diapositivas y una vista portátil de 1366 × 768. Las 16 principales y los 14 respaldos mantienen el texto SVG dentro del lienzo, cargan las imágenes y no presentan controles visibles.
-- Tema claro revisado en portada, arquitectura, calidad, AMFE, EDT, cronograma y cierre: fondo blanco, texto azul oscuro y acentos de alto contraste. El logotipo utilizado corresponde a la variante para fondo claro.
-- Sin errores de consola en el recorrido local. Evidencia: `revision/resultado.json` y capturas en `revision/`.
-- HyperFrames 0.8.181: análisis estático sin errores. La comprobación de ejecución de la CLI no pudo completarse porque este entorno bloquea la conexión local a `127.0.0.1`; el recorrido equivalente del archivo final se verificó con Playwright.
+## Comprobado en esta revisión
 
-La duración de 865 segundos es una pauta, no un ensayo oral. Las pruebas de T-17 se presentan como diseñadas, y las exposiciones residuales como estimaciones. No se ejecutaron pruebas del sistema propuesto ni se modificaron bitácoras personales.
+- Generación con `python3 construir.py`: 26 láminas principales, 21 respaldos y 889 segundos objetivo (14:49), con 11 segundos de margen respecto de los 15 minutos. Es una pauta, no un ensayo oral.
+- Orden inicial: portada, salida segura, cambios principales y separador «Qué construimos». Las escenas tienen identificadores únicos y referencias válidas en el manifiesto.
+- Tabla con cinco grupos de observaciones del Informe 1, contrastados con la matriz consolidada y los capítulos S3, S4 y S13 vigentes del repositorio. Las referencias complementarias apuntan a T-11, T-12, T-17 y T-19. No se utilizaron como contenido las copias externas al repositorio ni `original/`.
+- Tres fragmentos para la lámina 3, en posiciones 21, 23 y 25 de la composición: dos, cuatro y cinco filas visibles. La estructura y el pie de alcance pertenecen al primer fragmento; las filas anteriores se conservan.
+- El detalle de las observaciones 37, 43 y 48 sigue en R10, ahora lámina 36.
+- Coherencia entre los manifiestos incrustados, `manifest.json`, `escenas.json`, composición independiente e incrustada, notas y guion. Las 26 entradas y sus tiempos en el guion suman 889 segundos.
+- Revisión visual estática de la nueva lámina a 1920 × 1080 y 1366 × 768, sus tres estados, las láminas vecinas 2 y 4 y el respaldo R10. Las etiquetas de la tabla caben en sus columnas, sin recortes ni solapamientos en los renders revisados.
+
+## Evidencia y alcance de la comprobación visual
+
+`revision/resultado-cambios.json` registra las comprobaciones. `revision/cambios-informe2-estatico.png` y `revision/cambios-informe2-estatico-1366.png` son renders estáticos obtenidos del SVG generado, con Liberation Sans, la fuente de origen de AuditSans. Reproducen la composición y sus estados; no son capturas de navegador ni acreditan el comportamiento de GSAP o el ajuste de texto del navegador.
+
+## Pendiente de comprobación interactiva
+
+El navegador disponible bloqueó la apertura del archivo local por política de seguridad. No se verificaron en esta revisión las animaciones en ejecución, avance y retroceso por teclado/clic, retorno desde el respaldo, modo presentador, carga en navegador ni consola. El adaptador de navegación y las bibliotecas se conservaron sin cambios; la lámina nueva utiliza sus grupos `data-step` y transiciones existentes. Se requiere abrir `index.html` en un navegador autorizado, recorrer los tres fragmentos de la lámina 3, retroceder, avanzar al separador, entrar a R10 con B y «10 + Enter», volver con Escape y comprobar P con su ventana de audiencia.
+
+Realizar un ensayo oral con cronómetro y otro en proyector. Las pruebas T-17 siguen presentándose como diseñadas, no ejecutadas, y los riesgos residuales como estimaciones. Esta revisión no acredita el cierre integral de las 100 observaciones ni resultados de pruebas del sistema propuesto.

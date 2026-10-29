@@ -15,7 +15,8 @@ No hay botones, menús, instrucciones ni barras visibles en la superficie de exp
 
 ## Material
 
-- 25 láminas principales en tres actos, 14 minutos y 34 segundos objetivo y 26 segundos de margen:
+- 26 láminas principales en tres actos, 14 minutos y 49 segundos objetivo y 11 segundos de margen:
+  - Apertura: contexto operacional y síntesis visual de cinco grupos de correcciones del Informe 1 (matriz Art. 46, fuentes vigentes del repositorio).
   - Acto 1, «Qué construimos»: contexto en tres planos, ocho capas, verificación en 30 s, arquitectura física, equipo a bordo, datos y operación sin enlace (S4, S5, T-11).
   - Acto 2, «Cómo lo ejecutamos»: EDT en tres niveles, carta Gantt de la red T-15 con Monte Carlo por hito, simulación de atraso de A09, G13 y transición (S7, T-14, T-15, S8).
   - Acto 3, «Cómo lo protegemos»: mapa P×I de los 28 riesgos, los siete de exposición alta, corbatín de R-28 con AMFE, y reservas y holguras (S8, T-16).
@@ -25,6 +26,8 @@ No hay botones, menús, instrucciones ni barras visibles en la superficie de exp
 - `GUION-5-EXPOSITORES.md`: texto oral y relevos para cinco personas. `NOTAS-EXPOSICION.md`: notas por lámina.
 - `construir.py` lee los formularios vigentes del repositorio (T-14, T-15, T-16, S4, S5, S7, S8, T-19 en `recursos/Formato-Oferta-audIT/salida/informe2/`) y regenera todo con `python3 construir.py`. Requiere Python 3; no usa paquetes externos.
 - La versión original del compañero está en `original/`, como referencia.
+
+La nueva lámina 3 se revela en tres pasos: requisitos y arquitectura; legado y capacidad; innovaciones. El detalle de las observaciones 37, 43 y 48 permanece en R10 (lámina 36).
 
 Los cronometrajes son una pauta y requieren ensayo. Las pruebas del T-17 están diseñadas, no ejecutadas, y las exposiciones residuales son estimaciones.
 

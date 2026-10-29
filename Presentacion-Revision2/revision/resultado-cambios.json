@@ -1,0 +1,26 @@
+{
+  "fecha": "2026-10-29",
+  "principales": 26,
+  "respaldos": 21,
+  "segundos_objetivo": 889,
+  "margen_segundos": 11,
+  "diapositiva_cambios": 3,
+  "filas_visibles_por_fragmento": [
+    2,
+    4,
+    5
+  ],
+  "respaldo_correcciones": "R10 / lámina 36",
+  "comprobaciones": "Orden, identificadores, fragmentos, notas, manifiestos incrustados, composición y tiempos del guion coherentes.",
+  "render": "Estático desde el SVG generado, con Liberation Sans; no captura de navegador.",
+  "revision_visual_estatica": [
+    "1920 × 1080",
+    "1366 × 768",
+    "tres estados de la tabla",
+    "vecinas 2 y 4 y respaldo R10"
+  ],
+  "pendientes": [
+    "Prueba interactiva en navegador de animaciones, navegación y modo presentador.",
+    "Ensayo oral con cronómetro."
+  ]
+}
