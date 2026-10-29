@@ -21,3 +21,9 @@ Revisión del 29 de octubre de 2026: incorporación de la síntesis de cambios c
 El navegador disponible bloqueó la apertura del archivo local por política de seguridad. No se verificaron en esta revisión las animaciones en ejecución, avance y retroceso por teclado/clic, retorno desde el respaldo, modo presentador, carga en navegador ni consola. El adaptador de navegación y las bibliotecas se conservaron sin cambios; la lámina nueva utiliza sus grupos `data-step` y transiciones existentes. Se requiere abrir `index.html` en un navegador autorizado, recorrer los tres fragmentos de la lámina 3, retroceder, avanzar al separador, entrar a R10 con B y «10 + Enter», volver con Escape y comprobar P con su ventana de audiencia.
 
 Realizar un ensayo oral con cronómetro y otro en proyector. Las pruebas T-17 siguen presentándose como diseñadas, no ejecutadas, y los riesgos residuales como estimaciones. Esta revisión no acredita el cierre integral de las 100 observaciones ni resultados de pruebas del sistema propuesto.
+
+## Integración del cambio remoto 7aea637
+
+Se integra el orden de contextos y los códigos EDT del remoto en la arquitectura lógica, actualmente lámina 6. Se conserva la síntesis de cambios en la lámina 3. Los seis códigos y nombres (5.1 a 5.6) se cotejaron con T-14 y el bloque de contextos de la fuente integrada coincide con el remoto. Los conflictos de los dos HTML generados se resolvieron regenerándolos desde la fuente combinada.
+
+Se repitieron las comprobaciones de manifiestos, orden, fragmentos, notas y duración: 26 principales, 21 respaldos y 889 segundos. Se revisó el render estático de la lámina 6 a 1920 × 1080 y se generó también a 1366 × 768: `revision/arquitectura-integrada-estatico.png` y `revision/arquitectura-integrada-estatico-1366.png`. La confirmación visual del usuario y la comprobación interactiva siguen pendientes. No se publica ni se sube esta integración antes de la confirmación solicitada.

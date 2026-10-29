@@ -22,5 +22,11 @@
   "pendientes": [
     "Prueba interactiva en navegador de animaciones, navegación y modo presentador.",
     "Ensayo oral con cronómetro."
-  ]
+  ],
+  "integracion_remota": {
+    "commit": "7aea637",
+    "cambio": "Orden y códigos EDT de los seis contextos en la lámina 6",
+    "verificacion": "Bloque CTX idéntico al remoto y seis códigos/nombres cotejados con T-14; regeneración y validación estructural correctas.",
+    "revision_visual": "Render estático revisado a 1920 × 1080; vista 1366 × 768 generada. Confirmación visual del usuario pendiente."
+  }
 }
