@@ -915,7 +915,7 @@ Los diagramas que siguen se presentan en orientación horizontal a página compl
 *Figura. Contextos delimitados del dominio y sistemas con los que convive la solución*
 
 
-![Mapa de integraciones. Sistemas internos, fuentes de terreno y contrapartes externas](assets/images/LogicaIntegraciones.pdf)
+![Mapa de integraciones. Sistemas internos, fuentes de terreno y contrapartes externas](assets/images/LogicaIntegraciones.png)
 
 *Figura. Mapa de integraciones. Sistemas internos, fuentes de terreno y contrapartes externas*
 

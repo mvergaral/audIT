@@ -10,6 +10,7 @@ import os
 import re
 import subprocess
 import sys
+from pathlib import Path
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import lienzo  # noqa: E402
@@ -23,6 +24,8 @@ import s4_copias_d3  # noqa: E402
 import fisica_completa  # noqa: E402
 
 FORMATO = rutas.FORMATO
+sys.path.insert(0, str(Path(rutas.REPO) / 'Informe-2/D3/generadores_graficos'))
+from publicar_graficos import copiar_version_canonica
 PY = sys.executable
 MODULOS = [s4_fisica, fisica_completa, s4_logica, s4_copias_d3, s13, s7, propuestas]
 
@@ -51,6 +54,11 @@ def main():
             if pedidas and fn.__name__ not in pedidas:
                 continue
             base = fn()
+            # D3 conserva la autoría de sus fuentes: las copias usan sus PNG/SVG.
+            canonica = copiar_version_canonica(base)
+            if canonica and not os.path.exists(base + '.svg'):
+                print(f'{base} [PNG canónico de D3: {canonica}]')
+                continue
             ancho_mm = medida_svg(base)[0]
             tipo = {"257.4": "H", "148.9": "V"}.get(ancho_mm, "L")
             nombres, otras, letra = comprobar(base, tipo)

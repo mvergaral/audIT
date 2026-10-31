@@ -48,7 +48,7 @@ La Tabla 5.1 fija la estructura que se comprueba en S9. El cifrado y los índice
 
 La arquitectura de datos se estructura en seis contextos delimitados con límites explícitos. En la Figura 5.1 se despliega el modelo conceptual y relacional de persistencia de datos.
 
-![Figura 5.1. Modelo lógico de las relaciones críticas del viaje](../../figuras/05-datos/vertical/audit-figura-5.1-erd.pdf)
+![Figura 5.1. Modelo lógico de las relaciones críticas del viaje](../../figuras/05-datos/audit-figura-5.1-erd.pdf)
 
 *Figura 5.1. Modelo lógico de las relaciones críticas del viaje*
 
@@ -64,7 +64,7 @@ El ciclo propuesto del viaje es `PROGRAMADO $\rightarrow$ EN_\allowbreak{}CARGA 
 
 En cumplimiento de FEP02, RT-05.09, p. 11, se implementa un marco centralizado de Master Data Management (MDM) con principio de Registro Maestro Único (*Golden Record*), visualizado en la Figura 5.2.
 
-![Figura 5.2. Gestión de Datos Maestros (MDM) y Capa Anticorrupción](../../figuras/05-datos/vertical/audit-figura-5.2-mdm.pdf)
+![Figura 5.2. Gestión de Datos Maestros (MDM) y Capa Anticorrupción](../../figuras/05-datos/audit-figura-5.2-mdm.pdf)
 
 *Figura 5.2. Gestión de Datos Maestros (MDM) y Capa Anticorrupción*
 
@@ -111,7 +111,7 @@ El origen recibido se conserva sin renumeración silenciosa. Una descarga de tac
 
 La Figura 5.3 recorre recepción, validación, sellado, conservación y rectificación.
 
-![Figura 5.3. Cadena de custodia de evidencias y tratamiento de fuentes inválidas](../../figuras/05-datos/vertical/5-2-custodia.pdf)
+![Figura 5.3. Cadena de custodia de evidencias y tratamiento de fuentes inválidas](../../figuras/05-datos/5-2-custodia.pdf)
 
 *Figura 5.3. Cadena de custodia de evidencias y tratamiento de fuentes inválidas*
 
@@ -124,7 +124,7 @@ Las rectificaciones generan un registro nuevo que referencia el original, sin so
 \begingroup\emergencystretch=2em
 La Figura 5.4 separa evaluación y evidencia mediante \textsf{EVALUACION_\allowbreak{}EVIDENCIA}: una evaluación puede usar reposo de nivel 4 y atestación de nivel 5 simultáneamente. El veredicto siempre se registra, aun sin evidencia válida. Una excepción RN-04 conserva dos aprobadores, motivo, un viaje y revisión mensual; no levanta una causa legal. Las restricciones y nulabilidad se detallan en el anexo.\endgroup
 
-![Figura 5.4. Modelo lógico de evidencia, evaluación, excepción y permiso](../../figuras/05-datos/vertical/5-7-evidencia.pdf)
+![Figura 5.4. Modelo lógico de evidencia, evaluación, excepción y permiso](../../figuras/05-datos/5-7-evidencia.pdf)
 
 *Figura 5.4. Modelo lógico de evidencia, evaluación, excepción y permiso*
 
@@ -138,7 +138,7 @@ El permiso del transportista controla qué datos de sus recursos comparte, con q
 
 La Figura 5.5 muestra concesión, evaluación por petición, revocación y decisión de conservación. `PERMISO_\allowbreak{}COMPARTIR` mantiene recurso, destinatario, alcance, finalidad, vigencia, versión y respaldo; `ACCESO_\allowbreak{}DATO` conserva qué se mostró y bajo qué versión. Una lista JSON de clientes no reemplaza relaciones verificables ni la auditoría de cada acceso.
 
-![Figura 5.5. Compartición autorizada, revocación y conservación](../../figuras/05-datos/vertical/5-3-permisos.pdf)
+![Figura 5.5. Compartición autorizada, revocación y conservación](../../figuras/05-datos/5-3-permisos.pdf)
 
 *Figura 5.5. Compartición autorizada, revocación y conservación*
 
@@ -173,7 +173,7 @@ FEP02, RT-05.02, p. 11 exige justificar por dominio consistencia y disponibilida
 
 La Tabla 5.3 mantiene una base de negocio consistente y una captura local que resiste particiones. El documento fiscal permanece en el contable y requiere entrega conforme antes del movimiento; el búfer local no habilita emisión propia.
 
-![Figura 5.6. Consistencia del despacho y continuidad de captura durante una partición](../../figuras/05-datos/vertical/audit-figura-5.3-cap.pdf)
+![Figura 5.6. Consistencia del despacho y continuidad de captura durante una partición](../../figuras/05-datos/audit-figura-5.3-cap.pdf)
 
 *Figura 5.6. Consistencia del despacho y continuidad de captura durante una partición*
 
@@ -185,7 +185,7 @@ El protocolo Kafka de Event Hubs no implica un segundo clúster Apache Kafka ni 
 
 Para dar cumplimiento a FEP02, RT-05.05, p. 11, se separa la base transaccional de producción respecto del consumo analítico de reportería y cálculo de costo por kilómetro. La propagación usa captura de cambios (CDC Debezium) y Event Hubs Premium mediante protocolo Kafka. El objetivo propuesto de retraso CDC <60 s se verifica bajo carga antes de aceptarse; el flujo avanza hacia el repositorio analítico (Delta Lake), como esquematiza la Figura 5.7.
 
-![Figura 5.7. Segregación transaccional OLTP y analítica OLAP mediante CDC](../../figuras/05-datos/vertical/audit-figura-5.4-cdc.pdf)
+![Figura 5.7. Segregación transaccional OLTP y analítica OLAP mediante CDC](../../figuras/05-datos/audit-figura-5.4-cdc.pdf)
 
 *Figura 5.7. Segregación transaccional OLTP y analítica OLAP mediante CDC*
 
@@ -252,7 +252,7 @@ La Figura 5.8 muestra cuatro fases: extracción/perfilamiento con copia y hash d
 
 La aceptación exige conciliación de totales, referencias y documentos, ausencia de vigencias habilitantes sin respaldo y cuadratura de liquidaciones con diferencias justificadas. Toda inconsistencia se identifica por registro, propietario y resolución, sin afirmar que una carga masiva elimina errores. Se prueban reversa, delta final e idempotencia; nunca se borran documentos fiscales ya emitidos ni evidencias válidas generadas durante la convivencia. Los cortes respetan los congelamientos y la implantación por terminal/unidad de S7 (Caso, RT-10.05, p. 32).
 
-![Figura 5.8. Metodología de extracción, saneamiento, carga y conciliación histórica](../../figuras/05-datos/vertical/audit-figura-5.5-migracion.pdf)
+![Figura 5.8. Metodología de extracción, saneamiento, carga y conciliación histórica](../../figuras/05-datos/audit-figura-5.5-migracion.pdf)
 
 *Figura 5.8. Metodología de extracción, saneamiento, carga y conciliación histórica*
 
@@ -264,7 +264,7 @@ La Figura 5.8 muestra las puertas de acreditación y conciliación. Un registro 
 
 La meta contractual de asignación es ≤30 s extremo a extremo (Caso, RT-09.01, p. 32). Menos de 2 s es objetivo interno de un caso nominal, no medición ni garantía derivada de usar caché. La Figura 5.9 muestra que una proyección sólo habilita cuando su versión y actualidad se validan contra el estado autoritativo; si hay conflicto se reevalúa o rechaza dentro del plazo total.
 
-![Figura 5.9. Estado autoritativo, caché e índices especializados](../../figuras/05-datos/vertical/audit-figura-5.6-desempeno.pdf)
+![Figura 5.9. Estado autoritativo, caché e índices especializados](../../figuras/05-datos/audit-figura-5.6-desempeno.pdf)
 
 *Figura 5.9. Estado autoritativo, caché e índices especializados*
 

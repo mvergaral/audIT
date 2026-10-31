@@ -29,7 +29,7 @@ La administración del contrato se fundamenta en un modelo de ciclo de vida híb
 
 La articulación temporal del marco de gestión y su integración con los hitos contractuales de la licitación se ilustra en la Figura 6.1.
 
-![Figura 6.1. Gobernanza temporal del proyecto y articulación de fases, etapas y marchas blancas](../../figuras/06-metodologias/vertical/6-1-hitos.pdf)
+![Figura 6.1. Gobernanza temporal del proyecto y articulación de fases, etapas y marchas blancas](../../figuras/06-metodologias/6-1-hitos.pdf)
 
 *Figura 6.1. Gobernanza temporal del proyecto y articulación de fases, etapas y marchas blancas*
 
@@ -116,7 +116,7 @@ El control de cadena de suministro adopta SLSA v1.2 Build L3: plataforma alojada
 
 El pipeline de entrega continua se ejecuta automáticamente ante cada evento de integración en el repositorio, transitando obligatoriamente por seis fases de validación, ilustradas en la Figura 6.2.
 
-![Figura 6.2. Fases y puertas de calidad del pipeline DevSecOps unificado](../../figuras/06-metodologias/vertical/6-2-pipeline.pdf)
+![Figura 6.2. Fases y puertas de calidad del pipeline DevSecOps unificado](../../figuras/06-metodologias/6-2-pipeline.pdf)
 
 *Figura 6.2. Fases y puertas de calidad del pipeline DevSecOps unificado*
 

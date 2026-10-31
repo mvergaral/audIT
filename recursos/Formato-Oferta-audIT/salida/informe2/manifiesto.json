@@ -4,23 +4,6 @@
   "modo_folio": "subdocumento",
   "archivos": [
     {
-      "clave": "00",
-      "nombre": "INFORME2_AUDIT_SUBDOC00_20261012.pdf",
-      "folio_inicial": 1,
-      "paginas": 9,
-      "aux": "salida/aux/informe2/00/INFORME2_AUDIT_SUBDOC00_20261012.aux",
-      "log": "salida/aux/informe2/00/INFORME2_AUDIT_SUBDOC00_20261012.log",
-      "fuentes": [
-        [
-          "subdocumentos"
-        ],
-        [
-          "subdocumentos",
-          "anexos"
-        ]
-      ]
-    },
-    {
       "clave": "01",
       "nombre": "AUDIT-Subdocumento1.pdf",
       "folio_inicial": 1,
@@ -37,26 +20,10 @@
       ]
     },
     {
-      "clave": "02",
-      "nombre": "AUDIT-Subdocumento2.pdf",
-      "folio_inicial": 1,
-      "paginas": 34,
-      "aux": "salida/aux/informe2/02/AUDIT-Subdocumento2.aux",
-      "log": "salida/aux/informe2/02/AUDIT-Subdocumento2.log",
-      "fuentes": [
-        [
-          "subdocumentos"
-        ],
-        [
-          "subdocumentos/02-problema"
-        ]
-      ]
-    },
-    {
       "clave": "03",
       "nombre": "AUDIT-Subdocumento3.pdf",
       "folio_inicial": 1,
-      "paginas": 34,
+      "paginas": 33,
       "aux": "salida/aux/informe2/03/AUDIT-Subdocumento3.aux",
       "log": "salida/aux/informe2/03/AUDIT-Subdocumento3.log",
       "fuentes": [
@@ -88,7 +55,7 @@
       "clave": "05",
       "nombre": "AUDIT-Subdocumento5.pdf",
       "folio_inicial": 1,
-      "paginas": 66,
+      "paginas": 71,
       "aux": "salida/aux/informe2/05/AUDIT-Subdocumento5.aux",
       "log": "salida/aux/informe2/05/AUDIT-Subdocumento5.log",
       "fuentes": [
@@ -117,58 +84,10 @@
       ]
     },
     {
-      "clave": "07",
-      "nombre": "AUDIT-Subdocumento7.pdf",
-      "folio_inicial": 1,
-      "paginas": 68,
-      "aux": "salida/aux/informe2/07/AUDIT-Subdocumento7.aux",
-      "log": "salida/aux/informe2/07/AUDIT-Subdocumento7.log",
-      "fuentes": [
-        [
-          "subdocumentos"
-        ],
-        [
-          "subdocumentos/07-plan-trabajo"
-        ]
-      ]
-    },
-    {
-      "clave": "08",
-      "nombre": "AUDIT-Subdocumento8.pdf",
-      "folio_inicial": 1,
-      "paginas": 21,
-      "aux": "salida/aux/informe2/08/AUDIT-Subdocumento8.aux",
-      "log": "salida/aux/informe2/08/AUDIT-Subdocumento8.log",
-      "fuentes": [
-        [
-          "subdocumentos"
-        ],
-        [
-          "subdocumentos/08-riesgos"
-        ]
-      ]
-    },
-    {
-      "clave": "09",
-      "nombre": "AUDIT-Subdocumento9.pdf",
-      "folio_inicial": 1,
-      "paginas": 18,
-      "aux": "salida/aux/informe2/09/AUDIT-Subdocumento9.aux",
-      "log": "salida/aux/informe2/09/AUDIT-Subdocumento9.log",
-      "fuentes": [
-        [
-          "subdocumentos"
-        ],
-        [
-          "subdocumentos/09-calidad"
-        ]
-      ]
-    },
-    {
       "clave": "13",
       "nombre": "AUDIT-Subdocumento13.pdf",
       "folio_inicial": 1,
-      "paginas": 27,
+      "paginas": 28,
       "aux": "salida/aux/informe2/13/AUDIT-Subdocumento13.aux",
       "log": "salida/aux/informe2/13/AUDIT-Subdocumento13.log",
       "fuentes": [
@@ -261,102 +180,6 @@
       ]
     },
     {
-      "clave": "07T-14",
-      "nombre": "AUDIT-Formulario-T-14.pdf",
-      "folio_inicial": 1,
-      "paginas": 7,
-      "aux": "salida/aux/informe2/07T-14/AUDIT-Formulario-T-14.aux",
-      "log": "salida/aux/informe2/07T-14/AUDIT-Formulario-T-14.log",
-      "fuentes": [
-        [
-          "subdocumentos"
-        ],
-        [
-          "subdocumentos/07-plan-trabajo"
-        ]
-      ]
-    },
-    {
-      "clave": "07T-15",
-      "nombre": "AUDIT-Formulario-T-15.pdf",
-      "folio_inicial": 1,
-      "paginas": 10,
-      "aux": "salida/aux/informe2/07T-15/AUDIT-Formulario-T-15.aux",
-      "log": "salida/aux/informe2/07T-15/AUDIT-Formulario-T-15.log",
-      "fuentes": [
-        [
-          "subdocumentos"
-        ],
-        [
-          "subdocumentos/07-plan-trabajo"
-        ]
-      ]
-    },
-    {
-      "clave": "07T-18",
-      "nombre": "AUDIT-Formulario-T-18.pdf",
-      "folio_inicial": 1,
-      "paginas": 6,
-      "aux": "salida/aux/informe2/07T-18/AUDIT-Formulario-T-18.aux",
-      "log": "salida/aux/informe2/07T-18/AUDIT-Formulario-T-18.log",
-      "fuentes": [
-        [
-          "subdocumentos"
-        ],
-        [
-          "subdocumentos/07-plan-trabajo"
-        ]
-      ]
-    },
-    {
-      "clave": "08T-16",
-      "nombre": "AUDIT-Formulario-T-16.pdf",
-      "folio_inicial": 1,
-      "paginas": 10,
-      "aux": "salida/aux/informe2/08T-16/AUDIT-Formulario-T-16.aux",
-      "log": "salida/aux/informe2/08T-16/AUDIT-Formulario-T-16.log",
-      "fuentes": [
-        [
-          "subdocumentos"
-        ],
-        [
-          "subdocumentos/08-riesgos"
-        ]
-      ]
-    },
-    {
-      "clave": "09T-13",
-      "nombre": "AUDIT-Formulario-T-13.pdf",
-      "folio_inicial": 1,
-      "paginas": 8,
-      "aux": "salida/aux/informe2/09T-13/AUDIT-Formulario-T-13.aux",
-      "log": "salida/aux/informe2/09T-13/AUDIT-Formulario-T-13.log",
-      "fuentes": [
-        [
-          "subdocumentos"
-        ],
-        [
-          "subdocumentos/09-calidad"
-        ]
-      ]
-    },
-    {
-      "clave": "09T-17",
-      "nombre": "AUDIT-Formulario-T-17.pdf",
-      "folio_inicial": 1,
-      "paginas": 115,
-      "aux": "salida/aux/informe2/09T-17/AUDIT-Formulario-T-17.aux",
-      "log": "salida/aux/informe2/09T-17/AUDIT-Formulario-T-17.log",
-      "fuentes": [
-        [
-          "subdocumentos"
-        ],
-        [
-          "subdocumentos/09-calidad"
-        ]
-      ]
-    },
-    {
       "clave": "13T-19",
       "nombre": "AUDIT-Formulario-T-19.pdf",
       "folio_inicial": 1,
@@ -369,38 +192,6 @@
         ],
         [
           "subdocumentos/13-innovaciones"
-        ]
-      ]
-    },
-    {
-      "clave": "01A",
-      "nombre": "AUDIT-Subdocumento1-Anexos.pdf",
-      "folio_inicial": 1,
-      "paginas": 7,
-      "aux": "salida/aux/informe2/01A/AUDIT-Subdocumento1-Anexos.aux",
-      "log": "salida/aux/informe2/01A/AUDIT-Subdocumento1-Anexos.log",
-      "fuentes": [
-        [
-          "subdocumentos"
-        ],
-        [
-          "/home/carlosa/Documentos/Universidad/Actual/FEP/06_Repositorios_Git/repo/recursos/Formato-Oferta-audIT/subdocumentos/01-empresa"
-        ]
-      ]
-    },
-    {
-      "clave": "02A",
-      "nombre": "AUDIT-Subdocumento2-Anexos.pdf",
-      "folio_inicial": 1,
-      "paginas": 27,
-      "aux": "salida/aux/informe2/02A/AUDIT-Subdocumento2-Anexos.aux",
-      "log": "salida/aux/informe2/02A/AUDIT-Subdocumento2-Anexos.log",
-      "fuentes": [
-        [
-          "subdocumentos"
-        ],
-        [
-          "/home/carlosa/Documentos/Universidad/Actual/FEP/06_Repositorios_Git/repo/recursos/Formato-Oferta-audIT/subdocumentos/02-problema"
         ]
       ]
     }

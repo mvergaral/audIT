@@ -110,18 +110,21 @@
 <text x="122.67" y="128.20" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="middle" fill="#000000">4</text>
 <use href="#ic-flu-movil" x="207.00" y="124.00" width="22.00" height="22.00"/>
 <use href="#ic-flu-consola" x="332.33" y="124.00" width="22.00" height="22.00"/>
-<use href="#ic-pr-servicio" x="66.00" y="202.00" width="22.00" height="22.00"/>
-<circle cx="92.00" cy="203.00" r="6.8" fill="#FFFFFF" stroke="#000000" stroke-width="0.9"/>
-<text x="92.00" y="206.20" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="middle" fill="#000000">1</text>
-<use href="#ic-flu-candado" x="160.00" y="202.00" width="22.00" height="22.00"/>
-<circle cx="186.00" cy="203.00" r="6.8" fill="#FFFFFF" stroke="#000000" stroke-width="0.9"/>
-<text x="186.00" y="206.20" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="middle" fill="#000000">3</text>
-<use href="#ic-flu-documento" x="254.00" y="202.00" width="22.00" height="22.00"/>
-<circle cx="280.00" cy="203.00" r="6.8" fill="#FFFFFF" stroke="#000000" stroke-width="0.9"/>
-<text x="280.00" y="206.20" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="middle" fill="#000000">4</text>
-<use href="#ic-flu-parador" x="348.00" y="202.00" width="22.00" height="22.00"/>
-<circle cx="374.00" cy="203.00" r="6.8" fill="#FFFFFF" stroke="#000000" stroke-width="0.9"/>
-<text x="374.00" y="206.20" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="middle" fill="#000000">5</text>
+<use href="#ic-pr-servicio" x="56.60" y="202.00" width="22.00" height="22.00"/>
+<circle cx="82.60" cy="203.00" r="6.8" fill="#FFFFFF" stroke="#000000" stroke-width="0.9"/>
+<text x="82.60" y="206.20" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="middle" fill="#000000">1</text>
+<use href="#ic-pr-servicio" x="131.80" y="202.00" width="22.00" height="22.00"/>
+<circle cx="157.80" cy="203.00" r="6.8" fill="#FFFFFF" stroke="#000000" stroke-width="0.9"/>
+<text x="157.80" y="206.20" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="middle" fill="#000000">2</text>
+<use href="#ic-flu-candado" x="207.00" y="202.00" width="22.00" height="22.00"/>
+<circle cx="233.00" cy="203.00" r="6.8" fill="#FFFFFF" stroke="#000000" stroke-width="0.9"/>
+<text x="233.00" y="206.20" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="middle" fill="#000000">3</text>
+<use href="#ic-flu-documento" x="282.20" y="202.00" width="22.00" height="22.00"/>
+<circle cx="308.20" cy="203.00" r="6.8" fill="#FFFFFF" stroke="#000000" stroke-width="0.9"/>
+<text x="308.20" y="206.20" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="middle" fill="#000000">4</text>
+<use href="#ic-flu-parador" x="357.40" y="202.00" width="22.00" height="22.00"/>
+<circle cx="383.40" cy="203.00" r="6.8" fill="#FFFFFF" stroke="#000000" stroke-width="0.9"/>
+<text x="383.40" y="206.20" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="middle" fill="#000000">5</text>
 <use href="#ic-az-iothub" x="81.67" y="280.00" width="22.00" height="22.00"/>
 <use href="#ic-az-deviceupdate" x="207.00" y="280.00" width="22.00" height="22.00"/>
 <circle cx="233.00" cy="281.00" r="6.8" fill="#FFFFFF" stroke="#000000" stroke-width="0.9"/>
@@ -149,8 +152,8 @@
 <g id="textos">
 <text x="50.00" y="16.00" font-size="10" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">Expediente verificable</text>
 <text x="50.00" y="27.50" font-size="10" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">del transportista</text>
-<text x="50.00" y="46.00" font-size="10" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">Despliegue sin detener</text>
-<text x="50.00" y="57.50" font-size="10" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">la flota</text>
+<text x="50.00" y="46.00" font-size="10" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">Programación por</text>
+<text x="50.00" y="57.50" font-size="10" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">oportunidad de patio</text>
 <text x="50.00" y="76.00" font-size="10" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">Semirremolque</text>
 <text x="50.00" y="87.50" font-size="10" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">conectado</text>
 <text x="260.00" y="16.00" font-size="10" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">Esquema de adhesión y</text>
@@ -164,13 +167,15 @@
 <text x="343.33" y="157.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Vistas de</text>
 <text x="343.33" y="169.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">portería y taller</text>
 <text x="16.00" y="197.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">Servicios</text>
-<text x="77.00" y="235.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Servicio de</text>
-<text x="77.00" y="247.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">verificación</text>
-<text x="171.00" y="235.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Verificación</text>
-<text x="171.00" y="247.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">bloqueante</text>
-<text x="265.00" y="235.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Consentimiento</text>
-<text x="359.00" y="235.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Gobernanza</text>
-<text x="359.00" y="247.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">de paradores</text>
+<text x="67.60" y="235.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Servicio de</text>
+<text x="67.60" y="247.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">verificación</text>
+<text x="142.80" y="235.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Planificación</text>
+<text x="142.80" y="247.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">de patio</text>
+<text x="218.00" y="235.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Verificación</text>
+<text x="218.00" y="247.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">bloqueante</text>
+<text x="293.20" y="235.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Consentimiento</text>
+<text x="368.40" y="235.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Gobernanza</text>
+<text x="368.40" y="247.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">de paradores</text>
 <text x="16.00" y="275.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">Integración</text>
 <text x="92.67" y="313.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">IoT Hub</text>
 <text x="218.00" y="313.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Actualización</text>

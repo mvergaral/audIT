@@ -1,3 +1,5 @@
+% Gráficos canónicos de D3 en su orientación original.
+\ProvideDocumentCommand\figuraHorizontalAqui{mmm}{\par\figuraHorizontal{#1}{#2}{#3}\clearpage}
 % Contenido de D3 trasladado desde sus Markdown del Informe 2.
 La gestión combina PMBOK para alcance, adquisiciones, riesgos y cambios; Scrum para incrementos de software; Kanban para incidencias y estabilización. S3/T-12 fija 28 RF y 14 RNF —catálogo de la oferta, no número de requisitos impuestos por el Caso—; S7 organiza paquetes e hitos y S9 establece aceptación y evidencia. Los Formularios T-9/T-10 acompañan el capítulo como archivos propios conforme al Comunicado 10.
 
@@ -24,7 +26,7 @@ La administración del contrato se fundamenta en un modelo de ciclo de vida híb
 
 La articulación temporal del marco de gestión y su integración con los hitos contractuales de la licitación se ilustra en la \figref{06-6-1-hitos}.
 
-\figura[ancho=completo,alto=0.88,lugar=htbp]{figuras/06-metodologias/vertical/6-1-hitos.pdf}{Gobernanza temporal del proyecto y articulación de fases, etapas y marchas blancas}{06-6-1-hitos}
+\figuraHorizontalAqui{figuras/06-metodologias/6-1-hitos.pdf}{Gobernanza temporal del proyecto y articulación de fases, etapas y marchas blancas}{06-6-1-hitos}
 
 La \figref{06-6-1-hitos} representa el solapamiento desde M13: la estabilización de E1 y la construcción de E2 usan equipos y capacidad segregados. M25–56 aparece como tramo comprimido, identificado expresamente; el detalle mensual y las fechas derivadas de SA-01 corresponden a S7.
 
@@ -115,7 +117,7 @@ El control de cadena de suministro adopta SLSA v1.2 Build L3: plataforma alojada
 
 El pipeline de entrega continua se ejecuta automáticamente ante cada evento de integración en el repositorio, transitando obligatoriamente por seis fases de validación, ilustradas en la \figref{06-6-2-pipeline}.
 
-\figura[ancho=completo,alto=0.88,lugar=htbp]{figuras/06-metodologias/vertical/6-2-pipeline.pdf}{Fases y puertas de calidad del pipeline DevSecOps unificado}{06-6-2-pipeline}
+\figuraHorizontalAqui{figuras/06-metodologias/6-2-pipeline.pdf}{Fases y puertas de calidad del pipeline DevSecOps unificado}{06-6-2-pipeline}
 
 Como se representa en la \figref{06-6-2-pipeline}, ninguna versión de software puede alcanzar el ambiente de producción sin superar secuencialmente las seis etapas del pipeline. En la \tabref{06-tabla-6-3} se definen los umbrales bloqueantes parametrizados para comprobar los criterios de calidad y seguridad del artefacto.
 

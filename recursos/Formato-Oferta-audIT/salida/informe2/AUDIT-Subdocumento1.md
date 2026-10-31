@@ -171,7 +171,7 @@ Conforme al FEP01, Artículo 34.1, p. 22, audIT declara los seis roles habilitan
 - **Líder de Aseguramiento de Calidad (QA):** **Claudia Navarrete Rivas**. Ingeniera Civil Informática, certificada ISTQB (*Full Advanced Level* -- Test Manager, Technical Test Analyst), con 10 años de experiencia dirigiendo compuertas de calidad (*Quality Gates*), pruebas automatizadas de regresión, carga y estrés, y aseguramiento normativo bajo ISO/IEC/IEEE 12207.
 - **Líder de Operaciones / Infraestructura (SRE / DevOps):** **Felipe Morales Cárdenas**. Ingeniero en Telecomunicaciones, Conectividad y Redes, certificado CKA (Cloud Native Computing Foundation) y *Red Hat Certified Engineer*, con 10 años de experiencia en orquestación de clústeres Kubernetes (AKS), telemetría industrial IoT, redes vehiculares SAE J1939 y soporte operacional 24/7/365 en terreno.
 
-En la Tabla 1.1 se formaliza la dedicación porcentual (*Full-Time Equivalent*, FTE) de cada uno de los seis roles habilitantes obligatorios a lo largo de las dos etapas del contrato: la **Fase de Implantación** (Meses 1 a 20) y la **Fase de Operación Continuada** (Meses 21 a 56), explicitando su marco de responsabilidad y cobertura.
+En la Tabla 1.2.2 se formaliza la dedicación porcentual (*Full-Time Equivalent*, FTE) de cada uno de los seis roles habilitantes obligatorios a lo largo de las dos etapas del contrato: la **Fase de Implantación** (Meses 1 a 20) y la **Fase de Operación Continuada** (Meses 21 a 56), explicitando su marco de responsabilidad y cobertura.
 
 **Tabla 1.1.** Dedicación contractual de roles habilitantes y cobertura operacional
 
@@ -262,7 +262,7 @@ audIT declara tres proyectos concluidos dentro de los últimos cinco años con a
 | Nivel de Servicio (SLA) | 99,5% mensual de disponibilidad | 99,0% mensual; 72 h tolerancia offline | 99,6% mensual de disponibilidad | Al menos 1 proyecto con SLA $\ge 99{,}5%$ |
 | Estado y Ejecución | Finalizado; 100% audIT como Principal | Finalizado; 100% audIT como Principal | Finalizado; 100% audIT como Principal | Concluidos y en operación últimos 5 años |
 
-Los porcentajes de la Tabla 1.2 son acuerdos de disponibilidad mensual de proyectos anteriores. El proyecto 2 declara 99,0%; los SLA declarados de los proyectos 1 y 3 cumplen el umbral de experiencia de 99,5% del artículo 34.1. Estos antecedentes no reemplazan la disponibilidad crítica exigida a la oferta para Curimón.
+Los porcentajes de la Tabla 1.4.1 son acuerdos de disponibilidad mensual de proyectos anteriores. El proyecto 2 declara 99,0%; los SLA declarados de los proyectos 1 y 3 cumplen el umbral de experiencia de 99,5% del artículo 34.1. Estos antecedentes no reemplazan la disponibilidad crítica exigida a la oferta para Curimón.
 
 La comparabilidad con Curimón se establece por función y por magnitud declarada:
 - El Proyecto 1 aporta experiencia en telemetría y geocercas sobre 120 tractocamiones, aproximadamente 32,1 % de los 374 de Curimón. Sus 5.500 eventos diarios describen otra magnitud; no permiten acreditar equivalencia con 96.000 viajes anuales. La ampliación a la flota de Curimón requiere dimensionamiento y pruebas de carga de la solución propuesta.
@@ -284,7 +284,7 @@ Las competencias sectoriales comprenden el régimen de jornada de conductores y 
 
 audIT declara antecedentes de los ejercicios 2023, 2024 y 2025, con estados financieros auditados por Nexia Auditores SpA, para evaluar la capacidad de sostener los 56 meses de contrato. Los balances, estados de resultados, notas, dictámenes y Formulario 22 del SII se individualizan en la Carpeta de Idoneidad Económica del Sobre N.º 1 para el cotejo previsto en los FEP01, Artículo 34.1, p. 22 y FEP01, Artículo 39, p. 25, numeral 4.
 
-La Tabla 1.3 reúne los cinco indicadores declarados y sus respaldos. Liquidez y prueba ácida describen cobertura de pasivos corrientes; apalancamiento, la relación entre pasivos y patrimonio; ROE y ROA, la rentabilidad declarada. Estos indicadores no sustituyen la proyección de caja del contrato. La compañía declara además capital de trabajo neto positivo para más de seis meses de operación sin cobranzas inmediatas y capacidad de constituir las garantías bancarias exigidas; estos antecedentes requieren cotejo documental.
+La Tabla 1.4.3 reúne los cinco indicadores declarados y sus respaldos. Liquidez y prueba ácida describen cobertura de pasivos corrientes; apalancamiento, la relación entre pasivos y patrimonio; ROE y ROA, la rentabilidad declarada. Estos indicadores no sustituyen la proyección de caja del contrato. La compañía declara además capital de trabajo neto positivo para más de seis meses de operación sin cobranzas inmediatas y capacidad de constituir las garantías bancarias exigidas; estos antecedentes requieren cotejo documental.
 
 **Tabla 1.3.** Respaldo probatorio de ratios financieros en Sobre N.º 1 (FEP01, Artículo 34.1, p. 22)
 

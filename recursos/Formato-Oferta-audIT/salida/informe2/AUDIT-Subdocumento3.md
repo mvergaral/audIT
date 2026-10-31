@@ -177,7 +177,7 @@ alcances a la vez, y la Etapa 2 sólo agrega procesos que no cambian la forma de
 ### 3.2.2 Alcance de la Etapa 1
 
 La Etapa 1 controla lo que puede producir un despacho ilegal, una pérdida de prueba, una duplicación
-tributaria o un tratamiento indebido de datos personales. La Tabla 3.1 identifica sus diez
+tributaria o un tratamiento indebido de datos personales. La Tabla 3.2.2 identifica sus diez
 capacidades con el contexto de la arquitectura que las sostiene y la capacidad de la que dependen. El
 paquete de trabajo de cada una está en el Formulario T-12.
 
@@ -207,7 +207,7 @@ el Subdocumento 7 las trata como actividades de la red, con duración y holgura 
 ### 3.2.3 Alcance de la Etapa 2
 
 La Etapa 2 agrega procesos que se apoyan en datos que la Etapa 1 ya produce y que no cambian la forma de
-despachar. La Tabla 3.2 identifica sus seis capacidades.
+despachar. La Tabla 3.2.3 identifica sus seis capacidades.
 
 **Tabla 3.2.** Capacidades de la Etapa 2, contexto responsable y hito que atienden
 
@@ -237,7 +237,7 @@ llama la decisión de arquitectura más importante y exige resolverla con fundam
 (Caso, capítulo 5, p. 12). No debe confundirse con el sistema contable y de facturación, que se mantiene
 como único emisor de documentos tributarios (Caso, capítulo 10, restricción 8, p. 24). audIT evaluó las
 cuatro alternativas que el Caso, numeral 16.1, p. 34 enumera, más un paquete de mercado, con los criterios
-de la Tabla 3.3.
+de la Tabla 3.2.4.
 
 **Tabla 3.3.** Alternativas evaluadas para el sistema de gestión de 2013
 
@@ -270,7 +270,7 @@ camiones, en una compañía con 9 % de margen operacional (Caso, numeral 2.3, p.
 La sustitución por funciones aplica el patrón de estrangulamiento: la plataforma nueva crece alrededor
 del sistema existente y le quita funciones una a una hasta que deja de usarse
 (fowler2004_strangler, ). La capa anticorrupción que exige RT-05.20 traduce entre los dos
-modelos mientras conviven (sección 4.1.5). La Tabla 3.4 fija qué función
+modelos mientras conviven (sección 4.1.5). La Tabla 3.2.4 fija qué función
 pasa a qué contexto y cuándo.
 
 **Tabla 3.4.** Retiro del sistema de 2013 función por función
@@ -300,7 +300,7 @@ registro de decisión de arquitectura.
 
 El Caso declara diez materias que no pide y advierte que lo excluido no puede ignorarse en el diseño:
 la solución debe convivir con todo ello y sus dependencias deben quedar identificadas
-(Caso, capítulo 11, p. 24). La Tabla 3.5 recoge las diez y la dependencia que cada una genera.
+(Caso, capítulo 11, p. 24). La Tabla 3.2.5 recoge las diez y la dependencia que cada una genera.
 
 **Tabla 3.5.** Exclusiones del Caso y dependencia que generan en la solución
 
@@ -330,7 +330,7 @@ Los supuestos del entorno, sobre la disposición de terceros a compartir informa
 sección 2.5 del Subdocumento 2 con los códigos SUP-01 a SUP-06. Esta sección declara los supuestos de la
 propuesta: decisiones que audIT toma por el mandante para poder fijar plazos y metas. Cada uno lleva su
 efecto si resulta falso y la instancia en que se valida, como pide el Caso, numeral 17.1, p. 38. La
-Tabla 3.6 los resume y el Formulario T-12 los completa con las veintiséis decisiones del
+Tabla 3.2.6 los resume y el Formulario T-12 los completa con las veintiséis decisiones del
 numeral 16.1.
 
 **Tabla 3.6.** Supuestos del alcance, efecto si fallan y validación
@@ -359,7 +359,7 @@ el apagado de las redes 2G y 3G puede dejar sin señal equipos de terceros que h
 
 Las catorce restricciones del Caso no se discuten (Caso, capítulo 10, p. 23). Lo que esta sección hace es
 mostrar qué parte del alcance condiciona cada una, porque varias se cumplen sólo si el diseño las
-tiene en cuenta desde el principio. La Tabla 3.7 las agrupa por el componente que
+tiene en cuenta desde el principio. La Tabla 3.2.7 las agrupa por el componente que
 restringen.
 
 **Tabla 3.7.** Restricciones del Caso agrupadas por lo que condicionan
@@ -389,7 +389,7 @@ El Caso no trae requerimientos y exige construirlos desde el texto, con su orige
 funcionales, RF-001 a RF-028, y 14 no funcionales, RNF-001 a RNF-014. Cada uno lleva en el Formulario
 T-12 su descripción, actor, precondición, resultado esperado, prioridad, origen, componente, paquete de
 trabajo y prueba de verificación, y los no funcionales además su categoría, umbral numérico, método de
-verificación y a quién son exigibles. La Tabla 3.8 resume el catálogo por contexto.
+verificación y a quién son exigibles. La Tabla 3.2.8 resume el catálogo por contexto.
 
 **Tabla 3.8.** Requerimientos por contexto de la arquitectura y por etapa
 
@@ -451,7 +451,7 @@ requerimiento que lo justifique.
 El Caso pide registrar las reglas propias del transporte que la solución debe respetar y que el
 documento no explicita (Caso, numeral 17.1, p. 38). audIT registra doce. Una regla no es un requerimiento:
 el requerimiento dice qué hace la solución, la regla dice con qué criterio lo decide y quién puede
-cambiar ese criterio. La Tabla 3.9 resume las doce y el Formulario T-12 trae su enunciado
+cambiar ese criterio. La Tabla 3.2.9 resume las doce y el Formulario T-12 trae su enunciado
 completo.
 
 **Tabla 3.9.** Reglas de negocio, fuente y responsable de su cambio
@@ -497,7 +497,7 @@ El Caso fija 29 resultados de negocio y pide comprometerse con ellos, proponer l
 la fija, indicar en qué mes se alcanza cada uno y cómo se mide (Caso, capítulo 18, p. 41). Los 29 tienen
 meta, mes y medición en el Formulario T-12. audIT los clasifica en tres clases, porque un umbral
 ofrecido como si fuera exigencia del Caso confunde la evaluación, y uno fijado sin línea base se
-incumple después. La Tabla 3.10 muestra la distribución.
+incumple después. La Tabla 3.2.10 muestra la distribución.
 
 **Tabla 3.10.** Clases de criterios de aceptación y mes en que se alcanzan
 
@@ -600,7 +600,7 @@ puede exigírsele por la vía laboral, al transportista (Caso, capítulo 10, res
 ### 3.3.3 Atributos de calidad que el esquema resuelve
 
 El esquema responde a cinco atributos que el Informe 1 no analizó: interoperabilidad, escalabilidad,
-seguridad, desempeño y disponibilidad. La Tabla 3.11 muestra, para cada uno, el dato del Caso
+seguridad, desempeño y disponibilidad. La Tabla 3.3.3 muestra, para cada uno, el dato del Caso
 que lo dimensiona y la parte del esquema que lo atiende.
 
 **Tabla 3.11.** Atributos de calidad, dato que los dimensiona y respuesta del esquema
@@ -631,7 +631,7 @@ arquitectura lógica.
 
 ### 3.4.1 Coherencia con el problema del Capítulo 2
 
-El Subdocumento 2 identificó los problemas que el Caso describe y los dimensionó. La Tabla 3.12
+El Subdocumento 2 identificó los problemas que el Caso describe y los dimensionó. La Tabla 3.4.1
 cruza los ocho principales con la capacidad que los resuelve y el criterio que lo verifica.
 
 **Tabla 3.12.** Problema del Capítulo 2, capacidad que lo resuelve y criterio que lo verifica
@@ -735,7 +735,7 @@ quién son los datos: según la regla RN-10, el equipo sólo transmite dentro de
 asignado por la compañía, y fuera de ella el firmware no emite posición. La innovación 4 del Subdocumento
 13 desarrolla ese diseño.
 
-La Tabla 3.13 corrige un punto que el Informe 1 dejó implícito: el nivel de evidencia real
+La Tabla 3.4.3 corrige un punto que el Informe 1 dejó implícito: el nivel de evidencia real
 que habilita cada modalidad.
 
 **Tabla 3.13.** Modalidades de adhesión y nivel de evidencia de jornada que habilitan
@@ -848,7 +848,7 @@ servicio y el Subdocumento 11 los planes de operación.
 ### 3.4.7 Correspondencia con la arquitectura lógica
 
 El Comunicado 10, capítulo 3 exige que el esquema corresponda al ciento por ciento con la arquitectura
-lógica y con los mismos nombres. La Tabla 3.14 cruza cada elemento del esquema con su lugar en el
+lógica y con los mismos nombres. La Tabla 3.4.7 cruza cada elemento del esquema con su lugar en el
 Subdocumento 4.
 
 **Tabla 3.14.** Correspondencia entre el esquema de solución y la arquitectura lógica

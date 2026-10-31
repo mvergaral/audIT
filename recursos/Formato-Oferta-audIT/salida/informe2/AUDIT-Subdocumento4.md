@@ -211,7 +211,7 @@ La descomposición separa responsabilidades que hoy están dispersas entre el si
 planillas, los papeles y las plataformas de posicionamiento. La Figura 4.2 muestra los seis
 contextos y los sistemas con los que conviven.
 
-\figuraAqui{170mm}{figuras/04-arquitectura/LogicaContextos.pdf}{Contextos delimitados del dominio y sistemas con los que convive la solución}{4-contextosfig}
+\figuraAqui{170mm}{figuras/04-arquitectura/audit-figura-4.2-contextos.png}{Contextos delimitados del dominio y sistemas con los que convive la solución}{4-contextosfig}
 
 En la figura, cada contexto tiene su propio lenguaje y sus propios datos. Planificación y tráfico puede
 bloquear un viaje sin conocer por dentro a Personas y cumplimiento ni a Flota y activos, porque les
@@ -367,13 +367,13 @@ agotada ni un documento legal faltante.
 
 La Figura 4.3 muestra los patrones que aíslan el despacho de las integraciones externas.
 
-\figuraAqui[alto=0.84]{228mm}{figuras/04-arquitectura/D3-diagrama11_patrones_resiliencia_despacho.pdf}{Patrones de resiliencia y presupuesto nominal de diseño}{4-resilienciafig}
+\figuraAqui[alto=0.84]{228mm}{figuras/04-arquitectura/audit-figura-4.3-resiliencia.png}{Patrones de resiliencia y presupuesto nominal de diseño}{4-resilienciafig}
 
 La figura sigue la asignación desde la puerta de enlace hasta la persistencia, con los mamparos y
 cortacircuitos que la separan de las integraciones externas. Sus tiempos son hipótesis de diseño y no
 mediciones. La Figura 4.4 detalla los mensajes de la asignación.
 
-\figuraHorizontalAqui{figuras/04-arquitectura/secuencia-asignacion.pdf}{Secuencia de la asignación bloqueante y publicación desde la bandeja de salida}{4-asignacionfig}
+\figuraHorizontalAqui{figuras/04-arquitectura/4-3-asignacion.pdf}{Secuencia de la asignación bloqueante y publicación desde la bandeja de salida}{4-asignacionfig}
 
 La transacción reúne la reserva, la asignación y la bandeja de salida, y la confirmación se devuelve solo
 después del commit. La publicación se reintenta desde la bandeja y el consumidor deduplica, lo que cierra
@@ -445,7 +445,7 @@ formatos abiertos, con validación previa, informe de errores por registro y pro
 capacidad es la que sostiene la migración de las cerca de 6.000 vigencias y la ingesta mensual de
 combustible y peajes. La Figura 4.5 dibuja el mapa de integraciones.
 
-\figuraHorizontalAqui{figuras/04-arquitectura/LogicaIntegraciones.pdf}{Mapa de integraciones. Sistemas internos, fuentes de terreno y contrapartes externas}{4-integracionesfig}
+\figuraHorizontalAqui{figuras/04-arquitectura/LogicaIntegraciones.png}{Mapa de integraciones. Sistemas internos, fuentes de terreno y contrapartes externas}{4-integracionesfig}
 
 La figura distingue el sistema de gestión de 2013, que se sustituye, del sistema contable, que se
 conserva como único emisor tributario detrás de la capa anticorrupción. Los 192 camiones de terceros
@@ -475,7 +475,7 @@ lugar de dejarlo en silencio.
 
 La Figura 4.6 muestra la integración con el sistema contable a través de esa capa.
 
-\figuraHorizontalAqui{figuras/04-arquitectura/D3-diagrama12_integracion_acl_erp2013.pdf}{Integración con el sistema contable heredado a través de la capa anticorrupción}{4-aclfig}
+\figuraHorizontalAqui{figuras/04-arquitectura/audit-figura-4.4-acl.png}{Integración con el sistema contable heredado a través de la capa anticorrupción}{4-aclfig}
 
 El sistema contable queda detrás de la capa y solo recibe eventos ya traducidos.
 
@@ -517,7 +517,7 @@ retorno satelital completo quepa en 90 segundos es condición previa para acepta
 mientras tanto la regla es bloquear la salida sin documento conforme. Ese riesgo se trata en el
 Subdocumento 8. La Figura 4.8 detalla el intercambio y el cotejo previo al movimiento.
 
-\figuraHorizontalAqui{figuras/04-arquitectura/secuencia-documento.pdf}{Secuencia de emisión, entrega y comprobación previa a la salida}{4-documentofig}
+\figuraHorizontalAqui{figuras/04-arquitectura/4-4-documento.pdf}{Secuencia de emisión, entrega y comprobación previa a la salida}{4-documentofig}
 
 La salida se habilita solo con la carga coincidente, el documento válido y la representación portable
 disponible. Un cambio posterior de la carga obliga a corregir con el emisor y a evaluar de nuevo, y la
@@ -581,7 +581,7 @@ y tiempo, que la gerencia consulta sin conocer el modelo transaccional.
 
 La Figura 4.9 muestra la capa analítica y la explotación del costo por kilómetro.
 
-\figuraHorizontalAqui{figuras/04-arquitectura/D3-diagrama13_arquitectura_analitica_lakehouse_bi.pdf}{Capa analítica por niveles de refinamiento y explotación del costo por kilómetro}{4-analiticafig}
+\figuraHorizontalAqui{figuras/04-arquitectura/audit-figura-4.5-analitica.png}{Capa analítica por niveles de refinamiento y explotación del costo por kilómetro}{4-analiticafig}
 
 El costo por kilómetro se calcula distinto según el régimen de propiedad del equipo. Para la flota
 propia se compone de combustible medido por telemetría, peajes efectivamente transitados, neumáticos,
@@ -648,7 +648,7 @@ Subdocumento 13.
 La consolidación del costo de un viaje y la liquidación a los transportistas siguen la secuencia de la
 Figura 4.10, desde el cierre del viaje hasta el acuse del sistema contable.
 
-\figuraHorizontalAqui{figuras/04-arquitectura/secuencia-liquidacion.pdf}{Secuencia del costeo por viaje, la conciliación de insumos y la liquidación en el sistema contable}{4-liquidacionfig}
+\figuraHorizontalAqui{figuras/04-arquitectura/4-6-liquidacion.pdf}{Secuencia del costeo por viaje, la conciliación de insumos y la liquidación en el sistema contable}{4-liquidacionfig}
 
 Al cerrar el viaje, Liquidación y costeo emite la versión preliminar del costo en menos de 24 horas
 (Caso, RT-05.29, p. 32). Cada vez que llega una cartola de combustible o de peaje se registra una versión
@@ -665,7 +665,7 @@ RT-02.13 exige presentar el modelo de dominio del negocio con las entidades prin
 y los eventos de negocio que las modifican. El modelo táctico de la Figura 4.11 lo entrega
 organizado por contexto delimitado, de modo que cada agregado quede bajo el contexto que lo posee.
 
-\figuraAqui[alto=0.84]{228mm}{figuras/04-arquitectura/D3-diagrama2_arquitectura_tactica_ddd.pdf}{Modelo táctico del dominio. Agregados, entidades y objetos de valor por contexto, con los eventos de dominio entre contextos}{4-tacticofig}
+\figuraAqui[alto=0.84]{228mm}{figuras/04-arquitectura/audit-figura-4.6-tactico.png}{Modelo táctico del dominio. Agregados, entidades y objetos de valor por contexto, con los eventos de dominio entre contextos}{4-tacticofig}
 
 Cada agregado de la figura pertenece a un solo contexto delimitado. Los eventos de dominio van en línea
 discontinua, desde el contexto que los publica hasta el que los recibe. Los comandos y los eventos de
@@ -883,7 +883,7 @@ conforme que el movimiento necesita.
 La Figura 4.12 muestra la reconexión: autenticación, lotes numerados, admisión,
 deduplicación, commit y acuse duradero. Solo el último acuse permite depurar el búfer.
 
-\figuraHorizontalAqui{figuras/04-arquitectura/secuencia-reconexion.pdf}{Secuencia de la reconexión, con el acuse posterior a la persistencia y la conciliación por camión}{4-reconexionsecfig}
+\figuraHorizontalAqui{figuras/04-arquitectura/4-7-reconexion.pdf}{Secuencia de la reconexión, con el acuse posterior a la persistencia y la conciliación por camión}{4-reconexionsecfig}
 
 La conciliación conserva el original y la resolución de cada conflicto, y la hora de recepción no
 reemplaza la hora del evento. La prueba CP-PERF-02 debe demostrar que cada camión, después de 72 horas

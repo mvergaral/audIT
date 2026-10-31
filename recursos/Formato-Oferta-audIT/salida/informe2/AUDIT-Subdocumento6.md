@@ -4,6 +4,14 @@ audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. O
 
 ## 6 Metodologías
 
+\ProvideDocumentCommand\figuraHorizontalAqui{mmm}{
+![Figura 6.1. #2](../../#1)
+
+*Figura 6.1. #2*
+
+Fuente: Elaboración propia.
+}
+
 La gestión combina PMBOK para alcance, adquisiciones, riesgos y cambios; Scrum para incrementos de software; Kanban para incidencias y estabilización. S3/T-12 fija 28 RF y 14 RNF —catálogo de la oferta, no número de requisitos impuestos por el Caso—; S7 organiza paquetes e hitos y S9 establece aceptación y evidencia. Los Formularios T-9/T-10 acompañan el capítulo como archivos propios conforme al Comunicado 10.
 
 El CLIENTE recibe una línea base controlada, responsables y decisiones registradas, incrementos trazados a requisitos y un flujo DevSecOps con bloqueo de promoción ante incumplimiento. El contrato conserva 56 meses, con desarrollo E1 M1–12, marcha blanca E1 M13–15, producción E1 M16, desarrollo E2 M13–18, marcha blanca E2 M19–20 y operación completa M21–56 (FEP01, Artículo 17.1, p. 12). La metodología no acredita por sí sola que esos resultados ya se hayan obtenido.
@@ -29,11 +37,7 @@ La administración del contrato se fundamenta en un modelo de ciclo de vida híb
 
 La articulación temporal del marco de gestión y su integración con los hitos contractuales de la licitación se ilustra en la Figura 6.1.
 
-![Figura 6.1. Gobernanza temporal del proyecto y articulación de fases, etapas y marchas blancas](../../figuras/06-metodologias/vertical/6-1-hitos.pdf)
-
-*Figura 6.1. Gobernanza temporal del proyecto y articulación de fases, etapas y marchas blancas*
-
-Fuente: Elaboración propia.
+\figuraHorizontalAqui{figuras/06-metodologias/6-1-hitos.pdf}{Gobernanza temporal del proyecto y articulación de fases, etapas y marchas blancas}{06-6-1-hitos}
 
 La Figura 6.1 representa el solapamiento desde M13: la estabilización de E1 y la construcción de E2 usan equipos y capacidad segregados. M25–56 aparece como tramo comprimido, identificado expresamente; el detalle mensual y las fechas derivadas de SA-01 corresponden a S7.
 
@@ -116,11 +120,7 @@ El control de cadena de suministro adopta SLSA v1.2 Build L3: plataforma alojada
 
 El pipeline de entrega continua se ejecuta automáticamente ante cada evento de integración en el repositorio, transitando obligatoriamente por seis fases de validación, ilustradas en la Figura 6.2.
 
-![Figura 6.2. Fases y puertas de calidad del pipeline DevSecOps unificado](../../figuras/06-metodologias/vertical/6-2-pipeline.pdf)
-
-*Figura 6.2. Fases y puertas de calidad del pipeline DevSecOps unificado*
-
-Fuente: Elaboración propia.
+\figuraHorizontalAqui{figuras/06-metodologias/6-2-pipeline.pdf}{Fases y puertas de calidad del pipeline DevSecOps unificado}{06-6-2-pipeline}
 
 Como se representa en la Figura 6.2, ninguna versión de software puede alcanzar el ambiente de producción sin superar secuencialmente las seis etapas del pipeline. En la Tabla 6.3 se definen los umbrales bloqueantes parametrizados para comprobar los criterios de calidad y seguridad del artefacto.
 

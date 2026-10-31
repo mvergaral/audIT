@@ -67,7 +67,7 @@ consultas y vacíos.
 
 ## Glosario de códigos
 
-Cada código se usa con el mismo significado en toda la oferta. La Tabla 3.1 los define.
+Cada código se usa con el mismo significado en toda la oferta. La Tabla  los define.
 
 **Tabla 3.1.** Códigos usados en el catálogo y su significado
 
@@ -702,7 +702,7 @@ tienen requerimientos que los justifican.
 
 ## Registro de reglas de negocio
 
-La Tabla 3.3 enuncia las doce reglas que el Subdocumento 3 resume. Cada una indica quién puede
+La Tabla  enuncia las doce reglas que el Subdocumento 3 resume. Cada una indica quién puede
 cambiarla. Un cambio de regla sigue el procedimiento de control de cambios del Subdocumento 6 y queda versionado.
 
 **Tabla 3.2.** Reglas de negocio de la solución
@@ -728,7 +728,7 @@ proceso.
 
 ## Registro de supuestos
 
-La Tabla 3.4 declara los supuestos del alcance con su fundamento. Su efecto si fallan y su
+La Tabla  declara los supuestos del alcance con su fundamento. Su efecto si fallan y su
 validación están en la sección 3.2.6 del Subdocumento 3.
 
 **Tabla 3.3.** Supuestos del alcance y su fundamento
@@ -744,7 +744,7 @@ validación están en la sección 3.2.6 del Subdocumento 3.
 | SA-07 | El mandante firma los anexos de adhesión | El contrato de transporte es entre el mandante y el transportista |
 | SA-08 | Los terceros con equipo conservan su servicio de posicionamiento | Riesgo de apagado de redes 2G y 3G tratado en el Subdocumento 8 |
 
-La Tabla 3.5 resuelve las veintiséis decisiones del Caso, numeral 16.1, pp. 34 a 36, que el
+La Tabla  resuelve las veintiséis decisiones del Caso, numeral 16.1, pp. 34 a 36, que el
 Caso, numeral 17.1, p. 38 obliga a incluir en este registro.
 
 **Tabla 3.4.** Decisiones del numeral 16.1 tomadas por audIT
@@ -784,7 +784,7 @@ la decisión.
 
 ## Criterios de aceptación
 
-La Tabla 3.6 compromete los 29 criterios del Caso, capítulo 18, pp. 41 a 43 con su meta, el mes
+La Tabla  compromete los 29 criterios del Caso, capítulo 18, pp. 41 a 43 con su meta, el mes
 del contrato en que se alcanza y la forma de medirlo.
 
 **Tabla 3.5.** Criterios de aceptación con meta, mes y medición
@@ -827,7 +827,7 @@ renegociación de 2027 no espera al Artículo 17.
 
 ## Registro de consultas y vacíos
 
-La Tabla 3.7 recoge las consultas formuladas en el período del FEP01, Artículo 43, p. 27 y los vacíos que
+La Tabla  recoge las consultas formuladas en el período del FEP01, Artículo 43, p. 27 y los vacíos que
 audIT encontró después y que el Caso, numeral 16.1, p. 36 invita a declarar.
 
 **Tabla 3.6.** Consultas al mandante y vacíos detectados
@@ -850,3 +850,4 @@ audIT encontró después y que el Caso, numeral 16.1, p. 36 invita a declarar.
 
 Los vacíos V-01 y V-02 no están en la lista del numeral 16.1 y condicionan el plan. Ambos se resuelven
 en esta oferta sin alterar el cronograma obligatorio.
+

@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="257.4mm" height="167.0mm" viewBox="0 0 729.6 473.4">
+<defs><marker id="fin-n" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="5.5" markerHeight="5.5" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#2B2B2B"/></marker><marker id="ini-n" viewBox="0 0 10 10" refX="0.5" refY="5" markerWidth="5.5" markerHeight="5.5" markerUnits="userSpaceOnUse" orient="auto"><path d="M10,0.8 L0,5 L10,9.2 z" fill="#2B2B2B"/></marker><marker id="fin-r" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="5.5" markerHeight="5.5" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#C0392B"/></marker><marker id="ini-r" viewBox="0 0 10 10" refX="0.5" refY="5" markerWidth="5.5" markerHeight="5.5" markerUnits="userSpaceOnUse" orient="auto"><path d="M10,0.8 L0,5 L10,9.2 z" fill="#C0392B"/></marker><symbol id="ic-flu-candado" viewBox="0 0 32 32" fill="none">
+<path d="M16 2C12.6863 2 10 4.68629 10 8V11C10 14.3137 12.6863 17 16 17C19.3137 17 22 14.3137 22 11V8C22 4.68629 19.3137 2 16 2ZM16 4.5C17.933 4.5 19.5 6.067 19.5 8V11C19.5 12.933 17.933 14.5 16 14.5C14.067 14.5 12.5 12.933 12.5 11V8C12.5 6.067 14.067 4.5 16 4.5Z" fill="#D3D3D3"/>
+<path d="M5 14C5 12.3431 6.34315 11 8 11H24C25.6569 11 27 12.3431 27 14V27C27 28.6569 25.6569 30 24 30H8C6.34315 30 5 28.6569 5 27V14Z" fill="#F9C23C"/>
+<path d="M17.5 20.5002C18.1072 20.0441 18.5 19.3179 18.5 18.5C18.5 17.1193 17.3807 16 16 16C14.6193 16 13.5 17.1193 13.5 18.5C13.5 19.3179 13.8928 20.0441 14.5 20.5002V24C14.5 24.8284 15.1716 25.5 16 25.5C16.8284 25.5 17.5 24.8284 17.5 24V20.5002Z" fill="#433B6B"/>
+</symbol><symbol id="ic-flu-documento" viewBox="0 0 32 32" fill="none">
+<path d="M20.3432 2.29289C20.1556 2.10536 19.9013 2 19.6361 2H7C5.89543 2 5 2.89543 5 4V28C5 29.1046 5.89543 30 7 30H25C26.1046 30 27 29.1046 27 28V9.36394C27 9.09872 26.8946 8.84437 26.7071 8.65683L20.3432 2.29289Z" fill="#B4ACBC"/>
+<path d="M19.6821 3.00001L7 3C6.44772 3 6 3.44772 6 4V28C6 28.5523 6.44772 29 7 29L25 29C25.5523 29 26 28.5523 26 28V9.45333L19.6821 3.00001Z" fill="#F3EEF8"/>
+<path d="M9.5 12H22.5C22.7761 12 23 12.2239 23 12.5C23 12.7761 22.7761 13 22.5 13H9.5C9.22386 13 9 12.7761 9 12.5C9 12.2239 9.22386 12 9.5 12ZM9.5 15C9.22386 15 9 15.2239 9 15.5C9 15.7761 9.22386 16 9.5 16H22.5C22.7761 16 23 15.7761 23 15.5C23 15.2239 22.7761 15 22.5 15H9.5ZM9 18.5C9 18.2239 9.22386 18 9.5 18H22.5C22.7761 18 23 18.2239 23 18.5C23 18.7761 22.7761 19 22.5 19H9.5C9.22386 19 9 18.7761 9 18.5ZM9.5 21C9.22386 21 9 21.2239 9 21.5C9 21.7761 9.22386 22 9.5 22H17.5C17.7761 22 18 21.7761 18 21.5C18 21.2239 17.7761 21 17.5 21H9.5Z" fill="#998EA4"/>
+<path d="M26 9.45325H21.3892C20.4464 9.45325 19.6821 8.68896 19.6821 7.74614V3L26 9.45325Z" fill="#CDC4D6"/>
+</symbol><symbol id="ic-flu-ubicacion" viewBox="0 0 32 32" fill="none">
+<path d="M15.93 29.92C15.37 29.92 14.92 29.47 14.92 28.91V15.94H16.95V28.9C16.94 29.47 16.49 29.92 15.93 29.92Z" fill="#D3D3D3"/>
+<path d="M15.93 17.86C20.3096 17.86 23.86 14.3096 23.86 9.93C23.86 5.55038 20.3096 2 15.93 2C11.5504 2 8 5.55038 8 9.93C8 14.3096 11.5504 17.86 15.93 17.86Z" fill="#F70A8D"/>
+<path d="M16.5 5.41001C15.46 6.45001 15.41 8.07001 16.38 9.04001C17.35 10.01 18.98 9.96001 20.01 8.92001C21.05 7.88001 21.1 6.26001 20.13 5.29001C19.16 4.32001 17.53 4.37001 16.5 5.41001Z" fill="white"/>
+</symbol><symbol id="ic-pr-g26i" viewBox="0 0 48 48"><rect x="3" y="31" width="6" height="4.5" rx="1" fill="#9B9B9B"/><rect x="39" y="31" width="6" height="4.5" rx="1" fill="#9B9B9B"/><rect x="12" y="9.5" width="4.6" height="6.5" rx="1" fill="#FFB02E"/><rect x="21.7" y="9.5" width="4.6" height="6.5" rx="1" fill="#FFB02E"/><rect x="31.4" y="9.5" width="4.6" height="6.5" rx="1" fill="#FFB02E"/><rect x="7" y="15" width="34" height="23" rx="4.5" fill="#321B41"/><circle cx="13.5" cy="26.5" r="1.7" fill="#00D26A"/><circle cx="18.5" cy="26.5" r="1.7" fill="#26C9FC"/><rect x="24" y="23.5" width="12.5" height="6" rx="1" fill="#533566"/></symbol><symbol id="ic-pr-reconciliador" viewBox="0 0 48 48"><rect x="11" y="5" width="26" height="38" rx="2.5" fill="#D3D3D3"/><rect x="18" y="3" width="12" height="5" rx="1.5" fill="#433B6B"/><path d="M16.5 25 L21.5 30 L32 19.5" fill="none" stroke="#00D26A" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/></symbol><symbol id="ic-pr-servicio" viewBox="0 0 48 48"><path d="M24 4 L41.3 14 V34 L24 44 L6.7 34 V14 Z" fill="#0074BA"/><path d="M24 14 L32.7 19 V29 L24 34 L15.3 29 V19 Z" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol></defs>
+<rect x="0" y="0" width="729.6" height="473.4" fill="#FFFFFF"/>
+<g id="grupos">
+<rect x="17.00" y="65.00" width="210.00" height="122.00" rx="6" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="260.00" y="65.00" width="210.00" height="122.00" rx="6" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="503.00" y="65.00" width="210.00" height="122.00" rx="6" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="17.00" y="249.00" width="210.00" height="122.00" rx="6" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="260.00" y="249.00" width="210.00" height="122.00" rx="6" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="503.00" y="249.00" width="210.00" height="122.00" rx="6" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="14.00" y="405.00" width="701.60" height="61.00" rx="6" fill="#F7F8FA" stroke="#404040" stroke-width="0.75"/>
+</g>
+<g id="flechas">
+<path d="M227.00,126.00 L260.00,126.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" marker-end="url(#fin-n)"/>
+<path d="M470.00,126.00 L503.00,126.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" marker-end="url(#fin-n)"/>
+<path d="M227.00,310.00 L260.00,310.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" marker-end="url(#fin-n)"/>
+<path d="M470.00,310.00 L503.00,310.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" marker-end="url(#fin-n)"/>
+<path d="M608.00,187.00 L608.00,216.00 L122.00,216.00 L122.00,249.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" marker-end="url(#fin-n)"/>
+</g>
+<g id="iconos">
+<use href="#ic-flu-ubicacion" x="108.00" y="99.00" width="28.00" height="28.00"/>
+<use href="#ic-flu-documento" x="351.00" y="99.00" width="28.00" height="28.00"/>
+<use href="#ic-pr-servicio" x="594.00" y="99.00" width="28.00" height="28.00"/>
+<use href="#ic-flu-candado" x="108.00" y="283.00" width="28.00" height="28.00"/>
+<use href="#ic-pr-g26i" x="351.00" y="283.00" width="28.00" height="28.00"/>
+<use href="#ic-pr-reconciliador" x="594.00" y="283.00" width="28.00" height="28.00"/>
+<rect x="243.07" y="203.80" width="243.87" height="9.90" fill="#FFFFFF"/>
+</g>
+<g id="textos">
+<text x="14.00" y="18.00" font-size="11" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">Proceso propuesto: programar intervenciones por oportunidad de patio</text>
+<text x="25.00" y="80.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">1. Observar</text>
+<text x="122.00" y="138.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">ETA y paso por terminal</text>
+<text x="122.00" y="150.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Permiso y actualidad</text>
+<text x="268.00" y="80.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">2. Preparar</text>
+<text x="365.00" y="138.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Familia de equipo / kit</text>
+<text x="365.00" y="150.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Versión y pruebas previas</text>
+<text x="511.00" y="80.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">3. Programar</text>
+<text x="608.00" y="138.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Ventana, técnico y stock</text>
+<text x="608.00" y="150.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Prioridad + plan manual</text>
+<text x="25.00" y="264.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">4. Autorizar</text>
+<text x="122.00" y="322.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Vehículo detenido en terminal</text>
+<text x="122.00" y="334.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Ventana y kit confirmados</text>
+<text x="268.00" y="264.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">5. Intervenir</text>
+<text x="365.00" y="322.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Configurar / instalar</text>
+<text x="365.00" y="334.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Validar antes de liberar</text>
+<text x="511.00" y="264.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">6. Aprender</text>
+<text x="608.00" y="322.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Acta y tiempos reales</text>
+<text x="608.00" y="334.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Recalibrar el próximo plan</text>
+<text x="365.00" y="211.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Plan factible → confirmar ventana; si no existe, reprogramar</text>
+<text x="24.00" y="423.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">La instalación por unidad en terminal es obligatoria; el aporte es la planificación dinámica verificable.</text>
+<text x="24.00" y="436.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">Piloto: 10 unidades en M6; flota propia M6–9. Metas y línea base se miden; no se inventan resultados.</text>
+<text x="24.00" y="449.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">El twin conserva estado deseado/reportado. Eventos y actas guardan el historial de cada intervención.</text>
+</g>
+</svg>

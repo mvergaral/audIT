@@ -228,12 +228,14 @@
 <rect x="618.00" y="344.00" width="104.00" height="126.00" rx="10" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
 </g>
 <g id="flechas">
-<path d="M54.00,38.00 L54.00,44.00 L194.00,44.00 L194.00,50.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" marker-end="url(#fin-n)"/>
+<path d="M48.00,38.00 L48.00,44.00 L194.00,44.00 L194.00,50.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" marker-end="url(#fin-n)"/>
+<path d="M60.00,38.00 L60.00,44.00 L298.00,44.00 L298.00,50.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" marker-end="url(#fin-n)"/>
 <path d="M150.00,38.00 L150.00,44.00 L194.00,44.00 L194.00,50.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" marker-end="url(#fin-n)"/>
 <path d="M240.00,38.00 L240.00,44.00 L194.00,44.00 L194.00,50.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" marker-end="url(#fin-n)"/>
 <path d="M252.00,38.00 L252.00,44.00 L298.00,44.00 L298.00,50.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" marker-end="url(#fin-n)"/>
 <path d="M336.00,38.00 L336.00,44.00 L298.00,44.00 L298.00,50.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" marker-end="url(#fin-n)"/>
-<path d="M424.00,38.00 L424.00,44.00 L400.00,44.00 L400.00,50.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" marker-end="url(#fin-n)"/>
+<path d="M430.00,38.00 L430.00,44.00 L298.00,44.00 L298.00,50.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" marker-end="url(#fin-n)"/>
+<path d="M430.00,38.00 L430.00,44.00 L400.00,44.00 L400.00,50.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" marker-end="url(#fin-n)"/>
 <path d="M401.00,98.00 L401.00,106.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" marker-end="url(#fin-n)"/>
 <path d="M411.00,106.00 L411.00,98.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" marker-end="url(#fin-n)"/>
 <path d="M401.00,126.00 L401.00,134.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" marker-end="url(#fin-n)"/>
@@ -416,6 +418,6 @@
 <text x="645.00" y="447.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">SQLite</text>
 <text x="645.00" y="457.50" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Modo WAL</text>
 <text x="697.00" y="447.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Búfer</text>
-<text x="697.00" y="457.50" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">288 h</text>
+<text x="697.00" y="457.50" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">72 h mín.</text>
 </g>
 </svg>

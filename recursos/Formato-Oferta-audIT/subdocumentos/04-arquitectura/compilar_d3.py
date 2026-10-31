@@ -2,8 +2,8 @@
 """Compila D3 con el formato oficial y su bibliografía adicional local.
 
 Desde cualquier carpeta: python3 <ruta de este archivo> [04 05 06 13]
-S3 se compila como dependencia cuando lo necesitan los enlaces de S13.
-Las imágenes se leen de Informe-2/D3/graficos; no se duplican.
+S1 y S3 se compilan como dependencias de las referencias cruzadas.
+Las figuras oficiales se actualizan desde Informe-2/D3/graficos antes de compilar.
 """
 from pathlib import Path
 import os
@@ -17,13 +17,16 @@ os.environ.setdefault('TEXMFVAR', str(cache))
 os.environ.setdefault('TEXMFCACHE', str(cache))
 sys.path.insert(0, str(OFERTA / 'herramientas'))
 import compilar
+sys.path.insert(0, str(OFERTA.parents[1] / 'Informe-2/D3/generadores_graficos'))
+from publicar_graficos import publicar
 
 compilar.OFERTA.bib = 'subdocumentos/04-arquitectura/referencias-d3.bib'
 numeros = sys.argv[1:] or ['04', '05', '06', '13']
 seleccion = set(numeros)
-if seleccion & {'06', '13'}:
-    seleccion.update({'03', '04', '13'})
+if seleccion & {'04', '06', '13'}:
+    seleccion.update({'01', '03', '04', '13'})
 numeros = sorted(seleccion, key=int)
 sys.argv = [sys.argv[0], 'subdocs', *numeros, '-j', '2']
 if __name__ == '__main__':
+    publicar()
     raise SystemExit(compilar.main())

@@ -64,7 +64,11 @@ del Caso, numerales 2.3, 4.4, 4.11 y 16.1, pp. 7, 10, 12 y 35 y del (Caso, capí
 Cuatro de las cinco usan el equipo a bordo que especifica el Formulario T-11, y dos usan el portal del
 transportista. La Figura 13.1 ubica cada innovación en las capas de la arquitectura.
 
-\figuraAqui{200mm}{figuras/13-innovaciones/cartera.pdf}{Cartera de innovaciones sobre las capas de la arquitectura, con los componentes que usa cada una}{13-carterafig}
+![Figura 13.1. Cartera de innovaciones sobre las capas de la arquitectura, con los componentes que usa cada una](../../figuras/13-innovaciones/13-cartera.png)
+
+*Figura 13.1. Cartera de innovaciones sobre las capas de la arquitectura, con los componentes que usa cada una*
+
+Fuente: Elaboración propia.
 
 En la figura, el equipo a bordo concentra las innovaciones 2, 3, 4 y 5, y el portal del transportista
 las innovaciones 1 y 4. Esa concentración permite montar el valor nuevo sobre componentes que la
@@ -189,13 +193,9 @@ Se utiliza la escala TRL de nueve niveles explicada por NASA (Manning, 2023), ap
 
 ### 13.2.4 Incorporación, arquitectura y calendario
 
-La Figura 13.3 muestra el proceso, sus entradas y el control que evita intervenir sin ventana confirmada.
+La Figura 13.2 muestra el proceso, sus entradas y el control que evita intervenir sin ventana confirmada.
 
-![Figura 13.3. Programación y ejecución de intervenciones por oportunidad de patio](../../figuras/13-innovaciones/intervenciones.png)
-
-*Figura 13.3. Programación y ejecución de intervenciones por oportunidad de patio*
-
-Fuente: Elaboración propia.
+\figuraHorizontalAqui{figuras/13-innovaciones/13-2-intervenciones.pdf}{Programación y ejecución de intervenciones por oportunidad de patio}{13-proceso-13-2-intervenciones}
 
 \begingroup\emergencystretch=3em
 Flota y activos conserva `INTERVENCION_\allowbreak{}TALLER`; Telemetría conserva `DISPOSITIVO` y eventos de configuración; la plataforma de S6 construye y firma el artefacto. El manifiesto vincula dispositivo, familia, kit, versión y acta de validación, sin sobrescribir la evidencia anterior. El detalle de planificación se mantiene en el backlog EDT 12.2, con integración a EDT 4.1/4.2; no se altera la EDT del Subdocumento 7.\endgroup
@@ -290,7 +290,7 @@ comerciales en operación (Teltonika Telematics, 2026; Minew, 2023). La inferenc
 de la verificación bloqueante parten en nivel 6 y llegan a nivel 7 cuando se demuestran en la operación
 durante la marcha blanca, como pide FEP02, RT-26.03, p. 44.
 
-**Diseño de la incorporación.**  La Figura 13.2 muestra dónde se inserta la
+**Diseño de la incorporación.**  La Figura 13.3 muestra dónde se inserta la
 innovación en la arquitectura.
 
 \figuraHorizontalAqui{figuras/13-innovaciones/semirremolque.pdf}{Semirremolque conectado: la baliza, sus dos lectores y los tres servicios de negocio que usan el acople}{13-semirremolquefig}

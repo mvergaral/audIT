@@ -166,7 +166,7 @@ El sistema de gestión de 2013 mezcla los seis, y esa es la razón de fondo por 
 que se encargó y no conoce el viaje que ocurrió. La Figura 4.2 muestra los seis contextos
 y los sistemas con los que conviven.
 
-![Figura 4.2. Contextos delimitados del dominio y sistemas con los que convive la solución](../../figuras/04-arquitectura/LogicaContextos.pdf)
+![Figura 4.2. Contextos delimitados del dominio y sistemas con los que convive la solución](../../figuras/04-arquitectura/LogicaContextos.png)
 
 *Figura 4.2. Contextos delimitados del dominio y sistemas con los que convive la solución*
 
