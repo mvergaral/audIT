@@ -1,20 +1,20 @@
 # Guion oral · Revisión 2 · cinco expositores
 
-**Duración prevista:** 14:49 de exposición + 0:11 de margen, seguidos por 15 minutos de preguntas. Los tiempos son una pauta de ensayo, no una promesa de duración automática. Sustituir «Expositor 1–5» por la distribución real del equipo solo en este guion interno. En la presentación corporativa no se agregan nombres personales.
+**Duración prevista:** 14:29 de exposición + 0:31 de margen, seguidos por 15 minutos de preguntas. Es una pauta para ensayar, no una medición de duración. Expositor 1–5 identifica la distribución interna; la presentación corporativa conserva roles y códigos.
 
 | Voz | Diapositivas | Tramo previsto | Tema |
 | --- | --- | --- | --- |
-| Expositor 1 | 1–7 | 0:00–3:23 | Problema, correcciones y arquitectura lógica |
-| Expositor 2 | 8–11 | 3:23–5:53 | Arquitectura física, equipo a bordo, datos y desconexión |
-| Expositor 3 | 12–15 | 5:53–8:11 | EDT: niveles 0–2, diccionario y regla del 100 % |
-| Expositor 4 | 16–19 | 8:11–11:06 | Carta Gantt, qué pasa si, G13 y transición |
-| Expositor 5 | 20–26 | 11:06–14:49 | Riesgos, reservas, cierre y preguntas |
+| Expositor 1 | 1–7 | 0:00–3:28 | Problema, correcciones y arquitectura lógica |
+| Expositor 2 | 8–11 | 3:28–5:53 | Arquitectura física, datos y desconexión |
+| Expositor 3 | 12–15 | 5:53–7:51 | EDT, diccionario y cobertura |
+| Expositor 4 | 16–19 | 7:51–10:56 | Red, G13, transición y capacidad |
+| Expositor 5 | 20–26 | 10:56–14:29 | Riesgos, reservas y cierre |
 
-Las indicaciones entre **[corchetes]** son para ensayar; no se pronuncian. Cada persona mira al público y usa la lámina como evidencia, sin leer palabra por palabra. Los relevos se realizan en los límites de la tabla anterior; los separadores introducen cada acto. Las marcas rojas «✓ Obs.» de la arquitectura indican la observación del Informe 1 que esa vista resuelve: se nombran sólo si hay tiempo o si la comisión pregunta.
+Las indicaciones entre **[corchetes]** son para ensayar; no se pronuncian. Los relevos siguen la tabla. Los separadores introducen actos. La lámina 3 expone las correcciones; sus marcas de observación y R10 amplían la evidencia cuando se requiera. Las cifras de desempeño y riesgo conservan su condición de diseño o estimación.
 
-## Expositor 1 · 0:00–3:23
+## Expositor 1 · 0:00–3:28
 
-**Diapositiva 1 · Portada · 10 s**
+**Diapositiva 1 · Portada · 15 s**
 
 «Buenos días. Presentamos la segunda revisión de nuestra propuesta para Transportes Curimón. Revisaremos las correcciones del primer informe, los riesgos de la solución y del proyecto, y cómo la EDT y los hitos gobiernan la ejecución.»
 
@@ -30,11 +30,11 @@ Referencia para preguntas: observaciones 01/38/45/48, S3 §3.2.8 y T-12/T-17; 37
 
 **Diapositiva 4 · Separador: Qué construimos · 3 s**
 
-[Lámina de transición: avanzar enseguida.]
+[Transición de acto: avanzar al terminar la frase anterior.]
 
 **Diapositiva 5 · Contexto y tres planos · 40 s**
 
-«Abrir con el mapa completo. [Nube.] El núcleo vive en Chile Central, en tres zonas; Brazil South queda para recuperación. [Sitio.] San Bernardo sostiene la torre sin enlace y la integración con el contable, que sigue siendo el único emisor. Cada terminal tiene dos nodos y respaldo 5G. [Flota.] Los 182 camiones con equipo audIT conviven con 192 de terceros que conservan el suyo. [Componentes.] Son 39 componentes: 24 en la región primaria, uno en la secundaria y 14 fuera de la nube.»
+«[Nube.] El núcleo vive en Chile Central, en tres zonas; Brazil South queda para recuperación. [Sitios.] San Bernardo sostiene la torre y la integración con el contable, único emisor. Cada terminal tiene dos nodos y respaldo 5G. [Flota.] Los 182 camiones audIT conviven con 192 de terceros que conservan sus equipos; acceder a sus datos exige autorización y factibilidad por proveedor. [Componentes.] Son 39: 24 en la región primaria, uno en la secundaria y 14 fuera de la nube.»
 
 **Diapositiva 6 · Arquitectura lógica · 45 s**
 
@@ -44,92 +44,100 @@ Referencia para preguntas: observaciones 01/38/45/48, S3 §3.2.8 y T-12/T-17; 37
 
 «Seguir una petición real por la pila. [Solicitud.] La torre pide asignar conductor, tracto, semirremolque y carga. [Invariantes.] Planificación evalúa en paralelo tres condiciones y pregunta a quien es dueño de cada dato: Personas, Flota y el documento del contable. Una causa legal bloquea siempre, y el rechazo explica por qué. [Presupuesto.] El Caso da 30 segundos: dos para identidad, ocho para las tres evaluaciones en paralelo, ocho para reservar y confirmar, cuatro para veredicto y auditoría, tres para responder, y cinco de margen. [Cierre.] Ojo: es un reparto de diseño, todavía sin medición.»
 
-## Expositor 2 · 3:23–5:53
+## Expositor 2 · 3:28–5:53
 
-**Diapositiva 8 · Arquitectura física · 45 s**
+**Diapositiva 8 · Arquitectura física · 40 s**
 
-«Bajar de la idea al equipo. [Nube.] Lo que se contrata en Azure, por subred, y Brazil South con RPO de 15 minutos y RTO de 4 horas. [Sitios.] San Bernardo va en pares: dos servidores R360, dos FortiGate, clima N+1, detección por aspiración y grupo electrógeno. Cada terminal tiene dos Karbon 430 en activo y espera y un router 5G. El camión lleva el G26I, el módem Iridium, el lector CAN sin contacto y el lector de tarjeta. [Enlaces.] Cada enlace tiene medio, respaldo y tiempo de conmutación: ExpressRoute de 100 Mbit/s con VPN de respaldo en menos de un minuto; terminal fijo con 5G; camión LTE con Iridium. [Cierre.] Cinco ambientes desde el mismo código. Todo el hardware lo compra el mandante; el detalle y las cantidades están en el T-11.»
+«[Nube.] Chile Central concentra producción; el esquema identifica sus dos redes. Brazil South es recuperación: RPO de 15 minutos y RTO de cuatro horas. [Enlaces.] El camión llega por LTE o Iridium a IoT Hub de Chile Central. San Bernardo usa ExpressRoute de 100 Mbit/s y VPN; terminales, enlace fijo y 5G. [Energía.] Fuentes y adaptadores A/B en circuitos distintos en San Bernardo. Cada terminal tiene dos fuentes y un módulo por cada bus de 24 y 48 V: UPS más otro circuito del tablero. [Cierre.] El mandante compra el hardware de T-11. Los cinco ambientes se construyen desde el mismo código.»
 
 **Diapositiva 9 · El camión · 35 s**
 
-«El Caso pide tratar el equipo a bordo como un componente on-premise distribuido. [Equipo.] Es un iWave G26I: Linux, tres buses CAN, LTE, GNSS y un elemento seguro para arranque y claves; aguanta la cabina. [Periféricos.] Cada uno responde a una restricción: el CANCrocodile lee el bus sin cortar cables, para no tocar la garantía; el lector MIFARE identifica al conductor con el camión detenido; el Iridium cubre los tramos sin señal; y la baliza comprueba qué semirremolque va acoplado. [Memoria.] La observación 73 pidió derivar los 8 GB: se necesitan 2.374 MB, y el búfer de 288 horas para el cierre de Los Libertadores pesa menos del 2 %.»
+«[Equipo.] El iWave G26I ejecuta Linux y conserva datos localmente. [Periféricos.] CANCrocodile lee sin cortar el arnés, sujeto a autorización y homologación. MIFARE identifica al conductor detenido. Iridium cubre la falta de señal y la baliza identifica el semirremolque. [Memoria.] La observación 73 se responde derivando 2.374 MB; la configuración mínima elegida es de 8 GB. El búfer de 288 horas ocupa 38,4 MB y cubre el escenario de cierre fronterizo.»
 
-**Diapositiva 10 · Datos · 40 s**
+**Diapositiva 10 · Datos · 35 s**
 
-«Cada dato tiene su motor. [Dominios.] PostgreSQL confirma asignaciones y vigencias; SQLite captura a bordo; TimescaleDB conserva telemetría. La caché nunca habilita con una copia vieja. Documentos y auditoría quedan inmutables y la analítica se separa del despacho. [Volumen.] Se dimensionan 96 mil viajes y cerca de 120 millones de posiciones al año. [Migración.] Cuatro fases y 6.000 vigencias verificadas una a una: nada en cuarentena habilita un despacho.»
+«[Dominios.] PostgreSQL confirma asignaciones; SQLite captura a bordo; TimescaleDB conserva telemetría. La caché nunca habilita con una copia vieja. Documentos y auditoría quedan inmutables y la analítica se separa del despacho. [Volumen.] Se dimensionan 96 mil viajes y cerca de 120 millones de posiciones al año. [Migración.] Las aproximadamente seis mil vigencias requieren verificación documental individual y respaldo custodiado. El hash comprueba integridad; nada en cuarentena habilita despacho.»
 
-**Diapositiva 11 · Sin enlace · 30 s**
+**Diapositiva 11 · Sin enlace · 35 s**
 
-«Cortar los enlaces en la misma vista. [Corte.] Lo que exige estado global, asignar un viaje nuevo y emitir el documento, sigue pasando por el servicio central: no se inventan vigencias ni asignaciones. [Autonomía.] San Bernardo y los terminales operan 24 horas: la torre, las emergencias, la consulta de vigencias en portería. El camión guarda al menos 72 horas, y el diseño llega a 288. [Reconexión.] Al volver la señal se sube por lotes con acuse, y la prueba CP-PERF-02 exige 20 minutos para 300 camiones. Este es el puente con los riesgos: estas mismas piezas son las barreras del R-28.»
+«[Autoridad.] Una asignación nueva requiere estado autoritativo en Azure. El documento tributario lo emite únicamente el contable de San Bernardo, mediante la integración. [Autonomía.] San Bernardo y terminales sostienen 24 horas de funciones locales. El camión conserva 72 horas como mínimo contractual y 288 por diseño. [Reconexión.] Los lotes se deduplican y se liberan con acuse duradero. CP-PERF-02 define la prueba con 300 camiones tras 72 horas, incluyendo transferencia, persistencia y conciliación. Su ejecución sigue pendiente.»
 
-## Expositor 3 · 5:53–8:11
+## Expositor 3 · 5:53–7:51
 
-Este tramo es el que más pesa en la evaluación (S7, 15 %). Quien lo exponga debe dominar el árbol sin leerlo: señalar, no recitar paquetes.
+En el Informe 2, S7 pesa 15 %. Señalar el árbol y los criterios, sin recitar los 54 paquetes.
 
 **Diapositiva 12 · Separador: Cómo lo ejecutamos · 3 s**
 
-[Lámina de transición: avanzar enseguida. Aquí cambia la voz.]
+[Transición de acto: avanzar al terminar la frase anterior.]
 
-**Diapositiva 13 · EDT, niveles 0 y 1 · 40 s**
+**Diapositiva 13 · EDT, niveles 0 y 1 · 35 s**
 
-«La EDT parte de un solo nivel 0: la plataforma de control de jornada, flota y viaje para Curimón. [Revelar nivel 1.] Se descompone en trece elementos orientados a entregables, no a fases: cada uno termina en algo que el mandante recibe y puede verificar. [Revelar paquetes.] Cada elemento baja a paquetes estimables y asignables; son 54 en total. El elemento 5 es el más grande porque tiene un paquete por cada contexto de la arquitectura. [Revelar agrupación.] Los elementos 1 a 6 construyen la Etapa 1; del 7 al 13 la acompañan, certifican y operan. Y se cumple la regla del 100 %: la suma de los hijos es el padre, sin vacíos ni dobles conteos.»
+«La EDT parte de una plataforma de control de jornada, flota y viaje. [Primer nivel.] Se divide en trece elementos orientados a entregables. [Paquetes.] Contiene 54 paquetes estimables y asignables: servicios, integraciones, datos, calidad, implantación, innovaciones y operación. [Cobertura.] La regla del 100 % exige que los hijos cubran el trabajo del padre sin vacíos ni doble conteo. La aceptación de cada paquete se concreta en T-14.»
 
-**Diapositiva 14 · EDT, nivel 2 · 50 s**
+**Diapositiva 14 · EDT, nivel 2 · 40 s**
 
-«Este es el árbol completo a nivel de paquete. [Columnas 1 y 2.] A la izquierda, lo que construye la Etapa 1: gestión, levantamiento, plataforma, equipo a bordo, servicios e integraciones. [Revelar columnas 3 y 4.] A la derecha, datos y migración, la Etapa 2, adhesión, calidad, implantación, innovaciones y la operación de 36 meses. [Revelar trazabilidad.] Quiero destacar tres decisiones de diseño. Primero, los paquetes 5.1 a 5.6 llevan el nombre de los seis contextos del Subdocumento 4: cada componente de la arquitectura tiene un único paquete que lo construye. Segundo, 12.1 a 12.5 son las cinco fichas de innovación del T-19, con los mismos nombres. Tercero, la adhesión de transportistas es un elemento propio, con responsable y riesgo, porque el Caso exige tratarla como actividad y no como supuesto. El elemento 11 es el que produce las actas de los hitos de marcha blanca.»
+«[Árbol completo.] Los 54 paquetes conectan construcción y operación. Los seis contextos corresponden a 5.1 Personas, 5.2 Flota, 5.3 Planificación y 5.4 a 5.6 Telemetría, Fletes y Costeo. El portal ocupa 5.7. [Trazabilidad.] Las cinco innovaciones se ubican en 12.1 a 12.5 y conservan sus fichas T-19. La adhesión tiene paquetes, responsable y riesgo propios. El elemento 11 produce las evidencias de capacitación, marcha blanca, aceptación y traspaso.»
 
-**Diapositiva 15 · Diccionario y regla del 100 % · 45 s**
+**Diapositiva 15 · Diccionario y regla del 100 % · 40 s**
 
-«Cada paquete está definido en el diccionario del T-14. Tomemos el 11.2, marcha blanca de la Etapa 1. [Revelar.] Su entregable es la marcha blanca y el paso a producción de la Etapa 1; se acepta solo si se cumplen las seis condiciones del Artículo 17.3, que se acreditan en los hitos H6 y H7. [Revelar.] Tiene un único responsable, el Líder de Implantación, y se ubica en la red en las actividades A15 y A19, meses 13 a 16. Es también el paquete al que llega la traza de la observación 48: RNF-011, paquete 11.2, casos CP-INT-05 y CP-SYS-05. [Revelar.] Por último, comprobamos la regla del 100 % contra el alcance: 42 requerimientos, seis contextos, cinco innovaciones y once exigencias del Caso. Ninguno quedó sin paquete.»
+«Tomemos el paquete 11.2 del T-14. [Entregable.] Marcha blanca y paso a producción E1. Se acepta con las seis condiciones del Artículo 17.3 en H6 y H7. [Responsable.] El Líder de Implantación responde por A15 y A19, meses 13 a 16. [Traza.] La observación 48 conecta RNF-011, paquete 11.2 y casos CP-INT-05 y CP-SYS-05. La cobertura se contrasta con 42 requisitos, seis contextos, cinco innovaciones y las once exigencias del Caso.»
 
-## Expositor 4 · 8:11–11:06
+## Expositor 4 · 7:51–10:56
 
-**Diapositiva 16 · Carta Gantt y dependencias · 75 s**
+**Diapositiva 16 · Carta Gantt y dependencias · 65 s**
 
-«La EDT dice qué; la red del T-15 dice cuándo y en qué orden. [Barras.] Son 25 actividades en días hábiles, del día 0 al 420, que es el fin del mes 21. [Dependencias.] Cada línea es una precedencia fin a inicio. Por ejemplo, la certificación de la Etapa 1, A12, no puede partir hasta que terminen la migración, la construcción, las integraciones y el piloto a bordo. [Ruta crítica.] En rojo está la ruta crítica: trece actividades sin holgura, desde el inicio hasta la certificación de la Etapa 1, la reserva A14, y luego el diseño, la construcción y la certificación de la Etapa 2, la reserva A23 y la marcha blanca y paso a producción finales. Un atraso en la construcción de la Etapa 1 llega intacto hasta el mes 21. Las líneas punteadas son holguras: la marcha blanca de la Etapa 1 no está en la ruta y tiene 20 días. [Hitos.] Los rombos son los hitos del Formulario E-25; todos caen dentro de su mes contractual.»
+«[Barras.] La red tiene 25 actividades y G13, del día cero al 420. [Dependencias.] A12 espera migración, construcción, integraciones y piloto. El adelanto A09 hacia G13 y A13 es de diez días, condicionado a una versión lista. [Ruta.] Trece actividades críticas incluyen A14 y A23. Sin consumir reservas, un atraso se propaga; el siguiente ejemplo muestra cómo cambia ese resultado al usarlas. [Hitos.] Los rombos indican posición planificada. Los porcentajes redondeados miden cumplimiento del límite contractual en Monte Carlo de S8. A12 se planifica al día 226, pero su 96,2 % corresponde al límite 240. La holgura interna no cambia ese límite.»
 
-**Diapositiva 17 · ¿Y si A09 se atrasa? · 35 s**
+**Diapositiva 17 · ¿Y si A09 se atrasa? · 40 s**
 
-«Poner la red a prueba con una pregunta que la comisión suele hacer. [Plan.] La cadena crítica de la Etapa 1: ambientes, construcción, certificación y la reserva A14 antes del inicio fijo de la marcha blanca en el día 240. [Atraso.] Si la construcción se atrasa 10 días, la certificación se corre y la reserva baja de 14 a 4 días. [Efecto.] H5 y H6 se cumplen igual: para eso existe la reserva. Pero H4, el fin de la construcción, tiene límite el día 200 y queda dos días tarde: la reserva protege la marcha blanca, no los hitos de pago, y eso es justamente el riesgo R-17. El consumo de más de la mitad de A14 activa el R-16.»
+«Este escenario es determinista, sin nueva simulación. [Atraso.] Diez días adicionales en A09 llevan su término al día 202: H4 queda dos días tarde. A12 termina el 236 y A14 baja de 14 a cuatro días. [Resultado.] H5 y el inicio fijo de H6 se conservan en el límite 240. A13 termina el 232, ocho días antes. Consumir la reserva protege la marcha blanca, sin corregir el incumplimiento de H4. El consumo superior al 50 % activa R-16 y el hito tardío permanece bajo R-17.»
 
 **Diapositiva 18 · Paquete 11.1 y G13 · 35 s**
 
-«Un ejemplo es el paquete 11.1, capacitación operacional. Su entregable es la capacitación de torre, terminales y conductores. Se acepta con G13 disponible antes de A13 y con los usuarios certificados. [Seguir la secuencia.] G13 requiere una versión probada en PREPROD, datos y material antes de iniciar A13. A13 contempla 40 días hábiles: diez de familiarización y treinta de práctica y evaluación. Si G13 no está aceptada, la capacitación no comienza. La reserva A14 protege la red, pero no elimina esta precedencia.»
+«Un ejemplo es el paquete 11.1, capacitación operacional. Su entregable es la capacitación de torre, terminales y conductores. Se acepta con G13 disponible antes de A13 y con los usuarios certificados. [Seguir la secuencia.] G13 requiere una versión probada en PREPROD, datos ficticios y material por perfil antes de iniciar A13. A13 contempla 40 días hábiles: diez de familiarización y treinta de práctica y evaluación. Si G13 no está aceptada, la capacitación no comienza. La reserva A14 protege la red, pero no elimina esta precedencia.»
 
-**Diapositiva 19 · Transición en dos etapas · 30 s**
+**Diapositiva 19 · Transición en dos etapas · 45 s**
 
-«A escala de meses, esto se ve así. [Señalar E1.] La Etapa 1 pasa a marcha blanca entre M13 y M15 y a producción en M16; durante ese solapamiento una célula atiende la marcha blanca y otra construye la Etapa 2, para no sobreasignar a nadie. [Señalar E2.] La Etapa 2 tiene su marcha blanca en M19 y M20 y su aceptación en M21. La operación sigue hasta M56 y el sistema de 2013 queda en consulta hasta M24.»
+«[Etapas.] E1 entra a marcha blanca en M13–M15 y a producción en M16; E2 hace marcha blanca M19–M20 y se acepta en M21. [Capacidad.] En M13–M15 son 37 personas: 21 de planta y 16 de refuerzo. La capacidad se divide en 21,5 FTE E1, 14,1 E2 y 1,4 de coordinación. Seguridad e Integración son dos roles distintos de un FTE: cada uno aporta 0,4 a E1, 0,4 a E2 y 0,2 a coordinación. [Legado.] Se sustituye por funciones en M16 y M21, conserva consulta hasta M24 y el contable sigue como emisor. La operación continúa hasta M56.»
 
-## Expositor 5 · 11:06–14:49
+Para preguntas de capacidad: T-15 separa ambos roles y deja 1,4 FTE total de coordinación entre siete roles compartidos; no se suma otra vez a la dotación. En M19–M20, S7 prevé 26 personas; 16 integran operación desde M21.
+
+## Expositor 5 · 10:56–14:29
 
 **Diapositiva 20 · Separador: Cómo lo protegemos · 3 s**
 
-[Lámina de transición: avanzar enseguida. Aquí cambia la voz.]
+[Transición de acto: avanzar al terminar la frase anterior.]
 
-**Diapositiva 21 · Mapa de calor P×I · 50 s**
+**Diapositiva 21 · Mapa de calor P×I · 45 s**
 
 «Partir por el panorama completo. [Mapa.] Probabilidad por impacto, de 1 a 5; el color sigue la escala del S8. [Riesgos.] Los 28 riesgos del T-16 en su celda inicial: la mayoría se concentra en exposición media; siete quedan en alta, y uno, el R-06, llega a 15. [Antes y después.] Después de mitigar, ninguno queda en alta. [Cierre.] Las categorías: técnicos, contrapartes, gestión, ciberseguridad y continuidad. Lo residual es una estimación, no una medición.»
 
-**Diapositiva 22 · Riesgos de exposición alta · 50 s**
+**Diapositiva 22 · Riesgos de exposición alta · 45 s**
 
-«Bajar a los siete de exposición alta, sin leer la tabla. [Primeros.] El más alto es R-06: Microsoft retira Azure Cache for Redis justo en el mes 20; se evita desde el diseño naciendo en Azure Managed Redis, y baja de 15 a 3. R-11, la adhesión, se vigila con un corte en el mes 9. [Medio.] Dos son de ciberseguridad y datos: el portal expuesto y la réplica de datos personales en Brazil South, que exige aprobación del mandante en el H2. [Últimos.] La marcha blanca en temporada, el bloqueo indebido de un viaje, que se calibra con la prueba en paralelo, y el R-28, que vemos a continuación.»
+«[Riesgos altos.] R-06 se evita usando Managed Redis desde el diseño. R-11 exige al menos 60 de los 148 transportistas al corte M9; con 59 o menos se refuerza la adhesión. [Seguridad.] R-23 trata el portal expuesto. Para R-24, la réplica en Brazil South exige base de licitud, aprobación y cláusulas firmadas antes de H2. [Operación.] Se agregan la marcha blanca en temporada, el bloqueo indebido y R-28. Las exposiciones posteriores a mitigar son estimadas.»
 
-**Diapositiva 23 · Corbatín de R-28 · 50 s**
+**Diapositiva 23 · Corbatín de R-28 · 45 s**
 
-«Este es el riesgo que dio origen al bloqueo de salida. [Evento.] Que el documento completo no vuelva a la cabina en 90 segundos. [Causas.] Cuatro caminos: no hay LTE, la carga se conoce sólo en terreno, el documento no cabe en un mensaje satelital o se pierden fragmentos. [Prevención.] Cada uno tiene su barrera: el Iridium, la emisión anticipada, el protocolo fragmentado con integridad y un ensayo en el mes 3 con el peor documento. [Mitigación.] Si aun así ocurre, el camión no sale sin documento conforme, y si el ensayo supera 90 segundos se revisa la decisión de diseño. [AMFE.] Los diez modos de falla quedan bajo 50; los dos más altos se tratan detectando antes.»
+«[Evento.] El documento completo no vuelve a cabina en 90 segundos. [Controles.] Sin LTE se utiliza Iridium. Si la carga se conoce solo en terreno, se solicita al contable por satélite; la preemisión sirve cuando ya se conoce antes. Un documento grande se fragmenta y reensambla; las pérdidas requieren acuse íntegro y reintentos dentro del plazo. El ensayo M3 comprueba esas barreras con el peor documento. [Respuesta.] Sin documento conforme no hay salida. Si el ensayo falla, se revisa el diseño antes de operar ese camino. El AMFE contiene diez modos con NPR estimado bajo 50.»
 
-**Diapositiva 24 · Reservas y holguras · 40 s**
+**Diapositiva 24 · Reservas y holguras · 50 s**
 
-«El riesgo de plazo también se trata con números del plan. [Revelar reservas.] A14 protege la Etapa 1 con 14 días hábiles: dos desviaciones estándar de su cadena crítica, un 97,9 % de probabilidad de llegar al mes 13. A23 protege la Etapa 2 con 10 días y un 97,6 %. Las dos fechas a la vez: 95,6 %. Y hay una regla: si una reserva baja de la mitad cuando a su cadena le queda más de la mitad, el caso sube al Comité Ejecutivo. [Revelar holguras.] Lo que no controla audIT quedó fuera de la ruta crítica: la factibilidad con terceros puede atrasarse 61 días; un cierre del paso Los Libertadores, unos 9 días hábiles, cabe en la holgura del piloto y de la instalación. Consumir holgura no mueve las fechas contractuales.»
+«[Reservas.] A14 aporta 14 días y A23 diez. S7 usa PERT por cadenas: 97,9 % y 97,6 %, con 95,6 % conjunto. [Red completa.] S8 incorpora rutas convergentes y capacitación en diez mil corridas: H6 alcanza 96,2 %, H11 95,5 % y ambas fechas se cumplen en 92,1 %. Son modelos distintos; para hablar de la red completa se usa este último. [Control.] Una reserva bajo la mitad, con más de la mitad de cadena pendiente, se eleva al Comité. Las holguras de las rutas no críticas absorben variaciones dentro del plan, pero no permiten mover los hitos contractuales.»
+
+Fuente: S7 §7.3.1 para PERT por cadenas y S8, simulación de cronograma, para la red completa. El 95,6 % y el 92,1 % no son resultados intercambiables. No se modifica el LaTeX de esas fuentes.
 
 **Diapositiva 25 · Tres compromisos · 20 s**
 
 «Proponemos una arquitectura híbrida, 54 paquetes verificables y 28 riesgos tratados. Las reservas protegen la ejecución. Los 120 casos de prueba están diseñados y su ejecución corresponde a la fase contractual. Gracias.»
 
-**Diapositiva 26 · Preguntas · 10 s**
+**Diapositiva 26 · Preguntas · 5 s**
 
-«Muchas gracias. Abrimos los quince minutos de preguntas y discusión.» [Si una pregunta lo requiere, la tecla B abre el respaldo y Escape vuelve.]
+«Gracias. Abrimos las preguntas y la discusión.»
+
+[En preguntas, B abre respaldos; número y Enter seleccionan R1–R21; Escape vuelve al punto de la exposición.]
 
 ## Ensayo y preguntas
 
-Hacer al menos un ensayo completo con cronómetro y otro en el proyector disponible. Si un bloque se extiende, recortar ejemplos secundarios antes que las salvedades «diseñado, no ejecutado», «estimado, no medido» y «mes contractual relativo». Cada expositor debe saber qué diapositiva recibe y cuál entrega. Para preguntas, responder primero con la conclusión, luego señalar la evidencia del informe o formulario; si un resultado requiere ensayo futuro, decirlo expresamente.
+Ensayar con cronómetro, cinco relevos y revelaciones; repetir en el proyector disponible. La pauta deja 31 segundos de margen. Recortar ejemplos secundarios si es necesario, conservando condiciones y unidades. Las pruebas T-17 están diseñadas, no ejecutadas. Las exposiciones residuales y probabilidades son estimaciones del modelo. Los meses son contractuales y febrero de 2027 es el supuesto de calendario.
+
+Para responder: conclusión, evidencia y localizador del informe. El respaldo conserva calendarios por innovación, los seis pasos de reversión y los criterios completos del diccionario. La presentación no acredita por sí sola cierre de las 100 observaciones ni resultados de campo.

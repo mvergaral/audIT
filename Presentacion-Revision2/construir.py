@@ -266,7 +266,7 @@ v += group(
     0,
 )
 for i, (code, a, b, sub) in enumerate([
-    ('01 · CONDUCTOR', 'Conductor', 'Aptitud y jornada vigente', 'Licencia, biometría y descanso'),
+    ('01 · CONDUCTOR', 'Conductor', 'Aptitud y jornada vigente', 'Tarjeta MIFARE, licencia y descanso'),
     ('02 · VEHÍCULO', 'Vehículo', 'Vigencias y telemetría CAN', 'Estado técnico y bus J1939'),
     ('03 · DOCUMENTO', 'Documento', 'Disponibilidad y conformidad', 'Guía/DTE íntegro en cabina'),
 ]):
@@ -287,7 +287,7 @@ add(
     'REVISIÓN 2 / TFEP-01/2026',
     v,
     'S2 · S3 §3.3 · S8: verificación bloqueante de salida',
-    'Abrir desde la operación real. El camión se desplaza sobre un carril dedicado mientras se activan los tres controles bloqueantes inferiores: conductor, vehículo y documento deben aportar evidencia válida antes de autorizar la salida.',
+    'La salida requiere conductor habilitado, vehículo conforme y documento íntegro en cabina. La identificación del conductor utiliza tarjeta MIFARE con el camión detenido; no se propone biometría de conductores. La biometría del T-11 corresponde a la sala de datos. Una asignación de recursos no sustituye la autorización de salida: la condición documental se verifica antes del traslado.',
     30,
     3,
     kind='operational',
@@ -296,7 +296,7 @@ add(
 # 2. s02 — Recorrido Operacional Cabina → Terminal → Torre (45 s · S3 §3.3 · S3 §3.2.4)
 v = ''
 nodes_s02 = [
-    ('truck', '01 · BORDE', 'Cabina', 'Evidencia a bordo y biometría', 'Gateway + tablet + buffer local', 30),
+    ('truck', '01 · BORDE', 'Cabina', 'Identidad del conductor por tarjeta', 'Gateway + app del conductor + búfer', 30),
     ('terminal', '02 · CONTROL', 'Terminal', 'Validación y sincronización', 'Inspección y despacho local', 625),
     ('tower', '03 · NÚCLEO', 'Torre de control', 'Asignación y seguimiento', 'Monitoreo de flota 24/7', 1220),
 ]
@@ -510,7 +510,7 @@ v += group(
     + text(613, 130, 'Quality Gates Técnicos', 38, WHITE, 600)
     + card(613, 160, 478, 140, CARD_ALT, STROKE, 12, C)
     + text(637, 202, 'Hardware a bordo', 26, C, 600)
-    + text(637, 238, 'SAE J1455 · IP67 en cabina', 22, WHITE)
+    + text(637, 238, 'SAE J1455 · IP67: conjunto expuesto', 22, WHITE)
     + text(637, 274, 'Pérdida CAN < 0,1 % en banco', 21, AMBER)
     + card(613, 320, 478, 140, CARD_ALT, STROKE, 12, C)
     + text(637, 362, 'Software y seguridad', 26, C, 600)
@@ -532,10 +532,10 @@ v += group(
     + line(1178, 174, 1680, 174, STROKE, 1.5)
     + rect_bar(1196, 285, 64, 175, C, 6, grow_y=True)
     + text(1228, 275, '25', 24, C, 700, 'middle')
-    + text(1228, 490, 'Unitarias', 17, WHITE, 600, 'middle')
+    + text(1228, 490, 'Unit.', 17, WHITE, 600, 'middle')
     + rect_bar(1278, 285, 64, 175, C, 6, grow_y=True)
     + text(1310, 275, '25', 24, C, 700, 'middle')
-    + text(1310, 490, 'Integración', 17, WHITE, 600, 'middle')
+    + text(1310, 490, 'Integr.', 17, WHITE, 600, 'middle')
     + rect_bar(1360, 320, 64, 140, C, 6, grow_y=True)
     + text(1392, 310, '20', 24, C, 700, 'middle')
     + text(1392, 490, 'Sistema', 17, WHITE, 600, 'middle')
@@ -558,7 +558,7 @@ add(
     'METODOLOGÍA Y CALIDAD / S6 · S9 · T-9 · T-10 · T-13 · T-17',
     v,
     'S6 / T-9 / T-10: metodología y control de cambios · S9 / T-13 / T-17: aseguramiento de calidad y 120 casos de prueba',
-    'Cubrir los capítulos S6 y S9 del Informe 2: ciclo iterativo con control de cambios formal y umbral de <=5% de cambios fallidos en producción; compuertas de calidad para hardware (SAE J1455, IP67, pérdida CAN <0,1%) y 120 casos de prueba diseñados en T-17 bajo ISO 29119.',
+    'S6 combina sprints de dos semanas con control de cambios y umbral mensual ≤5 % de cambios fallidos. T-13 aplica SAE J1455 al perfil de montaje e IP67 al conjunto exterior expuesto, no uniformemente a todos los periféricos de cabina: el lector MIFARE del T-11 es IP66. La lectura CAN exige pérdida <0,1 % y cero tramas transmitidas por audIT. Los 120 casos del T-17 son 25 unitarios, 25 integración, 20 sistema, 12 rendimiento, ocho seguridad, 15 hardware/HIL y 15 UAT. Rendimiento y seguridad se agrupan como veinte no funcionales en la gráfica. Son casos diseñados, cuya ejecución y actas corresponden a la fase contractual.',
     60,
     3,
 )
@@ -719,7 +719,7 @@ v = ''
 r28_nodes = [
     ('doc', '01 · ORIGEN', 'ERP emite DTE', 'Guía electrónica timbrada', 'Pre-emisión si la carga se conoce', 0),
     ('tower', '02 · ENLACE', 'Retorno satelital', 'Conmutación LTE / satélite', 'Fragmentación y acuse de recibo', 402),
-    ('truck', '03 · CABINA', 'Bloqueo en cabina', 'Documento íntegro en tablet', 'Sin conformidad no sale', 804),
+    ('truck', '03 · CABINA', 'Bloqueo en cabina', ('Representación conforme', 'disponible en cabina'), 'Sin conformidad no sale', 804),
 ]
 for i, (ic, tag, title_n, sub1, sub2, x) in enumerate(r28_nodes):
     v += group(
@@ -727,8 +727,9 @@ for i, (ic, tag, title_n, sub1, sub2, x) in enumerate(r28_nodes):
         + badge(x + 22, 50, tag, C, '#e7f3f6', None, 30, 17)
         + icon(ic, x, 0, 0.78, C, center=(x + 176, 164))
         + text(x + 176, 282, title_n, 28, WHITE, 600, 'middle')
-        + text(x + 176, 318, sub1, 21, C, 500, 'middle')
-        + text(x + 176, 352, sub2, 20, MUTED, 400, 'middle'),
+        + (''.join(text(x + 176, 310 + j * 24, line, 21, C, 500, 'middle') for j, line in enumerate(sub1))
+           if isinstance(sub1, tuple) else text(x + 176, 318, sub1, 21, C, 500, 'middle'))
+        + text(x + 176, 374 if isinstance(sub1, tuple) else 352, sub2, 20, MUTED, 400, 'middle'),
         i,
     )
     if i < 2:
@@ -956,15 +957,15 @@ v += group(
     + iline(22, 528, ['si-linux', 'satellite'], 'iWave G26I · Iridium Edge · CANCrocodile', 17, WHITE, 600)
     + iline(22, 562, ['card'], 'MIFARE · LTE y satélite · búfer 288 h', 17)
     + plane(590, 464, 560, 122, FLOTA, 'FLOTA · 192 de terceros', 'no se intervienen', ic='truck')
-    + text(612, 528, 'Conservan su equipo; llegan por la', 17, WHITE, 600)
-    + text(612, 562, 'plataforma de su proveedor (API)', 17, WHITE)
+    + text(612, 528, 'Conservan su equipo; acceso autorizado', 17, WHITE, 600)
+    + text(612, 562, 'según factibilidad de cada proveedor', 17, WHITE)
     + plane(1180, 464, 548, 122, FLOTA, 'FLOTA · 210 semirremolques', '1 + 1', ic='trailer')
     + iline(1202, 528, ['si-bluetooth'], 'Baliza Teltonika EYE por Bluetooth', 17, WHITE, 600)
     + iline(1202, 562, ['phone'], 'Teléfono del conductor: app de 4 perfiles', 17)
     + link(868, 464, 868, 184, '', FLOTA)
     + text(856, 448, 'LTE · Iridium SBD', 17, FLOTA, 600, 'end')
     + link(892, 464, 892, 184, '', FLOTA, dashed=True)
-    + text(906, 448, 'API de terceros', 17, FLOTA, 600),
+    + text(906, 448, 'Interfaces autorizadas', 17, FLOTA, 600),
     2,
 )
 v += group(
@@ -981,7 +982,7 @@ add(
     'ARQUITECTURA · CONTEXTO Y TRES PLANOS / S4 §4.2 · §4.2.3 · T-11 · FEP01 Art. 16',
     v,
     'S4 §4.2, Tabla de planos y §4.2.3: 39 componentes (24 + 1 + 14) · T-11 · FEP01 Art. 16.1 a 16.4 · Caso RT-06.01 · íconos: Azure Architecture Icons y Simple Icons',
-    'Abrir con el mapa completo. [Nube.] El núcleo vive en Azure Chile Central, en tres zonas: Front Door, API Management, los seis contextos en AKS, IoT Hub y Event Hubs para la ingesta, PostgreSQL con TimescaleDB, Managed Redis y Storage; Brazil South espera como recuperación. [Sitio.] San Bernardo no aloja el núcleo: mantiene viva la torre si cae el enlace y aloja la capa anticorrupción junto al sistema contable, que sigue siendo el único emisor. Cada terminal tiene dos nodos en activo y espera y un router 5G. [Flota.] 182 camiones llevan el equipo audIT; los 192 de terceros no se intervienen y llegan por la plataforma de su proveedor. [Componentes.] Son 39 componentes: 24 en la región primaria, uno en la secundaria y 14 fuera de la nube. Por eso es híbrida, como exige el Artículo 16.',
+    '[Nube.] Azure Chile Central en tres zonas; Brazil South es la región de recuperación prevista. [Sitios.] San Bernardo sostiene la torre y aloja la capa anticorrupción junto al contable, único emisor tributario; cuatro terminales tienen nodos activo y espera y respaldo 5G. [Flota.] Se instalan equipos audIT en 182 camiones. Los 192 de terceros conservan sus equipos: el acceso por interfaz o exportación se sujeta a autorización y factibilidad por proveedor, sin prometer una API disponible para todos. La cobertura efectiva y antigüedad se muestran por unidad. [Componentes.] El catálogo arquitectónico tiene 39: 24 primarios, uno de recuperación y 14 fuera de la nube. R24 exige base de licitud, aprobación del mandante y cláusulas firmadas antes de H2; si falta esa condición no se autoriza producción, según S4.',
     45,
     4,
 )
@@ -1128,12 +1129,14 @@ add(
 
 # A3 · Física: nodos con hardware exacto y enlaces
 v = group(
-    plane(0, 0, 1340, 218, NUBE, 'Azure Chile Central · producción en 3 zonas', 'catálogo §4.2.4', ic='cloud')
+    plane(0, 0, 1340, 244, NUBE, 'Azure Chile Central · producción en 3 zonas', 'catálogo §4.2.4', ic='cloud')
     + text(22, 78, 'Borde', 16, NUBE, 700) + iline(140, 78, ['azure-frontdoor', 'azure-apim'], 'Front Door Premium · API Management Premium (3 zonas)', 17)
     + text(22, 110, 'Integración', 16, NUBE, 700) + iline(140, 110, ['azure-iothub', 'azure-dps', 'azure-eventhubs'], 'IoT Hub S1 ×2 (800.000 msg/día) · DPS X.509 · Event Hubs Premium', 17)
+    + tech('azure-iothub', 1210, 94, 28) + text(1248, 116, 'IoT Hub', 17, NUBE, 700)
     + text(22, 142, 'Aplicación', 16, NUBE, 700) + iline(140, 142, ['azure-aks', 'si-kubernetes'], 'AKS con nodos en 3 zonas y escalado automático', 17)
     + text(22, 174, 'Datos', 16, NUBE, 700) + iline(140, 174, ['azure-postgresql', 'azure-storage', 'azure-keyvault'], 'PostgreSQL Flexible HA zonal · Blob ZRS inmutable · Key Vault HSM', 17)
     + text(22, 206, 'Red central', 16, NUBE, 700) + iline(140, 206, ['azure-firewall', 'azure-expressroute', 'azure-vpngateway', 'azure-bastion'], 'Firewall Premium · ExpressRoute · VPN · Bastion', 17)
+    + text(22, 232, 'Red central: 10.10.0.0/22 · Red de producción: 10.11.0.0/20', 17, NUBE, 600)
     + plane(1376, 0, 352, 218, NUBE, 'Brazil South', 'espera', ic='cloud')
     + tech('azure-postgresql', 1398, 54, 32) + tech('azure-eventhubs', 1436, 54, 32) + tech('azure-storage', 1474, 54, 32)
     + text(1398, 120, 'Réplicas de PostgreSQL,', 17, WHITE) + text(1398, 144, 'Timescale y Event Hubs', 17, WHITE)
@@ -1142,18 +1145,22 @@ v = group(
     0,
 )
 v += group(
-    plane(0, 292, 640, 206, SITIO, 'San Bernardo · sala de sitio', 'pares A/B', ic='server')
-    + iline(22, 358, ['si-dell'], '2 Dell PowerEdge R360', 18, WHITE, 600)
-    + iline(22, 388, ['si-fortinet'], '2 FortiGate 90G · 2 FortiSwitch 124F-POE', 18)
-    + iline(22, 418, ['ups'], '2 UPS APC SRT3000 · UPS de 66 min', 18)
-    + iline(22, 448, ['server'], '2 Liebert Mini-Mate2 (N+1) · VESDA · Kidde', 18)
-    + iline(22, 478, ['ups'], 'Grupo electrógeno Himoinsa HYW-8', 18, SITIO, 700)
-    + plane(680, 292, 600, 206, SITIO, 'Cada terminal (×4)', 'gabinete', ic='router')
-    + iline(702, 358, ['server'], '2 OnLogic Karbon 430, activo y espera', 18, WHITE, 600)
-    + iline(702, 388, ['router'], 'Teltonika RUTX50 5G (2 SIM) · TSW202', 18)
-    + iline(702, 418, ['ups'], 'UPS APC SRT1000XLI', 18)
-    + iline(702, 448, ['si-fortinet'], 'En los 5 terminales: FortiAP 234G', 18)
-    + iline(702, 478, ['card'], 'y lector de portería Minew G1', 18)
+    plane(0, 292, 640, 248, SITIO, 'San Bernardo · sala de sitio', 'pares A/B', ic='server')
+    + iline(22, 354, ['si-dell'], '2 Dell PowerEdge R360', 18, WHITE, 600)
+    + iline(22, 382, ['si-fortinet'], '2 FortiGate 90G · 2 FortiSwitch 124F-POE', 18)
+    + iline(22, 410, ['ups'], '2 UPS APC SRT3000 · UPS de 66 min', 18)
+    + iline(22, 438, ['server'], '2 Liebert Mini-Mate2 (N+1) · VESDA · Kidde', 18)
+    + iline(22, 466, ['ups'], 'Grupo electrógeno Himoinsa HYW-8', 18, SITIO, 700)
+    + iline(22, 494, ['ups'], 'Por R360: 2 fuentes · Por FortiGate: 2 adaptadores', 18)
+    + text(54, 522, 'Alimentaciones A/B en circuitos distintos', 18, SITIO, 600)
+    + plane(680, 292, 600, 248, SITIO, 'Cada terminal (×4)', 'gabinete', ic='router')
+    + iline(702, 354, ['server'], '2 OnLogic Karbon 430, activo y espera', 18, WHITE, 600)
+    + iline(702, 382, ['router'], 'Teltonika RUTX50 5G (2 SIM) · TSW202', 18)
+    + iline(702, 410, ['ups'], 'UPS APC SRT1000XLI', 18)
+    + iline(702, 438, ['si-fortinet', 'card'], 'FortiAP 234G + Minew G1 en los 5 terminales', 18)
+    + text(734, 466, '24 V: cómputo/router · 48 V: TSW202 y PoE', 18, SITIO, 600)
+    + iline(702, 494, ['ups'], '2 fuentes DIN + módulo de redundancia por bus', 18)
+    + text(734, 522, 'A: UPS · B: otro circuito del tablero', 18, SITIO, 600)
     + plane(1320, 292, 408, 206, FLOTA, 'Camión (182 + 19)', 'a bordo', ic='truck')
     + iline(1342, 358, ['si-linux'], 'iWave G26I · 8 GB eMMC', 18, WHITE, 600)
     + iline(1342, 388, ['satellite'], 'Iridium Edge (SBD)', 18)
@@ -1163,28 +1170,30 @@ v += group(
     1,
 )
 v += group(
-    arrow(320, 292, 320, 220, SITIO, 3.5) + tech('azure-expressroute', 334, 232, 24) + text(366, 250, 'ExpressRoute 100 Mbit/s', 16, SITIO, 700)
-    + text(366, 272, '+ VPN 2.º proveedor · ≤ 1 min', 16, SITIO, 600)
-    + arrow(980, 292, 980, 220, SITIO, 3.5) + tech('azure-vpngateway', 994, 232, 24) + text(1026, 250, 'Fijo ≥ 10 Mbit/s', 16, SITIO, 700)
-    + text(1026, 272, '+ 5G con 2 SIM · < 1 min', 16, SITIO, 600)
-    + arrow(1524, 292, 1440, 220, FLOTA, 3.5) + tech('azure-iothub', 1540, 232, 24) + text(1572, 250, 'LTE 13–16 MB/mes', 16, FLOTA, 700)
-    + text(1572, 272, '+ Iridium SBD 340 B', 16, FLOTA, 600)
+    arrow(320, 292, 320, 246, SITIO, 3.5) + tech('azure-expressroute', 334, 248, 24) + text(366, 264, 'ExpressRoute 100 Mbit/s', 16, SITIO, 700)
+    + text(366, 284, '+ VPN 2.º proveedor · ≤ 1 min', 16, SITIO, 600)
+    + arrow(980, 292, 980, 246, SITIO, 3.5) + tech('azure-vpngateway', 994, 248, 24) + text(1026, 264, 'Fijo ≥ 10 Mbit/s', 16, SITIO, 700)
+    + text(1026, 284, '+ 5G con 2 SIM · < 1 min', 16, SITIO, 600)
+    + f'<path d="M1524 292 V280 H1360 V110" fill="none" stroke="{FLOTA}" stroke-width="3.5" stroke-linejoin="round" data-draw="346"/>'
+    + arrow(1360, 110, 1326, 110, FLOTA, 3.5)
+    + text(1540, 262, 'LTE 13–16 MB/mes', 16, FLOTA, 700)
+    + text(1540, 284, '+ Iridium SBD 340 B', 16, FLOTA, 600)
     + arrow(1340, 60, 1376, 60, NUBE, 3, dashed=True),
     2,
 )
 v += group(
-    card(0, 522, 1728, 108, CARD_BG, STROKE, 14, NUBE)
-    + text(28, 562, 'Cinco ambientes, cada uno en su suscripción y desde el mismo código: DEV · QA · PREPROD · PROD · recuperación.', 20, WHITE, 600)
-    + text(28, 598, 'Respaldos 3-2-1-1-0 · restauración de prueba mensual · dos conmutaciones reales al año (RT-07.07).', 18, MUTED)
-    + obs(1330, 586, 'Obs. 64 · 65 · 70 · 72'),
+    card(0, 564, 1728, 66, CARD_BG, STROKE, 14, NUBE)
+    + text(28, 592, 'Cinco ambientes, cada uno en su suscripción y desde el mismo código: DEV · QA · PREPROD · PROD · recuperación.', 20, WHITE, 600)
+    + text(28, 620, 'Respaldos 3-2-1-1-0 · restauración mensual · dos conmutaciones reales al año (RT-07.07).', 18, MUTED)
+    + obs(1330, 600, 'Obs. 64 · 65 · 70 · 72'),
     3,
 )
 add(
     'Cada nodo declara su hardware y su enlace.',
     'ARQUITECTURA FÍSICA / S4 §4.2.1 · §4.2.4 · §4.2.6 · §4.2.7 · T-11',
     v,
-    'S4 §4.2.1: implementos que compra el mandante · §4.2.4: catálogo Azure · §4.2.6: ambientes y respaldos · §4.2.7: enlaces y conmutación · T-11',
-    'Bajar de la idea al equipo. [Nube.] Lo que se contrata en Azure, por subred, y Brazil South con RPO de 15 minutos y RTO de 4 horas. [Sitios.] San Bernardo va en pares: dos servidores Dell R360, dos FortiGate, clima N+1, detección por aspiración y grupo electrógeno. Cada terminal tiene dos Karbon 430 en activo y espera y un router 5G. El camión lleva el G26I, el módem Iridium, el lector CAN sin contacto y el lector de tarjeta. [Enlaces.] Cada enlace tiene medio, respaldo y tiempo de conmutación: ExpressRoute de 100 Mbit/s con VPN de respaldo en menos de un minuto; terminal fijo con 5G; camión LTE con Iridium hacia IoT Hub. [Cierre.] Cinco ambientes desde el mismo código. Todo el hardware lo compra el mandante; el detalle y las cantidades están en el T-11.',
+    'S4 §4.2.1: hardware · §4.2.5: redes · §4.2.6: ambientes · §4.2.7: enlaces y alimentación redundante · T-11 · FEP02 RT-08.04, p. 18',
+    '[Nube.] Chile Central es la región primaria: red central 10.10.0.0/22 y red de producción 10.11.0.0/20. Brazil South recibe réplicas para recuperación, con RPO de 15 minutos y RTO de 4 horas. [Enlaces.] El camión llega por LTE o Iridium a IoT Hub en Chile Central. San Bernardo usa ExpressRoute de 100 Mbit/s y VPN de respaldo; cada terminal, enlace fijo y 5G. [Energía.] San Bernardo mantiene equipos A/B en circuitos distintos: cada R360 tiene dos fuentes y cada FortiGate 90G, dos adaptadores. En cada terminal hay un bus de 24 V para cómputo y router y otro de 48 V para el TSW202, que alimenta el punto de acceso y el lector por PoE. Cada bus tiene dos fuentes DIN y un módulo de redundancia: una fuente desde la UPS y otra desde un circuito distinto del tablero, según RT-08.04 y T-11. [Cierre.] Cinco ambientes desde el mismo código. El mandante compra el hardware detallado en T-11.',
     45,
     4,
 )
@@ -1287,7 +1296,7 @@ v += group(
     1,
 )
 MIG = [('Extracción y perfil', 'copia y hash del origen'), ('Homologación', 'deduplicación y mapeos'),
-       ('Acreditación', '6.000 vigencias con SHA-256'), ('Ensayo y corte', 'conciliación y acta')]
+       ('Acreditación documental', '≈6.000 vigencias: respaldo verificado'), ('Ensayo y corte', 'conciliación y acta')]
 mig = text(0, 488, 'MIGRACIÓN · S5 §5.3', 15, NUBE, 700, extra='letter-spacing="1.5"')
 for k, (a, b) in enumerate(MIG):
     x = k * 432
@@ -1303,16 +1312,16 @@ add(
     'ARQUITECTURA DE DATOS / S5 §5.2 · §5.3 · S4 §4.1.20 · Caso RT-05.10',
     v,
     'S5 Tabla 5.3: persistencia y conducta ante partición · Tabla 5.5: retención · Tabla 5.6: migración · S4 §4.1.20: volumen declarado',
-    'El dato no está en una sola base. [Dominios.] Asignación y vigencias van en PostgreSQL con transacciones: si no hay estado autoritativo, no se confirma una reserva. A bordo, SQLite sigue capturando y sincroniza después. La telemetría entra por Event Hubs a TimescaleDB. La caché, en Managed Redis, nunca habilita con una copia vieja. Documentos y auditoría quedan inmutables en Blob Storage, y la analítica se separa del despacho en Delta Lake. [Volumen.] 96 mil viajes y cerca de 120 millones de posiciones al año, con la retención que fija el Caso. [Migración.] Cuatro fases; las 6.000 vigencias se acreditan una a una con hash, y nada en cuarentena habilita un despacho.',
+    '[Dominios.] PostgreSQL confirma las asignaciones; SQLite captura a bordo; TimescaleDB conserva telemetría. La caché no habilita con una copia desactualizada. Documentos y auditoría conservan integridad y la analítica se separa del despacho. [Volumen.] 96.000 viajes y cerca de 120 millones de posiciones anuales. [Migración.] Las aproximadamente 6.000 vigencias requieren verificación documental individual, respaldo custodiado y acta de conciliación. El hash SHA-256 comprueba integridad y no sustituye la verificación documental. Nada en cuarentena habilita despacho.',
     45,
     3,
 )
 
 # A5 · Sin enlace: qué sigue operando
 v = group(
-    plane(0, 0, 1728, 110, NUBE, 'Servicio central en Azure', 'autoritativo', ic='cloud')
+    plane(0, 0, 1728, 110, NUBE, 'Autoridad de asignación y emisión', 'Azure + San Bernardo', ic='cloud')
     + tech('azure-aks', 1568, 50, 40) + tech('azure-postgresql', 1618, 50, 40) + tech('azure-iothub', 1668, 50, 40)
-    + text(22, 82, 'Asignar un viaje nuevo y emitir el documento (sistema contable) siempre pasan por aquí.', 20, WHITE, 600),
+    + text(22, 82, 'Asignación nueva: Azure. Documento tributario: solo el contable de San Bernardo, mediante integración.', 20, WHITE, 600),
     0,
 )
 AUT = [
@@ -1343,7 +1352,7 @@ add(
     'ARQUITECTURA · OPERACIÓN DESCONECTADA / S4 §4.1.26 · §4.2.3 · §4.3',
     v,
     'S4 §4.1.26: operación desconectada y reconexión · §4.2.3: funciones on-premise · §4.3: plazos sin enlace · FEP01 Art. 16.4 · Caso RT-03.10 y RT-03.13',
-    'Cortar los enlaces en la misma vista. [Corte.] Lo que exige estado global, asignar un viaje nuevo y emitir el documento, sigue pasando por el servicio central: no se inventan vigencias ni asignaciones. [Autonomía.] San Bernardo y los terminales operan 24 horas: la torre, las emergencias, la consulta de vigencias en portería. El camión guarda al menos 72 horas, y el diseño llega a 288. [Reconexión.] Al volver la señal se sube por lotes con acuse, y la prueba CP-PERF-02 exige 20 minutos para 300 camiones. Este es el puente con los riesgos: estas mismas piezas son las barreras del R-28.',
+    '[Autoridad.] Una asignación nueva requiere el estado autoritativo de Azure. El sistema contable de San Bernardo permanece como único emisor tributario, integrado a través de la capa anticorrupción. [Autonomía.] Los sitios mantienen 24 horas de funciones locales y el camión conserva un mínimo contractual de 72 horas, con diseño para 288. Una copia local no permite inventar vigencias ni confirmar asignaciones globales. [Reconexión.] Se sincroniza por lotes con deduplicación y acuse duradero. CP-PERF-02 diseña la comprobación con 300 camiones tras 72 horas, incluyendo transferencia, persistencia y conciliación. Es un criterio de ensayo, no una medición ya realizada.',
     30,
     3,
 )
@@ -1440,7 +1449,7 @@ add(
 )
 
 add('Qué construimos', 'ACTO 1 DE 3', separador('01', 'Qué construimos', 'Arquitectura física, lógica y de datos', ['Tres planos', 'Ocho capas', 'Datos y desconexión', 'Correcciones']),
-    'S4 y S5', 'Separador. Cambio de voz: el expositor 1 presenta el problema y la arquitectura de alto nivel.', 3, 1, kind='section')
+    'S4 y S5', 'Separador de acto; el expositor 1 continúa con la arquitectura.', 3, 1, kind='section')
 add('Cómo lo ejecutamos', 'ACTO 2 DE 3', separador('02', 'Cómo lo ejecutamos', 'EDT, carta Gantt y compuertas', ['EDT en 3 niveles', 'Red y ruta crítica', 'Qué pasa si', 'Transición']),
     'S7 · T-14 · T-15', 'Separador. Cambio de voz al expositor de la EDT.', 3, 1, kind='section')
 add('Cómo lo protegemos', 'ACTO 3 DE 3', separador('03', 'Cómo lo protegemos', 'Plan de riesgos del S8 y del T-16', ['28 riesgos', 'Los que más pesan', 'R-28 y AMFE', 'Reservas']),
@@ -1514,7 +1523,7 @@ SHORT = {
     'R-11': ('Adhesión bajo 104 en el mes 16 y 134 en el 21', '≤ 59 de 148 con anexo al cierre del mes 9'),
     'R-18': ('Marcha blanca E1 en temporada de fruta', 'Condición de cierre bajo umbral en el mes 14'),
     'R-23': ('Ataque al portal expone a conductores externos', 'Vulnerabilidad crítica abierta o acceso anómalo'),
-    'R-24': ('Réplica en Brazil South sin base de licitud', 'Hito H2 sin aprobación del mandante (mes 4)'),
+    'R-24': ('Réplica en Brazil South sin base de licitud', 'H2 sin base de licitud, aprobación o cláusulas'),
     'R-27': ('Bloqueo indebido de un viaje que debía salir', 'Prueba en paralelo de los meses 13 a 15'),
     'R-28': ('Documento no vuelve a la cabina en 90 s', 'Ensayo con retorno > 90 s (mes 3)'),
 }
@@ -1546,7 +1555,7 @@ add(
     'RIESGOS · EXPOSICIÓN ALTA / T-16 · S8 §8.3',
     v,
     'T-16: riesgos con exposición ≥ 12, respuesta, disparador, plazo y exposición residual · S8 §8.3: plan de acción',
-    'Bajar a los siete de exposición alta, sin leer la tabla. [Primeros.] El más alto es R-06: Microsoft retira Azure Cache for Redis justo en el mes 20; se evita desde el diseño naciendo en Azure Managed Redis, y baja de 15 a 3. R-11, la adhesión, se vigila con un corte en el mes 9. [Medio.] Dos son de ciberseguridad y datos: el portal expuesto y la réplica de datos personales en Brazil South, que exige aprobación del mandante en el H2. [Últimos.] La marcha blanca en temporada, el bloqueo indebido de un viaje, que se calibra con la prueba en paralelo, y el R-28, que vemos a continuación.',
+    'Seleccionar los siete riesgos de exposición alta inicial. R06 se evita usando Managed Redis desde el diseño; R11 se vigila con al menos 60 de los 148 transportistas al corte M9 y refuerzo con 59 o menos. R23 protege el portal. R24 exige base de licitud, aprobación del mandante y cláusulas firmadas antes de H2; la región secundaria no se considera autorizada por el solo calendario. Completar con marcha blanca en temporada, bloqueo indebido y retorno documental R28. Las exposiciones residuales son estimaciones de diseño.',
     50,
     3,
 )
@@ -1562,8 +1571,8 @@ v = group(
     + text(EVX, 312, f"P{RISK['R-28']['p']} × I{RISK['R-28']['i']} = {RISK['R-28']['e0']} → {RISK['R-28']['e1']}", 17, CORAL, 700, 'middle'),
     0,
 )
-CAUSES = [('Punto de carga sin LTE', 'Iridium Edge en cabina'), ('Carga conocida en terreno', 'Emisión anticipada'),
-          ('Documento > 1 mensaje SBD', 'Fragmentos con integridad'), ('Pérdida de fragmentos', 'Ensayo en el mes 3, peor caso')]
+CAUSES = [('Punto de carga sin LTE', 'Iridium Edge en cabina'), ('Carga conocida solo al cargar', 'Solicitud satelital al ERP'),
+          ('Documento > 1 mensaje SBD', 'Fragmentación y reensamblado'), ('Pérdida de fragmentos', 'Acuse íntegro y reintentos')]
 causes, bars_p = '', ''
 for k, (cause, barrier) in enumerate(CAUSES):
     y = 40 + k * 116
@@ -1588,13 +1597,13 @@ for k, (c1, barrier) in enumerate(CONS):
         + text(1245, y + 59 + (k - 0.5) * 20, barrier, 15, '#ffffff', 700, 'middle')
         + card(1428, y, 300, 70, '#ffffff', STROKE, 10, CORAL) + text(1448, y + 43, c1, 17, WHITE, 600)
     )
-v += group(cons + text(1245, 26, 'BARRERAS DE MITIGACIÓN', 15, SITIO, 700, 'middle', extra='letter-spacing="1.5"'), 3)
+v += group(cons + text(1245, 26, 'RESPUESTA Y REVISIÓN', 15, SITIO, 700, 'middle', extra='letter-spacing="1.5"'), 3)
 amfe_top = sorted(AMFE, key=lambda c: -int(c[5]))[:2]
 v += group(
     card(0, 520, 1728, 110, CARD_BG, STROKE, 14, CORAL)
     + text(28, 560, f'AMFE del T-16: {len(AMFE)} modos de falla, ninguno llega a NPR 50.', 21, WHITE, 700)
     + ''.join(text(28 + k * 860, 598, f'{c[0]}: NPR {c[5]} (S{c[2]} · O{c[3]} · D{c[4]})', 18, CORAL, 600) for k, c in enumerate(amfe_top))
-    + text(28, 622, 'Los dos más altos tienen detección tardía: la mitigación apunta a detectar antes.', 16, MUTED),
+    + text(28, 622, 'Preemisión solo si la carga ya se conoce. Ensayo M3: documento mayor, pérdidas y reintentos; NPR estimado.', 16, MUTED),
     4,
 )
 add(
@@ -1602,7 +1611,7 @@ add(
     'RIESGOS · CORBATÍN DE R-28 / S4 §4.1.13 · S8 · T-16',
     v,
     'S4 §4.1.13: emisión del documento sin cobertura · T-16: R-28 y análisis de modos de falla · Caso RT-09.01 (90 s) · restricción 8',
-    'Este es el riesgo que dio origen al bloqueo de salida. [Evento.] Que el documento completo no vuelva a la cabina en 90 segundos. [Causas.] Cuatro caminos: no hay LTE, la carga se conoce sólo en terreno, el documento no cabe en un mensaje satelital o se pierden fragmentos. [Prevención.] Cada uno tiene su barrera: el Iridium, la emisión anticipada, el protocolo fragmentado con integridad y un ensayo en el mes 3 con el peor documento. [Mitigación.] Si aun así ocurre, el camión no sale sin documento conforme, y si el ensayo supera 90 segundos se revisa la decisión de diseño. [AMFE.] Los diez modos de falla quedan bajo 50; los dos más altos se tratan detectando antes.',
+    '[Evento.] El documento completo no vuelve a cabina dentro de 90 segundos. [Causas y controles.] Sin LTE se utiliza Iridium. Si la carga definitiva se conoce solo en terreno, se solicita por satélite al contable; la preemisión únicamente sirve cuando se conoce antes. Un documento mayor que un mensaje requiere fragmentación y reensamblado; las pérdidas requieren acuse de integridad y reintentos dentro del presupuesto total. El ensayo M3 utiliza el documento mayor, con pérdidas y reintentos, para validar estas barreras; no es una barrera operativa por sí solo. [Respuesta.] Sin documento conforme no se permite salir; si el ensayo falla se revisan diseño y T-11 según R28, sin asumir resuelto el camino de carga desconocida. [AMFE.] Diez modos, todos bajo NPR 50 estimado; no son mediciones de terreno.',
     50,
     5,
 )
@@ -1643,25 +1652,25 @@ v += group(
     + text(24, 512, 'H5 y H6 se mantienen', 24, FLOTA, 700)
     + text(24, 548, f'A12 termina el día {226 + DELAY}, antes del 240.', 18, WHITE)
     + text(24, 576, 'La reserva A14 absorbe 10 de sus 14 días.', 18, WHITE)
-    + text(24, 604, f"Monte Carlo: H6 se cumple en {MC.get('H6', '')} de las corridas.", 16, MUTED)
+    + text(24, 604, 'Escenario determinista; no nueva simulación.', 16, MUTED)
     + card(584, 470, 560, 160, '#fbeaea', CORAL, 14, CORAL)
     + text(608, 512, 'H4 queda 2 días tarde', 24, CORAL, 700)
     + text(608, 548, f'A09 termina el día {192 + DELAY}; su límite es el 200.', 18, WHITE)
     + text(608, 576, 'La reserva protege H6, no los hitos de pago.', 18, WHITE)
-    + text(608, 604, f"Es el riesgo R-17 · H4 cumple en {MC.get('H4', '')}.", 16, MUTED)
+    + text(608, 604, 'R-17: incumplimiento del hito intermedio.', 16, MUTED)
     + card(1168, 470, 560, 160, CARD_BG, STROKE, 14, SITIO)
     + text(1192, 512, 'Se activa R-16', 24, SITIO, 700)
     + text(1192, 548, 'Consumo > 50 % de A14: revisión', 18, WHITE)
     + text(1192, 576, 'quincenal hasta el día 240.', 18, WHITE)
-    + text(1192, 604, 'G13 y A13 se corren, pero tienen 38 días de holgura.', 16, MUTED),
+    + text(1192, 604, 'A13 termina el día 232: quedan 8 días antes de H6.', 16, MUTED),
     2,
 )
 add(
     '¿Y si la construcción de la Etapa 1 se atrasa 10 días?',
-    'CARTA GANTT · QUÉ PASA SI / T-15 · S7 §7.3.1 · S8 Monte Carlo · T-16',
+    'CARTA GANTT · ESCENARIO DETERMINISTA / T-15 · S7 §7.3.1 · T-16',
     v,
-    'Cálculo sobre la red del T-15 (A09 +10 días hábiles) · S7 §7.3.1: reserva A14 · S8: Monte Carlo de 10.000 corridas · T-16: R-16 y R-17',
-    'Poner la red a prueba con una pregunta que la comisión suele hacer. [Plan.] La cadena crítica de la Etapa 1: ambientes, construcción, certificación y la reserva A14 antes del inicio fijo de la marcha blanca en el día 240. [Atraso.] Si la construcción se atrasa 10 días, la certificación se corre y la reserva baja de 14 a 4 días. [Efecto.] H5 y H6 se cumplen igual: para eso existe la reserva. Pero H4, el fin de la construcción, tiene límite el día 200 y queda dos días tarde: la reserva protege la marcha blanca, no los hitos de pago, y eso es justamente el riesgo R-17. El consumo de más de la mitad de A14 activa el R-16.',
+    'T-15 y S7 §7.3.1: A09 +10 días hábiles y consumo de A14 · T-16: R-16 y R-17 · No se recalcula Monte Carlo',
+    'Este es un escenario determinista sobre la red del T-15, sin nueva simulación. A09 termina el día 202 y supera el límite 200 de H4. A12 se desplaza hasta el 236 y la reserva A14 baja de 14 a 4 días, conservando el inicio fijo de H6 en el día 240. G13 y A13 se desplazan: A13 acaba el día 232 y conserva ocho días antes de H6. Los 38 días de holgura total de la red no autorizan a mover esa fecha fija. Se activa R16 por consumo superior al 50 % de A14 y permanece R17 por incumplimiento del hito intermedio. Los porcentajes Monte Carlo de S8 pertenecen a la línea base; no se atribuyen a este escenario.',
     35,
     3,
 )
@@ -2097,7 +2106,7 @@ hitos = ''
 for h, (aid, edge) in GANTT_HITOS.items():
     x = gx(ACTS[aid][edge])
     y = gy(aid) + 11
-    h = f"{h} · {round(float(MC[h].rstrip(' %').replace(',', '.')))} %" if h in MC else h
+    h = f"{h} · ≈{round(float(MC[h].rstrip(' %').replace(',', '.')))} %" if h in MC else h
     hitos += item(
         f'<rect x="{x - 7}" y="{y - 7}" width="14" height="14" transform="rotate(45 {x} {y})" fill="{AMBER}" stroke="#ffffff" stroke-width="2"/>'
         + (text(x - 14, y + 5, h, 15, AMBER, 700, 'end') if edge == 'es'
@@ -2116,13 +2125,13 @@ legend = (
 v = group(grid + labels + bars, 0)
 v += group(links, 1)
 v += group(floats + legend, 2)
-v += group(hitos, 3)
+v += group(hitos + text(0, 644, 'Rombos: posición planificada · %: Monte Carlo al límite contractual (S8), redondeado · A09 → G13/A13: FS−10', 17, MUTED), 3)
 add(
     'La red de 25 actividades define la ruta crítica.',
     'CARTA GANTT Y DEPENDENCIAS / S7 §7.3.1 · T-15 · FEP01 E-25',
     v,
-    'T-15: malla de precedencias, ES/EF/LS/LF y holguras (PERT, días hábiles) · S7 §7.3.1, Tabla 7.7: hitos frente a la red',
-    'Presentar la Gantt como red, no como barras sueltas. [Barras.] Veinticinco actividades en días hábiles, del día 0 al 420, que es el mes 21. [Dependencias.] Cada flecha es una precedencia fin a inicio del T-15: por ejemplo, la certificación A12 no parte hasta que terminan migración, construcción, integraciones y piloto a bordo. [Ruta crítica.] En rojo la ruta crítica: A01, A02, A05, A07, A09, A12, la reserva A14, y luego la Etapa 2: A17, A20, A22, la reserva A23, A24 y A25. Las líneas punteadas son holguras: la marcha blanca de la Etapa 1 queda fuera de la ruta, con 20 días. [Hitos.] Los rombos son los hitos del E-25; todos caen dentro de su mes contractual.',
+    'T-15: precedencias y holguras · S7 §7.3.1, Tabla 7.7: posición planificada · S8: Monte Carlo al límite contractual (10.000 corridas)',
+    '[Barras.] Veinticinco actividades y la compuerta G13, del día 0 al 420, fin M21. [Dependencias.] Se muestran precedencias fin a inicio; A09 hacia G13 y A13 incluye adelanto FS−10. A12 depende de migración, construcción, integraciones y piloto. [Ruta.] Trece actividades críticas; las reservas A14 y A23 son explícitas. Un atraso se propaga si se mantienen todas las duraciones; consumir una reserva modifica ese escenario. [Hitos.] Los rombos muestran la posición planificada y los porcentajes, redondeados, la probabilidad Monte Carlo de cumplir el límite contractual de S8. No son probabilidades de terminar en la fecha temprana: A12 se planifica al día 226, pero el 96,2 % corresponde al límite 240. Redondear un resultado a 100 % no constituye una garantía.',
     90,
     4,
 )
@@ -2179,14 +2188,15 @@ for label_t, m_ini, m_fin, y_t, col_t, bar_txt, out_txt, st_t in gantt_tracks:
 v += group(
     card(20, 466, 820, 164, CARD_ALT, STROKE, 14, C)
     + badge(46, 486, 'S3 §3.2.4 · CONVIVENCIA DEL LEGADO 2013', C, '#e7f3f6', 415, 32, 18)
-    + text(46, 548, 'Sustitución progresiva por funciones (M1 a M21)', 26, WHITE, 600)
-    + text(46, 582, '• M16–M20: E1 opera en producción mientras E2 entra en marcha blanca.', 20, MUTED)
-    + text(46, 612, '• Hasta M24: Sistema 2013 en consulta histórica; ERP sigue como emisor.', 20, C)
+    + text(46, 548, 'Retiro funcional del legado en M16 y M21', 26, WHITE, 600)
+    + text(46, 582, '• E1 produce desde M16; E2 inicia marcha blanca en M19.', 20, MUTED)
+    + text(46, 612, '• Consulta histórica hasta M24; el contable conserva la emisión.', 20, C)
     + card(865, 466, 843, 164, CARD_ALT, STROKE, 14, AMBER)
     + badge(891, 486, 'S7 §7.2 · T-15: NIVELACIÓN DE CAPACIDAD (M13–M15)', AMBER, '#fff0d7', 495, 32, 18)
-    + text(891, 548, 'Partición de equipos sin sobreasignación en solapamiento:', 26, WHITE, 600)
-    + text(891, 582, '• Célula Alfa: Marcha blanca y soporte E1  |  Célula Beta: Construcción E2.', 20, AMBER)
-    + text(891, 612, '• Especialista de Seguridad e Integración: 1,0 FTE dedicado sin doble cómputo.', 20, MUTED),
+    + text(891, 542, '37 FTE = 21,5 E1 + 14,1 E2 + 1,4 coordinación', 25, WHITE, 600)
+    + text(891, 570, '37 personas: 21 de planta + 16 de refuerzo; sin sobreasignación.', 20, AMBER)
+    + text(891, 598, 'Seguridad e Integración: dos roles distintos de 1 FTE cada uno.', 20, MUTED)
+    + text(891, 623, 'Cada rol: 0,4 E1 + 0,4 E2 + 0,2 coordinación.', 19, MUTED),
     2,
 )
 add(
@@ -2194,41 +2204,44 @@ add(
     'CRONOGRAMA Y CAPACIDAD / S3 §3.2.4 · S7 §§7.2–7.3 · T-15 · T-18',
     v,
     'S3 §3.2.4 · S7 §§7.2–7.3 · T-15: nivelación Células Alfa/Beta · T-18: etapas E1/E2 y legado hasta M24',
-    'Explicar el cronograma en escala proporcional M1–M24 con extensión a M56: E1 entra a marcha blanca en M13–M15 y producción en M16; E2 hace marcha blanca en M19–M20 y producción en M21. Destacar la partición en Células Alfa y Beta durante M13–M15 para evitar sobreasignación.',
+    '[Etapas.] Marcha blanca E1 M13–M15 y producción M16; marcha blanca E2 M19–M20 y aceptación M21; operación hasta M56. [Legado.] Retiro funcional del sistema de 2013 en M16 y M21, consulta histórica hasta M24; el contable permanece como emisor. [Capacidad M13–M15.] Son 37 personas, 21 de planta y 16 de refuerzo. Los 37 FTE se distribuyen en 21,5 para E1, 14,1 para E2 y 1,4 de coordinación. Seguridad de la Información y Líder de Integración son dos roles distintos, cada uno de un FTE: 0,4 E1, 0,4 E2 y 0,2 coordinación. No hay un especialista combinado. La tabla T-15 desglosa el resto de roles sin sobreasignación. En M19–M20 S7 prevé 26 personas; 16 integran la operación desde M21.',
     90,
     3,
 )
 
-# Reservas y holguras como respuesta al riesgo de cronograma (S7 §7.3.1, Tabla 7.6 y holguras no críticas).
+# Reservas por cadenas (S7) y simulación de la red completa (S8).
 v = group(
     card(0, 0, 840, 650, CARD_BG, STROKE, 16, CORAL, accent_top=True)
     + badge(28, 26, 'RESERVAS DE CONTINGENCIA · S7 TABLA 7.6', CORAL, '#fbeaea', None, 34, 17)
-    + text(28, 108, 'Dos reservas protegen la ruta crítica', 30, WHITE, 700)
-    + text(28, 142, 'Cada una mide dos desviaciones estándar PERT de la cadena que protege.', 19, MUTED),
+    + text(28, 104, 'Dos reservas protegen la ruta crítica', 30, WHITE, 700)
+    + text(28, 134, 'Aproximación PERT normal por cadenas; no simula toda la red.', 19, MUTED),
     0,
 )
 for k, (rid, chain, acts_txt, sigma, days, prob, end_txt) in enumerate([
-    ('A14', 'Etapa 1', 'A01 · A02 · A05 · A07 · A09 · A12', '6,89', 14, 0.979, 'hasta el día 240 (inicio M13)'),
-    ('A23', 'Etapa 2', 'A17 · A20 · A22', '5,04', 10, 0.976, 'hasta el día 360 (inicio M19)'),
+    ('A14', 'Etapa 1', 'A01 · A02 · A05 · A07 · A09 · A12', '6,89', 14, 0.979, 'día 240 / inicio M13'),
+    ('A23', 'Etapa 2', 'A17 · A20 · A22', '5,04', 10, 0.976, 'día 360 / inicio M19'),
 ]):
-    y = 176 + k * 196
+    y = 150 + k * 170
     v += group(
-        card(28, y, 784, 180, '#ffffff', STROKE, 12, CORAL)
-        + text(52, y + 44, f'Reserva {rid} · {days} días hábiles', 26, CORAL, 700)
-        + text(52, y + 80, f'Cadena {chain}: {acts_txt}', 20, WHITE, 600)
-        + text(52, y + 110, f'σ = {sigma} días · {end_txt}', 19, MUTED)
-        + rect_bar(52, y + 130, 520, 24, '#e7eef1', 8)
-        + rect_bar(52, y + 130, round(520 * prob), 24, C, 8, grow_x=True)
-        + text(590, y + 150, f'{prob * 100:.1f} %'.replace('.', ','), 26, C, 700)
-        + text(700, y + 150, 'de cumplir', 17, MUTED),
+        card(28, y, 784, 160, '#ffffff', STROKE, 12, CORAL)
+        + text(52, y + 36, f'Reserva {rid} · {days} días hábiles', 26, CORAL, 700)
+        + text(52, y + 68, f'Cadena {chain}: {acts_txt}', 20, WHITE, 600)
+        + text(52, y + 94, f'σ = {sigma} días · {end_txt}', 19, MUTED)
+        + rect_bar(52, y + 113, 520, 22, '#e7eef1', 8)
+        + rect_bar(52, y + 113, round(520 * prob), 22, C, 8, grow_x=True)
+        + text(590, y + 132, f'{prob * 100:.1f} %'.replace('.', ','), 26, C, 700)
+        + text(700, y + 132, 'por cadena', 17, MUTED),
         1,
     )
 v += group(
-    card(28, 568, 784, 66, '#fff6e8', AMBER, 12, AMBER)
-    + text(52, 598, 'Ambas fechas a la vez: 95,6 %', 22, AMBER, 700)
-    + text(52, 622, 'Si una reserva baja de la mitad antes de la mitad de su cadena, escala al Comité Ejecutivo.', 16.5, WHITE),
+    card(28, 494, 784, 140, '#fff6e8', AMBER, 12, AMBER)
+    + text(52, 522, 'PERT por cadenas: ambas a tiempo, 95,6 %', 21, AMBER, 700)
+    + text(52, 554, 'Monte Carlo, red completa: 92,1 % conjunta', 24, C, 700)
+    + text(52, 584, 'H6: 96,2 % · H11: 95,5 % · 10.000 corridas (S8)', 20, WHITE)
+    + text(52, 614, 'Reserva < 50 % y cadena pendiente > 50 %: elevar al Comité Ejecutivo.', 17, MUTED),
     1,
 )
+
 slack = [
     ('A04', 'Factibilidad con terceros', 61, 'No depende de audIT', None),
     ('A18', 'Instalación progresiva', 40, 'Cierre Los Libertadores', 9),
@@ -2239,8 +2252,8 @@ slack = [
 right = (
     card(868, 0, 860, 650, CARD_BG, STROKE, 16, C, accent_top=True)
     + badge(896, 26, 'HOLGURAS QUE ABSORBEN RIESGOS · S7 §7.3.1', C, '#e7f3f6', None, 34, 17)
-    + text(896, 108, 'Lo que no controla audIT va fuera de la ruta', 28, WHITE, 700)
-    + text(896, 142, 'Holgura total en días hábiles frente al evento que debe absorber.', 19, MUTED)
+    + text(896, 108, 'Holguras de actividades fuera de la ruta', 28, WHITE, 700)
+    + text(896, 142, 'Holguras internas en días hábiles; los hitos conservan su límite.', 19, MUTED)
 )
 rows = ''
 scale = 6.2
@@ -2261,10 +2274,10 @@ for k, (aid, name, ht, why, event) in enumerate(slack):
 v += group(right + rows, 2)
 add(
     'Las reservas y holguras absorben el riesgo del plan.',
-    'RIESGOS DEL CRONOGRAMA / S7 §7.3.1 · TABLAS 7.6 Y 7.7 · T-15',
+    'RIESGOS DEL CRONOGRAMA / S7 §7.3.1 · T-15 · S8: MONTE CARLO',
     v,
-    'S7 §7.3.1: reservas A14 y A23 (PERT, 2σ), probabilidad conjunta 95,6 % y holguras de A04, A06, A11, A15 y A18 · Caso §13.2, p. 27',
-    'El riesgo de plazo se trata con números del plan. [Revelar reservas.] A14 protege la Etapa 1 con 14 días hábiles: dos desviaciones estándar de su cadena crítica, 97,9 % de cumplir el inicio del mes 13. A23 hace lo mismo para la Etapa 2 con 10 días y 97,6 %. Las dos fechas a la vez: 95,6 %. Y hay una regla: si una reserva baja de la mitad cuando a su cadena le queda más de la mitad, el caso sube al Comité Ejecutivo. [Revelar holguras.] Lo que no depende de audIT queda fuera de la ruta crítica: la factibilidad con terceros puede atrasarse 61 días; un cierre del paso Los Libertadores, unos 9 días hábiles, cabe en la holgura del piloto y de la instalación.',
+    'S7 Tabla 7.6: PERT por cadenas (97,9 %, 97,6 %; conjunta 95,6 %) · S8: red completa (96,2 %, 95,5 %; conjunta 92,1 %) · T-15',
+    '[Reservas.] A14 aporta 14 días y A23 diez. S7 usa una aproximación normal por cadenas: probabilidades 97,9 % y 97,6 %, con producto conjunto 95,6 %. [Red completa.] S8 simula 10.000 corridas con semilla 2026 y Beta-PERT sobre el T-15: H6 96,2 %, H11 95,5 % y ambas marchas blancas a tiempo 92,1 %. La diferencia recoge las rutas convergentes y la capacitación condicionada a G13; no se presentan ambos resultados como equivalentes. Si la reserva baja del 50 % con más de la mitad de cadena pendiente, se eleva al Comité Ejecutivo. [Holguras.] A04 tiene 61 días totales; A18 cuarenta, A11 y A15 veinte, y A06 veinticuatro libres. Son holguras internas; no permiten desplazar hitos ni condiciones contractuales.',
     60,
     3,
 )
@@ -2282,7 +2295,7 @@ gates_s13 = [
     ('H6', 'M13', 'Inicio MB Etapa 1', '40d capacitación cumplidos', 'Apertura controlada E1', 510, False, C, 0),
     ('H7', 'M16', 'Aceptación Etapa 1', 'Producción E1 autorizada', 'Cierre formal MB E1', 865, True, AMBER, 1),
     ('H11', 'M19', 'Inicio MB Etapa 2', 'E1 estable en producción', 'Apertura controlada E2', 1220, False, C, 1),
-    ('H12', 'M21', 'Aceptación Final', 'Producción completa E1+E2', 'Paso a operación M56', 1575, True, AMBER, 1),
+    ('H12', 'M21', 'Aceptación Final', 'Producción completa E1+E2', 'Operación M21–M56', 1575, True, AMBER, 1),
 ]
 for code, m_lbl, title_g, sub1, sub2, xg, is_top, col_g, st_g in gates_s13:
     cy_card = 28 if is_top else 272
@@ -2446,40 +2459,55 @@ add(
     backup=True,
 )
 
-# s17 (Respaldo 03) — Portafolio de 5 Innovaciones (S13 / T-19) y Madurez TRL
-v = ''
-v += group(
-    card(20, 18, 1688, 78, CARD_ALT, STROKE, 12, C)
-    + badge(44, 36, 'SECCIÓN 13 · FORMULARIO T-19', C, '#e7f3f6', 320, 34, 19)
-    + text(390, 66, '5 Paquetes de Innovación (EDT 12.1 a 12.5) · Piloto M13–M15 · Despliegue M16', 29, WHITE, 600),
+# Portafolio de innovaciones: metas y calendario propios de cada ficha T-19.
+v = group(
+    text(48, 30, 'EDT · INNOVACIÓN Y MADUREZ', 19, C, 700)
+    + text(720, 30, 'META PROPUESTA', 19, C, 700)
+    + text(1280, 30, 'CALENDARIO DE LA FICHA', 19, C, 700),
     0,
 )
 inno_rows = [
-    ('12.1', 'Expediente verificable del transportista', 'Firma TRL 9 · credencial TRL 7–8', 'Meta: 50 % de adheridos con expediente.', 'Verificación ≤ 5 s en el 99 %', 0),
-    ('12.2', 'Intervenciones por oportunidad de patio', 'TRL 2 propuesto', 'Meta: −20 % de preparación inútil.', 'Factibilidad antes del piloto de M6', 0),
-    ('12.3', 'Semirremolque conectado', 'Balizas TRL 9 · acople TRL 6→7', 'Meta: ≥ 95 % de asignaciones verificadas.', 'Se valida en la marcha blanca', 1),
-    ('12.4', 'Esquema de adhesión y propiedad', 'Control por ventana TRL 8', 'Meta: cero posiciones fuera de ventana.', 'Lo contractual no se califica en TRL', 1),
-    ('12.5', 'Bienestar del conductor y parador seguro', 'TRL 2 conceptual (ISO 16290)', 'Meta: ≥ 98 % de recomendaciones válidas.', 'Sin prueba de concepto todavía', 2),
+    ('12.1', 'Expediente verificable del transportista',
+     ['Firma TRL 9 · credencial TRL 7–8', 'Credencial alternativa sujeta a aceptación'],
+     ['50 % de adheridos con expediente en M21.', 'Verificación ≤5 s en el 99 % desde M16.'],
+     ['Entrevistas M4; construcción M8–M10.', 'Cohorte inicial en marcha blanca E1.'], 0),
+    ('12.2', 'Intervenciones por oportunidad de patio',
+     ['TRL 2 propuesto; sin prueba de concepto'],
+     ['Preparación inútil: reducción ≥20 %', 'respecto de la línea base homologada.'],
+     ['Piloto M6; propios M6–M9.', 'Terceros desde M7; pausa M11–M15.', 'Continuación M16–M18.'], 0),
+    ('12.3', 'Semirremolque conectado',
+     ['Balizas TRL 9 · acople TRL 6→7 en MB'],
+     ['≥95 % de asignaciones con', 'semirremolque propio verificado', 'por medición.'],
+     ['Montaje M6–M10 y M16–M18.', 'Validación en MB, antes de M16.'], 1),
+    ('12.4', 'Esquema de adhesión y propiedad',
+     ['Ventana y consentimiento TRL 8', 'El contrato no se califica en TRL'],
+     ['0 posiciones fuera de la ventana', 'de transmisión acordada.'],
+     ['Anexo M2–M3; cohorte M6–M9.', 'Ventana y consola M6–M10.', 'Medición desde marcha blanca E1.'], 1),
+    ('12.5', 'Bienestar y descanso en parador seguro',
+     ['TRL 2 conceptual; sin prueba de concepto', 'Metas TRL 6/7 sujetas a evidencia'],
+     ['≥98 % de episodios que exigen parada', 'con recomendación válida y oportuna.', 'Omisión o aviso tardío cuentan como fallo.'],
+     ['Ensayos M10–M12; piloto M13–M15.', 'Producción E1 en M16.'], 2),
 ]
-for idx, (code_i, name_i, trl_i, desc_i, cond_i, st_i) in enumerate(inno_rows):
-    y = 112 + idx * 102
+for idx, (code_i, name_i, trl_lines, metric_lines, calendar_lines, st_i) in enumerate(inno_rows):
+    y = 48 + idx * 116
     col_i = AMBER if idx in (1, 2) else C
     v += group(
-        card(20, y, 1688, 88, CARD_BG, STROKE, 12, col_i)
-        + text(48, y + 54, code_i, 34, col_i, 700)
-        + text(155, y + 42, name_i, 27, WHITE, 600)
-        + text(155, y + 72, desc_i, 22, MUTED)
-        + badge(885, y + 24, trl_i, col_i, '#e7f3f6' if col_i == C else '#fff0d7', 295, 38, 19)
-        + text(1210, y + 52, cond_i, 22, WHITE, 500),
+        card(20, y, 1688, 108, CARD_BG, STROKE, 12, col_i)
+        + text(48, y + 59, code_i, 34, col_i, 700)
+        + text(155, y + 30, name_i, 24, WHITE, 600)
+        + ''.join(text(155, y + 60 + k * 25, t, 19, col_i) for k, t in enumerate(trl_lines))
+        + ''.join(text(720, y + 30 + k * 27, t, 21, WHITE) for k, t in enumerate(metric_lines))
+        + ''.join(text(1280, y + 30 + k * 27, t, 19, MUTED) for k, t in enumerate(calendar_lines)),
         st_i,
     )
+v += group(text(20, 642, 'Metas propuestas, no resultados · Hitos seleccionados; calendario completo en T-19 · Fichas 1–5 / EDT 12.1–12.5', 17, MUTED), 2)
 add(
     'Las cinco innovaciones distinguen TRL y condiciones.',
-    'RESPALDO 03 / DETALLE DE INNOVACIONES S13 · FORMULARIO T-19',
+    'RESPALDO / INNOVACIONES · S13 · FORMULARIO T-19, FICHAS 1–5',
     v,
-    'S13 · T-19: fichas de innovación 12.1 a 12.5, niveles TRL y supuestos de validación',
-    'Usar ante consultas sobre la Sección 13 (Innovaciones): detalla los 5 paquetes del área 12 de la EDT, diferenciando la madurez comercial del componente respecto del TRL de integración en Curimón.',
-    45,
+    'S13 §§13.1–13.5 · T-19: madurez, calendarios e indicadores por ficha · EDT 12.1–12.5',
+    'Cada innovación conserva su propio calendario y meta. Son propuestas: no se declara medición ni piloto ejecutados. Expediente: 50 % de adheridos con al menos una emisión en M21, y respuesta ≤5 s en 99 % de verificaciones desde M16; el formato alternativo depende de aceptación. Proceso: concepto TRL 2, piloto de 10 camiones M6, flota propia completa M9, terceros desde M7, pausa M11–M15 y continuación M16–M18; la mejora de 20 % exige línea base homologada. Semirremolque: el 95 % se refiere a asignaciones con semirremolque propio verificado por medición; montaje M6–M10 y M16–M18, validación antes de M16. Adhesión: ventana y consentimiento TRL 8; el contrato no recibe TRL. Bienestar: TRL 2 conceptual; objetivos TRL 6 tras ensayos M10–M12 y TRL 7 tras piloto M13–M15, sujetos a evidencia. Su efectividad divide episodios con recomendación válida y oportuna por episodios en que el oráculo exige parada; falta de parador, aviso omitido o tardío son fallos, y con denominador cero no se informa tasa. Talleres M4, catálogo M3–M6 y software M4–M9 preceden a esa validación.',
+    60,
     3,
     backup=True,
 )
@@ -2521,7 +2549,7 @@ for tag_f, l1, l2, and_desc, xf, cxf, st_f in fault_branches:
     )
 v += group(
     card(20, 534, 1688, 94, CARD_ALT, STROKE, 14, C)
-    + text(48, 574, 'Defensa en profundidad: cada camino exige que fallen simultáneamente dos barreras independientes (compuerta AND).', 26, WHITE, 600)
+    + text(48, 574, 'Cada camino requiere una falla técnica y una falla de control (AND); no se supone independencia estadística.', 26, WHITE, 600)
     + text(48, 610, 'Rigor S8 §8.2: análisis lógico cualitativo para diseñar pruebas en paralelo; no se inventan probabilidades empíricas sin historial.', 22, MUTED),
     2,
 )
@@ -2530,50 +2558,50 @@ add(
     'RESPALDO 04 / ÁRBOL DE FALLAS DE VERIFICACIÓN BLOQUEANTE · S8 §8.2',
     v,
     'S8 §8.2: árbol de fallas con compuerta OR superior y cuatro compuertas AND inferiores',
-    'Explicar la estructura lógica del árbol de fallas de S8 §8.2: el evento tope ocurre por una compuerta OR superior alimentada por cuatro ramas, donde cada rama requiere la conjunción (compuerta AND) de una falla técnica y una falla de control.',
+    'El evento tope se alimenta por OR de cuatro ramas. Cada AND expresa una conjunción de falla técnica y falla de control. Se utiliza como análisis lógico cualitativo para diseñar pruebas; dibujar AND no acredita independencia estadística ni autoriza multiplicar probabilidades sin datos.',
     45,
     3,
     backup=True,
 )
 
-# s19 (Respaldo 05) — Procedimiento de Reversión en 4 Pasos (T-18)
-v = ''
+# Procedimiento de reversión: las seis acciones y responsables del T-18.
+v = group(
+    text(40, 30, 'PASO', 18, C, 700)
+    + text(150, 30, 'ACCIÓN', 18, C, 700)
+    + text(900, 30, 'RESPONSABLE', 18, C, 700)
+    + text(1440, 30, 'TIEMPO MÁXIMO', 18, C, 700),
+    0,
+)
 rev_steps = [
-    ('01', 'Detectar', '15 min', 'Incidente crítico S1 o discrepancia de datos en marcha blanca.', 'Guardia SRE / Monitoreo Torre', C, 20, 0),
-    ('02', 'Decidir', '30 min', 'Evaluación en comité operativo con contraparte Curimón informada.', 'Jefe de Proyecto + Líder Operación', AMBER, 448, 1),
-    ('03', 'Revertir', '15m + 20m/camión', 'Conmutación de tráfico a versión previa y resincronización.', 'Ingeniero SRE + Soporte Terreno', C, 876, 1),
-    ('04', 'Conciliar', '24 h / 5 días', 'Cuadratura de viajes y DTE en 24 h; informe causal en 5 días hábiles.', 'Líder de Datos + Operación', AMBER, 1304, 2),
+    ('01', 'Detectar incidente crítico de la versión o diferencia de conciliación sin explicar.', 'Guardia de la mesa de servicio', '15 minutos', 0),
+    ('02', 'Decidir la reversión con la contraparte técnica informada.', 'Jefe de Proyecto y Líder de Operación', '30 minutos', 0),
+    ('03', 'Cambiar el tráfico a la versión anterior del servicio afectado.', 'Ingeniero SRE de guardia', '15 minutos', 1),
+    ('04', 'Recibir los eventos reenviados desde la copia de 72 horas a bordo.', 'Líder de Operación', '20 min por camión', 1),
+    ('05', 'Conciliar viajes y documentos del período con el sistema contable.', 'Líder de Datos', '24 horas', 2),
+    ('06', 'Informar la causa raíz al mandante.', 'Jefe de Proyecto', '5 días hábiles', 2),
 ]
-for num_r, title_r, sla_r, desc_r, role_r, col_r, xr, st_r in rev_steps:
-    w_lines = textwrap.wrap(desc_r, width=30)
+for j, (num_r, action_r, role_r, limit_r, step_r) in enumerate(rev_steps):
+    y = 50 + j * 78
     v += group(
-        card(xr, 36, 404, 465, CARD_BG, STROKE, 16, col_r, accent_top=True)
-        + text(xr + 26, 108, num_r, 56, col_r, 700)
-        + badge(xr + 125, 64, sla_r, col_r, '#e7f3f6' if col_r == C else '#fff0d7', 252, 38, 19)
-        + text(xr + 26, 168, title_r, 38, WHITE, 600)
-        + line(xr + 26, 194, xr + 378, 194, STROKE, 1.5)
-        + ''.join(text(xr + 26, 244 + k * 34, line_s, 24, WHITE) for k, line_s in enumerate(w_lines))
-        + card(xr + 24, 378, 356, 98, CARD_ALT, STROKE, 12, col_r)
-        + text(xr + 44, 414, 'RESPONSABLE', 19, col_r, 700)
-        + text(xr + 44, 450, role_r, 19.5, MUTED, 600),
-        st_r,
+        card(20, y, 1688, 70, CARD_BG if j % 2 == 0 else CARD_ALT, STROKE, 10, C)
+        + text(40, y + 45, num_r, 30, C, 700)
+        + ''.join(text(150, y + 29 + k * 27, t, 24, WHITE) for k, t in enumerate(textwrap.wrap(action_r, 55)))
+        + ''.join(text(900, y + 29 + k * 27, t, 23, MUTED, 600) for k, t in enumerate(textwrap.wrap(role_r, 36)))
+        + text(1440, y + 43, limit_r, 23, C, 700),
+        step_r,
     )
-    if xr < 1300:
-        v += group(arrow(xr + 408, 268, xr + 444, 268, C, 3.5, draw=True), st_r)
-
 v += group(
-    card(20, 526, 1688, 102, CARD_ALT, STROKE, 14, AMBER)
-    + badge(48, 548, 'NOTA METODOLÓGICA T-18', AMBER, '#fff0d7', 280, 34, 18)
-    + text(350, 572, 'Ventanas operativas de procedimiento; no deben sumarse como RTO único ni declararse como prueba ya ejecutada.', 23, WHITE, 600)
-    + text(48, 610, 'Durante la reversión, el ERP contable mantiene la continuidad de emisión tributaria sin pérdida de folios.', 23, MUTED),
+    card(20, 532, 1688, 102, CARD_ALT, STROKE, 14, AMBER)
+    + text(48, 568, 'Ventanas por acción; no se suman como RTO único. Procedimiento previsto y pendiente de ensayo.', 24, WHITE, 600)
+    + text(48, 608, 'El sistema contable conserva los documentos emitidos; el reenvío se concilia sin duplicar folios.', 23, MUTED),
     2,
 )
 add(
     'La reversión opera con tiempos y roles definidos.',
-    'RESPALDO 05 / PROCEDIMIENTO DE REVERSIÓN · FORMULARIO T-18',
+    'RESPALDO / PROCEDIMIENTO DE REVERSIÓN · FORMULARIO T-18',
     v,
-    'T-18: procedimiento de reversión en 4 fases (15 min, 30 min, 15 min + 20 min/camión, 24 h / 5 d)',
-    'Detallar el protocolo de reversión de T-18 en cuatro pasos con sus ventanas operativas y responsables, advirtiendo que no deben sumarse como un RTO único.',
+    'T-18: procedimiento de reversión, seis acciones con sus responsables y tiempos máximos',
+    'Recorrer las seis acciones del T-18. Detecta la guardia de la mesa de servicio en 15 minutos. Deciden Jefe de Proyecto y Líder de Operación en 30 minutos, con contraparte técnica informada. El SRE de guardia conmuta en 15 minutos. El Líder de Operación recibe los eventos reenviados en 20 minutos por camión. El Líder de Datos concilia en 24 horas. El Jefe de Proyecto informa la causa raíz en cinco días hábiles. Las ventanas no constituyen un RTO sumado; el procedimiento se ensaya en PREPROD antes de cada paso a producción. Un firmware vuelve a la imagen anterior en el siguiente paso por terminal, sin borrar eventos pendientes.',
     45,
     3,
     backup=True,
@@ -2597,20 +2625,28 @@ for page_idx, offset in enumerate(range(0, len(packages), 6)):
         + text(760, 33, 'CRITERIO DE ACEPTACIÓN', 18, C, 700, extra='letter-spacing="1.5"')
         + text(1360, 33, 'RESPONSABLE · RED Y MESES', 18, C, 700, extra='letter-spacing="1.5"')
     )
+    row_top = 60
     for j, p in enumerate(packages[offset:offset + 6]):
-        row_top = 60 + j * 98
-        v += card(0, row_top, 1728, 90, CARD_BG if j % 2 == 0 else CARD_ALT, STROKE, 10, C)
-        v += text(24, row_top + 56, p['codigo'], 30, C, 700)
-        for col_x, value, width, size, colr in (
-            (150, p['nombre'], 46, 22, WHITE),
-            (760, p['criterio'], 50, 20, WHITE),
+        name_lines = textwrap.wrap(p['nombre'], 46, break_long_words=False, break_on_hyphens=False)
+        criterion_lines = textwrap.wrap(p['criterio'], 56, break_long_words=False, break_on_hyphens=False)
+        role_lines = textwrap.wrap(p['responsable'], 36, break_long_words=False)
+        network_lines = textwrap.wrap(p['red'], 40, break_long_words=False, break_on_hyphens=False)
+        row_height = max(80, 26 + max(len(name_lines) * 24, len(criterion_lines) * 22,
+                                      (len(role_lines) + len(network_lines)) * 21))
+        v += card(0, row_top, 1728, row_height, CARD_BG if j % 2 == 0 else CARD_ALT, STROKE, 10, C)
+        v += text(24, row_top + row_height / 2 + 10, p['codigo'], 30, C, 700)
+        for col_x, wrapped, size, line_height in (
+            (150, name_lines, 22, 24),
+            (760, criterion_lines, 20, 22),
         ):
-            wrapped = textwrap.wrap(value, width)[:2]
+            first_baseline = row_top + (row_height - (len(wrapped) - 1) * line_height) / 2 + size * 0.35
             for k, value_line in enumerate(wrapped):
-                ty = row_top + 53 if len(wrapped) == 1 else row_top + 38 + k * 28
-                v += text(col_x, ty, value_line, size, colr, 500)
-        v += text(1360, row_top + 38, p['responsable'], 20 if len(p['responsable']) <= 30 else 16, WHITE, 600)
-        v += text(1360, row_top + 66, textwrap.shorten(p['red'], 38, placeholder='…'), 18, MUTED)
+                v += text(col_x, first_baseline + k * line_height, value_line, size, WHITE, 500)
+        for k, value_line in enumerate(role_lines):
+            v += text(1360, row_top + 24 + k * 21, value_line, 18, WHITE, 600)
+        for k, value_line in enumerate(network_lines):
+            v += text(1360, row_top + 24 + (len(role_lines) + k) * 21, value_line, 18, MUTED)
+        row_top += row_height + 8
     v = group(v, 0)
     add(
         f'Diccionario EDT · paquetes {packages[offset]["codigo"]} a {packages[min(offset + 5, len(packages) - 1)]["codigo"]}.',
@@ -2626,32 +2662,32 @@ for page_idx, offset in enumerate(range(0, len(packages), 6)):
 # Tiempos de la versión con bloque EDT ampliado (tres láminas): se recortan láminas de apoyo para volver a 15:00.
 # Recorrido principal en tres actos (título, segundos). Lo que no está aquí va al respaldo, salvo DESCARTE.
 RECORRIDO = [
-    ('Revisión 2 · Caso Transporte de Carga', 10),
+    ('Revisión 2 · Caso Transporte de Carga', 15),
     ('Una salida segura exige información confiable.', 25),
     ('Cambios principales del Informe 2', 40),
     ('Qué construimos', 3),
     ('La solución es híbrida: nube, sitio y flota.', 40),
     ('Ocho capas, cada una con su producto.', 45),
     ('Un viaje se autoriza o se bloquea en 30 segundos.', 40),
-    ('Cada nodo declara su hardware y su enlace.', 45),
+    ('Cada nodo declara su hardware y su enlace.', 40),
     ('El camión es un nodo que opera sin red.', 35),
-    ('Cada dato vive en el motor que su uso exige.', 40),
-    ('Si se corta el enlace, la operación sigue.', 30),
+    ('Cada dato vive en el motor que su uso exige.', 35),
+    ('Si se corta el enlace, la operación sigue.', 35),
     ('Cómo lo ejecutamos', 3),
-    ('La EDT cubre todo el alcance en 13 elementos.', 40),
-    ('Cada elemento baja a paquetes que se pueden aceptar.', 50),
-    ('El diccionario hace verificable cada paquete.', 45),
-    ('La red de 25 actividades define la ruta crítica.', 75),
-    ('¿Y si la construcción de la Etapa 1 se atrasa 10 días?', 35),
+    ('La EDT cubre todo el alcance en 13 elementos.', 35),
+    ('Cada elemento baja a paquetes que se pueden aceptar.', 40),
+    ('El diccionario hace verificable cada paquete.', 40),
+    ('La red de 25 actividades define la ruta crítica.', 65),
+    ('¿Y si la construcción de la Etapa 1 se atrasa 10 días?', 40),
     ('El paquete 11.1 se controla con la compuerta G13.', 35),
-    ('La transición se ejecuta en dos etapas niveladas.', 30),
+    ('La transición se ejecuta en dos etapas niveladas.', 45),
     ('Cómo lo protegemos', 3),
-    ('Veintiocho riesgos evaluados; ninguno queda alto.', 50),
-    ('Siete riesgos altos, cada uno con su disparador.', 50),
-    ('R-28: cuatro causas, cuatro barreras antes del evento.', 50),
-    ('Las reservas y holguras absorben el riesgo del plan.', 40),
+    ('Veintiocho riesgos evaluados; ninguno queda alto.', 45),
+    ('Siete riesgos altos, cada uno con su disparador.', 45),
+    ('R-28: cuatro causas, cuatro barreras antes del evento.', 45),
+    ('Las reservas y holguras absorben el riesgo del plan.', 50),
     ('Tres compromisos que se pueden verificar.', 20),
-    ('Preguntas y discusión', 10),
+    ('Preguntas y discusión', 5),
 ]
 RESPALDO_ORDEN = [
     'Registro de riesgos · R-01 a R-14.',
@@ -2693,6 +2729,9 @@ EXPOSICION_SEGUNDOS = sum(s['seconds'] for s in main)
 MARGEN_SEGUNDOS = 15 * 60 - EXPOSICION_SEGUNDOS
 for n, s in enumerate(SLIDES, 1):
     s['id'] = f's{n:02}'
+    if s['backup']:
+        s['eyebrow'] = re.sub(r'^RESPALDO(?:\s+\d+)?\s*/',
+                              f'RESPALDO R{n - len(main)} /', s['eyebrow'])
 import base64
 FONT_FACES = ''.join(
     "@font-face{font-family:'AuditSans';font-style:normal;font-weight:%s;font-display:block;src:url(data:font/woff2;base64,%s) format('woff2')}"

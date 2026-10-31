@@ -15,21 +15,22 @@ No hay botones, menús, instrucciones ni barras visibles en la superficie de exp
 
 ## Material
 
-- 26 láminas principales en tres actos, 14 minutos y 49 segundos objetivo y 11 segundos de margen:
+- 26 láminas principales en tres actos, 14 minutos y 29 segundos objetivo y 31 segundos de margen:
   - Apertura: contexto operacional y síntesis visual de cinco grupos de correcciones del Informe 1 (matriz Art. 46, fuentes vigentes del repositorio).
   - Acto 1, «Qué construimos»: contexto en tres planos, ocho capas, verificación en 30 s, arquitectura física, equipo a bordo, datos y operación sin enlace (S4, S5, T-11).
-  - Acto 2, «Cómo lo ejecutamos»: EDT en tres niveles, carta Gantt de la red T-15 con Monte Carlo por hito, simulación de atraso de A09, G13 y transición (S7, T-14, T-15, S8).
-  - Acto 3, «Cómo lo protegemos»: mapa P×I de los 28 riesgos, los siete de exposición alta, corbatín de R-28 con AMFE, y reservas y holguras (S8, T-16).
+  - Acto 2, «Cómo lo ejecutamos»: EDT en tres niveles, carta Gantt de T-15 con probabilidades al límite contractual, escenario determinista de atraso de A09, G13, transición y reparto de capacidad (S7, T-14, T-15, S8).
+  - Acto 3, «Cómo lo protegemos»: mapa P×I de los 28 riesgos, los siete de exposición alta, corbatín de R-28 con AMFE, reservas y holguras, distinguiendo PERT por cadenas de Monte Carlo de red completa (S8, T-16).
 - 21 láminas de respaldo: registro completo de riesgos, AMFE, árbol de fallas, R-28, implantación, hitos, reversión, calidad, correcciones, innovaciones, límites y diccionario EDT.
 - El respaldo no se muestra en el recorrido: se abre con B si una pregunta lo requiere; dentro, un número seguido de Enter salta a esa lámina. Escape vuelve.
 - El puntero del mouse está visible y se oculta tras 4 segundos sin moverlo.
 - `GUION-5-EXPOSITORES.md`: texto oral y relevos para cinco personas. `NOTAS-EXPOSICION.md`: notas por lámina.
 - `construir.py` lee los formularios vigentes del repositorio (T-14, T-15, T-16, S4, S5, S7, S8, T-19 en `recursos/Formato-Oferta-audIT/salida/informe2/`) y regenera todo con `python3 construir.py`. Requiere Python 3; no usa paquetes externos.
 - La versión original del compañero está en `original/`, como referencia.
+- La referencia de contenido son los LaTeX de los subdocumentos y formularios oficiales en `recursos/Formato-Oferta-audIT/`; las exportaciones Markdown alimentan las tablas del generador.
 
-La nueva lámina 3 se revela en tres pasos: requisitos y arquitectura; legado y capacidad; innovaciones. El detalle de las observaciones 37, 43 y 48 permanece en R10 (lámina 36).
+La nueva lámina 3 se revela en tres pasos: requisitos y arquitectura; legado y capacidad; innovaciones. El detalle de las observaciones 37, 43 y 48 permanece en R10 (lámina 36). R8 conserva las seis acciones de reversión de T-18; R11 distingue el calendario y los indicadores de cada innovación. R13–R21 conservan los 54 paquetes con sus campos completos.
 
-Los cronometrajes son una pauta y requieren ensayo. Las pruebas del T-17 están diseñadas, no ejecutadas, y las exposiciones residuales son estimaciones.
+Los cronometrajes son una pauta y requieren ensayo con los cinco expositores y las revelaciones. Las pruebas del T-17 están diseñadas, no ejecutadas, y las exposiciones residuales son estimaciones.
 
 ## Tipografía
 

@@ -1,10 +1,10 @@
 # Guion de exposición
 
-Objetivo: 14 minutos y 49 segundos + 11 segundos de margen. No hay asignación ficticia de expositores.
+Objetivo: 14 minutos y 29 segundos + 31 segundos de margen. No hay asignación ficticia de expositores.
 
 ## 1. Revisión 2 · Caso Transporte de Carga
 
-Tiempo: 10 s.
+Tiempo: 15 s.
 
 Presentar el alcance de la revisión: correcciones del Informe 1, riesgos de solución, proyecto e implantación, EDT, planificación e hitos. La exposición dura 15 minutos y deja 15 minutos para preguntas.
 
@@ -14,7 +14,7 @@ Fuente: Transportes Curimón · TFEP-01/2026 · audIT Soluciones Tecnológicas S
 
 Tiempo: 25 s.
 
-Abrir desde la operación real. El camión se desplaza sobre un carril dedicado mientras se activan los tres controles bloqueantes inferiores: conductor, vehículo y documento deben aportar evidencia válida antes de autorizar la salida.
+La salida requiere conductor habilitado, vehículo conforme y documento íntegro en cabina. La identificación del conductor utiliza tarjeta MIFARE con el camión detenido; no se propone biometría de conductores. La biometría del T-11 corresponde a la sala de datos. Una asignación de recursos no sustituye la autorización de salida: la condición documental se verifica antes del traslado.
 
 Fuente: S2 · S3 §3.3 · S8: verificación bloqueante de salida
 
@@ -30,7 +30,7 @@ Fuente: Matriz Art. 46 · S3 · S4 · S13 · T-11 / T-12 / T-17 / T-19
 
 Tiempo: 3 s.
 
-Separador. Cambio de voz: el expositor 1 presenta el problema y la arquitectura de alto nivel.
+Separador de acto; el expositor 1 continúa con la arquitectura.
 
 Fuente: S4 y S5
 
@@ -38,7 +38,7 @@ Fuente: S4 y S5
 
 Tiempo: 40 s.
 
-Abrir con el mapa completo. [Nube.] El núcleo vive en Azure Chile Central, en tres zonas: Front Door, API Management, los seis contextos en AKS, IoT Hub y Event Hubs para la ingesta, PostgreSQL con TimescaleDB, Managed Redis y Storage; Brazil South espera como recuperación. [Sitio.] San Bernardo no aloja el núcleo: mantiene viva la torre si cae el enlace y aloja la capa anticorrupción junto al sistema contable, que sigue siendo el único emisor. Cada terminal tiene dos nodos en activo y espera y un router 5G. [Flota.] 182 camiones llevan el equipo audIT; los 192 de terceros no se intervienen y llegan por la plataforma de su proveedor. [Componentes.] Son 39 componentes: 24 en la región primaria, uno en la secundaria y 14 fuera de la nube. Por eso es híbrida, como exige el Artículo 16.
+[Nube.] Azure Chile Central en tres zonas; Brazil South es la región de recuperación prevista. [Sitios.] San Bernardo sostiene la torre y aloja la capa anticorrupción junto al contable, único emisor tributario; cuatro terminales tienen nodos activo y espera y respaldo 5G. [Flota.] Se instalan equipos audIT en 182 camiones. Los 192 de terceros conservan sus equipos: el acceso por interfaz o exportación se sujeta a autorización y factibilidad por proveedor, sin prometer una API disponible para todos. La cobertura efectiva y antigüedad se muestran por unidad. [Componentes.] El catálogo arquitectónico tiene 39: 24 primarios, uno de recuperación y 14 fuera de la nube. R24 exige base de licitud, aprobación del mandante y cláusulas firmadas antes de H2; si falta esa condición no se autoriza producción, según S4.
 
 Fuente: S4 §4.2, Tabla de planos y §4.2.3: 39 componentes (24 + 1 + 14) · T-11 · FEP01 Art. 16.1 a 16.4 · Caso RT-06.01 · íconos: Azure Architecture Icons y Simple Icons
 
@@ -60,11 +60,11 @@ Fuente: S4 §4.1.9 y Tabla 4.3: presupuesto de diseño de la asignación · Caso
 
 ## 8. Cada nodo declara su hardware y su enlace.
 
-Tiempo: 45 s.
+Tiempo: 40 s.
 
-Bajar de la idea al equipo. [Nube.] Lo que se contrata en Azure, por subred, y Brazil South con RPO de 15 minutos y RTO de 4 horas. [Sitios.] San Bernardo va en pares: dos servidores Dell R360, dos FortiGate, clima N+1, detección por aspiración y grupo electrógeno. Cada terminal tiene dos Karbon 430 en activo y espera y un router 5G. El camión lleva el G26I, el módem Iridium, el lector CAN sin contacto y el lector de tarjeta. [Enlaces.] Cada enlace tiene medio, respaldo y tiempo de conmutación: ExpressRoute de 100 Mbit/s con VPN de respaldo en menos de un minuto; terminal fijo con 5G; camión LTE con Iridium hacia IoT Hub. [Cierre.] Cinco ambientes desde el mismo código. Todo el hardware lo compra el mandante; el detalle y las cantidades están en el T-11.
+[Nube.] Chile Central es la región primaria: red central 10.10.0.0/22 y red de producción 10.11.0.0/20. Brazil South recibe réplicas para recuperación, con RPO de 15 minutos y RTO de 4 horas. [Enlaces.] El camión llega por LTE o Iridium a IoT Hub en Chile Central. San Bernardo usa ExpressRoute de 100 Mbit/s y VPN de respaldo; cada terminal, enlace fijo y 5G. [Energía.] San Bernardo mantiene equipos A/B en circuitos distintos: cada R360 tiene dos fuentes y cada FortiGate 90G, dos adaptadores. En cada terminal hay un bus de 24 V para cómputo y router y otro de 48 V para el TSW202, que alimenta el punto de acceso y el lector por PoE. Cada bus tiene dos fuentes DIN y un módulo de redundancia: una fuente desde la UPS y otra desde un circuito distinto del tablero, según RT-08.04 y T-11. [Cierre.] Cinco ambientes desde el mismo código. El mandante compra el hardware detallado en T-11.
 
-Fuente: S4 §4.2.1: implementos que compra el mandante · §4.2.4: catálogo Azure · §4.2.6: ambientes y respaldos · §4.2.7: enlaces y conmutación · T-11
+Fuente: S4 §4.2.1: hardware · §4.2.5: redes · §4.2.6: ambientes · §4.2.7: enlaces y alimentación redundante · T-11 · FEP02 RT-08.04, p. 18
 
 ## 9. El camión es un nodo que opera sin red.
 
@@ -76,17 +76,17 @@ Fuente: S4 §4.2.2: equipo a bordo y Tabla de capacidad derivada (2.374 MB) · C
 
 ## 10. Cada dato vive en el motor que su uso exige.
 
-Tiempo: 40 s.
+Tiempo: 35 s.
 
-El dato no está en una sola base. [Dominios.] Asignación y vigencias van en PostgreSQL con transacciones: si no hay estado autoritativo, no se confirma una reserva. A bordo, SQLite sigue capturando y sincroniza después. La telemetría entra por Event Hubs a TimescaleDB. La caché, en Managed Redis, nunca habilita con una copia vieja. Documentos y auditoría quedan inmutables en Blob Storage, y la analítica se separa del despacho en Delta Lake. [Volumen.] 96 mil viajes y cerca de 120 millones de posiciones al año, con la retención que fija el Caso. [Migración.] Cuatro fases; las 6.000 vigencias se acreditan una a una con hash, y nada en cuarentena habilita un despacho.
+[Dominios.] PostgreSQL confirma las asignaciones; SQLite captura a bordo; TimescaleDB conserva telemetría. La caché no habilita con una copia desactualizada. Documentos y auditoría conservan integridad y la analítica se separa del despacho. [Volumen.] 96.000 viajes y cerca de 120 millones de posiciones anuales. [Migración.] Las aproximadamente 6.000 vigencias requieren verificación documental individual, respaldo custodiado y acta de conciliación. El hash SHA-256 comprueba integridad y no sustituye la verificación documental. Nada en cuarentena habilita despacho.
 
 Fuente: S5 Tabla 5.3: persistencia y conducta ante partición · Tabla 5.5: retención · Tabla 5.6: migración · S4 §4.1.20: volumen declarado
 
 ## 11. Si se corta el enlace, la operación sigue.
 
-Tiempo: 30 s.
+Tiempo: 35 s.
 
-Cortar los enlaces en la misma vista. [Corte.] Lo que exige estado global, asignar un viaje nuevo y emitir el documento, sigue pasando por el servicio central: no se inventan vigencias ni asignaciones. [Autonomía.] San Bernardo y los terminales operan 24 horas: la torre, las emergencias, la consulta de vigencias en portería. El camión guarda al menos 72 horas, y el diseño llega a 288. [Reconexión.] Al volver la señal se sube por lotes con acuse, y la prueba CP-PERF-02 exige 20 minutos para 300 camiones. Este es el puente con los riesgos: estas mismas piezas son las barreras del R-28.
+[Autoridad.] Una asignación nueva requiere el estado autoritativo de Azure. El sistema contable de San Bernardo permanece como único emisor tributario, integrado a través de la capa anticorrupción. [Autonomía.] Los sitios mantienen 24 horas de funciones locales y el camión conserva un mínimo contractual de 72 horas, con diseño para 288. Una copia local no permite inventar vigencias ni confirmar asignaciones globales. [Reconexión.] Se sincroniza por lotes con deduplicación y acuse duradero. CP-PERF-02 diseña la comprobación con 300 camiones tras 72 horas, incluyendo transferencia, persistencia y conciliación. Es un criterio de ensayo, no una medición ya realizada.
 
 Fuente: S4 §4.1.26: operación desconectada y reconexión · §4.2.3: funciones on-premise · §4.3: plazos sin enlace · FEP01 Art. 16.4 · Caso RT-03.10 y RT-03.13
 
@@ -100,7 +100,7 @@ Fuente: S7 · T-14 · T-15
 
 ## 13. La EDT cubre todo el alcance en 13 elementos.
 
-Tiempo: 40 s.
+Tiempo: 35 s.
 
 Construir el árbol en voz alta. Nivel 0: el proyecto completo. Nivel 1: trece elementos orientados a entregables, no a fases. [Revelar paquetes.] Cada elemento baja a paquetes estimables y asignables: 54 en total; el elemento 5 es el más grande porque replica los contextos de la arquitectura. [Revelar agrupación.] Los elementos 1 a 6 construyen la Etapa 1; los 7 a 13 la acompañan, certifican y operan. La regla del 100 %: la suma de los hijos es el padre, sin vacíos ni dobles conteos.
 
@@ -108,7 +108,7 @@ Fuente: S7 §7.1, Figura 7.1 y Tabla 7.2 · T-14: diccionario de 54 paquetes · 
 
 ## 14. Cada elemento baja a paquetes que se pueden aceptar.
 
-Tiempo: 50 s.
+Tiempo: 40 s.
 
 Recorrer de izquierda a derecha sin leer paquete por paquete. Columnas 1 y 2: lo que construye la Etapa 1, con el elemento 5 nombrado igual que los contextos de la arquitectura. [Revelar columnas 3 y 4.] Datos, Etapa 2, adhesión, calidad, implantación, innovaciones y operación. [Revelar trazabilidad.] Destacar tres decisiones de diseño: 5.1 a 5.6 son los seis contextos de S4, por lo que cada componente tiene un único paquete que lo construye; 12.1 a 12.5 son las fichas del T-19; y la adhesión es un elemento propio con responsable, porque el Caso exige tratarla como actividad. El elemento 11 produce las actas de los hitos de marcha blanca.
 
@@ -116,7 +116,7 @@ Fuente: S7 Figura 7.1 · T-14: 54 paquetes · S4: seis contextos · T-19: cinco 
 
 ## 15. El diccionario hace verificable cada paquete.
 
-Tiempo: 45 s.
+Tiempo: 40 s.
 
 Tomar un paquete real, el 11.2, y leerlo como lo leería el mandante. [Revelar.] Entregable: lo que se recibe. Criterio: las seis condiciones del Art. 17.3, que se acreditan en los hitos H6 y H7. [Revelar.] Un solo responsable, el Líder de Implantación, y su lugar en la red: A15 y A19, meses 13 a 16. Es el mismo paquete al que llega la traza de la observación 48. [Revelar.] Cerrar con la regla del 100 %: se contrastó contra los 42 requerimientos, los seis contextos, las cinco innovaciones y las once exigencias del Caso; ninguno quedó sin paquete.
 
@@ -124,19 +124,19 @@ Fuente: T-14: paquete 11.2 · S7 Tabla 7.1: cobertura contra el alcance · T-12:
 
 ## 16. La red de 25 actividades define la ruta crítica.
 
-Tiempo: 75 s.
+Tiempo: 65 s.
 
-Presentar la Gantt como red, no como barras sueltas. [Barras.] Veinticinco actividades en días hábiles, del día 0 al 420, que es el mes 21. [Dependencias.] Cada flecha es una precedencia fin a inicio del T-15: por ejemplo, la certificación A12 no parte hasta que terminan migración, construcción, integraciones y piloto a bordo. [Ruta crítica.] En rojo la ruta crítica: A01, A02, A05, A07, A09, A12, la reserva A14, y luego la Etapa 2: A17, A20, A22, la reserva A23, A24 y A25. Las líneas punteadas son holguras: la marcha blanca de la Etapa 1 queda fuera de la ruta, con 20 días. [Hitos.] Los rombos son los hitos del E-25; todos caen dentro de su mes contractual.
+[Barras.] Veinticinco actividades y la compuerta G13, del día 0 al 420, fin M21. [Dependencias.] Se muestran precedencias fin a inicio; A09 hacia G13 y A13 incluye adelanto FS−10. A12 depende de migración, construcción, integraciones y piloto. [Ruta.] Trece actividades críticas; las reservas A14 y A23 son explícitas. Un atraso se propaga si se mantienen todas las duraciones; consumir una reserva modifica ese escenario. [Hitos.] Los rombos muestran la posición planificada y los porcentajes, redondeados, la probabilidad Monte Carlo de cumplir el límite contractual de S8. No son probabilidades de terminar en la fecha temprana: A12 se planifica al día 226, pero el 96,2 % corresponde al límite 240. Redondear un resultado a 100 % no constituye una garantía.
 
-Fuente: T-15: malla de precedencias, ES/EF/LS/LF y holguras (PERT, días hábiles) · S7 §7.3.1, Tabla 7.7: hitos frente a la red
+Fuente: T-15: precedencias y holguras · S7 §7.3.1, Tabla 7.7: posición planificada · S8: Monte Carlo al límite contractual (10.000 corridas)
 
 ## 17. ¿Y si la construcción de la Etapa 1 se atrasa 10 días?
 
-Tiempo: 35 s.
+Tiempo: 40 s.
 
-Poner la red a prueba con una pregunta que la comisión suele hacer. [Plan.] La cadena crítica de la Etapa 1: ambientes, construcción, certificación y la reserva A14 antes del inicio fijo de la marcha blanca en el día 240. [Atraso.] Si la construcción se atrasa 10 días, la certificación se corre y la reserva baja de 14 a 4 días. [Efecto.] H5 y H6 se cumplen igual: para eso existe la reserva. Pero H4, el fin de la construcción, tiene límite el día 200 y queda dos días tarde: la reserva protege la marcha blanca, no los hitos de pago, y eso es justamente el riesgo R-17. El consumo de más de la mitad de A14 activa el R-16.
+Este es un escenario determinista sobre la red del T-15, sin nueva simulación. A09 termina el día 202 y supera el límite 200 de H4. A12 se desplaza hasta el 236 y la reserva A14 baja de 14 a 4 días, conservando el inicio fijo de H6 en el día 240. G13 y A13 se desplazan: A13 acaba el día 232 y conserva ocho días antes de H6. Los 38 días de holgura total de la red no autorizan a mover esa fecha fija. Se activa R16 por consumo superior al 50 % de A14 y permanece R17 por incumplimiento del hito intermedio. Los porcentajes Monte Carlo de S8 pertenecen a la línea base; no se atribuyen a este escenario.
 
-Fuente: Cálculo sobre la red del T-15 (A09 +10 días hábiles) · S7 §7.3.1: reserva A14 · S8: Monte Carlo de 10.000 corridas · T-16: R-16 y R-17
+Fuente: T-15 y S7 §7.3.1: A09 +10 días hábiles y consumo de A14 · T-16: R-16 y R-17 · No se recalcula Monte Carlo
 
 ## 18. El paquete 11.1 se controla con la compuerta G13.
 
@@ -148,9 +148,9 @@ Fuente: T-14: paquete 11.1 · T-15: compuerta G13, actividad A13 (40 d) y reserv
 
 ## 19. La transición se ejecuta en dos etapas niveladas.
 
-Tiempo: 30 s.
+Tiempo: 45 s.
 
-Explicar el cronograma en escala proporcional M1–M24 con extensión a M56: E1 entra a marcha blanca en M13–M15 y producción en M16; E2 hace marcha blanca en M19–M20 y producción en M21. Destacar la partición en Células Alfa y Beta durante M13–M15 para evitar sobreasignación.
+[Etapas.] Marcha blanca E1 M13–M15 y producción M16; marcha blanca E2 M19–M20 y aceptación M21; operación hasta M56. [Legado.] Retiro funcional del sistema de 2013 en M16 y M21, consulta histórica hasta M24; el contable permanece como emisor. [Capacidad M13–M15.] Son 37 personas, 21 de planta y 16 de refuerzo. Los 37 FTE se distribuyen en 21,5 para E1, 14,1 para E2 y 1,4 de coordinación. Seguridad de la Información y Líder de Integración son dos roles distintos, cada uno de un FTE: 0,4 E1, 0,4 E2 y 0,2 coordinación. No hay un especialista combinado. La tabla T-15 desglosa el resto de roles sin sobreasignación. En M19–M20 S7 prevé 26 personas; 16 integran la operación desde M21.
 
 Fuente: S3 §3.2.4 · S7 §§7.2–7.3 · T-15: nivelación Células Alfa/Beta · T-18: etapas E1/E2 y legado hasta M24
 
@@ -164,7 +164,7 @@ Fuente: S8 · T-16
 
 ## 21. Veintiocho riesgos evaluados; ninguno queda alto.
 
-Tiempo: 50 s.
+Tiempo: 45 s.
 
 Partir por el panorama completo. [Mapa.] Probabilidad por impacto, de 1 a 5; el color sigue la escala del S8. [Riesgos.] Los 28 riesgos del T-16 en su celda inicial: la mayoría se concentra en exposición media; siete quedan en alta, y uno, el R-06, llega a 15. [Antes y después.] Después de mitigar, ninguno queda en alta. [Cierre.] Las categorías: técnicos, contrapartes, gestión, ciberseguridad y continuidad. Lo residual es una estimación, no una medición.
 
@@ -172,27 +172,27 @@ Fuente: T-16: 28 riesgos con probabilidad, impacto, exposición inicial y residu
 
 ## 22. Siete riesgos altos, cada uno con su disparador.
 
-Tiempo: 50 s.
+Tiempo: 45 s.
 
-Bajar a los siete de exposición alta, sin leer la tabla. [Primeros.] El más alto es R-06: Microsoft retira Azure Cache for Redis justo en el mes 20; se evita desde el diseño naciendo en Azure Managed Redis, y baja de 15 a 3. R-11, la adhesión, se vigila con un corte en el mes 9. [Medio.] Dos son de ciberseguridad y datos: el portal expuesto y la réplica de datos personales en Brazil South, que exige aprobación del mandante en el H2. [Últimos.] La marcha blanca en temporada, el bloqueo indebido de un viaje, que se calibra con la prueba en paralelo, y el R-28, que vemos a continuación.
+Seleccionar los siete riesgos de exposición alta inicial. R06 se evita usando Managed Redis desde el diseño; R11 se vigila con al menos 60 de los 148 transportistas al corte M9 y refuerzo con 59 o menos. R23 protege el portal. R24 exige base de licitud, aprobación del mandante y cláusulas firmadas antes de H2; la región secundaria no se considera autorizada por el solo calendario. Completar con marcha blanca en temporada, bloqueo indebido y retorno documental R28. Las exposiciones residuales son estimaciones de diseño.
 
 Fuente: T-16: riesgos con exposición ≥ 12, respuesta, disparador, plazo y exposición residual · S8 §8.3: plan de acción
 
 ## 23. R-28: cuatro causas, cuatro barreras antes del evento.
 
-Tiempo: 50 s.
+Tiempo: 45 s.
 
-Este es el riesgo que dio origen al bloqueo de salida. [Evento.] Que el documento completo no vuelva a la cabina en 90 segundos. [Causas.] Cuatro caminos: no hay LTE, la carga se conoce sólo en terreno, el documento no cabe en un mensaje satelital o se pierden fragmentos. [Prevención.] Cada uno tiene su barrera: el Iridium, la emisión anticipada, el protocolo fragmentado con integridad y un ensayo en el mes 3 con el peor documento. [Mitigación.] Si aun así ocurre, el camión no sale sin documento conforme, y si el ensayo supera 90 segundos se revisa la decisión de diseño. [AMFE.] Los diez modos de falla quedan bajo 50; los dos más altos se tratan detectando antes.
+[Evento.] El documento completo no vuelve a cabina dentro de 90 segundos. [Causas y controles.] Sin LTE se utiliza Iridium. Si la carga definitiva se conoce solo en terreno, se solicita por satélite al contable; la preemisión únicamente sirve cuando se conoce antes. Un documento mayor que un mensaje requiere fragmentación y reensamblado; las pérdidas requieren acuse de integridad y reintentos dentro del presupuesto total. El ensayo M3 utiliza el documento mayor, con pérdidas y reintentos, para validar estas barreras; no es una barrera operativa por sí solo. [Respuesta.] Sin documento conforme no se permite salir; si el ensayo falla se revisan diseño y T-11 según R28, sin asumir resuelto el camino de carga desconocida. [AMFE.] Diez modos, todos bajo NPR 50 estimado; no son mediciones de terreno.
 
 Fuente: S4 §4.1.13: emisión del documento sin cobertura · T-16: R-28 y análisis de modos de falla · Caso RT-09.01 (90 s) · restricción 8
 
 ## 24. Las reservas y holguras absorben el riesgo del plan.
 
-Tiempo: 40 s.
+Tiempo: 50 s.
 
-El riesgo de plazo se trata con números del plan. [Revelar reservas.] A14 protege la Etapa 1 con 14 días hábiles: dos desviaciones estándar de su cadena crítica, 97,9 % de cumplir el inicio del mes 13. A23 hace lo mismo para la Etapa 2 con 10 días y 97,6 %. Las dos fechas a la vez: 95,6 %. Y hay una regla: si una reserva baja de la mitad cuando a su cadena le queda más de la mitad, el caso sube al Comité Ejecutivo. [Revelar holguras.] Lo que no depende de audIT queda fuera de la ruta crítica: la factibilidad con terceros puede atrasarse 61 días; un cierre del paso Los Libertadores, unos 9 días hábiles, cabe en la holgura del piloto y de la instalación.
+[Reservas.] A14 aporta 14 días y A23 diez. S7 usa una aproximación normal por cadenas: probabilidades 97,9 % y 97,6 %, con producto conjunto 95,6 %. [Red completa.] S8 simula 10.000 corridas con semilla 2026 y Beta-PERT sobre el T-15: H6 96,2 %, H11 95,5 % y ambas marchas blancas a tiempo 92,1 %. La diferencia recoge las rutas convergentes y la capacitación condicionada a G13; no se presentan ambos resultados como equivalentes. Si la reserva baja del 50 % con más de la mitad de cadena pendiente, se eleva al Comité Ejecutivo. [Holguras.] A04 tiene 61 días totales; A18 cuarenta, A11 y A15 veinte, y A06 veinticuatro libres. Son holguras internas; no permiten desplazar hitos ni condiciones contractuales.
 
-Fuente: S7 §7.3.1: reservas A14 y A23 (PERT, 2σ), probabilidad conjunta 95,6 % y holguras de A04, A06, A11, A15 y A18 · Caso §13.2, p. 27
+Fuente: S7 Tabla 7.6: PERT por cadenas (97,9 %, 97,6 %; conjunta 95,6 %) · S8: red completa (96,2 %, 95,5 %; conjunta 92,1 %) · T-15
 
 ## 25. Tres compromisos que se pueden verificar.
 
@@ -204,7 +204,7 @@ Fuente: Síntesis del Informe 2: S4, S5, S7, S8 y formularios T-11 a T-19
 
 ## 26. Preguntas y discusión
 
-Tiempo: 10 s.
+Tiempo: 5 s.
 
 Abrir los 15 minutos de preguntas. Si hace falta mostrar un detalle, la tecla B abre el respaldo técnico y Escape vuelve.
 
@@ -238,7 +238,7 @@ Fuente: T-16: análisis de modos de falla y efectos (S × O × D = NPR, umbral 5
 
 Tiempo: 45 s. Respaldo.
 
-Explicar la estructura lógica del árbol de fallas de S8 §8.2: el evento tope ocurre por una compuerta OR superior alimentada por cuatro ramas, donde cada rama requiere la conjunción (compuerta AND) de una falla técnica y una falla de control.
+El evento tope se alimenta por OR de cuatro ramas. Cada AND expresa una conjunción de falla técnica y falla de control. Se utiliza como análisis lógico cualitativo para diseñar pruebas; dibujar AND no acredita independencia estadística ni autoriza multiplicar probabilidades sin datos.
 
 Fuente: S8 §8.2: árbol de fallas con compuerta OR superior y cuatro compuertas AND inferiores
 
@@ -270,15 +270,15 @@ Fuente: S7 §7.3.1 · T-15: G13 y reservas A14 (14 d) / A23 (10 d) · T-18: hito
 
 Tiempo: 45 s. Respaldo.
 
-Detallar el protocolo de reversión de T-18 en cuatro pasos con sus ventanas operativas y responsables, advirtiendo que no deben sumarse como un RTO único.
+Recorrer las seis acciones del T-18. Detecta la guardia de la mesa de servicio en 15 minutos. Deciden Jefe de Proyecto y Líder de Operación en 30 minutos, con contraparte técnica informada. El SRE de guardia conmuta en 15 minutos. El Líder de Operación recibe los eventos reenviados en 20 minutos por camión. El Líder de Datos concilia en 24 horas. El Jefe de Proyecto informa la causa raíz en cinco días hábiles. Las ventanas no constituyen un RTO sumado; el procedimiento se ensaya en PREPROD antes de cada paso a producción. Un firmware vuelve a la imagen anterior en el siguiente paso por terminal, sin borrar eventos pendientes.
 
-Fuente: T-18: procedimiento de reversión en 4 fases (15 min, 30 min, 15 min + 20 min/camión, 24 h / 5 d)
+Fuente: T-18: procedimiento de reversión, seis acciones con sus responsables y tiempos máximos
 
 ## 35. La calidad se controla desde el código hasta terreno.
 
 Tiempo: 60 s. Respaldo.
 
-Cubrir los capítulos S6 y S9 del Informe 2: ciclo iterativo con control de cambios formal y umbral de <=5% de cambios fallidos en producción; compuertas de calidad para hardware (SAE J1455, IP67, pérdida CAN <0,1%) y 120 casos de prueba diseñados en T-17 bajo ISO 29119.
+S6 combina sprints de dos semanas con control de cambios y umbral mensual ≤5 % de cambios fallidos. T-13 aplica SAE J1455 al perfil de montaje e IP67 al conjunto exterior expuesto, no uniformemente a todos los periféricos de cabina: el lector MIFARE del T-11 es IP66. La lectura CAN exige pérdida <0,1 % y cero tramas transmitidas por audIT. Los 120 casos del T-17 son 25 unitarios, 25 integración, 20 sistema, 12 rendimiento, ocho seguridad, 15 hardware/HIL y 15 UAT. Rendimiento y seguridad se agrupan como veinte no funcionales en la gráfica. Son casos diseñados, cuya ejecución y actas corresponden a la fase contractual.
 
 Fuente: S6 / T-9 / T-10: metodología y control de cambios · S9 / T-13 / T-17: aseguramiento de calidad y 120 casos de prueba
 
@@ -292,11 +292,11 @@ Fuente: S3 §§3.2.4 y 3.3 · T-12: RNF-011 · T-14: 11.2 · T-17: CP-INT-05 y C
 
 ## 37. Las cinco innovaciones distinguen TRL y condiciones.
 
-Tiempo: 45 s. Respaldo.
+Tiempo: 60 s. Respaldo.
 
-Usar ante consultas sobre la Sección 13 (Innovaciones): detalla los 5 paquetes del área 12 de la EDT, diferenciando la madurez comercial del componente respecto del TRL de integración en Curimón.
+Cada innovación conserva su propio calendario y meta. Son propuestas: no se declara medición ni piloto ejecutados. Expediente: 50 % de adheridos con al menos una emisión en M21, y respuesta ≤5 s en 99 % de verificaciones desde M16; el formato alternativo depende de aceptación. Proceso: concepto TRL 2, piloto de 10 camiones M6, flota propia completa M9, terceros desde M7, pausa M11–M15 y continuación M16–M18; la mejora de 20 % exige línea base homologada. Semirremolque: el 95 % se refiere a asignaciones con semirremolque propio verificado por medición; montaje M6–M10 y M16–M18, validación antes de M16. Adhesión: ventana y consentimiento TRL 8; el contrato no recibe TRL. Bienestar: TRL 2 conceptual; objetivos TRL 6 tras ensayos M10–M12 y TRL 7 tras piloto M13–M15, sujetos a evidencia. Su efectividad divide episodios con recomendación válida y oportuna por episodios en que el oráculo exige parada; falta de parador, aviso omitido o tardío son fallos, y con denominador cero no se informa tasa. Talleres M4, catálogo M3–M6 y software M4–M9 preceden a esa validación.
 
-Fuente: S13 · T-19: fichas de innovación 12.1 a 12.5, niveles TRL y supuestos de validación
+Fuente: S13 §§13.1–13.5 · T-19: madurez, calendarios e indicadores por ficha · EDT 12.1–12.5
 
 ## 38. La evidencia mantiene límites metodológicos explícitos.
 

@@ -1,29 +1,27 @@
 # Verificación de la presentación
 
-Revisión del 29 de octubre de 2026: incorporación de la síntesis de cambios como lámina 3.
+Revisión del 30 de octubre de 2026, sobre la presentación integrada en a599a4d.
 
-## Comprobado en esta revisión
+## Contenido y estructura
 
-- Generación con `python3 construir.py`: 26 láminas principales, 21 respaldos y 889 segundos objetivo (14:49), con 11 segundos de margen respecto de los 15 minutos. Es una pauta, no un ensayo oral.
-- Orden inicial: portada, salida segura, cambios principales y separador «Qué construimos». Las escenas tienen identificadores únicos y referencias válidas en el manifiesto.
-- Tabla con cinco grupos de observaciones del Informe 1, contrastados con la matriz consolidada y los capítulos S3, S4 y S13 vigentes del repositorio. Las referencias complementarias apuntan a T-11, T-12, T-17 y T-19. No se utilizaron como contenido las copias externas al repositorio ni `original/`.
-- Tres fragmentos para la lámina 3, en posiciones 21, 23 y 25 de la composición: dos, cuatro y cinco filas visibles. La estructura y el pie de alcance pertenecen al primer fragmento; las filas anteriores se conservan.
-- El detalle de las observaciones 37, 43 y 48 sigue en R10, ahora lámina 36.
-- Coherencia entre los manifiestos incrustados, `manifest.json`, `escenas.json`, composición independiente e incrustada, notas y guion. Las 26 entradas y sus tiempos en el guion suman 889 segundos.
-- Revisión visual estática de la nueva lámina a 1920 × 1080 y 1366 × 768, sus tres estados, las láminas vecinas 2 y 4 y el respaldo R10. Las etiquetas de la tabla caben en sus columnas, sin recortes ni solapamientos en los renders revisados.
+- Se conservan 26 láminas principales y 21 respaldos. La pauta suma 869 segundos (14:29), con 31 segundos de margen. No equivale a un ensayo oral.
+- La lámina 3 conserva la selección de correcciones del Informe 1 y el detalle continúa en R10. No se declara cierre integral de las cien observaciones.
+- Los códigos EDT 5.1–5.6 conservan el orden y nombres de T-14. Los rótulos numéricos de respaldo coinciden con R1–R21.
+- Identificación del conductor por MIFARE, integraciones condicionadas a autorización y factibilidad, acreditación documental individual y alcance IP67 del conjunto expuesto.
+- Capacidad de T-15: 37 FTE = 21,5 E1 + 14,1 E2 + 1,4 coordinación. Seguridad e Integración son roles distintos.
+- R-28 distingue carga conocida y solicitud satelital en terreno, fragmentación, reensamblado, acuse íntegro y reintentos. El ensayo verifica las barreras; no sustituye una barrera operativa.
+- Se distinguen PERT por cadenas de S7 (95,6 % conjunto) y Monte Carlo de red completa de S8 (92,1 %). El escenario de atraso de A09 es determinista y no atribuye probabilidades recalculadas.
+- R7 declara operación M21–M56. R8 conserva las seis acciones, responsables y tiempos del T-18.
+- R11 conserva calendarios por innovación, estados de madurez y denominadores de indicadores.
+- Los nueve respaldos del diccionario contienen los 54 paquetes: entregable, criterio, responsable y red/meses completos, cotejados con el LaTeX del T-14. Se eliminaron los cortes de líneas y abreviaciones automáticas de esos campos.
+- Composición independiente e incrustada idénticas; los 26 tiempos del guion coinciden con el recorrido. Los LaTeX del informe se usaron como referencia de lectura.
 
-## Evidencia y alcance de la comprobación visual
+## Revisión en navegador
 
-`revision/resultado-cambios.json` registra las comprobaciones. `revision/cambios-informe2-estatico.png` y `revision/cambios-informe2-estatico-1366.png` son renders estáticos obtenidos del SVG generado, con Liberation Sans, la fuente de origen de AuditSans. Reproducen la composición y sus estados; no son capturas de navegador ni acreditan el comportamiento de GSAP o el ajuste de texto del navegador.
+Se abrió la presentación desde un servidor local en Chrome, con las fuentes cargadas. Se inspeccionaron las 47 escenas y las láminas modificadas a tamaño completo. Se comprobaron avance, retroceso, los tres fragmentos de la síntesis de correcciones, entrada a respaldos, salto a R10, retorno al punto principal, ejecución de la animación y apertura del modo presentador con ventana de audiencia.
 
-## Pendiente de comprobación interactiva
+Las capturas estáticas conservadas en revision/ corresponden a la incorporación anterior de las láminas 3 y 6. No se confunden con las capturas de navegador de esta revisión. Los registros y capturas temporales de comprobación se mantienen fuera del repositorio.
 
-El navegador disponible bloqueó la apertura del archivo local por política de seguridad. No se verificaron en esta revisión las animaciones en ejecución, avance y retroceso por teclado/clic, retorno desde el respaldo, modo presentador, carga en navegador ni consola. El adaptador de navegación y las bibliotecas se conservaron sin cambios; la lámina nueva utiliza sus grupos `data-step` y transiciones existentes. Se requiere abrir `index.html` en un navegador autorizado, recorrer los tres fragmentos de la lámina 3, retroceder, avanzar al separador, entrar a R10 con B y «10 + Enter», volver con Escape y comprobar P con su ventana de audiencia.
+## Comprobaciones de exposición pendientes
 
-Realizar un ensayo oral con cronómetro y otro en proyector. Las pruebas T-17 siguen presentándose como diseñadas, no ejecutadas, y los riesgos residuales como estimaciones. Esta revisión no acredita el cierre integral de las 100 observaciones ni resultados de pruebas del sistema propuesto.
-
-## Integración del cambio remoto 7aea637
-
-Se integra el orden de contextos y los códigos EDT del remoto en la arquitectura lógica, actualmente lámina 6. Se conserva la síntesis de cambios en la lámina 3. Los seis códigos y nombres (5.1 a 5.6) se cotejaron con T-14 y el bloque de contextos de la fuente integrada coincide con el remoto. Los conflictos de los dos HTML generados se resolvieron regenerándolos desde la fuente combinada.
-
-Se repitieron las comprobaciones de manifiestos, orden, fragmentos, notas y duración: 26 principales, 21 respaldos y 889 segundos. Se revisó el render estático de la lámina 6 a 1920 × 1080 y se generó también a 1366 × 768: `revision/arquitectura-integrada-estatico.png` y `revision/arquitectura-integrada-estatico-1366.png`. La confirmación visual del usuario y la comprobación interactiva siguen pendientes. No se publica ni se sube esta integración antes de la confirmación solicitada.
+Ensayo oral con cinco expositores y cronómetro, y comprobación en el proyector disponible. La revisión de la presentación no ejecuta las pruebas T-17 ni acredita desempeño del sistema ofertado: esas pruebas permanecen diseñadas y los riesgos residuales son estimaciones. La publicación web se realiza mediante publicar.sh.

@@ -1,9 +1,9 @@
 {
-  "fecha": "2026-10-29",
+  "fecha": "2026-10-30",
   "principales": 26,
   "respaldos": 21,
-  "segundos_objetivo": 889,
-  "margen_segundos": 11,
+  "segundos_objetivo": 869,
+  "margen_segundos": 31,
   "diapositiva_cambios": 3,
   "filas_visibles_por_fragmento": [
     2,
@@ -12,7 +12,7 @@
   ],
   "respaldo_correcciones": "R10 / lámina 36",
   "comprobaciones": "Orden, identificadores, fragmentos, notas, manifiestos incrustados, composición y tiempos del guion coherentes.",
-  "render": "Estático desde el SVG generado, con Liberation Sans; no captura de navegador.",
+  "render": "Renders estáticos originales conservados; revisión actual de 47 escenas en Chrome por HTTP local.",
   "revision_visual_estatica": [
     "1920 × 1080",
     "1366 × 768",
@@ -20,13 +20,20 @@
     "vecinas 2 y 4 y respaldo R10"
   ],
   "pendientes": [
-    "Prueba interactiva en navegador de animaciones, navegación y modo presentador.",
-    "Ensayo oral con cronómetro."
+    "Ensayo oral con cinco expositores y cronómetro.",
+    "Comprobación de legibilidad y manejo en el proyector disponible."
   ],
   "integracion_remota": {
     "commit": "7aea637",
     "cambio": "Orden y códigos EDT de los seis contextos en la lámina 6",
     "verificacion": "Bloque CTX idéntico al remoto y seis códigos/nombres cotejados con T-14; regeneración y validación estructural correctas.",
-    "revision_visual": "Render estático revisado a 1920 × 1080; vista 1366 × 768 generada. Confirmación visual del usuario pendiente."
+    "revision_visual": "Orden EDT conservado; lámina 6 inspeccionada en navegador. La revisión de navegación y modo presentador se documenta en VERIFICACION.md."
+  },
+  "revision_actual": {
+    "fuentes": "LaTeX oficiales de Informe 2 y formularios T-11 a T-19 pertinentes",
+    "diccionario": "54 paquetes con sus cinco campos completos cotejados con T-14",
+    "guion": "26 tiempos coincidentes, 869 segundos",
+    "navegacion": "Avance, retroceso, fragmentos, R10 y retorno; modo presentador con audiencia",
+    "evidencia": "Capturas de revisión actual y registros privados fuera del repositorio"
   }
 }
