@@ -1198,6 +1198,72 @@ add(
     4,
 )
 
+# A3a2 · Vista física completa con acercamiento por partes (versión extendida de la Figura 4.13 del S4)
+FIS_W, FIS_H = 6251, 3667            # assets/fisica-completa.png
+FIS_K = FIS_W / 2000                 # las zonas se midieron sobre la figura reducida a 2000 px de ancho
+FIS_VP = (0, -74, 1330, 740)         # ventana del acercamiento, en coordenadas de la lámina
+FIS_ZONAS = [                        # (título, línea 1, línea 2, zona x0 y0 x1 y1 o None para la vista completa)
+    ('Vista completa', 'Nube, sitio, terminales y flota,', 'con contrapartes y enlaces', None),
+    ('1 · Nube', 'Chile Central en 3 zonas', 'Brazil South: RTO 4 h · RPO 15 min', (790, 0, 1570, 505)),
+    ('2 · San Bernardo', 'Racks A/B · 66 min de UPS', 'Grupo electrógeno: 24 h', (10, 95, 770, 700)),
+    ('3 · Terminales ×4', 'Karbon 430 activo y en espera', 'Opera 24 h sin enlace', (795, 685, 1255, 1168)),
+    ('4 · Flota', '182 iWave G26I · búfer 288 h', '210 semirremolques con baliza', (1268, 685, 1995, 1168)),
+]
+
+
+def fis_vista(zona):
+    # viewBox con la proporción de la ventana, centrado en la zona y sin salir de la figura
+    if zona is None:
+        return f'0 0 {FIS_W} {FIS_H}'
+    x0, y0, x1, y1 = (c * FIS_K for c in zona)
+    asp = FIS_VP[2] / FIS_VP[3]
+    w, h = max(x1 - x0, (y1 - y0) * asp), max(y1 - y0, (x1 - x0) / asp)
+    x = min(max((x0 + x1 - w) / 2, 0), FIS_W - w)
+    y = min(max((y0 + y1 - h) / 2, 0), FIS_H - h)
+    return f'{x:.0f} {y:.0f} {w:.0f} {h:.0f}'
+
+
+fis_marcos = ''
+for k, (_t, _a, _b, zona) in enumerate(FIS_ZONAS[1:], 1):
+    x0, y0, x1, y1 = (c * FIS_K for c in zona)
+    fis_marcos += (
+        f'<rect x="{x0:.0f}" y="{y0:.0f}" width="{x1 - x0:.0f}" height="{y1 - y0:.0f}" rx="40" fill="none" stroke="{C}" stroke-width="16"/>'
+        f'<circle cx="{x0 + 95:.0f}" cy="{y0 + 95:.0f}" r="72" fill="{C}"/>'
+        f'<text x="{x0 + 95:.0f}" y="{y0 + 127:.0f}" fill="#ffffff" font-size="92" font-weight="700" text-anchor="middle">{k}</text>'
+    )
+vx, vy, vw, vh = FIS_VP
+vistas = json.dumps([fis_vista(z) for *_r, z in FIS_ZONAS])
+v = (
+    f'<rect x="{vx}" y="{vy}" width="{vw}" height="{vh}" rx="14" fill="#ffffff" stroke="{STROKE}" stroke-width="2"/>'
+    f'<svg x="{vx}" y="{vy}" width="{vw}" height="{vh}" viewBox="{fis_vista(None)}" preserveAspectRatio="xMidYMid meet" data-zoom=\'{vistas}\'>'
+    f'<image href="assets/fisica-completa.png" x="0" y="0" width="{FIS_W}" height="{FIS_H}"/>'
+    f'<g data-show-at="0" data-hide-at="1">{fis_marcos}</g></svg>'
+)
+for k, (titulo, l1, l2, _z) in enumerate(FIS_ZONAS):
+    y = vy + k * 150
+    v += (
+        f'<rect x="1360" y="{y}" width="368" height="140" rx="14" fill="{CARD_BG}" stroke="{STROKE}" stroke-width="2"/>'
+        f'<g data-show-at="{k}"' + (f' data-hide-at="{k + 1}"' if k < len(FIS_ZONAS) - 1 else '') + '>'
+        f'<rect x="1360" y="{y}" width="368" height="140" rx="14" fill="#e7f3f6" stroke="{C}" stroke-width="3"/>'
+        f'<rect x="1360" y="{y}" width="7" height="140" rx="3.5" fill="{C}"/></g>'
+        + text(1386, y + 46, titulo, 25, WHITE, 600)
+        + text(1386, y + 84, l1, 18, MUTED)
+        + text(1386, y + 112, l2, 18, MUTED)
+    )
+add(
+    'La arquitectura física completa, parte por parte.',
+    'ARQUITECTURA FÍSICA · VISTA COMPLETA / S4 §4.2.1 · §4.2.3 · §4.2.7 · T-11',
+    group(v, 0),
+    'S4 §4.2.1: implementos · §4.2.3: emplazamiento · §4.2.5: redes · §4.2.7: enlaces · T-11 · versión extendida de la Figura 4.13 del S4',
+    '[Completa.] La misma arquitectura de la lámina anterior, en una sola vista: nube, San Bernardo, cuatro terminales, flota y contrapartes, con cada enlace y su capacidad. '
+    '[Nube.] Chile Central, en tres zonas, separa borde, aplicación, integración, gestión y datos dentro de la red de producción 10.11.0.0/20. IoT Hub recibe a los camiones y Event Hubs, con protocolo Kafka, reparte los eventos. Brazil South recibe la réplica asíncrona y queda en espera, con RTO de 4 horas y RPO de 15 minutos. '
+    '[San Bernardo.] Dos racks de 24 U: servidores R360 A y B, dos FortiGate 90G en alta disponibilidad, FortiSwitch A y B y dos UPS SRT3000, con 66 minutos. El grupo electrógeno Himoinsa de 8,8 kVA sostiene 24 horas con 64,3 litros. La capa anticorrupción une el sistema contable, único emisor tributario, con el sistema de 2013. ExpressRoute de 100 Mbit/s y la VPN de respaldo la conectan con Azure. '
+    '[Terminales.] Cada gabinete tiene dos Karbon 430, uno activo y otro en espera, el router RUTX50 con enlace fijo de al menos 10 Mbit/s y 5G con dos SIM, y el switch TSW202. La portería lee la baliza del semirremolque con el Minew G1 y el patio tiene un FortiAP 234G. El terminal opera 24 horas sin enlace. '
+    '[Flota.] Los 182 tractocamiones con equipo audIT, 148 propios y 34 de terceros, llevan el iWave G26I con Iridium Edge, el lector CAN sin contacto y el lector de tarjeta. De los 8 GB de memoria se usan 2,4 GB, con el búfer de 288 horas. Los 192 camiones de terceros conservan su equipo.',
+    45,
+    5,
+)
+
 # A3b · El camión como nodo on-premise distribuido
 v = group(
     card(560, 150, 520, 300, '#ffffff', FLOTA, 18, FLOTA, accent_top=True)
@@ -2670,6 +2736,7 @@ RECORRIDO = [
     ('Ocho capas, cada una con su producto.', 45),
     ('Un viaje se autoriza o se bloquea en 30 segundos.', 40),
     ('Cada nodo declara su hardware y su enlace.', 40),
+    ('La arquitectura física completa, parte por parte.', 45),
     ('El camión es un nodo que opera sin red.', 35),
     ('Cada dato vive en el motor que su uso exige.', 35),
     ('Si se corta el enlace, la operación sigue.', 35),
@@ -2865,6 +2932,16 @@ scenes.forEach((scene,i)=>{
   });
   scene.querySelectorAll('[data-dim-at]').forEach(d=>{
     tl.to(d,{opacity:.2,duration:.5,ease:'power1.out'},Number(d.dataset.dimAt)*2);
+  });
+  scene.querySelectorAll('svg[data-zoom]').forEach(z=>{
+    const views=JSON.parse(z.dataset.zoom);
+    views.slice(1).forEach((v,k)=>{
+      tl.fromTo(z,{attr:{viewBox:views[k]}},{attr:{viewBox:v},duration:.95,ease:'power2.inOut',immediateRender:false},(k+1)*2);
+    });
+  });
+  scene.querySelectorAll('[data-show-at]').forEach(el=>{
+    tl.fromTo(el,{opacity:0},{opacity:1,duration:.45,ease:'power1.out'},Number(el.dataset.showAt)*2+.3);
+    if(el.dataset.hideAt)tl.fromTo(el,{opacity:1},{opacity:0,duration:.3,ease:'power1.in',immediateRender:false},Number(el.dataset.hideAt)*2);
   });
   scene.querySelectorAll('path[data-flow-path]').forEach((p,idx)=>{
     const svgRoot=scene.querySelector('svg');

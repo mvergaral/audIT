@@ -1,6 +1,6 @@
 # Guion de exposición
 
-Objetivo: 14 minutos y 29 segundos + 31 segundos de margen. No hay asignación ficticia de expositores.
+Objetivo: 15 minutos y 14 segundos + -14 segundos de margen. No hay asignación ficticia de expositores.
 
 ## 1. Revisión 2 · Caso Transporte de Carga
 
@@ -66,7 +66,15 @@ Tiempo: 40 s.
 
 Fuente: S4 §4.2.1: hardware · §4.2.5: redes · §4.2.6: ambientes · §4.2.7: enlaces y alimentación redundante · T-11 · FEP02 RT-08.04, p. 18
 
-## 9. El camión es un nodo que opera sin red.
+## 9. La arquitectura física completa, parte por parte.
+
+Tiempo: 45 s.
+
+[Completa.] La misma arquitectura de la lámina anterior, en una sola vista: nube, San Bernardo, cuatro terminales, flota y contrapartes, con cada enlace y su capacidad. [Nube.] Chile Central, en tres zonas, separa borde, aplicación, integración, gestión y datos dentro de la red de producción 10.11.0.0/20. IoT Hub recibe a los camiones y Event Hubs, con protocolo Kafka, reparte los eventos. Brazil South recibe la réplica asíncrona y queda en espera, con RTO de 4 horas y RPO de 15 minutos. [San Bernardo.] Dos racks de 24 U: servidores R360 A y B, dos FortiGate 90G en alta disponibilidad, FortiSwitch A y B y dos UPS SRT3000, con 66 minutos. El grupo electrógeno Himoinsa de 8,8 kVA sostiene 24 horas con 64,3 litros. La capa anticorrupción une el sistema contable, único emisor tributario, con el sistema de 2013. ExpressRoute de 100 Mbit/s y la VPN de respaldo la conectan con Azure. [Terminales.] Cada gabinete tiene dos Karbon 430, uno activo y otro en espera, el router RUTX50 con enlace fijo de al menos 10 Mbit/s y 5G con dos SIM, y el switch TSW202. La portería lee la baliza del semirremolque con el Minew G1 y el patio tiene un FortiAP 234G. El terminal opera 24 horas sin enlace. [Flota.] Los 182 tractocamiones con equipo audIT, 148 propios y 34 de terceros, llevan el iWave G26I con Iridium Edge, el lector CAN sin contacto y el lector de tarjeta. De los 8 GB de memoria se usan 2,4 GB, con el búfer de 288 horas. Los 192 camiones de terceros conservan su equipo.
+
+Fuente: S4 §4.2.1: implementos · §4.2.3: emplazamiento · §4.2.5: redes · §4.2.7: enlaces · T-11 · versión extendida de la Figura 4.13 del S4
+
+## 10. El camión es un nodo que opera sin red.
 
 Tiempo: 35 s.
 
@@ -74,7 +82,7 @@ El Caso pide tratar el equipo a bordo como un componente on-premise distribuido.
 
 Fuente: S4 §4.2.2: equipo a bordo y Tabla de capacidad derivada (2.374 MB) · Caso RT-03.10, RT-06.01, RT-10.05, RT-12.11 · restricciones 5 y 6
 
-## 10. Cada dato vive en el motor que su uso exige.
+## 11. Cada dato vive en el motor que su uso exige.
 
 Tiempo: 35 s.
 
@@ -82,7 +90,7 @@ Tiempo: 35 s.
 
 Fuente: S5 Tabla 5.3: persistencia y conducta ante partición · Tabla 5.5: retención · Tabla 5.6: migración · S4 §4.1.20: volumen declarado
 
-## 11. Si se corta el enlace, la operación sigue.
+## 12. Si se corta el enlace, la operación sigue.
 
 Tiempo: 35 s.
 
@@ -90,7 +98,7 @@ Tiempo: 35 s.
 
 Fuente: S4 §4.1.26: operación desconectada y reconexión · §4.2.3: funciones on-premise · §4.3: plazos sin enlace · FEP01 Art. 16.4 · Caso RT-03.10 y RT-03.13
 
-## 12. Cómo lo ejecutamos
+## 13. Cómo lo ejecutamos
 
 Tiempo: 3 s.
 
@@ -98,7 +106,7 @@ Separador. Cambio de voz al expositor de la EDT.
 
 Fuente: S7 · T-14 · T-15
 
-## 13. La EDT cubre todo el alcance en 13 elementos.
+## 14. La EDT cubre todo el alcance en 13 elementos.
 
 Tiempo: 35 s.
 
@@ -106,7 +114,7 @@ Construir el árbol en voz alta. Nivel 0: el proyecto completo. Nivel 1: trece e
 
 Fuente: S7 §7.1, Figura 7.1 y Tabla 7.2 · T-14: diccionario de 54 paquetes · PMI (2019): regla del 100 %
 
-## 14. Cada elemento baja a paquetes que se pueden aceptar.
+## 15. Cada elemento baja a paquetes que se pueden aceptar.
 
 Tiempo: 40 s.
 
@@ -114,7 +122,7 @@ Recorrer de izquierda a derecha sin leer paquete por paquete. Columnas 1 y 2: lo
 
 Fuente: S7 Figura 7.1 · T-14: 54 paquetes · S4: seis contextos · T-19: cinco innovaciones · Caso §17.5, p. 40
 
-## 15. El diccionario hace verificable cada paquete.
+## 16. El diccionario hace verificable cada paquete.
 
 Tiempo: 40 s.
 
@@ -122,7 +130,7 @@ Tomar un paquete real, el 11.2, y leerlo como lo leería el mandante. [Revelar.]
 
 Fuente: T-14: paquete 11.2 · S7 Tabla 7.1: cobertura contra el alcance · T-12: RNF-011 · T-17: CP-INT-05 y CP-SYS-05
 
-## 16. La red de 25 actividades define la ruta crítica.
+## 17. La red de 25 actividades define la ruta crítica.
 
 Tiempo: 65 s.
 
@@ -130,7 +138,7 @@ Tiempo: 65 s.
 
 Fuente: T-15: precedencias y holguras · S7 §7.3.1, Tabla 7.7: posición planificada · S8: Monte Carlo al límite contractual (10.000 corridas)
 
-## 17. ¿Y si la construcción de la Etapa 1 se atrasa 10 días?
+## 18. ¿Y si la construcción de la Etapa 1 se atrasa 10 días?
 
 Tiempo: 40 s.
 
@@ -138,7 +146,7 @@ Este es un escenario determinista sobre la red del T-15, sin nueva simulación. 
 
 Fuente: T-15 y S7 §7.3.1: A09 +10 días hábiles y consumo de A14 · T-16: R-16 y R-17 · No se recalcula Monte Carlo
 
-## 18. El paquete 11.1 se controla con la compuerta G13.
+## 19. El paquete 11.1 se controla con la compuerta G13.
 
 Tiempo: 35 s.
 
@@ -146,7 +154,7 @@ Conectar la ficha del paquete 11.1 con su control en el cronograma: G13 exige ve
 
 Fuente: T-14: paquete 11.1 · T-15: compuerta G13, actividad A13 (40 d) y reserva A14 · T-16: riesgo R-16
 
-## 19. La transición se ejecuta en dos etapas niveladas.
+## 20. La transición se ejecuta en dos etapas niveladas.
 
 Tiempo: 45 s.
 
@@ -154,7 +162,7 @@ Tiempo: 45 s.
 
 Fuente: S3 §3.2.4 · S7 §§7.2–7.3 · T-15: nivelación Células Alfa/Beta · T-18: etapas E1/E2 y legado hasta M24
 
-## 20. Cómo lo protegemos
+## 21. Cómo lo protegemos
 
 Tiempo: 3 s.
 
@@ -162,7 +170,7 @@ Separador. Cambio de voz al expositor de riesgos.
 
 Fuente: S8 · T-16
 
-## 21. Veintiocho riesgos evaluados; ninguno queda alto.
+## 22. Veintiocho riesgos evaluados; ninguno queda alto.
 
 Tiempo: 45 s.
 
@@ -170,7 +178,7 @@ Partir por el panorama completo. [Mapa.] Probabilidad por impacto, de 1 a 5; el 
 
 Fuente: T-16: 28 riesgos con probabilidad, impacto, exposición inicial y residual · S8 §8.1: escalas y umbrales
 
-## 22. Siete riesgos altos, cada uno con su disparador.
+## 23. Siete riesgos altos, cada uno con su disparador.
 
 Tiempo: 45 s.
 
@@ -178,7 +186,7 @@ Seleccionar los siete riesgos de exposición alta inicial. R06 se evita usando M
 
 Fuente: T-16: riesgos con exposición ≥ 12, respuesta, disparador, plazo y exposición residual · S8 §8.3: plan de acción
 
-## 23. R-28: cuatro causas, cuatro barreras antes del evento.
+## 24. R-28: cuatro causas, cuatro barreras antes del evento.
 
 Tiempo: 45 s.
 
@@ -186,7 +194,7 @@ Tiempo: 45 s.
 
 Fuente: S4 §4.1.13: emisión del documento sin cobertura · T-16: R-28 y análisis de modos de falla · Caso RT-09.01 (90 s) · restricción 8
 
-## 24. Las reservas y holguras absorben el riesgo del plan.
+## 25. Las reservas y holguras absorben el riesgo del plan.
 
 Tiempo: 50 s.
 
@@ -194,7 +202,7 @@ Tiempo: 50 s.
 
 Fuente: S7 Tabla 7.6: PERT por cadenas (97,9 %, 97,6 %; conjunta 95,6 %) · S8: red completa (96,2 %, 95,5 %; conjunta 92,1 %) · T-15
 
-## 25. Tres compromisos que se pueden verificar.
+## 26. Tres compromisos que se pueden verificar.
 
 Tiempo: 20 s.
 
@@ -202,7 +210,7 @@ Cerrar con tres frases, una por acto, sin repetir las láminas. Qué construimos
 
 Fuente: Síntesis del Informe 2: S4, S5, S7, S8 y formularios T-11 a T-19
 
-## 26. Preguntas y discusión
+## 27. Preguntas y discusión
 
 Tiempo: 5 s.
 
@@ -210,7 +218,7 @@ Abrir los 15 minutos de preguntas. Si hace falta mostrar un detalle, la tecla B 
 
 Fuente: Transportes Curimón · TFEP-01/2026 · audIT Soluciones Tecnológicas SpA
 
-## 27. Registro de riesgos · R-01 a R-14.
+## 28. Registro de riesgos · R-01 a R-14.
 
 Tiempo: 30 s. Respaldo.
 
@@ -218,7 +226,7 @@ Respaldo para preguntas sobre cualquier riesgo del registro.
 
 Fuente: T-16: identificación, evaluación P×I, respuesta, disparador y exposición residual
 
-## 28. Registro de riesgos · R-15 a R-28.
+## 29. Registro de riesgos · R-15 a R-28.
 
 Tiempo: 30 s. Respaldo.
 
@@ -226,7 +234,7 @@ Respaldo para preguntas sobre cualquier riesgo del registro.
 
 Fuente: T-16: identificación, evaluación P×I, respuesta, disparador y exposición residual
 
-## 29. El AMFE completo: diez modos bajo NPR 50.
+## 30. El AMFE completo: diez modos bajo NPR 50.
 
 Tiempo: 30 s. Respaldo.
 
@@ -234,7 +242,7 @@ Respaldo del AMFE con los diez modos.
 
 Fuente: T-16: análisis de modos de falla y efectos (S × O × D = NPR, umbral 50)
 
-## 30. El árbol de fallas modela compuertas OR y AND.
+## 31. El árbol de fallas modela compuertas OR y AND.
 
 Tiempo: 45 s. Respaldo.
 
@@ -242,7 +250,7 @@ El evento tope se alimenta por OR de cuatro ramas. Cada AND expresa una conjunci
 
 Fuente: S8 §8.2: árbol de fallas con compuerta OR superior y cuatro compuertas AND inferiores
 
-## 31. Sin documento conforme, el viaje no puede salir.
+## 32. Sin documento conforme, el viaje no puede salir.
 
 Tiempo: 60 s. Respaldo.
 
@@ -250,7 +258,7 @@ Explicar que se exige el retorno del documento íntegro a la cabina dentro de 90
 
 Fuente: T-16: R-28 · S8 §8.2 · Caso RT-09.01: presupuesto de retorno documental en 90 s
 
-## 32. La implantación converge en producción aceptada.
+## 33. La implantación converge en producción aceptada.
 
 Tiempo: 60 s. Respaldo.
 
@@ -258,7 +266,7 @@ Mostrar cómo las tres corrientes operativas (adhesión de al menos 60 de 148 tr
 
 Fuente: T-16: R-11 (adhesión), R-19 (montaje), R-18 (marcha blanca) · T-18: criterios de salida y reversión
 
-## 33. Los hitos avanzan por evidencia y protegen fechas.
+## 34. Los hitos avanzan por evidencia y protegen fechas.
 
 Tiempo: 90 s. Respaldo.
 
@@ -266,7 +274,7 @@ Explicar la cadena de compuertas e hitos: G13 habilita capacitación, H6 y H11 a
 
 Fuente: S7 §7.3.1 · T-15: G13 y reservas A14 (14 d) / A23 (10 d) · T-18: hitos H6, H7, H11 y H12
 
-## 34. La reversión opera con tiempos y roles definidos.
+## 35. La reversión opera con tiempos y roles definidos.
 
 Tiempo: 45 s. Respaldo.
 
@@ -274,7 +282,7 @@ Recorrer las seis acciones del T-18. Detecta la guardia de la mesa de servicio e
 
 Fuente: T-18: procedimiento de reversión, seis acciones con sus responsables y tiempos máximos
 
-## 35. La calidad se controla desde el código hasta terreno.
+## 36. La calidad se controla desde el código hasta terreno.
 
 Tiempo: 60 s. Respaldo.
 
@@ -282,7 +290,7 @@ S6 combina sprints de dos semanas con control de cambios y umbral mensual ≤5 %
 
 Fuente: S6 / T-9 / T-10: metodología y control de cambios · S9 / T-13 / T-17: aseguramiento de calidad y 120 casos de prueba
 
-## 36. Las correcciones vinculan decisiones y pruebas.
+## 37. Las correcciones vinculan decisiones y pruebas.
 
 Tiempo: 60 s. Respaldo.
 
@@ -290,7 +298,7 @@ Unificar las tres correcciones estructurales del Informe 1: las observaciones 37
 
 Fuente: S3 §§3.2.4 y 3.3 · T-12: RNF-011 · T-14: 11.2 · T-17: CP-INT-05 y CP-SYS-05
 
-## 37. Las cinco innovaciones distinguen TRL y condiciones.
+## 38. Las cinco innovaciones distinguen TRL y condiciones.
 
 Tiempo: 60 s. Respaldo.
 
@@ -298,7 +306,7 @@ Cada innovación conserva su propio calendario y meta. Son propuestas: no se dec
 
 Fuente: S13 §§13.1–13.5 · T-19: madurez, calendarios e indicadores por ficha · EDT 12.1–12.5
 
-## 38. La evidencia mantiene límites metodológicos explícitos.
+## 39. La evidencia mantiene límites metodológicos explícitos.
 
 Tiempo: 45 s. Respaldo.
 
@@ -306,7 +314,7 @@ Usar ante preguntas sobre el alcance de las afirmaciones: distinguimos con rigor
 
 Fuente: S3 · S7 · S8 · T-12 / T-15 / T-17 / T-18
 
-## 39. Diccionario EDT · paquetes 1.1 a 2.3.
+## 40. Diccionario EDT · paquetes 1.1 a 2.3.
 
 Tiempo: 30 s. Respaldo.
 
@@ -314,7 +322,7 @@ Vista paginada del diccionario vigente del T-14 para localizar cualquier paquete
 
 Fuente: T-14: diccionario de la EDT, entregable, criterio, responsable, red y meses por paquete
 
-## 40. Diccionario EDT · paquetes 2.4 a 3.4.
+## 41. Diccionario EDT · paquetes 2.4 a 3.4.
 
 Tiempo: 30 s. Respaldo.
 
@@ -322,7 +330,7 @@ Vista paginada del diccionario vigente del T-14 para localizar cualquier paquete
 
 Fuente: T-14: diccionario de la EDT, entregable, criterio, responsable, red y meses por paquete
 
-## 41. Diccionario EDT · paquetes 4.1 a 5.3.
+## 42. Diccionario EDT · paquetes 4.1 a 5.3.
 
 Tiempo: 30 s. Respaldo.
 
@@ -330,7 +338,7 @@ Vista paginada del diccionario vigente del T-14 para localizar cualquier paquete
 
 Fuente: T-14: diccionario de la EDT, entregable, criterio, responsable, red y meses por paquete
 
-## 42. Diccionario EDT · paquetes 5.4 a 6.2.
+## 43. Diccionario EDT · paquetes 5.4 a 6.2.
 
 Tiempo: 30 s. Respaldo.
 
@@ -338,7 +346,7 @@ Vista paginada del diccionario vigente del T-14 para localizar cualquier paquete
 
 Fuente: T-14: diccionario de la EDT, entregable, criterio, responsable, red y meses por paquete
 
-## 43. Diccionario EDT · paquetes 6.3 a 7.3.
+## 44. Diccionario EDT · paquetes 6.3 a 7.3.
 
 Tiempo: 30 s. Respaldo.
 
@@ -346,7 +354,7 @@ Vista paginada del diccionario vigente del T-14 para localizar cualquier paquete
 
 Fuente: T-14: diccionario de la EDT, entregable, criterio, responsable, red y meses por paquete
 
-## 44. Diccionario EDT · paquetes 8.1 a 9.1.
+## 45. Diccionario EDT · paquetes 8.1 a 9.1.
 
 Tiempo: 30 s. Respaldo.
 
@@ -354,7 +362,7 @@ Vista paginada del diccionario vigente del T-14 para localizar cualquier paquete
 
 Fuente: T-14: diccionario de la EDT, entregable, criterio, responsable, red y meses por paquete
 
-## 45. Diccionario EDT · paquetes 9.2 a 11.1.
+## 46. Diccionario EDT · paquetes 9.2 a 11.1.
 
 Tiempo: 30 s. Respaldo.
 
@@ -362,7 +370,7 @@ Vista paginada del diccionario vigente del T-14 para localizar cualquier paquete
 
 Fuente: T-14: diccionario de la EDT, entregable, criterio, responsable, red y meses por paquete
 
-## 46. Diccionario EDT · paquetes 11.2 a 12.3.
+## 47. Diccionario EDT · paquetes 11.2 a 12.3.
 
 Tiempo: 30 s. Respaldo.
 
@@ -370,7 +378,7 @@ Vista paginada del diccionario vigente del T-14 para localizar cualquier paquete
 
 Fuente: T-14: diccionario de la EDT, entregable, criterio, responsable, red y meses por paquete
 
-## 47. Diccionario EDT · paquetes 12.4 a 13.4.
+## 48. Diccionario EDT · paquetes 12.4 a 13.4.
 
 Tiempo: 30 s. Respaldo.
 

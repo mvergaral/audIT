@@ -89,6 +89,17 @@
   },
   {
     "id": "s09",
+    "title": "La arquitectura física completa, parte por parte.",
+    "eyebrow": "ARQUITECTURA FÍSICA · VISTA COMPLETA / S4 §4.2.1 · §4.2.3 · §4.2.7 · T-11",
+    "source": "S4 §4.2.1: implementos · §4.2.3: emplazamiento · §4.2.5: redes · §4.2.7: enlaces · T-11 · versión extendida de la Figura 4.13 del S4",
+    "notes": "[Completa.] La misma arquitectura de la lámina anterior, en una sola vista: nube, San Bernardo, cuatro terminales, flota y contrapartes, con cada enlace y su capacidad. [Nube.] Chile Central, en tres zonas, separa borde, aplicación, integración, gestión y datos dentro de la red de producción 10.11.0.0/20. IoT Hub recibe a los camiones y Event Hubs, con protocolo Kafka, reparte los eventos. Brazil South recibe la réplica asíncrona y queda en espera, con RTO de 4 horas y RPO de 15 minutos. [San Bernardo.] Dos racks de 24 U: servidores R360 A y B, dos FortiGate 90G en alta disponibilidad, FortiSwitch A y B y dos UPS SRT3000, con 66 minutos. El grupo electrógeno Himoinsa de 8,8 kVA sostiene 24 horas con 64,3 litros. La capa anticorrupción une el sistema contable, único emisor tributario, con el sistema de 2013. ExpressRoute de 100 Mbit/s y la VPN de respaldo la conectan con Azure. [Terminales.] Cada gabinete tiene dos Karbon 430, uno activo y otro en espera, el router RUTX50 con enlace fijo de al menos 10 Mbit/s y 5G con dos SIM, y el switch TSW202. La portería lee la baliza del semirremolque con el Minew G1 y el patio tiene un FortiAP 234G. El terminal opera 24 horas sin enlace. [Flota.] Los 182 tractocamiones con equipo audIT, 148 propios y 34 de terceros, llevan el iWave G26I con Iridium Edge, el lector CAN sin contacto y el lector de tarjeta. De los 8 GB de memoria se usan 2,4 GB, con el búfer de 288 horas. Los 192 camiones de terceros conservan su equipo.",
+    "seconds": 45,
+    "steps": 5,
+    "backup": false,
+    "kind": ""
+  },
+  {
+    "id": "s10",
     "title": "El camión es un nodo que opera sin red.",
     "eyebrow": "ARQUITECTURA FÍSICA · EQUIPO A BORDO / S4 §4.2.2 · T-11 · Caso RT-06.01",
     "source": "S4 §4.2.2: equipo a bordo y Tabla de capacidad derivada (2.374 MB) · Caso RT-03.10, RT-06.01, RT-10.05, RT-12.11 · restricciones 5 y 6",
@@ -99,7 +110,7 @@
     "kind": ""
   },
   {
-    "id": "s10",
+    "id": "s11",
     "title": "Cada dato vive en el motor que su uso exige.",
     "eyebrow": "ARQUITECTURA DE DATOS / S5 §5.2 · §5.3 · S4 §4.1.20 · Caso RT-05.10",
     "source": "S5 Tabla 5.3: persistencia y conducta ante partición · Tabla 5.5: retención · Tabla 5.6: migración · S4 §4.1.20: volumen declarado",
@@ -110,7 +121,7 @@
     "kind": ""
   },
   {
-    "id": "s11",
+    "id": "s12",
     "title": "Si se corta el enlace, la operación sigue.",
     "eyebrow": "ARQUITECTURA · OPERACIÓN DESCONECTADA / S4 §4.1.26 · §4.2.3 · §4.3",
     "source": "S4 §4.1.26: operación desconectada y reconexión · §4.2.3: funciones on-premise · §4.3: plazos sin enlace · FEP01 Art. 16.4 · Caso RT-03.10 y RT-03.13",
@@ -121,7 +132,7 @@
     "kind": ""
   },
   {
-    "id": "s12",
+    "id": "s13",
     "title": "Cómo lo ejecutamos",
     "eyebrow": "ACTO 2 DE 3",
     "source": "S7 · T-14 · T-15",
@@ -132,7 +143,7 @@
     "kind": "section"
   },
   {
-    "id": "s13",
+    "id": "s14",
     "title": "La EDT cubre todo el alcance en 13 elementos.",
     "eyebrow": "EDT · NIVELES 0 Y 1 / S7 §7.1 · T-14",
     "source": "S7 §7.1, Figura 7.1 y Tabla 7.2 · T-14: diccionario de 54 paquetes · PMI (2019): regla del 100 %",
@@ -143,7 +154,7 @@
     "kind": ""
   },
   {
-    "id": "s14",
+    "id": "s15",
     "title": "Cada elemento baja a paquetes que se pueden aceptar.",
     "eyebrow": "EDT · NIVEL 2: 54 PAQUETES / S7 §7.1 · T-14 · T-19",
     "source": "S7 Figura 7.1 · T-14: 54 paquetes · S4: seis contextos · T-19: cinco innovaciones · Caso §17.5, p. 40",
@@ -154,7 +165,7 @@
     "kind": ""
   },
   {
-    "id": "s15",
+    "id": "s16",
     "title": "El diccionario hace verificable cada paquete.",
     "eyebrow": "EDT · DICCIONARIO Y REGLA DEL 100 % / S7 §7.1 · T-12 · T-14 · T-17",
     "source": "T-14: paquete 11.2 · S7 Tabla 7.1: cobertura contra el alcance · T-12: RNF-011 · T-17: CP-INT-05 y CP-SYS-05",
@@ -165,7 +176,7 @@
     "kind": ""
   },
   {
-    "id": "s16",
+    "id": "s17",
     "title": "La red de 25 actividades define la ruta crítica.",
     "eyebrow": "CARTA GANTT Y DEPENDENCIAS / S7 §7.3.1 · T-15 · FEP01 E-25",
     "source": "T-15: precedencias y holguras · S7 §7.3.1, Tabla 7.7: posición planificada · S8: Monte Carlo al límite contractual (10.000 corridas)",
@@ -176,7 +187,7 @@
     "kind": ""
   },
   {
-    "id": "s17",
+    "id": "s18",
     "title": "¿Y si la construcción de la Etapa 1 se atrasa 10 días?",
     "eyebrow": "CARTA GANTT · ESCENARIO DETERMINISTA / T-15 · S7 §7.3.1 · T-16",
     "source": "T-15 y S7 §7.3.1: A09 +10 días hábiles y consumo de A14 · T-16: R-16 y R-17 · No se recalcula Monte Carlo",
@@ -187,7 +198,7 @@
     "kind": ""
   },
   {
-    "id": "s18",
+    "id": "s19",
     "title": "El paquete 11.1 se controla con la compuerta G13.",
     "eyebrow": "DEL ALCANCE AL CONTROL / T-14: 11.1 · T-15: G13/A13 · T-16: R-16",
     "source": "T-14: paquete 11.1 · T-15: compuerta G13, actividad A13 (40 d) y reserva A14 · T-16: riesgo R-16",
@@ -198,7 +209,7 @@
     "kind": ""
   },
   {
-    "id": "s19",
+    "id": "s20",
     "title": "La transición se ejecuta en dos etapas niveladas.",
     "eyebrow": "CRONOGRAMA Y CAPACIDAD / S3 §3.2.4 · S7 §§7.2–7.3 · T-15 · T-18",
     "source": "S3 §3.2.4 · S7 §§7.2–7.3 · T-15: nivelación Células Alfa/Beta · T-18: etapas E1/E2 y legado hasta M24",
@@ -209,7 +220,7 @@
     "kind": ""
   },
   {
-    "id": "s20",
+    "id": "s21",
     "title": "Cómo lo protegemos",
     "eyebrow": "ACTO 3 DE 3",
     "source": "S8 · T-16",
@@ -220,7 +231,7 @@
     "kind": "section"
   },
   {
-    "id": "s21",
+    "id": "s22",
     "title": "Veintiocho riesgos evaluados; ninguno queda alto.",
     "eyebrow": "RIESGOS · MAPA P×I / S8 §8.1–8.2 · T-16",
     "source": "T-16: 28 riesgos con probabilidad, impacto, exposición inicial y residual · S8 §8.1: escalas y umbrales",
@@ -231,7 +242,7 @@
     "kind": ""
   },
   {
-    "id": "s22",
+    "id": "s23",
     "title": "Siete riesgos altos, cada uno con su disparador.",
     "eyebrow": "RIESGOS · EXPOSICIÓN ALTA / T-16 · S8 §8.3",
     "source": "T-16: riesgos con exposición ≥ 12, respuesta, disparador, plazo y exposición residual · S8 §8.3: plan de acción",
@@ -242,7 +253,7 @@
     "kind": ""
   },
   {
-    "id": "s23",
+    "id": "s24",
     "title": "R-28: cuatro causas, cuatro barreras antes del evento.",
     "eyebrow": "RIESGOS · CORBATÍN DE R-28 / S4 §4.1.13 · S8 · T-16",
     "source": "S4 §4.1.13: emisión del documento sin cobertura · T-16: R-28 y análisis de modos de falla · Caso RT-09.01 (90 s) · restricción 8",
@@ -253,7 +264,7 @@
     "kind": ""
   },
   {
-    "id": "s24",
+    "id": "s25",
     "title": "Las reservas y holguras absorben el riesgo del plan.",
     "eyebrow": "RIESGOS DEL CRONOGRAMA / S7 §7.3.1 · T-15 · S8: MONTE CARLO",
     "source": "S7 Tabla 7.6: PERT por cadenas (97,9 %, 97,6 %; conjunta 95,6 %) · S8: red completa (96,2 %, 95,5 %; conjunta 92,1 %) · T-15",
@@ -264,7 +275,7 @@
     "kind": ""
   },
   {
-    "id": "s25",
+    "id": "s26",
     "title": "Tres compromisos que se pueden verificar.",
     "eyebrow": "CIERRE / UNA PROPUESTA EN TRES ACTOS",
     "source": "Síntesis del Informe 2: S4, S5, S7, S8 y formularios T-11 a T-19",
@@ -275,7 +286,7 @@
     "kind": ""
   },
   {
-    "id": "s26",
+    "id": "s27",
     "title": "Preguntas y discusión",
     "eyebrow": "CIERRE / REVISIÓN 2",
     "source": "Transportes Curimón · TFEP-01/2026 · audIT Soluciones Tecnológicas SpA",
@@ -286,7 +297,7 @@
     "kind": "closing"
   },
   {
-    "id": "s27",
+    "id": "s28",
     "title": "Registro de riesgos · R-01 a R-14.",
     "eyebrow": "RESPALDO R1 / T-16 · REGISTRO COMPLETO",
     "source": "T-16: identificación, evaluación P×I, respuesta, disparador y exposición residual",
@@ -297,7 +308,7 @@
     "kind": ""
   },
   {
-    "id": "s28",
+    "id": "s29",
     "title": "Registro de riesgos · R-15 a R-28.",
     "eyebrow": "RESPALDO R2 / T-16 · REGISTRO COMPLETO",
     "source": "T-16: identificación, evaluación P×I, respuesta, disparador y exposición residual",
@@ -308,7 +319,7 @@
     "kind": ""
   },
   {
-    "id": "s29",
+    "id": "s30",
     "title": "El AMFE completo: diez modos bajo NPR 50.",
     "eyebrow": "RESPALDO R3 / T-16 · ANÁLISIS DE MODOS DE FALLA",
     "source": "T-16: análisis de modos de falla y efectos (S × O × D = NPR, umbral 50)",
@@ -319,7 +330,7 @@
     "kind": ""
   },
   {
-    "id": "s30",
+    "id": "s31",
     "title": "El árbol de fallas modela compuertas OR y AND.",
     "eyebrow": "RESPALDO R4 / ÁRBOL DE FALLAS DE VERIFICACIÓN BLOQUEANTE · S8 §8.2",
     "source": "S8 §8.2: árbol de fallas con compuerta OR superior y cuatro compuertas AND inferiores",
@@ -330,7 +341,7 @@
     "kind": ""
   },
   {
-    "id": "s31",
+    "id": "s32",
     "title": "Sin documento conforme, el viaje no puede salir.",
     "eyebrow": "RIESGOS DE LA SOLUCIÓN / R-28 · S8 §8.2 · CASO RT-09.01",
     "source": "T-16: R-28 · S8 §8.2 · Caso RT-09.01: presupuesto de retorno documental en 90 s",
@@ -341,7 +352,7 @@
     "kind": ""
   },
   {
-    "id": "s32",
+    "id": "s33",
     "title": "La implantación converge en producción aceptada.",
     "eyebrow": "RIESGOS DE IMPLANTACIÓN / R-11 · R-19 · R-18 · T-16 · T-18",
     "source": "T-16: R-11 (adhesión), R-19 (montaje), R-18 (marcha blanca) · T-18: criterios de salida y reversión",
@@ -352,7 +363,7 @@
     "kind": ""
   },
   {
-    "id": "s33",
+    "id": "s34",
     "title": "Los hitos avanzan por evidencia y protegen fechas.",
     "eyebrow": "PLANIFICACIÓN / COMPUERTAS, HITOS Y RESERVAS · S7 §7.3.1 · T-15 · T-18",
     "source": "S7 §7.3.1 · T-15: G13 y reservas A14 (14 d) / A23 (10 d) · T-18: hitos H6, H7, H11 y H12",
@@ -363,7 +374,7 @@
     "kind": ""
   },
   {
-    "id": "s34",
+    "id": "s35",
     "title": "La reversión opera con tiempos y roles definidos.",
     "eyebrow": "RESPALDO R8 / PROCEDIMIENTO DE REVERSIÓN · FORMULARIO T-18",
     "source": "T-18: procedimiento de reversión, seis acciones con sus responsables y tiempos máximos",
@@ -374,7 +385,7 @@
     "kind": ""
   },
   {
-    "id": "s35",
+    "id": "s36",
     "title": "La calidad se controla desde el código hasta terreno.",
     "eyebrow": "METODOLOGÍA Y CALIDAD / S6 · S9 · T-9 · T-10 · T-13 · T-17",
     "source": "S6 / T-9 / T-10: metodología y control de cambios · S9 / T-13 / T-17: aseguramiento de calidad y 120 casos de prueba",
@@ -385,7 +396,7 @@
     "kind": ""
   },
   {
-    "id": "s36",
+    "id": "s37",
     "title": "Las correcciones vinculan decisiones y pruebas.",
     "eyebrow": "CORRECCIONES / OBSERVACIONES 37, 43 Y 48 · S3 · T-12 · T-14 · T-17",
     "source": "S3 §§3.2.4 y 3.3 · T-12: RNF-011 · T-14: 11.2 · T-17: CP-INT-05 y CP-SYS-05",
@@ -396,7 +407,7 @@
     "kind": ""
   },
   {
-    "id": "s37",
+    "id": "s38",
     "title": "Las cinco innovaciones distinguen TRL y condiciones.",
     "eyebrow": "RESPALDO R11 / INNOVACIONES · S13 · FORMULARIO T-19, FICHAS 1–5",
     "source": "S13 §§13.1–13.5 · T-19: madurez, calendarios e indicadores por ficha · EDT 12.1–12.5",
@@ -407,7 +418,7 @@
     "kind": ""
   },
   {
-    "id": "s38",
+    "id": "s39",
     "title": "La evidencia mantiene límites metodológicos explícitos.",
     "eyebrow": "RESPALDO R12 / ALCANCE Y FRONTERAS DE VERIFICACIÓN",
     "source": "S3 · S7 · S8 · T-12 / T-15 / T-17 / T-18",
@@ -418,7 +429,7 @@
     "kind": ""
   },
   {
-    "id": "s39",
+    "id": "s40",
     "title": "Diccionario EDT · paquetes 1.1 a 2.3.",
     "eyebrow": "RESPALDO R13 / DICCIONARIO EDT · T-14",
     "source": "T-14: diccionario de la EDT, entregable, criterio, responsable, red y meses por paquete",
@@ -429,7 +440,7 @@
     "kind": ""
   },
   {
-    "id": "s40",
+    "id": "s41",
     "title": "Diccionario EDT · paquetes 2.4 a 3.4.",
     "eyebrow": "RESPALDO R14 / DICCIONARIO EDT · T-14",
     "source": "T-14: diccionario de la EDT, entregable, criterio, responsable, red y meses por paquete",
@@ -440,7 +451,7 @@
     "kind": ""
   },
   {
-    "id": "s41",
+    "id": "s42",
     "title": "Diccionario EDT · paquetes 4.1 a 5.3.",
     "eyebrow": "RESPALDO R15 / DICCIONARIO EDT · T-14",
     "source": "T-14: diccionario de la EDT, entregable, criterio, responsable, red y meses por paquete",
@@ -451,7 +462,7 @@
     "kind": ""
   },
   {
-    "id": "s42",
+    "id": "s43",
     "title": "Diccionario EDT · paquetes 5.4 a 6.2.",
     "eyebrow": "RESPALDO R16 / DICCIONARIO EDT · T-14",
     "source": "T-14: diccionario de la EDT, entregable, criterio, responsable, red y meses por paquete",
@@ -462,7 +473,7 @@
     "kind": ""
   },
   {
-    "id": "s43",
+    "id": "s44",
     "title": "Diccionario EDT · paquetes 6.3 a 7.3.",
     "eyebrow": "RESPALDO R17 / DICCIONARIO EDT · T-14",
     "source": "T-14: diccionario de la EDT, entregable, criterio, responsable, red y meses por paquete",
@@ -473,7 +484,7 @@
     "kind": ""
   },
   {
-    "id": "s44",
+    "id": "s45",
     "title": "Diccionario EDT · paquetes 8.1 a 9.1.",
     "eyebrow": "RESPALDO R18 / DICCIONARIO EDT · T-14",
     "source": "T-14: diccionario de la EDT, entregable, criterio, responsable, red y meses por paquete",
@@ -484,7 +495,7 @@
     "kind": ""
   },
   {
-    "id": "s45",
+    "id": "s46",
     "title": "Diccionario EDT · paquetes 9.2 a 11.1.",
     "eyebrow": "RESPALDO R19 / DICCIONARIO EDT · T-14",
     "source": "T-14: diccionario de la EDT, entregable, criterio, responsable, red y meses por paquete",
@@ -495,7 +506,7 @@
     "kind": ""
   },
   {
-    "id": "s46",
+    "id": "s47",
     "title": "Diccionario EDT · paquetes 11.2 a 12.3.",
     "eyebrow": "RESPALDO R20 / DICCIONARIO EDT · T-14",
     "source": "T-14: diccionario de la EDT, entregable, criterio, responsable, red y meses por paquete",
@@ -506,7 +517,7 @@
     "kind": ""
   },
   {
-    "id": "s47",
+    "id": "s48",
     "title": "Diccionario EDT · paquetes 12.4 a 13.4.",
     "eyebrow": "RESPALDO R21 / DICCIONARIO EDT · T-14",
     "source": "T-14: diccionario de la EDT, entregable, criterio, responsable, red y meses por paquete",
