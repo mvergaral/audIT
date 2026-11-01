@@ -493,7 +493,7 @@ v += group(
     + text(72, 238, 'Integración continua con compuertas', 21, WHITE)
     + text(72, 268, 'DEV → QA → PREPROD → PROD', 20, MUTED)
     + card(48, 310, 478, 130, CARD_ALT, STROKE, 12, AMBER)
-    + text(72, 352, 'Control de cambios (T-10)', 25, AMBER, 600)
+    + text(72, 352, 'Control de cambios (T-9)', 25, AMBER, 600)
     + text(72, 388, 'Impacto en plazo, red y seguridad', 21, WHITE)
     + text(72, 418, 'Comité aprueba antes de liberar', 20, MUTED)
     + card(48, 460, 478, 142, CARD_ALT, STROKE, 12, C)
