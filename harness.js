@@ -38,6 +38,11 @@
     if (!c) return;
     if (c.position.fragmentIndex > 0) {
       c.resumeSlide(c.position.slideIndex, c.position.fragmentIndex - 1);
+    } else if (c.position.slideIndex > 0) {
+      // Vuelve a la lámina anterior ya con todas sus revelaciones hechas.
+      const idx = c.position.slideIndex - 1;
+      const anterior = c.slidesOf(c.position.sequenceId)[idx];
+      c.resumeSlide(idx, Math.max(0, (anterior?.fragments.length ?? 1) - 1));
     } else {
       c.prev();
     }
