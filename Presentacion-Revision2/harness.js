@@ -19,7 +19,9 @@
     originalSeek(time);
     if (!timeline || !win.__hfSetTime) return;
     const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (reduced || document.documentElement.dataset.qa === 'true') {
+    // Al retroceder se salta directo al estado final, sin reproducir la animación.
+    const backward = time < lastTarget;
+    if (reduced || backward || document.documentElement.dataset.qa === 'true') {
       win.__hfSetTime(time);
     } else {
       const sameScene = Math.floor(lastTarget / 10) === Math.floor(time / 10);
