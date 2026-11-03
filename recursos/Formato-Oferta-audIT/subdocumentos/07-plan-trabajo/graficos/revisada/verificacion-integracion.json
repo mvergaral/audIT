@@ -1,63 +1,63 @@
 {
-  "paginas_informe": 61,
+  "paginas_informe": 46,
   "anexos_gantt": [
     {
-      "pagina_pdf": 47,
+      "pagina_pdf": 32,
       "letra_minima_figura_pt": 10.424,
       "apaisada": true
     },
     {
-      "pagina_pdf": 48,
+      "pagina_pdf": 33,
       "letra_minima_figura_pt": 10.424,
       "apaisada": true
     },
     {
-      "pagina_pdf": 49,
+      "pagina_pdf": 34,
       "letra_minima_figura_pt": 10.424,
       "apaisada": true
     },
     {
-      "pagina_pdf": 50,
+      "pagina_pdf": 35,
       "letra_minima_figura_pt": 10.424,
       "apaisada": true
     },
     {
-      "pagina_pdf": 51,
+      "pagina_pdf": 36,
       "letra_minima_figura_pt": 10.424,
       "apaisada": true
     },
     {
-      "pagina_pdf": 52,
+      "pagina_pdf": 37,
       "letra_minima_figura_pt": 10.424,
       "apaisada": true
     },
     {
-      "pagina_pdf": 53,
+      "pagina_pdf": 38,
       "letra_minima_figura_pt": 10.424,
       "apaisada": true
     },
     {
-      "pagina_pdf": 54,
+      "pagina_pdf": 39,
       "letra_minima_figura_pt": 10.424,
       "apaisada": true
     },
     {
-      "pagina_pdf": 55,
+      "pagina_pdf": 40,
       "letra_minima_figura_pt": 10.424,
       "apaisada": true
     },
     {
-      "pagina_pdf": 56,
+      "pagina_pdf": 41,
       "letra_minima_figura_pt": 10.424,
       "apaisada": true
     },
     {
-      "pagina_pdf": 57,
+      "pagina_pdf": 42,
       "letra_minima_figura_pt": 10.424,
       "apaisada": true
     },
     {
-      "pagina_pdf": 58,
+      "pagina_pdf": 43,
       "letra_minima_figura_pt": 10.424,
       "apaisada": true
     }
@@ -65,5 +65,57 @@
   "referencias_gantt_faltantes": [],
   "paginas_con_interrogantes": [],
   "bibliografia": "biber exit 0",
-  "compilacion": "3 pasadas LuaLaTeX exit 0; etiquetas externas S3/S4/S6 generadas de sus fuentes"
+  "compilacion": "3 pasadas LuaLaTeX exit 0; etiquetas externas S3/S4/S6 generadas de sus fuentes",
+  "anexos_edt": [
+    {
+      "pagina_pdf": 23,
+      "apaisada": true
+    },
+    {
+      "pagina_pdf": 24,
+      "apaisada": true
+    },
+    {
+      "pagina_pdf": 25,
+      "apaisada": true
+    },
+    {
+      "pagina_pdf": 26,
+      "apaisada": true
+    },
+    {
+      "pagina_pdf": 27,
+      "apaisada": true
+    },
+    {
+      "pagina_pdf": 28,
+      "apaisada": true
+    },
+    {
+      "pagina_pdf": 29,
+      "apaisada": true
+    },
+    {
+      "pagina_pdf": 30,
+      "apaisada": true
+    },
+    {
+      "pagina_pdf": 31,
+      "apaisada": true
+    }
+  ],
+  "instancia": "final",
+  "fecha": "2026-11-25",
+  "folio_global": "Por fijar en ensamblado completo; copia local desde 1",
+  "verificador": {
+    "puntos": 21,
+    "incumplimientos": 0,
+    "avisos": 2,
+    "paginas_paquete": 71,
+    "adaptaciones": [
+      "separadores de ruta Windows",
+      "columna emb de pdffonts"
+    ]
+  },
+  "fuentes_figuras": "Arial incrustada en EDT/Gantt; PERT conserva IBM Plex incrustada"
 }

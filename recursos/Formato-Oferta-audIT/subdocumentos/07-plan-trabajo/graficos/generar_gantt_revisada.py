@@ -8,6 +8,13 @@ from reportlab.lib.utils import ImageReader
 from reportlab.platypus import Paragraph
 from reportlab.lib.styles import ParagraphStyle
 from xml.sax.saxutils import escape
+from reportlab.pdfbase import pdfmetrics
+from reportlab.pdfbase.ttfonts import TTFont
+# Arial conserva las métricas de la composición y queda incrustada en el PDF.
+FONTDIR=Path('C:/Windows/Fonts')
+pdfmetrics.registerFont(TTFont('Helvetica',str(FONTDIR/'arial.ttf')))
+pdfmetrics.registerFont(TTFont('Helvetica-Bold',str(FONTDIR/'arialbd.ttf')))
+pdfmetrics.registerFontFamily('Helvetica',normal='Helvetica',bold='Helvetica-Bold',italic='Helvetica',boldItalic='Helvetica-Bold')
 HERE=Path(__file__).resolve().parent
 BASE=HERE.parent
 ROOT=HERE.parents[4]
@@ -15,6 +22,10 @@ OUT=HERE/'revisada';OUT.mkdir(exist_ok=True)
 SOURCE=ROOT/'Informe-2/d2/99_Generacion/plan_detallado.json'
 D=json.loads(SOURCE.read_text(encoding='utf-8'))
 P=D['paquetes'];R=D['red'];BY={r['id']:r for r in R}
+# Ajustes conciliados con las fichas T-19 vigentes.
+AJ=json.loads((HERE/'ajustes-paquetes.json').read_text(encoding='utf-8'))
+for paquete in P:
+ if paquete['codigo'] in AJ:paquete.update(AJ[paquete['codigo']])
 N=HexColor('#102D3E');T=HexColor('#007582');RED=HexColor('#B3343C');A=HexColor('#9B5A00');G=HexColor('#D7E2E7');PALE=HexColor('#F0F4F6')
 W,H=840,525
 LOGO=ROOT/'recursos/Formato-Oferta-audIT/portadas/activos/logo-audit.png'
@@ -212,6 +223,6 @@ block='% INICIO LAMINAS GANTT\n'+refs+annex+'\n% FIN LAMINAS GANTT'
 s=re.sub(r'% INICIO LAMINAS GANTT.*?% FIN LAMINAS GANTT',lambda _:block,s,flags=re.S);content.write_text(s,encoding='utf-8')
 fontfile=HERE/'verificacion_letra.json';f=json.loads(fontfile.read_text(encoding='utf-8'));f=[x for x in f if not x['archivo'].startswith('revisada/')]
 f.extend({'archivo':'revisada/'+e['file'],'minimo_pt':12.0} for e in manifest);fontfile.write_text(json.dumps(f,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-report={'CPM_recalculada_y_coincidente':True,'actividades_conciliadas_T15':len(checked),'paquetes_conciliados_T14':len(ids),'paquetes_cubiertos_sin_duplicar':len(covered),'hitos_conciliados_catalogo':len(HITS),'paginas':len(manifest),'fuente_sha256':hashlib.sha256(SOURCE.read_bytes()).hexdigest(),'integracion':'Ver revisada/verificacion-integracion.json; recompilar si se regeneran las figuras.','pendientes':['Cotejo directo de tabla E-25: extracción textual vacía.','Revisión humana y asociación a bitácora A-6 del responsable.']}
+report={'CPM_recalculada_y_coincidente':True,'actividades_conciliadas_T15':len(checked),'paquetes_conciliados_T14':len(ids),'paquetes_cubiertos_sin_duplicar':len(covered),'hitos_conciliados_catalogo':len(HITS),'paginas':len(manifest),'fuente_sha256':hashlib.sha256(SOURCE.read_bytes()).hexdigest(),'integracion':'Ver revisada/verificacion-integracion.json; recompilar si se regeneran las figuras.','pendientes':['Cotejo directo de tabla E-25: extracción textual vacía.','Asociar REGISTRO-PARA-A6.md a la bitácora A-6 individual.']}
 (OUT/'conciliacion.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 print(json.dumps(report,ensure_ascii=True))

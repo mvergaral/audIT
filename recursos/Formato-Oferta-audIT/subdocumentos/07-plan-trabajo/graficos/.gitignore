@@ -3,3 +3,4 @@
 
 # Compilación local: fuentes descargadas, auxiliares y logs.
 revisada/compilacion/
+__pycache__/

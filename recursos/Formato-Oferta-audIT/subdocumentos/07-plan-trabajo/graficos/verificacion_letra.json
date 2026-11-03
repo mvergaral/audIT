@@ -1,103 +1,87 @@
 [
   {
-    "archivo": "edt-general.pdf",
-    "minimo_pt": 10.0
+    "archivo": "graficos/edt-revisada/01-arbol.pdf",
+    "minimo_pt": 11.5
   },
   {
-    "archivo": "edt-detalle-01-1.pdf",
-    "minimo_pt": 10.0
+    "archivo": "graficos/edt-revisada/02-paquetes-1.pdf",
+    "minimo_pt": 11.5
   },
   {
-    "archivo": "edt-detalle-02-1.pdf",
-    "minimo_pt": 10.0
+    "archivo": "graficos/edt-revisada/03-paquetes-2.pdf",
+    "minimo_pt": 11.5
   },
   {
-    "archivo": "edt-detalle-02-2.pdf",
-    "minimo_pt": 10.0
+    "archivo": "graficos/edt-revisada/04-paquetes-3.pdf",
+    "minimo_pt": 11.5
   },
   {
-    "archivo": "edt-detalle-03-1.pdf",
-    "minimo_pt": 10.0
+    "archivo": "graficos/edt-revisada/05-paquetes-4.pdf",
+    "minimo_pt": 11.5
   },
   {
-    "archivo": "edt-detalle-03-2.pdf",
-    "minimo_pt": 10.0
+    "archivo": "graficos/edt-revisada/06-paquetes-5.pdf",
+    "minimo_pt": 11.5
   },
   {
-    "archivo": "edt-detalle-04-1.pdf",
-    "minimo_pt": 10.0
+    "archivo": "graficos/edt-revisada/07-ejemplo.pdf",
+    "minimo_pt": 11.5
   },
   {
-    "archivo": "edt-detalle-05-1.pdf",
-    "minimo_pt": 10.0
+    "archivo": "graficos/edt-revisada/08-trazabilidad.pdf",
+    "minimo_pt": 11.5
   },
   {
-    "archivo": "edt-detalle-05-2.pdf",
-    "minimo_pt": 10.0
+    "archivo": "graficos/edt-revisada/09-matriz-requisitos.pdf",
+    "minimo_pt": 11.5
   },
   {
-    "archivo": "edt-detalle-05-3.pdf",
-    "minimo_pt": 10.0
+    "archivo": "graficos/revisada/gantt-panorama.pdf",
+    "minimo_pt": 12.0
   },
   {
-    "archivo": "edt-detalle-06-1.pdf",
-    "minimo_pt": 10.0
+    "archivo": "graficos/revisada/gantt-cpm.pdf",
+    "minimo_pt": 12.0
   },
   {
-    "archivo": "edt-detalle-06-2.pdf",
-    "minimo_pt": 10.0
+    "archivo": "graficos/revisada/gantt-gestion.pdf",
+    "minimo_pt": 12.0
   },
   {
-    "archivo": "edt-detalle-07-1.pdf",
-    "minimo_pt": 10.0
+    "archivo": "graficos/revisada/gantt-plataforma.pdf",
+    "minimo_pt": 12.0
   },
   {
-    "archivo": "edt-detalle-08-1.pdf",
-    "minimo_pt": 10.0
+    "archivo": "graficos/revisada/gantt-e1.pdf",
+    "minimo_pt": 12.0
   },
   {
-    "archivo": "edt-detalle-08-2.pdf",
-    "minimo_pt": 10.0
+    "archivo": "graficos/revisada/gantt-datos.pdf",
+    "minimo_pt": 12.0
   },
   {
-    "archivo": "edt-detalle-09-1.pdf",
-    "minimo_pt": 10.0
+    "archivo": "graficos/revisada/gantt-e2.pdf",
+    "minimo_pt": 12.0
   },
   {
-    "archivo": "edt-detalle-10-1.pdf",
-    "minimo_pt": 10.0
+    "archivo": "graficos/revisada/gantt-implantacion.pdf",
+    "minimo_pt": 12.0
   },
   {
-    "archivo": "edt-detalle-11-1.pdf",
-    "minimo_pt": 10.0
+    "archivo": "graficos/revisada/gantt-innovaciones.pdf",
+    "minimo_pt": 12.0
   },
   {
-    "archivo": "edt-detalle-11-2.pdf",
-    "minimo_pt": 10.0
+    "archivo": "graficos/revisada/gantt-hitos.pdf",
+    "minimo_pt": 12.0
   },
   {
-    "archivo": "edt-detalle-12-1.pdf",
-    "minimo_pt": 10.0
+    "archivo": "graficos/revisada/gantt-control.pdf",
+    "minimo_pt": 12.0
   },
   {
-    "archivo": "edt-detalle-12-2.pdf",
-    "minimo_pt": 10.0
-  },
-  {
-    "archivo": "edt-detalle-13-1.pdf",
-    "minimo_pt": 10.0
-  },
-  {
-    "archivo": "edt-detalle-13-2.pdf",
-    "minimo_pt": 10.0
-  },
-  {
-    "archivo": "pert-etapa1.pdf",
-    "minimo_pt": 10.0
-  },
-  {
-    "archivo": "pert-etapa2.pdf",
-    "minimo_pt": 10.0
+    "archivo": "graficos/revisada/gantt-operacion.pdf",
+    "minimo_pt": 12.0
   },
   {
     "archivo": "revisada/gantt-panorama.pdf",

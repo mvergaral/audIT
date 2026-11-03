@@ -1,5 +1,7 @@
 # Revisión de la carta Gantt - v3, 2 de noviembre de 2026
 
+Estado actualizado: preparación para propuesta final, versión 3.0, 25-11-2026. Ignacio Cuevas confirmó la revisión de EDT v2 y Gantt v3; el registro nominal está en REGISTRO-PARA-A6.md. Los cierres actuales se detallan en PENDIENTES-ENTREGA-FINAL.md. Las notas siguientes conservan el historial de revisión y no sustituyen ese estado.
+
 Registro interno de trabajo; no se incluye en la propuesta técnica.
 
 ## Resultado
@@ -38,12 +40,12 @@ Los generadores anteriores están archivados en `version-anterior/2026-11-02/`; 
 
 ## Integración compilada y pendientes
 
-- PDF integrado de revisión: `S7_Integrado_Revision.pdf`, 61 páginas. Las doce láminas Gantt ocupan los folios/páginas PDF 47-58.
+- PDF integrado tras la revisión de EDT: 46 páginas. Las doce láminas Gantt ocupan los folios/páginas PDF 32-43; la EDT ocupa 23-31. La versión previa de 61 páginas se conserva en `version-anterior/2026-11-02/informes/`.
 - Compilación directa con LuaLaTeX: tres pasadas correctas; Biber correcto. Se obtuvieron las etiquetas reales de S3, S4 y S6 en compilaciones temporales para resolver referencias externas. El PDF integrado no contiene referencias `??`.
 - Las doce figuras tienen letra mínima efectiva medida de 10,424 pt al insertarse en la plantilla, por encima de 9 pt. Se revisaron folios, orientación y contenido de las doce páginas.
 - Las fuentes oficiales IBM Plex se descargan de CTAN a una carpeta local de compilación. MiKTeX resolvió los paquetes faltantes. No se modificaron los estilos ni la configuración de la plantilla.
 - Comando reproducible desde la raíz: `python -X utf8 recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/compilar_revision.py`. El primer uso necesita conexión para las fuentes/paquetes, MiKTeX con LuaLaTeX y Biber; los siguientes reutilizan las dependencias locales. No usa el `latexmk` cuyo manejo de argumentos falla en este Windows.
-- Auxiliares, fuentes descargadas y logs: `graficos/revisada/compilacion/`, excluidos del versionado. Ver `graficos/revisada/verificacion-integracion.json` para las comprobaciones.
+- Auxiliares, fuentes descargadas y logs: `graficos/revisada/compilacion/`, excluidos del versionado y retirados tras la revisión. El próximo build los regenerará. Ver `graficos/revisada/verificacion-integracion.json` para las comprobaciones.
 - Esta es una copia integrada de revisión con el formato oficial; no sustituye el empaquetado completo de la entrega ni la aprobación humana.
 - Pendientes de contenido: cotejo directo de E-25, revisión humana y asociación a la bitácora A-6 del responsable. La declaración de IA conserva ese pendiente sin atribuir una aprobación no realizada.
 

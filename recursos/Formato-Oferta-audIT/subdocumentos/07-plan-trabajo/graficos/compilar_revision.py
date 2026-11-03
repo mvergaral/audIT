@@ -1,6 +1,6 @@
 """Compila una copia integrada de revisión del S7 sin modificar la plantilla."""
 from pathlib import Path
-import os,subprocess,shutil,urllib.request,zipfile
+import os,subprocess,shutil,urllib.request,zipfile,sys
 HERE=Path(__file__).resolve().parent
 BASE=HERE.parents[2]
 OUT=HERE/'revisada/compilacion';OUT.mkdir(parents=True,exist_ok=True)
@@ -14,6 +14,7 @@ if not (FONTS/'IBMPlexSerif-Regular.otf').exists():
  with zipfile.ZipFile(package) as z:
   for entry in z.namelist():
    if entry.endswith('.otf'):(FONTS/Path(entry).name).write_bytes(z.read(entry))
+FINAL='--informe2' not in sys.argv
 wrapper=OUT/'s7-revision.tex'
 wrapper.write_text(r'''\def\RaizSubdocumentos{subdocumentos}
 \def\NumeroSubdoc{7}
@@ -22,16 +23,22 @@ wrapper.write_text(r'''\def\RaizSubdocumentos{subdocumentos}
 \def\ArchivoActual{S7-Integrado-Revision}
 \input{subdocumento.tex}
 ''',encoding='utf-8')
+if FINAL:
+ entry=OUT/'entrada-final.tex'
+ template=(BASE/'subdocumento.tex').read_text(encoding='utf-8')
+ template=template.replace(r'\begin{document}',r'\AplicarInstancia{final}\Version{3.0}'+'\n'+r'\begin{document}')
+ entry.write_text(template,encoding='utf-8')
+ wrapper.write_text(wrapper.read_text(encoding='utf-8').replace(r'\input{subdocumento.tex}',r'\input{'+entry.relative_to(BASE).as_posix()+'}'),encoding='utf-8')
 env=os.environ.copy();env['TEXINPUTS']='.;'+';'.join(str(BASE/p).replace('\\','/')+'//' for p in ['estilo','fuentes','temas','portadas','formularios','configuracion'])+';'
 env['OPENTYPEFONTS']=str(FONTS).replace('\\','/')+'//;';env['OSFONTDIR']=str(FONTS)
-args=['lualatex','--enable-installer','-interaction=nonstopmode','-halt-on-error','-file-line-error','-jobname=S7-Integrado-Revision','-output-directory='+str(OUT),str(wrapper)]
+args=['lualatex','-recorder','--enable-installer','-interaction=nonstopmode','-halt-on-error','-file-line-error','-jobname=S7-Integrado-Revision','-output-directory='+str(OUT),str(wrapper)]
 # Freeze real section labels from S3/S4/S6 for cross-document references.
 ext=OUT/'externos';ext.mkdir(exist_ok=True)
 registrations=[]
 for number in (3,4,6):
  name=f'S{number:02d}';w=ext/(name+'.tex')
  w.write_text('\\def\\RaizSubdocumentos{subdocumentos}\n\\def\\NumeroSubdoc{'+str(number)+'}\n\\def\\FolioInicialExterno{1}\n\\def\\NombreArchivo{'+name+'}\n\\def\\ArchivoActual{'+name+'}\n\\input{subdocumento.tex}\n',encoding='utf-8')
- cmd=['lualatex','--enable-installer','-draftmode','-interaction=nonstopmode','-halt-on-error','-jobname='+name,'-output-directory='+str(ext),str(w)]
+ cmd=['lualatex','-recorder','--enable-installer','-draftmode','-interaction=nonstopmode','-halt-on-error','-jobname='+name,'-output-directory='+str(ext),str(w)]
  with (ext/(name+'-compilacion.txt')).open('w',encoding='utf-8') as log:
   r=subprocess.run(cmd,cwd=BASE,env=env,stdout=log,stderr=subprocess.STDOUT,stdin=subprocess.DEVNULL)
  print('etiquetas externas',name,r.returncode,flush=True)
@@ -52,5 +59,11 @@ for i in range(3):
   print('biber',r.returncode,flush=True)
   if r.returncode:
    print((OUT/'biber.txt').read_text(encoding='utf-8',errors='replace')[-2500:]);raise SystemExit(r.returncode)
-shutil.copy2(OUT/'S7-Integrado-Revision.pdf',HERE.parent/'S7_Integrado_Revision.pdf')
-print('PDF integrado:',HERE.parent/'S7_Integrado_Revision.pdf')
+target=HERE.parent/('S7_Integrado_Revision.pdf' if FINAL else 'S7_Informe2_Revision.pdf')
+try:
+ shutil.copy2(OUT/'S7-Integrado-Revision.pdf',target)
+except PermissionError:
+ # El visor de PDF de Windows puede mantener abierta la revisión previa.
+ target=HERE.parent/('S7_Final_actualizado.pdf' if FINAL else 'S7_Informe2_actualizado.pdf')
+ shutil.copy2(OUT/'S7-Integrado-Revision.pdf',target)
+print('PDF integrado:',target)
