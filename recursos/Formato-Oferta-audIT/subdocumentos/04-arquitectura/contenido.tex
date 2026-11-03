@@ -916,8 +916,13 @@ El reparto de la flota sale del \caso{numeral 2.2}{6}: 340 de los 374 camiones t
 equipo, y 340 menos 192 da 148 propios, todos equipados. Los 148 propios y los 34 de terceros sin
 equipo llevan el equipo de audIT, 182 en total. Los 192 de terceros que ya tienen equipo lo conservan,
 porque la restricción 3 impide intervenirlo sin acuerdo de su dueño \caso*{capítulo 10}{23}, y sus
-datos llegan por las plataformas de sus proveedores. La \figref{4-fisicafig} muestra los tres planos y
-los enlaces que los unen.
+datos llegan por las plataformas de sus proveedores. La \figref{4-fisicacompletafig} reúne la
+arquitectura física en una sola vista, con cada equipo, sus conexiones y su alimentación.
+
+\figuraHorizontalAqui{figuras/04-arquitectura/fisica-completa.pdf}{Vista completa de la arquitectura física, con cada equipo, sus conexiones y su alimentación}{4-fisicacompletafig}
+
+La vista completa sirve para ubicar cada equipo en el conjunto, y las figuras que siguen la explican por
+partes. La \figref{4-fisicafig} empieza por los tres planos y los enlaces que los unen.
 
 \figuraHorizontalAqui{figuras/04-arquitectura/fisica-general.pdf}{Vista general de la arquitectura física: nube primaria y secundaria, San Bernardo, terminales regionales y flota, con los enlaces y su capacidad}{4-fisicafig}
 
@@ -928,7 +933,8 @@ lado están los cuatro terminales regionales, cada uno con un enlace fijo de al 
 router 5G de respaldo. Abajo está la flota: los 182 equipos audIT transmiten por la red celular y,
 donde no hay señal, por la red satelital Iridium, mientras que los 192 equipos de terceros entregan su
 posición a través de las plataformas de sus proveedores. Las secciones que siguen desarrollan cada
-parte con su propio diagrama, como pide el \comunicado{10}{sección 4.4}.
+parte con su propio diagrama, como pide el \comunicado{10}{sección 4.4}: el equipo a bordo, la región
+primaria, la sala de San Bernardo, el gabinete de los terminales y la región secundaria.
 
 % ----------------------------------------------------------------------------
 \subsection{Especificaciones Implementos a proveer (Hardware y Software)}\label{sec:4-implementos}
@@ -1597,7 +1603,9 @@ SIM y conmutación automática, opera de $-40$ a $+75$~°C y consume menos de 18
 \parencite{teltonika_tsw202}. Fuera del gabinete, el FortiAP 234G, IP67 y de $-50$ a $+70$~°C, cubre el
 patio con Wi-Fi para actualizar los camiones \parencite{fortinet_fap}, y el Minew G1 lee en la portería
 las balizas de los semirremolques \parencite{minew_g1}. El gabinete suma 152~W, y la UPS APC SRT1000XLI,
-con 293~VAh \parencite{apc_srt1000}, lo sostiene 83 minutos al final de la vida de su batería. Sin enlace,
+con 293~VAh \parencite{apc_srt1000}, lo sostiene 83 minutos al final de la vida de su batería. La UPS
+alimenta una de las dos fuentes de cada bus de 24 y 48~V, y la otra sale de otro circuito del tablero,
+como fija la sección~\ref{sec:4-enlaces}. Sin enlace,
 el terminal sigue registrando salidas y llegadas, consulta la copia local de vigencias y jornada para
 controlar en portería los viajes ya asignados, y actualiza los camiones con la imagen que guarda, durante las 24 horas que fija el
 \art{16.4}{12}.
