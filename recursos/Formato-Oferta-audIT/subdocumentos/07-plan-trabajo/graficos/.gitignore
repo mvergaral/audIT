@@ -1,2 +1,5 @@
 # Estos PDF son fuentes de figuras de S7 y deben acompañar al documento.
 !*.pdf
+
+# Compilación local: fuentes descargadas, auxiliares y logs.
+revisada/compilacion/

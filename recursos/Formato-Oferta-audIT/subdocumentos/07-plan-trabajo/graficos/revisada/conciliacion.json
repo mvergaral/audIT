@@ -1,0 +1,14 @@
+{
+  "CPM_recalculada_y_coincidente": true,
+  "actividades_conciliadas_T15": 26,
+  "paquetes_conciliados_T14": 54,
+  "paquetes_cubiertos_sin_duplicar": 54,
+  "hitos_conciliados_catalogo": 12,
+  "paginas": 12,
+  "fuente_sha256": "7a8b9d8921fb4d12cfc3b3e86efeaa18431de353ce76633878e9c0f15ec57b71",
+  "pendientes": [
+    "Cotejo directo de tabla E-25: extracción textual vacía.",
+    "Revisión humana y asociación a bitácora A-6 del responsable."
+  ],
+  "integracion": "Ver verificacion-integracion.json: PDF S7 de 61 páginas, Gantt en 47-58."
+}

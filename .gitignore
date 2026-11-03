@@ -52,3 +52,8 @@ Investigacion/*.pdf
 # Copias locales para cargar la entrega; los PDF originales siguen en salida/informe2.
 **/salida/Entrega-Informe2-*/
 *.ZIP
+
+# Cachés y temporales locales de revisión; no son entregables.
+/.codex-cache/
+/tmp/
+/debug.log

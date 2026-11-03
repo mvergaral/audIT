@@ -452,33 +452,25 @@ plan de recuperación.
 
 \subsection{Carta Gantt}\label{sec:7-gantt}
 
-La carta Gantt cubre los 56 meses del contrato sobre el calendario real, con el inicio en febrero de
-2027. Muestra los 13 elementos de la EDT, las dos marchas blancas, los dos pasos a producción, el inicio
-de la operación y los doce hitos del Formulario E-25. La \figref{7-gantt} la presenta con la temporada de
-fruta en gris.
+La planificación se lee desde el horizonte contractual hasta el control de la implementación. La \figref{7-gantt-panorama} muestra las ventanas agregadas de los trece elementos de la EDT en M1-M56. La \figref{7-gantt-cpm} presenta las 25 actividades y G13 en días hábiles, con ruta crítica, holgura total y enlaces principales; las precedencias completas se consultan en T-15 y en los PERT de la \verSeccion{sec:7-ruta}.
+
+Los detalles se agrupan por frentes y cubren los 54 paquetes una sola vez, incluyendo los cuatro de operación. Las barras representan ventanas mensuales del T-14; los rombos muestran posiciones planificadas de hitos relacionados con la red. La tabla de hitos distingue estas posiciones de los límites contractuales y de los inicios fijos H6/H11. La probabilidad de cumplir plazos se analiza por separado en S8.
 
 % INICIO LAMINAS GANTT
-Los detalles se presentan en \figref{7-gantt-24-01}, \figref{7-gantt-24-02}, \figref{7-gantt-24-03}, \figref{7-gantt-24-04}, \figref{7-gantt-24-05}, \figref{7-gantt-24-06}, \figref{7-gantt-24-07}, \figref{7-gantt-24-08}, \figref{7-gantt-24-09}, \figref{7-gantt-56-01}, \figref{7-gantt-56-02}, \figref{7-gantt-56-03}, \figref{7-gantt-56-04}, \figref{7-gantt-56-05}, \figref{7-gantt-56-06}, \figref{7-gantt-56-07}, \figref{7-gantt-56-08}, \figref{7-gantt-56-09}.
+Las vistas del anexo se presentan en \figref{7-gantt-panorama}, \figref{7-gantt-cpm}, \figref{7-gantt-gestion}, \figref{7-gantt-plataforma}, \figref{7-gantt-e1}, \figref{7-gantt-datos}, \figref{7-gantt-e2}, \figref{7-gantt-implantacion}, \figref{7-gantt-innovaciones}, \figref{7-gantt-hitos}, \figref{7-gantt-control}, \figref{7-gantt-operacion}.
 
-\anexoGrafico{subdocumentos/07-plan-trabajo/graficos/gantt-general.pdf}{Gantt general M1-M56}{7-gantt}
-\anexoGrafico{subdocumentos/07-plan-trabajo/graficos/gantt-m24-detalle-01.pdf}{Gantt M1-M24: detalle 1}{7-gantt-24-01}
-\anexoGrafico{subdocumentos/07-plan-trabajo/graficos/gantt-m24-detalle-02.pdf}{Gantt M1-M24: detalle 2}{7-gantt-24-02}
-\anexoGrafico{subdocumentos/07-plan-trabajo/graficos/gantt-m24-detalle-03.pdf}{Gantt M1-M24: detalle 3}{7-gantt-24-03}
-\anexoGrafico{subdocumentos/07-plan-trabajo/graficos/gantt-m24-detalle-04.pdf}{Gantt M1-M24: detalle 4}{7-gantt-24-04}
-\anexoGrafico{subdocumentos/07-plan-trabajo/graficos/gantt-m24-detalle-05.pdf}{Gantt M1-M24: detalle 5}{7-gantt-24-05}
-\anexoGrafico{subdocumentos/07-plan-trabajo/graficos/gantt-m24-detalle-06.pdf}{Gantt M1-M24: detalle 6}{7-gantt-24-06}
-\anexoGrafico{subdocumentos/07-plan-trabajo/graficos/gantt-m24-detalle-07.pdf}{Gantt M1-M24: detalle 7}{7-gantt-24-07}
-\anexoGrafico{subdocumentos/07-plan-trabajo/graficos/gantt-m24-detalle-08.pdf}{Gantt M1-M24: detalle 8}{7-gantt-24-08}
-\anexoGrafico{subdocumentos/07-plan-trabajo/graficos/gantt-m24-detalle-09.pdf}{Gantt M1-M24: detalle 9}{7-gantt-24-09}
-\anexoGrafico{subdocumentos/07-plan-trabajo/graficos/gantt-m56-detalle-01.pdf}{Gantt M1-M56: detalle 1}{7-gantt-56-01}
-\anexoGrafico{subdocumentos/07-plan-trabajo/graficos/gantt-m56-detalle-02.pdf}{Gantt M1-M56: detalle 2}{7-gantt-56-02}
-\anexoGrafico{subdocumentos/07-plan-trabajo/graficos/gantt-m56-detalle-03.pdf}{Gantt M1-M56: detalle 3}{7-gantt-56-03}
-\anexoGrafico{subdocumentos/07-plan-trabajo/graficos/gantt-m56-detalle-04.pdf}{Gantt M1-M56: detalle 4}{7-gantt-56-04}
-\anexoGrafico{subdocumentos/07-plan-trabajo/graficos/gantt-m56-detalle-05.pdf}{Gantt M1-M56: detalle 5}{7-gantt-56-05}
-\anexoGrafico{subdocumentos/07-plan-trabajo/graficos/gantt-m56-detalle-06.pdf}{Gantt M1-M56: detalle 6}{7-gantt-56-06}
-\anexoGrafico{subdocumentos/07-plan-trabajo/graficos/gantt-m56-detalle-07.pdf}{Gantt M1-M56: detalle 7}{7-gantt-56-07}
-\anexoGrafico{subdocumentos/07-plan-trabajo/graficos/gantt-m56-detalle-08.pdf}{Gantt M1-M56: detalle 8}{7-gantt-56-08}
-\anexoGrafico{subdocumentos/07-plan-trabajo/graficos/gantt-m56-detalle-09.pdf}{Gantt M1-M56: detalle 9}{7-gantt-56-09}
+\anexoGrafico{subdocumentos/07-plan-trabajo/graficos/revisada/gantt-panorama.pdf}{Horizonte contractual M1-M56}{7-gantt-panorama}
+\anexoGrafico{subdocumentos/07-plan-trabajo/graficos/revisada/gantt-cpm.pdf}{Red CPM de 25 actividades y G13}{7-gantt-cpm}
+\anexoGrafico{subdocumentos/07-plan-trabajo/graficos/revisada/gantt-gestion.pdf}{Gestión y levantamiento}{7-gantt-gestion}
+\anexoGrafico{subdocumentos/07-plan-trabajo/graficos/revisada/gantt-plataforma.pdf}{Plataforma y equipo a bordo}{7-gantt-plataforma}
+\anexoGrafico{subdocumentos/07-plan-trabajo/graficos/revisada/gantt-e1.pdf}{Construcción de la Etapa 1}{7-gantt-e1}
+\anexoGrafico{subdocumentos/07-plan-trabajo/graficos/revisada/gantt-datos.pdf}{Integraciones y migración}{7-gantt-datos}
+\anexoGrafico{subdocumentos/07-plan-trabajo/graficos/revisada/gantt-e2.pdf}{Etapa 2 y adhesión}{7-gantt-e2}
+\anexoGrafico{subdocumentos/07-plan-trabajo/graficos/revisada/gantt-implantacion.pdf}{Calidad, capacitación e implantación}{7-gantt-implantacion}
+\anexoGrafico{subdocumentos/07-plan-trabajo/graficos/revisada/gantt-innovaciones.pdf}{Ventanas de las innovaciones}{7-gantt-innovaciones}
+\anexoGrafico{subdocumentos/07-plan-trabajo/graficos/revisada/gantt-hitos.pdf}{Fechas planificadas y límites de H1-H12}{7-gantt-hitos}
+\anexoGrafico{subdocumentos/07-plan-trabajo/graficos/revisada/gantt-control.pdf}{G13, reservas y control de fechas}{7-gantt-control}
+\anexoGrafico{subdocumentos/07-plan-trabajo/graficos/revisada/gantt-operacion.pdf}{Continuidad operacional M21-M56}{7-gantt-operacion}
 % FIN LAMINAS GANTT
 
 

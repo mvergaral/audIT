@@ -1,0 +1,69 @@
+{
+  "paginas_informe": 61,
+  "anexos_gantt": [
+    {
+      "pagina_pdf": 47,
+      "letra_minima_figura_pt": 10.424,
+      "apaisada": true
+    },
+    {
+      "pagina_pdf": 48,
+      "letra_minima_figura_pt": 10.424,
+      "apaisada": true
+    },
+    {
+      "pagina_pdf": 49,
+      "letra_minima_figura_pt": 10.424,
+      "apaisada": true
+    },
+    {
+      "pagina_pdf": 50,
+      "letra_minima_figura_pt": 10.424,
+      "apaisada": true
+    },
+    {
+      "pagina_pdf": 51,
+      "letra_minima_figura_pt": 10.424,
+      "apaisada": true
+    },
+    {
+      "pagina_pdf": 52,
+      "letra_minima_figura_pt": 10.424,
+      "apaisada": true
+    },
+    {
+      "pagina_pdf": 53,
+      "letra_minima_figura_pt": 10.424,
+      "apaisada": true
+    },
+    {
+      "pagina_pdf": 54,
+      "letra_minima_figura_pt": 10.424,
+      "apaisada": true
+    },
+    {
+      "pagina_pdf": 55,
+      "letra_minima_figura_pt": 10.424,
+      "apaisada": true
+    },
+    {
+      "pagina_pdf": 56,
+      "letra_minima_figura_pt": 10.424,
+      "apaisada": true
+    },
+    {
+      "pagina_pdf": 57,
+      "letra_minima_figura_pt": 10.424,
+      "apaisada": true
+    },
+    {
+      "pagina_pdf": 58,
+      "letra_minima_figura_pt": 10.424,
+      "apaisada": true
+    }
+  ],
+  "referencias_gantt_faltantes": [],
+  "paginas_con_interrogantes": [],
+  "bibliografia": "biber exit 0",
+  "compilacion": "3 pasadas LuaLaTeX exit 0; etiquetas externas S3/S4/S6 generadas de sus fuentes"
+}
