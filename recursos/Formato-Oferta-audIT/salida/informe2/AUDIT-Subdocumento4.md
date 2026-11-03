@@ -922,8 +922,13 @@ El reparto de la flota sale del Caso, numeral 2.2, p. 6: 340 de los 374 camiones
 equipo, y 340 menos 192 da 148 propios, todos equipados. Los 148 propios y los 34 de terceros sin
 equipo llevan el equipo de audIT, 182 en total. Los 192 de terceros que ya tienen equipo lo conservan,
 porque la restricción 3 impide intervenirlo sin acuerdo de su dueño (Caso, capítulo 10, p. 23), y sus
-datos llegan por las plataformas de sus proveedores. La Figura 4.13 muestra los tres planos y
-los enlaces que los unen.
+datos llegan por las plataformas de sus proveedores. La Figura 4.13 reúne la
+arquitectura física en una sola vista, con cada equipo, sus conexiones y su alimentación.
+
+\figuraHorizontalAqui{figuras/04-arquitectura/fisica-completa.pdf}{Vista completa de la arquitectura física, con cada equipo, sus conexiones y su alimentación}{4-fisicacompletafig}
+
+La vista completa sirve para ubicar cada equipo en el conjunto, y las figuras que siguen la explican por
+partes. La Figura 4.14 empieza por los tres planos y los enlaces que los unen.
 
 \figuraHorizontalAqui{figuras/04-arquitectura/fisica-general.pdf}{Vista general de la arquitectura física: nube primaria y secundaria, San Bernardo, terminales regionales y flota, con los enlaces y su capacidad}{4-fisicafig}
 
@@ -934,7 +939,8 @@ lado están los cuatro terminales regionales, cada uno con un enlace fijo de al 
 router 5G de respaldo. Abajo está la flota: los 182 equipos audIT transmiten por la red celular y,
 donde no hay señal, por la red satelital Iridium, mientras que los 192 equipos de terceros entregan su
 posición a través de las plataformas de sus proveedores. Las secciones que siguen desarrollan cada
-parte con su propio diagrama, como pide el Comunicado 10, sección 4.4.
+parte con su propio diagrama, como pide el Comunicado 10, sección 4.4: el equipo a bordo, la región
+primaria, la sala de San Bernardo, el gabinete de los terminales y la región secundaria.
 
 ### 4.2.1 Especificaciones Implementos a proveer (Hardware y Software)
 
@@ -1001,7 +1007,7 @@ CAN con J1939, RS232 y RS485, red celular LTE Cat 4 o Cat M1, GNSS, Wi-Fi, Bluet
 seguro Microchip TA100 para arranque seguro y almacenamiento de claves. Funciona de 9 a 32 V, de
 −40 a +70 °C y con protección IP67 (iWave Global, 2026), lo que responde a la vibración, el polvo
 y la temperatura de cabina que piden FEP02, RT-08.11, p. 19 y FEP02, RT-08.12, p. 19. Sobre él corre audIT EdgeHub, el software de
-borde de audIT que presenta el Subdocumento 1 (sección 1.1.3). La Figura 4.14 muestra el equipo con sus periféricos.
+borde de audIT que presenta el Subdocumento 1 (sección 1.1.3). La Figura 4.15 muestra el equipo con sus periféricos.
 
 \figuraAqui{195mm}{figuras/04-arquitectura/equipo-a-bordo.pdf}{Equipo a bordo: iWave G26I, periféricos, interfaces y particiones de la memoria}{4-bordofig}
 
@@ -1163,7 +1169,7 @@ una, las subredes de borde, integración, datos y gestión son /24, y la de apli
 los nodos de AKS. Brazil South repite el esquema con 10.20.0.0/22 para su red central y 10.21.0.0/20
 para la recuperación. San Bernardo usa 172.16.0.0/22, con redes virtuales locales separadas para
 servidores, gestión, videovigilancia y acceso, y los terminales usan 172.16.4.0/22, una /24 cada uno.
-Así cualquier sitio enruta a cualquier red de Azure sin traducción de direcciones. La Figura 4.15 muestra la región primaria con sus redes, subredes y
+Así cualquier sitio enruta a cualquier red de Azure sin traducción de direcciones. La Figura 4.16 muestra la región primaria con sus redes, subredes y
 servicios.
 
 \figuraHorizontalAqui{figuras/04-arquitectura/region-primaria.pdf}{Región primaria Azure Chile Central: red central, red de producción, subredes, servicios con su nivel y conexiones con San Bernardo y los terminales}{4-azurefig}
@@ -1185,7 +1191,7 @@ automática, como fija el Subdocumento 6.
 ### 4.2.6 Ambientes, alta disponibilidad y respaldos
 
 La solución tiene cinco ambientes y cada uno vive en su propia suscripción, como muestra la
-Figura 4.16.
+Figura 4.17.
 
 \figuraAqui{180mm}{figuras/04-arquitectura/ambientes.pdf}{Ambientes de la solución, cada uno en su suscripción, creados desde el mismo código}{4-ambientesfig}
 
@@ -1194,7 +1200,7 @@ repite la arquitectura de producción a escala reducida, y ahí se ejecutan las 
 FEP02, RT-09.06, p. 21 fija en 1,5 veces el peak declarado. Producción corre en las tres zonas de Chile
 Central. El ambiente de recuperación está en Brazil South, en espera, y se describe en la
 sección 4.3.2. Los cinco se levantan desde el mismo código de infraestructura, de modo que el de
-recuperación es idéntico a producción por construcción. La Figura 4.17 sigue una versión
+recuperación es idéntico a producción por construcción. La Figura 4.18 sigue una versión
 desde el repositorio hasta producción.
 
 \figuraHorizontalAqui{figuras/04-arquitectura/ambientes-promocion.pdf}{Promoción de una versión desde el repositorio hasta producción}{4-promocionfig}
@@ -1297,7 +1303,7 @@ Tabla 4.13 muestra lo que acumula un camión en 72 horas sin cobertura.
 Un camión junta cerca de 6.000 registros y 0,78 MB sin contar las fotos. Agrupados en mensajes de
 4 KB (4.096 bytes), que es la unidad con que IoT Hub cuenta su cuota (Microsoft, s. f.), son 192 mensajes
 por camión. La Tabla 4.14 aplica eso a 300 camiones que salen a la vez de una sombra, y la
-Figura 4.18 sigue el camino de esos mensajes. Son estimaciones de diseño que se comprueban
+Figura 4.19 sigue el camino de esos mensajes. Son estimaciones de diseño que se comprueban
 en la prueba CP-PERF-02 de la certificación de la Etapa 1.
 
 **Tabla 4.14.** Estimación de la reconexión simultánea de 300 camiones tras 72 horas
@@ -1566,7 +1572,7 @@ de Azure, lo que suma 8 Mbit/s al enlace de San Bernardo, dentro de su capacidad
 **Plano de la sala.**  FEP02, RT-06.03, p. 14 pide el plano de distribución con las zonas de
 generadores, baterías, climatización, servidores, comunicaciones, trabajo y respaldo. El numeral 6.1 lo
 exige a la sala principal, y esta oferta lo entrega igual porque la revisión del Informe 1 lo pidió. La
-Figura 4.19 lo muestra sobre una planta supuesta de 6,5 por 4 metros, que suma los 26 m²
+Figura 4.20 lo muestra sobre una planta supuesta de 6,5 por 4 metros, que suma los 26 m²
 del Caso.
 
 \figuraAqui{178mm}{figuras/04-arquitectura/sala-san-bernardo.pdf}{Plano de la sala de San Bernardo con sus zonas, a proporción de 26 m²}{4-planofig}
@@ -1584,7 +1590,7 @@ FEP02, RT-06.32, p. 17. Las medidas de detalle se confirman en el levantamiento 
 Caso solo entrega la superficie.
 
 **Gabinetes de los terminales regionales.**  Cada terminal regional lleva el gabinete de la
-Figura 4.20.
+Figura 4.21.
 
 \figuraAqui{215mm}{figuras/04-arquitectura/gabinete-terminal.pdf}{Gabinete de un terminal regional, con sus enlaces, el punto de acceso de patio y el lector de portería}{4-terminalfig}
 
@@ -1596,7 +1602,9 @@ SIM y conmutación automática, opera de −40 a +75 °C y consume menos de 18 W
 (Teltonika Networks, 2026). Fuera del gabinete, el FortiAP 234G, IP67 y de −50 a +70 °C, cubre el
 patio con Wi-Fi para actualizar los camiones (Fortinet, 2026), y el Minew G1 lee en la portería
 las balizas de los semirremolques (Minew, 2023). El gabinete suma 152 W, y la UPS APC SRT1000XLI,
-con 293 VAh (Schneider Electric, 2024), lo sostiene 83 minutos al final de la vida de su batería. Sin enlace,
+con 293 VAh (Schneider Electric, 2024), lo sostiene 83 minutos al final de la vida de su batería. La UPS
+alimenta una de las dos fuentes de cada bus de 24 y 48 V, y la otra sale de otro circuito del tablero,
+como fija la sección 4.2.7. Sin enlace,
 el terminal sigue registrando salidas y llegadas, consulta la copia local de vigencias y jornada para
 controlar en portería los viajes ya asignados, y actualiza los camiones con la imagen que guarda, durante las 24 horas que fija el
 FEP01, Artículo 16.4, p. 12.
@@ -1620,7 +1628,7 @@ con margen sobre el mínimo físico, para que la réplica asíncrona sostenga el
 >
 > Métrica: Latencia de ida y vuelta entre Chile Central y Brazil South bajo 60 ms. Se verifica en: Medición en la Etapa 1, antes del hito H5. Fuente: Mínimo físico de 26 ms calculado en esta sección.
 
-La Figura 4.21 muestra la región secundaria. Tiene las mismas redes, subredes y servicios
+La Figura 4.22 muestra la región secundaria. Tiene las mismas redes, subredes y servicios
 que la primaria, porque se levanta desde el mismo código, con el estado de cada servicio en espera y las
 réplicas que llegan desde Chile Central. Sus subredes repiten dentro de 10.21.0.0/20 las posiciones de
 Chile Central.
@@ -1651,7 +1659,7 @@ Event Hubs, cuya réplica frena la entrada cuando el retraso supera el máximo c
 72 horas, así que tras una conmutación reenvía el tramo que la réplica pudo no alcanzar, y la clave de
 idempotencia de siete días descarta los duplicados.
 
-La Figura 4.22 muestra la recuperación como un procedimiento, de izquierda a derecha. Empieza en la
+La Figura 4.23 muestra la recuperación como un procedimiento, de izquierda a derecha. Empieza en la
 operación normal, con las réplicas hacia Brazil South, y termina en la vuelta a Chile Central. Arriba
 van los tiempos que la fijan y abajo, aparte, el eje de continuidad.
 

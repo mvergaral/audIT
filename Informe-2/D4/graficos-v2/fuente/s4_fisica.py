@@ -714,15 +714,15 @@ def sala_san_bernardo():
 
 
 def gabinete_terminal():
-    f = Figura("gabinete-terminal", C, "V", alto=530)
-    f.grupo(14, 70, 200, 452, "Gabinete", "pr-gabinete", sub="Una /24 de 172.16.4.0/22")
+    f = Figura("gabinete-terminal", C, "V", alto=552)
+    f.grupo(14, 70, 200, 472, "Gabinete", "pr-gabinete", sub="Una /24 de 172.16.4.0/22")
     cx = 100
     # equipos, centrados, con su nombre debajo: (ilustración, ancho, alto, nombre, dato, y del centro)
-    equipos = [("hw-rutx50", 66, None, "RUTX50", "Router 5G, dos SIM", 128),
-               ("hw-tsw202", 78, None, "TSW202", "Switch PoE, riel DIN", 212),
-               ("hw-karbon", 66, None, "Karbon 430 A", "Activo", 290),
-               ("hw-karbon", 66, None, "Karbon 430 B", "En espera", 368),
-               ("hw-ups-torre", None, 54, "UPS SRT1000XLI", "83 min con 152 W", 448)]
+    equipos = [("hw-rutx50", 66, None, "RUTX50", "5G, dos SIM · 24 V", 128),
+               ("hw-tsw202", 78, None, "TSW202", "Switch PoE, riel DIN · 48 V", 212),
+               ("hw-karbon", 66, None, "Karbon 430 A", "Activo · 24 V", 284),
+               ("hw-karbon", 66, None, "Karbon 430 B", "En espera · 24 V", 354),
+               ("hw-ups-torre", None, 54, "UPS SRT1000XLI", "83 min con 152 W", 428)]
     caja = {}
     for ic, w, h, n, d, cy in equipos:
         x0, y0, x1, y1 = f.equipo(ic, cx, cy, w=w, h=h)
@@ -736,16 +736,15 @@ def gabinete_terminal():
     f.linea([(sw[0], ym(sw, 6)), (40, ym(sw, 6)), (40, ym(ka)), (ka[0], ym(ka))], flecha="ambas")
     f.linea([(40, ym(ka)), (40, ym(kb)), (kb[0], ym(kb))], flecha="fin")
     f.linea([(ka[0], ym(ka, 10)), (26, ym(ka, 10)), (26, ym(kb, 10)), (kb[0], ym(kb, 10))], disc=True, flecha="ambas")
-    # la UPS alimenta a todos, por el costado derecho
-    xe = 166
-    f.linea([(ups[2], ym(ups)), (130, ym(ups))], flecha=None, grosor=0.75)
-    f.icono("flu-enchufe", 137, ym(ups), 13)
-    f.linea([(144, ym(ups)), (xe, ym(ups)), (xe, ym(rt, 22))], flecha=None, grosor=0.75)
-    for b in (rt, sw, ka, kb):
-        yy = ym(b, 22) if b is rt else ym(b, 10)
-        f.linea([(xe, yy), (b[2], yy)], grosor=0.75)
-    f.rotulo(xe, ym(kb) + 36, "Energía")
-    f.ficha(cx, 508, "El terminal opera 24 h sin enlace")
+    # S4 §4.2.7 / T-11 (RT-08.04): dos buses, cada uno con dos fuentes DIN y un módulo de
+    # redundancia. La fuente A sale de la UPS y la B de otro circuito del tablero.
+    # Cada equipo indica su bus bajo el nombre: 24 V para router y Karbon, 48 V para el switch.
+    b24 = f.ficha(104, 494, "Bus 24 V · 2 fuentes DIN + módulo", w=150)
+    b48 = f.ficha(104, 512, "Bus 48 V · 2 fuentes DIN + módulo", w=150)
+    f.texto(104, 530, "A: UPS · B: otro circuito del tablero", 9, anc="middle")
+    f.linea([(ups[0], ym(ups)), (22, ym(ups)), (22, 512), (b48[0], 512)], grosor=0.75)
+    f.linea([(22, 494), (b24[0], 494)], grosor=0.75)
+    f.ficha(323, 452, "El terminal opera 24 h sin enlace")
     # enlaces a Azure: el fijo entra al RUTX50, que conmuta solo a 5G
     f.nodo("dev-azure", 372, 36, 26, "Azure Chile Central", "Red central, VPN IPsec")
     f.linea([(rt[2], ym(rt, 6)), (236, ym(rt, 6)), (236, 30), (359, 30)], flecha="ambas")
