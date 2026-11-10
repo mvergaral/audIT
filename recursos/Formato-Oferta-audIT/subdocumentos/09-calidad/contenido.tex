@@ -145,12 +145,59 @@ La alineación con S7 y la gestión de riesgos se comprueba con versiones identi
 
 \subsection{Actividades de calidad ubicadas en el calendario}\label{sec:9-calendario-pruebas}
 
-El calendario contractual establece las ventanas; la red vigente de S7/T-15 identifica las actividades A09 a A25 utilizadas aquí. Los códigos A identifican las actividades verificables del cronograma. La \tabref{9-ventanas-prueba} sintetiza dónde se produce la evidencia de cada transición.
+El calendario contractual establece las ventanas de implantación. La \figref{9-cronograma-calidad} cruza las campañas de calidad con la red de S7/T-15. Las barras representan meses en los que hay actividad planificada. Los hitos indican el mes contractual de entrega o certificación.
+
+\begin{figuraNativa}[!ht]{Campañas y puertas de calidad por mes contractual. Fuente: elaboración propia a partir de S7, T-15 y E-25}{9-cronograma-calidad}
+\begin{tikzpicture}[x=0.67cm,y=0.57cm,every node/.style={font=\sffamily\fontsize{9.5bp}{12bp}\selectfont,text=audit-tinta},banda/.style={fill=audit-fila,draw=audit-marino,rounded corners=1pt},hito/.style={fill=audit-marino}]
+  \foreach \x in {0,...,16} {
+    \draw[audit-filete] (\x,0.25) -- (\x,-6.45);
+  }
+  \node[anchor=south west,inner sep=0pt] at (-5.65,0.29) {Mes contractual};
+  \foreach \mes [count=\i from 0] in {6,...,21} {
+    \node[anchor=south,inner sep=1pt] at ({\i+0.5},0.29) {\mes};
+  }
+  \foreach \y/\carril in {
+    -1/{CI/QA: G1--G3},
+    -2/{Integración y piloto},
+    -3/{Staging/HIL: G4 y G6},
+    -4/{Aceptación: G5},
+    -5/{Marcha blanca},
+    -6/{Producción},
+    -7/{Hitos E-25}
+  } {
+    \node[anchor=west,inner sep=0pt] at (-5.65,\y) {\carril};
+  }
+  \foreach \inicio/\fin/\y/\actividad in {
+    0/5/-1/A09,8/12/-1/A20,
+    0/4/-2/A10 y A11,
+    4/7/-3/A12,11/13/-3/A22,
+    4/7/-4/A12,11/13/-4/A22,
+    7/10/-5/A15,13/15/-5/A24,
+    10/11/-6/A19,15/16/-6/A25
+  } {
+    \draw[banda] (\inicio,{\y-0.34}) rectangle (\fin,{\y+0.34});
+    \node[inner sep=0pt] at ({(\inicio+\fin)/2},\y) {\actividad};
+  }
+  \foreach \x/\etiqueta in {4.5/H4,6.5/H5,10.5/H7,11.5/H9,12.5/H10,15.5/H12} {
+    \fill[hito] (\x,-6.72) circle[radius=1.8pt];
+    \node[anchor=north,inner sep=1pt] at (\x,-6.85) {\etiqueta};
+  }
+  \draw[audit-marino,-latex] (15.5,-7.42) -- (15.5,-7.88) -- (16,-7.88);
+  \node[anchor=east,inner sep=0pt] at (15.15,-7.88) {Operación M21--M56: ejercicios G6 en junio y noviembre};
+\end{tikzpicture}
+\end{figuraNativa}
+\FloatBarrier
+
+Durante A09, A10, A11 y A20, G1 a G3 se aplican de forma recurrente según el componente y el cambio. Ingresan código, dependencias y contratos de integración versionados. Salen los informes de CI, seguridad e integración. H4 y H9 identifican las entregas de software a certificación.
+
+A12 y A22 reciben esas entregas con sus ambientes y datos habilitados. G4 verifica carga, resiliencia y seguridad en staging o HIL según el ensayo. G6 registra la restauración autorizada, RTO y RPO. G5 verifica con usuarios designados y conserva los resultados y las observaciones. Los informes respaldan H5 y H10. A15 y A24 reciben las entregas certificadas, con personal capacitado y plan de reversión activo. Sus registros de operación y las actas respaldan H7 y H12.
+
+En M21 comienza la operación de ambos alcances. G6 vuelve a aplicarse en los ejercicios de recuperación de junio y noviembre, con bitácora y reporte de continuidad. La \tabref{9-ventanas-prueba} identifica la evidencia de cada transición.
 
 \begin{tabla}[ancho=completo]{Ventanas de ensayo y actividad de cronograma}{9-ventanas-prueba}{L{29mm} L{28mm} L{43mm} X}
 Ventana & Actividad S7 & Ensayos & Salida verificable \\ \midrule
 Construcción E1 & A09/A10/A11 & Unitarias, integración y piloto HIL & Versión y regresión trazadas \\
-M10--M12, hito H5 & A12 & Pruebas integrales E1: carga, resiliencia, DR, seguridad y UAT & Informe y defectos de certificación \\
+M10--M12 & A12 & Pruebas integrales E1: carga, resiliencia, DR, seguridad y UAT & Informes y defectos. H5, certificación de Etapa 1 en M12 \\
 M13--M15 & A15 & Marcha blanca E1 & Cuatro semanas y seis condiciones \\
 M16, hito H7 & A19 & Producción E1 & Acta de su alcance \\
 Construcción E2 & A20 & Regresión E1 y ensayos del incremento & Evidencia sin degradación E1 \\

@@ -1,0 +1,168 @@
+% ============================================================================
+%  Formulario T-19. Cartera de innovaciones. Archivo propio
+%  AUDIT-Formulario-T-19.pdf (Comunicado 10, sección 1).
+%  Ficha 3 de la dupla 4 (D4-55). Fichas 1, 2, 4 y 5 trasladadas del
+%  Subdocumento 13 del Informe 1 (D4-52), con el marcador de la dupla que
+%  completa cada campo. Sin montos (Artículo 50.2): el formulario agrega la
+%  remisión al Sobre N.º 3 en inversión y costo operacional.
+% ============================================================================
+\begin{formulario}{T-19}
+% Numeración de tablas con cualquier versión de longtable (D4-119, sobre el ajuste de la dupla 3).
+% El estilo supone que longtable avanza el contador de tablas al abrir cada tabla, como la
+% versión de 2025. Hay versiones que no lo hacen, y entonces la primera tabla sale «4.0» y su
+% etiqueta toma el número de la sección. Al cerrar cada tabla numerada se mira cuánto avanzó el
+% contador: si no avanzó, desde la tabla siguiente se avanza aquí, y si avanzó dos veces, se deja
+% de hacerlo. La marca queda en el .aux, así que en la corrida siguiente se numera bien desde la
+% primera tabla, y una marca que ya no corresponde se borra sola. Donde longtable sí avanza el
+% contador no cambia nada. Una sola activación por documento.
+\ifdefined\AuditNumeracionTablas\else
+\global\let\AuditNumeracionTablas\empty
+\global\let\NumeracionTablasDthree\empty
+\ExplSyntaxOn
+\bool_new:N \g_audit_lt_avanzar_bool
+\bool_new:N \g_audit_lt_paso_bool
+\bool_new:N \g_audit_lt_pendiente_bool
+\bool_new:N \g_audit_lt_numerada_bool
+\bool_new:N \g_audit_lt_anotado_bool
+\int_new:N \g_audit_lt_antes_int
+\cs_if_exist:NT \AuditLongtableSinPaso { \bool_gset_true:N \g_audit_lt_avanzar_bool }
+\cs_gset_protected:Npn \AuditEvaluarTabla
+  {
+    \bool_if:NT \g_audit_lt_pendiente_bool
+      {
+        \bool_gset_false:N \g_audit_lt_pendiente_bool
+        \bool_if:NTF \g_audit_lt_numerada_bool
+          {
+            \int_set:Nn \l_tmpa_int { \value { table } - \g_audit_lt_antes_int }
+            \bool_if:NTF \g_audit_lt_paso_bool
+              { \int_compare:nNnT { \l_tmpa_int } > { 1 } { \bool_gset_false:N \g_audit_lt_avanzar_bool } }
+              { \int_compare:nNnT { \l_tmpa_int } < { 1 } { \bool_gset_true:N \g_audit_lt_avanzar_bool } }
+          }
+          { \bool_if:NT \g_audit_lt_paso_bool { \addtocounter { table } { -1 } } }
+        \bool_lazy_and:nnT { \g_audit_lt_avanzar_bool } { ! \g_audit_lt_anotado_bool }
+          {
+            \bool_gset_true:N \g_audit_lt_anotado_bool
+            \exp_args:Nc \iow_now:Nn { @auxout } { \gdef \AuditLongtableSinPaso { } }
+          }
+      }
+  }
+\cs_gset_protected:Npn \AuditAntesDeTabla
+  {
+    \AuditEvaluarTabla
+    \int_gset:Nn \g_audit_lt_antes_int { \value { table } }
+    \bool_gset_false:N \g_audit_lt_numerada_bool
+    \bool_gset_true:N \g_audit_lt_pendiente_bool
+    \bool_gset_eq:NN \g_audit_lt_paso_bool \g_audit_lt_avanzar_bool
+    \bool_if:NT \g_audit_lt_paso_bool { \refstepcounter { table } }
+  }
+\cs_gset_protected:Npn \AuditMarcarNumerada
+  { \bool_if:NT \g_audit_lt_pendiente_bool { \bool_gset_true:N \g_audit_lt_numerada_bool } }
+\ExplSyntaxOff
+\AddToHook{env/tabla/before}[audit-numeracion]{\AuditAntesDeTabla}
+\AddToHook{env/tabla/after}[audit-numeracion]{\AuditEvaluarTabla}
+\AddToHook{cmd/addcontentsline/before}[audit-numeracion]{\AuditMarcarNumerada}
+\fi
+% Cada ficha es una tabla numerada que no pasa por el entorno tabla.
+\AddToHook{cmd/fichaInnovacion/before}[audit-fichas]{\AuditAntesDeTabla}
+% ------------------------------------------------------------- innovación 1
+\fichaInnovacion{
+  tipo = {1. Producto o servicio},
+  nombre = {Expediente verificable del transportista},
+  problema = {148 transportistas con 226 camiones y 258 conductores (Caso, numeral 14.1, p. 29), muchos de los cuales trabajan también para otros clientes (numeral 4.3, p. 9), no pueden acreditar ante terceros la jornada de sus conductores ni la vigencia de sus documentos. La solución produce esa evidencia para los viajes de Curimón, pero queda dentro del sistema del mandante},
+  tecnologia = {Documento firmado por el mandante con firma electrónica avanzada, con datos sólo del propio transportista, y servicio público de verificación que responde si el documento es auténtico y vigente sin revelar su contenido. La jornada de cada conductor entra sólo con su consentimiento. Credencial verificable como formato alternativo},
+  madurez = {Escala de niveles de madurez tecnológica de 1 a 9. Firma electrónica avanzada con verificación en línea en nivel 9, formato comprometido. Credencial verificable entre los niveles 7 y 8, sólo si los destinatarios la aceptan},
+  fuentes = {International Organization for Standardization (2013). Congreso Nacional de Chile (2002), Ley N.º 19.799. World Wide Web Consortium (2025). Ley N.º 21.719 (2024)},
+  arquitectura = {Servicio de emisión en el contexto Personas y cumplimiento, que consulta a Flota y activos. Servicio público de verificación detrás de la puerta de enlace. Firma desde la bóveda de claves. Emisión y consentimientos en el portal del transportista. Subdocumento 13, sección 13.1},
+  edt = {EDT 12.1, sobre los paquetes 5.1 (Personas y cumplimiento) y 5.7 (Portal del transportista)},
+  mes = {Entrevistas a destinatarios y elección del formato en el mes 4. Construcción entre los meses 8 y 10. Disponible para la cohorte inicial en la marcha blanca de la Etapa 1},
+  inversion = {Desarrollo de los servicios de emisión y de verificación sobre datos que la Etapa 1 ya produce},
+  costooperacional = {Certificado de firma del emisor y operación del servicio de verificación},
+  beneficio = {Incentivo de adhesión que no requiere pagar al transportista. Cada adherido amplía la jornada acreditada y la evidencia de espera que sostiene los cobros. Sin ingresos atribuidos en el flujo de caja},
+  indicador = {Transportistas adheridos que emitieron al menos un expediente, de no existente a 50 \% de los adheridos. Verificaciones respondidas en no más de 5 segundos, 99 \%},
+  medicion = {Mes 21 para el primer indicador. Mensual desde el mes 16 para el segundo},
+  riesgo = {Que el transportista no perciba utilidad, probabilidad media e impacto medio. Que los destinatarios no acepten el documento como prueba, probabilidad media e impacto alto. Que un conductor no consienta incluir su jornada},
+  mitigacion = {Primera emisión asistida en el terminal durante el enrolamiento. Entrevistas a destinatarios reales en el mes 4, antes de construir. Expediente con la jornada de los conductores que consintieron},
+  contingencia = {Emisión automática mensual a los transportistas que lo pidan, sin acción de su parte}
+}
+% ------------------------------------------------------------- innovación 2
+\clearpage
+\fichaInnovacion{
+  tipo = {2. Proceso},
+  nombre = {Programación dinámica de intervenciones por oportunidad de patio},
+  problema = {148 unidades propias y 34 de terceros sin equipo requieren montaje durante el paso normal por terminal. La disponibilidad simultánea de unidad, autorización, kit, técnico y ventana debe coordinarse. La línea base se levanta en M6; no se atribuye un ahorro ya medido.},
+  tecnologia = {Planificador determinista en Flota y activos: combina ETA y calidad de posición, autorización, compatibilidad del kit, stock, turnos, versión y ventana confirmada. Device Twins conserva configuración y Device Update distribuye paquetes a equipos homologados; las actas conservan intentos y resultados.},
+  madurez = {TRL 2 propuesto, en escala NASA de nueve niveles: concepto definido, sin prueba de concepto ejecutada. Se valida factibilidad antes del piloto de M6 y se documenta el nivel alcanzado.},
+  fuentes = {\parencite{d3_nasa_trl,d3_device_twins,d3_device_update}},
+  arquitectura = {Flota y activos registra las intervenciones; Telemetría aporta actualidad y configuración; la plataforma DevSecOps construye y firma el artefacto. Manifiesto por unidad, familia, kit, versión y acta.},
+  edt = {12.2, con integración a 4.1 y 4.2; calendario del Subdocumento 7.},
+  mes = {Piloto de 10 camiones en M6; propios M6–M9, flota propia completa en M9; terceros adheridos desde M7; pausa M11–M15 y continuación M16–M18.},
+  inversion = {Planificador, tablero, integración, homologación del agente y kits diferenciales. No se cobra nuevamente el stock contractual de T-11.},
+  costooperacional = {Ejecución, almacenamiento de actas y mantenimiento del planificador, separados de la conectividad ya presupuestada.},
+  beneficio = {Reducción de preparación desperdiciada y visitas evitables. Se estima con cantidades y costos unitarios documentados, menos el costo incremental. Sin ahorro garantizado ni base inventada.},
+  indicador = {Reducir preparación inútil al menos 20 \% respecto de la línea base homologada. Validación al primer intento al menos 95 \% en cohorte de 20 intervenciones elegibles. Sustitución modular en hasta 30 min, dentro de la ventana normal. Metas propuestas.},
+  medicion = {Línea base y contraste con planificación manual en M6; comparación por familia y terminal en M7–M9. Registro de causas, reintentos y denominadores.},
+  riesgo = {ETA incorrecta, kit o agente incompatible, escaso beneficio frente a coordinación manual y falta de adhesión o paso de terceros. Probabilidad media; impacto alto salvo beneficio insuficiente, de impacto medio.},
+  mitigacion = {Calidad y actualidad de ETA, confirmación del jefe de terminal, matriz de familias, ensayo previo, paquete firmado, reversión validada y comparación trazable.},
+  contingencia = {Abortar de forma segura y reprogramar cuando la ventana se acorte; método manual homologado y versión previa sin borrar eventos. Integración lógica de terceros sin intervención física no autorizada.}
+}
+% ------------------------------------------------------------- innovación 3
+\fichaInnovacion{
+  tipo = {3. Tecnológica o de arquitectura},
+  nombre = {Semirremolque conectado},
+  problema = {210 semirremolques propios, 245 a tres años y 44 refrigerados (Caso, numerales 2.2 y 14.1, pp. 6 y 29). La verificación bloqueante comprueba la revisión técnica del semirremolque (numeral 4.4, p. 10), pero el sistema no sabe cuál va enganchado. El plan preventivo usa el odómetro del camión (capítulo 8, p. 19) y el criterio 26 pide kilometraje real (capítulo 18, p. 43)},
+  tecnologia = {Baliza Bluetooth de baja energía Teltonika EYE Sensor BTSMP1 con identificador, temperatura, humedad, acelerómetro y sensor de puerta, IP67, de $-20$ a $+60$ °C. Lectura por el iWave G26I a bordo y por un lector Minew G1 en cada portería. Acople inferido por señal estable y movimiento conjunto},
+  madurez = {Escala de niveles de madurez tecnológica de 1 a 9. Balizas y lectura en nivel 9. Inferencia del acople dentro de la verificación bloqueante de nivel 6 a nivel 7 en la marcha blanca},
+  fuentes = {International Organization for Standardization (2013). Teltonika Telematics (2026a, 2026b). Minew (2023). iWave Global (2026)},
+  arquitectura = {Capa de borde con el G26I y el lector de portería. IoT Hub y Event Hubs en la capa de integración. Contextos Flota y activos (verificación bloqueante y kilometraje) y Telemetría y geocercas (temperatura y puerta). Consume el flujo de IoT Hub y expone el identificador del semirremolque acoplado. Sección 13.3},
+  edt = {Paquete 12.3, con los paquetes 4.2 (instalación de balizas y lectores de portería) y 5.2 (Flota y activos)},
+  mes = {Instalación al paso por terminal en los meses 6 a 10 y 16 a 18, fuera de la temporada de diciembre a abril. Activación y primera medición en la marcha blanca, antes del mes 16},
+  inversion = {Balizas y lectores de portería que compra el mandante (Caso, capítulo 11, p. 24) según el Formulario T-11, más la integración en tres servicios de negocio},
+  costooperacional = {Reposición de balizas al término de su batería y tráfico celular menor dentro de los mensajes del G26I},
+  beneficio = {Ningún semirremolque sale con la revisión técnica vencida. Mantención de semirremolques por kilometraje medido. Respaldo ante el cliente de la condición de la carga refrigerada},
+  indicador = {Asignaciones con semirremolque propio verificado por medición, de no verificado al asignar a 95 \% o más. Semirremolques propios con kilometraje medido, 100 \% de los que tienen baliza. Viajes refrigerados con temperatura continua, 100 \%. Las dos últimas líneas base se miden en la Etapa 1},
+  medicion = {Marcha blanca antes del mes 16. Tercer mes de operación. Primera temporada de diciembre a abril},
+  riesgo = {Acople falso con la baliza de un semirremolque vecino, probabilidad media e impacto alto. Temperatura bajo $-20$ °C en el paso cordillerano. Suplantación del identificador. Batería de menor duración},
+  mitigacion = {Señal estable y movimiento conjunto en los primeros minutos de marcha. Montaje a la sombra y prueba en el invierno de 2027 (meses 6 y 7). Lectura de portería como segundo control. Vigilancia del nivel de batería},
+  contingencia = {La verificación vuelve a la declaración con la lectura de portería como control. Modelo de mayor rango térmico en los semirremolques que cruzan. Reposición desde la reserva del 10 \%. Modelado de amenazas STRIDE en el Subdocumento 4, sección 4.1.21 (RT-26.07)}
+}
+% ------------------------------------------------------------- innovación 4
+\fichaInnovacion{
+  tipo = {4. Modelo de negocio o de contratación},
+  nombre = {Esquema de adhesión y propiedad del dispositivo},
+  problema = {148 dueños de 226 camiones (Caso, numeral 14.1, p. 29) preguntan de quién es el equipo, quién lo paga y si delatará cuándo trabajan para otro cliente. La decisión 5 del numeral 16.1 está abierta (p. 34) y la restricción 2 obliga a conseguirlo por contrato, incentivo o diseño (capítulo 10, p. 23)},
+  tecnologia = {Ventana de transmisión aplicada en el firmware del equipo a bordo, auditable por el dueño desde su consola de permisos. Comodato con retiro sin costo. Reparto con el transportista de la espera recuperada que su evidencia permite cobrar},
+  madurez = {Escala de niveles de madurez tecnológica de 1 a 9. Control de transmisión por ventana en nivel 8. Registro de consentimiento en nivel 8. El componente contractual no se califica en esta escala},
+  fuentes = {International Organization for Standardization (2013). Ministerio de Hacienda (2024), Ley N.º 21.719},
+  arquitectura = {Equipo a bordo y búfer local con la ventana. Consentimiento en Personas y cumplimiento, adhesión en Flota y activos y reparto de la espera en Liquidación y costeo, regla RN-08 del Formulario T-12. Consola de permisos en el portal. Subdocumento 13, sección 13.4},
+  edt = {EDT 12.4, sobre los paquetes 9.1 (Anexo de adhesión), 9.2 (Campaña y enrolamiento), 4.1 (Firmware) y 5.7 (Portal del transportista)},
+  mes = {Reparto aprobado por el Comité Ejecutivo en el mes 2. Validación jurídica del anexo en los meses 2 y 3. Cohorte inicial entre los meses 6 y 9. Ventana y consola entre los meses 6 y 10. Medición desde la marcha blanca},
+  inversion = {Diseño y validación jurídica del anexo, campaña en los cinco terminales y consola de consentimiento. El equipamiento lo compra el mandante (Caso, capítulo 11, p. 24)},
+  costooperacional = {Aumentan conectividad, soporte y reposición de los equipos en comodato. Disminuye el costo de gestionar objeciones de cobro},
+  beneficio = {Recupero de la espera hoy objetada en un 71 \% (Caso, numeral 4.7, p. 11), que financia el incentivo. Se valoriza en la Oferta Económica y no se compromete como ingreso},
+  indicador = {Posiciones transmitidas fuera de la ventana de un viaje, cero. Transportistas adheridos con cobro respaldado que reciben su parte, 100 \%. Consentimientos revocados, menos de 10 \%},
+  medicion = {Auditoría mensual desde el mes 13. Cada liquidación desde el mes 16. Mensual desde el mes 13},
+  riesgo = {Adhesión bajo el 70 \% en la Etapa 1, probabilidad media e impacto alto. Desconfianza en la ventana. Rechazo de la evidencia de espera por los clientes. Anexo que no resista revisión jurídica, probabilidad baja e impacto alto},
+  mitigacion = {Conversación desde el mes 2 con el beneficio a la vista antes de pedir el equipo. Ventana auditable por el dueño. Validación jurídica antes de construir},
+  contingencia = {Tres medidas del Subdocumento 3 si la adhesión no llega al 40 \% en el mes 9. Financiar el incentivo con el ahorro de la liquidación automática}
+}
+% ------------------------------------------------------------- innovación 5
+\fichaInnovacion{
+  tipo = {5. Experiencia de usuario, sostenibilidad o impacto social},
+  nombre = {Anticipación circadiana de fatiga y recomendación no punitiva de descanso seguro},
+  problema = {El alcance base del Criterio 28 (Caso, capítulo 18, p. 43) exige geocercas y paradores seguros para no detenerse en ruta inhóspita. La brecha no resuelta es que la alerta reactiva no anticipa la caída de vigilancia circadiana (02:00 a 06:00 h) ni atiende la desconfianza de 258 conductores externos hacia sistemas percibidos como vigilancia patronal (numeral 2.3, p. 6)},
+  tecnologia = {Módulo algorítmico sobre audIT EdgeHub que cruza curva circadiana, jornada acumulada y topografía vial, sobre la base del catálogo de paradores del Criterio 28. Enclavamiento cinético de pantalla (Ley N.º 21.377), síntesis vocal neutra local en español y protocolo de no punitividad},
+  madurez = {Escala ISO 16290 de 1 a 9. Autoevaluación TRL 2 conceptual del modelo circadiano incremental sobre el catálogo base; sin evidencia aportada de prueba de concepto previa. Componentes comerciales no acreditan madurez del conjunto. Objetivos: TRL 6 tras ensayos en entorno representativo M10--M12 y TRL 7 tras piloto operacional M13--M15 con informe metodológico reproducible},
+  fuentes = {International Organization for Standardization (2013, 2017, 2019). National Academies of Sciences, Engineering, and Medicine (2016). Congreso Nacional de Chile (2021), Ley N.º 21.377. Ministerio del Trabajo (2003, 2006)},
+  arquitectura = {Capa de borde en audIT EdgeHub con motor circadiano y síntesis de voz. Servicio de consulta pasiva en Torre 24x7 sin registro punitivo. Gobernanza de paradores compartida con Criterio 28},
+  edt = {Paquete 12.5 (innovación incremental), coordinado con paquetes 4.1 (firmware) y 5.1 (Personas). La infraestructura base del catálogo se financia en el paquete base de la plataforma},
+  mes = {Talleres ergonómicos participativos M4; desarrollo algorítmico M4--M9. Ensayos del prototipo integrado M10--M12. Piloto y validación con conductores en marcha blanca M13--M15; producción E1 en M16},
+  inversion = {Desarrollo incremental del motor biomatemático y realización de talleres ergonómicos participativos. El levantamiento del catálogo base de paradores corresponde al Criterio 28 contractual},
+  costooperacional = {Ahorro medible en combustible por disminución de búsqueda errática de estacionamiento y menor siniestralidad nocturna, validado en marcha blanca},
+  beneficio = {Anticipación proactiva de paradas en ventana de alta vulnerabilidad circadiana, reduciendo detenciones en bermas inseguras sin generar fricción laboral con transportistas terceros},
+  indicador = {Efectividad incremental: 100 × episodios con recomendación circadiana oportuna y válida / episodios en ventana de fatiga; meta $\ge98\%$. Controles de adopción independientes: enclavamiento 100\%, NASA-TLX $<35$ y adherencia voluntaria $\ge85\%$},
+  medicion = {Medición mensual durante la marcha blanca M13--M15, antes del hito H7 en M16; nivel alcanzado respaldado por informe técnico de adopción y ergonomía},
+  riesgo = {Percepción de los 258 conductores subcontratados de vigilancia patronal encubierta o invasión de privacidad. Probabilidad Media-Alta e Impacto Alto (Severidad Crítica inicial según escala S8)},
+  mitigacion = {Tratamiento y gobernanza no punitiva: talleres participativos en terminales (M4); garantía de no transmisión de alertas como faltas laborales al mandante ni a los empleadores terceros; consulta pasiva y voluntaria. Evidencia: actas de talleres, auditoría de perfiles de base de datos y canal confidencial de feedback. Riesgo residual: Probabilidad Baja e Impacto Medio (Severidad Residual Baja/Aceptable)},
+  contingencia = {Si la adherencia a paradores seguros no alcanza el 70\% en M14 o la carga mental NASA-TLX supera 35 puntos, se conmuta de inmediato de síntesis vocal a tono acústico pasivo diferenciado por altavoz de cabina, convocando a la mesa técnica de conductores para ajustar los parámetros}
+}
+\end{formulario}

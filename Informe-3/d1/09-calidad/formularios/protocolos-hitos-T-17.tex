@@ -1,0 +1,255 @@
+% ============================================================================
+%  FICHAS DE PROTOCOLO DE ACEPTACIÓN POR HITO CONTRACTUAL (H1 A H12)
+%  Y PROTOCOLO DEL PRODUCTO FINAL
+%  audIT Soluciones Tecnológicas SpA — Licitación TFEP-01/2026
+%  Cumplimiento vinculante Art. 46 / Observación CAL-06 (Bases arts. 17 y 18)
+% ============================================================================
+
+\subsection*{Protocolos de aceptación formal por hito contractual (H1 a H12) y producto final}\label{sec:9-protocolos-hitos}
+\addcontentsline{toc}{subsection}{Protocolos de aceptación formal por hito (H1 a H12) y producto final}
+
+En cumplimiento de lo dispuesto en los Artículos 17 y 18 de las Bases Administrativas y conforme a la observación oficial CAL-06, a continuación se formalizan los trece protocolos individuales de aceptación vinculante: doce fichas para los hitos contractuales de pago H1 a H12 y una ficha consolidadora para el Producto Final. Cada ficha articula los entregables de la EDT (T-14), los límites de la red de precedencias de S7 (T-15), los criterios objetivos de aceptación, los casos de prueba trazados de este catálogo, la evidencia exigida y el modelo de suscripción de acta con la Contraparte Técnica de Transportes Curimón S.A.
+
+Para todos los hitos rigen las reglas procedimentales comunes: diez (10) días hábiles para pronunciamiento de la Contraparte Técnica y diez (10) días hábiles perentorios para subsanación (\art{18.2}{13}), sin admisión de aceptación tácita.
+
+% ----------------------------------------------------------------------------
+%  HITO H1
+% ----------------------------------------------------------------------------
+\subsubsection*{Protocolo H-01 — Aprobación del Plan de Dirección de Proyecto, Arquitectura Base y SGSI}\label{sec:9-proto-h1}
+\addcontentsline{toc}{subsubsection}{Protocolo H-01: Plan de Proyecto y Arquitectura Base (Mes 2)}
+\par\noindent\textbf{Identificador y Mes Contractual:} \texttt{HITO-H01} · Mes 2 de contrato (Actividad A02; límite día hábil 40; margen planificado de 2 días hábiles según T-15).\par
+\par\noindent\textbf{Entregables EDT Trazados:} Paquete 1.1 (Plan de Dirección del Proyecto), Paquete 1.2 (Línea base metodológica y herramientas), Paquete 2.1 (Levantamiento inicial y especificación de casos de uso de arquitectura), Anexo 1.A (Certificado oficial ISO/IEC 27001:2022 entregado por Andes Certificaciones Técnicas SpA).\par
+\par\noindent\textbf{Criterios Objetivos de Aceptación:}
+\begin{enumerate}
+  \item Matriz de trazabilidad inicial completa cubriendo el 100\% de los 42 requerimientos del sistema formalizados en el Formulario T-12.
+  \item Modelo arquitectónico lógico y físico aprobado sin observaciones bloqueantes de ciberseguridad por el CISO.
+  \item Plan de gestión de riesgos, matriz de comunicaciones y calendario detallado de sprints aprobados formalmente.
+  \item Copia legalizada de certificado ISO/IEC 27001 vigente debidamente protocolizada ante el mandante.
+\end{enumerate}
+\par\noindent\textbf{Pruebas y Verificación de Calidad:} Inspección formal de pares (IEEE 1028) sobre especificaciones y revisión de seguridad arquitectónica bajo NIST CSF 2.0.\par
+\par\noindent\textbf{Expediente de Conformidad:} Expediente en PDF versionado con firmas digitales avanzadas, matriz de trazabilidad y acta de sesión de inicio de proyecto (\textit{Kick-off}).\par
+\par\noindent\textbf{Roles Responsables:} Entrega: Jefe de Proyecto y Arquitecto de Solución (audIT). Aprobación y Conformidad: Contraparte Técnica y Administrador de Contrato (Transportes Curimón S.A.).\par
+\par\noindent\textbf{Efecto Económico Contractual:} Habilita la facturación del 10\% del precio total ofertado, conforme al Formulario E-25.\par
+
+% ----------------------------------------------------------------------------
+%  HITO H2
+% ----------------------------------------------------------------------------
+\subsubsection*{Protocolo H-02 — Aprobación de Levantamiento Operacional, Topología y Diseño de Detalle}\label{sec:9-proto-h2}
+\addcontentsline{toc}{subsubsection}{Protocolo H-02: Diseño de Detalle e Interfaces (Mes 4)}
+\par\noindent\textbf{Identificador y Mes Contractual:} \texttt{HITO-H02} · Mes 4 de contrato (Actividad A05; límite día hábil 80; margen planificado de 4 días hábiles según T-15).\par
+\par\noindent\textbf{Entregables EDT Trazados:} Paquete 2.2 (Topología de red, enlaces y dimensionamiento cloud Azure), Paquete 2.3 (Diseño de capa anticorrupción e interfaces legadas TMS 2013/GPS), Paquete 12.1 (Diseño de talleres ergonómicos y gobernanza de Innovación 5).\par
+\par\noindent\textbf{Criterios Objetivos de Aceptación:}
+\begin{enumerate}
+  \item Contratos de interfaz OpenAPI 3.0 formalizados para integración con ERP contable y plataformas de GPS de terceros, sin presuponer intervención de código propietario ajeno.
+  \item Catálogo de paradores seguros y geocercas base de terminales congelado (Criterio 28 del Caso 10).
+  \item Factibilidad técnica del circuito ExpressRoute y topología de failover VPN validada con proveedor de enlaces.
+\end{enumerate}
+\par\noindent\textbf{Pruebas y Verificación de Calidad:} Inspección técnica de contratos de API, modelado de amenazas STRIDE y revisión estática de esquemas de datos.\par
+\par\noindent\textbf{Expediente de Conformidad:} Especificaciones de interfaz congeladas, diccionario de datos preliminar y acta de validación de diseño de detalle.\par
+\par\noindent\textbf{Roles Responsables:} Entrega: Arquitecto de Solución y Líder de Datos (audIT). Aprobación: Contraparte Técnica y Jefe de TI (Curimón).\par
+\par\noindent\textbf{Efecto Económico Contractual:} Habilita la facturación del 5\% del precio contractual (Formulario E-25).\par
+
+% ----------------------------------------------------------------------------
+%  HITO H3
+% ----------------------------------------------------------------------------
+\subsubsection*{Protocolo H-03 — Despliegue de Infraestructura Cloud y Ambientes Base Operativos}\label{sec:9-proto-h3}
+\addcontentsline{toc}{subsubsection}{Protocolo H-03: Infraestructura Cloud y CI/CD (Mes 6)}
+\par\noindent\textbf{Identificador y Mes Contractual:} \texttt{HITO-H03} · Mes 6 de contrato (Actividad A07; límite día hábil 120; margen planificado de 8 días hábiles según T-15).\par
+\par\noindent\textbf{Entregables EDT Trazados:} Paquete 3.1 (Aprovisionamiento cloud de ambientes DEV, QA, STAGING, PROD y DR), Paquete 3.2 (Pipeline de CI/CD automatizado con Quality Gates G1--G3), Paquete 3.3 (Plataforma de observabilidad, trazas distribuidas y telemetría).\par
+\par\noindent\textbf{Criterios Objetivos de Aceptación:}
+\begin{enumerate}
+  \item Cinco ambientes cloud desplegados mediante código inmutable (Terraform) en Azure Chile Central y réplica pasiva en Brasil South.
+  \item Quality Gates G1 a G3 configurados en pipeline de compilación, bloqueando código con cobertura de líneas $< 70\%$ o ramas $< 80\%$.
+  \item Paneles de observabilidad operativos con emisión de alertas en tiempo real hacia consola Torre 24x7.
+\end{enumerate}
+\par\noindent\textbf{Pruebas y Verificación de Calidad:} Casos de prueba automatizados \texttt{CP-SYS-17} (compilación y despliegue automatizado) y análisis estático SAST sin vulnerabilidades críticas abiertas.\par
+\par\noindent\textbf{Expediente de Conformidad:} Reporte de infraestructura como código (IaC), bitácora de ejecución de pipelines y comprobante de disponibilidad de ambientes.\par
+\par\noindent\textbf{Roles Responsables:} Entrega: Líder de Operación / SRE y Líder de Calidad (audIT). Aprobación: Administrador Cloud y Contraparte Técnica (Curimón).\par
+\par\noindent\textbf{Efecto Económico Contractual:} Habilita la facturación del 5\% del precio contractual (Formulario E-25).\par
+
+% ----------------------------------------------------------------------------
+%  HITO H4
+% ----------------------------------------------------------------------------
+\subsubsection*{Protocolo H-04 — Entrega de Software Etapa 1 a Certificación (Quality Gate G3-E1)}\label{sec:9-proto-h4}
+\addcontentsline{toc}{subsubsection}{Protocolo H-04: Software Etapa 1 a Certificación (Mes 10)}
+\par\noindent\textbf{Identificador y Mes Contractual:} \texttt{HITO-H04} · Mes 10 de contrato (Actividad A09; límite día hábil 200; margen planificado de 8 días hábiles según T-15).\par
+\par\noindent\textbf{Entregables EDT Trazados:} Paquetes 5.1 a 5.6 (Servicios y microservicios construidos de los seis contextos delimitados E1), Paquete 6.1 (Integraciones con TMS 2013 y GPS terceros), Paquete 4.1 (Firmware audIT EdgeHub en versión Release Candidate congelada).\par
+\par\noindent\textbf{Criterios Objetivos de Aceptación:}
+\begin{enumerate}
+  \item 100\% de casos unitarios de lógica de negocio (\texttt{CP-UNIT-01} a \texttt{CP-UNIT-25}) y de integración (\texttt{CP-INT-01} a \texttt{CP-INT-25}) ejecutados con veredicto Pass.
+  \item Cobertura automatizada comprobada $\ge 70\%$ en líneas de lógica de negocio y $\ge 80\%$ en ramas instrumentadas.
+  \item Cero defectos de severidad P1 (Bloqueante) o P2 (Grave) abiertos en el sistema de seguimiento de incidencias.
+\end{enumerate}
+\par\noindent\textbf{Pruebas y Verificación de Calidad:} Compilación reproducible bajo estándar SLSA Nivel 3 (\transv{RT-11.24}{24}) y ejecución completa de suite de regresión.\par
+\par\noindent\textbf{Expediente de Conformidad:} Manifiesto de release congelado (Git commit hash, SBOM, checksums SHA-256), informe consolidado de pruebas unitarias e integración.\par
+\par\noindent\textbf{Roles Responsables:} Entrega: Líder de Desarrollo y Líder de Integración (audIT). Recepción técnica para inicio de pruebas integrales A12: Líder de Calidad y Contraparte Técnica (Curimón).\par
+\par\noindent\textbf{Efecto Económico Contractual:} Habilita la facturación del 5\% del precio contractual (Formulario E-25).\par
+
+% ----------------------------------------------------------------------------
+%  HITO H5
+% ----------------------------------------------------------------------------
+\subsubsection*{Protocolo H-05 — Certificación Integral de Software y Hardware Etapa 1 (Compuerta G5-E1)}\label{sec:9-proto-h5}
+\addcontentsline{toc}{subsubsection}{Protocolo H-05: Certificación Integral Etapa 1 (Mes 12)}
+\par\noindent\textbf{Identificador y Mes Contractual:} \texttt{HITO-H05} · Mes 12 de contrato (Cierre de Actividad A12; finalización planificada día hábil 226; límite contractual día 240; margen de 14 días hábiles según T-15).\par
+\par\noindent\textbf{Entregables EDT Trazados:} Paquetes 10.2 y 10.3 (Informes técnicos de pruebas de carga, resiliencia, seguridad ofensiva y UAT), Paquete 7.1 (Conciliación de migración de datos TMS 2013), Paquete 4.2 (Homologación HIL de equipos embarcados).\par
+\par\noindent\textbf{Criterios Objetivos de Aceptación:}
+\begin{enumerate}
+  \item \textbf{Rendimiento Transaccional:} Asignación pre-despacho de 4 factores en $P_{95} \le 30\text{ s}$ (\texttt{CP-PERF-01}); emisión y validación de DET en $P_{95} \le 90\text{ s}$ (\texttt{CP-PERF-02}).
+  \item \textbf{Continuidad y Recuperación ante Desastres:} Recuperación integral ante caída del centro principal con RTO $\le 4\text{ h}$ y RPO $\le 15\text{ min}$ (\texttt{CP-PERF-03}).
+  \item \textbf{Persistencia y Enlace en Terreno:} Autonomía a bordo $\ge 72\text{ h}$ sin cobertura y sincronización completa al reconectar en $< 20\text{ min}$ (\texttt{CP-HW-03}); latencia SOS contractual $\le 15\text{ s}$ en red celular real (\texttt{CP-HW-06}) y $P_{99} \le 15{,}0\text{ s}$ bajo red degradada (\texttt{CP-PERF-06}); estanqueidad IP67 certificada (\texttt{CP-HW-08}).
+  \item \textbf{Aceptación de Usuario (UAT):} 100\% de los casos UAT de Etapa 1 (\texttt{CP-UAT-01} a \texttt{CP-UAT-08}) ejecutados conforme por despachadores y personal designado de Curimón.
+  \item Cero defectos P1/P2 pendientes; cualquier defecto residual menor clasificado como P3/P4 con plan de subsanación acordado para marcha blanca.
+\end{enumerate}
+\par\noindent\textbf{Pruebas y Verificación de Calidad:} Ejecución de batería integral en entorno STAGING y bancos HIL durante la ventana M10--M12 (actividad A12).\par
+\par\noindent\textbf{Expediente de Conformidad:} Paquete documental consolidado con informes de carga, informe de intrusión y seguridad emitido por tercero independiente, bitácora HIL y actas individuales de UAT firmadas.\par
+\par\noindent\textbf{Roles Responsables:} Preparación y certificación: Líder de Calidad y Pruebas (audIT). Pronunciamiento y Aprobación: Contraparte Técnica de Transportes Curimón S.A.\par
+\par\noindent\textbf{Efecto Económico Contractual:} Suscripción del Acta de Conformidad Técnica de Etapa 1; habilita la facturación del 10\% del precio contractual (Formulario E-25).\par
+
+% ----------------------------------------------------------------------------
+%  HITO H6
+% ----------------------------------------------------------------------------
+\subsubsection*{Protocolo H-06 — Habilitación de Terreno y Montaje Flota Propia (182 Equipos)}\label{sec:9-proto-h6}
+\addcontentsline{toc}{subsubsection}{Protocolo H-06: Montaje Flota Propia 182 Equipos (Mes 13)}
+\par\noindent\textbf{Identificador y Mes Contractual:} \texttt{HITO-H06} · Mes 13 de contrato (Inicio de actividad A15; día hábil 240, fecha fija contractual).\par
+\par\noindent\textbf{Entregables EDT Trazados:} Paquete 4.3 (182 tractocamiones propios y ramplas prioritarias equipados con hardware iWave G26I, cableado ignífugo, antenas y botonera SOS homologada).\par
+\par\noindent\textbf{Criterios Objetivos de Aceptación:}
+\begin{enumerate}
+  \item 182 tractocamiones propios con hardware embarcado instalado conforme a norma SAE J1455 y sellado IP67 verificado en terminales autorizados.
+  \item Verificación de telemetría en línea, captura de bus CAN/FMS sin fallas de bus-off y transmisión periódica hacia la plataforma cloud.
+  \item Verificación funcional individual del botón SOS de cabina con recepción confirmada en consola Torre 24x7.
+\end{enumerate}
+\par\noindent\textbf{Pruebas y Verificación de Calidad:} Inspección física en terminal según lista de chequeo de instalación de hardware y prueba de comunicación en vivo.\par
+\par\noindent\textbf{Expediente de Conformidad:} 182 fichas técnicas de instalación suscritas por el instalador técnico y el jefe de taller de Curimón, con reporte de transmisión telemática adjunto.\par
+\par\noindent\textbf{Roles Responsables:} Entrega: Líder de Operación y Encargado de Despliegue de Terreno (audIT). Aprobación: Jefe de Taller y Contraparte Técnica (Curimón).\par
+\par\noindent\textbf{Efecto Económico Contractual:} Habilita la facturación del 10\% del precio contractual (Formulario E-25) y da inicio a la Marcha Blanca A15.\par
+
+% ----------------------------------------------------------------------------
+%  HITO H7
+% ----------------------------------------------------------------------------
+\subsubsection*{Protocolo H-07 — Aceptación de Marcha Blanca y Entrada en Producción Etapa 1}\label{sec:9-proto-h7}
+\addcontentsline{toc}{subsubsection}{Protocolo H-07: Producción Etapa 1 (Mes 16)}
+\par\noindent\textbf{Identificador y Mes Contractual:} \texttt{HITO-H07} · Mes 16 de contrato (Cierre de actividad A19; límite día hábil 320; margen planificado de 10 días hábiles según T-15).\par
+\par\noindent\textbf{Entregables EDT Trazados:} Paquete 11.1 (Acta de Marcha Blanca A15 de cuatro semanas continuas), Paquete 9.1 (Convenios de adhesión y perfiles de conductores cohorte 1), Paquete 13.1 (Pase formal a Producción de Etapa 1).\par
+\par\noindent\textbf{Criterios Objetivos de Aceptación:} Cumplimiento estricto de las seis condiciones acumulativas del \art{17.3}{13}:
+\begin{enumerate}
+  \item Disponibilidad mensual del servicio E2E $\ge 99,9\%$ en régimen operativo continuo.
+  \item Ninguna interrupción de servicio no programada superior a sesenta (60) minutos continuos.
+  \item 100\% de las emisiones de Documentos Electrónicos de Transporte (DET) procesadas conformes.
+  \item Cero pérdidas de datos de jornada laboral o eventos de telemetría tras reconexión.
+  \item 100\% del personal clave de despacho, talleres y conductores de la cohorte debidamente capacitados y evaluados.
+  \item Mesa de ayuda y soporte técnico de segundo nivel operando 24x7 con cumplimiento de tiempos de respuesta.
+\end{enumerate}
+\par\noindent\textbf{Pruebas y Verificación de Calidad:} Monitoreo continuo de transacciones reales en producción y auditoría de registros de mesa de ayuda.\par
+\par\noindent\textbf{Expediente de Conformidad:} Bitácora de incidencias de marcha blanca, estadísticas de disponibilidad, actas de capacitación de usuarios y Acta de Recepción Provisoria de Etapa 1.\par
+\par\noindent\textbf{Roles Responsables:} Entrega: Director de Proyecto y Líder de Operación (audIT). Aprobación formal: Comisión Receptora y Contraparte Técnica (Curimón).\par
+\par\noindent\textbf{Efecto Económico Contractual:} Habilita la facturación del 10\% del precio contractual (Formulario E-25).\par
+
+% ----------------------------------------------------------------------------
+%  HITO H8
+% ----------------------------------------------------------------------------
+\subsubsection*{Protocolo H-08 — Aprobación de Levantamiento y Diseño de Detalle Etapa 2}\label{sec:9-proto-h8}
+\addcontentsline{toc}{subsubsection}{Protocolo H-08: Diseño Detallado Etapa 2 (Mes 14)}
+\par\noindent\textbf{Identificador y Mes Contractual:} \texttt{HITO-H08} · Mes 14 de contrato (Actividad A17; límite día hábil 280; margen planificado de 4 días hábiles según T-15).\par
+\par\noindent\textbf{Entregables EDT Trazados:} Paquete 8.1 (Especificación detallada de arquitectura y reglas de negocio de Etapa 2: módulos avanzados de optimización de rutas, auditoría de combustible y liquidación automatizada de transportistas terceros).\par
+\par\noindent\textbf{Criterios Objetivos de Aceptación:}
+\begin{enumerate}
+  \item Modelo algorítmico de asignación de flete y liquidación validado formalmente con el departamento de finanzas de Curimón.
+  \item Especificación técnica de modelos de concilación de consumo de combustible y peajes con desfase $< 24\text{ h}$.
+  \item Diseño de interfaz de usuario de conductores externos compatible con enclavamiento cinético.
+\end{enumerate}
+\par\noindent\textbf{Pruebas y Verificación de Calidad:} Revisión formal de arquitectura y consistencia con los modelos transaccionales de Etapa 1.\par
+\par\noindent\textbf{Expediente de Conformidad:} Documento de especificación funcional y técnica de Etapa 2 aprobado con firmas de la mesa técnica.\par
+\par\noindent\textbf{Roles Responsables:} Entrega: Arquitecto de Solución y Líder de Desarrollo E2 (audIT). Aprobación: Contraparte Técnica y Jefatura de Operaciones (Curimón).\par
+\par\noindent\textbf{Efecto Económico Contractual:} Habilita la facturación del 5\% del precio contractual (Formulario E-25).\par
+
+% ----------------------------------------------------------------------------
+%  HITO H9
+% ----------------------------------------------------------------------------
+\subsubsection*{Protocolo H-09 — Entrega de Software Etapa 2 a Certificación (Quality Gate G3-E2)}\label{sec:9-proto-h9}
+\addcontentsline{toc}{subsubsection}{Protocolo H-09: Software Etapa 2 a Certificación (Mes 17)}
+\par\noindent\textbf{Identificador y Mes Contractual:} \texttt{HITO-H09} · Mes 17 de contrato (Actividad A20; límite día hábil 340; margen planificado de 14 días hábiles según T-15).\par
+\par\noindent\textbf{Entregables EDT Trazados:} Paquete 8.2 (Servicios construidos de Etapa 2), Paquete 8.3 (Batería automatizada de pruebas de no degradación sobre Etapa 1).\par
+\par\noindent\textbf{Criterios Objetivos de Aceptación:}
+\begin{enumerate}
+  \item 100\% de pruebas unitarias e integración de los módulos E2 ejecutadas con veredicto Pass.
+  \item Cobertura de código en lógica de negocio E2 $\ge 70\%$ en líneas y $\ge 80\%$ en ramas.
+  \item Ejecución exitosa de regresión completa de Etapa 1 sin fallas ni degradación de rendimiento.
+  \item Cero defectos P1 o P2 abiertos.
+\end{enumerate}
+\par\noindent\textbf{Pruebas y Verificación de Calidad:} Pipeline CI/CD automatizado con Quality Gates y verificación de compilación reproducible.\par
+\par\noindent\textbf{Expediente de Conformidad:} Manifiesto de release congelado E2, informe de ejecución de regresión de Etapa 1 e informe estático de código.\par
+\par\noindent\textbf{Roles Responsables:} Entrega: Líder de Desarrollo E2 y Líder de Calidad (audIT). Recepción para pruebas integrales A22: Contraparte Técnica (Curimón).\par
+\par\noindent\textbf{Efecto Económico Contractual:} Habilita la facturación del 5\% del precio contractual (Formulario E-25).\par
+
+% ----------------------------------------------------------------------------
+%  HITO H10
+% ----------------------------------------------------------------------------
+\subsubsection*{Protocolo H-10 — Certificación Integral de Software y Hardware Etapa 2 (Compuerta G5-E2)}\label{sec:9-proto-h10}
+\addcontentsline{toc}{subsubsection}{Protocolo H-10: Certificación Integral Etapa 2 (Mes 18)}
+\par\noindent\textbf{Identificador y Mes Contractual:} \texttt{HITO-H10} · Mes 18 de contrato (Cierre de Actividad A22; día hábil 350; límite contractual día 360; margen de 10 días hábiles según T-15).\par
+\par\noindent\textbf{Entregables EDT Trazados:} Paquete 10.4 (Informes de pruebas integrales A22: carga combinada 570 sesiones, resiliencia y UAT E2), Paquete 12.5 (Ensayos de validación de Innovación 5 en entorno representativo TRL 6).\par
+\par\noindent\textbf{Criterios Objetivos de Aceptación:}
+\begin{enumerate}
+  \item Perfil de carga combinada con 570 sesiones concurrentes sostenidas sin degradación de latencia (\texttt{CP-PERF-01} a \texttt{05}).
+  \item 100\% de casos UAT de Etapa 2 (\texttt{CP-UAT-09} a \texttt{CP-UAT-15}) aprobados por usuarios de Curimón.
+  \item Validación del algoritmo circadiano con tasa de acierto oportuno $\ge 98\%$ y carga mental NASA-TLX $< 35$.
+  \item Cero defectos bloqueantes P1 o graves P2 abiertos.
+\end{enumerate}
+\par\noindent\textbf{Pruebas y Verificación de Calidad:} Ensayos de estrés y simulación en entorno representativo STAGING y banco HIL durante ventana M17--M18 (actividad A22).\par
+\par\noindent\textbf{Expediente de Conformidad:} Paquete documental de certificación E2, actas UAT suscritas e informe de auditoría de seguridad.\par
+\par\noindent\textbf{Roles Responsables:} Preparación: Líder de Calidad y Pruebas (audIT). Suscripción de Acta: Contraparte Técnica (Curimón).\par
+\par\noindent\textbf{Efecto Económico Contractual:} Habilita la facturación del 5\% del precio contractual (Formulario E-25).\par
+
+% ----------------------------------------------------------------------------
+%  HITO H11
+% ----------------------------------------------------------------------------
+\subsubsection*{Protocolo H-11 — Habilitación Total de Flota Terceros (374 Unidades Totales)}\label{sec:9-proto-h11}
+\addcontentsline{toc}{subsubsection}{Protocolo H-11: Despliegue Total Flota 374 Camiones (Mes 19)}
+\par\noindent\textbf{Identificador y Mes Contractual:} \texttt{HITO-H11} · Mes 19 de contrato (Inicio de actividad A24; día hábil 360, fecha fija contractual).\par
+\par\noindent\textbf{Entregables EDT Trazados:} Paquete 4.4 (Despliegue y homologación de hardware telemático en los 192 tractocamiones subcontratados restantes, completando la totalidad de los 374 tractocamiones de la flota).\par
+\par\noindent\textbf{Criterios Objetivos de Aceptación:}
+\begin{enumerate}
+  \item 374 tractocamiones totales transmitiendo posición, telemetría y eventos de jornada en tiempo real hacia la nube.
+  \item Integración verificada de las tres plataformas de GPS existentes conforme a condiciones de adhesión SUP-02.
+  \item 100\% de botones SOS físicos y gateways de cabina operativos y probados individualmente.
+\end{enumerate}
+\par\noindent\textbf{Pruebas y Verificación de Calidad:} Prueba de comunicación extremo a extremo por cada vehículo integrado antes de su liberación a ruta.\par
+\par\noindent\textbf{Expediente de Conformidad:} Registro consolidado de patentes, chasis y dispositivos telemáticos suscrito por el Encargado de Flota de Curimón.\par
+\par\noindent\textbf{Roles Responsables:} Entrega: Líder de Operación (audIT). Aprobación: Encargado de Flota y Contraparte Técnica (Curimón).\par
+\par\noindent\textbf{Efecto Económico Contractual:} Habilita la facturación del 10\% del precio contractual (Formulario E-25) e inicio de Marcha Blanca A24.\par
+
+% ----------------------------------------------------------------------------
+%  HITO H12
+% ----------------------------------------------------------------------------
+\subsubsection*{Protocolo H-12 — Aceptación Final de Marcha Blanca Etapa 2 y Producto Final}\label{sec:9-proto-h12}
+\addcontentsline{toc}{subsubsection}{Protocolo H-12: Aceptación Final del Producto (Mes 21)}
+\par\noindent\textbf{Identificador y Mes Contractual:} \texttt{HITO-H12} · Mes 21 de contrato (Cierre de Actividad A25; límite día hábil 420; protegida por holgura de A23 según T-15).\par
+\par\noindent\textbf{Entregables EDT Trazados:} Paquete 11.2 (Cierre de Marcha Blanca A24 de cuatro semanas continuas sobre el alcance total), Paquete 12.6 (Cinco innovaciones validadas en operación continua), Paquete 13.2 (Transición y pase a régimen de Operación 24/7 M21--M56).\par
+\par\noindent\textbf{Criterios Objetivos de Aceptación:} Cumplimiento estricto de las condiciones de salida definitiva del contrato (\art{18.4}{14}):
+\begin{enumerate}
+  \item 100\% de los 374 tractocamiones y 84 clientes operando bajo la plataforma unificada sin uso de planillas manuales legadas.
+  \item Módulo de liquidación y auditoría de combustible operando con conciliación $< 24\text{ h}$ y reducción comprobada de retornos vacíos.
+  \item Disponibilidad mensual $\ge 99,9\%$ sostenida durante toda la marcha blanca con cero pérdidas de datos.
+  \item Entrega completa del repositorio de código fuente, artefactos inmutables, documentación de arquitectura y licencias perpetuas formalizadas.
+  \item Cero defectos abiertos de severidad P1, P2 o P3.
+\end{enumerate}
+\par\noindent\textbf{Pruebas y Verificación de Calidad:} Auditoría forense de cierre de proyecto e inspección de entrega de activos de software y propiedad intelectual.\par
+\par\noindent\textbf{Expediente de Conformidad:} Acta de Recepción Definitiva del Producto Final conforme al Artículo 18.4 de las Bases Administrativas, con entrega formal de garantías operacionales.\par
+\par\noindent\textbf{Roles Responsables:} Suscripción oficial: Representante Legal de audIT SpA y Gerente General / Representante Legal de Transportes Curimón S.A.\par
+\par\noindent\textbf{Efecto Económico Contractual:} Habilita la facturación del 10\% del precio contractual (Formulario E-25), devolución de boleta de fiel cumplimiento de instalación y transición al régimen de cobros mensuales operacionales M21--M56.\par
+
+% ----------------------------------------------------------------------------
+%  FICHA CONSOLIDADORA DE PRODUCTO FINAL
+% ----------------------------------------------------------------------------
+\subsubsection*{Ficha Consolidadora — Expediente de Conformidad del Producto Final}\label{sec:9-proto-producto-final}
+\addcontentsline{toc}{subsubsection}{Ficha Consolidadora: Expediente del Producto Final (Art. 18.4)}
+\par\noindent\textbf{Definición y Alcance:} El Producto Final corresponde a la solución integral entregada al término de los primeros 21 meses de contrato, conformada por la infraestructura cloud híbrida en producción, los 374 sistemas de telemetría de borde embarcados, el software transaccional de los 13 elementos de la EDT y los servicios de soporte 24/7 en régimen continuo.\par
+\par\noindent\textbf{Composición del Expediente de Conformidad Definitiva:}
+\begin{enumerate}
+  \item \textbf{Actas de Hitos Precedentes:} Compilación de las doce actas de recepción provisoria suscritas (H1 a H12) sin discrepancias pendientes.
+  \item \textbf{Evidencia de Ensayos Consolidados:} Reporte final de ejecución de los 120 casos del catálogo T-17 con 100\% de veredicto Pass o excepción formal suscrita.
+  \item \textbf{Activo de Software y Repositorio:} Transferencia formal de código fuente versionado, scripts de despliegue IaC, contenedores dockerizados y documentación técnica de arquitectura (S4/S5).
+  \item \textbf{Inventario de Hardware y Red Territorial:} Registro maestro de los 374 equipos iWave G26I instalados y contratos operativos con los cuatro centros de servicio regional en Ruta 5.
+  \item \textbf{Capacitación y Adhesión:} 100\% de los conductores de flota propia y terceros con credenciales de usuario y firmas de consentimiento de datos registradas.
+\end{enumerate}
+\par\noindent\textbf{Protocolo de Cierre:} Firma de Acta Notarial de Recepción Definitiva de la Obra y Servicio Informático, suscrita conjuntamente por los representantes legales de audIT SpA y Transportes Curimón S.A., habilitando la vigencia plena de los Acuerdos de Nivel de Servicio (SLA) para los meses 21 a 56.\par

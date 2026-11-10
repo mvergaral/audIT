@@ -1,0 +1,90 @@
+\makeatletter
+\audit@iniciarpartes
+\makeatother
+{\renewcommand\textoEncabezado{\color{audit-marino}Índice}\indiceDetallado}
+\clearpage
+\makeatletter
+\audit@marcasubdoc{Subdocumento 1}
+\makeatother
+\markboth{Formulario T-6}{}
+\registrarFolio{formsd-1}{Formulario T-6: catálogo de experiencia}
+\phantomsection
+\addcontentsline{toc}{section}{Formulario T-6: catálogo de experiencia}
+\begin{formulario}{T-6}
+Las fichas consignan rangos de los contratos históricos y disponibilidades mensuales pactadas de 99,5 \%, 99,0 \% y 99,6 \%. Los resultados medidos se identifican por su período y respaldo.
+
+\begingroup\emergencystretch=3em
+  \begin{formularioTSeis}
+
+    \proyectoTSeis{
+      nombre       = Sistema Híbrido de Telemetría\, Trazabilidad y Control de Flota,
+      cliente      = Transportes del Sur Ltda.,
+      industria    = Transporte terrestre interurbano de carga pesada y distribución troncal,
+      periodo      = 2023--2024 (14 meses de implementación; en operación continuada),
+      monto        = Rango histórico de UF 3.000 a UF 5.000,
+      alcance      = Diseño\, provisión e implantación de telemetría a bordo en 120 camiones\, control de eventos de conducción\, geocercas en terminales y despacho centralizado.,
+      arquitectura = Híbrida: Edge computing en cabina + nube pública Microsoft Azure,
+      servicio     = 99{,}5\,\% mensual en disponibilidad de plataforma 24/7/365,
+      volumen      = 120 tractocamiones; $\approx 5.500$ eventos telemáticos diarios,
+      rol          = Contratista Principal (100\,\% ingeniería\, desarrollo y soporte),
+      contacto     = Marcelo Iturra Valenzuela\, Gerente de Operaciones (miturra@transportesdelsur.cl\, +56~9~7845~1290)
+    }
+
+    \proyectoTSeis{
+      nombre       = Plataforma IoT y Telemetría Resiliente con Arquitectura Offline-First,
+      cliente      = AgroFrutícola Los Andes S.A.,
+      industria    = Agroindustria\, faenas remotas y logística de exportación en frío,
+      periodo      = 2022--2023 (12 meses de implementación; en operación continuada),
+      monto        = Rango histórico de UF 2.000 a UF 3.500,
+      alcance      = Despliegue de concentradores IoT y telemetría en 6 faenas remotas\, integración de 1.500 sensores\, almacenamiento local y reconciliación sin pérdida tras reconexión.,
+      arquitectura = Híbrida: Concentradores locales on-premise en plantas + nube Microsoft Azure,
+      servicio     = 99{,}0\,\% mensual; tolerancia a operación desconectada de 72 horas,
+      volumen      = 6 faenas remotas; 1.500 sensores telemáticos activos,
+      rol          = Contratista Principal (100\,\% ingeniería\, integración y despliegue),
+      contacto     = Paula Concha Morales\, Jefa de Tecnologías de Información (pconcha@agrofruticolalosandes.cl\, +56~9~8451~9023)
+    }
+
+    \proyectoTSeis{
+      nombre       = Plataforma Analítica Centralizada y Gestión Logística en Alta Disponibilidad,
+      cliente      = Logística y Distribución Multimodal Bicentenario S.A.,
+      industria    = Logística portuaria\, distribución multimodal y transferencia de carga,
+      periodo      = 2024--2025 (15 meses de implementación; en operación continuada),
+      monto        = Rango histórico de UF 4.500 a UF 6.500,
+      alcance      = Diseño de plataforma híbrida Azure con nodos locales\, ingestión de eventos de despacho\, reportería analítica ejecutiva y auditoría transaccional.,
+      arquitectura = Híbrida: Nube Microsoft Azure y servidores locales en plantas de transferencia,
+      servicio     = 99{,}6\,\% mensual garantizado contractualmente con monitoreo continuo,
+      volumen      = $\approx 2{,}5$ TB mensuales de transacciones logísticas; $> 800$ usuarios concurrentes,
+      rol          = Contratista Principal (100\,\% arquitectura\, software e implantación),
+      contacto     = Rodrigo Baeza Santander\, Subgerente Corporativo de Sistemas (rbaeza@logisticabicentenario.cl\, +56~9~6521~3487)
+    }
+
+  \end{formularioTSeis}
+
+  \providecommand\tituloBloqueFormulario[1]{%
+    \par\vspace{14pt plus 3pt}\phantomsection\addcontentsline{toc}{section}{#1}\noindent{\sffamily\bfseries\fontsize{13bp}{16bp}\selectfont\color{audit-marino}#1}\par\vspace{6pt}\noindent}
+  \providecommand\subtituloBloqueFormulario[1]{%
+    \par\vspace{10pt plus 2pt}\phantomsection\addcontentsline{toc}{subsection}{#1}\noindent{\sffamily\bfseries\fontsize{11bp}{14bp}\selectfont\color{audit-marino}#1}\par\vspace{4pt}\noindent}
+
+  \tituloBloqueFormulario{Comparabilidad y acreditación de la experiencia}
+
+El cotejo de las cartas de referencia, certificados de recepción conforme e instrumentos contractuales de los tres proyectos homólogos corresponde al expediente administrativo del Sobre N.º 1, conforme al \art{34.1}{22}. Dichos instrumentos permiten acreditar de forma fehaciente mandante, período de ejecución, alcance técnico, volumen de flota y facultades del emisor.
+
+El Proyecto 1 aporta experiencia en telemetría y geocercas para 120 tractocamiones, aproximadamente el 32,1 \% de los 374 de Curimón, registrando 5.500 eventos diarios. Curimón reporta 96.000 viajes anuales; la justificación técnica de cómo audIT absorbe dicho incremento de escala operacional mediante su capacidad por frentes, arquitectura elástica y despliegue modular en terminales se detalla analíticamente en el Subdocumento 1 (\verSeccionFolio{sec:1-capacidad-escala}).
+
+El Proyecto 2 aporta experiencia en persistencia local y conciliación tras desconexiones de hasta 72 horas en 6 faenas con 1.500 sensores. El antecedente comparable es la sincronización y resiliencia con conectividad intermitente en ruta.
+
+El Proyecto 3 aporta experiencia en plataformas híbridas Azure, con aproximadamente 2,5 TB mensuales de transacciones logísticas, más de 800 usuarios concurrentes y un SLA mensual de 99,6 \%. La comparación se centra en el procesamiento distribuido de eventos y concurrencia. S4 dimensiona la infraestructura en la nube para Curimón.
+
+\par\medskip
+\noindent\begin{minipage}{\linewidth}
+  \begin{minipage}[c]{0.20\linewidth}
+    \centering\includegraphics[height=1.1cm]{portadas/activos/media-firma.png}
+  \end{minipage}\hfill
+  \begin{minipage}[c]{0.76\linewidth}
+    \raggedright\textbf{Alejandro Hermosilla Díaz}\\
+    Representante Legal · audIT Soluciones Tecnológicas SpA\\
+    RUT: 14.892.341-8
+  \end{minipage}
+\end{minipage}
+\endgroup
+\end{formulario}

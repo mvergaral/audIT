@@ -2052,30 +2052,25 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 \par\noindent\textbf{Camino satelital bajo carga:} Repetir CP-HW-11 sin cobertura terrestre, con el contenido y tamaño máximo homologados y las fases 380/570 como carga de fondo del servicio central. El límite de 90 s termina en representación completa y conforme accesible en cabina e incluye emisión, retorno, reensamblado y validación; no termina en la obtención del folio. Registrar cada recepción y las variantes incompletas o tardías, que mantienen bloqueo. El control del percentil no autoriza movimiento sin documento conforme ni acredita por sí solo factibilidad del enlace.\par
 
-\subsubsection*{CP-PERF-06 — Transmisión y Recepción Prioritaria de Alarma SOS en Torre 24x7 (\(P_{99} \le 15{,}0\text{ s}\))}\label{sec:9-cp-perf-06}
+
+\subsubsection*{CP-PERF-06 — Latencia P99 de la alerta SOS con red celular degradada}\label{sec:9-cp-perf-06}
 \addcontentsline{toc}{subsubsection}{CP-PERF-06}
-Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y el criterio siguiente.
+Este ensayo de ingeniería mide la distribución de latencia del trayecto desde la activación en cabina hasta la alarma en la Torre 24x7, bajo degradación reproducible.
 
-\par\noindent\textbf{ID:} \texttt{C\allowbreak{}P\allowbreak{}-\allowbreak{}P\allowbreak{}E\allowbreak{}R\allowbreak{}F\allowbreak{}-\allowbreak{}0\allowbreak{}6\allowbreak{}}\par
-\par\noindent\textbf{Nivel y Tipología:} Prueba No Funcional / Latencia de Alerta Crítica de Pánico en Ruta.\par
-\par\noindent\textbf{Requerimiento Trazado:} Ensayo adicional de ingeniería; no sustituye controles contractuales.\par
-\par\noindent\textbf{Precondiciones:} Canal de red móvil degradado con ancho de banda restringido (simulación 2G/GPRS en ruta desértica).\par
-\par\noindent\textbf{Pasos de Ejecución:} \par
+\par\noindent\textbf{ID:} \texttt{CP-\allowbreak{}PERF-\allowbreak{}06}\par
+\par\noindent\textbf{Nivel y Tipología:} Prueba no funcional de latencia bajo degradación de red.\par
+\par\noindent\textbf{Requerimiento Trazado:} Objetivo adicional de ingeniería \(P_{99} \le 15{,}0\text{ s}\). CP-HW-06 verifica el límite contractual por evento con cobertura real.\par
+\par\noindent\textbf{Precondiciones:} Banco HIL y emulador de radiofrecuencia con perfil 2G/GPRS versionado. Registrar ancho de banda, retardo, pérdida inducida, carga ordinaria, intervalos de inyección y versión de firmware. Acordar antes de ejecutar el tamaño de muestra \(N\), con \(N\ge100\) para que cada evento represente como máximo un punto porcentual en la distribución empírica. Sincronizar y verificar los relojes de los extremos.\par
+\par\noindent\textbf{Pasos de Ejecución:}\par
 \begin{enumerate}
-\item Pulsar botón físico de pánico / SOS en el gateway de cabina.
-\item El firmware interrumpe cualquier transmisión ordinaria y prioriza el paquete de emergencia (\texttt{E\allowbreak{}M\allowbreak{}E\allowbreak{}R\allowbreak{}G\allowbreak{}E\allowbreak{}N\allowbreak{}C\allowbreak{}Y\allowbreak{}\_\allowbreak{}P\allowbreak{}A\allowbreak{}C\allowbreak{}K\allowbreak{}E\allowbreak{}T\allowbreak{}\_\allowbreak{}P\allowbreak{}R\allowbreak{}I\allowbreak{}O\allowbreak{}R\allowbreak{}I\allowbreak{}T\allowbreak{}Y\allowbreak{}\_\allowbreak{}0\allowbreak{}}).
-\item El paquete viaja por protocolo UDP/MQTT con QoS 1 hacia Azure IoT Hub / Event Hubs.
-\item Medir tiempo transcurrido hasta el disparo de la alarma visual y sonora en la pantalla del operador de Torre 24x7.
+\item Aplicar el perfil y generar tráfico ordinario. Inyectar \(N\) pulsaciones identificadas en la entrada del botón SOS del banco HIL, según la secuencia acordada. Cada evento sigue el trayecto de producción desde el firmware hasta la Torre.
+\item Correlacionar el instante de activación de cada evento con el primer aviso visual y sonoro registrado en la consola. Registrar las pérdidas y las alertas duplicadas.
+\item Ordenar las latencias de menor a mayor, con las alertas no recibidas al final, como latencia infinita. Calcular \(P_{99}\) como el valor en la posición \(\lceil 0{,}99N\rceil\), con posiciones contadas desde uno.
 \end{enumerate}
-\par\noindent\textbf{Datos de Entrada Sintéticos:} Evento SOS físico disparado en gateway con coordenadas en km 740 Ruta 5 Norte.\par
-\par\noindent\textbf{Resultado Esperado:} Se debe verificar que la alerta llega en \(\le 15\text{ segundos}\). Los tiempos, porcentajes y magnitudes observados se registrarán después del ensayo; no se anticipan mediciones ni actas suscritas.\par
-\par\noindent\textbf{Pass/Fail y Severidad:} Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: \textbf{P1 (Bloqueante)}.\par
-\par\noindent\textbf{Entorno:} Banco HIL / Red Celular Simulada con Emulador de Canal RF.\par
-
-
-
-
-
+\par\noindent\textbf{Datos de Entrada Sintéticos:} Secuencia de eventos SOS en el km 740 de la Ruta 5 Norte con perfil de degradación y carga reproducibles.\par
+\par\noindent\textbf{Resultado Esperado:} \(P_{99}\le15{,}0\text{ s}\). El informe conserva el perfil, \(N\), latencias, alertas no recibidas y duplicadas. Las alertas no recibidas permanecen en el denominador.\par
+\par\noindent\textbf{Pass/Fail y Severidad:} Pass si el perfil y la muestra son conformes, la evidencia está completa y se cumple el límite de \(P_{99}\). Fail en caso contrario. Severidad: \textbf{P1 (Bloqueante)}.\par
+\par\noindent\textbf{Entorno:} Banco HIL, emulador de canal de radiofrecuencia y consola Torre.\par
 
 \subsubsection*{CP-PERF-07 — Latencia de Refresco de Posición en Portal Clientes con 500 Usuarios Concurrentes}\label{sec:9-cp-perf-07}
 \addcontentsline{toc}{subsubsection}{CP-PERF-07}
@@ -2586,34 +2581,30 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 \par\noindent \textbf{Entorno:} Banco HIL / Multímetro Keysight 34461A 6½ dígitos.\par
 
 
-\subsubsection*{CP-HW-06 — Transmisión y Recepción Prioritaria de Alerta SOS en Torre 24x7 en \(\le 15\text{ s}\)}\label{sec:9-cp-hw-06}
+
+\subsubsection*{CP-HW-06 — Activación física y entrega por evento SOS con cobertura real}\label{sec:9-cp-hw-06}
 \addcontentsline{toc}{subsubsection}{CP-HW-06}
-Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y el criterio siguiente.
+Este ensayo verifica la activación física del botón de cabina, su registro y la entrega prioritaria de cada alerta a la Torre 24x7.
 
-\par\noindent\textbf{ID:} \texttt{C\allowbreak{}P\allowbreak{}-\allowbreak{}H\allowbreak{}W\allowbreak{}-\allowbreak{}0\allowbreak{}6\allowbreak{}}\par
-\par\noindent\textbf{Nivel y Tipología:} Prueba de Hardware HIL / Respuesta Rápida de Pánico y Seguridad Vial.\par
-\par\noindent\textbf{Requerimiento Trazado:} RF-027, RNF-001.\par
-\par\noindent\textbf{Precondiciones:} Gateway en banco HIL conectado a la red celular real de pruebas mediante SIM card M2M multi-operador (Entel/Claro/Movistar).\par
-\par\noindent\textbf{Pasos de Ejecución:} \par
+\par\noindent\textbf{ID:} \texttt{CP-\allowbreak{}HW-\allowbreak{}06}\par
+\par\noindent\textbf{Nivel y Tipología:} Prueba de hardware HIL de activación y entrega SOS por evento.\par
+\par\noindent\textbf{Requerimiento Trazado:} SOS con cobertura, \caso{RT-09.01}{32}. Las variantes de la ficha verifican RF-027 y RNF-001.\par
+\par\noindent\textbf{Precondiciones:} Equipo de cabina en banco HIL con SIM M2M multioperador y cobertura celular real documentada. Preparar tráfico ordinario y verificar la sincronización de relojes.\par
+\par\noindent\textbf{Pasos de Ejecución:}\par
 \begin{enumerate}
-\item Pulsar el botón físico de pánico de cabina (contacto seco normalmente abierto).
-\item Cronometrar la transmisión y medir la llegada del evento a la consola web de la Torre 24x7.
-\item Repetir la prueba 10 veces en distintas horas del día.
+\item Activar el botón físico de pánico de cabina y registrar la hora de pulsación, el identificador y la prioridad del evento.
+\item Correlacionar el evento registrado en el equipo con el aviso de emergencia en la consola. Medir el tiempo entre la pulsación y el aviso.
+\item Repetir hasta completar diez pulsaciones a intervalos de una hora. Registrar cobertura, red utilizada, latencia, entrega y prioridad por pulsación.
 \end{enumerate}
-\par\noindent\textbf{Datos de Entrada Sintéticos:} 10 pulsaciones físicas de botón de pánico en intervalos de 1 hora.\par
-\par\noindent\textbf{Resultado Esperado:} Se debe verificar que el 100\% de las alertas se reciben en \(\le 15\text{ s}\). Los tiempos, porcentajes y magnitudes observados se registrarán después del ensayo; no se anticipan mediciones ni actas suscritas.\par
-\par\noindent\textbf{Pass/Fail y Severidad:} Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: \textbf{P1 (Bloqueante)}.\par
-\par\noindent\textbf{Entorno:} Banco HIL / Red Móvil Real / Consola Torre.\par
-
-
-
-
-
-
+\par\noindent\textbf{Datos de Entrada Sintéticos:} Diez pulsaciones físicas en intervalos de una hora, con tráfico ordinario concurrente.\par
+\par\noindent\textbf{Resultado Esperado:} Las diez pulsaciones producen un registro correlacionable y un aviso prioritario en la Torre 24x7 en un máximo de 15 segundos por evento con cobertura.\par
+\par\noindent\textbf{Pass/Fail y Severidad:} Pass si todas las pulsaciones cumplen el límite individual, quedan registradas y se entregan con prioridad, y las variantes aplicables son conformes. Fail ante cualquier incumplimiento. Severidad: \textbf{P1 (Bloqueante)}.\par
+\par\noindent\textbf{Entorno:} Banco HIL, red móvil real y consola Torre.\par
 
 \par\noindent\textbf{Variante trazada a RF-027 (S3/T-12):} Reproducir conducción acumulada 4 h 15 min y área segura alcanzable en 35 min: alertar antes de agotar cinco horas con diez minutos de holgura. Mover área a 50 min: no recomendarla como alcanzable legalmente. La alerta en movimiento es pasiva y no solicita escritura ni confirmación táctil. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.\par
 
 \par\noindent\textbf{Variante trazada a RNF-001 (S3/T-12):} Reproducir velocidad cero y velocidad positiva; intentar escritura, formulario y confirmación en ambos estados. En movimiento descartar toda captura manual y mostrar solo aviso pasivo. La recuperación de interfaz detenida no debe perder datos; parámetros de milisegundos son objetivos adicionales, no permiso para interactuar conduciendo. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.\par
+
 \subsubsection*{CP-HW-07 — Ensayos Térmicos y Vibratorios SAE J1455 en Cámara Climática (-20 °C a +70 °C)}\label{sec:9-cp-hw-07}
 \addcontentsline{toc}{subsubsection}{CP-HW-07}
 Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y el criterio siguiente.
@@ -2635,23 +2626,23 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 \par\noindent \textbf{Entorno:} Laboratorio de Ensayos / Cámara Climática y Mesa de Vibración.\par
 
 
-\subsubsection*{CP-HW-08 — Grado de Estanqueidad IP67 — Resistencia a Polvo Minero y Sumersión Temporal}\label{sec:9-cp-hw-08}
+\subsubsection*{CP-HW-08 — Estanqueidad IP67 del conjunto instalado en transporte terrestre}\label{sec:9-cp-hw-08}
 \addcontentsline{toc}{subsubsection}{CP-HW-08}
 Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y el criterio siguiente.
 
 \par\noindent \textbf{ID:} \texttt{CP-\allowbreak{}HW-\allowbreak{}08}\par
 \par\noindent \textbf{Nivel y Tipología:} Prueba de Hardware HIL / Ensayos de Estanqueidad y Protección Ambiental.\par
 \par\noindent \textbf{Requerimiento Trazado:} RNF-004.\par
-\par\noindent \textbf{Precondiciones:} Muestra de tres conjuntos con gabinete, conectores y entradas de cableado exterior en su configuración ofertada, montados y sellados según procedimiento homologado. Registrar torque, juntas, modelo y montaje. El IP67 comprometido corresponde al conjunto expuesto, no a una certificación presumida del computador desnudo.\par
+\par\noindent \textbf{Precondiciones:} Muestra de tres conjuntos con gabinete, conectores y entradas de cableado exterior en su configuración ofertada, montados y sellados según procedimiento homologado. Registrar torque, juntas, modelo y montaje. El alcance IP67 comprende el conjunto expuesto en su configuración de instalación.\par
 \par\noindent \textbf{Pasos de Ejecución:}\par
 \begin{enumerate}
-\item Ensayo de Polvo (IP6X): Someter el equipo en cámara de polvo de talco circulante con presión negativa de 2 kPa durante 8 horas.
-\item Ensayo de Agua (IPX7): Sumergir el equipo en estanque de agua a 1 metro de profundidad durante 30 minutos continuos.
+\item Ejecutar el ensayo de polvo IP6X sobre el conjunto montado. Registrar el polvo, la exposición y las condiciones de presión y tiempo del procedimiento de laboratorio.
+\item Ejecutar el ensayo de inmersión temporal IPX7 sobre el conjunto montado. Registrar posición, profundidad y duración según el procedimiento aplicable.
 \item Extraer el equipo, secar exteriormente, abrir el gabinete e inspeccionar presencia de humedad o partículas internas.
 \end{enumerate}
 
 \par\noindent \textbf{Datos de Entrada Sintéticos:} Procedimiento de laboratorio con edición y apartados IP6X/IPX7 de IEC 60529 identificados; registrar su aplicabilidad al conjunto y configuración ensayados.\par
-\par\noindent \textbf{Resultado Esperado:} Se debe verificar conformidad IP6X/IPX7 del conjunto según el procedimiento identificado y funcionamiento posterior de captura, persistencia y enlace. Inspección, mediciones y criterios de ingreso se registran por muestra; no se declara certificación obtenida. Los tiempos, porcentajes y magnitudes observados se registrarán después del ensayo; no se anticipan mediciones ni actas suscritas.\par
+\par\noindent \textbf{Resultado Esperado:} Se debe verificar conformidad IP6X/IPX7 del conjunto según el procedimiento identificado y funcionamiento posterior de captura, persistencia y enlace. Registrar inspección, mediciones, criterio de ingreso y comprobación funcional por muestra en el informe de laboratorio.\par
 \par\noindent \textbf{Pass/Fail y Severidad:} Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: \textbf{P1 (Bloqueante)}.\par
 \par\noindent \textbf{Entorno:} Laboratorio de Certificación de Estanqueidad IP67.\par
 
