@@ -38,6 +38,16 @@ En cumplimiento del rol asignado a la Dupla 1 en la planificación del Informe 3
    * **Beneficio directo Curimón (`innovacion-5-beneficio`):** **\$238.320.000 CLP** en 36 meses (\$79.440.000 CLP/año).
    * Claves cargadas formalmente en `partidas.csv` y Ficha 5 de Formulario T-19.
 
+5. **Presupuesto de Calidad y Capacitación (`AUD-10` / Tarea 1.6)**:
+   * **Inversión en Implementación:** **\$37.250.000 CLP**, desglosada en:
+     * Ensayos físicos y ambientales de laboratorio externo: \$5.000.000 CLP (homologación IP67, IEC 60529 en M5) + \$7.000.000 CLP (cámara climática y vibración SAE J1455 en M6–M7) + \$3.500.000 CLP (banco HIL e instrumental bus CAN en M4–M10).
+     * Auditorías externas independientes de seguridad ofensiva (Pentest): \$9.000.000 CLP (M12 para H5 y M18 para H10).
+     * Programa de capacitación presencial y plataforma LMS: \$4.000.000 CLP (LMS y diseño instruccional) + \$5.250.000 CLP (talleres en 5 terminales A13 en M11–M12) + \$3.500.000 CLP (capacitación Etapa 2 A23 en M18–M19).
+   * **Gasto de Operación (36 meses):** **\$16.500.000 CLP**, desglosada en:
+     * 3 auditorías anuales de penetración recurrentes en producción (M30, M42, M54): \$12.000.000 CLP.
+     * Plan continuo de reinducción y rotación de conductores/operadores: \$4.500.000 CLP.
+   * Total Contrato Calidad y Capacitación: **\$53.750.000 CLP**. Herramientas CI/CD (SonarQube, k6, ZAP) costeadas en D3 para evitar duplicación.
+
 ---
 
 ## 2. Instrucciones de Coordinación para la Dupla 2 (D2)
@@ -50,3 +60,4 @@ Para la integración de la planilla común y del calendario mensual de caja:
    * Modelar el servicio de la deuda (intereses al 0,9 % y amortización) y de la línea de crédito (al 3,0 %) en la sección de financiamiento (Fila B) para obtener el **Flujo Neto Financiado (Fila C)**.
    * Graficar la **Curva S** acumulando costos operativos más intereses devengados frente a la facturación de hitos y pagos mensuales, auditando que la línea de crédito nunca exceda los \$50.000.000 CLP.
 3. Incorporar los \$13.000.000 de inversión de Innovación 5 en el presupuesto de inversión (M4–M15) y los \$280.000 mensuales en costos de operación técnica (M21–M56).
+4. Cargar en la hoja `Costos` las partidas de Calidad y Capacitación de D1: \$37.250.000 en Inversión (ensayos IP67/SAE, pentest y talleres) y \$16.500.000 en Operación (pentest anual y reinducción).
