@@ -13,6 +13,13 @@ Montos pendientes de respaldo. Los meses indicados corresponden a la ficha T-19 
 | Servicio de verificación y soporte incremental | Desde la activación efectiva en marcha blanca, hasta M56 según continuidad | Diferencia entre el costo del servicio con y sin la innovación, al mismo volumen y bajo el mismo contrato. Desglosar capacidad, transferencias y soporte cuando corresponda. Conciliar con el dimensionamiento y presupuesto de T-11. |
 | Beneficio de adhesión | Medición de verificaciones desde M16 y de uso del expediente en M21 | Transportistas adheridos con al menos una emisión ÷ total adherido y verificaciones dentro de 5 segundos ÷ verificaciones observadas. T-19 mantiene el beneficio fuera de los ingresos de audIT. Una atribución monetaria requeriría evidencia del efecto marginal del expediente y conciliación con la innovación 4. |
 
+### Insumos provisionales informados por D3
+
+- **Construcción del expediente:** 480 horas provisionales. Falta distribuirlas por perfil, actividad y mes, conciliar el esfuerzo incremental con T-15 y aplicar los costos horarios respaldados. Las 560 horas informadas para programación corresponden a la innovación 2 y quedan fuera de AUD-21.
+- **Operación del expediente:** 12 horas al mes entre M21 y M56, ambos inclusive. Son 432 horas en 36 meses, repartidas en 216 de SRE, 144 de software y 72 de seguridad. Falta aplicar costos horarios, verificar cobertura con la operación base y confirmar si se requieren horas adicionales durante la marcha blanca previa a M21.
+- **Firma electrónica:** D3 reporta como referencias comerciales un certificado FEA de un año por CLP 19.990 más IVA y un eToken por CLP 34.990 más IVA. Pendientes la fuente comercial fechada y la cotización de una modalidad compatible con la emisión automática. Estas referencias quedan fuera del costo oficial.
+- **Consumo del servicio:** estimar expedientes emitidos y verificaciones mensuales, y derivar de esos volúmenes el consumo y costo marginal frente a la infraestructura base.
+
 ## Innovación 4 · Esquema de adhesión y propiedad del dispositivo
 
 | Partida | Mes o condición de registro | Cálculo y evidencia requerida |
@@ -43,7 +50,7 @@ Si cambia el pagador de soporte, retiro o instalación, reclasificar cada import
 
 - Registrar por línea mes, cantidad, unidad, costo unitario y total, moneda, IVA, fuente fechada, pagador, frecuencia y referencia EDT o contractual. Convertir a CLP con los parámetros acordados cuando corresponda.
 - Conciliar el total mensual y el acumulado por innovación. El detalle puede identificar partidas que ya están en el presupuesto base para demostrar su cobertura sin sumarlas de nuevo. Separar el reparto al transportista del presupuesto de audIT y evitar descontarlo dos veces.
-- Pendientes de D3: horas adicionales por perfil, precio del certificado y costo incremental del servicio de verificación. D2 debe conciliar las horas con T-15 y aplicar costos por perfil respaldados. Quedan por confirmar con D4 los importes y la asignación final de soporte, retiro e instalación, y con D1 y D2 la proporción pactada de reparto.
+- Pendientes de D3: distribución de las 480 horas del expediente, esfuerzo incremental por perfil para la innovación 4, cotización compatible con la emisión automática y consumo del servicio. D2 debe conciliar las horas con T-15 y aplicar costos por perfil respaldados. Quedan por confirmar con D4 los importes y la asignación final de soporte, retiro e instalación, y con D1 y D2 la proporción pactada de reparto.
 - Las claves `innovacion-1-inversion`, `innovacion-1-costo`, `innovacion-1-beneficio`, `innovacion-4-inversion`, `innovacion-4-costo` e `innovacion-4-beneficio` permanecen vacías hasta contar con respaldo. Confirmar la plantilla del mandante y sus celdas antes de ejecutar la comparación de planilla.
 
 Fuentes internas de alcance y cronograma preliminar: T-19 fichas 1 y 4, S13 §§13.1 y 13.4, T-12 RN-08 y respuesta 05. Fuentes por conciliar antes de cargar cifras: T-15, T-11, E-26, parámetros económicos y cotizaciones.
