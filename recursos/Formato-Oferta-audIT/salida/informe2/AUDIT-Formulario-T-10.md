@@ -3,6 +3,7 @@
 audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. Oferta Técnica, Sobre N.º 2. Informe Preparatorio 2. Archivo AUDIT-Formulario-T-10.pdf. Anexo del Subdocumento N.º 6, Metodologías. Las fuentes están en las Referencias de ese subdocumento.
 
 \begin{formulario}{T-10}
+\InsertMark{audit-subdoc}{Subdocumento 6}
 
 \ifdefined\AuditNumeracionTablas\else
 \global\let\AuditNumeracionTablas\empty
@@ -61,5 +62,29 @@ audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. O
 \exigencia{Criterios de ingeniería, Definición de Preparado y Definición de Terminado}{sección 6.2.4}
 \exigencia{Cadencias, promoción, reversión y métricas de entrega}{sección 6.2.5}
 \end{contenidoExigido}
+
+La Tabla 6.2 propone una secuencia verificable de incrementos. Cada fila es una línea base de planificación que se ratifica con la contraparte en el refinamiento; no afirma pruebas ya ejecutadas. Los requisitos y prioridades proceden de T-12, las duraciones de A09/A20 de T-15 y las pruebas de S9/T-17.
+
+**Tabla 6.1.** Incrementos iniciales de A09 y A20 por sprint
+
+| Sprint | Requisitos T-12 | Incremento y dependencia principal | Prueba, revisor y salida |
+|---|---|---|---|
+| A09-1 | RF-005, RF-022 | Maestros con propietario, permisos y roles; depende de contratos de identidad | Casos de acceso y vigencias; TI y Prevención; sin permisos cruzados |
+| A09-2 | RF-002, RF-003, RF-004 | Evidencia de jornada, origen y custodia; depende de maestros | Casos de fuente y atestación; Prevención; evidencia reconstruible |
+| A09-3 | RF-001, RF-028 | Veredicto de asignación por modalidad; depende de jornada y activos | Bloqueos legales y concurrencia; torre; veredicto y motivo registrados |
+| A09-4 | RF-007, RF-008, RF-009 | Captura a bordo y vista de flota; depende de equipos homologados | Desconexión, reinicio y origen; torre y TI; sin pérdida/duplicación |
+| A09-5 | RF-010, RF-011, RF-012 | Geocerca, espera y entrega; depende de puntos y contratos | Casos de visita y firma; Operaciones; eventos conciliados |
+| A09-6 | RF-006, RF-013, RF-014 | Carga peligrosa y documento emitido por contable; depende de su interfaz | Salida bloqueada y documento sin enlace; torre; emisor correcto |
+| A09-7 | RF-026, RF-027; G13 | Adhesión, alerta y versión de entrenamiento con cinco flujos | T-17 G13 en PREPROD; conductor y transportista; acta y digest |
+| A09-8 | RF-016, RF-017, RF-019, RF-020 | Costeo inicial, liquidación y portal; integración de E1 | Regresión y pruebas integrales; Finanzas y torre; candidato H4 |
+| A20-1 | RF-015, RF-018 | Retorno y análisis de rendimiento; datos E1 conciliados | Casos de ruta y consumo; Operaciones; cálculo explicable |
+| A20-2 | RF-021, RF-023 | Vista del cliente y emisiones con método declarado | Permisos y factor de cálculo; cliente y Finanzas; acceso limitado |
+| A20-3 | RF-024, RF-025 | Taller externo y mantenimiento por kilometraje | Trabajo sin enlace y alerta; Mantenimiento; intervención auditable |
+| A20-4 | RF-015 a RF-025 | Integración entre analítica, talleres y portales | Regresión por perfil; TI y usuarios; defectos bloqueantes cerrados |
+| A20-5 | RF-015 a RF-025 | Candidato E2, reversa y evidencias para H9 | T-17 y revisión de usuarios; acta de entrega para certificación |
+
+La Tabla 6.2 coloca G13 al cierre de A09-7 y H4/H9 al término de A09-8/A20-5; la aceptación contractual sigue las pruebas posteriores y actas de S7/S9. La capacidad neta se recalcula por sprint: días-persona disponibles tras ausencias y guardias $\times foco acordado \times$ 0,85. Para E2, el foco inicial de S7 es 0,70 y el resultado 0,595 de la disponibilidad previa. Las historias se desglosan antes de comprometerse; si no caben, el Jefe de Proyecto registra impacto y propone replanificación sin desplazar hitos por decisión unilateral.
+
+Cada incremento conserva ID T-12, contrato OpenAPI/AsyncAPI cuando corresponda, commit, revisión independiente, pruebas con resultado, SBOM, firma/digest y decisión de promoción. QA comprueba las puertas de S9. Los defectos de seguridad, integridad y cumplimiento bloquean la salida; la revisión funcional del titular o suplente de Curimón no reemplaza la aceptación de hito. En M21–M56, incidencias, parches y deuda técnica pasan al tablero Kanban con horas y dotación acordadas mensualmente con S11/T-15.
 \end{formulario}
 

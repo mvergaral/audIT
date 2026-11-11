@@ -189,7 +189,7 @@ Azure IoT Hub Device Twins registra configuración deseada y reportada; una dife
 
 ### 13.2.3 Madurez
 
-Se utiliza la escala TRL de nueve niveles explicada por NASA (Manning, 2023), aplicada aquí como referencia de madurez del desarrollo, sin confundir disponibilidad de un servicio cloud con validación del proceso completo. El proceso integrado está en **TRL 2 propuesto**: concepto y contratos definidos, sin prueba de concepto ejecutada. Se prevé contrastar factibilidad en laboratorio antes del piloto de M6, avanzar a integración validada y documentar el nivel alcanzado con resultados.
+Se utiliza la escala TRL de nueve niveles explicada por NASA (Manning, 2023), aplicada aquí como referencia de madurez del desarrollo, sin confundir disponibilidad de un servicio cloud con validación del proceso completo. El proceso integrado está en **TRL 2 propuesto**: concepto y contratos definidos, sin prueba de concepto ejecutada. Antes del piloto de M6 se exige una prueba de laboratorio de compatibilidad de agente, reversión y conservación de eventos. Si falla, no se despliega el proceso en flota y se conserva la programación manual. El nivel de madurez sólo se actualiza con resultados y acta de esa prueba y del piloto.
 
 ### 13.2.4 Incorporación, arquitectura y calendario
 
@@ -206,7 +206,7 @@ Calendario del Subdocumento 7: piloto de **10 camiones en M6**, montaje propio *
 
 La inversión incremental comprende el planificador, el tablero de oportunidades, pruebas de integración, homologación del agente y los kits diferenciales que efectivamente agregue el proceso. Se contabiliza en EDT 12.2 y en las partidas de implementación de la oferta económica; el stock contractual de sustitución de T-11 no se cobra nuevamente como inversión innovadora. El costo recurrente incluye ejecución, almacenamiento de actas y mantenimiento del planificador, separado de la conectividad ya presupuestada.
 
-El beneficio estimado se calcula como intervenciones evitadas por falta de kit $\times$ costo unitario de visita, más reducción medida de preparación $\times$ costo operativo aplicable, menos costo incremental del proceso. Sólo se incorpora un ahorro al escenario financiero cuando su base, cantidad, costo unitario y sensibilidad estén documentados; el escenario inicial no atribuye ahorro garantizado. La valoración monetaria y su reflejo en el flujo de caja van en la oferta económica, conforme al Artículo 29.5°.
+El beneficio bruto estimado se calcula como visitas adicionales evitadas $\times$ costo unitario de visita, más minutos de preparación evitados $\times$ costo operativo por minuto. La inversión y el costo incremental del proceso se registran en partidas separadas del flujo; no se vuelven a restar dentro de la partida de beneficio. Se excluyen del ahorro visitas que no habrían ocurrido, paradas normales y kits ya presupuestados en T-11. Sólo se incorpora un ahorro al escenario financiero cuando su base, cantidad, costo unitario y sensibilidad estén documentados; el escenario inicial no atribuye ahorro garantizado. La valoración monetaria y su reflejo en el flujo de caja van en la oferta económica, conforme al Artículo 29.5°.
 
 ### 13.2.6 Indicadores y medición
 
@@ -221,7 +221,9 @@ La Tabla 13.2 distingue metas propuestas de la obligación de no extender la par
 | Sustitución modular | Tiempo real del piloto; aún sin valor | ≤30 min dentro de la ventana normal, en familias homologadas | Cronometraje por unidad, desde entrega de kit hasta liberación; reportar excepciones |
 | Parada comercial adicional por instalación | Restricción contractual, no beneficio novedoso | 0; abortar y reprogramar cuando se reduzca la ventana | En cada intervención; comparar ingreso, parada normal y liberación |
 
-La Tabla 13.2 permite aceptar o ajustar el proceso con evidencia. Una instalación cuenta como terminada sólo después de las pruebas físicas y de datos; cambiar el estado reportado en nube no sustituye esas pruebas. Ninguna meta se declara ya alcanzada.
+La línea base de M6 se levanta durante el piloto con una ficha por oportunidad elegible: terminal, familia, fecha, ventana normal, autorización, kit, técnico, tiempo de preparación, cancelación y causa, visita adicional efectivamente realizada, costo unitario y resultado de prueba. Se registra el plan manual antes de mostrar la recomendación del algoritmo. El mismo conjunto de oportunidades se evalúa con ambos métodos; se informan por separado los casos no comparables y las unidades sin autorización. El indicador de preparación inútil es casos con preparación que no termina en intervención / oportunidades elegibles; el indicador de primer intento es instalaciones validadas sin reintento / instalaciones elegibles ejecutadas. El ahorro de tiempo usa minutos medidos, sin convertir cada preparación inútil en una visita pagada.
+
+Al cierre de M6, el Comité de Proyecto firma el tamaño y calidad de la muestra, la línea base y la decisión de continuar, limitar o sustituir esta innovación por otra de proceso acreditable. Si no hay observaciones comparables suficientes o falla la homologación de hardware, la reducción del 20 % permanece no verificable y no se valoriza como ahorro. La Tabla 13.2 permite aceptar o ajustar el proceso con evidencia. Una instalación cuenta como terminada sólo después de las pruebas físicas y de datos; cambiar el estado reportado en nube no sustituye esas pruebas. Ninguna meta se declara ya alcanzada.
 
 ### 13.2.7 Riesgos, mitigación y contingencia
 
@@ -236,7 +238,7 @@ La Tabla 13.3 reúne los riesgos del proceso, sus controles y la alternativa ope
 | Escaso beneficio frente a coordinación manual | Media / medio | Comparación trazable por familia y terminal, con denominadores | Mantener planificación manual y limitar el desarrollo incremental |
 | Tercero sin autorización o sin paso por terminal | Media / alto | Agenda sólo con autorización vigente y oportunidad confirmada | Integración lógica de capacidades disponibles; no intervenir equipo privado |
 
-Las valoraciones siguen la escala del Subdocumento 8 (sección 8.1). Los responsables de Flota y terminal registran el riesgo y su decisión en los comités de S6.
+Las valoraciones siguen la escala del Subdocumento 8 (sección 8.1). El riesgo residual se fija como objetivo condicionado, no como resultado ya demostrado: ETA incorrecta baja/media sólo después de comprobar actualidad y confirmación de ventana; incompatibilidad baja/alta sólo tras homologación y reversión ensayada por familia; beneficio insuficiente media/media hasta medir la comparación de M6; tercero sin autorización media/alta mientras no exista adhesión y paso confirmado. Un control fallido conserva la valoración inicial y activa la contingencia de la Tabla 13.3. Los responsables de Flota y terminal registran el riesgo y su decisión en los comités de S6.
 
 Fuentes de madurez y aprovisionamiento: (NASA, s. f.; Microsoft, s. f.; Microsoft, s. f.).
 
@@ -380,7 +382,7 @@ retiro sin costo. Y reparto con el transportista de la espera recuperada que su 
 cobrar.
 
 **Delimitación frente a las bases.**  El plan de adhesión es alcance base: el criterio 27 del Caso
-lo exige y el Subdocumento 3 lo desarrolla (sección 3.4.3). Tampoco es innovación quién
+lo exige y el Subdocumento 3 lo desarrolla (sección ?). Tampoco es innovación quién
 compra el equipo, porque el Capítulo 11 lo resuelve (Caso, capítulo 11, p. 24). Lo que el Caso deja abierto
 es la decisión 5 del Caso, numeral 16.1, p. 34, sobre el equipo en un camión ajeno, y la restricción 2, que
 obliga a conseguir por contrato, incentivo o diseño lo que dependa de terceros. Esta innovación es el
@@ -458,7 +460,7 @@ acompañamiento predictivo del descanso, que cruza la cinemática del camión co
 alerta circadiana y un catálogo georreferenciado y calificado de paradores de carga pesada.
 
 **Tecnología que la sustenta.**  Motor predictivo que corre sobre audIT EdgeHub, el software
-de borde de audIT que define el Subdocumento 1 (sección 1.1.3), instalado en el equipo a bordo de la sección 4.2.2 (Caso, RT-06.01, p. 32). Evalúa en tiempo real el tiempo de conducción acumulado, la
+de borde de audIT que define el Subdocumento 1 (sección ?), instalado en el equipo a bordo de la sección 4.2.2 (Caso, RT-06.01, p. 32). Evalúa en tiempo real el tiempo de conducción acumulado, la
 topografía del tramo siguiente y la ventana de mínima alerta circadiana (*Window of Circadian
 Low*, de 02:00 a 06:00 h). Catálogo georreferenciado local en SQLite, en modo de registro anticipado de escritura, sobre la
 memoria flash industrial de 8 GB del equipo, especificada para las condiciones reales de uso que pide

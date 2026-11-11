@@ -12,7 +12,7 @@ audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. O
 | Ficha T-19. Innovación tipo 2. Proceso. Programación dinámica de intervenciones por oportunidad de patio | [7](AUDIT-Formulario-T-19.pdf#page=7) |
 | Ficha T-19. Innovación tipo 3. Tecnológica o de arquitectura. Semirremolque conectado | [8](AUDIT-Formulario-T-19.pdf#page=8) |
 | Ficha T-19. Innovación tipo 4. Modelo de negocio o de contratación. Esquema de adhesión y propiedad del dispositivo | [10](AUDIT-Formulario-T-19.pdf#page=10) |
-| Ficha T-19. Innovación tipo 5. Experiencia de usuario, sostenibilidad o impacto social. Bienestar del conductor y descanso en parador seguro | [11](AUDIT-Formulario-T-19.pdf#page=11) |
+| Ficha T-19. Innovación tipo 5. Experiencia de usuario, sostenibilidad o impacto social. Bienestar del conductor y descanso en parador seguro | [12](AUDIT-Formulario-T-19.pdf#page=12) |
 
 
 ## Innovación 1. Producto o servicio. Expediente verificable del transportista
@@ -48,12 +48,12 @@ audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. O
 | Mes del cronograma | Piloto de 10 camiones en M6; propios M6–M9, flota propia completa en M9; terceros adheridos desde M7; pausa M11–M15 y continuación M16–M18. |
 | Inversión requerida | Planificador, tablero, integración, homologación del agente y kits diferenciales. No se cobra nuevamente el stock contractual de T-11. |
 | Efecto en el costo operacional | Ejecución, almacenamiento de actas y mantenimiento del planificador, separados de la conectividad ya presupuestada. |
-| Beneficio esperado | Reducción de preparación desperdiciada y visitas evitables. Se estima con cantidades y costos unitarios documentados, menos el costo incremental. Sin ahorro garantizado ni base inventada. |
+| Beneficio esperado | Minutos de preparación y visitas adicionales evitados, medidos por terminal y familia. Beneficio bruto: visitas evitadas por costo unitario más minutos evitados por costo por minuto. Inversión y operación incremental van en partidas separadas; sin ahorro garantizado ni base inventada. |
 | Indicador, línea base y meta | Reducir preparación inútil al menos 20 % respecto de la línea base homologada. Validación al primer intento al menos 95 % en cohorte de 20 intervenciones elegibles. Sustitución modular en hasta 30 min, dentro de la ventana normal. Metas propuestas. |
-| Momento de medición | Línea base y contraste con planificación manual en M6; comparación por familia y terminal en M7–M9. Registro de causas, reintentos y denominadores. |
-| Riesgo de adopción | ETA incorrecta, kit o agente incompatible, escaso beneficio frente a coordinación manual y falta de adhesión o paso de terceros. Probabilidad media; impacto alto salvo beneficio insuficiente, de impacto medio. |
+| Momento de medición | En M6 se registra por oportunidad elegible el plan manual antes de la recomendación, terminal, familia, ventana, autorización, kit, técnico, preparación, cancelación, visita adicional real y prueba. El comité valida línea base y muestra al cierre de M6; comparación por familia y terminal en M7–M9 con denominadores y exclusiones. Sin base comparable, el ahorro no se acredita. |
+| Riesgo de adopción | Inicial: ETA incorrecta media/alto; kit o agente incompatible media/alto; beneficio insuficiente media/medio; tercero sin autorización media/alto. Residual objetivo condicionado a pruebas: baja/medio, baja/alto, media/medio y media/alto, respectivamente. Si no se prueba el control, permanece el riesgo inicial. |
 | Mitigación | Calidad y actualidad de ETA, confirmación del jefe de terminal, matriz de familias, ensayo previo, paquete firmado, reversión validada y comparación trazable. |
-| Contingencia | Abortar de forma segura y reprogramar cuando la ventana se acorte; método manual homologado y versión previa sin borrar eventos. Integración lógica de terceros sin intervención física no autorizada. |
+| Contingencia | Abortar de forma segura y reprogramar cuando la ventana se acorte; método manual homologado y versión previa sin borrar eventos. Integración lógica de terceros sin intervención física no autorizada. Si la prueba de laboratorio o el piloto M6 fallan, no escalar y someter al comité sustitución por otra innovación de proceso acreditable. |
 
 ## Innovación 3. Tecnológica o de arquitectura. Semirremolque conectado
 

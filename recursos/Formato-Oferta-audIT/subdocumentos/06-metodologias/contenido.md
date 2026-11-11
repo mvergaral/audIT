@@ -46,9 +46,33 @@ La gestión eficaz de los grupos de interés resulta determinante debido a la di
 - Transportistas Terceros y Dueños de Camiones: Propietarios de los 226 camiones subcontratados, interesados en la liquidación expedita de servicios y visibilidad telemática homologada.
 - Organismos Fiscalizadores (Dirección del Trabajo, MTT, SEC): Entidades que auditan la legalidad del transporte, pesos por eje, transporte de sustancias peligrosas y registros de jornada.
 
+La lista anterior agrupa usuarios de operación; el plan de comunicaciones cubre, además, los trece grupos diferenciados en S2. La Tabla 6.1 indica emisor, destinatario, información, cadencia y canal. Una solicitud urgente sigue el procedimiento de incidente o de cambio y no espera el informe periódico.
+
+**Tabla 6.1.** Comunicaciones para los trece grupos de interés del diagnóstico
+
+| Destinatario | Información y frecuencia | Emisor y canal | Escalamiento |
+|---|---|---|---|
+| Fondo de inversión | Riesgo financiero y continuidad; trimestral | Gerencia de Curimón; informe de directorio | Gerencia General |
+| Dirección del Trabajo | Evidencia de jornada ante requerimiento formal | Encargado legal de Curimón; canal oficial | Gerencia y asesoría legal |
+| Aseguradora de carga | Siniestros y cadena de evidencia; por evento | Riesgos de Curimón; expediente formal | Gerencia y Comité Ejecutivo |
+| Familia fundadora | Hitos, continuidad y riesgos; mensual | Gerencia General; informe ejecutivo | Comité Ejecutivo |
+| Gerencia General | Hitos, costos y riesgos; mensual | Jefe de Proyecto; Comité Ejecutivo | Administrador del Contrato |
+| Operaciones | Despacho, bloqueos y cambios; semanal | Líder funcional; reunión y tablero | Comité de Proyecto |
+| Finanzas | Conciliación, costo y liquidación; quincenal | Líder de datos; tablero y acta | Comité de Proyecto |
+| Mantenimiento | Ventanas, kits y vigencias; semanal | Líder de implantación; agenda y acta | Comité de Operación |
+| Prevención de Riesgos | Jornada, habilitaciones y excepciones; semanal | Líder funcional; registro de casos | Comité de Proyecto |
+| TI y Control de Flota | Interfaces, seguridad y telemetría; semanal | Arquitecto; ADR y mesa técnica | Comité de Arquitectura |
+| Conductores propios | Cambios de uso, privacidad y alertas; por liberación y turno | Capacitación; sesión y material por perfil | Supervisor de turno |
+| Transportistas terceros | Adhesión, permisos y liquidación; por hito y mensualmente | Relación con terceros; portal y comunicación formal | Administrador del Contrato |
+| Cliente exportador | Seguimiento y emisiones autorizadas; por corte contractual | Gerencia comercial; reporte aprobado | Gerencia General |
+
+La Tabla 6.1 no concede al proponente comunicación directa en nombre del mandante con fiscalizadores, aseguradora o accionistas. Curimón emite esas comunicaciones; audIT prepara la evidencia que le corresponde. Todo acuerdo que cambie alcance, costo, plazo o nivel de servicio pasa por el Artículo 72 y queda en acta.
+
 Conforme a la exigencia técnica de las bases (FEP02, RT-19.05, p. 33), audIT implementará desde el primer mes del contrato un **Espacio Colaborativo Digital** unificado en la nube de acceso seguro 24/7 para el equipo del proyecto y la contraparte técnica de Curimón. Este repositorio centralizado alojará la documentación formal, especificaciones de diseño, minutas firmadas, registro vivo de riesgos conforme a la norma ISO 31000 (ISO, 2018; FEP02, RT-19.04, p. 33) y el catálogo de solicitudes de cambio.
 
 El jefe de proyecto tiene dedicación exclusiva durante la implementación y centraliza línea base, cambios, riesgos y seguimiento, conforme a RT-19.01. S7/T-15 dimensiona esa dedicación y los frentes simultáneos; las actas identifican contraparte, responsable de acción y plazo de cierre.
+
+Curimón designará por acta antes del primer sprint a un responsable funcional titular y a un suplente con atribución para ordenar el backlog y aceptar o rechazar incrementos funcionales dentro del alcance aprobado. Se propone responder dudas bloqueantes en dos días hábiles y resolver la revisión de un incremento en cinco días hábiles; la contraparte debe ratificar estos plazos. Si el titular no responde, actúa el suplente; si ninguno decide, el Jefe de Proyecto registra el bloqueo y lo eleva al Comité de Proyecto. La revisión de sprint documenta conformidad de producto, pero la aceptación contractual de H4 y H9 exige las evidencias y actas de S7/S9; el responsable funcional no altera unilateralmente la línea base.
 
 ### 6.1.3 Gestión de adquisiciones e integración contractual
 
@@ -59,33 +83,33 @@ La gestión de adquisiciones se estructura para mitigar riesgos de desabastecimi
 
 ### 6.1.4 Comités de gobernanza, cadencias y mecanismos de decisión
 
-El control directivo y operacional del contrato se estructura en estricto apego al marco de gobernanza mandatado por las bases de licitación (FEP01, Artículo 71, p. 37). La interacción formal entre audIT y Transportes Curimón S.A. se canaliza a través de las cinco instancias que se detallan en la Tabla 6.1.
+El control directivo y operacional del contrato se estructura en estricto apego al marco de gobernanza mandatado por las bases de licitación (FEP01, Artículo 71, p. 37). La interacción formal entre audIT y Transportes Curimón S.A. se canaliza a través de las cinco instancias que se detallan en la Tabla 6.2.
 
-**Tabla 6.1.** Instancias formales de gobernanza, participantes y cadencias
+**Tabla 6.2.** Instancias formales de gobernanza, participantes y cadencias
 
 | Instancia | Frecuencia | Participantes obligatorios | Propósito y alcance decisional |
 |---|---|---|---|
-| Comité Ejecutivo | Mensual | Patrocinador de Curimón, Gerencia de audIT, Administrador del Contrato. | Dirección estratégica, resolución de bloqueos contractuales, aprobación de modificaciones de alcance y evaluación de riesgos mayores. |
-| Comité de Proyecto | Quincenal | Contraparte Técnica de Curimón, Jefe de Proyecto de audIT. | Seguimiento riguroso de la Carta Gantt, estado de paquetes de trabajo EDT, control de hitos y acuerdos de ejecución técnica. |
-| Comité de Arquitectura | Mensual | Arquitecto de Solución, Oficial de Ciberseguridad, referentes de TI de Curimón. | Aprobación formal de decisiones técnicas (ADR), control de deuda técnica, revisión de estándares de interoperabilidad y seguridad. |
-| Comité de Operación | Mensual (desde M13) | Líder de Operación, Jefatura de Mesa de Ayuda, Contraparte Técnica de Curimón. | Verificación del cumplimiento de acuerdos SLA, gestión de problemas recurrentes, indicadores de marcha blanca y mejora continua. |
-| Reunión de Seguimiento | Semanal | Equipos de ingeniería y especialistas de ambas partes. | Coordinación táctica operativa, revisión de impedimentos inmediatos y compromisos semanales de avance. |
+| Comité Ejecutivo | Mensual | Patrocinador, Gerencia audIT, Administrador del Contrato | Alcance, riesgos mayores |
+| Comité de Proyecto | Quincenal | Contraparte Técnica, Jefe de Proyecto | EDT, hitos, bloqueos |
+| Comité de Arquitectura | Mensual | Arquitecto, Ciberseguridad, TI Curimón | ADR, seguridad, deuda |
+| Comité de Operación | Mensual desde M13 | Operación, Mesa de Ayuda, Contraparte Técnica | SLA, incidentes, marcha blanca |
+| Reunión de Seguimiento | Semanal | Equipos de ambas partes | Impedimentos y acciones |
 
-La Tabla 6.1 asigna responsables y cadencias para resolver discrepancias técnicas u operativas. Las decisiones, responsables y fechas se conservan en actas; una demora se escala según su impacto. El escalamiento operacional transita de forma expedita desde la Reunión Semanal al Comité de Proyecto ante desviaciones operativas, elevándose al Comité Ejecutivo exclusivamente cuando existe impacto en el alcance, presupuesto o nivel de servicio convenido.
+La Tabla 6.2 asigna responsables y cadencias para resolver discrepancias técnicas u operativas. El Comité Ejecutivo decide cambios contractuales y riesgos mayores; el Comité de Proyecto controla la ruta y acuerdos técnicos; el de Arquitectura aprueba ADR y estándares; el de Operación revisa niveles de servicio y problemas recurrentes. Las decisiones, responsables y fechas se conservan en actas; una demora se escala según su impacto. El escalamiento operacional transita desde la Reunión Semanal al Comité de Proyecto ante desviaciones operativas, elevándose al Comité Ejecutivo cuando existe impacto en el alcance, presupuesto o nivel de servicio convenido.
 
-Cuando surge una contingencia o solicitud de cambio que modifique el alcance o los plazos acordados, esta debe tramitarse obligatoriamente mediante el procedimiento de control de cambios regido por el Artículo 72° de las Bases Administrativas (FEP01, Artículo 72, p. 38). La secuencia de este proceso se detalla en la Tabla 6.2.
+Cuando surge una contingencia o solicitud de cambio que modifique el alcance o los plazos acordados, esta debe tramitarse obligatoriamente mediante el procedimiento de control de cambios regido por el Artículo 72° de las Bases Administrativas (FEP01, Artículo 72, p. 38). La secuencia de este proceso se detalla en la Tabla 6.3.
 
-**Tabla 6.2.** Procedimiento formal de gestión y control de cambios contractuales
+**Tabla 6.3.** Procedimiento formal de gestión y control de cambios contractuales
 
 | Paso | Acción requerida | Responsable formal | Criterio y resultado verificable |
 |---|---|---|---|
-| 1. Registro | Solicitud Formal de Cambio (RFC) en espacio colaborativo. | Parte solicitante (Curimón o audIT). | Formulario normalizado con descripción técnica, justificación operativa y urgencia asignada. |
-| 2. Análisis | Evaluación de impactos en alcance, plazo, costo, riesgo y niveles de servicio. | Jefe de Proyecto y Arquitecto de Solución. | Informe de impacto en alcance, cronograma de Ruta Crítica, matriz de riesgos y disponibilidad. |
-| 3. Revisión | Dictamen técnico del Comité de Arquitectura. | Contraparte Técnica y Líder Técnico de audIT. | Validación de viabilidad arquitectónica, compatibilidad con microservicios y seguridad. |
-| 4. Decisión | Aprobación o rechazo formal en acta. | Comité Ejecutivo; acuerdo escrito de ambas partes. | Aprobación expresa previa a cualquier ejecución física o lógica. Límite acumulado del 20 % del valor original del contrato; no modificar objeto, garantías mínimas ni hitos obligatorios. |
-| 5. Ejecución | Actualización de línea base y despliegue controlado. | Equipos de ingeniería y PMO. | Incorporación a sprint de desarrollo o ventana de mantenimiento programada. |
+| 1. Registro | RFC y motivo | Parte solicitante | Solicitud con urgencia |
+| 2. Análisis | Impacto integral | Jefe de Proyecto y Arquitecto | Informe de impacto |
+| 3. Revisión | Viabilidad técnica | Comité de Arquitectura | Dictamen y ADR afectado |
+| 4. Decisión | Aprobar o rechazar | Comité Ejecutivo y ambas partes | Acta y acuerdo escrito |
+| 5. Ejecución | Rebaselinar y desplegar | Ingeniería y PMO | Sprint o ventana aprobada |
 
-Conforme se establece en la Tabla 6.2, la ejecución de cualquier alteración sin la debida aprobación previa en acta del Comité Ejecutivo carecerá de validez contractual y no dará derecho a pago adicional (FEP01, Artículo 72.5, p. 38). Si se suscitaren controversias no resueltas en sede del Comité Ejecutivo en un plazo de treinta días corridos, operarán los mecanismos de mediación y arbitraje de derecho ante el Centro de Arbitraje y Mediación de Santiago (FEP01, Artículo 87, p. 45).
+Conforme se establece en la Tabla 6.3, la RFC registra descripción técnica, justificación operativa y urgencia. El informe de impacto descompone alcance, ruta crítica, costo, riesgo, disponibilidad y pruebas. Arquitectura revisa contratos entre los seis contextos desplegables y seguridad. El acuerdo escrito precede cualquier ejecución, respeta el límite acumulado del 20 % del valor original y no cambia objeto, garantías mínimas ni hitos obligatorios (FEP01, Artículo 72, p. 38). La línea base aprobada se actualiza antes del sprint o ventana de mantenimiento. Una alteración sin aprobación previa en acta del Comité Ejecutivo carecerá de validez contractual y no dará derecho a pago adicional (FEP01, Artículo 72.5, p. 38). Si se suscitaren controversias no resueltas en sede del Comité Ejecutivo en treinta días corridos, operarán los mecanismos de mediación y arbitraje de derecho ante el Centro de Arbitraje y Mediación de Santiago (FEP01, Artículo 87, p. 45).
 
 **Compromiso C-01.** audIT formalizará las decisiones y acuerdos de cada sesión de comité en un plazo máximo de veinticuatro horas hábiles en el espacio colaborativo digital.  Métrica: Emisión de minuta formal y registro en espacio digital en menos de 24 horas hábiles tras cada sesión de comité. Se verifica en: Registro de auditoría del repositorio colaborativo. Fuente: compromiso adicional audIT sobre las instancias de FEP01, Artículo 71, p. 37 y el espacio de RT-19.05; las bases no fijan ese plazo de minuta.
 
@@ -122,20 +146,20 @@ El pipeline de entrega continua se ejecuta automáticamente ante cada evento de 
 
 Fuente: Elaboración propia.
 
-Como se representa en la Figura 6.2, ninguna versión de software puede alcanzar el ambiente de producción sin superar secuencialmente las seis etapas del pipeline. En la Tabla 6.3 se definen los umbrales bloqueantes parametrizados para comprobar los criterios de calidad y seguridad del artefacto.
+Como se representa en la Figura 6.2, ninguna versión de software puede alcanzar el ambiente de producción sin superar secuencialmente las seis etapas del pipeline. En la Tabla 6.4 se definen los umbrales bloqueantes parametrizados para comprobar los criterios de calidad y seguridad del artefacto.
 
-**Tabla 6.3.** Umbrales y políticas de calidad bloqueantes en el pipeline DevSecOps
+**Tabla 6.4.** Umbrales y políticas de calidad bloqueantes en el pipeline DevSecOps
 
 | Fase del Pipeline | Herramienta ejecutora | Métrica evaluada | Umbral bloqueante de paso a producción |
 |---|---|---|---|
-| 1. Pruebas | GitLab Runner / dotnet test, go test y flutter test | Cobertura de lógica de negocio y cobertura de ramas, informadas por separado | Cobertura de pruebas automatizadas de lógica de negocio ≥ 70 % (FEP02, RT-04.11, p. 10) y cobertura de ramas ≥ 80 % como meta de audIT. Ambos umbrales se reportan por separado; cero pruebas unitarias fallidas. |
-| 2. Análisis estático | SonarQube Enterprise | Calidad y seguridad | Quality Gate aprobado; calificación A en mantenibilidad, deuda técnica <5 %, complejidad ≤15 por función de negocio y cero vulnerabilidades críticas/altas abiertas. |
-| 3. Contenedores | Trivy Container Scanner | Vulnerabilidades CVE | Cero vulnerabilidades críticas o altas en dependencias y capas base (imágenes Distroless / Alpine). |
-| 4. Firma y procedencia | Cosign / Syft (Anchore) | Integridad de artefactos | SBOM CycloneDX por artefacto, firma y procedencia verificada; aislamiento del builder y custodia de firma fuera de los pasos del proyecto. |
-| 5. Infraestructura | HashiCorp Terraform | Drift y seguridad IaC | Plan de Terraform revisado, escaneo IaC con Trivy/Checkov y sin hallazgos bloqueantes; identidades, redes y configuración por ambiente comprobadas. |
-| 6. Análisis dinámico | OWASP ZAP | Vulnerabilidades web | ASVS 4.0 nivel 2 mínimo contractual, trazado por control; ZAP más verificaciones manuales de autorización. Cero hallazgos críticos/altos abiertos; no se confunde un escaneo con cobertura completa de ASVS. |
+| 1. Pruebas | Runner; dotnet/go/flutter test | Lógica y ramas | ≥70 % / ≥80 %; cero fallos |
+| 2. Análisis estático | SonarQube | Calidad y seguridad | Gate, A, deuda <5 %, complejidad ≤15 |
+| 3. Contenedores | Trivy | CVE en imagen | Cero críticos/altos |
+| 4. Firma y procedencia | Cosign y Syft | Digest y SBOM | Firma y procedencia verificadas |
+| 5. Infraestructura | Terraform y Checkov | Plan e IaC | Plan revisado; cero bloqueantes |
+| 6. Análisis dinámico | ZAP y revisión humana | Web y autorización | ASVS L2 trazado; cero críticos/altos |
 
-Los parámetros descritos en la Tabla 6.3 bloquean automáticamente la promoción cuando no se cumplen. La detección de un solo fallo en cualquiera de estos umbrales aborta inmediatamente el pipeline de despliegue, notificando al equipo responsable a través de los canales de ingeniería sin intervención manual.
+En la Tabla 6.4, el 70 % de lógica de negocio procede de FEP02, RT-04.11, p. 10; el 80 % de ramas es meta adicional de audIT y se informa por separado con numerador y denominador. SonarQube exige mantenibilidad A y cero vulnerabilidades críticas/altas, además de los umbrales de deuda y complejidad; Trivy revisa dependencias y capas base. Cada artefacto lleva SBOM CycloneDX, digest, firma y procedencia de un builder aislado, con secretos de firma fuera de los pasos del proyecto. Terraform requiere revisión de plan, escaneo IaC y verificación de identidades, redes y configuración por ambiente. ZAP complementa pruebas manuales de autorización y trazabilidad por control ASVS 4.0 nivel 2; un escaneo no acredita ASVS completo. Los parámetros bloquean automáticamente la promoción cuando no se cumplen. Un fallo aborta el despliegue y notifica al responsable.
 
 ### 6.2.3 Infraestructura como código y gestión de configuración
 
@@ -149,11 +173,11 @@ Toda la infraestructura cloud alojada en Microsoft Azure se gestiona bajo el par
 El trabajo colaborativo del equipo de desarrollo se organiza en torno a un flujo de trabajo de control de versiones GitFlow adaptado. Las ramas principales son:
 - Rama `main`: Contiene versiones estables liberables y está protegida. Se exige firma criptográfica de commits y dos aprobaciones independientes del autor antes de la liberación; producción se despliega automáticamente. El registro de despliegue identifica commit, etiqueta, digest, configuración y entorno efectivo; fusionar a main no equivale a haber desplegado.
 - Rama `develop`: Rama de integración continua donde convergen las nuevas funcionalidades validadas mediante pruebas unitarias.
-- **Ramas temáticas ((ISO, 2022), (ISO, 2008), (ISO, 2018)):** Ramas de trabajo de corta duración, sujetas obligatoriamente a revisión por pares (Peer Review) mediante Merge Requests.
+- **Ramas temáticas:** Ramas de trabajo de corta duración, sujetas obligatoriamente a revisión por pares mediante Merge Requests. Las normas ISO citadas en otros capítulos sustentan arquitectura, calidad de datos y riesgos; no se presentan como fuente del flujo de ramas.
 
-La Tabla 6.4 define las condiciones para iniciar una historia y aceptar un incremento de software mediante Definition of Ready (DoR) y Definition of Done (DoD).
+La Tabla 6.5 define las condiciones para iniciar una historia y aceptar un incremento de software mediante Definition of Ready (DoR) y Definition of Done (DoD).
 
-**Tabla 6.4.** Criterios formales de salida: Definición de Preparado y Definición de Terminado
+**Tabla 6.5.** Criterios formales de salida: Definición de Preparado y Definición de Terminado
 
 | Nivel de control | Artefacto / Fase evaluada | Criterios de aceptación obligatorios |
 |---|---|---|
@@ -161,7 +185,7 @@ La Tabla 6.4 define las condiciones para iniciar una historia y aceptar un incre
 | Revisión por Pares | Merge Request (MR) en GitLab | Al menos un revisor independiente para integración; dos aprobaciones independientes del autor antes de liberar a main/producción. Verificación de adherencia a guías de estilo, comentarios arquitectónicos y ausencia de duplicidad de código. |
 | Definición de Terminado (DoD) | Incremento de Software / Release Candidate | Código fusionado en rama objetivo. Cobertura automatizada de lógica de negocio ≥ 70 % (FEP02, RT-04.11, p. 10) y cobertura de ramas ≥ 80 % como meta de audIT, con numeradores, denominadores y exclusiones reportados por separado; no se promedian ni sustituyen entre sí. Quality Gate SonarQube superado. Contenedor firmado con Cosign y registrado en Azure Container Registry con SBOM. Documentación OpenAPI actualizada. Despliegue exitoso en staging sin regresiones operativas. |
 
-La aplicación de los criterios de la Tabla 6.4 asegura que cada módulo tecnológico entregado a Transportes Curimón cumpla con los estándares industriales de mantenibilidad, solidez arquitectónica y ciberseguridad exigidos por las bases.
+La aplicación de los criterios de la Tabla 6.5 asegura que cada módulo tecnológico entregado a Transportes Curimón cumpla con los estándares industriales de mantenibilidad, solidez arquitectónica y ciberseguridad exigidos por las bases.
 
 **Compromiso C-02.** audIT mantendrá un tiempo de despliegue continuo en ambiente de pruebas inferior a quince minutos para incrementos de software validados.  Métrica: Despliegue automatizado en staging en menos de 15 minutos tras aprobación de Merge Request. Se verifica en: Métricas de ejecución del pipeline en GitLab CI Enterprise. Fuente: objetivo adicional audIT, trazado a FEP02 RT-04.12 y RT-03.03; no es plazo impuesto por las bases.
 
@@ -169,13 +193,17 @@ La aplicación de los criterios de la Tabla 6.4 asegura que cada módulo tecnol�
 
 Cada sprint de dos semanas incluye planificación con objetivo y criterios, reunión diaria de quince minutos, refinamiento de dependencias, revisión con representantes de torre/conductores/transportistas y retrospectiva. Se conservan backlog, diseño de interfaz, ADR, contratos, código, pruebas, SBOM y decisión de liberación. El Comité de Proyecto quincenal recibe avance por paquete, riesgos y desviaciones; la revisión de sprint es validación de producto y no reemplaza aceptación contractual.
 
+El plan inicial de los ocho sprints A09 y cinco A20 se adjunta en T-10, con requisitos y prueba por incremento. Para cada sprint, la capacidad neta de construcción se calcula como días-persona disponibles multiplicados por el factor de foco de S7 y por 0,85 tras reservar 15 % para deuda técnica; vacaciones, guardias, inducción y otras ausencias se restan antes de aplicar ese factor. S7 fija 70 % para E2: su capacidad neta inicial equivale a 59,5 % de los días-persona disponibles. No se traduce ese porcentaje en horas contratadas sin el calendario y dedicaciones de T-15. El responsable funcional titular o suplente revisa el resultado con el perfil usuario indicado en T-10; QA registra pruebas y defectos. Una historia sin criterio de aceptación o dependencia habilitante no entra al sprint.
+
+Durante M21–M56, Kanban reserva un carril visible de deuda técnica con entrada por defecto, riesgo, costo de postergación y prueba de regresión. El Líder de Operación acuerda mensualmente con el Jefe de Proyecto la capacidad en horas y personas a partir de la dotación efectiva de S11/T-15; el 15 % de Scrum no se traslada automáticamente a operación. Hasta que esa capacidad esté dimensionada y valorizada, el carril es una decisión metodológica y no una asignación de esfuerzo ya acreditada.
+
 DEV, QA, PREPROD, PROD y DR deben estar operativos en H3 (FEP02, RT-04.01, p. 10). La rama main identifica lo liberado; develop integra incrementos y las ramas temáticas son breves. Se construye el artefacto una sola vez; su digest, firma y configuración externa permiten promoción QA $\rightarrow PREPROD \rightarrow$ PROD sin recompilar (RT-04.08). DAST requiere despliegue temporal en QA/PREPROD, aunque sea la sexta puerta antes de producción. Una comprobación que exige HIL, prueba de terreno o revisión humana se registra como evidencia adicional, sin simularla dentro del pipeline.
 
 Se elige canario para servicios y actualización por unidad para equipos a bordo. Antes de cada pase se comprueban métricas, reversa, esquema compatible y preservación de evidencia. La reversión automática retorna a la versión previa compatible, mantiene eventos no confirmados y conserva documentos emitidos; después reconcilia diferencias. Las migraciones de esquema siguen expandir–migrar–contraer y son versionadas/reversibles (RT-04.10). Contraer columnas o transformar datos de forma irreversible se posterga hasta que la versión anterior deje de necesitarlas; no se promete que toda transformación se deshaga con un rollback de contenedor.
 
-La Tabla 6.5 declara metas de entrega para RT-04.12 y conserva el máximo contractual de cambios fallidos del Artículo 78.3; se miden por contexto en operación y se ajusta capacidad si fallan, sin alterar mínimos de seguridad ni congelamientos de S7.
+La Tabla 6.6 declara metas de entrega para RT-04.12 y conserva el máximo contractual de cambios fallidos del Artículo 78.3; se miden por contexto en operación y se ajusta capacidad si fallan, sin alterar mínimos de seguridad ni congelamientos de S7.
 
-**Tabla 6.5.** Indicadores de entrega y restauración
+**Tabla 6.6.** Indicadores de entrega y restauración
 
 | Indicador | Meta propuesta | Evidencia |
 |---|---|---|
@@ -184,23 +212,23 @@ La Tabla 6.5 declara metas de entrega para RT-04.12 y conserva el máximo contra
 | Cambios fallidos en producción | ≤5 % de los despliegues del mes (FEP01, Art. 78.3, p. 40) | Despliegues con fallo, reversa o incidente atribuible / total de despliegues en producción del mes, ligados al digest |
 | Restauración tras cambio fallido | Objetivo ≤30 min para reversa de aplicación, sin sustituir SLA de incidente ni RTO de DR | Cronómetro de detección, reversa y verificación de integridad |
 
-La Tabla 6.5 distingue despliegue en pruebas (<15 min propuesto en C-02), lead time, reversa de una aplicación y recuperación completa de un sitio. Ninguno se infiere del éxito del pipeline. Los objetivos se verifican con S9; la aceptación E1/E2 mantiene sus marchas blancas y el régimen crítico 99,9 % del Artículo 78.2.
+La Tabla 6.6 distingue despliegue en pruebas (<15 min propuesto en C-02), lead time, reversa de una aplicación y recuperación completa de un sitio. Ninguno se infiere del éxito del pipeline. Los objetivos se verifican con S9; la aceptación E1/E2 mantiene sus marchas blancas y el régimen crítico 99,9 % del Artículo 78.2.
 
 ### 6.2.6 Puerta de salida G13 y funciones de sprint 7
 
-G13 libera la versión de entrenamiento probada y congelada en PREPROD, con datos ficticios y material por perfil. Para habilitar los diez días iniciales de familiarización de A13, el candidato debe incluir los cinco flujos de la Tabla 6.6. Esta definición complementa la línea base de capacitación del Subdocumento 7 y conserva la duración de A13 y su adelanto condicionado. Los casos trazados en el Formulario T-17 se ejecutan sobre el candidato de PREPROD antes de liberar G13.
+G13 libera la versión de entrenamiento probada y congelada en PREPROD, con datos ficticios y material por perfil. Para habilitar los diez días iniciales de familiarización de A13, el candidato debe incluir los cinco flujos de la Tabla 6.7. Esta definición complementa la línea base de capacitación del Subdocumento 7 y conserva la duración de A13 y su adelanto condicionado. Los casos trazados en el Formulario T-17 se ejecutan sobre el candidato de PREPROD antes de liberar G13.
 
-**Tabla 6.6.** Funciones mínimas de familiarización y criterios previstos para liberar G13
+**Tabla 6.7.** Funciones mínimas de familiarización y criterios previstos para liberar G13
 
 | Función | Requisito T-12 | Casos T-17 | Criterio previsto para G13 |
 |---|---|---|---|
-| Acceso por rol y privacidad | RF-022, RNF-013 | CP-SEC-04, CP-SEC-05 | Cuenta ficticia: el rol autorizado accede y el ajeno es rechazado; concesión y revocación quedan registradas. |
-| Asignación de personal elegible | RF-001, RF-002 | CP-UNIT-01, CP-UNIT-02, CP-SYS-01, CP-SYS-05 | Datos sintéticos: se asigna personal habilitado; vigencia inválida y doble asignación se rechazan. |
-| Jornada y descanso | RF-003 | CP-INT-03, CP-SYS-05 | Datos sintéticos de 8 h y 6 h de descanso en 24 h producen decisión y causa registradas. |
-| Alerta de conducción | RF-027 | CP-UNIT-18 | Reproducir 4 h 15 min y área segura alcanzable en 35 min; alertar antes de cinco horas, con diez minutos de margen. |
-| Eventos con conectividad intermitente | RNF-002 | CP-UNIT-23 | Desconexión simulada, reinicio y reenvío doble: conservar un evento íntegro y sincronizarlo sin duplicados. |
+| Acceso por rol y privacidad | RF-022, RNF-013 | CP-SEC-04/05 | Acceso/denegación auditados |
+| Asignación elegible | RF-001, RF-002 | CP-UNIT-01/02; CP-SYS-01/05 | Reserva válida; rechazo inválido |
+| Jornada y descanso | RF-003 | CP-INT-03; CP-SYS-05 | Decisión y motivo registrados |
+| Alerta de conducción | RF-027 | CP-UNIT-18 | Aviso antes de cinco horas |
+| Conectividad intermitente | RNF-002 | CP-UNIT-23 | Evento íntegro, sin duplicado |
 
-La Tabla 6.6 limita el certificado de familiarización a cinco flujos de software con datos ficticios. G13 se cumple cuando todos pasan en el mismo candidato de PREPROD destinado a capacitación y no quedan defectos bloqueantes abiertos.
+La Tabla 6.7 limita el certificado de familiarización a cinco flujos de software con datos ficticios. En acceso, el rol permitido entra, el ajeno es rechazado y concesión/revocación quedan auditadas. En asignación, una vigencia inválida o una segunda reserva activa bloquea. La prueba de descanso usa escenarios sintéticos de ocho horas y seis horas en 24 horas; registra decisión y causa. La alerta reproduce 4 h 15 min de conducción y un lugar seguro alcanzable en 35 min; debe avisar antes de cinco horas con diez minutos de margen. El corte de enlace incluye reinicio y reenvío doble, conservando un evento íntegro sin duplicarlo. G13 se cumple cuando todos pasan en el mismo candidato de PREPROD destinado a capacitación y no quedan defectos bloqueantes abiertos.
 
 El equipo de desarrollo conserva el identificador y digest del artefacto, configuración de PREPROD, versión del conjunto ficticio, informes de ejecución y reejecución de defectos, materiales por perfil y acta de congelamiento. El equipo de aseguramiento de calidad revisa la trazabilidad de la evidencia. Un cambio posterior al congelamiento obliga a repetir los casos afectados. CP-HW-03/06/14, la autonomía de 72 h y la validación en ruta requieren evidencia propia en S9/T-17; la simulación en PREPROD no las sustituye.
 
@@ -211,12 +239,6 @@ G13 habilita los diez días iniciales de familiarización; los flujos completos,
 El FEP01, Formulario T-9, p. 61 remite a 6.1, interesados, comités, adquisiciones, cambios y calendario; el FEP01, Formulario T-10, p. 61 remite a 6.2, ciclo de vida, herramientas, ambientes, criterios, cadencias y reversión. Los anexos son índices de evidencia del capítulo, no inventarios que reemplacen el análisis.
 
 ## Referencias
-
-ISO. (2008). *ISO/IEC 25012. Software engineering. Software product Quality Requirements and Evaluation (SQuaRE). Data quality model*.
-
-ISO. (2018). *ISO 31000:2018. Risk management -- Guidelines*.
-
-ISO. (2022). *ISO/IEC/IEEE 42010. Systems and software engineering. Architecture description*.
 
 Project Management Institute. (2021). *A Guide to the Project Management Body of Knowledge (PMBOK Guide) and The Standard for Project Management* (7th).
 

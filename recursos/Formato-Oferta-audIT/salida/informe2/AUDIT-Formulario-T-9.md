@@ -60,5 +60,9 @@ audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. O
 \exigencia{Adquisiciones e integración contractual}{sección 6.1.3}
 \exigencia{Control de cambios, comités y cadencias de decisión}{sección 6.1.4}
 \end{contenidoExigido}
+
+La línea base contractual se controla por paquete EDT, responsable, fecha temprana/tardía, holgura y evidencia de hito de S7. El Jefe de Proyecto compara avance y consumo de reservas cada semana, registra desvíos en el espacio colaborativo y lleva al Comité de Proyecto los bloqueos que afecten una entrega. Una modificación de alcance, plazo, costo o nivel de servicio se inicia con RFC; incluye impacto en EDT, ruta crítica, riesgo y pruebas; requiere acuerdo escrito conforme al Artículo 72 antes de ejecutarse. La revisión de sprint no reemplaza esa autorización.
+
+La matriz de trece destinatarios de S6 fija información, emisor, frecuencia, canal y escalamiento. Para una excepción operativa, el supervisor recibe el caso en el turno; el responsable funcional decide dentro de sus atribuciones; si afecta línea base o aceptación contractual, el Jefe de Proyecto lo eleva al comité correspondiente. Curimón designa titular y suplente funcionales por acta antes del primer sprint. El titular prioriza y revisa producto; H4 y H9 se aceptan mediante actas y evidencias de S7/S9. Una compra crítica se vincula a paquete, fecha de necesidad, responsable de suministro, recepción técnica y contingencia por retraso; los equipos del T-11 que compra el CLIENTE no se vuelven a presupuestar como compra de audIT.
 \end{formulario}
 

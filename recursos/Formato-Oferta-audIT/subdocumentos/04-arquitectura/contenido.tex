@@ -55,10 +55,10 @@ mantener su soporte.
 
 \begin{tabla}[ancho=completo, fuente=condensada]{Tecnologías seleccionadas y mantenimiento de su soporte}{4-software}{L{27mm} L{38mm} X X}
 Componente & Producto & Soporte del fabricante & Actualización dentro del contrato \\ \midrule
-Aplicación móvil de cuatro perfiles & Flutter~3, Dart y SQLite local & Canal estable del proyecto, sin versión de soporte extendido & Versión exacta y plataformas mínimas fijadas en el hito de diseño \\
-Portales y torre de control & React y Next.js & Versión exacta, licencia y dependencias declaradas en el SBOM & Actualización con prueba de regresión antes de que termine el soporte de la versión escogida \\
+Aplicación móvil de cuatro perfiles & Flutter~3.47.0 estable, Dart compatible y SQLite local & Canal estable; el fabricante no publica una fecha fija de fin para esa versión & Fijar SDK, Dart, plataformas mínimas y dependencias en el manifiesto; actualizar con regresión por perfil \\
+Portales y torre de control & React~19.3.0 y Next.js~16.x & React estable con política de versiones; Next.js~16 en soporte activo LTS al 10-11-2026 & Fijar parche compatible y SBOM antes de construir; actualizar dentro del ciclo LTS con prueba de regresión \\
 Servicios de negocio & .NET~10 LTS & Hasta el 14 de noviembre de 2028 & Paso a la versión LTS siguiente antes de esa fecha \\
-Ingesta y borde & Go~1.27 & Cada versión tiene soporte hasta que salen dos versiones mayores posteriores & Paso a una versión con soporte en cada ciclo anual \\
+Ingesta y borde & Go~1.27.3 & Cada versión mayor tiene soporte hasta que salen dos versiones mayores posteriores & Actualizar revisiones de seguridad y pasar a una versión mayor con soporte antes de su retiro \\
 Orquestación & Azure Kubernetes Service & Versiones de Kubernetes que AKS soporta en cada liberación & Actualización por grupos de nodos con prueba de reversa \\
 Motor transaccional & PostgreSQL~16 Flexible Server con PostGIS & Hasta el 9 de noviembre de 2028 & Actualización mayor ensayada antes de esa fecha, con extensiones y captura de cambios compatibles \\
 Series de tiempo & TimescaleDB, edición Apache-2, en una instancia Flexible Server separada & Versión que Azure publica para cada versión de PostgreSQL & Actualización junto con la versión mayor de PostgreSQL \\
@@ -68,10 +68,11 @@ Persistencia a bordo & SQLite~3 en modo WAL & Biblioteca fijada en la imagen Lin
 Repositorio analítico & Delta Lake en ADLS Gen2 & Motor, conectores y biblioteca declarados en un manifiesto de versiones & Datos exportables en formatos abiertos \\
 Identidad y secretos & Entra ID, identidades administradas y Key Vault & Servicio administrado & Edición y capacidades fijadas en el Formulario T-11 \\
 \end{tabla}
-\notaTabla{Fuente: políticas de soporte de cada fabricante, consultadas el 11 de octubre de 2026 \parencite{ms_dotnet_soporte,go_release,pg_versiones,ms_pg_ext_versiones,ms_eh_kafka,ms_redis_retiro}.}
+\notaTabla{Fuentes: políticas de soporte de los fabricantes \parencite{ms_dotnet_soporte,go_release,pg_versiones,ms_pg_ext_versiones,ms_eh_kafka,ms_redis_retiro}; versiones web y móvil verificadas el 10-11-2026 en \url{https://docs.flutter.dev/release/release-notes}, \url{https://react.dev/versions} y \url{https://nextjs.org/support-policy}.}
 
 La tabla decide los productos y evita dos buses alternativos o dos motores intercambiables. Las
-versiones exactas de los canales móviles y web se fijan en el hito de diseño, cada una con su SBOM, su
+versiones base de los canales móviles y web se muestran con su estado a la fecha de esta revisión. El
+parche compatible de Next.js y las versiones de Dart y SQLite se fijan en el hito de diseño, cada una con su SBOM, su
 licencia, su prueba de compatibilidad, su política de soporte y su responsable. La tabla especifica el
 mantenimiento, y las pruebas de compatibilidad todavía no se ejecutan.
 
@@ -202,8 +203,8 @@ restricción~8.
 
 \transv{RT-02.04}{7} exige un registro de decisiones fechado, con la alternativa escogida, las
 descartadas y el criterio, que es entregable contractual y se actualiza durante toda la ejecución, y el
-\art{19}{14} lo pide también en la oferta. La \tabref{4-adr} registra ocho decisiones al 11 de octubre
-de 2026. Las cuatro primeras conservan su número para no romper las referencias de la arquitectura
+\art{19}{14} lo pide también en la oferta. La \tabref{4-adr} registra ocho propuestas documentadas el 11 de octubre
+de 2026. Esa fecha es la del registro en la oferta, no una aprobación contractual ni una fecha efectiva de implantación. Cada ADR adquiere estado aprobado y fecha efectiva sólo con el acta del Comité de Arquitectura, que aún no existe; mientras tanto su estado es \emph{propuesto}. Las cuatro primeras conservan su número para no romper las referencias de la arquitectura
 física, y las cuatro nuevas completan el análisis que pidió el Informe~1.
 
 \begin{tabla}[ancho=completo, fuente=condensada]{Registro de decisiones de arquitectura}{4-adr}{L{8mm} X X X X}
@@ -218,6 +219,8 @@ ADR & Decisión & Alternativas evaluadas & Criterio & Consecuencia y verificaci�
 08 & SQLite local con bandeja de salida, acuses y conciliación determinista & Depender del enlace para cada evento o un búfer solo en memoria & El Caso exige 72 horas a bordo y conciliación en 20 minutos, y el transversal 24 horas en terminal & Las 288 horas propuestas tienen su propio ensayo y su propia capacidad \\
 \end{tabla}
 \notaTabla{Fuente: elaboración propia sobre \transv{RT-02.04}{7}.}
+
+El registro de ejecución mantendrá para cada ADR los campos \texttt{estado}, \texttt{fecha\_propuesta}, \texttt{fecha\_aprobación}, \texttt{fecha\_efectiva}, versión, acta y responsable. En esta entrega, ADR~01–08 tienen fecha de propuesta 11-10-2026, estado propuesto y fecha de aprobación/efectiva pendientes. La evidencia que permite cambiar cada estado es el acta que aprueba la alternativa correspondiente; no se presenta la fecha común de redacción como ocho decisiones ya aprobadas. El Comité revisará en particular ADR~06 contra el ensayo de entrega del documento y ADR~07 contra las capacidades de la extensión en Azure.
 
 La tabla permite revisar cada elección con sus costos de operación. Un cambio de proveedor, de protocolo o de estrategia de continuidad actualiza el ADR, los
 contratos, la EDT y los casos de aceptación. La mensajería satelital de la decisión 06 se dimensiona

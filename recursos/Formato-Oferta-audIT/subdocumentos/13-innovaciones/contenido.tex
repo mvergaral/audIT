@@ -157,7 +157,7 @@ Azure IoT Hub Device Twins registra configuración deseada y reportada; una dife
 
 \subsection{Madurez}\label{sec:13-proceso-madurez}
 
-Se utiliza la escala TRL de nueve niveles explicada por NASA (Manning, 2023), aplicada aquí como referencia de madurez del desarrollo, sin confundir disponibilidad de un servicio cloud con validación del proceso completo. El proceso integrado está en \textbf{TRL 2 propuesto}: concepto y contratos definidos, sin prueba de concepto ejecutada. Se prevé contrastar factibilidad en laboratorio antes del piloto de M6, avanzar a integración validada y documentar el nivel alcanzado con resultados.
+Se utiliza la escala TRL de nueve niveles explicada por NASA (Manning, 2023), aplicada aquí como referencia de madurez del desarrollo, sin confundir disponibilidad de un servicio cloud con validación del proceso completo. El proceso integrado está en \textbf{TRL 2 propuesto}: concepto y contratos definidos, sin prueba de concepto ejecutada. Antes del piloto de M6 se exige una prueba de laboratorio de compatibilidad de agente, reversión y conservación de eventos. Si falla, no se despliega el proceso en flota y se conserva la programación manual. El nivel de madurez sólo se actualiza con resultados y acta de esa prueba y del piloto.
 
 \subsection{Incorporación, arquitectura y calendario}\label{sec:13-proceso-incorporacion-arquitectura-y-calendario}
 
@@ -174,7 +174,7 @@ Calendario del Subdocumento 7: piloto de \textbf{10 camiones en M6}, montaje pro
 
 La inversión incremental comprende el planificador, el tablero de oportunidades, pruebas de integración, homologación del agente y los kits diferenciales que efectivamente agregue el proceso. Se contabiliza en EDT 12.2 y en las partidas de implementación de la oferta económica; el stock contractual de sustitución de T-11 no se cobra nuevamente como inversión innovadora. El costo recurrente incluye ejecución, almacenamiento de actas y mantenimiento del planificador, separado de la conectividad ya presupuestada.
 
-El beneficio estimado se calcula como intervenciones evitadas por falta de kit $\times$ costo unitario de visita, más reducción medida de preparación $\times$ costo operativo aplicable, menos costo incremental del proceso. Sólo se incorpora un ahorro al escenario financiero cuando su base, cantidad, costo unitario y sensibilidad estén documentados; el escenario inicial no atribuye ahorro garantizado. La valoración monetaria y su reflejo en el flujo de caja van en la oferta económica, conforme al Artículo 29.5°.
+El beneficio bruto estimado se calcula como visitas adicionales evitadas $\times$ costo unitario de visita, más minutos de preparación evitados $\times$ costo operativo por minuto. La inversión y el costo incremental del proceso se registran en partidas separadas del flujo; no se vuelven a restar dentro de la partida de beneficio. Se excluyen del ahorro visitas que no habrían ocurrido, paradas normales y kits ya presupuestados en T-11. Sólo se incorpora un ahorro al escenario financiero cuando su base, cantidad, costo unitario y sensibilidad estén documentados; el escenario inicial no atribuye ahorro garantizado. La valoración monetaria y su reflejo en el flujo de caja van en la oferta económica, conforme al Artículo 29.5°.
 
 \subsection{Indicadores y medición}\label{sec:13-proceso-indicadores-y-medicion}
 
@@ -188,7 +188,9 @@ Sustitución modular & Tiempo real del piloto; aún sin valor & $\leq$30 min den
 Parada comercial adicional por instalación & Restricción contractual, no beneficio novedoso & 0; abortar y reprogramar cuando se reduzca la ventana & En cada intervención; comparar ingreso, parada normal y liberación \\
 \end{tabla}
 
-La \tabref{13-proceso-tabla-13-2} permite aceptar o ajustar el proceso con evidencia. Una instalación cuenta como terminada sólo después de las pruebas físicas y de datos; cambiar el estado reportado en nube no sustituye esas pruebas. Ninguna meta se declara ya alcanzada.
+La línea base de M6 se levanta durante el piloto con una ficha por oportunidad elegible: terminal, familia, fecha, ventana normal, autorización, kit, técnico, tiempo de preparación, cancelación y causa, visita adicional efectivamente realizada, costo unitario y resultado de prueba. Se registra el plan manual antes de mostrar la recomendación del algoritmo. El mismo conjunto de oportunidades se evalúa con ambos métodos; se informan por separado los casos no comparables y las unidades sin autorización. El indicador de preparación inútil es casos con preparación que no termina en intervención / oportunidades elegibles; el indicador de primer intento es instalaciones validadas sin reintento / instalaciones elegibles ejecutadas. El ahorro de tiempo usa minutos medidos, sin convertir cada preparación inútil en una visita pagada.
+
+Al cierre de M6, el Comité de Proyecto firma el tamaño y calidad de la muestra, la línea base y la decisión de continuar, limitar o sustituir esta innovación por otra de proceso acreditable. Si no hay observaciones comparables suficientes o falla la homologación de hardware, la reducción del 20 \% permanece no verificable y no se valoriza como ahorro. La \tabref{13-proceso-tabla-13-2} permite aceptar o ajustar el proceso con evidencia. Una instalación cuenta como terminada sólo después de las pruebas físicas y de datos; cambiar el estado reportado en nube no sustituye esas pruebas. Ninguna meta se declara ya alcanzada.
 
 \subsection{Riesgos, mitigación y contingencia}\label{sec:13-proceso-riesgos-mitigacion-y-contingencia}
 
@@ -202,7 +204,7 @@ Escaso beneficio frente a coordinación manual & Media / medio & Comparación tr
 Tercero sin autorización o sin paso por terminal & Media / alto & Agenda sólo con autorización vigente y oportunidad confirmada & Integración lógica de capacidades disponibles; no intervenir equipo privado \\
 \end{tabla}
 
-Las valoraciones siguen la escala del Subdocumento 8 (sección 8.1). Los responsables de Flota y terminal registran el riesgo y su decisión en los comités de S6.
+Las valoraciones siguen la escala del Subdocumento 8 (sección 8.1). El riesgo residual se fija como objetivo condicionado, no como resultado ya demostrado: ETA incorrecta baja/media sólo después de comprobar actualidad y confirmación de ventana; incompatibilidad baja/alta sólo tras homologación y reversión ensayada por familia; beneficio insuficiente media/media hasta medir la comparación de M6; tercero sin autorización media/alta mientras no exista adhesión y paso confirmado. Un control fallido conserva la valoración inicial y activa la contingencia de la \tabref{13-proceso-tabla-2}. Los responsables de Flota y terminal registran el riesgo y su decisión en los comités de S6.
 
 Fuentes de madurez y aprovisionamiento: \parencite{d3_nasa_trl,d3_device_twins,d3_device_update}.
 

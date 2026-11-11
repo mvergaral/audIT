@@ -95,10 +95,10 @@ mantener su soporte.
 
 | Componente | Producto | Soporte del fabricante | Actualización dentro del contrato |
 |---|---|---|---|
-| Aplicación móvil de cuatro perfiles | Flutter 3, Dart y SQLite local | Canal estable del proyecto, sin versión de soporte extendido | Versión exacta y plataformas mínimas fijadas en el hito de diseño |
-| Portales y torre de control | React y Next.js | Versión exacta, licencia y dependencias declaradas en el SBOM | Actualización con prueba de regresión antes de que termine el soporte de la versión escogida |
+| Aplicación móvil de cuatro perfiles | Flutter 3.47.0 estable, Dart compatible y SQLite local | Canal estable; el fabricante no publica una fecha fija de fin para esa versión | Fijar SDK, Dart, plataformas mínimas y dependencias en el manifiesto; actualizar con regresión por perfil |
+| Portales y torre de control | React 19.3.0 y Next.js 16.x | React estable con política de versiones; Next.js 16 en soporte activo LTS al 10-11-2026 | Fijar parche compatible y SBOM antes de construir; actualizar dentro del ciclo LTS con prueba de regresión |
 | Servicios de negocio | .NET 10 LTS | Hasta el 14 de noviembre de 2028 | Paso a la versión LTS siguiente antes de esa fecha |
-| Ingesta y borde | Go 1.27 | Cada versión tiene soporte hasta que salen dos versiones mayores posteriores | Paso a una versión con soporte en cada ciclo anual |
+| Ingesta y borde | Go 1.27.3 | Cada versión mayor tiene soporte hasta que salen dos versiones mayores posteriores | Actualizar revisiones de seguridad y pasar a una versión mayor con soporte antes de su retiro |
 | Orquestación | Azure Kubernetes Service | Versiones de Kubernetes que AKS soporta en cada liberación | Actualización por grupos de nodos con prueba de reversa |
 | Motor transaccional | PostgreSQL 16 Flexible Server con PostGIS | Hasta el 9 de noviembre de 2028 | Actualización mayor ensayada antes de esa fecha, con extensiones y captura de cambios compatibles |
 | Series de tiempo | TimescaleDB, edición Apache-2, en una instancia Flexible Server separada | Versión que Azure publica para cada versión de PostgreSQL | Actualización junto con la versión mayor de PostgreSQL |
@@ -108,10 +108,11 @@ mantener su soporte.
 | Repositorio analítico | Delta Lake en ADLS Gen2 | Motor, conectores y biblioteca declarados en un manifiesto de versiones | Datos exportables en formatos abiertos |
 | Identidad y secretos | Entra ID, identidades administradas y Key Vault | Servicio administrado | Edición y capacidades fijadas en el Formulario T-11 |
 
-*Fuente: políticas de soporte de cada fabricante, consultadas el 11 de octubre de 2026 (Microsoft, 2026; The Go Authors, 2026; PostgreSQL Global Development Group, 2026; Microsoft, 2026; Microsoft, 2026; Microsoft, 2026).*
+*Fuentes: políticas de soporte de los fabricantes (Microsoft, 2026; The Go Authors, 2026; PostgreSQL Global Development Group, 2026; Microsoft, 2026; Microsoft, 2026; Microsoft, 2026); versiones web y móvil verificadas el 10-11-2026 en \url{https://docs.flutter.dev/release/release-notes}, \url{https://react.dev/versions} y \url{https://nextjs.org/support-policy}.*
 
 La tabla decide los productos y evita dos buses alternativos o dos motores intercambiables. Las
-versiones exactas de los canales móviles y web se fijan en el hito de diseño, cada una con su SBOM, su
+versiones base de los canales móviles y web se muestran con su estado a la fecha de esta revisión. El
+parche compatible de Next.js y las versiones de Dart y SQLite se fijan en el hito de diseño, cada una con su SBOM, su
 licencia, su prueba de compatibilidad, su política de soporte y su responsable. La tabla especifica el
 mantenimiento, y las pruebas de compatibilidad todavía no se ejecutan.
 
@@ -232,8 +233,8 @@ restricción 8.
 
 FEP02, RT-02.04, p. 7 exige un registro de decisiones fechado, con la alternativa escogida, las
 descartadas y el criterio, que es entregable contractual y se actualiza durante toda la ejecución, y el
-FEP01, Artículo 19, p. 14 lo pide también en la oferta. La Tabla 4.2 registra ocho decisiones al 11 de octubre
-de 2026. Las cuatro primeras conservan su número para no romper las referencias de la arquitectura
+FEP01, Artículo 19, p. 14 lo pide también en la oferta. La Tabla 4.2 registra ocho propuestas documentadas el 11 de octubre
+de 2026. Esa fecha es la del registro en la oferta, no una aprobación contractual ni una fecha efectiva de implantación. Cada ADR adquiere estado aprobado y fecha efectiva sólo con el acta del Comité de Arquitectura, que aún no existe; mientras tanto su estado es *propuesto*. Las cuatro primeras conservan su número para no romper las referencias de la arquitectura
 física, y las cuatro nuevas completan el análisis que pidió el Informe 1.
 
 **Tabla 4.2.** Registro de decisiones de arquitectura
@@ -250,6 +251,8 @@ física, y las cuatro nuevas completan el análisis que pidió el Informe 1.
 | 08 | SQLite local con bandeja de salida, acuses y conciliación determinista | Depender del enlace para cada evento o un búfer solo en memoria | El Caso exige 72 horas a bordo y conciliación en 20 minutos, y el transversal 24 horas en terminal | Las 288 horas propuestas tienen su propio ensayo y su propia capacidad |
 
 *Fuente: elaboración propia sobre FEP02, RT-02.04, p. 7.*
+
+El registro de ejecución mantendrá para cada ADR los campos `estado`, `fecha_propuesta`, `fecha_aprobación`, `fecha_efectiva`, versión, acta y responsable. En esta entrega, ADR 01–08 tienen fecha de propuesta 11-10-2026, estado propuesto y fecha de aprobación/efectiva pendientes. La evidencia que permite cambiar cada estado es el acta que aprueba la alternativa correspondiente; no se presenta la fecha común de redacción como ocho decisiones ya aprobadas. El Comité revisará en particular ADR 06 contra el ensayo de entrega del documento y ADR 07 contra las capacidades de la extensión en Azure.
 
 La tabla permite revisar cada elección con sus costos de operación. Un cambio de proveedor, de protocolo o de estrategia de continuidad actualiza el ADR, los
 contratos, la EDT y los casos de aceptación. La mensajería satelital de la decisión 06 se dimensiona
@@ -1007,7 +1010,7 @@ CAN con J1939, RS232 y RS485, red celular LTE Cat 4 o Cat M1, GNSS, Wi-Fi, Bluet
 seguro Microchip TA100 para arranque seguro y almacenamiento de claves. Funciona de 9 a 32 V, de
 −40 a +70 °C y con protección IP67 (iWave Global, 2026), lo que responde a la vibración, el polvo
 y la temperatura de cabina que piden FEP02, RT-08.11, p. 19 y FEP02, RT-08.12, p. 19. Sobre él corre audIT EdgeHub, el software de
-borde de audIT que presenta el Subdocumento 1 (sección 1.1.3). La Figura 4.15 muestra el equipo con sus periféricos.
+borde de audIT que presenta el Subdocumento 1 (sección ?). La Figura 4.15 muestra el equipo con sus periféricos.
 
 \figuraAqui{195mm}{figuras/04-arquitectura/equipo-a-bordo.pdf}{Equipo a bordo: iWave G26I, periféricos, interfaces y particiones de la memoria}{4-bordofig}
 
@@ -1022,7 +1025,7 @@ la red satelital (Ground Control, 2026) en los tramos de más de 80 km sin seña
 restricción 4 (Caso, capítulo 10, p. 23). Por el mismo canal, cuando un punto de carga no tiene
 cobertura, el equipo envía los datos de la carga y recibe, en fragmentos verificados, la representación
 completa del documento que emite el sistema contable, como fija el Subdocumento 3
-(sección 3.4.2). Los mensajes entran a la plataforma por un adaptador autorizado de la
+(sección ?). Los mensajes entran a la plataforma por un adaptador autorizado de la
 pasarela de Iridium, y el ensayo de los 90 segundos se describe en la sección 4.1.13
 (sección 4.1.13). Es el mismo módem que Webfleet vende en Chile dentro de su
 producto satelital (Webfleet, 2026), lo que hace factible su homologación local. Ese
