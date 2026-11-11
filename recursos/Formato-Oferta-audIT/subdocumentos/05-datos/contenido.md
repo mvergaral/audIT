@@ -296,6 +296,6 @@ Conforme al Comunicado 10, sección 7.2, cada sección de este subdocumento y ca
 
 | Sección | Herramienta | Finalidad del uso | Nivel en texto | Nivel en diagramas | Revisión humana (quién y qué verificó) |
 |---|---|---|---|---|---|
-| 5.1 | OpenAI Codex (GPT-6) | Modelo, evidencia, evaluación, custodia y permisos | Alto | Alto | Marcel Gutierrez, Arquitecto de Solución: entidades, niveles de evidencia, custodia, permisos y figuras del modelo. |
-| 5.2 a 5.4 | OpenAI Codex (GPT-6) | Motores, conservación, migración, índices y capacidad | Alto | Alto | Marcel Gutierrez, Arquitecto de Solución: motores, retención, migración, desempeño y figuras. |
-| Anexo de diccionario | OpenAI Codex (GPT-6) | Atributos y capacidad | Alto | Ninguno | Marcel Gutierrez, Arquitecto de Solución: revisión de atributos, restricciones y supuestos. |
+| 5.1 | OpenAI Codex (GPT-6) | Modelo, evidencia, evaluación, custodia y permisos | Alto | Alto | Responsable D3, Arquitecto de Solución: entidades, niveles de evidencia, custodia, permisos y figuras del modelo. |
+| 5.2 a 5.4 | OpenAI Codex (GPT-6) | Motores, conservación, migración, índices y capacidad | Alto | Alto | Responsable D3, Arquitecto de Solución: motores, retención, migración, desempeño y figuras. |
+| Anexo de diccionario | OpenAI Codex (GPT-6) | Atributos y capacidad | Alto | Ninguno | Responsable D3, Arquitecto de Solución: revisión de atributos, restricciones y supuestos. |

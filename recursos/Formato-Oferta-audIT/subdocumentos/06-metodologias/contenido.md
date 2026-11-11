@@ -256,6 +256,6 @@ Conforme al Comunicado 10, sección 7.2, cada sección de este subdocumento y ca
 
 | Sección | Herramienta | Finalidad del uso | Nivel en texto | Nivel en diagramas | Revisión humana (quién y qué verificó) |
 |---|---|---|---|---|---|
-| 6.1 | OpenAI Codex (GPT-6) | Calendario, comités, comunicaciones, adquisiciones y cambios | Alto | Alto | Marcel Gutierrez, Arquitecto de Solución: calendario, comités, comunicaciones, adquisiciones y control de cambios. |
-| 6.2 | OpenAI Codex (GPT-6) | Ingeniería DevSecOps, ambientes, cadencias y reversión | Alto | Alto | Marcel Gutierrez, Arquitecto de Solución: ciclo DevSecOps, ambientes, puertas de calidad, cadencias, reversión y figura del pipeline. |
-| T-9 y T-10 | OpenAI Codex (GPT-6) | Correspondencia de exigencias con metodología y evidencia | Alto | Ninguno | Marcel Gutierrez, Arquitecto de Solución: correspondencia de cada exigencia con su sección. |
+| 6.1 | OpenAI Codex (GPT-6) | Calendario, comités, comunicaciones, adquisiciones y cambios | Alto | Alto | Responsable D3, Arquitecto de Solución: calendario, comités, comunicaciones, adquisiciones y control de cambios. |
+| 6.2 | OpenAI Codex (GPT-6) | Ingeniería DevSecOps, ambientes, cadencias y reversión | Alto | Alto | Responsable D3, Arquitecto de Solución: ciclo DevSecOps, ambientes, puertas de calidad, cadencias, reversión y figura del pipeline. |
+| T-9 y T-10 | OpenAI Codex (GPT-6) | Correspondencia de exigencias con metodología y evidencia | Alto | Ninguno | Responsable D3, Arquitecto de Solución: correspondencia de cada exigencia con su sección. |

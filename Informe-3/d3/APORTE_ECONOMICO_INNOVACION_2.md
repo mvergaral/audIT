@@ -1,6 +1,6 @@
 # Aporte D3 al Informe 3: innovación 2
 
-**Destino:** documento de costos frente a venta y planilla mensual del Informe 3. **Base técnica:** S13, innovación 2 y ficha 2 de T-19. Las tres partidas ya existen, sin valor, en `economico/datos/partidas.csv` (`innovacion-2-inversion`, `innovacion-2-costo`, `innovacion-2-beneficio`). D3 no dispone de cotizaciones, tarifas internas ni una línea base medida; por eso aquí no se asignan montos ficticios.
+**Destino:** documento de costos frente a venta y planilla mensual del Informe 3. **Base técnica:** S13, innovación 2 y ficha 2 de T-19. Las tres partidas ya existen, sin valor, en `recursos/Formato-Oferta-audIT/economico/datos/partidas.csv` (`innovacion-2-inversion`, `innovacion-2-costo`, `innovacion-2-beneficio`). D3 no dispone de cotizaciones, tarifas internas ni una línea base medida; por eso aquí no se asignan montos ficticios.
 
 ## Qué se valoriza
 
