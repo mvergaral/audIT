@@ -2590,7 +2590,7 @@ Este ensayo verifica la activación física del botón de cabina, su registro y 
 
 \par\noindent\textbf{ID:} \texttt{CP-\allowbreak{}HW-\allowbreak{}06}\par
 \par\noindent\textbf{Nivel y Tipología:} Prueba de hardware HIL de activación y entrega SOS por evento.\par
-\par\noindent\textbf{Requerimiento Trazado:} SOS con cobertura, \caso{RT-09.01}{32}. Las variantes de la ficha verifican RF-027 y RNF-001.\par
+\par\noindent\textbf{Requerimiento Trazado:} SOS con cobertura, \caso{RT-09.01}{32}. La variante de la ficha verifica RNF-001.\par
 \par\noindent\textbf{Precondiciones:} Equipo de cabina en banco HIL con SIM M2M multioperador y cobertura celular real documentada. Preparar tráfico ordinario y verificar la sincronización de relojes.\par
 \par\noindent\textbf{Pasos de Ejecución:}\par
 \begin{enumerate}
@@ -2602,8 +2602,6 @@ Este ensayo verifica la activación física del botón de cabina, su registro y 
 \par\noindent\textbf{Resultado Esperado:} Las diez pulsaciones producen un registro correlacionable y un aviso prioritario en la Torre 24x7 en un máximo de 15 segundos por evento con cobertura.\par
 \par\noindent\textbf{Pass/Fail y Severidad:} Pass si todas las pulsaciones cumplen el límite individual, quedan registradas y se entregan con prioridad, y las variantes aplicables son conformes. Fail ante cualquier incumplimiento. Severidad: \textbf{P1 (Bloqueante)}.\par
 \par\noindent\textbf{Entorno:} Banco HIL, red móvil real y consola Torre.\par
-
-\par\noindent\textbf{Variante trazada a RF-027 (S3/T-12):} Reproducir conducción acumulada 4 h 15 min y área segura alcanzable en 35 min: alertar antes de agotar cinco horas con diez minutos de holgura. Mover área a 50 min: no recomendarla como alcanzable legalmente. La alerta en movimiento es pasiva y no solicita escritura ni confirmación táctil. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.\par
 
 \par\noindent\textbf{Variante trazada a RNF-001 (S3/T-12):} Reproducir velocidad cero y velocidad positiva; intentar escritura, formulario y confirmación en ambos estados. En movimiento descartar toda captura manual y mostrar solo aviso pasivo. La recuperación de interfaz detenida no debe perder datos; parámetros de milisegundos son objetivos adicionales, no permiso para interactuar conduciendo. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.\par
 
