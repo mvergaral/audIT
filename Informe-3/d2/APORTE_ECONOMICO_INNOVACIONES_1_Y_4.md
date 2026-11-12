@@ -16,7 +16,7 @@ Montos pendientes de respaldo. Los meses indicados corresponden a la ficha T-19 
 ### Insumos provisionales informados por D3
 
 - **Implementación del expediente:** D3 desglosó las 480 horas provisionales por perfil. Las 560 horas de programación corresponden a la innovación 2 y quedan fuera de AUD-21.
-- **Operación del expediente:** 12 horas al mes entre M21 y M56, ambos inclusive. Son 432 horas en 36 meses, repartidas en 216 de SRE, 144 de software y 72 de seguridad. Falta aplicar costos horarios, verificar cobertura con la operación base y confirmar si se requieren horas adicionales durante la marcha blanca previa a M21.
+- **Operación del expediente:** D3 propone imputar al presupuesto base 12 horas al mes entre M21 y M56, ambos inclusive. Son 432 horas en 36 meses, repartidas en 216 de SRE, 144 de Software y 72 de Seguridad. D2 debe comprobar la disponibilidad por perfil antes de determinar horas adicionales.
 - **Firma electrónica:** D3 reporta como referencias comerciales un certificado FEA de un año por CLP 19.990 más IVA y un eToken por CLP 34.990 más IVA. Pendientes la fuente comercial fechada y la cotización de una modalidad compatible con la emisión automática. Estas referencias quedan fuera del costo oficial.
 - **Consumo del servicio:** estimar expedientes emitidos y verificaciones mensuales, y derivar de esos volúmenes el consumo y costo marginal frente a la infraestructura base.
 
@@ -31,20 +31,22 @@ Montos pendientes de respaldo. Los meses indicados corresponden a la ficha T-19 
 | DevOps/SRE | 40 | Ingeniero DevOps / SRE. |
 | **Total** | **480** | |
 
-**Cruce de calendario.** D3 confirmó que las 480 horas cubren el ciclo completo de implementación. Las fechas son consistentes con T-14, paquete 12.1, y T-19.
+**Cruce de calendario.** El [JSON vigente de D3](https://github.com/mvergaral/audIT/blob/993fa514357085fb75b79a329de0e5c278507233/Informe-3/d3/datos/presupuesto_d3.json) distribuye 416 h de preparación y construcción y 64 h de marcha blanca. Las fechas corresponden a T-14, paquete 12.1, y T-19.
 
-| Mes | Horas | Actividad |
-| --- | ---: | --- |
-| M4 | 64 | Levantamiento con clientes y aseguradoras y definición de FEA frente a credencial. |
-| M8 | 128 | Desarrollo de emisión (EDT 5.1), validador público, firma y portal (EDT 5.7), dentro del bloque M8–M10. |
-| M9 | 144 | Continuación del bloque de desarrollo. |
-| M10 | 112 | Cierre del bloque de desarrollo. |
-| M13–M15 | 32 | Pruebas y soporte a la cohorte inicial durante la marcha blanca. |
-| **Total** | **480** | |
+| Mes | Arquitectura | Software | Frontend/Móvil | Seguridad | Datos | QA | SRE | Total (h) | Costo bruto de referencia (CLP) |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| M4 | 16 | 0 | 0 | 8 | 0 | 0 | 0 | 24 | 768.000–1.344.000 |
+| M8 | 16 | 40 | 24 | 16 | 16 | 16 | 16 | 144 | 3.968.000–5.376.000 |
+| M9 | 0 | 64 | 24 | 16 | 16 | 24 | 0 | 144 | 3.920.000–4.752.000 |
+| M10 | 8 | 40 | 8 | 8 | 0 | 24 | 16 | 104 | 2.720.000–3.552.000 |
+| M13 | 0 | 8 | 8 | 0 | 0 | 16 | 8 | 40 | 928.000–1.184.000 |
+| M14 | 0 | 8 | 0 | 0 | 0 | 0 | 0 | 8 | 240.000 |
+| M15 | 0 | 0 | 0 | 0 | 0 | 16 | 0 | 16 | 256.000–384.000 |
+| **Total** | **40** | **160** | **64** | **48** | **32** | **96** | **40** | **480** | **12.800.000–16.832.000** |
 
-T-15 agrupa la construcción de Etapa 1 en A09, las pruebas integrales en A12 y la marcha blanca en A15. El desglose de D3 entrega totales por perfil y por bloque de calendario. Falta el cruce perfil × mes, la distribución de las 32 horas de marcha blanca entre M13 y M15 y la conciliación con las horas ya presupuestadas en la EDT.
+El cálculo mensual usa CLP 30.000/h para Software y Frontend/Móvil y los extremos de E-26 para los demás perfiles. T-15 ubica la marcha blanca en A15. Las 64 h de esa actividad se reparten en 16 de Software, 8 de Frontend/Móvil, 32 de QA y 8 de SRE. Su costo bruto referencial es CLP 1.424.000–1.808.000, sujeto a conciliación con la carga de E1.
 
-Para operación, D3 confirmó Ingeniero Senior para las 4 h/mes de Software y propone absorberlas en las 640 h/mes del paquete 13.4 de T-15, mantención evolutiva. La capacidad figura en T-15. Queda por confirmar su disponibilidad y aprobar la imputación, además de conciliar SRE y Seguridad con sus respectivos paquetes de operación. T-15 ubica H12 al cierre de M21, por lo que se debe confirmar la imputación de ese mes y la cobertura antes de M21.
+Según D3, el expediente debe funcionar desde M16. D3 mantiene las 12 horas estimadas para M21. H12 cierra la Etapa 2 al final de M21. Si el traspaso exige esfuerzo adicional, estimarlo en una partida separada del mantenimiento del expediente. Queda por conciliar la cobertura de M16 a M20 con la dotación de ese periodo.
 
 ### Costo interno de las 480 horas de implementación
 
@@ -70,11 +72,80 @@ D2 usa la columna de costo horario de [E-26](https://github.com/mvergaral/audIT/
 | Frontend/Móvil | EDT 5.7, portal del transportista y funciones base de viajes, liquidación y consentimientos. | EDT 12.1, botón de emisión y adaptación del consentimiento y la descarga para el expediente. | 64 |
 | **Total por conciliar** | | | **224** |
 
-El [diseño de S13](https://github.com/mvergaral/audIT/blob/4da4195/recursos/Formato-Oferta-audIT/subdocumentos/13-innovaciones/contenido.tex#L88) separa el alcance funcional y permite trazar el trabajo propio del expediente. El diccionario EDT y T-15 no asignan horas individuales a esos bloques. Las 384 horas de M8–M10 informadas por D3 abarcan todos los perfiles y no permiten distribuir las 224 horas entre meses y actividades. [AUD-24](https://linear.app/audit-fep/issue/AUD-24) seguía en Todo sin adjuntos, documentos ni comentarios al revisar.
+| Mes | Software (h) | Frontend/Móvil (h) | Actividades informadas por D3 | Costo bruto de referencia (CLP) |
+| --- | ---: | ---: | --- | ---: |
+| M8 | 40 | 24 | Armado del expediente y controles de datos. Consentimiento y acceso desde el portal. | 1.920.000 |
+| M9 | 64 | 24 | Integración de firma y conservación de versiones. Emisión y descarga. | 2.640.000 |
+| M10 | 40 | 8 | Verificador público, vigencia y registros. Estados y errores. | 1.440.000 |
+| M13 | 8 | 8 | Correcciones de marcha blanca. | 480.000 |
+| M14 | 8 | 0 | Correcciones de marcha blanca. | 240.000 |
+| **Total** | **160** | **64** | **224 h** | **6.720.000** |
 
-Para completar la conciliación, pedir a D3 únicamente el desglose de sus 160 horas de Software y 64 de Frontend/Móvil por actividad y mes, identificando el trabajo específico del expediente y cualquier trabajo ya estimado para el servicio base. D2 cruza ese desglose con los paquetes 5.1, 5.7 y 12.1 y la asignación de T-15. Toda hora ya financiada se registra una sola vez en el presupuesto, aunque el trabajo corresponda a la innovación. Hasta verificar esa asignación, las 224 horas quedan pendientes de clasificar y la partida oficial permanece vacía.
+D3 propone imputar las 480 horas al paquete 12.1, dentro de las 2.560 horas del elemento 12 de T-15. D2 debe confirmar la reserva por perfil y mes contra la carga de las demás innovaciones y conciliar el trabajo con los paquetes 5.1 y 5.7. Los importes brutos quedan fuera del incremento de implementación mientras se comprueba la imputación.
 
-Con los costos internos aprobados, multiplicar las horas de cada perfil por su costo horario. Para obtener el costo incremental, aplicar el mismo cálculo solo a las horas adicionales a lo ya cubierto por T-15. La imputación mensual requiere la distribución de esas horas por perfil y mes. Las 432 horas de operación se concilian por separado.
+### Valorización preliminar de la operación del expediente
+
+Para los 36 meses de M21 a M56 estimados por D3, se aplican los rangos horarios de E-26 y la equivalencia de E-24 ya citados. Los subtotales valorizan la carga completa informada, antes de conciliarla con la operación base.
+
+| Perfil E-26 | h/mes | Horas en 36 meses | Rango (CLP/h) | Rango mensual (CLP) | Rango total (CLP) |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Ingeniero DevOps / SRE | 6 | 216 | 24.000–40.000 | 144.000–240.000 | 5.184.000–8.640.000 |
+| Ingeniero Senior (Software) | 4 | 144 | 24.000–32.000 | 96.000–128.000 | 3.456.000–4.608.000 |
+| Encargado de Seguridad TI | 2 | 72 | 32.000–56.000 | 64.000–112.000 | 2.304.000–4.032.000 |
+| **Total bruto** | **12** | **432** | | **304.000–480.000** | **10.944.000–17.280.000** |
+
+D3 propone imputar 6 h/mes de SRE y 2 h/mes de Seguridad al paquete 13.2, y 4 h/mes de Software al 13.4. T-15 reserva 640 h/mes para cada paquete en conjunto. Para comprobar la cobertura, D2 debe descontar las demás asignaciones del mismo perfil y mes y comparar el saldo con las horas propuestas. Las 12 h/mes quedan fuera del costo incremental mientras se valida esa capacidad. Si se acredita un faltante, valorizar solo esas horas con la tarifa aprobada en AUD-14. La firma automática y el consumo incremental se valorizan por separado.
+
+### Conciliación de capacidad para D2
+
+| Periodo | Resultado del cruce con T-15 | Comprobación pendiente |
+| --- | --- | --- |
+| M8–M10 | D3 asigna 200 h de Software y Frontend/Móvil al 12.1. La curva de T-15 entrega 4.800 h globales en M8 y M9, y 5.280 h en M10. El elemento 12 dispone de 2.560 h globales para todas las innovaciones. | Verificar la reserva mensual de cada perfil en el 12.1 y descontar la carga de las demás tareas. |
+| M13–M15 | T-15 asigna el 100 % de Software sénior y Frontend/Móvil a E1 y E2. D3 identifica 16 h de correcciones en M13 y 8 h en M14. | Identificar qué actividad de la carga ya asignada incluye esas 24 h. Si están fuera de esa carga, determinar qué trabajo se puede reprogramar o cuántas horas habría que agregar. |
+| M16–M20 | El expediente debe estar disponible desde M16. T-15 prevé 5.920 h globales por mes en M16–M17, 4.800 h en M18 y 4.160 h por mes en M19–M20. La reserva de los paquetes 13.2 y 13.4 comienza en M21. | Identificar quién cubre el expediente durante la estabilización y el cierre de implementación. Registrar por mes el esfuerzo de Software, SRE y Seguridad y la actividad base que lo financia. |
+| M21–M56 | La propuesta ocupa 8 de 640 h/mes del 13.2 (1,25 %) y 4 de 640 h/mes del 13.4 (0,625 %). Esas proporciones se calculan sobre el paquete completo. | Verificar 6 h libres de SRE y 2 h libres de Seguridad en 13.2, y 4 h libres de Software en 13.4, una vez descontadas las demás asignaciones de cada perfil. Mantener M21 y registrar por separado cualquier esfuerzo extraordinario de H12. |
+
+Para cerrar el cruce, D2 debe registrar por mes, perfil y paquete las horas presupuestadas, las horas ya asignadas y la parte de esa asignación que cubre el expediente. Las horas propuestas que queden sin cobertura se valorizan solo después de verificar si caben en la capacidad restante o si requieren ampliar la dotación. En M13 y M14, la prioridad es identificar las correcciones dentro de la carga de las escuadras, ya que ambos perfiles figuran totalmente asignados.
+
+#### Imputación propuesta para las correcciones de M13 y M14
+
+S7 encarga a la **Escuadra de Estabilización E1** la marcha blanca de la Etapa 1 y las correcciones de su software. T-15 sitúa esa ventana en **A15**, y T-14 incluye M13–M15 en el **paquete 12.1**, a cargo del Arquitecto de Solución. D2 puede registrar una sola imputación con esas tres referencias: **E1** ejecuta, **A15** identifica la actividad del cronograma y **12.1** identifica el alcance cuyo presupuesto debe cubrir las horas.
+
+| Mes | Software sénior E1 | Frontend/Móvil E1 | Total | Capacidad mensual comprometida por perfil en E1 |
+| --- | ---: | ---: | ---: | --- |
+| M13 | 8 h | 8 h | 16 h | 160 h de Software y 160 h de Frontend/Móvil |
+| M14 | 8 h | 0 h | 8 h | 160 h de Software y 160 h de Frontend/Móvil |
+| **Total** | **16 h** | **8 h** | **24 h** | |
+
+Cada bloque de 8 h ocupa el 5 % de la asignación mensual del perfil correspondiente en E1. D2 debe identificar las tareas que contienen esas horas o validar su redistribución dentro de A15 y conciliar su imputación al 12.1.
+
+#### Roles propuestos para QA y SRE en E1
+
+| Perfil en el JSON de D3 | Rol propuesto de T-15 | Demanda para A15 | Asignación nominal en E1 | Capacidad a comprobar |
+| --- | --- | --- | --- | --- |
+| QA y automatización | Ingeniero de pruebas y automatización (1 de planta) | 16 h en M13 y 16 h en M15 | 160 h/mes, 100 % asignado a E1 | Cada bloque ocupa el 10 % de la asignación. Identificar la validación del expediente dentro de las pruebas ya planificadas o reordenar la carga de ese mes. |
+| DevOps/SRE | Ingeniero SRE / DevOps (2 de refuerzo) | 8 h en M13 | 320 h/mes entre dos personas, 100 % asignado a E1 | Las 8 h ocupan el 2,5 % del equipo o el 5 % de la jornada mensual de una persona. Identificar quién absorbe el bloque y comprobar su carga junto con la guardia. |
+
+El Analista de QA de refuerzo está asignado a E2 durante M13–M15. Para SRE, S7 incorpora a los dos ingenieros de refuerzo a la rotación de guardia de E1, por lo que la asignación nominal de 320 h incluye otras responsabilidades. El cruce identifica los roles compatibles, con cobertura aún pendiente. Una vez identificadas las tareas y las personas en A15, D2 puede determinar el saldo de horas adicionales por perfil y valorizarlo en AUD-14.
+
+Fuentes: [T-15, capacidad de QA y SRE por escuadra](https://github.com/mvergaral/audIT/blob/4da4195/recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/formularios/T-15.tex#L118) · [S7, rotación de guardia de E1](https://github.com/mvergaral/audIT/blob/4da4195/recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/contenido.tex#L273).
+
+Fuentes: respuesta de D3 compartida con D2. [S7, Escuadra de Estabilización E1](https://github.com/mvergaral/audIT/blob/4da4195/recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/contenido.tex#L260) · [T-14, paquete 12.1](https://github.com/mvergaral/audIT/blob/4da4195/recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/formularios/T-14.tex#L74) · [T-15, capacidad por rol](https://github.com/mvergaral/audIT/blob/4da4195/recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/formularios/T-15.tex#L105) · [T-15, actividad A15](https://github.com/mvergaral/audIT/blob/4da4195/recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/formularios/T-15.tex#L209).
+
+#### Cobertura del expediente entre M16 y M20
+
+T-14 exige medir desde M16 el tiempo de respuesta de las verificaciones del paquete 12.1. S7 sitúa el inicio de la mesa de servicio en M16 y asigna al frente de Etapa 1 en producción la mesa, la guardia y las correcciones durante M19–M20. Con esas referencias, D2 propone el siguiente cruce para verificar la cobertura de la medición y del soporte técnico.
+
+| Periodo | Cobertura propuesta | Comprobación para D2 |
+| --- | --- | --- |
+| M16 | A19/H7 para el paso a producción y A21 para la estabilización posterior, según la fecha efectiva del traspaso. Mesa de servicio de Etapa 1 como canal de atención. | Ubicar el inicio de la medición del 12.1, la puesta en servicio del emisor y verificador y la asignación de Software, SRE y Seguridad durante el traspaso. |
+| M17 | A21, estabilización de Etapa 1 dentro de 11.4. | Identificar las tareas de medición, correcciones y permisos/firma dentro de la carga de estabilización. |
+| M18 | Continuidad del frente de Etapa 1 en producción. La ventana de 11.4 en T-14 termina en M17. | Identificar la fila y los responsables que cubren el soporte de M18, donde el plan revisado solo muestra dotación global de 30 personas. |
+| M19–M20 | Frente de Etapa 1 en producción, con 12 personas según S7. | Identificar quién monitorea la verificación y quién atiende correcciones, restauración y permisos/firma en cada mes. |
+
+La referencia técnica de 12 h/mes de D3 aplica a M21–M56. Para M16–M20, registrar por mes la carga ya asignada a medición, atención y correcciones, separando las intervenciones puntuales de activación y traspaso de la demanda recurrente. El costo de personal de este tramo sigue pendiente de esa asignación. Los pagos de firma y nube se calendarizan desde la fecha real de activación.
+
+Fuentes: [T-14, paquetes 11.2, 11.4 y 12.1](https://github.com/mvergaral/audIT/blob/4da4195/recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/formularios/T-14.tex#L71) · [T-15, actividades A19 y A21](https://github.com/mvergaral/audIT/blob/4da4195/recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/formularios/T-15.tex#L213) · [S7, frentes de M19–M20](https://github.com/mvergaral/audIT/blob/4da4195/recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/contenido.tex#L315) · [D3, operación y tratamiento de M21](https://linear.app/audit-fep/document/d3-insumos-economicos-y-pendientes-verificados-informe-3-12-11-2026-31d849dd13ef).
 
 ## Innovación 4 · Esquema de adhesión y propiedad del dispositivo
 
@@ -339,7 +410,7 @@ La propuesta sirve para revisar la carga de los montajes base. El cupo adicional
 
 - Registrar por línea mes, cantidad, unidad, costo unitario y total, moneda, IVA, fuente fechada, pagador, frecuencia y referencia EDT o contractual. Convertir a CLP con los parámetros acordados cuando corresponda.
 - Conciliar el total mensual y el acumulado por innovación. El detalle puede identificar partidas que ya están en el presupuesto base para demostrar su cobertura sin sumarlas de nuevo. Separar el reparto al transportista del presupuesto de audIT y evitar descontarlo dos veces.
-- Pendientes: cruce de horas por perfil y mes, imputación de Software, SRE y Seguridad a los paquetes de operación, esfuerzo incremental de software por perfil para la innovación 4, cotización compatible con la emisión automática y consumo del servicio. D2 debe conciliar las horas con T-15 y aplicar costos por perfil respaldados. Para el comodato faltan el alcance adicional, sus cantidades, la rotación y los costos internos por actividad. Falta confirmar con D1 y D2 la proporción pactada de reparto.
+- Pendientes: comprobar la reserva de las 480 h por perfil y mes en 12.1, incluida la cobertura de las 64 h de marcha blanca en E1/A15, validar capacidad libre por perfil en 13.2 y 13.4, conciliar la cobertura de M16 a M20, cotizar la firma automática y estimar el consumo incremental. Para la innovación 4 faltan el esfuerzo incremental de software, el alcance adicional del comodato, sus cantidades, la rotación y los costos internos por actividad. Falta confirmar con D1 y D2 la proporción pactada de reparto.
 - Las claves `innovacion-1-inversion`, `innovacion-1-costo`, `innovacion-1-beneficio`, `innovacion-4-inversion`, `innovacion-4-costo` e `innovacion-4-beneficio` permanecen vacías hasta contar con respaldo. Confirmar la plantilla del mandante y sus celdas antes de ejecutar la comparación de planilla.
 
 Fuentes internas de alcance y cronograma preliminar: T-19 fichas 1 y 4, S13 §§13.1 y 13.4, T-12 RN-08 y respuesta 05. Fuentes por conciliar antes de cargar cifras: T-15, T-11, E-26, parámetros económicos y cotizaciones.
