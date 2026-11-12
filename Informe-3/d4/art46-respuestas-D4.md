@@ -30,7 +30,8 @@ económico del Informe 3.
 | RIE-06 | R-17 se acepta con seguimiento pese a 21,6 % de atraso de H1 y 16,1 % de H2 | Umbrales de alerta, escalamiento, recuperación y contingencia para H1 y H2, y residual recalculado con la red vigente del T-15 | S8 §8.3 y T-16 | Aceptada, se incorpora en la oferta final |
 | RIE-07 | Las tablas 8.1 a 8.3 se repiten entre S8 y T-16 | El T-16 usa numeración propia y remisiones explícitas a contingencias, disparadores y respuestas | S8 §8.3 y T-16 | Aceptada, se incorpora en la oferta final |
 | INN-02 | La innovación 3 presenta como novedad el kilometraje de los semirremolques | El kilometraje real pasa a cumplimiento del criterio 26. La innovación 3 queda en la verificación del acople y el registro térmico de los 44 refrigerados, con sus pruebas, indicadores y beneficios separados | S13 §13.3 y T-19, ficha 3 | Aceptada, se incorpora en la oferta final |
-| INN-05 | La innovación 3 no tiene base ni magnitud de beneficio | Beneficio en unidades físicas (semirremolques verificados, 44 refrigerados con registro térmico) y valorización con inversión, costo operacional y beneficio en el flujo | Informe 3, tarea 4.9. T-19, ficha 3 | Aceptada. Valorización en el Informe 3 |
+| INN-05 | La innovación 3 no tiene base ni magnitud de beneficio | Beneficio en unidades físicas (asignaciones con el semirremolque verificado, 44 refrigerados con registro térmico) y valorización con inversión y costo operacional en el flujo. El beneficio monetario tiene un escenario prudente de $0 y una sensibilidad, con su fórmula y los parámetros que se miden en la Etapa 1 | Informe 3, tarea 4.9. T-19, ficha 3 | Aceptada. Valorización en el Informe 3 |
 
 Aviso para D1: al aceptar INN-02, la parte del beneficio de la innovación 3 que viene del kilometraje
-deja de ser de la innovación. El beneficio de $135.000.000 de la tarea 1.5 hay que revisarlo.
+deja de ser de la innovación. Por eso el beneficio queda en $0 en el escenario base y los $135.000.000 de
+la tarea 1.5 como sensibilidad, hasta que se rehagan sin el kilometraje (D4-149).

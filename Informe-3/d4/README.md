@@ -40,7 +40,8 @@ Archivos de apoyo:
 | Hardware que compra el mandante, hoja informativa fuera del flujo (4.1) | 225.384.199 |
 | Licencias de GitLab y SonarQube de D3, en la A-18 de la matriz y fuera del total de D4 (4.5) | 38.032.600 |
 
-Innovación 3 (4.9): inversión $5.700.000, costo $4.032.000 y beneficio $135.000.000 (cifra de D1).
+Innovación 3 (4.9): inversión $5.700.000 y costo $4.032.000. Beneficio con escenario prudente de $0 y la
+cifra de D1, $135.000.000, como sensibilidad (D4-149).
 
 ## Bases del reparto
 
@@ -49,7 +50,7 @@ Innovación 3 (4.9): inversión $5.700.000, costo $4.032.000 y beneficio $135.00
   Informe 3, §9, en `../../texto/Aclaraciones_Informe_3.md`).
 - Valores netos, al tipo de cambio del Formulario E-24: USD $900 y EUR $1.000.
 - Lo que no tiene precio público está estimado y marcado «estimado».
-- Las decisiones están en `../../Informe-2/D4/DECISIONES-D4.md`, D4-134 a D4-148.
+- Las decisiones están en `../../Informe-2/D4/DECISIONES-D4.md`, D4-134 a D4-149.
 
 ## Cómo volver a calcular
 
