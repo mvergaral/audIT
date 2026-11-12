@@ -17,28 +17,30 @@ ofertado frente al costo total: \textbackslash montoPartida\{proyecto\} y
 
 \section{Proveedores clave de la solución}\label{sec:eco-proveedores}
 
-\marcador{Párrafo de contexto: qué muestra la \tabref{eco-proveedores} y por qué
-esos proveedores son clave}
+La \tabref{eco-proveedores} identifica proveedores relevantes para el despliegue, la continuidad del servicio y la adquisición del equipamiento de referencia.
 
 \begin{tabla}{Proveedores clave de la solución}{eco-proveedores}{L{38mm} X L{38mm} L{34mm}}
 Proveedor & Qué provee & Componente o servicio & Criterio de selección \\ \midrule
-\marcador{proveedor} & \marcador{producto o servicio} & \marcador{componente} & \marcador{criterio} \\
+Microsoft & Azure en Chile Central y Brazil South & Plataforma y recuperación & Disponibilidad regional y canal CSP \\
+Dell & Servidores & Infraestructura on-premise & Soporte y disponibilidad en Chile \\
+iWave, Teltonika y Technoton & Equipos y periféricos de campo y red & Telemetría y acceso en terminal & Compatibilidad con el diseño de T-11 \\
+Ground Control & Tiempo de aire Iridium & Respaldo satelital & Cobertura en rutas sin servicio terrestre \\
 \end{tabla}
 
-\marcador{Conclusión que se saca de la tabla}
+El operador móvil y el proveedor del circuito ExpressRoute se seleccionan al validar cobertura y factibilidad del enlace.
 
 \section{Adquisiciones clave o relevantes}\label{sec:eco-adquisiciones}
 
-\marcador{Párrafo de contexto: qué muestra la \tabref{eco-adquisiciones}. El
-monto de cada adquisición va en partidas.csv y se imprime con
-\textbackslash montoPartida}
+La \tabref{eco-adquisiciones} presenta ventanas de compra o inicio de servicio según el calendario de adquisiciones.
 
 \begin{tabla}{Adquisiciones clave o relevantes de la solución}{eco-adquisiciones}{L{40mm} X C{14mm} L{36mm}}
 Adquisición & Para qué & Mes & Modalidad \\ \midrule
-\marcador{adquisición} & \marcador{uso en la solución} & \marcador{mes} & \marcador{compra, arriendo o suscripción} \\
+Infraestructura on-premise & Sala técnica, cómputo de terminal y continuidad & 1--4 & Compra de audIT \\
+Azure & Ambientes de la plataforma y recuperación & Desde 1 & Servicio de audIT \\
+Equipos de campo y red & Montaje en vehículos y red de terminal & Según calendario & Compra del mandante \\
 \end{tabla}
 
-\marcador{Conclusión que se saca de la tabla}
+La instalación se ejecuta con personal interno de audIT. El soporte del fabricante y las mantenciones especializadas se contratan como servicios.
 
 \section{Curva S del proyecto}\label{sec:eco-curva-s}
 
@@ -55,9 +57,7 @@ recursos humanos, con los gastos de proveedores sumados a operación}
 \tablaMontos{Costos de la solución por categoría de gasto}{eco-gastos}%
   {gasto-operacion-directo, gasto-proveedores, gasto-inversion, gasto-administracion, gasto-rrhh}
 
-\marcador{Justificación de cada ítem y su coherencia con el plan de
-actividades: las bases evalúan con severidad un presupuesto sobreestimado o
-subestimado}
+El presupuesto de referencia de infraestructura, nube, conectividad, soporte y otros servicios suma CLP 1.526.997.751 netos en 56 meses, incluidos CLP 863.430.586 de Azure. La reserva de CLP 152.699.775 se identifica por separado y su imputación mensual queda sujeta a conciliación. El bloque con reserva suma CLP 1.679.697.526. Las licencias de GitLab y SonarQube se registran en el presupuesto de software y las horas de instalación interna se concilian con recursos humanos. Las compras informativas de hardware de campo y red del mandante suman CLP 225.384.199 y quedan fuera del flujo de audIT, al igual que la energía de sala y gabinetes y el combustible del grupo electrógeno.
 
 \subsection{Costos frente a venta}\label{sec:eco-venta}
 
@@ -85,9 +85,7 @@ Tasa interna de retorno (TIR) & \marcador{porcentaje} \\
 
 \section{Valorización de las cinco innovaciones}\label{sec:eco-innovaciones}
 
-\marcador{Párrafo de contexto: qué muestra la \tabref{eco-innovaciones}, la
-inversión, el costo operacional y el beneficio esperado de cada innovación en
-el flujo de caja}
+La \tabref{eco-innovaciones} separa la inversión, el costo operacional y el beneficio esperado por innovación. En programación de patio se usa un caso base prudente de CLP 0 y una sensibilidad provisional de CLP 90.000.000 a 36 meses. Para la verificación de acople y el registro térmico adicional se usa un caso base prudente de CLP 0. La sensibilidad provisional del registro térmico es de CLP 60.000.000 a 36 meses. El acople sigue pendiente de valorización y el kilometraje se acredita en el criterio 26. El recupero de sobreestadías se estima en CLP 362.100.000 brutos a 36 meses a régimen y el neto del mandante depende del reparto con los transportistas. Estos escenarios se mantienen separados del beneficio neto consolidado y de los ingresos de audIT.
 
 \tablaMontos*[fuente=condensada]{Valorización de las cinco innovaciones en el flujo de caja}{eco-innovaciones}%
   {innovacion-1-inversion, innovacion-1-costo, innovacion-1-beneficio,

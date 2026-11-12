@@ -41,14 +41,12 @@ En cumplimiento del rol asignado a la Dupla 1 en la planificación del Informe 3
    * **Regla del VAN y M0:** Se calcula exclusivamente sobre el Flujo Libre (Fila A) sin deducir intereses. Dado que las obras y desembolsos arrancan en M1, $F_0 = 0$ y la función `=VNA(B_tasa; Flujo_M1_M56)` reporta directamente el valor actual neto.
 
 3. **Explicación de Beneficios Económicos para el Mandante (`AUD-9` / Tarea 1.5)**:
-   * **Cuadro Resumen y Calificación Metodológica Dual:**
-     * *Beneficios Consolidados de Ingeniería (Innovaciones 2, 3 y 4):* **\$585.000.000 CLP** en 36 meses (\$195.000.000 CLP/año), desglosados en:
-       * \$360.000.000 CLP por recuperación de sobreestadías hoy objetadas en faenas (Innovación 4: sobre base anual de **\$340.000.000 CLP facturados** según Caso 10, §7.2, con 71 % objetado = \$241.400.000 CLP/año, recuperando el 50 % = \$120.000.000 CLP/año).
-       * \$135.000.000 CLP por mantención preventiva de semirremolques por km real y cadena de frío (Innovación 3).
-       * \$90.000.000 CLP por reducción de tiempos muertos en patio (Innovación 2).
-     * *Proyección bajo Hipótesis Paramétrica de Ingeniería (Innovación 5):* **\$238.320.000 CLP** en 36 meses (\$79.440.000 CLP/año), sujeta a contraste y calibración empírica en marcha blanca (M13–M15) con el TMS 2013 y a integración económica por D2.
-     * **TOTAL GLOBAL PROYECTADO PARA CURIMÓN:** **\$823.320.000 CLP en los 36 meses** (\$274.440.000 CLP/año). Al presentar este total se preserva explícitamente su naturaleza dual (base consolidada de \$585M + hipótesis proyectada de \$238,32M).
-   * **Separación de Flujos (Art. 50.2):** Estos beneficios pertenecen íntegramente a Curimón y no representan cobro ni ingreso de audIT. Se retira la afirmación de autosustentabilidad garantizada hasta contar con el precio final consolidado del Sobre N.º 3.
+   * **Tipo 1:** Valorización pendiente.
+   * **Tipo 2:** Beneficio monetario de Curimón pendiente de acreditar. Caso base prudente CLP 0 y sensibilidad provisional CLP 90.000.000 en M21–M56. Validar oportunidades elegibles, visitas y minutos evitados, costos unitarios y pagador. Las horas de instalación liberadas corresponden a audIT.
+   * **Tipo 3:** El kilometraje real cumple el criterio 26. Se retiran CLP 75.000.000 de la valorización incremental a 36 meses. Caso base prudente CLP 0 (D4-149). Se mantiene CLP 60.000.000 a 36 meses como sensibilidad térmica provisional. El beneficio del acople queda pendiente de cuantificar. Los CLP 135.000.000 del cálculo original quedan como antecedente histórico porque incluían kilometraje.
+   * **Tipo 4:** CLP 120.700.000 brutos/año (CLP 340.000.000 × 71 % × 50 % supuesto) y CLP 362.100.000 brutos en 36 meses a régimen. Neto de Curimón pendiente del reparto con transportistas.
+   * **Tipo 5:** CLP 238.320.000 en 36 meses como escenario, sujeto a calibración en marcha blanca.
+   * **Consolidación:** El total neto queda pendiente de validación. El recupero bruto y las sensibilidades se muestran por separado y los beneficios de Curimón se mantienen fuera de los ingresos de audIT.
 
 4. **Valorización Completa de la Innovación 5 (`AUD-11` / Tarea 1.7 / `INN-05`)**:
    * **Cumplimiento del Artículo 50.2 (Sobre Técnico vs. Sobre Económico):** En el Formulario T-19 (Ficha 5) se han suprimido todos los valores monetarios en CLP y tarifas horarias, remitiendo formalmente su valorización al Sobre N.º 3 (Oferta Económica).
