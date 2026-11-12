@@ -1,0 +1,114 @@
+[
+  {
+    "repositorio": "flutter/flutter",
+    "url": "https://github.com/flutter/flutter/blob/master/LICENSE",
+    "sha": "aea51a336a305bd31e4e50af448679ed0c73b95e",
+    "licencia": "BSD-3-Clause",
+    "fecha_consulta": "2026-11-12"
+  },
+  {
+    "repositorio": "dart-lang/sdk",
+    "url": "https://github.com/dart-lang/sdk/blob/main/LICENSE",
+    "sha": "be5c7b45c38a54f9bde197ed254753167d61ad1b",
+    "licencia": "BSD-3-Clause",
+    "fecha_consulta": "2026-11-12"
+  },
+  {
+    "repositorio": "facebook/react",
+    "url": "https://github.com/react/react/blob/main/LICENSE",
+    "sha": "b93be90515ccd0b9daedaa589e42bf5929693f1f",
+    "licencia": "MIT",
+    "fecha_consulta": "2026-11-12"
+  },
+  {
+    "repositorio": "vercel/next.js",
+    "url": "https://github.com/vercel/next.js/blob/canary/license.md",
+    "sha": "5948ee9bd0de5064423688a2967ab3111c2658ed",
+    "licencia": "MIT",
+    "fecha_consulta": "2026-11-12"
+  },
+  {
+    "repositorio": "dotnet/runtime",
+    "url": "https://github.com/dotnet/runtime/blob/main/LICENSE.TXT",
+    "sha": "984713a49622a96da110443c15477613bc12656b",
+    "licencia": "MIT",
+    "fecha_consulta": "2026-11-12"
+  },
+  {
+    "repositorio": "golang/go",
+    "url": "https://github.com/golang/go/blob/master/LICENSE",
+    "sha": "2a7cf70da6e498df9c11ab6a5eaa2ddd7af34da4",
+    "licencia": "BSD-3-Clause",
+    "fecha_consulta": "2026-11-12"
+  },
+  {
+    "repositorio": "debezium/debezium",
+    "url": "https://github.com/debezium/debezium/blob/main/LICENSE.txt",
+    "sha": "7a4a3ea2424c09fbe48d455aed1eaa94d9124835",
+    "licencia": "Apache-2.0",
+    "fecha_consulta": "2026-11-12"
+  },
+  {
+    "repositorio": "delta-io/delta",
+    "url": "https://github.com/delta-io/delta/blob/master/LICENSE.txt",
+    "sha": "a04059199fb38aa317e3fe490465fef0907e29f1",
+    "licencia": "Apache-2.0",
+    "fecha_consulta": "2026-11-12"
+  },
+  {
+    "repositorio": "aquasecurity/trivy",
+    "url": "https://github.com/aquasecurity/trivy/blob/main/LICENSE",
+    "sha": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+    "licencia": "Apache-2.0",
+    "fecha_consulta": "2026-11-12"
+  },
+  {
+    "repositorio": "anchore/syft",
+    "url": "https://github.com/anchore/syft/blob/main/LICENSE",
+    "sha": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+    "licencia": "Apache-2.0",
+    "fecha_consulta": "2026-11-12"
+  },
+  {
+    "repositorio": "sigstore/cosign",
+    "url": "https://github.com/sigstore/cosign/blob/main/LICENSE",
+    "sha": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+    "licencia": "Apache-2.0",
+    "fecha_consulta": "2026-11-12"
+  },
+  {
+    "repositorio": "bridgecrewio/checkov",
+    "url": "https://github.com/bridgecrewio/checkov/blob/main/LICENSE",
+    "sha": "6dab8a318d54575f03cfa40688e9093e4398f979",
+    "licencia": "Apache-2.0",
+    "fecha_consulta": "2026-11-12"
+  },
+  {
+    "repositorio": "zaproxy/zaproxy",
+    "url": "https://github.com/zaproxy/zaproxy/blob/main/LICENSE",
+    "sha": "8dada3edaf50dbc082c9a125058f25def75e625a",
+    "licencia": "Apache-2.0",
+    "fecha_consulta": "2026-11-12"
+  },
+  {
+    "repositorio": "hashicorp/terraform",
+    "url": "https://github.com/hashicorp/terraform/blob/main/LICENSE",
+    "sha": "ad310798d99823e25b0f4b49707b2b2ce0261e14",
+    "licencia": "NOASSERTION",
+    "fecha_consulta": "2026-11-12"
+  },
+  {
+    "repositorio": "SonarSource/sonarqube",
+    "url": "https://github.com/SonarSource/sonarqube/blob/master/LICENSE.txt",
+    "sha": "65c5ca88a67c30becee01c5a8816d964b03862f9",
+    "licencia": "LGPL-3.0",
+    "fecha_consulta": "2026-11-12"
+  },
+  {
+    "repositorio": "timescale/timescaledb",
+    "url": "https://github.com/timescale/timescaledb/blob/main/LICENSE",
+    "sha": "6b7980745c9892ba0d79368acab331dea2246ac2",
+    "licencia": "NOASSERTION",
+    "fecha_consulta": "2026-11-12"
+  }
+]

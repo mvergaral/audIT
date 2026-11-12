@@ -1,0 +1,79 @@
+{
+  "fecha": "2026-11-12",
+  "revision_base": "8ae8c27",
+  "naturaleza": "Estimaciones de D3 para conciliación; no son cotizaciones ni una nivelación aprobada del T-15",
+  "usd_clp": 900,
+  "uf_clp": 40000,
+  "iva": 0.19,
+  "fuente_conversion": "FEP01, Formulario E-24, p. 73",
+  "perfiles": {
+    "arquitectura": {"nombre": "Arquitecto de Solución", "e26": "Arquitecto Senior", "costo_min_uf_h": 0.8, "costo_max_uf_h": 1.4},
+    "lider": {"nombre": "Líder de Desarrollo", "e26": "Jefe de Desarrollo", "costo_min_uf_h": 0.7, "costo_max_uf_h": 1.4},
+    "software": {"nombre": "Ingeniero de software sénior", "e26": "Ingeniero Senior", "costo_min_uf_h": 0.6, "costo_max_uf_h": 0.8},
+    "frontend": {"nombre": "Ingeniero frontend y móvil", "e26": "Ingeniero Senior", "costo_min_uf_h": 0.6, "costo_max_uf_h": 0.8},
+    "seguridad": {"nombre": "Seguridad TI", "e26": "Encargado de Seguridad TI", "costo_min_uf_h": 0.8, "costo_max_uf_h": 1.4},
+    "datos": {"nombre": "Ingeniero de datos", "e26": "Ingeniero de Datos", "costo_min_uf_h": 0.6, "costo_max_uf_h": 1.0},
+    "qa": {"nombre": "QA y automatización", "e26": "Analista QA Senior", "costo_min_uf_h": 0.4, "costo_max_uf_h": 0.6},
+    "sre": {"nombre": "DevOps/SRE", "e26": "Ingeniero DevOps / SRE", "costo_min_uf_h": 0.6, "costo_max_uf_h": 1.0}
+  },
+  "implementacion_base": [
+    {"edt": "5", "actividad": "Seis contextos E1, interfaces por perfil y portal base", "horas_t15": 17600, "ventana": "M6–M10, A09; ocho sprints T-10", "horas_perfil_propuestas": {"arquitectura": 320, "lider": 640, "software": 5920, "frontend": 4000, "seguridad": 640, "datos": 1600, "qa": 3200, "sre": 1280}},
+    {"edt": "6", "actividad": "Contable, posicionamiento, fábrica, costos y capa anticorrupción", "horas_t15": 6400, "ventana": "M6–M9 y retiro gradual M16–M24, según T-14", "horas_perfil_propuestas": {"arquitectura": 160, "lider": 320, "software": 2720, "frontend": 320, "seguridad": 320, "datos": 1280, "qa": 960, "sre": 320}},
+    {"edt": "7", "actividad": "Vigencias, migración histórica y repositorio analítico", "horas_t15": 4800, "ventana": "M4–M12 y cierres M19–M24, según T-14", "horas_perfil_propuestas": {"arquitectura": 160, "lider": 160, "software": 320, "frontend": 160, "seguridad": 320, "datos": 2400, "qa": 960, "sre": 320}},
+    {"edt": "8", "actividad": "Portal cliente, retornos, emisiones, talleres y rendimiento E2", "horas_t15": 8000, "ventana": "M13–M18, A17/A20/A22; cinco sprints T-10", "horas_perfil_propuestas": {"arquitectura": 240, "lider": 400, "software": 2400, "frontend": 1600, "seguridad": 400, "datos": 1200, "qa": 1280, "sre": 480}}
+  ],
+  "innovacion_1": {
+    "edt": "12.1",
+    "horas": {"arquitectura": 40, "software": 160, "frontend": 64, "seguridad": 48, "datos": 32, "qa": 96, "sre": 40},
+    "mensual": {
+      "arquitectura": {"4": 16, "8": 16, "10": 8},
+      "software": {"8": 40, "9": 64, "10": 40, "13": 8, "14": 8},
+      "frontend": {"8": 24, "9": 24, "10": 8, "13": 8},
+      "seguridad": {"4": 8, "8": 16, "9": 16, "10": 8},
+      "datos": {"8": 16, "9": 16},
+      "qa": {"8": 16, "9": 24, "10": 24, "13": 16, "15": 16},
+      "sre": {"8": 16, "10": 16, "13": 8}
+    },
+    "operacion_h_mes": {"sre": 6, "software": 4, "seguridad": 2}
+  },
+  "innovacion_2": {
+    "edt": "12.2",
+    "horas": {"arquitectura": 40, "software": 176, "frontend": 64, "seguridad": 32, "datos": 64, "qa": 104, "sre": 80},
+    "mensual": {
+      "arquitectura": {"4": 16, "5": 16, "6": 8},
+      "software": {"4": 24, "5": 56, "6": 32, "7": 24, "8": 16, "9": 8, "16": 8, "17": 8},
+      "frontend": {"5": 24, "6": 16, "7": 8, "8": 8, "16": 8},
+      "seguridad": {"4": 8, "5": 8, "6": 8, "16": 8},
+      "datos": {"4": 16, "5": 16, "6": 16, "7": 8, "16": 8},
+      "qa": {"5": 24, "6": 32, "7": 16, "9": 16, "18": 16},
+      "sre": {"4": 16, "5": 24, "6": 16, "9": 8, "16": 8, "18": 8}
+    },
+    "operacion_h_mes": {"sre": 4, "software": 4, "seguridad": 2, "datos": 2, "qa": 4},
+    "beneficio_base_clp_mes": 0,
+    "beneficio_hipotesis_d1_clp_anual": 30000000,
+    "nota_beneficio": "Los 30 millones anuales aparecen en el paquete D1; D3 no los acredita. Caso base prudente: cero; sensibilidad separada hasta justificar cantidades y costos unitarios."
+  },
+  "gitlab": {
+    "producto": "GitLab Premium Self-Managed, edición Enterprise",
+    "usd_usuario_mes": 29,
+    "facturacion_meses": 12,
+    "fuente": "https://about.gitlab.com/pricing/",
+    "pagos": [{"mes": 1, "usuarios": 33}, {"mes": 13, "usuarios": 37}, {"mes": 25, "usuarios": 16}, {"mes": 37, "usuarios": 16}, {"mes": 49, "usuarios": 16}],
+    "nota": "Supuesto conservador: se licencia la dotación máxima de cada anualidad. Reducir a 16 desde M25 exige ajustar la renovación y dar de baja accesos. M49 compra doce meses hasta M60 sin suponer devolución de los cuatro meses posteriores al contrato. Aumentos de tarifa, accesos del mandante y sobreconsumo de IA no están contratados ni acreditados."
+  },
+  "nube_auxiliar_propuesta": [
+    {"id": "D3-AUX-GITLAB", "concepto": "VM de GitLab", "sku": "Standard_D8ds_v5", "usd_h": 0.633, "cantidad": 1, "horas_mes": 730, "inicio": 1, "fin": 56, "meter_id": "f2fe1002-1dd1-5a73-8c53-296831d6d3d5"},
+    {"id": "D3-AUX-SONAR", "concepto": "VM de SonarQube", "sku": "Standard_D4ds_v5", "usd_h": 0.316, "cantidad": 1, "horas_mes": 730, "inicio": 4, "fin": 56, "meter_id": "41cfa109-993d-5770-a6d1-96f273adae01"},
+    {"id": "D3-AUX-RUNNERS-IMPL", "concepto": "Runners aislados de construcción", "sku": "Standard_D4ds_v5", "usd_h": 0.316, "cantidad": 2, "horas_mes": 100, "inicio": 4, "fin": 20, "meter_id": "41cfa109-993d-5770-a6d1-96f273adae01"},
+    {"id": "D3-AUX-RUNNERS-OP", "concepto": "Runners aislados de operación", "sku": "Standard_D4ds_v5", "usd_h": 0.316, "cantidad": 2, "horas_mes": 40, "inicio": 21, "fin": 56, "meter_id": "41cfa109-993d-5770-a6d1-96f273adae01"}
+  ],
+  "sonarqube": {
+    "producto": "SonarQube Server Developer Edition, una instancia autogestionada",
+    "usd_anual": null,
+    "loc": null,
+    "fuente": "https://www.sonarsource.com/plans-and-pricing/sonarqube/",
+    "pagos_propuestos": [4, 16, 28, 40, 52],
+    "decision_usuario": "Dejar cotización pendiente; no se dispone de oferta comercial ni acuerdo de edición anterior",
+    "nota": "Developer es la referencia para análisis oficial de Dart/Flutter y ramas/merge requests. LOC y precio deben cotizarse; null no significa gratuito ni cero."
+  }
+}
