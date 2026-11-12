@@ -2327,35 +2327,26 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 \par\noindent\textbf{Variante trazada a RF-022 (S3/T-12):} Crear permisos por propietario, dato, vehículo, destinatario y vigencia; conceder y revocar uno a hora fija. En hasta cinco minutos deben cesar accesos comprendidos, incluso con token o caché previa; conservar auditoría. Un conductor o propietario ajeno no puede revocar. No eliminar evidencia que tiene obligación de conservación. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.\par
 
 \par\noindent\textbf{Variante trazada a RNF-013 (S3/T-12):} Inventariar atributos que requieren protección y roles autorizados; leerlos desde disco y mediante API con rol permitido y ajeno. Todos los atributos protegidos están cifrados en persistencia y filtrados por rol/atributo; cero valores claros o accesos ajenos. Conservar claves y configuración del fixture; el ejemplo de ciphertext no acredita algoritmo real. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.\par
-\subsubsection*{CP-SEC-05 — Revocación Inmediata de Consentimiento de Geolocalización (\(\le 5\text{ min}\))}\label{sec:9-cp-sec-05}
+\subsubsection*{CP-SEC-05 — Revocación de permisos de geolocalización (\(\le 5\text{ min}\))}\label{sec:9-cp-sec-05}
 \addcontentsline{toc}{subsubsection}{CP-SEC-05}
-Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y el criterio siguiente.
+Este ensayo comprueba en una sola ejecución el cese del acceso revocado y la conservación de la evidencia previa.
 
 \par\noindent\textbf{ID:} \texttt{C\allowbreak{}P\allowbreak{}-\allowbreak{}S\allowbreak{}E\allowbreak{}C\allowbreak{}-\allowbreak{}0\allowbreak{}5\allowbreak{}}\par
-\par\noindent\textbf{Nivel y Tipología:} Prueba de Ciberseguridad / Derechos ARCO y Soberanía del Titular de Datos.\par
+\par\noindent\textbf{Nivel y Tipología:} Prueba de integración del control de acceso y conservación de evidencia.\par
 \par\noindent\textbf{Requerimiento Trazado:} RF-022, RNF-003, RNF-013.\par
-\par\noindent\textbf{Precondiciones:} Conductor subcontratado con consentimiento previo otorgado para uso de PWA.\par
-\par\noindent\textbf{Pasos de Ejecución:} \par
+\par\noindent\textbf{Precondiciones:} Dueño del camión o representante autorizado del transportista, autenticado en el portal del transportista. Permiso sintético vigente delimitado por vehículo, dato, destinatario y período. El destinatario tiene una sesión activa y existe una muestra de evidencia previa sujeta a conservación. Identificar si el permiso también habilita la captura en una fuente concreta y, de ser así, disponer de observación en esa fuente.\par
+\par\noindent\textbf{Pasos de Ejecución:}\par
 \begin{enumerate}
-\item Conductor presiona en la PWA el botón "Revocar Consentimiento de Ubicación".
-\item La PWA envía la petición al backend; el módulo de privacidad invalida la autorización en Redis y PostgreSQL.
-\item Cronometrar el tiempo en que la Torre de Control y los servicios de ingesta dejan de capturar y mostrar las coordenadas personales del conductor fuera de viaje.
+\item Comprobar el acceso permitido y registrar identificador y huella de la evidencia previa. Si el permiso habilita captura, registrar la actividad inicial de la fuente.
+\item Comprobar que un usuario sin autorización para administrar el permiso no puede revocarlo y que el rechazo queda en la bitácora.
+\item El titular autorizado revoca el permiso en el portal del transportista. Registrar la hora de recepción de la solicitud en el módulo de privacidad.
+\item Medir hasta el cese de los accesos cubiertos por el permiso, incluida la sesión activa y la caché del sistema. Si el permiso habilitaba captura, verificar en la fuente que deja de generar datos nuevos bajo ese permiso. Comprobar que el tratamiento con autorización independiente y vigente continúa.
+\item En la misma ejecución, consultar la muestra previa con un rol autorizado para su custodia, comparar identificador y huella, y cotejar el registro de revocación con el permiso y la hora registrada.
 \end{enumerate}
-\par\noindent\textbf{Datos de Entrada Sintéticos:} Evento de revocación formal de consentimiento de chofer \texttt{D\allowbreak{}R\allowbreak{}V\allowbreak{}-\allowbreak{}S\allowbreak{}Y\allowbreak{}N\allowbreak{}T\allowbreak{}H\allowbreak{}-\allowbreak{}2\allowbreak{}0\allowbreak{}4\allowbreak{}}.\par
-\par\noindent\textbf{Resultado Esperado:} La revocación se propaga a todo el sistema en 12 segundos (\(\ll 5\text{ minutos}\)); el canal telemático del chofer se disocia inmediatamente; se genera comprobante legal de revocación.\par
-\par\noindent\textbf{Pass/Fail y Severidad:} Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: \textbf{P1 (Bloqueante)}.\par
-\par\noindent\textbf{Entorno:} Staging AKS / Módulo de Privacidad.\par
-
-
-
-
-\par\noindent\textbf{Titularidad y revocación:} El solicitante con derecho de revocar es el propietario/titular autorizado del camión, no cualquier conductor. Preparar permisos por dato, camión, viaje, destinatario y fecha. Al revocar, cesan los accesos comprendidos por ese permiso; no se borran datos con obligación de conservación ni se deshabilita una función cuya fuente legítima y permiso sigan vigentes. Intentar revocación por usuario ajeno debe producir denegación y auditoría.\par\par
-
-
-
-
-
-\par\noindent\textbf{Variante trazada a RF-022 (S3/T-12):} Crear permisos por propietario, dato, vehículo, destinatario y vigencia; conceder y revocar uno a hora fija. En hasta cinco minutos deben cesar accesos comprendidos, incluso con token o caché previa; conservar auditoría. Un conductor o propietario ajeno no puede revocar. No eliminar evidencia que tiene obligación de conservación. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.\par
+\par\noindent\textbf{Datos de Entrada Sintéticos:} Camión, titular autorizado, usuario ajeno, permiso de geolocalización, sesión de destinatario y muestra de evidencia previa.\par
+\par\noindent\textbf{Resultado Esperado:} El acceso revocado y, cuando corresponda, la captura habilitada por ese mismo permiso cesan en no más de cinco minutos. Se conserva íntegra la evidencia previa sujeta a conservación. La bitácora identifica el permiso, el actor y la hora de revocación. Se registra el tiempo observado durante el ensayo.\par
+\par\noindent\textbf{Pass/Fail y Severidad:} Pass si se cumplen el plazo, la conservación, el registro y los controles de alcance y autorización. Cualquier incumplimiento es Fail. Si se requiere observar la captura y el entorno carece de visibilidad sobre la fuente, esa comprobación queda pendiente de acreditación. Severidad: \textbf{P1 (Bloqueante)}.\par
+\par\noindent\textbf{Entorno:} Staging AKS / Portal del Transportista y Módulo de Privacidad. Fuente instrumentada o banco HIL si el alcance incluye captura embarcada.\par
 
 \par\noindent\textbf{Variante trazada a RNF-013 (S3/T-12):} Inventariar atributos que requieren protección y roles autorizados; leerlos desde disco y mediante API con rol permitido y ajeno. Todos los atributos protegidos están cifrados en persistencia y filtrados por rol/atributo; cero valores claros o accesos ajenos. Conservar claves y configuración del fixture; el ejemplo de ciphertext no acredita algoritmo real. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.\par
 \subsubsection*{CP-SEC-06 — Autenticación Mutua TLS (mTLS) entre Microservicios y Rotación de Certificados}\label{sec:9-cp-sec-06}
