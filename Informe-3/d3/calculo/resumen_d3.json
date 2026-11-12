@@ -161,9 +161,6 @@
   "sonarqube": {
     "tipo_importe": "Presupuesto de referencia para Informe 3: precio público de catálogo EUR 215 netos para SKU 100.000 LOC, con duración anual supuesta a partir del modelo del fabricante. No es cotización ni tarifa anual confirmada.",
     "es_cotizacion": false,
-    "cotizacion_pendiente": true,
-    "cotizacion_bloquea_informe3": false,
-    "presupuesto_informe3_completo": true,
     "sku_catalogo": "SONARCL-DEV-100K",
     "loc_objetivo_no_medido": 100000,
     "eur_anual_modelado": 215.0,
@@ -242,7 +239,7 @@
     "La asignación por perfil de EDT 5 a 8 es una propuesta para valorizar el presupuesto existente, no prueba de factibilidad mensual.",
     "EDT 6 y 7 tienen actividades hasta M24, mientras la curva de implementación T-15 termina en M20. D2 debe separar el cierre en operación sin sumar horas dos veces.",
     "No se demuestra holgura por perfil en EDT 13.2 ni 13.4; por ello no se afirma costo adicional cero ni se suman automáticamente las horas propuestas.",
-    "SonarQube se presupuesta con el catálogo EUR 215 para 100K LOC y duración anual supuesta. AUD-25 está completo para el Informe 3 con fuentes y supuestos; la confirmación comercial se reserva para una eventual compra real.",
+    "SonarQube se presupuesta con el catálogo EUR 215 para 100K LOC y duración anual supuesta; el precio y período se confirman antes de contratar.",
     "Faltan completar servicios cloud auxiliares y conciliar personal; el total recurrente completo sigue abierto."
   ]
 }

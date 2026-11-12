@@ -27,7 +27,7 @@
     "edt": "12.1",
     "horas": {"arquitectura": 40, "software": 160, "frontend": 64, "seguridad": 48, "datos": 32, "qa": 96, "sre": 40},
     "costos_referencia_clp_h_implementacion": {"software": 30000, "frontend": 30000},
-    "fuente_costos_referencia": "Referencia provisional D2 para las 224 h de Ingeniero Senior de implementación del expediente; AUD-21, commit 93477ab5ab445fdad81a201f940e4171e298593c. No se extiende a operación ni a innovación 2.",
+    "fuente_costos_referencia": "Referencia provisional D2 para las 224 h de Ingeniero Senior de implementación del expediente; commit 93477ab5ab445fdad81a201f940e4171e298593c. No se extiende a operación ni a innovación 2.",
     "mensual": {
       "arquitectura": {"4": 16, "8": 16, "10": 8},
       "software": {"8": 40, "9": 64, "10": 40, "13": 8, "14": 8},
@@ -88,10 +88,6 @@
     "titular_licencia": "Transportes Curimón S.A.; pago por audIT, conforme al Art. 84",
     "soporte": "Soporte base documental e interno de audIT. No se supone SLA comercial directo incluido.",
     "es_cotizacion": false,
-    "cotizacion_pendiente": true,
-    "cotizacion_bloquea_informe3": false,
-    "presupuesto_informe3_completo": true,
-    "alcance_validacion_comercial": "Validación previa a una eventual compra real; no es un entregable faltante del Informe 3. Para este avance se utiliza el presupuesto de referencia con fuentes y supuestos explícitos.",
     "naturaleza_importe": "Presupuesto de referencia para Informe 3: precio público de catálogo EUR 215 netos para SKU 100.000 LOC, con duración anual supuesta a partir del modelo del fabricante. No es cotización ni tarifa anual confirmada.",
     "nota": "Precio y SKU proceden del catálogo; periodicidad anual y capacidad necesaria son supuestos de planificación explícitos. No se aplica un multiplicador de reserva. La referencia histórica USD 720/año se conserva como escenario alternativo por la diferencia de fuentes, sin atribuirle el mismo SKU. Las 100.000 LOC son capacidad inicial propuesta, no código medido. Antes de comprar se confirman anualidad, precio vigente para Chile, capacidad, soporte y titularidad/transferencia. M52 cubre hasta M63 bajo el supuesto anual y se paga completo, sin devolución presunta."
   }

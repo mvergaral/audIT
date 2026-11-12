@@ -91,9 +91,6 @@ def main():
     neto_alternativo = D(alternativa["precio_anual"]) * D(P["usd_clp"]) * D(sonar["instancias"]) * len(pagos_sonar)
     r["sonarqube"] = {
         "tipo_importe": sonar["naturaleza_importe"], "es_cotizacion": False,
-        "cotizacion_pendiente": sonar["cotizacion_pendiente"],
-        "cotizacion_bloquea_informe3": sonar["cotizacion_bloquea_informe3"],
-        "presupuesto_informe3_completo": sonar["presupuesto_informe3_completo"],
         "sku_catalogo": sonar["sku_catalogo"], "loc_objetivo_no_medido": sonar["loc"],
         "eur_anual_modelado": float(anual),
         "periodo_anual_es_supuesto": not sonar["periodo_catalogo_confirmado"],
@@ -118,7 +115,7 @@ def main():
         "La asignación por perfil de EDT 5 a 8 es una propuesta para valorizar el presupuesto existente, no prueba de factibilidad mensual.",
         "EDT 6 y 7 tienen actividades hasta M24, mientras la curva de implementación T-15 termina en M20. D2 debe separar el cierre en operación sin sumar horas dos veces.",
         "No se demuestra holgura por perfil en EDT 13.2 ni 13.4; por ello no se afirma costo adicional cero ni se suman automáticamente las horas propuestas.",
-        "SonarQube se presupuesta con el catálogo EUR 215 para 100K LOC y duración anual supuesta. AUD-25 está completo para el Informe 3 con fuentes y supuestos; la confirmación comercial se reserva para una eventual compra real.",
+        "SonarQube se presupuesta con el catálogo EUR 215 para 100K LOC y duración anual supuesta; el precio y período se confirman antes de contratar.",
         "Faltan completar servicios cloud auxiliares y conciliar personal; el total recurrente completo sigue abierto.",
     ]
     destino = RAIZ / "calculo/resumen_d3.json"

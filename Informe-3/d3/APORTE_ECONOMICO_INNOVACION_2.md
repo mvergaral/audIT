@@ -1,6 +1,6 @@
 # 3.7 · Valorización de la innovación 2
 
-**Tarea:** AUD-30. **Innovación:** programación de intervenciones por oportunidad de patio, EDT 12.2. **Reciben:** D2/AUD-16 y D1/AUD-9/AUD-12. **Fecha:** 12-11-2026. **Estado:** costo atribuido y escenarios preparados; cierre pendiente de capacidad, nube y consolidación.
+**Innovación:** programación de intervenciones por oportunidad de patio, EDT 12.2. **Fecha:** 12-11-2026.
 
 ## Inversión de desarrollo
 
@@ -31,7 +31,7 @@ Las 560 h se proponen dentro de las 2.560 h de innovaciones T-15. En el flujo so
 | M17 | 8 | Correcciones del escalamiento |
 | M18 | 24 | Regresión y acta de cierre |
 
-D2 debe hacer visible la preparación M4–M5 dentro de 12.2 para llegar al piloto M6; se conservan montaje M6–M9 y continuación M16–M18. No se afirman homologación o piloto ejecutados. QA valida laboratorio/reintentos/reversa; las pruebas físicas del equipo requieren firmware y campo ya presupuestados, que se concilian con D4 para no duplicar jornadas.
+La preparación M4–M5 de 12.2 habilita el piloto M6; se conservan montaje M6–M9 y continuación M16–M18. QA validará laboratorio, reintentos y reversa. Las pruebas físicas requieren el trabajo de firmware y campo de D4, con imputación única de las jornadas.
 
 ## Operación
 
@@ -41,24 +41,32 @@ Costo atribuido de referencia: $472.000/mes y $16.992.000 en 36 meses; rango $36
 
 ## Beneficio de Curimón y sensibilidad
 
-El Caso no entrega preparación desperdiciada ni visitas adicionales realmente causadas por la programación manual. El **caso base monetario prudente es $0** hasta justificar parámetros; significa ahorro no acreditado, no ausencia de utilidad.
+El Artículo 29.5 (FEP01 p.19) exige impacto económico **estimado** y beneficio esperado. Para el avance del Informe 3 se puede formular una proyección con hipótesis justificadas; no se exige disponer hoy de resultados medidos del piloto contractual M6. La medición y el acta del piloto pertenecen a la verificación futura de la solución, no son una condición que D3 añada para poder preparar el presupuesto actual.
 
-Beneficio bruto mensual = visitas adicionales efectivamente evitadas × costo unitario de visita + minutos de preparación efectivamente evitados × costo por minuto.
+El Caso no entrega preparación desperdiciada ni visitas adicionales causadas por la programación manual. El **caso base monetario prudente de D3 sigue en $0**, mientras no se documente una proyección causal atribuible a Curimón; significa beneficio no cuantificado en ese escenario, no ausencia de utilidad ni necesidad de ejecutar el proyecto antes de estimarlo.
 
-Se excluyen paradas normales, visitas que no habrían ocurrido e instalación obligatoria sin inmovilización adicional. Inversión y operación van en sus filas; no se restan otra vez dentro del beneficio bruto. Los ahorros son de Curimón y no ingresos de audIT.
+Para Curimón, el beneficio bruto mensual estimado se expresa como:
 
-El paquete económico D1 incluye **$30.000.000/año por patio**, $90.000.000 en 36 meses. D3 no encontró su derivación en cantidades/costos ni acta de línea base. Ese importe puede mantenerse como **hipótesis de sensibilidad**, $2.500.000 mensuales M21–M56, hasta demostrar el cálculo. No se valida como beneficio consolidado. D1 debe conciliarlo con el escenario prudente antes de publicar el total global.
+`visitas adicionales evitadas cuyo costo asumiría Curimón × costo incremental evitado por visita + minutos evitados de recursos de Curimón × costo operativo por minuto`.
+
+Cada término debe indicar volumen elegible, frecuencia, comparación manual, mejora supuesta y responsable de pagar el costo evitado. Si se monetiza el mismo recurso en una visita evitada, sus minutos no se vuelven a sumar como otro ahorro. Se excluyen paradas normales, visitas que no habrían ocurrido e instalación obligatoria sin inmovilización adicional. Inversión y operación van en sus filas; no se restan otra vez dentro del beneficio bruto.
+
+La instalación es trabajo interno de audIT, conforme a las aclaraciones del Informe 3 §9 y al reparto económico de D4. Por tanto, tiempo liberado de esos técnicos se trata como capacidad o costo evitado de audIT, según su efecto real de caja. No se atribuye automáticamente a Curimón ni se suma como ingreso de audIT. Si un ahorro se traslada al cliente mediante un precio menor, se documenta una sola vez y no se duplica como beneficio independiente.
+
+El paquete económico D1 incluye **$30.000.000/año por patio**, $90.000.000 en 36 meses, dentro de «Beneficios Consolidados de Ingeniería». Esa cifra equivale a **$2.500.000 mensuales M21–M56**, pero dividirla entre meses solo distribuye el importe: no demuestra su origen. En el aporte revisado no aparece la derivación por cantidades y costos ni la atribución del ahorro. Se conserva como **hipótesis agregada de sensibilidad**, no como beneficio consolidado.
+
+Propuesta de conciliación para esta entrega: mantener el escenario prudente D3 de $0 y el escenario de D1 de $90.000.000 separados. Si D1 documenta los parámetros que justifican su cifra y a quién beneficia, puede acordarse como beneficio **esperado**, sin exigir resultados reales del piloto ahora. No se fabrican cantidades o tarifas para hacer coincidir una fórmula con los $90 millones.
+
+El beneficio del cliente se presenta separado de los costos y de los ingresos de audIT. La inversión y el costo incremental de la innovación se calculan por separado.
 
 ## Evidencia y carga
 
-En M6 se registra cada oportunidad: terminal/familia, autorización, ventana, kit, técnico, preparación, cancelación/causa, visita adicional real, costo y resultado. El plan manual se registra antes de la recomendación. Se compara la misma muestra separando no comparables y unidades sin autorización. Sin muestra o compatibilidad del agente no se escala ni acredita reducción monetaria. La meta técnica −20 % de preparación inútil no se aplica automáticamente a todos los costos de patio.
+En la ejecución contractual se prevé registrar en M6 cada oportunidad: terminal/familia, autorización, ventana, kit, técnico, preparación, cancelación/causa, visita adicional real, costo y resultado. El plan manual se registra antes de la recomendación. Se compara la misma muestra separando no comparables y unidades sin autorización. Sin esa muestra o compatibilidad del agente no se acredita una reducción observada ni el escalamiento operativo. Esto se distingue de la estimación del Informe 3. La meta técnica −20 % de preparación inútil no se aplica automáticamente a todos los costos de patio.
 
 | Clave económica | Valor de referencia | Entrada al flujo |
 |---|---|---|
 | innovacion-2-inversion | Atribución $16.576.000, sustituible por costo de D2 | Reconciliar 560 h con RRHH; no duplicar |
 | innovacion-2-costo | Atribución $16.992.000 en 36 meses; nube pendiente | Agregar únicamente déficit de personal y consumo adicionales; total todavía abierto |
-| innovacion-2-beneficio | Base prudente $0; sensibilidad D1 $90.000.000/36 meses | Hoja de beneficios del mandante, fuera de ingresos de audIT |
+| innovacion-2-beneficio | Base prudente $0; sensibilidad agregada D1 $90.000.000/36 meses, sin derivación documentada en el aporte revisado | Hoja de beneficios del mandante, fuera de ingresos de audIT; separar el ahorro de recursos propios del proponente |
 
-El archivo común economico/datos/partidas.csv sigue sin cifras de innovación 2 porque falta conciliar el costo incremental neto. No se sustituyen faltantes por costo atribuido para aparentar cierre. Las dependencias FF AUD-24/AUD-26 siguen abiertas.
-
-**Fuentes:** S13 §13.2/T-19 ficha 2; S7/T-14, 12.2; T-15, 2.560 h; E-24 p.73/E-26 p.76; paquete económico D1, Beneficios; Aclaraciones Informe 3 §§1 y 5. Esta tarea no modifica S13, T-19 ni los valores de D1.
+**Fuentes:** S13 §13.2/T-19 ficha 2; S7/T-14, 12.2; T-15, 2.560 h; FEP01 Art.29.5, p.19; E-24 p.73/E-26 p.76; paquete económico D1 §1.3, Beneficios; Aclaraciones Informe 3 §§1, 5 y 9; D4, 4.8-compras-audit-y-mandante.md §1.
