@@ -94,8 +94,43 @@ a("DEV", "PostgreSQL", "B1ms, 32 GB", P["pg_b1ms"] * H + 32 * P["pg_gb_cc"])
 a("DEV", "Azure Managed Redis", "Balanced B0", P["redis_b0"] * H)
 a("DEV", "Log Analytics", "0,3 GB al día", 9 * P["la_gb"])
 
-# Meses activos de cada ambiente (contrato de 56 meses, mes 1 = febrero de 2027)
-MESES = {"DEV": (4, 56), "QA": (4, 56), "PREPROD": (6, 56), "PROD": (6, 56), "DR": (12, 56)}
+# Meses activos de cada ambiente (contrato de 56 meses, mes 1 = febrero de 2027).
+# Recuperación desde el mes 6: el H3 pide cinco ambientes operativos (T-14, paquete 3.1, y S7), D4-148 b.
+MESES = {"DEV": (4, 56), "QA": (4, 56), "PREPROD": (6, 56), "PROD": (6, 56), "DR": (6, 56)}
+
+# ---------------------------------------------------------------- Herramientas y datos (3.6 de D3, D4-148 a)
+# Precios agregados, consultados el 2026-11-12 en la misma API (disk_cc, backup_cc y acr)
+P.update({
+    "d8_cc": 0.633,                                     # vm_cc: D8ds v5, por hora
+    "p6": 13.024089, "p10": 25.149965, "p20": 93.414156,  # disk_cc: Premium SSD LRS, por disco y mes
+    "bk_vm": 13.9997, "bk_zrs_gb": 0.039199,            # backup_cc: Azure VM Protected Instance y Standard ZRS Data Stored
+    "acr_dia": 1.6666,                                  # acr: Premium Registry Unit y Premium Registry Replication Unit, por día
+})
+ENTRA_P1 = 7.0  # USD por usuario y mes, pago anual (microsoft.com/en-us/security/business/microsoft-entra-pricing, 2026-11-12)
+ENTRA = {1: 33, 13: 37, 25: 16, 37: 16, 49: 16}  # usuarios por pago anual, los mismos de GitLab (3.5 de D3)
+
+# (grupo, id, servicio, supuesto, USD al mes, mes inicial, mes final). Los D3-AUX son el pedido de la 3.6.
+S = [
+    ("Herramientas", "D3-AUX-GITLAB", "Máquina de GitLab", "1 D8ds v5 Linux, 730 h", P["d8_cc"] * H, 1, 56),
+    ("Herramientas", "D3-AUX-SONAR", "Máquina de SonarQube", "1 D4ds v5 Linux, 730 h", P["d4_cc"] * H, 4, 56),
+    ("Herramientas", "D3-AUX-RUNNERS-IMPL", "Runners de integración continua", "2 D4ds v5, 100 h por máquina al mes", 2 * 100 * P["d4_cc"], 4, 20),
+    ("Herramientas", "D3-AUX-RUNNERS-OP", "Runners en operación", "2 D4ds v5, 40 h por máquina al mes", 2 * 40 * P["d4_cc"], 21, 56),
+    ("Herramientas", "D4-AUX-DISCO-GITLAB", "Discos de GitLab", "Premium SSD P6 de arranque y P20 de 512 GB de datos", P["p6"] + P["p20"], 1, 56),
+    ("Herramientas", "D4-AUX-DISCO-SONAR", "Discos de SonarQube", "P6 de arranque y P10 de 128 GB de datos", P["p6"] + P["p10"], 4, 56),
+    ("Herramientas", "D4-AUX-DISCO-RUNNERS", "Discos de los runners", "2 P10 de 128 GB, se cobran con la máquina apagada", 2 * P["p10"], 4, 56),
+    ("Herramientas", "D4-AUX-RESPALDO", "Respaldo de GitLab y SonarQube", "Azure Backup, 2 máquinas protegidas y 1.000 GB en ZRS", 2 * P["bk_vm"] + 1000 * P["bk_zrs_gb"], 1, 56),
+    ("Herramientas", "D4-AUX-ACR", "Registro de contenedores", "ACR Premium en Chile Central, 500 GB incluidos", P["acr_dia"] * H / 24, 4, 56),
+    ("Herramientas", "D4-AUX-ACR-DR", "Réplica del registro en Brazil South", "Unidad de replicación Premium, junto con la recuperación", P["acr_dia"] * H / 24, 6, 56),
+    ("Datos", "D4-AUX-CDC", "CDC con Debezium", "1 D4ds v5 con Kafka Connect, 730 h, y disco P6", P["d4_cc"] * H + P["p6"], 6, 56),
+    ("Datos", "D4-AUX-ANALITICA", "Procesos Delta y consultas analíticas", "1 D8ds v5, 730 h, y disco P6", P["d8_cc"] * H + P["p6"], 6, 56),
+]
+
+
+def azure_mes(m):
+    """USD de Azure y Entra ID en el mes m: ambientes, herramientas y datos, y el pago anual de Entra ID."""
+    usd = sum(u for amb, _, _, u in L if MESES[amb][0] <= m <= MESES[amb][1])
+    usd += sum(u for *_, u, m0, m1 in S if m0 <= m <= m1)
+    return usd + ENTRA.get(m, 0) * 12 * ENTRA_P1
 
 
 # ---------------------------------------------------------------- Conectividad que paga audIT
@@ -121,7 +156,8 @@ def conectividad(total_azure):
     print(f"| Planes LTE de los equipos a bordo | Estimado $3.000 netos por línea activa al mes (D4-145) | {fmt(182 * 3000)} | {fmt(lte)} |")
     print(f"| Circuito del proveedor de ExpressRoute | Estimado USD 1.000 al mes, meses 4 a 56 (D4-145) | {fmt(1000 * TC)} | {fmt(er)} |")
     print(f"| Total conectividad | | | {fmt(iri + act + sim + lte + er)} |")
-    print(f"\nTOTAL NUBE Y CONECTIVIDAD: {fmt(total_azure + iri + act + sim + lte + er)}")
+    # suma de los totales ya redondeados, para que cuadre con las tablas de la 4.2 y la 4.5
+    print(f"\nTOTAL NUBE Y CONECTIVIDAD: {fmt(round(total_azure) + round(iri + act + sim + lte + er))}")
 
 
 def fmt(x, d=0):
@@ -141,7 +177,24 @@ if __name__ == "__main__":
         n = m1 - m0 + 1
         total += usd * TC * n
         print(f"| {amb} | {m0} a {m1} | {fmt(usd, 2)} | {fmt(usd * TC)} | {n} | {fmt(usd * TC * n)} |")
-    print(f"| Total 56 meses | | | | | {fmt(total)} |")
+    print(f"| Total ambientes 56 meses | | | | | {fmt(total)} |")
     apim = 2 * P["apim_prem"] * H
     print(f"\nAPIM Premium: {fmt(apim, 2)} USD al mes, {apim / tot_amb['PROD']:.0%} de producción")
+
+    print("\n| ID | Servicio | Supuesto | USD al mes | Meses | Total neto en pesos |\n|---|---|---|---|---|---|")
+    t_herr = {}
+    for g, i, serv, sup, usd, m0, m1 in S:
+        v = usd * TC * (m1 - m0 + 1)
+        t_herr[g] = t_herr.get(g, 0) + v
+        print(f"| {i} | {serv} | {sup} | {fmt(usd, 2)} | {m0} a {m1} | {fmt(v)} |")
+    entra = sum(ENTRA.values()) * 12 * ENTRA_P1 * TC
+    print(f"| D4-AUX-ENTRA | Entra ID P1 | USD 7 por usuario y mes, pago anual: 33 usuarios en el mes 1, 37 en el 13 y 16 en los meses 25, 37 y 49 | | 1, 13, 25, 37 y 49 | {fmt(entra)} |")
+    d3 = sum(usd * TC * (m1 - m0 + 1) for g, i, _, _, usd, m0, m1 in S if i.startswith("D3"))
+    sup_tot = sum(t_herr.values()) + entra
+    print(f"| Total herramientas, datos e identidad | | | | | {fmt(sup_tot)} |")
+    print(f"\nPedido de D3 (D3-AUX): {fmt(d3)}. Estimado por D4: {fmt(sup_tot - d3)}")
+    total += sup_tot
+    print(f"TOTAL AZURE: {fmt(total)}")
+    chk = sum(azure_mes(m) for m in range(1, 57)) * TC
+    assert abs(chk - total) < 1, (chk, total)
     conectividad(total)

@@ -1,22 +1,22 @@
 # Informe 3 · Aporte de D4 (infraestructura, proveedores y adquisiciones)
 
-Tareas de D4 del proyecto de Linear de la entrega 3, P-AUD-1 (AUD-32 a AUD-41). Versión del 2026-11-11.
+Tareas de D4 del proyecto de Linear de la entrega 3, P-AUD-1 (AUD-32 a AUD-41). Versión del 2026-11-12.
 Cada tarea tiene su archivo, con el mismo contenido que su adjunto en Linear.
 
 ## Tareas
 
 | Código | Linear | Tarea | Archivo | Estado en Linear |
 |---|---|---|---|---|
-| 4.1 | AUD-32 | Presupuestar equipos, repuestos, instalación e infraestructura | `4.1-presupuesto-equipos.md` | In Progress, espera 4.4 |
-| 4.2 | AUD-33 | Calcular nube, conectividad y alojamiento | `4.2-nube-conectividad.md` | In Progress, espera 3.6 de D3 |
-| 4.3 | AUD-34 | Calcular mantenimiento, reposiciones y operación técnica | `4.3-mantencion-operacion.md` | In Progress |
-| 4.4 | AUD-35 | Identificar y justificar proveedores clave | `4.4-proveedores-clave.md` | In Progress, espera 3.5 de D3 |
-| 4.5 | AUD-36 | Consolidar matriz de adquisiciones | `4.5-matriz-adquisiciones.md` | In Progress, espera 3.4 de D3 |
-| 4.6 | AUD-37 | Entregar calendario de compras y contrataciones a D2 | `4.6-calendario-compras.md` | In Progress |
-| 4.7 | AUD-38 | Valorizar respuestas a riesgos y contingencias | `4.7-riesgos-contingencias.md` | In Progress |
+| 4.1 | AUD-32 | Presupuestar equipos, repuestos, instalación e infraestructura | `4.1-presupuesto-equipos.md` | Done |
+| 4.2 | AUD-33 | Calcular nube, conectividad y alojamiento | `4.2-nube-conectividad.md` | Done |
+| 4.3 | AUD-34 | Calcular mantenimiento, reposiciones y operación técnica | `4.3-mantencion-operacion.md` | Done |
+| 4.4 | AUD-35 | Identificar y justificar proveedores clave | `4.4-proveedores-clave.md` | Done |
+| 4.5 | AUD-36 | Consolidar matriz de adquisiciones | `4.5-matriz-adquisiciones.md` | Done |
+| 4.6 | AUD-37 | Entregar calendario de compras y contrataciones a D2 | `4.6-calendario-compras.md` | Done |
+| 4.7 | AUD-38 | Valorizar respuestas a riesgos y contingencias | `4.7-riesgos-contingencias.md` | In Progress, espera 2.2 de D2 y 3.3 de D3 |
 | 4.8 | AUD-39 | Distinguir compras de audIT y del cliente | `4.8-compras-audit-y-mandante.md` | Done |
-| 4.9 | AUD-40 | Valorizar innovación 3 | `4.9-innovacion-3.md` | In Progress |
-| 4.10 | AUD-41 | Redactar explicación de costos y adquisiciones | `4.10-explicacion-costos-adquisiciones.md` | In Progress |
+| 4.9 | AUD-40 | Valorizar innovación 3 | `4.9-innovacion-3.md` | Done |
+| 4.10 | AUD-41 | Redactar explicación de costos y adquisiciones | `4.10-explicacion-costos-adquisiciones.md` | In Progress, espera 4.7 |
 
 Archivos de apoyo:
 
@@ -32,12 +32,13 @@ Archivos de apoyo:
 | Concepto | Neto en pesos, 56 meses |
 |---|---|
 | Infraestructura on-premise y unidades de prueba (4.1) | 111.326.621 |
-| Azure (4.2) | 750.165.482 |
+| Azure, con herramientas, datos e identidad (4.2) | 863.430.586 |
 | Conectividad (4.2) | 396.869.362 |
 | Soporte y mantención (4.3) | 152.371.182 |
-| Asesoría legal R-24 y reserva de contingencia (4.7) | 144.373.265 |
-| **Total de D4 en el flujo de audIT** | **1.555.105.912** |
+| Asesoría legal R-24 y reserva de contingencia (4.7) | 155.699.775 |
+| **Total de D4 en el flujo de audIT** | **1.679.697.526** |
 | Hardware que compra el mandante, hoja informativa fuera del flujo (4.1) | 225.384.199 |
+| Licencias de GitLab y SonarQube de D3, en la A-18 de la matriz y fuera del total de D4 (4.5) | 38.032.600 |
 
 Innovación 3 (4.9): inversión $5.700.000, costo $4.032.000 y beneficio $135.000.000 (cifra de D1).
 
@@ -48,7 +49,7 @@ Innovación 3 (4.9): inversión $5.700.000, costo $4.032.000 y beneficio $135.00
   Informe 3, §9, en `../../texto/Aclaraciones_Informe_3.md`).
 - Valores netos, al tipo de cambio del Formulario E-24: USD $900 y EUR $1.000.
 - Lo que no tiene precio público está estimado y marcado «estimado».
-- Las decisiones están en `../../Informe-2/D4/DECISIONES-D4.md`, D4-134 a D4-146.
+- Las decisiones están en `../../Informe-2/D4/DECISIONES-D4.md`, D4-134 a D4-148.
 
 ## Cómo volver a calcular
 

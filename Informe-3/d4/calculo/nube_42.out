@@ -50,13 +50,33 @@
 | Ambiente | Meses | USD al mes | Pesos al mes | Meses activos | Total neto en pesos |
 |---|---|---|---|---|---|
 | PROD | 6 a 56 | 11.633,59 | 10.470.232 | 51 | 533.981.844 |
-| DR | 12 a 56 | 3.251,01 | 2.925.907 | 45 | 131.665.797 |
+| DR | 6 a 56 | 3.251,01 | 2.925.907 | 51 | 149.221.237 |
 | PREPROD | 6 a 56 | 989,35 | 890.419 | 51 | 45.411.378 |
 | QA | 4 a 56 | 558,08 | 502.270 | 53 | 26.620.311 |
 | DEV | 4 a 56 | 261,76 | 235.588 | 53 | 12.486.152 |
-| Total 56 meses | | | | | 750.165.482 |
+| Total ambientes 56 meses | | | | | 767.720.922 |
 
 APIM Premium: 5.590,34 USD al mes, 48% de producción
+
+| ID | Servicio | Supuesto | USD al mes | Meses | Total neto en pesos |
+|---|---|---|---|---|---|
+| D3-AUX-GITLAB | Máquina de GitLab | 1 D8ds v5 Linux, 730 h | 462,09 | 1 a 56 | 23.289.336 |
+| D3-AUX-SONAR | Máquina de SonarQube | 1 D4ds v5 Linux, 730 h | 230,68 | 4 a 56 | 11.003.436 |
+| D3-AUX-RUNNERS-IMPL | Runners de integración continua | 2 D4ds v5, 100 h por máquina al mes | 63,20 | 4 a 20 | 966.960 |
+| D3-AUX-RUNNERS-OP | Runners en operación | 2 D4ds v5, 40 h por máquina al mes | 25,28 | 21 a 56 | 819.072 |
+| D4-AUX-DISCO-GITLAB | Discos de GitLab | Premium SSD P6 de arranque y P20 de 512 GB de datos | 106,44 | 1 a 56 | 5.364.488 |
+| D4-AUX-DISCO-SONAR | Discos de SonarQube | P6 de arranque y P10 de 128 GB de datos | 38,17 | 4 a 56 | 1.820.902 |
+| D4-AUX-DISCO-RUNNERS | Discos de los runners | 2 P10 de 128 GB, se cobran con la máquina apagada | 50,30 | 4 a 56 | 2.399.307 |
+| D4-AUX-RESPALDO | Respaldo de GitLab y SonarQube | Azure Backup, 2 máquinas protegidas y 1.000 GB en ZRS | 67,20 | 1 a 56 | 3.386.799 |
+| D4-AUX-ACR | Registro de contenedores | ACR Premium en Chile Central, 500 GB incluidos | 50,69 | 4 a 56 | 2.418.028 |
+| D4-AUX-ACR-DR | Réplica del registro en Brazil South | Unidad de replicación Premium, junto con la recuperación | 50,69 | 6 a 56 | 2.326.782 |
+| D4-AUX-CDC | CDC con Debezium | 1 D4ds v5 con Kafka Connect, 730 h, y disco P6 | 243,70 | 6 a 56 | 11.186.018 |
+| D4-AUX-ANALITICA | Procesos Delta y consultas analíticas | 1 D8ds v5, 730 h, y disco P6 | 475,11 | 6 a 56 | 21.807.737 |
+| D4-AUX-ENTRA | Entra ID P1 | USD 7 por usuario y mes, pago anual: 33 usuarios en el mes 1, 37 en el 13 y 16 en los meses 25, 37 y 49 | | 1, 13, 25, 37 y 49 | 8.920.800 |
+| Total herramientas, datos e identidad | | | | | 95.709.665 |
+
+Pedido de D3 (D3-AUX): 36.078.804. Estimado por D4: 59.630.861
+TOTAL AZURE: 863.430.586
 
 | Conectividad | Supuesto | Pesos al mes en régimen | Total neto 56 meses |
 |---|---|---|---|
@@ -67,4 +87,4 @@ APIM Premium: 5.590,34 USD al mes, 48% de producción
 | Circuito del proveedor de ExpressRoute | Estimado USD 1.000 al mes, meses 4 a 56 (D4-145) | 900.000 | 47.700.000 |
 | Total conectividad | | | 396.869.362 |
 
-TOTAL NUBE Y CONECTIVIDAD: 1.147.034.844
+TOTAL NUBE Y CONECTIVIDAD: 1.260.299.948

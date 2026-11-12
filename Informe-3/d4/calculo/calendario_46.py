@@ -23,14 +23,9 @@ for lineas, es_prueba in ((p41.M, False), (p41.PRUEBA, True)):
         destino = "inversion" if (es_prueba or k in p41.AUDIT) else "mandante"
         col[destino][mes] += precio * p41.TC[mon] * q
 
-# Azure por ambiente y meses activos
-por_amb = {}
-for amb, _, _, usd in n42.L:
-    por_amb[amb] = por_amb.get(amb, 0) + usd
-for amb, usd in por_amb.items():
-    m0, m1 = n42.MESES[amb]
-    for m in range(m0, m1 + 1):
-        col["azure"][m] += usd * n42.TC
+# Azure por ambiente y meses activos, más herramientas, datos y Entra ID (D4-148)
+for m in MESES:
+    col["azure"][m] += n42.azure_mes(m) * n42.TC
 
 # conectividad
 for m in MESES:
@@ -68,6 +63,6 @@ if __name__ == "__main__":
             tot[k] += col[k][m]
         print(f"| {m} | {fmt(col['inversion'][m])} | {fmt(col['azure'][m])} | {fmt(col['conectividad'][m])} | "
               f"{fmt(col['soporte'][m])} | {fmt(col['otros'][m])} | {fmt(audit)} | {fmt(acum)} | {fmt(col['mandante'][m])} |")
-    t_audit = sum(tot[k] for k in ["inversion", "azure", "conectividad", "soporte", "otros"])
+    t_audit = sum(round(tot[k]) for k in ["inversion", "azure", "conectividad", "soporte", "otros"])
     print(f"| Total | {fmt(tot['inversion'])} | {fmt(tot['azure'])} | {fmt(tot['conectividad'])} | {fmt(tot['soporte'])} | "
           f"{fmt(tot['otros'])} | {fmt(t_audit)} | | {fmt(tot['mandante'])} |")
