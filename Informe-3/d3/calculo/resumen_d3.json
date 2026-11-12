@@ -159,14 +159,90 @@
     "total_completo": false
   },
   "sonarqube": {
-    "total_neto_clp": null,
-    "cotizacion_pendiente": true
+    "tipo_importe": "Presupuesto de referencia para Informe 3: precio público de catálogo EUR 215 netos para SKU 100.000 LOC, con duración anual supuesta a partir del modelo del fabricante. No es cotización ni tarifa anual confirmada.",
+    "es_cotizacion": false,
+    "cotizacion_pendiente": true,
+    "cotizacion_bloquea_informe3": false,
+    "presupuesto_informe3_completo": true,
+    "sku_catalogo": "SONARCL-DEV-100K",
+    "loc_objetivo_no_medido": 100000,
+    "eur_anual_modelado": 215.0,
+    "periodo_anual_es_supuesto": true,
+    "pagos": [
+      {
+        "mes": 4,
+        "eur": 215.0,
+        "neto_clp": 215000.0,
+        "neto_uf": 5.375,
+        "neto_usd": 238.88888888888889,
+        "iva_clp": 40850.0,
+        "cobertura_hasta_mes": 15
+      },
+      {
+        "mes": 16,
+        "eur": 215.0,
+        "neto_clp": 215000.0,
+        "neto_uf": 5.375,
+        "neto_usd": 238.88888888888889,
+        "iva_clp": 40850.0,
+        "cobertura_hasta_mes": 27
+      },
+      {
+        "mes": 28,
+        "eur": 215.0,
+        "neto_clp": 215000.0,
+        "neto_uf": 5.375,
+        "neto_usd": 238.88888888888889,
+        "iva_clp": 40850.0,
+        "cobertura_hasta_mes": 39
+      },
+      {
+        "mes": 40,
+        "eur": 215.0,
+        "neto_clp": 215000.0,
+        "neto_uf": 5.375,
+        "neto_usd": 238.88888888888889,
+        "iva_clp": 40850.0,
+        "cobertura_hasta_mes": 51
+      },
+      {
+        "mes": 52,
+        "eur": 215.0,
+        "neto_clp": 215000.0,
+        "neto_uf": 5.375,
+        "neto_usd": 238.88888888888889,
+        "iva_clp": 40850.0,
+        "cobertura_hasta_mes": 63
+      }
+    ],
+    "total_eur": 1075.0,
+    "total_neto_clp": 1075000.0,
+    "total_neto_uf": 26.875,
+    "total_neto_usd": 1194.4444444444443,
+    "total_iva_clp": 204250.0,
+    "escenario_referencia_historica": {
+      "usd_anual": 720,
+      "neto_clp_5_anualidades": 3240000.0,
+      "iva_clp": 615600.0,
+      "diferencia_sobre_base_clp": 2165000.0,
+      "misma_capacidad_y_condiciones_confirmadas": false
+    },
+    "validacion_comercial_antes_de_compra": true
+  },
+  "licencias_comerciales_presupuestadas": {
+    "total_neto_clp": 38032600.0,
+    "total_iva_referencial_clp": 7226194.0,
+    "sonar_es_estimacion": true,
+    "incluye_alojamiento_y_personal": false,
+    "total_neto_uf": 950.815,
+    "total_neto_usd": 42258.444444444445
   },
   "total_software_externo_cerrado": false,
   "advertencias": [
     "La asignación por perfil de EDT 5 a 8 es una propuesta para valorizar el presupuesto existente, no prueba de factibilidad mensual.",
     "EDT 6 y 7 tienen actividades hasta M24, mientras la curva de implementación T-15 termina en M20. D2 debe separar el cierre en operación sin sumar horas dos veces.",
     "No se demuestra holgura por perfil en EDT 13.2 ni 13.4; por ello no se afirma costo adicional cero ni se suman automáticamente las horas propuestas.",
-    "Faltan SonarQube y los servicios cloud auxiliares no desglosados por D4. Los subtotales conocidos no son el total completo."
+    "SonarQube se presupuesta con el catálogo EUR 215 para 100K LOC y duración anual supuesta. AUD-25 está completo para el Informe 3 con fuentes y supuestos; la confirmación comercial se reserva para una eventual compra real.",
+    "Faltan completar servicios cloud auxiliares y conciliar personal; el total recurrente completo sigue abierto."
   ]
 }

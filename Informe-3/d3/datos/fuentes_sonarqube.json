@@ -1,0 +1,56 @@
+{
+  "consultado": "2026-11-12",
+  "referencia_precio": {
+    "url": "https://www.datavenir.com/logiciels/CF-ProdRef.php?r=SONARCL-DEV-100K",
+    "proveedor_catalogo": "Datavenir",
+    "producto": "SonarQube Server Developer Edition up to 100K LOCs",
+    "sku": "SONARCL-DEV-100K",
+    "localizador": "Ficha de producto: título, Référence, Prix Unitaire",
+    "moneda": "EUR",
+    "precio_unitario_neto": 215,
+    "dato": "Suscripción de hasta 100.000 LOC; precio unitario de catálogo sin impuestos. No especifica duración ni condiciones de una oferta para Chile.",
+    "periodo_publicado": null,
+    "fecha_publicacion_precio": null,
+    "fecha_consulta": "2026-11-12"
+  },
+  "referencia_historica_alternativa": {
+    "url": "https://www.sonarsource.com/blog/sonarqube-compare-editions/",
+    "titulo": "Choosing the right SonarQube Server edition for your needs",
+    "autor": "Robert Curlee, SonarSource",
+    "publicado": "2025-10-27",
+    "localizador": "SonarQube Server Feature Comparison, fila Base cost, columna Developer Edition",
+    "dato": "Precio de entrada publicado desde USD 720 anuales; no identifica el mismo SKU que Datavenir. Se conserva como escenario alternativo de costo, no como oferta comparable ni tarifa vigente confirmada."
+  },
+  "condiciones_actuales": {
+    "url": "https://www.sonarsource.com/plans-and-pricing/sonarqube/",
+    "localizador": "FAQ: How are the plans licensed? / How are my Lines of Code calculated? / Is support included?",
+    "dato": "Licenciamiento por instancia, año y LOC. La página remite a ventas para precio aplicable; soporte base documental y soporte comercial adicional se distinguen."
+  },
+  "compatibilidad": {
+    "url": "https://www.sonarsource.com/products/sonarqube/downloads/",
+    "localizador": "Developer edition",
+    "dato": "Incluye Dart y análisis de ramas/solicitudes de integración, además de lenguajes de la solución."
+  },
+  "condiciones_catalogo": {
+    "url": "https://www.datavenir.com/logiciels/CF-Conditions.php",
+    "localizador": "Prix / Paiement / Logiciels, garanties et obligations",
+    "dato": "EUR sin impuestos; precios modificables antes de confirmar pedido y pago al pedido por defecto. Las condiciones generales no acreditan la vigencia anual de este SKU ni el derecho de transferencia exigido por el proyecto."
+  },
+  "decision_d3": {
+    "capacidad_objetivo_loc": 100000,
+    "loc_medido": false,
+    "instancias": 1,
+    "precio_catalogo_eur": 215,
+    "periodo_modelado_meses": 12,
+    "periodo_anual_confirmado_en_catalogo": false,
+    "supuesto_periodo": "Se aplica el precio del catálogo a una anualidad porque el fabricante licencia por instancia/año/LOC. La duración del precio del SKU se confirma al cotizar.",
+    "neto_clp_cinco_pagos_base": 1075000,
+    "neto_clp_cinco_pagos_escenario_historico": 3240000,
+    "descripcion": "Caso base de referencia con SKU de capacidad identificada y periodicidad supuesta; sin multiplicador de reserva. La referencia anual histórica del fabricante se conserva por la diferencia de precios, sin presumir mismo alcance, descuento ni negociación. Las LOC necesarias tampoco se han medido. Ambos extremos exigen revisión antes de contratar.",
+    "cotizacion_recibida": false,
+    "cotizacion_bloquea_informe3": false,
+    "presupuesto_informe3_completo": true,
+    "alcance_validacion_comercial": "Confirmación anterior a una eventual compra real; las fuentes revisadas para el avance del Informe 3 no exigen respuesta formal del proveedor."
+  },
+  "norma": "FEP01, E-21, apartado 2.5 y requisitos del modelo (p.71): presupuestar licencias y documentar supuestos/trazabilidad. E-24, p.73: EUR/CLP 1.000, USD/CLP 900, UF/CLP 40.000 e IVA 19 %. Art.84, p.43: titularidad del cliente y renovaciones explícitas. Aclaraciones Informe 3, apartado 1: instancia preparatoria económica."
+}

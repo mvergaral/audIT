@@ -12,7 +12,9 @@ Para la implementación del expediente se adopta la referencia provisional de D2
 
 GitLab Premium Self-Managed concreta la plataforma de S6. Con 33, 37, 16, 16 y 16 usuarios en las anualidades M1/13/25/37/49, la referencia pública USD 29/usuario/mes exige USD 41.064, equivalentes a $36.957.600 netos a E-24. Se pagan doce meses en M49 aunque la anualidad termine en M60. No se presume devolución, descuento ni precio congelado; el alojamiento y los runners son costos distintos.
 
-SonarQube Developer se conserva como partida pendiente de cotización por instancia/LOC. Una edición gratuita no se presenta como equivalente para todos los lenguajes y ramas sin verificarlo. Las herramientas abiertas tienen canon nulo en las ediciones identificadas, pero requieren cómputo, actualización, revisión de dependencias y operación interna. ZAP no reemplaza el pentest externo de D1; respaldar GitLab tampoco sustituye el escrow independiente.
+SonarQube Developer se presupuesta con el catálogo Datavenir, SKU SONARCL-DEV-100K: EUR 215 netos por suscripción de hasta 100.000 LOC, consulta 12-11-2026. El catálogo no declara duración; se supone anual según el licenciamiento por instancia/año del fabricante. Para una instancia y cinco pagos en M4/16/28/40/52 se obtiene $1.075.000 netos a E-24, sin multiplicador de reserva. Tanto la duración anual como la suficiencia de 100.000 LOC son supuestos de planificación explícitos. La entrada histórica del fabricante desde USD 720/año se conserva como escenario alternativo de $3.240.000 netos, sin afirmar que sea el mismo SKU/alcance ni sumarla al caso base. Bajo el supuesto anual, M52 se paga completo hasta M63. El presupuesto de licencias está completo para este avance; la confirmación comercial se reserva para una eventual compra real.
+
+GitLab y Sonar suman **$38.032.600 netos presupuestados en licencias** (950,815 UF o USD 42.258,44), más IVA referencial separado de $7.226.194, sin personal ni cloud. Se exige constituir las licencias a nombre de Curimón con pago de audIT, conforme al Art.84; la aceptación del proveedor se confirma antes de comprar. Se cuenta soporte base/documental e interno, sin presumir un contrato comercial de Sonar con SLA directo. La metodología está en 3.2 y datos/fuentes_sonarqube.json. Las herramientas abiertas tienen canon nulo en las ediciones identificadas, pero requieren cómputo, actualización y operación interna. ZAP no reemplaza el pentest externo de D1; respaldar GitLab tampoco sustituye el escrow independiente.
 
 D4 consolida nube y D3 entrega carga, modelo, retención y ejecución: el reparto ya consta en ambos aportes. Las facturas externas se registran una vez en Proveedores y alimentan Operación según T-22, conservando su mes real de pago. El suplemento de VM para GitLab/Sonar/runners tiene una referencia de $36.078.804 netos, todavía fuera del total Azure de D4; faltan discos, copias, ACR y completar identidad/analítica. No constituye el total final de herramientas.
 
@@ -22,17 +24,17 @@ La innovación 2 propone 560 h dentro de EDT 12, con costo interno atribuido de 
 
 ## Entregables y condiciones de cierre
 
-| Tarea | Archivo preparado | Pendiente |
+| Tarea | Archivo preparado | Estado y condiciones |
 |---|---|---|
 | AUD-24 · Esfuerzo | 3.1-esfuerzo-perfiles.md | Nivelación por perfil/mes, cierres M21–M24 y capacidad operativa |
-| AUD-25 · Licencias | 3.2-licencias-herramientas.md | Cotización Sonar/LOC y ejecución |
-| AUD-26 · Recurrentes | 3.3-costos-recurrentes.md | Terminar AUD-25 y conciliar incrementos |
+| AUD-25 · Licencias | 3.2-licencias-herramientas.md | Completo para Informe 3 con referencia Sonar, supuesto anual y escenario alternativo; confirmación comercial solo ante una compra real |
+| AUD-26 · Recurrentes | 3.3-costos-recurrentes.md | Conciliar auxiliares cloud y capacidad de personal; AUD-25 ya entrega sus entradas |
 | AUD-27 · Hacer/comprar | 3.4-desarrollar-comprar-contratar.md | Decisiones entregadas; compras concretas continúan en sus tareas |
-| AUD-28 · Proveedores | 3.5-proveedores-software.md | Fichas entregadas, con precio Sonar pendiente identificado |
+| AUD-28 · Proveedores | 3.5-proveedores-software.md | Fichas entregadas, incluida estimación Sonar con fuente y sensibilidad |
 | AUD-29 · Reparto nube | 3.6-reparto-nube.md | Propietarios documentados; suplemento por dimensionar |
 | AUD-30 · Innovación 2 | APORTE_ECONOMICO_INNOVACION_2.md | Capacidad/nube, beneficio D1 e integración D2 |
 | AUD-31 · Texto económico | Este archivo | Antecedentes FF abiertos impiden declarar presupuesto completo |
 
 D2 mantiene cantidad, unidad, precio, frecuencia, mes e IVA como entradas de la planilla; los resultados se calculan con fórmulas. calculo/calcular_d3.py comprueba los insumos D3 y no sustituye la hoja del mandante ni permite pegar resultados como constantes. Un null significa faltante, nunca costo cero.
 
-**Fuentes:** S4.1/S5/S6/S13, T-14/T-15/T-19, E-24 p.73/E-26 p.76, FEP01 T-22 p.69 y Aclaraciones Informe 3 §§1/5. Precios/licencias y fechas: 3.2/3.5 y datos/fuentes_licencias.json. VM: instantánea oficial Azure de D4 del 11-11-2026. Revisión base examinada: main 8ae8c27. Los archivos permanecen locales hasta autorización expresa de push.
+**Fuentes:** S4.1/S5/S6/S13, T-14/T-15/T-19, E-24 p.73/E-26 p.76, FEP01 T-22 p.69 y Aclaraciones Informe 3 §§1/5. Precios/licencias y fechas: 3.2/3.5 y datos/fuentes_licencias.json. VM: instantánea oficial Azure de D4 del 11-11-2026. Revisión base examinada: main 8ae8c27.
