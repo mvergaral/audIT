@@ -952,7 +952,7 @@ implemento, con sus características, ubicación, ciclo de vida y justificación
 módem satelital Iridium Edge, el lector CAN sin contacto Technoton CANCrocodile y el lector de tarjeta
 GAO RFID MIFARE DESFire, y se compran 19 juegos más de reposición. Los conductores reciben 572 tarjetas
 MIFARE DESFire, y los 210 semirremolques propios una baliza Teltonika EYE Sensor, con 21 de reposición.
-El gabinete de cada terminal regional tiene dos OnLogic Karbon 430, un router 5G Teltonika RUTX50, un
+El gabinete de cada terminal regional tiene dos AAEON ICS-6280A-A10-00, un router 5G Teltonika RUTX50, un
 switch Teltonika TSW202 y una UPS APC SRT1000XLI, y cada uno de los cinco terminales recibe un punto de
 acceso de patio Fortinet FortiAP 234G y un lector de portería Minew G1. San Bernardo recibe dos
 servidores Dell PowerEdge R360, dos FortiGate 90G, dos FortiSwitch 124F-POE, dos UPS APC SRT3000 con
@@ -1099,7 +1099,7 @@ Motor transaccional & Datos & PostgreSQL Flexible con alta disponibilidad entre 
 Series de tiempo & Datos & PostgreSQL Flexible con TimescaleDB, servidor propio & Telemetría y geocercas: RF-010 y RF-021 & N \\
 Almacenamiento inmutable & Datos & Almacenamiento con redundancia de zona e inmutabilidad & Evidencia: RNF-012 y RNF-014 & N \\
 Capa anticorrupción & Integración y eventos & Pasarela en el nodo de San Bernardo & Capa anticorrupción: RF-013 y RNF-006 & SB \\
-Nodo de terminal & Servicios de negocio & Dos Karbon 430 en activo y en espera & Gabinetes de terminal: control en portería de RF-001 sin enlace & GT \\
+Nodo de terminal & Servicios de negocio & Dos AAEON ICS-6280 en activo y en espera & Gabinetes de terminal: control en portería de RF-001 sin enlace & GT \\
 Búfer a bordo & Datos, versión reducida & eMMC del iWave G26I & Equipos a bordo: RF-009, RF-027 y RNF-002 & DB \\
 Réplica de recuperación & Todas & Brazil South, en espera & Todos los elementos, por RT-07.04 & N2 \\
 \end{tabla}
@@ -1219,7 +1219,7 @@ producción y se levanta desde el mismo código.
 disponibilidad. En producción, AKS reparte sus nodos en tres zonas, PostgreSQL mantiene una copia en
 espera en otra zona, el almacenamiento es de redundancia de zona y API Management tiene unidades en las
 tres. En San Bernardo, los servidores, los firewalls y los switches van en pares, y en cada terminal los
-dos Karbon 430 funcionan en activo y en espera.
+dos ICS-6280 funcionan en activo y en espera.
 
 Los respaldos siguen el esquema 3-2-1-1-0 de \transv{RT-07.09}{18}. Las tres copias son la base en
 producción, su respaldo diario en Chile Central y la réplica en Brazil South. Los dos medios son el
@@ -1263,7 +1263,7 @@ de detención que el criterio 28 necesita y que hoy nadie posee.
 
 Cada punto único de falla de la infraestructura tiene su cobertura. El enlace de San Bernardo la tiene
 en la VPN por otro proveedor y otra ruta física, el de cada terminal en su router 5G con dos SIM, y el
-nodo de terminal en el segundo Karbon 430 en espera. En San Bernardo, servidores, firewalls, switches y
+nodo de terminal en el segundo ICS-6280 en espera. En San Bernardo, servidores, firewalls, switches y
 UPS van en pares, cada equipo del par en otro circuito o en la alimentación B, y el clima es N+1. Si
 falla el grupo electrógeno, la UPS sostiene 66 minutos y el reabastecimiento sale del estanque propio.
 En Azure, la caída de una zona la absorben las otras dos de Chile Central, y la de la región, Brazil
@@ -1278,7 +1278,7 @@ que solo se cambia cuando el camión pasa por un terminal, cada seis días en pr
 
 \transv{RT-08.04}{18} pide fuentes de poder redundantes conectadas a circuitos distintos. Los servidores
 R360 tienen dos fuentes, una en cada alimentación, y cada FortiGate 90G lleva su segundo adaptador, con
-un adaptador en cada circuito \parencite{fortinet_fg90g}. En cada terminal, los dos Karbon 430, el router
+un adaptador en cada circuito \parencite{fortinet_fg90g}. En cada terminal, los dos ICS-6280, el router
 RUTX50 y el conmutador TSW202 reciben corriente continua desde dos fuentes de riel DIN conectadas a
 circuitos distintos, una a la UPS del gabinete y otra a un segundo circuito del tablero, unidas por un
 módulo de redundancia. Hay dos buses de este tipo, uno de 24~V para los equipos de cómputo y el router y
@@ -1598,15 +1598,16 @@ Caso solo entrega la superficie.
 
 \figuraAqui{215mm}{figuras/04-arquitectura/gabinete-terminal.pdf}{Gabinete de un terminal regional, con sus enlaces, el punto de acceso de patio y el lector de portería}{4-terminalfig}
 
-Dentro del gabinete van dos OnLogic Karbon 430 en activo y en espera, que funcionan sin ventilador de
-$-40$ a $+70$~°C con alimentación de 9 a 48~V y consumen cerca de 35~W cada uno \parencite{onlogic_k430}.
+Dentro del gabinete van dos AAEON ICS-6280A-A10-00 en activo y en espera, que funcionan sin ventilador de
+$-40$ a $+75$~°C con doble entrada de alimentación de 9 a 48~V \parencite{aaeon_ics6280}. AAEON no publica
+su consumo, así que el cálculo toma 40~W por equipo, que es el adaptador que el fabricante ofrece para él.
 Con dos equipos el terminal no queda con un punto único de falla. El router Teltonika RUTX50, 5G con dos
 SIM y conmutación automática, opera de $-40$ a $+75$~°C y consume menos de 18~W
 \parencite{teltonika_rutx50}. El switch Teltonika TSW202, de riel DIN y con PoE, conecta los equipos
 \parencite{teltonika_tsw202}. Fuera del gabinete, el FortiAP 234G, IP67 y de $-50$ a $+70$~°C, cubre el
 patio con Wi-Fi para actualizar los camiones \parencite{fortinet_fap}, y el Minew G1 lee en la portería
-las balizas de los semirremolques \parencite{minew_g1}. El gabinete suma 152~W, y la UPS APC SRT1000XLI,
-con 293~VAh \parencite{apc_srt1000}, lo sostiene 83 minutos al final de la vida de su batería. La UPS
+las balizas de los semirremolques \parencite{minew_g1}. El gabinete suma 162~W, y la UPS APC SRT1000XLI,
+con 293~VAh \parencite{apc_srt1000}, lo sostiene 78 minutos al final de la vida de su batería. La UPS
 alimenta una de las dos fuentes de cada bus de 24 y 48~V, y la otra sale de otro circuito del tablero,
 como fija la sección~\ref{sec:4-enlaces}. Sin enlace,
 el terminal sigue registrando salidas y llegadas, consulta la copia local de vigencias y jornada para

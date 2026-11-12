@@ -63,7 +63,7 @@ er_mbps = (usuarios_conc * mbps_usuario + otros) * crecimiento
 
 # --- UPS de terminal: APC SRT1000XLI (F: 293 VAh internos) con criterio de 30 min ---
 terminal = {
-    "2 OnLogic Karbon 430 (F: 35 W c/u)": 70,
+    "2 AAEON ICS-6280 (cota: adaptador de 40 W c/u, D4-142)": 80,
     "Router Teltonika RUTX50 (F: < 18 W)": 18,
     "Switch Teltonika TSW202 sin PoE (F: 8 W)": 8,
     "FortiAP 234G por su inyector (F: 28 W)": 28,

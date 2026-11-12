@@ -208,7 +208,7 @@
 <rect x="494.00" y="186.00" width="92.00" height="14.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
 <text x="540.00" y="196.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">TSW202</text>
 <rect x="494.00" y="203.00" width="92.00" height="14.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
-<text x="540.00" y="213.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Karbon 430 ×2</text>
+<text x="540.00" y="213.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">ICS-6280 ×2</text>
 <rect x="494.00" y="220.00" width="92.00" height="14.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
 <text x="540.00" y="230.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">UPS SRT1000XLI</text>
 <use href="#ic-hw-fortiap" x="508.73" y="246.00" width="14.55" height="20.00"/>
@@ -300,7 +300,7 @@
 <text x="568.00" y="276.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Minew G1</text>
 <text x="536.00" y="298.00" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="middle" fill="#000000">Módulos de redundancia</text>
 <text x="536.00" y="310.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">A: UPS / B: otro circuito</text>
-<text x="536.00" y="348.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Karbon ×2 + RUTX50</text>
+<text x="536.00" y="348.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">ICS-6280 ×2 + RUTX50</text>
 <text x="536.00" y="384.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">TSW202 + PoE a AP y lector</text>
 <text x="506.00" y="106.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Fijo</text>
 <text x="506.00" y="116.60" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">≥ 10 Mbit/s</text>

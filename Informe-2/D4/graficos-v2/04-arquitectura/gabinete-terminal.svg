@@ -70,12 +70,12 @@
 <text x="100.00" y="178.29" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">5G, dos SIM · 24 V</text>
 <text x="100.00" y="242.24" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">TSW202</text>
 <text x="100.00" y="253.24" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Switch PoE, riel DIN · 48 V</text>
-<text x="100.00" y="314.80" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Karbon 430 A</text>
+<text x="100.00" y="314.80" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">ICS-6280 A</text>
 <text x="100.00" y="325.80" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Activo · 24 V</text>
-<text x="100.00" y="384.80" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Karbon 430 B</text>
+<text x="100.00" y="384.80" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">ICS-6280 B</text>
 <text x="100.00" y="395.80" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">En espera · 24 V</text>
 <text x="100.00" y="466.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">UPS SRT1000XLI</text>
-<text x="100.00" y="477.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">83 min con 152 W</text>
+<text x="100.00" y="477.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">78 min con 162 W</text>
 <text x="104.00" y="530.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">A: UPS · B: otro circuito del tablero</text>
 <text x="372.00" y="60.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Azure Chile Central</text>
 <text x="372.00" y="71.50" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Red central, VPN IPsec</text>

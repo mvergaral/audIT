@@ -143,7 +143,7 @@ Licencia: Dibujo propio de esta entrega en la paleta de Fluent Emoji, sin elemen
 | `pr-lector-tarjeta.svg` | Lector de tarjeta DESFire | No se usa |
 | `pr-medidor.svg` | Medidor de envíos por segundo | `D3-diagrama13_arquitectura_analitica_lakehouse_bi`, `ambientes-promocion` |
 | `pr-memoria.svg` | Memoria eMMC o búfer | `LogicaCapas`, `equipo-a-bordo`, `fisica-completa` |
-| `pr-pc-industrial.svg` | Computador industrial (Karbon 430) | `recuperacion`, `cartera` |
+| `pr-pc-industrial.svg` | Computador industrial (AAEON ICS-6280) | `recuperacion`, `cartera` |
 | `pr-pod.svg` | Pod de contenedores | No se usa |
 | `pr-rack.svg` | Rack de 24 U | No se usa |
 | `pr-rastreador.svg` | Rastreador GPS (plataformas de terceros) | `LogicaCapas`, `LogicaContextos`, `LogicaIntegraciones`, `fisica-completa`, `fisica-general` |
@@ -194,7 +194,7 @@ equipo audIT.
 | `hw-generador.svg` | Grupo electrógeno insonorizado Himoinsa HYW-8 | `fisica-completa`, `fisica-general`, `sala-san-bernardo` |
 | `hw-inyector.svg` | Inyector PoE 802.3bt | `fisica-completa`, `gabinete-terminal` |
 | `hw-iridium.svg` | Módem satelital Iridium Edge | `equipo-a-bordo`, `fisica-completa`, `instalacion-a-bordo` |
-| `hw-karbon.svg` | OnLogic Karbon 430, sin ventilador | `fisica-completa`, `gabinete-terminal` |
+| `hw-karbon.svg` | Computador de terminal sin ventilador, AAEON ICS-6280 | `fisica-completa`, `gabinete-terminal` |
 | `hw-minew.svg` | Lector de portería Minew G1 | `fisica-completa`, `fisica-general`, `gabinete-terminal`, `semirremolque` |
 | `hw-patch.svg` | Panel de conexión, 1 U | No se usa (queda de reserva) |
 | `hw-proveedor.svg` | Equipo de un proveedor de enlace, 1 U | `fisica-completa` |

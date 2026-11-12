@@ -95,7 +95,7 @@ def fisica_general():
 
     # ---------------------------------------------------------------- terminales
     f.grupo(466, 124, 140, 266, "Terminales", sub="× 4")
-    rack(f, 488, 146, 104, 94, "Gabinete", ["RUTX50", "TSW202", "Karbon 430 ×2", "UPS SRT1000XLI"])
+    rack(f, 488, 146, 104, 94, "Gabinete", ["RUTX50", "TSW202", "ICS-6280 ×2", "UPS SRT1000XLI"])
     f.linea([(516, 240), (516, 246)])
     f.linea([(568, 240), (568, 246)])
     f.equipo("hw-fortiap", 516, 256, h=20)
@@ -106,7 +106,7 @@ def fisica_general():
     # Dos fuentes y un módulo por bus: cuatro fuentes y dos módulos por gabinete.
     f.texto(536, 298, "Módulos de redundancia", 9, 600, anc="middle")
     f.texto(536, 310, "A: UPS / B: otro circuito", 9, anc="middle")
-    for y, tension, carga in [(328, 24, "Karbon ×2 + RUTX50"),
+    for y, tension, carga in [(328, 24, "ICS-6280 ×2 + RUTX50"),
                               (364, 48, "TSW202 + PoE a AP y lector")]:
         f.ficha(505, y, f"2 fuentes {tension} V", w=66)
         f.ficha(575, y, "Módulo", w=44)
@@ -720,16 +720,16 @@ def gabinete_terminal():
     # equipos, centrados, con su nombre debajo: (ilustración, ancho, alto, nombre, dato, y del centro)
     equipos = [("hw-rutx50", 66, None, "RUTX50", "5G, dos SIM · 24 V", 128),
                ("hw-tsw202", 78, None, "TSW202", "Switch PoE, riel DIN · 48 V", 212),
-               ("hw-karbon", 66, None, "Karbon 430 A", "Activo · 24 V", 284),
-               ("hw-karbon", 66, None, "Karbon 430 B", "En espera · 24 V", 354),
-               ("hw-ups-torre", None, 54, "UPS SRT1000XLI", "83 min con 152 W", 428)]
+               ("hw-karbon", 66, None, "ICS-6280 A", "Activo · 24 V", 284),
+               ("hw-karbon", 66, None, "ICS-6280 B", "En espera · 24 V", 354),
+               ("hw-ups-torre", None, 54, "UPS SRT1000XLI", "78 min con 162 W", 428)]
     caja = {}
     for ic, w, h, n, d, cy in equipos:
         x0, y0, x1, y1 = f.equipo(ic, cx, cy, w=w, h=h)
         caja[n] = (x0, y0, x1, y1)
         f.texto(cx, y1 + 11, n, 10, anc="middle")
         f.texto(cx, y1 + 22, d, 9, anc="middle")
-    rt, sw, ka, kb, ups = (caja[k] for k in ("RUTX50", "TSW202", "Karbon 430 A", "Karbon 430 B", "UPS SRT1000XLI"))
+    rt, sw, ka, kb, ups = (caja[k] for k in ("RUTX50", "TSW202", "ICS-6280 A", "ICS-6280 B", "UPS SRT1000XLI"))
     ym = lambda b, d=0: (b[1] + b[3]) / 2 + d
     # datos, por el costado izquierdo: router al switch y switch a los dos computadores
     f.linea([(rt[0], ym(rt, 16)), (54, ym(rt, 16)), (54, ym(sw, -6)), (sw[0], ym(sw, -6))], flecha="ambas")
@@ -738,7 +738,7 @@ def gabinete_terminal():
     f.linea([(ka[0], ym(ka, 10)), (26, ym(ka, 10)), (26, ym(kb, 10)), (kb[0], ym(kb, 10))], disc=True, flecha="ambas")
     # S4 §4.2.7 / T-11 (RT-08.04): dos buses, cada uno con dos fuentes DIN y un módulo de
     # redundancia. La fuente A sale de la UPS y la B de otro circuito del tablero.
-    # Cada equipo indica su bus bajo el nombre: 24 V para router y Karbon, 48 V para el switch.
+    # Cada equipo indica su bus bajo el nombre: 24 V para router y los ICS-6280, 48 V para el switch.
     b24 = f.ficha(104, 494, "Bus 24 V · 2 fuentes DIN + módulo", w=150)
     b48 = f.ficha(104, 512, "Bus 48 V · 2 fuentes DIN + módulo", w=150)
     f.texto(104, 530, "A: UPS · B: otro circuito del tablero", 9, anc="middle")
