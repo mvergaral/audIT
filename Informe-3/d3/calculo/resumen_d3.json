@@ -127,6 +127,256 @@
     "total_neto_clp": 36957600.0,
     "total_iva_clp": 7021944.0
   },
+  "revision_edt5": {
+    "estado": "Estimación D3 completa para conciliación; no nivelación ni modificación aprobada de T-15",
+    "archivo_actividades": "datos/estimacion_edt5.json",
+    "numero_actividades": 66,
+    "por_sprint": [
+      {
+        "sprint": 1,
+        "inicio_dia_habil": 112,
+        "fin_dia_habil": 122,
+        "dias_por_mes": {
+          "6": 8,
+          "7": 2
+        },
+        "horas_por_perfil": {
+          "arquitectura": 32,
+          "lider": 40,
+          "software": 248,
+          "frontend": 192,
+          "seguridad": 40,
+          "datos": 48,
+          "qa": 144,
+          "sre": 40
+        },
+        "total_h": 784
+      },
+      {
+        "sprint": 2,
+        "inicio_dia_habil": 122,
+        "fin_dia_habil": 132,
+        "dias_por_mes": {
+          "7": 10
+        },
+        "horas_por_perfil": {
+          "arquitectura": 16,
+          "lider": 32,
+          "software": 304,
+          "frontend": 160,
+          "seguridad": 24,
+          "datos": 32,
+          "qa": 160,
+          "sre": 24
+        },
+        "total_h": 752
+      },
+      {
+        "sprint": 3,
+        "inicio_dia_habil": 132,
+        "fin_dia_habil": 142,
+        "dias_por_mes": {
+          "7": 8,
+          "8": 2
+        },
+        "horas_por_perfil": {
+          "arquitectura": 24,
+          "lider": 32,
+          "software": 352,
+          "frontend": 160,
+          "seguridad": 32,
+          "datos": 24,
+          "qa": 184,
+          "sre": 24
+        },
+        "total_h": 832
+      },
+      {
+        "sprint": 4,
+        "inicio_dia_habil": 142,
+        "fin_dia_habil": 152,
+        "dias_por_mes": {
+          "8": 10
+        },
+        "horas_por_perfil": {
+          "arquitectura": 16,
+          "lider": 32,
+          "software": 232,
+          "frontend": 160,
+          "seguridad": 16,
+          "datos": 32,
+          "qa": 136,
+          "sre": 32
+        },
+        "total_h": 656
+      },
+      {
+        "sprint": 5,
+        "inicio_dia_habil": 152,
+        "fin_dia_habil": 162,
+        "dias_por_mes": {
+          "8": 8,
+          "9": 2
+        },
+        "horas_por_perfil": {
+          "arquitectura": 16,
+          "lider": 32,
+          "software": 272,
+          "frontend": 184,
+          "seguridad": 16,
+          "datos": 24,
+          "qa": 152,
+          "sre": 24
+        },
+        "total_h": 720
+      },
+      {
+        "sprint": 6,
+        "inicio_dia_habil": 162,
+        "fin_dia_habil": 172,
+        "dias_por_mes": {
+          "9": 10
+        },
+        "horas_por_perfil": {
+          "arquitectura": 16,
+          "lider": 32,
+          "software": 272,
+          "frontend": 176,
+          "seguridad": 24,
+          "datos": 24,
+          "qa": 152,
+          "sre": 24
+        },
+        "total_h": 720
+      },
+      {
+        "sprint": 7,
+        "inicio_dia_habil": 172,
+        "fin_dia_habil": 182,
+        "dias_por_mes": {
+          "9": 8,
+          "10": 2
+        },
+        "horas_por_perfil": {
+          "arquitectura": 32,
+          "lider": 32,
+          "software": 224,
+          "frontend": 144,
+          "seguridad": 40,
+          "datos": 40,
+          "qa": 176,
+          "sre": 56
+        },
+        "total_h": 744
+      },
+      {
+        "sprint": 8,
+        "inicio_dia_habil": 182,
+        "fin_dia_habil": 192,
+        "dias_por_mes": {
+          "10": 10
+        },
+        "horas_por_perfil": {
+          "arquitectura": 16,
+          "lider": 32,
+          "software": 240,
+          "frontend": 160,
+          "seguridad": 32,
+          "datos": 80,
+          "qa": 160,
+          "sre": 80
+        },
+        "total_h": 800
+      }
+    ],
+    "horas_por_perfil": {
+      "arquitectura": 168,
+      "lider": 264,
+      "software": 2144,
+      "frontend": 1336,
+      "seguridad": 224,
+      "datos": 304,
+      "qa": 1264,
+      "sre": 304
+    },
+    "total_h": 6008,
+    "mensual_prorrateado": {
+      "6": {
+        "horas_por_perfil": {
+          "arquitectura": 25.6,
+          "lider": 32.0,
+          "software": 198.4,
+          "frontend": 153.6,
+          "seguridad": 32.0,
+          "datos": 38.4,
+          "qa": 115.2,
+          "sre": 32.0
+        },
+        "total_h": 627.2
+      },
+      "7": {
+        "horas_por_perfil": {
+          "arquitectura": 41.6,
+          "lider": 65.6,
+          "software": 635.2,
+          "frontend": 326.4,
+          "seguridad": 57.6,
+          "datos": 60.8,
+          "qa": 336.0,
+          "sre": 51.2
+        },
+        "total_h": 1574.4
+      },
+      "8": {
+        "horas_por_perfil": {
+          "arquitectura": 33.6,
+          "lider": 64.0,
+          "software": 520.0,
+          "frontend": 339.2,
+          "seguridad": 35.2,
+          "datos": 56.0,
+          "qa": 294.4,
+          "sre": 56.0
+        },
+        "total_h": 1398.4
+      },
+      "9": {
+        "horas_por_perfil": {
+          "arquitectura": 44.8,
+          "lider": 64.0,
+          "software": 505.6,
+          "frontend": 328.0,
+          "seguridad": 59.2,
+          "datos": 60.8,
+          "qa": 323.2,
+          "sre": 73.6
+        },
+        "total_h": 1459.2
+      },
+      "10": {
+        "horas_por_perfil": {
+          "arquitectura": 22.4,
+          "lider": 38.4,
+          "software": 284.8,
+          "frontend": 188.8,
+          "seguridad": 40.0,
+          "datos": 88.0,
+          "qa": 195.2,
+          "sre": 91.2
+        },
+        "total_h": 948.8
+      }
+    },
+    "costo_atribuido_referencia_e26": {
+      "min_clp": 138272000.0,
+      "referencia_clp": 170512000.0,
+      "max_clp": 202752000.0
+    },
+    "horas_t15_vigentes": 17600,
+    "diferencia_pendiente_de_conciliar_h": 11592,
+    "modifica_t15": false,
+    "interpretacion": "Estimación técnica revisada; la diferencia no es ahorro, duplicidad demostrada ni capacidad libre. No sumar esta propuesta al presupuesto vigente."
+  },
   "nube_auxiliar": {
     "filas": [
       {
@@ -155,8 +405,10 @@
       }
     ],
     "subtotal_vm_neto_clp": 36078804.0,
-    "incluido_en_total_d4": false,
-    "total_completo": false
+    "incluido_en_total_d4": true,
+    "total_completo": false,
+    "fuente_consolidacion": "Informe-3/d4/4.2-nube-conectividad.md, sección 5, commit b8adac2",
+    "alcance": "Solo subtotal de las cuatro filas VM D3-AUX, ya incluido en Azure D4; el total con discos, respaldo, ACR, identidad y CDC/analítica se consolida en D4 y no se suma aquí otra vez."
   },
   "sonarqube": {
     "tipo_importe": "Presupuesto de referencia para Informe 3: precio público de catálogo EUR 215 netos para SKU 100.000 LOC, con duración anual supuesta a partir del modelo del fabricante. No es cotización ni tarifa anual confirmada.",
@@ -236,10 +488,10 @@
   },
   "total_software_externo_cerrado": false,
   "advertencias": [
-    "La asignación por perfil de EDT 5 a 8 es una propuesta para valorizar el presupuesto existente, no prueba de factibilidad mensual.",
+    "La base conserva el reparto presupuestario histórico EDT 5 a 8. revision_edt5 entrega el catálogo técnico completo de A09 por sprint/perfil; su adopción y nivelación siguen pendientes de conciliación con D2.",
     "EDT 6 y 7 tienen actividades hasta M24, mientras la curva de implementación T-15 termina en M20. D2 debe separar el cierre en operación sin sumar horas dos veces.",
     "No se demuestra holgura por perfil en EDT 13.2 ni 13.4; por ello no se afirma costo adicional cero ni se suman automáticamente las horas propuestas.",
     "SonarQube se presupuesta con el catálogo EUR 215 para 100K LOC y duración anual supuesta; el precio y período se confirman antes de contratar.",
-    "Faltan completar servicios cloud auxiliares y conciliar personal; el total recurrente completo sigue abierto."
+    "D4 incorporó los auxiliares en 4.2 sección 5, commit b8adac2; no sumar otra vez las VM D3-AUX. Falta conciliar personal y su integración sin duplicaciones; el total recurrente completo sigue abierto."
   ]
 }

@@ -1,0 +1,1487 @@
+{
+  "fecha": "2026-11-12",
+  "alcance": "EDT 5 / A09: ocho sprints, ocho perfiles; estimación técnica por actividad para Informe 3",
+  "estado": "Estimación D3 completa para conciliación; no nivelación ni modificación aprobada de T-15",
+  "revision_tecnica_fuentes": "946519c0d01355164efee805a56d5a31389f408f",
+  "propuesta_sprint7_d2": {
+    "commit": "5790cb0cc33e5dabdf15d67601e74a5b68c13ee9",
+    "rama": "codex/aud-21-valorizar-innovaciones-1-y-4",
+    "archivo": "Informe-3/d2/AUD-14_COSTO_PERSONAL_POR_PERFIL.md"
+  },
+  "perfiles": [
+    "arquitectura",
+    "lider",
+    "software",
+    "frontend",
+    "seguridad",
+    "datos",
+    "qa",
+    "sre"
+  ],
+  "horas_edt5_t15_vigente": 17600,
+  "calendario": {
+    "inicio_a09_dia_habil": 112,
+    "dias_sprint": 10,
+    "numero_sprints": 8,
+    "dias_mes_contractual": 20,
+    "horas_dia_persona_nominal": 8,
+    "g13_dia_habil": 182,
+    "h4_dia_habil": 192,
+    "convencion": "Intervalos [inicio, fin); prorrateo uniforme solo para comparar demanda mensual, no asignación real."
+  },
+  "criterio_estimacion": [
+    "Horas de asignación técnica por actividad y perfil, incluidas definición/refinamiento, implementación, reuniones/revisión propias y ajustes ordinarios; no solo escritura de código.",
+    "Software incluye pruebas del desarrollador y QA escenarios/automatización/ejecución distintos; una misma elaboración o ejecución se registra una vez.",
+    "Los perfiles de apoyo tienen actividades propias explícitas; el liderazgo cuenta su dedicación, no todas las horas de reunión de los asistentes.",
+    "Las horas no prueban dotación libre. D2 aplica disponibilidad, foco acordado y reserva de deuda de T-10 al calcular capacidad; no se añade otro 15 % a esta estimación ni se extrapola 0,70 de E2 a E1.",
+    "No se conservan bolsas de 2.400 h por sprint ni se redistribuye automáticamente el saldo respecto de 17.600 h.",
+    "S2–S6 conservan exactamente las 3.056 h de Software/Frontend/QA antes comunicadas; S7 conserva las 744 h propuestas por D2; S8 conserva sus 800 h por actividad y perfil.",
+    "No son mediciones reales, certificaciones ni promesas de ausencia de defectos; cambios de supuestos o defectos extraordinarios requieren reestimar la actividad afectada."
+  ],
+  "supuestos_habilitantes": [
+    "H2 aprobado: modelo, arquitectura y reglas de entrada disponibles; H3 y contratos de identidad habilitan la construcción.",
+    "La plataforma y servicios administrados se aprovisionan en EDT 3; aquí se estima la configuración y despliegue propios de la aplicación.",
+    "Los contratos/adaptadores de EDT 6 y el firmware de 4.1 entregan datos normalizados; dobles de prueba permiten avance local, pero no acreditan integración real.",
+    "El catálogo de lugares seguros y las entradas autorizadas están disponibles para la alerta mínima; su levantamiento y la innovación de bienestar no se vuelven a estimar en A09.",
+    "El trabajo temprano de costo/portal de S2–S6 habilita el cierre de S8; no se construyen esos contextos completos desde cero después de G13.",
+    "La migración real de vigencias e históricos y el repositorio analítico mantienen sus paquetes 7.1–7.3; aquí solo hay esquema operacional y fixtures.",
+    "El candidato G13 cumple los cinco flujos antes de A13; S8 no modifica el candidato de entrenamiento sin control y repetición de casos afectados."
+  ],
+  "fuentes": [
+    {
+      "archivo": "recursos/Formato-Oferta-audIT/subdocumentos/06-metodologias/formularios/T-10.tex",
+      "localizador": "Tabla de incrementos A09-1 a A09-8 y párrafo de capacidad"
+    },
+    {
+      "archivo": "recursos/Formato-Oferta-audIT/subdocumentos/06-metodologias/contenido.tex",
+      "localizador": "Puerta de salida G13 y funciones de sprint 7"
+    },
+    {
+      "archivo": "recursos/Formato-Oferta-audIT/subdocumentos/03-solucion/formularios/T-12.tex",
+      "localizador": "RF-001 a RF-028, prioridad, componente y paquete"
+    },
+    {
+      "archivo": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/formularios/T-14.tex",
+      "localizador": "Diccionario 3, 4, 5.1–5.7, 6, 7, 10, 11 y 12"
+    },
+    {
+      "archivo": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/formularios/T-15.tex",
+      "localizador": "EDT 5, 17.600 h; A09 112–192 y G13 182"
+    },
+    {
+      "archivo": "texto/FEP02_26_Bases_Tecnicas_Transversales_TFEP_01_2026.md",
+      "localizador": "FEP02 §20.1 p.34; índice buscar.py, sección 342"
+    }
+  ],
+  "tareas": [
+    {
+      "id": "REV-S1-01",
+      "sprint": 1,
+      "actividad": "Implementar altas, cambios y consulta de maestros operacionales de personas y activos, con propietario, identificadores y vigencias de cada registro.",
+      "horas": {
+        "arquitectura": 0,
+        "lider": 0,
+        "software": 80,
+        "frontend": 48,
+        "seguridad": 0,
+        "datos": 0,
+        "qa": 40,
+        "sre": 0
+      },
+      "requisitos": [
+        "RF-005"
+      ],
+      "entregable": "API y pantallas de maestros con casos de duplicado, propietario y estado.",
+      "limite_con_otros_paquetes": "EDT 5.1/5.2. Usa el modelo H2; la carga y verificación de las 6.000 vigencias pertenece a 7.1.",
+      "origen_estimacion": "D3, estimación por actividad",
+      "base_estimacion_por_perfil": {
+        "software": {
+          "detalle_reglas": 16,
+          "implementacion": 40,
+          "pruebas_desarrollador": 16,
+          "revision_ajustes": 8
+        },
+        "frontend": {
+          "flujo": 8,
+          "interfaz": 24,
+          "estados_pruebas": 16
+        },
+        "qa": {
+          "escenarios": 8,
+          "automatizacion_ejecucion": 24,
+          "verificacion_correcciones": 8
+        }
+      }
+    },
+    {
+      "id": "REV-S1-02",
+      "sprint": 1,
+      "actividad": "Implementar autorización aplicativa por camión, dato, destinatario y período: otorgar, consultar y revocar, invalidar caché y registrar accesos.",
+      "horas": {
+        "arquitectura": 0,
+        "lider": 0,
+        "software": 72,
+        "frontend": 48,
+        "seguridad": 0,
+        "datos": 0,
+        "qa": 40,
+        "sre": 0
+      },
+      "requisitos": [
+        "RF-022",
+        "RNF-013"
+      ],
+      "entregable": "Contrato y UI de permisos; concesión/revocación y rechazo del rol ajeno probados.",
+      "limite_con_otros_paquetes": "EDT 5.7. Consume identidad de 3.2 y su SDK; no vuelve a aprovisionar Entra ni ejecutar el pentest independiente.",
+      "origen_estimacion": "D3, estimación por actividad",
+      "base_estimacion_por_perfil": {
+        "software": {
+          "detalle_reglas": 16,
+          "implementacion": 32,
+          "pruebas_desarrollador": 16,
+          "revision_ajustes": 8
+        },
+        "frontend": {
+          "flujo": 8,
+          "interfaz": 24,
+          "estados_pruebas": 16
+        },
+        "qa": {
+          "escenarios": 8,
+          "automatizacion_ejecucion": 24,
+          "verificacion_correcciones": 8
+        }
+      }
+    },
+    {
+      "id": "REV-S1-03",
+      "sprint": 1,
+      "actividad": "Preparar estructura común de API, navegación web/móvil, autenticación contra el proveedor, estados de error y componentes de interfaz.",
+      "horas": {
+        "arquitectura": 0,
+        "lider": 0,
+        "software": 40,
+        "frontend": 64,
+        "seguridad": 0,
+        "datos": 0,
+        "qa": 32,
+        "sre": 0
+      },
+      "requisitos": [
+        "RF-022"
+      ],
+      "entregable": "Base ejecutable web y móvil, con sesión, errores y pruebas de humo.",
+      "limite_con_otros_paquetes": "EDT 5, transversal. Frontend contempla ambos clientes; no presume reutilizar código React en Flutter. Infraestructura y pipeline global están en 3.",
+      "origen_estimacion": "D3, estimación por actividad",
+      "base_estimacion_por_perfil": {
+        "software": {
+          "contratos_sesion": 8,
+          "implementacion": 16,
+          "pruebas_desarrollador": 8,
+          "revision_ajustes": 8
+        },
+        "frontend": {
+          "base_web": 24,
+          "base_flutter": 24,
+          "estados_pruebas": 16
+        },
+        "qa": {
+          "escenarios": 8,
+          "automatizacion_ejecucion": 16,
+          "verificacion_correcciones": 8
+        }
+      }
+    },
+    {
+      "id": "REV-S1-04",
+      "sprint": 1,
+      "actividad": "Implementar consulta de vencimientos, responsable de renovación, alertas 60/30/7 y exposición de vigencia al veredicto de asignación.",
+      "horas": {
+        "arquitectura": 0,
+        "lider": 0,
+        "software": 56,
+        "frontend": 32,
+        "seguridad": 0,
+        "datos": 0,
+        "qa": 32,
+        "sre": 0
+      },
+      "requisitos": [
+        "RF-005"
+      ],
+      "entregable": "Casos de umbral, vencimiento, falta de respaldo y resultado para el consumidor.",
+      "limite_con_otros_paquetes": "EDT 5.1/5.2. El motor de reserva se completa en S3; la migración y revisión documental no se reconstruyen aquí.",
+      "origen_estimacion": "D3, estimación por actividad",
+      "base_estimacion_por_perfil": {
+        "software": {
+          "detalle_umbrales": 8,
+          "implementacion": 24,
+          "pruebas_desarrollador": 16,
+          "revision_ajustes": 8
+        },
+        "frontend": {
+          "flujo": 8,
+          "interfaz": 16,
+          "estados_pruebas": 8
+        },
+        "qa": {
+          "escenarios": 8,
+          "automatizacion_ejecucion": 16,
+          "verificacion_correcciones": 8
+        }
+      }
+    },
+    {
+      "id": "REV-S1-ARQUITECTURA",
+      "sprint": 1,
+      "actividad": "Revisar contratos de maestros y permisos (16 h), límites de módulos (8 h) y decisión de caché/revocación (8 h).",
+      "horas": {
+        "arquitectura": 32,
+        "lider": 0,
+        "software": 0,
+        "frontend": 0,
+        "seguridad": 0,
+        "datos": 0,
+        "qa": 0,
+        "sre": 0
+      },
+      "requisitos": [],
+      "entregable": "Revisión, configuración o esquema versionado del incremento, con su resultado verificable.",
+      "limite_con_otros_paquetes": "Revisión evolutiva de EDT 5; no repetir diseño general de A05.",
+      "origen_estimacion": "D3, estimación por actividad"
+    },
+    {
+      "id": "REV-S1-DATOS",
+      "sprint": 1,
+      "actividad": "Detallar esquema operacional sobre H2 (16 h), restricciones/vigencias (16 h), migración versionada del esquema y fixtures ficticios (16 h).",
+      "horas": {
+        "arquitectura": 0,
+        "lider": 0,
+        "software": 0,
+        "frontend": 0,
+        "seguridad": 0,
+        "datos": 48,
+        "qa": 0,
+        "sre": 0
+      },
+      "requisitos": [],
+      "entregable": "Revisión, configuración o esquema versionado del incremento, con su resultado verificable.",
+      "limite_con_otros_paquetes": "Esquema, índices y fixtures operacionales de EDT 5; no migración de datos reales ni repositorio analítico de EDT 7.",
+      "origen_estimacion": "D3, estimación por actividad"
+    },
+    {
+      "id": "REV-S1-LIDER",
+      "sprint": 1,
+      "actividad": "Refinar y asignar historias (8 h), planificar/coordinación técnica (8 h), revisar dependencias y cambios (16 h), revisión de entrega (8 h).",
+      "horas": {
+        "arquitectura": 0,
+        "lider": 40,
+        "software": 0,
+        "frontend": 0,
+        "seguridad": 0,
+        "datos": 0,
+        "qa": 0,
+        "sre": 0
+      },
+      "requisitos": [],
+      "entregable": "Revisión, configuración o esquema versionado del incremento, con su resultado verificable.",
+      "limite_con_otros_paquetes": "Coordinación técnica de desarrollo; no sustituye ni repite la dirección/PMO del proyecto.",
+      "origen_estimacion": "D3, estimación por actividad"
+    },
+    {
+      "id": "REV-S1-SEGURIDAD",
+      "sprint": 1,
+      "actividad": "Revisar matriz de permisos (16 h), amenazas de sesión/revocación (8 h), trazabilidad de accesos (8 h) y verificar mitigaciones de la aplicación (8 h).",
+      "horas": {
+        "arquitectura": 0,
+        "lider": 0,
+        "software": 0,
+        "frontend": 0,
+        "seguridad": 40,
+        "datos": 0,
+        "qa": 0,
+        "sre": 0
+      },
+      "requisitos": [],
+      "entregable": "Revisión, configuración o esquema versionado del incremento, con su resultado verificable.",
+      "limite_con_otros_paquetes": "Controles de la aplicación; no aprovisionamiento de 3.2 ni pentest independiente de 10.2.",
+      "origen_estimacion": "D3, estimación por actividad"
+    },
+    {
+      "id": "REV-S1-SRE",
+      "sprint": 1,
+      "actividad": "Definir trabajos de build de la aplicación (16 h), configuración y secretos por referencia (8 h), despliegue de humo (8 h), reversión del candidato (8 h).",
+      "horas": {
+        "arquitectura": 0,
+        "lider": 0,
+        "software": 0,
+        "frontend": 0,
+        "seguridad": 0,
+        "datos": 0,
+        "qa": 0,
+        "sre": 40
+      },
+      "requisitos": [],
+      "entregable": "Revisión, configuración o esquema versionado del incremento, con su resultado verificable.",
+      "limite_con_otros_paquetes": "Trabajos y configuración de la aplicación sobre plataforma existente; no reconstruir IaC global, runners ni infraestructura de EDT 3.",
+      "origen_estimacion": "D3, estimación por actividad"
+    },
+    {
+      "id": "REV-S2-01",
+      "sprint": 2,
+      "actividad": "Recibir evidencia ya normalizada; vincular conductor/viaje, origen, nivel y estado; mostrar faltantes o evidencia inválida. RF-002",
+      "horas": {
+        "arquitectura": 0,
+        "lider": 0,
+        "software": 80,
+        "frontend": 32,
+        "seguridad": 0,
+        "datos": 0,
+        "qa": 32,
+        "sre": 0
+      },
+      "requisitos": [
+        "RF-002"
+      ],
+      "entregable": "Incremento, escenarios de componente/contrato y correcciones verificadas del comportamiento descrito.",
+      "limite_con_otros_paquetes": "EDT 5.1/5.6. Evidencia normalizada; custodia física WORM en 3, descarga del proveedor en 6 y migración en 7.",
+      "origen_estimacion": "D3, revisión Software/Frontend/QA S2–S6 previamente comunicada; horas conservadas"
+    },
+    {
+      "id": "REV-S2-02",
+      "sprint": 2,
+      "actividad": "Capturar y comprobar la atestación de jornada externa, autorización y período; mostrar el resultado y los errores. RF-003",
+      "horas": {
+        "arquitectura": 0,
+        "lider": 0,
+        "software": 96,
+        "frontend": 48,
+        "seguridad": 0,
+        "datos": 0,
+        "qa": 48,
+        "sre": 0
+      },
+      "requisitos": [
+        "RF-003"
+      ],
+      "entregable": "Incremento, escenarios de componente/contrato y correcciones verificadas del comportamiento descrito.",
+      "limite_con_otros_paquetes": "EDT 5.1/5.6. Evidencia normalizada; custodia física WORM en 3, descarga del proveedor en 6 y migración en 7.",
+      "origen_estimacion": "D3, revisión Software/Frontend/QA S2–S6 previamente comunicada; horas conservadas"
+    },
+    {
+      "id": "REV-S2-03",
+      "sprint": 2,
+      "actividad": "Conservar referencias al original bajo custodia y registrar rectificaciones como nuevos registros; consulta de historia y permisos. RF-004",
+      "horas": {
+        "arquitectura": 0,
+        "lider": 0,
+        "software": 80,
+        "frontend": 48,
+        "seguridad": 0,
+        "datos": 0,
+        "qa": 48,
+        "sre": 0
+      },
+      "requisitos": [
+        "RF-004"
+      ],
+      "entregable": "Incremento, escenarios de componente/contrato y correcciones verificadas del comportamiento descrito.",
+      "limite_con_otros_paquetes": "EDT 5.1/5.6. Evidencia normalizada; custodia física WORM en 3, descarga del proveedor en 6 y migración en 7.",
+      "origen_estimacion": "D3, revisión Software/Frontend/QA S2–S6 previamente comunicada; horas conservadas"
+    },
+    {
+      "id": "REV-S2-04",
+      "sprint": 2,
+      "actividad": "Preparar la estructura operativa de CostoVersion, fuentes y faltantes, con vista inicial y pruebas para el cierre económico del sprint 8",
+      "horas": {
+        "arquitectura": 0,
+        "lider": 0,
+        "software": 48,
+        "frontend": 32,
+        "seguridad": 0,
+        "datos": 0,
+        "qa": 32,
+        "sre": 0
+      },
+      "requisitos": [
+        "RF-016",
+        "RF-019"
+      ],
+      "entregable": "Incremento, escenarios de componente/contrato y correcciones verificadas del comportamiento descrito.",
+      "limite_con_otros_paquetes": "EDT 5.1/5.6. Evidencia normalizada; custodia física WORM en 3, descarga del proveedor en 6 y migración en 7.",
+      "origen_estimacion": "D3, revisión Software/Frontend/QA S2–S6 previamente comunicada; horas conservadas"
+    },
+    {
+      "id": "REV-S2-ARQUITECTURA",
+      "sprint": 2,
+      "actividad": "Revisar contratos de evidencia y origen (8 h) y límite atestación/custodia (8 h).",
+      "horas": {
+        "arquitectura": 16,
+        "lider": 0,
+        "software": 0,
+        "frontend": 0,
+        "seguridad": 0,
+        "datos": 0,
+        "qa": 0,
+        "sre": 0
+      },
+      "requisitos": [],
+      "entregable": "Revisión, configuración o esquema versionado del incremento, con su resultado verificable.",
+      "limite_con_otros_paquetes": "Revisión evolutiva de EDT 5; no repetir diseño general de A05.",
+      "origen_estimacion": "D3, estimación por actividad"
+    },
+    {
+      "id": "REV-S2-DATOS",
+      "sprint": 2,
+      "actividad": "Versionar el esquema de evidencia (16 h), preparar fixtures (8 h) y comprobar referencias operacionales de costo (8 h).",
+      "horas": {
+        "arquitectura": 0,
+        "lider": 0,
+        "software": 0,
+        "frontend": 0,
+        "seguridad": 0,
+        "datos": 32,
+        "qa": 0,
+        "sre": 0
+      },
+      "requisitos": [],
+      "entregable": "Revisión, configuración o esquema versionado del incremento, con su resultado verificable.",
+      "limite_con_otros_paquetes": "Esquema, índices y fixtures operacionales de EDT 5; no migración de datos reales ni repositorio analítico de EDT 7.",
+      "origen_estimacion": "D3, estimación por actividad"
+    },
+    {
+      "id": "REV-S2-LIDER",
+      "sprint": 2,
+      "actividad": "Refinar/planificar y coordinar (16 h), revisar bloqueos (8 h) y aceptación técnica de historias (8 h).",
+      "horas": {
+        "arquitectura": 0,
+        "lider": 32,
+        "software": 0,
+        "frontend": 0,
+        "seguridad": 0,
+        "datos": 0,
+        "qa": 0,
+        "sre": 0
+      },
+      "requisitos": [],
+      "entregable": "Revisión, configuración o esquema versionado del incremento, con su resultado verificable.",
+      "limite_con_otros_paquetes": "Coordinación técnica de desarrollo; no sustituye ni repite la dirección/PMO del proyecto.",
+      "origen_estimacion": "D3, estimación por actividad"
+    },
+    {
+      "id": "REV-S2-SEGURIDAD",
+      "sprint": 2,
+      "actividad": "Revisar permisos de atestación (8 h), exposición de evidencia (8 h) y correcciones de integridad de aplicación (8 h).",
+      "horas": {
+        "arquitectura": 0,
+        "lider": 0,
+        "software": 0,
+        "frontend": 0,
+        "seguridad": 24,
+        "datos": 0,
+        "qa": 0,
+        "sre": 0
+      },
+      "requisitos": [],
+      "entregable": "Revisión, configuración o esquema versionado del incremento, con su resultado verificable.",
+      "limite_con_otros_paquetes": "Controles de la aplicación; no aprovisionamiento de 3.2 ni pentest independiente de 10.2.",
+      "origen_estimacion": "D3, estimación por actividad"
+    },
+    {
+      "id": "REV-S2-SRE",
+      "sprint": 2,
+      "actividad": "Adaptar trabajos de prueba de aplicación (8 h), configurar acceso por identidad al almacén (8 h), revisar despliegue y correlación (8 h).",
+      "horas": {
+        "arquitectura": 0,
+        "lider": 0,
+        "software": 0,
+        "frontend": 0,
+        "seguridad": 0,
+        "datos": 0,
+        "qa": 0,
+        "sre": 24
+      },
+      "requisitos": [],
+      "entregable": "Revisión, configuración o esquema versionado del incremento, con su resultado verificable.",
+      "limite_con_otros_paquetes": "Trabajos y configuración de la aplicación sobre plataforma existente; no reconstruir IaC global, runners ni infraestructura de EDT 3.",
+      "origen_estimacion": "D3, estimación por actividad"
+    },
+    {
+      "id": "REV-S3-01",
+      "sprint": 3,
+      "actividad": "Implementar el motor de veredicto sobre jornada, habilitaciones y aptitud/compatibilidad de recursos; registrar motivos y versión de regla. RF-001",
+      "horas": {
+        "arquitectura": 0,
+        "lider": 0,
+        "software": 128,
+        "frontend": 32,
+        "seguridad": 0,
+        "datos": 0,
+        "qa": 64,
+        "sre": 0
+      },
+      "requisitos": [
+        "RF-001"
+      ],
+      "entregable": "Incremento, escenarios de componente/contrato y correcciones verificadas del comportamiento descrito.",
+      "limite_con_otros_paquetes": "EDT 5.3/5.6. Reglas, reserva y transacción de negocio; no rediseño H2 ni prueba independiente de carga.",
+      "origen_estimacion": "D3, revisión Software/Frontend/QA S2–S6 previamente comunicada; horas conservadas"
+    },
+    {
+      "id": "REV-S3-02",
+      "sprint": 3,
+      "actividad": "Aplicar la distinción entre modalidad completa, de datos y sin adhesión, mostrando fuente, nivel, veredicto y marca. RF-028",
+      "horas": {
+        "arquitectura": 0,
+        "lider": 0,
+        "software": 80,
+        "frontend": 48,
+        "seguridad": 0,
+        "datos": 0,
+        "qa": 48,
+        "sre": 0
+      },
+      "requisitos": [
+        "RF-028"
+      ],
+      "entregable": "Incremento, escenarios de componente/contrato y correcciones verificadas del comportamiento descrito.",
+      "limite_con_otros_paquetes": "EDT 5.3/5.6. Reglas, reserva y transacción de negocio; no rediseño H2 ni prueba independiente de carga.",
+      "origen_estimacion": "D3, revisión Software/Frontend/QA S2–S6 previamente comunicada; horas conservadas"
+    },
+    {
+      "id": "REV-S3-03",
+      "sprint": 3,
+      "actividad": "Confirmar la asignación con control de concurrencia, evitar reservas superpuestas, conservar resultado y emitir el evento de negocio",
+      "horas": {
+        "arquitectura": 0,
+        "lider": 0,
+        "software": 96,
+        "frontend": 48,
+        "seguridad": 0,
+        "datos": 0,
+        "qa": 48,
+        "sre": 0
+      },
+      "requisitos": [],
+      "entregable": "Incremento, escenarios de componente/contrato y correcciones verificadas del comportamiento descrito.",
+      "limite_con_otros_paquetes": "EDT 5.3/5.6. Reglas, reserva y transacción de negocio; no rediseño H2 ni prueba independiente de carga.",
+      "origen_estimacion": "D3, revisión Software/Frontend/QA S2–S6 previamente comunicada; horas conservadas"
+    },
+    {
+      "id": "REV-S3-04",
+      "sprint": 3,
+      "actividad": "Preparar los componentes operacionales de costo propio/subcontratado y su comparación para el incremento del sprint 8",
+      "horas": {
+        "arquitectura": 0,
+        "lider": 0,
+        "software": 48,
+        "frontend": 32,
+        "seguridad": 0,
+        "datos": 0,
+        "qa": 24,
+        "sre": 0
+      },
+      "requisitos": [
+        "RF-016",
+        "RF-017"
+      ],
+      "entregable": "Incremento, escenarios de componente/contrato y correcciones verificadas del comportamiento descrito.",
+      "limite_con_otros_paquetes": "EDT 5.3/5.6. Reglas, reserva y transacción de negocio; no rediseño H2 ni prueba independiente de carga.",
+      "origen_estimacion": "D3, revisión Software/Frontend/QA S2–S6 previamente comunicada; horas conservadas"
+    },
+    {
+      "id": "REV-S3-ARQUITECTURA",
+      "sprint": 3,
+      "actividad": "Revisar invariantes y concurrencia de reserva (16 h) y contrato de costos (8 h).",
+      "horas": {
+        "arquitectura": 24,
+        "lider": 0,
+        "software": 0,
+        "frontend": 0,
+        "seguridad": 0,
+        "datos": 0,
+        "qa": 0,
+        "sre": 0
+      },
+      "requisitos": [],
+      "entregable": "Revisión, configuración o esquema versionado del incremento, con su resultado verificable.",
+      "limite_con_otros_paquetes": "Revisión evolutiva de EDT 5; no repetir diseño general de A05.",
+      "origen_estimacion": "D3, estimación por actividad"
+    },
+    {
+      "id": "REV-S3-DATOS",
+      "sprint": 3,
+      "actividad": "Detallar índices/restricciones de reserva (16 h) y fixtures de conflicto de asignación (8 h).",
+      "horas": {
+        "arquitectura": 0,
+        "lider": 0,
+        "software": 0,
+        "frontend": 0,
+        "seguridad": 0,
+        "datos": 24,
+        "qa": 0,
+        "sre": 0
+      },
+      "requisitos": [],
+      "entregable": "Revisión, configuración o esquema versionado del incremento, con su resultado verificable.",
+      "limite_con_otros_paquetes": "Esquema, índices y fixtures operacionales de EDT 5; no migración de datos reales ni repositorio analítico de EDT 7.",
+      "origen_estimacion": "D3, estimación por actividad"
+    },
+    {
+      "id": "REV-S3-LIDER",
+      "sprint": 3,
+      "actividad": "Refinar/planificar y coordinar (16 h), resolver dependencias (8 h) y revisión de salida (8 h).",
+      "horas": {
+        "arquitectura": 0,
+        "lider": 32,
+        "software": 0,
+        "frontend": 0,
+        "seguridad": 0,
+        "datos": 0,
+        "qa": 0,
+        "sre": 0
+      },
+      "requisitos": [],
+      "entregable": "Revisión, configuración o esquema versionado del incremento, con su resultado verificable.",
+      "limite_con_otros_paquetes": "Coordinación técnica de desarrollo; no sustituye ni repite la dirección/PMO del proyecto.",
+      "origen_estimacion": "D3, estimación por actividad"
+    },
+    {
+      "id": "REV-S3-SEGURIDAD",
+      "sprint": 3,
+      "actividad": "Revisar autorización de modalidades (8 h), controles frente a abuso de reserva (8 h) y verificar correcciones aplicativas (16 h).",
+      "horas": {
+        "arquitectura": 0,
+        "lider": 0,
+        "software": 0,
+        "frontend": 0,
+        "seguridad": 32,
+        "datos": 0,
+        "qa": 0,
+        "sre": 0
+      },
+      "requisitos": [],
+      "entregable": "Revisión, configuración o esquema versionado del incremento, con su resultado verificable.",
+      "limite_con_otros_paquetes": "Controles de la aplicación; no aprovisionamiento de 3.2 ni pentest independiente de 10.2.",
+      "origen_estimacion": "D3, estimación por actividad"
+    },
+    {
+      "id": "REV-S3-SRE",
+      "sprint": 3,
+      "actividad": "Configurar despliegue de servicios del incremento (8 h), métricas de reserva (8 h) y reversa compatible (8 h).",
+      "horas": {
+        "arquitectura": 0,
+        "lider": 0,
+        "software": 0,
+        "frontend": 0,
+        "seguridad": 0,
+        "datos": 0,
+        "qa": 0,
+        "sre": 24
+      },
+      "requisitos": [],
+      "entregable": "Revisión, configuración o esquema versionado del incremento, con su resultado verificable.",
+      "limite_con_otros_paquetes": "Trabajos y configuración de la aplicación sobre plataforma existente; no reconstruir IaC global, runners ni infraestructura de EDT 3.",
+      "origen_estimacion": "D3, estimación por actividad"
+    },
+    {
+      "id": "REV-S4-01",
+      "sprint": 4,
+      "actividad": "Consumir posición normalizada y construir la vista de flota con fuente, antigüedad, disponibilidad y filtros. RF-008",
+      "horas": {
+        "arquitectura": 0,
+        "lider": 0,
+        "software": 64,
+        "frontend": 64,
+        "seguridad": 0,
+        "datos": 0,
+        "qa": 40,
+        "sre": 0
+      },
+      "requisitos": [
+        "RF-008"
+      ],
+      "entregable": "Incremento, escenarios de componente/contrato y correcciones verificadas del comportamiento descrito.",
+      "limite_con_otros_paquetes": "EDT 5.4/5.7. Consumo y efectos aplicativos; descargador en 6.3, ingesta GPS en 6.2 y captura/sincronización del dispositivo en 4.1.",
+      "origen_estimacion": "D3, revisión Software/Frontend/QA S2–S6 previamente comunicada; horas conservadas"
+    },
+    {
+      "id": "REV-S4-02",
+      "sprint": 4,
+      "actividad": "Consultar desde la aplicación el original de tacógrafo y su vínculo con el expediente mediante el contrato de 6.3. Parte aplicativa de RF-007",
+      "horas": {
+        "arquitectura": 0,
+        "lider": 0,
+        "software": 40,
+        "frontend": 40,
+        "seguridad": 0,
+        "datos": 0,
+        "qa": 24,
+        "sre": 0
+      },
+      "requisitos": [
+        "RF-007"
+      ],
+      "entregable": "Incremento, escenarios de componente/contrato y correcciones verificadas del comportamiento descrito.",
+      "limite_con_otros_paquetes": "EDT 5.4/5.7. Consumo y efectos aplicativos; descargador en 6.3, ingesta GPS en 6.2 y captura/sincronización del dispositivo en 4.1.",
+      "origen_estimacion": "D3, revisión Software/Frontend/QA S2–S6 previamente comunicada; horas conservadas"
+    },
+    {
+      "id": "REV-S4-03",
+      "sprint": 4,
+      "actividad": "Aplicar eventos ya sincronizados al estado de negocio de forma idempotente, conservar el resultado y mostrar su estado. Parte de aplicación asociada a RF-009",
+      "horas": {
+        "arquitectura": 0,
+        "lider": 0,
+        "software": 80,
+        "frontend": 24,
+        "seguridad": 0,
+        "datos": 0,
+        "qa": 40,
+        "sre": 0
+      },
+      "requisitos": [
+        "RF-009"
+      ],
+      "entregable": "Incremento, escenarios de componente/contrato y correcciones verificadas del comportamiento descrito.",
+      "limite_con_otros_paquetes": "EDT 5.4/5.7. Consumo y efectos aplicativos; descargador en 6.3, ingesta GPS en 6.2 y captura/sincronización del dispositivo en 4.1.",
+      "origen_estimacion": "D3, revisión Software/Frontend/QA S2–S6 previamente comunicada; horas conservadas"
+    },
+    {
+      "id": "REV-S4-04",
+      "sprint": 4,
+      "actividad": "Preparar API de consulta y vistas base de viajes/costos del portal, reutilizables por el cierre del sprint 8",
+      "horas": {
+        "arquitectura": 0,
+        "lider": 0,
+        "software": 48,
+        "frontend": 32,
+        "seguridad": 0,
+        "datos": 0,
+        "qa": 32,
+        "sre": 0
+      },
+      "requisitos": [
+        "RF-020"
+      ],
+      "entregable": "Incremento, escenarios de componente/contrato y correcciones verificadas del comportamiento descrito.",
+      "limite_con_otros_paquetes": "EDT 5.4/5.7. Consumo y efectos aplicativos; descargador en 6.3, ingesta GPS en 6.2 y captura/sincronización del dispositivo en 4.1.",
+      "origen_estimacion": "D3, revisión Software/Frontend/QA S2–S6 previamente comunicada; horas conservadas"
+    },
+    {
+      "id": "REV-S4-ARQUITECTURA",
+      "sprint": 4,
+      "actividad": "Revisar contratos de posición y obsolescencia (8 h) y límites de idempotencia entre transporte y negocio (8 h).",
+      "horas": {
+        "arquitectura": 16,
+        "lider": 0,
+        "software": 0,
+        "frontend": 0,
+        "seguridad": 0,
+        "datos": 0,
+        "qa": 0,
+        "sre": 0
+      },
+      "requisitos": [],
+      "entregable": "Revisión, configuración o esquema versionado del incremento, con su resultado verificable.",
+      "limite_con_otros_paquetes": "Revisión evolutiva de EDT 5; no repetir diseño general de A05.",
+      "origen_estimacion": "D3, estimación por actividad"
+    },
+    {
+      "id": "REV-S4-DATOS",
+      "sprint": 4,
+      "actividad": "Definir claves de deduplicación aplicativa (16 h), índices de consulta (8 h) y fixtures de reenvío (8 h).",
+      "horas": {
+        "arquitectura": 0,
+        "lider": 0,
+        "software": 0,
+        "frontend": 0,
+        "seguridad": 0,
+        "datos": 32,
+        "qa": 0,
+        "sre": 0
+      },
+      "requisitos": [],
+      "entregable": "Revisión, configuración o esquema versionado del incremento, con su resultado verificable.",
+      "limite_con_otros_paquetes": "Esquema, índices y fixtures operacionales de EDT 5; no migración de datos reales ni repositorio analítico de EDT 7.",
+      "origen_estimacion": "D3, estimación por actividad"
+    },
+    {
+      "id": "REV-S4-LIDER",
+      "sprint": 4,
+      "actividad": "Refinar/planificar y coordinar (16 h), revisar contratos de equipos/proveedores (8 h) y salida (8 h).",
+      "horas": {
+        "arquitectura": 0,
+        "lider": 32,
+        "software": 0,
+        "frontend": 0,
+        "seguridad": 0,
+        "datos": 0,
+        "qa": 0,
+        "sre": 0
+      },
+      "requisitos": [],
+      "entregable": "Revisión, configuración o esquema versionado del incremento, con su resultado verificable.",
+      "limite_con_otros_paquetes": "Coordinación técnica de desarrollo; no sustituye ni repite la dirección/PMO del proyecto.",
+      "origen_estimacion": "D3, estimación por actividad"
+    },
+    {
+      "id": "REV-S4-SEGURIDAD",
+      "sprint": 4,
+      "actividad": "Revisar exposición de posición (8 h) y autorización para consultar originales (8 h).",
+      "horas": {
+        "arquitectura": 0,
+        "lider": 0,
+        "software": 0,
+        "frontend": 0,
+        "seguridad": 16,
+        "datos": 0,
+        "qa": 0,
+        "sre": 0
+      },
+      "requisitos": [],
+      "entregable": "Revisión, configuración o esquema versionado del incremento, con su resultado verificable.",
+      "limite_con_otros_paquetes": "Controles de la aplicación; no aprovisionamiento de 3.2 ni pentest independiente de 10.2.",
+      "origen_estimacion": "D3, estimación por actividad"
+    },
+    {
+      "id": "REV-S4-SRE",
+      "sprint": 4,
+      "actividad": "Configurar consumidor y colas de aplicación (16 h), instrumentar reintentos (8 h), verificar despliegue y reversa (8 h).",
+      "horas": {
+        "arquitectura": 0,
+        "lider": 0,
+        "software": 0,
+        "frontend": 0,
+        "seguridad": 0,
+        "datos": 0,
+        "qa": 0,
+        "sre": 32
+      },
+      "requisitos": [],
+      "entregable": "Revisión, configuración o esquema versionado del incremento, con su resultado verificable.",
+      "limite_con_otros_paquetes": "Trabajos y configuración de la aplicación sobre plataforma existente; no reconstruir IaC global, runners ni infraestructura de EDT 3.",
+      "origen_estimacion": "D3, estimación por actividad"
+    },
+    {
+      "id": "REV-S5-01",
+      "sprint": 5,
+      "actividad": "Asociar llegada/salida recibidas a la visita, conservar origen/sello y exponer su secuencia. RF-010",
+      "horas": {
+        "arquitectura": 0,
+        "lider": 0,
+        "software": 64,
+        "frontend": 40,
+        "seguridad": 0,
+        "datos": 0,
+        "qa": 32,
+        "sre": 0
+      },
+      "requisitos": [
+        "RF-010"
+      ],
+      "entregable": "Incremento, escenarios de componente/contrato y correcciones verificadas del comportamiento descrito.",
+      "limite_con_otros_paquetes": "EDT 5.5/5.6. Eventos y evidencia de negocio; no firmware, montaje ni innovación 12.1.",
+      "origen_estimacion": "D3, revisión Software/Frontend/QA S2–S6 previamente comunicada; horas conservadas"
+    },
+    {
+      "id": "REV-S5-02",
+      "sprint": 5,
+      "actividad": "Calcular espera conforme a tiempo libre y contrato versionado, con evidencia y detalle consultable para el cobro. RF-011/RN-07",
+      "horas": {
+        "arquitectura": 0,
+        "lider": 0,
+        "software": 80,
+        "frontend": 48,
+        "seguridad": 0,
+        "datos": 0,
+        "qa": 40,
+        "sre": 0
+      },
+      "requisitos": [
+        "RF-011"
+      ],
+      "entregable": "Incremento, escenarios de componente/contrato y correcciones verificadas del comportamiento descrito.",
+      "limite_con_otros_paquetes": "EDT 5.5/5.6. Eventos y evidencia de negocio; no firmware, montaje ni innovación 12.1.",
+      "origen_estimacion": "D3, revisión Software/Frontend/QA S2–S6 previamente comunicada; horas conservadas"
+    },
+    {
+      "id": "REV-S5-03",
+      "sprint": 5,
+      "actividad": "Capturar la conformidad de entrega con destinatario identificado, firma, tiempo y ubicación; mostrar sus estados y disponibilidad. RF-012",
+      "horas": {
+        "arquitectura": 0,
+        "lider": 0,
+        "software": 80,
+        "frontend": 64,
+        "seguridad": 0,
+        "datos": 0,
+        "qa": 48,
+        "sre": 0
+      },
+      "requisitos": [
+        "RF-012"
+      ],
+      "entregable": "Incremento, escenarios de componente/contrato y correcciones verificadas del comportamiento descrito.",
+      "limite_con_otros_paquetes": "EDT 5.5/5.6. Eventos y evidencia de negocio; no firmware, montaje ni innovación 12.1.",
+      "origen_estimacion": "D3, revisión Software/Frontend/QA S2–S6 previamente comunicada; horas conservadas"
+    },
+    {
+      "id": "REV-S5-04",
+      "sprint": 5,
+      "actividad": "Preparar la relación entre esperas, recupero y ajustes de la liquidación, con vistas y pruebas para el cierre del sprint 8",
+      "horas": {
+        "arquitectura": 0,
+        "lider": 0,
+        "software": 48,
+        "frontend": 32,
+        "seguridad": 0,
+        "datos": 0,
+        "qa": 32,
+        "sre": 0
+      },
+      "requisitos": [
+        "RF-019"
+      ],
+      "entregable": "Incremento, escenarios de componente/contrato y correcciones verificadas del comportamiento descrito.",
+      "limite_con_otros_paquetes": "EDT 5.5/5.6. Eventos y evidencia de negocio; no firmware, montaje ni innovación 12.1.",
+      "origen_estimacion": "D3, revisión Software/Frontend/QA S2–S6 previamente comunicada; horas conservadas"
+    },
+    {
+      "id": "REV-S5-ARQUITECTURA",
+      "sprint": 5,
+      "actividad": "Revisar estado de visita y contrato de espera (8 h), y vínculo conformidad/cierre de viaje (8 h).",
+      "horas": {
+        "arquitectura": 16,
+        "lider": 0,
+        "software": 0,
+        "frontend": 0,
+        "seguridad": 0,
+        "datos": 0,
+        "qa": 0,
+        "sre": 0
+      },
+      "requisitos": [],
+      "entregable": "Revisión, configuración o esquema versionado del incremento, con su resultado verificable.",
+      "limite_con_otros_paquetes": "Revisión evolutiva de EDT 5; no repetir diseño general de A05.",
+      "origen_estimacion": "D3, estimación por actividad"
+    },
+    {
+      "id": "REV-S5-DATOS",
+      "sprint": 5,
+      "actividad": "Versionar relaciones visita/espera (8 h), preparar fixtures de contrato (8 h), comprobar referencias de liquidación (8 h).",
+      "horas": {
+        "arquitectura": 0,
+        "lider": 0,
+        "software": 0,
+        "frontend": 0,
+        "seguridad": 0,
+        "datos": 24,
+        "qa": 0,
+        "sre": 0
+      },
+      "requisitos": [],
+      "entregable": "Revisión, configuración o esquema versionado del incremento, con su resultado verificable.",
+      "limite_con_otros_paquetes": "Esquema, índices y fixtures operacionales de EDT 5; no migración de datos reales ni repositorio analítico de EDT 7.",
+      "origen_estimacion": "D3, estimación por actividad"
+    },
+    {
+      "id": "REV-S5-LIDER",
+      "sprint": 5,
+      "actividad": "Refinar/planificar y coordinar (16 h), resolver dependencias (8 h) y revisión técnica (8 h).",
+      "horas": {
+        "arquitectura": 0,
+        "lider": 32,
+        "software": 0,
+        "frontend": 0,
+        "seguridad": 0,
+        "datos": 0,
+        "qa": 0,
+        "sre": 0
+      },
+      "requisitos": [],
+      "entregable": "Revisión, configuración o esquema versionado del incremento, con su resultado verificable.",
+      "limite_con_otros_paquetes": "Coordinación técnica de desarrollo; no sustituye ni repite la dirección/PMO del proyecto.",
+      "origen_estimacion": "D3, estimación por actividad"
+    },
+    {
+      "id": "REV-S5-SEGURIDAD",
+      "sprint": 5,
+      "actividad": "Revisar identidad del firmante y acceso a evidencia (8 h) y comprobar correcciones (8 h).",
+      "horas": {
+        "arquitectura": 0,
+        "lider": 0,
+        "software": 0,
+        "frontend": 0,
+        "seguridad": 16,
+        "datos": 0,
+        "qa": 0,
+        "sre": 0
+      },
+      "requisitos": [],
+      "entregable": "Revisión, configuración o esquema versionado del incremento, con su resultado verificable.",
+      "limite_con_otros_paquetes": "Controles de la aplicación; no aprovisionamiento de 3.2 ni pentest independiente de 10.2.",
+      "origen_estimacion": "D3, estimación por actividad"
+    },
+    {
+      "id": "REV-S5-SRE",
+      "sprint": 5,
+      "actividad": "Configurar despliegue y referencias al almacén (8 h), correlación de eventos (8 h) y verificación de reversa (8 h).",
+      "horas": {
+        "arquitectura": 0,
+        "lider": 0,
+        "software": 0,
+        "frontend": 0,
+        "seguridad": 0,
+        "datos": 0,
+        "qa": 0,
+        "sre": 24
+      },
+      "requisitos": [],
+      "entregable": "Revisión, configuración o esquema versionado del incremento, con su resultado verificable.",
+      "limite_con_otros_paquetes": "Trabajos y configuración de la aplicación sobre plataforma existente; no reconstruir IaC global, runners ni infraestructura de EDT 3.",
+      "origen_estimacion": "D3, estimación por actividad"
+    },
+    {
+      "id": "REV-S6-01",
+      "sprint": 6,
+      "actividad": "Implementar lista de carga peligrosa, vínculos y coincidencia carga/documento/habilitaciones, firma de la lista y bloqueo de salida. RF-006",
+      "horas": {
+        "arquitectura": 0,
+        "lider": 0,
+        "software": 96,
+        "frontend": 56,
+        "seguridad": 0,
+        "datos": 0,
+        "qa": 48,
+        "sre": 0
+      },
+      "requisitos": [
+        "RF-006"
+      ],
+      "entregable": "Incremento, escenarios de componente/contrato y correcciones verificadas del comportamiento descrito.",
+      "limite_con_otros_paquetes": "EDT 5.5/5.6. Prepara y presenta documento emitido por contable; adaptador/folios en 6.1 y transporte satelital en 4.1.",
+      "origen_estimacion": "D3, revisión Software/Frontend/QA S2–S6 previamente comunicada; horas conservadas"
+    },
+    {
+      "id": "REV-S6-02",
+      "sprint": 6,
+      "actividad": "Preparar los datos desde la orden, solicitar el documento por el adaptador de 6.1 y consultar su estado/errores. Parte aplicativa de RF-013",
+      "horas": {
+        "arquitectura": 0,
+        "lider": 0,
+        "software": 64,
+        "frontend": 40,
+        "seguridad": 0,
+        "datos": 0,
+        "qa": 32,
+        "sre": 0
+      },
+      "requisitos": [
+        "RF-013"
+      ],
+      "entregable": "Incremento, escenarios de componente/contrato y correcciones verificadas del comportamiento descrito.",
+      "limite_con_otros_paquetes": "EDT 5.5/5.6. Prepara y presenta documento emitido por contable; adaptador/folios en 6.1 y transporte satelital en 4.1.",
+      "origen_estimacion": "D3, revisión Software/Frontend/QA S2–S6 previamente comunicada; horas conservadas"
+    },
+    {
+      "id": "REV-S6-03",
+      "sprint": 6,
+      "actividad": "Presentar el documento ya emitido, su integridad/estado y el bloqueo por ausencia, usando el canal de entrega previsto. Parte aplicativa de RF-014",
+      "horas": {
+        "arquitectura": 0,
+        "lider": 0,
+        "software": 64,
+        "frontend": 48,
+        "seguridad": 0,
+        "datos": 0,
+        "qa": 40,
+        "sre": 0
+      },
+      "requisitos": [
+        "RF-014"
+      ],
+      "entregable": "Incremento, escenarios de componente/contrato y correcciones verificadas del comportamiento descrito.",
+      "limite_con_otros_paquetes": "EDT 5.5/5.6. Prepara y presenta documento emitido por contable; adaptador/folios en 6.1 y transporte satelital en 4.1.",
+      "origen_estimacion": "D3, revisión Software/Frontend/QA S2–S6 previamente comunicada; horas conservadas"
+    },
+    {
+      "id": "REV-S6-04",
+      "sprint": 6,
+      "actividad": "Vincular cierre del viaje, documento y evidencias con liquidación/costeo; completar vistas y casos para el cierre del sprint 8",
+      "horas": {
+        "arquitectura": 0,
+        "lider": 0,
+        "software": 48,
+        "frontend": 32,
+        "seguridad": 0,
+        "datos": 0,
+        "qa": 32,
+        "sre": 0
+      },
+      "requisitos": [
+        "RF-016",
+        "RF-019"
+      ],
+      "entregable": "Incremento, escenarios de componente/contrato y correcciones verificadas del comportamiento descrito.",
+      "limite_con_otros_paquetes": "EDT 5.5/5.6. Prepara y presenta documento emitido por contable; adaptador/folios en 6.1 y transporte satelital en 4.1.",
+      "origen_estimacion": "D3, revisión Software/Frontend/QA S2–S6 previamente comunicada; horas conservadas"
+    },
+    {
+      "id": "REV-S6-ARQUITECTURA",
+      "sprint": 6,
+      "actividad": "Revisar estados de documento y bloqueo (8 h) y contrato aplicativo con contabilidad (8 h).",
+      "horas": {
+        "arquitectura": 16,
+        "lider": 0,
+        "software": 0,
+        "frontend": 0,
+        "seguridad": 0,
+        "datos": 0,
+        "qa": 0,
+        "sre": 0
+      },
+      "requisitos": [],
+      "entregable": "Revisión, configuración o esquema versionado del incremento, con su resultado verificable.",
+      "limite_con_otros_paquetes": "Revisión evolutiva de EDT 5; no repetir diseño general de A05.",
+      "origen_estimacion": "D3, estimación por actividad"
+    },
+    {
+      "id": "REV-S6-DATOS",
+      "sprint": 6,
+      "actividad": "Versionar relaciones carga/documento (8 h), preparar fixtures de correspondencia (8 h), verificar claves de cierre/costo (8 h).",
+      "horas": {
+        "arquitectura": 0,
+        "lider": 0,
+        "software": 0,
+        "frontend": 0,
+        "seguridad": 0,
+        "datos": 24,
+        "qa": 0,
+        "sre": 0
+      },
+      "requisitos": [],
+      "entregable": "Revisión, configuración o esquema versionado del incremento, con su resultado verificable.",
+      "limite_con_otros_paquetes": "Esquema, índices y fixtures operacionales de EDT 5; no migración de datos reales ni repositorio analítico de EDT 7.",
+      "origen_estimacion": "D3, estimación por actividad"
+    },
+    {
+      "id": "REV-S6-LIDER",
+      "sprint": 6,
+      "actividad": "Refinar/planificar y coordinar (16 h), resolver dependencia del adaptador (8 h) y revisar salida (8 h).",
+      "horas": {
+        "arquitectura": 0,
+        "lider": 32,
+        "software": 0,
+        "frontend": 0,
+        "seguridad": 0,
+        "datos": 0,
+        "qa": 0,
+        "sre": 0
+      },
+      "requisitos": [],
+      "entregable": "Revisión, configuración o esquema versionado del incremento, con su resultado verificable.",
+      "limite_con_otros_paquetes": "Coordinación técnica de desarrollo; no sustituye ni repite la dirección/PMO del proyecto.",
+      "origen_estimacion": "D3, estimación por actividad"
+    },
+    {
+      "id": "REV-S6-SEGURIDAD",
+      "sprint": 6,
+      "actividad": "Revisar acceso a documento y lista firmada (8 h), exposición de errores (8 h), verificar mitigaciones de aplicación (8 h).",
+      "horas": {
+        "arquitectura": 0,
+        "lider": 0,
+        "software": 0,
+        "frontend": 0,
+        "seguridad": 24,
+        "datos": 0,
+        "qa": 0,
+        "sre": 0
+      },
+      "requisitos": [],
+      "entregable": "Revisión, configuración o esquema versionado del incremento, con su resultado verificable.",
+      "limite_con_otros_paquetes": "Controles de la aplicación; no aprovisionamiento de 3.2 ni pentest independiente de 10.2.",
+      "origen_estimacion": "D3, estimación por actividad"
+    },
+    {
+      "id": "REV-S6-SRE",
+      "sprint": 6,
+      "actividad": "Configurar cliente del adaptador (8 h), alertas/trazas de fallos (8 h) y verificar despliegue/reversa (8 h).",
+      "horas": {
+        "arquitectura": 0,
+        "lider": 0,
+        "software": 0,
+        "frontend": 0,
+        "seguridad": 0,
+        "datos": 0,
+        "qa": 0,
+        "sre": 24
+      },
+      "requisitos": [],
+      "entregable": "Revisión, configuración o esquema versionado del incremento, con su resultado verificable.",
+      "limite_con_otros_paquetes": "Trabajos y configuración de la aplicación sobre plataforma existente; no reconstruir IaC global, runners ni infraestructura de EDT 3.",
+      "origen_estimacion": "D3, estimación por actividad"
+    },
+    {
+      "id": "REV-S7-01",
+      "sprint": 7,
+      "actividad": "Adhesión y consentimientos: estados de invitación/anexo/modalidad, RUT único, fechas y ocho indicadores; completar el flujo sin reconstruir permisos de S1.",
+      "horas": {
+        "arquitectura": 8,
+        "lider": 8,
+        "software": 64,
+        "frontend": 56,
+        "seguridad": 16,
+        "datos": 0,
+        "qa": 32,
+        "sre": 0
+      },
+      "requisitos": [
+        "RF-026",
+        "RF-022"
+      ],
+      "entregable": "Flujo aplicativo e indicadores de adhesión; concesión/revocación comprobada.",
+      "limite_con_otros_paquetes": "EDT 5.2/5.7; campaña, obtención de firmas y revisión jurídica siguen en 9.2/9.1.",
+      "origen_estimacion": "Propuesta D2 de 5790cb0, AUD-14; revisada por D3 contra S6/G13, con horas conservadas y fronteras explicitadas"
+    },
+    {
+      "id": "REV-S7-02",
+      "sprint": 7,
+      "actividad": "Verificar acceso y privacidad en el candidato, integrar configuración de roles y corregir defectos focalizados.",
+      "horas": {
+        "arquitectura": 0,
+        "lider": 0,
+        "software": 16,
+        "frontend": 8,
+        "seguridad": 16,
+        "datos": 0,
+        "qa": 16,
+        "sre": 8
+      },
+      "requisitos": [
+        "RF-022",
+        "RNF-013"
+      ],
+      "entregable": "Evidencia focalizada de acceso permitido/denegado y revocación.",
+      "limite_con_otros_paquetes": "Reutiliza S1; la misma elaboración/ejecución no se carga otra vez en 10.1.",
+      "origen_estimacion": "Propuesta D2 de 5790cb0, AUD-14; revisada por D3 contra S6/G13, con horas conservadas y fronteras explicitadas"
+    },
+    {
+      "id": "REV-S7-03",
+      "sprint": 7,
+      "actividad": "Integrar datos y flujos ya construidos de asignación/jornada; verificar escenarios de descanso y corregir defectos del candidato.",
+      "horas": {
+        "arquitectura": 8,
+        "lider": 0,
+        "software": 32,
+        "frontend": 16,
+        "seguridad": 0,
+        "datos": 16,
+        "qa": 24,
+        "sre": 0
+      },
+      "requisitos": [
+        "RF-001",
+        "RF-002",
+        "RF-003"
+      ],
+      "entregable": "Decisión y motivo de reserva válida o bloqueo, con datos ficticios.",
+      "limite_con_otros_paquetes": "Reutiliza S2/S3; no reconstruye motor ni sustituye aceptación independiente.",
+      "origen_estimacion": "Propuesta D2 de 5790cb0, AUD-14; revisada por D3 contra S6/G13, con horas conservadas y fronteras explicitadas"
+    },
+    {
+      "id": "REV-S7-04",
+      "sprint": 7,
+      "actividad": "Completar consumo/presentación de alerta de conducción y verificar en PREPROD el escenario sintético de G13.",
+      "horas": {
+        "arquitectura": 8,
+        "lider": 0,
+        "software": 40,
+        "frontend": 24,
+        "seguridad": 0,
+        "datos": 0,
+        "qa": 24,
+        "sre": 8
+      },
+      "requisitos": [
+        "RF-027"
+      ],
+      "entregable": "Aviso aplicativo y lugar seguro visibles; caso sintético documentado.",
+      "limite_con_otros_paquetes": "EDT 5.1; cálculo real a bordo y CP-HW-06 están en 4.1. No incluye la innovación 12.5.",
+      "origen_estimacion": "Propuesta D2 de 5790cb0, AUD-14; revisada por D3 contra S6/G13, con horas conservadas y fronteras explicitadas"
+    },
+    {
+      "id": "REV-S7-05",
+      "sprint": 7,
+      "actividad": "Verificar en la aplicación reinicio, reenvío y efectos idempotentes del candidato con conectividad intermitente.",
+      "horas": {
+        "arquitectura": 0,
+        "lider": 0,
+        "software": 24,
+        "frontend": 8,
+        "seguridad": 0,
+        "datos": 8,
+        "qa": 24,
+        "sre": 16
+      },
+      "requisitos": [
+        "RNF-002",
+        "RF-009"
+      ],
+      "entregable": "Evento íntegro y un efecto de negocio al reenviar; correcciones verificadas.",
+      "limite_con_otros_paquetes": "Reutiliza S4; no firmware, almacenamiento local ni prueba física CP-HW-03 de 4.1.",
+      "origen_estimacion": "Propuesta D2 de 5790cb0, AUD-14; revisada por D3 contra S6/G13, con horas conservadas y fronteras explicitadas"
+    },
+    {
+      "id": "REV-S7-06",
+      "sprint": 7,
+      "actividad": "Ejecutar regresión de construcción entre los cinco flujos del candidato y corregir defectos ordinarios previstos.",
+      "horas": {
+        "arquitectura": 0,
+        "lider": 8,
+        "software": 40,
+        "frontend": 24,
+        "seguridad": 8,
+        "datos": 8,
+        "qa": 40,
+        "sre": 8
+      },
+      "requisitos": [
+        "RF-001",
+        "RF-003",
+        "RF-022",
+        "RF-027",
+        "RNF-002"
+      ],
+      "entregable": "Regresión conjunta y reejecución de correcciones con el mismo candidato.",
+      "limite_con_otros_paquetes": "No reconstruir pruebas unitarias anteriores ni sumar esta misma ejecución como nuevo trabajo en 10.1.",
+      "origen_estimacion": "Propuesta D2 de 5790cb0, AUD-14; revisada por D3 contra S6/G13, con horas conservadas y fronteras explicitadas"
+    },
+    {
+      "id": "REV-S7-07",
+      "sprint": 7,
+      "actividad": "Congelar el candidato y preparar datos ficticios, material técnico por perfil, configuración, digest y paquete de evidencia.",
+      "horas": {
+        "arquitectura": 8,
+        "lider": 16,
+        "software": 8,
+        "frontend": 8,
+        "seguridad": 0,
+        "datos": 8,
+        "qa": 16,
+        "sre": 16
+      },
+      "requisitos": [],
+      "entregable": "Artefacto, configuración y datos identificados; paquete técnico para G13.",
+      "limite_con_otros_paquetes": "EDT 5 entrega evidencia; revisión independiente en 10.1 y capacitación impartida/evaluada en 11.1.",
+      "origen_estimacion": "Propuesta D2 de 5790cb0, AUD-14; revisada por D3 contra S6/G13, con horas conservadas y fronteras explicitadas"
+    },
+    {
+      "id": "REV-S8-01",
+      "sprint": 8,
+      "actividad": "Completar costeo por viaje, CostoVersion, faltantes y comparación de flota propia/subcontratada sobre lo preparado en S2–S6.",
+      "horas": {
+        "arquitectura": 4,
+        "lider": 4,
+        "software": 64,
+        "frontend": 32,
+        "seguridad": 0,
+        "datos": 32,
+        "qa": 32,
+        "sre": 8
+      },
+      "requisitos": [
+        "RF-016",
+        "RF-017"
+      ],
+      "entregable": "Costo y comparación reproducibles desde componentes operacionales.",
+      "limite_con_otros_paquetes": "5.6; no estudio de costos 2.5, adaptadores 6.4 ni otro repositorio 7.3.",
+      "origen_estimacion": "D3: desagregación conjunta de las 800 h ya comunicadas; totales de sus cinco actividades y ocho perfiles conservados"
+    },
+    {
+      "id": "REV-S8-02",
+      "sprint": 8,
+      "actividad": "Completar liquidación, ajustes y conciliación desde cierres y evidencias ya construidos.",
+      "horas": {
+        "arquitectura": 4,
+        "lider": 4,
+        "software": 56,
+        "frontend": 24,
+        "seguridad": 0,
+        "datos": 16,
+        "qa": 32,
+        "sre": 8
+      },
+      "requisitos": [
+        "RF-019"
+      ],
+      "entregable": "Liquidación versionada, detalle de ajustes y discrepancias visibles.",
+      "limite_con_otros_paquetes": "5.6; no migración histórica ni compra/desarrollo adicional del sistema contable.",
+      "origen_estimacion": "D3: desagregación conjunta de las 800 h ya comunicadas; totales de sus cinco actividades y ocho perfiles conservados"
+    },
+    {
+      "id": "REV-S8-03",
+      "sprint": 8,
+      "actividad": "Completar consultas del transportista sobre viajes, evidencias y liquidación, con límites de acceso y faltantes.",
+      "horas": {
+        "arquitectura": 0,
+        "lider": 4,
+        "software": 48,
+        "frontend": 64,
+        "seguridad": 16,
+        "datos": 8,
+        "qa": 24,
+        "sre": 4
+      },
+      "requisitos": [
+        "RF-020"
+      ],
+      "entregable": "Portal con filtros, detalle, errores y rechazo de acceso ajeno.",
+      "limite_con_otros_paquetes": "5.7; reutiliza permisos de S1 y consultas de S4; no portal del cliente E2 ni expediente 12.1.",
+      "origen_estimacion": "D3: desagregación conjunta de las 800 h ya comunicadas; totales de sus cinco actividades y ocho perfiles conservados"
+    },
+    {
+      "id": "REV-S8-04",
+      "sprint": 8,
+      "actividad": "Regresión de construcción e integración aplicativa del incremento final y correcciones ordinarias de cierre.",
+      "horas": {
+        "arquitectura": 4,
+        "lider": 8,
+        "software": 64,
+        "frontend": 32,
+        "seguridad": 8,
+        "datos": 16,
+        "qa": 56,
+        "sre": 28
+      },
+      "requisitos": [
+        "RF-016",
+        "RF-017",
+        "RF-019",
+        "RF-020"
+      ],
+      "entregable": "Pruebas continuas y regresión de candidato H4; defectos bloqueantes resueltos.",
+      "limite_con_otros_paquetes": "No duplicar ejecuciones ya imputadas a S7 ni la certificación independiente A12/H5 de EDT 10.",
+      "origen_estimacion": "D3: desagregación conjunta de las 800 h ya comunicadas; totales de sus cinco actividades y ocho perfiles conservados"
+    },
+    {
+      "id": "REV-S8-05",
+      "sprint": 8,
+      "actividad": "Preparar candidato H4, evidencia de QA y cobertura, entrega y complemento técnico del material de capacitación.",
+      "horas": {
+        "arquitectura": 4,
+        "lider": 12,
+        "software": 8,
+        "frontend": 8,
+        "seguridad": 8,
+        "datos": 8,
+        "qa": 16,
+        "sre": 32
+      },
+      "requisitos": [],
+      "entregable": "Artefacto firmado y trazable, informe de pruebas y complemento de capacitación.",
+      "limite_con_otros_paquetes": "Se mantiene congelado G13 en PREPROD; la impartición/evaluación de A13 y aceptación H5 conservan su esfuerzo propio.",
+      "origen_estimacion": "D3: desagregación conjunta de las 800 h ya comunicadas; totales de sus cinco actividades y ocho perfiles conservados"
+    }
+  ]
+}

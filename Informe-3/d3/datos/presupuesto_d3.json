@@ -17,6 +17,7 @@
     "qa": {"nombre": "QA y automatización", "e26": "Analista QA Senior", "costo_min_uf_h": 0.4, "costo_max_uf_h": 0.6},
     "sre": {"nombre": "DevOps/SRE", "e26": "Ingeniero DevOps / SRE", "costo_min_uf_h": 0.6, "costo_max_uf_h": 1.0}
   },
+  "referencia_revision_edt5": "El reparto por perfil de EDT 5 conservado aquí es histórico para comparación con T-15. La estimación técnica completa actual está en datos/estimacion_edt5.json y en revision_edt5 del resumen; su adopción económica requiere conciliación con D2.",
   "implementacion_base": [
     {"edt": "5", "actividad": "Seis contextos E1, interfaces por perfil y portal base", "horas_t15": 17600, "ventana": "M6–M10, A09; ocho sprints T-10", "horas_perfil_propuestas": {"arquitectura": 320, "lider": 640, "software": 5920, "frontend": 4000, "seguridad": 640, "datos": 1600, "qa": 3200, "sre": 1280}},
     {"edt": "6", "actividad": "Contable, posicionamiento, fábrica, costos y capa anticorrupción", "horas_t15": 6400, "ventana": "M6–M9 y retiro gradual M16–M24, según T-14", "horas_perfil_propuestas": {"arquitectura": 160, "lider": 320, "software": 2720, "frontend": 320, "seguridad": 320, "datos": 1280, "qa": 960, "sre": 320}},
@@ -54,7 +55,7 @@
     "operacion_h_mes": {"sre": 4, "software": 4, "seguridad": 2, "datos": 2, "qa": 4},
     "beneficio_base_clp_mes": 0,
     "beneficio_hipotesis_d1_clp_anual": 30000000,
-    "nota_beneficio": "Los 30 millones anuales aparecen en el paquete D1; D3 no los acredita. Caso base prudente: cero; sensibilidad separada hasta justificar cantidades y costos unitarios."
+    "nota_beneficio": "D1 adoptó el criterio D3 en 49fbdde: caso base prudente cero y sensibilidad provisional de 90 millones en 36 meses, separados de beneficios consolidados. La sensibilidad no es un importe acreditado; requiere derivación causal para cambiar de clasificación."
   },
   "gitlab": {
     "producto": "GitLab Premium Self-Managed, edición Enterprise",

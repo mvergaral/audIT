@@ -37,7 +37,7 @@ La preparación M4–M5 de 12.2 habilita el piloto M6; se conservan montaje M6�
 
 Propuesta nominal M21–M56: SRE 4, Software 4, Seguridad 2, Datos 2 y QA 4 h/mes; **16 h/mes y 576 h en 36 meses**. Es una revisión mensual de servicio/despliegue, reglas, autorización, calidad de entradas y regresión, no atención ilimitada de incidentes.
 
-Costo atribuido de referencia: $472.000/mes y $16.992.000 en 36 meses; rango $368.000–$576.000/mes. SRE/Seguridad irían a 13.2 y el resto a 13.4. D2 debe demostrar capacidad del mismo perfil: si se absorbe, ya está en RRHH base; si falta, se agrega solo el déficit. Nube/actas/paquetes/operaciones IoT se concilian con D4 por separado. No se cobra otra vez conectividad, kit estándar, stock contractual ni soporte físico.
+Costo atribuido de referencia: $472.000/mes y $16.992.000 en 36 meses; rango $368.000–$576.000/mes. SRE/Seguridad irían a 13.2 y el resto a 13.4. D2 debe demostrar capacidad del mismo perfil: si se absorbe, ya está en RRHH base; si falta, se agrega solo el déficit. D4 incluyó el cómputo auxiliar en 4.2 §5 y asignó la capacidad adicional de actas, twin y paquetes de esta innovación a su reserva del 10 % (4.7, commit b8adac2). Se adopta como supuesto presupuestario sujeto al consumo real, sin cargo cloud separado ni equivalencia con consumo cero. No se cobra otra vez conectividad, kit estándar, stock contractual ni soporte físico.
 
 ## Beneficio de Curimón y sensibilidad
 
@@ -53,9 +53,9 @@ Cada término debe indicar volumen elegible, frecuencia, comparación manual, me
 
 La instalación es trabajo interno de audIT, conforme a las aclaraciones del Informe 3 §9 y al reparto económico de D4. Por tanto, tiempo liberado de esos técnicos se trata como capacidad o costo evitado de audIT, según su efecto real de caja. No se atribuye automáticamente a Curimón ni se suma como ingreso de audIT. Si un ahorro se traslada al cliente mediante un precio menor, se documenta una sola vez y no se duplica como beneficio independiente.
 
-El paquete económico D1 incluye **$30.000.000/año por patio**, $90.000.000 en 36 meses, dentro de «Beneficios Consolidados de Ingeniería». Esa cifra equivale a **$2.500.000 mensuales M21–M56**, pero dividirla entre meses solo distribuye el importe: no demuestra su origen. En el aporte revisado no aparece la derivación por cantidades y costos ni la atribución del ahorro. Se conserva como **hipótesis agregada de sensibilidad**, no como beneficio consolidado.
+La versión anterior del paquete económico D1 incluía $30.000.000/año por patio, $90.000.000 en 36 meses, dentro de «Beneficios Consolidados de Ingeniería». Esa cifra equivale a $2.500.000 mensuales M21–M56, pero dividirla entre meses solo distribuye el importe: no demuestra su origen. En el commit **49fbdde**, D1 corrigió su aporte y ambos textos LaTeX económicos: adoptó **$0 en el caso base y $90.000.000 como sensibilidad provisional**, con las horas de instalación liberadas atribuidas a audIT.
 
-Propuesta de conciliación para esta entrega: mantener el escenario prudente D3 de $0 y el escenario de D1 de $90.000.000 separados. Si D1 documenta los parámetros que justifican su cifra y a quién beneficia, puede acordarse como beneficio **esperado**, sin exigir resultados reales del piloto ahora. No se fabrican cantidades o tarifas para hacer coincidir una fórmula con los $90 millones.
+El criterio de escenarios queda conciliado documentalmente entre D1 y D3 para esta entrega. La sensibilidad permanece separada y no se presenta como beneficio acreditado ni consolidado. Si se documentan los parámetros causales y a quién beneficia cada término, puede revisarse su uso como beneficio **esperado**, sin exigir resultados reales del piloto ahora. No se fabrican cantidades o tarifas para alcanzar $90 millones. Este acuerdo resuelve la clasificación del beneficio; no cierra la conciliación de personal de implementación/operación con D2.
 
 El beneficio del cliente se presenta separado de los costos y de los ingresos de audIT. La inversión y el costo incremental de la innovación se calculan por separado.
 
@@ -66,7 +66,7 @@ En la ejecución contractual se prevé registrar en M6 cada oportunidad: termina
 | Clave económica | Valor de referencia | Entrada al flujo |
 |---|---|---|
 | innovacion-2-inversion | Atribución $16.576.000, sustituible por costo de D2 | Reconciliar 560 h con RRHH; no duplicar |
-| innovacion-2-costo | Atribución $16.992.000 en 36 meses; nube pendiente | Agregar únicamente déficit de personal y consumo adicionales; total todavía abierto |
-| innovacion-2-beneficio | Base prudente $0; sensibilidad agregada D1 $90.000.000/36 meses, sin derivación documentada en el aporte revisado | Hoja de beneficios del mandante, fuera de ingresos de audIT; separar el ahorro de recursos propios del proponente |
+| innovacion-2-costo | Atribución de personal $16.992.000 en 36 meses; nube en presupuesto/reserva D4, sin sumar otra partida | Agregar únicamente déficit de personal conciliado con D2; conservar explícito el supuesto de cobertura cloud de D4; total todavía abierto |
+| innovacion-2-beneficio | Base prudente $0; sensibilidad provisional $90.000.000/36 meses, criterio adoptado por D1 en 49fbdde | Hoja de beneficios del mandante, fuera de ingresos de audIT; no sumar ambos escenarios ni presentar la sensibilidad como monto acreditado |
 
-**Fuentes:** S13 §13.2/T-19 ficha 2; S7/T-14, 12.2; T-15, 2.560 h; FEP01 Art.29.5, p.19; E-24 p.73/E-26 p.76; paquete económico D1 §1.3, Beneficios; Aclaraciones Informe 3 §§1, 5 y 9; D4, 4.8-compras-audit-y-mandante.md §1.
+**Fuentes:** S13 §13.2/T-19 ficha 2; S7/T-14, 12.2; T-15, 2.560 h; FEP01 Art.29.5, p.19; E-24 p.73/E-26 p.76; paquete económico D1 §1.3 y textos LaTeX económicos, commit 49fbdde; Aclaraciones Informe 3 §§1, 5 y 9; D4, 4.8-compras-audit-y-mandante.md §1.
