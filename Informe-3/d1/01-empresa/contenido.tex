@@ -327,13 +327,13 @@ La \tabref{1-capacidad-frentes} desglosa analíticamente la carga del caso, la v
 
 \begin{tabla}[ancho=completo, fuente=condensada]{Capacidad operativa por frente y absorción de escala frente al caso}{1-capacidad-frentes}{L{28mm} L{30mm} L{20mm} X L{28mm}}
 Frente operativo & Carga y escala del caso & Ventana S7 & Capacidad neta y modelo de absorción & Respaldo y validación \\ \midrule
-Montaje e instalación en flota & 374 unidades (148 propias, 226 terceros; 34 sin GPS, 140 homologación) & M1--M12 (A02, A05, A08, A10) & Dos cuadrillas técnicas (4 especialistas Célula Beta). Tasa de 1,5 camiones/día en terminal durante mantenciones y pernoctas; cero inmovilización no programada & Procedimiento en terminal; ensayo HIL CP-HW-08 y protocolo hito H3 \\
+Montaje e integración de flota & 182 montajes: 148 propios y 34 terceros sin equipo; 192 terceros con equipo existente & Montaje A11/A18; integración A10/A18, según secuencia de S7 & Instalación en terminal durante paradas programadas; integración mediante plataformas de terceros según factibilidad y adhesión & Actas de montaje por vehículo, pruebas de integración y conciliación con S4/T-11 \\
 Plataforma Cloud y Software & 96.000 viajes/año; peak estrés 450 viajes/día y 570 sesiones & M1--M12 (E1), M13--M18 (E2) & 8 ingenieros software/datos (Célula Alfa). Escalabilidad horizontal en AKS e IoT Hub: el volumen de transacciones se absorbe por elasticidad cloud, sin crecimiento lineal de personal & Pruebas de estrés CP-PERF-01 (450 viajes/día), compuertas G1--G4 y matriz T-12 \\
 Aseguramiento de Calidad (QA) & 120 casos de prueba, 13 hitos contractuales y 42 requisitos & M1--M20 (A12, A22, campañas) & 4 ingenieros QA/Ciberseguridad (Célula Gamma). Ejecución automatizada de pipelines CI/CD y pruebas continuas de regresión & Formulario T-13, catálogo T-17 y protocolos por hito H1--H12 \\
 Torre de Control y Operación 24/7 & 374 unidades en ruta, 5 terminales y mesa de ayuda permanente & M13--M15 (piloto), M16 en adelante & 4 turnos rotativos 4x4 (2 analistas por turno). Escalamiento Nivel 2 en $\le 15$\,min. Peak de 37 FTE en M13--M16 con monitores de marcha blanca ya nivelados en T-15 & Protocolo de escalamiento (§1.3), acuerdos OLA regionales (§1.1.2) y DRP semestral \\ \bottomrule
 \end{tabla}
 
-Este dimensionamiento demuestra que el salto de escala no se traslada a riesgos de ejecución: en hardware se distribuye a lo largo de 12 meses aprovechando el flujo natural de terminales; en software se delega a la capacidad de cómputo elástico en Azure; y en soporte se apoya en una estructura de turnos continuos formalmente coordinada con la red de asistencia técnica en la Ruta 5.
+Este dimensionamiento demuestra que el salto de escala no se traslada a riesgos de ejecución: el montaje se distribuye según las ventanas de intervención y las visitas programadas a terminal; en software se delega a la capacidad de cómputo elástico en Azure; y en soporte se apoya en una estructura de turnos continuos formalmente coordinada con la red de asistencia técnica en la Ruta 5.
 
 \subsection{Certificaciones institucionales y alineamiento normativo}\label{sec:1-certificaciones}
 
