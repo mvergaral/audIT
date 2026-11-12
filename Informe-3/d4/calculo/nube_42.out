@@ -1,0 +1,70 @@
+| Ambiente | Servicio | Supuesto de tamaño | USD al mes | Pesos al mes |
+|---|---|---|---|---|
+| PROD | AKS, plano de control | Nivel Standard con SLA de disponibilidad | 73,00 | 65.700 |
+| PROD | AKS, nodos | 3 D2ds v5 de sistema y 3 D4ds v5 de aplicación, uno por zona | 1.038,06 | 934.254 |
+| PROD | API Management | Premium, 2 unidades en dos zonas (D4-144, corrige la fila 33 del T-11) | 5.590,34 | 5.031.306 |
+| PROD | Front Door | Premium, 100 GB de salida al mes | 338,25 | 304.425 |
+| PROD | IoT Hub | S1, 2 unidades (T-11, fila 34) | 69,85 | 62.865 |
+| PROD | Event Hubs | Premium, 1 unidad de procesamiento (T-11, fila 35) | 1.047,34 | 942.610 |
+| PROD | PostgreSQL transaccional | 4 vCore de propósito general, alta disponibilidad entre zonas, 256 GB por nodo | 810,10 | 729.086 |
+| PROD | PostgreSQL de series (TimescaleDB) | 2 vCore de propósito general, 128 GB | 202,52 | 182.272 |
+| PROD | Azure Managed Redis | Balanced B3 | 66,43 | 59.787 |
+| PROD | Azure Firewall | Premium, 300 GB procesados al mes | 1.282,30 | 1.154.070 |
+| PROD | Puerta VPN | VpnGw1AZ, túneles de los 4 terminales y respaldo de San Bernardo | 153,30 | 137.970 |
+| PROD | Puerta ExpressRoute | ErGw1AZ | 263,53 | 237.177 |
+| PROD | Circuito ExpressRoute, lado Microsoft | Standard medido 100 Mbit/s, 50 GB de salida | 105,00 | 94.500 |
+| PROD | Azure Bastion | Basic | 138,70 | 124.830 |
+| PROD | Key Vault | Premium, 20 claves HSM y 1 millón de operaciones | 23,00 | 20.700 |
+| PROD | Almacenamiento de objetos y Data Lake | 500 GB Hot ZRS en promedio | 16,10 | 14.490 |
+| PROD | Log Analytics | 3 GB al día, 12 meses en línea | 411,42 | 370.275 |
+| PROD | Réplica hacia Brazil South | 50 GB al mes de tráfico entre regiones | 4,35 | 3.915 |
+| DR | Event Hubs, réplica | Premium, 1 unidad de procesamiento | 1.500,15 | 1.350.135 |
+| DR | PostgreSQL transaccional, réplica | 2 vCore, 256 GB | 231,14 | 208.022 |
+| DR | PostgreSQL de series, réplica | 2 vCore, 128 GB | 203,17 | 182.851 |
+| DR | Azure Firewall | Premium, siempre activo | 1.277,66 | 1.149.894 |
+| DR | Key Vault | Premium, 20 claves HSM | 20,30 | 18.270 |
+| DR | Almacenamiento replicado | 500 GB Hot LRS | 16,30 | 14.670 |
+| DR | AKS en las pruebas de conmutación | 2 pruebas al año de 8 horas con el tamaño de producción | 2,29 | 2.064 |
+| PREPROD | AKS, nodos | 3 D2ds v5, nivel gratuito | 346,02 | 311.418 |
+| PREPROD | API Management | Developer, 1 unidad | 48,03 | 43.231 |
+| PREPROD | IoT Hub | S1, 1 unidad | 34,92 | 31.432 |
+| PREPROD | Event Hubs | Standard, 2 unidades de capacidad | 61,19 | 55.070 |
+| PREPROD | PostgreSQL | 2 vCore de propósito general, 128 GB, más series en B2ms con 64 GB | 351,82 | 316.638 |
+| PREPROD | Azure Managed Redis | Balanced B0 | 16,35 | 14.717 |
+| PREPROD | Log Analytics | 1 GB al día | 96,39 | 86.754 |
+| PREPROD | Prueba de carga antes del H5 | Un mes con el tamaño de producción (AKS y PostgreSQL), repartido en 51 meses | 34,62 | 31.160 |
+| QA | AKS, nodos | 2 D2ds v5, nivel gratuito | 230,68 | 207.612 |
+| QA | API Management | Developer, 1 unidad | 48,03 | 43.231 |
+| QA | IoT Hub | S1, 1 unidad | 34,92 | 31.432 |
+| QA | Event Hubs | Standard, 1 unidad de capacidad | 30,59 | 27.535 |
+| QA | PostgreSQL | B2ms, 64 GB | 149,30 | 134.366 |
+| QA | Azure Managed Redis | Balanced B0 | 16,35 | 14.717 |
+| QA | Log Analytics | 0,5 GB al día | 48,20 | 43.377 |
+| DEV | AKS, nodos | 1 D2ds v5, nivel gratuito | 115,34 | 103.806 |
+| DEV | API Management | Developer, 1 unidad | 48,03 | 43.231 |
+| DEV | Event Hubs | Standard, 1 unidad de capacidad | 30,59 | 27.535 |
+| DEV | PostgreSQL | B1ms, 32 GB | 22,53 | 20.273 |
+| DEV | Azure Managed Redis | Balanced B0 | 16,35 | 14.717 |
+| DEV | Log Analytics | 0,3 GB al día | 28,92 | 26.026 |
+
+| Ambiente | Meses | USD al mes | Pesos al mes | Meses activos | Total neto en pesos |
+|---|---|---|---|---|---|
+| PROD | 6 a 56 | 11.633,59 | 10.470.232 | 51 | 533.981.844 |
+| DR | 12 a 56 | 3.251,01 | 2.925.907 | 45 | 131.665.797 |
+| PREPROD | 6 a 56 | 989,35 | 890.419 | 51 | 45.411.378 |
+| QA | 4 a 56 | 558,08 | 502.270 | 53 | 26.620.311 |
+| DEV | 4 a 56 | 261,76 | 235.588 | 53 | 12.486.152 |
+| Total 56 meses | | | | | 750.165.482 |
+
+APIM Premium: 5.590,34 USD al mes, 48% de producción
+
+| Conectividad | Supuesto | Pesos al mes en régimen | Total neto 56 meses |
+|---|---|---|---|
+| Tiempo de aire Iridium | Plan de 25 KB a USD 36,75 por equipo activo, 182 desde el mes 9 más el crecimiento | 6.019.650 | 311.566.500 |
+| Activación Iridium | USD 31,50 por equipo, 204 equipos | | 5.783.400 |
+| SIM 5G de los terminales | 8 líneas, referencia Entel 13 GB a $9.990 con IVA, meses 4 a 56 | 67.160 | 3.559.462 |
+| Planes LTE de los equipos a bordo | Estimado $3.000 netos por línea activa al mes (D4-145) | 546.000 | 28.260.000 |
+| Circuito del proveedor de ExpressRoute | Estimado USD 1.000 al mes, meses 4 a 56 (D4-145) | 900.000 | 47.700.000 |
+| Total conectividad | | | 396.869.362 |
+
+TOTAL NUBE Y CONECTIVIDAD: 1.147.034.844

@@ -1,0 +1,30 @@
+## 4.3 Soporte y mantención
+| Partida | Supuesto | Mes | Total neto en pesos |
+|---|---|---|---|
+| Soporte del fabricante y mantención preventiva y correctiva | 12 % anual de 333.192.728 de hardware, 44 meses | 13 a 56, mensual de 3.331.927 | 146.604.800 |
+| Batería de UPS SRT1000XLI (estimado USD 300) | 4 unidades | 36 | 1.080.000 |
+| Batería interna de UPS SRT3000RMXLI (estimado USD 600) | 2 unidades | 36 | 1.080.000 |
+| Paquete de baterías SRT96RMBP (USD 1.447,99, CDW) | 2 unidades | 36 | 2.606.382 |
+| Borrado seguro y disposición final (estimado) | Gestor autorizado y certificados (FEP02, RT-08.17 y RT-08.18) | 56 | 1.000.000 |
+| Total 4.3 | | | 152.371.182 |
+TOTAL 4.3: 152.371.182
+
+## 4.7 Contingencia
+| Partida | Supuesto | Total neto en pesos |
+|---|---|---|
+| Respuesta a R-24: asesoría legal de las cláusulas contractuales tipo antes del H2 (estimado) | Mes 3 | 3.000.000 |
+| Reserva de contingencia | 10 % de los costos de D4 (1.413.732.647) | 141.373.265 |
+| Total 4.7 | | 144.373.265 |
+TOTAL 4.7: 144.373.265
+
+## Resumen de costos de D4 para audIT
+| Concepto | Total neto en pesos |
+|---|---|
+| Inversión en infraestructura on-premise (4.1) | 107.808.529 |
+| Unidades de prueba (4.1) | 3.518.092 |
+| Nube y conectividad (4.2) | 1.147.034.844 |
+| Soporte y mantención (4.3) | 152.371.182 |
+| Respuesta a R-24 (4.7) | 3.000.000 |
+| Reserva de contingencia (4.7) | 141.373.265 |
+| Total costos de D4 en el flujo de audIT | 1.555.105.912 |
+| Hoja informativa del mandante, fuera del flujo (4.1) | 225.384.199 |
