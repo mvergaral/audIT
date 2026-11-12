@@ -34,7 +34,7 @@
       },
       "costo_implementacion_atribuido": {
         "min_clp": 11456000.0,
-        "referencia_clp": 14368000.0,
+        "referencia_clp": 14816000.0,
         "max_clp": 17280000.0
       },
       "operacion_h_mes": 12,

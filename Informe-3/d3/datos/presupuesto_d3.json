@@ -25,6 +25,8 @@
   "innovacion_1": {
     "edt": "12.1",
     "horas": {"arquitectura": 40, "software": 160, "frontend": 64, "seguridad": 48, "datos": 32, "qa": 96, "sre": 40},
+    "costos_referencia_clp_h_implementacion": {"software": 30000, "frontend": 30000},
+    "fuente_costos_referencia": "Referencia provisional D2 para las 224 h de Ingeniero Senior de implementación del expediente; AUD-21, commit 93477ab5ab445fdad81a201f940e4171e298593c. No se extiende a operación ni a innovación 2.",
     "mensual": {
       "arquitectura": {"4": 16, "8": 16, "10": 8},
       "software": {"8": 40, "9": 64, "10": 40, "13": 8, "14": 8},

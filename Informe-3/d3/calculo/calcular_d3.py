@@ -15,13 +15,20 @@ P = json.loads((RAIZ / "datos/presupuesto_d3.json").read_text())
 D = lambda x: Decimal(str(x))
 
 
-def costo(horas):
-    minimo = maximo = Decimal(0)
+def costo(horas, referencias_clp_h=None):
+    referencias_clp_h = referencias_clp_h or {}
+    assert referencias_clp_h.keys() <= horas.keys(), "Referencia de costo para un perfil sin horas"
+    minimo = referencia = maximo = Decimal(0)
     for perfil, h in horas.items():
         p = P["perfiles"][perfil]
-        minimo += D(h) * D(p["costo_min_uf_h"]) * D(P["uf_clp"])
-        maximo += D(h) * D(p["costo_max_uf_h"]) * D(P["uf_clp"])
-    return {"min_clp": float(minimo), "referencia_clp": float((minimo + maximo) / 2), "max_clp": float(maximo)}
+        unitario_min = D(p["costo_min_uf_h"]) * D(P["uf_clp"])
+        unitario_max = D(p["costo_max_uf_h"]) * D(P["uf_clp"])
+        unitario_ref = D(referencias_clp_h[perfil]) if perfil in referencias_clp_h else (unitario_min + unitario_max) / 2
+        assert unitario_min <= unitario_ref <= unitario_max, f"Costo fuera de E-26: {perfil}"
+        minimo += D(h) * unitario_min
+        referencia += D(h) * unitario_ref
+        maximo += D(h) * unitario_max
+    return {"min_clp": float(minimo), "referencia_clp": float(referencia), "max_clp": float(maximo)}
 
 
 def main():
@@ -47,7 +54,7 @@ def main():
         r["innovaciones"][str(n)] = {
             "horas_implementacion": esperado,
             "horas_por_mes": dict(sorted(meses.items())),
-            "costo_implementacion_atribuido": costo(i["horas"]),
+            "costo_implementacion_atribuido": costo(i["horas"], i.get("costos_referencia_clp_h_implementacion")),
             "operacion_h_mes": sum(op.values()),
             "operacion_h_36_meses": sum(op.values()) * 36,
             "costo_operacion_mes_atribuido": c_op,
