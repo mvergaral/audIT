@@ -447,11 +447,202 @@ Para la preparación de terminales, S7 prevé siete analistas de Implantación d
 
 Fuentes: [T-15, dotación mensual](https://github.com/mvergaral/audIT/blob/4da4195/recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/formularios/T-15.tex#L36) · [T-15, alcance de la tabla por rol](https://github.com/mvergaral/audIT/blob/4da4195/recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/formularios/T-15.tex#L99) · [S7, dotación de implantación](https://github.com/mvergaral/audIT/blob/4da4195/recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/contenido.tex#L276).
 
+#### Cruce semanal de Software, QA y Datos en M9
+
+M9 comprende los días hábiles 160 a 180 de la red, contando cada tramo como fin menos inicio. La carga de A09 se prorratea por los días de cada sprint. Las demás horas tienen mes de referencia, pero no un reparto semanal completo.
+
+| Semana de M9 | Tramo de la red | Sprints de A09 | Software (h) | QA (h) | Datos (h) |
+| --- | --- | --- | ---: | ---: | ---: |
+| 1 | 160–165 | 2 días del sprint 5 y 3 del sprint 6 | 136 | 76 | 100 |
+| 2 | 165–170 | 5 días del sprint 6 | 136 | 76 | 100 |
+| 3 | 170–175 | 2 días del sprint 6 y 3 del sprint 7 | 121,6 | 83,2 | 52 |
+| 4 | 175–180 | 5 días del sprint 7 | 112 | 88 | 20 |
+| **A09 en M9** | | | **505,6** | **323,2** | **272** |
+| **Horas con semana pendiente** | | EDT 6–7, innovaciones, 10.1 y A11 según perfil | **653** | **477** | **561** |
+| **Demanda mensual identificada** | | | **1.158,6** | **800,2** | **833** |
+
+En las fechas tempranas de T-15, A08 y A11 terminan el día 172, durante la semana 3. A10 termina el día 178, durante la semana 4. Estas fechas permiten priorizar la asignación semanal, pero las horas de EDT 6 y 7 incluyen más trabajo que A10 y A08 respectivamente. Se requiere identificar el subpaquete antes de trasladar su carga. Las pruebas transversales de 10.1 deben ubicarse tras la entrega de la interfaz y los datos que usan. El sprint 7 continúa dos días en M10 antes de G13.
+
+Como prueba de sensibilidad, si las horas con semana pendiente se distribuyeran en cuatro partes iguales, se obtendrían los siguientes mínimos brutos. El supuesto sirve para localizar posibles picos y todavía debe contrastarse con precedencias y personas.
+
+| Semana | Software (h / personas mínimas) | QA (h / personas mínimas) | Datos (h / personas mínimas) |
+| --- | ---: | ---: | ---: |
+| 1 | 299,25 / 8 | 195,25 / 5 | 240,25 / 7 |
+| 2 | 299,25 / 8 | 195,25 / 5 | 240,25 / 7 |
+| 3 | 284,85 / 8 | 202,45 / 6 | 192,25 / 5 |
+| 4 | 275,25 / 7 | 207,25 / 6 | 160,25 / 5 |
+
+Los mínimos dividen por 40 h brutas por persona y redondean hacia arriba. Para validar el cruce, D2 debe registrar persona, perfil, semana, horas disponibles y horas ya comprometidas. Revisar primero Datos antes del cierre temprano de A08 y QA en las semanas 3–4, cuando coinciden G13 y las pruebas integradas. Comprobar Software desde la semana 1 por la concurrencia de A09 y A10. La dotación mensual de 30 personas sigue siendo el techo agregado.
+
+Fuente de ventanas: [T-15, red de A08, A09, A10, A11 y G13](https://github.com/mvergaral/audIT/blob/4da4195/recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/formularios/T-15.tex#L200).
+
+##### Propuesta semanal para Datos
+
+Las 833 h de Datos identificadas en M9 se componen de 272 h de A09, 221 h de EDT 6, 300 h de EDT 7, 16 h del expediente verificable y 24 h de pruebas transversales. Para probar un calendario, D2 divide las 300 h de EDT 7 en tres bloques iguales para 7.1–7.3. Se ubica el bloque de 7.1 antes del cierre temprano de A08 en el día 172. El reparto de las 221 h de EDT 6 usa como referencia la ventana de A10 hasta el día 178 y requiere confirmar el subpaquete de cada ejecución.
+
+| Semana de M9 | A09 | EDT 6 | 7.1 Vigencias | 7.2 Históricos y 7.3 Repositorio | Expediente | 10.1 | Total (h) | Mínimo bruto a 40 h/persona |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| 1 | 100 | 61 | 42 | 50 | 0 | 0 | **253** | 7 |
+| 2 | 100 | 61 | 42 | 50 | 16 | 0 | **269** | 7 |
+| 3 | 52 | 62 | 16 | 50 | 0 | 0 | **180** | 5 |
+| 4 | 20 | 37 | 0 | 50 | 0 | 24 | **131** | 4 |
+| **Total** | **272** | **221** | **100** | **200** | **16** | **24** | **833** | |
+
+La semana 2 concentra la mayor demanda. Si hubiera seis personas con 40 h brutas disponibles para Datos, faltarían 13 h en la semana 1 y 29 h en la semana 2. Un ajuste para probar es trasladar esas 42 h de 7.2/7.3 a semanas posteriores de M9. Las ventanas de T-14 lo permiten a nivel de paquete, sujeto a verificar sus dependencias y responsables. Si parte de ese trabajo alimenta A09 o el expediente, se conserva su precedencia y se revisa la dotación.
+
+Las 16 h del expediente se ubican provisionalmente en la semana 2. Las 24 h de 10.1 se reservan en la semana 4 y se ejecutan según la disponibilidad de las interfaces y del padrón conciliado. Si una prueba depende del cierre de A10, su ventana es desde el día 178 y debe revisarse por día. S1 declara un Líder de Datos al 100 % durante implementación. Esa dedicación permite identificar al responsable de la coordinación y debe cruzarse con su carga de liderazgo antes de contarla como ejecución de ingeniería. Los demás perfiles de Datos requieren asignación nominal.
+
+Fuentes: [S1, dedicación del Líder de Datos](https://github.com/mvergaral/audIT/blob/4da4195/recursos/Formato-Oferta-audIT/subdocumentos/01-empresa/contenido.tex#L187) · [T-14, paquetes 7.1–7.3](https://github.com/mvergaral/audIT/blob/4da4195/recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/formularios/T-14.tex#L56) · [T-15, cierres tempranos](https://github.com/mvergaral/audIT/blob/4da4195/recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/formularios/T-15.tex#L201).
+
+##### Escenario ajustado de Datos y primera asignación de Software y QA
+
+Para Datos, el escenario mueve 13 h de la semana 1 y 29 h de la semana 2 a la semana 3, dentro de 7.2/7.3. Se mantiene la carga de vigencias antes del día 172. Antes de adoptar el ajuste, identificar las tareas de históricos o repositorio que no sean insumo de un incremento, prueba o entrega anterior.
+
+Para Software y QA, D2 usa un reparto proporcional dentro de los 18 días de M9 anteriores al cierre temprano de A10 como primera referencia para la carga agregada de EDT 6–7. El reparto se debe sustituir por el calendario de cada paquete, ya que EDT 7 también incluye trabajos con otras ventanas. Las reservas de innovaciones y pruebas se asignan por semana en la tabla. Los números son una propuesta de demanda, con personas todavía por confirmar.
+
+| Perfil y trabajo | Semana 1 (h) | Semana 2 (h) | Semana 3 (h) | Semana 4 (h) | M9 (h) |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| **Datos, escenario ajustado** | **240** | **240** | **222** | **131** | **833** |
+| Software · A09 | 136 | 136 | 121,6 | 112 | 505,6 |
+| Software · EDT 6–7 | 141 | 141 | 142 | 85 | 509 |
+| Software · Innovaciones 1, 2 y 4 | 0 | 40 | 44 | 12 | 96 |
+| Software · Pruebas 10.1 | 0 | 0 | 0 | 48 | 48 |
+| **Software total** | **277** | **317** | **307,6** | **257** | **1.158,6** |
+| QA · A09 | 76 | 76 | 83,2 | 88 | 323,2 |
+| QA · EDT 6–7 | 79 | 79 | 79 | 48 | 285 |
+| QA · Innovaciones 1, 2 y 4 | 0 | 16 | 40 | 24 | 80 |
+| QA · Cierre A11 | 0 | 0 | 16 | 0 | 16 |
+| QA · Pruebas 10.1 | 0 | 0 | 32 | 64 | 96 |
+| **QA total** | **155** | **171** | **250,2** | **224** | **800,2** |
+
+- **Datos:** seis personas a 40 h brutas cubrirían las dos primeras semanas con 240 h exactas. La semana 3 quedaría en 222 h después del traslado. Validar qué tareas se desplazan y quién las ejecuta.
+- **Software:** la semana 2 exige 317 h. Ocho personas a 40 h dejarían 3 h brutas esa semana. Confirmar la dotación y la disponibilidad real, especialmente mientras coinciden A09 y A10.
+- **QA:** con seis personas a 40 h, la semana 3 supera el techo en 10,2 h. Como variante, trasladar 16 h de 10.1 a la semana 4 dejaría QA en **234,2 h en la semana 3 y 240 h en la semana 4**. Identificar una ejecución que pueda moverse sin afectar A11, G13 ni la entrega de A10. Los casos que dependan del cierre temprano de A10 deben revisarse por día desde el 178.
+
+La demanda mensual de los tres perfiles permanece en 2.791,8 h en ambos escenarios. D2 debe cruzar la propuesta con el calendario por persona, sus tareas en otros perfiles y las ausencias. La capacidad bruta deja poco margen en las semanas señaladas.
+
+##### Validación de disponibilidad · Software, semana 2 de M9
+
+La demanda de referencia es **317 h**: 136 h de A09, 141 h de EDT 6–7 y 40 h de las innovaciones 1 y 2. La siguiente distribución prueba si esa carga cabe aritméticamente en ocho jornadas de 40 h. Cada puesto representa una asignación por confirmar. La carga de EDT 6–7 requiere identificar el subpaquete y los perfiles compatibles antes de reservar personas.
+
+| Puesto por confirmar | A09 (h) | EDT 6–7 (h) | Innovaciones 1 y 2 (h) | Total (h) | Margen bruto (h) |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| 1 | 40 | 0 | 0 | 40 | 0 |
+| 2 | 40 | 0 | 0 | 40 | 0 |
+| 3 | 40 | 0 | 0 | 40 | 0 |
+| 4 | 16 | 24 | 0 | 40 | 0 |
+| 5 | 0 | 40 | 0 | 40 | 0 |
+| 6 | 0 | 40 | 0 | 40 | 0 |
+| 7 | 0 | 37 | 0 | 37 | 3 |
+| 8 | 0 | 0 | 40 | 40 | 0 |
+| **Total** | **136** | **141** | **40** | **317** | **3** |
+
+T-15 permite comprobar el techo mensual de 30 personas, pero los insumos revisados carecen de una asignación nominal por perfil para esta semana. Para cada puesto, D2 debe registrar persona, actividad concreta, horas disponibles para el contrato y compromisos simultáneos. El puesto 4 requiere comprobar ambas competencias y el calendario. El puesto 8 debe separar las dos innovaciones y verificar que el mismo perfil pueda asumirlas.
+
+El umbral de confirmación es **317 h efectivamente asignables a estos tres bloques**. Con siete personas a tiempo completo faltarían 37 h. Con ocho personas y una jornada de ausencia de 8 h faltarían 5 h, incluso antes de descontar otros compromisos. Si hay déficit, identificar primero qué horas de EDT 6–7 corresponden a trabajo con ventana flexible, conservando las dependencias de A09 y A10. Las horas de la tabla son dedicaciones brutas presupuestadas. El esfuerzo neto de historias se comprueba con la regla de T-10.
+
+Fuentes: [T-15, dotación de M6–M9](https://github.com/mvergaral/audIT/blob/4da4195/recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/formularios/T-15.tex#L36) · [T-10, regla de capacidad neta](https://github.com/mvergaral/audIT/blob/4da4195/recursos/Formato-Oferta-audIT/subdocumentos/06-metodologias/formularios/T-10.tex#L88).
+
+##### Candidatos para Software · Semana 2 de M9
+
+S1 declara tres ingenieros de software sénior en planta, sin identificarlos por nombre en la nómina revisada. T-15 identifica dos puestos full-stack de refuerzo en M13–M15. Su incorporación en M9 requiere confirmar fecha de alta, competencias y capacidad disponible. El cuadro vincula perfiles candidatos con los puestos de la propuesta anterior.
+
+| Puesto | Persona o perfil candidato | Trabajo de referencia | Horas objetivo | Validación pendiente |
+| --- | --- | --- | ---: | --- |
+| 1 | Ingeniero de software sénior de planta 1 | A09 | 40 | Nombre y dedicación de la semana. |
+| 2 | Ingeniero de software sénior de planta 2 | A09 | 40 | Nombre y dedicación de la semana. |
+| 3 | Ingeniero de software sénior de planta 3 | A09 | 40 | Nombre, dedicación y asignación a Curimón. |
+| 4 | Por identificar, software con experiencia en integración | A09 y EDT 6–7 | 40 | Competencias para ambos bloques y calendario. |
+| 5 | Desarrollador full-stack de refuerzo 1, candidato condicionado | EDT 6–7 | 40 | Incorporación en M9 y aptitud para el subpaquete concreto. |
+| 6 | Desarrollador full-stack de refuerzo 2, candidato condicionado | EDT 6–7 | 40 | Incorporación en M9 y aptitud para el subpaquete concreto. |
+| 7 | Por identificar, software con experiencia en integración | EDT 6–7 | 37 | Nombre, competencias y otras asignaciones. |
+| 8 | Por identificar, software para los paquetes 12.1 y 12.2 | Innovaciones 1 y 2 | 40 | Nombre, competencias y posibilidad de cubrir ambos paquetes. |
+| **Total requerido** | | | **317** | |
+
+Si los tres profesionales de planta y los dos refuerzos estuvieran disponibles y fueran compatibles con el trabajo, aportarían como máximo **200 h**, dejando **117 h** por cubrir. El escenario de planta solamente aportaría como máximo **120 h**, dejando **197 h**. Antes de contar a un profesional de Datos, Frontend, Firmware o Liderazgo como apoyo, verificar que pueda asumir la tarea específica y descontar la dedicación de su perfil original. La disponibilidad nominal de M9 sigue pendiente para los ocho puestos.
+
+Fuentes: [S1, composición de las células de Software](https://github.com/mvergaral/audIT/blob/4da4195/recursos/Formato-Oferta-audIT/subdocumentos/01-empresa/contenido.tex#L167) · [T-15, refuerzos de M13–M15](https://github.com/mvergaral/audIT/blob/4da4195/recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/formularios/T-15.tex#L115).
+
+##### Alcance de la redistribución con cinco candidatos
+
+La curva mensual de Software en M9 atribuye 469 h a EDT 6 y 40 h a EDT 7. Son cifras del reparto preliminar por ventanas. En la semana 2 se habían agrupado 141 h de ambos elementos. Aun si las 40 h mensuales de EDT 7 estuvieran todas en esa semana y pudieran trasladarse, quedarían **77 h** de la brecha de 117 h por cubrir. Esa es una cota optimista. El trabajo de integración que alimenta A09, las pruebas de 10.1 o el cierre de A10 requiere comprobar precedencias antes de moverse.
+
+Las cuatro semanas de M9 demandan 277, 317, 307,6 y 257 h de Software. Si los mismos cinco candidatos aportaran 40 h por semana, su capacidad mensual sería de 800 h frente a 1.158,6 h de demanda. **La brecha mensual sería de 358,6 h**. Redistribuir horas entre semanas no elimina ese faltante mensual. Mantener abiertos dos datos para decidir: capacidad confirmada de Software en M9 y desglose de EDT 6/7 por tarea, perfil y fecha. Si se confirma el escenario de cinco personas, comparar refuerzo, reducción de esfuerzo sustentada por tareas o traslado a otro mes permitido antes de adoptar el presupuesto.
+
 ## Expediente verificable, EDT 12.1
 
 Las 480 h de implementación están desglosadas por perfil y mes en el JSON de D3 y valorizadas en el [respaldo de AUD-21](APORTE_ECONOMICO_INNOVACIONES_1_Y_4.md). La referencia de CLP 30.000/h para Software y Frontend/Móvil corresponde a esas 224 h del expediente. Para extenderla a otros paquetes se requiere validación de D2.
 
 D3 propone imputar las 480 h dentro de las 2.560 h de Innovaciones de T-15. En marcha blanca, conciliar los bloques de Software, Frontend/Móvil, QA y SRE con la carga de E1/A15. En M16–M20 queda pendiente estimar la dedicación de soporte por perfil y mes. Desde M21, las 12 h/mes propuestas requieren verificar disponibilidad de los mismos perfiles en 13.2 y 13.4 antes de valorizar un déficit.
+
+## Conciliación D2/D3 · Innovaciones 1 y 2
+
+| Mes | Expediente 12.1 (h) | Programación de patio 12.2 (h) | Demanda conjunta (h) |
+| --- | ---: | ---: | ---: |
+| M4 | 24 | 80 | 104 |
+| M5 | 0 | 168 | 168 |
+| M6 | 0 | 128 | 128 |
+| M7 | 0 | 56 | 56 |
+| M8 | 144 | 24 | 168 |
+| M9 | 144 | 32 | 176 |
+| M10 | 104 | 0 | 104 |
+| M13 | 40 | 0 | 40 |
+| M14 | 8 | 0 | 8 |
+| M15 | 16 | 0 | 16 |
+| M16 | 0 | 40 | 40 |
+| M17 | 0 | 8 | 8 |
+| M18 | 0 | 24 | 24 |
+| **Total** | **480** | **560** | **1.040** |
+
+D2 puede usar el JSON de D3 como base de demanda por perfil y mes. Las 1.040 h se proponen dentro de las 2.560 h del elemento 12, con 1.520 h de reserva agregada para conciliar con 12.3–12.5. La suficiencia por perfil depende de la carga simultánea. En M9 ya se incluyeron las 176 h de 12.1/12.2 en el escenario de capacidad.
+
+| Paquete de operación | Demanda mensual conjunta | Meses | Comprobación |
+| --- | --- | --- | --- |
+| 13.2 | SRE 10 h y Seguridad 4 h | M21–M56 | 14 h/mes dentro de las 640 h nominales del paquete. Identificar capacidad libre de cada perfil después de las otras asignaciones. |
+| 13.4 | Software 8 h, Datos 2 h y QA 4 h | M21–M56 | 14 h/mes dentro de las 640 h nominales del paquete. Identificar capacidad libre de cada perfil después de las otras asignaciones. |
+
+Se conservan las **28 h en M21** para ambos servicios y se registra por separado cualquier esfuerzo de aceptación o traspaso de H12. Si el mismo perfil absorbe cierres de 6.5 o 7.2 en M21–M24, descontar primero esas asignaciones de su capacidad disponible. Para M16–M20, el [respaldo de AUD-21](APORTE_ECONOMICO_INNOVACIONES_1_Y_4.md) identifica las actividades candidatas de estabilización y producción de Etapa 1. Queda por asignar horas y responsables, especialmente en M18. El déficit de personal de cada perfil y mes se calcula como el máximo entre cero y la demanda menos la capacidad que D2 acredite.
+
+**Costos de referencia propuestos para 12.2.** Adoptar para el escenario de D2 los puntos medios de E-26 que usó D3: Arquitectura y Seguridad CLP 44.000/h, Software y Frontend/Móvil CLP 28.000/h, Datos y SRE CLP 32.000/h, y QA CLP 20.000/h. Las 560 h de implementación equivalen a **CLP 16.576.000** de costo atribuido de referencia, sujeto a ratificación. El costo de CLP 30.000/h acordado para las 224 h de Software y Frontend de 12.1 conserva ese alcance. Las 6.048 h de diferencia de los sprints 2–6 quedan pendientes de conciliación. La revisión de los sprints 1 y 7 y de los demás perfiles sigue abierta.
+
+Fuente: [D3, esfuerzo por perfil y conciliaciones](https://github.com/mvergaral/audIT/blob/df2313894b2644f856ac66525788b310a72c17a0/Informe-3/d3/3.1-esfuerzo-perfiles.md) · [D3, JSON mensual](https://github.com/mvergaral/audIT/blob/df2313894b2644f856ac66525788b310a72c17a0/Informe-3/d3/datos/presupuesto_d3.json).
+
+### Concurrencia de cierres e innovaciones en M21–M24
+
+El reparto preliminar de 6.5 (retiro del legado) y 7.2 (cierre de históricos) ubica 1.669 h después de M20. Para comprobar la concurrencia, se suman por perfil esas horas y las 28 h mensuales de las innovaciones 1 y 2. La suma mide demanda. La imputación de los cierres a paquetes y el costo incremental requieren validación.
+
+| Demanda en horas | M21 | M22 | M23 | M24 |
+| --- | ---: | ---: | ---: | ---: |
+| SRE | 34 | 34 | 34 | 34 |
+| Seguridad | 28 | 28 | 28 | 28 |
+| Software | 115 | 115 | 114 | 114 |
+| Datos | 146 | 146 | 146 | 146 |
+| QA | 77 | 77 | 77 | 77 |
+| Arquitectura, Liderazgo y Frontend/Móvil, solo cierres | 48 | 45 | 45 | 45 |
+| **Total conjunto** | **448** | **445** | **444** | **444** |
+
+Como prueba de capacidad, si todos los cierres de los cinco perfiles compartidos se atendieran en los mismos paquetes que las innovaciones, 13.2 tendría que reservar **62 h/mes** para SRE y Seguridad, y 13.4 **338 h/mes en M21–M22** y **337 h/mes en M23–M24** para Software, Datos y QA. Frente a 640 h nominales por paquete, quedarían 578 h en 13.2 y 302–303 h en 13.4 para su trabajo habitual. Estas diferencias son agregadas y dependen de la imputación de los cierres. Por ejemplo, en M21 la demanda combinada de Datos por sí sola sería 146 h, antes del resto de sus funciones.
+
+D2 debe verificar la tarea de cierre, mes, paquete y persona responsable, y descontar la carga habitual y la guardia antes de reservar capacidad para las innovaciones. En M21 se conservan las 28 h nominales. Si hay trabajo de aceptación o traspaso H12, identificarlo aparte y comprobar si ya está incluido en su actividad. El déficit queda pendiente hasta contar con esa información. Las horas de cierre se contabilizan una vez, en la asignación aprobada.
+
+Fuentes: [T-14, retiro del legado e históricos](https://github.com/mvergaral/audIT/blob/4da4195/recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/formularios/T-14.tex#L55) · [T-15, horas de continuidad operacional](https://github.com/mvergaral/audIT/blob/4da4195/recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/formularios/T-15.tex#L80).
+
+## Revisión de cobertura de EDT 5 · Propuesta de 6.008 h
+
+El catálogo publicado por D3 contiene **66 actividades, ocho sprints y ocho perfiles**. El JSON suma **6.008 h** y referencia los 22 RF de entrega de Etapa 1 identificados en T-12. Incluye la integración y evidencia de los cinco flujos de G13, el candidato de H4 y los trabajos de apoyo de Arquitectura, Liderazgo, Seguridad, Datos y SRE. La revisión conserva las 744 h del sprint 7 preparadas por D2 y las 800 h de cierre del sprint 8.
+
+| Cruce de cobertura | Comprobación antes de adoptar el total |
+| --- | --- |
+| RNF-006 · Emisión contable e idempotencia | RF-014 está en el catálogo. Confirmar con 6.1/10.1 qué tarea verifica reintentos con el adaptador integrado y un solo documento por viaje. |
+| RNF-011 · Convivencia con el TMS anterior | Confirmar el esfuerzo de enrutamiento y convivencia en 6.5/11.2 y la ejecución integrada correspondiente. Registrar en A09 únicamente cualquier ajuste aplicativo que quede sin cobertura. |
+| RNF-014 · Revocación y retención | El catálogo incluye revocación e invalidación de caché en S1. Comprobar dónde se prueba que la revocación detiene la captura futura y conserva la evidencia obligatoria, cruzando 4.1, los controles de datos y la aplicación. |
+| Calidad de etapa y otras dependencias | Verificar las filas de esfuerzo de 10.1–10.3 para pruebas transversales y aceptación, de 4.1/6 para equipo físico y adaptadores, y de 11.1 para impartición de capacitación. Contabilizar una sola vez la ejecución común de G13 y 10.1. |
+
+Los puntos anteriores son comprobaciones de cobertura entre paquetes. Antes de estimar un adicional, identificar si la actividad ya está incluida y en qué paquete. La recomendación de D2 es usar **6.008 h como estimación técnica candidata** de EDT 5, comprobar esas interfaces y llevar a acuerdo el total y la dotación antes de actualizar T-15 y el presupuesto. Las **11.592 h** de diferencia respecto de las 17.600 h vigentes quedan pendientes de conciliación.
+
+En M9, el nuevo catálogo sitúa **1.459,2 h de A09**, frente a **1.998,4 h** del escenario parcial anterior. Al sustituir solo A09, el escenario de M9 baja de 4.796,4 a **4.257,2 h**, con una diferencia global de **542,8 h** frente a T-15. Las horas de A09 de Software, Frontend/Móvil y QA en M9 permanecen iguales. Por eso la brecha de Software de la semana 2 sigue abierta bajo la dotación de cinco candidatos y requiere el desglose de EDT 6–7 y la disponibilidad real por perfil.
+
+Fuentes: [D3, catálogo por actividad y perfil](https://github.com/mvergaral/audIT/blob/0712c7f/Informe-3/d3/datos/estimacion_edt5.json) · [D3, fronteras de alcance y calendario](https://github.com/mvergaral/audIT/blob/0712c7f/Informe-3/d3/3.1-esfuerzo-perfiles.md) · [T-12, requisitos de la solución](https://github.com/mvergaral/audIT/blob/0712c7f/recursos/Formato-Oferta-audIT/subdocumentos/03-solucion/formularios/T-12.tex).
 
 ## Validaciones pendientes
 
