@@ -279,9 +279,9 @@ def fisica_completa():
     # ================================================================ terminales
     f.grupo(596, 516, 344, 356, "Terminales", sub="× 4")
     f.grupo(604, 540, 180, 324, "Gabinete", "pr-gabinete", rx=6)
-    ka = eq(f, "hw-karbon", 650, 600, "Karbon 430 A", "Activo · 24 V", w=54)
-    kb = eq(f, "hw-karbon", 650, 690, "Karbon 430 B", "En espera · 24 V", w=54)
-    up = eq(f, "hw-ups-torre", 650, 790, "UPS SRT1000XLI", "83 min con 152 W", h=40)
+    ka = eq(f, "hw-karbon", 650, 600, "ICS-6280 A", "Activo · 24 V", w=54)
+    kb = eq(f, "hw-karbon", 650, 690, "ICS-6280 B", "En espera · 24 V", w=54)
+    up = eq(f, "hw-ups-torre", 650, 790, "UPS SRT1000XLI", "78 min con 162 W", h=40)
     rt = eq(f, "hw-rutx50", 740, 600, "RUTX50", ["Fijo ≥ 10 Mbit/s", "y 5G, dos SIM", "24 V"], w=58)
     ts = eq(f, "hw-tsw202", 740, 712, "TSW202", "Switch PoE · 48 V", w=66)
     f.ficha(740, 790, ["Opera 24 h", "sin enlace"])

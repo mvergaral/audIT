@@ -956,7 +956,7 @@ implemento, con sus características, ubicación, ciclo de vida y justificación
 módem satelital Iridium Edge, el lector CAN sin contacto Technoton CANCrocodile y el lector de tarjeta
 GAO RFID MIFARE DESFire, y se compran 19 juegos más de reposición. Los conductores reciben 572 tarjetas
 MIFARE DESFire, y los 210 semirremolques propios una baliza Teltonika EYE Sensor, con 21 de reposición.
-El gabinete de cada terminal regional tiene dos OnLogic Karbon 430, un router 5G Teltonika RUTX50, un
+El gabinete de cada terminal regional tiene dos AAEON ICS-6280A-A10-00, un router 5G Teltonika RUTX50, un
 switch Teltonika TSW202 y una UPS APC SRT1000XLI, y cada uno de los cinco terminales recibe un punto de
 acceso de patio Fortinet FortiAP 234G y un lector de portería Minew G1. San Bernardo recibe dos
 servidores Dell PowerEdge R360, dos FortiGate 90G, dos FortiSwitch 124F-POE, dos UPS APC SRT3000 con
@@ -1010,7 +1010,7 @@ CAN con J1939, RS232 y RS485, red celular LTE Cat 4 o Cat M1, GNSS, Wi-Fi, Bluet
 seguro Microchip TA100 para arranque seguro y almacenamiento de claves. Funciona de 9 a 32 V, de
 −40 a +70 °C y con protección IP67 (iWave Global, 2026), lo que responde a la vibración, el polvo
 y la temperatura de cabina que piden FEP02, RT-08.11, p. 19 y FEP02, RT-08.12, p. 19. Sobre él corre audIT EdgeHub, el software de
-borde de audIT que presenta el Subdocumento 1 (sección ?). La Figura 4.15 muestra el equipo con sus periféricos.
+borde de audIT que presenta el Subdocumento 1 (sección 1.1.3). La Figura 4.15 muestra el equipo con sus periféricos.
 
 \figuraAqui{195mm}{figuras/04-arquitectura/equipo-a-bordo.pdf}{Equipo a bordo: iWave G26I, periféricos, interfaces y particiones de la memoria}{4-bordofig}
 
@@ -1025,7 +1025,7 @@ la red satelital (Ground Control, 2026) en los tramos de más de 80 km sin seña
 restricción 4 (Caso, capítulo 10, p. 23). Por el mismo canal, cuando un punto de carga no tiene
 cobertura, el equipo envía los datos de la carga y recibe, en fragmentos verificados, la representación
 completa del documento que emite el sistema contable, como fija el Subdocumento 3
-(sección ?). Los mensajes entran a la plataforma por un adaptador autorizado de la
+(sección 3.4.2). Los mensajes entran a la plataforma por un adaptador autorizado de la
 pasarela de Iridium, y el ensayo de los 90 segundos se describe en la sección 4.1.13
 (sección 4.1.13). Es el mismo módem que Webfleet vende en Chile dentro de su
 producto satelital (Webfleet, 2026), lo que hace factible su homologación local. Ese
@@ -1103,7 +1103,7 @@ críticos.
 | Series de tiempo | Datos | PostgreSQL Flexible con TimescaleDB, servidor propio | Telemetría y geocercas: RF-010 y RF-021 | N |
 | Almacenamiento inmutable | Datos | Almacenamiento con redundancia de zona e inmutabilidad | Evidencia: RNF-012 y RNF-014 | N |
 | Capa anticorrupción | Integración y eventos | Pasarela en el nodo de San Bernardo | Capa anticorrupción: RF-013 y RNF-006 | SB |
-| Nodo de terminal | Servicios de negocio | Dos Karbon 430 en activo y en espera | Gabinetes de terminal: control en portería de RF-001 sin enlace | GT |
+| Nodo de terminal | Servicios de negocio | Dos AAEON ICS-6280 en activo y en espera | Gabinetes de terminal: control en portería de RF-001 sin enlace | GT |
 | Búfer a bordo | Datos, versión reducida | eMMC del iWave G26I | Equipos a bordo: RF-009, RF-027 y RNF-002 | DB |
 | Réplica de recuperación | Todas | Brazil South, en espera | Todos los elementos, por RT-07.04 | N2 |
 
@@ -1217,7 +1217,7 @@ FEP02, RT-03.02, p. 8 exige al menos dos zonas para todo componente con requisit
 disponibilidad. En producción, AKS reparte sus nodos en tres zonas, PostgreSQL mantiene una copia en
 espera en otra zona, el almacenamiento es de redundancia de zona y API Management tiene unidades en las
 tres. En San Bernardo, los servidores, los firewalls y los switches van en pares, y en cada terminal los
-dos Karbon 430 funcionan en activo y en espera.
+dos ICS-6280 funcionan en activo y en espera.
 
 Los respaldos siguen el esquema 3-2-1-1-0 de FEP02, RT-07.09, p. 18. Las tres copias son la base en
 producción, su respaldo diario en Chile Central y la réplica en Brazil South. Los dos medios son el
@@ -1259,7 +1259,7 @@ de detención que el criterio 28 necesita y que hoy nadie posee.
 
 Cada punto único de falla de la infraestructura tiene su cobertura. El enlace de San Bernardo la tiene
 en la VPN por otro proveedor y otra ruta física, el de cada terminal en su router 5G con dos SIM, y el
-nodo de terminal en el segundo Karbon 430 en espera. En San Bernardo, servidores, firewalls, switches y
+nodo de terminal en el segundo ICS-6280 en espera. En San Bernardo, servidores, firewalls, switches y
 UPS van en pares, cada equipo del par en otro circuito o en la alimentación B, y el clima es N+1. Si
 falla el grupo electrógeno, la UPS sostiene 66 minutos y el reabastecimiento sale del estanque propio.
 En Azure, la caída de una zona la absorben las otras dos de Chile Central, y la de la región, Brazil
@@ -1274,7 +1274,7 @@ que solo se cambia cuando el camión pasa por un terminal, cada seis días en pr
 
 FEP02, RT-08.04, p. 18 pide fuentes de poder redundantes conectadas a circuitos distintos. Los servidores
 R360 tienen dos fuentes, una en cada alimentación, y cada FortiGate 90G lleva su segundo adaptador, con
-un adaptador en cada circuito (Fortinet, 2026). En cada terminal, los dos Karbon 430, el router
+un adaptador en cada circuito (Fortinet, 2026). En cada terminal, los dos ICS-6280, el router
 RUTX50 y el conmutador TSW202 reciben corriente continua desde dos fuentes de riel DIN conectadas a
 circuitos distintos, una a la UPS del gabinete y otra a un segundo circuito del tablero, unidas por un
 módulo de redundancia. Hay dos buses de este tipo, uno de 24 V para los equipos de cómputo y el router y
@@ -1597,15 +1597,16 @@ Figura 4.21.
 
 \figuraAqui{215mm}{figuras/04-arquitectura/gabinete-terminal.pdf}{Gabinete de un terminal regional, con sus enlaces, el punto de acceso de patio y el lector de portería}{4-terminalfig}
 
-Dentro del gabinete van dos OnLogic Karbon 430 en activo y en espera, que funcionan sin ventilador de
-−40 a +70 °C con alimentación de 9 a 48 V y consumen cerca de 35 W cada uno (OnLogic, 2026).
+Dentro del gabinete van dos AAEON ICS-6280A-A10-00 en activo y en espera, que funcionan sin ventilador de
+−40 a +75 °C con doble entrada de alimentación de 9 a 48 V (AAEON, 2022). AAEON no publica
+su consumo, así que el cálculo toma 40 W por equipo, que es el adaptador que el fabricante ofrece para él.
 Con dos equipos el terminal no queda con un punto único de falla. El router Teltonika RUTX50, 5G con dos
 SIM y conmutación automática, opera de −40 a +75 °C y consume menos de 18 W
 (Teltonika Networks, 2026). El switch Teltonika TSW202, de riel DIN y con PoE, conecta los equipos
 (Teltonika Networks, 2026). Fuera del gabinete, el FortiAP 234G, IP67 y de −50 a +70 °C, cubre el
 patio con Wi-Fi para actualizar los camiones (Fortinet, 2026), y el Minew G1 lee en la portería
-las balizas de los semirremolques (Minew, 2023). El gabinete suma 152 W, y la UPS APC SRT1000XLI,
-con 293 VAh (Schneider Electric, 2024), lo sostiene 83 minutos al final de la vida de su batería. La UPS
+las balizas de los semirremolques (Minew, 2023). El gabinete suma 162 W, y la UPS APC SRT1000XLI,
+con 293 VAh (Schneider Electric, 2024), lo sostiene 78 minutos al final de la vida de su batería. La UPS
 alimenta una de las dos fuentes de cada bus de 24 y 48 V, y la otra sale de otro circuito del tablero,
 como fija la sección 4.2.7. Sin enlace,
 el terminal sigue registrando salidas y llegadas, consulta la copia local de vigencias y jornada para
@@ -1723,6 +1724,8 @@ Los formularios de este subdocumento van en archivo propio: Formulario T-11 (`AU
 
 ## Referencias
 
+AAEON. (2022). *ICS-6280. DIN rail 4 LAN ports industrial-grade network appliance with Intel Elkhart Lake platform*. https://www.aaeon.com/en/p/din-rail-industrial-grade-network-appliances-ics-6280
+
 Axis Communications. (2026). *AXIS M3215-LVE dome camera. Datasheet*. https://www.axis.com/products/axis-m3215-lve
 
 Axis Communications. (2026). *AXIS S3008 Mk II recorder. Datasheet*. https://www.axis.com/products/axis-s3008-mk-ii
@@ -1789,8 +1792,6 @@ Ministerio del Trabajo. (2003). *Decreto con Fuerza de Ley N.º 1. Texto refundi
 
 Northern.tech. (2026). *Variables. Mender documentation*. https://docs.mender.io/operating-system-updates-yocto-project/variables
 
-OnLogic. (2026). *Karbon 430. Compact rugged computer with expansion*. https://static.onlogic.com/resources/spec-sheets/OnLogic-K430-Spec-Sheet-V5.pdf
-
 PostgreSQL Global Development Group. (2026). *Versioning Policy*. https://www.postgresql.org/support/versioning/
 
 Schneider Electric. (2023). *APC Smart-UPS On-Line SRT3000XLI. Product datasheet*. https://media.distrelec.com/Web/Downloads/_t/ds/SRT3000XLI_eng_tds.pdf
@@ -1833,7 +1834,7 @@ Conforme al Comunicado 10, sección 7.2, cada sección de este subdocumento y ca
 |---|---|---|---|---|---|
 | Artículo 46 | Claude Opus 5.5 en Claude Code | Redacción de las respuestas 03 y 53 a 80 y ubicación de la sección que resuelve cada una | Alto | Ninguno | Ignacio Vera, Arquitecto de Solución: correspondencia de cada respuesta con la sección que la resuelve. |
 | Introducción | Claude Opus 5.5 en Claude Code | Redacción inicial del resumen a partir de las decisiones de diseño del equipo | Alto | Ninguno | Ignacio Vera, Arquitecto de Solución: alcance del resumen y su coherencia con las secciones 4.1 a 4.3. |
-| 4 y 4.1.1 a 4.1.26 | OpenAI Codex (GPT-6) | Contraste con las bases y con los Subdocumentos 3, 5, 6, 7 y 9, corrección de contratos, decisiones y capacidad, y figuras de capas, secuencias y documento sin cobertura | Alto | Alto | Marcel Gutierrez, Arquitecto de Solución: decisiones de arquitectura, contratos, presupuesto de la asignación y supuestos de capacidad de la arquitectura lógica. |
+| 4 y 4.1.1 a 4.1.26 | OpenAI Codex (GPT-6) | Contraste con las bases y con los Subdocumentos 3, 5, 6, 7 y 9, corrección de contratos, decisiones y capacidad, y figuras de capas, secuencias y documento sin cobertura | Alto | Alto | Responsable D3, Arquitecto de Solución: decisiones de arquitectura, contratos, presupuesto de la asignación y supuestos de capacidad de la arquitectura lógica. |
 | 4.1 | Claude Opus 5.5 en Claude Code | Integración al formato con verificación de citas y versiones, ajuste al formato de las cuatro secuencias y del documento sin cobertura, y diagramas de contextos, integraciones, resiliencia, capa anticorrupción, analítica y modelo táctico generados con un guion sobre los modelos del equipo | Alto | Medio | Ignacio Vera, Arquitecto de Solución: citas a las bases, versiones de cada fabricante y correspondencia de las figuras con el texto. |
 | 4.2 | Claude Opus 5.5 en Claude Code | Redacción inicial del texto desde las decisiones de diseño del equipo, y diagrama general generado con un guion desde el modelo definido por el equipo | Alto | Medio | Ignacio Vera, Arquitecto de Solución: emplazamiento de cada componente y correspondencia del diagrama general con el Formulario T-11. |
 | 4.2.1 | Claude Opus 5.5 en Claude Code | Búsqueda de fichas de fabricante, cantidades desde el Caso y redacción inicial | Alto | Ninguno | Ignacio Vera, Arquitecto de Solución: fichas de fabricante y cantidades frente a las poblaciones del Caso. |
