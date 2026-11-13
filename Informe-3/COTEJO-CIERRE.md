@@ -34,6 +34,8 @@ La aprobación corresponde a la modelación de la licitación. La disponibilidad
 
 ## Pendientes con evidencia externa
 
+[Conciliación de personal, gastos e infraestructura](CONCILIACION-RESPALDOS.md).
+
 | Responsable | Pendiente | Evidencia para cerrarlo |
 |---|---|---|
 | D1 y D2 | Disponibilidad de financiamiento ante atraso de H5 y contingencia | Monto, fecha, instrumento, costo y holgura acreditados. Recalcular caja con el instrumento real. |
