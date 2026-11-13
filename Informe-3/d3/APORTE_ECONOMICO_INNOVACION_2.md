@@ -39,7 +39,7 @@ Propuesta nominal M21–M56: SRE 4, Software 4, Seguridad 2, Datos 2 y QA 4 h/me
 
 Costo atribuido de referencia: $472.000/mes y $16.992.000 en 36 meses; rango $368.000–$576.000/mes. SRE/Seguridad irían a 13.2 y el resto a 13.4. D2 debe demostrar capacidad del mismo perfil: si se absorbe, ya está en RRHH base; si falta, se agrega solo el déficit. D4 incluyó el cómputo auxiliar en 4.2 §5 y asignó la capacidad adicional de actas, twin y paquetes de esta innovación a su reserva del 10 % (4.7, commit b8adac2). Se adopta como supuesto presupuestario sujeto al consumo real, sin cargo cloud separado ni equivalencia con consumo cero. No se cobra otra vez conectividad, kit estándar, stock contractual ni soporte físico.
 
-## Beneficio de Curimón y sensibilidad
+## Beneficio de Curimón pendiente de cuantificar
 
 El Artículo 29.5 (FEP01 p.19) exige impacto económico **estimado** y beneficio esperado. Para el avance del Informe 3 se puede formular una proyección con hipótesis justificadas; no se exige disponer hoy de resultados medidos del piloto contractual M6. La medición y el acta del piloto pertenecen a la verificación futura de la solución, no son una condición que D3 añada para poder preparar el presupuesto actual.
 
@@ -53,9 +53,9 @@ Cada término debe indicar volumen elegible, frecuencia, comparación manual, me
 
 La instalación es trabajo interno de audIT, conforme a las aclaraciones del Informe 3 §9 y al reparto económico de D4. Por tanto, tiempo liberado de esos técnicos se trata como capacidad o costo evitado de audIT, según su efecto real de caja. No se atribuye automáticamente a Curimón ni se suma como ingreso de audIT. Si un ahorro se traslada al cliente mediante un precio menor, se documenta una sola vez y no se duplica como beneficio independiente.
 
-La versión anterior del paquete económico D1 incluía $30.000.000/año por patio, $90.000.000 en 36 meses, dentro de «Beneficios Consolidados de Ingeniería». Esa cifra equivale a $2.500.000 mensuales M21–M56, pero dividirla entre meses solo distribuye el importe: no demuestra su origen. En el commit **49fbdde**, D1 corrigió su aporte y ambos textos LaTeX económicos: adoptó **$0 en el caso base y $90.000.000 como sensibilidad provisional**, con las horas de instalación liberadas atribuidas a audIT.
+El criterio vigente de D1, publicado en el commit **8967f18** el 13-11-2026, retira la sensibilidad monetaria anterior de la innovación 2 por falta de respaldo para atribuir ese ahorro a Curimón. Se mantiene **$0 reconocido en el caso base y el beneficio monetario pendiente de cuantificar**, sin importe alternativo activo en la tabla de beneficios o en el flujo. Las horas de instalación liberadas siguen correspondiendo a audIT según su efecto real, no automáticamente a Curimón.
 
-El criterio de escenarios queda conciliado documentalmente entre D1 y D3 para esta entrega. La sensibilidad permanece separada y no se presenta como beneficio acreditado ni consolidado. Si se documentan los parámetros causales y a quién beneficia cada término, puede revisarse su uso como beneficio **esperado**, sin exigir resultados reales del piloto ahora. No se fabrican cantidades o tarifas para alcanzar $90 millones. Este acuerdo resuelve la clasificación del beneficio; no cierra la conciliación de personal de implementación/operación con D2.
+Una futura estimación debe derivarse de los parámetros causales y del pagador de cada costo evitado, con una comparación trazable; no se parte de una cifra objetivo para fabricar sus supuestos. Las metas físicas y la fórmula anterior se conservan como método de estimación y medición. Retirar el monto no elimina la utilidad propuesta ni modifica las 560 h y los costos de implementación/operación. La cobertura del personal sigue siendo una conciliación distinta con D2.
 
 El beneficio del cliente se presenta separado de los costos y de los ingresos de audIT. La inversión y el costo incremental de la innovación se calculan por separado.
 
@@ -67,6 +67,6 @@ En la ejecución contractual se prevé registrar en M6 cada oportunidad: termina
 |---|---|---|
 | innovacion-2-inversion | Atribución $16.576.000, sustituible por costo de D2 | Reconciliar 560 h con RRHH; no duplicar |
 | innovacion-2-costo | Atribución de personal $16.992.000 en 36 meses; nube en presupuesto/reserva D4, sin sumar otra partida | Agregar únicamente déficit de personal conciliado con D2; conservar explícito el supuesto de cobertura cloud de D4; total todavía abierto |
-| innovacion-2-beneficio | Base prudente $0; sensibilidad provisional $90.000.000/36 meses, criterio adoptado por D1 en 49fbdde | Hoja de beneficios del mandante, fuera de ingresos de audIT; no sumar ambos escenarios ni presentar la sensibilidad como monto acreditado |
+| innovacion-2-beneficio | Base prudente $0 reconocido; beneficio monetario pendiente de cuantificar, sin sensibilidad numérica activa, según D1 en 8967f18 | Hoja de beneficios del mandante, fuera de ingresos de audIT; no cargar el monto retirado ni interpretarlo como ahorro cero demostrado |
 
-**Fuentes:** S13 §13.2/T-19 ficha 2; S7/T-14, 12.2; T-15, 2.560 h; FEP01 Art.29.5, p.19; E-24 p.73/E-26 p.76; paquete económico D1 §1.3 y textos LaTeX económicos, commit 49fbdde; Aclaraciones Informe 3 §§1, 5 y 9; D4, 4.8-compras-audit-y-mandante.md §1.
+**Fuentes:** S13 §13.2/T-19 ficha 2; S7/T-14, 12.2; T-15, 2.560 h; FEP01 Art.29.5, p.19; E-24 p.73/E-26 p.76; paquete económico D1 §1.3 y textos LaTeX económicos, commit 8967f18; Aclaraciones Informe 3 §§1, 5 y 9; D4, 4.8-compras-audit-y-mandante.md §1.

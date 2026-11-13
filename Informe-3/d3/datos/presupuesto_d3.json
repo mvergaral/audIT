@@ -54,8 +54,9 @@
     },
     "operacion_h_mes": {"sre": 4, "software": 4, "seguridad": 2, "datos": 2, "qa": 4},
     "beneficio_base_clp_mes": 0,
-    "beneficio_hipotesis_d1_clp_anual": 30000000,
-    "nota_beneficio": "D1 adoptó el criterio D3 en 49fbdde: caso base prudente cero y sensibilidad provisional de 90 millones en 36 meses, separados de beneficios consolidados. La sensibilidad no es un importe acreditado; requiere derivación causal para cambiar de clasificación."
+    "beneficio_hipotesis_d1_clp_anual": null,
+    "beneficio_sensibilidad_clp_36_meses": null,
+    "nota_beneficio": "Criterio vigente D1, commit 8967f18 del 13-11-2026: sensibilidad monetaria retirada por falta de respaldo de atribución. Base prudente con cero reconocido, beneficio de Curimón pendiente de cuantificar y sin importe alternativo activo. Los null indican ausencia de cuantificación, no ahorro cero demostrado; los costos y las horas de la innovación se conservan separados."
   },
   "gitlab": {
     "producto": "GitLab Premium Self-Managed, edición Enterprise",
