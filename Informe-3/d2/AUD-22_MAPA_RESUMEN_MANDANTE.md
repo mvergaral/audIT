@@ -1,6 +1,12 @@
 # Mapa para integrar la hoja Resumen del mandante
 
-Este mapa identifica las celdas fuente del modelo actual. Las celdas destino se identifican cuando llegue el original, conservando filas, rótulos, orden y fórmulas de «Resumen».
+Se integró «FLUJO DE CAJA - VACIO.xlsx», con SHA-256 `07a9b45003d04e4b161cde07a6839bb89627bf566490da90e21c21da0a154a2c`. Se comparó con el ejemplo con datos. El archivo vacío comparte su estructura y usa las conversiones de E-24. La copia [D2_RESUMEN_MANDANTE.xlsx](D2_RESUMEN_MANDANTE.xlsx) conserva las fórmulas, celdas combinadas, rótulos y orden de «RESUMEN».
+
+La hoja «PUENTE D2» carga los subtotales del modelo de trabajo. El puente asigna las tarifas de implementación en proporción al costo y conserva la tarifa de servicios de soporte igual al costo, conforme a la fórmula de la plantilla. El diferencial de la tarifa de soporte se refleja en RRHH para cuadrar con el precio de operación. Esta distribución es de presentación para el escenario y no cambia los precios de fase.
+
+«Rentabilidad Nominal» conserva la fórmula original de utilidad sobre costo. El control de margen del escenario usa ventas como denominador. Las filas de PCU mantienen sus referencias de origen y quedan pendientes de insumo. Las celdas G21 y G22 esperan los indicadores validados por D1.
+
+La copia integra el resumen económico. Para calendario mensual, Curva S y Fila A se usa el modelo de trabajo D2. Para volver a cargar el resumen desde una versión nueva, ejecutar `node integrar_resumen_mandante.mjs plantilla.xlsx modelo.xlsx salida.xlsx` con `D2_NODE_MODULES` configurada como indica la guía del modelo.
 
 | Concepto | Origen en D2 | Control |
 |---|---|---|
@@ -13,4 +19,4 @@ Este mapa identifica las celdas fuente del modelo actual. Las celdas destino se 
 | Fila A para D1 | Flujo de Caja H2:H57 y M0 = 0 | Exportar desde el mismo Excel. M57 es auxiliar. |
 | VAN, TIR y sensibilidad | Resultados validados por D1 sobre la Fila A entregada | Registrar versión del flujo y devolver las cifras validadas a Indicadores. |
 
-Con el original disponible, identificar celdas y nombres definidos, enlazar las cifras sin sobrescribir rótulos, verificar las conversiones a UF y USD con E-24 y regenerar el paquete de D2.
+Verificar B12:G20 como detalle de costos y tarifas, y C6:C8 y H6:H8 como totales en CLP. Regenerar la copia de integración cuando se cierre el presupuesto.
