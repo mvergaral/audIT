@@ -1,0 +1,379 @@
+mes,pagador,partida,proveedor_referencial,neto_clp,estado_iva,iva_referencial_clp,iva_pagado_clp,credito_fiscal_clp,fuente
+1,audIT,Azure e identidad Entra,Microsoft / canal CSP,3066953.98,pendiente,,,,D4 4.2 / calendario_46.py
+1,audIT,Equipos,Truck1,9750000.00,tasa_presupuestaria_E24,1852500,,,D4 4.1 / presupuesto_41.py
+2,audIT,Azure e identidad Entra,Microsoft / canal CSP,572153.98,pendiente,,,,D4 4.2 / calendario_46.py
+3,Curimón,Equipos,CDW,342936.00,tasa_presupuestaria_E24,65158,,,D4 4.1 / presupuesto_41.py
+3,Curimón,Equipos,SHI,8694000.00,tasa_presupuestaria_E24,1651860,,,D4 4.1 / presupuesto_41.py
+3,audIT,Asesoría legal R-24,Proveedor y régimen por confirmar,3000000.00,pendiente,,,,D4 4.6 / calendario_46.py
+3,audIT,Azure e identidad Entra,Microsoft / canal CSP,572153.98,pendiente,,,,D4 4.2 / calendario_46.py
+3,audIT,Equipos,Bechtle PT,903990.00,tasa_presupuestaria_E24,171758,,,D4 4.1 / presupuesto_41.py
+3,audIT,Equipos,CDW,2606382.00,tasa_presupuestaria_E24,495213,,,D4 4.1 / presupuesto_41.py
+3,audIT,Equipos,"Dell EE. UU., referencia",14982300.00,tasa_presupuestaria_E24,2846637,,,D4 4.1 / presupuesto_41.py
+3,audIT,Equipos,"Estimado, D4-145",35100000.00,tasa_presupuestaria_E24,6669000,,,D4 4.1 / presupuesto_41.py
+3,audIT,Equipos,Kele,1028196.00,tasa_presupuestaria_E24,195357,,,D4 4.1 / presupuesto_41.py
+3,audIT,Equipos,SHI,21317400.00,tasa_presupuestaria_E24,4050306,,,D4 4.1 / presupuesto_41.py
+3,audIT,Equipos,Titan Security Supply,4689972.00,tasa_presupuestaria_E24,891095,,,D4 4.1 / presupuesto_41.py
+3,audIT,Equipos,"chlengenharia.pt, equivalente",130000.00,tasa_presupuestaria_E24,24700,,,D4 4.1 / presupuesto_41.py
+3,audIT,Equipos,firealarm.com,2142900.00,tasa_presupuestaria_E24,407151,,,D4 4.1 / presupuesto_41.py
+4,Curimón,Equipos,DigiKey,351000.00,tasa_presupuestaria_E24,66690,,,D4 4.1 / presupuesto_41.py
+4,Curimón,Equipos,"Lista, gov.connection",1350000.00,tasa_presupuestaria_E24,256500,,,D4 4.1 / presupuesto_41.py
+4,Curimón,Equipos,SHI,5206500.00,tasa_presupuestaria_E24,989235,,,D4 4.1 / presupuesto_41.py
+4,Curimón,Equipos,nasstore,2650000.00,tasa_presupuestaria_E24,503500,,,D4 4.1 / presupuesto_41.py
+4,audIT,Azure e identidad Entra,Microsoft / canal CSP,1699753.54,pendiente,,,,D4 4.2 / calendario_46.py
+4,audIT,Circuito de operador ExpressRoute,Operador de circuito por seleccionar,900000.00,pendiente,,,,D4 4.2 / calendario_46.py
+4,audIT,Equipos,"Almo Pro AV, lista, equivalente",1214919.00,tasa_presupuestaria_E24,230835,,,D4 4.1 / presupuesto_41.py
+4,audIT,Equipos,Bechtle,5394950.00,tasa_presupuestaria_E24,1025040,,,D4 4.1 / presupuesto_41.py
+4,audIT,Equipos,Elmark,169600.00,tasa_presupuestaria_E24,32224,,,D4 4.1 / presupuesto_41.py
+4,audIT,Equipos,Texim Europe,4712490.00,tasa_presupuestaria_E24,895373,,,D4 4.1 / presupuesto_41.py
+4,audIT,Equipos,"alimentatorishop, equivalente",983430.00,tasa_presupuestaria_E24,186852,,,D4 4.1 / presupuesto_41.py
+4,audIT,Equipos,"cartft.com, equivalente",2682000.00,tasa_presupuestaria_E24,509580,,,D4 4.1 / presupuesto_41.py
+4,audIT,SIM 5G terminales,Entel como referencia / operadores por seleccionar,67159.66,precio_publico_bruto_referencial,12760,,,D4 4.2 / nube_42.py
+4,audIT,Unidades de prueba,"Almo Pro AV, lista, equivalente",134991.00,tasa_presupuestaria_E24,25648,,,D4 4.1 / presupuesto_41.py
+4,audIT,Unidades de prueba,"Comet, desde 10",19990.00,tasa_presupuestaria_E24,3798,,,D4 4.1 / presupuesto_41.py
+4,audIT,Unidades de prueba,DigiKey,70200.00,tasa_presupuestaria_E24,13338,,,D4 4.1 / presupuesto_41.py
+4,audIT,Unidades de prueba,DigiKey ES,454310.00,tasa_presupuestaria_E24,86319,,,D4 4.1 / presupuesto_41.py
+4,audIT,Unidades de prueba,"IP Security Depot, equivalente",75591.00,tasa_presupuestaria_E24,14362,,,D4 4.1 / presupuesto_41.py
+4,audIT,Unidades de prueba,SHI,1041300.00,tasa_presupuestaria_E24,197847,,,D4 4.1 / presupuesto_41.py
+4,audIT,Unidades de prueba,Satphonestore,323100.00,tasa_presupuestaria_E24,61389,,,D4 4.1 / presupuesto_41.py
+4,audIT,Unidades de prueba,"Technoton, tienda oficial",47000.00,tasa_presupuestaria_E24,8930,,,D4 4.1 / presupuesto_41.py
+4,audIT,Unidades de prueba,Texim Europe,523610.00,tasa_presupuestaria_E24,99486,,,D4 4.1 / presupuesto_41.py
+4,audIT,Unidades de prueba,"cartft.com, equivalente",298000.00,tasa_presupuestaria_E24,56620,,,D4 4.1 / presupuesto_41.py
+4,audIT,Unidades de prueba,nasstore,530000.00,tasa_presupuestaria_E24,100700,,,D4 4.1 / presupuesto_41.py
+5,Curimón,Equipos,"Comet, desde 10",4617690.00,tasa_presupuestaria_E24,877361,,,D4 4.1 / presupuesto_41.py
+5,Curimón,Equipos,DigiKey ES,4543100.00,tasa_presupuestaria_E24,863189,,,D4 4.1 / presupuesto_41.py
+5,Curimón,Equipos,"IP Security Depot, equivalente",755910.00,tasa_presupuestaria_E24,143623,,,D4 4.1 / presupuesto_41.py
+5,Curimón,Equipos,Satphonestore,3231000.00,tasa_presupuestaria_E24,613890,,,D4 4.1 / presupuesto_41.py
+5,Curimón,Equipos,"Technoton, tienda oficial",470000.00,tasa_presupuestaria_E24,89300,,,D4 4.1 / presupuesto_41.py
+5,Curimón,Equipos,"rfid.it, 200 a 799",772200.00,tasa_presupuestaria_E24,146718,,,D4 4.1 / presupuesto_41.py
+5,audIT,Azure e identidad Entra,Microsoft / canal CSP,1699753.54,pendiente,,,,D4 4.2 / calendario_46.py
+5,audIT,Circuito de operador ExpressRoute,Operador de circuito por seleccionar,900000.00,pendiente,,,,D4 4.2 / calendario_46.py
+5,audIT,SIM 5G terminales,Entel como referencia / operadores por seleccionar,67159.66,precio_publico_bruto_referencial,12760,,,D4 4.2 / nube_42.py
+6,Curimón,Equipos,DigiKey ES,86773210.00,tasa_presupuestaria_E24,16486910,,,D4 4.1 / presupuesto_41.py
+6,Curimón,Equipos,"IP Security Depot, equivalente",14437881.00,tasa_presupuestaria_E24,2743197,,,D4 4.1 / presupuesto_41.py
+6,Curimón,Equipos,Satphonestore,61712100.00,tasa_presupuestaria_E24,11725299,,,D4 4.1 / presupuesto_41.py
+6,Curimón,Equipos,"Technoton, tienda oficial",8977000.00,tasa_presupuestaria_E24,1705630,,,D4 4.1 / presupuesto_41.py
+6,audIT,Activación Iridium,Ground Control,283500.00,pendiente,,,,D4 4.2 / calendario_46.py
+6,audIT,Azure e identidad Entra,Microsoft / canal CSP,16678871.08,pendiente,,,,D4 4.2 / calendario_46.py
+6,audIT,Circuito de operador ExpressRoute,Operador de circuito por seleccionar,900000.00,pendiente,,,,D4 4.2 / calendario_46.py
+6,audIT,LTE a bordo,Operador móvil por seleccionar,30000.00,pendiente,,,,D4 4.2 / calendario_46.py
+6,audIT,SIM 5G terminales,Entel como referencia / operadores por seleccionar,67159.66,precio_publico_bruto_referencial,12760,,,D4 4.2 / nube_42.py
+6,audIT,Tiempo de aire Iridium,Ground Control,330750.00,pendiente,,,,D4 4.2 / calendario_46.py
+7,audIT,Activación Iridium,Ground Control,1701000.00,pendiente,,,,D4 4.2 / calendario_46.py
+7,audIT,Azure e identidad Entra,Microsoft / canal CSP,16678871.08,pendiente,,,,D4 4.2 / calendario_46.py
+7,audIT,Circuito de operador ExpressRoute,Operador de circuito por seleccionar,900000.00,pendiente,,,,D4 4.2 / calendario_46.py
+7,audIT,LTE a bordo,Operador móvil por seleccionar,210000.00,pendiente,,,,D4 4.2 / calendario_46.py
+7,audIT,SIM 5G terminales,Entel como referencia / operadores por seleccionar,67159.66,precio_publico_bruto_referencial,12760,,,D4 4.2 / nube_42.py
+7,audIT,Tiempo de aire Iridium,Ground Control,2315250.00,pendiente,,,,D4 4.2 / calendario_46.py
+8,audIT,Activación Iridium,Ground Control,1701000.00,pendiente,,,,D4 4.2 / calendario_46.py
+8,audIT,Azure e identidad Entra,Microsoft / canal CSP,16678871.08,pendiente,,,,D4 4.2 / calendario_46.py
+8,audIT,Circuito de operador ExpressRoute,Operador de circuito por seleccionar,900000.00,pendiente,,,,D4 4.2 / calendario_46.py
+8,audIT,LTE a bordo,Operador móvil por seleccionar,390000.00,pendiente,,,,D4 4.2 / calendario_46.py
+8,audIT,SIM 5G terminales,Entel como referencia / operadores por seleccionar,67159.66,precio_publico_bruto_referencial,12760,,,D4 4.2 / nube_42.py
+8,audIT,Tiempo de aire Iridium,Ground Control,4299750.00,pendiente,,,,D4 4.2 / calendario_46.py
+9,audIT,Activación Iridium,Ground Control,1474200.00,pendiente,,,,D4 4.2 / calendario_46.py
+9,audIT,Azure e identidad Entra,Microsoft / canal CSP,16678871.08,pendiente,,,,D4 4.2 / calendario_46.py
+9,audIT,Circuito de operador ExpressRoute,Operador de circuito por seleccionar,900000.00,pendiente,,,,D4 4.2 / calendario_46.py
+9,audIT,LTE a bordo,Operador móvil por seleccionar,546000.00,pendiente,,,,D4 4.2 / calendario_46.py
+9,audIT,SIM 5G terminales,Entel como referencia / operadores por seleccionar,67159.66,precio_publico_bruto_referencial,12760,,,D4 4.2 / nube_42.py
+9,audIT,Tiempo de aire Iridium,Ground Control,6019650.00,pendiente,,,,D4 4.2 / calendario_46.py
+10,audIT,Azure e identidad Entra,Microsoft / canal CSP,16678871.08,pendiente,,,,D4 4.2 / calendario_46.py
+10,audIT,Circuito de operador ExpressRoute,Operador de circuito por seleccionar,900000.00,pendiente,,,,D4 4.2 / calendario_46.py
+10,audIT,LTE a bordo,Operador móvil por seleccionar,546000.00,pendiente,,,,D4 4.2 / calendario_46.py
+10,audIT,SIM 5G terminales,Entel como referencia / operadores por seleccionar,67159.66,precio_publico_bruto_referencial,12760,,,D4 4.2 / nube_42.py
+10,audIT,Tiempo de aire Iridium,Ground Control,6019650.00,pendiente,,,,D4 4.2 / calendario_46.py
+11,audIT,Azure e identidad Entra,Microsoft / canal CSP,16678871.08,pendiente,,,,D4 4.2 / calendario_46.py
+11,audIT,Circuito de operador ExpressRoute,Operador de circuito por seleccionar,900000.00,pendiente,,,,D4 4.2 / calendario_46.py
+11,audIT,LTE a bordo,Operador móvil por seleccionar,546000.00,pendiente,,,,D4 4.2 / calendario_46.py
+11,audIT,SIM 5G terminales,Entel como referencia / operadores por seleccionar,67159.66,precio_publico_bruto_referencial,12760,,,D4 4.2 / nube_42.py
+11,audIT,Tiempo de aire Iridium,Ground Control,6019650.00,pendiente,,,,D4 4.2 / calendario_46.py
+12,audIT,Azure e identidad Entra,Microsoft / canal CSP,16678871.08,pendiente,,,,D4 4.2 / calendario_46.py
+12,audIT,Circuito de operador ExpressRoute,Operador de circuito por seleccionar,900000.00,pendiente,,,,D4 4.2 / calendario_46.py
+12,audIT,LTE a bordo,Operador móvil por seleccionar,546000.00,pendiente,,,,D4 4.2 / calendario_46.py
+12,audIT,SIM 5G terminales,Entel como referencia / operadores por seleccionar,67159.66,precio_publico_bruto_referencial,12760,,,D4 4.2 / nube_42.py
+12,audIT,Tiempo de aire Iridium,Ground Control,6019650.00,pendiente,,,,D4 4.2 / calendario_46.py
+13,audIT,Azure e identidad Entra,Microsoft / canal CSP,19476071.08,pendiente,,,,D4 4.2 / calendario_46.py
+13,audIT,Circuito de operador ExpressRoute,Operador de circuito por seleccionar,900000.00,pendiente,,,,D4 4.2 / calendario_46.py
+13,audIT,LTE a bordo,Operador móvil por seleccionar,546000.00,pendiente,,,,D4 4.2 / calendario_46.py
+13,audIT,SIM 5G terminales,Entel como referencia / operadores por seleccionar,67159.66,precio_publico_bruto_referencial,12760,,,D4 4.2 / nube_42.py
+13,audIT,Soporte y mantención,Fabricantes y mantenedores por desglosar,3331927.28,pendiente,,,,D4 4.3 / calendario_46.py
+13,audIT,Tiempo de aire Iridium,Ground Control,6019650.00,pendiente,,,,D4 4.2 / calendario_46.py
+14,audIT,Azure e identidad Entra,Microsoft / canal CSP,16678871.08,pendiente,,,,D4 4.2 / calendario_46.py
+14,audIT,Circuito de operador ExpressRoute,Operador de circuito por seleccionar,900000.00,pendiente,,,,D4 4.2 / calendario_46.py
+14,audIT,LTE a bordo,Operador móvil por seleccionar,546000.00,pendiente,,,,D4 4.2 / calendario_46.py
+14,audIT,SIM 5G terminales,Entel como referencia / operadores por seleccionar,67159.66,precio_publico_bruto_referencial,12760,,,D4 4.2 / nube_42.py
+14,audIT,Soporte y mantención,Fabricantes y mantenedores por desglosar,3331927.28,pendiente,,,,D4 4.3 / calendario_46.py
+14,audIT,Tiempo de aire Iridium,Ground Control,6019650.00,pendiente,,,,D4 4.2 / calendario_46.py
+15,audIT,Azure e identidad Entra,Microsoft / canal CSP,16678871.08,pendiente,,,,D4 4.2 / calendario_46.py
+15,audIT,Circuito de operador ExpressRoute,Operador de circuito por seleccionar,900000.00,pendiente,,,,D4 4.2 / calendario_46.py
+15,audIT,LTE a bordo,Operador móvil por seleccionar,546000.00,pendiente,,,,D4 4.2 / calendario_46.py
+15,audIT,SIM 5G terminales,Entel como referencia / operadores por seleccionar,67159.66,precio_publico_bruto_referencial,12760,,,D4 4.2 / nube_42.py
+15,audIT,Soporte y mantención,Fabricantes y mantenedores por desglosar,3331927.28,pendiente,,,,D4 4.3 / calendario_46.py
+15,audIT,Tiempo de aire Iridium,Ground Control,6019650.00,pendiente,,,,D4 4.2 / calendario_46.py
+16,audIT,Azure e identidad Entra,Microsoft / canal CSP,16678871.08,pendiente,,,,D4 4.2 / calendario_46.py
+16,audIT,Circuito de operador ExpressRoute,Operador de circuito por seleccionar,900000.00,pendiente,,,,D4 4.2 / calendario_46.py
+16,audIT,LTE a bordo,Operador móvil por seleccionar,546000.00,pendiente,,,,D4 4.2 / calendario_46.py
+16,audIT,SIM 5G terminales,Entel como referencia / operadores por seleccionar,67159.66,precio_publico_bruto_referencial,12760,,,D4 4.2 / nube_42.py
+16,audIT,Soporte y mantención,Fabricantes y mantenedores por desglosar,3331927.28,pendiente,,,,D4 4.3 / calendario_46.py
+16,audIT,Tiempo de aire Iridium,Ground Control,6019650.00,pendiente,,,,D4 4.2 / calendario_46.py
+17,audIT,Azure e identidad Entra,Microsoft / canal CSP,16678871.08,pendiente,,,,D4 4.2 / calendario_46.py
+17,audIT,Circuito de operador ExpressRoute,Operador de circuito por seleccionar,900000.00,pendiente,,,,D4 4.2 / calendario_46.py
+17,audIT,LTE a bordo,Operador móvil por seleccionar,546000.00,pendiente,,,,D4 4.2 / calendario_46.py
+17,audIT,SIM 5G terminales,Entel como referencia / operadores por seleccionar,67159.66,precio_publico_bruto_referencial,12760,,,D4 4.2 / nube_42.py
+17,audIT,Soporte y mantención,Fabricantes y mantenedores por desglosar,3331927.28,pendiente,,,,D4 4.3 / calendario_46.py
+17,audIT,Tiempo de aire Iridium,Ground Control,6019650.00,pendiente,,,,D4 4.2 / calendario_46.py
+18,audIT,Azure e identidad Entra,Microsoft / canal CSP,16678871.08,pendiente,,,,D4 4.2 / calendario_46.py
+18,audIT,Circuito de operador ExpressRoute,Operador de circuito por seleccionar,900000.00,pendiente,,,,D4 4.2 / calendario_46.py
+18,audIT,LTE a bordo,Operador móvil por seleccionar,546000.00,pendiente,,,,D4 4.2 / calendario_46.py
+18,audIT,SIM 5G terminales,Entel como referencia / operadores por seleccionar,67159.66,precio_publico_bruto_referencial,12760,,,D4 4.2 / nube_42.py
+18,audIT,Soporte y mantención,Fabricantes y mantenedores por desglosar,3331927.28,pendiente,,,,D4 4.3 / calendario_46.py
+18,audIT,Tiempo de aire Iridium,Ground Control,6019650.00,pendiente,,,,D4 4.2 / calendario_46.py
+19,audIT,Azure e identidad Entra,Microsoft / canal CSP,16678871.08,pendiente,,,,D4 4.2 / calendario_46.py
+19,audIT,Circuito de operador ExpressRoute,Operador de circuito por seleccionar,900000.00,pendiente,,,,D4 4.2 / calendario_46.py
+19,audIT,LTE a bordo,Operador móvil por seleccionar,546000.00,pendiente,,,,D4 4.2 / calendario_46.py
+19,audIT,SIM 5G terminales,Entel como referencia / operadores por seleccionar,67159.66,precio_publico_bruto_referencial,12760,,,D4 4.2 / nube_42.py
+19,audIT,Soporte y mantención,Fabricantes y mantenedores por desglosar,3331927.28,pendiente,,,,D4 4.3 / calendario_46.py
+19,audIT,Tiempo de aire Iridium,Ground Control,6019650.00,pendiente,,,,D4 4.2 / calendario_46.py
+20,audIT,Azure e identidad Entra,Microsoft / canal CSP,16678871.08,pendiente,,,,D4 4.2 / calendario_46.py
+20,audIT,Circuito de operador ExpressRoute,Operador de circuito por seleccionar,900000.00,pendiente,,,,D4 4.2 / calendario_46.py
+20,audIT,LTE a bordo,Operador móvil por seleccionar,546000.00,pendiente,,,,D4 4.2 / calendario_46.py
+20,audIT,SIM 5G terminales,Entel como referencia / operadores por seleccionar,67159.66,precio_publico_bruto_referencial,12760,,,D4 4.2 / nube_42.py
+20,audIT,Soporte y mantención,Fabricantes y mantenedores por desglosar,3331927.28,pendiente,,,,D4 4.3 / calendario_46.py
+20,audIT,Tiempo de aire Iridium,Ground Control,6019650.00,pendiente,,,,D4 4.2 / calendario_46.py
+21,audIT,Azure e identidad Entra,Microsoft / canal CSP,16644743.08,pendiente,,,,D4 4.2 / calendario_46.py
+21,audIT,Circuito de operador ExpressRoute,Operador de circuito por seleccionar,900000.00,pendiente,,,,D4 4.2 / calendario_46.py
+21,audIT,LTE a bordo,Operador móvil por seleccionar,546000.00,pendiente,,,,D4 4.2 / calendario_46.py
+21,audIT,SIM 5G terminales,Entel como referencia / operadores por seleccionar,67159.66,precio_publico_bruto_referencial,12760,,,D4 4.2 / nube_42.py
+21,audIT,Soporte y mantención,Fabricantes y mantenedores por desglosar,3331927.28,pendiente,,,,D4 4.3 / calendario_46.py
+21,audIT,Tiempo de aire Iridium,Ground Control,6019650.00,pendiente,,,,D4 4.2 / calendario_46.py
+22,audIT,Azure e identidad Entra,Microsoft / canal CSP,16644743.08,pendiente,,,,D4 4.2 / calendario_46.py
+22,audIT,Circuito de operador ExpressRoute,Operador de circuito por seleccionar,900000.00,pendiente,,,,D4 4.2 / calendario_46.py
+22,audIT,LTE a bordo,Operador móvil por seleccionar,546000.00,pendiente,,,,D4 4.2 / calendario_46.py
+22,audIT,SIM 5G terminales,Entel como referencia / operadores por seleccionar,67159.66,precio_publico_bruto_referencial,12760,,,D4 4.2 / nube_42.py
+22,audIT,Soporte y mantención,Fabricantes y mantenedores por desglosar,3331927.28,pendiente,,,,D4 4.3 / calendario_46.py
+22,audIT,Tiempo de aire Iridium,Ground Control,6019650.00,pendiente,,,,D4 4.2 / calendario_46.py
+23,audIT,Azure e identidad Entra,Microsoft / canal CSP,16644743.08,pendiente,,,,D4 4.2 / calendario_46.py
+23,audIT,Circuito de operador ExpressRoute,Operador de circuito por seleccionar,900000.00,pendiente,,,,D4 4.2 / calendario_46.py
+23,audIT,LTE a bordo,Operador móvil por seleccionar,546000.00,pendiente,,,,D4 4.2 / calendario_46.py
+23,audIT,SIM 5G terminales,Entel como referencia / operadores por seleccionar,67159.66,precio_publico_bruto_referencial,12760,,,D4 4.2 / nube_42.py
+23,audIT,Soporte y mantención,Fabricantes y mantenedores por desglosar,3331927.28,pendiente,,,,D4 4.3 / calendario_46.py
+23,audIT,Tiempo de aire Iridium,Ground Control,6019650.00,pendiente,,,,D4 4.2 / calendario_46.py
+24,Curimón,Equipos,"Comet, desde 10",239880.00,tasa_presupuestaria_E24,45577,,,D4 4.1 / presupuesto_41.py
+24,Curimón,Equipos,DigiKey ES,3634480.00,tasa_presupuestaria_E24,690551,,,D4 4.1 / presupuesto_41.py
+24,Curimón,Equipos,"IP Security Depot, equivalente",604728.00,tasa_presupuestaria_E24,114899,,,D4 4.1 / presupuesto_41.py
+24,Curimón,Equipos,Satphonestore,2584800.00,tasa_presupuestaria_E24,491112,,,D4 4.1 / presupuesto_41.py
+24,Curimón,Equipos,"Technoton, tienda oficial",376000.00,tasa_presupuestaria_E24,71440,,,D4 4.1 / presupuesto_41.py
+24,audIT,Activación Iridium,Ground Control,226800.00,pendiente,,,,D4 4.2 / calendario_46.py
+24,audIT,Azure e identidad Entra,Microsoft / canal CSP,16644743.08,pendiente,,,,D4 4.2 / calendario_46.py
+24,audIT,Circuito de operador ExpressRoute,Operador de circuito por seleccionar,900000.00,pendiente,,,,D4 4.2 / calendario_46.py
+24,audIT,LTE a bordo,Operador móvil por seleccionar,570000.00,pendiente,,,,D4 4.2 / calendario_46.py
+24,audIT,SIM 5G terminales,Entel como referencia / operadores por seleccionar,67159.66,precio_publico_bruto_referencial,12760,,,D4 4.2 / nube_42.py
+24,audIT,Soporte y mantención,Fabricantes y mantenedores por desglosar,3331927.28,pendiente,,,,D4 4.3 / calendario_46.py
+24,audIT,Tiempo de aire Iridium,Ground Control,6284250.00,pendiente,,,,D4 4.2 / calendario_46.py
+25,audIT,Azure e identidad Entra,Microsoft / canal CSP,17854343.08,pendiente,,,,D4 4.2 / calendario_46.py
+25,audIT,Circuito de operador ExpressRoute,Operador de circuito por seleccionar,900000.00,pendiente,,,,D4 4.2 / calendario_46.py
+25,audIT,LTE a bordo,Operador móvil por seleccionar,570000.00,pendiente,,,,D4 4.2 / calendario_46.py
+25,audIT,SIM 5G terminales,Entel como referencia / operadores por seleccionar,67159.66,precio_publico_bruto_referencial,12760,,,D4 4.2 / nube_42.py
+25,audIT,Soporte y mantención,Fabricantes y mantenedores por desglosar,3331927.28,pendiente,,,,D4 4.3 / calendario_46.py
+25,audIT,Tiempo de aire Iridium,Ground Control,6284250.00,pendiente,,,,D4 4.2 / calendario_46.py
+26,audIT,Azure e identidad Entra,Microsoft / canal CSP,16644743.08,pendiente,,,,D4 4.2 / calendario_46.py
+26,audIT,Circuito de operador ExpressRoute,Operador de circuito por seleccionar,900000.00,pendiente,,,,D4 4.2 / calendario_46.py
+26,audIT,LTE a bordo,Operador móvil por seleccionar,570000.00,pendiente,,,,D4 4.2 / calendario_46.py
+26,audIT,SIM 5G terminales,Entel como referencia / operadores por seleccionar,67159.66,precio_publico_bruto_referencial,12760,,,D4 4.2 / nube_42.py
+26,audIT,Soporte y mantención,Fabricantes y mantenedores por desglosar,3331927.28,pendiente,,,,D4 4.3 / calendario_46.py
+26,audIT,Tiempo de aire Iridium,Ground Control,6284250.00,pendiente,,,,D4 4.2 / calendario_46.py
+27,audIT,Azure e identidad Entra,Microsoft / canal CSP,16644743.08,pendiente,,,,D4 4.2 / calendario_46.py
+27,audIT,Circuito de operador ExpressRoute,Operador de circuito por seleccionar,900000.00,pendiente,,,,D4 4.2 / calendario_46.py
+27,audIT,LTE a bordo,Operador móvil por seleccionar,570000.00,pendiente,,,,D4 4.2 / calendario_46.py
+27,audIT,SIM 5G terminales,Entel como referencia / operadores por seleccionar,67159.66,precio_publico_bruto_referencial,12760,,,D4 4.2 / nube_42.py
+27,audIT,Soporte y mantención,Fabricantes y mantenedores por desglosar,3331927.28,pendiente,,,,D4 4.3 / calendario_46.py
+27,audIT,Tiempo de aire Iridium,Ground Control,6284250.00,pendiente,,,,D4 4.2 / calendario_46.py
+28,audIT,Azure e identidad Entra,Microsoft / canal CSP,16644743.08,pendiente,,,,D4 4.2 / calendario_46.py
+28,audIT,Circuito de operador ExpressRoute,Operador de circuito por seleccionar,900000.00,pendiente,,,,D4 4.2 / calendario_46.py
+28,audIT,LTE a bordo,Operador móvil por seleccionar,570000.00,pendiente,,,,D4 4.2 / calendario_46.py
+28,audIT,SIM 5G terminales,Entel como referencia / operadores por seleccionar,67159.66,precio_publico_bruto_referencial,12760,,,D4 4.2 / nube_42.py
+28,audIT,Soporte y mantención,Fabricantes y mantenedores por desglosar,3331927.28,pendiente,,,,D4 4.3 / calendario_46.py
+28,audIT,Tiempo de aire Iridium,Ground Control,6284250.00,pendiente,,,,D4 4.2 / calendario_46.py
+29,audIT,Azure e identidad Entra,Microsoft / canal CSP,16644743.08,pendiente,,,,D4 4.2 / calendario_46.py
+29,audIT,Circuito de operador ExpressRoute,Operador de circuito por seleccionar,900000.00,pendiente,,,,D4 4.2 / calendario_46.py
+29,audIT,LTE a bordo,Operador móvil por seleccionar,570000.00,pendiente,,,,D4 4.2 / calendario_46.py
+29,audIT,SIM 5G terminales,Entel como referencia / operadores por seleccionar,67159.66,precio_publico_bruto_referencial,12760,,,D4 4.2 / nube_42.py
+29,audIT,Soporte y mantención,Fabricantes y mantenedores por desglosar,3331927.28,pendiente,,,,D4 4.3 / calendario_46.py
+29,audIT,Tiempo de aire Iridium,Ground Control,6284250.00,pendiente,,,,D4 4.2 / calendario_46.py
+30,audIT,Azure e identidad Entra,Microsoft / canal CSP,16644743.08,pendiente,,,,D4 4.2 / calendario_46.py
+30,audIT,Circuito de operador ExpressRoute,Operador de circuito por seleccionar,900000.00,pendiente,,,,D4 4.2 / calendario_46.py
+30,audIT,LTE a bordo,Operador móvil por seleccionar,570000.00,pendiente,,,,D4 4.2 / calendario_46.py
+30,audIT,SIM 5G terminales,Entel como referencia / operadores por seleccionar,67159.66,precio_publico_bruto_referencial,12760,,,D4 4.2 / nube_42.py
+30,audIT,Soporte y mantención,Fabricantes y mantenedores por desglosar,3331927.28,pendiente,,,,D4 4.3 / calendario_46.py
+30,audIT,Tiempo de aire Iridium,Ground Control,6284250.00,pendiente,,,,D4 4.2 / calendario_46.py
+31,audIT,Azure e identidad Entra,Microsoft / canal CSP,16644743.08,pendiente,,,,D4 4.2 / calendario_46.py
+31,audIT,Circuito de operador ExpressRoute,Operador de circuito por seleccionar,900000.00,pendiente,,,,D4 4.2 / calendario_46.py
+31,audIT,LTE a bordo,Operador móvil por seleccionar,570000.00,pendiente,,,,D4 4.2 / calendario_46.py
+31,audIT,SIM 5G terminales,Entel como referencia / operadores por seleccionar,67159.66,precio_publico_bruto_referencial,12760,,,D4 4.2 / nube_42.py
+31,audIT,Soporte y mantención,Fabricantes y mantenedores por desglosar,3331927.28,pendiente,,,,D4 4.3 / calendario_46.py
+31,audIT,Tiempo de aire Iridium,Ground Control,6284250.00,pendiente,,,,D4 4.2 / calendario_46.py
+32,audIT,Azure e identidad Entra,Microsoft / canal CSP,16644743.08,pendiente,,,,D4 4.2 / calendario_46.py
+32,audIT,Circuito de operador ExpressRoute,Operador de circuito por seleccionar,900000.00,pendiente,,,,D4 4.2 / calendario_46.py
+32,audIT,LTE a bordo,Operador móvil por seleccionar,570000.00,pendiente,,,,D4 4.2 / calendario_46.py
+32,audIT,SIM 5G terminales,Entel como referencia / operadores por seleccionar,67159.66,precio_publico_bruto_referencial,12760,,,D4 4.2 / nube_42.py
+32,audIT,Soporte y mantención,Fabricantes y mantenedores por desglosar,3331927.28,pendiente,,,,D4 4.3 / calendario_46.py
+32,audIT,Tiempo de aire Iridium,Ground Control,6284250.00,pendiente,,,,D4 4.2 / calendario_46.py
+33,audIT,Azure e identidad Entra,Microsoft / canal CSP,16644743.08,pendiente,,,,D4 4.2 / calendario_46.py
+33,audIT,Circuito de operador ExpressRoute,Operador de circuito por seleccionar,900000.00,pendiente,,,,D4 4.2 / calendario_46.py
+33,audIT,LTE a bordo,Operador móvil por seleccionar,570000.00,pendiente,,,,D4 4.2 / calendario_46.py
+33,audIT,SIM 5G terminales,Entel como referencia / operadores por seleccionar,67159.66,precio_publico_bruto_referencial,12760,,,D4 4.2 / nube_42.py
+33,audIT,Soporte y mantención,Fabricantes y mantenedores por desglosar,3331927.28,pendiente,,,,D4 4.3 / calendario_46.py
+33,audIT,Tiempo de aire Iridium,Ground Control,6284250.00,pendiente,,,,D4 4.2 / calendario_46.py
+34,audIT,Azure e identidad Entra,Microsoft / canal CSP,16644743.08,pendiente,,,,D4 4.2 / calendario_46.py
+34,audIT,Circuito de operador ExpressRoute,Operador de circuito por seleccionar,900000.00,pendiente,,,,D4 4.2 / calendario_46.py
+34,audIT,LTE a bordo,Operador móvil por seleccionar,570000.00,pendiente,,,,D4 4.2 / calendario_46.py
+34,audIT,SIM 5G terminales,Entel como referencia / operadores por seleccionar,67159.66,precio_publico_bruto_referencial,12760,,,D4 4.2 / nube_42.py
+34,audIT,Soporte y mantención,Fabricantes y mantenedores por desglosar,3331927.28,pendiente,,,,D4 4.3 / calendario_46.py
+34,audIT,Tiempo de aire Iridium,Ground Control,6284250.00,pendiente,,,,D4 4.2 / calendario_46.py
+35,audIT,Azure e identidad Entra,Microsoft / canal CSP,16644743.08,pendiente,,,,D4 4.2 / calendario_46.py
+35,audIT,Circuito de operador ExpressRoute,Operador de circuito por seleccionar,900000.00,pendiente,,,,D4 4.2 / calendario_46.py
+35,audIT,LTE a bordo,Operador móvil por seleccionar,570000.00,pendiente,,,,D4 4.2 / calendario_46.py
+35,audIT,SIM 5G terminales,Entel como referencia / operadores por seleccionar,67159.66,precio_publico_bruto_referencial,12760,,,D4 4.2 / nube_42.py
+35,audIT,Soporte y mantención,Fabricantes y mantenedores por desglosar,3331927.28,pendiente,,,,D4 4.3 / calendario_46.py
+35,audIT,Tiempo de aire Iridium,Ground Control,6284250.00,pendiente,,,,D4 4.2 / calendario_46.py
+36,Curimón,Equipos,"Comet, desde 10",239880.00,tasa_presupuestaria_E24,45577,,,D4 4.1 / presupuesto_41.py
+36,Curimón,Equipos,DigiKey ES,3180170.00,tasa_presupuestaria_E24,604233,,,D4 4.1 / presupuesto_41.py
+36,Curimón,Equipos,"IP Security Depot, equivalente",529137.00,tasa_presupuestaria_E24,100536,,,D4 4.1 / presupuesto_41.py
+36,Curimón,Equipos,Satphonestore,2261700.00,tasa_presupuestaria_E24,429723,,,D4 4.1 / presupuesto_41.py
+36,Curimón,Equipos,"Technoton, tienda oficial",329000.00,tasa_presupuestaria_E24,62510,,,D4 4.1 / presupuesto_41.py
+36,audIT,Activación Iridium,Ground Control,198450.00,pendiente,,,,D4 4.2 / calendario_46.py
+36,audIT,Azure e identidad Entra,Microsoft / canal CSP,16644743.08,pendiente,,,,D4 4.2 / calendario_46.py
+36,audIT,Baterías SRT1000XLI,Proveedor por confirmar,1080000.00,pendiente,,,,D4 4.3 / calendario_46.py
+36,audIT,Baterías SRT3000RMXLI,Proveedor por confirmar,1080000.00,pendiente,,,,D4 4.3 / calendario_46.py
+36,audIT,Circuito de operador ExpressRoute,Operador de circuito por seleccionar,900000.00,pendiente,,,,D4 4.2 / calendario_46.py
+36,audIT,LTE a bordo,Operador móvil por seleccionar,591000.00,pendiente,,,,D4 4.2 / calendario_46.py
+36,audIT,Paquetes SRT96RMBP,CDW como referencia,2606382.00,pendiente,,,,D4 4.3 / calendario_46.py
+36,audIT,SIM 5G terminales,Entel como referencia / operadores por seleccionar,67159.66,precio_publico_bruto_referencial,12760,,,D4 4.2 / nube_42.py
+36,audIT,Soporte y mantención,Fabricantes y mantenedores por desglosar,3331927.28,pendiente,,,,D4 4.3 / calendario_46.py
+36,audIT,Tiempo de aire Iridium,Ground Control,6515775.00,pendiente,,,,D4 4.2 / calendario_46.py
+37,audIT,Azure e identidad Entra,Microsoft / canal CSP,17854343.08,pendiente,,,,D4 4.2 / calendario_46.py
+37,audIT,Circuito de operador ExpressRoute,Operador de circuito por seleccionar,900000.00,pendiente,,,,D4 4.2 / calendario_46.py
+37,audIT,LTE a bordo,Operador móvil por seleccionar,591000.00,pendiente,,,,D4 4.2 / calendario_46.py
+37,audIT,SIM 5G terminales,Entel como referencia / operadores por seleccionar,67159.66,precio_publico_bruto_referencial,12760,,,D4 4.2 / nube_42.py
+37,audIT,Soporte y mantención,Fabricantes y mantenedores por desglosar,3331927.28,pendiente,,,,D4 4.3 / calendario_46.py
+37,audIT,Tiempo de aire Iridium,Ground Control,6515775.00,pendiente,,,,D4 4.2 / calendario_46.py
+38,audIT,Azure e identidad Entra,Microsoft / canal CSP,16644743.08,pendiente,,,,D4 4.2 / calendario_46.py
+38,audIT,Circuito de operador ExpressRoute,Operador de circuito por seleccionar,900000.00,pendiente,,,,D4 4.2 / calendario_46.py
+38,audIT,LTE a bordo,Operador móvil por seleccionar,591000.00,pendiente,,,,D4 4.2 / calendario_46.py
+38,audIT,SIM 5G terminales,Entel como referencia / operadores por seleccionar,67159.66,precio_publico_bruto_referencial,12760,,,D4 4.2 / nube_42.py
+38,audIT,Soporte y mantención,Fabricantes y mantenedores por desglosar,3331927.28,pendiente,,,,D4 4.3 / calendario_46.py
+38,audIT,Tiempo de aire Iridium,Ground Control,6515775.00,pendiente,,,,D4 4.2 / calendario_46.py
+39,audIT,Azure e identidad Entra,Microsoft / canal CSP,16644743.08,pendiente,,,,D4 4.2 / calendario_46.py
+39,audIT,Circuito de operador ExpressRoute,Operador de circuito por seleccionar,900000.00,pendiente,,,,D4 4.2 / calendario_46.py
+39,audIT,LTE a bordo,Operador móvil por seleccionar,591000.00,pendiente,,,,D4 4.2 / calendario_46.py
+39,audIT,SIM 5G terminales,Entel como referencia / operadores por seleccionar,67159.66,precio_publico_bruto_referencial,12760,,,D4 4.2 / nube_42.py
+39,audIT,Soporte y mantención,Fabricantes y mantenedores por desglosar,3331927.28,pendiente,,,,D4 4.3 / calendario_46.py
+39,audIT,Tiempo de aire Iridium,Ground Control,6515775.00,pendiente,,,,D4 4.2 / calendario_46.py
+40,audIT,Azure e identidad Entra,Microsoft / canal CSP,16644743.08,pendiente,,,,D4 4.2 / calendario_46.py
+40,audIT,Circuito de operador ExpressRoute,Operador de circuito por seleccionar,900000.00,pendiente,,,,D4 4.2 / calendario_46.py
+40,audIT,LTE a bordo,Operador móvil por seleccionar,591000.00,pendiente,,,,D4 4.2 / calendario_46.py
+40,audIT,SIM 5G terminales,Entel como referencia / operadores por seleccionar,67159.66,precio_publico_bruto_referencial,12760,,,D4 4.2 / nube_42.py
+40,audIT,Soporte y mantención,Fabricantes y mantenedores por desglosar,3331927.28,pendiente,,,,D4 4.3 / calendario_46.py
+40,audIT,Tiempo de aire Iridium,Ground Control,6515775.00,pendiente,,,,D4 4.2 / calendario_46.py
+41,audIT,Azure e identidad Entra,Microsoft / canal CSP,16644743.08,pendiente,,,,D4 4.2 / calendario_46.py
+41,audIT,Circuito de operador ExpressRoute,Operador de circuito por seleccionar,900000.00,pendiente,,,,D4 4.2 / calendario_46.py
+41,audIT,LTE a bordo,Operador móvil por seleccionar,591000.00,pendiente,,,,D4 4.2 / calendario_46.py
+41,audIT,SIM 5G terminales,Entel como referencia / operadores por seleccionar,67159.66,precio_publico_bruto_referencial,12760,,,D4 4.2 / nube_42.py
+41,audIT,Soporte y mantención,Fabricantes y mantenedores por desglosar,3331927.28,pendiente,,,,D4 4.3 / calendario_46.py
+41,audIT,Tiempo de aire Iridium,Ground Control,6515775.00,pendiente,,,,D4 4.2 / calendario_46.py
+42,audIT,Azure e identidad Entra,Microsoft / canal CSP,16644743.08,pendiente,,,,D4 4.2 / calendario_46.py
+42,audIT,Circuito de operador ExpressRoute,Operador de circuito por seleccionar,900000.00,pendiente,,,,D4 4.2 / calendario_46.py
+42,audIT,LTE a bordo,Operador móvil por seleccionar,591000.00,pendiente,,,,D4 4.2 / calendario_46.py
+42,audIT,SIM 5G terminales,Entel como referencia / operadores por seleccionar,67159.66,precio_publico_bruto_referencial,12760,,,D4 4.2 / nube_42.py
+42,audIT,Soporte y mantención,Fabricantes y mantenedores por desglosar,3331927.28,pendiente,,,,D4 4.3 / calendario_46.py
+42,audIT,Tiempo de aire Iridium,Ground Control,6515775.00,pendiente,,,,D4 4.2 / calendario_46.py
+43,audIT,Azure e identidad Entra,Microsoft / canal CSP,16644743.08,pendiente,,,,D4 4.2 / calendario_46.py
+43,audIT,Circuito de operador ExpressRoute,Operador de circuito por seleccionar,900000.00,pendiente,,,,D4 4.2 / calendario_46.py
+43,audIT,LTE a bordo,Operador móvil por seleccionar,591000.00,pendiente,,,,D4 4.2 / calendario_46.py
+43,audIT,SIM 5G terminales,Entel como referencia / operadores por seleccionar,67159.66,precio_publico_bruto_referencial,12760,,,D4 4.2 / nube_42.py
+43,audIT,Soporte y mantención,Fabricantes y mantenedores por desglosar,3331927.28,pendiente,,,,D4 4.3 / calendario_46.py
+43,audIT,Tiempo de aire Iridium,Ground Control,6515775.00,pendiente,,,,D4 4.2 / calendario_46.py
+44,audIT,Azure e identidad Entra,Microsoft / canal CSP,16644743.08,pendiente,,,,D4 4.2 / calendario_46.py
+44,audIT,Circuito de operador ExpressRoute,Operador de circuito por seleccionar,900000.00,pendiente,,,,D4 4.2 / calendario_46.py
+44,audIT,LTE a bordo,Operador móvil por seleccionar,591000.00,pendiente,,,,D4 4.2 / calendario_46.py
+44,audIT,SIM 5G terminales,Entel como referencia / operadores por seleccionar,67159.66,precio_publico_bruto_referencial,12760,,,D4 4.2 / nube_42.py
+44,audIT,Soporte y mantención,Fabricantes y mantenedores por desglosar,3331927.28,pendiente,,,,D4 4.3 / calendario_46.py
+44,audIT,Tiempo de aire Iridium,Ground Control,6515775.00,pendiente,,,,D4 4.2 / calendario_46.py
+45,audIT,Azure e identidad Entra,Microsoft / canal CSP,16644743.08,pendiente,,,,D4 4.2 / calendario_46.py
+45,audIT,Circuito de operador ExpressRoute,Operador de circuito por seleccionar,900000.00,pendiente,,,,D4 4.2 / calendario_46.py
+45,audIT,LTE a bordo,Operador móvil por seleccionar,591000.00,pendiente,,,,D4 4.2 / calendario_46.py
+45,audIT,SIM 5G terminales,Entel como referencia / operadores por seleccionar,67159.66,precio_publico_bruto_referencial,12760,,,D4 4.2 / nube_42.py
+45,audIT,Soporte y mantención,Fabricantes y mantenedores por desglosar,3331927.28,pendiente,,,,D4 4.3 / calendario_46.py
+45,audIT,Tiempo de aire Iridium,Ground Control,6515775.00,pendiente,,,,D4 4.2 / calendario_46.py
+46,audIT,Azure e identidad Entra,Microsoft / canal CSP,16644743.08,pendiente,,,,D4 4.2 / calendario_46.py
+46,audIT,Circuito de operador ExpressRoute,Operador de circuito por seleccionar,900000.00,pendiente,,,,D4 4.2 / calendario_46.py
+46,audIT,LTE a bordo,Operador móvil por seleccionar,591000.00,pendiente,,,,D4 4.2 / calendario_46.py
+46,audIT,SIM 5G terminales,Entel como referencia / operadores por seleccionar,67159.66,precio_publico_bruto_referencial,12760,,,D4 4.2 / nube_42.py
+46,audIT,Soporte y mantención,Fabricantes y mantenedores por desglosar,3331927.28,pendiente,,,,D4 4.3 / calendario_46.py
+46,audIT,Tiempo de aire Iridium,Ground Control,6515775.00,pendiente,,,,D4 4.2 / calendario_46.py
+47,audIT,Azure e identidad Entra,Microsoft / canal CSP,16644743.08,pendiente,,,,D4 4.2 / calendario_46.py
+47,audIT,Circuito de operador ExpressRoute,Operador de circuito por seleccionar,900000.00,pendiente,,,,D4 4.2 / calendario_46.py
+47,audIT,LTE a bordo,Operador móvil por seleccionar,591000.00,pendiente,,,,D4 4.2 / calendario_46.py
+47,audIT,SIM 5G terminales,Entel como referencia / operadores por seleccionar,67159.66,precio_publico_bruto_referencial,12760,,,D4 4.2 / nube_42.py
+47,audIT,Soporte y mantención,Fabricantes y mantenedores por desglosar,3331927.28,pendiente,,,,D4 4.3 / calendario_46.py
+47,audIT,Tiempo de aire Iridium,Ground Control,6515775.00,pendiente,,,,D4 4.2 / calendario_46.py
+48,Curimón,Equipos,"Comet, desde 10",219890.00,tasa_presupuestaria_E24,41779,,,D4 4.1 / presupuesto_41.py
+48,Curimón,Equipos,DigiKey ES,3180170.00,tasa_presupuestaria_E24,604232,,,D4 4.1 / presupuesto_41.py
+48,Curimón,Equipos,"IP Security Depot, equivalente",529137.00,tasa_presupuestaria_E24,100536,,,D4 4.1 / presupuesto_41.py
+48,Curimón,Equipos,Satphonestore,2261700.00,tasa_presupuestaria_E24,429723,,,D4 4.1 / presupuesto_41.py
+48,Curimón,Equipos,"Technoton, tienda oficial",329000.00,tasa_presupuestaria_E24,62510,,,D4 4.1 / presupuesto_41.py
+48,audIT,Activación Iridium,Ground Control,198450.00,pendiente,,,,D4 4.2 / calendario_46.py
+48,audIT,Azure e identidad Entra,Microsoft / canal CSP,16644743.08,pendiente,,,,D4 4.2 / calendario_46.py
+48,audIT,Circuito de operador ExpressRoute,Operador de circuito por seleccionar,900000.00,pendiente,,,,D4 4.2 / calendario_46.py
+48,audIT,LTE a bordo,Operador móvil por seleccionar,612000.00,pendiente,,,,D4 4.2 / calendario_46.py
+48,audIT,SIM 5G terminales,Entel como referencia / operadores por seleccionar,67159.66,precio_publico_bruto_referencial,12760,,,D4 4.2 / nube_42.py
+48,audIT,Soporte y mantención,Fabricantes y mantenedores por desglosar,3331927.28,pendiente,,,,D4 4.3 / calendario_46.py
+48,audIT,Tiempo de aire Iridium,Ground Control,6747300.00,pendiente,,,,D4 4.2 / calendario_46.py
+49,audIT,Azure e identidad Entra,Microsoft / canal CSP,17854343.08,pendiente,,,,D4 4.2 / calendario_46.py
+49,audIT,Circuito de operador ExpressRoute,Operador de circuito por seleccionar,900000.00,pendiente,,,,D4 4.2 / calendario_46.py
+49,audIT,LTE a bordo,Operador móvil por seleccionar,612000.00,pendiente,,,,D4 4.2 / calendario_46.py
+49,audIT,SIM 5G terminales,Entel como referencia / operadores por seleccionar,67159.66,precio_publico_bruto_referencial,12760,,,D4 4.2 / nube_42.py
+49,audIT,Soporte y mantención,Fabricantes y mantenedores por desglosar,3331927.28,pendiente,,,,D4 4.3 / calendario_46.py
+49,audIT,Tiempo de aire Iridium,Ground Control,6747300.00,pendiente,,,,D4 4.2 / calendario_46.py
+50,audIT,Azure e identidad Entra,Microsoft / canal CSP,16644743.08,pendiente,,,,D4 4.2 / calendario_46.py
+50,audIT,Circuito de operador ExpressRoute,Operador de circuito por seleccionar,900000.00,pendiente,,,,D4 4.2 / calendario_46.py
+50,audIT,LTE a bordo,Operador móvil por seleccionar,612000.00,pendiente,,,,D4 4.2 / calendario_46.py
+50,audIT,SIM 5G terminales,Entel como referencia / operadores por seleccionar,67159.66,precio_publico_bruto_referencial,12760,,,D4 4.2 / nube_42.py
+50,audIT,Soporte y mantención,Fabricantes y mantenedores por desglosar,3331927.28,pendiente,,,,D4 4.3 / calendario_46.py
+50,audIT,Tiempo de aire Iridium,Ground Control,6747300.00,pendiente,,,,D4 4.2 / calendario_46.py
+51,audIT,Azure e identidad Entra,Microsoft / canal CSP,16644743.08,pendiente,,,,D4 4.2 / calendario_46.py
+51,audIT,Circuito de operador ExpressRoute,Operador de circuito por seleccionar,900000.00,pendiente,,,,D4 4.2 / calendario_46.py
+51,audIT,LTE a bordo,Operador móvil por seleccionar,612000.00,pendiente,,,,D4 4.2 / calendario_46.py
+51,audIT,SIM 5G terminales,Entel como referencia / operadores por seleccionar,67159.66,precio_publico_bruto_referencial,12760,,,D4 4.2 / nube_42.py
+51,audIT,Soporte y mantención,Fabricantes y mantenedores por desglosar,3331927.28,pendiente,,,,D4 4.3 / calendario_46.py
+51,audIT,Tiempo de aire Iridium,Ground Control,6747300.00,pendiente,,,,D4 4.2 / calendario_46.py
+52,audIT,Azure e identidad Entra,Microsoft / canal CSP,16644743.08,pendiente,,,,D4 4.2 / calendario_46.py
+52,audIT,Circuito de operador ExpressRoute,Operador de circuito por seleccionar,900000.00,pendiente,,,,D4 4.2 / calendario_46.py
+52,audIT,LTE a bordo,Operador móvil por seleccionar,612000.00,pendiente,,,,D4 4.2 / calendario_46.py
+52,audIT,SIM 5G terminales,Entel como referencia / operadores por seleccionar,67159.66,precio_publico_bruto_referencial,12760,,,D4 4.2 / nube_42.py
+52,audIT,Soporte y mantención,Fabricantes y mantenedores por desglosar,3331927.28,pendiente,,,,D4 4.3 / calendario_46.py
+52,audIT,Tiempo de aire Iridium,Ground Control,6747300.00,pendiente,,,,D4 4.2 / calendario_46.py
+53,audIT,Azure e identidad Entra,Microsoft / canal CSP,16644743.08,pendiente,,,,D4 4.2 / calendario_46.py
+53,audIT,Circuito de operador ExpressRoute,Operador de circuito por seleccionar,900000.00,pendiente,,,,D4 4.2 / calendario_46.py
+53,audIT,LTE a bordo,Operador móvil por seleccionar,612000.00,pendiente,,,,D4 4.2 / calendario_46.py
+53,audIT,SIM 5G terminales,Entel como referencia / operadores por seleccionar,67159.66,precio_publico_bruto_referencial,12760,,,D4 4.2 / nube_42.py
+53,audIT,Soporte y mantención,Fabricantes y mantenedores por desglosar,3331927.28,pendiente,,,,D4 4.3 / calendario_46.py
+53,audIT,Tiempo de aire Iridium,Ground Control,6747300.00,pendiente,,,,D4 4.2 / calendario_46.py
+54,audIT,Azure e identidad Entra,Microsoft / canal CSP,16644743.08,pendiente,,,,D4 4.2 / calendario_46.py
+54,audIT,Circuito de operador ExpressRoute,Operador de circuito por seleccionar,900000.00,pendiente,,,,D4 4.2 / calendario_46.py
+54,audIT,LTE a bordo,Operador móvil por seleccionar,612000.00,pendiente,,,,D4 4.2 / calendario_46.py
+54,audIT,SIM 5G terminales,Entel como referencia / operadores por seleccionar,67159.66,precio_publico_bruto_referencial,12760,,,D4 4.2 / nube_42.py
+54,audIT,Soporte y mantención,Fabricantes y mantenedores por desglosar,3331927.28,pendiente,,,,D4 4.3 / calendario_46.py
+54,audIT,Tiempo de aire Iridium,Ground Control,6747300.00,pendiente,,,,D4 4.2 / calendario_46.py
+55,audIT,Azure e identidad Entra,Microsoft / canal CSP,16644743.08,pendiente,,,,D4 4.2 / calendario_46.py
+55,audIT,Circuito de operador ExpressRoute,Operador de circuito por seleccionar,900000.00,pendiente,,,,D4 4.2 / calendario_46.py
+55,audIT,LTE a bordo,Operador móvil por seleccionar,612000.00,pendiente,,,,D4 4.2 / calendario_46.py
+55,audIT,SIM 5G terminales,Entel como referencia / operadores por seleccionar,67159.66,precio_publico_bruto_referencial,12760,,,D4 4.2 / nube_42.py
+55,audIT,Soporte y mantención,Fabricantes y mantenedores por desglosar,3331927.28,pendiente,,,,D4 4.3 / calendario_46.py
+55,audIT,Tiempo de aire Iridium,Ground Control,6747300.00,pendiente,,,,D4 4.2 / calendario_46.py
+56,audIT,Azure e identidad Entra,Microsoft / canal CSP,16644743.08,pendiente,,,,D4 4.2 / calendario_46.py
+56,audIT,Borrado y disposición final,Gestor autorizado por seleccionar,1000000.00,pendiente,,,,D4 4.3 / calendario_46.py
+56,audIT,Circuito de operador ExpressRoute,Operador de circuito por seleccionar,900000.00,pendiente,,,,D4 4.2 / calendario_46.py
+56,audIT,LTE a bordo,Operador móvil por seleccionar,612000.00,pendiente,,,,D4 4.2 / calendario_46.py
+56,audIT,SIM 5G terminales,Entel como referencia / operadores por seleccionar,67159.66,precio_publico_bruto_referencial,12760,,,D4 4.2 / nube_42.py
+56,audIT,Soporte y mantención,Fabricantes y mantenedores por desglosar,3331927.28,pendiente,,,,D4 4.3 / calendario_46.py
+56,audIT,Tiempo de aire Iridium,Ground Control,6747300.00,pendiente,,,,D4 4.2 / calendario_46.py
