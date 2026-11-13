@@ -1,6 +1,6 @@
 # Informe 3 · Aporte de D4 (infraestructura, proveedores y adquisiciones)
 
-Tareas de D4 del proyecto de Linear de la entrega 3, P-AUD-1 (AUD-32 a AUD-41). Versión del 2026-11-12.
+Tareas de D4 del proyecto de Linear de la entrega 3, P-AUD-1 (AUD-32 a AUD-41). Versión del 2026-11-13. Las diez tareas están en Done.
 Cada tarea tiene su archivo, con el mismo contenido que su adjunto en Linear.
 
 ## Tareas
@@ -13,10 +13,10 @@ Cada tarea tiene su archivo, con el mismo contenido que su adjunto en Linear.
 | 4.4 | AUD-35 | Identificar y justificar proveedores clave | `4.4-proveedores-clave.md` | Done |
 | 4.5 | AUD-36 | Consolidar matriz de adquisiciones | `4.5-matriz-adquisiciones.md` | Done |
 | 4.6 | AUD-37 | Entregar calendario de compras y contrataciones a D2 | `4.6-calendario-compras.md` | Done |
-| 4.7 | AUD-38 | Valorizar respuestas a riesgos y contingencias | `4.7-riesgos-contingencias.md` | In Progress, espera 2.2 de D2 y 3.3 de D3 |
+| 4.7 | AUD-38 | Valorizar respuestas a riesgos y contingencias | `4.7-riesgos-contingencias.md` | Done |
 | 4.8 | AUD-39 | Distinguir compras de audIT y del cliente | `4.8-compras-audit-y-mandante.md` | Done |
 | 4.9 | AUD-40 | Valorizar innovación 3 | `4.9-innovacion-3.md` | Done |
-| 4.10 | AUD-41 | Redactar explicación de costos y adquisiciones | `4.10-explicacion-costos-adquisiciones.md` | In Progress, espera 4.7 |
+| 4.10 | AUD-41 | Redactar explicación de costos y adquisiciones | `4.10-explicacion-costos-adquisiciones.md` | Done |
 
 Archivos de apoyo:
 
