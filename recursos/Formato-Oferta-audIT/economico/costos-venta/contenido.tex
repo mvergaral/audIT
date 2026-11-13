@@ -7,11 +7,9 @@
 % ============================================================================
 
 \begin{resumenApertura}
-\marcador{Qué muestra este documento, en cuatro o cinco líneas, con el valor
-ofertado frente al costo total: \textbackslash montoPartida\{proyecto\} y
-\textbackslash montoPartida\{gasto-total\}}
+El documento compara los costos de implementación y operación con el precio de la solución para Transportes Curimón. Presenta las adquisiciones, el calendario financiero y los indicadores del proyecto.
 \begin{recibe}
-  \item \marcador{Qué recibe el mandante}
+  \item Desglose de costos y precios por fase, respaldado en la planilla de cálculo.
 \end{recibe}
 \end{resumenApertura}
 
@@ -24,6 +22,8 @@ Proveedor & Qué provee & Componente o servicio & Criterio de selección \\ \mid
 Microsoft & Azure en Chile Central y Brazil South & Plataforma y recuperación & Disponibilidad regional y canal CSP \\
 Dell & Servidores & Infraestructura on-premise & Soporte y disponibilidad en Chile \\
 iWave, Teltonika y Technoton & Equipos y periféricos de campo y red & Telemetría y acceso en terminal & Compatibilidad con el diseño de T-11 \\
+Fortinet & Equipos de seguridad y red & Sala técnica y terminales & Compatibilidad con la arquitectura y soporte local \\
+GitLab y SonarSource & Licencias de desarrollo y análisis de código & Integración continua y calidad & Cobertura de los procesos de desarrollo y pruebas \\
 Ground Control & Tiempo de aire Iridium & Respaldo satelital & Cobertura en rutas sin servicio terrestre \\
 \end{tabla}
 
@@ -44,15 +44,11 @@ La instalación se ejecuta con personal interno de audIT. El soporte del fabrica
 
 \section{Curva S del proyecto}\label{sec:eco-curva-s}
 
-\marcador{Párrafo de contexto: costos e ingresos acumulados por mes, del mes 1
-al 56, horizonte de evaluación del Formulario E-24. La figura sale de la
-planilla y se cita con \textbackslash figref antes de aparecer}
+La curva S cubre los 56 meses de evaluación. Presenta costos acumulados con intereses, facturación acumulada por devengo y saldo de caja financiado. La amortización del principal se registra en caja. El saldo refleja el momento efectivo de cobro y permite identificar los meses de mayor necesidad de financiamiento.
 
 \section{Análisis de costos de la solución}\label{sec:eco-costos}
 
-\marcador{Párrafo de contexto: qué muestra la \tabref{eco-gastos}. El Formulario
-T-22 pide los gastos desglosados en operación, inversión, administrativos y
-recursos humanos, con los gastos de proveedores sumados a operación}
+La \tabref{eco-gastos} desglosa los gastos de operación, inversión, administración y recursos humanos. Los servicios de proveedores se identifican por separado y se suman una sola vez al gasto de operación, conforme a T-22.
 
 \tablaMontos{Costos de la solución por categoría de gasto}{eco-gastos}%
   {gasto-operacion-directo, gasto-proveedores, gasto-inversion, gasto-administracion, gasto-rrhh}
@@ -61,31 +57,31 @@ El presupuesto de referencia de infraestructura, nube, conectividad, soporte y o
 
 \subsection{Costos frente a venta}\label{sec:eco-venta}
 
-\marcador{Párrafo de contexto: qué muestra la \tabref{eco-venta}, el valor
-ofertado que se compara con el costo total de la \tabref{eco-gastos}}
+El cuadro maestro presenta los costos directos por fase y los indirectos. El valor ofertado se concilia con el cuadro de ingresos del modelo.
 
-\tablaMontos{Valor ofertado por fase}{eco-venta}{implementacion, operacion}
+\tablaMontos{Cuadro maestro de costos}{eco-maestro}{costo-directo-implementacion, costo-directo-operacion, costo-indirecto, costo-total}
 
-\marcador{Margen resultante y de dónde sale}
+\tablaMontos{Valor ofertado por fase}{eco-venta}{implementacion, operacion, proyecto}
+
+El margen consolidado se comprueba como EBITDA sobre ingresos netos y está sujeto al límite de 20\,\%. El precio y margen definitivos quedan pendientes de conciliación con el presupuesto de cierre.
 
 \section{VAN y TIR de la solución}\label{sec:eco-van}
 
-\marcador{Párrafo de contexto: qué muestra la \tabref{eco-van} y con qué tasa de
-descuento se calcula el VAN}
+La evaluación utiliza el flujo libre mensual de la Fila A. El VAN descuenta los flujos de M1 a M56 y considera el flujo de M0. La TIR es la tasa mensual que hace cero el VAN. El cobro de M57 se concilia por separado.
 
 \begin{tabla}{Indicadores de la evaluación financiera}{eco-van}{L{60mm} X}
 Indicador & Valor \\ \midrule
 Horizonte de evaluación & 56 meses, \form{E-24}{73} \\
-Tasa de descuento & \marcador{tasa y justificación} \\
+Tasa de descuento & 1,0261894\,\% mensual antes de impuestos en el modelo de trabajo. Pondera 80\,\% de deuda al 0,9\,\% mensual y 20\,\% de capital propio al 20\,\% efectivo anual supuesto. \\
 Valor actual neto (VAN) & \montoPartida{van} \\
-Tasa interna de retorno (TIR) & \marcador{porcentaje} \\
+Tasa interna de retorno (TIR) & Pendiente de validar sobre la Fila A de cierre \\
 \end{tabla}
 
-\marcador{Conclusión que se saca de los indicadores}
+Los resultados definitivos se validarán sobre la misma versión del flujo. La liquidez se evalúa con la Fila C y la sensibilidad al atraso de cobros.
 
 \section{Valorización de las cinco innovaciones}\label{sec:eco-innovaciones}
 
-La \tabref{eco-innovaciones} separa la inversión, el costo operacional y el beneficio por innovación. La valorización del expediente verificable y de la anticipación circadiana está pendiente. El escenario base prudente reconoce CLP 0 por programación de patio, verificación de acople y registro térmico adicional. El acople y el registro térmico se cuantificarán por separado. El kilometraje real corresponde al criterio 26. El recupero de sobreestadías se estima en CLP 120.700.000 brutos al año y CLP 362.100.000 brutos en 36 meses a régimen, bajo el supuesto de recuperar el 50\,\% del monto objetado. El beneficio neto de Curimón depende del reparto con los transportistas y se informa por separado de los ingresos de audIT.
+La \tabref{eco-innovaciones} separa la inversión, el costo operacional y el beneficio por innovación. El beneficio monetario del expediente verificable y de la anticipación circadiana queda pendiente de cuantificar. El escenario base prudente reconoce CLP 0 por programación de patio, verificación de acople y registro térmico adicional. El acople y el registro térmico se cuantificarán por separado. El kilometraje real corresponde al criterio 26. El recupero de sobreestadías se estima en CLP 120.700.000 brutos al año y CLP 362.100.000 brutos en 36 meses a régimen, bajo el supuesto de recuperar el 50\,\% del monto objetado. El beneficio neto de Curimón depende del reparto con los transportistas y se informa por separado de los ingresos de audIT.
 
 \tablaMontos*[fuente=condensada]{Valorización de las cinco innovaciones en el flujo de caja}{eco-innovaciones}%
   {innovacion-1-inversion, innovacion-1-costo, innovacion-1-beneficio,
@@ -94,12 +90,8 @@ La \tabref{eco-innovaciones} separa la inversión, el costo operacional y el ben
    innovacion-4-inversion, innovacion-4-costo, innovacion-4-beneficio,
    innovacion-5-inversion, innovacion-5-costo, innovacion-5-beneficio}
 
-\marcador{Conclusión que se saca de la tabla}
+El beneficio neto consolidado de Curimón queda pendiente de cuantificar. Los costos incrementales de audIT se asignan por mes y se concilian con el presupuesto base.
 
 \section{Planilla de cálculo}\label{sec:eco-planilla}
 
-\marcador{Qué contiene la planilla que entrega el mandante: gastos de operación,
-inversión, administrativos y recursos humanos, una hoja con los gastos de
-proveedores sumados a operación y el flujo de caja mensual con total del mes y
-monto acumulado. Nombre del archivo y hoja donde está cada valor de este
-documento}
+La planilla reúne el Resumen del mandante, los parámetros, los costos e ingresos, los proveedores, el financiamiento, la curva S y los indicadores. Los cuadros económicos se cotejan con las hojas correspondientes de la misma versión. El flujo mensual presenta el total del período y el saldo acumulado.
