@@ -1,0 +1,12 @@
+﻿id;mes;semana_propuesta;puesto_propuesto;horas_requeridas;entregable;codigo_ejecutor;semana_confirmada;horas_netas_reservadas;horas_compartidas_verificadas;referencia_confirmacion;estado;control
+01;M6;S2;Arquitecto de Solución;4;Diseño de autorización local;;;;0;;Pendiente de acreditar;Confirmar disponibilidad descontando otras tareas y guardias.
+02;M6;S2;Oficial de Seguridad;4;Revisión de vencimiento y revocación;;;;0;;Pendiente de acreditar;Confirmar disponibilidad descontando otras tareas y guardias.
+03;M6;S3;Software A11;8;Contrato local listo para implementar;;;;0;;Pendiente de acreditar;Confirmar disponibilidad descontando otras tareas y guardias.
+04;M7;S2;Software A11;16;Control previo al registro;;;;0;;Pendiente de acreditar;Confirmar disponibilidad descontando otras tareas y guardias.
+05;M7;S3;QA A11;8;Pruebas de componente;;;;0;;Pendiente de acreditar;Confirmar disponibilidad descontando otras tareas y guardias.
+06;M8;S2;Software A11;8;Instrumentación configurable;;;;0;;Pendiente de acreditar;Confirmar disponibilidad descontando otras tareas y guardias.
+07;M8;S2;Líder de Operación/SRE;4;Preparación de entorno y registros;;;;0;;Pendiente de acreditar;Confirmar disponibilidad descontando otras tareas y guardias.
+08;M8;S3;QA A11;4;Comprobación de la correlación con registros locales;;;;0;;Pendiente de acreditar;Confirmar disponibilidad descontando otras tareas y guardias.
+09;M9;S1;Software A11;4;Preparación del candidato;;;;0;;Pendiente de acreditar;Confirmar disponibilidad descontando otras tareas y guardias.
+10;M9;S1;Líder de Operación/SRE;4;Configuración del candidato;;;;0;;Pendiente de acreditar;Confirmar si las 4 h están cubiertas por el cupo SRE de M9.
+11;M9;S2;QA A11;8;Regresión de componente antes del cierre temprano de A11;;;;0;;Pendiente de acreditar;Mantener 8 h hasta acreditar tarea compartida con CP-HW-03.

@@ -57,6 +57,8 @@ Como sensibilidad, se simuló que las 72 h se compran íntegramente a los puntos
 
 ## Minuta de cierre D2 · 13-11-2026
 
+[Ficha editable de reservas](d2/AUD-14_RESERVAS_CP-SEC-05.csv). Cada titular completa código, semana confirmada, horas netas y referencia. D2 registra solo las horas compartidas acreditadas y comprueba el saldo sin contar dos veces la misma cobertura.
+
 Fuentes revisadas: nómina AUD-17, ficha de reservas de AUD-14 y comentarios recientes de AUD-14, AUD-15 y AUD-24. La ficha consultada tiene 34 filas y ninguna informa horas netas confirmadas. Para A11 se conserva la planificación semanal y el saldo por acreditar.
 
 | ID | Mes | Semana | Puesto propuesto | Ejecutor confirmado | h requeridas | h acreditadas | h compartidas verificadas | h por acreditar | Evidencia de reserva |
