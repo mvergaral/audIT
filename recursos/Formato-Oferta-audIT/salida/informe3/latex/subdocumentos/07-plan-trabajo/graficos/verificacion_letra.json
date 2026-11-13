@@ -1,0 +1,134 @@
+[
+  {
+    "archivo": "graficos/edt-revisada/01-arbol.pdf",
+    "minimo_pt": 11.5
+  },
+  {
+    "archivo": "graficos/edt-revisada/02-paquetes-1.pdf",
+    "minimo_pt": 11.5
+  },
+  {
+    "archivo": "graficos/edt-revisada/03-paquetes-2.pdf",
+    "minimo_pt": 11.5
+  },
+  {
+    "archivo": "graficos/edt-revisada/04-paquetes-3.pdf",
+    "minimo_pt": 11.5
+  },
+  {
+    "archivo": "graficos/edt-revisada/05-paquetes-4.pdf",
+    "minimo_pt": 11.5
+  },
+  {
+    "archivo": "graficos/edt-revisada/06-paquetes-5.pdf",
+    "minimo_pt": 11.5
+  },
+  {
+    "archivo": "graficos/edt-revisada/07-ejemplo.pdf",
+    "minimo_pt": 11.5
+  },
+  {
+    "archivo": "graficos/edt-revisada/08-trazabilidad.pdf",
+    "minimo_pt": 11.5
+  },
+  {
+    "archivo": "graficos/edt-revisada/09-matriz-requisitos.pdf",
+    "minimo_pt": 11.5
+  },
+  {
+    "archivo": "graficos/revisada/gantt-panorama.pdf",
+    "minimo_pt": 12.0
+  },
+  {
+    "archivo": "graficos/revisada/gantt-cpm.pdf",
+    "minimo_pt": 12.0
+  },
+  {
+    "archivo": "graficos/revisada/gantt-gestion.pdf",
+    "minimo_pt": 12.0
+  },
+  {
+    "archivo": "graficos/revisada/gantt-plataforma.pdf",
+    "minimo_pt": 12.0
+  },
+  {
+    "archivo": "graficos/revisada/gantt-e1.pdf",
+    "minimo_pt": 12.0
+  },
+  {
+    "archivo": "graficos/revisada/gantt-datos.pdf",
+    "minimo_pt": 12.0
+  },
+  {
+    "archivo": "graficos/revisada/gantt-e2.pdf",
+    "minimo_pt": 12.0
+  },
+  {
+    "archivo": "graficos/revisada/gantt-implantacion.pdf",
+    "minimo_pt": 12.0
+  },
+  {
+    "archivo": "graficos/revisada/gantt-innovaciones.pdf",
+    "minimo_pt": 12.0
+  },
+  {
+    "archivo": "graficos/revisada/gantt-hitos.pdf",
+    "minimo_pt": 12.0
+  },
+  {
+    "archivo": "graficos/revisada/gantt-control.pdf",
+    "minimo_pt": 12.0
+  },
+  {
+    "archivo": "graficos/revisada/gantt-operacion.pdf",
+    "minimo_pt": 12.0
+  },
+  {
+    "archivo": "revisada/gantt-panorama.pdf",
+    "minimo_pt": 12.0
+  },
+  {
+    "archivo": "revisada/gantt-cpm.pdf",
+    "minimo_pt": 12.0
+  },
+  {
+    "archivo": "revisada/gantt-gestion.pdf",
+    "minimo_pt": 12.0
+  },
+  {
+    "archivo": "revisada/gantt-plataforma.pdf",
+    "minimo_pt": 12.0
+  },
+  {
+    "archivo": "revisada/gantt-e1.pdf",
+    "minimo_pt": 12.0
+  },
+  {
+    "archivo": "revisada/gantt-datos.pdf",
+    "minimo_pt": 12.0
+  },
+  {
+    "archivo": "revisada/gantt-e2.pdf",
+    "minimo_pt": 12.0
+  },
+  {
+    "archivo": "revisada/gantt-implantacion.pdf",
+    "minimo_pt": 12.0
+  },
+  {
+    "archivo": "revisada/gantt-innovaciones.pdf",
+    "minimo_pt": 12.0
+  },
+  {
+    "archivo": "revisada/gantt-hitos.pdf",
+    "minimo_pt": 12.0
+  },
+  {
+    "archivo": "revisada/gantt-control.pdf",
+    "minimo_pt": 12.0
+  },
+  {
+    "archivo": "revisada/gantt-operacion.pdf",
+    "minimo_pt": 12.0
+  }
+]

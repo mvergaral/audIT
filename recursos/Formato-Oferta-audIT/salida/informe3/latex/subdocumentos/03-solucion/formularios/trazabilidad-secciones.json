@@ -1,0 +1,170 @@
+{
+  "RF-001": {
+    "etiqueta": "sec:3-evidencia",
+    "seccion": "3.3.2"
+  },
+  "RF-002": {
+    "etiqueta": "sec:3-evidencia",
+    "seccion": "3.3.2"
+  },
+  "RF-003": {
+    "etiqueta": "sec:3-evidencia",
+    "seccion": "3.3.2"
+  },
+  "RF-004": {
+    "etiqueta": "sec:3-evidencia",
+    "seccion": "3.3.2"
+  },
+  "RF-005": {
+    "etiqueta": "sec:3-etapa1",
+    "seccion": "3.2.2"
+  },
+  "RF-006": {
+    "etiqueta": "sec:3-viaje",
+    "seccion": "3.4.2"
+  },
+  "RF-007": {
+    "etiqueta": "sec:3-etapa1",
+    "seccion": "3.2.2"
+  },
+  "RF-008": {
+    "etiqueta": "sec:3-contextos",
+    "seccion": "3.3.1"
+  },
+  "RF-009": {
+    "etiqueta": "sec:3-viaje",
+    "seccion": "3.4.2"
+  },
+  "RF-010": {
+    "etiqueta": "sec:3-viaje",
+    "seccion": "3.4.2"
+  },
+  "RF-011": {
+    "etiqueta": "sec:3-viaje",
+    "seccion": "3.4.2"
+  },
+  "RF-012": {
+    "etiqueta": "sec:3-viaje",
+    "seccion": "3.4.2"
+  },
+  "RF-013": {
+    "etiqueta": "sec:3-viaje",
+    "seccion": "3.4.2"
+  },
+  "RF-014": {
+    "etiqueta": "sec:3-viaje",
+    "seccion": "3.4.2"
+  },
+  "RF-015": {
+    "etiqueta": "sec:3-etapa2",
+    "seccion": "3.2.3"
+  },
+  "RF-016": {
+    "etiqueta": "sec:3-etapa1",
+    "seccion": "3.2.2"
+  },
+  "RF-017": {
+    "etiqueta": "sec:3-etapa1",
+    "seccion": "3.2.2"
+  },
+  "RF-018": {
+    "etiqueta": "sec:3-etapa2",
+    "seccion": "3.2.3"
+  },
+  "RF-019": {
+    "etiqueta": "sec:3-viaje",
+    "seccion": "3.4.2"
+  },
+  "RF-020": {
+    "etiqueta": "sec:3-adhesion",
+    "seccion": "3.4.3"
+  },
+  "RF-021": {
+    "etiqueta": "sec:3-etapa2",
+    "seccion": "3.2.3"
+  },
+  "RF-022": {
+    "etiqueta": "sec:3-adhesion",
+    "seccion": "3.4.3"
+  },
+  "RF-023": {
+    "etiqueta": "sec:3-etapa2",
+    "seccion": "3.2.3"
+  },
+  "RF-024": {
+    "etiqueta": "sec:3-etapa2",
+    "seccion": "3.2.3"
+  },
+  "RF-025": {
+    "etiqueta": "sec:3-contextos",
+    "seccion": "3.3.1"
+  },
+  "RF-026": {
+    "etiqueta": "sec:3-adhesion",
+    "seccion": "3.4.3"
+  },
+  "RF-027": {
+    "etiqueta": "sec:3-etapa1",
+    "seccion": "3.2.2"
+  },
+  "RF-028": {
+    "etiqueta": "sec:3-evidencia",
+    "seccion": "3.3.2"
+  },
+  "RNF-001": {
+    "etiqueta": "sec:3-restricciones",
+    "seccion": "3.2.7"
+  },
+  "RNF-002": {
+    "etiqueta": "sec:3-atributos",
+    "seccion": "3.3.3"
+  },
+  "RNF-003": {
+    "etiqueta": "sec:3-exclusiones",
+    "seccion": "3.2.5"
+  },
+  "RNF-004": {
+    "etiqueta": "sec:3-implantacion",
+    "seccion": "3.4.5"
+  },
+  "RNF-005": {
+    "etiqueta": "sec:3-restricciones",
+    "seccion": "3.2.7"
+  },
+  "RNF-006": {
+    "etiqueta": "sec:3-viaje",
+    "seccion": "3.4.2"
+  },
+  "RNF-007": {
+    "etiqueta": "sec:3-restricciones",
+    "seccion": "3.2.7"
+  },
+  "RNF-008": {
+    "etiqueta": "sec:3-atributos",
+    "seccion": "3.3.3"
+  },
+  "RNF-009": {
+    "etiqueta": "sec:3-operacion",
+    "seccion": "3.4.6"
+  },
+  "RNF-010": {
+    "etiqueta": "sec:3-restricciones",
+    "seccion": "3.2.7"
+  },
+  "RNF-011": {
+    "etiqueta": "sec:3-implantacion",
+    "seccion": "3.4.5"
+  },
+  "RNF-012": {
+    "etiqueta": "sec:3-evidencia",
+    "seccion": "3.3.2"
+  },
+  "RNF-013": {
+    "etiqueta": "sec:3-atributos",
+    "seccion": "3.3.3"
+  },
+  "RNF-014": {
+    "etiqueta": "sec:3-operacion",
+    "seccion": "3.4.6"
+  }
+}

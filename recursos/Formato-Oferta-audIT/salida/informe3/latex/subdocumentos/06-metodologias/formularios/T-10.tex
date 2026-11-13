@@ -1,0 +1,91 @@
+\begin{formulario}{T-10}
+\markright{Subdocumento 6. Formulario T-10}
+% Numeración de tablas con cualquier versión de longtable (sobre el ajuste anterior).
+% El estilo supone que longtable avanza el contador de tablas al abrir cada tabla, como la
+% versión de 2025. Hay versiones que no lo hacen, y entonces la primera tabla sale «4.0» y su
+% etiqueta toma el número de la sección. Al cerrar cada tabla numerada se mira cuánto avanzó el
+% contador: si no avanzó, desde la tabla siguiente se avanza aquí, y si avanzó dos veces, se deja
+% de hacerlo. La marca queda en el .aux, así que en la corrida siguiente se numera bien desde la
+% primera tabla, y una marca que ya no corresponde se borra sola. Donde longtable sí avanza el
+% contador no cambia nada. Una sola activación por documento.
+\ifdefined\AuditNumeracionTablas\else
+\global\let\AuditNumeracionTablas\empty
+\global\let\NumeracionTablasDthree\empty
+\ExplSyntaxOn
+\bool_new:N \g_audit_lt_avanzar_bool
+\bool_new:N \g_audit_lt_paso_bool
+\bool_new:N \g_audit_lt_pendiente_bool
+\bool_new:N \g_audit_lt_numerada_bool
+\bool_new:N \g_audit_lt_anotado_bool
+\int_new:N \g_audit_lt_antes_int
+\cs_if_exist:NT \AuditLongtableSinPaso { \bool_gset_true:N \g_audit_lt_avanzar_bool }
+\cs_gset_protected:Npn \AuditEvaluarTabla
+  {
+    \bool_if:NT \g_audit_lt_pendiente_bool
+      {
+        \bool_gset_false:N \g_audit_lt_pendiente_bool
+        \bool_if:NTF \g_audit_lt_numerada_bool
+          {
+            \int_set:Nn \l_tmpa_int { \value { table } - \g_audit_lt_antes_int }
+            \bool_if:NTF \g_audit_lt_paso_bool
+              { \int_compare:nNnT { \l_tmpa_int } > { 1 } { \bool_gset_false:N \g_audit_lt_avanzar_bool } }
+              { \int_compare:nNnT { \l_tmpa_int } < { 1 } { \bool_gset_true:N \g_audit_lt_avanzar_bool } }
+          }
+          { \bool_if:NT \g_audit_lt_paso_bool { \addtocounter { table } { -1 } } }
+        \bool_lazy_and:nnT { \g_audit_lt_avanzar_bool } { ! \g_audit_lt_anotado_bool }
+          {
+            \bool_gset_true:N \g_audit_lt_anotado_bool
+            \exp_args:Nc \iow_now:Nn { @auxout } { \gdef \AuditLongtableSinPaso { } }
+          }
+      }
+  }
+\cs_gset_protected:Npn \AuditAntesDeTabla
+  {
+    \AuditEvaluarTabla
+    \int_gset:Nn \g_audit_lt_antes_int { \value { table } }
+    \bool_gset_false:N \g_audit_lt_numerada_bool
+    \bool_gset_true:N \g_audit_lt_pendiente_bool
+    \bool_gset_eq:NN \g_audit_lt_paso_bool \g_audit_lt_avanzar_bool
+    \bool_if:NT \g_audit_lt_paso_bool { \refstepcounter { table } }
+  }
+\cs_gset_protected:Npn \AuditMarcarNumerada
+  { \bool_if:NT \g_audit_lt_pendiente_bool { \bool_gset_true:N \g_audit_lt_numerada_bool } }
+\ExplSyntaxOff
+\AddToHook{env/tabla/before}[audit-numeracion]{\AuditAntesDeTabla}
+\AddToHook{env/tabla/after}[audit-numeracion]{\AuditEvaluarTabla}
+\AddToHook{cmd/addcontentsline/before}[audit-numeracion]{\AuditMarcarNumerada}
+\fi
+% El contenido exigido es una tabla numerada que no pasa por el entorno tabla.
+\AddToHook{env/contenidoExigido/before}[audit-exigido]{\AuditAntesDeTabla}
+\AddToHook{env/contenidoExigido/after}[audit-exigido]{\AuditEvaluarTabla}
+\begin{contenidoExigido}{T-10}
+\exigencia{Ciclo de vida, requerimientos, arquitectura evolutiva y deuda técnica}{\verSeccionFolio{sec:6-desarrollo-ciclovida}}
+\exigencia{DevSecOps y automatización de pruebas}{\verSeccionFolio{sec:6-desarrollo-devsecops}}
+\exigencia{Infraestructura y configuración como código}{\verSeccionFolio{sec:6-desarrollo-iac}}
+\exigencia{Criterios de ingeniería, Definición de Preparado y Definición de Terminado}{\verSeccionFolio{sec:6-desarrollo-ceremonias}}
+\exigencia{Cadencias, promoción, reversión y métricas de entrega}{\verSeccionFolio{sec:06-cadencia-entrega-y-reversion-verificable}}
+\end{contenidoExigido}
+
+La \tabref{06-t10-sprints} propone una secuencia verificable de incrementos. Cada fila es una línea base de planificación que se ratifica con la contraparte en el refinamiento; no afirma pruebas ya ejecutadas. Los requisitos y prioridades proceden de T-12, las duraciones de A09/A20 de T-15 y las pruebas de S9/T-17.
+
+\begin{tabla}[ancho=completo, fuente=condensada]{Incrementos iniciales de A09 y A20 por sprint}{06-t10-sprints}{L{13mm} L{30mm} X X}
+Sprint & Requisitos T-12 & Incremento y dependencia principal & Prueba, revisor y salida \\ \midrule
+A09-1 & RF-005, RF-022 & Maestros con propietario, permisos y roles; depende de contratos de identidad & Casos de acceso y vigencias; TI y Prevención; sin permisos cruzados \\
+A09-2 & RF-002, RF-003, RF-004 & Evidencia de jornada, origen y custodia; depende de maestros & Casos de fuente y atestación; Prevención; evidencia reconstruible \\
+A09-3 & RF-001, RF-028 & Veredicto de asignación por modalidad; depende de jornada y activos & Bloqueos legales y concurrencia; torre; veredicto y motivo registrados \\
+A09-4 & RF-007, RF-008, RF-009 & Captura a bordo y vista de flota; depende de equipos homologados & Desconexión, reinicio y origen; torre y TI; sin pérdida/duplicación \\
+A09-5 & RF-010, RF-011, RF-012 & Geocerca, espera y entrega; depende de puntos y contratos & Casos de visita y firma; Operaciones; eventos conciliados \\
+A09-6 & RF-006, RF-013, RF-014 & Carga peligrosa y documento emitido por contable; depende de su interfaz & Salida bloqueada y documento sin enlace; torre; emisor correcto \\
+A09-7 & RF-026, RF-027; G13 & Adhesión, alerta y versión de entrenamiento con cinco flujos & T-17 G13 en PREPROD; conductor y transportista; acta y digest \\
+A09-8 & RF-016, RF-017, RF-019, RF-020 & Costeo inicial, liquidación y portal; integración de E1 & Regresión y pruebas integrales; Finanzas y torre; candidato H4 \\
+A20-1 & RF-015, RF-018 & Retorno y análisis de rendimiento; datos E1 conciliados & Casos de ruta y consumo; Operaciones; cálculo explicable \\
+A20-2 & RF-021, RF-023 & Vista del cliente y emisiones con método declarado & Permisos y factor de cálculo; cliente y Finanzas; acceso limitado \\
+A20-3 & RF-024, RF-025 & Taller externo y mantenimiento por kilometraje & Trabajo sin enlace y alerta; Mantenimiento; intervención auditable \\
+A20-4 & RF-015 a RF-025 & Integración entre analítica, talleres y portales & Regresión por perfil; TI y usuarios; defectos bloqueantes cerrados \\
+A20-5 & RF-015 a RF-025 & Candidato E2, reversa y evidencias para H9 & T-17 y revisión de usuarios; acta de entrega para certificación \\
+\end{tabla}
+
+La \tabref{06-t10-sprints} coloca G13 al cierre de A09-7 y H4/H9 al término de A09-8/A20-5; la aceptación contractual sigue las pruebas posteriores y actas de S7/S9. La capacidad neta se recalcula por sprint: días-persona disponibles tras ausencias y guardias $\times$ foco acordado $\times$ 0,85. Para E2, el foco inicial de S7 es 0,70 y el resultado 0,595 de la disponibilidad previa. Las historias se desglosan antes de comprometerse; si no caben, el Jefe de Proyecto registra impacto y propone replanificación sin desplazar hitos por decisión unilateral.
+
+Cada incremento conserva ID T-12, contrato OpenAPI/AsyncAPI cuando corresponda, commit, revisión independiente, pruebas con resultado, SBOM, firma/digest y decisión de promoción. QA comprueba las puertas de S9. Los defectos de seguridad, integridad y cumplimiento bloquean la salida; la revisión funcional del titular o suplente de Curimón no reemplaza la aceptación de hito. En M21–M56, incidencias, parches y deuda técnica pasan al tablero Kanban con horas y dotación acordadas mensualmente con S11/T-15.
+\end{formulario}

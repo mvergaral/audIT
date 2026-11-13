@@ -1,0 +1,853 @@
+# Formulario T-12. Matriz de cumplimiento técnico y trazabilidad
+
+audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. Oferta Técnica, Sobre N.º 2. Propuesta final. Archivo AUDIT-Formulario-T-12.pdf. Anexo del Subdocumento N.º 3, Esquema de solución y alcance. Las fuentes están en las Referencias de ese subdocumento.
+
+## Índice detallado
+
+| Contenido | Página del PDF |
+|---|---:|
+| Ficha del documento | [3](AUDIT-Formulario-T-12.pdf#page=3) |
+| T-12 Matriz de cumplimiento técnico y trazabilidad | [5](AUDIT-Formulario-T-12.pdf#page=5) |
+| Glosario de códigos | [5](AUDIT-Formulario-T-12.pdf#page=5) |
+| Catálogo de requerimientos y matriz de trazabilidad | [5](AUDIT-Formulario-T-12.pdf#page=5) |
+| Registro de reglas de negocio | [13](AUDIT-Formulario-T-12.pdf#page=13) |
+| Registro de supuestos | [14](AUDIT-Formulario-T-12.pdf#page=14) |
+| Criterios de aceptación | [16](AUDIT-Formulario-T-12.pdf#page=16) |
+| Registro de consultas y vacíos | [17](AUDIT-Formulario-T-12.pdf#page=17) |
+
+\reqUsado{RF-001}{3.3.2}{}
+\reqUsado{RF-002}{3.3.2}{}
+\reqUsado{RF-003}{3.3.2}{}
+\reqUsado{RF-004}{3.3.2}{}
+\reqUsado{RF-005}{3.2.2}{}
+\reqUsado{RF-006}{3.4.2}{}
+\reqUsado{RF-007}{3.2.2}{}
+\reqUsado{RF-008}{3.3.1}{}
+\reqUsado{RF-009}{3.4.2}{}
+\reqUsado{RF-010}{3.4.2}{}
+\reqUsado{RF-011}{3.4.2}{}
+\reqUsado{RF-012}{3.4.2}{}
+\reqUsado{RF-013}{3.4.2}{}
+\reqUsado{RF-014}{3.4.2}{}
+\reqUsado{RF-015}{3.2.3}{}
+\reqUsado{RF-016}{3.2.2}{}
+\reqUsado{RF-017}{3.2.2}{}
+\reqUsado{RF-018}{3.2.3}{}
+\reqUsado{RF-019}{3.4.2}{}
+\reqUsado{RF-020}{3.4.3}{}
+\reqUsado{RF-021}{3.2.3}{}
+\reqUsado{RF-022}{3.4.3}{}
+\reqUsado{RF-023}{3.2.3}{}
+\reqUsado{RF-024}{3.2.3}{}
+\reqUsado{RF-025}{3.3.1}{}
+\reqUsado{RF-026}{3.4.3}{}
+\reqUsado{RF-027}{3.2.2}{}
+\reqUsado{RF-028}{3.3.2}{}
+\reqUsado{RNF-001}{3.2.7}{}
+\reqUsado{RNF-002}{3.3.3}{}
+\reqUsado{RNF-003}{3.2.5}{}
+\reqUsado{RNF-004}{3.4.5}{}
+\reqUsado{RNF-005}{3.2.7}{}
+\reqUsado{RNF-006}{3.4.2}{}
+\reqUsado{RNF-007}{3.2.7}{}
+\reqUsado{RNF-008}{3.3.3}{}
+\reqUsado{RNF-009}{3.4.6}{}
+\reqUsado{RNF-010}{3.2.7}{}
+\reqUsado{RNF-011}{3.4.5}{}
+\reqUsado{RNF-012}{3.3.2}{}
+\reqUsado{RNF-013}{3.3.3}{}
+\reqUsado{RNF-014}{3.4.6}{}
+
+Este formulario detalla lo que el Subdocumento 3 resume. Trae el catálogo de los 42 requerimientos con
+los campos del Caso, numeral 17.1, p. 38 y, en la columna de trazabilidad, el contexto de la arquitectura
+lógica que atiende cada uno, su paquete de trabajo y los casos de prueba que lo verifican. Siguen el
+registro de reglas de negocio, el registro de supuestos con las veintiséis decisiones del
+Caso, numeral 16.1, pp. 34 a 36, los 29 criterios de aceptación con meta, mes y medición, y el registro de
+consultas y vacíos.
+
+## Glosario de códigos
+
+Cada código se usa con el mismo significado en toda la oferta. La Tabla 3.1 los define.
+
+**Tabla 3.1.** Códigos usados en el catálogo y su significado
+
+| Código | Significado |
+|---|---|
+| RF-nnn y RNF-nnn | Requerimiento funcional y no funcional de este catálogo |
+| Caso n.n | Capítulo o numeral de las Bases Técnicas del Caso, con su página en el Subdocumento 3 |
+| CA-nn | Criterio de aceptación nn del Caso, capítulo 18, pp. 41 a 43 |
+| R-nn | Restricción nn del Caso, capítulo 10, pp. 23 y 24 |
+| DP-nn | Decisión nn de las que el Caso deja abiertas en el Caso, numeral 16.1, pp. 34 a 36 |
+| RT-nn.nn | Requisito de las Bases Técnicas Transversales con su valor del Caso, capítulo 15, pp. 31 a 34 |
+| REQ-NEG-nn | Requerimiento preliminar del Anexo 2.A del Subdocumento 2 |
+| SUP-nn y SA-nn | Supuesto del entorno, Subdocumento 2, y supuesto del alcance, este formulario |
+| RN-nn | Regla de negocio de este formulario |
+| E1-nn y E2-nn | Capacidad de la Etapa 1 y de la Etapa 2, sección 3.2.2 y sección 3.2.3 |
+| EDT n.n | Paquete de trabajo de la EDT del Subdocumento 7 y del Formulario T-14 |
+| CP-tipo-nn | Caso de prueba del Formulario T-17 del Subdocumento 9 |
+| Prioridad 1, 2 y 3 | 1: su falla deja salir un camión que no debía o pierde una prueba. 2: sostiene un criterio o una restricción. 3: optimiza sobre datos existentes |
+
+El requerimiento preliminar REQ-NEG-08 del Subdocumento 2, temperatura de los 44 semirremolques
+refrigerados, no tiene requerimiento en este catálogo porque ningún criterio ni restricción del Caso lo
+exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado, fuera del alcance base.
+
+## Catálogo de requerimientos y matriz de trazabilidad
+
+### RF-001
+
+| Campo | Contenido |
+|---|---|
+| Descripción | Antes de autorizar un viaje, comprobar jornada disponible y habilitaciones del conductor, y aptitud y compatibilidad del tractocamión y del semirremolque para la carga. Todo incumplimiento legal o de seguridad bloquea la asignación |
+| Actor | Despachador de la torre |
+| Precondición | Orden de transporte con conductor, tractocamión y semirremolque propuestos |
+| Resultado | Veredicto en no más de 30 segundos: asigna, asigna con marca o bloquea, con registro auditable |
+| Prioridad | 1. Etapa 1, mes 16 |
+| Origen | Caso 4.3. CA-01. R-07. DP-06. RT-09.01. REQ-NEG-01 y 03 |
+| Cumplimiento | Sí |
+| Componente y trazabilidad | Planificación y tráfico, que consulta a Personas y cumplimiento y a Flota y activos. EDT 5.3. CP-UNIT-01 y CP-SYS-01 |
+| Sección | Sección 3.3.2 |
+
+### RF-002
+
+| Campo | Contenido |
+|---|---|
+| Descripción | Obtener, asociar al viaje y presentar la evidencia de jornada efectiva de los 454 conductores, propios y externos, con su fuente y su nivel en la cascada de evidencia |
+| Actor | Prevención de riesgos |
+| Precondición | Viaje programado o en curso con conductor identificado |
+| Resultado | Expediente de jornada por conductor con el nivel de evidencia de cada tramo |
+| Prioridad | 1. Etapa 1, mes 16 |
+| Origen | Caso 4.3. CA-02. R-02 y R-07. DP-01 y DP-13. REQ-NEG-01 |
+| Cumplimiento | Sí |
+| Componente y trazabilidad | Personas y cumplimiento. EDT 5.1. CP-UNIT-02 y CP-INT-02 |
+| Sección | Sección 3.3.2 |
+
+### RF-003
+
+| Campo | Contenido |
+|---|---|
+| Descripción | Al asignar un viaje a un conductor externo, disponer de evidencia identificada y sellada de su jornada previa relevante, incluida la realizada para otros clientes en la medida que el anexo de adhesión lo autorice |
+| Actor | Despachador y transportista subcontratado |
+| Precondición | Transportista con anexo de adhesión firmado o atestación del viaje |
+| Resultado | Veredicto de descanso disponible al asignar, con su nivel de evidencia |
+| Prioridad | 1. Etapa 1, mes 16 |
+| Origen | Caso 4.3. CA-03. R-02 y R-07. DP-01 |
+| Cumplimiento | Sí |
+| Componente y trazabilidad | Personas y cumplimiento. EDT 5.1 y EDT 9.2. CP-INT-03 y CP-SYS-05 |
+| Sección | Sección 3.3.2 |
+
+### RF-004
+
+| Campo | Contenido |
+|---|---|
+| Descripción | Conservar la evidencia de jornada con origen, sello de tiempo, integridad verificable e historial de correcciones como registros nuevos, sin sobrescribir el original |
+| Actor | Fiscalizador, aseguradora o cliente que impugna |
+| Precondición | Evento de jornada generado por el equipo a bordo, el tacógrafo o una atestación |
+| Resultado | Evidencia con cadena de integridad verificable por un tercero durante cinco años |
+| Prioridad | 1. Etapa 1, mes 16 |
+| Origen | Caso 19. CA-04. DP-13 y DP-24. RT-05.10 |
+| Cumplimiento | Sí |
+| Componente y trazabilidad | Personas y cumplimiento, sobre almacenamiento inmutable. EDT 5.1. CP-UNIT-06 y CP-SEC-08 |
+| Sección | Sección 3.3.2 |
+
+### RF-005
+
+| Campo | Contenido |
+|---|---|
+| Descripción | Consolidar las cerca de 6.000 vigencias de conductores y equipos en un registro único con titular, responsable de renovación, vencimiento, respaldo y efecto sobre la asignación, con alertas a 60, 30 y 7 días |
+| Actor | Prevención de riesgos y control de flota |
+| Precondición | Vigencias migradas desde las cuatro planillas con verificación documental de cada una |
+| Resultado | Registro único que bloquea la asignación con cualquier vigencia vencida |
+| Prioridad | 1. Etapa 1, mes 16 |
+| Origen | Caso 5. CA-05. DP-18. RT-05.15 y RT-16.21. REQ-NEG-02 |
+| Cumplimiento | Sí |
+| Componente y trazabilidad | Personas y cumplimiento, con las vigencias de equipos en Flota y activos. EDT 5.1 y EDT 7.1. CP-UNIT-01 y CP-SYS-08 |
+| Sección | Sección 3.2.2 |
+
+### RF-006
+
+| Campo | Contenido |
+|---|---|
+| Descripción | Antes de la salida de una carga peligrosa, verificar que la carga efectiva corresponda al documento emitido y vincular carga, vehículo, conductor, habilitaciones y lista de verificación firmada |
+| Actor | Conductor habilitado y prevención de riesgos |
+| Precondición | Viaje asignado a uno de los 18 camiones habilitados para sustancias peligrosas |
+| Resultado | Salida autorizada sólo con lista firmada y coincidencia entre carga y documento |
+| Prioridad | 1. Etapa 1, mes 16 |
+| Origen | Caso 7.1. CA-06. DP-19. RT-16.14. REQ-NEG-04 |
+| Cumplimiento | Sí |
+| Componente y trazabilidad | Operación de fletes. EDT 5.5. CP-UNIT-19 y CP-SYS-06 |
+| Sección | Sección 3.4.2 |
+
+### RF-007
+
+| Campo | Contenido |
+|---|---|
+| Descripción | Descargar la información de los tacógrafos digitales instalados, asociarla al conductor y al vehículo, conservar el archivo original con su integridad y permitir su consulta |
+| Actor | Técnico de terminal y prevención de riesgos |
+| Precondición | Camión con tacógrafo digital de paso por un terminal |
+| Resultado | Archivo original conservado y jornada incorporada al expediente con nivel 1 |
+| Prioridad | 2. Etapa 1, mes 16 |
+| Origen | Caso 4.3. CA-07. DP-13. REQ-NEG-23 |
+| Cumplimiento | Sí |
+| Componente y trazabilidad | Personas y cumplimiento. EDT 6.3. CP-HW-15 y CP-INT-21 |
+| Sección | Sección 3.2.2 |
+
+### RF-008
+
+| Campo | Contenido |
+|---|---|
+| Descripción | Entregar a la torre una vista única con posición, fuente, antigüedad y nivel de evidencia de los 374 camiones, señalando los que no reportan y por qué |
+| Actor | Operador de la torre de programación |
+| Precondición | Factibilidad verificada con cada plataforma de posicionamiento |
+| Resultado | Una pantalla con toda la flota, sin pantallas por proveedor |
+| Prioridad | 2. Etapa 1, mes 16 |
+| Origen | Caso 5. CA-08. DP-04 y DP-26. REQ-NEG-18 y 19 |
+| Cumplimiento | Sí |
+| Componente y trazabilidad | Telemetría y geocercas. EDT 5.4 y EDT 6.2. CP-SYS-16 y CP-UAT-01 |
+| Sección | Sección 3.3.1 |
+
+### RF-009
+
+| Campo | Contenido |
+|---|---|
+| Descripción | Cada equipo audIT registra a bordo posición, conducción, jornada, permanencias y documentos del viaje durante al menos 72 horas sin cobertura, sin pérdida, y los sincroniza al reconectar |
+| Actor | Equipo a bordo |
+| Precondición | Camión con equipo audIT en un tramo sin cobertura |
+| Resultado | Cero eventos perdidos y sincronización en no más de 20 minutos tras la reconexión |
+| Prioridad | 1. Etapa 1, mes 16 |
+| Origen | Caso 6. CA-09. R-04. DP-11. RT-03.10 y RT-03.13. REQ-NEG-20 |
+| Cumplimiento | Sí |
+| Componente y trazabilidad | Telemetría y geocercas, en el equipo a bordo. EDT 4.1. CP-HW-03 y CP-PERF-02 |
+| Sección | Sección 3.4.2 |
+
+### RF-010
+
+| Campo | Contenido |
+|---|---|
+| Descripción | Registrar automáticamente la llegada y la salida en los cerca de 1.400 puntos de carga y descarga, sin acción del conductor ni equipos instalados en ellos, con fuente y sello de tiempo |
+| Actor | Equipo a bordo y torre |
+| Precondición | Punto de cliente con geocerca virtual registrada |
+| Resultado | Hora de llegada y salida sellada en el momento del evento |
+| Prioridad | 2. Etapa 1, mes 16 |
+| Origen | Caso 4.7. CA-10. R-01 y R-09. DP-08. RT-09.01. REQ-NEG-05 |
+| Cumplimiento | Sí |
+| Componente y trazabilidad | Telemetría y geocercas. EDT 5.4. CP-UNIT-08 y CP-SYS-03 |
+| Sección | Sección 3.4.2 |
+
+### RF-011
+
+| Campo | Contenido |
+|---|---|
+| Descripción | Calcular el tiempo de espera de cada visita según el tiempo libre del contrato del cliente, regla RN-07, y dejar la evidencia consultable para el cobro |
+| Actor | Área comercial y cliente |
+| Precondición | Llegada y salida registradas por RF-010 |
+| Resultado | Cobro por espera respaldado por eventos sellados |
+| Prioridad | 2. Etapa 1, mes 16 |
+| Origen | Caso 4.7. CA-11. DP-08. REQ-NEG-06 |
+| Cumplimiento | Sí |
+| Componente y trazabilidad | Operación de fletes. EDT 5.5. CP-UNIT-12 y CP-SYS-03 |
+| Sección | Sección 3.4.2 |
+
+### RF-012
+
+| Campo | Contenido |
+|---|---|
+| Descripción | Obtener la conformidad de entrega con firma electrónica del destinatario identificado, sello de tiempo y ubicación, aun sin cobertura, y dejarla disponible el mismo día |
+| Actor | Conductor y destinatario |
+| Precondición | Entrega en el punto de descarga |
+| Resultado | Conformidad disponible para facturar el mismo día, o al reconectar si no hay señal |
+| Prioridad | 2. Etapa 1, mes 16 |
+| Origen | Caso 4.5. CA-12. DP-10. RT-16.14. REQ-NEG-10 |
+| Cumplimiento | Sí |
+| Componente y trazabilidad | Operación de fletes. EDT 5.5. CP-SYS-04 y CP-INT-20 |
+| Sección | Sección 3.4.2 |
+
+### RF-013
+
+| Campo | Contenido |
+|---|---|
+| Descripción | Generar desde la orden los datos del documento electrónico de transporte y entregarlos al sistema contable, que lo emite, sin redigitación |
+| Actor | Despachador y sistema contable |
+| Precondición | Viaje asignado con datos de carga |
+| Resultado | Documento emitido por el sistema contable en no más de 90 segundos |
+| Prioridad | 1. Etapa 1, mes 16 |
+| Origen | Caso 9.10. CA-13. R-08. DP-03 y DP-09. RT-09.01. REQ-NEG-09 |
+| Cumplimiento | Sí |
+| Componente y trazabilidad | Operación de fletes y capa anticorrupción. EDT 6.1. CP-INT-11 y CP-INT-12 |
+| Sección | Sección 3.4.2 |
+
+### RF-014
+
+| Campo | Contenido |
+|---|---|
+| Descripción | Disponer del documento electrónico de transporte emitido por el sistema contable antes del movimiento, también en un punto de carga sin cobertura, por emisión anticipada o por datos enviados por enlace satelital |
+| Actor | Conductor y sistema contable |
+| Precondición | Punto de carga sin cobertura identificado en la caracterización en terreno |
+| Resultado | Representación completa y conforme disponible en cabina antes del movimiento; sólo emite el sistema contable. Comprobación integral del límite de 90 segundos en CP-HW-11 y CP-PERF-05 durante A12, incluida solicitud, emisión, retorno, reensamblado y verificación (S4 y S8, R-28) |
+| Prioridad | 1. Etapa 1, mes 16 |
+| Origen | Caso 4.5. CA-14. R-04 y R-08. DP-09. REQ-NEG-09 |
+| Cumplimiento | Sí |
+| Componente y trazabilidad | Operación de fletes, con enlace satelital del equipo a bordo. EDT 6.1 y EDT 4.1. CP-UNIT-21, CP-HW-11 y CP-PERF-05 |
+| Sección | Sección 3.4.2 |
+
+### RF-015
+
+| Campo | Contenido |
+|---|---|
+| Descripción | Proponer el retorno de un camión que va a quedar vacío con carga que la propia compañía gestiona, respetando jornada, habilitaciones, compatibilidad, plazo y la regla RN-09 |
+| Actor | Planificador de la torre |
+| Precondición | Viaje en curso con descarga estimada y cargas pendientes compatibles |
+| Resultado | Retorno propuesto antes de la descarga, con kilómetros en vacío evitados |
+| Prioridad | 3. Etapa 2, mes 21 |
+| Origen | Caso 7.2. CA-15. DP-14. REQ-NEG-07 |
+| Cumplimiento | Sí |
+| Componente y trazabilidad | Planificación y tráfico. EDT 8.2. CP-UNIT-15 y CP-SYS-09 |
+| Sección | Sección 3.2.3 |
+
+### RF-016
+
+| Campo | Contenido |
+|---|---|
+| Descripción | Calcular el costo real por kilómetro y por viaje, por ruta y por contrato, y publicar el costo de cada viaje dentro de 24 horas de su cierre con los componentes disponibles y la indicación de los faltantes |
+| Actor | Gerencia de administración y finanzas |
+| Precondición | Viaje cerrado con kilómetros, tiempos y peajes registrados |
+| Resultado | Costo preliminar en 24 horas y definitivo al llegar el combustible |
+| Prioridad | 2. Etapa 1, mes 16, con estudio por ruta en el mes 6 |
+| Origen | Caso 4.1 y 7.3. CA-16, CA-17 y CA-19. DP-15 y DP-17. RT-05.29. REQ-NEG-11 y 12 |
+| Cumplimiento | Sí |
+| Componente y trazabilidad | Liquidación y costeo. EDT 5.6 y EDT 2.5. CP-INT-23 y CP-SYS-15 |
+| Sección | Sección 3.2.2 |
+
+### RF-017
+
+| Campo | Contenido |
+|---|---|
+| Descripción | Distinguir el costo interno de la flota propia del costo contractual de la flota subcontratada y compararlos a igualdad de componentes |
+| Actor | Gerencia de administración y finanzas |
+| Precondición | Costo de viaje calculado por RF-016 |
+| Resultado | Comparación entre flota propia y subcontratada por ruta |
+| Prioridad | 2. Etapa 1, mes 16 |
+| Origen | Caso 7.3. CA-16. R-02. DP-16. REQ-NEG-12 |
+| Cumplimiento | Sí |
+| Componente y trazabilidad | Liquidación y costeo. EDT 5.6. CP-INT-23 y CP-SYS-10 |
+| Sección | Sección 3.2.2 |
+
+### RF-018
+
+| Campo | Contenido |
+|---|---|
+| Descripción | Relacionar kilometraje, consumo, ruta, vehículo, conductor y condiciones para explicar la dispersión de rendimiento entre camiones del mismo modelo y ruta |
+| Actor | Control de flota |
+| Precondición | Doce meses de consumo y kilometraje por viaje |
+| Resultado | Modelo que explica la dispersión en población comparable |
+| Prioridad | 3. Etapa 2, mes 21 |
+| Origen | Caso 7.3. CA-18. DP-12 y DP-15 |
+| Cumplimiento | Sí |
+| Componente y trazabilidad | Liquidación y costeo, sobre el repositorio analítico. EDT 8.5. CP-INT-18 y CP-PERF-09 |
+| Sección | Sección 3.2.3 |
+
+### RF-019
+
+| Campo | Contenido |
+|---|---|
+| Descripción | Calcular la liquidación mensual de cada transportista desde viajes cerrados con evidencia, tarifas pactadas, espera recuperada y ajustes, según la regla RN-08, con la corrección manual como excepción registrada |
+| Actor | Área de liquidaciones |
+| Precondición | Cierre mensual con viajes conformes |
+| Resultado | Liquidación en un día hábil con menos del 1
+| Prioridad | 2. Etapa 1, mes 16 |
+| Origen | Caso 7.3. CA-20. DP-03 y DP-16. REQ-NEG-16 |
+| Cumplimiento | Sí |
+| Componente y trazabilidad | Liquidación y costeo. EDT 5.6. CP-INT-24 y CP-SYS-10 |
+| Sección | Sección 3.4.2 |
+
+### RF-020
+
+| Campo | Contenido |
+|---|---|
+| Descripción | Permitir a cada transportista consultar sus viajes, estados, evidencias y liquidación en curso, restringido a su propia operación |
+| Actor | Transportista subcontratado |
+| Precondición | Transportista autenticado con anexo firmado |
+| Resultado | Liquidación en curso visible en cualquier momento |
+| Prioridad | 2. Etapa 1, mes 16 |
+| Origen | Caso 9. CA-21 y CA-29. DP-02. RT-16.30. REQ-NEG-16 |
+| Cumplimiento | Sí |
+| Componente y trazabilidad | Liquidación y costeo, por el portal del transportista. EDT 5.7. CP-SEC-07 y CP-PERF-10 |
+| Sección | Sección 3.4.3 |
+
+### RF-021
+
+| Campo | Contenido |
+|---|---|
+| Descripción | Permitir al cliente autorizado ver la posición y el estado de su carga sólo durante el servicio y dentro de lo que cada dueño de camión autorizó |
+| Actor | Cliente |
+| Precondición | Consentimiento vigente del dueño del camión para ese cliente |
+| Resultado | Posición publicada al cliente en no más de 2 minutos con cobertura |
+| Prioridad | 2. Etapa 2, mes 21 |
+| Origen | Caso 13.1 y 13.2. CA-22. R-02 y R-03. DP-23. RT-09.01. REQ-NEG-25 |
+| Cumplimiento | Sí |
+| Componente y trazabilidad | Telemetría y geocercas, por el portal del cliente. EDT 8.1. CP-SYS-19 y CP-PERF-07 |
+| Sección | Sección 3.2.3 |
+
+### RF-022
+
+| Campo | Contenido |
+|---|---|
+| Descripción | Permitir al dueño del camión otorgar, consultar y revocar permisos por camión, dato, destinatario y período, con bitácora de cada acceso a localización |
+| Actor | Transportista subcontratado |
+| Precondición | Transportista autenticado |
+| Resultado | Revocación efectiva en no más de cinco minutos, con registro |
+| Prioridad | 1. Etapa 1, mes 16 |
+| Origen | Caso 18. CA-23 y CA-29. DP-23. RT-16.09 y RT-16.30. REQ-NEG-17 |
+| Cumplimiento | Sí |
+| Componente y trazabilidad | Personas y cumplimiento, por el portal del transportista. EDT 5.7. CP-SEC-04 y CP-SEC-05 |
+| Sección | Sección 3.4.3 |
+
+### RF-023
+
+| Campo | Contenido |
+|---|---|
+| Descripción | Calcular las emisiones por tonelada-kilómetro con metodología declarada y verificable, incluidos los camiones subcontratados, con consolidación mensual |
+| Actor | Gerencia general y cliente |
+| Precondición | Método fijado en la Etapa 1 y consumo o rendimiento por viaje |
+| Resultado | Reporte mensual de emisiones por cliente y contrato |
+| Prioridad | 2. Etapa 2, mes 21, con método en la Etapa 1 |
+| Origen | Caso 13.2. CA-24. DP-22. RT-05.29. REQ-NEG-24 |
+| Cumplimiento | Sí |
+| Componente y trazabilidad | Liquidación y costeo, sobre el repositorio analítico. EDT 8.3. CP-UNIT-09 y CP-SYS-17 |
+| Sección | Sección 3.2.3 |
+
+### RF-024
+
+| Campo | Contenido |
+|---|---|
+| Descripción | Permitir que un taller externo registre su intervención, incluso sin cobertura, con taller, activo, fecha, kilometraje, trabajo y repuestos |
+| Actor | Taller externo |
+| Precondición | Taller registrado como usuario externo |
+| Resultado | Intervención incorporada a la hoja de vida del equipo |
+| Prioridad | 2. Etapa 2, mes 21 |
+| Origen | Caso 11. CA-25. R-04. DP-21. RT-12.12. REQ-NEG-15 |
+| Cumplimiento | Sí |
+| Componente y trazabilidad | Flota y activos. EDT 8.4. CP-INT-17 y CP-UAT-02 |
+| Sección | Sección 3.2.3 |
+
+### RF-025
+
+| Campo | Contenido |
+|---|---|
+| Descripción | Gatillar el mantenimiento preventivo con el kilometraje real del equipo a bordo o de la telemetría de fábrica, indicando cuando el dato es estimado |
+| Actor | Jefatura de taller |
+| Precondición | Kilometraje real disponible por viaje |
+| Resultado | Orden preventiva generada por kilometraje real hacia el sistema de taller |
+| Prioridad | 2. Etapa 2, mes 21 |
+| Origen | Caso 5. CA-26. R-06. DP-12 y DP-21. REQ-NEG-13 y 14 |
+| Cumplimiento | Sí |
+| Componente y trazabilidad | Flota y activos. EDT 8.4 y EDT 6.4. CP-UNIT-14 y CP-HW-04 |
+| Sección | Sección 3.3.1 |
+
+### RF-026
+
+| Campo | Contenido |
+|---|---|
+| Descripción | Registrar invitación, anexo, modalidad, camiones, consentimientos, capacidades habilitadas y fechas. Adhesión firmada: una vez por RUT de los 148 transportistas iniciales, anexo firmado por mandante y representante autorizado, vigente, no revocado y registrado al corte. Contar modalidades completa y de datos; instalación, activación y consentimientos de conductores se controlan por separado |
+| Actor | Coordinación de adhesión |
+| Precondición | Campaña de adhesión iniciada |
+| Resultado | Ocho indicadores mensuales; al cierre de M9, 31 de octubre de 2027 bajo SA-01, al menos 60 firmados (40
+| Prioridad | 2. Etapa 1, mes 16 |
+| Origen | Caso 19. CA-27. R-02 y R-03. DP-02 y DP-05. REQ-NEG-19 |
+| Cumplimiento | Sí |
+| Componente y trazabilidad | Flota y activos. EDT 9.2 y EDT 5.2. CP-SYS-05 y CP-UAT-09 |
+| Sección | Sección 3.4.3 |
+
+### RF-027
+
+| Campo | Contenido |
+|---|---|
+| Descripción | Calcular a bordo la alerta de jornada próxima a agotarse según jornada restante, posición, ruta y tiempo hasta el lugar seguro de detención más cercano |
+| Actor | Conductor y torre |
+| Precondición | Catálogo de lugares seguros de detención levantado en la Etapa 1 |
+| Resultado | Toda alerta indica un lugar alcanzable antes de agotar la jornada |
+| Prioridad | 2. Etapa 1, mes 16 |
+| Origen | Caso 8. CA-28. R-01 y R-04. DP-07. RT-09.01 y RT-16.21. REQ-NEG-22 |
+| Cumplimiento | Sí |
+| Componente y trazabilidad | Personas y cumplimiento, calculado en el equipo a bordo. EDT 4.1 y EDT 5.1. CP-UNIT-18 y CP-HW-06 |
+| Sección | Sección 3.2.2 |
+
+### RF-028
+
+| Campo | Contenido |
+|---|---|
+| Descripción | Durante el período mixto, distinguir las modalidades completa, de datos y sin adhesión de S3. Mostrar por separado modalidad, fuente, nivel de evidencia y veredicto. La completa aporta nivel 2; la de datos combina reposo del camión de nivel 4 y atestación firmada de nivel 5, con asignación con marca. Sin adhesión se admite validación documental, pero sin atestación firmada el viaje no se asigna; una atestación válida permite asignar con marca conforme a RN-03. No presentar niveles menores como equivalentes |
+| Actor | Despachador de la torre |
+| Precondición | Flota con camiones en distintas modalidades de adhesión |
+| Resultado | Despacho con modalidad, evidencia y veredicto visibles: asigna, asigna con marca o bloquea; todas las modalidades conservan los bloqueos legales |
+| Prioridad | 2. Etapa 1, mes 16 |
+| Origen | Caso 13.3. CA-01, CA-02, CA-08 y CA-27. R-02 y R-03. DP-26 |
+| Cumplimiento | Sí |
+| Componente y trazabilidad | Planificación y tráfico. EDT 5.3. CP-SYS-05 y CP-UAT-09 |
+| Sección | Sección 3.3.2 |
+
+### RNF-001
+
+| Campo | Contenido |
+|---|---|
+| Descripción | Ninguna función exige interacción del conductor con un dispositivo mientras el vehículo se mueve. Toda captura y alerta en marcha es automática |
+| Categoría | Usabilidad y seguridad de las personas |
+| Umbral | Cero interacciones exigidas con el vehículo en movimiento |
+| Verificación | Prueba en ruta con conductores reales y revisión de cada pantalla |
+| Exigible | Compañía y terceros |
+| Prioridad | 1. Etapa 1, mes 16 |
+| Origen | R-01. CA-10 y CA-28. RT-13.08. REQ-NEG-21 |
+| Cumplimiento | Sí |
+| Componente y trazabilidad | Telemetría y geocercas, equipo a bordo. EDT 4.1. CP-UNIT-11 y CP-HW-06 |
+| Sección | Sección 3.2.7 |
+
+### RNF-002
+
+| Campo | Contenido |
+|---|---|
+| Descripción | La operación esencial a bordo no depende de la cobertura y conserva integridad, orden y ausencia de duplicados al sincronizar |
+| Categoría | Disponibilidad |
+| Umbral | 72 horas sin cobertura con cero eventos perdidos y cero duplicados |
+| Verificación | Prueba de 72 horas en banco y en ruta con reconexión simultánea |
+| Exigible | Compañía y terceros con equipo audIT |
+| Prioridad | 1. Etapa 1, mes 16 |
+| Origen | R-04. CA-09. DP-11. RT-03.10. REQ-NEG-20 |
+| Cumplimiento | Sí |
+| Componente y trazabilidad | Telemetría y geocercas, equipo a bordo. EDT 4.1. CP-UNIT-23 y CP-HW-03 |
+| Sección | Sección 3.3.3 |
+
+### RNF-003
+
+| Campo | Contenido |
+|---|---|
+| Descripción | Ningún equipo de un tercero se interviene, reconfigura o reemplaza sin su acuerdo expreso. Lo no autorizado queda deshabilitado y visible como tal |
+| Categoría | Cumplimiento e interoperabilidad |
+| Umbral | Cero cambios sobre equipos de terceros sin anexo firmado |
+| Verificación | Auditoría de la ingesta de plataformas y del registro de adhesión |
+| Exigible | Compañía y contratista |
+| Prioridad | 1. Etapa 1, mes 16 |
+| Origen | R-03. DP-02 y DP-04. REQ-NEG-18 |
+| Cumplimiento | Sí |
+| Componente y trazabilidad | Telemetría y geocercas, ingesta de plataformas. EDT 6.2. CP-INT-07 y CP-INT-08 |
+| Sección | Sección 3.2.5 |
+
+### RNF-004
+
+| Campo | Contenido |
+|---|---|
+| Descripción | Toda intervención física a bordo ocurre durante el paso normal del camión por un terminal, sin inmovilizarlo más allá de ese tiempo |
+| Categoría | Operabilidad |
+| Umbral | Cero horas de inmovilización adicional a la estadía normal en terminal |
+| Verificación | Registro de portería contra registro de montaje por camión |
+| Exigible | Contratista |
+| Prioridad | 2. Etapa 1, mes 16 |
+| Origen | R-05, R-10 y R-11. DP-25 |
+| Cumplimiento | Sí |
+| Componente y trazabilidad | Flota y activos. EDT 4.2. CP-UAT-02 y CP-HW-08 |
+| Sección | Sección 3.4.5 |
+
+### RNF-005
+
+| Campo | Contenido |
+|---|---|
+| Descripción | La lectura del vehículo es de solo lectura, sin contacto con el cableado y sin afectar garantía ni sistemas de seguridad |
+| Categoría | Seguridad del vehículo |
+| Umbral | Cero mensajes transmitidos al bus del vehículo |
+| Verificación | Análisis del bus durante la prueba de montaje y autorización del fabricante cuando la pida |
+| Exigible | Contratista |
+| Prioridad | 2. Etapa 1, mes 16 |
+| Origen | R-06. DP-12. REQ-NEG-13 |
+| Cumplimiento | Sí |
+| Componente y trazabilidad | Flota y activos, equipo a bordo. EDT 4.1 y EDT 6.3. CP-UNIT-16 y CP-HW-04 |
+| Sección | Sección 3.2.7 |
+
+### RNF-006
+
+| Campo | Contenido |
+|---|---|
+| Descripción | El sistema contable sigue como único emisor tributario. La integración es idempotente y nunca produce dos documentos para un viaje |
+| Categoría | Cumplimiento e integridad |
+| Umbral | Cero folios duplicados ante reintentos o reconexiones |
+| Verificación | Prueba de reintentos y conciliación diaria de folios contra viajes |
+| Exigible | Compañía |
+| Prioridad | 1. Etapa 1, mes 16 |
+| Origen | R-08. DP-03 y DP-09 |
+| Cumplimiento | Sí |
+| Componente y trazabilidad | Operación de fletes y capa anticorrupción. EDT 6.1. CP-INT-12 y CP-INT-11 |
+| Sección | Sección 3.4.2 |
+
+### RNF-007
+
+| Campo | Contenido |
+|---|---|
+| Descripción | La solución no instala equipamiento ni impone procedimientos en los puntos de carga y descarga de terceros |
+| Categoría | Cumplimiento |
+| Umbral | Cero equipos instalados en instalaciones de clientes |
+| Verificación | Revisión del inventario del Formulario T-11 y del procedimiento de terreno |
+| Exigible | Compañía y clientes |
+| Prioridad | 2. Etapa 1, mes 16 |
+| Origen | R-09. CA-10 y CA-12 |
+| Cumplimiento | Sí |
+| Componente y trazabilidad | Telemetría y geocercas. EDT 5.4. CP-UNIT-08 y CP-SYS-03 |
+| Sección | Sección 3.2.7 |
+
+### RNF-008
+
+| Campo | Contenido |
+|---|---|
+| Descripción | La solución absorbe cierres del paso Los Libertadores de hasta 12 días con camiones detenidos, conservando la evidencia y sincronizando al reanudar |
+| Categoría | Continuidad |
+| Umbral | 288 horas de registro a bordo sin pérdida |
+| Verificación | Prueba de capacidad del almacenamiento a bordo con carga de 288 horas |
+| Exigible | Compañía y terceros con equipo audIT |
+| Prioridad | 2. Etapa 1, mes 16 |
+| Origen | R-12. DP-20. RT-10.05 |
+| Cumplimiento | Sí |
+| Componente y trazabilidad | Telemetría y geocercas, equipo a bordo y nodo de San Bernardo. EDT 4.1 y EDT 3.4. CP-HW-03 y CP-PERF-02 |
+| Sección | Sección 3.3.3 |
+
+### RNF-009
+
+| Campo | Contenido |
+|---|---|
+| Descripción | La solución es administrable por un área de tecnología de nueve personas. Toda especialidad que el mandante no tiene se entrega como servicio |
+| Categoría | Operabilidad |
+| Umbral | Funciones de especialista dedicado cubiertas al 100
+| Verificación | Matriz de responsabilidades revisada en la transferencia |
+| Exigible | Compañía y contratista |
+| Prioridad | 2. Etapa 1, mes 16 |
+| Origen | R-13. RT-21.06 |
+| Cumplimiento | Sí |
+| Componente y trazabilidad | Plataforma transversal, servicio de operación. EDT 13.1 y EDT 11.4. CP-SYS-16 y CP-UAT-01 |
+| Sección | Sección 3.4.6 |
+
+### RNF-010
+
+| Campo | Contenido |
+|---|---|
+| Descripción | El costo de operación de 36 meses se declara por componente: nube, conectividad a bordo, soporte, reposición de equipos y retiro |
+| Categoría | Operabilidad y costo |
+| Umbral | 100
+| Verificación | Conciliación entre el Formulario T-11 y la Oferta Económica |
+| Exigible | Contratista |
+| Prioridad | 2. Etapa 1, mes 16 |
+| Origen | R-14. DP-05 y DP-11 |
+| Cumplimiento | Sí |
+| Componente y trazabilidad | Plataforma transversal. EDT 1.1. CP-PERF-08 y CP-SYS-01 |
+| Sección | Sección 3.2.7 |
+
+### RNF-011
+
+| Campo | Contenido |
+|---|---|
+| Descripción | Los despliegues nunca detienen la flota y permiten la convivencia de camiones equipados, homologados y no adheridos |
+| Categoría | Disponibilidad y transición |
+| Umbral | Cero detenciones de flota por despliegue |
+| Verificación | Registro de cada liberación con su efecto en la operación |
+| Exigible | Compañía y terceros |
+| Prioridad | 2. Etapa 1, mes 16 |
+| Origen | R-05, R-10 y R-11. DP-25 y DP-26 |
+| Cumplimiento | Sí |
+| Componente y trazabilidad | Plataforma transversal. EDT 11.2. CP-INT-05 y CP-SYS-05 |
+| Sección | Sección 3.4.5 |
+
+### RNF-012
+
+| Campo | Contenido |
+|---|---|
+| Descripción | Los registros probatorios muestran autor, origen, fecha y valores anteriores, y nunca sobrescriben el historial |
+| Categoría | Integridad y no repudio |
+| Umbral | Cadena de integridad verificable en el 100
+| Verificación | Prueba de manipulación simulada y verificación por un tercero |
+| Exigible | Compañía |
+| Prioridad | 1. Etapa 1, mes 16 |
+| Origen | CA-04. DP-24 |
+| Cumplimiento | Sí |
+| Componente y trazabilidad | Personas y cumplimiento, almacenamiento inmutable. EDT 5.1. CP-SEC-08 y CP-UNIT-07 |
+| Sección | Sección 3.3.2 |
+
+### RNF-013
+
+| Campo | Contenido |
+|---|---|
+| Descripción | Los datos personales y comerciales se tratan con minimización, acceso por rol y atributo, cifrado en tránsito y en reposo, y cifrado de campo para conductores externos, localización y tarifas |
+| Categoría | Seguridad y privacidad |
+| Umbral | Cifrado de campo en el 100
+| Verificación | Revisión de esquema y prueba de acceso no autorizado |
+| Exigible | Compañía y terceros |
+| Prioridad | 1. Etapa 1, mes 16 |
+| Origen | CA-23 y CA-29. DP-23 y DP-24. RT-11.10. REQ-NEG-17 |
+| Cumplimiento | Sí |
+| Componente y trazabilidad | Personas y cumplimiento, y capa de seguridad. EDT 3.2. CP-SEC-04 y CP-SEC-05 |
+| Sección | Sección 3.3.3 |
+
+### RNF-014
+
+| Campo | Contenido |
+|---|---|
+| Descripción | La conservación y eliminación respetan los plazos de cada dominio. La revocación de un consentimiento detiene la captura futura y no elimina evidencia cuya conservación es obligatoria |
+| Categoría | Cumplimiento |
+| Umbral | Plazos de RT-05.10 del Caso: jornada 5 años, documento 6, siniestros 10, posición 2 en línea |
+| Verificación | Prueba de ciclo de vida de datos y de borrado seguro |
+| Exigible | Compañía |
+| Prioridad | 2. Etapa 1, mes 16 |
+| Origen | CA-04 y CA-23. DP-13, DP-23 y DP-24. RT-05.10 |
+| Cumplimiento | Sí |
+| Componente y trazabilidad | Plataforma transversal, capa de datos. EDT 7.3. CP-SEC-08 y CP-INT-25 |
+| Sección | Sección 3.4.6 |
+
+La matriz cumple las cuatro reglas de control del Subdocumento 3. Los 42 requerimientos tienen origen,
+contexto, paquete y prueba. Los 29 criterios de aceptación tienen al menos un requerimiento, y los
+veintiséis del numeral 16.1 aparecen en algún origen. Los seis contextos y la plataforma transversal
+tienen requerimientos que los justifican.
+
+## Registro de reglas de negocio
+
+La Tabla 3.3 enuncia las doce reglas que el Subdocumento 3 resume. Cada una indica quién puede
+cambiarla. Un cambio de regla sigue el procedimiento de control de cambios del Subdocumento 6 y queda versionado.
+
+**Tabla 3.2.** Reglas de negocio de la solución
+
+| ID | Enunciado | Cambia |
+|---|---|---|
+| RN-01 | Jornada del conductor de carga interurbana: no más de cinco horas de conducción continua seguidas de un descanso de al menos dos horas, ocho horas de descanso ininterrumpido en cada veinticuatro y 180 horas mensuales como tope, según el Artículo 25 bis del Código del Trabajo | Prevención de riesgos |
+| RN-02 | Conducción es tiempo con el camión en movimiento fuera de una geocerca de punto de cliente. Espera es tiempo detenido dentro de ella. Los umbrales de velocidad y duración se calibran en la marcha blanca contra el tacógrafo | Prevención de riesgos |
+| RN-03 | Con evidencia de nivel 1 a 4 se asigna según la cascada de S3. En la modalidad de datos, el reposo del camión de nivel 4 se complementa con atestación firmada de nivel 5: se asigna con marca y responsabilidad registrada del transportista. La validación documental sin adhesión requiere esa atestación; sin ella no se asigna. Con nivel 5 se asigna con marca; sin fuente se bloquea, con excepción sólo según RN-04. Ninguna evidencia levanta un bloqueo legal | Comité Ejecutivo |
+| RN-04 | Ninguna causa legal admite excepción. Si el bloqueo se debe a una fuente que no responde, la excepción la autorizan el jefe de turno de la torre y prevención de riesgos, vale para un viaje, registra el motivo y se revisa cada mes | Comité Ejecutivo |
+| RN-05 | El equipo es apto si su tipo corresponde a la carga, sus revisiones y permisos están vigentes, su mantenimiento no está vencido y, para carga peligrosa, cumple el DS 298 | Control de flota |
+| RN-06 | Prelación al asignar: primero el veredicto favorable, luego la ventana comprometida con el cliente, luego la menor distancia en vacío. Los viajes que salen de puntos sin cobertura y sin datos de carga previos se asignan a camiones con equipo audIT | Operaciones |
+| RN-07 | Espera es el tiempo entre la llegada y la salida por geocerca menos el tiempo libre pactado en el contrato del cliente, parametrizado por contrato | Comercial |
+| RN-08 | La liquidación de un transportista suma los viajes cerrados con conformidad por la tarifa pactada, más la parte pactada de la espera recuperada, menos los descuentos del contrato. Toda corrección posterior es un registro nuevo con motivo | Finanzas |
+| RN-09 | El retorno se ofrece al camión que quedará vacío más cerca de una carga compatible de la propia compañía, con preferencia para la flota adherida dentro del contrato vigente | Operaciones |
+| RN-10 | El equipo audIT transmite posición sólo dentro de la ventana del viaje asignado por la compañía. La revocación detiene la captura futura en no más de cinco minutos y no elimina evidencia de conservación obligatoria | Comité Ejecutivo |
+| RN-11 | Ningún viaje inicia el movimiento sin documento de transporte emitido por el sistema contable y su representación completa y conforme disponible en cabina | Finanzas |
+| RN-12 | Toda vigencia avisa a 60, 30 y 7 días al titular y a quien debe actuar. Vencida, bloquea la asignación | Prevención de riesgos |
+
+Las reglas RN-03, RN-04 y RN-10 sólo las cambia el Comité Ejecutivo porque alteran el equilibrio entre
+seguridad, operación y privacidad que el Caso pide arbitrar. Las demás las cambia el área dueña del
+proceso.
+
+## Registro de supuestos
+
+La Tabla 3.4 declara los supuestos del alcance con su fundamento. Su efecto si fallan y su
+validación están en la sección 3.2.6 del Subdocumento 3.
+
+**Tabla 3.3.** Supuestos del alcance y su fundamento
+
+| ID | Supuesto | Fundamento |
+|---|---|---|
+| SA-01 | El mes 1 del contrato es febrero de 2027 | Adjudicación el 1 de diciembre de 2026 y firma en enero. Único inicio que deja los meses 16 y 21 fuera de diciembre a abril sin estabilizar en el congelamiento |
+| SA-02 | Paso por terminal cada 6 días y 22 % de terceros bajo una vez al mes | Restricción 5 del Caso |
+| SA-03 | Dos de las tres plataformas entregan datos por interfaz | Capítulo 5 del Caso: dos con acceso de consulta y una sin exportación |
+| SA-04 | El sistema contable recibe datos por interfaz | Hoy recibe por redigitación, lo que muestra que el dato le llega |
+| SA-05 | La renegociación de 2027 es posterior a julio | El Caso no da la fecha. Se confirma con finanzas en el mes 1 |
+| SA-06 | La autoridad admite el registro electrónico de jornada | Resolución Exenta 1213 de 2009 de la Dirección del Trabajo y consulta C-10 |
+| SA-07 | El mandante firma los anexos de adhesión | El contrato de transporte es entre el mandante y el transportista |
+| SA-08 | Los terceros con equipo conservan su servicio de posicionamiento | Riesgo de apagado de redes 2G y 3G tratado en el Subdocumento 8 |
+
+La Tabla 3.5 resuelve las veintiséis decisiones del Caso, numeral 16.1, pp. 34 a 36, que el
+Caso, numeral 17.1, p. 38 obliga a incluir en este registro.
+
+**Tabla 3.4.** Decisiones del numeral 16.1 tomadas por audIT
+
+| DP | Decisión tomada | Dónde se sostiene |
+|---|---|---|
+| 01 | La jornada del conductor externo la acredita el dueño del camión con la cascada de seis niveles y la regla RN-03 | RF-002, RF-003 y sección 3.3.2 |
+| 02 | Al transportista se le ofrece liquidación visible, cálculo desde la evidencia, parte de la espera recuperada y preferencia en retornos. Quien no adhiere opera sin veredicto instrumental | RF-026 y sección 3.4.3 |
+| 03 | El sistema de 2013 se sustituye por funciones y se retira en el mes 21, con consulta hasta el 24 | sección 3.2.4 |
+| 04 | Dos plataformas se integran por interfaz. Los camiones de la que no exporta se tratan como sin equipo y se les ofrece la modalidad completa | RF-008 y RNF-003 |
+| 05 | El equipo lo compra el mandante, queda en comodato y audIT lo instala y retira en terminal sin costo para el transportista | RF-026 e innovación 4 |
+| 06 | Excepción al bloqueo según la regla RN-04 | RF-001 |
+| 07 | La alerta anticipa el tiempo hasta el lugar seguro más cercano más un margen fijado en la Etapa 1 | RF-027 |
+| 08 | Llegada y salida por geocerca virtual evaluada a bordo | RF-010 y RNF-007 |
+| 09 | Documento sin cobertura por emisión anticipada o por datos enviados por satélite. El sistema contable siempre emite | RF-014 y sección 3.4.2 |
+| 10 | Conformidad con firma electrónica del destinatario en la aplicación, disponible el mismo día | RF-012 |
+| 11 | Frecuencia de muestreo y consumo de datos derivados en el Subdocumento 4 | sección 4.2.2 |
+| 12 | Telemetría de fábrica de los 61 tractocamiones por lectura sin contacto, sujeta a la autorización de cada fabricante | RNF-005 y RF-025 |
+| 13 | audIT descarga el tacógrafo en el paso por terminal, con frecuencia fijada en la Etapa 1, y conserva el original | RF-007 |
+| 14 | Retorno según la regla RN-09 | RF-015 |
+| 15 | Costo preliminar en 24 horas con faltantes marcados y definitivo al llegar el combustible | RF-016 |
+| 16 | Costo del camión subcontratado como costo contractual, comparado a igualdad de componentes | RF-017 |
+| 17 | Estudio de costo por ruta y contrato en el mes 6, antes de la renegociación de 2027 | RF-016 y sección 3.2.1 |
+| 18 | El transportista es responsable de renovar las vigencias de sus conductores y camiones por el anexo. La compañía avisa y bloquea | RF-005 y RN-12 |
+| 19 | Lista de verificación de carga peligrosa firmada en el punto de carga contra el documento emitido | RF-006 |
+| 20 | Cierre del paso: registro a bordo de 288 horas, conductor en descanso registrado y reprogramación por la torre | RNF-008 |
+| 21 | El taller externo registra su intervención en la aplicación, perfil terminal y taller | RF-024 |
+| 22 | Emisiones de terceros con el rendimiento del tramo cuando no hay dato de combustible, declarado como estimación | RF-023 |
+| 23 | Al cliente sólo se muestra lo que el dueño del camión autorizó, durante el servicio | RF-021 y RN-10 |
+| 24 | Integridad por cadena de sellos y almacenamiento inmutable. Corrección como registro nuevo | RF-004 y RNF-012 |
+| 25 | Flota propia en los meses 6 a 9, terceros desde el mes 7 con adhesión y pausa en los meses 11 a 15 | sección 3.4.5 |
+| 26 | Una sola forma de despachar con el nivel de evidencia de cada camión visible | RF-028 |
+
+Ninguna de las veintiséis queda abierta. Las decisiones 11 y 12 dependen de lo que midan la
+caracterización en terreno y la factibilidad con los fabricantes, y su resultado ajusta parámetros, no
+la decisión.
+
+## Criterios de aceptación
+
+La Tabla 3.6 compromete los 29 criterios del Caso, capítulo 18, pp. 41 a 43 con su meta, el mes
+del contrato en que se alcanza y la forma de medirlo.
+
+**Tabla 3.5.** Criterios de aceptación con meta, mes y medición
+
+| CA | Meta comprometida | Mes | Medición |
+|---|---|---|---|
+| 1 | Cero salidas con jornada, habilitación o equipo no apto | 16 | Auditoría mensual del 100 % de las asignaciones |
+| 2 | 100 % de los viajes con veredicto de jornada y su nivel de evidencia | 16 | Reporte de viajes por nivel |
+| 3 | 100 % de las asignaciones a conductores externos con veredicto disponible | 16 | Registro de asignaciones |
+| 4 | 100 % de los registros probatorios con cadena de integridad verificable | 15 | Prueba de manipulación en marcha blanca |
+| 5 | 100 % de las vigencias migradas con verificación documental y con efecto sobre la asignación | 12 | Acta de conciliación de la migración |
+| 6 | Cero salidas de carga peligrosa sin lista firmada y coincidente | 16 | Auditoría de los viajes de los 18 camiones |
+| 7 | 100 % de los tacógrafos descargados en la frecuencia fijada | 12 | Frecuencia fijada en el mes 12, medida desde el 16 |
+| 8 | 100 % de la flota en una vista, con los camiones sin reporte señalados | 16 | Reporte diario de la vista única |
+| 9 | Cero eventos perdidos en 72 horas sin cobertura | 15 | Prueba de 72 horas en ruta |
+| 10 | 100 % de las visitas de camiones con equipo audIT registradas por geocerca | 12 | Precisión de geocerca fijada en el mes 12 |
+| 11 | Objeciones bajo el 20 % de los cobros por espera respaldados | 21 | Promedio móvil de tres meses |
+| 12 | 100 % de las conformidades disponibles el mismo día o al reconectar | 16 | Conciliación diaria |
+| 13 | 100 % de los documentos emitidos desde la orden, sin redigitación | 16 | Conciliación de folios contra viajes |
+| 14 | 100 % de las salidas sin cobertura con representación completa y conforme en cabina antes del movimiento | 16 | Registro de disponibilidad y conformidad de la representación contra primera posición; ensayo integral del límite de 90 segundos en CP-HW-11 y CP-PERF-05 durante A12 |
+| 15 | Kilómetros en vacío bajo el 18 % en población comparable | 33 | Medición trimestral desde el mes 21 |
+| 16 | 95 % de los viajes con costo trazable por componente | 16 | Reporte mensual de costo |
+| 17 | 100 % de los viajes con costo preliminar en 24 horas | 16 | Registro de cierre contra publicación |
+| 18 | Modelo que explica el 80 % de la variación en población comparable | 21 | Validación del modelo con datos de doce meses |
+| 19 | Estudio de costo por ruta y contrato antes de la renegociación | 6 | Entrega del estudio a finanzas |
+| 20 | Liquidación en un día hábil con menos del 1 % corregido | 16 | Registro de correcciones por cierre |
+| 21 | 100 % de los transportistas adheridos con acceso a su liquidación en curso | 16 | Registro de acceso al portal |
+| 22 | Posición al cliente en 2 minutos dentro de lo autorizado | 21 | Medición de latencia y registro de autorizaciones |
+| 23 | Revocación efectiva en no más de cinco minutos | 16 | Prueba de revocación y bitácora |
+| 24 | Método declarado en el mes 16 y cálculo mensual verificable | 21 | Revisión del método por un tercero antes de 2029 |
+| 25 | 100 % de las intervenciones de talleres externos informadas en la hoja de vida | 21 | Conciliación con facturas de talleres |
+| 26 | 100 % de los preventivos de la flota propia por kilometraje real | 21 | Registro de órdenes del sistema de taller |
+| 27 | 104 transportistas adheridos en el mes 16 y 134 en el 21 | 16 y 21 | Ocho indicadores mensuales de adhesión |
+| 28 | 100 % de las alertas con lugar seguro alcanzable antes de agotar la jornada | 12 | Anticipación fijada en el mes 12 con el catálogo de lugares |
+| 29 | El dueño del camión ve sus camiones, viajes y liquidación y decide qué comparte | 16 | Prueba de aceptación con transportistas |
+
+Los criterios 7, 10 y 28 fijan su parámetro en el mes 12 con datos medidos en la Etapa 1 y se cumplen
+desde el mes 16. El criterio 19 es el único que se alcanza antes de la producción, porque la
+renegociación de 2027 no espera al Artículo 17.
+
+## Registro de consultas y vacíos
+
+La Tabla 3.7 recoge las consultas formuladas en el período del FEP01, Artículo 43, p. 27 y los vacíos que
+audIT encontró después y que el Caso, numeral 16.1, p. 36 invita a declarar.
+
+**Tabla 3.6.** Consultas al mandante y vacíos detectados
+
+| ID | Materia | Qué desbloquea |
+|---|---|---|
+| C-01 | RT-08.10 pide costo unitario de cada equipo y el Artículo 50.2 prohíbe precios en la oferta técnica | Formato del Formulario T-11 |
+| C-02 | Alcance de las 72 horas sin cobertura frente a la restricción 3 | Población a la que se exige |
+| C-03 | Tipología a la que debe llevarse la sala de San Bernardo | Dimensionamiento de la sala |
+| C-04 | Instalaciones aptas para un sitio secundario | Emplazamiento del secundario |
+| C-05 | Ampliación de la sala más allá de 26 m² | Dimensionamiento de la sala |
+| C-06 | Mediciones previas de cobertura móvil | Plazo de la caracterización |
+| C-07 | Proveedor de cada uno de los 226 camiones de terceros | Estándar de homologación |
+| C-08 | Camiones de terceros con tacógrafo digital | Alcance de la descarga |
+| C-09 | Camiones de carga peligrosa propios y de terceros | Prioridad del enlace satelital |
+| C-10 | Autorización para sustituir el registro en papel por uno electrónico | Hito regulatorio de la jornada |
+| C-11 | Códigos del capítulo 15 del Caso que en las transversales tratan otra materia | Trazabilidad de toda la oferta |
+| V-01 | Los meses 16 y 21 sólo caben fuera de diciembre a abril con inicio en febrero o marzo, y la marcha blanca de la Etapa 1 cae siempre en la temporada de fruta | Supuesto SA-01 y plan de marcha blanca |
+| V-02 | La renegociación de 2027 ocurre antes de cualquier producción posible según el Artículo 17 | Estudio de costo del mes 6 |
+
+Los vacíos V-01 y V-02 no están en la lista del numeral 16.1 y condicionan el plan. Ambos se resuelven
+en esta oferta sin alterar el cronograma obligatorio.
+
