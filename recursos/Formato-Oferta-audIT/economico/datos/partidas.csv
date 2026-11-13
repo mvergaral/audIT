@@ -69,3 +69,15 @@ costo-fase-operacion;Costo neto de operación;CLP;4220076551;no;RESUMEN!C7
 costo-proyecto;Costo neto total del proyecto;CLP;=costo-fase-implementacion+costo-fase-operacion;no;RESUMEN!C8
 capital-adicional-h5;Capital inicial adicional para estrés H5 y reserva;CLP;400000000;no;Parámetros D2!B27
 caja-estres-h5;Caja mínima financiada del estrés H5 y reserva;CLP;11223065;no;Sensibilidad!D6
+equilibrio-nominal;Venta neta de equilibrio nominal;CLP;7984400845;no;Indicadores!B12
+equilibrio-van;Venta neta de equilibrio a VAN cero;CLP;8175218018;no;Indicadores!B13
+deficit-h5-reserva;Déficit H5 y reserva antes del financiamiento adicional;CLP;308446935;no;
+caja-estres-horas;Caja mínima M12 con compra completa de horas CP-SEC-05;CLP;9207065;no;
+cuadro-impl-directo-costo;Implementación directa, costo;CLP;3721196090;no;
+cuadro-impl-directo-venta;Implementación directa, venta;CLP;4565884773;no;
+cuadro-impl-indirecto-costo;Implementación indirecta, costo;CLP;43128204;no;
+cuadro-impl-indirecto-venta;Implementación indirecta, venta;CLP;52918042;no;
+cuadro-op-directo-costo;Operación directa, costo;CLP;4157076551;no;
+cuadro-op-directo-venta;Operación directa, venta;CLP;5115008038;no;
+cuadro-op-indirecto-costo;Operación indirecta, costo;CLP;63000000;no;
+cuadro-op-indirecto-venta;Operación indirecta, venta;CLP;63000000;no;

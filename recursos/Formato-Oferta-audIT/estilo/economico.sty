@@ -367,7 +367,7 @@
     % En la propuesta final las observaciones económicas (sub=E) van en el
     % Sobre N.º 3 y las técnicas en el Sobre N.º 2. En el Informe 3 va la
     % tabla entera.
-    \str_if_eq:nnF {#1} { analisis }
+    \str_if_eq:nnT {#1} { oferta }
       {
         \str_if_eq:eeTF { \instancia } { final }
           { \ObservacionesInstancia [ E ] }
@@ -375,6 +375,7 @@
       }
     \aperturaEconomica
     \BuscarContenidoEconomico { \carpetaEconomica {#1} }
+    \str_if_eq:nnT {#1} { costos } { \ObservacionesInstancia }
     \anexoReferencias
     \contraportada
   }

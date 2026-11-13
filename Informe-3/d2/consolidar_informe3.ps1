@@ -73,6 +73,9 @@ try {
     Set-Row $p 29 @('Cierre de coberturas M56',13800000)
     Set-Row $p 30 @('Activar reserva en estrés combinado',1)
     Set-Row $p 31 @('Primer mes de atraso de H5 en estrés',13)
+    Set-Row $p 32 @('Desfase de cobro de operación',1,'E-25. Mes siguiente al servicio vencido.')
+    Set-Row $p 33 @('Comisión incremental del crédito de estrés',0,'CLP. Confirmar con el instrumento.')
+    Set-Row $p 34 @('Mes de pago de la comisión en estrés',1,'Mes provisional. Confirmar con el instrumento.')
     foreach ($cfg in @(@('B2',2,0,0.2),@('B4',2,0,10000000000),@('B12',1,0,1),@('B13',1,12,13),@('B23',1,1,56),@('B24:B25',2,-1,1),@('B27',2,0,10000000000),@('B30',1,0,1))) {
         $r = $p.Range($cfg[0])
         $r.Validation.Add([int]$cfg[1],1,1,[double]$cfg[2],[double]$cfg[3])
@@ -132,6 +135,26 @@ try {
     $pcu = $book.Worksheets.Item('PCUESFUERZO')
     foreach ($address in @('I164','N39','N52','N55')) { $pcu.Range($address).Value2 = 'Pendiente de conciliación PCU' }
     $flow = $book.Worksheets.Item('Flujo de Caja')
+    $adjust = if ($targets.ContainsKey('Ajustes de operación')) { $targets['Ajustes de operación'] } else { Add-Sheet 'Ajustes de operación' }
+    Set-Row $adjust 1 @('Mes de servicio','Componente variable CLP','Descuento CLP','Fuente')
+    for ($i=2; $i -le 57; $i++) {
+        Set-Row $adjust $i @(($i-1),0,0,'Base sin ajuste. Documentar el origen del componente variable o descuento.')
+        $personal = $book.Worksheets.Item('Personal')
+        if ($personal.Range("C$i").Formula -like '*Refuerzo presupuestado*') {
+            $personal.Range("C$i").Formula = ('=SUMIF(''Refuerzo presupuestado''!$A$2:$A$48,A{0},''Refuerzo presupuestado''!$E$2:$E$48)' -f $i)
+        }
+    }
+    $adjust.Range('B22:D57').Locked = $false
+    $book.Names.Add('MensualidadBase','=''Parámetros D2''!$B$15') | Out-Null
+    $adjust.Range('B22:B57').Validation.Add(7,1,1,'=AND(ISNUMBER(B22),B22>=0,C22<=MensualidadBase+B22)')
+    $adjust.Range('C22:C57').Validation.Add(7,1,1,'=AND(ISNUMBER(C22),C22>=0,C22<=MensualidadBase+B22)')
+    $adjust.Range('B22:C57').Validation.ShowError = $true
+    $p.Range('B33:B34').Locked = $false
+    for ($i=2; $i -le 58; $i++) {
+        $flow.Range("D$i").Formula = ('=SUMIF(''Ajustes de operación''!$A$2:$A$57,A{0},''Ajustes de operación''!$B$2:$B$57)-SUMIF(''Ajustes de operación''!$A$2:$A$57,A{0},''Ajustes de operación''!$C$2:$C$57)' -f $i)
+        $flow.Range("F$i").Formula = ('=IF(B{0}="H5",0,C{0}*''Parámetros D2''!$B$14)+IF(A{0}=''Parámetros D2''!$B$13,SUMIF($B$2:$B$58,"H5",$C$2:$C$58)*''Parámetros D2''!$B$14,0)+IF(AND(A{0}-''Parámetros D2''!$B$32>=''Parámetros D2''!$B$17,A{0}-''Parámetros D2''!$B$32<''Parámetros D2''!$B$17+''Parámetros D2''!$B$16),''Parámetros D2''!$B$15+SUMIF($A$2:$A$58,A{0}-''Parámetros D2''!$B$32,$D$2:$D$58),0)' -f $i)
+    }
+    $adjust.Protect()
     $income = Add-Sheet 'Ingresos'
     Set-Row $income 1 @('Mes','Hito','Fracción','Variable neto CLP','Facturación neta CLP','Cobro neto CLP')
     for ($i=2;$i -le 58;$i++) {
@@ -155,8 +178,8 @@ try {
     $sens=Add-Sheet 'Sensibilidad'
     Set-Row $sens 1 @('Escenario','VAN CLP','TIR mensual','Caja mínima','Uso máximo de línea','Déficit sin cubrir','Criterio')
     Set-Row $sens 2 @('Base','=Indicadores!B2','=Indicadores!B3','=Indicadores!B6','=Indicadores!B5','=MAX(0,-D2)','Caso de oferta con cobro H5 en M12.')
-    Set-Row $sens 3 @('Aumento de costos','=NPV(''Parámetros D2''!B10,B11:B66)','=IRR(B11:B66,Indicadores!B3)',$null,$null,$null,'Precio fijo. Variación aplicada a costos netos.')
-    Set-Row $sens 4 @('Caída de cobros','=NPV(''Parámetros D2''!B10,C11:C66)','=IRR(C11:C66,Indicadores!B3)',$null,$null,$null,'Calendario fijo. Variación aplicada a cobros netos.')
+    Set-Row $sens 3 @('Aumento de costos','=NPV(''Parámetros D2''!B10,B11:B66)','=IFERROR(IRR(B11:B66,''Parámetros D2''!B10),"Sin convergencia")',$null,$null,$null,'Precio fijo. Variación aplicada a costos netos.')
+    Set-Row $sens 4 @('Caída de cobros','=NPV(''Parámetros D2''!B10,C11:C66)','=IFERROR(IRR(C11:C66,''Parámetros D2''!B10),"Sin convergencia")',$null,$null,$null,'Calendario fijo. Variación aplicada a cobros netos.')
     Set-Row $sens 5 @('H5 en M13','=NPV(''Parámetros D2''!B10,D11:D66)','=IRR(D11:D66,Indicadores!B3)','=MIN(F11:F66)','=MAX(G11:G66)','=MAX(0,-D5)','Precio fijo. Mantiene la facturación contractual en M12.')
     Set-Row $sens 6 @('Estrés combinado','=NPV(''Parámetros D2''!B10,H11:H66)','=IRR(H11:H66,Indicadores!B3)','=MIN(J11:J66)','=MAX(K11:K66)','=MAX(0,-D6)','H5, reserva, IVA de calibración sin crédito. Refuerzo incluido en base.')
     Set-Row $sens 7 @('Mes de caja mínima en estrés','=INDEX(A11:A66,MATCH(D6,J11:J66,0))')
@@ -175,6 +198,9 @@ try {
             $oldCash = if ($i -eq 11) { $initial } else { "$cash$prev" }
             $loanStart = if ($i -eq 11) { "$initial*'Parámetros D2'!B5" } else { $oldLoan }
             $sens.Range("$before$i").Formula = "=$oldCash+$free$i+$tax$i-$oldLine*'Parámetros D2'!B7-$oldLoan*'Parámetros D2'!B6"
+            if ($extra) {
+                $sens.Range("$before$i").Formula += "-IF(A$i='Parámetros D2'!B34,'Parámetros D2'!B33,0)"
+            }
             $sens.Range("$line$i").Formula = "=MIN('Parámetros D2'!B8,MAX(0,$oldLine-$before$i))"
             $sens.Range("$loan$i").Formula = "=$loanStart-IF(A$i>='Parámetros D2'!B17,MIN($loanStart,MAX(0,$before$i-$oldLine+$line$i)),0)"
             $sens.Range("$cash$i").Formula = "=$before$i-$oldLine+$line$i-($loanStart-$loan$i)"

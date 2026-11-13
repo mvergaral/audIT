@@ -14,9 +14,9 @@ La revisión del Informe 2 (p. 3) pide trasladar estas respuestas a un anexo o f
 
 La matriz reúne **68 observaciones o grupos de observaciones relacionadas**. Consolida las reiteraciones entre el cuerpo de la revisión y sus conclusiones (pp. 46–47). Retoma las ocho observaciones del Informe 1 que la revisión del Informe 2 califica como parciales, agrupando las dos de versiones y soporte en ARQ-01. Los puntos que el revisor ya da por corregidos o mantenidos figuran en el seguimiento de las pp. 38–46 de la revisión.
 
-- **Incorporada (8 históricas + 12 implementadas en D1 para Informe 3).** El cambio descrito se comprobó en el documento y folio de la versión revisada o se encuentra formalmente implementado y verificado en las fuentes de `Informe-3/d1/` (GEN-01, GEN-05, EMP-01, EMP-02, EMP-03, EMP-04, NEC-01, ALC-02, CAL-03, CAL-06, INN-03, INN-04).
-- **Parcial (5, incluida INN-05).** La columna de respuesta identifica el cambio comprobado y el componente que todavía requiere corrección.
-- **Sin cierre acreditado (43).** La respuesta define la acción que corresponde a las restantes duplas (D2, D3, D4 y armado Sobre 1). La última columna identifica el destino y se debe reemplazar o completar con el folio de la modificación efectivamente incorporada al expediente.
+- **Incorporada (19).** El cambio se comprobó en la versión revisada o en las fuentes de preparación.
+- **Parcial (6).** La respuesta identifica el cambio comprobado y el componente que requiere corrección. GEN-05 sigue parcial por la revisión de S6 y S8.
+- **Sin cierre acreditado (43).** La respuesta identifica la acción y el destino. El cierre requiere comprobar el cambio incorporado y su localizador.
 
 Las páginas que acompañan cada observación corresponden al PDF de revisión. Los folios citados como evidencia corresponden a los PDF revisados de S7 y T-14 y a la recompilación de control por archivo de S1, S2, S9, T-6, T-13 y T-17. Al ensamblar la oferta final se actualizan los localizadores a la foliación correlativa. S1 a S13 designan subdocumentos de la oferta técnica. M identifica meses contractuales y H, hitos.
 

@@ -31,16 +31,19 @@ El operador móvil y el proveedor del circuito ExpressRoute se seleccionan al va
 
 \section{Adquisiciones clave o relevantes}\label{sec:eco-adquisiciones}
 
-La \tabref{eco-adquisiciones} presenta ventanas de compra o inicio de servicio según el calendario de adquisiciones.
+La \tabref{eco-adquisiciones} presenta las compras y servicios que condicionan la habilitación, el piloto y la continuidad. Los meses corresponden al calendario presupuestado. Las fechas de orden y entrega se cierran con cada proveedor.
 
-\begin{tabla}{Adquisiciones clave o relevantes de la solución}{eco-adquisiciones}{L{40mm} X C{14mm} L{36mm}}
-Adquisición & Para qué & Mes & Modalidad \\ \midrule
-Infraestructura on-premise & Sala técnica, cómputo de terminal y continuidad & 1--4 & Compra de audIT \\
-Azure & Ambientes de la plataforma y recuperación & Desde 1 & Servicio de audIT \\
-Equipos de campo y red & Montaje en vehículos y red de terminal & Según calendario & Compra del mandante \\
+\begin{tabla}[ancho=completo]{Adquisiciones clave y dependencias}{eco-adquisiciones}{L{33mm} L{17mm} L{19mm} X X}
+Adquisición & Pagador & Mes previsto & Fecha requerida & Plazo, condición o alternativa \\ \midrule
+Grupo electrógeno & audIT & M1 & H3, M6 & Hasta seis meses de plazo. Confirmar entrega compatible con H3. \\
+Sala técnica, clima y extinción & audIT & M3 & H3, M6 & Cotizar instalación certificada, disponibilidad y fecha de puesta en servicio. \\
+Cómputo de terminal y red & audIT y Curimón & M3--M4 & H3, M6 & audIT compra cómputo y gabinetes. Curimón adquiere equipos de red. Plazo de referencia AAEON de una a tres semanas. \\
+Azure y conectividad privada & audIT & M1, M4 y M6 & H3, M6 & Azure por canal CSP. Confirmar factibilidad de ExpressRoute con los operadores evaluados. \\
+Equipos a bordo, tarjetas y balizas & Curimón & M5--M6 & Piloto y montaje & La unidad de prueba precede al lote. El equipo G26I registra cuatro semanas de fábrica y disponibilidad por confirmar. \\
+LTE M2M, Iridium y soporte & audIT & Desde M6; soporte M13 & Antes de su activación & Elegir operador móvil por cobertura. El tiempo de aire se activa por equipo. \\
 \end{tabla}
 
-La instalación se ejecuta con personal interno de audIT. El soporte del fabricante y las mantenciones especializadas se contratan como servicios.
+audIT desarrolla el software de negocio y ejecuta la instalación. Compra hardware y licencias de GitLab y SonarQube y contrata nube administrada, conectividad, soporte del fabricante y mantención especializada.
 
 \section{Curva S del proyecto}\label{sec:eco-curva-s}
 
@@ -52,11 +55,11 @@ La curva S cubre los 56 meses de evaluación. Presenta costos acumulados con int
 
 La planilla desglosa personal, costos de terceros, calidad y capacitación, administración y cierre. Los costos de proveedores se registran una sola vez. Las licencias GitLab y SonarQube suman \montoPartida{licencias-d3}. La ejecución auxiliar en Azure pertenece al presupuesto de infraestructura. La compra del hardware de campo y red del mandante se informa por \montoPartida{hardware-mandante} en una hoja separada del flujo de audIT. El pagador de energía y combustible queda sujeto a confirmación.
 
-La reserva de infraestructura asciende a \montoPartida{reserva-d4}. Se informa como provisión del presupuesto de riesgos y su desembolso se prueba en sensibilidad. Los gastos administrativos incluyen las garantías de fiel cumplimiento, primas, notaría y custodia de fuentes. Las bases asegurables y el overhead incremental siguen en conciliación.
+El presupuesto de riesgos incluye una reserva de infraestructura de \montoPartida{reserva-d4}. Su desembolso se prueba en sensibilidad. Los gastos administrativos incluyen las garantías de fiel cumplimiento, primas, notaría y custodia de fuentes. Las bases asegurables y el overhead incremental siguen en conciliación.
 
 \subsection{Costos frente a venta}\label{sec:eco-venta}
 
-La \tabref{eco-maestro} muestra el costo neto por fase. La comisión de correcto funcionamiento se atribuye a implementación y su salida se registra al constituir la garantía en M21.
+La \tabref{eco-maestro} muestra el costo neto por fase. La comisión de correcto funcionamiento se atribuye a implementación. El modelo estima el desembolso en M21, sujeto a confirmar las condiciones y la fecha de constitución. El costo de las actividades de cierre entre M21 y M24 sigue sujeto a la conciliación de la EDT con las horas y la nómina.
 
 \tablaMontos*{Costo neto por fase}{eco-maestro}{costo-fase-implementacion, costo-fase-operacion, costo-proyecto}
 
@@ -65,6 +68,18 @@ La \tabref{eco-venta} muestra el valor ofertado a partir de esos costos. El marg
 \tablaMontos{Valor ofertado por fase}{eco-venta}{implementacion, operacion}
 
 La implementación se factura con 12 hitos de E-25, en proporción 60/40. Los 36 servicios de operación se facturan en M21--M56 y se cobran en M22--M57. La última mensualidad asciende a \montoPartida{cobro-m57} y se concilia como cuenta por cobrar al cierre.
+
+La \tabref{eco-directos-indirectos} resume la asignación vigente de costos y precios. El cuadro maestro de la planilla detalla personal, infraestructura y servicios, licencias, calidad, firma, administración y cierre. La implementación asigna precio en proporción al costo. En operación, el margen se asigna a personal.
+
+\begin{tabla}[ancho=completo]{Asignación de costos y precio por fase}{eco-directos-indirectos}{L{36mm} X X L{17mm}}
+Fase y tipo & Costo neto & Venta neta & Margen \\ \midrule
+Implementación directa & \montoPartida{cuadro-impl-directo-costo} & \montoPartida{cuadro-impl-directo-venta} & 18,50\,\% \\
+Implementación indirecta & \montoPartida{cuadro-impl-indirecto-costo} & \montoPartida{cuadro-impl-indirecto-venta} & 18,50\,\% \\
+Operación directa & \montoPartida{cuadro-op-directo-costo} & \montoPartida{cuadro-op-directo-venta} & 18,73\,\% \\
+Operación indirecta & \montoPartida{cuadro-op-indirecto-costo} & \montoPartida{cuadro-op-indirecto-venta} & 0,00\,\% \\
+\end{tabla}
+
+Los indirectos corresponden a administración, garantías y cierre según su atribución. La conciliación con nómina y asesoría legal debe acreditar cualquier overhead incremental. El IVA referencial por proveedor se concilia con el IVA pagado y el crédito fiscal en la caja financiada.
 
 \section{VAN y TIR de la solución}\label{sec:eco-van}
 
@@ -78,19 +93,31 @@ Valor actual neto (VAN) & \montoPartida{van} \\
 Tasa interna de retorno (TIR) & 83,6613\,\% mensual sobre la Fila A de evaluación \\
 \end{tabla}
 
-El saldo descontado acumulado se recupera de forma sostenida en M16. El equilibrio nominal exige cubrir los costos netos fijados del escenario. La hoja Sensibilidad distingue ese umbral, el VAN y la liquidez. En base, el saldo mínimo de caja es cero. Si H5 se cobra en M13, la línea alcanza el límite y queda un déficit de \montoPartida{deficit-h5} en M12. Para el escenario combinado con desembolso de la reserva D4 en M12, se modela capital inicial adicional de \montoPartida{capital-adicional-h5} en M1, con 80\,\% de crédito y 20\,\% de aporte de socios. La caja mínima es \montoPartida{caja-estres-h5} en M12. La disponibilidad y las comisiones del financiamiento siguen sujetas a confirmación.
+La \tabref{eco-sensibilidad} compara la Fila A mensual a la tasa base. Los shocks reducen los flujos de los primeros meses y la tasa que hace cero su VAN. Por eso se presenta la TIR junto con el VAN y la caja financiada.
+
+\begin{tabla}[ancho=completo]{Sensibilidad del proyecto a precio o calendario fijo}{eco-sensibilidad}{X L{30mm} L{24mm}}
+Escenario & VAN, millones de CLP & TIR mensual \\ \midrule
+Base & 1.235,0 & 83,66\,\% \\
+Costos +5\,\% & 923,7 & 17,32\,\% \\
+Cobros −5\,\% & 862,0 & 16,63\,\% \\
+H5 cobrado en M13 & 1.230,9 & 83,01\,\% \\
+\end{tabla}
+
+El equilibrio nominal es \montoPartida{equilibrio-nominal}. Con costos fijos y escala uniforme de cobros en el calendario base, el equilibrio a VAN cero es \montoPartida{equilibrio-van}. La recuperación descontada sostenida ocurre en M16.
+
+En el caso base, la caja mínima es cero y el uso máximo de la línea es de 45,0 millones de CLP. Si H5 se cobra en M13, la línea alcanza su tope y queda un déficit de \montoPartida{deficit-h5} en M12. Con el desembolso adicional de la reserva de infraestructura, el déficit antes del refuerzo asciende a \montoPartida{deficit-h5-reserva}. El escenario reforzado modela \montoPartida{capital-adicional-h5} en M1, con 80\,\% de crédito y 20\,\% de aporte de socios. La caja mínima calculada es \montoPartida{caja-estres-h5} en M12 frente a una meta de 10 millones de CLP. Si las 72 horas de preparación de CP-SEC-05 se compran íntegramente, la caja simulada baja a \montoPartida{caja-estres-horas}. La viabilidad del escenario depende de la cobertura de horas y de confirmar disponibilidad, giros y comisiones del financiamiento.
 
 \section{Valorización de las cinco innovaciones}\label{sec:eco-innovaciones}
 
-La \tabref{eco-innovaciones} resume el tratamiento de cada innovación. Los costos atribuidos a personal se concilian con las horas ya presupuestadas. Los beneficios de Curimón se mantienen separados de los ingresos de audIT.
+La \tabref{eco-innovaciones} resume el tratamiento de cada innovación. La atribución de personal se contrasta con las horas presupuestadas y su disponibilidad. Los beneficios de Curimón se mantienen separados de los ingresos de audIT.
 
 \begin{tabla}[ancho=completo,fuente=condensada]{Tratamiento de las innovaciones}{eco-innovaciones}{L{32mm} X X}
 Innovación & Costo y carga en el modelo & Beneficio para Curimón \\ \midrule
 1. Expediente verificable & Firma automatizada presupuestada por \montoPartida{firma-inn1} en M13--M56. Desarrollo y soporte atribuidos a personal. & Monetización pendiente. Medir expedientes, tiempo de preparación y verificaciones. \\
-2. Programación de patio & D3 estima \montoPartida{innovacion-2-inversion} de desarrollo y \montoPartida{innovacion-2-costo} de operación atribuida. Cobertura de horas por conciliar. & Medir visitas y minutos de preparación evitados atribuibles a Curimón. \\
-3. Verificación de acople y registro térmico & D4 estima \montoPartida{innovacion-3-inversion} de integración y \montoPartida{innovacion-3-costo} de operación. Imputación incremental por conciliar. & Medir acoples detectados y eventos térmicos en series independientes. \\
-4. Comodato y recupero de sobreestadías & Los 182 montajes base se mantienen en el calendario. Las altas adicionales se evalúan como sensibilidad. & Recupero bruto referencial de \montoPartida{recupero-inn4} en 36 meses. El neto depende del reparto con transportistas. \\
-5. Prevención de fatiga & Talleres en M4 y calibración en M13--M15 cargados. Conciliar horas y partidas restantes con D1. & Monetización pendiente. Validar consumo evitado y siniestralidad con datos históricos. \\
+2. Programación de patio & \montoPartida{innovacion-2-inversion} de desarrollo y \montoPartida{innovacion-2-costo} de operación como atribuciones de referencia. Cobertura de horas por conciliar. & Medir visitas y minutos evitados en piloto y compararlos con la línea base. \\
+3. Verificación de acople y registro térmico & \montoPartida{innovacion-3-inversion} de integración y \montoPartida{innovacion-3-costo} de operación estimados. Imputación incremental por conciliar. & Medir acoples y eventos térmicos en series independientes. El kilometraje corresponde al criterio de aceptación 26. \\
+4. Comodato y recupero de sobreestadías & Los 182 montajes base incluyen 34 comodatos. Las altas adicionales dependen de cupo, capacidad y pagador. & Recupero bruto referencial de \montoPartida{recupero-inn4} en 36 meses a régimen. El neto depende de costos y reparto. \\
+5. Prevención de fatiga & \montoPartida{innovacion-5-inversion} de inversión y \montoPartida{innovacion-5-costo} de soporte. Talleres en M4 y calibración en M13--M15. Ejecutores e IVA por confirmar. & Monetización pendiente. Medir consumo y siniestralidad frente a datos históricos. \\
 \end{tabla}
 
 Las innovaciones 2 y 3 reconocen cero beneficio monetario en el caso base. El beneficio de la innovación 5 queda pendiente. Los costos atribuidos informados por cada responsable se mantienen identificados hasta completar su cruce con la planilla.

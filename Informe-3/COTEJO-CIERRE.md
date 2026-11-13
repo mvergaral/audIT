@@ -1,5 +1,24 @@
 # Cotejo de cierre · Informe 3
 
+## Aplicación del plan de corrección
+
+- **Modelo.** El cuadro maestro concilia a costo y venta de RESUMEN y el puente mensual de IVA reproduce CLP 69.374.046 de referencia y CLP 14.432.400 pagados en la caja base. Se incorporan ajustes de operación por mes, comisión de crédito de estrés, criterios de administración formulados y escenarios de beneficios de Curimón con entradas y evidencia.
+- **Prueba de regresión.** El recálculo en LibreOffice conservó el VAN, la TIR, la caja mínima y el uso de línea de base. En una copia, CLP 1.000.000 variables de M21 pasan a la factura M21 y al cobro M22. El descuento de CLP 500.000 de M56 pasa a la factura M56 y al cobro M57. H5 desplazado a M13 conserva la factura de M12. Una comisión de CLP 250.000 en el estrés reduce la caja M12 en ese importe bajo las mismas condiciones. Queda la comprobación equivalente en Excel de escritorio.
+- **Informe y exposición.** El PDF presenta compras vinculadas a hitos, costos directos e indirectos, sensibilidad y valorización. El anexo se ubica después del cuerpo económico. El recuento es 19 incorporadas, 6 parciales y 43 sin cierre acreditado. La presentación incorpora el déficit previo al financiamiento y los hitos de la Curva S.
+- **Demostración.** Se ejecutó el recorrido publicado Portal Clientes → Simulador Operativo en Vivo → pérdida de cobertura → restablecimiento. La interfaz mostró la retención en el búfer y el mensaje de reconciliación exitosa. El ensayo oral de 15 minutos corresponde al equipo expositor.
+
+### Evidencia pendiente
+
+| Frente | Evidencia para cerrar |
+|---|---|
+| Horas, nómina y M21–M24 | Confirmar ejecutores, reservas y posibles horas compartidas de CP-SEC-05 y G13. Conciliar las actividades 6.5 y 7.2 con T-15, E-26 y sus filas de nómina. |
+| H5 y caja | Acreditar fecha de cobro, crédito y aporte, giros y comisiones. Recalcular con los datos confirmados y comprobar la meta M12. |
+| Proveedores y pagadores | Acreditar ofertas, IVA, crédito fiscal, bases asegurables, overhead, energía y combustible. Contrastar la suficiencia de la reserva por riesgo y mes. |
+| Innovaciones | Conciliar horas e imputación incremental por mes, acreditar cupo adicional y reparto de INN-4 y obtener evidencia para monetizar beneficios. |
+| Art. 46 | Verificar el cambio y localizador de cada observación parcial o abierta. Revisar GEN-05 en S6 y S8. |
+
+La edición del modelo usa el consolidado generado por Excel como insumo para `d2/aplicar_controles_modelo.mjs`. El script incorpora las hojas y fórmulas de revisión. En la edición publicada se restituyeron las protecciones y hojas ocultas que el exportador no conserva, y se incorporaron resultados recalculados sin reemplazar las fórmulas. La ruta COM se actualizó para el calendario de cobros y la comisión de estrés y queda por validar en Windows.
+
 La planilla consolidada toma como base el paquete OFERTA_D2 del commit c601503. El corte de insumos es 8c950fa. El escenario conserva los precios y el calendario base publicados.
 
 ## Controles reproducidos en Excel

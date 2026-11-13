@@ -136,8 +136,8 @@ end
 -- Texto de un monto: CLP · UF · USD, sin cortes dentro de cada cifra
 local function nb(x) return (x:gsub(" ", "~")) end
 local function texto_tres(tres)
-  return nb(tres.CLP) .. "\\enspace\\textperiodcentered\\enspace " .. nb(tres.UF)
-    .. "\\enspace\\textperiodcentered\\enspace " .. nb(tres.USD)
+  return nb(tres.CLP) .. " \\textperiodcentered\\allowbreak\\ " .. nb(tres.UF)
+    .. " \\textperiodcentered\\allowbreak\\ " .. nb(tres.USD)
 end
 local function plano_tres(tres)
   return tres.CLP .. " · " .. tres.UF .. " · " .. tres.USD

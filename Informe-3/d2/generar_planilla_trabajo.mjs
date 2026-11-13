@@ -20,6 +20,7 @@ const dedicacion = wb.worksheets.add("Dedicación D3");
 const detalleD4 = wb.worksheets.add("Detalle proveedores D4");
 const capacidad = wb.worksheets.add("Capacidad por perfil");
 const escenarios = wb.worksheets.add("Escenarios de caja");
+const ajustes = wb.worksheets.add("Ajustes de operación");
 
 async function read(name, range) {
   const source = await Workbook.fromCSV(await fs.readFile(path.join(folder,name),"utf8"),{sheetName:"CSV"});
@@ -71,6 +72,7 @@ data(parametros,[
  ["Meses operación",36,"E-25"],
  ["Inicio operación",21,"E-25. Coincide con H12."],
  ["Meses por año",12,"Conversión efectiva de tasas."],
+ ["Desfase de cobro de operación",1,"E-25. Mes siguiente al servicio vencido."],
 ]);
 parametros.getRange("B10").formulas=[["=B5*B6+(1-B5)*((1+B9)^(1/B18)-1)"]];
 parametros.getRange("B14:B15").formulas=[["=SUM(Costos!I2:I21)/(1-B2-B3)"],["=SUM(Costos!I22:I57)/(1-B2)/B16"]];
@@ -168,6 +170,12 @@ costos.getRange("B2:K57").setNumberFormat("#,##0");
 
 init(flujo,["Mes","Hito","% hito","Variable neto","Facturación","Cobros netos","Costos netos","Fila A","IVA débito","IVA cobrado","IVA pagado","Crédito fiscal","IVA por pagar","Crédito arrastre","IVA neto caja","Interés banco","Interés línea","Giro línea","Pago línea","Saldo línea","Pago banco","Saldo banco","Caja acumulada","Fila C"],[8,9,10,16,...Array(20).fill(17)]);
 data(flujo,Array.from({length:57},(_,i)=>[i+1,hit.get(i+1)?.[0]??null,hit.get(i+1)?.[1]??null,null]));
+init(ajustes,["Mes de servicio","Componente variable CLP","Descuento CLP","Fuente"],[18,22,22,45]);
+data(ajustes,Array.from({length:56},(_,i)=>[i+1,0,0,"Base: sin ajuste de operación"]));
+formulas(flujo,1,3,Array.from({length:57},(_,i)=>{
+ const mes="A"+(i+2);
+ return ["=SUMIF('Ajustes de operación'!$A$2:$A$57,"+mes+",'Ajustes de operación'!$B$2:$B$57)-SUMIF('Ajustes de operación'!$A$2:$A$57,"+mes+",'Ajustes de operación'!$C$2:$C$57)"];
+}));
 flujo.getRange("C2:C58").setNumberFormat("0%");
 flujo.getRange("D2:D57").format.fill="#FFF1CE";
 formulas(flujo,1,4,Array.from({length:57},(_,i)=>{
@@ -177,7 +185,7 @@ formulas(flujo,1,4,Array.from({length:57},(_,i)=>{
  const available=`(${cash}+H${r}+O${r}+${initial}-P${r}-Q${r})`;
  return [
  `=C${r}*${param}$B$14+IF(AND(A${r}>=${param}$B$17,A${r}<${param}$B$17+${param}$B$16),${param}$B$15+D${r},0)`,
- `=IF(B${r}="H5",0,C${r}*${param}$B$14)+IF(A${r}=${param}$B$13,$C$13*${param}$B$14,0)+${i>=21?`${param}$B$15+D${p}`:"0"}`,
+ `=IF(B${r}="H5",0,C${r}*${param}$B$14)+IF(A${r}=${param}$B$13,SUMIF($B$2:$B$58,"H5",$C$2:$C$58)*${param}$B$14,0)+IF(AND(A${r}-${param}$B$19>=${param}$B$17,A${r}-${param}$B$19<${param}$B$17+${param}$B$16),${param}$B$15+SUMIF($A$2:$A$58,A${r}-${param}$B$19,$D$2:$D$58),0)`,
  m<=56?`=Costos!K${r}`:"=0",`=F${r}-G${r}`,
  `=E${r}*${param}$B$11`,`=F${r}*${param}$B$11`,
  m<=56?`=SUM(Proveedores!G${v}:G${v+2},Proveedores!G${v+4})`:"=0",
