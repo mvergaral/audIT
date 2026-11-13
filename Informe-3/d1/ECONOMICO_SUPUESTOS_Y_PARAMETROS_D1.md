@@ -42,11 +42,11 @@ En cumplimiento del rol asignado a la Dupla 1 en la planificación del Informe 3
 
 3. **Explicación de Beneficios Económicos para el Mandante (`AUD-9` / Tarea 1.5)**:
    * **Tipo 1:** Valorización pendiente.
-   * **Tipo 2:** Beneficio monetario de Curimón pendiente de acreditar. Caso base prudente CLP 0 y sensibilidad provisional CLP 90.000.000 en M21–M56. Validar oportunidades elegibles, visitas y minutos evitados, costos unitarios y pagador. Las horas de instalación liberadas corresponden a audIT.
-   * **Tipo 3:** El kilometraje real cumple el criterio 26. Se retiran CLP 75.000.000 de la valorización incremental a 36 meses. Caso base prudente CLP 0 (D4-149). Se mantiene CLP 60.000.000 a 36 meses como sensibilidad térmica provisional. El beneficio del acople queda pendiente de cuantificar. Los CLP 135.000.000 del cálculo original quedan como antecedente histórico porque incluían kilometraje.
+   * **Tipo 2:** El escenario base prudente reconoce CLP 0. Para estimar el ahorro de Curimón se requieren oportunidades elegibles, visitas y minutos evitados, costos unitarios y pagador. Las horas de instalación liberadas corresponden a audIT.
+   * **Tipo 3:** El kilometraje real corresponde al criterio 26. El escenario base prudente reconoce CLP 0. El ahorro por registro térmico y el beneficio del acople quedan pendientes de cuantificar por separado.
    * **Tipo 4:** CLP 120.700.000 brutos/año (CLP 340.000.000 × 71 % × 50 % supuesto) y CLP 362.100.000 brutos en 36 meses a régimen. Neto de Curimón pendiente del reparto con transportistas.
-   * **Tipo 5:** CLP 238.320.000 en 36 meses como escenario, sujeto a calibración en marcha blanca.
-   * **Consolidación:** El total neto queda pendiente de validación. El recupero bruto y las sensibilidades se muestran por separado y los beneficios de Curimón se mantienen fuera de los ingresos de audIT.
+   * **Tipo 5:** Los beneficios de combustible y siniestralidad quedan pendientes de cuantificar con datos de operación y evidencia del efecto atribuible a la innovación.
+   * **Consolidación:** El beneficio neto total queda pendiente de cuantificar. El recupero bruto estimado y los demás beneficios de Curimón se presentan por separado de los ingresos de audIT.
 
 4. **Valorización Completa de la Innovación 5 (`AUD-11` / Tarea 1.7 / `INN-05`)**:
    * **Cumplimiento del Artículo 50.2 (Sobre Técnico vs. Sobre Económico):** En el Formulario T-19 (Ficha 5) se han suprimido todos los valores monetarios en CLP y tarifas horarias, remitiendo formalmente su valorización al Sobre N.º 3 (Oferta Económica).
@@ -55,11 +55,7 @@ En cumplimiento del rol asignado a la Dupla 1 en la planificación del Informe 3
      * 5 talleres ergonómicos presenciales en los terminales oficiales de Curimón: **San Bernardo, Antofagasta, Talca, Los Ángeles y Puerto Montt** (M4) a \$440.000 CLP c/u = \$2.200.000 CLP.
      * 60 HH de calibración ergonómica y pruebas de carga mental NASA-TLX en marcha blanca (M13–M15) a **\$30.000 CLP/HH (costo perfil Especialista Ergonómico Sénior según E-26)** = \$1.800.000 CLP.
    * **Costo Operacional Incremental audIT (`innovacion-5-costo`):** **\$10.080.000 CLP netos** (10 HH/mes de soporte algorítmico y auditorías semestrales de privacidad a \$28.000 CLP/HH = \$280.000 CLP/mes durante los 36 meses de operación, Meses 21 a 56).
-   * **Beneficio Proyectado Curimón (`innovacion-5-beneficio`):** **\$238.320.000 CLP acumulados en 36 meses** (\$79.440.000 CLP/año):
-     * *Combustible:* 24.000 viajes nocturnos/año (hipótesis 25 % de 96.000) $\times$ 6,4 km evitados / 2,5 km/l = 61.440 l/año $\times$ \$1.000 CLP/l (precio mayorista ENAP) = **\$61.440.000 CLP/año** (\$184.320.000 CLP en 36 meses).
-     * *Mitigación de Siniestralidad Nocturna:* Identificada formalmente como **Supuesto de Escenario de Ingeniería** con 0,48 siniestros evitados/año (1 cada 50.000 viajes nocturnos), calibrada contra el piso de estadísticas de **CONASET** y reportes de fatiga de **ACHS/SUSESO**.
-     * *Respaldo del Costo por Incidente Evitado (\$37.500.000 CLP):* Identificado formalmente como **Supuesto de Escenario de Costo Integral**, respaldado en la **Guía de Costos de Siniestralidad AACH (POL 1 2013 0034 CMF)** (deducible UF 350 = \$14M) y estudios de **ChileTransporte AG / CNTC** (lucro cesante de 12 días = \$9M + rescate de grúa pesada y reparaciones menores = \$6,5M + multas contractuales y transbordo = \$8M). Multiplicado por 0,48 incidentes/año arroja **\$18.000.000 CLP/año** (\$54.000.000 CLP en 36 meses).
-     * *Instrucción de Carga para D2:* La clave **`innovacion-5-beneficio`** corresponde a los **\$238.320.000 CLP en 36 meses**. Los \$18.000.000 CLP anuales corresponden únicamente al componente de siniestralidad.
+   * **Beneficio monetario de Curimón:** Pendiente. Para estimar el ahorro de combustible se requieren desvíos evitados, kilómetros, rendimiento y precio del diésel. Para siniestralidad se requieren frecuencia, reducción atribuible y costo neto por incidente.
 
 5. **Presupuesto Detallado de Calidad y Capacitación (`AUD-10` / Tarea 1.6)**:
    * **Naturaleza de los Precios:** Todos los precios corresponden a **Estimaciones Paramétricas de Ingeniería basadas en benchmarks del mercado nacional a octubre de 2026** (DICTUC, CESMEC, IDIEM, consultoras de ciberseguridad ofensiva, E-Class y OTECs SENCE).
@@ -112,4 +108,4 @@ Para la integración de la planilla común y del calendario mensual de caja:
 3. En la hoja `Flujo de Caja Financiado`, calcular la liquidez de M56 con los cobros efectivos y el pago de garantías y seguros de ese mes. Registrar el cobro de la última mensualidad en M57 en la conciliación de cierre y verificar si se requiere financiamiento puente.
 4. En la hoja `Costos`, cargar los desembolsos de las Partidas 1 a 4 y 6 a 8 de Calidad y Capacitación (\$37.250.000 CLP) y de la Innovación 5 (\$13.000.000 CLP) según sus calendarios mensuales específicos en la fase de implementación (Meses 4 a 19), respetando el esquema 50/50 de anticipos e informes.
 5. En la sección de Operación de la hoja `Costos`, cargar los pentests y reinducciones (\$2,0M en M29, M41, M53 y \$3,5M en M30, M42, M54) y los \$280.000 mensuales de soporte técnico de la Innovación 5 (Meses 21 a 56).
-6. En la hoja `Innovaciones`, vincular las claves `innovacion-5-inversion` (\$13.000.000 CLP), `innovacion-5-costo` (\$10.080.000 CLP) e `innovacion-5-beneficio` (**\$238.320.000 CLP** acumulados en 36 meses).
+6. En la hoja `Innovaciones`, vincular las claves `innovacion-5-inversion` y `innovacion-5-costo`. Registrar `innovacion-5-beneficio` como pendiente de cuantificar.
