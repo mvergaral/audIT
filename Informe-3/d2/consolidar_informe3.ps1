@@ -68,7 +68,7 @@ try {
     Set-Row $p 24 @('Shock de costo',0.05)
     Set-Row $p 25 @('Shock de ingreso',-0.05)
     Set-Row $p 26 @('IVA adicional calibración por mes',114000)
-    Set-Row $p 27 @('Capital adicional disponible para H5',0,'Entrada. Confirmar disponibilidad y condiciones antes de comprometer.')
+    Set-Row $p 27 @('Capital inicial adicional en escenario H5 y reserva',400000000,'Supuesto aprobado por D1. 80 % banco y 20 % socios en M1. Disponibilidad y comisiones pendientes.')
     Set-Row $p 28 @('Seriedad de oferta, escenario preoperacional',2812500)
     Set-Row $p 29 @('Cierre de coberturas M56',13800000)
     Set-Row $p 30 @('Activar reserva en estrés combinado',1)
@@ -213,7 +213,7 @@ try {
     Set-Row $summary 7 @('Déficit H5 en M13 CLP','=Sensibilidad!F5')
     Set-Row $summary 8 @('Déficit estrés combinado CLP','=Sensibilidad!F6')
     Set-Row $summary 10 @('Versión de insumos','OFERTA_D2 · c601503. Corte GitHub 8c950fa.')
-    Set-Row $summary 11 @('Financiamiento','Puente condicionado a respaldo. El estrés permite simular capital adicional.')
+    Set-Row $summary 11 @('Financiamiento','D1 aprobó modelar CLP 400 millones adicionales en el escenario combinado. Disponibilidad y comisiones pendientes.')
     Set-Row $summary 12 @('Margen de la plantilla','Rentabilidad Nominal en RESUMEN divide utilidad por costo.')
     Set-Row $summary 13 @('Filas B29 y B30 de RESUMEN','La plantilla invierte las referencias costo/venta. Para el cotejo usar C8 y H8.')
     Set-Row $summary 14 @('IVA','Base conserva el criterio publicado. Confirmar IVA y crédito fiscal por proveedor.')
@@ -246,7 +246,7 @@ try {
     }
     $excel.Calculation=-4105
     $excel.CalculateFullRebuild()
-    $checks=@(@('RESUMEN','C8',7984400845.222496),@('RESUMEN','H8',9796810853.033737),@('RESUMEN','G21',1235043315.7805276),@('RESUMEN','G22',0.8366132363093755),@('Sensibilidad','F5',155747160.3787424),@('Hardware del mandante',"H$($n+1)",225384199))
+    $checks=@(@('RESUMEN','C8',7984400845.222496),@('RESUMEN','H8',9796810853.033737),@('RESUMEN','G21',1235043315.7805276),@('RESUMEN','G22',0.8366132363093755),@('Sensibilidad','F5',155747160.3787424),@('Sensibilidad','F6',0),@('Hardware del mandante',"H$($n+1)",225384199))
     foreach ($check in $checks) {
         $actual = $book.Worksheets.Item($check[0]).Range($check[1]).Value2
         if ($actual -isnot [double] -or [math]::Abs($actual - $check[2]) -gt 1) { throw "$($check[0]) $($check[1]): $actual esperado $($check[2])" }

@@ -67,3 +67,5 @@ licencias-d3;licencias-d3;CLP;38032600;no;
 costo-fase-implementacion;Costo neto de implementación;CLP;3764324294;no;RESUMEN!C6
 costo-fase-operacion;Costo neto de operación;CLP;4220076551;no;RESUMEN!C7
 costo-proyecto;Costo neto total del proyecto;CLP;=costo-fase-implementacion+costo-fase-operacion;no;RESUMEN!C8
+capital-adicional-h5;Capital inicial adicional para estrés H5 y reserva;CLP;400000000;no;Parámetros D2!B27
+caja-estres-h5;Caja mínima financiada del estrés H5 y reserva;CLP;11223065;no;Sensibilidad!D6

@@ -16,9 +16,15 @@ La planilla consolidada toma como base el paquete OFERTA_D2 del commit c601503. 
 | Venta de equilibrio a VAN cero con calendario base y escala uniforme | CLP 8.175.218.018 |
 | Recuperación descontada sostenida | M16 |
 | Déficit en M12 si se atrasa H5 | CLP 155.747.160 |
-| Déficit en M12 con H5 atrasado y reserva D4 desembolsada en M12 | CLP 308.446.935 |
+| Déficit en M12 con H5 atrasado y reserva D4, antes del financiamiento adicional | CLP 308.446.935 |
 
 Se conservaron los rótulos, las fórmulas y las celdas combinadas de RESUMEN. El Resumen Ejecutivo explica las referencias invertidas de costo y venta de la plantilla y su métrica de utilidad sobre costo. El archivo se recalculó en Excel, sin vínculos externos ni errores de celda. La Fila A y la Curva S coinciden con los CSV de OFERTA_D2.
+
+## Decisión de financiamiento H5 · 13-11-2026
+
+D1 aprobó modelar el atraso del cobro de H5 a M13 junto con el desembolso de la reserva D4 en M12. El supuesto aprobado incorpora CLP 400.000.000 adicionales desde M1: CLP 320.000.000 de crédito y CLP 80.000.000 de socios. Se aplica 0,9 % mensual al saldo bancario de apertura y amortización desde M21, según la caja disponible. La meta es mantener CLP 10.000.000 de caja en M12. El recálculo en Excel dejó CLP 11.223.065 de caja mínima en M12 y cero giros de línea en el escenario combinado. Se mantienen los precios y el cálculo del VAN sobre la Fila A.
+
+La aprobación corresponde a la modelación de la licitación. La disponibilidad de los fondos, los términos de giro y las comisiones requieren respaldo. El escenario actual no incluye comisiones adicionales de este crédito. Si se confirman, se incorporan en la Fila C y se vuelve a comprobar la holgura.
 
 ## Pendientes con evidencia externa
 
