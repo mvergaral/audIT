@@ -33,5 +33,5 @@ económico del Informe 3.
 | INN-05 | La innovación 3 no tiene base ni magnitud de beneficio | Beneficio en unidades físicas (asignaciones con el semirremolque verificado, 44 refrigerados con registro térmico) y valorización con inversión y costo operacional en el flujo. El beneficio monetario tiene un escenario prudente de $0 y una sensibilidad, con su fórmula y los parámetros que se miden en la Etapa 1 | Informe 3, tarea 4.9. T-19, ficha 3 | Aceptada. Valorización en el Informe 3 |
 
 Aviso para D1: al aceptar INN-02, la parte del beneficio de la innovación 3 que viene del kilometraje
-deja de ser de la innovación. Por eso el beneficio queda en $0 en el escenario base y los $135.000.000 de
-la tarea 1.5 como sensibilidad, hasta que se rehagan sin el kilometraje (D4-149).
+deja de ser de la innovación. D1 ya la retiró: el beneficio queda en $0 en el escenario base y en
+$60.000.000 de sensibilidad térmica, sin kilometraje (D4-149 y D4-151).
