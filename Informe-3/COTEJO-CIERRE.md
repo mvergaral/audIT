@@ -26,6 +26,12 @@ D1 aprobó modelar el atraso del cobro de H5 a M13 junto con el desembolso de la
 
 La aprobación corresponde a la modelación de la licitación. La disponibilidad de los fondos, los términos de giro y las comisiones requieren respaldo. El escenario actual no incluye comisiones adicionales de este crédito. Si se confirman, se incorporan en la Fila C y se vuelve a comprobar la holgura.
 
+### Respaldo revisado
+
+- **Bases del modelo.** El Formulario E-24, FEP01 p. 73, fija 0,9 % mensual para el crédito de consumo de referencia y los topes de 80 % bancario, 20 % propio y CLP 50 millones para la línea. El [dimensionamiento anterior de D2](https://github.com/mvergaral/audIT/commit/a89084b) y el [paquete OFERTA_D2](https://github.com/mvergaral/audIT/commit/c601503) respaldan la metodología de caja.
+- **Disponibilidad.** En las ramas remotas revisadas al 13-11-2026, con main en 8c950fa, no se encontró una aprobación de crédito por CLP 320 millones ni un compromiso de socios por CLP 80 millones. La [guía pública de BancoEstado](https://www.bancoestado.cl/content/dam/bancoestado-public/pdf/microempresas/guia-de-uso-emprendedor.pdf) sirve de referencia para el uso de crédito comercial como capital de trabajo. El monto, la tasa contractual y las condiciones de giro requieren confirmación específica.
+- **Estado de entrega.** Escenario de financiamiento aprobado por D1 para la licitación y verificado en la Fila C. Disponibilidad, condiciones de giro y comisiones pendientes de respaldo.
+
 ## Pendientes con evidencia externa
 
 | Responsable | Pendiente | Evidencia para cerrarlo |
