@@ -80,6 +80,28 @@ En cumplimiento del rol asignado a la Dupla 1 en la planificación del Informe 3
      * *Fase de Operación (Meses 21 a 56):* Pentest anual (50 % anticipo en M29, M41, M53 de \$2,0M; 50 % informe en M30, M42, M54 de \$2,0M) más anualidad de reinducción (\$1,5M en M30, M42, M54). Total Opex = **\$16.500.000 CLP**.
    * **Total Calidad y Capacitación:** **\$53.750.000 CLP**.
 
+### Conducción y validación de CP-SEC-05 en G13
+
+**Estimación de ingeniería del 12-11-2026: 8 h del Líder de Seguridad**, correspondiente al Encargado de Seguridad de la Información del equipo, para una campaña del caso CP-SEC-05 con variante conectada y sin enlace. Se planifican en **M10, antes de liberar G13 en el día hábil contractual 182**, con candidato, configuración y datos identificados. Son horas de personas, no ocho horas de ejecución continua ni resultados de una prueba ya realizada.
+
+| Actividad del Líder de Seguridad | Horas | Mes y paquete | Resultado previsto |
+|---|---:|---|---|
+| Preparar la ejecución: revisar protocolo, alcances de los permisos y conservación; verificar versión/configuración congeladas, datos ficticios, relojes y condiciones de observación. | 2 | M10 · 10.1, salida G13 | Lista de entrada y guion aprobables antes de iniciar. |
+| Conducir las variantes con y sin enlace; ordenar la revocación por el actor autorizado, comprobar rechazo al actor ajeno y observar el cese de acceso y de captura para la finalidad revocada. | 2 | M10 · 10.1, salida G13 | Registro de ejecución, tiempos y anomalías con el equipo instrumentado. |
+| Validar la evidencia: correlacionar permiso y tiempos de portal/equipo/log/SQLite; verificar el límite de cinco minutos, la continuidad del tratamiento con base independiente y la identidad/huella de la evidencia previa retenida. | 3 | M10 · 10.1, salida G13 | Dictamen trazable de cumplimiento o defecto; la ausencia de transmisión no basta. |
+| Cerrar el expediente del caso: emitir veredicto y registrar defectos, responsables y resultado de la revisión para la decisión de G13. | 1 | M10 · 10.1, salida G13 | Informe del caso y remisión al Líder de Calidad y Pruebas. |
+| **Total** | **8** | **M10 · 10.1 / G13** | **Una asignación interna, contada una sola vez.** |
+
+**Imputación:** 10.1 es el paquete de pruebas de sistema e integración de T-14 y ya contempla actividad durante A09. G13 identifica la salida que usa la evidencia; no es otro paquete al que cobrar las mismas 8 h. La ejecución y su revisión deben terminar antes de esa puerta, sin esperar a A12, que comienza en el día 192. La estimación supone que D3 entrega agente e instrumentación listos y que D4 monta/opera el banco; correcciones de software y una nueva campaña por un fallo requieren reestimación de la actividad afectada.
+
+**Cobertura presupuestaria verificable:** T-15 ya asigna 6.400 h al elemento 10, pero no individualiza en su texto estas 8 h del perfil de Seguridad en M10. Por tanto, se registra una asignación objetivo **dentro de 10.1**, con cobertura por perfil pendiente de comprobar; no se afirma que exista holgura ni que deban contratarse ocho horas nuevas. D2 debe individualizar la cobertura existente y conciliar cualquier ejecución común ya estimada para G13, incluidas las 16 h de Seguridad de REV-S7-02 del catálogo D3. La preparación/corrección de construcción y la conducción/revisión del ensayo tienen resultados propios; si alguna tarea o ejecución es la misma, se imputa una sola vez.
+
+**Cruce de la reserva:** las 8 h de D1 y las 7 h de D4 suman **15 h-persona** de conducción/validación y banco/corrida. Frente a las 16 h condicionales informadas por D2 queda una diferencia nominal de 1 h, que no acredita disponibilidad ni cobertura por perfil. La composición previa de la reserva (QA 8 h, Software 4 h y Firmware 4 h) debe conciliarse con **Seguridad 8 h, Técnico 5 h y Operación/SRE 2 h**; no se suman ambas composiciones. Las 72 h de preparación del agente D3 permanecen en 4.1/A11, M6–M9, y sus 8 h de QA M9 conservan el cruce separado con CP-HW-03. No se agregan a esta corrida ni a las 6.008 h de A09.
+
+**Costo interno atribuible de referencia:** correspondencia con el perfil **Encargado de Seguridad TI** de E-26, costo 0,8–1,4 UF/h. Con la UF contractual de CLP 40.000 de E-24, el punto medio es 1,1 UF/h = CLP 44.000/h: **8 h × CLP 44.000 = CLP 352.000**, rango CLP 256.000–448.000. Es una referencia de personal, no una cotización ni tarifa de venta. No se aplica IVA automáticamente como factura externa. El costo adicional se obtiene sólo por las horas no cubiertas del mismo perfil y mes; no se suma a los CLP 53.750.000 de compras/servicios de calidad y capacitación ni a remuneraciones ya presupuestadas.
+
+**Fuentes de alcance y calendario:** catálogo T-17 oficial, CP-SEC-05; S6, «Puerta de salida G13 y funciones de sprint 7»; T-14, 10.1; T-15, A09/G13/A12 y elemento 10. **Fuentes de valoración:** FEP01 · E-24 · p.73 y E-26 · p.76. Las 8 h y su desglose son una estimación de planificación adoptada para este insumo, no una duración medida ni una confirmación de cobertura financiera.
+
 ---
 
 ## 2. Instrucciones de Coordinación para la Dupla 2 (D2)
