@@ -1,0 +1,19 @@
+{
+  "horizonte": 56,
+  "m0": 0,
+  "tasa_mensual": 0.01026189409994624,
+  "precio_impl_escenario": 4597494824.830977,
+  "mensualidad_escenario": 142363950.61349693,
+  "cobro_m57": 142363950.61349693,
+  "valor_en_m56_del_cobro_m57": 140917866.39179397,
+  "van_referencial": 1227990935.8655732,
+  "van_referencial_con_m57": 1307545227.8278508,
+  "capital_inicial_escenario": 260413654,
+  "capital_inicial_h5_m13": 434610543,
+  "mes_estres_reserva": 9,
+  "capital_inicial_estres_reserva": 422446522,
+  "caja_m56": 1669259902.650995,
+  "saldo_banco_m56": 0.0,
+  "saldo_linea_m56": 0.0,
+  "tope_linea": 50000000
+}
