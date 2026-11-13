@@ -1,6 +1,7 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import { createRequire } from "node:module";
+import { execFileSync } from "node:child_process";
 import { fileURLToPath, pathToFileURL } from "node:url";
 
 const require = createRequire(path.join(process.env.D2_NODE_MODULES, "..", "package.json"));
@@ -15,6 +16,7 @@ const personal = wb.worksheets.add("Personal");
 const innovaciones = wb.worksheets.add("Innovaciones");
 const curva = wb.worksheets.add("Curva S");
 const indicadores = wb.worksheets.add("Indicadores");
+const dedicacion = wb.worksheets.add("Dedicación D3");
 
 async function read(name, range) {
   const source = await Workbook.fromCSV(await fs.readFile(path.join(folder,name),"utf8"),{sheetName:"CSV"});
@@ -36,6 +38,9 @@ function formulas(sheet,start,col,rows) {
   sheet.getRangeByIndexes(start,col,rows.length,rows[0].length).formulas = rows;
 }
 const raw = await read("AUD-17_FLUJO_INTEGRADO_PROVISIONAL.csv","A2:Z57");
+const demandCsv = execFileSync("git",["show","4070a7e:Informe-3/d3/datos/dedicacion_mensual_d3_resumen.csv"],{cwd:folder,encoding:"utf8"});
+const demandBook = await Workbook.fromCSV(demandCsv,{sheetName:"Demanda"});
+const demand = demandBook.worksheets.getItem("Demanda").getRange("A2:J54").values;
 const e25 = await read("AUD-18_CALENDARIO_INGRESOS_E25.csv","A2:J49");
 const hit = new Map(e25.filter(r=>r[0]==="implementacion").map(r=>[Number(r[4]),[r[2],Number(r[6])/100]]));
 init(parametros,["Parámetro","Valor","Criterio"],[39,18,86]);
@@ -63,15 +68,27 @@ parametros.getRange("B14:B15").formulas=[["=SUM(Costos!I2:I21)/(1-B2-B3)"],["=SU
 for(const address of ["B2:B3","B5:B7","B9:B11"]) parametros.getRange(address).setNumberFormat("0.000%");
 
 init(proveedores,["ID mensual","Mes","Bloque","Pagador","CLP netos","Fuente","IVA pagado","Crédito fiscal"],[19,9,24,17,19,49,16,17]);
-const vendor = raw.flatMap(r=>[
- [`D4-M${r[0]}`,Number(r[0]),"Base D4","audIT",Number(r[2]),"AUD-37 / calendario D4 conciliado",null,null],
+const ivaEquipo = new Map([[1,1852500],[3,15751217],[4,3548341]]);
+const vendor = raw.flatMap(r=>{
+ const month=Number(r[0]);
+ const ivaD4=(ivaEquipo.get(month)??0)+(month>=4?12760:0);
+ const firma=month<13?0:month<=15?73950:600840;
+ const ivaFirma=month<13?0:month<=15?14050:114160;
+ return [
+ [`D4-M${month}`,month,"Base D4","audIT",Number(r[2]),"AUD-37 / IVA parcial: equipos y SIM 5G",ivaD4||null,null],
  [`D3-M${r[0]}`,Number(r[0]),"Licencias D3","audIT",Number(r[3]),"AUD-26 / GitLab y SonarQube",null,null],
  [`D1-M${r[0]}`,Number(r[0]),"Calidad D1","audIT",Number(r[4]),"AUD-10 / calidad y capacitación",null,null],
  [`MAND-M${r[0]}`,Number(r[0]),"Equipos del mandante","Curimón",Number(r[8]),"D4-143 / compras informativas",null,null],
-]);
+ [`FEA-M${month}`,month,"Firma automática","audIT",firma,"4070a7e / ecert, estimación D3 por analogía",ivaFirma||null,null],
+ ];
+});
 data(proveedores,vendor);
-proveedores.getRange("E2:E225").setNumberFormat("#,##0");
-proveedores.getRange("G2:H225").format.fill="#FFF1CE";
+proveedores.getRange("E2:E281").setNumberFormat("#,##0");
+proveedores.getRange("G2:H281").format.fill="#FFF1CE";
+
+init(dedicacion,["Mes","Arquitectura","Liderazgo","Software","Frontend","Seguridad","Datos","QA","SRE","Horas D3","FTE nominal"],[9,...Array(10).fill(15)]);
+data(dedicacion,demand.map(r=>r.map(Number)));
+dedicacion.getRange("A57").values=[["Demanda D3 (4070a7e). 160 h/FTE nominal. Las horas no representan disponibilidad ni costo incremental."]];
 
 init(personal,["Mes","Dotación escenario","Ajuste confirmado","Costo integrado","Fuente / criterio"],[10,24,23,23,65]);
 data(personal,raw.map(r=>[Number(r[0]),Number(r[7]),null,null,"AUD-17_FLUJO_DE_CAJA.xlsx · escenario mensual, pendiente de conciliación"]));
@@ -89,23 +106,34 @@ personal.getRange("A65:E65").values=[["Preparación D3",72,null,null,"4.1/A11 ·
 
 init(innovaciones,["Innovación","Componente","Referencia CLP","Tratamiento","Fuente"],[13,32,22,64,45]);
 data(innovaciones,[
- [1,"Ingeniería Senior, 224 h",6720000,"Costo atribuible. Conciliar cobertura antes de integrar.","AUD-21 / E-26"],
+ [1,"Implementación atribuible, 480 h",14816000,"Dentro de EDT 12.1. No se suma al costo de personal.","4070a7e / D3"],
+ [1,"Soporte atribuible, 492 h",16072000,"M16–M56. Adicional solo por déficit de cobertura.","4070a7e / D3"],
+ [1,"Firma automática, neto",24856290,"Integrado en Proveedores, M13–M56. Estimación D3.","4070a7e / D3"],
+ [1,"Nube atribuible",132000,"Asignación dentro del presupuesto Azure D4.","4070a7e / D3"],
  [4,"Instalación y 12 meses de conectividad",550583,"Referencia por alta adicional. Cantidad pendiente.","AUD-21 / insumos D4"],
  [4,"Hardware por kit",900001,"Costo del mandante por alta adicional.","AUD-21 / insumos D4"],
  [4,"Soporte por mes",9000,"Costo unitario. Cobertura y pagador pendientes.","AUD-21 / insumos D4"],
  [4,"Recupero bruto anual",120700000,"Escenario de Curimón. Reparto pendiente.","AUD-21"],
 ]);
-innovaciones.getRange("C2:C6").setNumberFormat("#,##0");
+innovaciones.getRange("C2:C9").setNumberFormat("#,##0");
+innovaciones.getRange("A12:D16").values=[
+ ["Mes de alta","Altas adicionales","Soporte externo (meses)","Criterio"],
+ [null,null,null,"Cupo adicional sin comprometer hasta acreditar capacidad posterior a los 182 montajes base."],
+ ["Alta audIT",null,null,"Instalación más 12 meses de conectividad por alta."],
+ ["Hardware mandante",null,null,"Información del mandante, fuera de la caja audIT."],
+ ["Soporte audIT",null,null,"Presupuesto de sensibilidad si audIT asume el pago."],
+];
+formulas(innovaciones,13,1,[["=IF(ISNUMBER(B13),B13*C6,\"\")"],["=IF(ISNUMBER(B13),B13*C7,\"\")"],["=IF(AND(ISNUMBER(B13),ISNUMBER(C13)),B13*C13*C8,\"\")"]]);
 
-init(costos,["Mes","Base D4","Licencias","Calidad","Administración","Cierre","Personal","Otros confirmados","Base de precio","Comisión garantía","Egreso neto"],[8,17,17,17,17,17,17,20,18,19,18]);
+init(costos,["Mes","Base D4","Licencias","Calidad","Administración","Cierre","Personal","Otros confirmados","Base de precio","Comisión garantía","Egreso neto","Firma automática"],[8,17,17,17,17,17,17,20,18,19,18,19]);
 data(costos,raw.map(r=>[Number(r[0]),null,null,null,Number(r[5]),Number(r[6]),null,null,null,null,null]));
 formulas(costos,1,1,raw.map((_,i)=>{
- const row=i+2, first=2+i*4;
+ const row=i+2, first=2+i*5;
  return [`=Proveedores!E${first}`,`=Proveedores!E${first+1}`,`=Proveedores!E${first+2}`];
 }));
 formulas(costos,1,6,raw.map((_,i)=>{
  const r=i+2;
- return [`=Personal!D${r}`,null,`=SUM(B${r}:H${r})`,`=IF(A${r}='Parámetros'!$B$17,'Parámetros'!$B$14*'Parámetros'!$B$3,0)`,`=SUM(I${r}:J${r})`];
+ return [`=Personal!D${r}`,null,`=SUM(B${r}:H${r},L${r})`,`=IF(A${r}='Parámetros'!$B$17,'Parámetros'!$B$14*'Parámetros'!$B$3,0)`,`=SUM(I${r}:J${r})`,`=Proveedores!E${6+i*5}`];
 }));
 costos.getRange("H2:H57").format.fill="#FFF1CE";
 costos.getRange("B2:K57").setNumberFormat("#,##0");
@@ -115,7 +143,7 @@ data(flujo,Array.from({length:57},(_,i)=>[i+1,hit.get(i+1)?.[0]??null,hit.get(i+
 flujo.getRange("C2:C58").setNumberFormat("0%");
 flujo.getRange("D2:D57").format.fill="#FFF1CE";
 formulas(flujo,1,4,Array.from({length:57},(_,i)=>{
- const m=i+1,r=i+2,p=r-1, v=2+i*4;
+ const m=i+1,r=i+2,p=r-1, v=2+i*5;
  const bank=i?`V${p}`:"0", line=i?`T${p}`:"0", cash=i?`W${p}`:"0", credit=i?`N${p}`:"0";
  const param="'Parámetros'!", initial=i?"0":`${param}$B$4`;
  const available=`(${cash}+H${r}+O${r}+${initial}-P${r}-Q${r})`;
@@ -124,8 +152,8 @@ formulas(flujo,1,4,Array.from({length:57},(_,i)=>{
  `=IF(B${r}="H5",0,C${r}*${param}$B$14)+IF(A${r}=${param}$B$13,$C$13*${param}$B$14,0)+${i>=21?`${param}$B$15+D${p}`:"0"}`,
  m<=56?`=Costos!K${r}`:"=0",`=F${r}-G${r}`,
  `=E${r}*${param}$B$11`,`=F${r}*${param}$B$11`,
- m<=56?`=SUM(Proveedores!G${v}:G${v+2})`:"=0",
- m<=56?`=SUM(Proveedores!H${v}:H${v+2})`:"=0",
+ m<=56?`=SUM(Proveedores!G${v}:G${v+2},Proveedores!G${v+4})`:"=0",
+ m<=56?`=SUM(Proveedores!H${v}:H${v+2},Proveedores!H${v+4})`:"=0",
  `=MAX(0,I${r}-L${r}-${credit})`,`=MAX(0,${credit}+L${r}-I${r})`,
  `=${param}$B$12*(J${r}-K${r}-${i?`M${p}`:"0"})`,
  `=${bank}*${param}$B$6`,`=${line}*${param}$B$7`,
@@ -161,23 +189,19 @@ const f="'Flujo de Caja'!",p="'Parámetros'!";
 formulas(indicadores,1,1,[
  [`=NPV(${p}B10,${f}H2:H57)`],[`=IRR(${f}H2:H57,0.8)`],
  [`=NPV(${p}B10,${f}H2:H58)`],[`=MAX(${f}T2:T57)`],[`=MIN(${f}W2:W57)`],
- ["=SUMPRODUCT(--(COUNTIF(Proveedores!A2:A225,Proveedores!A2:A225)>1))"],[`=${f}F58`],
+ ["=SUMPRODUCT(--(COUNTIF(Proveedores!A2:A281,Proveedores!A2:A281)>1))"],[`=${f}F58`],
 ]);
 indicadores.getRange("B2:B8").setNumberFormat("#,##0;[Red](#,##0);–");
 indicadores.getRange("B3").setNumberFormat("0.00%");
 wb.recalculate();
 const get=(s,a)=>s.getRange(a).values[0][0];
-for(const [s,cell,expected] of [
- [indicadores,"B2",1227990935.865573],[indicadores,"B3",.8270703503195778],
- [indicadores,"B4",1307545227.8278506],[indicadores,"B5",49999999.26265542],[indicadores,"B7",0],
- [flujo,"W57",1669259902.650995],[flujo,"F58",142363950.61349693],
-]){
+for(const [s,cell,expected] of [[indicadores,"B7",0],[dedicacion,"J7",3354.2]]){
  const actual=get(s,cell);
  if(typeof actual!=="number"||Math.abs(actual-expected)>.01) throw new Error(`${s.name}!${cell}: ${actual} vs ${expected}`);
 }
 parametros.getRange("B13").values=[[13]];
 wb.recalculate();
-if(Math.abs(get(indicadores,"B2")-1223859441.7478087)>.01) throw new Error("No pasó sensibilidad H5");
+if(get(flujo,"F13")!==0 || get(flujo,"F14")<=0) throw new Error("No pasó sensibilidad H5");
 parametros.getRange("B13").values=[[12]];
 const originalVan=get(indicadores,"B2");
 personal.getRange("C2").values=[[1000000]];
@@ -191,7 +215,10 @@ if(Math.abs(get(flujo,"O2")+1000000)>.01 || Math.abs(get(flujo,"N2")-1000000)>.0
  throw new Error("IVA pagado y crédito fiscal no alimentan caja");
 }
 parametros.getRange("B12").values=[[0]];
-proveedores.getRange("G2:H2").values=[[null,null]];
+proveedores.getRange("G2:H2").values=[[1852500,null]];
 wb.recalculate();
+const signatureTotal=costos.getRange("L2:L57").values.flat().reduce((a,b)=>a+b,0);
+if(signatureTotal!==24856290) throw new Error("Total de firma incorrecto");
+console.log(JSON.stringify({firma:signatureTotal,van:get(indicadores,"B2"),cajaMinima:get(indicadores,"B6")}));
 const out = await SpreadsheetFile.exportXlsx(wb);
 await out.save(process.argv[2]);
