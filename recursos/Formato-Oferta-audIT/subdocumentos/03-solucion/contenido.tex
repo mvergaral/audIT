@@ -965,11 +965,7 @@ activa. En el mes 16 bloquea en toda la flota. Si la marcha blanca muestra un mo
 operación no puede absorber, se corrige el dato o la regla antes del paso a producción, nunca se apaga el
 bloqueo.
 
-Cada paso a producción ocurre en la segunda quincena del mes, después del cierre mensual de nueve días. La
-reversión es posible porque nada se pierde: los documentos de transporte ya emitidos son del sistema
-contable y no dependen de la plataforma, y los equipos a bordo conservan lo enviado durante 72 horas para
-reenviarlo tras una conmutación (\verSeccion{sec:4-dc-secundario}). La estabilización posterior a cada
-paso tiene dotación en los cinco terminales en el horario de relevo, que el Subdocumento 7 dimensiona.
+Cada paso a producción ocurre en la segunda quincena del mes, después del cierre mensual de nueve días. El procedimiento formal de reversión se rige por el protocolo de seis pasos establecido en el Formulario T-18 y verificado en el caso CP-SYS-20 (Formulario T-17): ante una degradación crítica no resuelta en 30 minutos, se conmuta el tráfico en API Gateway a la versión previa estable, garantizando cero pérdida de información gracias a la persistencia en buffer de 72 horas de los dispositivos a bordo (\verSeccion{sec:4-dc-secundario}) y la conciliación transaccional con el ERP. La estabilización posterior a cada paso tiene dotación en los cinco terminales en el horario de relevo, que el Subdocumento 7 dimensiona.
 
 % ----------------------------------------------------------------------------
 \subsection{Operación}\label{sec:3-operacion}

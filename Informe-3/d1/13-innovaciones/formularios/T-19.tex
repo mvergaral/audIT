@@ -80,8 +80,8 @@
   beneficio = {Incentivo de adhesión que no requiere pagar al transportista. Cada adherido amplía la jornada acreditada y la evidencia de espera que sostiene los cobros. Sin ingresos atribuidos en el flujo de caja},
   indicador = {Transportistas adheridos que emitieron al menos un expediente, de no existente a 50 \% de los adheridos. Verificaciones respondidas en no más de 5 segundos, 99 \%},
   medicion = {Mes 21 para el primer indicador. Mensual desde el mes 16 para el segundo},
-  riesgo = {Que el transportista no perciba utilidad, probabilidad media e impacto medio. Que los destinatarios no acepten el documento como prueba, probabilidad media e impacto alto. Que un conductor no consienta incluir su jornada},
-  mitigacion = {Primera emisión asistida en el terminal durante el enrolamiento. Entrevistas a destinatarios reales en el mes 4, antes de construir. Expediente con la jornada de los conductores que consintieron},
+  riesgo = {Que el transportista no perciba utilidad o los destinatarios rechacen el documento probatorio. Severidad inherente: Probabilidad Media (2) e Impacto Alto (3), Severidad $2 \times 3 = 6$ (Zona Media según escala S8)},
+  mitigacion = {Primera emisión asistida en el terminal durante el enrolamiento, entrevistas a destinatarios reales en el mes 4 antes de construir, y consentimiento opt-in de conductores. Severidad residual mitigada: Probabilidad Baja (1) e Impacto Bajo (1), Severidad Residual $1 \times 1 = 1$ (Zona Baja/Aceptable según escala S8)},
   contingencia = {Emisión automática mensual a los transportistas que lo pidan, sin acción de su parte}
 }
 % ------------------------------------------------------------- innovación 2
@@ -101,8 +101,8 @@
   beneficio = {Reducción de preparación desperdiciada y visitas evitables. Se estima con cantidades y costos unitarios documentados, menos el costo incremental. Sin ahorro garantizado ni base inventada.},
   indicador = {Reducir preparación inútil al menos 20 \% respecto de la línea base homologada. Validación al primer intento al menos 95 \% en cohorte de 20 intervenciones elegibles. Sustitución modular en hasta 30 min, dentro de la ventana normal. Metas propuestas.},
   medicion = {Línea base y contraste con planificación manual en M6; comparación por familia y terminal en M7–M9. Registro de causas, reintentos y denominadores.},
-  riesgo = {ETA incorrecta, kit o agente incompatible, escaso beneficio frente a coordinación manual y falta de adhesión o paso de terceros. Probabilidad media; impacto alto salvo beneficio insuficiente, de impacto medio.},
-  mitigacion = {Calidad y actualidad de ETA, confirmación del jefe de terminal, matriz de familias, ensayo previo, paquete firmado, reversión validada y comparación trazable.},
+  riesgo = {ETA incorrecta, kit o agente incompatible, o escaso beneficio frente a coordinación manual. Severidad inherente: Probabilidad Media (2) e Impacto Alto (3), Severidad $2 \times 3 = 6$ (Zona Media según escala S8)},
+  mitigacion = {Calidad y actualidad de ETA, confirmación del jefe de terminal, matriz de familias, ensayo previo, paquete firmado y reversión validada en $<30$ min. Severidad residual mitigada: Probabilidad Baja (1) e Impacto Medio (2), Severidad Residual $1 \times 2 = 2$ (Zona Baja según escala S8)},
   contingencia = {Abortar de forma segura y reprogramar cuando la ventana se acorte; método manual homologado y versión previa sin borrar eventos. Integración lógica de terceros sin intervención física no autorizada.}
 }
 % ------------------------------------------------------------- innovación 3
@@ -121,8 +121,8 @@
   beneficio = {Ningún semirremolque sale con la revisión técnica vencida. Mantención de semirremolques por kilometraje medido. Respaldo ante el cliente de la condición de la carga refrigerada},
   indicador = {Asignaciones con semirremolque propio verificado por medición, de no verificado al asignar a 95 \% o más. Semirremolques propios con kilometraje medido, 100 \% de los que tienen baliza. Viajes refrigerados con temperatura continua, 100 \%. Las dos últimas líneas base se miden en la Etapa 1},
   medicion = {Marcha blanca antes del mes 16. Tercer mes de operación. Primera temporada de diciembre a abril},
-  riesgo = {Acople falso con la baliza de un semirremolque vecino, probabilidad media e impacto alto. Temperatura bajo $-20$ °C en el paso cordillerano. Suplantación del identificador. Batería de menor duración},
-  mitigacion = {Señal estable y movimiento conjunto en los primeros minutos de marcha. Montaje a la sombra y prueba en el invierno de 2027 (meses 6 y 7). Lectura de portería como segundo control. Vigilancia del nivel de batería},
+  riesgo = {Acople falso con baliza vecina o exposición bajo $-20$ °C en paso cordillerano. Severidad inherente: Probabilidad Media (2) e Impacto Alto (3), Severidad $2 \times 3 = 6$ (Zona Media según escala S8)},
+  mitigacion = {Señal estable y movimiento conjunto en primeros minutos de marcha, sensor IP67 con rango industrial extendido y doble control en portería. Severidad residual mitigada: Probabilidad Baja (1) e Impacto Bajo (2), Severidad Residual $1 \times 2 = 2$ (Zona Baja según escala S8)},
   contingencia = {La verificación vuelve a la declaración con la lectura de portería como control. Modelo de mayor rango térmico en los semirremolques que cruzan. Reposición desde la reserva del 10 \%. Modelado de amenazas STRIDE en el Subdocumento 4, sección 4.1.21 (RT-26.07)}
 }
 % ------------------------------------------------------------- innovación 4
@@ -141,8 +141,8 @@
   beneficio = {Recupero de la espera hoy objetada en un 71 \% (Caso, numeral 4.7, p. 11), que financia el incentivo. Se valoriza en la Oferta Económica y no se compromete como ingreso},
   indicador = {Posiciones transmitidas fuera de la ventana de un viaje, cero. Transportistas adheridos con cobro respaldado que reciben su parte, 100 \%. Consentimientos revocados, menos de 10 \%},
   medicion = {Auditoría mensual desde el mes 13. Cada liquidación desde el mes 16. Mensual desde el mes 13},
-  riesgo = {Adhesión bajo el 70 \% en la Etapa 1, probabilidad media e impacto alto. Desconfianza en la ventana. Rechazo de la evidencia de espera por los clientes. Anexo que no resista revisión jurídica, probabilidad baja e impacto alto},
-  mitigacion = {Conversación desde el mes 2 con el beneficio a la vista antes de pedir el equipo. Ventana auditable por el dueño. Validación jurídica antes de construir},
+  riesgo = {Adhesión bajo 70 \% en Etapa 1 o reparos jurídicos a la retención de datos. Severidad inherente: Probabilidad Media (2) e Impacto Alto (4), Severidad $2 \times 4 = 8$ (Zona Media-Alta según escala S8)},
+  mitigacion = {Conversación desde el mes 2 con el beneficio a la vista antes de pedir el equipo, ventana auditable por el dueño y validación jurídica previa de anexos. Severidad residual mitigada: Probabilidad Baja (1) e Impacto Medio (2), Severidad Residual $1 \times 2 = 2$ (Zona Baja según escala S8)},
   contingencia = {Tres medidas del Subdocumento 3 si la adhesión no llega al 40 \% en el mes 9. Financiar el incentivo con el ahorro de la liquidación automática}
 }
 % ------------------------------------------------------------- innovación 5
