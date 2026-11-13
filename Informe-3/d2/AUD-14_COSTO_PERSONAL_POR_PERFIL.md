@@ -720,6 +720,24 @@ El escenario de una sola corrida se usa para planificar. **Las 16 h de 10.1 perm
 
 Fuentes: respuestas de D1 y D4 compartidas con D2. [T-12, RN-10](https://github.com/mvergaral/audIT/blob/0712c7f/recursos/Formato-Oferta-audIT/subdocumentos/03-solucion/formularios/T-12.tex#L598) · [S5, revocación y versión del permiso](https://github.com/mvergaral/audIT/blob/0712c7f/recursos/Formato-Oferta-audIT/subdocumentos/05-datos/contenido.tex#L112) · [D4, PREPROD e IoT Hub](https://github.com/mvergaral/audIT/blob/0712c7f/Informe-3/d4/4.2-nube-conectividad.md).
 
+#### CP-SEC-05 · Confirmación de D4 y cruce de las horas
+
+D4 confirmó la observación del iWave en la misma corrida de G13, con instrumentación habilitada por configuración sobre el candidato congelado. La instrumentación debe estar disponible antes del congelamiento y el ensayo debe registrar la versión y configuración utilizadas. El protocolo de D1 en `abc1962` exige evidencia del cese de captura local y de la conservación de la evidencia previa. La corrida queda planificada y pendiente de ejecución.
+
+| Mes | Preparación de D3 en 4.1/A11 | Horas por perfil | Cruce con el presupuesto base |
+| --- | --- | --- | --- |
+| M6 | Contrato de autorización local, vencimiento y revocación | Arquitectura 4, Software 8, Seguridad 4 | Identificar la fila de diseño del agente que cubre estas reglas. |
+| M7 | Control previo al registro y pruebas de componente | Software 16, QA 8 | Cruzar con la implementación y las pruebas ya previstas para firmware en 4.1. |
+| M8 | Instrumentación configurable y correlación con SQLite | Software 8, QA 4, SRE 4 | Verificar si el registro de captura, la versión del permiso y sus pruebas están incluidos en el agente base. |
+| M9 | Preparación del candidato y regresión de componente | Software 4, QA 8, SRE 4 | Comparar la regresión con CP-HW-03 de A11. Confirmar si comparten artefacto, escenario y ejecución antes de descontar horas. |
+| **Total** | | **72 h** | **Cobertura y déficit por confirmar.** |
+
+El escenario previo de **64 h de cierre de A11 en M9** incluye 16 h de QA y no desglosa horas de Software del agente ni de SRE. Dentro de esa reserva, el ensayo físico de desconexión CP-HW-03 contempla 8 h de QA. Es un posible cruce con la regresión de M9, cuya equivalencia debe verificarse antes de descontar horas. El total agregado de T-15 tampoco acredita disponibilidad por perfil. Las 72 h se mantienen en 4.1/A11 como demanda por conciliar, fuera de las 6.008 h de A09. Su costo atribuible de referencia es **CLP 2.016.000** a puntos medios de E-26. Con Software a CLP 30.000/h, la alternativa es **CLP 2.088.000**.
+
+Para la corrida compartida, D4 estima **7 h-persona** (5 de técnico y 2 de Operación/SRE), imputables dentro de las **16 h condicionales**. La estimación original de la reserva era de 8 h de QA, 4 h de Software y 4 h de Firmware. Hay que actualizar su composición con las 7 h de D4 y las horas de conducción y validación que confirme D1. La diferencia nominal de 9 h queda pendiente de asignación. Antes de liberar la reserva o cargar un adicional, conciliar cada actividad con su cobertura en G13, 10.1 y 4.1.
+
+Fuentes: [AUD-24, estimación y pendientes](https://linear.app/audit-fep/issue/AUD-24) · [D3, propuesta de cierre, apartado 10](https://linear.app/audit-fep/document/d3-propuesta-de-cierre-para-confirmar-con-d2-12-11-2026-7f09f8a47135) · [D1, actualización del protocolo CP-SEC-05](https://github.com/mvergaral/audIT/commit/abc1962393b1fff9a8b4e0be4c3aa81807994e6b).
+
 ### Revisión de la propuesta de cierre de D3
 
 | Bloque | Base propuesta para conciliar | Condición pendiente |
