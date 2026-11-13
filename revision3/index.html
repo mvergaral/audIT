@@ -1,0 +1,1201 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>audIT · Informe 3 · Modelo Económico y Costos frente a Venta</title>
+  <style>
+    @font-face {
+      font-family: 'AuditSans';
+      font-style: normal;
+      font-weight: 100 500;
+      font-display: block;
+      src: url('assets/fonts/AuditSans-Regular.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'AuditSans';
+      font-style: normal;
+      font-weight: 600 900;
+      font-display: block;
+      src: url('assets/fonts/AuditSans-Bold.woff2') format('woff2');
+    }
+
+    :root {
+      /* Tokens Oficiales de Identidad audIT (Revisión 2) */
+      --c-primary: #006b7d;        /* Teal institucional audIT */
+      --c-primary-light: #e7f3f6;  /* Fondo suave insignias */
+      --c-navy: #102d3e;           /* Azul marino profundo */
+      --c-muted: #48606e;          /* Texto secundario gris azulado */
+      --c-amber: #8a5100;          /* Ámbar de contingencia y riesgo */
+      --c-amber-light: #fff8ec;    /* Fondo ámbar suave */
+      --c-amber-border: #f2cf9d;   /* Borde ámbar */
+      --c-coral: #a13437;          /* Coral de alerta */
+      --c-emerald: #0f766e;        /* Verde cumplimiento */
+      --c-emerald-light: #e6f7f5;  /* Fondo verde suave */
+      --c-card-bg: #f4f8fa;        /* Fondo frío tarjetas audIT */
+      --c-card-alt: #ffffff;       /* Blanco puro */
+      --c-stroke: #c4d3dc;         /* Borde perimetral */
+      --c-stroke-subtle: #dbe5eb;  /* Separador sutil */
+      --c-line-sep: #bdced6;       /* Línea divisoria formal */
+      
+      --font-audit: 'AuditSans', 'Liberation Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      
+      /* Regla estricta: Letra mínima 16px */
+      --text-min: 16px;
+      --text-sm: 18px;
+      --text-base: 20px;
+      --text-md: 24px;
+      --text-lg: 30px;
+      --text-xl: 38px;
+      --text-2xl: 52px;
+      --text-title: 68px;
+      --text-hero: 94px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background-color: #0b1720;
+      font-family: var(--font-audit);
+      color: var(--c-navy);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Escenario Widescreen 1920x1080 con auto-escalado idéntico a Presentacion-Revision2 */
+    #stage {
+      width: 1920px;
+      height: 1080px;
+      position: absolute;
+      transform-origin: 0 0;
+      background: #ffffff;
+      overflow: hidden;
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.7);
+    }
+
+    /* Diapositivas sin animaciones (cambio instantáneo) */
+    .scene {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: #ffffff;
+      display: none;
+      user-select: none;
+    }
+
+    .scene.active {
+      display: block;
+    }
+
+    /* Línea inferior estándar institucional audIT */
+    .scene::after {
+      content: "";
+      position: absolute;
+      left: 96px;
+      right: 96px;
+      bottom: 104px;
+      height: 1px;
+      background: var(--c-line-sep);
+    }
+
+    /* Eyebrow / Sobretítulo institucional */
+    .eyebrow {
+      position: absolute;
+      left: 96px;
+      top: 62px;
+      font-size: 23px;
+      letter-spacing: 0.15em;
+      color: var(--c-primary);
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    /* Logo audIT oficial */
+    .brand {
+      position: absolute;
+      right: 96px;
+      top: 49px;
+      width: 142px;
+      height: 54px;
+      object-fit: contain;
+    }
+
+    /* Headline / Título principal */
+    .headline {
+      position: absolute;
+      left: 96px;
+      top: 130px;
+      width: 1728px;
+      font-size: var(--text-title);
+      line-height: 1.1;
+      font-weight: 700;
+      letter-spacing: -0.035em;
+      color: var(--c-navy);
+    }
+
+    .headline-accent {
+      color: var(--c-primary);
+      font-weight: 600;
+    }
+
+    .headline-subtitle {
+      font-size: var(--text-md);
+      font-weight: 500;
+      color: var(--c-muted);
+      margin-top: 8px;
+      letter-spacing: normal;
+    }
+
+    /* Área visual central de contenido */
+    .visual {
+      position: absolute;
+      left: 96px;
+      top: 288px;
+      width: 1728px;
+      height: 658px;
+      overflow: visible;
+    }
+
+    /* Fuente / Glosa contractual inferior */
+    .source {
+      position: absolute;
+      left: 96px;
+      bottom: 54px;
+      font-size: 19px;
+      color: var(--c-muted);
+      max-width: 1540px;
+    }
+
+    /* Folio de página */
+    .folio {
+      position: absolute;
+      right: 96px;
+      bottom: 52px;
+      font-size: 23px;
+      font-weight: 700;
+      color: var(--c-muted);
+      letter-spacing: 0.05em;
+    }
+
+    /* ============================================================== */
+    /* PORTADA FORMAL audIT (Exacta a Presentacion-Revision2)          */
+    /* ============================================================== */
+    .scene.cover .headline {
+      display: none;
+    }
+
+    .scene.cover .eyebrow {
+      top: 118px;
+      font-size: 24px;
+      letter-spacing: 0.16em;
+    }
+
+    .scene.cover .brand {
+      top: 100px;
+      width: 220px;
+      height: 80px;
+    }
+
+    .scene.cover .visual {
+      top: 215px;
+    }
+
+    .cover-badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 24px;
+      border-radius: 22px;
+      background: var(--c-primary-light);
+      border: 1.8px solid var(--c-primary);
+      color: var(--c-primary);
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-top: 12px;
+    }
+
+    .cover-title-hero {
+      font-size: var(--text-hero);
+      font-weight: 800;
+      color: var(--c-navy);
+      line-height: 1.02;
+      letter-spacing: -0.04em;
+      margin-top: 36px;
+    }
+
+    .cover-title-sub {
+      font-size: 53px;
+      font-weight: 700;
+      color: var(--c-primary);
+      line-height: 1.15;
+      margin-top: 12px;
+    }
+
+    .cover-tagline {
+      font-size: 29px;
+      font-weight: 500;
+      color: var(--c-muted);
+      margin-top: 16px;
+    }
+
+    .cover-divider {
+      width: 1640px;
+      height: 3px;
+      background: var(--c-stroke);
+      margin: 42px 0 34px 0;
+    }
+
+    .cover-company {
+      font-size: 35px;
+      font-weight: 700;
+      color: var(--c-navy);
+      letter-spacing: -0.01em;
+    }
+
+    .cover-meta {
+      font-size: 28px;
+      color: var(--c-muted);
+      margin-top: 10px;
+    }
+
+    .cover-truck-icon {
+      position: absolute;
+      right: 40px;
+      top: 90px;
+      width: 480px;
+      height: 300px;
+    }
+
+    /* ============================================================== */
+    /* COMPONENTES DE CONTENIDO Y TARJETAS                             */
+    /* ============================================================== */
+    .card {
+      background: var(--c-card-bg);
+      border: 2px solid var(--c-stroke);
+      border-radius: 14px;
+      padding: 24px 28px;
+      position: relative;
+    }
+
+    .card-accent-primary::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 8px;
+      border-radius: 14px 0 0 14px;
+      background: var(--c-primary);
+    }
+
+    .card-accent-navy::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 8px;
+      border-radius: 14px 0 0 14px;
+      background: var(--c-navy);
+    }
+
+    .card-accent-amber::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 8px;
+      border-radius: 14px 0 0 14px;
+      background: var(--c-amber);
+    }
+
+    .card-accent-emerald::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 8px;
+      border-radius: 14px 0 0 14px;
+      background: var(--c-emerald);
+    }
+
+    .card-label {
+      font-size: var(--text-min);
+      font-weight: 700;
+      color: var(--c-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 8px;
+    }
+
+    .metric-value {
+      font-size: 46px;
+      font-weight: 800;
+      color: var(--c-navy);
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+    }
+
+    .metric-sub {
+      font-size: var(--text-sm);
+      font-weight: 700;
+      color: var(--c-primary);
+      margin-top: 6px;
+    }
+
+    .metric-desc {
+      font-size: var(--text-min);
+      color: var(--c-muted);
+      line-height: 1.45;
+      margin-top: 10px;
+    }
+
+    /* Tablas Corporativas audIT */
+    .table-audit {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      font-size: var(--text-sm);
+      border: 2px solid var(--c-stroke);
+      border-radius: 12px;
+      overflow: hidden;
+      background: #ffffff;
+    }
+
+    .table-audit th {
+      background: #eef5f8;
+      color: var(--c-navy);
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: var(--text-min);
+      letter-spacing: 0.06em;
+      padding: 14px 20px;
+      text-align: left;
+      border-bottom: 2px solid var(--c-stroke);
+    }
+
+    .table-audit td {
+      padding: 15px 20px;
+      border-bottom: 1px solid var(--c-stroke-subtle);
+      color: var(--c-navy);
+    }
+
+    .table-audit tr:last-child td {
+      border-bottom: none;
+    }
+
+    .table-audit tr.total-row {
+      background: #e7f3f6;
+      font-weight: 700;
+    }
+
+    .table-audit tr.total-row td {
+      border-top: 2px solid var(--c-primary);
+      color: var(--c-navy);
+    }
+
+    .num-col {
+      text-align: right;
+      font-variant-numeric: tabular-nums;
+      font-family: var(--font-mono);
+      font-size: 19px;
+    }
+
+    /* Grillas utilitarias */
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+    }
+
+    /* Controles de navegación en pantalla */
+    #nav-controls {
+      position: fixed;
+      bottom: 18px;
+      right: 24px;
+      display: flex;
+      gap: 10px;
+      z-index: 999;
+      background: rgba(16, 45, 62, 0.85);
+      backdrop-filter: blur(8px);
+      padding: 6px 14px;
+      border-radius: 30px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .nav-btn {
+      background: none;
+      border: none;
+      color: #ffffff;
+      font-family: var(--font-audit);
+      font-size: var(--text-min);
+      font-weight: 700;
+      cursor: pointer;
+      padding: 6px 12px;
+      border-radius: 18px;
+      transition: background 0.15s;
+    }
+
+    .nav-btn:hover {
+      background: var(--c-primary);
+    }
+  </style>
+</head>
+<body>
+
+<div id="stage">
+
+  <!-- ============================================================== -->
+  <!-- SLIDE 1: PORTADA FORMAL audIT (Exacta a Presentacion-Revision2) -->
+  <!-- ============================================================== -->
+  <section class="scene cover active" data-slide="1">
+    <div class="eyebrow">PRESENTACIÓN ECONÓMICA / INFORME 3</div>
+    <img class="brand" src="assets/logo-audit.png" alt="audIT" />
+
+    <div class="visual">
+      <div class="cover-badge">TRANSPORTES CURIMÓN · TFEP-01/2026</div>
+      <h1 class="cover-title-hero">REVISIÓN 3</h1>
+      <h2 class="cover-title-sub">Costos frente a venta</h2>
+      <div class="cover-tagline">Informe 3 · Transportes Curimón S.A. · 13 de noviembre de 2026</div>
+
+      <div class="cover-divider"></div>
+
+      <div class="cover-company">audIT Soluciones Tecnológicas SpA</div>
+      <div class="cover-meta">Propuesta económica y modelo financiero para transporte de carga</div>
+
+      <!-- Camión Vectorial audIT Oficial (Idéntico a Presentacion-Revision2) -->
+      <div class="cover-truck-icon">
+        <svg viewBox="0 0 170 125" fill="none" stroke="#006b7d" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" style="width: 100%; height: 100%;">
+          <path d="M8 30h92v64H8z M100 51h34l25 25v18h-59 M113 58h16l16 19h-32"/>
+          <circle cx="38" cy="99" r="13" fill="#ffffff" stroke="#006b7d" stroke-width="4"/>
+          <circle cx="130" cy="99" r="13" fill="#ffffff" stroke="#006b7d" stroke-width="4"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="source">Transportes Curimón · TFEP-01/2026 · audIT Soluciones Tecnológicas SpA</div>
+    <div class="folio">01 / 08</div>
+  </section>
+
+
+  <!-- ============================================================== -->
+  <!-- SLIDE 2: RESUMEN EJECUTIVO Y CIFRAS GLOBALES                   -->
+  <!-- ============================================================== -->
+  <section class="scene" data-slide="2">
+    <div class="eyebrow">RESUMEN EJECUTIVO / CUADRO DE MANDO</div>
+    <img class="brand" src="assets/logo-audit.png" alt="audIT" />
+    <div class="headline">
+      Cifras Globales y Viabilidad Económica <span class="headline-accent">· Indicadores Clave M0–M56</span>
+      <div class="headline-subtitle">Consolidación de rentabilidad, horizonte contractual de 56 meses y holgura según Art. 44.1 (§7)</div>
+    </div>
+
+    <div class="visual">
+      <!-- Fila 1: 4 Tarjetas Macro Oficiales -->
+      <div class="grid-4" style="margin-bottom: 24px;">
+        <div class="card card-accent-navy">
+          <div class="card-label">Plazo Contractual</div>
+          <div class="metric-value">56 Meses</div>
+          <div class="metric-sub">20 m. Impl. + 36 m. Operación</div>
+          <div class="metric-desc">12 Hitos de pago (E-25) y 36 cuotas fijas de servicio continuo.</div>
+        </div>
+
+        <div class="card card-accent-primary">
+          <div class="card-label">Margen Consolidado</div>
+          <div class="metric-value" style="color: var(--c-primary);">18,50 %</div>
+          <div class="metric-sub">Sobre Ingresos Netos</div>
+          <div class="metric-desc">Tope consolidado de 20 % fijado en Art. 44.1 (§7 de las Bases).</div>
+        </div>
+
+        <div class="card card-accent-primary">
+          <div class="card-label">Rentabilidad Neta</div>
+          <div class="metric-value">1.235,0M</div>
+          <div class="metric-sub">VAN Base M0–M56 (CLP)</div>
+          <div class="metric-desc">Tasa WACC mensual de 1,0262 % (80 % deuda banco + 20 % socios).</div>
+        </div>
+
+        <div class="card card-accent-amber">
+          <div class="card-label">Recuperación (Payback)</div>
+          <div class="metric-value" style="color: var(--c-amber);">Mes 16</div>
+          <div class="metric-sub">Recuperación Descontada</div>
+          <div class="metric-desc">TIR mensual base de 83,6613 %. Retorno sostenido al cierre de Etapa 1.</div>
+        </div>
+      </div>
+
+      <!-- Fila 2: 3 Pilares Oficiales de Cierre -->
+      <div class="grid-3">
+        <div class="card">
+          <div class="card-label">Venta Total Neta Consolidada</div>
+          <div style="font-size: 34px; font-weight: 800; color: var(--c-navy); margin: 6px 0;">CLP 9.796,8M</div>
+          <div style="font-size: var(--text-min); color: var(--c-muted); line-height: 1.5;">
+            <strong>Implementación:</strong> CLP 4.618,8M (47,1 %)<br/>
+            <strong>Operación:</strong> CLP 5.178,0M (52,9 % en 36 cuotas)
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-label">Costo Total Consolidado</div>
+          <div style="font-size: 34px; font-weight: 800; color: var(--c-navy); margin: 6px 0;">CLP 7.984,4M</div>
+          <div style="font-size: var(--text-min); color: var(--c-muted); line-height: 1.5;">
+            <strong>Implementación:</strong> CLP 3.764,3M (costos directos + indirectos)<br/>
+            <strong>Operación:</strong> CLP 4.220,1M (nube, soporte, personal y enlaces)
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-label">Puntos de Equilibrio (Break-Even)</div>
+          <div style="font-size: 34px; font-weight: 800; color: var(--c-emerald); margin: 6px 0;">CLP 8.175,2M</div>
+          <div style="font-size: var(--text-min); color: var(--c-muted); line-height: 1.5;">
+            <strong>Venta a VAN cero:</strong> CLP 8.175,2M con escala uniforme.<br/>
+            <strong>Equilibrio nominal:</strong> CLP 7.984,4M con costos fijos del caso.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="source">Fila A (VAN/TIR) · Modelo Económico D1_PRESUPUESTO y COTEJO-CIERRE.md · TFEP-01/2026</div>
+    <div class="folio">02 / 08</div>
+  </section>
+
+
+  <!-- ============================================================== -->
+  <!-- SLIDE 3: COSTO, PRECIO Y MARGEN POR FASE                       -->
+  <!-- ============================================================== -->
+  <section class="scene" data-slide="3">
+    <div class="eyebrow">ESTRUCTURA DE COSTOS / MODELO COMERCIAL</div>
+    <img class="brand" src="assets/logo-audit.png" alt="audIT" />
+    <div class="headline">
+      Costo, Precio y Margen por Fase <span class="headline-accent">· Montos Netos en Millones de CLP</span>
+      <div class="headline-subtitle">Desglose oficial consolidado de costos directos, indirectos de soporte y margen industrial</div>
+    </div>
+
+    <div class="visual">
+      <div class="grid-2">
+        <div>
+          <table class="table-audit">
+            <thead>
+              <tr>
+                <th>Fase del Proyecto</th>
+                <th class="num-col">Costo Neto (M$)</th>
+                <th class="num-col">Venta Neta (M$)</th>
+                <th class="num-col">Margen %</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>1. Implementación (M1–M20)</strong><br/><span style="font-size: var(--text-min); color: var(--c-muted);">12 hitos contra entrega formal (E-25)</span></td>
+                <td class="num-col">3.764,3</td>
+                <td class="num-col" style="font-weight: 700;">4.618,8</td>
+                <td class="num-col" style="color: var(--c-primary); font-weight: 700;">18,50 %</td>
+              </tr>
+              <tr>
+                <td><strong>2. Operación (M21–M56)</strong><br/><span style="font-size: var(--text-min); color: var(--c-muted);">36 cuotas fijas de servicio continuo</span></td>
+                <td class="num-col">4.220,1</td>
+                <td class="num-col" style="font-weight: 700;">5.178,0</td>
+                <td class="num-col" style="color: var(--c-primary); font-weight: 700;">18,50 %</td>
+              </tr>
+              <tr class="total-row">
+                <td><strong>TOTAL CONSOLIDADO (M1–M56)</strong></td>
+                <td class="num-col" style="color: var(--c-navy);">7.984,4</td>
+                <td class="num-col" style="color: var(--c-navy); font-size: 21px;">9.796,8</td>
+                <td class="num-col" style="color: var(--c-primary); font-size: 21px;">18,50 %</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="card card-accent-emerald" style="margin-top: 24px;">
+            <div class="card-label">Margen sobre ventas según Art. 44.1 (§7 de las Bases)</div>
+            <div style="font-size: var(--text-base); color: var(--c-navy); line-height: 1.5;">
+              La licitación exige un margen comercial <strong>no superior al 20 %</strong> sobre ingresos netos. audIT estructura un margen uniforme del <strong>18,50 %</strong>, garantizando competitividad de tarifa y cumplimiento estricto de las bases.
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="card card-accent-navy" style="margin-bottom: 20px;">
+            <div class="card-label">Costos Indirectos y Atribución</div>
+            <div style="font-size: var(--text-base); color: var(--c-navy); line-height: 1.5; margin-top: 6px;">
+              Los costos indirectos ascienden a <strong>CLP 43,1 millones en implementación</strong> y <strong>CLP 63,0 millones en operación</strong>:
+            </div>
+            <div style="margin-top: 14px; display: flex; flex-direction: column; gap: 10px; font-size: var(--text-min);">
+              <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--c-stroke-subtle); padding-bottom: 6px;">
+                <span>• Administración central y coordinación:</span>
+                <strong class="num-col">Imputación directa</strong>
+              </div>
+              <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--c-stroke-subtle); padding-bottom: 6px;">
+                <span>• Boletas de garantía y seguros:</span>
+                <strong class="num-col">Fiel cumplimiento y anticipo</strong>
+              </div>
+              <div style="display: flex; justify-content: space-between;">
+                <span>• Cierre contractual y reversión:</span>
+                <strong class="num-col">Atribución en M56</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="card card-accent-amber">
+            <div class="card-label">Cobro en Mes 57 (Cierre de Régimen)</div>
+            <div class="metric-value" style="font-size: 38px;">$143,8M <span style="font-size: var(--text-base); font-weight: 600; color: var(--c-muted);">CLP residual</span></div>
+            <div class="metric-desc" style="font-size: var(--text-min);">
+              Cobro en M57 derivado del desfase natural de facturación de M56 (último mes de servicio) conciliado en el flujo de caja base.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="source">Fuente: Slide 2 de AUDIT-Informe3-Presentacion-Economica.pptx y COTEJO-CIERRE.md · TFEP-01/2026</div>
+    <div class="folio">03 / 08</div>
+  </section>
+
+
+  <!-- ============================================================== -->
+  <!-- SLIDE 4: ADQUISICIONES Y PROVEEDORES CLAVE                     -->
+  <!-- ============================================================== -->
+  <section class="scene" data-slide="4">
+    <div class="eyebrow">CADENA DE SUMINISTRO / ADQUISICIONES CRÍTICAS</div>
+    <img class="brand" src="assets/logo-audit.png" alt="audIT" />
+    <div class="headline">
+      Adquisiciones y Proveedores <span class="headline-accent">· Condiciones de Habilitación y Piloto</span>
+      <div class="headline-subtitle">Compras y servicios que condicionan la habilitación, el despliegue de campo y el piloto</div>
+    </div>
+
+    <div class="visual">
+      <div class="grid-3">
+        <!-- Paquete 1 -->
+        <div class="card card-accent-navy">
+          <div class="badge" style="font-size: 16px;">M1–M4 · INFRAESTRUCTURA</div>
+          <div style="font-size: var(--text-lg); font-weight: 700; color: var(--c-navy); margin: 12px 0 6px 0;">Respaldo y Cómputo</div>
+          <div style="font-size: var(--text-min); color: var(--c-muted); margin-bottom: 16px;">Sede San Bernardo y Terminales</div>
+          
+          <div style="font-size: var(--text-min); color: var(--c-navy); line-height: 1.5; border-top: 1px solid var(--c-stroke-subtle); padding-top: 12px;">
+            <p><strong>M1:</strong> Grupo electrógeno para respaldo de energía continua.</p>
+            <p style="margin-top: 8px;"><strong>M3:</strong> Habilitación de sala técnica central.</p>
+            <p style="margin-top: 8px;"><strong>M4:</strong> Cómputo de terminal en 4 sedes operacionales.</p>
+            <div style="margin-top: 12px; padding: 10px; background: #ffffff; border-radius: 8px; border: 1px solid var(--c-stroke-subtle); font-size: 16px;">
+              Clima y extinción de incendios por cotizar según especificación técnica.
+            </div>
+          </div>
+        </div>
+
+        <!-- Paquete 2 -->
+        <div class="card card-accent-primary">
+          <div class="badge" style="font-size: 16px;">M4–M6 · SERVICIOS NUBE</div>
+          <div style="font-size: var(--text-lg); font-weight: 700; color: var(--c-navy); margin: 12px 0 6px 0;">Azure y Conectividad M2M</div>
+          <div style="font-size: var(--text-min); color: var(--c-muted); margin-bottom: 16px;">Habilitación de H3 en Mes 6</div>
+          
+          <div style="font-size: var(--text-min); color: var(--c-navy); line-height: 1.5; border-top: 1px solid var(--c-stroke-subtle); padding-top: 12px;">
+            <p><strong>Nube:</strong> Azure Chile Central en 3 zonas de disponibilidad.</p>
+            <p style="margin-top: 8px;"><strong>Enlace:</strong> ExpressRoute dedicado habilitando H3 en M6.</p>
+            <p style="margin-top: 8px;"><strong>Red Móvil:</strong> Factibilidad de circuito y cobertura LTE M2M por confirmar con operadoras.</p>
+            <div style="margin-top: 12px; padding: 10px; background: #ffffff; border-radius: 8px; border: 1px solid var(--c-stroke-subtle); font-size: 16px;">
+              Garantiza redundancia y baja latencia hacia la torre de control.
+            </div>
+          </div>
+        </div>
+
+        <!-- Paquete 3 -->
+        <div class="card card-accent-amber">
+          <div class="badge badge-amber" style="font-size: 16px;">M5–M6 · PILOTO Y LOTE</div>
+          <div style="font-size: var(--text-lg); font-weight: 700; color: var(--c-navy); margin: 12px 0 6px 0;">Hardware de Campo y Red</div>
+          <div style="font-size: var(--text-min); color: var(--c-muted); margin-bottom: 16px;">Adquisición directa por Curimón</div>
+          
+          <div style="font-size: var(--text-min); color: var(--c-navy); line-height: 1.5; border-top: 1px solid var(--c-stroke-subtle); padding-top: 12px;">
+            <p><strong>Modalidad:</strong> Curimón adquiere el hardware de campo y red.</p>
+            <p style="margin-top: 8px;"><strong>Inventario informativo:</strong> CLP 225,4 millones.</p>
+            <p style="margin-top: 8px;"><strong>Hitos:</strong> H5 (Piloto 20 camiones) y despliegue del lote restante.</p>
+            <div style="margin-top: 12px; padding: 10px; background: #ffffff; border-radius: 8px; border: 1px solid var(--c-stroke-subtle); font-size: 16px;">
+              Equipos CAN-Bus J1939 y sensores de telemetría embarcada.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top: 24px; padding: 18px 28px; background: #eef5f8; border-color: var(--c-stroke);">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <div style="font-size: var(--text-base); color: var(--c-navy);">
+            <strong>Estrategia de audIT:</strong> Desarrolla e instala la plataforma. Compra licencias <strong>GitLab</strong> y <strong>SonarQube</strong>, y contrata nube, conectividad, enlace satelital y soporte especializado.
+          </div>
+          <div style="font-size: var(--text-min); font-weight: 700; color: var(--c-primary); text-transform: uppercase;">
+            Trazabilidad Total H1–H12
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="source">Fuente: Slide 3 de AUDIT-Informe3-Presentacion-Economica.pptx · TFEP-01/2026</div>
+    <div class="folio">04 / 08</div>
+  </section>
+
+
+  <!-- ============================================================== -->
+  <!-- SLIDE 5: CURVA S Y FLUJO DE CAJA                               -->
+  <!-- ============================================================== -->
+  <section class="scene" data-slide="5">
+    <div class="eyebrow">PLANIFICACIÓN FINANCIERA / CURVA S DE 56 MESES</div>
+    <img class="brand" src="assets/logo-audit.png" alt="audIT" />
+    <div class="headline">
+      Curva S Mensual y Flujo de Caja <span class="headline-accent">· Horizonte de 56 Meses</span>
+      <div class="headline-subtitle">Costos con intereses, facturación y caja financiada a lo largo de 56 meses</div>
+    </div>
+
+    <div class="visual">
+      <div style="display: flex; gap: 32px; height: 100%;">
+        <!-- Gráfico Vectorial Curva S Oficial con datos reales de D2 -->
+        <div class="card" style="flex: 2; padding: 20px; display: flex; flex-direction: column;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+            <div style="font-size: var(--text-base); font-weight: 700; color: var(--c-navy);">
+              Curva S Acumulada Oficial (M1 a M56 en Millones CLP)
+            </div>
+            <div style="display: flex; gap: 16px; font-size: var(--text-min);">
+              <span style="color: var(--c-primary); font-weight: 700;">— Facturación Acumulada</span>
+              <span style="color: var(--c-coral); font-weight: 700;">— Costos con Intereses</span>
+              <span style="color: var(--c-emerald); font-weight: 700;">— Saldo Caja Financiada</span>
+            </div>
+          </div>
+
+          <div style="flex: 1; position: relative;">
+            <svg viewBox="0 0 1000 440" style="width: 100%; height: 100%; overflow: visible;" xmlns="http://www.w3.org/2000/svg">
+              <!-- Rejilla y Guías -->
+              <line x1="60" y1="380" x2="980" y2="380" stroke="#c4d3dc" stroke-width="2"/>
+              <line x1="60" y1="290" x2="980" y2="290" stroke="#eef2f5" stroke-width="1.5" stroke-dasharray="4 4"/>
+              <line x1="60" y1="200" x2="980" y2="200" stroke="#eef2f5" stroke-width="1.5" stroke-dasharray="4 4"/>
+              <line x1="60" y1="110" x2="980" y2="110" stroke="#eef2f5" stroke-width="1.5" stroke-dasharray="4 4"/>
+              <line x1="60" y1="20"  x2="980" y2="20"  stroke="#eef2f5" stroke-width="1.5" stroke-dasharray="4 4"/>
+              <line x1="60" y1="20"  x2="60"  y2="380" stroke="#c4d3dc" stroke-width="2"/>
+
+              <!-- Etiquetas Eje Y -->
+              <text x="50" y="385" font-size="16" fill="#48606e" text-anchor="end">$0M</text>
+              <text x="50" y="295" font-size="16" fill="#48606e" text-anchor="end">$2.500M</text>
+              <text x="50" y="205" font-size="16" fill="#48606e" text-anchor="end">$5.000M</text>
+              <text x="50" y="115" font-size="16" fill="#48606e" text-anchor="end">$7.500M</text>
+              <text x="50" y="25"  font-size="16" fill="#48606e" text-anchor="end">$10.000M</text>
+
+              <!-- Hitos Verticales Notables -->
+              <!-- M9: Preparación -->
+              <line x1="207" y1="20" x2="207" y2="380" stroke="#f2cf9d" stroke-width="2" stroke-dasharray="6 4"/>
+              <text x="207" y="398" font-size="16" fill="#8a5100" font-weight="700" text-anchor="middle">M9 · Prep.</text>
+
+              <!-- M12: Hito 5 -->
+              <line x1="257" y1="20" x2="257" y2="380" stroke="#c4d3dc" stroke-width="1.5" stroke-dasharray="4 4"/>
+              <text x="257" y="416" font-size="16" fill="#48606e" text-anchor="middle">M12 · H5</text>
+
+              <!-- M16: Payback -->
+              <line x1="323" y1="20" x2="323" y2="380" stroke="#006b7d" stroke-width="2" stroke-dasharray="6 4"/>
+              <text x="323" y="398" font-size="16" fill="#006b7d" font-weight="700" text-anchor="middle">M16 · Payback</text>
+
+              <!-- M21: H12 e Inicio Operación -->
+              <line x1="404" y1="20" x2="404" y2="380" stroke="#102d3e" stroke-width="2"/>
+              <text x="404" y="416" font-size="16" fill="#102d3e" font-weight="700" text-anchor="middle">M21 · H12 / Oper.</text>
+
+              <!-- M56: Cierre -->
+              <line x1="980" y1="20" x2="980" y2="380" stroke="#102d3e" stroke-width="2"/>
+              <text x="980" y="398" font-size="16" fill="#102d3e" font-weight="700" text-anchor="middle">M56 · Cierre</text>
+
+              <!-- Curva Costo con Intereses (Rojo Coral) -->
+              <path d="M 60 376 Q 207 325 404 238 T 980 91" fill="none" stroke="#a13437" stroke-width="4" stroke-linecap="round"/>
+
+              <!-- Curva Facturación Venta Acumulada (Teal audIT) -->
+              <path d="M 60 380 L 126 367 L 207 338 L 257 305 L 323 272 L 404 208 L 980 27" fill="none" stroke="#006b7d" stroke-width="4.5" stroke-linecap="round"/>
+
+              <!-- Curva Saldo de Caja Financiada (Verde Esmeralda) -->
+              <path d="M 60 374 Q 207 380 257 368 T 323 368 T 404 350 T 980 320" fill="none" stroke="#0f766e" stroke-width="3.5" stroke-dasharray="7 5"/>
+
+              <!-- Marcador Payback en M16 -->
+              <circle cx="323" cy="272" r="7" fill="#006b7d" stroke="#ffffff" stroke-width="2.5"/>
+              <rect x="335" y="252" width="180" height="32" rx="6" fill="#e7f3f6" stroke="#006b7d" stroke-width="1.5"/>
+              <text x="425" y="273" font-size="16" fill="#006b7d" font-weight="700" text-anchor="middle">M16: Payback Descontado</text>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Hitos Clave de Caja y Liquidez -->
+        <div style="flex: 1; display: flex; flex-direction: column; gap: 16px;">
+          <div class="card card-accent-amber">
+            <div class="card-label">M9 · Preparación Operacional</div>
+            <div style="font-size: var(--text-lg); font-weight: 800; color: var(--c-amber);">Valle de Caja</div>
+            <div style="font-size: var(--text-min); color: var(--c-muted); margin-top: 4px;">
+              Etapa previa a facturación de H5 (piloto). Requiere línea de financiamiento bancaria para absorber desfases de certificación.
+            </div>
+          </div>
+
+          <div class="card card-accent-primary">
+            <div class="card-label">M16 · Retorno Sostenido</div>
+            <div style="font-size: var(--text-lg); font-weight: 800; color: var(--c-primary);">Recuperación Descontada</div>
+            <div style="font-size: var(--text-min); color: var(--c-muted); margin-top: 4px;">
+              El flujo neto acumulado descontado se consolida positivo en M16, asegurando retorno en la etapa de implantación.
+            </div>
+          </div>
+
+          <div class="card card-accent-emerald">
+            <div class="card-label">M21 · H12 e Inicio de Operación</div>
+            <div style="font-size: var(--text-lg); font-weight: 800; color: var(--c-emerald);">36 Meses de Régimen</div>
+            <div style="font-size: var(--text-min); color: var(--c-muted); margin-top: 4px;">
+              Cierre de implantación e inicio de servicio continuo con facturación mensual estable y caja positiva hasta M56.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="source">Fuente: Slide 4 de AUDIT-Informe3-Presentacion-Economica.pptx y D2_CURVA_S_OFERTA_D2.csv · TFEP-01/2026</div>
+    <div class="folio">05 / 08</div>
+  </section>
+
+
+  <!-- ============================================================== -->
+  <!-- SLIDE 6: EVALUACIÓN FINANCIERA Y SENSIBILIDAD                  -->
+  <!-- ============================================================== -->
+  <section class="scene" data-slide="6">
+    <div class="eyebrow">EVALUACIÓN FINANCIERA / MODELO VAN Y TIR</div>
+    <img class="brand" src="assets/logo-audit.png" alt="audIT" />
+    <div class="headline">
+      Evaluación y Liquidez <span class="headline-accent">· Fila A Mensual y Escenarios de Caja</span>
+      <div class="headline-subtitle">VAN base, TIR de Fila A, atraso de Hito 5 a M13 y financiamiento de estrés condicionado</div>
+    </div>
+
+    <div class="visual">
+      <div class="grid-2">
+        <!-- Columna Izquierda: Indicadores Base y Equilibrios -->
+        <div>
+          <div class="card card-accent-primary" style="margin-bottom: 20px;">
+            <div class="card-label">VAN Base y Tasa de Corte Contractual</div>
+            <div class="metric-value">CLP 1.235,0M</div>
+            <div class="metric-sub">Tasa de Descuento: 1,0262 % mensual (13,03 % TAE)</div>
+            <div class="metric-desc">
+              Ponderación estricta de bases: <strong>80 % deuda banco</strong> (0,95 % mensual) + <strong>20 % socios</strong> (1,33 % mensual).
+            </div>
+          </div>
+
+          <div class="grid-2">
+            <div class="card card-accent-emerald">
+              <div class="card-label">TIR y Recuperación</div>
+              <div style="font-size: 34px; font-weight: 800; color: var(--c-navy);">83,6613 %</div>
+              <div style="font-size: var(--text-min); color: var(--c-muted); margin-top: 6px;">
+                TIR mensual sobre Fila A · Recuperación descontada sostenida en <strong>M16</strong>.
+              </div>
+            </div>
+
+            <div class="card card-accent-navy">
+              <div class="card-label">Ventas de Equilibrio</div>
+              <div style="font-size: 34px; font-weight: 800; color: var(--c-primary);">CLP 8.175,2M</div>
+              <div style="font-size: var(--text-min); color: var(--c-muted); margin-top: 6px;">
+                Venta a VAN cero. Equilibrio nominal con costos fijos: <strong>CLP 7.984,4M</strong>.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Columna Derecha: Escenarios de Estrés H5 y Sensibilidad -->
+        <div>
+          <div class="card card-accent-amber">
+            <div class="card-label">Escenario de Estrés: Atraso de H5 a M13</div>
+            <div style="font-size: var(--text-base); color: var(--c-navy); line-height: 1.5; margin-top: 6px;">
+              Si el cobro de H5 se desplaza de M12 a M13 por demoras administrativas:
+            </div>
+
+            <div style="margin-top: 14px; display: flex; flex-direction: column; gap: 10px; font-size: var(--text-min);">
+              <div style="padding: 10px 14px; background: #ffffff; border-radius: 8px; border: 1.5px solid var(--c-stroke); display: flex; justify-content: space-between;">
+                <span>Déficit M12 con línea al tope ($50M):</span>
+                <strong style="color: var(--c-coral);">CLP 155,7 millones</strong>
+              </div>
+              <div style="padding: 10px 14px; background: #ffffff; border-radius: 8px; border: 1.5px solid var(--c-stroke); display: flex; justify-content: space-between;">
+                <span>Déficit M12 con reserva D4 antes de refuerzo:</span>
+                <strong style="color: var(--c-coral);">CLP 308,4 millones</strong>
+              </div>
+              <div style="padding: 10px 14px; background: var(--c-primary-light); border-radius: 8px; border: 1.5px solid var(--c-primary); display: flex; justify-content: space-between;">
+                <span>Refuerzo condicionado (+CLP 400M desde M1):</span>
+                <strong style="color: var(--c-emerald);">Caja M12: CLP 11,2M</strong>
+              </div>
+            </div>
+
+            <div style="margin-top: 14px; padding-top: 10px; border-top: 1px solid var(--c-stroke-subtle); font-size: 16px; color: var(--c-muted);">
+              <strong>Sensibilidad Paramétrica:</strong> Costos +5 % → VAN CLP 923,7M (TIR 17,32 %). Cobros −5 % → VAN CLP 862,0M (TIR 16,63 %). Meta de caja M12: CLP 10 millones asegurada.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="source">Fuente: Slide 5 de AUDIT-Informe3-Presentacion-Economica.pptx y COTEJO-CIERRE.md · TFEP-01/2026</div>
+    <div class="folio">06 / 08</div>
+  </section>
+
+
+  <!-- ============================================================== -->
+  <!-- SLIDE 7: VALORIZACIÓN DE LAS CINCO INNOVACIONES                -->
+  <!-- ============================================================== -->
+  <section class="scene" data-slide="7">
+    <div class="eyebrow">INNOVACIONES Y VALOR AGREGADO / BENEFICIOS CUANTIFICADOS</div>
+    <img class="brand" src="assets/logo-audit.png" alt="audIT" />
+    <div class="headline">
+      Cinco Innovaciones <span class="headline-accent">· Inversión, Operación y Beneficio Curimón</span>
+      <div class="headline-subtitle">Inversión, operación y beneficio para Curimón en montos netos en millones de CLP</div>
+    </div>
+
+    <div class="visual">
+      <table class="table-audit">
+        <thead>
+          <tr>
+            <th>Innovación Tecnológica audIT</th>
+            <th class="num-col">Inversión Capex</th>
+            <th class="num-col">Operación Opex</th>
+            <th>Criterio Técnico y Medición de Impacto</th>
+            <th class="num-col">Beneficio Monetario</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>1. Expediente Digital de Despacho</strong><br/><span style="font-size: 16px; color: var(--c-muted);">Firma biométrica y validación tributaria</span></td>
+            <td class="num-col">24,9</td>
+            <td class="num-col">Personal</td>
+            <td style="font-size: 16px;">Firma estimada 24,9M. Desarrollo y soporte atribuidos a personal propio.</td>
+            <td class="num-col" style="font-size: 16px; font-weight: 700;">Medir minutos evitados</td>
+          </tr>
+          <tr>
+            <td><strong>2. Optimización de Vacíos en Patios</strong><br/><span style="font-size: 16px; color: var(--c-muted);">Algoritmo de enlace y turnos cruzados</span></td>
+            <td class="num-col">16,6</td>
+            <td class="num-col">17,0</td>
+            <td style="font-size: 16px;">Desarrollo 16,6M y operación 17,0M atribuidos a horas de ingeniería.</td>
+            <td class="num-col" style="color: var(--c-amber); font-weight: 700; font-size: 16px;">Base en cero *</td>
+          </tr>
+          <tr>
+            <td><strong>3. Semirremolque Conectado (Acople y Frío)</strong><br/><span style="font-size: 16px; color: var(--c-muted);">Telemetría térmica y perno rey</span></td>
+            <td class="num-col">5,7</td>
+            <td class="num-col">4,0</td>
+            <td style="font-size: 16px;">Integración 5,7M y operación 4,0M estimadas. Medir acoples y eventos térmicos.</td>
+            <td class="num-col" style="color: var(--c-amber); font-weight: 700; font-size: 16px;">Base en cero *</td>
+          </tr>
+          <tr>
+            <td><strong>4. Control de Sobreestadías y Comodatos</strong><br/><span style="font-size: 16px; color: var(--c-muted);">Monitoreo de 34 comodatos en 182 camiones</span></td>
+            <td class="num-col">Flota</td>
+            <td class="num-col">Soporte</td>
+            <td style="font-size: 16px;">34 comodatos dentro de 182 montajes. Recupero bruto referencial 362,1M en 36 meses.</td>
+            <td class="num-col" style="color: var(--c-emerald); font-weight: 700;">Recupero 362,1M bruto</td>
+          </tr>
+          <tr>
+            <td><strong>5. Telemetría de Fatiga y Seguridad Vial</strong><br/><span style="font-size: 16px; color: var(--c-muted);">Cámara IA en cabina y alerta predictiva</span></td>
+            <td class="num-col">13,0</td>
+            <td class="num-col">10,1</td>
+            <td style="font-size: 16px;">Inversión 13,0M y soporte 10,1M. Beneficio a cuantificar con siniestralidad.</td>
+            <td class="num-col" style="font-size: 16px; font-weight: 700;">Por cuantificar</td>
+          </tr>
+          <tr class="total-row">
+            <td colspan="3"><strong>CRITERIO DE PRUDENCIA FINANCIERA</strong></td>
+            <td colspan="2" style="font-size: 16px;">
+              * Beneficio monetario base en cero hasta sustentar la estimación con mediciones empíricas en terreno.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="source">Fuente: Slide 6 de AUDIT-Informe3-Presentacion-Economica.pptx y COTEJO-CIERRE.md · TFEP-01/2026</div>
+    <div class="folio">07 / 08</div>
+  </section>
+
+
+  <!-- ============================================================== -->
+  <!-- SLIDE 8: AVANCE DEL PROTOTIPO INTERACTIVO                      -->
+  <!-- ============================================================== -->
+  <section class="scene" data-slide="8">
+    <div class="eyebrow">DEMOSTRACIÓN INTERACTIVA / PROTOTIPO OPERACIONAL</div>
+    <img class="brand" src="assets/logo-audit.png" alt="audIT" />
+    <div class="headline">
+      Demostración del Prototipo <span class="headline-accent">· Avance de Interfaz de Curimón</span>
+      <div class="headline-subtitle">Navegación interactiva, prueba de continuidad de misión crítica y verificación en vivo</div>
+    </div>
+
+    <div class="visual">
+      <div class="grid-2">
+        <div class="card card-accent-navy">
+          <div class="card-label">Ruta Oficial de Navegación Demostrativa</div>
+          <div style="font-size: var(--text-base); color: var(--c-navy); line-height: 1.55; margin-top: 10px;">
+            El prototipo está desplegado en el portal oficial y disponible para evaluación en vivo por la comisión:
+          </div>
+          
+          <div style="margin-top: 20px; padding: 22px; background: var(--c-primary-light); border: 2px dashed var(--c-primary); border-radius: 12px; text-align: center;">
+            <div style="font-size: var(--text-min); font-weight: 700; color: var(--c-primary); text-transform: uppercase;">Acceso en el Sitio Web Institucional:</div>
+            <div style="font-size: 24px; font-weight: 800; color: var(--c-navy); margin-top: 10px;">
+              Sitio audIT → Portal Clientes → Simulador Operativo en Vivo
+            </div>
+            <div style="font-size: var(--text-min); color: var(--c-muted); margin-top: 8px;">
+              Entorno interactivo conectado a la API de telemetría de Curimón
+            </div>
+          </div>
+
+          <div style="margin-top: 20px; font-size: var(--text-min); color: var(--c-muted); line-height: 1.5;">
+            Cumple con el estándar de demostración exigido en la Aclaración N.º 5 y acredita la resiliencia tecnológica antes del contrato.
+          </div>
+        </div>
+
+        <div class="card card-accent-primary" style="display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div class="card-label">Prueba de Continuidad Operacional en Vivo</div>
+            <div style="font-size: var(--text-lg); font-weight: 700; color: var(--c-navy); margin-top: 8px;">
+              Protocolo de Demostración (Ensayo de 15 Minutos)
+            </div>
+
+            <div style="margin-top: 18px; display: flex; flex-direction: column; gap: 14px; font-size: var(--text-min);">
+              <div style="padding: 12px 16px; background: #ffffff; border-radius: 8px; border: 1.5px solid var(--c-stroke); display: flex; gap: 12px; align-items: flex-start;">
+                <strong style="color: var(--c-amber); font-size: 20px;">1.</strong>
+                <div>
+                  <strong>Simular Pérdida de Cobertura Móvil:</strong> Se inyecta corte en enlace celular (Ruta 68 / Paso Los Libertadores). La interfaz confirma el almacenamiento local ininterrumpido en el búfer SQLite de cabina.
+                </div>
+              </div>
+
+              <div style="padding: 12px 16px; background: #ffffff; border-radius: 8px; border: 1.5px solid var(--c-stroke); display: flex; gap: 12px; align-items: flex-start;">
+                <strong style="color: var(--c-emerald); font-size: 20px;">2.</strong>
+                <div>
+                  <strong>Restablecer Cobertura Móvil:</strong> La interfaz ejecuta la sincronización atómica inmediata de eventos hacia la nube en Azure y muestra el mensaje de reconciliación exitosa sin pérdida de telemetría.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div style="padding: 14px 18px; background: #ffffff; border: 1.5px solid var(--c-stroke); border-radius: 10px; font-size: var(--text-min); color: var(--c-navy);">
+            <strong>Acreditación Fez:</strong> Acredita de manera empírica la resiliencia ante caídas de enlace y la integridad documental en ruta.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="source">Fuente: Slide 7 de AUDIT-Informe3-Presentacion-Economica.pptx y Prototipo en PaginaAudIT · TFEP-01/2026</div>
+    <div class="folio">08 / 08</div>
+  </section>
+
+</div>
+
+<!-- Controles Flotantes para Presentador -->
+<div id="nav-controls">
+  <button class="nav-btn" onclick="prevSlide()">◀ Anterior</button>
+  <span id="slide-indicator" style="color: #ffffff; font-weight: 700; font-size: 16px; display: flex; align-items: center; padding: 0 8px;">1 / 8</span>
+  <button class="nav-btn" onclick="nextSlide()">Siguiente ▶</button>
+  <button class="nav-btn" onclick="toggleFullScreen()">⛶ Pantalla Completa</button>
+</div>
+
+<script>
+  // Control de Diapositivas sin animaciones (Instantáneo)
+  const scenes = Array.from(document.querySelectorAll('.scene'));
+  const totalSlides = scenes.length;
+  let currentSlide = 0;
+
+  function updateSlide(index) {
+    if (index < 0) index = 0;
+    if (index >= totalSlides) index = totalSlides - 1;
+    currentSlide = index;
+
+    scenes.forEach((scene, i) => {
+      if (i === currentSlide) {
+        scene.classList.add('active');
+      } else {
+        scene.classList.remove('active');
+      }
+    });
+
+    const indicator = document.getElementById('slide-indicator');
+    if (indicator) {
+      indicator.textContent = `${currentSlide + 1} / ${totalSlides}`;
+    }
+  }
+
+  function nextSlide() {
+    if (currentSlide < totalSlides - 1) {
+      updateSlide(currentSlide + 1);
+    }
+  }
+
+  function prevSlide() {
+    if (currentSlide > 0) {
+      updateSlide(currentSlide - 1);
+    }
+  }
+
+  function toggleFullScreen() {
+    if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen().catch(err => {
+        console.error(`Error de pantalla completa: ${err.message}`);
+      });
+    } else {
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      }
+    }
+  }
+
+  // Navegación con teclado idéntica a Presentacion-Revision2
+  window.addEventListener('keydown', (e) => {
+    switch (e.key) {
+      case 'ArrowRight':
+      case 'ArrowDown':
+      case ' ':
+      case 'Enter':
+      case 'PageDown':
+        e.preventDefault();
+        nextSlide();
+        break;
+      case 'ArrowLeft':
+      case 'ArrowUp':
+      case 'PageUp':
+        e.preventDefault();
+        prevSlide();
+        break;
+      case 'Home':
+        e.preventDefault();
+        updateSlide(0);
+        break;
+      case 'End':
+        e.preventDefault();
+        updateSlide(totalSlides - 1);
+        break;
+      case 'f':
+      case 'F':
+        e.preventDefault();
+        toggleFullScreen();
+        break;
+    }
+  });
+
+  // Auto-escalado de Stage a cualquier resolución manteniendo 16:9 nítido
+  function fit() {
+    const stage = document.getElementById('stage');
+    if (!stage) return;
+    const s = Math.min(window.innerWidth / 1920, window.innerHeight / 1080);
+    stage.style.transform = `scale(${s})`;
+    stage.style.left = `${(window.innerWidth - 1920 * s) / 2}px`;
+    stage.style.top = `${(window.innerHeight - 1080 * s) / 2}px`;
+  }
+
+  window.addEventListener('resize', fit);
+  window.addEventListener('DOMContentLoaded', () => {
+    fit();
+    updateSlide(0);
+  });
+  fit();
+</script>
+
+</body>
+</html>
