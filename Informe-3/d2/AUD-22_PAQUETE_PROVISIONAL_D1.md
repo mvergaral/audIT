@@ -5,6 +5,7 @@
 - [Fila A de M1 a M56](AUD-22_FILA_A_PROVISIONAL.csv). CLP netos, cobros y egresos por mes. M0 = 0 en el escenario.
 - [Parámetros y conciliación de M57](AUD-22_PARAMETROS_PROVISIONALES.json). WACC mensual 1,0261894 %. Para el VAN usar la Fila A de M1 a M56. Para la TIR incluir M0 = 0 y usar periodicidad mensual. Si se informa anual, convertir mediante (1 + TIR mensual)^12 − 1.
 - [Flujo detallado](AUD-17_FLUJO_INTEGRADO_PROVISIONAL.csv). Incluye Fila C, deuda y las tres series de Curva S. La facturación final de operación queda por cobrar en M56. La sensibilidad incorpora ese cobro en M57 una sola vez.
+- [Curva S de 56 meses](AUD-19_CURVA_S_PROVISIONAL.pdf) e [indicadores de contraste](AUD-23_INDICADORES_PROVISIONALES.json). La TIR provisional de 82,71 % mensual responde al flujo de escenario, con cobros altos al comienzo. Verificar con D1 la sensibilidad al calendario antes de usarla para el cierre. El umbral de facturación supone que los costos se mantienen constantes y el mes de recuperación corresponde a la Fila A acumulada sin descuento.
 - Reproducción: ejecutar `python generar_flujo_provisional.py` desde este directorio. Los montos están sin redondear en los CSV para preservar la conciliación.
 
 ## Escenario y límites de uso

@@ -1,0 +1,30 @@
+{
+  "escenario": "Provisional, sin IVA de caja",
+  "tasa_mensual": 0.01026189409994624,
+  "van": 1227990935.865573,
+  "van_con_cobro_m57": 1307545227.8278506,
+  "van_con_h5_cobrado_en_m13": 1223859441.7478087,
+  "tir_mensual_raices_reales": [
+    0.8270703503195778
+  ],
+  "tir_anual_equivalente": [
+    1382.7678600327806
+  ],
+  "mes_recuperacion_simple_sostenida": 16,
+  "facturacion_equilibrio_costos_fijos_escenario_clp": 7923916593.2372465,
+  "fraccion_facturacion_de_equilibrio": 0.8149999999999998,
+  "sensibilidad_van_por_tasa_mensual": [
+    {
+      "tasa": 0.007761894099946239,
+      "van": 1318682430.7472372
+    },
+    {
+      "tasa": 0.01026189409994624,
+      "van": 1227990935.865573
+    },
+    {
+      "tasa": 0.01276189409994624,
+      "van": 1144693606.1182325
+    }
+  ]
+}
