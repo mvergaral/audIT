@@ -4,10 +4,10 @@
 
 | Entrada | Ubicación y uso |
 |---|---|
-| Proveedores | Bloques mensuales de D4, licencias y calidad/capacitación, con ID y fuente. Las compras del mandante aparecen como informativas. El control detecta IDs duplicados; la conciliación detallada por factura se hace al desglosar los bloques. |
-| Personal | Escenario mensual, ajuste editable y cruce de CP-SEC-05. La reserva de prueba se documenta y su costo atribuible se presenta por separado de la caja. |
+| Proveedores | Las 378 filas de D4 alimentan los subtotales por mes y pagador. Las compras del mandante aparecen como informativas. El neto mensual de audIT mantiene el ajuste de redondeo de CLP −1 en M56. |
+| Personal | La hoja Capacidad por perfil contiene 40 cruces de M9 y M21–M24. Cargar la disponibilidad acreditada y su fuente, calcular la brecha y estimar el costo de refuerzo. Solo la columna Ajuste aprobado llega a Personal. Evitar registrar el mismo ajuste en ambas hojas. CP-SEC-05 conserva 15 h de campaña dentro de la reserva de 16 h y 72 h de preparación registradas en la demanda de D3. |
 | Innovaciones | Referencias conocidas de INN-1 e INN-4. Cuando se confirme un importe incremental, cargarlo en Costos, «Otros confirmados», en el mes correspondiente. |
-| IVA | Registrar IVA pagado y crédito fiscal por separado, en el mes aplicable. El interruptor de IVA está apagado en el escenario publicado. La estructura supone liquidación del IVA débito neto al mes siguiente. |
+| IVA | Registrar IVA pagado y crédito fiscal por separado, en el mes aplicable. Para D4 se cargan en Detalle proveedores D4. El IVA referencial queda separado. El interruptor de IVA está apagado en el escenario publicado. La estructura supone liquidación del IVA débito neto al mes siguiente. |
 | H5 | Cambiar el mes de cobro a M13 en Parámetros para probar la sensibilidad. La facturación sigue en M12. |
 | Capital inicial | Entrada de escenario. Tras cambiar costos o cobros, revisar caja mínima y uso de línea y volver a dimensionar el financiamiento si corresponde. |
 
