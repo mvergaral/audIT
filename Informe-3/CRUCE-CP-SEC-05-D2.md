@@ -54,3 +54,30 @@ Mantener las 8 h de QA de M9 en la demanda. El trabajo potencialmente común es 
 Como sensibilidad, se simuló que las 72 h se compran íntegramente a los puntos medios de E-26, usando la Fila C del escenario combinado de H5 con CLP 400 millones adicionales. El desembolso neto de referencia es CLP 576.000 en M6, CLP 608.000 en M7, CLP 432.000 en M8 y CLP 400.000 en M9. Se conserva el tratamiento fiscal vigente y no se añaden comisiones. La caja de M12 pasa de CLP 11.223.065 a CLP 9.207.065, quedando CLP 792.935 bajo la meta de CLP 10 millones. Esta prueba dimensiona el impacto de comprar todas las horas. El presupuesto vigente conserva sus cifras hasta confirmar el costo incremental real.
 
 [Nómina AUD-17](d2/AUD-17_FLUJO_DE_CAJA.xlsx) · [Cruce de preparación D2](d2/AUD-14_COSTO_PERSONAL_POR_PERFIL.md) · [Estimación D3](d3/3.1-esfuerzo-perfiles.md) · [Planilla consolidada](AUDIT-Informe3-Modelo-Economico.xlsx) · [AUD-14 en Linear](https://linear.app/audit-fep/issue/AUD-14)
+
+## Minuta de cierre D2 · 13-11-2026
+
+Fuentes revisadas: nómina AUD-17, ficha de reservas de AUD-14 y comentarios recientes de AUD-14, AUD-15 y AUD-24. La ficha consultada tiene 34 filas y ninguna informa horas netas confirmadas. Para A11 se conserva la planificación semanal y el saldo por acreditar.
+
+| ID | Mes | Semana | Puesto propuesto | Ejecutor confirmado | h requeridas | h acreditadas | h compartidas verificadas | h por acreditar | Evidencia de reserva |
+|---|---|---|---|---|---:|---:|---:|---:|---|
+| 01 | M6 | S2 | Arquitecto de Solución | Pendiente | 4 | 0 | 0 | 4 | Pendiente |
+| 02 | M6 | S2 | Oficial de Seguridad | Pendiente | 4 | 0 | 0 | 4 | Pendiente |
+| 03 | M6 | S3 | Software A11 | Pendiente | 8 | 0 | 0 | 8 | Pendiente |
+| 04 | M7 | S2 | Software A11 | Pendiente | 16 | 0 | 0 | 16 | Pendiente |
+| 05 | M7 | S3 | QA A11 | Pendiente | 8 | 0 | 0 | 8 | Pendiente |
+| 06 | M8 | S2 | Software A11 | Pendiente | 8 | 0 | 0 | 8 | Pendiente |
+| 07 | M8 | S2 | Líder de Operación/SRE | Pendiente | 4 | 0 | 0 | 4 | Pendiente |
+| 08 | M8 | S3 | QA A11 | Pendiente | 4 | 0 | 0 | 4 | Pendiente |
+| 09 | M9 | S1 | Software A11 | Pendiente | 4 | 0 | 0 | 4 | Pendiente |
+| 10 | M9 | S1 | Líder de Operación/SRE | Pendiente | 4 | 0 | 0 | 4 | Pendiente |
+| 11 | M9 | S2 | QA A11 | Pendiente | 8 | 0 | 0 | 8 | Pendiente |
+| **Total** | | | | | **72** | **0** | **0** | **72** | |
+
+**QA y G13.** Se conservan las 8 h de QA de M9. D3/D4 deben aportar la tarea común, la duración y la evidencia para descontar alguna fracción. Las 15 h estimadas de G13 quedan dentro de las 16 h condicionales de 10.1. Las 4 h de SRE de M9 siguen pendientes de cruce con el cupo de apoyo.
+
+**Imputación.** El costo adicional confirmado permanece en CLP 0 mientras se acredita cobertura o se autoriza un refuerzo concreto. Las 72 h por acreditar representan demanda, con costo referencial máximo de CLP 2.016.000 a los puntos medios usados. Con el financiamiento aprobado y bajo el escenario combinado, ese desembolso reduce la caja M12 a CLP 9.207.065. Con la caja de referencia de CLP 11.223.065 y la meta de CLP 10 millones, un gasto adicional neto antes de M12 de hasta CLP 1.223.064 deja la meta cubierta bajo las mismas condiciones de la simulación. Recalcular con el importe, calendario e IVA efectivos si se confirma un refuerzo.
+
+**Responsables para completar la minuta.** D2 confirma las reservas con los titulares y registra su evidencia antes del cierre de AUD-14. D3 y D4 confirman el cruce de QA antes de descontar horas. D2 incorpora el déficit confirmado en AUD-15 y presenta a D1 cualquier ajuste de financiamiento necesario.
+
+[AUD-14](https://linear.app/audit-fep/issue/AUD-14) · [AUD-15](https://linear.app/audit-fep/issue/AUD-15) · [AUD-24](https://linear.app/audit-fep/issue/AUD-24)
