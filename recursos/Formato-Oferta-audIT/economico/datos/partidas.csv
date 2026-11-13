@@ -18,8 +18,8 @@ clave;concepto;moneda;valor;iva;planilla
 # ============================================================================
 #
 # Formulario E-21, 1.1: valores totales del proyecto
-implementacion;Valor total de la fase de implementación (Etapa 1 y Etapa 2);CLP;;si;
-operacion;Valor total de la fase de Operación por los 36 meses;CLP;;si;
+implementacion;Valor total de la fase de implementación (Etapa 1 y Etapa 2);CLP;4618802815;si;RESUMEN!H6
+operacion;Valor total de la fase de Operación por los 36 meses;CLP;5178008038;si;RESUMEN!H7
 proyecto;Valor total del proyecto;CLP;=implementacion+operacion;si;
 #
 # Formulario T-22, Informe 3: gastos que pide la planilla del mandante. Los
@@ -28,8 +28,8 @@ gasto-operacion-directo;Gastos de operación propios;CLP;;no;
 gasto-proveedores;Gastos asociados a proveedores, sumados a operación;CLP;;no;
 gasto-operacion;Gastos de operación;CLP;=gasto-operacion-directo+gasto-proveedores;no;
 gasto-inversion;Gastos de inversión;CLP;;no;
-gasto-administracion;Gastos administrativos;CLP;;no;
-gasto-rrhh;Gastos de recursos humanos;CLP;;no;
+gasto-administracion;Gastos administrativos;CLP;106128204;no;
+gasto-rrhh;Gastos de recursos humanos;CLP;6230636000;no;
 gasto-total;Costo total de la solución;CLP;=gasto-operacion+gasto-inversion+gasto-administracion+gasto-rrhh;no;
 #
 # Formulario E-21, 2.1: cuadro maestro de costos
@@ -39,17 +39,17 @@ costo-indirecto;Costos indirectos y overhead;CLP;;no;
 costo-total;Costo total;CLP;=costo-directo-implementacion+costo-directo-operacion+costo-indirecto;no;
 #
 # Formulario E-21, 2.2: evaluación financiera
-van;Valor actual neto (VAN);CLP;;no;
+van;Valor actual neto (VAN);CLP;1235043316;no;RESUMEN!G21
 #
 # Formulario T-22 y E-21, 2.7: valorización de las cinco innovaciones
 innovacion-1-inversion;Innovación tipo 1, inversión;CLP;;no;
 innovacion-1-costo;Innovación tipo 1, costo operacional incremental;CLP;;no;
 innovacion-1-beneficio;Innovación tipo 1, beneficio esperado;CLP;;no;
-innovacion-2-inversion;Innovación tipo 2, inversión;CLP;;no;
-innovacion-2-costo;Innovación tipo 2, costo operacional incremental;CLP;;no;
+innovacion-2-inversion;Innovación tipo 2, inversión;CLP;16576000;no;
+innovacion-2-costo;Innovación tipo 2, costo operacional incremental;CLP;16992000;no;
 innovacion-2-beneficio;Innovación tipo 2, beneficio esperado;CLP;;no;
-innovacion-3-inversion;Innovación tipo 3, inversión;CLP;;no;
-innovacion-3-costo;Innovación tipo 3, costo operacional incremental;CLP;;no;
+innovacion-3-inversion;Innovación tipo 3, inversión;CLP;5700000;no;
+innovacion-3-costo;Innovación tipo 3, costo operacional incremental;CLP;4032000;no;
 innovacion-3-beneficio;Innovación tipo 3, beneficio esperado;CLP;;no;
 innovacion-4-inversion;Innovación tipo 4, inversión;CLP;;no;
 innovacion-4-costo;Innovación tipo 4, costo operacional incremental;CLP;;no;
@@ -57,3 +57,13 @@ innovacion-4-beneficio;Innovación tipo 4, beneficio esperado;CLP;;no;
 innovacion-5-inversion;Innovación tipo 5, inversión;CLP;13000000;no;
 innovacion-5-costo;Innovación tipo 5, costo operacional incremental;CLP;10080000;no;
 innovacion-5-beneficio;Innovación tipo 5, beneficio esperado;CLP;;no;
+deficit-h5;deficit-h5;CLP;155747160;no;Sensibilidad!F5
+reserva-d4;reserva-d4;CLP;152699775;no;
+hardware-mandante;hardware-mandante;CLP;225384199;no;
+cobro-m57;cobro-m57;CLP;143833557;no;Indicadores!B8
+firma-inn1;firma-inn1;CLP;24856290;no;
+recupero-inn4;recupero-inn4;CLP;362100000;no;
+licencias-d3;licencias-d3;CLP;38032600;no;
+costo-fase-implementacion;Costo neto de implementación;CLP;3764324294;no;RESUMEN!C6
+costo-fase-operacion;Costo neto de operación;CLP;4220076551;no;RESUMEN!C7
+costo-proyecto;Costo neto total del proyecto;CLP;=costo-fase-implementacion+costo-fase-operacion;no;RESUMEN!C8

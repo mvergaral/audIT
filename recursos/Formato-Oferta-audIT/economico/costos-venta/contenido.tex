@@ -44,26 +44,27 @@ La instalación se ejecuta con personal interno de audIT. El soporte del fabrica
 
 \section{Curva S del proyecto}\label{sec:eco-curva-s}
 
-La curva S cubre los 56 meses de evaluación. Presenta costos acumulados con intereses, facturación acumulada por devengo y saldo de caja financiado. La amortización del principal se registra en caja. El saldo refleja el momento efectivo de cobro y permite identificar los meses de mayor necesidad de financiamiento.
+La curva S cubre los 56 meses de evaluación. Presenta costos acumulados con intereses, facturación acumulada por devengo y saldo de caja financiado. La \figref{eco-curva-s} presenta las series mensuales del modelo consolidado. La amortización del principal se registra en caja. El saldo refleja el momento efectivo de cobro y permite identificar los meses de mayor necesidad de financiamiento.
+
+\figura{economico/costos-venta/curva-s.pdf}{Costos con intereses, facturación y caja financiada acumulados}{eco-curva-s}
 
 \section{Análisis de costos de la solución}\label{sec:eco-costos}
 
-La \tabref{eco-gastos} desglosa los gastos de operación, inversión, administración y recursos humanos. Los servicios de proveedores se identifican por separado y se suman una sola vez al gasto de operación, conforme a T-22.
+La planilla desglosa personal, costos de terceros, calidad y capacitación, administración y cierre. Los costos de proveedores se registran una sola vez. Las licencias GitLab y SonarQube suman \montoPartida{licencias-d3}. La ejecución auxiliar en Azure pertenece al presupuesto de infraestructura. La compra del hardware de campo y red del mandante se informa por \montoPartida{hardware-mandante} en una hoja separada del flujo de audIT. El pagador de energía y combustible queda sujeto a confirmación.
 
-\tablaMontos{Costos de la solución por categoría de gasto}{eco-gastos}%
-  {gasto-operacion-directo, gasto-proveedores, gasto-inversion, gasto-administracion, gasto-rrhh}
-
-El presupuesto de referencia de infraestructura, nube, conectividad, soporte y otros servicios suma CLP 1.526.997.751 netos en 56 meses, incluidos CLP 863.430.586 de Azure. La reserva de CLP 152.699.775 se identifica por separado y su imputación mensual queda sujeta a conciliación. El bloque con reserva suma CLP 1.679.697.526. Las licencias de GitLab y SonarQube se registran en el presupuesto de software y las horas de instalación interna se concilian con recursos humanos. Las compras informativas de hardware de campo y red del mandante suman CLP 225.384.199 y quedan fuera del flujo de audIT, al igual que la energía de sala y gabinetes y el combustible del grupo electrógeno.
+La reserva de infraestructura asciende a \montoPartida{reserva-d4}. Se informa como provisión del presupuesto de riesgos y su desembolso se prueba en sensibilidad. Los gastos administrativos incluyen las garantías de fiel cumplimiento, primas, notaría y custodia de fuentes. Las bases asegurables y el overhead incremental siguen en conciliación.
 
 \subsection{Costos frente a venta}\label{sec:eco-venta}
 
-El cuadro maestro presenta los costos directos por fase y los indirectos. El valor ofertado se concilia con el cuadro de ingresos del modelo.
+La \tabref{eco-maestro} muestra el costo neto por fase. La comisión de correcto funcionamiento se atribuye a implementación y su salida se registra al constituir la garantía en M21.
 
-\tablaMontos{Cuadro maestro de costos}{eco-maestro}{costo-directo-implementacion, costo-directo-operacion, costo-indirecto, costo-total}
+\tablaMontos*{Costo neto por fase}{eco-maestro}{costo-fase-implementacion, costo-fase-operacion, costo-proyecto}
 
-\tablaMontos{Valor ofertado por fase}{eco-venta}{implementacion, operacion, proyecto}
+La \tabref{eco-venta} muestra el valor ofertado a partir de esos costos. El margen consolidado sobre ventas netas es 18,50\,\%, dentro del tope de 20\,\%. La métrica de utilidad sobre costo que conserva el Resumen de la plantilla equivale a 22,70\,\%.
 
-El margen consolidado se comprueba como EBITDA sobre ingresos netos y está sujeto al límite de 20\,\%. El precio y margen definitivos quedan pendientes de conciliación con el presupuesto de cierre.
+\tablaMontos{Valor ofertado por fase}{eco-venta}{implementacion, operacion}
+
+La implementación se factura con 12 hitos de E-25, en proporción 60/40. Los 36 servicios de operación se facturan en M21--M56 y se cobran en M22--M57. La última mensualidad asciende a \montoPartida{cobro-m57} y se concilia como cuenta por cobrar al cierre.
 
 \section{VAN y TIR de la solución}\label{sec:eco-van}
 
@@ -72,26 +73,28 @@ La evaluación utiliza el flujo libre mensual de la Fila A. El VAN descuenta los
 \begin{tabla}{Indicadores de la evaluación financiera}{eco-van}{L{60mm} X}
 Indicador & Valor \\ \midrule
 Horizonte de evaluación & 56 meses, \form{E-24}{73} \\
-Tasa de descuento & 1,0261894\,\% mensual antes de impuestos en el modelo de trabajo. Pondera 80\,\% de deuda al 0,9\,\% mensual y 20\,\% de capital propio al 20\,\% efectivo anual supuesto. \\
+Tasa de descuento & 1,0261894\,\% mensual antes de impuestos en el escenario consolidado. Pondera 80\,\% de deuda al 0,9\,\% mensual y 20\,\% de capital propio al 20\,\% efectivo anual supuesto. \\
 Valor actual neto (VAN) & \montoPartida{van} \\
-Tasa interna de retorno (TIR) & Pendiente de validar sobre la Fila A de cierre \\
+Tasa interna de retorno (TIR) & 83,6613\,\% mensual sobre la Fila A de evaluación \\
 \end{tabla}
 
-Los resultados definitivos se validarán sobre la misma versión del flujo. La liquidez se evalúa con la Fila C y la sensibilidad al atraso de cobros.
+El saldo descontado acumulado se recupera de forma sostenida en M16. El equilibrio nominal exige cubrir los costos netos fijados del escenario. La hoja Sensibilidad distingue ese umbral, el VAN y la liquidez. En base, el saldo mínimo de caja es cero. Si H5 se cobra en M13, la línea alcanza el límite y queda un déficit de \montoPartida{deficit-h5} en M12. El puente requiere disponibilidad, condiciones y fecha de giro acreditadas.
 
 \section{Valorización de las cinco innovaciones}\label{sec:eco-innovaciones}
 
-La \tabref{eco-innovaciones} separa la inversión, el costo operacional y el beneficio por innovación. El beneficio monetario del expediente verificable y de la anticipación circadiana queda pendiente de cuantificar. El escenario base prudente reconoce CLP 0 por programación de patio, verificación de acople y registro térmico adicional. El acople y el registro térmico se cuantificarán por separado. El kilometraje real corresponde al criterio 26. El recupero de sobreestadías se estima en CLP 120.700.000 brutos al año y CLP 362.100.000 brutos en 36 meses a régimen, bajo el supuesto de recuperar el 50\,\% del monto objetado. El beneficio neto de Curimón depende del reparto con los transportistas y se informa por separado de los ingresos de audIT.
+La \tabref{eco-innovaciones} resume el tratamiento de cada innovación. Los costos atribuidos a personal se concilian con las horas ya presupuestadas. Los beneficios de Curimón se mantienen separados de los ingresos de audIT.
 
-\tablaMontos*[fuente=condensada]{Valorización de las cinco innovaciones en el flujo de caja}{eco-innovaciones}%
-  {innovacion-1-inversion, innovacion-1-costo, innovacion-1-beneficio,
-   innovacion-2-inversion, innovacion-2-costo, innovacion-2-beneficio,
-   innovacion-3-inversion, innovacion-3-costo, innovacion-3-beneficio,
-   innovacion-4-inversion, innovacion-4-costo, innovacion-4-beneficio,
-   innovacion-5-inversion, innovacion-5-costo, innovacion-5-beneficio}
+\begin{tabla}[ancho=completo,fuente=condensada]{Tratamiento de las innovaciones}{eco-innovaciones}{L{32mm} X X}
+Innovación & Costo y carga en el modelo & Beneficio para Curimón \\ \midrule
+1. Expediente verificable & Firma automatizada presupuestada por \montoPartida{firma-inn1} en M13--M56. Desarrollo y soporte atribuidos a personal. & Monetización pendiente. Medir expedientes, tiempo de preparación y verificaciones. \\
+2. Programación de patio & D3 estima \montoPartida{innovacion-2-inversion} de desarrollo y \montoPartida{innovacion-2-costo} de operación atribuida. Cobertura de horas por conciliar. & Medir visitas y minutos de preparación evitados atribuibles a Curimón. \\
+3. Verificación de acople y registro térmico & D4 estima \montoPartida{innovacion-3-inversion} de integración y \montoPartida{innovacion-3-costo} de operación. Imputación incremental por conciliar. & Medir acoples detectados y eventos térmicos en series independientes. \\
+4. Comodato y recupero de sobreestadías & Los 182 montajes base se mantienen en el calendario. Las altas adicionales se evalúan como sensibilidad. & Recupero bruto referencial de \montoPartida{recupero-inn4} en 36 meses. El neto depende del reparto con transportistas. \\
+5. Prevención de fatiga & Talleres en M4 y calibración en M13--M15 cargados. Conciliar horas y partidas restantes con D1. & Monetización pendiente. Validar consumo evitado y siniestralidad con datos históricos. \\
+\end{tabla}
 
-El beneficio neto consolidado de Curimón queda pendiente de cuantificar. Los costos incrementales de audIT se asignan por mes y se concilian con el presupuesto base.
+Las innovaciones 2 y 3 reconocen cero beneficio monetario en el caso base. El beneficio de la innovación 5 queda pendiente. Los costos atribuidos informados por cada responsable se mantienen identificados hasta completar su cruce con la planilla.
 
 \section{Planilla de cálculo}\label{sec:eco-planilla}
 
-La planilla reúne el Resumen del mandante, los parámetros, los costos e ingresos, los proveedores, el financiamiento, la curva S y los indicadores. Los cuadros económicos se cotejan con las hojas correspondientes de la misma versión. El flujo mensual presenta el total del período y el saldo acumulado.
+El archivo consolidado reúne el Resumen del mandante, los parámetros, los costos e ingresos, los proveedores, el financiamiento, la curva S y los indicadores. Los cuadros económicos se cotejan con las hojas correspondientes de la misma versión. El flujo mensual presenta el total del período y el saldo acumulado.

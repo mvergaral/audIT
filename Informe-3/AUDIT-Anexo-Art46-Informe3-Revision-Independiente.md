@@ -177,10 +177,10 @@ La valorización de las innovaciones y los montos de las respuestas a riesgos se
 
 ## Referencias
 
-- Transportes Curimón S.A. (2026). *Bases Administrativas TFEP-01-2026* (FEP01.26), arts. 40 (p. 27), 45–47 (p. 29), 50.2 (p. 30) y 53 (p. 31), formularios T-9 a T-17 (pp. 62–65), T-20 (p. 66), T-22 (pp. 69–70) y E-25. [Texto de las bases](../06_Repositorios_Git/repo/texto/FEP01_26_Bases_Administrativas_TFEP_01_2026_3.md).
-- Transportes Curimón S.A. (2026). *Bases Técnicas Transversales TFEP-01-2026* (FEP02.26), §§1.5–1.6 y RT-02.04. [Texto de las bases](../06_Repositorios_Git/repo/texto/FEP02_26_Bases_Tecnicas_Transversales_TFEP_01_2026.md).
-- Transportes Curimón S.A. (2026). *Bases Técnicas del Caso 10: Transporte de Carga* (FEP03.10.26), capítulos 13, 17, 18 y 19. [Texto de las bases](../06_Repositorios_Git/repo/texto/FEP03_10_26_Caso_10_Transporte_de_Carga_Bases_Tecnicas_del_Caso.md).
-- *Comunicado 9. Uso de inteligencia artificial generativa en los subdocumentos* (2026). [Texto del comunicado](../06_Repositorios_Git/repo/texto/Comunicado_09.md).
-- *Comunicado 10. Estructura obligatoria de las propuestas preparatorias y técnica final* (2026), §§1–2, 5, 7 y 9. [Texto del comunicado](../06_Repositorios_Git/repo/texto/Comunicado_10.md).
+- Transportes Curimón S.A. (2026). *Bases Administrativas TFEP-01-2026* (FEP01.26), arts. 40 (p. 27), 45–47 (p. 29), 50.2 (p. 30) y 53 (p. 31), formularios T-9 a T-17 (pp. 62–65), T-20 (p. 66), T-22 (pp. 69–70) y E-25. [Texto de las bases](../texto/FEP01_26_Bases_Administrativas_TFEP_01_2026_3.md).
+- Transportes Curimón S.A. (2026). *Bases Técnicas Transversales TFEP-01-2026* (FEP02.26), §§1.5–1.6 y RT-02.04. [Texto de las bases](../texto/FEP02_26_Bases_Tecnicas_Transversales_TFEP_01_2026.md).
+- Transportes Curimón S.A. (2026). *Bases Técnicas del Caso 10: Transporte de Carga* (FEP03.10.26), capítulos 13, 17, 18 y 19. [Texto de las bases](../texto/FEP03_10_26_Caso_10_Transporte_de_Carga_Bases_Tecnicas_del_Caso.md).
+- *Comunicado 9. Uso de inteligencia artificial generativa en los subdocumentos* (2026). [Texto del comunicado](../texto/Comunicado_09.md).
+- *Comunicado 10. Estructura obligatoria de las propuestas preparatorias y técnica final* (2026), §§1–2, 5, 7 y 9. [Texto del comunicado](../texto/Comunicado_10.md).
 - *audIT. Primera revisión del Informe 2* (2026), pp. 1–47. [PDF de revisión](<G10 - AUDIT - Primera Revisión Informe 2.pdf>).
-- audIT. (2026). *Subdocumento 7. Plan de trabajo, EDT, cronograma e implantación*, versión 3.0, y Formularios T-14 y T-15 de preparación final. [Subdocumento 7](../06_Repositorios_Git/repo/recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/preparacion-final/SOBRE2_AUDIT_SUBDOC07_20261125.pdf) · [T-14](../06_Repositorios_Git/repo/recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/preparacion-final/AUDIT-Formulario-T-14.pdf) · [T-15](../06_Repositorios_Git/repo/recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/preparacion-final/AUDIT-Formulario-T-15.pdf).
+- audIT. Fuentes de S7 y formularios T-14/T-15. Los folios citados corresponden a los ejemplares revisados. [Fuentes versionadas](../recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/).
