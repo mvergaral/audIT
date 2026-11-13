@@ -19,6 +19,7 @@ const indicadores = wb.worksheets.add("Indicadores");
 const dedicacion = wb.worksheets.add("Dedicación D3");
 const detalleD4 = wb.worksheets.add("Detalle proveedores D4");
 const capacidad = wb.worksheets.add("Capacidad por perfil");
+const escenarios = wb.worksheets.add("Escenarios de caja");
 
 async function read(name, range) {
   const source = await Workbook.fromCSV(await fs.readFile(path.join(folder,name),"utf8"),{sheetName:"CSV"});
@@ -255,6 +256,50 @@ detalleD4.getRange("H2:I2").values=[[null,null]];
 wb.recalculate();
 const signatureTotal=costos.getRange("L2:L57").values.flat().reduce((a,b)=>a+b,0);
 if(signatureTotal!==24856290) throw new Error("Total de firma incorrecto");
+// Las simulaciones usan el mismo motor del Excel. Sus resultados se registran
+// como capturas y se restauran las entradas antes de exportar.
+const results=[];
+function capturar(nombre){
+ wb.recalculate();
+ const caja=get(indicadores,"B6"), linea=get(indicadores,"B5");
+ if(!Number.isFinite(caja)||!Number.isFinite(linea)||linea>50000000.01) throw new Error(nombre);
+ results.push([nombre,caja,linea,Math.max(0,-caja),get(flujo,"W57")]);
+}
+capturar("Base publicada");
+const refuerzos=[...Array(40)].map((_,i)=>{
+ const [month,perfil]=asignaciones[i];
+ if(month===9&&perfil==="Seguridad") return [448800];
+ if(month===9&&perfil==="SRE") return [659200];
+ if(month>=21&&perfil==="Datos") return [2112000];
+ if(month>=21&&perfil==="QA") return [740000];
+ return [null];
+});
+capacidad.getRange("H2:H41").values=refuerzos;
+capturar("Refuerzo nominal focalizado");
+capacidad.getRange("H2:H41").values=refuerzos.map(()=>[null]);
+const ivaPorMes=new Map();
+for(const r of d4){
+ if(r[1]==="audIT") ivaPorMes.set(Number(r[0]),(ivaPorMes.get(Number(r[0]))??0)+Number(r[6]??0));
+}
+const ivaInputs=raw.map((r,i)=>(ivaPorMes.get(i+1)??0)+Number(vendor[i*5+4][8]??0));
+if(ivaInputs.reduce((a,b)=>a+b,0)!==26551048) throw new Error("Base referencial IVA");
+parametros.getRange("B12").values=[[1]];
+for(let i=0;i<56;i++) proveedores.getRange(`G${6+i*5}:H${6+i*5}`).values=[[ivaInputs[i],ivaInputs[i]]];
+capturar("IVA referencial, crédito en mismo mes");
+for(let i=0;i<56;i++) proveedores.getRange(`H${6+i*5}`).values=[[ivaInputs[i-1]??0]];
+capturar("IVA referencial, crédito un mes después");
+capacidad.getRange("H2:H41").values=refuerzos;
+capturar("Refuerzo e IVA con crédito diferido");
+capacidad.getRange("H2:H41").values=refuerzos.map(()=>[null]);
+for(let i=0;i<56;i++) proveedores.getRange(`G${6+i*5}:H${6+i*5}`).values=[[null,null]];
+parametros.getRange("B12").values=[[0]];
+init(escenarios,["Escenario capturado","Caja mínima CLP","Mayor uso de línea","Déficit sin cubrir","Caja M56"],[44,21,22,22,21]);
+data(escenarios,results);
+escenarios.getRange("B2:E6").setNumberFormat("#,##0;[Red](#,##0);–");
+escenarios.getRange("A8").values=[["Capital inicial y precios según el modelo. Déficit = caja negativa tras la línea. Las capturas no se recalculan al editar."]];
+wb.recalculate();
+if(Math.abs(get(indicadores,"B2")-originalVan)>.01) throw new Error("El escenario base no fue restaurado");
+console.log(JSON.stringify(results));
 console.log(JSON.stringify({firma:signatureTotal,van:get(indicadores,"B2"),cajaMinima:get(indicadores,"B6")}));
 const out = await SpreadsheetFile.exportXlsx(wb);
 await out.save(process.argv[2]);
