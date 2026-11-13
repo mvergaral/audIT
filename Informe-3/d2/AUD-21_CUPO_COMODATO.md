@@ -1,6 +1,6 @@
 # AUD-21 · Cupo adicional de comodato de INN-4
 
-**Decisión de D2 pendiente.** Conservar los 182 montajes base, incluidos los 34 terceros sin equipo. Los otros 192 terceros, con equipo propio, son la población potencial para el cupo adicional. La agenda disponible permite estimar la carga base y el costo unitario, pero falta acreditar un cupo positivo. Mantener vacío el campo del cupo aprobado. Un escenario de control con cero altas tiene CLP 0 de diferencial y sirve para verificar que las partidas base se cuenten una sola vez. [Aporte de D2](APORTE_ECONOMICO_INNOVACIONES_1_Y_4.md) · [Presupuesto D4](../d4/4.1-presupuesto-equipos.md)
+**Alcance base aprobado por D2 el 12 de noviembre de 2026.** Se conservan los 182 montajes, incluidos los 34 terceros sin equipo. Las altas adicionales se evalúan como sensibilidad. Los otros 192 terceros, con equipo propio, son la población potencial para un cupo adicional. Cualquier compromiso adicional requiere acreditar visitas, turnos y presupuesto. El diferencial de altas adicionales en el escenario base es CLP 0. [Decisión D2](D2_DECISIONES_PERSONAL_Y_COMODATO.md) · [Presupuesto D4](../d4/4.1-presupuesto-equipos.md)
 
 ## Capacidad acreditable
 
