@@ -28,4 +28,15 @@ Se simulan CLP 26.551.048 de IVA de compra referencial de equipos, SIM y firma. 
 | IVA con crédito diferido | 49.059.629 | 0 |
 | Refuerzo e IVA con crédito diferido | 49.827.125 | 0 |
 
-El último escenario conserva **CLP 172.875** de holgura frente al tope. Es un control de cierre mensual con precios recalculados. Una prueba con precios congelados, pagos intramensuales o IVA de otros proveedores puede arrojar otro resultado.
+El último escenario con precios recalculados conserva **CLP 172.875** de holgura frente al tope.
+
+## Prueba con precios fijos
+
+Se congelan los precios de la base y se conserva el capital inicial de CLP 260.413.654. Se aplican el refuerzo focalizado y el IVA referencial con crédito diferido un mes.
+
+| Cobro de H5 | Máximo de línea (CLP) | Déficit mensual sin cubrir (CLP) |
+|---|---:|---:|
+| M12 | 50.000.000 | 167.629 |
+| M13 | 50.000.000 | 161.790.931 |
+
+El déficit es el máximo saldo negativo de cierre después de usar la línea. Sirve para medir la brecha de caja del escenario. El aporte inicial requerido se debe recalcular con las tasas y el calendario de financiamiento. La prueba se limita a cierres mensuales e IVA referencial de equipos, SIM y firma. Para comprometer refuerzo, primero acreditar la brecha de personal y volver a dimensionar la liquidez con precios y fechas aprobados.

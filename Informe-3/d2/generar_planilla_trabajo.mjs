@@ -266,6 +266,8 @@ function capturar(nombre){
  results.push([nombre,caja,linea,Math.max(0,-caja),get(flujo,"W57")]);
 }
 capturar("Base publicada");
+const preciosBase=parametros.getRange("B14:B15").values;
+const formulasPrecio=parametros.getRange("B14:B15").formulas;
 const refuerzos=[...Array(40)].map((_,i)=>{
  const [month,perfil]=asignaciones[i];
  if(month===9&&perfil==="Seguridad") return [448800];
@@ -290,13 +292,19 @@ for(let i=0;i<56;i++) proveedores.getRange(`H${6+i*5}`).values=[[ivaInputs[i-1]?
 capturar("IVA referencial, crédito un mes después");
 capacidad.getRange("H2:H41").values=refuerzos;
 capturar("Refuerzo e IVA con crédito diferido");
+parametros.getRange("B14:B15").values=preciosBase;
+capturar("Refuerzo e IVA, precios fijos");
+parametros.getRange("B13").values=[[13]];
+capturar("Refuerzo, IVA y H5 M13, precios fijos");
+parametros.getRange("B13").values=[[12]];
+parametros.getRange("B14:B15").formulas=formulasPrecio;
 capacidad.getRange("H2:H41").values=refuerzos.map(()=>[null]);
 for(let i=0;i<56;i++) proveedores.getRange(`G${6+i*5}:H${6+i*5}`).values=[[null,null]];
 parametros.getRange("B12").values=[[0]];
 init(escenarios,["Escenario capturado","Caja mínima CLP","Mayor uso de línea","Déficit sin cubrir","Caja M56"],[44,21,22,22,21]);
 data(escenarios,results);
-escenarios.getRange("B2:E6").setNumberFormat("#,##0;[Red](#,##0);–");
-escenarios.getRange("A8").values=[["Capital inicial y precios según el modelo. Déficit = caja negativa tras la línea. Las capturas no se recalculan al editar."]];
+escenarios.getRange("B2:E8").setNumberFormat("#,##0;[Red](#,##0);–");
+escenarios.getRange("A10").values=[["Capital inicial constante. Precios recalculados salvo corridas de precios fijos. Déficit = caja negativa tras la línea. Capturas estáticas."]];
 wb.recalculate();
 if(Math.abs(get(indicadores,"B2")-originalVan)>.01) throw new Error("El escenario base no fue restaurado");
 console.log(JSON.stringify(results));
