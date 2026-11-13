@@ -41,11 +41,11 @@ La aprobación corresponde a la modelación de la licitación. La disponibilidad
 | D1 y D2 | Disponibilidad de financiamiento ante atraso de H5 y contingencia | Monto, fecha, instrumento, costo y holgura acreditados. Recalcular caja con el instrumento real. |
 | D1 y D2 | IVA de proveedores, seguros y overhead | Condiciones tributarias por proveedor, términos de las pólizas y conciliación de overhead con RRHH y R-24. |
 | D1 y D2 | Horas de calidad, PCU y personal | T-15 y E-26 conciliados con ejecutores y disponibilidad. Identificar las 72 h de preparación de CP-SEC-05. |
-| D1 y D2 | Innovación 5 | Conciliar inversión y operación D1 con talleres, calibración, personal y refuerzo. |
+| D1 y D2 | Innovación 5 | Los montos concilian con talleres, calibración, desarrollo y soporte. Sigue pendiente acreditar cobertura por ejecutor e IVA de calibración. |
 | D2 y D3 | Innovaciones 1 y 2, licencias y firma | Acreditar cobertura de horas, condición comercial de Sonar y firma, y base de medición del beneficio para Curimón. |
 | D2 y D4 | Innovaciones 3 y 4, suministros y reserva | Relacionar costos con partidas, confirmar energía y combustible, validar reparto de recuperos y calendario de uso de la reserva. |
 | D1–D4 | Anexo Art. 46 | Revisar la evidencia y los folios de cada cambio. El anexo de origen registra 43 observaciones sin cierre acreditado. |
-| Equipo | Prototipo navegable y validación de entrega | [Acceso al sitio audIT](https://carlosabarza.github.io/PaginaAudIT/#equipo). El sitio ofrece «Simulador Operativo en Vivo». Quedan por comprobar el recorrido completo y la validación humana del expediente. |
+| Equipo | Prototipo navegable y validación de entrega | [Acceso al sitio audIT](https://carlosabarza.github.io/PaginaAudIT/#equipo). El sitio ofrece «Simulador Operativo en Vivo». Recorrido verificado el 13-11-2026: Portal Clientes → Simulador Operativo en Vivo → Simular Pérdida de Cobertura Celular → Restablecer Cobertura Móvil. La interfaz mostró el búfer local y la confirmación de reconciliación. Queda la validación humana y el ensayo completo de exposición. |
 
 Regeneración de la planilla desde la raíz del repositorio con PowerShell 7 y Excel de escritorio:
 
