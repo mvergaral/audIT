@@ -31,7 +31,7 @@ Se conservaron los rótulos, las fórmulas y las celdas combinadas de RESUMEN. E
 | D2 y D3 | Innovaciones 1 y 2, licencias y firma | Acreditar cobertura de horas, condición comercial de Sonar y firma, y base de medición del beneficio para Curimón. |
 | D2 y D4 | Innovaciones 3 y 4, suministros y reserva | Relacionar costos con partidas, confirmar energía y combustible, validar reparto de recuperos y calendario de uso de la reserva. |
 | D1–D4 | Anexo Art. 46 | Revisar la evidencia y los folios de cada cambio. El anexo de origen registra 43 observaciones sin cierre acreditado. |
-| Equipo | Prototipo navegable y validación de entrega | URL accesible del avance real, prueba de navegación y validación humana de documento, planilla y exposición. |
+| Equipo | Prototipo navegable y validación de entrega | [Acceso al sitio audIT](https://carlosabarza.github.io/PaginaAudIT/#equipo). El sitio ofrece «Simulador Operativo en Vivo». Quedan por comprobar el recorrido completo y la validación humana del expediente. |
 
 Regeneración de la planilla desde la raíz del repositorio con PowerShell 7 y Excel de escritorio:
 
