@@ -1,6 +1,6 @@
 # Modelo editable de trabajo D2
 
-`D2_MODELO_TRABAJO.xlsx` actualiza el escenario de f9ce7b0 con el aporte D3 de 4070a7e. Las hojas conectan costos, precios, facturación, cobros, caja financiada, Curva S y VAN/TIR. M57 se usa para conciliar el cobro de la última mensualidad. El CSV de Fila A de 262ead9 corresponde a la versión anterior.
+`D2_MODELO_TRABAJO.xlsx` actualiza el escenario de f9ce7b0 con el aporte D3 de 4070a7e. Las hojas conectan costos, precios, facturación, cobros, caja financiada, Curva S y VAN/TIR. La [Fila A de este Excel](AUD-22_FILA_A_MODELO_TRABAJO.csv) incluye M0–M56 y M57 como conciliación. Se verificó que su VAN a 1,0261894 % mensual coincide con el valor calculado en el Excel.
 
 | Entrada | Ubicación y uso |
 |---|---|
