@@ -431,38 +431,6 @@
       grid-template-columns: repeat(2, 1fr);
       gap: 28px;
     }
-
-    /* Controles de navegación en pantalla */
-    #nav-controls {
-      position: fixed;
-      bottom: 18px;
-      right: 24px;
-      display: flex;
-      gap: 10px;
-      z-index: 999;
-      background: rgba(16, 45, 62, 0.85);
-      backdrop-filter: blur(8px);
-      padding: 6px 14px;
-      border-radius: 30px;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-    }
-
-    .nav-btn {
-      background: none;
-      border: none;
-      color: #ffffff;
-      font-family: var(--font-audit);
-      font-size: var(--text-min);
-      font-weight: 700;
-      cursor: pointer;
-      padding: 6px 12px;
-      border-radius: 18px;
-      transition: background 0.15s;
-    }
-
-    .nav-btn:hover {
-      background: var(--c-primary);
-    }
   </style>
 </head>
 <body>
@@ -1089,14 +1057,6 @@
 
 </div>
 
-<!-- Controles Flotantes para Presentador -->
-<div id="nav-controls">
-  <button class="nav-btn" onclick="prevSlide()">◀ Anterior</button>
-  <span id="slide-indicator" style="color: #ffffff; font-weight: 700; font-size: 16px; display: flex; align-items: center; padding: 0 8px;">1 / 8</span>
-  <button class="nav-btn" onclick="nextSlide()">Siguiente ▶</button>
-  <button class="nav-btn" onclick="toggleFullScreen()">⛶ Pantalla Completa</button>
-</div>
-
 <script>
   // Control de Diapositivas sin animaciones (Instantáneo)
   const scenes = Array.from(document.querySelectorAll('.scene'));
@@ -1115,11 +1075,6 @@
         scene.classList.remove('active');
       }
     });
-
-    const indicator = document.getElementById('slide-indicator');
-    if (indicator) {
-      indicator.textContent = `${currentSlide + 1} / ${totalSlides}`;
-    }
   }
 
   function nextSlide() {
@@ -1177,6 +1132,19 @@
         toggleFullScreen();
         break;
     }
+  });
+
+  // Avance con clic del mouse o pasador de diapositivas
+  document.getElementById('stage').addEventListener('click', (e) => {
+    if (e.clientX > window.innerWidth / 2) {
+      nextSlide();
+    } else {
+      prevSlide();
+    }
+  });
+  document.getElementById('stage').addEventListener('contextmenu', (e) => {
+    e.preventDefault();
+    prevSlide();
   });
 
   // Auto-escalado de Stage a cualquier resolución manteniendo 16:9 nítido
