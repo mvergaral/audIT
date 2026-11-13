@@ -4,6 +4,8 @@ Corte GitHub 8c950fa y planilla consolidada en la rama de cierre. Las partidas d
 
 ## D1, D2 y D3 · Personal y CP-SEC-05
 
+[Cruce por perfil, mes y celda de nómina](CRUCE-CP-SEC-05-D2.md).
+
 Linear acepta la coordinación nominal para la entrega. La ficha de reservas de AUD-14 y la matriz INN-5 de AUD-15 conservan vacíos los campos de ejecutor, aceptación y horas netas acreditadas. El Excel consolidado tiene 40 cruces de capacidad y ninguno registra horas disponibles acreditadas.
 
 | Partida | Mes y base de cálculo | Neto CLP | Estado |
