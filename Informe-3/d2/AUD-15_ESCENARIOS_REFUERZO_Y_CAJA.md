@@ -40,3 +40,9 @@ Se congelan los precios de la base y se conserva el capital inicial de CLP 260.4
 | M13 | 50.000.000 | 161.790.931 |
 
 El déficit es el máximo saldo negativo de cierre después de usar la línea. Sirve para medir la brecha de caja del escenario. El aporte inicial requerido se debe recalcular con las tasas y el calendario de financiamiento. La prueba se limita a cierres mensuales e IVA referencial de equipos, SIM y firma. Para comprometer refuerzo, primero acreditar la brecha de personal y volver a dimensionar la liquidez con precios y fechas aprobados.
+
+## Financiamiento para el escenario H5 en M13
+
+Con precios fijos, refuerzo focalizado, IVA referencial con crédito diferido y H5 en M13, el menor capital inicial en pesos enteros que cubre los cierres mensuales en el modelo es **CLP 434.348.059**, CLP 173.934.405 sobre la base. Con el reparto 80/20, corresponde aproximadamente a CLP 347.478.447 de banco y CLP 86.869.612 de socios. La línea llega al tope redondeado de CLP 50 millones. La holgura es inferior a un peso. El generador verifica que el umbral cubra caja y que un peso menos produzca déficit.
+
+Es una sensibilidad con el calendario de desembolsos, intereses y amortización del modelo. Antes de adoptar este capital, confirmar disponibilidad y verificar caja intramensual y margen de seguridad. La base permanece en CLP 260.413.654 y conserva H5 en M12.

@@ -296,6 +296,33 @@ parametros.getRange("B14:B15").values=preciosBase;
 capturar("Refuerzo e IVA, precios fijos");
 parametros.getRange("B13").values=[[13]];
 capturar("Refuerzo, IVA y H5 M13, precios fijos");
+const capitalBase=get(parametros,"B4");
+const cubreCaja=capital=>{
+ parametros.getRange("B4").values=[[capital]];
+ wb.recalculate();
+ return get(indicadores,"B6")>=0;
+};
+let desde=capitalBase, hasta=capitalBase*2;
+while(!cubreCaja(hasta)){
+ hasta*=2;
+ if(hasta>100000000000) throw new Error("Financiamiento fuera de rango");
+}
+while(desde<hasta){
+ const medio=Math.floor((desde+hasta)/2);
+ if(cubreCaja(medio)) hasta=medio;
+ else desde=medio+1;
+}
+if(!cubreCaja(desde)||cubreCaja(desde-1)) throw new Error("Umbral de financiamiento no reproducible");
+cubreCaja(desde);
+capturar("H5 M13 con capital dimensionado");
+escenarios.getRange("A12:B15").values=[
+ ["Capital inicial para H5 M13",desde],
+ ["Aumento sobre capital base",desde-capitalBase],
+ ["Componente bancario",desde*get(parametros,"B5")],
+ ["Aporte propio",desde*(1-get(parametros,"B5"))],
+];
+escenarios.getRange("B12:B15").setNumberFormat("#,##0");
+parametros.getRange("B4").values=[[capitalBase]];
 parametros.getRange("B13").values=[[12]];
 parametros.getRange("B14:B15").formulas=formulasPrecio;
 capacidad.getRange("H2:H41").values=refuerzos.map(()=>[null]);
@@ -303,11 +330,12 @@ for(let i=0;i<56;i++) proveedores.getRange(`G${6+i*5}:H${6+i*5}`).values=[[null,
 parametros.getRange("B12").values=[[0]];
 init(escenarios,["Escenario capturado","Caja mínima CLP","Mayor uso de línea","Déficit sin cubrir","Caja M56"],[44,21,22,22,21]);
 data(escenarios,results);
-escenarios.getRange("B2:E8").setNumberFormat("#,##0;[Red](#,##0);–");
-escenarios.getRange("A10").values=[["Capital inicial constante. Precios recalculados salvo corridas de precios fijos. Déficit = caja negativa tras la línea. Capturas estáticas."]];
+escenarios.getRange("B2:E9").setNumberFormat("#,##0;[Red](#,##0);–");
+escenarios.getRange("A10").values=[["Capital base salvo la última corrida. Precios recalculados salvo corridas de precios fijos y H5 dimensionado. Capturas estáticas."]];
 wb.recalculate();
 if(Math.abs(get(indicadores,"B2")-originalVan)>.01) throw new Error("El escenario base no fue restaurado");
 console.log(JSON.stringify(results));
+console.log(JSON.stringify({capitalBase,capitalH5:desde,aumento:desde-capitalBase}));
 console.log(JSON.stringify({firma:signatureTotal,van:get(indicadores,"B2"),cajaMinima:get(indicadores,"B6")}));
 const out = await SpreadsheetFile.exportXlsx(wb);
 await out.save(process.argv[2]);
