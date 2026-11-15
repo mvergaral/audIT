@@ -1,6 +1,6 @@
 # Adenda A-6 · Corrección económica del Informe 3, versión 3.2
 
-**Responsable:** Persona 8 · **Fecha:** 15 de noviembre de 2026 · **Herramienta:** Claude Opus 5.5 en Claude Code · **Nivel:** Alto en cálculo y redacción técnica de la planilla.
+**Responsable:** Matías Vergara (Persona 8), Analista de Planificación y Calidad · **Fecha:** 15 de noviembre de 2026 · **Herramienta:** Claude Opus 5.5 en Claude Code · **Nivel:** Alto en cálculo y redacción técnica de la planilla.
 
 ## Alcance de la intervención
 
@@ -18,6 +18,8 @@ Las bases se consultaron solo con `tools/buscar.py` (E-24, E-25, Art. 73, Art. 7
 
 Recálculo completo con LibreOffice: cero celdas con error, identidad de caja con diferencia menor a 1 CLP, controles de `Control de entrega` en cero y cinco pruebas de propagación (`probar_32.py`). La réplica de la 3.1 en LibreOffice coincide en 38.831 de 38.835 valores; las cuatro diferencias son TIR de escenarios sin convergencia.
 
-## Pendiente de revisión humana
+## Revisión humana
 
-Las pruebas del asistente no equivalen a revisión humana. Quedan por validar personalmente los supuestos sin cotización (horas internas de campo, visitas y rondas del proveedor, refuerzos de puesta en producción), la decisión de precio y el calendario de prepago con D2 y D4. Esta adenda no incorpora firma ni acredita aceptación del contenido.
+Las pruebas del asistente no equivalen a revisión humana. La revisión manual la realizó **Matías Vergara, Analista de Planificación y Calidad**, el 15 de noviembre de 2026. La revisión comprendió la planilla 3.2 y los cambios descritos en esta adenda: los supuestos sin cotización rotulados en Parámetros corrección C78-C89, la decisión de precio por margen objetivo y el calendario de prepago del crédito. El revisor declaró conforme el contenido revisado.
+
+El registro lo transcribe el asistente a partir de la declaración del revisor en la sesión, porque este no lo escribió directamente. La firma se mantiene en la declaración oficial A-6 de la Persona 8.
