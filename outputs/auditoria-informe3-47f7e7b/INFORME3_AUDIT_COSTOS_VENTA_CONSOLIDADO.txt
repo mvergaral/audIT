@@ -1,0 +1,1761 @@
+PÁGINA FÍSICA 1
+Mediafirma
+1
+Folio
+
+PÁGINA FÍSICA 2
+EMPRESA N.º 10 · LICITACIÓN TFEP-01/2026 · CASO 10 TRANSPORTE DE CARGA
+PropuestaEconómica
+Costosfrenteaventa
+InformePreparatorio3.Costosfrenteaventa
+ENTREGA
+PropuestaEconómica.InformePreparatorio3
+PROYECTO
+PlataformaDigitaldeMisiónCríticaparaTransportedeCarga
+MANDANTE
+TransportesCurimónS.A.
+Antofagasta
+San Bernardo
+Talca
+Los Ángeles
+Puerto Montt
+Documento preparado para Transportes Curimón S.A.
+Versión 2.0 · 13 de noviembre de 2026 · Viña del Mar, Chile
+AlejandroHermosillaDíaz
+Representantelegal,audIT
+RUT14.892.341-8
+FirmaElectrónicaAvanzada·LeyN.°19.799
+Mediafirma
+2
+Folio
+
+PÁGINA FÍSICA 3
+Fichadeldocumento
+AUDIT · EMPRESA N.º 10
+Fichadeldocumento
+Proponente audIT,EmpresaN.º10.RUT76.924.310-0.CasamatrizenViñadelMar,Regiónde
+Valparaíso
+Representantelegal AlejandroHermosillaDíaz,RUT14.892.341-8
+Mandante TransportesCurimónS.A.
+Licitación LicitaciónPúblicaInternacionalN.ºTFEP-01/2026,Caso10TransportedeCarga
+Proyecto PlataformaDigitaldeMisiónCríticaparaTransportedeCarga
+Instancia PropuestaEconómica.InformePreparatorio3
+Documento InformePreparatorio3.Costosfrenteaventa
+Contenido DocumentodecostosfrenteaventaqueelFormularioT-22pidealInforme3:provee-
+doresyadquisicionesclave,curvaS,análisisdecostos,VANyTIR,yvalorizacióndelas
+cincoinnovacionesenelflujodecaja.
+Formularios Laplanilladecálculoqueentregaelmandantevaenarchivoaparte,conlosmismos
+valores
+Archivo INFORME3_AUDIT_COSTOS_VENTA_20261113.pdf
+Folios Del1al23,correlativos,enelextremoinferiorderechodecadapágina
+Versiónyfecha Versión2.0,13denoviembrede2026,ViñadelMar,Chile
+Citas Lasbasessecitanpordocumento,artículoonumeralypáginaimpresa:FEP01son
+lasBasesAdministrativas,FEP02lasBasesTécnicasTransversalesyCasolasBases
+TécnicasdelCaso10.LasfuentesexternassecitanennormaAPA7.ªedición.Todasse
+listanenlasecciónReferencias,alfinaldelsubdocumento.
+AlejandroHermosillaDíaz
+Representantelegal,audIT
+RUT14.892.341-8
+FirmaElectrónicaAvanzada·LeyN.°19.799
+TFEP-01/2026 · Caso10 · PropuestaEconómica · InformePreparatorio3
+Mediafirma
+3
+Folio
+
+PÁGINA FÍSICA 4
+Hojaresumen
+PROPUESTA ECONÓMICA
+Hojaresumen
+Folioinicialdecadaseccióndelapropuestaeconómica,conformeaFEP01,Artículo40.3,p.26.Los
+foliosidentificaneliniciodecadasecciónycorrespondenexactamentealafoliaciónimpresaenel
+extremoinferiorderechodecadapágina.
+Folioinicialdecadaseccióndeldocumento
+N.º Sección Folioinicial
+1 Portada 1
+2 Fichadeldocumento 3
+3 Hojaresumen 4
+4 Índicegeneral 5
+5 Tipodecambioyparámetros 6
+6 InformePreparatorio3.Costosfrenteaventa 7
+7 1Proveedoresclavedelasolución 7
+8 2Adquisicionesclaveorelevantes 7
+9 3CurvaSdelproyecto 8
+10 4Análisisdecostosdelasolución 10
+11 5VANyTIRdelasolución 11
+12 6Valorizacióndelascincoinnovaciones 12
+13 7Planilladecálculo 13
+14 8Demostracióninteractiva 13
+15 Resolucióndeobservaciones 14
+TFEP-01/2026 · Caso10 · PropuestaEconómica · InformePreparatorio3
+Mediafirma
+4
+Folio
+
+PÁGINA FÍSICA 5
+Índicegeneral
+PROPUESTA ECONÓMICA
+Índicegeneral
+Fichadeldocumento 3
+Hojaresumen 4
+Índicegeneral 5
+Tipodecambioyparámetros 6
+Costosfrenteaventa 7
+1 Proveedoresclavedelasolución . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 7
+2 Adquisicionesclaveorelevantes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 7
+3 CurvaSdelproyecto . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 8
+4 Análisisdecostosdelasolución . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+4.1 Costosfrenteaventa . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+5 VANyTIRdelasolución . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11
+6 Valorizacióndelascincoinnovaciones . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12
+7 Planilladecálculo . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 13
+8 Demostracióninteractiva . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 13
+Resolucióndeobservaciones 14
+CONVENCIÓN DE CITAS
+Lasbasessecitanpordocumento,artículoonumeralypáginaimpresa:FEP01sonlasBasesAdministrativas,FEP02
+lasBasesTécnicasTransversalesyCasolasBasesTécnicasdelCaso10.LasfuentesexternassecitanennormaAPA
+7.ªedición.TodasselistanenlasecciónReferencias,alfinaldelsubdocumento.
+TFEP-01/2026 · Caso10 · PropuestaEconómica · InformePreparatorio3
+Mediafirma
+5
+Folio
+
+PÁGINA FÍSICA 6
+Tipodecambioyparámetros
+FORMULARIO E-24
+Tipodecambioyparámetros
+Todoslosvaloresdeestedocumentoestánenpesoschilenos,UnidadesdeFomentoydólaresdelos
+EstadosUnidos,conlostiposdecambiodelFEP01,FormularioE-24,p.73,conformeaFEP01,Artículo
+51.2,p.29.Sonvaloresnetos,conelIVAdesglosado.CadavalorenUFyenUSDsecalculaapartirde
+suvalorenpesosyseredondeaadosdecimales.Lassumassehacenenpesos.
+Condicionesyparámetrosparalapreparacióndelaofertaeconómica,conformealFEP01,FormularioE-24,p.73
+Indicador Valorautilizar
+DólardelosEstadosUnidos(USD) 1USD=CLP900
+Euro(EUR) 1EUR=CLP1.000
+UnidaddeFomento(UF) 1UF=CLP40.000
+ImpuestoalValorAgregado 19%
+Tasadeinterés,créditodeconsumo 0,9%mensual
+Tasadeinterés,líneadecrédito 3,0%mensual
+Rentabilidadmáximaaobtener 20%
+Montomáximoautilizarenlíneadecrédito CLP50.000.000·UF1.250,00·USD55.555,56
+Porcentajemáximodefinanciamientopropio 20%
+Porcentajemáximodefinanciamientobancario 80%
+Horizontedeevaluación 56meses
+Fechadereferenciadeltipodecambio ValoresdereferenciadelFormularioE-24
+TFEP-01/2026 · Caso10 · PropuestaEconómica · InformePreparatorio3
+Mediafirma
+6
+Folio
+
+PÁGINA FÍSICA 7
+PROPUESTA ECONÓMICA · INFORME PREPARATORIO 3
+Costosfrenteaventa
+RESUMEN DE APERTURA
+Eldocumentocomparaloscostosdeimplementaciónyoperaciónconelprecio
+delasoluciónparaTransportesCurimón.Presentalasadquisiciones,elcalen-
+dariofinancieroylosindicadoresdelproyecto.
+QuérecibeTransportesCurimónS.A.
+Desglosedecostosypreciosporfase,respaldadoenlaplanilladecálculo.
+1 Proveedoresclavedelasolución
+LaTabla1identificaproveedoresrelevantesparaeldespliegue,lacontinuidaddel
+servicioylaadquisicióndelequipamientodereferencia.
+Tabla1 Proveedoresclavedelasolución
+Proveedor Quéprovee Componenteoservicio Criteriodeselección
+Microsoft AzureenChile
+CentralyBrazil
+South
+Plataformayrecupera-
+ción
+Disponibilidadregio-
+nalycanalCSP
+Dell Servidores Infraestructuraon-
+premise
+Soporteydisponibili-
+dadenChile
+iWave,TeltonikayTech-
+noton
+Equiposyperifé-
+ricosdecampo
+yred
+Telemetríayaccesoen
+terminal
+Compatibilidadconel
+diseñodeT-11
+Fortinet Equiposdese-
+guridadyred
+Salatécnicayterminales Compatibilidadconla
+arquitecturaysoporte
+local
+GitLabySonarSource Licenciasde
+desarrolloyaná-
+lisisdecódigo
+Integracióncontinuay
+calidad
+Coberturadelospro-
+cesosdedesarrolloy
+pruebas
+GroundControl Tiempodeaire
+Iridium
+Respaldosatelital Coberturaenrutassin
+servicioterrestre
+EloperadormóvilyelproveedordelcircuitoExpressRouteseseleccionanal
+validarcoberturayfactibilidaddelenlace.
+2 Adquisicionesclaveorelevantes
+La Tabla 2 presenta las compras y servicios que condicionan la habilitación, el
+pilotoylacontinuidad.Losmesescorrespondenalcalendariopresupuestado.Las
+fechasdeordenyentregasecierranconcadaproveedor.
+TFEP-01/2026 · Caso10 · PropuestaEconómica · InformePreparatorio3
+Mediafirma
+7
+Folio
+
+PÁGINA FÍSICA 8
+InformePreparatorio3 · 3 CurvaSdelproyecto
+Tabla2 Adquisicionesclaveydependencias
+Adquisición Pagador Mesprevis-
+to
+Fecharequerida Plazo,condiciónoalternativa
+Grupoelectrógeno audIT M1 H3,M6 Hastaseismesesdeplazo.Con-
+firmarentregacompatiblecon
+H3.
+Salatécnica,climay
+extinción
+audIT M3 H3,M6 Cotizarinstalacióncertificada,
+disponibilidadyfechadepuesta
+enservicio.
+Cómputodeterminal
+yred
+audITy
+Curimón
+M3–M4 H3,M6 audITcompracómputoygabi-
+netes.Curimónadquiereequi-
+posdered.Plazodereferencia
+AAEONdeunaatressemanas.
+Azureyconectividad
+privada
+audIT M1,M4y
+M6
+H3,M6 AzureporcanalCSP.Confirmar
+factibilidaddeExpressRoute
+conlosoperadoresevaluados.
+Equiposabordo,tar-
+jetasybalizas
+Curimón M5–M6 Pilotoymontaje Launidaddepruebaprecede
+allote.ElequipoG26Iregistra
+cuatrosemanasdefábricay
+disponibilidadporconfirmar.
+LTEM2M,Iridiumy
+soporte
+audIT DesdeM6;
+soporte
+M13
+Antesdesuactivación Elegiroperadormóvilporcober-
+tura.Eltiempodeaireseactiva
+porequipo.
+audITdesarrollaelsoftwaredenegocioyejecutalainstalación.Comprahardwa-
+reylicenciasdeGitLabySonarQubeycontratanubeadministrada,conectividad,
+soportedelfabricanteymantenciónespecializada.
+3 CurvaSdelproyecto
+LacurvaScubrelos56mesesdeevaluación.Presentacostosacumuladosconin-
+tereses,facturaciónacumuladapordevengoysaldodecajafinanciado.LaFigura
+1presentalasseriesmensualesdelmodeloconsolidado.Laamortizacióndelprin-
+cipalseregistraencaja.Elsaldoreflejaelmomentoefectivodecobroypermite
+identificarlosmesesdemayornecesidaddefinanciamiento.
+TFEP-01/2026 · Caso10 · PropuestaEconómica · InformePreparatorio3
+Mediafirma
+8
+Folio
+
+PÁGINA FÍSICA 9
+InformePreparatorio3 · 3 CurvaSdelproyecto
+1 9 16 24 32 40 48 56
+Mes contractual
+0
+2
+4
+6
+8
+10Miles de millones de CLP
+Costos con intereses
+Facturación neta
+Caja financiada
+Figura1 Costosconintereses,facturaciónycajafinanciadaacumulados
+Fuente:Elaboraciónpropia.
+TFEP-01/2026 · Caso10 · PropuestaEconómica · InformePreparatorio3
+Mediafirma
+9
+Folio
+
+PÁGINA FÍSICA 10
+InformePreparatorio3 · 4 Análisisdecostosdelasolución
+4 Análisisdecostosdelasolución
+Laplanilladesglosapersonal,costosdeterceros,calidadycapacitación,adminis-
+traciónycierre.Loscostosdeproveedoresseregistranunasolavez.Laslicencias
+GitLabySonarQubesumanCLP38.032.600·UF950,82·USD42.258,44.Laeje-
+cuciónauxiliarenAzurepertenecealpresupuestodeinfraestructura.Lacompra
+del hardware de campo y red del mandante se informa por CLP 225.384.199 ·
+UF5.634,60·USD250.426,89enunahojaseparadadelflujodeaudIT.Elpagador
+deenergíaycombustiblequedasujetoaconfirmación.
+ElpresupuestoderiesgosincluyeunareservadeinfraestructuradeCLP152.699.775
+·UF3.817,49·USD169.666,42.Sudesembolsosepruebaensensibilidad.Losgas-
+tosadministrativosincluyenlasgarantíasdefielcumplimiento,primas,notaríay
+custodiadefuentes.Lasbasesasegurablesyeloverheadincrementalsiguenen
+conciliación.
+4.1 Costosfrenteaventa
+LaTabla3muestraelcostonetoporfase.Lacomisióndecorrectofuncionamiento
+seatribuyeaimplementación.ElmodeloestimaeldesembolsoenM21,sujetoa
+confirmarlascondicionesylafechadeconstitución.Elcostodelasactividadesde
+cierreentreM21yM24siguesujetoalaconciliacióndelaEDTconlashorasyla
+nómina.
+Tabla3 Costonetoporfase
+N.º Concepto Moneda Valorneto IVA(19%) Total
+1 Costonetodeimplementación CLP 3.764.324.294 noaplica 3.764.324.294
+UF 94.108,11 94.108,11
+USD 4.182.582,55 4.182.582,55
+2 Costonetodeoperación CLP 4.220.076.551 noaplica 4.220.076.551
+UF 105.501,91 105.501,91
+USD 4.688.973,95 4.688.973,95
+3 Costonetototaldelproyecto CLP 7.984.400.845 noaplica 7.984.400.845
+UF 199.610,02 199.610,02
+USD 8.871.556,49 8.871.556,49
+LaTabla4muestraelvalorofertadoapartirdeesoscostos.Elmargenconsoli-
+dadosobreventasnetases18,50 %,dentrodeltopede20 %.Lamétricadeutilidad
+sobrecostoqueconservaelResumendelaplantillaequivalea22,70 %.
+Tabla4 Valorofertadoporfase
+N.º Concepto Moneda Valorneto IVA(19%) Total
+1 Valortotaldelafasedeimplemen-
+tación(Etapa1yEtapa2)
+CLP 4.618.802.815 877.572.535 5.496.375.350
+UF 115.470,07 21.939,31 137.409,38
+USD 5.132.003,13 975.080,59 6.107.083,72
+Continúaenelfoliosiguiente
+TFEP-01/2026 · Caso10 · PropuestaEconómica · InformePreparatorio3
+Mediafirma
+10
+Folio
+
+PÁGINA FÍSICA 11
+InformePreparatorio3 · 5 VANyTIRdelasolución
+Tabla4 (continuación)
+N.º Concepto Moneda Valorneto IVA(19%) Total
+2 ValortotaldelafasedeOperación
+porlos36meses
+CLP 5.178.008.038 983.821.527 6.161.829.565
+UF 129.450,20 24.595,54 154.045,74
+USD 5.753.342,26 1.093.135,03 6.846.477,29
+Totalgeneral CLP 9.796.810.853 1.861.394.062 11.658.204.915
+UF 244.920,27 46.534,85 291.455,12
+USD 10.885.345,39 2.068.215,62 12.953.561,02
+Laimplementaciónsefacturacon12hitosdeE-25,enproporción60/40.Los
+36serviciosdeoperaciónsefacturanenM21–M56ysecobranenM22–M57.La
+últimamensualidadasciendeaCLP143.833.557·UF3.595,84·USD159.815,06
+yseconciliacomocuentaporcobraralcierre.
+LaTabla5resumelaasignaciónvigentedecostosyprecios.Elcuadromaestro
+delaplanilladetallapersonal,infraestructurayservicios,licencias,calidad,firma,
+administraciónycierre.Laimplementaciónasignaprecioenproporciónalcosto.
+Enoperación,elmargenseasignaapersonal.
+Tabla5 Asignacióndecostosyprecioporfase
+Faseytipo Costoneto Ventaneta Margen
+Implementacióndirec-
+ta
+CLP3.721.196.090·UF93.029,90·
+USD4.134.662,32
+CLP4.565.884.773·UF114.147,12·
+USD5.073.205,30
+18,50 %
+Implementaciónindi-
+recta
+CLP43.128.204·UF1.078,21·
+USD47.920,23
+CLP52.918.042·UF1.322,95·
+USD58.797,82
+18,50 %
+Operacióndirecta CLP4.157.076.551·UF103.926,91·
+USD4.618.973,95
+CLP5.115.008.038·UF127.875,20·
+USD5.683.342,26
+18,73 %
+Operaciónindirecta CLP63.000.000·UF1.575,00·
+USD70.000,00
+CLP63.000.000·UF1.575,00·
+USD70.000,00
+0,00 %
+Losindirectoscorrespondenaadministración,garantíasycierresegúnsuatri-
+bución.Laconciliaciónconnóminayasesoríalegaldebeacreditarcualquieroverhead
+incremental.ElIVAreferencialporproveedorseconciliaconelIVApagadoyel
+créditofiscalenlacajafinanciada.
+5 VANyTIRdelasolución
+LaevaluaciónutilizaelflujolibremensualdelaFilaA.ElVANdescuentalosflujos
+deM1aM56yconsideraelflujodeM0.LaTIReslatasamensualquehaceceroel
+VAN.ElcobrodeM57seconciliaporseparado.
+Tabla6 Indicadoresdelaevaluaciónfinanciera
+Indicador Valor
+Horizontedeevaluación 56meses,FEP01,FormularioE-24,p.73
+Continúaenelfoliosiguiente
+TFEP-01/2026 · Caso10 · PropuestaEconómica · InformePreparatorio3
+Mediafirma
+11
+Folio
+
+PÁGINA FÍSICA 12
+InformePreparatorio3 · 6 Valorizacióndelascincoinnovaciones
+Tabla6 (continuación)
+Indicador Valor
+Tasadedescuento 1,0261894 %mensualantesdeimpuestosenelesce-
+narioconsolidado.Pondera80 %dedeudaal0,9 %
+mensualy20 %decapitalpropioal20 %efectivo
+anualsupuesto.
+Valoractualneto(VAN) CLP1.235.043.316·UF30.876,08·
+USD1.372.270,35
+Tasainternaderetorno(TIR) 83,6613 %mensualsobrelaFilaAdeevaluación
+LaTabla7comparalaFilaAmensualalatasabase.Losshocksreducenlos
+flujosdelosprimerosmesesylatasaquehacecerosuVAN.Poresosepresentala
+TIRjuntoconelVANylacajafinanciada.
+Tabla7 Sensibilidaddelproyectoaprecioocalendariofijo
+Escenario VAN,millonesde
+CLP
+TIRmensual
+Base 1.235,0 83,66 %
+Costos+5 % 923,7 17,32 %
+Cobros−5 % 862,0 16,63 %
+H5cobradoenM13 1.230,9 83,01 %
+ElequilibrionominalesCLP7.984.400.845·UF199.610,02·USD8.871.556,49.
+Concostosfijosyescalauniformedecobrosenelcalendariobase,elequilibrioa
+VANceroesCLP8.175.218.018·UF204.380,45·USD9.083.575,58.Larecupera-
+cióndescontadasostenidaocurreenM16.
+Enelcasobase,lacajamínimaesceroyelusomáximodelalíneaesde45,0
+millonesdeCLP.SiH5secobraenM13,lalíneaalcanzasutopeyquedaundéficit
+deCLP155.747.160·UF3.893,68·USD173.052,40enM12.Coneldesembolso
+adicionaldelareservadeinfraestructura,eldéficitantesdelrefuerzoasciendea
+CLP308.446.935·UF7.711,17·USD342.718,82.Elescenarioreforzadomodela
+CLP400.000.000·UF10.000,00·USD444.444,44enM1,con80 %decréditoy
+20 %deaportedesocios.LacajamínimacalculadaesCLP11.223.065·UF280,58
+·USD12.470,07enM12frenteaunametade10millonesdeCLP.Silas72horas
+depreparacióndeCP-SEC-05secompraníntegramente,lacajasimuladabajaa
+CLP9.207.065·UF230,18·USD10.230,07.Laviabilidaddelescenariodepende
+de la cobertura de horas y de confirmar disponibilidad, giros y comisiones del
+financiamiento.
+6 Valorizacióndelascincoinnovaciones
+LaTabla8resumeeltratamientodecadainnovación.Laatribucióndepersonal
+secontrastaconlashoraspresupuestadasysudisponibilidad.Losbeneficiosde
+CurimónsemantienenseparadosdelosingresosdeaudIT.
+TFEP-01/2026 · Caso10 · PropuestaEconómica · InformePreparatorio3
+Mediafirma
+12
+Folio
+
+PÁGINA FÍSICA 13
+InformePreparatorio3 · 7 Planilladecálculo
+Tabla8 Tratamientodelasinnovaciones
+Innovación Costoycargaenelmodelo BeneficioparaCurimón
+1.Expedienteverifica-
+ble
+Firmaautomatizadapresupuestadapor
+CLP24.856.290·UF621,41·USD27.618,10en
+M13--M56.Desarrolloysoporteatribuidosaperso-
+nal.
+Monetizaciónpendiente.Medirexpedientes,tiempo
+depreparaciónyverificaciones.
+2.Programaciónde
+patio
+CLP16.576.000·UF414,40·USD18.417,78
+dedesarrolloyCLP16.992.000·UF424,80·
+USD18.880,00deoperacióncomoatribuciones
+dereferencia.Coberturadehorasporconciliar.
+Medirvisitasyminutosevitadosenpilotoycompa-
+rarlosconlalíneabase.
+3.Verificacióndeaco-
+pleyregistrotérmico
+CLP5.700.000·UF142,50·USD6.333,33
+deintegraciónyCLP4.032.000·UF100,80·
+USD4.480,00deoperaciónestimados.Imputación
+incrementalporconciliar.
+Mediracoplesyeventostérmicosenseriesindepen-
+dientes.Elkilometrajecorrespondealcriteriode
+aceptación26.
+4.Comodatoyrecupe-
+rodesobreestadías
+Los182montajesbaseincluyen34comodatos.Las
+altasadicionalesdependendecupo,capacidady
+pagador.
+RecuperobrutoreferencialdeCLP362.100.000
+·UF9.052,50·USD402.333,33en36mesesa
+régimen.Elnetodependedecostosyreparto.
+5.Prevencióndefatiga CLP13.000.000·UF325,00·USD14.444,44
+deinversiónyCLP10.080.000·UF252,00·
+USD11.200,00desoporte.TalleresenM4ycalibra-
+ciónenM13--M15.EjecutoreseIVAporconfirmar.
+Monetizaciónpendiente.Medirconsumoysiniestra-
+lidadfrenteadatoshistóricos.
+Lasinnovaciones2y3reconocencerobeneficiomonetarioenelcasobase.El
+beneficiodelainnovación5quedapendiente.Loscostosatribuidosinformados
+porcadaresponsablesemantienenidentificadoshastacompletarsucruceconla
+planilla.
+7 Planilladecálculo
+ElarchivoconsolidadoreúneelResumendelmandante,losparámetros,loscostos
+eingresos,losproveedores,elfinanciamiento,lacurvaSylosindicadores.Los
+cuadroseconómicossecotejanconlashojascorrespondientesdelamismaversión.
+Elflujomensualpresentaeltotaldelperíodoyelsaldoacumulado.
+8 Demostracióninteractiva
+ElsitiodeaudITdaaccesoalentornodemostrativo.Enelsitio,seleccione«Simu-
+ladorOperativoenVivo»parainiciarlanavegación.
+TFEP-01/2026 · Caso10 · PropuestaEconómica · InformePreparatorio3
+Mediafirma
+13
+Folio
+
+PÁGINA FÍSICA 14
+Resolucióndeobservaciones
+ARTÍCULO 46
+Resolucióndeobservaciones
+ElFEP01,Artículo46,p.28pideresolverencadainformelasobservacionesdelainstanciaanterior,
+contrazabilidadentreobservación,respuestaysecciónmodificada.Latablareúnelasobservaciones
+delInforme2quecorrespondenaestedocumentoylaseccióndondeseresuelvecadauna.
+ResolucióndelasobservacionesdelInforme2,conformeaFEP01,Artículo46,p.28
+N.º Observación Respuesta Secciónmodifica-
+da
+Presentaciónycontroltransversal
+GEN-
+01
+GEN-01.Lastablasderespuestaocupan
+unasecciónquealteraelíndiceobligatorio
+delossubdocumentos.(rev.,pp.3)
+Latabladerespuestasseincorporacomo
+anexoposterioralcuerpoeconómico.Las
+aperturasverificadasdeS1,S2yS9conser-
+vanlaestructuradesuscapítulos.
+Índicegeneral,ane-
+xoderesolución
+yaperturasdeS1,
+S2yS9.Estado:
+Incorporada
+GEN-
+02
+GEN-02.Losfoliosreinicianporarchivo.La
+revisiónexigenumeracióncorrelativadel
+conjuntoparalaofertafinal.(rev.,pp.1–3,
+14,47)
+Asignarelfolioglobalalensamblarlaoferta
+yconciliareliniciodecadadocumentocon
+lahojaresumendesusobre.Verificarmedia
+firma,foliaciónyfirmasdeaperturasegún
+Art.40.
+Hojasresumen
+ypiesdepágina
+delaofertafinal.
+Estado:Sincierre
+acreditado
+GEN-
+03
+GEN-03.S1,S2yT-6reiterancláusulas
+defensivas.S1mantieneprosainstitucional
+defolleto.(rev.,pp.3–5,7–8,47)
+Sedepurólapresentacióndecapacidades,
+compromisosysupuestos.S1retirómisión,
+visiónyvalores.ElT-6remitealanálisisde
+capacidaddeS1yalosantecedentesdel
+SobreN.º1.
+S1§§1.1.1y1.4,
+S2§§2.1–2.5y
+T-6,f.6.Estado:
+Incorporada
+GEN-
+04
+GEN-04.LasdeclaracionesdeS3,S4y
+S6tienenseiscolumnasylarevisiónlas
+observaporellímitegeneraldelcuerpo.
+(rev.,pp.11,14,23,47)
+Conservarlosseiscamposexpresamente
+exigidosporelComunicado10§7.2ydistin-
+guirladeclaraciónobligatoriadelastablas
+analíticasdelcuerpo.Aplicarelmismocrite-
+rioalastresdeclaracionesyconciliarlocon
+lacontrapartesiseexigeunapresentación
+distinta.
+Declaracionesde
+usodeIAdeS3,S4
+yS6.Estado:Sin
+cierreacreditado
+GEN-
+05
+GEN-05.S6,S8yS9declaranusoaltode
+IAconrevisiónconcentrada.Sesolicita
+especialatenciónalasimulaciónderiesgos
+yaldiseñodepruebas.(rev.,pp.23,31–32)
+SedocumentólarevisióndeS9yseactua-
+lizaronlasdeclaracionesdeS1,S2yS9.
+QuedaporverificarlarevisióndeS6yS8.
+Declaracionesde
+S1,S2yS9yres-
+paldoderevisión.
+Estado:Parcial
+GEN-
+06
+GEN-06.ElT-11carecededeclaración
+propiaylosT-14,T-15yT-18remitenala
+delcapítulo.(rev.,pp.17–18,27,47)
+Individualizarladeclaraciónporformulario
+segúnlaobservación,conservarlasfilas
+asociadasenelsubdocumentoyconsolidar
+elregistroconA-6.EnS7verificartambién
+lamenciónexpresadelT-15.
+T-11,T-14,T-15,
+T-18,declaraciones
+deS4yS7yA-6.
+Estado:Sincierre
+acreditado
+Empresaycomprensióndelanecesidad
+Continúaenelfoliosiguiente
+TFEP-01/2026 · Caso10 · PropuestaEconómica · InformePreparatorio3
+Mediafirma
+14
+Folio
+
+PÁGINA FÍSICA 15
+Resolucióndeobservaciones
+ResolucióndelasobservacionesdelInforme2,conformeaFEP01,Artículo46,p.28(continuación)
+N.º Observación Respuesta Secciónmodifica-
+da
+EMP-
+01
+EMP-01.Laexperienciademayorescala
+declaradacubre120tractocamionesfrente
+a374camionesy96.000viajesanuales
+delcaso,sinexplicarcómosecompensala
+brecha.(rev.,pp.4–5,39)
+S1incorporaunanálisisdecapacidadpor
+frenteyremitealFormularioT-6.
+S1§1.4yFormu-
+larioT-6.Estado:
+Incorporada
+EMP-
+02
+EMP-02.Elgerentegeneralestambién
+jefedeproyectoyrepresentantelegalcon
+dedicaciónde100%entreM1yM20.Falta
+explicarlaconduccióndelaempresaenese
+período.(rev.,pp.5)
+Sedocumentaronlassubroganciasylaco-
+berturadefuncionescorporativasdurante
+ladedicacióncontractual.
+S1§1.3ytablade
+subrogancias.Esta-
+do:Incorporada
+EMP-
+03
+EMP-03.Sevinculanentidadescertifica-
+dorasyauditorasrealesconexpedientes
+ficticios.(rev.,pp.5,47)
+Searmonizaronlasreferenciaseidentifica-
+doresdelasentidadesquerespaldanlos
+antecedentessimulados.
+S1§§1.3–1.5y
+Anexo1.A.Estado:
+Incorporada
+EMP-
+04
+EMP-04.Lasalianzasexclusivasseremiten
+auncapítuloyunformularioausentesdel
+Informe2.(rev.,pp.5)
+S1delimitalasalianzascorporativas.Las
+cartascontractualessereferencianalSobre
+N.º1yalFormularioT-8.
+S1§1.6.Estado:
+Incorporada
+NEC-
+01
+NEC-01.Laestimaciónde338,15viajes
+diariosdetemporadaaltaylacotade450
+viajesdiariosdependendeunsupuestode
+210viajesdiariosenvalle.(rev.,pp.7–8)
+S2documentalaecuacióndebalance,la
+cotadeestrésysucalibraciónprevistacon
+elsistemahistóricoduranteH1.
+S2§§2.1y2.2.3.
+Estado:Incorpora-
+da
+NEC-
+02
+NEC-02.Eldiagnósticopresentalosum-
+bralesdecontinuidadcomocompromisos
+propiosyusalaexpresión«análisisperi-
+cial».(rev.,pp.7–8)
+S2atribuyealasBasesladisponibilidad,el
+RTO,elRPOylaautonomíadelasolución.
+Remitealdiseño,laoperaciónylaspruebas
+correspondientes.Seretirólaexpresión
+«análisispericial».
+S2§§2.2.2y2.5.1,
+ff.13y26–27.Esta-
+do:Incorporada
+NEC-
+03
+NEC-03.Lafiguradecadenadevalorqueda
+aisladaporespaciosenblanco.(rev.,pp.7)
+LaFigura2.1seredibujóenformatovec-
+torialyseintegróentreelpárrafoquela
+anunciaylalecturaporfases.Secomprobó
+eltextoa9,5ptenelPDF.
+S2§2.2,Figura
+2.1,f.10.Estado:
+Incorporada
+Alcanceycumplimientotécnico
+ALC-
+01
+ALC-01.SA-01fijafebrerode2027como
+inicioyelcalendariodependedeesafecha
+paralaventanadeM16.(rev.,pp.11–12,
+46–47)
+Separarlosmesescontractualesdelca-
+lendariocivilyevaluariniciosalternativos
+contralasventanasdemontajeypuesta
+enproducción.Silacombinaciónresulta
+incompatible,elevarlaconsultaformalsin
+cambiarunilateralmenteloshitosnisupedi-
+tarlaofertaaSA-01.
+S3supuestosy
+calendario,S7
+§§7.2–7.3,T-14/T-
+15/T-18yE-25.
+Estado:Sincierre
+acreditado
+ALC-
+02
+ALC-02.Lareversiónseresumeenuna
+afirmacióndequenosepierdeinformación.
+(rev.,pp.11)
+CP-SYS-20relacionalapruebaconelpro-
+cedimientodereversióndelFormulario
+T-18.
+FormularioT-17,
+CP-SYS-20,yFor-
+mularioT-18.Esta-
+do:Incorporada
+Continúaenelfoliosiguiente
+TFEP-01/2026 · Caso10 · PropuestaEconómica · InformePreparatorio3
+Mediafirma
+15
+Folio
+
+PÁGINA FÍSICA 16
+Resolucióndeobservaciones
+ResolucióndelasobservacionesdelInforme2,conformeaFEP01,Artículo46,p.28(continuación)
+N.º Observación Respuesta Secciónmodifica-
+da
+ALC-
+03
+ALC-03.ElT-12contiene42requerimientos
+propiosyusalosRTcomoreferencias,sin
+declararsucumplimientoindividual.(rev.,
+pp.11–12,33,46–47)
+Inventariarcadarequisitodelcasoycada
+RTdelcapítulo3transversal.Declararcum-
+plimientoindividual,componente,sección
+yfoliodeevidencia.Conciliarelinventario
+conT-17yjustificarexpresamentecual-
+quiernoaplicabilidad.
+T-12,S3trazabili-
+dadyT-17.Estado:
+Sincierreacredita-
+do
+ALC-
+04
+ALC-04.ElT-12declara«Sí»uniforme,in-
+clusoenRF-003,RNF-005yRF-014,que
+dependendeautorizacionesopruebas
+futuras.(rev.,pp.11–12,46–47)
+Distinguircompromiso,evidenciadisponible
+yverificaciónfutura.Declararelcumpli-
+mientoparcialcuandocorresponda,ex-
+plicitarladependenciaydefinircómose
+resuelve,revisandosucompatibilidadconel
+Art.53paralosrequisitosobligatorios.
+T-12fichasRF-003,
+RNF-005yRF-014,
+S3supuestos,T-16
+yT-17.Estado:Sin
+cierreacreditado
+ALC-
+05
+ALC-05.Lanumeracióndelastablas
+3.1–3.7delT-12coincideconladelS3.
+(rev.,pp.11–12,47)
+UsarunprefijopropiodeT-12yactualizar
+cadaremisiónenambosdocumentos.
+T-12yS3.Estado:
+Sincierreacredita-
+do
+ALC-
+06
+ALC-06.ElcuerpodelS3serefiereaversio-
+nespreviasdelinforme.(rev.,pp.11–12)
+Redactarelcuerpocomopropuestaautóno-
+mayconcentrarlahistoriadelascorreccio-
+nesenesteanexo.
+S3alcance,im-
+plementacióne
+implantación,y
+anexodelArt.46.
+Estado:Sincierre
+acreditado
+Arquitecturaydatos
+ARQ-
+01
+ARQ-01.Flutter,ReactyNext.jsnotienen
+versionesysoportedefinidos.Laversión
+Godeclaradacarecederespaldoverificable
+paralafechadeoferta.(rev.,pp.13–14,43)
+Fijarversionesverificadasparalafecha
+deoferta.Incorporarfuentedesoporte,
+fechadefinopolíticafechadayplande
+actualizaciónduranteelcontrato.Alinearel
+inventariodecomponentesconelT-11.
+S4§4.1,Tablade
+tecnologías,yT-11.
+Estado:Sincierre
+acreditado
+ARQ-
+02
+ARQ-02.LosochoADRllevanunamisma
+fechaycarecendeestadopordecisión.
+(rev.,pp.14–15)
+RegistrarporADRsufechaefectiva,esta-
+do,alternativaseleccionada,descartesy
+criterio,conevidenciadeladecisiónysu
+vigencia.
+S4§4.1,registro
+ADRyTabla4.2.
+Estado:Sincierre
+acreditado
+ARQ-
+03
+ARQ-03.Lamesadeayudayladotación
+operativaseremitenalS10sindimensiona-
+miento.(rev.,pp.15–16,18,44)
+Derivarcontactosporfranja,cargasyturnos
+deatención,dotación,suplenciasyesca-
+lamiento.Conciliarcapacidadycobertura
+24×7conelplandeoperaciónysusSLA.
+S4§4.2,S10–S11
+yT-15.Estado:Sin
+cierreacreditado
+ARQ-
+04
+ARQ-04.ElalcancedeExpressRoutehasta
+ChileCentralquedasujetoaconfirmación
+delproveedor.(rev.,pp.17–18,29,31,
+46–47)
+Obtenerconfirmacióndocumentadadel
+circuitoyprobarsuconmutación.Silaruta
+ofertadanoresultaviable,acreditarunaco-
+nectividadconformealasBasesyregistrar
+laexposiciónysurespuestaenT-16.
+S4§4.2,conectivi-
+dad,T-11,S8/T-16
+yT-17.Estado:Sin
+cierreacreditado
+ARQ-
+05
+ARQ-05.ElDRdedatospersonalesenBra-
+zilSouthcarecedevíahabilitantedocumen-
+tada.R-24dependedeunaactuacióndel
+mandanteantesdeH2yafectaH7.(rev.,pp.
+17–20,30–31,45–47)
+Documentarlavíaaplicableysurespaldo.
+Definirunsitioomecanismoadmisiblecon
+evidenciadeRTOyRPOsilahabilitación
+noseobtiene.VincularladecisióndeH2,
+lacontingenciayelefectosobreH7,sin
+asumirautorizacióndelmandante.
+S4§4.2DR,S5
+§5.1.6soberaníay
+tratamiento,S8/T-
+16R-24,S7/T-18
+yT-17.Estado:Sin
+cierreacreditado
+Continúaenelfoliosiguiente
+TFEP-01/2026 · Caso10 · PropuestaEconómica · InformePreparatorio3
+Mediafirma
+16
+Folio
+
+PÁGINA FÍSICA 17
+Resolucióndeobservaciones
+ResolucióndelasobservacionesdelInforme2,conformeaFEP01,Artículo46,p.28(continuación)
+N.º Observación Respuesta Secciónmodifica-
+da
+ARQ-
+06
+ARQ-06.LatabladelT-11seidentifica
+conelmismonúmeroquelatabladetec-
+nologíasdeS4yremitelasreferenciasal
+capítulo.(rev.,pp.17–18,47)
+Asignarnumeraciónpropiaalformulario
+ylocalizarsusfuentesdeespecificacióny
+soporte,manteniendoremisionesexplícitas
+aS4cuandoprocedan.
+T-11yS4,refe-
+renciasytablade
+tecnologías.Estado:
+Sincierreacredita-
+do
+ARQ-
+07
+ARQ-07.Persistenbrechasdecobertura
+real,parquedeterceros,conductorsinras-
+tro,consultassinrespuestayautonomíade
+lasoluciónsatelitalreferidaenlarevisión.
+(rev.,pp.18)
+Identificarparacadabrechaeldatoque
+falta,lapruebaoconsulta,elplazodereso-
+luciónyeldiseñodecontingencia.Separar
+laautonomíadelasoluciónofertadade
+antecedentesdeversionesanteriores.
+S4§§4.1–4.2,S3
+supuestosydeci-
+siones,T-16yT-17.
+Estado:Sincierre
+acreditado
+DAT-
+01
+DAT-01.Eldiccionariodedatosseincorporó
+dentrodelarchivodelS5.(rev.,pp.20,47)
+Publicareldiccionariocomoanexosepara-
+doyconservarenelcuerpolosmodelos,el
+análisisylaremisiónalanexo.
+S5yAUDIT-
+Subdocumento5-
+Anexos.Estado:Sin
+cierreacreditado
+DAT-
+02
+DAT-02.Lastablas5.2,5.3,5.5y5.6contie-
+nenprosaexplicativaenlasceldas.(rev.,pp.
+20,47)
+Trasladarlasreglasysusexcepcionesal
+textooaldiccionario.Reservarlasceldas
+paraatributoscomparablesycódigos.
+S5,Tablas5.2,5.3,
+5.5y5.6.Estado:
+Sincierreacredita-
+do
+DAT-
+03
+DAT-03.LadeclaracióndeS5dejauna
+páginadecontinuaciónconencabezadoy
+sinfilas.(rev.,pp.20,47)
+Eliminarelsaltovacíoyrevisarelcierre,los
+encabezadosylosfoliosenelPDFrecompi-
+lado.
+S5,Declaraciónde
+usodeIAyfolio
+final.Estado:Sin
+cierreacreditado
+DAT-
+04
+DAT-04.El99,9%mensualdeservicios
+críticosenS5debecotejarseconelSLAde
+S4.(rev.,pp.20)
+Conciliarmeta,servicioscubiertos,ventana
+yfórmuladecálculoentredatos,arquitectu-
+ra,operaciónysuspruebas.
+S5Tabla5.4,S4
+SLA,S10yT-17.
+Estado:Sincierre
+acreditado
+Metodologías
+MET-
+01
+MET-01.Elplandecomunicacionescubre
+cincogruposynoarticulalostreceactores
+deS2nidefinedestinatario,frecuenciao
+canal.(rev.,pp.21,23)
+Desarrollarunamatrizporinteresadocon
+información,responsable,destinatario,fre-
+cuencia,canalyescalamiento.Conciliarla
+conlostreceactoresdeldiagnóstico.
+S6§6.1,T-9yS2
+análisisdeintere-
+sados.Estado:Sin
+cierreacreditado
+MET-
+02
+MET-02.Faltaidentificarquiénpriorizay
+aceptaincrementosporCurimónyquiénlo
+reemplaza.(rev.,pp.21,23)
+Definirconlacontraparteelroltitulary
+suplente,atribucionesytiemposdedeci-
+sión.Distinguiraceptacióndeincremento
+deaceptacióncontractualyvincularlas
+revisionesconH4yH9.
+S6§§6.1–6.2,T-
+9/T-10yS7plande
+entregas.Estado:
+Sincierreacredita-
+do
+MET-
+03
+MET-03.T-9yT-10selimitanaremisio-
+nes,conpocainformaciónutilizableporsí
+mismos.(rev.,pp.21–22)
+AdjuntaraT-9lainformacióndegestiónde
+S6§6.1yaT-10ladedesarrollode§6.2,
+conformeasusinstrucciones.Identificar
+contenidoyevidenciassindependerde
+remisionesgenéricas.
+T-9yT-10,conS6
+§§6.1–6.2.Estado:
+Sincierreacredita-
+do
+MET-
+04
+MET-04.LosochosprintsdeA09ycinco
+deA20notienenunplandeentregaspor
+contextoorequerimiento.Sólosedetalla
+G13enelsprint7.(rev.,pp.22–23,26–27,
+47)
+Asignaracadasprintrequisitos,incremen-
+to,dependencias,capacidadneta,prueba,
+usuarioquerevisaycriteriodesalida.Conci-
+liarG13yloscierresdeH4/H9conelT-15y
+T-17.
+S6§6.2,S7
+§§7.1–7.3,T-10,
+T-12,T-14/T-15y
+T-17.Estado:Sin
+cierreacreditado
+Continúaenelfoliosiguiente
+TFEP-01/2026 · Caso10 · PropuestaEconómica · InformePreparatorio3
+Mediafirma
+17
+Folio
+
+PÁGINA FÍSICA 18
+Resolucióndeobservaciones
+ResolucióndelasobservacionesdelInforme2,conformeaFEP01,Artículo46,p.28(continuación)
+N.º Observación Respuesta Secciónmodifica-
+da
+MET-
+05
+MET-05.Ladeudatécnicasedescuenta
+ensprints,perocarecedepaqueteyho-
+rasdurantelaoperaciónKanban.(rev.,pp.
+22–23)
+Incluirtrabajodedeudatécnicadurante
+M21–M56enelplandeoperación.Dimen-
+sionaresfuerzoycapacidadsinconfundirla
+regladecapacidadScrumconlaasignación
+Kanban.
+S6§6.2,S7§7.2,
+T-14/T-15yS11.
+Estado:Sincierre
+acreditado
+MET-
+06
+MET-06.Laviñetaderamastemáticasde
+GitFlowcitanormasISOquenosustentan
+esapráctica.(rev.,pp.23)
+Retirarlascitasimprocedentesyrespal-
+darelflujoderamasconlafuentetécnica
+pertinente.CitarISO/IEC25012dondese
+apliqueacalidaddedatos.
+S6§6.2,controlde
+versionesyreferen-
+cias.Estado:Sin
+cierreacreditado
+MET-
+07
+MET-07.Lastablas6.1,6.2,6.3y6.6con-
+tienenprosa.LaTabla6.2utilizaunades-
+cripciónarquitectónicaquenocoincidecon
+S4.(rev.,pp.23)
+Trasladaraltextolasreglasextensasy
+armonizarladescripcióndecontenedoresy
+contextosconlosADRdelS4.
+S6,Tablas6.1,6.2,
+6.3y6.6,yS4§4.1.
+Estado:Sincierre
+acreditado
+EDT,cronogramaeimplantación
+PLA-
+01
+PLA-01.ElprimerniveldelaEDTsejustifica
+genéricamente,divideelsoftwareporetapa
+ycarecedeunaagrupaciónintermedia.
+(rev.,pp.24,27,47)
+Justificarcadaramaporentregableyagru-
+parelsoftwareporcapacidadocontexto,
+consubgruposypaquetesverificables.
+Representarlaetapacomoatributodepla-
+nificación.Lavistarevisadaaúnconserva
+ramasporetapa.
+S7§7.1yT-14.
+Evidenciaparcialen
+S7revisado,ff.7y
+23.Estado:Parcial
+PLA-
+02
+PLA-02.LasláminasEDTrepetíaneldiccio-
+narioenvezdemostrarlajerarquía.(rev.,
+pp.24,27)
+ElS7revisadomuestraelárbolgeneraly
+cincovistasdedescomposiciónporrama.El
+diccionarioconservaloscriteriosyrespon-
+sablesenT-14.
+S7revisado§7.1,f.
+7,Figuras7.3–7.8,
+ff.23–28,yT-14.
+Estado:Incorpora-
+da
+PLA-
+03
+PLA-03.Loscincopaquetesdeinnovación
+carecíandemesesconcretosenelT-14y
+deactividadidentificableenlared.(rev.,pp.
+24,27,37)
+ElT-14revisadofechaloscincopaquetesy
+laGanttdeS7muestrasusventanas.Inte-
+grarenT-15eltrabajoylasdependencias
+queafectanotrospaquetes,ycotejarlas
+ventanasconlaversiónfinaldeT-19.
+T-14revisadof.7
+yS7revisadof.40.
+Destinoadicional
+T-15yT-19.Estado:
+Parcial
+PLA-
+04
+PLA-04.Elesfuerzosecalculadesdedota-
+cionesmensualesynoportareaypaquete.
+(rev.,pp.25,27,47)
+Estimarhorasporentregable,tarea,roly
+cantidaddetrabajo.Conciliareltotalcon
+lacurvaporetapaylacurvaseparadade
+operación,verificandopicosysolapes.
+S7§7.2yT-15,de-
+talledeesfuerzoy
+curvas.Estado:Sin
+cierreacreditado
+PLA-
+05
+PLA-05.A09yA20agrupantodalacons-
+truccióndecadaetapasinsecuenciarlos
+contextosdependientes.(rev.,pp.25,27,
+47)
+Descomponerambasactividadesyenlazar
+vigenciasyjornadaconasignación,docu-
+mentoycosto,segúnsusdependencias
+reales.Recalcularholguras,rutacríticay
+efectoenhitos.Laredrevisadaaúnconser-
+valasactividadesagregadas.
+S7§§7.2–7.3yT-
+15revisado,Tabla
+7.7,ff.8–10.Des-
+tinoadicionalT-14
+yT-16.Estado:Sin
+cierreacreditado
+PLA-
+06
+PLA-06.Lamigraciónhistóricayelestudio
+decostoporrutanotienenprecedenciasni
+holgurasenlared.(rev.,pp.25)
+Incorporar7.2y2.5alaredconpredece-
+soras,sucesoras,responsablesycriterio
+detérmino.Recalcularmargenyfechade
+entregaalasáreasusuarias.
+S7§§7.2–7.3,T-14
+paquetes7.2y2.5
+yT-15.Estado:Sin
+cierreacreditado
+Continúaenelfoliosiguiente
+TFEP-01/2026 · Caso10 · PropuestaEconómica · InformePreparatorio3
+Mediafirma
+18
+Folio
+
+PÁGINA FÍSICA 19
+Resolucióndeobservaciones
+ResolucióndelasobservacionesdelInforme2,conformeaFEP01,Artículo46,p.28(continuación)
+N.º Observación Respuesta Secciónmodifica-
+da
+PLA-
+07
+PLA-07.LaGanttporpaquetenomuestra
+dependenciasnilarutacríticademanera
+conciliableconT-15.(rev.,pp.25,27,47)
+LavistaCPMrevisadaincorporarutacrítica
+yenlacesprincipalesparalasactividades
+agregadas.Vincularlospaquetesconla
+redenunaGanttquemuestretambiénsus
+dependenciasysucontribuciónalaruta
+crítica.
+S7revisado§7.3.2
+f.19,vistaCPM
+f.33yvistasde
+paquetesff.34–43.
+DestinoadicionalT-
+15.Estado:Parcial
+PLA-
+08
+PLA-08.Larutacríticaencadenalevan-
+tamiento,arquitectura,infraestructura,
+construcciónycertificaciónconescaso
+paralelismo.(rev.,pp.25)
+Evaluariniciosparcialesporcapacidadypor
+ambiente.Mantenercomopredecesoras
+lasdependenciastécnicasdemostrablesy
+justificarlasactividadesquedebanseguir
+enserie.
+S7§§7.2–7.3y
+T-15,redCPMy
+supuestos.Estado:
+Sincierreacredita-
+do
+PLA-
+09
+PLA-09.LasláminasGanttdepocasfilas
+ylas42páginasgráficasfragmentabanla
+lectura.(rev.,pp.25,27)
+ElS7revisadoconcentralaGanttenun
+panorama,unavistaCPMydiezvistaste-
+máticas.LaEDTsepresentaaparteenel
+mismobloquedeanexosgráficos.
+S7revisado
+§7.3.2yFigu-
+ras7.12–7.23,ff.
+32–43.Estado:
+Incorporada
+PLA-
+10
+PLA-10.Laprimeramarchablancacoincide
+conlatemporadadefrutasindeclararla
+disponibilidaddeusuariosdetorreytermi-
+nalescomodependencia.(rev.,pp.26)
+Acordarventanas,suplenciasydedicación
+conelmandanteyregistrarlacontingencia
+sifaltaparticipación.Conservarloshitosy
+lascondicionesdesalidadelArt.17.3.
+S7§7.3,T-18,S8/T-
+16yS9coordina-
+cióndeUAT.Es-
+tado:Sincierre
+acreditado
+PLA-
+11
+PLA-11.A18combinaintegracióntelemáti-
+caenM13–M15conmontajeenM16–M18,
+pesealarestricciónestacional.(rev.,pp.
+26–27)
+ElS7revisadodistinguelasventanasenel
+texto.Separarambasactividadestambién
+enlared,conrecursos,precedenciasy
+capacidaddemontajeporterminal.
+S7revisado§7.3.2
+f.19yT-15revisa-
+do,Tabla7.7,f.9.
+Destinoadicional
+T-14/T-18.Estado:
+Parcial
+PLA-
+12
+PLA-12.ElpilotoA11coincideconmeses
+decierresdeLosLibertadores.Laholgura
+sejustificaconuncierreindividualdehasta
+12días.(rev.,pp.26)
+Analizarcierressucesivos,sucoinciden-
+ciaconelpilotoysuconsumodeholgura.
+Definirdisparadoryalternativaderutao
+reprogramaciónquepreservelaaceptación
+delpiloto.
+S7§7.3,T-15acti-
+vidadesA11yA18,
+S8/T-16yT-18.
+Estado:Sincierre
+acreditado
+PLA-
+13
+PLA-13.Elplandemontajenoincorpora
+las210balizasdesemirremolque,las21
+dereposiciónniloslectoresdeportería
+declaradosparalainnovación3.(rev.,pp.
+27,47)
+Asignarpaquete,sitios,actividad,personal
+yrendimientoabalizasylectores.Distinguir
+unidadesdemontajedestockdereposición
+yconciliarcantidadesyventanasconT-11y
+T-19.
+S7§§7.1–7.3,T-
+14paquete4.2,
+T-15,T-18,T-11y
+T-19innovación3.
+Estado:Sincierre
+acreditado
+Riesgos
+RIE-
+01
+RIE-01.Lamitaddelregistrodelcliente
+agrupariesgosinternosdeaudIT.R-06trata
+comoincertidumbreunretiroanunciadoy
+yaresueltopordiseño.(rev.,pp.28,31,47)
+Clasificarpororigen,exposiciónresidual
+yactuaciónrequeridadelmandante.Man-
+tenercontrolespropiosenarquitectura,
+planificaciónyregistrointerno.Reclasifi-
+carR-06comoantecedentedeladecisión
+decachéyconservarvisibleslosriesgos
+contractualesquesiganabiertos.
+S8§§8.1–8.3,T-16,
+S4ADRdecachéy
+registrointernode
+audIT.Estado:Sin
+cierreacreditado
+Continúaenelfoliosiguiente
+TFEP-01/2026 · Caso10 · PropuestaEconómica · InformePreparatorio3
+Mediafirma
+19
+Folio
+
+PÁGINA FÍSICA 20
+Resolucióndeobservaciones
+ResolucióndelasobservacionesdelInforme2,conformeaFEP01,Artículo46,p.28(continuación)
+N.º Observación Respuesta Secciónmodifica-
+da
+RIE-
+02
+RIE-02.Laconvivenciayelretirodelsiste-
+made2013noaparecenenelregistrode
+riesgos.(rev.,pp.29,31,47)
+RegistrarlaexposiciónporfunciónenM16,
+M21yM24,condisparadores,conciliación,
+reversión,responsablesyefectosobrelos
+hitos.
+S8/T-16,S3estra-
+tegiadesustitución,
+S7yT-18.Estado:
+Sincierreacredita-
+do
+RIE-
+03
+RIE-03.Faltanenelregistrolosriesgos
+deadopcióndelasinnovaciones1y2ysu
+riesgoresidual.(rev.,pp.29,31)
+Evaluarutilidadpercibida,erroresdeesti-
+macióndellegadaeincompatibilidaddelkit.
+Vincularcadaevento,disparadoryrespues-
+taconlafichaT-19yrecalcularelresidual.
+S8/T-16yS13/T-
+19,innovaciones
+1y2.Estado:Sin
+cierreacreditado
+RIE-
+04
+RIE-04.Elárboldefallasdeasignacióna
+conductornoaptocarecedecuantificación.
+(rev.,pp.29,31)
+DefinirantesdelparalelodeM13–M14
+cómosecuentanloseventos,suexposición
+ylasdependencias.Cuantificarconlos
+datosobtenidosydeclararincertidumbrey
+límitesdelaestimación.
+S8§8.2,Figura
+8.3,T-16yplan
+depruebaenpa-
+raleloT-18/T-17.
+Estado:Sincierre
+acreditado
+RIE-
+05
+RIE-05.Elanálisiscosto-beneficioderes-
+puestasnopresentaunarazónderetorno.
+(rev.,pp.30)
+Calcularcostoincremental,pérdidaespera-
+daevitadaysensibilidaddecadarespuesta
+material.Mantenerlosmontosylarazón
+monetariaenelanálisiseconómicoydejar
+elcriteriotécnicoenS8.
+S8§8.3,T-16yaná-
+lisiseconómicodel
+Sobre3.Estado:
+Sincierreacredita-
+do
+RIE-
+06
+RIE-06.R-17seaceptaconseguimien-
+to,aunquelasimulaciónreporta21,6%
+deatrasodeH1y16,1%deH2.(rev.,pp.
+30–31,47)
+Definirumbralesdealerta,escalamiento,re-
+cuperaciónycontingenciaparaamboshitos.
+Recalcularelresidualconlaredactualizada
+sincambiarlaaceptacióncontractualdelos
+hitos.
+S8§8.3yT-16
+R-17,S7yT-15.
+Estado:Sincierre
+acreditado
+RIE-
+07
+RIE-07.Lastablas8.1–8.3serepitenentre
+S8yT-16ylasremisionessonambiguas.
+(rev.,pp.31)
+UsarnumeraciónpropiadelT-16yreconci-
+liarlasreferenciasacontingencias,dispara-
+doresyrespuestas.
+S8§8.3yT-16,ta-
+blasderegistroy
+respuesta.Estado:
+Sincierreacredita-
+do
+Calidadyaceptación
+CAL-
+01
+CAL-01.Elcalendariodeensayosylaspuer-
+tasdecalidadsemuestransóloentablas
+dedetalle.(rev.,pp.32)
+S9incorporaunavistatemporaldecam-
+pañasypuertasalineadaconS7/T-15.La
+figuraysuexplicacióndistinguencontroles
+recurrentes,ambientes,entradas,eviden-
+ciasdesalidaehitosdeaceptación.
+S9§9.3.2,Figura
+9.2yexplicación,
+ff.13–14.Estado:
+Incorporada
+CAL-
+02
+CAL-02.CP-HW-08aludeapolvomineroy
+CP-HW-06duplicaelensayodealarmaSOS
+deCP-PERF-06.(rev.,pp.32,34)
+CP-HW-08identificaelensayoIP67sobre
+elconjuntoinstaladoentransporteterres-
+tre.CP-HW-06verificaentregaSOSpor
+eventoconcoberturareal.CP-PERF-06mi-
+deelP99bajodegradaciónreproducible.
+Seconservaronlos120identificadoresdel
+catálogo.
+T-17,CP-PERF-06
+f.76,CP-HW-06
+f.94yCP-HW-08
+ff.95–96.Estado:
+Incorporada
+Continúaenelfoliosiguiente
+TFEP-01/2026 · Caso10 · PropuestaEconómica · InformePreparatorio3
+Mediafirma
+20
+Folio
+
+PÁGINA FÍSICA 21
+Resolucióndeobservaciones
+ResolucióndelasobservacionesdelInforme2,conformeaFEP01,Artículo46,p.28(continuación)
+N.º Observación Respuesta Secciónmodifica-
+da
+CAL-
+03
+CAL-03.Los29criteriosdeaceptacióndel
+capítulo18delcasonosevinculanacasos
+depruebaniaactas.(rev.,pp.33–34,47)
+Seincorporólatrazabilidaddelos29crite-
+riosdeaceptaciónaloscasosdeprueba.
+FormularioT-17,
+matrizdetraza-
+bilidad.Estado:
+Incorporada
+CAL-
+04
+CAL-04.LaUATdeEtapa1coincidecon
+elcomienzodelatemporadadefruta,sin
+disponibilidadacordadadeusuariosde
+terminalydespacho.(rev.,pp.34)
+ProgramarventanasUAT,cuposporrol,
+suplenciasyescalamiento.Registrarla
+consultayelplandecontingenciasiladis-
+ponibilidaddeusuariosnoseconfirma.
+S9§§9.2–9.3,T-
+13/T-17,S7/T-18
+yT-16.Estado:Sin
+cierreacreditado
+CAL-
+05
+CAL-05.ElS9ubicaA12enM10–M12yel
+T-13laexpresacomoM12/H5.(rev.,pp.34)
+S9yT-13distinguenlaejecucióndeA12en
+M10–M12delacertificaciónH5enM12.Se
+cotejólaventanaconlaactividadA12de
+T-15.
+S9Tabla9.5,f.14.
+T-13,apartado5,f.
+8.Estado:Incorpo-
+rada
+CAL-
+06
+CAL-06.ElT-17incluyeunprotocologene-
+ralycarecedeprotocolosporcadahitoy
+delproductofinal.(rev.,pp.34,47)
+Seincorporaronprotocolosdeaceptación
+porhitoyelproductodeverificaciónasocia-
+do.
+FormularioT-17,
+protocolosdehitos.
+Estado:Incorpora-
+da
+Innovacionesyvalorización
+INN-
+01
+INN-01.Laprogramaciónporoportunidad
+depatiotieneTRL2ymetasrelativasauna
+líneabasesinmedir.(rev.,pp.35–37,45)
+Definirlíneabaseymétododemediciónen
+piloto,umbralesobservablesyfechadede-
+cisión.Silasoluciónnodemuestrabeneficio
+omadurezsuficiente,definiryvalidarun
+sustitutoquecumplaeltipoexigido.
+S13yT-19innova-
+ción2,T-14/T-15y
+análisiseconómico.
+Estado:Sincierre
+acreditado
+INN-
+02
+INN-02.Lainnovación3presentacomo
+novedadelkilometrajerealdesemirremol-
+ques,queapoyaelcriteriodeaceptación
+26.(rev.,pp.36–37)
+Clasificarelkilometrajecomocumplimiento
+delcriterio26ydelimitarlainnovacióna
+verificacióndeacopleyregistrotérmico
+adicional.Separarsuspruebas,indicadores
+ybeneficios.
+S13/T-19innova-
+ción3,T-12yT-17
+criterio26.Estado:
+Sincierreacredita-
+do
+INN-
+03
+INN-03.Lainnovación5presentaelcatálo-
+godeparadoresdelcriterio28comoparte
+delméritoinnovador.(rev.,pp.35–37,45)
+Lafichadefatigadistingueelméritodela
+innovacióndelcumplimientodelcriterio28.
+FormularioT-19,
+fichadeprevención
+defatiga.Estado:
+Incorporada
+INN-
+04
+INN-04.Lascincofichasomitenelriesgo
+residual.Lapercepcióndevigilanciaen
+lainnovación5sedescribeconprobabili-
+dadmediaaaltaeimpactoalto.(rev.,pp.
+36–37)
+Lasfichasconsignanelriesgoresidualysus
+medidasdetratamiento.
+FormularioT-19,fi-
+chasdeinnovación.
+Estado:Incorpora-
+da
+Continúaenelfoliosiguiente
+TFEP-01/2026 · Caso10 · PropuestaEconómica · InformePreparatorio3
+Mediafirma
+21
+Folio
+
+PÁGINA FÍSICA 22
+Resolucióndeobservaciones
+ResolucióndelasobservacionesdelInforme2,conformeaFEP01,Artículo46,p.28(continuación)
+N.º Observación Respuesta Secciónmodifica-
+da
+INN-
+05
+INN-05.Lasinnovaciones2,3y5carecen
+debaseymagnitudparasusbeneficios,
+aunqueelinformeremitelavalorizaciónal
+Sobre3.(rev.,pp.36)
+Laprogramacióndepatioseevaluaráme-
+diantevisitasyminutosdepreparación
+evitados.Enlainnovación3semediránpor
+separadolaverificacióndeacopleyelre-
+gistrotérmicoadicional.Enlainnovación5
+semediránlosdesvíosevitadosatribuibles
+alarecomendaciónyelconsumoasocia-
+do,ysecontrastarálasiniestralidadcon
+registroshistóricos.Lacuantificacióndelos
+beneficiosquedapendiente.Lainversióny
+laoperaciónseregistranporseparadodel
+beneficiodeCurimón.
+S13yT-19,fichas
+2,3y5.Documen-
+todecostosfrente
+aventa,sección
+devalorizaciónde
+lasinnovaciones,y
+planillaeconómica.
+Estado:Parcial
+TFEP-01/2026 · Caso10 · PropuestaEconómica · InformePreparatorio3
+Mediafirma
+22
+Folio
+
+PÁGINA FÍSICA 23
+INGENIERÍA PARA OPERACIONES CRÍTICAS
+Conectamosdatos.
+Sostenemosoperaciones.
+Generamosconfianza.
+Conecta · Audita · Optimiza · Garantiza
+TECNOLOGÍA QUE MANTIENE EL MUNDO EN MOVIMIENTO
+audIT · Viña del Mar, Región de Valparaíso
+Mediafirma
+23
+Folio
+
+PÁGINA FÍSICA 24
+TFEP-01/2026 · Addendum de cierre económico
+24
+ Cierre económico · Informe 3
+TFEP-01/2026 · audIT / Transportes Curimón · 14 de noviembre de 2026
+Simulación académica · Addendum al corte c9a6515. Los importes de este addendum corresponden a las
+nuevas pruebas de tesorería. El cuerpo original conserva las cifras de sus escenarios históricos.
+La caja se mantiene sobre el piso de CLP 10 millones en los nueve meses críticos para cuatro secuencias
+simuladas. La prueba parte de los 56 cierres mensuales conciliados. M1 se mide desde el desembolso que
+precede a los egresos.
+Mes
+H5 feb. / reserva ene.
+H5 mar. / reserva ene.
+H5 mar. / reserva oct.
+H6 atrasado
+M1
+219,06
+219,06
+219,06
+219,06
+M9
+10,00
+10,00
+10,00
+10,00
+M10
+10,00
+10,00
+10,00
+10,00
+M12
+10,00
+57,35
+55,15
+57,35
+M13
+10,00
+10,00
+10,00
+10,00
+M14
+491,88
+10,00
+10,00
+10,00
+M15
+220,07
+286,85
+286,80
+286,85
+M16
+220,07
+286,85
+286,80
+286,85
+M21
+581,23
+592,92
+590,19
+592,92
+Saldos mínimos en millones de CLP. Las fechas de IVA, proveedores y nómina son supuestos de tesorería
+para el ejercicio.
+Secuencia M13: H6 el 15 de febrero a las 09:00, H5 a las 11:00 en la prueba de 15 días, IVA el 16,
+proveedores el 17, administración e intereses el 21 y nómina el 29. Con H5 en marzo, el saldo del cierre de
+febrero es CLP 10.000.002,98.
+Contingencia H6. Si H5 pasa a marzo y H6 pasa del 15 al 17 de febrero, pagar el IVA el 16 exige CLP
+19.506.394 adicionales para mantener el piso. El escenario prueba diferir CLP 19.510.000 de la reserva de
+enero al 17 de febrero, con abono de H6 a las 09:00 y liberación a las 10:00. Requiere que esa partida de
+reserva admita el diferimiento.
+
+
+PÁGINA FÍSICA 25
+TFEP-01/2026 · Addendum de cierre económico
+25
+ Anexos aprobados de financiamiento y pago
+Simulación académica · 14 de noviembre de 2026
+1. Carta de disponibilidad de financiamiento
+Emisor ficticio. Para el ejercicio, la entidad financiera contempla un desembolso inicial de CLP 266.251.504
+antes del primer egreso de M1 y financiamiento contingente neto hasta CLP 309.792.148. Se aplica 0,9 %
+mensual sobre el saldo de apertura y una comisión ilustrativa de CLP 250.000 en M12 bajo estrés. El
+principal inicial se amortiza en M21 y el refuerzo en M16, sujeto a H5 y H7.
+2. Acuerdo de aporte de socios
+Los socios de audIT aportan CLP 66.562.876 antes del primer egreso de M1 y comprometen hasta CLP
+77.448.037 contingentes para el ejercicio. Los aportes coinciden con los giros bancarios y representan el 20
+% de cada tramo.
+Escenario reserva
+Banco M9
+Banco M12
+Socios M9
+Socios M12
+Pago en M9
+123.772.620
+186.019.528
+30.943.155
+46.504.882
+Pago en M12
+1.612.800
+305.521.560
+403.200
+76.380.390
+Importes en CLP. Los calendarios de refuerzo son alternativos.
+3. Confirmación del plazo de H5
+Contraparte simulada de Curimón. La factura de H5 se emite al suscribirse el acta de aceptación. El plazo
+de pago de ejercicio es de 15 días corridos desde la recepción válida. El acta y la recepción se simulan el 31
+de enero de 2028, con abono el 15 de febrero. La prueba a 30 días traslada el abono al 1 de marzo. H5
+conserva M12 y el monto neto de CLP 461.880.281,50.
+
+
+PÁGINA FÍSICA 26
+TFEP-01/2026 · Addendum de cierre económico
+26
+ Instalación y soporte · Conciliación
+EDT 4.2 / A11 y A18. Los 182 montajes incluyen 34 comodatos y 10 montajes de piloto. La referencia D2
+usa 160 minutos de técnico (incluye banco) y 140 minutos de analista. Sus costos provisionales son CLP
+16.000 y CLP 20.000 por hora.
+Mes
+Kits
+Horas-persona
+CLP de referencia
+M6
+10
+50
+893.333
+M7
+60
+300
+5.360.000
+M8
+60
+300
+5.360.000
+M9
+52
+260
+4.645.333
+Total
+182
+910
+16.258.667
+El total usa precisión completa. Las 210 balizas requieren otras 52,5 horas-persona. Si el externo sustituye
+solo los 140 minutos del técnico a bordo, el costo interno comparable es CLP 37.333 por kit (CLP 6.794.667
+en total). Este valor sirve para comparar cotizaciones. La decisión requiere verificar las horas sustituibles y
+obtener autorización escrita conforme al Art. 73.
+Soporte. D4 presupuesta CLP 3.331.927 mensuales de fabricante y mantención en M13–M56. T-15 asigna
+desde M21 un total de 2.560 h/mes: 960 a mesa 24x7, 640 a plataforma, 320 al ciclo de vida a bordo y 640
+a mantención evolutiva. La nómina global pasa de CLP 88.252.000 al mes en M21–M24 a CLP 85.400.000
+desde M25. El descenso agregado es CLP 2.852.000 al mes.
+Instalación: quedan por acreditar la agenda por terminal, la cotización externa, la autorización del mandante
+y las horas de nómina sustituibles. Soporte: quedan por conciliar dotación, volumen de atención y cobertura
+del SLA por tramo. Los importes identificados se mantienen en sus cuentas de origen.
+Fuentes. T-14/T-15, AUD-14/15/21 y AUD-33/34/37. Cálculo interno a partir del modelo versionado
+c9a6515. Los horarios de tesorería y las pruebas de sensibilidad fueron preparados con apoyo de IA.

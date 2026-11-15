@@ -1,0 +1,579 @@
+Rc files read:
+  /etc/LatexMk
+  .latexmkrc
+Latexmk: This is Latexmk, John Collins, 31 Jan. 2024. Version 4.83.
+Latexmk: applying rule 'lualatex'...
+Rule 'lualatex':  Reasons for rerun
+Changed files or newly in use/created:
+  ../../Informe-3/correccion-final/economico/figuras/caja.pdf
+  ../../Informe-3/correccion-final/economico/figuras/curva-s.pdf
+  ../../Informe-3/correccion-final/economico/figuras/egresos.pdf
+  ../../Informe-3/correccion-final/economico/figuras/financiamiento.pdf
+Category 'changed_user':
+  ../../Informe-3/correccion-final/economico/figuras/caja.pdf
+  ../../Informe-3/correccion-final/economico/figuras/curva-s.pdf
+  ../../Informe-3/correccion-final/economico/figuras/egresos.pdf
+  ../../Informe-3/correccion-final/economico/figuras/financiamiento.pdf
+
+------------
+Run number 1 of rule 'lualatex'
+------------
+------------
+Running 'lualatex -interaction=nonstopmode -halt-on-error -file-line-error  -recorder --jobname="INFORME3_AUDIT_COSTOS_VENTA_20261114" -output-directory="/home/axeler8/Escritorio/audIT/outputs/informe3-corregido/revision/latex"  "../../Informe-3/correccion-final/documento.tex"'
+------------
+This is LuaHBTeX, Version 1.17.0 (TeX Live 2023/Debian) 
+ restricted system commands enabled.
+(../../Informe-3/correccion-final/documento.tex
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-22>
+
+(/home/axeler8/Escritorio/audIT/recursos/Formato-Oferta-audIT/estilo/audit-ofer
+ta.cls
+Document Class: audit-oferta 2026/09/26 v1.0 Oferta tecnica audIT
+(/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
+Document Class: report 2023/05/17 v1.4n Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size11.clo))
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/luatex.def)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(/usr/share/texlive/texmf-dist/tex/latex/colortbl/colortbl.sty
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)))
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/pgf.revision.tex)))
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered
+.code.tex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-luatex.def
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.de
+f)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.
+tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonomet
+ric.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.cod
+e.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison
+.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerari
+thmetics.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.te
+x)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.
+code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.te
+x)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.c
+ode.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformation
+s.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.t
+ex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing
+.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.te
+x)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.te
+x)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.c
+ode.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex))
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65
+.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18
+.sty)) (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex))
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers
+.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarytopaths.code.tex)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarycalc.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarypositioning.code.tex)
+(/home/axeler8/Escritorio/audIT/recursos/Formato-Oferta-audIT/fuentes/audit-fue
+ntes.sty (/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-luatex.def)))
+(/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec-luatex.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
+(/usr/share/texlive/texmf-dist/tex/latex/unicode-math/unicode-math.sty
+(/usr/share/texlive/texmf-dist/tex/latex/unicode-math/unicode-math-luatex.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/base/fix-cm.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1enc.def))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/share/texlive/texmf-dist/tex/lualatex/lualatex-math/lualatex-math.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/unicode-math/unicode-math-table.tex)))
+) (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+(/usr/share/texlive/texmf-dist/tex/generic/babel/luababel.def)
+(/usr/share/texlive/texmf-dist/tex/generic/babel/luababel.def)
+(/usr/share/texlive/texmf-dist/tex/generic/babel-spanish/spanish.ldf
+(/usr/share/texlive/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-es.tex
+UTF-8 Spanish hyphenation patterns
+(/usr/share/texlive/texmf-dist/tex/generic/hyph-utf8/patterns/tex/hyph-es.tex))
+)) (/usr/share/texlive/texmf-dist/tex/generic/babel/locale/es/babel-spanish.tex
+) (/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.sty
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype-luatex.def)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.cfg))
+(/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.sty
+(/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.def)
+(/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.cfg))
+(/home/axeler8/Escritorio/audIT/recursos/Formato-Oferta-audIT/temas/marca.tex)
+(/home/axeler8/Escritorio/audIT/recursos/Formato-Oferta-audIT/estilo/pagina.sty
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/changepage/changepage.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/lscape.sty))))
+(/home/axeler8/Escritorio/audIT/recursos/Formato-Oferta-audIT/estilo/titulos.st
+y (/usr/share/texlive/texmf-dist/tex/latex/titlesec/titlesec.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/titlesec/titletoc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/needspace/needspace.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/placeins/placeins.sty))
+(/home/axeler8/Escritorio/audIT/recursos/Formato-Oferta-audIT/estilo/tablas.sty
+(/usr/share/texlive/texmf-dist/tex/latex/tools/longtable.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/xltabular/xltabular.sty
+(/usr/share/texlive/texmf-dist/tex/latex/tools/tabularx.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/ltablex/ltablex.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/ragged2e/ragged2e.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/caption/ltcaption.sty)))
+(/home/axeler8/Escritorio/audIT/recursos/Formato-Oferta-audIT/estilo/figuras.st
+y (/usr/share/texlive/texmf-dist/tex/generic/alphalph/alphalph.sty
+(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty)))
+(/home/axeler8/Escritorio/audIT/recursos/Formato-Oferta-audIT/estilo/dispositiv
+os.sty (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcolorbox.sty
+(/usr/share/texlive/texmf-dist/tex/latex/tools/verbatim.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/environ/environ.sty
+(/usr/share/texlive/texmf-dist/tex/latex/trimspaces/trimspaces.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbraster.code.tex
+Library (tcolorbox): 'tcbraster.code.tex' version '6.2.0'
+) (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbskins.code.tex
+Library (tcolorbox): 'tcbskins.code.tex' version '6.2.0'
+(/usr/share/texlive/texmf-dist/tex/latex/tikzfill/tikzfill.image.sty
+(/usr/share/texlive/texmf-dist/tex/latex/tikzfill/tikzfill-common.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/tikzfill/tikzlibraryfill.image.code.te
+x)) (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbskinsjigsaw.code.tex
+Library (tcolorbox): 'tcbskinsjigsaw.code.tex' version '6.2.0'
+)) (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbbreakable.code.tex
+Library (tcolorbox): 'tcbbreakable.code.tex' version '6.2.0'
+(/usr/share/texlive/texmf-dist/tex/latex/pdfcol/pdfcol.sty
+(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty))
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifluatex.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbhooks.code.tex
+Library (tcolorbox): 'tcbhooks.code.tex' version '6.2.0'
+) (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbtheorems.code.tex
+Library (tcolorbox): 'tcbtheorems.code.tex' version '6.2.0'
+) (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbfitting.code.tex
+Library (tcolorbox): 'tcbfitting.code.tex' version '6.2.0'
+) (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcblistingsutf8.code.tex
+Library (tcolorbox): 'tcblistingsutf8.code.tex' version '6.2.0'
+(/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcblistings.code.tex
+Library (tcolorbox): 'tcblistings.code.tex' version '6.2.0'
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg))
+(/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcblistingscore.code.tex
+Library (tcolorbox): 'tcblistingscore.code.tex' version '6.2.0'
+(/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbprocessing.code.tex
+Library (tcolorbox): 'tcbprocessing.code.tex' version '6.2.0'
+)))) (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbexternal.code.tex
+Library (tcolorbox): 'tcbexternal.code.tex' version '6.2.0'
+) (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbmagazine.code.tex
+Library (tcolorbox): 'tcbmagazine.code.tex' version '6.2.0'
+) (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbvignette.code.tex
+Library (tcolorbox): 'tcbvignette.code.tex' version '6.2.0'
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibraryfadings.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryfadings.code
+.tex))) (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbposter.code.tex
+Library (tcolorbox): 'tcbposter.code.tex' version '6.2.0'
+)))
+(/home/axeler8/Escritorio/audIT/recursos/Formato-Oferta-audIT/estilo/citas.sty
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+(/usr/share/texlive/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.sty
+(/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.def))
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-dm.def)
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex-apa/apa.dbx)
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-unicode.def)
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-compat.def)
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.def)
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex-apa/apa.bbx
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/standard.bbx))
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex-apa/apa.cbx)
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty)))
+(/home/axeler8/Escritorio/audIT/recursos/Formato-Oferta-audIT/portadas/portadas
+.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibraryshapes.geometric.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshape
+s.geometric.code.tex)))
+(/home/axeler8/Escritorio/audIT/recursos/Formato-Oferta-audIT/formularios/formu
+larios.sty
+(/home/axeler8/Escritorio/audIT/recursos/Formato-Oferta-audIT/formularios/T-6.t
+ex)
+(/home/axeler8/Escritorio/audIT/recursos/Formato-Oferta-audIT/formularios/T-8.t
+ex)
+(/home/axeler8/Escritorio/audIT/recursos/Formato-Oferta-audIT/formularios/T-9.t
+ex)
+(/home/axeler8/Escritorio/audIT/recursos/Formato-Oferta-audIT/formularios/T-10.
+tex)
+(/home/axeler8/Escritorio/audIT/recursos/Formato-Oferta-audIT/formularios/T-11.
+tex)
+(/home/axeler8/Escritorio/audIT/recursos/Formato-Oferta-audIT/formularios/T-12.
+tex)
+(/home/axeler8/Escritorio/audIT/recursos/Formato-Oferta-audIT/formularios/T-13.
+tex)
+(/home/axeler8/Escritorio/audIT/recursos/Formato-Oferta-audIT/formularios/T-14.
+tex)
+(/home/axeler8/Escritorio/audIT/recursos/Formato-Oferta-audIT/formularios/T-15.
+tex)
+(/home/axeler8/Escritorio/audIT/recursos/Formato-Oferta-audIT/formularios/T-16.
+tex)
+(/home/axeler8/Escritorio/audIT/recursos/Formato-Oferta-audIT/formularios/T-17.
+tex)
+(/home/axeler8/Escritorio/audIT/recursos/Formato-Oferta-audIT/formularios/T-18.
+tex)
+(/home/axeler8/Escritorio/audIT/recursos/Formato-Oferta-audIT/formularios/T-19.
+tex)
+(/home/axeler8/Escritorio/audIT/recursos/Formato-Oferta-audIT/formularios/art46
+.tex))
+(/home/axeler8/Escritorio/audIT/recursos/Formato-Oferta-audIT/estilo/ensamblado
+.sty)
+(/home/axeler8/Escritorio/audIT/recursos/Formato-Oferta-audIT/estilo/economico.
+sty) (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/base/atbegshi-ltx.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hluatex.def
+(/usr/share/texlive/texmf-dist/tex/generic/stringenc/stringenc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/base/atveryend-ltx.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+(/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/bookmark/bookmark.sty
+(/usr/share/texlive/texmf-dist/tex/latex/bookmark/bkm-pdftex.def))
+(/usr/share/texlive/texmf-dist/tex/latex/lastpage/lastpage.sty
+(/usr/share/texlive/texmf-dist/tex/latex/lastpage/lastpage2e.sty
+(/usr/share/texlive/texmf-dist/tex/latex/lastpage/lastpagemodern.sty) 
+))
+(/home/axeler8/Escritorio/audIT/recursos/Formato-Oferta-audIT/estilo/comunicado
+10.sty (/usr/share/texlive/texmf-dist/tex/latex/tools/afterpage.sty)))
+(/home/axeler8/Escritorio/audIT/recursos/Formato-Oferta-audIT/configuracion/met
+adatos.tex)
+(/home/axeler8/Escritorio/audIT/recursos/Formato-Oferta-audIT/configuracion/ins
+tancia.tex)
+(/home/axeler8/Escritorio/audIT/recursos/Formato-Oferta-audIT/configuracion/sub
+documentos.tex)
+(/home/axeler8/Escritorio/audIT/recursos/Formato-Oferta-audIT/configuracion/eco
+nomico.tex) (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty)
+(/home/axeler8/Escritorio/audIT/outputs/informe3-corregido/revision/latex/INFOR
+ME3_AUDIT_COSTOS_VENTA_20261114.aux)
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+*geometry* driver: auto-detecting
+*geometry* detected driver: luatex
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex-apa/spanish-apa.lbx
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/spanish.lbx)
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/spanish.lbx))
+(/home/axeler8/Escritorio/audIT/outputs/informe3-corregido/revision/latex/INFOR
+ME3_AUDIT_COSTOS_VENTA_20261114.bbl) [1{/var/lib/texmf/fonts/map/pdftex/updmap/
+pdftex.map}</home/axeler8/Escritorio/audIT/recursos/Formato-Oferta-audIT/portad
+as/activos/camion.jpg></home/axeler8/Escritorio/audIT/recursos/Formato-Oferta-a
+udIT/portadas/activos/logo-audit.png></home/axeler8/Escritorio/audIT/recursos/F
+ormato-Oferta-audIT/portadas/activos/media-firma.png>] [2] [3]
+Underfull \hbox (badness 1694) in paragraph at lines 19--19
+ []|\TU/IBMPlexSans(0)/m/n/9.53561 1|
+
+Underfull \hbox (badness 1694) in paragraph at lines 19--19
+ []|\TU/IBMPlexSans(0)/m/n/9.53561 3|
+
+Underfull \hbox (badness 1694) in paragraph at lines 19--19
+ []|\TU/IBMPlexSans(0)/m/n/9.53561 4|
+
+Underfull \hbox (badness 1694) in paragraph at lines 19--19
+ []|\TU/IBMPlexSans(0)/m/n/9.53561 5|
+
+Underfull \hbox (badness 1694) in paragraph at lines 19--19
+ []|\TU/IBMPlexSans(0)/m/n/9.53561 6|
+
+Underfull \hbox (badness 1694) in paragraph at lines 19--19
+ []|\TU/IBMPlexSans(0)/m/n/9.53561 7|
+
+Underfull \hbox (badness 1221) in paragraph at lines 19--19
+ []|\TU/IBMPlexSans(0)/m/n/9.53561 16|
+
+Underfull \hbox (badness 1221) in paragraph at lines 19--19
+ []|\TU/IBMPlexSans(0)/m/n/9.53561 16|
+
+Underfull \hbox (badness 1221) in paragraph at lines 19--19
+ []|\TU/IBMPlexSans(0)/m/n/9.53561 17|
+
+Underfull \hbox (badness 1221) in paragraph at lines 19--19
+ []|\TU/IBMPlexSans(0)/m/n/9.53561 18|
+
+Underfull \hbox (badness 1221) in paragraph at lines 19--19
+ []|\TU/IBMPlexSans(0)/m/n/9.53561 19|
+
+Underfull \hbox (badness 1221) in paragraph at lines 19--19
+ []|\TU/IBMPlexSans(0)/m/n/9.53561 21|
+
+Underfull \hbox (badness 1221) in paragraph at lines 19--19
+ []|\TU/IBMPlexSans(0)/m/n/9.53561 24|
+
+Underfull \hbox (badness 1221) in paragraph at lines 19--19
+ []|\TU/IBMPlexSans(0)/m/n/9.53561 25|
+
+Underfull \hbox (badness 1221) in paragraph at lines 19--19
+ []|\TU/IBMPlexSans(0)/m/n/9.53561 25|
+[4]
+(/home/axeler8/Escritorio/audIT/outputs/informe3-corregido/revision/latex/INFOR
+ME3_AUDIT_COSTOS_VENTA_20261114.toc) [5] [6]
+(../../Informe-3/correccion-final/observaciones.tex [7] [8] [9] [10] [11]
+[12] [13] [14]) [15]
+(../../Informe-3/correccion-final/economico/costos-venta/contenido.tex [16]
+[17] [18<../../Informe-3/correccion-final/economico/figuras/curva-s.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 60--60
+ []|[]\TU/IBMPlexSans(0)/b/n/9.53561 UF|
+
+Underfull \hbox (badness 10000) in paragraph at lines 60--60
+ []|[]\TU/IBMPlexSans(0)/b/n/9.53561 UF|
+
+Underfull \hbox (badness 2189) in paragraph at lines 60--60
+ []|\TU/IBMPlexSans(0)/m/n/9.53561 172.657,03|
+
+Underfull \hbox (badness 2189) in paragraph at lines 60--60
+ []|\TU/IBMPlexSans(0)/m/n/9.53561 211.849,11|
+
+Underfull \hbox (badness 2875) in paragraph at lines 60--60
+ []|\TU/IBMPlexSans(0)/m/n/9.53561 26.915,02|
+
+Underfull \hbox (badness 2875) in paragraph at lines 60--60
+ []|\TU/IBMPlexSans(0)/m/n/9.53561 18.250,00|
+
+Underfull \hbox (badness 3679) in paragraph at lines 60--60
+ []|\TU/IBMPlexSans(0)/m/n/9.53561 5.423,95|
+[19<../../Informe-3/correccion-final/economico/figuras/egresos.pdf>]
+Underfull \hbox (badness 2990) in paragraph at lines 77--77
+ []|[]\TU/IBMPlexSans(0)/b/n/9.53561 UF por mes|
+
+Underfull \hbox (badness 2990) in paragraph at lines 77--77
+ []|[]\TU/IBMPlexSans(0)/b/n/9.53561 UF por mes|
+
+Underfull \hbox (badness 4608) in paragraph at lines 77--77
+ []|\TU/IBMPlexSans(0)/m/n/9.53561 1.646,00|
+
+Underfull \hbox (badness 4608) in paragraph at lines 77--77
+ []|\TU/IBMPlexSans(0)/m/n/9.53561 1.492,00|
+
+Underfull \hbox (badness 4608) in paragraph at lines 77--77
+ []|\TU/IBMPlexSans(0)/m/n/9.53561 1.436,00|
+
+Underfull \hbox (badness 4608) in paragraph at lines 77--77
+ []|\TU/IBMPlexSans(0)/m/n/9.53561 1.380,00|
+[20]
+Underfull \hbox (badness 2644) in paragraph at lines 83--83
+ []|[]\TU/IBMPlexSans(0)/b/n/9.53561 To-tal|
+
+Underfull \hbox (badness 2644) in paragraph at lines 83--83
+ []|[]\TU/IBMPlexSans(0)/b/n/9.53561 To-tal|
+
+Underfull \hbox (badness 4205) in paragraph at lines 83--83
+ []||
+
+Underfull \hbox (badness 4205) in paragraph at lines 83--83
+ []||
+
+Underfull \hbox (badness 4205) in paragraph at lines 83--83
+ []||
+
+Underfull \hbox (badness 4205) in paragraph at lines 83--83
+ []||
+
+Underfull \hbox (badness 4205) in paragraph at lines 83--83
+ []||
+
+Underfull \hbox (badness 4205) in paragraph at lines 83--83
+ []||
+
+Underfull \hbox (badness 2644) in paragraph at lines 86--86
+ []|[]\TU/IBMPlexSans(0)/b/n/9.53561 To-tal|
+
+Underfull \hbox (badness 2644) in paragraph at lines 86--86
+ []|[]\TU/IBMPlexSans(0)/b/n/9.53561 To-tal|
+[21] [22<../../Informe-3/correccion-final/economico/figuras/financiamiento.pdf>
+]
+Underfull \hbox (badness 1406) in paragraph at lines 117--117
+ []|\TU/IBMPlexSansCondensed(0)/m/n/9.53561 0,00|
+
+Underfull \hbox (badness 1406) in paragraph at lines 117--117
+ []|\TU/IBMPlexSansCondensed(0)/m/n/9.53561 0,00|
+
+Underfull \hbox (badness 1406) in paragraph at lines 117--117
+ []|\TU/IBMPlexSansCondensed(0)/m/n/9.53561 0,00|
+
+Underfull \hbox (badness 1406) in paragraph at lines 117--117
+ []|\TU/IBMPlexSansCondensed(0)/m/n/9.53561 0,00|
+
+Underfull \hbox (badness 1406) in paragraph at lines 117--117
+ []|\TU/IBMPlexSansCondensed(0)/m/n/9.53561 0,00|
+
+Underfull \hbox (badness 1406) in paragraph at lines 117--117
+ []|\TU/IBMPlexSansCondensed(0)/m/n/9.53561 0,00|
+[23]
+Underfull \hbox (badness 3386) in paragraph at lines 133--133
+ []|\TU/IBMPlexSansCondensed(0)/m/n/9.53561 780,40|
+
+Underfull \hbox (badness 3386) in paragraph at lines 133--133
+ []|\TU/IBMPlexSansCondensed(0)/m/n/9.53561 621,41|
+
+Underfull \hbox (badness 3386) in paragraph at lines 133--133
+ []|\TU/IBMPlexSansCondensed(0)/m/n/9.53561 858,40|
+
+Underfull \hbox (badness 5064) in paragraph at lines 133--133
+ []|\TU/IBMPlexSansCondensed(0)/m/n/9.53561 0,00|
+
+Underfull \hbox (badness 3386) in paragraph at lines 133--133
+ []|\TU/IBMPlexSansCondensed(0)/m/n/9.53561 198,00|
+
+Underfull \hbox (badness 5064) in paragraph at lines 133--133
+ []|\TU/IBMPlexSansCondensed(0)/m/n/9.53561 0,00|
+
+Underfull \hbox (badness 5064) in paragraph at lines 133--133
+ []|\TU/IBMPlexSansCondensed(0)/m/n/9.53561 0,00|
+
+Underfull \hbox (badness 5064) in paragraph at lines 133--133
+ []|\TU/IBMPlexSansCondensed(0)/m/n/9.53561 0,00|
+
+Underfull \hbox (badness 3386) in paragraph at lines 133--133
+ []|\TU/IBMPlexSansCondensed(0)/m/n/9.53561 495,00|
+
+Underfull \hbox (badness 3386) in paragraph at lines 133--133
+ []|\TU/IBMPlexSansCondensed(0)/m/n/9.53561 100,00|
+[24<../../Informe-3/correccion-final/economico/figuras/caja.pdf>] [25])
+[26] [27</home/axeler8/Escritorio/audIT/recursos/Formato-Oferta-audIT/portadas/
+activos/logo-audit-negativo.png>]
+
+enddocument/afterlastpage: lastpage setting LastPage.
+
+(/home/axeler8/Escritorio/audIT/outputs/informe3-corregido/revision/latex/INFOR
+ME3_AUDIT_COSTOS_VENTA_20261114.aux))
+(see the transcript file for additional information)
+ 1622 words of node memory still in use:
+   31 hlist, 2 vlist, 14 rule, 1 local_par, 4 glue, 5 kern, 1 penalty, 1 margin
+_kern, 4 glyph, 89 attribute, 104 glue_spec, 82 attribute_list, 3 write, 24 pdf
+_literal, 24 pdf_colorstack nodes
+   avail lists: 1:11,2:15477,3:3516,4:2022,5:18712,6:940,7:112840,8:4,9:10462,1
+0:30,11:13636
+</usr/share/texlive/texmf-dist/fonts/opentype/ibm/plex/IBMPlexSansCondensed-Reg
+ular.otf></usr/share/texlive/texmf-dist/fonts/opentype/ibm/plex/IBMPlexSansCond
+ensed-SemiBold.otf></usr/local/share/fonts/opentype/IBMPlexMath-Regular.otf></u
+sr/share/texlive/texmf-dist/fonts/opentype/ibm/plex/IBMPlexSerif-Regular.otf></
+usr/share/texlive/texmf-dist/fonts/opentype/ibm/plex/IBMPlexMono-Regular.otf></
+usr/share/texlive/texmf-dist/fonts/opentype/ibm/plex/IBMPlexSans-Light.otf></us
+r/share/texlive/texmf-dist/fonts/opentype/ibm/plex/IBMPlexSans-Medium.otf></usr
+/share/texlive/texmf-dist/fonts/opentype/ibm/plex/IBMPlexSans-SemiBold.otf></us
+r/share/texlive/texmf-dist/fonts/opentype/ibm/plex/IBMPlexSans-Regular.otf>
+Output written on INFORME3_AUDIT_COSTOS_VENTA_20261114.pdf (27 pages, 1150793 b
+ytes).
+Transcript written on INFORME3_AUDIT_COSTOS_VENTA_20261114.log.
+Latexmk: Getting log file '/home/axeler8/Escritorio/audIT/outputs/informe3-corregido/revision/latex/INFORME3_AUDIT_COSTOS_VENTA_20261114.log'
+Latexmk: Examining '/home/axeler8/Escritorio/audIT/outputs/informe3-corregido/revision/latex/INFORME3_AUDIT_COSTOS_VENTA_20261114.fls'
+Latexmk: Examining '/home/axeler8/Escritorio/audIT/outputs/informe3-corregido/revision/latex/INFORME3_AUDIT_COSTOS_VENTA_20261114.log'
+Latexmk: Found input bbl file '/home/axeler8/Escritorio/audIT/outputs/informe3-corregido/revision/latex/INFORME3_AUDIT_COSTOS_VENTA_20261114.bbl'
+Latexmk: Log file says output to 'INFORME3_AUDIT_COSTOS_VENTA_20261114.pdf'
+Latexmk: Log file says output to 'INFORME3_AUDIT_COSTOS_VENTA_20261114.pdf'
+Latexmk: Bibliography file(s) from .bcf file:
+  referencias/bases.bib
+  referencias/referencias.bib
+Latexmk: All targets (/home/axeler8/Escritorio/audIT/outputs/informe3-corregido/revision/latex/INFORME3_AUDIT_COSTOS_VENTA_20261114.pdf) are up-to-date
+

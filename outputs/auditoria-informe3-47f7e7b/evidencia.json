@@ -1,0 +1,1552 @@
+{
+  "sha": "47f7e7b1717e531fcbed6a171b6ed2023a1552e6",
+  "archivos": {
+    "outputs/informe3-integral/entrega-consolidada/AUDIT-Informe3-Modelo-Economico.xlsx": {
+      "sha256": "9902981405f40a28c0914ca93916dc8b14ffa6fe0fde996a357f24d0badbe91c",
+      "bytes": 225888
+    },
+    "outputs/informe3-integral/entrega-consolidada/AUDIT-Informe3-Presentacion-Economica.pptx": {
+      "sha256": "d0e6a67c7789d98370f1c646252b1d9f942314e44200c08628cff57e695d7ae0",
+      "bytes": 47095
+    },
+    "outputs/informe3-integral/entrega-consolidada/Agenda-montaje-simulada.csv": {
+      "sha256": "d6422aeb9665048666c8f68c1b90148ac177908ee1f8f1730bcc8b450047504c",
+      "bytes": 13446
+    },
+    "outputs/informe3-integral/entrega-consolidada/Cierre-tecnico-D1-D2.md": {
+      "sha256": "75649b13cdd3df315c1d710d9aa9c2a70bd262ddb4335dac33d179a25936c0e6",
+      "bytes": 11536
+    },
+    "outputs/informe3-integral/entrega-consolidada/INFORME3_AUDIT_COSTOS_VENTA_CONSOLIDADO.pdf": {
+      "sha256": "dded29b9b861e627a192edae773abe1e8aa8fb92c9e460262656e4047cb488e6",
+      "bytes": 1115535
+    },
+    "outputs/informe3-integral/entrega-consolidada/Instalacion-caja-sensibilidad.csv": {
+      "sha256": "565272253c3b5ad0eed825973aa5d089b8770de54d1202004b61e30d23ba265c",
+      "bytes": 496
+    },
+    "outputs/informe3-integral/entrega-consolidada/LEEME.md": {
+      "sha256": "c7b331bb82c6ef44fe6cf9da08b9614e7d7a78955d27714ac8d4995616a29d5b",
+      "bytes": 3721
+    },
+    "outputs/informe3-integral/entrega-consolidada/Soporte-Datos-QA-simulado.csv": {
+      "sha256": "56a8c1977319becd1a06a51e7c86e78424654baa15cefe44cb1fb5125a369242",
+      "bytes": 942
+    },
+    "outputs/informe3-integral/entrega-consolidada/Soporte-prueba-de-carga.csv": {
+      "sha256": "6a2ab0bd5bb90e719b09f95cd5c9e69d586aa91aefc50fa986b2a7aa90d66046",
+      "bytes": 169
+    },
+    "outputs/informe3-integral/entrega-consolidada/Tesoreria-orden-simulado.csv": {
+      "sha256": "5af7a0444b827bfb1683183e310e0c1c7d829dd50db3065739233cfc36fe7e9d",
+      "bytes": 19140
+    },
+    "outputs/informe3-integral/entrega-consolidada/activacion-simulada/Caja-activacion-montaje.csv": {
+      "sha256": "6c55b0d0681cb9f7d7d3dc86cc70d85043e43c2cf5c482f627ee5bba51e02a98",
+      "bytes": 27577
+    },
+    "outputs/informe3-integral/entrega-consolidada/activacion-simulada/Constancia-alcance-academico.pdf": {
+      "sha256": "4b9f4f84362ae786d2b23cdb0da6df1048ac7775647dec2be0b4bfab9c0deaa4",
+      "bytes": 3152
+    },
+    "outputs/informe3-integral/entrega-consolidada/activacion-simulada/Expediente-acreditacion-tecnica.md": {
+      "sha256": "28538a705a071db90d74f41b870ada6c9a4715c1eba633a99ab3a1144316284a",
+      "bytes": 7458
+    },
+    "outputs/informe3-integral/entrega-consolidada/activacion-simulada/Informe-3-Activacion-simulada.pdf": {
+      "sha256": "3530b29615b8fdba277f730130dbf6048435caed2c702c113b608e86bb4442f6",
+      "bytes": 1117132
+    },
+    "outputs/informe3-integral/entrega-consolidada/activacion-simulada/LEEME.md": {
+      "sha256": "f6dafa1058046d8cb5c327000983b759bf767077420eed61c9a84934c002f068",
+      "bytes": 3135
+    },
+    "outputs/informe3-integral/entrega-consolidada/activacion-simulada/Modelo-activacion-simulada.xlsx": {
+      "sha256": "1c012b3e927b2532edb0cd427283baeb93801974189c1d4a2f9d9750f4358e2c",
+      "bytes": 252069
+    },
+    "outputs/informe3-integral/entrega-consolidada/activacion-simulada/Presentacion-activacion-simulada.pptx": {
+      "sha256": "3e3359bc165cc96c22c9b1cdbcf4fba809c93a8d81322536bddc5be46e1cff3c",
+      "bytes": 48572
+    },
+    "outputs/informe3-integral/entrega-consolidada/activacion-simulada/Pruebas-SLA-critico.csv": {
+      "sha256": "5b3d97985d07835250eee8e33b757306fe753ad52bcbade203de22b5fdf2fbee",
+      "bytes": 347
+    },
+    "outputs/informe3-integral/entrega-consolidada/activacion-simulada/Turno-L1-y-guardia.csv": {
+      "sha256": "a2561e415a9b1b8902e741883752ee2c4bdb8ee60ad1a3835ca1e62dacd61c17",
+      "bytes": 4526
+    }
+  },
+  "planillas": {
+    "outputs/informe3-integral/entrega-consolidada/AUDIT-Informe3-Modelo-Economico.xlsx": {
+      "hojas": {
+        "RESUMEN": {
+          "filas": 1000,
+          "columnas": 26,
+          "cuentas": {
+            "texto": 64,
+            "formula": 92
+          },
+          "errores": [],
+          "protegida": false,
+          "validaciones": 0,
+          "graficos": 0
+        },
+        "PARÁMETROS": {
+          "filas": 6,
+          "columnas": 2,
+          "cuentas": {
+            "texto": 1,
+            "formula": 3
+          },
+          "errores": [],
+          "protegida": false,
+          "validaciones": 0,
+          "graficos": 0
+        },
+        "PCUESFUERZO": {
+          "filas": 164,
+          "columnas": 14,
+          "cuentas": {
+            "texto": 4
+          },
+          "errores": [],
+          "protegida": false,
+          "validaciones": 0,
+          "graficos": 0
+        },
+        "TARIFAS DE OPERACION": {
+          "filas": 47,
+          "columnas": 38,
+          "cuentas": {
+            "formula": 4
+          },
+          "errores": [],
+          "protegida": false,
+          "validaciones": 0,
+          "graficos": 0
+        },
+        "FLUJO DE CAJA COMPLETO": {
+          "filas": 26,
+          "columnas": 2,
+          "cuentas": {
+            "formula": 2
+          },
+          "errores": [],
+          "protegida": false,
+          "validaciones": 0,
+          "graficos": 0
+        },
+        "FLUJO DE CAJA NETO": {
+          "filas": 35,
+          "columnas": 15,
+          "cuentas": {
+            "formula": 3
+          },
+          "errores": [],
+          "protegida": false,
+          "validaciones": 0,
+          "graficos": 0
+        },
+        "COSTOS DE OPERACION": {
+          "filas": 45,
+          "columnas": 38,
+          "cuentas": {
+            "formula": 3
+          },
+          "errores": [],
+          "protegida": false,
+          "validaciones": 0,
+          "graficos": 0
+        },
+        "Flujo de Caja": {
+          "filas": 58,
+          "columnas": 24,
+          "cuentas": {
+            "texto": 36,
+            "numero": 69,
+            "formula": 1197
+          },
+          "errores": [],
+          "protegida": true,
+          "validaciones": 0,
+          "graficos": 0
+        },
+        "Parámetros D2": {
+          "filas": 34,
+          "columnas": 3,
+          "cuentas": {
+            "texto": 57,
+            "numero": 30,
+            "formula": 3
+          },
+          "errores": [],
+          "protegida": true,
+          "validaciones": 8,
+          "graficos": 0
+        },
+        "Costos": {
+          "filas": 57,
+          "columnas": 12,
+          "cuentas": {
+            "texto": 12,
+            "numero": 56,
+            "formula": 564
+          },
+          "errores": [],
+          "protegida": true,
+          "validaciones": 0,
+          "graficos": 0
+        },
+        "Proveedores": {
+          "filas": 281,
+          "columnas": 9,
+          "cuentas": {
+            "texto": 1129,
+            "numero": 545,
+            "formula": 448
+          },
+          "errores": [],
+          "protegida": false,
+          "validaciones": 0,
+          "graficos": 0
+        },
+        "Personal": {
+          "filas": 65,
+          "columnas": 6,
+          "cuentas": {
+            "texto": 78,
+            "numero": 119,
+            "formula": 101
+          },
+          "errores": [],
+          "protegida": false,
+          "validaciones": 0,
+          "graficos": 0
+        },
+        "Innovaciones": {
+          "filas": 24,
+          "columnas": 5,
+          "cuentas": {
+            "texto": 60,
+            "numero": 25,
+            "formula": 4
+          },
+          "errores": [],
+          "protegida": false,
+          "validaciones": 0,
+          "graficos": 0
+        },
+        "Curva S": {
+          "filas": 57,
+          "columnas": 4,
+          "cuentas": {
+            "texto": 4,
+            "formula": 224
+          },
+          "errores": [],
+          "protegida": true,
+          "validaciones": 0,
+          "graficos": 1
+        },
+        "Indicadores": {
+          "filas": 14,
+          "columnas": 3,
+          "cuentas": {
+            "texto": 30,
+            "formula": 12
+          },
+          "errores": [],
+          "protegida": true,
+          "validaciones": 0,
+          "graficos": 0
+        },
+        "Dedicación D3": {
+          "filas": 57,
+          "columnas": 11,
+          "cuentas": {
+            "texto": 12,
+            "numero": 530
+          },
+          "errores": [],
+          "protegida": false,
+          "validaciones": 0,
+          "graficos": 0
+        },
+        "Detalle proveedores D4": {
+          "filas": 379,
+          "columnas": 10,
+          "cuentas": {
+            "texto": 1900,
+            "numero": 867
+          },
+          "errores": [],
+          "protegida": false,
+          "validaciones": 0,
+          "graficos": 0
+        },
+        "Capacidad por perfil": {
+          "filas": 41,
+          "columnas": 9,
+          "cuentas": {
+            "texto": 49,
+            "numero": 80,
+            "formula": 80
+          },
+          "errores": [],
+          "protegida": false,
+          "validaciones": 0,
+          "graficos": 0
+        },
+        "Escenarios de caja": {
+          "filas": 20,
+          "columnas": 6,
+          "cuentas": {
+            "texto": 27,
+            "numero": 46
+          },
+          "errores": [],
+          "protegida": false,
+          "validaciones": 0,
+          "graficos": 0
+        },
+        "Beneficios Curimón": {
+          "filas": 30,
+          "columnas": 8,
+          "cuentas": {
+            "texto": 69,
+            "numero": 2,
+            "formula": 10
+          },
+          "errores": [],
+          "protegida": false,
+          "validaciones": 5,
+          "graficos": 0
+        },
+        "INN-5 Costos": {
+          "filas": 5,
+          "columnas": 6,
+          "cuentas": {
+            "texto": 14,
+            "numero": 12,
+            "formula": 4
+          },
+          "errores": [],
+          "protegida": false,
+          "validaciones": 0,
+          "graficos": 0
+        },
+        "Refuerzo presupuestado": {
+          "filas": 48,
+          "columnas": 5,
+          "cuentas": {
+            "texto": 52,
+            "numero": 178
+          },
+          "errores": [],
+          "protegida": false,
+          "validaciones": 0,
+          "graficos": 0
+        },
+        "Criterios y pendientes": {
+          "filas": 8,
+          "columnas": 2,
+          "cuentas": {
+            "texto": 16
+          },
+          "errores": [],
+          "protegida": false,
+          "validaciones": 0,
+          "graficos": 0
+        },
+        "Cotejo D1": {
+          "filas": 21,
+          "columnas": 2,
+          "cuentas": {
+            "texto": 29,
+            "numero": 13
+          },
+          "errores": [],
+          "protegida": false,
+          "validaciones": 0,
+          "graficos": 0
+        },
+        "Gastos Administrativos": {
+          "filas": 37,
+          "columnas": 8,
+          "cuentas": {
+            "texto": 113,
+            "numero": 81,
+            "formula": 52
+          },
+          "errores": [],
+          "protegida": true,
+          "validaciones": 0,
+          "graficos": 0
+        },
+        "PUENTE D2": {
+          "filas": 9,
+          "columnas": 4,
+          "cuentas": {
+            "texto": 11,
+            "formula": 18
+          },
+          "errores": [],
+          "protegida": true,
+          "validaciones": 0,
+          "graficos": 0
+        },
+        "Ingresos": {
+          "filas": 58,
+          "columnas": 6,
+          "cuentas": {
+            "texto": 6,
+            "formula": 342
+          },
+          "errores": [],
+          "protegida": true,
+          "validaciones": 0,
+          "graficos": 0
+        },
+        "Financiamiento": {
+          "filas": 58,
+          "columnas": 12,
+          "cuentas": {
+            "texto": 12,
+            "formula": 684
+          },
+          "errores": [],
+          "protegida": true,
+          "validaciones": 0,
+          "graficos": 0
+        },
+        "Sensibilidad": {
+          "filas": 66,
+          "columnas": 16,
+          "cuentas": {
+            "texto": 37,
+            "formula": 918,
+            "numero": 1
+          },
+          "errores": [],
+          "protegida": true,
+          "validaciones": 0,
+          "graficos": 0
+        },
+        "Hardware del mandante": {
+          "filas": 40,
+          "columnas": 12,
+          "cuentas": {
+            "texto": 232,
+            "numero": 176,
+            "formula": 38
+          },
+          "errores": [],
+          "protegida": false,
+          "validaciones": 0,
+          "graficos": 0
+        },
+        "Resumen Ejecutivo": {
+          "filas": 21,
+          "columnas": 2,
+          "cuentas": {
+            "texto": 31,
+            "formula": 9
+          },
+          "errores": [],
+          "protegida": true,
+          "validaciones": 0,
+          "graficos": 0
+        },
+        "Ajustes de operación": {
+          "filas": 59,
+          "columnas": 4,
+          "cuentas": {
+            "texto": 61,
+            "numero": 168
+          },
+          "errores": [],
+          "protegida": true,
+          "validaciones": 2,
+          "graficos": 0
+        },
+        "Cuadro maestro": {
+          "filas": 23,
+          "columnas": 10,
+          "cuentas": {
+            "texto": 65,
+            "formula": 128
+          },
+          "errores": [],
+          "protegida": true,
+          "validaciones": 0,
+          "graficos": 0
+        },
+        "Conciliación IVA": {
+          "filas": 60,
+          "columnas": 5,
+          "cuentas": {
+            "texto": 7,
+            "formula": 284
+          },
+          "errores": [],
+          "protegida": true,
+          "validaciones": 0,
+          "graficos": 0
+        },
+        "Caja por fecha simulada": {
+          "filas": 218,
+          "columnas": 7,
+          "cuentas": {
+            "texto": 875,
+            "numero": 434,
+            "formula": 217
+          },
+          "errores": [],
+          "protegida": false,
+          "validaciones": 0,
+          "graficos": 0
+        },
+        "Minimos meses criticos": {
+          "filas": 37,
+          "columnas": 4,
+          "cuentas": {
+            "texto": 40,
+            "numero": 108
+          },
+          "errores": [],
+          "protegida": false,
+          "validaciones": 0,
+          "graficos": 0
+        },
+        "Instalacion y soporte": {
+          "filas": 13,
+          "columnas": 8,
+          "cuentas": {
+            "texto": 68,
+            "numero": 36
+          },
+          "errores": [],
+          "protegida": false,
+          "validaciones": 0,
+          "graficos": 0
+        },
+        "Anexos simulados": {
+          "filas": 8,
+          "columnas": 4,
+          "cuentas": {
+            "texto": 22,
+            "numero": 10
+          },
+          "errores": [],
+          "protegida": false,
+          "validaciones": 0,
+          "graficos": 0
+        }
+      },
+      "claves": {
+        "Parámetros D2": {
+          "B4": {
+            "formula": 274452748,
+            "guardado": 274452748
+          },
+          "B5": {
+            "formula": 0.8,
+            "guardado": 0.8
+          },
+          "B6": {
+            "formula": 0.009,
+            "guardado": 0.009
+          },
+          "B7": {
+            "formula": 0.03,
+            "guardado": 0.03
+          },
+          "B8": {
+            "formula": 50000000,
+            "guardado": 50000000
+          },
+          "B9": {
+            "formula": 0.2,
+            "guardado": 0.2
+          },
+          "B10": {
+            "formula": "=B5*B6+(1-B5)*((1+B9)^(1/B18)-1)",
+            "guardado": 0.0102618940999462
+          },
+          "B21": {
+            "formula": 40000,
+            "guardado": 40000
+          }
+        },
+        "Indicadores": {
+          "B2": {
+            "formula": "=NPV('Parámetros D2'!B10,'Flujo de Caja'!H2:H57)",
+            "guardado": 1235043315.78053
+          },
+          "B3": {
+            "formula": "=IRR('Flujo de Caja'!H2:H57,0.8)",
+            "guardado": 0.836613236332302
+          },
+          "B10": {
+            "formula": "=1-SUM(Costos!K2:K57)/SUM(Ingresos!E2:E57)",
+            "guardado": 0.185
+          }
+        },
+        "Flujo de Caja": {
+          "R10": {
+            "formula": "=MAX(0,MIN('Parámetros D2'!$B$8-T9,-(W9+H10+O10+0-P10-Q10)))",
+            "guardado": 44999999.5355681
+          },
+          "T10": {
+            "formula": "=T9+R10-S10",
+            "guardado": 44999999.5355681
+          },
+          "W10": {
+            "formula": "=(W9+H10+O10+0-P10-Q10)+R10-S10-U10",
+            "guardado": 0
+          }
+        },
+        "Personal": {
+          "D22": {
+            "formula": "=SUM(B22:C22)+SUMIF('Capacidad por perfil'!$A$2:$A$41,A22,'Capacidad por perfil'!$H$2:$H$41)",
+            "guardado": 88252000
+          },
+          "D26": {
+            "formula": "=SUM(B26:C26)+SUMIF('Capacidad por perfil'!$A$2:$A$41,A26,'Capacidad por perfil'!$H$2:$H$41)",
+            "guardado": 85400000
+          }
+        }
+      },
+      "vinculos_externos": 0,
+      "recalculo": "None"
+    },
+    "outputs/informe3-integral/entrega-consolidada/activacion-simulada/Modelo-activacion-simulada.xlsx": {
+      "hojas": {
+        "RESUMEN": {
+          "filas": 1000,
+          "columnas": 26,
+          "cuentas": {
+            "texto": 64,
+            "formula": 92
+          },
+          "errores": [],
+          "protegida": false,
+          "validaciones": 0,
+          "graficos": 0
+        },
+        "PARÁMETROS": {
+          "filas": 6,
+          "columnas": 2,
+          "cuentas": {
+            "texto": 1,
+            "formula": 3
+          },
+          "errores": [],
+          "protegida": false,
+          "validaciones": 0,
+          "graficos": 0
+        },
+        "PCUESFUERZO": {
+          "filas": 164,
+          "columnas": 14,
+          "cuentas": {
+            "texto": 4
+          },
+          "errores": [],
+          "protegida": false,
+          "validaciones": 0,
+          "graficos": 0
+        },
+        "TARIFAS DE OPERACION": {
+          "filas": 47,
+          "columnas": 38,
+          "cuentas": {
+            "formula": 4
+          },
+          "errores": [],
+          "protegida": false,
+          "validaciones": 0,
+          "graficos": 0
+        },
+        "FLUJO DE CAJA COMPLETO": {
+          "filas": 26,
+          "columnas": 2,
+          "cuentas": {
+            "formula": 2
+          },
+          "errores": [],
+          "protegida": false,
+          "validaciones": 0,
+          "graficos": 0
+        },
+        "FLUJO DE CAJA NETO": {
+          "filas": 35,
+          "columnas": 15,
+          "cuentas": {
+            "formula": 3
+          },
+          "errores": [],
+          "protegida": false,
+          "validaciones": 0,
+          "graficos": 0
+        },
+        "COSTOS DE OPERACION": {
+          "filas": 45,
+          "columnas": 38,
+          "cuentas": {
+            "formula": 3
+          },
+          "errores": [],
+          "protegida": false,
+          "validaciones": 0,
+          "graficos": 0
+        },
+        "Flujo de Caja": {
+          "filas": 58,
+          "columnas": 24,
+          "cuentas": {
+            "texto": 36,
+            "numero": 69,
+            "formula": 1197
+          },
+          "errores": [],
+          "protegida": true,
+          "validaciones": 0,
+          "graficos": 0
+        },
+        "Parámetros D2": {
+          "filas": 34,
+          "columnas": 3,
+          "cuentas": {
+            "texto": 57,
+            "numero": 30,
+            "formula": 3
+          },
+          "errores": [],
+          "protegida": true,
+          "validaciones": 8,
+          "graficos": 0
+        },
+        "Costos": {
+          "filas": 57,
+          "columnas": 12,
+          "cuentas": {
+            "texto": 12,
+            "numero": 56,
+            "formula": 564
+          },
+          "errores": [],
+          "protegida": true,
+          "validaciones": 0,
+          "graficos": 0
+        },
+        "Proveedores": {
+          "filas": 281,
+          "columnas": 9,
+          "cuentas": {
+            "texto": 1129,
+            "numero": 545,
+            "formula": 448
+          },
+          "errores": [],
+          "protegida": false,
+          "validaciones": 0,
+          "graficos": 0
+        },
+        "Personal": {
+          "filas": 65,
+          "columnas": 6,
+          "cuentas": {
+            "texto": 78,
+            "numero": 119,
+            "formula": 101
+          },
+          "errores": [],
+          "protegida": false,
+          "validaciones": 0,
+          "graficos": 0
+        },
+        "Innovaciones": {
+          "filas": 24,
+          "columnas": 5,
+          "cuentas": {
+            "texto": 60,
+            "numero": 25,
+            "formula": 4
+          },
+          "errores": [],
+          "protegida": false,
+          "validaciones": 0,
+          "graficos": 0
+        },
+        "Curva S": {
+          "filas": 57,
+          "columnas": 4,
+          "cuentas": {
+            "texto": 4,
+            "formula": 224
+          },
+          "errores": [],
+          "protegida": true,
+          "validaciones": 0,
+          "graficos": 1
+        },
+        "Indicadores": {
+          "filas": 14,
+          "columnas": 3,
+          "cuentas": {
+            "texto": 30,
+            "formula": 12
+          },
+          "errores": [],
+          "protegida": true,
+          "validaciones": 0,
+          "graficos": 0
+        },
+        "Dedicación D3": {
+          "filas": 57,
+          "columnas": 11,
+          "cuentas": {
+            "texto": 12,
+            "numero": 530
+          },
+          "errores": [],
+          "protegida": false,
+          "validaciones": 0,
+          "graficos": 0
+        },
+        "Detalle proveedores D4": {
+          "filas": 379,
+          "columnas": 10,
+          "cuentas": {
+            "texto": 1900,
+            "numero": 867
+          },
+          "errores": [],
+          "protegida": false,
+          "validaciones": 0,
+          "graficos": 0
+        },
+        "Capacidad por perfil": {
+          "filas": 41,
+          "columnas": 9,
+          "cuentas": {
+            "texto": 49,
+            "numero": 80,
+            "formula": 80
+          },
+          "errores": [],
+          "protegida": false,
+          "validaciones": 0,
+          "graficos": 0
+        },
+        "Escenarios de caja": {
+          "filas": 20,
+          "columnas": 6,
+          "cuentas": {
+            "texto": 27,
+            "numero": 46
+          },
+          "errores": [],
+          "protegida": false,
+          "validaciones": 0,
+          "graficos": 0
+        },
+        "Beneficios Curimón": {
+          "filas": 30,
+          "columnas": 8,
+          "cuentas": {
+            "texto": 69,
+            "numero": 2,
+            "formula": 10
+          },
+          "errores": [],
+          "protegida": false,
+          "validaciones": 5,
+          "graficos": 0
+        },
+        "INN-5 Costos": {
+          "filas": 5,
+          "columnas": 6,
+          "cuentas": {
+            "texto": 14,
+            "numero": 12,
+            "formula": 4
+          },
+          "errores": [],
+          "protegida": false,
+          "validaciones": 0,
+          "graficos": 0
+        },
+        "Refuerzo presupuestado": {
+          "filas": 48,
+          "columnas": 5,
+          "cuentas": {
+            "texto": 52,
+            "numero": 178
+          },
+          "errores": [],
+          "protegida": false,
+          "validaciones": 0,
+          "graficos": 0
+        },
+        "Criterios y pendientes": {
+          "filas": 8,
+          "columnas": 2,
+          "cuentas": {
+            "texto": 16
+          },
+          "errores": [],
+          "protegida": false,
+          "validaciones": 0,
+          "graficos": 0
+        },
+        "Cotejo D1": {
+          "filas": 21,
+          "columnas": 2,
+          "cuentas": {
+            "texto": 29,
+            "numero": 13
+          },
+          "errores": [],
+          "protegida": false,
+          "validaciones": 0,
+          "graficos": 0
+        },
+        "Gastos Administrativos": {
+          "filas": 37,
+          "columnas": 8,
+          "cuentas": {
+            "texto": 113,
+            "numero": 81,
+            "formula": 52
+          },
+          "errores": [],
+          "protegida": true,
+          "validaciones": 0,
+          "graficos": 0
+        },
+        "PUENTE D2": {
+          "filas": 9,
+          "columnas": 4,
+          "cuentas": {
+            "texto": 11,
+            "formula": 18
+          },
+          "errores": [],
+          "protegida": true,
+          "validaciones": 0,
+          "graficos": 0
+        },
+        "Ingresos": {
+          "filas": 58,
+          "columnas": 6,
+          "cuentas": {
+            "texto": 6,
+            "formula": 342
+          },
+          "errores": [],
+          "protegida": true,
+          "validaciones": 0,
+          "graficos": 0
+        },
+        "Financiamiento": {
+          "filas": 58,
+          "columnas": 12,
+          "cuentas": {
+            "texto": 12,
+            "formula": 684
+          },
+          "errores": [],
+          "protegida": true,
+          "validaciones": 0,
+          "graficos": 0
+        },
+        "Sensibilidad": {
+          "filas": 66,
+          "columnas": 16,
+          "cuentas": {
+            "texto": 37,
+            "formula": 918,
+            "numero": 1
+          },
+          "errores": [],
+          "protegida": true,
+          "validaciones": 0,
+          "graficos": 0
+        },
+        "Hardware del mandante": {
+          "filas": 40,
+          "columnas": 12,
+          "cuentas": {
+            "texto": 232,
+            "numero": 176,
+            "formula": 38
+          },
+          "errores": [],
+          "protegida": false,
+          "validaciones": 0,
+          "graficos": 0
+        },
+        "Resumen Ejecutivo": {
+          "filas": 21,
+          "columnas": 2,
+          "cuentas": {
+            "texto": 31,
+            "formula": 9
+          },
+          "errores": [],
+          "protegida": true,
+          "validaciones": 0,
+          "graficos": 0
+        },
+        "Ajustes de operación": {
+          "filas": 59,
+          "columnas": 4,
+          "cuentas": {
+            "texto": 61,
+            "numero": 168
+          },
+          "errores": [],
+          "protegida": true,
+          "validaciones": 2,
+          "graficos": 0
+        },
+        "Cuadro maestro": {
+          "filas": 23,
+          "columnas": 10,
+          "cuentas": {
+            "texto": 65,
+            "formula": 128
+          },
+          "errores": [],
+          "protegida": true,
+          "validaciones": 0,
+          "graficos": 0
+        },
+        "Conciliación IVA": {
+          "filas": 60,
+          "columnas": 5,
+          "cuentas": {
+            "texto": 7,
+            "formula": 284
+          },
+          "errores": [],
+          "protegida": true,
+          "validaciones": 0,
+          "graficos": 0
+        },
+        "Caja por fecha simulada": {
+          "filas": 218,
+          "columnas": 7,
+          "cuentas": {
+            "texto": 875,
+            "numero": 434,
+            "formula": 217
+          },
+          "errores": [],
+          "protegida": false,
+          "validaciones": 0,
+          "graficos": 0
+        },
+        "Minimos meses criticos": {
+          "filas": 37,
+          "columnas": 4,
+          "cuentas": {
+            "texto": 40,
+            "numero": 108
+          },
+          "errores": [],
+          "protegida": false,
+          "validaciones": 0,
+          "graficos": 0
+        },
+        "Instalacion y soporte": {
+          "filas": 13,
+          "columnas": 8,
+          "cuentas": {
+            "texto": 68,
+            "numero": 36
+          },
+          "errores": [],
+          "protegida": false,
+          "validaciones": 0,
+          "graficos": 0
+        },
+        "Anexos simulados": {
+          "filas": 8,
+          "columnas": 4,
+          "cuentas": {
+            "texto": 22,
+            "numero": 10
+          },
+          "errores": [],
+          "protegida": false,
+          "validaciones": 0,
+          "graficos": 0
+        },
+        "Caja activacion montaje": {
+          "filas": 314,
+          "columnas": 7,
+          "cuentas": {
+            "texto": 1259,
+            "numero": 626,
+            "formula": 313
+          },
+          "errores": [],
+          "protegida": false,
+          "validaciones": 0,
+          "graficos": 0
+        },
+        "Cierres activacion": {
+          "filas": 225,
+          "columnas": 4,
+          "cuentas": {
+            "texto": 228,
+            "numero": 672
+          },
+          "errores": [],
+          "protegida": false,
+          "validaciones": 0,
+          "graficos": 0
+        },
+        "Turnos L1 y guardia": {
+          "filas": 125,
+          "columnas": 6,
+          "cuentas": {
+            "texto": 750
+          },
+          "errores": [],
+          "protegida": false,
+          "validaciones": 0,
+          "graficos": 0
+        },
+        "Casos SLA critico": {
+          "filas": 5,
+          "columnas": 6,
+          "cuentas": {
+            "texto": 14,
+            "numero": 16
+          },
+          "errores": [],
+          "protegida": false,
+          "validaciones": 0,
+          "graficos": 0
+        }
+      },
+      "claves": {
+        "Parámetros D2": {
+          "B4": {
+            "formula": 274452748,
+            "guardado": 274452748
+          },
+          "B5": {
+            "formula": 0.8,
+            "guardado": 0.8
+          },
+          "B6": {
+            "formula": 0.009,
+            "guardado": 0.009
+          },
+          "B7": {
+            "formula": 0.03,
+            "guardado": 0.03
+          },
+          "B8": {
+            "formula": 50000000,
+            "guardado": 50000000
+          },
+          "B9": {
+            "formula": 0.2,
+            "guardado": 0.2
+          },
+          "B10": {
+            "formula": "=B5*B6+(1-B5)*((1+B9)^(1/B18)-1)",
+            "guardado": 0.0102618940999462
+          },
+          "B21": {
+            "formula": 40000,
+            "guardado": 40000
+          }
+        },
+        "Indicadores": {
+          "B2": {
+            "formula": "=NPV('Parámetros D2'!B10,'Flujo de Caja'!H2:H57)",
+            "guardado": 1235043315.78053
+          },
+          "B3": {
+            "formula": "=IRR('Flujo de Caja'!H2:H57,0.8)",
+            "guardado": 0.836613236332302
+          },
+          "B10": {
+            "formula": "=1-SUM(Costos!K2:K57)/SUM(Ingresos!E2:E57)",
+            "guardado": 0.185
+          }
+        },
+        "Flujo de Caja": {
+          "R10": {
+            "formula": "=MAX(0,MIN('Parámetros D2'!$B$8-T9,-(W9+H10+O10+0-P10-Q10)))",
+            "guardado": 44999999.5355681
+          },
+          "T10": {
+            "formula": "=T9+R10-S10",
+            "guardado": 44999999.5355681
+          },
+          "W10": {
+            "formula": "=(W9+H10+O10+0-P10-Q10)+R10-S10-U10",
+            "guardado": 0
+          }
+        },
+        "Personal": {
+          "D22": {
+            "formula": "=SUM(B22:C22)+SUMIF('Capacidad por perfil'!$A$2:$A$41,A22,'Capacidad por perfil'!$H$2:$H$41)",
+            "guardado": 88252000
+          },
+          "D26": {
+            "formula": "=SUM(B26:C26)+SUMIF('Capacidad por perfil'!$A$2:$A$41,A26,'Capacidad por perfil'!$H$2:$H$41)",
+            "guardado": 85400000
+          }
+        }
+      },
+      "vinculos_externos": 0,
+      "recalculo": "None"
+    }
+  },
+  "presentaciones": {
+    "outputs/informe3-integral/entrega-consolidada/AUDIT-Informe3-Presentacion-Economica.pptx": {
+      "laminas": 9,
+      "texto": [
+        [
+          "audIT · TFEP-01/2026",
+          "Costos frente a venta",
+          "Informe 3 · Transportes Curimón S.A.",
+          "13 de noviembre de 2026"
+        ],
+        [
+          "Costo, precio y margen",
+          "Montos netos en millones de CLP",
+          "Implementación",
+          "Costo 3.764,3 · Venta 4.618,8",
+          "Operación",
+          "Costo 4.220,1 · Venta 5.178,0",
+          "Total",
+          "Costo 7.984,4 · Venta 9.796,8",
+          "Margen sobre ventas",
+          "18,50 % sobre ingresos netos · tope consolidado 20 %",
+          "Costos indirectos",
+          "43,1 en implementación · 63,0 en operación. Incluyen administración, garantías y cierre según su atribución."
+        ],
+        [
+          "Adquisiciones y proveedores",
+          "Compras y servicios que condicionan la habilitación y el piloto",
+          "M1–M4 · Infraestructura",
+          "audIT prevé grupo electrógeno en M1, sala técnica en M3 y cómputo de terminal en M4. Clima y extinción por cotizar.",
+          "M4–M6 · Servicios",
+          "Azure y ExpressRoute habilitan H3 en M6. Factibilidad del circuito y cobertura LTE M2M por confirmar.",
+          "M5–M6 · Piloto y lote",
+          "Curimón adquiere hardware de campo y red. Inventario informativo de CLP 225,4 millones.",
+          "Desarrollar y contratar",
+          "audIT desarrolla e instala. Compra licencias GitLab y SonarQube y contrata nube, conectividad, satélite y soporte."
+        ],
+        [
+          "Curva S mensual",
+          "56 meses · Costos con intereses, facturación y caja financiada",
+          "M9 · preparación   |   M12 · H5   |   M16 · recuperación descontada   |   M21 · H12 e inicio de operación"
+        ],
+        [
+          "Evaluación y liquidez",
+          "Fila A mensual y escenarios de caja",
+          "VAN base",
+          "CLP 1.235,0 millones · tasa 1,0262 % mensual",
+          "TIR y recuperación",
+          "83,6613 % mensual · recuperación descontada sostenida en M16",
+          "Equilibrios",
+          "CLP 7.984,4 millones nominal · CLP 8.175,2 millones a VAN cero",
+          "Atraso de H5 a M13",
+          "Déficit en M12 de CLP 155,7 millones con la línea al tope. Con la reserva, CLP 308,4 millones antes del refuerzo.",
+          "Refuerzo condicionado",
+          "Con CLP 400 millones adicionales, caja de CLP 11,2 millones en M12. Baja a CLP 9,2 millones si se compran las 72 h de CP-SEC-05.",
+          "Sensibilidad",
+          "Costos +5 % → VAN CLP 923,7 millones, TIR mensual 17,32 %. Cobros −5 % → VAN CLP 862,0 millones, TIR mensual 16,63 %.",
+          "Meta de caja M12: CLP 10 millones. Fondos, giros y comisiones por confirmar."
+        ],
+        [
+          "Cinco innovaciones",
+          "Inversión, operación y beneficio para Curimón · montos netos en millones de CLP",
+          "1 · Expediente",
+          "Firma estimada 24,9. Desarrollo y soporte atribuidos a personal. Medir minutos evitados por expediente.",
+          "2 · Patio",
+          "Desarrollo 16,6 y operación 17,0 atribuidos. Beneficio monetario base en cero hasta sustentar la estimación.",
+          "3 · Acople y frío",
+          "Integración 5,7 y operación 4,0 estimadas. Medir acoples y eventos térmicos. Beneficio monetario base en cero.",
+          "4 · Sobreestadías",
+          "34 comodatos dentro de 182 montajes. Recupero bruto referencial 362,1 en 36 meses a régimen. Neto sujeto a costos y reparto.",
+          "5 · Fatiga",
+          "Inversión 13,0 y soporte 10,1. Beneficio pendiente de cuantificar a partir de consumo y siniestralidad."
+        ],
+        [
+          "Demostración del prototipo",
+          "Avance de interfaz de Transportes Curimón",
+          "Navegación",
+          "Abrir el sitio audIT → Portal Clientes → Simulador Operativo en Vivo",
+          "Prueba de continuidad",
+          "Simular pérdida de cobertura y observar el búfer. Restablecer cobertura y comprobar la reconciliación."
+        ],
+        [
+          "Liquidez en los meses críticos",
+          "Piso simulado de CLP 10 millones",
+          "Capital M1 de CLP 332,81 millones y refuerzo por tramos de hasta CLP 387,24 millones.",
+          "H6 entra el 15 de febrero antes del IVA de M13. H5 se prueba el 15 de febrero y el 1 de marzo.",
+          "Si H6 pasa al 17, el diferimiento de CLP 19,51 millones de reserva cubre el IVA del 16.",
+          "Nueve meses críticos cotejados en cuatro escenarios con fechas simuladas.",
+          "Informe 3 · Simulación académica · audIT / Curimón"
+        ],
+        [
+          "Instalación y soporte",
+          "Trazabilidad de las partidas",
+          "182 montajes de EDT 4.2. Referencia de 910 horas-persona y CLP 16,26 millones.",
+          "Los 10 kits de piloto y los 34 comodatos están incluidos. Hay 210 balizas con 52,5 horas adicionales.",
+          "Fabricante y mantención D4 por CLP 3,33 millones mensuales en M13–M56.",
+          "Agenda por terminal, cotización externa y cobertura SLA por rol siguen por acreditar.",
+          "Informe 3 · Simulación académica · audIT / Curimón"
+        ]
+      ],
+      "graficos": {}
+    },
+    "outputs/informe3-integral/entrega-consolidada/activacion-simulada/Presentacion-activacion-simulada.pptx": {
+      "laminas": 10,
+      "texto": [
+        [
+          "audIT · TFEP-01/2026",
+          "Costos frente a venta",
+          "Informe 3 · Transportes Curimón S.A.",
+          "13 de noviembre de 2026"
+        ],
+        [
+          "Costo, precio y margen",
+          "Montos netos en millones de CLP",
+          "Implementación",
+          "Costo 3.764,3 · Venta 4.618,8",
+          "Operación",
+          "Costo 4.220,1 · Venta 5.178,0",
+          "Total",
+          "Costo 7.984,4 · Venta 9.796,8",
+          "Margen sobre ventas",
+          "18,50 % sobre ingresos netos · tope consolidado 20 %",
+          "Costos indirectos",
+          "43,1 en implementación · 63,0 en operación. Incluyen administración, garantías y cierre según su atribución."
+        ],
+        [
+          "Adquisiciones y proveedores",
+          "Compras y servicios que condicionan la habilitación y el piloto",
+          "M1–M4 · Infraestructura",
+          "audIT prevé grupo electrógeno en M1, sala técnica en M3 y cómputo de terminal en M4. Clima y extinción por cotizar.",
+          "M4–M6 · Servicios",
+          "Azure y ExpressRoute habilitan H3 en M6. Factibilidad del circuito y cobertura LTE M2M por confirmar.",
+          "M5–M6 · Piloto y lote",
+          "Curimón adquiere hardware de campo y red. Inventario informativo de CLP 225,4 millones.",
+          "Desarrollar y contratar",
+          "audIT desarrolla e instala. Compra licencias GitLab y SonarQube y contrata nube, conectividad, satélite y soporte."
+        ],
+        [
+          "Curva S mensual",
+          "56 meses · Costos con intereses, facturación y caja financiada",
+          "M9 · preparación   |   M12 · H5   |   M16 · recuperación descontada   |   M21 · H12 e inicio de operación"
+        ],
+        [
+          "Evaluación y liquidez",
+          "Fila A mensual y escenarios de caja",
+          "VAN base",
+          "CLP 1.235,0 millones · tasa 1,0262 % mensual",
+          "TIR y recuperación",
+          "83,6613 % mensual · recuperación descontada sostenida en M16",
+          "Equilibrios",
+          "CLP 7.984,4 millones nominal · CLP 8.175,2 millones a VAN cero",
+          "Atraso de H5 a M13",
+          "Déficit en M12 de CLP 155,7 millones con la línea al tope. Con la reserva, CLP 308,4 millones antes del refuerzo.",
+          "Refuerzo condicionado",
+          "Con CLP 400 millones adicionales, caja de CLP 11,2 millones en M12. Baja a CLP 9,2 millones si se compran las 72 h de CP-SEC-05.",
+          "Sensibilidad",
+          "Costos +5 % → VAN CLP 923,7 millones, TIR mensual 17,32 %. Cobros −5 % → VAN CLP 862,0 millones, TIR mensual 16,63 %.",
+          "Meta de caja M12: CLP 10 millones. Fondos, giros y comisiones por confirmar."
+        ],
+        [
+          "Cinco innovaciones",
+          "Inversión, operación y beneficio para Curimón · montos netos en millones de CLP",
+          "1 · Expediente",
+          "Firma estimada 24,9. Desarrollo y soporte atribuidos a personal. Medir minutos evitados por expediente.",
+          "2 · Patio",
+          "Desarrollo 16,6 y operación 17,0 atribuidos. Beneficio monetario base en cero hasta sustentar la estimación.",
+          "3 · Acople y frío",
+          "Integración 5,7 y operación 4,0 estimadas. Medir acoples y eventos térmicos. Beneficio monetario base en cero.",
+          "4 · Sobreestadías",
+          "34 comodatos dentro de 182 montajes. Recupero bruto referencial 362,1 en 36 meses a régimen. Neto sujeto a costos y reparto.",
+          "5 · Fatiga",
+          "Inversión 13,0 y soporte 10,1. Beneficio pendiente de cuantificar a partir de consumo y siniestralidad."
+        ],
+        [
+          "Demostración del prototipo",
+          "Avance de interfaz de Transportes Curimón",
+          "Navegación",
+          "Abrir el sitio audIT → Portal Clientes → Simulador Operativo en Vivo",
+          "Prueba de continuidad",
+          "Simular pérdida de cobertura y observar el búfer. Restablecer cobertura y comprobar la reconciliación."
+        ],
+        [
+          "Liquidez en los meses críticos",
+          "Piso simulado de CLP 10 millones",
+          "Capital M1 de CLP 332,81 millones y refuerzo por tramos de hasta CLP 387,24 millones.",
+          "H6 entra el 15 de febrero antes del IVA de M13. H5 se prueba el 15 de febrero y el 1 de marzo.",
+          "Si H6 pasa al 17, el diferimiento de CLP 19,51 millones de reserva cubre el IVA del 16.",
+          "Nueve meses críticos cotejados en cuatro escenarios con fechas simuladas.",
+          "Informe 3 · Simulación académica · audIT / Curimón"
+        ],
+        [
+          "Instalación y soporte",
+          "Trazabilidad de las partidas",
+          "182 montajes de EDT 4.2. Referencia de 910 horas-persona y CLP 16,26 millones.",
+          "Los 10 kits de piloto y los 34 comodatos están incluidos. Hay 210 balizas con 52,5 horas adicionales.",
+          "Fabricante y mantención D4 por CLP 3,33 millones mensuales en M13–M56.",
+          "Agenda por terminal, cotización externa y cobertura SLA por rol siguen por acreditar.",
+          "Informe 3 · Simulación académica · audIT / Curimón"
+        ],
+        [
+          "Activación simulada del montaje y soporte",
+          "172 montajes externos después del piloto · CLP 7,64 millones brutos",
+          "Refuerzo en M9 de CLP 7.867.985 al mantener la nómina y pagar el IVA. Los cuatro escenarios conservan el piso de CLP 10 millones.",
+          "Turno 24×7 probado con seis agentes L1, cobertura adicional en horas pico y guardia primaria y suplente.",
+          "Recuperación crítica en 225 minutos bajo supuestos. Tres críticas simultáneas requieren apoyo paralelo.",
+          "Pendientes de ejecución: aceptación del piloto, autorización escrita, turnos efectivos y ensayo de recuperación.",
+          "Informe 3 · Simulación académica · audIT / Curimón"
+        ]
+      ],
+      "graficos": {}
+    }
+  },
+  "pdf": {
+    "outputs/informe3-integral/entrega-consolidada/INFORME3_AUDIT_COSTOS_VENTA_CONSOLIDADO.pdf": {
+      "paginas": 26,
+      "texto": "outputs/auditoria-informe3-47f7e7b/INFORME3_AUDIT_COSTOS_VENTA_CONSOLIDADO.txt",
+      "academico": [
+        24,
+        25
+      ],
+      "paginas_con_UF": [
+        6,
+        10,
+        11,
+        12,
+        13
+      ]
+    },
+    "outputs/informe3-integral/entrega-consolidada/activacion-simulada/Constancia-alcance-academico.pdf": {
+      "paginas": 1,
+      "texto": "outputs/auditoria-informe3-47f7e7b/Constancia-alcance-academico.txt",
+      "academico": [
+        1
+      ],
+      "paginas_con_UF": []
+    },
+    "outputs/informe3-integral/entrega-consolidada/activacion-simulada/Informe-3-Activacion-simulada.pdf": {
+      "paginas": 27,
+      "texto": "outputs/auditoria-informe3-47f7e7b/Informe-3-Activacion-simulada.txt",
+      "academico": [
+        24,
+        25,
+        27
+      ],
+      "paginas_con_UF": [
+        6,
+        10,
+        11,
+        12,
+        13
+      ]
+    }
+  },
+  "reproduccion_independiente": {
+    "meses": 57,
+    "diferencia_maxima": {
+      "delta_caja": 1.9311904907226562e-05,
+      "delta_banco": 0.0,
+      "delta_linea": 1.7136335372924805e-07
+    },
+    "caja_minima": {
+      "mes": 9,
+      "caja": 0.0,
+      "delta_caja": 0.0,
+      "delta_banco": 0.0,
+      "delta_linea": -1.7136335372924805e-07
+    },
+    "tasa_mensual": 0.010261894099946238,
+    "van": 1235043315.7805283,
+    "tir_mensual": 0.8366132363323,
+    "costo": 7984400845.222495,
+    "venta": 9796810853.03375,
+    "hitos": [
+      [
+        2,
+        "H1",
+        0.08
+      ],
+      [
+        4,
+        "H2",
+        0.07
+      ],
+      [
+        6,
+        "H3",
+        0.1
+      ],
+      [
+        10,
+        "H4",
+        0.1
+      ],
+      [
+        12,
+        "H5",
+        0.1
+      ],
+      [
+        13,
+        "H6",
+        0.05
+      ],
+      [
+        14,
+        "H8",
+        0.05
+      ],
+      [
+        16,
+        "H7",
+        0.1
+      ],
+      [
+        17,
+        "H9",
+        0.1
+      ],
+      [
+        18,
+        "H10",
+        0.1
+      ],
+      [
+        19,
+        "H11",
+        0.05
+      ],
+      [
+        21,
+        "H12",
+        0.1
+      ]
+    ],
+    "facturaciones_operacion": 36
+  }
+}

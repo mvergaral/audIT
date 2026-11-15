@@ -1,0 +1,23 @@
+{
+  "grupo": "informe3-corregido",
+  "instancia": "informe3",
+  "tipo": "economico",
+  "modo_folio": "subdocumento",
+  "archivos": [
+    {
+      "clave": "costos",
+      "nombre": "INFORME3_AUDIT_COSTOS_VENTA_20261114.pdf",
+      "folio_inicial": 1,
+      "paginas": 27,
+      "aux": "../../outputs/informe3-corregido/revision/latex/INFORME3_AUDIT_COSTOS_VENTA_20261114.aux",
+      "log": "../../outputs/informe3-corregido/revision/latex/INFORME3_AUDIT_COSTOS_VENTA_20261114.log",
+      "eco": "INFORME3_AUDIT_COSTOS_VENTA_20261114.eco.json",
+      "fuentes": [
+        [
+          "../../Informe-3/correccion-final/economico"
+        ]
+      ]
+    }
+  ],
+  "planilla": "INFORME3_AUDIT_PLANILLA_20261114.xlsx"
+}

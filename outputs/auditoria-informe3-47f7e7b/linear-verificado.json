@@ -1,0 +1,600 @@
+[
+  {
+    "id": "AUD-41",
+    "estado": "Done",
+    "titulo": "[4.10] Redactar explicación de costos y adquisiciones",
+    "url": "https://linear.app/audit-fep/issue/AUD-41/410-redactar-explicacion-de-costos-y-adquisiciones",
+    "comentarios": 3,
+    "paginacion": false,
+    "ultimas_evidencias": [
+      {
+        "id": "bdb917cf-2cba-41b7-8881-0e646c6add30",
+        "fecha": "2026-11-13T05:14:39.852Z",
+        "cuerpo": "## Cierre\n\n* **FF** cumplidas: [AUD-34 · 4.3](<https://linear.app/audit-fep/issue/AUD-34>), [AUD-37 · 4.6](<https://linear.app/audit-fep/issue/AUD-37>), [AUD-38 · 4.7](<https://linear.app/audit-fep/issue/AUD-38>) y [AUD-40 · 4.9](<https://linear.app/audit-fep/issue/AUD-40>) en Done.\n* Texto para [AUD-12 · 1.8](<https://linear.app/audit-fep/issue/AUD-12>) con las cifras finales: Azure $863.430.586, reserva $152.699.775 y **total de D4 en el flujo de audIT $1.679.697.526**. Hardware del mandante $225.384.199 en la hoja informativa.\n* Innovación 3 con beneficio monetario $0, pendiente de cuantificar (D4-152), igual que en la tabla de D1.\n\n## Archivos\n\n* Adjuntos vigentes «4.10 Explicación de costos y adquisiciones (2026-11-12)» y «Art. 46, respuestas de D4 a la revisión del Informe 2 (2026-11-13)»."
+      },
+      {
+        "id": "a6db8769-e959-42e1-bf13-87751d539ab3",
+        "fecha": "2026-11-12T19:30:55.231Z",
+        "cuerpo": "## Avance\n\n* Texto para D1 actualizado con la nube nueva (Azure $863.430.586), la reserva ($152.699.775) y el total de D4 ($1.679.697.526).\n* Suma GitLab y SonarQube como software comprado del pipeline, con sus licencias en el presupuesto de software.\n\n## Pendiente para cerrar\n\n* **FF** desde [AUD-38 · 4.7](<https://linear.app/audit-fep/issue/AUD-38>), que espera la 2.2 de D2 y la 3.3 de D3.\n* Las **FF** desde [AUD-34 · 4.3](<https://linear.app/audit-fep/issue/AUD-34>), [AUD-37 · 4.6](<https://linear.app/audit-fep/issue/AUD-37>) y [AUD-40 · 4.9](<https://linear.app/audit-fep/issue/AUD-40>) ya están cumplidas.\n\n## Archivo\n\n* Adjunto vigente «4.10 Explicación de costos y adquisiciones (2026-11-12)». Las respuestas del Art. 46 siguen en el adjunto del 11-11."
+      }
+    ]
+  },
+  {
+    "id": "AUD-38",
+    "estado": "Done",
+    "titulo": "[4.7] Valorizar respuestas a riesgos y contingencias",
+    "url": "https://linear.app/audit-fep/issue/AUD-38/47-valorizar-respuestas-a-riesgos-y-contingencias",
+    "comentarios": 4,
+    "paginacion": false,
+    "ultimas_evidencias": [
+      {
+        "id": "f4cd1844-a58f-4e9a-8541-d2ac59737497",
+        "fecha": "2026-11-13T05:14:28.116Z",
+        "cuerpo": "## Cierre\n\n* **FF** cumplidas: [AUD-15 · 2.2](<https://linear.app/audit-fep/issue/AUD-15>), [AUD-26 · 3.3](<https://linear.app/audit-fep/issue/AUD-26>) y [AUD-34 · 4.3](<https://linear.app/audit-fep/issue/AUD-34>) en Done.\n* Cifras finales sin cambios: asesoría legal de R-24 $3.000.000 en el mes 3 y reserva del 10 % $152.699.775 sobre $1.526.997.751 de costos de D4. **Total 4.7: $155.699.775.**\n* La reserva cubre también los logs y la salida de los runners, la nube adicional de la innovación 2 y el consumo del expediente de la innovación 1 (D4-148 y D4-151). No incluye las licencias de D3.\n* **Total de D4 en el flujo de audIT: $1.679.697.526.**\n\n## Archivo\n\n* Adjunto vigente «4.7 Riesgos y contingencias (2026-11-12, noche)»."
+      },
+      {
+        "id": "c6943eda-f8e9-4025-90b8-853ce084b0a7",
+        "fecha": "2026-11-13T02:36:37.420Z",
+        "cuerpo": "## Avance (D4-151)\n\n* La reserva del 10 % cubre también el consumo de nube del expediente de la innovación 1 que pidió D3: $3.000 al mes en los meses 13 a 56, $132.000. No se suma aparte.\n* Cifras sin cambios: reserva $152.699.775, **total 4.7 $155.699.775**.\n\n## Pendiente para cerrar\n\n* **FF** desde [AUD-15 · 2.2](<https://linear.app/audit-fep/issue/AUD-15>) de D2 y [AUD-26 · 3.3](<https://linear.app/audit-fep/issue/AUD-26>) de D3. Las dos siguen en progreso y ya no esperan nada de D4.\n\n## Archivo\n\n* Adjunto vigente «4.7 Riesgos y contingencias (2026-11-12, noche)»."
+      }
+    ]
+  },
+  {
+    "id": "AUD-16",
+    "estado": "Done",
+    "titulo": "[2.3] Integrar y clasificar partidas en la planilla común",
+    "url": "https://linear.app/audit-fep/issue/AUD-16/23-integrar-y-clasificar-partidas-en-la-planilla-comun",
+    "comentarios": 12,
+    "paginacion": false,
+    "ultimas_evidencias": [
+      {
+        "id": "93fc3016-3645-4154-8918-4b47c552514c",
+        "fecha": "2026-11-13T04:50:49.214Z",
+        "cuerpo": "**Conciliación de administración y garantías sobre el consolidado.** El CSV fuente carga CLP 85.400.000 de administración: fiel cumplimiento 50,4 M, RC 13 M, ciberriesgo 15 M, notaría 1,2 M y custodia 5,8 M. El cierre M56 incorpora por separado CLP 13.800.000 de extensión de fiel cumplimiento y endoso de cola. La comisión de correcto funcionamiento está parametrizada al 0,15 % de implementación, con egreso en M21. Mantener estos importes una sola vez. Quedan por definir o respaldar: seriedad de la oferta (CLP 2.812.500 preoperacionales, no desembolsados en M0 de la base), base asegurable y alta de activos para todo riesgo, remuneración imponible y cobertura de la tarifa integral para accidentes, overhead incremental sin duplicar nómina/R-24, e IVA/crédito fiscal. [Calendario y criterios D2](https://github.com/mvergaral/audIT/blob/a89084b/Informe-3/d2/AUD-16_GASTOS_ADMINISTRATIVOS.md)."
+      },
+      {
+        "id": "08c5fb81-0ef8-43df-aea3-974de6f1a3fe",
+        "fecha": "2026-11-13T04:30:37.296Z",
+        "cuerpo": "Consolidado provisional integra IVA referencial de CLP 14.432.400 LTE/ExpressRoute en mes de servicio, sin crédito fiscal; CLP 4.000.000 de talleres/calibración INN-5 y tratamiento de beneficios vigente. Quedan IVA Azure/Entra e Iridium y el respaldo de seguros, garantías e indirectos. [Paquete consolidado](https://linear.app/audit-fep/issue/AUD-22)."
+      }
+    ]
+  },
+  {
+    "id": "AUD-14",
+    "estado": "Done",
+    "titulo": "[2.1] Calcular costo del personal por perfil y actividad",
+    "url": "https://linear.app/audit-fep/issue/AUD-14/21-calcular-costo-del-personal-por-perfil-y-actividad",
+    "comentarios": 7,
+    "paginacion": false,
+    "ultimas_evidencias": [
+      {
+        "id": "46ea4dcf-0469-473c-97f6-e796826ff25e",
+        "fecha": "2026-11-13T03:59:56.248Z",
+        "cuerpo": "**Conciliación D2 con el desglose semanal entregado en [AUD-24](https://linear.app/audit-fep/issue/AUD-24).** Las semanas son contractuales relativas (S1–S4). La matriz mantiene 442,8 h de apoyo y actualiza la propuesta anterior de Seguridad.\n\n| Cupo | Puesto propuesto | Horas por semana (S1 / S2 / S3 / S4) | Total |\n| --- | --- | --- | ---: |\n| M9 Seguridad documental | Auditor interno, con validación del CISO | 0 / 4 / 2,2 en los primeros dos días / 0 | 6,2 h |\n| M9 Seguridad técnica | Especialista de Seguridad TI | 0 / 0 / 4 en los primeros dos días / 0 | 4 h |\n| M9 SRE | Especialista SRE/DevOps | 8 en los últimos tres días / 8 / 4,6 en los primeros dos días / 0 | 20,6 h |\n| Datos, cada mes M21–M23 | Ingeniería de Datos | 26 / 26 / 12 / 2 | 66 h/mes |\n| QA, cada mes M21–M23 | Ingeniería de Pruebas y Automatización | 0 / 12 / 13 / 12 | 37 h/mes |\n| Datos, M24 | Ingeniería de Datos | 12 / 16 / 24 / 14 | 66 h |\n| QA, M24 | Ingeniería de Pruebas y Automatización | 0 / 8 / 13 / 16 | 37 h |\n\n**Para confirmar las reservas:** el CISO valida las 6,2 h documentales asignables al auditor. Para cada bloque, registrar código del ejecutor, aceptación y horas netas disponibles después de otras tareas y guardias. El apoyo de Datos y QA se ejecuta en 13.4 según las entregas y precedencias de AUD-24.\n\n**Efecto presupuestario:** si se acredita la base nominal y se cubren internamente las 6,2 h documentales y todo el apoyo de Datos y QA, el escenario con refuerzo de las 4 h técnicas de Seguridad y las 20,6 h SRE asciende a **CLP 835.200** (CLP 176.000 + CLP 659.200). Este escenario actualiza la referencia de solo SRE y se recalcula si se acredita cobertura técnica interna."
+      },
+      {
+        "id": "338570f7-ad75-4ddd-aaff-0090913f6088",
+        "fecha": "2026-11-13T03:44:05.950Z",
+        "cuerpo": "**Asignación propuesta de los diez cupos de apoyo de D2.** Los códigos identifican puestos de la oferta y los bloques indican horas que se deben reservar. S1 acredita los puestos internos, mientras la disponibilidad neta de cada ejecutor queda pendiente de confirmación.\n\n| Mes | Cupo | Puesto ejecutor propuesto | Horas a reservar | Ventana y condición |\n| --- | --- | --- | ---: | --- |\n| M9 | SEC-APOYO | Auditor interno de Procesos y Gobierno TI, bajo coordinación del CISO | 10,2 | En las ventanas de Seguridad de M9. Usar solo para tareas de evidencia, revisión y trazabilidad compatibles. El CISO debe validar el desglose. Si quedan tareas de ejecución especializada, cubrir ese saldo con un especialista de Seguridad. |\n| M9 | SRE-APOYO | Especialista SRE/DevOps de refuerzo | 20,6 | En las ventanas técnicas de M9 que indique D3. Se presupuestan como refuerzo mientras se acredita un segundo ejecutor interno compatible y libre de guardias. |\n| M21 | DAT-APOYO | Un ingeniero de Datos de la célula de Software y Plataforma Cloud | 66 | Reservar en M21 para los cierres de Datos y mantenimiento de 13.4. |\n| M21 | QA-APOYO | Ingeniero de Pruebas y Automatización QA | 37 | Reservar en M21 para pruebas y verificación de cierres de 13.4. |\n| M22 | DAT-APOYO | Mismo puesto de Ingeniería de Datos | 66 | Reservar en M22 para 13.4. |\n| M22 | QA-APOYO | Mismo puesto de Pruebas y Automatización QA | 37 | Reservar en M22 para 13.4. |\n| M23 | DAT-APOYO | Mismo puesto de Ingeniería de Datos | 66 | Reservar en M23 para 13.4. |\n| M23 | QA-APOYO | Mismo puesto de Pruebas y Automatización QA | 37 | Reservar en M23 para 13.4. |\n| M24 | DAT-APOYO | Mismo puesto de Ingeniería de Datos | 66 | Reservar en M24 para 13.4. |\n| M24 | QA-APOYO | Mismo puesto de Pruebas y Automatización QA | 37 | Reservar en M24 para 13.4. |\n\n**Decisión presupuestaria propuesta.** Si se acredita la base nominal y toda la cobertura interna propuesta, queda el refuerzo SRE de 20,6 h por CLP 659.200 como escenario. Si queda cobertura interna parcial, valorizar el saldo a las tarifas de la matriz. Si se acredita la base nominal pero ningún apoyo interno, se conserva la sensibilidad de CLP 12.516.000. El importe de la nómina base requiere confirmar ejecutor, fechas y horas netas por mes.\n\n[Dotación de S1](https://github.com/mvergaral/audIT/blob/bd8c1f7/recursos/Formato-Oferta-audIT/subdocumentos/01-empresa/contenido.tex#L157) · [Conciliación de carga de D2](https://github.com/mvergaral/audIT/blob/bd8c1f7/Informe-3/d2/AUD-15_CONCILIACION_CAPACIDAD.md)."
+      }
+    ]
+  },
+  {
+    "id": "AUD-22",
+    "estado": "Done",
+    "titulo": "[2.9] Entregar flujo integrado a D1",
+    "url": "https://linear.app/audit-fep/issue/AUD-22/29-entregar-flujo-integrado-a-d1",
+    "comentarios": 4,
+    "paginacion": false,
+    "ultimas_evidencias": [
+      {
+        "id": "69775344-4a65-4375-8dfb-276932f1f0af",
+        "fecha": "2026-11-13T04:59:08.643Z",
+        "cuerpo": "**Paquete OFERTA_D2 validado por D1 y publicado en GitHub main.** Confirmación de D1 comunicada por D2. La versión publicada corresponde a los cuatro adjuntos de oferta: Modelo, Resumen, Curva S y Fila A. [Commit c601503](https://github.com/mvergaral/audIT/commit/c601503b024a36fa1b63fa6ca332b8a2a3f110dc) · [Archivos de D2](https://github.com/mvergaral/audIT/tree/c601503b024a36fa1b63fa6ca332b8a2a3f110dc/Informe-3/d2). Los respaldos de personal, IVA y condiciones del puente siguen identificados como pendientes."
+      },
+      {
+        "id": "540ecad1-c0ef-4e6d-912b-06b0b2b958e7",
+        "fecha": "2026-11-13T04:56:36.862Z",
+        "cuerpo": "**Escenario OFERTA_D2 para revisión de entrega.** Se adjuntan Modelo, RESUMEN, Curva S y Fila A conciliados. Presupuesta CLP 31.596.000 de refuerzo (CLP 12.516.000 de cupos AUD-14/15 y CLP 19.080.000 de desarrollo y soporte INN-5), sujeto a cobertura base nominal, tarifa y disponibilidad. Reemplazar por el saldo acreditado al confirmar nómina. Se mantienen los CLP 4.000.000 ya incluidos de talleres y calibración. Costo neto CLP 7.984.400.845; precio implementación CLP 4.618.802.815; mensualidad CLP 143.833.557; venta total CLP 9.796.810.853; margen 18,5 %. Capital CLP 274.452.748 conserva CLP 5 millones de holgura en M9 con H5 en M12. Si H5 pasa a M13, el puente neto mínimo es CLP 155.747.161 en M12, antes de gastos y holgura. IVA según criterio previo; coberturas, seguros e indirectos pendientes de respaldo. Esta Fila A cambió respecto de CIERRE_D1 y requiere nuevo cotejo."
+      }
+    ]
+  },
+  {
+    "id": "AUD-31",
+    "estado": "Done",
+    "titulo": "[3.8] Redactar explicación del presupuesto de software y datos",
+    "url": "https://linear.app/audit-fep/issue/AUD-31/38-redactar-explicacion-del-presupuesto-de-software-y-datos",
+    "comentarios": 0,
+    "paginacion": false,
+    "ultimas_evidencias": []
+  },
+  {
+    "id": "AUD-30",
+    "estado": "Done",
+    "titulo": "[3.7] Valorizar innovación 2",
+    "url": "https://linear.app/audit-fep/issue/AUD-30/37-valorizar-innovacion-2",
+    "comentarios": 1,
+    "paginacion": false,
+    "ultimas_evidencias": [
+      {
+        "id": "f76d9130-238d-4d28-9a93-6c7ee3c69ffe",
+        "fecha": "2026-11-12T20:56:15.644Z",
+        "cuerpo": "## D4 aplica el mismo criterio a la innovación 3\n\n* Leímos la conciliación del beneficio de la innovación 2. D4 está de acuerdo.\n* En [AUD-40 · 4.9](<https://linear.app/audit-fep/issue/AUD-40>) la innovación 3 queda igual: **escenario base $0** y los $135.000.000 de D1 como sensibilidad (D4-149).\n* La 4.9 usa la misma ficha de campos (población, frecuencia, comparación, mejora, costo unitario, titular, realización y meses).\n* Sobre la nube: el pedido de la 3.6 ya está sumado en [AUD-33 · 4.2](<https://linear.app/audit-fep/issue/AUD-33>), y la recuperación parte en el mes 6. La 3.6 del repo todavía dice «DR M12» y que el suplemento no está en los $750.165.482. Las cifras vigentes de D4 son las del 12-11 (detalle en [AUD-26 · 3.3](<https://linear.app/audit-fep/issue/AUD-26>))."
+      }
+    ]
+  },
+  {
+    "id": "AUD-15",
+    "estado": "Done",
+    "titulo": "[2.2] Completar presupuesto de personal de implementación y operación",
+    "url": "https://linear.app/audit-fep/issue/AUD-15/22-completar-presupuesto-de-personal-de-implementacion-y-operacion",
+    "comentarios": 9,
+    "paginacion": false,
+    "ultimas_evidencias": [
+      {
+        "id": "4d31915a-e248-4a56-bb26-ba22de7f3912",
+        "fecha": "2026-11-13T04:56:43.386Z",
+        "cuerpo": "OFERTA_D2 en AUD-22 modela CLP 31.596.000 como presupuesto de contingencia de personal: cupos AUD-14/15 CLP 12.516.000 e INN-5 desarrollo y soporte CLP 19.080.000. La hoja Refuerzo presupuestado alimenta una sola vez el ajuste mensual de Personal. La aceptación de ejecutores, cobertura base y tarifa permanecen pendientes. Descontar las horas cubiertas que se acrediten."
+      },
+      {
+        "id": "344c6217-e73e-44b6-8f8d-bc62f683c627",
+        "fecha": "2026-11-13T04:43:08.923Z",
+        "cuerpo": "**Sensibilidad actualizada sobre el consolidado de AUD-22.** Con precios fijos, IVA referencial LTE/ExpressRoute sin crédito, H5 en M12 y capital de CLP 267.023.133, los dos escenarios de apoyo cubren los cierres mensuales. El refuerzo focalizado de CLP 835.200 eleva la línea a CLP 45.835.199 en M9 y requiere capital de CLP 267.909.381 para conservar la holgura de CLP 5 millones. El apoyo completo de CLP 12.516.000 eleva la línea a CLP 46.107.999 y requiere capital de CLP 268.198.854. Ambos umbrales se verificaron con un peso menos. El escenario focalizado exige acreditar Seguridad documental, Datos y QA internos y la base nominal; el completo supone base nominal acreditada y los cupos adicionales sin cobertura. Las 660 h de INN-5 pendientes de asignación quedan fuera de estos dos ajustes. Falta registrar ejecutores, aceptación y saldo neto en AUD-14 para calcular el monto definitivo. [Modelo consolidado](https://linear.app/audit-fep/issue/AUD-22)."
+      }
+    ]
+  },
+  {
+    "id": "AUD-26",
+    "estado": "Done",
+    "titulo": "[3.3] Calcular costos recurrentes de software y servicios",
+    "url": "https://linear.app/audit-fep/issue/AUD-26/33-calcular-costos-recurrentes-de-software-y-servicios",
+    "comentarios": 2,
+    "paginacion": false,
+    "ultimas_evidencias": [
+      {
+        "id": "3c0b55c6-c13c-4026-ae5f-b8bc9334ab49",
+        "fecha": "2026-11-13T02:36:38.260Z",
+        "cuerpo": "## Nube de la innovación 1 (D4-151)\n\n* El consumo del expediente que piden asignar ($3.000 al mes en los meses 13 a 56, $132.000) queda cubierto por la reserva del 10 % de [AUD-38 · 4.7](<https://linear.app/audit-fep/issue/AUD-38>), igual que la capacidad extra de la innovación 2. No se suma otra factura.\n* Revisamos la 3.3 y la 3.6 de main: coinciden con la nube de D4 ($863.430.586, recuperación desde el mes 6). D4 no tiene pendientes con esta tarea.\n* La 4.7 de D4 se cierra cuando cierren esta tarea y la 2.2 de D2."
+      },
+      {
+        "id": "fe345e7e-cf32-4976-9b5c-b36e260890a5",
+        "fecha": "2026-11-12T19:30:57.492Z",
+        "cuerpo": "## Respuesta de D4 al pedido de la 3.6\n\n* Suplemento D3-AUX sumado tal cual en [AUD-33 · 4.2](<https://linear.app/audit-fep/issue/AUD-33>): $36.078.804, con los mismos ID.\n* Entradas por completar, ya con monto estimado por D4 (D4-148 a):\n  * Discos de GitLab (P6 y P20 de 512 GB), de SonarQube (P6 y P10 de 128 GB) y de los runners (2 P10 de 128 GB).\n  * Azure Backup de GitLab y SonarQube, con 1.000 GB en ZRS.\n  * ACR Premium en Chile Central desde el mes 4 y réplica en Brazil South desde el mes 6.\n  * CDC: 1 D4ds v5 con Kafka Connect y Debezium. Analítica: 1 D8ds v5 para procesos Delta. Ambas desde el mes 6.\n  * Entra ID P1 a USD 7 por usuario y mes, pago anual, con los usuarios de GitLab. Curimón y transportistas por Entra External ID, gratis hasta 50.000 activos al mes.\n  * Subtotal estimado por D4: $59.630.861.\n* Logs y salida extra de los runners y capacidad de la innovación 2: cubiertos por la reserva del 10 % de [AUD-38 · 4.7](<https://linear.app/audit-fep/issue/AUD-38>).\n* Recuperación desde el mes 6, como pide el H3. Ya no es el mes 12.\n* Licencias de GitLab y SonarQube en la A-18 de [AUD-36 · 4.5](<https://linear.app/audit-fep/issue/AUD-36>), marcadas «cifra de D3» y en subtotal aparte.\n\nCon esto D4 ya no tiene pendientes de nube para cerrar la 3.3."
+      }
+    ]
+  },
+  {
+    "id": "AUD-24",
+    "estado": "Done",
+    "titulo": "[3.1] Estimar esfuerzo y entregar perfiles y dedicaciones a D2",
+    "url": "https://linear.app/audit-fep/issue/AUD-24/31-estimar-esfuerzo-y-entregar-perfiles-y-dedicaciones-a-d2",
+    "comentarios": 4,
+    "paginacion": false,
+    "ultimas_evidencias": [
+      {
+        "id": "065d7d1d-919d-4aa8-bba7-c60e380d1da7",
+        "fecha": "2026-11-13T04:05:32.492Z",
+        "cuerpo": "Para el cruce de INN-5 de [AUD-11](https://linear.app/audit-fep/issue/AUD-11), ¿pueden identificar la actividad EDT, perfil, desglose mensual y fila de nómina que cubren las 300 h de desarrollo en M4–M9 y las 10 h mensuales de soporte en M21–M56? Indiquen qué horas requieren capacidad adicional. D2 incorporará únicamente la brecha de costo respaldada."
+      },
+      {
+        "id": "7f6b9c94-f347-47fc-9e08-3a71107cbcb2",
+        "fecha": "2026-11-13T03:44:13.341Z",
+        "cuerpo": "D2 completó la [propuesta para los diez cupos de apoyo](https://linear.app/audit-fep/issue/AUD-14#comment-338570f7-ad75-4ddd-aaff-0090913f6088). D3 puede cruzar las ventanas y tareas exactas, especialmente el desglose de Seguridad/SRE en M9 y los cierres de 13.4 en M21–M24. Con capacidad base nominal y toda la cobertura interna propuesta acreditada, queda como escenario un refuerzo SRE de 20,6 h por CLP 659.200. La asignación efectiva y el ajuste de nómina siguen sujetos a confirmar ventanas y horas netas."
+      }
+    ]
+  },
+  {
+    "id": "AUD-23",
+    "estado": "Done",
+    "titulo": "[2.10] Integrar VAN, TIR y análisis en la planilla",
+    "url": "https://linear.app/audit-fep/issue/AUD-23/210-integrar-van-tir-y-analisis-en-la-planilla",
+    "comentarios": 6,
+    "paginacion": false,
+    "ultimas_evidencias": [
+      {
+        "id": "33609425-3904-4893-be2d-c92200091aad",
+        "fecha": "2026-11-13T04:59:05.489Z",
+        "cuerpo": "D2 recibió confirmación de que D1 validó la versión OFERTA_D2. Se publicó en [main, commit c601503](https://github.com/mvergaral/audIT/commit/c601503b024a36fa1b63fa6ca332b8a2a3f110dc). La hoja «Cotejo D1» del paquete contiene VAN CLP 1.235.043.316, TIR mensual 83,6613 %, recuperación descontada M16 y sensibilidad H5. La comunicación recibida no especificó un criterio separado de punto de equilibrio."
+      },
+      {
+        "id": "4354aee7-5f96-4451-a311-de51a0b1392f",
+        "fecha": "2026-11-13T04:56:39.922Z",
+        "cuerpo": "OFERTA_D2 en AUD-22 cambia la Fila A. VAN recalculado CLP 1.235.043.316, TIR mensual 83,6613 %, recuperación descontada M16, WACC 1,0261894 % mensual. Con H5 M13, VAN CLP 1.230.892.673. Para cotejo de D1 sobre esta versión, incluida metodología de punto de equilibrio."
+      }
+    ]
+  },
+  {
+    "id": "AUD-18",
+    "estado": "Done",
+    "titulo": "[2.5] Distribuir cobros por hitos y operación",
+    "url": "https://linear.app/audit-fep/issue/AUD-18/25-distribuir-cobros-por-hitos-y-operacion",
+    "comentarios": 3,
+    "paginacion": false,
+    "ultimas_evidencias": [
+      {
+        "id": "84e747bb-f8b8-4245-ac37-4f4b75427aef",
+        "fecha": "2026-11-13T04:53:27.524Z",
+        "cuerpo": "Versión CIERRE_D1 mantiene H5 facturado y cobrado en M12 en base. Si se cobra en M13, el déficit de CLP 156.829.213 en M12 tras agotar la línea se registra como riesgo de liquidez. Puente mínimo de referencia por el mismo monto neto en M12, con devolución después de H5 en M13. Condiciones y disponibilidad por confirmar en AUD-20. [Paquete CIERRE_D1](https://linear.app/audit-fep/issue/AUD-22)."
+      },
+      {
+        "id": "47d3b49c-5eed-4804-bd5b-0063ee5b1eac",
+        "fecha": "2026-11-13T04:30:26.925Z",
+        "cuerpo": "La versión provisional valoriza el calendario con los precios recalculados, verifica los 12 hitos y concilia M56/M57. Los componentes variables y multas siguen pendientes de validación para el calendario definitivo. [Paquete consolidado](https://linear.app/audit-fep/issue/AUD-22)."
+      }
+    ]
+  },
+  {
+    "id": "AUD-20",
+    "estado": "Done",
+    "titulo": "[2.7] Incorporar supuestos de precio y financiamiento",
+    "url": "https://linear.app/audit-fep/issue/AUD-20/27-incorporar-supuestos-de-precio-y-financiamiento",
+    "comentarios": 17,
+    "paginacion": false,
+    "ultimas_evidencias": [
+      {
+        "id": "1325d2a9-ee29-48e1-b784-b0489b7b5b4f",
+        "fecha": "2026-11-13T04:56:46.471Z",
+        "cuerpo": "OFERTA_D2 recalcula el capital inicial en CLP 274.452.748 para mantener CLP 5 millones de holgura en M9. H5 cobrado en M13 deja CLP 155.747.160 de déficit en M12 después de agotar la línea. Puente mínimo CLP 155.747.161 netos antes de intereses, comisiones y holgura. Sigue pendiente acreditar disponibilidad y condiciones. [Paquete OFERTA_D2](https://linear.app/audit-fep/issue/AUD-22)."
+      },
+      {
+        "id": "8bb96c87-7712-4afe-8ace-a391e17ba1c4",
+        "fecha": "2026-11-13T04:49:28.277Z",
+        "cuerpo": "**Confirmación de D1 comunicada por D2.** Se confirma el puente como alternativa para cubrir el atraso de H5 a M13. Sobre el consolidado de AUD-22, el monto neto de referencia es CLP 156.829.213 en M12, con devolución prevista en M13 después del cobro de H5. Las tasas de 0,9 % y 3,0 % siguen siendo sensibilidades. Queda precisar tasa comercial, comisiones, fechas exactas y respaldo de disponibilidad antes de incorporar el financiamiento al modelo definitivo. Recalcular el monto tras conciliar personal e IVA. [Sensibilidades](https://linear.app/audit-fep/issue/AUD-20#comment-45112d9e-81fc-4490-ba28-319b649bda58)."
+      }
+    ]
+  },
+  {
+    "id": "AUD-21",
+    "estado": "Done",
+    "titulo": "[2.8] Valorizar innovaciones 1 y 4",
+    "url": "https://linear.app/audit-fep/issue/AUD-21/28-valorizar-innovaciones-1-y-4",
+    "comentarios": 5,
+    "paginacion": false,
+    "ultimas_evidencias": [
+      {
+        "id": "d62b4adf-c00e-49ff-81ef-37cf702af1fb",
+        "fecha": "2026-11-13T04:30:41.019Z",
+        "cuerpo": "Consolidado provisional corrige la referencia de nube INN-1 a la reserva D4. Se mantienen firma estimada, cobertura de soporte pendiente, 182 montajes base y reparto del recupero INN-4 pendiente. [Paquete consolidado](https://linear.app/audit-fep/issue/AUD-22)."
+      },
+      {
+        "id": "b146918b-4b38-4288-bb34-dd1a058ab6f2",
+        "fecha": "2026-11-13T02:48:39.082Z",
+        "cuerpo": "**Conciliación de innovaciones 1 y 4 · modelo D2 en a89084b**\n\n| Innovación y partida | Mes contractual | Pagador o beneficiario | CLP netos / referencia | Imputación y dato pendiente |\n| --- | --- | --- | ---: | --- |\n| INN-1 · Firma automática | M13–M15 y M16–M56 | audIT | 73.950/mes y 600.840/mes, total **24.856.290** | Cargada en Proveedores como estimación D3, con CLP 4.722.710 de IVA referencial. Confirmar cotización apta para emisión automática. |\n| INN-1 · Nube | M13–M56 | audIT | 3.000/mes, total **132.000** | D4-151 la cubre en la reserva de AUD-38. La descripción de la hoja Innovaciones la atribuye a Azure D4. Actualizar esa referencia en la próxima regeneración y mantener el importe sin una salida separada. |\n| INN-1 · Implementación y soporte | Implementación según 12.1/A15, soporte M16–M56 | audIT | 480 h de implementación. CLP 16.072.000 de soporte como escenario sin cobertura. | Conciliar las horas por perfil/mes con AUD-14/15 y T-15. Imputar solo la brecha incremental respaldada. |\n| INN-1 · Beneficio | Medición desde M16 y uso desde M21 | Curimón y transportistas | Pendiente de cuantificar | Medir el efecto marginal del expediente y conciliarlo con INN-4 antes de valorizar. |\n| INN-4 · 182 montajes base, incluidos 34 de terceros | M6/M7/M8/M9, referencia de 10/60/60/52 | audIT | 910 h y **16.258.667** de costo interno estimado | Activaciones Iridium del detalle D4 reproducen 10/60/60/52 a CLP 28.350 por alta. El montaje en el mismo mes es un supuesto. Confirmar agenda por terminal e imputación de las horas a la nómina base de EDT 4.2, con reprogramación en ventanas habilitadas si aplica. |\n| INN-4 · Hardware y conectividad base | Compras según calendario D4, conectividad desde M6 | Curimón paga hardware de campo. audIT paga conectividad. | Incluidos en las partidas base de D4 | Conservar compras de Curimón en el registro informativo y conectividad en el flujo de audIT. |\n| INN-4 · Alta adicional con kit nuevo | Mes de alta y 11 meses siguientes en la sensibilidad | audIT y Curimón | audIT **550.583** por alta con 12 meses de conectividad, más **9.000/mes** si hay soporte incremental. Curimón **900.001** por kit. | Diferencial base CLP 0. Para comprometer un alta faltan agenda, capacidad, presupuesto y condiciones de soporte, retiro y reinstalación. |\n| INN-4 · Recupero de esperas | A régimen, mes de cobro pendiente | Curimón y transportistas | **120.700.000/año** brutos. **362.100.000** si se sostienen 36 meses a régimen. | Beneficio neto de Curimón = recupero cobrado − reparto al transportista − costos incrementales propios del período. Falta acordar reparto y calendario de liquidación. Separado de los ingresos de audIT. |\n\nFuentes: [Modelo D2](https://github.com/mvergaral/audIT/blob/a89084b/Informe-3/d2/D2_MODELO_TRABAJO.xlsx) · [Detalle mensual D4](https://github.com/mvergaral/audIT/blob/a89084b/Informe-3/d2/AUD-16_IVA_PROVEEDORES_D4.csv) · [Respaldo de innovaciones](https://github.com/mvergaral/audIT/blob/a89084b/Informe-3/d2/APORTE_ECONOMICO_INNOVACIONES_1_Y_4.md) · [Alcance y cupo](https://github.com/mvergaral/audIT/blob/a89084b/Informe-3/d2/AUD-21_CUPO_COMODATO.md) · [D4-151 en AUD-38](https://linear.app/audit-fep/issue/AUD-38).\n\n**Para cerrar:** confirmar la firma, conciliar la cobertura de personal y de los montajes con AUD-14/15, y acordar con D1 el reparto del recupero y su liquidación. Mantener el ticket en progreso mientras faltan esos respaldos."
+      }
+    ]
+  },
+  {
+    "id": "AUD-19",
+    "estado": "Done",
+    "titulo": "[2.6] Construir curva S de costos e ingresos",
+    "url": "https://linear.app/audit-fep/issue/AUD-19/26-construir-curva-s-de-costos-e-ingresos",
+    "comentarios": 2,
+    "paginacion": false,
+    "ultimas_evidencias": [
+      {
+        "id": "044d4b54-8c6f-4625-a5a0-6d58f0ea7ac9",
+        "fecha": "2026-11-13T04:30:30.380Z",
+        "cuerpo": "Curva S regenerada desde el mismo modelo del paquete y adjunta como CSV. El Resumen del mandante concilia costos y precios con ese modelo. [Paquete consolidado](https://linear.app/audit-fep/issue/AUD-22)."
+      },
+      {
+        "id": "1ad089fe-ef56-470d-9e00-fdab5fa2ad72",
+        "fecha": "2026-11-13T02:33:49.543Z",
+        "cuerpo": "**Revisión de cierre.** La hoja Curva S ya está en el [modelo editable](https://github.com/mvergaral/audIT/blob/a89084b/Informe-3/d2/D2_MODELO_TRABAJO.xlsx) y existe un [PDF provisional](https://github.com/mvergaral/audIT/blob/a89084b/Informe-3/d2/AUD-19_CURVA_S_PROVISIONAL.pdf). La [copia del Resumen del mandante](https://github.com/mvergaral/audIT/blob/a89084b/Informe-3/d2/D2_RESUMEN_MANDANTE.xlsx) también está versionada.\n\n**Para cerrar:** regenerar la curva y el Resumen desde la misma versión definitiva de [AUD-17](https://linear.app/audit-fep/issue/AUD-17), conciliando costos acumulados con intereses, facturación y cobros. Verificar totales en CLP, UF y USD y adjuntar la versión conciliada para [AUD-12](https://linear.app/audit-fep/issue/AUD-12)."
+      }
+    ]
+  },
+  {
+    "id": "AUD-17",
+    "estado": "Done",
+    "titulo": "[2.4] Construir flujo de caja mensual de 56 meses",
+    "url": "https://linear.app/audit-fep/issue/AUD-17/24-construir-flujo-de-caja-mensual-de-56-meses",
+    "comentarios": 1,
+    "paginacion": false,
+    "ultimas_evidencias": [
+      {
+        "id": "3aeb8171-fb26-4f93-8879-d8de2ccd44af",
+        "fecha": "2026-11-13T04:30:23.453Z",
+        "cuerpo": "Consolidado provisional verifica los 56 cierres sin déficit con H5 en M12 y capital CLP 267.023.133. H5 en M13 agota la línea y deja CLP 156.829.213 sin cubrir. M57 queda auxiliar y cuadra con la mensualidad facturada en M56. [Paquete consolidado](https://linear.app/audit-fep/issue/AUD-22)."
+      }
+    ]
+  },
+  {
+    "id": "AUD-12",
+    "estado": "In Progress",
+    "titulo": "[1.8] Consolidar documento de costos frente a venta",
+    "url": "https://linear.app/audit-fep/issue/AUD-12/18-consolidar-documento-de-costos-frente-a-venta",
+    "comentarios": 0,
+    "paginacion": false,
+    "ultimas_evidencias": []
+  },
+  {
+    "id": "AUD-11",
+    "estado": "In Progress",
+    "titulo": "[1.7] Valorizar innovación 5",
+    "url": "https://linear.app/audit-fep/issue/AUD-11/17-valorizar-innovacion-5",
+    "comentarios": 7,
+    "paginacion": false,
+    "ultimas_evidencias": [
+      {
+        "id": "7449c3a0-3253-40bd-b9d3-e3b8b178d141",
+        "fecha": "2026-11-13T04:53:30.655Z",
+        "cuerpo": "CIERRE_D1 verifica imputación única de talleres CLP 2.200.000 en M4 y calibración CLP 600.000/mes en M13–M15. Calibración en base por CLP 1.800.000 netos, IVA y crédito fiscal pendientes. Sensibilidad si el servicio está afecto: CLP 114.000/mes (CLP 342.000 total), pagados en M13–M15 sin crédito fiscal; no cambia el déficit H5 de M12 ni genera déficit en base mensual. Las 660 h de desarrollo/soporte siguen sin cobertura acreditada y no se cargó un ajuste. [Paquete CIERRE_D1](https://linear.app/audit-fep/issue/AUD-22)."
+      },
+      {
+        "id": "77aba19c-72e5-41bb-b4f5-59a4cf20219a",
+        "fecha": "2026-11-13T04:25:52.678Z",
+        "cuerpo": "**Cruce de demanda D2 con la matriz de D3 para INN-5.** Al incorporar el desarrollo de EDT 12.5 una sola vez a la matriz parcial de Software de D3, la demanda resultante de M4 a M9 es 88 / 120 / 797,4 / 1.234,2 / 1.143 / 1.140,6 h. Las 50 h de M9 ya estaban en la sensibilidad de D2 y no se suman otra vez allí. En M21–M24, el soporte INN-5 lleva la demanda parcial de Software a 125 / 125 / 124 / 124 h. En los seis meses de revisión se reservan 8 h de Software y 2 h de Seguridad dentro de las 10 h del mes.\n\nLa nómina disponible está agregada y las partidas candidatas no identifican ejecutor ni saldo por semana después de las demás tareas y guardias. Por eso quedan pendientes de acreditar las 300 h de desarrollo y 360 h de soporte. Las horas pendientes no se contabilizan como brecha de contratación confirmada. Para completar cada reserva registrar código, ventana, horas netas y partida de nómina. Mantener los CLP 19.080.000 como referencia y cargar solo el ajuste aprobado tras confirmar el saldo. [Desglose de D3](https://linear.app/audit-fep/issue/AUD-24)."
+      }
+    ]
+  },
+  {
+    "id": "AUD-39",
+    "estado": "Done",
+    "titulo": "[4.8] Distinguir compras de audIT y del cliente",
+    "url": "https://linear.app/audit-fep/issue/AUD-39/48-distinguir-compras-de-audit-y-del-cliente",
+    "comentarios": 2,
+    "paginacion": false,
+    "ultimas_evidencias": [
+      {
+        "id": "d4062408-5b67-43ca-9487-ada105670594",
+        "fecha": "2026-11-12T01:11:57.442Z",
+        "cuerpo": "## Corrección del 2026-11-11\n\nReemplaza el reparto comentado el 07-11. Las aclaraciones oficiales del Informe 3 (`texto/Aclaraciones_Informe_3.md`, §9) dejan fuera del flujo solo el hardware de campo y de red.\n\n* Mandante, en hoja informativa fuera del flujo: equipo a bordo, balizas, tarjetas, lectores, RUTX50, TSW202, FortiGate, FortiSwitch, FortiAP con inyector y Minew G1.\n* audIT, en su flujo: infraestructura on-premise (Dell R360, AAEON ICS-6280, gabinetes con UPS y fuentes, sala de San Bernardo y grupo electrógeno), instalación interna (S1 §1.4), Azure por la condición CSP de audIT, ExpressRoute, planes M2M, SIM 5G, tiempo de aire Iridium, soporte y mantención.\n* El mandante paga la energía y el combustible en su edificio. Va como exclusión en el E-21, numeral 1.3, p. 71.\n\n## Archivo\n\n* Adjunto «4.8 Compras de audIT y del mandante (2026-11-11, vigente)». El adjunto del 07-11 queda reemplazado."
+      },
+      {
+        "id": "155e3b7b-f3bb-4360-9936-387a0a4a6f21",
+        "fecha": "2026-11-07T23:51:37.795Z",
+        "cuerpo": "## Resultado\n\n* El mandante compra todo el hardware del T-11 y paga directo los servicios: Azure (contrato directo con Microsoft, suscripción a su nombre), ExpressRoute, planes LTE, mensajes Iridium, SIM 5G, energía de la sala y de los gabinetes, y combustible del grupo.\n* Nada de eso entra al costo ni al precio de audIT. Va estimado en una hoja aparte de la planilla, «Costos del mandante», con una parte de adquisiciones y otra de servicios mensuales.\n* audIT paga la instalación a bordo (subcontratada), una unidad de prueba de cada dispositivo (FEP02, RT-08.15, p. 19), el soporte del fabricante, la mantención, el reemplazo por obsolescencia (FEP02, numeral 1.6, p. 5) y la disposición final.\n* Se usan los enlaces actuales de San Bernardo y de los terminales (Caso, capítulo 6, p. 13).\n\n## Base\n\n* Asignación expresa al mandante: Caso, capítulo 11, p. 24 (dispositivos a bordo, terminales, lectores y equipamiento de red). FEP02, numeral 6.1, p. 14 (espacio de la sala) y RT-06.06, p. 15 (obra civil).\n* Sin asignación expresa, aprobado como supuesto comercial: equipamiento de la sala que no es de red, nube, enlaces y energía.\n* Riesgo: FEP01, Art. 16.4, p. 12 califica de incoherencia grave un costo que no refleje la arquitectura. La hoja «Costos del mandante» responde a eso. D1 debe declarar estas exclusiones en el E-21, numeral 1.3, p. 71.\n\n## Criterio para las tareas que reciben\n\n* **FF** hacia [AUD-32 · 4.1](<https://linear.app/audit-fep/issue/AUD-32/41-presupuestar-equipos-repuestos-instalacion-e-infraestructura>): cotiza todo el hardware igual, para la hoja del mandante.\n* **FF** hacia [AUD-36 · 4.5](<https://linear.app/audit-fep/issue/AUD-36/45-consolidar-matriz-de-adquisiciones>): la matriz lleva una columna «Compra o paga» con audIT o mandante.\n* **FF** hacia [AUD-16 · 2.3](<https://linear.app/audit-fep/issue/AUD-16/23-integrar-y-clasificar-partidas-en-la-planilla-comun>): hoja «Costos del mandante» separada, sin sumar a los gastos de audIT. Los proveedores de audIT van en la hoja de proveedores, sumados a operación (FEP01, T-22, p. 69).\n* Tipo de cambio fijo del E-24 (FEP01, p. 73): USD $900, EUR $1.000, UF $40.000, IVA 19 %.\n\n## Archivo\n\n* Detalle completo en el adjunto «4.8 Compras de audIT y del mandante»."
+      }
+    ]
+  },
+  {
+    "id": "AUD-9",
+    "estado": "In Progress",
+    "titulo": "[1.5] Explicar beneficios económicos para Curimón",
+    "url": "https://linear.app/audit-fep/issue/AUD-9/15-explicar-beneficios-economicos-para-curimon",
+    "comentarios": 3,
+    "paginacion": false,
+    "ultimas_evidencias": [
+      {
+        "id": "5b544e88-90f2-4b5f-9456-88dbe21082ab",
+        "fecha": "2026-11-13T03:24:56.647Z",
+        "cuerpo": "## Innovación 3 reflejada en la ficha de D4 (D4-152)\n\n* La 4.9 sigue su tabla del 13-11: **beneficio monetario $0, pendiente de cuantificar, sin sensibilidad**.\n* Se mantienen la fórmula y la ficha de campos en la sección 4 de [AUD-40 · 4.9](<https://linear.app/audit-fep/issue/AUD-40>), con la parte térmica y el acople por separado.\n* También se ajustó la respuesta de D4 a INN-05 en `Informe-3/d4/art46-respuestas-D4.md` (commit 08e8f76)."
+      },
+      {
+        "id": "281c90b0-5f87-4a7d-b4df-29eecf4770fa",
+        "fecha": "2026-11-13T02:36:38.972Z",
+        "cuerpo": "## Innovación 3: D4 adopta la corrección de D1 (D4-151)\n\n* La 4.9 queda igual que su 1.5: **escenario base $0 y sensibilidad térmica de $60.000.000**, sin kilometraje. Los $135.000.000 quedan como antecedente.\n* El acople sigue por cuantificar. Para usar los $60.000.000 como beneficio esperado falta respaldarlos con la ficha de la sección 4 de [AUD-40 · 4.9](<https://linear.app/audit-fep/issue/AUD-40>).\n* Vimos la corrección del S1 (182 montajes y 192 terceros integrados por sus plataformas). Con eso queda resuelto el aviso de D4 sobre los 374 camiones."
+      }
+    ]
+  },
+  {
+    "id": "AUD-40",
+    "estado": "Done",
+    "titulo": "[4.9] Valorizar innovación 3",
+    "url": "https://linear.app/audit-fep/issue/AUD-40/49-valorizar-innovacion-3",
+    "comentarios": 5,
+    "paginacion": false,
+    "ultimas_evidencias": [
+      {
+        "id": "239bd565-6968-493d-9ffd-8361cf23543e",
+        "fecha": "2026-11-13T03:24:55.759Z",
+        "cuerpo": "## Beneficio en $0 (D4-152)\n\n* D1 retiró el 13-11 los $60.000.000 térmicos de su tabla de beneficios de Curimón por falta de respaldo (commit 8967f18). Pidió reflejarlo en la ficha de D4.\n* **Beneficio monetario de la innovación 3: $0, pendiente de cuantificar. Sin sensibilidad.**\n* Se conservan la fórmula, la ficha de campos y el beneficio en unidades físicas. La parte térmica y el acople se cuantifican por separado.\n* Inversión ($5.700.000) y costo ($4.032.000) sin cambios. Reemplaza D4-151 (a).\n\n## Para D2\n\n* En [AUD-16 · 2.3](<https://linear.app/audit-fep/issue/AUD-16>), `innovacion-3-beneficio` = $0.\n\n## Archivo\n\n* Adjunto vigente «4.9 Valorización de la innovación 3 (2026-11-13)»."
+      },
+      {
+        "id": "6fb4594a-3483-4bc4-b29d-815b99162798",
+        "fecha": "2026-11-13T02:36:36.673Z",
+        "cuerpo": "## Sensibilidad corregida (D4-151)\n\n* D1 corrigió la 1.5: retira $75.000.000 del kilometraje, deja el escenario base en $0 (D4-149) y mantiene **$60.000.000 como sensibilidad térmica**. El acople queda por cuantificar.\n* La 4.9 adopta esa cifra. **Escenario base $0, sensibilidad $60.000.000** ($1.666.667 al mes, meses 21 a 56). Los $135.000.000 quedan solo como antecedente.\n* Inversión y costo sin cambios. La tarea sigue en Done.\n\n## Para D2\n\n* En [AUD-16 · 2.3](<https://linear.app/audit-fep/issue/AUD-16>), la sensibilidad de la innovación 3 es $60.000.000, no $135.000.000.\n\n## Archivo\n\n* Adjunto vigente «4.9 Valorización de la innovación 3 (2026-11-12, noche)»."
+      }
+    ]
+  },
+  {
+    "id": "AUD-6",
+    "estado": "Backlog",
+    "titulo": "[1.2] Calcular VAN y TIR",
+    "url": "https://linear.app/audit-fep/issue/AUD-6/12-calcular-van-y-tir",
+    "comentarios": 0,
+    "paginacion": false,
+    "ultimas_evidencias": []
+  },
+  {
+    "id": "AUD-10",
+    "estado": "In Progress",
+    "titulo": "[1.6] Presupuestar calidad y capacitación",
+    "url": "https://linear.app/audit-fep/issue/AUD-10/16-presupuestar-calidad-y-capacitacion",
+    "comentarios": 0,
+    "paginacion": false,
+    "ultimas_evidencias": []
+  },
+  {
+    "id": "AUD-5",
+    "estado": "In Progress",
+    "titulo": "[1.1] Acordar supuestos de precio, margen y financiamiento",
+    "url": "https://linear.app/audit-fep/issue/AUD-5/11-acordar-supuestos-de-precio-margen-y-financiamiento",
+    "comentarios": 0,
+    "paginacion": false,
+    "ultimas_evidencias": []
+  },
+  {
+    "id": "AUD-33",
+    "estado": "Done",
+    "titulo": "[4.2] Calcular nube, conectividad y alojamiento",
+    "url": "https://linear.app/audit-fep/issue/AUD-33/42-calcular-nube-conectividad-y-alojamiento",
+    "comentarios": 2,
+    "paginacion": false,
+    "ultimas_evidencias": [
+      {
+        "id": "44360614-b9ba-4ecc-86af-16c18b0698e5",
+        "fecha": "2026-11-12T19:29:42.583Z",
+        "cuerpo": "## Cierre\n\n* [AUD-29 · 3.6](<https://linear.app/audit-fep/issue/AUD-29>) quedó en Done el 12-11. Su pedido de cómputo se sumó tal cual: D3-AUX-GITLAB, D3-AUX-SONAR y runners, $36.078.804.\n* D4 estimó lo que D3 dejó sin monto: discos de GitLab, SonarQube y runners, respaldo, ACR Premium con réplica en Brazil South, una máquina de CDC con Debezium, una de procesos Delta y Entra ID P1 (USD 7 por usuario y mes, pago anual). Suma $59.630.861.\n* Logs y salida extra de los runners y capacidad adicional de la innovación 2: cubiertos por la reserva del 10 % de [AUD-38 · 4.7](<https://linear.app/audit-fep/issue/AUD-38>).\n* Recuperación en Brazil South desde el mes 6 y no desde el 12, porque el H3 pide cinco ambientes operativos (T-14, paquete 3.1). Son +$17.555.440.\n* Azure: $863.430.586. Conectividad sin cambios: $396.869.362. **Total nube y conectividad: $1.260.299.948 netos.**\n* [AUD-35 · 4.4](<https://linear.app/audit-fep/issue/AUD-35>) también quedó cerrada, así que se cumple la **FF**.\n* Decisión D4-148.\n\n## Archivo\n\n* Adjunto vigente «4.2 Nube, conectividad y alojamiento (2026-11-12)». El del 11-11 queda reemplazado."
+      },
+      {
+        "id": "5f862f93-5511-40d4-bff5-5ddb45ffbb0f",
+        "fecha": "2026-11-12T01:11:59.147Z",
+        "cuerpo": "## Avance\n\n* D3 dejó por escrito que D4 consolida la compra de nube y D3 aporta carga, modelo y retención (`Informe-3/d3/APORTE_COSTOS_SOFTWARE_DATOS.md`). Con eso se avanzó sin esperar el cierre de [AUD-29 · 3.6](<https://linear.app/audit-fep/issue/AUD-29>).\n* Azure con pago por uso de lista (API pública de precios, 11-11) y tamaños de referencia ajustables tras la prueba de carga antes del H5: $750.165.482 netos en 56 meses.\n* APIM Premium baja a 2 unidades en dos zonas, que cumple el RT-03.02. El T-11 se corrige en la oferta final.\n* Conectividad: $396.869.362 netos. Iridium con plan de 25 KB, planes M2M estimados en $3.000 por línea, SIM 5G con el plan Entel de 13 GB y circuito ExpressRoute estimado en USD 1.000 al mes.\n* Total de nube y conectividad: $1.147.034.844 netos. Gasto de operación en la hoja de proveedores.\n\n## Pendiente para cerrar\n\n* **FS** desde [AUD-29 · 3.6](<https://linear.app/audit-fep/issue/AUD-29>), que sigue en Todo.\n* **FF** desde [AUD-35 · 4.4](<https://linear.app/audit-fep/issue/AUD-35>).\n\n## Archivo\n\n* Adjunto «4.2 Nube, conectividad y alojamiento (2026-11-11)»."
+      }
+    ]
+  },
+  {
+    "id": "AUD-29",
+    "estado": "Done",
+    "titulo": "[3.6] Acordar con D4 el reparto de servicios de nube",
+    "url": "https://linear.app/audit-fep/issue/AUD-29/36-acordar-con-d4-el-reparto-de-servicios-de-nube",
+    "comentarios": 0,
+    "paginacion": false,
+    "ultimas_evidencias": []
+  },
+  {
+    "id": "AUD-36",
+    "estado": "Done",
+    "titulo": "[4.5] Consolidar matriz de adquisiciones",
+    "url": "https://linear.app/audit-fep/issue/AUD-36/45-consolidar-matriz-de-adquisiciones",
+    "comentarios": 2,
+    "paginacion": false,
+    "ultimas_evidencias": [
+      {
+        "id": "d93915c1-058f-43a1-a794-96226b9e329a",
+        "fecha": "2026-11-12T19:30:15.356Z",
+        "cuerpo": "## Cierre\n\n* [AUD-27 · 3.4](<https://linear.app/audit-fep/issue/AUD-27>) en Done el 12-11. En el pipeline se usan herramientas abiertas y se compran GitLab y SonarQube.\n* A-10 Azure: $863.430.586, meses 1 a 56 (con herramientas, datos y Entra ID).\n* A-18 ya no está «por definir»: GitLab Premium $36.957.600 y SonarQube Developer $1.075.000, marcadas «cifra de D3» y en un subtotal aparte, para sumarlas una sola vez (D4-148 c).\n* Totales: adquisiciones de D4 $1.526.997.751, licencias de D3 $38.032.600, total $1.565.030.351. Hardware del mandante $225.384.199 en la hoja informativa.\n* **FF** cumplidas: 3.4, 4.1, 4.2, 4.4 y 4.8 en Done.\n\n## Archivo\n\n* Adjunto vigente «4.5 Matriz de adquisiciones (2026-11-12)»."
+      },
+      {
+        "id": "3cdff09f-0945-4682-b535-0a88a3cde0be",
+        "fecha": "2026-11-12T01:12:23.680Z",
+        "cuerpo": "## Avance\n\n* Matriz de 18 adquisiciones con proveedor, quién paga, modalidad, mes, plazo y riesgo.\n* Estrategia de hacer o comprar, negociación, contratos críticos e importaciones (FEP01, E-21, numeral 2.4, p. 71).\n* Adquisiciones y contratos de audIT: $1.413.732.647 netos en 56 meses. Hardware del mandante: $225.384.199, en la hoja informativa.\n* Las herramientas de software del pipeline (fila A-18) las define y valoriza D3.\n\n## Pendiente para cerrar\n\n* **FF** desde [AUD-27 · 3.4](<https://linear.app/audit-fep/issue/AUD-27>), [AUD-32 · 4.1](<https://linear.app/audit-fep/issue/AUD-32>), [AUD-33 · 4.2](<https://linear.app/audit-fep/issue/AUD-33>) y [AUD-35 · 4.4](<https://linear.app/audit-fep/issue/AUD-35>).\n\n## Archivo\n\n* Adjunto «4.5 Matriz de adquisiciones (2026-11-11)»."
+      }
+    ]
+  },
+  {
+    "id": "AUD-37",
+    "estado": "Done",
+    "titulo": "[4.6] Entregar calendario de compras y contrataciones a D2",
+    "url": "https://linear.app/audit-fep/issue/AUD-37/46-entregar-calendario-de-compras-y-contrataciones-a-d2",
+    "comentarios": 2,
+    "paginacion": false,
+    "ultimas_evidencias": [
+      {
+        "id": "4a374736-773f-48fa-8204-ba5a14cd5a59",
+        "fecha": "2026-11-12T19:30:27.192Z",
+        "cuerpo": "## Cierre\n\n* Calendario mensual recalculado con la nube nueva de [AUD-33 · 4.2](<https://linear.app/audit-fep/issue/AUD-33>). **Total de D4 en el flujo de audIT: $1.526.997.751**, sin la reserva.\n* Cambios en los meses: GitLab con sus discos y respaldo desde el mes 1, Entra ID con pago anual en los meses 1, 13, 25, 37 y 49, y la región de recuperación desde el mes 6.\n* No incluye la reserva de [AUD-38 · 4.7](<https://linear.app/audit-fep/issue/AUD-38>) ($152.699.775) ni las licencias de D3 (A-18, $38.032.600), que D3 registra con sus meses.\n* **FS** cumplida: [AUD-36 · 4.5](<https://linear.app/audit-fep/issue/AUD-36>) en Done.\n\n## Para D2\n\n* Insumo listo para [AUD-17 · 2.4](<https://linear.app/audit-fep/issue/AUD-17>).\n\n## Archivo\n\n* Adjunto vigente «4.6 Calendario de compras y contrataciones (2026-11-12)»."
+      },
+      {
+        "id": "c43f67b5-3e91-4792-a8f0-8c243cbd9b2f",
+        "fecha": "2026-11-12T01:12:24.362Z",
+        "cuerpo": "## Avance\n\n* Calendario de los 56 meses con inversión, Azure, conectividad, soporte y otros de audIT, total y acumulado del mes, más las compras del mandante en columna aparte e informativa.\n* Insumo para [AUD-17 · 2.4](<https://linear.app/audit-fep/issue/AUD-17>). Valores netos al tipo de cambio del E-24. Mes 1 = febrero de 2027.\n* No incluye la reserva de contingencia de [AUD-38 · 4.7](<https://linear.app/audit-fep/issue/AUD-38>) ($141.373.265) ni el personal, que valoriza D2.\n\n## Pendiente para cerrar\n\n* **FS** desde [AUD-36 · 4.5](<https://linear.app/audit-fep/issue/AUD-36>), abierta por dependencias de D3. El calendario no cambia si 4.5 solo suma el software de D3.\n\n## Archivo\n\n* Adjunto «4.6 Calendario mensual de compras y contrataciones (2026-11-11)»."
+      }
+    ]
+  },
+  {
+    "id": "AUD-34",
+    "estado": "Done",
+    "titulo": "[4.3] Calcular mantenimiento, reposiciones y operación técnica",
+    "url": "https://linear.app/audit-fep/issue/AUD-34/43-calcular-mantenimiento-reposiciones-y-operacion-tecnica",
+    "comentarios": 2,
+    "paginacion": false,
+    "ultimas_evidencias": [
+      {
+        "id": "f4c8e477-c3ad-4d85-9ff1-74561f9b2cb1",
+        "fecha": "2026-11-12T19:30:12.641Z",
+        "cuerpo": "## Cierre\n\n* Cifras sin cambios: soporte del 12 % anual desde el mes 13, $146.604.800, baterías del mes 36 y disposición final. **Total 4.3: $152.371.182.**\n* La nube nueva de [AUD-33 · 4.2](<https://linear.app/audit-fep/issue/AUD-33>) no cambia esta base, que es el valor del hardware.\n* **FF** cumplidas: [AUD-32 · 4.1](<https://linear.app/audit-fep/issue/AUD-32>) y [AUD-33 · 4.2](<https://linear.app/audit-fep/issue/AUD-33>) en Done.\n\n## Archivo\n\n* Sigue vigente el adjunto del 11-11, sin cambios de cifras."
+      },
+      {
+        "id": "537a5879-95c8-4c70-b2ea-aba8f3328c49",
+        "fecha": "2026-11-12T01:11:59.967Z",
+        "cuerpo": "## Avance\n\n* Soporte del fabricante y mantención preventiva y correctiva como 12 % anual del valor de todo el hardware, desde el mes 13: $146.604.800 netos (estimado).\n* Recambio de baterías de UPS en el mes 36: $4.766.382. Borrado seguro y disposición final en el mes 56: $1.000.000 (estimado).\n* Total: $152.371.182 netos, gasto de operación en la hoja de proveedores.\n* El personal de operación e instalación lo valoriza D2 en [AUD-14 · 2.1](<https://linear.app/audit-fep/issue/AUD-14>) y [AUD-15 · 2.2](<https://linear.app/audit-fep/issue/AUD-15>). No se suma aquí.\n\n## Pendiente para cerrar\n\n* **FF** desde [AUD-32 · 4.1](<https://linear.app/audit-fep/issue/AUD-32>) y [AUD-33 · 4.2](<https://linear.app/audit-fep/issue/AUD-33>).\n\n## Archivo\n\n* Adjunto «4.3 Mantenimiento, reposiciones y operación técnica (2026-11-11)»."
+      }
+    ]
+  },
+  {
+    "id": "AUD-32",
+    "estado": "Done",
+    "titulo": "[4.1] Presupuestar equipos, repuestos, instalación e infraestructura",
+    "url": "https://linear.app/audit-fep/issue/AUD-32/41-presupuestar-equipos-repuestos-instalacion-e-infraestructura",
+    "comentarios": 3,
+    "paginacion": false,
+    "ultimas_evidencias": [
+      {
+        "id": "f23ef666-f018-45a1-a895-e9bbc7fad43b",
+        "fecha": "2026-11-12T19:29:57.309Z",
+        "cuerpo": "## Cierre\n\n* Cifras sin cambios: inversión de audIT $107.808.529, unidades de prueba $3.518.092, hoja informativa del mandante $225.384.199.\n* Horas de instalación entregadas a D2 (D4-147): 5 h-persona por kit, estimadas antes del piloto del mes 6. D2 ya las usa en [AUD-15 · 2.2](<https://linear.app/audit-fep/issue/AUD-15>) y [AUD-21 · 2.8](<https://linear.app/audit-fep/issue/AUD-21>).\n* **FF** cumplidas: [AUD-39 · 4.8](<https://linear.app/audit-fep/issue/AUD-39>) y [AUD-35 · 4.4](<https://linear.app/audit-fep/issue/AUD-35>) en Done.\n\n## Archivo\n\n* Adjunto vigente «4.1 Presupuesto de equipos e infraestructura (2026-11-12)»."
+      },
+      {
+        "id": "8aea19e4-d68a-4dbd-af3a-6e268e2fa522",
+        "fecha": "2026-11-12T01:11:58.152Z",
+        "cuerpo": "## Actualización del 2026-11-11\n\n* Inversión de audIT en el flujo: $107.808.529 netos, en los meses 1, 3 y 4. Unidades de prueba: $3.518.092, mes 4.\n* Hoja informativa del mandante: $225.384.199 netos, meses 3 a 6, 24, 36 y 48.\n* El AAEON ICS-6280 viene sin memoria ni SSD y se completa con ambos. El clima y la extinción de la sala están estimados (USD 12.000 por clima y USD 15.000 la extinción).\n* Instalación interna: cantidades y meses en la sección 6 del adjunto, para que D2 la valorice.\n\n## Pendiente para cerrar\n\n* **FF** desde [AUD-35 · 4.4](<https://linear.app/audit-fep/issue/AUD-35>), que espera [AUD-28 · 3.5](<https://linear.app/audit-fep/issue/AUD-28>).\n* Cargar las partidas en [AUD-16 · 2.3](<https://linear.app/audit-fep/issue/AUD-16>).\n\n## Archivos\n\n* Adjuntos «(2026-11-11, vigente)»: 4.1 Presupuesto de equipos, Precios con fuente y URL, y Cambios de productos frente al T-11. Los del 07-11 quedan reemplazados."
+      }
+    ]
+  },
+  {
+    "id": "AUD-35",
+    "estado": "Done",
+    "titulo": "[4.4] Identificar y justificar proveedores clave",
+    "url": "https://linear.app/audit-fep/issue/AUD-35/44-identificar-y-justificar-proveedores-clave",
+    "comentarios": 4,
+    "paginacion": false,
+    "ultimas_evidencias": [
+      {
+        "id": "b4b40781-1eb6-4ab7-bc30-565741086143",
+        "fecha": "2026-11-12T19:29:53.307Z",
+        "cuerpo": "## Cierre\n\n* [AUD-28 · 3.5](<https://linear.app/audit-fep/issue/AUD-28>) quedó en Done el 12-11. Se cumple la **FF**.\n* Fichas nuevas: 3.11 GitLab (Premium Self-Managed, USD 29 por usuario y mes, $36.957.600) y 3.12 SonarSource (SonarQube Developer, €215 por pago, $1.075.000). Cifras de D3.\n* GitLab Premium incluye soporte prioritario, 24/7 para severidad 1 (página de precios, 12-11).\n* Ficha de Microsoft actualizada: $863.430.586, ahora con las máquinas de herramientas, el ACR, el CDC y Entra ID ([AUD-33 · 4.2](<https://linear.app/audit-fep/issue/AUD-33>)).\n* Las herramientas abiertas (Trivy, Syft, Cosign, Checkov, ZAP, Debezium, Delta y Terraform) no tienen proveedor contratado.\n\n## Archivo\n\n* Adjunto vigente «4.4 Proveedores clave (2026-11-12)»."
+      },
+      {
+        "id": "0ea5dc1f-bc95-4f24-9db9-131015291122",
+        "fecha": "2026-11-12T01:12:00.698Z",
+        "cuerpo": "## Actualización del 2026-11-11\n\n* Fichas al día con las aclaraciones del Informe 3: Dell pasa a infraestructura de audIT, Azure se compra por la condición CSP de audIT y lo paga audIT, la instalación es interna, y el operador móvil y el proveedor de ExpressRoute los contrata audIT.\n* Precio de Azure en la ficha de Microsoft: $750.165.482 netos en 56 meses.\n\n## Pendiente para cerrar\n\n* **FF** desde [AUD-28 · 3.5](<https://linear.app/audit-fep/issue/AUD-28>): faltan los proveedores de software de D3.\n\n## Archivo\n\n* Adjunto «4.4 Proveedores clave (2026-11-11, vigente)». El del 07-11 queda reemplazado."
+      }
+    ]
+  },
+  {
+    "id": "AUD-25",
+    "estado": "Done",
+    "titulo": "[3.2] Identificar licencias, suscripciones y herramientas",
+    "url": "https://linear.app/audit-fep/issue/AUD-25/32-identificar-licencias-suscripciones-y-herramientas",
+    "comentarios": 0,
+    "paginacion": false,
+    "ultimas_evidencias": []
+  },
+  {
+    "id": "AUD-27",
+    "estado": "Done",
+    "titulo": "[3.4] Justificar desarrollar, comprar o contratar",
+    "url": "https://linear.app/audit-fep/issue/AUD-27/34-justificar-desarrollar-comprar-o-contratar",
+    "comentarios": 0,
+    "paginacion": false,
+    "ultimas_evidencias": []
+  },
+  {
+    "id": "AUD-28",
+    "estado": "Done",
+    "titulo": "[3.5] Entregar proveedores de software a D4",
+    "url": "https://linear.app/audit-fep/issue/AUD-28/35-entregar-proveedores-de-software-a-d4",
+    "comentarios": 0,
+    "paginacion": false,
+    "ultimas_evidencias": []
+  },
+  {
+    "id": "AUD-7",
+    "estado": "In Progress",
+    "titulo": "[1.3] Justificar tasa de descuento y periodicidad",
+    "url": "https://linear.app/audit-fep/issue/AUD-7/13-justificar-tasa-de-descuento-y-periodicidad",
+    "comentarios": 0,
+    "paginacion": false,
+    "ultimas_evidencias": []
+  },
+  {
+    "id": "AUD-13",
+    "estado": "Backlog",
+    "titulo": "[1.9] Comprobar cifras y preparar cierre de la entrega",
+    "url": "https://linear.app/audit-fep/issue/AUD-13/19-comprobar-cifras-y-preparar-cierre-de-la-entrega",
+    "comentarios": 0,
+    "paginacion": false,
+    "ultimas_evidencias": []
+  },
+  {
+    "id": "AUD-8",
+    "estado": "Backlog",
+    "titulo": "[1.4] Analizar resultados financieros y sensibilidad",
+    "url": "https://linear.app/audit-fep/issue/AUD-8/14-analizar-resultados-financieros-y-sensibilidad",
+    "comentarios": 0,
+    "paginacion": false,
+    "ultimas_evidencias": []
+  }
+]

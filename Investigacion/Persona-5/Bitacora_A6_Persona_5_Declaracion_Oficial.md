@@ -1,4 +1,6 @@
 # Declaración Oficial de Uso de Inteligencia Artificial (Formulario A-6)
+
+**Adenda posterior:** la corrección del Informe 3 del 14 de noviembre de 2026 tiene asistencia alta de IA y se registra en [A-6 de la corrección](Bitacora_A6_Informe3_Correccion_2026-11-14.md). La validación humana de esa versión no se acredita con las declaraciones históricas siguientes.
 ## Persona 5: Arquitectura de Cumplimiento Técnico-Legal y Vinculación con el Caso 10
 
 **Asignatura:** Taller de Formulación de Proyectos Informáticos (ICI-5444) · Escuela de Informática, PUCV  

@@ -1,0 +1,4 @@
+/home/axeler8/.local/lib/python3.12/site-packages/matplotlib/projections/__init__.py:63: UserWarning: Unable to import Axes3D. This may be due to multiple versions of Matplotlib being installed (e.g. as a system package and as a pip package). As a result, the 3D projection is not available.
+  warnings.warn("Unable to import Axes3D. This may be due to multiple versions of "
+Contenido, partidas, cuatro gráficos y anexo generados desde el Excel recalculado.
+TIR base: [0.715500225332119] ; escenarios: {'Atraso H5 M13': [0.226824918675414, 0.35613481878442343, 0.6978634183259589], 'Atraso H5 M14': [0.1871238459266381, 0.4202194228964288, 0.6848879686395029], 'H5 M14 + reserva M12': [0.13252054427004356, 0.49763194786703957, 0.6590274076177371], 'H5 M14 + reserva + facilidad': [0.13252054427004356, 0.49763194786703957, 0.6590274076177371], 'Costos +5%': [0.1278620940571672], 'Cobros -5%': [0.1243720380979426], 'Reserva anticipada M9': [0.11703967140726444]}

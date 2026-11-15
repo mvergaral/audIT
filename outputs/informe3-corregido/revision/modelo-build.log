@@ -1,0 +1,5 @@
+{"kind":"table","sheet":"Resumen Ejecutivo","address":"A1:C15","rows":15,"cols":3,"values":[["audIT / Transportes Curimón","Informe 3 · versión 3.0","Unidad"],["Costo neto",172657.02764459638,"UF"],["Venta neta",211849.1136743513,"UF"],["Margen EBITDA",0.18499999999999972,"%"],["VAN M1-M56",26915.024475100945,"UF"],["TIR mensual",0.7155002253495026,"%"],["Caja mínima base",-1172.848164489863,"UF tesorería"],["Línea máxima base",0,"UF"],["Capital inicial",11250,"UF total"],["Banco inicial",9000,"UF"],["Socios inicial",2249.9999999999995,"UF"],["Atraso H5 M13 déficit",3164.2614335538356,"UF tras línea"],["Atraso combinado déficit",8270.190579451193,"UF tras línea"],["Facilidad contingente",10000,"UF condicionados"],["Cola de cobro M57",2803.162671267894,"UF netos"]]}
+{"kind":"notice","message":"Cell search matched 0 entries."}
+Inspect result written to file: /home/axeler8/Escritorio/audIT/outputs/informe3-corregido/revision/modelo-borrador.xlsx.inspect.ndjson
+Modelo exportado
+
