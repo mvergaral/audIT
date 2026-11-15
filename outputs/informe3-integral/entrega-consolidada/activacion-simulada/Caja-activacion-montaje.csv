@@ -1,0 +1,314 @@
+﻿Escenario;Mes;Fecha simulada;Hora;Movimiento;Flujo CLP;Saldo CLP
+H5 M13 / reserva M12;1;2027-02-01;00:00;Apertura;0,00;0,00
+H5 M13 / reserva M12;1;2027-02-01;08:00;Desembolso banco;266251504,00;266251504,00
+H5 M13 / reserva M12;1;2027-02-01;08:10;Aporte socios;66562876,00;332814380,00
+H5 M13 / reserva M12;1;2027-02-17;15:00;Egresos netos distintos de nómina e IVA de compras;-35352554;297461826,00
+H5 M13 / reserva M12;1;2027-02-26;14:00;Nómina;-78400000;219061826,00
+H5 M13 / reserva M12;7;2027-08-01;00:00;Apertura;671913729,55;671913729,55
+H5 M13 / reserva M12;7;2027-08-16;12:00;IVA del mes previo;-87757253,48;584156476,07
+H5 M13 / reserva M12;7;2027-08-17;15:00;Egresos netos distintos de nómina e IVA de compras;-29733181;554423295,07
+H5 M13 / reserva M12;7;2027-08-23;12:00;Interés bancario y comisión;-2396263,54;552027031,53
+H5 M13 / reserva M12;7;2027-08-23;13:00;Horas condicionales de preparación;-608000;551419031,53
+H5 M13 / reserva M12;7;2027-08-31;14:00;Nómina;-161820000;389599031,53
+H5 M13 / reserva M12;7;2027-08-31;16:30;Pago bruto montaje externo;-2665600;386933431,53
+H5 M13 / reserva M12;8;2027-09-01;00:00;Apertura;386933431,53;386933431,53
+H5 M13 / reserva M12;8;2027-09-17;15:00;Egresos netos distintos de nómina e IVA de compras;-24781881;362151550,53
+H5 M13 / reserva M12;8;2027-09-21;12:00;Interés bancario y comisión;-2396263,54;359755287,00
+H5 M13 / reserva M12;8;2027-09-21;13:00;Horas condicionales de preparación;-432000;359323287,00
+H5 M13 / reserva M12;8;2027-09-30;14:00;Nómina;-161820000;197503287,00
+H5 M13 / reserva M12;8;2027-09-30;16:30;Pago bruto montaje externo;-2665600;194837687,00
+H5 M13 / reserva M12;9;2027-10-01;00:00;Apertura;194837687,00;194837687,00
+H5 M13 / reserva M12;9;2027-10-01;08:00;Desembolso banco;1612800,00;196450487,00
+H5 M13 / reserva M12;9;2027-10-01;08:10;Aporte socios;403200,00;196853687,00
+H5 M13 / reserva M12;9;2027-10-01;08:15;Desembolso adicional banco;6294388;203148075,00
+H5 M13 / reserva M12;9;2027-10-01;08:20;Aporte adicional socios;1573597;204721672,00
+H5 M13 / reserva M12;9;2027-10-18;15:00;Egresos netos distintos de nómina e IVA de compras;-26460621;178261051,00
+H5 M13 / reserva M12;9;2027-10-21;12:00;Interés bancario y comisión;-2396263,54;175864787,46
+H5 M13 / reserva M12;9;2027-10-21;13:00;Horas condicionales de preparación;-400000;175464787,46
+H5 M13 / reserva M12;9;2027-10-29;14:00;Nómina;-162928000;12536787,46
+H5 M13 / reserva M12;9;2027-10-29;16:30;Pago bruto montaje externo;-2310186;10226601,46
+H5 M13 / reserva M12;10;2027-11-01;00:00;Apertura;10226601,46;10226601,46
+H5 M13 / reserva M12;10;2027-11-15;09:00;H4 con IVA;549637534,98;559864136,45
+H5 M13 / reserva M12;10;2027-11-17;15:00;Egresos netos distintos de nómina e IVA de compras;-26986421;532877715,45
+H5 M13 / reserva M12;10;2027-11-22;12:00;Interés bancario y comisión;-2410778,74;530466936,71
+H5 M13 / reserva M12;10;2027-11-22;13:10;Interés crédito adicional;-56649,49;530410287,22
+H5 M13 / reserva M12;10;2027-11-30;14:00;Nómina;-175680000;354730287,22
+H5 M13 / reserva M12;12;2028-01-01;00:00;Apertura;57464184,50;57464184,50
+H5 M13 / reserva M12;12;2028-01-03;08:00;Desembolso banco;250920876,00;308385060,50
+H5 M13 / reserva M12;12;2028-01-03;08:10;Aporte socios;62730219,00;371115279,50
+H5 M13 / reserva M12;12;2028-01-17;15:00;Egresos netos distintos de nómina e IVA de compras;-29961421;341153858,50
+H5 M13 / reserva M12;12;2028-01-21;12:00;Interés bancario y comisión;-2660778,74;338493079,77
+H5 M13 / reserva M12;12;2028-01-21;13:10;Interés crédito adicional;-56649,49;338436430,28
+H5 M13 / reserva M12;12;2028-01-24;12:00;Pago reserva D4;-152699775;185736655,28
+H5 M13 / reserva M12;12;2028-01-31;14:00;Nómina;-175680000;10056655,28
+H5 M13 / reserva M12;13;2028-02-01;00:00;Apertura;10056655,28;10056655,28
+H5 M13 / reserva M12;13;2028-02-15;09:00;H6 con IVA;274818767,49;284875422,77
+H5 M13 / reserva M12;13;2028-02-15;11:00;Cobro H5 con IVA;549637534,98;834512957,75
+H5 M13 / reserva M12;13;2028-02-16;12:00;IVA del mes previo;-87757253,48;746755704,27
+H5 M13 / reserva M12;13;2028-02-17;15:00;Egresos netos distintos de nómina e IVA de compras;-53991898;692763806,27
+H5 M13 / reserva M12;13;2028-02-21;12:00;Interés bancario y comisión;-4669066,62;688094739,65
+H5 M13 / reserva M12;13;2028-02-21;13:10;Interés crédito adicional;-56649,49;688038090,16
+H5 M13 / reserva M12;13;2028-02-29;14:00;Nómina;-196160000;491878090,16
+H5 M13 / reserva M12;14;2028-03-01;00:00;Apertura;491878090,16;491878090,16
+H5 M13 / reserva M12;14;2028-03-15;09:00;H8 con IVA;274818767,49;766696857,65
+H5 M13 / reserva M12;14;2028-03-16;12:00;IVA del mes previo;-43878626,74;722818230,91
+H5 M13 / reserva M12;14;2028-03-17;15:00;Egresos netos distintos de nómina e IVA de compras;-28606298;694211932,91
+H5 M13 / reserva M12;14;2028-03-21;12:00;Interés bancario y comisión;-4669066,62;689542866,29
+H5 M13 / reserva M12;14;2028-03-21;13:10;Interés crédito adicional;-56649,49;689486216,79
+H5 M13 / reserva M12;14;2028-03-31;14:00;Nómina;-196160000;493326216,79
+H5 M13 / reserva M12;15;2028-04-01;00:00;Apertura;493326216,79;493326216,79
+H5 M13 / reserva M12;15;2028-04-17;12:00;IVA del mes previo;-43878626,74;449447590,05
+H5 M13 / reserva M12;15;2028-04-17;15:00;Egresos netos distintos de nómina e IVA de compras;-28606298;420841292,05
+H5 M13 / reserva M12;15;2028-04-21;12:00;Interés bancario y comisión;-4669066,62;416172225,43
+H5 M13 / reserva M12;15;2028-04-21;13:10;Interés crédito adicional;-56649,49;416115575,94
+H5 M13 / reserva M12;15;2028-04-28;14:00;Nómina;-196160000;219955575,94
+H5 M13 / reserva M12;16;2028-05-01;00:00;Apertura;219955575,94;219955575,94
+H5 M13 / reserva M12;16;2028-05-15;09:00;H7 con IVA;549637534,98;769593110,92
+H5 M13 / reserva M12;16;2028-05-17;15:00;Egresos netos distintos de nómina e IVA de compras;-28634188;740958922,92
+H5 M13 / reserva M12;16;2028-05-22;12:00;Interés bancario y comisión;-4669066,62;736289856,30
+H5 M13 / reserva M12;16;2028-05-22;13:10;Interés crédito adicional;-56649,49;736233206,81
+H5 M13 / reserva M12;16;2028-05-31;14:00;Nómina;-196160000;540073206,81
+H5 M13 / reserva M12;16;2028-05-31;15:00;Amortización puente;-252533676,00;287539530,81
+H5 M13 / reserva M12;21;2028-10-01;00:00;Apertura;580834576,97;580834576,97
+H5 M13 / reserva M12;21;2028-10-16;09:00;H12 con IVA;549637534,98;1130472111,95
+H5 M13 / reserva M12;21;2028-10-17;15:00;Egresos netos distintos de nómina e IVA de compras;-35313264,22;1095158847,73
+H5 M13 / reserva M12;21;2028-10-23;12:00;Interés bancario y comisión;-2396263,54;1092762584,19
+H5 M13 / reserva M12;21;2028-10-23;13:10;Interés crédito adicional;-56649,49;1092705934,70
+H5 M13 / reserva M12;21;2028-10-31;14:00;Nómina;-88252000;1004453934,70
+H5 M13 / reserva M12;21;2028-10-31;16:00;Amortización inicial;-266251504,00;738202430,70
+H5 M13 / reserva M12;21;2028-10-31;16:10;Amortización crédito adicional;-6294388;731908042,70
+H5 M14 / reserva M12;1;2027-02-01;00:00;Apertura;0,00;0,00
+H5 M14 / reserva M12;1;2027-02-01;08:00;Desembolso banco;266251504,00;266251504,00
+H5 M14 / reserva M12;1;2027-02-01;08:10;Aporte socios;66562876,00;332814380,00
+H5 M14 / reserva M12;1;2027-02-17;15:00;Egresos netos distintos de nómina e IVA de compras;-35352554;297461826,00
+H5 M14 / reserva M12;1;2027-02-26;14:00;Nómina;-78400000;219061826,00
+H5 M14 / reserva M12;7;2027-08-01;00:00;Apertura;671913729,55;671913729,55
+H5 M14 / reserva M12;7;2027-08-16;12:00;IVA del mes previo;-87757253,48;584156476,07
+H5 M14 / reserva M12;7;2027-08-17;15:00;Egresos netos distintos de nómina e IVA de compras;-29733181;554423295,07
+H5 M14 / reserva M12;7;2027-08-23;12:00;Interés bancario y comisión;-2396263,54;552027031,53
+H5 M14 / reserva M12;7;2027-08-23;13:00;Horas condicionales de preparación;-608000;551419031,53
+H5 M14 / reserva M12;7;2027-08-31;14:00;Nómina;-161820000;389599031,53
+H5 M14 / reserva M12;7;2027-08-31;16:30;Pago bruto montaje externo;-2665600;386933431,53
+H5 M14 / reserva M12;8;2027-09-01;00:00;Apertura;386933431,53;386933431,53
+H5 M14 / reserva M12;8;2027-09-17;15:00;Egresos netos distintos de nómina e IVA de compras;-24781881;362151550,53
+H5 M14 / reserva M12;8;2027-09-21;12:00;Interés bancario y comisión;-2396263,54;359755287,00
+H5 M14 / reserva M12;8;2027-09-21;13:00;Horas condicionales de preparación;-432000;359323287,00
+H5 M14 / reserva M12;8;2027-09-30;14:00;Nómina;-161820000;197503287,00
+H5 M14 / reserva M12;8;2027-09-30;16:30;Pago bruto montaje externo;-2665600;194837687,00
+H5 M14 / reserva M12;9;2027-10-01;00:00;Apertura;194837687,00;194837687,00
+H5 M14 / reserva M12;9;2027-10-01;08:00;Desembolso banco;1612800,00;196450487,00
+H5 M14 / reserva M12;9;2027-10-01;08:10;Aporte socios;403200,00;196853687,00
+H5 M14 / reserva M12;9;2027-10-01;08:15;Desembolso adicional banco;6294388;203148075,00
+H5 M14 / reserva M12;9;2027-10-01;08:20;Aporte adicional socios;1573597;204721672,00
+H5 M14 / reserva M12;9;2027-10-18;15:00;Egresos netos distintos de nómina e IVA de compras;-26460621;178261051,00
+H5 M14 / reserva M12;9;2027-10-21;12:00;Interés bancario y comisión;-2396263,54;175864787,46
+H5 M14 / reserva M12;9;2027-10-21;13:00;Horas condicionales de preparación;-400000;175464787,46
+H5 M14 / reserva M12;9;2027-10-29;14:00;Nómina;-162928000;12536787,46
+H5 M14 / reserva M12;9;2027-10-29;16:30;Pago bruto montaje externo;-2310186;10226601,46
+H5 M14 / reserva M12;10;2027-11-01;00:00;Apertura;10226601,46;10226601,46
+H5 M14 / reserva M12;10;2027-11-15;09:00;H4 con IVA;549637534,98;559864136,45
+H5 M14 / reserva M12;10;2027-11-17;15:00;Egresos netos distintos de nómina e IVA de compras;-26986421;532877715,45
+H5 M14 / reserva M12;10;2027-11-22;12:00;Interés bancario y comisión;-2410778,74;530466936,71
+H5 M14 / reserva M12;10;2027-11-22;13:10;Interés crédito adicional;-56649,49;530410287,22
+H5 M14 / reserva M12;10;2027-11-30;14:00;Nómina;-175680000;354730287,22
+H5 M14 / reserva M12;12;2028-01-01;00:00;Apertura;57464184,50;57464184,50
+H5 M14 / reserva M12;12;2028-01-03;08:00;Desembolso banco;305521560,00;362985744,50
+H5 M14 / reserva M12;12;2028-01-03;08:10;Aporte socios;76380390,00;439366134,50
+H5 M14 / reserva M12;12;2028-01-17;15:00;Egresos netos distintos de nómina e IVA de compras;-29961421;409404713,50
+H5 M14 / reserva M12;12;2028-01-21;12:00;Interés bancario y comisión;-2660778,74;406743934,77
+H5 M14 / reserva M12;12;2028-01-21;13:10;Interés crédito adicional;-56649,49;406687285,28
+H5 M14 / reserva M12;12;2028-01-24;12:00;Pago reserva D4;-152699775;253987510,28
+H5 M14 / reserva M12;12;2028-01-31;14:00;Nómina;-175680000;78307510,28
+H5 M14 / reserva M12;13;2028-02-01;00:00;Apertura;78307510,28;78307510,28
+H5 M14 / reserva M12;13;2028-02-15;09:00;H6 con IVA;274818767,49;353126277,77
+H5 M14 / reserva M12;13;2028-02-16;12:00;IVA del mes previo;-87757253,48;265369024,28
+H5 M14 / reserva M12;13;2028-02-17;15:00;Egresos netos distintos de nómina e IVA de compras;-53991898;211377126,28
+H5 M14 / reserva M12;13;2028-02-21;12:00;Interés bancario y comisión;-5160472,78;206216653,51
+H5 M14 / reserva M12;13;2028-02-21;13:10;Interés crédito adicional;-56649,49;206160004,02
+H5 M14 / reserva M12;13;2028-02-29;14:00;Nómina;-196160000;10000004,02
+H5 M14 / reserva M12;14;2028-03-01;00:00;Apertura;10000004,02;10000004,02
+H5 M14 / reserva M12;14;2028-03-01;11:00;Cobro H5 con IVA;549637534,98;559637539,00
+H5 M14 / reserva M12;14;2028-03-15;09:00;H8 con IVA;274818767,49;834456306,49
+H5 M14 / reserva M12;14;2028-03-16;12:00;IVA del mes previo;-43878626,74;790577679,75
+H5 M14 / reserva M12;14;2028-03-17;15:00;Egresos netos distintos de nómina e IVA de compras;-28606298;761971381,75
+H5 M14 / reserva M12;14;2028-03-21;12:00;Interés bancario y comisión;-5160472,78;756810908,97
+H5 M14 / reserva M12;14;2028-03-21;13:10;Interés crédito adicional;-56649,49;756754259,48
+H5 M14 / reserva M12;14;2028-03-31;14:00;Nómina;-196160000;560594259,48
+H5 M14 / reserva M12;15;2028-04-01;00:00;Apertura;560594259,48;560594259,48
+H5 M14 / reserva M12;15;2028-04-17;12:00;IVA del mes previo;-43878626,74;516715632,74
+H5 M14 / reserva M12;15;2028-04-17;15:00;Egresos netos distintos de nómina e IVA de compras;-28606298;488109334,74
+H5 M14 / reserva M12;15;2028-04-21;12:00;Interés bancario y comisión;-5160472,78;482948861,96
+H5 M14 / reserva M12;15;2028-04-21;13:10;Interés crédito adicional;-56649,49;482892212,47
+H5 M14 / reserva M12;15;2028-04-28;14:00;Nómina;-196160000;286732212,47
+H5 M14 / reserva M12;16;2028-05-01;00:00;Apertura;286732212,47;286732212,47
+H5 M14 / reserva M12;16;2028-05-15;09:00;H7 con IVA;549637534,98;836369747,46
+H5 M14 / reserva M12;16;2028-05-17;15:00;Egresos netos distintos de nómina e IVA de compras;-28634188;807735559,46
+H5 M14 / reserva M12;16;2028-05-22;12:00;Interés bancario y comisión;-5160472,78;802575086,68
+H5 M14 / reserva M12;16;2028-05-22;13:10;Interés crédito adicional;-56649,49;802518437,19
+H5 M14 / reserva M12;16;2028-05-31;14:00;Nómina;-196160000;606358437,19
+H5 M14 / reserva M12;16;2028-05-31;15:00;Amortización puente;-307134360,00;299224077,19
+H5 M14 / reserva M12;21;2028-10-01;00:00;Apertura;592519123,34;592519123,34
+H5 M14 / reserva M12;21;2028-10-16;09:00;H12 con IVA;549637534,98;1142156658,33
+H5 M14 / reserva M12;21;2028-10-17;15:00;Egresos netos distintos de nómina e IVA de compras;-35313264,22;1106843394,10
+H5 M14 / reserva M12;21;2028-10-23;12:00;Interés bancario y comisión;-2396263,54;1104447130,57
+H5 M14 / reserva M12;21;2028-10-23;13:10;Interés crédito adicional;-56649,49;1104390481,08
+H5 M14 / reserva M12;21;2028-10-31;14:00;Nómina;-88252000;1016138481,08
+H5 M14 / reserva M12;21;2028-10-31;16:00;Amortización inicial;-266251504,00;749886977,08
+H5 M14 / reserva M12;21;2028-10-31;16:10;Amortización crédito adicional;-6294388;743592589,08
+H5 M14 / reserva M9;1;2027-02-01;00:00;Apertura;0,00;0,00
+H5 M14 / reserva M9;1;2027-02-01;08:00;Desembolso banco;266251504,00;266251504,00
+H5 M14 / reserva M9;1;2027-02-01;08:10;Aporte socios;66562876,00;332814380,00
+H5 M14 / reserva M9;1;2027-02-17;15:00;Egresos netos distintos de nómina e IVA de compras;-35352554;297461826,00
+H5 M14 / reserva M9;1;2027-02-26;14:00;Nómina;-78400000;219061826,00
+H5 M14 / reserva M9;7;2027-08-01;00:00;Apertura;671913729,55;671913729,55
+H5 M14 / reserva M9;7;2027-08-16;12:00;IVA del mes previo;-87757253,48;584156476,07
+H5 M14 / reserva M9;7;2027-08-17;15:00;Egresos netos distintos de nómina e IVA de compras;-29733181;554423295,07
+H5 M14 / reserva M9;7;2027-08-23;12:00;Interés bancario y comisión;-2396263,54;552027031,53
+H5 M14 / reserva M9;7;2027-08-23;13:00;Horas condicionales de preparación;-608000;551419031,53
+H5 M14 / reserva M9;7;2027-08-31;14:00;Nómina;-161820000;389599031,53
+H5 M14 / reserva M9;7;2027-08-31;16:30;Pago bruto montaje externo;-2665600;386933431,53
+H5 M14 / reserva M9;8;2027-09-01;00:00;Apertura;386933431,53;386933431,53
+H5 M14 / reserva M9;8;2027-09-17;15:00;Egresos netos distintos de nómina e IVA de compras;-24781881;362151550,53
+H5 M14 / reserva M9;8;2027-09-21;12:00;Interés bancario y comisión;-2396263,54;359755287,00
+H5 M14 / reserva M9;8;2027-09-21;13:00;Horas condicionales de preparación;-432000;359323287,00
+H5 M14 / reserva M9;8;2027-09-30;14:00;Nómina;-161820000;197503287,00
+H5 M14 / reserva M9;8;2027-09-30;16:30;Pago bruto montaje externo;-2665600;194837687,00
+H5 M14 / reserva M9;9;2027-10-01;00:00;Apertura;194837687,00;194837687,00
+H5 M14 / reserva M9;9;2027-10-01;08:00;Desembolso banco;123772620,00;318610307,00
+H5 M14 / reserva M9;9;2027-10-01;08:10;Aporte socios;30943155,00;349553462,00
+H5 M14 / reserva M9;9;2027-10-01;08:15;Desembolso adicional banco;6294388;355847850,00
+H5 M14 / reserva M9;9;2027-10-01;08:20;Aporte adicional socios;1573597;357421447,00
+H5 M14 / reserva M9;9;2027-10-18;15:00;Egresos netos distintos de nómina e IVA de compras;-26460621;330960826,00
+H5 M14 / reserva M9;9;2027-10-21;12:00;Interés bancario y comisión;-2396263,54;328564562,46
+H5 M14 / reserva M9;9;2027-10-21;13:00;Horas condicionales de preparación;-400000;328164562,46
+H5 M14 / reserva M9;9;2027-10-25;12:00;Pago reserva D4;-152699775;175464787,46
+H5 M14 / reserva M9;9;2027-10-29;14:00;Nómina;-162928000;12536787,46
+H5 M14 / reserva M9;9;2027-10-29;16:30;Pago bruto montaje externo;-2310186;10226601,46
+H5 M14 / reserva M9;10;2027-11-01;00:00;Apertura;10226601,46;10226601,46
+H5 M14 / reserva M9;10;2027-11-15;09:00;H4 con IVA;549637534,98;559864136,45
+H5 M14 / reserva M9;10;2027-11-17;15:00;Egresos netos distintos de nómina e IVA de compras;-26986421;532877715,45
+H5 M14 / reserva M9;10;2027-11-22;12:00;Interés bancario y comisión;-3510217,12;529367498,33
+H5 M14 / reserva M9;10;2027-11-22;13:10;Interés crédito adicional;-56649,49;529310848,84
+H5 M14 / reserva M9;10;2027-11-30;14:00;Nómina;-175680000;353630848,84
+H5 M14 / reserva M9;12;2028-01-01;00:00;Apertura;55265307,74;55265307,74
+H5 M14 / reserva M9;12;2028-01-03;08:00;Desembolso banco;186019528,00;241284835,74
+H5 M14 / reserva M9;12;2028-01-03;08:10;Aporte socios;46504882,00;287789717,74
+H5 M14 / reserva M9;12;2028-01-17;15:00;Egresos netos distintos de nómina e IVA de compras;-29961421;257828296,74
+H5 M14 / reserva M9;12;2028-01-21;12:00;Interés bancario y comisión;-3760217,12;254068079,63
+H5 M14 / reserva M9;12;2028-01-21;13:10;Interés crédito adicional;-56649,49;254011430,14
+H5 M14 / reserva M9;12;2028-01-31;14:00;Nómina;-175680000;78331430,14
+H5 M14 / reserva M9;13;2028-02-01;00:00;Apertura;78331430,14;78331430,14
+H5 M14 / reserva M9;13;2028-02-15;09:00;H6 con IVA;274818767,49;353150197,63
+H5 M14 / reserva M9;13;2028-02-16;12:00;IVA del mes previo;-87757253,48;265392944,14
+H5 M14 / reserva M9;13;2028-02-17;15:00;Egresos netos distintos de nómina e IVA de compras;-53991898;211401046,14
+H5 M14 / reserva M9;13;2028-02-21;12:00;Interés bancario y comisión;-5184392,87;206216653,28
+H5 M14 / reserva M9;13;2028-02-21;13:10;Interés crédito adicional;-56649,49;206160003,78
+H5 M14 / reserva M9;13;2028-02-29;14:00;Nómina;-196160000;10000003,78
+H5 M14 / reserva M9;14;2028-03-01;00:00;Apertura;10000003,78;10000003,78
+H5 M14 / reserva M9;14;2028-03-01;11:00;Cobro H5 con IVA;549637534,98;559637538,77
+H5 M14 / reserva M9;14;2028-03-15;09:00;H8 con IVA;274818767,49;834456306,26
+H5 M14 / reserva M9;14;2028-03-16;12:00;IVA del mes previo;-43878626,74;790577679,52
+H5 M14 / reserva M9;14;2028-03-17;15:00;Egresos netos distintos de nómina e IVA de compras;-28606298;761971381,52
+H5 M14 / reserva M9;14;2028-03-21;12:00;Interés bancario y comisión;-5184392,87;756786988,65
+H5 M14 / reserva M9;14;2028-03-21;13:10;Interés crédito adicional;-56649,49;756730339,16
+H5 M14 / reserva M9;14;2028-03-31;14:00;Nómina;-196160000;560570339,16
+H5 M14 / reserva M9;15;2028-04-01;00:00;Apertura;560570339,16;560570339,16
+H5 M14 / reserva M9;15;2028-04-17;12:00;IVA del mes previo;-43878626,74;516691712,42
+H5 M14 / reserva M9;15;2028-04-17;15:00;Egresos netos distintos de nómina e IVA de compras;-28606298;488085414,42
+H5 M14 / reserva M9;15;2028-04-21;12:00;Interés bancario y comisión;-5184392,87;482901021,55
+H5 M14 / reserva M9;15;2028-04-21;13:10;Interés crédito adicional;-56649,49;482844372,06
+H5 M14 / reserva M9;15;2028-04-28;14:00;Nómina;-196160000;286684372,06
+H5 M14 / reserva M9;16;2028-05-01;00:00;Apertura;286684372,06;286684372,06
+H5 M14 / reserva M9;16;2028-05-15;09:00;H7 con IVA;549637534,98;836321907,04
+H5 M14 / reserva M9;16;2028-05-17;15:00;Egresos netos distintos de nómina e IVA de compras;-28634188;807687719,04
+H5 M14 / reserva M9;16;2028-05-22;12:00;Interés bancario y comisión;-5184392,87;802503326,17
+H5 M14 / reserva M9;16;2028-05-22;13:10;Interés crédito adicional;-56649,49;802446676,68
+H5 M14 / reserva M9;16;2028-05-31;14:00;Nómina;-196160000;606286676,68
+H5 M14 / reserva M9;16;2028-05-31;15:00;Amortización puente;-309792148,00;296494528,68
+H5 M14 / reserva M9;21;2028-10-01;00:00;Apertura;589789574,83;589789574,83
+H5 M14 / reserva M9;21;2028-10-16;09:00;H12 con IVA;549637534,98;1139427109,82
+H5 M14 / reserva M9;21;2028-10-17;15:00;Egresos netos distintos de nómina e IVA de compras;-35313264,22;1104113845,60
+H5 M14 / reserva M9;21;2028-10-23;12:00;Interés bancario y comisión;-2396263,54;1101717582,06
+H5 M14 / reserva M9;21;2028-10-23;13:10;Interés crédito adicional;-56649,49;1101660932,57
+H5 M14 / reserva M9;21;2028-10-31;14:00;Nómina;-88252000;1013408932,57
+H5 M14 / reserva M9;21;2028-10-31;16:00;Amortización inicial;-266251504,00;747157428,57
+H5 M14 / reserva M9;21;2028-10-31;16:10;Amortización crédito adicional;-6294388;740863040,57
+H6 atrasado / H5 M14;1;2027-02-01;00:00;Apertura;0,00;0,00
+H6 atrasado / H5 M14;1;2027-02-01;08:00;Desembolso banco;266251504,00;266251504,00
+H6 atrasado / H5 M14;1;2027-02-01;08:10;Aporte socios;66562876,00;332814380,00
+H6 atrasado / H5 M14;1;2027-02-17;15:00;Egresos netos distintos de nómina e IVA de compras;-35352554;297461826,00
+H6 atrasado / H5 M14;1;2027-02-26;14:00;Nómina;-78400000;219061826,00
+H6 atrasado / H5 M14;7;2027-08-01;00:00;Apertura;671913729,55;671913729,55
+H6 atrasado / H5 M14;7;2027-08-16;12:00;IVA del mes previo;-87757253,48;584156476,07
+H6 atrasado / H5 M14;7;2027-08-17;15:00;Egresos netos distintos de nómina e IVA de compras;-29733181;554423295,07
+H6 atrasado / H5 M14;7;2027-08-23;12:00;Interés bancario y comisión;-2396263,54;552027031,53
+H6 atrasado / H5 M14;7;2027-08-23;13:00;Horas condicionales de preparación;-608000;551419031,53
+H6 atrasado / H5 M14;7;2027-08-31;14:00;Nómina;-161820000;389599031,53
+H6 atrasado / H5 M14;7;2027-08-31;16:30;Pago bruto montaje externo;-2665600;386933431,53
+H6 atrasado / H5 M14;8;2027-09-01;00:00;Apertura;386933431,53;386933431,53
+H6 atrasado / H5 M14;8;2027-09-17;15:00;Egresos netos distintos de nómina e IVA de compras;-24781881;362151550,53
+H6 atrasado / H5 M14;8;2027-09-21;12:00;Interés bancario y comisión;-2396263,54;359755287,00
+H6 atrasado / H5 M14;8;2027-09-21;13:00;Horas condicionales de preparación;-432000;359323287,00
+H6 atrasado / H5 M14;8;2027-09-30;14:00;Nómina;-161820000;197503287,00
+H6 atrasado / H5 M14;8;2027-09-30;16:30;Pago bruto montaje externo;-2665600;194837687,00
+H6 atrasado / H5 M14;9;2027-10-01;00:00;Apertura;194837687,00;194837687,00
+H6 atrasado / H5 M14;9;2027-10-01;08:00;Desembolso banco;1612800,00;196450487,00
+H6 atrasado / H5 M14;9;2027-10-01;08:10;Aporte socios;403200,00;196853687,00
+H6 atrasado / H5 M14;9;2027-10-01;08:15;Desembolso adicional banco;6294388;203148075,00
+H6 atrasado / H5 M14;9;2027-10-01;08:20;Aporte adicional socios;1573597;204721672,00
+H6 atrasado / H5 M14;9;2027-10-18;15:00;Egresos netos distintos de nómina e IVA de compras;-26460621;178261051,00
+H6 atrasado / H5 M14;9;2027-10-21;12:00;Interés bancario y comisión;-2396263,54;175864787,46
+H6 atrasado / H5 M14;9;2027-10-21;13:00;Horas condicionales de preparación;-400000;175464787,46
+H6 atrasado / H5 M14;9;2027-10-29;14:00;Nómina;-162928000;12536787,46
+H6 atrasado / H5 M14;9;2027-10-29;16:30;Pago bruto montaje externo;-2310186;10226601,46
+H6 atrasado / H5 M14;10;2027-11-01;00:00;Apertura;10226601,46;10226601,46
+H6 atrasado / H5 M14;10;2027-11-15;09:00;H4 con IVA;549637534,98;559864136,45
+H6 atrasado / H5 M14;10;2027-11-17;15:00;Egresos netos distintos de nómina e IVA de compras;-26986421;532877715,45
+H6 atrasado / H5 M14;10;2027-11-22;12:00;Interés bancario y comisión;-2410778,74;530466936,71
+H6 atrasado / H5 M14;10;2027-11-22;13:10;Interés crédito adicional;-56649,49;530410287,22
+H6 atrasado / H5 M14;10;2027-11-30;14:00;Nómina;-175680000;354730287,22
+H6 atrasado / H5 M14;12;2028-01-01;00:00;Apertura;57464184,50;57464184,50
+H6 atrasado / H5 M14;12;2028-01-03;08:00;Desembolso banco;305521560,00;362985744,50
+H6 atrasado / H5 M14;12;2028-01-03;08:10;Aporte socios;76380390,00;439366134,50
+H6 atrasado / H5 M14;12;2028-01-17;15:00;Egresos netos distintos de nómina e IVA de compras;-29961421;409404713,50
+H6 atrasado / H5 M14;12;2028-01-21;12:00;Interés bancario y comisión;-2660778,74;406743934,77
+H6 atrasado / H5 M14;12;2028-01-21;13:10;Interés crédito adicional;-56649,49;406687285,28
+H6 atrasado / H5 M14;12;2028-01-24;12:00;Pago reserva D4;-133189775;273497510,28
+H6 atrasado / H5 M14;12;2028-01-31;14:00;Nómina;-175680000;97817510,28
+H6 atrasado / H5 M14;13;2028-02-01;00:00;Apertura;97817510,28;97817510,28
+H6 atrasado / H5 M14;13;2028-02-16;12:00;IVA del mes previo;-87757253,48;10060256,79
+H6 atrasado / H5 M14;13;2028-02-17;09:00;H6 con IVA;274818767,49;284879024,28
+H6 atrasado / H5 M14;13;2028-02-17;10:00;Liberación de reserva D4 tras H6;-19510000;265369024,28
+H6 atrasado / H5 M14;13;2028-02-17;15:00;Egresos netos distintos de nómina e IVA de compras;-53991898;211377126,28
+H6 atrasado / H5 M14;13;2028-02-21;12:00;Interés bancario y comisión;-5160472,78;206216653,51
+H6 atrasado / H5 M14;13;2028-02-21;13:10;Interés crédito adicional;-56649,49;206160004,02
+H6 atrasado / H5 M14;13;2028-02-29;14:00;Nómina;-196160000;10000004,02
+H6 atrasado / H5 M14;14;2028-03-01;00:00;Apertura;10000004,02;10000004,02
+H6 atrasado / H5 M14;14;2028-03-01;11:00;Cobro H5 con IVA;549637534,98;559637539,00
+H6 atrasado / H5 M14;14;2028-03-15;09:00;H8 con IVA;274818767,49;834456306,49
+H6 atrasado / H5 M14;14;2028-03-16;12:00;IVA del mes previo;-43878626,74;790577679,75
+H6 atrasado / H5 M14;14;2028-03-17;15:00;Egresos netos distintos de nómina e IVA de compras;-28606298;761971381,75
+H6 atrasado / H5 M14;14;2028-03-21;12:00;Interés bancario y comisión;-5160472,78;756810908,97
+H6 atrasado / H5 M14;14;2028-03-21;13:10;Interés crédito adicional;-56649,49;756754259,48
+H6 atrasado / H5 M14;14;2028-03-31;14:00;Nómina;-196160000;560594259,48
+H6 atrasado / H5 M14;15;2028-04-01;00:00;Apertura;560594259,48;560594259,48
+H6 atrasado / H5 M14;15;2028-04-17;12:00;IVA del mes previo;-43878626,74;516715632,74
+H6 atrasado / H5 M14;15;2028-04-17;15:00;Egresos netos distintos de nómina e IVA de compras;-28606298;488109334,74
+H6 atrasado / H5 M14;15;2028-04-21;12:00;Interés bancario y comisión;-5160472,78;482948861,96
+H6 atrasado / H5 M14;15;2028-04-21;13:10;Interés crédito adicional;-56649,49;482892212,47
+H6 atrasado / H5 M14;15;2028-04-28;14:00;Nómina;-196160000;286732212,47
+H6 atrasado / H5 M14;16;2028-05-01;00:00;Apertura;286732212,47;286732212,47
+H6 atrasado / H5 M14;16;2028-05-15;09:00;H7 con IVA;549637534,98;836369747,46
+H6 atrasado / H5 M14;16;2028-05-17;15:00;Egresos netos distintos de nómina e IVA de compras;-28634188;807735559,46
+H6 atrasado / H5 M14;16;2028-05-22;12:00;Interés bancario y comisión;-5160472,78;802575086,68
+H6 atrasado / H5 M14;16;2028-05-22;13:10;Interés crédito adicional;-56649,49;802518437,19
+H6 atrasado / H5 M14;16;2028-05-31;14:00;Nómina;-196160000;606358437,19
+H6 atrasado / H5 M14;16;2028-05-31;15:00;Amortización puente;-307134360,00;299224077,19
+H6 atrasado / H5 M14;21;2028-10-01;00:00;Apertura;592519123,34;592519123,34
+H6 atrasado / H5 M14;21;2028-10-16;09:00;H12 con IVA;549637534,98;1142156658,33
+H6 atrasado / H5 M14;21;2028-10-17;15:00;Egresos netos distintos de nómina e IVA de compras;-35313264,22;1106843394,10
+H6 atrasado / H5 M14;21;2028-10-23;12:00;Interés bancario y comisión;-2396263,54;1104447130,57
+H6 atrasado / H5 M14;21;2028-10-23;13:10;Interés crédito adicional;-56649,49;1104390481,08
+H6 atrasado / H5 M14;21;2028-10-31;14:00;Nómina;-88252000;1016138481,08
+H6 atrasado / H5 M14;21;2028-10-31;16:00;Amortización inicial;-266251504,00;749886977,08
+H6 atrasado / H5 M14;21;2028-10-31;16:10;Amortización crédito adicional;-6294388;743592589,08
