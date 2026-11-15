@@ -57,3 +57,4 @@ Investigacion/*.pdf
 /.codex-cache/
 /tmp/
 /debug.log
+**/salida/informe3-economica/

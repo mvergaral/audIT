@@ -1,10 +1,11 @@
 """Extrae insumos versionados sin alterar las planillas de origen."""
-import csv,json,subprocess
+import csv,json,os,subprocess
 from pathlib import Path
 from io import BytesIO
 import openpyxl
-R=Path(__file__).resolve().parents[2]
 D=Path(__file__).resolve().parent
+R=Path(os.environ['AUDIT_ORIGIN_REPO'])
+
 raw=subprocess.check_output(['git','show','c9a6515:Informe-3/AUDIT-Informe3-Modelo-Economico.xlsx'],cwd=R)
 (D/'build/origen.xlsx').write_bytes(raw)
 b=openpyxl.load_workbook(BytesIO(raw),data_only=True)

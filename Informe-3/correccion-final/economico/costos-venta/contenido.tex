@@ -1,5 +1,5 @@
 \begin{resumenApertura}
-La oferta integra inversión, instalación, personal y continuidad durante los 56 meses contractuales. El presupuesto sustituye el montaje físico posterior al piloto por un servicio por lote y diferencia cobertura fija y carga variable de soporte. La base dispone de capital antes de sus egresos y reserva la línea para contingencias.
+La oferta integra inversión, instalación, personal y continuidad durante los 56 meses contractuales. El presupuesto incluye un servicio de montaje por lote sujeto a verificación y distingue cobertura fija y carga variable de soporte. La base dispone de capital antes de sus egresos y reserva la línea para contingencias.
 \begin{recibe}
 \item Costos, precio y liquidez calculados desde un único modelo mensual, con trazabilidad de cantidades, horas, tasas y escenarios.
 \end{recibe}
@@ -36,44 +36,46 @@ M21--M56 & Operación & Cobertura fija y variable por tramo. Reposiciones, licen
 La ventana física exige la visita normal del camión y consentimiento del dueño cuando corresponda. El montaje se limita a terminales y se evita el congelamiento diciembre--abril, sin ampliar la inmovilización no costeada, conforme a las restricciones 3, 5 y 10 del Caso, capítulo 10, pp.~23--24. Los importes y las horas se relacionan en las hojas Instalación por lote y Dotación por perfil.
 
 \subsection{Servicio de instalación y trabajo que conserva audIT}\label{sec:eco-instalacion}
-El piloto permanece interno. Los otros 172 montajes sustituyen 401 horas y 20 minutos de ejecución física interna. Se conserva el trabajo de banco, configuración, integración, analista, QA y recepción. La reducción se aplica a las horas del técnico de campo, nunca al equipo completo ni al salario de un recurso que deba seguir dedicado a otras actividades.
-El servicio se presupuesta en \montoPartida{montaje-neto} netos equivalentes. Usa 140 minutos por kit, el costo de referencia del técnico, un recargo de coordinación e insumos y una provisión de traslado por terminal regional y lote. El costo interno sustituido es \montoPartida{montaje-evitado}. La diferencia paga el alcance del proveedor y su logística, no representa un ahorro ficticio.
+El piloto permanece interno. Los otros 172 montajes sustituyen 401 horas y 20 minutos de ejecución física interna. Se conserva el trabajo de banco, configuración, integración, analista, QA y recepción. El modelo conserva también la nómina mientras falte acreditar menor contratación, horas extra o refuerzo efectivamente evitado.
+El servicio se presupuesta en \montoPartida{montaje-neto} netos equivalentes. Usa 140 minutos por kit, el costo de referencia del técnico, un recargo de coordinación e insumos y una provisión de traslado por terminal regional y lote. El valor teórico de las horas sustituidas es \montoPartida{montaje-evitado}. Se concilia con la nómina mediante la fracción evitable de Parámetros corrección, igual a cero en el caso base. El calendario presupuestado de 182 en M9 supone 18 consentimientos y visitas más que la meta S7 de 164. La alternativa con adhesión gradual llega a 168 en M10, se congela M11--M15 y alcanza 179 en M18. El calendario requiere stock por terminal, consentimiento por placa, prueba de estadía y acta por vehículo. Los 192 terceros con equipo se integran por plataforma. El gasto LTE/Iridium sigue las altas presupuestadas y las unidades adicionales 8, 7 y 7 de M24, M36 y M48.
 La contratación queda sujeta a autorización previa escrita y al límite agregado del 40\,\% del valor contractual del \art{73}{38}. audIT conserva la responsabilidad, el núcleo de aplicaciones, credenciales y datos. El presupuesto de servicio no equivale a una autorización ya obtenida.
 
 \section{Curva S del proyecto}\label{sec:eco-curva-s}
-La \figref{eco-curva} presenta las tres series mensuales exigidas para M1--M56: costo acumulado con financiamiento, facturación acumulada y caja financiada neta de IVA. La tesorería con IVA se distingue en el análisis de liquidez. El principal del préstamo no se contabiliza como costo del proyecto.
-\figura[lugar=H]{../../Informe-3/correccion-final/economico/figuras/curva-s.pdf}{Curva S mensual en UF. Fuente: planilla, Curva S y Gráficos UF.}{eco-curva}
+Las dos curvas de la \figref{eco-curva} corresponden a la vista de solvencia y tesorería con capital inicial, partiendo en 18.250 UF en M0 para la facturación ajustada y la caja (financiamiento y socios antes del primer egreso de M1). La serie ajustada suma el capital a las facturas emitidas y descuenta intereses, comisión y principal pagado en M21. La caja neta usa cobros efectivos. El escenario por madurez reduce 3.884,16 UF en costos desde M25.
+\figura[lugar=H]{../../Informe-3/correccion-final/economico/figuras/curva-s.pdf}{Curvas S de M0 a M56 con capital inicial. Fuente: Gráficos UF y Escenarios corregidos de la planilla.}{eco-curva}
 La \figref{eco-egresos} muestra los desembolsos por mes. Los mayores picos ocurren en M13, M7, M9 y se explican por capacidad concurrente de implementación, brechas de perfiles y adquisiciones del mes. La contratación se calcula desde horas y tarifas, no desde una pendiente acumulada prefijada.
-\figura[lugar=H]{../../Informe-3/correccion-final/economico/figuras/egresos.pdf}{Costos netos mensuales en UF. Fuente: Costos, columnas A y K.}{eco-egresos}
-Los quiebres se deben a hitos de trabajo y a cambios de dotación. La demanda D3 se compara por perfil con la capacidad base del T-15 y se presupuesta el exceso una sola vez. El trabajo atribuido a innovaciones se identifica dentro de esas horas y no se vuelve a agregar al egreso.
+\figura[lugar=H]{../../Informe-3/correccion-final/economico/figuras/egresos.pdf}{Costos netos mensuales apilados en UF. Fuente: Gráficos UF, columnas K a M.}{eco-egresos}
+Los quiebres se deben a hitos de trabajo y a cambios de dotación. La demanda estimada de horas por perfil se compara con la capacidad base del T-15 y se presupuesta el exceso una sola vez. El trabajo atribuido a innovaciones se identifica dentro de esas horas y no se vuelve a agregar al egreso.
+A diferencia de la vista de solvencia de la \figref{eco-curva} (que parte en M0 con el capital inicial para evaluar liquidez), la \figref{eco-curva-contractual} refleja las series exigidas por el Formulario E-21 de las Bases. Esta curva contractual parte en 0 UF en M1 y no incluye el capital inicial ni la deuda como ingreso facturado: acumula únicamente los pagos contractuales de Transportes Curimón por hitos de desarrollo y mensualidades de operación frente al costo acumulado con intereses y la caja neta. En la vista con capital inicial, la brecha mínima ocurre en M9 frente al costo operativo. El análisis de liquidez detallado usa la tesorería con IVA conciliada en la \verSeccion{sec:eco-financiamiento}.
+\figura[lugar=H]{../../Informe-3/correccion-final/economico/figuras/curva-s-contractual.pdf}{Curva S contractual de M1 a M56, presupuesto base. Fuente: Curva S de la planilla.}{eco-curva-contractual}
 
 \section{Análisis de costos de la solución}\label{sec:eco-costos}
 La \tabref{eco-resumen} resume las magnitudes principales en UF del E-24. El horizonte corresponde a Etapa 1 M1--M16, Etapa 2 M13--M21 y 36 servicios operativos M21--M56. Los cierres de integración y datos que llegan hasta M24 se identifican y se pagan dentro del refuerzo temporal.
 \refstepcounter{table}
 \begin{tabla}{Magnitudes principales, UF netas}{eco-resumen}{L{72mm} R{40mm}}
 Concepto & UF \\ \midrule
-Costo neto & 172.657,03 \\
+Costo neto & 176.704,93 \\
 Venta neta & 211.849,11 \\
-VAN & 26.915,02 \\
+VAN & 24.267,77 \\
 Capital inicial & 18.250,00 \\
-Caja mínima de tesorería & 5.423,95 \\
+Caja mínima de tesorería & 5.260,21 \\
 \end{tabla}
-El precio se recalcula desde los costos corregidos para mantener un margen EBITDA sobre ingresos netos de 18,50\,\%, inferior al máximo del 20\,\% de las Aclaraciones, sección 7. Los valores de utilidad sobre costo de la hoja Resumen del mandante se conservan con su rótulo y se distinguen de ese margen sobre ingresos.
+El precio de implementación y la mensualidad del corte auditado 3.0 se conservan para medir el incremento de costo. El margen EBITDA sobre ingresos netos resultante es 16,59\,\%, dentro del máximo del 20\,\% de las Aclaraciones, sección 7. Los valores de utilidad sobre costo de la hoja Resumen del mandante se conservan con su rótulo y se distinguen de ese margen sobre ingresos.
 
 \subsection{Personal, overhead y gastos de continuidad}\label{sec:eco-personal}
-La implementación parte de las capacidades de referencia de 14, 24, 30, 33, 37, 30 y 26 FTE por tramo del T-15, a 160 horas por FTE. La hoja Tarifas por perfil declara el costo horario y su equivalencia con E-26. Dotación por perfil calcula horas base, demanda D3, refuerzo, horas sustituidas y costo. Los refuerzos son cupos de contratación presupuestados para cerrar una brecha, no disponibilidad de planta supuesta.
-Los costos D4, licencias, calidad, primas, notaría y custodia conservan su fuente y mes. Se incorpora una provisión empresarial de overhead del 2\,\% del costo de personal, separada de primas y gastos legales. Energía y combustible de pruebas se incluyen a cargo de audIT como hipótesis conservadora. El IVA de compras y el IVA de cobros se muestran aparte, sin reconocer créditos fiscales sin respaldo.
+La implementación compara las capacidades presupuestadas por perfil con la demanda mensual, a 160 horas brutas por FTE. T-15 asigna 17.600 horas al EDT 5 y el catálogo A09 del 12 de noviembre revisa ese alcance a 6.008 horas. Las 11.592 horas de diferencia requieren nivelación por semana y perfil antes de reducir contrataciones. Integración, datos y E2 conservan sus 6.400, 4.800 y 8.000 horas de referencia. La hoja Tarifas por perfil declara el costo horario y su equivalencia con E-26. Dotación por perfil calcula horas base, demanda estimada, refuerzo, horas sustituidas y costo. Los refuerzos son cupos de contratación presupuestados para cerrar una brecha, no disponibilidad de planta supuesta.
+Los costos de infraestructura y proveedores, licencias, calidad, primas, notaría y custodia conservan su fuente y mes. Se incorpora una provisión empresarial de overhead del 2\,\% del costo de personal, separada de primas y gastos legales. Energía y combustible de pruebas se incluyen a cargo de audIT como hipótesis conservadora. El IVA de compras y el IVA de cobros se muestran aparte, sin reconocer créditos fiscales sin respaldo.
 
 \subsection{Soporte reforzado y reducción por madurez}\label{sec:eco-soporte}
-El soporte de E1 en M16--M20 usa capacidad reservada de software, campo, QA y SRE de la implementación. Desde M21 se separan mesa 24\,\(\times\)\,7, plataforma, ciclo de vida y mantención evolutiva. Se conservan seis agentes L1 y una reserva mensual de suplencia, plataforma y guardia, y dos perfiles de campo. La carga variable de evolución se reduce al 75\,\%, 50\,\% y 25\,\% de su nivel inicial en M25, M33 y M45.
-La \tabref{eco-soporte} muestra el efecto por tramo. M21--M24 incluye Datos, QA, Arquitectura y Frontend para los cierres que siguen a implementación. El contrato estimado de fabricante D4 permanece en proveedores y no se reduce por esta curva.
+El soporte de E1 en M16--M20 usa capacidad reservada de software, campo, QA y SRE de la implementación. Desde M21 se separan mesa 24\,\(\times\)\,7, plataforma, ciclo de vida y mantención evolutiva. Se conservan seis agentes L1 y una reserva mensual de suplencia, plataforma y guardia, y dos perfiles de campo. La base mantiene el 100\,\% de la carga variable durante los 36 meses. La sensibilidad aplica 75\,\%, 50\,\% y 25\,\% en M25, M33 y M45 una vez verificados los criterios de madurez.
+La \tabref{eco-soporte} compara el presupuesto y la sensibilidad. M21--M24 incluye refuerzos de Datos, QA, Arquitectura y Frontend para el cierre de implementación. El soporte de fabricante se presupuesta como gasto de proveedores. N1 sigue interno con 960 horas más 160 de suplencia a \montoPartida{tarifa-n1} por hora. Un puesto continuo de 31 días consume 744 horas y deja 216 horas regulares para relevo y concurrencia. Falta validar turnos y probar dos incidentes simultáneos de madrugada. Para evaluar una mesa externa se requiere cotizar cobertura, concurrencia y escalamiento a audIT con el mismo alcance. El ahorro depende del egreso interno evitable y del costo total externo, incluida la transición.
 \refstepcounter{table}
-\begin{tabla}{Costo mensual de personal de operación, UF}{eco-soporte}{L{66mm} R{42mm}}
-Tramo & UF por mes \\ \midrule
-M21 & 1.646,00 \\
-M25--M32 & 1.492,00 \\
-M33--M44 & 1.436,00 \\
-M45--M56 & 1.380,00 \\
+\begin{tabla}{Costo mensual de personal de operación, UF sin overhead}{eco-soporte}{L{39mm} R{34mm} R{49mm}}
+Tramo & Base & Escenario por madurez \\ \midrule
+M21 & 1.646,00 & 1.646,00 \\
+M25--M32 & 1.548,00 & 1.492,00 \\
+M33--M44 & 1.548,00 & 1.436,00 \\
+M45--M56 & 1.548,00 & 1.380,00 \\
 \end{tabla}
 La reducción requiere dos meses sin incidentes P1 atribuibles al sistema, backlog menor a diez y demanda que quepa en las horas contratadas. Si no se cumplen, se mantiene el factor anterior y se recalcula el costo. No se interpreta menor demanda como permiso para eliminar cobertura crítica. Respuesta y resolución son 15 minutos y cuatro horas, respectivamente, conforme al \art{78.2}{40}. Una recuperación de 225 minutos puede cumplir resolución, pero no acredita por sí misma 99,9\,\% de disponibilidad: la continuidad debe sostenerse mediante conmutación y su ensayo previo a H5.
 
@@ -88,7 +90,7 @@ El cobro de M57 es \montoPartida{cobro-m57}. Se presenta como conciliación de l
 
 \section{VAN y TIR de la solución}\label{sec:eco-indicadores}
 La Fila A descuenta cobros netos menos costos del proyecto, sin deuda, aportes ni amortización. M0 es cero y los flujos se descuentan desde M1. La tasa mensual antes de impuestos es 1,0261894\,\%: 80\,\% de deuda al 0,9\,\% mensual y 20\,\% de capital propio al equivalente mensual de un 20\,\% efectivo anual supuesto. El costo de socios es una exigencia de retorno de presupuesto, no un dato impuesto por E-24.
-El VAN base es \montoPartida{van} y la TIR mensual es 71,5500\,\%. Se comprobó la raíz sobre la Fila A. En escenarios con cambios sucesivos de signo pueden existir varias TIR: la hoja Sensibilidad identifica la semilla utilizada y el análisis prioriza VAN y liquidez en vez de elegir la raíz que parezca más favorable. La venta nominal de equilibrio a VAN cero, conservando costos y calendario de cobros, es \montoPartida{equilibrio}.
+El VAN base es \montoPartida{van} y la TIR mensual es 70,9938\,\%. Se comprobó la raíz sobre la Fila A. En escenarios con cambios sucesivos de signo pueden existir varias TIR: la hoja Sensibilidad identifica la semilla utilizada y el análisis prioriza VAN y liquidez en vez de elegir la raíz que parezca más favorable. La venta nominal de equilibrio a VAN cero, conservando costos y calendario de cobros, es \montoPartida{equilibrio}.
 
 \subsection{Financiamiento y caja}\label{sec:eco-financiamiento}
 La base dispone de \montoPartida{capital} en M1. Se compone de un préstamo y del aporte de socios, según el reparto 80/20 del E-24.
@@ -98,30 +100,38 @@ La base dispone de \montoPartida{capital} en M1. Se compone de un préstamo y de
 \end{itemize}
 Se usa 0,9\,\% mensual sobre saldo bancario de apertura y una comisión presupuestada de \montoPartida{comision}. La devolución del banco se realiza en M21, desde el inicio de amortización previsto en M21, conservando el piso de \montoPartida{piso}. No se modelan retiros ni restitución a socios.
 El capital del corte de referencia anterior era \montoPartida{capital-anterior}. Se redimensiona por el calendario corregido y por la cobertura de pagos antes de cobros, en vez de conservar el monto de la versión anterior sin comprobar su suficiencia.
-La \figref{eco-financiacion} muestra entradas y devolución. El capital se dimensiona con la cota conservadora que paga los egresos mensuales antes de recibir cobros, además de comprobar cierres netos y de tesorería. Esto evita afirmar cobertura diaria basándose solo en un saldo mensual o en fechas aún no pactadas.
+La \figref{eco-financiacion} muestra entradas y devolución. El capital de 3.0 se mantiene como referencia. La cota conservadora aplica egresos antes de cobros. La ejecución requiere confirmar fondos y vencimientos de caja para las fechas de gasto.
 \figura[lugar=H]{../../Informe-3/correccion-final/economico/figuras/financiamiento.pdf}{Crédito, aportes y amortización, UF. Fuente: Flujo de Caja AB:AC y U.}{eco-financiacion}
-La base mantiene cero giros y cero saldo de línea. La cota anterior a cobros es \montoPartida{cota}. La disponibilidad, monto neto, comisión y vencimientos forman parte de las condiciones financieras de esta oferta. Se verifica su compatibilidad antes de comprometer órdenes. No se presenta un supuesto presupuestario como un desembolso ya realizado.
+La base mantiene cero giros y cero saldo de línea. La cota anterior a cobros es \montoPartida{cota}. La diferencia respecto del piso interno asciende a \montoPartida{faltante-piso} en el caso presupuestado. La disponibilidad, monto neto, comisión y vencimientos forman parte de las condiciones financieras de esta oferta. Se verifica su compatibilidad antes de comprometer órdenes. No se presenta un supuesto presupuestario como un desembolso ya realizado.
 
 \subsection{Atrasos y contingencia}\label{sec:eco-estres}
-La \tabref{eco-escenarios} compara las pruebas a precio fijo. El atraso mueve el cobro de H5 y su IVA cobrado, manteniendo factura en M12. Si se desplaza la aceptación, debe revisarse también la facturación conforme al Artículo 18. La reserva D4 de \montoPartida{reserva} se prueba con desembolso M12 y anticipado M9. La facilidad adicional presupuestada de \montoPartida{puente} se estructura 80/20 y se dispone en el mes que requiere la reserva, antes de sus egresos. La línea tiene un máximo de 1.250 UF y tasa del 3\,\% mensual.
+La \tabref{eco-escenarios} compara las pruebas a precio fijo. El atraso mueve el cobro de H5 y su IVA cobrado, manteniendo factura en M12. Si se desplaza la aceptación, debe revisarse también la facturación conforme al Artículo 18. La reserva de contingencia de infraestructura de \montoPartida{reserva} se prueba con desembolso M12 y anticipado M9. La facilidad adicional presupuestada de \montoPartida{puente} se estructura 80/20 y se dispone en el mes que requiere la reserva, antes de sus egresos. La línea tiene un máximo de 1.250 UF y tasa del 3\,\% mensual.
 \refstepcounter{table}
 \begin{tabla}[ancho=completo,fuente=condensada]{Liquidez de los escenarios, UF de tesorería}{eco-escenarios}{X R{25mm} C{14mm} R{25mm} R{25mm}}
 Escenario & Caja mínima & Mes & Línea máxima & Cota antes de cobros \\ \midrule
-Atraso H5 M13 & 2.066,52 & M12 & 0,00 & -5.835,46 \\
-Atraso H5 M14 & 765,19 & M13 & 0,00 & -5.835,46 \\
-H5 M14 + reserva M12 & -1.839,81 & M13 & 1.250,00 & -8.440,45 \\
-H5 M14 + reserva + facilidad & 5.423,95 & M9 & 0,00 & 551,26 \\
-Costos +5\% & 3.528,20 & M9 & 0,00 & -1.581,20 \\
-Cobros -5\% & 3.773,79 & M9 & 0,00 & -1.098,90 \\
-Reserva anticipada M9 & 7.139,04 & M13 & 0,00 & 538,40 \\
+Atraso H5 M13 & 1.902,78 & M12 & 0,00 & -5.999,20 \\
+Atraso H5 M14 & 601,45 & M13 & 0,00 & -5.999,20 \\
+H5 M14 + reserva M12 & -2.003,55 & M13 & 1.250,00 & -8.604,20 \\
+H5 M14 + reserva + facilidad & 5.260,21 & M9 & 0,00 & 387,51 \\
+Costos +5\% & 3.356,27 & M9 & 0,00 & -1.753,13 \\
+Cobros -5\% & 3.873,52 & M9 & 0,00 & -999,18 \\
+Reserva anticipada M9 & 6.975,30 & M13 & 0,00 & 374,65 \\
+H4 cobro M11, sin línea & 387,51 & M10 & 0,00 & -6.526,89 \\
+H4 cobro M11, con línea & 387,51 & M10 & 0,00 & -6.526,89 \\
+H4 cobro M11, facilidad M9 & 10.805,66 & M10 & 0,00 & 3.815,66 \\
+H4 acta y cobro M11 & 387,51 & M10 & 0,00 & -4.419,12 \\
+H12 cobro al mes siguiente & 5.260,21 & M9 & 0,00 & 387,51 \\
+Soporte sin reducción & 5.260,21 & M9 & 0,00 & 387,51 \\
+Soporte por madurez 3.0 & 5.260,21 & M9 & 0,00 & 387,51 \\
+Banco en cuotas desde M21 & 5.260,21 & M9 & 0,00 & 387,51 \\
 \end{tabla}
-Las filas sin facilidad muestran la exposición antes de cubrirla. El atraso simple conserva cierres mensuales positivos, pero su cota antes de cobros es negativa: requiere anticipar la facilidad o acordar el orden de pagos. El atraso con reserva sin facilidad presenta además déficit mensual, aun agotando la línea. Solo las dos pruebas con facilidad verifican el piso y la cota antes de cobros, con devolución desde M16. Los choques de costo y de cobros tampoco cubren esa cota y exigen redimensionar fondos si ocurren; no se declaran cubiertos por el cierre mensual. La línea no sostiene el caso base. Intereses, pagos y saldos se concilian mes a mes en Escenarios corregidos.
+La planilla distingue atraso de cobro de H4 con IVA ya devengado y atraso de acta que también desplaza la factura. H5 se prueba en M13 y M14, con reserva y facilidad. H12 se prueba con el cobro en M22. Las pruebas incluyen línea deshabilitada, línea contingente, choques de costo y cobro, madurez y cuotas. Sensibilidad indica mes mínimo, giro, saldo, interés, comisión y faltante frente al piso. La cota no reconoce giros posteriores a los egresos del mes. El banco y los socios deben confirmar disponibilidad, comisión, anticipo y reglas de amortización antes del compromiso. La amortización en cuotas incrementa el interés acumulado al conservar saldo durante más meses.
 La \figref{eco-caja} compara la base y los atrasos. Los valores de tesorería incluyen el efecto de IVA conservador, mientras la tercera serie de la Curva S conserva la vista neta exigida por las Aclaraciones, nota 7.4. Ambas se reconcilian con el IVA acumulado.
 \figura[lugar=H]{../../Informe-3/correccion-final/economico/figuras/caja.pdf}{Caja, referencia cero y atraso de H5. Fuente: Flujo de Caja y Escenarios corregidos.}{eco-caja}
 No se suavizan déficits ni se modifican precios al atrasar un pago. Las contingencias de costo y cobro conservan resultados propios y su condición de financiamiento adicional.
 
 \section{Valorización de las cinco innovaciones}\label{sec:eco-innovaciones}
-La \tabref{eco-innovaciones} distingue personal atribuido dentro de la nómina y egresos directos. El personal se calcula desde las horas D3, con 120 horas adicionales de integración de INN3 y el desarrollo y soporte de INN5. Es una vista de atribución, no otro costo para sumar al proyecto.
+La \tabref{eco-innovaciones} distingue personal atribuido dentro de la nómina y egresos directos. El costo de personal se calcula con las horas estimadas por perfil, incluidas 120 horas adicionales de integración de INN3 y las horas de desarrollo y soporte de INN5. Es una vista de atribución, no otro costo para sumar al proyecto.
 \refstepcounter{table}
 \begin{tabla}[ancho=completo,fuente=condensada]{Costo atribuido y egresos de innovaciones, UF}{eco-innovaciones}{C{10mm} X R{35mm} R{35mm}}
 ID & Innovación & Personal atribuido & Egreso directo adicional \\ \midrule
@@ -140,14 +150,14 @@ La planilla adjunta conserva filas, rótulos y orden del Resumen del mandante. S
 La hoja Control de entrega concilia costos y venta con Resumen y Cuadro maestro, doce hitos, 36 facturaciones, kits, deuda final y ausencia de línea en base. Los escenarios mantienen los mismos precios para sus pruebas. El hardware que compra Curimón permanece informativo y fuera del flujo de audIT, conforme a Aclaraciones, sección 9.
 
 \section{Demostración interactiva}\label{sec:eco-demo}
-El avance está disponible en \href{https://carlosabarza.github.io/PaginaAudIT/}{el portal de audIT}. La ruta de revisión es Portal Clientes, Simulador Operativo en Vivo. Al activar pérdida de cobertura, la interfaz muestra paquetes en el búfer. Al restablecerla, muestra reconciliación. Se comprobó esa navegación para preparar esta entrega.
+El avance está disponible en \href{https://carlosabarza.github.io/PaginaAudIT/}{el portal de audIT}. La ruta de revisión es Portal Clientes, Simulador Operativo en Vivo. Al activar pérdida de cobertura, la interfaz muestra paquetes en el búfer. Al restablecerla, muestra reconciliación. La compilación local rotula el recorrido como simulación. La URL corresponde al despliegue previo.
 La demostración representa comportamiento de interfaz. Sus contadores, tiempos y estados no prueban el desempeño de una infraestructura productiva ni sustituyen la aceptación de T-17. El recorrido de exposición reserva dos minutos para mostrar desconexión y reconexión, dentro de una presentación total prevista de quince minutos.
 
 \section*{Referencias}
 El análisis se apoya en FEP01, Formularios T-22, E-21, E-24, E-25 y E-26, Artículos 18, 46, 57.2, 73 y 78.2; las Aclaraciones del Informe 3; el Caso, numeral 14.1 y capítulo 10; y las estimaciones técnicas de EDT, T-14/T-15 y presupuestos de software, datos e infraestructura incorporados al modelo. Las fuentes de precios, moneda, pagador y mes se conservan en las hojas de entrada. Los nuevos parámetros sin cotización se identifican como supuestos de presupuesto.
 
 \section*{Declaración de uso de IA}
-Se utilizó Codex para organizar la trazabilidad, generar fórmulas y documentos y reproducir cálculos. El nivel de asistencia en texto y gráficos es alto. Las pruebas automáticas registran comprobaciones numéricas y de formato, sin sustituir la revisión sustantiva del proponente. La validación de negocio y la aprobación para presentación corresponden a PMO y QA, y se registran en A-6 por sus responsables.
+Se utilizó Codex para organizar la trazabilidad, generar fórmulas y documentos y reproducir cálculos. El nivel de asistencia en texto y gráficos es alto. Las pruebas automáticas registran comprobaciones numéricas y de formato, sin sustituir la revisión sustantiva del proponente. La revisión sustantiva del corte 3.1 y su registro en A-6 están pendientes.
 \refstepcounter{table}
 \begin{tabla}[ancho=completo,fuente=condensada,numerada=false]{Uso de IA y control de la propuesta}{eco-ia}{L{27mm} L{18mm} X L{18mm} L{18mm} L{35mm}}
 Secciones & Herramienta & Finalidad & Texto & Gráficos & Revisión humana \\ \midrule

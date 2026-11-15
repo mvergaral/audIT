@@ -1,34 +1,36 @@
 clave;concepto;moneda;valor;iva;planilla
-costo;Costo neto del proyecto;CLP;6906281106;no;RESUMEN!C8
+costo;Costo neto del proyecto;CLP;7068197266;no;RESUMEN!C8
 venta;Venta neta del proyecto;CLP;8473964547;si;RESUMEN!H8
 implementacion;Precio de implementación;CLP;4437410300;si;RESUMEN!H6
 operacion;Precio de los 36 meses de operación;CLP;4036554247;si;RESUMEN!H7
-costo-impl;Costo neto de implementación;CLP;3616489395;no;RESUMEN!C6
-costo-op;Costo neto de operación;CLP;3289791711;no;RESUMEN!C7
-van;Valor actual neto;CLP;1076600979;no;Indicadores!B2
+costo-impl;Costo neto de implementación;CLP;3623039155;no;RESUMEN!C6
+costo-op;Costo neto de operación;CLP;3445158111;no;RESUMEN!C7
+van;Valor actual neto;CLP;970710722;no;Indicadores!B2
 capital;Capital inicial;CLP;730000000;no;Parámetros corrección!B4
 capital-anterior;Capital del corte de referencia anterior;CLP;274452748;no;
 banco;Desembolso bancario inicial;CLP;584000000;no;Financiamiento!D2
 socios;Aporte inicial de socios;CLP;146000000;no;Financiamiento!C2
 puente;Facilidad contingente total;CLP;420000000;no;Parámetros corrección!B28
 piso;Piso de liquidez;CLP;20000000;no;Parámetros corrección!B3
-caja-min;Caja mínima de tesorería;CLP;216958073;no;Control de entrega!B2
-cota;Mínimo con pagos antes de cobros;CLP;22050292;no;Control de entrega!B21
+caja-min;Caja mínima de tesorería;CLP;210408313;no;Control de entrega!B2
+faltante-piso;Brecha de liquidez respecto del piso antes de cobros;CLP;4499468;no;
+cota;Mínimo con pagos antes de cobros;CLP;15500532;no;Control de entrega!B21
 montaje-neto;Servicio externo de montaje;CLP;10984533;si;
 montaje-evitado;Costo interno sustituido;CLP;6421333;no;
 hardware;Hardware de cargo del mandante, informativo;CLP;225384199;si;
-reserva;Reserva D4 del estrés;CLP;152699775;no;Parámetros corrección!B26
+reserva;Reserva de contingencia de infraestructura;CLP;152699775;no;Parámetros corrección!B26
 intereses;Interés bancario total base;CLP;105120000;no;
 comision;Comisión presupuestada del crédito;CLP;250000;no;Parámetros corrección!B29
-cobro-m57;Cobro de la última factura operativa en M57;CLP;112126507;no;Indicadores!B8
+cobro-m57;Cobros posteriores al horizonte de evaluación;CLP;112126507;no;Indicadores!B8
+tarifa-n1;Tarifa presupuestada N1 por hora;CLP;16000;no;Contrato de soporte!D2
 soporte21;Personal de operación M21;CLP;65840000;no;Personal!D22
-soporte25;Personal de operación M25;CLP;59680000;no;Personal!D26
-soporte33;Personal de operación M33;CLP;57440000;no;Personal!D34
-soporte45;Personal de operación M45;CLP;55200000;no;Personal!D46
+soporte25;Personal de operación M25;CLP;61920000;no;Personal!D26
+soporte33;Personal de operación M33;CLP;61920000;no;Personal!D34
+soporte45;Personal de operación M45;CLP;61920000;no;Personal!D46
 firma;Firma automatizada INN1;CLP;24856290;si;
 recupero;Recupero bruto referencial de sobreestadías;CLP;362100000;no;Beneficios Curimón!B4
 capacidad-inn1;Capacidad anual liberada, hipótesis INN1;CLP;9600000;no;Beneficios Curimón!B3
-equilibrio;Venta nominal a VAN cero;CLP;7081704596;no;Indicadores!B13
+equilibrio;Venta nominal a VAN cero;CLP;7218641834;no;Indicadores!B13
 inn1-personal;Costo personal atribuido INN-1;CLP;31216000;no;Innovaciones!C2
 inn1-directo;Egreso directo INN-1;CLP;24856290;no;Innovaciones!D2
 inn2-personal;Costo personal atribuido INN-2;CLP;34336000;no;Innovaciones!C3

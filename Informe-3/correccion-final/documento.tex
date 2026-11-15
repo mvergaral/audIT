@@ -1,7 +1,7 @@
 \def\RaizEconomico{../../Informe-3/correccion-final/economico}
 \def\ArchivoObservaciones{../../Informe-3/correccion-final/observaciones.tex}
-\def\NombreArchivo{INFORME3_AUDIT_COSTOS_VENTA_20261114}
-\def\ArchivoActual{INFORME3_AUDIT_COSTOS_VENTA_20261114}
+\def\NombreArchivo{INFORME3_AUDIT_COSTOS_VENTA_20261115}
+\def\ArchivoActual{INFORME3_AUDIT_COSTOS_VENTA_20261115}
 \def\FolioInicialExterno{1}
 \documentclass{audit-oferta}
 \input{configuracion/metadatos}
@@ -12,9 +12,13 @@
 \NewCommandCopy\montoPartidaOriginal\montoPartida
 \RenewDocumentCommand\montoPartida{m}{\begingroup\renewcommand\enspace{\hspace{.5em}\allowbreak}\montoPartidaOriginal{#1}\endgroup}
 \AplicarInstancia{informe3}
-\Version{3.0}
-\FechaEntrega{2026-11-14}
+\Version{3.1}
+\FechaEntrega{2026-11-15}
 \FechaTipoCambio{Valores de referencia del Formulario E-24}
 \begin{document}
+\NewCommandCopy\ArtCuarentaSeis\ObservacionesInstancia
+\RenewDocumentCommand\ObservacionesInstancia{O{}}{}
+\NewCommandCopy\ReferenciasDespuesDelAnexo\anexoReferencias
+\RenewDocumentCommand\anexoReferencias{}{\ArtCuarentaSeis\ReferenciasDespuesDelAnexo}
 \DocumentoEconomico{costos}
 \end{document}

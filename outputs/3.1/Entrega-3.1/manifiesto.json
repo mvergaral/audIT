@@ -1,0 +1,74 @@
+{
+  "licitacion": "TFEP-01/2026",
+  "version": "3.1",
+  "fecha": "2026-11-15",
+  "estado": "Corte oficial para entrega. Documentos económicos y enlace a prototipo interactivo.",
+  "archivos": [
+    {
+      "nombre": "INFORME3_AUDIT_COSTOS_VENTA_20261115.pdf",
+      "bytes": 1167164,
+      "sha256": "65a3c7bf3d3ff1f8d55d30f6996e0cd0df2805141a885b57068bf4e13dff122f"
+    },
+    {
+      "nombre": "INFORME3_AUDIT_PLANILLA_20261115.xlsx",
+      "bytes": 651421,
+      "sha256": "299e50cd9603885b246c4ffd89e91701455e549d4682fff101ad5d908077470b"
+    },
+    {
+      "nombre": "LEEME.txt",
+      "bytes": 1590,
+      "sha256": "66b271cb807223b18f15fc60ed2d93d098e8db54b872462dd1d9fb51d6ea9789"
+    }
+  ],
+  "linea_base": {
+    "version": "3.0",
+    "fecha": "2026-11-14",
+    "archivos": [
+      {
+        "nombre": "INFORME3_AUDIT_COSTOS_VENTA_20261114.pdf",
+        "bytes": 1150793,
+        "sha256": "b0f2499e8e53a827bc9d50c9ca3b1a3779570d5fbd7bda4da5caa5f0b8bfa2b6"
+      },
+      {
+        "nombre": "INFORME3_AUDIT_PLANILLA_20261114.xlsx",
+        "bytes": 462058,
+        "sha256": "60099326e2bca1d08319de0b8db01dde114142d1892ab40f85600acd8776d577"
+      },
+      {
+        "nombre": "INFORME3_AUDIT_PRESENTACION_20261114.pdf",
+        "bytes": 212407,
+        "sha256": "2161afe17eb91ef54c5ffff92387545ccd8b0bef2c733778b9935b3db98b5c47"
+      },
+      {
+        "nombre": "INFORME3_AUDIT_PRESENTACION_20261114.pptx",
+        "bytes": 78777,
+        "sha256": "73a7c05f5a6e85081cd53a13206350ec942b5a069a0e9b9d9ef3414646770127"
+      },
+      {
+        "nombre": "LEEME.txt",
+        "bytes": 980,
+        "sha256": "444d74a63e81769ab1542f940ae3ff2f5fe410614438d406d9eadc381e2f42a3"
+      },
+      {
+        "nombre": "manifiesto.json",
+        "bytes": 712,
+        "sha256": "49e7d919b87d46b7f09a1f8346d2be633a52e97b1f499ceb813acbca9a662d70"
+      }
+    ]
+  },
+  "prototipo": {
+    "url": "https://carlosabarza.github.io/PaginaAudIT/",
+    "ruta": "Portal Clientes > Simulador Operativo en Vivo",
+    "validacion": "Ruta pública anterior verificada. Cambios de razón social y rótulos compilados localmente."
+  },
+  "comprobaciones": {
+    "paginas_informe": 28,
+    "folio_anexo_art46": 19,
+    "laminas": 11,
+    "graficos_editables_pptx": 5,
+    "hojas": 44,
+    "celdas_conciliadas": 35,
+    "pruebas_propagacion": 5,
+    "vinculos_externos_excel": 0
+  }
+}
