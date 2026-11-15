@@ -304,7 +304,7 @@ for(let ci=0;ci<cases.length;ci++){
  const [label,h5,res,bridge,cost,revenue,h4,h12,lineEnabled,acceptance,maturity,instalments=0]=cases[ci];
  const rg=c=>`'Escenarios corregidos'!${c}${start}:${c}${end}`;
  ss.push([label,h5,res,bridge,cost,revenue,`=MIN(${rg('S')})`,`=INDEX(${rg('B')},MATCH(G${cr},${rg('S')},0))`,
-  `=MAX(${rg('P')})`,`=MAX(0,-G${cr})`,`=SUM(${rg('K')})`,`=SUM(${rg('J')})`,
+  `=MAX(${rg('P')})`,`=MAX(0,${pc(3)}-MIN(G${cr},S${cr}))`,`=SUM(${rg('K')})`,`=SUM(${rg('J')})`,
   `=NPV(${pd(10)},'Escenarios corregidos'!G${start}:G${evalEnd})`,`=IFERROR(IRR('Escenarios corregidos'!G${start}:G${evalEnd},${pc(58)}),"Revisar raíces")`,
   `=(SUM(${rg('H')})+SUM(${rg('I')}))*(1-${pd(5)})`,`=(SUM(${rg('H')})+SUM(${rg('I')}))*${pd(5)}`,
   `='Escenarios corregidos'!R${end}+'Escenarios corregidos'!P${end}`,'Contrastar raíces; priorizar VAN y liquidez.',`=MIN(${rg('V')})`,h4,h12,lineEnabled,acceptance,maturity,instalments,
@@ -328,12 +328,12 @@ for(let ci=0;ci<cases.length;ci++){
    `=${bank}*${pd(6)}`,`=${line}*${pd(7)}`,
    `=((D${r}-${prevInvoice})*${pd(11)}-'Flujo de Caja'!K${br})*${pd(12)}`,
    `=${cash}+G${r}+H${r}+I${r}+L${r}-J${r}-K${r}-IF(B${r}=1,${pc(29)},0)-IF(I${r}>0,${pc(30)},0)`,
-   `=IF(${paramAt('V')}=1,MIN(MAX(0,${pd(8)}-${line}),MAX(0,-M${r})),0)`,
+   `=IF(${paramAt('V')}=1,MIN(MAX(0,${pd(8)}-${line}),MAX(0,${pc(3)}-M${r}+D${r}*(1+${pd(11)}*${pd(12)}))),0)`,
    `=MIN(${line},MAX(0,M${r}-${pc(3)}))`,`=${line}+N${r}-O${r}`,
    `=IF(B${r}>=${pc(5)},MIN(${bank},${sched},IF(${paramAt('Y')}>0,${pd(4)}*${pd(5)}/MAX(1,${paramAt('Y')}),${bank})),IF(B${r}>=${pc(32)},MIN(MAX(0,${bank}-${pd(4)}*${pd(5)}),${sched}),0))`,
    `=${bank}+(H${r}+I${r})*${pd(5)}-Q${r}`,
    `=M${r}+N${r}-O${r}-Q${r}`,`=S${r}-${cash}`,`=G${r}/(1+${pd(10)})^B${r}`,
-   `=M${r}-D${r}*(1+${pd(11)}*${pd(12)})`]);
+   `=M${r}+N${r}-D${r}*(1+${pd(11)}*${pd(12)})`]);
  }
 }
 write('Sensibilidad',ss);write('Escenarios corregidos',er);

@@ -26,6 +26,7 @@ Investigacion/*.pdf
 **/salida/aux/
 **/salida/migracion/
 .venv/
+Informe-3/correccion-final/build/node_modules
 **/herramientas/.venv/
 *.aux
 *.fls
