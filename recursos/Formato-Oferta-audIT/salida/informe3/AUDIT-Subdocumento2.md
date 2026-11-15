@@ -1,0 +1,359 @@
+# Subdocumento 2. Resumen ejecutivo, comprensión del problema y de la necesidad
+
+audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. Oferta Técnica, Sobre N.º 2. Propuesta final. Archivo AUDIT-Subdocumento2.pdf.
+
+## 2 Resumen ejecutivo, comprensión del problema y de la necesidad
+
+> **Resumen de apertura.**
+>
+> audIT analiza la situación operacional de Transportes Curimón S.A. para la licitación TFEP-01/2026. El capítulo presenta el contexto logístico, la escala del problema, los trece grupos de interés y las necesidades, supuestos y restricciones que condicionan el alcance. Presenta por separado las magnitudes del caso y los supuestos que se emplean para dimensionar la solución.
+>
+>
+> **Qué recibe Transportes Curimón S.A.**
+> - Análisis de la cadena de valor en seis fases y de las brechas operacionales del Caso 10.
+> - Caracterización de la temporada frutícola (diciembre a abril) y los cierres fronterizos de hasta doce días, diferenciados de la autonomía sin cobertura.
+> - Mapeo estratégico de poder e influencia sobre los 13 actores del ecosistema y criterios de arbitraje para las seis tensiones operacionales.
+> - Matriz de supuestos de ingeniería con evidencia disponible, impacto y condiciones de validación.
+> - Cinco anexos de soporte: catálogo de 25 necesidades preliminares, inventario de 374 tractocamiones y 454 conductores, restricciones y exclusiones, trece fichas de actores y condicionantes de las 26 decisiones de diseño del caso.
+
+El diagnóstico fundamenta el alcance de S3 y su matriz T-12, el dimensionamiento y continuidad de S4 y los dominios de información de S5. También aporta las condiciones operacionales para metodología, planificación, riesgos, calidad y servicios de S6 a S11, y para organización, innovaciones y beneficios de S12 a S14. Los inventarios y listados de soporte se presentan en el documento independiente *AUDIT-Subdocumento2-Anexos.pdf*.
+
+## 2.1 Resumen Ejecutivo del problema
+
+El diagnóstico de Transportes Curimón S.A. identifica una diferencia entre la responsabilidad integral asumida por la compañía frente a sus mandantes y el control operacional efectivo que ejerce sobre los recursos con que ejecuta el servicio de transporte interurbano. En el modelo de negocio vigente, Curimón responde ante sus mandantes por el servicio y debe cumplir las obligaciones aplicables respecto de la carga transportada, la puntualidad en los puntos de destino, la seguridad de las operaciones en ruta y el cumplimiento normativo ante organismos fiscalizadores. No obstante, el 60,4% de la capacidad de transporte rodante (226 tractocamiones de un total de 374) y el 56,8% de la fuerza de conducción asignable (258 conductores externos frente a 196 propios) corresponden a recursos subcontratados pertenecientes a 148 pequeños y medianos transportistas independientes, sobre los cuales la empresa no ejerce tuición patronal ni subordinación directa.
+
+Esta diferencia limita la supervisión de recursos externos y expone la operación a decisiones tomadas con información incompleta. En el plano de la escala física, la red logística de Curimón coordina anualmente 96.000 viajes, movilizando 2,4 millones de toneladas de carga a lo largo de 41 millones de kilómetros recorridos por carretera. La operación se despliega en un eje territorial superior a 3.000 kilómetros lineales entre las ciudades de Antofagasta y Puerto Montt, complementado por aproximadamente 1.900 cruces internacionales por el Paso Fronterizo Los Libertadores hacia la provincia de Mendoza. La asignación se apoya en telefonía, planillas y la memoria de 22 despachadores de San Bernardo. Las bases registran que el 26% de la distancia anual se recorre sin transportar carga: son kilómetros vacíos, por retorno o desplazamiento hacia otra recogida, y equivalen a 10,66 millones de kilómetros.
+
+La información financiera del caso registra un margen operacional del 9,0%. Sin embargo, el análisis de rentabilidad por contrato identifica que tres (3) de los ocho (8) clientes principales de la empresa operan por debajo del costo. Estos tres contratos deficitarios concentran en conjunto el 31% de los ingresos corporativos, registrándose en el caso más grave un contrato con un margen negativo sostenido del -14% durante cuatro ejercicios fiscales consecutivos. Esta pérdida ha sido financiada de forma involuntaria por las rutas rentables debido a la aplicación histórica de un esquema contable de prorrateo de costos por ingresos.
+
+La sobreestadía es la permanencia en carga o descarga que excede el tiempo libre acordado y puede generar un cobro adicional según el contrato. El 71% de los cobros facturados por este concepto resulta objetado por los clientes. La falta de registros objetivos de llegada, espera y salida dificulta el cobro de esos ingresos en disputa.
+
+En el ámbito de la gobernanza de datos y el cumplimiento legal, la empresa presenta brechas de evidencia documental. La trazabilidad documental se apoya en cerca de 6.000 fechas de vencimiento vivas (licencias de conducir, permisos de circulación, revisiones técnicas, certificados de transporte de sustancias peligrosas y seguros obligatorios) administradas manualmente en cuatro planillas de cálculo sin integridad referencial ni alarmas automáticas preventivas. En el equipamiento instalado, las fuentes de información permanecen sin integrar: se constata un registro histórico de cero descargas de tacógrafos digitales, 61 tractocamiones propios disponen de telemetría de fábrica (interfaces y señales por verificar) que nunca ha sido consultada ni integrada, 34 camiones de terceros carecen por completo de dispositivos satelitales GPS, y las 340 unidades restantes se encuentran fragmentadas en tres plataformas comerciales heterogéneas que impiden conformar una vista de mando operacional unificada.
+
+La renovación contractual de 2029 del principal cliente exportador exige resolver estas brechas. Dicho mandante concentra el 19% de la facturación de la empresa y ha formalizado cuatro requerimientos:
+- Trazabilidad integral y posicionamiento de carga en tiempo real para el 100% de los despachos asignados.
+- Emisión y tramitación de documentación electrónica de transporte sin redigitación manual ni soporte físico en papel (e-Docs para un volumen actual de 128.000 documentos anuales, con una proyección de 157.000).
+- Acreditación técnica fehaciente del cumplimiento de los límites de jornada laboral y descansos obligatorios del Artículo 25 bis del Código del Trabajo para la totalidad de los conductores (tanto propios como externos de terceros) en cada viaje asignado.
+- Reportabilidad periódica y auditada de emisiones de gases de efecto invernadero (GEI / CO2e) por tonelada-kilómetro transportada, calculada bajo el estándar internacional del marco GLEC (*Global Logistics Emissions Council*) / ISO 14083:2023.
+
+El incumplimiento de estas exigencias hacia el año 2029 pondría en riesgo la continuidad del cliente que representa el 19% de la facturación de Curimón. Para estimar el efecto sobre el resultado y la solvencia se requieren los costos evitables y la contribución del contrato. El alcance de la solución se fundamenta en las brechas operacionales que siguen.
+
+## 2.2 Comprensión del problema y de la necesidad
+
+La Figura 2.1 resume la cadena de valor, desde la recepción de la orden hasta la liquidación. En cada fase, Curimón necesita información distinta para decidir y respaldar el servicio.
+
+\begin{figuraNativa}[!ht]{Flujo operacional y cadena de valor del transporte de carga en Curimón. Fuente: elaboración propia a partir del Caso 10}{2-flujo-operacional}
+\begin{tikzpicture}[every node/.style={draw,align=left,text width=59mm,inner sep=2mm,minimum height=20mm,font=\sffamily\fontsize{9.5bp}{12bp}\selectfont}]
+\node (a) at (0,0) {**1. Comercial y demanda** Solicitud, tarifa y compatibilidad de la carga. 84 clientes, 96.000 viajes/año.};
+\node (b) at (7,0) {**2. Programación y asignación** Camión, conductor, jornada y habilitaciones. 374 camiones, 454 conductores.};
+\node (c) at (7,-2.45) {**3. Carga y despacho** Documentación, peso y salida conforme. Aproximadamente 1.400 puntos de carga.};
+\node (d) at (0,-2.45) {**4. Tránsito y logística** Ruta, descansos y continuidad del registro. 41 millones de km/año, sombras celulares.};
+\node (e) at (0,-4.90) {**5. Entrega y cierre** Arribo, descarga y conformidad de recepción. Sobreestadías y retornos: 26% de km vacíos.};
+\node (f) at (7,-4.90) {**6. Liquidación y facturación** Conciliación de viajes, combustible y pagos. 148 transportistas, ocho analistas de cierre.};
+\draw[->] (a.east)--(b.west);
+\draw[->] (b.south)--(c.north);
+\draw[->] (c.west)--(d.east);
+\draw[->] (d.south)--(e.north);
+\draw[->] (e.east)--(f.west);
+\end{tikzpicture}
+\end{figuraNativa}
+
+El recorrido permite localizar en qué fase se originan las brechas de información y qué decisión se ve afectada.
+- **Fase 1: Comercial y Recepción de Demanda:** Captura y formalización de solicitudes de transporte generadas por los 84 clientes corporativos de la cartera. Se realiza mediante registro manual en el sistema legado TMS 2013, correos electrónicos y llamadas telefónicas no estructuradas. Carece de validación automatizada de compatibilidad de carga al ingresar la orden (identificación tardía de requerimientos de cadena de frío, especificaciones D.S. 298 para sustancias peligrosas o restricciones de peso por eje según D.S. 158). La identificación tardía de restricciones aumenta el riesgo de comprometer itinerarios o tarifas con información incompleta. El margen del contrato más deficitario se analiza por separado.
+- **Fase 2: Programación y Asignación de Recursos:** Casamiento de órdenes de transporte con unidades de tracción (374 camiones) y tripulaciones (454 conductores). Los 22 despachadores de la Torre de Control de San Bernardo asignan viajes mediante llamadas telefónicas y consulta visual de cuatro planillas Excel desvinculadas entre sí. No existe validación algorítmica previa de jornada laboral (Artículo 25 bis del Código del Trabajo), lo que dificulta acreditar descanso suficiente antes del despacho y constituye un riesgo de seguridad que debe resolverse.
+- **Fase 3: Carga y Despacho en Instalaciones de Origen:** Posicionamiento del equipo en los recintos de clientes ($≈ 1.400$ puntos), faena de estiba y emisión de guías de despacho. Las demoras en andenes de carga promedian 3 horas 10 minutos y superan las 8 horas en la temporada agrícola de exportación. Al no existir integración telemática ni comprobación de peso por eje a la salida, los camiones quedan expuestos a infracciones por sobrepeso en plazas de pesaje del MOP (Caso, numeral 4.4, p. 10).
+- **Fase 4: Tránsito en Ruta y Logística Interurbana:** Circulación por el eje troncal de la Ruta 5 (3.000 km entre Antofagasta y Puerto Montt) y cruces internacionales por el Paso Los Libertadores ($≈ 1.900$ viajes anuales). La flota enfrenta sombras celulares de más de 80 kilómetros en zonas desérticas y cortes climáticos de hasta 12 días continuos (288 horas) en alta cordillera. Las sombras celulares afectan la transmisión y la evidencia de jornada. Los cierres climáticos afectan el tránsito y la programación.
+- **Fase 5: Arribo, Descarga y Cierre de Entrega:** Recepción física en destino, descarga de mercancías y firma del comprobante de entrega en papel (*Proof of Delivery* [POD]). La falta de registro electrónico objetivo de entrada y salida genera la objeción del 71% de los cobros de sobreestadías. Asimismo, el 4,2% de los comprobantes de entrega en papel llegan incompletos, ilegibles o no llegan. Las bases registran además 26% de kilómetros sin carga (10,66 millones de km); la asignación del viaje posterior depende hoy de teléfono y memoria. La planificación debe relacionar esos recorridos con el viaje previo y con la siguiente recogida.
+- **Fase 6: Liquidación, Costeo y Facturación:** Consolidación administrativa de fletes, pago a 148 transportistas terceros e imputación contable. Demanda ocho (8) profesionales durante nueve (9) días al cierre de cada mes, exhibiendo una tasa de error del 11% en liquidaciones. El diésel se costea con un desfase de hasta 40 días, impidiendo detectar a tiempo desvíos de rendimiento de hasta un 19% entre vehículos gemelos.
+
+### 2.2.1 Diagnóstico e interpretación causal de la cadena operacional
+
+audIT analiza las brechas descritas en las bases y sus posibles relaciones operacionales. Las relaciones causales siguientes son interpretaciones del proponente a partir de esos antecedentes.
+- **Rentabilidad por contrato y prorrateo de costos:** La práctica contable de distribuir los costos operacionales en función de los ingresos brutos facturados por cada cliente ha encubierto la rentabilidad marginal real de cada servicio. El análisis financiero descrito en el caso identifica que tres contratos comerciales operan bajo costo, representando en conjunto el 31% de los ingresos corporativos. El caso más crítico registra cuatro años consecutivos operando con un margen negativo de -14%. Debido a que los costos directos de combustible, peajes de autopista y tarifas a terceros no se asocian de forma unívoca a la orden de transporte que los originó, las rutas rentables compensan los déficits de los contratos bajo costo sin que el prorrateo permita distinguirlos, distorsionando la estrategia comercial y mermando el margen de la compañía (9,0%).
+- **Registros de tacógrafo y jornada previa de terceros:** La ausencia de descargas de tacógrafos digitales (cero descargas históricas) y de información sobre la jornada previa de los 258 conductores subcontratados limita la comprobación del descanso antes de asignar un viaje. El 14 de febrero de 2026, a las 04:40 h, un camión subcontratado salió de la calzada en el kilómetro 312 de la Ruta 5 Sur. El conductor fue hospitalizado tres semanas y se recuperó; no hubo terceros involucrados. La investigación descrita en el caso estableció que había conducido el día anterior para otra empresa y no había completado su período de descanso antes del viaje asignado a las 22:00 h. Los registros de Curimón mostraban once horas sin conducir para ella, pero no las actividades realizadas para otros clientes. La autoridad laboral abrió una investigación; el principal cliente suspendió el contrato durante seis semanas mientras auditaba y la aseguradora aumentó la prima en la renovación. Caso, capítulo 1, p. 4.
+- **Dispersión de rendimiento y rezago de conciliación de combustible:** El combustible representa el 14% de la estructura de costos de Curimón, siendo el segundo rubro de mayor gasto de la compañía. La gestión de este recurso presenta dos deficiencias estructurales: por una parte, existe una dispersión de rendimiento de hasta un 19% entre tractocamiones de idéntica marca, modelo y año asignados a una misma ruta geográfica; por otra parte, la conciliación de los consumos depende de la recepción mensual de las facturas consolidadas de las distribuidoras de combustible, lo que introduce un retraso analítico de hasta 40 días. Durante esta ventana temporal, la empresa desconoce anomalías como ralentí excesivo, desvíos de ruta, malos hábitos de aceleración o eventuales pérdidas en carretera, limitando la aplicación oportuna de medidas correctivas.
+- **Continuidad de información en alta montaña y desierto:** El paso fronterizo Los Libertadores, por donde transitan aproximadamente 1.900 viajes internacionales al año, permanece cerrado entre junio y septiembre por eventos meteorológicos extremos de nieve y viento blanco durante períodos que alcanzan hasta 12 días continuos (288 horas). Estos cierres afectan los itinerarios y las esperas. En paralelo, los corredores mineros de la Región de Antofagasta registran sombras de telecomunicaciones de más de 80 kilómetros. Al no concebirse la desconexión como un estado operacional estándar, el sistema pierde la posición de los vehículos, no puede actualizar itinerarios y queda expuesto a la pérdida de información crítica.
+
+### 2.2.2 Fundamentación de la investigación externa aportada y marco normativo
+
+audIT aplica al diagnóstico las normas y estándares que condicionan la operación de Curimón y delimitan los requisitos de la solución.
+- **Ley N.° 20.123 sobre Trabajo en Régimen de Subcontratación:** Esta normativa establece que la empresa principal (Transportes Curimón S.A.) es solidaria o subsidiariamente responsable de las obligaciones laborales, previsionales y de seguridad y salud en el trabajo que afecten a los trabajadores de sus contratistas. Dado que el 56,8% de los conductores que tripulan camiones a nombre de Curimón son dependientes de 148 microempresarios externos, cualquier infracción a los descansos legales, impago previsional o accidente con lesiones en carretera traslada la responsabilidad legal, civil e indemnizatoria directamente a Curimón si la compañía no ejerce de forma efectiva su derecho legal de información y retención. Esto impone la restricción de que Curimón debe validar la idoneidad y legalidad laboral del chofer externo de forma vinculante previo al despacho del viaje.
+- **Artículo 25 bis del Código del Trabajo:** Regulado en el DFL N.° 1, fija el régimen especial de jornada laboral para choferes de carga terrestre interurbana. Establece un límite de conducción continua que no puede exceder de cinco (5) horas; un descanso obligatorio no inferior a dos (2) horas al término de cada ciclo de cinco horas; un descanso diario ininterrumpido de al menos ocho (8) horas dentro de cada período de veinticuatro horas; y un tope mensual ordinario de 180 horas distribuidas en no menos de veintiún días. Los incumplimientos de jornada y descanso exponen a la empresa a riesgos laborales y de responsabilidad ante un incidente.
+- **D.S. N.° 298/1994 (MTT) frente a D.S. N.° 43/2015 (MINSAL) para Sustancias Peligrosas (SUSPEL):** Curimón dispone de 18 unidades especializadas en transporte de sustancias químicas. El marco regulatorio impone dos normativas complementarias pero con ámbitos físicos diferenciados:
+- El **D.S. N.° 298/1994** del MTT reglamenta el transporte de cargas peligrosas por calles y caminos, exigiendo antigüedad máxima permitida, revisión técnica periódica específica, señalización reglamentaria NCh 2190, extintores adecuados, tacógrafo operativo, Hoja de Datos de Seguridad (HDS) en cabina y conductor capacitado con curso vigente.
+- El **D.S. N.° 43/2015** del MINSAL regula el almacenamiento de sustancias peligrosas en instalaciones fijas (Terminal Matriz San Bernardo y patios de acopio). Exige distancias de segregación química, pretiles de retención de derrames, sistemas de extinción certificados y prohíbe la permanencia o pernoctación de camiones cargados con sustancias incompatibles en áreas no habilitadas.
+- **Ley de Tránsito N.° 18.290 y Ley N.° 21.377 (Ley No Chat):** Tipifica como infracción gravísima la conducción de vehículos manipulando dispositivos de telefonía móvil o cualquier otro artefacto digital que no venga incorporado de fábrica, a menos que su operación se realice mediante manos libres y sin desviar la vista del camino. Esta disposición introduce una restricción de interacción durante la conducción: prohíbe que el conductor interactúe manualmente con pantallas o aplicaciones durante el movimiento vehicular ($v > 0\text{ km/h}$). Cualquier interacción manual debe limitarse a momentos de detención total comprobada, o bien gestionarse mediante mecanismos auditivos pasivos de síntesis vocal.
+- **Marco GLEC (*Global Logistics Emissions Council*) / ISO 14083:2023:** Constituye el estándar internacional de referencia adoptado por las multinacionales exportadoras para el cálculo y auditoría de la huella de carbono en la cadena logística. Exige reportar las emisiones de dióxido de carbono equivalente (CO2e) por tonelada-kilómetro transportada (g CO2e/t-km), desagregando las fases *Well-to-Tank* (WTT) y *Tank-to-Wheel* (TTW). Si bien el marco normativo admite factores de emisión modelados o valores por defecto para tramos sin telemetría primaria, satisfacer el nivel de exigencia de auditoría del cliente exportador (19% de ingresos) demanda priorizar mediciones empíricas de consumo de diésel sobre el motor vinculadas a la carga neta efectiva, acotando las estimaciones teóricas a contingencias debidamente documentadas.
+- **Tacógrafo y control de jornada:** El tacógrafo aporta registros técnicos de conducción y velocidad; su descarga y custodia no acreditan automáticamente todo el descanso personal ni sustituyen el sistema de control de asistencia aplicable. La Resolución Exenta N.º 1213 de la Dirección del Trabajo, de 8 de octubre de 2009, regula un registro individual de asistencia, trabajo y descanso para carga interurbana y contempla un sistema automatizado opcional sujeto a aprobación. audIT conservará los archivos originales, identidad, integridad y trazabilidad y comprobará la autorización aplicable al sistema antes de atribuirle carácter de registro laboral. Una huella criptográfica acredita integridad contrastable, no por sí sola autenticidad, homologación o valor judicial. (Dirección del Trabajo, s. f.).
+
+### 2.2.3 Calendario operacional, estacionalidad y modelamiento de demanda
+
+La dinámica anual de la operación exhibe una marcada disparidad entre la regularidad basal de la carga general y los picos pronunciados de la temporada agrícola, superpuestos a las ventanas de riesgo climático en la alta cordillera. En la Figura 2.2 se sintetiza el modelo estacional de demanda y se distinguen las restricciones de tránsito y conectividad.
+
+![Figura 2.2. Calendario operacional y restricciones de despliegue](../../figuras/02-problema/figura_2_2_calendario_operacional.png)
+
+*Figura 2.2. Calendario operacional y restricciones de despliegue*
+
+Fuente: Elaboración propia.
+
+El período protegido (Caso, RT-10.05, p. 32) y los 96.000 viajes anuales (Caso, numeral 14.1, pp. 29--30) provienen del caso. La Figura 2.2 presenta un escenario de dimensionamiento que parte de un supuesto de demanda en valle. El levantamiento del TMS 2013 permitirá calibrar el reparto y la punta.
+- **Temporada Frutícola de Alta Demanda (Diciembre a Abril, 151 días):** Corresponde al ciclo de cosecha y exportación hortofrutícola hacia los terminales portuarios de Valparaíso y San Antonio. En este período se genera la máxima tensión sobre la flota rodante:
+- *Demanda diaria promedio en temporada alta (D alta):* En el escenario ilustrativo con valle de 210 viajes/día, el balance resulta en aproximadamente 338,15 viajes/día, lo que representa una concentración de 51.060 viajes en los 5 meses (53,2% del volumen anual en el 41,4% de los días del año).
+- *Picos de demanda extrema (D punta):* Durante las semanas de saturación de cosecha e inspección fitosanitaria (enero-marzo) y coincidencia con ventanas de zarpe de buques refrigerados, se conserva una cota preliminar de ensayo de 450 viajes/día para dimensionar la oferta. La cota se calibrará con el TMS 2013.
+- *Utilización de la flota de frío (44 equipos refrigerados):* La demanda de frío debe dimensionarse con el número de equipos, la duración real de los viajes y las esperas en andén y packings, que sobrepasan las 8 horas.
+- *Restricción de despliegue (Congelamiento operacional):* Los camiones minimizan su paso por terminales centrales, lo que impone un congelamiento estricto sobre instalaciones o intervenciones físicas en cabina durante esta ventana.
+- **Temporada Valle y Operación Regular (Mayo a Noviembre, 214 días):** Caracterizada por flujos estables de carga general seca, graneles mineros e industriales, insumos químicos (18 camiones SUSPEL bajo D.S. N.° 298) y rutas troncales regulares:
+- *Demanda diaria promedio basal (D valle):* El escenario adopta 210 viajes/día en valle. Con ese supuesto resultan 44.940 viajes en 214 días.
+- *Comportamiento de la flota de frío:* Los registros de viajes permitirán verificar la utilización y los destinos de los equipos refrigerados por temporada.
+- *Menor demanda relativa (Mayo a Agosto):* La menor demanda puede facilitar intervenciones. Para programarlas se deben cotejar la llegada efectiva de camiones, el calendario contractual y los congelamientos del caso.
+- **Cierres Invernales del Paso Los Libertadores (Junio a Septiembre):** El corredor internacional a Mendoza ($≈ 1.900$ viajes anuales) enfrenta temporales de nieve y viento blanco con cortes impredecibles de hasta 12 días continuos (288 horas). audIT identifica riesgos de espera, custodia de carga y reprogramación; el número de camiones inmovilizados, su emplazamiento y el cómputo de jornada deben verificarse para cada contingencia. El cierre interrumpe el tránsito y exige continuidad del registro de jornada y de las decisiones de operación.
+- **Ventanas de Facturación y Liquidación Mensual:** El período de cierre mensual, cuyas fechas efectivas deben verificarse, concentra el ciclo administrativo de facturación a 84 clientes y liquidación a 148 transportistas, requiriendo 9 días de proceso continuo por 8 analistas. Los despliegues de software deben desacoplarse de estos cierres para no perturbar la caja operativa de la compañía.
+
+**Ecuación de balance anual y declaración de incertidumbre paramétrica:.**
+La media anual de 96.000/365 es 263,01 viajes/día. El balance de un año de 365 días toma 151 días de diciembre a abril y 214 el resto del año. V representa el volumen anual y d, los días.
+\begin{equation}
+  \begin{array}{r@{ }l}
+    V & = (151\text{ d} \times (51.060/151)\text{ viajes/d}) + (214\text{ d} \times 210\text{ viajes/d})
+                    & = 51.060 + 44.940 = 96.000\text{ viajes/año}
+  \end{array}
+\end{equation}
+La tasa exacta de temporada alta es 51.060/151, aproximadamente 338,15 viajes/día. La ecuación conserva la tasa exacta para sumar 96.000 viajes.
+
+\begingroup\emergencystretch=3em
+El factor entre las demandas medias de temporada alta y valle se sitúa en (51.060/151) / 210, aproximadamente 1,61. El supuesto de 210 viajes/día en valle se sitúa aproximadamente un 20,2% por debajo de la media anual. Elegido ese parámetro, la media alta se obtiene por balance: D alta = (96.000 - 214 × D valle) / 151. Con D valle de 178,5 y 241,5 viajes/día (variación de ±15%), D alta resulta 382,79 y 293,50 viajes/día, respectivamente. El umbral de 450 viajes/día es una cota preliminar de ensayo, aproximadamente un 33,1% por encima de la media alta del escenario. Durante el levantamiento, antes de aprobar la línea base en el hito H1 de S7/T-14 (mes 2), se extraerán los registros diarios del TMS 2013, se documentarán completitud, días sin actividad, máximos y distribución estacional y se calibrará la cota antes de aprobar el perfil de carga. Si los datos exceden la cota, se actualizarán el dimensionamiento y los ensayos de aceptación. Viajes diarios y sesiones concurrentes se validan por separado.\endgroup
+
+## 2.3 Dimensionamiento del problema
+
+El dimensionamiento cuantitativo del problema operacional de Transportes Curimón S.A. se sustenta en el análisis riguroso de las magnitudes físicas, financieras, territoriales y de seguridad que componen la actividad de la empresa. En la Tabla 2.1 se sintetizan los parámetros volumétricos consolidados que caracterizan la escala de la operación actual y las proyecciones requeridas para la estabilidad del servicio.
+
+**Tabla 2.1.** Volumetría operacional y magnitudes del desafío logístico
+
+| **Métrica operacional** | **Actual** | **Proyección a 3 años** | **Unidad** |
+|---|---|---|---|
+| Viajes Anuales Totales | 96.000 | 118.000 | viajes / año |
+| Kilómetros Recorridos | 41.000.000 | 50.000.000 | km / año |
+| Kilómetros en Vacío | 10.660.000 | No informada | km / año |
+| Carga Total Transportada | 2.400.000 | 2.900.000 | ton / año |
+| Documentación D.E.T. | 128.000 | 157.000 | docs / año |
+| Puntos de Carga y Descarga | 1.400 | 1.700 | recintos |
+| Vigencias Documentales | 6.000 | 7.000 | fechas |
+| Cruces Paso Los Libertadores | 1.900 | 2.400 | cruces / año |
+| Abastecimientos Diésel | 74.000 | 90.000 | eventos / año |
+| Pasadas de Peajes (TAG) | 620.000 | 760.000 | transacciones |
+| Migración Histórica TMS 2013 | A estimar | N/A | viajes |
+
+Los 96.000 viajes anuales equivalen a una media de 263,01 viajes diarios; su reparto estacional y punta se tratan como escenarios en la sección 2.2.3, separados de las magnitudes informadas. Los 41 millones de kilómetros fundamentan la exposición al desgaste; los 10,66 millones en vacío se calculan como 41.000.000 × 26%. Las 2,4 millones de toneladas conviven con 142 detenciones por sobrepeso por eje, lo que evidencia una necesidad de control de la carga, sin convertir el volumen transportado en causa única de las infracciones.
+
+Los 128.000 documentos y las 6.000 vigencias administradas en cuatro planillas muestran la escala documental. Los 1.400 recintos de clientes concentran esperas medias de 3 h 10 min. Los 1.900 cruces fronterizos exponen la operación a cierres de hasta doce días; esto no equivale a doce días sin conectividad. Los 74.000 abastecimientos y 620.000 pasadas de peaje requieren relacionar fuentes dispersas con cada viaje. La migración comprende cinco años de registros del TMS 2013, pero su volumen real debe estimarse con el inventario de datos, conforme a Caso, RT-05.15, p. 31.
+
+El análisis de la Tabla 2.1 evidencia la magnitud transaccional que debe ser gobernada. La persistencia de un 26% de kilómetros en vacío (10,66 millones de km) consume combustible, tiempo y capacidad sin carga transportada; su efecto monetario requiere los costos y condiciones de cada recorrido.
+
+En la Figura 2.3 se expone la cadena operacional que articula los principales problemas diagnosticados en Curimón, planteando el análisis del proponente sobre cómo los vacíos en la captura de datos primarios podrían propagarse hasta comprometer el margen corporativo y amenazar la continuidad de los contratos comerciales.
+
+![Figura 2.3. Relaciones operacionales entre registros, decisiones e impactos](../../figuras/02-problema/figura_2_3_cadena_causal.png)
+
+*Figura 2.3. Relaciones operacionales entre registros, decisiones e impactos*
+
+Fuente: Elaboración propia.
+
+Las flechas de la Figura 2.3 representan la interpretación operacional de audIT sobre mecanismos que pueden relacionar las condiciones observadas y sus efectos. Los porcentajes y plazos corresponden al diagnóstico del caso; su coexistencia no cuantifica cuánto del efecto puede atribuirse a cada condición. En particular, el gráfico no atribuye los cuatro siniestros con lesiones a fatiga ni transforma sobreestadías objetadas en pérdidas definitivas.
+
+### 2.3.1 Análisis de los 7 bloques de datos duros de Curimón
+
+A partir de la cadena causal expuesta, se dimensiona el impacto numérico de los siete bloques de datos duros que estructuran la operación:
+- **Parque Vehicular y Asimetría de Tenencia:** La flota totaliza 374 tractocamiones, divididos en 148 unidades propias (39,6%, con antigüedad media de 6,4 años) y 226 unidades subcontratadas (60,4%). A esto se añaden 210 semirremolques propios. Las bases informan separadamente 44 equipos refrigerados y 18 camiones habilitados para sustancias peligrosas; estas cantidades no definen una partición de los 210 semirremolques. Los 226 camiones subcontratados pertenecen a 148 transportistas independientes que poseen entre 1 y 4 vehículos. Curimón responde por el viaje que despacha, pero no es el empleador de los conductores externos ni propietaria del 60,4% de los tractocamiones motrices, impidiendo cualquier política de estandarización por imposición jerárquica.
+- **Fuerza Conductora y Brecha de Control de Jornada:** La fuerza laboral asignable suma 454 conductores: 196 dependientes con contrato indefinido en Curimón y 258 choferes dependientes de los 148 transportistas terceros. La ausencia de descargas de tacógrafos digitales y la carencia de control sobre las actividades previas de los choferes externos implican que la empresa despacha viajes sin verificar si el conductor ha descansado las 8 horas mínimas o si superó las 5 horas continuas de conducción (Art. 25 bis). En los últimos tres años se han documentado cuatro (4) siniestros con lesiones, uno de ellos grave, El accidente del kilómetro 312 se analiza como incidente específico, sin atribuir su causa al conjunto de los cuatro siniestros.
+- **Red Vial, Kilometraje y Retornos en Vacío:** La flota recorre 41 millones de kilómetros al año a lo largo de un corredor de 3.000 kilómetros. Las bases registran que el 26% de la distancia total (10,66 millones de km) se recorra en vacío. La planificación debe identificar el origen y destino de esos desplazamientos.
+- **Control documental y fuentes tecnológicas sin integrar:** La administración manual de aproximadamente 6.000 fechas vivas de vigencia en cuatro planillas de cálculo aisladas sin validación cruzada ha derivado en fallas graves, como la inmovilización de una unidad SUSPEL por 14 horas en abril de 2026 debido a un certificado vencido hace tres semanas. Asimismo, se evidencia una falta de integración de las fuentes tecnológicas: 61 tractocamiones propios cuentan con módulos telemáticos de fábrica que nunca han sido leídos; 34 camiones externos circulan sin GPS; y 192 unidades de terceros cuentan con GPS. Las tres plataformas sin vista unificada abarcan los 340 camiones con GPS; sus proveedores, interfaces y permisos deberán verificarse.
+- **Fricción comercial y cobros de sobreestadías en disputa:** La detención en los 1.400 recintos de carga y descarga genera tiempos muertos no imputables al transporte, promediando 3 horas 10 minutos y superando las 8 horas en la temporada agrícola. El 71% de los cobros emitidos por concepto de sobreestadías resulta sistemáticamente objetado por los clientes debido a la inexistencia de registros objetivos e inalterables que acrediten la permanencia en andén. El 71% corresponde a cobros objetados, no a una pérdida definitiva acreditada. La relación entre ese monto y el margen operacional es una exposición potencial, sujeta al resultado del cobro. A esto se suma que el 4,2% de los comprobantes de entrega en papel (*Proof of Delivery* [POD]) llegan incompletos, ilegibles o no llegan, demorando el ciclo de facturación y cobro.
+- **Estructura Financiera y Subsidios Cruzados:** La empresa opera con un margen consolidado del 9,0%. La estructura de costos se distribuye principalmente en: 38% para pagos a transportistas terceros, 14% en combustible de flota propia y 12% en remuneraciones de choferes propios. La asignación de costos por prorrateo por ingreso encubre que 3 de los 8 contratos principales (que concentran el 31% de los ingresos corporativos) operan bajo costo, registrándose un contrato con un margen negativo sostenido de -14% durante cuatro años. En paralelo, el diésel exhibe una dispersión de rendimiento del 19% entre vehículos idénticos en la misma ruta, cuya causa se desconoce debido al desfase de 40 días en la recepción de facturas.
+- **Seguridad vial, pesajes y continuidad comercial:** Durante el año 2025, la flota registró 142 detenciones formales en plazas de pesaje del Ministerio de Obras Públicas por infringir los límites de peso máximo por eje establecidos en el D.S. N.° 158/1980, sumando 2.556 horas-camión inmovilizadas (promedio de 18 horas de detención por infracción). Estas brechas de control vial y documental deben resolverse para cumplir las condiciones del principal cliente exportador, el cual concentra el 19% de la actividad comercial y facturación global de la empresa (magnitud distinta del margen operacional corporativo del 9,0%), quien ha condicionado la renovación contractual de 2029 a la certificación de jornada en el 100% de los viajes, digitalización documental sin papel, posicionamiento continuo y auditoría de emisiones de GEI bajo marco GLEC / ISO 14083.
+
+### 2.3.2 Caracterización territorial y mapeo de nodos críticos
+
+El despliegue territorial de Transportes Curimón S.A. abarca una red física y logística compleja compuesta por seis tipologías de nodos operacionales, cuya infraestructura actual impone severas restricciones técnicas que deben ser consideradas en el diagnóstico. En la Tabla 2.2 se sintetizan las características y niveles de criticidad de los nodos que conforman la red operacional de la empresa.
+
+**Tabla 2.2.** Síntesis de nodos críticos de la red operacional
+
+| **Nodo** | **Escala o condición** | **Riesgo principal** | **Criticidad** |
+|---|---|---|---|
+| San Bernardo | Sala 26 m²; UPS 20 min | Continuidad de la operación central | Máxima |
+| Terminales regionales | 4; 3 sin enlace de respaldo | Interrupción de servicios locales | Alta |
+| Talleres propios | 2; 46 operarios | Escasez de ventanas de intervención | Alta |
+| Los Libertadores | 1.900 cruces/año | Cierres de hasta 12 días | Crítica |
+| Zonas sin cobertura | Tramos de más de 80 km | Indisponibilidad de transmisión | Crítica |
+| Recintos de clientes | Aproximadamente 1.400 | Esperas sin evidencia suficiente | Alta |
+
+San Bernardo concentra casa matriz, torre 24x7, taller y estanque de diésel. Sus dos enlaces pertenecen a proveedores distintos; sus tecnologías deben verificarse. Antofagasta, Talca, Los Ángeles y Puerto Montt cubren las macrozonas norte, centro y sur, pero tres de los cuatro terminales regionales carecen de respaldo de enlace.
+
+Los talleres propios están en San Bernardo y Los Ángeles. El paso medio por terminal cada seis días, y la frecuencia inferior a una visita mensual del 22% de terceros, condicionan las intervenciones; las reparaciones mecánicas en ruta por talleres externos no autorizan intervenir fuera de terminal el equipo embarcado. En Los Libertadores, un cierre de tránsito y una pérdida de conectividad son condiciones diferentes. En los tramos sin señal no puede presumirse transmisión inmediata ni disponibilidad de documentos dependientes del enlace.
+
+Los recintos de clientes son infraestructura ajena, sin equipos fijos de la oferta. Las esperas de 3 h 10 min a más de ocho horas y el 71% de sobreestadías objetadas requieren evidencia atribuible de permanencia para resolver los cobros en disputa.
+
+El análisis de la Tabla 2.2 expone que la sala de servidores ubicada en el Terminal San Bernardo (26 m², climatización por split doméstico, una UPS con 20 minutos de autonomía y condiciones de respaldo energético que deben verificarse) incumple formalmente los requerimientos de infraestructura física estipulados en las Bases Técnicas Transversales (Caso, RT-06.01, p. 32 a FEP02, RT-06.09, p. 15). Para utilizar infraestructura local en la operación de misión crítica se deberá remediar o reemplazar la sala.
+
+Los tramos con más de 80 kilómetros sin cobertura en la Ruta 5 Norte impiden asumir conectividad permanente. Los cierres del Paso Los Libertadores, de hasta doce días, exigen continuidad de registro y reprogramación. Frente a pérdidas de señal, el caso exige conservar la información operacional y sincronizarla al recuperar cobertura.
+
+## 2.4 Actores y Grupos de Interés
+
+La operación y gobernanza de Transportes Curimón S.A. involucra a un ecosistema diverso de trece (13) actores clave, cuyos intereses, expectativas y capacidades de bloqueo determinan la viabilidad de cualquier transformación en los procesos corporativos. El catálogo incluye tres actores de capital, fiscalización y aseguramiento: el **Fondo de Inversión Institucional**, la **Dirección del Trabajo (DT)** y la **Aseguradora de Carga y Flota**.
+
+En la Figura 2.4 se ilustra el mapeo de actores en la Matriz de Poder e Influencia frente al Nivel de Interés, identificando la estrategia de gestión corporativa requerida para cada uno.
+
+![Figura 2.4. Poder efectivo e interés operativo de los 13 actores de Curimón](../../figuras/02-problema/figura_2_4_matriz_actores.png)
+
+*Figura 2.4. Poder efectivo e interés operativo de los 13 actores de Curimón*
+
+Fuente: Elaboración propia.
+
+El poder de la Figura 2.4 mide la capacidad efectiva de condicionar continuidad, cumplimiento o viabilidad del proyecto; no equivale sólo a autoridad jerárquica. La unidad de análisis es el grupo de interés considerado colectivamente; su clasificación no se traslada automáticamente a cada integrante. El eje de interés describe participación en la operación diaria, no la importancia estratégica del contrato. Q3 y Q4 quedan sin grupos asignados bajo este criterio, sin afirmar que no existan personas individuales de bajo poder formal. Los 148 transportistas controlan 226 de 374 camiones (60,43%); su bajo poder societario no reduce su influencia operacional. Los conductores poseen capacidad colectiva de afectar la ejecución segura del viaje. TI y Mantenimiento condicionan integraciones e intervención física y, por ello, tampoco se clasifican como actores de bajo poder.
+
+Los nueve actores de alto interés operativo se gestionan de cerca; las cuatro entidades de capital, fiscalización y aseguramiento se mantienen satisfechas mediante evidencia de riesgos y cumplimiento. No se fuerza presencia en los cuadrantes de bajo poder. En el Anexo 2.D se distinguen autoridad formal, veto operacional, expectativas y mecanismo de interacción de cada actor.
+
+En la Tabla 2.3 se comparan las necesidades principales, fuentes de influencia e interés operativo de los trece grupos. Las dotaciones, identificación de responsables, expectativas y riesgos detallados se conservan en las fichas del Anexo 2.D.
+
+**Tabla 2.3.** Matriz sintética de actores y grupos de interés
+
+| **Actor** | **Necesidad principal** | **Fuente de influencia** | **Interés operativo** |
+|---|---|---|---|
+| Fondo de inversión | Solvencia y pasivos laborales | Societaria | Bajo |
+| Dirección del Trabajo | Evidencia de jornada | Fiscalizadora | Bajo |
+| Aseguradora de carga | Evidencia de siniestros | Cobertura | Bajo |
+| Familia fundadora | Continuidad y reputación | Societaria | Bajo |
+| Gerencia General | Control del viaje contratado | Ejecutiva | Alto |
+| Operaciones | Asignación y retornos | Despacho | Alto |
+| Finanzas | Costo y liquidaciones | Financiera | Alto |
+| Mantenimiento | Historial y datos del vehículo | Intervención | Alto |
+| Prevención de Riesgos | Aptitud y vigencias | Veto legal | Alto |
+| TI y Control de Flota | Integración y posición | Técnica | Alto |
+| Conductores propios | Jornada y descanso seguro | Colectiva | Alto |
+| Transportistas terceros | Privacidad y liquidación | Colectiva | Alto |
+| Cliente exportador | Trazabilidad y emisiones | Comercial | Alto |
+
+El poder es alto para los trece grupos bajo el criterio colectivo ya definido, aunque procede de fuentes distintas. El fondo y la familia fundadora condicionan el gobierno y la continuidad financiera; el fiscalizador y la aseguradora requieren evidencia de cumplimiento. Las gerencias y áreas técnicas determinan la viabilidad diaria del despacho, la información y la intervención. Los conductores y transportistas pueden condicionar colectivamente la ejecución del viaje, mientras el cliente exportador concentra el 19% de los ingresos y condiciona la continuidad comercial.
+
+Esta clasificación no convierte el interés operativo bajo en falta de importancia. Su consecuencia es una relación de seguimiento y evidencia para los cuatro grupos de Q2, y participación cercana para los nueve grupos de Q1. Las tensiones siguientes explican cómo conciliar necesidades incompatibles sin prescribir aquí mecanismos de solución.
+
+### 2.4.1 Principios de arbitraje de las seis tensiones operacionales
+
+El análisis de actores permite identificar seis tensiones entre necesidades del negocio. Se explicitan los intereses y el criterio de conciliación; los procedimientos, responsables y mecanismos técnicos corresponden al alcance y las reglas de S3.
+- **Privacidad y evidencia de jornada:** Curimón necesita antecedentes suficientes para acreditar la aptitud del conductor y la ejecución del viaje; los terceros requieren preservar la privacidad de su operación ajena a Curimón. El criterio es obtener información pertinente, autorizada y verificable para cada finalidad, distinguiendo la evidencia de jornada previa de la visibilidad de posición durante el viaje. Los permisos, ventanas y mecanismos de tratamiento se desarrollan en S3 y S5.
+- **Urgencia de despacho y seguridad:** Operaciones requiere cumplir itinerarios, mientras Prevención necesita comprobar jornada, descanso, documentación y aptitud. La seguridad y las condiciones habilitantes prevalecen sobre la urgencia comercial. Debe distinguirse una condición incumplida de la indisponibilidad temporal de una fuente: esta última no demuestra cumplimiento ni habilita por sí sola una salida. La verificación y el tratamiento de excepciones se rigen por RN-03, RN-04 y RN-11 de S3/T-12; S2 no establece un procedimiento ni autorizadores alternativos.
+- **Autonomía de terceros e información de flota:** Se requiere acceso autorizado, suficiente y verificable a los datos de los viajes de Curimón, respetando los sistemas ajenos y evitando atribuirse información de otros clientes. S3 §3.1 presenta la integración; §3.2.5 delimita las exclusiones y la preservación de plataformas de terceros; §3.4.3 desarrolla adhesión, permisos e incentivos. Estas son decisiones de solución, no hechos del diagnóstico.
+- **Entrega y descansos:** Los compromisos comerciales deben considerar tiempos de viaje, esperas, descansos y lugares seguros de detención. El criterio es una planificación operacionalmente viable que preserve seguridad y condiciones habilitantes, sin trasladar al conductor la presión de cumplir un itinerario incompatible con ellas.
+- **Costeo por viaje y prorrateo:** Finanzas necesita identificar costos directos y contribución por viaje, ruta y contrato para decidir sobre los tres contratos deficitarios. El criterio es producir evidencia atribuible y distinguir estimación operacional de conciliación contable. La información permite revisar subsidios cruzados y tarifas.
+- **Trazabilidad y heterogeneidad tecnológica:** El cliente exportador requiere información consistente frente a fuentes y equipos distintos. El criterio es obtener datos comparables y atribuibles, con las señales disponibles y la cobertura efectiva de cada fuente. La normalización e integración se desarrollan en S3/S4 y la gestión de datos en S5.
+
+## 2.5 Resumen de Requerimientos, Supuestos, Exclusiones y Restricciones
+
+El cierre analítico del diagnóstico operacional consolida las condiciones de contorno que delimitan el alcance del proyecto. Conforme a las directrices de ingeniería, en este acápite se sintetizan las necesidades del mandante y se formula una matriz de supuestos de ingeniería que evalúa el impacto de eventuales contingencias.
+
+### 2.5.1 Síntesis de requerimientos del negocio y operacionales preliminares
+
+El Anexo 2.A reúne 25 necesidades preliminares, `REQ-NEG-01` a `REQ-NEG-25`, con su fuente y trazabilidad. S3/T-12 desarrolla el catálogo base de 42 requerimientos del sistema: 28 funcionales (`RF-001` a `RF-028`) y 14 no funcionales (`RNF-001` a `RNF-014`). La correspondencia no es uno a uno: una necesidad puede originar varios requerimientos. REQ-NEG-08, monitoreo térmico, se atiende mediante la innovación 3 de S13/T-19, fuera del catálogo base pero dentro de la oferta. S2 identifica las necesidades sin prescribir sus mecanismos técnicos. La síntesis se organiza en cuatro dominios:
+- **Dominio de Asignación y Control Operacional:** Capacidad de verificar en tiempo real ($< 30\text{ s}$) la disponibilidad legal del conductor (Art. 25 bis), idoneidad mecánica del camión, vigencia de 6.000 fechas documentales y compatibilidad de carga antes de liberar una orden de transporte.
+- **Dominio de Trazabilidad y Gestión de Esperas:** Acreditación automática de arribos, esperas y salidas en los 1.400 puntos de clientes, generando registros íntegros y atribuibles para sustentar los cobros que correspondan según cada contrato, sin garantizar su aceptación o recuperación.
+- **Dominio de Documentación Digital y Continuidad en Sombra:** Disponibilidad de Documentos Electrónicos de Transporte conformes (DET para $≈ 128.000$ emisiones anuales) antes del movimiento, incluso en puntos de carga sin cobertura, conservando al sistema contable como único emisor tributario.
+- **Dominio de Costeo y Sostenibilidad:** Reconstrucción analítica diaria ($< 24\text{ h}$) del costo directo por viaje (consumo de combustible atribuible, peajes y flete a terceros) y cálculo de huella de carbono (g CO2e/t-km) bajo estándar GLEC para el 100% de la flota.
+
+Las Bases establecen los siguientes mínimos de servicio y continuidad para la solución.
+- Disponibilidad mensual de al menos 99,9 % para servicios críticos, medida en transacciones de negocio de extremo a extremo en operación continua (FEP01, Artículo 20, p. 14 y FEP02, RT-10.01, p. 22).
+- Tiempo de recuperación (RTO) de hasta 4 horas y punto de recuperación (RPO) de hasta 15 minutos de pérdida de datos ante un desastre en el centro principal (FEP02, RT-07.04, p. 17).
+- Autonomía mínima de 72 horas de persistencia a bordo sin cobertura celular (Caso, RT-03.10, p. 31).
+
+S4 y S10 detallan el diseño y la operación que permiten cumplir estos mínimos. S9 y los formularios T-13 y T-17 establecen las pruebas y la evidencia. La gestión de jornada, carga y reprogramación durante un cierre fronterizo se aborda conforme al calendario contractual.
+
+El sistema contable y de facturación de Curimón conserva la emisión exclusiva de documentos tributarios. La solución aporta los datos y la trazabilidad. Curimón adquiere los equipos en las cantidades y con las características especificadas por audIT. El inventario distingue el equipamiento requerido y la infraestructura existente verificada. En terminales, las Bases Administrativas exigen 24 horas de operación sin enlace exterior, un umbral superior a las 12 horas del Caso 10 (FEP01, Artículo 16.4, p. 12).
+
+### 2.5.2 Matriz de supuestos de ingeniería de proyectos
+
+Los seis supuestos de la Tabla 2.4 son condiciones del entorno que todavía deben comprobarse para sostener el alcance. Para cada supuesto se indica la evidencia disponible, el impacto si falla y la comprobación requerida. Las contingencias y decisiones de implementación corresponden al Subdocumento 3 y a las vistas de arquitectura.
+
+**Tabla 2.4.** Matriz de supuestos clave de ingeniería de proyectos
+
+| Supuesto | Evidencia disponible | Impacto si falla | Validación requerida |
+|---|---|---|---|
+| SUP-01: Adhesión suficiente | 148 transportistas; no se acredita adhesión efectiva | Crítico: cobertura de jornada y datos de terceros no demostrada | Cotejar participación, permisos y cobertura por etapa |
+| SUP-02: Acceso a GPS | Tres plataformas; 192 terceros con GPS; acceso no comprobado | Alto: visibilidad y trazabilidad incompletas | Verificar acceso autorizado y datos por plataforma |
+| SUP-03: Extracción del TMS | Sistema de gestión de 2013; calidad y extracción no acreditadas | Alto: migración y conciliación no sustentadas | Perfilar una extracción y cotejarla con el origen |
+| SUP-04: Entorno de continuidad | Autonomía exigida de 72 h; cierres viales de hasta doce días | Crítico: evidencia y planificación pueden quedar incompletas | Caracterizar cobertura y cierres por separado |
+| SUP-05: Telemetría accesible | 61 equipos con telemetría; lectura y autorización no comprobadas | Alto: beneficios de mantenimiento sin datos verificables | Cotejar autorización y lectura por fabricante |
+| SUP-06: Ventanas en terminal | Paso medio cada seis días; 22 % de terceros, menos de una vez al mes | Alto: cobertura de despliegue fuera del plazo comprometido | Comprobar visitas y ventanas por unidad |
+
+*Fuente: elaboración propia sobre el Caso, capítulos 2, 4, 5 y 10, numeral 14.1 y RT-03.10 y RT-17.06. Las validaciones descritas son actividades previstas, no comprobaciones ya realizadas.*
+
+**SUP-01. Adhesión suficiente para la cobertura comprometida.**
+Se supone que la participación autorizada de los transportistas permitirá obtener los antecedentes exigidos para las cohortes y etapas del alcance. El Caso identifica 148 empresarios independientes y la conducción para otros clientes (numeral 4.3 y restricción 2 del capítulo 10); no acredita firmas ni un porcentaje de adhesión. Antes de comprometer una cohorte debe cotejarse un registro por transportista, vehículo y conductor, con permisos, finalidad y vigencia. El supuesto se acepta sólo si la cobertura resultante sostiene las funciones comprometidas para esa cohorte. Si no se cumple, quedan sin acreditar la jornada previa y parte de la trazabilidad; la solución debe declarar cobertura efectiva y tratamiento de no adhesión, sin sustituir evidencia personal faltante por un dato del camión.
+
+**SUP-02. Acceso autorizado y suficiente a las plataformas GPS.**
+Se supone que podrán obtenerse datos identificables, fechados y con actualización suficiente para los viajes incluidos. El capítulo 5 y RT-17.06 confirman tres plataformas existentes; no confirman permisos, interfaces ni exportación utilizable. Debe comprobarse cada plataforma por separado, identificando proveedor, derecho de acceso, vehículos cubiertos, campos, sellos de tiempo, frecuencia y restricciones. La aceptación requiere una muestra autorizada y conciliada con vehículo y viaje, con cobertura suficiente para la función declarada. Si alguna plataforma no permite acceso, la cobertura de los 192 terceros con GPS no puede darse por resuelta; su efecto y alternativa deben quedar explícitos en el alcance, sin presumir cambio de equipos ni acceso a datos privados.
+
+**SUP-03. Extracción y calidad del sistema de gestión de 2013.**
+Se supone que será posible obtener información suficiente para migrar y conciliar los dominios seleccionados. El capítulo 5 acredita el sistema existente, no la calidad ni la facilidad de extracción. Deben identificarse autorizaciones, tablas o archivos, claves, períodos, duplicados, faltantes y relación con los documentos contables. Una muestra debe cotejar cantidades, identificadores y valores con el origen; las diferencias y los criterios de aceptación por dominio se documentan antes de fijar el corte. Si falla, el histórico y la duración de migración permanecen sin acreditar y requieren ajuste de alcance o planificación. Esta comprobación distingue el TMS del sistema contable, cuya función de emisor se conserva.
+
+**SUP-04. Caracterización separada de conectividad y acceso vial.**
+Se supone que podrán caracterizarse las interrupciones relevantes por corredor para comprobar la continuidad exigida. RT-03.10 fija al menos 72 horas de autonomía a bordo; el numeral 4.6 describe cierres del paso de hasta doce días. Un cierre vial no demuestra una interrupción celular de igual duración. Deben documentarse por separado cobertura, duración sin señal, detención, jornada y necesidad de reprogramación mediante antecedentes de ruta y pruebas de continuidad previstas. El supuesto se acepta cuando ambos escenarios están identificados y pueden verificarse contra sus requisitos. Si faltan antecedentes, no se acredita la suficiencia de la operación ni se extrapolan las 72 horas para resolver automáticamente un cierre de doce días.
+
+**SUP-05. Lectura permitida de telemetría de fábrica.**
+Se supone que la información disponible en los 61 tractocamiones podrá leerse bajo autorización del fabricante y con garantías preservadas. El Caso, numeral 14.1 y RT-17.06, acredita la disponibilidad y exige integración de solo lectura; no acredita acceso operativo. Deben cotejarse fabricante, modelo, autorización, señales accesibles, unidades, frecuencia, identificación y restricciones de garantía. La aceptación requiere una lectura autorizada de muestra, con valores identificables y consistentes. Si un fabricante no autoriza o no entrega las señales requeridas, no puede atribuirse a esos vehículos el beneficio de mantenimiento o consumo apoyado en esa telemetría; el alcance debe mostrar la cobertura real y resolver la dependencia sin intervención no autorizada.
+
+**SUP-06. Visitas y ventanas suficientes en terminales.**
+Se supone que las visitas efectivas permitirán intervenir las unidades dentro del calendario obligatorio y sin detener la flota. El capítulo 10 informa un paso medio cada seis días y un 22 % de subcontratados con frecuencia inferior a una visita mensual; el promedio no garantiza una oportunidad para cada camión. Deben cotejarse registros y programación por unidad, duración disponible y restricciones estacionales. La aceptación requiere una oportunidad documentada por unidad de la cohorte y una cobertura acumulada compatible con sus hitos. Si no se cumple, el ritmo de despliegue y su cobertura quedan afectados; el plan debe explicitar ese efecto y su contingencia, sin suponer visitas uniformes ni desplazar hitos contractuales.
+
+**Condicionantes de las veintiséis decisiones de diseño del Caso (§16.1):.**
+El Anexo 2.E de `AUDIT-Subdocumento2-Anexos.pdf` identifica las 26 decisiones, sus necesidades de origen, restricciones y datos que deben comprobarse. Este diagnóstico no prescribe sus implementaciones. La resolución y su trazabilidad corresponden al alcance y a las vistas técnicas de la solución; se conservan como condiciones críticas la jornada previa de terceros, la adhesión de los 148 transportistas y la llegada física de camiones a terminales.
+
+### 2.5.3 Exclusiones y restricciones principales
+
+Esta síntesis distingue límites de prestación, condicionantes operacionales y prestaciones adicionales. Las exclusiones detalladas del Caso se desarrollan en S3 §3.2.5; aquí se conservan sus dependencias relevantes para el diagnóstico.
+- **Exclusiones y límites de prestación:** audIT no provee combustible físico, repuestos mecánicos ni reparación de motores o carrocerías. Esto no excluye gestionar la hoja de vida, registrar intervenciones de talleres o apoyar la planificación del mantenimiento; tampoco excluye reponer el equipamiento tecnológico conforme a las condiciones comprometidas. El ERP contable se conserva: su licenciamiento, modificación del código base y administración no forman parte de la prestación; deben comprobarse los derechos e interfaces de acceso y mantenerse su función de único emisor tributario.
+- **Condicionantes operacionales y de infraestructura:** No se exige interacción táctil del conductor en marcha. Las intervenciones del equipamiento embarcado se limitan al paso por terminal y a las ventanas permitidas del caso. La infraestructura local de San Bernardo debe remediarse o reemplazarse; no se presume aptitud ni se excluyen los acondicionamientos necesarios para su componente de alta resiliencia.
+- **Necesidad atendida mediante prestación adicional:** El monitoreo de los 44 equipos refrigerados (REQ-NEG-08) se atiende por la innovación 3 de S13/T-19. Comprende registros de temperatura y apertura de puerta y alertas según carga, contrato y condiciones de homologación. La prestación forma parte de la oferta mediante S13/T-19. Sus registros y alertas permiten identificar desvíos y activar el tratamiento operativo que corresponda.
+
+El uso de servicios en la nube no exime de remediar o reemplazar el emplazamiento local exigido por el caso, ni de especificar su energía, comunicaciones y seguridad física. Las exclusiones de obras civiles mayores no eliminan esos acondicionamientos necesarios.
+
+ Los catálogos exhaustivos de requerimientos preliminares, el inventario detallado del parque vehicular y conductores, la matriz exhaustiva de restricciones legales, las trece fichas completas de caracterización de actores y el registro integral de las veintiséis decisiones de diseño del Caso §16.1 se entregan en el documento independiente `AUDIT-Subdocumento2-Anexos.pdf`, el cual complementa el presente diagnóstico conforme a las directrices del Comunicado 10.
+
+## Referencias
+
+Congreso Nacional de Chile. (2021). *Ley N.º 21.377 que modifica la Ley de Tránsito para sancionar la conducción manipulando dispositivos de telefonía móvil u otro artefacto electrónico*. Biblioteca del Congreso Nacional de Chile. https://www.bcn.cl/leychile/navegar?idNorma=1166014
+
+Dirección del Trabajo. (2009, 8 de octubre). *Resolución Exenta N.º 1213: sistema obligatorio de control de asistencia, horas de trabajo y descanso para choferes de carga terrestre interurbana*. https://www.bcn.cl/leychile/navegar?i=1007210
+
+ISO. (2023). *ISO 14083. Greenhouse gases. Quantification and reporting of greenhouse gas emissions arising from transport chain operations*.
+
+Ministerio de Hacienda. (2024). *Ley N.º 21.719 sobre protección y tratamiento de datos personales*.
+
+Ministerio de Obras Públicas. (1980). *Decreto Supremo N.º 158. Fija peso máximo de los vehículos que pueden circular por caminos públicos*.
+
+Ministerio de Salud. (2015). *Decreto Supremo N.º 43. Reglamento de almacenamiento de sustancias peligrosas*.
+
+Ministerio de Transportes. (1995). *Decreto Supremo N.º 298. Reglamento de transporte de cargas peligrosas por calles y caminos*.
+
+Ministerio del Trabajo. (2003). *Decreto con Fuerza de Ley N.º 1. Texto refundido, coordinado y sistematizado del Código del Trabajo. Artículo 25 bis sobre jornada de choferes de vehículos de carga terrestre interurbana*. Biblioteca del Congreso Nacional de Chile. https://www.bcn.cl/leychile/navegar?idNorma=207436
+
+Ministerio del Trabajo. (2006). *Ley N.º 20.123 que regula el trabajo en régimen de subcontratación*.
+
+Smart Freight Centre. (2023). *GLEC Framework for logistics emissions accounting and reporting, version 3.0*.
+
+Transportes Curimón S.A. (2026). *Bases administrativas para la preparación de la propuesta: Licitación Pública Internacional N.º TFEP-01/2026* (Documento FEP01).
+
+Transportes Curimón S.A. (2026). *Bases técnicas del Caso 10, Transporte de Carga: Licitación Pública Internacional N.º TFEP-01/2026* (Documento FEP03).
+
+Transportes Curimón S.A. (2026). *Bases técnicas transversales para la preparación de la propuesta: Licitación Pública Internacional N.º TFEP-01/2026* (Documento FEP02).
+
+Transportes Curimón S.A. (2026). *Comunicado 10: Estructura obligatoria de las propuestas preparatorias y técnica final* (Comunicado de la licitación TFEP-01/2026).
+
+## Declaración de uso de IA
+
+Conforme al Comunicado 10, sección 7.2, cada sección de este subdocumento y cada formulario asociado declara la herramienta de inteligencia artificial generativa usada, su finalidad, el nivel de uso en texto y en diagramas según la escala oficial de esa sección, y quién revisó y qué verificó. Esta declaración se consolida en el Formulario A-6.
+
+| Sección | Herramienta | Finalidad del uso | Nivel en texto | Nivel en diagramas | Revisión humana (quién y qué verificó) |
+|---|---|---|---|---|---|
+| Párrafo Apertura S2 | Asistente LLM | Ajuste estilístico de redacción introductoria | Medio | Ninguno | Carlos Abarza: Lectura y revisión de claridad del resumen y de la separación entre datos de las bases, cálculos e hipótesis. |
+| 2.1 Resumen Ejecutivo | Asistente LLM | Síntesis ejecutiva de la problemática | Medio | Ninguno | Carlos Abarza: Lectura, aclaración de sobreestadías y kilómetros vacíos y revisión de consistencia de magnitudes y efectos descritos. |
+| 2.2 Comprensión del Problema | Asistente LLM y generación de imágenes | Redacción del diagnóstico; corrección de atribución de sensor térmico y antecedentes gráficos | Medio | Medio | Carlos Abarza: Lectura y revisión de claridad del diagnóstico, distinción entre hechos e interpretaciones, escenarios de demanda y referencia al hito H1. |
+| 2.3 Dimensionamiento | Asistente LLM y generación de imágenes | Dimensionamiento y presentación gráfica de la cadena causal | Medio | Medio | Carlos Abarza: Lectura y revisión de consistencia de cifras, unidades, cálculos y distinción entre cobros objetados y pérdidas demostradas. |
+| 2.4 Actores y Grupos de Interés | Asistente LLM y generación de imágenes | Mapeo de 13 actores y presentación gráfica de la matriz de poder e interés | Medio | Medio | Carlos Abarza: Lectura, aclaración del criterio colectivo de poder e interés, cuadrantes vacíos y coherencia de arbitraje y referencias a S3. |
+| 2.5 Requerimientos y Supuestos | Asistente LLM | Estandarización de matriz de supuestos de proyecto | Medio | Ninguno | Carlos Abarza: Lectura y revisión de claridad de necesidades, supuestos, exclusiones y restricciones; coherencia del monitoreo térmico con la innovación 3. |
+| Anexos 2.A a 2.E | Asistente LLM y Codex | Estructuración tabular de inventarios, fichas y registro de 26 decisiones; distinción de REQ-NEG-08 como necesidad preliminar atendida fuera del catálogo base S3/T-12 | Medio | Ninguno | Carlos Abarza: Lectura y revisión de consistencia entre catálogos y cuerpo de S2, inventarios y clasificación de actores; aclaración de REQ-NEG-08 dentro de la oferta. |

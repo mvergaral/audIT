@@ -1,0 +1,29 @@
+audIT Soluciones Tecnológicas SpA
+TFEP-01/2026 · Transportes Curimón S.A. · Informe Preparatorio 3
+Fecha de entrega: 15 de noviembre de 2026
+
+DOCUMENTOS DE LA ENTREGA
+
+1. INFORME3_AUDIT_COSTOS_VENTA_20261115.pdf
+Documento económico ("Costos frente a venta", avance E-21 Entregable 2).
+Contiene: proveedores y adquisiciones clave, curva S mensual (perspectiva de solvencia
+con capital inicial en M0 y perspectiva contractual E-21 desde M1), análisis de costos
+detallado, VAN y TIR con justificación de tasa de descuento, y valorización de las cinco innovaciones.
+Incluye como anexo formal la tabla de resolución de observaciones del Art. 46 del Informe 2,
+con trazabilidad a cada sección del documento.
+
+2. INFORME3_AUDIT_PLANILLA_20261115.xlsx
+Modelo financiero ("Planilla de cálculo", avance E-21 Entregable 3).
+Evaluado en el horizonte contractual de 56 meses (M1 a M56), calendario de pagos E-25,
+parámetros E-24, flujos mensual y acumulado, análisis de sensibilidad y escenarios.
+Celdas de entrada validadas en color azul. Formulación íntegra y protección de celdas
+críticas sin contraseña conforme al Art. 44 de las Bases.
+
+3. PROTOTIPO INTERACTIVO (Avance según Cap. 25 Bases Técnicas)
+URL pública: https://carlosabarza.github.io/PaginaAudIT/
+Ruta de acceso: Portal Clientes > Simulador Operativo en Vivo.
+Simulación navegable de telemetría en tiempo real y flujo de reconexión tras pérdida de cobertura.
+
+4. manifiesto.json
+Manifiesto de entrega con metadatos y sumas de verificación criptográfica (SHA-256)
+de cada archivo integrante del paquete oficial.

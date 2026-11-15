@@ -1,0 +1,118 @@
+[
+  {
+    "prueba": "Capital inicial",
+    "entrada": "Parámetros corrección!B4",
+    "antes": 730000000.0,
+    "despues": 680000000.0,
+    "salidas_antes": {
+      "RESUMEN!C8": 6906281105.783855,
+      "RESUMEN!H8": 8473964546.974056,
+      "Indicadores!B2": 1076600979.0040386,
+      "Control de entrega!B21": 22050292.420405656,
+      "Flujo de Caja!F13": 443741030.03482896,
+      "Flujo de Caja!F14": 221870515.01741448,
+      "Personal!D26": 59680000.0,
+      "Gráficos UF!B10": 38972.533058333334,
+      "Gráficos UF!E10": 5441.956558333332
+    },
+    "salidas_despues": {
+      "RESUMEN!C8": 6906281105.783855,
+      "RESUMEN!H8": 8473964546.974056,
+      "Indicadores!B2": 1076600979.0040386,
+      "Control de entrega!B21": -24709707.579594344,
+      "Flujo de Caja!F13": 443741030.03482896,
+      "Flujo de Caja!F14": 221870515.01741448,
+      "Personal!D26": 59680000.0,
+      "Gráficos UF!B10": 38900.533058333334,
+      "Gráficos UF!E10": 5441.956558333332
+    },
+    "sin_errores": true
+  },
+  {
+    "prueba": "Tarifa desarrollo",
+    "entrada": "Tarifas por perfil!B10",
+    "antes": 30000.0,
+    "despues": 33000.0,
+    "salidas_antes": {
+      "RESUMEN!C8": 6906281105.783855,
+      "RESUMEN!H8": 8473964546.974056,
+      "Indicadores!B2": 1076600979.0040386,
+      "Control de entrega!B21": 22050292.420405656,
+      "Flujo de Caja!F13": 443741030.03482896,
+      "Flujo de Caja!F14": 221870515.01741448,
+      "Personal!D26": 59680000.0,
+      "Gráficos UF!B10": 38972.533058333334,
+      "Gráficos UF!E10": 5441.956558333332
+    },
+    "salidas_despues": {
+      "RESUMEN!C8": 6943746933.294612,
+      "RESUMEN!H8": 8519934887.47805,
+      "Indicadores!B2": 1083353440.629949,
+      "Control de entrega!B21": 13337085.546404436,
+      "Flujo de Caja!F13": 448338064.08522844,
+      "Flujo de Caja!F14": 224169032.04261422,
+      "Personal!D26": 59680000.0,
+      "Gráficos UF!B10": 39428.71785833333,
+      "Gráficos UF!E10": 5531.048458333333
+    },
+    "sin_errores": true
+  },
+  {
+    "prueba": "Mes de cobro H5",
+    "entrada": "Parámetros D2!B13",
+    "antes": 12.0,
+    "despues": 13,
+    "salidas_antes": {
+      "RESUMEN!C8": 6906281105.783855,
+      "RESUMEN!H8": 8473964546.974056,
+      "Indicadores!B2": 1076600979.0040386,
+      "Control de entrega!B21": 22050292.420405656,
+      "Flujo de Caja!F13": 443741030.03482896,
+      "Flujo de Caja!F14": 221870515.01741448,
+      "Personal!D26": 59680000.0,
+      "Gráficos UF!B10": 38972.533058333334,
+      "Gráficos UF!E10": 5441.956558333332
+    },
+    "salidas_despues": {
+      "RESUMEN!C8": 6906281105.783855,
+      "RESUMEN!H8": 8473964546.974056,
+      "Indicadores!B2": 1072613343.2910022,
+      "Control de entrega!B21": -233418343.25138283,
+      "Flujo de Caja!F13": 0.0,
+      "Flujo de Caja!F14": 665611545.0522435,
+      "Personal!D26": 59680000.0,
+      "Gráficos UF!B10": 38972.533058333334,
+      "Gráficos UF!E10": 5441.956558333332
+    },
+    "sin_errores": true
+  },
+  {
+    "prueba": "Factor soporte M25",
+    "entrada": "Parámetros corrección!B13",
+    "antes": 0.75,
+    "despues": 1,
+    "salidas_antes": {
+      "RESUMEN!C8": 6906281105.783855,
+      "RESUMEN!H8": 8473964546.974056,
+      "Indicadores!B2": 1076600979.0040386,
+      "Control de entrega!B21": 22050292.420405656,
+      "Flujo de Caja!F13": 443741030.03482896,
+      "Flujo de Caja!F14": 221870515.01741448,
+      "Personal!D26": 59680000.0,
+      "Gráficos UF!B10": 38972.533058333334,
+      "Gráficos UF!E10": 5441.956558333332
+    },
+    "salidas_despues": {
+      "RESUMEN!C8": 6924559505.783855,
+      "RESUMEN!H8": 8496392031.636633,
+      "Indicadores!B2": 1077654154.2903306,
+      "Control de entrega!B21": 22050292.420405656,
+      "Flujo de Caja!F13": 443741030.03482896,
+      "Flujo de Caja!F14": 221870515.01741448,
+      "Personal!D26": 61920000.0,
+      "Gráficos UF!B10": 38972.533058333334,
+      "Gráficos UF!E10": 5441.956558333332
+    },
+    "sin_errores": true
+  }
+]

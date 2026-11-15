@@ -1124,7 +1124,7 @@ respaldos de la plataforma los opera el proveedor de nube, y en San Bernardo y l
 solo los equipos que el \art{16.4}{12} exige para operar sin enlace. El Formulario T-11 declara
 la cantidad y el ciclo de vida de cada servicio, y aquí se ordenan por subred. En el borde están Front
 Door Premium, con cortafuegos de aplicación y protección volumétrica, y API Management Premium, con
-unidades en las tres zonas. En la subred de integración, IoT Hub S1 con dos unidades recibe la
+dos unidades en dos zonas. En la subred de integración, IoT Hub S1 con dos unidades recibe la
 telemetría, Device Provisioning Service enrola cada equipo con el certificado X.509 de su elemento
 seguro, y Event Hubs Premium, con protocolo Kafka, desacopla la llegada del procesamiento y se replica
 en forma asíncrona a Brazil South. La subred de aplicación aloja AKS, con nodos en las tres zonas y
@@ -1143,6 +1143,17 @@ Hubs se configura con un retraso máximo, y el servicio frena la entrada si ese 
 \parencite{ms_eh_georep}, lo que acota la pérdida de telemetría ante un desastre. Las series de tiempo
 van en un servidor separado del transaccional, de modo que el peak de escritura de la reconexión masiva
 no atrase la réplica de los datos del despacho.
+
+Las herramientas del ciclo de desarrollo van en una red propia, separada de los ambientes del negocio,
+para que una ejecución del pipeline no compita con el despacho. Allí corren GitLab en una máquina D8ds
+v5, SonarQube en una D4ds v5 y dos runners D4ds v5 que se encienden solo mientras hay trabajos, con
+discos Premium SSD y copia diaria en Azure Backup. Azure Container Registry Premium guarda las imágenes
+firmadas y se replica en Brazil South junto con el ambiente de recuperación. La captura de cambios para
+la analítica usa una máquina D4ds v5 con Kafka Connect y Debezium, y los procesos de Delta Lake y las
+consultas analíticas del Subdocumento~5 corren en una D8ds v5, ambas en la subred de datos de
+producción. Las personas de audIT entran con Entra ID P1, y las de Curimón, de los transportistas y de
+los clientes con Entra External ID. El tamaño de estas máquinas se confirma con la duración real del
+pipeline y con la carga analítica medida.
 
 El tamaño de los nodos de AKS, de los servidores PostgreSQL y de Azure Managed Redis se fija con la
 prueba de carga de 1,5 veces el peak que se ejecuta en preproducción \transv*{RT-09.06}{21} antes del
@@ -1167,7 +1178,8 @@ central, con cinco subredes: borde, integración, aplicación, datos y gestión.
 expone a Internet, y las de aplicación y datos son privadas, como exige el \art{16.3}{11}. Los servicios
 administrados se alcanzan por puntos de conexión privados dentro de su subred. El plan de direcciones usa rangos privados que no se
 superponen. En Chile Central la red central es 10.10.0.0/22, y cada ambiente tiene una /20: producción
-10.11.0.0/20, preproducción 10.12.0.0/20, QA 10.13.0.0/20 y desarrollo 10.14.0.0/20. Dentro de cada
+10.11.0.0/20, preproducción 10.12.0.0/20, QA 10.13.0.0/20 y desarrollo 10.14.0.0/20, y la red de
+herramientas usa 10.15.0.0/20. Dentro de cada
 una, las subredes de borde, integración, datos y gestión son /24, y la de aplicación es una /22 para
 los nodos de AKS. Brazil South repite el esquema con 10.20.0.0/22 para su red central y 10.21.0.0/20
 para la recuperación. San Bernardo usa 172.16.0.0/22, con redes virtuales locales separadas para
@@ -1217,8 +1229,8 @@ producción y se levanta desde el mismo código.
 
 \transv{RT-03.02}{8} exige al menos dos zonas para todo componente con requisito de alta
 disponibilidad. En producción, AKS reparte sus nodos en tres zonas, PostgreSQL mantiene una copia en
-espera en otra zona, el almacenamiento es de redundancia de zona y API Management tiene unidades en las
-tres. En San Bernardo, los servidores, los firewalls y los switches van en pares, y en cada terminal los
+espera en otra zona, el almacenamiento es de redundancia de zona y API Management tiene dos unidades en
+dos zonas, el mínimo que fija ese requisito. En San Bernardo, los servidores, los firewalls y los switches van en pares, y en cada terminal los
 dos ICS-6280 funcionan en activo y en espera.
 
 Los respaldos siguen el esquema 3-2-1-1-0 de \transv{RT-07.09}{18}. Las tres copias son la base en
@@ -1249,8 +1261,11 @@ de ExpressRoute, así que la redundancia la da la VPN por el segundo proveedor q
 \caso*{capítulo 5}{13}. Con detección bidireccional de fallas en el enlace privado, la caída se detecta
 en menos de un segundo y la convergencia hacia la ruta de respaldo toma hasta un minuto
 \parencite{ms_er_bfd}. La tabla de regiones de Microsoft asocia Santiago solo a Brazil South dentro de
-Sudamérica, por lo que el proveedor debe confirmar que el circuito alcanza Chile Central con el nivel
-Estándar. Los terminales conmutan en el propio RUTX50, que vigila el enlace fijo y pasa a la red 5G
+Sudamérica, por lo que el proveedor debe confirmar por escrito, antes de contratar, que el circuito
+alcanza Chile Central con el nivel Estándar. La conmutación de ExpressRoute a la VPN se prueba en la
+Etapa~1. Si el circuito no llega a Chile Central con ese nivel, se contrata el complemento Premium de
+ExpressRoute o se reemplaza el circuito por dos VPN de proveedores y rutas físicas distintas, que también
+cumplen \transv{RT-03.17}{9}. El riesgo está en el Formulario T-16 como R-33. Los terminales conmutan en el propio RUTX50, que vigila el enlace fijo y pasa a la red 5G
 \parencite{teltonika_rutx50}. Se configura con sondeos cada 10 segundos, de modo que la conmutación
 ocurre en menos de un minuto. El enlace de los terceros no tiene respaldo porque depende de plataformas
 que audIT no controla.
@@ -1442,25 +1457,24 @@ S-18 & Suscripción de Azure & A nombre del mandante & Reversibilidad de RT-03.0
 Cada supuesto tiene un mecanismo de cierre en la Etapa~1 o en la compra. Ninguno fija un valor que las
 bases entreguen de otra forma.
 
-Esta oferta reconoce cinco brechas que la ingeniería no cierra por sí sola.
+Esta oferta reconoce cinco brechas que la ingeniería no cierra por sí sola. La \tabref{4-brechas}
+declara para cada una el dato que falta, la prueba o consulta que lo obtiene con su plazo, y lo que se
+hace mientras tanto. Los plazos son los de la red del Formulario T-15.
 
-\begin{enumerate}
-\item La cobertura móvil no se supone. El Caso declara que la disponibilidad informada por los
-operadores no es un antecedente aceptable para el diseño, y cualquier cifra sobre la calidad de la
-señal en cada tramo antes de la medición en terreno sería una invención.
-\item El parque telemático de los 192 camiones de terceros tampoco se supone. El Caso no entrega marca,
-modelo, protocolo ni capacidad de almacenamiento de esos equipos. El entregable correcto es el
-estándar mínimo de homologación de la sección~4.2.1, y el levantamiento es una actividad de la Etapa~1
-con costo, plazo y dependencia de terceros.
-\item El conductor que manejó otro camión sin dispositivo no deja rastro instrumental. Esa brecha se
-cierra con responsabilidad contractual.
-\item Las consultas del Artículo~43 están enviadas y no respondidas. Las interpretaciones que esta
-oferta adopta sobre la sustitución de los módulos operativos de 2013, la autorización de los
-fabricantes para leer la telemetría, el mecanismo digital de la red de estaciones de servicio y el
-alcance del costo consolidado en 24 horas son propuestas de audIT, no respuestas del mandante.
-\item El producto satelital evaluado en el Informe~1 guarda 40 horas de registro \parencite{webfleet_sat_cl},
-frente a las 72 exigidas. Por eso esta oferta integra el mismo módem al G26I, que guarda 288 horas.
-\end{enumerate}
+\begin{tabla}{Brechas de la arquitectura física con su cierre y su contingencia}{4-brechas}{L{28mm} L{32mm} X L{40mm}}
+Brecha & Dato que falta & Prueba o consulta y plazo & Contingencia \\ \midrule
+Cobertura móvil de las rutas & Calidad de la señal en cada tramo & Campaña A03 en terreno, días hábiles 5 a 50 (meses 1 a 3) & Búfer de 288 horas y eventos críticos por Iridium. El mapa de sombras ajusta S-06 y R-04 \\
+Parque de los terceros con equipo propio & Marca, modelo, protocolo y capacidad de cada equipo & Verificación A04 con los tres proveedores de posicionamiento, días hábiles 5 a 65 (meses 1 a 4) & Integración por plataforma según la sección 4.2.1. Si un proveedor no entrega datos, rige la respuesta de R-08 \\
+Conductor que manejó otro camión sin dispositivo & Rastro instrumental de esa jornada & No hay medición posible. Declaración del conductor al identificarse con su tarjeta & Responsabilidad contractual en el anexo de adhesión \\
+Consultas del Artículo~43 sin respuesta & Interpretación del mandante en cuatro materias & Respuesta del mandante, o validación en el levantamiento A02 antes del H1 & La propuesta de audIT queda como supuesto y cambia por control de cambios \\
+Autonomía del canal satelital & Registros que conserva el canal & El Iridium Edge del Formulario T-11 no guarda registros: transmite lo que entrega el G26I, que guarda 288 horas (sección 4.2.2). El producto del Informe~1, de 40 horas \parencite{webfleet_sat_cl}, ya no es parte de la oferta & Prueba de 72 horas sin pérdida de eventos del paquete 4.1, meses 4 a 9 \\
+\end{tabla}
+\notaTabla{Fuente: elaboración propia con la red del Formulario T-15.}
+
+Tres brechas se cierran en los primeros cuatro meses, antes de la compra del lote a bordo del mes 6: la
+cobertura, el parque de los terceros y las consultas. La autonomía se prueba con el firmware entre los
+meses 4 y 9. La del conductor no tiene medición posible y queda cubierta por el contrato de adhesión.
+La cobertura y el parque de los terceros tienen su riesgo en el Formulario T-16, R-04 y R-08.
 
 % ============================================================================
 \section{Data center}\label{sec:4-datacenter}
@@ -1692,9 +1706,14 @@ sujeta a la aprobación del mandante que exige el \art{23}{17}.
 La vía prevista son las cláusulas contractuales tipo del artículo 27 de la Ley N.º~21.719
 \parencite{ley21719}, que el mandante firma con el proveedor de nube antes del hito H2. Con ellas,
 Brazil South recupera todos los datos, también los personales, con el RPO de 15 minutos y el RTO de 4
-horas de \transv{RT-07.04}{17}. San Bernardo no es sitio de recuperación de ningún dato, porque comparte
-con Chile Central el riesgo sísmico y la red eléctrica \transv*{RT-07.02}{17}. Sin las cláusulas
-firmadas no se entra en producción, como fija la sección~4.1.25.
+horas de \transv{RT-07.04}{17}. Si el mandante no las firma, los datos personales no se replican fuera
+de Chile. El cifrado por campo de \caso{RT-11.10}{32} protege esos datos, pero no hace lícita la
+transferencia, como explica el Subdocumento~5. En ese caso el mandante decide en el H2 entre firmar o
+aceptar que los datos personales queden sin recuperación regional, con su efecto sobre el H7, y esa
+decisión queda registrada en R-24 del Formulario T-16. San Bernardo no es sitio de recuperación de ningún
+dato, porque comparte con Chile Central el riesgo sísmico y la red eléctrica \transv*{RT-07.02}{17}. La
+revisión jurídica y la conmutación probada siguen siendo condiciones para entrar en producción, como fija
+la sección~4.1.25.
 
 La parte inferior de la figura es el otro eje. La recuperación y la continuidad son ejes separados:
 Brazil South recupera la nube si cae la región primaria, y San Bernardo, los terminales y los camiones

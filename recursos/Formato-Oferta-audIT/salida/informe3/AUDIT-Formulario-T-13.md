@@ -1,0 +1,82 @@
+# Formulario T-13. Plan de calidad y verificación
+
+audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. Oferta Técnica, Sobre N.º 2. Propuesta final. Archivo AUDIT-Formulario-T-13.pdf. Anexo del Subdocumento N.º 9, Plan de calidad. Las fuentes están en las Referencias de ese subdocumento.
+
+\ifdefined\FormularioActual
+\makeatletter
+\audit@iniciarpartes
+\makeatother
+{\renewcommand\textoEncabezado{\color{audit-marino}Índice}\indiceDetallado}
+
+\makeatletter
+\audit@marcasubdoc{Subdocumento 9}
+\makeatother
+\markboth{Formulario T-13}{}
+\registrarFolio{formsd-9}{Formulario T-13}
+\phantomsection
+\addcontentsline{toc}{section}{Formulario T-13}
+\fi
+\begin{formulario}{T-13}
+\begin{contenidoExigido}{T-13}
+\exigencia{Niveles y tipos de prueba conforme a ISO/IEC/IEEE 29119.}{\hyperref[sec:9-t13-1]{Apartado 1}, folio \pageref{sec:9-t13-1}}
+\exigencia{Ambientes y datos de prueba.}{\hyperref[sec:9-t13-2]{Apartado 2}, folio \pageref{sec:9-t13-2}}
+\exigencia{Criterios de entrada y de salida.}{\hyperref[sec:9-t13-3]{Apartado 3}, folio \pageref{sec:9-t13-3}}
+\exigencia{Automatización de pruebas.}{\hyperref[sec:9-t13-4]{Apartado 4}, folio \pageref{sec:9-t13-4}}
+\exigencia{Calendario de las pruebas de carga, resiliencia, recuperación ante desastres y seguridad ofensiva.}{\hyperref[sec:9-t13-5]{Apartado 5}, folio \pageref{sec:9-t13-5}}
+\end{contenidoExigido}
+
+### 9.0.1 Niveles y tipos de prueba conforme a ISO/IEC/IEEE 29119.
+
+\addcontentsline{toc}{subsection}{Niveles y tipos de prueba conforme a ISO/IEC/IEEE 29119.}
+Se aplica planificación, seguimiento, diseño, preparación, ejecución y cierre de los procesos de prueba (ISO/IEC/IEEE, 2021). La estructura de nueve campos del catálogo es una convención de audIT. Se diseñan 25 casos unitarios, 25 de integración, 20 de sistema, 12 de rendimiento y 8 de seguridad, 15 de hardware/HIL y 15 UAT: 120 identificadores únicos. Unitarias contrastan reglas/oráculos; integración valida esquemas e idempotencia; sistema verifica flujos completos; no funcionales miden carga, seguridad y recuperación; HIL utiliza dispositivos homologados; UAT comprueba tareas con contraparte. Véase sección 9.2.
+
+### 9.0.2 Ambientes y datos de prueba.
+
+\addcontentsline{toc}{subsection}{Ambientes y datos de prueba.}
+CI utiliza dobles y fixtures sintéticos; QA integra contratos; staging reproduce configuración/carga; HIL conserva modelo, firmware, señales y permisos; UAT usa terminales y usuarios designados con autorización. Producción se utiliza solo en ejercicio autorizado, con respaldo y reversión. Se versionan entradas, semilla/reloj, oráculo y manifiesto. No se atribuyen marcas o API ensayadas al parque existente sin homologación. Datos operacionales requieren acceso autorizado y minimización. Véase sección 9.2.1.
+
+La configuración física sometida a homologación comprende iWave G26I con audIT EdgeHub, lector CAN sin contacto Technoton CANCrocodile y las balizas Bluetooth de la innovación 3. Los 182 equipos previstos se ensayan por modelo y montaje; para los 192 terceros con dispositivos existentes se verifican las interfaces y permisos de acceso disponibles. T-17 comprueba lectura, integridad, datos ausentes, antigüedad y conciliación mediante pruebas de integración y hardware. El control térmico utiliza el rango y la precisión del modelo homologado.
+
+### 9.0.3 Criterios de entrada y de salida.
+
+\addcontentsline{toc}{subsection}{Criterios de entrada y de salida.}
+Entrada: versión/configuración y ambiente identificados, requisito/caso/criterio fijados, datos y permisos disponibles, observabilidad y reversión verificadas. Salida: todos los criterios aplicables cumplidos, reporte reproducible y defectos relacionados, sin críticos/altos para cierre de marcha blanca. Se aplican los mínimos de sección 9.3.6; cuatro semanas sostenidas y las seis condiciones acumulativas de sección 9.3.5 gobiernan aceptación. Un promedio o cobertura de código no reemplaza otro criterio. La gestión de defectos utiliza las cuatro severidades de FEP01, Artículo 78.1: crítica, alta, media y baja. Toda observación formal de aceptación se subsana en diez días hábiles; los críticos y altos bloquean promoción y cierre de marcha blanca hasta corrección y reevaluación. El Líder de Calidad y Pruebas registra responsable, plazo y evidencia. Los tiempos de respuesta y resolución de operación se aplican según Artículo 78.2 y se detallan en S9 §9.2.2, separados del plazo de aceptación.
+
+La revisión de trazabilidad exige localizar cada RT aplicable en la solución y relacionarlo con su método y evidencia; cubrir los 42 RF/RNF del catálogo propio no demuestra toda la cobertura normativa. Los localizadores ausentes se registran como pendientes y bloquean el cierre de esa revisión. Para la capacitación, la entrada requiere G13 aceptado con PREPROD y funciones probadas por perfil, datos de ensayo y material; la familiarización no acredita disponibilidad de funciones aún no entregadas. La salida requiere usuarios certificados según plan aprobado, compatible con A15 en M13--M15 y producción E1 en M16. Véase sección 9.3.1.
+
+Antes del ensayo se fijan los oráculos de evidencia multifuente y cambios concurrentes de vigencia o permiso. CP-SYS-01 y CP-PERF-04 incluyen reserva, confirmación y reintentos sin doble asignación en el plazo E2E. CP-HW-11 y CP-PERF-05 requieren representación completa y conforme disponible en cabina, con retorno satelital completo en hasta 90 s. CP-PERF-03 y CP-INT-25 concilian datos, documentos y eventos recuperados y permisos revocados. La falta de contrato, tamaño documental o mecanismo de recuperación homologado mantiene pendiente el criterio afectado; una simulación no acredita factibilidad del enlace ni del sitio real.
+
+Los controles siguientes complementan los criterios contractuales de S9 §9.3.6. La Tabla 9.2 relaciona umbral, método y evidencia; los controles físicos son compromisos de homologación de la configuración ofertada, no certificaciones ya obtenidas. audIT provee o contrata el banco y los instrumentos, sin presumir infraestructura del mandante.
+
+**Tabla 9.1.** Controles bloqueantes de software y homologación física
+
+| Control | Umbral y alcance | Método y caso | Evidencia de salida |
+|---|---|---|---|
+| Cobertura | Líneas de negocio \(\ge\)70 % contractual; ramas \(\ge\)80 % adicional | GitLab Runner y reporte compatible con SonarQube; catálogo unitario CP-UNIT-01–25 | Versión, numeradores, denominadores, exclusiones y cero pruebas fallidas |
+| Complejidad | \(\le\)15 por función de negocio, compromiso audIT | SonarQube y revisión de descomposición; S9 §9.1.1 | Reporte estático y cierre de funciones fuera de límite |
+| Vulnerabilidades | Cero críticas o altas abiertas en el artefacto promovido | SonarQube, Trivy y OWASP ZAP; CP-SEC-01–08 según alcance | Informes ligados a huella, reevaluación y SBOM |
+| Lectura CAN pasiva | Pérdida <0,1 %; cero tramas transmitidas por audIT | CANoe y analizador independiente; CP-HW-04 | Contadores, captura, autorización y mapa de señales |
+| Energía en reposo | <50 mA tras 30 min, compromiso audIT | Instrumento de corriente sobre conjunto alimentado; CP-HW-05 | Serie de corriente, tensión, duración y configuración de periféricos |
+| Ambiente térmico y vibración | Operación entre -20 °C y +70 °C; perfil SAE J1455 aprobado para montaje | Cámara y mesa de vibración; CP-HW-07 | Protocolo identificado, certificado de calibración e informe funcional |
+| Protección exterior | IP67 del conjunto expuesto: gabinete, conectores y cableado exterior | Laboratorio y procedimiento IEC 60529; CP-HW-08 | Configuración de montaje, informe de polvo/agua y verificación funcional |
+| Actualización de firmware | Solo detenido en terminal autorizado; recuperación A/B sin pérdida | Control de ubicación/estado y fallos de imagen/energía; CP-SYS-20 y CP-HW-09 | Rechazos fuera de ventana, huellas, arranque, reversión y conciliación |
+
+Cada informe conserva la versión del procedimiento, modelo, montaje y calibración aplicables. Una ficha de fabricante o un resultado sobre otro montaje no sustituye la homologación del conjunto. Un fallo impide liberar ese equipo o incremento hasta su corrección y reevaluación. El perfil térmico y vibratorio se documenta antes del ensayo; los números de un fixture no se atribuyen a una cláusula normativa sin respaldo.
+
+### 9.0.4 Automatización de pruebas.
+
+\addcontentsline{toc}{subsection}{Automatización de pruebas.}
+Cada cambio ejecuta compilación, pruebas unitarias y regresión; contratos e integración se ejecutan contra dobles versionados y en QA. La cobertura automatizada de líneas ejecutables de lógica de negocio \(\ge\)70 % es el mínimo contractual bloqueante (RT-04.11); la cobertura de ramas \(\ge\)80 % es un compromiso adicional bloqueante de audIT, coherente con S6, Tabla 6.4. Se calculan líneas cubiertas/líneas ejecutables y ramas cubiertas/ramas instrumentadas por separado, con módulos y exclusiones justificadas; no se incluyen dependencias o código generado para elevar el resultado. Análisis estático/dependencias y pruebas de autorización acompañan cada promoción; el resultado se conserva por versión. Carga, cortes de enlace y recuperación requieren script, manifiesto y cronómetro; HIL/UAT conservan las verificaciones manuales que no puede suplir un pipeline. Un fallo bloquea promoción y dispara corrección/reevaluación; una excepción no rebaja mínimos contractuales ni los gates adicionales bloqueantes comprometidos. Véase sección 9.2.3.
+
+### 9.0.5 Calendario de las pruebas de carga, resiliencia, recuperación ante desastres y seguridad ofensiva.
+
+\addcontentsline{toc}{subsection}{Calendario de las pruebas de carga, resiliencia, recuperación ante desastres y seguridad ofensiva.}
+El perfil de carga común es 380 sesiones nominales (80 internas, 150 conductores, 50 transportistas y 100 clientes) y 570 en estrés (120, 225, 75 y 150 respectivamente). Son hipótesis conservadoras de S4, no mediciones del Caso; CP-PERF-01 preserva esa mezcla y comprueba los umbrales contractuales a 1,5 veces el peak. Un cambio de perfil exige actualizar S9 y T-17 antes de ensayar.
+
+Antes de ejecutar la carga se aprobará un manifiesto que identifique versiones de S2 y del perfil de arquitectura, poblaciones de referencia, proporciones de simultaneidad, operaciones por actor, tiempos de espera, rampa, duración, volumen de datos y ambiente. H1 contrastará las hipótesis con sesiones y actividad observadas; sin ese contraste, 380 y 570 siguen siendo escenarios sintéticos y el resultado no acredita representatividad de la operación real. El perfil incluye por separado la cota de viajes diarios de S2 y la concurrencia; no convierte una magnitud en la otra. Los umbrales contractuales se mantienen aunque la calibración obligue a ajustar la capacidad.
+
+La construcción E1 comprende A09, A10 y A11. Las pruebas integrales de A12 se ejecutan de M10 a M12. Los informes separados de las cuatro familias y de UAT respaldan H5, la certificación de Etapa 1 en M12. La marcha blanca A15 se ejecuta de M13 a M15 y el paso a producción A19 ocurre en M16 (H7).
+
+La construcción E2 corresponde a A20. A22 certifica la etapa en M18 (H10), con regresión E1 y ensayos de las cuatro familias. La marcha blanca A24 se ejecuta de M19 a M20 y la aceptación final A25 ocurre en M21 (H12). Las pruebas de DR y seguridad ofensiva requieren autorización previa y reversión dentro de las ventanas contractuales. Los ejercicios de resiliencia y DR se repiten semestralmente en operación. Un tercero independiente realiza la prueba de intrusión antes de la puesta en producción y anualmente, con informe íntegro y remediación. Se realizan dos ensayos de migración antes de la definitiva (FEP02, 20.1, pp. 34--35 y RT-11.20, p. 24). Véase sección 9.3.2.
+\end{formulario}
+

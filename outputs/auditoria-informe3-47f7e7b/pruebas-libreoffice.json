@@ -1,0 +1,86 @@
+{
+  "motor": "LibreOffice Calc calculateAll, UNO",
+  "resultados": {
+    "base.xlsx": {
+      "Parámetros D2": {
+        "B4": 274452748
+      },
+      "Financiamiento": {
+        "B2": 274452748
+      },
+      "Flujo de Caja": {
+        "R10": 44999999.5355681,
+        "W10": 0
+      },
+      "Minimos meses criticos": {
+        "C3": 10000002.4612318
+      },
+      "Caja activacion montaje": {
+        "F3": 266251504,
+        "G3": 266251504
+      },
+      "Cierres activacion": {
+        "D2": 219061826
+      },
+      "Indicadores": {
+        "B2": 1235043315.78053,
+        "B3": 0.836613236332302
+      },
+      "errores": []
+    },
+    "capital-mas-10m.xlsx": {
+      "Parámetros D2": {
+        "B4": 284452748
+      },
+      "Financiamiento": {
+        "B2": 284452748
+      },
+      "Flujo de Caja": {
+        "R10": 35575999.5355682,
+        "W10": 0
+      },
+      "Minimos meses criticos": {
+        "C3": 10000002.4612318
+      },
+      "Caja activacion montaje": {
+        "F3": 266251504,
+        "G3": 266251504
+      },
+      "Cierres activacion": {
+        "D2": 219061826
+      },
+      "Indicadores": {
+        "B2": 1235043315.78053,
+        "B3": 0.836613236332302
+      },
+      "errores": []
+    },
+    "evento-menos-1m.xlsx": {
+      "Parámetros D2": {
+        "B4": 274452748
+      },
+      "Financiamiento": {
+        "B2": 274452748
+      },
+      "Flujo de Caja": {
+        "R10": 44999999.5355681,
+        "W10": 0
+      },
+      "Minimos meses criticos": {
+        "C3": 10000002.4612318
+      },
+      "Caja activacion montaje": {
+        "F3": 265251504,
+        "G3": 265251504
+      },
+      "Cierres activacion": {
+        "D2": 219061826
+      },
+      "Indicadores": {
+        "B2": 1235043315.78053,
+        "B3": 0.836613236332302
+      },
+      "errores": []
+    }
+  }
+}

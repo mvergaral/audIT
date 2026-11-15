@@ -213,8 +213,9 @@ Fuentes de madurez y aprovisionamiento: \parencite{d3_nasa_trl,d3_device_twins,d
 
 La innovación 3 es de tipo tecnológico o de arquitectura, según el \art{28}{19}. Su nombre es
 Semirremolque conectado: una baliza Bluetooth en cada semirremolque propio permite que el sistema sepa
-qué semirremolque va realmente enganchado, cuántos kilómetros recorre y en qué condición viaja la carga
-refrigerada.
+qué semirremolque va realmente enganchado y en qué condición viaja la carga refrigerada. La misma baliza
+permite medir el kilometraje de cada semirremolque, pero eso es cumplimiento del criterio 26 y no parte
+de la innovación.
 
 \paragraph{Problema u oportunidad} La compañía tiene 210 semirremolques propios de cinco tipos: rampla
 plana, furgón seco, furgón refrigerado, tolva y portacontenedores \caso*{numeral 2.2}{6}. En tres años
@@ -226,11 +227,13 @@ dicen cómo sabe el sistema qué semirremolque va enganchado, y con una declarac
 requisito se cumple. Si la declaración es errónea, la verificación aprueba la vigencia de un
 semirremolque que no es el que sale.
 
-El mantenimiento tiene el mismo vacío. El taller atiende 148 tractocamiones y 210 semirremolques con
-un plan preventivo por kilometraje, y el kilometraje se lee del odómetro cuando el camión pasa por el
-taller \caso*{capítulo 8}{19}. Cuando un semirremolque cambia de tractocamión, el odómetro del camión
-deja de reflejar su recorrido. El criterio 26 pide que el mantenimiento preventivo se gatille con
-kilometraje real y no con una estimación \caso*{capítulo 18}{43}.
+La carga refrigerada tiene un vacío parecido. Los 44 equipos refrigerados trabajan sobre todo en la
+temporada de fruta, y el Caso no informa ningún registro de su temperatura ni de la apertura de puerta
+durante el viaje. Sin ese registro, ante un reclamo del cliente no hay con qué mostrar cómo viajó la
+carga, y por eso la línea base se mide en la Etapa 1. El kilometraje de los
+semirremolques es otro asunto: el criterio 26 pide que su mantenimiento preventivo se gatille con
+kilometraje real \caso*{capítulo 18}{43}, y la solución lo mide con la baliza como parte del
+cumplimiento, no como innovación.
 
 \paragraph{Tecnología que la sustenta} Balizas Bluetooth de baja energía Teltonika EYE Sensor BTSMP1,
 con identificador, temperatura, humedad, acelerómetro y sensor magnético de puerta, protección IP67,
@@ -243,12 +246,11 @@ para el seguimiento de remolques \parencite{teltonika_trailer}. El lector de por
 semirremolque que sale aunque lo tire un camión sin equipo audIT.
 
 \paragraph{Delimitación frente a las bases} El seguimiento de remolques con balizas ya se vende en el
-mercado, así que la innovación no está en la baliza. Está en tres usos que cambian decisiones del caso.
-La verificación bloqueante comprueba el semirremolque que efectivamente sale y no el declarado. El
-kilometraje de cada semirremolque sale de su tiempo acoplado sobre la traza del tractocamión, lo que
-extiende a los semirremolques el kilometraje real que el criterio 26 pide y que la solución base mide
-solo en el camión. Y los 44 equipos refrigerados registran temperatura y apertura de puerta durante el
-viaje. Ninguno de los catorce asuntos que la arquitectura debe resolver \caso*{numeral 17.4}{39} ni
+mercado, así que la innovación no está en la baliza. Está en dos usos que cambian decisiones del caso.
+La verificación bloqueante comprueba el semirremolque que efectivamente sale y no el declarado, y los 44
+equipos refrigerados registran temperatura y apertura de puerta durante el viaje. El kilometraje de
+cada semirremolque, que sale de su tiempo acoplado sobre la traza del tractocamión, lo exige el criterio
+26 y se verifica como cumplimiento en el Formulario T-17. Ninguno de los catorce asuntos que la arquitectura debe resolver \caso*{numeral 17.4}{39} ni
 ninguna de las decisiones pendientes \caso*{numeral 16.1}{34} pide identificar el semirremolque
 acoplado ni medir la condición de la carga, de modo que la innovación no cae en la exclusión del
 \art{30}{20}.
@@ -268,7 +270,8 @@ La baliza vive en el semirremolque y no agrega nada al tractocamión. En la capa
 lector de portería la leen por Bluetooth y envían el evento a IoT Hub, el primero por la red celular y
 el segundo por la red del terminal. En la capa de integración, Event Hubs distribuye el evento a tres
 servicios. El contexto Flota y activos usa el identificador del semirremolque acoplado en la
-verificación bloqueante y suma sus kilómetros para el plan preventivo. El contexto Telemetría y
+verificación bloqueante y, como cumplimiento del criterio 26, suma sus kilómetros para el plan
+preventivo. El contexto Telemetría y
 geocercas guarda la temperatura y la apertura de puerta en la base de series de tiempo. La innovación
 consume el flujo de telemetría de IoT Hub y expone a la verificación bloqueante el identificador del
 semirremolque acoplado, sin interfaces nuevas hacia terceros (secciones 4.1 y 4.2). El Formulario T-11
@@ -282,30 +285,32 @@ intervenciones \caso*{numeral 13.2}{27}, y los 44 refrigerados se intervienen fu
 paquete 5.2, Flota y activos, integra la baliza a la ficha del semirremolque. La verificación con el
 semirremolque medido se activa en la marcha blanca, y su primera medición ocurre antes del mes 16.
 
-\paragraph{Impacto económico} La inversión es el equipamiento que compra el mandante, conforme al
-\caso{capítulo 11}{24}: las balizas y los lectores de portería del Formulario T-11, más la
-integración en los tres servicios de negocio. En costo operacional agrega la reposición de balizas al
-término de su batería y un tráfico celular menor, porque el evento de acople viaja en los mensajes que
-el G26I ya envía. El beneficio tiene tres partes: impedir la salida de un semirremolque con la
-revisión técnica vencida, programar la mantención de los semirremolques con kilometraje medido en lugar
-de estimado, y respaldar ante el cliente la condición de la carga refrigerada. El flujo de caja de la
-Oferta Económica refleja la innovación como inversión en equipamiento en la Etapa~1 y como costo de
-reposición durante la operación.
+\paragraph{Impacto económico} El equipamiento lo compra el mandante, conforme al \caso{capítulo 11}{24}:
+las balizas y los lectores de portería del Formulario T-11. La inversión de audIT es la integración en
+los tres servicios de negocio y el montaje de las balizas en el paso por terminal, con personal propio.
+En operación agrega la mantención de la regla de acople y del reporte de temperatura y puerta. No agrega
+tráfico propio, porque el evento de acople viaja en los mensajes que el G26I ya envía, ni reposición
+por batería, porque la baliza dura cinco años o más y cubre los 56 meses. El beneficio tiene dos partes
+que se miden por separado: que ningún semirremolque salga con la revisión técnica vencida y que la
+condición de la carga refrigerada quede respaldada ante el cliente. Su valor en dinero queda pendiente
+de cuantificar, porque el Caso no entrega datos para derivarlo. El Sobre N.º~3 lleva la fórmula con
+sus campos y la inversión y el costo, sin contar el kilometraje, que es cumplimiento.
 
-\paragraph{Indicador de verificación} La \tabref{13-indicadores3} fija los indicadores. La primera línea
-base sale del Caso, y las otras dos se miden en la Etapa 1 porque el Caso no las entrega.
+\paragraph{Indicador de verificación} La \tabref{13-indicadores3} fija los dos indicadores, uno por cada
+parte del beneficio. La primera línea base sale del Caso, y la segunda se mide en la Etapa 1 porque el
+Caso no la entrega.
 
 \begin{tabla}{Indicadores de la innovación 3}{13-indicadores3}{X L{32mm} L{30mm} L{36mm}}
 Indicador & Línea base & Meta & Momento de medición \\ \midrule
 Asignaciones con semirremolque propio verificado por medición & No se verifica al asignar & 95 \% o más & Marcha blanca, antes del mes 16 \\
-Semirremolques propios con kilometraje medido & Línea base a medir en la Etapa 1 & 100 \% de los que tienen baliza & Tercer mes de operación \\
-Viajes refrigerados con registro continuo de temperatura & Línea base a medir en la Etapa 1 & 100 \% & Primera temporada de diciembre a abril \\
+Viajes de los 44 equipos refrigerados con temperatura y puerta registradas & Línea base a medir en la Etapa 1 & 100 \% & Primera temporada de diciembre a abril \\
 \end{tabla}
-\notaTabla{Fuente: elaboración propia sobre el Caso, numerales 2.2 y 4.4, pp. 6 y 10, y capítulo 18, p. 43.}
+\notaTabla{Fuente: elaboración propia sobre el Caso, numerales 2.2 y 4.4, pp. 6 y 10.}
 
 La primera meta no llega al 100 \% porque un semirremolque propio tirado por un camión sin equipo
-audIT solo se lee en la portería. Los tres indicadores se miden con datos que la propia solución
-produce, de modo que su verificación no depende de terceros.
+audIT solo se lee en la portería. Los dos indicadores se miden con datos que la propia solución produce,
+de modo que su verificación no depende de terceros. El kilometraje medido de los semirremolques no es
+un indicador de esta innovación: se verifica con el criterio 26 en el Formulario T-17.
 
 \paragraph{Riesgo de adopción} Cada riesgo se declara con su probabilidad, su impacto, la mitigación y
 la contingencia, como pide \transv{RT-26.04}{44}. El mayor es el acople falso con la baliza de un

@@ -1,0 +1,56 @@
+{
+  "capital_base": {
+    "1": 332814380
+  },
+  "capital_activacion_m9": 7867985,
+  "capital_banco_m9": 6294388,
+  "aporte_m9": 1573597,
+  "minimo_activacion": [
+    "H5 M14 / reserva M9",
+    13,
+    10000003.78429997,
+    10000003.784299994
+  ],
+  "eventos": 313,
+  "cierres": 224,
+  "costo_externo_neto": 6421333,
+  "interes_credito_extra": 679793.904,
+  "costos_corregidos_sin_descontar_nomina": 7990822178.222495,
+  "margen_precio_fijo_con_montaje": 0.18434454863972394,
+  "tolerancia_desvio_adicional_que_agota_piso": 3.7842999696731567,
+  "sla": [
+    [
+      "Dos críticas simultáneas",
+      15,
+      30,
+      180,
+      225,
+      "Cumple tiempo simulado"
+    ],
+    [
+      "Tres críticas con suplente al minuto 10",
+      15,
+      30,
+      180,
+      225,
+      "Cumple tiempo simulado"
+    ],
+    [
+      "Tres críticas sin suplente",
+      20,
+      30,
+      180,
+      230,
+      "Incumple"
+    ],
+    [
+      "Proveedor tarda 240 min desde diagnóstico",
+      15,
+      30,
+      240,
+      285,
+      "Incumple"
+    ]
+  ],
+  "cotejo_eventos_csv": true
+}

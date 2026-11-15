@@ -50,11 +50,6 @@ R = [
      2, 3, 1, 3,
      "Dimensionamiento sobre RT-09.03, escalado automático de AKS, unidades adicionales de IoT Hub y prueba de carga a 1,5 veces el peak",
      "Arquitecto de Solución", "Mitigar", "Uso diario de IoT Hub sobre el 75 % de su cuota", "Revisión mensual"),
-    ("R-06", "T", "Retiro de Redis en 2028",
-     "Azure Cache for Redis se retira el 30 de septiembre de 2028, en el mes 20, durante la marcha blanca de la Etapa 2, y su edición Enterprise el 31 de marzo de 2027",
-     5, 3, 1, 3,
-     "La arquitectura usa Azure Managed Redis, el servicio de reemplazo, desde la Etapa 1 (Subdocumento 4, sección 4.1.1)",
-     "Arquitecto de Solución", "Evitar", "Un componente de la Etapa 1 que dependa de Azure Cache for Redis en el hito H2", "Mes 4"),
     ("R-07", "T", "Bloqueo por proveedor",
      "La solución queda atada al proveedor de nube y el mandante no puede cambiarlo",
      2, 3, 2, 2,
@@ -106,10 +101,10 @@ R = [
      "Reserva A14 de 14 días y A13 diez días antes del fin de A09, condicionada a la entrega G13, con registro del atraso si faltan la versión de preproducción, los datos o el material",
      "Jefe de Proyecto", "Mitigar", "Entrega G13 incompleta el día 182 o consumo de más de la mitad de la reserva A14", "Quincenal hasta el día 240"),
     ("R-17", "G", "Hitos H1 a H4",
-     "Los primeros hitos de pago se atrasan, porque su margen es de 2 a 8 días hábiles",
-     2, 3, 2, 3,
-     "Levantamiento en los cinco terminales en paralelo y seguimiento semanal del margen de cada hito",
-     "Jefe de Proyecto", "Aceptar", "Margen de un hito bajo 2 días hábiles", "Semanal hasta H4"),
+     "Los primeros hitos de pago se atrasan, porque su margen es de 2 a 8 días hábiles. La red vigente del Formulario T-15 da 21,6 % de atraso para H1 y 16,1 % para H2",
+     2, 3, 2, 2,
+     "Alerta con un día hábil de atraso en A02 o A05, escalamiento al Comité Ejecutivo cuando el atraso proyectado supera el margen del hito, recuperación con un segundo equipo de levantamiento en dos terminales en paralelo y, si no alcanza, entrega del hito con los terminales levantados y cierre del resto antes del hito siguiente",
+     "Jefe de Proyecto", "Mitigar", "A02 o A05 con un día hábil de atraso", "Semanal hasta H4"),
     ("R-18", "G", "Cierre de la marcha blanca 1",
      "La marcha blanca de la Etapa 1, que cae en la temporada de fruta, no cumple las condiciones del Artículo 17.3 en tres meses",
      3, 4, 2, 4,
@@ -141,10 +136,10 @@ R = [
      "Cortafuegos de aplicación en Front Door, Entra ID con control por rol y atributo, cifrado de campo y pruebas de seguridad ofensiva en A12",
      "Encargado de Seguridad", "Mitigar", "Vulnerabilidad crítica abierta o acceso anómalo", "7 días corridos"),
     ("R-24", "S", "Licitud en Brazil South",
-     "La réplica de datos personales en Brazil South no cuenta con base de licitud ni con la aprobación del mandante",
+     "La réplica de datos personales en Brazil South no cuenta con una vía de transferencia lícita ni con la aprobación del mandante",
      3, 4, 2, 4,
-     "Base de licitud del Subdocumento 5, aprobación del mandante que exige el Artículo 23 y cláusulas contractuales tipo del artículo 27 de la Ley 21.719 firmadas antes del hito H2",
-     "Arquitecto de Solución", "Mitigar", "Hito H2 sin aprobación del mandante", "Mes 4"),
+     "Cláusulas contractuales tipo del artículo 27 de la Ley 21.719 firmadas antes del hito H2 y aprobación del mandante que exige el Artículo 23. Sin cláusulas, los datos personales no se replican fuera de Chile y el mandante decide en el H2 entre firmar o aceptar que queden sin recuperación regional",
+     "Arquitecto de Solución", "Mitigar", "Hito H2 sin cláusulas firmadas", "Mes 4"),
     ("R-25", "O", "Caída de la región",
      "La región Azure Chile Central deja de responder por un desastre",
      1, 5, 1, 3,
@@ -165,7 +160,45 @@ R = [
      3, 4, 2, 4,
      "Emisión anticipada desde la orden en todo viaje cuya carga se conoce al programar, ensayo del retorno en fragmentos con el documento de mayor tamaño y salida bloqueada sin documento conforme",
      "Líder de Integración", "Mitigar", "Ensayo con un retorno sobre 90 segundos o con fragmentos perdidos", "Mes 3, con la prueba técnica del sistema contable"),
+    ("R-29", "O", "Convivencia con el sistema de 2013",
+     "Durante la convivencia con el sistema de gestión de transporte de 2013, una función queda con dos registros distintos, o el retiro de un módulo en los meses 16, 21 o 24 corta una operación que todavía dependía de él",
+     3, 4, 2, 4,
+     "Retiro función por función, conciliación diaria entre ambos sistemas mientras conviven, reversión probada antes de cada retiro y retiro solo con acta del mandante",
+     "Líder de Integración", "Mitigar", "Diferencia de conciliación sobre el umbral acordado o uso de una función del sistema de 2013 después de su retiro", "Meses 16, 21 y 24"),
+    ("R-30", "C", "Adopción de la innovación 1",
+     "Los transportistas y la torre no usan el expediente verificable de la innovación 1, o la firma automática no está disponible al empezar la medición",
+     3, 3, 2, 3,
+     "Firma compatible con la emisión automática cotizada antes del mes 13, piloto con transportistas adheridos y medición del uso desde el mes 16 (Formulario T-19, ficha 1)",
+     "Líder Funcional", "Mitigar", "Uso del expediente bajo la meta de la ficha 1 en la medición del mes 16", "Meses 13 a 21"),
+    ("R-31", "C", "Adopción de la innovación 2",
+     "Los técnicos de taller y la torre no siguen la programación de intervenciones por oportunidad de patio y la preparación inútil no baja",
+     3, 2, 2, 2,
+     "Piloto de diez camiones en el mes 6 con medición manual comparable, recomendación revisable por el técnico y registro de cada oportunidad (Formulario T-19, ficha 2)",
+     "Líder Funcional", "Mitigar", "Menos de la mitad de las recomendaciones aplicadas en el piloto", "Meses 6 a 9 y 16 a 18"),
+    ("R-32", "C", "Usuarios en temporada de fruta",
+     "En la temporada de fruta, de diciembre a abril, los usuarios de la torre y de los terminales no tienen tiempo para la aceptación de la Etapa 1 (A12, meses 10 a 12) ni para su marcha blanca (meses 13 a 15)",
+     3, 4, 2, 4,
+     "Ventanas y cupos por rol acordados con el mandante antes del mes 9, suplentes nominados por turno, sesiones en el horario de relevo y escalamiento al Comité Ejecutivo",
+     "Jefe de Proyecto", "Mitigar", "Cupos por rol sin confirmar al cierre del mes 9 o asistencia bajo el 80 % de lo acordado en una semana", "Meses 9 a 15"),
+    ("R-33", "T", "Circuito ExpressRoute",
+     "El proveedor no confirma que el circuito de Santiago llega a Azure Chile Central con el nivel Estándar",
+     2, 3, 1, 3,
+     "Confirmación escrita antes de contratar, prueba de conmutación a la VPN en la Etapa 1 y, si no llega, complemento Premium o dos VPN de proveedores y rutas distintas (Subdocumento 4, sección 4.2.7)",
+     "Líder de Operación", "Mitigar", "Proveedor sin confirmación escrita al contratar el circuito", "Mes 4"),
+    ("R-34", "O", "Cierres de Los Libertadores",
+     "Dos o más cierres del paso Los Libertadores por nieve durante el piloto a bordo (A11, días 112 a 172) dejan varados camiones del piloto y consumen más que sus 20 días de holgura",
+     3, 3, 1, 3,
+     "Camiones del piloto elegidos entre los que no cruzan la frontera, reemplazo por otro de la misma familia si uno queda varado, y medición por familia de camión y no por unidad",
+     "Líder de Implantación", "Mitigar", "Cierre del paso con un camión del piloto en ruta internacional, o holgura de A11 bajo 10 días", "Meses 6 a 9"),
 ]
+
+# Origen de cada riesgo (observación RIE-01): M, mandante; T, terceros; A, audIT.
+ORIGEN = {"R-01": "A", "R-02": "A", "R-03": "T", "R-04": "T", "R-05": "A", "R-07": "A", "R-08": "T",
+          "R-09": "T", "R-10": "T", "R-11": "T", "R-12": "M", "R-13": "T", "R-14": "T", "R-15": "M",
+          "R-16": "A", "R-17": "A", "R-18": "A", "R-19": "A", "R-20": "T", "R-21": "M", "R-22": "T",
+          "R-23": "T", "R-24": "M", "R-25": "T", "R-26": "A", "R-27": "A", "R-28": "A", "R-29": "A",
+          "R-30": "T", "R-31": "M", "R-32": "M", "R-33": "T", "R-34": "T"}
+NOMBRE_ORIGEN = {"M": "Mandante", "T": "Terceros", "A": "audIT"}
 
 # Modos de falla técnicos (AMFE): modo, efecto, S, O, D, control de detección, riesgo
 AMFE = [
@@ -199,7 +232,9 @@ def escribir_t16():
                      f"responsable={{{resp}}}}}")
     resp_filas = []
     for (i, _c, _n, _r, p, im, pr, ir, _m, _resp, estr, disp, plazo) in R:
-        resp_filas.append(f"{i} & {estr} & {tex(disp)} & {tex(plazo)} & {p * im} a {pr * ir} \\\\")
+        resp_filas.append(f"{i} & {NOMBRE_ORIGEN[ORIGEN[i]]} & {estr} & {tex(disp)} & {tex(plazo)} & {p * im} a {pr * ir} \\\\")
+    quedan8 = [r[0] for r in R if r[6] * r[7] == 8]
+    cuenta = {o: sum(1 for r in R if ORIGEN[r[0]] == o) for o in "MTA"}
     amfe_filas = []
     for (modo, efecto, s, o, d, det, rid) in sorted(AMFE, key=lambda a: -a[2] * a[3] * a[4]):
         amfe_filas.append(f"{tex(modo)} & {tex(efecto)} & {s} & {o} & {d} & {s * o * d} & {tex(det)} & {rid} \\\\")
@@ -208,6 +243,7 @@ def escribir_t16():
 %  a partir del registro de riesgos: no se edita a mano.
 % ============================================================================
 \begin{formulario}{T-16}
+\renewcommand\thetable{T-16.\arabic{table}}\renewcommand\theHtable{T16.\arabic{table}}\setcounter{table}{0}
 
 \providecommand\tituloBloqueFormulario[1]{%
   \par\Needspace{10\baselineskip}\vspace{14pt plus 3pt}\phantomsection\addcontentsline{toc}{section}{#1}\noindent{\sffamily\bfseries\fontsize{13bp}{16bp}\selectfont\color{audit-marino}#1}\par\vspace{6pt}\noindent}
@@ -224,7 +260,9 @@ def escribir_t16():
 
 El registro tiene """ + str(len(R)) + r""" riesgos de la solución propuesta. La probabilidad y el impacto van de 1 a 5 con las
 escalas de la \verSeccion{sec:8-plan}, y la exposición es su producto. Una exposición de 12 o más es alta
-y exige plan de contingencia, que está en la \verSeccion{sec:8-accion}.
+y exige plan de contingencia, que está en la \verSeccion{sec:8-accion}. Los identificadores son propios
+de este formulario. R-06, el retiro de Azure Cache for Redis, salió del registro activo porque la
+arquitectura ya usa el servicio de reemplazo, y su número no se reutiliza.
 
 \begin{formularioTDieciseis}
 """ + "\n".join(filas) + r"""
@@ -232,16 +270,18 @@ y exige plan de contingencia, que está en la \verSeccion{sec:8-accion}.
 
 \tituloBloqueFormulario{Respuesta, disparador, plazo y exposición residual}
 
-La \tabref{t16-respuesta} completa cada riesgo con lo que pide \transv{RT-19.04}{33}: la estrategia de
-respuesta, el disparador que la activa y el plazo, más la exposición antes y después de mitigar.
+La \tabref{t16-respuesta} completa cada riesgo con lo que pide \transv{RT-19.04}{33}: su origen, la
+estrategia de respuesta, el disparador que la activa y el plazo, más la exposición antes y después de
+mitigar. """ + f"{cuenta['M']} riesgos nacen del mandante, {cuenta['T']} de terceros y {cuenta['A']} de audIT." + r""" La contingencia de los
+riesgos de exposición alta está en la \verSeccion{sec:8-accion}.
 
-\begin{tabla}[ancho=completo, fuente=condensada]{Respuesta, disparador y plazo de cada riesgo}{t16-respuesta}{L{12mm} L{18mm} X L{36mm} L{22mm}}
-ID & Respuesta & Disparador & Plazo & Exposición \\ \midrule
+\begin{tabla}[ancho=completo, fuente=condensada]{Origen, respuesta, disparador y plazo de cada riesgo}{t16-respuesta}{L{11mm} L{15mm} L{15mm} X L{34mm} L{18mm}}
+ID & Origen & Respuesta & Disparador & Plazo & Exposición \\ \midrule
 """ + "\n".join(resp_filas) + r"""
 \end{tabla}
 \notaTabla{Fuente: elaboración propia. La exposición va de la inicial a la residual.}
 
-Después de mitigar, ningún riesgo queda con exposición alta. Los cinco que quedan en 8 (R-11, R-18, R-23, R-24 y R-28)
+Después de mitigar, ningún riesgo queda con exposición alta. Los """ + str(len(quedan8)) + r""" que quedan en 8 (""" + ", ".join(quedan8[:-1]) + " y " + quedan8[-1] + r""")
 conservan su impacto de 4, porque la mitigación baja su probabilidad y deja igual su consecuencia.
 
 \tituloBloqueFormulario{Análisis de modos de falla de los componentes técnicos}
@@ -287,7 +327,8 @@ def _texto_blanco(f, x, y, s, tam, peso=400):
 def fig_rbs():
     """Estructura de desglose con un color por categoría (D4-107): borde y franja de encabezado en el
     color, fichas con un tinte claro del mismo color y texto negro. Sin íconos."""
-    f = lienzo.Figura("rbs", "08-riesgos", "V", alto=538)
+    alto = 62 + sum(27 + ((sum(1 for r in R if r[1] == c) + 1) // 2) * 16 + 4 + 6 for c, _n, _k in CATEGORIAS) + 4
+    f = lienzo.Figura("rbs", "08-riesgos", "V", alto=alto)
     f.caja(111, 8, 200, 34, [("Riesgos de la solución", 10, 600), (f"{len(R)} riesgos en cinco categorías", 9, 400)])
     y = 62
     xbus = 18
@@ -295,7 +336,7 @@ def fig_rbs():
     for c, nombre, color in CATEGORIAS:
         rs = [r for r in R if r[1] == c]
         filas = (len(rs) + 1) // 2
-        h = 30 + filas * 18 + 4
+        h = 27 + filas * 16 + 4
         f.rect(x, y, w, h, relleno="#FFFFFF", borde=color, grosor=1.2, rx=rx)
         f.crudo(f'<path d="M{x},{y + hb} L{x},{y + rx} A{rx},{rx} 0 0 1 {x + rx},{y} L{x + w - rx},{y} '
                 f'A{rx},{rx} 0 0 1 {x + w},{y + rx} L{x + w},{y + hb} Z" fill="{color}"/>', capa="fondo")
@@ -305,7 +346,7 @@ def fig_rbs():
         for k, r in enumerate(rs):
             col, fil = k % 2, k // 2
             alta = r[4] * r[5] >= 12
-            x0, yc = 42 + col * 186, y + 33 + fil * 18
+            x0, yc = 42 + col * 186, y + 30 + fil * 16
             f.rect(x0, yc - 7, 180, 14, relleno=_tinte(color), borde=color, grosor=0.6, rx=3, capa="frente")
             f.texto(x0 + 90, yc + 3, f"{r[0]}  {r[2]}", 9, 600 if alta else 400, "middle", capa=f.frente,
                     revisar=False)
@@ -333,8 +374,8 @@ def fig_mapa():
                 ids = [r[0] for r in R if r[ip] == p and r[ii] == i]
                 for j, rid in enumerate(ids):
                     rid = rid[2:]
-                    cx = xx + 13 + (j % 3) * 18
-                    cy = yy + 12 + (j // 3) * 11
+                    cx = xx + 10 + (j % 4) * 14
+                    cy = yy + 12 + (j // 4) * 11
                     f.texto(cx, cy, rid, 9, 600 if p * i >= 12 else 400, "middle")
         for i in range(1, 6):
             f.texto(gx + (i - 1) * cw + cw / 2, gy + 5 * ch + 12, str(i), 9, 400, "middle")

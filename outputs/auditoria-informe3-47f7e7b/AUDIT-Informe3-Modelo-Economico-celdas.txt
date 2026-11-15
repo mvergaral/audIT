@@ -1,0 +1,78 @@
+
+HOJA Parámetros D2
+
+A1: Parámetro | B1: Valor | C1: Criterio
+A2: Margen objetivo | B2: 0.185 | C2: AUD-20. Precio de escenario calculado desde los costos.
+A3: Comisión correcto funcionamiento | B3: 0.0015 | C3: E-24 y Art. 37. 5 % × 1,5 % anual × 2 años.
+A4: Capital inicial | B4: 274452748 | C4: Escenario publicado. Editar para simular otra disponibilidad.
+A5: Fracción bancaria | B5: 0.8 | C5: E-24. El resto corresponde a aporte propio.
+A6: Tasa bancaria mensual | B6: 0.009 | C6: E-24
+A7: Tasa de línea mensual | B7: 0.03 | C7: E-24
+A8: Tope línea | B8: 50000000 | C8: E-24
+A9: Costo capital propio anual | B9: 0.2 | C9: Supuesto del costo de capital propio. El 20 % efectivo anual se convierte a mensual antes de ponderar.
+A10: Tasa de descuento mensual | B10: =B5*B6+(1-B5)*((1+B9)^(1/B18)-1) | C10: Ponderación banco y socios.
+A11: IVA | B11: 0.19 | C11: E-24. Aplicar solo a bases identificadas.
+A12: Activar IVA de caja (0/1) | B12: 1 | C12: Escenario conservador D1. IVA referencial LTE/ExpressRoute en mes de servicio, sin crédito fiscal.
+A13: Mes de cobro H5 | B13: 12 | C13: Mover a 13 para sensibilidad. Su facturación contractual sigue en M12.
+A14: Precio implementación | B14: =SUM(Costos!I2:I21)/(1-B2-B3) | C14: Costo M1–M20 más comisión de correcto funcionamiento.
+A15: Mensualidad operación | B15: =SUM(Costos!I22:I57)/(1-B2)/B16 | C15: Costo M21–M56 dividido en 36 mensualidades, con margen.
+A16: Meses operación | B16: 36 | C16: E-25
+A17: Inicio operación | B17: 21 | C17: E-25. Coincide con H12.
+A18: Meses por año | B18: 12 | C18: Conversión efectiva de tasas.
+A19: USD en CLP | B19: 900
+A20: EUR en CLP | B20: 1000
+A21: UF en CLP | B21: 40000
+A22: Reserva D4 | B22: 152699775
+A23: Mes de desembolso de reserva en sensibilidad | B23: 12
+A24: Shock de costo | B24: 0.05
+A25: Shock de ingreso | B25: -0.05
+A26: IVA adicional calibración por mes | B26: 114000
+A27: Capital inicial adicional en escenario H5 y reserva | B27: 400000000 | C27: Supuesto aprobado por D1. 80 % banco y 20 % socios en M1. Disponibilidad y comisiones pendientes.
+A28: Seriedad de oferta, escenario preoperacional | B28: 2812500
+A29: Cierre de coberturas M56 | B29: 13800000
+A30: Activar reserva en estrés combinado | B30: 1
+A31: Primer mes de atraso de H5 en estrés | B31: 13
+A32: Desfase de cobro de operación | B32: 1 | C32: E-25. Mes siguiente al servicio vencido.
+A33: Comisión incremental del crédito de estrés | B33: 0 | C33: CLP. Se modela en cero hasta confirmar el instrumento.
+A34: Mes de pago de la comisión en estrés | B34: 1 | C34: Mes provisional. Confirmar con el instrumento.
+
+HOJA Indicadores
+
+A1: Control o indicador | B1: Resultado | C1: Criterio
+A2: VAN | B2: =NPV('Parámetros D2'!B10,'Flujo de Caja'!H2:H57) | C2: Fila A M1–M56. M0 = 0.
+A3: TIR mensual | B3: =IRR('Flujo de Caja'!H2:H57,0.8) | C3: Fila A M1–M56. Caso base consolidado.
+A4: VAN con M57 | B4: =NPV('Parámetros D2'!B10,'Flujo de Caja'!H2:H58) | C4: Sensibilidad con cobro neto efectivo en M57.
+A5: Mayor uso de línea | B5: =MAX('Flujo de Caja'!T2:T57) | C5: Debe respetar el tope E-24.
+A6: Caja mínima | B6: =MIN('Flujo de Caja'!W2:W57) | C6: Valor negativo indica déficit sin cubrir.
+A7: IDs duplicados | B7: <openpyxl.worksheet.formula.ArrayFormula object at 0x78f68dd5bf80> | C7: Cero es el resultado esperado.
+A8: Cobro M57 | B8: ='Flujo de Caja'!F58 | C8: Reconciliación posterior al horizonte.
+A9: Estado | B9: Avance consolidado | C9: Ver decisiones y respaldos pendientes en Resumen Ejecutivo.
+A10: Margen sobre ventas | B10: =1-SUM(Costos!K2:K57)/SUM(Ingresos!E2:E57) | C10: La plantilla conserva utilidad sobre costo en RESUMEN.
+A11: TIR anual efectiva | B11: =(1+B3)^'Parámetros D2'!B18-1 | C11: Equivalencia matemática para respaldo técnico.
+A12: Venta neta de equilibrio nominal | B12: =SUM(Costos!K2:K57) | C12: Costos netos del escenario fijados. Umbral EBITDA cero sin intereses ni IVA.
+A13: Venta neta de equilibrio VAN cero | B13: =NPV('Parámetros D2'!B10,Costos!K2:K57)/NPV('Parámetros D2'!B10,Ingresos!F2:F57)*SUM(Ingresos!E2:E57) | C13: Escala de cobros constante y calendario base. Se conserva M57 fuera del VAN base.
+A14: Recuperación descontada sostenida | B14: <openpyxl.worksheet.formula.ArrayFormula object at 0x78f68dd5c7a0> | C14: Primer mes tras el último saldo descontado acumulado negativo.
+
+HOJA Resumen Ejecutivo
+
+A1: audIT · Transportes Curimón · Informe 3 | B1: Avance económico
+A2: Costo neto CLP | B2: =RESUMEN!C8
+A3: Venta neta CLP | B3: =RESUMEN!H8
+A4: Margen sobre ventas | B4: =Indicadores!B10
+A5: VAN M0–M56 CLP | B5: =Indicadores!B2
+A6: TIR mensual | B6: =Indicadores!B3
+A7: Déficit H5 en M13 CLP | B7: =Sensibilidad!F5
+A8: Déficit estrés combinado CLP | B8: =Sensibilidad!F6
+
+A10: Versión de insumos | B10: OFERTA_D2 · c601503. Corte GitHub 8c950fa.
+A11: Financiamiento | B11: Estrés modelado con CLP 400 millones adicionales. Disponibilidad, giros y comisiones por confirmar.
+A12: Margen de la plantilla | B12: Rentabilidad Nominal en RESUMEN divide utilidad por costo.
+A13: Filas B29 y B30 de RESUMEN | B13: La plantilla invierte las referencias costo/venta. Para el cotejo usar C8 y H8.
+A14: IVA | B14: Base conserva el criterio publicado. Confirmar IVA y crédito fiscal por proveedor.
+A15: Innovaciones | B15: Completar atribución, beneficio neto de Curimón y cobertura de horas con cada responsable.
+A16: Administración | B16: Confirmar overhead incremental, bases asegurables y partidas de garantías.
+A17: Capacidad | B17: D2 debe acreditar capacidad efectiva y refuerzos. PCU pendiente de conciliación.
+A18: Cuadro maestro y conciliación IVA | B18: Ver costos, ventas y márgenes por fase y componente. El puente de IVA distingue referencia, pago y crédito.
+A19: Ajustes de operación | B19: Registrar variable y descuento en el mes de servicio. M56 se cobra en M57.
+A20: Caja mínima del estrés CLP | B20: =Sensibilidad!D6
+A21: Holgura frente a la meta CLP | B21: =Sensibilidad!C9
