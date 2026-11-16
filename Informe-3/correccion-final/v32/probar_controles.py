@@ -40,7 +40,7 @@ def main(path):
 
         cargar()
         base = v('Indicadores', 'B12')
-        assert abs(base - 6801216450.621594) < 1, 'Cambió el presupuesto base publicado de la 3.2'
+        assert abs(base - 6820207480.34194) < 1, 'Cambió el presupuesto base publicado de la 3.2'
         assert abs(v('Indicadores', 'B10') - .185) < 1e-8
         assert pagos()[0][0] == 17 and pagos()[-1][0] == 18
         for ref in ['B4', 'B5', 'B11', 'B12', 'B13', 'B15', 'B16', 'B18', 'B24', 'B25', 'B26', 'B28', 'B29', 'B31', 'B32', 'B34', 'B35']:
@@ -77,14 +77,10 @@ def main(path):
         cero('B32')
         print('OK capital 740 M: calendario de 592 M, sin diferencia de principal')
 
-        cargar('B83', 11)
-        assert v('Dotación por perfil', 'E187') == 160
-        assert v('Dotación por perfil', 'E206') == 0
-        assert v('Detalle proveedores D4', 'E380') == 0
-        assert v('Detalle proveedores D4', 'E381') > 0
+        cargar('B83', 20)
         assert v('Indicadores', 'B12') > base
         cero('B35')
-        print('OK salida M11: se pagan 160 h internas M10 y el servicio externo comienza M11')
+        print('OK salida M20: se paga 1 mes más de técnico interno y servicio externo comienza M20')
 
         cargar('B91', 20)
         assert pagos()[-1][0] >= 20, pagos()

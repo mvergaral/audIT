@@ -54,16 +54,16 @@ def main(entrada, salida):
     # Nuevos parámetros de la 3.2 (filas 78-87).
     nuevos = [
         ('Horas internas de campo en operación', 80,
-         'Supuesto 3.2: 0,5 FTE para recepción en terminal, stock y coordinación del proveedor; '
-         'el resto del ciclo de vida se externaliza por visita.'),
+         'Supuesto 3.2: 0,5 FTE interno (80 h) para supervisión, recepción en terminal, stock y coordinación de urgencias SLA 4h; '
+         'el resto del ciclo de vida se externaliza por visita y rondas.'),
         ('Reposiciones a bordo del contrato (unidades)', 19, 'D4 4.1: iWave G26I, 172 más 19 de reposición.'),
         ('Reposiciones de balizas del contrato (unidades)', 21, 'D4 4.1: Teltonika EYE, 210 más 21 de reposición.'),
-        ('Visitas correctivas sin reemplazo por mes', 2,
-         'Supuesto 3.2: diagnóstico, reinstalación y crecimiento de flota; no es medición.'),
+        ('Visitas correctivas sin reemplazo por mes', 3,
+         'Supuesto 3.2: 3 visitas/mes para diagnóstico, correctivas presenciales SLA 4h, crecimiento M24/M36/M48 y renovación M36.'),
         ('Rondas regionales del proveedor por mes', 2,
-         'Supuesto 3.2: agrupa atenciones de terminales regionales; traslado según B10.'),
-        ('Mes de salida del técnico de campo interno', 10,
-         'Termina el montaje M9 (B42); desde M10 las atenciones de campo son externas.'),
+         'Supuesto 3.2: 2 rondas regionales por mes; incluye revisiones preventivas periódicas en terminales y traslados según B10.'),
+        ('Mes de salida del técnico de campo interno', 19,
+         'Cubre montaje de etapas 1 y 2 (M7-M9 y M16-M18 según T-14 y S4); desde M19 campo 100% externo por visita.'),
         ('Amortización por calendario (1) o saldo sobre piso desde B5 (0)', 1,
          'Base 3.2: cuotas de la hoja Amortización, pagadas tras los cobros de hitos y sujetas al piso B3.'),
         ('Refuerzo SRE por puesta en producción (h)', 160,
