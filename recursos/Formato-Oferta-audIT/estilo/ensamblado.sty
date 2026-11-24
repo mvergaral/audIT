@@ -115,13 +115,12 @@
     \audit_archivo_obs:
     \tl_if_empty:NF \l_audit_obs_archivo_tl
       {
-        % Sin archivo, la tabla sale vacía con sus columnas en el documento
-        % que lleva la tabla completa (el Artículo 46 es obligatorio desde el
-        % Informe 2 y no puede faltar sin que se note). Un PDF de un solo
-        % subdocumento no la lleva.
+        % La tabla del Artículo 46 queda sólo en el anexo consolidado de
+        % resolución de observaciones y en el documento económico; un PDF de
+        % un solo subdocumento o formulario no la lleva.
         \bool_lazy_or:nnT
-          { \file_if_exist_p:V \l_audit_obs_archivo_tl }
-          { \tl_if_empty_p:n {#1} || \str_if_eq_p:nn {#1} { E } }
+          { \tl_if_empty_p:n {#1} }
+          { \str_if_eq_p:nn {#1} { E } }
           { \audit_observaciones:n {#1} }
       }
   }
