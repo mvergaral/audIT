@@ -1,0 +1,97 @@
+{
+  "fecha": "2026-11-24",
+  "rama_remota": "a59b9d2a809184b136396e4a61617ebe70f52821",
+  "sha256_planilla": "7976df5e54cad827b688e9c35a9918631e984b961526f5901a5a25c55fd3247e",
+  "horas_implementacion": 99626.66666666666,
+  "horas_operacion": 84606,
+  "brecha_implementacion": 5866.666666666657,
+  "brecha_operacion": -7554,
+  "pico_FTE_equivalentes": 39.230624999999996,
+  "formulas_inspeccionadas_sin_recalcular": true,
+  "requistos_T12": 42,
+  "paquetes_T14": 54,
+  "versiones": [
+    {
+      "archivo": "recursos\\Formato-Oferta-audIT\\subdocumentos\\03-solucion\\contenido.tex",
+      "version": "main",
+      "igual_al_remoto": false
+    },
+    {
+      "archivo": "recursos\\Formato-Oferta-audIT\\subdocumentos\\03-solucion\\contenido.tex",
+      "version": "worktree",
+      "igual_al_remoto": false
+    },
+    {
+      "archivo": "recursos\\Formato-Oferta-audIT\\subdocumentos\\03-solucion\\formularios\\T-12.tex",
+      "version": "main",
+      "igual_al_remoto": true
+    },
+    {
+      "archivo": "recursos\\Formato-Oferta-audIT\\subdocumentos\\03-solucion\\formularios\\T-12.tex",
+      "version": "worktree",
+      "igual_al_remoto": true
+    },
+    {
+      "archivo": "recursos\\Formato-Oferta-audIT\\subdocumentos\\07-plan-trabajo\\contenido.tex",
+      "version": "main",
+      "igual_al_remoto": true
+    },
+    {
+      "archivo": "recursos\\Formato-Oferta-audIT\\subdocumentos\\07-plan-trabajo\\contenido.tex",
+      "version": "worktree",
+      "igual_al_remoto": false
+    },
+    {
+      "archivo": "recursos\\Formato-Oferta-audIT\\subdocumentos\\07-plan-trabajo\\formularios\\T-14.tex",
+      "version": "main",
+      "igual_al_remoto": true
+    },
+    {
+      "archivo": "recursos\\Formato-Oferta-audIT\\subdocumentos\\07-plan-trabajo\\formularios\\T-14.tex",
+      "version": "worktree",
+      "igual_al_remoto": false
+    },
+    {
+      "archivo": "recursos\\Formato-Oferta-audIT\\subdocumentos\\07-plan-trabajo\\formularios\\T-15.tex",
+      "version": "main",
+      "igual_al_remoto": true
+    },
+    {
+      "archivo": "recursos\\Formato-Oferta-audIT\\subdocumentos\\07-plan-trabajo\\formularios\\T-15.tex",
+      "version": "worktree",
+      "igual_al_remoto": false
+    },
+    {
+      "archivo": "recursos\\Formato-Oferta-audIT\\subdocumentos\\07-plan-trabajo\\formularios\\T-18.tex",
+      "version": "main",
+      "igual_al_remoto": true
+    },
+    {
+      "archivo": "recursos\\Formato-Oferta-audIT\\subdocumentos\\07-plan-trabajo\\formularios\\T-18.tex",
+      "version": "worktree",
+      "igual_al_remoto": false
+    }
+  ],
+  "estados_art46_D2": {
+    "ALC-01": "Pendiente",
+    "ALC-02": "Parcial",
+    "ALC-03": "Pendiente",
+    "ALC-04": "Pendiente",
+    "ALC-05": "Pendiente",
+    "ALC-06": "Pendiente",
+    "PLA-01": "Parcial",
+    "PLA-02": "Incorporada",
+    "PLA-03": "Parcial",
+    "PLA-04": "Pendiente",
+    "PLA-05": "Pendiente",
+    "PLA-06": "Pendiente",
+    "PLA-07": "Parcial",
+    "PLA-08": "Pendiente",
+    "PLA-09": "Incorporada",
+    "PLA-10": "Pendiente",
+    "PLA-11": "Parcial",
+    "PLA-12": "Pendiente",
+    "PLA-13": "Pendiente",
+    "PLA-14": "Pendiente"
+  }
+}
