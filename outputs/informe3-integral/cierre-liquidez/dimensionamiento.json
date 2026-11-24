@@ -1,0 +1,288 @@
+{
+  "sha": "c9a6515652c3357ea684bf0bb9338b7c4ec028fd",
+  "caja_objetivo_clp": 10000000,
+  "h5_neto_clp": 461880281.499693,
+  "h5_factura_provisional": "2028-01-31",
+  "vencimiento_15": "2028-02-15",
+  "vencimiento_30": "2028-03-01",
+  "reserva_clp": 152699775,
+  "horas_compra_clp": {
+    "6": 576000,
+    "7": 608000,
+    "8": 432000,
+    "9": 400000
+  },
+  "comision_estrés_clp": 250000,
+  "iva_calibracion_clp": {
+    "13": 114000,
+    "14": 114000,
+    "15": 114000
+  },
+  "m14_solo_atraso_van_clp": 1226784191.910173,
+  "m14_solo_atraso_tir": 0.826293836103541,
+  "referencia_refuerzo_400": {
+    "m13_caja_m12": 8957064.607325375,
+    "m14_caja_m13": -8989379.170899414
+  },
+  "escenarios": {
+    "base_profesor": {
+      "mes_cobro_h5": 12,
+      "mes_reserva": null,
+      "tramos_clp": {
+        "1": 332814380
+      },
+      "capital_total_clp": 332814380,
+      "banco_clp": 266251504.0,
+      "socios_clp": 66562876.0,
+      "caja_minima_clp": 10000002.461231828,
+      "mes_minimo": 9,
+      "caja_m9_clp": 10000002.461231828,
+      "caja_m12_clp": 398979765.33755934,
+      "caja_m13_clp": 333607117.8089345,
+      "caja_m14_clp": 337498697.0227805,
+      "peor_caja_antes_de_cobros_clp": -195062682.0747682,
+      "mes_peor_orden": 10,
+      "intereses_clp": 47925270.72,
+      "comisiones_clp": 0,
+      "amortizacion_cobro_h5_clp": 0,
+      "saldo_puente_tras_h5_clp": 0.0,
+      "pagos_puente_clp": {},
+      "amortizacion_banco_clp": 266251504.0
+    },
+    "tesoreria_h5_m13": {
+      "mes_cobro_h5": 13,
+      "mes_reserva": null,
+      "tramos_clp": {
+        "1": 332814380,
+        "12": 160657770
+      },
+      "capital_total_clp": 493472150,
+      "banco_clp": 394777720.0,
+      "socios_clp": 98694430.0,
+      "caja_minima_clp": 10000000.352924705,
+      "mes_minimo": 12,
+      "caja_m9_clp": 10000002.461231828,
+      "caja_m12_clp": 10000000.352924705,
+      "caja_m13_clp": 364581935.86493456,
+      "caja_m14_clp": 368473515.0787806,
+      "peor_caja_antes_de_cobros_clp": -331348150.6120169,
+      "mes_peor_orden": 13,
+      "intereses_clp": 49082006.664,
+      "comisiones_clp": 0,
+      "amortizacion_cobro_h5_clp": 128526216.0,
+      "saldo_puente_tras_h5_clp": 0.0,
+      "pagos_puente_clp": {
+        "13": 128526216.0
+      },
+      "amortizacion_banco_clp": 266251504.0
+    },
+    "h5_m13_reserva_m12_tramos_repago_m16": {
+      "mes_cobro_h5": 13,
+      "mes_reserva": 12,
+      "tramos_clp": {
+        "1": 332814380,
+        "9": 2016000,
+        "12": 313651095
+      },
+      "capital_total_clp": 648481475,
+      "banco_clp": 518785180.0,
+      "socios_clp": 129696295.0,
+      "caja_minima_clp": 10000002.461231828,
+      "mes_minimo": 9,
+      "caja_m9_clp": 10000002.461231828,
+      "caja_m12_clp": 10000004.75292474,
+      "caja_m13_clp": 491878089.1249346,
+      "caja_m14_clp": 493382865.2547806,
+      "peor_caja_antes_de_cobros_clp": -332578213.35201687,
+      "mes_peor_orden": 13,
+      "intereses_clp": 57060028.655999996,
+      "comisiones_clp": 250000,
+      "amortizacion_cobro_h5_clp": 0,
+      "saldo_puente_tras_h5_clp": 252533676.0,
+      "pagos_puente_clp": {
+        "16": 252533676.0
+      },
+      "amortizacion_banco_clp": 266251504.0
+    },
+    "h5_m14_reserva_m12_tramos_repago_m16": {
+      "mes_cobro_h5": 14,
+      "mes_reserva": 12,
+      "tramos_clp": {
+        "1": 332814380,
+        "9": 2016000,
+        "12": 381901950
+      },
+      "capital_total_clp": 716732330,
+      "banco_clp": 573385864.0,
+      "socios_clp": 143346466.0,
+      "caja_minima_clp": 10000002.461231828,
+      "mes_minimo": 9,
+      "caja_m9_clp": 10000002.461231828,
+      "caja_m12_clp": 78250859.75292474,
+      "caja_m13_clp": 10000002.984299928,
+      "caja_m14_clp": 560650907.9427806,
+      "peor_caja_antes_de_cobros_clp": -264818764.50801688,
+      "mes_peor_orden": 13,
+      "intereses_clp": 59025653.279999994,
+      "comisiones_clp": 250000,
+      "amortizacion_cobro_h5_clp": 0,
+      "saldo_puente_tras_h5_clp": 307134360.0,
+      "pagos_puente_clp": {
+        "16": 307134360.0
+      },
+      "amortizacion_banco_clp": 266251504.0
+    },
+    "h5_m14_reserva_m9_tramos_repago_m16": {
+      "mes_cobro_h5": 14,
+      "mes_reserva": 9,
+      "tramos_clp": {
+        "1": 332814380,
+        "9": 154715775,
+        "12": 232524410
+      },
+      "capital_total_clp": 720054565,
+      "banco_clp": 576043652.0,
+      "socios_clp": 144010913.0,
+      "caja_minima_clp": 10000002.461231828,
+      "mes_minimo": 9,
+      "caja_m9_clp": 10000002.461231828,
+      "caja_m12_clp": 78274779.61292475,
+      "caja_m13_clp": 10000002.752299994,
+      "caja_m14_clp": 560626987.6187807,
+      "peor_caja_antes_de_cobros_clp": -264818764.74001682,
+      "mes_peor_orden": 13,
+      "intereses_clp": 62419648.787999995,
+      "comisiones_clp": 250000,
+      "amortizacion_cobro_h5_clp": 0,
+      "saldo_puente_tras_h5_clp": 309792148.0,
+      "pagos_puente_clp": {
+        "16": 309792148.0
+      },
+      "amortizacion_banco_clp": 266251504.0
+    },
+    "h5_m14_reserva_m12_tramos_repago_h5": {
+      "mes_cobro_h5": 14,
+      "mes_reserva": 12,
+      "tramos_clp": {
+        "1": 332814380,
+        "9": 2016000,
+        "12": 530202815
+      },
+      "capital_total_clp": 865033195,
+      "banco_clp": 692026556.0,
+      "socios_clp": 173006639.0,
+      "caja_minima_clp": 10000000.20830971,
+      "mes_minimo": 15,
+      "caja_m9_clp": 10000002.461231828,
+      "caja_m12_clp": 226551724.75292468,
+      "caja_m13_clp": 157233101.75629988,
+      "caja_m14_clp": 281041188.4867805,
+      "peor_caja_antes_de_cobros_clp": -217190451.3276903,
+      "mes_peor_orden": 16,
+      "intereses_clp": 55632767.256,
+      "comisiones_clp": 250000,
+      "amortizacion_cobro_h5_clp": 425775052.0,
+      "saldo_puente_tras_h5_clp": 0.0,
+      "pagos_puente_clp": {
+        "14": 425775052.0
+      },
+      "amortizacion_banco_clp": 266251504.0
+    },
+    "h5_m13_reserva_m12_todo_m1": {
+      "mes_cobro_h5": 13,
+      "mes_reserva": 12,
+      "tramos_clp": {
+        "1": 675585390
+      },
+      "capital_total_clp": 675585390,
+      "banco_clp": 540468312.0,
+      "socios_clp": 135117078.0,
+      "caja_minima_clp": 10000001.3609249,
+      "mes_minimo": 12,
+      "caja_m9_clp": 331011402.28523207,
+      "caja_m12_clp": 10000001.3609249,
+      "caja_m13_clp": 491682937.54493475,
+      "caja_m14_clp": 492992565.4867807,
+      "peor_caja_antes_de_cobros_clp": -332773364.93201673,
+      "mes_peor_orden": 13,
+      "intereses_clp": 97284296.15999998,
+      "comisiones_clp": 250000,
+      "amortizacion_cobro_h5_clp": 0,
+      "saldo_puente_tras_h5_clp": 0.0,
+      "pagos_puente_clp": {},
+      "amortizacion_banco_clp": 540468312.0
+    },
+    "h5_m14_reserva_m12_todo_m1": {
+      "mes_cobro_h5": 14,
+      "mes_reserva": 12,
+      "tramos_clp": {
+        "1": 749966520
+      },
+      "capital_total_clp": 749966520,
+      "banco_clp": 599973216.0,
+      "socios_clp": 149993304.0,
+      "caja_minima_clp": 10000002.928300053,
+      "mes_minimo": 13,
+      "caja_m9_clp": 401108179.1972319,
+      "caja_m12_clp": 78490145.86492485,
+      "caja_m13_clp": 10000002.928300053,
+      "caja_m14_clp": 560411621.7187808,
+      "peor_caja_antes_de_cobros_clp": -264818764.56401676,
+      "mes_peor_orden": 13,
+      "intereses_clp": 107995178.87999998,
+      "comisiones_clp": 250000,
+      "amortizacion_cobro_h5_clp": 0,
+      "saldo_puente_tras_h5_clp": 0.0,
+      "pagos_puente_clp": {},
+      "amortizacion_banco_clp": 599973216.0
+    },
+    "h5_m14_reserva_m9_todo_m1": {
+      "mes_cobro_h5": 14,
+      "mes_reserva": 9,
+      "tramos_clp": {
+        "1": 749966520
+      },
+      "capital_total_clp": 749966520,
+      "banco_clp": 599973216.0,
+      "socios_clp": 149993304.0,
+      "caja_minima_clp": 10000002.928299934,
+      "mes_minimo": 13,
+      "caja_m9_clp": 248408404.1972319,
+      "caja_m12_clp": 78490145.86492473,
+      "caja_m13_clp": 10000002.928299934,
+      "caja_m14_clp": 560411621.7187806,
+      "peor_caja_antes_de_cobros_clp": -264818764.56401688,
+      "mes_peor_orden": 13,
+      "intereses_clp": 107995178.87999998,
+      "comisiones_clp": 250000,
+      "amortizacion_cobro_h5_clp": 0,
+      "saldo_puente_tras_h5_clp": 0.0,
+      "pagos_puente_clp": {},
+      "amortizacion_banco_clp": 599973216.0
+    },
+    "h5_m14_reserva_m12_cota_orden_todo_m1": {
+      "mes_cobro_h5": 14,
+      "mes_reserva": 12,
+      "tramos_clp": {
+        "1": 1052310610
+      },
+      "capital_total_clp": 1052310610,
+      "banco_clp": 841848488.0,
+      "socios_clp": 210462122.0,
+      "caja_minima_clp": 286221563.5523002,
+      "mes_minimo": 13,
+      "caja_m9_clp": 686037249.6132321,
+      "caja_m12_clp": 356888583.93692505,
+      "caja_m13_clp": 286221563.5523002,
+      "caja_m14_clp": 834456304.8947809,
+      "peor_caja_antes_de_cobros_clp": 10000002.417829394,
+      "mes_peor_orden": 14,
+      "intereses_clp": 151532727.83999997,
+      "comisiones_clp": 250000,
+      "amortizacion_cobro_h5_clp": 0,
+      "saldo_puente_tras_h5_clp": 0.0,
+      "pagos_puente_clp": {},
+      "amortizacion_banco_clp": 841848488.0
+    }
+  }
+}

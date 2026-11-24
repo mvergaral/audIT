@@ -26,6 +26,7 @@ Investigacion/*.pdf
 **/salida/aux/
 **/salida/migracion/
 .venv/
+Informe-3/correccion-final/build/node_modules
 **/herramientas/.venv/
 *.aux
 *.fls
@@ -57,3 +58,5 @@ Investigacion/*.pdf
 /.codex-cache/
 /tmp/
 /debug.log
+**/salida/informe3-economica/
+outputs/3.2/trabajo/

@@ -1,0 +1,5 @@
+﻿Prueba simulada;Respuesta min;Diagnóstico min;Recuperación min;Total min;Resultado
+Dos críticas simultáneas;15;30;180;225;Cumple tiempo simulado
+Tres críticas con suplente al minuto 10;15;30;180;225;Cumple tiempo simulado
+Tres críticas sin suplente;20;30;180;230;Incumple
+Proveedor tarda 240 min desde diagnóstico;15;30;240;285;Incumple

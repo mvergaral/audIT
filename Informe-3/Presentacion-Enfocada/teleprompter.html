@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Teleprompter · Curva S y resultado</title>
+<style>
+  @font-face { font-family: AuditSans; font-weight: 100 500; src: url('assets/fonts/AuditSans-Regular.woff2'); }
+  @font-face { font-family: AuditSans; font-weight: 600 900; src: url('assets/fonts/AuditSans-Bold.woff2'); }
+  :root { --fondo:#0b1720; --texto:#f2f6f8; --tenue:#8fa6b3; --acento:#5fc3d3; --ambar:#f2b75b; --tam:56px; --ancho:1100px; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; background: var(--fondo); color: var(--texto);
+    font-family: AuditSans, "Liberation Sans", system-ui, sans-serif; overflow: hidden; }
+  #scroll { position: fixed; inset: 0; overflow-y: scroll; scrollbar-width: none; }
+  #scroll::-webkit-scrollbar { display: none; }
+  #texto { max-width: var(--ancho); margin: 0 auto; padding: 45vh 48px 80vh; font-size: var(--tam); line-height: 1.45; }
+  body.espejo #texto { transform: scaleX(-1); }
+  #texto p { margin-bottom: 0.8em; }
+  #texto ul { margin: 0 0 0.8em 1.1em; }
+  #texto li { margin-bottom: 0.5em; }
+  #texto strong { color: var(--acento); }
+  .marca { display: flex; align-items: baseline; gap: 0.5em; margin: 1.2em 0 0.7em; padding-top: 0.6em;
+    border-top: 3px solid #23404f; font-size: 0.5em; font-weight: 800; letter-spacing: .08em;
+    text-transform: uppercase; color: var(--ambar); }
+  .marca .n { font-size: 1.6em; }
+  .marca .t { margin-left: auto; color: var(--tenue); letter-spacing: 0; }
+  .fin { text-align: center; color: var(--tenue); font-size: 0.6em; margin-top: 2em; }
+  /* Línea de lectura */
+  #guia { position: fixed; left: 0; right: 0; top: 33vh; height: 0; pointer-events: none;
+    border-top: 2px solid rgba(242,183,91,.55); }
+  #guia::before, #guia::after { content: "▶"; position: absolute; top: -0.72em; font-size: 28px; color: var(--ambar); }
+  #guia::before { left: 10px; } #guia::after { right: 10px; transform: scaleX(-1); }
+  .velo { position: fixed; left: 0; right: 0; pointer-events: none; }
+  #velo-sup { top: 0; height: 22vh; background: linear-gradient(var(--fondo), transparent); }
+  #velo-inf { bottom: 0; height: 30vh; background: linear-gradient(transparent, var(--fondo)); }
+  /* Barra de estado */
+  #hud { position: fixed; left: 0; right: 0; bottom: 0; display: flex; flex-wrap: wrap; gap: 8px 22px; align-items: center;
+    padding: 10px 18px; background: rgba(5,12,17,.88); color: var(--tenue); font-size: 17px; transition: opacity .3s; }
+  #hud b { color: var(--texto); }
+  #hud.oculto { opacity: 0; }
+  #hud .estado { color: var(--ambar); font-weight: 800; }
+  #hud button { font: inherit; color: var(--texto); background: #18303d; border: 1px solid #2c4a5a; border-radius: 8px;
+    padding: 6px 12px; cursor: pointer; }
+  #hud .ayuda { margin-left: auto; font-size: 14px; }
+  #tiempo.pasado { color: #ff8f8f; }
+  @media (max-width: 700px) { #texto { padding-left: 20px; padding-right: 20px; } #hud .ayuda { display: none; } }
+</style>
+</head>
+<body>
+<div id="scroll"><div id="texto"></div></div>
+<div class="velo" id="velo-sup"></div><div class="velo" id="velo-inf"></div>
+<div id="guia"></div>
+<div id="hud">
+  <span class="estado" id="estado">EN PAUSA</span>
+  <span>Diapositiva <b id="dia">1</b></span>
+  <span>Tiempo <b id="tiempo">0:00</b> / <span id="meta">10:00</span></span>
+  <span>Velocidad <b id="vel">3</b></span>
+  <button id="b-play">▶︎ / ❚❚</button>
+  <button id="b-menos">− vel</button><button id="b-mas">+ vel</button>
+  <button id="b-ant">◀ dia</button><button id="b-sig">dia ▶</button>
+  <button id="b-modo">Versión corta</button>
+  <span class="ayuda">Espacio: iniciar · ↑↓ velocidad · ←→ diapositiva · + − letra · M espejo · C versión · R inicio · F pantalla completa</span>
+</div>
+<script>
+const DATOS = {"completa": [{"n": "1", "tema": "Portada", "t": "30 s", "html": "<p>Buenos días. Somos audIT y vamos a presentar la Curva S y el resultado económico de nuestra propuesta para Transportes Curimón.</p><p>Todo lo que vamos a mostrar sale del modelo financiero que entregamos con el Informe 3. Los montos son netos, sin IVA, en pesos chilenos, y cubren los 56 meses del contrato: implementación hasta el mes 21 y luego 36 meses de operación.</p>"}, {"n": "2", "tema": "Resultado del proyecto", "t": "2 min 30 s", "html": "<p>Partimos por el resultado.</p><p><strong>La venta neta total es de 9.797 millones de pesos.</strong> De eso, 4.619 millones corresponden a la implementación, que se cobra con los 12 hitos del Formulario E-25. Los otros 5.178 millones son la operación, que se cobra en 36 mensualidades de 143,8 millones cada una.</p><p><strong>El costo neto total es de 7.984 millones</strong>: 3.764 en implementación y 4.220 en operación. Cerca del 78 % del costo es personal. El resto es infraestructura, nube y conectividad, licencias, calidad y capacitación, garantías y seguros.</p><p>El precio lo construimos desde el costo. A cada fase le aplicamos un <strong>margen de 18,5 % sobre la venta</strong>. Ese margen es el EBITDA dividido por los ingresos netos, que es justamente la métrica del tope de 20 % de las bases. Quedamos 1,5 puntos bajo ese tope.</p><p><strong>El VAN es de 1.235 millones.</strong> Lo calculamos sobre el flujo libre del proyecto, mes a mes, del 1 al 56, sin IVA y sin intereses. La tasa de descuento es de 1,026 % mensual, que equivale a cerca de 13 % anual. Esa tasa sale de la estructura de financiamiento del Formulario E-24: 80 % crédito bancario al 0,9 % mensual y 20 % capital de socios al 20 % anual, convertido a tasa mensual compuesta.</p><p>Abajo hay tres datos de apoyo.</p><ul><li><strong>La recuperación descontada ocurre en el mes 16</strong>, que coincide con el paso a producción de la Etapa 1. Desde ahí el flujo acumulado descontado ya no vuelve a ser negativo.</li><li><strong>La venta de equilibrio es de 8.175 millones.</strong> Con esa venta el VAN sería cero. Nuestra venta está 1.622 millones por sobre ese punto.</li><li><strong>La TIR mensual es de 83,7 %.</strong> Es alta porque el primer hito, H1, se cobra en el mes 2 y aporta 370 millones cuando el proyecto lleva gastados menos de 200. Así, el proyecto se financia en gran parte con los cobros de los hitos. Por eso la TIR cambia mucho con pequeños ajustes, y <strong>para decidir usamos el VAN</strong>.</li></ul>"}, {"n": "3", "tema": "Curva S", "t": "3 min", "html": "<p>Esta es la Curva S. Tiene tres líneas acumuladas mes a mes, y todas salen directamente de la planilla.</p><p><strong>La línea azul es la facturación acumulada.</strong> En la zona sombreada, que es la implementación, sube en escalones: cada escalón es un hito del E-25. Por ejemplo, el primero es H1 en el mes 2, con 8 % de la implementación. Desde el mes 21 sube en línea recta, porque entran las mensualidades de operación. Termina en 9.797 millones.</p><p><strong>La línea roja son los costos acumulados con intereses.</strong> Es el costo de operar el proyecto más los intereses del crédito y de la línea. No incluye la devolución del capital del préstamo, porque eso no es un costo. Termina en 8.025 millones: los 7.984 de costo más unos 41 millones de intereses.</p><p><strong>La línea punteada verde es la caja financiada</strong>, es decir, el saldo de caja de cada mes después de incluir el financiamiento. Esta es la línea que muestra la liquidez.</p><p>Hay tres momentos que queremos destacar.</p><ul><li><strong>Mes 9, el valle de caja.</strong> Llevamos varios meses construyendo y el siguiente cobro grande, H4, llega recién en el mes 10. La caja llega a cero y usamos 45 millones de la línea de crédito, por debajo del tope de 50 millones del E-24. Ese es el punto de mayor necesidad de financiamiento.</li><li><strong>Mes 16, la recuperación.</strong> Con el paso a producción de la Etapa 1, el proyecto ya recuperó lo invertido en términos descontados.</li><li><strong>Mes 21, inicio de la operación.</strong> Termina la implementación con H12 y empiezan las 36 mensualidades. Desde aquí la facturación queda por sobre los costos y la caja crece de forma estable hasta 1.668 millones en el mes 56.</li></ul><p>En resumen: la distancia entre la línea azul y la roja al final es el margen del proyecto, y la línea verde muestra que el proyecto se puede financiar sin superar el tope de la línea de crédito.</p>"}, {"n": "4", "tema": "Lectura de la Curva S", "t": "2 min", "html": "<p>Esta lámina resume la curva en cuatro cifras.</p><p><strong>Facturación: 9.797 millones.</strong> Doce hitos en la implementación, que suman 60 % en la Etapa 1 y 40 % en la Etapa 2, y después 36 mensualidades de 143,8 millones. La operación del mes 56 se cobra en el mes 57, como indica el E-25: el pago es mes vencido. Por eso ese último cobro queda como cuenta por cobrar al cierre y no entra al VAN base.</p><p><strong>Costos con intereses: 8.025 millones.</strong> Es el costo neto más los intereses. En la planilla los intereses van en la hoja de Financiamiento, no como gasto administrativo.</p><p><strong>Valle de caja en el mes 9: cero pesos.</strong> Para cubrirlo partimos con un capital inicial de unos 274 millones, 80 % crédito y 20 % socios, y usamos 45 millones de la línea de crédito. Desde el mes 21 el crédito se amortiza con la caja disponible.</p><p><strong>Caja al cierre: 1.668 millones.</strong> Desde que empieza la operación, la caja no vuelve a bajar de cero.</p>"}, {"n": "5", "tema": "Sensibilidad", "t": "2 min", "html": "<p>Por último, revisamos qué tan firme es el resultado.</p><ul><li><strong>Costos 5 % más altos, con el mismo precio:</strong> el VAN baja a 924 millones.</li><li><strong>Cobros 5 % más bajos:</strong> el VAN baja a 862 millones.</li><li><strong>H5 se cobra un mes tarde, en el mes 13 en vez del 12:</strong> el VAN casi no cambia, 1.231 millones.</li></ul><p>En los tres casos el VAN sigue positivo.</p><p>Fíjense también en la TIR: en los dos primeros escenarios baja de 84 % a cerca de 17 %. Eso confirma lo que dijimos antes: la TIR es muy sensible al calendario de los primeros meses, y el VAN es el indicador que usamos para decidir.</p><p>Lo que sí hay que vigilar es la <strong>caja</strong> cuando se atrasa H5. Si ese cobro se corre al mes 13, en el mes 12 nos faltan 156 millones aunque usemos la línea completa. Si además en ese mes ocupamos la reserva de infraestructura, el déficit sube a 308 millones.</p><p>Para cubrir ese escenario modelamos un refuerzo de 400 millones desde el mes 1, 320 de crédito y 80 de socios. Con eso, la caja mínima en el mes 12 queda en 11,2 millones, sobre la meta de 10 millones que fijamos. La disponibilidad de ese financiamiento y sus condiciones están por confirmar con el banco y los socios.</p><p>Con esto cerramos. Quedamos atentos a sus preguntas.</p>"}], "corta": [{"n": "2", "tema": "Resultado", "t": "", "html": "<p><strong>Resultado.</strong> Vendemos 9.797 millones netos y el costo es de 7.984 millones, con un margen de 18,5 % sobre la venta, bajo el tope de 20 %. El VAN es de 1.235 millones con una tasa de 1,026 % mensual, que pondera 80 % crédito al 0,9 % mensual y 20 % socios al 20 % anual. Recuperamos lo invertido, en términos descontados, en el mes 16.</p>"}, {"n": "3", "tema": "Curva S", "t": "", "html": "<p><strong>Curva S.</strong> La azul es la facturación: sube en escalones con los 12 hitos y desde el mes 21 en línea recta con las 36 mensualidades. La roja son los costos con intereses: terminan en 8.025 millones. La verde es la caja financiada. Su punto más bajo es el mes 9: llega a cero y usamos 45 millones de la línea, bajo el tope de 50. Desde el mes 21 la caja crece sin interrupciones hasta 1.668 millones.</p><p><strong>Riesgo.</strong> Si H5 se atrasa un mes, el VAN casi no cambia, pero la caja necesita un refuerzo de 400 millones, que ya está modelado.</p>"}]};
+const $ = (id) => document.getElementById(id);
+const scroller = $('scroll'), texto = $('texto');
+// Preferencias del lector (solo en este navegador)
+const pref = (() => { try { return JSON.parse(localStorage.getItem('prompter') || '{}'); } catch (e) { return {}; } })();
+const guardar = () => { try { localStorage.setItem('prompter', JSON.stringify(pref)); } catch (e) {} };
+let vel = pref.vel || 3, tam = pref.tam || 56, modo = 'completa';
+let corriendo = false, ultimo = null, transcurrido = 0, resto = 0, temporizador = null;
+
+function render() {
+  const secs = DATOS[modo];
+  texto.innerHTML = secs.map((s) =>
+    `<section data-n="${s.n}"><div class="marca"><span class="n">${s.n}</span><span>${s.tema}</span>` +
+    `<span class="t">${s.t}</span></div>${s.html}</section>`).join('') +
+    '<div class="fin">— Fin · Quedamos atentos a sus preguntas —</div>';
+  $('meta').textContent = modo === 'completa' ? '10:00' : '2:00';
+  $('b-modo').textContent = modo === 'completa' ? 'Versión corta' : 'Versión completa';
+  scroller.scrollTop = 0; transcurrido = 0; pintarTiempo(); actualizarDia();
+}
+function aplicar() {
+  document.documentElement.style.setProperty('--tam', tam + 'px');
+  $('vel').textContent = vel; pref.vel = vel; pref.tam = tam; guardar();
+}
+// Velocidad 1–10. Con letra de 56 px en pantalla de 1920, la velocidad 3 lee el guion completo en ~10 min.
+const pxs = () => (8 + vel * 6.5) * tam / 56;
+function paso(t) {
+  if (!corriendo) return;
+  if (ultimo !== null) {
+    resto += pxs() * (t - ultimo) / 1000;
+    const entero = Math.floor(resto);
+    if (entero) { scroller.scrollTop += entero; resto -= entero; }
+  }
+  ultimo = t;
+  requestAnimationFrame(paso);
+}
+function alternar() {
+  corriendo = !corriendo; ultimo = null;
+  $('estado').textContent = corriendo ? 'LEYENDO' : 'EN PAUSA';
+  if (corriendo) {
+    requestAnimationFrame(paso);
+    temporizador = setInterval(() => { transcurrido++; pintarTiempo(); }, 1000);
+  } else clearInterval(temporizador);
+}
+function pintarTiempo() {
+  const m = Math.floor(transcurrido / 60), s = String(transcurrido % 60).padStart(2, '0');
+  $('tiempo').textContent = `${m}:${s}`;
+  $('tiempo').classList.toggle('pasado', transcurrido > (modo === 'completa' ? 600 : 120));
+}
+const secciones = () => Array.from(texto.querySelectorAll('section'));
+const lineaLectura = () => scroller.scrollTop + innerHeight * 0.33;
+function actualizarDia() {
+  let actual = secciones()[0];
+  for (const s of secciones()) if (s.offsetTop <= lineaLectura() + 4) actual = s;
+  if (actual) $('dia').textContent = actual.dataset.n;
+}
+function irA(sec) { if (sec) scroller.scrollTop = sec.offsetTop - innerHeight * 0.33 + 2; }
+function saltar(delta) {
+  const ss = secciones(), y = lineaLectura();
+  let i = ss.findIndex((s) => s.offsetTop > y + 4) - 1;
+  if (i < -1) i = ss.length - 1;
+  irA(ss[Math.max(0, Math.min(ss.length - 1, i + delta))]);
+}
+scroller.addEventListener('scroll', actualizarDia);
+addEventListener('keydown', (e) => {
+  const k = e.key;
+  if (k === ' ') { e.preventDefault(); alternar(); }
+  else if (k === 'ArrowUp') { e.preventDefault(); vel = Math.min(10, vel + 1); aplicar(); }
+  else if (k === 'ArrowDown') { e.preventDefault(); vel = Math.max(1, vel - 1); aplicar(); }
+  else if (k === 'ArrowRight' || k === 'PageDown') { e.preventDefault(); saltar(1); }
+  else if (k === 'ArrowLeft' || k === 'PageUp') { e.preventDefault(); saltar(-1); }
+  else if (k === '+' || k === '=') { tam = Math.min(110, tam + 4); aplicar(); }
+  else if (k === '-') { tam = Math.max(28, tam - 4); aplicar(); }
+  else if (k === 'm' || k === 'M') document.body.classList.toggle('espejo');
+  else if (k === 'c' || k === 'C') { modo = modo === 'completa' ? 'corta' : 'completa'; render(); }
+  else if (k === 'r' || k === 'R') { scroller.scrollTop = 0; transcurrido = 0; pintarTiempo(); }
+  else if (k === 'h' || k === 'H') $('hud').classList.toggle('oculto');
+  else if (k === 'f' || k === 'F') {
+    if (!document.fullscreenElement) document.documentElement.requestFullscreen().catch(() => {});
+    else document.exitFullscreen();
+  } else if (/^[1-5]$/.test(k)) irA(secciones().find((s) => s.dataset.n === k));
+});
+$('b-play').onclick = alternar;
+$('b-mas').onclick = () => { vel = Math.min(10, vel + 1); aplicar(); };
+$('b-menos').onclick = () => { vel = Math.max(1, vel - 1); aplicar(); };
+$('b-ant').onclick = () => saltar(-1);
+$('b-sig').onclick = () => saltar(1);
+$('b-modo').onclick = () => { modo = modo === 'completa' ? 'corta' : 'completa'; render(); };
+// Tocar el texto en celular o tablet pausa y reanuda
+scroller.addEventListener('click', alternar);
+// Evita que Espacio vuelva a activar el último botón pulsado
+document.querySelectorAll('#hud button').forEach((b) => b.addEventListener('click', () => b.blur()));
+aplicar(); render();
+</script>
+</body>
+</html>

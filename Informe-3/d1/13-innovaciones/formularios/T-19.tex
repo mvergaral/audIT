@@ -7,7 +7,6 @@
 %  remisión al Sobre N.º 3 en inversión y costo operacional.
 % ============================================================================
 \begin{formulario}{T-19}
-Las fichas usan la escala de probabilidad e impacto de S8, de 1 a 5. Los valores inherentes y residuales son estimaciones de diseño por evento. El residual se revisa tras verificar el control indicado y registrar su evidencia.
 % Numeración de tablas con cualquier versión de longtable (D4-119, sobre el ajuste de la dupla 3).
 % El estilo supone que longtable avanza el contador de tablas al abrir cada tabla, como la
 % versión de 2025. Hay versiones que no lo hacen, y entonces la primera tabla sale «4.0» y su
@@ -81,9 +80,9 @@ Las fichas usan la escala de probabilidad e impacto de S8, de 1 a 5. Los valores
   beneficio = {Incentivo de adhesión que no requiere pagar al transportista. Cada adherido amplía la jornada acreditada y la evidencia de espera que sostiene los cobros. Sin ingresos atribuidos en el flujo de caja},
   indicador = {Transportistas adheridos que emitieron al menos un expediente, de no existente a 50 \% de los adheridos. Verificaciones respondidas en no más de 5 segundos, 99 \%},
   medicion = {Mes 21 para el primer indicador. Mensual desde el mes 16 para el segundo},
-  riesgo = {Utilidad percibida insuficiente (3×3=9), rechazo del expediente como prueba (3×4=12) y ausencia de consentimiento de jornada (3×4=12).},
-  mitigacion = {Emisión asistida, entrevistas a receptores en M4 y consentimiento revocable por dato. Verificar emisiones, aceptaciones y permisos en marcha blanca. Residuales previstos, en el mismo orden: 2×3=6, 2×4=8 y 1×4=4.},
-  contingencia = {Si los destinatarios no aceptan el expediente, acordar formato probatorio alternativo. Sin consentimiento se omite la jornada. Si la emisión es baja, ofrecer emisión periódica voluntaria.}
+  riesgo = {Que el transportista no perciba utilidad o los destinatarios rechacen el documento probatorio. Severidad inherente: Probabilidad Media (2) e Impacto Alto (3), Severidad $2 \times 3 = 6$ (Zona Media según escala S8)},
+  mitigacion = {Primera emisión asistida en el terminal durante el enrolamiento, entrevistas a destinatarios reales en el mes 4 antes de construir, y consentimiento opt-in de conductores. Severidad residual mitigada: Probabilidad Baja (1) e Impacto Bajo (1), Severidad Residual $1 \times 1 = 1$ (Zona Baja/Aceptable según escala S8)},
+  contingencia = {Emisión automática mensual a los transportistas que lo pidan, sin acción de su parte}
 }
 % ------------------------------------------------------------- innovación 2
 \clearpage
@@ -102,9 +101,9 @@ Las fichas usan la escala de probabilidad e impacto de S8, de 1 a 5. Los valores
   beneficio = {Reducción de preparación desperdiciada y visitas evitables. Se estima con cantidades y costos unitarios documentados, menos el costo incremental. Sin ahorro garantizado ni base inventada.},
   indicador = {Reducir preparación inútil al menos 20 \% respecto de la línea base homologada. Validación al primer intento al menos 95 \% en cohorte de 20 intervenciones elegibles. Sustitución modular en hasta 30 min, dentro de la ventana normal. Metas propuestas.},
   medicion = {Línea base y contraste con planificación manual en M6; comparación por familia y terminal en M7–M9. Registro de causas, reintentos y denominadores.},
-  riesgo = {Llegada mal estimada (3×4=12), kit incompatible (3×4=12), ahorro insuficiente (3×3=9) y baja adhesión o escaso paso por terminal (3×4=12).},
-  mitigacion = {Validar ETA y confirmar ventanas, ensayar las familias de kits y comparar con planificación manual en M6. Revisar tasas de fallos, reintentos y no presentación. Residuales previstos: 2×2=4, 2×2=4, 2×3=6 y 2×4=8.},
-  contingencia = {Si falla homologación, usar método manual y conservar la versión anterior. Si el piloto no sustenta la meta, limitar alcance o evaluar sustitución antes de escalar.}
+  riesgo = {ETA incorrecta, kit o agente incompatible, o escaso beneficio frente a coordinación manual. Severidad inherente: Probabilidad Media (2) e Impacto Alto (3), Severidad $2 \times 3 = 6$ (Zona Media según escala S8)},
+  mitigacion = {Calidad y actualidad de ETA, confirmación del jefe de terminal, matriz de familias, ensayo previo, paquete firmado y reversión validada en $<30$ min. Severidad residual mitigada: Probabilidad Baja (1) e Impacto Medio (2), Severidad Residual $1 \times 2 = 2$ (Zona Baja según escala S8)},
+  contingencia = {Abortar de forma segura y reprogramar cuando la ventana se acorte; método manual homologado y versión previa sin borrar eventos. Integración lógica de terceros sin intervención física no autorizada.}
 }
 % ------------------------------------------------------------- innovación 3
 \fichaInnovacion{
@@ -119,12 +118,12 @@ Las fichas usan la escala de probabilidad e impacto de S8, de 1 a 5. Los valores
   mes = {Instalación al paso por terminal en los meses 6 a 10 y 16 a 18, fuera de la temporada de diciembre a abril. Activación y primera medición en la marcha blanca, antes del mes 16},
   inversion = {Balizas y lectores de portería que compra el mandante (Caso, capítulo 11, p. 24) según el Formulario T-11, más la integración en tres servicios de negocio},
   costooperacional = {Reposición de balizas al término de su batería y tráfico celular menor dentro de los mensajes del G26I},
-  beneficio = {Ningún semirremolque sale con la revisión técnica vencida. Respaldo ante el cliente de la condición de la carga refrigerada. El kilometraje real se mantiene como cumplimiento del criterio 26 y se excluye de la valorización de la innovación},
-  indicador = {Asignaciones con semirremolque propio verificado por medición, de no verificado al asignar a 95 \% o más. Viajes refrigerados con temperatura continua, 100 \%. La línea base térmica se mide en Etapa 1},
-  medicion = {Verificación de acople antes de M16 con cotejo de portería y confirmación del equipo observado. Registro térmico contrastado con sonda patrón en la primera temporada de diciembre a abril},
-  riesgo = {Acople falso (3×4=12), operación bajo el límite térmico (2×3=6), suplantación del identificador (2×4=8) y batería prematura (3×3=9).},
-  mitigacion = {Contrastar acople con portería y registro observado, medir frío en M6--M7, verificar la identidad en el evento y controlar batería. Residuales previstos: 2×4=8, 1×3=3, 1×4=4 (R-22) y 2×2=4.},
-  contingencia = {Si difieren portería y equipo, exigir verificación presencial. Si se excede el rango, homologar otra baliza. Ante identidad dudosa, aislar el dato y usar control manual. Reponer batería según el inventario.}
+  beneficio = {Ningún semirremolque sale con la revisión técnica vencida. Mantención de semirremolques por kilometraje medido. Respaldo ante el cliente de la condición de la carga refrigerada},
+  indicador = {Asignaciones con semirremolque propio verificado por medición, de no verificado al asignar a 95 \% o más. Semirremolques propios con kilometraje medido, 100 \% de los que tienen baliza. Viajes refrigerados con temperatura continua, 100 \%. Las dos últimas líneas base se miden en la Etapa 1},
+  medicion = {Marcha blanca antes del mes 16. Tercer mes de operación. Primera temporada de diciembre a abril},
+  riesgo = {Acople falso con baliza vecina o exposición bajo $-20$ °C en paso cordillerano. Severidad inherente: Probabilidad Media (2) e Impacto Alto (3), Severidad $2 \times 3 = 6$ (Zona Media según escala S8)},
+  mitigacion = {Señal estable y movimiento conjunto en primeros minutos de marcha, sensor IP67 con rango industrial extendido y doble control en portería. Severidad residual mitigada: Probabilidad Baja (1) e Impacto Bajo (2), Severidad Residual $1 \times 2 = 2$ (Zona Baja según escala S8)},
+  contingencia = {La verificación vuelve a la declaración con la lectura de portería como control. Modelo de mayor rango térmico en los semirremolques que cruzan. Reposición desde la reserva del 10 \%. Modelado de amenazas STRIDE en el Subdocumento 4, sección 4.1.21 (RT-26.07)}
 }
 % ------------------------------------------------------------- innovación 4
 \fichaInnovacion{
@@ -142,9 +141,9 @@ Las fichas usan la escala de probabilidad e impacto de S8, de 1 a 5. Los valores
   beneficio = {Recupero de la espera hoy objetada en un 71 \% (Caso, numeral 4.7, p. 11), que financia el incentivo. Se valoriza en la Oferta Económica y no se compromete como ingreso},
   indicador = {Posiciones transmitidas fuera de la ventana de un viaje, cero. Transportistas adheridos con cobro respaldado que reciben su parte, 100 \%. Consentimientos revocados, menos de 10 \%},
   medicion = {Auditoría mensual desde el mes 13. Cada liquidación desde el mes 16. Mensual desde el mes 13},
-  riesgo = {Adhesión bajo meta (3×4=12, R-11), desconfianza en la ventana (3×4=12), rechazo de prueba de espera (3×3=9) e insuficiencia del anexo contractual (2×4=8).},
-  mitigacion = {Auditar convenios firmados, transmisión por ventana y liquidaciones. Validar jurídicamente el anexo. Residuales previstos: 2×4=8, 1×4=4, 2×3=6 y 1×4=4.},
-  contingencia = {Escalar si al cierre de M9 hay menos del 40\,\% de adhesión. Ante una transmisión indebida, suspender la fuente, registrar la incidencia y corregir permisos. Sin anexo aprobado, mantener el proceso vigente.}
+  riesgo = {Adhesión bajo 70 \% en Etapa 1 o reparos jurídicos a la retención de datos. Severidad inherente: Probabilidad Media (2) e Impacto Alto (4), Severidad $2 \times 4 = 8$ (Zona Media-Alta según escala S8)},
+  mitigacion = {Conversación desde el mes 2 con el beneficio a la vista antes de pedir el equipo, ventana auditable por el dueño y validación jurídica previa de anexos. Severidad residual mitigada: Probabilidad Baja (1) e Impacto Medio (2), Severidad Residual $1 \times 2 = 2$ (Zona Baja según escala S8)},
+  contingencia = {Tres medidas del Subdocumento 3 si la adhesión no llega al 40 \% en el mes 9. Financiar el incentivo con el ahorro de la liquidación automática}
 }
 % ------------------------------------------------------------- innovación 5
 \fichaInnovacion{
@@ -157,13 +156,13 @@ Las fichas usan la escala de probabilidad e impacto de S8, de 1 a 5. Los valores
   arquitectura = {Capa de borde en audIT EdgeHub con motor circadiano y síntesis de voz. Servicio de consulta pasiva en Torre 24x7 sin registro punitivo. Gobernanza de paradores compartida con Criterio 28},
   edt = {Paquete 12.5 (innovación incremental), coordinado con paquetes 4.1 (firmware) y 5.1 (Personas). La infraestructura base del catálogo se financia en el paquete base de la plataforma},
   mes = {Talleres ergonómicos participativos M4; desarrollo algorítmico M4--M9. Ensayos del prototipo integrado M10--M12. Piloto y validación con conductores en marcha blanca M13--M15; producción E1 en M16},
-  inversion = {Desarrollo incremental del motor algorítmico y síntesis vocal en audIT EdgeHub (paquetes 12.5 y 4.1 durante M4--M9), 5 talleres ergonómicos participativos en los cinco terminales oficiales de Curimón: San Bernardo, Antofagasta, Talca, Los Ángeles y Puerto Montt (M4) y calibración ergonómica y evaluación de carga mental NASA-TLX en marcha blanca (M13--M15). El levantamiento del catálogo base de paradores corresponde al Criterio 28 obligatorio. Conforme al Art. 50.2, las horas, tarifas y el presupuesto monetario consolidado se valorizan exclusivamente en la Oferta Económica (Sobre N.º 3, clave innovacion-5-inversion)},
-  costooperacional = {Mantenimiento algorítmico preventivo, actualización de perfiles circadianos y auditorías semestrales de privacidad (meses 21 a 56). Conforme al Art. 50.2, valorizado exclusivamente en la Oferta Económica (Sobre N.º 3, clave innovacion-5-costo)},
+  inversion = {Desarrollo incremental del motor algorítmico y síntesis vocal en audIT EdgeHub (300 HH de perfil Profesional Sénior en paquetes 12.5 y 4.1 durante M4--M9), 5 talleres ergonómicos participativos en los cinco terminales oficiales de Curimón: San Bernardo, Antofagasta, Talca, Los Ángeles y Puerto Montt (M4) y 60 HH de calibración ergonómica y evaluación de carga mental NASA-TLX de perfil Profesional Sénior en marcha blanca (M13--M15). El levantamiento del catálogo base de paradores corresponde al Criterio 28 obligatorio. Conforme al Art. 50.2, las horas, tarifas y el presupuesto monetario consolidado se valorizan exclusivamente en la Oferta Económica (Sobre N.º 3, clave innovacion-5-inversion)},
+  costooperacional = {Mantenimiento algorítmico preventivo, actualización de perfiles circadianos y auditorías semestrales de privacidad (10 HH/mes durante los 36 meses de operación contractual, meses 21 a 56). Conforme al Art. 50.2, valorizado exclusivamente en la Oferta Económica (Sobre N.º 3, clave innovacion-5-costo)},
   beneficio = {La recomendación anticipada de paradores seguros busca reducir desvíos y exposición a incidentes asociados a fatiga. Durante la marcha blanca M13--M15 se contrastarán los viajes elegibles, los desvíos atribuibles y el consumo. La frecuencia de incidentes se estimará con registros históricos comparables. El beneficio monetario para Curimón queda pendiente de cuantificar en la Oferta Económica},
   indicador = {Efectividad incremental: 100 × episodios con recomendación circadiana oportuna y válida / episodios en ventana de fatiga; meta $\ge98\%$. Controles de adopción independientes: enclavamiento 100\%, NASA-TLX $<35$ y adherencia voluntaria $\ge85\%$},
   medicion = {Medición mensual durante la marcha blanca M13--M15, antes del hito H7 en M16; nivel alcanzado respaldado por informe técnico de adopción y ergonomía},
-  riesgo = {Percepción de vigilancia patronal o invasión de privacidad por conductores externos (3×4=12).},
-  mitigacion = {Talleres de M4, uso voluntario, auditoría semestral de accesos y revisión de que las alertas no se transmitan como faltas laborales. Residual previsto 1×3=3 tras comprobar los controles.},
-  contingencia = {Si la adherencia queda bajo 70\,\% en M14 o NASA-TLX llega a 35 puntos, ensayar aviso acústico pasivo y revisar las mediciones con la mesa de conductores.}
+  riesgo = {Percepción de los 258 conductores subcontratados de vigilancia patronal encubierta o invasión de privacidad. Riesgo inherente: Probabilidad Media-Alta (3) e Impacto Alto (4), Severidad Inherente $3 \times 4 = 12$ (Zona Alta según escala S8)},
+  mitigacion = {Tratamiento y gobernanza no punitiva: talleres participativos en terminales oficiales (San Bernardo, Antofagasta, Talca, Los Ángeles y Puerto Montt en M4); garantía de no transmisión de alertas como faltas laborales al mandante ni a los empleadores terceros; consulta pasiva y voluntaria. Evidencia: actas de talleres, auditoría semestral de perfiles de base de datos y canal confidencial de feedback. Riesgo residual mitigado: Probabilidad Baja (1) e Impacto Medio (3), Severidad Residual $1 \times 3 = 3$ (Zona Baja/Aceptable según escala S8)},
+  contingencia = {Si la adherencia a paradores seguros no alcanza el 70\% en M14 o la carga mental NASA-TLX supera 35 puntos, se conmuta de inmediato de síntesis vocal a tono acústico pasivo diferenciado por altavoz de cabina, convocando a la mesa técnica de conductores para ajustar los parámetros}
 }
 \end{formulario}

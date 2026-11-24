@@ -1,0 +1,275 @@
+% ============================================================================
+%  Subdocumento 11. Planes en operación (D4-153).
+% ============================================================================
+
+\begin{resumenApertura}
+Este subdocumento fija cómo se mantiene la solución durante los 36 meses de operación sin detener una
+flota que rueda a toda hora. Reparte las 640 horas mensuales del equipo de mantención evolutiva entre
+corrección, mejoras, deuda técnica y actualización, declara la bolsa anual de 2.688 horas de mantención
+evolutiva desde el mes 25, aplica un presupuesto de error de 43,8 minutos al mes a los servicios críticos y ubica cada
+prueba de recuperación fuera de los congelamientos del Caso.
+\begin{recibe}
+  \item Un plan de mantención preventiva, correctiva, evolutiva y normativa con criterios de prioridad y capacidad declarada por tipo.
+  \item Una bolsa anual de 2.688 horas de mantención evolutiva desde el mes 25, acumulable, con su procedimiento de solicitud, estimación, aprobación y liquidación.
+  \item Una política de presupuesto de error y un análisis sin culpa para cada incidente crítico o alto.
+  \item Seis pruebas reales de recuperación y cuatro ejercicios de resiliencia al año, todos fuera de la temporada de fruta y de los demás congelamientos.
+\end{recibe}
+\end{resumenApertura}
+
+La operación tiene 16 personas en cuatro paquetes del Formulario T-15: la mesa de servicio (13.1, seis
+personas), la operación de la plataforma y gestión del servicio (13.2, cuatro), el ciclo de vida del
+equipo a bordo (13.3, dos) y la mantención evolutiva (13.4, cuatro). El Subdocumento 10 trata la
+atención. Este subdocumento trata lo que se hace sobre la solución misma: la mantención en la sección
+11.1, las versiones y la deuda técnica en la 11.2, la confiabilidad en la 11.3, la capacidad y el costo
+de la nube en la 11.4 y las pruebas de recuperación en la 11.5.
+
+% ============================================================================
+\section{Plan de mantención}\label{sec:11-plan-de-mantencion}
+% ============================================================================
+
+Las bases separan cuatro tipos de mantención \transv*{numeral 21.4}{37}. La preventiva sigue un
+calendario anual acordado con el mandante, con auditorías técnicas al menos trimestrales e informe. La
+correctiva corrige defectos sin costo adicional y dentro de los plazos de resolución del \art{78.2}{40}.
+La evolutiva atiende las mejoras que pide el mandante con una bolsa anual de horas. La normativa adecua
+la solución a cambios legales sin costo adicional y antes de la vigencia de la norma. La
+\tabref{11-capacidad} muestra cómo se reparten las 640 horas mensuales del paquete 13.4 entre esos
+trabajos y la deuda técnica.
+
+\begin{tabla}{Capacidad mensual del paquete 13.4 por tipo de trabajo}{11-capacidad}{X R{18mm} R{22mm}}
+Tipo de trabajo & Fracción & Horas al mes \\ \midrule
+Mantención correctiva y apoyo de nivel 3 & 30 \% & 192 \\
+Mantención evolutiva, bolsa del mandante & 35 \% & 224 \\
+Reducción de la deuda técnica & 15 \% & 96 \\
+Actualización de versiones y mantención normativa & 15 \% & 96 \\
+Operación de las innovaciones y desborde de la mesa & 5 \% & 32 \\
+Total, cuatro personas de 160 horas & 100 \% & 640 \\
+\end{tabla}
+\notaTabla{Fuente: elaboración propia sobre el Formulario T-15, paquete 13.4.}
+
+La bolsa evolutiva de 224 horas al mes da 2.688 horas al año, que es el tamaño que declara audIT conforme
+a \transv{RT-21.19}{37}. Rige desde el mes 25, por lo que explica el párrafo sobre los meses 21 a 24, y
+suma 7.168 horas hasta el mes 56. La composición por perfil es 45 \% de ingeniería de software, 20 \% de
+interfaces web y móviles, 20 \% de datos y 15 \% de pruebas, y puede moverse entre perfiles cuando una
+solicitud lo pida. Las horas que el mandante no usa en un año pasan completas al siguiente. La tarifa del
+excedente va en el Sobre N.º~3, porque el \art{50.2}{29} no admite montos en la oferta técnica. Si la
+correctiva de un mes no usa sus 192 horas, el saldo va a la deuda técnica y no a la bolsa, para que la
+bolsa del mandante no dependa de cuántos defectos hubo.
+
+Una solicitud evolutiva sigue cinco pasos. La contraparte técnica de Curimón la registra en la mesa como
+solicitud de cambio. audIT la estima en horas por perfil dentro de cinco días hábiles. La contraparte la
+aprueba, y si pasa de 80 horas la aprueba el Comité de Operación. Se construye con el mismo estándar de
+calidad, pruebas y seguridad que el desarrollo original, como exige \transv{RT-21.20}{38}, y pasa por el
+mismo pipeline. Cada mes el informe de nivel de servicio liquida las horas usadas por solicitud y el
+saldo de la bolsa.
+
+La prioridad sigue un orden fijo. Primero van los incidentes por su severidad del Subdocumento 10.
+Después, las vulnerabilidades críticas, que tienen el plazo del \art{21.1}{15}, y las adecuaciones
+normativas, ordenadas por la fecha de vigencia de la norma. Las mejoras evolutivas se ordenan por el
+efecto en la operación dividido por las horas que cuestan, y la contraparte puede subir una solicitud
+cuando la necesita para una temporada.
+
+\paragraph{Los meses 21 a 24} La operación empieza con dos trabajos de la implementación todavía
+abiertos. El Formulario T-14 mantiene hasta el mes 24 el retiro del sistema de 2013 (paquete 6.5) y la
+migración histórica (paquete 7.2), y los ejecuta el equipo de operación con las horas que ya tienen
+asignadas los elementos 6 y 7 de la EDT. La conciliación de capacidad por perfil da para el paquete 13.4
+cerca de 372 horas al mes de esos cierres en el mes 21, que bajan a 368 en el 24, más 14 horas de
+operación de las innovaciones. El paquete 13.2 pone otras 62 horas al mes, de seguridad y de plataforma.
+La \figref{11-transicion} compara cómo se reparte la capacidad del paquete 13.4 en esos cuatro meses y
+desde el mes 25.
+
+\begin{figuraNativa}[!ht]{Capacidad mensual del paquete 13.4 en los meses 21 a 24 y desde el mes 25, en horas}{11-transicion}
+\begin{tikzpicture}[x=1mm,y=1mm,
+  t/.style={font=\sffamily\fontsize{9.5bp}{11bp}\selectfont\color{audit-tinta},anchor=west},
+  seg/.style={draw=white,line width=0.6pt}]
+  % meses 21 a 24, de abajo hacia arriba
+  \fill[seg,fill=audit-marino!75] (0,0) rectangle (24,19.2);
+  \fill[seg,fill=audit-gris-claro] (0,19.2) rectangle (24,25.4);
+  \fill[seg,fill=audit-tinta!35] (0,25.4) rectangle (24,26.8);
+  \fill[seg,fill=audit-turquesa!30] (0,26.8) rectangle (24,64);
+  \node[t] at (25.5,9.6) {Correctiva, 192};
+  \node[t,align=left] at (25.5,22.6) {Actualización, 62\\ e innovaciones, 14};
+  \node[t,align=left] at (25.5,45.4) {Cierre de los\\ paquetes 6.5 y 7.2,\\ 372};
+  % desde el mes 25
+  \fill[seg,fill=audit-marino!75] (74,0) rectangle (98,19.2);
+  \fill[seg,fill=audit-turquesa!70] (74,19.2) rectangle (98,41.6);
+  \fill[seg,fill=audit-filete!60] (74,41.6) rectangle (98,51.2);
+  \fill[seg,fill=audit-gris-claro] (74,51.2) rectangle (98,60.8);
+  \fill[seg,fill=audit-tinta!35] (74,60.8) rectangle (98,64);
+  \node[t] at (99.5,9.6) {Correctiva, 192};
+  \node[t] at (99.5,30.4) {Bolsa evolutiva, 224};
+  \node[t] at (99.5,46.4) {Deuda técnica, 96};
+  \node[t] at (99.5,56) {Actualización, 96};
+  \node[t] at (99.5,63.2) {Innovaciones y desborde, 32};
+  \draw[audit-filete,line width=0.6pt] (-3,0) -- (101,0);
+  \node[t,anchor=north] at (12,-1.5) {Meses 21 a 24};
+  \node[t,anchor=north] at (86,-1.5) {Meses 25 a 56};
+\end{tikzpicture}
+\end{figuraNativa}
+
+En los meses 21 a 24 la correctiva conserva sus 192 horas, porque los incidentes no esperan, y las 62
+que quedan van a parches y adecuaciones normativas. La bolsa evolutiva y el carril de deuda técnica
+empiezan en el mes 25, cuando terminan los cierres. Los perfiles más cargados en esos meses son datos y
+calidad: el paquete 13.4 necesita cerca de 146 horas de datos y 77 de pruebas al mes. El Líder de Datos
+y la Líder de Calidad aportan 80 y 40 horas desde su dedicación en la operación (Subdocumento 12), y el
+resto lo toman los ingenieros del paquete. Las 14 horas de innovaciones de este paquete son la mitad de
+las 28 que piden las innovaciones 1 y 2 en operación, 12 del expediente verificable y 16 de la
+programación por oportunidad de patio, y la otra mitad la pone el paquete 13.2.
+
+La preventiva tiene dos frentes. En la plataforma, el paquete 13.2 revisa cada mes certificados,
+respaldos, alertas y vulnerabilidades, y cada trimestre entrega la auditoría técnica con informe. En el
+terreno, el paquete 13.3 revisa los gabinetes y los equipos a bordo cuando pasan por el terminal, porque
+el equipo a bordo solo se interviene ahí \caso*{RT-06.01}{32}. El grupo electrógeno de San Bernardo se
+prueba cada mes, el clima y la extinción de la sala tienen la mantención de su fabricante y las baterías
+de las UPS se reponen en el mes 36. Al salir de servicio, todo medio de almacenamiento se borra con
+certificado \transv*{RT-08.17}{20}.
+
+% ============================================================================
+\section{Actualización de dependencias y deuda técnica}\label{sec:11-actualizacion-de-dependencias-y-}
+% ============================================================================
+
+El Subdocumento 4 declara la versión, el fin de soporte y el plan de actualización de cada producto de
+software. La regla de operación es que ningún componente llegue a su fin de soporte sin una actualización
+probada: todo componente cuyo soporte termina en los próximos 12 meses entra al plan anual, que es la
+ventana de obsolescencia. .NET~10 y PostgreSQL~16, cuyo soporte termina en noviembre de 2028, se
+actualizan antes de empezar la operación, dentro del desarrollo de la Etapa 2, como fija el Subdocumento
+8. El hardware tiene la misma regla. El iWave G26I declara 10 años de producto, y si la plataforma de
+los terminales pierde soporte antes del mes 56, audIT la reemplaza a su cargo \transv*{numeral 1.6}{5}.
+
+Las actualizaciones tienen tres ritmos. Los parches de seguridad se aplican cada mes, o antes si una
+vulnerabilidad es crítica. Las versiones menores se agrupan cada trimestre. Las mayores se planifican una
+vez al año, con ventana acordada con el mandante y plan de reversión, como exige
+\transv{RT-21.22}{38}. Cada artefacto lleva su lista de componentes, y el pipeline la revisa contra las
+vulnerabilidades conocidas en cada construcción (Subdocumento 6). Una actualización sigue la promoción
+de siempre: desarrollo, QA, preproducción y producción, con la versión anterior lista para volver.
+
+La deuda técnica tiene un registro cuantificado y una fracción fija de la capacidad, como pide
+\transv{RT-21.21}{38}. Cada partida del registro dice qué es, qué riesgo trae, cuántas horas cuesta
+corregirla y qué cuesta postergarla. El carril de deuda técnica del tablero Kanban que fija el
+Subdocumento 6 toma las 96 horas mensuales de la \tabref{11-capacidad}, el 15 \% de la mantención, más
+el saldo que deje la correctiva. Esa fracción no viene del 15 \% de los sprints de construcción: sale de
+la dotación de operación del Formulario T-15. El registro se revisa cada mes en el Comité de Operación, y
+su tamaño total en horas es un indicador del informe mensual.
+
+% ============================================================================
+\section{Plan de operación con ingeniería de confiabilidad}\label{sec:11-plan-de-operacion-con-ingenieria}
+% ============================================================================
+
+La operación aplica las prácticas de ingeniería de confiabilidad de \textcite{beyer2016}. Cada servicio
+tiene un objetivo de nivel de servicio igual al que compromete el Subdocumento 10, y su presupuesto de
+error es lo que falta para llegar al 100 \%. Para un servicio crítico de 99,9 \%, el presupuesto es de
+43,8 minutos al mes. Si un mes consume más de la mitad, los cambios evolutivos de ese servicio necesitan
+una revisión adicional antes de pasar a producción. Si lo agota, se detienen los cambios evolutivos del
+servicio, salvo las correcciones y los parches de seguridad, hasta que el mes siguiente cierre dentro del
+objetivo. Así el ritmo de cambios se ajusta a la estabilidad medida, y la tasa de cambios fallidos queda
+bajo el 5 \% del \art{78.3}{40}.
+
+El trabajo manual repetitivo se mide. Cada mes el paquete 13.2 registra qué parte de su tiempo se fue en
+tareas manuales que se repiten y no mejoran el servicio. El límite es la mitad del tiempo
+\parencite{beyer2016}, y la meta es bajar de un tercio en el segundo año de operación. Lo que se
+automatiza sale de los libros de operación del Subdocumento 10, en el orden que allí se fija.
+
+Todo incidente crítico, y todo alto con efecto en los usuarios, tiene un análisis retrospectivo sin
+culpa. El análisis reconstruye la línea de tiempo, busca las causas en el sistema y no en las personas,
+y termina en acciones con responsable y plazo. Se entrega al mandante en el plazo del informe de causa
+raíz del \art{78.2}{40}, cinco días hábiles para los críticos y diez para los altos. Las acciones se
+siguen en el Comité de Operación, y el indicador de reincidencia del \art{78.3}{40}, no más de un evento
+por trimestre con la misma causa, mide si funcionaron.
+
+% ============================================================================
+\section{Capacidad y optimización en nube}\label{sec:11-capacidad-y-optimizacion-en-nube}
+% ============================================================================
+
+El costo de la nube se gestiona con las tres fases del marco FinOps: informar, optimizar y operar
+\parencite{finops_framework}. Para informar, todo recurso lleva etiquetas de ambiente, centro de costo y
+responsable, con presupuesto y alerta de desviación por ambiente, como exige el \art{16.3}{11}. Cada mes
+el informe de operación trae el consumo por ambiente y por servicio contra su presupuesto.
+
+Para optimizar, el tamaño de AKS, PostgreSQL y Redis se ajusta con la prueba de carga de 1,5 veces el
+peak antes del hito H5 \transv*{RT-09.06}{21}, y después con el uso real de cada trimestre. Los runners
+del pipeline se encienden solo mientras hay trabajos. Las cargas estables, como los nodos de AKS y las
+bases de producción, se evalúan para compromisos de capacidad de uno o tres años después de tres meses
+de operación sin cambios de tamaño, y la decisión se toma con el mandante, porque la suscripción está a
+su nombre. Lo mismo vale para las licencias: los usuarios de GitLab siguen la dotación, 33 en la
+primera etapa, 37 en el peak y 16 desde el mes 25, y la capacidad de 100.000 líneas de SonarQube se
+revisa cada año contra el código real antes de renovar. En la operación los dos runners del pipeline
+corren unas 40 horas al mes cada uno. Para operar, la revisión mensual de costos es parte del Comité de
+Operación, y una desviación sobre el presupuesto de un ambiente abre una acción con responsable.
+
+La capacidad se vigila con umbrales que anticipan el límite. IoT Hub agrega una unidad cuando su uso
+diario supera el 75 \% de la cuota, Event Hubs cuando el retraso de proceso crece, y PostgreSQL cuando su
+almacenamiento pasa del 70 \%. La flota crece a 430 camiones en tres años \caso*{numeral 14.1}{29}, y la
+plataforma está dimensionada para tres veces la volumetría inicial \transv*{RT-09.03}{21}, así que el
+crecimiento previsto se absorbe con unidades y nodos, sin rediseño.
+
+El hardware crece con la flota en fechas fijas. La flota propia pasa de 148 a 170 camiones, y el
+Formulario T-11 prevé para ellos 22 juegos a bordo que compra el mandante: 8 en el mes 24, 7 en el 36 y
+7 en el 48. A eso se suman los 19 equipos de reposición del mismo formulario. El paquete 13.3 instala los juegos nuevos en el paso normal de cada camión por el terminal,
+igual que en la implantación.
+
+% ============================================================================
+\section{Pruebas periódicas de recuperación y resiliencia}\label{sec:11-pruebas-periodicas-de-recuperaci}
+% ============================================================================
+
+La recuperación ante desastres se prueba con una conmutación real a Brazil South dos veces al año, con
+informe, medición del RPO y del RTO alcanzados y plan de corrección, como exige
+\transv{RT-07.07}{17}. La primera prueba se hace antes del paso a producción (Subdocumento 4). Durante
+la operación caen en noviembre y en mayo: los meses 22, 28, 34, 40, 46 y 52. El \art{78.3}{40} pide
+cumplir el 100 \% del RPO de 15 minutos y del RTO de 4 horas en cada prueba.
+
+Las fechas evitan los congelamientos del \caso{RT-10.05}{32}: la temporada de fruta de diciembre a
+abril, Semana Santa, Fiestas Patrias y los nueve días del cierre mensual de liquidaciones. Por eso cada
+prueba se hace en la segunda quincena del mes. La \figref{11-calendario} muestra el año tipo de la
+operación.
+
+\begin{figuraNativa}[!ht]{Año tipo de la operación: congelamientos del Caso y meses de cada prueba}{11-calendario}
+\begin{tikzpicture}[x=8.4mm,y=7mm,
+  lab/.style={anchor=east,font=\sffamily\fontsize{9.5bp}{11bp}\selectfont\color{audit-tinta}},
+  cel/.style={font=\sffamily\fontsize{9.5bp}{11bp}\selectfont\color{audit-tinta}},
+  marca/.style={draw=audit-marino,line width=0.5pt,fill=audit-turquesa!35,minimum width=7mm,minimum height=4.6mm,inner sep=0pt}]
+  \fill[audit-gris-claro] (0,0.5) rectangle (4,-8.5);
+  \fill[audit-gris-claro] (11,0.5) rectangle (12,-8.5);
+  \foreach \m/\c in {1/E,2/F,3/M,4/A,5/M,6/J,7/J,8/A,9/S,10/O,11/N,12/D}{
+    \node[cel] at (\m-0.5,0) {\c};
+  }
+  \draw[audit-filete] (0,-0.5) -- (12,-0.5);
+  \node[lab] at (-0.2,0) {Mes};
+  \node[lab] at (-0.2,-1) {Congelamiento};
+  \node[cel] at (2,-1) {Temporada de fruta};
+  \node[cel] at (8.5,-1) {Fiestas Patrias};
+  \node[lab] at (-0.2,-2) {Recuperación ante desastres};
+  \node[marca] at (4.5,-2) {};
+  \node[marca] at (10.5,-2) {};
+  \node[lab] at (-0.2,-3) {Ejercicio de resiliencia};
+  \node[marca] at (6.5,-3) {};
+  \node[marca] at (9.5,-3) {};
+  \node[lab] at (-0.2,-4) {Actualización mayor};
+  \node[marca,minimum width=24mm] at (6.5,-4) {};
+  \node[lab] at (-0.2,-5) {Auditoría trimestral};
+  \foreach \m in {3,6,9,12}{ \node[marca,fill=white] at (\m-0.5,-5) {}; }
+  \node[lab] at (-0.2,-6) {Prueba de penetración};
+  \node[marca,minimum width=15.4mm] at (6,-6) {};
+  \node[lab] at (-0.2,-7) {Jornada de actualización};
+  \node[marca] at (4.5,-7) {};
+  \node[marca] at (9.5,-7) {};
+  \node[lab] at (-0.2,-8) {Depósito de fuentes};
+  \node[marca,fill=white] at (0.5,-8) {};
+  \node[marca,fill=white] at (6.5,-8) {};
+\end{tikzpicture}
+\end{figuraNativa}
+
+Las pruebas de recuperación caen en mayo y noviembre, los ejercicios de resiliencia en julio y octubre y
+la actualización mayor entre junio y agosto, todo fuera de la temporada de fruta. La prueba de
+penetración anual de la empresa independiente ocupa junio y julio, y las dos jornadas de actualización
+para el personal de Curimón van en mayo y octubre (Subdocumento 10). Las auditorías trimestrales y el
+depósito semestral de las fuentes, en enero y julio, son trabajos documentales que no intervienen la
+operación, así que pueden caer en cualquier mes. Los cierres del paso Los Libertadores, de junio a septiembre, no cambian este calendario,
+porque ninguna prueba depende de un camión en ruta internacional.
+
+Los ejercicios de resiliencia prueban las fallas que no son un desastre regional. En julio se simula la
+caída de una zona de disponibilidad de producción y se corta el circuito ExpressRoute para medir la conmutación a la
+VPN, que debe ocurrir en hasta un minuto. En octubre un terminal opera 12 horas sin enlace, como exige
+\caso{RT-03.10}{31}, y una muestra de equipos a bordo acumula 72 horas sin cobertura y se reconecta a la
+vez, para medir que la sincronización no pase de 20 minutos. Además, cada mes se restaura un respaldo
+elegido al azar para comprobar que el esquema 3-2-1-1-0 de \transv{RT-07.09}{18} termina en cero errores
+de restauración. Cada ejercicio deja un informe con lo medido, lo que falló y el plan de corrección, que
+se sigue como cualquier acción de un análisis sin culpa.

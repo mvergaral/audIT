@@ -1,0 +1,228 @@
+{
+  "corte": "c9a6515652c3357ea684bf0bb9338b7c4ec028fd",
+  "clp_por_uf": 40000,
+  "meta_clp": 10000000,
+  "modelo": {
+    "tasa_mensual": 0.010261894099946238,
+    "van": 1235043315.7805283,
+    "tir_mensual": 0.8366132363323,
+    "costo": 7984400845.222495,
+    "venta": 9796810853.03375,
+    "margen": 0.1850000000000012,
+    "cobro_m57": 143833556.612134,
+    "picos_costo": [
+      [
+        13,
+        249763158
+      ],
+      [
+        17,
+        226554448
+      ],
+      [
+        16,
+        224519448
+      ],
+      [
+        14,
+        224377558
+      ],
+      [
+        15,
+        224377558
+      ]
+    ]
+  },
+  "escenarios": {
+    "base_publicada": {
+      "caja_minima": 0.0,
+      "mes_minimo": 9,
+      "antes_de_giro_en_minimo": -44999999.53556793,
+      "saldo_linea_max": 44999999.53556793,
+      "meses_giro": [
+        9
+      ],
+      "meses_pago_linea": [
+        10
+      ],
+      "pagos_banco": [
+        [
+          21,
+          219562198.4
+        ]
+      ],
+      "deficit_residual": 0,
+      "prestamo": 219562198.4,
+      "aporte": 54890549.59999999,
+      "giro": 44999999.53556793,
+      "pago_linea": 44999999.53556793,
+      "interes_linea": 1349999.9860670378,
+      "interes_banco": 39521195.712
+    },
+    "base_sin_linea": {
+      "caja_minima": -44999999.53556793,
+      "mes_minimo": 9,
+      "antes_de_giro_en_minimo": -44999999.53556793,
+      "saldo_linea_max": 0,
+      "meses_giro": [],
+      "meses_pago_linea": [],
+      "pagos_banco": [
+        [
+          21,
+          219562198.4
+        ]
+      ],
+      "deficit_residual": 44999999.53556793,
+      "prestamo": 219562198.4,
+      "aporte": 54890549.59999999,
+      "giro": 0,
+      "pago_linea": 0,
+      "interes_linea": 0.0,
+      "interes_banco": 39521195.712
+    },
+    "base_condicionada": {
+      "caja_minima": 10000000.576431759,
+      "mes_minimo": 9,
+      "antes_de_giro_en_minimo": 10000000.576431759,
+      "saldo_linea_max": 0,
+      "meses_giro": [],
+      "meses_pago_linea": [],
+      "pagos_banco": [
+        [
+          21,
+          266251502.4
+        ]
+      ],
+      "deficit_residual": 0,
+      "prestamo": 266251502.4,
+      "aporte": 66562875.59999999,
+      "giro": 0,
+      "pago_linea": 0,
+      "interes_linea": 0.0,
+      "interes_banco": 47925270.432000004
+    },
+    "h5_m13_sin_linea": {
+      "caja_minima": -204397160.39267504,
+      "mes_minimo": 12,
+      "antes_de_giro_en_minimo": -204397160.39267504,
+      "saldo_linea_max": 0,
+      "meses_giro": [],
+      "meses_pago_linea": [],
+      "pagos_banco": [
+        [
+          21,
+          219562198.4
+        ]
+      ],
+      "deficit_residual": 204397160.39267504,
+      "prestamo": 219562198.4,
+      "aporte": 54890549.59999999,
+      "giro": 0,
+      "pago_linea": 0,
+      "interes_linea": 0.0,
+      "interes_banco": 39521195.712
+    },
+    "h5_m13_capital_base_condicionado": {
+      "caja_minima": -100657771.48867536,
+      "mes_minimo": 12,
+      "antes_de_giro_en_minimo": -150657771.48867536,
+      "saldo_linea_max": 50000000,
+      "meses_giro": [
+        12
+      ],
+      "meses_pago_linea": [
+        13
+      ],
+      "pagos_banco": [
+        [
+          21,
+          266251502.4
+        ]
+      ],
+      "deficit_residual": 100657771.48867536,
+      "prestamo": 266251502.4,
+      "aporte": 66562875.59999999,
+      "giro": 50000000,
+      "pago_linea": 50000000,
+      "interes_linea": 1500000.0,
+      "interes_banco": 47925270.432000004
+    },
+    "h5_m13_con_linea": {
+      "caja_minima": -155747160.3787421,
+      "mes_minimo": 12,
+      "antes_de_giro_en_minimo": -205747160.3787421,
+      "saldo_linea_max": 50000000.0,
+      "meses_giro": [
+        9,
+        12
+      ],
+      "meses_pago_linea": [
+        10,
+        13
+      ],
+      "pagos_banco": [
+        [
+          21,
+          219562198.4
+        ]
+      ],
+      "deficit_residual": 155747160.3787421,
+      "prestamo": 219562198.4,
+      "aporte": 54890549.59999999,
+      "giro": 94999999.53556794,
+      "pago_linea": 94999999.53556794,
+      "interes_linea": 2849999.986067038,
+      "interes_banco": 39521195.712
+    },
+    "h5_m13_reserva_sin_refuerzo": {
+      "caja_minima": -308446935.3787421,
+      "mes_minimo": 12,
+      "antes_de_giro_en_minimo": -358446935.3787421,
+      "saldo_linea_max": 50000000.0,
+      "meses_giro": [
+        9,
+        12,
+        15
+      ],
+      "meses_pago_linea": [
+        10,
+        13,
+        16
+      ],
+      "pagos_banco": [
+        [
+          21,
+          219562198.4
+        ]
+      ],
+      "deficit_residual": 308446935.3787421,
+      "prestamo": 219562198.4,
+      "aporte": 54890549.59999999,
+      "giro": 144999999.53556794,
+      "pago_linea": 144999999.53556794,
+      "interes_linea": 4349999.986067038,
+      "interes_banco": 39521195.712
+    },
+    "h5_m13_reserva_sin_linea_condicionado": {
+      "caja_minima": 10000000.03692466,
+      "mes_minimo": 12,
+      "antes_de_giro_en_minimo": 10000000.03692466,
+      "saldo_linea_max": 0,
+      "meses_giro": [],
+      "meses_pago_linea": [],
+      "pagos_banco": [
+        [
+          21,
+          538499588.0
+        ]
+      ],
+      "deficit_residual": 0,
+      "prestamo": 538499588.0,
+      "aporte": 134624896.99999997,
+      "giro": 0,
+      "pago_linea": 0,
+      "interes_linea": 0.0,
+      "interes_banco": 96929925.83999999
+    }
+  }
+}

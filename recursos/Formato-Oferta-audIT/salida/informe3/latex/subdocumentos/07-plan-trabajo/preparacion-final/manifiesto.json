@@ -1,0 +1,71 @@
+{
+  "grupo": "final-s7-preparacion",
+  "instancia": "final",
+  "modo_folio": "subdocumento",
+  "archivos": [
+    {
+      "clave": "07",
+      "nombre": "SOBRE2_AUDIT_SUBDOC07_20261125.pdf",
+      "folio_inicial": 1,
+      "paginas": 46,
+      "aux": "subdocumentos\\07-plan-trabajo\\graficos\\revisada\\compilacion\\S7-Integrado-Revision.aux",
+      "log": "subdocumentos\\07-plan-trabajo\\graficos\\revisada\\compilacion\\S7-Integrado-Revision.log",
+      "fuentes": [
+        [
+          "subdocumentos"
+        ],
+        [
+          "subdocumentos/07-plan-trabajo"
+        ]
+      ]
+    },
+    {
+      "clave": "07T-14",
+      "nombre": "AUDIT-Formulario-T-14.pdf",
+      "folio_inicial": 1,
+      "paginas": 9,
+      "aux": "subdocumentos\\07-plan-trabajo\\graficos\\revisada\\compilacion\\AUDIT-Formulario-T-14.aux",
+      "log": "subdocumentos\\07-plan-trabajo\\graficos\\revisada\\compilacion\\AUDIT-Formulario-T-14.log",
+      "fuentes": [
+        [
+          "subdocumentos"
+        ],
+        [
+          "subdocumentos/07-plan-trabajo"
+        ]
+      ]
+    },
+    {
+      "clave": "07T-15",
+      "nombre": "AUDIT-Formulario-T-15.pdf",
+      "folio_inicial": 1,
+      "paginas": 10,
+      "aux": "subdocumentos\\07-plan-trabajo\\graficos\\revisada\\compilacion\\AUDIT-Formulario-T-15.aux",
+      "log": "subdocumentos\\07-plan-trabajo\\graficos\\revisada\\compilacion\\AUDIT-Formulario-T-15.log",
+      "fuentes": [
+        [
+          "subdocumentos"
+        ],
+        [
+          "subdocumentos/07-plan-trabajo"
+        ]
+      ]
+    },
+    {
+      "clave": "07T-18",
+      "nombre": "AUDIT-Formulario-T-18.pdf",
+      "folio_inicial": 1,
+      "paginas": 6,
+      "aux": "subdocumentos\\07-plan-trabajo\\graficos\\revisada\\compilacion\\AUDIT-Formulario-T-18.aux",
+      "log": "subdocumentos\\07-plan-trabajo\\graficos\\revisada\\compilacion\\AUDIT-Formulario-T-18.log",
+      "fuentes": [
+        [
+          "subdocumentos"
+        ],
+        [
+          "subdocumentos/07-plan-trabajo"
+        ]
+      ]
+    }
+  ]
+}

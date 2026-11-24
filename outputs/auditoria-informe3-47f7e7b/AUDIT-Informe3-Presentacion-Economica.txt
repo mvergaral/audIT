@@ -1,0 +1,93 @@
+LÁMINA 1
+audIT · TFEP-01/2026
+Costos frente a venta
+Informe 3 · Transportes Curimón S.A.
+13 de noviembre de 2026
+
+LÁMINA 2
+Costo, precio y margen
+Montos netos en millones de CLP
+Implementación
+Costo 3.764,3 · Venta 4.618,8
+Operación
+Costo 4.220,1 · Venta 5.178,0
+Total
+Costo 7.984,4 · Venta 9.796,8
+Margen sobre ventas
+18,50 % sobre ingresos netos · tope consolidado 20 %
+Costos indirectos
+43,1 en implementación · 63,0 en operación. Incluyen administración, garantías y cierre según su atribución.
+
+LÁMINA 3
+Adquisiciones y proveedores
+Compras y servicios que condicionan la habilitación y el piloto
+M1–M4 · Infraestructura
+audIT prevé grupo electrógeno en M1, sala técnica en M3 y cómputo de terminal en M4. Clima y extinción por cotizar.
+M4–M6 · Servicios
+Azure y ExpressRoute habilitan H3 en M6. Factibilidad del circuito y cobertura LTE M2M por confirmar.
+M5–M6 · Piloto y lote
+Curimón adquiere hardware de campo y red. Inventario informativo de CLP 225,4 millones.
+Desarrollar y contratar
+audIT desarrolla e instala. Compra licencias GitLab y SonarQube y contrata nube, conectividad, satélite y soporte.
+
+LÁMINA 4
+Curva S mensual
+56 meses · Costos con intereses, facturación y caja financiada
+M9 · preparación   |   M12 · H5   |   M16 · recuperación descontada   |   M21 · H12 e inicio de operación
+
+LÁMINA 5
+Evaluación y liquidez
+Fila A mensual y escenarios de caja
+VAN base
+CLP 1.235,0 millones · tasa 1,0262 % mensual
+TIR y recuperación
+83,6613 % mensual · recuperación descontada sostenida en M16
+Equilibrios
+CLP 7.984,4 millones nominal · CLP 8.175,2 millones a VAN cero
+Atraso de H5 a M13
+Déficit en M12 de CLP 155,7 millones con la línea al tope. Con la reserva, CLP 308,4 millones antes del refuerzo.
+Refuerzo condicionado
+Con CLP 400 millones adicionales, caja de CLP 11,2 millones en M12. Baja a CLP 9,2 millones si se compran las 72 h de CP-SEC-05.
+Sensibilidad
+Costos +5 % → VAN CLP 923,7 millones, TIR mensual 17,32 %. Cobros −5 % → VAN CLP 862,0 millones, TIR mensual 16,63 %.
+Meta de caja M12: CLP 10 millones. Fondos, giros y comisiones por confirmar.
+
+LÁMINA 6
+Cinco innovaciones
+Inversión, operación y beneficio para Curimón · montos netos en millones de CLP
+1 · Expediente
+Firma estimada 24,9. Desarrollo y soporte atribuidos a personal. Medir minutos evitados por expediente.
+2 · Patio
+Desarrollo 16,6 y operación 17,0 atribuidos. Beneficio monetario base en cero hasta sustentar la estimación.
+3 · Acople y frío
+Integración 5,7 y operación 4,0 estimadas. Medir acoples y eventos térmicos. Beneficio monetario base en cero.
+4 · Sobreestadías
+34 comodatos dentro de 182 montajes. Recupero bruto referencial 362,1 en 36 meses a régimen. Neto sujeto a costos y reparto.
+5 · Fatiga
+Inversión 13,0 y soporte 10,1. Beneficio pendiente de cuantificar a partir de consumo y siniestralidad.
+
+LÁMINA 7
+Demostración del prototipo
+Avance de interfaz de Transportes Curimón
+Navegación
+Abrir el sitio audIT → Portal Clientes → Simulador Operativo en Vivo
+Prueba de continuidad
+Simular pérdida de cobertura y observar el búfer. Restablecer cobertura y comprobar la reconciliación.
+
+LÁMINA 8
+Liquidez en los meses críticos
+Piso simulado de CLP 10 millones
+Capital M1 de CLP 332,81 millones y refuerzo por tramos de hasta CLP 387,24 millones.
+H6 entra el 15 de febrero antes del IVA de M13. H5 se prueba el 15 de febrero y el 1 de marzo.
+Si H6 pasa al 17, el diferimiento de CLP 19,51 millones de reserva cubre el IVA del 16.
+Nueve meses críticos cotejados en cuatro escenarios con fechas simuladas.
+Informe 3 · Simulación académica · audIT / Curimón
+
+LÁMINA 9
+Instalación y soporte
+Trazabilidad de las partidas
+182 montajes de EDT 4.2. Referencia de 910 horas-persona y CLP 16,26 millones.
+Los 10 kits de piloto y los 34 comodatos están incluidos. Hay 210 balizas con 52,5 horas adicionales.
+Fabricante y mantención D4 por CLP 3,33 millones mensuales en M13–M56.
+Agenda por terminal, cotización externa y cobertura SLA por rol siguen por acreditar.
+Informe 3 · Simulación académica · audIT / Curimón

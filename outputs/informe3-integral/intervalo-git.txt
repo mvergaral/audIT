@@ -1,0 +1,77 @@
+c9a6515 2026-11-13 Corrige y concilia los entregables del Informe 3
+b15ebb6 2026-11-13 Registra la prueba del simulador y el cotejo de INN-5
+97c15ee 2026-11-13 Prepara ficha editable de reservas CP-SEC-05
+3f47f93 2026-11-13 Registra la minuta de cierre y el saldo por acreditar de CP-SEC-05
+ab00343 2026-11-13 Propone reserva semanal de CP-SEC-05 y delimita el cruce de QA
+08f5c69 2026-11-13 Traza las 72 horas de preparación de CP-SEC-05 a la nómina D2
+6f2cf8c 2026-11-13 Concilia respaldos de personal, gastos e infraestructura
+910abec 2026-11-13 Documenta el respaldo revisado del financiamiento H5
+96f1204 2026-11-13 Incorpora el financiamiento inicial aprobado para el escenario H5
+49a147d 2026-11-13 Incorpora el enlace al entorno demostrativo de audIT
+00e383f 2026-11-13 Consolida el expediente económico del Informe 3
+8c950fa 2026-11-13 D4 readme
+c601503 2026-11-13 Publica el paquete de oferta D2 validado por D1
+339df8a 2026-11-13 docs(informe3): avanzar costos frente a venta y conciliar INN-05
+bd8c1f7 2026-11-13 docs(d3): retirar sensibilidad de beneficio de innovación 2
+08e8f76 2026-11-13 D4: beneficio de la innovación 3 en cero y pendiente (D4-152)
+8967f18 2026-11-13 fix(economico): retirar beneficios sin respaldo suficiente
+b51f54e 2026-11-12 D4: sensibilidad térmica de la innovación 3 y CP-SEC-05 (D4-150 y D4-151)
+a89084b 2026-11-12 Dimensiona capital para el atraso de H5
+a8fe7a8 2026-11-12 Verifica liquidez con precios fijos y atraso de H5
+31fc217 2026-11-12 Define plan y evidencias de cierre para las diez tareas de D2
+cd04e8b 2026-11-12 Registra alcance aprobado para los comodatos de D2
+dc496e4 2026-11-12 Integra el Resumen del mandante con los totales de D2
+1c5d7bc 2026-11-12 Documenta decisiones pendientes de personal y comodato D2
+96991e8 2026-11-12 Prueba refuerzos e IVA y prepara el mapa de Resumen
+dd7e69f 2026-11-12 Integra proveedores D4 y capacidad por perfil en el modelo D2
+88d7a6e 2026-11-12 Concilia capacidad, IVA de proveedores y cupo de comodatos
+b1a22d4 2026-11-12 Sincroniza la Fila A para D1 con la planilla vigente
+80b2aa0 2026-11-12 Integra dedicaciones D3, firma e IVA referencial D4
+4070a7e 2026-11-12 docs(d3): consolidar dedicaciones y definir firma automática
+945976c 2026-11-12 Integra costos, caja e indicadores en planilla editable D2
+f9ce7b0 2026-11-12 Grafica Curva S y verifica indicadores provisionales de D2
+262ead9 2026-11-12 Publica flujo provisional y Fila A para revisión de D1
+b9f3889 2026-11-12 Publica escenario provisional de gastos administrativos
+ff1389e 2026-11-12 d1 incorporado etc
+d4850e3 2026-11-12 Fija criterios financieros y publica plan de cierre D2
+b8935c4 2026-11-12 Merge pull request #2 from mvergaral/codex/aud-21-valorizar-innovaciones-1-y-4
+494e42b 2026-11-12 Concilia preparación y reserva de la prueba CP-SEC-05
+3214a84 2026-11-12 perfiles
+2bc6f22 2026-11-12 Publica avances de personal, flujo de caja e IVA
+28e0840 2026-11-12 Publica plantilla preliminar de flujo de caja
+abc1962 2026-11-12 fix(calidad): exigir cese de captura RN-10 en CP-SEC-05
+efd1567 2026-11-12 s
+ed5ae14 2026-11-12 fix(calidad): unificar revocación y conservación en CP-SEC-05
+146f74e 2026-11-12 fix(d1): conciliar cobertura de flota y evidencias de montaje
+87f07c2 2026-11-12 Actualiza estimación de EDT 5 y calendario de egresos de D2
+0712c7f 2026-11-12 docs(d3): completar estimación de A09 y conciliar insumos económicos
+49fbdde 2026-11-12 fix(d1): conciliar beneficios y fuentes económicas con D4-149
+df23138 2026-11-12 D4: beneficio de la innovación 3 en dos escenarios (D4-149)
+946519c 2026-11-12 d3 mas
+5790cb0 2026-11-12 Consolida avances de personal e innovaciones de D2
+b8adac2 2026-11-12 Mas cosas de d4
+0c612d6 2026-11-12 docs(d3): cerrar presupuesto estimado de licencias del informe 3
+ad908a5 2026-11-12 fix(d3): conciliar costo sénior del expediente con referencia de D2
+993fa51 2026-11-12 docs(d3): preparar insumos económicos y seguimiento del informe 3
+93477ab 2026-11-12 AUD-21: publica avance de valorización y supuestos de D2
+e4663f7 2026-11-11 Merge remote-tracking branch 'origin/main' into codex/aud-21-valorizar-innovaciones-1-y-4
+8ae8c27 2026-11-11 Tareas D4
+521164a 2026-11-11 Cambios de nombres para paso al informe 3, ya que se tiene que mantener consistencia
+df060d6 2026-11-11 AUD-21: incorpora estimaciones provisionales de D3
+cb1af79 2026-11-11 AUD-21: registra supuestos de recupero y costos del comodato
+fd7c3e6 2026-11-11 AUD-21: documenta respaldo económico de innovaciones 1 y 4
+4da4195 2026-11-11 fix(d1): purge prices from T-19 per Art. 50.2 and update official terminals
+a8035b4 2026-11-11 docs(d1): formalize scenario assumptions and senior profile in AUD-11
+dc0c942 2026-11-11 fix(d1): reconcile AUD-5 M57-68, AUD-11 sources, and AUD-10 50-50 schedule
+0359b20 2026-11-11 docs(d1): complete economic package for AUD-5, 7, 9, 10 and 11
+4589fa8 2026-11-11 fix(d1): update H6/H11 triggers per E-25 and reconcile GEN-05 bitacora
+5e2ee78 2026-11-11 fix: reconcile CAL-03, CAL-06, INN-04/05 and add GEN-05 audit log
+add2bc1 2026-11-11 feat: integrate quality and training budget into D1 financial package (AUD-10)
+bf09fb3 2026-11-11 feat: formalize financial assumptions, discount rate and benefits for D1 (AUD-5, AUD-7, AUD-9)
+bd063e3 2026-11-11 feat: quantify Innovation 5 physical benefits and economic values for INN-05
+e3d61f0 2026-11-11 detalles
+dad7c2e 2026-11-10 sobre D3 informe 3
+12676cc 2026-11-10 Agrega revisión original del Informe 2 para trazabilidad del Informe 3
+7cd422d 2026-11-10 docs: update Art 46 audit matrix with D1 implemented tasks
+7addc29 2026-11-10 Avance d1
+8b71b2b 2026-11-09 Art 46

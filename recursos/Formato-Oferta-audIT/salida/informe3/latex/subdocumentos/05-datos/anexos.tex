@@ -1,0 +1,772 @@
+\section*{Anexo. Diccionario de datos y supuestos de capacidad}\label{sec:05-anexo-diccionario}
+\addcontentsline{toc}{section}{Anexo. Diccionario de datos y supuestos de capacidad}
+\markright{Anexo. Diccionario de datos}
+El diccionario especifica el modelo propuesto, por dominio, conforme a \transv{RT-05.01}{11} y Comunicado 10 · capítulo 5. Las figuras del cuerpo seleccionan relaciones críticas para mantener legibilidad; aquí se explicitan atributos y controles. El catálogo se valida con los propietarios y fuentes del CLIENTE antes de congelar el esquema.
+
+UUID identifica globalmente sin renumerar un original. TIMESTAMPTZ conserva un instante normalizado; la zona/offset de origen se registra aparte cuando importa; el valor original de fuente se guarda cuando su interpretación sea incierta. NULL significa ausente/desconocido cuando corresponde y nunca se rellena con cero. Las referencias entre contextos son lógicas y se validan por contratos; las FK físicas se implementan en las tablas locales del contexto. Una etiqueta PK/FK en el modelo no impone acceso directo a otra base. Los campos condicionales se exigen al confirmar su estado; una recepción incompleta se conserva sin habilitar operación. Los catálogos TEXT se validan con CHECK o catálogo versionado; JSONB requiere esquema y versión explícitos.
+
+\Needspace{18\baselineskip}
+\subsection*{CLIENTE}\label{sec:05-anexo-cliente}
+
+Propietario de atributos: Contable (identidad comercial); Planificación (atributos operacionales). La tabla define el contrato del registro.
+
+La \tabref{05-anexo-tabla-cliente} detalla los atributos y controles del registro.
+
+\begin{tabla}[ancho=completo, fuente=condensada]{Atributos y controles de CLIENTE}{05-anexo-tabla-cliente}{L{30mm} L{22mm} X L{12mm} L{24mm} X}
+Atributo & Tipo & Dominio y regla & Obligatorio & Propietario & Sensibilidad/tratamiento \\ \midrule
+id\_\allowbreak{}cliente & UUID & PK; generado una vez y preservado en reintentos & Sí & Planificación y tráfico & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+rut & TEXT & Identificador chileno validado; cifrado e índice ciego & Sí & Sistema contable & Personal si identifica persona natural; cifrado/acceso según RT-11.10 cuando aplica \\
+razon\_\allowbreak{}social & TEXT & Denominación acreditada & Sí & Sistema contable & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+estado & TEXT & ACTIVO / INACTIVO & Sí & Planificación y tráfico & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+referencia\_\allowbreak{}contable & TEXT & ID externo homologado; unicidad por sistema & Sí & Sistema contable & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+\end{tabla}
+
+Estos atributos concretan las referencias, campos obligatorios y controles de acceso de CLIENTE.
+
+\Needspace{18\baselineskip}
+\subsection*{TRANSPORTISTA}\label{sec:05-anexo-transportista}
+
+Propietario de atributos: Contable (identidad comercial); Personas y Flota (adhesión y recursos). La tabla define el contrato del registro.
+
+La \tabref{05-anexo-tabla-transportista} detalla los atributos y controles del registro.
+
+\begin{tabla}[ancho=completo, fuente=condensada]{Atributos y controles de TRANSPORTISTA}{05-anexo-tabla-transportista}{L{30mm} L{22mm} X L{12mm} L{24mm} X}
+Atributo & Tipo & Dominio y regla & Obligatorio & Propietario & Sensibilidad/tratamiento \\ \midrule
+id\_\allowbreak{}transportista & UUID & PK; generado una vez y preservado en reintentos & Sí & Flota y activos & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+rut & TEXT & Identificador validado; cifrado e índice ciego & Sí & Sistema contable & Personal si identifica persona natural; cifrado/acceso según RT-11.10 cuando aplica \\
+razon\_\allowbreak{}social & TEXT & Denominación acreditada & Sí & Sistema contable & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+referencia\_\allowbreak{}contable & TEXT & ID homologado & Sí & Sistema contable & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+estado\_\allowbreak{}adhesion & TEXT & COMPLETA / DATOS / SIN\_\allowbreak{}ADHESION; versionado & Sí & Flota y activos & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+id\_\allowbreak{}documento\_\allowbreak{}adhesion & UUID & Referencia a DOCUMENTO\_\allowbreak{}RESPALDO & Condicional & Flota y activos & Operacional; personal si vincula persona; cifrado/acceso según RT-11.10 cuando aplica \\
+adhesion\_\allowbreak{}desde & TIMESTAMPTZ & Inicio de vigencia contractual & Condicional & Flota y activos & Operacional; personal si vincula jornada; cifrado/acceso según RT-11.10 cuando aplica \\
+adhesion\_\allowbreak{}hasta & TIMESTAMPTZ & Vencimiento; NULL si sin fin fijado & No & Flota y activos & Operacional; personal si vincula jornada; cifrado/acceso según RT-11.10 cuando aplica \\
+\end{tabla}
+
+Estos atributos concretan las referencias, campos obligatorios y controles de acceso de TRANSPORTISTA.
+
+\Needspace{18\baselineskip}
+\subsection*{CONDUCTOR}\label{sec:05-anexo-conductor}
+
+Propietario de atributos: Personas y cumplimiento. La tabla define el contrato del registro.
+
+La \tabref{05-anexo-tabla-conductor} detalla los atributos y controles del registro.
+
+\begin{tabla}[ancho=completo, fuente=condensada]{Atributos y controles de CONDUCTOR}{05-anexo-tabla-conductor}{L{30mm} L{22mm} X L{12mm} L{24mm} X}
+Atributo & Tipo & Dominio y regla & Obligatorio & Propietario & Sensibilidad/tratamiento \\ \midrule
+id\_\allowbreak{}conductor & UUID & PK; generado una vez y preservado en reintentos & Sí & Personas y cumplimiento & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+id\_\allowbreak{}transportista & UUID & Referencia a TRANSPORTISTA; NULL propio & No & Personas y cumplimiento & Operacional; personal si vincula persona; cifrado/acceso según RT-11.10 cuando aplica \\
+rut & TEXT & Identificador validado, cifrado e índice ciego & Sí & Personas y cumplimiento & Personal; cifrado/acceso según RT-11.10 cuando aplica \\
+nombre\_\allowbreak{}completo & TEXT & Nombre acreditado; cifrado & Sí & Personas y cumplimiento & Personal; cifrado/acceso según RT-11.10 cuando aplica \\
+clase\_\allowbreak{}licencia & TEXT & Catálogo homologado; aptitud según vehículo & Sí & Personas y cumplimiento & Personal; cifrado/acceso según RT-11.10 cuando aplica \\
+estado\_\allowbreak{}operativo & TEXT & HABILITADO / BLOQUEADO; no sustituye evaluación & Sí & Personas y cumplimiento & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+id\_\allowbreak{}documento\_\allowbreak{}identidad & UUID & Referencia a DOCUMENTO\_\allowbreak{}RESPALDO & Sí & Personas y cumplimiento & Operacional; personal si vincula persona; cifrado/acceso según RT-11.10 cuando aplica \\
+actualizado\_\allowbreak{}utc & TIMESTAMPTZ & Última actualización acreditada & Sí & Personas y cumplimiento & Operacional; personal si vincula jornada; cifrado/acceso según RT-11.10 cuando aplica \\
+\end{tabla}
+
+Estos atributos concretan las referencias, campos obligatorios y controles de acceso de CONDUCTOR.
+
+\Needspace{18\baselineskip}
+\subsection*{TRACTOCAMION}\label{sec:05-anexo-tractocamion}
+
+Propietario de atributos: Flota y activos. La tabla define el contrato del registro.
+
+La \tabref{05-anexo-tabla-tractocamion} detalla los atributos y controles del registro.
+
+\begin{tabla}[ancho=completo, fuente=condensada]{Atributos y controles de TRACTOCAMION}{05-anexo-tabla-tractocamion}{L{30mm} L{22mm} X L{12mm} L{24mm} X}
+Atributo & Tipo & Dominio y regla & Obligatorio & Propietario & Sensibilidad/tratamiento \\ \midrule
+id\_\allowbreak{}tracto & UUID & PK; generado una vez y preservado en reintentos & Sí & Flota y activos & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+patente & TEXT & Normalizada y única en el registro maestro & Sí & Flota y activos & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+tipo\_\allowbreak{}propiedad & TEXT & PROPIO / TERCERO & Sí & Flota y activos & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+id\_\allowbreak{}transportista & UUID & Referencia a TRANSPORTISTA; NULL si propio & No & Flota y activos & Operacional; personal si vincula persona; cifrado/acceso según RT-11.10 cuando aplica \\
+modelo & TEXT & Modelo y fabricante homologados & Sí & Flota y activos & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+estado & TEXT & DISPONIBLE / RESERVADO / MANTENCION / FUERA\_\allowbreak{}SERVICIO & Sí & Flota y activos & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+acceso\_\allowbreak{}fabrica & TEXT & AUTORIZADO / NO\_\allowbreak{}AUTORIZADO / NO\_\allowbreak{}DISPONIBLE; no booleano inferido & Sí & Flota y activos & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+mapa\_\allowbreak{}senales\_\allowbreak{}version & TEXT & Protocolo y señales autorizadas & No & Flota y activos & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+id\_\allowbreak{}dispositivo & UUID & Referencia a DISPOSITIVO & No & Flota y activos & Operacional; personal si vincula persona; cifrado/acceso según RT-11.10 cuando aplica \\
+\end{tabla}
+
+Estos atributos concretan las referencias, campos obligatorios y controles de acceso de TRACTOCAMION.
+
+\Needspace{18\baselineskip}
+\subsection*{SEMIRREMOLQUE}\label{sec:05-anexo-semirremolque}
+
+Propietario de atributos: Flota y activos. La tabla define el contrato del registro.
+
+La \tabref{05-anexo-tabla-semirremolque} detalla los atributos y controles del registro.
+
+\begin{tabla}[ancho=completo, fuente=condensada]{Atributos y controles de SEMIRREMOLQUE}{05-anexo-tabla-semirremolque}{L{30mm} L{22mm} X L{12mm} L{24mm} X}
+Atributo & Tipo & Dominio y regla & Obligatorio & Propietario & Sensibilidad/tratamiento \\ \midrule
+id\_\allowbreak{}semirremolque & UUID & PK; generado una vez y preservado en reintentos & Sí & Flota y activos & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+patente & TEXT & Identificador normalizado; tercero según inventario & Sí & Flota y activos & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+tipo\_\allowbreak{}carroceria & TEXT & Catálogo de compatibilidad de carga & Sí & Flota y activos & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+capacidad\_\allowbreak{}kg & NUMERIC & >0; según certificado, no rango universal inventado & Sí & Flota y activos & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+tipo\_\allowbreak{}propiedad & TEXT & PROPIO / TERCERO & Sí & Flota y activos & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+id\_\allowbreak{}transportista & UUID & Referencia a TRANSPORTISTA & No & Flota y activos & Operacional; personal si vincula persona; cifrado/acceso según RT-11.10 cuando aplica \\
+estado & TEXT & Disponibilidad y aptitud versionadas & Sí & Flota y activos & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+id\_\allowbreak{}baliza & TEXT & ID registrado y homologado; no evidencia personal & No & Flota y activos & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+\end{tabla}
+
+Estos atributos concretan las referencias, campos obligatorios y controles de acceso de SEMIRREMOLQUE.
+
+\Needspace{18\baselineskip}
+\subsection*{PUNTO\_\allowbreak{}SERVICIO}\label{sec:05-anexo-punto-servicio}
+
+Propietario de atributos: Planificación y tráfico. La tabla define el contrato del registro.
+
+La \tabref{05-anexo-tabla-punto-servicio} detalla los atributos y controles del registro.
+
+\begin{tabla}[ancho=completo, fuente=condensada]{Atributos y controles de PUNTO\_\allowbreak{}SERVICIO}{05-anexo-tabla-punto-servicio}{L{30mm} L{22mm} X L{12mm} L{24mm} X}
+Atributo & Tipo & Dominio y regla & Obligatorio & Propietario & Sensibilidad/tratamiento \\ \midrule
+id\_\allowbreak{}punto & UUID & PK; generado una vez y preservado en reintentos & Sí & Planificación y tráfico & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+id\_\allowbreak{}cliente & UUID & Referencia a CLIENTE & No & Planificación y tráfico & Operacional; personal si vincula persona; cifrado/acceso según RT-11.10 cuando aplica \\
+tipo & TEXT & ORIGEN / DESTINO / TERMINAL / TALLER / PARADOR & Sí & Planificación y tráfico & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+nombre & TEXT & Denominación operacional & Sí & Planificación y tráfico & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+geometria & GEOMETRY(Polygon,4326) & PostGIS GEOMETRY, SRID 4326; validar polígono y versión & Condicional & Planificación y tráfico & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+margen\_\allowbreak{}geocerca & NUMERIC & Parámetro calibrado; unidad declarada & Condicional & Planificación y tráfico & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+version & INTEGER & Versión usada por el equipo & Sí & Planificación y tráfico & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+\end{tabla}
+
+Estos atributos concretan las referencias, campos obligatorios y controles de acceso de PUNTO\_\allowbreak{}SERVICIO.
+
+\Needspace{18\baselineskip}
+\subsection*{ORDEN\_\allowbreak{}TRANSPORTE}\label{sec:05-anexo-orden-transporte}
+
+Propietario de atributos: Planificación y tráfico. La tabla define el contrato del registro.
+
+La \tabref{05-anexo-tabla-orden-transporte} detalla los atributos y controles del registro.
+
+\begin{tabla}[ancho=completo, fuente=condensada]{Atributos y controles de ORDEN\_\allowbreak{}TRANSPORTE}{05-anexo-tabla-orden-transporte}{L{30mm} L{22mm} X L{12mm} L{24mm} X}
+Atributo & Tipo & Dominio y regla & Obligatorio & Propietario & Sensibilidad/tratamiento \\ \midrule
+id\_\allowbreak{}orden & UUID & PK; generado una vez y preservado en reintentos & Sí & Planificación y tráfico & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+id\_\allowbreak{}cliente & UUID & Referencia a CLIENTE & Sí & Planificación y tráfico & Operacional; personal si vincula persona; cifrado/acceso según RT-11.10 cuando aplica \\
+id\_\allowbreak{}origen & UUID & Referencia a PUNTO\_\allowbreak{}SERVICIO & Sí & Planificación y tráfico & Operacional; personal si vincula persona; cifrado/acceso según RT-11.10 cuando aplica \\
+id\_\allowbreak{}destino & UUID & Referencia a PUNTO\_\allowbreak{}SERVICIO & Sí & Planificación y tráfico & Operacional; personal si vincula persona; cifrado/acceso según RT-11.10 cuando aplica \\
+carga & TEXT & Tipo/código y especificación del servicio & Sí & Planificación y tráfico & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+peso\_\allowbreak{}previsto\_\allowbreak{}kg & NUMERIC & >0 cuando disponible; no sustituye pesaje definitivo & No & Planificación y tráfico & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+requiere\_\allowbreak{}semirremolque & BOOLEAN & BOOLEAN; determina campo obligatorio al asignar & Sí & Planificación y tráfico & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+estado & TEXT & ABIERTA / PROGRAMADA / CUMPLIDA / CANCELADA & Sí & Planificación y tráfico & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+fecha\_\allowbreak{}servicio & TIMESTAMPTZ & Fecha programada; zona origen conservada & Sí & Planificación y tráfico & Operacional; personal si vincula jornada; cifrado/acceso según RT-11.10 cuando aplica \\
+\end{tabla}
+
+Estos atributos concretan las referencias, campos obligatorios y controles de acceso de ORDEN\_\allowbreak{}TRANSPORTE.
+
+\Needspace{18\baselineskip}
+\subsection*{VIAJE}\label{sec:05-anexo-viaje}
+
+Propietario de atributos: Operación de fletes. La tabla define el contrato del registro.
+
+La \tabref{05-anexo-tabla-viaje} detalla los atributos y controles del registro.
+
+\begin{tabla}[ancho=completo, fuente=condensada]{Atributos y controles de VIAJE}{05-anexo-tabla-viaje}{L{30mm} L{22mm} X L{12mm} L{24mm} X}
+Atributo & Tipo & Dominio y regla & Obligatorio & Propietario & Sensibilidad/tratamiento \\ \midrule
+id\_\allowbreak{}viaje & UUID & PK; generado una vez y preservado en reintentos & Sí & Operación de fletes & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+id\_\allowbreak{}orden & UUID & Referencia a ORDEN\_\allowbreak{}TRANSPORTE & Sí & Operación de fletes & Operacional; personal si vincula persona; cifrado/acceso según RT-11.10 cuando aplica \\
+codigo\_\allowbreak{}viaje & TEXT & Identificador único legible & Sí & Operación de fletes & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+estado\_\allowbreak{}viaje & TEXT & PROGRAMADO / EN\_\allowbreak{}CARGA / EN\_\allowbreak{}RUTA / EN\_\allowbreak{}DESCARGA / CERRADO / CANCELADO & Sí & Operación de fletes & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+peso\_\allowbreak{}origen\_\allowbreak{}kg & NUMERIC & Pesaje definitivo; obligatorio antes de salida si aplica & Condicional & Operación de fletes & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+id\_\allowbreak{}punto\_\allowbreak{}actual & UUID & Referencia a PUNTO\_\allowbreak{}SERVICIO & No & Operación de fletes & Operacional; personal si vincula persona; cifrado/acceso según RT-11.10 cuando aplica \\
+inicio\_\allowbreak{}utc & TIMESTAMPTZ & Inicio efectivo & No & Operación de fletes & Operacional; personal si vincula jornada; cifrado/acceso según RT-11.10 cuando aplica \\
+cierre\_\allowbreak{}utc & TIMESTAMPTZ & Cierre efectivo & No & Operación de fletes & Operacional; personal si vincula jornada; cifrado/acceso según RT-11.10 cuando aplica \\
+version & INTEGER & Entero positivo para control optimista & Sí & Operación de fletes & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+motivo\_\allowbreak{}cancelacion & TEXT & Obligatorio al cancelar & Condicional & Operación de fletes & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+\end{tabla}
+
+Estos atributos concretan las referencias, campos obligatorios y controles de acceso de VIAJE.
+
+\Needspace{18\baselineskip}
+\subsection*{ASIGNACION}\label{sec:05-anexo-asignacion}
+
+Propietario de atributos: Planificación y tráfico. La tabla define el contrato del registro.
+
+La \tabref{05-anexo-tabla-asignacion} detalla los atributos y controles del registro.
+
+\begin{tabla}[ancho=completo, fuente=condensada]{Atributos y controles de ASIGNACION}{05-anexo-tabla-asignacion}{L{30mm} L{22mm} X L{12mm} L{24mm} X}
+Atributo & Tipo & Dominio y regla & Obligatorio & Propietario & Sensibilidad/tratamiento \\ \midrule
+id\_\allowbreak{}asignacion & UUID & PK; generado una vez y preservado en reintentos & Sí & Planificación y tráfico & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+id\_\allowbreak{}viaje & UUID & Referencia a VIAJE & Sí & Planificación y tráfico & Operacional; personal si vincula persona; cifrado/acceso según RT-11.10 cuando aplica \\
+id\_\allowbreak{}conductor & UUID & Referencia a CONDUCTOR & Al confirmar & Planificación y tráfico & Operacional; personal si vincula persona; cifrado/acceso según RT-11.10 cuando aplica \\
+id\_\allowbreak{}tracto & UUID & Referencia a TRACTOCAMION & Al confirmar & Planificación y tráfico & Operacional; personal si vincula persona; cifrado/acceso según RT-11.10 cuando aplica \\
+id\_\allowbreak{}semirremolque & UUID & Referencia a SEMIRREMOLQUE & Si carga lo exige & Planificación y tráfico & Operacional; personal si vincula persona; cifrado/acceso según RT-11.10 cuando aplica \\
+id\_\allowbreak{}transportista & UUID & Referencia a TRANSPORTISTA & Si tercero & Planificación y tráfico & Operacional; personal si vincula persona; cifrado/acceso según RT-11.10 cuando aplica \\
+desde\_\allowbreak{}utc & TIMESTAMPTZ & Inicio de reserva & Sí & Planificación y tráfico & Operacional; personal si vincula jornada; cifrado/acceso según RT-11.10 cuando aplica \\
+hasta\_\allowbreak{}utc & TIMESTAMPTZ & Fin; NULL activa & No & Planificación y tráfico & Operacional; personal si vincula jornada; cifrado/acceso según RT-11.10 cuando aplica \\
+estado & TEXT & PROPUESTA / CONFIRMADA / LIBERADA / RECHAZADA & Sí & Planificación y tráfico & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+clave\_\allowbreak{}idempotencia & TEXT & Única por cliente de API y operación; persistencia duradera & Sí & Planificación y tráfico & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+version\_\allowbreak{}recursos & TEXT & Versiones de validación usadas & Sí & Planificación y tráfico & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+correlacion & TEXT & ID común de la operación & Sí & Planificación y tráfico & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+\end{tabla}
+
+Estos atributos concretan las referencias, campos obligatorios y controles de acceso de ASIGNACION.
+
+\Needspace{18\baselineskip}
+\subsection*{DOCUMENTO\_\allowbreak{}RESPALDO}\label{sec:05-anexo-documento-respaldo}
+
+Propietario de atributos: Propietario del dominio que aporta el documento. La tabla define el contrato del registro.
+
+La \tabref{05-anexo-tabla-documento-respaldo} detalla los atributos y controles del registro.
+
+\begin{tabla}[ancho=completo, fuente=condensada]{Atributos y controles de DOCUMENTO\_\allowbreak{}RESPALDO}{05-anexo-tabla-documento-respaldo}{L{30mm} L{22mm} X L{12mm} L{24mm} X}
+Atributo & Tipo & Dominio y regla & Obligatorio & Propietario & Sensibilidad/tratamiento \\ \midrule
+id\_\allowbreak{}documento & UUID & PK; generado una vez y preservado en reintentos & Sí & Dominio del documento: Personas, Flota u Operación, uno por registro & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+tipo\_\allowbreak{}documento & TEXT & Catálogo versionado; no se inventa total de tipos & Sí & Dominio del documento: Personas, Flota u Operación, uno por registro & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+hash\_\allowbreak{}sha256 & TEXT & 64 hex; hash del original exacto & Sí & Dominio del documento: Personas, Flota u Operación, uno por registro & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+uri & TEXT & Objeto inmutable; sin secretos en URI & Sí & Dominio del documento: Personas, Flota u Operación, uno por registro & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+emisor & TEXT & Responsable u origen acreditado & Sí & Dominio del documento: Personas, Flota u Operación, uno por registro & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+recibido\_\allowbreak{}utc & TIMESTAMPTZ & Recepción por plataforma & Sí & Dominio del documento: Personas, Flota u Operación, uno por registro & Operacional; personal si vincula jornada; cifrado/acceso según RT-11.10 cuando aplica \\
+firma\_\allowbreak{}estado & TEXT & VALIDA / INVALIDA / NO\_\allowbreak{}APLICA / PENDIENTE; hash no es firma & Sí & Dominio del documento: Personas, Flota u Operación, uno por registro & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+retener\_\allowbreak{}hasta & TIMESTAMPTZ & Fin mínimo contractual según dominio & Sí & Dominio del documento: Personas, Flota u Operación, uno por registro & Operacional; personal si vincula jornada; cifrado/acceso según RT-11.10 cuando aplica \\
+retencion\_\allowbreak{}litigio & BOOLEAN & BOOLEAN; prolonga sin permitir borrado anticipado & Sí & Dominio del documento: Personas, Flota u Operación, uno por registro & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+\end{tabla}
+
+Estos atributos concretan las referencias, campos obligatorios y controles de acceso de DOCUMENTO\_\allowbreak{}RESPALDO.
+
+\Needspace{18\baselineskip}
+\subsection*{VIGENCIA\_\allowbreak{}HABILITACION}\label{sec:05-anexo-vigencia-habilitacion}
+
+Propietario de atributos: Personas y cumplimiento (conductor); Flota y activos (equipos). La tabla define el contrato del registro.
+
+La \tabref{05-anexo-tabla-vigencia-habilitacion} detalla los atributos y controles del registro.
+
+\begin{tabla}[ancho=completo, fuente=condensada]{Atributos y controles de VIGENCIA\_\allowbreak{}HABILITACION}{05-anexo-tabla-vigencia-habilitacion}{L{30mm} L{22mm} X L{12mm} L{24mm} X}
+Atributo & Tipo & Dominio y regla & Obligatorio & Propietario & Sensibilidad/tratamiento \\ \midrule
+id\_\allowbreak{}vigencia & UUID & PK; generado una vez y preservado en reintentos & Sí & Dominio del sujeto: Personas o Flota, uno por registro & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+id\_\allowbreak{}conductor & UUID & Referencia a CONDUCTOR & Excluyente & Personas y cumplimiento & Operacional; personal si vincula persona; cifrado/acceso según RT-11.10 cuando aplica \\
+id\_\allowbreak{}tracto & UUID & Referencia a TRACTOCAMION & Excluyente & Flota y activos & Operacional; personal si vincula persona; cifrado/acceso según RT-11.10 cuando aplica \\
+id\_\allowbreak{}semirremolque & UUID & Referencia a SEMIRREMOLQUE & Excluyente & Flota y activos & Operacional; personal si vincula persona; cifrado/acceso según RT-11.10 cuando aplica \\
+tipo\_\allowbreak{}documento & TEXT & Catálogo homologado para el sujeto & Sí & Dominio del sujeto: Personas o Flota, uno por registro & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+fecha\_\allowbreak{}vencimiento & DATE & DATE; cotejo documental & Sí & Dominio del sujeto: Personas o Flota, uno por registro & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+estado\_\allowbreak{}verificacion & TEXT & VERIFICADO / PENDIENTE / RECHAZADO / REVOCADO & Sí & Dominio del sujeto: Personas o Flota, uno por registro & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+id\_\allowbreak{}documento & UUID & Referencia a DOCUMENTO\_\allowbreak{}RESPALDO & Al verificar & Dominio del sujeto: Personas o Flota, uno por registro & Operacional; personal si vincula persona; cifrado/acceso según RT-11.10 cuando aplica \\
+verificado\_\allowbreak{}utc & TIMESTAMPTZ & Fecha real de cotejo & Al verificar & Dominio del sujeto: Personas o Flota, uno por registro & Operacional; personal si vincula jornada; cifrado/acceso según RT-11.10 cuando aplica \\
+verificado\_\allowbreak{}por & TEXT & Identidad del verificador & Al verificar & Dominio del sujeto: Personas o Flota, uno por registro & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+responsable\_\allowbreak{}renovacion & TEXT & Rol/titular responsable; alertas 60/30/7 días & Sí & Dominio del sujeto: Personas o Flota, uno por registro & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+\end{tabla}
+
+Estos atributos concretan las referencias, campos obligatorios y controles de acceso de VIGENCIA\_\allowbreak{}HABILITACION.
+
+\Needspace{18\baselineskip}
+\subsection*{DISPOSITIVO}\label{sec:05-anexo-dispositivo}
+
+Propietario de atributos: Telemetría y geocercas. La tabla define el contrato del registro.
+
+La \tabref{05-anexo-tabla-dispositivo} detalla los atributos y controles del registro.
+
+\begin{tabla}[ancho=completo, fuente=condensada]{Atributos y controles de DISPOSITIVO}{05-anexo-tabla-dispositivo}{L{30mm} L{22mm} X L{12mm} L{24mm} X}
+Atributo & Tipo & Dominio y regla & Obligatorio & Propietario & Sensibilidad/tratamiento \\ \midrule
+id\_\allowbreak{}dispositivo & UUID & PK; generado una vez y preservado en reintentos & Sí & Telemetría y geocercas & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+codigo\_\allowbreak{}origen & TEXT & ID externo único por proveedor & Sí & Telemetría y geocercas & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+tipo & TEXT & AUDIT / TERCERO / FABRICA / TACOGRAFO & Sí & Telemetría y geocercas & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+proveedor & TEXT & Fuente homologada & Sí & Telemetría y geocercas & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+certificado\_\allowbreak{}id & TEXT & Identidad por equipo cuando sea aplicable & Condicional & Telemetría y geocercas & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+version\_\allowbreak{}config & TEXT & Configuración y esquema & Sí & Telemetría y geocercas & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+ultimo\_\allowbreak{}acuse\_\allowbreak{}utc & TIMESTAMPTZ & Último commit confirmado & No & Telemetría y geocercas & Operacional; personal si vincula jornada; cifrado/acceso según RT-11.10 cuando aplica \\
+cursor\_\allowbreak{}confirmado & TEXT & Secuencia duradera por flujo & No & Telemetría y geocercas & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+\end{tabla}
+
+Estos atributos concretan las referencias, campos obligatorios y controles de acceso de DISPOSITIVO.
+
+\Needspace{18\baselineskip}
+\subsection*{EVIDENCIA\_\allowbreak{}JORNADA}\label{sec:05-anexo-evidencia-jornada}
+
+Propietario de atributos: Personas y cumplimiento. La tabla define el contrato del registro.
+
+La \tabref{05-anexo-tabla-evidencia-jornada} detalla los atributos y controles del registro.
+
+\begin{tabla}[ancho=completo, fuente=condensada]{Atributos y controles de EVIDENCIA\_\allowbreak{}JORNADA}{05-anexo-tabla-evidencia-jornada}{L{30mm} L{22mm} X L{12mm} L{24mm} X}
+Atributo & Tipo & Dominio y regla & Obligatorio & Propietario & Sensibilidad/tratamiento \\ \midrule
+id\_\allowbreak{}evidencia & UUID & PK; generado una vez y preservado en reintentos & Sí & Personas y cumplimiento & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+id\_\allowbreak{}conductor & UUID & Referencia a CONDUCTOR; no inferir identidad & No & Personas y cumplimiento & Operacional; personal si vincula persona; cifrado/acceso según RT-11.10 cuando aplica \\
+id\_\allowbreak{}dispositivo & UUID & Referencia a DISPOSITIVO & No & Personas y cumplimiento & Operacional; personal si vincula persona; cifrado/acceso según RT-11.10 cuando aplica \\
+id\_\allowbreak{}documento\_\allowbreak{}original & UUID & Referencia a DOCUMENTO\_\allowbreak{}RESPALDO & Si hay artefacto firmado/archivo & Personas y cumplimiento & Operacional; personal si vincula persona; cifrado/acceso según RT-11.10 cuando aplica \\
+codigo\_\allowbreak{}fuente & TEXT & Código original recibido, sin renumerarlo & Sí & Personas y cumplimiento & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+estado\_\allowbreak{}evidencia & TEXT & VALIDA / CODIGO\_\allowbreak{}FUENTE\_\allowbreak{}DESCONOCIDO / EVIDENCIA\_\allowbreak{}INVALIDA & Sí & Personas y cumplimiento & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+nivel\_\allowbreak{}cascada & SMALLINT & SMALLINT NULL o 0–5; 0 sólo REG\_\allowbreak{}COND; NULL no válida & Si VALIDA & Personas y cumplimiento & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+tipo\_\allowbreak{}evento & TEXT & CONDUCCION / ESPERA / REPOSO / ATESTACION / VOLUNTARIO; catálogo versionado & Sí & Personas y cumplimiento & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+evento\_\allowbreak{}utc & TIMESTAMPTZ & Hora de fuente interpretada; conservar original & No & Personas y cumplimiento & Operacional; personal si vincula jornada; cifrado/acceso según RT-11.10 cuando aplica \\
+recibido\_\allowbreak{}utc & TIMESTAMPTZ & Hora de recepción & Sí & Personas y cumplimiento & Operacional; personal si vincula jornada; cifrado/acceso según RT-11.10 cuando aplica \\
+marca\_\allowbreak{}original & TEXT & Hora/offset/código original para interpretación & No & Personas y cumplimiento & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+calidad\_\allowbreak{}reloj & TEXT & GNSS / NTP / NO\_\allowbreak{}SINCRONIZADO / DESCONOCIDO; deriva cuando medible & Sí & Personas y cumplimiento & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+odometro\_\allowbreak{}km & NUMERIC & $\geq$0 cuando medido; NULL ausente & No & Personas y cumplimiento & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+velocidad\_\allowbreak{}kmh & NUMERIC & $\geq$0 cuando medida; NULL ausente & No & Personas y cumplimiento & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+cadena\_\allowbreak{}id & TEXT & Identificador de cadena de custodia & Sí & Personas y cumplimiento & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+secuencia\_\allowbreak{}custodia & BIGINT & BIGINT >0; único por cadena & Sí & Personas y cumplimiento & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+hash\_\allowbreak{}sha256 & TEXT & 64 hex; registro canónico y referencia al original & Sí & Personas y cumplimiento & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+hash\_\allowbreak{}previo & TEXT & 64 hex; NULL sólo al inicio de cadena & Condicional & Personas y cumplimiento & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+rectifica\_\allowbreak{}id & UUID & Referencia a EVIDENCIA\_\allowbreak{}JORNADA original & No & Personas y cumplimiento & Operacional; personal si vincula persona; cifrado/acceso según RT-11.10 cuando aplica \\
+mapeo\_\allowbreak{}version & TEXT & Versión origen$\rightarrow$nivel aplicada & Sí & Personas y cumplimiento & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+motivo\_\allowbreak{}invalidez & TEXT & Obligatorio para fuente desconocida/inválida & Condicional & Personas y cumplimiento & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+\end{tabla}
+
+Estos atributos concretan las referencias, campos obligatorios y controles de acceso de EVIDENCIA\_\allowbreak{}JORNADA.
+
+\Needspace{18\baselineskip}
+\subsection*{EVALUACION\_\allowbreak{}ASIGNACION}\label{sec:05-anexo-evaluacion-asignacion}
+
+Propietario de atributos: Personas y cumplimiento. La tabla define el contrato del registro.
+
+La \tabref{05-anexo-tabla-evaluacion-asignacion} detalla los atributos y controles del registro.
+
+\begin{tabla}[ancho=completo, fuente=condensada]{Atributos y controles de EVALUACION\_\allowbreak{}ASIGNACION}{05-anexo-tabla-evaluacion-asignacion}{L{30mm} L{22mm} X L{12mm} L{24mm} X}
+Atributo & Tipo & Dominio y regla & Obligatorio & Propietario & Sensibilidad/tratamiento \\ \midrule
+id\_\allowbreak{}evaluacion & UUID & PK; generado una vez y preservado en reintentos & Sí & Personas y cumplimiento & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+id\_\allowbreak{}asignacion & UUID & Referencia a ASIGNACION & Sí & Personas y cumplimiento & Operacional; personal si vincula persona; cifrado/acceso según RT-11.10 cuando aplica \\
+estado\_\allowbreak{}evidencia & TEXT & VALIDA / SIN\_\allowbreak{}EVIDENCIA / CODIGO\_\allowbreak{}FUENTE\_\allowbreak{}DESCONOCIDO / EVIDENCIA\_\allowbreak{}INVALIDA & Sí & Personas y cumplimiento & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+modalidad\_\allowbreak{}adhesion & TEXT & COMPLETA / DATOS / SIN\_\allowbreak{}ADHESION & Sí & Personas y cumplimiento & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+veredicto & TEXT & HABILITADA / HABILITADA\_\allowbreak{}CON\_\allowbreak{}MARCA / BLOQUEADA / EXCEPCION\_\allowbreak{}RN04\_\allowbreak{}APROBADA & Sí & Personas y cumplimiento & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+regla\_\allowbreak{}version & TEXT & Versión de reglas y catálogo normativo aplicado & Sí & Personas y cumplimiento & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+causa & JSONB & Causales y datos faltantes estructurados; esquema versionado & Sí & Personas y cumplimiento & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+evaluado\_\allowbreak{}utc & TIMESTAMPTZ & Hora de decisión & Sí & Personas y cumplimiento & Operacional; personal si vincula jornada; cifrado/acceso según RT-11.10 cuando aplica \\
+correlacion & TEXT & Enlace auditable a solicitud y respuesta & Sí & Personas y cumplimiento & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+\end{tabla}
+
+Estos atributos concretan las referencias, campos obligatorios y controles de acceso de EVALUACION\_\allowbreak{}ASIGNACION.
+
+\Needspace{18\baselineskip}
+\subsection*{EVALUACION\_\allowbreak{}EVIDENCIA}\label{sec:05-anexo-evaluacion-evidencia}
+
+Propietario de atributos: Personas y cumplimiento. La tabla define el contrato del registro.
+
+La \tabref{05-anexo-tabla-evaluacion-evidencia} detalla los atributos y controles del registro.
+
+\begin{tabla}[ancho=completo, fuente=condensada]{Atributos y controles de EVALUACION\_\allowbreak{}EVIDENCIA}{05-anexo-tabla-evaluacion-evidencia}{L{30mm} L{22mm} X L{12mm} L{24mm} X}
+Atributo & Tipo & Dominio y regla & Obligatorio & Propietario & Sensibilidad/tratamiento \\ \midrule
+id\_\allowbreak{}evaluacion & UUID & Referencia a EVALUACION\_\allowbreak{}ASIGNACION; parte de PK & Sí & Personas y cumplimiento & Operacional; personal si vincula persona; cifrado/acceso según RT-11.10 cuando aplica \\
+id\_\allowbreak{}evidencia & UUID & Referencia a EVIDENCIA\_\allowbreak{}JORNADA; parte de PK & Sí & Personas y cumplimiento & Operacional; personal si vincula persona; cifrado/acceso según RT-11.10 cuando aplica \\
+uso & TEXT & JORNADA / REPOSO / ATESTACION / AUXILIAR & Sí & Personas y cumplimiento & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+condicion\_\allowbreak{}validada & JSONB & Identidad, rango temporal e integridad comprobados; esquema versionado & Sí & Personas y cumplimiento & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+\end{tabla}
+
+Estos atributos concretan las referencias, campos obligatorios y controles de acceso de EVALUACION\_\allowbreak{}EVIDENCIA.
+
+\Needspace{18\baselineskip}
+\subsection*{EXCEPCION\_\allowbreak{}RN04}\label{sec:05-anexo-excepcion-rn04}
+
+Propietario de atributos: Personas y cumplimiento. La tabla define el contrato del registro.
+
+La \tabref{05-anexo-tabla-excepcion-rn04} detalla los atributos y controles del registro.
+
+\begin{tabla}[ancho=completo, fuente=condensada]{Atributos y controles de EXCEPCION\_\allowbreak{}RN04}{05-anexo-tabla-excepcion-rn04}{L{30mm} L{22mm} X L{12mm} L{24mm} X}
+Atributo & Tipo & Dominio y regla & Obligatorio & Propietario & Sensibilidad/tratamiento \\ \midrule
+id\_\allowbreak{}excepcion & UUID & PK; generado una vez y preservado en reintentos & Sí & Personas y cumplimiento & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+id\_\allowbreak{}evaluacion & UUID & Referencia a EVALUACION\_\allowbreak{}ASIGNACION; máximo una aprobada & Sí & Personas y cumplimiento & Operacional; personal si vincula persona; cifrado/acceso según RT-11.10 cuando aplica \\
+motivo & TEXT & Sólo indisponibilidad de fuente; causa legal nunca elegible & Sí & Personas y cumplimiento & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+aprobador\_\allowbreak{}torre & TEXT & Jefe de turno identificado & Sí & Personas y cumplimiento & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+aprobador\_\allowbreak{}prevencion & TEXT & Prevención de riesgos identificada; independiente & Sí & Personas y cumplimiento & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+aprobado\_\allowbreak{}utc & TIMESTAMPTZ & Antes de confirmar excepción & Sí & Personas y cumplimiento & Operacional; personal si vincula jornada; cifrado/acceso según RT-11.10 cuando aplica \\
+alcance & TEXT & Un único viaje/asignación & Sí & Personas y cumplimiento & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+revisado\_\allowbreak{}utc & TIMESTAMPTZ & Revisión mensual real & No & Personas y cumplimiento & Operacional; personal si vincula jornada; cifrado/acceso según RT-11.10 cuando aplica \\
+\end{tabla}
+
+Estos atributos concretan las referencias, campos obligatorios y controles de acceso de EXCEPCION\_\allowbreak{}RN04.
+
+\Needspace{18\baselineskip}
+\subsection*{PERMISO\_\allowbreak{}COMPARTIR}\label{sec:05-anexo-permiso-compartir}
+
+Propietario de atributos: Personas y cumplimiento. La tabla define el contrato del registro.
+
+La \tabref{05-anexo-tabla-permiso-compartir} detalla los atributos y controles del registro.
+
+\begin{tabla}[ancho=completo, fuente=condensada]{Atributos y controles de PERMISO\_\allowbreak{}COMPARTIR}{05-anexo-tabla-permiso-compartir}{L{30mm} L{22mm} X L{12mm} L{24mm} X}
+Atributo & Tipo & Dominio y regla & Obligatorio & Propietario & Sensibilidad/tratamiento \\ \midrule
+id\_\allowbreak{}permiso & UUID & PK; generado una vez y preservado en reintentos & Sí & Personas y cumplimiento & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+id\_\allowbreak{}transportista & UUID & Referencia a TRANSPORTISTA & Sí & Personas y cumplimiento & Operacional; personal si vincula persona; cifrado/acceso según RT-11.10 cuando aplica \\
+recurso & TEXT & Tipo e ID de camión/conductor/viaje autorizado & Sí & Personas y cumplimiento & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+destinatario & TEXT & Rol/cliente/sistema; referencia verificable & Sí & Personas y cumplimiento & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+finalidad & TEXT & Propósito específico; no autorización genérica & Sí & Personas y cumplimiento & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+datos\_\allowbreak{}autorizados & JSONB & Catálogo granular de posición, documentos u otro dato; esquema versionado & Sí & Personas y cumplimiento & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+desde\_\allowbreak{}utc & TIMESTAMPTZ & Inicio & Sí & Personas y cumplimiento & Operacional; personal si vincula jornada; cifrado/acceso según RT-11.10 cuando aplica \\
+hasta\_\allowbreak{}utc & TIMESTAMPTZ & Fin; permiso local siempre con expiración & Sí & Personas y cumplimiento & Operacional; personal si vincula jornada; cifrado/acceso según RT-11.10 cuando aplica \\
+revocado\_\allowbreak{}utc & TIMESTAMPTZ & Cese registrado & No & Personas y cumplimiento & Operacional; personal si vincula jornada; cifrado/acceso según RT-11.10 cuando aplica \\
+version & INTEGER & Entero positivo; invalidación de caché & Sí & Personas y cumplimiento & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+id\_\allowbreak{}respaldo & UUID & Referencia a DOCUMENTO\_\allowbreak{}RESPALDO & Sí & Personas y cumplimiento & Operacional; personal si vincula persona; cifrado/acceso según RT-11.10 cuando aplica \\
+base\_\allowbreak{}tratamiento\_\allowbreak{}ref & TEXT & Registro jurídico separado; no se deduce del permiso comercial & Sí & Personas y cumplimiento & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+\end{tabla}
+
+Estos atributos concretan las referencias, campos obligatorios y controles de acceso de PERMISO\_\allowbreak{}COMPARTIR.
+
+\Needspace{18\baselineskip}
+\subsection*{ACCESO\_\allowbreak{}DATO}\label{sec:05-anexo-acceso-dato}
+
+Propietario de atributos: Seguridad y auditoría. La tabla define el contrato del registro.
+
+La \tabref{05-anexo-tabla-acceso-dato} detalla los atributos y controles del registro.
+
+\begin{tabla}[ancho=completo, fuente=condensada]{Atributos y controles de ACCESO\_\allowbreak{}DATO}{05-anexo-tabla-acceso-dato}{L{30mm} L{22mm} X L{12mm} L{24mm} X}
+Atributo & Tipo & Dominio y regla & Obligatorio & Propietario & Sensibilidad/tratamiento \\ \midrule
+id\_\allowbreak{}acceso & UUID & PK; generado una vez y preservado en reintentos & Sí & Seguridad y auditoría & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+actor & TEXT & Persona o sistema autenticado & Sí & Seguridad y auditoría & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+recurso & TEXT & Tipo, ID y campos mostrados/negados & Sí & Seguridad y auditoría & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+id\_\allowbreak{}permiso & UUID & Referencia a PERMISO\_\allowbreak{}COMPARTIR & Si aplica & Seguridad y auditoría & Operacional; personal si vincula persona; cifrado/acceso según RT-11.10 cuando aplica \\
+permiso\_\allowbreak{}version & INTEGER & Versión evaluada & Si aplica & Seguridad y auditoría & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+resultado & TEXT & PERMITIDO / DENEGADO & Sí & Seguridad y auditoría & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+acceso\_\allowbreak{}utc & TIMESTAMPTZ & Hora UTC & Sí & Seguridad y auditoría & Operacional; personal si vincula jornada; cifrado/acceso según RT-11.10 cuando aplica \\
+correlacion & TEXT & Petición, dispositivo y canal & Sí & Seguridad y auditoría & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+\end{tabla}
+
+Estos atributos concretan las referencias, campos obligatorios y controles de acceso de ACCESO\_\allowbreak{}DATO.
+
+\Needspace{18\baselineskip}
+\subsection*{TELEMETRIA\_\allowbreak{}EVENTO}\label{sec:05-anexo-telemetria-evento}
+
+Propietario de atributos: Telemetría y geocercas. La tabla define el contrato del registro.
+
+La \tabref{05-anexo-tabla-telemetria-evento} detalla los atributos y controles del registro.
+
+\begin{tabla}[ancho=completo, fuente=condensada]{Atributos y controles de TELEMETRIA\_\allowbreak{}EVENTO}{05-anexo-tabla-telemetria-evento}{L{30mm} L{22mm} X L{12mm} L{24mm} X}
+Atributo & Tipo & Dominio y regla & Obligatorio & Propietario & Sensibilidad/tratamiento \\ \midrule
+id\_\allowbreak{}evento & UUID & PK; generado una vez y preservado en reintentos & Sí & Telemetría y geocercas & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+id\_\allowbreak{}dispositivo & UUID & Referencia a DISPOSITIVO & Sí & Telemetría y geocercas & Operacional; personal si vincula persona; cifrado/acceso según RT-11.10 cuando aplica \\
+id\_\allowbreak{}viaje & UUID & Referencia a VIAJE & No & Telemetría y geocercas & Operacional; personal si vincula persona; cifrado/acceso según RT-11.10 cuando aplica \\
+id\_\allowbreak{}conductor & UUID & Referencia a CONDUCTOR; sólo vínculo acreditado & No & Telemetría y geocercas & Operacional; personal si vincula persona; cifrado/acceso según RT-11.10 cuando aplica \\
+secuencia\_\allowbreak{}origen & BIGINT & BIGINT; unicidad por equipo/flujo cuando fuente la ofrece & No & Telemetría y geocercas & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+evento\_\allowbreak{}utc & TIMESTAMPTZ & Hora de fuente & No & Telemetría y geocercas & Operacional; personal si vincula jornada; cifrado/acceso según RT-11.10 cuando aplica \\
+recibido\_\allowbreak{}utc & TIMESTAMPTZ & Hora de recepción & Sí & Telemetría y geocercas & Operacional; personal si vincula jornada; cifrado/acceso según RT-11.10 cuando aplica \\
+latitud & NUMERIC & −90..90; ambas coordenadas o ninguna & No & Telemetría y geocercas & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+longitud & NUMERIC & −180..180; ambas coordenadas o ninguna & No & Telemetría y geocercas & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+odometro\_\allowbreak{}km & NUMERIC & Dato medido; NULL ausente & No & Telemetría y geocercas & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+parametros & JSONB & JSONB validado por esquema y mapa autorizado; esquema versionado & Sí & Telemetría y geocercas & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+hash\_\allowbreak{}origen & TEXT & Integridad y procedencia & Sí & Telemetría y geocercas & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+autorizacion\_\allowbreak{}version & INTEGER & Permiso aplicado; no transmitir fuera de su alcance & Si aplica & Telemetría y geocercas & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+\end{tabla}
+
+Estos atributos concretan las referencias, campos obligatorios y controles de acceso de TELEMETRIA\_\allowbreak{}EVENTO.
+
+\Needspace{18\baselineskip}
+\subsection*{ESTANCIA\_\allowbreak{}CLIENTE}\label{sec:05-anexo-estancia-cliente}
+
+Propietario de atributos: Operación de fletes. La tabla define el contrato del registro.
+
+La \tabref{05-anexo-tabla-estancia-cliente} detalla los atributos y controles del registro.
+
+\begin{tabla}[ancho=completo, fuente=condensada]{Atributos y controles de ESTANCIA\_\allowbreak{}CLIENTE}{05-anexo-tabla-estancia-cliente}{L{30mm} L{22mm} X L{12mm} L{24mm} X}
+Atributo & Tipo & Dominio y regla & Obligatorio & Propietario & Sensibilidad/tratamiento \\ \midrule
+id\_\allowbreak{}estancia & UUID & PK; generado una vez y preservado en reintentos & Sí & Operación de fletes & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+id\_\allowbreak{}viaje & UUID & Referencia a VIAJE & Sí & Operación de fletes & Operacional; personal si vincula persona; cifrado/acceso según RT-11.10 cuando aplica \\
+id\_\allowbreak{}punto & UUID & Referencia a PUNTO\_\allowbreak{}SERVICIO & Sí & Operación de fletes & Operacional; personal si vincula persona; cifrado/acceso según RT-11.10 cuando aplica \\
+llegada\_\allowbreak{}utc & TIMESTAMPTZ & Evento automático geocerca & Sí & Operación de fletes & Operacional; personal si vincula jornada; cifrado/acceso según RT-11.10 cuando aplica \\
+salida\_\allowbreak{}utc & TIMESTAMPTZ & NULL mientras estancia abierta & No & Operación de fletes & Operacional; personal si vincula jornada; cifrado/acceso según RT-11.10 cuando aplica \\
+id\_\allowbreak{}evento\_\allowbreak{}llegada & UUID & Referencia a TELEMETRIA\_\allowbreak{}EVENTO & Sí & Operación de fletes & Operacional; personal si vincula persona; cifrado/acceso según RT-11.10 cuando aplica \\
+id\_\allowbreak{}evento\_\allowbreak{}salida & UUID & Referencia a TELEMETRIA\_\allowbreak{}EVENTO & No & Operación de fletes & Operacional; personal si vincula persona; cifrado/acceso según RT-11.10 cuando aplica \\
+geocerca\_\allowbreak{}version & TEXT & Polígono y regla usados & Sí & Operación de fletes & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+causa\_\allowbreak{}demora & TEXT & Cliente / frontera / otra; no cobro automático por toda demora & No & Operación de fletes & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+\end{tabla}
+
+Estos atributos concretan las referencias, campos obligatorios y controles de acceso de ESTANCIA\_\allowbreak{}CLIENTE.
+
+\Needspace{18\baselineskip}
+\subsection*{DOCUMENTO\_\allowbreak{}TRANSPORTE}\label{sec:05-anexo-documento-transporte}
+
+Propietario de atributos: Operación de fletes; emisor fiscal externo contable. La tabla define el contrato del registro.
+
+La \tabref{05-anexo-tabla-documento-transporte} detalla los atributos y controles del registro.
+
+\begin{tabla}[ancho=completo, fuente=condensada]{Atributos y controles de DOCUMENTO\_\allowbreak{}TRANSPORTE}{05-anexo-tabla-documento-transporte}{L{30mm} L{22mm} X L{12mm} L{24mm} X}
+Atributo & Tipo & Dominio y regla & Obligatorio & Propietario & Sensibilidad/tratamiento \\ \midrule
+id\_\allowbreak{}documento\_\allowbreak{}transporte & UUID & PK; generado una vez y preservado en reintentos & Sí & Operación de fletes; emisor fiscal externo contable & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+id\_\allowbreak{}viaje & UUID & Referencia a VIAJE & Sí & Operación de fletes; emisor fiscal externo contable & Operacional; personal si vincula persona; cifrado/acceso según RT-11.10 cuando aplica \\
+id\_\allowbreak{}original & UUID & Referencia a DOCUMENTO\_\allowbreak{}RESPALDO & Sí & Operación de fletes; emisor fiscal externo contable & Operacional; personal si vincula persona; cifrado/acceso según RT-11.10 cuando aplica \\
+folio & TEXT & Asignado exclusivamente por contable; único por emisor/tipo & Sí & Operación de fletes; emisor fiscal externo contable & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+emisor & TEXT & Identidad del emisor & Sí & Operación de fletes; emisor fiscal externo contable & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+estado & TEXT & SOLICITADO / EMITIDO / ENTREGADO / RECHAZADO / ANULADO & Sí & Operación de fletes; emisor fiscal externo contable & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+representacion\_\allowbreak{}uri & TEXT & Copia portable conforme del mismo contenido & Al habilitar salida & Operación de fletes; emisor fiscal externo contable & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+emitido\_\allowbreak{}utc & TIMESTAMPTZ & Hora de emisión del contable & Al emitir & Operación de fletes; emisor fiscal externo contable & Operacional; personal si vincula jornada; cifrado/acceso según RT-11.10 cuando aplica \\
+acuse\_\allowbreak{}cabina\_\allowbreak{}utc & TIMESTAMPTZ & Entrega completa verificada & Antes de salida & Operación de fletes; emisor fiscal externo contable & Operacional; personal si vincula jornada; cifrado/acceso según RT-11.10 cuando aplica \\
+clave\_\allowbreak{}idempotencia & TEXT & Solicitud fiscal correlacionada y duradera & Sí & Operación de fletes; emisor fiscal externo contable & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+\end{tabla}
+
+Estos atributos concretan las referencias, campos obligatorios y controles de acceso de DOCUMENTO\_\allowbreak{}TRANSPORTE.
+
+\Needspace{18\baselineskip}
+\subsection*{CONFORMIDAD\_\allowbreak{}ENTREGA}\label{sec:05-anexo-conformidad-entrega}
+
+Propietario de atributos: Operación de fletes. La tabla define el contrato del registro.
+
+La \tabref{05-anexo-tabla-conformidad-entrega} detalla los atributos y controles del registro.
+
+\begin{tabla}[ancho=completo, fuente=condensada]{Atributos y controles de CONFORMIDAD\_\allowbreak{}ENTREGA}{05-anexo-tabla-conformidad-entrega}{L{30mm} L{22mm} X L{12mm} L{24mm} X}
+Atributo & Tipo & Dominio y regla & Obligatorio & Propietario & Sensibilidad/tratamiento \\ \midrule
+id\_\allowbreak{}conformidad & UUID & PK; generado una vez y preservado en reintentos & Sí & Operación de fletes & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+id\_\allowbreak{}viaje & UUID & Referencia a VIAJE & Sí & Operación de fletes & Operacional; personal si vincula persona; cifrado/acceso según RT-11.10 cuando aplica \\
+destinatario & TEXT & Persona identificada que recibe & Sí & Operación de fletes & Personal; acceso restringido; cifrado/acceso según RT-11.10 cuando aplica \\
+resultado & TEXT & CONFORME / DISCREPANCIA / RECHAZADA & Sí & Operación de fletes & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+observacion & TEXT & Descripción concreta & No & Operación de fletes & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+id\_\allowbreak{}original\_\allowbreak{}firmado & UUID & Referencia a DOCUMENTO\_\allowbreak{}RESPALDO & Sí & Operación de fletes & Operacional; personal si vincula persona; cifrado/acceso según RT-11.10 cuando aplica \\
+evento\_\allowbreak{}utc & TIMESTAMPTZ & Firma/recepción & Sí & Operación de fletes & Operacional; personal si vincula jornada; cifrado/acceso según RT-11.10 cuando aplica \\
+firma\_\allowbreak{}modalidad & TEXT & Modalidad admitida para el caso; comprobación de identidad e integridad & Sí & Operación de fletes & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+\end{tabla}
+
+Estos atributos concretan las referencias, campos obligatorios y controles de acceso de CONFORMIDAD\_\allowbreak{}ENTREGA.
+
+\Needspace{18\baselineskip}
+\subsection*{CHECKLIST\_\allowbreak{}CARGA\_\allowbreak{}PELIGROSA}\label{sec:05-anexo-checklist-carga-peligrosa}
+
+Propietario de atributos: Operación de fletes. La tabla define el contrato del registro.
+
+La \tabref{05-anexo-tabla-checklist-carga-peligrosa} detalla los atributos y controles del registro.
+
+\begin{tabla}[ancho=completo, fuente=condensada]{Atributos y controles de CHECKLIST\_\allowbreak{}CARGA\_\allowbreak{}PELIGROSA}{05-anexo-tabla-checklist-carga-peligrosa}{L{30mm} L{22mm} X L{12mm} L{24mm} X}
+Atributo & Tipo & Dominio y regla & Obligatorio & Propietario & Sensibilidad/tratamiento \\ \midrule
+id\_\allowbreak{}checklist & UUID & PK; generado una vez y preservado en reintentos & Sí & Operación de fletes & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+id\_\allowbreak{}viaje & UUID & Referencia a VIAJE & Sí & Operación de fletes & Operacional; personal si vincula persona; cifrado/acceso según RT-11.10 cuando aplica \\
+version & INTEGER & Versión de lista y regla & Sí & Operación de fletes & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+resultado & TEXT & APROBADA / RECHAZADA & Sí & Operación de fletes & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+items & JSONB & JSONB validado; carga y documentación cotejadas; esquema versionado & Sí & Operación de fletes & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+id\_\allowbreak{}original\_\allowbreak{}firmado & UUID & Referencia a DOCUMENTO\_\allowbreak{}RESPALDO & Sí & Operación de fletes & Operacional; personal si vincula persona; cifrado/acceso según RT-11.10 cuando aplica \\
+verificado\_\allowbreak{}utc & TIMESTAMPTZ & Antes del movimiento & Sí & Operación de fletes & Operacional; personal si vincula jornada; cifrado/acceso según RT-11.10 cuando aplica \\
+\end{tabla}
+
+Estos atributos concretan las referencias, campos obligatorios y controles de acceso de CHECKLIST\_\allowbreak{}CARGA\_\allowbreak{}PELIGROSA.
+
+\Needspace{18\baselineskip}
+\subsection*{TARIFA\_\allowbreak{}CONTRATO}\label{sec:05-anexo-tarifa-contrato}
+
+Propietario de atributos: Liquidación y costeo; terceros desde M16 y clientes desde M21. La tabla define el contrato del registro.
+
+La \tabref{05-anexo-tabla-tarifa-contrato} detalla los atributos y controles del registro.
+
+\begin{tabla}[ancho=completo, fuente=condensada]{Atributos y controles de TARIFA\_\allowbreak{}CONTRATO}{05-anexo-tabla-tarifa-contrato}{L{30mm} L{22mm} X L{12mm} L{24mm} X}
+Atributo & Tipo & Dominio y regla & Obligatorio & Propietario & Sensibilidad/tratamiento \\ \midrule
+id\_\allowbreak{}tarifa & UUID & PK; generado una vez y preservado en reintentos & Sí & Liquidación y costeo & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+id\_\allowbreak{}cliente & UUID & Referencia a CLIENTE; exactamente una contraparte & Excluyente & Liquidación y costeo & Operacional; acceso restringido \\
+id\_\allowbreak{}transportista & UUID & Referencia a TRANSPORTISTA; exactamente una contraparte & Excluyente & Liquidación y costeo & Operacional; acceso restringido \\
+ruta\_\allowbreak{}servicio & TEXT & Alcance contractual & Sí & Liquidación y costeo & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+importe & NUMERIC & Moneda y regla de redondeo conservadas & Sí & Liquidación y costeo & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+moneda & TEXT & Catálogo ISO de moneda & Sí & Liquidación y costeo & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+desde\_\allowbreak{}utc & TIMESTAMPTZ & Inicio de vigencia & Sí & Liquidación y costeo & Operacional; personal si vincula jornada; cifrado/acceso según RT-11.10 cuando aplica \\
+hasta\_\allowbreak{}utc & TIMESTAMPTZ & Fin; NULL si no fijado & No & Liquidación y costeo & Operacional; personal si vincula jornada; cifrado/acceso según RT-11.10 cuando aplica \\
+version & INTEGER & No sobrescribir tarifa aplicada a un viaje & Sí & Liquidación y costeo & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+id\_\allowbreak{}respaldo & UUID & Referencia a DOCUMENTO\_\allowbreak{}RESPALDO & Sí & Liquidación y costeo & Operacional; personal si vincula persona; cifrado/acceso según RT-11.10 cuando aplica \\
+\end{tabla}
+
+Estos atributos concretan las referencias, campos obligatorios y controles de acceso de TARIFA\_\allowbreak{}CONTRATO.
+
+\Needspace{18\baselineskip}
+\subsection*{COSTO\_\allowbreak{}VERSION}\label{sec:05-anexo-costo-version}
+
+Propietario de atributos: Liquidación y costeo. La tabla define el contrato del registro.
+
+La \tabref{05-anexo-tabla-costo-version} detalla los atributos y controles del registro.
+
+\begin{tabla}[ancho=completo, fuente=condensada]{Atributos y controles de COSTO\_\allowbreak{}VERSION}{05-anexo-tabla-costo-version}{L{30mm} L{22mm} X L{12mm} L{24mm} X}
+Atributo & Tipo & Dominio y regla & Obligatorio & Propietario & Sensibilidad/tratamiento \\ \midrule
+id\_\allowbreak{}costo & UUID & PK; generado una vez y preservado en reintentos & Sí & Liquidación y costeo & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+id\_\allowbreak{}viaje & UUID & Referencia a VIAJE & Sí & Liquidación y costeo & Operacional; personal si vincula persona; cifrado/acceso según RT-11.10 cuando aplica \\
+version & INTEGER & INTEGER >0; único por viaje & Sí & Liquidación y costeo & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+estado & TEXT & PRELIMINAR / ACTUALIZADO / DEFINITIVO & Sí & Liquidación y costeo & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+costo\_\allowbreak{}total & NUMERIC & Importe con moneda y redondeo & Sí & Liquidación y costeo & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+distancia\_\allowbreak{}km & NUMERIC & Denominador y origen medido/estimado; no dividir por cero & Sí & Liquidación y costeo & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+componentes & JSONB & Datos medidos, estimados y pendientes identificados; esquema versionado & Sí & Liquidación y costeo & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+fuentes & JSONB & IDs de lotes/telemetría/tarifa y versiones usadas; esquema versionado & Sí & Liquidación y costeo & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+calculado\_\allowbreak{}utc & TIMESTAMPTZ & v1 no más de 24 h tras cierre & Sí & Liquidación y costeo & Operacional; personal si vincula jornada; cifrado/acceso según RT-11.10 cuando aplica \\
+regla\_\allowbreak{}version & TEXT & Fórmula y supuestos reproducibles & Sí & Liquidación y costeo & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+\end{tabla}
+
+Estos atributos concretan las referencias, campos obligatorios y controles de acceso de COSTO\_\allowbreak{}VERSION.
+
+\Needspace{18\baselineskip}
+\subsection*{LIQUIDACION}\label{sec:05-anexo-liquidacion}
+
+Propietario de atributos: Liquidación y costeo. La tabla define el contrato del registro.
+
+La \tabref{05-anexo-tabla-liquidacion} detalla los atributos y controles del registro.
+
+\begin{tabla}[ancho=completo, fuente=condensada]{Atributos y controles de LIQUIDACION}{05-anexo-tabla-liquidacion}{L{30mm} L{22mm} X L{12mm} L{24mm} X}
+Atributo & Tipo & Dominio y regla & Obligatorio & Propietario & Sensibilidad/tratamiento \\ \midrule
+id\_\allowbreak{}liquidacion & UUID & PK; generado una vez y preservado en reintentos & Sí & Liquidación y costeo & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+id\_\allowbreak{}transportista & UUID & Referencia a TRANSPORTISTA & Sí & Liquidación y costeo & Operacional; personal si vincula persona; cifrado/acceso según RT-11.10 cuando aplica \\
+periodo & TEXT & Mes y versión; único por transportista/periodo/versión & Sí & Liquidación y costeo & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+estado & TEXT & BORRADOR / EN\_\allowbreak{}REVISION / APROBADA / REGISTRADA & Sí & Liquidación y costeo & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+importe\_\allowbreak{}total & NUMERIC & Importe conciliado; moneda declarada & Sí & Liquidación y costeo & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+id\_\allowbreak{}aceptacion\_\allowbreak{}firmada & UUID & Referencia a DOCUMENTO\_\allowbreak{}RESPALDO & Al aprobar & Liquidación y costeo & Operacional; personal si vincula persona; cifrado/acceso según RT-11.10 cuando aplica \\
+operacion\_\allowbreak{}contable\_\allowbreak{}id & TEXT & Acuse externo; NULL mientras pendiente & No & Liquidación y costeo & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+clave\_\allowbreak{}idempotencia & TEXT & Evita doble registro en contable & Sí & Liquidación y costeo & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+aprobado\_\allowbreak{}utc & TIMESTAMPTZ & Aceptación efectiva & No & Liquidación y costeo & Operacional; personal si vincula jornada; cifrado/acceso según RT-11.10 cuando aplica \\
+\end{tabla}
+
+Estos atributos concretan las referencias, campos obligatorios y controles de acceso de LIQUIDACION.
+
+\Needspace{18\baselineskip}
+\subsection*{LIQUIDACION\_\allowbreak{}DETALLE}\label{sec:05-anexo-liquidacion-detalle}
+
+Propietario de atributos: Liquidación y costeo. La tabla define el contrato del registro.
+
+La \tabref{05-anexo-tabla-liquidacion-detalle} detalla los atributos y controles del registro.
+
+\begin{tabla}[ancho=completo, fuente=condensada]{Atributos y controles de LIQUIDACION\_\allowbreak{}DETALLE}{05-anexo-tabla-liquidacion-detalle}{L{30mm} L{22mm} X L{12mm} L{24mm} X}
+Atributo & Tipo & Dominio y regla & Obligatorio & Propietario & Sensibilidad/tratamiento \\ \midrule
+id\_\allowbreak{}liquidacion & UUID & Referencia a LIQUIDACION; parte de PK & Sí & Liquidación y costeo & Operacional; personal si vincula persona; cifrado/acceso según RT-11.10 cuando aplica \\
+id\_\allowbreak{}viaje & UUID & Referencia a VIAJE; parte de PK & Sí & Liquidación y costeo & Operacional; personal si vincula persona; cifrado/acceso según RT-11.10 cuando aplica \\
+id\_\allowbreak{}costo & UUID & Referencia a COSTO\_\allowbreak{}VERSION usado & Sí & Liquidación y costeo & Operacional; personal si vincula persona; cifrado/acceso según RT-11.10 cuando aplica \\
+id\_\allowbreak{}tarifa & UUID & Referencia a TARIFA\_\allowbreak{}CONTRATO & Sí & Liquidación y costeo & Operacional; personal si vincula persona; cifrado/acceso según RT-11.10 cuando aplica \\
+importe & NUMERIC & Monto y conceptos conciliados & Sí & Liquidación y costeo & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+discrepancia & TEXT & Observación y resolución; no excluir sin historia & No & Liquidación y costeo & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+\end{tabla}
+
+Estos atributos concretan las referencias, campos obligatorios y controles de acceso de LIQUIDACION\_\allowbreak{}DETALLE.
+
+\Needspace{18\baselineskip}
+\subsection*{LOTE\_\allowbreak{}COSTO}\label{sec:05-anexo-lote-costo}
+
+Propietario de atributos: Liquidación y costeo. La tabla define el contrato del registro.
+
+La \tabref{05-anexo-tabla-lote-costo} detalla los atributos y controles del registro.
+
+\begin{tabla}[ancho=completo, fuente=condensada]{Atributos y controles de LOTE\_\allowbreak{}COSTO}{05-anexo-tabla-lote-costo}{L{30mm} L{22mm} X L{12mm} L{24mm} X}
+Atributo & Tipo & Dominio y regla & Obligatorio & Propietario & Sensibilidad/tratamiento \\ \midrule
+id\_\allowbreak{}lote & UUID & PK; generado una vez y preservado en reintentos & Sí & Liquidación y costeo & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+fuente & TEXT & COMBUSTIBLE / PEAJE / OTRA & Sí & Liquidación y costeo & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+clave\_\allowbreak{}fuente & TEXT & ID único por proveedor/lote & Sí & Liquidación y costeo & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+id\_\allowbreak{}original & UUID & Referencia a DOCUMENTO\_\allowbreak{}RESPALDO & Sí & Liquidación y costeo & Operacional; personal si vincula persona; cifrado/acceso según RT-11.10 cuando aplica \\
+recibido\_\allowbreak{}utc & TIMESTAMPTZ & Recepción & Sí & Liquidación y costeo & Operacional; personal si vincula jornada; cifrado/acceso según RT-11.10 cuando aplica \\
+totales & TEXT & Cantidad e importes originales y conciliados & Sí & Liquidación y costeo & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+errores & TEXT & Informe por registro; carga parcial trazada & Sí & Liquidación y costeo & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+estado & TEXT & RECIBIDO / CONCILIADO / PARCIAL / RECHAZADO & Sí & Liquidación y costeo & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+\end{tabla}
+
+Estos atributos concretan las referencias, campos obligatorios y controles de acceso de LOTE\_\allowbreak{}COSTO.
+
+\Needspace{18\baselineskip}
+\subsection*{INTERVENCION\_\allowbreak{}TALLER}\label{sec:05-anexo-intervencion-taller}
+
+Propietario de atributos: Flota y activos. La tabla define el contrato del registro.
+
+La \tabref{05-anexo-tabla-intervencion-taller} detalla los atributos y controles del registro.
+
+\begin{tabla}[ancho=completo, fuente=condensada]{Atributos y controles de INTERVENCION\_\allowbreak{}TALLER}{05-anexo-tabla-intervencion-taller}{L{30mm} L{22mm} X L{12mm} L{24mm} X}
+Atributo & Tipo & Dominio y regla & Obligatorio & Propietario & Sensibilidad/tratamiento \\ \midrule
+id\_\allowbreak{}intervencion & UUID & PK; generado una vez y preservado en reintentos & Sí & Flota y activos & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+id\_\allowbreak{}tracto & UUID & Referencia a TRACTOCAMION & Excluyente & Flota y activos & Operacional; personal si vincula persona; cifrado/acceso según RT-11.10 cuando aplica \\
+id\_\allowbreak{}semirremolque & UUID & Referencia a SEMIRREMOLQUE & Excluyente & Flota y activos & Operacional; personal si vincula persona; cifrado/acceso según RT-11.10 cuando aplica \\
+taller & TEXT & Propio/externo y responsable identificado & Sí & Flota y activos & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+tipo & TEXT & Preventiva / correctiva / neumático; catálogo & Sí & Flota y activos & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+odometro\_\allowbreak{}km & NUMERIC & Medido cuando disponible & No & Flota y activos & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+estado & TEXT & PROGRAMADA / EJECUTADA / VALIDADA & Sí & Flota y activos & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+id\_\allowbreak{}respaldo & UUID & Referencia a DOCUMENTO\_\allowbreak{}RESPALDO & Al validar & Flota y activos & Operacional; personal si vincula persona; cifrado/acceso según RT-11.10 cuando aplica \\
+ejecutado\_\allowbreak{}utc & TIMESTAMPTZ & Fecha efectiva & No & Flota y activos & Operacional; personal si vincula jornada; cifrado/acceso según RT-11.10 cuando aplica \\
+\end{tabla}
+
+Estos atributos concretan las referencias, campos obligatorios y controles de acceso de INTERVENCION\_\allowbreak{}TALLER.
+
+\Needspace{18\baselineskip}
+\subsection*{POSICION\_\allowbreak{}NEUMATICO}\label{sec:05-anexo-posicion-neumatico}
+
+Propietario de atributos: Flota y activos. La tabla define el contrato del registro.
+
+La \tabref{05-anexo-tabla-posicion-neumatico} detalla los atributos y controles del registro.
+
+\begin{tabla}[ancho=completo, fuente=condensada]{Atributos y controles de POSICION\_\allowbreak{}NEUMATICO}{05-anexo-tabla-posicion-neumatico}{L{30mm} L{22mm} X L{12mm} L{24mm} X}
+Atributo & Tipo & Dominio y regla & Obligatorio & Propietario & Sensibilidad/tratamiento \\ \midrule
+id\_\allowbreak{}posicion & UUID & PK; generado una vez y preservado en reintentos & Sí & Flota y activos & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+id\_\allowbreak{}tracto & UUID & Referencia a TRACTOCAMION; sujeto exclusivo & Excluyente & Flota y activos & Operacional; acceso restringido \\
+id\_\allowbreak{}semirremolque & UUID & Referencia a SEMIRREMOLQUE; sujeto exclusivo & Excluyente & Flota y activos & Operacional; acceso restringido \\
+ubicacion & TEXT & Eje/lado; catálogo por vehículo & Sí & Flota y activos & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+neumatico\_\allowbreak{}id & TEXT & Identidad trazable & Sí & Flota y activos & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+km\_\allowbreak{}acumulado & NUMERIC & Derivado de odómetro y montaje; no inventar medición & No & Flota y activos & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+montado\_\allowbreak{}utc & TIMESTAMPTZ & Inicio & Sí & Flota y activos & Operacional; personal si vincula jornada; cifrado/acceso según RT-11.10 cuando aplica \\
+retirado\_\allowbreak{}utc & TIMESTAMPTZ & Fin & No & Flota y activos & Operacional; personal si vincula jornada; cifrado/acceso según RT-11.10 cuando aplica \\
+id\_\allowbreak{}intervencion & UUID & Referencia a INTERVENCION\_\allowbreak{}TALLER & Sí & Flota y activos & Operacional; personal si vincula persona; cifrado/acceso según RT-11.10 cuando aplica \\
+\end{tabla}
+
+Estos atributos concretan las referencias, campos obligatorios y controles de acceso de POSICION\_\allowbreak{}NEUMATICO.
+
+\Needspace{18\baselineskip}
+\subsection*{SINIESTRO}\label{sec:05-anexo-siniestro}
+
+Propietario de atributos: Operación de fletes. La tabla define el contrato del registro.
+
+La \tabref{05-anexo-tabla-siniestro} detalla los atributos y controles del registro.
+
+\begin{tabla}[ancho=completo, fuente=condensada]{Atributos y controles de SINIESTRO}{05-anexo-tabla-siniestro}{L{30mm} L{22mm} X L{12mm} L{24mm} X}
+Atributo & Tipo & Dominio y regla & Obligatorio & Propietario & Sensibilidad/tratamiento \\ \midrule
+id\_\allowbreak{}siniestro & UUID & PK; generado una vez y preservado en reintentos & Sí & Operación de fletes & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+id\_\allowbreak{}viaje & UUID & Referencia a VIAJE & No & Operación de fletes & Operacional; personal si vincula persona; cifrado/acceso según RT-11.10 cuando aplica \\
+equipo\_\allowbreak{}persona & JSONB & Referencias de activos/personas afectadas; esquema versionado & Sí & Operación de fletes & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+evento\_\allowbreak{}utc & TIMESTAMPTZ & Hora conocida; precisión/origen declarados & Sí & Operación de fletes & Operacional; personal si vincula jornada; cifrado/acceso según RT-11.10 cuando aplica \\
+tipo & TEXT & Catálogo de incidentes/siniestros & Sí & Operación de fletes & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+expediente & JSONB & Referencias a originales, peritajes y resoluciones; esquema versionado & Sí & Operación de fletes & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+estado & TEXT & ABIERTO / EN\_\allowbreak{}TRAMITE / CERRADO & Sí & Operación de fletes & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+retencion\_\allowbreak{}litigio & BOOLEAN & BOOLEAN; conserva hasta resolución aplicable & Sí & Operación de fletes & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+\end{tabla}
+
+Estos atributos concretan las referencias, campos obligatorios y controles de acceso de SINIESTRO.
+
+\Needspace{18\baselineskip}
+\subsection*{AUDITORIA\_\allowbreak{}EVENTO}\label{sec:05-anexo-auditoria-evento}
+
+Propietario de atributos: Seguridad y auditoría. La tabla define el contrato del registro.
+
+La \tabref{05-anexo-tabla-auditoria-evento} detalla los atributos y controles del registro.
+
+\begin{tabla}[ancho=completo, fuente=condensada]{Atributos y controles de AUDITORIA\_\allowbreak{}EVENTO}{05-anexo-tabla-auditoria-evento}{L{30mm} L{22mm} X L{12mm} L{24mm} X}
+Atributo & Tipo & Dominio y regla & Obligatorio & Propietario & Sensibilidad/tratamiento \\ \midrule
+id\_\allowbreak{}auditoria & UUID & PK; generado una vez y preservado en reintentos & Sí & Seguridad y auditoría & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+actor\_\allowbreak{}dispositivo & TEXT & Identidades y origen & Sí & Seguridad y auditoría & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+entidad\_\allowbreak{}id & TEXT & Tipo e ID del registro consultado/modificado & Sí & Seguridad y auditoría & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+operacion & TEXT & CREAR / MODIFICAR / CONSULTAR / RECTIFICAR / ELIMINAR\_\allowbreak{}AUTORIZADO & Sí & Seguridad y auditoría & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+valores & JSONB & Antes/después o campos mostrados; cifrado si procede; esquema versionado & Sí & Seguridad y auditoría & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+evento\_\allowbreak{}utc & TIMESTAMPTZ & Fecha y zona conservadas & Sí & Seguridad y auditoría & Operacional; personal si vincula jornada; cifrado/acceso según RT-11.10 cuando aplica \\
+correlacion & TEXT & Operación end to end & Sí & Seguridad y auditoría & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+cadena\_\allowbreak{}id & UUID & Identificador de cadena & Sí & Seguridad y auditoría & Operacional; acceso restringido \\
+secuencia & BIGINT & >0; UNIQUE(cadena\_\allowbreak{}id,secuencia) & Sí & Seguridad y auditoría & Operacional; acceso restringido \\
+hash\_\allowbreak{}actual & TEXT & 64 hex; registro canónico & Sí & Seguridad y auditoría & Operacional; acceso restringido \\
+hash\_\allowbreak{}previo & TEXT & 64 hex; NULL sólo inicio de cadena & Condicional & Seguridad y auditoría & Operacional; acceso restringido \\
+manifiesto\_\allowbreak{}worm & TEXT & Anclaje sellado e ID de segmento & Sí & Seguridad y auditoría & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+\end{tabla}
+
+Estos atributos concretan las referencias, campos obligatorios y controles de acceso de AUDITORIA\_\allowbreak{}EVENTO.
+
+\Needspace{18\baselineskip}
+\subsection*{OUTBOX\_\allowbreak{}EVENTO}\label{sec:05-anexo-outbox-evento}
+
+Propietario de atributos: Contexto productor del evento. La tabla define el contrato del registro.
+
+La \tabref{05-anexo-tabla-outbox-evento} detalla los atributos y controles del registro.
+
+\begin{tabla}[ancho=completo, fuente=condensada]{Atributos y controles de OUTBOX\_\allowbreak{}EVENTO}{05-anexo-tabla-outbox-evento}{L{30mm} L{22mm} X L{12mm} L{24mm} X}
+Atributo & Tipo & Dominio y regla & Obligatorio & Propietario & Sensibilidad/tratamiento \\ \midrule
+id\_\allowbreak{}evento & UUID & PK; generado una vez y preservado en reintentos & Sí & Contexto productor del evento & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+agregado\_\allowbreak{}id & TEXT & ID, tipo y versión del agregado & Sí & Contexto productor del evento & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+tipo\_\allowbreak{}esquema & TEXT & Contrato de evento y versión & Sí & Contexto productor del evento & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+payload & JSONB & JSON validado; datos mínimos autorizados; esquema versionado & Sí & Contexto productor del evento & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+creado\_\allowbreak{}utc & TIMESTAMPTZ & Mismo commit que cambio de negocio & Sí & Contexto productor del evento & Operacional; personal si vincula jornada; cifrado/acceso según RT-11.10 cuando aplica \\
+clave\_\allowbreak{}particion & TEXT & Agregado/equipo para orden & Sí & Contexto productor del evento & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+estado & TEXT & PENDIENTE / PUBLICADO; acuse no equivale a consumo final & Sí & Contexto productor del evento & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+intentos & INTEGER & $\geq$0 & Sí & Contexto productor del evento & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+proximo\_\allowbreak{}intento\_\allowbreak{}utc & TIMESTAMPTZ & Fecha de reintento; NULL si publicado & No & Contexto productor del evento & Operacional; acceso restringido \\
+correlacion & TEXT & ID común de solicitud y efectos & Sí & Contexto productor del evento & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
+\end{tabla}
+
+Estos atributos concretan las referencias, campos obligatorios y controles de acceso de OUTBOX\_\allowbreak{}EVENTO.
+
+\Needspace{18\baselineskip}
+\subsection*{Restricciones transversales y custodia}\label{sec:05-anexo-restricciones-transversales-y-custodia}
+
+VIGENCIA\_\allowbreak{}HABILITACION, INTERVENCION\_\allowbreak{}TALLER y POSICION\_\allowbreak{}NEUMATICO usan FK explícitas y un CHECK de sujeto exclusivo; no una FK polimórfica ficticia. VIAJE puede existir programado sin recursos. ASIGNACION confirmada exige recursos válidos, evaluación y rangos activos no superpuestos; una reserva rechazada no termina el viaje. DOCUMENTO\_\allowbreak{}TRANSPORTE requiere original y representación conforme antes de salir; el contable es el único emisor.
+
+EVIDENCIA\_\allowbreak{}JORNADA válida exige código homologado, nivel 0–5 y controles de integridad; 0 sólo REG\_\allowbreak{}COND. Las fuentes desconocidas/inválidas tienen nivel NULL y motivo conservado. SIN\_\allowbreak{}EVIDENCIA se registra en la evaluación, sin fabricar un artefacto. La evaluación puede referenciar múltiples fuentes mediante EVALUACION\_\allowbreak{}EVIDENCIA; reposo nivel 4 y atestación nivel 5 no se colapsan en una fuente. Ninguna causa legal admite EXCEPCION\_\allowbreak{}RN04.
+
+El sello encadenado incluye ID de cadena, secuencia, bytes canónicos, hash previo y hash actual; sólo un registro inicial tiene hash previo NULL. Rectificación genera registro nuevo. Originales, manifiestos y claves de firma se conservan/administran separados; el hash no es firma. Las cuentas aplicativas no sobrescriben evidencia; almacenamiento WORM bloqueado y verificación independiente sostienen el control contra administradores.
+
+Se indexan FK locales y claves de consulta. RUT cifrado utiliza índice ciego de deduplicación con clave separada; no se presume búsqueda SQL de texto sobre AES-GCM. VIAJE se mantiene sin partición inicial. Particionar una tabla PostgreSQL exige compatibilizar PK/UNIQUE con su clave de partición y revisar referencias. Las políticas de supresión contemplan retención, litigio, claves compartidas y todas las copias.
+
+\Needspace{18\baselineskip}
+\subsection*{Supuestos de capacidad y migración}\label{sec:05-anexo-supuestos-de-capacidad-y-migracion}
+
+\caso{numeral 14.2}{30} pide estimación; la \tabref{05-anexo-tabla-A5-1} diferencia tasas del Caso, tamaños supuestos y conteos históricos no entregados.
+
+La \tabref{05-anexo-tabla-A5-1} detalla los atributos y controles del registro.
+
+\begin{tabla}[ancho=completo, fuente=condensada]{Presupuesto lógico inicial de datos, sin índices ni réplicas}{05-anexo-tabla-A5-1}{L{36mm} X X}
+Dominio & Base / supuesto & Resultado de diseño \\ \midrule
+Viajes & 96.000/año $\times$2 KiB/registro compuesto & $\approx$197 MB/año; 5 años $\approx$983 MB, sin documentos \\
+Evaluaciones & 3 intentos/viaje $\times$96.000 $\times$1 KiB & $\approx$295 MB/año; intentos reales por medir \\
+Documentos de transporte & 128.000/año $\times$20 KiB por XML/representación & $\approx$2,62 GB/año; 6 años $\approx$15,73 GB. No acredita tamaño para envío SBD \\
+Evidencia de jornada & 454 conductores $\times$365 $\times$15 eventos/día $\times$512 bytes & $\approx$1,27 GB/año; 5 años $\approx$6,36 GB, sin originales de tacógrafo/atestaciones \\
+Vigencias vivas & $\approx$6.000 $\times$100 KiB de respaldo medio & $\approx$614 MB por lote; tamaño y versiones por medir \\
+Telemetría de posición & 119,82 millones/año $\times$64 bytes & $\approx$7,67 GB/año, escenario completo de S4.1.20 \\
+Viajes históricos a migrar & 96.000/año $\times$5 sólo como extrapolación & $\approx$480.000 registros; contar el histórico real antes de dimensionar corte \\
+Liquidaciones históricas & 148/mes $\times$12 $\times$6 sólo como extrapolación & $\approx$10.656 registros; verificar períodos, versiones y transportistas reales \\
+Siniestros y maestros & Totalidad de la fuente según RT-05.15 & No hay conteo/bytes entregados; inventariar todos y preservar pendientes \\
+\end{tabla}
+
+La \tabref{05-anexo-tabla-A5-1} no es tamaño físico ni cifra medida. Un factor provisional 3$\times$ sobre registros cubre índices/estructura de manera aproximada, pero WAL, originales grandes, fotos, copias WORM, respaldos y réplicas se dimensionan explícitamente por separado. No se multiplica por un factor sin indicar qué incluye. El volumen de jornada se registra por eventos semánticos, sin convertir cada ping de GPS en prueba de descanso. Se ensayan extracción, transformación, carga y conciliación con tasa medida; volumen/tasa más delta final determina la ventana, conciliada con S7.

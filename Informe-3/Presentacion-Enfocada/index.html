@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>audIT · Curva S y resultado del proyecto</title>
+  <style>
+    @font-face { font-family: 'AuditSans'; font-weight: 100 500; font-display: block;
+      src: url('assets/fonts/AuditSans-Regular.woff2') format('woff2'); }
+    @font-face { font-family: 'AuditSans'; font-weight: 600 900; font-display: block;
+      src: url('assets/fonts/AuditSans-Bold.woff2') format('woff2'); }
+
+    :root {
+      /* Tokens de identidad audIT, iguales a la presentación completa */
+      --c-primary: #006b7d;
+      --c-primary-light: #e7f3f6;
+      --c-navy: #102d3e;
+      --c-muted: #48606e;
+      --c-amber: #8a5100;
+      --c-amber-light: #fff8ec;
+      --c-coral: #a13437;
+      --c-emerald: #0f766e;
+      --c-card-bg: #f4f8fa;
+      --c-stroke: #c4d3dc;
+      --c-line-sep: #bdced6;
+      --font-audit: 'AuditSans', 'Liberation Sans', -apple-system, "Segoe UI", Roboto, sans-serif;
+      /* Versión para proyectar: letra mínima de 26 px sobre lienzo 1920 x 1080 */
+      --text-min: 26px;
+      --text-base: 32px;
+      --text-lg: 40px;
+      --text-num: 84px;
+      --text-title: 60px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { width: 100%; height: 100%; overflow: hidden; background: #0b1720;
+      font-family: var(--font-audit); color: var(--c-navy); -webkit-font-smoothing: antialiased; }
+    #stage { width: 1920px; height: 1080px; position: absolute; transform-origin: 0 0;
+      background: #fff; overflow: hidden; }
+    .scene { position: absolute; inset: 0; background: #fff; display: none; user-select: none; }
+    .scene.active { display: block; }
+    .scene::after { content: ""; position: absolute; left: 96px; right: 96px; bottom: 96px;
+      height: 1px; background: var(--c-line-sep); }
+
+    .eyebrow { position: absolute; left: 96px; top: 60px; font-size: 26px; font-weight: 700;
+      letter-spacing: 0.14em; text-transform: uppercase; color: var(--c-primary); }
+    .brand { position: absolute; right: 96px; top: 46px; width: 150px; height: 56px; object-fit: contain; }
+    .headline { position: absolute; left: 96px; top: 118px; width: 1728px; font-size: var(--text-title);
+      line-height: 1.1; font-weight: 700; letter-spacing: -0.03em; }
+    .headline em { font-style: normal; color: var(--c-primary); }
+    .visual { position: absolute; left: 96px; top: 250px; width: 1728px; height: 720px; }
+    .pie { position: absolute; left: 96px; bottom: 40px; font-size: var(--text-min); color: var(--c-muted); }
+    .folio { position: absolute; right: 96px; bottom: 40px; font-size: var(--text-min);
+      font-weight: 700; color: var(--c-muted); }
+
+    /* Portada */
+    .cover .visual { top: 230px; }
+    .cover-badge { display: inline-block; padding: 10px 22px; border: 2px solid var(--c-primary);
+      border-radius: 999px; font-size: 26px; font-weight: 700; color: var(--c-primary); letter-spacing: 0.06em; }
+    .cover h1 { margin-top: 44px; font-size: 112px; line-height: 1; letter-spacing: -0.04em; }
+    .cover h2 { margin-top: 20px; font-size: 52px; font-weight: 700; color: var(--c-primary); }
+    .cover p { margin-top: 44px; font-size: var(--text-base); color: var(--c-muted); }
+    .cover .empresa { margin-top: 80px; font-size: var(--text-lg); font-weight: 700; color: var(--c-navy); }
+
+    /* Cifras */
+    .grid4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; }
+    .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 32px; }
+    .tile { background: var(--c-card-bg); border: 2px solid var(--c-stroke); border-left: 10px solid var(--c-primary);
+      border-radius: 14px; padding: 28px 30px; }
+    .tile .lbl { font-size: var(--text-min); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--c-muted); }
+    .tile .num { margin-top: 10px; font-size: var(--text-num); font-weight: 800; line-height: 1;
+      letter-spacing: -0.03em; }
+    .tile .num small { font-size: 34px; font-weight: 700; color: var(--c-muted); letter-spacing: 0; }
+    .tile .det { margin-top: 14px; font-size: var(--text-min); color: var(--c-muted); line-height: 1.3; }
+    .tile.sm .num { font-size: 60px; }
+    .t-coral { border-left-color: var(--c-coral); }
+    .t-emerald { border-left-color: var(--c-emerald); }
+    .t-amber { border-left-color: var(--c-amber); }
+    .t-navy { border-left-color: var(--c-navy); }
+
+    /* Curva S */
+    .leyenda { display: flex; gap: 56px; font-size: 30px; font-weight: 700; margin-bottom: 8px; }
+    .leyenda span::before { content: ""; display: inline-block; width: 48px; height: 6px; margin-right: 14px;
+      vertical-align: middle; background: currentColor; }
+    .leyenda .caja::before { background: repeating-linear-gradient(90deg, currentColor 0 12px, transparent 12px 20px); }
+    svg .g { stroke: #dbe5eb; stroke-width: 2; }
+    svg .ax { font-size: 26px; fill: var(--c-muted); font-family: var(--font-audit); }
+    svg .fase { font-size: 28px; font-weight: 700; fill: var(--c-muted); font-family: var(--font-audit); }
+    svg .fin { font-size: 32px; font-weight: 800; font-family: var(--font-audit); }
+    svg .nota { font-size: 30px; font-weight: 800; font-family: var(--font-audit); }
+    svg .nota2 { font-size: 26px; font-weight: 600; font-family: var(--font-audit); }
+
+    /* Filas de lectura */
+    .filas { display: flex; flex-direction: column; gap: 26px; }
+    .fila { display: grid; grid-template-columns: 360px 1fr; align-items: center; gap: 36px;
+      background: var(--c-card-bg); border: 2px solid var(--c-stroke); border-radius: 14px; padding: 30px 36px; }
+    .fila .k { font-size: 54px; font-weight: 800; line-height: 1.05; letter-spacing: -0.02em; }
+    .fila .k small { display: block; font-size: var(--text-min); font-weight: 700; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--c-muted); margin-bottom: 6px; }
+    .fila .v { font-size: var(--text-base); line-height: 1.35; }
+
+    /* Tabla de sensibilidad */
+    table { width: 100%; border-collapse: collapse; font-size: 34px; }
+    th { text-align: left; font-size: var(--text-min); letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--c-muted); padding: 0 24px 16px; border-bottom: 3px solid var(--c-navy); }
+    td { padding: 22px 24px; border-bottom: 2px solid #dbe5eb; }
+    td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; }
+    tr.base td { font-weight: 800; background: var(--c-primary-light); }
+    .nota-caja { margin-top: 34px; padding: 26px 32px; border-radius: 14px; background: var(--c-amber-light);
+      border-left: 10px solid var(--c-amber); font-size: 30px; line-height: 1.35; }
+  </style>
+</head>
+<body>
+<div id="stage">
+
+  <section class="scene cover active">
+    <div class="eyebrow">Propuesta económica · Informe 3</div>
+    <img class="brand" src="assets/logo-audit.png" alt="audIT" />
+    <div class="visual">
+      <div class="cover-badge">TRANSPORTES CURIMÓN · TFEP-01/2026</div>
+      <h1>Curva S y resultado<br/>del proyecto</h1>
+      <h2>Costos frente a venta en 56 meses</h2>
+      <p>13 de noviembre de 2026</p>
+      <div class="empresa">audIT Soluciones Tecnológicas SpA</div>
+    </div>
+    <div class="folio">1 / 5</div>
+  </section>
+
+  <section class="scene">
+    <div class="eyebrow">Resultado del proyecto</div>
+    <img class="brand" src="assets/logo-audit.png" alt="audIT" />
+    <div class="headline">VAN de CLP 1.235 millones <em>con margen de 18,5 %</em></div>
+    <div class="visual">
+      <div class="grid4">
+        <div class="tile"><div class="lbl">Venta neta</div><div class="num">9.796,8<small> M</small></div>
+          <div class="det">Implementación 4.618,8 M<br/>Operación 5.178,0 M</div></div>
+        <div class="tile t-coral"><div class="lbl">Costo neto</div><div class="num">7.984,4<small> M</small></div>
+          <div class="det">Implementación 3.764,3 M<br/>Operación 4.220,1 M</div></div>
+        <div class="tile t-emerald"><div class="lbl">Margen sobre venta</div><div class="num">18,50<small> %</small></div>
+          <div class="det">Tope de las bases: 20 %</div></div>
+        <div class="tile t-navy"><div class="lbl">VAN M0–M56</div><div class="num">1.235,0<small> M</small></div>
+          <div class="det">Tasa 1,026 % mensual<br/>(13,0 % anual)</div></div>
+      </div>
+      <div class="grid3">
+        <div class="tile sm t-navy"><div class="lbl">Recuperación descontada</div><div class="num">M16</div>
+          <div class="det">Paso a producción de la Etapa 1</div></div>
+        <div class="tile sm t-navy"><div class="lbl">Venta de equilibrio (VAN 0)</div><div class="num">8.175,2<small> M</small></div>
+          <div class="det">Holgura de 1.621,6 M sobre ese umbral</div></div>
+        <div class="tile sm t-amber"><div class="lbl">TIR mensual</div><div class="num">83,7<small> %</small></div>
+          <div class="det">Alta porque H1 se cobra en M2. Se decide con el VAN.</div></div>
+      </div>
+    </div>
+    <div class="pie">Montos netos en CLP, sin IVA · Fuente: modelo financiero audIT</div>
+    <div class="folio">2 / 5</div>
+  </section>
+
+  <section class="scene">
+    <div class="eyebrow">Curva S · 56 meses</div>
+    <img class="brand" src="assets/logo-audit.png" alt="audIT" />
+    <div class="headline">Facturación, costos y caja <em>acumulados por mes</em></div>
+    <div class="visual">
+      <div class="leyenda">
+        <span style="color:#006b7d">Facturación</span>
+        <span style="color:#a13437">Costos con intereses</span>
+        <span class="caja" style="color:#0f766e">Caja financiada</span>
+      </div>
+      
+<svg viewBox="0 0 1728 640" xmlns="http://www.w3.org/2000/svg" role="img"
+     aria-label="Curva S: facturación, costos con intereses y caja financiada acumulados, meses 1 a 56">
+  <rect x="130" y="40" width="514" height="520" fill="#f4f8fa"/>
+  <text x="387" y="76" class="fase" text-anchor="middle">Implementación · M1–M21</text>
+  <text x="1072" y="76" class="fase" text-anchor="middle">Operación · M21–M56</text>
+  <line x1="130" y1="560" x2="1500" y2="560" class="g"/><text x="112" y="569" class="ax" text-anchor="end">0</text><line x1="130" y1="430" x2="1500" y2="430" class="g"/><text x="112" y="439" class="ax" text-anchor="end">2.500</text><line x1="130" y1="300" x2="1500" y2="300" class="g"/><text x="112" y="309" class="ax" text-anchor="end">5.000</text><line x1="130" y1="170" x2="1500" y2="170" class="g"/><text x="112" y="179" class="ax" text-anchor="end">7.500</text><line x1="130" y1="40" x2="1500" y2="40" class="g"/><text x="112" y="49" class="ax" text-anchor="end">10.000</text>
+  <line x1="644" y1="40" x2="644" y2="560" stroke="#102d3e" stroke-width="2"/>
+  <line x1="521" y1="100" x2="521" y2="560" stroke="#006b7d" stroke-width="2.5" stroke-dasharray="8 6"/>
+  <text x="154" y="600" class="ax" text-anchor="middle">M1</text><text x="350" y="600" class="ax" text-anchor="middle">M9</text><text x="521" y="600" class="ax" text-anchor="middle">M16</text><text x="644" y="600" class="ax" text-anchor="middle">M21</text><text x="864" y="600" class="ax" text-anchor="middle">M30</text><text x="1109" y="600" class="ax" text-anchor="middle">M40</text><text x="1500" y="600" class="ax" text-anchor="middle">M56</text>
+  <path d="M 130.0 560.0 L 154.5 560.0 L 178.9 540.8 L 203.4 540.8 L 227.9 524.0 L 252.3 524.0 L 276.8 500.0 L 301.2 500.0 L 325.7 500.0 L 350.2 500.0 L 374.6 475.9 L 399.1 475.9 L 423.6 451.9 L 448.0 439.9 L 472.5 427.9 L 497.0 427.9 L 521.4 403.9 L 545.9 379.9 L 570.4 355.8 L 594.8 343.8 L 619.3 343.8 L 643.8 312.3 L 668.2 304.9 L 692.7 297.4 L 717.1 289.9 L 741.6 282.4 L 766.1 274.9 L 790.5 267.5 L 815.0 260.0 L 839.5 252.5 L 863.9 245.0 L 888.4 237.5 L 912.9 230.1 L 937.3 222.6 L 961.8 215.1 L 986.2 207.6 L 1010.7 200.2 L 1035.2 192.7 L 1059.6 185.2 L 1084.1 177.7 L 1108.6 170.2 L 1133.0 162.8 L 1157.5 155.3 L 1182.0 147.8 L 1206.4 140.3 L 1230.9 132.8 L 1255.4 125.4 L 1279.8 117.9 L 1304.3 110.4 L 1328.8 102.9 L 1353.2 95.4 L 1377.7 88.0 L 1402.1 80.5 L 1426.6 73.0 L 1451.1 65.5 L 1475.5 58.0 L 1500.0 50.6" fill="none" stroke="#006b7d" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M 130.0 560.0 L 154.5 554.1 L 178.9 549.9 L 203.4 538.5 L 227.9 530.2 L 252.3 522.9 L 276.8 513.2 L 301.2 503.1 L 325.7 493.3 L 350.2 483.4 L 374.6 472.7 L 399.1 461.9 L 423.6 451.1 L 448.0 438.0 L 472.5 426.2 L 497.0 414.4 L 521.4 402.7 L 545.9 390.8 L 570.4 380.6 L 594.8 371.4 L 619.3 362.6 L 643.8 356.1 L 668.2 350.0 L 692.7 344.0 L 717.1 337.9 L 741.6 331.1 L 766.1 325.1 L 790.5 319.2 L 815.0 313.3 L 839.5 307.3 L 863.9 301.1 L 888.4 294.9 L 912.9 289.0 L 937.3 283.1 L 961.8 277.2 L 986.2 271.3 L 1010.7 265.1 L 1035.2 258.2 L 1059.6 252.3 L 1084.1 246.4 L 1108.6 240.4 L 1133.0 234.4 L 1157.5 228.2 L 1182.0 222.0 L 1206.4 216.1 L 1230.9 210.2 L 1255.4 204.2 L 1279.8 198.3 L 1304.3 192.3 L 1328.8 185.5 L 1353.2 179.5 L 1377.7 173.6 L 1402.1 167.6 L 1426.6 161.6 L 1451.1 155.4 L 1475.5 149.4 L 1500.0 142.7" fill="none" stroke="#a13437" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M 130.0 560.0 L 154.5 551.6 L 178.9 533.0 L 203.4 548.0 L 227.9 536.3 L 252.3 546.8 L 276.8 528.0 L 301.2 542.6 L 325.7 552.4 L 350.2 560.0 L 374.6 544.5 L 399.1 559.9 L 423.6 542.1 L 448.0 545.5 L 472.5 545.3 L 497.0 559.3 L 521.4 542.5 L 545.9 530.4 L 570.4 516.6 L 594.8 516.1 L 619.3 527.2 L 643.8 516.6 L 668.2 519.7 L 692.7 518.3 L 717.1 516.9 L 741.6 516.3 L 766.1 514.7 L 790.5 513.2 L 815.0 511.7 L 839.5 510.2 L 863.9 508.9 L 888.4 507.6 L 912.9 506.1 L 937.3 504.5 L 961.8 503.0 L 986.2 501.4 L 1010.7 500.2 L 1035.2 499.5 L 1059.6 498.0 L 1084.1 496.5 L 1108.6 495.0 L 1133.0 493.5 L 1157.5 492.2 L 1182.0 490.9 L 1206.4 489.4 L 1230.9 487.9 L 1255.4 486.3 L 1279.8 484.8 L 1304.3 483.3 L 1328.8 482.7 L 1353.2 481.2 L 1377.7 479.7 L 1402.1 478.2 L 1426.6 476.7 L 1451.1 475.4 L 1475.5 474.0 L 1500.0 473.3" fill="none" stroke="#0f766e" stroke-width="5" stroke-dasharray="12 8" stroke-linejoin="round"/>
+
+  <text x="1516" y="61" class="fin" fill="#006b7d">9.796,8</text>
+  <text x="1516" y="153" class="fin" fill="#a13437">8.025,3</text>
+  <text x="1516" y="483" class="fin" fill="#0f766e">1.668,2</text>
+
+  <circle cx="350" cy="560" r="11" fill="#8a5100" stroke="#fff" stroke-width="3"/>
+  <line x1="350" y1="548" x2="350" y2="250" stroke="#8a5100" stroke-width="2.5"/>
+  <text x="154" y="200" class="nota" fill="#8a5100">M9 · caja en cero</text>
+  <text x="154" y="236" class="nota2" fill="#8a5100">línea de crédito CLP 45 M</text>
+  <text x="507" y="136" class="nota" fill="#006b7d" text-anchor="end">M16 · recuperación</text>
+</svg>
+    </div>
+    <div class="pie">Millones de CLP netos · Fuente: modelo financiero audIT, hoja Curva S</div>
+    <div class="folio">3 / 5</div>
+  </section>
+
+  <section class="scene">
+    <div class="eyebrow">Curva S · Lectura</div>
+    <img class="brand" src="assets/logo-audit.png" alt="audIT" />
+    <div class="headline">La caja toca fondo en M9 <em>y crece desde M21</em></div>
+    <div class="visual">
+      <div class="filas">
+        <div class="fila"><div class="k" style="color:#006b7d"><small>Facturación</small>9.796,8 M</div>
+          <div class="v">Sube en escalones con los 12 hitos de implementación y luego en línea recta con 36 mensualidades de CLP 143,8 M.</div></div>
+        <div class="fila"><div class="k" style="color:#a13437"><small>Costos con intereses</small>8.025,3 M</div>
+          <div class="v">Costo neto de 7.984,4 M más los intereses del crédito y de la línea.</div></div>
+        <div class="fila"><div class="k" style="color:#8a5100"><small>Valle de caja · M9</small>CLP 0</div>
+          <div class="v">Antes del cobro de H5 la caja llega a cero y la línea de crédito usa CLP 45 M, bajo el tope de 50 M.</div></div>
+        <div class="fila"><div class="k" style="color:#0f766e"><small>Caja al cierre · M56</small>1.668,2 M</div>
+          <div class="v">Desde el inicio de la operación en M21 la caja se mantiene positiva hasta el cierre.</div></div>
+      </div>
+    </div>
+    <div class="pie">Millones de CLP netos · Fuente: modelo financiero audIT</div>
+    <div class="folio">4 / 5</div>
+  </section>
+
+  <section class="scene">
+    <div class="eyebrow">Resultado · Sensibilidad</div>
+    <img class="brand" src="assets/logo-audit.png" alt="audIT" />
+    <div class="headline">El VAN sigue positivo <em>en todos los escenarios</em></div>
+    <div class="visual">
+      <table>
+        <thead><tr><th>Escenario</th><th class="n">VAN (M CLP)</th><th class="n">TIR mensual</th></tr></thead>
+        <tbody>
+          <tr class="base"><td>Base</td><td class="n">1.235,0</td><td class="n">83,7 %</td></tr>
+          <tr><td>Costos +5 %, precio fijo</td><td class="n">923,7</td><td class="n">17,3 %</td></tr>
+          <tr><td>Cobros −5 %</td><td class="n">862,0</td><td class="n">16,6 %</td></tr>
+          <tr><td>Cobro de H5 atrasado a M13</td><td class="n">1.230,9</td><td class="n">83,0 %</td></tr>
+        </tbody>
+      </table>
+      <div class="nota-caja"><strong>Atraso de H5:</strong> la caja de M12 queda en déficit de CLP 155,7 M con la línea al tope.
+        Un refuerzo de CLP 400 M desde M1 (80 % crédito, 20 % socios) deja CLP 11,2 M de caja en M12.</div>
+    </div>
+    <div class="pie">Fuente: modelo financiero audIT, hojas Indicadores y Sensibilidad</div>
+    <div class="folio">5 / 5</div>
+  </section>
+
+</div>
+<script>
+  const scenes = Array.from(document.querySelectorAll('.scene'));
+  let current = 0;
+  function show(i) {
+    current = Math.max(0, Math.min(scenes.length - 1, i));
+    scenes.forEach((s, k) => s.classList.toggle('active', k === current));
+  }
+  window.addEventListener('keydown', (e) => {
+    if (['ArrowRight', 'ArrowDown', ' ', 'Enter', 'PageDown'].includes(e.key)) { e.preventDefault(); show(current + 1); }
+    else if (['ArrowLeft', 'ArrowUp', 'PageUp'].includes(e.key)) { e.preventDefault(); show(current - 1); }
+    else if (e.key === 'Home') show(0);
+    else if (e.key === 'End') show(scenes.length - 1);
+    else if (e.key === 'f' || e.key === 'F') {
+      if (!document.fullscreenElement) document.documentElement.requestFullscreen().catch(() => {});
+      else document.exitFullscreen();
+    }
+  });
+  document.getElementById('stage').addEventListener('click', (e) => show(current + (e.clientX > innerWidth / 2 ? 1 : -1)));
+  function fit() {
+    const st = document.getElementById('stage');
+    const s = Math.min(innerWidth / 1920, innerHeight / 1080);
+    st.style.transform = `scale(${s})`;
+    st.style.left = `${(innerWidth - 1920 * s) / 2}px`;
+    st.style.top = `${(innerHeight - 1080 * s) / 2}px`;
+  }
+  window.addEventListener('resize', fit);
+  fit();
+</script>
+</body>
+</html>

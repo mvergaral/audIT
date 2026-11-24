@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/home/axeler8/Escritorio/audIT/Informe-3/correccion-final/proteger_salida.py", line 21, in <module>
+    assert before==after,(before,after)
+           ^^^^^^^^^^^^^
+AssertionError: ([6906281105.78386, 8473964546.97406, 1076600979.00404, 22050292.4204057], [6906281105.783855, 8473964546.974056, 1076600979.0040386, 22050292.420405656])

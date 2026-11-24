@@ -1,0 +1,55 @@
+{
+  "grupo": "final-por-subdocumento",
+  "instancia": "final",
+  "modo_folio": "subdocumento",
+  "archivos": [
+    {
+      "clave": "09",
+      "nombre": "AUDIT-Subdocumento9.pdf",
+      "folio_inicial": 1,
+      "paginas": 20,
+      "aux": "salida/aux/final-por-subdocumento/09/AUDIT-Subdocumento9.aux",
+      "log": "salida/aux/final-por-subdocumento/09/AUDIT-Subdocumento9.log",
+      "fuentes": [
+        [
+          "subdocumentos"
+        ],
+        [
+          "subdocumentos/09-calidad"
+        ]
+      ]
+    },
+    {
+      "clave": "09T-13",
+      "nombre": "AUDIT-Formulario-T-13.pdf",
+      "folio_inicial": 1,
+      "paginas": 8,
+      "aux": "salida/aux/final-por-subdocumento/09T-13/AUDIT-Formulario-T-13.aux",
+      "log": "salida/aux/final-por-subdocumento/09T-13/AUDIT-Formulario-T-13.log",
+      "fuentes": [
+        [
+          "subdocumentos"
+        ],
+        [
+          "subdocumentos/09-calidad"
+        ]
+      ]
+    },
+    {
+      "clave": "09T-17",
+      "nombre": "AUDIT-Formulario-T-17.pdf",
+      "folio_inicial": 1,
+      "paginas": 116,
+      "aux": "salida/aux/final-por-subdocumento/09T-17/AUDIT-Formulario-T-17.aux",
+      "log": "salida/aux/final-por-subdocumento/09T-17/AUDIT-Formulario-T-17.log",
+      "fuentes": [
+        [
+          "subdocumentos"
+        ],
+        [
+          "subdocumentos/09-calidad"
+        ]
+      ]
+    }
+  ]
+}

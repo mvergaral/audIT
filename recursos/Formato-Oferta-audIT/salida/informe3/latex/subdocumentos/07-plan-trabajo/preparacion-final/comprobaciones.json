@@ -1,0 +1,36 @@
+{
+  "paquetes_unicos": 54,
+  "requisitos_con_pruebas_disenadas": 42,
+  "exigencias_caso_trazadas": 11,
+  "documentos": [
+    {
+      "archivo": "AUDIT-Formulario-T-14.pdf",
+      "paginas": 9,
+      "fuentes_incrustadas": true,
+      "referencias_resueltas": true,
+      "sha256": "973e29f06263a48eee42bb7a885b12a99e3fc379370894f8401de2c1ebef981b"
+    },
+    {
+      "archivo": "AUDIT-Formulario-T-15.pdf",
+      "paginas": 10,
+      "fuentes_incrustadas": true,
+      "referencias_resueltas": true,
+      "sha256": "bf53978b338939ffc6d3d94fc4571cceb2d4ea9cc87eb58b5f6a94ed7522bcf6"
+    },
+    {
+      "archivo": "AUDIT-Formulario-T-18.pdf",
+      "paginas": 6,
+      "fuentes_incrustadas": true,
+      "referencias_resueltas": true,
+      "sha256": "e0f1dec6b00f4fca7ce24f86ccc1ea31b05d5efbc29d5a1b2144fba2c87ba448"
+    },
+    {
+      "archivo": "SOBRE2_AUDIT_SUBDOC07_20261125.pdf",
+      "paginas": 46,
+      "fuentes_incrustadas": true,
+      "referencias_resueltas": true,
+      "sha256": "e636ffff077c10e7294efdae0f133a8078d4905abf3b118b1ffdf1433edd1294"
+    }
+  ],
+  "correccion_estetica_p23": "Conexiones unificadas, dibujadas antes de los nodos y derivación por margen izquierdo; contenido textual idéntico."
+}
