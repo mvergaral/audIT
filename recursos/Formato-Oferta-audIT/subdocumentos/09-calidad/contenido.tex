@@ -35,7 +35,7 @@ La fiabilidad se verifica con disponibilidad real E2E de al menos 99,9\,\%, cont
 
 La aceptación de asignación mide el proceso completo hasta reserva y confirmación, incluidos reintentos, dentro del p95 de 30 s; exige revalidación ante cambios concurrentes de vigencia o permiso y una única asignación por solicitud. La contingencia documental mide hasta la recepción, reensamblado, validación y disponibilidad local de la representación completa y conforme en cabina, en hasta 90 s; folio o hash aislados no acreditan recepción. La recuperación conjunta concilia datos, documentos y eventos, sus vínculos, versiones y permisos vigentes o revocados, con RTO de hasta 4 h y RPO de hasta 15 min. Estos criterios se verifican en CP-SYS-01, CP-PERF-03/04/05 y CP-HW-11.
 
-La mantenibilidad se verifica con revisión, análisis estático, pruebas de regresión y cobertura automatizada de líneas ejecutables de lógica de negocio de al menos 70 \% (mínimo contractual RT-04.11) y de ramas de al menos 80 \% (compromiso adicional bloqueante de audIT, coherente con S6 §6.2.2, \tabref{06-tabla-6-3}). Se calculan por separado líneas cubiertas/líneas ejecutables y ramas cubiertas/ramas instrumentadas; el manifiesto identifica módulos de negocio y exclusiones justificadas. No se promedian ambos porcentajes ni se incluyen dependencias o código generado para elevar la cobertura. La flexibilidad se comprueba en los modelos e interfaces homologados, con actualización/reversión y perfiles nominales y de estrés: no se presume compatibilidad con cualquier camión. La seguridad operacional se verifica mediante bloqueo ante jornada ausente, habilitación vencida o documento no conforme; la interacción del conductor se admite únicamente detenido. Dos autorizaciones comerciales no levantan esos bloqueos legales.
+La mantenibilidad se verifica con revisión, análisis estático, pruebas de regresión y cobertura automatizada de líneas ejecutables de lógica de negocio de al menos 70 \% (mínimo contractual RT-04.11) y de ramas de al menos 80 \% (compromiso adicional bloqueante de audIT, coherente con S6 §6.2.2, Tabla 6.3). Se calculan por separado líneas cubiertas/líneas ejecutables y ramas cubiertas/ramas instrumentadas; el manifiesto identifica módulos de negocio y exclusiones justificadas. No se promedian ambos porcentajes ni se incluyen dependencias o código generado para elevar la cobertura. La flexibilidad se comprueba en los modelos e interfaces homologados, con actualización/reversión y perfiles nominales y de estrés: no se presume compatibilidad con cualquier camión. La seguridad operacional se verifica mediante bloqueo ante jornada ausente, habilitación vencida o documento no conforme; la interacción del conductor se admite únicamente detenido. Dos autorizaciones comerciales no levantan esos bloqueos legales.
 
 
 
@@ -54,7 +54,7 @@ Métrica & Criterio & Naturaleza y fuente & Evidencia \\ \midrule
 Disponibilidad de servicios críticos & $\ge 99{,}9\%$ mensual E2E & Contractual: Art. 20 FEP01, p. 14; RT-10.01 FEP02, p. 22 & Medición real de transacciones E2E; monitoreo sintético complementario y reporte \\
 Recuperación ante desastre & RTO $\le 4$ h; RPO $\le 15$ min & Contractual: RT-07.04 FEP02, p. 17 & Informe fechado de ejercicio de recuperación \\
 Retención local sin conectividad & Al menos 72 h, sin pérdida ni corrupción & Contractual: RT-03.10, p. 31 & Registro de desconexión, almacenamiento y sincronización \\
-Cobertura automatizada de lógica de negocio & Líneas \(\ge\)70 \%; ramas \(\ge\)80 \%, ambas bloqueantes & RT-04.11 FEP02, p. 11: mínimo 70 \%; ramas 80 \%: compromiso audIT, S6, \tabref{06-tabla-6-3} & Reporte por versión, numeradores, denominadores y exclusiones \\
+Cobertura automatizada de lógica de negocio & Líneas \(\ge\)70 \%; ramas \(\ge\)80 \%, ambas bloqueantes & RT-04.11 FEP02, p. 11: mínimo 70 \%; ramas 80 \%: compromiso audIT, S6, Tabla 6.3 & Reporte por versión, numeradores, denominadores y exclusiones \\
 Perfil de carga y latencia & 380 sesiones nominales y 570 en estrés (1,5 × 380) & Hipótesis de diseño: S4, «Concurrencia y volumen declarados»; factor de prueba RT-09.06 & Script K6 versionado, mezcla por perfil, configuración y percentiles \\
 \end{tabla}
 
@@ -103,7 +103,7 @@ Los plazos y coberturas de la \tabref{9-defectos-operacion} provienen de FEP01, 
 
 \subsection{Puertas de calidad propuestas}\label{sec:9-puertas}
 
-La \tabref{9-puertas-calidad} establece los puntos de control de audIT, coherentes con S6, \tabref{06-tabla-6-3} y la \tabref{9-t13-gates} del T-13. Cada ejecución del pipeline conserva su configuración versionada, los resultados de los controles y la decisión de promoción.
+La \tabref{9-puertas-calidad} establece los puntos de control de audIT, coherentes con S6, Tabla 6.3 y la \tabref{9-t13-gates} del T-13. Cada ejecución del pipeline conserva su configuración versionada, los resultados de los controles y la decisión de promoción.
 
 \begin{tabla}[ancho=completo]{Puertas de calidad y evidencia de salida}{9-puertas-calidad}{L{22mm} X L{49mm} L{39mm}}
 Puerta & Control propuesto & Condición de salida & Evidencia \\ \midrule
@@ -168,7 +168,7 @@ El calendario contractual establece las ventanas de implantación. La \figref{9-
     \node[anchor=west,inner sep=0pt] at (-5.65,\y) {\carril};
   }
   \foreach \inicio/\fin/\y/\actividad in {
-    0/5/-1/A09,8/12/-1/A20,
+    0/5/-1/A09,7/13/-1/A20,
     0/4/-2/A10 y A11,
     4/7/-3/A12,11/13/-3/A22,
     4/7/-4/A12,11/13/-4/A22,
@@ -178,7 +178,7 @@ El calendario contractual establece las ventanas de implantación. La \figref{9-
     \draw[banda] (\inicio,{\y-0.34}) rectangle (\fin,{\y+0.34});
     \node[inner sep=0pt] at ({(\inicio+\fin)/2},\y) {\actividad};
   }
-  \foreach \x/\etiqueta in {4.5/H4,6.5/H5,10.5/H7,11.5/H9,12.5/H10,15.5/H12} {
+  \foreach \x/\etiqueta in {0.5/H3,4.5/H4,6.5/H5,7.5/H6,8.5/H8,10.5/H7,11.5/H9,12.5/H10,13.5/H11,15.5/H12} {
     \fill[hito] (\x,-6.72) circle[radius=1.8pt];
     \node[anchor=north,inner sep=1pt] at (\x,-6.85) {\etiqueta};
   }
@@ -208,6 +208,8 @@ Operación (M21--M56) & A25/Operación & Simulacros semestrales DR (junio y novi
 \end{tabla}
 
 Las pruebas de carga utilizan el perfil aprobado de S4, conservando mezcla y concurrencia; resiliencia incluye desconexión embarcada de 72 h, terminal de 24 h y reconexión masiva. Cada ejercicio DR mide desde la declaración del incidente hasta servicio recuperado y contrasta el último dato recuperable con RPO; seguridad ofensiva se ejecuta con autorización, límites, datos de ensayo y reversión. Las cuatro familias producen informes independientes en las ventanas de pruebas integrales A12 (meses 10 a 12) y A22 (meses 17 a 18), para evitar que un éxito funcional sustituya una comprobación no funcional. Antes de cada paso a producción y semestralmente durante los 36 meses de operación (M21 a M56) se ejecutan las pruebas de resiliencia y DR; estos ejercicios de recuperación ante desastres se programan en junio y noviembre de cada año operacional, distanciados por cinco meses y fuera de la temporada alta de fruta para resguardar la continuidad de negocio \transv*{RT-07.07}{17}, certificando el RTO $\le 4$\,h y RPO $\le 15$\,min hacia la región secundaria Azure Brazil South (\transv{RT-07.04}{17}). Las pruebas de intrusión se ejecutan antes de cada paso a producción y anualmente, por tercero independiente de audIT, con informe íntegro y remediación (\transv{20.1}{34--35}; \transv{RT-11.20}{24}). La carga prueba los umbrales a 1,5 veces el peak declarado. La migración definitiva requiere dos ensayos previos con conciliación sin diferencias no explicadas. Estas comprobaciones complementan las certificaciones A12/A22 y conservan responsables, autorización y ventanas.
+
+Para la aceptación de usuarios (UAT) de la Etapa 1 en M10--M12 (A12), cuya ventana puede coincidir con el inicio de la temporada alta agrícola de exportación, se acuerda con la Contraparte Técnica en H1 un calendario de ventanas UAT acotadas por turno fuera de horario punta, con cupos nominales por rol (despacho, prevención, mantenimiento, finanzas y terminales), designación previa de usuarios suplentes certificados y regla de escalamiento en 48 horas ante indisponibilidad, asegurando el cierre oportuno de H5 sin afectar la operación en curso ni desplazar hitos contractuales. Asimismo, la aceptación de la integración de flota de terceros (SUP-02) exige ejecutar en ambiente de staging/UAT la verificación sobre una muestra autorizada real de cada una de las tres plataformas GPS de terceros previo a suscribir el acta de H5 y H10, complementando los ensayos automatizados contra dobles simulados de CI.
 
 \subsection{Protocolo de aceptación, observaciones y acta}\label{sec:9-protocolo-aceptacion}
 
@@ -254,7 +256,7 @@ Asignación bloqueante & p95 $\le30$ s & \caso{RT-09.01}{32}; FEP02 Cap. 9: jorn
 Documento de transporte & $\le90$ s & \caso{RT-09.01}{32}: documento conforme antes de mover carga; ERP contable como emisor tributario. \\
 Emergencia y posición & $\le15$ s con cobertura; $\le2$ min & \caso{RT-09.01}{32}: tiempos origen/destino; publicación al cliente y cobertura documentada. \\
 Costeo & $\le24$ h tras cierre & \caso{RT-05.29}{32}: consolidación con identificación de componentes aún no disponibles. \\
-Cobertura de negocio & Líneas \(\ge\)70 \%; ramas \(\ge\)80 \% & FEP02 RT-04.11: mínimo contractual 70 \%; ramas 80 \%: gate adicional audIT, S6, \tabref{06-tabla-6-3}. Ambos bloquean; no demuestran por sí solos corrección funcional. \\
+Cobertura de negocio & Líneas \(\ge\)70 \%; ramas \(\ge\)80 \% & FEP02 RT-04.11: mínimo contractual 70 \%; ramas 80 \%: gate adicional audIT, S6, Tabla 6.3. Ambos bloquean; no demuestran por sí solos corrección funcional. \\
 Autonomía embarcada & $\ge72$ h sin cobertura & \caso{RT-03.10}{31}: posición, conducción, jornada, tiempos y documentos sin pérdida. 288 h es propuesta adicional. \\
 Autonomía terminal & $\ge24$ h sin enlace exterior & \art{16.4}{12}; \transv{RT-03.10}{9}: mínimo transversal ante las 12 h del caso; operación degradada y conciliación. \\
 Reconexión masiva & $\le20$ min por camión tras 72 h & \caso{RT-03.13}{31}: perfil explícito de 300 unidades simultáneas; medir por unidad, sin pérdida de jornada o esperas. \\

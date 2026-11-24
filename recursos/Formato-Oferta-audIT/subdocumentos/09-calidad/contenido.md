@@ -1,6 +1,6 @@
 # Subdocumento 9. Plan de calidad
 
-audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. Oferta Técnica, Sobre N.º 2. Informe Preparatorio 2. Archivo AUDIT-Subdocumento9.pdf. Anexos: Formulario T-13 en el archivo AUDIT-Formulario-T-13.pdf, Formulario T-17 en el archivo AUDIT-Formulario-T-17.pdf.
+audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. Oferta Técnica, Sobre N.º 2. Oferta Técnica Final. Archivo AUDIT-Subdocumento9.pdf. Anexos: Formulario T-13 en el archivo AUDIT-Formulario-T-13.pdf, Formulario T-17 en el archivo AUDIT-Formulario-T-17.pdf.
 
 ## 9 Plan de calidad
 
@@ -16,7 +16,7 @@ audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. O
 
 ## 9.1 Plan de Calidad
 
-El plan aplica controles preventivos y verificaciones basadas en riesgo a cada incremento de software, configuración de infraestructura y equipo embarcado. Los criterios de servicio provienen de las bases; los umbrales adicionales de cobertura de ramas, complejidad y vulnerabilidades se adoptan como compromisos bloqueantes de audIT y se distinguen del mínimo contractual. La homologación física utiliza los criterios de la Tabla 9.2 del T-13 sobre la configuración ofertada.
+El plan aplica controles preventivos y verificaciones basadas en riesgo a cada incremento de software, configuración de infraestructura y equipo embarcado. Los criterios de servicio provienen de las bases; los umbrales adicionales de cobertura de ramas, complejidad y vulnerabilidades se adoptan como compromisos bloqueantes de audIT y se distinguen del mínimo contractual. La homologación física utiliza los criterios de la Tabla de controles del T-13 sobre la configuración ofertada.
 
 La configuración física sometida a homologación comprende iWave G26I con audIT EdgeHub, lector CAN sin contacto Technoton CANCrocodile y las balizas Bluetooth de la innovación 3. Los 182 equipos previstos se ensayan por modelo y montaje; para los 192 terceros con dispositivos existentes se verifican las interfaces y permisos de acceso disponibles. T-17 comprueba lectura, integridad, datos ausentes, antigüedad y conciliación mediante pruebas de integración y hardware. El control térmico utiliza el rango y la precisión del modelo homologado.
 
@@ -54,7 +54,7 @@ La Tabla 9.1 distingue los mínimos contractuales de los compromisos adicionales
 
 | Métrica | Criterio | Naturaleza y fuente | Evidencia |
 |---|---|---|---|
-| Disponibilidad de servicios críticos | $\ge 99{,}9%$ mensual E2E | Contractual: Art. 20 FEP01, p. 14; RT-10.01 FEP02, p. 22 | Medición real de transacciones E2E; monitoreo sintético complementario y reporte |
+| Disponibilidad de servicios críticos | $\ge 99,9%$ mensual E2E | Contractual: Art. 20 FEP01, p. 14; RT-10.01 FEP02, p. 22 | Medición real de transacciones E2E; monitoreo sintético complementario y reporte |
 | Recuperación ante desastre | RTO $\le 4 h; RPO \le 15$ min | Contractual: RT-07.04 FEP02, p. 17 | Informe fechado de ejercicio de recuperación |
 | Retención local sin conectividad | Al menos 72 h, sin pérdida ni corrupción | Contractual: RT-03.10, p. 31 | Registro de desconexión, almacenamiento y sincronización |
 | Cobertura automatizada de lógica de negocio | Líneas \(\ge\)70 %; ramas \(\ge\)80 %, ambas bloqueantes | RT-04.11 FEP02, p. 11: mínimo 70 %; ramas 80 %: compromiso audIT, S6, Tabla 6.3 | Reporte por versión, numeradores, denominadores y exclusiones |
@@ -109,13 +109,13 @@ Los plazos y coberturas de la Tabla 9.2 provienen de FEP01, Artículo 78.2, p. 4
 
 ### 9.2.3 Puertas de calidad propuestas
 
-La Tabla 9.3 establece los puntos de control de audIT, coherentes con S6, Tabla 6.3 y la Tabla 9.2 del T-13. Cada ejecución del pipeline conserva su configuración versionada, los resultados de los controles y la decisión de promoción.
+La Tabla 9.3 establece los puntos de control de audIT, coherentes con S6, Tabla 6.3 y la Tabla de controles del T-13. Cada ejecución del pipeline conserva su configuración versionada, los resultados de los controles y la decisión de promoción.
 
 **Tabla 9.3.** Puertas de calidad y evidencia de salida
 
 | Puerta | Control propuesto | Condición de salida | Evidencia |
 |---|---|---|---|
-| G1 — Código | Revisión, pruebas y análisis estático | Líneas \(\ge\)70 %, ramas \(\ge\)80 %, cero pruebas fallidas, complejidad \(\le\)15 por función | Reporte CI y SonarQube por versión; sección |
+| G1 — Código | Revisión, pruebas y análisis estático | Líneas \(\ge\)70 %, ramas \(\ge\)80 %, cero pruebas fallidas, complejidad \(\le\)15 por función | Reporte CI y SonarQube por versión; sección 9.3.1 |
 | G2 — Dependencias | SAST, composición y escaneo de imágenes | Cero vulnerabilidades críticas o altas abiertas en el artefacto promovido | SBOM, SonarQube y Trivy por versión |
 | G3 — Integración | Contratos e intercambio entre servicios | Casos de integración trazados aprobados | Resultados y logs de integración |
 | G4 — Sistema | Rendimiento, resiliencia y seguridad | Umbrales acordados antes del ensayo y cumplidos | Reporte de ejecución y configuración |
@@ -151,14 +151,22 @@ La alineación con S7 y la gestión de riesgos se comprueba con versiones identi
 
 ### 9.3.2 Actividades de calidad ubicadas en el calendario
 
-El calendario contractual establece las ventanas; la red vigente de S7/T-15 identifica las actividades A09 a A25 utilizadas aquí. Los códigos A identifican las actividades verificables del cronograma. La Tabla 9.5 sintetiza dónde se produce la evidencia de cada transición.
+El calendario contractual establece las ventanas de implantación. La Figura 9.2 cruza las campañas de calidad con la red de S7/T-15. Las barras representan meses en los que hay actividad planificada. Los hitos indican el mes contractual de entrega o certificación.
+
+*[Diagrama vectorial nativo en PDF: Campañas y puertas de calidad por mes contractual. Fuente: elaboración propia a partir de S7, T-15 y E-25]*
+
+Durante A09, A10, A11 y A20, G1 a G3 se aplican de forma recurrente según el componente y el cambio. Ingresan código, dependencias y contratos de integración versionados. Salen los informes de CI, seguridad e integración. H4 y H9 identifican las entregas de software a certificación.
+
+A12 y A22 reciben esas entregas con sus ambientes y datos habilitados. G4 verifica carga, resiliencia y seguridad en staging o HIL según el ensayo. G6 registra la restauración autorizada, RTO y RPO. G5 verifica con usuarios designados y conserva los resultados y las observaciones. Los informes respaldan H5 y H10. A15 y A24 reciben las entregas certificadas, con personal capacitado y plan de reversión activo. Sus registros de operación y las actas respaldan H7 y H12.
+
+En M21 comienza la operación de ambos alcances. G6 vuelve a aplicarse en los ejercicios de recuperación de junio y noviembre, con bitácora y reporte de continuidad. La Tabla 9.5 identifica la evidencia de cada transición.
 
 **Tabla 9.5.** Ventanas de ensayo y actividad de cronograma
 
 | Ventana | Actividad S7 | Ensayos | Salida verificable |
 |---|---|---|---|
 | Construcción E1 | A09/A10/A11 | Unitarias, integración y piloto HIL | Versión y regresión trazadas |
-| M10--M12, hito H5 | A12 | Pruebas integrales E1: carga, resiliencia, DR, seguridad y UAT | Informe y defectos de certificación |
+| M10--M12 | A12 | Pruebas integrales E1: carga, resiliencia, DR, seguridad y UAT | Informes y defectos. H5, certificación de Etapa 1 en M12 |
 | M13--M15 | A15 | Marcha blanca E1 | Cuatro semanas y seis condiciones |
 | M16, hito H7 | A19 | Producción E1 | Acta de su alcance |
 | Construcción E2 | A20 | Regresión E1 y ensayos del incremento | Evidencia sin degradación E1 |
@@ -168,6 +176,8 @@ El calendario contractual establece las ventanas; la red vigente de S7/T-15 iden
 | Operación (M21--M56) | A25/Operación | Simulacros semestrales DR (junio y noviembre) | Demostración RTO $\le 4 h, RPO \le 15$ min y conmutación |
 
 Las pruebas de carga utilizan el perfil aprobado de S4, conservando mezcla y concurrencia; resiliencia incluye desconexión embarcada de 72 h, terminal de 24 h y reconexión masiva. Cada ejercicio DR mide desde la declaración del incidente hasta servicio recuperado y contrasta el último dato recuperable con RPO; seguridad ofensiva se ejecuta con autorización, límites, datos de ensayo y reversión. Las cuatro familias producen informes independientes en las ventanas de pruebas integrales A12 (meses 10 a 12) y A22 (meses 17 a 18), para evitar que un éxito funcional sustituya una comprobación no funcional. Antes de cada paso a producción y semestralmente durante los 36 meses de operación (M21 a M56) se ejecutan las pruebas de resiliencia y DR; estos ejercicios de recuperación ante desastres se programan en junio y noviembre de cada año operacional, distanciados por cinco meses y fuera de la temporada alta de fruta para resguardar la continuidad de negocio (FEP02, RT-07.07, p. 17), certificando el RTO $\le 4$ h y RPO $\le 15$ min hacia la región secundaria Azure Brazil South (FEP02, RT-07.04, p. 17). Las pruebas de intrusión se ejecutan antes de cada paso a producción y anualmente, por tercero independiente de audIT, con informe íntegro y remediación (FEP02, 20.1, pp. 34--35; FEP02, RT-11.20, p. 24). La carga prueba los umbrales a 1,5 veces el peak declarado. La migración definitiva requiere dos ensayos previos con conciliación sin diferencias no explicadas. Estas comprobaciones complementan las certificaciones A12/A22 y conservan responsables, autorización y ventanas.
+
+Para la aceptación de usuarios (UAT) de la Etapa 1 en M10--M12 (A12), cuya ventana puede coincidir con el inicio de la temporada alta agrícola de exportación, se acuerda con la Contraparte Técnica en H1 un calendario de ventanas UAT acotadas por turno fuera de horario punta, con cupos nominales por rol (despacho, prevención, mantenimiento, finanzas y terminales), designación previa de usuarios suplentes certificados y regla de escalamiento en 48 horas ante indisponibilidad, asegurando el cierre oportuno de H5 sin afectar la operación en curso ni desplazar hitos contractuales. Asimismo, la aceptación de la integración de flota de terceros (SUP-02) exige ejecutar en ambiente de staging/UAT la verificación sobre una muestra autorizada real de cada una de las tres plataformas GPS de terceros previo a suscribir el acta de H5 y H10, complementando los ensayos automatizados contra dobles simulados de CI.
 
 ### 9.3.3 Protocolo de aceptación, observaciones y acta
 
@@ -181,8 +191,7 @@ Cada evidencia incluirá identificador de requisito/caso, fecha, versión, ambie
 
 ### 9.3.5 Condiciones contractuales de calendario y aceptación
 
-\begingroup\emergencystretch=3em
-El calendario de la Tabla 9.6 es obligatorio conforme al FEP01, Artículo 17.1, pp. 12--13. M1 se cuenta desde el origen contractual efectivo; no se convierte la fecha de entrega de la oferta en inicio del contrato. Los puntos de control técnicos no sustituyen los hitos ponderados de E-25.\endgroup
+El calendario de la Tabla 9.6 es obligatorio conforme al FEP01, Artículo 17.1, pp. 12--13. M1 se cuenta desde el origen contractual efectivo; no se convierte la fecha de entrega de la oferta en inicio del contrato. Los puntos de control técnicos no sustituyen los hitos ponderados de E-25.
 
 **Tabla 9.6.** Calendario contractual y evidencia de transición
 
@@ -210,8 +219,8 @@ La Tabla 9.7 concreta los criterios que deben incorporarse al catálogo de prueb
 
 | Control | Umbral | Fuente y evidencia |
 |---|---|---|
-| Disponibilidad crítica E2E | $\ge99{,}9%$ mensual | FEP01, Artículo 20, p. 14, FEP02, RT-10.01, p. 22: intentos, éxito/fallo y duración de transacciones reales correlacionadas. Monitoreo sintético complementario. |
-| Red, cómputo, datos y portal | $\ge99{,}95%$ por componente | FEP02, Cap. 7, pp. 17--18; sala Cap. 6: métricas por componente y conciliación con incidencias de negocio. |
+| Disponibilidad crítica E2E | $\ge99,9%$ mensual | FEP01, Artículo 20, p. 14, FEP02, RT-10.01, p. 22: intentos, éxito/fallo y duración de transacciones reales correlacionadas. Monitoreo sintético complementario. |
+| Red, cómputo, datos y portal | $\ge99,95%$ por componente | FEP02, Cap. 7, pp. 17--18; sala Cap. 6: métricas por componente y conciliación con incidencias de negocio. |
 | Recuperación | RTO $\le4 h; RPO \le15$ min | FEP02, RT-07.04, p. 17: conmutación real autorizada, tiempos y datos recuperados. |
 | Asignación bloqueante | p95 $\le30$ s | Caso, RT-09.01, p. 32; FEP02 Cap. 9: jornada previa, habilitaciones y equipo bajo carga declarada. |
 | Documento de transporte | $\le90$ s | Caso, RT-09.01, p. 32: documento conforme antes de mover carga; ERP contable como emisor tributario. |

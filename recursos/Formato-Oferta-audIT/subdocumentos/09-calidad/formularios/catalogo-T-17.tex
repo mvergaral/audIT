@@ -387,7 +387,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 \par\noindent\textbf{Datos de Entrada Sintéticos:} Buffer de bytes válidos conteniendo timestamp, coordenadas, velocidad, RPM, combustible y temperatura y estado de balizas Bluetooth.\par
 \par\noindent\textbf{Resultado Esperado:} El paquete corrupto lanza \texttt{Invalid\allowbreak{}Protocol\allowbreak{}Buffer\allowbreak{}Exception} gestionada limpiamente sin crash; el paquete válido se deserializa en \(< 5\text{ }\mu\text{s}\) con valores de campos 100\% exactos.\par
 \par\noindent\textbf{Pass/Fail y Severidad:} Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: \textbf{P2 (Crítica)}.\par
-\par\noindent\textbf{Entorno:} Local CI Runner / Go o Java Testcontainers.\par
+\par\noindent\textbf{Entorno:} Local CI Runner / Go o .NET Testcontainers.\par
 
 
 \subsubsection*{CP-UNIT-14 — Detección de Discrepancias y Manipulación en Odómetro CAN vs GNSS}\label{sec:9-cp-unit-14}
@@ -904,21 +904,21 @@ Este ensayo define entradas, controles y evidencia; no declara resultados ejecut
 \par\noindent\textbf{Entorno:} QA / Dobles de plataforma y capa de integración.\par
 
 
-\subsubsection*{CP-INT-09 — Ingesta Normalizada de Telemetría Comercial Webfleet vía Capa ACL}\label{sec:9-cp-int-09}
+\subsubsection*{CP-INT-09 — Ingesta Normalizada de Telemetría Comercial de Tercero (Perfil Simulado OAuth 2.0) vía Capa ACL}\label{sec:9-cp-int-09}
 \addcontentsline{toc}{subsubsection}{CP-INT-09}
 Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y el criterio siguiente.
 
 \par\noindent\textbf{ID:} \texttt{C\allowbreak{}P\allowbreak{}-\allowbreak{}I\allowbreak{}N\allowbreak{}T\allowbreak{}-\allowbreak{}0\allowbreak{}9\allowbreak{}}\par
-\par\noindent\textbf{Nivel y Tipología:} Prueba de Integración / Conectores Telemáticos Internacionales.\par
+\par\noindent\textbf{Nivel y Tipología:} Prueba de Integración / Conectores Telemáticos de Terceros (Perfil Simulado).\par
 \par\noindent\textbf{Requerimiento Trazado:} Ensayo adicional de ingeniería; no sustituye controles contractuales.\par
-\par\noindent\textbf{Precondiciones:} Adaptador \texttt{W\allowbreak{}e\allowbreak{}b\allowbreak{}f\allowbreak{}l\allowbreak{}e\allowbreak{}e\allowbreak{}t\allowbreak{}C\allowbreak{}o\allowbreak{}n\allowbreak{}n\allowbreak{}e\allowbreak{}c\allowbreak{}t\allowbreak{}A\allowbreak{}d\allowbreak{}a\allowbreak{}p\allowbreak{}t\allowbreak{}e\allowbreak{}r\allowbreak{}} configurado con autenticación OAuth 2.0.\par
+\par\noindent\textbf{Precondiciones:} Adaptador ACL configurado con autenticación OAuth 2.0 contra un perfil simulado de plataforma GPS comercial tercera (sin atribuir marca ni API al parque existente sin homologación previa).\par
 \par\noindent\textbf{Pasos de Ejecución:} \par
 \begin{enumerate}
-\item Ejecutar ciclo de consulta de posiciones \texttt{s\allowbreak{}h\allowbreak{}o\allowbreak{}w\allowbreak{}O\allowbreak{}r\allowbreak{}d\allowbreak{}e\allowbreak{}r\allowbreak{}R\allowbreak{}e\allowbreak{}p\allowbreak{}o\allowbreak{}r\allowbreak{}t\allowbreak{}E\allowbreak{}x\allowbreak{}t\allowbreak{}e\allowbreak{}r\allowbreak{}n\allowbreak{}} a la API de Webfleet.
-\item Parsear el payload CSV/JSON retornado por Webfleet Connect.
+\item Ejecutar ciclo de consulta de posiciones contra el endpoint simulado de la plataforma GPS comercial tercera autenticada por OAuth 2.0.
+\item Parsear el payload CSV/JSON retornado por el conector simulado.
 \item Mapear estado de ignición y odómetro a la entidad canónica audIT.
 \end{enumerate}
-\par\noindent\textbf{Datos de Entrada Sintéticos:} Respuesta sintética de Webfleet conteniendo camiones subcontratados operando en la Macrozona Sur.\par
+\par\noindent\textbf{Datos de Entrada Sintéticos:} Respuesta sintética del perfil simulado conteniendo camiones subcontratados operando en la Macrozona Sur.\par
 \par\noindent\textbf{Resultado Esperado:} Conversión completa al esquema canónico en \(< 100\text{ ms}\); persistencia de traza en TimescaleDB.\par
 \par\noindent\textbf{Pass/Fail y Severidad:} Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: \textbf{P2 (Crítica)}.\par
 \par\noindent\textbf{Entorno:} CI Testcontainers.\par
@@ -1013,7 +1013,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 \par\noindent\textbf{ID:} \texttt{C\allowbreak{}P\allowbreak{}-\allowbreak{}I\allowbreak{}N\allowbreak{}T\allowbreak{}-\allowbreak{}1\allowbreak{}3\allowbreak{}}\par
 \par\noindent\textbf{Nivel y Tipología:} Prueba de Integración / Seguridad Criptográfica en Hardware (Cloud HSM).\par
 \par\noindent\textbf{Requerimiento Trazado:} Ensayo adicional de ingeniería; no sustituye controles contractuales.\par
-\par\noindent\textbf{Precondiciones:} Conexión segura configurada hacia Azure Key Vault (o simulador LocalStack / Azure SDK Mock) con clave asimétrica RSA 2048 / ECC P-256 respaldada en hardware HSM.\par
+\par\noindent\textbf{Precondiciones:} Conexión segura configurada hacia Azure Key Vault (o Azure SDK Mock en entorno local) con clave asimétrica RSA 2048 / ECC P-256 respaldada en hardware HSM.\par
 \par\noindent\textbf{Pasos de Ejecución:} \par
 \begin{enumerate}
 \item Tomar el hash SHA-256 de una entidad \texttt{E\allowbreak{}v\allowbreak{}i\allowbreak{}d\allowbreak{}e\allowbreak{}n\allowbreak{}c\allowbreak{}i\allowbreak{}a\allowbreak{}J\allowbreak{}o\allowbreak{}r\allowbreak{}n\allowbreak{}a\allowbreak{}d\allowbreak{}a\allowbreak{}}.
@@ -1079,24 +1079,24 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 
 
-\subsubsection*{CP-INT-16 — Conciliación de Carga de Diésel con Surtidor y Caudalímetro en San Bernardo}\label{sec:9-cp-int-16}
+\subsubsection*{CP-INT-16 — Conciliación de Carga de Diésel con Estanque Propio en San Bernardo}\label{sec:9-cp-int-16}
 \addcontentsline{toc}{subsubsection}{CP-INT-16}
 Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y el criterio siguiente.
 
 \par\noindent\textbf{ID:} \texttt{C\allowbreak{}P\allowbreak{}-\allowbreak{}I\allowbreak{}N\allowbreak{}T\allowbreak{}-\allowbreak{}1\allowbreak{}6\allowbreak{}}\par
-\par\noindent\textbf{Nivel y Tipología:} Prueba de Integración / IoT Industrial y Conciliación de Combustible.\par
+\par\noindent\textbf{Nivel y Tipología:} Prueba de Integración / Conciliación de Combustible en Terminal.\par
 \par\noindent\textbf{Requerimiento Trazado:} Ensayo adicional de ingeniería; no sustituye controles contractuales.\par
-\par\noindent\textbf{Precondiciones:} Dispositivo concentrador de patio en San Bernardo conectado al caudalímetro digital del estanque propio de diésel.\par
+\par\noindent\textbf{Precondiciones:} Registro operativo de despacho de diésel del estanque propio de San Bernardo mediante PWA de patio o carga estructurada desde administración, conciliado contra telemetría CAN/odómetro del iWave G26I. La ingesta directa por caudalímetro MQTT queda como interfaz opcional sujeta a instrumentación futura del mandante fuera del alcance base.\par
 \par\noindent\textbf{Pasos de Ejecución:} \par
 \begin{enumerate}
-\item Simular carga de combustible de 380 litros al camión \texttt{T\allowbreak{}R\allowbreak{}K\allowbreak{}-\allowbreak{}S\allowbreak{}Y\allowbreak{}N\allowbreak{}T\allowbreak{}H\allowbreak{}-\allowbreak{}0\allowbreak{}4\allowbreak{}2\allowbreak{}}.
-\item Caudalímetro emite trama MQTT \texttt{c\allowbreak{}u\allowbreak{}r\allowbreak{}i\allowbreak{}m\allowbreak{}o\allowbreak{}n\allowbreak{}/\allowbreak{}t\allowbreak{}e\allowbreak{}r\allowbreak{}m\allowbreak{}i\allowbreak{}n\allowbreak{}a\allowbreak{}l\allowbreak{}/\allowbreak{}s\allowbreak{}b\allowbreak{}o\allowbreak{}/\allowbreak{}f\allowbreak{}u\allowbreak{}e\allowbreak{}l\allowbreak{}/\allowbreak{}d\allowbreak{}i\allowbreak{}s\allowbreak{}p\allowbreak{}e\allowbreak{}n\allowbreak{}s\allowbreak{}e\allowbreak{}} con identificador de manguera, litros y tag RFID del camión.
-\item Servicio de combustible captura la trama, valida contra la orden de trabajo abierta y actualiza el nivel de estanque e inventario.
+\item Registrar en la PWA de patio (o carga estructurada administrativa) un abastecimiento sintético de 380 litros al camión \texttt{T\allowbreak{}R\allowbreak{}K\allowbreak{}-\allowbreak{}S\allowbreak{}Y\allowbreak{}N\allowbreak{}T\allowbreak{}H\allowbreak{}-\allowbreak{}0\allowbreak{}4\allowbreak{}2\allowbreak{}} con identificador de vehículo, litros y código de conductor.
+\item El servicio de combustible recibe el evento de despacho, valida contra la orden de trabajo abierta y cruza el consumo con el odómetro y señales CAN reportadas por el gateway iWave G26I.
+\item Actualizar el nivel de estanque e inventario en base de datos transaccional.
 \end{enumerate}
-\par\noindent\textbf{Datos de Entrada Sintéticos:} Mensaje MQTT sintético con litros dispensados y código de conductor.\par
+\par\noindent\textbf{Datos de Entrada Sintéticos:} Evento de despacho sintético con litros suministrados, patente y código de conductor.\par
 \par\noindent\textbf{Resultado Esperado:} Registro de abastecimiento creado en PostgreSQL, contrastado contra odómetro de cabina y conciliado en \(< 2\text{ segundos}\).\par
 \par\noindent\textbf{Pass/Fail y Severidad:} Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: \textbf{P2 (Crítica)}.\par
-\par\noindent\textbf{Entorno:} CI Testcontainers (Mosquitto MQTT Broker + PostgreSQL).\par
+\par\noindent\textbf{Entorno:} CI Testcontainers (API Servicio de Combustible + PostgreSQL).\par
 
 
 
@@ -1159,7 +1159,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 
 \par\noindent\textbf{Variante trazada a RF-018 (S3/T-12):} Construir 12 meses de consumo y kilómetros por vehículo, ruta y conductor con condiciones registradas. En una cohorte de referencia, razones 2, 4, 4, 4, 5, 5, 7 y 9 tienen media 5 y varianza poblacional 4, en unidades sintéticas. Añadir una condición de carga sintética x con valores 0, 2, 2, 2, 3, 3, 5 y 7 y consumo y=2+x: el modelo lineal de referencia debe reproducir coeficientes 2 y 1 y residual cero en ese fixture. Un modelo alternativo debe declarar su oráculo independiente. Esta exactitud sintética no se promete para datos reales. El modelo debe conservar cohorte, período, condiciones, versión y dispersión reproducible; registros incompletos no se mezclan como cero. El benchmark de inserción no demuestra explicación de dispersión. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.\par
-\subsubsection*{CP-INT-19 — Publicación y Suscripción de Eventos de Geocerca en Kafka Event Hubs}\label{sec:9-cp-int-19}
+\subsubsection*{CP-INT-19 — Publicación y Suscripción de Eventos de Geocerca en Azure Event Hubs Premium (protocolo Kafka)}\label{sec:9-cp-int-19}
 \addcontentsline{toc}{subsubsection}{CP-INT-19}
 Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y el criterio siguiente.
 
@@ -1411,7 +1411,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 \begin{enumerate}
 \item Inyectar coordenadas progresivas del trayecto simulando velocidad de \(75\text{ km/h}\).
 \item Detectar paso por hitos: Peaje Angostura (km 54), Bypass Rancagua (km 85), Terminal San Fernando (km 138), y Peaje Río Claro (km 220).
-\item Verificar que cada hito dispare un evento en Kafka, actualice la posición en la Torre 24x7 y recalcule el ETA hacia Concepción.
+\item Verificar que cada hito dispare un evento en Azure Event Hubs Premium (protocolo Kafka), actualice la posición en la Torre 24x7 y recalcule el ETA hacia Concepción.
 \end{enumerate}
 \par\noindent\textbf{Datos de Entrada Sintéticos:} Serie de 1.200 puntos GPS interpolados en el trazado de la Ruta 5 Sur.\par
 \par\noindent\textbf{Resultado Esperado:} Hitos georreferenciados reconocidos con precisión de \(\pm 20\text{ metros}\); actualización de la pantalla del despachador en tiempo real (\(< 2\text{ segundos}\) tras cruzar el hito).\par
@@ -1490,7 +1490,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 \par\noindent\textbf{ID:} \texttt{CP-\allowbreak{}SYS-\allowbreak{}05}\par
 \par\noindent\textbf{Nivel y Tipología:} Prueba de Sistema E2E / Transición de Flota y Cascada Probatoria.\par
-\par\noindent\textbf{Requerimiento Trazado:} RF-003, RF-026, RF-028, RNF-003, RNF-011.\par
+\par\noindent\textbf{Requerimiento Trazado:} RF-002, RF-003, RF-026, RF-028, RNF-003, RNF-011.\par
 \par\noindent\textbf{Precondiciones:} Torre de Programación operando simultáneamente con:\par
 Camión Propio \texttt{TRK-\allowbreak{}010} (equipado con Gateway audIT + Technoton CANCrocodile, Nivel 2 instrumental).
 Camión Subcontratado \texttt{TRK-\allowbreak{}305} (con acceso autorizado a datos de posición de plataforma de ensayo, posición comercial; jornada por atestación separada del transportista).
@@ -1516,6 +1516,8 @@ Camión Subcontratado \texttt{TRK-\allowbreak{}305} (con acceso autorizado a dat
 \par\noindent\textbf{Variante trazada a RF-028 (S3/T-12):} Crear transportistas en modalidades completa, de datos y sin adhesión según S3; comprobar nivel 2, reposo de nivel 4 con atestación de nivel 5 y validación documental con y sin atestación firmada; visualizar modalidad, fuente, nivel y veredicto por separado. Comprobar la cascada de niveles 1 a 4 con asignación y el nivel 5 con asignación con marca y responsabilidad registrada, sin bloqueos legales. En la modalidad de datos, exigir la atestación firmada que complementa el reposo del camión: con ella asignar con marca y sin ella bloquear la asignación. En el estado sin adhesión, la validación documental con atestación válida permite asignar con marca; sin atestación no hay veredicto habilitante ni asignación. Sin fuente bloquear, con excepción sólo según RN-04; con incumplimiento legal bloquear en todas las modalidades. El nivel 0 voluntario no cambia el veredicto. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.\par
 
 \par\noindent Comprobar además el contrato de datos contra el oráculo canónico: origen instrumental y nivel son campos distintos; la atestación firmada corresponde a nivel 5 y el registro voluntario a nivel 0. Un origen CAN, GPS o portería no se acepta como nivel adicional. Un código desconocido o un mapeo que altere el veredicto produce rechazo de la integración y defecto bloqueante, conservando el dato original para trazabilidad.\par
+
+\par\noindent\textbf{Validación de aceptación en staging/UAT con muestra autorizada real de las tres plataformas GPS de terceros (SUP-02):} Como complemento obligatorio a los dobles simulados ejecutados en CI (\texttt{CP-INT-07}, \texttt{CP-INT-08} y \texttt{CP-INT-09}), antes del cierre de H5 y H10 se ejecuta en ambiente de staging/UAT la ingesta sobre una muestra autorizada real de al menos una unidad activa por cada una de las tres plataformas GPS de terceros vigentes en Curimón (con consentimiento vigente del transportista titular y credenciales provistas por el mandante o proveedor). Se verifican conectividad real, esquema normalizado, sellos de tiempo UTC, frecuencia de actualización, ausencia de registros fuera de ventana autorizada y trazabilidad de origen, documentando en el acta de H5/H10 cualquier restricción real de exportación y su mecanismo de contingencia.\par
 
 \par\noindent\textbf{Variante trazada a RNF-011 (S3/T-12):} Durante convivencia TMS 2013/nuevo sistema, desviar por función y repetir una misma orden por ambas rutas; esperar un solo viaje y ningún despacho que eluda bloqueo. Restaurar ruta anterior sin detener la flota. Assignment, tracking y liquidación pasan en M16, órdenes y tarifas cliente en M21; solo lectura hasta M24 según S3. El ERP contable permanece separado. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.\par
 
@@ -1947,7 +1949,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y el criterio siguiente.
 
 \par\noindent\textbf{ID:} \texttt{CP-\allowbreak{}PERF-\allowbreak{}02}\par
-\par\noindent\textbf{Nivel y Tipología:} Prueba No Funcional / Capacidad de Ingesta en Ráfaga y Streaming Kafka.\par
+\par\noindent\textbf{Nivel y Tipología:} Prueba No Funcional / Capacidad de Ingesta en Ráfaga y Streaming (Azure Event Hubs Premium).\par
 \par\noindent\textbf{Requerimiento Trazado:} RF-009, RNF-002, RNF-008.\par
 \par\noindent\textbf{Precondiciones:} Perfil principal de 300 camiones/72 h definido abajo, despliegue de ensayo identificado y reloj común. El perfil de 60 camiones/288 h se ejecuta separadamente como ampliación propuesta.\par
 \par\noindent\textbf{Pasos de Ejecución:}\par
@@ -1962,7 +1964,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 \par\noindent\textbf{Datos de Entrada Sintéticos:} Perfil y manifiesto definidos abajo; tamaño serializado medido antes de aplicar transporte o compresión.\par
 \par\noindent\textbf{Resultado Esperado:} Cada camión confirma su lote en \(\le\)20 min, sin pérdida ni corrupción. Una sola unidad fuera del límite o evidencia discordante implica Fail de severidad alta/crítica. Los resultados se medirán al ejecutar.\par
 \par\noindent\textbf{Pass/Fail y Severidad:} Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: Alta cuando afecta seguridad o evidencia; mayor en objetivos adicionales.\par
-\par\noindent\textbf{Entorno:} Staging AKS / Apache Kafka Event Hubs.\par
+\par\noindent\textbf{Entorno:} Staging AKS / Azure Event Hubs Premium (protocolo Kafka).\par
 
 \par\noindent\textbf{Variante contractual obligatoria:} Generar 72 h de registros por unidad con el perfil de muestreo y tamaño versionado de la memoria de cálculo; reconectar 300 camiones simultáneamente. Medir desde recuperación de cobertura hasta confirmación conciliada de cada camión: todas las unidades deben sincronizar en \(\le\)20 min, sin pérdida de jornada ni esperas, con deduplicación y conflictos registrados. El ensayo sintético de 60 unidades/288 h se conserva como ampliación separada y no sustituye este control.\par
 
@@ -1983,7 +1985,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 \par\noindent \textbf{ID:} \texttt{CP-\allowbreak{}PERF-\allowbreak{}03}\par
 \par\noindent \textbf{Nivel y Tipología:} Prueba No Funcional / Continuidad Operacional y Resiliencia ante Desastres.\par
-\par\noindent \textbf{Requerimiento Trazado:} Ensayo adicional de ingeniería; no sustituye controles contractuales.\par
+\par\noindent \textbf{Requerimiento Trazado:} RNF-014 (S3/T-12); RT-07.04 y RT-07.07 (FEP02).\par
 \par\noindent \textbf{Precondiciones:} Plataforma primaria en Azure Chile Central operando con carga activa. Sitio secundario Hot-Standby en Azure Brazil South sincronizado mediante replicación continua.\par
 \par\noindent \textbf{Pasos de Ejecución:}\par
 \begin{enumerate}
@@ -1996,7 +1998,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 \end{enumerate}
 
 \par\noindent \textbf{Datos de Entrada Sintéticos:} Carga continua previa de 100 viajes/hora; script de failover automatizado con Terraform.\par
-\par\noindent \textbf{Resultado Esperado:} Se debe verificar que RTO $\le 4\text{ h} y RPO \le 15\text{ min}$. Los tiempos, porcentajes y magnitudes observados se registrarán después del ensayo; no se anticipan mediciones ni actas suscritas.\par
+\par\noindent \textbf{Resultado Esperado:} Se debe verificar que RTO $\le 4\text{ h}$ y RPO $\le 15\text{ min}$. Los tiempos, porcentajes y magnitudes observados se registrarán después del ensayo; no se anticipan mediciones ni actas suscritas.\par
 \par\noindent \textbf{Pass/Fail y Severidad:} Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: \textbf{P1 (Bloqueante)}.\par
 \par\noindent \textbf{Entorno:} Azure Chile Central $\rightarrow$ Azure Brazil South.\par
 
@@ -2139,7 +2141,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 \begin{enumerate}
 \item Ejecutar herramienta de benchmarking \texttt{t\allowbreak{}s\allowbreak{}b\allowbreak{}s\allowbreak{}} (Time Series Benchmark Suite).
 \item Inyectar flujo continuo de 10.000 métricas por segundo (odómetro, RPM, velocidad, presiones, temperaturas) durante 60 minutos.
-\item Medir la tasa sostenida de inserción y el ratio de compresión en disco tras la política de compresión columnar.
+\item Medir la tasa sostenida de inserción y el uso de almacenamiento por particiones temporales (chunks) conforme al subconjunto Apache-2 de TimescaleDB habilitado en Azure PostgreSQL Flexible Server.
 \end{enumerate}
 \par\noindent\textbf{Datos de Entrada Sintéticos:} 36.000.000 de registros sintéticos de sensores vehiculares.\par
 \par\noindent\textbf{Resultado Esperado:} Se debe verificar que sostiene \(\ge 10.000\text{ métricas/s}\) sin degradación. Los tiempos, porcentajes y magnitudes observados se registrarán después del ensayo; no se anticipan mediciones ni actas suscritas.\par
@@ -2213,13 +2215,13 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 \par\noindent\textbf{Pasos de Ejecución:} \par
 \begin{enumerate}
 \item Ejecutar prueba de carga ininterrumpida durante 72 horas consecutivas.
-\item Monitorear de forma continua el consumo de memoria heap en JVM/Go y descriptores de archivo en microservicios, brokers Kafka y nodos de base de datos.
+\item Monitorear de forma continua el consumo de memoria heap en servicios .NET/Go y descriptores de archivo en microservicios, brokers de mensajería y nodos de base de datos.
 \item Comprobar que no existan tendencias lineales crecientes de memoria (memory leaks) ni saturación de conexiones en el pool de PostgreSQL (connection leaks).
 \end{enumerate}
 \par\noindent\textbf{Datos de Entrada Sintéticos:} Tráfico sintético sostenido de 72 horas continuas.\par
 \par\noindent\textbf{Resultado Esperado:} Se debe verificar que no hay fugas de recursos ni degradación acumulativa. Los tiempos, porcentajes y magnitudes observados se registrarán después del ensayo; no se anticipan mediciones ni actas suscritas.\par
 \par\noindent\textbf{Pass/Fail y Severidad:} Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: \textbf{P1 (Bloqueante)}.\par
-\par\noindent\textbf{Entorno:} Staging AKS / Datadog Monitoring.\par
+\par\noindent\textbf{Entorno:} Staging AKS / Azure Monitor y Log Analytics.\par
 
 
 \par\noindent\textbf{Variante contractual de terminales:} Mantener cada tipo de terminal 24 h sin enlace exterior, con cómputo y red del ambiente de ensayo especificados; registrar transacciones locales bajo perfil versionado. Restaurar el enlace, reconciliar automáticamente y verificar conteos, huellas y conflictos deterministas. Fallar si se requiere acceso cloud para las funciones degradadas comprometidas o se pierden transacciones. No se presupone hardware del cliente.\par\par
@@ -2236,7 +2238,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 \par\noindent\textbf{ID:} \texttt{C\allowbreak{}P\allowbreak{}-\allowbreak{}S\allowbreak{}E\allowbreak{}C\allowbreak{}-\allowbreak{}0\allowbreak{}1\allowbreak{}}\par
 \par\noindent\textbf{Nivel y Tipología:} Prueba de Ciberseguridad / Análisis Dinámico de Seguridad (DAST).\par
 \par\noindent\textbf{Requerimiento Trazado:} Ensayo adicional de ingeniería; no sustituye controles contractuales.\par
-\par\noindent\textbf{Precondiciones:} Escáner OWASP ZAP Enterprise integrado en el pipeline de GitLab CI apuntando al endpoint \texttt{/\allowbreak{}a\allowbreak{}p\allowbreak{}i\allowbreak{}/\allowbreak{}v\allowbreak{}1\allowbreak{}/\allowbreak{}d\allowbreak{}i\allowbreak{}s\allowbreak{}p\allowbreak{}a\allowbreak{}t\allowbreak{}c\allowbreak{}h\allowbreak{}/\allowbreak{}o\allowbreak{}r\allowbreak{}d\allowbreak{}e\allowbreak{}r\allowbreak{}s\allowbreak{}}.\par
+\par\noindent\textbf{Precondiciones:} Escáner OWASP ZAP (Apache-2.0) integrado en el pipeline de GitLab CI apuntando al endpoint \texttt{/\allowbreak{}a\allowbreak{}p\allowbreak{}i\allowbreak{}/\allowbreak{}v\allowbreak{}1\allowbreak{}/\allowbreak{}d\allowbreak{}i\allowbreak{}s\allowbreak{}p\allowbreak{}a\allowbreak{}t\allowbreak{}c\allowbreak{}h\allowbreak{}/\allowbreak{}o\allowbreak{}r\allowbreak{}d\allowbreak{}e\allowbreak{}r\allowbreak{}s\allowbreak{}}.\par
 \par\noindent\textbf{Pasos de Ejecución:} \par
 \begin{enumerate}
 \item Ejecutar ataque activo inyectando vectores de ataque SQLi en todos los parámetros de entrada (\texttt{'\allowbreak{} O\allowbreak{}R\allowbreak{} '\allowbreak{}1\allowbreak{}'\allowbreak{}=\allowbreak{}'\allowbreak{}1\allowbreak{}}, \texttt{U\allowbreak{}N\allowbreak{}I\allowbreak{}O\allowbreak{}N\allowbreak{} S\allowbreak{}E\allowbreak{}L\allowbreak{}E\allowbreak{}C\allowbreak{}T\allowbreak{}}, inyecciones ciegas basadas en tiempo \texttt{S\allowbreak{}L\allowbreak{}E\allowbreak{}E\allowbreak{}P\allowbreak{}(\allowbreak{}5\allowbreak{})\allowbreak{}}).
@@ -2524,26 +2526,26 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 \par\noindent\textbf{Variante trazada a RNF-008 (S3/T-12):} Ensayar 288 h separadamente como compromiso propuesto para cierres fronterizos: cuatro repeticiones del perfil de 72 h, 23.816 registros y 12.950.624 bytes brutos por unidad antes de overhead. Conciliar registros y documentos tras reconexión; cualquier pérdida falla ese compromiso. No atribuir a las bases 288 h de desconexión ni sustituir la aprobación de 72 h por esta ampliación. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.\par
 
 
-\subsubsection*{CP-HW-04 — Lectura CAN sin contacto con Technoton CANCrocodile — Lectura J1939 con Pérdida < 0{,}1\%}\label{sec:9-cp-hw-04}
+\subsubsection*{CP-HW-04 — Lectura CAN sin contacto con Technoton CANCrocodile — Lectura J1939 con Pérdida \(< 0{,}1\%\)}\label{sec:9-cp-hw-04}
 \addcontentsline{toc}{subsubsection}{CP-HW-04}
 Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y el criterio siguiente.
 
 \par\noindent \textbf{ID:} \texttt{CP-\allowbreak{}HW-\allowbreak{}04}\par
 \par\noindent \textbf{Nivel y Tipología:} Prueba de Hardware HIL / Adquisición Pasiva No Intrusiva en Bus CAN.\par
 \par\noindent \textbf{Requerimiento Trazado:} RF-025, RNF-005.\par
-\par\noindent \textbf{Precondiciones:} Lector sin contacto Technoton CANCrocodile montado sobre cables trenzados CAN\_H y CAN\_L sin pelar aislantes ni soldaduras. Generador de tráfico Vector CANoe emitiendo tramas SAE J1939 a \(250\text{ kbps}\) con una carga de bus del \(65\%\).\par
+\par\noindent \textbf{Precondiciones:} Lector sin contacto Technoton CANCrocodile montado sobre cables trenzados CAN\_H y CAN\_L sin pelar aislantes ni soldaduras. Generador/analizador de bus CAN SAE J1939 independiente (arrendado en banco HIL) emitiendo tramas SAE J1939 a \(250\text{ kbps}\) con una carga de bus del \(65\%\).\par
 \par\noindent \textbf{Pasos de Ejecución:}\par
 \begin{enumerate}
 \item Emitir 1.000.000 de tramas CAN estándar SAE J1939 durante 2 horas.
 \item El firmware del gateway recibe y decodifica las tramas a través del lector sin contacto conectado al CAN del iWave G26I.
-\item Comparar el contador de tramas transmitidas por el generador Vector contra el contador de tramas válidas recibidas en el gateway.
+\item Comparar el contador de tramas transmitidas por el generador/analizador CAN independiente contra el contador de tramas válidas recibidas en el gateway.
 \item Calcular la tasa de pérdida de paquetes: $\text{Packet Loss Rate} = \dfrac{\text{Tramas Perdidas}}{\text{Tramas Emitidas}} \times 100$.
 \end{enumerate}
 
 \par\noindent \textbf{Datos de Entrada Sintéticos:} 1.000.000 de tramas SAE J1939 generadas sintéticamente por hardware.\par
 \par\noindent \textbf{Resultado Esperado:} Se debe verificar que la tasa de pérdida es $< 0{,}1\%$. Los tiempos, porcentajes y magnitudes observados se registrarán después del ensayo; no se anticipan mediciones ni actas suscritas.\par
 \par\noindent \textbf{Pass/Fail y Severidad:} Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: \textbf{P1 (Bloqueante)}.\par
-\par\noindent \textbf{Entorno:} Banco HIL / Analizador de Bus Vector CANoe + lector Technoton CANCrocodile.\par
+\par\noindent \textbf{Entorno:} Banco HIL / Generador y analizador de bus CAN SAE J1939 independiente + lector Technoton CANCrocodile.\par
 
 \par\noindent \textbf{Variante trazada a RF-025 (S3/T-12):} Configurar mantenimiento a 100.000 km como dato sintético, no norma. Con odómetro real de 99.999 y 100.000 km esperar ausencia y presencia de aviso, respectivamente, enviado al sistema de talleres. Repetir con estimación: marcar incertidumbre y origen, sin presentar estimación como lectura real ni perder el aviso. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.\par
 
@@ -2858,10 +2860,10 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 \par\noindent\textbf{ID:} \texttt{CP-\allowbreak{}UAT-\allowbreak{}02}\par
 \par\noindent\textbf{Nivel y Tipología:} Prueba de Aceptación de Usuario (UAT) / Despliegue Físico y Mantenimiento.\par
 \par\noindent\textbf{Requerimiento Trazado:} RF-024, RNF-003, RNF-004, RNF-005.\par
-\par\noindent\textbf{Precondiciones:} Tractocamión propio ingresando a mantenimiento programado de 10.000 km en taller central San Bernardo. Cuadrilla de técnicos mecánicos de Curimón S.A. capacitada por audIT.\par
+\par\noindent\textbf{Precondiciones:} Tractocamión propio ingresando a ventana regular de mantenimiento en taller central San Bernardo. Equipo de montaje autorizado por audIT (técnico interno en piloto y proveedor externo de montaje en despliegue por lotes) con supervisión operativa del taller de Curimón S.A.\par
 \par\noindent\textbf{Pasos de Ejecución:}\par
 \begin{itemize}
-\item Técnico mecánico ejecuta el procedimiento de montaje físico del gateway telemático, antena externa GNSS/4G y lector sin contacto Technoton CANCrocodile.
+\item Equipo de montaje autorizado por audIT ejecuta el procedimiento de montaje físico del gateway telemático, antena externa GNSS/4G y lector sin contacto Technoton CANCrocodile.
 \item Verificar que no se corten ni perforen cables del bus CAN original del camión.
 \item Conectar equipo a la alimentación protegida por fusible aéreo automotriz.
 \item Realizar encendido de motor y ejecutar autodiagnóstico en la PWA de taller audIT.
@@ -2869,7 +2871,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 \end{itemize}
 
 \par\noindent\textbf{Datos de Entrada Sintéticos:} Checklist de instalación mecánica y eléctrica en PWA de taller.\par
-\par\noindent\textbf{Resultado Esperado:} Se debe verificar que el tiempo de instalación es \(< 60\text{ minutos}\) con 0 invasión de cables. Los tiempos, porcentajes y magnitudes observados se registrarán después del ensayo; no se anticipan mediciones ni actas suscritas.\par
+\par\noindent\textbf{Resultado Esperado:} Se debe verificar que el tiempo de montaje físico a bordo cumple la referencia de diseño (\(\le 140\text{ minutos}\) por kit, validada en piloto) dentro de la ventana regular de mantenimiento sin inmovilización adicional y con 0 invasión de cables. Los tiempos, porcentajes y magnitudes observados se registrarán después del ensayo; no se anticipan mediciones ni actas suscritas.\par
 \par\noindent\textbf{Pass/Fail y Severidad:} Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: \textbf{P2 (Crítica)}.\par
 \par\noindent\textbf{Entorno:} Terreno / Taller Central San Bernardo.\par
 
@@ -2877,7 +2879,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 \par\noindent\textbf{Variante trazada a RF-024 (S3/T-12):} Registrar una intervención offline de taller externo con técnico, equipo, fecha, odómetro, trabajo, repuestos y evidencia; reconectar dos veces. Esperar una sola intervención íntegra en hoja de vida e inventario actualizado una vez. Quitar técnico o repuesto obligatorio: rechazar o señalar registro incompleto, sin tratarlo como intervención válida. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.\par
 
-\par\noindent\textbf{Variante trazada a RNF-004 (S3/T-12):} Usar agenda de visitas normales a terminal y órdenes de instalación; cada instalación se integra a una visita existente sin viaje adicional ni inmovilización extra. Comparar hora de liberación del vehículo con su visita prevista; cualquier demora adicional falla aunque el montaje dure menos de 60 min. Conservar orden, entrada, liberación y autorización. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.\par
+\par\noindent\textbf{Variante trazada a RNF-004 (S3/T-12):} Usar agenda de visitas normales a terminal y órdenes de instalación; cada instalación se integra a una visita existente sin viaje adicional ni inmovilización extra. Comparar hora de liberación del vehículo con su visita prevista; cualquier demora adicional falla aunque el montaje dure menos de 140 min. Conservar orden, entrada, liberación y autorización. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.\par
 
 
 \subsubsection*{CP-UAT-03 — UAT Terminal San Bernardo — Conciliación de Carga de Diésel con Estanque Propio}\label{sec:9-cp-uat-03}
@@ -2885,15 +2887,15 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y el criterio siguiente.
 
 \par\noindent\textbf{ID:} \texttt{C\allowbreak{}P\allowbreak{}-\allowbreak{}U\allowbreak{}A\allowbreak{}T\allowbreak{}-\allowbreak{}0\allowbreak{}3\allowbreak{}}\par
-\par\noindent\textbf{Nivel y Tipología:} Prueba de Aceptación de Usuario (UAT) / Control de Combustible y Caudalímetro.\par
+\par\noindent\textbf{Nivel y Tipología:} Prueba de Aceptación de Usuario (UAT) / Control y Conciliación de Combustible.\par
 \par\noindent\textbf{Requerimiento Trazado:} Ensayo adicional de ingeniería; no sustituye controles contractuales.\par
-\par\noindent\textbf{Precondiciones:} Estanque propio de diésel de San Bernardo equipado con caudalímetro digital y surtidor con identificación RFID.\par
+\par\noindent\textbf{Precondiciones:} Operación del estanque propio de diésel de San Bernardo con registro de despacho vía PWA de patio o carga estructurada administrativa y camión equipado con gateway iWave G26I (telemetría CAN/odómetro). La integración directa con caudalímetro MQTT o RFID queda como interfaz opcional sujeta a instrumentación futura del mandante fuera del alcance base.\par
 \par\noindent\textbf{Pasos de Ejecución:} \par
 \begin{enumerate}
-\item Camión \texttt{T\allowbreak{}R\allowbreak{}K\allowbreak{}-\allowbreak{}0\allowbreak{}1\allowbreak{}5\allowbreak{}} se posiciona en la pista de carga de combustible.
-\item Operador de patio pasa el identificador RFID del camión por el surtidor y suministra 350 litros de diésel.
-\item El caudalímetro digital transmite la carga al concentrador de patio.
-\item Verificar en el sistema de gestión de patio la concordancia entre los litros despachados y la lectura del sensor telemático de estanque del camión.
+\item Camión \texttt{T\allowbreak{}R\allowbreak{}K\allowbreak{}-\allowbreak{}0\allowbreak{}1\allowbreak{}5\allowbreak{}} se posiciona en la pista de carga de combustible del terminal San Bernardo.
+\item Operador de patio (o administración) registra en la PWA de patio el abastecimiento de 350 litros de diésel indicando patente y conductor.
+\item El sistema procesa el registro de despacho y lo cruza con la lectura de odómetro y consumo acumulado reportada por la telemetría CAN del iWave G26I.
+\item Verificar en el sistema de gestión de patio la concordancia entre los litros despachados, el saldo de inventario del estanque y el rendimiento registrado para la unidad.
 \end{enumerate}
 \par\noindent\textbf{Datos de Entrada Sintéticos:} Fixture de conciliación: 350 litros de referencia de ensayo, sin afirmar carga realizada o certificación examinada. En terreno se conserva lectura del instrumento homologado.\par
 \par\noindent\textbf{Resultado Esperado:} Se debe verificar que concilia automáticamente sin descuadres de inventario. Los tiempos, porcentajes y magnitudes observados se registrarán después del ensayo; no se anticipan mediciones ni actas suscritas.\par
@@ -3052,6 +3054,8 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 \par\noindent\textbf{Variante trazada a RF-028 (S3/T-12):} Crear transportistas en modalidades completa, de datos y sin adhesión según S3; comprobar nivel 2, reposo de nivel 4 con atestación de nivel 5 y validación documental con y sin atestación firmada; visualizar modalidad, fuente, nivel y veredicto por separado. Comprobar la cascada de niveles 1 a 4 con asignación y el nivel 5 con asignación con marca y responsabilidad registrada, sin bloqueos legales. En la modalidad de datos, exigir la atestación firmada que complementa el reposo del camión: con ella asignar con marca y sin ella bloquear la asignación. En el estado sin adhesión, la validación documental con atestación válida permite asignar con marca; sin atestación no hay veredicto habilitante ni asignación. Sin fuente bloquear, con excepción sólo según RN-04; con incumplimiento legal bloquear en todas las modalidades. El nivel 0 voluntario no cambia el veredicto. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.\par
 
 \par\noindent Comprobar además el contrato de datos contra el oráculo canónico: origen instrumental y nivel son campos distintos; la atestación firmada corresponde a nivel 5 y el registro voluntario a nivel 0. Un origen CAN, GPS o portería no se acepta como nivel adicional. Un código desconocido o un mapeo que altere el veredicto produce rechazo de la integración y defecto bloqueante, conservando el dato original para trazabilidad.\par
+
+\par\noindent\textbf{Validación de aceptación en staging/UAT con muestra autorizada real de las tres plataformas GPS de terceros (SUP-02):} Como complemento obligatorio a los dobles simulados ejecutados en CI (\texttt{CP-INT-07}, \texttt{CP-INT-08} y \texttt{CP-INT-09}), antes del cierre de H5 y H10 se ejecuta en ambiente de staging/UAT la ingesta sobre una muestra autorizada real de al menos una unidad activa por cada una de las tres plataformas GPS de terceros vigentes en Curimón (con consentimiento vigente del transportista titular y credenciales provistas por el mandante o proveedor). Se verifican conectividad real, esquema normalizado, sellos de tiempo UTC, frecuencia de actualización, ausencia de registros fuera de ventana autorizada y trazabilidad de origen, documentando en el acta de H5/H10 cualquier restricción real de exportación y su mecanismo de contingencia.\par
 
 
 \subsubsection*{CP-UAT-10 — UAT Terminal Antofagasta — Despacho Bloqueante SUSPEL, Código QR y Rótulos NCh 2190}\label{sec:9-cp-uat-10}

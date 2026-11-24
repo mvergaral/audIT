@@ -79,7 +79,7 @@ Para organizar la atención de incidencias físicas de hardware conforme al Cap�
   \item \textbf{Nodo Central y Metropolitano (San Bernardo / Santiago):}
   \begin{itemize}
     \item \textit{Base Operativa:} Centro de Operaciones Técnicas y Laboratorio de Hardware de audIT en Santiago, en coordinación directa con el Pañol y Taller Central de Curimón en San Bernardo.
-    \item \textit{Función y Cobertura:} Soporte de nivel 2 y 3, laboratorio de precarga criptográfica de firmware y cuadrilla móvil para la Región Metropolitana y puertos de Valparaíso y San Antonio, con tiempo de respuesta física en terreno inferior a dos (2) horas.
+    \item \textit{Función y Cobertura:} Soporte de nivel 2 y 3, laboratorio de precarga criptográfica de firmware y atención en terreno por despacho programado o visita correctiva para la Región Metropolitana y puertos de Valparaíso y San Antonio, con tiempo de respuesta física en terreno inferior a dos (2) horas.
   \end{itemize}
 
   \item \textbf{Nodo Regional Antofagasta (Macrozona Norte):}
@@ -182,15 +182,15 @@ Conforme al \art{34.1}{22}, audIT declara los seis roles habilitantes siguientes
   \item \textbf{Líder de Operaciones / Infraestructura (SRE / DevOps):} \textbf{Felipe Morales Cárdenas}. Ingeniero en Telecomunicaciones, Conectividad y Redes, certificado CKA (Cloud Native Computing Foundation) y \textit{Red Hat Certified Engineer}, con 10 años de experiencia en orquestación de clústeres Kubernetes (AKS), telemetría industrial IoT, redes vehiculares SAE J1939 y soporte operacional 24/7/365 en terreno.
 \end{enumerate}
 
-En la \tabref{1-dedicacion-roles} se formaliza la dedicación porcentual (\textit{Full-Time Equivalent}, FTE) de cada uno de los seis roles habilitantes obligatorios a lo largo de las dos etapas del contrato: la \textbf{Fase de Implantación} (Meses 1 a 20) y la \textbf{Fase de Operación Continuada} (Meses 21 a 56), explicitando su marco de responsabilidad y cobertura.
+En la \tabref{1-dedicacion-roles} se formaliza la dedicación porcentual (\textit{Full-Time Equivalent}, FTE) de cada uno de los seis roles habilitantes obligatorios a lo largo de las dos fases del contrato: la \textbf{Fase de Implementación} (Meses 1 a 20, con aceptación final H12 de Etapa 2 en Mes 21) y la \textbf{Fase de Operación Continuada} (Meses 21 a 56), explicitando su marco de responsabilidad y cobertura.
 
-\begin{tabla}[ancho=completo]{Dedicación contractual de roles habilitantes y cobertura operacional}{1-dedicacion-roles}{L{44mm} X C{28mm} C{28mm}}
-\textbf{Rol Habilitante (\art{34.1}{22})} & \textbf{Profesional} & \textbf{Fase 1 (M1--M20)} & \textbf{Fase 2 (M21--M56)} \\ \midrule
+\begin{tabla}[ancho=completo]{Dedicación contractual de roles habilitantes y cobertura operacional}{1-dedicacion-roles}{L{44mm} X C{28mm} C{34mm}}
+\textbf{Rol Habilitante (\art{34.1}{22})} & \textbf{Profesional} & \textbf{Implementación (M1--M20)} & \textbf{Operación (M21--M56)} \\ \midrule
 Jefe de Proyecto & Alejandro Hermosilla D. & 100\% FTE & 50\% FTE \\
-Arquitecto de Solución & Dr. Esteban Valenzuela L. & 100\% FTE & 25\% FTE \\
+Arquitecto de Solución & Dr. Esteban Valenzuela L. & 100\% FTE & Cierre M21--M24 (45 HH totales; a demanda en M25--M56) \\
 Oficial de Seguridad (CISO) & Mauricio Arancibia T. & 100\% FTE & 50\% FTE \\
-Líder de Datos & Rodrigo Sanhueza P. & 100\% FTE & 50\% FTE \\
-Líder de Calidad y Pruebas & Claudia Navarrete R. & 100\% FTE & 25\% FTE \\
+Líder de Datos & Rodrigo Sanhueza P. & 100\% FTE & 50\% FTE fijo (más bolsa variable/cierre) \\
+Líder de Calidad y Pruebas & Claudia Navarrete R. & 100\% FTE & 50\% FTE fijo (más bolsa variable/cierre) \\
 Líder de Operaciones (SRE/DevOps) & Felipe Morales C. & 100\% FTE & 100\% FTE \\
 \end{tabla}
 
@@ -201,9 +201,9 @@ La dedicación de la tabla corresponde a la capacidad comprometida al contrato, 
 \noindent Asimismo, para organizar la cobertura territorial durante los 56 meses de contrato, la dotación total de \textbf{22 profesionales de planta} contratados bajo régimen laboral indefinido provee el núcleo de ingeniería y cubre íntegramente la totalidad de los seis Roles Habilitantes obligatorios del \art{34.1}{22}. Esta dotación permanente se distribuye funcionalmente de la siguiente manera:
 \begin{itemize}
   \item \textbf{12 ingenieros asignados a dedicación preferente y exclusiva al contrato Curimón:} Distribuidos en las células operativas del proyecto (Célula Alfa: 4 ingenieros en cloud, microservicios y bases de datos; Célula Beta: 4 ingenieros en firmware de borde, telemetría e integración de hardware; Célula Gamma: 4 especialistas en QA, automatización de pruebas y seguridad).
-  \item \textbf{10 ingenieros de planta en células de soporte matricial y contingencia:} Asumen las funciones transversales de soporte corporativo, relevo bajo metodología \textit{pair-engineering} (sección~\ref{sec:1-celulas}) para mitigar la dependencia de personas únicas, atención de mesa de ayuda de nivel 2 y 3, y coordinación técnica centralizada con las cuadrillas de turno 24/7 de los centros autorizados de la Red Regional en Ruta 5, gestionando la reposición física del equipamiento embarcado exclusivamente en terminales y coordinando la asistencia y los traslados técnicos a sitios alejados para camiones en tránsito (\caso{RT-21.16}{34}). El plazo exigido de cuatro horas desde el diagnóstico y sus limitaciones operacionales derivadas del paso por terminal se declaran en la sección~\ref{sec:1-red-regional} (\transv{Cap. 8.4}{19}).
+  \item \textbf{10 ingenieros de planta en células de soporte matricial y contingencia:} Asumen las funciones transversales de soporte corporativo, relevo bajo metodología \textit{pair-engineering} (sección~\ref{sec:1-celulas}) para mitigar la dependencia de personas únicas, atención de mesa de ayuda de nivel 2 y 3, y coordinación técnica centralizada con el servicio de campo externalizado por visita y rondas preventivas regionales en los cinco terminales (coordinado desde el 0,5 FTE interno de operación de campo en M21--M56, tras la transición de las atenciones de campo a modalidad externa a partir de M19), conforme al esquema de la Red Regional en Ruta 5, gestionando la reposición física del equipamiento embarcado exclusivamente en terminales y coordinando la asistencia y los traslados técnicos a sitios alejados para camiones en tránsito (\caso{RT-21.16}{34}). El plazo exigido de cuatro horas desde el diagnóstico y sus limitaciones operacionales derivadas del paso por terminal se declaran en la sección~\ref{sec:1-red-regional} (\transv{Cap. 8.4}{19}).
 \end{itemize}
-En la máxima carga de despliegue (M13--M17), se asignan al proyecto 21 de los 22 profesionales de planta y 16 profesionales de refuerzo contratados por proyecto. El máximo comprende 37 personas únicas y 37,0 equivalentes a jornada completa (FTE), conforme al Formulario T-15. La planta institucional y la dotación asignada se contabilizan por separado. En ese máximo, T-15 distribuye 21,5 FTE a E1, 14,1 a E2 y 1,4 a coordinación, sin contabilizar dos veces funciones compartidas. La persona restante de la planta no integra esa asignación; los refuerzos no aumentan la planta permanente y su disponibilidad se acredita antes de iniciar el frente correspondiente. La nominación, currículos y cartas de compromiso de los seis roles habilitantes se documentan en T-8; los refuerzos operacionales se incorporan bajo el plan de dotación de la oferta técnica.
+En la carga de referencia de M13--M17 se asignan 37,0 FTE base (21 de los 22 profesionales de planta y 16 profesionales de refuerzo contratados por proyecto), a los que se suman los refuerzos puntuales de puesta en producción en H6 (M13) y H7 (M16) hasta 38,50 FTE, y la sobredemanda de construcción e integración de M7--M9 que alcanza un máximo mensual de 39,23 FTE contratados en M7 (conforme a la nivelación de recursos de T-15 y al presupuesto de dotación). La planta institucional y la dotación asignada se contabilizan por separado. En la carga de referencia de M13--M17, T-15 distribuye 21,5 FTE a E1, 14,1 a E2 y 1,4 a coordinación, sin contabilizar dos veces funciones compartidas. La persona restante de la planta no integra esa asignación; los refuerzos no aumentan la planta permanente y su disponibilidad se acredita antes de iniciar el frente correspondiente. La nominación, currículos y cartas de compromiso de los seis roles habilitantes se documentan en T-8; los refuerzos operacionales se incorporan bajo el plan de dotación de la oferta técnica.
 La nominación de los seis roles y el dimensionamiento expuestos se respaldan con las declaraciones de dedicación, los currículos normalizados y las cartas de compromiso individualizados en el Formulario T-8 y el \art{34.1}{22}, debidamente incorporados en el expediente administrativo de la Oferta Técnica.
 
 \subsection{Modelo operativo en células y mitigación de dependencia}\label{sec:1-celulas}
@@ -259,7 +259,7 @@ La compañía ejecuta un ciclo anual de aseguramiento de calidad y seguridad de 
 Para organizar la respuesta y el escalamiento ante incidentes técnicos en las plataformas y hardware en ruta, audIT aplica una matriz de escalamiento estructurada en cuatro niveles jerárquicos:
 
 \begin{itemize}
-  \item \textbf{Nivel 1 (Atención Inicial y Diagnóstico de Mesa de Ayuda):} Analistas de Soporte Técnico (PMO y Soporte). Recepción de alertas automatizadas de telemetría y tickets de usuarios; diagnóstico inicial mediante consolas de monitoreo; aplicación de procedimientos estándar de operación (SOP). Tiempo máximo de escalamiento: 15 minutos ante incidentes clasificados como Críticos (Severidad 1).
+  \item \textbf{Nivel 1 (Atención Inicial y Diagnóstico de Mesa de Ayuda):} Agentes dedicados de Mesa de Ayuda N1 24$\times$7 (6 agentes regulares más 1 FTE de suplencias y picos en fase de operación, bajo supervisión de Gestión de Servicio y PMO). Recepción de alertas automatizadas de telemetría y tickets de usuarios; diagnóstico inicial mediante consolas de monitoreo; aplicación de procedimientos estándar de operación (SOP). Tiempo máximo de escalamiento: 15 minutos ante incidentes clasificados como Críticos (Severidad 1).
   \item \textbf{Nivel 2 (Ingeniería de Especialidad y Soporte de Campo):} Ingenieros de Células de Software o Células de Firmware/Hardware. Depuración de código, análisis de registros de logs en Azure, emisión de parches de software urgentes o movilización del centro técnico regional en la Ruta 5 para asistencia y coordinación del reemplazo físico de hardware; el recambio de equipamiento embarcado se realiza exclusivamente en terminal. Tiempo máximo de escalamiento: 45 minutos si la incidencia compromete la continuidad operacional del mandante.
   \item \textbf{Nivel 3 (Dirección Técnica de Especialidad):} Director de Arquitectura y Datos / Jefatura de IoT y Terreno / CISO. Decisión de activación de contingencia, conmutación por error (\textit{failover}) a región secundaria en nube, modificación de esquemas de red o instrucción de procedimientos de aislamiento de seguridad ante sospecha de intrusión. Tiempo máximo de escalamiento: 60 minutos.
   \item \textbf{Nivel 4 (Comité de Crisis y Dirección Ejecutiva):} Gerente General / Director de Proyectos y Contraparte Gerencial de Transportes Curimón S.A. Notificación formal a la alta dirección del mandante, activación del Plan de Continuidad de Negocio (BCP) y coordinación legal/comunicacional si correspondiera.
@@ -283,6 +283,7 @@ Esta sección presenta los proyectos comparables, el estado declarado de las cer
 
 audIT declara tres proyectos concluidos dentro de los últimos cinco años con arquitectura híbrida. Los proyectos 1 y 3 comprometen disponibilidad mensual de 99,5 \% y 99,6 \%, respectivamente; el proyecto 2, 99,0 \% con tolerancia a desconexión de 72 horas. Las magnitudes se presentan en las unidades de cada proyecto: flota y eventos, faenas y sensores, o datos y concurrencia.
 
+\Needspace{55mm}
 \begin{tabla}[ancho=completo]{Resumen analítico de proyectos de experiencia previa declarados}{1-proyectos}{L{34mm} X X X L{30mm}}
 \textbf{Parámetro Clave} & \textbf{Proyecto 1: Transporte Interurbano} & \textbf{Proyecto 2: Logística en Frío y Faenas} & \textbf{Proyecto 3: Distribución Multimodal} & \textbf{Exigencia Art. 34° / Curimón} \\ \midrule
 Cliente y Giro & Transportes del Sur Ltda. (Carga pesada interurbana) & AgroFrutícola Los Andes S.A. (Logística en frío remota) & Logística Multimodal Bicentenario S.A. (Carga portuaria) & Industria del caso y afines (Transporte y Logística) \\
@@ -320,9 +321,9 @@ Las competencias sectoriales comprenden el régimen de jornada de conductores y 
 
 \subsection{Credenciales financieras y capacidad patrimonial}\label{sec:1-financiero}
 
-audIT declara antecedentes de los ejercicios 2023, 2024 y 2025, con estados financieros auditados por Nexia Auditores SpA, para evaluar la capacidad de sostener los 56 meses de contrato. Los balances, estados de resultados, notas, dictámenes y Formulario 22 del SII se individualizan en la Carpeta de Idoneidad Económica del Sobre N.º 1 para el cotejo previsto en los \art{34.1}{22} y \art{39}{25}, numeral 4.
+audIT declara antecedentes de los ejercicios 2023, 2024 y 2025, con estados financieros auditados por Nexia Auditores SpA, para evaluar la capacidad de sostener los 56 meses de contrato. Los balances, estados de resultados, notas, dictámenes y Formulario 22 del SII se individualizan en la Carpeta de Idoneidad Económica del Sobre N.º 1 para el cotejo previsto en los \art{34.1}{22} y \art{39.2}{26}.
 
-La \tabref{1-ratios-respaldo} reúne los cinco indicadores declarados y sus respaldos. Liquidez y prueba ácida describen cobertura de pasivos corrientes; apalancamiento, la relación entre pasivos y patrimonio; ROE y ROA, la rentabilidad declarada. La proyección de caja del contrato se presenta en la oferta económica. La compañía declara además capital de trabajo neto positivo para más de seis meses de operación sin cobranzas inmediatas y capacidad de constituir las garantías bancarias exigidas; estos antecedentes requieren cotejo documental.
+La \tabref{1-ratios-respaldo} reúne los cinco indicadores declarados y sus respaldos. Liquidez y prueba ácida describen cobertura de pasivos corrientes; apalancamiento, la relación entre pasivos y patrimonio; ROE y ROA, la rentabilidad declarada. La compañía declara capital de trabajo neto positivo respaldado en sus estados financieros 2023--2025 y capacidad de constituir las garantías bancarias exigidas; el financiamiento específico del contrato y su proyección de caja se detallan en el Sobre N.° 3. Estos antecedentes requieren cotejo documental.
 
 \begin{tabla}[ancho=completo]{Respaldo probatorio de ratios financieros en Sobre N.º 1 (\art{34.1}{22})}{1-ratios-respaldo}{L{38mm} C{22mm} L{40mm} X}
 \textbf{Ratio Financiero} & \textbf{Valor Declarado} & \textbf{Documento de Respaldo} & \textbf{Custodia y Expediente en Sobre N.º 1} \\ \midrule
@@ -358,7 +359,7 @@ A continuación se exponen las alianzas estratégicas vigentes en materia de inf
 
 \subsection{Alianza tecnológica de nube: Microsoft Azure}\label{sec:1-alianza-azure}
 
-audIT declara la categoría de \textbf{Microsoft Cloud Solution Provider (CSP) Tier 1 (Direct Partner)}, con acreditación avanzada en infraestructura híbrida, tecnologías de Internet de las Cosas (\textit{Azure IoT Hub}, \textit{Azure Arc}) y bases de datos gestionadas de alta escala. Los beneficios declarados de esta alianza, sujetos al alcance de los acuerdos de soporte, son:
+audIT declara la categoría de \textbf{Microsoft Cloud Solution Provider (CSP) Tier 1 (Direct Partner)}, aprovisionando la plataforma y recuperación en las regiones \textbf{Azure Chile Central y Brazil South} a través del canal CSP, con acreditación avanzada en infraestructura híbrida, tecnologías de Internet de las Cosas (\textit{Azure IoT Hub}, \textit{Azure Arc}) y bases de datos gestionadas de alta escala. Los beneficios declarados de esta alianza, sujetos al alcance de los acuerdos de soporte, son:
 
 \begin{itemize}
   \item Acceso preferente a soporte técnico de ingeniería de Microsoft de nivel Premier (\textit{24/7 Enterprise Support}) con tiempos de escalamiento a especialistas de producto inferiores a treinta (30) minutos ante incidencias de plataforma en la nube.
@@ -366,14 +367,15 @@ audIT declara la categoría de \textbf{Microsoft Cloud Solution Provider (CSP) T
   \item Acceso anticipado a programas de seguridad avanzada, módulos HSM en la nube y herramientas de cumplimiento normativo global.
 \end{itemize}
 
-\subsection{Alianzas de hardware automotriz grado industrial e IoT}\label{sec:1-alianza-hardware}
+\subsection{Alianzas de infraestructura, hardware industrial, conectividad y calidad}\label{sec:1-alianza-hardware}
 
-La compañía mantiene acuerdos corporativos de aprovisionamiento directo y soporte de ingeniería con fabricantes y distribuidores autorizados de componentes electrónicos de grado automotriz:
+La solución integra ecosistemas de proveedores líderes para infraestructura on-premise, seguridad de red, telemetría de campo, respaldo satelital y aseguramiento de calidad. El hardware de campo y red especificado en T-11 es adquirido por el mandante, mientras audIT provee el software, la infraestructura on-premise, la integración, la homologación, la conectividad y el soporte:
 
 \begin{itemize}
-  \item \textbf{Proveedores de Semiconductores y Microelectrónica Industrial:} Convenios de soporte técnico directo con distribuidores oficiales de procesadores de grado automotriz (NXP Semiconductors / STMicroelectronics) y módulos de comunicación celular eIoT con certificación de antenas y compatibilidad de bandas chilenas B2/B4/B7/B28 (Quectel Wireless Solutions).
-  \item \textbf{Lectores CAN sin contacto:} Para esta solución se selecciona Technoton CANCrocodile, conectado al CAN del iWave G26I. Montaje sobre el aislamiento, mapa de señales, autorización y garantía se verifican por modelo; no se presuponen convenios o certificaciones examinados.
-  \item \textbf{Instrumentación y Sensores Térmicos:} El equipamiento térmico de Curimón se alinea con las balizas Bluetooth de la innovación 3 y T-11. La homologación verifica rango, precisión, ubicación y trazabilidad de lectura mediante un patrón independiente.
+  \item \textbf{Infraestructura on-premise y seguridad de red (Dell y Fortinet):} Servidores Dell con soporte y disponibilidad local en Chile para la sala técnica y respaldo de cómputo en terminales, junto con equipamiento de seguridad perimetral y switching Fortinet para sala técnica y los cinco terminales.
+  \item \textbf{Telemetría a bordo, red de patio y sensores (iWave, Teltonika y Technoton):} Integración y homologación de gateways vehiculares iWave G26I, lectores CAN sin contacto Technoton CANCrocodile y equipamiento de red y balizas Bluetooth Teltonika (incluidas las balizas EYE Sensor BTSMP1 de la innovación 3, alineadas con T-11). Montaje sobre el aislamiento, mapa de señales, rango, precisión y trazabilidad de lectura se verifican en laboratorio y piloto por modelo.
+  \item \textbf{Conectividad satelital de respaldo (Ground Control / Iridium):} Aprovisionamiento de tiempo de aire satelital Iridium para cobertura continua en rutas cordilleranas y zonas sin servicio celular terrestre.
+  \item \textbf{Ingeniería de software y aseguramiento de calidad (GitLab y SonarSource):} Licenciamiento corporativo de GitLab y SonarQube para integración continua, análisis estático de código y compuertas bloqueantes de calidad.
 \end{itemize}
 
 \subsection{Red estratégica de centros de soporte en terreno en Ruta 5}\label{sec:1-alianza-red}
