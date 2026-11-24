@@ -18,66 +18,67 @@ clave;concepto;moneda;valor;iva;planilla
 # ============================================================================
 #
 # Formulario E-21, 1.1: valores totales del proyecto
-implementacion;Valor total de la fase de implementación (Etapa 1 y Etapa 2);CLP;4618802815;si;RESUMEN!H6
-operacion;Valor total de la fase de Operación por los 36 meses;CLP;5178008038;si;RESUMEN!H7
-proyecto;Valor total del proyecto;CLP;=implementacion+operacion;si;
+implementacion;Valor total de la fase de implementación (Etapa 1 y Etapa 2);CLP;4477563339.06986;si;RESUMEN!H6
+operacion;Valor total de la fase de Operación por los 36 meses;CLP;3890789397.54601;si;RESUMEN!H7
+proyecto;Valor total del proyecto;CLP;=implementacion+operacion;si;RESUMEN!H8
 #
 # Formulario T-22, Informe 3: gastos que pide la planilla del mandante. Los
 # gastos asociados a proveedores se explicitan aparte y se suman a operación.
-gasto-operacion-directo;Gastos de operación propios;CLP;;no;
-gasto-proveedores;Gastos asociados a proveedores, sumados a operación;CLP;;no;
+gasto-operacion-directo;Gastos de operación propios;CLP;141155235.008605;no;
+gasto-proveedores;Gastos asociados a proveedores, sumados a operación;CLP;1053415759;no;Cuadro maestro!C12
 gasto-operacion;Gastos de operación;CLP;=gasto-operacion-directo+gasto-proveedores;no;
-gasto-inversion;Gastos de inversión;CLP;;no;
-gasto-administracion;Gastos administrativos;CLP;106128204;no;
-gasto-rrhh;Gastos de recursos humanos;CLP;6230636000;no;
-gasto-total;Costo total de la solución;CLP;=gasto-operacion+gasto-inversion+gasto-administracion+gasto-rrhh;no;
+gasto-inversion;Gastos de inversión;CLP;545513270.333333;no;Cuadro maestro!C3
+gasto-administracion;Gastos administrativos;CLP;183335749.333333;no;
+gasto-rrhh;Gastos de recursos humanos;CLP;4896787466.66667;no;
+gasto-total;Costo total de la solución;CLP;=gasto-operacion+gasto-inversion+gasto-administracion+gasto-rrhh;no;RESUMEN!C8
 #
 # Formulario E-21, 2.1: cuadro maestro de costos
-costo-directo-implementacion;Costos directos de implementación;CLP;;no;
-costo-directo-operacion;Costos directos de operación;CLP;;no;
-costo-indirecto;Costos indirectos y overhead;CLP;;no;
-costo-total;Costo total;CLP;=costo-directo-implementacion+costo-directo-operacion+costo-indirecto;no;
+costo-directo-implementacion;Costos directos de implementación;CLP;3547592787.000003;no;
+costo-directo-operacion;Costos directos de operación;CLP;3068762599;no;
+costo-indirecto;Costos indirectos y overhead;CLP;203852094.341938;no;
+costo-total;Costo total;CLP;=costo-directo-implementacion+costo-directo-operacion+costo-indirecto;no;Cuadro maestro!C19
 #
 # Formulario E-21, 2.2: evaluación financiera
-van;Valor actual neto (VAN);CLP;1235043316;no;RESUMEN!G21
+van;Valor actual neto (VAN);CLP;1064658620.88063;no;Indicadores!B2
 #
 # Formulario T-22 y E-21, 2.7: valorización de las cinco innovaciones
-innovacion-1-inversion;Innovación tipo 1, inversión;CLP;;no;
-innovacion-1-costo;Innovación tipo 1, costo operacional incremental;CLP;;no;
-innovacion-1-beneficio;Innovación tipo 1, beneficio esperado;CLP;;no;
-innovacion-2-inversion;Innovación tipo 2, inversión;CLP;16576000;no;
-innovacion-2-costo;Innovación tipo 2, costo operacional incremental;CLP;16992000;no;
-innovacion-2-beneficio;Innovación tipo 2, beneficio esperado;CLP;;no;
-innovacion-3-inversion;Innovación tipo 3, inversión;CLP;5700000;no;
-innovacion-3-costo;Innovación tipo 3, costo operacional incremental;CLP;4032000;no;
-innovacion-3-beneficio;Innovación tipo 3, beneficio esperado;CLP;;no;
-innovacion-4-inversion;Innovación tipo 4, inversión;CLP;;no;
-innovacion-4-costo;Innovación tipo 4, costo operacional incremental;CLP;;no;
-innovacion-4-beneficio;Innovación tipo 4, beneficio esperado;CLP;;no;
-innovacion-5-inversion;Innovación tipo 5, inversión;CLP;13000000;no;
-innovacion-5-costo;Innovación tipo 5, costo operacional incremental;CLP;10080000;no;
-innovacion-5-beneficio;Innovación tipo 5, beneficio esperado;CLP;;no;
-deficit-h5;deficit-h5;CLP;155747160;no;Sensibilidad!F5
-reserva-d4;reserva-d4;CLP;152699775;no;
-hardware-mandante;hardware-mandante;CLP;225384199;no;
-cobro-m57;cobro-m57;CLP;143833557;no;Indicadores!B8
-firma-inn1;firma-inn1;CLP;24856290;no;
-recupero-inn4;recupero-inn4;CLP;362100000;no;
-licencias-d3;licencias-d3;CLP;38032600;no;
-costo-fase-implementacion;Costo neto de implementación;CLP;3764324294;no;RESUMEN!C6
-costo-fase-operacion;Costo neto de operación;CLP;4220076551;no;RESUMEN!C7
+innovacion-1-inversion;Innovación tipo 1, personal atribuido en implementación;CLP;16816000;no;
+innovacion-1-costo;Innovación tipo 1, personal atribuido en operación;CLP;14400000;no;
+innovacion-1-beneficio;Innovación tipo 1, beneficio monetario reconocido en el caso base;CLP;0;no;Innovaciones!E2
+innovacion-2-inversion;Innovación tipo 2, personal atribuido en implementación;CLP;17056000;no;
+innovacion-2-costo;Innovación tipo 2, personal atribuido en operación;CLP;17280000;no;
+innovacion-2-beneficio;Innovación tipo 2, beneficio monetario reconocido en el caso base;CLP;0;no;Innovaciones!E3
+innovacion-3-inversion;Innovación tipo 3, personal atribuido en implementación;CLP;3600000;no;
+innovacion-3-costo;Innovación tipo 3, personal atribuido en operación;CLP;4320000;no;
+innovacion-3-beneficio;Innovación tipo 3, beneficio monetario reconocido en el caso base;CLP;0;no;Innovaciones!E4
+innovacion-4-inversion;Innovación tipo 4, personal atribuido en implementación;CLP;0;no;
+innovacion-4-costo;Innovación tipo 4, personal atribuido en operación;CLP;0;no;
+innovacion-4-beneficio;Innovación tipo 4, beneficio monetario reconocido en el caso base;CLP;0;no;Innovaciones!E5
+innovacion-5-inversion;Innovación tipo 5, personal atribuido en implementación;CLP;9000000;no;
+innovacion-5-costo;Innovación tipo 5, personal atribuido en operación;CLP;10800000;no;
+innovacion-5-beneficio;Innovación tipo 5, beneficio monetario reconocido en el caso base;CLP;0;no;Innovaciones!E6
+deficit-h5;Déficit antes de cobros en atraso de H5 a M13;CLP;214449287.434542;no;Sensibilidad!J2
+reserva-d4;Reserva de sensibilidad D4;CLP;152699775;no;Parámetros corrección!B26
+hardware-mandante;Hardware a cargo del mandante, total referencial;CLP;225384199;no;Hardware del mandante!H40
+cobro-m57;Mensualidad neta de operación, último cobro en M57;CLP;108077483.265167;no;Indicadores!B8
+firma-inn1;Egreso directo por firma automática INN-1;CLP;24856290;no;Innovaciones!D2
+recupero-inn4;Recupero bruto referencial del mandante en 36 meses, INN-4;CLP;362100000;no;Beneficios Curimón!B4
+licencias-d3;Licencias de implementación y operación;CLP;38032600;no;
+costo-fase-implementacion;Costo neto de implementación;CLP;3649214121.34194;no;RESUMEN!C6
+costo-fase-operacion;Costo neto de operación;CLP;3170993359;no;RESUMEN!C7
 costo-proyecto;Costo neto total del proyecto;CLP;=costo-fase-implementacion+costo-fase-operacion;no;RESUMEN!C8
-capital-adicional-h5;Capital inicial adicional para estrés H5 y reserva;CLP;400000000;no;Parámetros D2!B27
-caja-estres-h5;Caja mínima financiada del estrés H5 y reserva;CLP;11223065;no;Sensibilidad!D6
-equilibrio-nominal;Venta neta de equilibrio nominal;CLP;7984400845;no;Indicadores!B12
-equilibrio-van;Venta neta de equilibrio a VAN cero;CLP;8175218018;no;Indicadores!B13
-deficit-h5-reserva;Déficit H5 y reserva antes del financiamiento adicional;CLP;308446935;no;
-caja-estres-horas;Caja mínima M12 con compra completa de horas CP-SEC-05;CLP;9207065;no;
-cuadro-impl-directo-costo;Implementación directa, costo;CLP;3721196090;no;
-cuadro-impl-directo-venta;Implementación directa, venta;CLP;4565884773;no;
-cuadro-impl-indirecto-costo;Implementación indirecta, costo;CLP;43128204;no;
-cuadro-impl-indirecto-venta;Implementación indirecta, venta;CLP;52918042;no;
-cuadro-op-directo-costo;Operación directa, costo;CLP;4157076551;no;
-cuadro-op-directo-venta;Operación directa, venta;CLP;5115008038;no;
-cuadro-op-indirecto-costo;Operación indirecta, costo;CLP;63000000;no;
-cuadro-op-indirecto-venta;Operación indirecta, venta;CLP;63000000;no;
+capital-adicional-h5;Capital inicial adicional para estrés H5 y reserva;CLP;420000000;no;Parámetros corrección!B28
+caja-estres-h5;Caja mínima financiada del estrés H5 y reserva;CLP;226996333.100799;no;Sensibilidad!G5
+equilibrio-nominal;Venta neta de equilibrio nominal;CLP;6820207480.34194;no;Indicadores!B12
+equilibrio-van;Venta neta de equilibrio a VAN cero;CLP;6996056075.78202;no;Indicadores!B13
+deficit-h5-reserva;Déficit H5 y reserva antes del financiamiento adicional;CLP;368649062.434542;no;Sensibilidad!J4
+cuadro-impl-directo-costo;Implementación directa, costo;CLP;3547592787.000003;no;
+cuadro-impl-directo-venta;Implementación directa, venta;CLP;4352874585.276073;no;
+cuadro-impl-indirecto-costo;Implementación indirecta, costo;CLP;101621334.341938;no;
+cuadro-impl-indirecto-venta;Implementación indirecta, venta;CLP;124688753.793789;no;
+cuadro-op-directo-costo;Operación directa, costo;CLP;3068762599;no;
+cuadro-op-directo-venta;Operación directa, venta;CLP;3788558637.54601;no;
+cuadro-op-indirecto-costo;Operación indirecta, costo;CLP;102230760;no;
+cuadro-op-indirecto-venta;Operación indirecta, venta;CLP;102230760;no;
+egreso-inn5;Egreso directo de INN-5;CLP;4000000;no;Innovaciones!D6
+capital-inicial;Capital inicial del caso base;CLP;730000000;no;Parámetros corrección!B4

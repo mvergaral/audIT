@@ -7,6 +7,7 @@
 %  remisión al Sobre N.º 3 en inversión y costo operacional.
 % ============================================================================
 \begin{formulario}{T-19}
+Las fichas usan la escala de probabilidad e impacto de S8, de 1 a 5. Los valores inherentes y residuales son estimaciones de diseño por evento. El residual se revisa tras verificar el control indicado y registrar su evidencia.
 % Numeración de tablas con cualquier versión de longtable (D4-119, sobre el ajuste de la dupla 3).
 % El estilo supone que longtable avanza el contador de tablas al abrir cada tabla, como la
 % versión de 2025. Hay versiones que no lo hacen, y entonces la primera tabla sale «4.0» y su
@@ -80,9 +81,9 @@
   beneficio = {Incentivo de adhesión que no requiere pagar al transportista. Cada adherido amplía la jornada acreditada y la evidencia de espera que sostiene los cobros. Sin ingresos atribuidos en el flujo de caja},
   indicador = {Transportistas adheridos que emitieron al menos un expediente, de no existente a 50 \% de los adheridos. Verificaciones respondidas en no más de 5 segundos, 99 \%},
   medicion = {Mes 21 para el primer indicador. Mensual desde el mes 16 para el segundo},
-  riesgo = {Que el transportista no perciba utilidad, probabilidad media e impacto medio. Que los destinatarios no acepten el documento como prueba, probabilidad media e impacto alto. Que un conductor no consienta incluir su jornada},
-  mitigacion = {Primera emisión asistida en el terminal durante el enrolamiento. Entrevistas a destinatarios reales en el mes 4, antes de construir. Expediente con la jornada de los conductores que consintieron},
-  contingencia = {Emisión automática mensual a los transportistas que lo pidan, sin acción de su parte}
+  riesgo = {Utilidad percibida insuficiente (3×3=9), rechazo del expediente como prueba (3×4=12) y ausencia de consentimiento de jornada (3×4=12).},
+  mitigacion = {Emisión asistida, entrevistas a receptores en M4 y consentimiento revocable por dato. Verificar emisiones, aceptaciones y permisos en marcha blanca. Residuales previstos, en el mismo orden: 2×3=6, 2×4=8 y 1×4=4.},
+  contingencia = {Si los destinatarios no aceptan el expediente, acordar formato probatorio alternativo. Sin consentimiento se omite la jornada. Si la emisión es baja, ofrecer emisión periódica voluntaria.}
 }
 % ------------------------------------------------------------- innovación 2
 \clearpage
@@ -98,12 +99,12 @@
   mes = {Piloto de 10 camiones en M6; propios M6–M9, flota propia completa en M9; terceros adheridos desde M7; pausa M11–M15 y continuación M16–M18.},
   inversion = {Planificador, tablero, integración, homologación del agente y kits diferenciales. No se cobra nuevamente el stock contractual de T-11.},
   costooperacional = {Ejecución, almacenamiento de actas y mantenimiento del planificador, separados de la conectividad ya presupuestada.},
-  beneficio = {Minutos de preparación y visitas adicionales evitados, medidos por terminal y familia. Beneficio bruto: visitas evitadas por costo unitario más minutos evitados por costo por minuto. Inversión y operación incremental van en partidas separadas; sin ahorro garantizado ni base inventada.},
+  beneficio = {Reducción de preparación desperdiciada y visitas evitables. Se estima con cantidades y costos unitarios documentados, menos el costo incremental. Sin ahorro garantizado ni base inventada.},
   indicador = {Reducir preparación inútil al menos 20 \% respecto de la línea base homologada. Validación al primer intento al menos 95 \% en cohorte de 20 intervenciones elegibles. Sustitución modular en hasta 30 min, dentro de la ventana normal. Metas propuestas.},
-  medicion = {En M6 se registra por oportunidad elegible el plan manual antes de la recomendación, terminal, familia, ventana, autorización, kit, técnico, preparación, cancelación, visita adicional real y prueba. El comité valida línea base y muestra al cierre de M6; comparación por familia y terminal en M7–M9 con denominadores y exclusiones. Sin base comparable, el ahorro no se acredita.},
-  riesgo = {Inicial: ETA incorrecta media/alto; kit o agente incompatible media/alto; beneficio insuficiente media/medio; tercero sin autorización media/alto. Residual objetivo condicionado a pruebas: baja/medio, baja/alto, media/medio y media/alto, respectivamente. Si no se prueba el control, permanece el riesgo inicial.},
-  mitigacion = {Calidad y actualidad de ETA, confirmación del jefe de terminal, matriz de familias, ensayo previo, paquete firmado, reversión validada y comparación trazable.},
-  contingencia = {Abortar de forma segura y reprogramar cuando la ventana se acorte; método manual homologado y versión previa sin borrar eventos. Integración lógica de terceros sin intervención física no autorizada. Si la prueba de laboratorio o el piloto M6 fallan, no escalar y someter al comité sustitución por otra innovación de proceso acreditable.}
+  medicion = {Línea base y contraste con planificación manual en M6; comparación por familia y terminal en M7–M9. Registro de causas, reintentos y denominadores.},
+  riesgo = {Llegada mal estimada (3×4=12), kit incompatible (3×4=12), ahorro insuficiente (3×3=9) y baja adhesión o escaso paso por terminal (3×4=12).},
+  mitigacion = {Validar ETA y confirmar ventanas, ensayar las familias de kits y comparar con planificación manual en M6. Revisar tasas de fallos, reintentos y no presentación. Residuales previstos: 2×2=4, 2×2=4, 2×3=6 y 2×4=8.},
+  contingencia = {Si falla homologación, usar método manual y conservar la versión anterior. Si el piloto no sustenta la meta, limitar alcance o evaluar sustitución antes de escalar.}
 }
 % ------------------------------------------------------------- innovación 3
 \fichaInnovacion{
@@ -118,12 +119,12 @@
   mes = {Instalación al paso por terminal en los meses 6 a 10 y 16 a 18, fuera de la temporada de diciembre a abril. Activación y primera medición en la marcha blanca, antes del mes 16},
   inversion = {Balizas y lectores de portería que compra el mandante (Caso, capítulo 11, p. 24) según el Formulario T-11, más la integración en tres servicios de negocio},
   costooperacional = {Reposición de balizas al término de su batería y tráfico celular menor dentro de los mensajes del G26I},
-  beneficio = {Ningún semirremolque sale con la revisión técnica vencida. Mantención de semirremolques por kilometraje medido. Respaldo ante el cliente de la condición de la carga refrigerada},
-  indicador = {Asignaciones con semirremolque propio verificado por medición, de no verificado al asignar a 95 \% o más. Semirremolques propios con kilometraje medido, 100 \% de los que tienen baliza. Viajes refrigerados con temperatura continua, 100 \%. Las dos últimas líneas base se miden en la Etapa 1},
-  medicion = {Marcha blanca antes del mes 16. Tercer mes de operación. Primera temporada de diciembre a abril},
-  riesgo = {Acople falso con la baliza de un semirremolque vecino, probabilidad media e impacto alto. Temperatura bajo $-20$ °C en el paso cordillerano. Suplantación del identificador. Batería de menor duración},
-  mitigacion = {Señal estable y movimiento conjunto en los primeros minutos de marcha. Montaje a la sombra y prueba en el invierno de 2027 (meses 6 y 7). Lectura de portería como segundo control. Vigilancia del nivel de batería},
-  contingencia = {La verificación vuelve a la declaración con la lectura de portería como control. Modelo de mayor rango térmico en los semirremolques que cruzan. Reposición desde la reserva del 10 \%. Modelado de amenazas STRIDE en el Subdocumento 4, sección 4.1.21 (RT-26.07)}
+  beneficio = {Ningún semirremolque sale con la revisión técnica vencida. Respaldo ante el cliente de la condición de la carga refrigerada. El kilometraje real se mantiene como cumplimiento del criterio 26 y se excluye de la valorización de la innovación},
+  indicador = {Asignaciones con semirremolque propio verificado por medición, de no verificado al asignar a 95 \% o más. Viajes refrigerados con temperatura continua, 100 \%. La línea base térmica se mide en Etapa 1},
+  medicion = {Verificación de acople antes de M16 con cotejo de portería y confirmación del equipo observado. Registro térmico contrastado con sonda patrón en la primera temporada de diciembre a abril},
+  riesgo = {Acople falso (3×4=12), operación bajo el límite térmico (2×3=6), suplantación del identificador (2×4=8) y batería prematura (3×3=9).},
+  mitigacion = {Contrastar acople con portería y registro observado, medir frío en M6--M7, verificar la identidad en el evento y controlar batería. Residuales previstos: 2×4=8, 1×3=3, 1×4=4 (R-22) y 2×2=4.},
+  contingencia = {Si difieren portería y equipo, exigir verificación presencial. Si se excede el rango, homologar otra baliza. Ante identidad dudosa, aislar el dato y usar control manual. Reponer batería según el inventario.}
 }
 % ------------------------------------------------------------- innovación 4
 \fichaInnovacion{
@@ -141,28 +142,28 @@
   beneficio = {Recupero de la espera hoy objetada en un 71 \% (Caso, numeral 4.7, p. 11), que financia el incentivo. Se valoriza en la Oferta Económica y no se compromete como ingreso},
   indicador = {Posiciones transmitidas fuera de la ventana de un viaje, cero. Transportistas adheridos con cobro respaldado que reciben su parte, 100 \%. Consentimientos revocados, menos de 10 \%},
   medicion = {Auditoría mensual desde el mes 13. Cada liquidación desde el mes 16. Mensual desde el mes 13},
-  riesgo = {Adhesión bajo el 70 \% en la Etapa 1, probabilidad media e impacto alto. Desconfianza en la ventana. Rechazo de la evidencia de espera por los clientes. Anexo que no resista revisión jurídica, probabilidad baja e impacto alto},
-  mitigacion = {Conversación desde el mes 2 con el beneficio a la vista antes de pedir el equipo. Ventana auditable por el dueño. Validación jurídica antes de construir},
-  contingencia = {Tres medidas del Subdocumento 3 si la adhesión no llega al 40 \% en el mes 9. Financiar el incentivo con el ahorro de la liquidación automática}
+  riesgo = {Adhesión bajo meta (3×4=12, R-11), desconfianza en la ventana (3×4=12), rechazo de prueba de espera (3×3=9) e insuficiencia del anexo contractual (2×4=8).},
+  mitigacion = {Auditar convenios firmados, transmisión por ventana y liquidaciones. Validar jurídicamente el anexo. Residuales previstos: 2×4=8, 1×4=4, 2×3=6 y 1×4=4.},
+  contingencia = {Escalar si al cierre de M9 hay menos del 40\,\% de adhesión. Ante una transmisión indebida, suspender la fuente, registrar la incidencia y corregir permisos. Sin anexo aprobado, mantener el proceso vigente.}
 }
 % ------------------------------------------------------------- innovación 5
 \fichaInnovacion{
   tipo = {5. Experiencia de usuario, sostenibilidad o impacto social},
-  nombre = {Bienestar del conductor y descanso en parador seguro},
-  problema = {Una alerta de jornada entregada donde no hay dónde detenerse es inútil (Caso, capítulo 18, p. 43). Hay tramos sin lugar seguro para combinaciones de 45 toneladas (numeral 16.1, p. 35). 258 conductores externos no son trabajadores de la compañía (numeral 2.3, p. 6)},
-  tecnologia = {Motor predictivo sobre audIT EdgeHub, en el equipo a bordo, que cruza jornada acumulada, topografía y ventana circadiana de 02:00 a 06:00 h. Catálogo local de paradores calificados. Enclavamiento cinético de pantalla y síntesis de voz local en español},
-  madurez = {Escala ISO 16290 de 1 a 9. Autoevaluación TRL 2 conceptual del modelo circadiano y catálogo integrado; sin evidencia aportada de prueba de concepto o validación del prototipo. Componentes comerciales no acreditan madurez del conjunto. Objetivos: TRL 6 tras ensayos en entorno representativo M10--M12 y TRL 7 tras piloto operacional M13--M15, sujetos a versión, protocolo, datos y resultados reproducibles. Se acreditan con el expediente de validación},
+  nombre = {Anticipación circadiana de fatiga y recomendación no punitiva de descanso seguro},
+  problema = {El alcance base del Criterio 28 (Caso, capítulo 18, p. 43) exige geocercas y paradores seguros para no detenerse en ruta inhóspita. La brecha no resuelta es que la alerta reactiva no anticipa la caída de vigilancia circadiana (02:00 a 06:00 h) ni atiende la desconfianza de 258 conductores externos hacia sistemas percibidos como vigilancia patronal (numeral 2.3, p. 6)},
+  tecnologia = {Módulo algorítmico sobre audIT EdgeHub que cruza curva circadiana, jornada acumulada y topografía vial, sobre la base del catálogo de paradores del Criterio 28. Enclavamiento cinético de pantalla (Ley N.º 21.377), síntesis vocal neutra local en español y protocolo de no punitividad},
+  madurez = {Escala ISO 16290 de 1 a 9. Autoevaluación TRL 2 conceptual del modelo circadiano incremental sobre el catálogo base; sin evidencia aportada de prueba de concepto previa. Componentes comerciales no acreditan madurez del conjunto. Objetivos: TRL 6 tras ensayos en entorno representativo M10--M12 y TRL 7 tras piloto operacional M13--M15 con informe metodológico reproducible},
   fuentes = {International Organization for Standardization (2013, 2017, 2019). National Academies of Sciences, Engineering, and Medicine (2016). Congreso Nacional de Chile (2021), Ley N.º 21.377. Ministerio del Trabajo (2003, 2006)},
-  arquitectura = {Capa de borde con el motor predictivo, el catálogo y la síntesis de voz. Servicio de gobernanza de paradores en la torre de control. Consulta pasiva en el portal},
-  edt = {Paquete 12.5, con los paquetes 4.1 (firmware a bordo) y 5.1 (Personas y cumplimiento)},
-  mes = {Talleres ergonómicos M4; catálogo M3--M6; software a bordo M4--M9. Ensayos del prototipo integrado M10--M12. Piloto y validación con conductores en marcha blanca M13--M15; producción E1 en M16},
-  inversion = {Software de borde incremental y talleres ergonómicos participativos. El catálogo se levanta dentro de la campaña de cobertura},
-  costooperacional = {Menor búsqueda errática de estacionamiento en ruta, con un efecto en combustible que se mide en la Etapa 1},
-  beneficio = {Reducción esperada de exposición a detenciones inseguras, incumplimientos de jornada y uso de dispositivos en marcha. Durante la marcha blanca M13--M15 se contrastarán los viajes elegibles, los desvíos evitados atribuibles a la recomendación y el consumo asociado. La frecuencia de incidentes se estimará con registros históricos comparables. El beneficio monetario para Curimón queda pendiente de cuantificar en la Oferta Económica},
-  indicador = {Efectividad: 100 × episodios con recomendación válida y oportuna / episodios en que el oráculo exige parada; meta $\ge98\%$. Parador verificado, compatible y alcanzable dentro del tiempo legal remanente; aviso acústico oportuno. Falta de parador y aviso tardío cuentan como fallos; denominador cero sin tasa. Línea base medida antes del piloto. Controles separados: bloqueo 100\%, NASA-TLX $<35$, adherencia $\ge85\%$, con sus líneas base en Etapa 1},
-  medicion = {Mensual durante la marcha blanca M13--M15, antes de producción E1 en M16; nivel alcanzado respaldado por informe de resultados},
-  riesgo = {Que los 258 conductores externos lo perciban como vigilancia patronal encubierta, probabilidad media a alta e impacto alto},
-  mitigacion = {Diseño ergonómico participativo en horario de relevo en los cinco terminales y orientación al bienestar},
-  contingencia = {Notificación solo acústica por el altavoz del vehículo, sin teléfonos personales ni botones adicionales en cabina}
+  arquitectura = {Capa de borde en audIT EdgeHub con motor circadiano y síntesis de voz. Servicio de consulta pasiva en Torre 24x7 sin registro punitivo. Gobernanza de paradores compartida con Criterio 28},
+  edt = {Paquete 12.5 (innovación incremental), coordinado con paquetes 4.1 (firmware) y 5.1 (Personas). La infraestructura base del catálogo se financia en el paquete base de la plataforma},
+  mes = {Talleres ergonómicos participativos M4; desarrollo algorítmico M4--M9. Ensayos del prototipo integrado M10--M12. Piloto y validación con conductores en marcha blanca M13--M15; producción E1 en M16},
+  inversion = {Desarrollo incremental del motor algorítmico y síntesis vocal en audIT EdgeHub (paquetes 12.5 y 4.1 durante M4--M9), 5 talleres ergonómicos participativos en los cinco terminales oficiales de Curimón: San Bernardo, Antofagasta, Talca, Los Ángeles y Puerto Montt (M4) y calibración ergonómica y evaluación de carga mental NASA-TLX en marcha blanca (M13--M15). El levantamiento del catálogo base de paradores corresponde al Criterio 28 obligatorio. Conforme al Art. 50.2, las horas, tarifas y el presupuesto monetario consolidado se valorizan exclusivamente en la Oferta Económica (Sobre N.º 3, clave innovacion-5-inversion)},
+  costooperacional = {Mantenimiento algorítmico preventivo, actualización de perfiles circadianos y auditorías semestrales de privacidad (meses 21 a 56). Conforme al Art. 50.2, valorizado exclusivamente en la Oferta Económica (Sobre N.º 3, clave innovacion-5-costo)},
+  beneficio = {La recomendación anticipada de paradores seguros busca reducir desvíos y exposición a incidentes asociados a fatiga. Durante la marcha blanca M13--M15 se contrastarán los viajes elegibles, los desvíos atribuibles y el consumo. La frecuencia de incidentes se estimará con registros históricos comparables. El beneficio monetario para Curimón queda pendiente de cuantificar en la Oferta Económica},
+  indicador = {Efectividad incremental: 100 × episodios con recomendación circadiana oportuna y válida / episodios en ventana de fatiga; meta $\ge98\%$. Controles de adopción independientes: enclavamiento 100\%, NASA-TLX $<35$ y adherencia voluntaria $\ge85\%$},
+  medicion = {Medición mensual durante la marcha blanca M13--M15, antes del hito H7 en M16; nivel alcanzado respaldado por informe técnico de adopción y ergonomía},
+  riesgo = {Percepción de vigilancia patronal o invasión de privacidad por conductores externos (3×4=12).},
+  mitigacion = {Talleres de M4, uso voluntario, auditoría semestral de accesos y revisión de que las alertas no se transmitan como faltas laborales. Residual previsto 1×3=3 tras comprobar los controles.},
+  contingencia = {Si la adherencia queda bajo 70\,\% en M14 o NASA-TLX llega a 35 puntos, ensayar aviso acústico pasivo y revisar las mediciones con la mesa de conductores.}
 }
 \end{formulario}

@@ -44,8 +44,12 @@ function formulas(sheet,start,col,rows) {
 const raw = await read("AUD-17_FLUJO_INTEGRADO_PROVISIONAL.csv","A2:Z57");
 const d4 = await read("AUD-16_IVA_PROVEEDORES_D4.csv","A2:J379");
 const numeric = value => value == null || value === "" ? null : Number(value);
-init(detalleD4,["Mes","Pagador","Partida","Proveedor referencial","Neto CLP","Estado IVA","IVA referencial","IVA pagado","Crédito fiscal","Fuente"],[9,15,30,38,17,26,18,17,17,37]);
+init(detalleD4,["Mes","Pagador","Partida","Proveedor referencial","Neto CLP","Estado IVA","IVA referencial","IVA efectivo","Crédito fiscal","Fuente","IVA de caja estimado"],[9,15,30,38,17,26,18,17,17,37,22]);
 data(detalleD4,d4.map(r=>r.map((v,i)=>[0,4,6,7,8].includes(i)?numeric(v):v)));
+formulas(detalleD4,1,10,d4.map((_,i)=>{
+ const row=i+2;
+ return [`=IF(OR(C${row}="Circuito de operador ExpressRoute",C${row}="LTE a bordo"),ROUND(E${row}*'Parámetros'!$B$11,0),"")`];
+}));
 detalleD4.getRange("H2:I379").format.fill="#FFF1CE";
 detalleD4.getRange("E2:I379").setNumberFormat("#,##0.00");
 const demandCsv = execFileSync("git",["show","4070a7e:Informe-3/d3/datos/dedicacion_mensual_d3_resumen.csv"],{cwd:folder,encoding:"utf8"});
@@ -73,6 +77,8 @@ data(parametros,[
  ["Inicio operación",21,"E-25. Coincide con H12."],
  ["Meses por año",12,"Conversión efectiva de tasas."],
  ["Desfase de cobro de operación",1,"E-25. Mes siguiente al servicio vencido."],
+ ["Conciliación neta D4 en M56",-1,"AUD-16 / AUD-17. Ajuste único de redondeo del corte."],
+ ["Semilla numérica de TIR",.8,"Semilla de convergencia del escenario base. Sin efecto sobre el flujo."],
 ]);
 parametros.getRange("B10").formulas=[["=B5*B6+(1-B5)*((1+B9)^(1/B18)-1)"]];
 parametros.getRange("B14:B15").formulas=[["=SUM(Costos!I2:I21)/(1-B2-B3)"],["=SUM(Costos!I22:I57)/(1-B2)/B16"]];
@@ -100,9 +106,11 @@ for(let i=0;i<56;i++){
   const expected=Number(raw[i][r===row?2:8]);
   const source=Math.round(d4.filter(x=>Number(x[0])===i+1&&x[1]===(r===row?"audIT":"Curimón")).reduce((a,x)=>a+Number(x[4]),0));
   if(source-expected!==(r===row&&i===55?1:0)) throw new Error(`D4 no cuadra en M${i+1}, fila ${r}`);
-  proveedores.getRange(`E${r}`).formulas=[[`=ROUND(${subtotal("E",r)},0)${r===row&&i===55?"-1":""}`]];
+  proveedores.getRange(`E${r}`).formulas=[[`=ROUND(${subtotal("E",r)},0)${r===row&&i===55?"+'Parámetros'!$B$20":""}`]];
   proveedores.getRange(`G${r}:I${r}`).formulas=[["H","I","G"].map(c=>`=IF(COUNTIFS(${criterio(r)},${sheet}$${c}$2:$${c}$379,"<>")=0,"",${subtotal(c,r)})`)];
  }
+ const licencias=row+1;
+ proveedores.getRange(`I${licencias}`).formulas=[[`=ROUND(E${licencias}*'Parámetros'!$B$11,0)`]];
 }
 proveedores.getRange("E2:E281").setNumberFormat("#,##0");
 proveedores.getRange("G2:H281").format.fill="#FFF1CE";
@@ -174,8 +182,16 @@ init(ajustes,["Mes de servicio","Componente variable CLP","Descuento CLP","Fuent
 data(ajustes,Array.from({length:56},(_,i)=>[i+1,0,0,"Base: sin ajuste de operación"]));
 formulas(flujo,1,3,Array.from({length:57},(_,i)=>{
  const mes="A"+(i+2);
- return ["=SUMIF('Ajustes de operación'!$A$2:$A$57,"+mes+",'Ajustes de operación'!$B$2:$B$57)-SUMIF('Ajustes de operación'!$A$2:$A$57,"+mes+",'Ajustes de operación'!$C$2:$C$57)"];
+ return ["=SUMIFS('Ajustes de operación'!$B$2:$B$57,'Ajustes de operación'!$A$2:$A$57,"+mes+",'Ajustes de operación'!$E$2:$E$57,\"OK\")-SUMIFS('Ajustes de operación'!$C$2:$C$57,'Ajustes de operación'!$A$2:$A$57,"+mes+",'Ajustes de operación'!$E$2:$E$57,\"OK\")"];
 }));
+ajustes.getRange("E1").values=[["Control de entrada"]];
+formulas(ajustes,1,4,raw.map((_,i)=>{
+ const row=i+2;
+ return [`=IF(AND(ISNUMBER(B${row}),B${row}>=0,ISNUMBER(C${row}),C${row}>=0,C${row}<='Parámetros'!$B$15+B${row}),"OK","Revisar variable o descuento")`];
+}));
+wb.names.add("MensualidadBase","='Parámetros'!$B$15");
+ajustes.dataValidations.add({ range:"B22:B57", rule:{ type:"custom", formula1:"AND(ISNUMBER(B22),B22>=0,C22<=MensualidadBase+B22)" }});
+ajustes.dataValidations.add({ range:"C22:C57", rule:{ type:"custom", formula1:"AND(ISNUMBER(C22),C22>=0,C22<=MensualidadBase+B22)" }});
 flujo.getRange("C2:C58").setNumberFormat("0%");
 flujo.getRange("D2:D57").format.fill="#FFF1CE";
 formulas(flujo,1,4,Array.from({length:57},(_,i)=>{
@@ -184,7 +200,7 @@ formulas(flujo,1,4,Array.from({length:57},(_,i)=>{
  const param="'Parámetros'!", initial=i?"0":`${param}$B$4`;
  const available=`(${cash}+H${r}+O${r}+${initial}-P${r}-Q${r})`;
  return [
- `=C${r}*${param}$B$14+IF(AND(A${r}>=${param}$B$17,A${r}<${param}$B$17+${param}$B$16),${param}$B$15+D${r},0)`,
+ `=C${r}*${param}$B$14+IF(AND(A${r}>=${param}$B$17,A${r}<${param}$B$17+${param}$B$16),MAX(0,${param}$B$15+D${r}),0)`,
  `=IF(B${r}="H5",0,C${r}*${param}$B$14)+IF(A${r}=${param}$B$13,SUMIF($B$2:$B$58,"H5",$C$2:$C$58)*${param}$B$14,0)+IF(AND(A${r}-${param}$B$19>=${param}$B$17,A${r}-${param}$B$19<${param}$B$17+${param}$B$16),${param}$B$15+SUMIF($A$2:$A$58,A${r}-${param}$B$19,$D$2:$D$58),0)`,
  m<=56?`=Costos!K${r}`:"=0",`=F${r}-G${r}`,
  `=E${r}*${param}$B$11`,`=F${r}*${param}$B$11`,
@@ -223,7 +239,7 @@ data(indicadores,[
 ]);
 const f="'Flujo de Caja'!",p="'Parámetros'!";
 formulas(indicadores,1,1,[
- [`=NPV(${p}B10,${f}H2:H57)`],[`=IRR(${f}H2:H57,0.8)`],
+ [`=NPV(${p}B10,${f}H2:H57)`],[`=IRR(${f}H2:H57,${p}B21)`],
  [`=NPV(${p}B10,${f}H2:H58)`],[`=MAX(${f}T2:T57)`],[`=MIN(${f}W2:W57)`],
  ["=SUMPRODUCT(--(COUNTIF(Proveedores!A2:A281,Proveedores!A2:A281)>1))"],[`=${f}F58`],
 ]);

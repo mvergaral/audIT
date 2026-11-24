@@ -1,0 +1,22 @@
+\def\RaizSubdocumentos{subdocumentos}
+\def\NumeroSubdoc{3}
+\def\FolioInicialExterno{1}
+\def\NombreArchivo{SOBRE2_AUDIT_SUBDOC03_20261125}
+\def\ArchivoActual{SOBRE2_AUDIT_SUBDOC03_20261125}
+\def\ArchivoExternos{subdocumentos/03-solucion/preparacion-final/compilacion/SOBRE2_AUDIT_SUBDOC03_20261125-externos.tex}
+% ============================================================================
+%  Un subdocumento como PDF propio. La herramienta de compilación lo llama
+%  con el número de subdocumento, el folio inicial y el nombre de archivo:
+%    -usepretex="\def\NumeroSubdoc{4}\def\FolioInicialExterno{57}..."
+%  Compilar desde la raíz:  python3 herramientas/compilar.py subdocs 04
+% ============================================================================
+\providecommand\NumeroSubdoc{1}
+\documentclass{audit-oferta}
+\input{configuracion/metadatos}
+\input{configuracion/instancia}
+\input{configuracion/subdocumentos}
+
+\AplicarInstancia{final}\Version{3.0}
+\begin{document}
+\expandafter\DocumentoSubdocumento\expandafter{\NumeroSubdoc}
+\end{document}

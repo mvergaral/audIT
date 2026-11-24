@@ -1,4 +1,9 @@
 """Anexo Gantt revisado: datos conciliados, frentes, hitos y operación."""
+if __name__ == '__main__':
+ import runpy
+ from pathlib import Path
+ runpy.run_path(str(Path(__file__).with_name('generar_anexos_32.py')),run_name='__main__')
+ raise SystemExit(0)
 from pathlib import Path
 import json, re, hashlib
 import fitz

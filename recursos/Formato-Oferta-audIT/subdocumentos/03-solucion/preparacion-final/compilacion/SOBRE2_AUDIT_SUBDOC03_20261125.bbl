@@ -1,0 +1,499 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{apa/apasortcite//global/global/global}
+    \entry{ley19799}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=499b3368fa957f63eb091bbe7f8b363a}{%
+           family={{Congreso Nacional de Chile}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{499b3368fa957f63eb091bbe7f8b363a}
+      \strng{fullhash}{499b3368fa957f63eb091bbe7f8b363a}
+      \strng{fullhashraw}{499b3368fa957f63eb091bbe7f8b363a}
+      \strng{bibnamehash}{499b3368fa957f63eb091bbe7f8b363a}
+      \strng{authorbibnamehash}{499b3368fa957f63eb091bbe7f8b363a}
+      \strng{authornamehash}{499b3368fa957f63eb091bbe7f8b363a}
+      \strng{authorfullhash}{499b3368fa957f63eb091bbe7f8b363a}
+      \strng{authorfullhashraw}{499b3368fa957f63eb091bbe7f8b363a}
+      \field{extraname}{1}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Ley N.º 19.799 sobre documentos electrónicos, firma electrónica y servicios de certificación de dicha firma}
+      \field{year}{2002}
+      \verb{urlraw}
+      \verb https://www.bcn.cl/leychile/navegar?idNorma=196640
+      \endverb
+      \verb{url}
+      \verb https://www.bcn.cl/leychile/navegar?idNorma=196640
+      \endverb
+    \endentry
+    \entry{ley21377}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=499b3368fa957f63eb091bbe7f8b363a}{%
+           family={{Congreso Nacional de Chile}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{499b3368fa957f63eb091bbe7f8b363a}
+      \strng{fullhash}{499b3368fa957f63eb091bbe7f8b363a}
+      \strng{fullhashraw}{499b3368fa957f63eb091bbe7f8b363a}
+      \strng{bibnamehash}{499b3368fa957f63eb091bbe7f8b363a}
+      \strng{authorbibnamehash}{499b3368fa957f63eb091bbe7f8b363a}
+      \strng{authornamehash}{499b3368fa957f63eb091bbe7f8b363a}
+      \strng{authorfullhash}{499b3368fa957f63eb091bbe7f8b363a}
+      \strng{authorfullhashraw}{499b3368fa957f63eb091bbe7f8b363a}
+      \field{extraname}{2}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Ley N.º 21.377 que modifica la Ley de Tránsito para sancionar la conducción manipulando dispositivos de telefonía móvil u otro artefacto electrónico}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://www.bcn.cl/leychile/navegar?idNorma=1166014
+      \endverb
+      \verb{url}
+      \verb https://www.bcn.cl/leychile/navegar?idNorma=1166014
+      \endverb
+    \endentry
+    \entry{fowler2004_strangler}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=312ac886938a9b2be4f8eb607567fe4c}{%
+           family={Fowler},
+           familyi={F\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{312ac886938a9b2be4f8eb607567fe4c}
+      \strng{fullhash}{312ac886938a9b2be4f8eb607567fe4c}
+      \strng{fullhashraw}{312ac886938a9b2be4f8eb607567fe4c}
+      \strng{bibnamehash}{312ac886938a9b2be4f8eb607567fe4c}
+      \strng{authorbibnamehash}{312ac886938a9b2be4f8eb607567fe4c}
+      \strng{authornamehash}{312ac886938a9b2be4f8eb607567fe4c}
+      \strng{authorfullhash}{312ac886938a9b2be4f8eb607567fe4c}
+      \strng{authorfullhashraw}{312ac886938a9b2be4f8eb607567fe4c}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{29}
+      \field{month}{6}
+      \field{title}{Strangler Fig Application}
+      \field{urlday}{6}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{year}{2004}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://martinfowler.com/bliki/StranglerFigApplication.html
+      \endverb
+      \verb{url}
+      \verb https://martinfowler.com/bliki/StranglerFigApplication.html
+      \endverb
+    \endentry
+    \entry{codigo_trabajo_25bis}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=4bea1cf2944a8ad58a1c159a33e3a06b}{%
+           family={{Ministerio del Trabajo}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Biblioteca del Congreso Nacional de Chile}%
+      }
+      \strng{namehash}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{fullhash}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{fullhashraw}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{bibnamehash}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{authorbibnamehash}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{authornamehash}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{authorfullhash}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{authorfullhashraw}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Decreto con Fuerza de Ley N.º 1. Texto refundido, coordinado y sistematizado del Código del Trabajo. Artículo 25 bis sobre jornada de choferes de vehículos de carga terrestre interurbana}
+      \field{year}{2003}
+      \verb{urlraw}
+      \verb https://www.bcn.cl/leychile/navegar?idNorma=207436
+      \endverb
+      \verb{url}
+      \verb https://www.bcn.cl/leychile/navegar?idNorma=207436
+      \endverb
+    \endentry
+    \entry{bases-fep01}{report}{}{}
+      \name{author}{1}{}{%
+        {{hash=05834e46fd17449e232b4d09ac505ddd}{%
+           family={{Transportes Curimón S.A.}},
+           familyi={T\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Transportes Curimón S.A.}%
+      }
+      \strng{namehash}{05834e46fd17449e232b4d09ac505ddd}
+      \strng{fullhash}{05834e46fd17449e232b4d09ac505ddd}
+      \strng{fullhashraw}{05834e46fd17449e232b4d09ac505ddd}
+      \strng{bibnamehash}{05834e46fd17449e232b4d09ac505ddd}
+      \strng{authorbibnamehash}{05834e46fd17449e232b4d09ac505ddd}
+      \strng{authornamehash}{05834e46fd17449e232b4d09ac505ddd}
+      \strng{authorfullhash}{05834e46fd17449e232b4d09ac505ddd}
+      \strng{authorfullhashraw}{05834e46fd17449e232b4d09ac505ddd}
+      \field{extraname}{1}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{18}
+      \field{month}{8}
+      \field{title}{Bases administrativas para la preparación de la propuesta: Licitación Pública Internacional N.º TFEP-01/2026}
+      \field{type}{Documento FEP01}
+      \field{year}{2026}
+      \field{dateera}{ce}
+      \true{nocite}
+    \endentry
+    \entry{bases-fep03}{report}{}{}
+      \name{author}{1}{}{%
+        {{hash=05834e46fd17449e232b4d09ac505ddd}{%
+           family={{Transportes Curimón S.A.}},
+           familyi={T\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Transportes Curimón S.A.}%
+      }
+      \strng{namehash}{05834e46fd17449e232b4d09ac505ddd}
+      \strng{fullhash}{05834e46fd17449e232b4d09ac505ddd}
+      \strng{fullhashraw}{05834e46fd17449e232b4d09ac505ddd}
+      \strng{bibnamehash}{05834e46fd17449e232b4d09ac505ddd}
+      \strng{authorbibnamehash}{05834e46fd17449e232b4d09ac505ddd}
+      \strng{authornamehash}{05834e46fd17449e232b4d09ac505ddd}
+      \strng{authorfullhash}{05834e46fd17449e232b4d09ac505ddd}
+      \strng{authorfullhashraw}{05834e46fd17449e232b4d09ac505ddd}
+      \field{extraname}{2}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{18}
+      \field{month}{8}
+      \field{title}{Bases técnicas del Caso 10, Transporte de Carga: Licitación Pública Internacional N.º TFEP-01/2026}
+      \field{type}{Documento FEP03}
+      \field{year}{2026}
+      \field{dateera}{ce}
+      \true{nocite}
+    \endentry
+    \entry{bases-com10}{report}{}{}
+      \name{author}{1}{}{%
+        {{hash=05834e46fd17449e232b4d09ac505ddd}{%
+           family={{Transportes Curimón S.A.}},
+           familyi={T\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Transportes Curimón S.A.}%
+      }
+      \strng{namehash}{05834e46fd17449e232b4d09ac505ddd}
+      \strng{fullhash}{05834e46fd17449e232b4d09ac505ddd}
+      \strng{fullhashraw}{05834e46fd17449e232b4d09ac505ddd}
+      \strng{bibnamehash}{05834e46fd17449e232b4d09ac505ddd}
+      \strng{authorbibnamehash}{05834e46fd17449e232b4d09ac505ddd}
+      \strng{authornamehash}{05834e46fd17449e232b4d09ac505ddd}
+      \strng{authorfullhash}{05834e46fd17449e232b4d09ac505ddd}
+      \strng{authorfullhashraw}{05834e46fd17449e232b4d09ac505ddd}
+      \field{extraname}{3}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradate}{3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{23}
+      \field{month}{9}
+      \field{title}{Comunicado 10: Estructura obligatoria de las propuestas preparatorias y técnica final}
+      \field{type}{Comunicado de la licitación TFEP-01/2026}
+      \field{year}{2026}
+      \field{dateera}{ce}
+      \true{nocite}
+    \endentry
+  \enddatalist
+  \datalist[entry]{apa/global//global/global/global}
+    \entry{ley19799}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=499b3368fa957f63eb091bbe7f8b363a}{%
+           family={{Congreso Nacional de Chile}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{499b3368fa957f63eb091bbe7f8b363a}
+      \strng{fullhash}{499b3368fa957f63eb091bbe7f8b363a}
+      \strng{fullhashraw}{499b3368fa957f63eb091bbe7f8b363a}
+      \strng{bibnamehash}{499b3368fa957f63eb091bbe7f8b363a}
+      \strng{authorbibnamehash}{499b3368fa957f63eb091bbe7f8b363a}
+      \strng{authornamehash}{499b3368fa957f63eb091bbe7f8b363a}
+      \strng{authorfullhash}{499b3368fa957f63eb091bbe7f8b363a}
+      \strng{authorfullhashraw}{499b3368fa957f63eb091bbe7f8b363a}
+      \field{extraname}{1}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Ley N.º 19.799 sobre documentos electrónicos, firma electrónica y servicios de certificación de dicha firma}
+      \field{year}{2002}
+      \verb{urlraw}
+      \verb https://www.bcn.cl/leychile/navegar?idNorma=196640
+      \endverb
+      \verb{url}
+      \verb https://www.bcn.cl/leychile/navegar?idNorma=196640
+      \endverb
+    \endentry
+    \entry{ley21377}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=499b3368fa957f63eb091bbe7f8b363a}{%
+           family={{Congreso Nacional de Chile}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{499b3368fa957f63eb091bbe7f8b363a}
+      \strng{fullhash}{499b3368fa957f63eb091bbe7f8b363a}
+      \strng{fullhashraw}{499b3368fa957f63eb091bbe7f8b363a}
+      \strng{bibnamehash}{499b3368fa957f63eb091bbe7f8b363a}
+      \strng{authorbibnamehash}{499b3368fa957f63eb091bbe7f8b363a}
+      \strng{authornamehash}{499b3368fa957f63eb091bbe7f8b363a}
+      \strng{authorfullhash}{499b3368fa957f63eb091bbe7f8b363a}
+      \strng{authorfullhashraw}{499b3368fa957f63eb091bbe7f8b363a}
+      \field{extraname}{2}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Ley N.º 21.377 que modifica la Ley de Tránsito para sancionar la conducción manipulando dispositivos de telefonía móvil u otro artefacto electrónico}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://www.bcn.cl/leychile/navegar?idNorma=1166014
+      \endverb
+      \verb{url}
+      \verb https://www.bcn.cl/leychile/navegar?idNorma=1166014
+      \endverb
+    \endentry
+    \entry{fowler2004_strangler}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=312ac886938a9b2be4f8eb607567fe4c}{%
+           family={Fowler},
+           familyi={F\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{312ac886938a9b2be4f8eb607567fe4c}
+      \strng{fullhash}{312ac886938a9b2be4f8eb607567fe4c}
+      \strng{fullhashraw}{312ac886938a9b2be4f8eb607567fe4c}
+      \strng{bibnamehash}{312ac886938a9b2be4f8eb607567fe4c}
+      \strng{authorbibnamehash}{312ac886938a9b2be4f8eb607567fe4c}
+      \strng{authornamehash}{312ac886938a9b2be4f8eb607567fe4c}
+      \strng{authorfullhash}{312ac886938a9b2be4f8eb607567fe4c}
+      \strng{authorfullhashraw}{312ac886938a9b2be4f8eb607567fe4c}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{29}
+      \field{month}{6}
+      \field{title}{Strangler Fig Application}
+      \field{urlday}{6}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{year}{2004}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://martinfowler.com/bliki/StranglerFigApplication.html
+      \endverb
+      \verb{url}
+      \verb https://martinfowler.com/bliki/StranglerFigApplication.html
+      \endverb
+    \endentry
+    \entry{codigo_trabajo_25bis}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=4bea1cf2944a8ad58a1c159a33e3a06b}{%
+           family={{Ministerio del Trabajo}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Biblioteca del Congreso Nacional de Chile}%
+      }
+      \strng{namehash}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{fullhash}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{fullhashraw}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{bibnamehash}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{authorbibnamehash}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{authornamehash}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{authorfullhash}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \strng{authorfullhashraw}{4bea1cf2944a8ad58a1c159a33e3a06b}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Decreto con Fuerza de Ley N.º 1. Texto refundido, coordinado y sistematizado del Código del Trabajo. Artículo 25 bis sobre jornada de choferes de vehículos de carga terrestre interurbana}
+      \field{year}{2003}
+      \verb{urlraw}
+      \verb https://www.bcn.cl/leychile/navegar?idNorma=207436
+      \endverb
+      \verb{url}
+      \verb https://www.bcn.cl/leychile/navegar?idNorma=207436
+      \endverb
+    \endentry
+    \entry{bases-fep01}{report}{}{}
+      \name{author}{1}{}{%
+        {{hash=05834e46fd17449e232b4d09ac505ddd}{%
+           family={{Transportes Curimón S.A.}},
+           familyi={T\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Transportes Curimón S.A.}%
+      }
+      \strng{namehash}{05834e46fd17449e232b4d09ac505ddd}
+      \strng{fullhash}{05834e46fd17449e232b4d09ac505ddd}
+      \strng{fullhashraw}{05834e46fd17449e232b4d09ac505ddd}
+      \strng{bibnamehash}{05834e46fd17449e232b4d09ac505ddd}
+      \strng{authorbibnamehash}{05834e46fd17449e232b4d09ac505ddd}
+      \strng{authornamehash}{05834e46fd17449e232b4d09ac505ddd}
+      \strng{authorfullhash}{05834e46fd17449e232b4d09ac505ddd}
+      \strng{authorfullhashraw}{05834e46fd17449e232b4d09ac505ddd}
+      \field{extraname}{1}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{18}
+      \field{month}{8}
+      \field{title}{Bases administrativas para la preparación de la propuesta: Licitación Pública Internacional N.º TFEP-01/2026}
+      \field{type}{Documento FEP01}
+      \field{year}{2026}
+      \field{dateera}{ce}
+      \true{nocite}
+    \endentry
+    \entry{bases-fep03}{report}{}{}
+      \name{author}{1}{}{%
+        {{hash=05834e46fd17449e232b4d09ac505ddd}{%
+           family={{Transportes Curimón S.A.}},
+           familyi={T\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Transportes Curimón S.A.}%
+      }
+      \strng{namehash}{05834e46fd17449e232b4d09ac505ddd}
+      \strng{fullhash}{05834e46fd17449e232b4d09ac505ddd}
+      \strng{fullhashraw}{05834e46fd17449e232b4d09ac505ddd}
+      \strng{bibnamehash}{05834e46fd17449e232b4d09ac505ddd}
+      \strng{authorbibnamehash}{05834e46fd17449e232b4d09ac505ddd}
+      \strng{authornamehash}{05834e46fd17449e232b4d09ac505ddd}
+      \strng{authorfullhash}{05834e46fd17449e232b4d09ac505ddd}
+      \strng{authorfullhashraw}{05834e46fd17449e232b4d09ac505ddd}
+      \field{extraname}{2}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{18}
+      \field{month}{8}
+      \field{title}{Bases técnicas del Caso 10, Transporte de Carga: Licitación Pública Internacional N.º TFEP-01/2026}
+      \field{type}{Documento FEP03}
+      \field{year}{2026}
+      \field{dateera}{ce}
+      \true{nocite}
+    \endentry
+    \entry{bases-com10}{report}{}{}
+      \name{author}{1}{}{%
+        {{hash=05834e46fd17449e232b4d09ac505ddd}{%
+           family={{Transportes Curimón S.A.}},
+           familyi={T\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Transportes Curimón S.A.}%
+      }
+      \strng{namehash}{05834e46fd17449e232b4d09ac505ddd}
+      \strng{fullhash}{05834e46fd17449e232b4d09ac505ddd}
+      \strng{fullhashraw}{05834e46fd17449e232b4d09ac505ddd}
+      \strng{bibnamehash}{05834e46fd17449e232b4d09ac505ddd}
+      \strng{authorbibnamehash}{05834e46fd17449e232b4d09ac505ddd}
+      \strng{authornamehash}{05834e46fd17449e232b4d09ac505ddd}
+      \strng{authorfullhash}{05834e46fd17449e232b4d09ac505ddd}
+      \strng{authorfullhashraw}{05834e46fd17449e232b4d09ac505ddd}
+      \field{extraname}{3}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradate}{3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{23}
+      \field{month}{9}
+      \field{title}{Comunicado 10: Estructura obligatoria de las propuestas preparatorias y técnica final}
+      \field{type}{Comunicado de la licitación TFEP-01/2026}
+      \field{year}{2026}
+      \field{dateera}{ce}
+      \true{nocite}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

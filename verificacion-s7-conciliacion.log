@@ -1,0 +1,87 @@
+
+Verificación de final-s7-preparacion
+------------------------------------------------------------------------------
+NO CUMPLE  1    Papel carta y vertical, salvo anexos gráficos declarados
+                SOBRE2_AUDIT_SUBDOC07_20261125.pdf folio 17: horizontal sin ser anexo gráfico declarado
+                SOBRE2_AUDIT_SUBDOC07_20261125.pdf folio 18: horizontal sin ser anexo gráfico declarado
+                SOBRE2_AUDIT_SUBDOC07_20261125.pdf folio 19: horizontal sin ser anexo gráfico declarado
+                SOBRE2_AUDIT_SUBDOC07_20261125.pdf folio 20: horizontal sin ser anexo gráfico declarado
+CUMPLE     2    Folio en todas las páginas, extremo inferior derecho tal como se ve, correlativo
+                84 páginas revisadas en 4 archivo(s), medidas como se ven en pantalla
+CUMPLE     3    Folio por subdocumento: cada archivo empieza en 1
+CUMPLE     4    Media firma y folio separados entre sí, del texto y de los diagramas
+                84 páginas con media firma y folio
+CUMPLE     5    Cuerpo 11 pt o más, tablas y leyendas 9 pt o más (medido en el PDF)
+                cuerpo (IBM Plex Serif): mínimo 11.00 pt
+                tablas, leyendas, títulos, encabezado y pie (Plex Sans y Mono): mínimo 9.00 pt
+NO CUMPLE  7    Fuentes incrustadas y texto seleccionable y buscable (tildes, ligaduras)
+                SOBRE2_AUDIT_SUBDOC07_20261125.pdf: fuente no incrustada Helvetica
+                SOBRE2_AUDIT_SUBDOC07_20261125.pdf: fuente no incrustada Helvetica
+                SOBRE2_AUDIT_SUBDOC07_20261125.pdf: fuente no incrustada Helvetica
+                SOBRE2_AUDIT_SUBDOC07_20261125.pdf: fuente no incrustada Helvetica
+                SOBRE2_AUDIT_SUBDOC07_20261125.pdf: fuente no incrustada Helvetica
+                SOBRE2_AUDIT_SUBDOC07_20261125.pdf: fuente no incrustada Helvetica
+                SOBRE2_AUDIT_SUBDOC07_20261125.pdf: fuente no incrustada Helvetica
+                SOBRE2_AUDIT_SUBDOC07_20261125.pdf: fuente no incrustada Helvetica
+                ... y 16 más (ver el informe .md)
+CUMPLE     6    Texto dentro de las figuras 9 pt o más
+                01-arbol.pdf (horizontal, folio 21): letra mínima de origen 11.50 pt, escala 0.87, efectiva 9.99 pt
+                02-paquetes-1.pdf (horizontal, folio 22): letra mínima de origen 11.50 pt, escala 0.87, efectiva 9.99 pt
+                03-paquetes-2.pdf (horizontal, folio 23): letra mínima de origen 11.50 pt, escala 0.87, efectiva 9.99 pt
+                04-paquetes-3.pdf (horizontal, folio 24): letra mínima de origen 11.50 pt, escala 0.87, efectiva 9.99 pt
+                05-paquetes-4.pdf (horizontal, folio 25): letra mínima de origen 11.50 pt, escala 0.87, efectiva 9.99 pt
+                06-paquetes-5.pdf (horizontal, folio 26): letra mínima de origen 11.50 pt, escala 0.87, efectiva 9.99 pt
+                07-ejemplo.pdf (horizontal, folio 27): letra mínima de origen 11.50 pt, escala 0.87, efectiva 9.99 pt
+                08-trazabilidad.pdf (horizontal, folio 28): letra mínima de origen 11.50 pt, escala 0.87, efectiva 9.99 pt
+                ... y 60 más (ver el informe .md)
+CUMPLE     8    Sin cajas desbordadas ni referencias sin resolver
+NO CUMPLE  9    Cada figura y cada tabla se cita desde el texto
+                no se cita: fig:7-edt
+                no se cita: fig:7-edt-ejemplo
+                no se cita: fig:7-edt-matriz
+                no se cita: fig:7-edt-paquetes-1
+                no se cita: fig:7-edt-paquetes-2
+                no se cita: fig:7-edt-paquetes-3
+                no se cita: fig:7-edt-paquetes-4
+                no se cita: fig:7-edt-paquetes-5
+                ... y 21 más (ver el informe .md)
+CUMPLE     10   Ningún título va seguido directamente de una tabla o una figura
+                15 archivos de contenido revisados
+CUMPLE     11   Sin residuos: Escuela, dupla, nombres, Proyecto Semestral, meses en inglés, horas hombre, cifras en dinero (Artículo 50.2)
+                33 fuentes y 84 páginas revisadas
+CUMPLE     21   Ninguna tabla ni título se llama «Formulario T-NN» sin ser el formulario
+                las tablas y títulos que nombran un formulario son los de formularios/
+NO APLICA  12   Hoja resumen coincide con la foliación
+                no hay hoja resumen
+CUMPLE     17   Cada subdocumento empieza en página nueva, arriba
+                todas las aperturas en la parte superior de página nueva
+CUMPLE     18   Ningún título queda en las cinco últimas líneas de la página
+                ningún título al pie
+CUMPLE     19   Ninguna tabla deja su cabecera o su leyenda sola al pie
+                todas las tablas empiezan con filas en su primera página
+NO CUMPLE  20   El encabezado nombra el subdocumento al que pertenece cada página
+                SOBRE2_AUDIT_SUBDOC07_20261125.pdf folio 7: el encabezado dice Subdocumento 7, la página es preliminar
+                SOBRE2_AUDIT_SUBDOC07_20261125.pdf folio 8: el encabezado dice Subdocumento 7, la página es preliminar
+CUMPLE     13   Nombres de archivo conforme a los Artículos 49 a 51 y al Comunicado 10
+                SOBRE2_AUDIT_SUBDOC07_20261125.pdf
+                AUDIT-Formulario-T-14.pdf
+                AUDIT-Formulario-T-15.pdf
+                AUDIT-Formulario-T-18.pdf
+CUMPLE     14   Colores de texto legibles (contraste 4,5:1 o más)
+                audit-marino sobre blanco 14.66:1
+                audit-tinta sobre blanco 15.65:1
+                audit-secundario sobre blanco 5.83:1
+                audit-turquesa sobre blanco 2.43:1, solo para filetes y nodos, nunca texto chico
+AVISO      15   Reglas de escritura: sin punto y coma, raya ni guion doble (aviso)
+                subdocumentos\07-plan-trabajo\formularios\T-14.tex: 69 punto y coma
+                subdocumentos\07-plan-trabajo\formularios\T-14.tex: 63 guion doble
+                subdocumentos\07-plan-trabajo\formularios\T-15.tex: 4 punto y coma
+                subdocumentos\07-plan-trabajo\formularios\T-15.tex: 3 guion doble
+                subdocumentos\07-plan-trabajo\formularios\T-18.tex: 7 punto y coma
+                subdocumentos\07-plan-trabajo\formularios\T-18.tex: 2 guion doble
+                subdocumentos\07-plan-trabajo\graficos\conciliacion-3.2\gantt-formulario.tex: 2 guion doble
+                subdocumentos\07-plan-trabajo\graficos\conciliacion-3.2\horas-formulario.tex: 3 punto y coma
+                ... y 2 más (ver el informe .md)
+CUMPLE     16   Marcadores por completar
+------------------------------------------------------------------------------
+21 puntos, 4 no cumplen, 1 avisos

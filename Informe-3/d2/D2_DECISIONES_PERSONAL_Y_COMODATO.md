@@ -11,7 +11,7 @@ Primero buscar reasignación dentro de la nómina presupuestada. La hoja «Capac
 | M21–M24, cada mes | Datos | 146 h | 80 h | 66 h | CLP 2.112.000 |
 | M21–M24, cada mes | QA | 77 h | 40 h | 37 h | CLP 740.000 |
 
-Las referencias nominales son supuestos de comparación. Para las filas de la tabla, el refuerzo suma CLP 12.516.000 si se cumplen esos supuestos. El escenario combinado de refuerzo e IVA referencial con crédito diferido conserva CLP 172.875 de holgura de línea con precios recalculados. Cualquier contratación requiere acreditar primero la brecha y aprobar el costo antes de cargarlo a la Fila A. [Conciliación de capacidad](AUD-15_CONCILIACION_CAPACIDAD.md) · [Escenarios de caja](AUD-15_ESCENARIOS_REFUERZO_Y_CAJA.md)
+Las referencias nominales son supuestos de comparación. Para las filas de la tabla, el refuerzo suma CLP 12.516.000 si se cumplen esos supuestos. Ese cupo ya figura en el costo presupuestado del Informe 3. Cualquier contratación requiere acreditar primero la brecha, conciliar el cupo y aprobar el costo incremental antes de cargarlo a la Fila A. La holgura de CLP 172.875 corresponde al escenario histórico de precios recalculados, capital inicial CLP 260.413.654 e IVA referencial con crédito diferido. [Conciliación de capacidad](AUD-15_CONCILIACION_CAPACIDAD.md) · [Escenarios históricos](AUD-15_ESCENARIOS_REFUERZO_Y_CAJA.md) · [Escenarios del Informe 3](AUD-20_DECISIONES_MODELO.md#disponibilidad-de-fondos-y-aceptación-de-h5)
 
 ## Comodato · AUD-21
 

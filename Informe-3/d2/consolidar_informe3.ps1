@@ -1,7 +1,9 @@
+param([string]$Salida, [string]$Entrada)
+
 $ErrorActionPreference = 'Stop'
-$root = (Get-Location).Path
+$root = (Resolve-Path (Join-Path $PSScriptRoot '../..')).Path
 $inputDir = Join-Path $root 'Informe-3/d2'
-$out = Join-Path $root 'Informe-3/AUDIT-Informe3-Modelo-Economico.xlsx'
+$out = if ($Salida) { [System.IO.Path]::GetFullPath($Salida) } else { Join-Path $root 'Informe-3/AUDIT-Informe3-Modelo-Economico.xlsx' }
 $excel = New-Object -ComObject Excel.Application
 $excel.DisplayAlerts = $false
 $excel.Visible = $false
@@ -15,6 +17,7 @@ function Set-Row($sheet, $row, $values) {
         $cell = $sheet.Cells.Item($row,$i+1)
         $v = $values[$i]
         if ($v -is [string] -and $v.StartsWith('=')) { $cell.Formula = $v }
+        elseif ($v -is [ValueType]) { $cell.Value2 = [double]$v }
         elseif ($null -ne $v) { $cell.Value2 = $v }
     }
 }
@@ -25,6 +28,14 @@ function Header($sheet,$range) {
     $r.Interior.Color = 6373678
 }
 try {
+    if ($Entrada) {
+        $book = $excel.Workbooks.Open([System.IO.Path]::GetFullPath($Entrada),0,$true)
+        . (Join-Path $PSScriptRoot 'controles_modelo_excel.ps1')
+        Set-ControlesModelo $book $excel
+        $book.SaveAs($out,51)
+        Write-Output $out
+        return
+    }
     $source = $excel.Workbooks.Open((Join-Path $inputDir 'D2_MODELO_TRABAJO_OFERTA_D2.xlsx'),0,$true)
     $book = $excel.Workbooks.Open((Join-Path $inputDir 'D2_RESUMEN_MANDANTE_OFERTA_D2.xlsx'),0,$true)
     $excel.Calculation = -4135
@@ -146,9 +157,6 @@ try {
     }
     $adjust.Range('B22:D57').Locked = $false
     $book.Names.Add('MensualidadBase','=''Parámetros D2''!$B$15') | Out-Null
-    $adjust.Range('B22:B57').Validation.Add(7,1,1,'=AND(ISNUMBER(B22),B22>=0,C22<=MensualidadBase+B22)')
-    $adjust.Range('C22:C57').Validation.Add(7,1,1,'=AND(ISNUMBER(C22),C22>=0,C22<=MensualidadBase+B22)')
-    $adjust.Range('B22:C57').Validation.ShowError = $true
     $p.Range('B33:B34').Locked = $false
     for ($i=2; $i -le 58; $i++) {
         $flow.Range("D$i").Formula = ('=SUMIF(''Ajustes de operación''!$A$2:$A$57,A{0},''Ajustes de operación''!$B$2:$B$57)-SUMIF(''Ajustes de operación''!$A$2:$A$57,A{0},''Ajustes de operación''!$C$2:$C$57)' -f $i)
@@ -250,12 +258,12 @@ try {
     $curva=$book.Worksheets.Item('Curva S')
     $chart=$curva.ChartObjects().Add(340,24,660,320).Chart
     $chart.ChartType=4
-    $chart.SetSourceData($curva.Range('A1:D57'))
-    foreach ($line in $chart.SeriesCollection()) { $line.XValues = $curva.Range('A2:A57') }
+    $chart.SetSourceData($curva.Range('B1:D57'),2)
+    foreach ($line in $chart.SeriesCollection()) { $line.XValues = $curva.Range('A2:A57'); $line.Smooth = $false }
     $chart.HasTitle=$true
     $chart.ChartTitle.Text='Curva S mensual · CLP'
     foreach ($sheet in $book.Worksheets) {
-        if ($sheet.Name -in $keep) { continue }
+        if ($sheet.Name -in $keep -or $sheet.Visible -ne -1 -or $sheet.ProtectContents) { continue }
         $sheet.UsedRange.Columns.AutoFit() | Out-Null
         foreach ($column in $sheet.UsedRange.Columns) { if ($column.ColumnWidth -gt 62) { $column.ColumnWidth=62; $column.WrapText=$true } }
         $sheet.UsedRange.Rows.AutoFit() | Out-Null
@@ -270,6 +278,8 @@ try {
     foreach ($name in @('PARÁMETROS','COSTOS DE OPERACION','TARIFAS DE OPERACION','FLUJO DE CAJA NETO','FLUJO DE CAJA COMPLETO','PCUESFUERZO')) {
         $book.Worksheets.Item($name).Visible=0
     }
+    . (Join-Path $PSScriptRoot 'controles_modelo_excel.ps1')
+    Set-ControlesModelo $book $excel
     $excel.Calculation=-4105
     $excel.CalculateFullRebuild()
     $checks=@(@('RESUMEN','C8',7984400845.222496),@('RESUMEN','H8',9796810853.033737),@('RESUMEN','G21',1235043315.7805276),@('RESUMEN','G22',0.8366132363093755),@('Sensibilidad','F5',155747160.3787424),@('Sensibilidad','F6',0),@('Hardware del mandante',"H$($n+1)",225384199))

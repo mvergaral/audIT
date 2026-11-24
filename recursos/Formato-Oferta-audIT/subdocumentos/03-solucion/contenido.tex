@@ -1,7 +1,6 @@
 % ============================================================================
 %  Subdocumento 3. Introducción al Alcance de la Solución
 %  Índice obligatorio del Comunicado 10, capítulo 3: 3.1 a 3.4.
-%  Responde las observaciones 37 a 52 del Informe 1 (FEP01, Artículo 46).
 %  Figuras dibujadas en TikZ (figuraNativa) para que la letra del diagrama
 %  sea la del documento y el verificador la mida.
 % ============================================================================
@@ -64,13 +63,15 @@ con la marcha blanca de la Etapa 1, tiene marcha blanca en los meses 19 y 20 y p
 mes 21, que es también la aceptación final de la implementación. La operación cubre los meses 21 a 56,
 36 meses continuos con atención 24x7x365.
 
-El calendario real importa tanto como los meses contractuales, porque el Caso prohíbe pasos a
-producción entre diciembre y abril \caso*{numeral 13.3}{28}. Los meses 16 y 21 están separados por cinco
-meses, que es también la duración de esa ventana. Por eso el mes 16 sólo puede caer en mayo o junio y
-el 21 en octubre o noviembre. Con el inicio del contrato en febrero de 2027 (supuesto SA-01 de la
-\verSeccion{sec:3-supuestos}), la Etapa 1 pasa a producción en mayo de 2028, después de la temporada de fruta, y la
-Etapa 2 en octubre de 2028, después de Fiestas Patrias y antes del congelamiento siguiente. La
-\figref{3-ciclo} muestra los primeros 24 meses sobre el calendario.
+El Caso prohíbe pasos a producción entre diciembre y abril \caso*{numeral 13.3}{28}. Los meses
+contractuales 16 y 21 están separados por cinco meses. Para que ambos queden fuera del período
+protegido, M16 debe caer en mayo o junio y M21 en octubre o noviembre. Con M1 en febrero de 2027,
+M16 cae en mayo de 2028 y M21 en octubre. Con M1 en marzo, pasan a junio y noviembre. Con M1 en
+enero, M16 cae en abril. Con M1 en abril, M21 cae en diciembre. Esos dos últimos escenarios
+requieren consulta formal a la Contraparte Técnica antes de fijar ventanas civiles. audIT mantiene
+los hitos contractuales y valida el calendario con el primer mes completo de ejecución. La
+\figref{3-ciclo}
+muestra el escenario ilustrativo de febrero, con hitos contractuales fijos.
 
 \begin{figuraNativa}[!htbp]{Ciclo contractual de los primeros 24 meses sobre el calendario, con inicio en febrero de 2027. En gris, la temporada de fruta de diciembre a abril}{3-ciclo}
 \begin{tikzpicture}[x=4.85mm,y=6.4mm,
@@ -124,8 +125,11 @@ La figura deja a la vista la consecuencia que el cronograma obligatorio impone y
 eludir: la marcha blanca de la Etapa 1 cae entera en la temporada de fruta, entre febrero y abril de
 2028. La marcha blanca no es un paso a producción ni interviene camiones, y la solución la usa a su
 favor: la verificación bloqueante corre en paralelo durante el peak de actividad, que es la condición
-más exigente para medir cuántos viajes habría detenido. Todo el montaje a bordo termina antes de
-diciembre de 2027 y se reanuda en mayo de 2028, según la \verSeccion{sec:3-implantacion}.
+más exigente para medir cuántos viajes habría detenido. El escenario de montaje inicial se concentra en M6--M9, sujeto a liberación de los lotes y sus
+ventanas, según la \verSeccion{sec:3-implantacion}. Para reunir usuarios durante el peak, los jefes
+de turno programan sesiones breves durante relevos, repiten cada sesión para los turnos sin
+representación y registran cobertura y excepciones. Los transportistas participan mediante su
+encargado y por adhesión. QA coteja la cobertura antes de habilitar el bloqueo efectivo.
 
 Tres resultados resumen lo que el mandante recibe al cierre de la implementación. Desde el mes 16
 ningún viaje asignado por la plataforma sale sin veredicto de jornada, habilitaciones y aptitud. Desde
@@ -178,7 +182,7 @@ el número.
 Lo altera en el costo. La objeción de la gerenta de administración y finanzas es un hito externo con
 fecha: dos de los tres contratos que hoy se sirven bajo costo se renegocian en 2027 \caso*{numeral
 13.2}{27}. Con el inicio en febrero de 2027, incluso la producción de la Etapa 1 llega en mayo de 2028,
-después de esa renegociación. Adelantar el costeo a la Etapa 1, como planteó el Informe 1, no alcanza.
+después de esa renegociación. El costeo operacional de Etapa 1 llegaría tarde para esa decisión.
 audIT lo resuelve en dos tiempos. En el mes 6, julio de 2027, entrega un estudio de costo real por ruta
 y por contrato construido con los datos históricos que ya existen (liquidaciones de combustible,
 peajes, neumáticos, remuneraciones y la planilla de junio de 2026) cargados en el repositorio
@@ -359,7 +363,7 @@ numeral 16.1.
 
 \begin{tabla}{Supuestos del alcance, efecto si fallan y validación}{3-supuestos}{L{12mm} L{45mm} L{50mm} X}
 ID & Supuesto & Efecto si es falso & Se valida \\ \midrule
-SA-01 & El mes 1 es febrero de 2027 & Con enero, el mes 16 cae en abril, prohibido & Firma del contrato \\
+SA-01 & M1 en febrero de 2027 para proyectar fechas civiles & Validar ventanas de montaje y producción con el M1 efectivo & Inicio contractual y calendario acordado \\
 SA-02 & Paso por terminal cada 6 días y 22~\% de terceros bajo una vez al mes & Se recalcula la cobertura mensual & Registro de portería, meses 1 a 3 \\
 SA-03 & Dos de las tres plataformas entregan datos por interfaz & Esos camiones se tratan como sin equipo & Factibilidad, meses 1 a 4 \\
 SA-04 & El sistema contable recibe datos por interfaz & Se usa intercambio de archivos con conciliación & Prueba técnica, mes 3 \\
@@ -370,12 +374,11 @@ SA-08 & Los terceros con equipo conservan su contrato con su proveedor & Pierden
 \end{tabla}
 \notaTabla{Fuente: elaboración propia. SA: supuesto del alcance.}
 
-El supuesto SA-01 es el único que audIT pide fijar en el contrato. El \art{10.2}{8} cuenta los meses
-desde la fecha de inicio, con el mes 1 como el primer mes completo de ejecución. Con la adjudicación el
-1 de diciembre de 2026 \form{T-20}{65}, una firma en enero de 2027 deja febrero como primer mes
-completo. Si el inicio fuera enero, el mes 16 caería en abril de 2028 y ninguna estrategia lo
-corregiría sin alterar el Artículo 17. El supuesto SA-08 nace de un riesgo que el Subdocumento 8 trata:
-el apagado de las redes 2G y 3G puede dejar sin señal equipos de terceros que hoy reportan posición.
+El \art{10.2}{8} cuenta los meses desde el primer mes completo de ejecución. Con la fecha de inicio
+efectiva se cotejan los pasos a producción y las ventanas civiles de montaje de S7 y T-18. Si hay
+incompatibilidad, se eleva consulta formal a la Contraparte Técnica. Los meses del Artículo 17 y de
+E-25 se mantienen. El Subdocumento 8 trata el supuesto SA-08: el apagado de redes 2G y 3G puede
+dejar sin señal equipos de terceros que hoy reportan posición.
 
 % ----------------------------------------------------------------------------
 \subsection{Restricciones del alcance}\label{sec:3-restricciones}
@@ -408,7 +411,7 @@ más personas.
 \subsection{Catálogo priorizado de requerimientos}\label{sec:3-catalogo}
 % ----------------------------------------------------------------------------
 
-El Caso no trae requerimientos y exige construirlos desde el texto, con su origen verificable
+El Caso exige construir un catálogo propio con origen verificable en el texto
 \caso*{numeral 17.1}{38}. audIT recorrió los capítulos 4 a 18 del Caso y produjo 42 requerimientos: 28
 funcionales, RF-001 a RF-028, y 14 no funcionales, RNF-001 a RNF-014. Cada uno lleva en el Formulario
 T-12 su descripción, actor, precondición, resultado esperado, prioridad, origen, componente, paquete de
@@ -483,6 +486,12 @@ la misma cadena para los 42 requerimientos, y cuatro reglas la controlan: todo p
 tiene requerimiento, exclusión o supuesto, todo requerimiento tiene origen, componente, paquete y
 prueba, todo criterio de aceptación tiene al menos un requerimiento, y ningún contexto carece de un
 requerimiento que lo justifique.
+
+La matriz individual del Formulario T-12 registra los códigos de FEP02 y su carácter, los
+parámetros del Caso y el cruce administrativo. Cada fila documenta el grado de respaldo en la
+oferta, su localizador y la evidencia prevista. Las fichas RF-003, RF-014 y RNF-005 explicitan
+las condiciones de acceso, respuesta en ruta y autorización que deben comprobarse durante
+la ejecución.
 
 % ----------------------------------------------------------------------------
 \subsection{Reglas de negocio}\label{sec:3-reglas}
@@ -716,7 +725,7 @@ puede exigírsele por la vía laboral, al transportista \caso*{capítulo 10, res
 \subsection{Atributos de calidad que el esquema resuelve}\label{sec:3-atributos}
 % ----------------------------------------------------------------------------
 
-El esquema responde a cinco atributos que el Informe 1 no analizó: interoperabilidad, escalabilidad,
+El esquema responde a cinco atributos: interoperabilidad, escalabilidad,
 seguridad, desempeño y disponibilidad. La \tabref{3-atributos} muestra, para cada uno, el dato del Caso
 que lo dimensiona y la parte del esquema que lo atiende.
 
@@ -875,8 +884,7 @@ quién son los datos: según la regla RN-10, el equipo sólo transmite dentro de
 asignado por la compañía, y fuera de ella el firmware no emite posición. La innovación 4 del Subdocumento
 13 desarrolla ese diseño.
 
-La \tabref{3-modalidades} corrige un punto que el Informe 1 dejó implícito: el nivel de evidencia real
-que habilita cada modalidad.
+La \tabref{3-modalidades} indica el nivel de evidencia que habilita cada modalidad.
 
 \begin{tabla}{Modalidades de adhesión y nivel de evidencia de jornada que habilitan}{3-modalidades}{L{24mm} L{50mm} L{30mm} X}
 Modalidad & Qué aporta el transportista & Camiones & Evidencia de jornada \\ \midrule
@@ -897,7 +905,8 @@ Se cuenta una vez por RUT, con anexo firmado por el mandante y el representante 
 del transportista, vigente, no revocado y registrado al corte. Se incluyen las modalidades completa
 y de datos. La instalación de equipos, la activación técnica y los consentimientos de
 conductores se controlan por separado; la firma del transportista no sustituye esos consentimientos.
-El corte de M9 es el 31 de octubre de 2027 bajo SA-01 (inicio en febrero de 2027).
+El corte se toma al cierre de M9. En la proyección civil SA-01 corresponde al 31 de octubre
+de 2027.
 El 40 \% corresponde a 59,2 transportistas: se requieren al menos 60 firmados y con
 59 o menos se activa el refuerzo. Las metas posteriores permanecen en 104 en M16 y 134 en M21.
 
@@ -944,19 +953,52 @@ no exporta no bloquea la construcción del resto.
 
 La implantación respeta las condiciones del \caso{numeral 13.3}{27}. Nada entra en producción sin haber
 convivido con la forma actual de trabajar, ninguna actividad inmoviliza camiones y el despliegue avanza
-por proceso, no como un evento único. El montaje a bordo empieza por la flota propia, porque la compañía
-puede instruir a sus conductores y el equipo es suyo sin negociación: un piloto de diez camiones en San
-Bernardo en el mes 6, julio de 2027, y la flota propia completa en el mes 9. Cada camión pasa por un
-terminal cada seis días, unas cinco veces al mes, de modo que el límite no es la frecuencia de paso sino
-la dotación de técnicos en el horario de relevo. Los 34 camiones de terceros sin equipo se montan desde el
-mes 7, a medida que sus dueños firman la modalidad completa.
+por proceso. El escenario base contempla 182 equipos a bordo de primera instalación para 148
+camiones propios y 34 de terceros sin dispositivo. La \tabref{3-montaje} cruza el piloto interno
+con los lotes externos. Cada montaje aprovecha un paso ordinario por terminal y se programa de acuerdo
+con el tiempo de permanencia disponible.
 
-El montaje se detiene entre diciembre de 2027 y abril de 2028, los meses 11 a 15, y se reanuda en mayo de
-2028. Las metas de planificación son 24 de esos 34 camiones montados al mes 16 y 31 al mes 21, que
-corresponden al 70~\% y al 90~\% de adhesión. De los 226 camiones de terceros, el 22~\% pasa por un
-terminal menos de una vez al mes, unos 50 camiones \caso*{capítulo 10, restricción 5}{23}. Para ellos el
-plan no supone un paso: mientras no se monten operan en modalidad de datos o documental, y la torre ve su
-nivel de evidencia. El Subdocumento 7 declara la cobertura acumulada mes a mes.
+\begin{tabla}{Montaje inicial de equipos a bordo por terminal y mes contractual}{3-montaje}{L{42mm} R{14mm} R{14mm} R{14mm} R{14mm} R{14mm}}
+Terminal & M6 & M7 & M8 & M9 & Total \\ \midrule
+San Bernardo & 10 & 12 & 12 & 12 & 46 \\
+Antofagasta & 0 & 12 & 12 & 10 & 34 \\
+Talca & 0 & 12 & 12 & 10 & 34 \\
+Los Ángeles & 0 & 12 & 12 & 10 & 34 \\
+Puerto Montt & 0 & 12 & 12 & 10 & 34 \\
+Altas del mes & 10 & 60 & 60 & 52 & 182 \\
+Altas acumuladas & 10 & 70 & 130 & 182 & 182 \\
+\end{tabla}
+\notaTabla{Fuente: línea base 3.2, hoja «Instalación por lote».}
+
+M6 libera el piloto en San Bernardo con diez camiones propios y personal de audIT. De M7 a M9 el
+proveedor monta 172 unidades, con 140 minutos de puesto por unidad. audIT prepara cada equipo en
+banco, verifica la entrega, configura y registra la activación. Cada terminal reserva 28 horas de
+puesto por lote de doce y 23 horas y 20 minutos por lote de diez. Antes de autorizar cada lote, D2 y
+D4 cotejan con la Contraparte Técnica la lista de camiones, ventana de permanencia, técnico y
+traslado confirmados, equipos disponibles y serie asignada. Para terceros comprueban además el
+anexo vigente con modalidad completa y el permiso del dueño. El acta de lote registra estas
+condiciones, la instalación efectiva, la prueba del kit y el estado de la activación.
+
+El 22~\% de los 226 camiones subcontratados pasa por terminal menos de una vez al mes
+\caso*{capítulo 10, restricción 5}{23}. Mientras no se concrete el montaje, los camiones operan en
+modalidad de datos si tienen interfaz homologada y autorización, o con validación documental y la
+regla de bloqueo de la \verSeccion{sec:3-adhesion}. El conteo por RUT y el montaje por vehículo
+tienen registros y criterios de corte propios. Si falta una condición de liberación, el equipo
+registra el faltante, reprograma el camión para una ventana habilitada y eleva el cambio con
+sensibilidad por mes de montaje, activación, comunicaciones e IVA. El Subdocumento 7 y los formularios
+T-14 y T-18 usan la misma línea base. La cobertura real se informa desde las actas y el escenario
+presupuestado concentra todo el montaje inicial en M6--M9.
+
+\subsubsection{Balizas y lectores de portería}\label{sec:3-balizas-lectores}
+
+Electrónica instala y prueba cinco lectores de portería del mandante en M5--M6, uno por terminal,
+con dos horas por sitio y diez horas en total. Entre M7 y M9, Electrónica registra y fija 70 balizas
+base por mes, a 15 minutos cada una: 17,5 horas al mes y 52,5 horas para las 210 unidades. Los cinco
+terminales programan el turno por activo. Como pauta de capacidad, cada terminal reserva 3,5 horas
+mensuales para 14 balizas. D4 ajusta esa distribución según el padrón de semirremolques y su paso,
+conservando la meta mensual y usando control de cambios si la disponibilidad obliga a reprogramarla.
+El registro distingue alta y prueba funcional desde la portería, conserva la serie y el activo
+asociado, y reserva 21 balizas y 19 equipos a bordo para reposición, fuera del montaje inicial.
 
 La verificación bloqueante se prueba en paralelo antes de bloquear. En los meses 13 y 14 corre sobre todas
 las asignaciones sin detener ninguna y registra cuántos viajes habría detenido, por qué motivo y con qué
@@ -965,11 +1007,42 @@ activa. En el mes 16 bloquea en toda la flota. Si la marcha blanca muestra un mo
 operación no puede absorber, se corrige el dato o la regla antes del paso a producción, nunca se apaga el
 bloqueo.
 
-Cada paso a producción ocurre en la segunda quincena del mes, después del cierre mensual de nueve días. La
-reversión es posible porque nada se pierde: los documentos de transporte ya emitidos son del sistema
-contable y no dependen de la plataforma, y los equipos a bordo conservan lo enviado durante 72 horas para
-reenviarlo tras una conmutación (\verSeccion{sec:4-dc-secundario}). La estabilización posterior a cada
-paso tiene dotación en los cinco terminales en el horario de relevo, que el Subdocumento 7 dimensiona.
+Cada paso a producción se programa en la segunda quincena del mes, una vez concluido el cierre
+mensual de nueve días y fuera de las ventanas de restricción vehicular y de temporada de fruta.
+Antes de liberar el cambio, la Contraparte Técnica revisa el calendario vigente y distingue
+viajes fronterizos de casos reproducibles en preproducción. Ante cierres sucesivos de Los
+Libertadores, la torre conserva el registro local, mantiene el seguimiento por excepción y
+reconcilia los eventos al reabrir la ruta. QA reproduce la interrupción del enlace, cola y reconexión en
+preproducción con datos controlados cuando la prueba en ruta no puede realizarse en la ventana,
+y programa la validación en terreno con la Contraparte Técnica según el criterio de aceptación.
+Los hitos E-25 se mantienen.
+
+\subsubsection{Reversión y conciliación del corte}\label{sec:3-reversion}
+
+Un incidente crítico atribuible a la nueva versión o una diferencia de conciliación sin explicar activa
+el «Procedimiento de reversión» del Formulario T-18. La mesa de servicio detecta el incidente en hasta
+15 minutos. La jefatura del proyecto y el líder de operación deciden en hasta 30 minutos e informan a
+la Contraparte Técnica. El equipo de operación redirige el tráfico a la versión anterior en hasta
+15 minutos y conserva los registros transaccionales y el punto de control del corte.
+
+El sistema contable conserva la autoridad sobre los documentos de transporte ya emitidos. El reenvío
+de eventos desde la copia de 72 horas del equipo a bordo se coteja por identificador, con deduplicación
+y un objetivo de hasta 20 minutos por camión. En hasta 24 horas el líder de datos concilia órdenes,
+viajes, e-POD y folios contables contra el registro vigente. Si falla el arranque del firmware, el
+mecanismo A/B retorna a la partición funcional. Si requiere recuperación presencial, se usa la
+imagen anterior en el siguiente paso autorizado por terminal. La jefatura informa la causa raíz
+en hasta cinco días hábiles. El expediente de reversión registra tiempos, diferencias, duplicados
+y su resolución. Antes de cada paso a producción se ejecutará CP-SYS-20 del Formulario T-17
+\ifcsname r@T17-sec:9-cp-sys-20\endcsname
+  (p.~\folio{sec:9-cp-sys-20} del Formulario T-17)
+\else
+  \ifcsname r@sec:9-cp-sys-20\endcsname
+    (folio~\folio{sec:9-cp-sys-20})
+  \fi
+\fi
+para comprobar conmutación, reenvío, conciliación y retorno del firmware conforme a los
+criterios del ensayo. El Subdocumento 7 dimensiona la estabilización posterior en el horario
+de relevo de los cinco terminales (\verSeccion{sec:7-implantacion}).
 
 % ----------------------------------------------------------------------------
 \subsection{Operación}\label{sec:3-operacion}
@@ -980,7 +1053,23 @@ todo incidente que impida asignar, emitir un documento o recibir una emergencia 
 \caso*{RT-21.06}{34}. El área de tecnología del mandante tiene nueve personas y no puede sostener sola una
 plataforma con 182 equipos distribuidos \caso*{capítulo 10, restricción 13}{24}. audIT opera como servicio
 la plataforma, el ciclo de vida del equipo a bordo y la mesa de ayuda, y transfiere al área del mandante la
-administración funcional y la primera línea de atención a usuarios internos.
+administración funcional y el ingreso de solicitudes internas. La mesa N1 de audIT mantiene
+seis agentes y un FTE de suplencias y picos para sostener la cobertura comprometida.
+
+Desde M19, la intervención presencial se despacha al proveedor externo. Desde M21, audIT reserva
+80 horas internas al mes para recepción, supervisión, stock y coordinación de urgencias. El
+proveedor ejecuta las reposiciones, las tres visitas correctivas y las dos rondas regionales
+mensuales previstas. N1 registra la incidencia, el coordinador de campo moviliza al proveedor
+y confirma el acceso por terminal, y Operación vigila los plazos y escala cualquier riesgo de
+incumplimiento a la Contraparte Técnica. D2 y D4 verifican antes del traspaso la capacidad, las rutas,
+la ventana de relevo y el stock para los cinco terminales. Las visitas y rondas son una provisión
+de capacidad. La cobertura y los tiempos de respuesta se mantienen si la demanda rebasa esa
+provisión.
+
+La carga variable baja por escalones desde M25, M33 y M45 sólo con dos meses sin incidentes P1,
+menos de diez pendientes y demanda dentro de la capacidad. Cuando una condición falla, Operación
+mantiene o restituye la capacidad del tramo anterior y escala los refuerzos en el Comité de
+Servicio. La mesa, la guardia y el SLA permanecen según lo ofertado.
 
 La continuidad tiene dos ejes separados. Si cae la región primaria de nube, la recuperación conmuta a la
 región secundaria con un tiempo de recuperación de cuatro horas y una pérdida máxima de quince minutos de

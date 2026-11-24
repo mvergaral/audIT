@@ -1,12 +1,12 @@
 [
   {
     "file": "gantt-panorama.pdf",
-    "caption": "Horizonte contractual M1-M56",
+    "caption": "Horizonte contractual M1--M56",
     "label": "7-gantt-panorama"
   },
   {
     "file": "gantt-cpm.pdf",
-    "caption": "Red CPM de 25 actividades y G13",
+    "caption": "Cadena de control hasta H12",
     "label": "7-gantt-cpm"
   },
   {
@@ -21,7 +21,7 @@
   },
   {
     "file": "gantt-e1.pdf",
-    "caption": "Construcción de la Etapa 1",
+    "caption": "Construcción por capacidades E1",
     "label": "7-gantt-e1"
   },
   {
@@ -31,32 +31,32 @@
   },
   {
     "file": "gantt-e2.pdf",
-    "caption": "Etapa 2 y adhesión",
+    "caption": "Capacidades E2 y adhesión",
     "label": "7-gantt-e2"
   },
   {
     "file": "gantt-implantacion.pdf",
-    "caption": "Calidad, capacitación e implantación",
+    "caption": "Calidad e implantación",
     "label": "7-gantt-implantacion"
   },
   {
     "file": "gantt-innovaciones.pdf",
-    "caption": "Ventanas de las innovaciones",
+    "caption": "Ventanas de innovaciones",
     "label": "7-gantt-innovaciones"
   },
   {
     "file": "gantt-hitos.pdf",
-    "caption": "Fechas planificadas y límites de H1-H12",
+    "caption": "Lotes de montaje y condiciones",
     "label": "7-gantt-hitos"
   },
   {
     "file": "gantt-control.pdf",
-    "caption": "G13, reservas y control de fechas",
+    "caption": "G13 reservas y cierre técnico",
     "label": "7-gantt-control"
   },
   {
     "file": "gantt-operacion.pdf",
-    "caption": "Continuidad operacional M21-M56",
+    "caption": "Continuidad operacional M21--M56",
     "label": "7-gantt-operacion"
   }
 ]

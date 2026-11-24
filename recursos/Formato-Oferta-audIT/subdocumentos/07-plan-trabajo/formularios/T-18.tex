@@ -23,14 +23,14 @@ calendario que resulta del inicio en febrero de 2027.
 
 \begin{tabla}[ancho=completo, fuente=condensada]{Secuencia de implantación de la Etapa 1}{t18-etapa1}{L{22mm} L{28mm} X L{36mm}}
 Meses & Calendario & Qué se habilita & Condición para avanzar \\ \midrule
-6 a 10 & Julio a noviembre 2027 & Montaje de la flota propia y de los terceros adheridos & Acta de montaje por camión \\
-10 a 12 & Noviembre 2027 a enero 2028 & A13: 40 días hábiles, días 182 a 222; familiarización diez días antes del fin de A09 y luego práctica completa y evaluación por turnos y relevos & G13 disponible: PREPROD probado y congelado, datos ficticios y material por perfil; usuarios certificados al cierre \\
+6 a 9 & Julio a octubre 2027 & Piloto 10 y lotes externos 60, 60 y 52 en cinco terminales & Adhesión, stock, ventana y acta por unidad \\
+10 a 12 & Noviembre 2027 a enero 2028 & A13: 40 días hábiles, días 182 a 222; familiarización desde G13; práctica desde día 192 y luego práctica completa y evaluación por turnos y relevos & G13 disponible: PREPROD probado y congelado, datos ficticios y material por perfil; usuarios certificados al cierre \\
 13 & Febrero 2028 & Vigencias, jornada, viaje y posición en registro paralelo, primero en San Bernardo & Conciliación diaria sin diferencias \\
 13 y 14 & Febrero y marzo 2028 & Documento de transporte y verificación bloqueante en paralelo, sin bloquear & Motivos de bloqueo explicados \\
 14 & Marzo 2028 & Liquidación por las dos vías, transportista por transportista & Diferencias explicadas \\
 15 & Abril 2028 & Bloqueo efectivo en la flota propia con regla de excepción y portal del transportista & Seis condiciones del Art. 17.3 \\
 16 & Mayo 2028 & Paso a producción en la segunda quincena, después del cierre mensual & Acta de aceptación, hito H7 \\
-16 y 17 & Mayo y junio 2028 & Estabilización con un analista por terminal en el relevo & 30 días hábiles sin incidente crítico \\
+17 y 18 & Junio y julio 2028 & Estabilización con un analista por terminal en el relevo & 30 días hábiles sin incidente crítico \\
 \end{tabla}
 \notaTabla{Fuente: elaboración propia sobre el \art{17.1}{12} y el \caso{numeral 13.3}{27 y 28}.}
 
@@ -44,10 +44,11 @@ La Etapa 2 se implanta sobre la Etapa 1 en producción. La \tabref{t18-etapa2} d
 
 \begin{tabla}[ancho=completo, fuente=condensada]{Secuencia de implantación de la Etapa 2}{t18-etapa2}{L{22mm} L{28mm} X L{36mm}}
 Meses & Calendario & Qué se habilita & Condición para avanzar \\ \midrule
-16 a 18 & Mayo a julio 2028 & Montaje de los terceros adheridos pendientes y talleres externos registrados & Acta de montaje por camión \\
+13 a 15 & Febrero a abril 2028 & Escalamiento lógico de plataformas de terceros sin intervención física & Factibilidad, consentimiento y posición conciliada \\
 19 & Agosto 2028 & Portal del cliente con posición autorizada y registro de talleres & Cero posiciones sin autorización \\
 19 y 20 & Agosto y septiembre 2028 & Retornos propuestos sin asignación automática y cálculo de emisiones & Conciliación con viajes reales \\
-21 & Octubre 2028 & Paso a producción en la segunda quincena e inicio de la operación & Acta de aceptación final, hito H12 \\
+21 & Octubre 2028 & Operación desde el inicio de M21; aceptación final al cierre de M21 & Acta de aceptación final, hito H12 \\
+21 a 24 & Octubre 2028 a enero 2029 & Estabilización E2 y cierre de integraciones/migración & Acta de traspaso y diferencias resueltas \\
 \end{tabla}
 \notaTabla{Fuente: elaboración propia sobre el \art{17.1}{12}.}
 
@@ -80,10 +81,28 @@ Paso & Acción & Responsable & Tiempo máximo \\ \midrule
 \end{tabla}
 \notaTabla{Fuente: elaboración propia sobre el \art{78.2}{40} y el \caso{RT-03.13}{31}.}
 
-La reversión no pierde información. Los documentos de transporte ya emitidos son del sistema contable y no
-dependen de la plataforma, y los equipos a bordo conservan lo enviado durante 72 horas. Si la reversión
-afecta un firmware, se reinstala la imagen anterior que guarda el gabinete del terminal en el siguiente
-paso del camión. Durante la marcha blanca la reversión es más simple: la forma actual de trabajar sigue
-operando en paralelo y basta con dejar de usar el proceso nuevo.
+El sistema contable conserva el registro de los documentos ya emitidos. Se preservan los registros
+transaccionales del corte y se cotejan órdenes, viajes, e-POD y folios contables antes y después del
+reenvío, con deduplicación por identificador de evento y registro de las diferencias. Si la reversión
+afecta un firmware, el mecanismo A/B retorna a la partición funcional cuando falla el arranque. La
+imagen anterior en el terminal respalda la recuperación en la siguiente visita si se requiere atención
+presencial. En marcha blanca, el proceso vigente en paralelo permite continuar mientras se concilian
+los registros. El ensayo CP-SYS-20 del Formulario T-17 verifica la secuencia y conserva el resultado
+en el expediente de pruebas.
+
+
+\tituloBloqueFormulario{Condiciones de montaje y atención de campo}
+
+El calendario base completa los 182 equipos en M9. La adhesión por transportista, el
+consentimiento por conductor, el montaje y la activación son registros distintos. El proveedor
+ejecuta los lotes masivos; audIT conserva banco, recepción y prueba. Si no se recibe una firma,
+kit o ventana a tiempo se registra desviación y se reprograma el escenario técnico y financiero;
+no se certifica como instalada la unidad pendiente. Los 140 minutos por kit son estimación de
+puesto a validar en piloto y deben caber en la estadía normal.
+
+Las 210 balizas iniciales se montan M7--M9, y cinco lectores M5--M6; 21 balizas y 19 equipos
+a bordo son reserva de reposición. En operación hay 80 horas internas mensuales para campo
+y un servicio externo de visitas y rondas. La contratación exige disponibilidad por terminal,
+registro de despacho y escalamiento para mantener el tiempo de respuesta y resolución.
 
 \end{formulario}

@@ -1879,28 +1879,30 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 
 \par\noindent\textbf{Variante trazada a RF-021 (S3/T-12):} Con permiso por cliente, viaje y ventana, publicar posición cuya antigüedad se conoce. Durante ventana autorizada, refrescar en hasta dos minutos y mostrar antigüedad; antes o después, negar acceso. Cambiar el viaje a otro cliente y repetir con token viejo: no compartir ubicación ni rutas de competidores. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.\par
-\subsubsection*{CP-SYS-20 — Actualización Masiva de Firmware FOTA en Flota Propia con Rollback Automático}\label{sec:9-cp-sys-20}
+\subsubsection*{CP-SYS-20 — Resiliencia en Despliegue: Rollback FOTA de Firmware y Reversión Transaccional de Paso a Producción con Conciliación de Datos (T-18)}\label{sec:9-cp-sys-20}
 \addcontentsline{toc}{subsubsection}{CP-SYS-20}
-Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y el criterio siguiente.
+Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y el criterio siguiente, cubriendo tanto la resiliencia a nivel de dispositivo como el protocolo integral de reversión transaccional de un paso a producción formalizado en el Formulario T-18.
 
 \par\noindent \textbf{ID:} \texttt{CP-\allowbreak{}SYS-\allowbreak{}20}\par
-\par\noindent \textbf{Nivel y Tipología:} Prueba de Sistema E2E / Mantenimiento Remoto de Firmware y Resiliencia FOTA.\par
+\par\noindent \textbf{Nivel y Tipología:} Prueba de Sistema E2E / Mantenimiento Remoto de Firmware y Reversión de Despliegue (Rollback y Convivencia).\par
 \par\noindent \textbf{Requerimiento Trazado:} RNF-011.\par
-\par\noindent \textbf{Precondiciones:} Campaña FOTA de actualización de firmware v2.1.0 configurada para 10 camiones propios detenidos en terminales durante su ventana de mantenimiento.\par
+\par\noindent \textbf{Precondiciones:} Dos escenarios combinados en ambiente de Preproducción/Staging: (a) Campaña FOTA v2.1.0 configurada para 10 camiones propios detenidos en terminal; (b) Paso a producción simulado de release con 50 órdenes de transporte en curso, 20 viajes en tránsito y convivencia activa entre servicios de Etapa 1 y Etapa 2.\par
 \par\noindent \textbf{Pasos de Ejecución:}\par
 \begin{enumerate}
-\item Antes de transferir, instalar o activar, verificar ubicación, vehículo detenido, autorización y ventana. Repetir la solicitud con ubicación en ruta, velocidad positiva o permiso ausente: debe rechazarse sin escribir la partición ni reiniciar.
-\item Despachar imagen de firmware firmada criptográficamente hacia los 10 gateways telemáticos habilitados en terminal.
-\item Los dispositivos descargan la imagen en la partición inactiva (partición B) en segundo plano.
-\item En 9 camiones el reinicio y verificación de arranque (watchdog health check) es exitoso.
-\item En un equipo se utiliza una imagen de ensayo con firma y huella válidas, pero con fallo de arranque inducido en el fixture. Probar por separado una firma/huella inválida, que debe rechazarse antes de instalación; ese rechazo no equivale al ensayo de reversión de un arranque fallido.
-\item Evaluar el comportamiento del mecanismo de recuperación dual A/B.
+\item \textbf{Verificación previa de seguridad:} Antes de transferir, instalar o activar firmware o release, verificar ubicación, vehículo detenido, autorización y ventana de mantenimiento. Repetir la solicitud con ubicación en ruta, velocidad positiva o permiso ausente: debe rechazarse de inmediato sin escribir la partición ni reiniciar el servicio.
+\item \textbf{Ensayo FOTA y rollback dual A/B en hardware:} Despachar imagen de firmware firmada criptográficamente hacia los 10 gateways telemáticos. Nueve completan la actualización exitosamente; en el décimo se induce un fallo de arranque en el fixture tras verificar firma/huella válidas. Comprobar que el watchdog de arranque (CP-HW-09, 60 s) revierta de manera autónoma e incondicional a la partición A funcional, preservando los datos de telemetría de 72 h, la identidad criptográfica y la conectividad.
+\item \textbf{Disparador de reversión de plataforma (Paso 1 T-18):} Inyectar una anomalía de conciliación crítica en el flujo de asignación/despacho durante la liberación del nuevo componente en la nube. La guardia de la mesa de servicio detecta y tipifica el incidente en un tiempo máximo de 15 minutos.
+\item \textbf{Decisión y autorización de rollback (Paso 2 T-18):} El Jefe de Proyecto y el Líder de Operación formalizan la decisión de reversión informando a la Contraparte Técnica dentro de una ventana máxima de 30 minutos.
+\item \textbf{Conmutación de tráfico en API Gateway (Paso 3 T-18):} El Ingeniero SRE conmuta las rutas del Ingress Controller/API Gateway redirigiendo el 100\,\% del tráfico hacia la versión anterior ($N-1$) en un tiempo máximo de 15 minutos, sin caída de sesión de la Torre de Control.
+\item \textbf{Drenaje de eventos y replay telemático (Paso 4 T-18):} Los equipos a bordo reenvían los paquetes de eventos represados desde su memoria local de 72 horas. Se verifica la absorción masiva en no más de 20 minutos por camión conforme al perfil de reconexión de RT-03.13, garantizando orden cronológico y descarte estricto de duplicados mediante clave idempotente de evento.
+\item \textbf{Conciliación de transacciones y consistencia ERP (Paso 5 T-18):} El Líder de Datos ejecuta la conciliación automatizada entre las órdenes en curso, pre-despachos, conformidades e-POD y los documentos emitidos en el ERP contable, certificando en menos de 24 horas que ninguna transacción quedó inconsistente o duplicada.
+\item \textbf{Cierre y causa raíz (Paso 6 T-18):} Emisión de la minuta de reversión y apertura del expediente de causa raíz hacia el mandante con plazo contractual de 5 días hábiles (\art{78.2}{40}).
 \end{enumerate}
 
-\par\noindent \textbf{Datos de Entrada Sintéticos:} Paquete de firmware \texttt{.ota} de 45 MB firmado digitalmente.\par
-\par\noindent \textbf{Resultado Esperado:} Los 9 camiones actualizan a v2.1.0 sin incidencias; el equipo con fallo revierte de forma autónoma a la partición A funcional, preservando registros, configuración e identidad. Las solicitudes fuera de terminal, en movimiento o sin permiso se rechazan sin instalación o reinicio. Se mide el tiempo completo desde activación hasta recuperación y conciliación; el perfil de watchdog es el de CP-HW-09 (60 s por intento). No se promete recuperación total en menos de 30 s cuando el watchdog por sí solo espera 60 s.\par
-\par\noindent \textbf{Pass/Fail y Severidad:} Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: \textbf{P1 (Bloqueante)}.\par
-\par\noindent \textbf{Entorno:} Staging / Banco HIL + Gateways Físicos.\par
+\par\noindent \textbf{Datos de Entrada Sintéticos:} Paquete \texttt{.ota} de 45 MB firmado digitalmente; lote de 50 transacciones de despacho sintéticas con 5 viajes en transición de estado e-POD y fallo transaccional inducido en base de datos.\par
+\par\noindent \textbf{Resultado Esperado:} En hardware, los 9 gateways actualizan a v2.1.0 y el equipo con fallo revierte autónomamente a partición A en $\le 60$\,s sin pérdida de memoria. En plataforma, conmutación de tráfico a versión $N-1$ ejecutada en $\le 15$\,min; eventos represados sincronizados en $\le 20$\,min/unidad; 100\,\% de las transacciones conciliadas con el ERP en $\le 24$\,h sin pérdida de datos ni duplicación de documentos contables; disponibilidad de Torre conservada.\par
+\par\noindent \textbf{Pass/Fail y Severidad:} Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia o desincronización transaccional es Fail. Severidad: \textbf{P1 (Bloqueante)}.\par
+\par\noindent \textbf{Entorno:} Staging AKS + Preproducción Cloud / Banco HIL con 10 Gateways Físicos.\par
 
 
 Los reportes del catálogo se incorporan al pipeline con los controles de la \tabref{9-t13-gates} del T-13: cero pruebas fallidas, líneas de lógica de negocio \(\ge\)70 \% y ramas \(\ge\)80 \% por separado; complejidad \(\le\)15 por función y cero vulnerabilidades críticas o altas abiertas en el artefacto promovido. Las exclusiones requieren justificación y no pueden ocultar lógica de negocio. El catálogo diseñado no acredita que esos resultados se hayan obtenido.
@@ -2579,7 +2581,7 @@ Este ensayo verifica la activación física del botón de cabina, su registro y 
 
 \par\noindent\textbf{ID:} \texttt{CP-\allowbreak{}HW-\allowbreak{}06}\par
 \par\noindent\textbf{Nivel y Tipología:} Prueba de hardware HIL de activación y entrega SOS por evento.\par
-\par\noindent\textbf{Requerimiento Trazado:} SOS con cobertura, \caso{RT-09.01}{32}. Las variantes de la ficha verifican RF-027 y RNF-001.\par
+\par\noindent\textbf{Requerimiento Trazado:} SOS con cobertura, \caso{RT-09.01}{32}. La variante de la ficha verifica RNF-001.\par
 \par\noindent\textbf{Precondiciones:} Equipo de cabina en banco HIL con SIM M2M multioperador y cobertura celular real documentada. Preparar tráfico ordinario y verificar la sincronización de relojes.\par
 \par\noindent\textbf{Pasos de Ejecución:}\par
 \begin{enumerate}
@@ -2591,8 +2593,6 @@ Este ensayo verifica la activación física del botón de cabina, su registro y 
 \par\noindent\textbf{Resultado Esperado:} Las diez pulsaciones producen un registro correlacionable y un aviso prioritario en la Torre 24x7 en un máximo de 15 segundos por evento con cobertura.\par
 \par\noindent\textbf{Pass/Fail y Severidad:} Pass si todas las pulsaciones cumplen el límite individual, quedan registradas y se entregan con prioridad, y las variantes aplicables son conformes. Fail ante cualquier incumplimiento. Severidad: \textbf{P1 (Bloqueante)}.\par
 \par\noindent\textbf{Entorno:} Banco HIL, red móvil real y consola Torre.\par
-
-\par\noindent\textbf{Variante trazada a RF-027 (S3/T-12):} Reproducir conducción acumulada 4 h 15 min y área segura alcanzable en 35 min: alertar antes de agotar cinco horas con diez minutos de holgura. Mover área a 50 min: no recomendarla como alcanzable legalmente. La alerta en movimiento es pasiva y no solicita escritura ni confirmación táctil. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.\par
 
 \par\noindent\textbf{Variante trazada a RNF-001 (S3/T-12):} Reproducir velocidad cero y velocidad positiva; intentar escritura, formulario y confirmación en ambos estados. En movimiento descartar toda captura manual y mostrar solo aviso pasivo. La recuperación de interfaz detenida no debe perder datos; parámetros de milisegundos son objetivos adicionales, no permiso para interactuar conduciendo. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.\par
 

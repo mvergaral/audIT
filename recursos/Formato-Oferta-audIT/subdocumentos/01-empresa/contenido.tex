@@ -214,7 +214,23 @@ audIT organiza el trabajo en células multifuncionales y utiliza revisión cruza
 
 El gobierno institucional de audIT asigna responsabilidades de calidad, seguridad de la información y gestión del conocimiento. Sus comités revisan indicadores, autorizan transiciones y supervisan acciones correctivas antes de transferir productos al entorno operacional del mandante.
 
-A continuación se describen las instancias colegiadas de gobierno, los ciclos anuales de auditoría bajo normas internacionales, la matriz de escalamiento técnico y la estrategia corporativa de gestión del conocimiento.
+A continuación se describen el régimen de delegación corporativa que salvaguarda la marcha institucional durante la ejecución contractual, las instancias colegiadas de gobierno, los ciclos anuales de auditoría bajo normas internacionales, la matriz de escalamiento técnico y la estrategia corporativa de gestión del conocimiento.
+
+\subsection{Régimen de delegación corporativa y continuidad institucional}\label{sec:1-delegacion-corporativa}
+
+Para garantizar la conducción ininterrumpida de audIT SpA durante el período de máxima dedicación contractual (M1--M20), en el cual el Jefe de Proyecto y Representante Legal, don Alejandro Hermosilla Díaz, compromete dedicación preferente del 100\% FTE al contrato con Transportes Curimón S.A., la compañía prevé el régimen de delegación de facultades corporativas de la tabla siguiente. Su formalización se acredita con el instrumento del Sobre N.º 1.
+
+Este régimen separa estrictamente la dirección ejecutiva del proyecto de la administración societaria ordinaria. Las funciones de representación legal formal, poderes bancarios mayores y suscripción contractual con Curimón se mantienen radicadas en el Representante Legal titular. En paralelo, la administración corporativa general, gestión laboral interna, compras ordinarias y representación gremial se delegan formalmente en la Dirección de Operaciones Corporativas, con suplencia designada e instancias colegiadas de escalamiento, tal como se especifica en la \tabref{1-delegacion-funciones}.
+
+\begin{tabla}[ancho=completo]{Matriz de funciones corporativas y régimen de delegación (M1--M20)}{1-delegacion-funciones}{L{33mm} L{30mm} L{28mm} X L{28mm}}
+Función Corporativa & Rol Titular Delegado & Suplencia Designada & Facultades y Alcance Delegado & Escalamiento / Supervisión \\ \midrule
+Administración Ordinaria y RR.HH. & Directora de Administración y Finanzas & Jefe de Gestión de Personas & Gestión de personal no asignado a Curimón, contrataciones operacionales y pago de remuneraciones corporativas. & Directorio audIT SpA (informe mensual) \\ \midrule
+Adquisiciones y Contratos Generales & Subgerente de Operaciones Corporativas & Encargado de Abastecimiento & Compras ordinarias de insumos de oficina, suscripciones de software transversal y convenios marco hasta 500 UF. & Representante Legal titular si excede 500 UF \\ \midrule
+Operaciones y Continuidad de Negocio & Director de Operaciones Corporativas & Auditor Interno de Procesos & Conducción de la infraestructura propia, soporte de otros servicios y supervisión de sistemas internos de audIT. & Comité Ejecutivo (CEGCN trimestral) \\ \midrule
+Representación Legal Contractual Curimón & Representante Legal Titular (Alejandro Hermosilla D.) & CISO / Oficial de Seguridad (Mauricio Arancibia T.) & Firma de actas de hitos, estados de pago E-25, compromisos vinculantes y poderes judiciales ante el mandante. & Asamblea de Accionistas / Directorio \\
+\end{tabla}
+
+Esta distribución cubre la administración ordinaria durante la dedicación de la jefatura al contrato. La vigencia de las facultades de firma y suplencia se verifica en los poderes del expediente administrativo.
 
 \subsection{Comités institucionales de gobierno y cadencias de decisión}\label{sec:1-comites}
 
@@ -250,7 +266,7 @@ La compañía ejecuta un ciclo anual de aseguramiento de calidad y seguridad de 
 \begin{itemize}
   \item \textbf{Auditorías Internas Semestrales de Calidad (ISO 9001:2015):} En los meses de mayo y noviembre de cada año, el equipo de auditoría interna evalúa el 100\% de los procesos de desarrollo de software, pruebas de banco de hardware y gestión de mesa de ayuda, verificando la trazabilidad de requisitos y la aplicación de los planes de pruebas.
   \item \textbf{Auditorías Internas Semestrales de Seguridad (ISO/IEC 27001:2022):} En los meses de marzo y septiembre, se audita el cumplimiento de los 93 controles del Anexo A de la norma, con énfasis en el control de acceso, gestión de incidentes, cifrado en reposo y tránsito, y segregación lógica de entornos.
-  \item \textbf{Auditoría Externa Anual de Mantenimiento / Recertificación:} Ejecutada por un organismo certificador internacional independiente debidamente acreditado (como Bureau Veritas o SGS), validando formalmente la eficacia del sistema integrado de gestión.
+  \item \textbf{Auditoría Externa Anual de Mantenimiento / Recertificación:} Ejecutada por un organismo certificador independiente debidamente acreditado ante el Instituto Nacional de Normalización (INN), validando formalmente la eficacia del sistema integrado de gestión.
   \item \textbf{Procedimiento de Acciones Correctivas y Preventivas (CAPA):} Toda no conformidad detectada en auditorías internas o externas se incorpora de inmediato a un flujo de trabajo formal en el sistema de gestión corporativo, exigiendo análisis de causa raíz mediante metodología de los 5 Porqués o diagrama de Ishikawa, con un plazo perentorio de cierre y verificación de eficacia no superior a treinta (30) días calendario.
 \end{itemize}
 
@@ -303,24 +319,37 @@ La comparabilidad con Curimón se establece por función y por magnitud declarad
   \item El Proyecto 3 aporta experiencia en plataforma híbrida Azure, aproximadamente 2,5 TB mensuales de transacciones logísticas y más de 800 usuarios concurrentes, con SLA declarado de 99,6 \% mensual. La comparación se centra en el procesamiento de datos y la concurrencia. S4 dimensiona la plataforma para Curimón.
 \end{enumerate}
 
+\subsection{Capacidad operativa y absorción de escala para el contrato}\label{sec:1-capacidad-escala}
+
+El contraste entre la experiencia previa en flotas de 120 camiones y la escala de Transportes Curimón S.A. (374 camiones y 96.000 viajes anuales) se aborda mediante una asignación estructurada por frentes operativos, articulando la dotación permanente de 22 profesionales de planta con el peak proyectado de 37 FTE en las fases críticas de implantación, sin requerir un crecimiento lineal no justificado en mano de obra.
+
+La \tabref{1-capacidad-frentes} desglosa analíticamente la carga del caso, la ventana de ejecución, la capacidad neta asignada y el modelo técnico que asegura la absorción de escala en cada frente de trabajo:
+
+\begin{tabla}[ancho=completo, fuente=condensada]{Capacidad operativa por frente y absorción de escala frente al caso}{1-capacidad-frentes}{L{28mm} L{30mm} L{20mm} X L{28mm}}
+Frente operativo & Carga y escala del caso & Ventana S7 & Capacidad neta y modelo de absorción & Respaldo y validación \\ \midrule
+Montaje e integración de flota & 182 montajes: 148 propios y 34 terceros sin equipo; 192 terceros con equipo existente & Montaje A11/A18; integración A10/A18, según secuencia de S7 & Instalación en terminal durante paradas programadas; integración mediante plataformas de terceros según factibilidad y adhesión & Actas de montaje por vehículo, pruebas de integración y conciliación con S4/T-11 \\
+Plataforma Cloud y Software & 96.000 viajes/año; peak estrés 450 viajes/día y 570 sesiones & M1--M12 (E1), M13--M18 (E2) & 8 ingenieros software/datos (Célula Alfa). Escalabilidad horizontal en AKS e IoT Hub: el volumen de transacciones se absorbe por elasticidad cloud, sin crecimiento lineal de personal & Pruebas de estrés CP-PERF-01 (450 viajes/día), compuertas G1--G4 y matriz T-12 \\
+Aseguramiento de Calidad (QA) & 120 casos de prueba, 12 hitos contractuales y una ficha consolidadora; 42 requisitos & M1--M20 (A12, A22, campañas) & 4 ingenieros QA/Ciberseguridad (Célula Gamma). Ejecución automatizada de pipelines CI/CD y pruebas continuas de regresión & Formulario T-13, catálogo T-17 y protocolos por hito H1--H12 \\
+Torre de Control y Operación 24/7 & 374 unidades en ruta, 5 terminales y mesa de ayuda permanente & M13--M15 (piloto), M16 en adelante & 4 turnos rotativos 4x4 (2 analistas por turno). Escalamiento Nivel 2 en $\le 15$\,min. Peak de 37 FTE en M13--M16 con monitores de marcha blanca ya nivelados en T-15 & Protocolo de escalamiento (§1.3), acuerdos OLA regionales (§1.1.2) y DRP semestral \\ \bottomrule
+\end{tabla}
+
+El T-15 dimensiona la capacidad prevista. Para acreditar los 182 montajes se requiere cruzar por terminal y mes las ventanas de los vehículos, los turnos confirmados y el rendimiento observado en el piloto. La cobertura de Torre de Control requiere una nómina por turno, suplencias y acuerdos de soporte territorial vigentes.
+
 \subsection{Certificaciones institucionales y alineamiento normativo}\label{sec:1-certificaciones}
 
 audIT distingue las certificaciones institucionales declaradas, los procesos de certificación y los estándares aplicados. El cotejo de vigencia y alcance requiere los instrumentos originales del expediente administrativo.
 
 \begin{itemize}
   \item \textbf{Certificación declarada vigente -- ISO 9001:2015:} Sistema de Gestión de la Calidad para diseño, desarrollo, pruebas, implantación, integración de hardware y soporte de software y sistemas IoT telemáticos. Su vigencia y alcance se cotejan con el certificado del Sobre N.º 1.
-  \item \textbf{Certificación en proceso -- ISO/IEC 27001:2022:} audIT utiliza la alternativa de plan institucional con hitos verificables dentro de doce meses permitida por el \art{34.1}{22}. Declara auditoría Fase 2 con Bureau Veritas Certification S.A., expediente N.º BV-EXP-2026-CL-8921. El certificado aún no ha sido emitido. El Anexo 1.A mantiene el compromiso adicional de entregar el certificado oficial, con identificación y mecanismo de verificación del organismo certificador, en H1 (M1), respaldado por la declaración notarial del Representante Legal individualizada en el Sobre N.º 1.
+  \item \textbf{Certificación en proceso -- ISO/IEC 27001:2022:} audIT utiliza la alternativa de plan institucional con hitos verificables dentro de doce meses permitida por el \art{34.1}{22}. Declara auditoría Fase 2 con Andes Certificaciones Técnicas SpA, expediente N.º ACT-EXP-2026-CL-8921. El certificado aún no ha sido emitido. El Anexo 1.A compromete su entrega en M1, primer hito del plan institucional ISO 27001, con identificación y mecanismo de verificación del organismo certificador. El H1 contractual corresponde a M2 según E-25.
   \item \textbf{Estándares y marcos aplicados:} NIST SP 800-207 y CSF 2.0 para arquitectura y gestión de seguridad; OWASP ASVS 4.0 Nivel 2 y Top 10 para desarrollo seguro; SLSA Nivel 3 para trazabilidad de compilaciones (\transv{RT-11.24}{24}); ISO/IEC 20000-1 e ISO 22301 para soporte y continuidad. Su aplicación no se presenta como certificación corporativa obtenida; los controles se desarrollan en S4, S6 y S9.
 \end{itemize}
-
-La cobertura objetivo comprende los 374 vehículos de Curimón. El diseño de S4 y T-11 prevé 182 montajes nuevos en terminal, correspondientes a 148 camiones propios y 34 de terceros sin equipo. Los 192 terceros restantes conservan su equipamiento y se integran mediante sus plataformas según factibilidad y adhesión. Las actas de montaje y la evidencia de integración se registran por separado.
-
 
 Las competencias sectoriales comprenden el régimen de jornada de conductores y la normativa de sustancias peligrosas, protección de datos, ciberseguridad y seguridad vial. Su aplicación al caso se analiza en S2 y se traduce en requisitos en S3; los controles técnicos se describen en los capítulos de solución correspondientes.
 
 \subsection{Credenciales financieras y capacidad patrimonial}\label{sec:1-financiero}
 
-audIT declara antecedentes de los ejercicios 2023, 2024 y 2025, con estados financieros auditados por Nexia Auditores SpA, para evaluar la capacidad de sostener los 56 meses de contrato. Los balances, estados de resultados, notas, dictámenes y Formulario 22 del SII se individualizan en la Carpeta de Idoneidad Económica del Sobre N.º 1 para el cotejo previsto en los \art{34.1}{22} y \art{39}{25}, numeral 4.
+audIT declara antecedentes de los ejercicios 2023, 2024 y 2025, con estados financieros auditados por Austral Auditores Consultores SpA, para evaluar la capacidad de sostener los 56 meses de contrato. Los balances, estados de resultados, notas, dictámenes y Formulario 22 del SII se individualizan en la Carpeta de Idoneidad Económica del Sobre N.º 1 para el cotejo previsto en los \art{34.1}{22} y \art{39}{25}, numeral 4.
 
 La \tabref{1-ratios-respaldo} reúne los cinco indicadores declarados y sus respaldos. Liquidez y prueba ácida describen cobertura de pasivos corrientes; apalancamiento, la relación entre pasivos y patrimonio; ROE y ROA, la rentabilidad declarada. La proyección de caja del contrato se presenta en la oferta económica. La compañía declara además capital de trabajo neto positivo para más de seis meses de operación sin cobranzas inmediatas y capacidad de constituir las garantías bancarias exigidas; estos antecedentes requieren cotejo documental.
 
@@ -330,7 +359,7 @@ Liquidez Corriente & 2,14 & Balance General Auditado 2023--2025 & Sobre N.º 1, 
 Prueba Ácida & 1,88 & Balance General y Notas de Inventario & Sobre N.º 1, Carpeta Idoneidad Económica, Fols. 63--78 \\
 Apalancamiento (\textit{Leverage}) & 0,38 & Estado de Situación Financiera Auditado & Sobre N.º 1, Carpeta Idoneidad Económica, Fols. 79--88 \\
 Retorno Patrimonial (ROE) & 18,5\% & Estado de Resultados Consolidados & Sobre N.º 1, Carpeta Idoneidad Económica, Fols. 89--98 \\
-Retorno sobre Activos (ROA) & 12,8\% & Dictamen Nexia Auditores SpA & Sobre N.º 1, Carpeta Idoneidad Económica, Fols. 99--112 \\
+Retorno sobre Activos (ROA) & 12,8\% & Dictamen Austral Auditores Consultores SpA & Sobre N.º 1, Carpeta Idoneidad Económica, Fols. 99--112 \\
 \end{tabla}
 
 Las tarifas, honorarios y valores de la oferta se presentan en el Sobre N.° 3, conforme al \art{50.2}{29} de las Bases Administrativas.
@@ -352,7 +381,7 @@ La asignación de dedicación, los refuerzos de T-15 y los protocolos de coordin
 
 \section{Alianzas}\label{sec:1-alianzas}
 
-audIT declara alianzas corporativas de nube, aprovisionamiento industrial y soporte territorial. La condición de partner y la vigencia y alcance de los convenios requieren cotejo de sus instrumentos. Las alianzas exclusivas de este contrato se desarrollan en el Capítulo 12.3.
+audIT declara alianzas corporativas vigentes de infraestructura en la nube, aprovisionamiento industrial y soporte territorial en ruta. El alcance contractual de cada alianza requiere cotejar las cartas de respaldo, los convenios específicos y la nómina de especialistas en el Sobre N.º 1 y su resumen en el Formulario T-8.
 
 A continuación se exponen las alianzas estratégicas vigentes en materia de infraestructura en la nube, hardware industrial y soporte operativo territorial:
 
@@ -380,6 +409,6 @@ La compañía mantiene acuerdos corporativos de aprovisionamiento directo y sopo
 
 Los centros y convenios se individualizan en la sección~\ref{sec:1-red-regional}, que concentra la cobertura territorial y las condiciones de atención. Sus acuerdos OLA contemplan protocolos de intervención y auditorías semestrales conforme a ISO 9001 e ISO/IEC 20000-1, incluida la calibración del instrumental; esta referencia no declara certificaciones adicionales de los talleres.
 
-La red registra diagnósticos, recambios y números de serie con firma digital mediante el módulo PWA de asistencia. La custodia y trazabilidad del stock se ajustan a T-11. La gobernanza contractual, los OLA y los protocolos de auditoría se integran a la operación desde M1; el detalle de participación contractual corresponde al Capítulo 12.3.
+La red registra diagnósticos, recambios y números de serie con firma digital mediante el módulo PWA de asistencia. La custodia y trazabilidad del stock se ajustan a T-11. La gobernanza contractual, los OLA y los protocolos de auditoría se integran a la operación desde M1; los antecedentes documentales y cartas de compromiso formal con los talleres autorizados se incorporan en el expediente del Sobre N.º 1 y en el Formulario T-8.
 
 \nocite{cisbenchmarks2024, ley19799, ley21377, ley21663, ley21719, iso9001, iso12207, iso20000_1, iso22301, iso27001, ds43minsal, ds298, codigo_trabajo_25bis, nist_sp800_207, nist_csf2, owasp_asvs4}

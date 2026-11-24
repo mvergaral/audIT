@@ -243,12 +243,10 @@ para el seguimiento de remolques \parencite{teltonika_trailer}. El lector de por
 semirremolque que sale aunque lo tire un camión sin equipo audIT.
 
 \paragraph{Delimitación frente a las bases} El seguimiento de remolques con balizas ya se vende en el
-mercado, así que la innovación no está en la baliza. Está en tres usos que cambian decisiones del caso.
-La verificación bloqueante comprueba el semirremolque que efectivamente sale y no el declarado. El
-kilometraje de cada semirremolque sale de su tiempo acoplado sobre la traza del tractocamión, lo que
-extiende a los semirremolques el kilometraje real que el criterio 26 pide y que la solución base mide
-solo en el camión. Y los 44 equipos refrigerados registran temperatura y apertura de puerta durante el
-viaje. Ninguno de los catorce asuntos que la arquitectura debe resolver \caso*{numeral 17.4}{39} ni
+mercado. La innovación combina verificación del acople real para el despacho y registro de temperatura
+y apertura de puerta en los 44 equipos refrigerados. El kilometraje trazable del semirremolque apoya el
+mantenimiento preventivo del criterio 26. Se verifica con el método del T-17 y queda fuera del
+beneficio incremental de esta ficha. Ninguno de los catorce asuntos que la arquitectura debe resolver \caso*{numeral 17.4}{39} ni
 ninguna de las decisiones pendientes \caso*{numeral 16.1}{34} pide identificar el semirremolque
 acoplado ni medir la condición de la carga, de modo que la innovación no cae en la exclusión del
 \art{30}{20}.
@@ -286,26 +284,24 @@ semirremolque medido se activa en la marcha blanca, y su primera medición ocurr
 \caso{capítulo 11}{24}: las balizas y los lectores de portería del Formulario T-11, más la
 integración en los tres servicios de negocio. En costo operacional agrega la reposición de balizas al
 término de su batería y un tráfico celular menor, porque el evento de acople viaja en los mensajes que
-el G26I ya envía. El beneficio tiene tres partes: impedir la salida de un semirremolque con la
-revisión técnica vencida, programar la mantención de los semirremolques con kilometraje medido en lugar
-de estimado, y respaldar ante el cliente la condición de la carga refrigerada. El flujo de caja de la
-Oferta Económica refleja la innovación como inversión en equipamiento en la Etapa~1 y como costo de
-reposición durante la operación.
+el G26I ya envía. El beneficio incremental se estima por separado para la detección de acoples con
+documentación inadecuada y para el respaldo de temperatura de la carga. Para valorizarlo se requiere
+medir la frecuencia y el costo atribuible de cada evento. El equipamiento del mandante y las partidas
+atribuibles a audIT se detallan por pagador en la Oferta Económica.
 
 \paragraph{Indicador de verificación} La \tabref{13-indicadores3} fija los indicadores. La primera línea
-base sale del Caso, y las otras dos se miden en la Etapa 1 porque el Caso no las entrega.
+base sale del Caso. La línea base térmica se levanta en Etapa 1.
 
 \begin{tabla}{Indicadores de la innovación 3}{13-indicadores3}{X L{32mm} L{30mm} L{36mm}}
 Indicador & Línea base & Meta & Momento de medición \\ \midrule
 Asignaciones con semirremolque propio verificado por medición & No se verifica al asignar & 95 \% o más & Marcha blanca, antes del mes 16 \\
-Semirremolques propios con kilometraje medido & Línea base a medir en la Etapa 1 & 100 \% de los que tienen baliza & Tercer mes de operación \\
 Viajes refrigerados con registro continuo de temperatura & Línea base a medir en la Etapa 1 & 100 \% & Primera temporada de diciembre a abril \\
 \end{tabla}
 \notaTabla{Fuente: elaboración propia sobre el Caso, numerales 2.2 y 4.4, pp. 6 y 10, y capítulo 18, p. 43.}
 
 La primera meta no llega al 100 \% porque un semirremolque propio tirado por un camión sin equipo
-audIT solo se lee en la portería. Los tres indicadores se miden con datos que la propia solución
-produce, de modo que su verificación no depende de terceros.
+audIT solo se lee en la portería. Se coteja la identificación contra el acople observado en terminal.
+La temperatura se contrasta con sonda patrón y se informa por viaje elegible.
 
 \paragraph{Riesgo de adopción} Cada riesgo se declara con su probabilidad, su impacto, la mitigación y
 la contingencia, como pide \transv{RT-26.04}{44}. El mayor es el acople falso con la baliza de un
@@ -444,12 +440,11 @@ de 60~×~60~mm o más e iluminación ámbar de alto contraste.
 detención \caso*{RT-09.01}{32}, la autenticación sin manipulación \caso*{RT-12.11}{32}, la interfaz
 para guantes sin interacción en marcha \caso*{RT-13.08}{33} y la resiliencia desconectada de 72 horas
 \caso*{RT-17.01}{33} constituyen el alcance base comprometido y no se presentan como
-innovación. Lo que agrega esta ficha son tres elementos. La anticipación predictiva circadiana, que
-sugiere pausas preventivas antes de que el conductor ingrese a tramos críticos sin infraestructura o
-enfrente el valle biológico de microsueño de madrugada. En esa franja, a las 04:40, ocurrió el
+innovación. El catálogo calificado para el criterio 28 también forma parte del alcance base. La
+anticipación circadiana agrega pausas preventivas antes de tramos críticos y del período de menor
+alerta de madrugada. En esa franja, a las 04:40, ocurrió el
 accidente del 14 de febrero de 2026, con un conductor que no había completado su descanso
-\caso*{capítulo 1}{4}. La ontología, gobernanza y sincronización por actualización remota en terminales de un catálogo calificado para
-camiones de 45 toneladas con servicios de higiene, agua potable y seguridad para el descanso. Y un modelo social y ergonómico no punitivo
+\caso*{capítulo 1}{4}. La síntesis local por voz entrega el aviso anticipado, y un modelo social y ergonómico no punitivo
 para los 258 conductores externos subcontratados \caso*{numeral 2.3}{6}, conforme a las restricciones 1
 y 2 \caso*{capítulo 10}{23} y a la Ley N.º~20.123 \parencite{ley20123}, que transforma una herramienta de control patronal en
 un asistente de seguridad y bienestar.
@@ -462,20 +457,20 @@ TRL 6 es un objetivo de validación del prototipo integrado en entorno represent
 catálogo local y síntesis de voz), en la capa de servicios (servicio de gobernanza de paradores y
 seguridad vial en la torre de control) y en la de presentación (portal para consulta pasiva). En la
 EDT es el paquete 12.5, que se ejecuta con los paquetes 4.1, firmware a bordo (meses 4 a 9), y 5.1,
-contexto Personas y cumplimiento (meses 6 a 10). La validación con conductores reales ocurre en la
-marcha blanca de los meses 13 a 15. El beneficio es verificable antes
-del mes 16, como valora \transv{RT-26.08}{45}. La validación de los paradores y sus atributos se
+contexto Personas y cumplimiento (meses 6 a 10). La validación con conductores reales se programa en la marcha blanca de M13 a M15. El ensayo
+mide el resultado incremental antes de M16, como valora \transv{RT-26.08}{45}. La validación de los paradores y sus atributos se
 consolida durante la campaña de cobertura de la Etapa~1, y la calibración de la ventana circadiana con
 los turnos reales se ajusta en los talleres de diseño ergonómico del mes cuatro.
 
 \paragraph{Impacto económico} La inversión requerida es incremental sobre el software de borde y los
 talleres ergonómicos participativos, mientras que el levantamiento del catálogo se absorbe dentro del
 recorrido de la campaña de medición de cobertura que exige el \caso{RT-03.24}{31}, sin costo
-logístico adicional. En costo operacional
-reduce la búsqueda errática de estacionamiento en ruta, con un efecto en combustible que se mide en la
-Etapa~1. El beneficio esperado es reducir la exposición a detenciones inseguras, incumplimientos de jornada y uso de dispositivos en marcha. Su magnitud se evaluará con los indicadores de seguridad y adopción; no se garantiza eliminación de siniestros ni de multas.
+logístico adicional. El costo operacional comprende el mantenimiento del motor circadiano y la
+auditoría de privacidad. El beneficio esperado es reducir la exposición a detenciones inseguras,
+incumplimientos de jornada y uso de dispositivos en marcha. Su magnitud se estima con las métricas de
+seguridad y adopción y con evidencia comparable de consumo y siniestralidad.
 
-En el flujo de caja de la Oferta Económica, la innovación se registra en la partida CAPEX de desarrollo de software de borde y talleres ergonómicos, y en OPEX bajo la línea de servicios de actualización y soporte de cartografía segura.
+En el flujo de caja de la Oferta Económica, la innovación se registra en la partida CAPEX de desarrollo de software de borde y talleres ergonómicos, y en OPEX en el soporte incremental del motor circadiano.
 
 \paragraph{Indicador de verificación} La efectividad de recomendación se calcula como 100 × episodios con recomendación válida y oportuna / total de episodios en que el oráculo del protocolo exige recomendar una parada, con meta de al menos 98\%. Una recomendación es válida y oportuna si identifica un parador con atributos de acceso y servicios verificados, compatible con el vehículo y alcanzable antes de agotar el tiempo legal de conducción, y emite el aviso acústico con la anticipación necesaria. El protocolo fija ruta, vehículo, tiempo remanente, catálogo y estado conocido del parador; un oráculo independiente determina el resultado esperado. La falta de un parador alcanzable y una alerta tardía cuentan como fallos, no se excluyen para mejorar el porcentaje. Se informa además el número total de episodios, fallos por causa y resultados por corredor. Con denominador cero no se informa una tasa de éxito.
 

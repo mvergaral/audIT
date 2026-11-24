@@ -1,0 +1,33 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {chapter}{Ficha del documento}{3}{section*.2}%
+\ttl@starttoc {subdoc@1}
+\contentsline {chapter}{\numberline {3}Introducción al Alcance de la Solución}{6}{section*.4}%
+\contentsline {section}{\numberline {3.1}Resumen Ejecutivo de la Solución}{7}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Alcance}{9}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Criterio de reparto entre la Etapa 1 y la Etapa 2}{9}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Alcance de la Etapa 1}{10}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Alcance de la Etapa 2}{11}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}Decisión sobre el sistema de gestión de transporte de 2013}{12}{subsection.3.2.4}%
+\contentsline {subsection}{\numberline {3.2.5}Exclusiones explícitas}{14}{subsection.3.2.5}%
+\contentsline {subsection}{\numberline {3.2.6}Supuestos del alcance}{14}{subsection.3.2.6}%
+\contentsline {subsection}{\numberline {3.2.7}Restricciones del alcance}{15}{subsection.3.2.7}%
+\contentsline {subsection}{\numberline {3.2.8}Catálogo priorizado de requerimientos}{16}{subsection.3.2.8}%
+\contentsline {subsection}{\numberline {3.2.9}Reglas de negocio}{18}{subsection.3.2.9}%
+\contentsline {subsection}{\numberline {3.2.10}Criterios formales de aceptación del alcance}{19}{subsection.3.2.10}%
+\contentsline {section}{\numberline {3.3}Esquema de solución}{20}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Los seis contextos y lo que decide cada uno}{21}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Evidencia de jornada y veredicto de asignación}{21}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Atributos de calidad que el esquema resuelve}{23}{subsection.3.3.3}%
+\contentsline {section}{\numberline {3.4}Explicación de la Solución}{23}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Coherencia con el problema del Capítulo 2}{23}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Funcionamiento de un viaje}{24}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Estrategia con los grupos de interés y plan de adhesión}{26}{subsection.3.4.3}%
+\contentsline {subsection}{\numberline {3.4.4}Implementación}{27}{subsection.3.4.4}%
+\contentsline {subsection}{\numberline {3.4.5}Implantación}{28}{subsection.3.4.5}%
+\contentsline {subsubsection}{\numberline {3.4.5.1}Balizas y lectores de portería}{29}{subsubsection.3.4.5.1}%
+\contentsline {subsubsection}{\numberline {3.4.5.2}Reversión y conciliación del corte}{29}{subsubsection.3.4.5.2}%
+\contentsline {subsection}{\numberline {3.4.6}Operación}{30}{subsection.3.4.6}%
+\contentsline {subsection}{\numberline {3.4.7}Correspondencia con la arquitectura lógica}{30}{subsection.3.4.7}%
+\contentsline {section}{Referencias}{32}{section*.10}%
+\contentsline {section}{Declaración de uso de IA}{32}{section*.11}%
+\contentsfinish 

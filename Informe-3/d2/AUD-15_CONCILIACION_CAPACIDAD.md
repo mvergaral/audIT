@@ -52,6 +52,28 @@ T-15 asigna **640 h mensuales** a cada paquete y **2.560 h mensuales** a toda la
 
 Para Datos, registrar **100 h/mes** de conciliación histórica en 7.2, **44 h/mes** de retiro del TMS anterior en 6.5 y **2 h/mes** de mantenimiento. Identificar ingeniería de Datos en 13.4 y reservar las horas junto con los responsables de 7.2 y 6.5. Si se confirma un puesto nominal de 160 h para ejecutar las tres tareas, quedan 14 h/mes para sus demás trabajos. Si se confirman únicamente 80 h/mes compatibles y disponibles, el déficit sería de **264 h en cuatro meses**, equivalentes a **CLP 8.448.000** a CLP 32.000/h. Con 0 h de cobertura el escenario de referencia sería **584 h y CLP 18.688.000**. La brecha de personal y su efecto presupuestario se calculan tras acreditar disponibilidad, imputación y costo marginal. [AUD-14, capacidad de Datos y ejecutores propuestos](AUD-14_COSTO_PERSONAL_POR_PERFIL.md#capacidad-de-datos-en-m21m24).
 
+### Cruce con nómina, costos y PCU
+
+| Mes | 6.5 → 13.2 / 13.4 (h) | 7.2 → 13.2 / 13.4 (h) | Valor atribuible CLP | Localizador de nómina y modelo |
+|---|---:|---:|---:|---|
+| M21 | 22 / 199 | 26 / 173 | 12.926.000 | AUD-17 Personal M13–M56, fila 17; Personal fila 22 y Costos G22 |
+| M22 | 22 / 198 | 26 / 171 | 12.810.000 | AUD-17 fila 18; Personal fila 23 y Costos G23 |
+| M23 | 22 / 197 | 26 / 171 | 12.780.000 | AUD-17 fila 19; Personal fila 24 y Costos G24 |
+| M24 | 22 / 197 | 26 / 171 | 12.780.000 | AUD-17 fila 20; Personal fila 25 y Costos G25 |
+| **Total** | **88 / 791** | **104 / 686** | **51.296.000** | **1.669 h**, alcance de implementación |
+
+La matriz D3 reproduce estos importes sumando `costo_atribuido_clp` para `cierre_ya_incluido_edt6_7` por mes, alcance y paquete. Son una atribución de horas de implementación a ejecutar durante la operación. La nómina presupuestada de cada mes es CLP 85.120.000 base más CLP 2.852.000 de cupos Datos/QA y CLP 280.000 de soporte INN-5, total CLP 88.252.000. El ajuste a caja debe descontar los cupos que ya cubren la misma tarea. Para imputar el costo por alcance en el PCU, separar capacidad de mantenimiento, guardias, horas de cierre, H12 y soporte de innovaciones, y conciliar las horas y tarifas con su ejecutor. El total atribuible de CLP 51.296.000 sirve como control, sin aplicarlo como cargo nuevo.
+
+| Ventana de apoyo | Candidato y horas semanales S1 / S2 / S3 / S4 | Fuente por completar |
+|---|---|---|
+| Seguridad M9 | Auditoría interna: 0 / 4 / 2,2 / 0. Especialista Seguridad: 0 / 0 / 4 / 0 | Identificar ejecutor y validar con el CISO la carga documental que se puede reasignar. |
+| SRE M9 | SRE/DevOps: 8 / 8 / 4,6 / 0 | Cruzar guardias y las 4 h SRE de preparación CP-SEC-05 ya incluidas en demanda. |
+| Datos M21–M23 | Ingeniería de Datos: 26 / 26 / 12 / 2 | Reservar 66 h en cada mes, dentro de 13.4 y con ventana confirmada. |
+| QA M21–M23 | Ingeniería de Pruebas: 0 / 12 / 13 / 12 | Reservar 37 h en cada mes, dentro de 13.4 y con ventana confirmada. |
+| Datos / QA M24 | Ingeniería de Datos: 12 / 16 / 24 / 14; Ingeniería de Pruebas: 0 / 8 / 13 / 16 | Validar las ventanas de entrega de los paquetes y registrar ambos saldos. |
+
+Estas 442,8 h son cupos propuestos. Registrar código, semana, tarea, disponibilidad neta, horas compartidas, tarifa y aceptación por cada ejecutor. La parte de nómina a CLP 32.000/h es una tasa de mezcla provisional, no un PCU aprobado. Para completar el PCU, dividir los costos atribuibles e identificados de cada componente por sus unidades respaldadas, comprobar horas por perfil y conciliar el total mensual con Costos. [Distribución semanal AUD-14](https://linear.app/audit-fep/issue/AUD-14#comment-46ea4dcf-0469-473c-97f6-e796826ff25e) · [Matriz de demanda D3](../d3/datos/dedicacion_mensual_d3.csv) · [Nómina AUD-17](AUD-17_FLUJO_DE_CAJA.xlsx) · [Mapa del resumen del mandante](AUD-22_MAPA_RESUMEN_MANDANTE.md)
+
 ## CP-SEC-05 · Agente y campaña de G13
 
 | Imputación | Ventana | Horas | Conciliación |

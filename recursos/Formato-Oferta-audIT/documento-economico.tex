@@ -15,6 +15,15 @@
 \input{configuracion/economico}
 % La muestra económica arma documentos de otra instancia
 \ifdefined\InstanciaForzada\AplicarInstancia{\InstanciaForzada}\fi
+\makeatletter
+\ifdefstring{\DocumentoEco}{costos}{%
+  \Version{2.1}
+  \patchcmd{\bloqueFirma}{Firma Electrónica Avanzada · Ley N.° 19.799}%
+    {Firma gráfica del representante}{}{\PackageError{documento-economico}{No se pudo ajustar el rótulo de firma}{}}
+  \patchcmd{\audit@filaficha}{\fontsize{10bp}{13bp}}{\fontsize{11bp}{14bp}}%
+    {}{\PackageError{documento-economico}{No se pudo ajustar la fuente de la ficha}{}}
+}{}
+\makeatother
 
 \begin{document}
 \expandafter\DocumentoEconomico\expandafter{\DocumentoEco}

@@ -1,6 +1,6 @@
 # Refuerzo focalizado y liquidez
 
-La hoja «Escenarios de caja» captura cinco corridas del mismo modelo. La base mantiene el capital inicial de CLP 260.413.654. Al agregar refuerzo, el modelo recalcula precios con el margen de escenario. El gasto se trata como costo interno, sin IVA de proveedor.
+Este respaldo conserva las corridas del modelo de trabajo anterior a `c9a6515`, con capital inicial de CLP 260.413.654. La hoja oculta «Escenarios de caja» mantiene esas capturas históricas. El escenario del Informe 3 y las pruebas posteriores se controlan en [Decisiones del modelo financiero](AUD-20_DECISIONES_MODELO.md#disponibilidad-de-fondos-y-aceptación-de-h5). En las corridas históricas con precio recalculado se aplicó el margen a la base de costos con refuerzo. El refuerzo se trató como costo interno.
 
 ## Alternativas de personal
 

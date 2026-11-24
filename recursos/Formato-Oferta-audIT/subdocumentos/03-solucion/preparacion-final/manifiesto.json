@@ -1,0 +1,39 @@
+{
+  "grupo": "final-s3-preparacion",
+  "instancia": "final",
+  "modo_folio": "subdocumento",
+  "archivos": [
+    {
+      "clave": "03",
+      "nombre": "SOBRE2_AUDIT_SUBDOC03_20261125.pdf",
+      "folio_inicial": 1,
+      "paginas": 33,
+      "aux": "subdocumentos/03-solucion/preparacion-final/compilacion/SOBRE2_AUDIT_SUBDOC03_20261125.aux",
+      "log": "subdocumentos/03-solucion/preparacion-final/compilacion/SOBRE2_AUDIT_SUBDOC03_20261125.log",
+      "fuentes": [
+        [
+          "subdocumentos"
+        ],
+        [
+          "subdocumentos/03-solucion"
+        ]
+      ]
+    },
+    {
+      "clave": "03T-12",
+      "nombre": "AUDIT-Formulario-T-12.pdf",
+      "folio_inicial": 1,
+      "paginas": 75,
+      "aux": "subdocumentos/03-solucion/preparacion-final/compilacion/AUDIT-Formulario-T-12.aux",
+      "log": "subdocumentos/03-solucion/preparacion-final/compilacion/AUDIT-Formulario-T-12.log",
+      "fuentes": [
+        [
+          "subdocumentos"
+        ],
+        [
+          "subdocumentos/03-solucion"
+        ]
+      ]
+    }
+  ]
+}

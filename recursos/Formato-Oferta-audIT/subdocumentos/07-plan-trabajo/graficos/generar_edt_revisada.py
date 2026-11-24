@@ -19,7 +19,7 @@ HERE=Path(__file__).resolve().parent
 BASE=HERE.parent
 ROOT=HERE.parents[4]
 OUT=HERE/'edt-revisada'; OUT.mkdir(exist_ok=True)
-P=json.loads((ROOT/'Informe-2/d2/99_Generacion/plan_detallado.json').read_text(encoding='utf-8'))['paquetes']
+P=json.loads((HERE/'conciliacion-3.2/plan_32.json').read_text(encoding='utf-8'))['paquetes']
 # Ajustes conciliados con las fichas T-19 vigentes.
 AJ=json.loads((HERE/'ajustes-paquetes.json').read_text(encoding='utf-8'))
 for paquete in P:
@@ -44,7 +44,7 @@ def page(slug,title,kicker,sub):
  return c
 def foot(c,n):
  c.setStrokeColor(G);c.line(34,47,806,47);para(c,n,34,40,770)
- c.setFillColor(N);c.setFont('Helvetica',11.5);c.drawRightString(806,12,'EDT · 02-11-2026');c.save()
+ c.setFillColor(N);c.setFont('Helvetica',11.5);c.drawRightString(806,12,'EDT · 24-11-2026');c.save()
 
 # Árbol explícito de tres niveles; las conexiones representan pertenencia, no precedencia.
 c=page('01-arbol','13 elementos · 54 paquetes','EDT / S7 §7.1 · T-14','La raíz contiene trece elementos de alcance; cada código de paquete aparece en las vistas siguientes.')

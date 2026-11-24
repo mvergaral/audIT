@@ -1,7 +1,7 @@
 {
   "12.1": {
     "entregable": "Expediente verificable del transportista",
-    "aceptacion": "50 % de adheridos con expediente en M21; 99 % de verificaciones en hasta 5 s, mensual desde M16",
+    "aceptacion": "50 \\% de adheridos con expediente en M21; 99 \\% de verificaciones en hasta 5 s, mensual desde M16",
     "red_meses": "M4; M8 a M10; M13 a M15; medición M16 a M21",
     "ventanas": [
       [
@@ -20,41 +20,40 @@
         16,
         21
       ]
-    ]
+    ],
+    "nombre": "Expediente verificable del transportista"
   },
   "12.2": {
     "entregable": "Programación dinámica de intervenciones por oportunidad de patio",
-    "aceptacion": "Metas propuestas T-19: preparación inútil reducida al menos 20 %; primer intento al menos 95 % en 20 intervenciones elegibles; sustitución hasta 30 min",
-    "red_meses": "Piloto M6; M6 a M9 y M16 a M18",
+    "aceptacion": "Metas propuestas T-19: preparación inútil reducida al menos 20 \\%; primer intento al menos 95 \\% en 20 intervenciones elegibles; sustitución hasta 30 min",
+    "red_meses": "Preparación M4-M5; piloto M6; despliegue M7-M9",
     "ventanas": [
       [
-        6,
+        4,
         9
-      ],
-      [
-        16,
-        18
       ]
-    ]
+    ],
+    "nombre": "Programación dinámica de intervenciones por oportunidad de patio"
   },
   "12.3": {
-    "entregable": "Semirremolque conectado",
-    "aceptacion": "Al menos 95 % de asignaciones verificadas; kilometraje del 100 % de balizados y temperatura continua del 100 % de viajes refrigerados, según T-19",
-    "red_meses": "M6 a M10; activación M13 a M15; M16 a M18",
+    "entregable": "Acople verificado y registro térmico del semirremolque",
+    "aceptacion": "Al menos 95 \\% de asignaciones verificadas y registro continuo de temperatura en el 100 \\% de viajes refrigerados, según T-19. Kilometraje en 8.4 y criterio 26",
+    "red_meses": "Lectores M5-M6; balizas M7-M9; activación M13-M15",
     "ventanas": [
       [
-        6,
+        5,
         10
       ],
       [
         13,
-        18
+        15
       ]
-    ]
+    ],
+    "nombre": "Acople verificado y registro térmico del semirremolque"
   },
   "12.4": {
     "entregable": "Esquema de adhesión y propiedad del dispositivo",
-    "aceptacion": "Cero posiciones fuera de ventana; reparto al 100 % de adheridos con cobro respaldado; revocaciones menores al 10 %, según T-19",
+    "aceptacion": "Cero posiciones fuera de ventana; reparto al 100 \\% de adheridos con cobro respaldado; revocaciones menores al 10 \\%, según T-19",
     "red_meses": "M2 a M3; M6 a M10; auditoría M13 a M21",
     "ventanas": [
       [
@@ -69,17 +68,19 @@
         13,
         21
       ]
-    ]
+    ],
+    "nombre": "Esquema de adhesión y propiedad del dispositivo"
   },
   "12.5": {
-    "entregable": "Bienestar del conductor y descanso en parador seguro",
-    "aceptacion": "Efectividad al menos 98 %; bloqueo 100 %; NASA-TLX menor a 35; adherencia al menos 85 %, con denominadores y protocolo de T-19",
-    "red_meses": "Catálogo M3 a M6; software M4 a M9; ensayos M10 a M12; piloto M13 a M15; producción M16",
+    "entregable": "Anticipación circadiana y aviso no punitivo de descanso",
+    "aceptacion": "Efectividad incremental al menos 98 \\%; bloqueo 100 \\%; NASA-TLX menor a 35; adherencia al menos 85 \\%, según T-19. El catálogo base se verifica por criterio 28",
+    "red_meses": "Talleres M4; software M4–M9; ensayo M10–M12; piloto M13–M15; producción M16",
     "ventanas": [
       [
-        3,
+        4,
         16
       ]
-    ]
+    ],
+    "nombre": "Anticipación circadiana y aviso no punitivo de descanso"
   }
 }

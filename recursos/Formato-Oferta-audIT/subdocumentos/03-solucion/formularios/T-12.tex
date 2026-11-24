@@ -10,6 +10,8 @@
 % ============================================================================
 \input{subdocumentos/03-solucion/formularios/trazabilidad-secciones.tex}
 \begin{formulario}{T-12}
+\renewcommand\thetable{T-12.\arabic{table}}
+\setcounter{table}{0}
 
 \providecommand\tituloBloqueFormulario[1]{%
   \par\Needspace{5\baselineskip}\vspace{14pt plus 3pt}\phantomsection\addcontentsline{toc}{section}{#1}\noindent{\sffamily\bfseries\fontsize{13bp}{16bp}\selectfont\color{audit-marino}#1}\par\vspace{6pt}\noindent}
@@ -19,7 +21,8 @@ los campos del \caso{numeral 17.1}{38} y, en la columna de trazabilidad, el cont
 lógica que atiende cada uno, su paquete de trabajo y los casos de prueba que lo verifican. Siguen el
 registro de reglas de negocio, el registro de supuestos con las veintiséis decisiones del
 \caso{numeral 16.1}{34 a 36}, los 29 criterios de aceptación con meta, mes y medición, y el registro de
-consultas y vacíos.
+consultas y vacíos. Cierra con el pronunciamiento individual sobre los RT transversales, los
+parámetros del Caso y los artículos transversales de las Bases Administrativas.
 
 \tituloBloqueFormulario{Glosario de códigos}
 
@@ -44,9 +47,13 @@ Prioridad 1, 2 y 3 & 1: su falla deja salir un camión que no debía o pierde un
 
 El requerimiento preliminar REQ-NEG-08 del Subdocumento 2, temperatura de los 44 semirremolques
 refrigerados, no tiene requerimiento en este catálogo porque ningún criterio ni restricción del Caso lo
-exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado, fuera del alcance base.
+exige. Lo atiende la innovación 3 del Subdocumento 13, acople y registro térmico del semirremolque, fuera del alcance base.
 
 \tituloBloqueFormulario{Catálogo de requerimientos y matriz de trazabilidad}
+
+Las fichas vinculan el compromiso de diseño con sus controles previstos. El estado refleja el
+respaldo descrito en la oferta. Los identificadores CP remiten a protocolos del Formulario T-17
+y sus expedientes se completarán durante la ejecución.
 
 \begin{formularioTDoce}
 
@@ -80,12 +87,12 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
   seccion      = {Sección 3.3.2},
   descripcion  = {Al asignar un viaje a un conductor externo, disponer de evidencia identificada y sellada de su jornada previa relevante, incluida la realizada para otros clientes en la medida que el anexo de adhesión lo autorice},
   actor        = {Despachador y transportista subcontratado},
-  precondicion = {Transportista con anexo de adhesión firmado o atestación del viaje},
-  resultado    = {Veredicto de descanso disponible al asignar, con su nivel de evidencia},
+  precondicion = {Para acceso instrumental, anexo vigente y alcance de datos autorizado; en validación documental, atestación firmada para el viaje},
+  resultado    = {Veredicto disponible al asignar. Evidencia de diseño: modalidades, regla RN-03 y bloqueo sin atestación válida (S3). Verificación prevista: contrastar veredictos, fuente y nivel con anexos o atestaciones en CP-SYS-05 y H7},
   prioridad    = {1. Etapa 1, mes 16},
   origen       = {Caso 4.3. CA-03. R-02 y R-07. DP-01},
-  cumple       = {Sí},
-  componente   = {Personas y cumplimiento. EDT 5.1 y EDT 9.2. CP-INT-03 y CP-SYS-05}
+  cumple       = {Parcial: compromiso sujeto a adhesión, autorización o atestación firmada},
+  componente   = {Personas y cumplimiento. EDT 5.1 y 9.2. CP-INT-03, CP-SYS-05 y CP-HW-14. Validación de adhesión en S3 y T-16}
 }
 \requisitoF{
   id           = RF-004,
@@ -212,12 +219,12 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
   seccion      = {Sección 3.4.2},
   descripcion  = {Disponer del documento electrónico de transporte emitido por el sistema contable antes del movimiento, también en un punto de carga sin cobertura, por emisión anticipada o por datos enviados por enlace satelital},
   actor        = {Conductor y sistema contable},
-  precondicion = {Punto de carga sin cobertura identificado en la caracterización en terreno},
-  resultado    = {Representación completa y conforme disponible en cabina antes del movimiento; sólo emite el sistema contable. Comprobación integral del límite de 90 segundos en CP-HW-11 y CP-PERF-05 durante A12, incluida solicitud, emisión, retorno, reensamblado y verificación (S4 y S8, R-28)},
+  precondicion = {Punto sin cobertura caracterizado; validar intercambio con el contable y homologar el tamaño máximo del documento y su retorno por enlace},
+  resultado    = {Evidencia de diseño: emisión anticipada o retorno satelital conforme, con bloqueo de movimiento (S3, S4 y riesgo R-28 de T-16). Verificación prevista en H5 y H7: solicitud, emisión, retorno, reensamblado, validación y disponibilidad en cabina en hasta 90 s},
   prioridad    = {1. Etapa 1, mes 16},
   origen       = {Caso 4.5. CA-14. R-04 y R-08. DP-09. REQ-NEG-09},
-  cumple       = {Sí},
-  componente   = {Operación de fletes, con enlace satelital del equipo a bordo. EDT 6.1 y EDT 4.1. CP-UNIT-21, CP-HW-11 y CP-PERF-05}
+  cumple       = {Parcial: diseño definido y factibilidad del retorno pendiente},
+  componente   = {Operación de fletes, contable emisor y enlace satelital. EDT 6.1 y 4.1. CP-UNIT-21, CP-HW-11 y CP-PERF-05}
 }
 \requisitoF{
   id           = RF-015,
@@ -447,12 +454,12 @@ exige. Lo atiende la innovación 3 del Subdocumento 13, semirremolque conectado,
   descripcion  = {La lectura del vehículo es de solo lectura, sin contacto con el cableado y sin afectar garantía ni sistemas de seguridad},
   categoria    = {Seguridad del vehículo},
   umbral       = {Cero mensajes transmitidos al bus del vehículo},
-  metodo       = {Análisis del bus durante la prueba de montaje y autorización del fabricante cuando la pida},
+  metodo       = {Evidencia de diseño: lectura aislada descrita en S4. Verificación prevista: analizador independiente durante lectura y reinicio, cero tramas de la solución, y autorización del fabricante cuando corresponda. Revisar garantía e interferencias antes del montaje},
   exigible     = {Contratista},
   prioridad    = {2. Etapa 1, mes 16},
   origen       = {R-06. DP-12. REQ-NEG-13},
-  cumple       = {Sí},
-  componente   = {Flota y activos, equipo a bordo. EDT 4.1 y EDT 6.3. CP-UNIT-16 y CP-HW-04}
+  cumple       = {Parcial: diseño de solo lectura con homologación pendiente},
+  componente   = {Flota y activos, equipo a bordo. EDT 4.1 y 6.3. CP-UNIT-16 y CP-HW-04 (T-17)}
 }
 \requisitoNF{
   id           = RNF-006,
@@ -611,7 +618,7 @@ validación están en la \verSeccion{sec:3-supuestos} del Subdocumento 3.
 
 \begin{tabla}[ancho=completo, fuente=condensada]{Supuestos del alcance y su fundamento}{t12-supuestos}{L{12mm} L{60mm} X}
 ID & Supuesto & Fundamento \\ \midrule
-SA-01 & El mes 1 del contrato es febrero de 2027 & Adjudicación el 1 de diciembre de 2026 y firma en enero. Único inicio que deja los meses 16 y 21 fuera de diciembre a abril sin estabilizar en el congelamiento \\
+SA-01 & Febrero de 2027 se usa para proyectar fechas civiles & M1 es el primer mes completo de ejecución. Febrero y marzo permiten M16 y M21 fuera de diciembre a abril. Con enero o abril se eleva consulta a la Contraparte Técnica por conflicto. Se mantienen los hitos E-25 \\
 SA-02 & Paso por terminal cada 6 días y 22 \% de terceros bajo una vez al mes & Restricción 5 del Caso \\
 SA-03 & Dos de las tres plataformas entregan datos por interfaz & Capítulo 5 del Caso: dos con acceso de consulta y una sin exportación \\
 SA-04 & El sistema contable recibe datos por interfaz & Hoy recibe por redigitación, lo que muestra que el dato le llega \\
@@ -724,5 +731,7 @@ V-02 & La renegociación de 2027 ocurre antes de cualquier producción posible s
 
 Los vacíos V-01 y V-02 no están en la lista del numeral 16.1 y condicionan el plan. Ambos se resuelven
 en esta oferta sin alterar el cronograma obligatorio.
+
+\input{subdocumentos/03-solucion/formularios/cumplimiento-bases.tex}
 
 \end{formulario}
