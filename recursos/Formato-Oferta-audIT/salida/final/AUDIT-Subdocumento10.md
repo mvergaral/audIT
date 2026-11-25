@@ -176,9 +176,9 @@ llegan con el agente ocupado. Ese desborde ocupa poco tiempo, porque solo uno de
 día encuentra al agente ocupado.
 
 Los puestos dedicados son uno durante las 24 horas y un segundo en el relevo de madrugada. Suman 851
-horas al mes. El paquete 13.1 tiene seis agentes en turnos, 960 horas que dejan un 11 % para
-vacaciones y capacitación, más una jornada de suplencias de 160 horas para ausencias, descansos y picos
-de cola: siete personas y 1.120 horas al mes, como presupuesta la planilla económica 3.2.
+horas en un mes promedio. El paquete 13.1 tiene seis agentes en turnos con 960 horas al mes: el
+cuadrante programa 930 horas en un mes de 31 días y deja 30 de reserva. Se suma una jornada de suplencias de 160 horas para ausencias, descansos y picos de cola: siete
+personas y 1.120 horas al mes, como presupuesta el Sobre N.º 3.
 
 El volumen de contactos es un supuesto, así que importa saber qué pasa si el real es mayor. La
 Figura 10.2 muestra el abandono en la hora punta de cada franja cuando el volumen sube
@@ -223,14 +223,14 @@ dos meses seguidos.
 
 El 30 % de los contactos que el nivel 1 no resuelve son unos 170 tickets al mes para el nivel 2, a los
 que se suman los incidentes que abre el monitoreo. Los ingenieros de los paquetes 13.2 y 13.4 los
-atienden dentro de sus 1.280 horas mensuales de los meses 21 a 24, junto con la guardia y la mantención
-del Subdocumento 11. Esas horas bajan a 1.040 en el último año, porque el trabajo variable de mejoras
-y deuda técnica se reduce con la madurez del servicio. La parte fija de la guardia y de la corrección no
-baja. En el mes 21, con el paso a producción de la Etapa 2, la guardia suma además 160 horas de
-plataforma y 80 de software.
-En los meses 21 a 24 el paquete 13.2 dedica además unas 62 horas al mes, de seguridad y de plataforma,
-a cerrar los paquetes 6.5 y 7.2 de la EDT, y le quedan cerca de 578 para la guardia y los tickets. El
-Subdocumento 11 muestra cómo se reparte en esos meses la capacidad del paquete 13.4.
+atienden junto con la guardia y la mantención del Subdocumento 11. Su base es de 1.280 horas al mes, 640
+de cada paquete. En los meses 21 a 24 el paquete 13.4 suma un refuerzo temporal de 66 horas de datos y
+37 de pruebas al mes para cerrar los paquetes 6.5 y 7.2 de la EDT, y 28 a 30 horas de arquitectura e
+interfaces cierran el paquete 6.5. En el mes 21, con el paso a producción de la Etapa 2, la guardia suma
+además 160 horas de plataforma y 80 de software. Desde el mes 25 la base baja con la madurez del
+servicio a 1.200 horas, a 1.120 desde el mes 33 y a 1.040 desde el mes 45, porque se reduce el trabajo
+variable de mejoras y deuda técnica. La parte fija de la guardia y de la corrección no baja. El
+Subdocumento 11 muestra cómo se reparte la capacidad del paquete 13.4 en cada tramo.
 
 ## 10.4 Acuerdos operacionales y contratos de apoyo
 
@@ -268,7 +268,8 @@ de apoyo de audIT y aparecen en el Formulario T-8.
 Cada alerta de la plataforma y cada procedimiento recurrente tiene su libro de operación: qué se
 observa, cómo se confirma, qué se hace y cómo se vuelve atrás. Los primeros son los procedimientos que
 el Subdocumento 4 ya declara: la conmutación a Brazil South y su vuelta, el paso de ExpressRoute a la
-VPN, el terminal sin enlace durante 12 horas, la reconexión masiva tras una zona de sombra, la rotación
+VPN, el terminal sin enlace durante al menos 24 horas, el mayor entre las 12 del Caso, RT-03.10, p. 31 y
+las 24 del FEP01, Artículo 16.4, p. 12, la reconexión masiva tras una zona de sombra, la rotación
 de certificados de los equipos y la actualización del equipo a bordo en el terminal. Los libros se
 escriben en español, en formato editable, se versionan en el repositorio del mandante y son de su
 propiedad (FEP02, RT-22.03, p. 38). Se prueban con el personal de Curimón antes de traspasarlos, porque
@@ -348,5 +349,5 @@ Conforme al Comunicado 10, sección 7.2, cada sección de este subdocumento y ca
 |---|---|---|---|---|---|
 | Introducción y 10.1 | Claude Opus 5.5 en Claude Code | Redacción inicial del modelo de soporte desde las bases, el Formulario T-15 y el Subdocumento 7, y diagrama de niveles dibujado en TikZ desde el modelo definido por el equipo | Alto | Medio | Naomi Núñez, Líder de Calidad, e Ignacio Vera y Marcel Gutiérrez, Arquitectos de Solución: niveles, centro de operaciones, gerente de servicio, canales, horario y escalamiento frente a FEP02, capítulo 21, y al Caso. |
 | 10.2 | Claude Opus 5.5 en Claude Code | Redacción inicial de la severidad, los niveles de servicio y la fórmula única de disponibilidad, conciliada con los Subdocumentos 4, 5 y 9 | Alto | Ninguno | Naomi Núñez, Líder de Calidad, e Ignacio Vera y Marcel Gutiérrez, Arquitectos de Solución: valores del Artículo 78, servicios críticos y altos, fórmula y su coherencia con los otros subdocumentos. |
-| 10.3 | Claude Opus 5.5 en Claude Code | Guion del modelo Erlang C con supuestos declarados, cálculo de sensibilidad al volumen, gráfico dibujado en TikZ con sus resultados y redacción inicial del dimensionamiento, con la conciliación de capacidad del Informe 3 | Alto | Medio | Naomi Núñez, Líder de Calidad, e Ignacio Vera y Marcel Gutiérrez, Arquitectos de Solución: supuestos de volumen, cálculo reproducible, lectura del gráfico, coherencia con las seis personas del Formulario T-15 y horas del paquete 13.2 en los meses 21 a 24. |
-| 10.4 a 10.6 | Claude Opus 5.5 en Claude Code | Redacción inicial de los acuerdos internos y con proveedores, la seguridad de la operación, los libros, el conocimiento, la capacitación y la observabilidad desde el Subdocumento 4, las bases y el calendario de calidad y capacitación del Informe 3 | Alto | Ninguno | Naomi Núñez, Líder de Calidad, e Ignacio Vera y Marcel Gutiérrez, Arquitectos de Solución: plazos internos dentro del Artículo 78, plazos del Artículo 21.1, meses de la prueba de penetración y del depósito de fuentes, jornadas del RT-22.06 y procedimientos frente al Subdocumento 4. |
+| 10.3 | Claude Opus 5.5 en Claude Code | Guion del modelo Erlang C con supuestos declarados, cálculo de sensibilidad al volumen, gráfico dibujado en TikZ con sus resultados y redacción inicial del dimensionamiento, con la conciliación de capacidad del presupuesto de soporte | Alto | Medio | Naomi Núñez, Líder de Calidad, e Ignacio Vera y Marcel Gutiérrez, Arquitectos de Solución: supuestos de volumen, cálculo reproducible, lectura del gráfico, coherencia con las siete personas del paquete 13.1 y horas del paquete 13.2 en los meses 21 a 24. |
+| 10.4 a 10.6 | Claude Opus 5.5 en Claude Code | Redacción inicial de los acuerdos internos y con proveedores, la seguridad de la operación, los libros, el conocimiento, la capacitación y la observabilidad desde el Subdocumento 4, las bases y el calendario de calidad y capacitación del Subdocumento 9 | Alto | Ninguno | Naomi Núñez, Líder de Calidad, e Ignacio Vera y Marcel Gutiérrez, Arquitectos de Solución: plazos internos dentro del Artículo 78, plazos del Artículo 21.1, meses de la prueba de penetración y del depósito de fuentes, jornadas del RT-22.06 y procedimientos frente al Subdocumento 4. |

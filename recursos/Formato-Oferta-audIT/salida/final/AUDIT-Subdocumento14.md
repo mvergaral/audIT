@@ -105,8 +105,9 @@ una sola vista. Los preventivos de la flota propia se programan por el kilometra
 odómetro leído en el taller, y todas las intervenciones de talleres externos quedan en la hoja de vida
 del equipo (criterios 25 y 26, mes 21). Los 61 tractocamiones con telemetría de fábrica que hoy no se
 descarga entregan sus datos, con la autorización de cada fabricante (Caso, RT-17.06, p. 34). Las cinco
-innovaciones del Subdocumento 13 suman beneficios propios, que se miden con los indicadores del
-Formulario T-19 y se valorizan en el Sobre N.º 3.
+innovaciones del Subdocumento 13 suman beneficios operacionales propios, que se miden con los
+indicadores del Formulario T-19. El Sobre N.º 3 no les reconoce beneficio monetario en el escenario
+base ni cobro incremental de audIT.
 
 **Desempeño.**  Los umbrales de la transacción crítica son los del Caso, RT-09.01, p. 32 y se miden
 en el percentil 95: asignar en 30 segundos, emitir el documento de transporte en 90, llevar un evento de
@@ -128,7 +129,9 @@ con una transacción sintética de extremo a extremo y no con la disponibilidad 
 ## 14.3 Equilibrio entre alcance, tiempo, costo y calidad
 
 El alcance se ordenó por dependencia. Las cinco innovaciones tienen su propio elemento en la EDT, el 12,
-con 2.560 horas, de modo que no compiten con el alcance obligatorio. Lo que el Caso pide resolver primero, jornada, habilitaciones,
+con 1.520 horas reservadas en la implementación y 3.032 en los 56 meses dentro de la dotación del
+contrato. Como se reservan antes de repartir el resto (Formulario T-15), no compiten con el alcance
+obligatorio. Lo que el Caso pide resolver primero, jornada, habilitaciones,
 vista única, documento y liquidación, entra en la Etapa 1. Los kilómetros en vacío quedan para la Etapa 2
 porque necesitan saber primero dónde termina cada viaje, que es un dato que produce la Etapa 1
 (Subdocumento 3). Así ninguna etapa construye sobre datos que todavía no existen.
@@ -242,5 +245,5 @@ Conforme al Comunicado 10, sección 7.2, cada sección de este subdocumento y ca
 |---|---|---|---|---|---|
 | Introducción y 14.1 | Claude Opus 5.5 en Claude Code | Redacción inicial de la propuesta de valor desde los Subdocumentos 2 a 4, el Formulario T-12 y el Caso | Alto | Ninguno | Naomi Núñez, Líder de Calidad, e Ignacio Vera y Marcel Gutiérrez, Arquitectos de Solución: condiciones de renovación de 2029, criterios de aceptación citados y cifras de la flota frente al Caso. |
 | 14.2 | Claude Opus 5.5 en Claude Code | Cruce de los indicadores del capítulo 7 del Caso con las metas del Formulario T-12 y cálculo de jornadas, liquidaciones y kilómetros | Alto | Ninguno | Naomi Núñez, Líder de Calidad, e Ignacio Vera y Marcel Gutiérrez, Arquitectos de Solución: valor actual, meta, criterio y mes de cada fila, supuestos del cálculo y ausencia de montos. |
-| 14.3 y 14.4 | Claude Opus 5.5 en Claude Code | Redacción inicial del equilibrio y de la coherencia desde los Subdocumentos 3 a 12 y los insumos del Informe 3 | Alto | Ninguno | Naomi Núñez, Líder de Calidad, e Ignacio Vera y Marcel Gutiérrez, Arquitectos de Solución: cada cifra repetida comparada con el subdocumento de origen y con los insumos de cada área. |
+| 14.3 y 14.4 | Claude Opus 5.5 en Claude Code | Redacción inicial del equilibrio y de la coherencia desde los Subdocumentos 3 a 12 y el presupuesto del Sobre N.º 3 | Alto | Ninguno | Naomi Núñez, Líder de Calidad, e Ignacio Vera y Marcel Gutiérrez, Arquitectos de Solución: cada cifra repetida comparada con el subdocumento de origen y con los insumos de cada área. |
 | 14.5 | Claude Opus 5.5 en Claude Code | Redacción de la trazabilidad y diagrama dibujado en TikZ desde los Formularios T-12, T-14, T-17 y T-18 | Alto | Medio | Naomi Núñez, Líder de Calidad, e Ignacio Vera y Marcel Gutiérrez, Arquitectos de Solución: requerimientos, paquetes, casos de prueba, hitos y servicios de los dos ejemplos. |

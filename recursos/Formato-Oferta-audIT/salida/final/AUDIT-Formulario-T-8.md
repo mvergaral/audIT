@@ -9,7 +9,7 @@ audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. O
     meses={1 a 56}}
   \rolTOcho{rol={Arquitecto de Solución}, nombre={Esteban Valenzuela Lagos},
     certificaciones={Microsoft Certified: Azure Solutions Architect Expert. TOGAF 9.2},
-    dedicacion={100 % en los meses 1 a 20 y 25 % en los meses 21 a 56}, meses={1 a 56}}
+    dedicacion={100 % en los meses 1 a 20, cierre de integración y migración en los meses 21 a 24 con 45 horas en total, y apoyo a demanda desde el mes 25}, meses={1 a 56}}
   \rolTOcho{rol={Encargado de Seguridad de la Información}, nombre={Mauricio Arancibia Toledo},
     certificaciones={CISSP. CISM. Auditor líder ISO/IEC 27001},
     dedicacion={100 % en los meses 1 a 20 y 50 % en los meses 21 a 56}, meses={1 a 56}}
@@ -18,7 +18,7 @@ audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. O
     dedicacion={100 % en los meses 1 a 20 y 50 % en los meses 21 a 56}, meses={1 a 56}}
   \rolTOcho{rol={Líder de Calidad}, nombre={Claudia Navarrete Rivas},
     certificaciones={ISTQB Full Advanced Level: Test Manager y Technical Test Analyst},
-    dedicacion={100 % en los meses 1 a 20 y 25 % en los meses 21 a 56}, meses={1 a 56}}
+    dedicacion={100 % en los meses 1 a 20 y 50 % en los meses 21 a 56}, meses={1 a 56}}
   \rolTOcho{rol={Líder de Operación o SRE}, nombre={Felipe Morales Cárdenas},
     certificaciones={CKA. Red Hat Certified Engineer},
     dedicacion={100 %, y gerente de servicio desde el mes 21}, meses={1 a 56}}
@@ -27,13 +27,13 @@ audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. O
     dedicacion={100 %}, meses={1 a 56, paquetes 5, 8 y 13.4}}
   \rolTOcho{rol={Líder de Implantación y Gestión del Cambio}, nombre={Refuerzo, se nomina en el plan de dirección del mes 1},
     certificaciones={Se acreditan con el currículo al nominarlo},
-    dedicacion={100 %}, meses={1 a 20, paquetes 1.3, 4.2 y 11.1 a 11.3}}
+    dedicacion={100 %}, meses={3 a 20, paquetes 1.3, 4.2 y 11.1 a 11.3}}
   \rolTOcho{rol={Líder de Integración}, nombre={Refuerzo, se nomina en el plan de dirección del mes 1},
     certificaciones={Se acreditan con el currículo al nominarlo},
-    dedicacion={100 %}, meses={1 a 20, paquetes 2.3, 4.3 y 6}}
+    dedicacion={100 %}, meses={3 a 20, paquetes 2.3, 4.3 y 6}}
   \rolTOcho{rol={Líder Funcional}, nombre={Refuerzo, se nomina en el plan de dirección del mes 1},
     certificaciones={Se acreditan con el currículo al nominarlo},
-    dedicacion={100 %}, meses={1 a 20, paquetes 2.1, 9 y 12.4}}
+    dedicacion={100 %}, meses={3 a 20, paquetes 2.1, 9 y 12.4}}
   \rolTOcho{rol={Oficina de proyecto e ingeniería de planta (14 personas)}, nombre={Planta del Subdocumento 1},
     certificaciones={Tres analistas de la oficina de proyecto, dos ingenieros de software sénior, dos de frontend y móvil, uno de datos, uno de pruebas y automatización, tres de firmware, uno electrónico y uno de telecomunicaciones y campo},
     dedicacion={100 %}, meses={Implementación, según el Formulario T-15}}
@@ -69,7 +69,7 @@ audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. O
     porcentaje={0,1}, justificacion={Tercero independiente que protege al mandante si audIT deja de operar. Artículo 84.6}}
   \subcontratoTOcho{empresa={Proveedor de plataforma de aprendizaje}, servicio={Plataforma de aprendizaje en línea y contenidos de la Etapa 1},
     porcentaje={Menos de 0,1}, justificacion={Capacitación de conductores que pasan por un terminal cada seis días en promedio}}
-  \subcontratoTOcho{empresa={Especialistas en ergonomía}, servicio={Talleres de ergonomía de la innovación 5 en los cinco terminales},
+  \subcontratoTOcho{empresa={Especialistas en ergonomía}, servicio={Talleres de ergonomía en los cinco terminales en el mes 4 y calibración ergonómica en la marcha blanca de los meses 13 a 15, innovación 5},
     porcentaje={Menos de 0,1}, justificacion={Especialidad que audIT no mantiene en planta}}
   \subcontratoTOcho{empresa={SonarSource}, servicio={Licencia de SonarQube para el análisis estático},
     porcentaje={Menos de 0,1}, justificacion={Soporte del fabricante y reglas de seguridad actualizadas}}

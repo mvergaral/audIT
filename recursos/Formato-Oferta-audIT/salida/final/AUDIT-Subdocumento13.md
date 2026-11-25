@@ -58,10 +58,11 @@ diseño de la incorporación con su lugar en la arquitectura (FEP02, RT-26.01, p
 estructura de descomposición del trabajo y su mes del cronograma (FEP02, RT-26.02, p. 44), el impacto
 económico, el indicador y el riesgo de adopción. Los montos no aparecen en esta oferta técnica, porque
 el FEP01, Artículo 50.2, p. 29 lo prohíbe, y la valorización va en el Entregable 2 de la Oferta Económica, como
-dispone el FEP01, Artículo 30.1, p. 20. En la planilla económica 3.2 los beneficios para Curimón van separados de
-los ingresos de audIT. Las innovaciones 2 y 3 no tienen beneficio monetario en el escenario base hasta
-medirlo en el piloto, la 1 y la 5 tienen su valor pendiente de los datos de la Etapa 1, y la 4 lleva un
-recupero bruto referencial de los cobros por espera, que es de Curimón y no se suma a la venta. Lo que
+dispone el FEP01, Artículo 30.1, p. 20. En la Oferta Económica los beneficios para Curimón van separados de los
+ingresos de audIT. Ninguna de las cinco tiene beneficio monetario reconocido en el escenario base ni
+cobro incremental de audIT, y su personal está dentro de la dotación del contrato. La 1 trae solo una
+sensibilidad de la capacidad que libera, y la 4 un recupero bruto referencial de los cobros por espera,
+que es de Curimón y no se suma a la venta. Lo que
 esta oferta sí fija es el indicador físico de cada una y cómo se mide. Cada riesgo de adopción declara
 su exposición inicial y su exposición residual con las escalas del Subdocumento 8 y remite a su riesgo
 del Formulario T-16. Al menos una innovación es verificable en la marcha blanca, como valora
@@ -129,9 +130,10 @@ y 10, y el expediente está disponible para la cohorte inicial de adherentes en 
 Etapa 1 ya produce, y el costo operacional es el certificado de firma del emisor y la operación del
 servicio de verificación. El beneficio para el mandante es indirecto y está en la adhesión: el
 expediente es un incentivo que no requiere pagar al transportista, y cada transportista adherido amplía
-la jornada acreditada y la evidencia de espera que sostiene los cobros. En el flujo de caja de la Oferta
-Económica, la innovación aparece como una partida de desarrollo en la Etapa 1 y una partida de
-operación mensual, sin ingresos atribuidos.
+la jornada acreditada y la evidencia de espera que sostiene los cobros. En la Oferta Económica, el desarrollo y la
+operación de la innovación se hacen con la dotación del contrato, sin partida propia, y el único egreso
+adicional es la firma electrónica avanzada del emisor desde el mes 13. No tiene cobro incremental ni
+beneficio monetario reconocido en el escenario base.
 
 **Indicador de verificación.**  La Tabla 13.1 fija los dos indicadores. Ambos parten
 de cero porque el expediente no existe hoy.
@@ -404,14 +406,15 @@ en la marcha blanca. La proporción de la espera recuperada que va al transporti
 la aprueba el Comité Ejecutivo en el mes 2, antes de la primera conversación con los transportistas.
 
 **Impacto económico.**  El equipo lo compra el mandante, y audIT especifica la cantidad sobre las
-poblaciones del Caso y no sobre la adhesión (sección 4.2.1). Las partidas propias son
-el diseño y la validación jurídica del anexo, la campaña en los cinco terminales y la consola de
-consentimiento, todas valorizadas en la Oferta Económica. En el costo operacional aumentan la
-conectividad, el soporte y la reposición de los equipos en comodato, y disminuye el costo de gestionar
-las objeciones de cobro. El recupero parte de una base del Caso: los clientes objetaron el 71 % de lo
+poblaciones del Caso y no sobre la adhesión (sección 4.2.1). El diseño y la validación
+jurídica del anexo, la campaña en los cinco terminales y la consola de consentimiento se hacen con la
+dotación del contrato, sin partida propia. Los 34 equipos en comodato son parte de los 182 del alcance
+base, así que la innovación no suma conectividad, soporte ni reposición aparte, y disminuye el costo de
+gestionar las objeciones de cobro. El recupero parte de una base del Caso: los clientes objetaron el 71 % de lo
 facturado en 2025 por tiempos de espera, porque la hora de llegada se anota en papel (Caso, numeral
-4.7, p. 11). Ese recupero financia el incentivo, se valoriza en la Oferta Económica y no se compromete
-como ingreso.
+4.7, p. 11). La Oferta Económica lo trae como recupero bruto referencial a 36 meses, antes de repartirlo
+con los transportistas y de restar costos. Es de Curimón, no es beneficio neto ni ingreso de audIT, y
+no se compromete.
 
 **Indicador de verificación.**  La Tabla 13.5 fija los indicadores. El primero mide la
 propiedad que el dueño del camión necesita creer, y los otros dos si el mecanismo funciona.
@@ -497,14 +500,15 @@ del mes 16, como valora FEP02, RT-26.08, p. 45. La validación de los paradores 
 consolida durante la campaña de cobertura de la Etapa 1, y la calibración de la ventana circadiana con
 los turnos reales se ajusta en los talleres de diseño ergonómico del mes cuatro.
 
-**Impacto económico.**  La inversión requerida es incremental sobre el software de borde y los
-talleres ergonómicos participativos. El catálogo de paradores es alcance del criterio 28 y se levanta
+**Impacto económico.**  El desarrollo y el soporte se hacen con la dotación del contrato. El único
+egreso adicional son los cinco talleres ergonómicos participativos del mes 4 y la calibración ergonómica
+externa de la marcha blanca, 60 horas entre los meses 13 y 15. El catálogo de paradores es alcance del criterio 28 y se levanta
 en el recorrido de la campaña de medición de cobertura que exige el Caso, RT-03.24, p. 31, de modo que
 no es costo de esta innovación. En costo operacional
 reduce la búsqueda errática de estacionamiento en ruta, con un efecto en combustible que se mide en la
 Etapa 1. El beneficio esperado es reducir la exposición a detenciones inseguras, incumplimientos de jornada y uso de dispositivos en marcha. Su magnitud se evaluará con los indicadores de seguridad y adopción; no se garantiza eliminación de siniestros ni de multas.
 
-En el flujo de caja de la Oferta Económica, la innovación se registra en la partida CAPEX de desarrollo de software de borde y talleres ergonómicos, y en OPEX bajo la línea de servicios de actualización y soporte de cartografía segura.
+En la Oferta Económica la innovación no tiene cobro incremental ni beneficio monetario reconocido en el escenario base, y los talleres y la calibración van en otros costos confirmados.
 
 **Indicador de verificación.**  La efectividad de recomendación se calcula como 100 × episodios con recomendación válida y oportuna / total de episodios en que el oráculo del protocolo exige recomendar una parada, con meta de al menos 98%. Una recomendación es válida y oportuna si identifica un parador con atributos de acceso y servicios verificados, compatible con el vehículo y alcanzable antes de agotar el tiempo legal de conducción, y emite el aviso acústico con la anticipación necesaria. El protocolo fija ruta, vehículo, tiempo remanente, catálogo y estado conocido del parador; un oráculo independiente determina el resultado esperado. La falta de un parador alcanzable y una alerta tardía cuentan como fallos, no se excluyen para mejorar el porcentaje. Se informa además el número total de episodios, fallos por causa y resultados por corredor. Con denominador cero no se informa una tasa de éxito.
 
@@ -574,11 +578,11 @@ Conforme al Comunicado 10, sección 7.2, cada sección de este subdocumento y ca
 | Sección | Herramienta | Finalidad del uso | Nivel en texto | Nivel en diagramas | Revisión humana (quién y qué verificó) |
 |---|---|---|---|---|---|
 | Introducción | Claude Opus 5.5 en Claude Code | Redacción inicial de la estrategia y de la cartera, y diagrama de la cartera generado con un guion desde el modelo definido por el equipo | Alto | Medio | Ignacio Vera, Arquitecto de Solución: problema de cada innovación, lugar en la arquitectura y figura de la cartera. |
-| 13.1, 13.4 y 13.5 | Claude Opus 5.5 en Claude Code | Traslado del texto del Informe 1 ordenado por los siete elementos del Artículo 29, retiro de lo observado en las observaciones 93 a 100 y verificación de las citas al Caso | Medio | Ninguno | Ignacio Vera, Arquitecto de Solución: siete elementos del Artículo 29 y citas al Caso. |
-| 13.2 y ficha 2 del Formulario T-19 | OpenAI Codex (GPT-6) | Diseño de la programación de intervenciones por oportunidad de patio, indicadores, riesgos y gráfico | Alto | Alto | Responsable D3, Arquitecto de Solución: proceso de programación por oportunidad de patio, indicadores, riesgos y figura. |
-| 13.2 y ficha 2 del Formulario T-19 | OpenAI Codex | Cierre de la flota propia en el mes 9 y calendario del Subdocumento 7 | Alto | Ninguno | Responsable D3, Arquitecto de Solución: calendario de la innovación 2 frente al Subdocumento 7. |
-| 13.3 y ficha 3 del Formulario T-19 | Claude Opus 5.5 en Claude Code | Búsqueda de fichas de fabricante, redacción inicial desde las decisiones del equipo, y actualización para la oferta final: el kilometraje de los semirremolques pasa al criterio 26 (observación INN-02) y el beneficio queda en dos partes medidas por separado, con su valor monetario pendiente (observación INN-05) | Alto | Medio | Liderazgo de Calidad y Arquitectura de Solución: delimitación frente al criterio 26, indicadores, inversión y costo coherentes con el Sobre N.º 3, y ficha 3 del Formulario T-19. |
-| Formulario T-19 | Claude Opus 5.5 en Claude Code | Armado de las cinco fichas desde las secciones 13.1 a 13.5 | Alto | Ninguno | Arquitectura de Solución: correspondencia de las cinco fichas con las secciones 13.1 a 13.5. |
-| 13.5 y ficha T-19 tipo 5 | Asistente LLM y OpenAI Codex | Integración del texto de experiencia de usuario; depuración de madurez y calendario; definición del indicador de recomendación y alcance del beneficio | Alto | Ninguno | Coordinación de Calidad: revisión de claridad y consistencia de la innovación 5, madurez actual y objetivos, ventanas de validación y producción, fórmula de efectividad y distinción entre metas y resultados. |
-| 13.2 y ficha 2 | Codex | Conciliación de lotes, piloto y medición de beneficio | Alto | Ninguno | Pendiente de validar con Flota y Calidad. |
-| 13.1 a 13.5 y Formulario T-19 | Claude Opus 5.5 en Claude Code | Conciliación de los riesgos de adopción con el Formulario T-16 y exposición residual por ficha, delimitación de la innovación 5 frente al criterio 28, nombres de las innovaciones 3 y 5 y meses de montaje alineados con el Formulario T-14, impacto económico de la cartera según la planilla 3.2 y diagrama de la cartera regenerado con su guion | Alto | Medio | Naomi Núñez, Líder de Calidad, e Ignacio Vera y Marcel Gutiérrez, Arquitectos de Solución: exposición inicial y residual de cada riesgo frente al Formulario T-16, alcance base y mérito innovador de las fichas 3 y 5, nombres y meses frente al Formulario T-14 y ausencia de horas y montos. |
+| 13.1, 13.4 y 13.5 | Claude Opus 5.5 en Claude Code | Ordenamiento del texto por los siete elementos del Artículo 29 y verificación de las citas al Caso | Medio | Ninguno | Ignacio Vera, Arquitecto de Solución: siete elementos del Artículo 29 y citas al Caso. |
+| 13.2 y ficha 2 del Formulario T-19 | OpenAI Codex (GPT-6) | Diseño de la programación de intervenciones por oportunidad de patio, indicadores, riesgos y gráfico | Alto | Alto | Naomi Núñez, Líder de Calidad, e Ignacio Vera y Marcel Gutiérrez, Arquitectos de Solución: proceso de programación por oportunidad de patio, indicadores, riesgos y figura. |
+| 13.2 y ficha 2 del Formulario T-19 | OpenAI Codex | Cierre de la flota propia en el mes 9 y calendario del Subdocumento 7 | Alto | Ninguno | Naomi Núñez, Líder de Calidad, e Ignacio Vera y Marcel Gutiérrez, Arquitectos de Solución: calendario de la innovación 2 frente al Subdocumento 7. |
+| 13.3 y ficha 3 del Formulario T-19 | Claude Opus 5.5 en Claude Code | Búsqueda de fichas de fabricante, redacción inicial desde las decisiones del equipo, y actualización para la oferta final: el kilometraje de los semirremolques pasa al criterio 26 y el beneficio queda en dos partes medidas por separado, sin valor monetario en el escenario base | Alto | Medio | Naomi Núñez, Líder de Calidad, e Ignacio Vera y Marcel Gutiérrez, Arquitectos de Solución: delimitación frente al criterio 26, indicadores, inversión y costo coherentes con el Sobre N.º 3, y ficha 3 del Formulario T-19. |
+| Formulario T-19 | Claude Opus 5.5 en Claude Code | Armado de las cinco fichas desde las secciones 13.1 a 13.5 | Alto | Ninguno | Naomi Núñez, Líder de Calidad, e Ignacio Vera y Marcel Gutiérrez, Arquitectos de Solución: correspondencia de las cinco fichas con las secciones 13.1 a 13.5. |
+| 13.5 y ficha T-19 tipo 5 | Asistente LLM y OpenAI Codex | Integración del texto de experiencia de usuario; depuración de madurez y calendario; definición del indicador de recomendación y alcance del beneficio | Alto | Ninguno | Naomi Núñez, Líder de Calidad, e Ignacio Vera y Marcel Gutiérrez, Arquitectos de Solución: claridad y consistencia de la innovación 5, madurez actual y objetivos, ventanas de validación y producción, fórmula de efectividad y distinción entre metas y resultados. |
+| 13.2 y ficha 2 | Codex | Conciliación de lotes, piloto y medición de beneficio | Alto | Ninguno | Naomi Núñez, Líder de Calidad, e Ignacio Vera y Marcel Gutiérrez, Arquitectos de Solución: lotes, piloto y medición del beneficio frente al Subdocumento 7 y a la ficha 2. |
+| 13.1 a 13.5 y Formulario T-19 | Claude Opus 5.5 en Claude Code | Conciliación de los riesgos de adopción con el Formulario T-16 y exposición residual por ficha, delimitación de la innovación 5 frente al criterio 28, nombres de las innovaciones 3 y 5 y meses de montaje alineados con el Formulario T-14, impacto económico de la cartera según el presupuesto del Sobre N.º 3 y diagrama de la cartera regenerado con su guion | Alto | Medio | Naomi Núñez, Líder de Calidad, e Ignacio Vera y Marcel Gutiérrez, Arquitectos de Solución: exposición inicial y residual de cada riesgo frente al Formulario T-16, alcance base y mérito innovador de las fichas 3 y 5, nombres y meses frente al Formulario T-14 y ausencia de horas y montos. |

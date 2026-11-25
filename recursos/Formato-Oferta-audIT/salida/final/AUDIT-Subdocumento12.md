@@ -118,12 +118,14 @@ terreno. Dirige la plataforma, la mesa de servicio y el ciclo de vida del equipo
 operación es el gerente de servicio.
 
 Los seis trabajan a tiempo completo en los meses 1 a 20. En la operación, según el Subdocumento 1, el
-Líder de Operación sigue a tiempo completo, el Jefe de Proyecto, el Encargado de Seguridad y el Líder de
-Datos quedan con la mitad de su tiempo, y el Arquitecto de Solución y la Líder de Calidad con un cuarto.
-Eso suma tres jornadas completas, 480 horas al mes, y esas horas están dentro de la dotación de
-operación del Formulario T-15, que es también como las cuenta el Sobre N.º 3. El Líder
-de Datos y la Líder de Calidad las dedican sobre todo al paquete 13.4, donde están los cierres de los
-meses 21 a 24 (Subdocumento 11). El Formulario T-8 trae cada rol con su nombre, sus certificaciones, su
+Líder de Operación sigue a tiempo completo, y el Jefe de Proyecto, el Encargado de Seguridad, el Líder
+de Datos y la Líder de Calidad quedan con la mitad de su tiempo. Eso suma tres jornadas completas, 480
+horas al mes, que están dentro de la dotación de operación del Formulario T-15, que es también como las
+cuenta el Sobre N.º 3: el Jefe de Proyecto en la gestión del servicio, el Encargado de Seguridad en la
+seguridad del paquete 13.2, y el Líder de Datos y la Líder de Calidad en la base de datos y de pruebas
+del paquete 13.4, donde están los cierres de los meses 21 a 24 (Subdocumento 11). El Arquitecto de
+Solución cierra la integración y la migración en los meses 21 a 24, con 45 horas en total, y después
+apoya a demanda. El Formulario T-8 trae cada rol con su nombre, sus certificaciones, su
 dedicación y sus meses, y los currículos y las cartas de compromiso van en el Sobre N.º 1. Los demás
 roles de la estructura salen de la planta o del refuerzo que declara el Formulario T-15, y se nominan en
 el plan de dirección del mes 1.
@@ -178,7 +180,7 @@ jornada de suplencias, la plataforma, con cuatro, el equipo a bordo, con media j
 proveedor de campo, y la mantención evolutiva, con cuatro que bajan a dos y media, según los
 Subdocumentos 10 y 11.
 
-La curva también se comprobó contra el trabajo por tarea, como pidió la revisión del Informe 2. El mes 9
+La curva también se comprobó contra el trabajo por tarea. El mes 9
 es uno de los más cargados. La estimación por actividad del software, los datos y las integraciones pide
 ese mes 3.354 horas de arquitectura, desarrollo, interfaces, seguridad, datos, pruebas y plataforma, unas
 21 jornadas completas. Sumados la recepción de los lotes de montaje, las pruebas transversales, la
@@ -312,6 +314,6 @@ Conforme al Comunicado 10, sección 7.2, cada sección de este subdocumento y ca
 | Sección | Herramienta | Finalidad del uso | Nivel en texto | Nivel en diagramas | Revisión humana (quién y qué verificó) |
 |---|---|---|---|---|---|
 | Introducción y 12.1 | Claude Opus 5.5 en Claude Code | Redacción inicial de la estructura del proyecto, organigrama dibujado en TikZ y matriz de asignación armada desde los responsables del Formulario T-14 | Alto | Medio | Naomi Núñez, Líder de Calidad, e Ignacio Vera y Marcel Gutiérrez, Arquitectos de Solución: líneas del proyecto, comités del Artículo 71 y una sola A por grupo igual al responsable del Formulario T-14. |
-| 12.2 y 12.3 | Claude Opus 5.5 en Claude Code | Redacción del equipo clave, su trayectoria y la curva de dotación desde el Subdocumento 1, el Formulario T-15 y la conciliación de capacidad del Informe 3, y gráfico de dotación dibujado en TikZ | Alto | Medio | Naomi Núñez, Líder de Calidad, e Ignacio Vera y Marcel Gutiérrez, Arquitectos de Solución: nombres, certificaciones, años de experiencia y dedicaciones frente al Subdocumento 1, personas por tramo frente al Formulario T-15 y horas del mes 9. |
-| 12.4 a 12.6 | Claude Opus 5.5 en Claude Code | Redacción inicial de hacer o comprar, subcontratistas y continuidad, con las decisiones de compra del Informe 3 y los porcentajes calculados desde las partidas del Sobre N.º 3 | Alto | Ninguno | Naomi Núñez, Líder de Calidad, e Ignacio Vera y Marcel Gutiérrez, Arquitectos de Solución: decisiones de compra, porcentajes y tope del Artículo 73, régimen de control, reglas del Artículo 76 y suplentes dentro de la planta. |
-| Formulario T-8 | Claude Opus 5.5 en Claude Code | Llenado del formulario desde el Subdocumento 1, los Formularios T-14 y T-15 y las partidas de proveedores del Informe 3 | Alto | Ninguno | Naomi Núñez, Líder de Calidad, e Ignacio Vera y Marcel Gutiérrez, Arquitectos de Solución: roles, meses de participación, servicio y porcentaje de cada proveedor. |
+| 12.2 y 12.3 | Claude Opus 5.5 en Claude Code | Redacción del equipo clave, su trayectoria y la curva de dotación desde el Subdocumento 1, el Formulario T-15 y la conciliación de capacidad del presupuesto, y gráfico de dotación dibujado en TikZ | Alto | Medio | Naomi Núñez, Líder de Calidad, e Ignacio Vera y Marcel Gutiérrez, Arquitectos de Solución: nombres, certificaciones, años de experiencia y dedicaciones frente al Subdocumento 1, personas por tramo frente al Formulario T-15 y horas del mes 9. |
+| 12.4 a 12.6 | Claude Opus 5.5 en Claude Code | Redacción inicial de hacer o comprar, subcontratistas y continuidad, con las decisiones de compra del presupuesto y los porcentajes calculados desde las partidas del Sobre N.º 3 | Alto | Ninguno | Naomi Núñez, Líder de Calidad, e Ignacio Vera y Marcel Gutiérrez, Arquitectos de Solución: decisiones de compra, porcentajes y tope del Artículo 73, régimen de control, reglas del Artículo 76 y suplentes dentro de la planta. |
+| Formulario T-8 | Claude Opus 5.5 en Claude Code | Llenado del formulario desde el Subdocumento 1, los Formularios T-14 y T-15 y las partidas de proveedores del Sobre N.º 3 | Alto | Ninguno | Naomi Núñez, Líder de Calidad, e Ignacio Vera y Marcel Gutiérrez, Arquitectos de Solución: roles, meses de participación, servicio y porcentaje de cada proveedor. |
