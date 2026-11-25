@@ -1,6 +1,6 @@
 # Subdocumento 9. Plan de calidad
 
-audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. Oferta Técnica, Sobre N.º 2. Oferta Técnica Final. Archivo AUDIT-Subdocumento9.pdf. Anexos: Formulario T-13 en el archivo AUDIT-Formulario-T-13.pdf, Formulario T-17 en el archivo AUDIT-Formulario-T-17.pdf.
+audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. Oferta Técnica, Sobre N.º 2. Propuesta final. Archivo AUDIT-Subdocumento9.pdf. Anexos: Formulario T-13 en el archivo AUDIT-Formulario-T-13.pdf, Formulario T-17 en el archivo AUDIT-Formulario-T-17.pdf.
 
 ## 9 Plan de calidad
 
@@ -16,7 +16,7 @@ audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. O
 
 ## 9.1 Plan de Calidad
 
-El plan aplica controles preventivos y verificaciones basadas en riesgo a cada incremento de software, configuración de infraestructura y equipo embarcado. Los criterios de servicio provienen de las bases; los umbrales adicionales de cobertura de ramas, complejidad y vulnerabilidades se adoptan como compromisos bloqueantes de audIT y se distinguen del mínimo contractual. La homologación física utiliza los criterios de la Tabla de controles del T-13 sobre la configuración ofertada.
+El plan aplica controles preventivos y verificaciones basadas en riesgo a cada incremento de software, configuración de infraestructura y equipo embarcado. Los criterios de servicio provienen de las bases; los umbrales adicionales de cobertura de ramas, complejidad y vulnerabilidades se adoptan como compromisos bloqueantes de audIT y se distinguen del mínimo contractual. La homologación física utiliza los criterios de la Tabla 9.2 del T-13 sobre la configuración ofertada.
 
 La configuración física sometida a homologación comprende iWave G26I con audIT EdgeHub, lector CAN sin contacto Technoton CANCrocodile y las balizas Bluetooth de la innovación 3. Los 182 equipos previstos se ensayan por modelo y montaje; para los 192 terceros con dispositivos existentes se verifican las interfaces y permisos de acceso disponibles. T-17 comprueba lectura, integridad, datos ausentes, antigüedad y conciliación mediante pruebas de integración y hardware. El control térmico utiliza el rango y la precisión del modelo homologado.
 
@@ -54,7 +54,7 @@ La Tabla 9.1 distingue los mínimos contractuales de los compromisos adicionales
 
 | Métrica | Criterio | Naturaleza y fuente | Evidencia |
 |---|---|---|---|
-| Disponibilidad de servicios críticos | $\ge 99,9%$ mensual E2E | Contractual: Art. 20 FEP01, p. 14; RT-10.01 FEP02, p. 22 | Medición real de transacciones E2E; monitoreo sintético complementario y reporte |
+| Disponibilidad de servicios críticos | $\ge 99{,}9%$ mensual E2E | Contractual: Art. 20 FEP01, p. 14; RT-10.01 FEP02, p. 22 | Medición real de transacciones E2E; monitoreo sintético complementario y reporte |
 | Recuperación ante desastre | RTO $\le 4 h; RPO \le 15$ min | Contractual: RT-07.04 FEP02, p. 17 | Informe fechado de ejercicio de recuperación |
 | Retención local sin conectividad | Al menos 72 h, sin pérdida ni corrupción | Contractual: RT-03.10, p. 31 | Registro de desconexión, almacenamiento y sincronización |
 | Cobertura automatizada de lógica de negocio | Líneas \(\ge\)70 %; ramas \(\ge\)80 %, ambas bloqueantes | RT-04.11 FEP02, p. 11: mínimo 70 %; ramas 80 %: compromiso audIT, S6, Tabla 6.3 | Reporte por versión, numeradores, denominadores y exclusiones |
@@ -109,13 +109,13 @@ Los plazos y coberturas de la Tabla 9.2 provienen de FEP01, Artículo 78.2, p. 4
 
 ### 9.2.3 Puertas de calidad propuestas
 
-La Tabla 9.3 establece los puntos de control de audIT, coherentes con S6, Tabla 6.3 y la Tabla de controles del T-13. Cada ejecución del pipeline conserva su configuración versionada, los resultados de los controles y la decisión de promoción.
+La Tabla 9.3 establece los puntos de control de audIT, coherentes con S6, Tabla 6.3 y la Tabla 9.2 del T-13. Cada ejecución del pipeline conserva su configuración versionada, los resultados de los controles y la decisión de promoción.
 
 **Tabla 9.3.** Puertas de calidad y evidencia de salida
 
 | Puerta | Control propuesto | Condición de salida | Evidencia |
 |---|---|---|---|
-| G1 — Código | Revisión, pruebas y análisis estático | Líneas \(\ge\)70 %, ramas \(\ge\)80 %, cero pruebas fallidas, complejidad \(\le\)15 por función | Reporte CI y SonarQube por versión; sección 9.3.1 |
+| G1 — Código | Revisión, pruebas y análisis estático | Líneas \(\ge\)70 %, ramas \(\ge\)80 %, cero pruebas fallidas, complejidad \(\le\)15 por función | Reporte CI y SonarQube por versión; sección |
 | G2 — Dependencias | SAST, composición y escaneo de imágenes | Cero vulnerabilidades críticas o altas abiertas en el artefacto promovido | SBOM, SonarQube y Trivy por versión |
 | G3 — Integración | Contratos e intercambio entre servicios | Casos de integración trazados aprobados | Resultados y logs de integración |
 | G4 — Sistema | Rendimiento, resiliencia y seguridad | Umbrales acordados antes del ensayo y cumplidos | Reporte de ejecución y configuración |
@@ -153,13 +153,51 @@ La alineación con S7 y la gestión de riesgos se comprueba con versiones identi
 
 El calendario contractual establece las ventanas de implantación. La Figura 9.2 cruza las campañas de calidad con la red de S7/T-15. Las barras representan meses en los que hay actividad planificada. Los hitos indican el mes contractual de entrega o certificación.
 
-*[Diagrama vectorial nativo en PDF: Campañas y puertas de calidad por mes contractual. Fuente: elaboración propia a partir de S7, T-15 y E-25]*
+\begin{figuraNativa}[!ht]{Campañas y puertas de calidad por mes contractual. Fuente: elaboración propia a partir de S7, T-15 y E-25}{9-cronograma-calidad}
+\begin{tikzpicture}[x=0.67cm,y=0.57cm,every node/.style={font=\sffamily\fontsize{9.5bp}{12bp}\selectfont,text=audit-tinta},banda/.style={fill=audit-fila,draw=audit-marino,rounded corners=1pt},hito/.style={fill=audit-marino}]
+  \foreach \x in {0,...,16} {
+    \draw[audit-filete] (\x,0.25) -- (\x,-6.45);
+  }
+  \node[anchor=south west,inner sep=0pt] at (-5.65,0.29) {Mes contractual};
+  \foreach \mes [count=\i from 0] in {6,...,21} {
+    \node[anchor=south,inner sep=1pt] at ({\i+0.5},0.29) {\mes};
+  }
+  \foreach \y/\carril in {
+    -1/{CI/QA: G1--G3},
+    -2/{Integración y piloto},
+    -3/{Staging/HIL: G4 y G6},
+    -4/{Aceptación: G5},
+    -5/{Marcha blanca},
+    -6/{Producción},
+    -7/{Hitos E-25}
+  } {
+    \node[anchor=west,inner sep=0pt] at (-5.65,\y) {\carril};
+  }
+  \foreach \inicio/\fin/\y/\actividad in {
+    0/5/-1/A09,7/13/-1/A20,
+    0/4/-2/A10 y A11,
+    4/7/-3/A12,11/13/-3/A22,
+    4/7/-4/A12,11/13/-4/A22,
+    7/10/-5/A15,13/15/-5/A24,
+    10/11/-6/A19,15/16/-6/A25
+  } {
+    \draw[banda] (\inicio,{\y-0.34}) rectangle (\fin,{\y+0.34});
+    \node[inner sep=0pt] at ({(\inicio+\fin)/2},\y) {\actividad};
+  }
+  \foreach \x/\etiqueta in {0.5/H3,4.5/H4,6.5/H5,7.5/H6,8.5/H8,10.5/H7,11.5/H9,12.5/H10,13.5/H11,15.5/H12} {
+    \fill[hito] (\x,-6.72) circle[radius=1.8pt];
+    \node[anchor=north,inner sep=1pt] at (\x,-6.85) {\etiqueta};
+  }
+  \draw[audit-marino,-latex] (15.5,-7.42) -- (15.5,-7.88) -- (16,-7.88);
+  \node[anchor=east,inner sep=0pt] at (15.15,-7.88) {Operación M21--M56: ejercicios G6 en mayo y noviembre};
+\end{tikzpicture}
+\end{figuraNativa}
 
 Durante A09, A10, A11 y A20, G1 a G3 se aplican de forma recurrente según el componente y el cambio. Ingresan código, dependencias y contratos de integración versionados. Salen los informes de CI, seguridad e integración. H4 y H9 identifican las entregas de software a certificación.
 
 A12 y A22 reciben esas entregas con sus ambientes y datos habilitados. G4 verifica carga, resiliencia y seguridad en staging o HIL según el ensayo. G6 registra la restauración autorizada, RTO y RPO. G5 verifica con usuarios designados y conserva los resultados y las observaciones. Los informes respaldan H5 y H10. A15 y A24 reciben las entregas certificadas, con personal capacitado y plan de reversión activo. Sus registros de operación y las actas respaldan H7 y H12.
 
-En M21 comienza la operación de ambos alcances. G6 vuelve a aplicarse en los ejercicios de recuperación de junio y noviembre, con bitácora y reporte de continuidad. La Tabla 9.5 identifica la evidencia de cada transición.
+En M21 comienza la operación de ambos alcances. G6 vuelve a aplicarse en los ejercicios de recuperación de mayo y noviembre, con bitácora y reporte de continuidad. La Tabla 9.5 identifica la evidencia de cada transición.
 
 **Tabla 9.5.** Ventanas de ensayo y actividad de cronograma
 
@@ -173,15 +211,15 @@ En M21 comienza la operación de ambos alcances. G6 vuelve a aplicarse en los ej
 | M17--M18, hito H10 | A22 | Certificación E2: carga, resiliencia, DR, seguridad y UAT | Informe y defectos de certificación |
 | M19--M20 | A24 | Marcha blanca E2 | Cuatro semanas y seis condiciones |
 | M21, hito H12 | A25 | Producto final | Acta e inicio de operación |
-| Operación (M21--M56) | A25/Operación | Simulacros semestrales DR (junio y noviembre) | Demostración RTO $\le 4 h, RPO \le 15$ min y conmutación |
+| Operación (M21--M56) | A25/Operación | Simulacros semestrales DR (mayo y noviembre) | Demostración RTO $\le 4 h, RPO \le 15$ min y conmutación |
 
-Las pruebas de carga utilizan el perfil aprobado de S4, conservando mezcla y concurrencia; resiliencia incluye desconexión embarcada de 72 h, terminal de 24 h y reconexión masiva. Cada ejercicio DR mide desde la declaración del incidente hasta servicio recuperado y contrasta el último dato recuperable con RPO; seguridad ofensiva se ejecuta con autorización, límites, datos de ensayo y reversión. Las cuatro familias producen informes independientes en las ventanas de pruebas integrales A12 (meses 10 a 12) y A22 (meses 17 a 18), para evitar que un éxito funcional sustituya una comprobación no funcional. Antes de cada paso a producción y semestralmente durante los 36 meses de operación (M21 a M56) se ejecutan las pruebas de resiliencia y DR; estos ejercicios de recuperación ante desastres se programan en junio y noviembre de cada año operacional, distanciados por cinco meses y fuera de la temporada alta de fruta para resguardar la continuidad de negocio (FEP02, RT-07.07, p. 17), certificando el RTO $\le 4$ h y RPO $\le 15$ min hacia la región secundaria Azure Brazil South (FEP02, RT-07.04, p. 17). Las pruebas de intrusión se ejecutan antes de cada paso a producción y anualmente, por tercero independiente de audIT, con informe íntegro y remediación (FEP02, 20.1, pp. 34--35; FEP02, RT-11.20, p. 24). La carga prueba los umbrales a 1,5 veces el peak declarado. La migración definitiva requiere dos ensayos previos con conciliación sin diferencias no explicadas. Estas comprobaciones complementan las certificaciones A12/A22 y conservan responsables, autorización y ventanas.
+Las pruebas de carga utilizan el perfil aprobado de S4, conservando mezcla y concurrencia; resiliencia incluye desconexión embarcada de 72 h, terminal de 24 h y reconexión masiva. Cada ejercicio DR mide desde la declaración del incidente hasta servicio recuperado y contrasta el último dato recuperable con RPO; seguridad ofensiva se ejecuta con autorización, límites, datos de ensayo y reversión. Las cuatro familias producen informes independientes en las ventanas de pruebas integrales A12 (meses 10 a 12) y A22 (meses 17 a 18), para evitar que un éxito funcional sustituya una comprobación no funcional. Antes de cada paso a producción y semestralmente durante los 36 meses de operación (M21 a M56) se ejecutan las pruebas de resiliencia y DR; estos ejercicios de recuperación ante desastres se programan en mayo y noviembre de cada año operacional, distanciados por seis meses (meses 22, 28, 34, 40, 46 y 52, conforme al Subdocumento 11) y fuera de la temporada alta de fruta para resguardar la continuidad de negocio (FEP02, RT-07.07, p. 17), certificando el RTO $\le 4$ h y RPO $\le 15$ min hacia la región secundaria Azure Brazil South (FEP02, RT-07.04, p. 17). Las pruebas de intrusión se ejecutan antes de cada paso a producción y anualmente, por tercero independiente de audIT, con informe íntegro y remediación (FEP02, 20.1, pp. 34--35; FEP02, RT-11.20, p. 24). La carga prueba los umbrales a 1,5 veces el peak declarado. La migración definitiva requiere dos ensayos previos con conciliación sin diferencias no explicadas. Estas comprobaciones complementan las certificaciones A12/A22 y conservan responsables, autorización y ventanas.
 
 Para la aceptación de usuarios (UAT) de la Etapa 1 en M10--M12 (A12), cuya ventana puede coincidir con el inicio de la temporada alta agrícola de exportación, se acuerda con la Contraparte Técnica en H1 un calendario de ventanas UAT acotadas por turno fuera de horario punta, con cupos nominales por rol (despacho, prevención, mantenimiento, finanzas y terminales), designación previa de usuarios suplentes certificados y regla de escalamiento en 48 horas ante indisponibilidad, asegurando el cierre oportuno de H5 sin afectar la operación en curso ni desplazar hitos contractuales. Asimismo, la aceptación de la integración de flota de terceros (SUP-02) exige ejecutar en ambiente de staging/UAT la verificación sobre una muestra autorizada real de cada una de las tres plataformas GPS de terceros previo a suscribir el acta de H5 y H10, complementando los ensayos automatizados contra dobles simulados de CI.
 
 ### 9.3.3 Protocolo de aceptación, observaciones y acta
 
-Para cada hito se identificará el entregable, la versión sometida, el criterio objetivo, el responsable de ejecución y la evidencia. La contraparte revisará el paquete dentro de los plazos previstos en las bases; las observaciones se registrarán con identificador, requisito relacionado, severidad, evidencia y respuesta. La versión corregida se reevalúa contra el mismo criterio y se conserva la trazabilidad de ambas revisiones.
+Para cada hito se identificará el entregable, la versión sometida, el criterio objetivo, el responsable de ejecución y la evidencia. La formalización operativa de este régimen se detalla en las doce fichas por hito contractual (H1 a H12) y una ficha consolidadora del producto final contenidas en el Formulario T-17 (sección ), las cuales vinculan unívocamente cada entrega con sus paquetes EDT, ensayos específicos del catálogo y modelos de acta bajo los Artículos 17 y 18 de las Bases Administrativas. La contraparte revisará el paquete dentro de los plazos previstos en las bases; las observaciones se registrarán con identificador, requisito relacionado, severidad, evidencia y respuesta. La versión corregida se reevalúa contra el mismo criterio y se conserva la trazabilidad de ambas revisiones.
 
 Solo el acta de aceptación suscrita acredita el hito; el registro de observaciones no sustituye la conformidad exigida. La disponibilidad contractual es al menos 99,9 %; RTO máximo 4 h y RPO máximo 15 min; la retención local mínima es 72 h. Para el resto de los criterios, el valor medido, el umbral aprobado y la fuente deben constar en el acta, sin completar resultados antes de ejecutar las pruebas.
 
@@ -191,7 +229,8 @@ Cada evidencia incluirá identificador de requisito/caso, fecha, versión, ambie
 
 ### 9.3.5 Condiciones contractuales de calendario y aceptación
 
-El calendario de la Tabla 9.6 es obligatorio conforme al FEP01, Artículo 17.1, pp. 12--13. M1 se cuenta desde el origen contractual efectivo; no se convierte la fecha de entrega de la oferta en inicio del contrato. Los puntos de control técnicos no sustituyen los hitos ponderados de E-25.
+\begingroup\emergencystretch=3em
+El calendario de la Tabla 9.6 es obligatorio conforme al FEP01, Artículo 17.1, pp. 12--13. M1 se cuenta desde el origen contractual efectivo; no se convierte la fecha de entrega de la oferta en inicio del contrato. Los puntos de control técnicos no sustituyen los hitos ponderados de E-25.\endgroup
 
 **Tabla 9.6.** Calendario contractual y evidencia de transición
 
@@ -219,8 +258,8 @@ La Tabla 9.7 concreta los criterios que deben incorporarse al catálogo de prueb
 
 | Control | Umbral | Fuente y evidencia |
 |---|---|---|
-| Disponibilidad crítica E2E | $\ge99,9%$ mensual | FEP01, Artículo 20, p. 14, FEP02, RT-10.01, p. 22: intentos, éxito/fallo y duración de transacciones reales correlacionadas. Monitoreo sintético complementario. |
-| Red, cómputo, datos y portal | $\ge99,95%$ por componente | FEP02, Cap. 7, pp. 17--18; sala Cap. 6: métricas por componente y conciliación con incidencias de negocio. |
+| Disponibilidad crítica E2E | $\ge99{,}9%$ mensual | FEP01, Artículo 20, p. 14, FEP02, RT-10.01, p. 22: intentos, éxito/fallo y duración de transacciones reales correlacionadas. Monitoreo sintético complementario. |
+| Red, cómputo, datos y portal | $\ge99{,}95%$ por componente | FEP02, Cap. 7, pp. 17--18; sala Cap. 6: métricas por componente y conciliación con incidencias de negocio. |
 | Recuperación | RTO $\le4 h; RPO \le15$ min | FEP02, RT-07.04, p. 17: conmutación real autorizada, tiempos y datos recuperados. |
 | Asignación bloqueante | p95 $\le30$ s | Caso, RT-09.01, p. 32; FEP02 Cap. 9: jornada previa, habilitaciones y equipo bajo carga declarada. |
 | Documento de transporte | $\le90$ s | Caso, RT-09.01, p. 32: documento conforme antes de mover carga; ERP contable como emisor tributario. |

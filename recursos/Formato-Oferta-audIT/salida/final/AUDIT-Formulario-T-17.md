@@ -22,7 +22,7 @@ audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. O
 
 ### 9.0.1 Entregables de cada hito y del producto final
 
-La secuencia de actividades, dependencias y evidencias por hito se articula con la estructura canónica de la EDT de 13 elementos y 54 paquetes de trabajo (con especial foco en el elemento 10 «Calidad y pruebas», paquetes 10.1 a 10.3) y el cronograma contractual de actividades A01 a A25 de S7 (Formularios T-14, T-15 y T-18). La verificación integral de la Etapa 1 se concentra en la actividad A12 (meses 10 a 12), la certificación de la Etapa 2 en la actividad A22 (meses 17 a 18), y los ejercicios semestrales de recuperación ante desastres (DR) se programan en junio y noviembre de cada año operacional (M21 a M56); véanse sección 9.3.1 y sección 9.3.2.
+La secuencia de actividades, dependencias y evidencias por hito se articula con la estructura canónica de la EDT de 13 elementos y 54 paquetes de trabajo (con especial foco en el elemento 10 «Calidad y pruebas», paquetes 10.1 a 10.3) y el cronograma contractual de actividades A01 a A25 de S7 (Formularios T-14, T-15 y T-18). La verificación integral de la Etapa 1 se concentra en la actividad A12 (meses 10 a 12), la certificación de la Etapa 2 en la actividad A22 (meses 17 a 18), y los ejercicios semestrales de recuperación ante desastres (DR) se programan en mayo y noviembre de cada año operacional (meses 22, 28, 34, 40, 46 y 52, conforme al Subdocumento 11); véanse sección 9.3.1 y sección 9.3.2.
 
 La evidencia de capacitación se acepta conforme a G13: versión y configuración de PREPROD congeladas, funciones por perfil con pruebas superadas, datos y material de formación. A13 distingue familiarización con lo certificado al cierre del sprint 7 de práctica completa y evaluación después de A09. El acta de usuarios certificados es necesaria para cerrar la marcha blanca; una fecha prevista o una probabilidad de simulación no acredita estas entregas. Se mantienen M13--M15 para A15 y M16 para producción E1.
 
@@ -91,11 +91,11 @@ La Contraparte Técnica suscribe el acta que acredita cada hito (FEP01, Artícul
 **Identificador y Mes Contractual:** `HITO-H03` · Mes 6 de contrato (Actividad A07; límite día hábil 120; margen planificado de 8 días hábiles según T-15).
 **Entregables EDT Trazados:** 3.1 (ambientes operativos), 3.2 (identidad y seguridad habilitadas) y 3.3 (observabilidad). La certificación de seguridad se presenta en H5.
 **Criterios Objetivos de Aceptación:**
-- Cinco ambientes cloud desplegados mediante código inmutable (Terraform) en Azure Chile Central y réplica pasiva en Brasil South.
+- Cinco ambientes cloud desplegados mediante código inmutable (Terraform) en Azure Chile Central y réplica pasiva en Brazil South.
 - Quality Gates G1 a G3 configurados en pipeline de compilación, bloqueando código con cobertura de líneas $< 70% o ramas < 80%$.
 - Paneles de observabilidad operativos con emisión de alertas en tiempo real hacia consola Torre 24x7.
 
-**Pruebas y Verificación de Calidad:** Casos de prueba automatizados registro de compilación y despliegue automatizado y análisis estático SAST sin vulnerabilidades críticas abiertas.
+**Pruebas y Verificación de Calidad:** Pruebas automatizadas de infraestructura como código, registro de compilación y despliegue automatizado, y análisis estático SAST sin vulnerabilidades críticas ni altas abiertas.
 **Expediente de Conformidad:** Reporte de infraestructura como código (IaC), bitácora de ejecución de pipelines y comprobante de disponibilidad de ambientes.
 **Roles Responsables:** Entrega: Líder de Operación / SRE y Líder de Calidad (audIT). Aprobación: Administrador Cloud y Contraparte Técnica (Curimón).
 **Efecto Económico Contractual:** Habilita la facturación del 10 % del valor total de la fase de implementación, conforme al Formulario E-25 (Etapa 1 acumulada: 25 %).
@@ -123,7 +123,7 @@ La Contraparte Técnica suscribe el acta que acredita cada hito (FEP01, Artícul
 **Criterios Objetivos de Aceptación:**
 - **Rendimiento transaccional:** Asignación en $P_{95} \le 30$ s (`CP-PERF-04`). Para el DET, se verifica disponibilidad en cabina antes de mover la carga y el umbral de 90 s bajo el perfil del ensayo `CP-PERF-05`.
 - **Continuidad y Recuperación ante Desastres:** Recuperación integral ante caída del centro principal con RTO $\le 4\text{ h} y RPO \le 15\text{ min}$ (`CP-PERF-03`).
-- **Persistencia y Enlace en Terreno:** Autonomía a bordo $\ge 72\text{ h}$ sin cobertura y sincronización completa al reconectar en $< 20\text{ min}$ (`CP-HW-03`); latencia SOS contractual $\le 15\text{ s}$ en red celular real (`CP-HW-06`) y $P_{99} \le 15{,}0\text{ s}$ bajo red degradada (`CP-PERF-06`); estanqueidad IP67 certificada (`CP-HW-08`).
+- **Persistencia y Enlace en Terreno:** Autonomía a bordo $\ge 72\text{ h}$ sin cobertura y sincronización completa al reconectar en $\le 20\text{ min}$ (`CP-HW-03`); latencia SOS contractual $\le 15\text{ s}$ en red celular real (`CP-HW-06`) y $P_{99} \le 15{,}0\text{ s}$ bajo red degradada (`CP-PERF-06`); estanqueidad IP67 certificada (`CP-HW-08`).
 - **Aceptación de Usuario (UAT):** 100% de los casos UAT de Etapa 1 (`CP-UAT-01` a `CP-UAT-08`) ejecutados conforme por despachadores y personal designado de Curimón.
 - Cero defectos de severidad Crítica o Alta pendientes (FEP01, Art. 78.1); cualquier defecto residual clasificado como Media o Baja con plan de subsanación acordado para marcha blanca.
 
@@ -420,7 +420,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
   }\allowbreak{}
 \end{quote}
 **Resultado Esperado:** Objeto `A\allowbreak{}s\allowbreak{}s\allowbreak{}i\allowbreak{}g\allowbreak{}n\allowbreak{}m\allowbreak{}e\allowbreak{}n\allowbreak{}t\allowbreak{}V\allowbreak{}a\allowbreak{}l\allowbreak{}i\allowbreak{}d\allowbreak{}a\allowbreak{}t\allowbreak{}i\allowbreak{}o\allowbreak{}n\allowbreak{}R\allowbreak{}e\allowbreak{}s\allowbreak{}u\allowbreak{}l\allowbreak{}t\allowbreak{}` con `i\allowbreak{}s\allowbreak{}A\allowbreak{}p\allowbreak{}p\allowbreak{}r\allowbreak{}o\allowbreak{}v\allowbreak{}e\allowbreak{}d\allowbreak{}:\allowbreak{} t\allowbreak{}r\allowbreak{}u\allowbreak{}e\allowbreak{}`, `r\allowbreak{}e\allowbreak{}j\allowbreak{}e\allowbreak{}c\allowbreak{}t\allowbreak{}i\allowbreak{}o\allowbreak{}n\allowbreak{}R\allowbreak{}e\allowbreak{}a\allowbreak{}s\allowbreak{}o\allowbreak{}n\allowbreak{}s\allowbreak{}:\allowbreak{} [\allowbreak{}]\allowbreak{}`, y tiempo medido sobre el fixture, contrastado con el objetivo adicional de treinta milisegundos en memoria.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P1 (Bloqueante)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Crítica** (FEP01, Art. 78.1).
 **Entorno:** Local CI Runner / Jest Unit Runtime.
 
 **Variantes negativas del fixture:** repetir retirando, de a uno, jornada disponible, habilitación, aptitud mecánica y compatibilidad; cada falta debe impedir asignación. El oráculo de cada variante es isApproved=false con motivo específico. Un caso unitario rápido no acredita por sí solo asignación E2E p95hasta 30 s.
@@ -454,7 +454,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
   }\allowbreak{}
 \end{quote}
 **Resultado Esperado:** Emisión inmediata de infracción `V\allowbreak{}I\allowbreak{}O\allowbreak{}L\allowbreak{}A\allowbreak{}T\allowbreak{}I\allowbreak{}O\allowbreak{}N\allowbreak{}_\allowbreak{}C\allowbreak{}O\allowbreak{}N\allowbreak{}T\allowbreak{}I\allowbreak{}N\allowbreak{}U\allowbreak{}O\allowbreak{}U\allowbreak{}S\allowbreak{}_\allowbreak{}D\allowbreak{}R\allowbreak{}I\allowbreak{}V\allowbreak{}I\allowbreak{}N\allowbreak{}G\allowbreak{}_\allowbreak{}E\allowbreak{}X\allowbreak{}C\allowbreak{}E\allowbreak{}E\allowbreak{}D\allowbreak{}E\allowbreak{}D\allowbreak{}` con estado `B\allowbreak{}L\allowbreak{}O\allowbreak{}C\allowbreak{}K\allowbreak{}E\allowbreak{}D\allowbreak{}_\allowbreak{}F\allowbreak{}O\allowbreak{}R\allowbreak{}_\allowbreak{}D\allowbreak{}I\allowbreak{}S\allowbreak{}P\allowbreak{}A\allowbreak{}T\allowbreak{}C\allowbreak{}H\allowbreak{}`, registrando exceso de 60 segundos.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P1 (Bloqueante)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Crítica** (FEP01, Art. 78.1).
 **Entorno:** Local CI Runner / Go Test Runtime.
 
 **Variante trazada a RF-002 (S3/T-12):** Construir un padrón sintético de 454 conductores identificados, 196 propios y 258 externos; asociar a cada tramo origen, conductor, vehículo y nivel 1–5, con muestras de todas las fuentes y ausencia de fuente. El expediente debe conservar todos los tramos y distinguirlos; un GPS sin identificación ni atestación no prueba jornada del conductor. El registro voluntario de nivel 0 nunca habilita la asignación. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.
@@ -478,7 +478,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 **Resultado Esperado:**
    En `t\allowbreak{}1\allowbreak{}`: `c\allowbreak{}a\allowbreak{}n\allowbreak{}R\allowbreak{}e\allowbreak{}s\allowbreak{}u\allowbreak{}m\allowbreak{}e\allowbreak{}:\allowbreak{} f\allowbreak{}a\allowbreak{}l\allowbreak{}s\allowbreak{}e\allowbreak{}`, motivo `I\allowbreak{}N\allowbreak{}S\allowbreak{}U\allowbreak{}F\allowbreak{}F\allowbreak{}I\allowbreak{}C\allowbreak{}I\allowbreak{}E\allowbreak{}N\allowbreak{}T\allowbreak{}_\allowbreak{}M\allowbreak{}A\allowbreak{}N\allowbreak{}D\allowbreak{}A\allowbreak{}T\allowbreak{}O\allowbreak{}R\allowbreak{}Y\allowbreak{}_\allowbreak{}B\allowbreak{}R\allowbreak{}E\allowbreak{}A\allowbreak{}K\allowbreak{}`, tiempo restante `1\allowbreak{}5\allowbreak{} m\allowbreak{}i\allowbreak{}n\allowbreak{}u\allowbreak{}t\allowbreak{}o\allowbreak{}s\allowbreak{}`.
    En `t\allowbreak{}2\allowbreak{}`: `c\allowbreak{}a\allowbreak{}n\allowbreak{}R\allowbreak{}e\allowbreak{}s\allowbreak{}u\allowbreak{}m\allowbreak{}e\allowbreak{}:\allowbreak{} t\allowbreak{}r\allowbreak{}u\allowbreak{}e\allowbreak{}`, contador de conducción continua reiniciado a 0,0 horas.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P1 (Bloqueante)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Crítica** (FEP01, Art. 78.1).
 **Entorno:** Local CI Runner / Jest.
 
 #### 9.0.12.4 CP-UNIT-04 — Descanso Mínimo Diario de 8 Horas Continuas en Ciclo de 24 Horas
@@ -496,7 +496,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** Array de 1.440 minutos con actividades fraccionadas donde \(\max(\text{bloque_descanso}) = 6{,}5\text{ horas}\).
 **Resultado Esperado:** Función retorna `h\allowbreak{}a\allowbreak{}s\allowbreak{}V\allowbreak{}a\allowbreak{}l\allowbreak{}i\allowbreak{}d\allowbreak{}D\allowbreak{}a\allowbreak{}i\allowbreak{}l\allowbreak{}y\allowbreak{}R\allowbreak{}e\allowbreak{}s\allowbreak{}t\allowbreak{}:\allowbreak{} f\allowbreak{}a\allowbreak{}l\allowbreak{}s\allowbreak{}e\allowbreak{}`, `m\allowbreak{}a\allowbreak{}x\allowbreak{}C\allowbreak{}o\allowbreak{}n\allowbreak{}t\allowbreak{}i\allowbreak{}n\allowbreak{}u\allowbreak{}o\allowbreak{}u\allowbreak{}s\allowbreak{}R\allowbreak{}e\allowbreak{}s\allowbreak{}t\allowbreak{}H\allowbreak{}o\allowbreak{}u\allowbreak{}r\allowbreak{}s\allowbreak{}:\allowbreak{} 6\allowbreak{}.\allowbreak{}5\allowbreak{}`, `d\allowbreak{}e\allowbreak{}f\allowbreak{}i\allowbreak{}c\allowbreak{}i\allowbreak{}t\allowbreak{}H\allowbreak{}o\allowbreak{}u\allowbreak{}r\allowbreak{}s\allowbreak{}:\allowbreak{} 1\allowbreak{}.\allowbreak{}5\allowbreak{}`, generando alerta de infracción legal.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P1 (Bloqueante)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Crítica** (FEP01, Art. 78.1).
 **Entorno:** Local CI Runner / Go Test.
 
 #### 9.0.12.5 CP-UNIT-05 — Control Acumulativo de Tope Mensual de 180 Horas Ordinarias de Trabajo
@@ -514,7 +514,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** `a\allowbreak{}c\allowbreak{}c\allowbreak{}u\allowbreak{}m\allowbreak{}u\allowbreak{}l\allowbreak{}a\allowbreak{}t\allowbreak{}e\allowbreak{}d\allowbreak{}M\allowbreak{}o\allowbreak{}n\allowbreak{}t\allowbreak{}h\allowbreak{}l\allowbreak{}y\allowbreak{}H\allowbreak{}o\allowbreak{}u\allowbreak{}r\allowbreak{}s\allowbreak{}:\allowbreak{} 1\allowbreak{}7\allowbreak{}8\allowbreak{}.\allowbreak{}0\allowbreak{}`, `p\allowbreak{}r\allowbreak{}o\allowbreak{}j\allowbreak{}e\allowbreak{}c\allowbreak{}t\allowbreak{}e\allowbreak{}d\allowbreak{}T\allowbreak{}r\allowbreak{}i\allowbreak{}p\allowbreak{}H\allowbreak{}o\allowbreak{}u\allowbreak{}r\allowbreak{}s\allowbreak{}:\allowbreak{} 4\allowbreak{}.\allowbreak{}0\allowbreak{}`, `m\allowbreak{}o\allowbreak{}n\allowbreak{}t\allowbreak{}h\allowbreak{}l\allowbreak{}y\allowbreak{}C\allowbreak{}a\allowbreak{}p\allowbreak{}:\allowbreak{} 1\allowbreak{}8\allowbreak{}0\allowbreak{}.\allowbreak{}0\allowbreak{}`.
 **Resultado Esperado:** Rechazo de asignación con código `M\allowbreak{}O\allowbreak{}N\allowbreak{}T\allowbreak{}H\allowbreak{}L\allowbreak{}Y\allowbreak{}_\allowbreak{}C\allowbreak{}A\allowbreak{}P\allowbreak{}_\allowbreak{}O\allowbreak{}V\allowbreak{}E\allowbreak{}R\allowbreak{}R\allowbreak{}U\allowbreak{}N\allowbreak{}_\allowbreak{}P\allowbreak{}R\allowbreak{}E\allowbreak{}V\allowbreak{}E\allowbreak{}N\allowbreak{}T\allowbreak{}E\allowbreak{}D\allowbreak{}`, indicando exceso proyectado de 2,0 horas.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P1 (Bloqueante)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Crítica** (FEP01, Art. 78.1).
 **Entorno:** Local CI Runner / Jest.
 
 #### 9.0.12.6 CP-UNIT-06 — Generación y Sellado Criptográfico SHA-256 de la Entidad `E\allowbreak{}v\allowbreak{}i\allowbreak{}d\allowbreak{}e\allowbreak{}n\allowbreak{}c\allowbreak{}i\allowbreak{}a\allowbreak{}J\allowbreak{}o\allowbreak{}r\allowbreak{}n\allowbreak{}a\allowbreak{}d\allowbreak{}a\allowbreak{}`
@@ -545,7 +545,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
   }\allowbreak{}
 \end{quote}
 **Resultado Esperado:** Hash SHA-256 generado con longitud exacta de 64 caracteres hexadecimales. El hash de la entidad modificada difiere completamente (no se exige que cada par de hashes cambie más de la mitad de sus bits).
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P1 (Bloqueante)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Crítica** (FEP01, Art. 78.1).
 **Entorno:** Local CI Runner / Go Crypto / Jest.
 
 **Variante trazada a RF-004 (S3/T-12):** Sellar un evento original y una corrección que cambia un dato; conservar ambas versiones con autor, origen y fecha. Alterar el original y verificar fallo de integridad. Avanzar reloj virtual hasta cinco años de conservación y comprobar disponibilidad e integridad antes de su término; la simulación verifica la política y no acredita cinco años de operación real. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.
@@ -567,7 +567,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** Bloque 6 con hash anterior `a\allowbreak{}1\allowbreak{}b\allowbreak{}2\allowbreak{}c\allowbreak{}3\allowbreak{}d\allowbreak{}4\allowbreak{}.\allowbreak{}.\allowbreak{}.\allowbreak{}`, timestamp `2\allowbreak{}0\allowbreak{}2\allowbreak{}6\allowbreak{}-\allowbreak{}1\allowbreak{}0\allowbreak{}-\allowbreak{}0\allowbreak{}1\allowbreak{}T\allowbreak{}1\allowbreak{}0\allowbreak{}:\allowbreak{}2\allowbreak{}0\allowbreak{}:\allowbreak{}0\allowbreak{}0\allowbreak{}Z\allowbreak{}`.
 **Resultado Esperado:** La verificación retorna `v\allowbreak{}a\allowbreak{}l\allowbreak{}i\allowbreak{}d\allowbreak{}:\allowbreak{} t\allowbreak{}r\allowbreak{}u\allowbreak{}e\allowbreak{}` inicialmente; tras alterar el bloque 3, retorna `v\allowbreak{}a\allowbreak{}l\allowbreak{}i\allowbreak{}d\allowbreak{}:\allowbreak{} f\allowbreak{}a\allowbreak{}l\allowbreak{}s\allowbreak{}e\allowbreak{}` identificando ruptura de enlace en bloque 3 y 4.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P1 (Bloqueante)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Crítica** (FEP01, Art. 78.1).
 **Entorno:** Local CI Runner / Go Test.
 
 **Variante trazada a RNF-012 (S3/T-12):** Crear evidencia con autor, origen, fecha y contenido; añadir corrección como registro nuevo. Esperar histórico íntegro y vínculo entre versiones. Quitar autor u origen y alterar fecha: rechazar ingreso probatorio o dejar pendiente identificado, nunca completar datos inventados ni sobrescribir original. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.
@@ -589,7 +589,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** Geometría plana sintética en metros; cuadrado de vértices (0,0), (100,0), (100,100), (0,100). P1=(50,50), P2=(0,50), P3=(-15,50). El borde exacto se clasifica como interior según política versionada; no se usan coordenadas latitud/longitud como UTM.
 **Resultado Esperado:** P1=INSIDE, P2=BOUNDARY_INSIDE y P3=OUTSIDE. Se mide latencia; el ensayo unitario no sustituye el límite E2E contractual. Todos los puntos se evalúan con el mismo sistema de referencia.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P2 (Crítica)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Alta** (FEP01, Art. 78.1).
 **Entorno:** Local CI Runner / C++ o Go Test.
 
 **Variante trazada a RF-010 (S3/T-12):** Versionar 1.400 polígonos y puntos de entrada, límite interior y exterior en el mismo sistema de coordenadas; ejecutar replay automático. Esperar una entrada y una salida por cruce válido, ninguna para puntos exteriores y deduplicación de reintentos, sin equipos en instalaciones del cliente ni acciones del conductor. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.
@@ -612,7 +612,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** `f\allowbreak{}u\allowbreak{}e\allowbreak{}l\allowbreak{}L\allowbreak{}i\allowbreak{}t\allowbreak{}e\allowbreak{}r\allowbreak{}s\allowbreak{}:\allowbreak{} 1\allowbreak{}5\allowbreak{}2\allowbreak{}.\allowbreak{}0\allowbreak{}`, `d\allowbreak{}i\allowbreak{}s\allowbreak{}t\allowbreak{}a\allowbreak{}n\allowbreak{}c\allowbreak{}e\allowbreak{}K\allowbreak{}m\allowbreak{}:\allowbreak{} 4\allowbreak{}5\allowbreak{}0\allowbreak{}.\allowbreak{}0\allowbreak{}`, `c\allowbreak{}a\allowbreak{}r\allowbreak{}g\allowbreak{}o\allowbreak{}T\allowbreak{}o\allowbreak{}n\allowbreak{}s\allowbreak{}:\allowbreak{} 2\allowbreak{}4\allowbreak{}.\allowbreak{}5\allowbreak{}`, `e\allowbreak{}m\allowbreak{}i\allowbreak{}s\allowbreak{}s\allowbreak{}i\allowbreak{}o\allowbreak{}n\allowbreak{}F\allowbreak{}a\allowbreak{}c\allowbreak{}t\allowbreak{}o\allowbreak{}r\allowbreak{}W\allowbreak{}T\allowbreak{}W\allowbreak{}:\allowbreak{} 3\allowbreak{}.\allowbreak{}1\allowbreak{}8\allowbreak{}`.
 **Resultado Esperado:** Retorno de objeto con `t\allowbreak{}o\allowbreak{}t\allowbreak{}a\allowbreak{}l\allowbreak{}E\allowbreak{}m\allowbreak{}i\allowbreak{}s\allowbreak{}s\allowbreak{}i\allowbreak{}o\allowbreak{}n\allowbreak{}s\allowbreak{}K\allowbreak{}g\allowbreak{}C\allowbreak{}O\allowbreak{}2\allowbreak{}e\allowbreak{}:\allowbreak{} 4\allowbreak{}8\allowbreak{}3\allowbreak{}.\allowbreak{}3\allowbreak{}6\allowbreak{}` e `i\allowbreak{}n\allowbreak{}t\allowbreak{}e\allowbreak{}n\allowbreak{}s\allowbreak{}i\allowbreak{}t\allowbreak{}y\allowbreak{}G\allowbreak{}r\allowbreak{}a\allowbreak{}m\allowbreak{}P\allowbreak{}e\allowbreak{}r\allowbreak{}T\allowbreak{}o\allowbreak{}n\allowbreak{}K\allowbreak{}m\allowbreak{}:\allowbreak{} 4\allowbreak{}3\allowbreak{}.\allowbreak{}8\allowbreak{}4\allowbreak{}`, con precisión de 2 decimales.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P3 (Mayor)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Media** (FEP01, Art. 78.1).
 **Entorno:** Local CI Runner / Jest.
 
 **Variante trazada a RF-023 (S3/T-12):** Calcular emisiones mensuales de una muestra propia y otra externa con factores versionados, actividad y toneladas-kilómetro de referencia. Reproducir sumas y unidades de la hoja independiente y desglosar cliente y contrato. Sin factor o actividad, declarar faltante y no emitir cero verificado. La conformidad externa del método se acredita separadamente. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.
@@ -633,7 +633,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** `d\allowbreak{}i\allowbreak{}s\allowbreak{}t\allowbreak{}a\allowbreak{}n\allowbreak{}c\allowbreak{}e\allowbreak{}K\allowbreak{}m\allowbreak{}:\allowbreak{} 3\allowbreak{}2\allowbreak{}0\allowbreak{}.\allowbreak{}0\allowbreak{}`, `p\allowbreak{}u\allowbreak{}m\allowbreak{}p\allowbreak{}F\allowbreak{}u\allowbreak{}e\allowbreak{}l\allowbreak{}L\allowbreak{}i\allowbreak{}t\allowbreak{}e\allowbreak{}r\allowbreak{}s\allowbreak{}:\allowbreak{} 2\allowbreak{}4\allowbreak{}0\allowbreak{}.\allowbreak{}0\allowbreak{}`, `c\allowbreak{}a\allowbreak{}n\allowbreak{}B\allowbreak{}u\allowbreak{}s\allowbreak{}F\allowbreak{}u\allowbreak{}e\allowbreak{}l\allowbreak{}L\allowbreak{}i\allowbreak{}t\allowbreak{}e\allowbreak{}r\allowbreak{}s\allowbreak{}:\allowbreak{} 1\allowbreak{}3\allowbreak{}5\allowbreak{}.\allowbreak{}0\allowbreak{}`.
 **Resultado Esperado:** Disparo de evento `F\allowbreak{}U\allowbreak{}E\allowbreak{}L\allowbreak{}_\allowbreak{}D\allowbreak{}I\allowbreak{}S\allowbreak{}C\allowbreak{}R\allowbreak{}E\allowbreak{}P\allowbreak{}A\allowbreak{}N\allowbreak{}C\allowbreak{}Y\allowbreak{}_\allowbreak{}A\allowbreak{}L\allowbreak{}E\allowbreak{}R\allowbreak{}T\allowbreak{}` con nivel de sospecha de merma/extracción no autorizada de 105 litros (\(43{,}75%\) de inconsistencia).
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P2 (Crítica)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Alta** (FEP01, Art. 78.1).
 **Entorno:** Local CI Runner / Python/Go Unit.
 
 #### 9.0.12.11 CP-UNIT-11 — Enclavamiento Cinético de Interfaz de Usuario (Ley No Chat 21.377)
@@ -653,7 +653,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** Evento sensor `S\allowbreak{}p\allowbreak{}e\allowbreak{}e\allowbreak{}d\allowbreak{}S\allowbreak{}e\allowbreak{}n\allowbreak{}s\allowbreak{}o\allowbreak{}r\allowbreak{}R\allowbreak{}e\allowbreak{}a\allowbreak{}d\allowbreak{}i\allowbreak{}n\allowbreak{}g\allowbreak{}{\allowbreak{}s\allowbreak{}p\allowbreak{}e\allowbreak{}e\allowbreak{}d\allowbreak{}K\allowbreak{}m\allowbreak{}h\allowbreak{}:\allowbreak{} 1\allowbreak{}.\allowbreak{}2\allowbreak{},\allowbreak{} t\allowbreak{}i\allowbreak{}m\allowbreak{}e\allowbreak{}s\allowbreak{}t\allowbreak{}a\allowbreak{}m\allowbreak{}p\allowbreak{}:\allowbreak{} 1\allowbreak{}7\allowbreak{}7\allowbreak{}5\allowbreak{}0\allowbreak{}0\allowbreak{}1\allowbreak{}2\allowbreak{}0\allowbreak{}0\allowbreak{}0\allowbreak{}0\allowbreak{}0\allowbreak{}}\allowbreak{}`.
 **Resultado Esperado:** La UI transiciona a pantalla negra o aviso visual pasivo en \(< 150\text{ ms}\), rechazando el 100% de los eventos táctiles interactivos.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P1 (Bloqueante)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Crítica** (FEP01, Art. 78.1).
 **Entorno:** Local CI Runner / Android/Linux HAL Mock.
 
 **Variante trazada a RNF-001 (S3/T-12):** Reproducir velocidad cero y velocidad positiva; intentar escritura, formulario y confirmación en ambos estados. En movimiento descartar toda captura manual y mostrar solo aviso pasivo. La recuperación de interfaz detenida no debe perder datos; parámetros de milisegundos son objetivos adicionales, no permiso para interactuar conduciendo. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.
@@ -674,7 +674,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** `e\allowbreak{}n\allowbreak{}t\allowbreak{}r\allowbreak{}y\allowbreak{}:\allowbreak{} 0\allowbreak{}9\allowbreak{}:\allowbreak{}0\allowbreak{}0\allowbreak{}:\allowbreak{}0\allowbreak{}0\allowbreak{}Z\allowbreak{}`, `e\allowbreak{}x\allowbreak{}i\allowbreak{}t\allowbreak{}:\allowbreak{} 1\allowbreak{}4\allowbreak{}:\allowbreak{}3\allowbreak{}0\allowbreak{}:\allowbreak{}0\allowbreak{}0\allowbreak{}Z\allowbreak{}`, `f\allowbreak{}r\allowbreak{}e\allowbreak{}e\allowbreak{}T\allowbreak{}i\allowbreak{}m\allowbreak{}e\allowbreak{}:\allowbreak{} 1\allowbreak{}2\allowbreak{}0\allowbreak{} m\allowbreak{}i\allowbreak{}n\allowbreak{}`, estadía total = 330 min, tiempo excedente = 210 min (7 bloques de 30 min).
 **Resultado Esperado:** Retorno de `b\allowbreak{}i\allowbreak{}l\allowbreak{}l\allowbreak{}a\allowbreak{}b\allowbreak{}l\allowbreak{}e\allowbreak{}O\allowbreak{}v\allowbreak{}e\allowbreak{}r\allowbreak{}s\allowbreak{}t\allowbreak{}a\allowbreak{}y\allowbreak{}M\allowbreak{}i\allowbreak{}n\allowbreak{}u\allowbreak{}t\allowbreak{}e\allowbreak{}s\allowbreak{}:\allowbreak{} 2\allowbreak{}1\allowbreak{}0\allowbreak{}`, `b\allowbreak{}i\allowbreak{}l\allowbreak{}l\allowbreak{}a\allowbreak{}b\allowbreak{}l\allowbreak{}e\allowbreak{}U\allowbreak{}n\allowbreak{}i\allowbreak{}t\allowbreak{}s\allowbreak{}:\allowbreak{} 7\allowbreak{}`, con trazabilidad de coordenadas y odómetro inalterados.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P2 (Crítica)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Alta** (FEP01, Art. 78.1).
 **Entorno:** Local CI Runner / Jest.
 
 **Variante trazada a RF-011 (S3/T-12):** Usar un contrato sintético con 120 min libres y bloques facturables de 30 min, permanencias de 119, 120 y 330 min. Esperar 0, 0 y 210 min facturables respectivamente, siete bloques en la última. Conservar entrada, salida y contrato. Repetir con otro tiempo libre contractual para verificar que no se fija universalmente en dos horas. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.
@@ -696,7 +696,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** Buffer de bytes válidos conteniendo timestamp, coordenadas, velocidad, RPM, combustible y temperatura y estado de balizas Bluetooth.
 **Resultado Esperado:** El paquete corrupto lanza `Invalid\allowbreak{}Protocol\allowbreak{}Buffer\allowbreak{}Exception` gestionada limpiamente sin crash; el paquete válido se deserializa en \(< 5\text{ }\mu\text{s}\) con valores de campos 100% exactos.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P2 (Crítica)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Alta** (FEP01, Art. 78.1).
 **Entorno:** Local CI Runner / Go o .NET Testcontainers.
 
 #### 9.0.12.14 CP-UNIT-14 — Detección de Discrepancias y Manipulación en Odómetro CAN vs GNSS
@@ -715,7 +715,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** `g\allowbreak{}p\allowbreak{}s\allowbreak{}D\allowbreak{}e\allowbreak{}l\allowbreak{}t\allowbreak{}a\allowbreak{}K\allowbreak{}m\allowbreak{}:\allowbreak{} 8\allowbreak{}5\allowbreak{}.\allowbreak{}0\allowbreak{}`, `c\allowbreak{}a\allowbreak{}n\allowbreak{}D\allowbreak{}e\allowbreak{}l\allowbreak{}t\allowbreak{}a\allowbreak{}K\allowbreak{}m\allowbreak{}:\allowbreak{} 5\allowbreak{}.\allowbreak{}0\allowbreak{}`, `t\allowbreak{}h\allowbreak{}r\allowbreak{}e\allowbreak{}s\allowbreak{}h\allowbreak{}o\allowbreak{}l\allowbreak{}d\allowbreak{}D\allowbreak{}e\allowbreak{}l\allowbreak{}t\allowbreak{}a\allowbreak{}P\allowbreak{}e\allowbreak{}r\allowbreak{}c\allowbreak{}e\allowbreak{}n\allowbreak{}t\allowbreak{}a\allowbreak{}g\allowbreak{}e\allowbreak{}:\allowbreak{} 1\allowbreak{}0\allowbreak{}.\allowbreak{}0\allowbreak{}`.
 **Resultado Esperado:** Emisión de alerta de seguridad `O\allowbreak{}D\allowbreak{}O\allowbreak{}M\allowbreak{}E\allowbreak{}T\allowbreak{}E\allowbreak{}R\allowbreak{}_\allowbreak{}T\allowbreak{}A\allowbreak{}M\allowbreak{}P\allowbreak{}E\allowbreak{}R\allowbreak{}I\allowbreak{}N\allowbreak{}G\allowbreak{}_\allowbreak{}S\allowbreak{}U\allowbreak{}S\allowbreak{}P\allowbreak{}E\allowbreak{}C\allowbreak{}T\allowbreak{}E\allowbreak{}D\allowbreak{}` con discrepancia de \(94{,}1%\).
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P2 (Crítica)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Alta** (FEP01, Art. 78.1).
 **Entorno:** Local CI Runner / Jest.
 
 **Variante trazada a RF-025 (S3/T-12):** Configurar mantenimiento a 100.000 km como dato sintético, no norma. Con odómetro real de 99.999 y 100.000 km esperar ausencia y presencia de aviso, respectivamente, enviado al sistema de talleres. Repetir con estimación: marcar incertidumbre y origen, sin presentar estimación como lectura real ni perder el aviso. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.
@@ -736,7 +736,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** Dos candidatos legalmente viables y con ventanas compatibles. Fixture simplificado: ingreso 1.000 unidades por retorno; costo variable 2 unidades/km; O1: 15 km incrementales; O2: 110 km. Margen incremental O1=970 y O2=780. No son tarifas ni distancias medidas del caso; unidades abstractas del ensayo.
 **Resultado Esperado:** O1 obtiene mayor margen (970 frente a 780) y se selecciona. Repetir O1 sin jornada disponible: debe descartarse y seleccionarse O2 si es viable. Si ambas incumplen restricciones, no se propone retorno.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: Alta cuando afecta seguridad o evidencia; mayor en objetivos adicionales.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Crítica** cuando afecta seguridad o evidencia; **Media** en objetivos adicionales (FEP01, Art. 78.1).
 **Entorno:** Local CI Runner / Go Test.
 
 **Oráculo del fixture ALNS:** Ingreso menos costo incremental; el ensayo controlado valida decisión y restricciones. No demuestra optimalidad global del algoritmo en la red real.
@@ -760,7 +760,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** Bytes sintéticos, sin atribuir captura a Technoton CANCrocodile ni a vehículos reales; mapa de caudal de laboratorio y patrón de dato no disponible versionados.
 **Resultado Esperado:** Bajo el mapa sintético little-endian indicado, bytes 0x50 y 0x4E: entero 20.048; 20.048/256 = 78,3125 km/h. Añadir fixture de caudal: entero 2.000, resolución sintética 0,05 L/h por unidad, resultado 100 L/h. Verificar también valor no disponible según el mapa homologado, sin convertirlo en cero.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P2 (Crítica)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Alta** (FEP01, Art. 78.1).
 **Entorno:** Local CI Runner / C / Go Test.
 
 **Variante trazada a RNF-005 (S3/T-12):** Medir con analizador independiente el bus durante lectura y reinicio del equipo: cero tramas transmitidas por audIT. Conservar autorización del fabricante, mapa de señales y evidencia de no corte/no interferencia. Un parser correcto o una tasa baja de pérdidas no acredita por sí solo lectura pasiva ni preservación de garantía. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.
@@ -781,7 +781,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** Tokens JWT sintéticos con roles de chofer y despachador.
 **Resultado Esperado:** Token válido verificado exitosamente en \(< 2\text{ ms}\); token manipulado y token expirado rechazados con `S\allowbreak{}e\allowbreak{}c\allowbreak{}u\allowbreak{}r\allowbreak{}i\allowbreak{}t\allowbreak{}y\allowbreak{}E\allowbreak{}x\allowbreak{}c\allowbreak{}e\allowbreak{}p\allowbreak{}t\allowbreak{}i\allowbreak{}o\allowbreak{}n\allowbreak{}`.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P1 (Bloqueante)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Crítica** (FEP01, Art. 78.1).
 **Entorno:** Local CI Runner / Jest.
 
 #### 9.0.12.18 CP-UNIT-18 — Algoritmo de Estimación Dinámica de Alerta de Fatiga según ETA a Área Segura
@@ -800,7 +800,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** Posición actual km 450 Ruta 5 Norte, velocidad media \(65\text{ km/h}\), tiempo restante 45 min.
 **Resultado Esperado:** Disparo preventivo de alerta sonora en cabina conminando a detenerse en el área de descanso del km 488 (arribo estimado en 35 min, con 10 min de holgura legal).
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P2 (Crítica)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Alta** (FEP01, Art. 78.1).
 **Entorno:** Local CI Runner / Go Test.
 
 **Variante trazada a RF-027 (S3/T-12):** Reproducir conducción acumulada 4 h 15 min y área segura alcanzable en 35 min: alertar antes de agotar cinco horas con diez minutos de holgura. Mover área a 50 min: no recomendarla como alcanzable legalmente. La alerta en movimiento es pasiva y no solicita escritura ni confirmación táctil. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.
@@ -820,7 +820,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** `[\allowbreak{}{\allowbreak{}"\allowbreak{}u\allowbreak{}n\allowbreak{}N\allowbreak{}u\allowbreak{}m\allowbreak{}b\allowbreak{}e\allowbreak{}r\allowbreak{}"\allowbreak{}:\allowbreak{} 1\allowbreak{}2\allowbreak{}0\allowbreak{}2\allowbreak{},\allowbreak{} "\allowbreak{}c\allowbreak{}l\allowbreak{}a\allowbreak{}s\allowbreak{}s\allowbreak{}"\allowbreak{}:\allowbreak{} "\allowbreak{}3\allowbreak{}"\allowbreak{}}\allowbreak{},\allowbreak{} {\allowbreak{}"\allowbreak{}u\allowbreak{}n\allowbreak{}N\allowbreak{}u\allowbreak{}m\allowbreak{}b\allowbreak{}e\allowbreak{}r\allowbreak{}"\allowbreak{}:\allowbreak{} 1\allowbreak{}9\allowbreak{}4\allowbreak{}2\allowbreak{},\allowbreak{} "\allowbreak{}c\allowbreak{}l\allowbreak{}a\allowbreak{}s\allowbreak{}s\allowbreak{}"\allowbreak{}:\allowbreak{} "\allowbreak{}5\allowbreak{}.\allowbreak{}1\allowbreak{}"\allowbreak{}}\allowbreak{}]\allowbreak{}`.
 **Resultado Esperado:** Bloqueo terminante con código `C\allowbreak{}H\allowbreak{}E\allowbreak{}M\allowbreak{}I\allowbreak{}C\allowbreak{}A\allowbreak{}L\allowbreak{}_\allowbreak{}I\allowbreak{}N\allowbreak{}C\allowbreak{}O\allowbreak{}M\allowbreak{}P\allowbreak{}A\allowbreak{}T\allowbreak{}I\allowbreak{}B\allowbreak{}I\allowbreak{}L\allowbreak{}I\allowbreak{}T\allowbreak{}Y\allowbreak{}_\allowbreak{}F\allowbreak{}A\allowbreak{}T\allowbreak{}A\allowbreak{}L\allowbreak{}`, señalando prohibición expresa de transporte simultáneo.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P1 (Bloqueante)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Crítica** (FEP01, Art. 78.1).
 **Entorno:** Local CI Runner / Jest.
 
 **Variante trazada a RF-006 (S3/T-12):** Preparar 18 unidades SUSPEL sintéticas, cada una con carga efectiva, DET emitido por ERP, conductor y lista firmada. La muestra conforme vincula esos elementos y permite salida si los otros factores cumplen. Cambiar carga respecto del documento, quitar firma o vencer habilitación: cada variante bloquea. La compatibilidad química por sí sola no acredita este requisito. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.
@@ -840,7 +840,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** Coordenadas lat/lon con desviación de 45 m en la muestra número 6.
 **Resultado Esperado:** La coordenada filtrada amortigua el salto abrupto, manteniéndose a \(< 3{,}5\text{ metros}\) de la posición media real.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P3 (Mayor)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Media** (FEP01, Art. 78.1).
 **Entorno:** Local CI Runner / Python/C++.
 
 #### 9.0.12.21 CP-UNIT-21 — Validación del Estado Conforme del DET y Bloqueo de Documento No Admitido
@@ -861,7 +861,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** Dos órdenes de prueba, mismo identificador repetido, estado `C\allowbreak{}O\allowbreak{}N\allowbreak{}F\allowbreak{}O\allowbreak{}R\allowbreak{}M\allowbreak{}E\allowbreak{}` y estado `N\allowbreak{}O\allowbreak{}_\allowbreak{}E\allowbreak{}M\allowbreak{}I\allowbreak{}T\allowbreak{}I\allowbreak{}D\allowbreak{}O\allowbreak{}`, documento/firma/folio y esquema de prueba versionados; manifestar emisor, orden y huellas. Reloj virtual del fixture.
 **Resultado Esperado:** Disponible el documento conforme antes del movimiento; bloqueadas todas las variantes negativas, una única emisión por orden y evidencia de validación conservada. En pruebas de sistema/hardware se mide ≤90 s; en pruebas unitarias se valida el estado, sin sustituir el tiempo E2E.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: Alta cuando afecta seguridad o evidencia; mayor en objetivos adicionales.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Crítica** cuando afecta seguridad o evidencia; **Media** en objetivos adicionales (FEP01, Art. 78.1).
 **Entorno:** CI con doble de ERP. Homologación real del mecanismo de contingencia antes de despliegue; la falta de disponibilidad no se resuelve fingiendo certificación.
 
 **Variante trazada a RF-014 (S3/T-12):** Ejecutar dos rutas de contingencia: DET anticipado por ERP desde la orden y solicitud satelital al ERP con retorno de la representación completa y conforme a cabina. Antes del movimiento debe estar recibida, reensamblada, validada y accesible localmente en hasta 90 s; folio o hash aislados, fragmentos faltantes, datos discordantes y respuesta fuera de plazo bloquean. Un PDF local firmado por audIT no sustituye emisión del ERP. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.
@@ -881,7 +881,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** Profundidad inicial \(16{,}0\text{ mm}\), profundidad mínima legal \(1{,}6\text{ mm}\), kilometraje acumulado 45.000 km.
 **Resultado Esperado:** Retorno de profundidad remanente estimada (\(9{,}2\text{ mm}\)) y proyección de cambio en 38.000 km adicionales.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P3 (Mayor)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Media** (FEP01, Art. 78.1).
 **Entorno:** Local CI Runner / Jest.
 
 #### 9.0.12.23 CP-UNIT-23 — Compresión de Paquetes con Algoritmo Zstandard para Buffer de 288 Horas
@@ -901,7 +901,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** Lote sintético de 288 h de telemetría de ruta de montaña.
 **Resultado Esperado:** La descompresión reproduce exactamente los bytes de origen; conteo, orden e identificadores permanecen iguales. Se mide tamaño comprimido y se calcula razón raw/comprimido, sin anticipar 1,2 MB ni una razón universal. Este fixture de 34.560 paquetes de 120 bytes suma 4.147.200 bytes, sin fotos ni overhead; no representa el perfil operacional de S4.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: Alta cuando afecta seguridad o evidencia; mayor en objetivos adicionales.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Crítica** cuando afecta seguridad o evidencia; **Media** en objetivos adicionales (FEP01, Art. 78.1).
 **Entorno:** Local CI Runner / C/Go Test.
 
 **Variante trazada a RNF-002 (S3/T-12):** Repetir el conjunto de 72 h sin red, reinicios y reenvío de cada lote dos veces. Esperar mismos identificadores y huellas al final, ninguna pérdida ni duplicado, con bitácora de conciliación. La compresión unitaria comprueba reversibilidad y no acredita capacidad ni sincronización del equipo completo. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.
@@ -923,7 +923,7 @@ Este ensayo define entradas, controles y evidencia; no declara resultados ejecut
 
 **Datos de Entrada Sintéticos:** Anuncios conocidos con temperatura de referencia y casos inválidos; sin atribuir captura real.
 **Resultado Esperado:** La temperatura decodificada coincide con el oráculo a la resolución del formato; entradas inválidas se marcan y no generan lecturas válidas. Esta prueba no acredita precisión metrológica del sensor.
-**Pass/Fail y Severidad:** Pass solo si se cumplen todos los criterios y se conserva evidencia reproducible; cualquier pérdida, acceso no autorizado o salida incorrecta implica Fail. Severidad alta para seguridad y evidencia.
+**Pass/Fail y Severidad:** Pass solo si se cumplen todos los criterios y se conserva evidencia reproducible; cualquier pérdida, acceso no autorizado o salida incorrecta implica Fail. Severidad: **Alta** para seguridad y evidencia (FEP01, Art. 78.1).
 **Entorno:** CI / Decodificador Bluetooth.
 
 #### 9.0.12.25 CP-UNIT-25 — Validación Sintáctica de Códigos QR para Hojas de Datos de Seguridad (HDS)
@@ -942,7 +942,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** Cadenas de texto QR sintéticas.
 **Resultado Esperado:** Payload válido parseado en objeto estructurado; payloads anómalos rechazados con código `I\allowbreak{}N\allowbreak{}V\allowbreak{}A\allowbreak{}L\allowbreak{}I\allowbreak{}D\allowbreak{}_\allowbreak{}H\allowbreak{}D\allowbreak{}S\allowbreak{}_\allowbreak{}Q\allowbreak{}R\allowbreak{}_\allowbreak{}S\allowbreak{}T\allowbreak{}R\allowbreak{}U\allowbreak{}C\allowbreak{}T\allowbreak{}U\allowbreak{}R\allowbreak{}E\allowbreak{}`.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P2 (Crítica)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Alta** (FEP01, Art. 78.1).
 **Entorno:** Local CI Runner / Jest.
 
 ### 9.0.13 Batería 2: Pruebas de Integración y APIs (25 Casos: `C\allowbreak{}P\allowbreak{}-\allowbreak{}I\allowbreak{}N\allowbreak{}T\allowbreak{}-\allowbreak{}0\allowbreak{}1\allowbreak{}` a `C\allowbreak{}P\allowbreak{}-\allowbreak{}I\allowbreak{}N\allowbreak{}T\allowbreak{}-\allowbreak{}2\allowbreak{}5\allowbreak{}`)
@@ -981,7 +981,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
   }\allowbreak{}
 \end{quote}
 **Resultado Esperado:** Código HTTP `2\allowbreak{}0\allowbreak{}1\allowbreak{} C\allowbreak{}r\allowbreak{}e\allowbreak{}a\allowbreak{}t\allowbreak{}e\allowbreak{}d\allowbreak{}` con payload conforme a esquema JSON Schema, UUID generado, registro persistido en BD en \(< 40\text{ ms}\).
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P1 (Bloqueante)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Crítica** (FEP01, Art. 78.1).
 **Entorno:** CI Testcontainers Runtime / Docker daemon.
 
 #### 9.0.13.2 CP-INT-02 — Contrato OpenAPI 3.1 — Ingesta de Series Temporales con TimescaleDB Testcontainers
@@ -1000,7 +1000,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** Array de 100 lecturas sintéticas con latitud, longitud, velocidad, odómetro, temperatura reefer y RPM para camión `T\allowbreak{}R\allowbreak{}K\allowbreak{}-\allowbreak{}S\allowbreak{}Y\allowbreak{}N\allowbreak{}T\allowbreak{}H\allowbreak{}-\allowbreak{}0\allowbreak{}1\allowbreak{}2\allowbreak{}`.
 **Resultado Esperado:** Código HTTP `2\allowbreak{}0\allowbreak{}2\allowbreak{} A\allowbreak{}c\allowbreak{}c\allowbreak{}e\allowbreak{}p\allowbreak{}t\allowbreak{}e\allowbreak{}d\allowbreak{}`, 100 tuplas insertadas en la partición correspondiente en \(< 50\text{ ms}\), consulta de agregación retorna datos consistentes.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P1 (Bloqueante)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Crítica** (FEP01, Art. 78.1).
 **Entorno:** CI Testcontainers Runtime.
 
 **Variante trazada a RF-002 (S3/T-12):** Construir un padrón sintético de 454 conductores identificados, 196 propios y 258 externos; asociar a cada tramo origen, conductor, vehículo y nivel 1–5, con muestras de todas las fuentes y ausencia de fuente. El expediente debe conservar todos los tramos y distinguirlos; un GPS sin identificación ni atestación no prueba jornada del conductor. El registro voluntario de nivel 0 nunca habilita la asignación. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.
@@ -1021,7 +1021,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** Claves Redis con TTL de 24 horas simulando revisiones técnicas, licencias A5 y pólizas de seguro de carga.
 **Resultado Esperado:** Código HTTP `2\allowbreak{}0\allowbreak{}0\allowbreak{} O\allowbreak{}K\allowbreak{}`, respuesta estructurada con estado de aptitud en latencia de red/backend \(< 15\text{ ms}\) (\(P_{99} < 25\text{ ms}\)).
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P1 (Bloqueante)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Crítica** (FEP01, Art. 78.1).
 **Entorno:** CI Testcontainers Runtime.
 
 **Variante trazada a RF-003 (S3/T-12):** Crear dos conductores externos con igual viaje propuesto y jornadas previas distintas: descanso continuo de 8 h y de 6 h en la ventana de 24 h del fixture. Con permiso y evidencia verificable, el primero dispone de descanso y el segundo bloquea. Repetir sin fuente, con atestación firmada del dueño y con permiso revocado: bloquear sin fuente, asignar con marca cuando la atestación acredita saldo válido y cesar la consulta revocada. No divulgar coordenadas de otros clientes. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.
@@ -1042,7 +1042,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** Evento Kafka con encabezados de metadatos (timestamp, tenantId, schemaVersion) y payload JSON/Protobuf.
 **Resultado Esperado:** Consumidor recibe el evento exacto en \(< 20\text{ ms}\), procesa la carga y confirma offset sin reprocesamientos.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P1 (Bloqueante)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Crítica** (FEP01, Art. 78.1).
 **Entorno:** CI Testcontainers Runtime.
 
 #### 9.0.13.5 CP-INT-05 — Conector CDC Debezium con BD de TMS 2013 Legacy (Patrón Estrangulador)
@@ -1062,7 +1062,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** `I\allowbreak{}N\allowbreak{}S\allowbreak{}E\allowbreak{}R\allowbreak{}T\allowbreak{} I\allowbreak{}N\allowbreak{}T\allowbreak{}O\allowbreak{} d\allowbreak{}b\allowbreak{}o\allowbreak{}.\allowbreak{}O\allowbreak{}R\allowbreak{}D\allowbreak{}E\allowbreak{}N\allowbreak{}E\allowbreak{}S\allowbreak{}_\allowbreak{}C\allowbreak{}A\allowbreak{}R\allowbreak{}G\allowbreak{}A\allowbreak{} (\allowbreak{}I\allowbreak{}D\allowbreak{}_\allowbreak{}O\allowbreak{}R\allowbreak{}D\allowbreak{}E\allowbreak{}N\allowbreak{},\allowbreak{} C\allowbreak{}L\allowbreak{}I\allowbreak{}E\allowbreak{}N\allowbreak{}T\allowbreak{}E\allowbreak{},\allowbreak{} O\allowbreak{}R\allowbreak{}I\allowbreak{}G\allowbreak{}E\allowbreak{}N\allowbreak{},\allowbreak{} D\allowbreak{}E\allowbreak{}S\allowbreak{}T\allowbreak{}I\allowbreak{}N\allowbreak{}O\allowbreak{},\allowbreak{} F\allowbreak{}E\allowbreak{}C\allowbreak{}H\allowbreak{}A\allowbreak{})\allowbreak{} V\allowbreak{}A\allowbreak{}L\allowbreak{}U\allowbreak{}E\allowbreak{}S\allowbreak{} (\allowbreak{}'\allowbreak{}O\allowbreak{}R\allowbreak{}D\allowbreak{}-\allowbreak{}9\allowbreak{}9\allowbreak{}0\allowbreak{}1\allowbreak{}'\allowbreak{},\allowbreak{} '\allowbreak{}F\allowbreak{}R\allowbreak{}U\allowbreak{}T\allowbreak{}I\allowbreak{}C\allowbreak{}O\allowbreak{}L\allowbreak{}A\allowbreak{}_\allowbreak{}S\allowbreak{}U\allowbreak{}R\allowbreak{}'\allowbreak{},\allowbreak{} '\allowbreak{}S\allowbreak{}B\allowbreak{}O\allowbreak{}'\allowbreak{},\allowbreak{} '\allowbreak{}P\allowbreak{}M\allowbreak{}C\allowbreak{}'\allowbreak{},\allowbreak{} G\allowbreak{}E\allowbreak{}T\allowbreak{}D\allowbreak{}A\allowbreak{}T\allowbreak{}E\allowbreak{}(\allowbreak{})\allowbreak{})\allowbreak{};\allowbreak{}`
 **Resultado Esperado:** Evento CDC capturado en \(< 500\text{ ms}\), transformado por el conector y disponible en el tópico Kafka canónico con los campos traducidos.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P1 (Bloqueante)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Crítica** (FEP01, Art. 78.1).
 **Entorno:** CI Testcontainers Runtime (SQL Server + Debezium).
 
 **Variante trazada a RNF-011 (S3/T-12):** Durante convivencia TMS 2013/nuevo sistema, desviar por función y repetir una misma orden por ambas rutas; esperar un solo viaje y ningún despacho que eluda bloqueo. Restaurar ruta anterior sin detener la flota. Assignment, tracking y liquidación pasan en M16, órdenes y tarifas cliente en M21; solo lectura hasta M24 según S3. El ERP contable permanece separado. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.
@@ -1084,7 +1084,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** Payload SOAP/XML legacy con chofer infractor.
 **Resultado Esperado:** Respuesta SOAP con código de rechazo legacy `E\allowbreak{}R\allowbreak{}R\allowbreak{}_\allowbreak{}A\allowbreak{}S\allowbreak{}I\allowbreak{}G\allowbreak{}_\allowbreak{}B\allowbreak{}L\allowbreak{}O\allowbreak{}Q\allowbreak{}U\allowbreak{}E\allowbreak{}O\allowbreak{}_\allowbreak{}S\allowbreak{}E\allowbreak{}G\allowbreak{}U\allowbreak{}R\allowbreak{}I\allowbreak{}D\allowbreak{}A\allowbreak{}D\allowbreak{}`, impidiendo que el despachador del TMS 2013 fuerce el viaje.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P1 (Bloqueante)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Crítica** (FEP01, Art. 78.1).
 **Entorno:** CI Testcontainers / WireMock Mock Server.
 
 #### 9.0.13.7 CP-INT-07 — Normalización de datos GPS por acceso autorizado
@@ -1105,7 +1105,7 @@ Este ensayo define entradas, controles y evidencia; no declara resultados ejecut
 
 **Datos de Entrada Sintéticos:** Tres perfiles de plataforma simulados; eventos y denegaciones deterministas.
 **Resultado Esperado:** Cero accesos no autorizados, intervenciones de equipos o duplicados. La falta de datos queda visible y no se sustituye por posición o jornada inventada. Una consulta de posición no acredita jornada del conductor ni integración de los 192 vehículos; la aceptación real requiere muestra autorizada por plataforma.
-**Pass/Fail y Severidad:** Pass solo si se cumplen todos los criterios y se conserva evidencia reproducible; cualquier pérdida, acceso no autorizado o salida incorrecta implica Fail. Severidad alta para seguridad y evidencia.
+**Pass/Fail y Severidad:** Pass solo si se cumplen todos los criterios y se conserva evidencia reproducible; cualquier pérdida, acceso no autorizado o salida incorrecta implica Fail. Severidad: **Alta** para seguridad y evidencia (FEP01, Art. 78.1).
 **Entorno:** QA / Dobles de plataforma y capa de integración.
 
 #### 9.0.13.8 CP-INT-08 — Consulta restringida y plataforma sin exportación
@@ -1126,7 +1126,7 @@ Este ensayo define entradas, controles y evidencia; no declara resultados ejecut
 
 **Datos de Entrada Sintéticos:** Tres perfiles de plataforma simulados; eventos y denegaciones deterministas.
 **Resultado Esperado:** Cero accesos no autorizados, intervenciones de equipos o duplicados. La falta de datos queda visible y no se sustituye por posición o jornada inventada. Una consulta de posición no acredita jornada del conductor ni integración de los 192 vehículos; la aceptación real requiere muestra autorizada por plataforma.
-**Pass/Fail y Severidad:** Pass solo si se cumplen todos los criterios y se conserva evidencia reproducible; cualquier pérdida, acceso no autorizado o salida incorrecta implica Fail. Severidad alta para seguridad y evidencia.
+**Pass/Fail y Severidad:** Pass solo si se cumplen todos los criterios y se conserva evidencia reproducible; cualquier pérdida, acceso no autorizado o salida incorrecta implica Fail. Severidad: **Alta** para seguridad y evidencia (FEP01, Art. 78.1).
 **Entorno:** QA / Dobles de plataforma y capa de integración.
 
 #### 9.0.13.9 CP-INT-09 — Ingesta Normalizada de Telemetría Comercial de Tercero (Perfil Simulado OAuth 2.0) vía Capa ACL
@@ -1145,7 +1145,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** Respuesta sintética del perfil simulado conteniendo camiones subcontratados operando en la Macrozona Sur.
 **Resultado Esperado:** Conversión completa al esquema canónico en \(< 100\text{ ms}\); persistencia de traza en TimescaleDB.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P2 (Crítica)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Alta** (FEP01, Art. 78.1).
 **Entorno:** CI Testcontainers.
 
 #### 9.0.13.10 CP-INT-10 — Resiliencia y Reintentos (Exponential Backoff con Jitter) ante Caída de APIs Externas
@@ -1164,7 +1164,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** Solicitud de sincronización de flota tercera.
 **Resultado Esperado:** El sistema ejecuta exactamente 3 reintentos con desfases crecientes aleatorios (jitter), evitando inundar el servicio externo, y procesa la respuesta en el intento 4 exitosamente.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P2 (Crítica)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Alta** (FEP01, Art. 78.1).
 **Entorno:** CI Testcontainers / WireMock.
 
 #### 9.0.13.11 CP-INT-11 — Contrato del ERP Contable como Único Emisor de DET y Contingencia Homologada
@@ -1185,7 +1185,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** Dos órdenes de prueba, mismo identificador repetido, estado `C\allowbreak{}O\allowbreak{}N\allowbreak{}F\allowbreak{}O\allowbreak{}R\allowbreak{}M\allowbreak{}E\allowbreak{}` y estado `N\allowbreak{}O\allowbreak{}_\allowbreak{}E\allowbreak{}M\allowbreak{}I\allowbreak{}T\allowbreak{}I\allowbreak{}D\allowbreak{}O\allowbreak{}`, documento/firma/folio y esquema de prueba versionados; manifestar emisor, orden y huellas. Reloj virtual del fixture.
 **Resultado Esperado:** Disponible el documento conforme antes del movimiento; bloqueadas todas las variantes negativas, una única emisión por orden y evidencia de validación conservada. En pruebas de sistema/hardware se mide ≤90 s; en pruebas unitarias se valida el estado, sin sustituir el tiempo E2E.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: Alta cuando afecta seguridad o evidencia; mayor en objetivos adicionales.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Crítica** cuando afecta seguridad o evidencia; **Media** en objetivos adicionales (FEP01, Art. 78.1).
 **Entorno:** CI con doble de ERP. Homologación real del mecanismo de contingencia antes de despliegue; la falta de disponibilidad no se resuelve fingiendo certificación.
 
 **Variante trazada a RF-013 (S3/T-12):** Solicitar al ERP un DET desde una orden válida y repetir la misma clave con timeout y respuesta tardía. Esperar un solo folio emitido por ERP, asociado a la orden y disponible en hasta 90 s. El componente audIT no emite documentos tributarios. Rechazar documento no emitido o con datos discordantes. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.
@@ -1209,7 +1209,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** Dos peticiones idénticas con la misma `I\allowbreak{}d\allowbreak{}e\allowbreak{}m\allowbreak{}p\allowbreak{}o\allowbreak{}t\allowbreak{}e\allowbreak{}n\allowbreak{}c\allowbreak{}y\allowbreak{}-\allowbreak{}K\allowbreak{}e\allowbreak{}y\allowbreak{}` en cabecera HTTP.
 **Resultado Esperado:** La primera petición procesa y almacena el resultado; la segunda petición reconoce la clave existente y retorna la misma respuesta previa con HTTP `2\allowbreak{}0\allowbreak{}0\allowbreak{} O\allowbreak{}K\allowbreak{}` sin duplicar la emisión ni consumir un nuevo folio tributario.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P1 (Bloqueante)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Crítica** (FEP01, Art. 78.1).
 **Entorno:** CI Testcontainers.
 
 **Variante trazada a RF-013 (S3/T-12):** Solicitar al ERP un DET desde una orden válida y repetir la misma clave con timeout y respuesta tardía. Esperar un solo folio emitido por ERP, asociado a la orden y disponible en hasta 90 s. El componente audIT no emite documentos tributarios. Rechazar documento no emitido o con datos discordantes. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.
@@ -1232,7 +1232,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** Digest SHA-256 de 32 bytes de jornada de chofer propio de San Bernardo.
 **Resultado Esperado:** Firma criptográfica generada en \(< 45\text{ ms}\); verificación de firma con clave pública resulta `t\allowbreak{}r\allowbreak{}u\allowbreak{}e\allowbreak{}`.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P1 (Bloqueante)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Crítica** (FEP01, Art. 78.1).
 **Entorno:** CI Runner / Azure Key Vault Managed Identity (o Mock).
 
 #### 9.0.13.14 CP-INT-14 — Rotación Automática de Claves Simétricas en Azure Key Vault sin Caída de Servicio
@@ -1252,7 +1252,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** Datos personales sintéticos cifrados en dos instantes distintos.
 **Resultado Esperado:** El sistema utiliza \(V_2\) para nuevas escrituras y mantiene la capacidad de descifrar registros históricos con \(V_1\) mediante metadatos de clave, sin errores de descifrado ni reinicio de pods.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P1 (Bloqueante)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Crítica** (FEP01, Art. 78.1).
 **Entorno:** CI Testcontainers / Key Vault Mock.
 
 #### 9.0.13.15 CP-INT-15 — Integración con API de Concesionarias Viales (TAG) para Conciliación de Peajes
@@ -1271,7 +1271,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** Registro TAG de camión `L\allowbreak{}K\allowbreak{}J\allowbreak{}H\allowbreak{}-\allowbreak{}8\allowbreak{}9\allowbreak{}` pasando por pórtico Buin a las 11:22:15Z del 2026-10-01.
 **Resultado Esperado:** 100% de las pasadas válidas correlacionadas con el viaje en ruta con ventana de tolerancia \(\pm 3\text{ minutos}\); asignación del costo directo a la orden.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P2 (Crítica)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Alta** (FEP01, Art. 78.1).
 **Entorno:** CI Testcontainers / PostgreSQL.
 
 #### 9.0.13.16 CP-INT-16 — Conciliación de Carga de Diésel con Estanque Propio en San Bernardo
@@ -1290,7 +1290,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** Evento de despacho sintético con litros suministrados, patente y código de conductor.
 **Resultado Esperado:** Registro de abastecimiento creado en PostgreSQL, contrastado contra odómetro de cabina y conciliado en \(< 2\text{ segundos}\).
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P2 (Crítica)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Alta** (FEP01, Art. 78.1).
 **Entorno:** CI Testcontainers (API Servicio de Combustible + PostgreSQL).
 
 #### 9.0.13.17 CP-INT-17 — Integración de Órdenes de Trabajo desde Formulario Web PWA de Talleres en Ruta
@@ -1310,7 +1310,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** Reparación sintética en taller externo de Los Ángeles, adjunto JPG de 1,2 MB.
 **Resultado Esperado:** Código HTTP `2\allowbreak{}0\allowbreak{}1\allowbreak{} C\allowbreak{}r\allowbreak{}e\allowbreak{}a\allowbreak{}t\allowbreak{}e\allowbreak{}d\allowbreak{}`, archivo subido y blob referenciado; hoja de vida del camión actualizada inmediatamente.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P3 (Mayor)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Media** (FEP01, Art. 78.1).
 **Entorno:** CI Testcontainers (Azurite Blob Storage + PostgreSQL).
 
 **Variante de taller desconectado y mantenimiento (RF-024/RF-025):** Capturar una intervención offline con taller, técnico, fecha, odómetro, trabajo, repuestos y evidencia. Reconectar dos veces: debe registrarse una sola intervención. Comparar umbral preventivo configurado en el fixture con el kilometraje trazable y generar aviso cuando se alcance; si el odómetro no es confiable, mostrar incertidumbre y no inventar recorrido.
@@ -1333,7 +1333,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** Mediciones telemáticas de ruta Ruta 5 Sur sector Talca-Chillán.
 **Resultado Esperado:** Agregación materializada actualizada en \(< 250\text{ ms}\); métricas de dispersión disponibles para el microservicio de analítica.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P2 (Crítica)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Alta** (FEP01, Art. 78.1).
 **Entorno:** CI Testcontainers TimescaleDB.
 
 **Variante trazada a RF-018 (S3/T-12):** Construir 12 meses de consumo y kilómetros por vehículo, ruta y conductor con condiciones registradas. En una cohorte de referencia, razones 2, 4, 4, 4, 5, 5, 7 y 9 tienen media 5 y varianza poblacional 4, en unidades sintéticas. Añadir una condición de carga sintética x con valores 0, 2, 2, 2, 3, 3, 5 y 7 y consumo y=2+x: el modelo lineal de referencia debe reproducir coeficientes 2 y 1 y residual cero en ese fixture. Un modelo alternativo debe declarar su oráculo independiente. Esta exactitud sintética no se promete para datos reales. El modelo debe conservar cohorte, período, condiciones, versión y dispersión reproducible; registros incompletos no se mezclan como cero. El benchmark de inserción no demuestra explicación de dispersión. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.
@@ -1354,7 +1354,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** Evento JSON con `e\allowbreak{}v\allowbreak{}e\allowbreak{}n\allowbreak{}t\allowbreak{}T\allowbreak{}y\allowbreak{}p\allowbreak{}e\allowbreak{}:\allowbreak{} "\allowbreak{}E\allowbreak{}N\allowbreak{}T\allowbreak{}E\allowbreak{}R\allowbreak{}"\allowbreak{}`, `g\allowbreak{}e\allowbreak{}o\allowbreak{}f\allowbreak{}e\allowbreak{}n\allowbreak{}c\allowbreak{}e\allowbreak{}I\allowbreak{}d\allowbreak{}:\allowbreak{} "\allowbreak{}G\allowbreak{}E\allowbreak{}O\allowbreak{}-\allowbreak{}S\allowbreak{}B\allowbreak{}O\allowbreak{}-\allowbreak{}0\allowbreak{}1\allowbreak{}"\allowbreak{}`, `t\allowbreak{}r\allowbreak{}u\allowbreak{}c\allowbreak{}k\allowbreak{}I\allowbreak{}d\allowbreak{}:\allowbreak{} "\allowbreak{}T\allowbreak{}R\allowbreak{}K\allowbreak{}-\allowbreak{}0\allowbreak{}4\allowbreak{}2\allowbreak{}"\allowbreak{}`, timestamp actual.
 **Resultado Esperado:** Ambos servicios consumen el evento en \(< 30\text{ ms}\), disparando la actualización en pantalla de Torre y el inicio del cronómetro de estadía.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P1 (Bloqueante)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Crítica** (FEP01, Art. 78.1).
 **Entorno:** CI Testcontainers Kafka.
 
 #### 9.0.13.20 CP-INT-20 — Integración de Despacho de OTP para e-POD vía Mensajería SMS/Email
@@ -1374,7 +1374,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** Solicitud e-POD para receptor sintético en bodega Puerto Montt.
 **Resultado Esperado:** OTP despachado en \(< 600\text{ ms}\); validación exitosa del código numérico; bloqueo de reintentos tras 3 fallos consecutivos.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P2 (Crítica)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Alta** (FEP01, Art. 78.1).
 **Entorno:** CI Testcontainers / Mock Server.
 
 **Variante trazada a RF-012 (S3/T-12):** Emitir e-POD con receptor identificado, fecha, viaje y conformidad, primero con conectividad y después sin ella. La recepción debe quedar disponible en el día o al recuperar cobertura, conservando firma y datos tras reinicio y reintento. El OTP es una variante de identificación, no condición que impida entregar cuando no hay red. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.
@@ -1395,7 +1395,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** Archivo binario `.\allowbreak{}d\allowbreak{}d\allowbreak{}d\allowbreak{}` sintético con registros de conducción de 30 días.
 **Resultado Esperado:** Archivo descargado íntegramente en \(< 40\text{ segundos}\), firma digital del tacógrafo validada, y registro asentado en base de datos.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P2 (Crítica)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Alta** (FEP01, Art. 78.1).
 **Entorno:** CI Testcontainers.
 
 **Variante trazada a RF-007 (S3/T-12):** Descargar dos archivos originales de tacógrafo con conductores y vehículos distintos; conservar bytes y huellas originales, relacionar conductor y vehículo y clasificar nivel 1. Archivo truncado, alterado o sin identidad debe rechazarse o quedar pendiente de verificación, sin convertirse en evidencia válida. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.
@@ -1416,7 +1416,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** Certificados de prueba generados con OpenSSL; tráfico sintético HTTP GET.
 **Resultado Esperado:** Conexión sin certificado rechazada (`S\allowbreak{}S\allowbreak{}L\allowbreak{}_\allowbreak{}E\allowbreak{}R\allowbreak{}R\allowbreak{}O\allowbreak{}R\allowbreak{}_\allowbreak{}N\allowbreak{}O\allowbreak{}_\allowbreak{}C\allowbreak{}L\allowbreak{}I\allowbreak{}E\allowbreak{}N\allowbreak{}T\allowbreak{}_\allowbreak{}C\allowbreak{}E\allowbreak{}R\allowbreak{}T\allowbreak{}`); ráfaga controlada por rate limiter con cabecera `R\allowbreak{}e\allowbreak{}t\allowbreak{}r\allowbreak{}y\allowbreak{}-\allowbreak{}A\allowbreak{}f\allowbreak{}t\allowbreak{}e\allowbreak{}r\allowbreak{}`.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P1 (Bloqueante)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Crítica** (FEP01, Art. 78.1).
 **Entorno:** CI Testcontainers.
 
 #### 9.0.13.23 CP-INT-23 — Servicio de Consolidación de Costo Diario Preliminar por Viaje en \(\le 24\text{ h}\)
@@ -1435,7 +1435,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** Datos de viaje cerrado Santiago-Concepción con 510 km.
 **Resultado Esperado:** Costo preliminar consolidado y persistido con estado `P\allowbreak{}R\allowbreak{}E\allowbreak{}L\allowbreak{}I\allowbreak{}M\allowbreak{}I\allowbreak{}N\allowbreak{}A\allowbreak{}R\allowbreak{}Y\allowbreak{}_\allowbreak{}C\allowbreak{}O\allowbreak{}S\allowbreak{}T\allowbreak{}_\allowbreak{}C\allowbreak{}A\allowbreak{}L\allowbreak{}C\allowbreak{}U\allowbreak{}L\allowbreak{}A\allowbreak{}T\allowbreak{}E\allowbreak{}D\allowbreak{}` en \(< 150\text{ ms}\), separando costos fijos y variables.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P2 (Crítica)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Alta** (FEP01, Art. 78.1).
 **Entorno:** CI Testcontainers / PostgreSQL.
 
 **Variantes de costo y dispersión (RF-016/RF-017/RF-018):** Usar dos viajes sintéticos cerrados en el mismo instante, uno propio y otro de tercero, con componentes separados de combustible, peaje y tarifa contractual. Retener intencionalmente una factura; el consolidado debe publicarse en ≤24 h indicando el faltante, sin duplicar costos. Aplicar una serie controlada de litros/km por vehículo, ruta y jornada con media y dispersión calculadas por el fixture; contrastar agregación y exponer registros no explicados, sin exigir un porcentaje de explicación inventado. El cálculo esperado se obtiene sumando los componentes disponibles del fixture, sin tratar tarifa de tercero como consumo de combustible propio.
@@ -1460,7 +1460,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** Token de sesión del transportista `C\allowbreak{}A\allowbreak{}R\allowbreak{}R\allowbreak{}I\allowbreak{}E\allowbreak{}R\allowbreak{}-\allowbreak{}S\allowbreak{}Y\allowbreak{}N\allowbreak{}T\allowbreak{}H\allowbreak{}-\allowbreak{}0\allowbreak{}8\allowbreak{}8\allowbreak{}`.
 **Resultado Esperado:** Código HTTP `2\allowbreak{}0\allowbreak{}0\allowbreak{} O\allowbreak{}K\allowbreak{}` con balance conciliado en \(< 90\text{ ms}\); valores calculados coinciden exactamente con los registros contables.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P1 (Bloqueante)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Crítica** (FEP01, Art. 78.1).
 **Entorno:** CI Testcontainers.
 
 **Variante trazada a RF-019 (S3/T-12):** Cerrar un mes para 148 transportistas sintéticos, con viajes, tarifas y descuentos de referencia. Esperar una liquidación por titular con sumas exactas dentro de un día hábil del cierre mensual, no mensual. Medir proporción de correcciones manuales sobre liquidaciones emitidas: con 148, una corrección cumple menos de 1 por ciento y dos no. Registrar calendario hábil y denominador. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.
@@ -1483,7 +1483,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
  **Datos de Entrada Sintéticos:** Inserción de 50 registros con timestamp de precisión microsegundo.
  **Resultado Esperado:** Retraso de replicación medido $< 120\text{ segundos}$ (muy inferior al límite contractual de 15 minutos de RPO); 100% de los registros presentes e idénticos en Brazil South.
- **Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P1 (Bloqueante)**.
+ **Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Crítica** (FEP01, Art. 78.1).
  **Entorno:** Staging Azure Multi-Region.
 
  **Variante trazada a RNF-014 (S3/T-12):** Versionar dominios y plazos: jornada cinco años, documentos/viajes/liquidación seis, siniestros diez, habilitación vigencia más cinco, SUSPEL cinco, esperas tres, series dos en línea con agregación. Con reloj virtual antes/al cumplir cada umbral, retener mientras exista obligación o suspensión y aplicar después la política aprobada. Revocar permiso detiene captura/acceso comprendidos, sin borrado anticipado; cotejar réplica y original. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.
@@ -1521,7 +1521,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** OT `O\allowbreak{}T\allowbreak{}-\allowbreak{}E\allowbreak{}2\allowbreak{}E\allowbreak{}-\allowbreak{}2\allowbreak{}0\allowbreak{}2\allowbreak{}6\allowbreak{}-\allowbreak{}0\allowbreak{}0\allowbreak{}1\allowbreak{}`, Chofer `D\allowbreak{}R\allowbreak{}V\allowbreak{}-\allowbreak{}S\allowbreak{}Y\allowbreak{}N\allowbreak{}T\allowbreak{}H\allowbreak{}-\allowbreak{}1\allowbreak{}0\allowbreak{}1\allowbreak{}`, Tracto `L\allowbreak{}K\allowbreak{}J\allowbreak{}H\allowbreak{}-\allowbreak{}8\allowbreak{}9\allowbreak{}`, Carga 22 ton paletizadas.
 **Resultado Esperado:** Transición ordenada de estados de la orden (`C\allowbreak{}R\allowbreak{}E\allowbreak{}A\allowbreak{}D\allowbreak{}A\allowbreak{}` \(\rightarrow\) `A\allowbreak{}S\allowbreak{}I\allowbreak{}G\allowbreak{}N\allowbreak{}A\allowbreak{}D\allowbreak{}A\allowbreak{}` \(\rightarrow\) `E\allowbreak{}N\allowbreak{}_\allowbreak{}R\allowbreak{}U\allowbreak{}T\allowbreak{}A\allowbreak{}` \(\rightarrow\) `E\allowbreak{}N\allowbreak{}_\allowbreak{}D\allowbreak{}E\allowbreak{}S\allowbreak{}T\allowbreak{}I\allowbreak{}N\allowbreak{}O\allowbreak{}` \(\rightarrow\) `E\allowbreak{}N\allowbreak{}T\allowbreak{}R\allowbreak{}E\allowbreak{}G\allowbreak{}A\allowbreak{}D\allowbreak{}A\allowbreak{}` \(\rightarrow\) `L\allowbreak{}I\allowbreak{}Q\allowbreak{}U\allowbreak{}I\allowbreak{}D\allowbreak{}A\allowbreak{}D\allowbreak{}A\allowbreak{}`), sin intervención manual correctiva.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P1 (Bloqueante)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Crítica** (FEP01, Art. 78.1).
 **Entorno:** Staging AKS / Emuladores Telemáticos IoT.
 
 **Variante trazada a RF-001 (S3/T-12):** Preparar seis asignaciones con los cuatro factores presentes: fuentes de jornada 1, 2, 3, 4, 5 y ninguna. Con saldo y habilitaciones válidos, comprobar la cascada general: asigna en 1–4, asigna con marca y responsabilidad del transportista en 5, y bloquea sin fuente. Repetir el nivel 4 en la modalidad de datos de S3: sin atestación firmada no asignar; con atestación válida de nivel 5 asignar con marca. Aplicar RN-04 únicamente a su excepción de caída de fuente, nunca a un incumplimiento legal. Retirar por separado cada factor: todos deben bloquear aun con dos firmas. Medir las tres salidas de extremo a extremo en hasta 30 s; el tiempo unitario no acredita ese límite. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.
@@ -1548,7 +1548,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** Serie de 1.200 puntos GPS interpolados en el trazado de la Ruta 5 Sur.
 **Resultado Esperado:** Hitos georreferenciados reconocidos con precisión de \(\pm 20\text{ metros}\); actualización de la pantalla del despachador en tiempo real (\(< 2\text{ segundos}\) tras cruzar el hito).
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P2 (Crítica)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Alta** (FEP01, Art. 78.1).
 **Entorno:** Staging AKS / Mock Geográfico.
 
 #### 9.0.14.3 CP-SYS-03 — Detección Automática de Sobreestadías en Patio de Cliente y Sustento Probatorio
@@ -1569,7 +1569,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** Geocerca `G\allowbreak{}E\allowbreak{}O\allowbreak{}-\allowbreak{}A\allowbreak{}G\allowbreak{}R\allowbreak{}O\allowbreak{}-\allowbreak{}C\allowbreak{}U\allowbreak{}R\allowbreak{}I\allowbreak{}C\allowbreak{}O\allowbreak{}-\allowbreak{}0\allowbreak{}4\allowbreak{}`, Tracto `T\allowbreak{}R\allowbreak{}K\allowbreak{}-\allowbreak{}0\allowbreak{}8\allowbreak{}8\allowbreak{}`, Estadía total: 390 min (270 min facturables).
 **Resultado Esperado:** Certificado PDF/JSON generado automáticamente con diagrama de permanencia, coordenadas de entrada/salida, traza de motor apagado y cobro liquidado por 9 tramos de 30 minutos, con no repudio.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P2 (Crítica)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Alta** (FEP01, Art. 78.1).
 **Entorno:** Staging AKS / Motor de Liquidación.
 
 **Variante trazada a RF-010 (S3/T-12):** Versionar 1.400 polígonos y puntos de entrada, límite interior y exterior en el mismo sistema de coordenadas; ejecutar replay automático. Esperar una entrada y una salida por cruce válido, ninguna para puntos exteriores y deduplicación de reintentos, sin equipos en instalaciones del cliente ni acciones del conductor. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.
@@ -1596,7 +1596,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** OTP `6\allowbreak{}5\allowbreak{}4\allowbreak{}3\allowbreak{}2\allowbreak{}1\allowbreak{}`, firma en cristal (SVG/PNG base64), dos imágenes comprimidas (JPEG, 800 KB c/u).
 **Resultado Esperado:** Documento e-POD generado con sello temporal RFC 3161, notificaciones inmediatas por email al cliente exportador con copia del e-POD adjunto, y orden marcada como `D\allowbreak{}E\allowbreak{}L\allowbreak{}I\allowbreak{}V\allowbreak{}E\allowbreak{}R\allowbreak{}E\allowbreak{}D\allowbreak{}_\allowbreak{}C\allowbreak{}O\allowbreak{}N\allowbreak{}F\allowbreak{}I\allowbreak{}R\allowbreak{}M\allowbreak{}E\allowbreak{}D\allowbreak{}`.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P1 (Bloqueante)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Crítica** (FEP01, Art. 78.1).
 **Entorno:** Staging AKS / Dispositivos Móviles PWA.
 
 **Variante trazada a RF-012 (S3/T-12):** Emitir e-POD con receptor identificado, fecha, viaje y conformidad, primero con conectividad y después sin ella. La recepción debe quedar disponible en el día o al recuperar cobertura, conservando firma y datos tras reinicio y reintento. El OTP es una variante de identificación, no condición que impida entregar cuando no hay red. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.
@@ -1621,7 +1621,7 @@ Camión Subcontratado `TRK-\allowbreak{}305` (con acceso autorizado a datos de p
 
 **Datos de Entrada Sintéticos:** Dos viajes sintéticos paralelos despachados a las 08:30:00Z.
 **Resultado Esperado:** Coexistencia armónica en la plataforma; la Torre opera sin fricciones y las reglas de liquidación y jornada aplican los algoritmos diferenciados según el nivel probatorio canónico.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P1 (Bloqueante)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Crítica** (FEP01, Art. 78.1).
 **Entorno:** Staging AKS / Torre 24x7.
 
 **Variante de jornada previa y adhesión (RF-003/RF-026/RNF-003):** Crear propietario, dos camiones y conductores sintéticos, permisos por destinatario/vigencia y evidencia previa con origen y sello. Registrar invitación, aceptación, rechazo y revocación; comprobar que no se activa integración no autorizada. Intentar asignar con jornada previa ausente, vencida o no verificable: debe bloquearse, sin asumir cero horas. Repetir con evidencia válida y saldo suficiente; aprobar solo después de las verificaciones obligatorias.
@@ -1661,7 +1661,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** Carga UN 1830, Chofer con curso vencido \(\rightarrow\) Chofer con curso vigente, QR de HDS válida.
 **Resultado Esperado:** En el paso 2, el sistema bloquea terminantemente el viaje con alerta sonora y visual en Torre (`H\allowbreak{}A\allowbreak{}Z\allowbreak{}M\allowbreak{}A\allowbreak{}T\allowbreak{}_\allowbreak{}D\allowbreak{}R\allowbreak{}I\allowbreak{}V\allowbreak{}E\allowbreak{}R\allowbreak{}_\allowbreak{}C\allowbreak{}E\allowbreak{}R\allowbreak{}T\allowbreak{}I\allowbreak{}F\allowbreak{}I\allowbreak{}C\allowbreak{}A\allowbreak{}T\allowbreak{}E\allowbreak{}_\allowbreak{}E\allowbreak{}X\allowbreak{}P\allowbreak{}I\allowbreak{}R\allowbreak{}E\allowbreak{}D\allowbreak{}`); en el paso 5, tras subsanar todas las exigencias legales, autoriza la salida.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P1 (Bloqueante)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Crítica** (FEP01, Art. 78.1).
 **Entorno:** Staging AKS / Módulo SUSPEL.
 
 **Variante trazada a RF-006 (S3/T-12):** Preparar 18 unidades SUSPEL sintéticas, cada una con carga efectiva, DET emitido por ERP, conductor y lista firmada. La muestra conforme vincula esos elementos y permite salida si los otros factores cumplen. Cambiar carga respecto del documento, quitar firma o vencer habilitación: cada variante bloquea. La compatibilidad química por sí sola no acredita este requisito. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.
@@ -1682,7 +1682,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** Solicitud de despacho para chofer `D\allowbreak{}R\allowbreak{}V\allowbreak{}-\allowbreak{}S\allowbreak{}Y\allowbreak{}N\allowbreak{}T\allowbreak{}H\allowbreak{}-\allowbreak{}1\allowbreak{}1\allowbreak{}5\allowbreak{}` con déficit de descanso diario.
 **Resultado Esperado:** Bloqueo automático en \(< 2\text{ segundos}\) con mensaje explicativo: "Asignación Bloqueada por Ley: Conductor registra déficit de 4,0 horas de descanso diario continuo (Art. 25 bis Código del Trabajo)". El botón de confirmación queda inhabilitado.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P1 (Bloqueante)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Crítica** (FEP01, Art. 78.1).
 **Entorno:** Staging AKS / Consola Torre.
 
 #### 9.0.14.8 CP-SYS-08 — Bloqueo Preventivo Pre-Despacho por Vigencia Vencida (Revisión Técnica / SOAP)
@@ -1701,7 +1701,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** Intento de despacho con equipo en tabla `e\allowbreak{}q\allowbreak{}u\allowbreak{}i\allowbreak{}p\allowbreak{}m\allowbreak{}e\allowbreak{}n\allowbreak{}t\allowbreak{}_\allowbreak{}c\allowbreak{}o\allowbreak{}m\allowbreak{}p\allowbreak{}l\allowbreak{}i\allowbreak{}a\allowbreak{}n\allowbreak{}c\allowbreak{}e\allowbreak{}` con fecha de caducidad en el pasado.
 **Resultado Esperado:** Bloqueo inmediato del semirremolque; el sistema sugiere automáticamente las 3 ramplas sustitutas más cercanas disponibles en el patio con documentación al día.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P1 (Bloqueante)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Crítica** (FEP01, Art. 78.1).
 **Entorno:** Staging AKS / Módulo de Flota.
 
 **Variante trazada a RF-005 (S3/T-12):** Generar 6.000 vigencias sintéticas con titular, responsable, fecha y respaldo. Fijar reloj y fechas a 61, 60, 31, 30, 8 y 7 días del vencimiento; esperar alertas exactamente en 60, 30 y 7, sin duplicación al repetir. Vencer cada tipo habilitante por separado: cualquier vencimiento bloquea; renovar con documento válido libera únicamente ese impedimento. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.
@@ -1722,7 +1722,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** Estado de camión, 3 órdenes de retorno en radio de 50 km de Puerto Montt.
 **Resultado Esperado:** El sistema recomienda la orden Llanquihue-Santiago (menor desvío en vacío: solo 18 km desde Puerto Montt), reduciendo los km muertos del viaje y maximizando el margen operacional.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P2 (Crítica)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Alta** (FEP01, Art. 78.1).
 **Entorno:** Staging AKS / Microservicio ALNS.
 
 **Variante trazada a RF-015 (S3/T-12):** Usar las dos ofertas de retorno del fixture de CP-UNIT-15 con márgenes analíticos 970 y 780, en unidades sintéticas ajenas a precios de oferta. Con ambas viables elegir la primera; sin jornada, habilitación, capacidad, compatibilidad o ventana de entrega en la primera, descartarla y elegir la segunda viable. Si ninguna cumple RN-09, no proponer retorno. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.
@@ -1745,7 +1745,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** Registros de fletes, surtidor y peajes del transportista `C\allowbreak{}A\allowbreak{}R\allowbreak{}R\allowbreak{}I\allowbreak{}E\allowbreak{}R\allowbreak{}-\allowbreak{}S\allowbreak{}Y\allowbreak{}N\allowbreak{}T\allowbreak{}H\allowbreak{}-\allowbreak{}0\allowbreak{}4\allowbreak{}5\allowbreak{}`.
 **Resultado Esperado:** Pre-liquidación emitida con balance matemático exacto; detalle íntegro visible en el portal en \(< 2\text{ minutos}\) post-cierre (reducción del histórico de 9 días a tiempo real).
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P1 (Bloqueante)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Crítica** (FEP01, Art. 78.1).
 **Entorno:** Staging AKS / Portal Transportistas.
 
 **Variante trazada a RF-017 (S3/T-12):** Usar un viaje propio y uno de tercero con los mismos tipos de componentes conocidos. Para el propio sumar costos internos y para el tercero la tarifa contractual y componentes aplicables, sin sumar combustible interno de otro vehículo. Esperar sumas de la hoja de referencia, con desglose y estado preliminar o final. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.
@@ -1772,7 +1772,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** Dos órdenes de prueba, mismo identificador repetido, estado `C\allowbreak{}O\allowbreak{}N\allowbreak{}F\allowbreak{}O\allowbreak{}R\allowbreak{}M\allowbreak{}E\allowbreak{}` y estado `N\allowbreak{}O\allowbreak{}_\allowbreak{}E\allowbreak{}M\allowbreak{}I\allowbreak{}T\allowbreak{}I\allowbreak{}D\allowbreak{}O\allowbreak{}`, documento/firma/folio y esquema de prueba versionados; manifestar emisor, orden y huellas. Reloj virtual del fixture.
 **Resultado Esperado:** Disponible el documento conforme antes del movimiento; bloqueadas todas las variantes negativas, una única emisión por orden y evidencia de validación conservada. En pruebas de sistema/hardware se mide ≤90 s; en pruebas unitarias se valida el estado, sin sustituir el tiempo E2E.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: Alta cuando afecta seguridad o evidencia; mayor en objetivos adicionales.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Crítica** cuando afecta seguridad o evidencia; **Media** en objetivos adicionales (FEP01, Art. 78.1).
 **Entorno:** staging/HIL con dispositivo y contrato ERP de ensayo. Homologación real del mecanismo de contingencia antes de despliegue; la falta de disponibilidad no se resuelve fingiendo certificación.
 
 #### 9.0.14.12 CP-SYS-12 — Flujo E2E de Gestión de Discrepancias en Entrega (Rechazo Parcial y Daño)
@@ -1793,7 +1793,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** Discrepancia en OT: 18 conformes, 2 rechazados, código de anomalía `D\allowbreak{}A\allowbreak{}M\allowbreak{}A\allowbreak{}G\allowbreak{}E\allowbreak{}D\allowbreak{}_\allowbreak{}C\allowbreak{}A\allowbreak{}R\allowbreak{}G\allowbreak{}O\allowbreak{}`.
 **Resultado Esperado:** Acta de entrega parcial firmada; alerta P2 en Torre 24x7 con fotografías adjuntas para apertura de siniestro con la compañía de seguros; orden reencaminada a logística inversa.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P2 (Crítica)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Alta** (FEP01, Art. 78.1).
 **Entorno:** Staging AKS / App Móvil PWA.
 
 #### 9.0.14.13 CP-SYS-13 — Trazabilidad Térmica Continua y Alarma en Cadena de Frío (Rampla Reefer)
@@ -1814,7 +1814,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** Anuncios de baliza Bluetooth con curva térmica sintética, identificador y cadencia versionados; no se atribuye cadencia al fabricante sin comprobación.
 **Resultado Esperado:** Alarma crítica `COLD_\allowbreak{}CHAIN_\allowbreak{}BREACH_\allowbreak{}CRITICAL` disparada en \(< 45\text{ segundos}\) tras el rebase térmico; despachador activa protocolo de desvío a taller técnico frigorífico en ruta.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P1 (Bloqueante)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Crítica** (FEP01, Art. 78.1).
 **Entorno:** Staging AKS / Banco HIL Térmico.
 
 #### 9.0.14.14 CP-SYS-14 — Flujo E2E de Relevo de Tripulación en Ruta con Cierre y Apertura de Sesión
@@ -1835,7 +1835,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** Eventos de logout chofer 1 y login chofer 2 con lectores RFID.
 **Resultado Esperado:** Segregación 100% nítida de las horas de conducción y descanso de ambos choferes; cero mezcla de jornadas; bitácora legal inalterable para la Dirección del Trabajo.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P1 (Bloqueante)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Crítica** (FEP01, Art. 78.1).
 **Entorno:** Staging / Banco HIL + Gateway.
 
 #### 9.0.14.15 CP-SYS-15 — Registro y Conciliación E2E de Carga de Combustible en Estación de Ruta
@@ -1854,7 +1854,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** Voucher sintético por 250 litros, telemetría reporta salto de nivel de estanque de \(32%\) a \(84%\).
 **Resultado Esperado:** Carga conciliada con éxito (diferencia de solo 2 litros dentro del margen de tolerancia metrológica del \(\pm 1%\)); imputación inmediata al costo consolidado del viaje.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P2 (Crítica)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Alta** (FEP01, Art. 78.1).
 **Entorno:** Staging AKS / Módulo de Combustible.
 
 **Variante trazada a RF-016 (S3/T-12):** Entregar dos viajes cerrados con factura de combustible tardía en uno. Publicar costo preliminar en hasta 24 h con faltante explícito y recalcular una vez al recibirla, sin duplicación. Diferenciar estudio por ruta/contrato disponible en M6, EDT 2.5, de costeo por viaje en producción M16, EDT 5.6; exigir ambos entregables en sus hitos. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.
@@ -1877,7 +1877,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** Flujo concurrente de telemetría de 374 unidades en tiempo real.
 **Resultado Esperado:** 374 camiones desplegados sin latencia de renderizado (tasa de refresco visual \(\ge 30\text{ FPS}\)); 0 unidades duplicadas u omitidas; latencia de actualización \(< 2\text{ segundos}\).
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P1 (Bloqueante)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Crítica** (FEP01, Art. 78.1).
 **Entorno:** Staging AKS / Torre de Programación San Bernardo.
 
 **Variante trazada a RF-008 (S3/T-12):** Construir 374 unidades únicas, 148 propias y 226 externas, con muestras de todas las fuentes y marcas de tiempo conocidas. La vista contiene 374 identidades sin duplicación; cada posición muestra fuente y antigüedad y la jornada su nivel real. Si no existe posición, mostrar no disponible; no inventar coordenadas ni equiparar ubicación a descanso. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.
@@ -1901,7 +1901,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** ID de cliente sintético `C\allowbreak{}L\allowbreak{}I\allowbreak{}-\allowbreak{}E\allowbreak{}X\allowbreak{}P\allowbreak{}O\allowbreak{}R\allowbreak{}T\allowbreak{}-\allowbreak{}F\allowbreak{}R\allowbreak{}U\allowbreak{}I\allowbreak{}T\allowbreak{}-\allowbreak{}0\allowbreak{}1\allowbreak{}`, período mensual septiembre 2026.
 **Resultado Esperado:** Informe formal de sostenibilidad con desglose mensual de toneladas-kilómetro netas, emisiones totales de \(\text{CO}_2\text{e}\) e índice de intensidad de carbono verificado.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P3 (Mayor)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Media** (FEP01, Art. 78.1).
 **Entorno:** Staging AKS / Módulo de Sostenibilidad.
 
 **Variante trazada a RF-023 (S3/T-12):** Calcular emisiones mensuales de una muestra propia y otra externa con factores versionados, actividad y toneladas-kilómetro de referencia. Reproducir sumas y unidades de la hoja independiente y desglosar cliente y contrato. Sin factor o actividad, declarar faltante y no emitir cero verificado. La conformidad externa del método se acredita separadamente. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.
@@ -1917,7 +1917,7 @@ La excepción verifica indisponibilidad de fuente, sin levantar incumplimientos 
  **Pasos de Ejecución:** Solicitar excepción motivada para un solo viaje; intentar aprobar con una firma, con rol ajeno y con las dos firmas autorizadas. Repetir con descanso incumplido, habilitación vencida, equipo no apto y carga incompatible.
  **Datos de Entrada Sintéticos:** Una orden, motivo, responsable y fecha fijos; variantes conformes e infractoras identificadas.
  **Resultado Esperado:** Solo el viaje conforme con ambas firmas puede recibir excepción registrada; una firma o rol incorrecto no la concede. Todas las infracciones mantienen bloqueo incluso con dos firmas. Conservar razón, identidades, vigencia de un viaje y registro para revisión mensual; no atribuir evidencia instrumental a la excepción.
- **Pass/Fail y Severidad:** Pass si todas las variantes producen esos estados y auditoría íntegra; cualquier discrepancia es Fail de severidad bloqueante.
+ **Pass/Fail y Severidad:** Pass si todas las variantes producen esos estados y auditoría íntegra; cualquier discrepancia es Fail de severidad **Crítica** (FEP01, Art. 78.1).
  **Entorno:** Staging identificado, reloj y configuración de RN-04 versionados.
 
 #### 9.0.14.19 CP-SYS-19 — Portal de Clientes con Tracking Activo y Geofencing Temporal (Ley 21.719)
@@ -1937,7 +1937,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** Sesión de cliente autenticada, orden de transporte activa \(\rightarrow\) cerrada.
 **Resultado Esperado:** Durante el viaje, el cliente observa la ubicación en tiempo real; una vez cerrada la entrega, el camión desaparece de su vista (geofencing temporal), salvaguardando la privacidad de ruta del transportista conforme a la Ley N.º 21.719.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P1 (Bloqueante)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Crítica** (FEP01, Art. 78.1).
 **Entorno:** Staging AKS / Portal Web Clientes.
 
 **Variante trazada a RF-021 (S3/T-12):** Con permiso por cliente, viaje y ventana, publicar posición cuya antigüedad se conoce. Durante ventana autorizada, refrescar en hasta dos minutos y mostrar antigüedad; antes o después, negar acceso. Cambiar el viaje a otro cliente y repetir con token viejo: no compartir ubicación ni rutas de competidores. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.
@@ -1963,7 +1963,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
  **Datos de Entrada Sintéticos:** Paquete `.ota` de 45 MB firmado digitalmente; lote de 50 transacciones de despacho sintéticas con 5 viajes en transición de estado e-POD y fallo transaccional inducido en base de datos.
  **Resultado Esperado:** En hardware, los 9 gateways actualizan a v2.1.0 y el equipo con fallo revierte autónomamente a partición A en $\le 60$ s sin pérdida de memoria. En plataforma, conmutación de tráfico a versión N−1 ejecutada en $\le 15$ min; eventos represados sincronizados en $\le 20$ min/unidad; 100 % de las transacciones conciliadas con el ERP en $\le 24$ h sin pérdida de datos ni duplicación de documentos contables; disponibilidad de Torre conservada.
- **Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia o desincronización transaccional es Fail. Severidad: **P1 (Bloqueante)**.
+ **Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia o desincronización transaccional es Fail. Severidad: **Crítica** (FEP01, Art. 78.1).
  **Entorno:** Staging AKS + Preproducción Cloud / Banco HIL con 10 Gateways Físicos.
 
 Los reportes del catálogo se incorporan al pipeline con los controles de la Tabla 9.2 del T-13: cero pruebas fallidas, líneas de lógica de negocio \(\ge\)70 % y ramas \(\ge\)80 % por separado; complejidad \(\le\)15 por función y cero vulnerabilidades críticas o altas abiertas en el artefacto promovido. Las exclusiones requieren justificación y no pueden ocultar lógica de negocio. El catálogo diseñado no acredita que esos resultados se hayan obtenido.
@@ -1991,7 +1991,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
  **Datos de Entrada Sintéticos:** K6 Virtual Users (VUs): 380 sesiones nominales y 570 de estrés, con mezcla de despacho, mapas y tracking versionada; no se atribuyen estas magnitudes al Caso.
  **Resultado Esperado:** Se debe verificar que sostiene ambas fases sin caídas, pérdida o doble procesamiento, cumpliendo los umbrales aplicables de S9 §9.3.6 a 1,5 veces el peak: asignación p95 \(\le\)30 s y DET \(\le\)90 s, medidos con sus relojes y oráculos de CP-PERF-04/05. Se conservan percentiles, errores y throughput por perfil; un promedio no compensa incumplimientos. Los tiempos, porcentajes y magnitudes observados se registrarán después del ensayo; no se anticipan mediciones ni actas suscritas.
- **Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P1 (Bloqueante)**.
+ **Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Crítica** (FEP01, Art. 78.1).
  **Entorno:** Staging AKS / K6 Distributed Runner.
 
  **Perfil de concurrencia de diseño:** 380 sesiones nominales y 570 de estrés (1,5 × 380), conforme a S4 compartido, «Concurrencia y volumen declarados». Se adopta el extremo superior de los rangos de diseño: 80 usuarios internos, 150 conductores, 50 transportistas y 100 clientes; estrés: 120, 225, 75 y 150 respectivamente. Esos rangos son hipótesis de simultaneidad sobre las poblaciones del Caso, no mediciones. La concurrencia de usuarios no modifica la población de vehículos. Versionar la mezcla de usuarios y operaciones en el manifiesto. Es una hipótesis de ingeniería, no un dato del Caso ni una equivalencia con viajes diarios.
@@ -2016,8 +2016,8 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 - Repetir por separado el perfil adicional 60/288, sin usarlo para aprobar el principal.
 
 **Datos de Entrada Sintéticos:** Perfil y manifiesto definidos abajo; tamaño serializado medido antes de aplicar transporte o compresión.
-**Resultado Esperado:** Cada camión confirma su lote en \(\le\)20 min, sin pérdida ni corrupción. Una sola unidad fuera del límite o evidencia discordante implica Fail de severidad alta/crítica. Los resultados se medirán al ejecutar.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: Alta cuando afecta seguridad o evidencia; mayor en objetivos adicionales.
+**Resultado Esperado:** Cada camión confirma su lote en \(\le\)20 min, sin pérdida ni corrupción. Una sola unidad fuera del límite o evidencia discordante implica Fail de severidad **Crítica** o **Alta** (FEP01, Art. 78.1). Los resultados se medirán al ejecutar.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Crítica** cuando afecta seguridad o evidencia; **Media** en objetivos adicionales (FEP01, Art. 78.1).
 **Entorno:** Staging AKS / Azure Event Hubs Premium (protocolo Kafka).
 
 **Variante contractual obligatoria:** Generar 72 h de registros por unidad con el perfil de muestreo y tamaño versionado de la memoria de cálculo; reconectar 300 camiones simultáneamente. Medir desde recuperación de cobertura hasta confirmación conciliada de cada camión: todas las unidades deben sincronizar en \(\le\)20 min, sin pérdida de jornada ni esperas, con deduplicación y conflictos registrados. El ensayo sintético de 60 unidades/288 h se conserva como ampliación separada y no sustituye este control.
@@ -2051,7 +2051,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
  **Datos de Entrada Sintéticos:** Carga continua previa de 100 viajes/hora; script de failover automatizado con Terraform.
  **Resultado Esperado:** Se debe verificar que RTO $\le 4\text{ h} y RPO \le 15\text{ min}$. Los tiempos, porcentajes y magnitudes observados se registrarán después del ensayo; no se anticipan mediciones ni actas suscritas.
- **Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P1 (Bloqueante)**.
+ **Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Crítica** (FEP01, Art. 78.1).
  **Entorno:** Azure Chile Central $\rightarrow$ Azure Brazil South.
 
 **Recuperación conjunta y permisos:** Preparar viajes sintéticos con filas transaccionales, originales/representaciones documentales, eventos pendientes y confirmados, evidencia original y rectificación como nuevo registro vinculado. Registrar un manifiesto independiente de identificadores, versiones, secuencias, huellas, relaciones y marcas de tiempo. Revocar un permiso antes del incidente y conservar otro vigente. Recuperar bases, objetos documentales y eventos mediante el mecanismo aprobado en S4/S5; reanudar consumidores y conciliar los tres conjuntos con el manifiesto, sin referencias huérfanas, pérdidas fuera del RPO, duplicados ni sobrescritura del original. Comprobar que el permiso revocado sigue denegado incluso con token/caché anterior y que el acceso legítimo conserva su alcance.
@@ -2077,7 +2077,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
  **Datos de Entrada Sintéticos:** Lote de 500 candidatos de viaje con datos de choferes, camiones y ramplas.
  **Resultado Esperado:** Se debe verificar que $P_{95} \le 30{,}0\text{ s}$. Los tiempos, porcentajes y magnitudes observados se registrarán después del ensayo; no se anticipan mediciones ni actas suscritas.
- **Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P1 (Bloqueante)**.
+ **Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Crítica** (FEP01, Art. 78.1).
  **Entorno:** Staging AKS / K6.
 
 **Alcance E2E y variantes bajo carga:** Repetir las barreras y claves de CP-SYS-01 en fases nominal y estrés: cambio de vigencia, revocación de permiso, competencia por recursos y respuesta perdida. Medir desde recepción inicial hasta respuesta definitiva y reserva/asignación confirmada o rechazo, incluyendo consulta autoritativa y todos los reintentos internos. Conservar percentiles, errores y causas por fase y variante; exigir p95 de hasta 30 s y cero confirmaciones con condiciones inválidas o asignaciones duplicadas. El plazo agotado mantiene el bloqueo, sin reintento que reinicie el presupuesto.
@@ -2097,7 +2097,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
  **Datos de Entrada Sintéticos:** 30 solicitudes D.E.T. con tokens de contingencia.
  **Resultado Esperado:** Se debe verificar que $P_{99} \le 90\text{ s}$. Los tiempos, porcentajes y magnitudes observados se registrarán después del ensayo; no se anticipan mediciones ni actas suscritas.
- **Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P1 (Bloqueante)**.
+ **Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Crítica** (FEP01, Art. 78.1).
  **Entorno:** Staging / Banco HIL Multidispositivo.
 
 **Camino satelital bajo carga:** Repetir CP-HW-11 sin cobertura terrestre, con el contenido y tamaño máximo homologados y las fases 380/570 como carga de fondo del servicio central. El límite de 90 s termina en representación completa y conforme accesible en cabina e incluye emisión, retorno, reensamblado y validación; no termina en la obtención del folio. Registrar cada recepción y las variantes incompletas o tardías, que mantienen bloqueo. El control del percentil no autoriza movimiento sin documento conforme ni acredita por sí solo factibilidad del enlace.
@@ -2118,7 +2118,7 @@ Este ensayo de ingeniería mide la distribución de latencia del trayecto desde 
 
 **Datos de Entrada Sintéticos:** Secuencia de eventos SOS en el km 740 de la Ruta 5 Norte con perfil de degradación y carga reproducibles.
 **Resultado Esperado:** \(P_{99}\le15{,}0\text{ s}\). El informe conserva el perfil, \(N\), latencias, alertas no recibidas y duplicadas. Las alertas no recibidas permanecen en el denominador.
-**Pass/Fail y Severidad:** Pass si el perfil y la muestra son conformes, la evidencia está completa y se cumple el límite de \(P_{99}\). Fail en caso contrario. Severidad: **P1 (Bloqueante)**.
+**Pass/Fail y Severidad:** Pass si el perfil y la muestra son conformes, la evidencia está completa y se cumple el límite de \(P_{99}\). Fail en caso contrario. Severidad: **Crítica** (FEP01, Art. 78.1).
 **Entorno:** Banco HIL, emulador de canal de radiofrecuencia y consola Torre.
 
 #### 9.0.15.7 CP-PERF-07 — Latencia de Refresco de Posición en Portal Clientes con 500 Usuarios Concurrentes
@@ -2137,7 +2137,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** 500 sesiones virtuales con peticiones cada 15 segundos.
 **Resultado Esperado:** Se debe verificar que el refresco se mantiene \(\le 2\text{ minutos}\) para el 100% de los usuarios. Los tiempos, porcentajes y magnitudes observados se registrarán después del ensayo; no se anticipan mediciones ni actas suscritas.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P2 (Crítica)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Alta** (FEP01, Art. 78.1).
 **Entorno:** Staging AKS / K6 WebSocket Runner.
 
 **Perfil de clientes:** 100 sesiones nominales de cliente y 150 en estrés, derivadas del rango de S4. Mantener antigüedad de posición publicada ≤2 min con cobertura. Un perfil exploratorio de 500 se conserva solo como sobrecarga adicional, sin atribuirlo a las bases.
@@ -2161,7 +2161,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** Ráfaga masiva K6 de 1.000 req/s.
 **Resultado Esperado:** Se debe verificar que escala automáticamente en \(< 90\text{ s}\) manteniendo disponibilidad. Los tiempos, porcentajes y magnitudes observados se registrarán después del ensayo; no se anticipan mediciones ni actas suscritas.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P2 (Crítica)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Alta** (FEP01, Art. 78.1).
 **Entorno:** Staging AKS.
 
 **Variante trazada a RNF-010 (S3/T-12):** Conciliar inventario técnico y modelo económico de 36 meses: cantidades, unidades, periodicidad y cobertura de nube, enlaces, licencias, soporte, reposición, retiro y contingencia. Esperar cero partidas omitidas o duplicadas y horizonte íntegro; precios solo en oferta económica. El escalamiento de pods no demuestra exhaustividad del costo de operación. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.
@@ -2182,7 +2182,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** 36.000.000 de registros sintéticos de sensores vehiculares.
 **Resultado Esperado:** Se debe verificar que sostiene \(\ge 10.000\text{ métricas/s}\) sin degradación. Los tiempos, porcentajes y magnitudes observados se registrarán después del ensayo; no se anticipan mediciones ni actas suscritas.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P2 (Crítica)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Alta** (FEP01, Art. 78.1).
 **Entorno:** Staging Azure PostgreSQL TimescaleDB.
 
 **Variante trazada a RF-018 (S3/T-12):** Construir 12 meses de consumo y kilómetros por vehículo, ruta y conductor con condiciones registradas. En una cohorte de referencia, razones 2, 4, 4, 4, 5, 5, 7 y 9 tienen media 5 y varianza poblacional 4, en unidades sintéticas. Añadir una condición de carga sintética x con valores 0, 2, 2, 2, 3, 3, 5 y 7 y consumo y=2+x: el modelo lineal de referencia debe reproducir coeficientes 2 y 1 y residual cero en ese fixture. Un modelo alternativo debe declarar su oráculo independiente. Esta exactitud sintética no se promete para datos reales. El modelo debe conservar cohorte, período, condiciones, versión y dispersión reproducible; registros incompletos no se mezclan como cero. El benchmark de inserción no demuestra explicación de dispersión. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.
@@ -2203,7 +2203,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** 148 usuarios virtuales K6 autenticados con tokens independientes.
 **Resultado Esperado:** Se debe verificar que atiende a los 148 transportistas en paralelo con latencia \(< 3\text{ s}\). Los tiempos, porcentajes y magnitudes observados se registrarán después del ensayo; no se anticipan mediciones ni actas suscritas.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P2 (Crítica)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Alta** (FEP01, Art. 78.1).
 **Entorno:** Staging AKS / Portal Web.
 
 **Variante trazada a RF-020 (S3/T-12):** Autenticar dos propietarios y solicitar viajes y liquidaciones propios y ajenos durante el cierre de 148 titulares. Mostrar detalle propio actualizado y negar toda consulta ajena; registrar autor y fecha. Conservar el ensayo de latencia adicional de 3 s como parámetro propuesto; no confundirlo con el plazo mensual de liquidación. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.
@@ -2223,7 +2223,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** Flujo telemático de 2 horas en condiciones adversas de conectividad.
 **Resultado Esperado:** Se debe verificar que concilia el conjunto del ensayo sin pérdida ni duplicados. Los tiempos, porcentajes y magnitudes observados se registrarán después del ensayo; no se anticipan mediciones ni actas suscritas.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P2 (Crítica)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Alta** (FEP01, Art. 78.1).
 **Entorno:** Banco HIL / Simulador de Red NetEm.
 
 #### 9.0.15.12 CP-PERF-12 — Prueba de Longevidad (Soak Testing) — 72 Horas Continuas a Carga Nominal
@@ -2242,7 +2242,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** Tráfico sintético sostenido de 72 horas continuas.
 **Resultado Esperado:** Se debe verificar que no hay fugas de recursos ni degradación acumulativa. Los tiempos, porcentajes y magnitudes observados se registrarán después del ensayo; no se anticipan mediciones ni actas suscritas.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P1 (Bloqueante)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Crítica** (FEP01, Art. 78.1).
 **Entorno:** Staging AKS / Azure Monitor y Log Analytics.
 
 **Variante contractual de terminales:** Mantener cada tipo de terminal 24 h sin enlace exterior, con cómputo y red del ambiente de ensayo especificados; registrar transacciones locales bajo perfil versionado. Restaurar el enlace, reconciliar automáticamente y verificar conteos, huellas y conflictos deterministas. Fallar si se requiere acceso cloud para las funciones degradadas comprometidas o se pierden transacciones. No se presupone hardware del cliente.
@@ -2262,7 +2262,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** Diccionario de 2.500 cargas útiles (payloads) de inyección SQL estándar OWASP.
 **Resultado Esperado:** 0 vulnerabilidades detectadas; el 100% de las peticiones maliciosas son neutralizadas mediante consultas parametrizadas (Prepared Statements) en los ORMs y bloqueadas por el WAF con HTTP 400 o 403; cero exposición de esquemas de BD.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P1 (Bloqueante)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Crítica** (FEP01, Art. 78.1).
 **Entorno:** CI Pipeline / OWASP ZAP Container.
 
 #### 9.0.15.14 CP-SEC-02 — DAST OWASP ZAP — Prevención de Cross-Site Scripting (XSS) y CSRF en Portales
@@ -2280,7 +2280,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** Payloads `<\allowbreak{}s\allowbreak{}c\allowbreak{}r\allowbreak{}i\allowbreak{}p\allowbreak{}t\allowbreak{}>\allowbreak{}a\allowbreak{}l\allowbreak{}e\allowbreak{}r\allowbreak{}t\allowbreak{}(\allowbreak{}'\allowbreak{}X\allowbreak{}S\allowbreak{}S\allowbreak{}'\allowbreak{})\allowbreak{}<\allowbreak{}/\allowbreak{}s\allowbreak{}c\allowbreak{}r\allowbreak{}i\allowbreak{}p\allowbreak{}t\allowbreak{}>\allowbreak{}`, payloads basados en SVG, y formularios con dominios cruzados sin token CSRF.
 **Resultado Esperado:** Cero alertas XSS; sanitización automática de entradas en frontend y backend; cabeceras `S\allowbreak{}a\allowbreak{}m\allowbreak{}e\allowbreak{}S\allowbreak{}i\allowbreak{}t\allowbreak{}e\allowbreak{}=\allowbreak{}S\allowbreak{}t\allowbreak{}r\allowbreak{}i\allowbreak{}c\allowbreak{}t\allowbreak{}` en cookies y tokens anti-CSRF validan y bloquean peticiones no autorizadas.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P1 (Bloqueante)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Crítica** (FEP01, Art. 78.1).
 **Entorno:** CI Pipeline / OWASP ZAP.
 
 #### 9.0.15.15 CP-SEC-03 — Hardening de Cabeceras HTTP y Cifrado en Tránsito TLS 1.3 Estricto
@@ -2299,7 +2299,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** Sondas de escaneo SSL y peticiones cURL a cabeceras HTTP.
 **Resultado Esperado:** Calificación SSL Labs Grade A+; 100% de las cabeceras de seguridad requeridas presentes; rechazo inmediato de ciphers obsoletos.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P1 (Bloqueante)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Crítica** (FEP01, Art. 78.1).
 **Entorno:** Staging Azure Front Door / SSL Labs Scanner.
 
 #### 9.0.15.16 CP-SEC-04 — Cifrado a Nivel de Campo (FLE AES-256-GCM) para Datos de Choferes (Ley 21.719)
@@ -2318,7 +2318,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** Chofer sintético `R\allowbreak{}U\allowbreak{}T\allowbreak{}:\allowbreak{} 1\allowbreak{}4\allowbreak{}.\allowbreak{}8\allowbreak{}8\allowbreak{}7\allowbreak{}.\allowbreak{}6\allowbreak{}5\allowbreak{}4\allowbreak{}-\allowbreak{}3\allowbreak{}`, `T\allowbreak{}e\allowbreak{}l\allowbreak{}é\allowbreak{}f\allowbreak{}o\allowbreak{}n\allowbreak{}o\allowbreak{}:\allowbreak{} +\allowbreak{}5\allowbreak{}6\allowbreak{}9\allowbreak{}8\allowbreak{}7\allowbreak{}6\allowbreak{}5\allowbreak{}4\allowbreak{}3\allowbreak{}2\allowbreak{}1\allowbreak{}`.
 **Resultado Esperado:** Los datos aparecen como cadenas cifradas en disco (`\$\allowbreak{}f\allowbreak{}l\allowbreak{}e\allowbreak{}\$\allowbreak{}v\allowbreak{}1\allowbreak{}\$\allowbreak{}g\allowbreak{}A\allowbreak{}A\allowbreak{}A\allowbreak{}A\allowbreak{}A\allowbreak{}B\allowbreak{}k\allowbreak{}.\allowbreak{}.\allowbreak{}.\allowbreak{}`); el texto en claro solo es accesible mediante invocación autorizada con la clave custodiada en Azure Key Vault.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P1 (Bloqueante)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Crítica** (FEP01, Art. 78.1).
 **Entorno:** CI Testcontainers / PostgreSQL + Azure Key Vault Mock.
 
 **Variante trazada a RF-022 (S3/T-12):** Crear permisos por propietario, dato, vehículo, destinatario y vigencia; conceder y revocar uno a hora fija. En hasta cinco minutos deben cesar accesos comprendidos, incluso con token o caché previa; conservar auditoría. Un conductor o propietario ajeno no puede revocar. No eliminar evidencia que tiene obligación de conservación. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.
@@ -2343,7 +2343,7 @@ Este ensayo comprueba en una sola ejecución el cese del acceso revocado (RF-022
 
 **Datos de Entrada Sintéticos:** Camión, titular autorizado, usuario ajeno, permiso de geolocalización, sesión de destinatario y muestra de evidencia previa.
 **Resultado Esperado:** El acceso revocado cesa en no más de cinco minutos. Para RN-10, la captura de posición en el equipo audIT cesa en el mismo plazo contado desde la recepción de la revocación. Se conserva íntegra la evidencia previa sujeta a conservación. La bitácora identifica el permiso, el actor y la hora de revocación. Se registra el tiempo observado durante el ensayo.
-**Pass/Fail y Severidad:** Pass si se acreditan el cese de acceso y de captura dentro del plazo, la integridad de la evidencia previa, el registro de revocación y los controles de alcance y autorización. Cualquier incumplimiento es Fail. Si falta observación directa de la captura, el caso queda pendiente de acreditación y no puede aprobarse. Severidad: **P1 (Bloqueante)**.
+**Pass/Fail y Severidad:** Pass si se acreditan el cese de acceso y de captura dentro del plazo, la integridad de la evidencia previa, el registro de revocación y los controles de alcance y autorización. Cualquier incumplimiento es Fail. Si falta observación directa de la captura, el caso queda pendiente de acreditación y no puede aprobarse. Severidad: **Crítica** (FEP01, Art. 78.1).
 **Entorno:** Staging AKS / Portal del Transportista y Módulo de Privacidad. Equipo audIT instrumentado en banco HIL. El iWave G26I es el candidato, sujeto a confirmación de disponibilidad, firmware y registro de captura local.
 
 **Variante trazada a RNF-013 (S3/T-12):** Inventariar atributos que requieren protección y roles autorizados; leerlos desde disco y mediante API con rol permitido y ajeno. Todos los atributos protegidos están cifrados en persistencia y filtrados por rol/atributo; cero valores claros o accesos ajenos. Conservar claves y configuración del fixture; el ejemplo de ciphertext no acredita algoritmo real. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.
@@ -2365,7 +2365,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** Peticiones curl internas en clúster Kubernetes.
 **Resultado Esperado:** Rechazo del 100% de conexiones no autenticadas con certificado de malla; rotación automática de certificados sin desconexión de servicios.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P1 (Bloqueante)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Crítica** (FEP01, Art. 78.1).
 **Entorno:** Staging AKS con Istio Service Mesh.
 
 #### 9.0.15.19 CP-SEC-07 — Prevención de Broken Object Level Authorization (BOLA/IDOR) en Portales
@@ -2383,7 +2383,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** Petición manipulada con token de sesión de transportista A consultando ID del transportista B.
 **Resultado Esperado:** Código HTTP `4\allowbreak{}0\allowbreak{}3\allowbreak{} F\allowbreak{}o\allowbreak{}r\allowbreak{}b\allowbreak{}i\allowbreak{}d\allowbreak{}d\allowbreak{}e\allowbreak{}n\allowbreak{}` o `4\allowbreak{}0\allowbreak{}4\allowbreak{} N\allowbreak{}o\allowbreak{}t\allowbreak{} F\allowbreak{}o\allowbreak{}u\allowbreak{}n\allowbreak{}d\allowbreak{}`; denegación absoluta de acceso al documento ajeno; registro de alerta de seguridad en la consola SIEM por intento de vulneración BOLA/IDOR.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P1 (Bloqueante)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Crítica** (FEP01, Art. 78.1).
 **Entorno:** CI Testcontainers / API Gateway.
 
 **Variante trazada a RF-020 (S3/T-12):** Autenticar dos propietarios y solicitar viajes y liquidaciones propios y ajenos durante el cierre de 148 titulares. Mostrar detalle propio actualizado y negar toda consulta ajena; registrar autor y fecha. Conservar el ensayo de latencia adicional de 3 s como parámetro propuesto; no confundirlo con el plazo mensual de liquidación. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.
@@ -2405,7 +2405,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** Lote sintético de eventos de jornada con sello RFC 3161 y blob de control sin protección; contenido alternativo para el intento de sobrescritura.
 **Resultado Esperado:** El control sin inmutabilidad permite sobrescritura y borrado con la cuenta de prueba. En el contenedor protegido, Azure Blob Storage rechaza ambas operaciones con HTTP 409 y código `Blob\allowbreak{}Immutable\allowbreak{}Due\allowbreak{}To\allowbreak{}Policy`; el objeto conserva contenido, huella criptográfica y sello originales durante la conservación. Registrar resultados solo después de ejecutar el ensayo.
-**Pass/Fail y Severidad:** Pass solo si el control previo acredita escritura y borrado, ambas operaciones sobre el objeto protegido son rechazadas por la política WORM y la evidencia permanece íntegra. Una denegación por autenticación o permisos no acredita inmutabilidad: el caso queda no aprobado hasta corregir la preparación y repetirlo. Sobrescritura o borrado efectivos, pérdida de integridad o cualquier incumplimiento de los criterios implican Fail. Severidad: **P1 (Bloqueante)**.
+**Pass/Fail y Severidad:** Pass solo si el control previo acredita escritura y borrado, ambas operaciones sobre el objeto protegido son rechazadas por la política WORM y la evidencia permanece íntegra. Una denegación por autenticación o permisos no acredita inmutabilidad: el caso queda no aprobado hasta corregir la preparación y repetirlo. Sobrescritura o borrado efectivos, pérdida de integridad o cualquier incumplimiento de los criterios implican Fail. Severidad: **Crítica** (FEP01, Art. 78.1).
 **Entorno:** Staging Azure Blob Storage: contenedor protegido y contenedor de control sin inmutabilidad.
 
 **Variante trazada a RF-004 (S3/T-12):** Sellar un evento original y una corrección que cambia un dato; conservar ambas versiones con autor, origen y fecha. Alterar el original y verificar fallo de integridad. Avanzar reloj virtual hasta cinco años de conservación y comprobar disponibilidad e integridad antes de su término; la simulación verifica la política y no acredita cinco años de operación real. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.
@@ -2439,7 +2439,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** Transición escalón de tensión de \(24{,}0\text{ V}\) a \(0{,}0\text{ V}\) con \(t_{\mbox{caída}} \le 100\text{ }\mu\text{s}\).
 **Resultado Esperado:** Se debe verificar que conmuta en \(< 10\text{ ms}\) sin reboot. Los tiempos, porcentajes y magnitudes observados se registrarán después del ensayo; no se anticipan mediciones ni actas suscritas.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P1 (Bloqueante)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Crítica** (FEP01, Art. 78.1).
 **Entorno:** Banco HIL / Osciloscopio Digital Rigol / Fuente DC Keysight.
 
 #### 9.0.16.2 CP-HW-02 — Autonomía de Batería Interna LiFePO4 — \(\ge 6\text{ Horas}\) Transmitiendo Telemetría
@@ -2458,7 +2458,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** Transmisión continua a intervalo de 60 segundos sobre red móvil simulada.
 **Resultado Esperado:** Se debe verificar que la autonomía supera las 6 horas continuas. Los tiempos, porcentajes y magnitudes observados se registrarán después del ensayo; no se anticipan mediciones ni actas suscritas.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P1 (Bloqueante)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Crítica** (FEP01, Art. 78.1).
 **Entorno:** Banco HIL / Registrador de Datos de Batería.
 
 #### 9.0.16.3 CP-HW-03 — Retención embarcada obligatoria de 72 h y ampliación propuesta de 288 h
@@ -2479,7 +2479,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** 5.954 registros y ocho fotos por unidad para 72 h, según el perfil común; cuatro repeticiones para la ampliación 288 h.
 **Resultado Esperado:** Se debe verificar que almacena las 72 horas contractuales sin pérdida ni corrupción; registrar por separado la ampliación 288 h. Los tiempos, porcentajes y magnitudes observados se registrarán después del ensayo; no se anticipan mediciones ni actas suscritas.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P1 (Bloqueante)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Crítica** (FEP01, Art. 78.1).
 **Entorno:** Banco HIL / Inyector de Tramas de Simulación.
 
 **Variante contractual obligatoria:** Ejecutar primero 72 h sin cobertura, con perfil de posición, jornada, eventos de conducción, tiempos en clientes y documentos del viaje. Conservar conteo y huellas de origen, cortar el enlace sin detener la captura, reabrirlo y conciliar registros sin pérdida ni corrupción. El ensayo de 288 h es adicional propuesto y su fallo no redefine el mínimo normativo. No se declara resultado previo.
@@ -2511,7 +2511,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
  **Datos de Entrada Sintéticos:** 1.000.000 de tramas SAE J1939 generadas sintéticamente por hardware.
  **Resultado Esperado:** Se debe verificar que la tasa de pérdida es $< 0{,}1%$. Los tiempos, porcentajes y magnitudes observados se registrarán después del ensayo; no se anticipan mediciones ni actas suscritas.
- **Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P1 (Bloqueante)**.
+ **Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Crítica** (FEP01, Art. 78.1).
  **Entorno:** Banco HIL / Generador y analizador de bus CAN SAE J1939 independiente + lector Technoton CANCrocodile.
 
  **Variante trazada a RF-025 (S3/T-12):** Configurar mantenimiento a 100.000 km como dato sintético, no norma. Con odómetro real de 99.999 y 100.000 km esperar ausencia y presencia de aviso, respectivamente, enviado al sistema de talleres. Repetir con estimación: marcar incertidumbre y origen, sin presentar estimación como lectura real ni perder el aviso. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.
@@ -2535,7 +2535,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
  **Datos de Entrada Sintéticos:** Corte de ignición emulado por señal digital en banco HIL.
  **Resultado Esperado:** Se debe verificar que la corriente de reposo es $< 50\text{ mA}$. Los tiempos, porcentajes y magnitudes observados se registrarán después del ensayo; no se anticipan mediciones ni actas suscritas.
- **Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P2 (Crítica)**.
+ **Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Alta** (FEP01, Art. 78.1).
  **Entorno:** Banco HIL / Multímetro Keysight 34461A 6½ dígitos.
 
 #### 9.0.16.6 CP-HW-06 — Activación física y entrega por evento SOS con cobertura real
@@ -2554,7 +2554,7 @@ Este ensayo verifica la activación física del botón de cabina, su registro y 
 
 **Datos de Entrada Sintéticos:** Diez pulsaciones físicas en intervalos de una hora, con tráfico ordinario concurrente.
 **Resultado Esperado:** Las diez pulsaciones producen un registro correlacionable y un aviso prioritario en la Torre 24x7 en un máximo de 15 segundos por evento con cobertura.
-**Pass/Fail y Severidad:** Pass si todas las pulsaciones cumplen el límite individual, quedan registradas y se entregan con prioridad, y las variantes aplicables son conformes. Fail ante cualquier incumplimiento. Severidad: **P1 (Bloqueante)**.
+**Pass/Fail y Severidad:** Pass si todas las pulsaciones cumplen el límite individual, quedan registradas y se entregan con prioridad, y las variantes aplicables son conformes. Fail ante cualquier incumplimiento. Severidad: **Crítica** (FEP01, Art. 78.1).
 **Entorno:** Banco HIL, red móvil real y consola Torre.
 
 **Variante trazada a RNF-001 (S3/T-12):** Reproducir velocidad cero y velocidad positiva; intentar escritura, formulario y confirmación en ambos estados. En movimiento descartar toda captura manual y mostrar solo aviso pasivo. La recuperación de interfaz detenida no debe perder datos; parámetros de milisegundos son objetivos adicionales, no permiso para interactuar conduciendo. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.
@@ -2575,7 +2575,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
  **Datos de Entrada Sintéticos:** Perfil térmico y dinámico de ingeniería; protocolo de laboratorio identificado con edición y apartados aplicables de SAE J1455. El laboratorio debe contrastar y aprobar el espectro, duración, montaje y ejes antes del ensayo; el fixture por sí solo no acredita conformidad normativa.
  **Resultado Esperado:** Se debe verificar que supera el ciclo completo sin degradación funcional. Los tiempos, porcentajes y magnitudes observados se registrarán después del ensayo; no se anticipan mediciones ni actas suscritas.
- **Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P1 (Bloqueante)**.
+ **Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Crítica** (FEP01, Art. 78.1).
  **Entorno:** Laboratorio de Ensayos / Cámara Climática y Mesa de Vibración.
 
 #### 9.0.16.8 CP-HW-08 — Estanqueidad IP67 del conjunto instalado en transporte terrestre
@@ -2594,7 +2594,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
  **Datos de Entrada Sintéticos:** Procedimiento de laboratorio con edición y apartados IP6X/IPX7 de IEC 60529 identificados; registrar su aplicabilidad al conjunto y configuración ensayados.
  **Resultado Esperado:** Se debe verificar conformidad IP6X/IPX7 del conjunto según el procedimiento identificado y funcionamiento posterior de captura, persistencia y enlace. Registrar inspección, mediciones, criterio de ingreso y comprobación funcional por muestra en el informe de laboratorio.
- **Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P1 (Bloqueante)**.
+ **Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Crítica** (FEP01, Art. 78.1).
  **Entorno:** Laboratorio de Certificación de Estanqueidad IP67.
 
  **Variante trazada a RNF-004 (S3/T-12):** Usar agenda de visitas normales a terminal y órdenes de instalación; cada instalación se integra a una visita existente sin viaje adicional ni inmovilización extra. Comparar hora de liberación del vehículo con su visita prevista; cualquier demora adicional falla aunque el montaje dure menos de 60 min. Conservar orden, entrada, liberación y autorización. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.
@@ -2617,7 +2617,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
  **Datos de Entrada Sintéticos:** Imagen de firmware con instrucción de aborto inducida en `init`.
  **Resultado Esperado:** Se debe verificar que el rollback opera de manera 100% autónoma. Los tiempos, porcentajes y magnitudes observados se registrarán después del ensayo; no se anticipan mediciones ni actas suscritas.
- **Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P1 (Bloqueante)**.
+ **Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Crítica** (FEP01, Art. 78.1).
  **Entorno:** Banco HIL / U-Boot Debug Port.
 
 #### 9.0.16.10 CP-HW-10 — Verificación térmica y recepción de baliza Bluetooth
@@ -2637,7 +2637,7 @@ Este ensayo define entradas, controles y evidencia; no declara resultados ejecut
 
 **Datos de Entrada Sintéticos:** Consignas dentro del rango aprobado; cada valor y tolerancia constan en el manifiesto.
 **Resultado Esperado:** Error dentro de la tolerancia aprobada del modelo y asociación correcta. Ausencia o antigüedad genera aviso de dato no disponible; no se mantiene una lectura antigua como actual. Si el rango no cubre la carga prevista, no se homologa esa aplicación. No se presupone precisión de ±0,3 °C ni operación a −30 °C.
-**Pass/Fail y Severidad:** Pass solo si se cumplen todos los criterios y se conserva evidencia reproducible; cualquier pérdida, acceso no autorizado o salida incorrecta implica Fail. Severidad alta para seguridad y evidencia.
+**Pass/Fail y Severidad:** Pass solo si se cumplen todos los criterios y se conserva evidencia reproducible; cualquier pérdida, acceso no autorizado o salida incorrecta implica Fail. Severidad: **Alta** para seguridad y evidencia (FEP01, Art. 78.1).
 **Entorno:** HIL / Cámara térmica, patrón y receptor Bluetooth.
 
 #### 9.0.16.11 CP-HW-11 — Acceso Local al DET Conforme y Bloqueo ante Documento No Emitido
@@ -2658,7 +2658,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** Dos órdenes de prueba, mismo identificador repetido, estado `C\allowbreak{}O\allowbreak{}N\allowbreak{}F\allowbreak{}O\allowbreak{}R\allowbreak{}M\allowbreak{}E\allowbreak{}` y estado `N\allowbreak{}O\allowbreak{}_\allowbreak{}E\allowbreak{}M\allowbreak{}I\allowbreak{}T\allowbreak{}I\allowbreak{}D\allowbreak{}O\allowbreak{}`, documento/firma/folio y esquema de prueba versionados; manifestar emisor, orden y huellas. Reloj virtual del fixture.
 **Resultado Esperado:** Disponible el documento conforme antes del movimiento; bloqueadas todas las variantes negativas, una única emisión por orden y evidencia de validación conservada. En pruebas de sistema/hardware se mide ≤90 s; en pruebas unitarias se valida el estado, sin sustituir el tiempo E2E.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: Alta cuando afecta seguridad o evidencia; mayor en objetivos adicionales.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Crítica** cuando afecta seguridad o evidencia; **Media** en objetivos adicionales (FEP01, Art. 78.1).
 **Entorno:** staging/HIL con dispositivo y contrato ERP de ensayo. Homologación real del mecanismo de contingencia antes de despliegue; la falta de disponibilidad no se resuelve fingiendo certificación.
 
 **Variante trazada a RF-014 (S3/T-12):** Ejecutar dos rutas de contingencia: DET anticipado por ERP desde la orden y solicitud satelital al ERP con retorno de la representación completa y conforme a cabina. Antes del movimiento debe estar recibida, reensamblada, validada y accesible localmente en hasta 90 s; folio o hash aislados, fragmentos faltantes, datos discordantes y respuesta fuera de plazo bloquean. Un PDF local firmado por audIT no sustituye emisión del ERP. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.
@@ -2684,7 +2684,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** Desconexión física SMA e inyección controlada de ruido RF.
 **Resultado Esperado:** Se debe verificar que detecta corte de antena y jamming sin ambigüedad. Los tiempos, porcentajes y magnitudes observados se registrarán después del ensayo; no se anticipan mediciones ni actas suscritas.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P1 (Bloqueante)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Crítica** (FEP01, Art. 78.1).
 **Entorno:** Banco HIL / Jaula de Faraday / Generador de Ruido RF.
 
 #### 9.0.16.13 CP-HW-13 — Acelerómetro 3D MEMS — Detección Inercial de Frenadas Bruscas y Volcamiento
@@ -2703,7 +2703,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** Perfil cinemático de frenada brusca y giro de vuelco en mesa giratoria.
 **Resultado Esperado:** Se debe verificar que detecta el impacto y preserva la caja negra. Los tiempos, porcentajes y magnitudes observados se registrarán después del ensayo; no se anticipan mediciones ni actas suscritas.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P1 (Bloqueante)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Crítica** (FEP01, Art. 78.1).
 **Entorno:** Banco HIL / Mesa de Giro Cinemático.
 
 #### 9.0.16.14 CP-HW-14 — Identificación del conductor y bloqueo administrativo de asignación
@@ -2725,7 +2725,7 @@ Este ensayo verifica la identificación y la decisión de asignación sin actuar
 
  **Datos de Entrada Sintéticos:** Credenciales desconocida, revocada y vigente; estados de licencia, descanso y vehículo conformes/no conformes, con reloj y oráculo independientes.
  **Resultado Esperado:** Cada intento conserva identidad o motivo de ausencia, fuente, fecha, veredicto y causa. Solo la combinación de identidad válida y todos los controles conformes habilita asignación. Los casos no conformes bloquean el despacho administrativo; el vehículo no recibe órdenes de inmovilización. Lectura pasiva y montaje preservan garantía y sistemas de seguridad. No se impone un tiempo de liberación de relé ni se acredita una prueba ejecutada.
- **Pass/Fail y Severidad:** Pass si todas las decisiones coinciden con el oráculo, se conservan los registros y no existe actuación física sobre el vehículo. Cualquier autorización indebida, pérdida de trazabilidad o actuación sobre arranque/CAN es Fail. Severidad: **P1 (Bloqueante)**.
+ **Pass/Fail y Severidad:** Pass si todas las decisiones coinciden con el oráculo, se conservan los registros y no existe actuación física sobre el vehículo. Cualquier autorización indebida, pérdida de trazabilidad o actuación sobre arranque/CAN es Fail. Severidad: **Crítica** (FEP01, Art. 78.1).
  **Entorno:** Banco HIL de identificación e iWave G26I, servicios de QA y analizador independiente de interfaces; sin tablero de encendido ni inmovilizador.
 
 #### 9.0.16.15 CP-HW-15 — Descarga Remota Dedicada de Tacógrafo Digital Mediante Enlace DSRC
@@ -2745,7 +2745,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** Tacógrafo con 90 días de actividad sintética grabada.
 **Resultado Esperado:** Se debe verificar que descarga el archivo íntegro y autenticado. Los tiempos, porcentajes y magnitudes observados se registrarán después del ensayo; no se anticipan mediciones ni actas suscritas.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P2 (Crítica)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Alta** (FEP01, Art. 78.1).
 **Entorno:** Banco HIL / Tacógrafo Digital VDO DTCO 1381.
 
 **Variante trazada a RF-007 (S3/T-12):** Descargar dos archivos originales de tacógrafo con conductores y vehículos distintos; conservar bytes y huellas originales, relacionar conductor y vehículo y clasificar nivel 1. Archivo truncado, alterado o sin identidad debe rechazarse o quedar pendiente de verificación, sin convertirse en evidencia válida. En ensayo unitario se comprueba la regla con reloj controlado; latencia y comportamiento externo se acreditan en la prueba de integración, sistema o HIL asociada.
@@ -2772,7 +2772,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** 180 órdenes de transporte sintéticas programadas durante el turno.
 **Resultado Esperado:** Se debe verificar que el 100% de los despachadores opera de forma autónoma. Los tiempos, porcentajes y magnitudes observados se registrarán después del ensayo; no se anticipan mediciones ni actas suscritas.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P1 (Bloqueante)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Crítica** (FEP01, Art. 78.1).
 **Entorno:** Terreno / Torre de Programación San Bernardo.
 
 **Variantes de administración y costo de operación (RNF-009/RNF-010):** Personal TI designado de la dotación de nueve ejecuta con cuentas de prueba las tareas de alta, consulta de salud, restauración autorizada y escalamiento siguiendo el manual. Identificar tareas que requieren especialidad de audIT, sin atribuirla a TI del cliente. Revisar un modelo sintético de 36 meses con cantidades, unidades, periodicidad y componentes de nube, enlaces, licencias, soporte y reposición; cotejar sumas y categorías contra T-11 y modelo económico sin publicar valores de la oferta en el documento técnico. Fallar ante rubros omitidos, unidades incompatibles o doble conteo. El ensayo no demuestra por sí solo dotación suficiente 24x7.
@@ -2800,7 +2800,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** Checklist de instalación mecánica y eléctrica en PWA de taller.
 **Resultado Esperado:** Se debe verificar que el tiempo de montaje físico a bordo cumple la referencia de diseño (\(\le 140\text{ minutos}\) por kit, validada en piloto) dentro de la ventana regular de mantenimiento sin inmovilización adicional y con 0 invasión de cables. Los tiempos, porcentajes y magnitudes observados se registrarán después del ensayo; no se anticipan mediciones ni actas suscritas.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P2 (Crítica)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Alta** (FEP01, Art. 78.1).
 **Entorno:** Terreno / Taller Central San Bernardo.
 
 **Autorización y alcance físico:** No intervenir un equipo de terceros sin acuerdo expreso. Ejecutar durante una pasada regular por terminal, sin detener globalmente la flota. Documentar duración medida, modelo, permisos, procedimiento no invasivo, señales y garantía; disponer del equipo de ensayo especificado por audIT, sin presumirlo propiedad del cliente. El banco reproduce CANCrocodile y las balizas Bluetooth seleccionadas en T-11, sin agregar sensores alternativos a la oferta. El criterio se aplica a la interfaz efectivamente seleccionada.
@@ -2828,7 +2828,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** Fixture de conciliación: 350 litros de referencia de ensayo, sin afirmar carga realizada o certificación examinada. En terreno se conserva lectura del instrumento homologado.
 **Resultado Esperado:** Se debe verificar que concilia automáticamente sin descuadres de inventario. Los tiempos, porcentajes y magnitudes observados se registrarán después del ensayo; no se anticipan mediciones ni actas suscritas.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P2 (Crítica)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Alta** (FEP01, Art. 78.1).
 **Entorno:** Terreno / Pista de Combustible San Bernardo.
 
 #### 9.0.17.4 CP-UAT-04 — UAT Instalación de Cliente — escenario sintético Valparaíso — Control de Semirremolques Portacontenedores y Precintos
@@ -2847,7 +2847,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** Contenedor `M\allowbreak{}S\allowbreak{}K\allowbreak{}U\allowbreak{}-\allowbreak{}9\allowbreak{}9\allowbreak{}8\allowbreak{}8\allowbreak{}1\allowbreak{}2\allowbreak{}-\allowbreak{}4\allowbreak{}`, Precinto aduanero `C\allowbreak{}L\allowbreak{}-\allowbreak{}V\allowbreak{}A\allowbreak{}L\allowbreak{}P\allowbreak{}-\allowbreak{}5\allowbreak{}5\allowbreak{}4\allowbreak{}1\allowbreak{}2\allowbreak{}`.
 **Resultado Esperado:** Se debe verificar que el despacho en garita toma \(< 3\text{ minutos}\). Los tiempos, porcentajes y magnitudes observados se registrarán después del ensayo; no se anticipan mediciones ni actas suscritas.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P2 (Crítica)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Alta** (FEP01, Art. 78.1).
 **Entorno:** Terreno / Garita instalación de cliente en Valparaíso.
 
 #### 9.0.17.5 CP-UAT-05 — UAT Instalación de Cliente — escenario sintético Valparaíso — Inspección de Conexión Reefer y Cadena Fría Portuaria
@@ -2867,7 +2867,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** Parámetros de temperatura de pulpa de fruta a \(-0{,}5\text{ }^\circ\text{C}\).
 **Resultado Esperado:** Se debe verificar que mantiene trazabilidad térmica continua en patio. Los tiempos, porcentajes y magnitudes observados se registrarán después del ensayo; no se anticipan mediciones ni actas suscritas.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P1 (Bloqueante)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Crítica** (FEP01, Art. 78.1).
 **Entorno:** Terreno / Patio Reefer instalación de cliente en Valparaíso.
 
 #### 9.0.17.6 CP-UAT-06 — UAT Instalación de Cliente — escenario sintético Valparaíso — Detección Automática de Esperas en Antepuerto (ZEAL)
@@ -2886,7 +2886,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** Camión `L\allowbreak{}K\allowbreak{}J\allowbreak{}H\allowbreak{}-\allowbreak{}8\allowbreak{}9\allowbreak{}` con contenedor en antepuerto ZEAL.
 **Resultado Esperado:** Se debe verificar que detecta la estadía portuaria sin intervención humana. Los tiempos, porcentajes y magnitudes observados se registrarán después del ensayo; no se anticipan mediciones ni actas suscritas.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P2 (Crítica)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Alta** (FEP01, Art. 78.1).
 **Entorno:** Terreno / ZEAL Valparaíso.
 
 #### 9.0.17.7 CP-UAT-07 — UAT Terminal Los Ángeles — Relevos de Tripulación Forestal y Descansos Art. 25 bis
@@ -2906,7 +2906,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** Relevo de chofer forestal en Los Ángeles.
 **Resultado Esperado:** Se debe verificar que gobierna el relevo y protege el descanso del chofer saliente. Los tiempos, porcentajes y magnitudes observados se registrarán después del ensayo; no se anticipan mediciones ni actas suscritas.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P1 (Bloqueante)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Crítica** (FEP01, Art. 78.1).
 **Entorno:** Terreno / Terminal Los Ángeles.
 
 #### 9.0.17.8 CP-UAT-08 — UAT Instalación de Cliente — escenario sintético Concepción — Integración de Órdenes y Control de Pesaje en Báscula
@@ -2925,7 +2925,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** Ticket de báscula digital con peso bruto y distribución por eje.
 **Resultado Esperado:** Con los demás factores conformes, el fixture permite 44.800 y 45.000 kg y bloquea 45.200 kg por superar el umbral sintético; conservar ticket, configuración y motivo. No se afirma que 45.000 kg sea admisible para toda configuración. Los tiempos, porcentajes y magnitudes observados se registrarán después del ensayo; no se anticipan mediciones ni actas suscritas.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P1 (Bloqueante)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Crítica** (FEP01, Art. 78.1).
 **Entorno:** Terreno / Báscula instalación de cliente en Concepción.
 
 #### 9.0.17.9 CP-UAT-09 — UAT Terminal Talca — Despacho en Modo Mixto con Transportistas — escenario sintético
@@ -2945,7 +2945,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** 5 órdenes asignadas a patentes de terceros de Talca.
 **Resultado Esperado:** Se debe verificar que integra a los transportistas externos con Nivel 5 conforme. Los tiempos, porcentajes y magnitudes observados se registrarán después del ensayo; no se anticipan mediciones ni actas suscritas.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P2 (Crítica)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Alta** (FEP01, Art. 78.1).
 **Entorno:** Terreno / Terminal Talca.
 
 **Variante de incorporación de terceros (RF-026):** Además del despacho sobre cinco órdenes sintéticas, completar invitación, condiciones de adhesión, registro de camiones y conductores, consentimiento por propietario y alcance de los permisos. Rechazar la adhesión en una muestra y revocar otra; no debe habilitarse integración ni despacho sin las condiciones obligatorias. Conservar comprobante y auditoría de cada transición.
@@ -2975,7 +2975,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** Carga UN 1689, checklist digital de 14 puntos normativos.
 **Resultado Esperado:** Se debe verificar que el enclavamiento físico y documental opera con tolerancia cero. Los tiempos, porcentajes y magnitudes observados se registrarán después del ensayo; no se anticipan mediciones ni actas suscritas.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P1 (Bloqueante)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Crítica** (FEP01, Art. 78.1).
 **Entorno:** Terreno / Patio SUSPEL Terminal Antofagasta.
 
 #### 9.0.17.11 CP-UAT-11 — UAT Terminal Antofagasta — Resiliencia en Sombra Extrema Ruta 5 Norte (>80 km)
@@ -2995,7 +2995,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** Viaje real en ruta desértica con 85 km sin señal móvil.
 **Resultado Esperado:** Se debe verificar que reconstruye la trayectoria completa sin vacíos de datos. Los tiempos, porcentajes y magnitudes observados se registrarán después del ensayo; no se anticipan mediciones ni actas suscritas.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P1 (Bloqueante)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Crítica** (FEP01, Art. 78.1).
 **Entorno:** Terreno / Ruta 5 Norte (Tramo Antofagasta-Chañaral).
 
 #### 9.0.17.12 CP-UAT-12 — UAT Terminal Antofagasta — Protocolo de Emergencia ante Derrame Químico / Botón SOS
@@ -3015,7 +3015,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** Evento SOS en faena minera sintética en Antofagasta.
 **Resultado Esperado:** Se debe verificar que despliega la ficha de emergencia en \(\le 15\text{ s}\) con datos precisos. Los tiempos, porcentajes y magnitudes observados se registrarán después del ensayo; no se anticipan mediciones ni actas suscritas.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P1 (Bloqueante)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Crítica** (FEP01, Art. 78.1).
 **Entorno:** Terreno / Terminal Antofagasta.
 
 #### 9.0.17.13 CP-UAT-13 — Monitoreo térmico Bluetooth de semirremolque refrigerado
@@ -3036,7 +3036,7 @@ Este ensayo define entradas, controles y evidencia; no declara resultados ejecut
 
 **Datos de Entrada Sintéticos:** Perfil de temperatura y carga de ensayo dentro del rango homologado, sin mercancía real expuesta.
 **Resultado Esperado:** Trazabilidad de identidad, temperatura, fecha y calidad; error y cadencia dentro de los límites aprobados. No se declara funcionamiento a −30 °C ni cobertura térmica inferior al mínimo documentado; cualquier incompatibilidad de aplicación impide aceptación.
-**Pass/Fail y Severidad:** Pass solo si se cumplen todos los criterios y se conserva evidencia reproducible; cualquier pérdida, acceso no autorizado o salida incorrecta implica Fail. Severidad alta para seguridad y evidencia.
+**Pass/Fail y Severidad:** Pass solo si se cumplen todos los criterios y se conserva evidencia reproducible; cualquier pérdida, acceso no autorizado o salida incorrecta implica Fail. Severidad: **Alta** para seguridad y evidencia (FEP01, Art. 78.1).
 **Entorno:** Terminal Puerto Montt / Ruta autorizada y HIL térmico.
 
 #### 9.0.17.14 CP-UAT-14 — UAT Terminal Puerto Montt — Alerta Inmediata de Desviación Térmica (\(\pm 1{,}5\text{ }^\circ\text{C}\))
@@ -3057,7 +3057,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** Apertura física de puertas en patio de pruebas de Puerto Montt.
 **Resultado Esperado:** Se debe verificar que alerta en \(< 60\text{ segundos}\) previniendo la descongelación. Los tiempos, porcentajes y magnitudes observados se registrarán después del ensayo; no se anticipan mediciones ni actas suscritas.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P1 (Bloqueante)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Crítica** (FEP01, Art. 78.1).
 **Entorno:** Terreno / Patio Terminal Puerto Montt.
 
 #### 9.0.17.15 CP-UAT-15 — UAT Terminal Puerto Montt — e-POD y Cierre de Viaje en Planta Procesadora Acuícola
@@ -3078,7 +3078,7 @@ Este ensayo comprueba el comportamiento descrito mediante entradas sintéticas y
 
 **Datos de Entrada Sintéticos:** Cierre de viaje real/simulado en Chinquihue, firma en cristal y dos fotos de control.
 **Resultado Esperado:** Se debe verificar que el e-POD opera en baja señal y sincroniza sin fallos. Los tiempos, porcentajes y magnitudes observados se registrarán después del ensayo; no se anticipan mediciones ni actas suscritas.
-**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **P1 (Bloqueante)**.
+**Pass/Fail y Severidad:** Pass únicamente si se cumplen todas las salidas y límites del Resultado Esperado, las variantes y los criterios contractuales aplicables; cualquier discrepancia es Fail. No se admite una zona sin veredicto entre dos umbrales. Severidad: **Crítica** (FEP01, Art. 78.1).
 **Entorno:** Terreno / Planta Acuícola Chinquihue (Puerto Montt).
 
 \endgroup

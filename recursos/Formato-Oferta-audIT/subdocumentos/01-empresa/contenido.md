@@ -1,6 +1,6 @@
 # Subdocumento 1. Presentación de la empresa
 
-audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. Oferta Técnica, Sobre N.º 2. Oferta Técnica Final. Archivo AUDIT-Subdocumento1.pdf. Anexos: Formulario T-6 en el archivo AUDIT-Formulario-T-6.pdf.
+audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. Oferta Técnica, Sobre N.º 2. Propuesta final. Archivo AUDIT-Subdocumento1.pdf. Anexos: Formulario T-6 en el archivo AUDIT-Formulario-T-6.pdf.
 
 ## 1 Presentación de la empresa
 
@@ -13,7 +13,7 @@ audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. O
 > - Estructura organizacional, dotación de planta de 22 ingenieros y asignación nominada con dedicación de los seis roles habilitantes obligatorios del FEP01, Artículo 34.1, p. 22.
 > - Software de borde audIT EdgeHub sobre iWave G26I: mínimo contractual de 72 h sin cobertura; propuesta ampliada de 288 h y 8 GB, sujeta a verificación.
 > - Red regional de asistencia técnica y soporte en Ruta 5: reemplazo del equipamiento embarcado sólo en terminales y asistencia en ruta diferenciada del recambio físico, con alcance y dependencia temporal declarados en la sección 1.1.4 (Caso, RT-21.16, p. 34).
-> - Plan institucional de certificación formal ISO/IEC 27001:2022 (FEP01, Artículo 34.1, p. 22) y tres proyectos de experiencia previa descritos en el Formulario T-6, dos con disponibilidad mensual ≥ 99,5 % y uno con 99,0% mensual enfocado en resiliencia desconectada de 72 horas.
+> - Plan institucional de certificación formal ISO/IEC 27001:2022 (FEP01, Artículo 34.1, p. 22) y tres proyectos de experiencia previa descritos en el Formulario T-6, dos con disponibilidad mensual $\ge 99{,}5%$ y uno con 99,0% mensual enfocado en resiliencia desconectada de 72 horas.
 
 Los antecedentes declarados se cotejan en el expediente del Sobre N.º 1: balances y dictámenes de auditoría, certificados y antecedentes del proceso de certificación, cartas y actas de experiencia, y convenios de soporte regional. Para cada instrumento se cotejan emisor, fecha, vigencia, alcance, firma y correspondencia con el antecedente declarado.
 
@@ -114,6 +114,8 @@ La estructura funcional de audIT se encuentra dimensionada para asegurar goberna
 ![Figura 1.1. Organigrama institucional y estructura operativa de audIT SpA](../../figuras/01-empresa/figura_1_1_organigrama.png)
 
 *Figura 1.1. Organigrama institucional y estructura operativa de audIT SpA*
+
+Fuente: Elaboración propia.
 
 Fuente: Estructura corporativa declarada por audIT. Dotación total: 22 personas.
 
@@ -226,9 +228,9 @@ audIT declara tres proyectos concluidos dentro de los últimos cinco años con a
 | **Parámetro Clave** | **Proyecto 1: Transporte Interurbano** | **Proyecto 2: Logística en Frío y Faenas** | **Proyecto 3: Distribución Multimodal** | **Exigencia Art. 34° / Curimón** |
 |---|---|---|---|---|
 | Cliente y Giro | Transportes del Sur Ltda. (Carga pesada interurbana) | AgroFrutícola Los Andes S.A. (Logística en frío remota) | Logística Multimodal Bicentenario S.A. (Carga portuaria) | Industria del caso y afines (Transporte y Logística) |
-| Volumetría Operacional | 120 tractocamiones; ≈ 5.500 eventos/día | 6 faenas; 1.500 sensores | ≈ 2,5 TB/mes; > 800 usuarios concurrentes | Comparabilidad funcional y de escala |
+| Volumetría Operacional | 120 tractocamiones; ≈ 5.500 eventos/día | 6 faenas; 1.500 sensores | $≈ 2{,}5 TB/mes; > 800$ usuarios concurrentes | Comparabilidad funcional y de escala |
 | Arquitectura Tecnológica | Híbrida (Borde en cabina + Azure Cloud) | Híbrida (Edge on-premise + Azure Cloud) | Híbrida (Nube Azure + Servidores locales) | Al menos 1 proyecto con arquitectura híbrida |
-| Nivel de Servicio (SLA) | 99,5% mensual de disponibilidad | 99,0% mensual; 72 h tolerancia offline | 99,6% mensual de disponibilidad | Al menos 1 proyecto con SLA ≥ 99,5 % |
+| Nivel de Servicio (SLA) | 99,5% mensual de disponibilidad | 99,0% mensual; 72 h tolerancia offline | 99,6% mensual de disponibilidad | Al menos 1 proyecto con SLA $\ge 99{,}5%$ |
 | Estado y Ejecución | Finalizado; 100% audIT como Principal | Finalizado; 100% audIT como Principal | Finalizado; 100% audIT como Principal | Concluidos y en operación últimos 5 años |
 
 Los porcentajes de la Tabla 1.2 son acuerdos de disponibilidad mensual de proyectos anteriores. El proyecto 2 declara 99,0%; los SLA declarados de los proyectos 1 y 3 cumplen el umbral de experiencia de 99,5% del artículo 34.1. La disponibilidad crítica de Curimón se define en S4 y se verifica conforme a S9.
@@ -275,7 +277,7 @@ La organización interna para el proyecto se estructura en cuatro frentes de tra
 - **Frente de Gestión Contractual y PMO Dedicada:** Liderado por el Jefe de Proyecto e integrado por analistas de la Oficina PMO. Administra la relación contractual directa con la contraparte técnica de Transportes Curimón S.A., gestiona la matriz de riesgos del proyecto, supervisa el cumplimiento de la Carta Gantt y coordina la entrega formal de los hitos de pago asociados a entregables.
 - **Célula Alfa -- Plataforma Cloud, Backend y Capa Anticorrupción:** Conducida por el Arquitecto de Solución y el Líder de Datos. Responsable del núcleo transaccional, la ingestión, los modelos de datos y la integración con plataformas de terceros. Verifica permisos y mecanismos de acceso conforme a SUP-02 y A04 (paquete 2.3), sin presuponer APIs ni intervenir equipos de terceros. El alcance se detalla en S3, S4 y S5.
 - **Célula Beta -- Software Embarcado, Telemetría y Despliegue de Terreno:** Conducida por el Líder de Operación. Adapta audIT EdgeHub, coordina suministro, homologación e instalación en terminal de los equipos y sensores ofertados y articula el soporte regional. La cobertura distingue instalación de equipos e integración de datos autorizada, conforme al inventario y las condiciones de adhesión de S3, S4 y T-11.
-- **Célula Gamma -- Calidad, Ciberseguridad y Verificación Independiente:** Liderada por el Líder de Calidad y el Encargado de Seguridad de la Información. Ejecuta las compuertas de calidad, verifica cobertura de líneas de lógica de negocio ≥ 70 % y ramas ≥ 80 %, ambas bloqueantes, y controla integridad de registros de jornada y cifrado a nivel de campo. S9, T-13 y T-17 desarrollan por separado los criterios de cobertura y los protocolos de integración.
+- **Célula Gamma -- Calidad, Ciberseguridad y Verificación Independiente:** Liderada por el Líder de Calidad y el Encargado de Seguridad de la Información. Ejecuta las compuertas de calidad, verifica cobertura de líneas de lógica de negocio $\ge 70% y ramas \ge 80%$, ambas bloqueantes, y controla integridad de registros de jornada y cifrado a nivel de campo. S9, T-13 y T-17 desarrollan por separado los criterios de cobertura y los protocolos de integración.
 
 La asignación de dedicación, los refuerzos de T-15 y los protocolos de coordinación se someten a nivelación para verificar la cobertura integral de los requerimientos de implantación y operación 24/7 de Transportes Curimón S.A., con disponibilidad de personal y acuerdos de soporte verificados antes de iniciar servicios.
 
@@ -295,7 +297,7 @@ audIT declara la categoría de **Microsoft Cloud Solution Provider (CSP) Tier 1 
 ### 1.6.2 Alianzas de infraestructura, hardware industrial, conectividad y calidad
 
 La solución integra ecosistemas de proveedores líderes para infraestructura on-premise, seguridad de red, telemetría de campo, respaldo satelital y aseguramiento de calidad. El hardware de campo y red especificado en T-11 es adquirido por el mandante, mientras audIT provee el software, la infraestructura on-premise, la integración, la homologación, la conectividad y el soporte:
-- **Infraestructura on-premise y seguridad de red (Dell y Fortinet):** Servidores Dell con soporte y disponibilidad local en Chile para la sala técnica y respaldo de cómputo en terminales, junto con equipamiento de seguridad perimetral y switching Fortinet para sala técnica y los cinco terminales.
+- **Infraestructura on-premise y seguridad de red (Dell, AAEON y Fortinet):** Servidores Dell PowerEdge con soporte y disponibilidad local en Chile para el nodo de continuidad en la sala técnica de San Bernardo y computadores industriales AAEON para el respaldo de cómputo en los cuatro terminales regionales, junto con equipamiento de seguridad perimetral y switching Fortinet en la sala técnica y puntos de acceso Wi-Fi de patio Fortinet en los cinco terminales (conforme al Formulario T-11).
 - **Telemetría a bordo, red de patio y sensores (iWave, Teltonika y Technoton):** Integración y homologación de gateways vehiculares iWave G26I, lectores CAN sin contacto Technoton CANCrocodile y equipamiento de red y balizas Bluetooth Teltonika (incluidas las balizas EYE Sensor BTSMP1 de la innovación 3, alineadas con T-11). Montaje sobre el aislamiento, mapa de señales, rango, precisión y trazabilidad de lectura se verifican en laboratorio y piloto por modelo.
 - **Conectividad satelital de respaldo (Ground Control / Iridium):** Aprovisionamiento de tiempo de aire satelital Iridium para cobertura continua en rutas cordilleranas y zonas sin servicio celular terrestre.
 - **Ingeniería de software y aseguramiento de calidad (GitLab y SonarSource):** Licenciamiento corporativo de GitLab y SonarQube para integración continua, análisis estático de código y compuertas bloqueantes de calidad.

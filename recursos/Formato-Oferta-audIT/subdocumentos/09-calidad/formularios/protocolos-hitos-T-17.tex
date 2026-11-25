@@ -58,11 +58,11 @@ La Contraparte Técnica suscribe el acta que acredita cada hito (\art{18.1}{13})
 \par\noindent\textbf{Entregables EDT Trazados:} 3.1 (ambientes operativos), 3.2 (identidad y seguridad habilitadas) y 3.3 (observabilidad). La certificación de seguridad se presenta en H5.\par
 \par\noindent\textbf{Criterios Objetivos de Aceptación:}
 \begin{enumerate}
-  \item Cinco ambientes cloud desplegados mediante código inmutable (Terraform) en Azure Chile Central y réplica pasiva en Brasil South.
+  \item Cinco ambientes cloud desplegados mediante código inmutable (Terraform) en Azure Chile Central y réplica pasiva en Brazil South.
   \item Quality Gates G1 a G3 configurados en pipeline de compilación, bloqueando código con cobertura de líneas $< 70\%$ o ramas $< 80\%$.
   \item Paneles de observabilidad operativos con emisión de alertas en tiempo real hacia consola Torre 24x7.
 \end{enumerate}
-\par\noindent\textbf{Pruebas y Verificación de Calidad:} Casos de prueba automatizados registro de compilación y despliegue automatizado y análisis estático SAST sin vulnerabilidades críticas abiertas.\par
+\par\noindent\textbf{Pruebas y Verificación de Calidad:} Pruebas automatizadas de infraestructura como código, registro de compilación y despliegue automatizado, y análisis estático SAST sin vulnerabilidades críticas ni altas abiertas.\par
 \par\noindent\textbf{Expediente de Conformidad:} Reporte de infraestructura como código (IaC), bitácora de ejecución de pipelines y comprobante de disponibilidad de ambientes.\par
 \par\noindent\textbf{Roles Responsables:} Entrega: Líder de Operación / SRE y Líder de Calidad (audIT). Aprobación: Administrador Cloud y Contraparte Técnica (Curimón).\par
 \par\noindent\textbf{Efecto Económico Contractual:} Habilita la facturación del 10\,\% del valor total de la fase de implementación, conforme al Formulario E-25 (Etapa 1 acumulada: 25\,\%).\par
@@ -96,7 +96,7 @@ La Contraparte Técnica suscribe el acta que acredita cada hito (\art{18.1}{13})
 \begin{enumerate}
   \item \textbf{Rendimiento transaccional:} Asignación en $P_{95} \le 30$\,s (\texttt{CP-PERF-04}). Para el DET, se verifica disponibilidad en cabina antes de mover la carga y el umbral de 90\,s bajo el perfil del ensayo \texttt{CP-PERF-05}.
   \item \textbf{Continuidad y Recuperación ante Desastres:} Recuperación integral ante caída del centro principal con RTO $\le 4\text{ h}$ y RPO $\le 15\text{ min}$ (\texttt{CP-PERF-03}).
-  \item \textbf{Persistencia y Enlace en Terreno:} Autonomía a bordo $\ge 72\text{ h}$ sin cobertura y sincronización completa al reconectar en $< 20\text{ min}$ (\texttt{CP-HW-03}); latencia SOS contractual $\le 15\text{ s}$ en red celular real (\texttt{CP-HW-06}) y $P_{99} \le 15{,}0\text{ s}$ bajo red degradada (\texttt{CP-PERF-06}); estanqueidad IP67 certificada (\texttt{CP-HW-08}).
+  \item \textbf{Persistencia y Enlace en Terreno:} Autonomía a bordo $\ge 72\text{ h}$ sin cobertura y sincronización completa al reconectar en $\le 20\text{ min}$ (\texttt{CP-HW-03}); latencia SOS contractual $\le 15\text{ s}$ en red celular real (\texttt{CP-HW-06}) y $P_{99} \le 15{,}0\text{ s}$ bajo red degradada (\texttt{CP-PERF-06}); estanqueidad IP67 certificada (\texttt{CP-HW-08}).
   \item \textbf{Aceptación de Usuario (UAT):} 100\% de los casos UAT de Etapa 1 (\texttt{CP-UAT-01} a \texttt{CP-UAT-08}) ejecutados conforme por despachadores y personal designado de Curimón.
   \item Cero defectos de severidad Crítica o Alta pendientes (FEP01, Art. 78.1); cualquier defecto residual clasificado como Media o Baja con plan de subsanación acordado para marcha blanca.
 \end{enumerate}

@@ -451,6 +451,38 @@
           "subdocumentos/13-innovaciones"
         ]
       ]
+    },
+    {
+      "clave": "01A",
+      "nombre": "AUDIT-Subdocumento1-Anexos.pdf",
+      "folio_inicial": 1,
+      "paginas": 7,
+      "aux": "salida/aux/final/01A/AUDIT-Subdocumento1-Anexos.aux",
+      "log": "salida/aux/final/01A/AUDIT-Subdocumento1-Anexos.log",
+      "fuentes": [
+        [
+          "subdocumentos"
+        ],
+        [
+          "subdocumentos/01-empresa"
+        ]
+      ]
+    },
+    {
+      "clave": "02A",
+      "nombre": "AUDIT-Subdocumento2-Anexos.pdf",
+      "folio_inicial": 1,
+      "paginas": 28,
+      "aux": "salida/aux/final/02A/AUDIT-Subdocumento2-Anexos.aux",
+      "log": "salida/aux/final/02A/AUDIT-Subdocumento2-Anexos.log",
+      "fuentes": [
+        [
+          "subdocumentos"
+        ],
+        [
+          "subdocumentos/02-problema"
+        ]
+      ]
     }
   ]
 }

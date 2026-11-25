@@ -192,7 +192,7 @@ Los talleres propios están en San Bernardo y Los Ángeles. El paso medio por te
 
 Los recintos de clientes son infraestructura ajena, sin equipos fijos de la oferta. Las esperas de 3 h 10 min a más de ocho horas y el 71% de sobreestadías objetadas requieren evidencia atribuible de permanencia para resolver los cobros en disputa.
 
-El análisis de la Tabla 2.2 expone que la sala de servidores ubicada en el Terminal San Bernardo (26 m², climatización por split doméstico, una UPS con 20 minutos de autonomía y condiciones de respaldo energético que deben verificarse) incumple formalmente los requerimientos de infraestructura física estipulados en las Bases Técnicas Transversales (Caso, RT-06.01, p. 32 a FEP02, RT-06.09, p. 15). Para utilizar infraestructura local en la operación de misión crítica se deberá remediar o reemplazar la sala.
+El análisis de la Tabla 2.2 expone que la sala de servidores ubicada en el Terminal San Bernardo (26 m², climatización por split doméstico, una UPS con 20 minutos de autonomía y condiciones de respaldo energético que deben verificarse) incumple formalmente los requerimientos de infraestructura física estipulados en las Bases Técnicas Transversales (FEP02, RT-06.01, p. 14 a FEP02, RT-06.09, p. 15; Caso, RT-06.01, p. 32). Para utilizar infraestructura local en la operación de misión crítica se deberá remediar o reemplazar la sala.
 
 Los tramos con más de 80 kilómetros sin cobertura en la Ruta 5 Norte impiden asumir conectividad permanente. Los cierres del Paso Los Libertadores, de hasta doce días, exigen continuidad de registro y reprogramación. Frente a pérdidas de señal, el caso exige conservar la información operacional y sincronizarla al recuperar cobertura.
 
