@@ -1,0 +1,70 @@
+
+Verificación de d2-cierre-final
+------------------------------------------------------------------------------
+CUMPLE     1    Papel carta y vertical, salvo anexos gráficos declarados
+                33 páginas horizontales, todas anexos gráficos declarados
+CUMPLE     2    Folio en todas las páginas, extremo inferior derecho tal como se ve, correlativo
+                197 páginas revisadas en 6 archivo(s), medidas como se ven en pantalla
+CUMPLE     3    Folio por subdocumento: cada archivo empieza en 1
+CUMPLE     4    Media firma y folio separados entre sí, del texto y de los diagramas
+                197 páginas con media firma y folio
+CUMPLE     5    Cuerpo 11 pt o más, tablas y leyendas 9 pt o más (medido en el PDF)
+                cuerpo (IBM Plex Serif): mínimo 11.00 pt
+                tablas, leyendas, títulos, encabezado y pie (Plex Sans y Mono): mínimo 9.00 pt
+CUMPLE     7    Fuentes incrustadas y texto seleccionable y buscable (tildes, ligaduras)
+                todas las fuentes incrustadas, «Técnica», «Ficha» y «Folio» se encuentran en el texto
+CUMPLE     6    Texto dentro de las figuras 9 pt o más
+                01-arbol.pdf (horizontal, folio 18): letra mínima de origen 11.50 pt, escala 0.87, efectiva 9.99 pt
+                02-paquetes-1.pdf (horizontal, folio 19): letra mínima de origen 11.50 pt, escala 0.87, efectiva 9.99 pt
+                03-paquetes-2.pdf (horizontal, folio 20): letra mínima de origen 11.50 pt, escala 0.87, efectiva 9.99 pt
+                04-paquetes-3.pdf (horizontal, folio 21): letra mínima de origen 11.50 pt, escala 0.87, efectiva 9.99 pt
+                05-paquetes-4.pdf (horizontal, folio 22): letra mínima de origen 11.50 pt, escala 0.87, efectiva 9.99 pt
+                06-paquetes-5.pdf (horizontal, folio 23): letra mínima de origen 11.50 pt, escala 0.87, efectiva 9.99 pt
+                07-ejemplo.pdf (horizontal, folio 24): letra mínima de origen 11.50 pt, escala 0.87, efectiva 9.99 pt
+                08-trazabilidad.pdf (horizontal, folio 25): letra mínima de origen 11.50 pt, escala 0.87, efectiva 9.99 pt
+                ... y 58 más (ver el informe .md)
+CUMPLE     8    Sin cajas desbordadas ni referencias sin resolver
+AVISO      9    Cada figura y cada tabla se cita desde el texto
+                tablas de formulario sin cita desde el texto (aviso): tab:T-14, tab:T-18, tab:t12
+CUMPLE     10   Ningún título va seguido directamente de una tabla o una figura
+                17 archivos de contenido revisados
+CUMPLE     11   Sin residuos: Escuela, dupla, nombres, Proyecto Semestral, meses en inglés, horas hombre, cifras en dinero (Artículo 50.2)
+                35 fuentes y 197 páginas revisadas
+CUMPLE     21   Ninguna tabla ni título se llama «Formulario T-NN» sin ser el formulario
+                las tablas y títulos que nombran un formulario son los de formularios/
+NO APLICA  12   Hoja resumen coincide con la foliación
+                no hay hoja resumen
+CUMPLE     17   Cada subdocumento empieza en página nueva, arriba
+                todas las aperturas en la parte superior de página nueva
+CUMPLE     18   Ningún título queda en las cinco últimas líneas de la página
+                ningún título al pie
+CUMPLE     19   Ninguna tabla deja su cabecera o su leyenda sola al pie
+                todas las tablas empiezan con filas en su primera página
+CUMPLE     20   El encabezado nombra el subdocumento al que pertenece cada página
+                183 encabezados comparados con los folios de inicio del .aux
+CUMPLE     13   Nombres de archivo conforme a los Artículos 49 a 51 y al Comunicado 10
+                AUDIT-Subdocumento3.pdf
+                AUDIT-Formulario-T-12.pdf
+                AUDIT-Subdocumento7.pdf
+                AUDIT-Formulario-T-14.pdf
+                AUDIT-Formulario-T-15.pdf
+                AUDIT-Formulario-T-18.pdf
+CUMPLE     14   Colores de texto legibles (contraste 4,5:1 o más)
+                audit-marino sobre blanco 14.66:1
+                audit-tinta sobre blanco 15.65:1
+                audit-secundario sobre blanco 5.83:1
+                audit-turquesa sobre blanco 2.43:1, solo para filetes y nodos, nunca texto chico
+AVISO      15   Reglas de escritura: sin punto y coma, raya ni guion doble (aviso)
+                subdocumentos\03-solucion\contenido.tex: 104 punto y coma
+                subdocumentos\03-solucion\contenido.tex: 33 guion doble
+                subdocumentos\03-solucion\formularios\T-12.tex: 11 punto y coma
+                subdocumentos\03-solucion\formularios\cumplimiento-bases.tex: 32 punto y coma
+                subdocumentos\03-solucion\formularios\cumplimiento-bases.tex: 38 raya
+                subdocumentos\07-plan-trabajo\contenido.tex: 32 punto y coma
+                subdocumentos\07-plan-trabajo\contenido.tex: 19 guion doble
+                subdocumentos\07-plan-trabajo\formularios\T-14.tex: 69 punto y coma
+                ... y 9 más (ver el informe .md)
+CUMPLE     16   Marcadores por completar
+------------------------------------------------------------------------------
+21 puntos, 0 no cumplen, 2 avisos
+REGLAS_NO_CUMPLIDAS 0

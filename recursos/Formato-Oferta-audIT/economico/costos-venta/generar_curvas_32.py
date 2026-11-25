@@ -15,7 +15,7 @@ GRID = HexColor('#D7E2E7')
 
 
 def render(rows, filename, title, series):
-    chart = Canvas(str(HERE / filename), pagesize=(420, 219))
+    chart = Canvas(str(HERE / filename), pagesize=(420, 219), initialFontName='Arial')
     chart.setTitle(title)
     chart.setFillColor(NAVY)
     chart.setFont('Arial', 14)

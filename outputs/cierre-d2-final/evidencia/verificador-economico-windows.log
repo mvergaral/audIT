@@ -1,0 +1,71 @@
+
+Verificación de final-economica
+------------------------------------------------------------------------------
+CUMPLE     1    Papel carta y vertical, salvo anexos gráficos declarados
+CUMPLE     2    Folio en todas las páginas, extremo inferior derecho tal como se ve, correlativo
+                33 páginas revisadas en 2 archivo(s), medidas como se ven en pantalla
+CUMPLE     3    Folio continuo entre archivos
+                AUDIT_OfertaEconomica_1_20261125.pdf termina en 14, AUDIT_AnalisisFinanciero_2_20261125.pdf empieza en 15
+CUMPLE     4    Media firma y folio separados entre sí, del texto y de los diagramas
+                33 páginas con media firma y folio
+CUMPLE     5    Cuerpo 11 pt o más, tablas y leyendas 9 pt o más (medido en el PDF)
+                cuerpo (IBM Plex Serif): mínimo 11.00 pt
+                tablas, leyendas, títulos, encabezado y pie (Plex Sans y Mono): mínimo 9.00 pt
+CUMPLE     7    Fuentes incrustadas y texto seleccionable y buscable (tildes, ligaduras)
+                todas las fuentes incrustadas, «Técnica», «Ficha» y «Folio» se encuentran en el texto
+CUMPLE     6    Texto dentro de las figuras 9 pt o más
+                curva-s.pdf (vertical, folio 24): letra mínima de origen 10.00 pt, escala 1.00, efectiva 10.05 pt
+                solvencia-3.2.pdf (vertical, folio 24): letra mínima de origen 10.00 pt, escala 1.00, efectiva 10.05 pt
+                  control en el PDF, AUDIT_AnalisisFinanciero_2_20261125.pdf folio 24: texto de figura entre 10.05 y 14.07 pt
+CUMPLE     8    Sin cajas desbordadas ni referencias sin resolver
+CUMPLE     9    Cada figura y cada tabla se cita desde el texto
+                18 figuras y tablas, todas citadas
+CUMPLE     10   Ningún título va seguido directamente de una tabla o una figura
+                7 archivos de contenido revisados
+CUMPLE     11   Sin residuos: Escuela, dupla, nombres, Proyecto Semestral, meses en inglés (documento económico: el Artículo 50.2 no se aplica)
+                29 fuentes y 33 páginas revisadas
+CUMPLE     21   Ninguna tabla ni título se llama «Formulario T-NN» sin ser el formulario
+                las tablas y títulos que nombran un formulario son los de formularios/
+CUMPLE     12   Hoja resumen: cada sección empieza en el folio que declara
+                22 entradas comprobadas contra el PDF
+CUMPLE     17   Cada subdocumento empieza en página nueva, arriba
+                todas las aperturas en la parte superior de página nueva
+CUMPLE     18   Ningún título queda en las cinco últimas líneas de la página
+                ningún título al pie
+CUMPLE     19   Ninguna tabla deja su cabecera o su leyenda sola al pie
+                todas las tablas empiezan con filas en su primera página
+CUMPLE     20   El encabezado nombra el subdocumento al que pertenece cada página
+                27 encabezados comparados con los folios de inicio del .aux
+CUMPLE     13   Nombres de archivo conforme al Formulario E-21 y al Artículo 51.3
+                AUDIT_OfertaEconomica_1_20261125.pdf
+                AUDIT_OfertaEconomica_1_20261125.docx
+                AUDIT_AnalisisFinanciero_2_20261125.pdf
+                AUDIT_AnalisisFinanciero_2_20261125.docx
+                AUDIT_ModeloFinanciero_3_20261125.xlsx
+                SOBRE3_AUDIT_OFERTA_ECONOMICA_20261125.ZIP
+CUMPLE     22   Montos en CLP, UF y USD con el tipo de cambio del Formulario E-24
+                142 montos en CLP, UF y USD recalculados con 1 USD = CLP 900 y 1 UF = CLP 40.000 (Formulario E-24)
+                ninguna cifra en dinero escrita a mano
+CUMPLE     23   Valores netos, IVA desglosado y total general (Artículo 51.2)
+                37 partidas y totales con neto, IVA y total comprobados
+CUMPLE     24   Valores idénticos en los PDF, los DOCX y la planilla (Formulario E-21)
+                AUDIT_OfertaEconomica_1_20261125.docx: abre y trae las mismas 18 cifras en moneda y 58 valores de tabla que el PDF
+                AUDIT_AnalisisFinanciero_2_20261125.docx: abre y trae las mismas 87 cifras en moneda y 133 valores de tabla que el PDF
+                37 celdas de la planilla comparadas con partidas.csv
+                97 cifras de partidas iguales en todos los documentos
+CUMPLE     14   Colores de texto legibles (contraste 4,5:1 o más)
+                audit-marino sobre blanco 14.66:1
+                audit-tinta sobre blanco 15.65:1
+                audit-secundario sobre blanco 5.83:1
+                audit-turquesa sobre blanco 2.43:1, solo para filetes y nodos, nunca texto chico
+AVISO      15   Reglas de escritura: sin punto y coma, raya ni guion doble (aviso)
+                anexos\observaciones-informe3.tex: 48 punto y coma
+                anexos\observaciones-informe3.tex: 56 guion doble
+                economico\analisis-financiero\contenido.tex: 24 punto y coma
+                economico\analisis-financiero\contenido.tex: 10 guion doble
+                economico\oferta-economica\contenido.tex: 4 punto y coma
+                economico\oferta-economica\contenido.tex: 1 guion doble
+CUMPLE     16   Marcadores por completar
+------------------------------------------------------------------------------
+24 puntos, 0 no cumplen, 1 avisos
+REGLAS_NO_CUMPLIDAS 0

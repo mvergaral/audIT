@@ -1,0 +1,12 @@
+{
+  "metodo": "Raíces del polinomio de Fila A M0-M56; candidatos reales q>0 y verificación de residuo relativo",
+  "raices_verificadas": [
+    {
+      "tir_mensual": 0.7919053275646835,
+      "npv_residual_relativo": 9.42816389739456e-16,
+      "npv_residual_clp": 2.1199138080194762e-07
+    }
+  ],
+  "tir_planilla": 0.791905327564698,
+  "limite": "Comprobación numérica del caso base, no de todos los escenarios ni garantía de interpretación financiera."
+}

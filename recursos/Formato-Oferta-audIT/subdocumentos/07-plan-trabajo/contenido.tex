@@ -16,7 +16,7 @@ no controla audIT: el paso de cada camión por un terminal, la firma de 148 tran
 temporada de fruta, que con el inicio en febrero de 2027 cae en los meses 1 a 3, 11 a 15 y 23 a 27.
 \begin{recibe}
   \item Una EDT de 13 elementos y 54 paquetes de trabajo que cubre el 100 \% del alcance, con su diccionario en el Formulario T-14.
-  \item La ruta crítica calculada con PERT y CPM y una carta Gantt de 56 meses con los doce hitos del Formulario E-25.
+  \item La ruta crítica determinista calculada con CPM, las condiciones para el análisis PERT y una carta Gantt de 56 meses con los doce hitos del Formulario E-25.
   \item La capacidad interna mes a mes, con un máximo de 39,2306 FTE equivalentes en M7, el servicio externo y el esfuerzo por paquete en el Formulario T-15.
   \item El plan de implantación por proceso y por terminal, la cobertura a bordo mes a mes y los umbrales de cierre de cada marcha blanca.
 \end{recibe}
@@ -293,7 +293,7 @@ La red incorpora los lotes M6--M9, el escalamiento lógico M13--M15 sin interven
 el estudio EDT2.5 entregado durante M6, la migración histórica y la estabilización E2 hasta M24.
 Cada relación declara FS o SS y su desfase. Se calculan ES, EF, LS, LF, HT y HL con cotas
 propias de liberación y límite; la criticidad se interpreta contra esas fechas. La secuencia de
-control que fija la aceptación H12 recorre A01--A02--R-H1--H1--A05--INN5-D--INN5-C--INN5-Q--R-H6--H6--A17--R-H8--H8--A20-1 a A20-5--A22-SIS--R-H10--H10--A23--H11--A24--A25--R-H12--H12. Sus
+control que fija la aceptación H12 recorre A01, A02, R-H1, H1, A05, INN5-D, INN5-C, INN5-Q, R-H6, H6, A17, R-H8, H8, los sprints A20-1 a A20-5, A22-SIS, R-H10, H10, A23, H11, A24, A25, R-H12 y H12. Sus
 enlaces sin margen gobiernan las transiciones H6, H11 y H12 y se distinguen de las restricciones
 locales de lote (M7/8/9-KIT) y de las ventanas de revisión de contraparte. H6 queda condicionado
 por la certificación de la innovación circadiana INN5-Q y por la reserva A14; H11 por la reserva
@@ -309,6 +309,17 @@ Las fechas civiles son una visualización de SA-01; al fijar el inicio contractu
 contra temporada de fruta, cierres y relevos sin desplazar los hitos del E-25.
 
 \input{subdocumentos/07-plan-trabajo/graficos/conciliacion-3.2/hitos-resumen.tex}
+
+H4, H7 y H12 no tienen margen al límite contractual. H11 tiene fecha fija al inicio de M19:
+su margen se controla en la reserva A23 y no adelantando el acta. En particular, la marcha blanca
+E2 ocupa los días 360 a 400, el corte A25 los días 400 a 410 y la revisión R-H12 los días 410 a 420.
+Esta secuencia consume el plazo hasta H12. La contratación mensual de T-15 no acredita por sí
+sola capacidad neta para acortar actividades ni disponibilidad simultánea por turno.
+Antes de fijar la línea base en H1, el Jefe de Proyecto y los ejecutores deben validar capacidad,
+ventanas de terceros y estimaciones de tres puntos. Cualquier adelanto o solapamiento debe
+conservar los criterios de aceptación y demostrar su efecto en recursos, pruebas y costo.
+Hasta esa validación se mantiene la exposición alta de R-17 de S8/T-16, sin declarar recuperada
+una holgura ni una probabilidad de cumplimiento que la red actual no respalda.
 
 Las reservas A14 y A23 son ventanas de contingencia de planificación y no una probabilidad
 calculada de cumplimiento. Si se reciben observaciones se evalúa la subsanación y se registra

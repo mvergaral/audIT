@@ -1,0 +1,42 @@
+[
+  {
+    "paso": "S07-pasada-1",
+    "exit": 0
+  },
+  {
+    "paso": "S07-biber",
+    "exit": 0
+  },
+  {
+    "paso": "S07-pasada-2",
+    "exit": 0
+  },
+  {
+    "paso": "S07-pasada-3",
+    "exit": 0
+  },
+  {
+    "paso": "T14-pasada-1",
+    "exit": 0
+  },
+  {
+    "paso": "T14-biber",
+    "exit": 0
+  },
+  {
+    "paso": "T15-pasada-1",
+    "exit": 0
+  },
+  {
+    "paso": "T15-biber",
+    "exit": 0
+  },
+  {
+    "paso": "T18-pasada-1",
+    "exit": 0
+  },
+  {
+    "paso": "T18-biber",
+    "exit": 0
+  }
+]

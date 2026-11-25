@@ -1,0 +1,50 @@
+{
+  "grupo": "final-economica",
+  "instancia": "final",
+  "tipo": "economico",
+  "modo_folio": "continuo",
+  "archivos": [
+    {
+      "clave": "oferta",
+      "nombre": "AUDIT_OfertaEconomica_1_20261125.pdf",
+      "folio_inicial": 1,
+      "paginas": 14,
+      "aux": "salida\\aux\\final-economica\\oferta\\AUDIT_OfertaEconomica_1_20261125.aux",
+      "log": "salida\\aux\\final-economica\\oferta\\AUDIT_OfertaEconomica_1_20261125.log",
+      "eco": "salida\\aux\\final-economica\\oferta\\AUDIT_OfertaEconomica_1_20261125.eco.json",
+      "docx": "AUDIT_OfertaEconomica_1_20261125.docx",
+      "fuentes": [
+        [
+          "economico"
+        ],
+        [
+          "economico",
+          "documento-economico.tex",
+          "anexos"
+        ]
+      ]
+    },
+    {
+      "clave": "analisis",
+      "nombre": "AUDIT_AnalisisFinanciero_2_20261125.pdf",
+      "folio_inicial": 15,
+      "paginas": 19,
+      "aux": "salida\\aux\\final-economica\\analisis\\AUDIT_AnalisisFinanciero_2_20261125.aux",
+      "log": "salida\\aux\\final-economica\\analisis\\AUDIT_AnalisisFinanciero_2_20261125.log",
+      "eco": "salida\\aux\\final-economica\\analisis\\AUDIT_AnalisisFinanciero_2_20261125.eco.json",
+      "docx": "AUDIT_AnalisisFinanciero_2_20261125.docx",
+      "fuentes": [
+        [
+          "economico"
+        ],
+        [
+          "economico",
+          "documento-economico.tex",
+          "anexos"
+        ]
+      ]
+    }
+  ],
+  "planilla": "AUDIT_ModeloFinanciero_3_20261125.xlsx",
+  "zip": "SOBRE3_AUDIT_OFERTA_ECONOMICA_20261125.ZIP"
+}

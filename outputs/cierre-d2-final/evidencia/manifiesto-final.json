@@ -1,0 +1,619 @@
+[
+  {
+    "paquete": "D2_PARA_REVISION_20261125.zip",
+    "bytes": 8594902,
+    "sha256": "43e84ed8be29112795172254e62a0a40e11b2484d01c12688dc9936330646c06",
+    "crc": "OK",
+    "extraccion": "OK",
+    "archivos": [
+      {
+        "nombre": "tecnico/AUDIT-Subdocumento3.pdf",
+        "sha256": "2435869ed79fcbd4fd33ec157ae3264d2b2c5344e07b8a246d5c05fd35ea6143",
+        "bytes": 912972
+      },
+      {
+        "nombre": "tecnico/AUDIT-Formulario-T-12.pdf",
+        "sha256": "12eb1c94e51a9eae17b08580b57fb3bbb0c183ff4649295931f94c896abb7948",
+        "bytes": 1199597
+      },
+      {
+        "nombre": "tecnico/AUDIT-Subdocumento7.pdf",
+        "sha256": "74086f9492915718f9dc43daead18232fae70922e2e88aef731831ef00427372",
+        "bytes": 1580218
+      },
+      {
+        "nombre": "tecnico/AUDIT-Formulario-T-14.pdf",
+        "sha256": "dab84c1413f6ead44c52e794fca20ecaa2d578a49ca63dc6e399dba49e40c95d",
+        "bytes": 1179152
+      },
+      {
+        "nombre": "tecnico/AUDIT-Formulario-T-15.pdf",
+        "sha256": "907c44fb8c633fdf9410a559252892b6fde0b373e707a8f0281882dbdff42ae4",
+        "bytes": 788123
+      },
+      {
+        "nombre": "tecnico/AUDIT-Formulario-T-18.pdf",
+        "sha256": "d9608c17526079dc3696e8eeff6643349b3bd5ca8099e1c6dcebec7651eaecbd",
+        "bytes": 742400
+      },
+      {
+        "nombre": "economico/AUDIT_OfertaEconomica_1_20261125.pdf",
+        "sha256": "49c64fff07cb754663c0ecd1bc078eb1c21a8198d6a9327ff51e26c64d8cd417",
+        "bytes": 1009273
+      },
+      {
+        "nombre": "economico/AUDIT_OfertaEconomica_1_20261125.docx",
+        "sha256": "7aa52fcc9eb12ed27a8a67ec2964588b7285561eab94cb442fa8cc7135b1d264",
+        "bytes": 11011
+      },
+      {
+        "nombre": "economico/AUDIT_AnalisisFinanciero_2_20261125.pdf",
+        "sha256": "6126ffab56cf83ae511fd927f4f1bc23bcbd0f7326830cd3655075805353cb40",
+        "bytes": 1117939
+      },
+      {
+        "nombre": "economico/AUDIT_AnalisisFinanciero_2_20261125.docx",
+        "sha256": "cec8fe7828912e47826a1a9e5f51c3f8c08199d082d5544f70081eee97a52ad4",
+        "bytes": 89936
+      },
+      {
+        "nombre": "economico/AUDIT_ModeloFinanciero_3_20261125.xlsx",
+        "sha256": "176e403c108029bdfa7d33595cd88f38c2a0e2804c5103f51b70f9d62ff02eb6",
+        "bytes": 744858
+      }
+    ]
+  },
+  {
+    "paquete": "SOBRE3_AUDIT_OFERTA_ECONOMICA_20261125.ZIP",
+    "bytes": 2707551,
+    "sha256": "464ee9cce7176f0a72dbf1765abd211daefbfceaae17afc0accca52b0415a9fe",
+    "crc": "OK",
+    "extraccion": "OK",
+    "archivos": [
+      {
+        "nombre": "AUDIT_OfertaEconomica_1_20261125.pdf",
+        "sha256": "49c64fff07cb754663c0ecd1bc078eb1c21a8198d6a9327ff51e26c64d8cd417",
+        "bytes": 1009273
+      },
+      {
+        "nombre": "AUDIT_OfertaEconomica_1_20261125.docx",
+        "sha256": "7aa52fcc9eb12ed27a8a67ec2964588b7285561eab94cb442fa8cc7135b1d264",
+        "bytes": 11011
+      },
+      {
+        "nombre": "AUDIT_AnalisisFinanciero_2_20261125.pdf",
+        "sha256": "6126ffab56cf83ae511fd927f4f1bc23bcbd0f7326830cd3655075805353cb40",
+        "bytes": 1117939
+      },
+      {
+        "nombre": "AUDIT_AnalisisFinanciero_2_20261125.docx",
+        "sha256": "cec8fe7828912e47826a1a9e5f51c3f8c08199d082d5544f70081eee97a52ad4",
+        "bytes": 89936
+      },
+      {
+        "nombre": "AUDIT_ModeloFinanciero_3_20261125.xlsx",
+        "sha256": "176e403c108029bdfa7d33595cd88f38c2a0e2804c5103f51b70f9d62ff02eb6",
+        "bytes": 744858
+      }
+    ]
+  },
+  {
+    "paquete": "D2_FUENTES_PARA_INTEGRACION_20261125.zip",
+    "bytes": 5692945,
+    "sha256": "f0dc0b89469810460d43e2e3720df4a9696742cebdafc25758089a00c4c821de",
+    "crc": "OK",
+    "extraccion": "OK",
+    "archivos": [
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/subdocumentos/03-solucion/compilar_final.py",
+        "sha256": "ede4c7507962d9056745928e5c9907308b31191c06bb748f4fd734deb6d464c6",
+        "bytes": 5411
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/subdocumentos/03-solucion/contenido.tex",
+        "sha256": "8d461bf37ddbc387bcb3b2350f28202d3ee93bb7ebe6fd239a9388df58eed401",
+        "bytes": 85218
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/subdocumentos/03-solucion/declaracion-ia.tex",
+        "sha256": "3b110247564d6c71c6b9635aaa5fd8d17c1ad341f40ec71e371e1f6469b5212f",
+        "bytes": 386
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/subdocumentos/03-solucion/meta.tex",
+        "sha256": "eb4d0acb77579bb83574db790060605c1d51bdf55f5f0aba936329667dd8abdd",
+        "bytes": 315
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/subdocumentos/03-solucion/formularios/cumplimiento-bases.tex",
+        "sha256": "3eb6e2751344cb3a1ea20328461a394ceec1664f41ba06da2dd7f42be5c9292d",
+        "bytes": 180147
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/subdocumentos/03-solucion/formularios/T-12.md",
+        "sha256": "d025425d3f0e813bdb06004332d55ca47e90ab005dbfba2bdf2f552671b5c659",
+        "bytes": 212146
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/subdocumentos/03-solucion/formularios/T-12.tex",
+        "sha256": "723f8b0454ddab509409206ebd9a885a420fed1c684ba4bcf811f504fbcfb6c2",
+        "bytes": 52050
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/subdocumentos/03-solucion/formularios/trazabilidad-secciones.json",
+        "sha256": "162586425fe641b3c4e8f5e875dba8adc6e15b5f8a10ee30496fe0c7c15fe4aa",
+        "bytes": 3374
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/subdocumentos/03-solucion/formularios/trazabilidad-secciones.tex",
+        "sha256": "b8e7d3bddb8ef27956a975221bb711c95ef8840de2d9ac0282ea6ea9543d52a2",
+        "bytes": 1255
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/.gitattributes",
+        "sha256": "fdfa7b607b52326cb536a984c43634aaa9afd5fb2c3df583c525f68615a80fad",
+        "bytes": 14
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/ARCHIVOS-VIGENTES.md",
+        "sha256": "458d03b8012acd6642d885b6e8662908f34eb59b2cf7766d8ad9cc9f2b93a5ee",
+        "bytes": 1259
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/contenido.tex",
+        "sha256": "6579d70ef08867048792bcd375efc3c33f72846df2acb87d124ae54b86db1c55",
+        "bytes": 38845
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/declaracion-ia.tex",
+        "sha256": "c2cb815baf735658e53be988dcdb96cdea6dadd27dd6a94d0be6907c54b9b165",
+        "bytes": 381
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/meta.tex",
+        "sha256": "1afa26c224322d3c93be585e31738c01e886e9a0e8d1534599b302d682abe134",
+        "bytes": 259
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/PENDIENTES-ENTREGA-FINAL.md",
+        "sha256": "458d03b8012acd6642d885b6e8662908f34eb59b2cf7766d8ad9cc9f2b93a5ee",
+        "bytes": 1259
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/REGISTRO-PARA-A6.md",
+        "sha256": "a0e1bc73e16dc8af2fe189ef160fca8820875e3f1f0dcda5aeaa7d1d5de9f088",
+        "bytes": 909
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/REVISION-EDT.md",
+        "sha256": "281f7f8db49e7b8a7b1115a5cbffb997fafd89093a4dd0dfe566dcf80228ab13",
+        "bytes": 2141
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/REVISION-GANTT.md",
+        "sha256": "5de8e4bd083f66628413b2c68e09b46dadf9be656f3165995ffae1770c460753",
+        "bytes": 5876
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/formularios/T-14.tex",
+        "sha256": "566da21c85d5ede72adfa2eaf45843acec656e7252b4d080eb8e4229d6b9517d",
+        "bytes": 13259
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/formularios/T-15.tex",
+        "sha256": "ff2aaf933064c932bdf63dfdc5f68a6c39bb1fedd689d1c33f2536627df579b4",
+        "bytes": 2192
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/formularios/T-18.tex",
+        "sha256": "0c7cfe65b7aacc2c6336301be7102e566a39626a2119ec9a4e04a19d755a9f94",
+        "bytes": 8603
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/formularios/trazabilidad-aceptacion.tex",
+        "sha256": "958706dfecf5380df4da2bab3bc659ffb12adf10e536483753e854ca7aedf4b1",
+        "bytes": 2716
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/.gitignore",
+        "sha256": "ae8c32053a7f999136f82884ec2b2355eaf1784ae0a4bc4a701746cb1b8241a9",
+        "bytes": 185
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/ajustes-paquetes.json",
+        "sha256": "e7f18acd92ab0d02445726d5d31cadb8f93c0035b32bcc4f52c9706b16a5d8b7",
+        "bytes": 2639
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/compilar_formularios_final.py",
+        "sha256": "d6c2ffbbfc194d9b938dd656b4d648ffc099a3f6794a4ea77ac50525039c1ae2",
+        "bytes": 3477
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/compilar_revision.py",
+        "sha256": "bdd5159e1d0b75e0cf3a200da10d3b829c9e256e62b654797ca5672225b7d5f8",
+        "bytes": 4698
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/conciliar_32.py",
+        "sha256": "7cbc06f4707eee406bae44333ff9f5cd6d30ecdceee59b536f3953dd6f23812c",
+        "bytes": 17411
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/Gantt_Completa_Revisada.pdf",
+        "sha256": "d67a97537710a69f427e39ab5163926b3e241b1d9d9f86d7f5e98fff13b86dc8",
+        "bytes": 899041
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/generar_anexos_32.py",
+        "sha256": "348d51062e14f0c0f6701cf615f7423671cd60de71ac0ca039815fdeb8e49ac2",
+        "bytes": 9469
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/generar_edt_revisada.py",
+        "sha256": "05b111e07bb030e7762d4ee99f671508dd700db9e352be3ab104f935f4ecd62c",
+        "bytes": 8246
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/generar_gantt_revisada.py",
+        "sha256": "530af5a2ca18b5591d0e8b29d96aa68a052ec8a1819819f35af027752be24ca6",
+        "bytes": 19092
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/pert-etapa1.pdf",
+        "sha256": "92deba02e47f77caa71205e7f474757c7065a9572eec867ea80f45f6b8cc91a7",
+        "bytes": 600606
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/pert-etapa2.pdf",
+        "sha256": "336e455f12dd7946faa244db32f3632024470dadc0e1831be56c475b777e3c0f",
+        "bytes": 600228
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/red-3.2.json",
+        "sha256": "fe403e736256e1e1baa7e539eaf0b35a687e43ccbcc8c6b3f76d4e7bc68dac02",
+        "bytes": 58076
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/test_conciliacion_32.py",
+        "sha256": "88b3a6c46d8b20cdddfa8843554bcd125ec89d7de220e21a2009ab93188ef003",
+        "bytes": 3970
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/verificacion_letra.json",
+        "sha256": "7a318549867fb84b31c7fb8898a2ce25823712619ac9b8f4c9d00c54c5595d78",
+        "bytes": 2867
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/verificar_preparacion_final.py",
+        "sha256": "a420f85c031488de7a6d55b60dbbb1549589ca51b3051abe60d05e1e43542d39",
+        "bytes": 1034
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/conciliacion-3.2/asignacion-tarea-rol-mes.csv",
+        "sha256": "77ebbda87e5f55d4418a7c5b038c7953d341ae3b92ffa33aa37073a14e155fae",
+        "bytes": 341931
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/conciliacion-3.2/gantt-formulario.tex",
+        "sha256": "2887e336eb8ed371f72c798a8b8b841da00b17fa2e37b116423fe1655e9938f7",
+        "bytes": 1986
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/conciliacion-3.2/hitos-resumen.tex",
+        "sha256": "d0654915c6c1db7adfacdbfd2c66db144d037934723edae0b0232c7ae140f2ff",
+        "bytes": 480
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/conciliacion-3.2/horas-formulario.tex",
+        "sha256": "7668f90999862ba7cc4180f8dc84546e93dc13654637dc6291604167943e3da3",
+        "bytes": 20838
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/conciliacion-3.2/malla-formulario.tex",
+        "sha256": "f5347d54f47d931e97e456007a59aff698ef3958e50e7700e69aa3b51bc6d08b",
+        "bytes": 14485
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/conciliacion-3.2/plan_32.json",
+        "sha256": "0f06bd86767d5b09d99348ff609564c4cb91f93b1d86dabec3ec5c60f6e3b8ab",
+        "bytes": 29070
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/conciliacion-3.2/puente.json",
+        "sha256": "e1d87fdc1f07d641fd7c716cedd1fe5f2091ccba29cf9c17839e8bb0d236fe34",
+        "bytes": 775987
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/conciliacion-3.2/red-calculada.json",
+        "sha256": "9857f8311d3202b2bf30750a050d3d1c3d183a98848172254839098a225774b1",
+        "bytes": 62605
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/edt-revisada/01-arbol.pdf",
+        "sha256": "0f813e7ac10636348f195b63ad65d5584c24e6b13a15fe810e19410db4486617",
+        "bytes": 76656
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/edt-revisada/02-paquetes-1.pdf",
+        "sha256": "3a36d96d65c83f527e6688a3ec66df9a1c76e4d352ea7d527f71614f82aec5b1",
+        "bytes": 75345
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/edt-revisada/03-paquetes-2.pdf",
+        "sha256": "7ba782dcc6bc93bc84f0beab8b97c4ca4cc2f6c91e9fc6b9e5415c9d016bb7d9",
+        "bytes": 74834
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/edt-revisada/04-paquetes-3.pdf",
+        "sha256": "02484cb7b24a464432f98926b30713b9c71f5d437949d4fae6e500d6e58fe10a",
+        "bytes": 75143
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/edt-revisada/05-paquetes-4.pdf",
+        "sha256": "965d0e5081131936514167f2f056b34df717c0161ab2332b7086a3b363572112",
+        "bytes": 75162
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/edt-revisada/06-paquetes-5.pdf",
+        "sha256": "e699707c1bb06ebab791ff822b72e884d25c478528321f9fda0094bb30f0f108",
+        "bytes": 74866
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/edt-revisada/07-ejemplo.pdf",
+        "sha256": "8833944341aace8f10944fe53a53044adae69769493cdce9147bef4eee6d433c",
+        "bytes": 74812
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/edt-revisada/08-trazabilidad.pdf",
+        "sha256": "98170356542b6834f1ef4444d9423c108d4a2fe205b3fe60eb767e8b90e5e166",
+        "bytes": 74577
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/edt-revisada/09-matriz-requisitos.pdf",
+        "sha256": "e7588efbeece30c2a6d683d95b486a68b40427193034a8a04c387a1e0d555524",
+        "bytes": 74638
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/edt-revisada/EDT_Completa_Revisada.pdf",
+        "sha256": "caab5a54931a4587767f320cffd6c36e4c69931a289a7f414b4da355ebd0e4d8",
+        "bytes": 563083
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/edt-revisada/matriz-requisitos.json",
+        "sha256": "878ad908525640391b5a4573e9a6af0c04979da97007983cfddf3b58db590ab2",
+        "bytes": 1496
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/revisada/conciliacion.json",
+        "sha256": "4cd5893b21acb8920d8684a2fb271f2c180f6299e7a4e3f876aa1cd67815f436",
+        "bytes": 567
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/revisada/gantt-control.pdf",
+        "sha256": "fba85c2beecb51997919512f268865983960badaee71f1fa11ed1783ef27664c",
+        "bytes": 74977
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/revisada/gantt-cpm.pdf",
+        "sha256": "9a9ad660f1a914c6190bf8c74c43f2063806a433db8169a3f8b91dfc493ddc3e",
+        "bytes": 77325
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/revisada/gantt-datos.pdf",
+        "sha256": "a2c91fb022554604afde86f89fd2e62ee8c876c1e068d89179ec3ee43a984a88",
+        "bytes": 75924
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/revisada/gantt-e1.pdf",
+        "sha256": "822ecc1e9a9b4c70933eb99bda2340297740374c798cdba7cc957b9e4621e13c",
+        "bytes": 75760
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/revisada/gantt-e2.pdf",
+        "sha256": "fbf748462b8b8bedddfbced783a297fc5507f9cc783db13b0baa5b55136033e9",
+        "bytes": 76226
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/revisada/gantt-gestion.pdf",
+        "sha256": "ca4296914e8ed52ca24feb27d2486b1261d0a6e11a2190ef18c41cba5fa5a773",
+        "bytes": 75883
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/revisada/gantt-hitos.pdf",
+        "sha256": "65f9a2154e9b79f3689fd44776e5293329dbf02d1b1cf2dab32254d2d8fc5e76",
+        "bytes": 74678
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/revisada/gantt-implantacion.pdf",
+        "sha256": "e68f914b48f83d891373cb202ec7dd324013a0fb6d6528af0eee816a54a9f076",
+        "bytes": 76038
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/revisada/gantt-innovaciones.pdf",
+        "sha256": "cda0a9e9aaabc1d8cbf66018d441c0ad86fa6bc30dbd7f4a1b6ad22c6d385862",
+        "bytes": 75670
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/revisada/gantt-operacion.pdf",
+        "sha256": "d2b5aff25c962eee9a0f5a57ddcab7b932728e47ed4b6ae1355bba0db8a84c46",
+        "bytes": 75002
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/revisada/gantt-panorama.pdf",
+        "sha256": "faeb8c2a93e9d7934bd214b0798b1bb783e1cd561c1ac6bd1ccb5e762df6e062",
+        "bytes": 77457
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/revisada/gantt-plataforma.pdf",
+        "sha256": "28468e7a38a3235714d4ab91702bc879c0174785a0a62f5ae769adf4cf4b7d99",
+        "bytes": 75605
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/revisada/manifiesto.json",
+        "sha256": "2fb49ca6b3119baa015d662a7ce4061cad9196dd873edd5e3acb23df01bab399",
+        "bytes": 1493
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/revisada/verificacion-integracion.json",
+        "sha256": "2114c91c4b8fce3c73690513a3533daf6e3f430b2e9292e29dc870017b484d4d",
+        "bytes": 2563
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/revisada/verificacion-pdf.json",
+        "sha256": "6bcc3c3d10c9b6a8295401b682c8b7b1ebf3a16d0d0cfc2b178250e8ab501d20",
+        "bytes": 1122
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/economico/analisis-financiero/contenido.tex",
+        "sha256": "1670e7180f39c3f3a128631c08f6c09777fda55643ccdfb96eb2f35bc742c8d6",
+        "bytes": 14846
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/economico/costos-venta/contenido.tex",
+        "sha256": "a58e87f4c1c5a255c491965c5bac2c3b5185dffc71bc8ddc2a4e503d9d28bf95",
+        "bytes": 9386
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/economico/costos-venta/curva-s.pdf",
+        "sha256": "736f31b666addfdd4d3a6f06b2cbd795ff03eb8f47facde5a24fd3a7b30de372",
+        "bytes": 42457
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/economico/costos-venta/generar_curvas_32.py",
+        "sha256": "f07e90335597833c241c8d68672fffb3860a6b3b194fc3506f92025c01854ea7",
+        "bytes": 2613
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/economico/costos-venta/solvencia-3.2.pdf",
+        "sha256": "972f1ed6e1132bf886f157285523a99e06ab0b43c3c426685f3d93ebb3c7df0c",
+        "bytes": 41888
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/economico/datos/flujo-mensual-final.tex",
+        "sha256": "d66b62669e58de9a58027b417163fafe4a0b685b5fdce664703b4a73b462c50f",
+        "bytes": 3581
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/economico/datos/operacion-categorias-final.tex",
+        "sha256": "d98eb479336cfe60175f22879fbbe42a3a4f64b64f45c441671adf36a57b7ed4",
+        "bytes": 164
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/economico/datos/partidas.csv",
+        "sha256": "fe14b82c256666345d7edb392d42647f636c133e41ca07d3c7cea33c97dcad70",
+        "bytes": 7167
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/economico/datos/respaldo-3.2.json",
+        "sha256": "810afb5e5317581be3ce9d9c4d6fcacd8edeeec19c22f66e934833dc581b1ed0",
+        "bytes": 27839
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/economico/datos/soporte-final.tex",
+        "sha256": "423206bf80fa9986e4099a7343b08d1bac4a030f45a765b08ad364985193f339",
+        "bytes": 773
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/economico/datos/tarifas-final.csv",
+        "sha256": "90d49ee71cf6a391f8108eb7ecb0de1280062e173b41b640564836e3159509c8",
+        "bytes": 2892
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/economico/datos/tarifas-final.tex",
+        "sha256": "bf6b689d7f9b8d233927b18e196dc3bdf572fbf04995d9b384f6ef75bc820f49",
+        "bytes": 2718
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/economico/datos/tarifas.csv",
+        "sha256": "07df87356e450a87b4c06c25a25088d30909d38508fbc2b18b09280b9ac79f52",
+        "bytes": 562
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/economico/oferta-economica/contenido.tex",
+        "sha256": "1c75cbbaa62d8d02f0460b3820ceb5788a33b969c9201c883285973fb64255a6",
+        "bytes": 8106
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/economico/planilla/AUDIT_ModeloFinanciero_3_20261125.xlsx",
+        "sha256": "176e403c108029bdfa7d33595cd88f38c2a0e2804c5103f51b70f9d62ff02eb6",
+        "bytes": 744858
+      },
+      {
+        "nombre": "recursos/Formato-Oferta-audIT/economico/planilla/LEEME.txt",
+        "sha256": "508be7a9962ed5c30090aae9dd45770b128a1ca70c4e12674f10e2212fd96381",
+        "bytes": 727
+      },
+      {
+        "nombre": "outputs/3.2/Entrega-3.2/INFORME3_AUDIT_PLANILLA_3.2_20261115.xlsx",
+        "sha256": "7976df5e54cad827b688e9c35a9918631e984b961526f5901a5a25c55fd3247e",
+        "bytes": 717737
+      },
+      {
+        "nombre": "Informe-3/d3/datos/dedicacion_mensual_d3.csv",
+        "sha256": "54d8cdfb83425f5cceb5de54745dc4785d7fde48f5711a0e3908a3b8be5cd390",
+        "bytes": 56664
+      },
+      {
+        "nombre": "outputs/cierre-d2-final/cerrar_d2.py",
+        "sha256": "323f05d988c6de31cdf95ba9ce51ef04d43d44e470770d9f567e6197d85bf994",
+        "bytes": 16460
+      },
+      {
+        "nombre": "outputs/cierre-d2-final/compilar_d2.py",
+        "sha256": "07e041a3b9b4b35da63c0e37b67d6fd337f5230724d67de24761094480fa9bbe",
+        "bytes": 3981
+      },
+      {
+        "nombre": "outputs/cierre-d2-final/compilar_economico.py",
+        "sha256": "171bbd00d955ba68498eedcd126cdafd69981f4a1bc306ed5986dfd93ad59467",
+        "bytes": 3186
+      },
+      {
+        "nombre": "outputs/cierre-d2-final/completar_docx.py",
+        "sha256": "b3a361aa73827cfe1c784071f4d003223753f3c081709fc1f3b0c27d25c480eb",
+        "bytes": 2191
+      },
+      {
+        "nombre": "outputs/cierre-d2-final/completar_economico.py",
+        "sha256": "4fb52b4d1573285d0174fc6986bfa963d5d97ba10def2005150c49c1264f8546",
+        "bytes": 18227
+      },
+      {
+        "nombre": "outputs/cierre-d2-final/incorporar_tarifas.py",
+        "sha256": "3f5d2ca4e85323369f2087a09da3f92f1ac7d3e363da26a90312c468a66b1449",
+        "bytes": 8140
+      },
+      {
+        "nombre": "outputs/cierre-d2-final/incrustar_fuente_residual.py",
+        "sha256": "f9a28d67c11d9470b44418e33887caa2afb2fcf661a5a92808975aa7fb064911",
+        "bytes": 1905
+      },
+      {
+        "nombre": "outputs/cierre-d2-final/preparar_fuentes.py",
+        "sha256": "e62928703623b805cd6eac4271f5ed833e95b3a7079282624bdf5bb77260c2e9",
+        "bytes": 1195
+      },
+      {
+        "nombre": "outputs/cierre-d2-final/verificar_corte.py",
+        "sha256": "5a0e6d67c8ee57eb80818223d70224609104320ec730c9645932abe1ab1128da",
+        "bytes": 1346
+      },
+      {
+        "nombre": "outputs/cierre-d2-final/CIERRE-D2.md",
+        "sha256": "67712092d3baa46d54285927534c47eb15adaf1eb2f8f5c32f7aa83d223fee3a",
+        "bytes": 5602
+      },
+      {
+        "nombre": "outputs/cierre-d2-final/evidencia/tarifas-aceptadas.json",
+        "sha256": "6c26b2479e69ca11e429016822336e5433125e44adff85ce0f72798ebed93954",
+        "bytes": 12256
+      },
+      {
+        "nombre": "outputs/cierre-d2-final/evidencia/linea-base.json",
+        "sha256": "a5d5dfc8f606368e59ff12495e13733c92a53b715d28af2bd9b2337abd3be155",
+        "bytes": 241
+      }
+    ]
+  }
+]

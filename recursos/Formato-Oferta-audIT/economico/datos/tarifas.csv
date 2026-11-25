@@ -4,3 +4,6 @@ perfil;costo;tarifa
 # (Formulario E-26). Un valor fuera del rango del E-26 detiene la
 # compilación. Un perfil que no está en el E-26 deja un aviso: las bases piden
 # declararlo en la hoja de tarifas del modelo financiero.
+
+# Oferta final: el tarifario por fase esta en tarifas-final.csv, tarifas-final.tex
+# y la hoja Tarifas E26 Final del modelo. Este esquema historico no representa las dos fases.

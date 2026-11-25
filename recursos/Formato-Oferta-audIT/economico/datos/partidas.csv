@@ -82,3 +82,19 @@ cuadro-op-indirecto-costo;Operación indirecta, costo;CLP;102230760;no;
 cuadro-op-indirecto-venta;Operación indirecta, venta;CLP;102230760;no;
 egreso-inn5;Egreso directo de INN-5;CLP;4000000;no;Innovaciones!D6
 capital-inicial;Capital inicial del caso base;CLP;730000000;no;Parámetros corrección!B4
+
+final-op-1;Personal;CLP;1961538000;no;Cuadro maestro!C11
+
+final-op-2;Infraestructura y servicios;CLP;1053415759;no;Cuadro maestro!C12
+
+final-op-3;Licencias;CLP;15678600;no;Cuadro maestro!C13
+
+final-op-4;Calidad y capacitación;CLP;16500000;no;Cuadro maestro!C14
+
+final-op-5;Firma automática;CLP;21630240;no;Cuadro maestro!C15
+
+final-op-6;Otros confirmados;CLP;0;no;Cuadro maestro!C16
+
+final-op-7;Administración;CLP;88430760;no;Cuadro maestro!C17
+
+final-op-8;Cierre;CLP;13800000;no;Cuadro maestro!C18
