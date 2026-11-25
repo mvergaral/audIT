@@ -83,3 +83,11 @@ CASOS/
 CONTROL/**/*.pdf
 TALLER 3/*.pdf
 Investigacion/Informe-Final-LaTeX/**/*.pdf
+
+# Material de estudio personal del ramo: se mantiene local, no va al repo.
+CONTROL/
+RESUMEN_CONTROL.md
+MEGA_RESUMEN_CONTROL.md
+PRUEBA_CONTROL.md
+HOJA_FORMULAS.md
+juego_licitacion.html
