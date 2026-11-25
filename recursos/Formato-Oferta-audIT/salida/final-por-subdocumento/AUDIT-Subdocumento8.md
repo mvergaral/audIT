@@ -13,7 +13,7 @@ audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. O
 > exposición alta tienen además plan de contingencia.
 >
 > **Qué recibe Transportes Curimón S.A.**
-> - Un registro vivo de 35 riesgos en cinco categorías y tres orígenes, con su probabilidad, impacto, respuesta, responsable, disparador y plazo, en el Formulario T-16.
+> - Un registro vivo de 36 riesgos en cinco categorías y tres orígenes, con su probabilidad, impacto, respuesta, responsable, disparador y plazo, en el Formulario T-16.
 > - Escalas de probabilidad e impacto calibradas en días hábiles, en efecto sobre la flota y en cumplimiento, con el mapa de calor antes y después de mitigar.
 > - Un análisis de modos de falla de diez componentes técnicos, un análisis del margen de los doce hitos de pago sobre la malla del cronograma, con su simulación Monte Carlo, y un árbol de fallas de la verificación bloqueante.
 > - Contingencias para los diez riesgos altos y reservas de contingencia y de gestión expresadas en días hábiles.
@@ -52,8 +52,8 @@ cuando se combinan varias causas.
 **Roles.**
 El Jefe de Proyecto es dueño del proceso y del registro. Cada riesgo tiene un responsable nominado entre
 los roles del Formulario T-14, que vigila el disparador y ejecuta la respuesta. El Líder de Implantación
-tiene siete riesgos, casi todos del montaje y del terreno, el Líder Funcional tiene seis, y el Líder de
-Integración, el Líder de Operación y el Jefe de Proyecto tienen cinco cada uno. El Arquitecto de Solución lleva los riesgos de arquitectura
+tiene siete riesgos, casi todos del montaje y del terreno, el Líder de Operación y el Líder Funcional
+tienen seis cada uno, y el Líder de Integración y el Jefe de Proyecto cinco cada uno. El Arquitecto de Solución lleva los riesgos de arquitectura
 y el Encargado de Seguridad los de ciberamenazas, y los dos integran el Comité de Arquitectura. La
 Contraparte Técnica del mandante consulta el registro cuando quiere y valida en el Comité de Proyecto el
 cierre de cada riesgo. Aceptar un riesgo alto sin tratarlo, o usar la reserva de gestión, lo decide el
@@ -62,7 +62,7 @@ Comité Ejecutivo, que según el mismo artículo revisa los riesgos mayores.
 **Origen de cada riesgo.**
 El registro separa los riesgos según dónde nacen, porque cada origen pide una actuación distinta.
 Diecisiete nacen de terceros, como los proveedores de posicionamiento, los fabricantes, los transportistas,
-la autoridad o el proveedor externo de montaje y campo. Doce nacen del trabajo de audIT y seis del propio mandante. Estos seis solo bajan si
+la autoridad o el proveedor externo de montaje y campo. Trece nacen del trabajo de audIT y seis del propio mandante. Estos seis solo bajan si
 Curimón actúa: dar acceso por interfaz a su sistema contable (R-12), nominar usuarios y suplentes con
 cupos por rol (R-15 y R-32), firmar el contrato con febrero de 2027 como mes 1 (R-21), validar el
 instrumento contractual de la transferencia internacional antes del H2 (R-24) y aplicar en su taller la programación de
@@ -93,8 +93,8 @@ La probabilidad se estima para la ventana en que el riesgo puede ocurrir y no pa
 exposición es el producto de los dos niveles y fija la respuesta mínima. De 1 a 5 es baja y basta con
 vigilar el disparador. De 6 a 11 es media y pide mitigación con responsable y revisión quincenal. De 12 a
 25 es alta y pide además plan de contingencia y revisión mensual en el Comité Ejecutivo. Las escalas se
-contrastan con datos cuando los hay. En la malla del Subdocumento 7, cuatro hitos de pago terminan en su
-límite contractual (sección 8.2), y por eso el R-17 tiene probabilidad 4.
+contrastan con datos cuando los hay. En la malla del Subdocumento 7, tres hitos de pago terminan en su
+límite contractual y un cuarto depende de una reserva (sección 8.2), y por eso el R-17 tiene probabilidad 4.
 
 **Modos de falla.**
 Los componentes técnicos se analizan además modo por modo. Cada modo de falla se califica de 1 a 5 en
@@ -123,9 +123,9 @@ los puntos únicos de falla y los modos degradados del Subdocumento 4, la red y 
 Subdocumento 7, las innovaciones del Subdocumento 13 y las restricciones del Caso. La Figura 8.1 los
 ordena en una estructura de desglose con las cinco categorías que pide el Comunicado 10, sección 11.
 
-![Figura 8.1. Estructura de desglose de los 35 riesgos de la solución en cinco categorías. Los de exposición alta van en negrita](../../figuras/08-riesgos/rbs.png)
+![Figura 8.1. Estructura de desglose de los 36 riesgos de la solución en cinco categorías. Los de exposición alta van en negrita](../../figuras/08-riesgos/rbs.png)
 
-*Figura 8.1. Estructura de desglose de los 35 riesgos de la solución en cinco categorías. Los de exposición alta van en negrita*
+*Figura 8.1. Estructura de desglose de los 36 riesgos de la solución en cinco categorías. Los de exposición alta van en negrita*
 
 Fuente: Elaboración propia.
 
@@ -144,8 +144,8 @@ continuación.
 El FEP02, numeral 1.6, p. 5 deja la obsolescencia de cargo del adjudicatario: si un componente pierde
 soporte antes del mes 56, su reemplazo debe estar previsto en la oferta. El caso concreto es Azure Cache
 for Redis, que Microsoft retira el 30 de septiembre de 2028 (Microsoft, 2026). Con el mes 1 en
-febrero de 2027, esa fecha cae en el mes 20, el último de la marcha blanca de la Etapa 2. En el Informe 2
-era el riesgo de mayor exposición del registro (R-06, 15). La caché acelera la verificación bloqueante,
+febrero de 2027, esa fecha cae en el mes 20, el último de la marcha blanca de la Etapa 2. Sin respuesta
+sería el riesgo de mayor exposición del registro, con 15. La caché acelera la verificación bloqueante,
 aunque la autoridad queda en la base transaccional (sección 4.1.9). La respuesta fue
 evitarlo: el Subdocumento 4 fija Azure Managed Redis, el servicio de reemplazo, desde la Etapa 1
 (sección 4.1.1), de modo que nunca haya una migración durante una marcha blanca, y la
@@ -223,9 +223,10 @@ propio riesgo de adopción. Los transportistas y la torre pueden no usar el expe
 se vinculan con su ficha del Formulario T-19 y se miden con el indicador de esa ficha. El último
 riesgo del grupo nace del modelo de servicio (R-36). Un proveedor externo monta los lotes de los meses 7
 a 9 y atiende el campo en la operación, y puede no cumplir la agenda de un lote o no llegar en 4 horas a
-una urgencia de hardware crítico (FEP02, numeral 8.4, p. 19). El contrato le traslada ese plazo, cada
-terminal guarda equipos de reposición y el técnico de audIT sigue disponible hasta el mes 19 como
-respaldo.
+una urgencia de hardware crítico (FEP02, numeral 8.4, p. 19). Subcontratarlo requiere la autorización previa y
+escrita del mandante, y el total subcontratado se controla con el Formulario T-8 bajo el tope del 40 %
+del FEP01, Artículo 73.1, p. 38. El contrato le traslada el plazo de urgencia, cada terminal guarda equipos de
+reposición y el técnico de campo de audIT sigue como respaldo hasta el mes 18.
 
 **Convivencia con el sistema de 2013.**
 El sistema de gestión de transporte de 2013 se retira función por función, como fija el Subdocumento 3:
@@ -237,6 +238,16 @@ solo con acta del mandante. El disparador es una diferencia de conciliación sob
 el uso de una función ya retirada. Lo vigila el Líder de Integración, y un retiro que se atrasa mueve el
 hito siguiente de la Etapa 2, no la operación.
 
+**Escalones de madurez del soporte.**
+La capacidad variable de mejoras y deuda técnica baja en los meses 25, 33 y 45 solo si el servicio
+cumple tres criterios: dos meses sin incidentes críticos, menos de diez solicitudes pendientes y una
+demanda que cabe en la capacidad del tramo (Subdocumento 11). Si no los cumple, el soporte sigue con la
+capacidad del tramo anterior y su costo es mayor que el previsto (R-37). Los niveles de servicio no
+bajan, porque la capacidad no se reduce. La respuesta es medir los tres criterios cada mes en el Comité
+de Operación desde el mes 21 y bajar las solicitudes pendientes y la deuda técnica antes de cada
+escalón. El disparador es un criterio sin cumplir dos meses antes del escalón, y lo vigila el Líder de
+Operación.
+
 **Cierres del paso fronterizo.**
 El piloto a bordo y los lotes de montaje van de los días 112 a 180, entre los meses 6 y 9, y coinciden con
 los cierres del paso Los Libertadores por nieve, de junio a septiembre (Caso, numeral 13.2, p. 27). En la
@@ -246,7 +257,7 @@ y de cada lote se eligen entre los que no cruzan la frontera, y el piloto mide p
 modo que un camión varado se reemplaza por otro de la misma familia en el mismo lote sin repetir la prueba.
 
 **Análisis cualitativo.**
-La Figura 8.2 ubica los 35 riesgos en la matriz de probabilidad e impacto antes y después de
+La Figura 8.2 ubica los 36 riesgos en la matriz de probabilidad e impacto antes y después de
 mitigar.
 
 ![Figura 8.2. Mapa de calor de los riesgos antes y después de mitigar. Cada número es el identificador del riesgo en el Formulario T-16, y el gris más oscuro es la zona de exposición alta](../../figuras/08-riesgos/mapa-calor.png)
@@ -255,8 +266,8 @@ mitigar.
 
 Fuente: Elaboración propia.
 
-Antes de mitigar hay diez riesgos altos, veinticuatro medios y uno bajo. Después quedan diecinueve
-medios y dieciséis bajos, y la suma de las exposiciones baja de 311 a 187. Los que más bajan son R-27, de
+Antes de mitigar hay diez riesgos altos, veinticinco medios y uno bajo. Después quedan diecinueve
+medios y diecisiete bajos, y la suma de las exposiciones baja de 317 a 191. Los que más bajan son R-27, de
 12 a 6, porque la prueba en paralelo encuentra las reglas que bloquean sin causa antes de que bloqueen, y
 R-34, de 9 a 3, porque elegir camiones que no cruzan la frontera saca al piloto del alcance del cierre.
 Ocho quedan en 8 (R-11, R-18, R-23, R-24, R-28, R-29, R-32 y R-35) y conservan impacto 4, porque la
@@ -295,9 +306,9 @@ activación técnica y los consentimientos de los conductores se controlan apart
 transportista no los reemplaza.
 
 **Simulación del cronograma.**
-La red del Subdocumento 7 se concilió con la planilla económica 3.2 y pasó a una malla de 122 nodos con
-duración única. Sus estimaciones de tres puntos se validan con quienes ejecutan cada actividad en el H1,
-y las probabilidades de la red anterior no se trasladan a la malla nueva. Por eso esta sección mide
+La red del Subdocumento 7 se concilió con el presupuesto de dotación del Sobre N.º 3 y es una malla de
+122 nodos con duración única. Sus estimaciones de tres puntos se validan con quienes ejecutan cada
+actividad antes del H1, y hasta entonces no se publica una probabilidad que la malla no respalde. Por eso esta sección mide
 primero el margen de cada hito de pago, que es lo que decide su riesgo. La Tabla 8.2 da para
 cada hito del FEP01, Formulario E-25, p. 74 su límite, su margen en la malla y la actividad que lo determina.
 
@@ -320,18 +331,22 @@ cada hito del FEP01, Formulario E-25, p. 74 su límite, su margen en la malla y 
 
 *Fuente: elaboración propia con la malla del Formulario T-15. Márgenes en días hábiles, con la revisión de 10 días hábiles del mandante dentro de cada cadena.*
 
-Cuatro hitos quedan sin margen: H4, H7, H11 y H12. En H11 la reserva A23 absorbe hasta 10 días de la
-construcción de la Etapa 2, pero no más, y H12 hereda lo que pase en H11. Un hito sin margen se cumple,
+Tres hitos quedan sin margen: H4, H7 y H12. H11 tiene fecha fija al inicio del mes 19 y su margen está
+en la reserva A23, que absorbe hasta 10 días de la construcción de la Etapa 2, pero no más, y H12
+hereda lo que pase en H11. Un hito sin margen se cumple,
 en el mejor caso, en la mitad de los escenarios, porque cualquier variación de su cadena lo atrasa. La
 simulación Monte Carlo lo confirma sobre la malla: con 10.000 corridas, semilla fija 2026 y una regla
 provisional de tres puntos (Malcolm et al., 1959), que deja fijos los hitos, las revisiones y las
 ventanas y aplica 0,85, 1 y 1,4 veces la duración al resto del trabajo, los cuatro quedan bajo la mitad,
 y también con una regla más estrecha.
 
-Ese es el R-17, que por eso tiene exposición alta. Su respuesta empieza antes del H1: la planificación
-del Subdocumento 7 ajusta la malla para devolver margen a esos cuatro hitos, y quienes ejecutan validan
-las tres estimaciones de cada actividad. Con la malla ajustada, la simulación se vuelve a correr y su
-resultado entra al primer informe mensual de riesgos. Mientras tanto rigen los umbrales. La alerta se da
+Ese es el R-17, que por eso tiene exposición alta. Su respuesta empieza antes del H1: el Jefe de
+Proyecto y quienes ejecutan validan la capacidad, las ventanas de terceros y las tres estimaciones de
+cada actividad (Subdocumento 7). Un adelanto o un solapamiento que devuelva margen debe conservar los
+criterios de aceptación y mostrar su efecto en recursos, pruebas y costo. Con la línea base fijada en el
+H1, la simulación se vuelve a correr y su resultado entra al primer informe mensual de riesgos. El H5,
+que tiene 14 días de margen, se vigila igual, porque su atraso al mes 13 o 14 es el escenario de caja
+más exigente del Sobre N.º 3, que trae su propia contingencia de financiamiento. Mientras tanto rigen los umbrales. La alerta se da
 con un día hábil de atraso en la cadena de un hito. Si el atraso proyectado supera su margen, el caso sube
 al Comité Ejecutivo. La recuperación refuerza los sprints de A09 o de A20, y si no alcanza, el hito se
 entrega con el alcance comprometido y un acta de la Contraparte Técnica que fija el cierre del resto antes
@@ -417,7 +432,7 @@ aceptado sigue la regla inversa: mitigarlo costaría más que su exposición, qu
 **Planes de contingencia.**
 Los diez riesgos que empiezan con exposición alta tienen un plan de contingencia, que se activa cuando
 se cumple su disparador. La Tabla 8.3 dice qué se hace y quién lo decide. El disparador y
-el plazo de cada uno, igual que los de los 35 riesgos, están en la Tabla T-16.3 del
+el plazo de cada uno, igual que los de los 36 riesgos, están en la Tabla T-16.3 del
 Formulario T-16, y esta tabla no los repite. Ningún modo de falla llega al número de prioridad 50, así
 que ninguno agrega una contingencia propia.
 
@@ -509,7 +524,7 @@ Conforme al Comunicado 10, sección 7.2, cada sección de este subdocumento y ca
 | Sección | Herramienta | Finalidad del uso | Nivel en texto | Nivel en diagramas | Revisión humana (quién y qué verificó) |
 |---|---|---|---|---|---|
 | Introducción y 8.1 | Claude Opus 5.5 en Claude Code | Redacción inicial del método, los roles, las escalas, las cadencias y el origen de cada riesgo desde las decisiones de diseño del equipo, y verificación de las citas a las bases | Alto | Ninguno | Naomi Núñez, Líder de Calidad, e Ignacio Vera y Marcel Gutiérrez, Arquitectos de Solución: escalas, umbrales, roles, clasificación por origen y citas a ISO 31000 y a las bases. |
-| 8.2 | Claude Opus 5.5 en Claude Code | Identificación de los riesgos sobre los subdocumentos 3, 4, 7 y 13 y el Caso, incluidos R-35 y R-36 de la revisión final y de la planilla 3.2, análisis del margen de cada hito sobre la malla conciliada del Formulario T-15 y guion de la simulación Monte Carlo vuelto a correr el 24-11-2026 sobre esa malla con una regla de tres puntos declarada, y método de cuantificación del árbol de fallas | Alto | Alto | Naomi Núñez, Líder de Calidad, e Ignacio Vera y Marcel Gutiérrez, Arquitectos de Solución: riesgos frente a sus fuentes, margen de cada hito frente a la malla, regla de la simulación y su lectura, y que no se publiquen probabilidades de la red anterior. |
+| 8.2 | Claude Opus 5.5 en Claude Code | Identificación de los riesgos sobre los subdocumentos 3, 4, 7 y 13 y el Caso, incluidos R-35, R-36 y R-37, análisis del margen de cada hito sobre la malla conciliada del Formulario T-15 y guion de la simulación Monte Carlo vuelto a correr el 24-11-2026 sobre esa malla con una regla de tres puntos declarada, y método de cuantificación del árbol de fallas | Alto | Alto | Naomi Núñez, Líder de Calidad, e Ignacio Vera y Marcel Gutiérrez, Arquitectos de Solución: riesgos frente a sus fuentes, margen de cada hito frente a la malla, regla de la simulación y su lectura, y que no se publiquen probabilidades de la red anterior. |
 | 8.2.1, y riesgos R-11 y R-16 del Formulario T-16 | OpenAI Codex | Incorporación de la línea base de capacitación y de la definición común de adhesión | Alto | Ninguno | Marcel Gutierrez, Arquitecto de Solución: línea base de la A13 y del hito G13 frente al T-15, y definición de adhesión firmada. |
-| 8.3 | Claude Opus 5.5 en Claude Code | Redacción inicial de las respuestas, la razón de retorno, las contingencias y las reservas desde el registro de riesgos, con R-17 en exposición alta y las holguras de la malla conciliada | Alto | Ninguno | Naomi Núñez, Líder de Calidad, e Ignacio Vera y Marcel Gutiérrez, Arquitectos de Solución: contingencia de cada riesgo alto, holguras y reservas frente al Formulario T-15 y refuerzos de puesta en producción frente a la planilla 3.2. |
+| 8.3 | Claude Opus 5.5 en Claude Code | Redacción inicial de las respuestas, la razón de retorno, las contingencias y las reservas desde el registro de riesgos, con R-17 en exposición alta y las holguras de la malla conciliada | Alto | Ninguno | Naomi Núñez, Líder de Calidad, e Ignacio Vera y Marcel Gutiérrez, Arquitectos de Solución: contingencia de cada riesgo alto, holguras y reservas frente al Formulario T-15 y refuerzos de puesta en producción frente al presupuesto del Sobre N.º 3. |
 | Formulario T-16 | Claude Opus 5.5 en Claude Code | Generación del registro, de la tabla de origen y respuesta y del análisis de modos de falla con un guion desde el registro de riesgos, con numeración propia de sus tablas | Alto | Ninguno | Naomi Núñez, Líder de Calidad, e Ignacio Vera y Marcel Gutiérrez, Arquitectos de Solución: correspondencia del formulario con el registro, con la sección 8.3 y con la numeración del subdocumento. |

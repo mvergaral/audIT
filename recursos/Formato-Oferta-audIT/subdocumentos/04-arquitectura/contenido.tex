@@ -923,12 +923,24 @@ El reparto de la flota sale del \caso{numeral 2.2}{6}: 340 de los 374 camiones t
 equipo, y 340 menos 192 da 148 propios, todos equipados. Los 148 propios y los 34 de terceros sin
 equipo llevan el equipo de audIT, 182 en total. Los 192 de terceros que ya tienen equipo lo conservan,
 porque la restricción 3 impide intervenirlo sin acuerdo de su dueño \caso*{capítulo 10}{23}, y sus
-datos llegan por las plataformas de sus proveedores. La \figref{4-fisicacompletafig} reúne la
-arquitectura física en una sola vista, con cada equipo, sus conexiones y su alimentación.
+datos llegan por las plataformas de sus proveedores. La vista completa de la arquitectura física, con
+cada equipo, sus conexiones y su alimentación, va en cinco láminas para que se lea a tamaño natural:
+San Bernardo en dos (\figref{4-laminaa} y \figref{4-laminab}), la nube en la \figref{4-laminac}, los
+terminales y las contrapartes en la \figref{4-laminad} y la flota en la \figref{4-laminae}. Una
+conexión que sigue en otra lámina termina en un número dentro de un círculo, el mismo en las dos
+láminas, y cada lámina trae la lista de esos números.
 
-\figuraHorizontalAqui{figuras/04-arquitectura/fisica-completa.pdf}{Vista completa de la arquitectura física, con cada equipo, sus conexiones y su alimentación}{4-fisicacompletafig}
+\figuraHorizontalAqui{figuras/04-arquitectura/fisica-lamina-a.pdf}{Vista completa, lámina A: San Bernardo, con los sistemas existentes, la energía y los racks}{4-laminaa}
 
-La vista completa sirve para ubicar cada equipo en el conjunto, y las figuras que siguen la explican por
+\figuraHorizontalAqui{figuras/04-arquitectura/fisica-lamina-b.pdf}{Vista completa, lámina B: San Bernardo, con el clima, la protección, el acceso, la torre y el patio}{4-laminab}
+
+\figuraHorizontalAqui{figuras/04-arquitectura/fisica-lamina-c.pdf}{Vista completa, lámina C: Azure Chile Central y Brazil South}{4-laminac}
+
+\figuraHorizontalAqui{figuras/04-arquitectura/fisica-lamina-d.pdf}{Vista completa, lámina D: terminales regionales y contrapartes}{4-laminad}
+
+\figuraHorizontalAqui{figuras/04-arquitectura/fisica-lamina-e.pdf}{Vista completa, lámina E: flota con equipo audIT y sus enlaces}{4-laminae}
+
+Las láminas sirven para ubicar cada equipo en el conjunto, y las figuras que siguen lo explican por
 partes. La \figref{4-fisicafig} empieza por los tres planos y los enlaces que los unen.
 
 \figuraHorizontalAqui{figuras/04-arquitectura/fisica-general.pdf}{Vista general de la arquitectura física: nube primaria y secundaria, San Bernardo, terminales regionales y flota, con los enlaces y su capacidad}{4-fisicafig}
@@ -949,23 +961,33 @@ primaria, la sala de San Bernardo, el gabinete de los terminales y la región se
 \subsection{Especificaciones Implementos a proveer (Hardware y Software)}\label{sec:4-implementos}
 % ----------------------------------------------------------------------------
 
-El hardware lo adquiere el mandante, y audIT debe especificar exactamente qué comprar, cuánto y con
-qué características \caso*{capítulo 11}{24}. \transv{RT-08.10}{19} pide para cada dispositivo marca,
+El mandante adquiere el hardware de campo y de red, y audIT debe especificar exactamente qué comprar,
+cuánto y con qué características \caso*{capítulo 11}{24}. audIT provee la infraestructura on-premise de
+cómputo, respaldo eléctrico, clima, seguridad física y racks, y contrata el circuito ExpressRoute. La
+columna «Adquiere» del Formulario T-11 dice quién compra cada fila. \transv{RT-08.10}{19} pide para cada dispositivo marca,
 modelo de referencia, cantidad, características mínimas y costo unitario estimado. El costo va en el
 Sobre N.º~3, porque el \art{50.2}{29} no admite en la Oferta Técnica cifras que permitan inferir el
 monto. El Formulario T-11 trae el detalle de cada
-implemento, con sus características, ubicación, ciclo de vida y justificación. Cada uno de los 182 camiones lleva el computador vehicular iWave G26I con 8~GB de memoria, el
-módem satelital Iridium Edge, el lector CAN sin contacto Technoton CANCrocodile y el lector de tarjeta
-GAO RFID MIFARE DESFire, y se compran 19 juegos más de reposición. Los conductores reciben 572 tarjetas
-MIFARE DESFire, y los 210 semirremolques propios una baliza Teltonika EYE Sensor, con 21 de reposición.
-El gabinete de cada terminal regional tiene dos AAEON ICS-6280A-A10-00, un router 5G Teltonika RUTX50, un
-switch Teltonika TSW202 y una UPS APC SRT1000XLI, y cada uno de los cinco terminales recibe un punto de
-acceso de patio Fortinet FortiAP 234G y un lector de portería Minew G1. San Bernardo recibe dos
-servidores Dell PowerEdge R360, dos FortiGate 90G, dos FortiSwitch 124F-POE, dos UPS APC SRT3000 con
-batería externa, dos climas Vertiv Liebert Mini-Mate2, detección VESDA VLF-250 con extinción Kidde
-Fluoro-K, dos lectores faciales Suprema FaceStation F2, cuatro cámaras Axis con su grabador, un detector
-de agua Liebert LT460 y un grupo electrógeno Himoinsa HYW-8 T5 S5 con estanque de 100~L. Los servicios
-de nube se declaran en la sección~4.2.4.
+implemento, con sus características, ubicación, ciclo de vida y justificación.
+
+Lo que compra el mandante es el equipo de campo y de red. Cada uno de los 182 camiones lleva el
+computador vehicular iWave G26I con 8~GB de memoria, el módem satelital Iridium Edge, el lector CAN sin
+contacto Technoton CANCrocodile y el lector de tarjeta GAO RFID MIFARE DESFire, y se compran 19 juegos
+más de reposición. Los conductores reciben 572 tarjetas MIFARE DESFire EV3 4K, y los 210 semirremolques
+propios una baliza Teltonika EYE Sensor, con 21 de reposición. Cada gabinete regional recibe un router
+5G Teltonika RUTX50 y un switch Teltonika TSW202, y cada uno de los cinco terminales un punto de acceso
+de patio Fortinet FortiAP 234G con su inyector GPI-145 y un lector de portería Minew G1. San Bernardo
+recibe dos FortiGate 90G con su segundo adaptador y dos FortiSwitch 124F-POE, más uno de repuesto de
+cada uno, y los gabinetes un RUTX50 y un TSW202 de repuesto.
+
+Lo que provee audIT es la infraestructura on-premise. El gabinete de cada terminal regional tiene dos
+AAEON ICS-6280A-A10-00, sus fuentes de riel DIN y una UPS APC SRT1000XLI, con un AAEON y una UPS
+de repuesto. San Bernardo recibe dos servidores Dell PowerEdge R360 y uno de repuesto, dos UPS APC
+SRT3000 con batería externa y una de repuesto, dos climas Vertiv Liebert Mini-Mate2, detección VESDA
+VLF-250 con extinción Kidde Fluoro-K, dos extintores portátiles, dos lectores faciales Suprema
+FaceStation F2, cuatro cámaras Axis con su grabador, un detector de agua Liebert LT460, dos racks y un
+grupo electrógeno Himoinsa HYW-8 T5 S5 con estanque de 100~L. Los
+servicios de nube se declaran en la sección~4.2.4.
 
 Las cantidades salen de las poblaciones del Caso y no de la adhesión. Los 19 juegos de reposición son el
 10~\% del parque redondeado hacia arriba. Las 572 tarjetas cubren a los 520 conductores que el
@@ -981,7 +1003,8 @@ mes 9 están montados los 182 equipos. El piloto lo monta el personal de audIT. 
 proveedor externo con una agenda por terminal, y audIT conserva el banco de pruebas y la recepción de
 cada camión. En los meses 17 a 19 no hay montajes iniciales: se validan en los terminales las reglas de
 patio y de acople, se cierran las recepciones pendientes y se reponen equipos por excepción
-(actividad A21-PATIO). Con el contrato iniciado en febrero de 2027, ninguna instalación cae en la
+(actividad A21-PATIO). El técnico de campo de audIT cubre hasta el mes 18, y desde el mes 19 la atención
+en terreno es del proveedor externo. Con el contrato iniciado en febrero de 2027, ninguna instalación cae en la
 temporada de diciembre a abril, en que la operación no admite intervenciones \caso*{numeral 13.2}{27}.
 
 \paragraph{Estándar de homologación de los equipos de terceros} El Caso no pide reemplazar las
@@ -1049,8 +1072,8 @@ del G26I declara certificaciones CE, FCC, ISED, PTCRB y AT\&T, y no declara E-Ma
 que ambas quedan como condición de compra. El equipo a bordo no emite documentos tributarios: la
 restricción~8 deja al sistema contable como único emisor \caso*{capítulo 10}{24}.
 
-\paragraph{Capacidad de almacenamiento} La observación 73 del Informe~1 pidió derivar la capacidad en
-lugar de justificarla hacia atrás. La \tabref{4-emmc} suma lo que ocupa cada parte de la memoria.
+\paragraph{Capacidad de almacenamiento} La capacidad se deriva desde lo que se guarda y no se justifica
+hacia atrás. La \tabref{4-emmc} suma lo que ocupa cada parte de la memoria.
 
 \begin{tabla}{Capacidad de almacenamiento a bordo derivada por componente}{4-emmc}{X R{22mm} L{62mm}}
 Componente & Tamaño & Base \\ \midrule
@@ -1079,9 +1102,10 @@ industrial durante los 56 meses del contrato.
 El \art{16.2}{11} obliga a justificar el emplazamiento componente por componente en función de
 latencia, criticidad operacional, volumen de datos, restricciones regulatorias, disponibilidad de
 conectividad y costo total de propiedad, y califica como observación grave una asignación no
-justificada. La justificación de cada componente, con esos seis criterios, está en el Formulario T-11. De sus 39
-componentes, 24 quedan en la región primaria, en las tres zonas de Azure Chile Central, y uno, la
-réplica de recuperación, en Brazil South. Los otros 14 están fuera de la nube: cuatro en la sala de San
+justificada. La justificación de cada componente, con esos seis criterios, está en el Formulario T-11. Sus filas
+32 a 78 son 47 componentes de plataforma, software y servicios. De ellos, 32 quedan en la región
+primaria, en las tres zonas de Azure Chile Central, y uno, la réplica de recuperación, en Brazil South.
+Los otros 14 están fuera de la nube: cuatro en la sala de San
 Bernardo, tres en el gabinete de cada terminal regional, cinco en el equipo a bordo de los 182 camiones,
 uno en la baliza de los semirremolques y uno en el teléfono del conductor. La propuesta cumple el
 \art{16.1}{11}, porque no es exclusivamente en nube ni exclusivamente on-premise. \caso{RT-21.06}{34}
@@ -1090,9 +1114,7 @@ transporte o recibir un evento de emergencia. Cuando cae el enlace, la parte on-
 registro de lo que ocurre, la consulta de vigencias en portería y la recepción de emergencias. La
 asignación de un viaje nuevo y la emisión del documento pasan siempre por el servicio central y el
 sistema contable, como fija la sección~4.1.26 (\verSeccion{sec:4-desconectada}), y la torre llega a
-ellos por sus enlaces de respaldo (\verSeccion{sec:4-enlaces}). El Informe~1
-declaraba 18 componentes en nube y su tabla sumaba 20 (observación 71). La cuenta actual sale de la
-lista del T-11.
+ellos por sus enlaces de respaldo (\verSeccion{sec:4-enlaces}).
 
 \paragraph{Trazabilidad entre la arquitectura lógica y la física} El \comunicado{10}{sección 11}
 recomienda una matriz que cruce cada componente con su lugar en el esquema de solución, en la
@@ -1302,7 +1324,11 @@ que solo se cambia cuando el camión pasa por un terminal, cada seis días en pr
 
 \transv{RT-08.04}{18} pide fuentes de poder redundantes conectadas a circuitos distintos. Los servidores
 R360 tienen dos fuentes, una en cada alimentación, y cada FortiGate 90G lleva su segundo adaptador, con
-un adaptador en cada circuito \parencite{fortinet_fg90g}. En cada terminal, los dos ICS-6280, el router
+un adaptador en cada circuito \parencite{fortinet_fg90g}. Cada FortiSwitch 124F-POE tiene una sola
+fuente interna, así que la redundancia está en el par: un switch en el circuito A y otro en el B, con
+los servidores y los FortiGate conectados a ambos, y un tercero de repuesto en la sala. Si el diseño
+detallado exige doble fuente en cada chasis, se cambia por un modelo con fuente redundante antes de la
+compra del mes 3. En cada terminal, los dos ICS-6280, el router
 RUTX50 y el conmutador TSW202 reciben corriente continua desde dos fuentes de riel DIN conectadas a
 circuitos distintos, una a la UPS del gabinete y otra a un segundo circuito del tablero, unidas por un
 módulo de redundancia. Hay dos buses de este tipo, uno de 24~V para los equipos de cómputo y el router y
@@ -1400,8 +1426,8 @@ si cuatro camiones se actualizan en la misma hora de relevo. El ancho de banda d
 los usuarios de la casa matriz y de la torre, y por eso el circuito ExpressRoute es de 100~Mbit/s, el
 siguiente escalón comercial sobre 52~Mbit/s.
 
-La observación 75 pidió además el volumen transaccional anual y el de la evidencia que se almacena. La
-\tabref{4-transaccional} los reúne.
+El volumen transaccional anual y el de la evidencia que se almacena también se derivan de las
+poblaciones del Caso. La \tabref{4-transaccional} los reúne.
 
 \begin{tabla}{Volumen transaccional y de evidencia al año}{4-transaccional}{X R{30mm} R{30mm}}
 Transacción & Hoy & A tres años \\ \midrule
@@ -1438,8 +1464,8 @@ relevo de madrugada. Con 8 minutos por contacto, la meta de \transv{RT-21.06}{36
 contactos atendidos antes de 20 segundos y abandono de 5~\% o menos, se cumple con dos agentes entre
 las 4:00 y las 8:00 y uno el resto del día, con el desborde del nivel 2. Esos puestos suman 851 horas
 al mes, que cubren seis agentes en turnos más una jornada de suplencias para ausencias y picos, siete
-en total. El campo en la operación lo atiende media jornada de audIT para recepción en terminal, stock
-y coordinación, y un proveedor externo hace tres visitas correctivas y dos rondas regionales al mes como
+en total. El campo en la operación lo atiende media jornada de audIT, 80 horas al mes, para recepción en
+terminal, stock y coordinación, y un proveedor externo hace tres visitas correctivas y dos rondas regionales al mes como
 base, más las urgencias de 4 horas. El cálculo completo, la atención y el escalamiento están en el
 Subdocumento~10.
 
@@ -1472,7 +1498,7 @@ S-16 & Tráfico por usuario interno & 0,5 Mbit/s & Medición en la Etapa 1 \\
 S-17 & Ventana de disponibilidad de las plataformas de terceros y de la autoridad tributaria & No declarada por las bases & Consulta al mandante \\
 S-18 & Suscripción de Azure & A nombre del mandante & Reversibilidad de RT-03.07 \\
 \end{tabla}
-\notaTabla{Fuente: elaboración propia. S-01 a S-17 vienen del Informe 1 y se actualizaron con las decisiones de esta instancia.}
+\notaTabla{Fuente: elaboración propia.}
 
 Cada supuesto tiene un mecanismo de cierre en la Etapa~1 o en la compra. Ninguno fija un valor que las
 bases entreguen de otra forma.
@@ -1487,7 +1513,7 @@ Cobertura móvil de las rutas & Calidad de la señal en cada tramo & Campaña A0
 Parque de los terceros con equipo propio & Marca, modelo, protocolo y capacidad de cada equipo & Verificación A04 con los tres proveedores de posicionamiento, días hábiles 5 a 65 (meses 1 a 4) & Integración por plataforma según la sección 4.2.1. Si un proveedor no entrega datos, rige la respuesta de R-08 \\
 Conductor que manejó otro camión sin dispositivo & Rastro instrumental de esa jornada & Contrastar jornada con la cascada de evidencia antes de asignar & Bloquear si la evidencia exigible falta. Aplicar solo la excepción RN-04 documentada \\
 Consultas del Artículo~43 sin respuesta & Interpretación del mandante en cuatro materias & Respuesta del mandante, o validación en el levantamiento A02 antes del H1 & La propuesta de audIT queda como supuesto y cambia por control de cambios \\
-Autonomía del canal satelital & Registros que conserva el canal & El Iridium Edge del Formulario T-11 no guarda registros: transmite lo que entrega el G26I, que guarda 288 horas (sección 4.2.2). El producto del Informe~1, de 40 horas \parencite{webfleet_sat_cl}, ya no es parte de la oferta & Prueba de 72 horas sin pérdida de eventos del paquete 4.1, meses 4 a 9 \\
+Autonomía del canal satelital & Registros que conserva el canal & El Iridium Edge del Formulario T-11 no guarda registros: transmite lo que entrega el G26I, que guarda 288 horas (sección 4.2.2). El producto satelital de 40 horas \parencite{webfleet_sat_cl} no es parte de la oferta & Prueba de 72 horas sin pérdida de eventos del paquete 4.1, meses 4 a 9 \\
 \end{tabla}
 \notaTabla{Fuente: elaboración propia con la red del Formulario T-15.}
 
@@ -1552,8 +1578,8 @@ Redes & Rutas físicas distintas & Dos proveedores & ExpressRoute y VPN por duct
 \notaTabla{Fuente: FEP02, capítulo 6, pp. 14 a 17, y Caso, capítulo 5, p. 13.}
 
 La brecha está en energía, clima, incendio y acceso, que son los ámbitos que el numeral 6.1 exige para
-una sala de sitio. El agente de extinción es el FK-5-1-12. El Informe~1 proponía el Novec~1230, que es
-ese mismo compuesto, pero 3M dejó de fabricarlo a fines de 2025 \parencite{fike_novec}. Kidde lo
+una sala de sitio. El agente de extinción es el FK-5-1-12. Su marca más conocida, Novec~1230, dejó de fabricarse
+a fines de 2025, cuando 3M cerró su producción \parencite{fike_novec}. Kidde lo
 ofrece como Fluoro-K, con aprobación UL y FM \parencite{kidde_fluorok}, lo que cumple
 \transv{RT-06.17}{15}. La detección y la extinción se integran al monitoreo, que avisa al centro de
 operación y a la contraparte del mandante \transv*{RT-06.19}{16}, y la sala suma dos extintores
@@ -1600,7 +1626,9 @@ Un grupo de 15~kVA quedaría bajo el 30~\%, carga con la que un motor diésel ac
 quemar. A plena carga consume 2,68 litros por hora, 64,3 litros en 24 horas, y el estanque opcional de
 100 litros cumple las 24 horas de \transv{RT-06.08}{15} con margen. El reabastecimiento se hace desde el
 estanque de combustible propio que la compañía tiene en San Bernardo \caso*{numeral 2.2}{6}, con un
-contrato de respaldo con el proveedor de combustible.
+contrato de respaldo con el proveedor de combustible. Desde el mes 4, audIT se hace cargo del
+combustible de las pruebas periódicas con carga, unos 50 litros al mes, y de la energía de la sala y de
+los cuatro gabinetes regionales, estimada en 3.000~kWh al mes.
 
 La videovigilancia guarda 30 días en línea, como pide \transv{RT-06.24}{16}. Cuatro cámaras Axis
 M3215-LVE a 2~Mbit/s en H.265 generan 2,59~TB en 30 días, y el grabador Axis S3008 Mk II de 4~TB los
@@ -1609,7 +1637,7 @@ de Azure, lo que suma 8~Mbit/s al enlace de San Bernardo, dentro de su capacidad
 
 \paragraph{Plano de la sala} \transv{RT-06.03}{14} pide el plano de distribución con las zonas de
 generadores, baterías, climatización, servidores, comunicaciones, trabajo y respaldo. El numeral 6.1 lo
-exige a la sala principal, y esta oferta lo entrega igual porque la revisión del Informe~1 lo pidió. La
+exige a la sala principal, y esta oferta lo entrega igual para la sala de sitio. La
 \figref{4-planofig} lo muestra sobre una planta supuesta de 6,5 por 4~metros, que suma los 26~m²
 del Caso.
 

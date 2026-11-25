@@ -1,26 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="148.9mm" height="190.1mm" viewBox="0 0 422 539">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="148.9mm" height="195.8mm" viewBox="0 0 422 555">
 <defs><marker id="fin-n" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="5.5" markerHeight="5.5" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#2B2B2B"/></marker><marker id="ini-n" viewBox="0 0 10 10" refX="0.5" refY="5" markerWidth="5.5" markerHeight="5.5" markerUnits="userSpaceOnUse" orient="auto"><path d="M10,0.8 L0,5 L10,9.2 z" fill="#2B2B2B"/></marker><marker id="fin-r" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="5.5" markerHeight="5.5" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#C0392B"/></marker><marker id="ini-r" viewBox="0 0 10 10" refX="0.5" refY="5" markerWidth="5.5" markerHeight="5.5" markerUnits="userSpaceOnUse" orient="auto"><path d="M10,0.8 L0,5 L10,9.2 z" fill="#C0392B"/></marker></defs>
-<rect x="0" y="0" width="422" height="539" fill="#FFFFFF"/>
+<rect x="0" y="0" width="422" height="555" fill="#FFFFFF"/>
 <g id="grupos">
 <rect x="111.00" y="8.00" width="200.00" height="34.00" rx="6" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
 <rect x="34.00" y="62.00" width="380.00" height="95.00" rx="8" fill="#FFFFFF" stroke="#1B4FA8" stroke-width="1.2"/>
 <path d="M34,84 L34,70 A8,8 0 0 1 42,62 L406,62 A8,8 0 0 1 414,70 L414,84 Z" fill="#1B4FA8"/>
 <rect x="34.00" y="163.00" width="380.00" height="127.00" rx="8" fill="#FFFFFF" stroke="#96600B" stroke-width="1.2"/>
 <path d="M34,185 L34,171 A8,8 0 0 1 42,163 L406,163 A8,8 0 0 1 414,171 L414,185 Z" fill="#96600B"/>
-<rect x="34.00" y="296.00" width="380.00" height="79.00" rx="8" fill="#FFFFFF" stroke="#0A6B45" stroke-width="1.2"/>
+<rect x="34.00" y="296.00" width="380.00" height="95.00" rx="8" fill="#FFFFFF" stroke="#0A6B45" stroke-width="1.2"/>
 <path d="M34,318 L34,304 A8,8 0 0 1 42,296 L406,296 A8,8 0 0 1 414,304 L414,318 Z" fill="#0A6B45"/>
-<rect x="34.00" y="381.00" width="380.00" height="63.00" rx="8" fill="#FFFFFF" stroke="#A32222" stroke-width="1.2"/>
-<path d="M34,403 L34,389 A8,8 0 0 1 42,381 L406,381 A8,8 0 0 1 414,389 L414,403 Z" fill="#A32222"/>
-<rect x="34.00" y="450.00" width="380.00" height="79.00" rx="8" fill="#FFFFFF" stroke="#5B3BB5" stroke-width="1.2"/>
-<path d="M34,472 L34,458 A8,8 0 0 1 42,450 L406,450 A8,8 0 0 1 414,458 L414,472 Z" fill="#5B3BB5"/>
+<rect x="34.00" y="397.00" width="380.00" height="63.00" rx="8" fill="#FFFFFF" stroke="#A32222" stroke-width="1.2"/>
+<path d="M34,419 L34,405 A8,8 0 0 1 42,397 L406,397 A8,8 0 0 1 414,405 L414,419 Z" fill="#A32222"/>
+<rect x="34.00" y="466.00" width="380.00" height="79.00" rx="8" fill="#FFFFFF" stroke="#5B3BB5" stroke-width="1.2"/>
+<path d="M34,488 L34,474 A8,8 0 0 1 42,466 L406,466 A8,8 0 0 1 414,474 L414,488 Z" fill="#5B3BB5"/>
 </g>
 <g id="flechas">
 <path d="M18.00,73.00 L34.00,73.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" marker-end="url(#fin-n)"/>
 <path d="M18.00,174.00 L34.00,174.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" marker-end="url(#fin-n)"/>
 <path d="M18.00,307.00 L34.00,307.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" marker-end="url(#fin-n)"/>
-<path d="M18.00,392.00 L34.00,392.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" marker-end="url(#fin-n)"/>
-<path d="M18.00,461.00 L34.00,461.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" marker-end="url(#fin-n)"/>
-<path d="M211.00,42.00 L211.00,52.00 L18.00,52.00 L18.00,461.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter"/>
+<path d="M18.00,408.00 L34.00,408.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" marker-end="url(#fin-n)"/>
+<path d="M18.00,477.00 L34.00,477.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter" marker-end="url(#fin-n)"/>
+<path d="M211.00,42.00 L211.00,52.00 L18.00,52.00 L18.00,477.00" fill="none" stroke="#2B2B2B" stroke-width="1.0" stroke-linejoin="miter"/>
 </g>
 <g id="iconos">
 <rect x="42.00" y="85.00" width="180.00" height="14.00" rx="3" fill="#E8EDF6" stroke="#1B4FA8" stroke-width="0.6"/>
@@ -75,37 +75,39 @@
 <text x="132.00" y="361.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">R-20  Período mixto prolongado</text>
 <rect x="228.00" y="351.00" width="180.00" height="14.00" rx="3" fill="#E6F0EC" stroke="#0A6B45" stroke-width="0.6"/>
 <text x="318.00" y="361.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">R-21  Inicio en enero</text>
-<rect x="42.00" y="404.00" width="180.00" height="14.00" rx="3" fill="#F6E9E9" stroke="#A32222" stroke-width="0.6"/>
-<text x="132.00" y="414.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">R-22  Suplantación de equipos</text>
-<rect x="228.00" y="404.00" width="180.00" height="14.00" rx="3" fill="#F6E9E9" stroke="#A32222" stroke-width="0.6"/>
-<text x="318.00" y="414.00" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="middle" fill="#000000">R-23  Ataque al portal</text>
+<rect x="42.00" y="367.00" width="180.00" height="14.00" rx="3" fill="#E6F0EC" stroke="#0A6B45" stroke-width="0.6"/>
+<text x="132.00" y="377.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">R-37  Escalones de madurez del soporte</text>
 <rect x="42.00" y="420.00" width="180.00" height="14.00" rx="3" fill="#F6E9E9" stroke="#A32222" stroke-width="0.6"/>
-<text x="132.00" y="430.00" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="middle" fill="#000000">R-24  Licitud en Brazil South</text>
+<text x="132.00" y="430.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">R-22  Suplantación de equipos</text>
 <rect x="228.00" y="420.00" width="180.00" height="14.00" rx="3" fill="#F6E9E9" stroke="#A32222" stroke-width="0.6"/>
-<text x="318.00" y="430.00" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="middle" fill="#000000">R-35  Desconexión física del equipo</text>
-<rect x="42.00" y="473.00" width="180.00" height="14.00" rx="3" fill="#EFEBF8" stroke="#5B3BB5" stroke-width="0.6"/>
-<text x="132.00" y="483.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">R-25  Caída de la región</text>
-<rect x="228.00" y="473.00" width="180.00" height="14.00" rx="3" fill="#EFEBF8" stroke="#5B3BB5" stroke-width="0.6"/>
-<text x="318.00" y="483.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">R-26  Retraso de la réplica</text>
+<text x="318.00" y="430.00" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="middle" fill="#000000">R-23  Ataque al portal</text>
+<rect x="42.00" y="436.00" width="180.00" height="14.00" rx="3" fill="#F6E9E9" stroke="#A32222" stroke-width="0.6"/>
+<text x="132.00" y="446.00" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="middle" fill="#000000">R-24  Licitud en Brazil South</text>
+<rect x="228.00" y="436.00" width="180.00" height="14.00" rx="3" fill="#F6E9E9" stroke="#A32222" stroke-width="0.6"/>
+<text x="318.00" y="446.00" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="middle" fill="#000000">R-35  Desconexión física del equipo</text>
 <rect x="42.00" y="489.00" width="180.00" height="14.00" rx="3" fill="#EFEBF8" stroke="#5B3BB5" stroke-width="0.6"/>
-<text x="132.00" y="499.00" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="middle" fill="#000000">R-27  Bloqueo indebido</text>
+<text x="132.00" y="499.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">R-25  Caída de la región</text>
 <rect x="228.00" y="489.00" width="180.00" height="14.00" rx="3" fill="#EFEBF8" stroke="#5B3BB5" stroke-width="0.6"/>
-<text x="318.00" y="499.00" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="middle" fill="#000000">R-29  Convivencia con el sistema de 2013</text>
+<text x="318.00" y="499.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">R-26  Retraso de la réplica</text>
 <rect x="42.00" y="505.00" width="180.00" height="14.00" rx="3" fill="#EFEBF8" stroke="#5B3BB5" stroke-width="0.6"/>
-<text x="132.00" y="515.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">R-34  Cierres de Los Libertadores</text>
+<text x="132.00" y="515.00" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="middle" fill="#000000">R-27  Bloqueo indebido</text>
+<rect x="228.00" y="505.00" width="180.00" height="14.00" rx="3" fill="#EFEBF8" stroke="#5B3BB5" stroke-width="0.6"/>
+<text x="318.00" y="515.00" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="middle" fill="#000000">R-29  Convivencia con el sistema de 2013</text>
+<rect x="42.00" y="521.00" width="180.00" height="14.00" rx="3" fill="#EFEBF8" stroke="#5B3BB5" stroke-width="0.6"/>
+<text x="132.00" y="531.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">R-34  Cierres de Los Libertadores</text>
 </g>
 <g id="textos">
 <text x="211.00" y="22.50" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="middle" fill="#000000">Riesgos de la solución</text>
-<text x="211.00" y="34.50" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">35 riesgos en cinco categorías</text>
+<text x="211.00" y="34.50" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">36 riesgos en cinco categorías</text>
 <text x="44.00" y="77.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#FFFFFF">Técnicos</text>
 <text x="90.90" y="77.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#FFFFFF">8 riesgos</text>
 <text x="44.00" y="178.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#FFFFFF">Organizacionales y de contrapartes</text>
 <text x="213.47" y="178.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#FFFFFF">12 riesgos</text>
 <text x="44.00" y="311.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#FFFFFF">Gestión del proyecto</text>
-<text x="145.82" y="311.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#FFFFFF">6 riesgos</text>
-<text x="44.00" y="396.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#FFFFFF">Ciberseguridad y datos</text>
-<text x="156.78" y="396.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#FFFFFF">4 riesgos</text>
-<text x="44.00" y="465.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#FFFFFF">Continuidad operativa</text>
-<text x="152.96" y="465.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#FFFFFF">5 riesgos</text>
+<text x="145.82" y="311.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#FFFFFF">7 riesgos</text>
+<text x="44.00" y="412.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#FFFFFF">Ciberseguridad y datos</text>
+<text x="156.78" y="412.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#FFFFFF">4 riesgos</text>
+<text x="44.00" y="481.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#FFFFFF">Continuidad operativa</text>
+<text x="152.96" y="481.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#FFFFFF">5 riesgos</text>
 </g>
 </svg>

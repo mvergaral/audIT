@@ -64,8 +64,8 @@
 }
 \componenteTOnce{
   componente = Tarjeta de identificación del conductor,
-  producto = MIFARE DESFire,
-  caracteristicas = Tarjeta sin contacto con clave por aplicación,
+  producto = MIFARE DESFire EV3 4K,
+  caracteristicas = Tarjeta sin contacto de 4 KB con clave por aplicación,
   ubicacion = Conductores,
   cantidad = 572,
   adquiere = CLIENTE,
@@ -88,7 +88,7 @@
   producto = Teltonika EYE Sensor BTSMP1,
   caracteristicas = Iguales a la fila 7,
   ubicacion = Semirremolques propios nuevos,
-  cantidad = {35, compradas durante la operación},
+  cantidad = {35, compradas durante la operación: 12 en el mes 24, 12 en el 36 y 11 en el 48},
   adquiere = CLIENTE,
   ciclo = Igual a la fila 7,
   justificacion = {Los semirremolques propios pasan de 210 a 245 (Caso, numeral 14.1, p. 29)}
@@ -146,7 +146,7 @@
 }
 \componenteTOnce{
   componente = Punto de acceso de patio,
-  producto = Fortinet FortiAP 234G,
+  producto = Fortinet FortiAP 234G con inyector Fortinet GPI-145,
   caracteristicas = {Wi-Fi 6E, IP67, $-50$ a $+70$ °C, 28 W por PoE 802.3bt con inyector, radio Bluetooth, administración por FortiLAN Cloud. Ficha: \parencite{fortinet_fap}},
   ubicacion = {Patio de los cinco terminales},
   cantidad = 5,
@@ -177,7 +177,7 @@
 }
 \componenteTOnce{
   componente = Firewall,
-  producto = Fortinet FortiGate 90G con segundo adaptador,
+  producto = Fortinet FortiGate 90G con segundo adaptador (un pack Fortinet SP-FG60E-PDC-5),
   caracteristicas = {Par en alta disponibilidad, 19,9 W, dos entradas de alimentación. Ficha: \parencite{fortinet_fg90g}},
   ubicacion = Rack de comunicaciones de San Bernardo,
   cantidad = {2 y 1 de repuesto},
@@ -193,7 +193,7 @@
   cantidad = {2 y 1 de repuesto},
   adquiere = CLIENTE,
   ciclo = {Soporte FortiCare contratado por 56 meses},
-  justificacion = {Par en circuitos A y B. Un solo panel para un área de TI de 9 personas}
+  justificacion = {Par en circuitos A y B. Cada equipo tiene una sola fuente interna, así que la redundancia de RT-08.04 la da el par más el repuesto en sala. Un solo panel para un área de TI de 9 personas}
 }
 \componenteTOnce{
   componente = UPS de sala,
@@ -584,7 +584,7 @@
   ubicacion = SB,
   cantidad = 1 nodo,
   adquiere = audIT,
-  ciclo = Igual a la fila 15,
+  ciclo = Igual a la fila 16,
   justificacion = {Severidad máxima de RT-21.06 del Caso. No puede depender del enlace. Costo fijo de dos nodos}
 }
 \componenteTOnce{
@@ -614,7 +614,7 @@
   ubicacion = SB,
   cantidad = {2 y 2},
   adquiere = CLIENTE,
-  ciclo = Igual a las filas 16 y 17,
+  ciclo = Igual a las filas 17 y 18,
   justificacion = {Entrada de ExpressRoute y VPN por rutas distintas (FEP02, RT-03.17 y RT-06.32)}
 }
 \componenteTOnce{
@@ -634,7 +634,7 @@
   ubicacion = GT y SB,
   cantidad = 5,
   adquiere = CLIENTE,
-  ciclo = Igual a la fila 14,
+  ciclo = Igual a la fila 15,
   justificacion = Registra el semirremolque también en camiones sin equipo audIT
 }
 \componenteTOnce{
@@ -644,7 +644,7 @@
   ubicacion = GT y SB,
   cantidad = 5,
   adquiere = CLIENTE,
-  ciclo = Igual a la fila 13,
+  ciclo = Igual a la fila 14,
   justificacion = {Restricción 5, Caso, p. 23}
 }
 \componenteTOnce{
@@ -816,8 +816,8 @@ licitación se citan en el texto por documento, artículo o numeral y página.\p
 \noindent Conforme al Comunicado 10, sección 7.2, este formulario declara la herramienta de inteligencia
 artificial generativa usada, su finalidad, el nivel de uso en texto y en diagramas y quién revisó y qué
 verificó. Esta declaración se consolida en el Formulario A-6.\par
-\usoIA{Formulario T-11}{Claude Opus 5.5 en Claude Code}{Llenado de las filas desde la arquitectura física, las cotizaciones del presupuesto de equipos y las fichas de los fabricantes}{Alto}{Ninguno}{Naomi Núñez, Líder de Calidad, e Ignacio Vera y Marcel Gutiérrez, Arquitectos de Solución: modelo, cantidad, ubicación, ciclo de vida, quién adquiere y ficha de cada componente frente al Subdocumento 4 y a la planilla económica 3.2.}
-\usoIA{Formulario T-11}{OpenAI Codex}{Alineación de las versiones de software y de sus fuentes técnicas con la sección 4.1}{Alto}{Ninguno}{Pendiente de validación por Arquitectura e Infraestructura: versiones, titularidad de licencias, componentes y referencias de fabricante.}
+\usoIA{Formulario T-11}{Claude Opus 5.5 en Claude Code}{Llenado de las filas desde la arquitectura física, las cotizaciones del presupuesto de equipos y las fichas de los fabricantes}{Alto}{Ninguno}{Naomi Núñez, Líder de Calidad, e Ignacio Vera y Marcel Gutiérrez, Arquitectos de Solución: modelo, cantidad, ubicación, ciclo de vida, quién adquiere y ficha de cada componente frente al Subdocumento 4 y al presupuesto del Sobre N.º 3.}
+\usoIA{Formulario T-11}{OpenAI Codex}{Alineación de las versiones de software y de sus fuentes técnicas con la sección 4.1}{Alto}{Ninguno}{Naomi Núñez, Líder de Calidad, e Ignacio Vera y Marcel Gutiérrez, Arquitectos de Solución: versiones, titularidad de licencias, componentes y referencias de fabricante.}
 \begin{tabla}[ancho=completo, fuente=condensada, numerada=false]{Declaración de uso de IA}{usoia-t11}%
   {L{13mm} L{24mm} X L{15mm} L{17mm} L{44mm}}
 Sección & Herramienta & Finalidad del uso & Nivel en texto & Nivel en diagramas & Revisión humana (quién y qué verificó) \\ \midrule

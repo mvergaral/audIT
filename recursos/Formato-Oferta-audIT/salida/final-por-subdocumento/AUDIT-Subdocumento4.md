@@ -892,13 +892,25 @@ El reparto de la flota sale del Caso, numeral 2.2, p. 6: 340 de los 374 camiones
 equipo, y 340 menos 192 da 148 propios, todos equipados. Los 148 propios y los 34 de terceros sin
 equipo llevan el equipo de audIT, 182 en total. Los 192 de terceros que ya tienen equipo lo conservan,
 porque la restricción 3 impide intervenirlo sin acuerdo de su dueño (Caso, capítulo 10, p. 23), y sus
-datos llegan por las plataformas de sus proveedores. La Figura 4.13 reúne la
-arquitectura física en una sola vista, con cada equipo, sus conexiones y su alimentación.
+datos llegan por las plataformas de sus proveedores. La vista completa de la arquitectura física, con
+cada equipo, sus conexiones y su alimentación, va en cinco láminas para que se lea a tamaño natural:
+San Bernardo en dos (Figura 4.13 y Figura 4.14), la nube en la Figura 4.15, los
+terminales y las contrapartes en la Figura 4.16 y la flota en la Figura 4.17. Una
+conexión que sigue en otra lámina termina en un número dentro de un círculo, el mismo en las dos
+láminas, y cada lámina trae la lista de esos números.
 
-\figuraHorizontalAqui{figuras/04-arquitectura/fisica-completa.pdf}{Vista completa de la arquitectura física, con cada equipo, sus conexiones y su alimentación}{4-fisicacompletafig}
+\figuraHorizontalAqui{figuras/04-arquitectura/fisica-lamina-a.pdf}{Vista completa, lámina A: San Bernardo, con los sistemas existentes, la energía y los racks}{4-laminaa}
 
-La vista completa sirve para ubicar cada equipo en el conjunto, y las figuras que siguen la explican por
-partes. La Figura 4.14 empieza por los tres planos y los enlaces que los unen.
+\figuraHorizontalAqui{figuras/04-arquitectura/fisica-lamina-b.pdf}{Vista completa, lámina B: San Bernardo, con el clima, la protección, el acceso, la torre y el patio}{4-laminab}
+
+\figuraHorizontalAqui{figuras/04-arquitectura/fisica-lamina-c.pdf}{Vista completa, lámina C: Azure Chile Central y Brazil South}{4-laminac}
+
+\figuraHorizontalAqui{figuras/04-arquitectura/fisica-lamina-d.pdf}{Vista completa, lámina D: terminales regionales y contrapartes}{4-laminad}
+
+\figuraHorizontalAqui{figuras/04-arquitectura/fisica-lamina-e.pdf}{Vista completa, lámina E: flota con equipo audIT y sus enlaces}{4-laminae}
+
+Las láminas sirven para ubicar cada equipo en el conjunto, y las figuras que siguen lo explican por
+partes. La Figura 4.18 empieza por los tres planos y los enlaces que los unen.
 
 \figuraHorizontalAqui{figuras/04-arquitectura/fisica-general.pdf}{Vista general de la arquitectura física: nube primaria y secundaria, San Bernardo, terminales regionales y flota, con los enlaces y su capacidad}{4-fisicafig}
 
@@ -916,23 +928,33 @@ primaria, la sala de San Bernardo, el gabinete de los terminales y la región se
 
 ### 4.2.1 Especificaciones Implementos a proveer (Hardware y Software)
 
-El hardware lo adquiere el mandante, y audIT debe especificar exactamente qué comprar, cuánto y con
-qué características (Caso, capítulo 11, p. 24). FEP02, RT-08.10, p. 19 pide para cada dispositivo marca,
+El mandante adquiere el hardware de campo y de red, y audIT debe especificar exactamente qué comprar,
+cuánto y con qué características (Caso, capítulo 11, p. 24). audIT provee la infraestructura on-premise de
+cómputo, respaldo eléctrico, clima, seguridad física y racks, y contrata el circuito ExpressRoute. La
+columna «Adquiere» del Formulario T-11 dice quién compra cada fila. FEP02, RT-08.10, p. 19 pide para cada dispositivo marca,
 modelo de referencia, cantidad, características mínimas y costo unitario estimado. El costo va en el
 Sobre N.º 3, porque el FEP01, Artículo 50.2, p. 29 no admite en la Oferta Técnica cifras que permitan inferir el
 monto. El Formulario T-11 trae el detalle de cada
-implemento, con sus características, ubicación, ciclo de vida y justificación. Cada uno de los 182 camiones lleva el computador vehicular iWave G26I con 8 GB de memoria, el
-módem satelital Iridium Edge, el lector CAN sin contacto Technoton CANCrocodile y el lector de tarjeta
-GAO RFID MIFARE DESFire, y se compran 19 juegos más de reposición. Los conductores reciben 572 tarjetas
-MIFARE DESFire, y los 210 semirremolques propios una baliza Teltonika EYE Sensor, con 21 de reposición.
-El gabinete de cada terminal regional tiene dos AAEON ICS-6280A-A10-00, un router 5G Teltonika RUTX50, un
-switch Teltonika TSW202 y una UPS APC SRT1000XLI, y cada uno de los cinco terminales recibe un punto de
-acceso de patio Fortinet FortiAP 234G y un lector de portería Minew G1. San Bernardo recibe dos
-servidores Dell PowerEdge R360, dos FortiGate 90G, dos FortiSwitch 124F-POE, dos UPS APC SRT3000 con
-batería externa, dos climas Vertiv Liebert Mini-Mate2, detección VESDA VLF-250 con extinción Kidde
-Fluoro-K, dos lectores faciales Suprema FaceStation F2, cuatro cámaras Axis con su grabador, un detector
-de agua Liebert LT460 y un grupo electrógeno Himoinsa HYW-8 T5 S5 con estanque de 100 L. Los servicios
-de nube se declaran en la sección 4.2.4.
+implemento, con sus características, ubicación, ciclo de vida y justificación.
+
+Lo que compra el mandante es el equipo de campo y de red. Cada uno de los 182 camiones lleva el
+computador vehicular iWave G26I con 8 GB de memoria, el módem satelital Iridium Edge, el lector CAN sin
+contacto Technoton CANCrocodile y el lector de tarjeta GAO RFID MIFARE DESFire, y se compran 19 juegos
+más de reposición. Los conductores reciben 572 tarjetas MIFARE DESFire EV3 4K, y los 210 semirremolques
+propios una baliza Teltonika EYE Sensor, con 21 de reposición. Cada gabinete regional recibe un router
+5G Teltonika RUTX50 y un switch Teltonika TSW202, y cada uno de los cinco terminales un punto de acceso
+de patio Fortinet FortiAP 234G con su inyector GPI-145 y un lector de portería Minew G1. San Bernardo
+recibe dos FortiGate 90G con su segundo adaptador y dos FortiSwitch 124F-POE, más uno de repuesto de
+cada uno, y los gabinetes un RUTX50 y un TSW202 de repuesto.
+
+Lo que provee audIT es la infraestructura on-premise. El gabinete de cada terminal regional tiene dos
+AAEON ICS-6280A-A10-00, sus fuentes de riel DIN y una UPS APC SRT1000XLI, con un AAEON y una UPS
+de repuesto. San Bernardo recibe dos servidores Dell PowerEdge R360 y uno de repuesto, dos UPS APC
+SRT3000 con batería externa y una de repuesto, dos climas Vertiv Liebert Mini-Mate2, detección VESDA
+VLF-250 con extinción Kidde Fluoro-K, dos extintores portátiles, dos lectores faciales Suprema
+FaceStation F2, cuatro cámaras Axis con su grabador, un detector de agua Liebert LT460, dos racks y un
+grupo electrógeno Himoinsa HYW-8 T5 S5 con estanque de 100 L. Los
+servicios de nube se declaran en la sección 4.2.4.
 
 Las cantidades salen de las poblaciones del Caso y no de la adhesión. Los 19 juegos de reposición son el
 10 % del parque redondeado hacia arriba. Las 572 tarjetas cubren a los 520 conductores que el
@@ -948,7 +970,8 @@ mes 9 están montados los 182 equipos. El piloto lo monta el personal de audIT. 
 proveedor externo con una agenda por terminal, y audIT conserva el banco de pruebas y la recepción de
 cada camión. En los meses 17 a 19 no hay montajes iniciales: se validan en los terminales las reglas de
 patio y de acople, se cierran las recepciones pendientes y se reponen equipos por excepción
-(actividad A21-PATIO). Con el contrato iniciado en febrero de 2027, ninguna instalación cae en la
+(actividad A21-PATIO). El técnico de campo de audIT cubre hasta el mes 18, y desde el mes 19 la atención
+en terreno es del proveedor externo. Con el contrato iniciado en febrero de 2027, ninguna instalación cae en la
 temporada de diciembre a abril, en que la operación no admite intervenciones (Caso, numeral 13.2, p. 27).
 
 **Estándar de homologación de los equipos de terceros.**  El Caso no pide reemplazar las
@@ -982,7 +1005,7 @@ CAN con J1939, RS232 y RS485, red celular LTE Cat 4 o Cat M1, GNSS, Wi-Fi, Bluet
 seguro Microchip TA100 para arranque seguro y almacenamiento de claves. Funciona de 9 a 32 V, de
 −40 a +70 °C y con protección IP67 (iWave Global, 2026), lo que responde a la vibración, el polvo
 y la temperatura de cabina que piden FEP02, RT-08.11, p. 19 y FEP02, RT-08.12, p. 19. Sobre él corre audIT EdgeHub, el software de
-borde de audIT que presenta el Subdocumento 1 (sección 1.1.3). La Figura 4.15 muestra el equipo con sus periféricos.
+borde de audIT que presenta el Subdocumento 1 (sección 1.1.3). La Figura 4.19 muestra el equipo con sus periféricos.
 
 \figuraAqui{195mm}{figuras/04-arquitectura/equipo-a-bordo.pdf}{Equipo a bordo: iWave G26I, periféricos, interfaces y particiones de la memoria}{4-bordofig}
 
@@ -1014,8 +1037,8 @@ del G26I declara certificaciones CE, FCC, ISED, PTCRB y AT&T, y no declara E-Mar
 que ambas quedan como condición de compra. El equipo a bordo no emite documentos tributarios: la
 restricción 8 deja al sistema contable como único emisor (Caso, capítulo 10, p. 24).
 
-**Capacidad de almacenamiento.**  La observación 73 del Informe 1 pidió derivar la capacidad en
-lugar de justificarla hacia atrás. La Tabla 4.11 suma lo que ocupa cada parte de la memoria.
+**Capacidad de almacenamiento.**  La capacidad se deriva desde lo que se guarda y no se justifica
+hacia atrás. La Tabla 4.11 suma lo que ocupa cada parte de la memoria.
 
 **Tabla 4.11.** Capacidad de almacenamiento a bordo derivada por componente
 
@@ -1044,9 +1067,10 @@ industrial durante los 56 meses del contrato.
 El FEP01, Artículo 16.2, p. 11 obliga a justificar el emplazamiento componente por componente en función de
 latencia, criticidad operacional, volumen de datos, restricciones regulatorias, disponibilidad de
 conectividad y costo total de propiedad, y califica como observación grave una asignación no
-justificada. La justificación de cada componente, con esos seis criterios, está en el Formulario T-11. De sus 39
-componentes, 24 quedan en la región primaria, en las tres zonas de Azure Chile Central, y uno, la
-réplica de recuperación, en Brazil South. Los otros 14 están fuera de la nube: cuatro en la sala de San
+justificada. La justificación de cada componente, con esos seis criterios, está en el Formulario T-11. Sus filas
+32 a 78 son 47 componentes de plataforma, software y servicios. De ellos, 32 quedan en la región
+primaria, en las tres zonas de Azure Chile Central, y uno, la réplica de recuperación, en Brazil South.
+Los otros 14 están fuera de la nube: cuatro en la sala de San
 Bernardo, tres en el gabinete de cada terminal regional, cinco en el equipo a bordo de los 182 camiones,
 uno en la baliza de los semirremolques y uno en el teléfono del conductor. La propuesta cumple el
 FEP01, Artículo 16.1, p. 11, porque no es exclusivamente en nube ni exclusivamente on-premise. Caso, RT-21.06, p. 34
@@ -1055,9 +1079,7 @@ transporte o recibir un evento de emergencia. Cuando cae el enlace, la parte on-
 registro de lo que ocurre, la consulta de vigencias en portería y la recepción de emergencias. La
 asignación de un viaje nuevo y la emisión del documento pasan siempre por el servicio central y el
 sistema contable, como fija la sección 4.1.26 (sección 4.1.26), y la torre llega a
-ellos por sus enlaces de respaldo (sección 4.2.7). El Informe 1
-declaraba 18 componentes en nube y su tabla sumaba 20 (observación 71). La cuenta actual sale de la
-lista del T-11.
+ellos por sus enlaces de respaldo (sección 4.2.7).
 
 **Trazabilidad entre la arquitectura lógica y la física.**  El Comunicado 10, sección 11
 recomienda una matriz que cruce cada componente con su lugar en el esquema de solución, en la
@@ -1156,7 +1178,7 @@ una, las subredes de borde, integración, datos y gestión son /24, y la de apli
 los nodos de AKS. Brazil South repite el esquema con 10.20.0.0/22 para su red central y 10.21.0.0/20
 para la recuperación. San Bernardo usa 172.16.0.0/22, con redes virtuales locales separadas para
 servidores, gestión, videovigilancia y acceso, y los terminales usan 172.16.4.0/22, una /24 cada uno.
-Así cualquier sitio enruta a cualquier red de Azure sin traducción de direcciones. La Figura 4.16 muestra la región primaria con sus redes, subredes y
+Así cualquier sitio enruta a cualquier red de Azure sin traducción de direcciones. La Figura 4.20 muestra la región primaria con sus redes, subredes y
 servicios.
 
 \figuraHorizontalAqui{figuras/04-arquitectura/region-primaria.pdf}{Región primaria Azure Chile Central: red central, red de producción, subredes, servicios con su nivel y conexiones con San Bernardo y los terminales}{4-azurefig}
@@ -1178,7 +1200,7 @@ automática, como fija el Subdocumento 6.
 ### 4.2.6 Ambientes, alta disponibilidad y respaldos
 
 La solución tiene cinco ambientes y cada uno vive en su propia suscripción, como muestra la
-Figura 4.17.
+Figura 4.21.
 
 \figuraAqui{180mm}{figuras/04-arquitectura/ambientes.pdf}{Ambientes de la solución, cada uno en su suscripción, creados desde el mismo código}{4-ambientesfig}
 
@@ -1187,7 +1209,7 @@ repite la arquitectura de producción a escala reducida, y ahí se ejecutan las 
 FEP02, RT-09.06, p. 21 fija en 1,5 veces el peak declarado. Producción corre en las tres zonas de Chile
 Central. El ambiente de recuperación está en Brazil South, en espera, y se describe en la
 sección 4.3.2. Los cinco se levantan desde el mismo código de infraestructura, de modo que el de
-recuperación es idéntico a producción por construcción. La Figura 4.18 sigue una versión
+recuperación es idéntico a producción por construcción. La Figura 4.22 sigue una versión
 desde el repositorio hasta producción.
 
 \figuraHorizontalAqui{figuras/04-arquitectura/ambientes-promocion.pdf}{Promoción de una versión desde el repositorio hasta producción}{4-promocionfig}
@@ -1261,7 +1283,11 @@ que solo se cambia cuando el camión pasa por un terminal, cada seis días en pr
 
 FEP02, RT-08.04, p. 18 pide fuentes de poder redundantes conectadas a circuitos distintos. Los servidores
 R360 tienen dos fuentes, una en cada alimentación, y cada FortiGate 90G lleva su segundo adaptador, con
-un adaptador en cada circuito (Fortinet, 2026). En cada terminal, los dos ICS-6280, el router
+un adaptador en cada circuito (Fortinet, 2026). Cada FortiSwitch 124F-POE tiene una sola
+fuente interna, así que la redundancia está en el par: un switch en el circuito A y otro en el B, con
+los servidores y los FortiGate conectados a ambos, y un tercero de repuesto en la sala. Si el diseño
+detallado exige doble fuente en cada chasis, se cambia por un modelo con fuente redundante antes de la
+compra del mes 3. En cada terminal, los dos ICS-6280, el router
 RUTX50 y el conmutador TSW202 reciben corriente continua desde dos fuentes de riel DIN conectadas a
 circuitos distintos, una a la UPS del gabinete y otra a un segundo circuito del tablero, unidas por un
 módulo de redundancia. Hay dos buses de este tipo, uno de 24 V para los equipos de cómputo y el router y
@@ -1293,7 +1319,7 @@ Tabla 4.13 muestra lo que acumula un camión en 72 horas sin cobertura.
 Un camión junta cerca de 6.000 registros y 0,78 MB sin contar las fotos. Agrupados en mensajes de
 4 KB (4.096 bytes), que es la unidad con que IoT Hub cuenta su cuota (Microsoft, s. f.), son 192 mensajes
 por camión. La Tabla 4.14 aplica eso a 300 camiones que salen a la vez de una sombra, y la
-Figura 4.19 sigue el camino de esos mensajes. Son estimaciones de diseño que se comprueban
+Figura 4.23 sigue el camino de esos mensajes. Son estimaciones de diseño que se comprueban
 en la prueba CP-PERF-02 de la certificación de la Etapa 1.
 
 **Tabla 4.14.** Estimación de la reconexión simultánea de 300 camiones tras 72 horas
@@ -1363,8 +1389,8 @@ si cuatro camiones se actualizan en la misma hora de relevo. El ancho de banda d
 los usuarios de la casa matriz y de la torre, y por eso el circuito ExpressRoute es de 100 Mbit/s, el
 siguiente escalón comercial sobre 52 Mbit/s.
 
-La observación 75 pidió además el volumen transaccional anual y el de la evidencia que se almacena. La
-Tabla 4.16 los reúne.
+El volumen transaccional anual y el de la evidencia que se almacena también se derivan de las
+poblaciones del Caso. La Tabla 4.16 los reúne.
 
 **Tabla 4.16.** Volumen transaccional y de evidencia al año
 
@@ -1403,8 +1429,8 @@ relevo de madrugada. Con 8 minutos por contacto, la meta de FEP02, RT-21.06, p. 
 contactos atendidos antes de 20 segundos y abandono de 5 % o menos, se cumple con dos agentes entre
 las 4:00 y las 8:00 y uno el resto del día, con el desborde del nivel 2. Esos puestos suman 851 horas
 al mes, que cubren seis agentes en turnos más una jornada de suplencias para ausencias y picos, siete
-en total. El campo en la operación lo atiende media jornada de audIT para recepción en terminal, stock
-y coordinación, y un proveedor externo hace tres visitas correctivas y dos rondas regionales al mes como
+en total. El campo en la operación lo atiende media jornada de audIT, 80 horas al mes, para recepción en
+terminal, stock y coordinación, y un proveedor externo hace tres visitas correctivas y dos rondas regionales al mes como
 base, más las urgencias de 4 horas. El cálculo completo, la atención y el escalamiento están en el
 Subdocumento 10.
 
@@ -1437,7 +1463,7 @@ Tabla 4.17 con la forma en que se cierran.
 | S-17 | Ventana de disponibilidad de las plataformas de terceros y de la autoridad tributaria | No declarada por las bases | Consulta al mandante |
 | S-18 | Suscripción de Azure | A nombre del mandante | Reversibilidad de RT-03.07 |
 
-*Fuente: elaboración propia. S-01 a S-17 vienen del Informe 1 y se actualizaron con las decisiones de esta instancia.*
+*Fuente: elaboración propia.*
 
 Cada supuesto tiene un mecanismo de cierre en la Etapa 1 o en la compra. Ninguno fija un valor que las
 bases entreguen de otra forma.
@@ -1454,7 +1480,7 @@ hace mientras tanto. Los plazos son los de la red del Formulario T-15.
 | Parque de los terceros con equipo propio | Marca, modelo, protocolo y capacidad de cada equipo | Verificación A04 con los tres proveedores de posicionamiento, días hábiles 5 a 65 (meses 1 a 4) | Integración por plataforma según la sección 4.2.1. Si un proveedor no entrega datos, rige la respuesta de R-08 |
 | Conductor que manejó otro camión sin dispositivo | Rastro instrumental de esa jornada | Contrastar jornada con la cascada de evidencia antes de asignar | Bloquear si la evidencia exigible falta. Aplicar solo la excepción RN-04 documentada |
 | Consultas del Artículo 43 sin respuesta | Interpretación del mandante en cuatro materias | Respuesta del mandante, o validación en el levantamiento A02 antes del H1 | La propuesta de audIT queda como supuesto y cambia por control de cambios |
-| Autonomía del canal satelital | Registros que conserva el canal | El Iridium Edge del Formulario T-11 no guarda registros: transmite lo que entrega el G26I, que guarda 288 horas (sección 4.2.2). El producto del Informe 1, de 40 horas (Webfleet, 2026), ya no es parte de la oferta | Prueba de 72 horas sin pérdida de eventos del paquete 4.1, meses 4 a 9 |
+| Autonomía del canal satelital | Registros que conserva el canal | El Iridium Edge del Formulario T-11 no guarda registros: transmite lo que entrega el G26I, que guarda 288 horas (sección 4.2.2). El producto satelital de 40 horas (Webfleet, 2026) no es parte de la oferta | Prueba de 72 horas sin pérdida de eventos del paquete 4.1, meses 4 a 9 |
 
 *Fuente: elaboración propia con la red del Formulario T-15.*
 
@@ -1517,8 +1543,8 @@ Tabla 4.19 compara cada exigencia con lo que hay y con lo que se instala.
 *Fuente: FEP02, capítulo 6, pp. 14 a 17, y Caso, capítulo 5, p. 13.*
 
 La brecha está en energía, clima, incendio y acceso, que son los ámbitos que el numeral 6.1 exige para
-una sala de sitio. El agente de extinción es el FK-5-1-12. El Informe 1 proponía el Novec 1230, que es
-ese mismo compuesto, pero 3M dejó de fabricarlo a fines de 2025 (Fike, 2025). Kidde lo
+una sala de sitio. El agente de extinción es el FK-5-1-12. Su marca más conocida, Novec 1230, dejó de fabricarse
+a fines de 2025, cuando 3M cerró su producción (Fike, 2025). Kidde lo
 ofrece como Fluoro-K, con aprobación UL y FM (Kidde Fire Systems, 2026), lo que cumple
 FEP02, RT-06.17, p. 15. La detección y la extinción se integran al monitoreo, que avisa al centro de
 operación y a la contraparte del mandante (FEP02, RT-06.19, p. 16), y la sala suma dos extintores
@@ -1567,7 +1593,9 @@ Un grupo de 15 kVA quedaría bajo el 30 %, carga con la que un motor diésel acu
 quemar. A plena carga consume 2,68 litros por hora, 64,3 litros en 24 horas, y el estanque opcional de
 100 litros cumple las 24 horas de FEP02, RT-06.08, p. 15 con margen. El reabastecimiento se hace desde el
 estanque de combustible propio que la compañía tiene en San Bernardo (Caso, numeral 2.2, p. 6), con un
-contrato de respaldo con el proveedor de combustible.
+contrato de respaldo con el proveedor de combustible. Desde el mes 4, audIT se hace cargo del
+combustible de las pruebas periódicas con carga, unos 50 litros al mes, y de la energía de la sala y de
+los cuatro gabinetes regionales, estimada en 3.000 kWh al mes.
 
 La videovigilancia guarda 30 días en línea, como pide FEP02, RT-06.24, p. 16. Cuatro cámaras Axis
 M3215-LVE a 2 Mbit/s en H.265 generan 2,59 TB en 30 días, y el grabador Axis S3008 Mk II de 4 TB los
@@ -1576,8 +1604,8 @@ de Azure, lo que suma 8 Mbit/s al enlace de San Bernardo, dentro de su capacidad
 
 **Plano de la sala.**  FEP02, RT-06.03, p. 14 pide el plano de distribución con las zonas de
 generadores, baterías, climatización, servidores, comunicaciones, trabajo y respaldo. El numeral 6.1 lo
-exige a la sala principal, y esta oferta lo entrega igual porque la revisión del Informe 1 lo pidió. La
-Figura 4.20 lo muestra sobre una planta supuesta de 6,5 por 4 metros, que suma los 26 m²
+exige a la sala principal, y esta oferta lo entrega igual para la sala de sitio. La
+Figura 4.24 lo muestra sobre una planta supuesta de 6,5 por 4 metros, que suma los 26 m²
 del Caso.
 
 \figuraAqui{178mm}{figuras/04-arquitectura/sala-san-bernardo.pdf}{Plano de la sala de San Bernardo con sus zonas, a proporción de 26 m²}{4-planofig}
@@ -1595,7 +1623,7 @@ FEP02, RT-06.32, p. 17. Las medidas de detalle se confirman en el levantamiento 
 Caso solo entrega la superficie.
 
 **Gabinetes de los terminales regionales.**  Cada terminal regional lleva el gabinete de la
-Figura 4.21.
+Figura 4.25.
 
 \figuraAqui{215mm}{figuras/04-arquitectura/gabinete-terminal.pdf}{Gabinete de un terminal regional, con sus enlaces, el punto de acceso de patio y el lector de portería}{4-terminalfig}
 
@@ -1634,7 +1662,7 @@ con margen sobre el mínimo físico, para que la réplica asíncrona sostenga el
 >
 > Métrica: Latencia de ida y vuelta entre Chile Central y Brazil South bajo 60 ms. Se verifica en: Medición en la Etapa 1, antes del hito H5. Fuente: Mínimo físico de 26 ms calculado en esta sección.
 
-La Figura 4.22 muestra la región secundaria. Tiene las mismas redes, subredes y servicios
+La Figura 4.26 muestra la región secundaria. Tiene las mismas redes, subredes y servicios
 que la primaria, porque se levanta desde el mismo código, con el estado de cada servicio en espera y las
 réplicas que llegan desde Chile Central. Sus subredes repiten dentro de 10.21.0.0/20 las posiciones de
 Chile Central.
@@ -1665,7 +1693,7 @@ Event Hubs, cuya réplica frena la entrada cuando el retraso supera el máximo c
 72 horas, así que tras una conmutación reenvía el tramo que la réplica pudo no alcanzar, y la clave de
 idempotencia de siete días descarta los duplicados.
 
-La Figura 4.23 muestra la recuperación como un procedimiento, de izquierda a derecha. Empieza en la
+La Figura 4.27 muestra la recuperación como un procedimiento, de izquierda a derecha. Empieza en la
 operación normal, con las réplicas hacia Brazil South, y termina en la vuelta a Chile Central. Arriba
 van los tiempos que la fijan y abajo, aparte, el eje de continuidad.
 
@@ -1834,20 +1862,20 @@ Conforme al Comunicado 10, sección 7.2, cada sección de este subdocumento y ca
 | Sección | Herramienta | Finalidad del uso | Nivel en texto | Nivel en diagramas | Revisión humana (quién y qué verificó) |
 |---|---|---|---|---|---|
 | Introducción | Claude Opus 5.5 en Claude Code | Redacción inicial del resumen a partir de las decisiones de diseño del equipo | Alto | Ninguno | Ignacio Vera, Arquitecto de Solución: alcance del resumen y su coherencia con las secciones 4.1 a 4.3. |
-| 4 y 4.1.1 a 4.1.26 | OpenAI Codex (GPT-6) | Contraste con las bases y con los Subdocumentos 3, 5, 6, 7 y 9, corrección de contratos, decisiones y capacidad, y figuras de capas, secuencias y documento sin cobertura | Alto | Alto | Responsable D3, Arquitecto de Solución: decisiones de arquitectura, contratos, presupuesto de la asignación y supuestos de capacidad de la arquitectura lógica. |
-| 4.1 | Claude Opus 5.5 en Claude Code | Integración al formato con verificación de citas y versiones, ajuste al formato de las cuatro secuencias y del documento sin cobertura, y diagramas de contextos, integraciones, resiliencia, capa anticorrupción, analítica y modelo táctico generados con un guion sobre los modelos del equipo | Alto | Medio | Arquitectura de Solución: citas a las bases, versiones de cada fabricante y correspondencia de las figuras con el texto. |
-| 4.1 y continuidad | Codex | Versiones, estado de ADR, dimensionamiento, condiciones de DR y liquidación por tramo. Actualización de la secuencia y validación de legibilidad de los diagramas | Alto | Medio | Pendiente de validación de Arquitectura e Infraestructura. |
+| 4 y 4.1.1 a 4.1.26 | OpenAI Codex (GPT-6) | Contraste con las bases y con los Subdocumentos 3, 5, 6, 7 y 9, corrección de contratos, decisiones y capacidad, y figuras de capas, secuencias y documento sin cobertura | Alto | Alto | Naomi Núñez, Líder de Calidad, e Ignacio Vera y Marcel Gutiérrez, Arquitectos de Solución: decisiones de arquitectura, contratos, presupuesto de la asignación y supuestos de capacidad de la arquitectura lógica. |
+| 4.1 | Claude Opus 5.5 en Claude Code | Integración al formato con verificación de citas y versiones, ajuste al formato de las cuatro secuencias y del documento sin cobertura, y diagramas de contextos, integraciones, resiliencia, capa anticorrupción, analítica y modelo táctico generados con un guion sobre los modelos del equipo | Alto | Medio | Naomi Núñez, Líder de Calidad, e Ignacio Vera y Marcel Gutiérrez, Arquitectos de Solución: citas a las bases, versiones de cada fabricante y correspondencia de las figuras con el texto. |
+| 4.1 y continuidad | Codex | Versiones, estado de ADR, dimensionamiento, condiciones de DR y liquidación por tramo. Actualización de la secuencia y validación de legibilidad de los diagramas | Alto | Medio | Naomi Núñez, Líder de Calidad, e Ignacio Vera y Marcel Gutiérrez, Arquitectos de Solución: versiones, estado de cada decisión de arquitectura, dimensionamiento, condiciones de recuperación, liquidación por tramo y legibilidad de los diagramas. |
 | 4.2 | Claude Opus 5.5 en Claude Code | Redacción inicial del texto desde las decisiones de diseño del equipo, diagrama general generado con un guion desde el modelo definido por el equipo y rótulo del enlace de la autoridad tributaria | Alto | Medio | Naomi Núñez, Líder de Calidad, e Ignacio Vera y Marcel Gutiérrez, Arquitectos de Solución: emplazamiento de cada componente, correspondencia del diagrama general con el Formulario T-11 y enlace externo de la autoridad tributaria (observación ARQ-08). |
 | 4.2.1 | Claude Opus 5.5 en Claude Code | Búsqueda de fichas de fabricante, cantidades desde el Caso y redacción inicial | Alto | Ninguno | Ignacio Vera, Arquitecto de Solución: fichas de fabricante y cantidades frente a las poblaciones del Caso. |
-| 4.2.2 | Claude Opus 5.5 en Claude Code | Fichas del equipo a bordo, cálculo del almacenamiento y calendario de montaje alineado con el Formulario T-14 y la planilla económica 3.2, y diagrama generado con un guion desde el modelo definido por el equipo | Alto | Medio | Naomi Núñez, Líder de Calidad, e Ignacio Vera y Marcel Gutiérrez, Arquitectos de Solución: cálculo del almacenamiento a bordo, especificaciones del equipo, meses de montaje y quién monta cada lote. |
+| 4.2.2 | Claude Opus 5.5 en Claude Code | Fichas del equipo a bordo, cálculo del almacenamiento y calendario de montaje alineado con el Formulario T-14 y el presupuesto del Sobre N.º 3, y diagrama generado con un guion desde el modelo definido por el equipo | Alto | Medio | Naomi Núñez, Líder de Calidad, e Ignacio Vera y Marcel Gutiérrez, Arquitectos de Solución: cálculo del almacenamiento a bordo, especificaciones del equipo, meses de montaje y quién monta cada lote. |
 | 4.2.3 | Claude Opus 5.5 en Claude Code | Conteo del emplazamiento y matriz de trazabilidad | Alto | Ninguno | Ignacio Vera, Arquitecto de Solución: conteo de componentes y matriz de trazabilidad. |
 | 4.2.4 | Claude Opus 5.5 en Claude Code | Verificación de servicios y niveles en la documentación de Microsoft, y actualización para la oferta final con APIM en dos zonas, herramientas del ciclo de desarrollo, analítica e identidad | Alto | Ninguno | Naomi Núñez, Líder de Calidad, e Ignacio Vera y Marcel Gutiérrez, Arquitectos de Solución: servicios, niveles, disponibilidad regional y coherencia con el Formulario T-11. |
 | 4.2.5 | Claude Opus 5.5 en Claude Code | Plan de direcciones con la red de herramientas, y diagrama de la región primaria generado con un guion desde el modelo definido por el equipo | Alto | Medio | Naomi Núñez, Líder de Calidad, e Ignacio Vera y Marcel Gutiérrez, Arquitectos de Solución: plan de direcciones, segmentación y figura de la región primaria. |
 | 4.2.6 | Claude Opus 5.5 en Claude Code | Redacción inicial de ambientes, promoción y respaldos, corrección de API Management a dos zonas, y los dos diagramas generados con un guion desde el modelo definido por el equipo | Alto | Medio | Naomi Núñez, Líder de Calidad, e Ignacio Vera y Marcel Gutiérrez, Arquitectos de Solución: ambientes, alta disponibilidad, respaldos y correspondencia de los dos diagramas. |
-| 4.2.7 | Claude Opus 5.5 en Claude Code | Enlaces, puntos únicos de falla y tiempos de conmutación con fuente, y respuesta a la observación ARQ-04 sobre el circuito ExpressRoute | Alto | Ninguno | Naomi Núñez, Líder de Calidad, e Ignacio Vera y Marcel Gutiérrez, Arquitectos de Solución: enlaces, conmutación, alternativa al circuito y su riesgo R-33. |
+| 4.2.7 | Claude Opus 5.5 en Claude Code | Enlaces, puntos únicos de falla y tiempos de conmutación con fuente, y alternativa si el circuito ExpressRoute no llega a Chile Central | Alto | Ninguno | Naomi Núñez, Líder de Calidad, e Ignacio Vera y Marcel Gutiérrez, Arquitectos de Solución: enlaces, conmutación, alternativa al circuito y su riesgo R-33. |
 | 4.2.8 | Claude Opus 5.5 en Claude Code | Cálculo del dimensionamiento con un guion, resumen del dimensionamiento de la mesa de servicio del Subdocumento 10 y diagrama de la reconexión generado con un guion desde el modelo definido por el equipo | Alto | Medio | Naomi Núñez, Líder de Calidad, e Ignacio Vera y Marcel Gutiérrez, Arquitectos de Solución: cálculos del dimensionamiento y de la reconexión, y contactos, agentes y jornadas de la mesa frente al Subdocumento 10 (observación ARQ-03). |
-| 4.2.9 | Claude Opus 5.5 en Claude Code | Actualización de los supuestos y tabla de brechas con su cierre y contingencia (observación ARQ-07) | Medio | Ninguno | Naomi Núñez, Líder de Calidad, e Ignacio Vera y Marcel Gutiérrez, Arquitectos de Solución: supuestos, brechas, plazos de la red del T-15 y contingencias. |
+| 4.2.9 | Claude Opus 5.5 en Claude Code | Actualización de los supuestos y tabla de brechas con su cierre y contingencia | Medio | Ninguno | Naomi Núñez, Líder de Calidad, e Ignacio Vera y Marcel Gutiérrez, Arquitectos de Solución: supuestos, brechas, plazos de la red del T-15 y contingencias. |
 | 4.3 | Claude Opus 5.5 en Claude Code | Redacción inicial de tipologías | Alto | Ninguno | Ignacio Vera, Arquitecto de Solución: tipología de los centros de datos frente al numeral 6.1 transversal. |
 | 4.3.1 | Claude Opus 5.5 en Claude Code | Fichas y balance eléctrico con un guion, y plano de la sala y gabinete generados con un guion desde el modelo definido por el equipo | Alto | Medio | Ignacio Vera, Arquitecto de Solución: fichas, balance eléctrico, plano de la sala y gabinete. |
-| 4.3.2 | Claude Opus 5.5 en Claude Code | Réplicas con fuente, protocolo de conmutación, compromiso de latencia, vía de recuperación de datos personales alineada con el Subdocumento 5 y alternativa sin transferencia con su fuente (observación ARQ-05), y diagramas generados con un guion desde el modelo definido por el equipo | Alto | Medio | Naomi Núñez, Líder de Calidad, e Ignacio Vera y Marcel Gutiérrez, Arquitectos de Solución: réplicas, conmutación, condición de la transferencia en el H2, alta disponibilidad entre zonas frente a su fuente y registro en R-24. |
+| 4.3.2 | Claude Opus 5.5 en Claude Code | Réplicas con fuente, protocolo de conmutación, compromiso de latencia, vía de recuperación de datos personales alineada con el Subdocumento 5 y alternativa sin transferencia con su fuente, y diagramas generados con un guion desde el modelo definido por el equipo | Alto | Medio | Naomi Núñez, Líder de Calidad, e Ignacio Vera y Marcel Gutiérrez, Arquitectos de Solución: réplicas, conmutación, condición de la transferencia en el H2, alta disponibilidad entre zonas frente a su fuente y registro en R-24. |
 | Formulario T-11 | Claude Opus 5.5 en Claude Code | Armado de las filas desde las fichas y las decisiones de diseño del equipo, y actualización para la oferta final: quién adquiere cada componente, repuestos, crecimiento, fuente por fila y seis filas de herramientas, analítica e identidad | Alto | Ninguno | Naomi Núñez, Líder de Calidad, e Ignacio Vera y Marcel Gutiérrez, Arquitectos de Solución: cantidades, ubicación, adquirente, fuente y justificación de cada componente. |

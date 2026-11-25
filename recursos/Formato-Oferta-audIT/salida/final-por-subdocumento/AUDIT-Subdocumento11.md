@@ -16,7 +16,7 @@ audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. O
 > - Un plan de mantención preventiva, correctiva, evolutiva y normativa con criterios de prioridad y capacidad declarada por tipo.
 > - Una bolsa de 3.360 horas de mantención evolutiva entre los meses 25 y 56, declarada por tramo y acumulable, con su procedimiento de solicitud, estimación, aprobación y liquidación.
 > - Una política de presupuesto de error y un análisis sin culpa para cada incidente crítico o alto.
-> - Seis pruebas reales de recuperación y cuatro ejercicios de resiliencia al año, todos fuera de la temporada de fruta y de los demás congelamientos.
+> - Dos pruebas reales de recuperación al año, seis en los 36 meses, y dos ejercicios de resiliencia al año con cuatro escenarios, todos fuera de la temporada de fruta y de los demás congelamientos.
 
 La operación tiene cuatro paquetes, con la dotación que presupuesta el Sobre N.º 3: la mesa de servicio
 (13.1, siete personas con la jornada de suplencias), la operación de la plataforma y gestión del
@@ -45,14 +45,15 @@ trabajos y la deuda técnica en cada tramo de la operación.
 | Actualización de versiones y normativa | 62 | 96 | 96 | 96 |
 | Operación de las innovaciones y desborde | 14 | 32 | 32 | 32 |
 | Cierre de los paquetes 6.5 y 7.2 | 372 | 0 | 0 | 0 |
+| Refuerzo temporal de datos y pruebas para los cierres | 103 | 0 | 0 | 0 |
 | Bolsa evolutiva del mandante | 0 | 168 | 112 | 56 |
 | Reducción de la deuda técnica | 0 | 72 | 48 | 24 |
-| Total del paquete | 640 | 560 | 480 | 400 |
+| Total del paquete | 743 | 560 | 480 | 400 |
 
-*Fuente: elaboración propia sobre el presupuesto de soporte del Sobre N.º 3. Las columnas son meses del contrato.*
+*Fuente: elaboración propia sobre el presupuesto de soporte del Sobre N.º 3. Las columnas son meses del contrato. La base del paquete es de 640 horas. En el mes 21 se suman 80 horas de software por el paso a producción de la Etapa 2, 823 en total.*
 
 La parte fija, 320 horas de corrección, actualización e innovaciones, se mantiene durante toda la
-operación. Lo que baja es la parte variable de mejoras y deuda técnica: queda en el 75 % desde el mes
+operación, y el refuerzo de los meses 21 a 24 termina con los cierres. Lo que baja es la parte variable de mejoras y deuda técnica: queda en el 75 % desde el mes
 25, en el 50 % desde el 33 y en el 25 % desde el 45. Cada escalón exige dos meses sin incidentes
 críticos, menos de diez solicitudes pendientes y una demanda que quepa en la capacidad del tramo, para
 no arriesgar los plazos del FEP01, Artículo 78.2, p. 40. Si no se cumplen, el paquete conserva la capacidad del tramo
@@ -93,10 +94,10 @@ del paquete 13.4.
 En los meses 21 a 24 la correctiva conserva sus 192 horas, porque los incidentes no esperan, y las 62
 que quedan van a parches y adecuaciones normativas. La bolsa evolutiva y el carril de deuda técnica
 empiezan en el mes 25, cuando terminan los cierres. Los perfiles más cargados en esos meses son datos y
-calidad: el paquete 13.4 necesita cerca de 146 horas de datos y 77 de pruebas al mes. El Líder de Datos
-y la Líder de Calidad aportan 80 y 40 horas desde su dedicación en la operación (Subdocumento 12), y el
-resto, 66 horas de datos y 37 de pruebas al mes, es un refuerzo temporal de esos cuatro meses, junto con
-30 horas de arquitectura y de interfaces para cerrar el paquete 6.5. Las 14 horas de innovaciones de este paquete son la mitad de
+calidad: el paquete 13.4 tiene 226 horas de datos y 197 de pruebas al mes, que incluyen un refuerzo
+temporal de 66 y 37 horas para los cierres. Así el paquete suma 743 horas al mes, y 823 en el mes 21
+con las 80 de software del paso a producción. Aparte, 30 horas de arquitectura y de interfaces en el
+mes 21 y 28 en cada uno de los tres siguientes cierran el paquete 6.5. Las 14 horas de innovaciones de este paquete son la mitad de
 las 28 que piden las innovaciones 1 y 2 en operación, 12 del expediente verificable y 16 de la
 programación por oportunidad de patio, y la otra mitad la pone el paquete 13.2.
 
@@ -129,8 +130,9 @@ de siempre: desarrollo, QA, preproducción y producción, con la versión anteri
 La deuda técnica tiene un registro cuantificado y una fracción fija de la capacidad, como pide
 FEP02, RT-21.21, p. 38. Cada partida del registro dice qué es, qué riesgo trae, cuántas horas cuesta
 corregirla y qué cuesta postergarla. El carril de deuda técnica del tablero Kanban que fija el
-Subdocumento 6 toma las 96 horas mensuales de la Tabla 11.1, el 15 % de la mantención, más
-el saldo que deje la correctiva. Esa fracción no viene del 15 % de los sprints de construcción: sale de
+Subdocumento 6 toma la capacidad de cada tramo de la Tabla 11.1, 72 horas al mes entre los
+meses 25 y 32, 48 entre los meses 33 y 44 y 24 entre los meses 45 y 56, el 30 % de la parte variable
+de cada tramo, más el saldo que deje la correctiva. Esa fracción no viene del 15 % de los sprints de construcción: sale de
 la dotación de operación del Formulario T-15. El registro se revisa cada mes en el Comité de Operación, y
 su tamaño total en horas es un indicador del informe mensual.
 
@@ -170,7 +172,8 @@ del pipeline se encienden solo mientras hay trabajos. Las cargas estables, como 
 bases de producción, se evalúan para compromisos de capacidad de uno o tres años después de tres meses
 de operación sin cambios de tamaño, y la decisión se toma con el mandante, porque la suscripción está a
 su nombre. Lo mismo vale para las licencias: los usuarios de GitLab siguen la dotación, 33 en la
-primera etapa, 37 en el peak y 16 desde el mes 25, y la capacidad de 100.000 líneas de SonarQube se
+primera etapa, 37 en el peak y, desde el mes 25, la dotación de operación, que baja de 15 a 14 personas
+con los escalones de madurez, y la capacidad de 100.000 líneas de SonarQube se
 revisa cada año contra el código real antes de renovar. En la operación los dos runners del pipeline
 corren unas 40 horas al mes cada uno. Para operar, la revisión mensual de costos es parte del Comité de
 Operación, y una desviación sobre el presupuesto de un ambiente abre una acción con responsable.
@@ -246,8 +249,8 @@ porque ninguna prueba depende de un camión en ruta internacional.
 
 Los ejercicios de resiliencia prueban las fallas que no son un desastre regional. En julio se simula la
 caída de una zona de disponibilidad de producción y se corta el circuito ExpressRoute para medir la conmutación a la
-VPN, que debe ocurrir en hasta un minuto. En octubre un terminal opera 12 horas sin enlace, como exige
-Caso, RT-03.10, p. 31, y una muestra de equipos a bordo acumula 72 horas sin cobertura y se reconecta a la
+VPN, que debe ocurrir en hasta un minuto. En octubre un terminal opera al menos 24 horas sin enlace, el mayor
+entre las 12 del Caso, RT-03.10, p. 31 y las 24 del FEP01, Artículo 16.4, p. 12, y una muestra de equipos a bordo acumula 72 horas sin cobertura y se reconecta a la
 vez, para medir que la sincronización no pase de 20 minutos. Además, cada mes se restaura un respaldo
 elegido al azar para comprobar que el esquema 3-2-1-1-0 de FEP02, RT-07.09, p. 18 termina en cero errores
 de restauración. Cada ejercicio deja un informe con lo medido, lo que falló y el plan de corrección, que
@@ -271,6 +274,6 @@ Conforme al Comunicado 10, sección 7.2, cada sección de este subdocumento y ca
 
 | Sección | Herramienta | Finalidad del uso | Nivel en texto | Nivel en diagramas | Revisión humana (quién y qué verificó) |
 |---|---|---|---|---|---|
-| Introducción y 11.1 | Claude Opus 5.5 en Claude Code | Redacción inicial del plan de mantención, reparto de la capacidad del paquete 13.4 por tramo con los escalones de madurez de la planilla económica 3.2, bolsa evolutiva y transición de los meses 21 a 24 desde el Formulario T-15 y FEP02, capítulo 21 | Alto | Ninguno | Naomi Núñez, Líder de Calidad, e Ignacio Vera y Marcel Gutiérrez, Arquitectos de Solución: horas por tipo de trabajo y tramo, horas de cierre de los paquetes 6.5 y 7.2, criterios de cada escalón y bolsa de 3.360 horas desde el mes 25. |
+| Introducción y 11.1 | Claude Opus 5.5 en Claude Code | Redacción inicial del plan de mantención, reparto de la capacidad del paquete 13.4 por tramo con los escalones de madurez del presupuesto del Sobre N.º 3, bolsa evolutiva y transición de los meses 21 a 24 desde el Formulario T-15 y FEP02, capítulo 21 | Alto | Ninguno | Naomi Núñez, Líder de Calidad, e Ignacio Vera y Marcel Gutiérrez, Arquitectos de Solución: horas por tipo de trabajo y tramo, horas de cierre de los paquetes 6.5 y 7.2, criterios de cada escalón y bolsa de 3.360 horas desde el mes 25. |
 | 11.2 y 11.3 | Claude Opus 5.5 en Claude Code | Redacción inicial de la ventana de obsolescencia, la deuda técnica, el presupuesto de error y el análisis sin culpa, coherentes con los Subdocumentos 4, 6 y 10 | Alto | Ninguno | Naomi Núñez, Líder de Calidad, e Ignacio Vera y Marcel Gutiérrez, Arquitectos de Solución: fechas de fin de soporte, ritmos de actualización, reglas del presupuesto de error y plazos del Artículo 78. |
 | 11.4 y 11.5 | Claude Opus 5.5 en Claude Code | Redacción inicial de la capacidad de nube y hardware, de las licencias y del calendario de pruebas, y figura del año tipo dibujada en TikZ desde el calendario definido por el equipo | Alto | Medio | Naomi Núñez, Líder de Calidad, e Ignacio Vera y Marcel Gutiérrez, Arquitectos de Solución: umbrales, juegos por crecimiento del Formulario T-11, usuarios de licencias, meses de cada prueba frente a los congelamientos del Caso. |

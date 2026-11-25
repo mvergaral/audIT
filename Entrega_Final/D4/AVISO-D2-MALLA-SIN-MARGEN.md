@@ -9,6 +9,12 @@
 | Guion | `Informe-2/D4/riesgos/montecarlo32.py` (salida `montecarlo32.json`) |
 | Decisión de D4 | D4-161 y D4-162 |
 
+## 0. Estado al 2026-11-25
+
+- D2 reprodujo la simulación sobre los 122 nodos y confirmó el resultado (`outputs/cierre-d2-final/RESPUESTA-D4-PARA-COORDINAR.md`). La malla no cambió: H4, H7 y H12 sin margen y H11 con fecha fija protegida por A23. El S7 ya lo explica, y el S8 y R-17 quedaron con la misma redacción (D4-163).
+- D2 corrigió en su copia económica final las notas C83 y A17 de la planilla: 182 equipos montados en M9 y técnico interno hasta antes de M19. El punto 3 de la sección 4 queda cerrado.
+- Sigue abierto: la validación de capacidad, ventanas y tres puntos antes del H1 y la nueva corrida de la simulación con la línea base.
+
 ## 1. Hallazgo
 
 En la malla conciliada, cuatro hitos de pago terminan justo en su límite contractual, sin días de margen:

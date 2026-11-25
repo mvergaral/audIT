@@ -101,10 +101,10 @@ R = [
      "Reserva A14 de 14 días y A13 diez días antes del fin de A09, condicionada a la entrega G13, con registro del atraso si faltan la versión de preproducción, los datos o el material",
      "Jefe de Proyecto", "Mitigar", "Entrega G13 incompleta el día 182 o consumo de más de la mitad de la reserva A14", "Quincenal hasta el día 240"),
     ("R-17", "G", "Margen de los hitos de pago",
-     "En la malla del Formulario T-15, H1 y H2 tienen 2 y 4 días hábiles de margen, y H4, H7, H11 y H12 terminan en su límite contractual, de modo que un atraso en la construcción de cada etapa o en la preparación de cada paso a producción mueve el hito y su pago",
+     "En la malla del Formulario T-15, H1 y H2 tienen 2 y 4 días hábiles de margen, H4, H7 y H12 terminan en su límite contractual y H11 depende de la reserva A23, de modo que un atraso en la construcción de cada etapa o en la preparación de cada paso a producción mueve el hito y su pago",
      4, 3, 2, 3,
-     "Ajuste de la malla con la planificación del Subdocumento 7 antes del H1 para devolver margen a H4, H7, H11 y H12, validación de las estimaciones de tres puntos con quienes ejecutan, alerta con un día hábil de atraso en la cadena de cada hito, escalamiento al Comité Ejecutivo cuando el atraso proyectado supera el margen y recuperación con refuerzo en los sprints de A09 y A20",
-     "Jefe de Proyecto", "Mitigar", "Un día hábil de atraso en A02, A05, un sprint de A09 o A20, A19 o A25", "Semanal hasta H12"),
+     "Antes del H1, el Jefe de Proyecto y quienes ejecutan validan capacidad, ventanas de terceros y estimaciones de tres puntos, y todo adelanto o solapamiento que devuelva margen conserva los criterios de aceptación. Alerta con un día hábil de atraso en la cadena de cada hito, escalamiento al Comité Ejecutivo cuando el atraso proyectado supera el margen, recuperación con refuerzo en los sprints de A09 y A20 y vigilancia del H5, cuyo atraso al mes 13 o 14 es el escenario de caja más exigente del Sobre N.º 3",
+     "Jefe de Proyecto", "Mitigar", "Un día hábil de atraso en A02, A05, un sprint de A09 o A20, A12, A19 o A25", "Semanal hasta H12"),
     ("R-18", "G", "Cierre de la marcha blanca 1",
      "La marcha blanca de la Etapa 1, que cae en la temporada de fruta, no cumple las condiciones del Artículo 17.3 en tres meses",
      3, 4, 2, 4,
@@ -148,7 +148,7 @@ R = [
     ("R-26", "O", "Retraso de la réplica",
      "El retraso de la réplica asíncrona supera los 15 minutos de pérdida admitida con escritura intensa",
      2, 4, 1, 3,
-     "Servidor de series separado, Event Hubs con retraso máximo de 10 minutos y reenvío de 72 horas desde el equipo a bordo",
+     "Servidor de series separado, Event Hubs con retraso máximo de 10 minutos y reenvío desde el equipo a bordo, que conserva lo ya enviado durante 72 horas",
      "Líder de Datos", "Mitigar", "Retraso de la réplica cerca de 15 minutos", "Continuo"),
     ("R-27", "O", "Bloqueo indebido",
      "La verificación bloqueante detiene un viaje comprometido que debía salir, por un dato vencido, un registro sin sincronizar o una regla mal calibrada",
@@ -198,8 +198,13 @@ R = [
     ("R-36", "C", "Proveedor de montaje y campo",
      "El proveedor externo de montaje y servicio técnico de campo no cumple la agenda de los lotes de los meses 7 a 9 o no llega en 4 horas a una urgencia de hardware crítico en un terminal",
      2, 3, 1, 3,
-     "Contrato con agenda por terminal y lote, plazo de urgencia de 4 horas trasladado desde el Artículo 78.2, equipos de reposición en cada terminal y técnico de audIT disponible hasta el mes 19 como respaldo",
+     "Autorización previa y escrita del mandante y control del tope del 40 % del Artículo 73.1 con el Formulario T-8, contrato con agenda por terminal y lote, plazo de urgencia de 4 horas trasladado desde el Artículo 78.2, equipos de reposición en cada terminal y técnico de campo de audIT como respaldo hasta el mes 18",
      "Líder de Operación", "Mitigar", "Lote con menos del 80 % de los montajes de su mes, o una urgencia atendida en más de 4 horas", "Meses 7 a 9 y desde el mes 19"),
+    ("R-37", "G", "Escalones de madurez del soporte",
+     "El servicio no cumple antes de los meses 25, 33 o 45 los criterios para bajar la capacidad variable de mejoras y deuda técnica, dos meses sin incidentes críticos, menos de diez solicitudes pendientes y demanda dentro de la capacidad, y el soporte sigue con la capacidad del tramo anterior",
+     3, 2, 2, 2,
+     "Medición mensual de los tres criterios en el Comité de Operación desde el mes 21, reducción de las solicitudes pendientes y de la deuda técnica antes de cada escalón y revisión de la demanda con la contraparte. Si no se cumplen, se conserva la capacidad del tramo anterior, como prevé el Sobre N.º 3, sin bajar los niveles de servicio",
+     "Líder de Operación", "Mitigar", "Un criterio de madurez sin cumplir dos meses antes del escalón", "Meses 23, 31 y 43"),
 ]
 
 # Origen de cada riesgo (observación RIE-01): M, mandante; T, terceros; A, audIT.
@@ -207,7 +212,8 @@ ORIGEN = {"R-01": "A", "R-02": "A", "R-03": "T", "R-04": "T", "R-05": "A", "R-07
           "R-09": "T", "R-10": "T", "R-11": "T", "R-12": "M", "R-13": "T", "R-14": "T", "R-15": "M",
           "R-16": "A", "R-17": "A", "R-18": "A", "R-19": "A", "R-20": "T", "R-21": "M", "R-22": "T",
           "R-23": "T", "R-24": "M", "R-25": "T", "R-26": "A", "R-27": "A", "R-28": "A", "R-29": "A",
-          "R-30": "T", "R-31": "M", "R-32": "M", "R-33": "T", "R-34": "T", "R-35": "T", "R-36": "T"}
+          "R-30": "T", "R-31": "M", "R-32": "M", "R-33": "T", "R-34": "T", "R-35": "T", "R-36": "T",
+          "R-37": "A"}
 NOMBRE_ORIGEN = {"M": "Mandante", "T": "Terceros", "A": "audIT"}
 
 # Modos de falla técnicos (AMFE): modo, efecto, S, O, D, control de detección, riesgo

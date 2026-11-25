@@ -6,7 +6,7 @@
 | De | D4 (S4.2/S4.3, S8, S13 y T-11, T-16, T-19) |
 | Para | D1, que mantiene `anexos/observaciones-informe3.tex` |
 | Base | Revisión final del Informe 2 y anexo regenerado en `main` (5011546), con el cierre de D3 (84dbc21) |
-| Estado de los cambios | Subidos a `main` (D4-161 y D4-162) |
+| Estado de los cambios | D4-161 y D4-162 en `main` (e1f3a63). D4-163 (25-11) en el formato local, en revisión |
 
 Cada fila trae el texto de respuesta y de sección y estado, listo para reemplazar el que hoy dice «Pendiente». ARQ-01 y ARQ-02 son de la parte 4.1 (D3) y no van aquí.
 
@@ -43,13 +43,13 @@ Cada fila trae el texto de respuesta y de sección y estado, listo para reemplaz
 - Sección y estado: S4 §4.2, supuestos y brechas, y T-16 R-04 y R-08. Estado: Incorporada.
 
 **ARQ-08** · Autoridad tributaria en la Figura 4.13
-- Respuesta: La autoridad tributaria queda fuera del sitio. La línea al sistema contable lleva el rótulo «Internet del emisor», y el texto explica que el emisor se comunica por su propio enlace y que la capa anticorrupción solo le pide la emisión.
+- Respuesta: La autoridad tributaria queda fuera del sitio. La línea al sistema contable lleva el rótulo «Internet del emisor» en la vista general y en la lámina A de la vista completa, y el texto explica que el emisor se comunica por su propio enlace y que la capa anticorrupción solo le pide la emisión. La vista completa pasó a cinco láminas legibles a 9 pt.
 - Sección y estado: S4 §4.2, Figura 4.13. Estado: Incorporada.
 
 ## Riesgos (S8 y T-16)
 
 **RIE-01** · Riesgos internos y R-06
-- Respuesta: Cada riesgo declara su origen (mandante, terceros o audIT) y R-06 salió del registro activo. Son 35 riesgos: 17 de terceros, 12 de audIT y 6 del mandante.
+- Respuesta: Cada riesgo declara su origen (mandante, terceros o audIT) y R-06 salió del registro activo. Son 36 riesgos: 17 de terceros, 13 de audIT y 6 del mandante.
 - Sección y estado: S8 §8.1 y T-16. Estado: Incorporada.
 
 **RIE-02** · Convivencia y retiro del sistema de 2013
@@ -69,7 +69,7 @@ Cada fila trae el texto de respuesta y de sección y estado, listo para reemplaz
 - Sección y estado: S8 §8.3. Estado: Incorporada.
 
 **RIE-06** · R-17 aceptado con atraso de H1 y H2
-- Respuesta: Sobre la malla conciliada, H4, H7, H11 y H12 quedan sin margen. R-17 pasa a exposición alta, con umbrales, escalamiento, recuperación con refuerzo y contingencia de entrega con alcance comprometido y acta. La malla se ajusta antes del H1 y la simulación se vuelve a correr. No se publican probabilidades de la red anterior.
+- Respuesta: Sobre la malla conciliada, H4, H7 y H12 quedan sin margen y H11 tiene fecha fija protegida por la reserva A23. R-17 pasa a exposición alta, con umbrales, escalamiento, recuperación con refuerzo, vigilancia del H5 y contingencia de entrega con alcance comprometido y acta. Antes del H1 se validan capacidad, ventanas y estimaciones de tres puntos, y la simulación se vuelve a correr. No se publica una probabilidad que la malla no respalde.
 - Sección y estado: S8 §8.2 y §8.3 y T-16 R-17. Estado: Incorporada (nueva simulación sujeta al ajuste de la malla con D2).
 
 **RIE-07** · Numeración repetida entre S8 y T-16
@@ -106,5 +106,5 @@ Cada fila trae el texto de respuesta y de sección y estado, listo para reemplaz
 - Sección y estado: S13 y T-19, fichas 1 a 5. Estado: Incorporada.
 
 **INN-05** · Base y magnitud de los beneficios
-- Respuesta: El S13 explica el tratamiento de la planilla 3.2: beneficio cero en el escenario base para las innovaciones 2 y 3, valor pendiente de los datos de la Etapa 1 para la 1 y la 5, y recupero bruto referencial de la 4, que es de Curimón y no se suma a la venta. Cada ficha fija el indicador físico que se mide en el piloto.
+- Respuesta: El S13 explica el tratamiento de la Oferta Económica: ninguna innovación tiene beneficio monetario reconocido en el escenario base ni cobro incremental, el personal va dentro de la dotación del contrato, la 1 trae solo una sensibilidad de capacidad y la 4 un recupero bruto referencial que es de Curimón y no se suma a la venta. Cada ficha fija el indicador físico que se mide en el piloto.
 - Sección y estado: S13, introducción y fichas. Estado: Incorporada.

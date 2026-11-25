@@ -22,12 +22,13 @@ import s13  # noqa: E402
 import propuestas  # noqa: E402
 import s4_copias_d3  # noqa: E402
 import fisica_completa  # noqa: E402
+import fisica_laminas  # noqa: E402
 
 FORMATO = rutas.FORMATO
 sys.path.insert(0, str(Path(rutas.REPO) / 'Informe-2/D3/generadores_graficos'))
 from publicar_graficos import copiar_version_canonica
 PY = sys.executable
-MODULOS = [s4_fisica, fisica_completa, s4_logica, s4_copias_d3, s13, s7, propuestas]
+MODULOS = [s4_fisica, fisica_completa, fisica_laminas, s4_logica, s4_copias_d3, s13, s7, propuestas]
 
 
 def medida_svg(base):
