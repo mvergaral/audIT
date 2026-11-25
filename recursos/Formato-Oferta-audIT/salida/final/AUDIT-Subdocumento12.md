@@ -1,0 +1,317 @@
+# Subdocumento 12. Equipo de trabajo, subcontrataciones y alianzas
+
+audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. Oferta Técnica, Sobre N.º 2. Propuesta final. Archivo AUDIT-Subdocumento12.pdf. Anexos: Formulario T-8 en el archivo AUDIT-Formulario-T-8.pdf.
+
+## 12 Equipo de trabajo, subcontrataciones y alianzas
+
+> **Resumen de apertura.**
+>
+> Este subdocumento presenta quién hace el proyecto y quién responde por cada parte. El equipo clave son
+> los seis roles que exige el FEP01, Artículo 34.1, p. 22, nominados y con su dedicación en el Formulario T-8. La
+> dotación sube de 14 jornadas completas en los meses 1 y 2 a un máximo de 39,2 en el mes 7, se mantiene
+> cerca de 37 mientras conviven las dos etapas y baja de 17,8 a 14 en la operación, igual que en el
+> Formulario T-15. Lo que no hace audIT lo hacen proveedores y socios que suman cerca del 18,8 % del
+> valor del contrato, bajo el tope del 40 % del FEP01, Artículo 73.1, p. 38.
+>
+> **Qué recibe Transportes Curimón S.A.**
+> - Una estructura del proyecto con un responsable por cada entregable y una matriz de asignación.
+> - Un equipo clave nominado, con certificaciones, dedicación y meses de participación en el Formulario T-8.
+> - Una curva de dotación por fase que coincide con la nivelación de recursos del Formulario T-15.
+> - La lista de subcontratistas y socios con su rol, su peso en el valor y su régimen de control.
+
+El equipo es el que declara el Subdocumento 1: 22 profesionales de planta de audIT, de los cuales 21
+trabajan en el proyecto, y 16 personas de refuerzo que audIT incorpora para el despliegue y la segunda
+etapa (FEP01, Formulario T-15, p. 65). La sección 12.1 ordena el proyecto, la 12.2 presenta el equipo clave, la 12.3 la
+dotación por fase, la 12.4 lo que audIT hace y lo que compra, la 12.5 los subcontratistas y socios, y la
+12.6 cómo se conserva el conocimiento cuando alguien se va.
+
+## 12.1 Estructura organizacional del proyecto
+
+El proyecto tiene cuatro líneas bajo el Jefe de Proyecto, como muestra la Figura 12.1. La
+dirección técnica diseña y construye. El aseguramiento vigila la seguridad y la calidad con
+independencia de quien construye. La implantación lleva la solución a los terminales, a los camiones y
+a las personas. La operación sostiene el servicio desde que entra en producción. Las decisiones que
+cruzan las líneas suben a los comités del FEP01, Artículo 71, p. 37: el Comité de Proyecto cada quince días, el de
+Arquitectura cada mes, el Ejecutivo cada mes y, desde el mes 13, el de Operación.
+
+\begin{figuraNativa}[!ht]{Estructura del proyecto: el Jefe de Proyecto y sus cuatro líneas, con los roles de cada una}{12-organigrama}
+\begin{tikzpicture}[x=1mm,y=1mm,
+  caja/.style={draw=audit-marino,line width=0.6pt,fill=white,rounded corners=2pt,align=center,
+               text width=34.5mm,inner sep=2pt,anchor=north,
+               font=\sffamily\fontsize{9.5bp}{11bp}\selectfont\color{audit-tinta}},
+  jefe/.style={caja,fill=audit-gris-claro,text width=60mm},
+  linea/.style={line width=0.6pt,draw=audit-marino}]
+  \node[jefe] (jp) at (55,0) {**Jefe de Proyecto**  Comités del Artículo 71 y oficina de proyecto};
+  \node[caja] (t) at (0,-24) {**Dirección técnica**  Arquitecto de Solución  Líder de Datos  Líder de Desarrollo  Líder de Integración};
+  \node[caja] (a) at (37,-24) {**Aseguramiento**  Encargado de Seguridad  de la Información  Líder de Calidad};
+  \node[caja] (i) at (74,-24) {**Implantación**  Líder de Implantación  y Gestión del Cambio  Líder Funcional  Analistas en terreno};
+  \node[caja] (o) at (111,-24) {**Operación**  Líder de Operación  y gerente de servicio  Mesa, plataforma  y equipo a bordo};
+  \draw[linea] (jp.south) -- (55,-17);
+  \draw[linea] (0,-17) -- (111,-17);
+  \foreach \x in {0,37,74,111} { \draw[linea] (\x,-17) -- (\x,-24); }
+\end{tikzpicture}
+\end{figuraNativa}
+
+El Jefe de Proyecto responde ante el mandante por el contrato completo. El Arquitecto de Solución decide
+la arquitectura y lleva su registro de decisiones. El Encargado de Seguridad de la Información y el Líder
+de Calidad dependen del Jefe de Proyecto y no de la dirección técnica, para que puedan detener una entrega
+que no cumple. El Líder de Operación es además el gerente de servicio dedicado que pide
+FEP02, RT-21.02, p. 35. La Tabla 12.1 agrupa los paquetes del Formulario T-14 y marca quién
+responde por cada grupo (A), quién lo ejecuta (R), a quién se consulta (C) y a quién se informa (I).
+
+**Tabla 12.1.** Matriz de asignación por grupo de paquetes de la EDT
+
+| Paquetes de la EDT | JP | AS | ESI | LD | LDS | LC | LO | LIN | LIM | LF |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 1.1 y 1.2 Dirección y comunicaciones | A | C | C | I | I | C | C | I | C | C |
+| 2.1 Alcance y trazabilidad | C | C | I | C | C | C | I | C | I | A |
+| 2.4 Arquitectura, seguridad y modelo de datos | I | A | R | R | C | C | C | C | I | I |
+| 3.1, 3.3 y 3.4 Ambientes, trazas y sala | I | C | C | I | C | C | A | I | I | I |
+| 3.2 Identidad y cifrado | I | C | A | C | C | C | R | I | I | I |
+| 4.2 y 11.1 Montaje a bordo y capacitación | I | I | I | I | I | C | C | C | A | C |
+| 4.3 y 6.1 a 6.5 Integraciones y retiro del sistema de 2013 | I | C | C | C | R | C | C | A | I | I |
+| 5.1 a 5.7 y 8.1 a 8.4 Contextos y portales | I | C | C | C | A | C | I | C | I | C |
+| 7.1 a 7.3 y 8.5 Migración y analítica | I | C | C | A | R | C | I | C | I | C |
+| 9.1 a 9.3 Adhesión de transportistas | C | I | C | I | I | I | I | I | C | A |
+| 10.1 a 10.3 Pruebas | I | C | C | C | R | A | C | R | C | C |
+| 11.2 y 11.3 Marchas blancas | C | C | C | C | R | C | R | R | A | C |
+| 11.4 y 13.1 a 13.3 Estabilización y operación | I | C | C | C | C | C | A | C | I | I |
+| 13.4 Mantención evolutiva | I | C | C | C | A | C | C | C | I | I |
+| 12.1 a 12.3 y 12.5 Innovaciones | C | A | C | C | R | C | C | C | I | C |
+
+*JP, Jefe de Proyecto. AS, Arquitecto de Solución. ESI, Encargado de Seguridad de la Información. LD, Líder de Datos. LDS, Líder de Desarrollo. LC, Líder de Calidad y Pruebas. LO, Líder de Operación. LIN, Líder de Integración. LIM, Líder de Implantación y Gestión del Cambio. LF, Líder Funcional. Fuente: elaboración propia sobre el Formulario T-14.*
+
+Cada grupo tiene una sola A, y es el mismo rol responsable que el Formulario T-14 asigna a sus paquetes.
+Los paquetes 1.3, 2.2, 2.3, 2.5, 4.1 y 12.4 no aparecen en la tabla porque su responsable es un rol que
+ya figura en ella o un ingeniero de especialidad, y están en el Formulario T-14. La seguridad y la calidad
+tienen su propio responsable y el desarrollo solo ejecuta en esos grupos, que es la separación que exige
+el aseguramiento independiente del Subdocumento 9.
+
+## 12.2 Equipo clave
+
+El equipo clave son los seis roles habilitantes del FEP01, Artículo 34.1, p. 22. El Subdocumento 1 los nomina y deja a
+este subdocumento su trayectoria, sus certificaciones y su dedicación. Los seis son profesionales de
+planta de audIT con entre 9 y 14 años de experiencia en el trabajo que les toca en este contrato.
+
+El Jefe de Proyecto es Alejandro Hermosilla Díaz, certificado PMP, con 14 años dirigiendo proyectos de
+modernización de plataformas digitales y sistemas de misión crítica en logística y transporte. Conduce
+la planificación, los comités del FEP01, Artículo 71, p. 37 y la relación con la contraparte técnica. El Arquitecto
+de Solución es Esteban Valenzuela Lagos, con las certificaciones Microsoft Azure Solutions Architect
+Expert y TOGAF 9.2 y 12 años en arquitecturas de nube híbrida, microservicios y sistemas de alta
+concurrencia. Decide la arquitectura de los Subdocumentos 4 y 5 y lleva el Comité de Arquitectura junto
+al Encargado de Seguridad.
+
+El Encargado de Seguridad de la Información es Mauricio Arancibia Toledo, con CISSP, CISM y auditor
+líder ISO/IEC 27001, y 11 años en ciberseguridad industrial, criptografía y protección de datos
+personales conforme a la Ley N.º 21.719. Responde por el plan de seguridad, el cifrado de campo y la
+certificación ISO/IEC 27001 de audIT. El Líder de Datos es Rodrigo Sanhueza Parra, con CDMP y Azure
+Data Engineer Associate, y 9 años en datos distribuidos, flujos de eventos en tiempo real y bases
+relacionales y de series de tiempo. Responde por el modelo de datos, la migración de las cerca de 6.000
+vigencias y el repositorio analítico.
+
+La Líder de Calidad es Claudia Navarrete Rivas, con ISTQB Full Advanced Level como Test Manager y
+Technical Test Analyst, y 10 años dirigiendo compuertas de calidad y pruebas automatizadas de regresión,
+carga y estrés. Responde por el plan de calidad del Subdocumento 9 y por la aceptación de cada hito. El
+Líder de Operación es Felipe Morales Cárdenas, con CKA y Red Hat Certified Engineer, y 10 años en
+orquestación de Kubernetes, telemetría industrial, redes vehiculares SAE J1939 y soporte 24/7 en
+terreno. Dirige la plataforma, la mesa de servicio y el ciclo de vida del equipo a bordo, y en la
+operación es el gerente de servicio.
+
+Los seis trabajan a tiempo completo en los meses 1 a 20. En la operación, según el Subdocumento 1, el
+Líder de Operación sigue a tiempo completo, el Jefe de Proyecto, el Encargado de Seguridad y el Líder de
+Datos quedan con la mitad de su tiempo, y el Arquitecto de Solución y la Líder de Calidad con un cuarto.
+Eso suma tres jornadas completas, 480 horas al mes, y esas horas están dentro de la dotación de
+operación del Formulario T-15, que es también como las cuenta el Sobre N.º 3. El Líder
+de Datos y la Líder de Calidad las dedican sobre todo al paquete 13.4, donde están los cierres de los
+meses 21 a 24 (Subdocumento 11). El Formulario T-8 trae cada rol con su nombre, sus certificaciones, su
+dedicación y sus meses, y los currículos y las cartas de compromiso van en el Sobre N.º 1. Los demás
+roles de la estructura salen de la planta o del refuerzo que declara el Formulario T-15, y se nominan en
+el plan de dirección del mes 1.
+
+## 12.3 Curva de dotación por fase
+
+La dotación sigue la nivelación de recursos del Formulario T-15 mes a mes, en jornadas completas de 160
+horas, como muestra la Figura 12.2. El proyecto parte con 14 en los meses 1 y 2, que hacen el
+levantamiento y el plan, y sube a 24 en los meses 3 a 5 con la arquitectura y los ambientes. Entre los
+meses 6 y 9 la construcción de la Etapa 1 coincide con la recepción de los lotes de montaje, y la curva
+llega a su máximo, 39,2 en el mes 7. Baja a 33 en los meses 11 y 12 y vuelve a 37 en los meses 13 a 17,
+cuando la marcha blanca de la Etapa 1 convive con la construcción de la Etapa 2, con 38,5 en los meses 13
+y 16 por los refuerzos de puesta en producción. Después baja a 30,1 en el mes 18, 26,5 en el 19 y 25 en
+el 20. La operación empieza con 17,8 en el mes 21, sigue con 16,3 hasta el mes 24 por los cierres de la
+implementación, y baja a 15, 14,5 y 14 desde los meses 25, 33 y 45, a medida que el servicio madura. La
+implementación suma 99.627 horas y la operación 84.606.
+
+\begin{figuraNativa}[!ht]{Jornadas completas por mes según el Formulario T-15, con la parte que corresponde al equipo clave}{12-dotacion}
+\begin{tikzpicture}[x=2.3mm,y=1.05mm,
+  t/.style={font=\sffamily\fontsize{9.5bp}{11bp}\selectfont\color{audit-tinta}},
+  clave/.style={fill=audit-marino!80,draw=white,line width=0.3pt},
+  resto/.style={fill=audit-turquesa!35,draw=white,line width=0.3pt}]
+  \foreach \m/\v in {1/14,2/14,3/24,4/24,5/24,6/35.2875,7/39.2306,8/38.7756,9/39.0904,10/34.67,11/33,12/33,13/38.5,14/37,15/37,16/38.5,17/37,18/30.1125,19/26.5,20/25,21/17.8313,22/16.3188,23/16.3188,24/16.3188,25/15,26/15,27/15,28/15,29/15,30/15,31/15,32/15,33/14.5,34/14.5,35/14.5,36/14.5,37/14.5,38/14.5,39/14.5,40/14.5,41/14.5,42/14.5,43/14.5,44/14.5,45/14,46/14,47/14,48/14,49/14,50/14,51/14,52/14,53/14,54/14,55/14,56/14} {
+    \pgfmathsetmacro\k{\m<21 ? 6 : 3}
+    \fill[clave] (\m-1,0) rectangle (\m,\k);
+    \fill[resto] (\m-1,\k) rectangle (\m,\v);
+  }
+  \foreach \x/\y/\l in {1/14/14,4/24/24,6.5/39.23/{39,2},11.5/33/33,15/38.5/{38,5},19.5/25/25,20.5/17.83/{17,8},28.5/15/15,38.5/14.5/{14,5},50.5/14/14} {
+    \node[t,anchor=south] at (\x,\y) {\l};
+  }
+  \draw[audit-filete,line width=0.6pt] (0,0) -- (56,0);
+  \foreach \m/\x in {1/0.5,7/6.5,13/12.5,21/20.5,33/32.5,45/44.5,56/55.5} {
+    \draw[audit-filete] (\x,0) -- (\x,-1.2);
+    \node[t,anchor=north] at (\x,-1.6) {\m};
+  }
+  \node[t,anchor=north] at (28,-6.4) {Mes del contrato};
+  \fill[clave] (30,36) rectangle (31.5,38.6);
+  \node[t,anchor=west] at (31.8,37.3) {Equipo clave, 6 y luego 3 jornadas};
+  \fill[resto] (30,31) rectangle (31.5,33.6);
+  \node[t,anchor=west] at (31.8,32.3) {Resto del equipo};
+\end{tikzpicture}
+\end{figuraNativa}
+
+La curva tiene dos máximos y los dos tienen una razón. El primero es el montaje de la flota mientras se
+construye la Etapa 1. El segundo contiene los meses 13 a 15, en que el Subdocumento 7 divide el equipo en
+dos escuadras, una que estabiliza lo que ya opera y otra que construye lo que viene, con 21 personas de
+planta y 16 de refuerzo, y por eso no se puede aplanar sin atrasar la Etapa 2. Las 16 personas de
+refuerzo son el Líder Funcional, el Líder de Integración, el Líder de Implantación y Gestión del Cambio,
+siete analistas de implantación en terreno, dos ingenieros SRE, dos desarrolladores, un ingeniero de
+datos y un analista de pruebas. La operación se reparte en la mesa de servicio, con siete personas y la
+jornada de suplencias, la plataforma, con cuatro, el equipo a bordo, con media jornada de audIT y el
+proveedor de campo, y la mantención evolutiva, con cuatro que bajan a dos y media, según los
+Subdocumentos 10 y 11.
+
+La curva también se comprobó contra el trabajo por tarea, como pidió la revisión del Informe 2. El mes 9
+es uno de los más cargados. La estimación por actividad del software, los datos y las integraciones pide
+ese mes 3.354 horas de arquitectura, desarrollo, interfaces, seguridad, datos, pruebas y plataforma, unas
+21 jornadas completas. Sumados la recepción de los lotes de montaje, las pruebas transversales, la
+dirección y la preparación de las innovaciones, la demanda llega a cerca de 4.283 horas, y el Formulario
+T-15 asigna a ese mes 6.254 horas internas, conciliadas por perfil. Las cuentas de usuario del
+repositorio siguen la misma curva: 33 en la primera etapa, 37 en el segundo máximo y 16 desde el mes 25.
+
+## 12.4 Decisiones de hacer o comprar
+
+La regla es construir lo que es propio del negocio de Curimón, comprar lo que el mercado ya hace mejor y
+contratar lo que exige independencia o una especialidad que no conviene mantener en planta. Cada compra
+se compara por su costo total de 56 meses, que incluye alta, canon, consumo, alojamiento, actualización,
+soporte y salida, y por compatibilidad, permisos sobre los datos, ubicación, portabilidad y derecho de
+uso. Un precio bajo no basta para decidir.
+
+audIT construye el software de los seis contextos, las reglas de asignación y liquidación y las
+interfaces web y móviles. La alternativa era comprar un sistema de gestión de transporte y
+parametrizarlo, pero ninguno acredita cubrir a la vez la verificación de jornada, el documento de
+transporte y la convivencia con el sistema de 2013 que piden los Subdocumentos 3 y 4. También construye
+los adaptadores hacia el sistema contable, la telemetría de fábrica y las plataformas de posicionamiento,
+sobre contratos autorizados y sin tocar sus bases, porque el sistema contable conserva la emisión
+tributaria y cada dato tiene su dueño. La migración se construye como un proceso reproducible con
+revisión funcional, porque las cerca de 6.000 vigencias se verifican una por una contra su respaldo. Lo
+que se construye es del mandante desde su creación (FEP01, Artículo 84.1, p. 43). audIT tiene para eso siete
+ingenieros de software y cinco de firmware y hardware en su planta, certificación ISO 9001 vigente y los
+tres proyectos de misión crítica del Formulario T-6 (Subdocumento 1).
+
+audIT compra como servicio lo que no es propio del negocio. Las bases de datos, la caché, los eventos, la
+identidad y la custodia de claves son servicios administrados de Azure, porque operar clústeres propios
+recargaría a un área de tecnología de nueve personas (Caso, numeral 7.4, p. 16) con parches, alta
+disponibilidad y respaldos. audIT es socio Microsoft CSP, que es la condición de socio del proveedor de
+nube que pide el FEP01, Artículo 34.1, p. 22. Las bibliotecas y herramientas abiertas se usan con su inventario de
+componentes y no se reimplementan. GitLab se contrata en su edición Premium autoadministrada, dentro del
+perímetro del proyecto, en vez de la gratuita o la de software como servicio. SonarQube se contrata en su
+edición Developer porque la gratuita no analiza Dart ni las ramas de integración que usa el
+Subdocumento 6.
+
+El hardware se compra a fabricantes y no se fabrica. Los equipos de campo y de red los compra el
+mandante con la especificación del Formulario T-11, y los servidores del nodo de continuidad de San
+Bernardo los provee audIT.
+Los servicios que la solución consume, como Azure, el circuito ExpressRoute, los planes móviles y el
+tiempo de aire satelital, los contrata y paga audIT, con la suscripción de Azure a nombre del mandante.
+El montaje sigue la misma regla de lo operativo: el piloto del mes 6 y la validación posterior en los
+terminales los hace el técnico de audIT que integró el equipo en su laboratorio, que sigue en el proyecto
+hasta antes del mes 19, y los 172 equipos de los lotes de
+los meses 7 a 9 los monta un proveedor externo con agenda por terminal, porque es trabajo que termina con
+el último lote. audIT conserva el banco de pruebas y la recepción de cada camión. En la operación, el
+campo tampoco llena una jornada: queda media jornada de audIT para recepción, stock y coordinación, y el
+proveedor de campo hace las visitas, las rondas a los terminales y las urgencias de 4 horas.
+
+audIT contrata lo que pide independencia o una especialidad puntual. Las pruebas de penetración y la
+custodia de las fuentes las hace un tercero porque su valor está en no depender de quien construye. Un
+laboratorio acreditado ensaya el equipo a bordo contra polvo, agua y vibración entre los meses 4 y 7, y
+el banco de pruebas del bus CAN se arrienda entre los meses 4 y 9. La plataforma de aprendizaje en línea
+y sus contenidos se contratan para la capacitación de la Etapa 1, y los talleres presenciales en los
+cinco terminales, la capacitación de la Etapa 2 y la reinducción anual de la operación los dicta un
+organismo de capacitación. Los talleres de ergonomía de la innovación 5 también son externos.
+
+## 12.5 Subcontratistas y socios
+
+El Formulario T-8 lista cada proveedor y socio con el servicio que da y su peso en el valor total que
+factura el contrato. El mayor es Microsoft, con cerca del 10,3 %, por el consumo de Azure y Entra ID.
+Le siguen Ground Control, con cerca del 3,8 % por el tiempo de aire satelital, y los fabricantes y
+mantenedores del hardware, con cerca del 1,8 %. El proveedor de montaje y campo pesa cerca del 0,5 %, y
+el resto menos del 1 % cada uno. En total suman cerca del 18,8 %, bajo el tope del 40 % del FEP01, Artículo 73.1, p. 38. Los porcentajes salen de las partidas del
+Sobre N.º 3, que es donde están los montos. Los cuatro centros técnicos aliados de la red regional del
+Subdocumento 1 también se declaran en el formulario, aunque no tienen una partida propia en el Sobre
+N.º 3.
+
+Ningún proveedor opera el núcleo del negocio, como prohíbe el FEP01, Artículo 73.2, p. 38: las aplicaciones las
+construye y opera audIT. Los datos sí quedan en Azure, y por eso la suscripción está a nombre del
+mandante, que autoriza expresamente al proveedor de nube. Ese es también el proveedor que más pesa, y el
+riesgo de quedar atado a él lo acota la estrategia de reversibilidad del Subdocumento 4, con la
+infraestructura como código y los datos exportables en formatos abiertos.
+
+El régimen de control tiene cinco partes. Primero, cada subcontratación tiene la autorización previa y
+escrita del mandante (FEP01, Artículo 73.1, p. 38), y también la tiene el reemplazo de un proveedor, que debe
+mantener o mejorar las condiciones del anterior. Segundo, todo proveedor con acceso a datos del mandante
+queda declarado, firma un acuerdo de tratamiento de datos conforme a la Ley N.º 21.719 y queda sujeto a
+auditoría (FEP01, Artículo 73.4, p. 38). Tercero, cada contrato traslada al proveedor los plazos que audIT necesita para
+cumplir los niveles de servicio, restados desde el FEP01, Artículo 78.2, p. 40 (Subdocumento 10). Cuarto, el
+proveedor cumple los mismos estándares de seguridad, confidencialidad, calidad y cumplimiento laboral
+que audIT, que le pide sus certificados laborales y previsionales al contratarlo y en cada renovación
+(FEP01, Artículo 73.3, p. 38). Quinto, el Comité de Proyecto revisa a los proveedores cada quince días durante la
+implementación y el Comité de Operación cada mes desde el mes 13, con el informe de nivel de servicio.
+audIT responde solidariamente por todos ellos (FEP01, Artículo 73.3, p. 38).
+
+## 12.6 Gestión del conocimiento y continuidad
+
+El FEP01, Artículo 76.4, p. 39 pide que la salida de cualquier persona no comprometa el proyecto. La regla de audIT
+es que todo conocimiento crítico lo tengan al menos dos personas, con la revisión cruzada que describe el
+Subdocumento 1. Cada rol del equipo clave tiene un suplente designado dentro de la planta. El Jefe de
+Proyecto tiene como suplente a uno de los tres analistas de la oficina de proyecto. El Arquitecto de
+Solución y el Líder de Desarrollo se cubren entre sí. El Encargado de Seguridad tiene como suplente al
+Líder de Operación, que ejecuta con él la identidad y el cifrado. El Líder de Datos tiene al ingeniero
+de datos, la Líder de Calidad al ingeniero de pruebas y automatización y el Líder de Operación a uno de
+los ingenieros de la operación de la plataforma. Las decisiones quedan en el registro de arquitectura,
+los procedimientos en los libros de operación y las soluciones en la base de conocimiento (Subdocumento
+10), de modo que lo que se sabe no depende de una sola memoria.
+
+Las 16 personas de refuerzo entran en pareja con un profesional de planta que ya conoce su frente, y su
+primer trabajo se revisa antes de integrarse. Cada una recibe su cuenta del repositorio y su identidad
+en Entra ID con acceso condicional y doble factor, y el día en que deja el proyecto se le retiran los
+accesos. Así el peak de 37 personas no deja conocimiento en manos de quien se va en el mes 18.
+
+Un reemplazo del equipo clave necesita la autorización previa y escrita del mandante y recae en un
+profesional de perfil igual o superior, con quince días hábiles de traslape y sin costo para Curimón
+(FEP01, Artículo 76.2, p. 39). La rotación no puede pasar del 30 % del equipo clave en doce meses (FEP01, Artículo 76.3, p. 39), que
+con seis personas significa no más de una salida al año. Para retener al equipo, audIT aplica durante
+todo el contrato el programa de entrenamiento y certificación del Subdocumento 1.
+
+El conocimiento también pasa al mandante. Las personas administradoras y el equipo técnico de Curimón se
+evalúan y certifican al cierre de cada marcha blanca (FEP02, RT-22.05, p. 38). Los libros de operación los
+prueba el personal de Curimón antes de recibirlos (FEP02, RT-21.04, p. 35), y después del paso a
+producción de la Etapa 2 audIT acompaña al equipo técnico del mandante durante al menos seis meses
+(FEP02, RT-22.07, p. 38). Durante la operación siguen las dos jornadas anuales de actualización del
+Subdocumento 10.
+
+## Referencias
+
+Transportes Curimón S.A. (2026). *Bases administrativas para la preparación de la propuesta: Licitación Pública Internacional N.º TFEP-01/2026* (Documento FEP01).
+
+Transportes Curimón S.A. (2026). *Bases técnicas del Caso 10, Transporte de Carga: Licitación Pública Internacional N.º TFEP-01/2026* (Documento FEP03).
+
+Transportes Curimón S.A. (2026). *Bases técnicas transversales para la preparación de la propuesta: Licitación Pública Internacional N.º TFEP-01/2026* (Documento FEP02).
+
+## Declaración de uso de IA
+
+Conforme al Comunicado 10, sección 7.2, cada sección de este subdocumento y cada formulario asociado declara la herramienta de inteligencia artificial generativa usada, su finalidad, el nivel de uso en texto y en diagramas según la escala oficial de esa sección, y quién revisó y qué verificó. Esta declaración se consolida en el Formulario A-6.
+
+| Sección | Herramienta | Finalidad del uso | Nivel en texto | Nivel en diagramas | Revisión humana (quién y qué verificó) |
+|---|---|---|---|---|---|
+| Introducción y 12.1 | Claude Opus 5.5 en Claude Code | Redacción inicial de la estructura del proyecto, organigrama dibujado en TikZ y matriz de asignación armada desde los responsables del Formulario T-14 | Alto | Medio | Naomi Núñez, Líder de Calidad, e Ignacio Vera y Marcel Gutiérrez, Arquitectos de Solución: líneas del proyecto, comités del Artículo 71 y una sola A por grupo igual al responsable del Formulario T-14. |
+| 12.2 y 12.3 | Claude Opus 5.5 en Claude Code | Redacción del equipo clave, su trayectoria y la curva de dotación desde el Subdocumento 1, el Formulario T-15 y la conciliación de capacidad del Informe 3, y gráfico de dotación dibujado en TikZ | Alto | Medio | Naomi Núñez, Líder de Calidad, e Ignacio Vera y Marcel Gutiérrez, Arquitectos de Solución: nombres, certificaciones, años de experiencia y dedicaciones frente al Subdocumento 1, personas por tramo frente al Formulario T-15 y horas del mes 9. |
+| 12.4 a 12.6 | Claude Opus 5.5 en Claude Code | Redacción inicial de hacer o comprar, subcontratistas y continuidad, con las decisiones de compra del Informe 3 y los porcentajes calculados desde las partidas del Sobre N.º 3 | Alto | Ninguno | Naomi Núñez, Líder de Calidad, e Ignacio Vera y Marcel Gutiérrez, Arquitectos de Solución: decisiones de compra, porcentajes y tope del Artículo 73, régimen de control, reglas del Artículo 76 y suplentes dentro de la planta. |
+| Formulario T-8 | Claude Opus 5.5 en Claude Code | Llenado del formulario desde el Subdocumento 1, los Formularios T-14 y T-15 y las partidas de proveedores del Informe 3 | Alto | Ninguno | Naomi Núñez, Líder de Calidad, e Ignacio Vera y Marcel Gutiérrez, Arquitectos de Solución: roles, meses de participación, servicio y porcentaje de cada proveedor. |

@@ -139,9 +139,10 @@ La Contraparte Técnica suscribe el acta que acredita cada hito (\art{18.1}{13})
   \item Conciliación con el registro vigente sin diferencias no explicadas.
   \item Personal del mandante capacitado y certificado según el plan.
   \item Acta de aceptación suscrita por la Contraparte Técnica.
+  \item \textbf{Condición de contingencia de soberanía de datos (R-24, T-16 y S4 §4.3):} Si antes de H2 no se acredita la vía habilitante contractual con garantías adecuadas (Ley N.º 21.719, arts. 27 letra b y 28) para la réplica de datos personales en Azure Brazil South, H7 exige además la ejecución conforme y con acta suscrita del ensayo de recuperación sobre el sitio secundario admisible seleccionado, certificando RPO $\le 15\text{ min}$ y RTO $\le 4\text{ h}$ (\transv{RT-07.04}{17}) conforme al caso \texttt{CP-PERF-03}.
 \end{enumerate}
-\par\noindent\textbf{Pruebas y Verificación de Calidad:} Monitoreo continuo de transacciones reales en producción y auditoría de registros de mesa de ayuda.\par
-\par\noindent\textbf{Expediente de Conformidad:} Bitácora de incidencias de marcha blanca, estadísticas de disponibilidad, actas de capacitación de usuarios y acta de aceptación H7.\par
+\par\noindent\textbf{Pruebas y Verificación de Calidad:} Monitoreo continuo de transacciones reales en producción (aplicando la fórmula y los cuatro servicios críticos de S10 §10.2), auditoría de registros de mesa de ayuda y, de activarse la contingencia R-24, ejecución del ensayo de recuperación con acta (\texttt{CP-PERF-03}).\par
+\par\noindent\textbf{Expediente de Conformidad:} Bitácora de incidencias de marcha blanca, estadísticas de disponibilidad por servicio crítico/alto (S10 §10.2), actas de capacitación de usuarios, acta del ensayo de recuperación R-24 (si aplica) y acta de aceptación H7.\par
 \par\noindent\textbf{Roles Responsables:} Entrega: Director de Proyecto y Líder de Operación (audIT). Aprobación formal: Comisión Receptora y Contraparte Técnica (Curimón).\par
 \par\noindent\textbf{Efecto Económico Contractual:} Cierre conforme de marcha blanca y paso a producción de Etapa 1; habilita la facturación del 10\,\% del valor total de la fase de implementación, completando el 60\,\% de Etapa 1 y el 65\,\% acumulado del valor de implementación al considerar H8 (M14).\par
 
