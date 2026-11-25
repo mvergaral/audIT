@@ -137,19 +137,21 @@ vista única, documento y liquidación, entra en la Etapa 1. Los kilómetros en 
 porque necesitan saber primero dónde termina cada viaje, que es un dato que produce la Etapa 1
 (Subdocumento 3). Así ninguna etapa construye sobre datos que todavía no existen.
 
-El tiempo está fijado por los hitos del Formulario E-25. Todos se alcanzan dentro de su mes
-contractual, con márgenes de 2 a 14 días hábiles salvo las fechas fijas de los dos inicios de marcha
-blanca (Subdocumento 7). La simulación del Subdocumento 8 da una probabilidad del 78,4 \% de cumplir el
-hito H1 y del 92,1 \% de iniciar a tiempo las dos marchas blancas, y el riesgo de atraso del H1 tiene su
-responsable y su disparador en el Formulario T-16. Los pasos a producción caen en la segunda quincena del mes,
+El tiempo está fijado por los hitos del Formulario E-25. La malla del Subdocumento 7 los planifica
+dentro de su mes contractual, y las reservas A14 y A23, de 14 y 10 días hábiles, protegen los dos
+inicios de marcha blanca que fija el \art{17.1}{12}. Cuatro hitos quedan sin margen en la malla, y el
+Subdocumento 8 los trata en R-17 con alerta, escalamiento, refuerzo y un ajuste de la malla antes del
+H1, que se valida con una nueva simulación. Los pasos a producción caen en la segunda quincena del mes,
 después del cierre de liquidaciones, para respetar las ventanas protegidas del \caso{RT-10.05}{32}.
 
 El costo se contuvo con decisiones de diseño, sin recortar alcance. La recuperación ante desastres es
 activo-pasivo, porque una copia activa en la segunda región duplicaría el costo de operación para
 mejorar un tiempo de recuperación que ya se cumple (Subdocumento 4). La nube es de servicios
 administrados, porque el área de tecnología de Curimón son nueve personas \caso*{numeral 7.4}{16}. El enlace satelital lleva
-solo los eventos críticos y no toda la telemetría. La dotación llega a 37 personas solo en los cinco
-meses en que conviven dos frentes y baja a 16 en la operación (Subdocumento 12). Los compromisos de
+solo los eventos críticos y no toda la telemetría. Lo operativo que termina o que no llena una jornada
+se contrata por lote o por visita: los lotes de montaje de los meses 7 a 9 y el campo de la operación.
+La dotación llega a sus máximos solo mientras se monta la flota y mientras conviven las dos etapas, y
+en la operación baja de 17,8 a 14 jornadas a medida que el servicio madura (Subdocumento 12). Los compromisos de
 capacidad en la nube se toman después de tres meses de consumo medido (Subdocumento 11).
 
 La calidad tiene controles que el plazo no puede saltar. La cobertura automatizada de pruebas es bloqueante, con al
@@ -175,17 +177,18 @@ capacidad del equipo en el Subdocumento 4 y una prueba en ruta en el Subdocument
 
 La tecnología también es una sola. Azure en Chile Central con respaldo en Brazil South, contenedores
 orquestados, PostgreSQL para las transacciones y TimescaleDB para las series de tiempo se usan en todos
-los ambientes y en la operación. La dotación de 37 personas en el peak es la misma en los Subdocumentos
-1, 7 y 12, y la de 16 en la operación, en los Subdocumentos 7, 11 y 12. Cada uno de los 33 riesgos del
+los ambientes y en la operación. La dotación mes a mes del Formulario T-15 es la misma en los
+Subdocumentos 1, 7, 10, 11 y 12, con 37 jornadas base cuando conviven las dos etapas y de 17,8 a 14 en
+la operación. Cada uno de los 35 riesgos del
 Formulario T-16 tiene como responsable un rol de la estructura del Subdocumento 12.
 
 La coherencia se comprobó también contra la oferta económica, sin mostrar sus montos. Los 182 equipos a
 bordo son los mismos en el Subdocumento 1, en el Formulario T-11, en las innovaciones y en el
 calendario de compras. Las cuentas del repositorio y las identidades del personal de audIT siguen la
-dotación: 33 en la primera etapa, 37 en el peak y 16 en la operación. La prueba de penetración anual y
+dotación: 33 en la primera etapa, 37 cuando conviven las dos etapas y 16 en la operación. La prueba de penetración anual y
 el depósito semestral de las fuentes caen en los mismos meses en los Subdocumentos 10 y 11 y en el
-Formulario T-8. La dedicación del equipo clave en la operación se cuenta una sola vez, dentro de las 16
-personas del Formulario T-15.
+Formulario T-8. La dedicación del equipo clave en la operación se cuenta una sola vez, dentro de la
+dotación de operación del Formulario T-15.
 
 % ============================================================================
 \section{Trazabilidad de extremo a extremo}\label{sec:14-trazabilidad-de-extremo-a-extrem}

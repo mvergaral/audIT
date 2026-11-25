@@ -4,6 +4,21 @@ audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. O
 
 ## 13 Introducción a las Innovaciones
 
+\ProvideDocumentCommand\figuraAqui{O{}mmmm}{
+![Figura 13.1. #4](../../#3)
+
+*Figura 13.1. #4*
+
+Fuente: Elaboración propia.
+}
+\ProvideDocumentCommand\figuraHorizontalAqui{mmm}{
+![Figura 13.2. #2](../../#1)
+
+*Figura 13.2. #2*
+
+Fuente: Elaboración propia.
+}
+
 Este capítulo presenta la cartera de cinco innovaciones que exige el FEP01, Artículo 28, p. 19, una por cada tipo
 y en el orden que fija el Comunicado 10, sección 8. Cada una responde a un problema medido del Caso.
 El FEP01, Artículo 30.2, p. 20 valora la pertinencia por sobre la novedad, y el Caso, capítulo 19, p. 44 pide
@@ -16,12 +31,13 @@ papel o se conoce tarde. La innovación 1, Expediente
 verificable del transportista, responde a que el transportista no puede probar ante terceros lo que el
 sistema ya sabe de él, y vive en el portal del transportista y en el servicio de verificación. La 2,
 Programación dinámica de intervenciones por oportunidad de patio, coordina unidad, autorización,
-kit, técnico y ventana confirmada, con actualización remota como soporte del proceso. La 3, Semirremolque conectado, le dice
-al sistema qué semirremolque va enganchado y cuánto recorre, desde el equipo a bordo, la portería y la
-verificación bloqueante. La 4, Esquema de adhesión y propiedad del dispositivo, atiende a los dueños de
+kit, técnico y ventana confirmada, con actualización remota como soporte del proceso. La 3, Acople verificado y registro térmico del semirremolque, le dice
+al sistema qué semirremolque va enganchado y en qué condición viaja la carga refrigerada, desde el equipo
+a bordo, la portería y la verificación bloqueante. La 4, Esquema de adhesión y propiedad del dispositivo, atiende a los dueños de
 camión que no aceptan un equipo que delate cuándo trabajan para otros, con consentimiento y adhesión.
-La 5, Bienestar del conductor y descanso en parador seguro, hace que la alerta de jornada llegue donde
-sí hay dónde detenerse, desde el equipo a bordo y la gobernanza de paradores. Los cinco problemas salen
+La 5, Anticipación circadiana y aviso no punitivo de descanso, adelanta la alerta de jornada a la caída
+de vigilancia de la madrugada y la entrega sin castigo, desde el equipo a bordo y sobre el catálogo de
+paradores que exige el criterio 28. Los cinco problemas salen
 del Caso, numerales 2.3, 4.4, 4.11 y 16.1, pp. 7, 10, 12 y 35 y del (Caso, capítulo 10, p. 23).
 
 Cuatro de las cinco usan el equipo a bordo que especifica el Formulario T-11, y dos usan el portal del
@@ -42,7 +58,13 @@ diseño de la incorporación con su lugar en la arquitectura (FEP02, RT-26.01, p
 estructura de descomposición del trabajo y su mes del cronograma (FEP02, RT-26.02, p. 44), el impacto
 económico, el indicador y el riesgo de adopción. Los montos no aparecen en esta oferta técnica, porque
 el FEP01, Artículo 50.2, p. 29 lo prohíbe, y la valorización va en el Entregable 2 de la Oferta Económica, como
-dispone el FEP01, Artículo 30.1, p. 20. Al menos una innovación es verificable en la marcha blanca, como valora
+dispone el FEP01, Artículo 30.1, p. 20. En la planilla económica 3.2 los beneficios para Curimón van separados de
+los ingresos de audIT. Las innovaciones 2 y 3 no tienen beneficio monetario en el escenario base hasta
+medirlo en el piloto, la 1 y la 5 tienen su valor pendiente de los datos de la Etapa 1, y la 4 lleva un
+recupero bruto referencial de los cobros por espera, que es de Curimón y no se suma a la venta. Lo que
+esta oferta sí fija es el indicador físico de cada una y cómo se mide. Cada riesgo de adopción declara
+su exposición inicial y su exposición residual con las escalas del Subdocumento 8 y remite a su riesgo
+del Formulario T-16. Al menos una innovación es verificable en la marcha blanca, como valora
 FEP02, RT-26.08, p. 45: la innovación 4 mide sus primeros anexos firmados desde el mes tres, y la 3 y
 la 5 miden su indicador antes del mes 16.
 
@@ -132,7 +154,8 @@ Que los destinatarios no acepten el documento como prueba, con probabilidad medi
 mitigado con las entrevistas del mes 4, antes de construir. Que un conductor no consienta incluir su
 jornada, mitigado mostrando en el expediente la jornada de los conductores que sí consintieron. Si la
 adopción es baja, la contingencia es emitir el expediente automáticamente cada mes a los
-transportistas que lo pidan, sin acción de su parte.
+transportistas que lo pidan, sin acción de su parte. Es el riesgo R-30 del Formulario T-16: su
+exposición inicial es 9, probabilidad 3 e impacto 3, y con la mitigación baja a 6, con probabilidad 2.
 
 ## 13.2 Innovación 2 — Proceso
 
@@ -158,13 +181,10 @@ Se utiliza la escala TRL de nueve niveles explicada por NASA (Manning, 2023), ap
 
 La Figura 13.2 muestra el proceso, sus entradas y el control que evita intervenir sin ventana confirmada.
 
-![Figura 13.2. Programación y ejecución de intervenciones por oportunidad de patio](../../figuras/13-innovaciones/13-2-intervenciones.png)
+\figuraHorizontalAqui{figuras/13-innovaciones/13-2-intervenciones.pdf}{Programación y ejecución de intervenciones por oportunidad de patio}{13-proceso-13-2-intervenciones}
 
-*Figura 13.2. Programación y ejecución de intervenciones por oportunidad de patio*
-
-Fuente: Elaboración propia.
-
-Flota y activos conserva `INTERVENCION_TALLER`; Telemetría conserva `DISPOSITIVO` y eventos de configuración; la plataforma de S6 construye y firma el artefacto. El manifiesto vincula dispositivo, familia, kit, versión y acta de validación, sin sobrescribir la evidencia anterior. El detalle de planificación se mantiene en el backlog EDT 12.2, con integración a EDT 4.1/4.2; no se altera la EDT del Subdocumento 7.\endgroup
+\begingroup\emergencystretch=3em
+Flota y activos conserva `INTERVENCION_\allowbreak{}TALLER`; Telemetría conserva `DISPOSITIVO` y eventos de configuración; la plataforma de S6 construye y firma el artefacto. El manifiesto vincula dispositivo, familia, kit, versión y acta de validación, sin sobrescribir la evidencia anterior. El detalle de planificación se mantiene en el backlog EDT 12.2, con integración a EDT 4.1/4.2; no se altera la EDT del Subdocumento 7.\endgroup
 
 La programación de recursos contempla diez kits piloto en San Bernardo en M6, con técnico interno, y capacidad externa para lotes de 60, 60 y 52 kits en M7, M8 y M9, distribuidos en cinco terminales. audIT mantiene banco, analista y recepción. El escenario base de S7 prevé 182 montajes acumulados en M9, incluidos 34 camiones de terceros sin equipo. Cada orden se libera con adhesión aplicable, stock recibido, ventana normal confirmada y reserva del proveedor. Si alguna condición falla, se registra la desviación y se reprograman el montaje, la activación y su efecto en caja conforme a S7. En M13 a M15 se escalan las interfaces autorizadas de los otros 192 equipos de terceros mediante integración lógica.
 
@@ -204,14 +224,14 @@ La Tabla 13.3 reúne los riesgos del proceso, sus controles y la alternativa ope
 | Escaso beneficio frente a coordinación manual | Media / medio | Comparación trazable por familia y terminal, con denominadores | Mantener planificación manual y limitar el desarrollo incremental |
 | Tercero sin autorización o sin paso por terminal | Media / alto | Agenda sólo con autorización vigente y oportunidad confirmada | Integración lógica de capacidades disponibles; no intervenir equipo privado |
 
-Las valoraciones siguen la escala del Subdocumento 8 (sección 8.1). El riesgo residual se fija como objetivo condicionado, no como resultado ya demostrado: ETA incorrecta baja/media sólo después de comprobar actualidad y confirmación de ventana; incompatibilidad baja/alta sólo tras homologación y reversión ensayada por familia; beneficio insuficiente media/media hasta medir la comparación de M6; tercero sin autorización media/alta mientras no exista adhesión y paso confirmado. Un control fallido conserva la valoración inicial y activa la contingencia de la Tabla 13.3. Los responsables de Flota y terminal registran el riesgo y su decisión en los comités de S6.
+Las valoraciones siguen la escala del Subdocumento 8 (sección 8.1). El riesgo residual se fija como objetivo condicionado, no como resultado ya demostrado: ETA incorrecta baja/media sólo después de comprobar actualidad y confirmación de ventana; incompatibilidad baja/alta sólo tras homologación y reversión ensayada por familia; beneficio insuficiente media/media hasta medir la comparación de M6; tercero sin autorización media/alta mientras no exista adhesión y paso confirmado. La adopción del proceso por el taller y la torre es el riesgo R-31 del Formulario T-16, con exposición 6 que baja a 4. Un control fallido conserva la valoración inicial y activa la contingencia de la Tabla 13.3. Los responsables de Flota y terminal registran el riesgo y su decisión en los comités de S6.
 
 Fuentes de madurez y aprovisionamiento: (NASA, s. f.; Microsoft, s. f.; Microsoft, s. f.).
 
 ## 13.3 Innovación 3 — Tecnológica o de arquitectura
 
 La innovación 3 es de tipo tecnológico o de arquitectura, según el FEP01, Artículo 28, p. 19. Su nombre es
-Semirremolque conectado: una baliza Bluetooth en cada semirremolque propio permite que el sistema sepa
+Acople verificado y registro térmico del semirremolque: una baliza Bluetooth en cada semirremolque propio permite que el sistema sepa
 qué semirremolque va realmente enganchado y en qué condición viaja la carga refrigerada. La misma baliza
 permite medir el kilometraje de cada semirremolque, pero eso es cumplimiento del criterio 26 y no parte
 de la innovación.
@@ -263,11 +283,7 @@ durante la marcha blanca, como pide FEP02, RT-26.03, p. 44.
 **Diseño de la incorporación.**  La Figura 13.3 muestra dónde se inserta la
 innovación en la arquitectura.
 
-![Figura 13.3. Semirremolque conectado: la baliza, sus dos lectores y los tres servicios de negocio que usan el acople](../../figuras/13-innovaciones/semirremolque.png)
-
-*Figura 13.3. Semirremolque conectado: la baliza, sus dos lectores y los tres servicios de negocio que usan el acople*
-
-Fuente: Elaboración propia.
+\figuraHorizontalAqui{figuras/13-innovaciones/semirremolque.pdf}{Acople verificado y registro térmico del semirremolque: la baliza, sus dos lectores y los tres servicios de negocio que usan el acople}{13-semirremolquefig}
 
 La baliza vive en el semirremolque y no agrega nada al tractocamión. En la capa de borde, el G26I y el
 lector de portería la leen por Bluetooth y envían el evento a IoT Hub, el primero por la red celular y
@@ -281,9 +297,10 @@ semirremolque acoplado, sin interfaces nuevas hacia terceros (secciones 4.1 y 4.
 declara el equipo: 210 balizas más 21 de reposición, 35 más por el crecimiento a 245 semirremolques y
 cinco lectores de portería.
 
-En la EDT es el paquete 12.3. Las balizas y los lectores de portería se instalan con el paquete 4.2,
-cuando cada semirremolque pasa por un terminal y en los mismos meses del montaje a bordo, 6 a 10 y 16
-a 18. Así ninguna instalación cae en la temporada de diciembre a abril, en que la operación no admite
+En la EDT es el paquete 12.3. Los cinco lectores de portería se instalan y prueban en los meses 5 y 6.
+Las 210 balizas se montan con el paquete 4.2 en los meses 7 a 9, 70 por mes, cuando cada semirremolque
+pasa por un terminal, y las lecturas de acople y temperatura se validan sobre esos lotes antes del
+mes 10. Así ninguna instalación cae en la temporada de diciembre a abril, en que la operación no admite
 intervenciones (Caso, numeral 13.2, p. 27), y los 44 refrigerados se intervienen fuera de su temporada. El
 paquete 5.2, Flota y activos, integra la baliza a la ficha del semirremolque. La verificación con el
 semirremolque medido se activa en la marcha blanca, y su primera medición ocurre antes del mes 16.
@@ -320,7 +337,8 @@ un indicador de esta innovación: se verifica con el criterio 26 en el Formulari
 **Riesgo de adopción.**  Cada riesgo se declara con su probabilidad, su impacto, la mitigación y
 la contingencia, como pide FEP02, RT-26.04, p. 44. El mayor es el acople falso con la baliza de un
 semirremolque vecino en el patio, de probabilidad media e impacto alto, porque afecta a la verificación
-bloqueante. Se mitiga exigiendo señal estable y movimiento conjunto en los primeros minutos de marcha.
+bloqueante. Es el modo de falla que el Formulario T-16 asocia a R-22, con exposición 8 que baja a 4 con la
+mitigación. Se mitiga exigiendo señal estable y movimiento conjunto en los primeros minutos de marcha.
 Si aun así falla, la verificación vuelve a la declaración con la lectura de portería como control, sin
 detener la operación. La suplantación del identificador de la baliza tiene probabilidad baja e impacto
 alto: el acople ya exige movimiento conjunto y la lectura de portería, y en contingencia se trata como
@@ -357,7 +375,7 @@ retiro sin costo. Y reparto con el transportista de la espera recuperada que su 
 cobrar.
 
 **Delimitación frente a las bases.**  El plan de adhesión es alcance base: el criterio 27 del Caso
-lo exige y el Subdocumento 3 lo desarrolla (sección ?). Tampoco es innovación quién
+lo exige y el Subdocumento 3 lo desarrolla (sección 3.4.3). Tampoco es innovación quién
 compra el equipo, porque el Capítulo 11 lo resuelve (Caso, capítulo 11, p. 24). Lo que el Caso deja abierto
 es la decisión 5 del Caso, numeral 16.1, p. 34, sobre el equipo en un camión ajeno, y la restricción 2, que
 obliga a conseguir por contrato, incentivo o diseño lo que dependa de terceros. Esta innovación es el
@@ -415,7 +433,8 @@ meta pertenece al criterio 27 del alcance base y se mide allí.
 **Riesgo de adopción.**  Que la adhesión no alcance el 70 % en la Etapa 1, con probabilidad media e
 impacto alto, mitigado empezando la conversación en el mes 2 y mostrando el beneficio antes de pedir el
 equipo. La contingencia son las tres medidas del Subdocumento 3 si en el mes 9 la adhesión no llega al
-40 %. Que el transportista desconfíe de la ventana, mitigado haciéndola auditable por él mismo. Que los
+40 %. Es el riesgo R-11 del Formulario T-16, con exposición inicial 12, alta, que baja a 8 con la
+mitigación y conserva su plan de contingencia en el Subdocumento 8. Que el transportista desconfíe de la ventana, mitigado haciéndola auditable por él mismo. Que los
 clientes no acepten la evidencia telemática para el cobro y desaparezca la fuente del incentivo, con la
 contingencia de financiarlo con el ahorro de la liquidación automática, que no depende del cliente. Y
 que el anexo no resista revisión jurídica, con probabilidad baja e impacto alto, mitigado validándolo
@@ -424,7 +443,7 @@ antes de construir.
 ## 13.5 Innovación 5 — Experiencia de usuario, sostenibilidad o impacto social
 
 La innovación 5 es de experiencia de usuario, sostenibilidad o impacto social, según el FEP01, Artículo 28, p. 19.
-Su nombre es Bienestar del conductor y descanso en parador seguro.
+Su nombre es Anticipación circadiana y aviso no punitivo de descanso.
 
 **Problema u oportunidad.**  Una alerta que avisa al conductor cuando su cuota de cinco horas
 continuas está por agotarse (Ministerio del Trabajo, 2003), entregada en medio de una cuesta sin
@@ -432,10 +451,10 @@ bermas o en un tramo desértico sin paraderos habilitados para combinaciones de 
 toneladas, no soluciona nada: lo fuerza a detenerse en bermas peligrosas o a seguir rodando en
 infracción. La innovación abandona el temporizador pasivo e implementa un sistema sociotécnico de
 acompañamiento predictivo del descanso, que cruza la cinemática del camión con la curva biológica de
-alerta circadiana y un catálogo georreferenciado y calificado de paradores de carga pesada.
+alerta circadiana sobre el catálogo de paradores que exige el criterio 28 del Caso, capítulo 18, p. 43.
 
 **Tecnología que la sustenta.**  Motor predictivo que corre sobre audIT EdgeHub, el software
-de borde de audIT que define el Subdocumento 1 (sección ?), instalado en el equipo a bordo de la sección 4.2.2 (Caso, RT-06.01, p. 32). Evalúa en tiempo real el tiempo de conducción acumulado, la
+de borde de audIT que define el Subdocumento 1 (sección 1.1.3), instalado en el equipo a bordo de la sección 4.2.2 (Caso, RT-06.01, p. 32). Evalúa en tiempo real el tiempo de conducción acumulado, la
 topografía del tramo siguiente y la ventana de mínima alerta circadiana (*Window of Circadian
 Low*, de 02:00 a 06:00 h). Catálogo georreferenciado local en SQLite, en modo de registro anticipado de escritura, sobre la
 memoria flash industrial de 8 GB del equipo, especificada para las condiciones reales de uso que pide
@@ -452,17 +471,19 @@ de 60 × 60 mm o más e iluminación ámbar de alto contraste.
 detención (Caso, RT-09.01, p. 32), la autenticación sin manipulación (Caso, RT-12.11, p. 32), la interfaz
 para guantes sin interacción en marcha (Caso, RT-13.08, p. 33) y la resiliencia desconectada de 72 horas
 (Caso, RT-17.01, p. 33) constituyen el alcance base comprometido y no se presentan como
-innovación. Lo que agrega esta ficha son tres elementos. La anticipación predictiva circadiana, que
+innovación. Tampoco el catálogo de paradores calificados: el criterio 28 obliga a que toda alerta
+indique un lugar de detención alcanzable (Caso, capítulo 18, p. 43), así que el catálogo, con su
+ontología, su gobernanza y su sincronización en los terminales, es alcance base y se levanta en la
+plataforma. Lo que agrega esta ficha son dos elementos. La anticipación predictiva circadiana, que
 sugiere pausas preventivas antes de que el conductor ingrese a tramos críticos sin infraestructura o
 enfrente el valle biológico de microsueño de madrugada. En esa franja, a las 04:40, ocurrió el
 accidente del 14 de febrero de 2026, con un conductor que no había completado su descanso
-(Caso, capítulo 1, p. 4). La ontología, gobernanza y sincronización por actualización remota en terminales de un catálogo calificado para
-camiones de 45 toneladas con servicios de higiene, agua potable y seguridad para el descanso. Y un modelo social y ergonómico no punitivo
+(Caso, capítulo 1, p. 4). Y un modelo social y ergonómico no punitivo
 para los 258 conductores externos subcontratados (Caso, numeral 2.3, p. 6), conforme a las restricciones 1
 y 2 (Caso, capítulo 10, p. 23) y a la Ley N.º 20.123 (Ministerio del Trabajo, 2006), que transforma una herramienta de control patronal en
 un asistente de seguridad y bienestar.
 
-**Nivel de madurez.**  Se utiliza la escala tecnológica de uno a nueve (International Organization for Standardization, 2013). El desarrollo integrado del modelo circadiano y del catálogo calificado de paradores se autoevalúa en TRL 2 conceptual: el concepto, sus entradas y su incorporación están definidos, pero no se aporta evidencia de una prueba de concepto o validación del prototipo. La disponibilidad comercial del equipo de borde, almacenamiento y síntesis de voz no acredita la madurez del conjunto ni de su integración con el enclavamiento.
+**Nivel de madurez.**  Se utiliza la escala tecnológica de uno a nueve (International Organization for Standardization, 2013). El modelo circadiano, montado sobre el catálogo del criterio 28, se autoevalúa en TRL 2 conceptual: el concepto, sus entradas y su incorporación están definidos, pero no se aporta evidencia de una prueba de concepto o validación del prototipo. La disponibilidad comercial del equipo de borde, almacenamiento y síntesis de voz no acredita la madurez del conjunto ni de su integración con el enclavamiento.
 
 TRL 6 es un objetivo de validación del prototipo integrado en entorno representativo durante las pruebas de Etapa 1 (M10--M12); TRL 7 es un objetivo de demostración operacional con conductores durante la marcha blanca M13--M15, antes de producción E1 en M16. El nivel alcanzado se determinará con versión y configuración, datos de entrada autorizados o sintéticos identificados, protocolo, entorno y resultados reproducibles, junto con evidencia del piloto. Los niveles 6 y 7 se acreditan con ese expediente. Las normas ergonómicas (International Organization for Standardization, 2017; International Organization for Standardization, 2019), los estudios de fatiga (National Academies of Sciences, Engineering, and Medicine, 2016) y la normativa aplicable (Congreso Nacional de Chile, 2021; Ministerio del Trabajo, 2003) fundamentan el diseño; no sustituyen los resultados de validación de audIT.
 
@@ -477,9 +498,9 @@ consolida durante la campaña de cobertura de la Etapa 1, y la calibración de l
 los turnos reales se ajusta en los talleres de diseño ergonómico del mes cuatro.
 
 **Impacto económico.**  La inversión requerida es incremental sobre el software de borde y los
-talleres ergonómicos participativos, mientras que el levantamiento del catálogo se absorbe dentro del
-recorrido de la campaña de medición de cobertura que exige el Caso, RT-03.24, p. 31, sin costo
-logístico adicional. En costo operacional
+talleres ergonómicos participativos. El catálogo de paradores es alcance del criterio 28 y se levanta
+en el recorrido de la campaña de medición de cobertura que exige el Caso, RT-03.24, p. 31, de modo que
+no es costo de esta innovación. En costo operacional
 reduce la búsqueda errática de estacionamiento en ruta, con un efecto en combustible que se mide en la
 Etapa 1. El beneficio esperado es reducir la exposición a detenciones inseguras, incumplimientos de jornada y uso de dispositivos en marcha. Su magnitud se evaluará con los indicadores de seguridad y adopción; no se garantiza eliminación de siniestros ni de multas.
 
@@ -492,9 +513,15 @@ La línea base de efectividad se medirá antes del piloto; la operación actual 
 **Riesgo de adopción.**  Que los 258 conductores externos perciban el sistema como vigilancia
 patronal encubierta, con probabilidad media a alta e impacto alto. Se mitiga mediante diseño
 ergonómico participativo en horario de relevo en los cinco terminales y orientando la herramienta al
-bienestar, con recomendación de sitios con duchas, seguridad y convenios comerciales. La contingencia
-es que la unidad a bordo conmute a notificación puramente acústica por el altavoz del vehículo, sin
-requerir teléfonos personales ni botones adicionales en cabina, manteniendo la seguridad activa y respetando la participación voluntaria del conductor externo.
+bienestar, con recomendación de sitios con duchas, seguridad y convenios comerciales. Las alertas no
+se transmiten como faltas laborales al mandante ni al empleador del conductor, la consulta en el
+portal es pasiva y voluntaria, y el anexo de adhesión con el incentivo de la innovación 4 fija el uso
+permitido de cada dato. Es el riesgo R-14 del Formulario T-16, con exposición inicial 9, probabilidad 3
+e impacto 3, que baja a 6 con la mitigación. El plan adicional tiene disparadores medibles: si la
+adherencia voluntaria a las paradas sugeridas queda bajo 70 % en el mes 14, o la carga cognitiva
+NASA-TLX supera 35 puntos, la unidad a bordo conmuta de inmediato a notificación solo acústica por el
+altavoz del vehículo, sin teléfonos personales ni botones adicionales en cabina, y una mesa técnica
+con conductores de los cinco terminales ajusta los parámetros antes del paso a producción del mes 16.
 
 ## Referencias
 
@@ -546,12 +573,12 @@ Conforme al Comunicado 10, sección 7.2, cada sección de este subdocumento y ca
 
 | Sección | Herramienta | Finalidad del uso | Nivel en texto | Nivel en diagramas | Revisión humana (quién y qué verificó) |
 |---|---|---|---|---|---|
-| Artículo 46 | Claude Opus 5.5 en Claude Code | Redacción de las respuestas 02 y 88 a 100 y ubicación de la sección que resuelve cada una | Alto | Ninguno | Arquitectura de Solución: correspondencia de cada respuesta con las secciones 13.1 a 13.5 y con las fichas. |
-| Introducción | Claude Opus 5.5 en Claude Code | Redacción inicial de la estrategia y de la cartera, y diagrama de la cartera generado con un guion desde el modelo definido por el equipo | Alto | Medio | Arquitectura de Solución: problema de cada innovación, lugar en la arquitectura y figura de la cartera. |
-| 13.1, 13.4 y 13.5 | Claude Opus 5.5 en Claude Code | Traslado del texto del Informe 1 ordenado por los siete elementos del Artículo 29, retiro de lo observado en las observaciones 93 a 100 y verificación de las citas al Caso | Medio | Ninguno | Arquitectura de Solución: siete elementos del Artículo 29 y citas al Caso. |
+| Introducción | Claude Opus 5.5 en Claude Code | Redacción inicial de la estrategia y de la cartera, y diagrama de la cartera generado con un guion desde el modelo definido por el equipo | Alto | Medio | Ignacio Vera, Arquitecto de Solución: problema de cada innovación, lugar en la arquitectura y figura de la cartera. |
+| 13.1, 13.4 y 13.5 | Claude Opus 5.5 en Claude Code | Traslado del texto del Informe 1 ordenado por los siete elementos del Artículo 29, retiro de lo observado en las observaciones 93 a 100 y verificación de las citas al Caso | Medio | Ninguno | Ignacio Vera, Arquitecto de Solución: siete elementos del Artículo 29 y citas al Caso. |
 | 13.2 y ficha 2 del Formulario T-19 | OpenAI Codex (GPT-6) | Diseño de la programación de intervenciones por oportunidad de patio, indicadores, riesgos y gráfico | Alto | Alto | Responsable D3, Arquitecto de Solución: proceso de programación por oportunidad de patio, indicadores, riesgos y figura. |
 | 13.2 y ficha 2 del Formulario T-19 | OpenAI Codex | Cierre de la flota propia en el mes 9 y calendario del Subdocumento 7 | Alto | Ninguno | Responsable D3, Arquitecto de Solución: calendario de la innovación 2 frente al Subdocumento 7. |
 | 13.3 y ficha 3 del Formulario T-19 | Claude Opus 5.5 en Claude Code | Búsqueda de fichas de fabricante, redacción inicial desde las decisiones del equipo, y actualización para la oferta final: el kilometraje de los semirremolques pasa al criterio 26 (observación INN-02) y el beneficio queda en dos partes medidas por separado, con su valor monetario pendiente (observación INN-05) | Alto | Medio | Liderazgo de Calidad y Arquitectura de Solución: delimitación frente al criterio 26, indicadores, inversión y costo coherentes con el Sobre N.º 3, y ficha 3 del Formulario T-19. |
 | Formulario T-19 | Claude Opus 5.5 en Claude Code | Armado de las cinco fichas desde las secciones 13.1 a 13.5 | Alto | Ninguno | Arquitectura de Solución: correspondencia de las cinco fichas con las secciones 13.1 a 13.5. |
 | 13.5 y ficha T-19 tipo 5 | Asistente LLM y OpenAI Codex | Integración del texto de experiencia de usuario; depuración de madurez y calendario; definición del indicador de recomendación y alcance del beneficio | Alto | Ninguno | Coordinación de Calidad: revisión de claridad y consistencia de la innovación 5, madurez actual y objetivos, ventanas de validación y producción, fórmula de efectividad y distinción entre metas y resultados. |
 | 13.2 y ficha 2 | Codex | Conciliación de lotes, piloto y medición de beneficio | Alto | Ninguno | Pendiente de validar con Flota y Calidad. |
+| 13.1 a 13.5 y Formulario T-19 | Claude Opus 5.5 en Claude Code | Conciliación de los riesgos de adopción con el Formulario T-16 y exposición residual por ficha, delimitación de la innovación 5 frente al criterio 28, nombres de las innovaciones 3 y 5 y meses de montaje alineados con el Formulario T-14, impacto económico de la cartera según la planilla 3.2 y diagrama de la cartera regenerado con su guion | Alto | Medio | Naomi Núñez, Líder de Calidad, e Ignacio Vera y Marcel Gutiérrez, Arquitectos de Solución: exposición inicial y residual de cada riesgo frente al Formulario T-16, alcance base y mérito innovador de las fichas 3 y 5, nombres y meses frente al Formulario T-14 y ausencia de horas y montos. |

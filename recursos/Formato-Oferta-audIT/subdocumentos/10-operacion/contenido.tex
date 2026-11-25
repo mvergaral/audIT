@@ -44,7 +44,7 @@ niveles que define \transv{numeral 21.3}{36}.
   nota/.style={align=center,font=\sffamily\fontsize{9.5bp}{11bp}\selectfont\color{audit-tinta}},
   flecha/.style={-latex,line width=0.6pt,draw=audit-marino}]
   \node[caja,fill=audit-gris-claro] (u) at (0,0) {Conductores, torre, terminales, taller, transportistas y clientes};
-  \node[caja] (n1) at (53,0) {\textbf{Nivel 1}\\ Mesa de servicio 24x7\\ paquete 13.1, 6 personas};
+  \node[caja] (n1) at (53,0) {\textbf{Nivel 1}\\ Mesa de servicio 24x7\\ paquete 13.1, 7 personas};
   \node[caja] (n2) at (106,0) {\textbf{Nivel 2}\\ Plataforma y aplicaciones\\ 13.2 y 13.4, guardia 24x7};
   \node[caja,fill=audit-gris-claro] (m) at (106,30) {Monitoreo y alertas de la plataforma};
   \node[caja] (n3) at (106,-32) {\textbf{Nivel 3}\\ Desarrollo, datos\\ y arquitectura};
@@ -62,7 +62,7 @@ El nivel 1 es la mesa de servicio del paquete 13.1. Recibe todo contacto, lo reg
 ticket y severidad, lo resuelve con la base de conocimiento cuando puede y, si no, lo deriva. Su meta es
 resolver en el primer contacto al menos el 70 \% de los casos, como exige \transv{RT-21.06}{36}. El
 nivel 2 son los ingenieros de plataforma y de aplicaciones de los paquetes 13.2 y 13.4, que se turnan
-en la guardia primaria y secundaria de ocho personas que justifica el Subdocumento 7. El nivel 3 reúne
+en la guardia primaria y secundaria que justifica el Subdocumento 7. El nivel 3 reúne
 a quienes construyeron el software y el diseño: desarrollo, datos y arquitectura. El nivel 4 son los
 fabricantes y proveedores, y gestionarlo es responsabilidad de audIT sin que eso lo exima frente al
 mandante \transv*{numeral 21.3}{37}. Los incidentes que detecta el monitoreo entran directo al nivel 2,
@@ -72,9 +72,12 @@ El centro de operaciones que pide \transv{RT-21.01}{35} es el Centro de Operacio
 Santiago (Subdocumento 1). Atiende las 24 horas todos los días del año, con dos agentes en el relevo de
 madrugada y uno en el resto del día, más la guardia de ingeniería. El gerente de servicio dedicado que
 pide \transv{RT-21.02}{35} es el Líder de Operación / SRE, Felipe Morales Cárdenas, que tiene dedicación
-completa durante la operación (Subdocumento 12). El paquete 13.3 cubre el ciclo de vida del equipo a
-bordo y los traslados a los cinco terminales, que están a más de 2.500 km entre sus extremos
-\caso*{RT-21.16}{34}. Los traslados van incluidos en la oferta, como exige el mismo requisito.
+completa durante la operación (Subdocumento 12). El ciclo de vida del equipo a bordo, paquete 13.3,
+tiene media jornada de audIT para la recepción en terminal, el stock y la coordinación, y un proveedor
+externo de campo que hace tres visitas al mes, dos rondas a los terminales regionales y las urgencias
+de 4 horas del hardware crítico \transv*{numeral 8.4}{19}. Los cinco terminales están a más de 2.500 km
+entre sus extremos \caso*{RT-21.16}{34}, y los traslados van incluidos en la oferta, como exige el
+mismo requisito.
 
 Los canales son un teléfono único, el portal de la mesa con autoservicio, un botón de ayuda en la
 aplicación del conductor y el correo. Todos llegan al mismo registro, con número de ticket, severidad y
@@ -178,8 +181,9 @@ llegan con el agente ocupado. Ese desborde ocupa poco tiempo, porque solo uno de
 día encuentra al agente ocupado.
 
 Los puestos dedicados son uno durante las 24 horas y un segundo en el relevo de madrugada. Suman 851
-horas al mes, que las seis personas del paquete 13.1, con 960 horas, cubren con un 11 \% para
-vacaciones, licencias y capacitación. Es la misma dotación del Formulario T-15.
+horas al mes. El paquete 13.1 tiene seis agentes en turnos, 960 horas que dejan un 11 \% para
+vacaciones y capacitación, más una jornada de suplencias de 160 horas para ausencias, descansos y picos
+de cola: siete personas y 1.120 horas al mes, como presupuesta la planilla económica 3.2.
 
 El volumen de contactos es un supuesto, así que importa saber qué pasa si el real es mayor. La
 \figref{10-sensibilidad} muestra el abandono en la hora punta de cada franja cuando el volumen sube
@@ -217,12 +221,18 @@ porque tiene el desborde del nivel 2: con el doble del volumen sigue en 95,2 \% 
 volumen, un tercer agente de madrugada baja el abandono a 2,0 \% y un segundo agente de noche lo deja en
 0,3 \%. Con 2,5 veces, el tercero de madrugada lo deja en 3,7 \%. Entre los meses 16 y 20, cuando el uso
 recién empieza y las consultas pueden llegar a 2,5 veces el supuesto, ese agente extra lo pone la
-escuadra de estabilización del Subdocumento 7. Después el supuesto se revisa cada trimestre con el
-volumen real, y se agrega un puesto en la franja que supere el 4 \% de abandono dos meses seguidos.
+escuadra de estabilización del Subdocumento 7. Desde el mes 21 lo pone la jornada de suplencias: un
+tercer agente en el relevo de madrugada ocupa unas 122 horas al mes de sus 160. El supuesto se revisa
+cada trimestre con el volumen real, y se agrega un puesto en la franja que supere el 4 \% de abandono
+dos meses seguidos.
 
 El 30 \% de los contactos que el nivel 1 no resuelve son unos 170 tickets al mes para el nivel 2, a los
-que se suman los incidentes que abre el monitoreo. Los ocho ingenieros de los paquetes 13.2 y 13.4 los
-atienden dentro de sus 1.280 horas mensuales, junto con la guardia y la mantención del Subdocumento 11.
+que se suman los incidentes que abre el monitoreo. Los ingenieros de los paquetes 13.2 y 13.4 los
+atienden dentro de sus 1.280 horas mensuales de los meses 21 a 24, junto con la guardia y la mantención
+del Subdocumento 11. Esas horas bajan a 1.040 en el último año, porque el trabajo variable de mejoras
+y deuda técnica se reduce con la madurez del servicio. La parte fija de la guardia y de la corrección no
+baja. En el mes 21, con el paso a producción de la Etapa 2, la guardia suma además 160 horas de
+plataforma y 80 de software.
 En los meses 21 a 24 el paquete 13.2 dedica además unas 62 horas al mes, de seguridad y de plataforma,
 a cerrar los paquetes 6.5 y 7.2 de la EDT, y le quedan cerca de 578 para la guardia y los tickets. El
 Subdocumento 11 muestra cómo se reparte en esos meses la capacidad del paquete 13.4.

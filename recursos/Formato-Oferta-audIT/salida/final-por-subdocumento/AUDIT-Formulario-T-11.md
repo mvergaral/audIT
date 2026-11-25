@@ -1,6 +1,6 @@
 # Formulario T-11. Especificaciones técnicas ofertadas
 
-audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. Oferta Técnica, Sobre N.º 2. Propuesta final. Archivo AUDIT-Formulario-T-11.pdf. Anexo del Subdocumento N.º 4, Arquitectura lógica y física de la solución. El formulario incluye sus referencias técnicas.
+audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. Oferta Técnica, Sobre N.º 2. Propuesta final. Archivo AUDIT-Formulario-T-11.pdf. Anexo del Subdocumento N.º 4, Arquitectura lógica y física de la solución. Las fuentes están en las Referencias de ese subdocumento.
 
 ## Índice detallado
 
@@ -86,7 +86,8 @@ audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. O
 | Componente 76. Registro de contenedores | [17](AUDIT-Formulario-T-11.pdf#page=17) |
 | Componente 77. Captura de cambios y proceso analítico | [17](AUDIT-Formulario-T-11.pdf#page=17) |
 | Componente 78. Identidad del personal de audIT | [17](AUDIT-Formulario-T-11.pdf#page=17) |
-| Declaración de uso de IA del T-11 | [20](AUDIT-Formulario-T-11.pdf#page=20) |
+| Referencias | [18](AUDIT-Formulario-T-11.pdf#page=18) |
+| Declaración de uso de IA | [20](AUDIT-Formulario-T-11.pdf#page=20) |
 
 | N.º | Componente | Producto | Características | Ubicación | Cantidad | Adquiere | Ciclo de vida | Justificación |
 |---|---|---|---|---|---|---|---|---|
@@ -159,8 +160,8 @@ audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. O
 | 67 | Identificación del conductor | Lector GAO RFID y tarjeta DESFire | Con el camión detenido | DB | 182 | CLIENTE | Igual a la fila 5 | Caso, RT-12.11, p. 32 |
 | 68 | Módulo satelital | Iridium Edge | Eventos críticos sin señal celular | DB | 182 | CLIENTE | Igual a la fila 3 | Latencia de decenas de segundos. Costo por mensaje. Restricción 4 |
 | 69 | Baliza de semirremolque | Teltonika EYE Sensor | Identificación y temperatura del semirremolque | SR | 210 | CLIENTE | Igual a la fila 7 | Innovación tipo 3. Los semirremolques son de la compañía, sin restricción 3 |
-| 70 | Aplicación móvil del conductor | Aplicación de audIT | Cuatro perfiles de RT-17.01 del Caso. Flutter 3.50.0 estable, Dart compatible y SQLite local. [Notas de Flutter](https://docs.flutter.dev/release/release-notes) | BM | 454 conductores posibles | audIT | Mantención evolutiva del contrato | Canal voluntario. La trazabilidad obligatoria no depende de él (restricciones 1 y 2) |
-| 71 | Portales y torre de control | React 19.3.0 y Next.js 16.x LTS activo | [Versiones de React](https://react.dev/versions) y [Soporte de Next.js](https://nextjs.org/support-policy) | N, capa de presentación | Una plataforma web para los perfiles de S4.1 | audIT | Parche compatible fijado en diseño y mantenido en LTS | Interfaz común con control de acceso por perfil |
+| 70 | Aplicación móvil del conductor | Aplicación de audIT | Cuatro perfiles de RT-17.01 del Caso. Flutter 3.50.0 estable, Dart compatible y SQLite local. \href{https://docs.flutter.dev/release/release-notes}{Notas de Flutter} | BM | 454 conductores posibles | audIT | Mantención evolutiva del contrato | Canal voluntario. La trazabilidad obligatoria no depende de él (restricciones 1 y 2) |
+| 71 | Portales y torre de control | React 19.3.0 y Next.js 16.x LTS activo | \href{https://react.dev/versions}{Versiones de React} y \href{https://nextjs.org/support-policy}{Soporte de Next.js} | N, capa de presentación | Una plataforma web para los perfiles de S4.1 | audIT | Parche compatible fijado en diseño y mantenido en LTS | Interfaz común con control de acceso por perfil |
 | 72 | Ingesta y borde | Go 1.27.4 | Series con soporte y parches según (The Go Authors, 2026) | N y equipo a bordo | Un agente por equipo homologado y un servicio de ingesta escalable | audIT | Revisión de soporte con cada actualización | Desacopla recepción de eventos y procesamiento |
 | 73 | Repositorio y pipeline | GitLab Premium Self-Managed en una máquina Azure D8ds v5 | Repositorio, revisión de código y pipeline. Discos Premium SSD de 64 y 512 GB, copia diaria en Azure Backup. Ficha: (GitLab Inc., 2026) | N, red de herramientas | 1 máquina. Licencias: 33 usuarios en el mes 1, 37 en el 13 y 16 desde el 25 | audIT, licencia a nombre del CLIENTE | Suscripción anual renovable. Máquina desde el mes 1 | Código en el repositorio del mandante y pipeline firmado del Subdocumento 6. Sección 4.2.4 |
 | 74 | Análisis estático del código | SonarQube Developer en una máquina Azure D4ds v5 | Hasta 100.000 líneas en C#, Go, JavaScript, TypeScript y Dart. Discos de 64 y 128 GB. Ficha: (SonarSource, 2026) | N, red de herramientas | 1 máquina y 1 licencia desde el mes 4 | audIT, licencia a nombre del CLIENTE | Suscripción anual renovable | Umbrales bloqueantes de calidad del código del Subdocumento 9. Sección 4.2.4 |
@@ -170,67 +171,3 @@ audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. O
 | 78 | Identidad del personal de audIT | Entra ID P1 | Acceso condicional y autenticación multifactor. Ficha: (Microsoft, 2026) | N | 33 usuarios en el mes 1, 37 en el 13 y 16 desde el 25 | audIT, a nombre del CLIENTE | Suscripción anual renovable | El personal de audIT entra a los ambientes con su identidad y segundo factor. Sección 4.2.4 |
 
 No hay columna de costo: el Artículo 50.2 prohíbe toda cifra que permita inferir la oferta económica, y ese dato va en el Sobre N.º 3.
-
-## Referencias técnicas del T-11
-
-AAEON. (2022). *ICS-6280. DIN rail 4 LAN ports industrial-grade network appliance with Intel Elkhart Lake platform*. https://www.aaeon.com/en/p/din-rail-industrial-grade-network-appliances-ics-6280
-
-Axis Communications. (2026). *AXIS M3215-LVE dome camera. Datasheet*. https://www.axis.com/products/axis-m3215-lve
-
-Axis Communications. (2026). *AXIS S3008 Mk II recorder. Datasheet*. https://www.axis.com/products/axis-s3008-mk-ii
-
-Dell Technologies. (2024). *PowerEdge R360 spec sheet*. https://www.delltechnologies.com/asset/en-us/products/servers/technical-support/poweredge-r360-spec-sheet.pdf
-
-Fortinet. (2026). *FortiAP series data sheet*. https://www.fortinet.com/resources/data-sheets/fortiap-series
-
-Fortinet. (2026). *FortiGate 90G series data sheet*. https://www.fortinet.com/resources/data-sheets/fortigate-90g-series
-
-Fortinet. (2026). *FortiSwitch 124F-POE data sheet*. https://www.router-switch.com/pdf/ft-fs-124f-poe-datasheet.pdf
-
-GAO RFID. (2026). *13.56 MHz MIFARE DESFire RFID reader*. https://gaorfid.com/product/reader-mifare-desfire-13-56-mhz-rfid/
-
-GitLab Inc. (2026). *GitLab pricing*. https://about.gitlab.com/pricing/
-
-Ground Control. (2026). *Iridium Edge satellite IoT terminal*. https://www.groundcontrol.com/product/iridium-edge-9602-satellite-modem/
-
-Himoinsa. (2026). *Grupo electrógeno diésel HYW-8 T5 S5 insonorizado, 8,8 kVA*. https://www.himoinsa.com/esp/generadores-electricos/15843/grupo-electrogeno--8,8kva--insonorizado.html
-
-iWave Global. (2026). *Rugged telematics device G26I*. https://iwave-global.com/product/rugged-telematics-device/
-
-Kidde Fire Systems. (2026). *Fluoro-K clean agent fire suppression*. https://kiddefenwal.com/solutions/engineered-fire-suppression/clean-agent-systems-land/fluoro-k/
-
-Microsoft. (2026). *Azure Retail Prices REST API*. https://prices.azure.com/api/retail/prices
-
-Microsoft. (2026). *Microsoft Entra pricing*. https://www.microsoft.com/en-us/security/business/microsoft-entra-pricing
-
-Microsoft. (2026, 16 de septiembre). *Locations and connectivity providers for Azure ExpressRoute*. Microsoft Learn. https://learn.microsoft.com/en-us/azure/expressroute/expressroute-locations-providers
-
-Minew. (2023). *G1 IoT Bluetooth gateway*. https://www.minew.com/wp-content/uploads/2023/12/G1-IoT-Bluetooth%C2%AE-Gateway.pdf
-
-Schneider Electric. (2023). *APC Smart-UPS On-Line SRT3000XLI. Product datasheet*. https://media.distrelec.com/Web/Downloads/_t/ds/SRT3000XLI_eng_tds.pdf
-
-Schneider Electric. (2024). *APC Smart-UPS SRT 1000VA 230V SRT1000XLI. Product datasheet*. https://docs.rs-online.com/8440/A700000007481704.pdf
-
-SonarSource. (2026). *SonarQube plans and pricing*. https://www.sonarsource.com/plans-and-pricing/sonarqube/
-
-Suprema. (2026). *Fusion multimodal terminal FaceStation F2*. https://www.supremainc.com/en/hardware/fusion-multimodal-terminal-facestation-f2.asp
-
-Technoton. (2026). *CANCrocodile: contactless CAN bus reader*. https://e-shop.jv-technoton.com/product/cancrocodile/
-
-Teltonika Networks. (2026). *RUTX50 industrial 5G router*. https://www.teltonika-networks.com/products/routers/rutx50
-
-Teltonika Networks. (2026). *TSW202 PoE+ managed Ethernet switch*. https://www.teltonika-networks.com/products/ethernet-switches/tsw202
-
-Teltonika Telematics. (2026). *EYE Sensor BTSMP1*. https://wiki.teltonika-gps.com/view/EYE_SENSOR_/_BTSMP1
-
-The Go Authors. (2026). *Release History*. https://go.dev/doc/devel/release
-
-Vertiv. (2026). *Liebert LT460 zone leak detection sensors*. https://www.vertiv.com/en-us/products-catalog/monitoring-control-and-management/monitoring/liebert-lt410-zone-leak-detection-sensors/
-
-Vertiv. (2026). *Liebert Mini-Mate2, MMD12E, 3.55 kW*. https://www.vertiv.com/en-us/products-catalog/thermal-management/room-cooling/mmd12e-3.55kw/
-
-Xtralis. (2026). *VESDA LaserFOCUS VLF-250*. https://firealarm.com/product/vesda-vlf-250-00/
-
-## Declaración de uso de IA
-
-Codex se utilizó con nivel alto en texto para alinear versiones y fuentes con S4.1. Nivel en diagramas: ninguno. Arquitectura e Infraestructura deben validar el ajuste.

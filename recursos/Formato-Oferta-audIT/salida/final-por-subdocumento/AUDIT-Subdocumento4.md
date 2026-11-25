@@ -4,6 +4,21 @@ audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. O
 
 ## 4 Introducción a la Arquitectura Lógica y Física de la Solución
 
+\ProvideDocumentCommand\figuraAqui{O{}mmmm}{
+![Figura 4.1. #4](../../#3)
+
+*Figura 4.1. #4*
+
+Fuente: Elaboración propia.
+}
+\ProvideDocumentCommand\figuraHorizontalAqui{mmm}{
+![Figura 4.2. #2](../../#1)
+
+*Figura 4.2. #2*
+
+Fuente: Elaboración propia.
+}
+
 Este capítulo describe cómo se construye la Plataforma Digital de Misión Crítica para Transporte de Carga: con qué piezas de software se organiza
 la solución y en qué equipos, sitios y regiones de nube corre cada una. La sección 4.1 presenta la
 arquitectura lógica, sus ocho capas, sus seis contextos delimitados y sus decisiones registradas, y la
@@ -56,7 +71,7 @@ mantener su soporte.
 | Repositorio analítico | Delta Lake en ADLS Gen2 | Motor, conectores y biblioteca declarados en un manifiesto de versiones | Datos exportables en formatos abiertos |
 | Identidad y secretos | Entra ID, identidades administradas y Key Vault | Servicio administrado | Edición y capacidades fijadas en el Formulario T-11 |
 
-*Fuentes: políticas de soporte de los fabricantes (Microsoft, 2026; The Go Authors, 2026; PostgreSQL Global Development Group, 2026; Microsoft, 2026; Microsoft, 2026; Microsoft, 2026). Corte del 24-11-2026: [Flutter](https://docs.flutter.dev/release/release-notes), [React](https://react.dev/versions) y [Next.js](https://nextjs.org/support-policy).*
+*Fuentes: políticas de soporte de los fabricantes (Microsoft, 2026; The Go Authors, 2026; PostgreSQL Global Development Group, 2026; Microsoft, 2026; Microsoft, 2026; Microsoft, 2026). Corte del 24-11-2026: \href{https://docs.flutter.dev/release/release-notes}{Flutter}, \href{https://react.dev/versions}{React} y \href{https://nextjs.org/support-policy}{Next.js}.*
 
 La tabla decide los productos y evita dos buses alternativos o dos motores intercambiables. Las
 versiones base de los canales móviles y web se muestran con su estado a la fecha de esta revisión. El
@@ -140,11 +155,7 @@ cuando corresponde. No toda consulta pasa por el bus de eventos. La respuesta vu
 enlace y el canal de presentación. Seguridad y observabilidad no ocupan un lugar en esa pila, la
 atraviesan entera. La Figura 4.1 dibuja las ocho capas con sus componentes.
 
-![Figura 4.1. Las ocho capas obligatorias del numeral 2.1 transversal, con sus componentes e interfaces, conforme a RT-02.01](../../figuras/04-arquitectura/LogicaCapas.png)
-
-*Figura 4.1. Las ocho capas obligatorias del numeral 2.1 transversal, con sus componentes e interfaces, conforme a RT-02.01*
-
-Fuente: Elaboración propia.
+\figuraHorizontalAqui{figuras/04-arquitectura/LogicaCapas.pdf}{Las ocho capas obligatorias del numeral 2.1 transversal, con sus componentes e interfaces, conforme a RT-02.01}{4-capasfig}
 
 Arriba están los cinco tipos de usuario y el canal que usa cada uno. A la derecha quedan los servicios
 externos y el camión, que conserva una versión reducida de las capas de servicios y de datos para
@@ -164,11 +175,7 @@ La descomposición separa responsabilidades que hoy están dispersas entre el si
 planillas, los papeles y las plataformas de posicionamiento. La Figura 4.2 muestra los seis
 contextos y los sistemas con los que conviven.
 
-![Figura 4.2. Contextos delimitados del dominio y sistemas con los que convive la solución](../../figuras/04-arquitectura/audit-figura-4.2-contextos.png)
-
-*Figura 4.2. Contextos delimitados del dominio y sistemas con los que convive la solución*
-
-Fuente: Elaboración propia.
+\figuraAqui{170mm}{figuras/04-arquitectura/audit-figura-4.2-contextos.pdf}{Contextos delimitados del dominio y sistemas con los que convive la solución}{4-contextosfig}
 
 En la figura, cada contexto tiene su propio lenguaje y sus propios datos. Planificación y tráfico puede
 bloquear un viaje sin conocer por dentro a Personas y cumplimiento ni a Flota y activos, porque les
@@ -326,21 +333,13 @@ agotada ni un documento legal faltante.
 
 La Figura 4.3 muestra los patrones que aíslan el despacho de las integraciones externas.
 
-![Figura 4.3. Patrones de resiliencia y presupuesto nominal de diseño](../../figuras/04-arquitectura/audit-figura-4.3-resiliencia.png)
-
-*Figura 4.3. Patrones de resiliencia y presupuesto nominal de diseño*
-
-Fuente: Elaboración propia.
+\figuraAqui[alto=0.84]{228mm}{figuras/04-arquitectura/audit-figura-4.3-resiliencia.pdf}{Patrones de resiliencia y presupuesto nominal de diseño}{4-resilienciafig}
 
 La figura sigue la asignación desde la puerta de enlace hasta la persistencia, con los mamparos y
 cortacircuitos que la separan de las integraciones externas. Sus tiempos son hipótesis de diseño y no
 mediciones. La Figura 4.4 detalla los mensajes de la asignación.
 
-![Figura 4.4. Secuencia de la asignación bloqueante y publicación desde la bandeja de salida](../../figuras/04-arquitectura/4-3-asignacion.png)
-
-*Figura 4.4. Secuencia de la asignación bloqueante y publicación desde la bandeja de salida*
-
-Fuente: Elaboración propia.
+\figuraHorizontalAqui{figuras/04-arquitectura/4-3-asignacion.pdf}{Secuencia de la asignación bloqueante y publicación desde la bandeja de salida}{4-asignacionfig}
 
 La transacción reúne la reserva, la asignación y la bandeja de salida, y la confirmación se devuelve solo
 después del commit. La publicación se reintenta desde la bandeja y el consumidor deduplica, lo que cierra
@@ -412,11 +411,7 @@ formatos abiertos, con validación previa, informe de errores por registro y pro
 capacidad es la que sostiene la migración de las cerca de 6.000 vigencias y la ingesta mensual de
 combustible y peajes. La Figura 4.5 dibuja el mapa de integraciones.
 
-![Figura 4.5. Mapa de integraciones. Sistemas internos, fuentes de terreno y contrapartes externas](../../figuras/04-arquitectura/LogicaIntegraciones.png)
-
-*Figura 4.5. Mapa de integraciones. Sistemas internos, fuentes de terreno y contrapartes externas*
-
-Fuente: Elaboración propia.
+\figuraHorizontalAqui{figuras/04-arquitectura/LogicaIntegraciones.pdf}{Mapa de integraciones. Sistemas internos, fuentes de terreno y contrapartes externas}{4-integracionesfig}
 
 La figura distingue el sistema de gestión de 2013, que se sustituye, del sistema contable, que se
 conserva como único emisor tributario detrás de la capa anticorrupción. Los 192 camiones de terceros
@@ -446,11 +441,7 @@ lugar de dejarlo en silencio.
 
 La Figura 4.6 muestra la integración con el sistema contable a través de esa capa.
 
-![Figura 4.6. Integración con el sistema contable heredado a través de la capa anticorrupción](../../figuras/04-arquitectura/audit-figura-4.4-acl.png)
-
-*Figura 4.6. Integración con el sistema contable heredado a través de la capa anticorrupción*
-
-Fuente: Elaboración propia.
+\figuraHorizontalAqui{figuras/04-arquitectura/audit-figura-4.4-acl.pdf}{Integración con el sistema contable heredado a través de la capa anticorrupción}{4-aclfig}
 
 El sistema contable queda detrás de la capa y solo recibe eventos ya traducidos.
 
@@ -466,11 +457,7 @@ despacho, y la solicitud satelital, cuando solo se conoce en el punto sin cobert
 sistema contable emite y la cabina recibe el contenido íntegro que necesita para portar una
 representación conforme, porque un folio o una huella no bastan.
 
-![Figura 4.7. Emisión del documento de transporte sin cobertura: emisión anticipada o solicitud satelital al único emisor](../../figuras/04-arquitectura/documento-sin-cobertura.png)
-
-*Figura 4.7. Emisión del documento de transporte sin cobertura: emisión anticipada o solicitud satelital al único emisor*
-
-Fuente: Elaboración propia.
+\figuraHorizontalAqui{figuras/04-arquitectura/documento-sin-cobertura.pdf}{Emisión del documento de transporte sin cobertura: emisión anticipada o solicitud satelital al único emisor}{4-sincoberturafig}
 
 Con la mensajería SBD de la familia 9603, Iridium permite hasta 340 bytes de subida y 270 de bajada por
 mensaje (Iridium Communications, 2026). Un documento completo puede necesitar varios mensajes. El protocolo propuesto usa una solicitud correlacionada con versión, longitud, número de
@@ -496,11 +483,7 @@ retorno satelital completo quepa en 90 segundos es condición previa para acepta
 mientras tanto la regla es bloquear la salida sin documento conforme. Ese riesgo se trata en el
 Subdocumento 8. La Figura 4.8 detalla el intercambio y el cotejo previo al movimiento.
 
-![Figura 4.8. Secuencia de emisión, entrega y comprobación previa a la salida](../../figuras/04-arquitectura/4-4-documento.png)
-
-*Figura 4.8. Secuencia de emisión, entrega y comprobación previa a la salida*
-
-Fuente: Elaboración propia.
+\figuraHorizontalAqui{figuras/04-arquitectura/4-4-documento.pdf}{Secuencia de emisión, entrega y comprobación previa a la salida}{4-documentofig}
 
 La salida se habilita solo con la carga coincidente, el documento válido y la representación portable
 disponible. Un cambio posterior de la carga obliga a corregir con el emisor y a evaluar de nuevo, y la
@@ -564,11 +547,7 @@ y tiempo, que la gerencia consulta sin conocer el modelo transaccional.
 
 La Figura 4.9 muestra la capa analítica y la explotación del costo por kilómetro.
 
-![Figura 4.9. Capa analítica por niveles de refinamiento y explotación del costo por kilómetro](../../figuras/04-arquitectura/audit-figura-4.5-analitica.png)
-
-*Figura 4.9. Capa analítica por niveles de refinamiento y explotación del costo por kilómetro*
-
-Fuente: Elaboración propia.
+\figuraHorizontalAqui{figuras/04-arquitectura/audit-figura-4.5-analitica.pdf}{Capa analítica por niveles de refinamiento y explotación del costo por kilómetro}{4-analiticafig}
 
 El costo por kilómetro se calcula distinto según el régimen de propiedad del equipo. Para la flota
 propia se compone de combustible medido por telemetría, peajes efectivamente transitados, neumáticos,
@@ -635,11 +614,7 @@ Subdocumento 13.
 La consolidación del costo de un viaje y la liquidación a los transportistas siguen la secuencia de la
 Figura 4.10, desde el cierre del viaje hasta el acuse del sistema contable.
 
-![Figura 4.10. Secuencia del costeo por viaje, la conciliación de insumos y la liquidación en el sistema contable](../../figuras/04-arquitectura/4-6-liquidacion.png)
-
-*Figura 4.10. Secuencia del costeo por viaje, la conciliación de insumos y la liquidación en el sistema contable*
-
-Fuente: Elaboración propia.
+\figuraHorizontalAqui{figuras/04-arquitectura/4-6-liquidacion.pdf}{Secuencia del costeo por viaje, la conciliación de insumos y la liquidación en el sistema contable}{4-liquidacionfig}
 
 Al cerrar el viaje, Liquidación y costeo emite la versión preliminar del costo en menos de 24 horas
 (Caso, RT-05.29, p. 32). Cada vez que llega una cartola de combustible o de peaje se registra una versión
@@ -660,11 +635,7 @@ RT-02.13 exige presentar el modelo de dominio del negocio con las entidades prin
 y los eventos de negocio que las modifican. El modelo táctico de la Figura 4.11 lo entrega
 organizado por contexto delimitado, de modo que cada agregado quede bajo el contexto que lo posee.
 
-![Figura 4.11. Modelo táctico del dominio. Agregados, entidades y objetos de valor por contexto, con los eventos de dominio entre contextos](../../figuras/04-arquitectura/audit-figura-4.6-tactico.png)
-
-*Figura 4.11. Modelo táctico del dominio. Agregados, entidades y objetos de valor por contexto, con los eventos de dominio entre contextos*
-
-Fuente: Elaboración propia.
+\figuraAqui[alto=0.84]{228mm}{figuras/04-arquitectura/audit-figura-4.6-tactico.pdf}{Modelo táctico del dominio. Agregados, entidades y objetos de valor por contexto, con los eventos de dominio entre contextos}{4-tacticofig}
 
 Cada agregado de la figura pertenece a un solo contexto delimitado. Los eventos de dominio van en línea
 discontinua, desde el contexto que los publica hasta el que los recibe. Los comandos y los eventos de
@@ -882,11 +853,7 @@ conforme que el movimiento necesita.
 La Figura 4.12 muestra la reconexión: autenticación, lotes numerados, admisión,
 deduplicación, commit y acuse duradero. Solo el último acuse permite depurar el búfer.
 
-![Figura 4.12. Secuencia de la reconexión, con el acuse posterior a la persistencia y la conciliación por camión](../../figuras/04-arquitectura/4-7-reconexion.png)
-
-*Figura 4.12. Secuencia de la reconexión, con el acuse posterior a la persistencia y la conciliación por camión*
-
-Fuente: Elaboración propia.
+\figuraHorizontalAqui{figuras/04-arquitectura/4-7-reconexion.pdf}{Secuencia de la reconexión, con el acuse posterior a la persistencia y la conciliación por camión}{4-reconexionsecfig}
 
 La conciliación conserva el original y la resolución de cada conflicto, y la hora de recepción no
 reemplaza la hora del evento. La prueba CP-PERF-02 debe demostrar que cada camión, después de 72 horas
@@ -928,20 +895,12 @@ porque la restricción 3 impide intervenirlo sin acuerdo de su dueño (Caso, cap
 datos llegan por las plataformas de sus proveedores. La Figura 4.13 reúne la
 arquitectura física en una sola vista, con cada equipo, sus conexiones y su alimentación.
 
-![Figura 4.13. Vista completa de la arquitectura física, con cada equipo, sus conexiones y su alimentación](../../figuras/04-arquitectura/fisica-completa.png)
-
-*Figura 4.13. Vista completa de la arquitectura física, con cada equipo, sus conexiones y su alimentación*
-
-Fuente: Elaboración propia.
+\figuraHorizontalAqui{figuras/04-arquitectura/fisica-completa.pdf}{Vista completa de la arquitectura física, con cada equipo, sus conexiones y su alimentación}{4-fisicacompletafig}
 
 La vista completa sirve para ubicar cada equipo en el conjunto, y las figuras que siguen la explican por
 partes. La Figura 4.14 empieza por los tres planos y los enlaces que los unen.
 
-![Figura 4.14. Vista general de la arquitectura física: nube primaria y secundaria, San Bernardo, terminales regionales y flota, con los enlaces y su capacidad](../../figuras/04-arquitectura/fisica-general.png)
-
-*Figura 4.14. Vista general de la arquitectura física: nube primaria y secundaria, San Bernardo, terminales regionales y flota, con los enlaces y su capacidad*
-
-Fuente: Elaboración propia.
+\figuraHorizontalAqui{figuras/04-arquitectura/fisica-general.pdf}{Vista general de la arquitectura física: nube primaria y secundaria, San Bernardo, terminales regionales y flota, con los enlaces y su capacidad}{4-fisicafig}
 
 La figura se lee de arriba hacia abajo. Arriba está la nube, con Azure Chile Central como región
 primaria en tres zonas y Brazil South en espera. Al medio está San Bernardo, conectado a la red central
@@ -949,7 +908,9 @@ de Azure por ExpressRoute de 100 Mbit/s y por una VPN de respaldo a través de o
 lado están los cuatro terminales regionales, cada uno con un enlace fijo de al menos 10 Mbit/s y un
 router 5G de respaldo. Abajo está la flota: los 182 equipos audIT transmiten por la red celular y,
 donde no hay señal, por la red satelital Iridium, mientras que los 192 equipos de terceros entregan su
-posición a través de las plataformas de sus proveedores. Las secciones que siguen desarrollan cada
+posición a través de las plataformas de sus proveedores. La autoridad tributaria queda fuera del sitio:
+el sistema contable, que es el único emisor del documento de transporte, se comunica con ella por su
+propio enlace a internet, y la capa anticorrupción solo le pide la emisión desde la solución. Las secciones que siguen desarrollan cada
 parte con su propio diagrama, como pide el Comunicado 10, sección 4.4: el equipo a bordo, la región
 primaria, la sala de San Bernardo, el gabinete de los terminales y la región secundaria.
 
@@ -981,11 +942,14 @@ propios que pasan de 148 a 170, y 35 balizas para los semirremolques que pasan d
 equipos de terceros no figuran porque no se reemplazan.
 
 Los equipos se montan camión por camión cuando el camión pasa por un terminal, dentro del paquete 4.2
-de la EDT del Subdocumento 7. Primero va un piloto de 10 camiones en el mes 6, luego la flota propia
-hasta el mes 9 y, desde el mes 7, los camiones de terceros que adhieren. El montaje se detiene en los
-meses 11 a 15 y se retoma en los meses 16 a 18. Con el contrato iniciado en febrero de 2027, esa pausa
-coincide con la temporada de diciembre a abril, en que la operación no admite intervenciones
-(Caso, numeral 13.2, p. 27).
+de la EDT del Subdocumento 7. Primero va un piloto de 10 camiones en el mes 6 y luego tres lotes de 60,
+60 y 52 camiones en los meses 7 a 9, que incluyen los 34 camiones de terceros sin equipo. Al cierre del
+mes 9 están montados los 182 equipos. El piloto lo monta el personal de audIT. Los lotes los monta un
+proveedor externo con una agenda por terminal, y audIT conserva el banco de pruebas y la recepción de
+cada camión. En los meses 17 a 19 no hay montajes iniciales: se validan en los terminales las reglas de
+patio y de acople, se cierran las recepciones pendientes y se reponen equipos por excepción
+(actividad A21-PATIO). Con el contrato iniciado en febrero de 2027, ninguna instalación cae en la
+temporada de diciembre a abril, en que la operación no admite intervenciones (Caso, numeral 13.2, p. 27).
 
 **Estándar de homologación de los equipos de terceros.**  El Caso no pide reemplazar las
 plataformas de posicionamiento instaladas en camiones de terceros, pero sí «especificar qué se
@@ -1018,13 +982,9 @@ CAN con J1939, RS232 y RS485, red celular LTE Cat 4 o Cat M1, GNSS, Wi-Fi, Bluet
 seguro Microchip TA100 para arranque seguro y almacenamiento de claves. Funciona de 9 a 32 V, de
 −40 a +70 °C y con protección IP67 (iWave Global, 2026), lo que responde a la vibración, el polvo
 y la temperatura de cabina que piden FEP02, RT-08.11, p. 19 y FEP02, RT-08.12, p. 19. Sobre él corre audIT EdgeHub, el software de
-borde de audIT que presenta el Subdocumento 1 (sección ?). La Figura 4.15 muestra el equipo con sus periféricos.
+borde de audIT que presenta el Subdocumento 1 (sección 1.1.3). La Figura 4.15 muestra el equipo con sus periféricos.
 
-![Figura 4.15. Equipo a bordo: iWave G26I, periféricos, interfaces y particiones de la memoria](../../figuras/04-arquitectura/equipo-a-bordo.png)
-
-*Figura 4.15. Equipo a bordo: iWave G26I, periféricos, interfaces y particiones de la memoria*
-
-Fuente: Elaboración propia.
+\figuraAqui{195mm}{figuras/04-arquitectura/equipo-a-bordo.pdf}{Equipo a bordo: iWave G26I, periféricos, interfaces y particiones de la memoria}{4-bordofig}
 
 Cada periférico de la figura responde a una restricción del Caso. El CANCrocodile lee el bus del camión
 a través del aislamiento de los cables, sin cortarlos, y entrega la señal en CAN 2.0B según SAE J1939
@@ -1037,7 +997,7 @@ la red satelital (Ground Control, 2026) en los tramos de más de 80 km sin seña
 restricción 4 (Caso, capítulo 10, p. 23). Por el mismo canal, cuando un punto de carga no tiene
 cobertura, el equipo envía los datos de la carga y recibe, en fragmentos verificados, la representación
 completa del documento que emite el sistema contable, como fija el Subdocumento 3
-(sección ?). Los mensajes entran a la plataforma por un adaptador autorizado de la
+(sección 3.4.2). Los mensajes entran a la plataforma por un adaptador autorizado de la
 pasarela de Iridium, y el ensayo de los 90 segundos se describe en la sección 4.1.13
 (sección 4.1.13). Es el mismo módem que Webfleet vende en Chile dentro de su
 producto satelital (Webfleet, 2026), lo que hace factible su homologación local. Ese
@@ -1199,11 +1159,7 @@ servidores, gestión, videovigilancia y acceso, y los terminales usan 172.16.4.0
 Así cualquier sitio enruta a cualquier red de Azure sin traducción de direcciones. La Figura 4.16 muestra la región primaria con sus redes, subredes y
 servicios.
 
-![Figura 4.16. Región primaria Azure Chile Central: red central, red de producción, subredes, servicios con su nivel y conexiones con San Bernardo y los terminales](../../figuras/04-arquitectura/region-primaria.png)
-
-*Figura 4.16. Región primaria Azure Chile Central: red central, red de producción, subredes, servicios con su nivel y conexiones con San Bernardo y los terminales*
-
-Fuente: Elaboración propia.
+\figuraHorizontalAqui{figuras/04-arquitectura/region-primaria.pdf}{Región primaria Azure Chile Central: red central, red de producción, subredes, servicios con su nivel y conexiones con San Bernardo y los terminales}{4-azurefig}
 
 Todo el tráfico entre redes pasa por el cortafuegos de la red central, y cada subred tiene su grupo de
 seguridad con reglas de denegación por defecto. Los camiones entran por IoT Hub con certificado mutuo,
@@ -1224,11 +1180,7 @@ automática, como fija el Subdocumento 6.
 La solución tiene cinco ambientes y cada uno vive en su propia suscripción, como muestra la
 Figura 4.17.
 
-![Figura 4.17. Ambientes de la solución, cada uno en su suscripción, creados desde el mismo código](../../figuras/04-arquitectura/ambientes.png)
-
-*Figura 4.17. Ambientes de la solución, cada uno en su suscripción, creados desde el mismo código*
-
-Fuente: Elaboración propia.
+\figuraAqui{180mm}{figuras/04-arquitectura/ambientes.pdf}{Ambientes de la solución, cada uno en su suscripción, creados desde el mismo código}{4-ambientesfig}
 
 Desarrollo y QA están en Chile Central con niveles de servicio menores y menos nodos. Preproducción
 repite la arquitectura de producción a escala reducida, y ahí se ejecutan las pruebas de carga que
@@ -1238,11 +1190,7 @@ sección 4.3.2. Los cinco se levantan desde el mismo código de infraestructura,
 recuperación es idéntico a producción por construcción. La Figura 4.18 sigue una versión
 desde el repositorio hasta producción.
 
-![Figura 4.18. Promoción de una versión desde el repositorio hasta producción](../../figuras/04-arquitectura/ambientes-promocion.png)
-
-*Figura 4.18. Promoción de una versión desde el repositorio hasta producción*
-
-Fuente: Elaboración propia.
+\figuraHorizontalAqui{figuras/04-arquitectura/ambientes-promocion.pdf}{Promoción de una versión desde el repositorio hasta producción}{4-promocionfig}
 
 La versión entra desde el repositorio a desarrollo y se promueve a QA y a preproducción, donde corre la
 prueba de carga. Antes de llegar a producción pasa las seis etapas del pipeline del Subdocumento 6,
@@ -1372,11 +1320,7 @@ completo, fotos, persistencia y conciliación incluidas (sección 4.1.26). Hasta
 ejecutarla, el cumplimiento es una estimación. Las fotos van en un solo paquete por camión: con una carga
 por foto, solo iniciar las cargas tomaría 12 minutos con dos unidades.
 
-![Figura 4.19. Reconexión masiva: del búfer del camión a la base de datos, con los límites de cada tramo](../../figuras/04-arquitectura/reconexion.png)
-
-*Figura 4.19. Reconexión masiva: del búfer del camión a la base de datos, con los límites de cada tramo*
-
-Fuente: Elaboración propia.
+\figuraAqui[alto=0.84]{228mm}{figuras/04-arquitectura/reconexion.pdf}{Reconexión masiva: del búfer del camión a la base de datos, con los límites de cada tramo}{4-reconexionfig}
 
 La figura sigue los cinco tramos. Cada equipo espera un tiempo aleatorio antes de reconectarse y
 reintenta con retroceso exponencial, de modo que los 300 no golpean la puerta en el mismo segundo. Del
@@ -1451,7 +1395,18 @@ críticos: asignación bloqueante, emisión del documento de transporte, recepci
 Los datos históricos que se migran según Caso, RT-05.15, p. 31 se dimensionan en la sección 5.3 del
 Subdocumento 5. Son los maestros completos de flota, conductores, transportistas, clientes y
 geocercas, cerca de 6.000 vigencias, cinco años de viajes, unos 480.000, seis años de liquidaciones y
-todos los siniestros. La mesa N1 opera 24$\times$7 con seis agentes regulares y un equivalente de jornada completa para suplencias y picos. Durante operación se reservan 80 horas mensuales internas de campo para recepción, inventario y coordinación. Las atenciones presenciales se organizan por proveedor, con tres visitas correctivas y dos rondas regionales al mes como base de dimensionamiento. El piloto de diez kits en M6 es interno y los lotes M7 a M9 contratan 172 montajes externos. Banco, analista y supervisión siguen a cargo de audIT. La dotación de instalación se cierra al comenzar M19, tras la ventana M16 a M18. S10 establece la atención y el escalamiento del servicio.
+todos los siniestros.
+
+La mesa de servicio se dimensiona con el modelo Erlang C sobre los contactos que generan las
+poblaciones a tres años del Caso, numeral 14.1, p. 29: unos 576 al mes, 19 al día, concentrados en el
+relevo de madrugada. Con 8 minutos por contacto, la meta de FEP02, RT-21.06, p. 36, 80 % de los
+contactos atendidos antes de 20 segundos y abandono de 5 % o menos, se cumple con dos agentes entre
+las 4:00 y las 8:00 y uno el resto del día, con el desborde del nivel 2. Esos puestos suman 851 horas
+al mes, que cubren seis agentes en turnos más una jornada de suplencias para ausencias y picos, siete
+en total. El campo en la operación lo atiende media jornada de audIT para recepción en terminal, stock
+y coordinación, y un proveedor externo hace tres visitas correctivas y dos rondas regionales al mes como
+base, más las urgencias de 4 horas. El cálculo completo, la atención y el escalamiento están en el
+Subdocumento 10.
 
 ### 4.2.9 Supuestos declarados y brechas
 
@@ -1625,11 +1580,7 @@ exige a la sala principal, y esta oferta lo entrega igual porque la revisión de
 Figura 4.20 lo muestra sobre una planta supuesta de 6,5 por 4 metros, que suma los 26 m²
 del Caso.
 
-![Figura 4.20. Plano de la sala de San Bernardo con sus zonas, a proporción de 26 m²](../../figuras/04-arquitectura/sala-san-bernardo.png)
-
-*Figura 4.20. Plano de la sala de San Bernardo con sus zonas, a proporción de 26 m²*
-
-Fuente: Elaboración propia.
+\figuraAqui{178mm}{figuras/04-arquitectura/sala-san-bernardo.pdf}{Plano de la sala de San Bernardo con sus zonas, a proporción de 26 m²}{4-planofig}
 
 Se entra por una esclusa con dos lectores biométricos, uno en cada puerta, que no deja pasar a más de
 una persona a la vez (FEP02, RT-06.23, p. 16). El rack de servidores y el de comunicaciones van separados,
@@ -1646,11 +1597,7 @@ Caso solo entrega la superficie.
 **Gabinetes de los terminales regionales.**  Cada terminal regional lleva el gabinete de la
 Figura 4.21.
 
-![Figura 4.21. Gabinete de un terminal regional, con sus enlaces, el punto de acceso de patio y el lector de portería](../../figuras/04-arquitectura/gabinete-terminal.png)
-
-*Figura 4.21. Gabinete de un terminal regional, con sus enlaces, el punto de acceso de patio y el lector de portería*
-
-Fuente: Elaboración propia.
+\figuraAqui{215mm}{figuras/04-arquitectura/gabinete-terminal.pdf}{Gabinete de un terminal regional, con sus enlaces, el punto de acceso de patio y el lector de portería}{4-terminalfig}
 
 Dentro del gabinete van dos AAEON ICS-6280A-A10-00 en activo y en espera, que funcionan sin ventilador de
 −40 a +75 °C con doble entrada de alimentación de 9 a 48 V (AAEON, 2022). AAEON no publica
@@ -1692,11 +1639,7 @@ que la primaria, porque se levanta desde el mismo código, con el estado de cada
 réplicas que llegan desde Chile Central. Sus subredes repiten dentro de 10.21.0.0/20 las posiciones de
 Chile Central.
 
-![Figura 4.22. Región secundaria Azure Brazil South en espera: red central, red de recuperación, subredes, servicios y estado de cada uno](../../figuras/04-arquitectura/region-secundaria.png)
-
-*Figura 4.22. Región secundaria Azure Brazil South en espera: red central, red de recuperación, subredes, servicios y estado de cada uno*
-
-Fuente: Elaboración propia.
+\figuraHorizontalAqui{figuras/04-arquitectura/region-secundaria.pdf}{Región secundaria Azure Brazil South en espera: red central, red de recuperación, subredes, servicios y estado de cada uno}{4-secundariafig}
 
 Las bases de datos, Event Hubs, el almacenamiento de objetos y Key Vault reciben réplica de forma
 continua. AKS queda como clúster en espera, y la puerta de enlace, IoT Hub, el servicio de
@@ -1726,11 +1669,7 @@ La Figura 4.23 muestra la recuperación como un procedimiento, de izquierda a de
 operación normal, con las réplicas hacia Brazil South, y termina en la vuelta a Chile Central. Arriba
 van los tiempos que la fijan y abajo, aparte, el eje de continuidad.
 
-![Figura 4.23. Recuperación ante desastres entre Chile Central y Brazil South, y eje separado de continuidad en San Bernardo, los terminales y los camiones](../../figuras/04-arquitectura/recuperacion.png)
-
-*Figura 4.23. Recuperación ante desastres entre Chile Central y Brazil South, y eje separado de continuidad en San Bernardo, los terminales y los camiones*
-
-Fuente: Elaboración propia.
+\figuraHorizontalAqui{figuras/04-arquitectura/recuperacion.pdf}{Recuperación ante desastres entre Chile Central y Brazil South, y eje separado de continuidad en San Bernardo, los terminales y los camiones}{4-drfig}
 
 La conmutación sigue los cuatro pasos numerados de la figura. El monitoreo detecta la caída y
 alerta con un criterio declarado: la región primaria no responde durante 15 minutos, el plazo que
@@ -1749,7 +1688,7 @@ se identifican el responsable y el destinatario y se documenta la vía que habil
 replican fuera de Chile. El Subdocumento 5 trata la base de licitud, y la residencia de los datos queda
 sujeta a la aprobación del mandante que exige el FEP01, Artículo 23, p. 17.
 
-Antes de H2, Curimón valida el instrumento contractual con garantías adecuadas de los artículos 27 letra b) y 28 del régimen introducido por Ley 21.719 (Biblioteca del Congreso Nacional de Chile, s. f.), en los términos de S5. La réplica de datos personales a Brazil South queda condicionada a esa validación y autorización documentada. Mientras se tramita, la región secundaria sólo recibe artefactos técnicos y datos sintéticos. Si no hay vía habilitante, debe seleccionarse y ensayarse un sitio secundario admisible, con RPO de hasta 15 minutos y RTO de hasta cuatro horas según FEP02, RT-07.04, p. 17. San Bernardo conserva el eje de continuidad local. Su exposición compartida con Chile Central impide usarlo como sitio independiente de recuperación. R-24 queda abierto y H7 requiere ensayo de recuperación y acta.
+Antes de H2, Curimón valida el instrumento contractual con garantías adecuadas de los artículos 27 letra b) y 28 del régimen introducido por Ley 21.719 (Biblioteca del Congreso Nacional de Chile, s. f.), en los términos de S5, con el apoyo de una asesoría legal externa que documenta la vía. La réplica de datos personales a Brazil South queda condicionada a esa validación y autorización documentada. Mientras se tramita, la región secundaria sólo recibe artefactos técnicos y datos sintéticos, y los datos personales quedan protegidos en Chile Central por la alta disponibilidad entre zonas, cuya réplica sincrónica no pierde datos confirmados ante la caída de una zona y conmuta en 60 a 120 segundos (Microsoft, s. f.). Esa protección cubre una zona y no la región completa. Si no hay vía habilitante, debe seleccionarse y ensayarse un sitio secundario admisible, con RPO de hasta 15 minutos y RTO de hasta cuatro horas según FEP02, RT-07.04, p. 17. San Bernardo conserva el eje de continuidad local. Su exposición compartida con Chile Central impide usarlo como sitio independiente de recuperación. R-24 queda abierto y H7 requiere ensayo de recuperación y acta.
 
 La parte inferior de la figura es el otro eje. La recuperación y la continuidad son ejes separados:
 Brazil South recupera la nube si cae la región primaria, y San Bernardo, los terminales y los camiones
@@ -1836,6 +1775,8 @@ Microsoft. (2026, 16 de septiembre). *Locations and connectivity providers for A
 
 Microsoft. (2026, 23 de septiembre). *List of Azure regions*. Microsoft Learn. https://learn.microsoft.com/en-us/azure/reliability/regions-list
 
+Microsoft. (2026, 24 de marzo). *Reliability in Azure Database for PostgreSQL*. Microsoft Learn. https://learn.microsoft.com/en-us/azure/reliability/reliability-database-postgresql
+
 Microsoft. (2026, 30 de julio). *Azure network round-trip latency statistics*. Microsoft Learn. https://learn.microsoft.com/en-us/azure/networking/azure-network-latency
 
 Microsoft. (2026, 5 de septiembre). *What is Azure Database for PostgreSQL flexible server?*. Microsoft Learn. https://learn.microsoft.com/en-us/azure/postgresql/flexible-server/overview
@@ -1892,22 +1833,21 @@ Conforme al Comunicado 10, sección 7.2, cada sección de este subdocumento y ca
 
 | Sección | Herramienta | Finalidad del uso | Nivel en texto | Nivel en diagramas | Revisión humana (quién y qué verificó) |
 |---|---|---|---|---|---|
-| Artículo 46 | Claude Opus 5.5 en Claude Code | Redacción de las respuestas 03 y 53 a 80 y ubicación de la sección que resuelve cada una | Alto | Ninguno | Arquitectura de Solución: correspondencia de cada respuesta con la sección que la resuelve. |
-| Introducción | Claude Opus 5.5 en Claude Code | Redacción inicial del resumen a partir de las decisiones de diseño del equipo | Alto | Ninguno | Arquitectura de Solución: alcance del resumen y su coherencia con las secciones 4.1 a 4.3. |
+| Introducción | Claude Opus 5.5 en Claude Code | Redacción inicial del resumen a partir de las decisiones de diseño del equipo | Alto | Ninguno | Ignacio Vera, Arquitecto de Solución: alcance del resumen y su coherencia con las secciones 4.1 a 4.3. |
 | 4 y 4.1.1 a 4.1.26 | OpenAI Codex (GPT-6) | Contraste con las bases y con los Subdocumentos 3, 5, 6, 7 y 9, corrección de contratos, decisiones y capacidad, y figuras de capas, secuencias y documento sin cobertura | Alto | Alto | Responsable D3, Arquitecto de Solución: decisiones de arquitectura, contratos, presupuesto de la asignación y supuestos de capacidad de la arquitectura lógica. |
 | 4.1 | Claude Opus 5.5 en Claude Code | Integración al formato con verificación de citas y versiones, ajuste al formato de las cuatro secuencias y del documento sin cobertura, y diagramas de contextos, integraciones, resiliencia, capa anticorrupción, analítica y modelo táctico generados con un guion sobre los modelos del equipo | Alto | Medio | Arquitectura de Solución: citas a las bases, versiones de cada fabricante y correspondencia de las figuras con el texto. |
-| 4.2 | Claude Opus 5.5 en Claude Code | Redacción inicial del texto desde las decisiones de diseño del equipo, y diagrama general generado con un guion desde el modelo definido por el equipo | Alto | Medio | Arquitectura de Solución: emplazamiento de cada componente y correspondencia del diagrama general con el Formulario T-11. |
-| 4.2.1 | Claude Opus 5.5 en Claude Code | Búsqueda de fichas de fabricante, cantidades desde el Caso y redacción inicial | Alto | Ninguno | Arquitectura de Solución: fichas de fabricante y cantidades frente a las poblaciones del Caso. |
-| 4.2.2 | Claude Opus 5.5 en Claude Code | Fichas del equipo a bordo y cálculo del almacenamiento, y diagrama generado con un guion desde el modelo definido por el equipo | Alto | Medio | Arquitectura de Solución: cálculo del almacenamiento a bordo, especificaciones del equipo y figura. |
-| 4.2.3 | Claude Opus 5.5 en Claude Code | Conteo del emplazamiento y matriz de trazabilidad | Alto | Ninguno | Arquitectura de Solución: conteo de componentes y matriz de trazabilidad. |
-| 4.2.4 | Claude Opus 5.5 en Claude Code | Verificación de servicios y niveles en la documentación de Microsoft, y actualización para la oferta final con APIM en dos zonas, herramientas del ciclo de desarrollo, analítica e identidad | Alto | Ninguno | Liderazgo de Calidad y Arquitectura de Solución: servicios, niveles, disponibilidad regional y coherencia con el Formulario T-11. |
-| 4.2.5 | Claude Opus 5.5 en Claude Code | Plan de direcciones con la red de herramientas, y diagrama de la región primaria generado con un guion desde el modelo definido por el equipo | Alto | Medio | Liderazgo de Calidad y Arquitectura de Solución: plan de direcciones, segmentación y figura de la región primaria. |
-| 4.2.6 | Claude Opus 5.5 en Claude Code | Redacción inicial de ambientes, promoción y respaldos, corrección de API Management a dos zonas, y los dos diagramas generados con un guion desde el modelo definido por el equipo | Alto | Medio | Liderazgo de Calidad y Arquitectura de Solución: ambientes, alta disponibilidad, respaldos y correspondencia de los dos diagramas. |
-| 4.2.7 | Claude Opus 5.5 en Claude Code | Enlaces, puntos únicos de falla y tiempos de conmutación con fuente, y respuesta a la observación ARQ-04 sobre el circuito ExpressRoute | Alto | Ninguno | Liderazgo de Calidad y Arquitectura de Solución: enlaces, conmutación, alternativa al circuito y su riesgo R-33. |
-| 4.2.8 | Claude Opus 5.5 en Claude Code | Cálculo del dimensionamiento con un guion y diagrama de la reconexión generado con un guion desde el modelo definido por el equipo | Alto | Medio | Arquitectura de Solución: cálculos del dimensionamiento y de la reconexión, y su tratamiento como estimación. |
-| 4.2.9 | Claude Opus 5.5 en Claude Code | Actualización de los supuestos y tabla de brechas con su cierre y contingencia (observación ARQ-07) | Medio | Ninguno | Liderazgo de Calidad y Arquitectura de Solución: supuestos, brechas, plazos de la red del T-15 y contingencias. |
-| 4.3 | Claude Opus 5.5 en Claude Code | Redacción inicial de tipologías | Alto | Ninguno | Arquitectura de Solución: tipología de los centros de datos frente al numeral 6.1 transversal. |
-| 4.3.1 | Claude Opus 5.5 en Claude Code | Fichas y balance eléctrico con un guion, y plano de la sala y gabinete generados con un guion desde el modelo definido por el equipo | Alto | Medio | Arquitectura de Solución: fichas, balance eléctrico, plano de la sala y gabinete. |
-| 4.3.2 | Claude Opus 5.5 en Claude Code | Réplicas con fuente, protocolo de conmutación, compromiso de latencia y vía de recuperación de datos personales alineada con el Subdocumento 5 (observación ARQ-05), y diagramas generados con un guion desde el modelo definido por el equipo | Alto | Medio | Liderazgo de Calidad y Arquitectura de Solución: réplicas, conmutación, cláusulas tipo y decisión del H2 registrada en R-24. |
-| Formulario T-11 | Claude Opus 5.5 en Claude Code | Armado de las filas desde las fichas y las decisiones de diseño del equipo, y actualización para la oferta final: quién adquiere cada componente, repuestos, crecimiento, fuente por fila y seis filas de herramientas, analítica e identidad | Alto | Ninguno | Liderazgo de Calidad y Arquitectura de Solución: cantidades, ubicación, adquirente, fuente y justificación de cada componente. |
 | 4.1 y continuidad | Codex | Versiones, estado de ADR, dimensionamiento, condiciones de DR y liquidación por tramo. Actualización de la secuencia y validación de legibilidad de los diagramas | Alto | Medio | Pendiente de validación de Arquitectura e Infraestructura. |
+| 4.2 | Claude Opus 5.5 en Claude Code | Redacción inicial del texto desde las decisiones de diseño del equipo, diagrama general generado con un guion desde el modelo definido por el equipo y rótulo del enlace de la autoridad tributaria | Alto | Medio | Naomi Núñez, Líder de Calidad, e Ignacio Vera y Marcel Gutiérrez, Arquitectos de Solución: emplazamiento de cada componente, correspondencia del diagrama general con el Formulario T-11 y enlace externo de la autoridad tributaria (observación ARQ-08). |
+| 4.2.1 | Claude Opus 5.5 en Claude Code | Búsqueda de fichas de fabricante, cantidades desde el Caso y redacción inicial | Alto | Ninguno | Ignacio Vera, Arquitecto de Solución: fichas de fabricante y cantidades frente a las poblaciones del Caso. |
+| 4.2.2 | Claude Opus 5.5 en Claude Code | Fichas del equipo a bordo, cálculo del almacenamiento y calendario de montaje alineado con el Formulario T-14 y la planilla económica 3.2, y diagrama generado con un guion desde el modelo definido por el equipo | Alto | Medio | Naomi Núñez, Líder de Calidad, e Ignacio Vera y Marcel Gutiérrez, Arquitectos de Solución: cálculo del almacenamiento a bordo, especificaciones del equipo, meses de montaje y quién monta cada lote. |
+| 4.2.3 | Claude Opus 5.5 en Claude Code | Conteo del emplazamiento y matriz de trazabilidad | Alto | Ninguno | Ignacio Vera, Arquitecto de Solución: conteo de componentes y matriz de trazabilidad. |
+| 4.2.4 | Claude Opus 5.5 en Claude Code | Verificación de servicios y niveles en la documentación de Microsoft, y actualización para la oferta final con APIM en dos zonas, herramientas del ciclo de desarrollo, analítica e identidad | Alto | Ninguno | Naomi Núñez, Líder de Calidad, e Ignacio Vera y Marcel Gutiérrez, Arquitectos de Solución: servicios, niveles, disponibilidad regional y coherencia con el Formulario T-11. |
+| 4.2.5 | Claude Opus 5.5 en Claude Code | Plan de direcciones con la red de herramientas, y diagrama de la región primaria generado con un guion desde el modelo definido por el equipo | Alto | Medio | Naomi Núñez, Líder de Calidad, e Ignacio Vera y Marcel Gutiérrez, Arquitectos de Solución: plan de direcciones, segmentación y figura de la región primaria. |
+| 4.2.6 | Claude Opus 5.5 en Claude Code | Redacción inicial de ambientes, promoción y respaldos, corrección de API Management a dos zonas, y los dos diagramas generados con un guion desde el modelo definido por el equipo | Alto | Medio | Naomi Núñez, Líder de Calidad, e Ignacio Vera y Marcel Gutiérrez, Arquitectos de Solución: ambientes, alta disponibilidad, respaldos y correspondencia de los dos diagramas. |
+| 4.2.7 | Claude Opus 5.5 en Claude Code | Enlaces, puntos únicos de falla y tiempos de conmutación con fuente, y respuesta a la observación ARQ-04 sobre el circuito ExpressRoute | Alto | Ninguno | Naomi Núñez, Líder de Calidad, e Ignacio Vera y Marcel Gutiérrez, Arquitectos de Solución: enlaces, conmutación, alternativa al circuito y su riesgo R-33. |
+| 4.2.8 | Claude Opus 5.5 en Claude Code | Cálculo del dimensionamiento con un guion, resumen del dimensionamiento de la mesa de servicio del Subdocumento 10 y diagrama de la reconexión generado con un guion desde el modelo definido por el equipo | Alto | Medio | Naomi Núñez, Líder de Calidad, e Ignacio Vera y Marcel Gutiérrez, Arquitectos de Solución: cálculos del dimensionamiento y de la reconexión, y contactos, agentes y jornadas de la mesa frente al Subdocumento 10 (observación ARQ-03). |
+| 4.2.9 | Claude Opus 5.5 en Claude Code | Actualización de los supuestos y tabla de brechas con su cierre y contingencia (observación ARQ-07) | Medio | Ninguno | Naomi Núñez, Líder de Calidad, e Ignacio Vera y Marcel Gutiérrez, Arquitectos de Solución: supuestos, brechas, plazos de la red del T-15 y contingencias. |
+| 4.3 | Claude Opus 5.5 en Claude Code | Redacción inicial de tipologías | Alto | Ninguno | Ignacio Vera, Arquitecto de Solución: tipología de los centros de datos frente al numeral 6.1 transversal. |
+| 4.3.1 | Claude Opus 5.5 en Claude Code | Fichas y balance eléctrico con un guion, y plano de la sala y gabinete generados con un guion desde el modelo definido por el equipo | Alto | Medio | Ignacio Vera, Arquitecto de Solución: fichas, balance eléctrico, plano de la sala y gabinete. |
+| 4.3.2 | Claude Opus 5.5 en Claude Code | Réplicas con fuente, protocolo de conmutación, compromiso de latencia, vía de recuperación de datos personales alineada con el Subdocumento 5 y alternativa sin transferencia con su fuente (observación ARQ-05), y diagramas generados con un guion desde el modelo definido por el equipo | Alto | Medio | Naomi Núñez, Líder de Calidad, e Ignacio Vera y Marcel Gutiérrez, Arquitectos de Solución: réplicas, conmutación, condición de la transferencia en el H2, alta disponibilidad entre zonas frente a su fuente y registro en R-24. |
+| Formulario T-11 | Claude Opus 5.5 en Claude Code | Armado de las filas desde las fichas y las decisiones de diseño del equipo, y actualización para la oferta final: quién adquiere cada componente, repuestos, crecimiento, fuente por fila y seis filas de herramientas, analítica e identidad | Alto | Ninguno | Naomi Núñez, Líder de Calidad, e Ignacio Vera y Marcel Gutiérrez, Arquitectos de Solución: cantidades, ubicación, adquirente, fuente y justificación de cada componente. |

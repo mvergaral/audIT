@@ -5,9 +5,9 @@ C13 = "13-innovaciones"
 
 INNOVACIONES = [(1, "inn-expediente", ["Expediente verificable", "del transportista"]),
                 (2, "az-deviceupdate", ["Programación por", "oportunidad de patio"]),
-                (3, "pr-semirremolque", ["Semirremolque", "conectado"]),
+                (3, "pr-semirremolque", ["Acople verificado y registro", "térmico del semirremolque"]),
                 (4, "flu-acuerdo", ["Esquema de adhesión y", "propiedad del dispositivo"]),
-                (5, "flu-parador", ["Bienestar del conductor y", "descanso en parador seguro"])]
+                (5, "flu-parador", ["Anticipación circadiana", "y aviso no punitivo", "de descanso"])]
 
 
 def nodo_marcado(f, ic, cx, cy, s, nombre, numeros):
@@ -34,13 +34,13 @@ def cartera():
                                  ("pr-servicio", ["Planificación", "de patio"], [2]),
                                  ("flu-candado", ["Verificación", "bloqueante"], [3]),
                                  ("flu-documento", "Consentimiento", [4]),
-                                 ("flu-parador", ["Gobernanza", "de paradores"], [5])]),
+                                 ("flu-parador", ["Paradores del", "criterio 28"], [])]),
              ("Integración", 260, [("az-iothub", "IoT Hub", []), ("az-deviceupdate", ["Actualización", "remota"], [2]),
                                    ("az-eventhubs", "Event Hubs", [])]),
              ("Borde", 338, [("pr-pc-industrial", "Terminales", [2]), ("pr-ble", "Portería", [3]),
                              ("pr-wifi", ["Patio", "con Wi-Fi"], [])]),
              ("Equipo a bordo", 416, [("pr-g26i", "iWave G26I", [2, 3, 4, 5]), ("pr-servicio", ["Motor de", "geocercas"], []),
-                                      ("rol-conductor", ["Alerta de", "jornada"], [])])]
+                                      ("rol-conductor", ["Aviso", "circadiano"], [5])])]
     for titulo, y, nodos in capas:
         f.grupo(8, y, 406, 74, titulo)
         n = len(nodos)

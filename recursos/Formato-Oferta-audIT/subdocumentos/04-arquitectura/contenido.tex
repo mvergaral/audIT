@@ -939,7 +939,9 @@ de Azure por ExpressRoute de 100~Mbit/s y por una VPN de respaldo a través de o
 lado están los cuatro terminales regionales, cada uno con un enlace fijo de al menos 10~Mbit/s y un
 router 5G de respaldo. Abajo está la flota: los 182 equipos audIT transmiten por la red celular y,
 donde no hay señal, por la red satelital Iridium, mientras que los 192 equipos de terceros entregan su
-posición a través de las plataformas de sus proveedores. Las secciones que siguen desarrollan cada
+posición a través de las plataformas de sus proveedores. La autoridad tributaria queda fuera del sitio:
+el sistema contable, que es el único emisor del documento de transporte, se comunica con ella por su
+propio enlace a internet, y la capa anticorrupción solo le pide la emisión desde la solución. Las secciones que siguen desarrollan cada
 parte con su propio diagrama, como pide el \comunicado{10}{sección 4.4}: el equipo a bordo, la región
 primaria, la sala de San Bernardo, el gabinete de los terminales y la región secundaria.
 
@@ -973,11 +975,14 @@ propios que pasan de 148 a 170, y 35 balizas para los semirremolques que pasan d
 equipos de terceros no figuran porque no se reemplazan.
 
 Los equipos se montan camión por camión cuando el camión pasa por un terminal, dentro del paquete 4.2
-de la EDT del Subdocumento~7. Primero va un piloto de 10 camiones en el mes 6, luego la flota propia
-hasta el mes 9 y, desde el mes 7, los camiones de terceros que adhieren. El montaje se detiene en los
-meses 11 a 15 y se retoma en los meses 16 a 18. Con el contrato iniciado en febrero de 2027, esa pausa
-coincide con la temporada de diciembre a abril, en que la operación no admite intervenciones
-\caso*{numeral 13.2}{27}.
+de la EDT del Subdocumento~7. Primero va un piloto de 10 camiones en el mes 6 y luego tres lotes de 60,
+60 y 52 camiones en los meses 7 a 9, que incluyen los 34 camiones de terceros sin equipo. Al cierre del
+mes 9 están montados los 182 equipos. El piloto lo monta el personal de audIT. Los lotes los monta un
+proveedor externo con una agenda por terminal, y audIT conserva el banco de pruebas y la recepción de
+cada camión. En los meses 17 a 19 no hay montajes iniciales: se validan en los terminales las reglas de
+patio y de acople, se cierran las recepciones pendientes y se reponen equipos por excepción
+(actividad A21-PATIO). Con el contrato iniciado en febrero de 2027, ninguna instalación cae en la
+temporada de diciembre a abril, en que la operación no admite intervenciones \caso*{numeral 13.2}{27}.
 
 \paragraph{Estándar de homologación de los equipos de terceros} El Caso no pide reemplazar las
 plataformas de posicionamiento instaladas en camiones de terceros, pero sí «especificar qué se
@@ -1425,7 +1430,18 @@ críticos: asignación bloqueante, emisión del documento de transporte, recepci
 Los datos históricos que se migran según \caso{RT-05.15}{31} se dimensionan en la sección~5.3 del
 Subdocumento~5. Son los maestros completos de flota, conductores, transportistas, clientes y
 geocercas, cerca de 6.000 vigencias, cinco años de viajes, unos 480.000, seis años de liquidaciones y
-todos los siniestros. La mesa N1 opera 24$\times$7 con seis agentes regulares y un equivalente de jornada completa para suplencias y picos. Durante operación se reservan 80 horas mensuales internas de campo para recepción, inventario y coordinación. Las atenciones presenciales se organizan por proveedor, con tres visitas correctivas y dos rondas regionales al mes como base de dimensionamiento. El piloto de diez kits en M6 es interno y los lotes M7 a M9 contratan 172 montajes externos. Banco, analista y supervisión siguen a cargo de audIT. La dotación de instalación se cierra al comenzar M19, tras la ventana M16 a M18. S10 establece la atención y el escalamiento del servicio.
+todos los siniestros.
+
+La mesa de servicio se dimensiona con el modelo Erlang C sobre los contactos que generan las
+poblaciones a tres años del \caso{numeral 14.1}{29}: unos 576 al mes, 19 al día, concentrados en el
+relevo de madrugada. Con 8 minutos por contacto, la meta de \transv{RT-21.06}{36}, 80~\% de los
+contactos atendidos antes de 20 segundos y abandono de 5~\% o menos, se cumple con dos agentes entre
+las 4:00 y las 8:00 y uno el resto del día, con el desborde del nivel 2. Esos puestos suman 851 horas
+al mes, que cubren seis agentes en turnos más una jornada de suplencias para ausencias y picos, siete
+en total. El campo en la operación lo atiende media jornada de audIT para recepción en terminal, stock
+y coordinación, y un proveedor externo hace tres visitas correctivas y dos rondas regionales al mes como
+base, más las urgencias de 4 horas. El cálculo completo, la atención y el escalamiento están en el
+Subdocumento~10.
 
 % ----------------------------------------------------------------------------
 \subsection{Supuestos declarados y brechas}\label{sec:4-supuestos}
@@ -1707,7 +1723,7 @@ se identifican el responsable y el destinatario y se documenta la vía que habil
 replican fuera de Chile. El Subdocumento~5 trata la base de licitud, y la residencia de los datos queda
 sujeta a la aprobación del mandante que exige el \art{23}{17}.
 
-Antes de H2, Curimón valida el instrumento contractual con garantías adecuadas de los artículos 27 letra b) y 28 del régimen introducido por Ley~21.719 \parencite{d3_ley21719}, en los términos de S5. La réplica de datos personales a Brazil South queda condicionada a esa validación y autorización documentada. Mientras se tramita, la región secundaria sólo recibe artefactos técnicos y datos sintéticos. Si no hay vía habilitante, debe seleccionarse y ensayarse un sitio secundario admisible, con RPO de hasta 15 minutos y RTO de hasta cuatro horas según \transv{RT-07.04}{17}. San Bernardo conserva el eje de continuidad local. Su exposición compartida con Chile Central impide usarlo como sitio independiente de recuperación. R-24 queda abierto y H7 requiere ensayo de recuperación y acta.
+Antes de H2, Curimón valida el instrumento contractual con garantías adecuadas de los artículos 27 letra b) y 28 del régimen introducido por Ley~21.719 \parencite{d3_ley21719}, en los términos de S5, con el apoyo de una asesoría legal externa que documenta la vía. La réplica de datos personales a Brazil South queda condicionada a esa validación y autorización documentada. Mientras se tramita, la región secundaria sólo recibe artefactos técnicos y datos sintéticos, y los datos personales quedan protegidos en Chile Central por la alta disponibilidad entre zonas, cuya réplica sincrónica no pierde datos confirmados ante la caída de una zona y conmuta en 60 a 120 segundos \parencite{ms_pg_confiabilidad}. Esa protección cubre una zona y no la región completa. Si no hay vía habilitante, debe seleccionarse y ensayarse un sitio secundario admisible, con RPO de hasta 15 minutos y RTO de hasta cuatro horas según \transv{RT-07.04}{17}. San Bernardo conserva el eje de continuidad local. Su exposición compartida con Chile Central impide usarlo como sitio independiente de recuperación. R-24 queda abierto y H7 requiere ensayo de recuperación y acta.
 
 La parte inferior de la figura es el otro eje. La recuperación y la continuidad son ejes separados:
 Brazil South recupera la nube si cae la región primaria, y San Bernardo, los terminales y los camiones

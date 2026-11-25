@@ -7,9 +7,10 @@
 \begin{resumenApertura}
 Este subdocumento presenta quién hace el proyecto y quién responde por cada parte. El equipo clave son
 los seis roles que exige el \art{34.1}{22}, nominados y con su dedicación en el Formulario T-8. La
-dotación sube de 14 personas en los meses 1 y 2 a 37 en los meses 13 a 17 y baja a 16 en la operación,
-igual que en el Formulario T-15. Lo que no hace audIT lo hacen proveedores y socios que suman cerca del
-15,6 \% del valor del contrato, bajo el tope del 40 \% del \art{73.1}{38}.
+dotación sube de 14 jornadas completas en los meses 1 y 2 a un máximo de 39,2 en el mes 7, se mantiene
+cerca de 37 mientras conviven las dos etapas y baja de 17,8 a 14 en la operación, igual que en el
+Formulario T-15. Lo que no hace audIT lo hacen proveedores y socios que suman cerca del 18,8 \% del
+valor del contrato, bajo el tope del 40 \% del \art{73.1}{38}.
 \begin{recibe}
   \item Una estructura del proyecto con un responsable por cada entregable y una matriz de asignación.
   \item Un equipo clave nominado, con certificaciones, dedicación y meses de participación en el Formulario T-8.
@@ -121,8 +122,8 @@ operación es el gerente de servicio.
 Los seis trabajan a tiempo completo en los meses 1 a 20. En la operación, según el Subdocumento 1, el
 Líder de Operación sigue a tiempo completo, el Jefe de Proyecto, el Encargado de Seguridad y el Líder de
 Datos quedan con la mitad de su tiempo, y el Arquitecto de Solución y la Líder de Calidad con un cuarto.
-Eso suma tres jornadas completas, 480 de las 2.560 horas mensuales de la operación, y esas horas están
-dentro de las 16 personas del Formulario T-15, que es también como las cuenta el Sobre N.º~3. El Líder
+Eso suma tres jornadas completas, 480 horas al mes, y esas horas están dentro de la dotación de
+operación del Formulario T-15, que es también como las cuenta el Sobre N.º~3. El Líder
 de Datos y la Líder de Calidad las dedican sobre todo al paquete 13.4, donde están los cierres de los
 meses 21 a 24 (Subdocumento 11). El Formulario T-8 trae cada rol con su nombre, sus certificaciones, su
 dedicación y sus meses, y los currículos y las cartas de compromiso van en el Sobre N.º~1. Los demás
@@ -133,59 +134,61 @@ el plan de dirección del mes 1.
 \section{Curva de dotación por fase}\label{sec:12-curva-de-dotacion-por-fase}
 % ============================================================================
 
-La dotación sigue la nivelación de recursos del Formulario T-15 mes a mes, como muestra la
-\figref{12-dotacion}. El proyecto parte con 14 personas en los meses 1 y 2, que hacen el levantamiento y
-el plan, y sube a 24 en los meses 3 a 5 con la arquitectura y los ambientes. Llega a 30 en los meses 6 a
-9, cuando empiezan la construcción y el montaje a bordo, y a 33 en los meses 10 a 12, con la
-capacitación. El peak es de 37 personas en los meses 13 a 17, cuando la marcha blanca y la
-estabilización de la Etapa 1 conviven con la construcción de la Etapa 2. De esas 37, 21 son de planta y
-16 de refuerzo. Después baja a 30 en el mes 18 y a 26 en los meses 19 y 20, y la operación sigue con 16
-personas desde el mes 21 hasta el 56. La implementación suma 93.760 horas y la operación 92.160.
+La dotación sigue la nivelación de recursos del Formulario T-15 mes a mes, en jornadas completas de 160
+horas, como muestra la \figref{12-dotacion}. El proyecto parte con 14 en los meses 1 y 2, que hacen el
+levantamiento y el plan, y sube a 24 en los meses 3 a 5 con la arquitectura y los ambientes. Entre los
+meses 6 y 9 la construcción de la Etapa 1 coincide con la recepción de los lotes de montaje, y la curva
+llega a su máximo, 39,2 en el mes 7. Baja a 33 en los meses 11 y 12 y vuelve a 37 en los meses 13 a 17,
+cuando la marcha blanca de la Etapa 1 convive con la construcción de la Etapa 2, con 38,5 en los meses 13
+y 16 por los refuerzos de puesta en producción. Después baja a 30,1 en el mes 18, 26,5 en el 19 y 25 en
+el 20. La operación empieza con 17,8 en el mes 21, sigue con 16,3 hasta el mes 24 por los cierres de la
+implementación, y baja a 15, 14,5 y 14 desde los meses 25, 33 y 45, a medida que el servicio madura. La
+implementación suma 99.627 horas y la operación 84.606.
 
-\begin{figuraNativa}[!ht]{Personas por mes según el Formulario T-15, con la parte que corresponde al equipo clave}{12-dotacion}
-\begin{tikzpicture}[x=2.3mm,y=1.15mm,
+\begin{figuraNativa}[!ht]{Jornadas completas por mes según el Formulario T-15, con la parte que corresponde al equipo clave}{12-dotacion}
+\begin{tikzpicture}[x=2.3mm,y=1.05mm,
   t/.style={font=\sffamily\fontsize{9.5bp}{11bp}\selectfont\color{audit-tinta}},
-  clave/.style={fill=audit-marino!80,draw=white,line width=0.4pt},
-  resto/.style={fill=audit-turquesa!35,draw=white,line width=0.4pt}]
-  \foreach \a/\b/\n in {0/2/14,2/5/24,5/9/30,9/12/33,12/17/37,17/18/30,18/20/26} {
-    \fill[clave] (\a,0) rectangle (\b,6);
-    \fill[resto] (\a,6) rectangle (\b,\n);
-    \node[t,anchor=south] at ({(\a+\b)/2},\n) {\n};
+  clave/.style={fill=audit-marino!80,draw=white,line width=0.3pt},
+  resto/.style={fill=audit-turquesa!35,draw=white,line width=0.3pt}]
+  \foreach \m/\v in {1/14,2/14,3/24,4/24,5/24,6/35.2875,7/39.2306,8/38.7756,9/39.0904,10/34.67,11/33,12/33,13/38.5,14/37,15/37,16/38.5,17/37,18/30.1125,19/26.5,20/25,21/17.8313,22/16.3188,23/16.3188,24/16.3188,25/15,26/15,27/15,28/15,29/15,30/15,31/15,32/15,33/14.5,34/14.5,35/14.5,36/14.5,37/14.5,38/14.5,39/14.5,40/14.5,41/14.5,42/14.5,43/14.5,44/14.5,45/14,46/14,47/14,48/14,49/14,50/14,51/14,52/14,53/14,54/14,55/14,56/14} {
+    \pgfmathsetmacro\k{\m<21 ? 6 : 3}
+    \fill[clave] (\m-1,0) rectangle (\m,\k);
+    \fill[resto] (\m-1,\k) rectangle (\m,\v);
   }
-  \fill[clave] (20,0) rectangle (56,3);
-  \fill[resto] (20,3) rectangle (56,16);
-  \node[t,anchor=south] at (38,16) {16};
+  \foreach \x/\y/\l in {1/14/14,4/24/24,6.5/39.23/{39,2},11.5/33/33,15/38.5/{38,5},19.5/25/25,20.5/17.83/{17,8},28.5/15/15,38.5/14.5/{14,5},50.5/14/14} {
+    \node[t,anchor=south] at (\x,\y) {\l};
+  }
   \draw[audit-filete,line width=0.6pt] (0,0) -- (56,0);
-  \foreach \m/\x in {1/0.5,13/12.5,21/20.5,56/55.5} {
+  \foreach \m/\x in {1/0.5,7/6.5,13/12.5,21/20.5,33/32.5,45/44.5,56/55.5} {
     \draw[audit-filete] (\x,0) -- (\x,-1.2);
     \node[t,anchor=north] at (\x,-1.6) {\m};
   }
-  \node[t,anchor=north] at (28,-6.2) {Mes del contrato};
-  \fill[clave] (30,33) rectangle (31.5,35.5);
-  \node[t,anchor=west] at (31.8,34.25) {Equipo clave, 6 y luego 3 jornadas};
-  \fill[resto] (30,28.5) rectangle (31.5,31);
-  \node[t,anchor=west] at (31.8,29.75) {Resto del equipo};
+  \node[t,anchor=north] at (28,-6.4) {Mes del contrato};
+  \fill[clave] (30,36) rectangle (31.5,38.6);
+  \node[t,anchor=west] at (31.8,37.3) {Equipo clave, 6 y luego 3 jornadas};
+  \fill[resto] (30,31) rectangle (31.5,33.6);
+  \node[t,anchor=west] at (31.8,32.3) {Resto del equipo};
 \end{tikzpicture}
 \end{figuraNativa}
 
-La forma de la curva tiene una razón. El peak contiene los meses 13 a 15, en que el Subdocumento 7
-divide el equipo en dos escuadras, una que estabiliza lo que ya opera y otra que construye lo que viene,
-y por eso no se puede aplanar sin atrasar la Etapa 2. Las 16 personas de refuerzo son el Líder
-Funcional, el Líder de Integración, el Líder de Implantación y Gestión del Cambio, siete analistas de
-implantación en terreno, dos ingenieros SRE, dos desarrolladores, un ingeniero de datos y un analista
-de pruebas. Las 16 personas de la operación se reparten en la mesa de servicio, la plataforma, el
-equipo a bordo y la mantención evolutiva, con el dimensionamiento de los Subdocumentos 10 y 11.
+La curva tiene dos máximos y los dos tienen una razón. El primero es el montaje de la flota mientras se
+construye la Etapa 1. El segundo contiene los meses 13 a 15, en que el Subdocumento 7 divide el equipo en
+dos escuadras, una que estabiliza lo que ya opera y otra que construye lo que viene, con 21 personas de
+planta y 16 de refuerzo, y por eso no se puede aplanar sin atrasar la Etapa 2. Las 16 personas de
+refuerzo son el Líder Funcional, el Líder de Integración, el Líder de Implantación y Gestión del Cambio,
+siete analistas de implantación en terreno, dos ingenieros SRE, dos desarrolladores, un ingeniero de
+datos y un analista de pruebas. La operación se reparte en la mesa de servicio, con siete personas y la
+jornada de suplencias, la plataforma, con cuatro, el equipo a bordo, con media jornada de audIT y el
+proveedor de campo, y la mantención evolutiva, con cuatro que bajan a dos y media, según los
+Subdocumentos 10 y 11.
 
-La curva también se comprobó contra el trabajo por tarea, como pidió la revisión del Informe 2. El mes 9 es el más cargado de construcción. La estimación por actividad del
-software, los datos y las integraciones pide ese mes 3.354 horas de arquitectura, desarrollo, interfaces,
-seguridad, datos, pruebas y plataforma, unas 21 jornadas completas. Sumados el montaje a bordo, las
-pruebas transversales, la dirección y la preparación de las innovaciones, la demanda del mes llega a
-cerca de 4.283 horas, y de las 4.800 que dan las 30 personas del Formulario T-15 quedan unas 517 para
-las cargas menores que faltan por detallar. Por perfil, seguridad y plataforma quedan justo en su
-capacidad ese mes, con unas 10 y 21 horas por sobre una jornada, y esa diferencia la toman otros
-ingenieros de planta con el perfil compatible. Las cuentas
-de usuario del repositorio siguen la misma curva: 33 en la primera etapa, 37 en el peak y 16 desde el
-mes 25.
+La curva también se comprobó contra el trabajo por tarea, como pidió la revisión del Informe 2. El mes 9
+es uno de los más cargados. La estimación por actividad del software, los datos y las integraciones pide
+ese mes 3.354 horas de arquitectura, desarrollo, interfaces, seguridad, datos, pruebas y plataforma, unas
+21 jornadas completas. Sumados la recepción de los lotes de montaje, las pruebas transversales, la
+dirección y la preparación de las innovaciones, la demanda llega a cerca de 4.283 horas, y el Formulario
+T-15 asigna a ese mes 6.254 horas internas, conciliadas por perfil. Las cuentas de usuario del
+repositorio siguen la misma curva: 33 en la primera etapa, 37 en el segundo máximo y 16 desde el mes 25.
 
 % ============================================================================
 \section{Decisiones de hacer o comprar}\label{sec:12-decisiones-de-hacer-o-comprar}
@@ -223,9 +226,14 @@ El hardware se compra a fabricantes y no se fabrica. Los equipos de campo y de r
 mandante con la especificación del Formulario T-11, y los servidores del nodo de continuidad de San
 Bernardo los provee audIT.
 Los servicios que la solución consume, como Azure, el circuito ExpressRoute, los planes móviles y el
-tiempo de aire satelital, los contrata y paga audIT, con la suscripción de Azure a nombre del mandante. La
-instalación a bordo no se subcontrata: la hace el personal de audIT que integró el equipo en su
-laboratorio.
+tiempo de aire satelital, los contrata y paga audIT, con la suscripción de Azure a nombre del mandante.
+El montaje sigue la misma regla de lo operativo: el piloto del mes 6 y la validación posterior en los
+terminales los hace el técnico de audIT que integró el equipo en su laboratorio, que sigue en el proyecto
+hasta antes del mes 19, y los 172 equipos de los lotes de
+los meses 7 a 9 los monta un proveedor externo con agenda por terminal, porque es trabajo que termina con
+el último lote. audIT conserva el banco de pruebas y la recepción de cada camión. En la operación, el
+campo tampoco llena una jornada: queda media jornada de audIT para recepción, stock y coordinación, y el
+proveedor de campo hace las visitas, las rondas a los terminales y las urgencias de 4 horas.
 
 audIT contrata lo que pide independencia o una especialidad puntual. Las pruebas de penetración y la
 custodia de las fuentes las hace un tercero porque su valor está en no depender de quien construye. Un
@@ -240,10 +248,10 @@ organismo de capacitación. Los talleres de ergonomía de la innovación 5 tambi
 % ============================================================================
 
 El Formulario T-8 lista cada proveedor y socio con el servicio que da y su peso en el valor total que
-factura el contrato. El mayor es Microsoft, con cerca del 8,8 \%, por el consumo de Azure y Entra ID.
-Le siguen Ground Control, con cerca del 3,2 \% por el tiempo de aire satelital, y los fabricantes y
-mantenedores del hardware, con cerca del 1,5 \%. El resto pesa menos del 1 \% cada uno. En total suman
-cerca del 15,6 \%, bajo el tope del 40 \% del \art{73.1}{38}. Los porcentajes salen de las partidas del
+factura el contrato. El mayor es Microsoft, con cerca del 10,3 \%, por el consumo de Azure y Entra ID.
+Le siguen Ground Control, con cerca del 3,8 \% por el tiempo de aire satelital, y los fabricantes y
+mantenedores del hardware, con cerca del 1,8 \%. El proveedor de montaje y campo pesa cerca del 0,5 \%, y
+el resto menos del 1 \% cada uno. En total suman cerca del 18,8 \%, bajo el tope del 40 \% del \art{73.1}{38}. Los porcentajes salen de las partidas del
 Sobre N.º~3, que es donde están los montos. Los cuatro centros técnicos aliados de la red regional del
 Subdocumento 1 también se declaran en el formulario, aunque no tienen una partida propia en el Sobre
 N.º~3.

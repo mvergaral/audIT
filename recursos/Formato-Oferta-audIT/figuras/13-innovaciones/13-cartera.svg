@@ -123,8 +123,6 @@
 <circle cx="308.20" cy="203.00" r="6.8" fill="#FFFFFF" stroke="#000000" stroke-width="0.9"/>
 <text x="308.20" y="206.20" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="middle" fill="#000000">4</text>
 <use href="#ic-flu-parador" x="357.40" y="202.00" width="22.00" height="22.00"/>
-<circle cx="383.40" cy="203.00" r="6.8" fill="#FFFFFF" stroke="#000000" stroke-width="0.9"/>
-<text x="383.40" y="206.20" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="middle" fill="#000000">5</text>
 <use href="#ic-az-iothub" x="81.67" y="280.00" width="22.00" height="22.00"/>
 <use href="#ic-az-deviceupdate" x="207.00" y="280.00" width="22.00" height="22.00"/>
 <circle cx="233.00" cy="281.00" r="6.8" fill="#FFFFFF" stroke="#000000" stroke-width="0.9"/>
@@ -148,18 +146,21 @@
 <text x="152.67" y="440.20" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="middle" fill="#000000">5</text>
 <use href="#ic-pr-servicio" x="207.00" y="436.00" width="22.00" height="22.00"/>
 <use href="#ic-rol-conductor" x="332.33" y="436.00" width="22.00" height="22.00"/>
+<circle cx="358.33" cy="437.00" r="6.8" fill="#FFFFFF" stroke="#000000" stroke-width="0.9"/>
+<text x="358.33" y="440.20" font-size="9" font-family="IBM Plex Sans" font-weight="600" text-anchor="middle" fill="#000000">5</text>
 </g>
 <g id="textos">
 <text x="50.00" y="16.00" font-size="10" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">Expediente verificable</text>
 <text x="50.00" y="27.50" font-size="10" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">del transportista</text>
 <text x="50.00" y="46.00" font-size="10" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">Programación por</text>
 <text x="50.00" y="57.50" font-size="10" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">oportunidad de patio</text>
-<text x="50.00" y="76.00" font-size="10" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">Semirremolque</text>
-<text x="50.00" y="87.50" font-size="10" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">conectado</text>
+<text x="50.00" y="76.00" font-size="10" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">Acople verificado y registro</text>
+<text x="50.00" y="87.50" font-size="10" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">térmico del semirremolque</text>
 <text x="260.00" y="16.00" font-size="10" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">Esquema de adhesión y</text>
 <text x="260.00" y="27.50" font-size="10" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">propiedad del dispositivo</text>
-<text x="260.00" y="46.00" font-size="10" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">Bienestar del conductor y</text>
-<text x="260.00" y="57.50" font-size="10" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">descanso en parador seguro</text>
+<text x="260.00" y="46.00" font-size="10" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">Anticipación circadiana</text>
+<text x="260.00" y="57.50" font-size="10" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">y aviso no punitivo</text>
+<text x="260.00" y="69.00" font-size="10" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">de descanso</text>
 <text x="16.00" y="119.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">Presentación</text>
 <text x="92.67" y="157.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Portal del</text>
 <text x="92.67" y="169.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">transportista</text>
@@ -174,8 +175,8 @@
 <text x="218.00" y="235.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Verificación</text>
 <text x="218.00" y="247.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">bloqueante</text>
 <text x="293.20" y="235.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Consentimiento</text>
-<text x="368.40" y="235.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Gobernanza</text>
-<text x="368.40" y="247.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">de paradores</text>
+<text x="368.40" y="235.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Paradores del</text>
+<text x="368.40" y="247.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">criterio 28</text>
 <text x="16.00" y="275.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">Integración</text>
 <text x="92.67" y="313.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">IoT Hub</text>
 <text x="218.00" y="313.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Actualización</text>
@@ -190,7 +191,7 @@
 <text x="92.67" y="469.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">iWave G26I</text>
 <text x="218.00" y="469.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Motor de</text>
 <text x="218.00" y="481.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">geocercas</text>
-<text x="343.33" y="469.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Alerta de</text>
-<text x="343.33" y="481.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">jornada</text>
+<text x="343.33" y="469.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Aviso</text>
+<text x="343.33" y="481.00" font-size="10" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">circadiano</text>
 </g>
 </svg>

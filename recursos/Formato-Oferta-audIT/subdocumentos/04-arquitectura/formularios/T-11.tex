@@ -8,8 +8,8 @@
 %  herramientas, analítica e identidad del personal (D4-155).
 % ============================================================================
 \begin{formulario}{T-11}
-\renewcommand\thetable{T-11.\arabic{table}}
-\setcounter{table}{1}
+% Numeración propia del formulario (observación ARQ-06): sus tablas no comparten número con el S4.
+\renewcommand\thetable{T-11.\arabic{table}}\renewcommand\theHtable{T11.\arabic{table}}\setcounter{table}{0}
 \begin{formularioTOnce}
 % ---------------------------------------------------------------- cabina
 \componenteTOnce{
@@ -804,13 +804,23 @@ emplazamiento: N, Azure Chile Central. N2, Azure Brazil South. SB, sala de San B
 de terminal. DB, equipo a bordo. SR, semirremolque. BM, teléfono del conductor.\par}
 \end{formulario}
 
+% Referencias y declaración propias del formulario (observaciones ARQ-06 y GEN-06): el formato no
+% las imprime en los formularios, así que se cierran aquí con los mismos comandos del subdocumento.
+\makeatletter
 \clearpage
-\printbibliography[title={Referencias técnicas del T-11}]
-
-\csname audit@titulocierre\endcsname{Declaración de uso de IA del T-11}
-La actualización de versiones y la conciliación con la arquitectura se prepararon con apoyo de IA.
-\begin{tabla}[ancho=completo,fuente=condensada,numerada=false]{Uso de IA en especificaciones}{4-ia-t11}{L{13mm} L{23mm} X L{18mm} L{20mm} X}
-Sección & Herramienta & Finalidad & Texto & Diagramas & Revisión humana \\ \midrule
-T-11 & Codex & Alineación de software y fuentes técnicas con S4.1 & Alto & Ninguno & Pendiente de validación por Arquitectura e Infraestructura \\
+\audit@titulocierre{Referencias}
+\noindent Fuentes técnicas citadas en este formulario, en norma APA 7.ª edición. Las bases de la
+licitación se citan en el texto por documento, artículo o numeral y página.\par\vspace{8pt}
+\printbibliography[heading=none]
+\audit@titulocierre{Declaración de uso de IA}
+\noindent Conforme al Comunicado 10, sección 7.2, este formulario declara la herramienta de inteligencia
+artificial generativa usada, su finalidad, el nivel de uso en texto y en diagramas y quién revisó y qué
+verificó. Esta declaración se consolida en el Formulario A-6.\par
+\usoIA{Formulario T-11}{Claude Opus 5.5 en Claude Code}{Llenado de las filas desde la arquitectura física, las cotizaciones del presupuesto de equipos y las fichas de los fabricantes}{Alto}{Ninguno}{Naomi Núñez, Líder de Calidad, e Ignacio Vera y Marcel Gutiérrez, Arquitectos de Solución: modelo, cantidad, ubicación, ciclo de vida, quién adquiere y ficha de cada componente frente al Subdocumento 4 y a la planilla económica 3.2.}
+\usoIA{Formulario T-11}{OpenAI Codex}{Alineación de las versiones de software y de sus fuentes técnicas con la sección 4.1}{Alto}{Ninguno}{Pendiente de validación por Arquitectura e Infraestructura: versiones, titularidad de licencias, componentes y referencias de fabricante.}
+\begin{tabla}[ancho=completo, fuente=condensada, numerada=false]{Declaración de uso de IA}{usoia-t11}%
+  {L{13mm} L{24mm} X L{15mm} L{17mm} L{44mm}}
+Sección & Herramienta & Finalidad del uso & Nivel en texto & Nivel en diagramas & Revisión humana (quién y qué verificó) \\ \midrule
+\filasUsoIA
 \end{tabla}
-La validación coteja versiones, titularidad de licencias, componentes y referencias de fabricante.
+\makeatother

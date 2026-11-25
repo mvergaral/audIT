@@ -88,7 +88,7 @@ R = [
     ("R-14", "C", "Rechazo de conductores",
      "Los conductores rechazan la medición o la perciben como vigilancia, en especial los 258 externos",
      3, 3, 2, 3,
-     "Plan de gestión del cambio, consentimiento revocable por dato y período, y capacitación en los terminales (A13)",
+     "Plan de gestión del cambio, consentimiento revocable por dato y período, capacitación en los terminales (A13), anexo de adhesión con el uso permitido de cada dato y el incentivo de comodato de la innovación 4 para el transportista que adhiere",
      "Líder de Implantación", "Mitigar", "Aumento de revocaciones en el indicador mensual de adhesión", "Mensual desde el mes 6"),
     ("R-15", "C", "Contraparte del mandante",
      "Los usuarios clave de la torre y de los terminales no tienen tiempo para el levantamiento, las pruebas y la capacitación, sobre todo en la temporada, o un entregable vuelve con observaciones y la segunda revisión del Artículo 18.3 consume el margen del hito",
@@ -100,11 +100,11 @@ R = [
      2, 4, 1, 4,
      "Reserva A14 de 14 días y A13 diez días antes del fin de A09, condicionada a la entrega G13, con registro del atraso si faltan la versión de preproducción, los datos o el material",
      "Jefe de Proyecto", "Mitigar", "Entrega G13 incompleta el día 182 o consumo de más de la mitad de la reserva A14", "Quincenal hasta el día 240"),
-    ("R-17", "G", "Hitos H1 a H4",
-     "Los primeros hitos de pago se atrasan, porque su margen es de 2 a 8 días hábiles. La red vigente del Formulario T-15 da 21,6 % de atraso para H1 y 16,1 % para H2",
-     2, 3, 2, 2,
-     "Alerta con un día hábil de atraso en A02 o A05, escalamiento al Comité Ejecutivo cuando el atraso proyectado supera el margen del hito, recuperación con un segundo equipo de levantamiento en dos terminales en paralelo y, si no alcanza, entrega del hito con los terminales levantados y cierre del resto antes del hito siguiente",
-     "Jefe de Proyecto", "Mitigar", "A02 o A05 con un día hábil de atraso", "Semanal hasta H4"),
+    ("R-17", "G", "Margen de los hitos de pago",
+     "En la malla del Formulario T-15, H1 y H2 tienen 2 y 4 días hábiles de margen, y H4, H7, H11 y H12 terminan en su límite contractual, de modo que un atraso en la construcción de cada etapa o en la preparación de cada paso a producción mueve el hito y su pago",
+     4, 3, 2, 3,
+     "Ajuste de la malla con la planificación del Subdocumento 7 antes del H1 para devolver margen a H4, H7, H11 y H12, validación de las estimaciones de tres puntos con quienes ejecutan, alerta con un día hábil de atraso en la cadena de cada hito, escalamiento al Comité Ejecutivo cuando el atraso proyectado supera el margen y recuperación con refuerzo en los sprints de A09 y A20",
+     "Jefe de Proyecto", "Mitigar", "Un día hábil de atraso en A02, A05, un sprint de A09 o A20, A19 o A25", "Semanal hasta H12"),
     ("R-18", "G", "Cierre de la marcha blanca 1",
      "La marcha blanca de la Etapa 1, que cae en la temporada de fruta, no cumple las condiciones del Artículo 17.3 en tres meses",
      3, 4, 2, 4,
@@ -113,8 +113,8 @@ R = [
     ("R-19", "G", "Despliegue a bordo lento",
      "El montaje a bordo avanza más lento que la cobertura declarada mes a mes, por un cierre del paso Los Libertadores, por la temporada de diciembre a abril o porque un camión pasa poco por los terminales",
      3, 2, 3, 1,
-     "Montaje en los meses 6 a 10 y 16 a 18, con holguras de 20 días (A11) y 40 días (A18)",
-     "Líder de Implantación", "Mitigar", "Cobertura acumulada bajo la declarada para el mes", "Meses 6 a 10 y 16 a 18"),
+     "Piloto en el mes 6 y lotes de ventana fija en los meses 7 a 9 (días 112 a 180), con agenda por terminal, reemplazo dentro del mismo lote y validación posterior en A21-PATIO, con 15 días de holgura",
+     "Líder de Implantación", "Mitigar", "Cobertura acumulada bajo la declarada para el mes", "Meses 6 a 9"),
     ("R-20", "G", "Período mixto prolongado",
      "La parte de la flota sin equipo audIT queda así más tiempo del previsto y se forman dos maneras de trabajar que después no se unifican",
      3, 3, 2, 3,
@@ -128,7 +128,7 @@ R = [
     ("R-22", "S", "Suplantación de equipos",
      "Alguien suplanta un equipo a bordo o una baliza para falsear posición, jornada o acople",
      2, 4, 1, 4,
-     "Elemento seguro TA100 y certificado por equipo, certificado mutuo en IoT Hub y acople confirmado en la portería",
+     "Elemento seguro TA100 y certificado por equipo, certificado mutuo en IoT Hub y acople confirmado en la portería. La desconexión física del equipo se trata en R-35",
      "Encargado de Seguridad", "Mitigar", "Un certificado usado desde dos equipos", "Revocación inmediata"),
     ("R-23", "S", "Ataque al portal",
      "Un ataque al portal expuesto a internet compromete datos de localización de los conductores externos",
@@ -138,8 +138,8 @@ R = [
     ("R-24", "S", "Licitud en Brazil South",
      "La réplica de datos personales en Brazil South no cuenta con una vía de transferencia lícita ni con la aprobación del mandante",
      3, 4, 2, 4,
-     "Cláusulas contractuales tipo del artículo 27 de la Ley 21.719 firmadas antes del hito H2 y aprobación del mandante que exige el Artículo 23. Sin cláusulas, los datos personales no se replican fuera de Chile y el mandante decide en el H2 entre firmar o aceptar que queden sin recuperación regional",
-     "Arquitecto de Solución", "Mitigar", "Hito H2 sin cláusulas firmadas", "Mes 4"),
+     "Antes del hito H2, el mandante valida con una asesoría legal externa el instrumento contractual con garantías adecuadas de los artículos 27 letra b) y 28 de la Ley 21.719 y da la aprobación que exige el Artículo 23. Mientras tanto, Brazil South solo recibe artefactos técnicos y datos sintéticos, y los datos personales quedan protegidos por la alta disponibilidad entre zonas de Chile Central. Sin vía habilitante, se selecciona y ensaya un sitio secundario admisible, con RPO de hasta 15 minutos y RTO de hasta cuatro horas, y el H7 exige ese ensayo con acta",
+     "Arquitecto de Solución", "Mitigar", "Hito H2 sin vía habilitante documentada", "Mes 4"),
     ("R-25", "O", "Caída de la región",
      "La región Azure Chile Central deja de responder por un desastre",
      1, 5, 1, 3,
@@ -174,7 +174,7 @@ R = [
      "Los técnicos de taller y la torre no siguen la programación de intervenciones por oportunidad de patio y la preparación inútil no baja",
      3, 2, 2, 2,
      "Piloto de diez camiones en el mes 6 con medición manual comparable, recomendación revisable por el técnico y registro de cada oportunidad (Formulario T-19, ficha 2)",
-     "Líder Funcional", "Mitigar", "Menos de la mitad de las recomendaciones aplicadas en el piloto", "Meses 6 a 9 y 16 a 18"),
+     "Líder Funcional", "Mitigar", "Menos de la mitad de las recomendaciones aplicadas en el piloto", "Meses 6 a 9"),
     ("R-32", "C", "Usuarios en temporada de fruta",
      "En la temporada de fruta, de diciembre a abril, los usuarios de la torre y de los terminales no tienen tiempo para la aceptación de la Etapa 1 (A12, meses 10 a 12) ni para su marcha blanca (meses 13 a 15)",
      3, 4, 2, 4,
@@ -186,10 +186,20 @@ R = [
      "Confirmación escrita antes de contratar, prueba de conmutación a la VPN en la Etapa 1 y, si no llega, complemento Premium o dos VPN de proveedores y rutas distintas (Subdocumento 4, sección 4.2.7)",
      "Líder de Operación", "Mitigar", "Proveedor sin confirmación escrita al contratar el circuito", "Mes 4"),
     ("R-34", "O", "Cierres de Los Libertadores",
-     "Dos o más cierres del paso Los Libertadores por nieve durante el piloto a bordo (A11, días 112 a 172) dejan varados camiones del piloto y consumen más que sus 20 días de holgura",
+     "Uno o más cierres del paso Los Libertadores por nieve durante el piloto y los lotes de montaje (días 112 a 180) dejan varado al otro lado un camión agendado en una ventana que no tiene holgura",
      3, 3, 1, 3,
-     "Camiones del piloto elegidos entre los que no cruzan la frontera, reemplazo por otro de la misma familia si uno queda varado, y medición por familia de camión y no por unidad",
-     "Líder de Implantación", "Mitigar", "Cierre del paso con un camión del piloto en ruta internacional, o holgura de A11 bajo 10 días", "Meses 6 a 9"),
+     "Camiones del piloto y de cada lote elegidos entre los que no cruzan la frontera, reemplazo por otro de la misma familia en el mismo lote si uno queda varado, y medición por familia de camión y no por unidad",
+     "Líder de Implantación", "Mitigar", "Cierre del paso con un camión agendado en ruta internacional", "Meses 6 a 9"),
+    ("R-35", "S", "Desconexión física del equipo",
+     "Un conductor externo desconecta la antena, el lector CAN o la alimentación del equipo a bordo para que no registre posición ni jornada",
+     3, 4, 2, 4,
+     "Alerta a la torre cuando un equipo deja de reportar en un tramo con cobertura medida mientras el viaje sigue activo, sellos en los conectores revisados en cada paso por terminal, viaje sin veredicto de jornada que bloquea la siguiente asignación, y anexo de adhesión con la cláusula de no manipulación y la pérdida del incentivo de la innovación 4",
+     "Encargado de Seguridad", "Mitigar", "Equipo sin reporte en un tramo con cobertura medida con el viaje activo, o sello roto en terminal", "Alerta en 15 minutos y revisión en el siguiente paso por terminal"),
+    ("R-36", "C", "Proveedor de montaje y campo",
+     "El proveedor externo de montaje y servicio técnico de campo no cumple la agenda de los lotes de los meses 7 a 9 o no llega en 4 horas a una urgencia de hardware crítico en un terminal",
+     2, 3, 1, 3,
+     "Contrato con agenda por terminal y lote, plazo de urgencia de 4 horas trasladado desde el Artículo 78.2, equipos de reposición en cada terminal y técnico de audIT disponible hasta el mes 19 como respaldo",
+     "Líder de Operación", "Mitigar", "Lote con menos del 80 % de los montajes de su mes, o una urgencia atendida en más de 4 horas", "Meses 7 a 9 y desde el mes 19"),
 ]
 
 # Origen de cada riesgo (observación RIE-01): M, mandante; T, terceros; A, audIT.
@@ -197,7 +207,7 @@ ORIGEN = {"R-01": "A", "R-02": "A", "R-03": "T", "R-04": "T", "R-05": "A", "R-07
           "R-09": "T", "R-10": "T", "R-11": "T", "R-12": "M", "R-13": "T", "R-14": "T", "R-15": "M",
           "R-16": "A", "R-17": "A", "R-18": "A", "R-19": "A", "R-20": "T", "R-21": "M", "R-22": "T",
           "R-23": "T", "R-24": "M", "R-25": "T", "R-26": "A", "R-27": "A", "R-28": "A", "R-29": "A",
-          "R-30": "T", "R-31": "M", "R-32": "M", "R-33": "T", "R-34": "T"}
+          "R-30": "T", "R-31": "M", "R-32": "M", "R-33": "T", "R-34": "T", "R-35": "T", "R-36": "T"}
 NOMBRE_ORIGEN = {"M": "Mandante", "T": "Terceros", "A": "audIT"}
 
 # Modos de falla técnicos (AMFE): modo, efecto, S, O, D, control de detección, riesgo
@@ -301,6 +311,22 @@ Ningún modo de falla llega a 50. Los dos más altos, el equipo a bordo que deja
 satelital sin servicio, tienen detección tardía. Su mitigación apunta a detectar antes la falla.
 
 \end{formulario}
+
+% Declaración propia del formulario (observación GEN-06): el formato no la imprime en los
+% formularios, así que se cierra aquí con los mismos comandos del subdocumento.
+\makeatletter
+\clearpage
+\audit@titulocierre{Declaración de uso de IA}
+\noindent Conforme al Comunicado 10, sección 7.2, este formulario declara la herramienta de inteligencia
+artificial generativa usada, su finalidad, el nivel de uso en texto y en diagramas y quién revisó y qué
+verificó. Esta declaración se consolida en el Formulario A-6.\par
+\usoIA{Formulario T-16}{Claude Opus 5.5 en Claude Code}{Generación del registro, de la tabla de origen y respuesta y del análisis de modos de falla con un guion desde el registro de riesgos, con números y cálculos reproducibles}{Alto}{Ninguno}{Naomi Núñez, Líder de Calidad, e Ignacio Vera y Marcel Gutiérrez, Arquitectos de Solución: cada riesgo, su origen, su exposición antes y después de mitigar, los disparadores y el número de prioridad de cada modo de falla.}
+\begin{tabla}[ancho=completo, fuente=condensada, numerada=false]{Declaración de uso de IA}{usoia-t16}%
+  {L{13mm} L{24mm} X L{15mm} L{17mm} L{44mm}}
+Sección & Herramienta & Finalidad del uso & Nivel en texto & Nivel en diagramas & Revisión humana (quién y qué verificó) \\ \midrule
+\filasUsoIA
+\end{tabla}
+\makeatother
 """
     ruta = os.path.join(FORMATO, "subdocumentos/08-riesgos/formularios/T-16.tex")
     os.makedirs(os.path.dirname(ruta), exist_ok=True)
