@@ -82,9 +82,17 @@ El verificador evaluó 21 puntos. Confirmó folios correlativos por archivo, fue
 
 ## 6. Pendientes compartidos para el armado final
 
-| Frente | Pendiente |
+| Se comparte con | Pendiente |
 |---|---|
-| Infraestructura y Calidad | Confirmar factibilidad de ExpressRoute y la alternativa con S8/T-16. Corregir en S4.2 el emplazamiento y enlace de la autoridad tributaria de ARQ-08, y redistribuir el plano para alcanzar 9 pt. Acreditar la vía jurídica y el ensayo de recuperación de R-24 para H7. |
-| PMO y responsables de la planilla | Validar la adhesión, el stock y las ventanas por terminal del escenario de 182 montajes acumulados en M9. Alinear las glosas de `Feedback 3.2` P5 y `Conciliación técnica` fila 17 con la fecha vigente de transición en `Parámetros corrección` B83, M19. |
-| PMO y Calidad | Confirmar en H1 la cobertura de las 69 h de conducción técnica. Nivelar la capacidad por sprint con T-15 y S11. Incorporar a T-17 las variantes de reasignación y verificar que los ensayos SLA usen el perímetro de S10. Medir la línea base y el beneficio de la innovación 2 en el piloto de M6. |
-| Integración de la oferta | Regenerar S9 con la tabla de observaciones en el anexo central. Conciliar la foliación general del sobre durante el ensamblaje. |
+| **D4** | Confirmar la factibilidad de ExpressRoute y documentar la alternativa en S8/T-16. |
+| **D4** | Corregir el emplazamiento y enlace de la autoridad tributaria en el plano de S4.2 (ARQ-08) y redistribuirlo para alcanzar 9 pt. |
+| **D4 y D1** | D4 documenta en R-24 de T-16 la vía jurídica que debe validar Curimón antes de H2 y la alternativa de recuperación. D1 incorpora en T-17 el ensayo para H7. |
+| **D2 y D4** | D2 verifica la adhesión y el calendario de S7. D4 confirma el stock, las ventanas por terminal y la capacidad del proveedor para el escenario de 182 montajes acumulados en M9. |
+| **D2 y D4** | D2 corrige las glosas de `Feedback 3.2` P5 y `Conciliación técnica` fila 17. D4 confirma la transición del servicio de campo en M19 que fija `Parámetros corrección` B83. |
+| **D2** | Confirmar en H1 la cobertura de las 69 h de conducción técnica reservadas en S7/T-15. |
+| **D2 y D4** | Nivelar con D2 la capacidad neta por sprint en T-15 y conciliar con D4 las reservas de cierre, mejoras y deuda de S11. |
+| **D1** | Incorporar en T-17 las variantes de reasignación por tramo de S5. |
+| **D1 y D4** | D1 comprueba que los ensayos de disponibilidad de T-17 usen los servicios, denominadores y ventanas aprobadas de S10, a cargo de D4. |
+| **D1 y D4** | Medir la línea base de la innovación 2 en el piloto de M6 y contrastarla con los lotes M7 a M9. D4 coordina la ejecución en terreno y D1 valida la evidencia de aceptación, incluida la referencia de montaje integral de CP-UAT-02. |
+| **D1** | Regenerar S9 con la resolución de observaciones en el anexo central del Art. 46. |
+| **D1, D2 y D4** | Confirmar los archivos definitivos de cada dupla con el controlador de integración para conciliar la foliación del Sobre N.º 2 durante el ensamblaje. |
