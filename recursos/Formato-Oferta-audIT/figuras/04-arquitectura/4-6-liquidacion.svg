@@ -29,7 +29,7 @@
 <rect x="266.86" y="135.80" width="196.29" height="9.90" fill="#FFFFFF"/>
 <rect x="199.80" y="177.80" width="186.40" height="9.90" fill="#FFFFFF"/>
 <rect x="273.17" y="219.80" width="183.67" height="9.90" fill="#FFFFFF"/>
-<rect x="257.93" y="261.80" width="214.14" height="9.90" fill="#FFFFFF"/>
+<rect x="269.59" y="261.80" width="190.81" height="9.90" fill="#FFFFFF"/>
 <rect x="276.28" y="297.80" width="177.45" height="9.90" fill="#FFFFFF"/>
 <rect x="341.45" y="338.80" width="188.11" height="9.90" fill="#FFFFFF"/>
 <rect x="374.53" y="374.80" width="121.94" height="9.90" fill="#FFFFFF"/>
@@ -49,11 +49,11 @@
 <text x="365.00" y="143.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">v1 ≤ 24 h · componentes disponibles y faltantes</text>
 <text x="293.00" y="185.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Lotes conciliados · combustible hasta 40 días</text>
 <text x="365.00" y="227.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">v2…vn · costo actualizado sin sobrescribir v1</text>
-<text x="365.00" y="269.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Propuesta de liquidación mensual + detalle por viaje</text>
+<text x="365.00" y="269.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Liquidación mensual · detalle por viaje y tramo</text>
 <text x="365.00" y="305.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Aceptación firmada o discrepancia trazable</text>
 <text x="435.50" y="346.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Liquidación aprobada · clave de idempotencia</text>
 <text x="435.50" y="382.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Acuse contable y conciliación</text>
-<text x="24.00" y="429.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">El costo preliminar de un viaje y la liquidación mensual son registros distintos.</text>
-<text x="24.00" y="442.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">Sin acuse contable permanece pendiente; el reintento no duplica el registro financiero.</text>
+<text x="24.00" y="429.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">Cada tramo admite un cargo base por su asignación ejecutada.</text>
+<text x="24.00" y="442.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">Sin acuse contable queda pendiente. La clave de idempotencia evita duplicar el registro financiero.</text>
 </g>
 </svg>

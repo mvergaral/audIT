@@ -1,0 +1,151 @@
+{
+  "grupo": "final-por-subdocumento-d3",
+  "instancia": "final",
+  "modo_folio": "subdocumento",
+  "archivos": [
+    {
+      "clave": "04",
+      "nombre": "AUDIT-Subdocumento4.pdf",
+      "folio_inicial": 1,
+      "paginas": 85,
+      "aux": "salida/aux/cierre-d3/04/AUDIT-Subdocumento4.aux",
+      "log": "salida/aux/cierre-d3/04/AUDIT-Subdocumento4.log",
+      "fuentes": [
+        [
+          "subdocumentos"
+        ],
+        [
+          "subdocumentos/04-arquitectura"
+        ]
+      ]
+    },
+    {
+      "clave": "05",
+      "nombre": "AUDIT-Subdocumento5.pdf",
+      "folio_inicial": 1,
+      "paginas": 30,
+      "aux": "salida/aux/cierre-d3/05/AUDIT-Subdocumento5.aux",
+      "log": "salida/aux/cierre-d3/05/AUDIT-Subdocumento5.log",
+      "fuentes": [
+        [
+          "subdocumentos"
+        ],
+        [
+          "subdocumentos/05-datos"
+        ]
+      ]
+    },
+    {
+      "clave": "06",
+      "nombre": "AUDIT-Subdocumento6.pdf",
+      "folio_inicial": 1,
+      "paginas": 20,
+      "aux": "salida/aux/cierre-d3/06/AUDIT-Subdocumento6.aux",
+      "log": "salida/aux/cierre-d3/06/AUDIT-Subdocumento6.log",
+      "fuentes": [
+        [
+          "subdocumentos"
+        ],
+        [
+          "subdocumentos/06-metodologias"
+        ]
+      ]
+    },
+    {
+      "clave": "13",
+      "nombre": "AUDIT-Subdocumento13.pdf",
+      "folio_inicial": 1,
+      "paginas": 26,
+      "aux": "salida/aux/cierre-d3/13/AUDIT-Subdocumento13.aux",
+      "log": "salida/aux/cierre-d3/13/AUDIT-Subdocumento13.log",
+      "fuentes": [
+        [
+          "subdocumentos"
+        ],
+        [
+          "subdocumentos/13-innovaciones"
+        ]
+      ]
+    },
+    {
+      "clave": "04T-11",
+      "nombre": "AUDIT-Formulario-T-11.pdf",
+      "folio_inicial": 1,
+      "paginas": 20,
+      "aux": "salida/aux/cierre-d3/04T-11/AUDIT-Formulario-T-11.aux",
+      "log": "salida/aux/cierre-d3/04T-11/AUDIT-Formulario-T-11.log",
+      "fuentes": [
+        [
+          "subdocumentos"
+        ],
+        [
+          "subdocumentos/04-arquitectura"
+        ]
+      ]
+    },
+    {
+      "clave": "06T-9",
+      "nombre": "AUDIT-Formulario-T-9.pdf",
+      "folio_inicial": 1,
+      "paginas": 4,
+      "aux": "salida/aux/cierre-d3/06T-9/AUDIT-Formulario-T-9.aux",
+      "log": "salida/aux/cierre-d3/06T-9/AUDIT-Formulario-T-9.log",
+      "fuentes": [
+        [
+          "subdocumentos"
+        ],
+        [
+          "subdocumentos/06-metodologias"
+        ]
+      ]
+    },
+    {
+      "clave": "06T-10",
+      "nombre": "AUDIT-Formulario-T-10.pdf",
+      "folio_inicial": 1,
+      "paginas": 5,
+      "aux": "salida/aux/cierre-d3/06T-10/AUDIT-Formulario-T-10.aux",
+      "log": "salida/aux/cierre-d3/06T-10/AUDIT-Formulario-T-10.log",
+      "fuentes": [
+        [
+          "subdocumentos"
+        ],
+        [
+          "subdocumentos/06-metodologias"
+        ]
+      ]
+    },
+    {
+      "clave": "13T-19",
+      "nombre": "AUDIT-Formulario-T-19.pdf",
+      "folio_inicial": 1,
+      "paginas": 13,
+      "aux": "salida/aux/cierre-d3/13T-19/AUDIT-Formulario-T-19.aux",
+      "log": "salida/aux/cierre-d3/13T-19/AUDIT-Formulario-T-19.log",
+      "fuentes": [
+        [
+          "subdocumentos"
+        ],
+        [
+          "subdocumentos/13-innovaciones"
+        ]
+      ]
+    },
+    {
+      "clave": "05A",
+      "nombre": "AUDIT-Subdocumento5-Anexos.pdf",
+      "folio_inicial": 1,
+      "paginas": 41,
+      "aux": "salida/aux/cierre-d3/05A/AUDIT-Subdocumento5-Anexos.aux",
+      "log": "salida/aux/cierre-d3/05A/AUDIT-Subdocumento5-Anexos.log",
+      "fuentes": [
+        [
+          "subdocumentos"
+        ],
+        [
+          "subdocumentos/05-datos"
+        ]
+      ]
+    }
+  ]
+}

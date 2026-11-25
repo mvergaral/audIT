@@ -7,7 +7,7 @@
 %  f86e240), que se sobrepone a la anterior (D4-109 y D4-116). Las tablas de tipo
 %  «concepto y descripción» siguen como texto (D4-97, Comunicado 10, sección
 %  5.2). 4.2 a 4.3.2 son de la dupla 4 (D4-01 a D4-60 y D4-109 a D4-115).
-%  Las figuras de 4.1 usan las fuentes de D3/graficos (f86e240). \figuraAqui reserva el alto
+%  Las figuras de 4.1 se publican con publicar_graficos.py de D3. \figuraAqui reserva el alto
 %  de la figura y la deja donde se llama, y \figuraHorizontalAqui cierra la
 %  página para que la página apaisada caiga entre dos párrafos.
 % ============================================================================
@@ -55,10 +55,10 @@ mantener su soporte.
 
 \begin{tabla}[ancho=completo, fuente=condensada]{Tecnologías seleccionadas y mantenimiento de su soporte}{4-software}{L{27mm} L{38mm} X X}
 Componente & Producto & Soporte del fabricante & Actualización dentro del contrato \\ \midrule
-Aplicación móvil de cuatro perfiles & Flutter~3.47.0 estable, Dart compatible y SQLite local & Canal estable; el fabricante no publica una fecha fija de fin para esa versión & Fijar SDK, Dart, plataformas mínimas y dependencias en el manifiesto; actualizar con regresión por perfil \\
-Portales y torre de control & React~19.3.0 y Next.js~16.x & React estable con política de versiones; Next.js~16 en soporte activo LTS al 10-11-2026 & Fijar parche compatible y SBOM antes de construir; actualizar dentro del ciclo LTS con prueba de regresión \\
+Aplicación móvil de cuatro perfiles & Flutter~3.50.0 estable, Dart compatible y SQLite local & Canal estable; sin fecha fija pública de fin para esa versión & Fijar SDK, Dart y dependencias en el manifiesto. Actualizar con regresión por perfil \\
+Portales y torre de control & React~19.3.0 y Next.js~16.x & React estable con política de versiones; Next.js~16 en soporte activo LTS al 24-11-2026 & Fijar parche compatible y SBOM antes de construir; actualizar dentro del ciclo LTS con prueba de regresión \\
 Servicios de negocio & .NET~10 LTS & Hasta el 14 de noviembre de 2028 & Paso a la versión LTS siguiente antes de esa fecha \\
-Ingesta y borde & Go~1.27.3 & Cada versión mayor tiene soporte hasta que salen dos versiones mayores posteriores & Actualizar revisiones de seguridad y pasar a una versión mayor con soporte antes de su retiro \\
+Ingesta y borde & Go~1.27.4 & Cada serie recibe soporte hasta que existen dos series posteriores & Aplicar parches de seguridad y cambiar de serie antes de perder soporte \\
 Orquestación & Azure Kubernetes Service & Versiones de Kubernetes que AKS soporta en cada liberación & Actualización por grupos de nodos con prueba de reversa \\
 Motor transaccional & PostgreSQL~16 Flexible Server con PostGIS & Hasta el 9 de noviembre de 2028 & Actualización mayor ensayada antes de esa fecha, con extensiones y captura de cambios compatibles \\
 Series de tiempo & TimescaleDB, edición Apache-2, en una instancia Flexible Server separada & Versión que Azure publica para cada versión de PostgreSQL & Actualización junto con la versión mayor de PostgreSQL \\
@@ -68,7 +68,7 @@ Persistencia a bordo & SQLite~3 en modo WAL & Biblioteca fijada en la imagen Lin
 Repositorio analítico & Delta Lake en ADLS Gen2 & Motor, conectores y biblioteca declarados en un manifiesto de versiones & Datos exportables en formatos abiertos \\
 Identidad y secretos & Entra ID, identidades administradas y Key Vault & Servicio administrado & Edición y capacidades fijadas en el Formulario T-11 \\
 \end{tabla}
-\notaTabla{Fuentes: políticas de soporte de los fabricantes \parencite{ms_dotnet_soporte,go_release,pg_versiones,ms_pg_ext_versiones,ms_eh_kafka,ms_redis_retiro}; versiones web y móvil verificadas el 10-11-2026 en \url{https://docs.flutter.dev/release/release-notes}, \url{https://react.dev/versions} y \url{https://nextjs.org/support-policy}.}
+\notaTabla{Fuentes: políticas de soporte de los fabricantes \parencite{ms_dotnet_soporte,go_release,pg_versiones,ms_pg_ext_versiones,ms_eh_kafka,ms_redis_retiro}. Corte del 24-11-2026: \href{https://docs.flutter.dev/release/release-notes}{Flutter}, \href{https://react.dev/versions}{React} y \href{https://nextjs.org/support-policy}{Next.js}.}
 
 La tabla decide los productos y evita dos buses alternativos o dos motores intercambiables. Las
 versiones base de los canales móviles y web se muestran con su estado a la fecha de esta revisión. El
@@ -178,7 +178,7 @@ La descomposición separa responsabilidades que hoy están dispersas entre el si
 planillas, los papeles y las plataformas de posicionamiento. La \figref{4-contextosfig} muestra los seis
 contextos y los sistemas con los que conviven.
 
-\figuraAqui{170mm}{figuras/04-arquitectura/audit-figura-4.2-contextos.png}{Contextos delimitados del dominio y sistemas con los que convive la solución}{4-contextosfig}
+\figuraAqui{170mm}{figuras/04-arquitectura/audit-figura-4.2-contextos.pdf}{Contextos delimitados del dominio y sistemas con los que convive la solución}{4-contextosfig}
 
 En la figura, cada contexto tiene su propio lenguaje y sus propios datos. Planificación y tráfico puede
 bloquear un viaje sin conocer por dentro a Personas y cumplimiento ni a Flota y activos, porque les
@@ -207,20 +207,20 @@ descartadas y el criterio, que es entregable contractual y se actualiza durante 
 de 2026. Esa fecha es la del registro en la oferta, no una aprobación contractual ni una fecha efectiva de implantación. Cada ADR adquiere estado aprobado y fecha efectiva sólo con el acta del Comité de Arquitectura, que aún no existe; mientras tanto su estado es \emph{propuesto}. Las cuatro primeras conservan su número para no romper las referencias de la arquitectura
 física, y las cuatro nuevas completan el análisis que pidió el Informe~1.
 
-\begin{tabla}[ancho=completo, fuente=condensada]{Registro de decisiones de arquitectura}{4-adr}{L{8mm} X X X X}
-ADR & Decisión & Alternativas evaluadas & Criterio & Consecuencia y verificación \\ \midrule
-01 & Seis contextos desplegables por separado en AKS & Monolito modular, arquitectura orientada a servicios con orquestador central o servicios independientes & RT-02.02 exige desplegar por separado los componentes críticos & La ingesta queda aislada del despacho a cambio de más operación, observabilidad y pruebas de contratos, y el aislamiento se mide bajo carga \\
-02 & Event Hubs Premium con protocolo Kafka y bandeja de salida transaccional & Cadena síncrona de llamadas HTTP o Kafka autoadministrado sobre Strimzi & Las ráfagas quedan aisladas y los efectos derivados no alargan el despacho & La entrega al menos una vez obliga a deduplicar y conciliar en el consumidor \\
-03 & Captura de cambios hacia ADLS y Delta Lake, con modelo dimensional & Inteligencia de negocios sobre la base transaccional o sobre una réplica operacional & RT-05.05 exige separar la analítica de la operación & La captura también consume recursos, por lo que se vigilan los slots y el WAL y se mide su impacto \\
-04 & Identidad federada, certificado por equipo y acceso por rol y atributo & Claves compartidas o secretos en la dirección web & RT-05.18 y el modelo Zero Trust exigen revocación, mínima exposición y secretos fuera del código & Se prueba el acceso cruzado entre transportistas \\
-05 & Reemplazar el sistema de gestión de 2013 función por función y conservar el contable & Corte único, conservarlo solo integrado o un paquete de mercado sin integración demostrada & Los cortes de los meses 16, 21 y 24 evitan interrumpir la operación y el doble registro definitivo & La coexistencia, los adaptadores y la conciliación se presupuestan en el plan de trabajo y en el Sobre N.º~3, sin suponer ahorros \\
-06 & Captura local y mensajería satelital corta, con el documento emitido por el sistema contable & Banda ancha satelital en toda la flota o emisión fiscal en la cabina & Contiene el costo recurrente y los equipos del T-11, y la emisión en cabina infringe la restricción~8 & Se ensaya la entrega completa del documento en 90 segundos y la decisión se revisa si el ensayo falla \\
-07 & PostgreSQL transaccional y TimescaleDB en instancias separadas & Motor único, Cosmos DB o un motor temporal autoadministrado & La integridad referencial queda en el negocio y las series quedan aisladas con SQL conocido & Se verifican la extensión Apache-2, sus funciones efectivas, su actualización y su alta disponibilidad en Azure \\
-08 & SQLite local con bandeja de salida, acuses y conciliación determinista & Depender del enlace para cada evento o un búfer solo en memoria & El Caso exige 72 horas a bordo y conciliación en 20 minutos, y el transversal 24 horas en terminal & Las 288 horas propuestas tienen su propio ensayo y su propia capacidad \\
+\begin{tabla}[ancho=completo, fuente=condensada]{Registro de decisiones de arquitectura}{4-adr}{L{16mm} X X X X}
+ADR / estado & Decisión & Alternativas evaluadas & Criterio & Consecuencia y verificación \\ \midrule
+01 / Propuesto & Seis contextos desplegables por separado en AKS & Monolito modular, arquitectura orientada a servicios con orquestador central o servicios independientes & RT-02.02 exige desplegar por separado los componentes críticos & La ingesta queda aislada del despacho a cambio de más operación, observabilidad y pruebas de contratos, y el aislamiento se mide bajo carga \\
+02 / Propuesto & Event Hubs Premium con protocolo Kafka y bandeja de salida transaccional & Cadena síncrona de llamadas HTTP o Kafka autoadministrado sobre Strimzi & Las ráfagas quedan aisladas y los efectos derivados no alargan el despacho & La entrega al menos una vez obliga a deduplicar y conciliar en el consumidor \\
+03 / Propuesto & Captura de cambios hacia ADLS y Delta Lake, con modelo dimensional & Inteligencia de negocios sobre la base transaccional o sobre una réplica operacional & RT-05.05 exige separar la analítica de la operación & La captura también consume recursos, por lo que se vigilan los slots y el WAL y se mide su impacto \\
+04 / Propuesto & Identidad federada, certificado por equipo y acceso por rol y atributo & Claves compartidas o secretos en la dirección web & RT-05.18 y el modelo Zero Trust exigen revocación, mínima exposición y secretos fuera del código & Se prueba el acceso cruzado entre transportistas \\
+05 / Propuesto & Reemplazar el sistema de gestión de 2013 función por función y conservar el contable & Corte único, conservarlo solo integrado o un paquete de mercado sin integración demostrada & Los cortes de los meses 16, 21 y 24 evitan interrumpir la operación y el doble registro definitivo & La coexistencia, los adaptadores y la conciliación se presupuestan en el plan de trabajo y en el Sobre N.º~3, sin suponer ahorros \\
+06 / Propuesto & Captura local y mensajería satelital corta, con el documento emitido por el sistema contable & Banda ancha satelital en toda la flota o emisión fiscal en la cabina & Contiene el costo recurrente y los equipos del T-11, y la emisión en cabina infringe la restricción~8 & Se ensaya la entrega completa del documento en 90 segundos y la decisión se revisa si el ensayo falla \\
+07 / Propuesto & PostgreSQL transaccional y TimescaleDB en instancias separadas & Motor único, Cosmos DB o un motor temporal autoadministrado & La integridad referencial queda en el negocio y las series quedan aisladas con SQL conocido & Se verifican la extensión Apache-2, sus funciones efectivas, su actualización y su alta disponibilidad en Azure \\
+08 / Propuesto & SQLite local con bandeja de salida, acuses y conciliación determinista & Depender del enlace para cada evento o un búfer solo en memoria & El Caso exige 72 horas a bordo y conciliación en 20 minutos, y el transversal 24 horas en terminal & Las 288 horas propuestas tienen su propio ensayo y su propia capacidad \\
 \end{tabla}
 \notaTabla{Fuente: elaboración propia sobre \transv{RT-02.04}{7}.}
 
-El registro de ejecución mantendrá para cada ADR los campos \texttt{estado}, \texttt{fecha\_propuesta}, \texttt{fecha\_aprobación}, \texttt{fecha\_efectiva}, versión, acta y responsable. En esta entrega, ADR~01–08 tienen fecha de propuesta 11-10-2026, estado propuesto y fecha de aprobación/efectiva pendientes. La evidencia que permite cambiar cada estado es el acta que aprueba la alternativa correspondiente; no se presenta la fecha común de redacción como ocho decisiones ya aprobadas. El Comité revisará en particular ADR~06 contra el ensayo de entrega del documento y ADR~07 contra las capacidades de la extensión en Azure.
+Cada registro conserva estado, fecha de propuesta, fecha de aprobación, fecha efectiva, versión, acta y responsable. Los ocho ADR se registraron en la propuesta del 11 de octubre de 2026. La aprobación y la fecha efectiva se anotarán por decisión con el acta correspondiente. El Comité revisará ADR~06 con el ensayo de entrega del documento y ADR~07 con las capacidades de la extensión en Azure.
 
 La tabla permite revisar cada elección con sus costos de operación. Un cambio de proveedor, de protocolo o de estrategia de continuidad actualiza el ADR, los
 contratos, la EDT y los casos de aceptación. La mensajería satelital de la decisión 06 se dimensiona
@@ -342,7 +342,7 @@ agotada ni un documento legal faltante.
 
 La \figref{4-resilienciafig} muestra los patrones que aíslan el despacho de las integraciones externas.
 
-\figuraAqui[alto=0.84]{228mm}{figuras/04-arquitectura/audit-figura-4.3-resiliencia.png}{Patrones de resiliencia y presupuesto nominal de diseño}{4-resilienciafig}
+\figuraAqui[alto=0.84]{228mm}{figuras/04-arquitectura/audit-figura-4.3-resiliencia.pdf}{Patrones de resiliencia y presupuesto nominal de diseño}{4-resilienciafig}
 
 La figura sigue la asignación desde la puerta de enlace hasta la persistencia, con los mamparos y
 cortacircuitos que la separan de las integraciones externas. Sus tiempos son hipótesis de diseño y no
@@ -422,7 +422,7 @@ formatos abiertos, con validación previa, informe de errores por registro y pro
 capacidad es la que sostiene la migración de las cerca de 6.000 vigencias y la ingesta mensual de
 combustible y peajes. La \figref{4-integracionesfig} dibuja el mapa de integraciones.
 
-\figuraHorizontalAqui{figuras/04-arquitectura/LogicaIntegraciones.png}{Mapa de integraciones. Sistemas internos, fuentes de terreno y contrapartes externas}{4-integracionesfig}
+\figuraHorizontalAqui{figuras/04-arquitectura/LogicaIntegraciones.pdf}{Mapa de integraciones. Sistemas internos, fuentes de terreno y contrapartes externas}{4-integracionesfig}
 
 La figura distingue el sistema de gestión de 2013, que se sustituye, del sistema contable, que se
 conserva como único emisor tributario detrás de la capa anticorrupción. Los 192 camiones de terceros
@@ -454,7 +454,7 @@ lugar de dejarlo en silencio.
 
 La \figref{4-aclfig} muestra la integración con el sistema contable a través de esa capa.
 
-\figuraHorizontalAqui{figuras/04-arquitectura/audit-figura-4.4-acl.png}{Integración con el sistema contable heredado a través de la capa anticorrupción}{4-aclfig}
+\figuraHorizontalAqui{figuras/04-arquitectura/audit-figura-4.4-acl.pdf}{Integración con el sistema contable heredado a través de la capa anticorrupción}{4-aclfig}
 
 El sistema contable queda detrás de la capa y solo recibe eventos ya traducidos.
 
@@ -566,7 +566,7 @@ y tiempo, que la gerencia consulta sin conocer el modelo transaccional.
 
 La \figref{4-analiticafig} muestra la capa analítica y la explotación del costo por kilómetro.
 
-\figuraHorizontalAqui{figuras/04-arquitectura/audit-figura-4.5-analitica.png}{Capa analítica por niveles de refinamiento y explotación del costo por kilómetro}{4-analiticafig}
+\figuraHorizontalAqui{figuras/04-arquitectura/audit-figura-4.5-analitica.pdf}{Capa analítica por niveles de refinamiento y explotación del costo por kilómetro}{4-analiticafig}
 
 El costo por kilómetro se calcula distinto según el régimen de propiedad del equipo. Para la flota
 propia se compone de combustible medido por telemetría, peajes efectivamente transitados, neumáticos,
@@ -639,12 +639,16 @@ La consolidación del costo de un viaje y la liquidación a los transportistas s
 
 Al cerrar el viaje, Liquidación y costeo emite la versión preliminar del costo en menos de 24 horas
 \caso*{RT-05.29}{32}. Cada vez que llega una cartola de combustible o de peaje se registra una versión
-auditada nueva, sin sobrescribir la anterior, hasta la definitiva. El costo preliminar de un viaje y la
-liquidación mensual son registros distintos. La liquidación se propone al transportista con el detalle
-por viaje, y su aceptación o su discrepancia quedan trazadas antes de enviarla al sistema contable. Una
-evidencia insuficiente deja el componente sin valor y abre una excepción para revisión, en lugar de
-registrarlo como cero. Sin el acuse contable la liquidación queda pendiente, y los reintentos son
-idempotentes, así que ningún pago se duplica.
+auditada nueva, sin sobrescribir la anterior, hasta la definitiva. El costo se versiona por viaje.
+La propuesta de liquidación mensual se agrupa por beneficiario y detalla cada tramo ejecutado y su
+asignación. Según el modelo de S5, una reasignación previa a la ejecución conserva el tramo y un
+relevo en ruta abre otro. Cada tramo admite un único cargo base. Una rectificación registra un
+ajuste sobre ese cargo.
+
+La aceptación o la discrepancia del beneficiario queda trazada antes del envío al sistema contable.
+Una evidencia insuficiente deja el componente sin valor y abre una excepción para revisión. La
+liquidación queda pendiente hasta el acuse contable. La clave de idempotencia evita duplicar el
+registro financiero en un reintento.
 
 % ----------------------------------------------------------------------------
 \subsection{Modelo táctico del dominio}\label{sec:4-tactico}
@@ -654,7 +658,7 @@ RT-02.13 exige presentar el modelo de dominio del negocio con las entidades prin
 y los eventos de negocio que las modifican. El modelo táctico de la \figref{4-tacticofig} lo entrega
 organizado por contexto delimitado, de modo que cada agregado quede bajo el contexto que lo posee.
 
-\figuraAqui[alto=0.84]{228mm}{figuras/04-arquitectura/audit-figura-4.6-tactico.png}{Modelo táctico del dominio. Agregados, entidades y objetos de valor por contexto, con los eventos de dominio entre contextos}{4-tacticofig}
+\figuraAqui[alto=0.84]{228mm}{figuras/04-arquitectura/audit-figura-4.6-tactico.pdf}{Modelo táctico del dominio. Agregados, entidades y objetos de valor por contexto, con los eventos de dominio entre contextos}{4-tacticofig}
 
 Cada agregado de la figura pertenece a un solo contexto delimitado. Los eventos de dominio van en línea
 discontinua, desde el contexto que los publica hasta el que los recibe. Los comandos y los eventos de
@@ -1416,12 +1420,12 @@ a 1,2 veces, de modo que esta oferta dimensiona sobre el requisito transversal. 
 pide identificar el primer cuello de botella: es la ingesta durante la reconexión masiva, se detecta por
 profundidad de cola y retraso de procesamiento en Event Hubs, y se resuelve con más unidades de IoT Hub y
 de procesamiento, sin rediseño. La disponibilidad comprometida es de 99,9~\% mensual para los servicios
-críticos, medida sobre la transacción de negocio de extremo a extremo \art*{20}{14}.
+críticos: asignación bloqueante, emisión del documento de transporte, recepción de emergencias e ingesta de telemetría. Para posición al cliente, portales y liquidación, el mínimo es de 99,5~\%. S10 define el cómputo por servicio sobre la transacción completa, con minutos totales del mes y exclusión de interrupciones en ventanas aprobadas, conforme a los Artículos 78.2 y 79.4. S5 aplica el mismo criterio a sus indicadores.
 
 Los datos históricos que se migran según \caso{RT-05.15}{31} se dimensionan en la sección~5.3 del
 Subdocumento~5. Son los maestros completos de flota, conductores, transportistas, clientes y
 geocercas, cerca de 6.000 vigencias, cinco años de viajes, unos 480.000, seis años de liquidaciones y
-todos los siniestros. La mesa de ayuda se dimensiona en el Subdocumento~10.
+todos los siniestros. La mesa N1 opera 24$\times$7 con seis agentes regulares y un equivalente de jornada completa para suplencias y picos. Durante operación se reservan 80 horas mensuales internas de campo para recepción, inventario y coordinación. Las atenciones presenciales se organizan por proveedor, con tres visitas correctivas y dos rondas regionales al mes como base de dimensionamiento. El piloto de diez kits en M6 es interno y los lotes M7 a M9 contratan 172 montajes externos. Banco, analista y supervisión siguen a cargo de audIT. La dotación de instalación se cierra al comenzar M19, tras la ventana M16 a M18. S10 establece la atención y el escalamiento del servicio.
 
 % ----------------------------------------------------------------------------
 \subsection{Supuestos declarados y brechas}\label{sec:4-supuestos}
@@ -1465,7 +1469,7 @@ hace mientras tanto. Los plazos son los de la red del Formulario T-15.
 Brecha & Dato que falta & Prueba o consulta y plazo & Contingencia \\ \midrule
 Cobertura móvil de las rutas & Calidad de la señal en cada tramo & Campaña A03 en terreno, días hábiles 5 a 50 (meses 1 a 3) & Búfer de 288 horas y eventos críticos por Iridium. El mapa de sombras ajusta S-06 y R-04 \\
 Parque de los terceros con equipo propio & Marca, modelo, protocolo y capacidad de cada equipo & Verificación A04 con los tres proveedores de posicionamiento, días hábiles 5 a 65 (meses 1 a 4) & Integración por plataforma según la sección 4.2.1. Si un proveedor no entrega datos, rige la respuesta de R-08 \\
-Conductor que manejó otro camión sin dispositivo & Rastro instrumental de esa jornada & No hay medición posible. Declaración del conductor al identificarse con su tarjeta & Responsabilidad contractual en el anexo de adhesión \\
+Conductor que manejó otro camión sin dispositivo & Rastro instrumental de esa jornada & Contrastar jornada con la cascada de evidencia antes de asignar & Bloquear si la evidencia exigible falta. Aplicar solo la excepción RN-04 documentada \\
 Consultas del Artículo~43 sin respuesta & Interpretación del mandante en cuatro materias & Respuesta del mandante, o validación en el levantamiento A02 antes del H1 & La propuesta de audIT queda como supuesto y cambia por control de cambios \\
 Autonomía del canal satelital & Registros que conserva el canal & El Iridium Edge del Formulario T-11 no guarda registros: transmite lo que entrega el G26I, que guarda 288 horas (sección 4.2.2). El producto del Informe~1, de 40 horas \parencite{webfleet_sat_cl}, ya no es parte de la oferta & Prueba de 72 horas sin pérdida de eventos del paquete 4.1, meses 4 a 9 \\
 \end{tabla}
@@ -1473,7 +1477,7 @@ Autonomía del canal satelital & Registros que conserva el canal & El Iridium Ed
 
 Tres brechas se cierran en los primeros cuatro meses, antes de la compra del lote a bordo del mes 6: la
 cobertura, el parque de los terceros y las consultas. La autonomía se prueba con el firmware entre los
-meses 4 y 9. La del conductor no tiene medición posible y queda cubierta por el contrato de adhesión.
+meses 4 y 9. La tarjeta identifica al conductor. La evidencia de jornada se acredita con la cascada de S5 y los casos CP-SYS-05 y CP-UAT-09 de T-17.
 La cobertura y el parque de los terceros tienen su riesgo en el Formulario T-16, R-04 y R-08.
 
 % ============================================================================
@@ -1703,17 +1707,7 @@ se identifican el responsable y el destinatario y se documenta la vía que habil
 replican fuera de Chile. El Subdocumento~5 trata la base de licitud, y la residencia de los datos queda
 sujeta a la aprobación del mandante que exige el \art{23}{17}.
 
-La vía prevista son las cláusulas contractuales tipo del artículo 27 de la Ley N.º~21.719
-\parencite{ley21719}, que el mandante firma con el proveedor de nube antes del hito H2. Con ellas,
-Brazil South recupera todos los datos, también los personales, con el RPO de 15 minutos y el RTO de 4
-horas de \transv{RT-07.04}{17}. Si el mandante no las firma, los datos personales no se replican fuera
-de Chile. El cifrado por campo de \caso{RT-11.10}{32} protege esos datos, pero no hace lícita la
-transferencia, como explica el Subdocumento~5. En ese caso el mandante decide en el H2 entre firmar o
-aceptar que los datos personales queden sin recuperación regional, con su efecto sobre el H7, y esa
-decisión queda registrada en R-24 del Formulario T-16. San Bernardo no es sitio de recuperación de ningún
-dato, porque comparte con Chile Central el riesgo sísmico y la red eléctrica \transv*{RT-07.02}{17}. La
-revisión jurídica y la conmutación probada siguen siendo condiciones para entrar en producción, como fija
-la sección~4.1.25.
+Antes de H2, Curimón valida el instrumento contractual con garantías adecuadas de los artículos 27 letra b) y 28 del régimen introducido por Ley~21.719 \parencite{d3_ley21719}, en los términos de S5. La réplica de datos personales a Brazil South queda condicionada a esa validación y autorización documentada. Mientras se tramita, la región secundaria sólo recibe artefactos técnicos y datos sintéticos. Si no hay vía habilitante, debe seleccionarse y ensayarse un sitio secundario admisible, con RPO de hasta 15 minutos y RTO de hasta cuatro horas según \transv{RT-07.04}{17}. San Bernardo conserva el eje de continuidad local. Su exposición compartida con Chile Central impide usarlo como sitio independiente de recuperación. R-24 queda abierto y H7 requiere ensayo de recuperación y acta.
 
 La parte inferior de la figura es el otro eje. La recuperación y la continuidad son ejes separados:
 Brazil South recupera la nube si cae la región primaria, y San Bernardo, los terminales y los camiones

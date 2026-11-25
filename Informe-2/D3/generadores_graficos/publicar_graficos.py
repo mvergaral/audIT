@@ -2,7 +2,8 @@
 """Publica los gráficos canónicos de D3 en el formato oficial de la oferta.
 
 Las fuentes PNG/SVG están en D3/graficos (selección del commit f86e240).
-Los PDF se derivan del SVG; cuando solo existe PNG se conserva ese formato.
+Los PDF se derivan del SVG de D3 o se toman de las versiones vectoriales
+de los mismos diagramas conservadas en graficos-v2.
 """
 from pathlib import Path
 import shutil
@@ -11,6 +12,15 @@ import subprocess
 REPO = Path(__file__).resolve().parents[3]
 FUENTES = REPO / 'Informe-2/D3/graficos'
 DESTINO = REPO / 'recursos/Formato-Oferta-audIT/figuras'
+VECTORES_S4 = REPO / 'Informe-2/D4/graficos-v2/04-arquitectura'
+PDF_VECTORIALES = {
+    'audit-figura-4.2-contextos': 'LogicaContextos.pdf',
+    'audit-figura-4.3-resiliencia': 'D3-diagrama11_patrones_resiliencia_despacho.pdf',
+    'LogicaIntegraciones': 'LogicaIntegraciones.pdf',
+    'audit-figura-4.4-acl': 'D3-diagrama12_integracion_acl_erp2013.pdf',
+    'audit-figura-4.5-analitica': 'D3-diagrama13_arquitectura_analitica_lakehouse_bi.pdf',
+    'audit-figura-4.6-tactico': 'D3-diagrama2_arquitectura_tactica_ddd.pdf',
+}
 
 EQUIVALENCIAS = {
     'LogicaCapas': ['_LogicaCapas', 'diagrama10_arquitectura_logica_8capas', 'esquema_conceptual_solucion'],
@@ -55,7 +65,8 @@ def carpeta(nombre):
 
 
 def ruta_oficial(nombre):
-    extension = '.pdf' if (FUENTES / (nombre + '.svg')).exists() else '.png'
+    vectorial = nombre in PDF_VECTORIALES or (FUENTES / (nombre + '.svg')).exists()
+    extension = '.pdf' if vectorial else '.png'
     return DESTINO / carpeta(nombre) / (nombre + extension)
 
 
@@ -78,6 +89,8 @@ def copiar_version_canonica(base):
     pdf = Path(str(base) + '.pdf')
     if svg.exists():
         subprocess.run(['rsvg-convert', '-f', 'pdf', '-o', str(pdf), str(svg)], check=True)
+    elif nombre in PDF_VECTORIALES:
+        shutil.copy2(VECTORES_S4 / PDF_VECTORIALES[nombre], pdf)
     elif pdf.exists():
         pdf.unlink()
     return nombre
@@ -86,7 +99,8 @@ def copiar_version_canonica(base):
 def publicar():
     for nombre in EQUIVALENCIAS:
         copiar_version_canonica(DESTINO / carpeta(nombre) / nombre)
-    print('Publicados 25 gráficos de D3: 19 PDF vectoriales y 6 PNG.')
+    vectoriales = sum(ruta_oficial(nombre).suffix == '.pdf' for nombre in EQUIVALENCIAS)
+    print(f'Publicados {len(EQUIVALENCIAS)} gráficos de D3, {vectoriales} en PDF vectorial.')
 
 
 if __name__ == '__main__':

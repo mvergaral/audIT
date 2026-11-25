@@ -13,12 +13,13 @@ def figura_5_1_erd():
         (574,42,140,'SEMIRREMOLQUE',['PK id_semirremolque']),
         (14,186,154,'TRANSPORTISTA',['PK id_transportista']),
         (206,186,154,'VIAJE',['PK id_viaje','FK id_orden','estado_viaje']),
-        (398,186,140,'ASIGNACION',['PK id_asignacion','FK viaje / recursos','desde / hasta / estado']),
-        (574,186,140,'CONDUCTOR',['PK id_conductor','FK transportista?']),
+        (398,186,140,'ASIGNACION',['PK id_asignacion','FK viaje / tramo / recursos','Titular / empleador','Beneficiario contractual']),
+        (574,186,140,'CONDUCTOR',['PK id_conductor','FK empleador vigente']),
         (14,335,154,'LIQUIDACION',['PK id_liquidacion','FK id_transportista']),
         (206,335,154,'DOCUMENTO_TRANSP.',['PK id_documento','FK id_viaje','folio / emisor / hash']),
         (398,335,140,'EVAL_ASIGNACION',['PK id_evaluacion','FK id_asignacion','regla / veredicto']),
-        (574,335,140,'COSTO_VERSION',['PK id_costo','FK id_viaje','version / faltantes'])]: entidad(f,*args)
+        (574,335,140,'COSTO_VERSION',['PK id_costo','FK id_viaje','version / faltantes']),
+        (14,410,346,'LIQUIDACION_DETALLE',['PK (liquidación, asignación ejecutada)','Cargo base único por tramo; rectificación por ajuste'])]: entidad(f,*args)
     relacion(f,[(168,65),(206,65)])
     relacion(f,[(283,94),(283,186)])
     relacion(f,[(468,82),(468,186)])
@@ -27,11 +28,16 @@ def figura_5_1_erd():
     relacion(f,[(574,217),(538,217)])
     relacion(f,[(91,226),(91,335)])
     relacion(f,[(283,250),(283,335)])
-    relacion(f,[(468,250),(468,335)])
+    relacion(f,[(468,262),(468,335)])
     relacion(f,[(350,250),(350,290),(644,290),(644,335)])
-    # Maestro del empleador/propietario: relación opcional del conductor.
+    # Identidad compartida con referencias independientes para los tres roles.
     relacion(f,[(91,186),(91,163),(644,163),(644,186)],padre='0..1')
-    f.texto(14,453,'1, 0..1 y 0..*: multiplicidades por extremo. PK: identificador; FK: referencia lógica; ?: nullable.',9)
+    f.linea([(91,387),(91,410)],flecha=None,grosor=0.8)
+    f.rotulo(84,399,'1',anc='end')
+    f.rotulo(98,406,'0..*',anc='start')
+    relacion(f,[(530,262),(553,262),(553,423),(360,423)],hijo='0..1')
+    f.texto(383,442,'Titular, empleador y beneficiario pueden diferir.',9)
+    f.texto(383,455,'La asignación guarda los tres respaldos vigentes.',9)
     return f.guardar()
 
 def figura_5_7_evidencia():

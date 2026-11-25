@@ -1,23 +1,6 @@
 # Subdocumento 5. Modelo y gestión de datos
 
-audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. Oferta Técnica, Sobre N.º 2. Informe Preparatorio 2. Archivo AUDIT-Subdocumento5.pdf.
-
-## Resolución de observaciones del Informe 1
-
-El FEP01, Artículo 46, p. 28 pide resolver en cada informe las observaciones de la instancia anterior, con trazabilidad entre observación, respuesta y sección modificada. La tabla reúne las observaciones del Informe 1 que corresponden a este documento y la sección donde se resuelve cada una.
-
-**Resolución de las observaciones del Informe 1, conforme a FEP01, Artículo 46, p. 28**
-
-| N.º | Observación | Respuesta | Sección modificada |
-|---|---|---|---|
-| 13 | El Subdocumento 5 abre con la bitácora interna del grupo de trabajo. | Se acepta. Se acoge la observación. Se implementa en la Sección 5.1, eliminando por completo la sección de bitácora interna; el documento inicia con el marco conceptual, alcance y gobierno del modelo de datos de la empresa. | Sección 5.1. |
-| 81 | El diccionario cubre 6 entidades y ninguna es la evidencia de jornada, exigida para resistir impugnaciones. | Se acepta. S5 incorpora la entidad EVIDENCIA_JORNADA. Sus niveles siguen el contrato del Subdocumento 3: niveles 1 a 5, nivel 0 solo para el registro voluntario del conductor y nulo para la fuente desconocida o inválida, y el dominio nivel_cascada del anexo de diccionario usa los mismos niveles. Origen instrumental, modalidad, nivel y veredicto se registran por separado | S5 §5.1.5 y anexo de diccionario, EVIDENCIA_JORNADA; S3, evidencia y veredicto; S9 §9.1.1; T-17 CP-SYS-05 y CP-UAT-09 |
-| 82 | No hay diagrama Entidad-Relación (DER) en el documento. | Se acepta. La sección 5.1.2 incluye la Figura 5.1 en el cuerpo del documento, con entidades, claves, relaciones y multiplicidades del modelo lógico; la sección 5.1.5 detalla el modelo de evidencia y evaluación en la Figura 5.4 | Sección 5.1.2 (Figura 5.1) |
-| 83 | Contradicción de residencia: copia fuera de sitio en Azure East US 2 mientras S4 sostiene residencia en Chile. | Se acepta. La residencia primaria es Chile Central y la réplica secundaria es Brazil South, sin referencias a East US 2. La réplica de datos personales a Brazil South es una transferencia internacional y se activa solo con la vía habilitante documentada | S5 §5.1.6 y S4 §4.3.2 |
-| 84 | El motor de bases de datos de series de tiempo y el bus de mensajería quedan indefinidos. | Se acepta. La sección 5.2.1 fija TimescaleDB sobre PostgreSQL, en un servidor separado, para las series de tiempo, y Azure Event Hubs Premium con protocolo Kafka como bus de eventos, sin un clúster Apache Kafka propio | S5 §5.2.1 y S4 §4.1.1 |
-| 85 | La sección 1.1 es la bitácora interna del grupo de trabajo. | Se acepta. Se acoge la observación. Se implementa en la Sección 5.1, eliminando íntegramente la bitácora interna y abriendo el documento con la descripción conceptual del gobierno y ciclo de vida de los datos corporativos. | Sección 5.1. |
-| 86 | Prosa hinchada y escasez de figuras (dos figuras en 21 páginas), no citadas desde el texto. | Se acepta. S5 integra nueve figuras verticales en las secciones que las explican, sin leyendas sueltas ni remisión de todos los gráficos al final. Las figuras muestran relaciones, maestros, custodia, permisos, partición de red, CDC, migración y desempeño, con cita y análisis. | S5 §§5.1.2–5.1.6, 5.2.1–5.2.2, 5.3 y 5.4; Figuras 5.1–5.9. |
-| 87 | El tratamiento de revocación del consentimiento frente a la retención legal queda pendiente de validar. | Se acepta. La revocación cesa los accesos cubiertos por el permiso y conserva la evidencia sujeta a retención legal, con rectificaciones trazables y sin eliminación automática de la jornada. S5 lo modela en la sección 5.1.6 y el Formulario T-17 lo comprueba en CP-SEC-05, CP-SEC-08 y CP-INT-25 | S5 §5.1.6; T-17 CP-SEC-05, CP-SEC-08 y CP-INT-25; S9 §9.1.1 |
+audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. Oferta Técnica, Sobre N.º 2. Propuesta final. Archivo AUDIT-Subdocumento5.pdf.
 
 ## 5 Modelo y gestión de datos
 
@@ -48,23 +31,27 @@ La Tabla 5.1 fija la estructura que se comprueba en S9. El cifrado y los índice
 
 La arquitectura de datos se estructura en seis contextos delimitados con límites explícitos. En la Figura 5.1 se despliega el modelo conceptual y relacional de persistencia de datos.
 
-![Figura 5.1. Modelo lógico de las relaciones críticas del viaje](../../figuras/05-datos/audit-figura-5.1-erd.pdf)
+![Figura 5.1. Modelo lógico de las relaciones críticas del viaje](../../figuras/05-datos/audit-figura-5.1-erd.png)
 
 *Figura 5.1. Modelo lógico de las relaciones críticas del viaje*
 
 Fuente: Elaboración propia.
 
-La Figura 5.1 separa el ciclo del viaje de las asignaciones: una orden genera cero o varios viajes y cada viaje conserva cero o varias asignaciones históricas. Cada asignación confirmada identifica conductor, tracto y, cuando la carga lo exige, semirremolque; no puede solaparse con otra activa para esos recursos. Documento, costo y evaluación mantienen su identificador y relación con el viaje o la asignación. En el gráfico, EVAL_\allowbreak{}ASIGNACION abrevia EVALUACION_\allowbreak{}ASIGNACION y DOCUMENTO_\allowbreak{}TRANSP. abrevia DOCUMENTO_\allowbreak{}TRANSPORTE.
+La Figura 5.1 separa el ciclo del viaje de las asignaciones: una orden genera cero o varios viajes y cada viaje conserva cero o varias asignaciones históricas. Cada asignación confirmada identifica conductor, tracto y, cuando la carga lo exige, semirremolque; no puede solaparse con otra activa para esos recursos. Documento, costo y evaluación mantienen su identificador y relación con el viaje o la asignación. En el gráfico, EVAL_ASIGNACION abrevia EVALUACION_ASIGNACION y DOCUMENTO_TRANSP. abrevia DOCUMENTO_TRANSPORTE.
 
 Los contextos gobiernan estos agregados: Planificación conserva OrdenTransporte y la reserva de Asignación; Operación conserva Viaje y su ejecución; Flota conserva Tractocamion y Semirremolque; Personas conserva Conductor, EvidenciaJornada y EvaluacionAsignacion; Liquidación conserva CostoVersion y Liquidacion. Transportista y Cliente tienen identidad compartida con un propietario de atributo declarado en MDM.
 
-El ciclo propuesto del viaje es `PROGRAMADO $\rightarrow$ EN_\allowbreak{}CARGA $\rightarrow$ EN_\allowbreak{}RUTA $\rightarrow$ EN_\allowbreak{}DESCARGA $\rightarrow$ CERRADO`, con `CANCELADO` como excepción trazable. `BLOQUEADA` es resultado de una evaluación de asignación, no un sexto estado que termine el viaje por fatiga: puede buscarse otro recurso y volver a evaluar. El rechazo de carga en destino conserva evento, motivo y resolución; no elimina recorrido ni costos ya incurridos. Un cierre de frontera registra demora y causa; su efecto sobre cobros depende de la regla contractual, sin congelar sobreestadías automáticamente por RT-10.05.
+La titularidad del equipo, el empleador del conductor y el beneficiario de la liquidación son vínculos independientes. Flota acredita la titularidad, Personas acredita la relación laboral y Liquidación valida al beneficiario contra el contrato de transporte vigente. Al confirmar una asignación se congelan las referencias y la vigencia que respaldan cada rol. Una diferencia entre ellos requiere evidencia y validación por sus propietarios. Si falta un vínculo exigible, se bloquea la acción correspondiente y se registra el motivo. Para recursos propios se identifica a Curimón como empresa operadora, sin generar una liquidación a terceros.
+
+Cada tramo efectivamente ejecutado recibe un identificador estable dentro del viaje. Una reasignación previa a la ejecución conserva ese identificador y sólo cambia la asignación vigente. Un relevo en ruta cierra el tramo anterior y abre otro con intervalos contiguos. La liquidación identifica tramo, asignación ejecutada, beneficiario, tarifa y versión del costo. Una restricción única impide duplicar el cargo base del mismo tramo entre liquidaciones, incluso si cambia la asignación o el beneficiario. Una rectificación conserva el cargo original y registra un ajuste referido a él. La prueba extiende CP-INT-24 y CP-SYS-10 con dos asignaciones para el mismo tramo, dos tramos con relevo y un reintento concurrente.
+
+El ciclo propuesto del viaje es `PROGRAMADO $\rightarrow$ EN_CARGA $\rightarrow$ EN_RUTA $\rightarrow$ EN_DESCARGA $\rightarrow$ CERRADO`, con `CANCELADO` como excepción trazable. `BLOQUEADA` es resultado de una evaluación de asignación, no un sexto estado que termine el viaje por fatiga: puede buscarse otro recurso y volver a evaluar. El rechazo de carga en destino conserva evento, motivo y resolución; no elimina recorrido ni costos ya incurridos. Un cierre de frontera registra demora y causa; su efecto sobre cobros depende de la regla contractual, sin congelar sobreestadías automáticamente por RT-10.05.
 
 ### 5.1.3 Estrategia de Gestión de Datos Maestros (MDM)
 
 En cumplimiento de FEP02, RT-05.09, p. 11, se implementa un marco centralizado de Master Data Management (MDM) con principio de Registro Maestro Único (*Golden Record*), visualizado en la Figura 5.2.
 
-![Figura 5.2. Gestión de Datos Maestros (MDM) y Capa Anticorrupción](../../figuras/05-datos/audit-figura-5.2-mdm.pdf)
+![Figura 5.2. Gestión de Datos Maestros (MDM) y Capa Anticorrupción](../../figuras/05-datos/audit-figura-5.2-mdm.png)
 
 *Figura 5.2. Gestión de Datos Maestros (MDM) y Capa Anticorrupción*
 
@@ -80,7 +67,7 @@ El archivo independiente `AUDIT-Subdocumento5-Anexos.pdf` entrega por atributo n
 
 Una vigencia referencia exactamente un conductor, un tracto o un semirremolque mediante tres FK nullable y un `CHECK` de un único sujeto. Se evita una FK polimórfica que PostgreSQL no pueda comprobar. El estado `VERIFICADO` requiere respaldo y fecha de verificación; también se comprueba vencimiento, tipo requerido y eventual revocación. Una fecha futura en una planilla no equivale a aptitud acreditada.
 
-El viaje puede programarse sin recursos ni peso definitivo. La asignación sólo se confirma con recursos y evaluación válida; pasar a `EN_\allowbreak{}RUTA` requiere además carga definitiva y documento conforme. La posición se almacena con latitud y longitud ambas presentes o ambas ausentes. Identidad, velocidad, odómetro y hora del evento se dejan nulos cuando la fuente no los proporciona; la hora de recepción y la procedencia siempre quedan registradas. No se generan ceros para representar desconocimiento.
+El viaje puede programarse sin recursos ni peso definitivo. La asignación sólo se confirma con recursos y evaluación válida; pasar a `EN_RUTA` requiere además carga definitiva y documento conforme. La posición se almacena con latitud y longitud ambas presentes o ambas ausentes. Identidad, velocidad, odómetro y hora del evento se dejan nulos cuando la fuente no los proporciona; la hora de recepción y la procedencia siempre quedan registradas. No se generan ceros para representar desconocimiento.
 
 ### 5.1.5 Evidencia de jornada, cascada y cadena de custodia
 
@@ -90,28 +77,28 @@ La evidencia se clasifica conforme al Subdocumento 3: fuente instrumental, nivel
 
 | **Origen o código conservado** | **Nivel canónico** | **Condición de interpretación** | **Modalidad y veredicto esperado** |
 |---|---|---|---|
-| Tacógrafo digital (`TACO_\allowbreak{}DIG`) | 1 | Original, identidad, vínculo e integridad | Evaluación legal completa |
+| Tacógrafo digital (`TACO_DIG`) | 1 | Original, identidad, vínculo e integridad | Evaluación legal completa |
 | Equipo a bordo identificado (CAN/GPS) | 2 | Conductor y evento verificados | Modalidad completa |
-| Telemetría de fábrica (`TEL_\allowbreak{}FAB`) | 3 | Lectura autorizada y origen trazado | Sin inferir descanso personal |
-| Reposo del camión (`REPOSO_\allowbreak{}CAM`) | 4 | Estado del vehículo; sin coordenadas | Requiere nivel 5 en modalidad de datos |
-| Atestación (`ATEST_\allowbreak{}TRAN`) | 5 | Firma, responsable, fecha y viaje | Asignación con marca |
-| Registro voluntario (`REG_\allowbreak{}COND`) | 0 | Captura identificada | Informativo |
+| Telemetría de fábrica (`TEL_FAB`) | 3 | Lectura autorizada y origen trazado | Sin inferir descanso personal |
+| Reposo del camión (`REPOSO_CAM`) | 4 | Estado del vehículo; sin coordenadas | Requiere nivel 5 en modalidad de datos |
+| Atestación (`ATEST_TRAN`) | 5 | Firma, responsable, fecha y viaje | Asignación con marca |
+| Registro voluntario (`REG_COND`) | 0 | Captura identificada | Informativo |
 | Evento de portería | — | Entrada o salida | No habilitante |
-| Sin evidencia (`SIN_\allowbreak{}EVIDENCIA`) | `NULL` | Fuente ausente | Bloqueo; RN-04 acotada |
+| Sin evidencia (`SIN_EVIDENCIA`) | `NULL` | Fuente ausente | Bloqueo; RN-04 acotada |
 | Código desconocido | `NULL` | Original en cuarentena | Bloqueo hasta homologación |
 | Evidencia inválida | `NULL` | Artefacto y motivo conservados | Bloqueo |
 
 La Tabla 5.2 resume categorías; las reglas completas no caben en una celda. El nivel clasifica la evidencia y no certifica por sí solo su valor judicial. Nivel 1 exige original, identidad y vehículo/viaje; nivel 2 requiere conductor identificado, no sólo el código instrumental. Nivel 3 conserva cobertura y hora de recepción, sin inferir descanso de una posición. Nivel 4 necesita atestación firmada de nivel 5 para asignar con marca en modalidad de datos; sin ella bloquea. El nivel 5 registra responsabilidad y no levanta bloqueos legales. Nivel 0 nunca habilita ni cambia el veredicto. Origen desconocido o inválido mantiene código/artefacto y motivo en cuarentena, sin renumerarse como nivel 0. RN-04 sólo cubre su excepción aprobada y no un incumplimiento legal. Los códigos de origen (CAN, GPS, portería u otro) se conservan sin convertirlos en niveles: CAN instalado en un equipo a bordo no equivale a telemetría de fábrica. Las plataformas de terceros se integran únicamente mediante lectura o exportación autorizada; no se presume API ni webhook.
 
-La evaluación de asignación vinculada conserva por separado `modalidad_\allowbreak{}adhesion`, `veredicto_\allowbreak{}asignacion`, versión de regla y marca temporal, junto con las referencias a conductor, viaje y evidencia. La modalidad completa aplica la evidencia de nivel 2 prevista por S3; la modalidad de datos requiere reposo de nivel 4 complementado por atestación firmada de nivel 5 y produce asignación con marca; sin adhesión, la validación documental solo habilita con atestación válida y también deja marca. La falta de fuente bloquea, salvo la excepción acotada de RN-04. Un incumplimiento legal bloquea en todas las modalidades y el nivel 0 nunca modifica el resultado. Estos casos se cotejan con T-17, CP-SYS-05 y CP-UAT-09.
+La evaluación de asignación vinculada conserva por separado `modalidad_adhesion`, `veredicto_asignacion`, versión de regla y marca temporal, junto con las referencias a conductor, viaje y evidencia. La modalidad completa aplica la evidencia de nivel 2 prevista por S3; la modalidad de datos requiere reposo de nivel 4 complementado por atestación firmada de nivel 5 y produce asignación con marca; sin adhesión, la validación documental solo habilita con atestación válida y también deja marca. La falta de fuente bloquea, salvo la excepción acotada de RN-04. Un incumplimiento legal bloquea en todas las modalidades y el nivel 0 nunca modifica el resultado. Estos casos se cotejan con T-17, CP-SYS-05 y CP-UAT-09.
 
-El origen recibido se conserva sin renumeración silenciosa. Una descarga de tacógrafo, un evento de equipo o una atestación mantiene original, emisor/dispositivo, versión de esquema, ID, marca temporal si existe, hora de recepción, hash y resultado de validación. `id_\allowbreak{}conductor` puede ser nulo en un artefacto no identificado; ese artefacto se conserva para auditoría y no se convierte por sí solo en jornada personal habilitante. La vinculación exige identidad acreditada y período coherente.
+El origen recibido se conserva sin renumeración silenciosa. Una descarga de tacógrafo, un evento de equipo o una atestación mantiene original, emisor/dispositivo, versión de esquema, ID, marca temporal si existe, hora de recepción, hash y resultado de validación. `id_conductor` puede ser nulo en un artefacto no identificado; ese artefacto se conserva para auditoría y no se convierte por sí solo en jornada personal habilitante. La vinculación exige identidad acreditada y período coherente.
 
-`EVIDENCIA_\allowbreak{}JORNADA` conserva artefactos válidos, desconocidos o inválidos; la ausencia se expresa en `EVALUACION_\allowbreak{}ASIGNACION` como `SIN_\allowbreak{}EVIDENCIA`, sin inventar una fila de evidencia. `nivel_\allowbreak{}cascada` es NULL para origen desconocido/inválido; 0 sólo para `REG_\allowbreak{}COND`; 1–5 según la fuente válida y la condición canónica. Un nivel válido no elimina un incumplimiento legal. La hora GNSS/NTP se compara con la de recepción y se registra deriva o calidad del reloj; no se llama reloj atómico ni se reemplaza la hora original para aparentar exactitud.
+`EVIDENCIA_JORNADA` conserva artefactos válidos, desconocidos o inválidos; la ausencia se expresa en `EVALUACION_ASIGNACION` como `SIN_EVIDENCIA`, sin inventar una fila de evidencia. `nivel_cascada` es NULL para origen desconocido/inválido; 0 sólo para `REG_COND`; 1–5 según la fuente válida y la condición canónica. Un nivel válido no elimina un incumplimiento legal. La hora GNSS/NTP se compara con la de recepción y se registra deriva o calidad del reloj; no se llama reloj atómico ni se reemplaza la hora original para aparentar exactitud.
 
 La Figura 5.3 recorre recepción, validación, sellado, conservación y rectificación.
 
-![Figura 5.3. Cadena de custodia de evidencias y tratamiento de fuentes inválidas](../../figuras/05-datos/5-2-custodia.pdf)
+![Figura 5.3. Cadena de custodia de evidencias y tratamiento de fuentes inválidas](../../figuras/05-datos/5-2-custodia.png)
 
 *Figura 5.3. Cadena de custodia de evidencias y tratamiento de fuentes inválidas*
 
@@ -121,10 +108,9 @@ El hash permite detectar alteración; no es firma electrónica ni vuelve inmutab
 
 Las rectificaciones generan un registro nuevo que referencia el original, sin sobrescribirlo. El primer hash previo es NULL y existe un único inicio por cadena; el orden es secuencia de custodia, distinto del orden de ocurrencia de eventos tardíos. Un acuse de sincronización requiere commit duradero. La confirmación probatoria incorpora el sellado y respaldo exigidos por el dominio; su falta se muestra y se ensaya, sin declarar evidencia plenamente custodiada cuando sólo fue admitida por el bus.
 
-\begingroup\emergencystretch=2em
-La Figura 5.4 separa evaluación y evidencia mediante \textsf{EVALUACION_\allowbreak{}EVIDENCIA}: una evaluación puede usar reposo de nivel 4 y atestación de nivel 5 simultáneamente. El veredicto siempre se registra, aun sin evidencia válida. Una excepción RN-04 conserva dos aprobadores, motivo, un viaje y revisión mensual; no levanta una causa legal. Las restricciones y nulabilidad se detallan en el anexo.\endgroup
+La Figura 5.4 separa evaluación y evidencia mediante \textsf{EVALUACION_EVIDENCIA}: una evaluación puede usar reposo de nivel 4 y atestación de nivel 5 simultáneamente. El veredicto siempre se registra, aun sin evidencia válida. Una excepción RN-04 conserva dos aprobadores, motivo, un viaje y revisión mensual; no levanta una causa legal. Las restricciones y nulabilidad se detallan en el anexo.\endgroup
 
-![Figura 5.4. Modelo lógico de evidencia, evaluación, excepción y permiso](../../figuras/05-datos/5-7-evidencia.pdf)
+![Figura 5.4. Modelo lógico de evidencia, evaluación, excepción y permiso](../../figuras/05-datos/5-7-evidencia.png)
 
 *Figura 5.4. Modelo lógico de evidencia, evaluación, excepción y permiso*
 
@@ -136,19 +122,23 @@ La Tabla 5.2 y la Figura 5.4 se cotejan con CP-SYS-05/CP-UAT-09: nivel 0, nivel 
 
 El permiso del transportista controla qué datos de sus recursos comparte, con quién, para qué finalidad y durante qué servicio (Caso, RT-16.30, p. 33). No sustituye la base de tratamiento de datos personales del conductor. El modelo distingue permiso comercial, adhesión contractual y base jurídica; la localización es dato personal cuando identifica o permite identificar a una persona, sin clasificar automáticamente toda localización como categoría legal de dato sensible.
 
-La Figura 5.5 muestra concesión, evaluación por petición, revocación y decisión de conservación. `PERMISO_\allowbreak{}COMPARTIR` mantiene recurso, destinatario, alcance, finalidad, vigencia, versión y respaldo; `ACCESO_\allowbreak{}DATO` conserva qué se mostró y bajo qué versión. Una lista JSON de clientes no reemplaza relaciones verificables ni la auditoría de cada acceso.
+La Figura 5.5 muestra concesión, evaluación por petición, revocación y decisión de conservación. `PERMISO_COMPARTIR` mantiene recurso, destinatario, alcance, finalidad, vigencia, versión y respaldo; `ACCESO_DATO` conserva qué se mostró y bajo qué versión. Una lista JSON de clientes no reemplaza relaciones verificables ni la auditoría de cada acceso.
 
-![Figura 5.5. Compartición autorizada, revocación y conservación](../../figuras/05-datos/5-3-permisos.pdf)
+![Figura 5.5. Compartición autorizada, revocación y conservación](../../figuras/05-datos/5-3-permisos.png)
 
 *Figura 5.5. Compartición autorizada, revocación y conservación*
 
 Fuente: Elaboración propia.
 
-La revocación cesa nuevas consultas y emisiones cubiertas por el permiso, invalida caché/credenciales de acceso y propaga una versión al dispositivo. Durante falta de enlace no puede recibir una revocación nueva: el permiso local tiene vencimiento y sólo se transmiten datos tras comprobar la versión al reconectar. La transmisión de emergencia y los registros obligatorios siguen su base específica y minimización; revocar compartición comercial no borra evidencia de jornada ni elimina obligaciones de seguridad.
+La revocación cesa nuevas consultas y emisiones cubiertas por el permiso, invalida caché/credenciales de acceso y propaga su nueva versión al dispositivo. Conforme a RN-10 y RNF-014 del Formulario T-12, también debe detener la captura futura de posiciones para la finalidad revocada en no más de cinco minutos: el agente aplica el control antes de registrar esas posiciones, no sólo al transmitirlas. La ausencia de mensajes o de nuevas filas en la bandeja SQLite no demuestra por sí sola el cese de captura; CP-SEC-05 debe corroborarlo mediante observación local instrumentada, manteniendo activa la entrada de posición.
+
+Sin enlace no se puede recibir una revocación nueva. El diseño requiere autorización local con vencimiento por finalidad y cese de esa captura al vencer, sin esperar a reconectar. La vigencia y su renovación deben acotar el peor caso de revocación a los cinco minutos de RN-10, considerando propagación, desfase de reloj y procesamiento; no se declara acreditado ese plazo sin el ensayo correspondiente. Al reconectar se comprueba la versión antes de reanudar los usos autorizados. La transmisión de emergencia y los registros obligatorios siguen su base específica y minimización; no se extiende el permiso revocado a esas finalidades. Se conserva protegida la evidencia previa sujeta a retención, incluida la de jornada: revocar no la borra ni elimina obligaciones de seguridad.
 
 FEP01, Artículo 4.2, p. 5 exige Ley 21.719 y, mientras esté vigente, Ley 19.628. La Ley 21.719 entra en vigor el 01-12-2026; el inicio supuesto de febrero de 2027 cae bajo el régimen nuevo. Curimón debe documentar finalidad, base, derechos, encargos, plazos y transferencias. El cifrado de campo exigido por RT-11.10 no reemplaza esos deberes (BCN, Ley 21.719 (Biblioteca del Congreso Nacional de Chile, s. f.)).
 
-Chile Central es primario y Brazil South es secundario propuesto en S4.3. Una réplica de datos personales es transferencia internacional: requiere identificar responsable y destinatario y documentar una vía aplicable del artículo 27 y las salvaguardias del artículo 28. Ubicación sudamericana y cifrado no acreditan por sí solos licitud. Si no se documenta el mecanismo, no se activa esa réplica; tampoco se declara satisfecho el DR hasta disponer de un sitio secundario admisible que supere RPO $≤15 min y RTO ≤$4 h. San Bernardo puede sostener continuidad local ante una pérdida de enlace, pero no se acredita como recuperación frente a un desastre de la región primaria: comparte el área metropolitana y sus riesgos, conforme a RT-07.02. Mientras no exista una vía habilitante documentada para Brazil South o un sitio secundario admisible con independencia de fallos, la recuperación de esos datos queda sin acreditar. La revisión jurídica y la prueba de recuperación son condiciones de puesta en operación.
+Chile Central es primario y Brazil South es secundario propuesto en S4.3. Antes de H2, Curimón identifica responsable, destinatario, subencargados y categorías de datos. La vía propuesta es el instrumento contractual con garantías adecuadas previsto por los artículos 27 letra b) y 28 del régimen introducido por Ley 21.719 (Biblioteca del Congreso Nacional de Chile, s. f.). Curimón debe validar su aplicabilidad y documentar finalidad, lugar de tratamiento, salvaguardias y autorización antes de replicar datos personales.
+
+Si la revisión jurídica queda pendiente, Brazil South recibe sólo artefactos técnicos y datos sintéticos para ensayos. Arquitectura e Infraestructura deben seleccionar un sitio secundario admisible con riesgos independientes y validar su capacidad en CP-PERF-03 o su variante, con RPO de hasta 15 minutos y RTO de hasta cuatro horas. San Bernardo sostiene continuidad local ante pérdida de enlace, con la exposición metropolitana que describe S4. Se mantiene abierto R-24 hasta que la vía jurídica o el sitio alternativo, el ensayo y el acta sustenten H7.
 
 Una supresión solicitada se resuelve por dato y finalidad: conservar protegido lo sujeto a retención o litigio, cesar usos no autorizados y eliminar cuando proceda. El procedimiento incluye BD, originales, índices, cachés, exportaciones autorizadas, réplicas y respaldos; registra alcance, retenciones vigentes y fecha efectiva. NIST SP 800-88 Rev. 2 sustituye la revisión 1 desde septiembre de 2025. La destrucción criptográfica sólo se usa cuando el diseño de claves y todas sus copias lo permite; no se promete irrecuperabilidad absoluta ni purga instantánea de Key Vault (NIST, SP 800-88 Rev. 2 (Ramaswamy Chandramouli y Eric Hibbard, s. f.)).
 
@@ -173,7 +163,7 @@ FEP02, RT-05.02, p. 11 exige justificar por dominio consistencia y disponibilida
 
 La Tabla 5.3 mantiene una base de negocio consistente y una captura local que resiste particiones. Sin estado autoritativo no se confirma nueva reserva; RN-04 sólo cubre la indisponibilidad acotada de una fuente de evidencia. Una caída de nube permite capturar, no usar todas las funciones globales. TimescaleDB conserva semántica relacional y no se etiqueta como AP sólo por recibir eventos. Redis es dato derivado con versión y vencimiento: una copia obsoleta no habilita. El original local permanece cifrado hasta confirmar custodia, y un hash aislado no acredita inmutabilidad. En analítica se publican antigüedad, faltantes y versión. El documento fiscal permanece en el contable y requiere entrega conforme antes del movimiento; el búfer local no habilita emisión propia.
 
-![Figura 5.6. Consistencia del despacho y continuidad de captura durante una partición](../../figuras/05-datos/audit-figura-5.3-cap.pdf)
+![Figura 5.6. Consistencia del despacho y continuidad de captura durante una partición](../../figuras/05-datos/audit-figura-5.3-cap.png)
 
 *Figura 5.6. Consistencia del despacho y continuidad de captura durante una partición*
 
@@ -185,7 +175,7 @@ El protocolo Kafka de Event Hubs no implica un segundo clúster Apache Kafka ni 
 
 Para dar cumplimiento a FEP02, RT-05.05, p. 11, se separa la base transaccional de producción respecto del consumo analítico de reportería y cálculo de costo por kilómetro. La propagación usa captura de cambios (CDC Debezium) y Event Hubs Premium mediante protocolo Kafka. El objetivo propuesto de retraso CDC <60 s se verifica bajo carga antes de aceptarse; el flujo avanza hacia el repositorio analítico (Delta Lake), como esquematiza la Figura 5.7.
 
-![Figura 5.7. Segregación transaccional OLTP y analítica OLAP mediante CDC](../../figuras/05-datos/audit-figura-5.4-cdc.pdf)
+![Figura 5.7. Segregación transaccional OLTP y analítica OLAP mediante CDC](../../figuras/05-datos/audit-figura-5.4-cdc.png)
 
 *Figura 5.7. Segregación transaccional OLTP y analítica OLAP mediante CDC*
 
@@ -207,7 +197,7 @@ La calidad se mide en captura y migración según FEP02, RT-05.04, p. 11 e ISO/I
 | Credibilidad | Origen, versión y horas de evento/recepción conservados; deriva visible | Contraste de reloj y orden de secuencia; cuarentena cuando no hay interpretación fiable |
 | Accesibilidad | 99,9 % mensual en servicios críticos durante operación | Indicadores de servicio extremo a extremo; HA del motor sola no acredita SLA |
 
-La Tabla 5.4 produce un tablero con errores por fuente, antigüedad, registros en cuarentena y resolución responsable. El 99,9 % mensual se aplica a los servicios clasificados como críticos durante operación, igual que S4.2 y el Artículo 78.2; se calcula sobre minutos de transacción de negocio disponible / minutos exigibles del mes, por servicio, desde el punto de vista del usuario. No es disponibilidad aislada de PostgreSQL ni objetivo uniforme para servicios de otra criticidad. S9/T-17 deben medir el mismo perímetro y registrar exclusiones contractuales, si proceden. Las modificaciones y consultas sensibles conservan actor, dispositivo, valores anteriores/posteriores, motivo y correlación (RT-05.03 transversal y RT-16.09 del Caso).
+La Tabla 5.4 produce un tablero con errores por fuente, antigüedad, registros en cuarentena y resolución responsable. El mínimo de 99,9 % mensual cubre asignación bloqueante, emisión del documento de transporte, recepción de emergencias e ingesta de telemetría. El mínimo de 99,5 % cubre posición al cliente, portales y liquidación. Para cada servicio se resta de uno el cociente entre minutos indisponibles fuera de ventanas aprobadas y minutos totales del mes. Se mide la transacción completa desde el punto de vista del usuario, con la regla de sondeos y fallos reales de S10. Una ventana no aprobada o excedida cuenta como indisponibilidad. S9/T-17 verifican la evidencia de servicio y los ensayos de recuperación por separado. Las modificaciones y consultas sensibles conservan actor, dispositivo, valores anteriores/posteriores, motivo y correlación (FEP02, RT-05.03, p. 11 y Caso, RT-16.09, p. 33).
 
 La auditoría es append-only, encadenada y anclada en WORM bajo administración separada. La cuenta de negocio no modifica ni elimina registros de evidencia; una cuenta de administración de BD no puede modificar el original WORM. Los ensayos de integridad comprueban también omisión de eventos y eliminación de segmentos, con manifiestos firmados; el hash de una fila aislada no detecta por sí solo que esa fila desapareció.
 
@@ -252,7 +242,7 @@ La Figura 5.8 muestra cuatro fases: extracción/perfilamiento con copia y hash d
 
 La aceptación exige conciliación de totales, referencias y documentos, ausencia de vigencias habilitantes sin respaldo y cuadratura de liquidaciones con diferencias justificadas. Toda inconsistencia se identifica por registro, propietario y resolución, sin afirmar que una carga masiva elimina errores. Se prueban reversa, delta final e idempotencia; nunca se borran documentos fiscales ya emitidos ni evidencias válidas generadas durante la convivencia. Los cortes respetan los congelamientos y la implantación por terminal/unidad de S7 (Caso, RT-10.05, p. 32).
 
-![Figura 5.8. Metodología de extracción, saneamiento, carga y conciliación histórica](../../figuras/05-datos/audit-figura-5.5-migracion.pdf)
+![Figura 5.8. Metodología de extracción, saneamiento, carga y conciliación histórica](../../figuras/05-datos/audit-figura-5.5-migracion.png)
 
 *Figura 5.8. Metodología de extracción, saneamiento, carga y conciliación histórica*
 
@@ -264,7 +254,7 @@ La Figura 5.8 muestra las puertas de acreditación y conciliación. Un registro 
 
 La meta contractual de asignación es ≤30 s extremo a extremo (Caso, RT-09.01, p. 32). Menos de 2 s es objetivo interno de un caso nominal, no medición ni garantía derivada de usar caché. La Figura 5.9 muestra que una proyección sólo habilita cuando su versión y actualidad se validan contra el estado autoritativo; si hay conflicto se reevalúa o rechaza dentro del plazo total.
 
-![Figura 5.9. Estado autoritativo, caché e índices especializados](../../figuras/05-datos/audit-figura-5.6-desempeno.pdf)
+![Figura 5.9. Estado autoritativo, caché e índices especializados](../../figuras/05-datos/audit-figura-5.6-desempeno.png)
 
 *Figura 5.9. Estado autoritativo, caché e índices especializados*
 
@@ -296,6 +286,6 @@ Conforme al Comunicado 10, sección 7.2, cada sección de este subdocumento y ca
 
 | Sección | Herramienta | Finalidad del uso | Nivel en texto | Nivel en diagramas | Revisión humana (quién y qué verificó) |
 |---|---|---|---|---|---|
-| 5.1 | OpenAI Codex (GPT-6) | Modelo, evidencia, evaluación, custodia y permisos | Alto | Alto | Responsable D3, Arquitecto de Solución: entidades, niveles de evidencia, custodia, permisos y figuras del modelo. |
-| 5.2 a 5.4 | OpenAI Codex (GPT-6) | Motores, conservación, migración, índices y capacidad | Alto | Alto | Responsable D3, Arquitecto de Solución: motores, retención, migración, desempeño y figuras. |
-| Anexo de diccionario | OpenAI Codex (GPT-6) | Atributos y capacidad | Alto | Ninguno | Responsable D3, Arquitecto de Solución: revisión de atributos, restricciones y supuestos. |
+| 5.1 | Codex | Modelo, custodia y roles por asignación | Alto | Alto | Arquitectura y Datos: pendiente validar el ajuste del modelo y la Figura 5.1. |
+| 5.2 a 5.4 | Codex | Motores, disponibilidad, migración e índices | Alto | Alto | Datos y Calidad: pendiente cotejar la medición de disponibilidad. |
+| Diccionario | Codex | Atributos, unicidad por tramo y capacidad | Alto | Ninguno | Datos y Calidad: pendiente validar la regla y los casos de reasignación. |

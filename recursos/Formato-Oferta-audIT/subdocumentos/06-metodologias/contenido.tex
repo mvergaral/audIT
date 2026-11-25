@@ -45,6 +45,11 @@ La gestión eficaz de los grupos de interés resulta determinante debido a la di
 
 La lista anterior agrupa usuarios de operación; el plan de comunicaciones cubre, además, los trece grupos diferenciados en S2. La \tabref{06-actores-comunicacion} indica emisor, destinatario, información, cadencia y canal. Una solicitud urgente sigue el procedimiento de incidente o de cambio y no espera el informe periódico.
 
+\begingroup
+% La matriz añadida conserva las referencias a la Tabla 6.3 en S9 y T-13.
+\edef\NumeroTablaAnteriorSSeis{\number\value{table}}
+\renewcommand\thetable{6.A}
+\renewcommand\theHtable{6.comunicaciones}
 \begin{tabla}[ancho=completo, fuente=condensada]{Comunicaciones para los trece grupos de interés del diagnóstico}{06-actores-comunicacion}{L{27mm} X X X}
 Destinatario & Información y frecuencia & Emisor y canal & Escalamiento \\ \midrule
 Fondo de inversión & Riesgo financiero y continuidad; trimestral & Gerencia de Curimón; informe de directorio & Gerencia General \\
@@ -61,6 +66,8 @@ Conductores propios & Cambios de uso, privacidad y alertas; por liberación y tu
 Transportistas terceros & Adhesión, permisos y liquidación; por hito y mensualmente & Relación con terceros; portal y comunicación formal & Administrador del Contrato \\
 Cliente exportador & Seguimiento y emisiones autorizadas; por corte contractual & Gerencia comercial; reporte aprobado & Gerencia General \\
 \end{tabla}
+\setcounter{table}{\NumeroTablaAnteriorSSeis}
+\endgroup
 
 La \tabref{06-actores-comunicacion} no concede al proponente comunicación directa en nombre del mandante con fiscalizadores, aseguradora o accionistas. Curimón emite esas comunicaciones; audIT prepara la evidencia que le corresponde. Todo acuerdo que cambie alcance, costo, plazo o nivel de servicio pasa por el Artículo 72 y queda en acta.
 
@@ -69,6 +76,8 @@ Conforme a la exigencia técnica de las bases (\transv{RT-19.05}{33}), audIT imp
 El jefe de proyecto tiene dedicación exclusiva durante la implementación y centraliza línea base, cambios, riesgos y seguimiento, conforme a RT-19.01. S7/T-15 dimensiona esa dedicación y los frentes simultáneos; las actas identifican contraparte, responsable de acción y plazo de cierre.
 
 Curimón designará por acta antes del primer sprint a un responsable funcional titular y a un suplente con atribución para ordenar el backlog y aceptar o rechazar incrementos funcionales dentro del alcance aprobado. Se propone responder dudas bloqueantes en dos días hábiles y resolver la revisión de un incremento en cinco días hábiles; la contraparte debe ratificar estos plazos. Si el titular no responde, actúa el suplente; si ninguno decide, el Jefe de Proyecto registra el bloqueo y lo eleva al Comité de Proyecto. La revisión de sprint documenta conformidad de producto, pero la aceptación contractual de H4 y H9 exige las evidencias y actas de S7/S9; el responsable funcional no altera unilateralmente la línea base.
+
+El Líder Funcional conduce la adhesión de los 148 transportistas iniciales. El paquete 9.1 prepara el anexo para validación jurídica de Curimón, el 9.2 conduce el enrolamiento y el 9.3 mide avance y refuerzo. El Comité de Proyecto revisa impedimentos cada quince días y el Líder Funcional informa mensualmente por RUT con anexo firmado, vigente y registrado. Con 59 o menos adhesiones al cierre de M9 bajo el supuesto de calendario de S7, activa la campaña de refuerzo con el Administrador del Contrato. Las metas de T-14 son 104 en M16 y 134 en M21. La falta de autorización impide intervenir el equipo privado y obliga a usar la modalidad de evidencia permitida por S3.
 
 \FloatBarrier
 \subsection{Gestión de adquisiciones e integración contractual}\label{sec:6-gestion-adquisiciones}\label{sec:06-gestion-de-adquisiciones-e-integracion-contractual}
@@ -128,14 +137,16 @@ Para conciliar la alta disponibilidad exigida con la continua evolución logíst
 \item Prevención y Mitigación de Deuda Técnica: Cada sprint de construcción reserva un 15 \% de la capacidad de desarrollo para refactorización, optimización de consultas en base de datos y actualización de librerías base. Se prohíbe la acumulación de advertencias de compilación y se somete el código a inspección estática continua.
 \end{itemize}
 
-La \verSeccion{sec:13-innovacion-2} se incorpora como backlog de EDT 12.2, integrado con 4.1/4.2. Sus criterios y métricas se trazan por separado de los 42 requisitos de T-12; no se modifica el significado de un requisito obligatorio para presentarlo como innovación. El piloto y las intervenciones mantienen las ventanas de S7.
+La innovación 2 de S13 se incorpora al backlog de EDT 12.2, integrado con 4.1/4.2. Sus criterios y métricas se trazan por separado de los 42 requisitos de T-12. El piloto y las intervenciones mantienen las ventanas de S7.
+
+Durante M21 a M56, el carril Kanban de deuda técnica se ejecuta dentro del paquete 13.4 de evolución. Software dispone de 160, 120, 80 y 40 horas variables al mes desde M21, M25, M33 y M45, respectivamente, para mejoras y deuda en conjunto. El Comité de Operación acuerda el reparto mensual y el Arquitecto prioriza defectos de diseño, dependencias y consultas con evidencia de impacto. El reparto descuenta las reservas de cierre que usan la misma bolsa, según T-15. La guardia, la corrección fija y los refuerzos identificados conservan su imputación en la planilla. Los escalones requieren dos meses sin incidentes P1, menos de diez pendientes y demanda dentro de capacidad. Si falla una condición se conserva el escalón precedente y se revisa el plan con S11 y T-15.
 
 \FloatBarrier
-\subsection{Ecosistema DevSecOps unificado en GitLab CI Enterprise}\label{sec:6-desarrollo-devsecops}\label{sec:06-ecosistema-devsecops-unificado-en-gitlab-ci-enterprise}
+\subsection{Plataforma DevSecOps y herramientas}\label{sec:6-desarrollo-devsecops}\label{sec:06-ecosistema-devsecops-unificado-en-gitlab-ci-enterprise}
 
-GitLab CI Enterprise centraliza repositorio, incidencias, revisión, ejecución y registro de liberaciones. SonarQube, Trivy, Cosign, herramientas de prueba y Terraform se integran al mismo flujo; usar GitLab no elimina su necesidad ni acredita automáticamente SLSA nivel 3.
+GitLab Premium Self-Managed centraliza repositorio, incidencias, revisión, ejecución y liberaciones. La suscripción anual cubre 33 usuarios desde M1, 37 desde M13 y 16 desde M25. SonarQube Server Developer Edition se incorpora en M4, con una instancia y capacidad inicial propuesta de 100.000 líneas. Se coteja el tamaño antes de la compra y de cada renovación. audIT provee las licencias a nombre de Curimón. Los ejecutores y el alojamiento se dimensionan en S4/T-11, separados de la suscripción. Trivy, Syft, Cosign, Checkov, ZAP y Terraform se integran al mismo flujo conforme a sus condiciones de uso.
 
-\decision{titulo={Orquestación de DevSecOps en GitLab CI Enterprise}, decide={Un solo control de versión y orquestación, con herramientas especializadas integradas}, descarta={Pipelines independientes por equipo con despliegues sin registro común}, criterio={Mantener ID de requisito, commit, prueba, artefacto y despliegue; asumir operación y licencias de las herramientas declaradas}, fuente={\transv{RT-04.03–05}{10}}}
+\decision{titulo={Orquestación de DevSecOps en GitLab Premium Self-Managed}, decide={Un solo control de versión y orquestación, con herramientas especializadas integradas}, descarta={Pipelines independientes por equipo con despliegues sin registro común}, criterio={Mantener ID de requisito, commit, prueba, artefacto y despliegue; asumir operación y licencias de las herramientas declaradas}, fuente={\transv{RT-04.03–05}{10}}}
 
 El control de cadena de suministro adopta SLSA v1.2 Build L3: plataforma alojada y endurecida, ejecuciones aisladas entre sí y secretos de firma de procedencia inaccesibles a los pasos definidos por el proyecto. El builder genera la procedencia; un script del propio repositorio que crea una atestación y usa Cosign no basta para L3. Se verifican identidad del builder, parámetros, entradas y digest en la admisión. Es un requisito de implementación a acreditar, no una certificación ya obtenida (SLSA, Build Track \parencite{d3_slsa12}).
 
@@ -176,7 +187,7 @@ El trabajo colaborativo del equipo de desarrollo se organiza en torno a un flujo
 \begin{itemize}
 \item Rama \texttt{main}: Contiene versiones estables liberables y está protegida. Se exige firma criptográfica de commits y dos aprobaciones independientes del autor antes de la liberación; producción se despliega automáticamente. El registro de despliegue identifica commit, etiqueta, digest, configuración y entorno efectivo; fusionar a main no equivale a haber desplegado.
 \item Rama \texttt{develop}: Rama de integración continua donde convergen las nuevas funcionalidades validadas mediante pruebas unitarias.
-\item \textbf{Ramas temáticas:} Ramas de trabajo de corta duración, sujetas obligatoriamente a revisión por pares mediante Merge Requests. Las normas ISO citadas en otros capítulos sustentan arquitectura, calidad de datos y riesgos; no se presentan como fuente del flujo de ramas.
+\item \textbf{Ramas temáticas:} Ramas breves por cambio. La solicitud de integración liga el requisito, el cambio, las pruebas y las aprobaciones. GitLab documenta la configuración de ramas protegidas en \url{https://docs.gitlab.com/user/project/repository/branches/protected/}.
 \end{itemize}
 
 La \tabref{06-tabla-6-4} define las condiciones para iniciar una historia y aceptar un incremento de software mediante Definition of Ready (DoR) y Definition of Done (DoD).
@@ -190,7 +201,7 @@ Definición de Terminado (DoD) & Incremento de Software / Release Candidate & C�
 
 La aplicación de los criterios de la \tabref{06-tabla-6-4} asegura que cada módulo tecnológico entregado a Transportes Curimón cumpla con los estándares industriales de mantenibilidad, solidez arquitectónica y ciberseguridad exigidos por las bases.
 
-\textbf{Compromiso C-02.} audIT mantendrá un tiempo de despliegue continuo en ambiente de pruebas inferior a quince minutos para incrementos de software validados.  Métrica: Despliegue automatizado en staging en menos de 15 minutos tras aprobación de Merge Request. Se verifica en: Métricas de ejecución del pipeline en GitLab CI Enterprise. Fuente: objetivo adicional audIT, trazado a FEP02 RT-04.12 y RT-03.03; no es plazo impuesto por las bases.
+\textbf{Compromiso C-02.} audIT mantendrá un tiempo de despliegue continuo en ambiente de pruebas inferior a quince minutos para incrementos de software validados.  Métrica: Despliegue automatizado en staging en menos de 15 minutos tras aprobación de Merge Request. Se verifica en: Métricas de ejecución del pipeline en GitLab Premium Self-Managed. Fuente: objetivo adicional audIT, trazado a FEP02 RT-04.12 y RT-03.03; no es plazo impuesto por las bases.
 
 \FloatBarrier
 \subsection{Cadencia, entrega y reversión verificable}\label{sec:06-cadencia-entrega-y-reversion-verificable}
@@ -236,7 +247,7 @@ La \tabref{06-tabla-6-6-g13} limita el certificado de familiarización a cinco f
 
 El equipo de desarrollo conserva el identificador y digest del artefacto, configuración de PREPROD, versión del conjunto ficticio, informes de ejecución y reejecución de defectos, materiales por perfil y acta de congelamiento. El equipo de aseguramiento de calidad revisa la trazabilidad de la evidencia. Un cambio posterior al congelamiento obliga a repetir los casos afectados. CP-HW-03/06/14, la autonomía de 72 h y la validación en ruta requieren evidencia propia en S9/T-17; la simulación en PREPROD no las sustituye.
 
-G13 habilita los diez días iniciales de familiarización; los flujos completos, las evaluaciones y el complemento del sprint 8 se mantienen en los treinta días restantes de A13.
+El sprint A09-7 entrega el candidato el día hábil 180. G13 lo libera después de dos días de ensayo en PREPROD, incluidos los controles de CP-SEC-05. Los diez días iniciales de familiarización van de d182 a d192. La práctica de flujos completos y su certificación van de d192 a d222, conforme a T-15 y T-18.
 
 \FloatBarrier
 \subsection{Evidencia asociada a T-9 y T-10}\label{sec:06-evidencia-asociada-a-t-9-y-t-10}

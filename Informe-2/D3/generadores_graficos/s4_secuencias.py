@@ -47,12 +47,12 @@ def figura_4_6_liquidacion():
     mensaje(f,xs,1,3,148,'v1 ≤ 24 h · componentes disponibles y faltantes')
     mensaje(f,xs,2,1,190,'Lotes conciliados · combustible hasta 40 días')
     mensaje(f,xs,1,3,232,'v2…vn · costo actualizado sin sobrescribir v1')
-    mensaje(f,xs,1,3,274,'Propuesta de liquidación mensual + detalle por viaje')
+    mensaje(f,xs,1,3,274,'Liquidación mensual · detalle por viaje y tramo')
     mensaje(f,xs,3,1,310,'Aceptación firmada o discrepancia trazable',True)
     mensaje(f,xs,1,4,351,'Liquidación aprobada · clave de idempotencia')
     mensaje(f,xs,4,1,387,'Acuse contable y conciliación',True)
-    nota(f,411,['El costo preliminar de un viaje y la liquidación mensual son registros distintos.',
-                'Sin acuse contable permanece pendiente; el reintento no duplica el registro financiero.'])
+    nota(f,411,['Cada tramo admite un cargo base por su asignación ejecutada.',
+                'Sin acuse contable queda pendiente. La clave de idempotencia evita duplicar el registro financiero.'])
     return f.guardar()
 
 def figura_4_7_reconexion():

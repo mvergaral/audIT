@@ -187,7 +187,10 @@ id\_\allowbreak{}viaje & UUID & Referencia a VIAJE & Sí & Planificación y trá
 id\_\allowbreak{}conductor & UUID & Referencia a CONDUCTOR & Al confirmar & Planificación y tráfico & Operacional; personal si vincula persona; cifrado/acceso según RT-11.10 cuando aplica \\
 id\_\allowbreak{}tracto & UUID & Referencia a TRACTOCAMION & Al confirmar & Planificación y tráfico & Operacional; personal si vincula persona; cifrado/acceso según RT-11.10 cuando aplica \\
 id\_\allowbreak{}semirremolque & UUID & Referencia a SEMIRREMOLQUE & Si carga lo exige & Planificación y tráfico & Operacional; personal si vincula persona; cifrado/acceso según RT-11.10 cuando aplica \\
-id\_\allowbreak{}transportista & UUID & Referencia a TRANSPORTISTA & Si tercero & Planificación y tráfico & Operacional; personal si vincula persona; cifrado/acceso según RT-11.10 cuando aplica \\
+id\_\allowbreak{}tramo & UUID & Tramo canónico de VIAJE, estable ante reasignación & Sí & Planificación y tráfico & Operacional \\
+id\_\allowbreak{}titular & UUID & Titular del equipo según Flota y vigencia & Al confirmar & Flota y activos & Operacional; acceso restringido \\
+id\_\allowbreak{}empleador & UUID & Empleador acreditado según Personas y vigencia & Al confirmar & Personas y cumplimiento & Personal; acceso restringido \\
+id\_\allowbreak{}beneficiario & UUID & Beneficiario según contrato vigente & Si tercero & Liquidación y costeo & Operacional; acceso restringido \\
 desde\_\allowbreak{}utc & TIMESTAMPTZ & Inicio de reserva & Sí & Planificación y tráfico & Operacional; personal si vincula jornada; cifrado/acceso según RT-11.10 cuando aplica \\
 hasta\_\allowbreak{}utc & TIMESTAMPTZ & Fin; NULL activa & No & Planificación y tráfico & Operacional; personal si vincula jornada; cifrado/acceso según RT-11.10 cuando aplica \\
 estado & TEXT & PROPUESTA / CONFIRMADA / LIBERADA / RECHAZADA & Sí & Planificación y tráfico & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
@@ -595,7 +598,8 @@ La \tabref{05-anexo-tabla-liquidacion-detalle} detalla los atributos y controles
 \begin{tabla}[ancho=completo, fuente=condensada]{Atributos y controles de LIQUIDACION\_\allowbreak{}DETALLE}{05-anexo-tabla-liquidacion-detalle}{L{30mm} L{22mm} X L{12mm} L{24mm} X}
 Atributo & Tipo & Dominio y regla & Obligatorio & Propietario & Sensibilidad/tratamiento \\ \midrule
 id\_\allowbreak{}liquidacion & UUID & Referencia a LIQUIDACION; parte de PK & Sí & Liquidación y costeo & Operacional; personal si vincula persona; cifrado/acceso según RT-11.10 cuando aplica \\
-id\_\allowbreak{}viaje & UUID & Referencia a VIAJE; parte de PK & Sí & Liquidación y costeo & Operacional; personal si vincula persona; cifrado/acceso según RT-11.10 cuando aplica \\
+id\_\allowbreak{}asignacion & UUID & FK a ASIGNACION ejecutada; parte de PK & Sí & Liquidación y costeo & Operacional; acceso restringido \\
+id\_\allowbreak{}tramo & UUID & FK al tramo de la asignación; cargo base único por tramo & Sí & Liquidación y costeo & Operacional \\
 id\_\allowbreak{}costo & UUID & Referencia a COSTO\_\allowbreak{}VERSION usado & Sí & Liquidación y costeo & Operacional; personal si vincula persona; cifrado/acceso según RT-11.10 cuando aplica \\
 id\_\allowbreak{}tarifa & UUID & Referencia a TARIFA\_\allowbreak{}CONTRATO & Sí & Liquidación y costeo & Operacional; personal si vincula persona; cifrado/acceso según RT-11.10 cuando aplica \\
 importe & NUMERIC & Monto y conceptos conciliados & Sí & Liquidación y costeo & Operacional; cifrado/acceso según RT-11.10 cuando aplica \\
@@ -603,6 +607,7 @@ discrepancia & TEXT & Observación y resolución; no excluir sin historia & No &
 \end{tabla}
 
 Estos atributos concretan las referencias, campos obligatorios y controles de acceso de LIQUIDACION\_\allowbreak{}DETALLE.
+La clave es (liquidación, asignación). El tramo pertenece al mismo viaje que la asignación y la versión de costo. El beneficiario de la cabecera coincide con el validado para el tramo. La unicidad global de cargo base por tramo se comprueba en la transacción, aun entre liquidaciones distintas. Un ajuste conserva la referencia al cargo base, el motivo y el acta que lo autorizó.
 
 \Needspace{18\baselineskip}
 \subsection*{LOTE\_\allowbreak{}COSTO}\label{sec:05-anexo-lote-costo}
@@ -754,8 +759,6 @@ Se indexan FK locales y claves de consulta. RUT cifrado utiliza índice ciego de
 
 \caso{numeral 14.2}{30} pide estimación; la \tabref{05-anexo-tabla-A5-1} diferencia tasas del Caso, tamaños supuestos y conteos históricos no entregados.
 
-La \tabref{05-anexo-tabla-A5-1} detalla los atributos y controles del registro.
-
 \begin{tabla}[ancho=completo, fuente=condensada]{Presupuesto lógico inicial de datos, sin índices ni réplicas}{05-anexo-tabla-A5-1}{L{36mm} X X}
 Dominio & Base / supuesto & Resultado de diseño \\ \midrule
 Viajes & 96.000/año $\times$2 KiB/registro compuesto & $\approx$197 MB/año; 5 años $\approx$983 MB, sin documentos \\
@@ -769,4 +772,4 @@ Liquidaciones históricas & 148/mes $\times$12 $\times$6 sólo como extrapolaci�
 Siniestros y maestros & Totalidad de la fuente según RT-05.15 & No hay conteo/bytes entregados; inventariar todos y preservar pendientes \\
 \end{tabla}
 
-La \tabref{05-anexo-tabla-A5-1} no es tamaño físico ni cifra medida. Un factor provisional 3$\times$ sobre registros cubre índices/estructura de manera aproximada, pero WAL, originales grandes, fotos, copias WORM, respaldos y réplicas se dimensionan explícitamente por separado. No se multiplica por un factor sin indicar qué incluye. El volumen de jornada se registra por eventos semánticos, sin convertir cada ping de GPS en prueba de descanso. Se ensayan extracción, transformación, carga y conciliación con tasa medida; volumen/tasa más delta final determina la ventana, conciliada con S7.
+El presupuesto lógico usa un factor provisional de 3 para índices y estructura. El WAL, los originales grandes, las fotos, las copias WORM, los respaldos y las réplicas se dimensionan por separado. Jornada conserva eventos con significado de negocio. El ensayo mide la tasa de extracción, transformación, carga y conciliación. El volumen dividido por esa tasa, más el delta final, determina la ventana que se concilia con S7.

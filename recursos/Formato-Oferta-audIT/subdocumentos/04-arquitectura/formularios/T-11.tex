@@ -8,6 +8,8 @@
 %  herramientas, analítica e identidad del personal (D4-155).
 % ============================================================================
 \begin{formulario}{T-11}
+\renewcommand\thetable{T-11.\arabic{table}}
+\setcounter{table}{1}
 \begin{formularioTOnce}
 % ---------------------------------------------------------------- cabina
 \componenteTOnce{
@@ -708,12 +710,32 @@
 \componenteTOnce{
   componente = Aplicación móvil del conductor,
   producto = {Aplicación de audIT},
-  caracteristicas = {Cuatro perfiles de RT-17.01 del Caso},
+  caracteristicas = {Cuatro perfiles de RT-17.01 del Caso. Flutter 3.50.0 estable, Dart compatible y SQLite local. \href{https://docs.flutter.dev/release/release-notes}{Notas de Flutter}},
   ubicacion = BM,
   cantidad = {454 conductores posibles},
   adquiere = audIT,
   ciclo = {Mantención evolutiva del contrato},
   justificacion = {Canal voluntario. La trazabilidad obligatoria no depende de él (restricciones 1 y 2)}
+}
+\componenteTOnce{
+  componente = Portales y torre de control,
+  producto = {React 19.3.0 y Next.js 16.x LTS activo},
+  caracteristicas = {\href{https://react.dev/versions}{Versiones de React} y \href{https://nextjs.org/support-policy}{Soporte de Next.js}},
+  ubicacion = {N, capa de presentación},
+  cantidad = {Una plataforma web para los perfiles de S4.1},
+  adquiere = {audIT},
+  ciclo = {Parche compatible fijado en diseño y mantenido en LTS},
+  justificacion = {Interfaz común con control de acceso por perfil}
+}
+\componenteTOnce{
+  componente = Ingesta y borde,
+  producto = {Go 1.27.4},
+  caracteristicas = {Series con soporte y parches según \parencite{go_release}},
+  ubicacion = {N y equipo a bordo},
+  cantidad = {Un agente por equipo homologado y un servicio de ingesta escalable},
+  adquiere = {audIT},
+  ciclo = {Revisión de soporte con cada actualización},
+  justificacion = {Desacopla recepción de eventos y procesamiento}
 }
 \componenteTOnce{
   componente = Repositorio y pipeline,
@@ -779,6 +801,16 @@
 \par\vspace{6pt}
 \noindent{\sffamily\fontsize{9.5bp}{12.5bp}\selectfont\color{audit-secundario}Códigos de
 emplazamiento: N, Azure Chile Central. N2, Azure Brazil South. SB, sala de San Bernardo. GT, gabinete
-de terminal. DB, equipo a bordo. SR, semirremolque. BM, teléfono del conductor. Las fuentes de las
-fichas de fabricante están en las Referencias del Subdocumento N.º 4.\par}
+de terminal. DB, equipo a bordo. SR, semirremolque. BM, teléfono del conductor.\par}
 \end{formulario}
+
+\clearpage
+\printbibliography[title={Referencias técnicas del T-11}]
+
+\csname audit@titulocierre\endcsname{Declaración de uso de IA del T-11}
+La actualización de versiones y la conciliación con la arquitectura se prepararon con apoyo de IA.
+\begin{tabla}[ancho=completo,fuente=condensada,numerada=false]{Uso de IA en especificaciones}{4-ia-t11}{L{13mm} L{23mm} X L{18mm} L{20mm} X}
+Sección & Herramienta & Finalidad & Texto & Diagramas & Revisión humana \\ \midrule
+T-11 & Codex & Alineación de software y fuentes técnicas con S4.1 & Alto & Ninguno & Pendiente de validación por Arquitectura e Infraestructura \\
+\end{tabla}
+La validación coteja versiones, titularidad de licencias, componentes y referencias de fabricante.
