@@ -1,0 +1,26 @@
+{
+  "instruccion": "Usuario confirma Art93 y validación docente de piezas simuladas; emisores ficticios inconfundibles.",
+  "mapa": {
+    "Bureau Veritas Certification S.A.": "Certificadora Simulada Horizonte TFEP S.A.",
+    "Bureau Veritas": "Certificadora Simulada Horizonte TFEP S.A.",
+    "BV-EXP-2026-CL-8921": "CSH-EXP-2026-CL-8921",
+    "Nexia Auditores SpA": "Auditores Simulados Faro TFEP SpA",
+    "Transportes del Sur Ltda.": "Transportes Simulados del Sur TFEP SpA",
+    "AgroFrutícola Los Andes S.A.": "Agrofrutícola Simulada Cordillera TFEP S.A.",
+    "Logística y Distribución Multimodal Bicentenario S.A.": "Logística Simulada Bicentenario TFEP S.A.",
+    "Logística Multimodal Bicentenario S.A.": "Logística Simulada Bicentenario TFEP S.A.",
+    "Maestranza y Laboratorio Electrónico Diesel del Norte Ltda.": "Centro Simulado TFEP Antofagasta SpA",
+    "Electromecánica y Telecomunicaciones del Maule SpA": "Centro Simulado TFEP Talca SpA",
+    "Centro Integral de Servicios Telemáticos Biobío S.A.": "Centro Simulado TFEP Los Ángeles S.A.",
+    "Laboratorio y Soporte Tecnológico Austral Ltda.": "Centro Simulado TFEP Puerto Montt Ltda.",
+    "miturra@transportesdelsur.cl": "referencia-p1@transportes-simulados-tfep.example",
+    "pconcha@agrofruticolalosandes.cl": "referencia-p2@agro-simulada-tfep.example",
+    "rbaeza@logisticabicentenario.cl": "referencia-p3@logistica-simulada-tfep.example",
+    "(como Certificadora Simulada Horizonte TFEP S.A. o SGS)": "(Certificadora Simulada Horizonte TFEP S.A.)"
+  },
+  "archivos": [
+    "subdocumentos\\01-empresa\\anexo-1a.tex",
+    "subdocumentos\\01-empresa\\contenido.tex",
+    "subdocumentos\\01-empresa\\formularios\\T-6.tex"
+  ]
+}

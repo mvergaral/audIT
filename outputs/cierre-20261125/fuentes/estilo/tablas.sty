@@ -1,0 +1,360 @@
+% ============================================================================
+%  tablas.sty
+%  Tablas cortas y largas con un solo entorno, y utilidades para formularios.
+%
+%  \begin{tabla}[opciones]{Leyenda}{etiqueta}{columnas}
+%    Cabecera 1 & Cabecera 2 \\ \midrule
+%    Dato & Dato \\
+%  \end{tabla}
+%
+%  Todo lo que va antes del primer \midrule es la cabecera. Se repite en cada
+%  página con la marca «(continuación)» y el pie «Continúa en el folio
+%  siguiente». La tabla siempre es larga (xltabular), así que puede cruzar
+%  páginas sin riesgo. Se usa \label{tab:etiqueta} automáticamente.
+%
+%  Columnas: L{ancho} izquierda, C{ancho} centro, R{ancho} derecha, X ancho
+%  flexible. Las p{...} del formato anterior también quedan alineadas a la
+%  izquierda: en columnas angostas el texto justificado abre huecos.
+%
+%  Opciones: ancho=completo (texto más carril), fuente=condensada,
+%            filetes=false (sin filetes entre filas)
+%
+%  Trampas evitadas: no se usa \extrarowheight (bucle en el formato
+%  anterior), el relleno vertical sale de \arraystretch. Las filas se emiten
+%  ya armadas, sin macros que terminen en \\.
+% ============================================================================
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{tablas}[2026/09/26 Tablas]
+
+\RequirePackage{array}
+\RequirePackage{longtable}
+\RequirePackage{xltabular}
+\RequirePackage{booktabs}
+\RequirePackage{colortbl}
+\RequirePackage{ragged2e}
+\RequirePackage{caption}
+
+% Letra de tablas: IBM Plex Sans 9,5 pt, sobre el mínimo de 9 del Art. 40.4
+\newcommand\letraTabla{\sffamily\fontsize{9.5bp}{12.5bp}\selectfont}
+\newcommand\letraTablaCondensada{\plexcondensada\fontsize{9.5bp}{12.5bp}\selectfont}
+
+% Leyendas de tablas y figuras: 9,5 pt
+\DeclareCaptionFont{audit}{\sffamily\fontsize{9.5bp}{12.5bp}\selectfont}
+\DeclareCaptionFont{auditetiqueta}{\bfseries\color{audit-marino}}
+\DeclareCaptionFont{audittexto}{\color{audit-tinta}}
+\captionsetup{font=audit, labelfont=auditetiqueta, textfont=audittexto,
+  labelsep=quad, justification=raggedright, singlelinecheck=false}
+\captionsetup[table]{position=top, skip=3pt}
+\captionsetup[figure]{position=bottom, skip=5pt}
+\renewcommand\thetable{\thechapter.\arabic{table}}
+\renewcommand\thefigure{\thechapter.\arabic{figure}}
+
+% Columnas alineadas a la izquierda, con partición silábica solo si hace falta
+\newcommand\audit@celdaizq{\RaggedRight\arraybackslash\hspace{0pt}}
+\newcolumntype{L}[1]{>{\audit@celdaizq}p{#1}}
+\newcolumntype{C}[1]{>{\Centering\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{R}[1]{>{\RaggedLeft\arraybackslash\hspace{0pt}}p{#1}}
+\renewcommand\tabularxcolumn[1]{>{\audit@celdaizq}p{#1}}
+
+\setlength\aboverulesep{0pt}
+\setlength\belowrulesep{0pt}
+\setlength\LTpre{2pt}
+\setlength\LTpost{6pt}
+
+% Estilo de celda de cabecera
+\newcommand\audit@cab{\leavevmode\color{audit-marino}\bfseries}
+
+\ExplSyntaxOn
+\bool_new:N \l_audit_tabla_completa_bool
+\bool_new:N \l_audit_tabla_condensada_bool
+\bool_new:N \l_audit_tabla_filetes_bool
+\bool_new:N \l_audit_tabla_numerada_bool
+\keys_define:nn { audit/tabla }
+  {
+    ancho .choices:nn = { texto, completo }
+      { \bool_set:Nn \l_audit_tabla_completa_bool { \int_compare_p:nNn \l_keys_choice_int = 2 } } ,
+    fuente .choices:nn = { normal, condensada }
+      { \bool_set:Nn \l_audit_tabla_condensada_bool { \int_compare_p:nNn \l_keys_choice_int = 2 } } ,
+    filetes .bool_set:N = \l_audit_tabla_filetes_bool ,
+    filetes .initial:n = true ,
+    espacio .tl_set:N = \l_audit_tabla_espacio_tl ,
+    espacio .initial:n = 8 ,
+    numerada .bool_set:N = \l_audit_tabla_numerada_bool ,
+    numerada .initial:n = true ,
+  }
+
+\tl_new:N \l_audit_tabla_cab_tl
+\tl_new:N \l_audit_tabla_cuerpo_tl
+\tl_new:N \l_audit_tabla_filas_tl
+\tl_new:N \l_audit_tabla_todo_tl
+\tl_new:N \l_audit_tabla_num_tl
+\tl_new:N \l_audit_tabla_marcas_tl
+\seq_new:N \l_audit_tabla_celdas_seq
+\seq_new:N \l_audit_tabla_filas_seq
+\int_new:N \l_audit_tabla_ncol_int
+\dim_new:N \l_audit_tabla_ancho_dim
+
+\cs_new_protected:Npn \audit_tabla_partir:w #1 \midrule #2 \q_stop
+  {
+    \tl_set:Nn \l_audit_tabla_cab_tl {#1}
+    \tl_set:Nn \l_audit_tabla_cuerpo_tl {#2}
+  }
+
+% Cabecera: cada celda con el estilo de cabecera
+\cs_new_protected:Npn \audit_tabla_cabecera:
+  {
+    \tl_remove_all:Nn \l_audit_tabla_cab_tl { \\ }
+    \seq_set_split:NnV \l_audit_tabla_celdas_seq { & } \l_audit_tabla_cab_tl
+    \int_set:Nn \l_audit_tabla_ncol_int { \seq_count:N \l_audit_tabla_celdas_seq }
+    \tl_set:Ne \l_audit_tabla_cab_tl
+      {
+        \seq_map_function:NN \l_audit_tabla_celdas_seq \audit_tabla_celda_cab:n
+      }
+    % quita el & sobrante al inicio
+    \tl_set:Ne \l_audit_tabla_cab_tl { \tl_tail:N \l_audit_tabla_cab_tl }
+  }
+\cs_new:Npn \audit_tabla_celda_cab:n #1 { & \exp_not:N \audit@cab \exp_not:n {#1} }
+
+% Cuerpo: separa filas en \\ y agrega un filete fino entre ellas
+\cs_new_protected:Npn \audit_tabla_filas:
+  {
+    \seq_set_split:NnV \l_audit_tabla_filas_seq { \\ } \l_audit_tabla_cuerpo_tl
+    \seq_remove_all:Nn \l_audit_tabla_filas_seq { }
+    \tl_clear:N \l_audit_tabla_filas_tl
+    \int_step_inline:nn { \seq_count:N \l_audit_tabla_filas_seq }
+      {
+        \tl_set:Ne \l_tmpa_tl { \seq_item:Nn \l_audit_tabla_filas_seq {##1} }
+        \tl_put_right:Ne \l_audit_tabla_filas_tl { \exp_not:V \l_tmpa_tl \exp_not:N \\ }
+        \bool_if:NT \l_audit_tabla_filetes_bool
+          {
+            \int_compare:nNnT {##1} < { \seq_count:N \l_audit_tabla_filas_seq }
+              { \tl_put_right:Nn \l_audit_tabla_filas_tl { \audit@filetefila } }
+          }
+      }
+  }
+\cs_generate_variant:Nn \seq_set_split:Nnn { NnV }
+
+% Ancho de la leyenda. Si la tabla tiene columna X, ocupa el ancho pedido.
+% Si no, se estima su ancho natural: la suma de las columnas de ancho fijo,
+% 20 pt por cada columna l, c o r, y el espacio entre columnas.
+\dim_new:N \l_audit_tabla_leyenda_dim
+\seq_new:N \l_audit_tabla_anchos_seq
+\cs_new_protected:Npn \audit_tabla_ancho_leyenda:n #1
+  {
+    \tl_if_in:nnTF {#1} { X }
+      { \dim_set_eq:NN \l_audit_tabla_leyenda_dim \l_audit_tabla_ancho_dim }
+      {
+        \regex_extract_all:nnN { [pmbLCR] \{ ([^\}]*) \} } {#1} \l_audit_tabla_anchos_seq
+        \dim_zero:N \l_audit_tabla_leyenda_dim
+        \int_step_inline:nnnn { 2 } { 2 } { \seq_count:N \l_audit_tabla_anchos_seq }
+          {
+            \dim_add:Nn \l_audit_tabla_leyenda_dim
+              { \seq_item:Nn \l_audit_tabla_anchos_seq {##1} }
+          }
+        \tl_set:Nn \l_tmpa_tl {#1}
+        \regex_replace_all:nnN { \{ [^\}]* \} } { } \l_tmpa_tl
+        \regex_count:nVN { [lcr] } \l_tmpa_tl \l_tmpa_int
+        \dim_add:Nn \l_audit_tabla_leyenda_dim { \l_tmpa_int \c_audit_tabla_col_dim }
+        \dim_add:Nn \l_audit_tabla_leyenda_dim
+          { \l_audit_tabla_ncol_int \tabcolsep * 2 }
+        \dim_compare:nNnT { \l_audit_tabla_leyenda_dim } > { \l_audit_tabla_ancho_dim }
+          { \dim_set_eq:NN \l_audit_tabla_leyenda_dim \l_audit_tabla_ancho_dim }
+      }
+  }
+\dim_const:Nn \c_audit_tabla_col_dim { 20pt }
+\cs_generate_variant:Nn \regex_count:nnN { nV }
+
+% Una tabla que no es el formulario no se llama «Formulario T-NN». La
+% revisión del Informe 1 objetó una tabla de emplazamiento rotulada
+% «Formulario T-11» que no era el T-11. Los formularios reales se imprimen
+% dentro del entorno formulario (formularios/). Fuera de él, una leyenda que
+% nombra un formulario deja un aviso en el registro y el verificador lo
+% informa.
+\newif\ifaudit@enformulario
+\str_new:N \l_audit_tabla_leyenda_str
+\seq_new:N \l_audit_tabla_rotulo_seq
+\cs_new_protected:Npn \audit_tabla_rotulo_formulario:nn #1#2
+  {
+    \legacy_if:nF { audit@enformulario }
+      {
+        \str_set:Nn \l_audit_tabla_leyenda_str {#1}
+        \regex_extract_once:nVNT { Formulario [\s\~]+ (T-\d+) }
+          \l_audit_tabla_leyenda_str \l_audit_tabla_rotulo_seq
+          {
+            \msg_warning:nnne { tablas } { formulario-ajeno } {#2}
+              { \seq_item:Nn \l_audit_tabla_rotulo_seq { 2 } }
+            \iow_log:e
+              { AUDIT-FORMULARIO-AJENO:~tab:#2~\seq_item:Nn \l_audit_tabla_rotulo_seq { 2 } }
+          }
+      }
+  }
+\prg_generate_conditional_variant:Nnn \regex_extract_once:nnN { nV } { T }
+\msg_new:nnn { tablas } { formulario-ajeno }
+  {
+    La~leyenda~de~la~tabla~tab:#1~nombra~el~Formulario~#2,~pero~la~tabla~no~
+    es~ese~formulario.~El~formulario~real~lo~imprime~el~sistema~de~formularios/.~
+    Cambiar~la~leyenda~para~que~diga~lo~que~la~tabla~muestra.
+  }
+
+\cs_new_protected:Npn \audit_tabla:nnnnn #1#2#3#4#5
+  {
+    \group_begin:
+    \audit_tabla_rotulo_formulario:nn {#2} {#3}
+    \keys_set:nn { audit/tabla } {#1}
+    \tl_if_in:nnF {#5} { \midrule }
+      { \msg_error:nnn { tablas } { sin-cabecera } {#3} }
+    \audit_tabla_partir:w #5 \q_stop
+    \audit_tabla_cabecera:
+    \audit_tabla_filas:
+    % En una página ancha (paginaAncha) la tabla ocupa también el carril.
+    % longtable no respeta el corrimiento de adjustwidth, así que se ubica con
+    % su propio desplazamiento, igual que una tabla de ancho completo.
+    \legacy_if:nT { audit@enanchocompleto }
+      {
+        \bool_set_true:N \l_audit_tabla_completa_bool
+        % adjustwidth agranda \hsize, pero longtable ubica la tabla desde el
+        % margen original: se restituye el ancho del texto y la tabla llega al
+        % carril con su propio desplazamiento
+        \setlength \hsize { \textwidth }
+        \setlength \linewidth { \textwidth }
+      }
+    \bool_if:NTF \l_audit_tabla_completa_bool
+      {
+        \dim_set:Nn \l_audit_tabla_ancho_dim { \anchoCompleto }
+        \skip_set:Nn \LTleft { \dim_eval:n { -\desplazamientoCarril } plus 1fill }
+      }
+      {
+        \dim_set:Nn \l_audit_tabla_ancho_dim { \linewidth }
+        \skip_set:Nn \LTleft { 0pt plus 1fill }
+      }
+    % Relleno igual a ambos lados: una tabla de ancho natural (solo columnas
+    % de ancho fijo, como las del formato anterior) queda centrada en el
+    % espacio disponible. Las que tienen columna X lo llenan igual.
+    \skip_set:Nn \LTright { 0pt plus 1fill }
+    \bool_if:NTF \l_audit_tabla_condensada_bool { \letraTablaCondensada } { \letraTabla }
+    \color{audit-tinta}
+    \renewcommand \arraystretch { 1.2 }
+    \setlength \tabcolsep { 5pt }
+    \audit_tabla_ancho_leyenda:n {#4}
+    \appto \@arrayparboxrestore { \RaggedRight \let \\ \tabularnewline }
+    % Reserva de espacio con \Needspace, que compara con lo que queda de página.
+    % \needspace lo hace con un truco de pegamento (suma el espacio, pone un
+    % punto de corte y lo resta) y longtable, que mide la página en ese
+    % momento, creía que el primer bloque no cabía y dejaba la primera página
+    % solo con el pie.
+    \par \global \@nobreakfalse \everypar { }
+    \Needspace { \l_audit_tabla_espacio_tl \baselineskip }
+    % Leyenda. Se arma como primera fila de la tabla y no con \caption:
+    % longtable ubica \caption respecto del bloque de texto, sin mirar \LTleft
+    % ni el corrimiento de paginaAncha, y en las tablas que ocupan el carril
+    % quedaba corrida. Como fila, arranca siempre en el borde de la tabla.
+    % longtable (versión 2025) incrementa el contador de tablas al empezar,
+    % salvo que \LTcaptype esté vacío. La etiqueta y la entrada del índice de
+    % tablas van dentro de la fila de leyenda, cuando el número ya existe.
+    \tl_clear:N \l_audit_tabla_num_tl
+    \tl_clear:N \l_audit_tabla_marcas_tl
+    \bool_if:NTF \l_audit_tabla_numerada_bool
+      {
+        \def \LTcaptype { table }
+        \tl_set:Nn \l_audit_tabla_num_tl { \tablename \nobreakspace \thetable }
+        \tl_set:Nn \l_audit_tabla_marcas_tl
+          {
+            \label { tab:#3 }
+            \addcontentsline { lot } { table } { \protect \numberline { \thetable } #2 }
+          }
+      }
+      {
+        % sin número: longtable no avanza su contador interno de tablas, y
+        % dos tablas sin número compartirían los anchos de columna guardados
+        % en el .aux. Se avanza a mano.
+        \def \LTcaptype { }
+        \stepcounter { LT@tables }
+      }
+    \tl_set:Ne \l_audit_tabla_todo_tl
+      {
+        \exp_not:N \begin{xltabular} { \dim_use:N \l_audit_tabla_ancho_dim } { \exp_not:n {#4} }
+        \exp_not:N \multicolumn { \int_use:N \l_audit_tabla_ncol_int } { @{} l @{} }
+          {
+            \exp_not:N \audit@filaleyenda { \dim_use:N \l_audit_tabla_leyenda_dim }
+              { \exp_not:V \l_audit_tabla_num_tl } { \exp_not:n {#2} }
+            \exp_not:V \l_audit_tabla_marcas_tl
+          }
+        \exp_not:N \\ [ 3pt ]
+      }
+    \tl_put_right:Nn \l_audit_tabla_todo_tl
+      {
+          \audit@filetesuperior
+          \rowcolor { audit-gris-claro }
+      }
+    \tl_put_right:NV \l_audit_tabla_todo_tl \l_audit_tabla_cab_tl
+    \tl_put_right:Nn \l_audit_tabla_todo_tl
+      {
+        \\ \audit@filetecabecera
+        \endfirsthead
+      }
+    \tl_put_right:Ne \l_audit_tabla_todo_tl
+      {
+        \exp_not:N \multicolumn { \int_use:N \l_audit_tabla_ncol_int } { @{} l @{} }
+          {
+            \exp_not:N \audit@filaleyenda { \dim_use:N \l_audit_tabla_leyenda_dim }
+              { \exp_not:V \l_audit_tabla_num_tl }
+              {
+                \tl_if_empty:NTF \l_audit_tabla_num_tl
+                  { \exp_not:n {#2} }
+                  { \exp_not:N \audit@sinleyenda { \exp_not:n {#2} } }
+                ~ (continuación)
+              }
+          }
+        \exp_not:N \\ [ 3pt ]
+      }
+    \tl_put_right:Nn \l_audit_tabla_todo_tl
+      {
+        \audit@filetesuperior
+        \rowcolor { audit-gris-claro }
+      }
+    \tl_put_right:NV \l_audit_tabla_todo_tl \l_audit_tabla_cab_tl
+    \tl_put_right:Ne \l_audit_tabla_todo_tl
+      {
+        \exp_not:N \\ \exp_not:N \audit@filetecabecera
+        \exp_not:N \endhead
+        \exp_not:N \audit@fileteinferior
+        \exp_not:N \multicolumn { \int_use:N \l_audit_tabla_ncol_int } { r }
+          { \exp_not:N \audit@continua } \exp_not:N \\
+        \exp_not:N \endfoot
+        \exp_not:N \audit@fileteinferior
+        \exp_not:N \endlastfoot
+      }
+    \tl_put_right:NV \l_audit_tabla_todo_tl \l_audit_tabla_filas_tl
+    \tl_put_right:Nn \l_audit_tabla_todo_tl { \end{xltabular} }
+    \tl_use:N \l_audit_tabla_todo_tl
+    \group_end:
+  }
+\msg_new:nnn { tablas } { sin-cabecera }
+  { La~tabla~'#1'~no~tiene~\midrule.~La~cabecera~es~lo~que~va~antes~del~primer~\midrule. }
+
+\NewDocumentEnvironment { tabla } { O{} m m m +b }
+  { \audit_tabla:nnnnn {#1} {#2} {#3} {#4} {#5} } { }
+\NewDocumentCommand \TablaDesdeCuerpo { m m m m +m }
+  { \audit_tabla:nnnnn {#1} {#2} {#3} {#4} {#5} }
+\ExplSyntaxOff
+
+% Fila de leyenda: una caja del ancho de la tabla, sin ancho propio para no
+% alterar las columnas. «Tabla 4.2» en marino y negrita, luego el texto.
+\newcommand\audit@filaleyenda[3]{%
+  \rlap{\parbox[t]{#1}{\RaggedRight\sffamily\fontsize{9.5bp}{12.5bp}\selectfont
+    \if\relax\detokenize{#2}\relax\else{\color{audit-marino}\bfseries #2}\quad\fi
+    {\color{audit-tinta}#3}\strut}}}
+% En la continuación de una tabla numerada basta el número
+\newcommand\audit@sinleyenda[1]{}
+\newcommand\audit@filetesuperior{\arrayrulecolor{audit-marino}\specialrule{0.8pt}{0pt}{0pt}}
+\newcommand\audit@filetecabecera{\arrayrulecolor{audit-turquesa}\specialrule{0.8pt}{0pt}{0pt}}
+\newcommand\audit@fileteinferior{\arrayrulecolor{audit-marino}\specialrule{0.8pt}{0pt}{0pt}}
+\newcommand\audit@filetefila{\arrayrulecolor{audit-filete}\specialrule{0.4pt}{0pt}{0pt}}
+\newcommand\audit@continua{\rule{0pt}{14pt}{\color{audit-secundario}Continúa en el folio siguiente}}
+
+% Nota bajo una tabla: fuente o aclaración, 9,5 pt
+\newcommand\notaTabla[1]{%
+  \par\vspace{-4pt}{\sffamily\fontsize{9.5bp}{12.5bp}\selectfont\color{audit-secundario}#1\par}%
+  \vspace{5pt}}
+
+\endinput

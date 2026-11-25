@@ -1,0 +1,19 @@
+% ============================================================================
+%  Formulario T-13. Plan de pruebas y validación (FEP01 p. 62)
+%  Formulario de contenido adjunto: lista cada exigencia de las bases y dice
+%  dónde se presenta, con \verSeccionFolio{etiqueta}.
+% ============================================================================
+
+\DefinirFormulario{T-13}{Plan de pruebas y validación}{62}
+  {El Proponente adjuntará a este formulario el plan de pruebas conforme al Subdocumento 9, incluyendo niveles, tipos, ambientes, datos de prueba, criterios de entrada y salida, automatización y el calendario de las pruebas de carga, de resiliencia, de recuperación ante desastres y de seguridad ofensiva.}
+
+\expandafter\def\csname esqueleto@T-13\endcsname{%
+  \begin{formulario}{T-13}
+    \begin{contenidoExigido}{T-13}
+      \exigencia{Niveles y tipos de prueba conforme a ISO/IEC/IEEE 29119.}{}
+      \exigencia{Ambientes y datos de prueba.}{}
+      \exigencia{Criterios de entrada y de salida.}{}
+      \exigencia{Automatización de pruebas.}{}
+      \exigencia{Calendario de las pruebas de carga, de resiliencia, de recuperación ante desastres y de seguridad ofensiva.}{}
+    \end{contenidoExigido}
+  \end{formulario}}

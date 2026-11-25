@@ -1,0 +1,59 @@
+% ============================================================================
+%  Fuentes. Una sola superfamilia, IBM Plex, la misma del manual de marca y de
+%  los diagramas. Las fuentes vienen con TeX Live, no hay que embarcarlas.
+%
+%    Cuerpo           IBM Plex Serif 11 pt
+%    Títulos, tablas  IBM Plex Sans (SemiBold como negrita)
+%    Tablas densas    IBM Plex Sans Condensed, para formularios de muchas
+%                     columnas sin bajar de 9 pt ni partir palabras
+%    Códigos          IBM Plex Mono (RT-03.10, T-11, valores técnicos)
+%    Matemáticas      IBM Plex Math
+% ============================================================================
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{audit-fuentes}[2026/09/26 Fuentes IBM Plex]
+
+\RequirePackage{fontspec}
+\RequirePackage{unicode-math}
+
+% Ligaduras estándar activas. En LuaLaTeX cada ligadura lleva su equivalencia
+% Unicode, de modo que «fi» y «fl» se extraen y se buscan en el PDF (el formato
+% anterior las perdía: «flota» salía como «ota»).
+\setmainfont{IBMPlexSerif}[
+  Extension      = .otf,
+  UprightFont    = *-Regular,
+  ItalicFont     = *-Italic,
+  BoldFont       = *-SemiBold,
+  BoldItalicFont = *-SemiBoldItalic,
+  Ligatures      = {Common},
+]
+\setsansfont{IBMPlexSans}[
+  Extension      = .otf,
+  UprightFont    = *-Regular,
+  ItalicFont     = *-Italic,
+  BoldFont       = *-SemiBold,
+  BoldItalicFont = *-SemiBoldItalic,
+  FontFace       = {l}{n}{*-Light},
+  FontFace       = {mb}{n}{*-Medium},
+]
+\setmonofont{IBMPlexMono}[
+  Extension      = .otf,
+  UprightFont    = *-Regular,
+  ItalicFont     = *-Italic,
+  BoldFont       = *-SemiBold,
+  BoldItalicFont = *-SemiBoldItalic,
+]
+\setmathfont{IBMPlexMath-Regular.otf}
+
+% Familias auxiliares
+\newfontfamily\plexcondensada{IBMPlexSansCondensed}[
+  Extension = .otf, UprightFont = *-Regular, BoldFont = *-SemiBold,
+  ItalicFont = *-Italic, BoldItalicFont = *-SemiBoldItalic]
+\newfontfamily\plexligera{IBMPlexSans}[Extension = .otf, UprightFont = *-Light,
+  BoldFont = *-Regular]
+\newfontfamily\plexmedia{IBMPlexSans}[Extension = .otf, UprightFont = *-Medium,
+  BoldFont = *-SemiBold]
+% Rótulos en versalitas espaciadas (etiquetas de dispositivos y de portada)
+\newfontfamily\plexrotulo{IBMPlexSans}[Extension = .otf, UprightFont = *-Medium,
+  LetterSpace = 9]
+
+\endinput

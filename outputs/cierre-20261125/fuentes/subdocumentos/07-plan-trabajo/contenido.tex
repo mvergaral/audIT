@@ -1,0 +1,506 @@
+% ============================================================================
+%  Subdocumento 7. Introducción al Plan de Trabajo. Índice obligatorio del
+%  Comunicado 10, capítulo 7 (D4-65).
+%
+%  7.2.3 y 7.3.1 los escribió la dupla 4 por encargo del usuario (D4-61 a
+%  D4-67): partición de la capacidad en el solapamiento de los meses 13 a 15
+%  y red PERT/CPM con su ruta crítica. La red sale de D4/lucid/d11_pert.py, que
+%  genera las dos figuras, el JSON de Lucid y el Mermaid desde los mismos datos.
+%  Lo demás es de la dupla 2 y lleva su marcador.
+% ============================================================================
+
+\begin{resumenApertura}
+Este capítulo convierte el alcance del Subdocumento 3 en trabajo con fecha, dueño y holgura. La
+implementación dura 21 meses y la operación 36, como fija el Artículo 17. El plan se ordena por lo que
+no controla audIT: el paso de cada camión por un terminal, la firma de 148 transportistas y la
+temporada de fruta, que con el inicio en febrero de 2027 cae en los meses 1 a 3, 11 a 15 y 23 a 27.
+\begin{recibe}
+  \item Una EDT de 13 elementos y 54 paquetes de trabajo que cubre el 100 \% del alcance, con su diccionario en el Formulario T-14.
+  \item La ruta crítica determinista calculada con CPM, las condiciones para el análisis PERT y una carta Gantt de 56 meses con los doce hitos del Formulario E-25.
+  \item La capacidad interna mes a mes, con un máximo de 39,2306 FTE equivalentes en M7, el servicio externo y el esfuerzo por paquete en el Formulario T-15.
+  \item El plan de implantación por proceso y por terminal, la cobertura a bordo mes a mes y los umbrales de cierre de cada marcha blanca.
+\end{recibe}
+\end{resumenApertura}
+
+Este capítulo presenta la estructura de descomposición del trabajo, el plan de trabajo con sus
+frentes paralelos y el cronograma con la ruta crítica, la implantación y las dos marchas blancas.
+Sigue el cronograma contractual del \art{17.1}{12}, que fija la Etapa 1 entre los meses 1 y 16, la
+Etapa 2 entre los meses 13 y 21 y la operación entre los meses 21 y 56. Toma el alcance, las
+capacidades y los supuestos del Subdocumento 3, en particular el inicio del contrato en febrero de 2027
+(\verSeccion{sec:3-supuestos}), y aplica el marco de gestión del Subdocumento 6: los paquetes que
+dependen de terceros, del terreno o de un hito contractual se planifican de forma predictiva, y los
+paquetes de software se construyen en iteraciones de dos semanas. El Subdocumento 8 toma de este
+capítulo las actividades y holguras sobre las que calcula sus riesgos, y el Subdocumento 9 las ventanas
+de prueba.
+
+Los formularios T-14, T-15 y T-18 acompañan este capítulo como archivos propios, conforme al
+\comunicado{10}{sección 1}. El Formulario T-14 trae el diccionario de la EDT paquete por paquete. El
+Formulario T-15 trae el esfuerzo por etapa, la curva de dotación, la asignación de capacidad por rol en
+los meses 13 a 15 y la malla completa de precedencias con sus holguras. El Formulario T-18 trae la
+propuesta de implantación de cada etapa, la convivencia entre ambas y la reversión.
+
+% ============================================================================
+\section{EDT}\label{sec:7-edt}
+
+La EDT está orientada a entregables y no a fases: cada paquete termina en algo que el mandante puede
+recibir y verificar. Sigue la regla del 100 \%, según la cual la suma del trabajo de los elementos
+hijos es igual al trabajo del padre, y nada queda fuera ni se cuenta dos veces
+\parencite{pmi2019_wbs}. Tiene 13 elementos de primer nivel y 54 paquetes de trabajo. La
+\figref{7-edt} la muestra completa.
+
+% INICIO LAMINAS EDT
+La descomposición de segundo nivel se presenta en \figref{7-edt-paquetes-1}, \figref{7-edt-paquetes-2}, \figref{7-edt-paquetes-3}, \figref{7-edt-paquetes-4}, \figref{7-edt-paquetes-5}. La ficha de aceptación de 11.2 está en \figref{7-edt-ejemplo}; la lectura de cobertura y los 42 vínculos requisito--paquete están en \figref{7-edt-trazabilidad} y \figref{7-edt-matriz}.
+
+\anexoGrafico{subdocumentos/07-plan-trabajo/graficos/edt-revisada/01-arbol.pdf}{Árbol general de la EDT: raíz y trece elementos}{7-edt}
+\anexoGrafico{subdocumentos/07-plan-trabajo/graficos/edt-revisada/02-paquetes-1.pdf}{Paquetes 1 a 3: gestión, diseño y plataforma}{7-edt-paquetes-1}
+\anexoGrafico{subdocumentos/07-plan-trabajo/graficos/edt-revisada/03-paquetes-2.pdf}{Paquetes 4 y 5: equipo y servicios Etapa 1}{7-edt-paquetes-2}
+\anexoGrafico{subdocumentos/07-plan-trabajo/graficos/edt-revisada/04-paquetes-3.pdf}{Paquetes 6 a 8: integraciones, datos y Etapa 2}{7-edt-paquetes-3}
+\anexoGrafico{subdocumentos/07-plan-trabajo/graficos/edt-revisada/05-paquetes-4.pdf}{Paquetes 9 a 11: adhesión, calidad e implantación}{7-edt-paquetes-4}
+\anexoGrafico{subdocumentos/07-plan-trabajo/graficos/edt-revisada/06-paquetes-5.pdf}{Paquetes 12 y 13: innovaciones y operación}{7-edt-paquetes-5}
+\anexoGrafico{subdocumentos/07-plan-trabajo/graficos/edt-revisada/07-ejemplo.pdf}{Ejemplo del diccionario: paquete 11.2}{7-edt-ejemplo}
+\anexoGrafico{subdocumentos/07-plan-trabajo/graficos/edt-revisada/08-trazabilidad.pdf}{Trazabilidad de alcance, paquetes y evidencia}{7-edt-trazabilidad}
+\anexoGrafico{subdocumentos/07-plan-trabajo/graficos/edt-revisada/09-matriz-requisitos.pdf}{Matriz de los 42 requisitos y sus paquetes asignados}{7-edt-matriz}
+% FIN LAMINAS EDT
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+La vista general muestra la raíz y los trece elementos de primer nivel. Las cinco láminas de detalle distribuyen los 54 paquetes sin repetir el diccionario; el entregable, la aceptación, el responsable y los meses de cada uno permanecen en el Formulario T-14. La
+organización distingue gestión, diseño, plataforma, equipo a bordo, servicios, integraciones,
+datos, adhesión, calidad, implantación, innovaciones y operación de 36 meses. Los paquetes 5.1 a 5.6 llevan el
+nombre de los seis contextos del Subdocumento 4. La lectura por capacidades de la \tabref{7-capacidades-edt}
+relaciona entregables de ambos cortes con las actividades de su primera entrega y conserva la codificación
+del T-14 para el seguimiento de pruebas, cronograma y costos. La adhesión es un elemento propio, con duración, responsable y riesgo,
+porque el Caso exige tratarla como actividad y no como supuesto \caso*{numeral 17.5}{40}.
+
+\begin{tabla}[ancho=completo, fuente=condensada]{Capacidades de software, paquetes y actividades de control}{7-capacidades-edt}{L{40mm} X L{39mm}}
+Capacidad verificable & Paquetes del T-14 & Enlace con T-15 \\ \midrule
+Personas, asignación y permisos & 5.1 Personas y cumplimiento, 5.3 Planificación y tráfico, 5.7 Portal del transportista & A09 entrega H4 y A12 certificación H5 \\
+Flota, posición y mantenimiento & 5.2 Flota y activos, 5.4 Telemetría y geocercas, 8.1 Portal del cliente, 8.4 Mantenimiento & A09/A12 y A17/A20/A22 \\
+Flete y retorno & 5.5 Operación de fletes, 8.2 Asignación de retornos & A09/A12 y A17/A20/A22 \\
+Costeo, liquidación y analítica & 5.6 Liquidación y costeo, 8.3 Emisiones, 8.5 Rendimiento & A09/A12 y A17/A20/A22 \\
+\end{tabla}
+
+Esta lectura identifica los productos y su actividad de control. La descomposición de la red por
+contexto requiere estimaciones de duración y precedencias de sus paquetes, además del enlace al hito.
+
+La descomposición contiene los 54 paquetes del diccionario T-14, sin duplicar códigos. Los 42
+códigos de T-12 tienen al menos un paquete asignado en la matriz de la \figref{7-edt-matriz};
+esta correspondencia de códigos no sustituye la comprobación del entregable y de su prueba de
+aceptación. La \tabref{7-cobertura-edt} resume las demás fuentes del alcance.
+
+\begin{tabla}{Fuentes de alcance y puntos de trazabilidad de la EDT}{7-cobertura-edt}{L{50mm} R{18mm} L{36mm} X}
+Fuente del alcance & Elementos & Paquetes & Revisión \\ \midrule
+Requerimientos del Formulario T-12 & 42 & Matriz de la EDT & 42 vinculados \\
+Contextos de la arquitectura lógica & 6 & 5.1 a 5.6 & Códigos cotejados \\
+Innovaciones del Subdocumento 13 & 5 & 12.1 a 12.5 & Códigos cotejados \\
+Exigencias del numeral 17.5 del Caso & 11 & Tabla siguiente & Correspondencia explícita \\
+\end{tabla}
+\notaTabla{Fuente: Formulario T-12, \verSeccion{sec:4-contextos}, Subdocumento 13 y \caso{numeral 17.5}{40}.}
+
+La tabla resume la cobertura por familias; la correspondencia individual de cada requisito se debe verificar con el catálogo T-12 y el diccionario T-14. Algunas exigencias del Caso se desarrollan además de los requisitos del catálogo: la caracterización de la cobertura móvil en terreno (2.2), que el
+\caso{RT-03.24}{31} prohíbe suponer, la factibilidad con proveedores y fabricantes (2.3), que no depende
+de audIT, la migración con verificación documental de las vigencias (7.1) y el estudio de costo por
+ruta del mes 6 (2.5), que llega antes de la renegociación de 2027.
+
+La \tabref{7-caso-paquetes} desglosa las once exigencias del numeral 17.5 y localiza el trabajo que las materializa. Los paquetes comparten evidencia cuando la restricción afecta a varios frentes.
+
+\begin{tabla}{Exigencias de planificación del Caso y paquetes que las desarrollan}{7-caso-paquetes}{L{51mm} L{32mm} X}
+Exigencia & Paquetes & Evidencia planificada \\ \midrule
+Horizonte de 56 meses & 1.1, 13.1 a 13.4 & Gantt M1--M56 \\
+Despliegue a bordo y cobertura acumulada & 4.1 a 4.3 & Curva mensual de implantación \\
+Adhesión con duración, responsable y riesgo & 9.1 a 9.3 & Campaña, metas y refuerzo \\
+Congelamiento, restricciones y cierre mensual & 4.2, 6.1, 11.2, 11.3 & Ventanas de implantación y Gantt \\
+Cierres fronterizos por nieve & 4.1, 4.2 & Ventanas de piloto y lotes, rutas alternativas y control de cambios \\
+Cobertura móvil medida en terreno & 2.2 & Mapa por tramo y punto de carga \\
+Factibilidad con proveedores y fabricantes & 2.3 & Actas escritas de factibilidad \\
+Migración documental de vigencias & 7.1 & Acta de conciliación de vigencias \\
+Costo real por ruta antes de renegociar & 2.5, 5.6 & Estudio entregado a finanzas en M6 \\
+Capacitación distribuida y por turnos & 11.1 & G13, capacitación y certificación \\
+Solapamientos M13--M15 y M19--M20 & 1.1, 8.1 a 8.5, 11.2, 11.3 & Dotación y partición de capacidad \\
+\end{tabla}
+\notaTabla{Fuente: \caso{numeral 17.5}{40}, diccionario T-14, red T-15 y plan T-18.}
+
+La correspondencia incorpora las restricciones operacionales al alcance asignado. La cobertura mensual, las reservas y la dotación se justifican en las secciones de implantación, ruta crítica y solapamientos de este capítulo.
+
+El diccionario de la EDT, en el Formulario T-14, declara para cada uno de los 54 paquetes su
+entregable, su criterio de aceptación, el rol responsable, la actividad de la red de la
+\verSeccion{sec:7-ruta} a la que pertenece y sus meses. La \tabref{7-diccionario} resume el primer
+nivel.
+
+\begin{tabla}{Resumen del diccionario de la EDT por elemento de primer nivel}{7-diccionario}{L{40mm} L{50mm} X R{12mm}}
+Elemento & Entregable principal & Responsable & Hito \\ \midrule
+1 Gestión & Plan de dirección e informes & Jefe de Proyecto & H1 \\
+2 Levantamiento & Línea base y arquitectura & Arquitecto de Solución & H1, H2 \\
+3 Plataforma & Cinco ambientes con observabilidad & Líder de Operación & H3 \\
+4 Equipo a bordo & 182 equipos montados & Líder de Implantación & H6 \\
+5 Servicios Etapa 1 & Software de los seis contextos & Líder de Desarrollo & H4 \\
+6 Integraciones & Contratos de interfaz en producción & Líder de Integración & H4 \\
+7 Datos y migración & Actas de conciliación & Líder de Datos & H5 \\
+8 Servicios Etapa 2 & Software de la Etapa 2 & Líder de Desarrollo & H9 \\
+9 Adhesión & Anexos firmados & Líder Funcional & H7, H12 \\
+10 Calidad & Certificación de cada etapa & Líder de Calidad & H5, H10 \\
+11 Implantación & Actas de marcha blanca & Líder de Implantación & H7, H12 \\
+12 Innovaciones & Cinco innovaciones operando & Arquitecto de Solución & H12 \\
+13 Operación & Niveles de servicio mensuales & Líder de Operación & Mensual \\
+\end{tabla}
+\notaTabla{Fuente: Formulario T-14 y \form{E-25}{74}.}
+
+La tabla identifica el rol que coordina cada elemento; los responsables de los paquetes se
+detallan en T-14 y pueden ser distintos. Cada hito del Formulario E-25 tiene al menos un elemento que lo gatilla. El hito
+H7 depende de dos elementos que no son software, la adhesión y la implantación, y por eso sus
+responsables participan del Comité de Proyecto desde el mes 1.
+
+% ============================================================================
+\section{Plan de trabajo}\label{sec:7-plan}
+
+El plan de trabajo ordena los 54 paquetes en el tiempo y les asigna personas. Esta sección explica cómo
+se alinea con las metodologías del Subdocumento 6, cómo se secuenció y estimó el trabajo, cómo se divide
+la capacidad en el solapamiento de los meses 13 a 15 y cómo se trabaja en los meses 19 y 20.
+
+\subsection{Alineación con las metodologías}\label{sec:7-alineacion}
+
+El Subdocumento 6 combina una capa predictiva para los compromisos contractuales con una capa adaptativa
+para el software (\verSeccion{sec:6-gestion-pmbok}). El plan aplica esa división paquete por paquete. Los
+elementos 1, 2, 3, 4, 7, 9 y 11 son predictivos: tienen fecha fija en la red, dependen del terreno, de
+terceros o de un hito del Formulario E-25, y se controlan contra la línea base. Los elementos 5, 6 y 8 son
+adaptativos: se construyen en iteraciones de dos semanas, ocho en la Etapa 1 (actividad A09, 80 días
+hábiles) y cinco en la Etapa 2 (actividad A20, 50 días hábiles), y su contenido se prioriza con el orden
+de prioridad del Formulario T-12. El elemento 13 trabaja en flujo continuo, que es la forma en que el
+Subdocumento 6 atiende incidentes y solicitudes durante la operación.
+
+Las dos capas se encuentran en la red. Cada actividad adaptativa tiene una duración fija en la red, de modo
+que lo que varía dentro de ella es el contenido de cada iteración y no su fecha de término. Las
+instancias de gobierno son las del Subdocumento 6: el Comité de Proyecto quincenal revisa el avance de
+la EDT y el consumo de las reservas de la ruta crítica, el Comité Ejecutivo mensual revisa los
+indicadores de adhesión y aprueba los cambios de alcance, y el Comité de Operación sigue la marcha
+blanca desde el mes 13 (\verSeccion{sec:6-gestion-ceremonias}).
+
+\subsection{Secuenciamiento y estimación del esfuerzo}\label{sec:7-secuencia}
+
+La secuencia sale de tres clases de dependencia. Las técnicas son las de la cadena de capacidades del
+Subdocumento 3: sin registro de vigencias y expediente de jornada no hay asignación con bloqueo, y sin
+asignación no hay documento ni costo (\verSeccion{sec:3-etapa1}). Las físicas son las del terreno: un
+equipo sólo se monta cuando el camión pasa por un terminal y nunca entre diciembre y abril
+\caso*{numeral 13.2}{27}. Las contractuales son los hitos del \form{E-25}{74}, que fijan qué debe estar
+aceptado en cada mes. La red de 25 actividades de la \verSeccion{sec:7-ruta} combina las tres.
+
+La estimación separa capacidad de ingeniería, atención y servicio externo. Las actividades tienen
+entregable y dependencia identificables en T-14/T-15. Las duraciones son ventanas de planificación;
+la capacidad mensual contratada procede de la conciliación de perfiles y demanda de desarrollo.
+El montaje utiliza 140 minutos de puesto por kit, 20 minutos de banco y 140 minutos de analista,
+como hipótesis a validar en el piloto; no se presentan como tiempos ya medidos.
+
+\subsection{Capacidad interna y servicio externo}\label{sec:7-dotacion}
+
+La capacidad de implementación alcanza 39,2306 FTE equivalentes en M7. Un FTE equivale a 160 horas
+mensuales; la fracción expresa contratación de capacidad y no un número nominal de personas.
+La curva detallada por mes, tarea, rol y paquete está en T-15. Se presupuestan 99.626,67 horas
+internas en M1--M20 y 84.606 en M21--M56, incluido el cierre de integraciones y migración.
+Los refuerzos SRE y Software de H6, H7, H11 y H12 están dentro de esa contratación.
+
+El montaje externo de M7--M9 sustituye las horas de puesto internas; audIT conserva banco,
+analista, prueba y recepción. El técnico de implementación se mantiene antes de M19 y sale
+desde ese mes. En operación hay 0,5 FTE interno de coordinación de campo, más visitas externas,
+reposiciones y rondas. No se compromete una cuadrilla permanente de dos personas.
+
+\subsection{Partición de capacidad en M13 a M15}\label{sec:7-particion}
+
+En M13--M15 conviven la estabilización E1 y la construcción E2. El equipo base de referencia
+es 37,0 FTE, dividido en 21,5 para E1, 14,1 para E2 y 1,4 de coordinación. Esa partición
+es una regla de control del equipo base, no el máximo de contratación de toda la implementación.
+M13 añade 160 horas SRE y 80 horas Software para la puesta en producción: total 38,5 FTE
+equivalentes. M14 y M15 conservan 37,0. Los refuerzos no se cuentan simultáneamente en ambos frentes.
+
+Los siete roles de dirección comparten su jornada al 80 por ciento entre los frentes y reservan
+el resto a coordinación. El resto de los puestos mantiene frente primario y una única reserva
+semanal. El líder de cada frente asigna la tarea del diccionario a su ejecutor y descuenta
+guardia, atención, revisión y ausencia antes de fijar capacidad neta de sprint. No se identifica
+capacidad bruta con horas netas de programación.
+
+En terreno se programan los 35 relevos semanales de los cinco terminales con los siete analistas
+de implantación presupuestados en este tramo. La agenda se confirma con cada terminal y
+reserva capacitación por turno sin retirar usuarios críticos de la operación. El Jefe de Proyecto
+revisa semanalmente cupos, ausencias y reemplazos. Si un cupo no se confirma se usa simulación
+en PREPROD y se reasigna la práctica; no se certifica un usuario que no completó la evaluación.
+
+\begin{compromiso}[metrica={35 turnos de relevo semanales en los cinco terminales durante marcha blanca y estabilización E1},
+verifica={registro semanal de turno, ejecutor y suplencia},fuente={\caso{numeral 13.3}{27}}]
+audIT mantiene presencia de implantación en el relevo y protege la atención de la operación vigente.
+\end{compromiso}
+
+\subsection{Solapamiento de M19 y M20}\label{sec:7-solapamiento-19-20}
+
+La contratación interna equivale a 26,5 FTE en M19 y 25,0 en M20. El técnico de campo ya no
+forma parte de esa nómina; la atención física se ejecuta por visita externa. La Etapa 1 en
+producción y la Etapa 2 en marcha blanca comparten los registros de viaje, conductor, camión y
+transportista. Cada contexto conserva un único dueño y la conciliación diaria contrasta el
+resultado con el registro vigente. El refuerzo de H11 pertenece a M19 y no se extiende por
+defecto a M20. T-15 contiene el presupuesto por perfil; el Líder de Operación protege primero
+la continuidad E1 y el de Desarrollo ejecuta el alcance E2 sin usar dos veces la misma jornada.
+
+\subsection{Continuidad y madurez del soporte}\label{sec:7-soporte32}
+
+La mesa N1 dispone de seis agentes regulares y un FTE de suplencias y picos: 1.120 horas por mes.
+La coordinación interna de campo dispone de 80 horas mensuales; el proveedor atiende tres visitas
+correctivas y dos rondas regionales mensuales presupuestadas, además de las reposiciones incluidas
+en el contrato. Los tiempos de respuesta y resolución se mantienen conforme al \art{78.2}{40}.
+Las tarifas de servicio de campo son provisiones de presupuesto y requieren orden de servicio
+y cobertura confirmada por sitio antes de su activación.
+
+La carga variable de Software, Datos y QA utiliza factores 100, 75, 50 y 25 por ciento desde
+M21, M25, M33 y M45. La cobertura fija permanece. Cada reducción exige dos meses sin P1,
+backlog menor que diez y demanda dentro de capacidad; si no se cumple, se mantiene el factor
+anterior y se activa el escenario sin reducción. La supervisión conserva los SLA y no convierte
+una hipótesis de madurez en una reducción automática de la obligación de servicio.
+
+El cierre M21--M24 de EDT6.5 y EDT7.2 reserva 1.669 horas ya incluidas en la contratación.
+La conducción técnica de cierre utiliza 18, 17, 17 y 17 horas de la capacidad de Gestión de Servicio
+en M21, M22, M23 y M24: ese puesto debe acreditar competencia de liderazgo de desarrollo para
+asumir esta responsabilidad. La reserva deja 62 o 63 horas para su gestión ordinaria dentro de
+las 80 contratadas. En H1 se asigna un titular que cumpla ambos cometidos o un sustituto de igual
+capacidad y tarifa, conservando la cobertura de servicio y sin declarar una equivalencia ya acreditada.
+El presupuesto identifica esa asignación como propuesta de ejecución, no como nombramiento confirmado.
+
+El cierre tiene recursos de Arquitectura, Frontend, Datos y QA
+en T-15, y una actividad formal de estabilización E2 posterior a H12. La aceptación contractual
+no elimina ese trabajo ni lo duplica dentro de la mantención evolutiva.
+
+% ============================================================================
+\section{Cronograma e implantación}\label{sec:7-cronograma}
+
+Esta sección determina la ruta crítica de la implementación con sus holguras y presenta la carta
+Gantt, el plan de implantación y el plan de las dos marchas blancas.
+
+\subsection{Ruta crítica y holguras}\label{sec:7-ruta}
+
+La red detallada del Formulario T-15 conecta entregables, revisiones, hitos y operación.
+A09 y A20 son grupos de ocho y cinco sprints, respectivamente; los nodos individuales de diez
+días identifican la entrega de cada contexto. G13 es una entrega probada de PREPROD al cierre
+del séptimo sprint y habilita capacitación; su disponibilidad real es condición de inicio.
+
+La red incorpora los lotes M6--M9, el escalamiento lógico M13--M15 sin intervención física,
+el estudio EDT2.5 entregado durante M6, la migración histórica y la estabilización E2 hasta M24.
+Cada relación declara FS o SS y su desfase. Se calculan ES, EF, LS, LF, HT y HL con cotas
+propias de liberación y límite; la criticidad se interpreta contra esas fechas. La secuencia de
+control que fija la aceptación H12 recorre A01, A02, R-H1, H1, A05, INN5-D, INN5-C, INN5-Q, R-H6, H6, A17, R-H8, H8, los sprints A20-1 a A20-5, A22-SIS, R-H10, H10, A23, H11, A24, A25, R-H12 y H12. Sus
+enlaces sin margen gobiernan las transiciones H6, H11 y H12 y se distinguen de las restricciones
+locales de lote (M7/8/9-KIT) y de las ventanas de revisión de contraparte. H6 queda condicionado
+por la certificación de la innovación circadiana INN5-Q y por la reserva A14; H11 por la reserva
+A23 y la certificación E2; H12 por la marcha blanca A24 y el corte A25. Pueden solaparse la
+familiarización A13-FAM con el sprint A09-8, la marcha blanca A24 con la migración histórica
+A24-HIST2 y la estabilización CE2 con el saneamiento posterior al acta H12. La lámina de control
+del anexo traza esta cadena; el resto de la red con HT cero es restricción local y no se suma a
+una única ruta crítica.
+
+La \tabref{7-hitos} presenta las fechas de aceptación planificadas, incluidas las ventanas de
+revisión de contraparte. Los inicios de marcha blanca H6 y H11 se fijan al comienzo de M13 y M19.
+Las fechas civiles son una visualización de SA-01; al fijar el inicio contractual se contrastan
+contra temporada de fruta, cierres y relevos sin desplazar los hitos del E-25.
+
+\input{subdocumentos/07-plan-trabajo/graficos/conciliacion-3.2/hitos-resumen.tex}
+
+H4, H7 y H12 no tienen margen al límite contractual. H11 tiene fecha fija al inicio de M19:
+su margen se controla en la reserva A23 y no adelantando el acta. En particular, la marcha blanca
+E2 ocupa los días 360 a 400, el corte A25 los días 400 a 410 y la revisión R-H12 los días 410 a 420.
+Esta secuencia consume el plazo hasta H12. La contratación mensual de T-15 no acredita por sí
+sola capacidad neta para acortar actividades ni disponibilidad simultánea por turno.
+Antes de fijar la línea base en H1, el Jefe de Proyecto y los ejecutores deben validar capacidad,
+ventanas de terceros y estimaciones de tres puntos. Cualquier adelanto o solapamiento debe
+conservar los criterios de aceptación y demostrar su efecto en recursos, pruebas y costo.
+Hasta esa validación se mantiene la exposición alta de R-17 de S8/T-16, sin declarar recuperada
+una holgura ni una probabilidad de cumplimiento que la red actual no respalda.
+
+Las reservas A14 y A23 son ventanas de contingencia de planificación y no una probabilidad
+calculada de cumplimiento. Si se reciben observaciones se evalúa la subsanación y se registra
+el consumo de reserva. La malla presentada es CPM determinista con duraciones de ventana y no
+sustituye el análisis PERT: las estimaciones de tres puntos que el Formulario T-14 exige quedan
+pendientes de la validación de los ejecutores, y las probabilidades de la red anterior deben
+recalcularse sobre esta malla antes de volver a publicarse, sin trasladar probabilidades
+históricas a los nodos nuevos. Las duraciones nuevas deben contrastarse en H1 con el ejecutor
+y el calendario real; esa revisión no autoriza mover las fechas obligatorias.
+
+\subsection{Carta Gantt}\label{sec:7-gantt}
+
+La carta Gantt muestra las ventanas de los 54 paquetes, los hitos y la red de control.
+La descomposición por contexto permite distinguir una dependencia técnica de la espera de un
+acta. El Formulario T-14 incorpora directamente la carta, sin depender de una remisión al cuerpo.
+T-15 presenta la red detallada y sus holguras; el presupuesto de capacidad se verifica por mes y perfil.
+
+% INICIO LAMINAS GANTT
+Las vistas se presentan en \figref{7-gantt-panorama}, \figref{7-gantt-cpm}, \figref{7-gantt-gestion}, \figref{7-gantt-plataforma}, \figref{7-gantt-e1}, \figref{7-gantt-datos}, \figref{7-gantt-e2}, \figref{7-gantt-implantacion}, \figref{7-gantt-innovaciones}, \figref{7-gantt-hitos}, \figref{7-gantt-control}, \figref{7-gantt-operacion}.
+
+\anexoGrafico{subdocumentos/07-plan-trabajo/graficos/revisada/gantt-panorama.pdf}{Horizonte contractual M1--M56}{7-gantt-panorama}
+\anexoGrafico{subdocumentos/07-plan-trabajo/graficos/revisada/gantt-cpm.pdf}{Cadena de control hasta H12}{7-gantt-cpm}
+\anexoGrafico{subdocumentos/07-plan-trabajo/graficos/revisada/gantt-gestion.pdf}{Gestión y levantamiento}{7-gantt-gestion}
+\anexoGrafico{subdocumentos/07-plan-trabajo/graficos/revisada/gantt-plataforma.pdf}{Plataforma y equipo a bordo}{7-gantt-plataforma}
+\anexoGrafico{subdocumentos/07-plan-trabajo/graficos/revisada/gantt-e1.pdf}{Construcción por capacidades E1}{7-gantt-e1}
+\anexoGrafico{subdocumentos/07-plan-trabajo/graficos/revisada/gantt-datos.pdf}{Integraciones y migración}{7-gantt-datos}
+\anexoGrafico{subdocumentos/07-plan-trabajo/graficos/revisada/gantt-e2.pdf}{Capacidades E2 y adhesión}{7-gantt-e2}
+\anexoGrafico{subdocumentos/07-plan-trabajo/graficos/revisada/gantt-implantacion.pdf}{Calidad e implantación}{7-gantt-implantacion}
+\anexoGrafico{subdocumentos/07-plan-trabajo/graficos/revisada/gantt-innovaciones.pdf}{Ventanas de innovaciones}{7-gantt-innovaciones}
+\anexoGrafico{subdocumentos/07-plan-trabajo/graficos/revisada/gantt-hitos.pdf}{Lotes de montaje y condiciones}{7-gantt-hitos}
+\anexoGrafico{subdocumentos/07-plan-trabajo/graficos/revisada/gantt-control.pdf}{G13 reservas y cierre técnico}{7-gantt-control}
+\anexoGrafico{subdocumentos/07-plan-trabajo/graficos/revisada/gantt-operacion.pdf}{Continuidad operacional M21--M56}{7-gantt-operacion}
+% FIN LAMINAS GANTT
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+El montaje se concentra en el piloto M6 y los lotes externos M7--M9, sin trabajos físicos
+programados durante diciembre--abril bajo SA-01. El escalamiento de plataformas de terceros
+M13--M15 es lógico. Las órdenes de montaje requieren firma de adhesión aplicable, stock recibido,
+ventana normal de paso y reserva del proveedor por terminal. Una condición incumplida se trata
+como desviación del escenario y exige reprogramación técnica y financiera, sin declarar equipos
+instalados ni activar servicios de una unidad que aún no fue recibida.
+
+Para los cierres invernales sucesivos del paso Los Libertadores se verifica semanalmente
+la posición de los camiones y la disponibilidad de cada terminal; el cronograma no supone
+que un único cierre de doce días represente toda la exposición. Los kits deben estar recibidos
+antes de liberar cada lote. Se atiende primero en un terminal nacional disponible durante el
+paso normal del camión y se utiliza la reserva de agenda del proveedor para reagrupar unidades.
+Si los cierres consumen la ventana del lote, el Jefe de Proyecto registra la desviación,
+actualiza el riesgo y contrasta reprogramación, activación y caja; no utiliza una holgura
+agregada de integración para justificar montaje fuera de su ventana ni desplaza automáticamente
+los hitos de aceptación.
+
+\subsection{Implantación y puesta en marcha}\label{sec:7-implantacion}
+
+La implantación respeta las condiciones del \caso{numeral 13.3}{27 y 28}: nada entra en producción sin
+convivir con la forma actual de trabajar, ninguna actividad inmoviliza camiones y el despliegue avanza
+por proceso. El Formulario T-18 la detalla por etapa. Esta sección resume el patrón de despliegue, las
+pruebas, las métricas de éxito y la reversión.
+
+\paragraph{Patrón de despliegue}
+Cada componente se despliega con el patrón que su naturaleza permite. Los servicios en la nube usan
+despliegue azul-verde: la versión nueva corre junto a la anterior y la puerta de enlace cambia el tráfico
+de una a otra, de modo que volver atrás es cambiar el tráfico de vuelta. El firmware a bordo usa
+despliegue canario: una versión nueva va primero a diez camiones propios de San Bernardo, luego a un
+terminal y luego al resto, y sólo se instala cuando el camión pasa por un terminal. Los procesos se
+habilitan en forma progresiva, uno a la vez y terminal por terminal, empezando por San Bernardo.
+
+En la Etapa 1 los procesos entran en este orden: vigencias y jornada, que sólo registran, viaje y
+posición, documento de transporte, asignación con bloqueo, costo y liquidación, y portal del
+transportista. El orden sigue la cadena de dependencias del Subdocumento 3 y deja para el final los
+procesos que necesitan datos acumulados. Se empieza por la flota propia porque el mandante puede
+instruir a sus conductores y el equipo es suyo, y se sigue con los transportistas que adhirieron en la
+cohorte inicial de la campaña.
+
+\paragraph{Cobertura a bordo mes a mes}
+El Caso exige declarar la cobertura acumulada mes a mes \caso*{numeral 13.3}{27}. La
+\tabref{7-cobertura} la muestra para los 182 equipos audIT.
+
+\begin{tabla}{Equipos audIT montados al cierre de cada mes}{7-cobertura}{L{20mm} L{35mm} R{28mm} X}
+Mes & Modalidad de ejecución & Nuevos & Acumulados \\ \midrule
+M6 & Piloto interno San Bernardo & 10 & 10 \\
+M7 & Cinco terminales, proveedor externo & 60 & 70 \\
+M8 & Cinco terminales, proveedor externo & 60 & 130 \\
+M9 & Cinco terminales, proveedor externo & 52 & 182 \\
+M10--M56 & Operación, reposición y crecimiento según orden & 0 de alta inicial & 182 de configuración inicial \\
+\end{tabla}
+\notaTabla{Fuente: calendario de instalación del escenario económico de referencia; piloto incluido en los 182 equipos, sin duplicarlo.}
+
+La curva es el escenario de contratación, no evidencia de montaje ejecutado. Incluye 148 camiones
+propios y 34 de terceros sin equipo; la distribución de los 34 entre lotes exige adhesión y paso
+confirmados. La firma por RUT, el consentimiento de cada conductor, el montaje y la activación
+se miden por separado. Para quien no haya completado esas condiciones se mantiene modalidad
+de datos o documental y se registra la diferencia frente al presupuesto. No se transforma la meta
+de adhesión M16/M21 en una instalación retroactiva.
+
+Los cinco terminales reciben 12 kits cada uno en M7 y M8. En M9 San Bernardo recibe 12 y cada
+terminal regional diez. audIT conserva banco y recepción; el proveedor aporta 401,33 horas
+de puesto para los 172 montajes externos. Las 210 balizas iniciales se montan M7--M9, a razón
+de 70 por mes y 15 minutos presupuestados cada una; las 21 de reposición son stock. Los cinco
+lectores de portería se prueban M5--M6, dos horas por lector. Los 19 equipos a bordo de reserva
+no se cuentan como altas iniciales. El criterio de montaje exige permanecer dentro de la
+estadía normal; los 140 minutos son hipótesis a validar, no una ampliación de la estadía.
+
+\paragraph{Pruebas}
+Antes de cada marcha blanca la solución pasa cuatro clases de prueba, que el Subdocumento 9 detalla. La
+prueba de aceptación la ejecutan usuarios reales de cada perfil: torre, conductores propios y de
+terceros, terminal, taller, finanzas y transportistas. La prueba de desempeño verifica la asignación en
+30 segundos y el documento en 90 segundos en el percentil 95, como mide el \art{78.3}{40}, con la
+volumetría proyectada a tres años: 430 camiones y 118.000 viajes al año \caso*{numeral 14.1}{29}. La
+prueba de estrés lleva la carga al triple de la volumetría inicial, que es lo que la solución debe
+soportar sin rediseño \transv*{RT-09.03}{21}, y repite la reconexión simultánea de 300 camiones que
+dimensiona la \verSeccion{sec:4-dimensionamiento}. La prueba de resiliencia corta el enlace de un terminal
+durante 24 horas (\art{16.4}{12}) y el de un camión durante 72.
+
+\paragraph{Métricas de éxito}
+Un paso a producción es exitoso si en sus primeros 30 días hábiles no hay incidentes críticos atribuibles
+a la solución, la disponibilidad de las funciones críticas es de al menos 99,9 \% en el mes, la tasa de
+cambios fallidos no supera el 5 \% \art*{78.2 y 78.3}{40} y la conciliación diaria con el registro vigente no
+muestra diferencias sin explicar. Son los mismos indicadores que cierran la marcha blanca, medidos ahora
+con la solución como sistema de registro.
+
+\paragraph{Reversión}
+Durante la marcha blanca se aplica el procedimiento de reversión del T-18, conservando la forma actual de trabajar en paralelo y conciliando los registros antes de restituir el tráfico. Después del paso a producción, la reversión de un servicio en la nube es el cambio
+de tráfico del despliegue azul-verde y la autoriza el Jefe de Proyecto con el Líder de Operación. Se preservan los registros transaccionales y se cotejan viajes, documentos y eventos por identificador. El ensayo CP-SYS-20 comprueba reenvío y deduplicación antes del paso. El firmware retorna por A/B ante fallo de arranque; la imagen del terminal respalda la recuperación presencial en una visita posterior si resulta necesaria (\verSeccion{sec:4-dc-secundario}).
+
+\begin{compromiso}[metrica={Reversión de un servicio en la nube en no más de 15 minutos, sin pérdida de eventos},
+                   verifica={Ensayo de reversión en preproducción antes de cada paso a producción},
+                   fuente={\caso{numeral 13.3}{27} y \art{17.1}{12}}]
+audIT ensaya la reversión de cada servicio antes de cada paso a producción y la mantiene disponible durante la estabilización posterior.
+\end{compromiso}
+
+\subsection{Marcha blanca de la Etapa 1 y de la Etapa 2}\label{sec:7-marcha-blanca}
+
+Cada marcha blanca termina sólo cuando se cumplen a la vez las seis condiciones del \art{17.3}{13}. El
+plan las convierte en indicadores con umbral, medidos cada día y evaluados sobre las cuatro últimas
+semanas. La \tabref{7-cierre} los declara para las dos etapas.
+
+\begin{tabla}{Condiciones de cierre de cada marcha blanca y su umbral}{7-cierre}{L{36mm} L{42mm} X X}
+Condición del Art. 17.3 & Indicador & Etapa 1 & Etapa 2 \\ \midrule
+Sin incidentes críticos ni altos & Incidentes abiertos & Cero & Cero \\
+Volumen real comprometido & Viajes por la plataforma & 100 \% de flota propia y adheridos & 100 \% de clientes con autorización \\
+Disponibilidad y respuesta & Funciones críticas y percentil 95 & 99,9 \%, 30 s y 90 s & 99,9 \% y 2 min \\
+Conciliación & Diferencias sin explicar & Cero & Cero \\
+Personal capacitado & Usuarios certificados & Torre y terminales al 100 \% & Comercial y talleres al 100 \% \\
+Acta de aceptación & Firma de la contraparte & Mes 15 & Mes 20 \\
+\end{tabla}
+\notaTabla{Fuente: \art{17.3}{13} y \art{78.2}{40}.}
+
+Los umbrales de disponibilidad son los que el \art{78.2}{40} exige en la operación para las funciones
+críticas, de modo que la marcha blanca prueba lo mismo que después se cobra. La conciliación de la Etapa 1
+compara cada día la plataforma con los registros vigentes: el sistema de 2013 para los viajes, las
+planillas para las vigencias y el papel para la jornada de los conductores propios. Toda diferencia queda
+explicada o corregida antes del día siguiente.
+
+\paragraph{Marcha blanca de la Etapa 1}
+Entre febrero y abril de 2028 la Etapa 1 opera con datos y usuarios reales, en plena temporada de fruta.
+Lo aprovecha en dos pruebas que no podrían hacerse en un mes tranquilo. La verificación bloqueante corre en
+paralelo en los meses 13 y 14 sobre todas las asignaciones, sin detener ninguna, y registra cuántos viajes
+habría detenido, por qué motivo y con qué cliente comprometido. En el mes 15 bloquea en la flota propia con
+la regla de excepción activa. La liquidación de febrero y de marzo se calcula por las dos vías, la actual y
+la nueva, y se concilia transportista por transportista. Un analista de implantación está en cada
+terminal en el horario de relevo, como compromete la \verSeccion{sec:7-particion}.
+
+\paragraph{Marcha blanca de la Etapa 2}
+En agosto y septiembre de 2028 la Etapa 2 convive con la Etapa 1 en producción. El portal del cliente
+muestra posición sólo de los camiones con autorización vigente, los retornos se proponen sin asignarse
+automáticamente y el cálculo de emisiones se ejecuta sobre los dos meses completos. La marcha blanca
+incluye la semana de Fiestas Patrias, que pone a prueba la operación con restricción vehicular sin que
+ocurra ningún paso a producción.
+
+Si una marcha blanca no cumple las seis condiciones, se extiende por cuenta de audIT sin mover las fechas
+siguientes \art*{17.3}{13}. La red de T-15 calcula el margen por actividad y límite contractual; una extensión requiere revisar la fecha de aceptación, capacidad y reserva consumida. La Etapa 2 mantiene la reserva A23 y la fecha de H12.

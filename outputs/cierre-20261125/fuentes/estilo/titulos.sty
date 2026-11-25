@@ -1,0 +1,334 @@
+% ============================================================================
+%  titulos.sty
+%  Jerarquía de títulos, numeración desde el número de subdocumento, apertura
+%  de subdocumento e índices.
+%
+%  La numeración nace del subdocumento: el subdocumento 4 numera 4, 4.1,
+%  4.1.1 y 4.1.1.1, también cuando se compila solo. El índice general, el
+%  índice detallado de cada subdocumento y el cuerpo salen del mismo archivo
+%  .toc, de modo que no pueden discrepar.
+%
+%  Escala tipográfica (IBM Plex Sans, cuerpo 11 pt):
+%    apertura 26 pt · nivel 1 (4.1) 17 pt · nivel 2 (4.1.1) 13,5 pt ·
+%    nivel 3 (4.1.1.1) 11,5 pt · nivel 4 en línea, 11 pt
+%  Los números cuelgan en el carril izquierdo, alineados a su borde derecho.
+% ============================================================================
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{titulos}[2026/09/26 Titulos y numeracion]
+
+\RequirePackage{titlesec}
+\RequirePackage{titletoc}
+\RequirePackage{needspace}
+\RequirePackage{placeins}
+
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+\renewcommand\thesection{\thechapter.\arabic{section}}
+
+% Bandera derecha sin tocar \leftskip: titlesec guarda ahí el margen negativo
+% que cuelga el número en el carril (\raggedright lo anulaba)
+\newcommand\audit@banderatitulo{\rightskip\z@ plus 1fil\relax
+  \hyphenpenalty=10000\exhyphenpenalty=10000}
+
+% Número colgado en el carril
+\newcommand\audit@numerocarril[1]{%
+  \makebox[\desplazamientoCarril][r]{#1\hspace{\separacionCarril}}}
+
+\titleformat{\section}[hang]
+  {\sffamily\fontsize{17bp}{21bp}\selectfont\color{audit-marino}}
+  {\audit@numerocarril{{\color{audit-secundario}\thesection}}}
+  {0pt}
+  {\bfseries\audit@banderatitulo}
+\titlespacing*{\section}{-\desplazamientoCarril}{14pt plus 3pt minus 2pt}{5pt plus 1pt}
+
+\titleformat{\subsection}[hang]
+  {\sffamily\fontsize{13.5bp}{17bp}\selectfont\color{audit-marino}}
+  {\audit@numerocarril{{\color{audit-secundario}\thesubsection}}}
+  {0pt}
+  {\bfseries\audit@banderatitulo}
+\titlespacing*{\subsection}{-\desplazamientoCarril}{11pt plus 2pt minus 1pt}{3.5pt plus 1pt}
+
+\titleformat{\subsubsection}[hang]
+  {\sffamily\fontsize{11.5bp}{14.5bp}\selectfont\color{audit-tinta}}
+  {\audit@numerocarril{{\color{audit-secundario}\thesubsubsection}}}
+  {0pt}
+  {\bfseries\audit@banderatitulo}
+\titlespacing*{\subsubsection}{-\desplazamientoCarril}{9pt plus 2pt minus 1pt}{2.5pt plus 1pt}
+
+% Cuarto nivel: título en línea, sin número
+\titleformat{\paragraph}[runin]
+  {\sffamily\bfseries\fontsize{11bp}{14.5bp}\selectfont\color{audit-marino}}
+  {}{0pt}{}[.]
+\titlespacing*{\paragraph}{0pt}{6pt plus 2pt minus 1pt}{0.6em}
+
+% Un título arrastra al menos cinco líneas de texto (reclamo de títulos
+% huérfanos al pie). Las figuras no cruzan el inicio de la sección siguiente.
+% Se usa \Needspace, que compara con lo que queda de página. \needspace
+% reserva con un truco de pegamento que confunde a longtable cuando una tabla
+% viene poco después del título: dejaba el pie de la tabla solo en una página
+% y su cabecera de continuación antes del título en la siguiente.
+\AddToHook{cmd/section/before}{\FloatBarrier\Needspace{8\baselineskip}}
+\AddToHook{cmd/subsection/before}{\Needspace{7\baselineskip}}
+\AddToHook{cmd/subsubsection/before}{\Needspace{6.5\baselineskip}}
+\AddToHook{cmd/paragraph/before}{\Needspace{5.5\baselineskip}}
+
+% Marcas para el encabezado corriente
+\renewcommand\chaptermark[1]{\markboth{#1}{}}
+\renewcommand\sectionmark[1]{\markright{\thesection\enspace#1}}
+% El número de subdocumento del encabezado viaja con la página, como marca,
+% igual que el título de la sección. Si se leyera de una variable, la última
+% página de un subdocumento saldría con el número del siguiente: TeX arma la
+% página después de haber leído el texto que sigue. La apertura pone la marca
+% con su rótulo («Subdocumento 4», «Entregable 1») y cada página preliminar
+% (ficha, índice, observaciones, referencias) la vacía.
+\NewMarkClass{audit-subdoc}
+\newcommand\audit@marcasubdoc[1]{\InsertMark{audit-subdoc}{#1}}
+\renewcommand\textoEncabezado{%
+  \edef\audit@sdpagina{\FirstMark{audit-subdoc}}%
+  \ifx\audit@sdpagina\@empty
+    {\color{audit-marino}\leftmark}%
+  \else
+    {\color{audit-secundario}\audit@sdpagina}%
+    \begingroup\protected@edef\audit@x{\rightmark}%
+      \ifx\audit@x\@empty\else\enspace\textperiodcentered\enspace\fi
+    \endgroup
+    {\color{audit-marino}\rightmark}%
+  \fi}
+
+% ----------------------------------------------------------------------------
+%  Títulos de páginas preliminares (ficha, hoja resumen, índice, anexos)
+%  Sin número, en página nueva, con entrada en el índice y folio registrado
+% ----------------------------------------------------------------------------
+\newcommand\audit@rotulo[1]{%
+  {\plexrotulo\fontsize{9bp}{11bp}\selectfont\color{audit-secundario}\MakeUppercase{#1}}}
+\newcommand\rotulo[1]{\audit@rotulo{#1}}
+
+% \tituloPagina[entrada en índice]{rótulo}{título}{clave de folio}
+\NewDocumentCommand\tituloPagina{o m m m}{%
+  % dentro de paginaAncha la página ya se abrió: otro \clearpage dejaría una
+  % página en blanco con la lista vacía de adjustwidth
+  \ifaudit@enanchocompleto\else\clearpage\fi
+  \phantomsection
+  \audit@marcasubdoc{}%
+  \markboth{#3}{}\markright{}%
+  \IfValueTF{#1}
+    {\addcontentsline{toc}{chapter}{#1}}
+    {\addcontentsline{toc}{chapter}{#3}}%
+  \registrarFolio{#4}{#3}%
+  \noindent\audit@rotulo{#2}\par\vspace{3pt}%
+  \noindent{\sffamily\bfseries\fontsize{22bp}{26bp}\selectfont\color{audit-marino}#3\par}%
+  \vspace{5pt}%
+  \noindent{\color{audit-turquesa}\rule{30mm}{1.2pt}}\par
+  \vspace{9pt}\@afterheading}
+
+% ----------------------------------------------------------------------------
+%  Apertura de subdocumento
+%  Página nueva, arriba. Rótulo, número grande colgado en el carril, título,
+%  y a continuación el resumen de apertura que escribe el subdocumento. Al
+%  cerrar el resumen se imprime el índice detallado del subdocumento.
+% ----------------------------------------------------------------------------
+\newif\ifaudit@indicelocal
+\newcounter{audit@sdprevio}
+
+% Cantidad de figuras y tablas de cada subdocumento, para decidir si se
+% imprimen sus índices. Se guarda en el .aux al cerrar el subdocumento.
+\newcommand\audit@cerrarconteo{%
+  \SiHaySubdoc{%
+    \immediate\write\@auxout{%
+      \string\audit@conteo{\subdocActual}{\the\c@figure}{\the\c@table}}}{}}
+\newcommand\audit@conteo[3]{%
+  \expandafter\gdef\csname audit@nfig@#1\endcsname{#2}%
+  \expandafter\gdef\csname audit@ntab@#1\endcsname{#3}}
+\AtEndDocument{\audit@cerrarconteo}
+
+% El subdocumento anterior se cierra (anexos, conteo y salto de página) antes
+% de fijar el nuevo número: todo lo que se escribe o se imprime hasta ahí
+% todavía le pertenece al anterior.
+\newcommand\aperturaSubdocumento[1]{%
+  \EmitirAnexosGraficos
+  \audit@cerrarconteo
+  \clearpage
+  \thispagestyle{plain}%
+  \FijarSubdocumento{#1}%
+  \audit@marcasubdoc{Subdocumento #1}%
+  \setcounter{chapter}{\numexpr#1-1\relax}%
+  \refstepcounter{chapter}%
+  \global\audit@indicelocalfalse
+  \addcontentsline{toc}{chapter}{\protect\numberline{\thechapter}\tituloSubdocActual}%
+  \markboth{\tituloSubdocActual}{}\markright{}%
+  \registrarFolio{sd-#1}{Subdocumento #1. \tituloSubdocActual}%
+  \startcontents[subdoc]%
+  \startlist[subdoc]{lof}%
+  \startlist[subdoc]{lot}%
+  \noindent\hspace*{-\desplazamientoCarril}%
+  \begin{minipage}[t]{\desplazamientoCarril}%
+    \raggedleft\vspace{-3pt}%
+    {\plexligera\fontsize{66bp}{60bp}\selectfont\color{audit-marino}\thechapter}%
+    \hspace*{\separacionCarril}%
+  \end{minipage}%
+  \begin{minipage}[t]{\textwidth}%
+    \vspace{0pt}\motivoApertura
+    \audit@rotulo{Subdocumento N.º \thechapter}\par\vspace{4pt}%
+    {\sffamily\bfseries\fontsize{26bp}{30bp}\selectfont\color{audit-marino}%
+      \raggedright\tituloSubdocActual\par}%
+    \vspace{6pt}%
+    {\color{audit-turquesa}\rule{30mm}{1.2pt}}%
+  \end{minipage}\par
+  \vspace{11pt}\@afterheading}
+
+% Índice detallado del subdocumento (FEP01, Artículo 40.4: «en cada
+% documento»). Lo imprime el cierre del resumen de apertura, o el primer
+% título de nivel 1 si el subdocumento no trajo resumen.
+\newcommand\indiceSubdocumento{%
+  \ifaudit@indicelocal\else
+    \global\audit@indicelocaltrue
+    \par\vspace{8pt}%
+    \noindent\audit@rotulo{Contenido del subdocumento}\par\vspace{3pt}%
+    {\color{audit-filete}\hrule height 0.4pt}\vspace{4pt}%
+    \printcontents[subdoc]{l}{1}{\setcounter{tocdepth}{3}}%
+    \ifnum\ifcsname audit@nfig@\subdocActual\endcsname
+        \csname audit@nfig@\subdocActual\endcsname\else0\fi>0
+      \par\vspace{7pt}\noindent\audit@rotulo{Figuras}\par\vspace{3pt}%
+      {\color{audit-filete}\hrule height 0.4pt}\vspace{4pt}%
+      \printlist[subdoc]{lof}{l}{}%
+    \fi
+    \ifnum\ifcsname audit@ntab@\subdocActual\endcsname
+        \csname audit@ntab@\subdocActual\endcsname\else0\fi>0
+      \par\vspace{7pt}\noindent\audit@rotulo{Tablas}\par\vspace{3pt}%
+      {\color{audit-filete}\hrule height 0.4pt}\vspace{4pt}%
+      \printlist[subdoc]{lot}{l}{}%
+    \fi
+    % el contenido sigue en la misma página, sin dejar media página vacía
+    \par\vspace{12pt plus 4pt}%
+  \fi}
+\AddToHook{cmd/section/before}{%
+  \SiHaySubdoc{%
+    \ifaudit@indicelocal\else
+      \PackageWarning{titulos}{El subdocumento \subdocActual\space no abre
+        con resumenApertura}%
+      \indiceSubdocumento
+    \fi}{}}
+
+% ----------------------------------------------------------------------------
+%  Formato de los índices
+% ----------------------------------------------------------------------------
+\newcommand\audit@puntos{\titlerule*[0.75em]{\textcolor{audit-filete}{.}}}
+
+% Índice general
+\titlecontents{chapter}[11mm]
+  {\addvspace{4pt}\sffamily\bfseries\fontsize{10.5bp}{13.5bp}\selectfont\color{audit-marino}}
+  {\contentslabel{11mm}}
+  {\hspace*{-11mm}}
+  {\hfill\contentspage}
+\titlecontents{section}[22mm]
+  {\sffamily\fontsize{10.5bp}{13.5bp}\selectfont\color{audit-tinta}}
+  {\contentslabel{11mm}}
+  {}
+  {\audit@puntos\contentspage}
+\titlecontents{subsection}[35mm]
+  {\sffamily\fontsize{10bp}{13bp}\selectfont\color{audit-tinta}}
+  {\contentslabel{13mm}}{}
+  {\audit@puntos\contentspage}
+\titlecontents{subsubsection}[51mm]
+  {\sffamily\fontsize{10bp}{13bp}\selectfont\color{audit-secundario}}
+  {\contentslabel{16mm}}{}
+  {\audit@puntos\contentspage}
+
+% Índice detallado de cada subdocumento
+\titlecontents{lsection}[12mm]
+  {\addvspace{1.5pt}\sffamily\fontsize{10.5bp}{13.5bp}\selectfont\color{audit-marino}}
+  {\contentslabel{12mm}}{}
+  {\audit@puntos\contentspage}
+\titlecontents{lsubsection}[26mm]
+  {\sffamily\fontsize{10bp}{13bp}\selectfont\color{audit-tinta}}
+  {\contentslabel{14mm}}{}
+  {\audit@puntos\contentspage}
+\titlecontents{lsubsubsection}[43mm]
+  {\sffamily\fontsize{10bp}{13bp}\selectfont\color{audit-secundario}}
+  {\contentslabel{17mm}}{}
+  {\audit@puntos\contentspage}
+\titlecontents{lfigure}[14mm]
+  {\sffamily\fontsize{10bp}{13bp}\selectfont\color{audit-tinta}}
+  {\contentslabel{14mm}}{}
+  {\audit@puntos\contentspage}
+\titlecontents{ltable}[14mm]
+  {\sffamily\fontsize{10bp}{13bp}\selectfont\color{audit-tinta}}
+  {\contentslabel{14mm}}{}
+  {\audit@puntos\contentspage}
+\titlecontents{figure}[14mm]
+  {\sffamily\fontsize{10bp}{13bp}\selectfont\color{audit-tinta}}
+  {\contentslabel{14mm}}{}
+  {\audit@puntos\contentspage}
+\titlecontents{table}[14mm]
+  {\sffamily\fontsize{10bp}{13bp}\selectfont\color{audit-tinta}}
+  {\contentslabel{14mm}}{}
+  {\audit@puntos\contentspage}
+
+% ----------------------------------------------------------------------------
+%  Referencias cruzadas
+%  Funcionan igual en el documento único y cuando el sobre va en varios PDF.
+%  En el segundo caso la herramienta importa las etiquetas de los otros
+%  subdocumentos con un prefijo (S04-) y estos comandos lo buscan solos:
+%    \verSeccion{sec:4-fisica}        sección 4.2
+%    \verSeccionFolio{sec:4-fisica}   sección 4.2, folio 57
+%    \figref{capas}  \tabref{planos}  Figura 4.1, Tabla 4.3
+% ----------------------------------------------------------------------------
+\ExplSyntaxOn
+\tl_new:N \l_audit_ref_tl
+\bool_new:N \l_audit_ref_externa_bool
+\clist_new:N \g_audit_prefijos_clist
+\NewDocumentCommand \RegistrarPrefijo { m } { \clist_gput_right:Nn \g_audit_prefijos_clist {#1} }
+\cs_new_protected:Npn \audit_resolver:n #1
+  {
+    \tl_set:Nn \l_audit_ref_tl {#1}
+    \bool_set_false:N \l_audit_ref_externa_bool
+    \cs_if_exist:cF { r@#1 }
+      {
+        \clist_map_inline:Nn \g_audit_prefijos_clist
+          {
+            \cs_if_exist:cT { r@##1#1 }
+              {
+                \tl_set:Nn \l_audit_ref_tl {##1#1}
+                \bool_set_true:N \l_audit_ref_externa_bool
+                \clist_map_break:
+              }
+          }
+      }
+  }
+\NewDocumentCommand \refx { m } { \audit_resolver:n {#1} \ref { \l_audit_ref_tl } }
+\NewDocumentCommand \folio { m } { \audit_resolver:n {#1} \pageref { \l_audit_ref_tl } }
+\NewDocumentCommand \verSeccion { m }
+  { \audit_resolver:n {#1} sección~\ref { \l_audit_ref_tl } }
+\NewDocumentCommand \verSeccionFolio { m }
+  {
+    \audit_resolver:n {#1}
+    sección~\ref { \l_audit_ref_tl }
+    \bool_if:NTF \l_audit_ref_externa_bool
+      { \SiFolioContinuo { ,~folio~\pageref { \l_audit_ref_tl } } { } }
+      { ,~folio~\pageref { \l_audit_ref_tl } }
+  }
+\NewDocumentCommand \figref { m } { Figura~\refx { fig:#1 } }
+\NewDocumentCommand \tabref { m } { Tabla~\refx { tab:#1 } }
+\ExplSyntaxOff
+
+% Índice general del documento único: subdocumentos y nivel 1. Los documentos
+% económicos, que son uno solo cada uno, lo imprimen hasta el nivel 3 como
+% índice detallado.
+\providecommand\audit@profundidadindice{1}
+\providecommand\audit@rotuloindice{Oferta técnica}
+\newcommand\indiceGeneral{%
+  \clearpage
+  \begin{paginaAncha}%
+  \tituloPagina[Índice general]{\audit@rotuloindice}{Índice general}{indice}%
+  \begingroup
+    \setcounter{tocdepth}{\audit@profundidadindice}%
+    \@starttoc{toc}%
+  \endgroup
+  \par\vspace{9pt}%
+  \noindent\audit@rotulo{Convención de citas}\par\vspace{3pt}%
+  \filetefino\vspace{5pt}%
+  {\sffamily\fontsize{10bp}{13bp}\selectfont\color{audit-tinta}\noindent\convencionCitas\par}%
+  \end{paginaAncha}%
+  \clearpage}
+
+\endinput

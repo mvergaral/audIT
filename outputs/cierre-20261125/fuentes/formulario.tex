@@ -1,0 +1,18 @@
+% ============================================================================
+%  Un formulario como PDF propio (Comunicado 10, sección 1, regla 1). La
+%  herramienta de compilación lo llama con el subdocumento y el formulario:
+%    -usepretex="\def\NumeroSubdoc{4}\def\FormularioActual{T-11}..."
+% ============================================================================
+\providecommand\NumeroSubdoc{4}
+\providecommand\FormularioActual{T-11}
+\documentclass{audit-oferta}
+\input{configuracion/metadatos}
+\input{configuracion/instancia}
+\input{configuracion/subdocumentos}
+
+\begin{document}
+% Los dos argumentos se expanden antes de entrar: \FijarSubdocumento y las
+% búsquedas por clave no expanden el nombre de la macro.
+\edef\auditFormularioArgs{{\NumeroSubdoc}{\FormularioActual}}
+\expandafter\DocumentoFormulario\auditFormularioArgs
+\end{document}

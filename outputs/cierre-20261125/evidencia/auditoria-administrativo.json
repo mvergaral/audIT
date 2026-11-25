@@ -1,0 +1,437 @@
+{
+  "paginas": 37,
+  "folios_correctos": true,
+  "referencias_rotas": 0,
+  "emisores_prohibidos": 0,
+  "pies_sobre2": 0,
+  "paginas_detalle": [
+    {
+      "pagina": 1,
+      "folios": [
+        "1"
+      ],
+      "min_fuente": 8.999990463256836,
+      "referencias_rotas": false,
+      "pendientes": [],
+      "emisor_real_prohibido": false,
+      "sobre2_en_pie": false
+    },
+    {
+      "pagina": 2,
+      "folios": [
+        "2"
+      ],
+      "min_fuente": 8.999990463256836,
+      "referencias_rotas": false,
+      "pendientes": [],
+      "emisor_real_prohibido": false,
+      "sobre2_en_pie": false
+    },
+    {
+      "pagina": 3,
+      "folios": [
+        "3"
+      ],
+      "min_fuente": 8.999990463256836,
+      "referencias_rotas": false,
+      "pendientes": [],
+      "emisor_real_prohibido": false,
+      "sobre2_en_pie": false
+    },
+    {
+      "pagina": 4,
+      "folios": [
+        "4"
+      ],
+      "min_fuente": 8.999990463256836,
+      "referencias_rotas": false,
+      "pendientes": [],
+      "emisor_real_prohibido": false,
+      "sobre2_en_pie": false
+    },
+    {
+      "pagina": 5,
+      "folios": [
+        "5"
+      ],
+      "min_fuente": 8.999990463256836,
+      "referencias_rotas": false,
+      "pendientes": [],
+      "emisor_real_prohibido": false,
+      "sobre2_en_pie": false
+    },
+    {
+      "pagina": 6,
+      "folios": [
+        "6"
+      ],
+      "min_fuente": 8.999990463256836,
+      "referencias_rotas": false,
+      "pendientes": [],
+      "emisor_real_prohibido": false,
+      "sobre2_en_pie": false
+    },
+    {
+      "pagina": 7,
+      "folios": [
+        "7"
+      ],
+      "min_fuente": 8.999990463256836,
+      "referencias_rotas": false,
+      "pendientes": [
+        "4. No mantiene litigios pendientes con el CLIENTE."
+      ],
+      "emisor_real_prohibido": false,
+      "sobre2_en_pie": false
+    },
+    {
+      "pagina": 8,
+      "folios": [
+        "8"
+      ],
+      "min_fuente": 8.999990463256836,
+      "referencias_rotas": false,
+      "pendientes": [],
+      "emisor_real_prohibido": false,
+      "sobre2_en_pie": false
+    },
+    {
+      "pagina": 9,
+      "folios": [
+        "9"
+      ],
+      "min_fuente": 8.999990463256836,
+      "referencias_rotas": false,
+      "pendientes": [],
+      "emisor_real_prohibido": false,
+      "sobre2_en_pie": false
+    },
+    {
+      "pagina": 10,
+      "folios": [
+        "10"
+      ],
+      "min_fuente": 8.999990463256836,
+      "referencias_rotas": false,
+      "pendientes": [],
+      "emisor_real_prohibido": false,
+      "sobre2_en_pie": false
+    },
+    {
+      "pagina": 11,
+      "folios": [
+        "11"
+      ],
+      "min_fuente": 8.999990463256836,
+      "referencias_rotas": false,
+      "pendientes": [
+        "Pendiente de confirmación.",
+        "Revisión de cierre pendiente"
+      ],
+      "emisor_real_prohibido": false,
+      "sobre2_en_pie": false
+    },
+    {
+      "pagina": 12,
+      "folios": [
+        "12"
+      ],
+      "min_fuente": 8.999990463256836,
+      "referencias_rotas": false,
+      "pendientes": [
+        "independiente."
+      ],
+      "emisor_real_prohibido": false,
+      "sobre2_en_pie": false
+    },
+    {
+      "pagina": 13,
+      "folios": [
+        "13"
+      ],
+      "min_fuente": 8.999990463256836,
+      "referencias_rotas": false,
+      "pendientes": [],
+      "emisor_real_prohibido": false,
+      "sobre2_en_pie": false
+    },
+    {
+      "pagina": 14,
+      "folios": [
+        "14"
+      ],
+      "min_fuente": 8.999990463256836,
+      "referencias_rotas": false,
+      "pendientes": [],
+      "emisor_real_prohibido": false,
+      "sobre2_en_pie": false
+    },
+    {
+      "pagina": 15,
+      "folios": [
+        "15"
+      ],
+      "min_fuente": 8.999990463256836,
+      "referencias_rotas": false,
+      "pendientes": [],
+      "emisor_real_prohibido": false,
+      "sobre2_en_pie": false
+    },
+    {
+      "pagina": 16,
+      "folios": [
+        "16"
+      ],
+      "min_fuente": 8.999990463256836,
+      "referencias_rotas": false,
+      "pendientes": [],
+      "emisor_real_prohibido": false,
+      "sobre2_en_pie": false
+    },
+    {
+      "pagina": 17,
+      "folios": [
+        "17"
+      ],
+      "min_fuente": 8.999990463256836,
+      "referencias_rotas": false,
+      "pendientes": [],
+      "emisor_real_prohibido": false,
+      "sobre2_en_pie": false
+    },
+    {
+      "pagina": 18,
+      "folios": [
+        "18"
+      ],
+      "min_fuente": 8.999990463256836,
+      "referencias_rotas": false,
+      "pendientes": [],
+      "emisor_real_prohibido": false,
+      "sobre2_en_pie": false
+    },
+    {
+      "pagina": 19,
+      "folios": [
+        "19"
+      ],
+      "min_fuente": 8.999990463256836,
+      "referencias_rotas": false,
+      "pendientes": [],
+      "emisor_real_prohibido": false,
+      "sobre2_en_pie": false
+    },
+    {
+      "pagina": 20,
+      "folios": [
+        "20"
+      ],
+      "min_fuente": 8.999990463256836,
+      "referencias_rotas": false,
+      "pendientes": [],
+      "emisor_real_prohibido": false,
+      "sobre2_en_pie": false
+    },
+    {
+      "pagina": 21,
+      "folios": [
+        "21"
+      ],
+      "min_fuente": 8.999990463256836,
+      "referencias_rotas": false,
+      "pendientes": [],
+      "emisor_real_prohibido": false,
+      "sobre2_en_pie": false
+    },
+    {
+      "pagina": 22,
+      "folios": [
+        "22"
+      ],
+      "min_fuente": 8.999990463256836,
+      "referencias_rotas": false,
+      "pendientes": [
+        "la fecha de emisión. Sin protestos, morosidades ni aclaraciones pendientes en el"
+      ],
+      "emisor_real_prohibido": false,
+      "sobre2_en_pie": false
+    },
+    {
+      "pagina": 23,
+      "folios": [
+        "23"
+      ],
+      "min_fuente": 8.999990463256836,
+      "referencias_rotas": false,
+      "pendientes": [],
+      "emisor_real_prohibido": false,
+      "sobre2_en_pie": false
+    },
+    {
+      "pagina": 24,
+      "folios": [
+        "24"
+      ],
+      "min_fuente": 8.999990463256836,
+      "referencias_rotas": false,
+      "pendientes": [],
+      "emisor_real_prohibido": false,
+      "sobre2_en_pie": false
+    },
+    {
+      "pagina": 25,
+      "folios": [
+        "25"
+      ],
+      "min_fuente": 8.999990463256836,
+      "referencias_rotas": false,
+      "pendientes": [],
+      "emisor_real_prohibido": false,
+      "sobre2_en_pie": false
+    },
+    {
+      "pagina": 26,
+      "folios": [
+        "26"
+      ],
+      "min_fuente": 8.999990463256836,
+      "referencias_rotas": false,
+      "pendientes": [],
+      "emisor_real_prohibido": false,
+      "sobre2_en_pie": false
+    },
+    {
+      "pagina": 27,
+      "folios": [
+        "27"
+      ],
+      "min_fuente": 8.999990463256836,
+      "referencias_rotas": false,
+      "pendientes": [],
+      "emisor_real_prohibido": false,
+      "sobre2_en_pie": false
+    },
+    {
+      "pagina": 28,
+      "folios": [
+        "28"
+      ],
+      "min_fuente": 8.999990463256836,
+      "referencias_rotas": false,
+      "pendientes": [],
+      "emisor_real_prohibido": false,
+      "sobre2_en_pie": false
+    },
+    {
+      "pagina": 29,
+      "folios": [
+        "29"
+      ],
+      "min_fuente": 8.999990463256836,
+      "referencias_rotas": false,
+      "pendientes": [],
+      "emisor_real_prohibido": false,
+      "sobre2_en_pie": false
+    },
+    {
+      "pagina": 30,
+      "folios": [
+        "30"
+      ],
+      "min_fuente": 8.999990463256836,
+      "referencias_rotas": false,
+      "pendientes": [],
+      "emisor_real_prohibido": false,
+      "sobre2_en_pie": false
+    },
+    {
+      "pagina": 31,
+      "folios": [
+        "31"
+      ],
+      "min_fuente": 8.999990463256836,
+      "referencias_rotas": false,
+      "pendientes": [],
+      "emisor_real_prohibido": false,
+      "sobre2_en_pie": false
+    },
+    {
+      "pagina": 32,
+      "folios": [
+        "32"
+      ],
+      "min_fuente": 8.999990463256836,
+      "referencias_rotas": false,
+      "pendientes": [],
+      "emisor_real_prohibido": false,
+      "sobre2_en_pie": false
+    },
+    {
+      "pagina": 33,
+      "folios": [
+        "33"
+      ],
+      "min_fuente": 8.999990463256836,
+      "referencias_rotas": false,
+      "pendientes": [],
+      "emisor_real_prohibido": false,
+      "sobre2_en_pie": false
+    },
+    {
+      "pagina": 34,
+      "folios": [
+        "34"
+      ],
+      "min_fuente": 8.999990463256836,
+      "referencias_rotas": false,
+      "pendientes": [],
+      "emisor_real_prohibido": false,
+      "sobre2_en_pie": false
+    },
+    {
+      "pagina": 35,
+      "folios": [
+        "35"
+      ],
+      "min_fuente": 8.999990463256836,
+      "referencias_rotas": false,
+      "pendientes": [],
+      "emisor_real_prohibido": false,
+      "sobre2_en_pie": false
+    },
+    {
+      "pagina": 36,
+      "folios": [
+        "36"
+      ],
+      "min_fuente": 8.999990463256836,
+      "referencias_rotas": false,
+      "pendientes": [],
+      "emisor_real_prohibido": false,
+      "sobre2_en_pie": false
+    },
+    {
+      "pagina": 37,
+      "folios": [
+        "37"
+      ],
+      "min_fuente": 8.999990463256836,
+      "referencias_rotas": false,
+      "pendientes": [],
+      "emisor_real_prohibido": false,
+      "sobre2_en_pie": false
+    }
+  ],
+  "renders": [
+    "C:\\Users\\mvergara\\Documents\\ChatGPT\\Audit\\outputs\\cierre-20261125\\revision\\admin-01.png",
+    "C:\\Users\\mvergara\\Documents\\ChatGPT\\Audit\\outputs\\cierre-20261125\\revision\\admin-02.png",
+    "C:\\Users\\mvergara\\Documents\\ChatGPT\\Audit\\outputs\\cierre-20261125\\revision\\admin-03.png",
+    "C:\\Users\\mvergara\\Documents\\ChatGPT\\Audit\\outputs\\cierre-20261125\\revision\\admin-04.png",
+    "C:\\Users\\mvergara\\Documents\\ChatGPT\\Audit\\outputs\\cierre-20261125\\revision\\admin-05.png",
+    "C:\\Users\\mvergara\\Documents\\ChatGPT\\Audit\\outputs\\cierre-20261125\\revision\\admin-06.png",
+    "C:\\Users\\mvergara\\Documents\\ChatGPT\\Audit\\outputs\\cierre-20261125\\revision\\admin-12.png",
+    "C:\\Users\\mvergara\\Documents\\ChatGPT\\Audit\\outputs\\cierre-20261125\\revision\\admin-21.png",
+    "C:\\Users\\mvergara\\Documents\\ChatGPT\\Audit\\outputs\\cierre-20261125\\revision\\admin-35.png",
+    "C:\\Users\\mvergara\\Documents\\ChatGPT\\Audit\\outputs\\cierre-20261125\\revision\\admin-37.png"
+  ]
+}

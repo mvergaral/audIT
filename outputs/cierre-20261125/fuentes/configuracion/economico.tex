@@ -1,0 +1,90 @@
+% ============================================================================
+%  Parámetros de la oferta económica. Es el único lugar de donde salen los
+%  tipos de cambio, la tasa del IVA, los hitos de pago y los rangos por
+%  perfil. Los documentos económicos, su Markdown, su DOCX y el verificador
+%  los leen de aquí, de modo que no pueden discrepar por una conversión.
+%
+%  Todos los valores de este archivo son de las bases, no del proyecto. Las
+%  cifras del proyecto van en economico/datos/partidas.csv.
+% ============================================================================
+
+% ----------------------------------------------------------------------------
+%  Formulario E-24 (FEP01 p.73). Condiciones y parámetros para la preparación
+%  de la oferta económica.
+%  \TipoCambio{código}{nombre}{pesos chilenos por una unidad}
+% ----------------------------------------------------------------------------
+\TipoCambio{USD}{Dólar de los Estados Unidos}{900}
+\TipoCambio{EUR}{Euro}{1000}
+\TipoCambio{UF}{Unidad de Fomento}{40000}
+\TasaIVA{19}
+% Fecha de referencia del tipo de cambio que pide el Formulario E-21, 1.1. El
+% E-24 fija los valores sin fecha. Decisión del equipo: vacío imprime un
+% marcador.
+\FechaTipoCambio{}
+\ParametroEconomico{Tasa de interés, crédito de consumo}{0,9 \% mensual}
+\ParametroEconomico{Tasa de interés, línea de crédito}{3,0 \% mensual}
+\ParametroEconomico{Rentabilidad máxima a obtener}{20 \%}
+\ParametroEconomicoMonto{Monto máximo a utilizar en línea de crédito}{50000000}
+\ParametroEconomico{Porcentaje máximo de financiamiento propio}{20 \%}
+\ParametroEconomico{Porcentaje máximo de financiamiento bancario}{80 \%}
+\ParametroEconomico{Horizonte de evaluación}{56 meses}
+
+% ----------------------------------------------------------------------------
+%  Formulario E-25 (FEP01 pp.74 y 75). Hitos de pago de la fase de
+%  implementación. Los porcentajes se aplican sobre el valor total de esa
+%  fase y suman 100.
+%  \HitoPago{hito}{etapa}{mes}{porcentaje}{descripción y entregable}
+% ----------------------------------------------------------------------------
+\HitoPago{H1}{1}{2}{8}{Cierre del levantamiento y aprobación de la línea base de alcance y de la matriz de trazabilidad de requerimientos.}
+\HitoPago{H2}{1}{4}{7}{Aprobación del documento de arquitectura, del plan de seguridad y del modelo de datos.}
+\HitoPago{H3}{1}{6}{10}{Entrega de la infraestructura híbrida y habilitación de los ambientes de Desarrollo, QA, Preproducción y Producción, con observabilidad operativa.}
+\HitoPago{H4}{1}{10}{10}{Entrega del software de la Etapa 1 para pruebas, con QA superado y evidencia de cobertura.}
+\HitoPago{H5}{1}{12}{10}{Certificación de la solución de la Etapa 1: pruebas de aceptación de usuario, de carga, de resiliencia y de seguridad ofensiva aprobadas.}
+\HitoPago{H6}{1}{13}{5}{Inicio de la marcha blanca de la Etapa 1, con plan de reversión activo y usuarios capacitados.}
+\HitoPago{H7}{1}{16}{10}{Paso a producción de la Etapa 1 y cierre conforme de la marcha blanca.}
+\HitoPago{H8}{2}{14}{5}{Aprobación de la línea base de alcance de la Etapa 2 y de su diseño detallado.}
+\HitoPago{H9}{2}{17}{10}{Entrega del software de la Etapa 2 para pruebas, con QA superado.}
+\HitoPago{H10}{2}{18}{10}{Certificación de la solución de la Etapa 2 y cierre del desarrollo.}
+\HitoPago{H11}{2}{19}{5}{Inicio de la marcha blanca de la Etapa 2 en convivencia con la Etapa 1 en producción.}
+\HitoPago{H12}{2}{21}{10}{Paso a producción de la Etapa 2 y aceptación final del proyecto de implementación.}
+
+% ----------------------------------------------------------------------------
+%  Formulario E-26 (FEP01 p.76). Rangos de costo y tarifa horaria por perfil,
+%  en UF. \RangoPerfil{perfil}{costo mínimo}{costo máximo}{tarifa mínima}{tarifa máxima}
+%  Los decimales van con punto.
+% ----------------------------------------------------------------------------
+\RangoPerfil{Director de Proyecto}{1.5}{2.8}{2.5}{4.0}
+\RangoPerfil{Gerente de Proyecto}{1.5}{2.8}{2.5}{4.0}
+\RangoPerfil{Jefe de Proyecto}{0.8}{2.1}{1.5}{3.0}
+\RangoPerfil{Jefe de Análisis y Diseño}{0.7}{1.4}{1.0}{2.0}
+\RangoPerfil{Jefe de Desarrollo}{0.7}{1.4}{1.0}{2.0}
+\RangoPerfil{Jefe de TIC}{0.7}{1.4}{1.0}{2.0}
+\RangoPerfil{Analista / Diseñador Experto}{0.5}{0.8}{0.8}{1.2}
+\RangoPerfil{Analista / Diseñador Senior}{0.5}{0.7}{0.7}{1.0}
+\RangoPerfil{Analista / Diseñador Junior}{0.3}{0.6}{0.5}{0.8}
+\RangoPerfil{Ingeniero Experto}{0.6}{1.0}{1.0}{1.5}
+\RangoPerfil{Ingeniero Senior}{0.6}{0.8}{0.8}{1.2}
+\RangoPerfil{Ingeniero Junior}{0.4}{0.7}{0.6}{1.0}
+\RangoPerfil{Arquitecto Experto}{0.8}{1.4}{1.5}{2.5}
+\RangoPerfil{Arquitecto Senior}{0.8}{1.4}{1.2}{2.0}
+\RangoPerfil{Arquitecto Junior}{0.7}{1.0}{1.0}{1.5}
+\RangoPerfil{Encargado de Seguridad TI}{0.8}{1.4}{1.5}{2.5}
+\RangoPerfil{Ingeniero de Datos}{0.6}{1.0}{1.0}{1.5}
+\RangoPerfil{Ingeniero DevOps / SRE}{0.6}{1.0}{1.0}{1.5}
+\RangoPerfil{TIC}{0.6}{1.0}{0.8}{1.5}
+\RangoPerfil{Documentador}{0.3}{0.7}{0.5}{1.0}
+\RangoPerfil{Analista QA Experto}{0.5}{0.7}{0.8}{1.0}
+\RangoPerfil{Analista QA Senior}{0.4}{0.6}{0.6}{0.8}
+\RangoPerfil{Analista QA Junior}{0.3}{0.4}{0.4}{0.6}
+
+% ----------------------------------------------------------------------------
+%  Documentos económicos de cada instancia
+%  Formulario T-22 (FEP01 p.69): el Informe 3 entrega, de la Propuesta
+%  Económica, el documento de costos frente a venta y la planilla de cálculo
+%  que entrega el mandante. Formulario E-21 (FEP01 pp.70 a 72): el Sobre N.º 3
+%  lleva la propuesta económica formal, el análisis económico-financiero y el
+%  modelo financiero en planilla.
+%  \DocumentosEconomicosDeInstancia{instancia}{claves}
+% ----------------------------------------------------------------------------
+\DocumentosEconomicosDeInstancia{informe3}{costos}
+\DocumentosEconomicosDeInstancia{final}{oferta,analisis}

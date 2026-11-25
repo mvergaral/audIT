@@ -1,0 +1,20 @@
+[
+  {
+    "paquete": "D2_PARA_REVISION_20261125.zip",
+    "archivos": 11,
+    "integridad": "OK"
+  },
+  {
+    "paquete": "SOBRE3_AUDIT_OFERTA_ECONOMICA_20261125.ZIP",
+    "archivos": 5,
+    "integridad": "OK"
+  },
+  {
+    "paquete": "D2_FUENTES_PARA_INTEGRACION_20261125.zip",
+    "archivos": 102,
+    "integridad": "OK"
+  },
+  {
+    "coincidencia_final_cifras_PDF_DOCX": "OK"
+  }
+]

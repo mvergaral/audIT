@@ -1,0 +1,103 @@
+{
+  "grupo": "d2-cierre-final",
+  "instancia": "final",
+  "modo_folio": "subdocumento",
+  "archivos": [
+    {
+      "clave": "S03",
+      "nombre": "AUDIT-Subdocumento3.pdf",
+      "folio_inicial": 1,
+      "paginas": 33,
+      "aux": "C:\\Users\\mvergara\\Documents\\ChatGPT\\Audit\\outputs\\cierre-d2-final\\revision\\latex\\S03.aux",
+      "log": "C:\\Users\\mvergara\\Documents\\ChatGPT\\Audit\\outputs\\cierre-d2-final\\revision\\latex\\S03.log",
+      "fuentes": [
+        [
+          "subdocumentos"
+        ],
+        [
+          "subdocumentos/03-solucion"
+        ]
+      ]
+    },
+    {
+      "clave": "T12",
+      "nombre": "AUDIT-Formulario-T-12.pdf",
+      "folio_inicial": 1,
+      "paginas": 75,
+      "aux": "C:\\Users\\mvergara\\Documents\\ChatGPT\\Audit\\outputs\\cierre-d2-final\\revision\\latex\\T12.aux",
+      "log": "C:\\Users\\mvergara\\Documents\\ChatGPT\\Audit\\outputs\\cierre-d2-final\\revision\\latex\\T12.log",
+      "fuentes": [
+        [
+          "subdocumentos"
+        ],
+        [
+          "subdocumentos/03-solucion"
+        ]
+      ]
+    },
+    {
+      "clave": "S07",
+      "nombre": "AUDIT-Subdocumento7.pdf",
+      "folio_inicial": 1,
+      "paginas": 39,
+      "aux": "C:\\Users\\mvergara\\Documents\\ChatGPT\\Audit\\outputs\\cierre-d2-final\\revision\\latex\\S07.aux",
+      "log": "C:\\Users\\mvergara\\Documents\\ChatGPT\\Audit\\outputs\\cierre-d2-final\\revision\\latex\\S07.log",
+      "fuentes": [
+        [
+          "subdocumentos"
+        ],
+        [
+          "subdocumentos/07-plan-trabajo"
+        ]
+      ]
+    },
+    {
+      "clave": "T14",
+      "nombre": "AUDIT-Formulario-T-14.pdf",
+      "folio_inicial": 1,
+      "paginas": 22,
+      "aux": "C:\\Users\\mvergara\\Documents\\ChatGPT\\Audit\\outputs\\cierre-d2-final\\revision\\latex\\T14.aux",
+      "log": "C:\\Users\\mvergara\\Documents\\ChatGPT\\Audit\\outputs\\cierre-d2-final\\revision\\latex\\T14.log",
+      "fuentes": [
+        [
+          "subdocumentos"
+        ],
+        [
+          "subdocumentos/07-plan-trabajo"
+        ]
+      ]
+    },
+    {
+      "clave": "T15",
+      "nombre": "AUDIT-Formulario-T-15.pdf",
+      "folio_inicial": 1,
+      "paginas": 22,
+      "aux": "C:\\Users\\mvergara\\Documents\\ChatGPT\\Audit\\outputs\\cierre-d2-final\\revision\\latex\\T15.aux",
+      "log": "C:\\Users\\mvergara\\Documents\\ChatGPT\\Audit\\outputs\\cierre-d2-final\\revision\\latex\\T15.log",
+      "fuentes": [
+        [
+          "subdocumentos"
+        ],
+        [
+          "subdocumentos/07-plan-trabajo"
+        ]
+      ]
+    },
+    {
+      "clave": "T18",
+      "nombre": "AUDIT-Formulario-T-18.pdf",
+      "folio_inicial": 1,
+      "paginas": 6,
+      "aux": "C:\\Users\\mvergara\\Documents\\ChatGPT\\Audit\\outputs\\cierre-d2-final\\revision\\latex\\T18.aux",
+      "log": "C:\\Users\\mvergara\\Documents\\ChatGPT\\Audit\\outputs\\cierre-d2-final\\revision\\latex\\T18.log",
+      "fuentes": [
+        [
+          "subdocumentos"
+        ],
+        [
+          "subdocumentos/07-plan-trabajo"
+        ]
+      ]
+    }
+  ]
+}

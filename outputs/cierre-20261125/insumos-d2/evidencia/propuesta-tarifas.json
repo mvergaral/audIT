@@ -1,0 +1,549 @@
+{
+  "estado": "Propuesta calculada pendiente de aceptación; no altera precios globales",
+  "metodo": "Tarifa = costo UF × factor por fase, limitada al rango E26; factor resuelto para conservar la venta de personal RESUMEN H12/H16. Referencias de roles adicionales no acreditan titulaciones.",
+  "controles": [
+    {
+      "fase": "Implementación",
+      "factor": 1.2079890011930194,
+      "precio_personal_objetivo": 3601533087.93456,
+      "precio_reconstruido": 3601533087.93456,
+      "diferencia": 0.0
+    },
+    {
+      "fase": "Operación",
+      "factor": 1.366954929522655,
+      "precio_personal_objetivo": 2681334038.54601,
+      "precio_reconstruido": 2681334038.54601,
+      "diferencia": 0.0
+    }
+  ],
+  "perfiles": [
+    {
+      "fase": "Implementación",
+      "perfil": "Jefe de proyecto",
+      "referencia": "Jefe de Proyecto",
+      "horas": 3200,
+      "costo_uf": 1.45,
+      "tarifa_uf": 1.7515840517298782,
+      "ingreso_clp": 224202758.6214244,
+      "rango_costo": [
+        0.8,
+        2.1
+      ],
+      "rango_tarifa": [
+        1.5,
+        3.0
+      ]
+    },
+    {
+      "fase": "Implementación",
+      "perfil": "Arquitectura",
+      "referencia": "Arquitecto Senior",
+      "horas": 3200,
+      "costo_uf": 1.1,
+      "tarifa_uf": 1.3287879013123214,
+      "ingreso_clp": 170084851.36797714,
+      "rango_costo": [
+        0.8,
+        1.4
+      ],
+      "rango_tarifa": [
+        1.2,
+        2.0
+      ]
+    },
+    {
+      "fase": "Implementación",
+      "perfil": "Seguridad",
+      "referencia": "Encargado de Seguridad TI",
+      "horas": 3210.2,
+      "costo_uf": 1.1,
+      "tarifa_uf": 1.5,
+      "ingreso_clp": 192611999.99999997,
+      "rango_costo": [
+        0.8,
+        1.4
+      ],
+      "rango_tarifa": [
+        1.5,
+        2.5
+      ]
+    },
+    {
+      "fase": "Implementación",
+      "perfil": "Líder QA",
+      "referencia": "Analista QA Experto",
+      "horas": 3200,
+      "costo_uf": 0.6,
+      "tarifa_uf": 0.8,
+      "ingreso_clp": 102400000.0,
+      "rango_costo": [
+        0.5,
+        0.7
+      ],
+      "rango_tarifa": [
+        0.8,
+        1.0
+      ]
+    },
+    {
+      "fase": "Implementación",
+      "perfil": "Líder Datos",
+      "referencia": "Ingeniero de Datos",
+      "horas": 3200,
+      "costo_uf": 0.8,
+      "tarifa_uf": 1.0,
+      "ingreso_clp": 128000000.0,
+      "rango_costo": [
+        0.6,
+        1.0
+      ],
+      "rango_tarifa": [
+        1.0,
+        1.5
+      ]
+    },
+    {
+      "fase": "Implementación",
+      "perfil": "SRE",
+      "referencia": "Ingeniero DevOps / SRE",
+      "horas": 7360,
+      "costo_uf": 0.8,
+      "tarifa_uf": 1.0,
+      "ingreso_clp": 294400000.0,
+      "rango_costo": [
+        0.6,
+        1.0
+      ],
+      "rango_tarifa": [
+        1.0,
+        1.5
+      ]
+    },
+    {
+      "fase": "Implementación",
+      "perfil": "PMO",
+      "referencia": "Analista / Diseñador Junior",
+      "horas": 9120,
+      "costo_uf": 0.6,
+      "tarifa_uf": 0.7247934007158117,
+      "ingreso_clp": 264404632.5811281,
+      "rango_costo": [
+        0.3,
+        0.6
+      ],
+      "rango_tarifa": [
+        0.5,
+        0.8
+      ]
+    },
+    {
+      "fase": "Implementación",
+      "perfil": "Liderazgo desarrollo",
+      "referencia": "Jefe de Desarrollo",
+      "horas": 3200,
+      "costo_uf": 1.05,
+      "tarifa_uf": 1.2683884512526704,
+      "ingreso_clp": 162353721.76034182,
+      "rango_costo": [
+        0.7,
+        1.4
+      ],
+      "rango_tarifa": [
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "fase": "Implementación",
+      "perfil": "Software",
+      "referencia": "Ingeniero Senior",
+      "horas": 12461.2,
+      "costo_uf": 0.75,
+      "tarifa_uf": 0.9059917508947646,
+      "ingreso_clp": 451589776.2499937,
+      "rango_costo": [
+        0.6,
+        0.8
+      ],
+      "rango_tarifa": [
+        0.8,
+        1.2
+      ]
+    },
+    {
+      "fase": "Implementación",
+      "perfil": "Frontend",
+      "referencia": "Ingeniero Senior",
+      "horas": 6082.6,
+      "costo_uf": 0.75,
+      "tarifa_uf": 0.9059917508947646,
+      "ingreso_clp": 220431416.9596998,
+      "rango_costo": [
+        0.6,
+        0.8
+      ],
+      "rango_tarifa": [
+        0.8,
+        1.2
+      ]
+    },
+    {
+      "fase": "Implementación",
+      "perfil": "Datos",
+      "referencia": "Ingeniero de Datos",
+      "horas": 6324.0,
+      "costo_uf": 0.8,
+      "tarifa_uf": 1.0,
+      "ingreso_clp": 252960000.0,
+      "rango_costo": [
+        0.6,
+        1.0
+      ],
+      "rango_tarifa": [
+        1.0,
+        1.5
+      ]
+    },
+    {
+      "fase": "Implementación",
+      "perfil": "QA",
+      "referencia": "Analista QA Senior",
+      "horas": 5675.0,
+      "costo_uf": 0.5,
+      "tarifa_uf": 0.6039945005965097,
+      "ingreso_clp": 137106751.63540772,
+      "rango_costo": [
+        0.4,
+        0.6
+      ],
+      "rango_tarifa": [
+        0.6,
+        0.8
+      ]
+    },
+    {
+      "fase": "Implementación",
+      "perfil": "Firmware",
+      "referencia": "Ingeniero Senior",
+      "horas": 7360,
+      "costo_uf": 0.7,
+      "tarifa_uf": 0.8455923008351136,
+      "ingreso_clp": 248942373.36585745,
+      "rango_costo": [
+        0.6,
+        0.8
+      ],
+      "rango_tarifa": [
+        0.8,
+        1.2
+      ]
+    },
+    {
+      "fase": "Implementación",
+      "perfil": "Electrónica",
+      "referencia": "Ingeniero Senior",
+      "horas": 2880,
+      "costo_uf": 0.7,
+      "tarifa_uf": 0.8455923008351136,
+      "ingreso_clp": 97412233.0562051,
+      "rango_costo": [
+        0.6,
+        0.8
+      ],
+      "rango_tarifa": [
+        0.8,
+        1.2
+      ]
+    },
+    {
+      "fase": "Implementación",
+      "perfil": "Técnico de campo",
+      "referencia": "Analista / Diseñador Junior",
+      "horas": 2193.666666666667,
+      "costo_uf": 0.4,
+      "tarifa_uf": 0.5,
+      "ingreso_clp": 43873333.333333336,
+      "rango_costo": [
+        0.3,
+        0.6
+      ],
+      "rango_tarifa": [
+        0.5,
+        0.8
+      ]
+    },
+    {
+      "fase": "Implementación",
+      "perfil": "Funcional",
+      "referencia": "Analista / Diseñador Experto",
+      "horas": 2880,
+      "costo_uf": 0.75,
+      "tarifa_uf": 0.9059917508947646,
+      "ingreso_clp": 104370249.70307688,
+      "rango_costo": [
+        0.5,
+        0.8
+      ],
+      "rango_tarifa": [
+        0.8,
+        1.2
+      ]
+    },
+    {
+      "fase": "Implementación",
+      "perfil": "Integración",
+      "referencia": "Ingeniero Senior",
+      "horas": 2880,
+      "costo_uf": 0.75,
+      "tarifa_uf": 0.9059917508947646,
+      "ingreso_clp": 104370249.70307688,
+      "rango_costo": [
+        0.6,
+        0.8
+      ],
+      "rango_tarifa": [
+        0.8,
+        1.2
+      ]
+    },
+    {
+      "fase": "Implementación",
+      "perfil": "Implantación y cambio",
+      "referencia": "Analista / Diseñador Experto",
+      "horas": 2880,
+      "costo_uf": 0.75,
+      "tarifa_uf": 0.9059917508947646,
+      "ingreso_clp": 104370249.70307688,
+      "rango_costo": [
+        0.5,
+        0.8
+      ],
+      "rango_tarifa": [
+        0.8,
+        1.2
+      ]
+    },
+    {
+      "fase": "Implementación",
+      "perfil": "Analista terreno",
+      "referencia": "Analista / Diseñador Junior",
+      "horas": 12320,
+      "costo_uf": 0.5,
+      "tarifa_uf": 0.6039945005965097,
+      "ingreso_clp": 297648489.89396,
+      "rango_costo": [
+        0.3,
+        0.6
+      ],
+      "rango_tarifa": [
+        0.5,
+        0.8
+      ]
+    },
+    {
+      "fase": "Operación",
+      "perfil": "L1 24x7",
+      "referencia": "Analista / Diseñador Junior",
+      "horas": 34560,
+      "costo_uf": 0.4,
+      "tarifa_uf": 0.5467819718090621,
+      "ingreso_clp": 755871397.8288474,
+      "rango_costo": [
+        0.3,
+        0.6
+      ],
+      "rango_tarifa": [
+        0.5,
+        0.8
+      ]
+    },
+    {
+      "fase": "Operación",
+      "perfil": "SRE",
+      "referencia": "Ingeniero DevOps / SRE",
+      "horas": 11680,
+      "costo_uf": 0.8,
+      "tarifa_uf": 1.0935639436181241,
+      "ingreso_clp": 510913074.4583876,
+      "rango_costo": [
+        0.6,
+        1.0
+      ],
+      "rango_tarifa": [
+        1.0,
+        1.5
+      ]
+    },
+    {
+      "fase": "Operación",
+      "perfil": "Seguridad",
+      "referencia": "Encargado de Seguridad TI",
+      "horas": 2880,
+      "costo_uf": 1.1,
+      "tarifa_uf": 1.5036504224749208,
+      "ingreso_clp": 173220528.66911086,
+      "rango_costo": [
+        0.8,
+        1.4
+      ],
+      "rango_tarifa": [
+        1.5,
+        2.5
+      ]
+    },
+    {
+      "fase": "Operación",
+      "perfil": "Gestión servicio",
+      "referencia": "Jefe de TIC",
+      "horas": 2880,
+      "costo_uf": 1.05,
+      "tarifa_uf": 1.435302675998788,
+      "ingreso_clp": 165346868.27506036,
+      "rango_costo": [
+        0.7,
+        1.4
+      ],
+      "rango_tarifa": [
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "fase": "Operación",
+      "perfil": "Monitoreo",
+      "referencia": "TIC",
+      "horas": 5760,
+      "costo_uf": 0.6,
+      "tarifa_uf": 0.820172957713593,
+      "ingreso_clp": 188967849.45721182,
+      "rango_costo": [
+        0.6,
+        1.0
+      ],
+      "rango_tarifa": [
+        0.8,
+        1.5
+      ]
+    },
+    {
+      "fase": "Operación",
+      "perfil": "Campo",
+      "referencia": "Analista / Diseñador Junior",
+      "horas": 2880,
+      "costo_uf": 0.4,
+      "tarifa_uf": 0.5467819718090621,
+      "ingreso_clp": 62989283.15240395,
+      "rango_costo": [
+        0.3,
+        0.6
+      ],
+      "rango_tarifa": [
+        0.5,
+        0.8
+      ]
+    },
+    {
+      "fase": "Operación",
+      "perfil": "Software",
+      "referencia": "Ingeniero Senior",
+      "horas": 8880,
+      "costo_uf": 0.75,
+      "tarifa_uf": 1.0252161971419913,
+      "ingreso_clp": 364156793.22483534,
+      "rango_costo": [
+        0.6,
+        0.8
+      ],
+      "rango_tarifa": [
+        0.8,
+        1.2
+      ]
+    },
+    {
+      "fase": "Operación",
+      "perfil": "Datos",
+      "referencia": "Ingeniero de Datos",
+      "horas": 4664,
+      "costo_uf": 0.8,
+      "tarifa_uf": 1.0935639436181241,
+      "ingreso_clp": 204015289.32139724,
+      "rango_costo": [
+        0.6,
+        1.0
+      ],
+      "rango_tarifa": [
+        1.0,
+        1.5
+      ]
+    },
+    {
+      "fase": "Operación",
+      "perfil": "QA",
+      "referencia": "Analista QA Senior",
+      "horas": 4548,
+      "costo_uf": 0.5,
+      "tarifa_uf": 0.6834774647613275,
+      "ingreso_clp": 124338220.38938071,
+      "rango_costo": [
+        0.4,
+        0.6
+      ],
+      "rango_tarifa": [
+        0.6,
+        0.8
+      ]
+    },
+    {
+      "fase": "Operación",
+      "perfil": "Arquitectura cierre",
+      "referencia": "Arquitecto Senior",
+      "horas": 45,
+      "costo_uf": 1.1,
+      "tarifa_uf": 1.5036504224749208,
+      "ingreso_clp": 2706570.7604548573,
+      "rango_costo": [
+        0.8,
+        1.4
+      ],
+      "rango_tarifa": [
+        1.2,
+        2.0
+      ]
+    },
+    {
+      "fase": "Operación",
+      "perfil": "Frontend cierre",
+      "referencia": "Ingeniero Senior",
+      "horas": 69,
+      "costo_uf": 0.75,
+      "tarifa_uf": 1.0252161971419913,
+      "ingreso_clp": 2829596.704111896,
+      "rango_costo": [
+        0.6,
+        0.8
+      ],
+      "rango_tarifa": [
+        0.8,
+        1.2
+      ]
+    },
+    {
+      "fase": "Operación",
+      "perfil": "L1 suplencias y picos",
+      "referencia": "Analista / Diseñador Junior",
+      "horas": 5760,
+      "costo_uf": 0.4,
+      "tarifa_uf": 0.5467819718090621,
+      "ingreso_clp": 125978566.3048079,
+      "rango_costo": [
+        0.3,
+        0.6
+      ],
+      "rango_tarifa": [
+        0.5,
+        0.8
+      ]
+    }
+  ]
+}

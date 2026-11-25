@@ -1,0 +1,1347 @@
+# Formulario T-12. Matriz de cumplimiento técnico y trazabilidad
+
+audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. Oferta Técnica, Sobre N.º 2. Propuesta final. Archivo AUDIT-Formulario-T-12.pdf. Anexo del Subdocumento N.º 3, Esquema de solución y alcance. Las fuentes están en las Referencias de ese subdocumento.
+
+## Índice detallado
+
+| Contenido | Página del PDF |
+|---|---:|
+| Ficha del documento | [417](AUDIT-Formulario-T-12.pdf#page=417) |
+| T-12 Matriz de cumplimiento técnico y trazabilidad | [419](AUDIT-Formulario-T-12.pdf#page=419) |
+| Glosario de códigos | [419](AUDIT-Formulario-T-12.pdf#page=419) |
+| Catálogo de requerimientos y matriz de trazabilidad | [420](AUDIT-Formulario-T-12.pdf#page=420) |
+| Registro de reglas de negocio | [427](AUDIT-Formulario-T-12.pdf#page=427) |
+| Registro de supuestos | [428](AUDIT-Formulario-T-12.pdf#page=428) |
+| Criterios de aceptación | [430](AUDIT-Formulario-T-12.pdf#page=430) |
+| Registro de consultas y vacíos | [432](AUDIT-Formulario-T-12.pdf#page=432) |
+| Cumplimiento individual de las Bases | [432](AUDIT-Formulario-T-12.pdf#page=432) |
+
+\reqUsado{RF-001}{3.3.2}{}
+\reqUsado{RF-002}{3.3.2}{}
+\reqUsado{RF-003}{3.3.2}{}
+\reqUsado{RF-004}{3.3.2}{}
+\reqUsado{RF-005}{3.2.2}{}
+\reqUsado{RF-006}{3.4.2}{}
+\reqUsado{RF-007}{3.2.2}{}
+\reqUsado{RF-008}{3.3.1}{}
+\reqUsado{RF-009}{3.4.2}{}
+\reqUsado{RF-010}{3.4.2}{}
+\reqUsado{RF-011}{3.4.2}{}
+\reqUsado{RF-012}{3.4.2}{}
+\reqUsado{RF-013}{3.4.2}{}
+\reqUsado{RF-014}{3.4.2}{}
+\reqUsado{RF-015}{3.2.3}{}
+\reqUsado{RF-016}{3.2.2}{}
+\reqUsado{RF-017}{3.2.2}{}
+\reqUsado{RF-018}{3.2.3}{}
+\reqUsado{RF-019}{3.4.2}{}
+\reqUsado{RF-020}{3.4.3}{}
+\reqUsado{RF-021}{3.2.3}{}
+\reqUsado{RF-022}{3.4.3}{}
+\reqUsado{RF-023}{3.2.3}{}
+\reqUsado{RF-024}{3.2.3}{}
+\reqUsado{RF-025}{3.3.1}{}
+\reqUsado{RF-026}{3.4.3}{}
+\reqUsado{RF-027}{3.2.2}{}
+\reqUsado{RF-028}{3.3.2}{}
+\reqUsado{RNF-001}{3.2.7}{}
+\reqUsado{RNF-002}{3.3.3}{}
+\reqUsado{RNF-003}{3.2.5}{}
+\reqUsado{RNF-004}{3.4.5}{}
+\reqUsado{RNF-005}{3.2.7}{}
+\reqUsado{RNF-006}{3.4.2}{}
+\reqUsado{RNF-007}{3.2.7}{}
+\reqUsado{RNF-008}{3.3.3}{}
+\reqUsado{RNF-009}{3.4.6}{}
+\reqUsado{RNF-010}{3.2.7}{}
+\reqUsado{RNF-011}{3.4.5}{}
+\reqUsado{RNF-012}{3.3.2}{}
+\reqUsado{RNF-013}{3.3.3}{}
+\reqUsado{RNF-014}{3.4.6}{}
+
+\renewcommand\thetable{T-12.\arabic{table}}
+\setcounter{table}{0}
+
+Este formulario detalla lo que el Subdocumento 3 resume. Trae el catálogo de los 42 requerimientos con
+los campos del Caso, numeral 17.1, p. 38 y, en la columna de trazabilidad, el contexto de la arquitectura
+lógica que atiende cada uno, su paquete de trabajo y los casos de prueba que lo verifican. Siguen el
+registro de reglas de negocio, el registro de supuestos con las veintiséis decisiones del
+Caso, numeral 16.1, pp. 34 a 36, los 29 criterios de aceptación con meta, mes y medición, y el registro de
+consultas y vacíos. Cierra con el pronunciamiento individual sobre los RT transversales, los
+parámetros del Caso y los artículos transversales de las Bases Administrativas.
+
+## Glosario de códigos
+
+Cada código se usa con el mismo significado en toda la oferta. La Tabla T-12.1 los define.
+
+**Tabla 3.1.** Códigos usados en el catálogo y su significado
+
+| Código | Significado |
+|---|---|
+| RF-nnn y RNF-nnn | Requerimiento funcional y no funcional de este catálogo |
+| Caso n.n | Capítulo o numeral de las Bases Técnicas del Caso, con su página en el Subdocumento 3 |
+| CA-nn | Criterio de aceptación nn del Caso, capítulo 18, pp. 41 a 43 |
+| R-nn | Restricción nn del Caso, capítulo 10, pp. 23 y 24 |
+| DP-nn | Decisión nn de las que el Caso deja abiertas en el Caso, numeral 16.1, pp. 34 a 36 |
+| RT-nn.nn | Requisito de las Bases Técnicas Transversales con su valor del Caso, capítulo 15, pp. 31 a 34 |
+| REQ-NEG-nn | Requerimiento preliminar del Anexo 2.A del Subdocumento 2 |
+| SUP-nn y SA-nn | Supuesto del entorno, Subdocumento 2, y supuesto del alcance, este formulario |
+| RN-nn | Regla de negocio de este formulario |
+| E1-nn y E2-nn | Capacidad de la Etapa 1 y de la Etapa 2, sección 3.2.2 y sección 3.2.3 |
+| EDT n.n | Paquete de trabajo de la EDT del Subdocumento 7 y del Formulario T-14 |
+| CP-tipo-nn | Caso de prueba del Formulario T-17 del Subdocumento 9 |
+| Prioridad 1, 2 y 3 | 1: su falla deja salir un camión que no debía o pierde una prueba. 2: sostiene un criterio o una restricción. 3: optimiza sobre datos existentes |
+
+El requerimiento preliminar REQ-NEG-08 del Subdocumento 2, temperatura de los 44 semirremolques
+refrigerados, no tiene requerimiento en este catálogo porque ningún criterio ni restricción del Caso lo
+exige. Lo atiende la innovación 3 del Subdocumento 13, acople y registro térmico del semirremolque, fuera del alcance base.
+
+## Catálogo de requerimientos y matriz de trazabilidad
+
+Las fichas vinculan el compromiso de diseño con sus controles previstos. El estado refleja el
+respaldo descrito en la oferta. Los identificadores CP remiten a protocolos del Formulario T-17
+y sus expedientes se completarán durante la ejecución.
+
+### RF-001
+
+| Campo | Contenido |
+|---|---|
+| Descripción | Antes de autorizar un viaje, comprobar jornada disponible y habilitaciones del conductor, y aptitud y compatibilidad del tractocamión y del semirremolque para la carga. Todo incumplimiento legal o de seguridad bloquea la asignación |
+| Actor | Despachador de la torre |
+| Precondición | Orden de transporte con conductor, tractocamión y semirremolque propuestos |
+| Resultado | Veredicto en no más de 30 segundos: asigna, asigna con marca o bloquea, con registro auditable |
+| Prioridad | 1. Etapa 1, mes 16 |
+| Origen | Caso 4.3. CA-01. R-07. DP-06. RT-09.01. REQ-NEG-01 y 03 |
+| Cumplimiento | Sí |
+| Componente y trazabilidad | Planificación y tráfico, que consulta a Personas y cumplimiento y a Flota y activos. EDT 5.3. CP-UNIT-01 y CP-SYS-01 |
+| Sección | Sección 3.3.2 |
+
+### RF-002
+
+| Campo | Contenido |
+|---|---|
+| Descripción | Obtener, asociar al viaje y presentar la evidencia de jornada efectiva de los 454 conductores, propios y externos, con su fuente y su nivel en la cascada de evidencia |
+| Actor | Prevención de riesgos |
+| Precondición | Viaje programado o en curso con conductor identificado |
+| Resultado | Expediente de jornada por conductor con el nivel de evidencia de cada tramo |
+| Prioridad | 1. Etapa 1, mes 16 |
+| Origen | Caso 4.3. CA-02. R-02 y R-07. DP-01 y DP-13. REQ-NEG-01 |
+| Cumplimiento | Sí |
+| Componente y trazabilidad | Personas y cumplimiento. EDT 5.1. CP-UNIT-02 y CP-INT-02 |
+| Sección | Sección 3.3.2 |
+
+### RF-003
+
+| Campo | Contenido |
+|---|---|
+| Descripción | Al asignar un viaje a un conductor externo, disponer de evidencia identificada y sellada de su jornada previa relevante, incluida la realizada para otros clientes en la medida que el anexo de adhesión lo autorice |
+| Actor | Despachador y transportista subcontratado |
+| Precondición | Para acceso instrumental, anexo vigente y alcance de datos autorizado; en validación documental, atestación firmada para el viaje |
+| Resultado | Veredicto disponible al asignar. Evidencia de diseño: modalidades, regla RN-03 y bloqueo sin atestación válida (S3). Verificación prevista: contrastar veredictos, fuente y nivel con anexos o atestaciones en CP-SYS-05 y H7 |
+| Prioridad | 1. Etapa 1, mes 16 |
+| Origen | Caso 4.3. CA-03. R-02 y R-07. DP-01 |
+| Cumplimiento | Parcial: compromiso sujeto a adhesión, autorización o atestación firmada |
+| Componente y trazabilidad | Personas y cumplimiento. EDT 5.1 y 9.2. CP-INT-03, CP-SYS-05 y CP-HW-14. Validación de adhesión en S3 y T-16 |
+| Sección | Sección 3.3.2 |
+
+### RF-004
+
+| Campo | Contenido |
+|---|---|
+| Descripción | Conservar la evidencia de jornada con origen, sello de tiempo, integridad verificable e historial de correcciones como registros nuevos, sin sobrescribir el original |
+| Actor | Fiscalizador, aseguradora o cliente que impugna |
+| Precondición | Evento de jornada generado por el equipo a bordo, el tacógrafo o una atestación |
+| Resultado | Evidencia con cadena de integridad verificable por un tercero durante cinco años |
+| Prioridad | 1. Etapa 1, mes 16 |
+| Origen | Caso 19. CA-04. DP-13 y DP-24. RT-05.10 |
+| Cumplimiento | Sí |
+| Componente y trazabilidad | Personas y cumplimiento, sobre almacenamiento inmutable. EDT 5.1. CP-UNIT-06 y CP-SEC-08 |
+| Sección | Sección 3.3.2 |
+
+### RF-005
+
+| Campo | Contenido |
+|---|---|
+| Descripción | Consolidar las cerca de 6.000 vigencias de conductores y equipos en un registro único con titular, responsable de renovación, vencimiento, respaldo y efecto sobre la asignación, con alertas a 60, 30 y 7 días |
+| Actor | Prevención de riesgos y control de flota |
+| Precondición | Vigencias migradas desde las cuatro planillas con verificación documental de cada una |
+| Resultado | Registro único que bloquea la asignación con cualquier vigencia vencida |
+| Prioridad | 1. Etapa 1, mes 16 |
+| Origen | Caso 5. CA-05. DP-18. RT-05.15 y RT-16.21. REQ-NEG-02 |
+| Cumplimiento | Sí |
+| Componente y trazabilidad | Personas y cumplimiento, con las vigencias de equipos en Flota y activos. EDT 5.1 y EDT 7.1. CP-UNIT-01 y CP-SYS-08 |
+| Sección | Sección 3.2.2 |
+
+### RF-006
+
+| Campo | Contenido |
+|---|---|
+| Descripción | Antes de la salida de una carga peligrosa, verificar que la carga efectiva corresponda al documento emitido y vincular carga, vehículo, conductor, habilitaciones y lista de verificación firmada |
+| Actor | Conductor habilitado y prevención de riesgos |
+| Precondición | Viaje asignado a uno de los 18 camiones habilitados para sustancias peligrosas |
+| Resultado | Salida autorizada sólo con lista firmada y coincidencia entre carga y documento |
+| Prioridad | 1. Etapa 1, mes 16 |
+| Origen | Caso 7.1. CA-06. DP-19. RT-16.14. REQ-NEG-04 |
+| Cumplimiento | Sí |
+| Componente y trazabilidad | Operación de fletes. EDT 5.5. CP-UNIT-19 y CP-SYS-06 |
+| Sección | Sección 3.4.2 |
+
+### RF-007
+
+| Campo | Contenido |
+|---|---|
+| Descripción | Descargar la información de los tacógrafos digitales instalados, asociarla al conductor y al vehículo, conservar el archivo original con su integridad y permitir su consulta |
+| Actor | Técnico de terminal y prevención de riesgos |
+| Precondición | Camión con tacógrafo digital de paso por un terminal |
+| Resultado | Archivo original conservado y jornada incorporada al expediente con nivel 1 |
+| Prioridad | 2. Etapa 1, mes 16 |
+| Origen | Caso 4.3. CA-07. DP-13. REQ-NEG-23 |
+| Cumplimiento | Sí |
+| Componente y trazabilidad | Personas y cumplimiento. EDT 6.3. CP-HW-15 y CP-INT-21 |
+| Sección | Sección 3.2.2 |
+
+### RF-008
+
+| Campo | Contenido |
+|---|---|
+| Descripción | Entregar a la torre una vista única con posición, fuente, antigüedad y nivel de evidencia de los 374 camiones, señalando los que no reportan y por qué |
+| Actor | Operador de la torre de programación |
+| Precondición | Factibilidad verificada con cada plataforma de posicionamiento |
+| Resultado | Una pantalla con toda la flota, sin pantallas por proveedor |
+| Prioridad | 2. Etapa 1, mes 16 |
+| Origen | Caso 5. CA-08. DP-04 y DP-26. REQ-NEG-18 y 19 |
+| Cumplimiento | Sí |
+| Componente y trazabilidad | Telemetría y geocercas. EDT 5.4 y EDT 6.2. CP-SYS-16 y CP-UAT-01 |
+| Sección | Sección 3.3.1 |
+
+### RF-009
+
+| Campo | Contenido |
+|---|---|
+| Descripción | Cada equipo audIT registra a bordo posición, conducción, jornada, permanencias y documentos del viaje durante al menos 72 horas sin cobertura, sin pérdida, y los sincroniza al reconectar |
+| Actor | Equipo a bordo |
+| Precondición | Camión con equipo audIT en un tramo sin cobertura |
+| Resultado | Cero eventos perdidos y sincronización en no más de 20 minutos tras la reconexión |
+| Prioridad | 1. Etapa 1, mes 16 |
+| Origen | Caso 6. CA-09. R-04. DP-11. RT-03.10 y RT-03.13. REQ-NEG-20 |
+| Cumplimiento | Sí |
+| Componente y trazabilidad | Telemetría y geocercas, en el equipo a bordo. EDT 4.1. CP-HW-03 y CP-PERF-02 |
+| Sección | Sección 3.4.2 |
+
+### RF-010
+
+| Campo | Contenido |
+|---|---|
+| Descripción | Registrar automáticamente la llegada y la salida en los cerca de 1.400 puntos de carga y descarga, sin acción del conductor ni equipos instalados en ellos, con fuente y sello de tiempo |
+| Actor | Equipo a bordo y torre |
+| Precondición | Punto de cliente con geocerca virtual registrada |
+| Resultado | Hora de llegada y salida sellada en el momento del evento |
+| Prioridad | 2. Etapa 1, mes 16 |
+| Origen | Caso 4.7. CA-10. R-01 y R-09. DP-08. RT-09.01. REQ-NEG-05 |
+| Cumplimiento | Sí |
+| Componente y trazabilidad | Telemetría y geocercas. EDT 5.4. CP-UNIT-08 y CP-SYS-03 |
+| Sección | Sección 3.4.2 |
+
+### RF-011
+
+| Campo | Contenido |
+|---|---|
+| Descripción | Calcular el tiempo de espera de cada visita según el tiempo libre del contrato del cliente, regla RN-07, y dejar la evidencia consultable para el cobro |
+| Actor | Área comercial y cliente |
+| Precondición | Llegada y salida registradas por RF-010 |
+| Resultado | Cobro por espera respaldado por eventos sellados |
+| Prioridad | 2. Etapa 1, mes 16 |
+| Origen | Caso 4.7. CA-11. DP-08. REQ-NEG-06 |
+| Cumplimiento | Sí |
+| Componente y trazabilidad | Operación de fletes. EDT 5.5. CP-UNIT-12 y CP-SYS-03 |
+| Sección | Sección 3.4.2 |
+
+### RF-012
+
+| Campo | Contenido |
+|---|---|
+| Descripción | Obtener la conformidad de entrega con firma electrónica del destinatario identificado, sello de tiempo y ubicación, aun sin cobertura, y dejarla disponible el mismo día |
+| Actor | Conductor y destinatario |
+| Precondición | Entrega en el punto de descarga |
+| Resultado | Conformidad disponible para facturar el mismo día, o al reconectar si no hay señal |
+| Prioridad | 2. Etapa 1, mes 16 |
+| Origen | Caso 4.5. CA-12. DP-10. RT-16.14. REQ-NEG-10 |
+| Cumplimiento | Sí |
+| Componente y trazabilidad | Operación de fletes. EDT 5.5. CP-SYS-04 y CP-INT-20 |
+| Sección | Sección 3.4.2 |
+
+### RF-013
+
+| Campo | Contenido |
+|---|---|
+| Descripción | Generar desde la orden los datos del documento electrónico de transporte y entregarlos al sistema contable, que lo emite, sin redigitación |
+| Actor | Despachador y sistema contable |
+| Precondición | Viaje asignado con datos de carga |
+| Resultado | Documento emitido por el sistema contable en no más de 90 segundos |
+| Prioridad | 1. Etapa 1, mes 16 |
+| Origen | Caso 9.10. CA-13. R-08. DP-03 y DP-09. RT-09.01. REQ-NEG-09 |
+| Cumplimiento | Sí |
+| Componente y trazabilidad | Operación de fletes y capa anticorrupción. EDT 6.1. CP-INT-11 y CP-INT-12 |
+| Sección | Sección 3.4.2 |
+
+### RF-014
+
+| Campo | Contenido |
+|---|---|
+| Descripción | Disponer del documento electrónico de transporte emitido por el sistema contable antes del movimiento, también en un punto de carga sin cobertura, por emisión anticipada o por datos enviados por enlace satelital |
+| Actor | Conductor y sistema contable |
+| Precondición | Punto sin cobertura caracterizado; validar intercambio con el contable y homologar el tamaño máximo del documento y su retorno por enlace |
+| Resultado | Evidencia de diseño: emisión anticipada o retorno satelital conforme, con bloqueo de movimiento (S3, S4 y riesgo R-28 de T-16). Verificación prevista en H5 y H7: solicitud, emisión, retorno, reensamblado, validación y disponibilidad en cabina en hasta 90 s |
+| Prioridad | 1. Etapa 1, mes 16 |
+| Origen | Caso 4.5. CA-14. R-04 y R-08. DP-09. REQ-NEG-09 |
+| Cumplimiento | Parcial: diseño definido y factibilidad del retorno pendiente |
+| Componente y trazabilidad | Operación de fletes, contable emisor y enlace satelital. EDT 6.1 y 4.1. CP-UNIT-21, CP-HW-11 y CP-PERF-05 |
+| Sección | Sección 3.4.2 |
+
+### RF-015
+
+| Campo | Contenido |
+|---|---|
+| Descripción | Proponer el retorno de un camión que va a quedar vacío con carga que la propia compañía gestiona, respetando jornada, habilitaciones, compatibilidad, plazo y la regla RN-09 |
+| Actor | Planificador de la torre |
+| Precondición | Viaje en curso con descarga estimada y cargas pendientes compatibles |
+| Resultado | Retorno propuesto antes de la descarga, con kilómetros en vacío evitados |
+| Prioridad | 3. Etapa 2, mes 21 |
+| Origen | Caso 7.2. CA-15. DP-14. REQ-NEG-07 |
+| Cumplimiento | Sí |
+| Componente y trazabilidad | Planificación y tráfico. EDT 8.2. CP-UNIT-15 y CP-SYS-09 |
+| Sección | Sección 3.2.3 |
+
+### RF-016
+
+| Campo | Contenido |
+|---|---|
+| Descripción | Calcular el costo real por kilómetro y por viaje, por ruta y por contrato, y publicar el costo de cada viaje dentro de 24 horas de su cierre con los componentes disponibles y la indicación de los faltantes |
+| Actor | Gerencia de administración y finanzas |
+| Precondición | Viaje cerrado con kilómetros, tiempos y peajes registrados |
+| Resultado | Costo preliminar en 24 horas y definitivo al llegar el combustible |
+| Prioridad | 2. Etapa 1, mes 16, con estudio por ruta en el mes 6 |
+| Origen | Caso 4.1 y 7.3. CA-16, CA-17 y CA-19. DP-15 y DP-17. RT-05.29. REQ-NEG-11 y 12 |
+| Cumplimiento | Sí |
+| Componente y trazabilidad | Liquidación y costeo. EDT 5.6 y EDT 2.5. CP-INT-23 y CP-SYS-15 |
+| Sección | Sección 3.2.2 |
+
+### RF-017
+
+| Campo | Contenido |
+|---|---|
+| Descripción | Distinguir el costo interno de la flota propia del costo contractual de la flota subcontratada y compararlos a igualdad de componentes |
+| Actor | Gerencia de administración y finanzas |
+| Precondición | Costo de viaje calculado por RF-016 |
+| Resultado | Comparación entre flota propia y subcontratada por ruta |
+| Prioridad | 2. Etapa 1, mes 16 |
+| Origen | Caso 7.3. CA-16. R-02. DP-16. REQ-NEG-12 |
+| Cumplimiento | Sí |
+| Componente y trazabilidad | Liquidación y costeo. EDT 5.6. CP-INT-23 y CP-SYS-10 |
+| Sección | Sección 3.2.2 |
+
+### RF-018
+
+| Campo | Contenido |
+|---|---|
+| Descripción | Relacionar kilometraje, consumo, ruta, vehículo, conductor y condiciones para explicar la dispersión de rendimiento entre camiones del mismo modelo y ruta |
+| Actor | Control de flota |
+| Precondición | Doce meses de consumo y kilometraje por viaje |
+| Resultado | Modelo que explica la dispersión en población comparable |
+| Prioridad | 3. Etapa 2, mes 21 |
+| Origen | Caso 7.3. CA-18. DP-12 y DP-15 |
+| Cumplimiento | Sí |
+| Componente y trazabilidad | Liquidación y costeo, sobre el repositorio analítico. EDT 8.5. CP-INT-18 y CP-PERF-09 |
+| Sección | Sección 3.2.3 |
+
+### RF-019
+
+| Campo | Contenido |
+|---|---|
+| Descripción | Calcular la liquidación mensual de cada transportista desde viajes cerrados con evidencia, tarifas pactadas, espera recuperada y ajustes, según la regla RN-08, con la corrección manual como excepción registrada |
+| Actor | Área de liquidaciones |
+| Precondición | Cierre mensual con viajes conformes |
+| Resultado | Liquidación en un día hábil con menos del 1
+| Prioridad | 2. Etapa 1, mes 16 |
+| Origen | Caso 7.3. CA-20. DP-03 y DP-16. REQ-NEG-16 |
+| Cumplimiento | Sí |
+| Componente y trazabilidad | Liquidación y costeo. EDT 5.6. CP-INT-24 y CP-SYS-10 |
+| Sección | Sección 3.4.2 |
+
+### RF-020
+
+| Campo | Contenido |
+|---|---|
+| Descripción | Permitir a cada transportista consultar sus viajes, estados, evidencias y liquidación en curso, restringido a su propia operación |
+| Actor | Transportista subcontratado |
+| Precondición | Transportista autenticado con anexo firmado |
+| Resultado | Liquidación en curso visible en cualquier momento |
+| Prioridad | 2. Etapa 1, mes 16 |
+| Origen | Caso 9. CA-21 y CA-29. DP-02. RT-16.30. REQ-NEG-16 |
+| Cumplimiento | Sí |
+| Componente y trazabilidad | Liquidación y costeo, por el portal del transportista. EDT 5.7. CP-SEC-07 y CP-PERF-10 |
+| Sección | Sección 3.4.3 |
+
+### RF-021
+
+| Campo | Contenido |
+|---|---|
+| Descripción | Permitir al cliente autorizado ver la posición y el estado de su carga sólo durante el servicio y dentro de lo que cada dueño de camión autorizó |
+| Actor | Cliente |
+| Precondición | Consentimiento vigente del dueño del camión para ese cliente |
+| Resultado | Posición publicada al cliente en no más de 2 minutos con cobertura |
+| Prioridad | 2. Etapa 2, mes 21 |
+| Origen | Caso 13.1 y 13.2. CA-22. R-02 y R-03. DP-23. RT-09.01. REQ-NEG-25 |
+| Cumplimiento | Sí |
+| Componente y trazabilidad | Telemetría y geocercas, por el portal del cliente. EDT 8.1. CP-SYS-19 y CP-PERF-07 |
+| Sección | Sección 3.2.3 |
+
+### RF-022
+
+| Campo | Contenido |
+|---|---|
+| Descripción | Permitir al dueño del camión otorgar, consultar y revocar permisos por camión, dato, destinatario y período, con bitácora de cada acceso a localización |
+| Actor | Transportista subcontratado |
+| Precondición | Transportista autenticado |
+| Resultado | Revocación efectiva en no más de cinco minutos, con registro |
+| Prioridad | 1. Etapa 1, mes 16 |
+| Origen | Caso 18. CA-23 y CA-29. DP-23. RT-16.09 y RT-16.30. REQ-NEG-17 |
+| Cumplimiento | Sí |
+| Componente y trazabilidad | Personas y cumplimiento, por el portal del transportista. EDT 5.7. CP-SEC-04 y CP-SEC-05 |
+| Sección | Sección 3.4.3 |
+
+### RF-023
+
+| Campo | Contenido |
+|---|---|
+| Descripción | Calcular las emisiones por tonelada-kilómetro con metodología declarada y verificable, incluidos los camiones subcontratados, con consolidación mensual |
+| Actor | Gerencia general y cliente |
+| Precondición | Método fijado en la Etapa 1 y consumo o rendimiento por viaje |
+| Resultado | Reporte mensual de emisiones por cliente y contrato |
+| Prioridad | 2. Etapa 2, mes 21, con método en la Etapa 1 |
+| Origen | Caso 13.2. CA-24. DP-22. RT-05.29. REQ-NEG-24 |
+| Cumplimiento | Sí |
+| Componente y trazabilidad | Liquidación y costeo, sobre el repositorio analítico. EDT 8.3. CP-UNIT-09 y CP-SYS-17 |
+| Sección | Sección 3.2.3 |
+
+### RF-024
+
+| Campo | Contenido |
+|---|---|
+| Descripción | Permitir que un taller externo registre su intervención, incluso sin cobertura, con taller, activo, fecha, kilometraje, trabajo y repuestos |
+| Actor | Taller externo |
+| Precondición | Taller registrado como usuario externo |
+| Resultado | Intervención incorporada a la hoja de vida del equipo |
+| Prioridad | 2. Etapa 2, mes 21 |
+| Origen | Caso 11. CA-25. R-04. DP-21. RT-12.12. REQ-NEG-15 |
+| Cumplimiento | Sí |
+| Componente y trazabilidad | Flota y activos. EDT 8.4. CP-INT-17 y CP-UAT-02 |
+| Sección | Sección 3.2.3 |
+
+### RF-025
+
+| Campo | Contenido |
+|---|---|
+| Descripción | Gatillar el mantenimiento preventivo con el kilometraje real del equipo a bordo o de la telemetría de fábrica, indicando cuando el dato es estimado |
+| Actor | Jefatura de taller |
+| Precondición | Kilometraje real disponible por viaje |
+| Resultado | Orden preventiva generada por kilometraje real hacia el sistema de taller |
+| Prioridad | 2. Etapa 2, mes 21 |
+| Origen | Caso 5. CA-26. R-06. DP-12 y DP-21. REQ-NEG-13 y 14 |
+| Cumplimiento | Sí |
+| Componente y trazabilidad | Flota y activos. EDT 8.4 y EDT 6.4. CP-UNIT-14 y CP-HW-04 |
+| Sección | Sección 3.3.1 |
+
+### RF-026
+
+| Campo | Contenido |
+|---|---|
+| Descripción | Registrar invitación, anexo, modalidad, camiones, consentimientos, capacidades habilitadas y fechas. Adhesión firmada: una vez por RUT de los 148 transportistas iniciales, anexo firmado por mandante y representante autorizado, vigente, no revocado y registrado al corte. Contar modalidades completa y de datos; instalación, activación y consentimientos de conductores se controlan por separado |
+| Actor | Coordinación de adhesión |
+| Precondición | Campaña de adhesión iniciada |
+| Resultado | Ocho indicadores mensuales; al cierre de M9, 31 de octubre de 2027 bajo SA-01, al menos 60 firmados (40
+| Prioridad | 2. Etapa 1, mes 16 |
+| Origen | Caso 19. CA-27. R-02 y R-03. DP-02 y DP-05. REQ-NEG-19 |
+| Cumplimiento | Sí |
+| Componente y trazabilidad | Flota y activos. EDT 9.2 y EDT 5.2. CP-SYS-05 y CP-UAT-09 |
+| Sección | Sección 3.4.3 |
+
+### RF-027
+
+| Campo | Contenido |
+|---|---|
+| Descripción | Calcular a bordo la alerta de jornada próxima a agotarse según jornada restante, posición, ruta y tiempo hasta el lugar seguro de detención más cercano |
+| Actor | Conductor y torre |
+| Precondición | Catálogo de lugares seguros de detención levantado en la Etapa 1 |
+| Resultado | Toda alerta indica un lugar alcanzable antes de agotar la jornada |
+| Prioridad | 2. Etapa 1, mes 16 |
+| Origen | Caso 8. CA-28. R-01 y R-04. DP-07. RT-09.01 y RT-16.21. REQ-NEG-22 |
+| Cumplimiento | Sí |
+| Componente y trazabilidad | Personas y cumplimiento, calculado en el equipo a bordo. EDT 4.1 y EDT 5.1. CP-UNIT-18 y CP-HW-06 |
+| Sección | Sección 3.2.2 |
+
+### RF-028
+
+| Campo | Contenido |
+|---|---|
+| Descripción | Durante el período mixto, distinguir las modalidades completa, de datos y sin adhesión de S3. Mostrar por separado modalidad, fuente, nivel de evidencia y veredicto. La completa aporta nivel 2; la de datos combina reposo del camión de nivel 4 y atestación firmada de nivel 5, con asignación con marca. Sin adhesión se admite validación documental, pero sin atestación firmada el viaje no se asigna; una atestación válida permite asignar con marca conforme a RN-03. No presentar niveles menores como equivalentes |
+| Actor | Despachador de la torre |
+| Precondición | Flota con camiones en distintas modalidades de adhesión |
+| Resultado | Despacho con modalidad, evidencia y veredicto visibles: asigna, asigna con marca o bloquea; todas las modalidades conservan los bloqueos legales |
+| Prioridad | 2. Etapa 1, mes 16 |
+| Origen | Caso 13.3. CA-01, CA-02, CA-08 y CA-27. R-02 y R-03. DP-26 |
+| Cumplimiento | Sí |
+| Componente y trazabilidad | Planificación y tráfico. EDT 5.3. CP-SYS-05 y CP-UAT-09 |
+| Sección | Sección 3.3.2 |
+
+### RNF-001
+
+| Campo | Contenido |
+|---|---|
+| Descripción | Ninguna función exige interacción del conductor con un dispositivo mientras el vehículo se mueve. Toda captura y alerta en marcha es automática |
+| Categoría | Usabilidad y seguridad de las personas |
+| Umbral | Cero interacciones exigidas con el vehículo en movimiento |
+| Verificación | Prueba en ruta con conductores reales y revisión de cada pantalla |
+| Exigible | Compañía y terceros |
+| Prioridad | 1. Etapa 1, mes 16 |
+| Origen | R-01. CA-10 y CA-28. RT-13.08. REQ-NEG-21 |
+| Cumplimiento | Sí |
+| Componente y trazabilidad | Telemetría y geocercas, equipo a bordo. EDT 4.1. CP-UNIT-11 y CP-HW-06 |
+| Sección | Sección 3.2.7 |
+
+### RNF-002
+
+| Campo | Contenido |
+|---|---|
+| Descripción | La operación esencial a bordo no depende de la cobertura y conserva integridad, orden y ausencia de duplicados al sincronizar |
+| Categoría | Disponibilidad |
+| Umbral | 72 horas sin cobertura con cero eventos perdidos y cero duplicados |
+| Verificación | Prueba de 72 horas en banco y en ruta con reconexión simultánea |
+| Exigible | Compañía y terceros con equipo audIT |
+| Prioridad | 1. Etapa 1, mes 16 |
+| Origen | R-04. CA-09. DP-11. RT-03.10. REQ-NEG-20 |
+| Cumplimiento | Sí |
+| Componente y trazabilidad | Telemetría y geocercas, equipo a bordo. EDT 4.1. CP-UNIT-23 y CP-HW-03 |
+| Sección | Sección 3.3.3 |
+
+### RNF-003
+
+| Campo | Contenido |
+|---|---|
+| Descripción | Ningún equipo de un tercero se interviene, reconfigura o reemplaza sin su acuerdo expreso. Lo no autorizado queda deshabilitado y visible como tal |
+| Categoría | Cumplimiento e interoperabilidad |
+| Umbral | Cero cambios sobre equipos de terceros sin anexo firmado |
+| Verificación | Auditoría de la ingesta de plataformas y del registro de adhesión |
+| Exigible | Compañía y contratista |
+| Prioridad | 1. Etapa 1, mes 16 |
+| Origen | R-03. DP-02 y DP-04. REQ-NEG-18 |
+| Cumplimiento | Sí |
+| Componente y trazabilidad | Telemetría y geocercas, ingesta de plataformas. EDT 6.2. CP-INT-07 y CP-INT-08 |
+| Sección | Sección 3.2.5 |
+
+### RNF-004
+
+| Campo | Contenido |
+|---|---|
+| Descripción | Toda intervención física a bordo ocurre durante el paso normal del camión por un terminal, sin inmovilizarlo más allá de ese tiempo |
+| Categoría | Operabilidad |
+| Umbral | Cero horas de inmovilización adicional a la estadía normal en terminal |
+| Verificación | Registro de portería contra registro de montaje por camión |
+| Exigible | Contratista |
+| Prioridad | 2. Etapa 1, mes 16 |
+| Origen | R-05, R-10 y R-11. DP-25 |
+| Cumplimiento | Sí |
+| Componente y trazabilidad | Flota y activos. EDT 4.2. CP-UAT-02 y CP-HW-08 |
+| Sección | Sección 3.4.5 |
+
+### RNF-005
+
+| Campo | Contenido |
+|---|---|
+| Descripción | La lectura del vehículo es de solo lectura, sin contacto con el cableado y sin afectar garantía ni sistemas de seguridad |
+| Categoría | Seguridad del vehículo |
+| Umbral | Cero mensajes transmitidos al bus del vehículo |
+| Verificación | Evidencia de diseño: lectura aislada descrita en S4. Verificación prevista: analizador independiente durante lectura y reinicio, cero tramas de la solución, y autorización del fabricante cuando corresponda. Revisar garantía e interferencias antes del montaje |
+| Exigible | Contratista |
+| Prioridad | 2. Etapa 1, mes 16 |
+| Origen | R-06. DP-12. REQ-NEG-13 |
+| Cumplimiento | Parcial: diseño de solo lectura con homologación pendiente |
+| Componente y trazabilidad | Flota y activos, equipo a bordo. EDT 4.1 y 6.3. CP-UNIT-16 y CP-HW-04 (T-17) |
+| Sección | Sección 3.2.7 |
+
+### RNF-006
+
+| Campo | Contenido |
+|---|---|
+| Descripción | El sistema contable sigue como único emisor tributario. La integración es idempotente y nunca produce dos documentos para un viaje |
+| Categoría | Cumplimiento e integridad |
+| Umbral | Cero folios duplicados ante reintentos o reconexiones |
+| Verificación | Prueba de reintentos y conciliación diaria de folios contra viajes |
+| Exigible | Compañía |
+| Prioridad | 1. Etapa 1, mes 16 |
+| Origen | R-08. DP-03 y DP-09 |
+| Cumplimiento | Sí |
+| Componente y trazabilidad | Operación de fletes y capa anticorrupción. EDT 6.1. CP-INT-12 y CP-INT-11 |
+| Sección | Sección 3.4.2 |
+
+### RNF-007
+
+| Campo | Contenido |
+|---|---|
+| Descripción | La solución no instala equipamiento ni impone procedimientos en los puntos de carga y descarga de terceros |
+| Categoría | Cumplimiento |
+| Umbral | Cero equipos instalados en instalaciones de clientes |
+| Verificación | Revisión del inventario del Formulario T-11 y del procedimiento de terreno |
+| Exigible | Compañía y clientes |
+| Prioridad | 2. Etapa 1, mes 16 |
+| Origen | R-09. CA-10 y CA-12 |
+| Cumplimiento | Sí |
+| Componente y trazabilidad | Telemetría y geocercas. EDT 5.4. CP-UNIT-08 y CP-SYS-03 |
+| Sección | Sección 3.2.7 |
+
+### RNF-008
+
+| Campo | Contenido |
+|---|---|
+| Descripción | La solución absorbe cierres del paso Los Libertadores de hasta 12 días con camiones detenidos, conservando la evidencia y sincronizando al reanudar |
+| Categoría | Continuidad |
+| Umbral | 288 horas de registro a bordo sin pérdida |
+| Verificación | Prueba de capacidad del almacenamiento a bordo con carga de 288 horas |
+| Exigible | Compañía y terceros con equipo audIT |
+| Prioridad | 2. Etapa 1, mes 16 |
+| Origen | R-12. DP-20. RT-10.05 |
+| Cumplimiento | Sí |
+| Componente y trazabilidad | Telemetría y geocercas, equipo a bordo y nodo de San Bernardo. EDT 4.1 y EDT 3.4. CP-HW-03 y CP-PERF-02 |
+| Sección | Sección 3.3.3 |
+
+### RNF-009
+
+| Campo | Contenido |
+|---|---|
+| Descripción | La solución es administrable por un área de tecnología de nueve personas. Toda especialidad que el mandante no tiene se entrega como servicio |
+| Categoría | Operabilidad |
+| Umbral | Funciones de especialista dedicado cubiertas al 100
+| Verificación | Matriz de responsabilidades revisada en la transferencia |
+| Exigible | Compañía y contratista |
+| Prioridad | 2. Etapa 1, mes 16 |
+| Origen | R-13. RT-21.06 |
+| Cumplimiento | Sí |
+| Componente y trazabilidad | Plataforma transversal, servicio de operación. EDT 13.1 y EDT 11.4. CP-SYS-16 y CP-UAT-01 |
+| Sección | Sección 3.4.6 |
+
+### RNF-010
+
+| Campo | Contenido |
+|---|---|
+| Descripción | El costo de operación de 36 meses se declara por componente: nube, conectividad a bordo, soporte, reposición de equipos y retiro |
+| Categoría | Operabilidad y costo |
+| Umbral | 100
+| Verificación | Conciliación entre el Formulario T-11 y la Oferta Económica |
+| Exigible | Contratista |
+| Prioridad | 2. Etapa 1, mes 16 |
+| Origen | R-14. DP-05 y DP-11 |
+| Cumplimiento | Sí |
+| Componente y trazabilidad | Plataforma transversal. EDT 1.1. CP-PERF-08 y CP-SYS-01 |
+| Sección | Sección 3.2.7 |
+
+### RNF-011
+
+| Campo | Contenido |
+|---|---|
+| Descripción | Los despliegues nunca detienen la flota y permiten la convivencia de camiones equipados, homologados y no adheridos |
+| Categoría | Disponibilidad y transición |
+| Umbral | Cero detenciones de flota por despliegue |
+| Verificación | Registro de cada liberación con su efecto en la operación |
+| Exigible | Compañía y terceros |
+| Prioridad | 2. Etapa 1, mes 16 |
+| Origen | R-05, R-10 y R-11. DP-25 y DP-26 |
+| Cumplimiento | Sí |
+| Componente y trazabilidad | Plataforma transversal. EDT 11.2. CP-INT-05 y CP-SYS-05 |
+| Sección | Sección 3.4.5 |
+
+### RNF-012
+
+| Campo | Contenido |
+|---|---|
+| Descripción | Los registros probatorios muestran autor, origen, fecha y valores anteriores, y nunca sobrescriben el historial |
+| Categoría | Integridad y no repudio |
+| Umbral | Cadena de integridad verificable en el 100
+| Verificación | Prueba de manipulación simulada y verificación por un tercero |
+| Exigible | Compañía |
+| Prioridad | 1. Etapa 1, mes 16 |
+| Origen | CA-04. DP-24 |
+| Cumplimiento | Sí |
+| Componente y trazabilidad | Personas y cumplimiento, almacenamiento inmutable. EDT 5.1. CP-SEC-08 y CP-UNIT-07 |
+| Sección | Sección 3.3.2 |
+
+### RNF-013
+
+| Campo | Contenido |
+|---|---|
+| Descripción | Los datos personales y comerciales se tratan con minimización, acceso por rol y atributo, cifrado en tránsito y en reposo, y cifrado de campo para conductores externos, localización y tarifas |
+| Categoría | Seguridad y privacidad |
+| Umbral | Cifrado de campo en el 100
+| Verificación | Revisión de esquema y prueba de acceso no autorizado |
+| Exigible | Compañía y terceros |
+| Prioridad | 1. Etapa 1, mes 16 |
+| Origen | CA-23 y CA-29. DP-23 y DP-24. RT-11.10. REQ-NEG-17 |
+| Cumplimiento | Sí |
+| Componente y trazabilidad | Personas y cumplimiento, y capa de seguridad. EDT 3.2. CP-SEC-04 y CP-SEC-05 |
+| Sección | Sección 3.3.3 |
+
+### RNF-014
+
+| Campo | Contenido |
+|---|---|
+| Descripción | La conservación y eliminación respetan los plazos de cada dominio. La revocación de un consentimiento detiene la captura futura y no elimina evidencia cuya conservación es obligatoria |
+| Categoría | Cumplimiento |
+| Umbral | Plazos de RT-05.10 del Caso: jornada 5 años, documento 6, siniestros 10, posición 2 en línea |
+| Verificación | Prueba de ciclo de vida de datos y de borrado seguro |
+| Exigible | Compañía |
+| Prioridad | 2. Etapa 1, mes 16 |
+| Origen | CA-04 y CA-23. DP-13, DP-23 y DP-24. RT-05.10 |
+| Cumplimiento | Sí |
+| Componente y trazabilidad | Plataforma transversal, capa de datos. EDT 7.3. CP-SEC-08 y CP-INT-25 |
+| Sección | Sección 3.4.6 |
+
+La matriz cumple las cuatro reglas de control del Subdocumento 3. Los 42 requerimientos tienen origen,
+contexto, paquete y prueba. Los 29 criterios de aceptación tienen al menos un requerimiento, y los
+veintiséis del numeral 16.1 aparecen en algún origen. Los seis contextos y la plataforma transversal
+tienen requerimientos que los justifican.
+
+## Registro de reglas de negocio
+
+La Tabla T-12.3 enuncia las doce reglas que el Subdocumento 3 resume. Cada una indica quién puede
+cambiarla. Un cambio de regla sigue el procedimiento de control de cambios del Subdocumento 6 y queda versionado.
+
+**Tabla 3.2.** Reglas de negocio de la solución
+
+| ID | Enunciado | Cambia |
+|---|---|---|
+| RN-01 | Jornada del conductor de carga interurbana: no más de cinco horas de conducción continua seguidas de un descanso de al menos dos horas, ocho horas de descanso ininterrumpido en cada veinticuatro y 180 horas mensuales como tope, según el Artículo 25 bis del Código del Trabajo | Prevención de riesgos |
+| RN-02 | Conducción es tiempo con el camión en movimiento fuera de una geocerca de punto de cliente. Espera es tiempo detenido dentro de ella. Los umbrales de velocidad y duración se calibran en la marcha blanca contra el tacógrafo | Prevención de riesgos |
+| RN-03 | Con evidencia de nivel 1 a 4 se asigna según la cascada de S3. En la modalidad de datos, el reposo del camión de nivel 4 se complementa con atestación firmada de nivel 5: se asigna con marca y responsabilidad registrada del transportista. La validación documental sin adhesión requiere esa atestación; sin ella no se asigna. Con nivel 5 se asigna con marca; sin fuente se bloquea, con excepción sólo según RN-04. Ninguna evidencia levanta un bloqueo legal | Comité Ejecutivo |
+| RN-04 | Ninguna causa legal admite excepción. Si el bloqueo se debe a una fuente que no responde, la excepción la autorizan el jefe de turno de la torre y prevención de riesgos, vale para un viaje, registra el motivo y se revisa cada mes | Comité Ejecutivo |
+| RN-05 | El equipo es apto si su tipo corresponde a la carga, sus revisiones y permisos están vigentes, su mantenimiento no está vencido y, para carga peligrosa, cumple el DS 298 | Control de flota |
+| RN-06 | Prelación al asignar: primero el veredicto favorable, luego la ventana comprometida con el cliente, luego la menor distancia en vacío. Los viajes que salen de puntos sin cobertura y sin datos de carga previos se asignan a camiones con equipo audIT | Operaciones |
+| RN-07 | Espera es el tiempo entre la llegada y la salida por geocerca menos el tiempo libre pactado en el contrato del cliente, parametrizado por contrato | Comercial |
+| RN-08 | La liquidación de un transportista suma los viajes cerrados con conformidad por la tarifa pactada, más la parte pactada de la espera recuperada, menos los descuentos del contrato. Toda corrección posterior es un registro nuevo con motivo | Finanzas |
+| RN-09 | El retorno se ofrece al camión que quedará vacío más cerca de una carga compatible de la propia compañía, con preferencia para la flota adherida dentro del contrato vigente | Operaciones |
+| RN-10 | El equipo audIT transmite posición sólo dentro de la ventana del viaje asignado por la compañía. La revocación detiene la captura futura en no más de cinco minutos y no elimina evidencia de conservación obligatoria | Comité Ejecutivo |
+| RN-11 | Ningún viaje inicia el movimiento sin documento de transporte emitido por el sistema contable y su representación completa y conforme disponible en cabina | Finanzas |
+| RN-12 | Toda vigencia avisa a 60, 30 y 7 días al titular y a quien debe actuar. Vencida, bloquea la asignación | Prevención de riesgos |
+
+Las reglas RN-03, RN-04 y RN-10 sólo las cambia el Comité Ejecutivo porque alteran el equilibrio entre
+seguridad, operación y privacidad que el Caso pide arbitrar. Las demás las cambia el área dueña del
+proceso.
+
+## Registro de supuestos
+
+La Tabla T-12.4 declara los supuestos del alcance con su fundamento. Su efecto si fallan y su
+validación están en la sección 3.2.6 del Subdocumento 3.
+
+**Tabla 3.3.** Supuestos del alcance y su fundamento
+
+| ID | Supuesto | Fundamento |
+|---|---|---|
+| SA-01 | Febrero de 2027 se usa para proyectar fechas civiles | M1 es el primer mes completo de ejecución. Febrero y marzo permiten M16 y M21 fuera de diciembre a abril. Con enero o abril se eleva consulta a la Contraparte Técnica por conflicto. Se mantienen los hitos E-25 |
+| SA-02 | Paso por terminal cada 6 días y 22 % de terceros bajo una vez al mes | Restricción 5 del Caso |
+| SA-03 | Dos de las tres plataformas entregan datos por interfaz | Capítulo 5 del Caso: dos con acceso de consulta y una sin exportación |
+| SA-04 | El sistema contable recibe datos por interfaz | Hoy recibe por redigitación, lo que muestra que el dato le llega |
+| SA-05 | La renegociación de 2027 es posterior a julio | El Caso no da la fecha. Se confirma con finanzas en el mes 1 |
+| SA-06 | La autoridad admite el registro electrónico de jornada | Resolución Exenta 1213 de 2009 de la Dirección del Trabajo y consulta C-10 |
+| SA-07 | El mandante firma los anexos de adhesión | El contrato de transporte es entre el mandante y el transportista |
+| SA-08 | Los terceros con equipo conservan su servicio de posicionamiento | Riesgo de apagado de redes 2G y 3G tratado en el Subdocumento 8 |
+
+La Tabla T-12.5 resuelve las veintiséis decisiones del Caso, numeral 16.1, pp. 34 a 36, que el
+Caso, numeral 17.1, p. 38 obliga a incluir en este registro.
+
+**Tabla 3.4.** Decisiones del numeral 16.1 tomadas por audIT
+
+| DP | Decisión tomada | Dónde se sostiene |
+|---|---|---|
+| 01 | La jornada del conductor externo la acredita el dueño del camión con la cascada de seis niveles y la regla RN-03 | RF-002, RF-003 y sección 3.3.2 |
+| 02 | Al transportista se le ofrece liquidación visible, cálculo desde la evidencia, parte de la espera recuperada y preferencia en retornos. Quien no adhiere opera sin veredicto instrumental | RF-026 y sección 3.4.3 |
+| 03 | El sistema de 2013 se sustituye por funciones y se retira en el mes 21, con consulta hasta el 24 | sección 3.2.4 |
+| 04 | Dos plataformas se integran por interfaz. Los camiones de la que no exporta se tratan como sin equipo y se les ofrece la modalidad completa | RF-008 y RNF-003 |
+| 05 | El equipo lo compra el mandante, queda en comodato y audIT lo instala y retira en terminal sin costo para el transportista | RF-026 e innovación 4 |
+| 06 | Excepción al bloqueo según la regla RN-04 | RF-001 |
+| 07 | La alerta anticipa el tiempo hasta el lugar seguro más cercano más un margen fijado en la Etapa 1 | RF-027 |
+| 08 | Llegada y salida por geocerca virtual evaluada a bordo | RF-010 y RNF-007 |
+| 09 | Documento sin cobertura por emisión anticipada o por datos enviados por satélite. El sistema contable siempre emite | RF-014 y sección 3.4.2 |
+| 10 | Conformidad con firma electrónica del destinatario en la aplicación, disponible el mismo día | RF-012 |
+| 11 | Frecuencia de muestreo y consumo de datos derivados en el Subdocumento 4 | sección 4.2.2 |
+| 12 | Telemetría de fábrica de los 61 tractocamiones por lectura sin contacto, sujeta a la autorización de cada fabricante | RNF-005 y RF-025 |
+| 13 | audIT descarga el tacógrafo en el paso por terminal, con frecuencia fijada en la Etapa 1, y conserva el original | RF-007 |
+| 14 | Retorno según la regla RN-09 | RF-015 |
+| 15 | Costo preliminar en 24 horas con faltantes marcados y definitivo al llegar el combustible | RF-016 |
+| 16 | Costo del camión subcontratado como costo contractual, comparado a igualdad de componentes | RF-017 |
+| 17 | Estudio de costo por ruta y contrato en el mes 6, antes de la renegociación de 2027 | RF-016 y sección 3.2.1 |
+| 18 | El transportista es responsable de renovar las vigencias de sus conductores y camiones por el anexo. La compañía avisa y bloquea | RF-005 y RN-12 |
+| 19 | Lista de verificación de carga peligrosa firmada en el punto de carga contra el documento emitido | RF-006 |
+| 20 | Cierre del paso: registro a bordo de 288 horas, conductor en descanso registrado y reprogramación por la torre | RNF-008 |
+| 21 | El taller externo registra su intervención en la aplicación, perfil terminal y taller | RF-024 |
+| 22 | Emisiones de terceros con el rendimiento del tramo cuando no hay dato de combustible, declarado como estimación | RF-023 |
+| 23 | Al cliente sólo se muestra lo que el dueño del camión autorizó, durante el servicio | RF-021 y RN-10 |
+| 24 | Integridad por cadena de sellos y almacenamiento inmutable. Corrección como registro nuevo | RF-004 y RNF-012 |
+| 25 | Flota propia en los meses 6 a 9, terceros desde el mes 7 con adhesión y pausa en los meses 11 a 15 | sección 3.4.5 |
+| 26 | Una sola forma de despachar con el nivel de evidencia de cada camión visible | RF-028 |
+
+Ninguna de las veintiséis queda abierta. Las decisiones 11 y 12 dependen de lo que midan la
+caracterización en terreno y la factibilidad con los fabricantes, y su resultado ajusta parámetros, no
+la decisión.
+
+## Criterios de aceptación
+
+La Tabla T-12.6 compromete los 29 criterios del Caso, capítulo 18, pp. 41 a 43 con su meta, el mes
+del contrato en que se alcanza y la forma de medirlo.
+
+**Tabla 3.5.** Criterios de aceptación con meta, mes y medición
+
+| CA | Meta comprometida | Mes | Medición |
+|---|---|---|---|
+| 1 | Cero salidas con jornada, habilitación o equipo no apto | 16 | Auditoría mensual del 100 % de las asignaciones |
+| 2 | 100 % de los viajes con veredicto de jornada y su nivel de evidencia | 16 | Reporte de viajes por nivel |
+| 3 | 100 % de las asignaciones a conductores externos con veredicto disponible | 16 | Registro de asignaciones |
+| 4 | 100 % de los registros probatorios con cadena de integridad verificable | 15 | Prueba de manipulación en marcha blanca |
+| 5 | 100 % de las vigencias migradas con verificación documental y con efecto sobre la asignación | 12 | Acta de conciliación de la migración |
+| 6 | Cero salidas de carga peligrosa sin lista firmada y coincidente | 16 | Auditoría de los viajes de los 18 camiones |
+| 7 | 100 % de los tacógrafos descargados en la frecuencia fijada | 12 | Frecuencia fijada en el mes 12, medida desde el 16 |
+| 8 | 100 % de la flota en una vista, con los camiones sin reporte señalados | 16 | Reporte diario de la vista única |
+| 9 | Cero eventos perdidos en 72 horas sin cobertura | 15 | Prueba de 72 horas en ruta |
+| 10 | 100 % de las visitas de camiones con equipo audIT registradas por geocerca | 12 | Precisión de geocerca fijada en el mes 12 |
+| 11 | Objeciones bajo el 20 % de los cobros por espera respaldados | 21 | Promedio móvil de tres meses |
+| 12 | 100 % de las conformidades disponibles el mismo día o al reconectar | 16 | Conciliación diaria |
+| 13 | 100 % de los documentos emitidos desde la orden, sin redigitación | 16 | Conciliación de folios contra viajes |
+| 14 | 100 % de las salidas sin cobertura con representación completa y conforme en cabina antes del movimiento | 16 | Registro de disponibilidad y conformidad de la representación contra primera posición; ensayo integral del límite de 90 segundos en CP-HW-11 y CP-PERF-05 durante A12 |
+| 15 | Kilómetros en vacío bajo el 18 % en población comparable | 33 | Medición trimestral desde el mes 21 |
+| 16 | 95 % de los viajes con costo trazable por componente | 16 | Reporte mensual de costo |
+| 17 | 100 % de los viajes con costo preliminar en 24 horas | 16 | Registro de cierre contra publicación |
+| 18 | Modelo que explica el 80 % de la variación en población comparable | 21 | Validación del modelo con datos de doce meses |
+| 19 | Estudio de costo por ruta y contrato antes de la renegociación | 6 | Entrega del estudio a finanzas |
+| 20 | Liquidación en un día hábil con menos del 1 % corregido | 16 | Registro de correcciones por cierre |
+| 21 | 100 % de los transportistas adheridos con acceso a su liquidación en curso | 16 | Registro de acceso al portal |
+| 22 | Posición al cliente en 2 minutos dentro de lo autorizado | 21 | Medición de latencia y registro de autorizaciones |
+| 23 | Revocación efectiva en no más de cinco minutos | 16 | Prueba de revocación y bitácora |
+| 24 | Método declarado en el mes 16 y cálculo mensual verificable | 21 | Revisión del método por un tercero antes de 2029 |
+| 25 | 100 % de las intervenciones de talleres externos informadas en la hoja de vida | 21 | Conciliación con facturas de talleres |
+| 26 | 100 % de los preventivos de la flota propia por kilometraje real | 21 | Registro de órdenes del sistema de taller |
+| 27 | 104 transportistas adheridos en el mes 16 y 134 en el 21 | 16 y 21 | Ocho indicadores mensuales de adhesión |
+| 28 | 100 % de las alertas con lugar seguro alcanzable antes de agotar la jornada | 12 | Anticipación fijada en el mes 12 con el catálogo de lugares |
+| 29 | El dueño del camión ve sus camiones, viajes y liquidación y decide qué comparte | 16 | Prueba de aceptación con transportistas |
+
+Los criterios 7, 10 y 28 fijan su parámetro en el mes 12 con datos medidos en la Etapa 1 y se cumplen
+desde el mes 16. El criterio 19 es el único que se alcanza antes de la producción, porque la
+renegociación de 2027 no espera al Artículo 17.
+
+## Registro de consultas y vacíos
+
+La Tabla T-12.7 recoge las consultas formuladas en el período del FEP01, Artículo 43, p. 27 y los vacíos que
+audIT encontró después y que el Caso, numeral 16.1, p. 36 invita a declarar.
+
+**Tabla 3.6.** Consultas al mandante y vacíos detectados
+
+| ID | Materia | Qué desbloquea |
+|---|---|---|
+| C-01 | RT-08.10 pide costo unitario de cada equipo y el Artículo 50.2 prohíbe precios en la oferta técnica | Formato del Formulario T-11 |
+| C-02 | Alcance de las 72 horas sin cobertura frente a la restricción 3 | Población a la que se exige |
+| C-03 | Tipología a la que debe llevarse la sala de San Bernardo | Dimensionamiento de la sala |
+| C-04 | Instalaciones aptas para un sitio secundario | Emplazamiento del secundario |
+| C-05 | Ampliación de la sala más allá de 26 m² | Dimensionamiento de la sala |
+| C-06 | Mediciones previas de cobertura móvil | Plazo de la caracterización |
+| C-07 | Proveedor de cada uno de los 226 camiones de terceros | Estándar de homologación |
+| C-08 | Camiones de terceros con tacógrafo digital | Alcance de la descarga |
+| C-09 | Camiones de carga peligrosa propios y de terceros | Prioridad del enlace satelital |
+| C-10 | Autorización para sustituir el registro en papel por uno electrónico | Hito regulatorio de la jornada |
+| C-11 | Códigos del capítulo 15 del Caso que en las transversales tratan otra materia | Trazabilidad de toda la oferta |
+| V-01 | Los meses 16 y 21 sólo caben fuera de diciembre a abril con inicio en febrero o marzo, y la marcha blanca de la Etapa 1 cae siempre en la temporada de fruta | Supuesto SA-01 y plan de marcha blanca |
+| V-02 | La renegociación de 2027 ocurre antes de cualquier producción posible según el Artículo 17 | Estudio de costo del mes 6 |
+
+Los vacíos V-01 y V-02 no están en la lista del numeral 16.1 y condicionan el plan. Ambos se resuelven
+en esta oferta sin alterar el cronograma obligatorio.
+
+\providecommand\localizadorRT[3]{
+  #1\ifcsname r@#2\endcsname\space(sección ?)\else
+    \ifcsname r@S#3-#2\endcsname\space(sección ?\SiFolioContinuo{}{, p. \folio{#2} del PDF})\fi
+  \fi}
+
+## Cumplimiento individual de las Bases
+
+La Tabla T-12.8 se pronuncia sobre los 374 códigos del índice de FEP02. La
+Tabla T-12.9 registra los 27 parámetros de FEP03 por separado para conservar cada exigencia
+cuando el mismo código trata materias distintas. La Tabla T-12.10 vincula los artículos
+del capítulo 4 de FEP01 con su referencia documental. Las restricciones, los criterios y las
+decisiones del Caso se desarrollan en S3, el catálogo de este formulario y las
+Tabla T-12.5 y Tabla T-12.6.
+
+«Cumple en diseño» identifica respaldo técnico específico en la oferta. «Parcial» indica que el
+diseño cubre parte de la exigencia o que falta una condición para acreditarla. «No acreditado»
+indica que el expediente disponible carece de un antecedente suficiente para ese código. En
+ese caso, un localizador relacionado orienta el cotejo y no constituye acreditación. El nombre
+y la versión del producto, cuando están definidos, se consultan en el localizador de la oferta y
+en el inventario del T-11. Las versiones que dependen de homologación se fijarán en las fichas
+de recepción. La última columna registra verificaciones previstas, incluidas las pruebas
+identificadas por código en T-17. Las actas, logs o certificados obtenidos durante la ejecución
+se incorporarán al expediente. Los hallazgos se siguen hasta su resolución según el plan de
+calidad.
+
+**Tabla 3.7.** Requisitos individuales de las Bases Técnicas Transversales
+
+| Código y fuente | Exigencia | Estado | Componente y localizador | Verificación prevista |
+|---|---|---|---|---|
+| \multicolumn{5}{l}{\bfseries Capítulo 2. Arquitectura de referencia} |
+| RT-02.01\newline FEP02, p. 6\newline Obligatorio | La solución se organizará en las ocho capas del numeral 2.1. El PROPONENTE presentará el diagrama de la arquitectura lógica identificando cada capa, sus componentes y las interfaces entre ellas. | Cumple en diseño | Ocho capas de arquitectura\newline \localizadorRT{S4, «Las ocho capas»}{sec:4-capas}{04} | Diagrama lógico y revisión de interfaces. |
+| RT-02.02\newline FEP02, p. 6\newline Obligatorio | La arquitectura será modular, con límites de contexto explícitos y acoplamiento débil. Se rechazará toda arquitectura monolítica que no permita desplegar de forma independiente sus componentes críticos. | Cumple en diseño | Límites de contexto y despliegue por servicio\newline \localizadorRT{S4, «Los seis contextos delimitados»}{sec:4-contextos}{04} | Demostración de despliegue independiente. |
+| RT-02.03\newline FEP02, p. 7\newline Obligatorio | La descripción de la arquitectura se ajustará a ISO/IEC/IEEE 42010, con vistas lógica, de procesos, de despliegue, de datos y de seguridad. | No acreditado | Arquitectura lógica\newline \localizadorRT{S4, «Estilo, principios de diseño y contratos de dominio»}{sec:4-estilo}{04} | Revisión de diseño y escenarios de arquitectura. |
+| RT-02.04\newline FEP02, p. 7\newline Obligatorio | El PROPONENTE mantendrá un registro de decisiones de arquitectura (ADR) fechado, con la alternativa escogida, las alternativas descartadas y el criterio de decisión. El registro es entregable contractual y se actualizará durante toda la ejecución. | Cumple en diseño | Registro de decisiones de arquitectura\newline \localizadorRT{S4, «Registro de decisiones de arquitectura»}{sec:4-adr}{04} | Registro ADR actualizado durante la ejecución. |
+| RT-02.05\newline FEP02, p. 7\newline Obligatorio | La capa de servicios de negocio será sin estado. El estado de sesión y el estado de proceso residirán en almacenes externos con alta disponibilidad. | No acreditado | Resiliencia\newline \localizadorRT{S4, «Resiliencia»}{sec:4-resiliencia}{04} | Revisión de diseño y escenarios de arquitectura. |
+| RT-02.06\newline FEP02, p. 7\newline Obligatorio | Toda operación de escritura expuesta a reintentos será idempotente, con clave de idempotencia declarada por el cliente y ventana de deduplicación documentada. | Cumple en diseño | Idempotencia de escritura\newline \localizadorRT{S4, «Idempotencia y ventana de deduplicación»}{sec:4-idempotencia}{04} | CP-SYS-01: reintento sin doble asignación. |
+| RT-02.07\newline FEP02, p. 7\newline Obligatorio | Los flujos de eventos garantizarán entrega al menos una vez, con deduplicación en el consumidor y orden garantizado dentro de la partición o del agregado cuando el proceso lo exija. | Cumple en diseño | Eventos y deduplicación\newline \localizadorRT{S4, «Idempotencia y ventana de deduplicación»}{sec:4-idempotencia}{04} | Cotejo de reenvío y deduplicación. |
+| RT-02.08\newline FEP02, p. 7\newline Obligatorio | La solución implementará patrones de resiliencia demostrables: reintento con retroceso exponencial y variación aleatoria, cortacircuitos, mamparos de aislamiento, límites de tasa y tiempo de espera explícito en toda llamada remota. No se admiten llamadas remotas sin tiempo de espera. | Cumple en diseño | Patrones de resiliencia\newline \localizadorRT{S4, «Resiliencia»}{sec:4-resiliencia}{04} | Ensayo de degradación y recuperación. |
+| RT-02.09\newline FEP02, p. 7\newline Obligatorio | La solución degradará de forma elegante: ante la indisponibilidad de un componente no crítico deberá continuar operando en modo reducido, informando la degradación a la persona usuaria, y nunca fallar de forma total. | Cumple en diseño | Degradación controlada\newline \localizadorRT{S4, «Degradación, escalamiento y puntos únicos de falla»}{sec:4-degradacion}{04} | Ensayo de falla de componente no crítico. |
+| RT-02.10\newline FEP02, p. 7\newline Obligatorio | Las capas de aplicación e integración escalarán horizontalmente de forma automática, con umbrales, límites superiores y costo asociado declarados en la oferta. | Parcial | Degradación, escalamiento y puntos únicos de falla\newline \localizadorRT{S4, «Degradación, escalamiento y puntos únicos de falla»}{sec:4-degradacion}{04} | Revisión de diseño y escenarios de arquitectura. |
+| RT-02.11\newline FEP02, p. 7\newline Obligatorio | El PROPONENTE declarará explícitamente los puntos únicos de falla que subsistan en su arquitectura y justificará por qué son aceptables. Omitir esta declaración cuando existan puntos únicos de falla se evaluará como observación grave. | Cumple en diseño | Puntos únicos de falla\newline \localizadorRT{S4, «Degradación, escalamiento y puntos únicos de falla»}{sec:4-degradacion}{04} | Registro y validación de riesgos residuales. |
+| RT-02.12\newline FEP02, p. 7\newline Según caso | La solución admitirá su replicación a nuevas unidades, sitios, sucursales o filiales del CLIENTE sin rediseño arquitectónico, mediante parametrización o multi-tenencia. | No acreditado | Arquitectura lógica\newline \localizadorRT{S4, «Estilo, principios de diseño y contratos de dominio»}{sec:4-estilo}{04} | Revisión de diseño y escenarios de arquitectura. |
+| RT-02.13\newline FEP02, p. 7\newline Obligatorio | El PROPONENTE presentará un modelo de dominio del negocio del caso, con las entidades principales, sus relaciones y los eventos de negocio que las modifican. | Cumple en diseño | Modelo de dominio\newline \localizadorRT{S4, «Modelo táctico del dominio»}{sec:4-tactico}{04} | Revisión del modelo de dominio y eventos. |
+| RT-02.14\newline FEP02, p. 7\newline Deseable | Se valorará la aplicación documentada de patrones de arquitectura evolutiva que permitan sustituir un componente sin reescribir la solución: capa anticorrupción frente a sistemas heredados, estrangulamiento progresivo y abstracción de proveedores. | Cumple en diseño | Sustitución por funciones del TMS 2013\newline \localizadorRT{S3, «Decisión sobre el sistema de gestión de transporte de 2013»}{sec:3-sistema2013}{03} | CP-INT-05 y convivencia por función. |
+| \multicolumn{5}{l}{\bfseries Capítulo 3. Nube, sitio y borde} |
+| RT-03.01\newline FEP02, p. 8\newline Obligatorio | El PROPONENTE declarará el proveedor de nube pública, la región primaria y la región secundaria utilizadas. El proveedor deberá contar con presencia de región o zona en Chile o en Sudamérica. | Cumple en diseño | Regiones Azure\newline \localizadorRT{S4, «Emplazamiento de componentes»}{sec:4-emplazamiento}{04} | Inventario de regiones y contratos de provisión. |
+| RT-03.02\newline FEP02, p. 8\newline Obligatorio | Todos los componentes con requisito de alta disponibilidad se desplegarán en al menos dos zonas de disponibilidad. No se aceptará un diseño en una sola zona. | Parcial | Ambientes, alta disponibilidad y respaldos\newline \localizadorRT{S4, «Ambientes, alta disponibilidad y respaldos»}{sec:4-ambientes}{04} | Inventario y configuración de despliegue. |
+| RT-03.03\newline FEP02, p. 8\newline Obligatorio | La totalidad de la infraestructura se definirá como código, versionada en el repositorio del CLIENTE, revisable y reproducible. No se admite infraestructura creada manualmente por consola, salvo la cuenta raíz inicial, cuya creación deberá documentarse. | Cumple en diseño | Terraform en repositorio versionado\newline \localizadorRT{S6, «Infraestructura como código y gestión de configuración»}{sec:6-desarrollo-iac}{06} | Reconstrucción reproducible de infraestructura. |
+| RT-03.04\newline FEP02, p. 8\newline Obligatorio | La red se segmentará por capas, con subredes privadas para aplicación y datos, y exposición pública restringida a la capa de borde. Ningún componente de datos será alcanzable desde Internet. | Cumple en diseño | Segmentación de red\newline \localizadorRT{S4, «Topología de red y segmentación»}{sec:4-red}{04} | Validación de red y exposición de capas. |
+| RT-03.05\newline FEP02, p. 8\newline Obligatorio | El PROPONENTE privilegiará servicios administrados por sobre servicios autoadministrados cuando ello reduzca el riesgo operacional, y justificará cada excepción. | Parcial | Especificaciones Tecnologías de Software a utilizar\newline \localizadorRT{S4, «Especificaciones Tecnologías de Software a utilizar»}{sec:4-software}{04} | Inventario y configuración de despliegue. |
+| RT-03.06\newline FEP02, p. 8\newline Obligatorio | Se aplicarán prácticas FinOps: etiquetado obligatorio de todos los recursos por ambiente, módulo y centro de costo; presupuestos con alertas de desviación; y reporte mensual de consumo desglosado entregado al CLIENTE. | No acreditado | Plataforma de nube\newline \localizadorRT{S4, «Catálogo de servicios contratados en la nube»}{sec:4-catalogo}{04} | Inventario y configuración de despliegue. |
+| RT-03.07\newline FEP02, p. 8\newline Obligatorio | El PROPONENTE declarará su estrategia de reversibilidad y de mitigación del bloqueo por proveedor, identificando qué componentes son portables, cuáles no lo son y cuál sería el esfuerzo estimado de una migración. | Parcial | Convivencia con el sistema contable heredado\newline \localizadorRT{S4, «Convivencia con el sistema contable heredado»}{sec:4-contable}{04} | Inventario y configuración de despliegue. |
+| RT-03.08\newline FEP02, p. 8\newline Deseable | La solución empleará instancias reservadas, planes de ahorro o capacidad comprometida cuando el perfil de carga lo justifique, y lo reflejará en la estructura de costos. | No acreditado | Plataforma de nube\newline \localizadorRT{S4, «Catálogo de servicios contratados en la nube»}{sec:4-catalogo}{04} | Inventario y configuración de despliegue. |
+| RT-03.09\newline FEP02, p. 9\newline Deseable | Se valorará el uso de cómputo sin servidor o de contenedores administrados para las cargas de perfil variable, con el análisis comparativo de costo frente a instancias permanentes. | No acreditado | Plataforma de nube\newline \localizadorRT{S4, «Catálogo de servicios contratados en la nube»}{sec:4-catalogo}{04} | Inventario y configuración de despliegue. |
+| RT-03.10\newline FEP02, p. 9\newline Obligatorio | El componente on-premise operará de forma autónoma y degradada ante la pérdida total del enlace con la nube, durante un período mínimo de 24 horas continuas o el mayor que fije el caso. | Cumple en diseño | Operación desconectada de camiones y terminales\newline \localizadorRT{S4, «Operación desconectada, reconexión y escalamiento»}{sec:4-desconectada}{04} | CP-HW-03 y CP-PERF-02; comprobar 24 h en terminal y 72 h a bordo. |
+| RT-03.11\newline FEP02, p. 9\newline Obligatorio | Durante la operación desconectada, la solución continuará registrando las transacciones operacionales críticas de forma local, con integridad garantizada y sin pérdida de datos. | No acreditado | Borde, terminales y sitio\newline \localizadorRT{S4, «Operación desconectada, reconexión y escalamiento»}{sec:4-desconectada}{04} | Prueba funcional del borde y cotejo de configuración. |
+| RT-03.12\newline FEP02, p. 9\newline Obligatorio | Restablecido el enlace, la sincronización será automática, con reconciliación determinista de conflictos, regla de resolución documentada y bitácora auditable de las decisiones aplicadas. | No acreditado | Borde, terminales y sitio\newline \localizadorRT{S4, «Operación desconectada, reconexión y escalamiento»}{sec:4-desconectada}{04} | Prueba funcional del borde y cotejo de configuración. |
+| RT-03.13\newline FEP02, p. 9\newline Obligatorio | El PROPONENTE declarará qué funciones NO estarán disponibles en modo desconectado y qué procedimiento manual las suple. La ausencia de esta declaración se evaluará como observación grave. | Cumple en diseño | Funciones degradadas y suplencia manual\newline \localizadorRT{S4, «Especificaciones Data Center Secundario»}{sec:4-dc-secundario}{04} | Ensayo de caída completa, registro de funciones disponibles y suplencia manual. |
+| RT-03.14\newline FEP02, p. 9\newline Obligatorio | Los equipos on-premise críticos serán redundantes. El almacenamiento local tolerará la falla de al menos un disco; el PROPONENTE declarará el nivel RAID escogido y lo justificará frente a las alternativas. | No acreditado | Borde, terminales y sitio\newline \localizadorRT{S4, «Operación desconectada, reconexión y escalamiento»}{sec:4-desconectada}{04} | Prueba funcional del borde y cotejo de configuración. |
+| RT-03.15\newline FEP02, p. 9\newline Obligatorio | Los sistemas on-premise se endurecerán conforme a los CIS Benchmarks aplicables, con gestión centralizada de parches y ventana de aplicación acordada con el CLIENTE. | No acreditado | Borde, terminales y sitio\newline \localizadorRT{S4, «Operación desconectada, reconexión y escalamiento»}{sec:4-desconectada}{04} | Prueba funcional del borde y cotejo de configuración. |
+| RT-03.16\newline FEP02, p. 9\newline Obligatorio | El monitoreo del componente on-premise se integrará a la misma plataforma de observabilidad que la nube, con alertamiento unificado. | Parcial | Especificaciones Data Center Primaria\newline \localizadorRT{S4, «Especificaciones Data Center Primaria»}{sec:4-dc-primario}{04} | Prueba funcional del borde y cotejo de configuración. |
+| RT-03.17\newline FEP02, p. 9\newline Obligatorio | El enlace entre el sitio on-premise y la nube será redundante, con caminos físicos y proveedores distintos, y conmutación automática con tiempo de conmutación declarado. | Parcial | Enlaces, puntos únicos de falla y conmutación\newline \localizadorRT{S4, «Enlaces, puntos únicos de falla y conmutación»}{sec:4-enlaces}{04} | Prueba funcional del borde y cotejo de configuración. |
+| RT-03.18\newline FEP02, p. 9\newline Obligatorio | Los dispositivos de borde y de terreno se administrarán de forma remota y centralizada: inventario, configuración, actualización de firmware y de aplicación, bloqueo y borrado remoto. | No acreditado | Borde, terminales y sitio\newline \localizadorRT{S4, «Operación desconectada, reconexión y escalamiento»}{sec:4-desconectada}{04} | Prueba funcional del borde y cotejo de configuración. |
+| RT-03.19\newline FEP02, p. 9\newline Deseable | Se valorará el procesamiento en el borde de las cargas que lo admitan —filtrado, agregación previa, inferencia local— reduciendo el volumen transferido y la dependencia del enlace. | No acreditado | Borde, terminales y sitio\newline \localizadorRT{S4, «Operación desconectada, reconexión y escalamiento»}{sec:4-desconectada}{04} | Prueba funcional del borde y cotejo de configuración. |
+| RT-03.20\newline FEP02, p. 9\newline Obligatorio | El PROPONENTE dimensionará el ancho de banda requerido por sitio, en régimen normal y en peak, y lo justificará con el cálculo de volumen de transacciones y de datos. | No acreditado | Red y enlaces\newline \localizadorRT{S4, «Enlaces, puntos únicos de falla y conmutación»}{sec:4-enlaces}{04} | Acta de instalación, prueba de red y respaldo. |
+| RT-03.21\newline FEP02, p. 9\newline Obligatorio | La conexión entre la red del CLIENTE y la nube se establecerá mediante enlace privado dedicado o red privada virtual con cifrado, según lo que el volumen y la criticidad justifiquen. | No acreditado | Red y enlaces\newline \localizadorRT{S4, «Enlaces, puntos únicos de falla y conmutación»}{sec:4-enlaces}{04} | Acta de instalación, prueba de red y respaldo. |
+| RT-03.22\newline FEP02, p. 10\newline Obligatorio | El acceso remoto de las personas trabajadoras del CLIENTE, incluido el trabajo desde el hogar, se resolverá con acceso a la red de confianza cero, con verificación de postura del dispositivo. No se admite exponer servicios internos directamente a Internet. | No acreditado | Red y enlaces\newline \localizadorRT{S4, «Enlaces, puntos únicos de falla y conmutación»}{sec:4-enlaces}{04} | Acta de instalación, prueba de red y respaldo. |
+| RT-03.23\newline FEP02, p. 10\newline Según caso | La red inalámbrica de los sitios operacionales, cuando el caso la requiera, contará con segmentación por tipo de dispositivo, autenticación por certificado o credencial de empresa y cobertura verificada mediante estudio de sitio. | No acreditado | Red y enlaces\newline \localizadorRT{S4, «Enlaces, puntos únicos de falla y conmutación»}{sec:4-enlaces}{04} | Acta de instalación, prueba de red y respaldo. |
+| RT-03.24\newline FEP02, p. 10\newline Deseable | El PROPONENTE declarará la calidad de servicio y la priorización de tráfico aplicada a las transacciones operacionales críticas frente al tráfico administrativo. | No acreditado | Enlaces, puntos únicos de falla y conmutación\newline \localizadorRT{S4, «Enlaces, puntos únicos de falla y conmutación»}{sec:4-enlaces}{04} | Acta de instalación, prueba de red y respaldo. |
+| \multicolumn{5}{l}{\bfseries Capítulo 4. Ambientes y entrega continua} |
+| RT-04.01\newline FEP02, p. 10\newline Obligatorio | Los cinco ambientes del numeral 4.1 estarán habilitados y operativos como condición del hito H3 del Formulario E-25. | Cumple en diseño | Ambientes de entrega y recuperación\newline \localizadorRT{S4, «Ambientes, alta disponibilidad y respaldos»}{sec:4-ambientes}{04} | Inventario y configuración de los cinco ambientes. |
+| RT-04.02\newline FEP02, p. 10\newline Obligatorio | Preproducción será equivalente a producción en topología, versiones de componentes y configuración. Las diferencias que subsistan por costo se declararán expresamente y se justificarán. | No acreditado | Flujo CI/CD\newline \localizadorRT{S6, «Ecosistema DevSecOps unificado en GitLab CI Enterprise»}{sec:6-desarrollo-devsecops}{06} | Registro de repositorios, controles y canalización. |
+| RT-04.03\newline FEP02, p. 10\newline Obligatorio | El código residirá en un sistema de control de versiones con ramas protegidas, revisión obligatoria por pares y prohibición de escritura directa sobre la rama principal. | No acreditado | Ecosistema DevSecOps unificado en GitLab CI Enterprise\newline \localizadorRT{S6, «Ecosistema DevSecOps unificado en GitLab CI Enterprise»}{sec:6-desarrollo-devsecops}{06} | Registro de repositorios, controles y canalización. |
+| RT-04.04\newline FEP02, p. 10\newline Obligatorio | Existirá trazabilidad completa entre requerimiento, incidencia, cambio de código, prueba ejecutada y despliegue realizado. | No acreditado | Flujo CI/CD\newline \localizadorRT{S6, «Ecosistema DevSecOps unificado en GitLab CI Enterprise»}{sec:6-desarrollo-devsecops}{06} | Registro de repositorios, controles y canalización. |
+| RT-04.05\newline FEP02, p. 10\newline Obligatorio | El flujo de integración continua ejecutará, como mínimo: compilación, pruebas unitarias, análisis estático de código, análisis de composición de software, escaneo de secretos y escaneo de imágenes de contenedor, con criterios de bloqueo automático del despliegue. | No acreditado | Flujo CI/CD\newline \localizadorRT{S6, «Ecosistema DevSecOps unificado en GitLab CI Enterprise»}{sec:6-desarrollo-devsecops}{06} | Registro de repositorios, controles y canalización. |
+| RT-04.06\newline FEP02, p. 11\newline Obligatorio | Los despliegues serán automatizados y reproducibles, con reversión automatizada y sin intervención manual en el paso a producción. | No acreditado | Flujo CI/CD\newline \localizadorRT{S6, «Ecosistema DevSecOps unificado en GitLab CI Enterprise»}{sec:6-desarrollo-devsecops}{06} | Registro de repositorios, controles y canalización. |
+| RT-04.07\newline FEP02, p. 11\newline Obligatorio | La estrategia de despliegue permitirá liberar sin interrupción del servicio: azul-verde, canario o despliegue progresivo. Se declarará cuál se emplea y se demostrará en Preproducción antes de cada paso a producción. | No acreditado | Flujo CI/CD\newline \localizadorRT{S6, «Ecosistema DevSecOps unificado en GitLab CI Enterprise»}{sec:6-desarrollo-devsecops}{06} | Registro de repositorios, controles y canalización. |
+| RT-04.08\newline FEP02, p. 11\newline Obligatorio | Toda configuración estará externalizada del artefacto y gestionada por ambiente. Un mismo artefacto deberá poder promoverse de QA a Preproducción y a Producción sin recompilación. | No acreditado | Cadencia, entrega y reversión verificable\newline \localizadorRT{S6, «Cadencia, entrega y reversión verificable»}{sec:06-cadencia-entrega-y-reversion-verificable}{06} | Registro de repositorios, controles y canalización. |
+| RT-04.09\newline FEP02, p. 11\newline Obligatorio | Los secretos residirán en un gestor de secretos con rotación automática y auditoría de acceso. Queda prohibida toda credencial embebida en código, imágenes o archivos de configuración. | No acreditado | Flujo CI/CD\newline \localizadorRT{S6, «Ecosistema DevSecOps unificado en GitLab CI Enterprise»}{sec:6-desarrollo-devsecops}{06} | Registro de repositorios, controles y canalización. |
+| RT-04.10\newline FEP02, p. 11\newline Obligatorio | Las migraciones de esquema de base de datos serán versionadas, reversibles y ejecutadas de forma automatizada, con estrategia de compatibilidad que permita convivir dos versiones de la aplicación durante el despliegue. | No acreditado | Cadencia, entrega y reversión verificable\newline \localizadorRT{S6, «Cadencia, entrega y reversión verificable»}{sec:06-cadencia-entrega-y-reversion-verificable}{06} | Registro de repositorios, controles y canalización. |
+| RT-04.11\newline FEP02, p. 11\newline Obligatorio | La cobertura de pruebas automatizadas del código de lógica de negocio será de al menos 70 %, con umbral bloqueante en el flujo de integración continua. | Parcial | Ecosistema DevSecOps unificado en GitLab CI Enterprise\newline \localizadorRT{S6, «Ecosistema DevSecOps unificado en GitLab CI Enterprise»}{sec:6-desarrollo-devsecops}{06} | Registro de repositorios, controles y canalización. |
+| RT-04.12\newline FEP02, p. 11\newline Obligatorio | El PROPONENTE declarará su frecuencia de despliegue objetivo, su tiempo desde el compromiso de código hasta producción, su tasa de cambios fallidos y su tiempo de restauración, y los medirá durante la Operación. | No acreditado | Ceremonias técnicas, artefactos y criterios de salida\newline \localizadorRT{S6, «Ceremonias técnicas, artefactos y criterios de salida»}{sec:6-desarrollo-ceremonias}{06} | Registro de repositorios, controles y canalización. |
+| RT-04.13\newline FEP02, p. 11\newline Deseable | Los ambientes no productivos se apagarán o reducirán fuera del horario de uso, con el ahorro reflejado en la estructura de costos. | No acreditado | Flujo CI/CD\newline \localizadorRT{S6, «Ecosistema DevSecOps unificado en GitLab CI Enterprise»}{sec:6-desarrollo-devsecops}{06} | Registro de repositorios, controles y canalización. |
+| RT-04.14\newline FEP02, p. 11\newline Deseable | Se valorará la existencia de ambientes efímeros por rama o por incidencia, creados y destruidos automáticamente. | No acreditado | Flujo CI/CD\newline \localizadorRT{S6, «Ecosistema DevSecOps unificado en GitLab CI Enterprise»}{sec:6-desarrollo-devsecops}{06} | Registro de repositorios, controles y canalización. |
+| \multicolumn{5}{l}{\bfseries Capítulo 5. Datos e interoperabilidad} |
+| RT-05.01\newline FEP02, p. 11\newline Obligatorio | El PROPONENTE entregará el modelo de datos documentado y un diccionario de datos con el nombre, el tipo, el dominio de valores, la obligatoriedad, el propietario y la sensibilidad de cada atributo. | Parcial | Diccionario de datos y restricciones\newline \localizadorRT{S5, «Diccionario de datos y restricciones»}{sec:5-diccionario}{05} | Cotejo del diccionario, políticas y controles del dato. |
+| RT-05.02\newline FEP02, p. 11\newline Obligatorio | El PROPONENTE justificará la selección del paradigma y del motor de persistencia: relacional o no relacional, garantías transaccionales, y la posición escogida entre consistencia y disponibilidad conforme al teorema CAP, para cada dominio de datos. | Parcial | Motores, transacciones y decisión ante partición\newline \localizadorRT{S5, «Motores, transacciones y decisión ante partición»}{sec:5-motores}{05} | Cotejo del diccionario, políticas y controles del dato. |
+| RT-05.03\newline FEP02, p. 11\newline Obligatorio | Toda operación de negocio será trazable: la solución permitirá reconstruir quién, qué, cuándo, desde qué dispositivo y con qué valores anteriores y posteriores, para cualquier registro y en cualquier momento del período de retención. | No acreditado | Políticas de gobernanza, calidad y retención histórica\newline \localizadorRT{S5, «Políticas de gobernanza, calidad y retención histórica»}{sec:5-gobernanza}{05} | Cotejo del diccionario, políticas y controles del dato. |
+| RT-05.04\newline FEP02, p. 11\newline Obligatorio | La calidad de datos se gestionará conforme a ISO/IEC 25012, con validación en el punto de captura, indicadores de completitud, exactitud y consistencia, y tablero de calidad disponible para el CLIENTE. | Parcial | Políticas de gobernanza, calidad y retención histórica\newline \localizadorRT{S5, «Políticas de gobernanza, calidad y retención histórica»}{sec:5-gobernanza}{05} | Cotejo del diccionario, políticas y controles del dato. |
+| RT-05.05\newline FEP02, p. 11\newline Obligatorio | El almacenamiento transaccional y el analítico estarán separados. Ninguna consulta analítica podrá degradar el desempeño de la operación. | Parcial | Segregación arquitectónica OLTP versus analítica (Lakehouse)\newline \localizadorRT{S5, «Segregación arquitectónica OLTP versus analítica (Lakehouse)»}{sec:5-oltp-olap}{05} | Cotejo del diccionario, políticas y controles del dato. |
+| RT-05.06\newline FEP02, p. 12\newline Obligatorio | La solución permitirá exportar la totalidad de la información del CLIENTE en formatos abiertos y documentados, en cualquier momento del Contrato, sin costo adicional y sin intervención del ADJUDICATARIO. | No acreditado | Modelo y gobierno de datos\newline \localizadorRT{S5, «Políticas de gobernanza, calidad y retención histórica»}{sec:5-gobernanza}{05} | Cotejo del diccionario, políticas y controles del dato. |
+| RT-05.07\newline FEP02, p. 12\newline Obligatorio | El PROPONENTE declarará la política de retención, archivado y eliminación por cada dominio de datos, coherente con la normativa aplicable al caso, e implementará un procedimiento verificable de eliminación segura. | No acreditado | Modelo y gobierno de datos\newline \localizadorRT{S5, «Políticas de gobernanza, calidad y retención histórica»}{sec:5-gobernanza}{05} | Cotejo del diccionario, políticas y controles del dato. |
+| RT-05.08\newline FEP02, p. 12\newline Obligatorio | Los datos personales se tratarán conforme al Artículo 85° de las Bases Administrativas, con seudonimización o cifrado a nivel de campo para las categorías sensibles que el caso identifique. | No acreditado | Modelo y gobierno de datos\newline \localizadorRT{S5, «Políticas de gobernanza, calidad y retención histórica»}{sec:5-gobernanza}{05} | Cotejo del diccionario, políticas y controles del dato. |
+| RT-05.09\newline FEP02, p. 12\newline Obligatorio | El PROPONENTE presentará una estrategia de gestión de datos maestros que evite la duplicación de entidades compartidas entre módulos y con sistemas externos. | Parcial | Estrategia de Gestión de Datos Maestros (MDM)\newline \localizadorRT{S5, «Estrategia de Gestión de Datos Maestros (MDM)»}{sec:5-mdm}{05} | Cotejo del diccionario, políticas y controles del dato. |
+| RT-05.10\newline FEP02, p. 12\newline Deseable | Se valorará la implementación de un catálogo de datos con linaje automatizado, que permita rastrear el origen de cada indicador de negocio hasta su fuente. | Parcial | Catálogo y gobernanza de datos\newline \localizadorRT{S5, «Políticas de gobernanza, calidad y retención histórica»}{sec:5-gobernanza}{05} | Verificar trazas de linaje automatizado desde indicadores a fuentes. |
+| RT-05.11\newline FEP02, p. 12\newline Obligatorio | El PROPONENTE presentará un plan de migración con alcance, origen, volumen, reglas de transformación, criterios de calidad, estrategia de ejecución y plan de reversión. | No acreditado | Proceso de migración\newline \localizadorRT{S5, «Estrategia de migración»}{sec:5-migracion}{05} | Acta de migración y conciliación. |
+| RT-05.12\newline FEP02, p. 12\newline Obligatorio | La migración incluirá una etapa de perfilado y saneamiento previo, con informe de los defectos detectados en los datos de origen y la decisión adoptada sobre cada uno. | No acreditado | Proceso de migración\newline \localizadorRT{S5, «Estrategia de migración»}{sec:5-migracion}{05} | Acta de migración y conciliación. |
+| RT-05.13\newline FEP02, p. 12\newline Obligatorio | Se ejecutarán al menos dos ensayos completos de migración sobre Preproducción antes de la migración definitiva, con medición del tiempo total y del resultado de la conciliación. | No acreditado | Proceso de migración\newline \localizadorRT{S5, «Estrategia de migración»}{sec:5-migracion}{05} | Acta de migración y conciliación. |
+| RT-05.14\newline FEP02, p. 12\newline Obligatorio | La conciliación posterior a la migración será cuantitativa y verificable: recuentos, sumas de control y muestreo dirigido. Toda diferencia deberá quedar explicada. | No acreditado | Proceso de migración\newline \localizadorRT{S5, «Estrategia de migración»}{sec:5-migracion}{05} | Acta de migración y conciliación. |
+| RT-05.15\newline FEP02, p. 12\newline Según caso | Los datos históricos que no se migren quedarán accesibles en un repositorio de consulta durante el período de retención que fije el caso. | Parcial | Repositorio de consulta histórica\newline \localizadorRT{S5, «Estrategia de migración»}{sec:5-migracion}{05} | Verificar consulta, alcance y plazo de datos excluidos del proceso de migración. |
+| RT-05.16\newline FEP02, p. 12\newline Obligatorio | Los servicios síncronos se documentarán en OpenAPl 3.1 y los flujos dirigidos por eventos en AsyncAPI 2.6 o superior. La documentación se generará desde el código y se mantendrá actualizada automáticamente. | Parcial | Gobernanza de interfaces y contratos\newline \localizadorRT{S4, «Gobernanza de interfaces y contratos»}{sec:4-interfaces}{04} | Inventario de interfaces y pruebas de contrato. |
+| RT-05.17\newline FEP02, p. 12\newline Obligatorio | Los contratos de interfaz se versionarán semánticamente, con compatibilidad hacia atrás y política de obsolescencia con preaviso mínimo de seis meses. | No acreditado | Gobernanza de interfaces y contratos\newline \localizadorRT{S4, «Gobernanza de interfaces y contratos»}{sec:4-interfaces}{04} | Inventario de interfaces y pruebas de contrato. |
+| RT-05.18\newline FEP02, p. 12\newline Obligatorio | La autenticación entre sistemas empleará OAuth 2.1 con credenciales de cliente o autenticación mutua TLS. Queda prohibida la autenticación por clave estática en la ruta de la dirección web. | Parcial | Registro de decisiones de arquitectura\newline \localizadorRT{S4, «Registro de decisiones de arquitectura»}{sec:4-adr}{04} | Inventario de interfaces y pruebas de contrato. |
+| RT-05.19\newline FEP02, p. 12\newline Obligatorio | Toda integración registrará la transacción de entrada y de salida, con identificador de correlación común que permita seguir una operación de negocio a través de todos los sistemas involucrados. | No acreditado | Las ocho capas\newline \localizadorRT{S4, «Las ocho capas»}{sec:4-capas}{04} | Inventario de interfaces y pruebas de contrato. |
+| RT-05.20\newline FEP02, p. 13\newline Obligatorio | Las integraciones con sistemas heredados o de terceros se aislarán mediante una capa anticorrupción, de modo que un cambio en el sistema externo no propague su modelo al núcleo de la solución. | No acreditado | Punto de partida\newline \localizadorRT{S4, «Punto de partida»}{sec:4-partida}{04} | Inventario de interfaces y pruebas de contrato. |
+| RT-05.21\newline FEP02, p. 13\newline Obligatorio | El PROPONENTE declarará, por cada integración, el modo (síncrono o asíncrono), el volumen esperado, la ventana de disponibilidad del sistema contraparte y el comportamiento de la solución cuando ese sistema no responde. | No acreditado | Gobernanza de interfaces y contratos\newline \localizadorRT{S4, «Gobernanza de interfaces y contratos»}{sec:4-interfaces}{04} | Inventario de interfaces y pruebas de contrato. |
+| RT-05.22\newline FEP02, p. 13\newline Obligatorio | La solución soportará la carga y descarga masiva de información en formatos abiertos, con validación previa, informe de errores por registro y procesamiento parcial. | No acreditado | Gobernanza de interfaces y contratos\newline \localizadorRT{S4, «Gobernanza de interfaces y contratos»}{sec:4-interfaces}{04} | Inventario de interfaces y pruebas de contrato. |
+| RT-05.23\newline FEP02, p. 13\newline Según caso | Se emplearán los estándares sectoriales de intercambio que las Bases Técnicas del caso identifiquen. | No acreditado | Capa de integración\newline \localizadorRT{S4, «Gobernanza de interfaces y contratos»}{sec:4-interfaces}{04} | Inventario de interfaces y pruebas de contrato. |
+| RT-05.24\newline FEP02, p. 13\newline Deseable | Se valorará la publicación de un portal de servicios para desarrolladores con documentación navegable, ambiente de pruebas y credenciales de prueba autoservidas. | No acreditado | Capa de integración\newline \localizadorRT{S4, «Gobernanza de interfaces y contratos»}{sec:4-interfaces}{04} | Inventario de interfaces y pruebas de contrato. |
+| RT-05.25\newline FEP02, p. 13\newline Obligatorio | La solución proveerá una capa analítica con tableros operacionales y de gestión, construidos sobre los indicadores que las Bases Técnicas del caso definan. | No acreditado | Explotación analítica y autoservicio\newline \localizadorRT{S4, «Explotación analítica y autoservicio»}{sec:4-autoservicio}{04} | Prueba de consultas y control de latencias. |
+| RT-05.26\newline FEP02, p. 13\newline Obligatorio | Los tableros permitirán filtrar por período, unidad organizacional y dimensiones propias del caso, y profundizar desde el indicador agregado hasta la transacción de origen. | No acreditado | Explotación analítica y autoservicio\newline \localizadorRT{S4, «Explotación analítica y autoservicio»}{sec:4-autoservicio}{04} | Prueba de consultas y control de latencias. |
+| RT-05.27\newline FEP02, p. 13\newline Obligatorio | El CLIENTE podrá construir sus propios informes sin intervención del ADJUDICATARIO, mediante una herramienta de autoservicio con modelo semántico documentado. | No acreditado | Explotación analítica y autoservicio\newline \localizadorRT{S4, «Explotación analítica y autoservicio»}{sec:4-autoservicio}{04} | Prueba de consultas y control de latencias. |
+| RT-05.28\newline FEP02, p. 13\newline Obligatorio | Todo informe será exportable en formatos abiertos y programable para envío automático por calendario. | No acreditado | Explotación analítica y autoservicio\newline \localizadorRT{S4, «Explotación analítica y autoservicio»}{sec:4-autoservicio}{04} | Prueba de consultas y control de latencias. |
+| RT-05.29\newline FEP02, p. 13\newline Según caso | La latencia máxima entre la ocurrencia de una transacción y su disponibilidad en la capa analítica será la que fije el caso y, en su defecto, no superará las 4 horas. | Parcial | Capa analítica y latencia\newline \localizadorRT{S4, «Capa analítica y costo real por kilómetro»}{sec:4-analitica}{04} | Medición por evento y corte de actualización. |
+| RT-05.30\newline FEP02, p. 13\newline Deseable | Se valorará la incorporación de analítica predictiva pertinente al proceso del caso, con el modelo, sus variables, su métrica de desempeño y su plan de reentrenamiento documentados. | No acreditado | Explotación analítica y autoservicio\newline \localizadorRT{S4, «Explotación analítica y autoservicio»}{sec:4-autoservicio}{04} | Prueba de consultas y control de latencias. |
+| \multicolumn{5}{l}{\bfseries Capítulo 6. Sitio principal} |
+| RT-06.01\newline FEP02, p. 14\newline Obligatorio | El espacio asignado será de uso exclusivo de la solución y estará aislado de otras dependencias del CLIENTE, con acceso independiente. | No acreditado | Degradación, escalamiento y puntos únicos de falla\newline \localizadorRT{S4, «Degradación, escalamiento y puntos únicos de falla»}{sec:4-degradacion}{04} | Acta de habilitación y recepción técnica. |
+| RT-06.02\newline FEP02, p. 14\newline Obligatorio | Los muros no estructurales del recinto contarán con blindaje perimetral; el PROPONENTE especificará el material y la resistencia. | No acreditado | Sala principal\newline \localizadorRT{S4, «Especificaciones Data Center Primaria»}{sec:4-dc-primario}{04} | Acta de habilitación y recepción técnica. |
+| RT-06.03\newline FEP02, p. 14\newline Obligatorio | El PROPONENTE entregará el plano de distribución interna del recinto, con la separación de las zonas de generadores, baterías, climatización, servidores, comunicaciones, trabajo y respaldo. | Parcial | Especificaciones Data Center Primaria\newline \localizadorRT{S4, «Especificaciones Data Center Primaria»}{sec:4-dc-primario}{04} | Acta de habilitación y recepción técnica. |
+| RT-06.04\newline FEP02, p. 14\newline Obligatorio | El piso técnico, la canalización, el cableado estructurado y el etiquetado se ejecutarán conforme a norma, con documentación de la certificación de cada enlace. | No acreditado | Sala principal\newline \localizadorRT{S4, «Especificaciones Data Center Primaria»}{sec:4-dc-primario}{04} | Acta de habilitación y recepción técnica. |
+| RT-06.05\newline FEP02, p. 15\newline Obligatorio | Los racks de servidores serán independientes de los racks de equipos de comunicación. Se declarará la ocupación proyectada de cada rack y su margen de crecimiento. | Parcial | Especificaciones Data Center Primaria\newline \localizadorRT{S4, «Especificaciones Data Center Primaria»}{sec:4-dc-primario}{04} | Acta de habilitación y recepción técnica. |
+| RT-06.06\newline FEP02, p. 15\newline Obligatorio | La obra civil de separación de las instalaciones es de cargo del CLIENTE; su especificación técnica y su coordinación son de cargo del PROPONENTE. | No acreditado | Sala principal\newline \localizadorRT{S4, «Especificaciones Data Center Primaria»}{sec:4-dc-primario}{04} | Acta de habilitación y recepción técnica. |
+| RT-06.07\newline FEP02, p. 15\newline Obligatorio | El suministro eléctrico de los equipos será ininterrumpido, con sistema de alimentación ininterrumpida dimensionado para una autonomía mínima de 30 minutos a plena carga. | Parcial | Especificaciones Data Center Primaria\newline \localizadorRT{S4, «Especificaciones Data Center Primaria»}{sec:4-dc-primario}{04} | Memoria de energía y prueba de puesta en servicio. |
+| RT-06.08\newline FEP02, p. 15\newline Obligatorio | La capacidad de generación autónoma asegurará un rango mínimo de 24 horas continuas de operación, con estanque de combustible dimensionado y contrato de reabastecimiento declarado. | Parcial | Especificaciones Data Center Primaria\newline \localizadorRT{S4, «Especificaciones Data Center Primaria»}{sec:4-dc-primario}{04} | Memoria de energía y prueba de puesta en servicio. |
+| RT-06.09\newline FEP02, p. 15\newline Obligatorio | La instalación eléctrica del recinto será independiente de la del resto del edificio y cumplirá la normativa eléctrica chilena vigente, incluida la NCh Elec. 2777 sobre sistemas de puesta a tierra, | Parcial | Especificaciones Data Center Primaria\newline \localizadorRT{S4, «Especificaciones Data Center Primaria»}{sec:4-dc-primario}{04} | Memoria de energía y prueba de puesta en servicio. |
+| RT-06.10\newline FEP02, p. 15\newline Obligatorio | Se efectuará revisión y medición semestral de las instalaciones eléctricas del recinto, con informe entregable al CLIENTE, | Parcial | Especificaciones Data Center Primaria\newline \localizadorRT{S4, «Especificaciones Data Center Primaria»}{sec:4-dc-primario}{04} | Memoria de energía y prueba de puesta en servicio. |
+| RT-06.11\newline FEP02, p. 15\newline Obligatorio | El PROPONENTE declarará la carga eléctrica proyectada en kW, el factor de potencia y la eficiencia en el uso de la energía (PUE) estimada del recinto. | Parcial | Especificaciones Data Center Primaria\newline \localizadorRT{S4, «Especificaciones Data Center Primaria»}{sec:4-dc-primario}{04} | Memoria de energía y prueba de puesta en servicio. |
+| RT-06.12\newline FEP02, p. 15\newline Deseable | Se valorará la redundancia de alimentación en configuración 2N o N+1 con doble acometida y transferencia automática. | Parcial | Enlaces, puntos únicos de falla y conmutación\newline \localizadorRT{S4, «Enlaces, puntos únicos de falla y conmutación»}{sec:4-enlaces}{04} | Memoria de energía y prueba de puesta en servicio. |
+| RT-06.13\newline FEP02, p. 15\newline Obligatorio | El recinto contará con climatización de precisión para operación continua, redundante en configuración N+1, con control de temperatura y de humedad relativa dentro de los rangos que recomienda el fabricante del equipamiento. | Parcial | Especificaciones Data Center Primaria\newline \localizadorRT{S4, «Especificaciones Data Center Primaria»}{sec:4-dc-primario}{04} | Acta ambiental y registro de mediciones. |
+| RT-06.14\newline FEP02, p. 15\newline Obligatorio | Se monitorearán en línea la temperatura, la humedad y la presencia de agua, con alertamiento integrado a la plataforma de observabilidad. | No acreditado | Especificaciones Data Center Primaria\newline \localizadorRT{S4, «Especificaciones Data Center Primaria»}{sec:4-dc-primario}{04} | Acta ambiental y registro de mediciones. |
+| RT-06.15\newline FEP02, p. 15\newline Deseable | El PROPONENTE declarará la estrategia de contención de pasillo frío o caliente y su efecto en la eficiencia energética. | No acreditado | Climatización de sala\newline \localizadorRT{S4, «Especificaciones Data Center Primaria»}{sec:4-dc-primario}{04} | Acta ambiental y registro de mediciones. |
+| RT-06.16\newline FEP02, p. 15\newline Obligatorio | El recinto contará con detección temprana por aspiración de aire con tecnología láser, tipo AnaLASER o equivalente de prestaciones iguales o superiores. | No acreditado | Especificaciones Data Center Primaria\newline \localizadorRT{S4, «Especificaciones Data Center Primaria»}{sec:4-dc-primario}{04} | Certificado o acta de prueba del sistema. |
+| RT-06.17\newline FEP02, p. 15\newline Obligatorio | La extinción será automática mediante agente limpio tipo FM-200 o equivalente, con aprobación UL e instalación conforme a norma NEPA. | Parcial | Especificaciones Data Center Primaria\newline \localizadorRT{S4, «Especificaciones Data Center Primaria»}{sec:4-dc-primario}{04} | Certificado o acta de prueba del sistema. |
+| RT-06.18\newline FEP02, p. 15\newline Obligatorio | Se proveerá un sistema secundario de extintores portátiles habilitados, con mantención y certificación vigentes. | Parcial | Especificaciones Data Center Primaria\newline \localizadorRT{S4, «Especificaciones Data Center Primaria»}{sec:4-dc-primario}{04} | Certificado o acta de prueba del sistema. |
+| RT-06.19\newline FEP02, p. 16\newline Obligatorio | El sistema de detección y extinción se integrará al monitoreo en línea y notificará al NOC y a la contraparte del CLIENTE. | Parcial | Especificaciones Data Center Primaria\newline \localizadorRT{S4, «Especificaciones Data Center Primaria»}{sec:4-dc-primario}{04} | Certificado o acta de prueba del sistema. |
+| RT-06.20\newline FEP02, p. 16\newline Obligatorio | El ingreso al recinto se controlará mediante seguridad física y control de acceso biométrico basado principalmente en biometría facial, con AFIS como respaldo. Se admite proponer sistemas de mayor seguridad. | No acreditado | Especificaciones Data Center Primaria\newline \localizadorRT{S4, «Especificaciones Data Center Primaria»}{sec:4-dc-primario}{04} | Registro de accesos y prueba de alarmas. |
+| RT-06.21\newline FEP02, p. 16\newline Obligatorio | Todo ingreso y egreso quedará registrado en una bitácora auditable, con identificación de la persona, fecha, hora y motivo, conservada por el período de retención declarado. | No acreditado | Acceso físico y sensores\newline \localizadorRT{S4, «Especificaciones Data Center Primaria»}{sec:4-dc-primario}{04} | Registro de accesos y prueba de alarmas. |
+| RT-06.22\newline FEP02, p. 16\newline Obligatorio | Entre el acceso principal y el término del pasillo de la zona de control se dispondrá un espacio para la atención de personas en proceso de enrolamiento. Se evaluará mejor la existencia de una estación de enrolamiento fuera de las instalaciones del recinto técnico. | No acreditado | Acceso físico y sensores\newline \localizadorRT{S4, «Especificaciones Data Center Primaria»}{sec:4-dc-primario}{04} | Registro de accesos y prueba de alarmas. |
+| RT-06.23\newline FEP02, p. 16\newline Obligatorio | Al término del pasillo se instalará un acceso que impida el paso de más de una persona a la vez, con nueva verificación de identidad previa al ingreso. | Parcial | Especificaciones Data Center Primaria\newline \localizadorRT{S4, «Especificaciones Data Center Primaria»}{sec:4-dc-primario}{04} | Registro de accesos y prueba de alarmas. |
+| RT-06.24\newline FEP02, p. 16\newline Obligatorio | El recinto contará con videovigilancia y monitoreo IP, con imágenes en línea y disponibles para visualización de al menos los últimos 30 días. Las grabaciones anteriores se respaldarán en un medio secundario recuperable y auditable. | Parcial | Especificaciones Data Center Primaria\newline \localizadorRT{S4, «Especificaciones Data Center Primaria»}{sec:4-dc-primario}{04} | Registro de accesos y prueba de alarmas. |
+| RT-06.25\newline FEP02, p. 16\newline Obligatorio | El PROPONENTE declarará el procedimiento de acceso de terceros —fabricantes, mantenedores, auditores — con acompañamiento obligatorio y registro. | No acreditado | Acceso físico y sensores\newline \localizadorRT{S4, «Especificaciones Data Center Primaria»}{sec:4-dc-primario}{04} | Registro de accesos y prueba de alarmas. |
+| RT-06.26\newline FEP02, p. 16\newline Obligatorio | Se habilitará un servicio de custodia de medios de respaldo para el sitio primario, en un medio físico transportable a otro lugar cuando el CLIENTE lo determine. Se admite proponer una solución más segura y eficiente, debidamente justificada. | Parcial | Ambientes, alta disponibilidad y respaldos\newline \localizadorRT{S4, «Ambientes, alta disponibilidad y respaldos»}{sec:4-ambientes}{04} | Registro de custodia y recuperación. |
+| RT-06.27\newline FEP02, p. 16\newline Obligatorio | El recinto de custodia cumplirá exigencias de luminosidad, humedad, ventilación y cualquier otro factor que pueda afectar la calidad y la disponibilidad de los medios. | No acreditado | Respaldo y custodia\newline \localizadorRT{S4, «Especificaciones Data Center Primaria»}{sec:4-dc-primario}{04} | Registro de custodia y recuperación. |
+| RT-06.28\newline FEP02, p. 16\newline Obligatorio | Se llevará un inventario de medios con rotación, verificación periódica de legibilidad y registro de todo movimiento de entrada y de salida. | No acreditado | Respaldo y custodia\newline \localizadorRT{S4, «Especificaciones Data Center Primaria»}{sec:4-dc-primario}{04} | Registro de custodia y recuperación. |
+| RT-06.29\newline FEP02, p. 16\newline Obligatorio | El PROPONENTE habilitará el espacio físico necesario para el personal encargado de la operación y administración de la plataforma, con estaciones de trabajo, telefonía, conexión a Internet y todo elemento que permita realizar la labor en condiciones adecuadas. | No acreditado | Sala de operación\newline \localizadorRT{S4, «Especificaciones Data Center Primaria»}{sec:4-dc-primario}{04} | Ficha del sitio e inspección de recepción. |
+| RT-06.30\newline FEP02, p. 16\newline Obligatorio | El espacio de operación estará separado de la sala de equipos y no requerirá el ingreso al recinto técnico para las labores habituales de operación. | No acreditado | Sala de operación\newline \localizadorRT{S4, «Especificaciones Data Center Primaria»}{sec:4-dc-primario}{04} | Ficha del sitio e inspección de recepción. |
+| RT-06.31\newline FEP02, p. 16\newline Obligatorio | Las instalaciones sanitarias, las zonas de seguridad ante emergencia y las áreas exteriores existentes en el edificio del CLIENTE podrán utilizarse y no deben implementarse nuevamente. El PROPONENTE declarará de cuáles hará uso. | No acreditado | Sala de operación\newline \localizadorRT{S4, «Especificaciones Data Center Primaria»}{sec:4-dc-primario}{04} | Ficha del sitio e inspección de recepción. |
+| RT-06.32\newline FEP02, p. 17\newline Obligatorio | El acceso a las redes de comunicaciones estará provisto a través de rutas físicas distintas, con ingreso al edificio por puntos separados. | Parcial | Especificaciones Data Center Primaria\newline \localizadorRT{S4, «Especificaciones Data Center Primaria»}{sec:4-dc-primario}{04} | Inspección de rutas y ensayo de conmutación. |
+| RT-06.33\newline FEP02, p. 17\newline Obligatorio | El PROPONENTE proveerá toda la conectividad, la seguridad y las canalizaciones, cañerías o ductos requeridos para cumplir los niveles de servicio comprometidos. | No acreditado | Comunicaciones del sitio\newline \localizadorRT{S4, «Enlaces, puntos únicos de falla y conmutación»}{sec:4-enlaces}{04} | Inspección de rutas y ensayo de conmutación. |
+| RT-06.34\newline FEP02, p. 17\newline Deseable | Se privilegiará al PROPONENTE que ofrezca o provea especificaciones nuevas o mejores que las aquí establecidas, debidamente fundamentadas. | No acreditado | Comunicaciones del sitio\newline \localizadorRT{S4, «Enlaces, puntos únicos de falla y conmutación»}{sec:4-enlaces}{04} | Inspección de rutas y ensayo de conmutación. |
+| \multicolumn{5}{l}{\bfseries Capítulo 7. Sitio secundario y recuperación} |
+| RT-07.01\newline FEP02, p. 17\newline Obligatorio | El PROPONENTE declarará la modalidad escogida —activo-activo o activo-pasivo— y la justificará frente al costo, al RTO comprometido y a la complejidad operacional que introduce. | Parcial | Especificaciones Data Center Secundario\newline \localizadorRT{S4, «Especificaciones Data Center Secundario»}{sec:4-dc-secundario}{04} | Acta de habilitación y ensayo de recuperación. |
+| RT-07.02\newline FEP02, p. 17\newline Obligatorio | El sitio secundario estará emplazado a una distancia suficiente del principal para no verse afectado por el mismo evento de fuerza mayor. El PROPONENTE declarará la distancia y el análisis de amenazas comunes considerado. | Parcial | Especificaciones Data Center Secundario\newline \localizadorRT{S4, «Especificaciones Data Center Secundario»}{sec:4-dc-secundario}{04} | Acta de habilitación y ensayo de recuperación. |
+| RT-07.03\newline FEP02, p. 17\newline Obligatorio | La replicación de datos será continua, con medición y alertamiento del retraso de replicación. | No acreditado | Recuperación en sitio secundario\newline \localizadorRT{S4, «Especificaciones Data Center Secundario»}{sec:4-dc-secundario}{04} | Acta de habilitación y ensayo de recuperación. |
+| RT-07.04\newline FEP02, p. 17\newline Obligatorio | El objetivo de tiempo de recuperación (RTO) no superará 4 horas y el objetivo de punto de recuperación (RPO) no superará 15 minutos para los servicios críticos, salvo exigencia superior del caso. | Parcial | Especificaciones Data Center Secundario\newline \localizadorRT{S4, «Especificaciones Data Center Secundario»}{sec:4-dc-secundario}{04} | Acta de habilitación y ensayo de recuperación. |
+| RT-07.05\newline FEP02, p. 17\newline Obligatorio | El procedimiento de conmutación estará documentado, automatizado en la mayor medida posible y ejecutable por el personal del CLIENTE tras la transferencia de conocimiento. | Parcial | Especificaciones Data Center Secundario\newline \localizadorRT{S4, «Especificaciones Data Center Secundario»}{sec:4-dc-secundario}{04} | Acta de habilitación y ensayo de recuperación. |
+| RT-07.06\newline FEP02, p. 17\newline Obligatorio | Existirá un procedimiento de retorno al sitio principal igualmente documentado y probado, con reconciliación de los datos generados durante la contingencia. | Parcial | Especificaciones Data Center Secundario\newline \localizadorRT{S4, «Especificaciones Data Center Secundario»}{sec:4-dc-secundario}{04} | Acta de habilitación y ensayo de recuperación. |
+| RT-07.07\newline FEP02, p. 17\newline Obligatorio | El plan de recuperación ante desastres se probará al menos dos veces al año mediante conmutación real, con informe de resultados, medición del RTO y del RPO efectivamente alcanzados y plan de corrección de las brechas detectadas. | Parcial | Ambientes, alta disponibilidad y respaldos\newline \localizadorRT{S4, «Ambientes, alta disponibilidad y respaldos»}{sec:4-ambientes}{04} | Acta de habilitación y ensayo de recuperación. |
+| RT-07.08\newline FEP02, p. 17\newline Deseable | Se valorará que la conmutación sea automática ante la detección de indisponibilidad, con criterio de disparo declarado y protección contra conmutación innecesaria. | Parcial | Especificaciones Data Center Secundario\newline \localizadorRT{S4, «Especificaciones Data Center Secundario»}{sec:4-dc-secundario}{04} | Acta de habilitación y ensayo de recuperación. |
+| RT-07.09\newline FEP02, p. 18\newline Obligatorio | La política de respaldo seguirá el esquema 3-2-1-1-0: tres copias, en dos medios distintos, una fuera de sitio, una inmutable o fuera de línea y cero errores de verificación de restauración. | Parcial | Ambientes, alta disponibilidad y respaldos\newline \localizadorRT{S4, «Ambientes, alta disponibilidad y respaldos»}{sec:4-ambientes}{04} | Plan, catálogo y registro de restauración. |
+| RT-07.10\newline FEP02, p. 18\newline Obligatorio | Los respaldos estarán cifrados en reposo y en tránsito, con clave gestionada de forma independiente de la infraestructura respaldada. | No acreditado | Respaldos y restauración\newline \localizadorRT{S4, «Especificaciones Data Center Secundario»}{sec:4-dc-secundario}{04} | Plan, catálogo y registro de restauración. |
+| RT-07.11\newline FEP02, p. 18\newline Obligatorio | Las copias inmutables estarán protegidas contra borrado y contra modificación durante su período de retención, incluso frente a credenciales administrativas comprometidas. | No acreditado | Respaldos y restauración\newline \localizadorRT{S4, «Especificaciones Data Center Secundario»}{sec:4-dc-secundario}{04} | Plan, catálogo y registro de restauración. |
+| RT-07.12\newline FEP02, p. 18\newline Obligatorio | Se ejecutará y documentará una prueba de restauración al menos mensual, sobre una muestra representativa, con medición del tiempo efectivo de restauración. | No acreditado | Respaldos y restauración\newline \localizadorRT{S4, «Especificaciones Data Center Secundario»}{sec:4-dc-secundario}{04} | Plan, catálogo y registro de restauración. |
+| RT-07.13\newline FEP02, p. 18\newline Obligatorio | El PROPONENTE declarará, por cada dominio de datos, la frecuencia de respaldo, el período de retención y el tiempo estimado de restauración completa. | No acreditado | Respaldos y restauración\newline \localizadorRT{S4, «Especificaciones Data Center Secundario»}{sec:4-dc-secundario}{04} | Plan, catálogo y registro de restauración. |
+| RT-07.14\newline FEP02, p. 18\newline Deseable | Los respaldos permitirán la restauración granular: un registro, una tabla, un módulo o el sistema completo. | No acreditado | Respaldos y restauración\newline \localizadorRT{S4, «Especificaciones Data Center Secundario»}{sec:4-dc-secundario}{04} | Plan, catálogo y registro de restauración. |
+| \multicolumn{5}{l}{\bfseries Capítulo 8. Hardware y terreno} |
+| RT-08.01\newline FEP02, p. 18\newline Obligatorio | El PROPONENTE especificará el equipamiento de cómputo con su marca, modelo de referencia, procesador, memoria, almacenamiento local, interfaces y consumo, junto con el cálculo de dimensionamiento que lo sustenta. | No acreditado | Cómputo, almacenamiento y red\newline \localizadorRT{S4, «Especificaciones Implementos a proveer (Hardware y Software)»}{sec:4-implementos}{04} | Inventario y fichas técnicas del T-11. |
+| RT-08.02\newline FEP02, p. 18\newline Obligatorio | El almacenamiento será redundante, con tolerancia declarada a la falla de discos, control de errores y monitoreo predictivo de salud de los medios. | No acreditado | Cómputo, almacenamiento y red\newline \localizadorRT{S4, «Especificaciones Implementos a proveer (Hardware y Software)»}{sec:4-implementos}{04} | Inventario y fichas técnicas del T-11. |
+| RT-08.03\newline FEP02, p. 18\newline Obligatorio | Los conmutadores de núcleo, los cortafuegos y los balanceadores de carga estarán en configuración de alta disponibilidad, sin punto único de falla. | No acreditado | Cómputo, almacenamiento y red\newline \localizadorRT{S4, «Especificaciones Implementos a proveer (Hardware y Software)»}{sec:4-implementos}{04} | Inventario y fichas técnicas del T-11. |
+| RT-08.04\newline FEP02, p. 18\newline Obligatorio | Todo el equipamiento contará con fuentes de poder redundantes y conexión a circuitos eléctricos distintos. | Parcial | Enlaces, puntos únicos de falla y conmutación\newline \localizadorRT{S4, «Enlaces, puntos únicos de falla y conmutación»}{sec:4-enlaces}{04} | Inventario y fichas técnicas del T-11. |
+| RT-08.05\newline FEP02, p. 19\newline Obligatorio | El PROPONENTE declarará el margen de crecimiento del dimensionamiento propuesto, expresado como porcentaje sobre la carga proyectada del caso, y el procedimiento de ampliación. | No acreditado | Cómputo, almacenamiento y red\newline \localizadorRT{S4, «Especificaciones Implementos a proveer (Hardware y Software)»}{sec:4-implementos}{04} | Inventario y fichas técnicas del T-11. |
+| RT-08.06\newline FEP02, p. 19\newline Obligatorio | El equipamiento será nuevo, sin uso previo, con garantía de fábrica vigente desde la recepción conforme. | No acreditado | Cómputo, almacenamiento y red\newline \localizadorRT{S4, «Especificaciones Implementos a proveer (Hardware y Software)»}{sec:4-implementos}{04} | Inventario y fichas técnicas del T-11. |
+| RT-08.07\newline FEP02, p. 19\newline Obligatorio | El PROPONENTE especificará las estaciones de trabajo requeridas para la operación y la administración de la plataforma, en la cantidad que determine el dimensionamiento del caso, con monitores duales. | No acreditado | Puestos de usuario\newline \localizadorRT{S4, «Especificaciones Implementos a proveer (Hardware y Software)»}{sec:4-implementos}{04} | Recepción de puestos y fichas técnicas. |
+| RT-08.08\newline FEP02, p. 19\newline Obligatorio | Los puestos de trabajo cumplirán las condiciones ergonómicas de la NCh 2527 y los equipos contarán con certificación de eficiencia energética. | No acreditado | Puestos de usuario\newline \localizadorRT{S4, «Especificaciones Implementos a proveer (Hardware y Software)»}{sec:4-implementos}{04} | Recepción de puestos y fichas técnicas. |
+| RT-08.09\newline FEP02, p. 19\newline Obligatorio | Las estaciones estarán gestionadas de forma centralizada, con cifrado de disco, control de dispositivos extraíbles, antivirus con detección y respuesta y actualización automatizada. | No acreditado | Puestos de usuario\newline \localizadorRT{S4, «Especificaciones Implementos a proveer (Hardware y Software)»}{sec:4-implementos}{04} | Recepción de puestos y fichas técnicas. |
+| RT-08.10\newline FEP02, p. 19\newline Obligatorio | El PROPONENTE especificará cada dispositivo de terreno con marca, modelo de referencia, cantidad, características mínimas, accesorios, consumibles y costo unitario estimado, aun cuando su compra sea de cargo del CLIENTE. | Parcial | Inventario de equipamiento y consulta C-01\newline \localizadorRT{S4, «Especificaciones Implementos a proveer (Hardware y Software)»}{sec:4-implementos}{04} | T-11 para ficha técnica; resolver reserva de precios según Art. 50.2. |
+| RT-08.11\newline FEP02, p. 19\newline Obligatorio | La especificación considerará las condiciones reales de uso del caso: intemperie, humedad, polvo, vibración, temperatura, uso con guantes, luminosidad y autonomía de batería requerida por turno. | Parcial | Equipo a bordo y almacenamiento derivado\newline \localizadorRT{S4, «Equipo a bordo y almacenamiento derivado»}{sec:4-bordo}{04} | Homologación y registro de recepción del equipo. |
+| RT-08.12\newline FEP02, p. 19\newline Obligatorio | Los dispositivos declararán su grado de protección contra polvo y agua y su resistencia a caídas, coherentes con el entorno de operación. | Parcial | Equipo a bordo y almacenamiento derivado\newline \localizadorRT{S4, «Equipo a bordo y almacenamiento derivado»}{sec:4-bordo}{04} | Homologación y registro de recepción del equipo. |
+| RT-08.13\newline FEP02, p. 19\newline Obligatorio | El PROPONENTE indicará el ciclo de vida esperado de cada dispositivo, la disponibilidad de repuestos y el plan de reposición durante los 56 meses del Contrato. | No acreditado | Equipamiento a bordo y terminal\newline \localizadorRT{S4, «Equipo a bordo y almacenamiento derivado»}{sec:4-bordo}{04} | Homologación y registro de recepción del equipo. |
+| RT-08.14\newline FEP02, p. 19\newline Obligatorio | Los dispositivos se integrarán ala gestión centralizada de flota exigida en RT-03.18. | No acreditado | Equipamiento a bordo y terminal\newline \localizadorRT{S4, «Equipo a bordo y almacenamiento derivado»}{sec:4-bordo}{04} | Homologación y registro de recepción del equipo. |
+| RT-08.15\newline FEP02, p. 19\newline Deseable | El PROPONENTE proveerá una unidad de cada tipo de dispositivo especificado para pruebas de aceptación por parte del CLIENTE, antes de la compra masiva. | No acreditado | Equipamiento a bordo y terminal\newline \localizadorRT{S4, «Equipo a bordo y almacenamiento derivado»}{sec:4-bordo}{04} | Homologación y registro de recepción del equipo. |
+| RT-08.16\newline FEP02, p. 20\newline Obligatorio | El PROPONENTE presentará el plan de ciclo de vida del equipamiento: recepción, puesta en servicio, mantención, actualización, retiro y disposición final. | No acreditado | Ciclo de vida de equipos\newline \localizadorRT{S4, «Especificaciones Implementos a proveer (Hardware y Software)»}{sec:4-implementos}{04} | Inventario, garantías y plan de reposición y retiro. |
+| RT-08.17\newline FEP02, p. 20\newline Obligatorio | Todo medio de almacenamiento que salga de servicio será borrado de forma segura y verificable, con certificado de destrucción o de sanitización entregado al CLIENTE. | No acreditado | Ciclo de vida de equipos\newline \localizadorRT{S4, «Especificaciones Implementos a proveer (Hardware y Software)»}{sec:4-implementos}{04} | Inventario, garantías y plan de reposición y retiro. |
+| RT-08.18\newline FEP02, p. 20\newline Obligatorio | La disposición final de equipamiento electrónico se realizará con gestor autorizado, conforme a la normativa de residuos aplicable, con certificado de disposición. | No acreditado | Ciclo de vida de equipos\newline \localizadorRT{S4, «Especificaciones Implementos a proveer (Hardware y Software)»}{sec:4-implementos}{04} | Inventario, garantías y plan de reposición y retiro. |
+| RT-08.19\newline FEP02, p. 20\newline Deseable | Se valorará una estrategia de reacondicionamiento o de extensión de vida útil que reduzca el impacto ambiental, cuantificada en la propuesta. | No acreditado | Ciclo de vida de equipos\newline \localizadorRT{S4, «Especificaciones Implementos a proveer (Hardware y Software)»}{sec:4-implementos}{04} | Inventario, garantías y plan de reposición y retiro. |
+| \multicolumn{5}{l}{\bfseries Capítulo 9. Desempeño y capacidad} |
+| RT-09.01\newline FEP02, p. 21\newline Obligatorio | El PROPONENTE presentará el cálculo de capacidad que sustenta su dimensionamiento, con los supuestos de usuarios concurrentes, transacciones por segundo, volumen de datos y crecimiento anual, tomados de la volumetría del caso. | Cumple en diseño | Modelo de capacidad y carga\newline \localizadorRT{S4, «Concurrencia y volumen declarados»}{sec:4-concurrencia}{04} | CP-PERF-01: carga nominal y estrés frente al dimensionamiento. |
+| RT-09.02\newline FEP02, p. 21\newline Según caso | La solución soportará la concurrencia y el volumen de transacciones que fije el caso, y mantendrá los umbrales del numeral 9.1 bajo esa carga. | Cumple en diseño | Modelo de concurrencia\newline \localizadorRT{S4, «Concurrencia y volumen declarados»}{sec:4-concurrencia}{04} | Prueba con carga derivada y reconexión en lote. |
+| RT-09.03\newline FEP02, p. 21\newline Obligatorio | La solución soportará, sin rediseño, un crecimiento de al menos tres veces la volumetría inicial del caso en un horizonte de tres años. | Parcial | Concurrencia y volumen declarados\newline \localizadorRT{S4, «Concurrencia y volumen declarados»}{sec:4-concurrencia}{04} | Carga, volumen y umbral en el expediente de rendimiento. |
+| RT-09.04\newline FEP02, p. 21\newline Obligatorio | El escalamiento de las capas de aplicación e integración será horizontal y automático, con tiempo de reacción declarado y sin pérdida de transacciones en curso. | No acreditado | Dimensionamiento y pruebas\newline \localizadorRT{S4, «Concurrencia y volumen declarados»}{sec:4-concurrencia}{04} | Carga, volumen y umbral en el expediente de rendimiento. |
+| RT-09.05\newline FEP02, p. 21\newline Obligatorio | El PROPONENTE identificará el componente que primero se convertirá en cuello de botella al crecer la carga y explicará cómo lo detectará y cómo lo resolverá. | Parcial | Dimensionamiento y capacidad\newline \localizadorRT{S4, «Dimensionamiento y capacidad»}{sec:4-dimensionamiento}{04} | Carga, volumen y umbral en el expediente de rendimiento. |
+| RT-09.06\newline FEP02, p. 21\newline Obligatorio | Se ejecutarán pruebas de carga sobre Preproducción con un volumen equivalente a 1,5 veces el peak declarado, y pruebas de estrés hasta identificar el punto de quiebre de la solución. | Parcial | Concurrencia y volumen declarados\newline \localizadorRT{S4, «Concurrencia y volumen declarados»}{sec:4-concurrencia}{04} | Carga, volumen y umbral en el expediente de rendimiento. |
+| RT-09.07\newline FEP02, p. 21\newline Obligatorio | El informe de pruebas de carga incluirá la curva de tiempo de respuesta frente a carga, el punto de saturación, el consumo de recursos y el comportamiento durante y después del peak. | No acreditado | Dimensionamiento y pruebas\newline \localizadorRT{S4, «Concurrencia y volumen declarados»}{sec:4-concurrencia}{04} | Carga, volumen y umbral en el expediente de rendimiento. |
+| RT-09.08\newline FEP02, p. 22\newline Obligatorio | La solución degradará de forma controlada al superarse la capacidad: encolamiento, limitación de tasa y mensaje explícito a la persona usuaria, nunca error genérico ni pérdida silenciosa de transacciones. | No acreditado | Dimensionamiento y pruebas\newline \localizadorRT{S4, «Concurrencia y volumen declarados»}{sec:4-concurrencia}{04} | Carga, volumen y umbral en el expediente de rendimiento. |
+| RT-09.09\newline FEP02, p. 22\newline Obligatorio | Se gestionará la capacidad durante la Operación con proyección trimestral de crecimiento, alertas anticipadas de agotamiento y propuesta de ajuste de dimensionamiento y de costo. | No acreditado | Dimensionamiento y pruebas\newline \localizadorRT{S4, «Concurrencia y volumen declarados»}{sec:4-concurrencia}{04} | Carga, volumen y umbral en el expediente de rendimiento. |
+| RT-09.10\newline FEP02, p. 22\newline Deseable | Se valorará la existencia de pruebas de carga automatizadas ejecutadas de forma periódica en el flujo de integración continua, con detección de regresiones de desempeño. | No acreditado | Dimensionamiento y pruebas\newline \localizadorRT{S4, «Concurrencia y volumen declarados»}{sec:4-concurrencia}{04} | Carga, volumen y umbral en el expediente de rendimiento. |
+| \multicolumn{5}{l}{\bfseries Capítulo 10. Continuidad} |
+| RT-10.01\newline FEP02, p. 22\newline Obligatorio | La solución alcanzará una disponibilidad mensual mínima de 99,9 % para los servicios clasificados como críticos, medida sobre la transacción de negocio de extremo a extremo, | Parcial | Continuidad de la plataforma\newline \localizadorRT{S4, «Resiliencia»}{sec:4-resiliencia}{04} | Ensayo de servicio, continuidad y recuperación. |
+| RT-10.02\newline FEP02, p. 22\newline Obligatorio | El PROPONENTE clasificará cada servicio de la solución en crítico, alto, medio o bajo, justificando la clasificación con el impacto operacional de su indisponibilidad, y aplicará a cada uno el nivel de servicio correspondiente del Artículo 78° de las Bases Administrativas. | No acreditado | Continuidad de la plataforma\newline \localizadorRT{S4, «Resiliencia»}{sec:4-resiliencia}{04} | Ensayo de servicio, continuidad y recuperación. |
+| RT-10.03\newline FEP02, p. 22\newline Obligatorio | El plan de continuidad del negocio se elaborará conforme a ISO 22301, con análisis de impacto en el negocio, escenarios de contingencia, procedimientos manuales de respaldo y criterios de activación. | No acreditado | Continuidad de la plataforma\newline \localizadorRT{S4, «Resiliencia»}{sec:4-resiliencia}{04} | Ensayo de servicio, continuidad y recuperación. |
+| RT-10.04\newline FEP02, p. 22\newline Obligatorio | La continuidad TIC se estructurará conforme a ISO/IEC 27031, articulada con el plan de recuperación ante desastres del Capítulo 7. | No acreditado | Continuidad de la plataforma\newline \localizadorRT{S4, «Resiliencia»}{sec:4-resiliencia}{04} | Ensayo de servicio, continuidad y recuperación. |
+| RT-10.05\newline FEP02, p. 22\newline Según caso | Los mantenimientos programados se ejecutarán fuera de la ventana operacional crítica que defina el caso, con aviso previo mínimo de diez días hábiles. | No acreditado | Equipo a bordo y almacenamiento derivado\newline \localizadorRT{S4, «Equipo a bordo y almacenamiento derivado»}{sec:4-bordo}{04} | Ensayo de servicio, continuidad y recuperación. |
+| RT-10.06\newline FEP02, p. 22\newline Obligatorio | La solución permitirá desplegar cambios sin interrupción del servicio. Las ventanas de indisponibilidad programada serán excepcionales y deberán justificarse caso a caso. | No acreditado | Continuidad de la plataforma\newline \localizadorRT{S4, «Resiliencia»}{sec:4-resiliencia}{04} | Ensayo de servicio, continuidad y recuperación. |
+| RT-10.07\newline FEP02, p. 22\newline Obligatorio | Se ejecutarán pruebas de resiliencia mediante inyección controlada de fallas —caída de instancia, de zona, de dependencia externa, latencia elevada, saturación de disco— antes de cada paso a producción y al menos una vez por semestre durante la Operación. | No acreditado | Continuidad de la plataforma\newline \localizadorRT{S4, «Resiliencia»}{sec:4-resiliencia}{04} | Ensayo de servicio, continuidad y recuperación. |
+| RT-10.08\newline FEP02, p. 22\newline Obligatorio | El PROPONENTE documentará, por cada dependencia externa, el comportamiento de la solución cuando esa dependencia no responde, responde con error o responde con lentitud. | No acreditado | Continuidad de la plataforma\newline \localizadorRT{S4, «Resiliencia»}{sec:4-resiliencia}{04} | Ensayo de servicio, continuidad y recuperación. |
+| RT-10.09\newline FEP02, p. 22\newline Deseable | Se declarará un presupuesto de error por servicio crítico y su vinculación con el ritmo de despliegue de cambios. | No acreditado | Continuidad de la plataforma\newline \localizadorRT{S4, «Resiliencia»}{sec:4-resiliencia}{04} | Ensayo de servicio, continuidad y recuperación. |
+| \multicolumn{5}{l}{\bfseries Capítulo 11. Seguridad} |
+| RT-11.01\newline FEP02, p. 23\newline Obligatorio | La arquitectura de seguridad se basará en el modelo Zero Trust conforme a NIST SP 800-207: verificación explícita de cada solicitud, privilegio mínimo y presunción de compromiso. | No acreditado | Gobierno de seguridad\newline \localizadorRT{S4, «Modelado de amenazas de la arquitectura»}{sec:4-amenazas}{04} | Matriz de control y validación de configuración. |
+| RT-11.02\newline FEP02, p. 23\newline Obligatorio | El PROPONENTE entregará un modelado de amenazas documentado por cada componente y por cada integración externa, con metodología declarada (STRIDE u otra), y lo actualizará ante cada cambio arquitectónico relevante. | No acreditado | Gobierno de seguridad\newline \localizadorRT{S4, «Modelado de amenazas de la arquitectura»}{sec:4-amenazas}{04} | Matriz de control y validación de configuración. |
+| RT-11.03\newline FEP02, p. 23\newline Obligatorio | La información del CLIENTE se clasificará por nivel de sensibilidad, con controles diferenciados por nivel documentados en una matriz. | No acreditado | Gobierno de seguridad\newline \localizadorRT{S4, «Modelado de amenazas de la arquitectura»}{sec:4-amenazas}{04} | Matriz de control y validación de configuración. |
+| RT-11.04\newline FEP02, p. 23\newline Obligatorio | Existirá un programa de gestión de vulnerabilidades con escaneo continuo y plazos máximos de remediación de 7 días corridos para vulnerabilidades críticas, 15 días para altas y 30 días para medias, contados desde su publicación o detección. | No acreditado | Gobierno de seguridad\newline \localizadorRT{S4, «Modelado de amenazas de la arquitectura»}{sec:4-amenazas}{04} | Matriz de control y validación de configuración. |
+| RT-11.05\newline FEP02, p. 23\newline Obligatorio | El PROPONENTE mantendrá una matriz de controles de seguridad trazable a ISO/IEC 27001 e ISO/IEC 27002, indicando el control, su implementación concreta en la solución y la evidencia que lo acredita. | No acreditado | Gobierno de seguridad\newline \localizadorRT{S4, «Modelado de amenazas de la arquitectura»}{sec:4-amenazas}{04} | Matriz de control y validación de configuración. |
+| RT-11.06\newline FEP02, p. 23\newline Obligatorio | Se aplicarán los controles de ISO/IEC 27017 para los servicios en nube y de ISO/IEC 27018 para el tratamiento de datos personales en nube. | No acreditado | Gobierno de seguridad\newline \localizadorRT{S4, «Modelado de amenazas de la arquitectura»}{sec:4-amenazas}{04} | Matriz de control y validación de configuración. |
+| RT-11.07\newline FEP02, p. 23\newline Obligatorio | La publicación de servicios se realizará exclusivamente a través de la capa de borde, con red de distribución de contenidos, cortafuegos de aplicaciones web con reglas gestionadas y personalizadas, y protección contra denegación de servicio distribuida en capas 3, 4 y 7. | Parcial | Seguridad de la exposición\newline \localizadorRT{S4, «Seguridad lógica y superficie de exposición»}{sec:4-seguridad}{04} | Configuración y acta de prueba de protección. |
+| RT-11.08\newline FEP02, p. 23\newline Obligatorio | El cifrado en tránsito empleará TLS 1.3, con prohibición expresa de TLS 1.0 y 1.1, conjuntos de cifrado modernos, HSTS con precarga y gestión automatizada de certificados con rotación y alerta anticipada de vencimiento. | Parcial | Seguridad de la exposición\newline \localizadorRT{S4, «Seguridad lógica y superficie de exposición»}{sec:4-seguridad}{04} | Configuración y acta de prueba de protección. |
+| RT-11.09\newline FEP02, p. 23\newline Obligatorio | La totalidad de los datos en reposo estará cifrada, con claves gestionadas en un servicio de gestión de claves o en un módulo de seguridad de hardware, política de rotación declarada y separación de funciones en la custodia de claves. | Parcial | Seguridad de la exposición\newline \localizadorRT{S4, «Seguridad lógica y superficie de exposición»}{sec:4-seguridad}{04} | Configuración y acta de prueba de protección. |
+| RT-11.10\newline FEP02, p. 23\newline Según caso | Los datos de categoría sensible que el caso identifique se cifrarán adicionalmente a nivel de campo, de modo que el acceso a la base de datos no revele su contenido. | Parcial | Protección de datos identificables\newline \localizadorRT{S4, «Seguridad lógica y superficie de exposición»}{sec:4-seguridad}{04} | Prueba de cifrado por campo y autorización de consulta. |
+| RT-11.11\newline FEP02, p. 23\newline Obligatorio | La puerta de enlace de servicios aplicará autenticación, autorización, cuotas, límites de tasa, validación de esquema e inspección de carga útil. | Parcial | Seguridad de la exposición\newline \localizadorRT{S4, «Seguridad lógica y superficie de exposición»}{sec:4-seguridad}{04} | Configuración y acta de prueba de protección. |
+| RT-11.12\newline FEP02, p. 23\newline Obligatorio | Los puntos de entrada públicos contarán con protección contra bots y abuso automatizado, con reto progresivo que no degrade la accesibilidad ni bloquee a personas usuarias legítimas. | No acreditado | Seguridad de la exposición\newline \localizadorRT{S4, «Seguridad lógica y superficie de exposición»}{sec:4-seguridad}{04} | Configuración y acta de prueba de protección. |
+| RT-11.13\newline FEP02, p. 23\newline Obligatorio | El PROPONENTE declarará la superficie de exposición completa de la solución: cada nombre de dominio, puerto y servicio alcanzable desde fuera de la red del CLIENTE. | Parcial | Seguridad de la exposición\newline \localizadorRT{S4, «Seguridad lógica y superficie de exposición»}{sec:4-seguridad}{04} | Configuración y acta de prueba de protección. |
+| RT-11.14\newline FEP02, p. 24\newline Obligatorio | Los eventos de seguridad se registrarán de forma centralizada e inalterable, con retención mínima de doce meses en línea y veinticuatro meses adicionales en archivo recuperable. | No acreditado | Monitoreo y respuesta\newline \localizadorRT{S4, «Seguridad lógica y superficie de exposición»}{sec:4-seguridad}{04} | Registros de seguridad y prueba de respuesta. |
+| RT-11.15\newline FEP02, p. 24\newline Obligatorio | Los eventos se correlacionarán en una plataforma SIEM, con casos de uso de detección definidos específicamente para el proceso de negocio del caso, y no sólo genéricos de infraestructura. | No acreditado | Monitoreo y respuesta\newline \localizadorRT{S4, «Seguridad lógica y superficie de exposición»}{sec:4-seguridad}{04} | Registros de seguridad y prueba de respuesta. |
+| RT-11.16\newline FEP02, p. 24\newline Obligatorio | Se implementará detección y respuesta en puntos finales y en cargas de trabajo, tanto en nube como on-premise. | No acreditado | Monitoreo y respuesta\newline \localizadorRT{S4, «Seguridad lógica y superficie de exposición»}{sec:4-seguridad}{04} | Registros de seguridad y prueba de respuesta. |
+| RT-11.17\newline FEP02, p. 24\newline Obligatorio | El PROPONENTE dispondrá de un centro de operaciones de seguridad con cobertura 24x7, propio o subcontratado, y declarará su ubicación, dotación y procedimientos. | No acreditado | Monitoreo y respuesta\newline \localizadorRT{S4, «Seguridad lógica y superficie de exposición»}{sec:4-seguridad}{04} | Registros de seguridad y prueba de respuesta. |
+| RT-11.18\newline FEP02, p. 24\newline Obligatorio | El plan de respuesta a incidentes de seguridad definirá clasificación, cadena de escalamiento, plazos, responsables y protocolo de comunicación al CLIENTE dentro de las dos horas de detectado un incidente de severidad crítica. | No acreditado | Monitoreo y respuesta\newline \localizadorRT{S4, «Seguridad lógica y superficie de exposición»}{sec:4-seguridad}{04} | Registros de seguridad y prueba de respuesta. |
+| RT-11.19\newline FEP02, p. 24\newline Obligatorio | Toda brecha de seguridad o de datos personales se notificará al CLIENTE dentro de las 24 horas de su detección, con informe preliminar, y el análisis de causa raíz se entregará dentro de los cinco días hábiles siguientes. | No acreditado | Monitoreo y respuesta\newline \localizadorRT{S4, «Seguridad lógica y superficie de exposición»}{sec:4-seguridad}{04} | Registros de seguridad y prueba de respuesta. |
+| RT-11.20\newline FEP02, p. 24\newline Obligatorio | Se ejecutarán pruebas de intrusión por un tercero independiente del ADJUDICATARIO, anualmente y antes de cada paso a producción, con entrega íntegra del informe al CLIENTE y plan de remediación con plazos. | Parcial | Monitoreo y respuesta\newline \localizadorRT{S4, «Seguridad lógica y superficie de exposición»}{sec:4-seguridad}{04} | Registros de seguridad y prueba de respuesta. |
+| RT-11.21\newline FEP02, p. 24\newline Deseable | Se realizarán ejercicios de simulación de incidente con participación del CLIENTE al menos una vez al año durante la Operación. | No acreditado | Monitoreo y respuesta\newline \localizadorRT{S4, «Seguridad lógica y superficie de exposición»}{sec:4-seguridad}{04} | Registros de seguridad y prueba de respuesta. |
+| RT-11.22\newline FEP02, p. 24\newline Obligatorio | El flujo de integración continua incorporará análisis estático de código, análisis de composición de software, análisis dinámico y escaneo de imágenes de contenedor, con criterios de bloqueo automático del despliegue ante hallazgos críticos. | Parcial | DevSecOps\newline \localizadorRT{S6, «Ecosistema DevSecOps unificado en GitLab CI Enterprise»}{sec:6-desarrollo-devsecops}{06} | Registros de análisis y aprobación de liberación. |
+| RT-11.23\newline FEP02, p. 24\newline Obligatorio | Cada versión liberada se acompañará de su inventario de componentes de software en formato CycloneDX o SPDX, entregado al CLIENTE. | No acreditado | DevSecOps\newline \localizadorRT{S6, «Ecosistema DevSecOps unificado en GitLab CI Enterprise»}{sec:6-desarrollo-devsecops}{06} | Registros de análisis y aprobación de liberación. |
+| RT-11.24\newline FEP02, p. 24\newline Obligatorio | Los artefactos se firmarán y su procedencia se verificará conforme a SLSA nivel 3 o superior. | Parcial | DevSecOps\newline \localizadorRT{S6, «Ecosistema DevSecOps unificado en GitLab CI Enterprise»}{sec:6-desarrollo-devsecops}{06} | Registros de análisis y aprobación de liberación. |
+| RT-11.25\newline FEP02, p. 24\newline Obligatorio | Queda prohibido el uso de datos productivos reales en ambientes no productivos sin anonimización o seudonimización verificable. | No acreditado | DevSecOps\newline \localizadorRT{S6, «Ecosistema DevSecOps unificado en GitLab CI Enterprise»}{sec:6-desarrollo-devsecops}{06} | Registros de análisis y aprobación de liberación. |
+| RT-11.26\newline FEP02, p. 24\newline Obligatorio | El PROPONENTE declarará el proceso de aprobación de nuevas dependencias de terceros, incluyendo criterios de licencia, mantención activa y ausencia de vulnerabilidades conocidas. | No acreditado | DevSecOps\newline \localizadorRT{S6, «Ecosistema DevSecOps unificado en GitLab CI Enterprise»}{sec:6-desarrollo-devsecops}{06} | Registros de análisis y aprobación de liberación. |
+| RT-11.27\newline FEP02, p. 24\newline Obligatorio | Las personas desarrolladoras no tendrán acceso interactivo directo al ambiente de producción. Todo acceso excepcional será temporal, aprobado, registrado y con sesión grabada. | No acreditado | DevSecOps\newline \localizadorRT{S6, «Ecosistema DevSecOps unificado en GitLab CI Enterprise»}{sec:6-desarrollo-devsecops}{06} | Registros de análisis y aprobación de liberación. |
+| RT-11.28\newline FEP02, p. 24\newline Deseable | Se aplicará el marco OWASP SAMM o equivalente para medir y mejorar la madurez del proceso de desarrollo seguro, con evaluación inicial y reevaluación anual. | Parcial | DevSecOps\newline \localizadorRT{S6, «Ecosistema DevSecOps unificado en GitLab CI Enterprise»}{sec:6-desarrollo-devsecops}{06} | Registros de análisis y aprobación de liberación. |
+| \multicolumn{5}{l}{\bfseries Capítulo 12. Identidad y sesiones} |
+| RT-12.01\newline FEP02, p. 25\newline Obligatorio | La gestión de identidad será centralizada, con federación mediante OpenID Connect y OAuth 2.1, o SAML 2.0 cuando la integración con el CLIENTE lo requiera, e integración con el directorio corporativo del CLIENTE por LDAP o su equivalente en la nube. | No acreditado | Identidad y acceso\newline \localizadorRT{S4, «Seguridad lógica y superficie de exposición»}{sec:4-seguridad}{04} | Cotejo de configuración, roles y ciclo de sesión. |
+| RT-12.02\newline FEP02, p. 25\newline Obligatorio | Existirá inicio de sesión único para todos los módulos de la solución, con cierre de sesión propagado a todos ellos. | No acreditado | Identidad y acceso\newline \localizadorRT{S4, «Seguridad lógica y superficie de exposición»}{sec:4-seguridad}{04} | Cotejo de configuración, roles y ciclo de sesión. |
+| RT-12.03\newline FEP02, p. 25\newline Obligatorio | La autenticación multifactor será obligatoria para personas usuarias administradoras, para todo acceso privilegiado y para todo acceso originado fuera de la red corporativa. | No acreditado | Identidad y acceso\newline \localizadorRT{S4, «Seguridad lógica y superficie de exposición»}{sec:4-seguridad}{04} | Cotejo de configuración, roles y ciclo de sesión. |
+| RT-12.04\newline FEP02, p. 25\newline Deseable | Se soportarán factores resistentes a la suplantación de identidad, tipo FIDO2 o claves de acceso, al menos para los perfiles administradores. | No acreditado | Identidad y acceso\newline \localizadorRT{S4, «Seguridad lógica y superficie de exposición»}{sec:4-seguridad}{04} | Cotejo de configuración, roles y ciclo de sesión. |
+| RT-12.05\newline FEP02, p. 25\newline Obligatorio | El control de acceso será basado en roles, complementado con control basado en atributos donde el proceso lo exija, con matriz de segregación de funciones documentada y verificable. | No acreditado | Identidad y acceso\newline \localizadorRT{S4, «Seguridad lógica y superficie de exposición»}{sec:4-seguridad}{04} | Cotejo de configuración, roles y ciclo de sesión. |
+| RT-12.06\newline FEP02, p. 25\newline Obligatorio | Los accesos privilegiados se gestionarán con elevación temporal a demanda, aprobación previa y grabación de sesión para las operaciones de mayor riesgo. | No acreditado | Identidad y acceso\newline \localizadorRT{S4, «Seguridad lógica y superficie de exposición»}{sec:4-seguridad}{04} | Cotejo de configuración, roles y ciclo de sesión. |
+| RT-12.07\newline FEP02, p. 25\newline Obligatorio | La política de sesión declarará duración máxima, caducidad por inactividad, renovación de la credencial de sesión tras la autenticación, revocación inmediata y control de sesiones concurrentes. | No acreditado | Identidad y acceso\newline \localizadorRT{S4, «Seguridad lógica y superficie de exposición»}{sec:4-seguridad}{04} | Cotejo de configuración, roles y ciclo de sesión. |
+| RT-12.08\newline FEP02, p. 25\newline Obligatorio | Las credenciales de sesión serán firmadas y de vida breve, con credencial de refresco rotatoria. Queda prohibido transportar identificadores de sesión en la ruta de la dirección web. | No acreditado | Identidad y acceso\newline \localizadorRT{S4, «Seguridad lógica y superficie de exposición»}{sec:4-seguridad}{04} | Cotejo de configuración, roles y ciclo de sesión. |
+| RT-12.09\newline FEP02, p. 25\newline Obligatorio | Se registrará auditoría completa del ciclo de vida de la identidad: creación, modificación, elevación, bloqueo y baja de cuentas, con no repudio y retención declarada. | No acreditado | Identidad y acceso\newline \localizadorRT{S4, «Seguridad lógica y superficie de exposición»}{sec:4-seguridad}{04} | Cotejo de configuración, roles y ciclo de sesión. |
+| RT-12.10\newline FEP02, p. 26\newline Obligatorio | El aprovisionamiento y el desaprovisionamiento estarán automatizados y ligados al ciclo de vida laboral, con baja efectiva en un plazo no superior a 24 horas desde la desvinculación. | No acreditado | Identidad y acceso\newline \localizadorRT{S4, «Seguridad lógica y superficie de exposición»}{sec:4-seguridad}{04} | Cotejo de configuración, roles y ciclo de sesión. |
+| RT-12.11\newline FEP02, p. 26\newline Según caso | El mecanismo de autenticación se adecuará al perfil operacional real descrito en el caso: entornos de terreno, uso con guantes, baja alfabetización digital, dispositivos compartidos por turno y ausencia de correo electrónico personal. | No acreditado | Seguridad lógica y superficie de exposición\newline \localizadorRT{S4, «Seguridad lógica y superficie de exposición»}{sec:4-seguridad}{04} | Cotejo de configuración, roles y ciclo de sesión. |
+| RT-12.12\newline FEP02, p. 26\newline Según caso | Las personas usuarias externas del CLIENTE —clientes, proveedores, pacientes, productores, según el caso — dispondrán de un mecanismo de registro, verificación de identidad y recuperación de acceso autoservido y seguro. | No acreditado | Identidad y acceso\newline \localizadorRT{S4, «Seguridad lógica y superficie de exposición»}{sec:4-seguridad}{04} | Cotejo de configuración, roles y ciclo de sesión. |
+| RT-12.13\newline FEP02, p. 26\newline Obligatorio | El PROPONENTE declarará el procedimiento de acceso de emergencia (cuenta de último recurso), su custodia, su control y su auditoría. | No acreditado | Identidad y acceso\newline \localizadorRT{S4, «Seguridad lógica y superficie de exposición»}{sec:4-seguridad}{04} | Cotejo de configuración, roles y ciclo de sesión. |
+| \multicolumn{5}{l}{\bfseries Capítulo 13. Usabilidad y accesibilidad} |
+| RT-13.01\newline FEP02, p. 26\newline Obligatorio | Todas las interfaces destinadas a personas usuarias cumplirán WCAG 2.2 nivel AA, verificado con herramientas automatizadas y con pruebas manuales, con informe de conformidad entregable. | No acreditado | Interfaz operacional\newline \localizadorRT{S3, «Funcionamiento de un viaje»}{sec:3-viaje}{03} | Prueba de interfaz y acta de aceptación con usuarios. |
+| RT-13.02\newline FEP02, p. 26\newline Obligatorio | El diseño será responsivo y funcionará correctamente en escritorio, tableta y teléfono, con puntos de quiebre coherentes y adaptación inteligente del contenido, no simple reducción. | No acreditado | Interfaz operacional\newline \localizadorRT{S3, «Funcionamiento de un viaje»}{sec:3-viaje}{03} | Prueba de interfaz y acta de aceptación con usuarios. |
+| RT-13.03\newline FEP02, p. 26\newline Obligatorio | El PROPONENTE ejecutará investigación con personas usuarias reales del CLIENTE, prototipado y pruebas de usabilidad antes de la construcción definitiva, y documentará los hallazgos y los cambios de diseño que produjeron. | No acreditado | Interfaz operacional\newline \localizadorRT{S3, «Funcionamiento de un viaje»}{sec:3-viaje}{03} | Prueba de interfaz y acta de aceptación con usuarios. |
+| RT-13.04\newline FEP02, p. 26\newline Obligatorio | Se comprometerán indicadores de usabilidad medibles: tiempo máximo de la transacción operacional crítica, número máximo de pasos, tasa de error tolerada y tiempo de aprendizaje esperado por perfil. | No acreditado | Interfaz operacional\newline \localizadorRT{S3, «Funcionamiento de un viaje»}{sec:3-viaje}{03} | Prueba de interfaz y acta de aceptación con usuarios. |
+| RT-13.05\newline FEP02, p. 26\newline Obligatorio | Ninguna funcionalidad principal requerirá más de tres interacciones desde la pantalla de inicio del perfil correspondiente. | No acreditado | Interfaz operacional\newline \localizadorRT{S3, «Funcionamiento de un viaje»}{sec:3-viaje}{03} | Prueba de interfaz y acta de aceptación con usuarios. |
+| RT-13.06\newline FEP02, p. 26\newline Obligatorio | La solución entregará retroalimentación visual clara ante cada acción, manejará los errores de forma comprensible —indicando qué ocurrió y qué hacer— y evitará mensajes técnicos dirigidos a la persona usuaria final. | No acreditado | Interfaz operacional\newline \localizadorRT{S3, «Funcionamiento de un viaje»}{sec:3-viaje}{03} | Prueba de interfaz y acta de aceptación con usuarios. |
+| RT-13.07\newline FEP02, p. 26\newline Obligatorio | La solución soportará a personas usuarias con baja alfabetización digital: alto contraste, objetivos táctiles de al menos 44 x 44 píxeles, iconografía acompañada de texto, y flujos guiados paso a paso. | No acreditado | Interfaz operacional\newline \localizadorRT{S3, «Funcionamiento de un viaje»}{sec:3-viaje}{03} | Prueba de interfaz y acta de aceptación con usuarios. |
+| RT-13.08\newline FEP02, p. 26\newline Según caso | Cuando el caso lo requiera, las interfaces de terreno operarán con guantes, a la intemperie, con luminosidad variable y sin conexión. | No acreditado | Interfaz operacional\newline \localizadorRT{S3, «Funcionamiento de un viaje»}{sec:3-viaje}{03} | Prueba de interfaz y acta de aceptación con usuarios. |
+| RT-13.09\newline FEP02, p. 26\newline Obligatorio | Existirá un sistema de diseño documentado con paleta de colores acotada, jerarquía tipográfica de a lo más dos familias, iconografía coherente, retícula y componentes reutilizables. | No acreditado | Interfaz operacional\newline \localizadorRT{S3, «Funcionamiento de un viaje»}{sec:3-viaje}{03} | Prueba de interfaz y acta de aceptación con usuarios. |
+| RT-13.10\newline FEP02, p. 26\newline Obligatorio | El PROPONENTE declarará la matriz de navegadores y de versiones soportadas y su política de actualización. | No acreditado | Interfaz operacional\newline \localizadorRT{S3, «Funcionamiento de un viaje»}{sec:3-viaje}{03} | Prueba de interfaz y acta de aceptación con usuarios. |
+| RT-13.11\newline FEP02, p. 26\newline Obligatorio | La solución será navegable íntegramente por teclado, con orden de foco lógico y atajos para las operaciones frecuentes. | No acreditado | Interfaz operacional\newline \localizadorRT{S3, «Funcionamiento de un viaje»}{sec:3-viaje}{03} | Prueba de interfaz y acta de aceptación con usuarios. |
+| RT-13.12\newline FEP02, p. 27\newline Deseable | Se valorará el soporte de modo oscuro, de personalización de la interfaz por persona usuaria y de múltiples idiomas cuando el caso lo justifique. | No acreditado | Interfaz operacional\newline \localizadorRT{S3, «Funcionamiento de un viaje»}{sec:3-viaje}{03} | Prueba de interfaz y acta de aceptación con usuarios. |
+| \multicolumn{5}{l}{\bfseries Capítulo 14. Observabilidad} |
+| RT-14.01\newline FEP02, p. 27\newline Obligatorio | La observabilidad será unificada para nube y on-premise, con métricas, registros y trazas distribuidas correlacionadas por un identificador único de transacción, instrumentadas conforme a OpenTelemetry. | No acreditado | Monitoreo de la plataforma\newline \localizadorRT{S3, «Operación»}{sec:3-operacion}{03} | Registro de monitoreo y evidencia de alerta. |
+| RT-14.02\newline FEP02, p. 27\newline Obligatorio | El CLIENTE dispondrá de acceso propio y permanente a los tableros operacionales y de negocio, con datos en tiempo real y capacidad de exportación. | No acreditado | Monitoreo de la plataforma\newline \localizadorRT{S3, «Operación»}{sec:3-operacion}{03} | Registro de monitoreo y evidencia de alerta. |
+| RT-14.03\newline FEP02, p. 27\newline Obligatorio | Los indicadores de nivel de servicio se medirán sobre la experiencia real de la persona usuaria y no sobre pruebas sintéticas, sin perjuicio de que estas se empleen como complemento. | No acreditado | Monitoreo de la plataforma\newline \localizadorRT{S3, «Operación»}{sec:3-operacion}{03} | Registro de monitoreo y evidencia de alerta. |
+| RT-14.04\newline FEP02, p. 27\newline Obligatorio | El alertamiento se basará en síntomas de negocio y no sólo en umbrales de infraestructura, con supresión de ruido, agrupación, escalamiento automático y turnos de disponibilidad declarados. | No acreditado | Monitoreo de la plataforma\newline \localizadorRT{S3, «Operación»}{sec:3-operacion}{03} | Registro de monitoreo y evidencia de alerta. |
+| RT-14.05\newline FEP02, p. 27\newline Obligatorio | Existirá un libro de operación y una guía de resolución documentados para cada escenario de falla previsible, con automatización progresiva de las tareas repetitivas. | No acreditado | Monitoreo de la plataforma\newline \localizadorRT{S3, «Operación»}{sec:3-operacion}{03} | Registro de monitoreo y evidencia de alerta. |
+| RT-14.06\newline FEP02, p. 27\newline Obligatorio | Todo incidente crítico dará lugar a un análisis de causa raíz obligatorio, con informe entregable dentro de cinco días hábiles y seguimiento de las acciones correctivas hasta su cierre. | No acreditado | Monitoreo de la plataforma\newline \localizadorRT{S3, «Operación»}{sec:3-operacion}{03} | Registro de monitoreo y evidencia de alerta. |
+| RT-14.07\newline FEP02, p. 27\newline Obligatorio | Los registros de la solución no contendrán datos personales sensibles ni credenciales, y su acceso estará controlado y auditado. | No acreditado | Monitoreo de la plataforma\newline \localizadorRT{S3, «Operación»}{sec:3-operacion}{03} | Registro de monitoreo y evidencia de alerta. |
+| RT-14.08\newline FEP02, p. 27\newline Obligatorio | El PROPONENTE declarará la retención de métricas, registros y trazas, y su costo asociado, distinguiendo el almacenamiento en línea del archivado. | No acreditado | Monitoreo de la plataforma\newline \localizadorRT{S3, «Operación»}{sec:3-operacion}{03} | Registro de monitoreo y evidencia de alerta. |
+| RT-14.09\newline FEP02, p. 27\newline Deseable | Se valorará la detección proactiva de anomalías mediante análisis del comportamiento histórico, con alerta antes de que el incidente afecte a la operación. | No acreditado | Monitoreo de la plataforma\newline \localizadorRT{S3, «Operación»}{sec:3-operacion}{03} | Registro de monitoreo y evidencia de alerta. |
+| \multicolumn{5}{l}{\bfseries Capítulo 15. Sostenibilidad y certificaciones} |
+| RT-15.01\newline FEP02, p. 27\newline Obligatorio | El PROPONENTE dimensionará la infraestructura ajustada a la demanda real, evitando capacidad ociosa permanente, y declarará el factor de utilización proyectado. | No acreditado | Infraestructura y eficiencia\newline \localizadorRT{S4, «Dimensionamiento y capacidad»}{sec:4-dimensionamiento}{04} | Memoria de capacidad y medición de consumo. |
+| RT-15.02\newline FEP02, p. 27\newline Obligatorio | Los ambientes no productivos se apagarán o reducirán fuera del horario de uso. | No acreditado | Infraestructura y eficiencia\newline \localizadorRT{S4, «Dimensionamiento y capacidad»}{sec:4-dimensionamiento}{04} | Memoria de capacidad y medición de consumo. |
+| RT-15.03\newline FEP02, p. 27\newline Obligatorio | El PROPONENTE estimará la huella de carbono anual de la operación de la solución y declarará la metodología empleada. | No acreditado | Infraestructura y eficiencia\newline \localizadorRT{S4, «Dimensionamiento y capacidad»}{sec:4-dimensionamiento}{04} | Memoria de capacidad y medición de consumo. |
+| RT-15.04\newline FEP02, p. 27\newline Obligatorio | Se declarará la eficiencia en el uso de la energía (PUE) del recinto on-premise y la intensidad de carbono de la región de nube escogida. | No acreditado | Infraestructura y eficiencia\newline \localizadorRT{S4, «Dimensionamiento y capacidad»}{sec:4-dimensionamiento}{04} | Memoria de capacidad y medición de consumo. |
+| RT-15.05\newline FEP02, p. 28\newline Deseable | Se valorará la elección de regiones de nube con menor intensidad de carbono cuando la latencia y la regulación lo permitan, con el análisis comparativo correspondiente. | No acreditado | Infraestructura y eficiencia\newline \localizadorRT{S4, «Dimensionamiento y capacidad»}{sec:4-dimensionamiento}{04} | Memoria de capacidad y medición de consumo. |
+| RT-15.06\newline FEP02, p. 28\newline Deseable | Se valorará la definición de metas de reducción del consumo durante la Operación, con medición y reporte anual. | No acreditado | Infraestructura y eficiencia\newline \localizadorRT{S4, «Dimensionamiento y capacidad»}{sec:4-dimensionamiento}{04} | Memoria de capacidad y medición de consumo. |
+| RT-15.07\newline FEP02, p. 28\newline Obligatorio | Las certificaciones se acreditarán con copia del certificado vigente y con el código de verificación del organismo emisor cuando exista. | No acreditado | Certificaciones del personal\newline \localizadorRT{S1, «Certificaciones institucionales y alineamiento normativo»}{sec:1-certificaciones}{01} | Cotejo de credenciales, perfiles y vigencia. |
+| RT-15.08\newline FEP02, p. 28\newline Obligatorio | Las personas certificadas formarán parte del equipo efectivamente asignado al PROYECTO, con dedicación declarada. No se aceptará acreditar personal que no participe. | No acreditado | Certificaciones del personal\newline \localizadorRT{S1, «Certificaciones institucionales y alineamiento normativo»}{sec:1-certificaciones}{01} | Cotejo de credenciales, perfiles y vigencia. |
+| RT-15.09\newline FEP02, p. 28\newline Obligatorio | El ADJUDICATARIO mantendrá vigentes estas certificaciones durante todo el período contractual y las repondrá ante la salida de una persona certificada, conforme al Artículo 76° de las Bases Administrativas. | No acreditado | Certificaciones del personal\newline \localizadorRT{S1, «Certificaciones institucionales y alineamiento normativo»}{sec:1-certificaciones}{01} | Cotejo de credenciales, perfiles y vigencia. |
+| \multicolumn{5}{l}{\bfseries Capítulo 16. Módulos transversales} |
+| RT-16.01\newline FEP02, p. 29\newline Obligatorio | La solución dispondrá de un módulo de administración que permita al CLIENTE, sin intervención del ADJUDICATARIO, gestionar personas usuarias, roles, permisos, unidades organizacionales y sus jerarquías. | No acreditado | Parametrización de la plataforma\newline \localizadorRT{S4, «Los seis contextos delimitados»}{sec:4-contextos}{04} | Prueba de configuración y perfiles. |
+| RT-16.02\newline FEP02, p. 29\newline Obligatorio | Las reglas de negocio parametrizables —umbrales, plazos, montos, tolerancias, catálogos, listas de valores, textos de notificación — serán configurables desde la interfaz de administración, con control de versiones y registro de quién cambió qué y cuándo. | No acreditado | Parametrización de la plataforma\newline \localizadorRT{S4, «Los seis contextos delimitados»}{sec:4-contextos}{04} | Prueba de configuración y perfiles. |
+| RT-16.03\newline FEP02, p. 29\newline Obligatorio | Todo cambio de parámetro con impacto operacional requerirá aprobación de un segundo perfil y quedará registrado con su justificación. | No acreditado | Parametrización de la plataforma\newline \localizadorRT{S4, «Los seis contextos delimitados»}{sec:4-contextos}{04} | Prueba de configuración y perfiles. |
+| RT-16.04\newline FEP02, p. 29\newline Obligatorio | El PROPONENTE declarará expresamente qué elementos son parametrizables y cuáles requieren desarrollo. Presentar como parametrizable lo que exige desarrollo se evaluará como observación grave. | No acreditado | Parametrización de la plataforma\newline \localizadorRT{S4, «Los seis contextos delimitados»}{sec:4-contextos}{04} | Prueba de configuración y perfiles. |
+| RT-16.05\newline FEP02, p. 29\newline Deseable | Existirá un ambiente de simulación que permita probar el efecto de un cambio de parámetro antes de aplicarlo a producción. | No acreditado | Parametrización de la plataforma\newline \localizadorRT{S4, «Los seis contextos delimitados»}{sec:4-contextos}{04} | Prueba de configuración y perfiles. |
+| RT-16.06\newline FEP02, p. 29\newline Obligatorio | Toda operación que cree, modifique o elimine información quedará registrada con identificación de la persona o del sistema que la ejecutó, fecha y hora con zona horaria, origen, valores anteriores y valores posteriores. | No acreditado | Auditoría de transacciones\newline \localizadorRT{S5, «Políticas de gobernanza, calidad y retención histórica»}{sec:5-gobernanza}{05} | Inspección del registro de auditoría. |
+| RT-16.07\newline FEP02, p. 29\newline Obligatorio | El registro de auditoría será inalterable y no podrá ser modificado ni eliminado por ningún perfil, incluido el administrador de la plataforma. | No acreditado | Auditoría de transacciones\newline \localizadorRT{S5, «Políticas de gobernanza, calidad y retención histórica»}{sec:5-gobernanza}{05} | Inspección del registro de auditoría. |
+| RT-16.08\newline FEP02, p. 29\newline Obligatorio | El CLIENTE podrá consultar y exportar la auditoría desde la interfaz, con filtros por persona, período, entidad y tipo de operación, sin requerir acceso a la base de datos. | No acreditado | Auditoría de transacciones\newline \localizadorRT{S5, «Políticas de gobernanza, calidad y retención histórica»}{sec:5-gobernanza}{05} | Inspección del registro de auditoría. |
+| RT-16.09\newline FEP02, p. 29\newline Según caso | Las consultas a información sensible quedarán registradas, no sólo las modificaciones. | No acreditado | Políticas de gobernanza, calidad y retención histórica\newline \localizadorRT{S5, «Políticas de gobernanza, calidad y retención histórica»}{sec:5-gobernanza}{05} | Inspección del registro de auditoría. |
+| RT-16.10\newline FEP02, p. 29\newline Según caso | El período de retención de la auditoría será el que fije el caso y, en su defecto, no inferior a cinco años. | No acreditado | Auditoría de transacciones\newline \localizadorRT{S5, «Políticas de gobernanza, calidad y retención histórica»}{sec:5-gobernanza}{05} | Inspección del registro de auditoría. |
+| RT-16.11\newline FEP02, p. 30\newline Obligatorio | La solución soportará flujos de trabajo con estados, transiciones, responsables, plazos, escalamiento automático por vencimiento y delegación por ausencia. | No acreditado | Motor de reglas\newline \localizadorRT{S3, «Reglas de negocio»}{sec:3-reglas}{03} | Ensayo de reglas y flujos en preproducción. |
+| RT-16.12\newline FEP02, p. 30\newline Obligatorio | Los flujos serán configurables por el CLIENTE sin desarrollo, al menos en lo relativo a responsables, plazos y niveles de aprobación. | No acreditado | Motor de reglas\newline \localizadorRT{S3, «Reglas de negocio»}{sec:3-reglas}{03} | Ensayo de reglas y flujos en preproducción. |
+| RT-16.13\newline FEP02, p. 30\newline Obligatorio | Toda solicitud pendiente será visible para su responsable en una bandeja de tareas unificada, con priorización y alerta de vencimiento. | No acreditado | Motor de reglas\newline \localizadorRT{S3, «Reglas de negocio»}{sec:3-reglas}{03} | Ensayo de reglas y flujos en preproducción. |
+| RT-16.14\newline FEP02, p. 30\newline Deseable | El motor de reglas permitirá definir condiciones de negocio evaluables sin recompilación, con trazabilidad de qué regla se aplicó a cada transacción. | No acreditado | Motor de reglas\newline \localizadorRT{S3, «Reglas de negocio»}{sec:3-reglas}{03} | Ensayo de reglas y flujos en preproducción. |
+| RT-16.15\newline FEP02, p. 30\newline Obligatorio | La solución gestionará documentos con versionado, metadatos, control de acceso, búsqueda por contenido y por metadato, y previsualización sin descarga. | No acreditado | Documentos del viaje\newline \localizadorRT{S3, «Funcionamiento de un viaje»}{sec:3-viaje}{03} | Expediente de documento, firma y conservación. |
+| RT-16.16\newline FEP02, p. 30\newline Obligatorio | Los documentos se almacenarán cifrados, con verificación de integridad y retención conforme a la política del caso. | No acreditado | Documentos del viaje\newline \localizadorRT{S3, «Funcionamiento de un viaje»}{sec:3-viaje}{03} | Expediente de documento, firma y conservación. |
+| RT-16.17\newline FEP02, p. 30\newline Según caso | La solución soportará firma electrónica conforme a la Ley N° 19.799, con firma avanzada para los actos que el caso lo requiera, y verificación de validez del certificado al momento de la firma. | No acreditado | Documentos del viaje\newline \localizadorRT{S3, «Funcionamiento de un viaje»}{sec:3-viaje}{03} | Expediente de documento, firma y conservación. |
+| RT-16.18\newline FEP02, p. 30\newline Según caso | Se generará el sello de tiempo y se conservará la evidencia de firma que permita verificar el documento con posterioridad al vencimiento del certificado. | No acreditado | Documentos del viaje\newline \localizadorRT{S3, «Funcionamiento de un viaje»}{sec:3-viaje}{03} | Expediente de documento, firma y conservación. |
+| RT-16.19\newline FEP02, p. 30\newline Obligatorio | La solución generará documentos a partir de plantillas administrables por el CLIENTE, con datos de la transacción y salida en formato abierto. | No acreditado | Documentos del viaje\newline \localizadorRT{S3, «Funcionamiento de un viaje»}{sec:3-viaje}{03} | Expediente de documento, firma y conservación. |
+| RT-16.20\newline FEP02, p. 30\newline Obligatorio | La solución enviará notificaciones por al menos tres canales: correo electrónico, notificación en la aplicación y mensajería instantánea o SMS, según lo que el caso requiera. | No acreditado | Alertas operacionales\newline \localizadorRT{S3, «Funcionamiento de un viaje»}{sec:3-viaje}{03} | Prueba de canales, envío y recepción. |
+| RT-16.21\newline FEP02, p. 30\newline Obligatorio | Las plantillas de notificación serán administrables por el CLIENTE, con variables de la transacción, y versionadas. | No acreditado | Reglas de negocio\newline \localizadorRT{S3, «Reglas de negocio»}{sec:3-reglas}{03} | Prueba de canales, envío y recepción. |
+| RT-16.22\newline FEP02, p. 30\newline Obligatorio | Cada persona usuaria podrá configurar sus preferencias de canal y de frecuencia, respetando las notificaciones que el CLIENTE defina como obligatorias. | No acreditado | Alertas operacionales\newline \localizadorRT{S3, «Funcionamiento de un viaje»}{sec:3-viaje}{03} | Prueba de canales, envío y recepción. |
+| RT-16.23\newline FEP02, p. 30\newline Obligatorio | El envío será asíncrono, con reintento ante falla, control de duplicados y registro de entrega, apertura y error por cada mensaje. | No acreditado | Alertas operacionales\newline \localizadorRT{S3, «Funcionamiento de un viaje»}{sec:3-viaje}{03} | Prueba de canales, envío y recepción. |
+| RT-16.24\newline FEP02, p. 30\newline Obligatorio | El PROPONENTE declarará el proveedor de cada canal, su costo unitario, su volumen proyectado y el tratamiento del costo variable en la Oferta Económica. | No acreditado | Alertas operacionales\newline \localizadorRT{S3, «Funcionamiento de un viaje»}{sec:3-viaje}{03} | Prueba de canales, envío y recepción. |
+| RT-16.25\newline FEP02, p. 30\newline Obligatorio | Las notificaciones respetarán la normativa de comunicaciones comerciales y permitirán la baja cuando corresponda. | No acreditado | Alertas operacionales\newline \localizadorRT{S3, «Funcionamiento de un viaje»}{sec:3-viaje}{03} | Prueba de canales, envío y recepción. |
+| RT-16.26\newline FEP02, p. 30\newline Deseable | Se valorará la integración con canales conversacionales que permitan a la persona usuaria responder y ejecutar acciones desde el propio canal. | No acreditado | Alertas operacionales\newline \localizadorRT{S3, «Funcionamiento de un viaje»}{sec:3-viaje}{03} | Prueba de canales, envío y recepción. |
+| RT-16.27\newline FEP02, p. 31\newline Obligatorio | La solución dispondrá de búsqueda global con indexación de texto completo, tolerancia a errores de escritura, filtros facetados y respeto del control de acceso de la persona que busca. | No acreditado | Búsqueda y reportería\newline \localizadorRT{S4, «Explotación analítica y autoservicio»}{sec:4-autoservicio}{04} | Prueba de consulta y exportación. |
+| RT-16.28\newline FEP02, p. 31\newline Obligatorio | Los listados serán ordenables, filtrables, paginados y exportables en formatos abiertos, con el filtro aplicado reflejado en la exportación. | No acreditado | Búsqueda y reportería\newline \localizadorRT{S4, «Explotación analítica y autoservicio»}{sec:4-autoservicio}{04} | Prueba de consulta y exportación. |
+| RT-16.29\newline FEP02, p. 31\newline Obligatorio | Las exportaciones de gran volumen se procesarán de forma asíncrona, con notificación al completarse y sin bloquear la sesión. | No acreditado | Búsqueda y reportería\newline \localizadorRT{S4, «Explotación analítica y autoservicio»}{sec:4-autoservicio}{04} | Prueba de consulta y exportación. |
+| RT-16.30\newline FEP02, p. 31\newline Obligatorio | Toda exportación de información sensible quedará registrada en la auditoría, con identificación de quién exportó qué y cuándo. | No acreditado | Seguridad lógica y superficie de exposición\newline \localizadorRT{S4, «Seguridad lógica y superficie de exposición»}{sec:4-seguridad}{04} | Prueba de consulta y exportación. |
+| RT-16.31\newline FEP02, p. 31\newline Según caso | La solución dispondrá de un portal público con la información que el caso determine, accesible sin autenticación, con los mismos estándares de accesibilidad y desempeño que el resto de la plataforma. | No acreditado | Portales del viaje\newline \localizadorRT{S4, «Los seis contextos delimitados»}{sec:4-contextos}{04} | Prueba de portales, acceso y autoatención. |
+| RT-16.32\newline FEP02, p. 31\newline Obligatorio | Las personas usuarias externas dispondrán de autoatención para las consultas de mayor frecuencia, evitando el contacto telefónico para operaciones simples. | No acreditado | Portales del viaje\newline \localizadorRT{S4, «Los seis contextos delimitados»}{sec:4-contextos}{04} | Prueba de portales, acceso y autoatención. |
+| RT-16.33\newline FEP02, p. 31\newline Obligatorio | El PROPONENTE estimará la reducción esperada del volumen de atención asistida por efecto de la autoatención y comprometerá el indicador. | No acreditado | Portales del viaje\newline \localizadorRT{S4, «Los seis contextos delimitados»}{sec:4-contextos}{04} | Prueba de portales, acceso y autoatención. |
+| RT-16.34\newline FEP02, p. 31\newline Obligatorio | El portal público resistirá picos de tráfico sin degradar los servicios transaccionales internos, mediante aislamiento de recursos y caché. | No acreditado | Portales del viaje\newline \localizadorRT{S4, «Los seis contextos delimitados»}{sec:4-contextos}{04} | Prueba de portales, acceso y autoatención. |
+| \multicolumn{5}{l}{\bfseries Capítulo 17. Canales y movilidad} |
+| RT-17.01\newline FEP02, p. 31\newline Según caso | La solución proveerá una aplicación móvil para los perfiles operacionales que el caso identifique, con funcionamiento sin conexión y sincronización diferida cuando la operación en terreno lo requiera. | No acreditado | Las ocho capas\newline \localizadorRT{S4, «Las ocho capas»}{sec:4-capas}{04} | Prueba de perfiles de movilidad y periféricos. |
+| RT-17.02\newline FEP02, p. 31\newline Obligatorio | El PROPONENTE declarará si la aplicación es nativa, híbrida o web progresiva, y justificará la decisión frente al requisito de operación desconectada, al acceso a periféricos y al costo de mantención. | No acreditado | Canales de usuario\newline \localizadorRT{S4, «Las ocho capas»}{sec:4-capas}{04} | Prueba de perfiles de movilidad y periféricos. |
+| RT-17.03\newline FEP02, p. 31\newline Obligatorio | La aplicación soportará las versiones de sistema operativo móvil vigentes y las dos anteriores, con política de actualización declarada. | No acreditado | Canales de usuario\newline \localizadorRT{S4, «Las ocho capas»}{sec:4-capas}{04} | Prueba de perfiles de movilidad y periféricos. |
+| RT-17.04\newline FEP02, p. 31\newline Obligatorio | La aplicación se distribuirá por las tiendas oficiales o mediante gestión de flota corporativa, con firma de la aplicación y verificación de integridad. | No acreditado | Canales de usuario\newline \localizadorRT{S4, «Las ocho capas»}{sec:4-capas}{04} | Prueba de perfiles de movilidad y periféricos. |
+| RT-17.05\newline FEP02, p. 31\newline Obligatorio | La información almacenada en el dispositivo estará cifrada, con borrado remoto y bloqueo ante pérdida o desvinculación de la persona usuaria. | No acreditado | Canales de usuario\newline \localizadorRT{S4, «Las ocho capas»}{sec:4-capas}{04} | Prueba de perfiles de movilidad y periféricos. |
+| RT-17.06\newline FEP02, p. 31\newline Según caso | La aplicación integrará los periféricos que el caso requiera: cámara, lector de códigos, NFC, GPS, impresora de etiquetas, balanza o báscula. | No acreditado | Fuentes con desfase y telemetría del vehículo\newline \localizadorRT{S4, «Fuentes con desfase y telemetría del vehículo»}{sec:4-desfase}{04} | Prueba de perfiles de movilidad y periféricos. |
+| RT-17.07\newline FEP02, p. 31\newline Obligatorio | El consumo de datos móviles y de batería se optimizará y se declarará el consumo estimado por turno de trabajo. | No acreditado | Canales de usuario\newline \localizadorRT{S4, «Las ocho capas»}{sec:4-capas}{04} | Prueba de perfiles de movilidad y periféricos. |
+| RT-17.08\newline FEP02, p. 32\newline Deseable | Se valorará la disponibilidad de una versión de la interfaz para dispositivos de bajo costo o de generaciones anteriores, ampliando la cobertura de personas usuarias. | No acreditado | Canales de usuario\newline \localizadorRT{S4, «Las ocho capas»}{sec:4-capas}{04} | Prueba de perfiles de movilidad y periféricos. |
+| \multicolumn{5}{l}{\bfseries Capítulo 18. Inteligencia artificial} |
+| RT-18.01\newline FEP02, p. 32\newline Obligatorio | El PROPONENTE declarará cada componente de inteligencia artificial: propósito, modelo o servicio empleado, proveedor, versión y ubicación de procesamiento de los datos. | No acreditado | Innovación y automatización aplicada\newline \localizadorRT{S13, «Innovación 2 — Proceso»}{sec:13-innovacion-2}{13} | Ficha de innovación y aceptación de controles aplicables. |
+| RT-18.02\newline FEP02, p. 32\newline Obligatorio | Se garantizará contractualmente que los datos del CLIENTE no serán utilizados para entrenar modelos de terceros, salvo autorización expresa y escrita. | No acreditado | Innovación y automatización aplicada\newline \localizadorRT{S13, «Innovación 2 — Proceso»}{sec:13-innovacion-2}{13} | Ficha de innovación y aceptación de controles aplicables. |
+| RT-18.03\newline FEP02, p. 32\newline Obligatorio | Se documentarán los límites de uso, los casos en que el resultado requiere validación humana previa y el procedimiento de supervisión. | No acreditado | Innovación y automatización aplicada\newline \localizadorRT{S13, «Innovación 2 — Proceso»}{sec:13-innovacion-2}{13} | Ficha de innovación y aceptación de controles aplicables. |
+| RT-18.04\newline FEP02, p. 32\newline Obligatorio | Los riesgos de sesgo, alucinación, fuga de información y uso indebido se evaluarán y mitigarán conforme al NIST Al Risk Management Framework 1.0 y a la norma ISO/IEC 42001. | No acreditado | Innovación y automatización aplicada\newline \localizadorRT{S13, «Innovación 2 — Proceso»}{sec:13-innovacion-2}{13} | Ficha de innovación y aceptación de controles aplicables. |
+| RT-18.05\newline FEP02, p. 32\newline Obligatorio | Toda interacción relevante con un componente de inteligencia artificial quedará registrada para efectos de auditoría y trazabilidad, incluyendo la entrada, la salida y la decisión humana posterior. | No acreditado | Innovación y automatización aplicada\newline \localizadorRT{S13, «Innovación 2 — Proceso»}{sec:13-innovacion-2}{13} | Ficha de innovación y aceptación de controles aplicables. |
+| RT-18.06\newline FEP02, p. 32\newline Obligatorio | El componente podrá desactivarse sin comprometer la operación del resto de la solución, y existirá un procedimiento manual de respaldo para la función que automatiza. | No acreditado | Innovación y automatización aplicada\newline \localizadorRT{S13, «Innovación 2 — Proceso»}{sec:13-innovacion-2}{13} | Ficha de innovación y aceptación de controles aplicables. |
+| RT-18.07\newline FEP02, p. 32\newline Obligatorio | Cuando el resultado se presente a una persona usuaria, se indicará expresamente que fue generado o sugerido de forma automática, y su nivel de confianza cuando el modelo lo provea. | No acreditado | Innovación y automatización aplicada\newline \localizadorRT{S13, «Innovación 2 — Proceso»}{sec:13-innovacion-2}{13} | Ficha de innovación y aceptación de controles aplicables. |
+| RT-18.08\newline FEP02, p. 32\newline Obligatorio | Los modelos predictivos declararán sus variables de entrada, su métrica de desempeño, su línea base y su plan de reentrenamiento y de detección de deriva. | No acreditado | Innovación y automatización aplicada\newline \localizadorRT{S13, «Innovación 2 — Proceso»}{sec:13-innovacion-2}{13} | Ficha de innovación y aceptación de controles aplicables. |
+| RT-18.09\newline FEP02, p. 32\newline Obligatorio | La responsabilidad por los resultados de los componentes de inteligencia artificial recae integramente en el ADJUDICATARIO, conforme al Artículo 86° de las Bases Administrativas. | No acreditado | Innovación y automatización aplicada\newline \localizadorRT{S13, «Innovación 2 — Proceso»}{sec:13-innovacion-2}{13} | Ficha de innovación y aceptación de controles aplicables. |
+| RT-18.10\newline FEP02, p. 32\newline Deseable | Se valorará el uso de automatización robótica de procesos o de agentes para tareas repetitivas de back office, con el ahorro de horas cuantificado y reflejado en la Oferta Económica. | No acreditado | Innovación y automatización aplicada\newline \localizadorRT{S13, «Innovación 2 — Proceso»}{sec:13-innovacion-2}{13} | Ficha de innovación y aceptación de controles aplicables. |
+| \multicolumn{5}{l}{\bfseries Capítulo 19. Gobierno} |
+| RT-19.01\newline FEP02, p. 33\newline Obligatorio | El ADJUDICATARIO constituirá una oficina de gestión del proyecto con metodología declarada, basada en el PMBOK del Project Management Institute e integrando prácticas ágiles donde el PROPONENTE lo justifique. | Parcial | Metodología de Gestión de Proyectos\newline \localizadorRT{S6, «Metodología de Gestión de Proyectos»}{sec:6-gestion}{06} | Acta de organización, roles y matriz de responsabilidades. |
+| RT-19.02\newline FEP02, p. 33\newline Obligatorio | El Jefe de Proyecto tendrá dedicación exclusiva durante toda la fase de implementación y facultades para comprometer al ADJUDICATARIO en materias de ejecución. | No acreditado | Gobierno del proyecto\newline \localizadorRT{S6, «Marco híbrido de gestión: PMBOK y enfoques ágiles»}{sec:6-gestion-pmbok}{06} | Acta de organización, roles y matriz de responsabilidades. |
+| RT-19.03\newline FEP02, p. 33\newline Obligatorio | Existirá un procedimiento formal de control de cambios conforme al Artículo 72° de las Bases Administrativas, con registro de cambios, análisis de impacto y aprobación previa a la ejecución. | Parcial | Gobierno del proyecto\newline \localizadorRT{S6, «Marco híbrido de gestión: PMBOK y enfoques ágiles»}{sec:6-gestion-pmbok}{06} | Acta de organización, roles y matriz de responsabilidades. |
+| RT-19.04\newline FEP02, p. 33\newline Obligatorio | La gestión del riesgo seguirá la norma ISO 31000, con registro de riesgos vivo, revisión en cada Comité de Proyecto y planes de mitigación con responsable, plazo y disparador. | Parcial | Gobernanza de interesados y plan de comunicaciones\newline \localizadorRT{S6, «Gobernanza de interesados y plan de comunicaciones»}{sec:6-gestion-interesados}{06} | Acta de organización, roles y matriz de responsabilidades. |
+| RT-19.05\newline FEP02, p. 33\newline Obligatorio | El ADJUDICATARIO habilitará un espacio colaborativo accesible al CLIENTE, con la documentación del proyecto, los entregables, las actas, el registro de riesgos y el registro de cambios siempre actualizados. | Parcial | Gobernanza de interesados y plan de comunicaciones\newline \localizadorRT{S6, «Gobernanza de interesados y plan de comunicaciones»}{sec:6-gestion-interesados}{06} | Acta de organización, roles y matriz de responsabilidades. |
+| RT-19.06\newline FEP02, p. 34\newline Obligatorio | El ADJUDICATARIO entregará un informe mensual de avance con estado del cronograma, avance físico y financiero, entregables del período, desviaciones, riesgos, incidencias y compromisos del período siguiente. | Parcial | Control y reporte de proyecto\newline \localizadorRT{S6, «Metodología de Gestión de Proyectos»}{sec:6-gestion}{06} | Plan, tablero y actas de control. |
+| RT-19.07\newline FEP02, p. 34\newline Obligatorio | El avance se medirá con valor ganado, reportando el índice de desempeño del cronograma y del costo, y no mediante declaración cualitativa de porcentaje de avance. | No acreditado | Control y reporte de proyecto\newline \localizadorRT{S6, «Metodología de Gestión de Proyectos»}{sec:6-gestion}{06} | Plan, tablero y actas de control. |
+| RT-19.08\newline FEP02, p. 34\newline Obligatorio | El CLIENTE dispondrá de un tablero de estado del proyecto actualizado, accesible en cualquier momento. | No acreditado | Control y reporte de proyecto\newline \localizadorRT{S6, «Metodología de Gestión de Proyectos»}{sec:6-gestion}{06} | Plan, tablero y actas de control. |
+| RT-19.09\newline FEP02, p. 34\newline Obligatorio | Las actas de todos los comités del Artículo 71° de las Bases Administrativas se levantarán dentro de los dos días hábiles siguientes y registrarán acuerdos, responsables y plazos. | No acreditado | Control y reporte de proyecto\newline \localizadorRT{S6, «Metodología de Gestión de Proyectos»}{sec:6-gestion}{06} | Plan, tablero y actas de control. |
+| RT-19.10\newline FEP02, p. 34\newline Obligatorio | Toda desviación superior al 10 % en un hito se comunicará dentro de los cinco días hábiles de detectada, con plan de recuperación. | Parcial | Control y reporte de proyecto\newline \localizadorRT{S6, «Metodología de Gestión de Proyectos»}{sec:6-gestion}{06} | Plan, tablero y actas de control. |
+| \multicolumn{5}{l}{\bfseries Capítulo 20. Implantación y aceptación} |
+| RT-20.01\newline FEP02, p. 35\newline Obligatorio | El PROPONENTE presentará un plan de implantación por sitio y por perfil, coherente con el cronograma obligatorio del Artículo 17° de las Bases Administrativas. | Cumple en diseño | Implantación por etapa\newline \localizadorRT{S3, «Implantación»}{sec:3-implantacion}{03} | Puertas y actas de marcha blanca y producción. |
+| RT-20.02\newline FEP02, p. 35\newline Obligatorio | La estrategia de paso a producción será gradual y reversible. Se declarará el criterio de avance entre olas y el procedimiento de reversión, con su tiempo de ejecución. | No acreditado | Plan de implantación\newline \localizadorRT{S3, «Implantación»}{sec:3-implantacion}{03} | Acta de marcha blanca y aceptación; T-17 y T-18. |
+| RT-20.03\newline FEP02, p. 35\newline Obligatorio | Durante la marcha blanca, la solución convivirá con la operación vigente del CLIENTE, con conciliación diaria y sin doble digitación no declarada. | No acreditado | Plan de implantación\newline \localizadorRT{S3, «Implantación»}{sec:3-implantacion}{03} | Acta de marcha blanca y aceptación; T-17 y T-18. |
+| RT-20.04\newline FEP02, p. 35\newline Obligatorio | El PROPONENTE definirá los indicadores diarios que se medirán durante la marcha blanca y sus umbrales de avance, conforme al Artículo 17.3 de las Bases Administrativas. | No acreditado | Plan de implantación\newline \localizadorRT{S3, «Implantación»}{sec:3-implantacion}{03} | Acta de marcha blanca y aceptación; T-17 y T-18. |
+| RT-20.05\newline FEP02, p. 35\newline Obligatorio | Se dispondrá de acompañamiento en terreno durante las primeras semanas de cada ola, con dotación declarada y decreciente según la curva de adopción. | No acreditado | Plan de implantación\newline \localizadorRT{S3, «Implantación»}{sec:3-implantacion}{03} | Acta de marcha blanca y aceptación; T-17 y T-18. |
+| RT-20.06\newline FEP02, p. 35\newline Obligatorio | Se establecerá un período de estabilización con atención reforzada tras cada paso a producción, con dotación y duración declaradas y sin costo adicional. | No acreditado | Plan de implantación\newline \localizadorRT{S3, «Implantación»}{sec:3-implantacion}{03} | Acta de marcha blanca y aceptación; T-17 y T-18. |
+| RT-20.07\newline FEP02, p. 35\newline Obligatorio | Existirá una definición de terminado acordada con el CLIENTE, aplicable a cada entregable, que incluya código, pruebas, documentación, seguridad y despliegue. | No acreditado | Plan de implantación\newline \localizadorRT{S3, «Implantación»}{sec:3-implantacion}{03} | Acta de marcha blanca y aceptación; T-17 y T-18. |
+| RT-20.08\newline FEP02, p. 35\newline Obligatorio | El protocolo de aceptación de cada hito se formalizará conforme al Formulario T-17, con criterios objetivos y verificables. | No acreditado | Plan de implantación\newline \localizadorRT{S3, «Implantación»}{sec:3-implantacion}{03} | Acta de marcha blanca y aceptación; T-17 y T-18. |
+| \multicolumn{5}{l}{\bfseries Capítulo 21. Operación y soporte} |
+| RT-21.01\newline FEP02, p. 35\newline Obligatorio | El ADJUDICATARIO dispondrá de un centro de operaciones de red con cobertura 24x7x365, propio o subcontratado, y declarará su ubicación, dotación por turno y procedimientos. | Parcial | Modelo de operación\newline \localizadorRT{S3, «Operación»}{sec:3-operacion}{03} | Plan de operación y acta de conformidad. |
+| RT-21.02\newline FEP02, p. 35\newline Obligatorio | Se designará un gerente de servicio dedicado como contraparte permanente del CLIENTE durante la fase de Operación. | No acreditado | Modelo de operación\newline \localizadorRT{S3, «Operación»}{sec:3-operacion}{03} | Plan de operación y acta de conformidad. |
+| RT-21.03\newline FEP02, p. 35\newline Obligatorio | El equipo de operación contará con especialistas por tecnología, nominados y con dedicación declarada. | No acreditado | Modelo de operación\newline \localizadorRT{S3, «Operación»}{sec:3-operacion}{03} | Plan de operación y acta de conformidad. |
+| RT-21.04\newline FEP02, p. 35\newline Obligatorio | Los procedimientos de operación estarán documentados y serán ejecutables por el personal del CLIENTE tras la transferencia de conocimiento. | No acreditado | Modelo de operación\newline \localizadorRT{S3, «Operación»}{sec:3-operacion}{03} | Plan de operación y acta de conformidad. |
+| RT-21.05\newline FEP02, p. 36\newline Obligatorio | El PROPONENTE dispondrá de un centro de atención adecuado para soportar integralmente las consultas, propio o subcontratado con un operador de nivel acreditado. | Parcial | Centro de atención N1\newline \localizadorRT{S3, «Operación»}{sec:3-operacion}{03} | Turnos, colas e indicadores de atención. |
+| RT-21.06\newline FEP02, p. 36\newline Obligatorio | El centro de atención cumplirá un tiempo de atención al usuario final de 80 % antes de 20 segundos y una resolución al primer contacto de al menos 70 %. La tasa de abandono no superará el 5 %. | Parcial | Mesa N1 de audIT\newline \localizadorRT{S3, «Operación»}{sec:3-operacion}{03} | Medir 80 por ciento antes de 20 s, resolución inicial y abandono; falta acreditación del dimensionamiento contra esos umbrales. |
+| RT-21.07\newline FEP02, p. 36\newline Según caso | El horario mínimo de atención será de 8:00 a 20:00 en días hábiles, ampliado a 24x7 para los incidentes de severidad crítica y para la ventana operacional que defina el caso. | No acreditado | Centro de atención N1\newline \localizadorRT{S3, «Operación»}{sec:3-operacion}{03} | Turnos, colas e indicadores de atención. |
+| RT-21.08\newline FEP02, p. 36\newline Obligatorio | La atención cubrirá orientación funcional de distintos grados de complejidad, desde preguntas simples hasta situaciones complejas, y las preguntas técnicas más frecuentes sobre la aplicación y su entorno de uso. | No acreditado | Centro de atención N1\newline \localizadorRT{S3, «Operación»}{sec:3-operacion}{03} | Turnos, colas e indicadores de atención. |
+| RT-21.09\newline FEP02, p. 36\newline Obligatorio | Se mantendrá un registro histórico de las actividades de soporte que permita monitorear y gestionar los principales requerimientos, con análisis de tendencia mensual. | No acreditado | Centro de atención N1\newline \localizadorRT{S3, «Operación»}{sec:3-operacion}{03} | Turnos, colas e indicadores de atención. |
+| RT-21.10\newline FEP02, p. 36\newline Obligatorio | Existirá un proceso de aprendizaje del centro de soporte que acumule conocimiento sobre las complejidades de la operación y las necesidades de las personas usuarias, reflejado en la base de conocimiento. | No acreditado | Centro de atención N1\newline \localizadorRT{S3, «Operación»}{sec:3-operacion}{03} | Turnos, colas e indicadores de atención. |
+| RT-21.11\newline FEP02, p. 36\newline Obligatorio | Se proveerán servicios de capacitación en línea en modalidad de autoformación, con registro de avance para efectos de monitoreo. | No acreditado | Centro de atención N1\newline \localizadorRT{S3, «Operación»}{sec:3-operacion}{03} | Turnos, colas e indicadores de atención. |
+| RT-21.12\newline FEP02, p. 36\newline Deseable | Se habilitarán espacios de interacción entre las entidades y personas usuarias del sistema, que permitan compartir experiencias de uso. | No acreditado | Centro de atención N1\newline \localizadorRT{S3, «Operación»}{sec:3-operacion}{03} | Turnos, colas e indicadores de atención. |
+| RT-21.13\newline FEP02, p. 36\newline Obligatorio | Los indicadores clave del proceso de soporte estarán abiertos al CLIENTE, y los indicadores específicos serán accesibles según nivel de autorización. | No acreditado | Centro de atención N1\newline \localizadorRT{S3, «Operación»}{sec:3-operacion}{03} | Turnos, colas e indicadores de atención. |
+| RT-21.14\newline FEP02, p. 36\newline Obligatorio | El PROPONENTE dimensionará la dotación del centro de atención con fundamento cuantitativo, empleando teoría de colas o el modelo Erlang C, a partir del volumen de contactos proyectado del caso. | No acreditado | Centro de atención N1\newline \localizadorRT{S3, «Operación»}{sec:3-operacion}{03} | Turnos, colas e indicadores de atención. |
+| RT-21.15\newline FEP02, p. 37\newline Obligatorio | Existirá un canal único de registro de incidentes y solicitudes, con número de ticket, clasificación por severidad y seguimiento del ciclo de vida completo hasta el cierre conforme. | Parcial | Mesa y soporte de campo\newline \localizadorRT{S3, «Operación»}{sec:3-operacion}{03} | Registro de escalamiento y actas de intervención. |
+| RT-21.16\newline FEP02, p. 37\newline Según caso | Cuando el caso comprenda sitios alejados, los especialistas de niveles 2 y 3 deberán trasladarse cuando la resolución lo requiera, por el medio más rápido disponible y con disponibilidad de tiempo suficiente, sin alterar la atención normal del resto de los sitios. El costo del traslado está incluido en la oferta. | Parcial | Supervisión y proveedor regional\newline \localizadorRT{S3, «Operación»}{sec:3-operacion}{03} | Confirmación de capacidad, ventanas y traslados en cinco sitios. |
+| RT-21.17\newline FEP02, p. 37\newline Obligatorio | El cierre de un ticket reguerirá confirmación de la persona usuaria o transcurso del plazo de confirmación automática declarado. | No acreditado | Mesa y soporte de campo\newline \localizadorRT{S3, «Operación»}{sec:3-operacion}{03} | Registro de escalamiento y actas de intervención. |
+| RT-21.18\newline FEP02, p. 37\newline Obligatorio | El ADJUDICATARIO reportará mensualmente el cumplimiento de los niveles de servicio de atención, con el detalle por severidad y el análisis de los incumplimientos. | No acreditado | Mesa y soporte de campo\newline \localizadorRT{S3, «Operación»}{sec:3-operacion}{03} | Registro de escalamiento y actas de intervención. |
+| RT-21.19\newline FEP02, p. 37\newline Obligatorio | El PROPONENTE declarará el tamaño de la bolsa anual de horas de mantención evolutiva, su composición por perfil y el procedimiento de solicitud, estimación, aprobación y liquidación. | Parcial | Mantención y soporte\newline \localizadorRT{S3, «Operación»}{sec:3-operacion}{03} | Plan de mantención y registro de cambios. |
+| RT-21.20\newline FEP02, p. 38\newline Obligatorio | La mantención evolutiva se someterá al mismo estándar de calidad, pruebas y seguridad que el desarrollo original. | No acreditado | Mantención y soporte\newline \localizadorRT{S3, «Operación»}{sec:3-operacion}{03} | Plan de mantención y registro de cambios. |
+| RT-21.21\newline FEP02, p. 38\newline Obligatorio | El PROPONENTE mantendrá un registro de deuda técnica cuantificado y destinará una fracción declarada de la capacidad de la Operación a reducirla. | No acreditado | Mantención y soporte\newline \localizadorRT{S3, «Operación»}{sec:3-operacion}{03} | Plan de mantención y registro de cambios. |
+| RT-21.22\newline FEP02, p. 38\newline Obligatorio | Las actualizaciones de versión de los componentes de base se planificarán anualmente, con ventana acordada y plan de reversión. | No acreditado | Mantención y soporte\newline \localizadorRT{S3, «Operación»}{sec:3-operacion}{03} | Plan de mantención y registro de cambios. |
+| \multicolumn{5}{l}{\bfseries Capítulo 22. Capacitación} |
+| RT-22.01\newline FEP02, p. 38\newline Obligatorio | El plan de capacitación se estructurará por perfil: personas usuarias finales, usuarias avanzadas, administradoras, equipo técnico y soporte de niveles 1 y 2. | No acreditado | Capacitación de operación\newline \localizadorRT{S8, «Línea base de capacitación y adhesión»}{sec:8-acuerdo-capacitacion-adhesion}{08} | Plan por perfil, cobertura y actas de capacitación. |
+| RT-22.02\newline FEP02, p. 38\newline Obligatorio | Las modalidades incluirán capacitación presencial en cada sitio de operación, sesiones en línea sincrónicas, autoformación y acompañamiento en puesto de trabajo durante la marcha blanca. | No acreditado | Capacitación de operación\newline \localizadorRT{S8, «Línea base de capacitación y adhesión»}{sec:8-acuerdo-capacitacion-adhesion}{08} | Plan por perfil, cobertura y actas de capacitación. |
+| RT-22.03\newline FEP02, p. 38\newline Obligatorio | Todo el material de capacitación se entregará en español, en formato editable y de propiedad del CLIENTE: manuales por perfil, guías rápidas, preguntas frecuentes, videos tutoriales y base de conocimiento consultable. | No acreditado | Capacitación de operación\newline \localizadorRT{S8, «Línea base de capacitación y adhesión»}{sec:8-acuerdo-capacitacion-adhesion}{08} | Plan por perfil, cobertura y actas de capacitación. |
+| RT-22.04\newline FEP02, p. 38\newline Según caso | La capacitación no podrá afectar la operación del CLIENTE: se programará por turnos y en horarios acordados, considerando la estacionalidad y la ventana operacional del caso. | No acreditado | Capacitación de operación\newline \localizadorRT{S8, «Línea base de capacitación y adhesión»}{sec:8-acuerdo-capacitacion-adhesion}{08} | Plan por perfil, cobertura y actas de capacitación. |
+| RT-22.05\newline FEP02, p. 38\newline Obligatorio | Las personas usuarias administradoras y el equipo técnico del CLIENTE serán evaluados y certificados como condición para el cierre de cada marcha blanca. | No acreditado | Capacitación de operación\newline \localizadorRT{S8, «Línea base de capacitación y adhesión»}{sec:8-acuerdo-capacitacion-adhesion}{08} | Plan por perfil, cobertura y actas de capacitación. |
+| RT-22.06\newline FEP02, p. 38\newline Obligatorio | Durante la Operación se ejecutarán al menos dos jornadas anuales de actualización y se capacitará al personal nuevo del CLIENTE sin costo adicional. | No acreditado | Capacitación de operación\newline \localizadorRT{S8, «Línea base de capacitación y adhesión»}{sec:8-acuerdo-capacitacion-adhesion}{08} | Plan por perfil, cobertura y actas de capacitación. |
+| RT-22.07\newline FEP02, p. 38\newline Obligatorio | El ADJUDICATARIO proveerá acompañamiento y mentoría al equipo técnico del CLIENTE durante al menos seis meses posteriores al paso a producción de la Etapa 2. | No acreditado | Capacitación de operación\newline \localizadorRT{S8, «Línea base de capacitación y adhesión»}{sec:8-acuerdo-capacitacion-adhesion}{08} | Plan por perfil, cobertura y actas de capacitación. |
+| RT-22.08\newline FEP02, p. 38\newline Obligatorio | La base de conocimiento será mantenida y actualizada durante todo el Contrato, con métricas de uso y de utilidad percibida. | No acreditado | Capacitación de operación\newline \localizadorRT{S8, «Línea base de capacitación y adhesión»}{sec:8-acuerdo-capacitacion-adhesion}{08} | Plan por perfil, cobertura y actas de capacitación. |
+| RT-22.09\newline FEP02, p. 38\newline Deseable | Se valorará la existencia de un ambiente permanente de entrenamiento, con datos ficticios, disponible para la práctica sin riesgo. | No acreditado | Capacitación de operación\newline \localizadorRT{S8, «Línea base de capacitación y adhesión»}{sec:8-acuerdo-capacitacion-adhesion}{08} | Plan por perfil, cobertura y actas de capacitación. |
+| \multicolumn{5}{l}{\bfseries Capítulo 23. Presencia digital} |
+| RT-23.01\newline FEP02, p. 39\newline Obligatorio | Información institucional: descripción detallada del giro principal, historia y trayectoria de la empresa con al menos tres años de antiguedad comprobable, misión, visión y valores, certificaciones y acreditaciones vigentes, y presencia geográfica y oficinas. | No acreditado | Presencia web corporativa\newline Sin localizador acreditado. | Expediente del sitio y cotejo de la exigencia con acceso real. |
+| RT-23.02\newline FEP02, p. 39\newline Obligatorio | Experiencia y casos de éxito: portafolio de proyectos similares de los últimos cinco años, casos documentados con métricas verificables, testimonios de clientes con autorización de publicación, industrias atendidas con énfasis en la del caso asignado, y volumen de transacciones o de personas usuarias gestionadas. | No acreditado | Presencia web corporativa\newline Sin localizador acreditado. | Expediente del sitio y cotejo de la exigencia con acceso real. |
+| RT-23.03\newline FEP02, p. 39\newline Obligatorio | Equipo profesional: organigrama del equipo directivo, perfiles de socios y directores, currículos resumidos del equipo técnico clave y certificaciones profesionales del personal. | No acreditado | Presencia web corporativa\newline Sin localizador acreditado. | Expediente del sitio y cotejo de la exigencia con acceso real. |
+| RT-23.04\newline FEP02, p. 39\newline Obligatorio | Capacidades técnicas: servicios y soluciones ofrecidas, conjunto tecnológico dominado, alianzas tecnológicas con proveedores de nube y de plataforma, metodologías de trabajo certificadas, e infraestructura y capacidad instalada. | No acreditado | Presencia web corporativa\newline Sin localizador acreditado. | Expediente del sitio y cotejo de la exigencia con acceso real. |
+| RT-23.05\newline FEP02, p. 39\newline Obligatorio | El sitio será accesible conforme a WCAG 2.2 nivel AA, responsivo y con certificado TLS válido y vigente. | No acreditado | Presencia web corporativa\newline Sin localizador acreditado. | Expediente del sitio y cotejo de la exigencia con acceso real. |
+| RT-23.06\newline FEP02, p. 39\newline Obligatorio | El sitio se mantendrá activo y disponible durante todo el proceso de licitación, desde el registro del participante hasta la adjudicación. | No acreditado | Presencia web corporativa\newline Sin localizador acreditado. | Expediente del sitio y cotejo de la exigencia con acceso real. |
+| RT-23.07\newline FEP02, p. 39\newline Deseable | Material educativo digital: seminarios en línea, artículos técnicos o centro de recursos y documentación. | No acreditado | Presencia web corporativa\newline Sin localizador acreditado. | Expediente del sitio y cotejo de la exigencia con acceso real. |
+| RT-23.08\newline FEP02, p. 39\newline Deseable | Demostración en línea, recorrido virtual de la solución o portal de soporte para clientes. | No acreditado | Presencia web corporativa\newline Sin localizador acreditado. | Expediente del sitio y cotejo de la exigencia con acceso real. |
+| RT-23.09\newline FEP02, p. 39\newline Deseable | Métricas de disponibilidad y desempeño de los servicios del proponente publicadas en tiempo real. | No acreditado | Presencia web corporativa\newline Sin localizador acreditado. | Expediente del sitio y cotejo de la exigencia con acceso real. |
+| RT-23.10\newline FEP02, p. 39\newline Deseable | Calculadora de retorno de la inversión o herramienta de estimación pertinente a la industria del caso. | No acreditado | Presencia web corporativa\newline Sin localizador acreditado. | Expediente del sitio y cotejo de la exigencia con acceso real. |
+| \multicolumn{5}{l}{\bfseries Capítulo 24. Video} |
+| RT-24.01\newline FEP02, p. 41\newline Obligatorio | Todos los integrantes clave del equipo deberán aparecer individualmente presentándose, en toma de medio cuerpo, mirando directamente a la cámara, con vestimenta formal o de negocio informal, y con una duración mínima de aparición de 10 segundos por persona. | No acreditado | Video de presentación\newline Sin localizador acreditado. | Archivo entregado y pauta de validación audiovisual. |
+| RT-24.02\newline FEP02, p. 41\newline Obligatorio | Cada vez que aparezca un integrante deberá mostrarse en pantalla su nombre completo, su cargo en el proyecto, sus años de experiencia y su especialización relevante. | No acreditado | Video de presentación\newline Sin localizador acreditado. | Archivo entregado y pauta de validación audiovisual. |
+| RT-24.03\newline FEP02, p. 41\newline Deseable | Las certificaciones principales de cada integrante podrán mostrarse en pantalla. | No acreditado | Video de presentación\newline Sin localizador acreditado. | Archivo entregado y pauta de validación audiovisual. |
+| RT-24.04\newline FEP02, p. 41\newline Obligatorio | El fondo será el mismo para todas las tomas de personas, con iluminación consistente y encuadre similar para todos los participantes. | No acreditado | Video de presentación\newline Sin localizador acreditado. | Archivo entregado y pauta de validación audiovisual. |
+| RT-24.05\newline FEP02, p. 41\newline Obligatorio | La paleta de colores corporativa, la tipografía y el uso de la marca serán consistentes en todo el video, con logotipo visible en todas las escenas y datos de contacto en el encabezado o pie. | No acreditado | Video de presentación\newline Sin localizador acreditado. | Archivo entregado y pauta de validación audiovisual. |
+| RT-24.06\newline FEP02, p. 41\newline Obligatorio | Los niveles de volumen estarán normalizados, con la misma calidad de grabación y sin variaciones bruscas de sonido. | No acreditado | Video de presentación\newline Sin localizador acreditado. | Archivo entregado y pauta de validación audiovisual. |
+| \multicolumn{5}{l}{\bfseries Capítulo 25. Prototipo} |
+| RT-25.01\newline FEP02, p. 43\newline Obligatorio | Navegación intuitiva sin necesidad de manual, con un máximo de tres interacciones para alcanzar cualquier funcionalidad principal. | No acreditado | Prototipo de interfaz\newline Sin localizador acreditado. | Prototipo navegable y prueba con perfiles de uso. |
+| RT-25.02\newline FEP02, p. 43\newline Obligatorio | Retroalimentación visual clara ante cada acción, estados de carga y transición fluidos, y manejo elegante de los errores. | No acreditado | Prototipo de interfaz\newline Sin localizador acreditado. | Prototipo navegable y prueba con perfiles de uso. |
+| RT-25.03\newline FEP02, p. 43\newline Obligatorio | Cumplimiento de WCAG 2.2 nivel AA: contraste adecuado, tamaños de fuente legibles, objetivos táctiles de al menos 44 x 44 píxeles, navegación completa por teclado, y textos alternativos y etiquetas de accesibilidad. | No acreditado | Prototipo de interfaz\newline Sin localizador acreditado. | Prototipo navegable y prueba con perfiles de uso. |
+| RT-25.04\newline FEP02, p. 43\newline Obligatorio | Diseño responsivo demostrado en escritorio (1920 x 1080 y 1366 x 768), tableta (768 x 1024 en vertical y horizontal) y teléfono (375 x 812), con puntos de quiebre coherentes. | No acreditado | Prototipo de interfaz\newline Sin localizador acreditado. | Prototipo navegable y prueba con perfiles de uso. |
+| RT-25.05\newline FEP02, p. 43\newline Obligatorio | Sistema de diseño documentado: paleta de a lo más cinco colores principales, a lo más dos familias tipográficas jerarquizadas, iconografía coherente, retícula y espaciado consistentes, y componentes reutilizables. | No acreditado | Prototipo de interfaz\newline Sin localizador acreditado. | Prototipo navegable y prueba con perfiles de uso. |
+| RT-25.06\newline FEP02, p. 43\newline Obligatorio | El prototipo se entregará como enlace navegable en línea, sin instalación ni complementos, compatible con los navegadores modernos vigentes. | No acreditado | Prototipo de interfaz\newline Sin localizador acreditado. | Prototipo navegable y prueba con perfiles de uso. |
+| RT-25.07\newline FEP02, p. 43\newline Obligatorio | El acceso al prototipo estará garantizado por un mínimo de seis meses desde su entrega. | No acreditado | Prototipo de interfaz\newline Sin localizador acreditado. | Prototipo navegable y prueba con perfiles de uso. |
+| RT-25.08\newline FEP02, p. 43\newline Obligatorio | El prototipo permitirá navegación completa entre pantallas, simulación de ingreso de datos, transiciones y animaciones básicas, estados de posado y activo, simulación de carga de archivos, elementos desplegables funcionales y simulación de validaciones. | No acreditado | Prototipo de interfaz\newline Sin localizador acreditado. | Prototipo navegable y prueba con perfiles de uso. |
+| RT-25.09\newline FEP02, p. 43\newline Obligatorio | Se entregará la arquitectura de información del prototipo: mapa del sitio completo, diagrama de navegación, taxonomía y nomenclatura, estructura de menús y jerarquía de la información. | No acreditado | Prototipo de interfaz\newline Sin localizador acreditado. | Prototipo navegable y prueba con perfiles de uso. |
+| RT-25.10\newline FEP02, p. 44\newline Deseable | Se valorará la posibilidad de exportar el prototipo a un documento interactivo para revisión sin conexión. | No acreditado | Prototipo de interfaz\newline Sin localizador acreditado. | Prototipo navegable y prueba con perfiles de uso. |
+| \multicolumn{5}{l}{\bfseries Capítulo 26. Innovaciones} |
+| RT-26.01\newline FEP02, p. 44\newline Obligatorio | Cada innovación se ubicará explícitamente en la arquitectura: qué capa la contiene, qué componentes la implementan y qué interfaces consume o expone. | Parcial | Cartera de innovaciones T-19\newline \localizadorRT{S13, «Innovación 1 — Producto o servicio»}{sec:13-innovacion-1}{13} | Fichas T-19 y expedientes de aceptación por innovación. |
+| RT-26.02\newline FEP02, p. 44\newline Obligatorio | Cada innovación identificará los paquetes de la estructura de descomposición del trabajo que la ejecutan y el mes del cronograma en que se materializa. | Parcial | Cartera de innovaciones T-19\newline \localizadorRT{S13, «Innovación 1 — Producto o servicio»}{sec:13-innovacion-1}{13} | Fichas T-19 y expedientes de aceptación por innovación. |
+| RT-26.03\newline FEP02, p. 44\newline Obligatorio | Las innovaciones de base tecnológica declararán el nivel de madurez de la tecnología con la escala utilizada y citarán las fuentes en norma APA 7.ª edición. | Parcial | Innovación 3 — Tecnológica o de arquitectura\newline \localizadorRT{S13, «Innovación 3 — Tecnológica o de arquitectura»}{sec:13-innovacion-3}{13} | Fichas T-19 y expedientes de aceptación por innovación. |
+| RT-26.04\newline FEP02, p. 44\newline Obligatorio | Cada innovación declarará su riesgo de adopción, su probabilidad, su impacto, la estrategia de mitigación y el plan de contingencia si no rinde lo esperado. | Parcial | Innovación 3 — Tecnológica o de arquitectura\newline \localizadorRT{S13, «Innovación 3 — Tecnológica o de arquitectura»}{sec:13-innovacion-3}{13} | Fichas T-19 y expedientes de aceptación por innovación. |
+| RT-26.05\newline FEP02, p. 44\newline Obligatorio | Cada innovación declarará su indicador de verificación con línea base, meta y momento de medición, y su impacto en inversión, costo operacional y beneficio esperado. | No acreditado | Cartera de innovaciones T-19\newline \localizadorRT{S13, «Innovación 1 — Producto o servicio»}{sec:13-innovacion-1}{13} | Fichas T-19 y expedientes de aceptación por innovación. |
+| RT-26.06\newline FEP02, p. 44\newline Obligatorio | Las innovaciones que incorporen inteligencia artificial cumplirán íntegramente el Capítulo 18 de este documento. | No acreditado | Cartera de innovaciones T-19\newline \localizadorRT{S13, «Innovación 1 — Producto o servicio»}{sec:13-innovacion-1}{13} | Fichas T-19 y expedientes de aceptación por innovación. |
+| RT-26.07\newline FEP02, p. 45\newline Obligatorio | Las innovaciones que modifiquen la arquitectura de seguridad requerirán su propio modelado de amenazas. | Parcial | Innovación 3 — Tecnológica o de arquitectura\newline \localizadorRT{S13, «Innovación 3 — Tecnológica o de arquitectura»}{sec:13-innovacion-3}{13} | Fichas T-19 y expedientes de aceptación por innovación. |
+| RT-26.08\newline FEP02, p. 45\newline Deseable | Se valorará que al menos una innovación sea verificable durante la marcha blanca de la Etapa 1, es decir, que su beneficio pueda medirse antes del mes 16. | Parcial | Innovación 5 — Experiencia de usuario, sostenibilidad o impacto social\newline \localizadorRT{S13, «Innovación 5 — Experiencia de usuario, sostenibilidad o impacto social»}{sec:13-innovacion-5}{13} | Fichas T-19 y expedientes de aceptación por innovación. |
+
+Cada código transversal se contrasta con la exigencia específica del Caso cuando corresponde.
+
+**Tabla 3.8.** Parámetros de los requisitos para Transporte de Carga
+
+| Código y fuente | Exigencia | Estado | Componente y localizador | Verificación prevista |
+|---|---|---|---|---|
+| RT-02.12\newline FEP03, p. 31 | Replicación a nuevas unidades. Exigible. La compañía evalúa un sexto terminal en el norte y la renovación de 40 tractocamiones entre 2030 y 2032. La solución debe admitir un terminal nuevo, camiones nuevos y transportistas nuevos por parametrización, y el alta de un transportista subcontratado con sus camiones y conductores debe poder completarse en el plazo en que hoy se firma un contrato. | Parcial | Parametrización de sitios y altas\newline \localizadorRT{S4, «Los seis contextos delimitados»}{sec:4-contextos}{04} | Validar alta por catálogo y duración de incorporación. |
+| RT-03.10\newline FEP03, p. 31 | Operación desconectada del componente on-premise. El dispositivo a bordo debe operar 72 horas continuas sin cobertura móvil, registrando posición, eventos de conducción y jornada, tiempos en puntos de carga y descarga, y documentos asociados al viaje, sin pérdida de ningún registro. Los terminales deben operar 12 horas sin enlace hacia el exterior. La emisión del documento electrónico de transporte en un punto de carga sin cobertura es una decisión pendiente del numeral 16.1 y debe resolverse, no omitirse. | Parcial | Cola local a bordo y en terminal\newline \localizadorRT{S4, «Operación desconectada, reconexión y escalamiento»}{sec:4-desconectada}{04} | CP-HW-03 y CP-PERF-02 para 72 h; ensayo terminal 24 h conforme a FEP02 y S4 y CP-HW-11 para DET. |
+| RT-03.13\newline FEP03, p. 31 | Sincronización tras la reconexión. No debe superar 20 minutos por camión tras 72 horas sin cobertura, sin pérdida de ningún evento de jornada ni de ningún registro de tiempo en instalaciones de cliente, y con un diseño que soporte la reconexión simultánea de varios cientos de unidades al salir de una zona de sombra. | Cumple en diseño | Sincronización de flota\newline \localizadorRT{S4, «Operación desconectada, reconexión y escalamiento»}{sec:4-desconectada}{04} | CP-PERF-02 y CP-SYS-20; hasta 20 min por camión con conciliación. |
+| RT-03.24\newline FEP03, p. 31 | Red de los sitios operacionales. Exigible el respaldo de enlace en los cuatro terminales regionales, tres de los cuales hoy no lo tienen. Y, con carácter propio de este caso, se exige caracterizar la cobertura móvil real de las rutas que la compañía opera mediante mediciones en terreno, y no suponerla: la disponibilidad declarada por los operadores no es un antecedente aceptable para el diseño. | Parcial | Enlaces de respaldo y cobertura\newline \localizadorRT{S4, «Enlaces, puntos únicos de falla y conmutación»}{sec:4-enlaces}{04} | Confirmar cuatro enlaces y medir rutas; C-06. |
+| RT-05.10\newline FEP03, p. 31 | Retención de datos históricos y de auditoría. Registro de jornada de conducción y su evidencia: mínimo 5 años, conforme a la normativa laboral aplicable. Documento electrónico de transporte y antecedentes del viaje: 6 años. Antecedentes de siniestros: 10 años. Habilitaciones de conductores y equipos: su vigencia y 5 años más. Registros de carga peligrosa: 5 años. Evidencia de tiempos de llegada y salida en instalaciones de cliente: 3 años. Liquidaciones a transportistas: 6 años. Series de posición y telemetría: 2 años en línea, con política de agregación declarada para el resto. | Cumple en diseño | Conservación por dominio\newline \localizadorRT{S5, «Políticas de gobernanza, calidad y retención histórica»}{sec:5-gobernanza}{05} | Cotejo de retención por entidad y prueba de recuperación. |
+| RT-05.15\newline FEP03, p. 31 | Datos históricos a migrar. Maestros de flota, semirremolques, conductores, transportistas y clientes: la totalidad. Viajes: 5 años. Liquidaciones a transportistas: 6 años. Siniestros: la totalidad. Las cerca de 6.000 vigencias, con verificación documental de cada una durante la migración, por tratarse de datos hoy dispersos en cuatro planillas mantenidas por personas distintas. | Cumple en diseño | Migración y validación de vigencias\newline \localizadorRT{S5, «Estrategia de migración»}{sec:5-migracion}{05} | Recepción de fuentes, actas y verificación de vigencias. |
+| RT-05.23\newline FEP03, p. 32 | Estándares sectoriales de intercambio. Formato del documento electrónico de transporte definido por la autoridad tributaria. Estándares de telemetría vehicular y de intercambio con las plataformas de posicionamiento. Estándares de descarga y conservación de datos de tacógrafo digital. Estándares de intercambio logístico con clientes para aviso de despacho, estado del viaje y conformidad de entrega. Formatos de la autoridad aduanera para el tránsito internacional. El PROPONENTE deberá identificar cada uno por su denominación y verificar con cada proveedor y fabricante qué es efectivamente accesible. | Parcial | Contratos sectoriales de intercambio\newline \localizadorRT{S4, «Gobernanza de interfaces y contratos»}{sec:4-interfaces}{04} | Homologar acceso con autoridades, proveedores y fabricantes. |
+| RT-05.29\newline FEP03, p. 32 | Latencia de la capa analítica. Posición de un camión con cobertura: no superior a 2 minutos. Jornada acumulada de un conductor: en tiempo real, con el dato disponible en el momento de asignar. Tiempos de llegada y salida en un punto de cliente: registrados en el momento del evento. Costo consolidado de un viaje: no superior a 24 horas tras su cierre, con los componentes que a esa fecha estén disponibles y con indicación explícita de los que aún no lo están. Emisiones: consolidación mensual. | Parcial | Latencia por dato operacional\newline \localizadorRT{S4, «Capa analítica y costo real por kilómetro»}{sec:4-analitica}{04} | Medir desfases por posición, jornada, visita, costo y emisiones. |
+| RT-06.01\newline FEP03, p. 32 | Tipología del emplazamiento on-premise. Sala de equipos de San Bernardo, de 26 m² habilitada en 2013, que debe remediarse o reemplazarse por no cumplir el Capítulo 6 del documento transversal. Gabinete en cada terminal regional dimensionado para RT-03.10. Y, con carácter propio de este caso, el dispositivo a bordo debe tratarse como un componente on-premise distribuido en 374 unidades, con su propio ciclo de vida, su mecanismo de actualización remota, su gestión de seguridad y su plan de reposición, todo ello sujeto a la restricción de que sólo puede intervenirse físicamente cuando el camión pasa por un terminal. | Parcial | Sala de San Bernardo y borde de flota\newline \localizadorRT{S4, «Arquitectura física»}{sec:4-fisica}{04} | Confirmar sala, inventario mixto y aprobación de intervención por terminal. |
+| RT-09.01\newline FEP03, p. 32 | Transacción operacional crítica. Asignación de un viaje con verificación bloqueante de jornada, habilitaciones y aptitud del equipo: no superior a 30 segundos. Emisión del documento electrónico de transporte: no superior a 90 segundos. Registro de llegada y de salida en un punto de carga o descarga: automático, sin intervención del conductor y sin equipamiento instalado en las instalaciones del cliente. Transmisión de un evento de botón de emergencia a la torre: no superior a 15 segundos con cobertura. Publicación de la posición al cliente: no superior a 2 minutos. Alerta de jornada próxima a agotarse: con la anticipación que el PROPONENTE justifique en función de la distancia al lugar seguro de detención más cercano, criterio que debe declararse y fundamentarse. | Parcial | Asignación, DET y telemetría\newline \localizadorRT{S9, «Objetivos y métricas de aceptación»}{sec:9-metricas}{09} | CP-PERF-04/05, CP-HW-11 y controles RF-010/019/027. |
+| RT-09.02\newline FEP03, p. 32 | Concurrencia y volumen de transacciones. El PROPONENTE lo deriva de la volumetría del numeral 14.1, considerando la reconexión simultánea de unidades al salir de zonas de sombra, y lo declara conforme al numeral 14.2. | Cumple en diseño | Concurrencia, escala y reconexión\newline \localizadorRT{S4, «Concurrencia y volumen declarados»}{sec:4-concurrencia}{04} | CP-PERF-02 y escenario concurrente de T-17. |
+| RT-10.05\newline FEP03, p. 32 | Ventana operacional protegida. La flota rueda 24x7x365 y no existe ventana de detención: la intervención es camión por camión y terminal por terminal. Congelamiento de diciembre a abril por temporada de fruta. Congelamiento en las ventanas de restricción vehicular de Semana Santa y Fiestas Patrias. Congelamiento durante los nueve días del cierre mensual de liquidaciones. Los cierres del paso fronterizo por nieve, de hasta 12 días continuos, deben absorberse sin desplazar hitos. | Parcial | Ventanas protegidas y reversión\newline \localizadorRT{S3, «Implantación»}{sec:3-implantacion}{03} | Validar calendario efectivo, paso por terminal y contingencia fronteriza; T-18. |
+| RT-11.10\newline FEP03, p. 32 | Cifrado a nivel de campo. Exigible para los datos personales de los 258 conductores que no son trabajadores de la compañía, para toda información de localización asociada a una persona identificable, para los antecedentes de jornada y para las tarifas y condiciones pactadas con cada uno de los 148 transportistas subcontratados. | Parcial | Seguridad de jornada y datos de terceros\newline \localizadorRT{S4, «Seguridad lógica y superficie de exposición»}{sec:4-seguridad}{04} | Cotejo de cifrado por campo, permisos y registro de lectura. |
+| RT-12.11\newline FEP03, p. 32 | Autenticación en el perfil operacional. Torre en turnos 24x7. Conductores sin dispositivo asignado propio en una parte relevante de los casos y con camiones que rotan entre conductores. 258 conductores que no son trabajadores de la compañía y que en muchos casos trabajan también para otros. La identificación del conductor al inicio de un viaje debe resolverse sin exigir manipulación de un dispositivo con el vehículo en movimiento y sin depender de que el conductor recuerde una credencial. | Parcial | Identificación antes de iniciar viaje\newline \localizadorRT{S3, «Funcionamiento de un viaje»}{sec:3-viaje}{03} | Prueba de identificación con conductor y camión detenidos. |
+| RT-12.12\newline FEP03, p. 33 | Personas usuarias externas. Los 84 clientes; los 148 transportistas subcontratados y sus 258 conductores; los talleres externos que intervienen equipos en ruta; la red de estaciones de servicio; y las autoridades laboral, de transporte y aduanera en lo que la normativa disponga. | Parcial | Portales y perfiles de contraparte\newline \localizadorRT{S4, «Las ocho capas»}{sec:4-capas}{04} | Cotejar matriz por contraparte y normativa de acceso. |
+| RT-13.08\newline FEP03, p. 33 | Interfaces de terreno y de atención. Cabina en movimiento, con vibración, temperatura extrema y luz solar directa, donde ninguna interacción es admisible durante la marcha. Terminal en horario de relevo, que es de madrugada. Taller con guantes y manos sucias. Punto de carga de un cliente donde el conductor es visita y no controla nada. Ruta sin cobertura durante horas. Toda interfaz destinada al conductor debe ser operable con una sola mano, con guantes, y debe validarse con conductores reales antes de su despliegue. | Parcial | Interfaz en cabina, terminal y taller\newline \localizadorRT{S3, «Funcionamiento de un viaje»}{sec:3-viaje}{03} | Validación con conductores en operación real y condiciones de terreno. |
+| RT-13.12\newline FEP03, p. 33 | Idioma y diseño de las interfaces del conductor. Español obligatorio. La documentación y las interfaces asociadas al cruce fronterizo deben considerar el intercambio con la autoridad del país vecino. Y, con carácter obligatorio y por sobre lo que exige el documento transversal, las interfaces destinadas al conductor deben acreditar criterios verificables de carga cognitiva mínima, validados con conductores en condiciones reales de operación. | Parcial | Interfaz de conductor y documentos fronterizos\newline \localizadorRT{S3, «Funcionamiento de un viaje»}{sec:3-viaje}{03} | Validar carga cognitiva, español e intercambio transfronterizo. |
+| RT-15.02\newline FEP03, p. 33 | Certificaciones sectoriales del adjudicatario. Conocimiento acreditado del régimen especial de jornada del conductor de carga y del reglamento de transporte de sustancias peligrosas. Experiencia comprobable en telemática de flotas y en soluciones con operación desconectada prolongada. | Parcial | Experiencia y certificaciones sectoriales\newline \localizadorRT{S1, «Resumen analítico de proyectos homólogos»}{sec:1-proyectos-homologos}{01} | Cotejar acreditación de jornada, carga peligrosa y telemática desconectada. |
+| RT-16.09\newline FEP03, p. 33 | Registro de consultas a información sensible. Exigible sobre el acceso a la localización de camiones de terceros, a los antecedentes de jornada de conductores externos y a las tarifas y condiciones pactadas con cada transportista. Debe registrarse además todo acceso de un cliente a información de posición, indicando qué se le mostró y bajo qué autorización del dueño del camión. | Parcial | Auditoría de acceso y autorización\newline \localizadorRT{S3, «Estrategia con los grupos de interés y plan de adhesión»}{sec:3-adhesion}{03} | Probar consulta a datos sensibles y registro de la autorización. |
+| RT-16.14\newline FEP03, p. 33 | Firma electrónica. Exigible en la conformidad de entrega del destinatario, en el registro de jornada del conductor, en la lista de verificación de carga peligrosa previa a la salida y en la aceptación de la liquidación mensual por parte del transportista subcontratado, en la modalidad que la normativa admita para cada caso. | Parcial | Firma en flujos del viaje\newline \localizadorRT{S3, «Funcionamiento de un viaje»}{sec:3-viaje}{03} | Validar firma por documento y confirmar con autoridad cuando corresponda. |
+| RT-16.21\newline FEP03, p. 33 | Canales de notificación. Alerta de jornada próxima a agotarse, al conductor y a la torre, con la anticipación fundamentada de RT-09.01. Alerta de vencimiento de habilitaciones con escalonamiento a 60, 30 y 7 días, al titular y a quien deba actuar. Alerta de desvío de ruta y evento de botón de emergencia a la torre, con confirmación de recepción por una persona identificada. Aviso al cliente ante eventos relevantes del viaje. Aviso al transportista subcontratado ante cada viaje liquidado. | Parcial | Alertas a conductor, torre y terceros\newline \localizadorRT{S3, «Funcionamiento de un viaje»}{sec:3-viaje}{03} | Medir anticipación, 60/30/7, recepción y avisos del viaje. |
+| RT-16.30\newline FEP03, p. 33 | Portal público. Sin autenticación: seguimiento del estado de un envío mediante su número de documento. Autenticado, portal del cliente: posición de la carga, estado del viaje, documentos, conformidades, tiempos en sus instalaciones y emisiones asociadas. Autenticado, portal del transportista subcontratado: sus viajes, su liquidación en curso y su detalle, sus vencimientos, su evaluación y —con carácter obligatorio— el control de qué datos de sus camiones y conductores autoriza compartir y con quién, con posibilidad de revocación. | Parcial | Portal de cliente y transportista\newline \localizadorRT{S3, «Estrategia con los grupos de interés y plan de adhesión»}{sec:3-adhesion}{03} | Probar consulta pública y acceso autenticado y revocable. |
+| RT-17.01\newline FEP03, p. 33 | Aplicación móvil. Exigible en cuatro perfiles: conductor, operable con una sola mano y con guantes, sin ninguna interacción exigible en marcha y con operación desconectada de 72 horas; torre de programación; terminal y taller; y transportista subcontratado, con la gestión de sus viajes, su liquidación y sus autorizaciones de datos. | Parcial | Canales por perfil operativo\newline \localizadorRT{S4, «Las ocho capas»}{sec:4-capas}{04} | Probar los cuatro perfiles y funcionamiento desconectado en cabina. |
+| RT-17.06\newline FEP03, p. 34 | Periféricos a integrar. Dispositivos a bordo en 374 camiones; las tres plataformas de posicionamiento satelital existentes; la telemetría de fábrica de 61 tractocamiones, como integración de solo lectura sujeta a la autorización de cada fabricante; los tacógrafos digitales instalados; lectores y terminales de los cinco terminales y los dos talleres; y el dispositivo de peaje. | Parcial | Equipos, fuentes y periféricos\newline \localizadorRT{S4, «Equipo a bordo y almacenamiento derivado»}{sec:4-bordo}{04} | Validar padrón, permisos de fabricante y contratos de interfaz. |
+| RT-21.06\newline FEP03, p. 34 | Horario del centro de atención. 24x7x365 sin excepción. La flota rueda a toda hora y todo incidente que impida asignar un viaje, emitir un documento de transporte o recibir un evento de emergencia se clasifica en la severidad máxima. | Cumple en diseño | Centro 24x7x365\newline \localizadorRT{S3, «Operación»}{sec:3-operacion}{03} | Auditar turnos y ensayar prioridad máxima en tres flujos. |
+| RT-21.16\newline FEP03, p. 34 | Traslado a sitios alejados. Exigible. Cinco terminales entre Antofagasta y Puerto Montt, con más de 2.500 km entre los extremos. Debe considerarse además que una parte de la intervención ocurre sobre camiones que están en ruta y cuya llegada a un terminal no es programable con precisión. | Parcial | Proveedor de terreno y supervisión\newline \localizadorRT{S3, «Operación»}{sec:3-operacion}{03} | Validar traslado de urgencia y disponibilidad de ventanas por sitio. |
+| RT-22.04\newline FEP03, p. 34 | Restricción de la capacitación. Los conductores no están en ningún lugar fijo y pasan por un terminal cada 6 días en promedio. 258 de ellos no son trabajadores de la compañía y su capacitación no puede imponerse por la vía laboral. La torre opera en turnos 24x7. El congelamiento de diciembre a abril coincide con el período de mayor actividad y menor disponibilidad de las personas. | Parcial | Capacitación en turno y adhesión\newline \localizadorRT{S8, «Línea base de capacitación y adhesión»}{sec:8-acuerdo-capacitacion-adhesion}{08} | Repetir en relevos; comprobar cobertura y pendientes por perfil. |
+
+Los 27 parámetros conservan la materia y el valor de FEP03, inclusive cuando el número se usa para otra materia en FEP02.
+
+**Tabla 3.9.** Requisitos transversales de las Bases Administrativas
+
+| Artículo y fuente | Exigencia | Estado | Componente y localizador | Verificación prevista |
+|---|---|---|---|---|
+| Art. 19\newline FEP01, p. 14 | Arquitectura modular, contratos, resiliencia y escalabilidad | Parcial | \localizadorRT{S4, «Estilo, principios de diseño y contratos de dominio»}{sec:4-estilo}{04} | Expediente ADR y ensayos de arquitectura. |
+| Art. 20\newline FEP01, p. 14 | Disponibilidad, continuidad y recuperación ante desastres | Parcial | \localizadorRT{S4, «Especificaciones Data Center Secundario»}{sec:4-dc-secundario}{04} | Ensayo de recuperación y reporte mensual de SLA. |
+| Art. 21\newline FEP01, p. 15 | Seguridad y defensa en profundidad | Parcial | \localizadorRT{S4, «Seguridad lógica y superficie de exposición»}{sec:4-seguridad}{04} | Matriz de controles y expediente de seguridad. |
+| Art. 21.1\newline FEP01, p. 15 | Gobierno de seguridad, riesgos y responsables | Parcial | \localizadorRT{S4, «Modelado de amenazas de la arquitectura»}{sec:4-amenazas}{04} | Cotejo del plan de seguridad, roles y riesgos. |
+| Art. 21.2\newline FEP01, p. 15 | Protección de la capa expuesta | Parcial | \localizadorRT{S4, «Seguridad lógica y superficie de exposición»}{sec:4-seguridad}{04} | Ficha perimetral y pruebas de configuración. |
+| Art. 21.3\newline FEP01, p. 15 | Detección, respuesta y evidencia | Parcial | \localizadorRT{S4, «Seguridad lógica y superficie de exposición»}{sec:4-seguridad}{04} | Prueba de respuesta y exportación de evidencia. |
+| Art. 21.4\newline FEP01, p. 16 | Seguridad del ciclo de desarrollo | Parcial | \localizadorRT{S6, «Ecosistema DevSecOps unificado en GitLab CI Enterprise»}{sec:6-desarrollo-devsecops}{06} | Bitácoras de compilación, revisión y despliegue. |
+| Art. 22\newline FEP01, p. 16 | Identidad, acceso y gestión de sesiones | Parcial | \localizadorRT{S4, «Seguridad lógica y superficie de exposición»}{sec:4-seguridad}{04} | Cotejo de perfiles, accesos y ciclo de cuenta. |
+| Art. 23\newline FEP01, p. 16 | Datos, integración e interoperabilidad | Parcial | \localizadorRT{S5, «Gestión de datos»}{sec:5-gestion-datos}{05} | Pruebas de contratos, exportación y conciliación. |
+| Art. 24\newline FEP01, p. 17 | Ingeniería, DevSecOps y calidad | Parcial | \localizadorRT{S6, «Ecosistema DevSecOps unificado en GitLab CI Enterprise»}{sec:6-desarrollo-devsecops}{06} | Registros de entrega y aceptación. |
+| Art. 25\newline FEP01, p. 17 | Observabilidad, operación y niveles de servicio | Parcial | \localizadorRT{S3, «Operación»}{sec:3-operacion}{03} | Configuración de monitoreo y expediente de SLA. |
+| Art. 26\newline FEP01, p. 18 | Accesibilidad, usabilidad y sostenibilidad | Parcial | \localizadorRT{S4, «Dimensionamiento y capacidad»}{sec:4-dimensionamiento}{04} | Informe de accesibilidad y plan de ciclo de vida. |
+| Art. 27\newline FEP01, p. 18 | Cumplimiento normativo, auditoría y derecho de inspección | Parcial | \localizadorRT{S6, «Metodología de Gestión de Proyectos»}{sec:6-gestion}{06} | Registro de auditoría y protocolo de inspección. |
+
+El cotejo por artículo complementa la evaluación por código. Su acreditación seguirá los controles, entregables y actas previstos en la ejecución.
+

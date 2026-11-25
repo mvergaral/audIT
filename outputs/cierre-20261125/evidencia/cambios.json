@@ -1,0 +1,188 @@
+[
+  {
+    "archivo": "subdocumentos\\01-empresa\\declaracion-ia.tex",
+    "motivo": "Autoría corporativa en propuesta técnica; identidad original preservada en evidencia interna.",
+    "antes_sha256": "60a8e9902d40f4f5d6e7da1d07b65d3f657769968512402fc5184f26c095ca7f",
+    "despues_sha256": "1e502c720cd9c4935c82eca922147deb4ec541e18ceaf2ab6b8a673ff79b06a8"
+  },
+  {
+    "archivo": "subdocumentos\\02-problema\\declaracion-ia.tex",
+    "motivo": "Autoría corporativa en propuesta técnica; identidad original preservada en evidencia interna.",
+    "antes_sha256": "24744f057013d699cfe6169616a487e19256b7a0547ec10021d425ffc78eae49",
+    "despues_sha256": "c130cf8697879163a1e5aa4e08dda067439df118f6a9e3f5669786cecb0cd2e1"
+  },
+  {
+    "archivo": "subdocumentos\\04-arquitectura\\declaracion-ia.tex",
+    "motivo": "Autoría corporativa en propuesta técnica; identidad original preservada en evidencia interna.",
+    "antes_sha256": "f424e52a9c0e9c6e89a7898cc1b749a6e7a834f3e562dab78fc71125e6f645e8",
+    "despues_sha256": "056569ccdcb4ef93181a8d776c0b940dad438b62994905c7e0e2a1ce299c942f"
+  },
+  {
+    "archivo": "subdocumentos\\04-arquitectura\\formularios\\T-11.tex",
+    "motivo": "Autoría corporativa en propuesta técnica; identidad original preservada en evidencia interna.",
+    "antes_sha256": "ad6ecc4c67b927d35dfab7fde5a68b7fbd6a626e2c58e3a890941414d95f87a9",
+    "despues_sha256": "ee4da18cfe668ec872201d5366118680f3d50542e5e4d5eba8f836f724279cc7"
+  },
+  {
+    "archivo": "subdocumentos\\08-riesgos\\declaracion-ia.tex",
+    "motivo": "Autoría corporativa en propuesta técnica; identidad original preservada en evidencia interna.",
+    "antes_sha256": "e6014a685cd94c7a013ae9d1ace55bf05c5ed91d6cb0740f494fc4cd3e3310a7",
+    "despues_sha256": "0414bb159981bcca6809f31ce7533d44e9c91fcc4de77520aa5f9a9bd8586ba3"
+  },
+  {
+    "archivo": "subdocumentos\\08-riesgos\\formularios\\T-16.tex",
+    "motivo": "Autoría corporativa en propuesta técnica; identidad original preservada en evidencia interna.",
+    "antes_sha256": "29d96ee8cd5fac52a71eb0990b7c7f6b5d2b84b6194b4df09f8826010843e5eb",
+    "despues_sha256": "405deb05367cea8d9ec41cadcf2296a26e07a3fea5fa9dcb74405aba5dad70ed"
+  },
+  {
+    "archivo": "subdocumentos\\09-calidad\\declaracion-ia.tex",
+    "motivo": "Autoría corporativa en propuesta técnica; identidad original preservada en evidencia interna.",
+    "antes_sha256": "afa02e68e1a660d5187c2a2421b0cbf7cce3a1da00c6055e3452d52706b5bf14",
+    "despues_sha256": "a7eca91f165b9ccefe1c8bc30a95bafbefc659d8adac80f1248e2c99add90d37"
+  },
+  {
+    "archivo": "subdocumentos\\10-operacion\\declaracion-ia.tex",
+    "motivo": "Autoría corporativa en propuesta técnica; identidad original preservada en evidencia interna.",
+    "antes_sha256": "62582e102172dc21298befec4c6d90a95dbf73df8e6d8075eea39b952f3c7b2b",
+    "despues_sha256": "4d255cba8f0676c28653d7b53dadab5f426cbd83f8e47a14c64646d2ed6130d2"
+  },
+  {
+    "archivo": "subdocumentos\\11-planes-operacion\\declaracion-ia.tex",
+    "motivo": "Autoría corporativa en propuesta técnica; identidad original preservada en evidencia interna.",
+    "antes_sha256": "8c8d83b0f3f7c3a82d750351d3d04a9a242ea543b5cbee1655a9bf532d2bd090",
+    "despues_sha256": "5bcb8dfd8c0149876635fa021315d7d8186dd08813d7416a503cea599aff2785"
+  },
+  {
+    "archivo": "subdocumentos\\12-equipo\\declaracion-ia.tex",
+    "motivo": "Autoría corporativa en propuesta técnica; identidad original preservada en evidencia interna.",
+    "antes_sha256": "85eae961905b4dae397c6f1b68c9f4a3c9fe6ed89a3971315834a23e1b7bc9e5",
+    "despues_sha256": "edcfe9b6110372ec2d87e9d4db252a9a19b1f8bc9c4db68b5ae8ba90741ee19d"
+  },
+  {
+    "archivo": "subdocumentos\\13-innovaciones\\declaracion-ia.tex",
+    "motivo": "Autoría corporativa en propuesta técnica; identidad original preservada en evidencia interna.",
+    "antes_sha256": "b2292400fdfc01b83ec3f20fa8066c02a51bb9429842b43759230d85b21fd01a",
+    "despues_sha256": "cbf5db10dcc717106c20929a9eb152c61d044d7651b8018c21e8bbb6a6e90cf1"
+  },
+  {
+    "archivo": "subdocumentos\\13-innovaciones\\formularios\\T-19.tex",
+    "motivo": "Autoría corporativa en propuesta técnica; identidad original preservada en evidencia interna.",
+    "antes_sha256": "a0ff5f9581d7a22e8207a42d43bbab5a17669e1066057404237b6ee68e7ce176",
+    "despues_sha256": "2a3b0d21695697b05d23ed0255afe960545c7d694048f498d785d65d905dda39"
+  },
+  {
+    "archivo": "subdocumentos\\14-ventajas\\declaracion-ia.tex",
+    "motivo": "Autoría corporativa en propuesta técnica; identidad original preservada en evidencia interna.",
+    "antes_sha256": "9b8be1f71c847cfff166dc7d5dd3277d53fcecf8dcd54851854dc2cd080f7bfd",
+    "despues_sha256": "cdb1042a160e39701a8cc65b66fafeb6fc05a9abd603af0082e7e4f218351b5a"
+  },
+  {
+    "archivo": "subdocumentos\\01-empresa\\declaracion-ia.tex",
+    "motivo": "Declaración transparente de esta intervención sin atribuir revisión humana realizada.",
+    "antes_sha256": "1e502c720cd9c4935c82eca922147deb4ec541e18ceaf2ab6b8a673ff79b06a8",
+    "despues_sha256": "2f5b94bd7a337688981d792a1de4240b3328c1937d151d2c7b796284be3dfa59"
+  },
+  {
+    "archivo": "subdocumentos\\02-problema\\declaracion-ia.tex",
+    "motivo": "Declaración transparente de esta intervención sin atribuir revisión humana realizada.",
+    "antes_sha256": "c130cf8697879163a1e5aa4e08dda067439df118f6a9e3f5669786cecb0cd2e1",
+    "despues_sha256": "3284f25525ee479fd55ab92efba07c4f07f209b3ac759710dee95ea856e8ce8a"
+  },
+  {
+    "archivo": "subdocumentos\\03-solucion\\declaracion-ia.tex",
+    "motivo": "Declaración transparente de esta intervención sin atribuir revisión humana realizada.",
+    "antes_sha256": "963f4635beae8677bda198a1cdfb32acfa2831714fa5fde38ab7118854fb0eca",
+    "despues_sha256": "597afa1dea787a3f02e24be661b3e79b67936b7552ea60afb7dc986c8981df01"
+  },
+  {
+    "archivo": "subdocumentos\\04-arquitectura\\declaracion-ia.tex",
+    "motivo": "Declaración transparente de esta intervención sin atribuir revisión humana realizada.",
+    "antes_sha256": "056569ccdcb4ef93181a8d776c0b940dad438b62994905c7e0e2a1ce299c942f",
+    "despues_sha256": "1b77171ee6413df4fa614e21a0914ad6bcfa28ad82c1c874e3d3e7b171c72343"
+  },
+  {
+    "archivo": "subdocumentos\\05-datos\\declaracion-ia.tex",
+    "motivo": "Declaración transparente de esta intervención sin atribuir revisión humana realizada.",
+    "antes_sha256": "9ecfcfcb8eae835b57dd6886e68fab2f20fc0d2e8d218f43b6a332e57c05deec",
+    "despues_sha256": "72c38813bf5169c12f7e7cea40cf1d87e9eaf101a6df6432b2e273490139f577"
+  },
+  {
+    "archivo": "subdocumentos\\06-metodologias\\declaracion-ia.tex",
+    "motivo": "Declaración transparente de esta intervención sin atribuir revisión humana realizada.",
+    "antes_sha256": "8a5bdccfce46dbac14930f5c43a6ec004e2d963cb6180b8e80d0dbede20da7de",
+    "despues_sha256": "2823011986656e16be22d251932b5a52bf9e0d6eaa7d368cdc83a55734f3312e"
+  },
+  {
+    "archivo": "subdocumentos\\07-plan-trabajo\\declaracion-ia.tex",
+    "motivo": "Declaración transparente de esta intervención sin atribuir revisión humana realizada.",
+    "antes_sha256": "5c16da39f2e0d190437ad6723e958a79cc737c9393e225eec882c3cd76a29940",
+    "despues_sha256": "e196aa8b33dfb514124d1987c8cfd32d42392a96830f906f035899d64ce089d5"
+  },
+  {
+    "archivo": "subdocumentos\\08-riesgos\\declaracion-ia.tex",
+    "motivo": "Declaración transparente de esta intervención sin atribuir revisión humana realizada.",
+    "antes_sha256": "0414bb159981bcca6809f31ce7533d44e9c91fcc4de77520aa5f9a9bd8586ba3",
+    "despues_sha256": "b4c4ccc50e633d2f64df9923906d8aa40edc7f64a6dbc51191e59640135fff14"
+  },
+  {
+    "archivo": "subdocumentos\\09-calidad\\declaracion-ia.tex",
+    "motivo": "Declaración transparente de esta intervención sin atribuir revisión humana realizada.",
+    "antes_sha256": "a7eca91f165b9ccefe1c8bc30a95bafbefc659d8adac80f1248e2c99add90d37",
+    "despues_sha256": "ba9c1be81bb265c27393020513c55745dcb1e31a9c9dd8f3d2b184bbf2dea95b"
+  },
+  {
+    "archivo": "subdocumentos\\10-operacion\\declaracion-ia.tex",
+    "motivo": "Declaración transparente de esta intervención sin atribuir revisión humana realizada.",
+    "antes_sha256": "4d255cba8f0676c28653d7b53dadab5f426cbd83f8e47a14c64646d2ed6130d2",
+    "despues_sha256": "f64435f14641d7923c0c47a2da9737e2499bb3815df0f75b8eb69df55c5a2e9d"
+  },
+  {
+    "archivo": "subdocumentos\\11-planes-operacion\\declaracion-ia.tex",
+    "motivo": "Declaración transparente de esta intervención sin atribuir revisión humana realizada.",
+    "antes_sha256": "5bcb8dfd8c0149876635fa021315d7d8186dd08813d7416a503cea599aff2785",
+    "despues_sha256": "f38052b9c22c075c45fee569dfc7749bfeff3d0c7f1c128c4489887597ee4676"
+  },
+  {
+    "archivo": "subdocumentos\\12-equipo\\declaracion-ia.tex",
+    "motivo": "Declaración transparente de esta intervención sin atribuir revisión humana realizada.",
+    "antes_sha256": "edcfe9b6110372ec2d87e9d4db252a9a19b1f8bc9c4db68b5ae8ba90741ee19d",
+    "despues_sha256": "db8ef2a5a40abe9213e68a6b154c51c3943697043d24a045297b37573aa54083"
+  },
+  {
+    "archivo": "subdocumentos\\13-innovaciones\\declaracion-ia.tex",
+    "motivo": "Declaración transparente de esta intervención sin atribuir revisión humana realizada.",
+    "antes_sha256": "cbf5db10dcc717106c20929a9eb152c61d044d7651b8018c21e8bbb6a6e90cf1",
+    "despues_sha256": "915b52526b7d393d1c9d8693b3bc7a3dc398dbda78242da58dfc63cd468696b8"
+  },
+  {
+    "archivo": "subdocumentos\\14-ventajas\\declaracion-ia.tex",
+    "motivo": "Declaración transparente de esta intervención sin atribuir revisión humana realizada.",
+    "antes_sha256": "cdb1042a160e39701a8cc65b66fafeb6fc05a9abd603af0082e7e4f218351b5a",
+    "despues_sha256": "ff19c4d6cca159671127d58adb9f94ad75a3d180a8d51e53c66023c773f829e4"
+  },
+  {
+    "archivo": "subdocumentos\\09-calidad\\formularios\\catalogo-T-17.tex",
+    "motivo": "CP-PERF-03 parametrizado para ambas ramas del protocolo R-24/H7; sin dar por autorizada una región.",
+    "antes_sha256": "8b5a1ca82e6e17ee0a281340e649eb5e2403dc0f7c890e08f464e5806501f485",
+    "despues_sha256": "b41600e67d3b90bfc9409829dbb4ce11c76de53b8f4af0a2277903e22e2b2599"
+  },
+  {
+    "archivo": "anexos\\observaciones-informe3.tex",
+    "motivo": "Referencia semántica estable al Anexo 1.A; el folio exacto se fija tras compilar.",
+    "antes_sha256": "6c31c99c28d6e18cb9fa28ec0cf61963ea26c06d14834d2cea3366d9cf04aafb",
+    "despues_sha256": "a0943dfde00ead87923f44b8eddd3cabc4f66296cd80e7bd1a5d5c155335219e"
+  },
+  {
+    "archivo": ".latexmkrc",
+    "motivo": "Separador de rutas Windows en la copia aislada; instalación automática deshabilitada.",
+    "antes_sha256": "d7e005d6e113c854666d2299686da5614844462890d7d218f17ff5a1b7e2b7d5",
+    "despues_sha256": "7348688bc1a89fbecbb44c96dfdccdcd7914eb7febed4837bc5b373ce56fd101"
+  },
+  {
+    "archivo": "herramientas\\compilar.py",
+    "motivo": "Anexos S1/S2/S5 en correlativo global y rutas de referencias compatibles con Windows; sólo copia aislada.",
+    "antes_sha256": "264f7c452e0647ed996b6a11be190feb528ba42b3bbc744457ecdc6d5cba95ba",
+    "despues_sha256": "a3e62e45bdfeabd0f7a73db6ad031b1864bd98509e0638381180a39fa256cf98"
+  }
+]

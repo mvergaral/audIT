@@ -1,0 +1,64 @@
+{
+  "fecha": "2026-11-25",
+  "git": {
+    "commits_distintos_all_reflog": 314,
+    "worktrees": [
+      "C:/Users/mvergara/Documents/ChatGPT/Audit",
+      "C:/Users/mvergara/Documents/ChatGPT/Audit/tmp/aud-21-worktree",
+      "C:/Users/mvergara/Documents/ChatGPT/Audit/tmp/cierre-entrega-3",
+      "C:/Users/mvergara/Documents/ChatGPT/Audit/tmp/publicar-entrega3-20261115"
+    ],
+    "refs": [
+      "HEAD",
+      "origin/main",
+      "origin/codex/cierre-entrega-3",
+      "origin/codex/aud-21-valorizar-innovaciones-1-y-4",
+      "origin/codex/d2-comparison-snapshot-2026-10-06",
+      "origin/presentacion-revision2",
+      "origin/gh-pages",
+      "b26d23ed"
+    ],
+    "commit_sobre1": "c484cc6d0a21e2eb8058de5717d945cfd03b7e27",
+    "paths": [
+      "recursos/Formato-Oferta-audIT/sobre1-antecedentes.tex",
+      "recursos/Formato-Oferta-audIT/salida/final/AUDIT-Sobre1-Antecedentes-Administrativos.pdf",
+      "recursos/Formato-Oferta-audIT/salida/final-por-subdocumento/AUDIT-Sobre1-Antecedentes-Administrativos.pdf",
+      "outputs/cierre-entrega-final/trabajo/Sobre1/ESTADO-ADMINISTRATIVO.md"
+    ],
+    "consultas": [
+      "git worktree list --porcelain",
+      "git ls-tree -r --name-only HEAD",
+      "git log --all --reflog --name-only",
+      "git log --all --reflog -G (autorización específica, simulación administrativa, garantía simulada) -- *.md *.txt *.tex",
+      "git grep -I -n -i -E (autorización y simulación de instrumentos) en 8 referencias",
+      "git show c484cc6 y git log --all --reflog sobre1-antecedentes.tex"
+    ]
+  },
+  "archivos": {
+    "consulta": "rg --files --hidden --no-ignore -g !.git/**; filtros Sobre1, antecedentes, personería, cédula, garantías, certificados, A-1 a A-6, comunicados, aclaraciones y correo; zipfile.namelist()",
+    "zip_enumerados": 15,
+    "zip_con_error": 0,
+    "resultado": "Solo copias de los comunicados y aclaraciones dentro de tmp/informe3-integral-c9a6515.zip entre las entradas filtradas.",
+    "descargas_cotejo": "Get-ChildItem -File -Recurse; filtros audIT, Curimón, FEP o TFEP; solo nombres",
+    "descargas_resultado": [
+      "AUDIT-Informe3-Presentacion-Enfocada.pdf",
+      "FEP01 - CONTROL 1 - Pauta de Correccion Publicada.pdf",
+      "FEP01.26 - CONTROL 1.pdf",
+      "FEP01.26 - CONTROL 2  - Pauta de Correccion Publicada.pdf",
+      "Guia_Control_FEP06-FEP08.pdf"
+    ]
+  },
+  "bases": {
+    "consulta": [
+      "python tools/buscar.py -p antecedentes administrativos -f FEP01",
+      "python tools/buscar.py -o simulación simulados ficticios ficción -f FEP01",
+      "python tools/buscar.py -v 209",
+      "python tools/buscar.py -v 136",
+      "Extracto FEP01 art. 49.2–49.3 por rg y Get-Content dirigido",
+      "rg dirigido en Comunicado_09.md, Comunicado_10.md y Aclaraciones_Informe_3.md"
+    ],
+    "resultado": "FEP01 art. 93.2, p. 46, identifica garantías y obligaciones como simuladas sin efecto jurídico. FEP01 art. 49.2–49.3, p. 29, exige los documentos y su respaldo dentro del ejercicio. No se localizó modalidad docente específica de sustitución."
+  },
+  "hallazgo": "Conjunto incompleto: PDF de 12 páginas y fuente con nóminas, formularios adaptados y ficha de garantía. Sin respaldos autónomos ni autorización específica localizados.",
+  "limites": "Consultas locales, sin acceso a correo, chats o plataforma docente. Sin abrir PDF escaneados de bases ni documentos personales en Descargas."
+}

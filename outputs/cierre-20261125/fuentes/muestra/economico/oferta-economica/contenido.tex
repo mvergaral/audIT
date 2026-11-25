@@ -1,0 +1,22 @@
+% ============================================================================
+%  Muestra: la plantilla de economico/oferta-economica más una sección que demuestra los
+%  comandos de montos con valores de las bases (1 UF y 1 USD del Formulario
+%  E-24). No contiene cifras del proyecto.
+% ============================================================================
+\input{./economico/oferta-economica/contenido.tex}
+
+\section{\marcador{Demostración de los montos, solo en la muestra}}\label{sec:eco-demo}
+
+\marcador{Monto dado en UF, con \textbackslash monto[UF]\{1\}:} \monto[UF]{1}.
+
+\marcador{Monto dado en USD, con \textbackslash monto[USD]\{1\}:} \monto[USD]{1}.
+
+\marcador{Partida de partidas.csv que suma las dos anteriores, con
+\textbackslash montoPartida\{demo-suma\}:} \montoPartida{demo-suma}.
+
+\marcador{Párrafo de contexto: la \tabref{eco-demo} desglosa el IVA de cada
+partida y suma el total general en pesos}
+
+\tablaMontos{Demostración del desglose del IVA con valores de las bases}{eco-demo}{demo-uf, demo-usd}
+
+\marcador{Conclusión que se saca de la tabla}

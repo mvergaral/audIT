@@ -1,0 +1,123 @@
+% ============================================================================
+%  Formulario T-12. Matriz de cumplimiento técnico y trazabilidad (FEP01 p. 62)
+%  Subdocumento 3 según el Formulario T-21.
+%
+%  Une las columnas del T-12 (ID, descripción, cumple, componente, sección)
+%  con los campos que el numeral 17.1 del Caso (p. 38) exige al catálogo:
+%    funcional     identificador, descripción, actor, precondición,
+%                  resultado esperado, prioridad y origen
+%    no funcional  categoría, umbral numérico, método de verificación, y si
+%                  es exigible a la compañía o a terceros
+%
+%  \requisitoF{id=RF-001, descripcion=..., actor=..., precondicion=...,
+%              resultado=..., prioridad=Alta, origen=..., cumple=Sí,
+%              componente=...}
+%  \requisitoNF{id=RT-09.01, descripcion=..., categoria=Desempeño,
+%               umbral=..., metodo=..., exigible=Compañía, prioridad=...,
+%               origen=..., cumple=Sí, componente=...}
+%
+%  La columna «Sección de la propuesta» se completa sola con las secciones
+%  donde el texto usa \req{ID} o \reqMargen{ID}. Si ningún párrafo atiende el
+%  requisito, lo dice. Cada código queda como destino de enlace.
+% ============================================================================
+
+\DefinirFormulario{T-12}{Matriz de cumplimiento técnico y trazabilidad}{62}
+  {El Proponente deberá declarar el cumplimiento de cada requerimiento de las
+   Bases Técnicas del caso y de los requisitos transversales del Capítulo 3,
+   indicando dónde se acredita en la propuesta. Cada requerimiento indica
+   además los campos del catálogo exigidos por el numeral 17.1 del Caso
+   (p. 38).}
+
+\newcommand\requisitoF[1]{\RegistroNuevo{t12}{tipo=F,#1}}
+\newcommand\requisitoNF[1]{\RegistroNuevo{t12}{tipo=NF,#1}}
+
+% Celda con rótulo y valor
+\newcommand\audit@par[2]{{\color{audit-secundario}#1}\enspace #2}
+% Destino de enlace del código
+\newcommand\audit@anclareq[1]{%
+  \phantomsection\label{req:#1}{\ttfamily\bfseries\color{audit-marino}#1}}
+
+\ExplSyntaxOn
+\dim_new:N \l_audit_tdoce_ancho_dim
+\NewDocumentEnvironment { formularioTDoce } { O{} }
+  { \ReiniciarRegistros { t12 } }
+  {
+    \IniciarFilas
+    \int_step_inline:nn { \CantidadRegistros { t12 } }
+      {
+        \str_if_eq:eeTF { \audit_campo_crudo:nnn { t12 } {##1} { tipo } } { F }
+          { \audit_tdoce_funcional:n {##1} }
+          { \audit_tdoce_nofuncional:n {##1} }
+      }
+    \TablaAcumulada [ ancho = completo , fuente = condensada , #1 ]
+      { Formulario~T-12.~Matriz~de~cumplimiento~técnico~y~trazabilidad } { t12 }
+      { L{19mm} L{55mm} L{50mm} X }
+      { ID & Requerimiento,~actor~y~precondición & Resultado~esperado~y~origen &
+        Cumplimiento~y~trazabilidad \\ \midrule }
+  }
+
+\cs_new_protected:Npn \audit_tdoce_primera:n #1
+  {
+    % fila 1: código, descripción, prioridad y cumple
+    \tl_gput_right:Ne \g_audit_filas_tl
+      {
+        \exp_not:N \rowcolor { audit-fila }
+        \exp_not:N \audit@anclareq { \audit_campo_crudo:nnn { t12 } {#1} { id } } &
+        \exp_not:n { \multicolumn { 2 } { >{\audit@celdaizq} p { \dimexpr 105mm + 10pt \relax } } }
+          { \exp_not:N \bfseries \audit_campo:nnn { t12 } {#1} { descripcion } } &
+        \exp_not:N \audit@par { Prioridad } { \audit_campo:nnn { t12 } {#1} { prioridad } }
+        \exp_not:N \newline
+        \exp_not:N \audit@par { Cumple } { \audit_campo:nnn { t12 } {#1} { cumple } }
+        \exp_not:N \tabularnewline
+      }
+  }
+\cs_new_protected:Npn \audit_tdoce_funcional:n #1
+  {
+    \audit_tdoce_primera:n {#1}
+    \tl_gput_right:Ne \g_audit_filas_tl
+      {
+        { \exp_not:N \audit@rotulotipo { Funcional } } &
+        \exp_not:N \audit@par { Actor } { \audit_campo:nnn { t12 } {#1} { actor } }
+        \exp_not:N \newline
+        \exp_not:N \audit@par { Precondición } { \audit_campo:nnn { t12 } {#1} { precondicion } } &
+        \exp_not:N \audit@par { Resultado } { \audit_campo:nnn { t12 } {#1} { resultado } }
+        \exp_not:N \newline
+        \exp_not:N \audit@par { Origen } { \audit_campo:nnn { t12 } {#1} { origen } } &
+        \exp_not:N \audit@par { Componente } { \audit_campo:nnn { t12 } {#1} { componente } }
+        \exp_not:N \newline
+        \exp_not:N \audit@par { Sección }
+          { \exp_not:N \seccionesReq { \audit_campo_crudo:nnn { t12 } {#1} { id } } }
+        \exp_not:N \\
+      }
+  }
+\cs_new_protected:Npn \audit_tdoce_nofuncional:n #1
+  {
+    \audit_tdoce_primera:n {#1}
+    \tl_gput_right:Ne \g_audit_filas_tl
+      {
+        { \exp_not:N \audit@rotulotipo { No~funcional } } &
+        \exp_not:N \audit@par { Categoría } { \audit_campo:nnn { t12 } {#1} { categoria } }
+        \exp_not:N \newline
+        \exp_not:N \audit@par { Umbral } { \audit_campo:nnn { t12 } {#1} { umbral } }
+        \exp_not:N \newline
+        \exp_not:N \audit@par { Exigible~a } { \audit_campo:nnn { t12 } {#1} { exigible } } &
+        \exp_not:N \audit@par { Verificación } { \audit_campo:nnn { t12 } {#1} { metodo } }
+        \exp_not:N \newline
+        \exp_not:N \audit@par { Origen } { \audit_campo:nnn { t12 } {#1} { origen } } &
+        \exp_not:N \audit@par { Componente } { \audit_campo:nnn { t12 } {#1} { componente } }
+        \exp_not:N \newline
+        \exp_not:N \audit@par { Sección }
+          { \exp_not:N \seccionesReq { \audit_campo_crudo:nnn { t12 } {#1} { id } } }
+        \exp_not:N \\
+      }
+  }
+\ExplSyntaxOff
+\newcommand\audit@rotulotipo[1]{{\color{audit-secundario}#1}}
+
+\expandafter\def\csname esqueleto@T-12\endcsname{%
+  \begin{formulario}{T-12}
+    \begin{formularioTDoce}
+      \requisitoF{id=RF-000}
+      \requisitoNF{id=RNF-000}
+    \end{formularioTDoce}
+  \end{formulario}}

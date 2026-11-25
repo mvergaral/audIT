@@ -1,0 +1,4100 @@
+[
+  {
+    "origen": "outputs/cierre-d2-final/CIERRE-D2.md",
+    "destino": "insumos-d2\\CIERRE-D2.md",
+    "bytes": 5602,
+    "sha256": "67712092d3baa46d54285927534c47eb15adaf1eb2f8f5c32f7aa83d223fee3a"
+  },
+  {
+    "origen": "outputs/cierre-d2-final/LEEME.md",
+    "destino": "insumos-d2\\LEEME.md",
+    "bytes": 1285,
+    "sha256": "326bf4f5d8756da243447a2903ad5a95985c692898c9f4e59fda763ea5939308"
+  },
+  {
+    "origen": "outputs/cierre-d2-final/PLAN-D2.md",
+    "destino": "insumos-d2\\PLAN-D2.md",
+    "bytes": 1106,
+    "sha256": "4d76c7ead055bc7a8ef53eb53184b1a725045bd4a00665c6870f329fbbf61a1d"
+  },
+  {
+    "origen": "outputs/cierre-d2-final/PROPUESTA-TARIFAS-E26.md",
+    "destino": "insumos-d2\\PROPUESTA-TARIFAS-E26.md",
+    "bytes": 3163,
+    "sha256": "0f515c64dbe3a7faa5795e27e71074ee3b67be35ea2d51a5c04c4ce95c903ba9"
+  },
+  {
+    "origen": "outputs/cierre-d2-final/REGISTRO-A6-D2-PARA-REVISION.md",
+    "destino": "insumos-d2\\REGISTRO-A6-D2-PARA-REVISION.md",
+    "bytes": 1408,
+    "sha256": "fb09bd5c59d1440e618b991d83948b30cbeea4e6aea11be5916bd8c09795f67e"
+  },
+  {
+    "origen": "outputs/cierre-d2-final/RESPUESTA-D4-PARA-COORDINAR.md",
+    "destino": "insumos-d2\\RESPUESTA-D4-PARA-COORDINAR.md",
+    "bytes": 903,
+    "sha256": "6eb98d017ede37532a5641a156056ce6bb9b11b9a38702e992c58eb0b4e9912b"
+  },
+  {
+    "origen": "outputs/cierre-d2-final/cerrar_d2.py",
+    "destino": "insumos-d2\\cerrar_d2.py",
+    "bytes": 16460,
+    "sha256": "323f05d988c6de31cdf95ba9ce51ef04d43d44e470770d9f567e6197d85bf994"
+  },
+  {
+    "origen": "outputs/cierre-d2-final/compilar_d2.py",
+    "destino": "insumos-d2\\compilar_d2.py",
+    "bytes": 4048,
+    "sha256": "5439653cf6bb4d48f588bb4ae260b91a127f71d1164b0afd3e4f35bb7977d30e"
+  },
+  {
+    "origen": "outputs/cierre-d2-final/compilar_economico.py",
+    "destino": "insumos-d2\\compilar_economico.py",
+    "bytes": 3186,
+    "sha256": "171bbd00d955ba68498eedcd126cdafd69981f4a1bc306ed5986dfd93ad59467"
+  },
+  {
+    "origen": "outputs/cierre-d2-final/completar_docx.py",
+    "destino": "insumos-d2\\completar_docx.py",
+    "bytes": 2191,
+    "sha256": "b3a361aa73827cfe1c784071f4d003223753f3c081709fc1f3b0c27d25c480eb"
+  },
+  {
+    "origen": "outputs/cierre-d2-final/completar_economico.py",
+    "destino": "insumos-d2\\completar_economico.py",
+    "bytes": 18227,
+    "sha256": "4fb52b4d1573285d0174fc6986bfa963d5d97ba10def2005150c49c1264f8546"
+  },
+  {
+    "origen": "outputs/cierre-d2-final/documentos/AUDIT-Formulario-T-12.pdf",
+    "destino": "insumos-d2\\documentos\\AUDIT-Formulario-T-12.pdf",
+    "bytes": 1199597,
+    "sha256": "12eb1c94e51a9eae17b08580b57fb3bbb0c183ff4649295931f94c896abb7948"
+  },
+  {
+    "origen": "outputs/cierre-d2-final/documentos/AUDIT-Formulario-T-14.pdf",
+    "destino": "insumos-d2\\documentos\\AUDIT-Formulario-T-14.pdf",
+    "bytes": 1179152,
+    "sha256": "dab84c1413f6ead44c52e794fca20ecaa2d578a49ca63dc6e399dba49e40c95d"
+  },
+  {
+    "origen": "outputs/cierre-d2-final/documentos/AUDIT-Formulario-T-15.pdf",
+    "destino": "insumos-d2\\documentos\\AUDIT-Formulario-T-15.pdf",
+    "bytes": 788123,
+    "sha256": "907c44fb8c633fdf9410a559252892b6fde0b373e707a8f0281882dbdff42ae4"
+  },
+  {
+    "origen": "outputs/cierre-d2-final/documentos/AUDIT-Formulario-T-18.pdf",
+    "destino": "insumos-d2\\documentos\\AUDIT-Formulario-T-18.pdf",
+    "bytes": 742400,
+    "sha256": "d9608c17526079dc3696e8eeff6643349b3bd5ca8099e1c6dcebec7651eaecbd"
+  },
+  {
+    "origen": "outputs/cierre-d2-final/documentos/AUDIT-Subdocumento3.pdf",
+    "destino": "insumos-d2\\documentos\\AUDIT-Subdocumento3.pdf",
+    "bytes": 912972,
+    "sha256": "2435869ed79fcbd4fd33ec157ae3264d2b2c5344e07b8a246d5c05fd35ea6143"
+  },
+  {
+    "origen": "outputs/cierre-d2-final/documentos/AUDIT-Subdocumento7.pdf",
+    "destino": "insumos-d2\\documentos\\AUDIT-Subdocumento7.pdf",
+    "bytes": 1580218,
+    "sha256": "74086f9492915718f9dc43daead18232fae70922e2e88aef731831ef00427372"
+  },
+  {
+    "origen": "outputs/cierre-d2-final/documentos/AUDIT_AnalisisFinanciero_2_20261125.docx",
+    "destino": "insumos-d2\\documentos\\AUDIT_AnalisisFinanciero_2_20261125.docx",
+    "bytes": 89936,
+    "sha256": "cec8fe7828912e47826a1a9e5f51c3f8c08199d082d5544f70081eee97a52ad4"
+  },
+  {
+    "origen": "outputs/cierre-d2-final/documentos/AUDIT_AnalisisFinanciero_2_20261125.md",
+    "destino": "insumos-d2\\documentos\\AUDIT_AnalisisFinanciero_2_20261125.md",
+    "bytes": 31001,
+    "sha256": "23b2065f6fbce143cc7cc8cc22ba143cdb5da998cdb310e2c890dcfd89063229"
+  },
+  {
+    "origen": "outputs/cierre-d2-final/documentos/AUDIT_AnalisisFinanciero_2_20261125.pdf",
+    "destino": "insumos-d2\\documentos\\AUDIT_AnalisisFinanciero_2_20261125.pdf",
+    "bytes": 1117939,
+    "sha256": "6126ffab56cf83ae511fd927f4f1bc23bcbd0f7326830cd3655075805353cb40"
+  },
+  {
+    "origen": "outputs/cierre-d2-final/documentos/AUDIT_ModeloFinanciero_3_20261125.xlsx",
+    "destino": "insumos-d2\\documentos\\AUDIT_ModeloFinanciero_3_20261125.xlsx",
+    "bytes": 744858,
+    "sha256": "176e403c108029bdfa7d33595cd88f38c2a0e2804c5103f51b70f9d62ff02eb6"
+  },
+  {
+    "origen": "outputs/cierre-d2-final/documentos/AUDIT_OfertaEconomica_1_20261125.docx",
+    "destino": "insumos-d2\\documentos\\AUDIT_OfertaEconomica_1_20261125.docx",
+    "bytes": 11011,
+    "sha256": "7aa52fcc9eb12ed27a8a67ec2964588b7285561eab94cb442fa8cc7135b1d264"
+  },
+  {
+    "origen": "outputs/cierre-d2-final/documentos/AUDIT_OfertaEconomica_1_20261125.md",
+    "destino": "insumos-d2\\documentos\\AUDIT_OfertaEconomica_1_20261125.md",
+    "bytes": 12425,
+    "sha256": "32e3fb955d247f68428a9a122ef786fc14c684a3d468fc7a7980c03cf767ae23"
+  },
+  {
+    "origen": "outputs/cierre-d2-final/documentos/AUDIT_OfertaEconomica_1_20261125.pdf",
+    "destino": "insumos-d2\\documentos\\AUDIT_OfertaEconomica_1_20261125.pdf",
+    "bytes": 1009273,
+    "sha256": "49c64fff07cb754663c0ecd1bc078eb1c21a8198d6a9327ff51e26c64d8cd417"
+  },
+  {
+    "origen": "outputs/cierre-d2-final/documentos/manifiesto-economico.json",
+    "destino": "insumos-d2\\documentos\\manifiesto-economico.json",
+    "bytes": 1597,
+    "sha256": "eef79d32f23870f93f0725d7ea6457e2b763462b95a08ea72d8c10ed6e1a201e"
+  },
+  {
+    "origen": "outputs/cierre-d2-final/documentos/manifiesto-tecnico.json",
+    "destino": "insumos-d2\\documentos\\manifiesto-tecnico.json",
+    "bytes": 3155,
+    "sha256": "f979e8dcd2e3ff7eadfc93538e4418ab620d22140edb956533901035fc5622e1"
+  },
+  {
+    "origen": "outputs/cierre-d2-final/evidencia/compilacion-tecnica.json",
+    "destino": "insumos-d2\\evidencia\\compilacion-tecnica.json",
+    "bytes": 541,
+    "sha256": "79e666165f9f20e22614825a8d294085f8c57bd9c1b395c2bcb7088acbf3d508"
+  },
+  {
+    "origen": "outputs/cierre-d2-final/evidencia/comprobacion-paquetes-final.json",
+    "destino": "insumos-d2\\evidencia\\comprobacion-paquetes-final.json",
+    "bytes": 401,
+    "sha256": "2576958705e6da50f80730be629607fa25f5abb2ac91e096607b3d35fbe8e25e"
+  },
+  {
+    "origen": "outputs/cierre-d2-final/evidencia/comprobacion-tir.json",
+    "destino": "insumos-d2\\evidencia\\comprobacion-tir.json",
+    "bytes": 474,
+    "sha256": "ed8df9f628c7dce015f394d5e102c130bc0bed3b30b91c0f206dcb65bec49b75"
+  },
+  {
+    "origen": "outputs/cierre-d2-final/evidencia/incrustacion-fuente-residual.json",
+    "destino": "insumos-d2\\evidencia\\incrustacion-fuente-residual.json",
+    "bytes": 218,
+    "sha256": "8367339e378c48a25dae7d4e50b7affa582e6c23755b311b0d3f1f8ab03b7907"
+  },
+  {
+    "origen": "outputs/cierre-d2-final/evidencia/limpieza-fuentes-curvas.json",
+    "destino": "insumos-d2\\evidencia\\limpieza-fuentes-curvas.json",
+    "bytes": 289,
+    "sha256": "d06d9b44781d5ed12ae17ea4320255eb90ccc9517eeb796c1220e2316de789fb"
+  },
+  {
+    "origen": "outputs/cierre-d2-final/evidencia/linea-base.json",
+    "destino": "insumos-d2\\evidencia\\linea-base.json",
+    "bytes": 241,
+    "sha256": "a5d5dfc8f606368e59ff12495e13733c92a53b715d28af2bd9b2337abd3be155"
+  },
+  {
+    "origen": "outputs/cierre-d2-final/evidencia/manifiesto-final.json",
+    "destino": "insumos-d2\\evidencia\\manifiesto-final.json",
+    "bytes": 27632,
+    "sha256": "733f1f18600afa00a7bd5a28e8553d544a72f1a7c0faabb834285603d2e5d7a5"
+  },
+  {
+    "origen": "outputs/cierre-d2-final/evidencia/montecarlo32.json",
+    "destino": "insumos-d2\\evidencia\\montecarlo32.json",
+    "bytes": 741,
+    "sha256": "3570ba5172361e10b861822c553d09ac206060d98f292e6b2458a1bdee4f4652"
+  },
+  {
+    "origen": "outputs/cierre-d2-final/evidencia/muestra-visual-tecnica.json",
+    "destino": "insumos-d2\\evidencia\\muestra-visual-tecnica.json",
+    "bytes": 1921,
+    "sha256": "82ba72b7162360ed758fa46ff1730f40061346593ea8df09c866400b1b1f010d"
+  },
+  {
+    "origen": "outputs/cierre-d2-final/evidencia/propuesta-tarifas.json",
+    "destino": "insumos-d2\\evidencia\\propuesta-tarifas.json",
+    "bytes": 12241,
+    "sha256": "b70109680ccef9857003008bd10937f3b32ac2802d137f1782925350641c45d7"
+  },
+  {
+    "origen": "outputs/cierre-d2-final/evidencia/recalculo-modelo-final.json",
+    "destino": "insumos-d2\\evidencia\\recalculo-modelo-final.json",
+    "bytes": 393,
+    "sha256": "afde486c1bc6f605b1d85f8ca860f8d529fae8bfd1ad18686b9ca9f9fcf58afa"
+  },
+  {
+    "origen": "outputs/cierre-d2-final/evidencia/render-analisis-liberacion.log",
+    "destino": "insumos-d2\\evidencia\\render-analisis-liberacion.log",
+    "bytes": 119,
+    "sha256": "00e5ae4875b397a9e87b7f74245408e3594257aace6d31e2cb910138544ed01c"
+  },
+  {
+    "origen": "outputs/cierre-d2-final/evidencia/render-oferta-liberacion.log",
+    "destino": "insumos-d2\\evidencia\\render-oferta-liberacion.log",
+    "bytes": 117,
+    "sha256": "a5d8030178ee065736bc6028f6a9a6fd80b743bffaf8d4e9d2a376bd75533f8b"
+  },
+  {
+    "origen": "outputs/cierre-d2-final/evidencia/tarifas-aceptadas.json",
+    "destino": "insumos-d2\\evidencia\\tarifas-aceptadas.json",
+    "bytes": 12256,
+    "sha256": "6c26b2479e69ca11e429016822336e5433125e44adff85ce0f72798ebed93954"
+  },
+  {
+    "origen": "outputs/cierre-d2-final/evidencia/verificador-economico-windows.log",
+    "destino": "insumos-d2\\evidencia\\verificador-economico-windows.log",
+    "bytes": 5313,
+    "sha256": "90d7a9147f434d3e689133b315dd0c5a9db9249bcd61e84d1085b1f92ae5c9b5"
+  },
+  {
+    "origen": "outputs/cierre-d2-final/evidencia/verificador-tecnico-windows.log",
+    "destino": "insumos-d2\\evidencia\\verificador-tecnico-windows.log",
+    "bytes": 5238,
+    "sha256": "296e7ccda8fc97e2d6cc2d196effbe793161fe033d32bac5427b74f31e4e56a2"
+  },
+  {
+    "origen": "outputs/cierre-d2-final/incorporar_tarifas.py",
+    "destino": "insumos-d2\\incorporar_tarifas.py",
+    "bytes": 8140,
+    "sha256": "3f5d2ca4e85323369f2087a09da3f92f1ac7d3e363da26a90312c468a66b1449"
+  },
+  {
+    "origen": "outputs/cierre-d2-final/incrustar_fuente_residual.py",
+    "destino": "insumos-d2\\incrustar_fuente_residual.py",
+    "bytes": 1905,
+    "sha256": "f9a28d67c11d9470b44418e33887caa2afb2fcf661a5a92808975aa7fb064911"
+  },
+  {
+    "origen": "outputs/cierre-d2-final/paquetes/D2_FUENTES_PARA_INTEGRACION_20261125.zip",
+    "destino": "insumos-d2\\paquetes\\D2_FUENTES_PARA_INTEGRACION_20261125.zip",
+    "bytes": 5692945,
+    "sha256": "f0dc0b89469810460d43e2e3720df4a9696742cebdafc25758089a00c4c821de"
+  },
+  {
+    "origen": "outputs/cierre-d2-final/paquetes/D2_PARA_REVISION_20261125.zip",
+    "destino": "insumos-d2\\paquetes\\D2_PARA_REVISION_20261125.zip",
+    "bytes": 8594902,
+    "sha256": "43e84ed8be29112795172254e62a0a40e11b2484d01c12688dc9936330646c06"
+  },
+  {
+    "origen": "outputs/cierre-d2-final/paquetes/SOBRE3_AUDIT_OFERTA_ECONOMICA_20261125.ZIP",
+    "destino": "insumos-d2\\paquetes\\SOBRE3_AUDIT_OFERTA_ECONOMICA_20261125.ZIP",
+    "bytes": 2707551,
+    "sha256": "464ee9cce7176f0a72dbf1765abd211daefbfceaae17afc0accca52b0415a9fe"
+  },
+  {
+    "origen": "outputs/cierre-d2-final/preparar_fuentes.py",
+    "destino": "insumos-d2\\preparar_fuentes.py",
+    "bytes": 1212,
+    "sha256": "46ff87a95a4ed7a7ad95a5cff9dec68f6b6ae6a1b5192efd487ad4cd90045638"
+  },
+  {
+    "origen": "outputs/cierre-d2-final/revision/curva-s.png",
+    "destino": "insumos-d2\\revision\\curva-s.png",
+    "bytes": 36163,
+    "sha256": "4dd1de9eaa47e992c17a4e51d49559a79d5adccbc36b8ab4da77e3c63c4b7bcf"
+  },
+  {
+    "origen": "outputs/cierre-d2-final/revision/solvencia-3.2.png",
+    "destino": "insumos-d2\\revision\\solvencia-3.2.png",
+    "bytes": 33440,
+    "sha256": "22a85ab14b24db119b147d9dcf13516124d75bf53b1ea609ddf60f42fdab983e"
+  },
+  {
+    "origen": "outputs/cierre-d2-final/verificar_corte.py",
+    "destino": "insumos-d2\\verificar_corte.py",
+    "bytes": 1346,
+    "sha256": "5a0e6d67c8ee57eb80818223d70224609104320ec730c9645932abe1ab1128da"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/.latexmkrc",
+    "destino": "fuentes\\.latexmkrc",
+    "bytes": 697,
+    "sha256": "b2f3a21cfaf0088a3e881697f4a65cbde6a043a087f3eb270f3fba444b9918b8"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/GUIA.md",
+    "destino": "fuentes\\GUIA.md",
+    "bytes": 52908,
+    "sha256": "786c5ceb82a051f82b0fe2c81fd4b5853bac4492ea7e71750f89d1485fe0b487"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/INFORME3_AUDIT_COSTOS_VENTA_20261114.eco.json",
+    "destino": "fuentes\\INFORME3_AUDIT_COSTOS_VENTA_20261114.eco.json",
+    "bytes": 3273,
+    "sha256": "6d7212d1430b03943927d6253f9ef07a8a0241c4c1e6149d1c77002d0f1a023f"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/LEEME-EQUIPO.md",
+    "destino": "fuentes\\LEEME-EQUIPO.md",
+    "bytes": 2642,
+    "sha256": "d0d28c49d9c8808f7e343cc9b5c8ee2920237a18ed5c101c9d5797eceddc6043"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/anexo.tex",
+    "destino": "fuentes\\anexo.tex",
+    "bytes": 1094,
+    "sha256": "b61ba513e11c3f91bf65a4b3ae82873faba2ee635ba730f524db03bed6fb0536"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/anexos/observaciones-informe1.tex",
+    "destino": "fuentes\\anexos\\observaciones-informe1.tex",
+    "bytes": 42250,
+    "sha256": "8d90e4306ea264caf77daeb8ef31f94dc7e4cb41e45531049cc6fb642d1b6519"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/anexos/observaciones-informe2.tex",
+    "destino": "fuentes\\anexos\\observaciones-informe2.tex",
+    "bytes": 29871,
+    "sha256": "79d9af62066004423a0ec865f3a35e0a0554bb76b12c4d93777c663972936a7d"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/anexos/observaciones-informe3.tex",
+    "destino": "fuentes\\anexos\\observaciones-informe3.tex",
+    "bytes": 33772,
+    "sha256": "97a6b4abba4c9d02cf8b07380f64b6d0d9fcd7c4a0156625a5e1c68816932e4b"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/anexos/tabla-art46-informe1-borrador.md",
+    "destino": "fuentes\\anexos\\tabla-art46-informe1-borrador.md",
+    "bytes": 53369,
+    "sha256": "64d947baab46b43c928b48aee01e85d932b6b40c21c8a32cfb9cc81669c9cc31"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/caratula.tex",
+    "destino": "fuentes\\caratula.tex",
+    "bytes": 1069,
+    "sha256": "d31e996f77028f075a737c303bc854335b61b6827c391d06db2ba8eb524e6de8"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/comunicado10.sty",
+    "destino": "fuentes\\comunicado10.sty",
+    "bytes": 17005,
+    "sha256": "c937c52597f481c9aae6a089173998e41ab3bcb2b112d01e3f86cc0464367197"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/configuracion/economico.tex",
+    "destino": "fuentes\\configuracion\\economico.tex",
+    "bytes": 5988,
+    "sha256": "144470f0f87a0eb9cef98ba13da154e77f48d283ea8c7a0aa35ac4b937b1e0c1"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/configuracion/instancia.tex",
+    "destino": "fuentes\\configuracion\\instancia.tex",
+    "bytes": 1413,
+    "sha256": "d9c104ad54577c640e5e4315a977a541ce3565d78c7623cb0b6a97132b588744"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/configuracion/metadatos.tex",
+    "destino": "fuentes\\configuracion\\metadatos.tex",
+    "bytes": 1332,
+    "sha256": "3e3dc5dbc6c2395634602ec266081f397ef6a32f2a5bfaac520330c4c7945f41"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/configuracion/subdocumentos.tex",
+    "destino": "fuentes\\configuracion\\subdocumentos.tex",
+    "bytes": 4288,
+    "sha256": "91b57a6b5d892a15984e9cf873951ac32e79bb30e3e1190d4f4989e0de9b560a"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/documento-economico.tex",
+    "destino": "fuentes\\documento-economico.tex",
+    "bytes": 1502,
+    "sha256": "5fc01f95ff8759167cecd9a97ac9ac5b51c00224014eb77f57d2532c71b83632"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/economico/analisis-financiero/contenido.tex",
+    "destino": "fuentes\\economico\\analisis-financiero\\contenido.tex",
+    "bytes": 14846,
+    "sha256": "1670e7180f39c3f3a128631c08f6c09777fda55643ccdfb96eb2f35bc742c8d6"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/economico/costos-venta/contenido.tex",
+    "destino": "fuentes\\economico\\costos-venta\\contenido.tex",
+    "bytes": 9386,
+    "sha256": "a58e87f4c1c5a255c491965c5bac2c3b5185dffc71bc8ddc2a4e503d9d28bf95"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/economico/costos-venta/curva-s.pdf",
+    "destino": "fuentes\\economico\\costos-venta\\curva-s.pdf",
+    "bytes": 42457,
+    "sha256": "736f31b666addfdd4d3a6f06b2cbd795ff03eb8f47facde5a24fd3a7b30de372"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/economico/costos-venta/generar_curvas_32.py",
+    "destino": "fuentes\\economico\\costos-venta\\generar_curvas_32.py",
+    "bytes": 2613,
+    "sha256": "f07e90335597833c241c8d68672fffb3860a6b3b194fc3506f92025c01854ea7"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/economico/costos-venta/solvencia-3.2.pdf",
+    "destino": "fuentes\\economico\\costos-venta\\solvencia-3.2.pdf",
+    "bytes": 41888,
+    "sha256": "972f1ed6e1132bf886f157285523a99e06ab0b43c3c426685f3d93ebb3c7df0c"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/economico/datos/flujo-mensual-final.tex",
+    "destino": "fuentes\\economico\\datos\\flujo-mensual-final.tex",
+    "bytes": 3581,
+    "sha256": "d66b62669e58de9a58027b417163fafe4a0b685b5fdce664703b4a73b462c50f"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/economico/datos/operacion-categorias-final.tex",
+    "destino": "fuentes\\economico\\datos\\operacion-categorias-final.tex",
+    "bytes": 164,
+    "sha256": "d98eb479336cfe60175f22879fbbe42a3a4f64b64f45c441671adf36a57b7ed4"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/economico/datos/partidas.csv",
+    "destino": "fuentes\\economico\\datos\\partidas.csv",
+    "bytes": 7167,
+    "sha256": "fe14b82c256666345d7edb392d42647f636c133e41ca07d3c7cea33c97dcad70"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/economico/datos/respaldo-3.2.json",
+    "destino": "fuentes\\economico\\datos\\respaldo-3.2.json",
+    "bytes": 27839,
+    "sha256": "810afb5e5317581be3ce9d9c4d6fcacd8edeeec19c22f66e934833dc581b1ed0"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/economico/datos/soporte-final.tex",
+    "destino": "fuentes\\economico\\datos\\soporte-final.tex",
+    "bytes": 773,
+    "sha256": "423206bf80fa9986e4099a7343b08d1bac4a030f45a765b08ad364985193f339"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/economico/datos/tarifas-final.csv",
+    "destino": "fuentes\\economico\\datos\\tarifas-final.csv",
+    "bytes": 2892,
+    "sha256": "90d49ee71cf6a391f8108eb7ecb0de1280062e173b41b640564836e3159509c8"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/economico/datos/tarifas-final.tex",
+    "destino": "fuentes\\economico\\datos\\tarifas-final.tex",
+    "bytes": 2718,
+    "sha256": "bf6b689d7f9b8d233927b18e196dc3bdf572fbf04995d9b384f6ef75bc820f49"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/economico/datos/tarifas.csv",
+    "destino": "fuentes\\economico\\datos\\tarifas.csv",
+    "bytes": 562,
+    "sha256": "07df87356e450a87b4c06c25a25088d30909d38508fbc2b18b09280b9ac79f52"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/economico/oferta-economica/contenido.tex",
+    "destino": "fuentes\\economico\\oferta-economica\\contenido.tex",
+    "bytes": 8106,
+    "sha256": "1c75cbbaa62d8d02f0460b3820ceb5788a33b969c9201c883285973fb64255a6"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/economico/planilla/AUDIT_ModeloFinanciero_3_20261125.xlsx",
+    "destino": "fuentes\\economico\\planilla\\AUDIT_ModeloFinanciero_3_20261125.xlsx",
+    "bytes": 744858,
+    "sha256": "176e403c108029bdfa7d33595cd88f38c2a0e2804c5103f51b70f9d62ff02eb6"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/economico/planilla/LEEME.txt",
+    "destino": "fuentes\\economico\\planilla\\LEEME.txt",
+    "bytes": 727,
+    "sha256": "508be7a9962ed5c30090aae9dd45770b128a1ca70c4e12674f10e2212fd96381"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/estilo/audit-oferta.cls",
+    "destino": "fuentes\\estilo\\audit-oferta.cls",
+    "bytes": 11412,
+    "sha256": "1c89790c2e6c0abbe205ff5b6fc3cea4c448a8a307a901c97dd7c1435db8696e"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/estilo/citas.sty",
+    "destino": "fuentes\\estilo\\citas.sty",
+    "bytes": 4416,
+    "sha256": "da9aa2f483a2f68757d0f52c17c9d29158bf6e8a875a863214b98e7f08f7c80b"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/estilo/compatibilidad.sty",
+    "destino": "fuentes\\estilo\\compatibilidad.sty",
+    "bytes": 2900,
+    "sha256": "df0bb3c3611b874e4b4e16c4d821f43e42b76d91156116729395fdf6d580ff49"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/estilo/comunicado10.sty",
+    "destino": "fuentes\\estilo\\comunicado10.sty",
+    "bytes": 15327,
+    "sha256": "07f3914f62756c04bbb00db7cfbdb81ca0be821d6371fa2fa6df627fcf722bf4"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/estilo/dispositivos.sty",
+    "destino": "fuentes\\estilo\\dispositivos.sty",
+    "bytes": 11499,
+    "sha256": "3417f248241226c60721ad8a62c2525a909cfefcd3c02e278a6eaa7b4f1ced33"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/estilo/economico.lua",
+    "destino": "fuentes\\estilo\\economico.lua",
+    "bytes": 21690,
+    "sha256": "91f111add279e7bd159725c1f9ca3761da347fff606f44c9c5cbf7e8e3ed6534"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/estilo/economico.sty",
+    "destino": "fuentes\\estilo\\economico.sty",
+    "bytes": 17339,
+    "sha256": "763c74277e3bcf9795c1ae5c45f7461f4123baeb266c76742a9b792f442ebdac"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/estilo/ensamblado.sty",
+    "destino": "fuentes\\estilo\\ensamblado.sty",
+    "bytes": 9691,
+    "sha256": "f9e50484f25c2b77a33bee0c15e4563561a11fdfff4b04078c296bcc1224de9d"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/estilo/figuras.sty",
+    "destino": "fuentes\\estilo\\figuras.sty",
+    "bytes": 13664,
+    "sha256": "b118d23ad7e3a7b1453b8cf950b9584c0c15e6aed61c6046a0e9e9c7cbf226a5"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/estilo/pagina.sty",
+    "destino": "fuentes\\estilo\\pagina.sty",
+    "bytes": 9864,
+    "sha256": "1bf7e609335f0d441f0becdc59be30d0e4627bc0baffe2703db435ef3577b8b1"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/estilo/tablas.sty",
+    "destino": "fuentes\\estilo\\tablas.sty",
+    "bytes": 16068,
+    "sha256": "3cc9181526d1b990f435874baafbeed46dc419cc2aa8452f4c35c982fbda3dfb"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/estilo/titulos.sty",
+    "destino": "fuentes\\estilo\\titulos.sty",
+    "bytes": 14598,
+    "sha256": "40750c728277edefd9e3e7072ca6afd1a136855058f9bd6f9805ec5b31564244"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/.gitignore",
+    "destino": "fuentes\\figuras\\.gitignore",
+    "bytes": 217,
+    "sha256": "fe65afb965c92a2c00b431baa87d386f1812d727ecf35ea46a8ef99979d462b4"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/01-empresa/README.md",
+    "destino": "fuentes\\figuras\\01-empresa\\README.md",
+    "bytes": 408,
+    "sha256": "cf29d40f3ac62198ed6d09b38a24b8f5a9361cd25e94e06f814bc40418bbdd3e"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/01-empresa/figura_1_1_organigrama.png",
+    "destino": "fuentes\\figuras\\01-empresa\\figura_1_1_organigrama.png",
+    "bytes": 1301368,
+    "sha256": "83bab31a0fa2dde5aef09085eebbd2744fc2e142515561c1af38e76f09bbef55"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/02-problema/figura_2_1_flujo_operacional.png",
+    "destino": "fuentes\\figuras\\02-problema\\figura_2_1_flujo_operacional.png",
+    "bytes": 1644213,
+    "sha256": "05c815ef1c50a570eb628d9a68cf7f57a38005d6e6cd5a484045a551675a8b8d"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/02-problema/figura_2_2_calendario_operacional.png",
+    "destino": "fuentes\\figuras\\02-problema\\figura_2_2_calendario_operacional.png",
+    "bytes": 1555782,
+    "sha256": "f5cbb1c77acb641be7e4659880ae27d3be171f31de9f7a3a4ee4d8da23ee0b76"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/02-problema/figura_2_3_cadena_causal.png",
+    "destino": "fuentes\\figuras\\02-problema\\figura_2_3_cadena_causal.png",
+    "bytes": 1560252,
+    "sha256": "af80c306e7eac002147d48d5211eab83cd77df1921fcc0bdad91fa5b405b2047"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/02-problema/figura_2_4_matriz_actores.png",
+    "destino": "fuentes\\figuras\\02-problema\\figura_2_4_matriz_actores.png",
+    "bytes": 1503216,
+    "sha256": "89840300b6976b38b05ad522fa22e2c6410937e5f47bfd6d0e95c8131f8828e5"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/03-solucion/esquema_conceptual_solucion.png",
+    "destino": "fuentes\\figuras\\03-solucion\\esquema_conceptual_solucion.png",
+    "bytes": 694746,
+    "sha256": "5ee38d45c8738276a7379c2d67aa7d55436b092842809dc5386e3ea59b155336"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/03-solucion/flujo_operacional_solucion.png",
+    "destino": "fuentes\\figuras\\03-solucion\\flujo_operacional_solucion.png",
+    "bytes": 110321,
+    "sha256": "da418c3b2c0a56e0653f11658706dfbd89d31de2d0b34804051f74825ab6fd29"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/4-3-asignacion.pdf",
+    "destino": "fuentes\\figuras\\04-arquitectura\\4-3-asignacion.pdf",
+    "bytes": 14905,
+    "sha256": "8fa89d31c28c66939715879e047bd2e5a6d330dc61410f8eea937594c0471a26"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/4-3-asignacion.png",
+    "destino": "fuentes\\figuras\\04-arquitectura\\4-3-asignacion.png",
+    "bytes": 313612,
+    "sha256": "b6c39cc60a4d2f4d5c7f0d02c8fddd05dc9c8262a6aa17674b9a0a93ddc3574f"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/4-3-asignacion.svg",
+    "destino": "fuentes\\figuras\\04-arquitectura\\4-3-asignacion.svg",
+    "bytes": 8022,
+    "sha256": "39ff78f020e1e24ecd4e390eafcd7d32db10f1ca9d131db04691fbc3aa335748"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/4-4-documento.pdf",
+    "destino": "fuentes\\figuras\\04-arquitectura\\4-4-documento.pdf",
+    "bytes": 16055,
+    "sha256": "3a61734fa36747749e8ab243180fd191086a531e7ff1bbb28060bb00ab38bf15"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/4-4-documento.png",
+    "destino": "fuentes\\figuras\\04-arquitectura\\4-4-documento.png",
+    "bytes": 332413,
+    "sha256": "49e91b9eedaf9b1eb2aab06d52d95339e3a9a711bebc6e3ac2543fceb8592a36"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/4-4-documento.svg",
+    "destino": "fuentes\\figuras\\04-arquitectura\\4-4-documento.svg",
+    "bytes": 7600,
+    "sha256": "1c36012624fd7fafa2e9fac91d425ef20484cbc267bd6ce1359a8150808d769d"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/4-6-liquidacion.pdf",
+    "destino": "fuentes\\figuras\\04-arquitectura\\4-6-liquidacion.pdf",
+    "bytes": 15559,
+    "sha256": "736f653b165505c79b67f58303304f73eb2d90c320abf003527de992606e7f49"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/4-6-liquidacion.png",
+    "destino": "fuentes\\figuras\\04-arquitectura\\4-6-liquidacion.png",
+    "bytes": 290108,
+    "sha256": "acd82981c92b3ac7dda35d82153f8977d66d2103952f9a80d35f85beb51ad042"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/4-6-liquidacion.svg",
+    "destino": "fuentes\\figuras\\04-arquitectura\\4-6-liquidacion.svg",
+    "bytes": 7299,
+    "sha256": "4bc7862c3cb9dfce110bb3e2f72b26615b0503bc8bda73e6cdae01a91e030c4c"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/4-7-reconexion.pdf",
+    "destino": "fuentes\\figuras\\04-arquitectura\\4-7-reconexion.pdf",
+    "bytes": 16096,
+    "sha256": "464c4969b589876384e8aacd1b75203460284411f8bf626ec183490698b0b4d7"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/4-7-reconexion.png",
+    "destino": "fuentes\\figuras\\04-arquitectura\\4-7-reconexion.png",
+    "bytes": 288503,
+    "sha256": "974495b05bbe95d758c1b6ea5248c35a19a70a462dc55a2e61c2b6af8c51b8c1"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/4-7-reconexion.svg",
+    "destino": "fuentes\\figuras\\04-arquitectura\\4-7-reconexion.svg",
+    "bytes": 7295,
+    "sha256": "29c48d5f4c21e58cb0e40870fbd87cb18d3dd73cb949cbdec9dc414edb5f2fe1"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/Camion.png",
+    "destino": "fuentes\\figuras\\04-arquitectura\\Camion.png",
+    "bytes": 107742,
+    "sha256": "ddda14e985bd9a9c1764da26014966d99569efd17c845d4bb415174855ea772d"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/D3-diagrama10_arquitectura_logica_8capas.png",
+    "destino": "fuentes\\figuras\\04-arquitectura\\D3-diagrama10_arquitectura_logica_8capas.png",
+    "bytes": 694746,
+    "sha256": "5ee38d45c8738276a7379c2d67aa7d55436b092842809dc5386e3ea59b155336"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/D3-diagrama11_patrones_resiliencia_despacho.png",
+    "destino": "fuentes\\figuras\\04-arquitectura\\D3-diagrama11_patrones_resiliencia_despacho.png",
+    "bytes": 300185,
+    "sha256": "1a5ba1ea8f6861e6ff6ecb936739bb1109b0e58044d40a5a41e7608bedde99e8"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/D3-diagrama12_integracion_acl_erp2013.png",
+    "destino": "fuentes\\figuras\\04-arquitectura\\D3-diagrama12_integracion_acl_erp2013.png",
+    "bytes": 410287,
+    "sha256": "33a0476e1397481adbf36fb0f46ff2b951d505f4a5d3085fb1b895f481045719"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/D3-diagrama13_arquitectura_analitica_lakehouse_bi.png",
+    "destino": "fuentes\\figuras\\04-arquitectura\\D3-diagrama13_arquitectura_analitica_lakehouse_bi.png",
+    "bytes": 440446,
+    "sha256": "3e84e5621ae9cdea87c153d4dbf956c6ca5c71cfdb023b420a084c9a53dc7a71"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/D3-diagrama1_bounded_contexts.png",
+    "destino": "fuentes\\figuras\\04-arquitectura\\D3-diagrama1_bounded_contexts.png",
+    "bytes": 279325,
+    "sha256": "5612c31f102ac9ba98792c800e50936d407d9b9949274e394ede24f767399857"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/D3-diagrama2_arquitectura_tactica_ddd.png",
+    "destino": "fuentes\\figuras\\04-arquitectura\\D3-diagrama2_arquitectura_tactica_ddd.png",
+    "bytes": 322407,
+    "sha256": "684d1737aa5182d4555940eac79647d8bc5105cd8903768512e9f7c2b864af6d"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/DosEjes.png",
+    "destino": "fuentes\\figuras\\04-arquitectura\\DosEjes.png",
+    "bytes": 107538,
+    "sha256": "63f8ab34d7b4c7a316cfb9310a6c2840a7b98313260af2c47adbf95c630eedaf"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/Flujo.png",
+    "destino": "fuentes\\figuras\\04-arquitectura\\Flujo.png",
+    "bytes": 110321,
+    "sha256": "da418c3b2c0a56e0653f11658706dfbd89d31de2d0b34804051f74825ab6fd29"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/LogicaCapas.pdf",
+    "destino": "fuentes\\figuras\\04-arquitectura\\LogicaCapas.pdf",
+    "bytes": 100402,
+    "sha256": "7f6a0c620065ca965bf8466b46054e44013934cc7c2117f758ddfc362b56026a"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/LogicaCapas.png",
+    "destino": "fuentes\\figuras\\04-arquitectura\\LogicaCapas.png",
+    "bytes": 694746,
+    "sha256": "5ee38d45c8738276a7379c2d67aa7d55436b092842809dc5386e3ea59b155336"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/LogicaCapas.svg",
+    "destino": "fuentes\\figuras\\04-arquitectura\\LogicaCapas.svg",
+    "bytes": 137327,
+    "sha256": "a9bcce98e0f40b38a7f74ced22c3c9f52208d10f8b6ae119278ad2f8b37b4e63"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/LogicaContextos.png",
+    "destino": "fuentes\\figuras\\04-arquitectura\\LogicaContextos.png",
+    "bytes": 279325,
+    "sha256": "5612c31f102ac9ba98792c800e50936d407d9b9949274e394ede24f767399857"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/LogicaEmplazamiento.png",
+    "destino": "fuentes\\figuras\\04-arquitectura\\LogicaEmplazamiento.png",
+    "bytes": 96230,
+    "sha256": "d7035a32176209ea84b5538e9137843af346f7430aa6e126aec17a2a4e50ff05"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/LogicaIntegraciones.pdf",
+    "destino": "fuentes\\figuras\\04-arquitectura\\LogicaIntegraciones.pdf",
+    "bytes": 34184,
+    "sha256": "3ed962aa677cfb0e7cfc795a68bdf37ed7ec85961ac256f21c07a39bf9d34250"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/LogicaIntegraciones.png",
+    "destino": "fuentes\\figuras\\04-arquitectura\\LogicaIntegraciones.png",
+    "bytes": 349473,
+    "sha256": "3bcdd5a2d2df2c34289ac12ab2a3512e817d497532607e1d50a1f20e74f93bd0"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/Main.png",
+    "destino": "fuentes\\figuras\\04-arquitectura\\Main.png",
+    "bytes": 118281,
+    "sha256": "d5834ed647bc19f959bedba0db3fd06c7360be49dcf6c0ebca270a2f8919b0ab"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/Main.svg",
+    "destino": "fuentes\\figuras\\04-arquitectura\\Main.svg",
+    "bytes": 23149,
+    "sha256": "b4ca6ce0b1c8a5e900f5b1c66349040cca453d7bf43e251981109be549b4d0f3"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/ambientes-promocion.pdf",
+    "destino": "fuentes\\figuras\\04-arquitectura\\ambientes-promocion.pdf",
+    "bytes": 42127,
+    "sha256": "fcec00124d822b945eafa532eeaa7bf33de1e682ec050520275b0376fc3c3909"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/ambientes-promocion.png",
+    "destino": "fuentes\\figuras\\04-arquitectura\\ambientes-promocion.png",
+    "bytes": 477405,
+    "sha256": "ead9c05ae0aca54a1c2271c46f019271a2a9f3e4be539fc793c94befa6cd74ca"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/ambientes.pdf",
+    "destino": "fuentes\\figuras\\04-arquitectura\\ambientes.pdf",
+    "bytes": 32577,
+    "sha256": "c3d7f5e7eb76c1648ed4e32e3d42fa6f3e378c7195555f3e5875ce1630d24cf8"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/ambientes.png",
+    "destino": "fuentes\\figuras\\04-arquitectura\\ambientes.png",
+    "bytes": 306794,
+    "sha256": "6f4c457373e71e3c57b0df0c7d0fe424f4c5bfe88f8072901ea2dfeba2621e46"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/audit-figura-4.2-contextos.pdf",
+    "destino": "fuentes\\figuras\\04-arquitectura\\audit-figura-4.2-contextos.pdf",
+    "bytes": 29717,
+    "sha256": "2e601252238d9823e4836878db8092dd716bf9d6c72e0f39d4a1244c39f4578b"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/audit-figura-4.2-contextos.png",
+    "destino": "fuentes\\figuras\\04-arquitectura\\audit-figura-4.2-contextos.png",
+    "bytes": 279325,
+    "sha256": "5612c31f102ac9ba98792c800e50936d407d9b9949274e394ede24f767399857"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/audit-figura-4.3-resiliencia.pdf",
+    "destino": "fuentes\\figuras\\04-arquitectura\\audit-figura-4.3-resiliencia.pdf",
+    "bytes": 36488,
+    "sha256": "ea04b13442e20e2068a48da5790ea9505b78db99be15388c21058afdea850e15"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/audit-figura-4.3-resiliencia.png",
+    "destino": "fuentes\\figuras\\04-arquitectura\\audit-figura-4.3-resiliencia.png",
+    "bytes": 300185,
+    "sha256": "1a5ba1ea8f6861e6ff6ecb936739bb1109b0e58044d40a5a41e7608bedde99e8"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/audit-figura-4.4-acl.pdf",
+    "destino": "fuentes\\figuras\\04-arquitectura\\audit-figura-4.4-acl.pdf",
+    "bytes": 21235,
+    "sha256": "5737a055d5f825f6c8fe1eb8ceb4a011f9be060a4797ae43b9cb47f5b0cd0dd8"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/audit-figura-4.4-acl.png",
+    "destino": "fuentes\\figuras\\04-arquitectura\\audit-figura-4.4-acl.png",
+    "bytes": 410287,
+    "sha256": "33a0476e1397481adbf36fb0f46ff2b951d505f4a5d3085fb1b895f481045719"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/audit-figura-4.5-analitica.pdf",
+    "destino": "fuentes\\figuras\\04-arquitectura\\audit-figura-4.5-analitica.pdf",
+    "bytes": 50402,
+    "sha256": "61fa2d93eaeedcb7307f7a4a52461aa8a7ffeaa7e74eb4ac9d8649b1106b6d44"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/audit-figura-4.5-analitica.png",
+    "destino": "fuentes\\figuras\\04-arquitectura\\audit-figura-4.5-analitica.png",
+    "bytes": 440446,
+    "sha256": "3e84e5621ae9cdea87c153d4dbf956c6ca5c71cfdb023b420a084c9a53dc7a71"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/audit-figura-4.6-tactico.pdf",
+    "destino": "fuentes\\figuras\\04-arquitectura\\audit-figura-4.6-tactico.pdf",
+    "bytes": 18574,
+    "sha256": "82b183bd394970c299748dea5eb631f6625509cc3fe93f5e223fee59322d30cb"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/audit-figura-4.6-tactico.png",
+    "destino": "fuentes\\figuras\\04-arquitectura\\audit-figura-4.6-tactico.png",
+    "bytes": 322407,
+    "sha256": "684d1737aa5182d4555940eac79647d8bc5105cd8903768512e9f7c2b864af6d"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/documento-sin-cobertura.pdf",
+    "destino": "fuentes\\figuras\\04-arquitectura\\documento-sin-cobertura.pdf",
+    "bytes": 21393,
+    "sha256": "1448fc41ea3f5b2569931fae4bc32aac0729c012df1f099c191c5fa7c93caa02"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/documento-sin-cobertura.png",
+    "destino": "fuentes\\figuras\\04-arquitectura\\documento-sin-cobertura.png",
+    "bytes": 297795,
+    "sha256": "7d0a041b1a17c39efb0e79a6335a0d152e98c8861f2cc2900e511030add7290a"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/documento-sin-cobertura.svg",
+    "destino": "fuentes\\figuras\\04-arquitectura\\documento-sin-cobertura.svg",
+    "bytes": 13251,
+    "sha256": "57630e79e2ae083c95ca63c86e6b7a6fafe761547970b6ee3cca8f902fb5fb79"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/equipo-a-bordo.pdf",
+    "destino": "fuentes\\figuras\\04-arquitectura\\equipo-a-bordo.pdf",
+    "bytes": 119405,
+    "sha256": "460b343ea3a5aa782245a7080315ee71dcdb895d9b7b21f0cb7f839ca5423fb8"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/equipo-a-bordo.png",
+    "destino": "fuentes\\figuras\\04-arquitectura\\equipo-a-bordo.png",
+    "bytes": 315491,
+    "sha256": "e7b908494f8993df61ea7dd6501f8a39a850ad7d26376db16a784d6688e53e5c"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/fisica-general.pdf",
+    "destino": "fuentes\\figuras\\04-arquitectura\\fisica-general.pdf",
+    "bytes": 77793,
+    "sha256": "6decf6db54403a7b082c121ced34cf5a44faa9ead6e7ebec5ab257011b0bcc32"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/fisica-general.png",
+    "destino": "fuentes\\figuras\\04-arquitectura\\fisica-general.png",
+    "bytes": 520290,
+    "sha256": "95cc0842f7d2bc756fc0371d2b03fa5ff75fad6629d0df16ed7cde8545a2bd23"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/fisica-lamina-a.pdf",
+    "destino": "fuentes\\figuras\\04-arquitectura\\fisica-lamina-a.pdf",
+    "bytes": 112459,
+    "sha256": "b9d6199d61f3ec69aeec611c53855d03d82f5c9a5bef4a03dda89809cbbf17d5"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/fisica-lamina-a.png",
+    "destino": "fuentes\\figuras\\04-arquitectura\\fisica-lamina-a.png",
+    "bytes": 526978,
+    "sha256": "390e69d228b5062da551ca447131b3b3334176f0e24ec1d6746a43d5c113235b"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/fisica-lamina-a.svg",
+    "destino": "fuentes\\figuras\\04-arquitectura\\fisica-lamina-a.svg",
+    "bytes": 87601,
+    "sha256": "6b3e177e2548d3695ce2dee59cf087cfb882566ffd3e86eccbf605ba62af4f9e"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/fisica-lamina-b.pdf",
+    "destino": "fuentes\\figuras\\04-arquitectura\\fisica-lamina-b.pdf",
+    "bytes": 31014,
+    "sha256": "76c955893b45b63634abf6ca10e4a46e5f52dfca2dab43dd865e03c175ea2e24"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/fisica-lamina-b.png",
+    "destino": "fuentes\\figuras\\04-arquitectura\\fisica-lamina-b.png",
+    "bytes": 354462,
+    "sha256": "216058830e04471d7fe665f123e76de8ea06b31fb4f4aa7b9c276a99c01cd50b"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/fisica-lamina-b.svg",
+    "destino": "fuentes\\figuras\\04-arquitectura\\fisica-lamina-b.svg",
+    "bytes": 27467,
+    "sha256": "05dd114c8e8a8142f5cc8ffcca30004e9dc2900575ad350863c8b8e6b2f7bcc6"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/fisica-lamina-c.pdf",
+    "destino": "fuentes\\figuras\\04-arquitectura\\fisica-lamina-c.pdf",
+    "bytes": 97519,
+    "sha256": "93c8e8a30e708ac7206070035bbb3e4d5bc3eea432b6a8ad408be780245dddc8"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/fisica-lamina-c.png",
+    "destino": "fuentes\\figuras\\04-arquitectura\\fisica-lamina-c.png",
+    "bytes": 602823,
+    "sha256": "6d1967c87068524d76a7458fdfa9dbb6920bb5a6cd089f5ff84813a4d79a874d"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/fisica-lamina-c.svg",
+    "destino": "fuentes\\figuras\\04-arquitectura\\fisica-lamina-c.svg",
+    "bytes": 65588,
+    "sha256": "d59c18856b39d6388f7e797a536e0dc0791d27973a015434709585ab3af97ec2"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/fisica-lamina-d.pdf",
+    "destino": "fuentes\\figuras\\04-arquitectura\\fisica-lamina-d.pdf",
+    "bytes": 42652,
+    "sha256": "b104a3dd71091894e574c38ba6ecdbabbf4ff5f8ef2d3852b9b4af30cff10279"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/fisica-lamina-d.png",
+    "destino": "fuentes\\figuras\\04-arquitectura\\fisica-lamina-d.png",
+    "bytes": 432793,
+    "sha256": "2c6f29e5a5ee743417b20682e730530047c7b3e237e76e9ef97e284c8bb22db0"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/fisica-lamina-d.svg",
+    "destino": "fuentes\\figuras\\04-arquitectura\\fisica-lamina-d.svg",
+    "bytes": 44032,
+    "sha256": "8891fb779db3ddfa033541f84402a4e503d873335fa387e3369675eed35f803d"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/fisica-lamina-e.pdf",
+    "destino": "fuentes\\figuras\\04-arquitectura\\fisica-lamina-e.pdf",
+    "bytes": 123474,
+    "sha256": "1b57e845b5ba9776f081f08968c75b301b8bb81a575a3e610d5830b5bef2efa4"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/fisica-lamina-e.png",
+    "destino": "fuentes\\figuras\\04-arquitectura\\fisica-lamina-e.png",
+    "bytes": 483092,
+    "sha256": "a02601fea46beda758dc5d50a42e620e320eb50c611af7646beff0514273a864"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/fisica-lamina-e.svg",
+    "destino": "fuentes\\figuras\\04-arquitectura\\fisica-lamina-e.svg",
+    "bytes": 238657,
+    "sha256": "b58f26156e4c7f97992d8ee08fbd7dad880637cc4bd799b2bc280ad48c309700"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/gabinete-terminal.pdf",
+    "destino": "fuentes\\figuras\\04-arquitectura\\gabinete-terminal.pdf",
+    "bytes": 38041,
+    "sha256": "1eaf23d5be1ae2b34c3b7bac53a124ef401ac4214904630201473bbfdd58ee59"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/gabinete-terminal.png",
+    "destino": "fuentes\\figuras\\04-arquitectura\\gabinete-terminal.png",
+    "bytes": 293909,
+    "sha256": "c041fcba2152e1fc38257b193b072e5101a9724498bbeae93ea65b512ab2a28b"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/instalacion-a-bordo.png",
+    "destino": "fuentes\\figuras\\04-arquitectura\\instalacion-a-bordo.png",
+    "bytes": 174628,
+    "sha256": "602f1303b8eb95db9108284f1c7e5391a868d20342030b410f129f3bd5a59d28"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/racks-san-bernardo.png",
+    "destino": "fuentes\\figuras\\04-arquitectura\\racks-san-bernardo.png",
+    "bytes": 223950,
+    "sha256": "15a667720d76fa5edbc58c72aec7beabb3a49eec4dc4b5b821d372bdf64a3f8d"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/reconexion.pdf",
+    "destino": "fuentes\\figuras\\04-arquitectura\\reconexion.pdf",
+    "bytes": 45280,
+    "sha256": "1082e0bebd3923cd3658d4372b92fbd053b01d70b747a814272131667da2e45c"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/reconexion.png",
+    "destino": "fuentes\\figuras\\04-arquitectura\\reconexion.png",
+    "bytes": 484789,
+    "sha256": "76aa93fa7982586a4775b1be9d22a99d1cdcb11f611740ad74f46411c5fff704"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/recuperacion.pdf",
+    "destino": "fuentes\\figuras\\04-arquitectura\\recuperacion.pdf",
+    "bytes": 73012,
+    "sha256": "57af0a4e003fb17fa85ceded0799a28e726ece08459cf9faeafe1ee5a993738e"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/recuperacion.png",
+    "destino": "fuentes\\figuras\\04-arquitectura\\recuperacion.png",
+    "bytes": 581371,
+    "sha256": "55eca9e1af27ae529bec8174f75c5005db8d522f12dc8e439965ac434d54af67"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/region-primaria.pdf",
+    "destino": "fuentes\\figuras\\04-arquitectura\\region-primaria.pdf",
+    "bytes": 83475,
+    "sha256": "bfdafa56360c44f54016c014c599ac334e25f1ff5bb3761f5d0528e13ab25bbc"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/region-primaria.png",
+    "destino": "fuentes\\figuras\\04-arquitectura\\region-primaria.png",
+    "bytes": 510552,
+    "sha256": "da75611093e69abfbc5fb8c3e45b02fc2d013fcc7c5539d90435b4a7e37ffe08"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/region-secundaria.pdf",
+    "destino": "fuentes\\figuras\\04-arquitectura\\region-secundaria.pdf",
+    "bytes": 85295,
+    "sha256": "0292d9629074d39f34a887fa3a9a1b41aa33d3e72c4f79838342039bde406445"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/region-secundaria.png",
+    "destino": "fuentes\\figuras\\04-arquitectura\\region-secundaria.png",
+    "bytes": 647011,
+    "sha256": "f46d3b968f53fbea08e7b1215bc615068215dd3aba267119ee7c932334d24721"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/sala-san-bernardo.pdf",
+    "destino": "fuentes\\figuras\\04-arquitectura\\sala-san-bernardo.pdf",
+    "bytes": 62089,
+    "sha256": "7afde8eca3fb761899f43ffa56668d6c80654a80d3758f5bad1c6b473bac5eee"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/sala-san-bernardo.png",
+    "destino": "fuentes\\figuras\\04-arquitectura\\sala-san-bernardo.png",
+    "bytes": 272891,
+    "sha256": "b3cb6d4d2b0aa42bc4ba285fdf29d63901f5be0b9424c1f8ecacd5a0ff814774"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/secuencia-asignacion.pdf",
+    "destino": "fuentes\\figuras\\04-arquitectura\\secuencia-asignacion.pdf",
+    "bytes": 14905,
+    "sha256": "8fa89d31c28c66939715879e047bd2e5a6d330dc61410f8eea937594c0471a26"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/secuencia-asignacion.png",
+    "destino": "fuentes\\figuras\\04-arquitectura\\secuencia-asignacion.png",
+    "bytes": 313612,
+    "sha256": "b6c39cc60a4d2f4d5c7f0d02c8fddd05dc9c8262a6aa17674b9a0a93ddc3574f"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/secuencia-documento.pdf",
+    "destino": "fuentes\\figuras\\04-arquitectura\\secuencia-documento.pdf",
+    "bytes": 16055,
+    "sha256": "3a61734fa36747749e8ab243180fd191086a531e7ff1bbb28060bb00ab38bf15"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/secuencia-documento.png",
+    "destino": "fuentes\\figuras\\04-arquitectura\\secuencia-documento.png",
+    "bytes": 332413,
+    "sha256": "49e91b9eedaf9b1eb2aab06d52d95339e3a9a711bebc6e3ac2543fceb8592a36"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/secuencia-liquidacion.pdf",
+    "destino": "fuentes\\figuras\\04-arquitectura\\secuencia-liquidacion.pdf",
+    "bytes": 15700,
+    "sha256": "c07fb603bc56c2d90b40e76d90bbeb7e72d7eb3c40fa0dc3a497e21bbf1e3596"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/secuencia-liquidacion.png",
+    "destino": "fuentes\\figuras\\04-arquitectura\\secuencia-liquidacion.png",
+    "bytes": 290662,
+    "sha256": "f5b0cc41cc53a44d89f56ac6e38dd115a05386885d1a9e2d9d79621accd8f763"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/secuencia-reconexion.pdf",
+    "destino": "fuentes\\figuras\\04-arquitectura\\secuencia-reconexion.pdf",
+    "bytes": 16096,
+    "sha256": "464c4969b589876384e8aacd1b75203460284411f8bf626ec183490698b0b4d7"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/04-arquitectura/secuencia-reconexion.png",
+    "destino": "fuentes\\figuras\\04-arquitectura\\secuencia-reconexion.png",
+    "bytes": 288503,
+    "sha256": "974495b05bbe95d758c1b6ea5248c35a19a70a462dc55a2e61c2b6af8c51b8c1"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/05-datos/5-2-custodia.pdf",
+    "destino": "fuentes\\figuras\\05-datos\\5-2-custodia.pdf",
+    "bytes": 22366,
+    "sha256": "967612304bfa0bf63188b5995d9ba19073389edcf5b2b27cffafdc07ecd15fce"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/05-datos/5-2-custodia.png",
+    "destino": "fuentes\\figuras\\05-datos\\5-2-custodia.png",
+    "bytes": 279920,
+    "sha256": "cf40549cc3fe206d4c2d6fb58c9b8d23086f8c90b2fad3a00f9c0d058be7f690"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/05-datos/5-2-custodia.svg",
+    "destino": "fuentes\\figuras\\05-datos\\5-2-custodia.svg",
+    "bytes": 25061,
+    "sha256": "27a865b61fb9bd6bcb82a4d8f4b0b361f63a1591da277bd4b8224a4ccd2c2c49"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/05-datos/5-3-permisos.pdf",
+    "destino": "fuentes\\figuras\\05-datos\\5-3-permisos.pdf",
+    "bytes": 21629,
+    "sha256": "359118ba962c65d095d2fd704261333e538b25db5de1db1e300808438a33f6c8"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/05-datos/5-3-permisos.png",
+    "destino": "fuentes\\figuras\\05-datos\\5-3-permisos.png",
+    "bytes": 308567,
+    "sha256": "6bfb9d81719faf0f1cc51b72cc0f804d1b6fd69ac20548e1fe4b435cfd950a1b"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/05-datos/5-3-permisos.svg",
+    "destino": "fuentes\\figuras\\05-datos\\5-3-permisos.svg",
+    "bytes": 26365,
+    "sha256": "a7776122672714cb608b93d57175c23c43a42ae34fea8a7d94f81f90a43fad55"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/05-datos/5-7-evidencia.pdf",
+    "destino": "fuentes\\figuras\\05-datos\\5-7-evidencia.pdf",
+    "bytes": 14652,
+    "sha256": "948176cd39db51e8374a67e2af99acf9d7a29e1e3cf71e19c2c6880bae2b711a"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/05-datos/5-7-evidencia.png",
+    "destino": "fuentes\\figuras\\05-datos\\5-7-evidencia.png",
+    "bytes": 362300,
+    "sha256": "9927cb019a0c21621dc82eebedbf6cca4836150bebd94b737d9f21ac59144bb0"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/05-datos/5-7-evidencia.svg",
+    "destino": "fuentes\\figuras\\05-datos\\5-7-evidencia.svg",
+    "bytes": 9458,
+    "sha256": "f599b6a31b0994932619da6edd78e987bfbb7746237cae44f6061b4d766a040a"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/05-datos/D3-diagrama3_teorema_cap.png",
+    "destino": "fuentes\\figuras\\05-datos\\D3-diagrama3_teorema_cap.png",
+    "bytes": 308544,
+    "sha256": "ba0e4f862b8cb071f273c13af2ab59eb54fc1bfc6cea30bc84f27c154e922c8c"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/05-datos/D3-diagrama5_modelo_erd_persistencia.png",
+    "destino": "fuentes\\figuras\\05-datos\\D3-diagrama5_modelo_erd_persistencia.png",
+    "bytes": 291933,
+    "sha256": "8ec7ae22b86abdb8a799ef7d331d087129c0a795dc8d00b4643193716434a7f5"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/05-datos/D3-diagrama6_migracion_datos.png",
+    "destino": "fuentes\\figuras\\05-datos\\D3-diagrama6_migracion_datos.png",
+    "bytes": 309996,
+    "sha256": "38d20b0c37751331211356257cc207259a34e4639e4cc307d86583ccd1a9054a"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/05-datos/D3-diagrama7_oltp_olap_cdc.png",
+    "destino": "fuentes\\figuras\\05-datos\\D3-diagrama7_oltp_olap_cdc.png",
+    "bytes": 298082,
+    "sha256": "2ededd102cb5bc0708c264029c68be40adca2ca9eddc6bfebe9225407beda19e"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/05-datos/D3-diagrama8_gestion_datos_maestros_mdm.png",
+    "destino": "fuentes\\figuras\\05-datos\\D3-diagrama8_gestion_datos_maestros_mdm.png",
+    "bytes": 333240,
+    "sha256": "bf25b2f7980346cd82223735485ed74abe9eef199e02de650b08d902d8249d23"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/05-datos/D3-diagrama9_estrategia_desempeno.png",
+    "destino": "fuentes\\figuras\\05-datos\\D3-diagrama9_estrategia_desempeno.png",
+    "bytes": 300027,
+    "sha256": "9a9b4b9bac8a53755181090d15ff087cb6e3a54f5f54e99258b4565d6e9b8012"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/05-datos/audit-figura-5.1-erd.pdf",
+    "destino": "fuentes\\figuras\\05-datos\\audit-figura-5.1-erd.pdf",
+    "bytes": 15097,
+    "sha256": "098b8f9191d0ceb914b798f56faace74a0c0536011da0aa885cbc819f4fe63c5"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/05-datos/audit-figura-5.1-erd.png",
+    "destino": "fuentes\\figuras\\05-datos\\audit-figura-5.1-erd.png",
+    "bytes": 348723,
+    "sha256": "e82b871c2f4862f882b29fb0886c50c22bf6f6d47a295e7f268193d1307d6264"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/05-datos/audit-figura-5.1-erd.svg",
+    "destino": "fuentes\\figuras\\05-datos\\audit-figura-5.1-erd.svg",
+    "bytes": 16943,
+    "sha256": "aac7f1ecce436c7d75111c2d157244cc392e5cc33a21fbf4586c93cfb10b7fa0"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/05-datos/audit-figura-5.2-mdm.pdf",
+    "destino": "fuentes\\figuras\\05-datos\\audit-figura-5.2-mdm.pdf",
+    "bytes": 17047,
+    "sha256": "76e75b26742cf55deccb2778dbe5d3d6ed12fdfc7f3aae138ec67f977e26721f"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/05-datos/audit-figura-5.2-mdm.png",
+    "destino": "fuentes\\figuras\\05-datos\\audit-figura-5.2-mdm.png",
+    "bytes": 333240,
+    "sha256": "bf25b2f7980346cd82223735485ed74abe9eef199e02de650b08d902d8249d23"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/05-datos/audit-figura-5.2-mdm.svg",
+    "destino": "fuentes\\figuras\\05-datos\\audit-figura-5.2-mdm.svg",
+    "bytes": 14303,
+    "sha256": "abcb050e4f7474ecc31e5f756cba876d74d401dc6bbd909b363a21022eb0a811"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/05-datos/audit-figura-5.3-cap.pdf",
+    "destino": "fuentes\\figuras\\05-datos\\audit-figura-5.3-cap.pdf",
+    "bytes": 26542,
+    "sha256": "6b025ae9d0a06957fd175371ab05602e99bd4cad3c6eff15d65cf4132cf334d7"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/05-datos/audit-figura-5.3-cap.png",
+    "destino": "fuentes\\figuras\\05-datos\\audit-figura-5.3-cap.png",
+    "bytes": 308544,
+    "sha256": "ba0e4f862b8cb071f273c13af2ab59eb54fc1bfc6cea30bc84f27c154e922c8c"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/05-datos/audit-figura-5.3-cap.svg",
+    "destino": "fuentes\\figuras\\05-datos\\audit-figura-5.3-cap.svg",
+    "bytes": 9814,
+    "sha256": "9c0ce8f19a409d29358bf983db003afe9203b8b105b68618b4302cfaff0cc19d"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/05-datos/audit-figura-5.4-cdc.pdf",
+    "destino": "fuentes\\figuras\\05-datos\\audit-figura-5.4-cdc.pdf",
+    "bytes": 30187,
+    "sha256": "9850de696cedfa2caff70c23429351974448092199997ab8f6527f79641693fa"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/05-datos/audit-figura-5.4-cdc.png",
+    "destino": "fuentes\\figuras\\05-datos\\audit-figura-5.4-cdc.png",
+    "bytes": 298082,
+    "sha256": "2ededd102cb5bc0708c264029c68be40adca2ca9eddc6bfebe9225407beda19e"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/05-datos/audit-figura-5.4-cdc.svg",
+    "destino": "fuentes\\figuras\\05-datos\\audit-figura-5.4-cdc.svg",
+    "bytes": 24620,
+    "sha256": "cad4e1fee0f9ba27168ab1f91014ed72897e744c1eead45e9e0029e40bed1612"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/05-datos/audit-figura-5.5-migracion.pdf",
+    "destino": "fuentes\\figuras\\05-datos\\audit-figura-5.5-migracion.pdf",
+    "bytes": 18990,
+    "sha256": "3e2a0104d0da8d3313430d4c2f4b289d108a910fc5725c8cd42bd51147ae2f2b"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/05-datos/audit-figura-5.5-migracion.png",
+    "destino": "fuentes\\figuras\\05-datos\\audit-figura-5.5-migracion.png",
+    "bytes": 309996,
+    "sha256": "38d20b0c37751331211356257cc207259a34e4639e4cc307d86583ccd1a9054a"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/05-datos/audit-figura-5.5-migracion.svg",
+    "destino": "fuentes\\figuras\\05-datos\\audit-figura-5.5-migracion.svg",
+    "bytes": 11431,
+    "sha256": "5e06cc921eb81f2e9ac1f70a439dc1d880051b1b6aeade2d6b45e5fa673352ba"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/05-datos/audit-figura-5.6-desempeno.pdf",
+    "destino": "fuentes\\figuras\\05-datos\\audit-figura-5.6-desempeno.pdf",
+    "bytes": 24653,
+    "sha256": "6114f11448ece9af8bedee46ea1a203a056f8d3d7192f3aee9db604139ed06b3"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/05-datos/audit-figura-5.6-desempeno.png",
+    "destino": "fuentes\\figuras\\05-datos\\audit-figura-5.6-desempeno.png",
+    "bytes": 300027,
+    "sha256": "9a9b4b9bac8a53755181090d15ff087cb6e3a54f5f54e99258b4565d6e9b8012"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/05-datos/audit-figura-5.6-desempeno.svg",
+    "destino": "fuentes\\figuras\\05-datos\\audit-figura-5.6-desempeno.svg",
+    "bytes": 15285,
+    "sha256": "ae4a37b03684162d099685e77e07606ceae891a158ec4c2782d20a5b26f9954b"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/06-metodologias/6-1-hitos.pdf",
+    "destino": "fuentes\\figuras\\06-metodologias\\6-1-hitos.pdf",
+    "bytes": 15199,
+    "sha256": "3b54b6dc5f5a6fd3e33a9258f42a288491964e9663407a9c60d1e64e47aeef11"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/06-metodologias/6-1-hitos.png",
+    "destino": "fuentes\\figuras\\06-metodologias\\6-1-hitos.png",
+    "bytes": 295626,
+    "sha256": "3874b12813755b4859143d4e79604f8e83dde6a0ec0bd8e494db4aab4e3b39df"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/06-metodologias/6-1-hitos.svg",
+    "destino": "fuentes\\figuras\\06-metodologias\\6-1-hitos.svg",
+    "bytes": 12803,
+    "sha256": "8789cf312b461dac251d9f7af03b5d72f25c5784aa771c610c9575b2ca5f5184"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/06-metodologias/6-2-pipeline.pdf",
+    "destino": "fuentes\\figuras\\06-metodologias\\6-2-pipeline.pdf",
+    "bytes": 24917,
+    "sha256": "91827c4185ea1f54dccd7eb7e10b029dd7ae7acd6d87e7d4ed0fff772c2f4859"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/06-metodologias/6-2-pipeline.png",
+    "destino": "fuentes\\figuras\\06-metodologias\\6-2-pipeline.png",
+    "bytes": 348054,
+    "sha256": "0be06b8efa1b6b85b094b0af61dd984e848b63ab98761dfe3036f08a247a1495"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/06-metodologias/6-2-pipeline.svg",
+    "destino": "fuentes\\figuras\\06-metodologias\\6-2-pipeline.svg",
+    "bytes": 20162,
+    "sha256": "174032713478034561ae2c6ff23120bbc44b2421c96175f78c12fb3625e4d8be"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/07-plan-trabajo/pert-etapa1.pdf",
+    "destino": "fuentes\\figuras\\07-plan-trabajo\\pert-etapa1.pdf",
+    "bytes": 19491,
+    "sha256": "b784ffc2c6032f1f251fbb93c4058f1d91d624f5c4652e9d5b4eaeb6b31b765b"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/07-plan-trabajo/pert-etapa1.png",
+    "destino": "fuentes\\figuras\\07-plan-trabajo\\pert-etapa1.png",
+    "bytes": 430087,
+    "sha256": "30c1ddaaab9e9fbf224623571d095fe638f69c34182f08cd18eeffec10030e00"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/07-plan-trabajo/pert-etapa1.svg",
+    "destino": "fuentes\\figuras\\07-plan-trabajo\\pert-etapa1.svg",
+    "bytes": 12723,
+    "sha256": "b76976700e4208e107daacc00cf022d9ed0062edd9b26cfd986ebf6efded70b1"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/07-plan-trabajo/pert-etapa2.pdf",
+    "destino": "fuentes\\figuras\\07-plan-trabajo\\pert-etapa2.pdf",
+    "bytes": 19385,
+    "sha256": "778814533474f305fe183ed51661d85e75ade8feed29d046a6db4bf6cbcb45d1"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/07-plan-trabajo/pert-etapa2.png",
+    "destino": "fuentes\\figuras\\07-plan-trabajo\\pert-etapa2.png",
+    "bytes": 433677,
+    "sha256": "fee48549966317fd786249d1d40e21ca22cde45d0910f9662b14968bc5f928cf"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/07-plan-trabajo/pert-etapa2.svg",
+    "destino": "fuentes\\figuras\\07-plan-trabajo\\pert-etapa2.svg",
+    "bytes": 12597,
+    "sha256": "71069c29b39595c2232807f47bd7b43cfdac53bdccc63e289f9a857d330e4e60"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/08-riesgos/arbol-fallas.pdf",
+    "destino": "fuentes\\figuras\\08-riesgos\\arbol-fallas.pdf",
+    "bytes": 13953,
+    "sha256": "c98b7fdf32affcab5f48f9709edab30df138b4d50fd7c650ed9ae7549fe87723"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/08-riesgos/arbol-fallas.png",
+    "destino": "fuentes\\figuras\\08-riesgos\\arbol-fallas.png",
+    "bytes": 230260,
+    "sha256": "4c611ab991f7213f97c9c223775991eda09f769ae1019c29942ca049c894b64d"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/08-riesgos/arbol-fallas.svg",
+    "destino": "fuentes\\figuras\\08-riesgos\\arbol-fallas.svg",
+    "bytes": 11847,
+    "sha256": "618772d9baf25ce29ea1b12dea2422897be7fdc4a1c4720eee6ac456c96e850c"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/08-riesgos/mapa-calor.pdf",
+    "destino": "fuentes\\figuras\\08-riesgos\\mapa-calor.pdf",
+    "bytes": 10343,
+    "sha256": "b606bceef395f103a74d900093de45b6d5430e5e428b1e6abcc0e1764df742d9"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/08-riesgos/mapa-calor.png",
+    "destino": "fuentes\\figuras\\08-riesgos\\mapa-calor.png",
+    "bytes": 159213,
+    "sha256": "4eb2880c780fae96d4ce23072cd604d3fcb717bee2441f307b668de1c2bd9f35"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/08-riesgos/mapa-calor.svg",
+    "destino": "fuentes\\figuras\\08-riesgos\\mapa-calor.svg",
+    "bytes": 18965,
+    "sha256": "4d15544cd6c7e14f7c6cf06d1a4f6f69f1f9986bb62a115c7a3c75cd1084a40d"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/08-riesgos/rbs.pdf",
+    "destino": "fuentes\\figuras\\08-riesgos\\rbs.pdf",
+    "bytes": 19783,
+    "sha256": "1feada766cf1bacc77fb13c3e892a74a62b98cea9f75c7291ac44d64b7368c54"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/08-riesgos/rbs.png",
+    "destino": "fuentes\\figuras\\08-riesgos\\rbs.png",
+    "bytes": 551583,
+    "sha256": "a4ae5a3167dc3ab4d2330148761013eb07374e7308f9692a2402e30cf591ada8"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/08-riesgos/rbs.svg",
+    "destino": "fuentes\\figuras\\08-riesgos\\rbs.svg",
+    "bytes": 14495,
+    "sha256": "ebbd2695ff5967e55e5a123dd2d53f051e419595e66bdf3a6d68ffc30043e62c"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/09-calidad/README.md",
+    "destino": "fuentes\\figuras\\09-calidad\\README.md",
+    "bytes": 338,
+    "sha256": "374cfce85e2c5fb2afba61bf641289562957222bb0be106e656374e58aee4a2a"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/09-calidad/figura_9_1_flujo_calidad_validacion.png",
+    "destino": "fuentes\\figuras\\09-calidad\\figura_9_1_flujo_calidad_validacion.png",
+    "bytes": 1263435,
+    "sha256": "c1b75790f9de3d89e5c0ea0385ed5807bb5e9dbd3a4b3dec842da04c861ad413"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/13-innovaciones/13-2-intervenciones.pdf",
+    "destino": "fuentes\\figuras\\13-innovaciones\\13-2-intervenciones.pdf",
+    "bytes": 18537,
+    "sha256": "dc3eb5e2ec71759daf43ab89e19e0011f742d00cfed50f21ac6739cf791eaffb"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/13-innovaciones/13-2-intervenciones.png",
+    "destino": "fuentes\\figuras\\13-innovaciones\\13-2-intervenciones.png",
+    "bytes": 320816,
+    "sha256": "4c3e68f4b0ecf17c7047bea0bbe855d6867d48a5bc9525872950fcb7caa89d28"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/13-innovaciones/13-2-intervenciones.svg",
+    "destino": "fuentes\\figuras\\13-innovaciones\\13-2-intervenciones.svg",
+    "bytes": 10556,
+    "sha256": "b726e7ae3848c66e1bcce2900be8a66deb61e8e6f583286cc9389219ec693374"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/13-innovaciones/13-cartera.pdf",
+    "destino": "fuentes\\figuras\\13-innovaciones\\13-cartera.pdf",
+    "bytes": 43890,
+    "sha256": "c2c09554818217d4e8554fc1f1c94debe8777422c14f2c950a560483bcba94ed"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/13-innovaciones/13-cartera.png",
+    "destino": "fuentes\\figuras\\13-innovaciones\\13-cartera.png",
+    "bytes": 347628,
+    "sha256": "a73b86d28eecc2b9ad384ae51a31f3e070f376b6a200cc025463fe903e3867f6"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/13-innovaciones/13-cartera.svg",
+    "destino": "fuentes\\figuras\\13-innovaciones\\13-cartera.svg",
+    "bytes": 52169,
+    "sha256": "4eef0773e15e6b866910e8bafea4c6f65414aa4418bfb1c99a429f5cbac7a758"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/13-innovaciones/cartera.pdf",
+    "destino": "fuentes\\figuras\\13-innovaciones\\cartera.pdf",
+    "bytes": 43890,
+    "sha256": "c2c09554818217d4e8554fc1f1c94debe8777422c14f2c950a560483bcba94ed"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/13-innovaciones/cartera.png",
+    "destino": "fuentes\\figuras\\13-innovaciones\\cartera.png",
+    "bytes": 347628,
+    "sha256": "a73b86d28eecc2b9ad384ae51a31f3e070f376b6a200cc025463fe903e3867f6"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/13-innovaciones/intervenciones.pdf",
+    "destino": "fuentes\\figuras\\13-innovaciones\\intervenciones.pdf",
+    "bytes": 18537,
+    "sha256": "dc3eb5e2ec71759daf43ab89e19e0011f742d00cfed50f21ac6739cf791eaffb"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/13-innovaciones/intervenciones.png",
+    "destino": "fuentes\\figuras\\13-innovaciones\\intervenciones.png",
+    "bytes": 320816,
+    "sha256": "4c3e68f4b0ecf17c7047bea0bbe855d6867d48a5bc9525872950fcb7caa89d28"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/13-innovaciones/semirremolque.pdf",
+    "destino": "fuentes\\figuras\\13-innovaciones\\semirremolque.pdf",
+    "bytes": 36247,
+    "sha256": "c39468830d893b415e1366c36dcffbd9da7da33f00e7c4ba0bc69c21e5d00283"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/figuras/13-innovaciones/semirremolque.png",
+    "destino": "fuentes\\figuras\\13-innovaciones\\semirremolque.png",
+    "bytes": 267811,
+    "sha256": "13160d3ca3a67b6032ee7357b654730d1ea87963cde4f76645317d2b7b64a855"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/formulario.tex",
+    "destino": "fuentes\\formulario.tex",
+    "bytes": 877,
+    "sha256": "1a5a0f6310b3db6181030a512ea47e3eb33fa13940e99ab0cc76e2de9dbcc623"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/formularios/T-10.tex",
+    "destino": "fuentes\\formularios\\T-10.tex",
+    "bytes": 1068,
+    "sha256": "8c1f3f7becb9f71b65eb1d54ebdd8b0fc555ac11051a7684b77d806dcd34b5db"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/formularios/T-11.tex",
+    "destino": "fuentes\\formularios\\T-11.tex",
+    "bytes": 3987,
+    "sha256": "c73732807c34fd454dc2b6b0fabaac0f5fcb9b95051e8d5ca638bbde39b1cab2"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/formularios/T-12.tex",
+    "destino": "fuentes\\formularios\\T-12.tex",
+    "bytes": 5833,
+    "sha256": "f8476edcd70fed5a310fb7461d2ad36dd1fc25bae30d5d8cc5ec13aed7ee039a"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/formularios/T-13.tex",
+    "destino": "fuentes\\formularios\\T-13.tex",
+    "bytes": 1262,
+    "sha256": "ac9b1f674dea49f4607ed046852c727f04ed83f428e962d466caca2f5c42cafa"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/formularios/T-14.tex",
+    "destino": "fuentes\\formularios\\T-14.tex",
+    "bytes": 1486,
+    "sha256": "befba6787c4268bf480699fd2e080ed2cea5801498a2288027c75da14bc3a163"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/formularios/T-15.tex",
+    "destino": "fuentes\\formularios\\T-15.tex",
+    "bytes": 2573,
+    "sha256": "e5069087cd71769b8529a9881bb02848059e966446a0a7a4151e4a8a19dda4bf"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/formularios/T-16.tex",
+    "destino": "fuentes\\formularios\\T-16.tex",
+    "bytes": 2232,
+    "sha256": "eb36b2491b83ab27a452503520d83ed85d1b0d964a039d54be4deb0a1c9c1cad"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/formularios/T-17.tex",
+    "destino": "fuentes\\formularios\\T-17.tex",
+    "bytes": 1162,
+    "sha256": "45499b05a38fdf39ca652735edfb923281e19069797aba0835b04956404b4e90"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/formularios/T-18.tex",
+    "destino": "fuentes\\formularios\\T-18.tex",
+    "bytes": 1221,
+    "sha256": "6a10f429e47e5c33d4896d9cb5cc4e20e64402fbe6e99bcc5ecfec268911b19a"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/formularios/T-19.tex",
+    "destino": "fuentes\\formularios\\T-19.tex",
+    "bytes": 5779,
+    "sha256": "e443023e38b2fc421a99cd7a23f04d59d7ada0190c9300aafb5f4df516fc90c0"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/formularios/T-6.tex",
+    "destino": "fuentes\\formularios\\T-6.tex",
+    "bytes": 3024,
+    "sha256": "ffaf83529d709bd8bd97cd6a5a049c67a7f25034c6ff86821e5892740c35872b"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/formularios/T-8.tex",
+    "destino": "fuentes\\formularios\\T-8.tex",
+    "bytes": 3487,
+    "sha256": "f6422ddb31037262b456425f57135c18f14b87675acbbf3342744da20b39593d"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/formularios/T-9.tex",
+    "destino": "fuentes\\formularios\\T-9.tex",
+    "bytes": 1095,
+    "sha256": "9a649d388b37268496e15fcd6bdd27ac5c0862435e82e73c3fcb732f398112c9"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/formularios/art46.tex",
+    "destino": "fuentes\\formularios\\art46.tex",
+    "bytes": 4025,
+    "sha256": "b8cb1abc1a11b10f0dc1089773c5cdc98096e59b12ec5ae990dbdddd76abc1f4"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/formularios/formularios.sty",
+    "destino": "fuentes\\formularios\\formularios.sty",
+    "bytes": 14014,
+    "sha256": "d6a7e510f7b332a00af642199442f0ca035a60a5b654d6fc431a53e7b04c153f"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/fuentes/audit-fuentes.sty",
+    "destino": "fuentes\\fuentes\\audit-fuentes.sty",
+    "bytes": 2378,
+    "sha256": "4eca0b2cc1a8457452cfdb276222829c6ac9a33779f4c646bda50a15ea6e703b"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/herramientas/compilar.py",
+    "destino": "fuentes\\herramientas\\compilar.py",
+    "bytes": 29497,
+    "sha256": "407410c41fca8a367c9214fbfe1a61fb3ffe3ad533e75bbe6fa861f98676a4c0"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/herramientas/compilar_s1_s2.py",
+    "destino": "fuentes\\herramientas\\compilar_s1_s2.py",
+    "bytes": 2117,
+    "sha256": "1468c185124505007d04140638942cf47225600c48478dd1a00efb8e9d08e48a"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/herramientas/comun.py",
+    "destino": "fuentes\\herramientas\\comun.py",
+    "bytes": 6361,
+    "sha256": "c68bcd33620ed1ba8f4f82bf25c1bb5747620966e0da9552076ac35b6fe45c90"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/herramientas/ensamblar_subdoc02.py",
+    "destino": "fuentes\\herramientas\\ensamblar_subdoc02.py",
+    "bytes": 93110,
+    "sha256": "2bf3f8d3c459678dc06cb40ba7135d058f1c800414431f40025e0c06bdaca6b3"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/herramientas/generar_subdoc02.py",
+    "destino": "fuentes\\herramientas\\generar_subdoc02.py",
+    "bytes": 398,
+    "sha256": "0071dbd62f2adf9a86d92d8bc2f4f7a1b53aa3b47250ca5dfab29c9bce916d0b"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/herramientas/graficos/s5_s6_verticales.py",
+    "destino": "fuentes\\herramientas\\graficos\\s5_s6_verticales.py",
+    "bytes": 15390,
+    "sha256": "348a737e6e2ffc14d88aa07fd5dd588fd6ef6b0eade1f1eeba3bb4b2f9884271"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/herramientas/letra_diagramas.py",
+    "destino": "fuentes\\herramientas\\letra_diagramas.py",
+    "bytes": 3274,
+    "sha256": "829d3d6c1339f435c8c951e56c61edcacc2828b49497a183133447fbdcd93dbb"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/herramientas/md2docx.py",
+    "destino": "fuentes\\herramientas\\md2docx.py",
+    "bytes": 16736,
+    "sha256": "dbb546fa9fb281f9a3378f5e7ea53997b1396adf5df5c6b8f63efdfbcde58cbd"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/herramientas/migrar.py",
+    "destino": "fuentes\\herramientas\\migrar.py",
+    "bytes": 7105,
+    "sha256": "83153db890db487cb12f33ad0633e2aafb378848f38a26f907bb42beb9aca30c"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/herramientas/planilla.py",
+    "destino": "fuentes\\herramientas\\planilla.py",
+    "bytes": 8330,
+    "sha256": "0b7f6350e22a99a65c0ae7b8da0edf000d1a72605e34b1c00860e17dabfbebee"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/herramientas/preparar.sh",
+    "destino": "fuentes\\herramientas\\preparar.sh",
+    "bytes": 608,
+    "sha256": "8eecb4ffef1244ceade6f35a2aba636cf84427e222bf81283d6dbf902cd7c249"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/herramientas/preparar_entrega_informe2.py",
+    "destino": "fuentes\\herramientas\\preparar_entrega_informe2.py",
+    "bytes": 4135,
+    "sha256": "688465599ce1a4d508e3bc30499ba92e38173ef372e8e9b6e170e9f068d53fce"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/herramientas/preparar_revision_d1.py",
+    "destino": "fuentes\\herramientas\\preparar_revision_d1.py",
+    "bytes": 1728,
+    "sha256": "82a23c964f65f1c1d218ed1ed395d2c215efaeae119b023ee6cff2e1bc5c92ec"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/herramientas/recuperar_figuras.py",
+    "destino": "fuentes\\herramientas\\recuperar_figuras.py",
+    "bytes": 2072,
+    "sha256": "c8885a2159e42d861bb31c9244dde86f7bc40496aa1a38490217cc5baec76d6c"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/herramientas/tex2md.py",
+    "destino": "fuentes\\herramientas\\tex2md.py",
+    "bytes": 40612,
+    "sha256": "a1c43fe78f25397bf277ea583577891566a1d7ffcae4d0ba3982b0b799e13b8d"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/herramientas/verificar.py",
+    "destino": "fuentes\\herramientas\\verificar.py",
+    "bytes": 58727,
+    "sha256": "7924c633b882b2375cf91a704bb659660b12fe9c07440bfd6b6b60552f4cfa70"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/muestra/economico/analisis-financiero/contenido.tex",
+    "destino": "fuentes\\muestra\\economico\\analisis-financiero\\contenido.tex",
+    "bytes": 1109,
+    "sha256": "ebf344f8dd80c0cba29e69543c9e6a46d3235d30b2e9ee1642a918018641fbfd"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/muestra/economico/costos-venta/contenido.tex",
+    "destino": "fuentes\\muestra\\economico\\costos-venta\\contenido.tex",
+    "bytes": 1095,
+    "sha256": "ffaf6f02060ab738a546481bba6399d16975125045ebb0761e98d8fd7234e8c7"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/muestra/economico/datos/partidas.csv",
+    "destino": "fuentes\\muestra\\economico\\datos\\partidas.csv",
+    "bytes": 465,
+    "sha256": "b033b46cd0d2d1b4acfc81b8301a1ec4c6d939125941b2ce7f9806b5d50c6ddd"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/muestra/economico/oferta-economica/contenido.tex",
+    "destino": "fuentes\\muestra\\economico\\oferta-economica\\contenido.tex",
+    "bytes": 1103,
+    "sha256": "2aefdf6cb85d91cc4a7b93586c6d149e56df8d59627278f4603083aeec8713d9"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/muestra/muestra.tex",
+    "destino": "fuentes\\muestra\\muestra.tex",
+    "bytes": 956,
+    "sha256": "01673176179f8c5715129b72e9cbcdaed249ba0d03a5e16ab98459cac4a24e33"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/muestra/observaciones-informe1.tex",
+    "destino": "fuentes\\muestra\\observaciones-informe1.tex",
+    "bytes": 2153,
+    "sha256": "943174a7e2e856a4487a54e467f3c91753557b619e6ecb18839475b322fe3c63"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/muestra/referencias-muestra.bib",
+    "destino": "fuentes\\muestra\\referencias-muestra.bib",
+    "bytes": 332,
+    "sha256": "375ed9384cf6df0a05af8442f7a085537c02fbf789c3b0c5e8397b3dd3ee9f5b"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/muestra/subdocumentos/04-arquitectura/contenido.tex",
+    "destino": "fuentes\\muestra\\subdocumentos\\04-arquitectura\\contenido.tex",
+    "bytes": 9868,
+    "sha256": "e5e093cc892e999839e1c14c9be370e243d7cddd10ea968bc10240b18c5442f8"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/portadas/activos/camion.jpg",
+    "destino": "fuentes\\portadas\\activos\\camion.jpg",
+    "bytes": 229753,
+    "sha256": "1befe687b6ea7559c3cb2e1db6977cf4b8a67c5223404d53b8e06b1f22da0381"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/portadas/activos/logo-audit-negativo.png",
+    "destino": "fuentes\\portadas\\activos\\logo-audit-negativo.png",
+    "bytes": 246272,
+    "sha256": "b3b49ec691ae31120759525bfd9e678fab13d75af048d6c2e12aaa9d530121fb"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/portadas/activos/logo-audit.png",
+    "destino": "fuentes\\portadas\\activos\\logo-audit.png",
+    "bytes": 430480,
+    "sha256": "f7acef1b00ffe94da5e1e3d26b7c60bb7509ab9c30352e8ad8f60a72be1c0099"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/portadas/activos/media-firma.png",
+    "destino": "fuentes\\portadas\\activos\\media-firma.png",
+    "bytes": 55977,
+    "sha256": "be2ca73b77f10ec7a685e6a48f94b5fa16c70065dfb8d04a31eb86ac8fba6d3d"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/portadas/portadas.sty",
+    "destino": "fuentes\\portadas\\portadas.sty",
+    "bytes": 12330,
+    "sha256": "6362736dbd44c054cff59e7870b81de6fdb38fe0d00f4cee70f7a85eeba4b4fb"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/principal.tex",
+    "destino": "fuentes\\principal.tex",
+    "bytes": 635,
+    "sha256": "fe317215811970aa23e3cf1aeb816d4a9df6ae2c72a024dc523f55565c841ddc"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/referencias/bases.bib",
+    "destino": "fuentes\\referencias\\bases.bib",
+    "bytes": 1464,
+    "sha256": "146a9b5da4fc359ff282fb7ca175fde48a780c433aad157dca5787b8c9082b3d"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/referencias/referencias.bib",
+    "destino": "fuentes\\referencias\\referencias.bib",
+    "bytes": 30116,
+    "sha256": "3d2729067ba132a171cd87629e76a9e48d329c81abb500356257358dc47671d5"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/resolucion-observaciones.tex",
+    "destino": "fuentes\\resolucion-observaciones.tex",
+    "bytes": 330,
+    "sha256": "c56e9d3d92f9ff8f85a86dae8af69a51c6da37779a8cf96b0f8349d5dc9ffcab"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final-por-subdocumento/AUDIT-Anexo-Art46-Resolucion-Observaciones.pdf",
+    "destino": "referencia\\final-por-subdocumento\\AUDIT-Anexo-Art46-Resolucion-Observaciones.pdf",
+    "bytes": 560960,
+    "sha256": "c97e01425d5e5db83a2557b9a3e5e9696e797d5168cb11e95261b6949c744509"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final-por-subdocumento/AUDIT-Formulario-T-10.md",
+    "destino": "referencia\\final-por-subdocumento\\AUDIT-Formulario-T-10.md",
+    "bytes": 5325,
+    "sha256": "d14d99f4626914ea9281b4c0c7447c3791df4626fafe2a6934699840b1781e6b"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final-por-subdocumento/AUDIT-Formulario-T-10.pdf",
+    "destino": "referencia\\final-por-subdocumento\\AUDIT-Formulario-T-10.pdf",
+    "bytes": 772279,
+    "sha256": "ca3af24ba095a77c58ee3085447e4a612930ea7462fb04840e78a3f0ac6ec8c2"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final-por-subdocumento/AUDIT-Formulario-T-11.md",
+    "destino": "referencia\\final-por-subdocumento\\AUDIT-Formulario-T-11.md",
+    "bytes": 34098,
+    "sha256": "ef4e9ec3cf944244335633ca2d8fcaceac3dc6369de7a2bb2d2ec3ec10e9a0cc"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final-por-subdocumento/AUDIT-Formulario-T-11.pdf",
+    "destino": "referencia\\final-por-subdocumento\\AUDIT-Formulario-T-11.pdf",
+    "bytes": 862852,
+    "sha256": "c995a055b67dd2460b3eddde8f0f15109891a467286cf021eaac7479f4a93922"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final-por-subdocumento/AUDIT-Formulario-T-13.md",
+    "destino": "referencia\\final-por-subdocumento\\AUDIT-Formulario-T-13.md",
+    "bytes": 12667,
+    "sha256": "db5b091db91254dbd29e901acb64292eb3804ed87ca21f57589d9661063c22b3"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final-por-subdocumento/AUDIT-Formulario-T-13.pdf",
+    "destino": "referencia\\final-por-subdocumento\\AUDIT-Formulario-T-13.pdf",
+    "bytes": 788356,
+    "sha256": "bdc351e0f8bdb683f878f3566a6a3ab2f3d4d0392a8817c69fb5e9caf659771e"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final-por-subdocumento/AUDIT-Formulario-T-16.md",
+    "destino": "referencia\\final-por-subdocumento\\AUDIT-Formulario-T-16.md",
+    "bytes": 28634,
+    "sha256": "dad2a7cacf6d58660604e7e6741d562003533317d3d90b4a96aef0e098792781"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final-por-subdocumento/AUDIT-Formulario-T-16.pdf",
+    "destino": "referencia\\final-por-subdocumento\\AUDIT-Formulario-T-16.pdf",
+    "bytes": 807400,
+    "sha256": "0ae930f2dd6f7d66d753dabeb1f5faa838b2ecc9b2fcc7a55a58f38d8298aac0"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final-por-subdocumento/AUDIT-Formulario-T-17.md",
+    "destino": "referencia\\final-por-subdocumento\\AUDIT-Formulario-T-17.md",
+    "bytes": 428481,
+    "sha256": "82533ad99ddfbc4698f5273a570004ffa9e2e61636068f477a21f4bdf91e2a00"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final-por-subdocumento/AUDIT-Formulario-T-17.pdf",
+    "destino": "referencia\\final-por-subdocumento\\AUDIT-Formulario-T-17.pdf",
+    "bytes": 1314035,
+    "sha256": "71783a51788363c2fa1c24c37721e12515930252dab3bc98fdc7c70b123ea5b0"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final-por-subdocumento/AUDIT-Formulario-T-19.md",
+    "destino": "referencia\\final-por-subdocumento\\AUDIT-Formulario-T-19.md",
+    "bytes": 21937,
+    "sha256": "7ae502eebc0b9291b95c4b9528f96b5c5607f4e36b2c60f81f449fc1407fa56d"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final-por-subdocumento/AUDIT-Formulario-T-19.pdf",
+    "destino": "referencia\\final-por-subdocumento\\AUDIT-Formulario-T-19.pdf",
+    "bytes": 819326,
+    "sha256": "539e1c846376201f7a45f2217cccb4810c312dd41d8ec0e913d2a9210f80ae6f"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final-por-subdocumento/AUDIT-Formulario-T-6.md",
+    "destino": "referencia\\final-por-subdocumento\\AUDIT-Formulario-T-6.md",
+    "bytes": 6364,
+    "sha256": "82144c37bfbb64abc1c469c730e91b5698aaead181160e6ba489ab2f19899a27"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final-por-subdocumento/AUDIT-Formulario-T-6.pdf",
+    "destino": "referencia\\final-por-subdocumento\\AUDIT-Formulario-T-6.pdf",
+    "bytes": 775820,
+    "sha256": "04869d72e10399cd218ef0bbda9b87e72263d99ea180ff1194a75dd8dbcd1bc1"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final-por-subdocumento/AUDIT-Formulario-T-8.md",
+    "destino": "referencia\\final-por-subdocumento\\AUDIT-Formulario-T-8.md",
+    "bytes": 9266,
+    "sha256": "7c22d3448eb09fc15dc8d0b226724daf4e7f84acbf5444509fb8a294c25f719f"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final-por-subdocumento/AUDIT-Formulario-T-8.pdf",
+    "destino": "referencia\\final-por-subdocumento\\AUDIT-Formulario-T-8.pdf",
+    "bytes": 771089,
+    "sha256": "25d53d15521cf7c58c7d3fd4f9b4fd16a262ad4f5b57b71d79051395dab92474"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final-por-subdocumento/AUDIT-Formulario-T-9.md",
+    "destino": "referencia\\final-por-subdocumento\\AUDIT-Formulario-T-9.md",
+    "bytes": 2601,
+    "sha256": "43503b15ff24f06cf0ea5474503ee852bf7fd8ee206ded1cb51bc90a2837b01f"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final-por-subdocumento/AUDIT-Formulario-T-9.pdf",
+    "destino": "referencia\\final-por-subdocumento\\AUDIT-Formulario-T-9.pdf",
+    "bytes": 760100,
+    "sha256": "53f89a1138c1f4c20d24729e5e7c992059d050c64aad8e01cdda2024fe2db8fa"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final-por-subdocumento/AUDIT-Sobre1-Antecedentes-Administrativos.pdf",
+    "destino": "referencia\\final-por-subdocumento\\AUDIT-Sobre1-Antecedentes-Administrativos.pdf",
+    "bytes": 576745,
+    "sha256": "c2136fc7e86342c09226f7bf3776f72c012c3ee634d47629443660b8bc7a8d69"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final-por-subdocumento/AUDIT-Subdocumento1-Anexos.pdf",
+    "destino": "referencia\\final-por-subdocumento\\AUDIT-Subdocumento1-Anexos.pdf",
+    "bytes": 774145,
+    "sha256": "b7f426992932d0832f9d1e15f5b73ed5225c0f45a2881204810b8e149802e678"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final-por-subdocumento/AUDIT-Subdocumento1.md",
+    "destino": "referencia\\final-por-subdocumento\\AUDIT-Subdocumento1.md",
+    "bytes": 61440,
+    "sha256": "c0ba9d954de87c5ede16195a32f0c4566870bdae85ffed672277af7ceaf08f93"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final-por-subdocumento/AUDIT-Subdocumento1.pdf",
+    "destino": "referencia\\final-por-subdocumento\\AUDIT-Subdocumento1.pdf",
+    "bytes": 2168153,
+    "sha256": "8e828b344a57e1c1132cfd60125e685b1bd833416806e3e166bee2178dbb6ebe"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final-por-subdocumento/AUDIT-Subdocumento10.md",
+    "destino": "referencia\\final-por-subdocumento\\AUDIT-Subdocumento10.md",
+    "bytes": 29150,
+    "sha256": "e675bee93a301a060b64fab81cc1c001dd5bf4470da018442a27dca7445f4eda"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final-por-subdocumento/AUDIT-Subdocumento10.pdf",
+    "destino": "referencia\\final-por-subdocumento\\AUDIT-Subdocumento10.pdf",
+    "bytes": 818749,
+    "sha256": "3dbca1fdfd7f6bf57841c6e176543b04551a875ca6ec6630e4044a611c981e19"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final-por-subdocumento/AUDIT-Subdocumento11.md",
+    "destino": "referencia\\final-por-subdocumento\\AUDIT-Subdocumento11.md",
+    "bytes": 22757,
+    "sha256": "9258dc97f1a166a2a76bbd42a6f239867a178ec43fae69f2d556d883a5395cbf"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final-por-subdocumento/AUDIT-Subdocumento11.pdf",
+    "destino": "referencia\\final-por-subdocumento\\AUDIT-Subdocumento11.pdf",
+    "bytes": 806730,
+    "sha256": "dab7c3984f2dc291d04e39d1ef2ae18fe4f0891280d4ca032acb8e1798bbc5b6"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final-por-subdocumento/AUDIT-Subdocumento12.md",
+    "destino": "referencia\\final-por-subdocumento\\AUDIT-Subdocumento12.md",
+    "bytes": 27152,
+    "sha256": "30961e8eb5df0dc9b83ba3002b169929c5fce97dd42375bc5ec2144f6098b7b1"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final-por-subdocumento/AUDIT-Subdocumento12.pdf",
+    "destino": "referencia\\final-por-subdocumento\\AUDIT-Subdocumento12.pdf",
+    "bytes": 814144,
+    "sha256": "7e508038d7500edc1d8e96be1b3674b64dc3334aee0cafb08886348879186a12"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final-por-subdocumento/AUDIT-Subdocumento13.md",
+    "destino": "referencia\\final-por-subdocumento\\AUDIT-Subdocumento13.md",
+    "bytes": 58240,
+    "sha256": "9af75b343d76988d3a85fa31dcf635eb0d0ebd475d1e9aaafeed9273e00aeecc"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final-por-subdocumento/AUDIT-Subdocumento13.pdf",
+    "destino": "referencia\\final-por-subdocumento\\AUDIT-Subdocumento13.pdf",
+    "bytes": 961011,
+    "sha256": "0352571c0c734e5b131570bb9629124e463a03737cf8b13f41287d3e98328da7"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final-por-subdocumento/AUDIT-Subdocumento14.md",
+    "destino": "referencia\\final-por-subdocumento\\AUDIT-Subdocumento14.md",
+    "bytes": 21175,
+    "sha256": "3d9381fb80112ea0bded6cc6f83bf066f3b80058925337377f3839b986bcfee5"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final-por-subdocumento/AUDIT-Subdocumento14.pdf",
+    "destino": "referencia\\final-por-subdocumento\\AUDIT-Subdocumento14.pdf",
+    "bytes": 805625,
+    "sha256": "4a7545a65b1000ab3be40b367c9938593f66f9ab03442dfff229f1e90f9018c7"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final-por-subdocumento/AUDIT-Subdocumento2-Anexos.pdf",
+    "destino": "referencia\\final-por-subdocumento\\AUDIT-Subdocumento2-Anexos.pdf",
+    "bytes": 867556,
+    "sha256": "88b9b86f114efc2616b242ceffd6103bbb54bbdb5162473c07cab7256b66e56a"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final-por-subdocumento/AUDIT-Subdocumento2.md",
+    "destino": "referencia\\final-por-subdocumento\\AUDIT-Subdocumento2.md",
+    "bytes": 66504,
+    "sha256": "fe047f069cee9d99939370caa7626364c284215e8e0cf34fc58efb0c67681565"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final-por-subdocumento/AUDIT-Subdocumento2.pdf",
+    "destino": "referencia\\final-por-subdocumento\\AUDIT-Subdocumento2.pdf",
+    "bytes": 5444569,
+    "sha256": "a0de71d8349bbd27437be0f58cc21a336d852560f119ceb1e1533a835ac756d8"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final-por-subdocumento/AUDIT-Subdocumento4.md",
+    "destino": "referencia\\final-por-subdocumento\\AUDIT-Subdocumento4.md",
+    "bytes": 160856,
+    "sha256": "462cf71cc2c1c37cef4abce6439eacdfdcebe84db65b387cdad4c4e9b14d0712"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final-por-subdocumento/AUDIT-Subdocumento4.pdf",
+    "destino": "referencia\\final-por-subdocumento\\AUDIT-Subdocumento4.pdf",
+    "bytes": 2271756,
+    "sha256": "8eb75c6070a8bc0eb4e4ef958713f06c4f7d531cb216ae5ceca0c7ee56cc4ae7"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final-por-subdocumento/AUDIT-Subdocumento5-Anexos.md",
+    "destino": "referencia\\final-por-subdocumento\\AUDIT-Subdocumento5-Anexos.md",
+    "bytes": 73312,
+    "sha256": "8b2705cfa72df8d9c8bfe6fb08d7b0098e20d97105506da6efeeb0f4e5181fbd"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final-por-subdocumento/AUDIT-Subdocumento5-Anexos.pdf",
+    "destino": "referencia\\final-por-subdocumento\\AUDIT-Subdocumento5-Anexos.pdf",
+    "bytes": 885197,
+    "sha256": "3747822eaf07c2029d2791283ef071c4dfe1222c0cd67c94111b2ccd9bc3cf5a"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final-por-subdocumento/AUDIT-Subdocumento5.md",
+    "destino": "referencia\\final-por-subdocumento\\AUDIT-Subdocumento5.md",
+    "bytes": 37253,
+    "sha256": "9b15a3904753eade7a805ce22d5b2e4bcf9180b13276b5f0b774848687b08637"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final-por-subdocumento/AUDIT-Subdocumento5.pdf",
+    "destino": "referencia\\final-por-subdocumento\\AUDIT-Subdocumento5.pdf",
+    "bytes": 1015627,
+    "sha256": "9c26933dc8ca5d73b751865cd116f9de3db4b8b84a141ed0b33854a2372f30f3"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final-por-subdocumento/AUDIT-Subdocumento6.md",
+    "destino": "referencia\\final-por-subdocumento\\AUDIT-Subdocumento6.md",
+    "bytes": 38288,
+    "sha256": "a4178afdd6e6c64524f21eb1c26b2062d4380760dee84c3f5640239014cf9005"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final-por-subdocumento/AUDIT-Subdocumento6.pdf",
+    "destino": "referencia\\final-por-subdocumento\\AUDIT-Subdocumento6.pdf",
+    "bytes": 882052,
+    "sha256": "a4c574a0f1751a9150157cccaf5dde495c6b6d9e21d6bef79820d689a2793556"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final-por-subdocumento/AUDIT-Subdocumento8.md",
+    "destino": "referencia\\final-por-subdocumento\\AUDIT-Subdocumento8.md",
+    "bytes": 47415,
+    "sha256": "c8c6c88ca6330de0a39ae37d43722b8995a9a1883f44ae8e6a8af251291754c5"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final-por-subdocumento/AUDIT-Subdocumento8.pdf",
+    "destino": "referencia\\final-por-subdocumento\\AUDIT-Subdocumento8.pdf",
+    "bytes": 885741,
+    "sha256": "5890d2b46b95521c6c93193cd7f89d17e4446c236a2fdb076146617434f6eb6f"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final-por-subdocumento/AUDIT-Subdocumento9.md",
+    "destino": "referencia\\final-por-subdocumento\\AUDIT-Subdocumento9.md",
+    "bytes": 39600,
+    "sha256": "e95fdecf3ecfaf6e063fd0d0df7f5e59b9a04146428b8fd9a7b64f5c7897e7b9"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final-por-subdocumento/AUDIT-Subdocumento9.pdf",
+    "destino": "referencia\\final-por-subdocumento\\AUDIT-Subdocumento9.pdf",
+    "bytes": 2080973,
+    "sha256": "7cc2f5433974ead0e694ee5df6d0df2e653078bf3c894ff5a1d1768e11ce03a9"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final-por-subdocumento/manifiesto-d3.json",
+    "destino": "referencia\\final-por-subdocumento\\manifiesto-d3.json",
+    "bytes": 3839,
+    "sha256": "b963c38167277cc3eb86e8b88d3726b0600b6db038fe47b612be70c1310cc46b"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final-por-subdocumento/manifiesto-d4.json",
+    "destino": "referencia\\final-por-subdocumento\\manifiesto-d4.json",
+    "bytes": 3351,
+    "sha256": "c3c7a997fa4ecf501e3ee6817f777c26d2e6cded1cbfe67f324d75e4f616297a"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final-por-subdocumento/manifiesto.json",
+    "destino": "referencia\\final-por-subdocumento\\manifiesto.json",
+    "bytes": 4659,
+    "sha256": "92018a6bb6413599a36e4a7256a7155b3e6298b03bb500919605038423c95dd2"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final/AUDIT-Anexo-Art46-Resolucion-Observaciones.pdf",
+    "destino": "referencia\\final\\AUDIT-Anexo-Art46-Resolucion-Observaciones.pdf",
+    "bytes": 560960,
+    "sha256": "c97e01425d5e5db83a2557b9a3e5e9696e797d5168cb11e95261b6949c744509"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final/AUDIT-Formulario-T-10.md",
+    "destino": "referencia\\final\\AUDIT-Formulario-T-10.md",
+    "bytes": 8022,
+    "sha256": "a4134dc344b0eccebdfae41391d7ac77cf19d3f6861adb8cc891deb1ad98ad09"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final/AUDIT-Formulario-T-10.pdf",
+    "destino": "referencia\\final\\AUDIT-Formulario-T-10.pdf",
+    "bytes": 771302,
+    "sha256": "db5128c286f444031a6ecf85389d753c1e49dcf7af2062b2d439bda5bdb8f937"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final/AUDIT-Formulario-T-11.md",
+    "destino": "referencia\\final\\AUDIT-Formulario-T-11.md",
+    "bytes": 34308,
+    "sha256": "f85180b095e303df1b1675ecacb0fb47449f79cf09bebea5eaf364deac9d08d2"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final/AUDIT-Formulario-T-11.pdf",
+    "destino": "referencia\\final\\AUDIT-Formulario-T-11.pdf",
+    "bytes": 862315,
+    "sha256": "0e2f0544bcf44fcc92d96c654bab12b0d4f357a82eb4e5ca27a551f07f1ea854"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final/AUDIT-Formulario-T-12.md",
+    "destino": "referencia\\final\\AUDIT-Formulario-T-12.md",
+    "bytes": 231596,
+    "sha256": "2af42af38db4c157d0006eecd4d2f25f32172593ef5e187917712a1b53ea21bb"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final/AUDIT-Formulario-T-12.pdf",
+    "destino": "referencia\\final\\AUDIT-Formulario-T-12.pdf",
+    "bytes": 1059797,
+    "sha256": "c1c1c6e9a66a0eac8bf6e7749391d5e1a6ae0dd182cba203e50a9c35fc4d16cd"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final/AUDIT-Formulario-T-13.md",
+    "destino": "referencia\\final\\AUDIT-Formulario-T-13.md",
+    "bytes": 12667,
+    "sha256": "db5b091db91254dbd29e901acb64292eb3804ed87ca21f57589d9661063c22b3"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final/AUDIT-Formulario-T-13.pdf",
+    "destino": "referencia\\final\\AUDIT-Formulario-T-13.pdf",
+    "bytes": 788489,
+    "sha256": "bfdab1e2e08763b057be578df79e12bc85766931f56d2f07fd6437eb71dcbe4d"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final/AUDIT-Formulario-T-14.md",
+    "destino": "referencia\\final\\AUDIT-Formulario-T-14.md",
+    "bytes": 18003,
+    "sha256": "61953010e12e184ab1c1de8975a3f30fad6370c20bb5eff086c0ad283a101aab"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final/AUDIT-Formulario-T-14.pdf",
+    "destino": "referencia\\final\\AUDIT-Formulario-T-14.pdf",
+    "bytes": 1671960,
+    "sha256": "0cd7335112debe7e1b0801eea30daa591377e53d2ff132b45e282ab5580ef79a"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final/AUDIT-Formulario-T-15.md",
+    "destino": "referencia\\final\\AUDIT-Formulario-T-15.md",
+    "bytes": 37773,
+    "sha256": "c972208e3d278e3942c023669d89873ff44768b4e81cea4840977b5155563010"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final/AUDIT-Formulario-T-15.pdf",
+    "destino": "referencia\\final\\AUDIT-Formulario-T-15.pdf",
+    "bytes": 819671,
+    "sha256": "0a2dee40559dd637a09f58a4e3cffc8e97abc9a24b9aed660991d2f4d63a4aa6"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final/AUDIT-Formulario-T-16.md",
+    "destino": "referencia\\final\\AUDIT-Formulario-T-16.md",
+    "bytes": 28634,
+    "sha256": "dad2a7cacf6d58660604e7e6741d562003533317d3d90b4a96aef0e098792781"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final/AUDIT-Formulario-T-16.pdf",
+    "destino": "referencia\\final\\AUDIT-Formulario-T-16.pdf",
+    "bytes": 806749,
+    "sha256": "00247fa58e1537da2187579152e2aa6e3c4a2b36a336bb243ab04e4d3d111b18"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final/AUDIT-Formulario-T-17.md",
+    "destino": "referencia\\final\\AUDIT-Formulario-T-17.md",
+    "bytes": 430465,
+    "sha256": "5517f2586002bde26a751fb545dcb474a5f5d1aa424c896278dbdec65b2f3385"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final/AUDIT-Formulario-T-17.pdf",
+    "destino": "referencia\\final\\AUDIT-Formulario-T-17.pdf",
+    "bytes": 1316644,
+    "sha256": "99fd39afd8d6880e97779bed98b1c31bbce0be7ba31a5119b91f17d311d24699"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final/AUDIT-Formulario-T-18.md",
+    "destino": "referencia\\final\\AUDIT-Formulario-T-18.md",
+    "bytes": 8252,
+    "sha256": "6944664a00678092304105d4630085d4e3c23ea3c8f4db220f447a78898f7920"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final/AUDIT-Formulario-T-18.pdf",
+    "destino": "referencia\\final\\AUDIT-Formulario-T-18.pdf",
+    "bytes": 776646,
+    "sha256": "306a37590ee40d51b7af38a07d1d3d1ae80effa315c45a22f479dd5b5fcb0eb5"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final/AUDIT-Formulario-T-19.md",
+    "destino": "referencia\\final\\AUDIT-Formulario-T-19.md",
+    "bytes": 21965,
+    "sha256": "842bb959afbdff2f8f866cebf0355b6351ca430cba12bbc4a7c6208bca9d7db4"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final/AUDIT-Formulario-T-19.pdf",
+    "destino": "referencia\\final\\AUDIT-Formulario-T-19.pdf",
+    "bytes": 818586,
+    "sha256": "6ef483c11b130632ae781de746855fe3f7d3e00dc705239335f511e843b574fc"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final/AUDIT-Formulario-T-6.md",
+    "destino": "referencia\\final\\AUDIT-Formulario-T-6.md",
+    "bytes": 6737,
+    "sha256": "09efcac47ae2005159ba7d97e001d6c5d8780295508af08c9018ebf693806297"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final/AUDIT-Formulario-T-6.pdf",
+    "destino": "referencia\\final\\AUDIT-Formulario-T-6.pdf",
+    "bytes": 777016,
+    "sha256": "103b90531190a2675b88aeda7768e2794029f7f5c4ab4061d15a5c4f6b3bc067"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final/AUDIT-Formulario-T-8.md",
+    "destino": "referencia\\final\\AUDIT-Formulario-T-8.md",
+    "bytes": 9266,
+    "sha256": "7c22d3448eb09fc15dc8d0b226724daf4e7f84acbf5444509fb8a294c25f719f"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final/AUDIT-Formulario-T-8.pdf",
+    "destino": "referencia\\final\\AUDIT-Formulario-T-8.pdf",
+    "bytes": 770228,
+    "sha256": "cf6c27ef4f2aaf94a76dda3d4e7c59459ec4fdedc4a083dc7b93f4464c3e93aa"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final/AUDIT-Formulario-T-9.md",
+    "destino": "referencia\\final\\AUDIT-Formulario-T-9.md",
+    "bytes": 5119,
+    "sha256": "b4d21fb37a9f777a54e526720f13882ee56a4f593ab9b0549d550bfb934b757d"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final/AUDIT-Formulario-T-9.pdf",
+    "destino": "referencia\\final\\AUDIT-Formulario-T-9.pdf",
+    "bytes": 759081,
+    "sha256": "b746da2c484aa71de9df8a4874fb5f0afb00811a5ada94cea049da4a98044e30"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final/AUDIT-Sobre1-Antecedentes-Administrativos.pdf",
+    "destino": "referencia\\final\\AUDIT-Sobre1-Antecedentes-Administrativos.pdf",
+    "bytes": 576745,
+    "sha256": "c2136fc7e86342c09226f7bf3776f72c012c3ee634d47629443660b8bc7a8d69"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final/AUDIT-Subdocumento1-Anexos.pdf",
+    "destino": "referencia\\final\\AUDIT-Subdocumento1-Anexos.pdf",
+    "bytes": 774181,
+    "sha256": "499406167a4a0a0b0a5a19ea5cbc832d3ffc6bc08b516298714a7314d82c7afb"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final/AUDIT-Subdocumento1.md",
+    "destino": "referencia\\final\\AUDIT-Subdocumento1.md",
+    "bytes": 61656,
+    "sha256": "8609d8a0e061a319d7f1d936df17a61db77df65e984b8cf7370cdedb0102b233"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final/AUDIT-Subdocumento1.pdf",
+    "destino": "referencia\\final\\AUDIT-Subdocumento1.pdf",
+    "bytes": 2169021,
+    "sha256": "41e699d76657fabe132290f3dab8bd37bde891fb3c77226d16b6bb9c389d2807"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final/AUDIT-Subdocumento10.md",
+    "destino": "referencia\\final\\AUDIT-Subdocumento10.md",
+    "bytes": 29150,
+    "sha256": "e675bee93a301a060b64fab81cc1c001dd5bf4470da018442a27dca7445f4eda"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final/AUDIT-Subdocumento10.pdf",
+    "destino": "referencia\\final\\AUDIT-Subdocumento10.pdf",
+    "bytes": 817984,
+    "sha256": "023bfa63acfa0f584c30a440568c490879ee430370df69760a2cbdbff5d26cce"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final/AUDIT-Subdocumento11.md",
+    "destino": "referencia\\final\\AUDIT-Subdocumento11.md",
+    "bytes": 22757,
+    "sha256": "9258dc97f1a166a2a76bbd42a6f239867a178ec43fae69f2d556d883a5395cbf"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final/AUDIT-Subdocumento11.pdf",
+    "destino": "referencia\\final\\AUDIT-Subdocumento11.pdf",
+    "bytes": 805946,
+    "sha256": "f2150435c6bff103c2ad65498775f0aad047c6e8adad7e0c24953f0ec5eef327"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final/AUDIT-Subdocumento12.md",
+    "destino": "referencia\\final\\AUDIT-Subdocumento12.md",
+    "bytes": 27152,
+    "sha256": "30961e8eb5df0dc9b83ba3002b169929c5fce97dd42375bc5ec2144f6098b7b1"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final/AUDIT-Subdocumento12.pdf",
+    "destino": "referencia\\final\\AUDIT-Subdocumento12.pdf",
+    "bytes": 813439,
+    "sha256": "1b348c683ad5b1f86aa5fe22bfde5f2a3dd40f660af7b6f784a5b338665afbfa"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final/AUDIT-Subdocumento13.md",
+    "destino": "referencia\\final\\AUDIT-Subdocumento13.md",
+    "bytes": 58240,
+    "sha256": "9af75b343d76988d3a85fa31dcf635eb0d0ebd475d1e9aaafeed9273e00aeecc"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final/AUDIT-Subdocumento13.pdf",
+    "destino": "referencia\\final\\AUDIT-Subdocumento13.pdf",
+    "bytes": 960549,
+    "sha256": "3b607fb61e81e778e84a286a0f4192b683768030beb09db44f971cf6f4548d7e"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final/AUDIT-Subdocumento14.md",
+    "destino": "referencia\\final\\AUDIT-Subdocumento14.md",
+    "bytes": 21175,
+    "sha256": "3d9381fb80112ea0bded6cc6f83bf066f3b80058925337377f3839b986bcfee5"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final/AUDIT-Subdocumento14.pdf",
+    "destino": "referencia\\final\\AUDIT-Subdocumento14.pdf",
+    "bytes": 804793,
+    "sha256": "20b2bd7827d88543f5960ef7a30bb84b62bbe633bf10e3aa82b68f7a5f07f318"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final/AUDIT-Subdocumento2-Anexos.pdf",
+    "destino": "referencia\\final\\AUDIT-Subdocumento2-Anexos.pdf",
+    "bytes": 867556,
+    "sha256": "1e78d14362cdfc002c8d2b94a3ce56d9ff7a832974517a0ec102720bb9cd841b"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final/AUDIT-Subdocumento2.md",
+    "destino": "referencia\\final\\AUDIT-Subdocumento2.md",
+    "bytes": 67637,
+    "sha256": "a400a7ce0d56ef5ecec5a7f84dfeec3061fab649d227cb16541a3c1c7f20d504"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final/AUDIT-Subdocumento2.pdf",
+    "destino": "referencia\\final\\AUDIT-Subdocumento2.pdf",
+    "bytes": 5446091,
+    "sha256": "e1e7c3da1373207cafd25c084f244c19b3b2947874d22f901cc2f3a195a7438e"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final/AUDIT-Subdocumento3.md",
+    "destino": "referencia\\final\\AUDIT-Subdocumento3.md",
+    "bytes": 71140,
+    "sha256": "dec894b8ac6542f84de4fa06f6dcf75f006a63a615e5507a6643438a0ee31591"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final/AUDIT-Subdocumento3.pdf",
+    "destino": "referencia\\final\\AUDIT-Subdocumento3.pdf",
+    "bytes": 906878,
+    "sha256": "3c18d48ec2fda06922db043acdf9a1f097cedf0549cb8ebc399635ce2c013393"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final/AUDIT-Subdocumento4.md",
+    "destino": "referencia\\final\\AUDIT-Subdocumento4.md",
+    "bytes": 160856,
+    "sha256": "462cf71cc2c1c37cef4abce6439eacdfdcebe84db65b387cdad4c4e9b14d0712"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final/AUDIT-Subdocumento4.pdf",
+    "destino": "referencia\\final\\AUDIT-Subdocumento4.pdf",
+    "bytes": 2272721,
+    "sha256": "9ef8c7adfd89378a21fa2303e6c47765533c3ed23624ad8d6092fc33d83ba1ba"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final/AUDIT-Subdocumento5.md",
+    "destino": "referencia\\final\\AUDIT-Subdocumento5.md",
+    "bytes": 36980,
+    "sha256": "da9114d8fa0757bf0146980d646c6caf24602d9c30fb8b07b442dd127c80f155"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final/AUDIT-Subdocumento5.pdf",
+    "destino": "referencia\\final\\AUDIT-Subdocumento5.pdf",
+    "bytes": 1015424,
+    "sha256": "3ac65771c9d23774ace8de6077fa914ce633458a65a9523f9f9ec91e3a3114f2"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final/AUDIT-Subdocumento6.md",
+    "destino": "referencia\\final\\AUDIT-Subdocumento6.md",
+    "bytes": 38426,
+    "sha256": "43101515fb3e8164f87676d1d4b641c3bf8fabbd3291247a1e3bc315e318f7ba"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final/AUDIT-Subdocumento6.pdf",
+    "destino": "referencia\\final\\AUDIT-Subdocumento6.pdf",
+    "bytes": 881584,
+    "sha256": "bec144e8fa05bf590c23bd1af57c558fa2abadaf636cb2ac82f2487ff649cfed"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final/AUDIT-Subdocumento7.md",
+    "destino": "referencia\\final\\AUDIT-Subdocumento7.md",
+    "bytes": 40611,
+    "sha256": "f75d6e4a963cf0aa9c6bd89f13a679ca3a2bdbcb04a9c9d58d482bc4818ca139"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final/AUDIT-Subdocumento7.pdf",
+    "destino": "referencia\\final\\AUDIT-Subdocumento7.pdf",
+    "bytes": 2383952,
+    "sha256": "182e64ebbc8028f9af6de5d6295d8e6177099c5f765c4c20636ac742be708537"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final/AUDIT-Subdocumento8.md",
+    "destino": "referencia\\final\\AUDIT-Subdocumento8.md",
+    "bytes": 47415,
+    "sha256": "c8c6c88ca6330de0a39ae37d43722b8995a9a1883f44ae8e6a8af251291754c5"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final/AUDIT-Subdocumento8.pdf",
+    "destino": "referencia\\final\\AUDIT-Subdocumento8.pdf",
+    "bytes": 885069,
+    "sha256": "030f1b7dca21a0dd048e9086593362eefa2600f368eb5f95103abfad6248248a"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final/AUDIT-Subdocumento9.md",
+    "destino": "referencia\\final\\AUDIT-Subdocumento9.md",
+    "bytes": 39657,
+    "sha256": "d6a1b60c53427b9bbf190c32432c71bafde07f63966bbf4ab30b2a2fe4f3ffd0"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final/AUDIT-Subdocumento9.pdf",
+    "destino": "referencia\\final\\AUDIT-Subdocumento9.pdf",
+    "bytes": 2081172,
+    "sha256": "eac2d3fe8106f2e9066bdf0b7ec13e18aaa2238606f8d7b534038ad40502f472"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final/SOBRE2_AUDIT_SUBDOC00_20261125.pdf",
+    "destino": "referencia\\final\\SOBRE2_AUDIT_SUBDOC00_20261125.pdf",
+    "bytes": 812458,
+    "sha256": "d118c5b5e126668203c3143249b892986cacd04c842412d5843f882faf282923"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/salida/final/manifiesto.json",
+    "destino": "referencia\\final\\manifiesto.json",
+    "bytes": 12264,
+    "sha256": "dd4b98304bf58da34fe7b17aa4276bf7059b82da4fdaa1491d8aea0dc649c683"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/sobre1-antecedentes.tex",
+    "destino": "fuentes\\sobre1-antecedentes.tex",
+    "bytes": 23322,
+    "sha256": "326265a8f9259612f330d9819f4748b020a364a7cf061d894e3090d3577b0db6"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumento.tex",
+    "destino": "fuentes\\subdocumento.tex",
+    "bytes": 724,
+    "sha256": "fbd9a49cd9f2b002299a1fafdb95d6282f0b38b9019fae717d287f062a77e4ee"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/01-empresa/anexo-1a.md",
+    "destino": "fuentes\\subdocumentos\\01-empresa\\anexo-1a.md",
+    "bytes": 6010,
+    "sha256": "0216f66516954b50b9948227f9114e59fcafe1dd4fdc06a383be582044dbbd4f"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/01-empresa/anexo-1a.tex",
+    "destino": "fuentes\\subdocumentos\\01-empresa\\anexo-1a.tex",
+    "bytes": 6878,
+    "sha256": "b5d26dca3ba4b9ca24f12ab737e77824c650823de05917677712156bde587b09"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/01-empresa/anexos.md",
+    "destino": "fuentes\\subdocumentos\\01-empresa\\anexos.md",
+    "bytes": 6010,
+    "sha256": "0216f66516954b50b9948227f9114e59fcafe1dd4fdc06a383be582044dbbd4f"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/01-empresa/anexos.tex",
+    "destino": "fuentes\\subdocumentos\\01-empresa\\anexos.tex",
+    "bytes": 315,
+    "sha256": "5e0ddf89eb7a6978511e79258a76dca30cdfc2a6c1e85789c97f8dd3479ecb61"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/01-empresa/contenido.md",
+    "destino": "fuentes\\subdocumentos\\01-empresa\\contenido.md",
+    "bytes": 61656,
+    "sha256": "8609d8a0e061a319d7f1d936df17a61db77df65e984b8cf7370cdedb0102b233"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/01-empresa/contenido.tex",
+    "destino": "fuentes\\subdocumentos\\01-empresa\\contenido.tex",
+    "bytes": 58884,
+    "sha256": "78f84c7dd2f37aa5daf6cd1294ae8539865ba3d2a66a311602899cb32851b8ad"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/01-empresa/declaracion-ia.tex",
+    "destino": "fuentes\\subdocumentos\\01-empresa\\declaracion-ia.tex",
+    "bytes": 2701,
+    "sha256": "8782daec10048e41789ed040b4268da8c17d05a6f6179b0c457a48309159df3a"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/01-empresa/figuras-vectoriales-respaldo.tex",
+    "destino": "fuentes\\subdocumentos\\01-empresa\\figuras-vectoriales-respaldo.tex",
+    "bytes": 1312,
+    "sha256": "24da406140dde9b4077d8ed789b2a8e8aa25710baee25f78297b721a365fb4ed"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/01-empresa/formularios/T-6.md",
+    "destino": "fuentes\\subdocumentos\\01-empresa\\formularios\\T-6.md",
+    "bytes": 6737,
+    "sha256": "09efcac47ae2005159ba7d97e001d6c5d8780295508af08c9018ebf693806297"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/01-empresa/formularios/T-6.tex",
+    "destino": "fuentes\\subdocumentos\\01-empresa\\formularios\\T-6.tex",
+    "bytes": 6613,
+    "sha256": "e0ef685ca75eb66030e6debf3f9bc9874fcdf85301f0fee0d3673402afa00eef"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/01-empresa/meta.tex",
+    "destino": "fuentes\\subdocumentos\\01-empresa\\meta.tex",
+    "bytes": 420,
+    "sha256": "b3bcc84d0b968ebdca2dfc408da469c28011b84a14fb4233d2a1bf637319d0cf"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/02-problema/anexos.md",
+    "destino": "fuentes\\subdocumentos\\02-problema\\anexos.md",
+    "bytes": 57888,
+    "sha256": "d483315a71440e140a4bc048be69ac1bd3802f91a87a096652efb10ea236fb60"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/02-problema/anexos.tex",
+    "destino": "fuentes\\subdocumentos\\02-problema\\anexos.tex",
+    "bytes": 62773,
+    "sha256": "9dcd99041c10bef2e30e0beeaed177d9a04a1a04c276008671911b7fb0e701b9"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/02-problema/contenido.md",
+    "destino": "fuentes\\subdocumentos\\02-problema\\contenido.md",
+    "bytes": 67637,
+    "sha256": "a400a7ce0d56ef5ecec5a7f84dfeec3061fab649d227cb16541a3c1c7f20d504"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/02-problema/contenido.tex",
+    "destino": "fuentes\\subdocumentos\\02-problema\\contenido.tex",
+    "bytes": 64751,
+    "sha256": "5e2925ce23847f9ac53dd38aac0bf4a0878c8f384a26420720362c5e62b025e9"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/02-problema/declaracion-ia.tex",
+    "destino": "fuentes\\subdocumentos\\02-problema\\declaracion-ia.tex",
+    "bytes": 2224,
+    "sha256": "fa22dbbf5c3f177de587d1f087a4e52c2856431db739b28b85435efc4ba65c6f"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/02-problema/figuras-vectoriales-respaldo.tex",
+    "destino": "fuentes\\subdocumentos\\02-problema\\figuras-vectoriales-respaldo.tex",
+    "bytes": 5548,
+    "sha256": "1f2db512fe09c201dff02b79a7aa654cea7a4560a25e45dbddbd3e3ce123a688"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/02-problema/meta.tex",
+    "destino": "fuentes\\subdocumentos\\02-problema\\meta.tex",
+    "bytes": 418,
+    "sha256": "f75e2177bb9b5067ca4373b4747d69b6f26aa99220f88bb77d4a60ee42365a68"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/03-solucion/compilar_final.py",
+    "destino": "fuentes\\subdocumentos\\03-solucion\\compilar_final.py",
+    "bytes": 5411,
+    "sha256": "ede4c7507962d9056745928e5c9907308b31191c06bb748f4fd734deb6d464c6"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/03-solucion/contenido.tex",
+    "destino": "fuentes\\subdocumentos\\03-solucion\\contenido.tex",
+    "bytes": 85218,
+    "sha256": "8d461bf37ddbc387bcb3b2350f28202d3ee93bb7ebe6fd239a9388df58eed401"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/03-solucion/declaracion-ia.tex",
+    "destino": "fuentes\\subdocumentos\\03-solucion\\declaracion-ia.tex",
+    "bytes": 386,
+    "sha256": "3b110247564d6c71c6b9635aaa5fd8d17c1ad341f40ec71e371e1f6469b5212f"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/03-solucion/formularios/T-12.md",
+    "destino": "fuentes\\subdocumentos\\03-solucion\\formularios\\T-12.md",
+    "bytes": 212146,
+    "sha256": "d025425d3f0e813bdb06004332d55ca47e90ab005dbfba2bdf2f552671b5c659"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/03-solucion/formularios/T-12.tex",
+    "destino": "fuentes\\subdocumentos\\03-solucion\\formularios\\T-12.tex",
+    "bytes": 52050,
+    "sha256": "723f8b0454ddab509409206ebd9a885a420fed1c684ba4bcf811f504fbcfb6c2"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/03-solucion/formularios/cumplimiento-bases.tex",
+    "destino": "fuentes\\subdocumentos\\03-solucion\\formularios\\cumplimiento-bases.tex",
+    "bytes": 180147,
+    "sha256": "3eb6e2751344cb3a1ea20328461a394ceec1664f41ba06da2dd7f42be5c9292d"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/03-solucion/formularios/trazabilidad-secciones.json",
+    "destino": "fuentes\\subdocumentos\\03-solucion\\formularios\\trazabilidad-secciones.json",
+    "bytes": 3374,
+    "sha256": "162586425fe641b3c4e8f5e875dba8adc6e15b5f8a10ee30496fe0c7c15fe4aa"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/03-solucion/formularios/trazabilidad-secciones.tex",
+    "destino": "fuentes\\subdocumentos\\03-solucion\\formularios\\trazabilidad-secciones.tex",
+    "bytes": 1255,
+    "sha256": "b8e7d3bddb8ef27956a975221bb711c95ef8840de2d9ac0282ea6ea9543d52a2"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/03-solucion/meta.tex",
+    "destino": "fuentes\\subdocumentos\\03-solucion\\meta.tex",
+    "bytes": 315,
+    "sha256": "eb4d0acb77579bb83574db790060605c1d51bdf55f5f0aba936329667dd8abdd"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/03-solucion/preparacion-final/AUDIT-Formulario-T-12.pdf",
+    "destino": "fuentes\\subdocumentos\\03-solucion\\preparacion-final\\AUDIT-Formulario-T-12.pdf",
+    "bytes": 1254481,
+    "sha256": "bcb555f4608c8a027c740514af2aa1472606f31ebc8ff6b3b88afd73b25ce99b"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/03-solucion/preparacion-final/SOBRE2_AUDIT_SUBDOC03_20261125.pdf",
+    "destino": "fuentes\\subdocumentos\\03-solucion\\preparacion-final\\SOBRE2_AUDIT_SUBDOC03_20261125.pdf",
+    "bytes": 974269,
+    "sha256": "bd4035e1bdcf789af4a82a25559c7b81bd49e30941d7384b194d4bcabdaf6fb3"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/03-solucion/preparacion-final/cierre-20261125/AUDIT-Formulario-T-12.pdf",
+    "destino": "fuentes\\subdocumentos\\03-solucion\\preparacion-final\\cierre-20261125\\AUDIT-Formulario-T-12.pdf",
+    "bytes": 1199597,
+    "sha256": "12eb1c94e51a9eae17b08580b57fb3bbb0c183ff4649295931f94c896abb7948"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/03-solucion/preparacion-final/cierre-20261125/AUDIT-Subdocumento3.pdf",
+    "destino": "fuentes\\subdocumentos\\03-solucion\\preparacion-final\\cierre-20261125\\AUDIT-Subdocumento3.pdf",
+    "bytes": 912972,
+    "sha256": "2435869ed79fcbd4fd33ec157ae3264d2b2c5344e07b8a246d5c05fd35ea6143"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/03-solucion/preparacion-final/cierre-20261125/LEEME.md",
+    "destino": "fuentes\\subdocumentos\\03-solucion\\preparacion-final\\cierre-20261125\\LEEME.md",
+    "bytes": 185,
+    "sha256": "dcbf5610466cd734904489355bd4cf5b80e80f32b7fd651ce3ca17fafcb7fa02"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/03-solucion/preparacion-final/compilacion/AUDIT-Formulario-T-12-1.txt",
+    "destino": "fuentes\\subdocumentos\\03-solucion\\preparacion-final\\compilacion\\AUDIT-Formulario-T-12-1.txt",
+    "bytes": 38978,
+    "sha256": "54b71d2e535253799ec6c0654e36ae15e4e2ee1bf54af00b69696bebae70244c"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/03-solucion/preparacion-final/compilacion/AUDIT-Formulario-T-12-2.txt",
+    "destino": "fuentes\\subdocumentos\\03-solucion\\preparacion-final\\compilacion\\AUDIT-Formulario-T-12-2.txt",
+    "bytes": 36586,
+    "sha256": "f7a2324156eb7da9b0dbd443c362a6d909e4c9a2e8b1819d64c459185f17dd74"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/03-solucion/preparacion-final/compilacion/AUDIT-Formulario-T-12-3.txt",
+    "destino": "fuentes\\subdocumentos\\03-solucion\\preparacion-final\\compilacion\\AUDIT-Formulario-T-12-3.txt",
+    "bytes": 36500,
+    "sha256": "e3c5d88cf656e83f31ab774b2091ba7bfa0aa60e3c358e4d1f25c8814a435666"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/03-solucion/preparacion-final/compilacion/AUDIT-Formulario-T-12-biber.txt",
+    "destino": "fuentes\\subdocumentos\\03-solucion\\preparacion-final\\compilacion\\AUDIT-Formulario-T-12-biber.txt",
+    "bytes": 2106,
+    "sha256": "037237cfea48df9a72618cf70de24b1cbb81907c0d914bcbfb0d6017e6f21018"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/03-solucion/preparacion-final/compilacion/AUDIT-Formulario-T-12-externos.tex",
+    "destino": "fuentes\\subdocumentos\\03-solucion\\preparacion-final\\compilacion\\AUDIT-Formulario-T-12-externos.tex",
+    "bytes": 440,
+    "sha256": "628ed3316e565776416076cd26d5742422744267befa69c5758411a0d87d2982"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/03-solucion/preparacion-final/compilacion/AUDIT-Formulario-T-12.bbl",
+    "destino": "fuentes\\subdocumentos\\03-solucion\\preparacion-final\\compilacion\\AUDIT-Formulario-T-12.bbl",
+    "bytes": 6381,
+    "sha256": "65e37afa83c90e3804c139cfe3e70ff78fa982cfe33ecc2d1210dd29c09a7031"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/03-solucion/preparacion-final/compilacion/AUDIT-Formulario-T-12.log",
+    "destino": "fuentes\\subdocumentos\\03-solucion\\preparacion-final\\compilacion\\AUDIT-Formulario-T-12.log",
+    "bytes": 161216,
+    "sha256": "267842738890260379ed3e6c830e9eebd74cde69f80f8b79cd7c4430cab39de3"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/03-solucion/preparacion-final/compilacion/AUDIT-Formulario-T-12.pdf",
+    "destino": "fuentes\\subdocumentos\\03-solucion\\preparacion-final\\compilacion\\AUDIT-Formulario-T-12.pdf",
+    "bytes": 1254481,
+    "sha256": "bcb555f4608c8a027c740514af2aa1472606f31ebc8ff6b3b88afd73b25ce99b"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/03-solucion/preparacion-final/compilacion/AUDIT-Formulario-T-12.tex",
+    "destino": "fuentes\\subdocumentos\\03-solucion\\preparacion-final\\compilacion\\AUDIT-Formulario-T-12.tex",
+    "bytes": 1235,
+    "sha256": "5c14bb6e76b3f0e4dc4fb0314c522583b8a522263de388402bef7248aee89659"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/03-solucion/preparacion-final/compilacion/SOBRE2_AUDIT_SUBDOC03_20261125-1.txt",
+    "destino": "fuentes\\subdocumentos\\03-solucion\\preparacion-final\\compilacion\\SOBRE2_AUDIT_SUBDOC03_20261125-1.txt",
+    "bytes": 37218,
+    "sha256": "b6ad51aa7c7209495aa82cebc51ba06a72c92f3595096c2e2f5b28a298ea16d6"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/03-solucion/preparacion-final/compilacion/SOBRE2_AUDIT_SUBDOC03_20261125-2.txt",
+    "destino": "fuentes\\subdocumentos\\03-solucion\\preparacion-final\\compilacion\\SOBRE2_AUDIT_SUBDOC03_20261125-2.txt",
+    "bytes": 29745,
+    "sha256": "e508bc30b04b89cd1e87759bac5b825c769d7e9ca29c30dfbcca56dd78655a59"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/03-solucion/preparacion-final/compilacion/SOBRE2_AUDIT_SUBDOC03_20261125-3.txt",
+    "destino": "fuentes\\subdocumentos\\03-solucion\\preparacion-final\\compilacion\\SOBRE2_AUDIT_SUBDOC03_20261125-3.txt",
+    "bytes": 29556,
+    "sha256": "6bc516f70e2a695eda07d22bcbea0c7da099813f2af7241bc65a7e2b0911e1da"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/03-solucion/preparacion-final/compilacion/SOBRE2_AUDIT_SUBDOC03_20261125-biber.txt",
+    "destino": "fuentes\\subdocumentos\\03-solucion\\preparacion-final\\compilacion\\SOBRE2_AUDIT_SUBDOC03_20261125-biber.txt",
+    "bytes": 2142,
+    "sha256": "67cba6ce6ac42fda3a1f7b846161d5eb4de568b210923fdaa2ba53a6da206b35"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/03-solucion/preparacion-final/compilacion/SOBRE2_AUDIT_SUBDOC03_20261125-externos.tex",
+    "destino": "fuentes\\subdocumentos\\03-solucion\\preparacion-final\\compilacion\\SOBRE2_AUDIT_SUBDOC03_20261125-externos.tex",
+    "bytes": 266,
+    "sha256": "ce2b9462749d48b0678a715dec97118305ec99e5692f979a0b1d530d2e75573f"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/03-solucion/preparacion-final/compilacion/SOBRE2_AUDIT_SUBDOC03_20261125.bbl",
+    "destino": "fuentes\\subdocumentos\\03-solucion\\preparacion-final\\compilacion\\SOBRE2_AUDIT_SUBDOC03_20261125.bbl",
+    "bytes": 21057,
+    "sha256": "7e87b3b4490016e1751db01828ae335f08c64ae9c3021562b3f3f42f2c8ae906"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/03-solucion/preparacion-final/compilacion/SOBRE2_AUDIT_SUBDOC03_20261125.log",
+    "destino": "fuentes\\subdocumentos\\03-solucion\\preparacion-final\\compilacion\\SOBRE2_AUDIT_SUBDOC03_20261125.log",
+    "bytes": 129823,
+    "sha256": "18a105bd0c4288a0e75853cb855fdc09a01e93bf0175cd0ca106980d2fa3e08d"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/03-solucion/preparacion-final/compilacion/SOBRE2_AUDIT_SUBDOC03_20261125.pdf",
+    "destino": "fuentes\\subdocumentos\\03-solucion\\preparacion-final\\compilacion\\SOBRE2_AUDIT_SUBDOC03_20261125.pdf",
+    "bytes": 974269,
+    "sha256": "bd4035e1bdcf789af4a82a25559c7b81bd49e30941d7384b194d4bcabdaf6fb3"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/03-solucion/preparacion-final/compilacion/SOBRE2_AUDIT_SUBDOC03_20261125.plf",
+    "destino": "fuentes\\subdocumentos\\03-solucion\\preparacion-final\\compilacion\\SOBRE2_AUDIT_SUBDOC03_20261125.plf",
+    "bytes": 957,
+    "sha256": "ddbc98bbaf151aed12847c2cf59b219162aedb8bdfb6b9dc4c6f4c513f84b60d"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/03-solucion/preparacion-final/compilacion/SOBRE2_AUDIT_SUBDOC03_20261125.plt",
+    "destino": "fuentes\\subdocumentos\\03-solucion\\preparacion-final\\compilacion\\SOBRE2_AUDIT_SUBDOC03_20261125.plt",
+    "bytes": 1884,
+    "sha256": "c6e4541d22778b37013e6daa7a64853b410f50b2b4df5eec37d1456b2b09bd4c"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/03-solucion/preparacion-final/compilacion/SOBRE2_AUDIT_SUBDOC03_20261125.ptc",
+    "destino": "fuentes\\subdocumentos\\03-solucion\\preparacion-final\\compilacion\\SOBRE2_AUDIT_SUBDOC03_20261125.ptc",
+    "bytes": 3027,
+    "sha256": "6361c1684e789db8084f9140b06a9fa0fcc8597b4765ba69662f443150462af3"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/03-solucion/preparacion-final/compilacion/SOBRE2_AUDIT_SUBDOC03_20261125.tex",
+    "destino": "fuentes\\subdocumentos\\03-solucion\\preparacion-final\\compilacion\\SOBRE2_AUDIT_SUBDOC03_20261125.tex",
+    "bytes": 1080,
+    "sha256": "17963dfcbd0b594dc6394b56b99c4a44c25420b7bc12097526b3815f760f9293"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/03-solucion/preparacion-final/manifiesto.json",
+    "destino": "fuentes\\subdocumentos\\03-solucion\\preparacion-final\\manifiesto.json",
+    "bytes": 1092,
+    "sha256": "3825b92bd47606f02f451f4cbce69d549a88a3979e5d1bc644023c635abc5b05"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/04-arquitectura/compilar_d3.py",
+    "destino": "fuentes\\subdocumentos\\04-arquitectura\\compilar_d3.py",
+    "bytes": 1244,
+    "sha256": "dd85ff705edaf97275587e2e28998b1c0addebf80a317c0f70d9a7ac48a70eb5"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/04-arquitectura/contenido.md",
+    "destino": "fuentes\\subdocumentos\\04-arquitectura\\contenido.md",
+    "bytes": 164017,
+    "sha256": "ee01daac53651fda66a93a14c3ecde1999d98070276c614823ad15053d581788"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/04-arquitectura/contenido.tex",
+    "destino": "fuentes\\subdocumentos\\04-arquitectura\\contenido.tex",
+    "bytes": 153952,
+    "sha256": "dd4197180c30aee6c511925a3e6eb007469efd9e7abb5060c474b42d0d7db3f3"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/04-arquitectura/declaracion-ia.tex",
+    "destino": "fuentes\\subdocumentos\\04-arquitectura\\declaracion-ia.tex",
+    "bytes": 7544,
+    "sha256": "afd6d26d9744f304325b0acb46cc33afdb1aeb14eecf70f1f22db81c3616a57d"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/04-arquitectura/formularios/T-11.md",
+    "destino": "fuentes\\subdocumentos\\04-arquitectura\\formularios\\T-11.md",
+    "bytes": 34098,
+    "sha256": "ef4e9ec3cf944244335633ca2d8fcaceac3dc6369de7a2bb2d2ec3ec10e9a0cc"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/04-arquitectura/formularios/T-11.tex",
+    "destino": "fuentes\\subdocumentos\\04-arquitectura\\formularios\\T-11.tex",
+    "bytes": 41007,
+    "sha256": "ce87790cb3fa642e9613d3b035f5c8f10ee8a89cac41181834b11d31205a51e3"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/04-arquitectura/meta.tex",
+    "destino": "fuentes\\subdocumentos\\04-arquitectura\\meta.tex",
+    "bytes": 3178,
+    "sha256": "7b02f3ed58e54bef006893360bbe60dda5c17d63907052d0f1872596cbedebba"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/04-arquitectura/referencias-d3.bib",
+    "destino": "fuentes\\subdocumentos\\04-arquitectura\\referencias-d3.bib",
+    "bytes": 3673,
+    "sha256": "73d210fdd5003688caa24b4ea06888e0bf57709a5667543b4b59a7701e44f9ab"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/05-datos/anexos.md",
+    "destino": "fuentes\\subdocumentos\\05-datos\\anexos.md",
+    "bytes": 73312,
+    "sha256": "8b2705cfa72df8d9c8bfe6fb08d7b0098e20d97105506da6efeeb0f4e5181fbd"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/05-datos/anexos.tex",
+    "destino": "fuentes\\subdocumentos\\05-datos\\anexos.tex",
+    "bytes": 85155,
+    "sha256": "9414bb5da733f741a3561a3f0b287b22952f9b9f57cdad644b873f010e4fc09d"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/05-datos/compilar_anexo.py",
+    "destino": "fuentes\\subdocumentos\\05-datos\\compilar_anexo.py",
+    "bytes": 1072,
+    "sha256": "7539e20e27fd35ccac5b2ffc452937c73d38e82978ca0c62674e1f71fdd5ed59"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/05-datos/contenido.md",
+    "destino": "fuentes\\subdocumentos\\05-datos\\contenido.md",
+    "bytes": 37253,
+    "sha256": "9b15a3904753eade7a805ce22d5b2e4bcf9180b13276b5f0b774848687b08637"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/05-datos/contenido.tex",
+    "destino": "fuentes\\subdocumentos\\05-datos\\contenido.tex",
+    "bytes": 37152,
+    "sha256": "a552f4aebfa1b96e5981127d299f1ee78075db71fc5cf2d31edd4dbf13151129"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/05-datos/declaracion-ia.tex",
+    "destino": "fuentes\\subdocumentos\\05-datos\\declaracion-ia.tex",
+    "bytes": 547,
+    "sha256": "d25bcb7311bb31b4343771770b9f5a21075ecef4eb89c9e6e60f1794a3548d0f"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/05-datos/meta.tex",
+    "destino": "fuentes\\subdocumentos\\05-datos\\meta.tex",
+    "bytes": 3230,
+    "sha256": "49087e7504072623d724f8744fd37dcd4e43972f405a26bf028a0e5ff6241518"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/06-metodologias/contenido.md",
+    "destino": "fuentes\\subdocumentos\\06-metodologias\\contenido.md",
+    "bytes": 38288,
+    "sha256": "a4178afdd6e6c64524f21eb1c26b2062d4380760dee84c3f5640239014cf9005"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/06-metodologias/contenido.tex",
+    "destino": "fuentes\\subdocumentos\\06-metodologias\\contenido.tex",
+    "bytes": 38550,
+    "sha256": "3681e10a6f838d2d015c0c1c443d127d24679192e4a6f0389835eb69547c937e"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/06-metodologias/declaracion-ia.tex",
+    "destino": "fuentes\\subdocumentos\\06-metodologias\\declaracion-ia.tex",
+    "bytes": 527,
+    "sha256": "54c2cfd995cd3b47dccc94fefd95920327944f4f6e4f9b039d77a9e9b3cdf5c0"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/06-metodologias/formularios/T-10.tex",
+    "destino": "fuentes\\subdocumentos\\06-metodologias\\formularios\\T-10.tex",
+    "bytes": 8784,
+    "sha256": "25557542c8585c94db578002a896421899cd524f7de457502be6768c81b6eb57"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/06-metodologias/formularios/T-9.tex",
+    "destino": "fuentes\\subdocumentos\\06-metodologias\\formularios\\T-9.tex",
+    "bytes": 5755,
+    "sha256": "cf4f2f6fa5e5bff81b698cf97c27869393c561775abf06e55b13725b8e62c7ac"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/06-metodologias/meta.tex",
+    "destino": "fuentes\\subdocumentos\\06-metodologias\\meta.tex",
+    "bytes": 3162,
+    "sha256": "67cd5a5f3e5f6695f099578cd3401f06e767fcd0d575e9faf3992a49f3420f68"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/.gitattributes",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\.gitattributes",
+    "bytes": 14,
+    "sha256": "fdfa7b607b52326cb536a984c43634aaa9afd5fb2c3df583c525f68615a80fad"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/ARCHIVOS-VIGENTES.md",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\ARCHIVOS-VIGENTES.md",
+    "bytes": 1259,
+    "sha256": "458d03b8012acd6642d885b6e8662908f34eb59b2cf7766d8ad9cc9f2b93a5ee"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/PENDIENTES-ENTREGA-FINAL.md",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\PENDIENTES-ENTREGA-FINAL.md",
+    "bytes": 1259,
+    "sha256": "458d03b8012acd6642d885b6e8662908f34eb59b2cf7766d8ad9cc9f2b93a5ee"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/REGISTRO-PARA-A6.md",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\REGISTRO-PARA-A6.md",
+    "bytes": 909,
+    "sha256": "a0e1bc73e16dc8af2fe189ef160fca8820875e3f1f0dcda5aeaa7d1d5de9f088"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/REVISION-EDT.md",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\REVISION-EDT.md",
+    "bytes": 2141,
+    "sha256": "281f7f8db49e7b8a7b1115a5cbffb997fafd89093a4dd0dfe566dcf80228ab13"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/REVISION-GANTT.md",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\REVISION-GANTT.md",
+    "bytes": 5876,
+    "sha256": "5de8e4bd083f66628413b2c68e09b46dadf9be656f3165995ffae1770c460753"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/S7_Integrado_Revision.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\S7_Integrado_Revision.pdf",
+    "bytes": 2526398,
+    "sha256": "a9d1e35a29563074bf512cfec97d55e77d4a4e2226591c7b89675a3670905a3e"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/contenido.tex",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\contenido.tex",
+    "bytes": 38845,
+    "sha256": "6579d70ef08867048792bcd375efc3c33f72846df2acb87d124ae54b86db1c55"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/declaracion-ia.tex",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\declaracion-ia.tex",
+    "bytes": 381,
+    "sha256": "c2cb815baf735658e53be988dcdb96cdea6dadd27dd6a94d0be6907c54b9b165"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/formularios/T-14.tex",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\formularios\\T-14.tex",
+    "bytes": 13259,
+    "sha256": "566da21c85d5ede72adfa2eaf45843acec656e7252b4d080eb8e4229d6b9517d"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/formularios/T-15.tex",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\formularios\\T-15.tex",
+    "bytes": 2192,
+    "sha256": "ff2aaf933064c932bdf63dfdc5f68a6c39bb1fedd689d1c33f2536627df579b4"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/formularios/T-18.tex",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\formularios\\T-18.tex",
+    "bytes": 8603,
+    "sha256": "0c7cfe65b7aacc2c6336301be7102e566a39626a2119ec9a4e04a19d755a9f94"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/formularios/trazabilidad-aceptacion.tex",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\formularios\\trazabilidad-aceptacion.tex",
+    "bytes": 2716,
+    "sha256": "958706dfecf5380df4da2bab3bc659ffb12adf10e536483753e854ca7aedf4b1"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/.gitignore",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\graficos\\.gitignore",
+    "bytes": 185,
+    "sha256": "ae8c32053a7f999136f82884ec2b2355eaf1784ae0a4bc4a701746cb1b8241a9"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/Gantt_Completa_Revisada.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\graficos\\Gantt_Completa_Revisada.pdf",
+    "bytes": 899041,
+    "sha256": "d67a97537710a69f427e39ab5163926b3e241b1d9d9f86d7f5e98fff13b86dc8"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/ajustes-paquetes.json",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\graficos\\ajustes-paquetes.json",
+    "bytes": 2639,
+    "sha256": "e7f18acd92ab0d02445726d5d31cadb8f93c0035b32bcc4f52c9706b16a5d8b7"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/compilar_formularios_final.py",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\graficos\\compilar_formularios_final.py",
+    "bytes": 3477,
+    "sha256": "d6c2ffbbfc194d9b938dd656b4d648ffc099a3f6794a4ea77ac50525039c1ae2"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/compilar_revision.py",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\graficos\\compilar_revision.py",
+    "bytes": 4698,
+    "sha256": "bdd5159e1d0b75e0cf3a200da10d3b829c9e256e62b654797ca5672225b7d5f8"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/conciliacion-3.2/asignacion-tarea-rol-mes.csv",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\graficos\\conciliacion-3.2\\asignacion-tarea-rol-mes.csv",
+    "bytes": 341931,
+    "sha256": "77ebbda87e5f55d4418a7c5b038c7953d341ae3b92ffa33aa37073a14e155fae"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/conciliacion-3.2/gantt-formulario.tex",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\graficos\\conciliacion-3.2\\gantt-formulario.tex",
+    "bytes": 1986,
+    "sha256": "2887e336eb8ed371f72c798a8b8b841da00b17fa2e37b116423fe1655e9938f7"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/conciliacion-3.2/hitos-resumen.tex",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\graficos\\conciliacion-3.2\\hitos-resumen.tex",
+    "bytes": 480,
+    "sha256": "d0654915c6c1db7adfacdbfd2c66db144d037934723edae0b0232c7ae140f2ff"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/conciliacion-3.2/horas-formulario.tex",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\graficos\\conciliacion-3.2\\horas-formulario.tex",
+    "bytes": 20838,
+    "sha256": "7668f90999862ba7cc4180f8dc84546e93dc13654637dc6291604167943e3da3"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/conciliacion-3.2/malla-formulario.tex",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\graficos\\conciliacion-3.2\\malla-formulario.tex",
+    "bytes": 14485,
+    "sha256": "f5347d54f47d931e97e456007a59aff698ef3958e50e7700e69aa3b51bc6d08b"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/conciliacion-3.2/plan_32.json",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\graficos\\conciliacion-3.2\\plan_32.json",
+    "bytes": 29070,
+    "sha256": "0f06bd86767d5b09d99348ff609564c4cb91f93b1d86dabec3ec5c60f6e3b8ab"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/conciliacion-3.2/puente.json",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\graficos\\conciliacion-3.2\\puente.json",
+    "bytes": 775987,
+    "sha256": "e1d87fdc1f07d641fd7c716cedd1fe5f2091ccba29cf9c17839e8bb0d236fe34"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/conciliacion-3.2/red-calculada.json",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\graficos\\conciliacion-3.2\\red-calculada.json",
+    "bytes": 62605,
+    "sha256": "9857f8311d3202b2bf30750a050d3d1c3d183a98848172254839098a225774b1"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/conciliar_32.py",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\graficos\\conciliar_32.py",
+    "bytes": 17411,
+    "sha256": "7cbc06f4707eee406bae44333ff9f5cd6d30ecdceee59b536f3953dd6f23812c"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/edt-revisada/01-arbol.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\graficos\\edt-revisada\\01-arbol.pdf",
+    "bytes": 76656,
+    "sha256": "0f813e7ac10636348f195b63ad65d5584c24e6b13a15fe810e19410db4486617"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/edt-revisada/02-paquetes-1.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\graficos\\edt-revisada\\02-paquetes-1.pdf",
+    "bytes": 75345,
+    "sha256": "3a36d96d65c83f527e6688a3ec66df9a1c76e4d352ea7d527f71614f82aec5b1"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/edt-revisada/03-paquetes-2.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\graficos\\edt-revisada\\03-paquetes-2.pdf",
+    "bytes": 74834,
+    "sha256": "7ba782dcc6bc93bc84f0beab8b97c4ca4cc2f6c91e9fc6b9e5415c9d016bb7d9"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/edt-revisada/04-paquetes-3.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\graficos\\edt-revisada\\04-paquetes-3.pdf",
+    "bytes": 75143,
+    "sha256": "02484cb7b24a464432f98926b30713b9c71f5d437949d4fae6e500d6e58fe10a"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/edt-revisada/05-paquetes-4.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\graficos\\edt-revisada\\05-paquetes-4.pdf",
+    "bytes": 75162,
+    "sha256": "965d0e5081131936514167f2f056b34df717c0161ab2332b7086a3b363572112"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/edt-revisada/06-paquetes-5.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\graficos\\edt-revisada\\06-paquetes-5.pdf",
+    "bytes": 74866,
+    "sha256": "e699707c1bb06ebab791ff822b72e884d25c478528321f9fda0094bb30f0f108"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/edt-revisada/07-ejemplo.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\graficos\\edt-revisada\\07-ejemplo.pdf",
+    "bytes": 74812,
+    "sha256": "8833944341aace8f10944fe53a53044adae69769493cdce9147bef4eee6d433c"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/edt-revisada/08-trazabilidad.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\graficos\\edt-revisada\\08-trazabilidad.pdf",
+    "bytes": 74577,
+    "sha256": "98170356542b6834f1ef4444d9423c108d4a2fe205b3fe60eb767e8b90e5e166"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/edt-revisada/09-matriz-requisitos.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\graficos\\edt-revisada\\09-matriz-requisitos.pdf",
+    "bytes": 74638,
+    "sha256": "e7588efbeece30c2a6d683d95b486a68b40427193034a8a04c387a1e0d555524"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/edt-revisada/EDT_Completa_Revisada.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\graficos\\edt-revisada\\EDT_Completa_Revisada.pdf",
+    "bytes": 563083,
+    "sha256": "caab5a54931a4587767f320cffd6c36e4c69931a289a7f414b4da355ebd0e4d8"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/edt-revisada/matriz-requisitos.json",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\graficos\\edt-revisada\\matriz-requisitos.json",
+    "bytes": 1496,
+    "sha256": "878ad908525640391b5a4573e9a6af0c04979da97007983cfddf3b58db590ab2"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/generar_anexos_32.py",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\graficos\\generar_anexos_32.py",
+    "bytes": 9469,
+    "sha256": "348d51062e14f0c0f6701cf615f7423671cd60de71ac0ca039815fdeb8e49ac2"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/generar_edt_revisada.py",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\graficos\\generar_edt_revisada.py",
+    "bytes": 8246,
+    "sha256": "05b111e07bb030e7762d4ee99f671508dd700db9e352be3ab104f935f4ecd62c"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/generar_gantt_revisada.py",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\graficos\\generar_gantt_revisada.py",
+    "bytes": 19092,
+    "sha256": "530af5a2ca18b5591d0e8b29d96aa68a052ec8a1819819f35af027752be24ca6"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/pert-etapa1.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\graficos\\pert-etapa1.pdf",
+    "bytes": 600606,
+    "sha256": "92deba02e47f77caa71205e7f474757c7065a9572eec867ea80f45f6b8cc91a7"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/pert-etapa2.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\graficos\\pert-etapa2.pdf",
+    "bytes": 600228,
+    "sha256": "336e455f12dd7946faa244db32f3632024470dadc0e1831be56c475b777e3c0f"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/red-3.2.json",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\graficos\\red-3.2.json",
+    "bytes": 58076,
+    "sha256": "fe403e736256e1e1baa7e539eaf0b35a687e43ccbcc8c6b3f76d4e7bc68dac02"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/revisada/conciliacion.json",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\graficos\\revisada\\conciliacion.json",
+    "bytes": 567,
+    "sha256": "4cd5893b21acb8920d8684a2fb271f2c180f6299e7a4e3f876aa1cd67815f436"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/revisada/gantt-control.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\graficos\\revisada\\gantt-control.pdf",
+    "bytes": 74977,
+    "sha256": "fba85c2beecb51997919512f268865983960badaee71f1fa11ed1783ef27664c"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/revisada/gantt-cpm.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\graficos\\revisada\\gantt-cpm.pdf",
+    "bytes": 77325,
+    "sha256": "9a9ad660f1a914c6190bf8c74c43f2063806a433db8169a3f8b91dfc493ddc3e"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/revisada/gantt-datos.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\graficos\\revisada\\gantt-datos.pdf",
+    "bytes": 75924,
+    "sha256": "a2c91fb022554604afde86f89fd2e62ee8c876c1e068d89179ec3ee43a984a88"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/revisada/gantt-e1.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\graficos\\revisada\\gantt-e1.pdf",
+    "bytes": 75760,
+    "sha256": "822ecc1e9a9b4c70933eb99bda2340297740374c798cdba7cc957b9e4621e13c"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/revisada/gantt-e2.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\graficos\\revisada\\gantt-e2.pdf",
+    "bytes": 76226,
+    "sha256": "fbf748462b8b8bedddfbced783a297fc5507f9cc783db13b0baa5b55136033e9"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/revisada/gantt-gestion.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\graficos\\revisada\\gantt-gestion.pdf",
+    "bytes": 75883,
+    "sha256": "ca4296914e8ed52ca24feb27d2486b1261d0a6e11a2190ef18c41cba5fa5a773"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/revisada/gantt-hitos.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\graficos\\revisada\\gantt-hitos.pdf",
+    "bytes": 74678,
+    "sha256": "65f9a2154e9b79f3689fd44776e5293329dbf02d1b1cf2dab32254d2d8fc5e76"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/revisada/gantt-implantacion.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\graficos\\revisada\\gantt-implantacion.pdf",
+    "bytes": 76038,
+    "sha256": "e68f914b48f83d891373cb202ec7dd324013a0fb6d6528af0eee816a54a9f076"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/revisada/gantt-innovaciones.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\graficos\\revisada\\gantt-innovaciones.pdf",
+    "bytes": 75670,
+    "sha256": "cda0a9e9aaabc1d8cbf66018d441c0ad86fa6bc30dbd7f4a1b6ad22c6d385862"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/revisada/gantt-operacion.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\graficos\\revisada\\gantt-operacion.pdf",
+    "bytes": 75002,
+    "sha256": "d2b5aff25c962eee9a0f5a57ddcab7b932728e47ed4b6ae1355bba0db8a84c46"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/revisada/gantt-panorama.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\graficos\\revisada\\gantt-panorama.pdf",
+    "bytes": 77457,
+    "sha256": "faeb8c2a93e9d7934bd214b0798b1bb783e1cd561c1ac6bd1ccb5e762df6e062"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/revisada/gantt-plataforma.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\graficos\\revisada\\gantt-plataforma.pdf",
+    "bytes": 75605,
+    "sha256": "28468e7a38a3235714d4ab91702bc879c0174785a0a62f5ae769adf4cf4b7d99"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/revisada/manifiesto.json",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\graficos\\revisada\\manifiesto.json",
+    "bytes": 1493,
+    "sha256": "2fb49ca6b3119baa015d662a7ce4061cad9196dd873edd5e3acb23df01bab399"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/revisada/verificacion-integracion.json",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\graficos\\revisada\\verificacion-integracion.json",
+    "bytes": 2563,
+    "sha256": "2114c91c4b8fce3c73690513a3533daf6e3f430b2e9292e29dc870017b484d4d"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/revisada/verificacion-pdf.json",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\graficos\\revisada\\verificacion-pdf.json",
+    "bytes": 1122,
+    "sha256": "6bcc3c3d10c9b6a8295401b682c8b7b1ebf3a16d0d0cfc2b178250e8ab501d20"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/test_conciliacion_32.py",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\graficos\\test_conciliacion_32.py",
+    "bytes": 3970,
+    "sha256": "88b3a6c46d8b20cdddfa8843554bcd125ec89d7de220e21a2009ab93188ef003"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/verificacion_letra.json",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\graficos\\verificacion_letra.json",
+    "bytes": 2867,
+    "sha256": "7a318549867fb84b31c7fb8898a2ce25823712619ac9b8f4c9d00c54c5595d78"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/graficos/verificar_preparacion_final.py",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\graficos\\verificar_preparacion_final.py",
+    "bytes": 1053,
+    "sha256": "1545dafd7911d4a1c0b48ecb681e483b8e893f2153555c2fdc7e37967eee9357"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/meta.tex",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\meta.tex",
+    "bytes": 259,
+    "sha256": "1afa26c224322d3c93be585e31738c01e886e9a0e8d1534599b302d682abe134"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/preparacion-final/AUDIT-Formulario-T-14.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\preparacion-final\\AUDIT-Formulario-T-14.pdf",
+    "bytes": 1739202,
+    "sha256": "fd8b606e9897a1d122e6187e6e2ed3ede07713178f6dc94da12551d51397dc6d"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/preparacion-final/AUDIT-Formulario-T-15.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\preparacion-final\\AUDIT-Formulario-T-15.pdf",
+    "bytes": 833776,
+    "sha256": "586410b1cc7391cd2b0f6baa282cf4a263b80a541b410c59fe84a4fd67fa8950"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/preparacion-final/AUDIT-Formulario-T-18.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\preparacion-final\\AUDIT-Formulario-T-18.pdf",
+    "bytes": 799979,
+    "sha256": "6165771758668b951ade3a4678e5beec06c3648fcb810a3aec6fb479933b75af"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/preparacion-final/LEEME.md",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\preparacion-final\\LEEME.md",
+    "bytes": 802,
+    "sha256": "54802ebeb3cab0139d3d27a92479cbc459ce3a5a582dfa2e01cf6ca2e701fb9a"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/preparacion-final/SOBRE2_AUDIT_SUBDOC07_20261125.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\preparacion-final\\SOBRE2_AUDIT_SUBDOC07_20261125.pdf",
+    "bytes": 2512600,
+    "sha256": "7a05893fea31c5ee12f2f6502319a77b07074f5d6cb7348e6a89db820ff23f02"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/preparacion-final/cierre-20261125/AUDIT-Formulario-T-14.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\preparacion-final\\cierre-20261125\\AUDIT-Formulario-T-14.pdf",
+    "bytes": 1179152,
+    "sha256": "dab84c1413f6ead44c52e794fca20ecaa2d578a49ca63dc6e399dba49e40c95d"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/preparacion-final/cierre-20261125/AUDIT-Formulario-T-15.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\preparacion-final\\cierre-20261125\\AUDIT-Formulario-T-15.pdf",
+    "bytes": 788123,
+    "sha256": "907c44fb8c633fdf9410a559252892b6fde0b373e707a8f0281882dbdff42ae4"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/preparacion-final/cierre-20261125/AUDIT-Formulario-T-18.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\preparacion-final\\cierre-20261125\\AUDIT-Formulario-T-18.pdf",
+    "bytes": 742400,
+    "sha256": "d9608c17526079dc3696e8eeff6643349b3bd5ca8099e1c6dcebec7651eaecbd"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/preparacion-final/cierre-20261125/AUDIT-Subdocumento7.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\preparacion-final\\cierre-20261125\\AUDIT-Subdocumento7.pdf",
+    "bytes": 1580218,
+    "sha256": "74086f9492915718f9dc43daead18232fae70922e2e88aef731831ef00427372"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/preparacion-final/cierre-20261125/LEEME.md",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\preparacion-final\\cierre-20261125\\LEEME.md",
+    "bytes": 185,
+    "sha256": "dcbf5610466cd734904489355bd4cf5b80e80f32b7fd651ce3ca17fafcb7fa02"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/preparacion-final/comprobaciones.json",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\preparacion-final\\comprobaciones.json",
+    "bytes": 1258,
+    "sha256": "b1e22f474bb274e29fe666caf22e39053541b00a72c2825a635681a046ddc75e"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/preparacion-final/manifiesto.json",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\preparacion-final\\manifiesto.json",
+    "bytes": 2107,
+    "sha256": "e715ce290c45b1b9b8198d0c767cb0903223ce1f64f9e54785f2faf493364c73"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/preparacion-final/verificacion.md",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\preparacion-final\\verificacion.md",
+    "bytes": 7683,
+    "sha256": "6f4fb13b938f8c82293867415e0bde3028e4d4c57fe673240694d452344e145d"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/version-anterior/2026-11-02/.gitignore",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\version-anterior\\2026-11-02\\.gitignore",
+    "bytes": 99,
+    "sha256": "4d8134c235ba869f1273c113d7af0eedbba31e7efcc7075947fb50820c221f71"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/version-anterior/2026-11-02/LEEME.md",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\version-anterior\\2026-11-02\\LEEME.md",
+    "bytes": 753,
+    "sha256": "7a7ea23b1e743d766eee6ae5a5972a4f27431d52f66984ae167e6eaccee50fc1"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/version-anterior/2026-11-02/edt/LEEME.md",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\version-anterior\\2026-11-02\\edt\\LEEME.md",
+    "bytes": 137,
+    "sha256": "8b5c036f6cc71b21caf68354c67a698a3ca5463c2590f84be7974dbfc97c6e87"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/version-anterior/2026-11-02/edt/edt-detalle-01-1.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\version-anterior\\2026-11-02\\edt\\edt-detalle-01-1.pdf",
+    "bytes": 14971,
+    "sha256": "a4c38e7578ffef61ea8bfea1315ceb5a74a2c8830b7d61801d4371c901698dd0"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/version-anterior/2026-11-02/edt/edt-detalle-02-1.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\version-anterior\\2026-11-02\\edt\\edt-detalle-02-1.pdf",
+    "bytes": 15188,
+    "sha256": "ce99f2d02d4387eca0b95c3bd3783375113d41cb03e44088f62c88d24bd7ddba"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/version-anterior/2026-11-02/edt/edt-detalle-02-2.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\version-anterior\\2026-11-02\\edt\\edt-detalle-02-2.pdf",
+    "bytes": 14955,
+    "sha256": "201a92ea17f35f797a81f90b0c7230609e9cc3ddf890852a0e0d1d50b3300c06"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/version-anterior/2026-11-02/edt/edt-detalle-03-1.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\version-anterior\\2026-11-02\\edt\\edt-detalle-03-1.pdf",
+    "bytes": 14978,
+    "sha256": "9667765c7cb66fccc5774f31d6ff550fb54221d811919f953b19abbaaa43784c"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/version-anterior/2026-11-02/edt/edt-detalle-03-2.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\version-anterior\\2026-11-02\\edt\\edt-detalle-03-2.pdf",
+    "bytes": 14668,
+    "sha256": "5e4928d249ab755b8247ed0be64c28c48462ab736320d72d7be56e021fbff89e"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/version-anterior/2026-11-02/edt/edt-detalle-04-1.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\version-anterior\\2026-11-02\\edt\\edt-detalle-04-1.pdf",
+    "bytes": 14992,
+    "sha256": "6edcebd1aa05d89134ac3a26c591efd2ad32b8fd9b69032dcdf246fc80288b96"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/version-anterior/2026-11-02/edt/edt-detalle-05-1.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\version-anterior\\2026-11-02\\edt\\edt-detalle-05-1.pdf",
+    "bytes": 14860,
+    "sha256": "3d4414d509ba358b40e76ba2d86b2fa0ad4dead97a6b613812cf9084ad510596"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/version-anterior/2026-11-02/edt/edt-detalle-05-2.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\version-anterior\\2026-11-02\\edt\\edt-detalle-05-2.pdf",
+    "bytes": 14881,
+    "sha256": "8e476ea85047fc1656fcf1499b23b71183d8ffe5d85819481790125330b14501"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/version-anterior/2026-11-02/edt/edt-detalle-05-3.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\version-anterior\\2026-11-02\\edt\\edt-detalle-05-3.pdf",
+    "bytes": 14659,
+    "sha256": "fd9b3e58871b54b0c0ed0c2847cc656a81a4b0da94f1597010c62adf117d8a73"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/version-anterior/2026-11-02/edt/edt-detalle-06-1.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\version-anterior\\2026-11-02\\edt\\edt-detalle-06-1.pdf",
+    "bytes": 14975,
+    "sha256": "c14f28fbcdbbd315a3b377624a5a521bfcb2739938b8f9c872cd9749e4ba4798"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/version-anterior/2026-11-02/edt/edt-detalle-06-2.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\version-anterior\\2026-11-02\\edt\\edt-detalle-06-2.pdf",
+    "bytes": 14801,
+    "sha256": "9009241aea7f7f4ab8cffaf6f8ce431f610b19a12d8d8ae3cbba0343ab0f486e"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/version-anterior/2026-11-02/edt/edt-detalle-07-1.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\version-anterior\\2026-11-02\\edt\\edt-detalle-07-1.pdf",
+    "bytes": 15007,
+    "sha256": "8e48d77629dc631004f52ea31792c28fb554f1f847f38aae9ccfd9338dcfc888"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/version-anterior/2026-11-02/edt/edt-detalle-08-1.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\version-anterior\\2026-11-02\\edt\\edt-detalle-08-1.pdf",
+    "bytes": 14907,
+    "sha256": "c1564a3a142e776ebffa76832cb19e198b474dff9c0714be3f78623bee56c56e"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/version-anterior/2026-11-02/edt/edt-detalle-08-2.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\version-anterior\\2026-11-02\\edt\\edt-detalle-08-2.pdf",
+    "bytes": 14789,
+    "sha256": "93ae1cdacfe10d21e1f10860ca3a5fa0d6eba870fc0dd1db83252465eecc3b9d"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/version-anterior/2026-11-02/edt/edt-detalle-09-1.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\version-anterior\\2026-11-02\\edt\\edt-detalle-09-1.pdf",
+    "bytes": 15086,
+    "sha256": "b5a64d23ecee6e719460c73ccf636a1284338567cd41deb41eeace82a826010e"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/version-anterior/2026-11-02/edt/edt-detalle-10-1.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\version-anterior\\2026-11-02\\edt\\edt-detalle-10-1.pdf",
+    "bytes": 14933,
+    "sha256": "b93d9ef357ccd8732162a01a6abb6ab5a615f318bb8815c75f5367f5712d2bc7"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/version-anterior/2026-11-02/edt/edt-detalle-11-1.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\version-anterior\\2026-11-02\\edt\\edt-detalle-11-1.pdf",
+    "bytes": 14974,
+    "sha256": "e5e2bce6896ad596f59e970cc35db30ded7f9c6600187c85f22db5c65e90e339"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/version-anterior/2026-11-02/edt/edt-detalle-11-2.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\version-anterior\\2026-11-02\\edt\\edt-detalle-11-2.pdf",
+    "bytes": 14704,
+    "sha256": "70e9ff5116bd074e2611171cb921c695bdeae0109292ee1ebe3620fcc2fb2c84"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/version-anterior/2026-11-02/edt/edt-detalle-12-1.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\version-anterior\\2026-11-02\\edt\\edt-detalle-12-1.pdf",
+    "bytes": 14834,
+    "sha256": "55bc4ddd2d7fb1fca01deb971d748ff934b11cdcc0dfc9b38146358a689ef718"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/version-anterior/2026-11-02/edt/edt-detalle-12-2.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\version-anterior\\2026-11-02\\edt\\edt-detalle-12-2.pdf",
+    "bytes": 14827,
+    "sha256": "f7a733fb4444989704f5ab1a8716068279c6fdd8c0b35f80466d1960f03551de"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/version-anterior/2026-11-02/edt/edt-detalle-13-1.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\version-anterior\\2026-11-02\\edt\\edt-detalle-13-1.pdf",
+    "bytes": 14855,
+    "sha256": "2ed663c2eeb0f78cbff32ecb5e26294c6f5f336a7e95f8edcbadfb33fca5a3b1"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/version-anterior/2026-11-02/edt/edt-detalle-13-2.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\version-anterior\\2026-11-02\\edt\\edt-detalle-13-2.pdf",
+    "bytes": 14634,
+    "sha256": "718e889c6b54ab780cf0b48de41a9b2d07cb6a434c8b62b420de79960bb44236"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/version-anterior/2026-11-02/edt/edt-general.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\version-anterior\\2026-11-02\\edt\\edt-general.pdf",
+    "bytes": 15816,
+    "sha256": "89490a177b55586ba753b260077c0704f1afe717de653dc040f7aa65f7bd3712"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/version-anterior/2026-11-02/graficos/Gantt_Completa_Formato_Unificado.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\version-anterior\\2026-11-02\\graficos\\Gantt_Completa_Formato_Unificado.pdf",
+    "bytes": 11026422,
+    "sha256": "485ea677b993eb6553aae661d92594f2a150035a16edbe87b2f050ba0ad358ed"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/version-anterior/2026-11-02/graficos/gantt-general.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\version-anterior\\2026-11-02\\graficos\\gantt-general.pdf",
+    "bytes": 16078,
+    "sha256": "1722c107a6a243df94b128f3ad131f8868e41239fb5b4130ed264f83cc921930"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/version-anterior/2026-11-02/graficos/gantt-m24-detalle-01.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\version-anterior\\2026-11-02\\graficos\\gantt-m24-detalle-01.pdf",
+    "bytes": 15559,
+    "sha256": "60e9e8faa4a890ef9c5a63b266a925a8c19549bebdeeca0b5e473b972ea80dc6"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/version-anterior/2026-11-02/graficos/gantt-m24-detalle-02.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\version-anterior\\2026-11-02\\graficos\\gantt-m24-detalle-02.pdf",
+    "bytes": 15454,
+    "sha256": "578b20bf0d90215775dc68bcd50a18b601d1893dd5c2a8a58e53c1318803e9f1"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/version-anterior/2026-11-02/graficos/gantt-m24-detalle-03.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\version-anterior\\2026-11-02\\graficos\\gantt-m24-detalle-03.pdf",
+    "bytes": 15507,
+    "sha256": "93cab57d72d439d8ceaf3301230fed367f7715abdc25c056c3dd1b4e3dead266"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/version-anterior/2026-11-02/graficos/gantt-m24-detalle-04.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\version-anterior\\2026-11-02\\graficos\\gantt-m24-detalle-04.pdf",
+    "bytes": 15507,
+    "sha256": "b785adb101f7884d1aebbbcf9dc4a64be88b1ea2076cfb2c701c1cca8da2fabd"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/version-anterior/2026-11-02/graficos/gantt-m24-detalle-05.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\version-anterior\\2026-11-02\\graficos\\gantt-m24-detalle-05.pdf",
+    "bytes": 15548,
+    "sha256": "f14811f3aca024074801def6b6819c69cac01c9aae3f61c6c2e67ad9e104775c"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/version-anterior/2026-11-02/graficos/gantt-m24-detalle-06.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\version-anterior\\2026-11-02\\graficos\\gantt-m24-detalle-06.pdf",
+    "bytes": 15426,
+    "sha256": "376f54c3902af88e399c5726bd884935b0ffcb31c24cc406a88c1882c8571134"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/version-anterior/2026-11-02/graficos/gantt-m24-detalle-07.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\version-anterior\\2026-11-02\\graficos\\gantt-m24-detalle-07.pdf",
+    "bytes": 15589,
+    "sha256": "675dd37139ada40b4102c64290a080faab9dfa24516950eede66e1e47633fedf"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/version-anterior/2026-11-02/graficos/gantt-m24-detalle-08.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\version-anterior\\2026-11-02\\graficos\\gantt-m24-detalle-08.pdf",
+    "bytes": 15612,
+    "sha256": "c17eb36c2152b6d1cd8d769641c2fb990f2e0c1258090e4566b36243f968859f"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/version-anterior/2026-11-02/graficos/gantt-m24-detalle-09.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\version-anterior\\2026-11-02\\graficos\\gantt-m24-detalle-09.pdf",
+    "bytes": 15583,
+    "sha256": "b9ca1978202e74cfb9199936b862be71b3af3052904032c662fefa1d2220cd3e"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/version-anterior/2026-11-02/graficos/gantt-m56-detalle-01.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\version-anterior\\2026-11-02\\graficos\\gantt-m56-detalle-01.pdf",
+    "bytes": 15733,
+    "sha256": "2ab06b5e13429fdaa498fa4bb53d99d5ba6357bea77b53bd8e35589775653864"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/version-anterior/2026-11-02/graficos/gantt-m56-detalle-02.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\version-anterior\\2026-11-02\\graficos\\gantt-m56-detalle-02.pdf",
+    "bytes": 15633,
+    "sha256": "e3bffc6503ee7404f58c3962e9a7cb2ae4fc05fc1f33cb921957a3486ec693dc"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/version-anterior/2026-11-02/graficos/gantt-m56-detalle-03.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\version-anterior\\2026-11-02\\graficos\\gantt-m56-detalle-03.pdf",
+    "bytes": 15685,
+    "sha256": "763787e868633a602058f213f42d266eca6b0b9a3e0eaeb8c27abdf442c21bba"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/version-anterior/2026-11-02/graficos/gantt-m56-detalle-04.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\version-anterior\\2026-11-02\\graficos\\gantt-m56-detalle-04.pdf",
+    "bytes": 15668,
+    "sha256": "d70718a355f2bbf76b65b367516323c580c5543d22b6b3142d0bf40e430c4ad2"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/version-anterior/2026-11-02/graficos/gantt-m56-detalle-05.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\version-anterior\\2026-11-02\\graficos\\gantt-m56-detalle-05.pdf",
+    "bytes": 15730,
+    "sha256": "b31acbfe6cb669c49dd1f916b50821b8f5d79cd96a2056f78d4b15f6f9b732ed"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/version-anterior/2026-11-02/graficos/gantt-m56-detalle-06.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\version-anterior\\2026-11-02\\graficos\\gantt-m56-detalle-06.pdf",
+    "bytes": 15601,
+    "sha256": "00ed70d70e1a717dfd84a454d21dae1d17a8bcd1fa9b7681184203d500717495"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/version-anterior/2026-11-02/graficos/gantt-m56-detalle-07.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\version-anterior\\2026-11-02\\graficos\\gantt-m56-detalle-07.pdf",
+    "bytes": 15763,
+    "sha256": "633361ce220cb1e19a9fc58e0c475843d60b5d72cad400a39dbc0fa8a4299cdd"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/version-anterior/2026-11-02/graficos/gantt-m56-detalle-08.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\version-anterior\\2026-11-02\\graficos\\gantt-m56-detalle-08.pdf",
+    "bytes": 15795,
+    "sha256": "dbdfbf0104b47a0bca3afca8555ee92a487df7d50137c00297a63768e2855b15"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/version-anterior/2026-11-02/graficos/gantt-m56-detalle-09.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\version-anterior\\2026-11-02\\graficos\\gantt-m56-detalle-09.pdf",
+    "bytes": 15763,
+    "sha256": "980a3f7323d51e058c8dd09c40e77b24838dcfe681165ed3bf2d89a133498d73"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/version-anterior/2026-11-02/graficos/gantt-red-critica.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\version-anterior\\2026-11-02\\graficos\\gantt-red-critica.pdf",
+    "bytes": 554508,
+    "sha256": "0d998d005bb5d7c3700b7ff9f5e7759f94e9aadab42dc26521391cbd911f4c4d"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/version-anterior/2026-11-02/graficos/gantt-transicion.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\version-anterior\\2026-11-02\\graficos\\gantt-transicion.pdf",
+    "bytes": 3701,
+    "sha256": "2af03cc2b07db82a117f0c3d479689b9aeeb75a8f0c3b495e525f9823ae01ba6"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/version-anterior/2026-11-02/graficos/generar_gantt_red.py",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\version-anterior\\2026-11-02\\graficos\\generar_gantt_red.py",
+    "bytes": 6561,
+    "sha256": "6742ae59cab44e212d7f3a342201c89c9ebd205e5800a83a86f884bd6c6adc2b"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/version-anterior/2026-11-02/graficos/generar_gantt_uniforme.py",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\version-anterior\\2026-11-02\\graficos\\generar_gantt_uniforme.py",
+    "bytes": 209,
+    "sha256": "c8bd8907862f05486ea9fdd2187a4824877e30fce2a53c2111b74351893668d1"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/version-anterior/2026-11-02/graficos/uniforme/gantt-general.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\version-anterior\\2026-11-02\\graficos\\uniforme\\gantt-general.pdf",
+    "bytes": 553341,
+    "sha256": "e72b57c3ed89814f729d2f9a9d707293f33bf09c9e9a9d6ba44c68088a1484ec"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/version-anterior/2026-11-02/graficos/uniforme/gantt-m24-detalle-01.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\version-anterior\\2026-11-02\\graficos\\uniforme\\gantt-m24-detalle-01.pdf",
+    "bytes": 551737,
+    "sha256": "731a0d5419111f772dcc53155bf73c3fb0936ca94073e9c3c0b909baf6549b53"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/version-anterior/2026-11-02/graficos/uniforme/gantt-m24-detalle-02.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\version-anterior\\2026-11-02\\graficos\\uniforme\\gantt-m24-detalle-02.pdf",
+    "bytes": 551707,
+    "sha256": "595ee60bdc41acfa9c84ee49a8e0ca6fdba02da4d7c5515540c587b43389294d"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/version-anterior/2026-11-02/graficos/uniforme/gantt-m24-detalle-03.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\version-anterior\\2026-11-02\\graficos\\uniforme\\gantt-m24-detalle-03.pdf",
+    "bytes": 551882,
+    "sha256": "b95be507aef7bebcb5541715a80b47d4256112e81daf82f4c4ce665bf591d94f"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/version-anterior/2026-11-02/graficos/uniforme/gantt-m24-detalle-04.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\version-anterior\\2026-11-02\\graficos\\uniforme\\gantt-m24-detalle-04.pdf",
+    "bytes": 551693,
+    "sha256": "27e63f2742a5f062ca7b27f1e9e43d6189670e5fa9da7058f41b128f52c6ec64"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/version-anterior/2026-11-02/graficos/uniforme/gantt-m24-detalle-05.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\version-anterior\\2026-11-02\\graficos\\uniforme\\gantt-m24-detalle-05.pdf",
+    "bytes": 551907,
+    "sha256": "726308e5d623c2f3966986a29d09b67cdf35b8f69255e7273351d84084d5b52e"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/version-anterior/2026-11-02/graficos/uniforme/gantt-m24-detalle-06.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\version-anterior\\2026-11-02\\graficos\\uniforme\\gantt-m24-detalle-06.pdf",
+    "bytes": 551659,
+    "sha256": "203e04885f1275cc19dd95b7d879abff2008e220b4185a8732a66a94ba1a7e53"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/version-anterior/2026-11-02/graficos/uniforme/gantt-m24-detalle-07.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\version-anterior\\2026-11-02\\graficos\\uniforme\\gantt-m24-detalle-07.pdf",
+    "bytes": 551969,
+    "sha256": "8d138c0516fb4517fe0e959b01137eb2a9b0f4f76d01efb1e176f07bdc811e24"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/version-anterior/2026-11-02/graficos/uniforme/gantt-m24-detalle-08.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\version-anterior\\2026-11-02\\graficos\\uniforme\\gantt-m24-detalle-08.pdf",
+    "bytes": 552405,
+    "sha256": "0159d876f2adad3fec9d093a18878887a06b67dfc788fd9a55ac10d6ade28526"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/version-anterior/2026-11-02/graficos/uniforme/gantt-m24-detalle-09.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\version-anterior\\2026-11-02\\graficos\\uniforme\\gantt-m24-detalle-09.pdf",
+    "bytes": 552152,
+    "sha256": "5ca0d361a7ec04ab56b0580618b420774d342179f64936fa8eba2bcb69bb97b5"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/version-anterior/2026-11-02/graficos/uniforme/gantt-m56-detalle-01.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\version-anterior\\2026-11-02\\graficos\\uniforme\\gantt-m56-detalle-01.pdf",
+    "bytes": 551925,
+    "sha256": "9f5d2bb5665ef5db91118bbff7ce3474560abf44e2a82d5ca40dd53bb946f20b"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/version-anterior/2026-11-02/graficos/uniforme/gantt-m56-detalle-02.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\version-anterior\\2026-11-02\\graficos\\uniforme\\gantt-m56-detalle-02.pdf",
+    "bytes": 551910,
+    "sha256": "89a387552ad9cd074da39c8151cef8dd72f1ae904e251e49eab0b1930dae7bf2"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/version-anterior/2026-11-02/graficos/uniforme/gantt-m56-detalle-03.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\version-anterior\\2026-11-02\\graficos\\uniforme\\gantt-m56-detalle-03.pdf",
+    "bytes": 552077,
+    "sha256": "1d00e7fd264d12fc3fb376821f7ca6f013d2ea0934ad86513007de58ebc778d9"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/version-anterior/2026-11-02/graficos/uniforme/gantt-m56-detalle-04.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\version-anterior\\2026-11-02\\graficos\\uniforme\\gantt-m56-detalle-04.pdf",
+    "bytes": 551872,
+    "sha256": "68d014262b48cd951b9760467d1da501638e7f3e4d5cffdfee6f5b94954ac9d6"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/version-anterior/2026-11-02/graficos/uniforme/gantt-m56-detalle-05.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\version-anterior\\2026-11-02\\graficos\\uniforme\\gantt-m56-detalle-05.pdf",
+    "bytes": 552114,
+    "sha256": "b39fe02f9c77608e46dcf1906fedee627fc91e96606b1a98c530175ac3027386"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/version-anterior/2026-11-02/graficos/uniforme/gantt-m56-detalle-06.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\version-anterior\\2026-11-02\\graficos\\uniforme\\gantt-m56-detalle-06.pdf",
+    "bytes": 551862,
+    "sha256": "1a3cbc6d330a122b7ec3c38670cf0314a2680da6f63359d31eec978cc2bccdfb"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/version-anterior/2026-11-02/graficos/uniforme/gantt-m56-detalle-07.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\version-anterior\\2026-11-02\\graficos\\uniforme\\gantt-m56-detalle-07.pdf",
+    "bytes": 552172,
+    "sha256": "c86d69a615fcaa26b7d2e8e867184f29c1614cfc5e7777ee4b5c8832ba1475db"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/version-anterior/2026-11-02/graficos/uniforme/gantt-m56-detalle-08.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\version-anterior\\2026-11-02\\graficos\\uniforme\\gantt-m56-detalle-08.pdf",
+    "bytes": 552620,
+    "sha256": "74e27c2f399a2693d51250cd2492d59fd250608cfc8c8d9c59476941c679337e"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/version-anterior/2026-11-02/graficos/uniforme/gantt-m56-detalle-09.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\version-anterior\\2026-11-02\\graficos\\uniforme\\gantt-m56-detalle-09.pdf",
+    "bytes": 552357,
+    "sha256": "ee340bf184108ad97341a109d29ea2400a1421575a48ff8c50b1ffef01696796"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/version-anterior/2026-11-02/informes/S7_Integrado_EDT_antes_cierre_final.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\version-anterior\\2026-11-02\\informes\\S7_Integrado_EDT_antes_cierre_final.pdf",
+    "bytes": 7661190,
+    "sha256": "8a97ae42c9d34167fce33cd4dbf016bdaefcf203d798a4d1e54034f269a130c9"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/version-anterior/2026-11-02/informes/S7_Integrado_Revision_pre_EDT.pdf",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\version-anterior\\2026-11-02\\informes\\S7_Integrado_Revision_pre_EDT.pdf",
+    "bytes": 8015448,
+    "sha256": "8dca5336347d4d4c012c5a7d122d49e9afedf66bf54c2da8b83766e028634891"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/07-plan-trabajo/version-anterior/2026-11-02/movimientos.json",
+    "destino": "fuentes\\subdocumentos\\07-plan-trabajo\\version-anterior\\2026-11-02\\movimientos.json",
+    "bytes": 8576,
+    "sha256": "722a1e2ab5ccc23fac81eeeedb34e41a838aa1b65819edf945f7145fc873f8c3"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/08-riesgos/contenido.tex",
+    "destino": "fuentes\\subdocumentos\\08-riesgos\\contenido.tex",
+    "bytes": 43471,
+    "sha256": "2e96233066720c44e9ab730200a44489af060b08b73e3cefe23b4a72af40130a"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/08-riesgos/declaracion-ia.tex",
+    "destino": "fuentes\\subdocumentos\\08-riesgos\\declaracion-ia.tex",
+    "bytes": 2807,
+    "sha256": "29f8ff1df6b4df7ba7d333a2a915adc5ec088148624e50216e5f3f90a3529880"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/08-riesgos/formularios/T-16.tex",
+    "destino": "fuentes\\subdocumentos\\08-riesgos\\formularios\\T-16.tex",
+    "bytes": 29331,
+    "sha256": "141feb32085dd737be086800c5a49a503b2b2fe23aba4c15ebaeb5510e656bbf"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/08-riesgos/meta.tex",
+    "destino": "fuentes\\subdocumentos\\08-riesgos\\meta.tex",
+    "bytes": 334,
+    "sha256": "ff61fde724ed048760ba37a4e1e20fac49643e326bef30835086cfc796c6c804"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/09-calidad/contenido.md",
+    "destino": "fuentes\\subdocumentos\\09-calidad\\contenido.md",
+    "bytes": 39657,
+    "sha256": "d6a1b60c53427b9bbf190c32432c71bafde07f63966bbf4ab30b2a2fe4f3ffd0"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/09-calidad/contenido.tex",
+    "destino": "fuentes\\subdocumentos\\09-calidad\\contenido.tex",
+    "bytes": 37243,
+    "sha256": "dbe81a808f28de46de0612221c2b8f24e5fde8ed892d3a5a58ae97d39dc77e3e"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/09-calidad/declaracion-ia.tex",
+    "destino": "fuentes\\subdocumentos\\09-calidad\\declaracion-ia.tex",
+    "bytes": 1865,
+    "sha256": "e9af098a570d0dcb54afca3c1e0c49ae5816633ee354b03073db3af9a4e8af7e"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/09-calidad/figuras-vectoriales-respaldo.tex",
+    "destino": "fuentes\\subdocumentos\\09-calidad\\figuras-vectoriales-respaldo.tex",
+    "bytes": 983,
+    "sha256": "9ddb10ed4af768afe008243d25215df9d487c55cd11dd8e07d2feabfb3cdd002"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/09-calidad/formularios/T-13.md",
+    "destino": "fuentes\\subdocumentos\\09-calidad\\formularios\\T-13.md",
+    "bytes": 11155,
+    "sha256": "c639a7d7eb2ca57278654b49b8ceb4a6425b563faefac57ce92aa976f7efd1c4"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/09-calidad/formularios/T-13.tex",
+    "destino": "fuentes\\subdocumentos\\09-calidad\\formularios\\T-13.tex",
+    "bytes": 12795,
+    "sha256": "ea2382ae8efbab768fd82979718df083433ddaf2596e7a827455b5dce23bf3ce"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/09-calidad/formularios/T-17.md",
+    "destino": "fuentes\\subdocumentos\\09-calidad\\formularios\\T-17.md",
+    "bytes": 430465,
+    "sha256": "5517f2586002bde26a751fb545dcb474a5f5d1aa424c896278dbdec65b2f3385"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/09-calidad/formularios/T-17.tex",
+    "destino": "fuentes\\subdocumentos\\09-calidad\\formularios\\T-17.tex",
+    "bytes": 4953,
+    "sha256": "399501024aad0df7b84e678bd1452071ae80eb50a6e4b824e9069810d4406d46"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/09-calidad/formularios/catalogo-T-17.tex",
+    "destino": "fuentes\\subdocumentos\\09-calidad\\formularios\\catalogo-T-17.tex",
+    "bytes": 415609,
+    "sha256": "4f9bb84915edf32929dedf8987f4d0cfd87e6aa386dcc6fcb4308e2f0aebd92f"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/09-calidad/formularios/protocolos-hitos-T-17.tex",
+    "destino": "fuentes\\subdocumentos\\09-calidad\\formularios\\protocolos-hitos-T-17.tex",
+    "bytes": 34260,
+    "sha256": "9b4d00470f573553ae36192c7b550f2555d60a6a43126db2db73c40a48b7611e"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/09-calidad/formularios/trazabilidad-T-17.tex",
+    "destino": "fuentes\\subdocumentos\\09-calidad\\formularios\\trazabilidad-T-17.tex",
+    "bytes": 21867,
+    "sha256": "737d15f21ee7a380d67d1248e43d503db378d1d12fe68e927f5eb2395668949f"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/09-calidad/meta.tex",
+    "destino": "fuentes\\subdocumentos\\09-calidad\\meta.tex",
+    "bytes": 385,
+    "sha256": "9dadc8336a9a039fbb9821d7cf66a61a82ed6b80dc5d7249cb952d08c8e15f94"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/10-operacion/contenido.tex",
+    "destino": "fuentes\\subdocumentos\\10-operacion\\contenido.tex",
+    "bytes": 26797,
+    "sha256": "2ef3882d881f6a146a03ddce9af5eda22425e9d4a2c905b31109a499f9791f7b"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/10-operacion/declaracion-ia.tex",
+    "destino": "fuentes\\subdocumentos\\10-operacion\\declaracion-ia.tex",
+    "bytes": 2481,
+    "sha256": "bb2ca4e27cffa7ca562377ccfaca09221da15f35bf44d688a983c545ed1aae41"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/10-operacion/meta.tex",
+    "destino": "fuentes\\subdocumentos\\10-operacion\\meta.tex",
+    "bytes": 285,
+    "sha256": "c3500dfe7e5ce95261cabb581144c2e37c875a27a5a58981bc00a0d37d001c26"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/11-planes-operacion/contenido.tex",
+    "destino": "fuentes\\subdocumentos\\11-planes-operacion\\contenido.tex",
+    "bytes": 20854,
+    "sha256": "b636b0fb78e2ebdad0ff6df39660bc7d5f0dcab810dcc7ac306cc0673c4b421d"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/11-planes-operacion/declaracion-ia.tex",
+    "destino": "fuentes\\subdocumentos\\11-planes-operacion\\declaracion-ia.tex",
+    "bytes": 1917,
+    "sha256": "82a284efc415cf5e5b6a4ca5b529c4481888612c7f4a7a696640592407390431"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/11-planes-operacion/meta.tex",
+    "destino": "fuentes\\subdocumentos\\11-planes-operacion\\meta.tex",
+    "bytes": 281,
+    "sha256": "8d18b9fab6ab2776219e07ffe999c8d467b9a65994313009909a11bea26a873c"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/12-equipo/contenido.tex",
+    "destino": "fuentes\\subdocumentos\\12-equipo\\contenido.tex",
+    "bytes": 25352,
+    "sha256": "f02dbfb66cea601b2ce1999ef5df5b44df7a3fe1a12e7518eec57a9c88ce8d25"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/12-equipo/declaracion-ia.tex",
+    "destino": "fuentes\\subdocumentos\\12-equipo\\declaracion-ia.tex",
+    "bytes": 2222,
+    "sha256": "dfe30531ed0609bdd0c6ae23501dec18110324e3d6bb60ee0f7b61ef8ffdb9dc"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/12-equipo/formularios/T-8.tex",
+    "destino": "fuentes\\subdocumentos\\12-equipo\\formularios\\T-8.tex",
+    "bytes": 9477,
+    "sha256": "7e9917946d0b4b8e7f5fd8608d84588d64cf522c1bd476412206fbdca600765d"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/12-equipo/meta.tex",
+    "destino": "fuentes\\subdocumentos\\12-equipo\\meta.tex",
+    "bytes": 278,
+    "sha256": "40bee004e28f3c483bf76378706d0acc129f9830a48d39dd57076095c7dc231b"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/13-innovaciones/contenido.tex",
+    "destino": "fuentes\\subdocumentos\\13-innovaciones\\contenido.tex",
+    "bytes": 51816,
+    "sha256": "1196efec92cc33d31e0c6f2db5edb9ef82b48c0025e827977e69f774f73b9559"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/13-innovaciones/declaracion-ia.tex",
+    "destino": "fuentes\\subdocumentos\\13-innovaciones\\declaracion-ia.tex",
+    "bytes": 4103,
+    "sha256": "ff33c46ec3a472949e55df31c269ae87b036fdfb904c151ac07a69352930e95b"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/13-innovaciones/formularios/T-19.tex",
+    "destino": "fuentes\\subdocumentos\\13-innovaciones\\formularios\\T-19.tex",
+    "bytes": 25562,
+    "sha256": "762dcd7c84a361906a73a4da187693f4510846e80eee741f92f9ef3cae7a42bb"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/13-innovaciones/meta.tex",
+    "destino": "fuentes\\subdocumentos\\13-innovaciones\\meta.tex",
+    "bytes": 3174,
+    "sha256": "e48474d4f96d332f25f005ccb46eaa54d20ccc9f9ecc51e940fc5cbe41ab43e9"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/14-ventajas/contenido.tex",
+    "destino": "fuentes\\subdocumentos\\14-ventajas\\contenido.tex",
+    "bytes": 19821,
+    "sha256": "351976f3011175062835c8923e2836df8f02c8a7cf0552dede7d92427840a63c"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/14-ventajas/declaracion-ia.tex",
+    "destino": "fuentes\\subdocumentos\\14-ventajas\\declaracion-ia.tex",
+    "bytes": 1911,
+    "sha256": "bec137c8c9e6a1dd2d440712cab1e27125b86feefa505564dea4c0441c407ce9"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/subdocumentos/14-ventajas/meta.tex",
+    "destino": "fuentes\\subdocumentos\\14-ventajas\\meta.tex",
+    "bytes": 298,
+    "sha256": "0afdfa217e1bf85d4a932d7b4ea3b485000b3c3fa3d6363025402cefd0fade26"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/temas/grises.tex",
+    "destino": "fuentes\\temas\\grises.tex",
+    "bytes": 1150,
+    "sha256": "994708def91efd5c35b22fa39094ba09d880cc98ba53ca77285503ca41548946"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/temas/marca.tex",
+    "destino": "fuentes\\temas\\marca.tex",
+    "bytes": 1474,
+    "sha256": "e2f66341bf05fb3dcbc3abfbcf906c5b8d775c52278d94b202a7063408feb265"
+  },
+  {
+    "origen": "recursos/Formato-Oferta-audIT/verificar.py",
+    "destino": "fuentes\\verificar.py",
+    "bytes": 58602,
+    "sha256": "c5f52c5ecb59c5316cc5c3e64448895b7a952881d6f516339e7c163c9b9d4241"
+  }
+]

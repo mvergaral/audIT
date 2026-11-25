@@ -1,0 +1,206 @@
+% ============================================================================
+%  pagina.sty
+%  Papel, márgenes, encabezado, y pie con folio y media firma.
+%
+%  Unidades: todos los tamaños de letra se dan en bp, el punto del PDF y de
+%  los procesadores de texto (1/72 de pulgada). El punto de TeX (pt) es
+%  1/72,27: un cuerpo de «11pt» mide 10,96 en el PDF y quedaría bajo el
+%  mínimo del Artículo 40.4. Con 11bp mide 11,00.
+%
+%  Medidas (papel carta, 215,9 x 279,4 mm)
+%    Cuerpo IBM Plex Serif 11/14,5 bp. Ancho de texto 148,9 mm = 82
+%    caracteres por línea en promedio (medido: 5,15 pt por carácter).
+%    Butterick pide 45 a 90 y Bringhurst 45 a 75. Se eligió 82 para reducir
+%    el margen sin uso, como se pidió. Para volver a 75 caracteres basta con
+%    left=52mm y right=27.9mm.
+%    Margen izquierdo 47 mm. De ellos, 28 mm (desde 12 mm) son el carril donde
+%    cuelgan los números de título, los códigos de requisito y las cifras con
+%    fuente. Las tablas anchas pueden ocupar texto más carril (183,9 mm), y
+%    las páginas preliminares (ficha, hoja resumen, índice, observaciones y
+%    referencias) usan siempre ese ancho completo.
+%    Margen derecho 20 mm.
+%    Encabezado y pie cerca del borde: el logo y el título corriente a 10 mm
+%    del borde superior, la media firma y el folio a 8 mm del inferior, ambos
+%    de 12 mm a 10 mm de los bordes laterales.
+%    Alto de texto 11 bp + 46 x 14,5 bp = 680,5 pt, una grilla exacta de 47
+%    líneas. El texto va de 17 mm del borde superior a 23,2 mm del inferior,
+%    y el pie ocupa de 4 a 19 mm: la media firma y el folio nunca tocan la
+%    última línea.
+%
+%  El folio no depende del estilo de página. Se dibuja en el gancho
+%  shipout/foreground en todas las páginas sin excepción, portadas incluidas
+%  (FEP01, Artículo 40.1). Así el estilo plain del índice no puede moverlo.
+% ============================================================================
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{pagina}[2026/09/26 Pagina, folio y media firma]
+
+\RequirePackage[letterpaper,
+  left=47mm, right=20mm, top=17mm,
+  textheight=680.5pt,
+  headheight=16pt, headsep=5mm,
+  footskip=20pt,
+  marginparwidth=28mm, marginparsep=7mm]{geometry}
+\RequirePackage{fancyhdr}
+\RequirePackage{changepage}
+\RequirePackage{pdflscape}
+
+% Cuerpo 11 pt sobre 14,5 pt de interlínea (1,32)
+\renewcommand\normalsize{%
+  \@setfontsize\normalsize{11bp}{14.5bp}%
+  \abovedisplayskip 8pt plus 2pt minus 2pt
+  \abovedisplayshortskip 4pt plus 2pt
+  \belowdisplayshortskip 4pt plus 2pt
+  \belowdisplayskip \abovedisplayskip
+  \let\@listi\@listI}
+\normalsize
+\setlength\topskip{11bp}
+
+% Sangría de primera línea igual al cuerpo del texto x 1,5, sin espacio
+% entre párrafos. El primer párrafo tras un título no se sangra.
+\setlength\parindent{16.5pt}
+\setlength\parskip{0pt}
+\raggedbottom
+\clubpenalty=10000
+\widowpenalty=10000
+\displaywidowpenalty=10000
+
+% Marcas de medida que usan los demás módulos
+\newlength\carrilInicio      \setlength\carrilInicio{12mm}
+\newlength\anchoCarril       \setlength\anchoCarril{28mm}
+\newlength\separacionCarril  \setlength\separacionCarril{7mm}
+\newlength\anchoCompleto     \setlength\anchoCompleto{\dimexpr\textwidth+35mm\relax}
+\newlength\desplazamientoCarril \setlength\desplazamientoCarril{35mm}
+% Borde derecho de encabezado y pie
+\newlength\bordeDerecho      \setlength\bordeDerecho{10mm}
+\reversemarginpar
+
+% ----------------------------------------------------------------------------
+%  Ancho completo: el contenido ocupa también el carril, de 12 mm al margen
+%  derecho. Lo usan las páginas preliminares, donde no hay números colgados.
+% ----------------------------------------------------------------------------
+\newif\ifaudit@enanchocompleto
+\newenvironment{paginaAncha}
+  {\begin{adjustwidth}{-\desplazamientoCarril}{0pt}\audit@enanchocompletotrue}
+  {\end{adjustwidth}}
+
+% Filete fino del ancho de línea, sin interlineado propio. A diferencia de
+% \hrule, respeta el corrimiento de paginaAncha.
+\newcommand\filetefino{\par\nointerlineskip
+  \noindent{\color{audit-filete}\rule{\linewidth}{0.4pt}}\par\nointerlineskip}
+
+% ----------------------------------------------------------------------------
+%  Encabezado
+% ----------------------------------------------------------------------------
+\newcommand\logoEncabezado{%
+  \raisebox{-0.9mm}{\includegraphics[height=4.4mm]{portadas/activos/logo-audit.png}}}
+\newcommand\textoEncabezado{}%  lo fija titulos.sty según la página
+
+\fancypagestyle{audit}{%
+  \fancyhf{}%
+  \fancyhfoffset[L]{\desplazamientoCarril}%
+  \fancyhfoffset[R]{\dimexpr20mm-\bordeDerecho\relax}%
+  \fancyhead[L]{\logoEncabezado}%
+  \fancyhead[R]{\sffamily\fontsize{9bp}{11bp}\selectfont\textoEncabezado}%
+  \renewcommand\headrulewidth{0.4pt}%
+  \renewcommand\headrule{{\color{audit-filete}%
+    \hrule\@height\headrulewidth\@width\headwidth\vskip-\headrulewidth}}%
+  \renewcommand\footrulewidth{0pt}}
+% plain y empty quedan sin encabezado. El folio no se ve afectado.
+\fancypagestyle{plain}{\fancyhf{}\renewcommand\headrulewidth{0pt}}
+\fancypagestyle{empty}{\fancyhf{}\renewcommand\headrulewidth{0pt}}
+\pagestyle{audit}
+
+% ----------------------------------------------------------------------------
+%  Folio inicial
+%  Por subdocumento, cada PDF empieza en 1. En modo continuo la herramienta
+%  de compilación entrega el folio con -usepretex="\def\FolioInicialExterno{N}"
+% ----------------------------------------------------------------------------
+\providecommand\FolioInicialExterno{1}
+\AtBeginDocument{\setcounter{page}{\FolioInicialExterno}}
+
+% Nombre del archivo final en que queda esta página (lo fija el documento)
+\providecommand\ArchivoActual{\jobname}
+% Los nombres de archivo llevan guiones bajos: se tratan como texto literal
+\AtBeginDocument{\edef\audit@archivo{\ArchivoActual}%
+  \edef\ArchivoActual{\detokenize\expandafter{\audit@archivo}}}
+
+% ----------------------------------------------------------------------------
+%  Registro de folios (FEP01, Artículo 40.3)
+%  Cada punto de inicio (portada, ficha, subdocumento, formulario, anexo)
+%  deja en el .aux su folio real. La hoja resumen se arma con esas entradas y
+%  la herramienta las junta cuando el sobre va en varios PDF.
+% ----------------------------------------------------------------------------
+\newcommand\registrarFolio[2]{%
+  \protected@write\@auxout{}{\string\entradaFolio{#1}{#2}{\thepage}{\ArchivoActual}}}
+\providecommand\entradaFolio[4]{}
+
+% ----------------------------------------------------------------------------
+%  Pie: identificación, zona de media firma y folio
+%  Todas las coordenadas desde la esquina inferior izquierda de la hoja física.
+% ----------------------------------------------------------------------------
+\newif\ifaudit@piecompleto \audit@piecompletotrue
+\newcommand\pieSoloFolio{\global\audit@piecompletofalse}
+\newcommand\textoPie{%
+  \dato{licitacioncorta}\enspace\textperiodcentered\enspace
+  Caso 10\enspace\textperiodcentered\enspace
+  \dato{sobre}\enspace\textperiodcentered\enspace
+  \rotuloInstancia}
+
+\newcommand\audit@mediafirma{%
+  \begingroup\edef\audit@img{\dato{mediafirma}}%
+  \ifx\audit@img\@empty\else
+    \IfFileExists{\audit@img}{%
+      \raisebox{0.6mm}{\includegraphics[height=9.5mm,width=30mm,keepaspectratio]{\audit@img}}}{}%
+  \fi\endgroup}
+
+\newcommand\audit@dibujarpie{%
+  \begingroup
+  \setlength\unitlength{1pt}%
+  \normalfont\normalcolor
+  \ifaudit@piecompleto
+    % filete superior del pie, de carril a borde derecho
+    \put(\strip@pt\dimexpr\carrilInicio\relax,
+         \strip@pt\dimexpr-\paperheight+19mm\relax){%
+      {\color{audit-filete}\rule{\dimexpr\paperwidth-\carrilInicio-\bordeDerecho\relax}{0.4pt}}}%
+    % identificación del documento
+    \put(\strip@pt\dimexpr\carrilInicio\relax,
+         \strip@pt\dimexpr-\paperheight+8mm\relax){%
+      \makebox[0pt][l]{\sffamily\fontsize{9bp}{11bp}\selectfont
+        \color{audit-secundario}\textoPie}}%
+  \fi
+  % zona de media firma: imagen, línea y rótulo (FEP01, Artículo 40.2)
+  \put(\strip@pt\dimexpr\paperwidth-58mm\relax,
+       \strip@pt\dimexpr-\paperheight+8mm\relax){%
+    \makebox[34mm][c]{\audit@mediafirma}}%
+  \put(\strip@pt\dimexpr\paperwidth-58mm\relax,
+       \strip@pt\dimexpr-\paperheight+7.4mm\relax){%
+    {\color{audit-secundario}\rule{34mm}{0.4pt}}}%
+  \put(\strip@pt\dimexpr\paperwidth-58mm\relax,
+       \strip@pt\dimexpr-\paperheight+4mm\relax){%
+    \makebox[34mm][c]{\sffamily\fontsize{9bp}{11bp}\selectfont
+      \color{audit-secundario}Media firma}}%
+  % folio, extremo inferior derecho (FEP01, Artículo 40.1)
+  \put(\strip@pt\dimexpr\paperwidth-\bordeDerecho\relax,
+       \strip@pt\dimexpr-\paperheight+8mm\relax){%
+    \makebox[0pt][r]{\sffamily\bfseries\fontsize{12bp}{14bp}\selectfont
+      \color{audit-marino}\thepage}}%
+  \put(\strip@pt\dimexpr\paperwidth-\bordeDerecho\relax,
+       \strip@pt\dimexpr-\paperheight+4mm\relax){%
+    \makebox[0pt][r]{\sffamily\fontsize{9bp}{11bp}\selectfont
+      \color{audit-secundario}Folio}}%
+  \endgroup
+  \global\audit@piecompletotrue}
+
+\AddToHook{shipout/foreground}{\audit@dibujarpie}
+
+% ----------------------------------------------------------------------------
+%  Página horizontal para anexos gráficos (FEP01, Artículo 40.4)
+%  Modo «hoja»: pdflscape gira el contenido y la página se muestra apaisada.
+%  El pie queda donde está en la hoja física, con el folio abajo a la
+%  derecha de la hoja vertical.
+% ----------------------------------------------------------------------------
+\newenvironment{paginaHorizontal}
+  {\clearpage\begin{landscape}\thispagestyle{empty}}
+  {\end{landscape}}
+
+\endinput

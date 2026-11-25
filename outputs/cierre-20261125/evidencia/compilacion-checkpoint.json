@@ -1,0 +1,632 @@
+[
+  {
+    "documento": "01",
+    "ultimo_resultado": [
+      {
+        "latex": 1,
+        "exit": 0
+      },
+      {
+        "biber": 0
+      },
+      {
+        "latex": 2,
+        "exit": 0
+      },
+      {
+        "latex": 3,
+        "exit": 0
+      }
+    ],
+    "mtime": "2026-11-25T16:12:44.525295+00:00"
+  },
+  {
+    "documento": "01T-6",
+    "ultimo_resultado": [
+      {
+        "latex": 1,
+        "exit": 0
+      },
+      {
+        "biber": 0
+      },
+      {
+        "latex": 2,
+        "exit": 0
+      },
+      {
+        "latex": 3,
+        "exit": 0
+      }
+    ],
+    "mtime": "2026-11-25T16:17:11.286143+00:00"
+  },
+  {
+    "documento": "02",
+    "ultimo_resultado": [
+      {
+        "latex": 1,
+        "exit": 0
+      },
+      {
+        "biber": 0
+      },
+      {
+        "latex": 2,
+        "exit": 0
+      },
+      {
+        "latex": 3,
+        "exit": 0
+      }
+    ],
+    "mtime": "2026-11-25T16:12:47.158770+00:00"
+  },
+  {
+    "documento": "03",
+    "ultimo_resultado": [
+      {
+        "latex": 1,
+        "exit": 0
+      },
+      {
+        "biber": 0
+      },
+      {
+        "latex": 2,
+        "exit": 0
+      },
+      {
+        "latex": 3,
+        "exit": 0
+      }
+    ],
+    "mtime": "2026-11-25T16:12:50.539071+00:00"
+  },
+  {
+    "documento": "03T-12",
+    "ultimo_resultado": [
+      {
+        "latex": 1,
+        "exit": 0
+      },
+      {
+        "biber": 0
+      },
+      {
+        "latex": 2,
+        "exit": 0
+      },
+      {
+        "latex": 3,
+        "exit": 0
+      }
+    ],
+    "mtime": "2026-11-25T16:18:48.391958+00:00"
+  },
+  {
+    "documento": "04",
+    "ultimo_resultado": [
+      {
+        "latex": 1,
+        "exit": 0
+      },
+      {
+        "biber": 0
+      },
+      {
+        "latex": 2,
+        "exit": 0
+      },
+      {
+        "latex": 3,
+        "exit": 0
+      }
+    ],
+    "mtime": "2026-11-25T16:13:39.207134+00:00"
+  },
+  {
+    "documento": "04T-11",
+    "ultimo_resultado": [
+      {
+        "latex": 1,
+        "exit": 0
+      },
+      {
+        "biber": 0
+      },
+      {
+        "latex": 2,
+        "exit": 0
+      },
+      {
+        "latex": 3,
+        "exit": 0
+      }
+    ],
+    "mtime": "2026-11-25T16:18:47.873947+00:00"
+  },
+  {
+    "documento": "05",
+    "ultimo_resultado": [
+      {
+        "latex": 1,
+        "exit": 0
+      },
+      {
+        "biber": 0
+      },
+      {
+        "latex": 2,
+        "exit": 0
+      },
+      {
+        "latex": 3,
+        "exit": 0
+      }
+    ],
+    "mtime": "2026-11-25T16:14:20.240746+00:00"
+  },
+  {
+    "documento": "06",
+    "ultimo_resultado": [
+      {
+        "latex": 1,
+        "exit": 0
+      },
+      {
+        "biber": 0
+      },
+      {
+        "latex": 2,
+        "exit": 0
+      },
+      {
+        "latex": 3,
+        "exit": 0
+      }
+    ],
+    "mtime": "2026-11-25T16:14:16.039162+00:00"
+  },
+  {
+    "documento": "06T-10",
+    "ultimo_resultado": [
+      {
+        "latex": 1,
+        "exit": 0
+      },
+      {
+        "biber": 0
+      },
+      {
+        "latex": 2,
+        "exit": 0
+      },
+      {
+        "latex": 3,
+        "exit": 0
+      }
+    ],
+    "mtime": "2026-11-25T16:18:41.112918+00:00"
+  },
+  {
+    "documento": "06T-9",
+    "ultimo_resultado": [
+      {
+        "latex": 1,
+        "exit": 0
+      },
+      {
+        "biber": 0
+      },
+      {
+        "latex": 2,
+        "exit": 0
+      },
+      {
+        "latex": 3,
+        "exit": 0
+      }
+    ],
+    "mtime": "2026-11-25T16:18:34.891863+00:00"
+  },
+  {
+    "documento": "07",
+    "ultimo_resultado": [
+      {
+        "latex": 1,
+        "exit": 0
+      },
+      {
+        "biber": 0
+      },
+      {
+        "latex": 2,
+        "exit": 0
+      },
+      {
+        "latex": 3,
+        "exit": 0
+      }
+    ],
+    "mtime": "2026-11-25T16:14:28.503977+00:00"
+  },
+  {
+    "documento": "07T-14",
+    "ultimo_resultado": [
+      {
+        "latex": 1,
+        "exit": 0
+      },
+      {
+        "biber": 0
+      },
+      {
+        "latex": 2,
+        "exit": 0
+      },
+      {
+        "latex": 3,
+        "exit": 0
+      }
+    ],
+    "mtime": "2026-11-25T16:19:43.729214+00:00"
+  },
+  {
+    "documento": "07T-15",
+    "ultimo_resultado": [
+      {
+        "latex": 1,
+        "exit": 0
+      },
+      {
+        "biber": 0
+      },
+      {
+        "latex": 2,
+        "exit": 0
+      },
+      {
+        "latex": 3,
+        "exit": 0
+      }
+    ],
+    "mtime": "2026-11-25T16:19:53.704896+00:00"
+  },
+  {
+    "documento": "07T-18",
+    "ultimo_resultado": [
+      {
+        "latex": 1,
+        "exit": 0
+      },
+      {
+        "biber": 0
+      },
+      {
+        "latex": 2,
+        "exit": 0
+      },
+      {
+        "latex": 3,
+        "exit": 0
+      }
+    ],
+    "mtime": "2026-11-25T16:19:47.500524+00:00"
+  },
+  {
+    "documento": "08",
+    "ultimo_resultado": [
+      {
+        "latex": 1,
+        "exit": 0
+      },
+      {
+        "biber": 0
+      },
+      {
+        "latex": 2,
+        "exit": 0
+      },
+      {
+        "latex": 3,
+        "exit": 0
+      }
+    ],
+    "mtime": "2026-11-25T16:14:54.300319+00:00"
+  },
+  {
+    "documento": "08T-16",
+    "ultimo_resultado": [
+      {
+        "latex": 1,
+        "exit": 0
+      },
+      {
+        "biber": 0
+      },
+      {
+        "latex": 2,
+        "exit": 0
+      },
+      {
+        "latex": 3,
+        "exit": 0
+      }
+    ],
+    "mtime": "2026-11-25T16:19:54.116500+00:00"
+  },
+  {
+    "documento": "09",
+    "ultimo_resultado": [
+      {
+        "latex": 1,
+        "exit": 0
+      },
+      {
+        "biber": 0
+      },
+      {
+        "latex": 2,
+        "exit": 0
+      },
+      {
+        "latex": 3,
+        "exit": 0
+      }
+    ],
+    "mtime": "2026-11-25T16:15:36.431867+00:00"
+  },
+  {
+    "documento": "09T-13",
+    "ultimo_resultado": [
+      {
+        "latex": 1,
+        "exit": 0
+      },
+      {
+        "biber": 0
+      },
+      {
+        "latex": 2,
+        "exit": 0
+      },
+      {
+        "latex": 3,
+        "exit": 0
+      }
+    ],
+    "mtime": "2026-11-25T16:07:28.005388+00:00"
+  },
+  {
+    "documento": "09T-17",
+    "ultimo_resultado": [
+      {
+        "latex": 1,
+        "exit": 0
+      },
+      {
+        "biber": 0
+      },
+      {
+        "latex": 2,
+        "exit": 0
+      },
+      {
+        "latex": 3,
+        "exit": 0
+      }
+    ],
+    "mtime": "2026-11-25T16:08:39.613420+00:00"
+  },
+  {
+    "documento": "10",
+    "ultimo_resultado": [
+      {
+        "latex": 1,
+        "exit": 0
+      },
+      {
+        "biber": 0
+      },
+      {
+        "latex": 2,
+        "exit": 0
+      },
+      {
+        "latex": 3,
+        "exit": 0
+      }
+    ],
+    "mtime": "2026-11-25T16:15:38.988185+00:00"
+  },
+  {
+    "documento": "11",
+    "ultimo_resultado": [
+      {
+        "latex": 1,
+        "exit": 0
+      },
+      {
+        "biber": 0
+      },
+      {
+        "latex": 2,
+        "exit": 0
+      },
+      {
+        "latex": 3,
+        "exit": 0
+      }
+    ],
+    "mtime": "2026-11-25T16:15:46.785283+00:00"
+  },
+  {
+    "documento": "12",
+    "ultimo_resultado": [
+      {
+        "latex": 1,
+        "exit": 0
+      },
+      {
+        "biber": 0
+      },
+      {
+        "latex": 2,
+        "exit": 0
+      },
+      {
+        "latex": 3,
+        "exit": 0
+      }
+    ],
+    "mtime": "2026-11-25T16:16:17.919161+00:00"
+  },
+  {
+    "documento": "12T-8",
+    "ultimo_resultado": [
+      {
+        "latex": 1,
+        "exit": 0
+      },
+      {
+        "biber": 0
+      },
+      {
+        "latex": 2,
+        "exit": 0
+      },
+      {
+        "latex": 3,
+        "exit": 0
+      }
+    ],
+    "mtime": "2026-11-25T16:07:33.994145+00:00"
+  },
+  {
+    "documento": "13",
+    "ultimo_resultado": [
+      {
+        "latex": 1,
+        "exit": 0
+      },
+      {
+        "biber": 0
+      },
+      {
+        "latex": 2,
+        "exit": 0
+      },
+      {
+        "latex": 3,
+        "exit": 0
+      }
+    ],
+    "mtime": "2026-11-25T16:17:16.033844+00:00"
+  },
+  {
+    "documento": "13T-19",
+    "ultimo_resultado": [
+      {
+        "latex": 1,
+        "exit": 0
+      },
+      {
+        "biber": 0
+      },
+      {
+        "latex": 2,
+        "exit": 0
+      },
+      {
+        "latex": 3,
+        "exit": 0
+      }
+    ],
+    "mtime": "2026-11-25T16:08:37.761724+00:00"
+  },
+  {
+    "documento": "14",
+    "ultimo_resultado": [
+      {
+        "latex": 1,
+        "exit": 0
+      },
+      {
+        "biber": 0
+      },
+      {
+        "latex": 2,
+        "exit": 0
+      },
+      {
+        "latex": 3,
+        "exit": 0
+      }
+    ],
+    "mtime": "2026-11-25T16:17:06.589771+00:00"
+  },
+  {
+    "documento": "A1",
+    "ultimo_resultado": [
+      {
+        "latex": 1,
+        "exit": 0
+      },
+      {
+        "biber": 0
+      },
+      {
+        "latex": 2,
+        "exit": 0
+      },
+      {
+        "latex": 3,
+        "exit": 0
+      }
+    ],
+    "mtime": "2026-11-25T16:08:42.401096+00:00"
+  },
+  {
+    "documento": "A2",
+    "ultimo_resultado": [
+      {
+        "latex": 1,
+        "exit": 0
+      },
+      {
+        "biber": 0
+      },
+      {
+        "latex": 2,
+        "exit": 0
+      },
+      {
+        "latex": 3,
+        "exit": 0
+      }
+    ],
+    "mtime": "2026-11-25T16:09:05.454785+00:00"
+  },
+  {
+    "documento": "A5",
+    "ultimo_resultado": [
+      {
+        "latex": 1,
+        "exit": 0
+      },
+      {
+        "biber": 0
+      },
+      {
+        "latex": 2,
+        "exit": 0
+      },
+      {
+        "latex": 3,
+        "exit": 0
+      }
+    ],
+    "mtime": "2026-11-25T16:10:24.847883+00:00"
+  }
+]

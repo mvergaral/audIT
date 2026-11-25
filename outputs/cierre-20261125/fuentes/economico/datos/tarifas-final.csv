@@ -1,0 +1,32 @@
+fase;perfil;referencia;horas;costo_uf;tarifa_uf;ingreso_clp
+Implementación;Jefe de proyecto;Jefe de Proyecto;3200;1.45;1.7515840517298782;224202758.6214244
+Implementación;Arquitectura;Arquitecto Senior;3200;1.1;1.3287879013123214;170084851.36797714
+Implementación;Seguridad;Encargado de Seguridad TI;3210.2;1.1;1.5;192611999.99999997
+Implementación;Líder QA;Analista QA Experto;3200;0.6;0.8;102400000.0
+Implementación;Líder Datos;Ingeniero de Datos;3200;0.8;1.0;128000000.0
+Implementación;SRE;Ingeniero DevOps / SRE;7360;0.8;1.0;294400000.0
+Implementación;PMO;Analista / Diseñador Junior;9120;0.6;0.7247934007158117;264404632.5811281
+Implementación;Liderazgo desarrollo;Jefe de Desarrollo;3200;1.05;1.2683884512526704;162353721.76034182
+Implementación;Software;Ingeniero Senior;12461.2;0.75;0.9059917508947646;451589776.2499937
+Implementación;Frontend;Ingeniero Senior;6082.6;0.75;0.9059917508947646;220431416.9596998
+Implementación;Datos;Ingeniero de Datos;6324.0;0.8;1.0;252960000.0
+Implementación;QA;Analista QA Senior;5675.0;0.5;0.6039945005965097;137106751.63540772
+Implementación;Firmware;Ingeniero Senior;7360;0.7;0.8455923008351136;248942373.36585745
+Implementación;Electrónica;Ingeniero Senior;2880;0.7;0.8455923008351136;97412233.0562051
+Implementación;Técnico de campo;Analista / Diseñador Junior;2193.666666666667;0.4;0.5;43873333.333333336
+Implementación;Funcional;Analista / Diseñador Experto;2880;0.75;0.9059917508947646;104370249.70307688
+Implementación;Integración;Ingeniero Senior;2880;0.75;0.9059917508947646;104370249.70307688
+Implementación;Implantación y cambio;Analista / Diseñador Experto;2880;0.75;0.9059917508947646;104370249.70307688
+Implementación;Analista terreno;Analista / Diseñador Junior;12320;0.5;0.6039945005965097;297648489.89396
+Operación;L1 24x7;Analista / Diseñador Junior;34560;0.4;0.5467819718090621;755871397.8288474
+Operación;SRE;Ingeniero DevOps / SRE;11680;0.8;1.0935639436181241;510913074.4583876
+Operación;Seguridad;Encargado de Seguridad TI;2880;1.1;1.5036504224749208;173220528.66911086
+Operación;Gestión servicio;Jefe de TIC;2880;1.05;1.435302675998788;165346868.27506036
+Operación;Monitoreo;TIC;5760;0.6;0.820172957713593;188967849.45721182
+Operación;Campo;Analista / Diseñador Junior;2880;0.4;0.5467819718090621;62989283.15240395
+Operación;Software;Ingeniero Senior;8880;0.75;1.0252161971419913;364156793.22483534
+Operación;Datos;Ingeniero de Datos;4664;0.8;1.0935639436181241;204015289.32139724
+Operación;QA;Analista QA Senior;4548;0.5;0.6834774647613275;124338220.38938071
+Operación;Arquitectura cierre;Arquitecto Senior;45;1.1;1.5036504224749208;2706570.7604548573
+Operación;Frontend cierre;Ingeniero Senior;69;0.75;1.0252161971419913;2829596.704111896
+Operación;L1 suplencias y picos;Analista / Diseñador Junior;5760;0.4;0.5467819718090621;125978566.3048079

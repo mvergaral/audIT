@@ -1,0 +1,67 @@
+{
+  "get": [
+    {
+      "ruta": "./",
+      "status": 200,
+      "bytes_iniciales": 1553
+    },
+    {
+      "ruta": "./assets/index-BJmZizgJ.js",
+      "status": 200,
+      "caracteres": 349506
+    },
+    {
+      "ruta": "./assets/index-CKIsUEJ2.css",
+      "status": 200,
+      "bytes": 41415
+    }
+  ],
+  "url": "https://carlosabarza.github.io/PaginaAudIT/",
+  "navegador": {
+    "resultado": "Recorrido no ejecutado, Edge detectó interacción concurrente",
+    "envios": 0
+  },
+  "referencia_http": "../evidencia/sitio-web.json",
+  "identidad": {
+    "og_url": "https://www.audit-ingenieria.cl",
+    "oferta": "audIT Soluciones Tecnológicas SpA",
+    "publicada": "audIT Soluciones Tecnológicas de Misión Crítica S.A."
+  },
+  "no_acreditado": [
+    "WCAG 2.2 AA",
+    "resoluciones",
+    "navegadores",
+    "permanencia",
+    "cobertura y navegación completa",
+    "reproducción y criterios RT-24"
+  ],
+  "demo": {
+    "id": "portal-modal-title",
+    "simulacion": [
+      "desconexión celular",
+      "buffer SQLite WAL",
+      "reconexión y reconciliación",
+      "credenciales demo"
+    ],
+    "nombre": "audIT TelemetryCore",
+    "tipo": "Modal incorporado",
+    "enlace_independiente_localizado": false
+  },
+  "video": {
+    "url_publica_localizada": false,
+    "validacion": "No abierto. La revisión automática rechazó acceder a la pestaña por posible contenido privado fuera del alcance.",
+    "guion": "output/pdf/Guion-video-propuesta-audIT-Curimon.pdf",
+    "indicio": "Título de MP4 en pestaña de Google Drive"
+  },
+  "anclas": [
+    "empresa",
+    "capacidades",
+    "casos",
+    "equipo",
+    "calculadora",
+    "status",
+    "recursos",
+    "contacto"
+  ],
+  "fecha": "2026-11-25"
+}

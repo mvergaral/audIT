@@ -1,0 +1,23 @@
+{
+  "grupo": "administrativo",
+  "instancia": "final",
+  "modo_folio": "unico",
+  "archivos": [
+    {
+      "clave": "ADMIN",
+      "nombre": "AUDIT-Sobre1-Antecedentes-Administrativos.pdf",
+      "folio_inicial": 1,
+      "paginas": 37,
+      "aux": "C:\\Users\\mvergara\\Documents\\ChatGPT\\Audit\\outputs\\cierre-20261125\\fuentes\\salida\\aux\\administrativo\\AUDIT-Sobre1-Antecedentes-Administrativos.aux",
+      "log": "C:\\Users\\mvergara\\Documents\\ChatGPT\\Audit\\outputs\\cierre-20261125\\fuentes\\salida\\aux\\administrativo\\AUDIT-Sobre1-Antecedentes-Administrativos.log",
+      "fuentes": [
+        [
+          "administrativo"
+        ],
+        [
+          "sobre1-antecedentes.tex"
+        ]
+      ]
+    }
+  ]
+}

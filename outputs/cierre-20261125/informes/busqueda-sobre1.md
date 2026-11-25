@@ -1,0 +1,19 @@
+# Búsqueda de respaldos y autorización del Sobre 1
+
+No encontré un expediente administrativo completo, respaldos autónomos nuevos ni una instrucción del profesor que autorice reemplazar certificados, cartas o la boleta por una ficha, declaración o maqueta específica. El artículo 93.2 sí establece expresamente que las garantías y obligaciones son elementos del ejercicio sin efecto jurídico real. El artículo 49.2 mantiene la exigencia documental dentro del ejercicio.
+
+## Respaldos administrativos
+
+El commit `c484cc6` incorporó `sobre1-antecedentes.tex` y los PDF administrativos de ambas variantes de salida. La fuente identifica los documentos como simulados y presenta nóminas de respaldos legales, financieros y habilitantes, formularios A-1 a A-6 adaptados y una ficha de garantía. La nota de simulación es parte de la propuesta del equipo. La revisión del PDF de 12 páginas comprobó que los respaldos enumerados carecen de piezas autónomas o adjuntos embebidos. [Revisión administrativa del corte](administrativo.md)
+
+No aparecieron instrumentos adicionales de personería, e-RUT, vigencia, patente, escritura o poderes, estados financieros con sus dictámenes, certificados tributarios, laborales y bancarios, cartas de mandantes o socios, boleta autónoma ni un ZIP oficial de respaldo. Hay insumos técnicos e internos sobre experiencia, certificación y A-6. La carpeta de trabajo histórica de Sobre 1 ya registraba la falta de un paquete completo. [Registro del corte previo](../../cierre-entrega-final/trabajo/Sobre1/ESTADO-ADMINISTRATIVO.md)
+
+## Autorización para sustituir documentos
+
+- **Base de la simulación.** FEP01, artículo 93, p. 46, establece la finalidad formativa y que garantías, montos, obligaciones y penalidades carecen de efecto jurídico real. El propio artículo mantiene el rigor de la documentación y consecuencias académicas. La naturaleza académica descarta una obligación bancaria real como efecto del ejercicio. El texto no define el espécimen, formato o nivel de respaldo que aceptará el profesor como equivalente a cada documento solicitado.
+- **Requisito documental.** FEP01, artículo 49.2–49.3, p. 29, pide los documentos del artículo 39, boleta de garantía en original, índice, firmas y folios, y ZIP de los escaneos con firmas y folios visibles. Los Comunicados 09 y 10 se ocupan de IA, referencias a la ficción y criterios de forma o calidad. El Comunicado 10 incluye una advertencia sobre mediciones o certificaciones ficticias en su contexto de revisión. Las aclaraciones del Informe 3 remiten al costo financiero de las garantías y no describen un sustituto documental.
+- **Evidencia de autorización específica.** La declaración de simulación del equipo en el PDF y las menciones internas a una certificadora simulada documentan decisiones del equipo. Ninguna remite a una autorización docente para entregar una nómina, ficha o muestra en lugar de los instrumentos enumerados. Sigue pendiente localizar una comunicación docente que indique las piezas que admite y cómo presentarlas.
+
+## Alcance de la búsqueda
+
+Revisé los nombres del árbol Git, ramas remotas disponibles localmente, historial alcanzable por referencias y reflogs y los cuatro worktrees registrados. Busqué nombres y texto dirigido en el proyecto, incluidos archivos ignorados y rutas fuera del checkout por sparse. Enumeré las entradas de los 15 ZIP locales del proyecto sin extraerlos. En Descargas solo cotejé nombres inequívocos de audIT, FEP, Curimón y TFEP. La búsqueda cubrió las bases por extractos, los Comunicados 09 y 10 y las aclaraciones del Informe 3. Quedan fuera las cuentas de correo, chats y plataformas docentes, archivos genéricos sin señales en nombre o contenido indexable y repositorios o copias que no estén disponibles localmente. [Evidencia y consultas](busqueda-sobre1.json)

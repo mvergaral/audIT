@@ -1,0 +1,90 @@
+{
+  "estado": "Parcial",
+  "archivo": "AUDIT_ModeloFinanciero_3_20261125.xlsx",
+  "costo_R24": {
+    "celda": "Detalle proveedores D4!E7",
+    "mes_celda": "Detalle proveedores D4!A7",
+    "mes": 3,
+    "clp": 3000000,
+    "fuente": "Informe-3/d4/4.7-riesgos-contingencias.md",
+    "naturaleza": "estimación de asesoría, régimen/proveedor pendientes"
+  },
+  "formula_pendiente": "(p_sin * L_sin - p_con * L_con)/costo_incremental",
+  "formula_umbral": "costo_incremental/(valor_neto_hito*min(0.005*dias_corridos,0.10))",
+  "condicion": "Supuestos condicionales mutuamente excluyentes por hito. No acreditan causalidad, probabilidad ni multa aplicada. No sumar H2 y H7.",
+  "umbrales": [
+    {
+      "hito": "H2",
+      "celda": "Hitos E25!G3",
+      "valor_neto_clp": 313429433.73489,
+      "dias_corridos_condicionales": 1,
+      "multa_clp": 1567147.16867445,
+      "delta_probabilidad_equilibrio": 1.914306492693669
+    },
+    {
+      "hito": "H2",
+      "celda": "Hitos E25!G3",
+      "valor_neto_clp": 313429433.73489,
+      "dias_corridos_condicionales": 2,
+      "multa_clp": 3134294.3373489,
+      "delta_probabilidad_equilibrio": 0.9571532463468345
+    },
+    {
+      "hito": "H2",
+      "celda": "Hitos E25!G3",
+      "valor_neto_clp": 313429433.73489,
+      "dias_corridos_condicionales": 5,
+      "multa_clp": 7835735.84337225,
+      "delta_probabilidad_equilibrio": 0.3828612985387338
+    },
+    {
+      "hito": "H2",
+      "celda": "Hitos E25!G3",
+      "valor_neto_clp": 313429433.73489,
+      "dias_corridos_condicionales": 20,
+      "multa_clp": 31342943.373489,
+      "delta_probabilidad_equilibrio": 0.09571532463468345
+    },
+    {
+      "hito": "H7",
+      "celda": "Hitos E25!G9",
+      "valor_neto_clp": 447756333.906986,
+      "dias_corridos_condicionales": 1,
+      "multa_clp": 2238781.66953493,
+      "delta_probabilidad_equilibrio": 1.3400145448855674
+    },
+    {
+      "hito": "H7",
+      "celda": "Hitos E25!G9",
+      "valor_neto_clp": 447756333.906986,
+      "dias_corridos_condicionales": 2,
+      "multa_clp": 4477563.33906986,
+      "delta_probabilidad_equilibrio": 0.6700072724427837
+    },
+    {
+      "hito": "H7",
+      "celda": "Hitos E25!G9",
+      "valor_neto_clp": 447756333.906986,
+      "dias_corridos_condicionales": 5,
+      "multa_clp": 11193908.347674651,
+      "delta_probabilidad_equilibrio": 0.26800290897711343
+    },
+    {
+      "hito": "H7",
+      "celda": "Hitos E25!G9",
+      "valor_neto_clp": 447756333.906986,
+      "dias_corridos_condicionales": 20,
+      "multa_clp": 44775633.390698604,
+      "delta_probabilidad_equilibrio": 0.06700072724427836
+    }
+  ],
+  "reserva": {
+    "celdas": [
+      "Parámetros corrección!B26",
+      "Parámetros corrección!B27"
+    ],
+    "clp": 152699775,
+    "mes_sensibilidad": 12,
+    "es_gasto_base": false
+  }
+}

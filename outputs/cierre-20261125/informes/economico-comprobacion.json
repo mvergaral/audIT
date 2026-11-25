@@ -1,0 +1,638 @@
+{
+  "paquete": "SOBRE3_AUDIT_OFERTA_ECONOMICA_20261125.ZIP",
+  "sha256": "464ee9cce7176f0a72dbf1765abd211daefbfceaae17afc0accca52b0415a9fe",
+  "archivos": [
+    {
+      "nombre": "AUDIT_OfertaEconomica_1_20261125.pdf",
+      "sha256": "49c64fff07cb754663c0ecd1bc078eb1c21a8198d6a9327ff51e26c64d8cd417",
+      "bytes": 1009273
+    },
+    {
+      "nombre": "AUDIT_OfertaEconomica_1_20261125.docx",
+      "sha256": "7aa52fcc9eb12ed27a8a67ec2964588b7285561eab94cb442fa8cc7135b1d264",
+      "bytes": 11011
+    },
+    {
+      "nombre": "AUDIT_AnalisisFinanciero_2_20261125.pdf",
+      "sha256": "6126ffab56cf83ae511fd927f4f1bc23bcbd0f7326830cd3655075805353cb40",
+      "bytes": 1117939
+    },
+    {
+      "nombre": "AUDIT_AnalisisFinanciero_2_20261125.docx",
+      "sha256": "cec8fe7828912e47826a1a9e5f51c3f8c08199d082d5544f70081eee97a52ad4",
+      "bytes": 89936
+    },
+    {
+      "nombre": "AUDIT_ModeloFinanciero_3_20261125.xlsx",
+      "sha256": "176e403c108029bdfa7d33595cd88f38c2a0e2804c5103f51b70f9d62ff02eb6",
+      "bytes": 744858
+    }
+  ],
+  "partidas": [
+    {
+      "clave": "implementacion",
+      "referencia": "RESUMEN!H6",
+      "esperado": 4477563339,
+      "valor": 4477563339.06986,
+      "coincide": true
+    },
+    {
+      "clave": "operacion",
+      "referencia": "RESUMEN!H7",
+      "esperado": 3890789398,
+      "valor": 3890789397.54601,
+      "coincide": true
+    },
+    {
+      "clave": "proyecto",
+      "referencia": "RESUMEN!H8",
+      "esperado": 8368352737,
+      "valor": 8368352736.61588,
+      "coincide": true
+    },
+    {
+      "clave": "gasto-proveedores",
+      "referencia": "Cuadro maestro!C12",
+      "esperado": 1053415759,
+      "valor": 1053415759,
+      "coincide": true
+    },
+    {
+      "clave": "gasto-inversion",
+      "referencia": "Cuadro maestro!C3",
+      "esperado": 545513270,
+      "valor": 545513270.333333,
+      "coincide": true
+    },
+    {
+      "clave": "gasto-total",
+      "referencia": "RESUMEN!C8",
+      "esperado": 6820207480,
+      "valor": 6820207480.34194,
+      "coincide": true
+    },
+    {
+      "clave": "costo-total",
+      "referencia": "Cuadro maestro!C19",
+      "esperado": 6820207480,
+      "valor": 6820207480.34194,
+      "coincide": true
+    },
+    {
+      "clave": "van",
+      "referencia": "Indicadores!B2",
+      "esperado": 1064658621,
+      "valor": 1064658620.88063,
+      "coincide": true
+    },
+    {
+      "clave": "innovacion-1-beneficio",
+      "referencia": "Innovaciones!E2",
+      "esperado": 0,
+      "valor": 0,
+      "coincide": true
+    },
+    {
+      "clave": "innovacion-2-beneficio",
+      "referencia": "Innovaciones!E3",
+      "esperado": 0,
+      "valor": 0,
+      "coincide": true
+    },
+    {
+      "clave": "innovacion-3-beneficio",
+      "referencia": "Innovaciones!E4",
+      "esperado": 0,
+      "valor": 0,
+      "coincide": true
+    },
+    {
+      "clave": "innovacion-4-beneficio",
+      "referencia": "Innovaciones!E5",
+      "esperado": 0,
+      "valor": 0,
+      "coincide": true
+    },
+    {
+      "clave": "innovacion-5-beneficio",
+      "referencia": "Innovaciones!E6",
+      "esperado": 0,
+      "valor": 0,
+      "coincide": true
+    },
+    {
+      "clave": "deficit-h5",
+      "referencia": "Sensibilidad!J2",
+      "esperado": 214449287,
+      "valor": 214449287.434542,
+      "coincide": true
+    },
+    {
+      "clave": "reserva-d4",
+      "referencia": "Parámetros corrección!B26",
+      "esperado": 152699775,
+      "valor": 152699775,
+      "coincide": true
+    },
+    {
+      "clave": "hardware-mandante",
+      "referencia": "Hardware del mandante!H40",
+      "esperado": 225384199,
+      "valor": 225384199,
+      "coincide": true
+    },
+    {
+      "clave": "cobro-m57",
+      "referencia": "Indicadores!B8",
+      "esperado": 108077483,
+      "valor": 108077483.265167,
+      "coincide": true
+    },
+    {
+      "clave": "firma-inn1",
+      "referencia": "Innovaciones!D2",
+      "esperado": 24856290,
+      "valor": 24856290,
+      "coincide": true
+    },
+    {
+      "clave": "recupero-inn4",
+      "referencia": "Beneficios Curimón!B4",
+      "esperado": 362100000,
+      "valor": 362100000,
+      "coincide": true
+    },
+    {
+      "clave": "costo-fase-implementacion",
+      "referencia": "RESUMEN!C6",
+      "esperado": 3649214121,
+      "valor": 3649214121.34194,
+      "coincide": true
+    },
+    {
+      "clave": "costo-fase-operacion",
+      "referencia": "RESUMEN!C7",
+      "esperado": 3170993359,
+      "valor": 3170993359,
+      "coincide": true
+    },
+    {
+      "clave": "costo-proyecto",
+      "referencia": "RESUMEN!C8",
+      "esperado": 6820207480,
+      "valor": 6820207480.34194,
+      "coincide": true
+    },
+    {
+      "clave": "capital-adicional-h5",
+      "referencia": "Parámetros corrección!B28",
+      "esperado": 420000000,
+      "valor": 420000000,
+      "coincide": true
+    },
+    {
+      "clave": "caja-estres-h5",
+      "referencia": "Sensibilidad!G5",
+      "esperado": 226996333,
+      "valor": 226996333.100799,
+      "coincide": true
+    },
+    {
+      "clave": "equilibrio-nominal",
+      "referencia": "Indicadores!B12",
+      "esperado": 6820207480,
+      "valor": 6820207480.34194,
+      "coincide": true
+    },
+    {
+      "clave": "equilibrio-van",
+      "referencia": "Indicadores!B13",
+      "esperado": 6996056076,
+      "valor": 6996056075.78202,
+      "coincide": true
+    },
+    {
+      "clave": "deficit-h5-reserva",
+      "referencia": "Sensibilidad!J4",
+      "esperado": 368649062,
+      "valor": 368649062.434542,
+      "coincide": true
+    },
+    {
+      "clave": "egreso-inn5",
+      "referencia": "Innovaciones!D6",
+      "esperado": 4000000,
+      "valor": 4000000,
+      "coincide": true
+    },
+    {
+      "clave": "capital-inicial",
+      "referencia": "Parámetros corrección!B4",
+      "esperado": 730000000,
+      "valor": 730000000,
+      "coincide": true
+    },
+    {
+      "clave": "final-op-1",
+      "referencia": "Cuadro maestro!C11",
+      "esperado": 1961538000,
+      "valor": 1961538000,
+      "coincide": true
+    },
+    {
+      "clave": "final-op-2",
+      "referencia": "Cuadro maestro!C12",
+      "esperado": 1053415759,
+      "valor": 1053415759,
+      "coincide": true
+    },
+    {
+      "clave": "final-op-3",
+      "referencia": "Cuadro maestro!C13",
+      "esperado": 15678600,
+      "valor": 15678600,
+      "coincide": true
+    },
+    {
+      "clave": "final-op-4",
+      "referencia": "Cuadro maestro!C14",
+      "esperado": 16500000,
+      "valor": 16500000,
+      "coincide": true
+    },
+    {
+      "clave": "final-op-5",
+      "referencia": "Cuadro maestro!C15",
+      "esperado": 21630240,
+      "valor": 21630240,
+      "coincide": true
+    },
+    {
+      "clave": "final-op-6",
+      "referencia": "Cuadro maestro!C16",
+      "esperado": 0,
+      "valor": 0,
+      "coincide": true
+    },
+    {
+      "clave": "final-op-7",
+      "referencia": "Cuadro maestro!C17",
+      "esperado": 88430760,
+      "valor": 88430760,
+      "coincide": true
+    },
+    {
+      "clave": "final-op-8",
+      "referencia": "Cuadro maestro!C18",
+      "esperado": 13800000,
+      "valor": 13800000,
+      "coincide": true
+    }
+  ],
+  "formulas": 32661,
+  "resultados_textuales_vacios": {
+    "Flujo de Caja": 50,
+    "Costos": 55,
+    "Proveedores": 274,
+    "Ingresos": 50,
+    "Cuadro maestro": 2
+  },
+  "errores": [],
+  "pdf_docx": [
+    {
+      "clave": "oferta",
+      "folios_declarados": [
+        1,
+        14
+      ],
+      "paginas": 14,
+      "muestra_coincide": [
+        "8.368.352.737",
+        "1.589.987.020",
+        "9.958.339.757",
+        "150"
+      ],
+      "imagenes_docx": []
+    },
+    {
+      "clave": "analisis",
+      "folios_declarados": [
+        15,
+        33
+      ],
+      "paginas": 19,
+      "muestra_coincide": [
+        "6.820.207.480",
+        "1.064.658.621",
+        "79,1905",
+        "420.000.000",
+        "730.000.000"
+      ],
+      "imagenes_docx": [
+        "word/media/image1.png",
+        "word/media/image2.png"
+      ]
+    }
+  ],
+  "hitos": [
+    [
+      "Hito",
+      "Etapa",
+      "Mes factura",
+      "% implementación",
+      "Mes cobro base",
+      "Mes cobro prueba",
+      "Monto neto CLP",
+      "Criterio",
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "H1",
+      1,
+      2,
+      0.08,
+      2,
+      2,
+      358205067.125589,
+      "Mes E-25 condicionado a acta conforme (art. 18). Fechas efectivas de acta, factura y pago pendientes de acreditar.",
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "H2",
+      1,
+      4,
+      0.07,
+      4,
+      4,
+      313429433.73489,
+      "Mes E-25 condicionado a acta conforme (art. 18). Fechas efectivas de acta, factura y pago pendientes de acreditar.",
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "H3",
+      1,
+      6,
+      0.1,
+      6,
+      6,
+      447756333.906986,
+      "Mes E-25 condicionado a acta conforme (art. 18). Fechas efectivas de acta, factura y pago pendientes de acreditar.",
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "H4",
+      1,
+      10,
+      0.1,
+      10,
+      10,
+      447756333.906986,
+      "Mes E-25 condicionado a acta conforme (art. 18). Fechas efectivas de acta, factura y pago pendientes de acreditar.",
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "H5",
+      1,
+      12,
+      0.1,
+      12,
+      12,
+      447756333.906986,
+      "Mes E-25 condicionado a acta conforme (art. 18). Fechas efectivas de acta, factura y pago pendientes de acreditar.",
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "H6",
+      1,
+      13,
+      0.05,
+      13,
+      13,
+      223878166.953493,
+      "Mes E-25 condicionado a acta conforme (art. 18). Fechas efectivas de acta, factura y pago pendientes de acreditar.",
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "H8",
+      2,
+      14,
+      0.05,
+      14,
+      14,
+      223878166.953493,
+      "Mes E-25 condicionado a acta conforme (art. 18). Fechas efectivas de acta, factura y pago pendientes de acreditar.",
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "H7",
+      1,
+      16,
+      0.1,
+      16,
+      16,
+      447756333.906986,
+      "Mes E-25 condicionado a acta conforme (art. 18). Fechas efectivas de acta, factura y pago pendientes de acreditar.",
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "H9",
+      2,
+      17,
+      0.1,
+      17,
+      17,
+      447756333.906986,
+      "Mes E-25 condicionado a acta conforme (art. 18). Fechas efectivas de acta, factura y pago pendientes de acreditar.",
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "H10",
+      2,
+      18,
+      0.1,
+      18,
+      18,
+      447756333.906986,
+      "Mes E-25 condicionado a acta conforme (art. 18). Fechas efectivas de acta, factura y pago pendientes de acreditar.",
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "H11",
+      2,
+      19,
+      0.05,
+      19,
+      19,
+      223878166.953493,
+      "Mes E-25 condicionado a acta conforme (art. 18). Fechas efectivas de acta, factura y pago pendientes de acreditar.",
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      "H12",
+      2,
+      21,
+      0.1,
+      21,
+      21,
+      447756333.906986,
+      "Mes E-25 condicionado a acta conforme (art. 18). Fechas efectivas de acta, factura y pago pendientes de acreditar.",
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  ]
+}

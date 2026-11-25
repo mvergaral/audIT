@@ -1,0 +1,118 @@
+# Formulario T-19. Cartera de innovaciones
+
+audIT, Empresa N.º 10. Licitación TFEP-01/2026, Caso 10 Transporte de Carga. Oferta Técnica, Sobre N.º 2. Propuesta final. Archivo AUDIT-Formulario-T-19.pdf. Anexo del Subdocumento N.º 13, Innovaciones. Las fuentes están en las Referencias de ese subdocumento.
+
+## Índice detallado
+
+| Contenido | Página del PDF |
+|---|---:|
+| Ficha del documento | [3](AUDIT-Formulario-T-19.pdf#page=3) |
+| T-19 Cartera de innovaciones | [5](AUDIT-Formulario-T-19.pdf#page=5) |
+| Ficha T-19. Innovación tipo 1. Producto o servicio. Expediente verificable del transportista | [5](AUDIT-Formulario-T-19.pdf#page=5) |
+| Ficha T-19. Innovación tipo 2. Proceso. Programación dinámica de intervenciones por oportunidad de patio | [7](AUDIT-Formulario-T-19.pdf#page=7) |
+| Ficha T-19. Innovación tipo 3. Tecnológica o de arquitectura. Acople verificado y registro térmico del semirremolque | [8](AUDIT-Formulario-T-19.pdf#page=8) |
+| Ficha T-19. Innovación tipo 4. Modelo de negocio o de contratación. Esquema de adhesión y propiedad del dispositivo | [10](AUDIT-Formulario-T-19.pdf#page=10) |
+| Ficha T-19. Innovación tipo 5. Experiencia de usuario, sostenibilidad o impacto social. Anticipación circadiana y aviso no punitivo de descanso | [12](AUDIT-Formulario-T-19.pdf#page=12) |
+| Referencias | [15](AUDIT-Formulario-T-19.pdf#page=15) |
+| Declaración de uso de IA | [15](AUDIT-Formulario-T-19.pdf#page=15) |
+
+
+## Innovación 1. Producto o servicio. Expediente verificable del transportista
+
+| Campo | Contenido |
+|---|---|
+| Problema u oportunidad | 148 transportistas con 226 camiones y 258 conductores (Caso, numeral 14.1, p. 29), muchos de los cuales trabajan también para otros clientes (numeral 4.3, p. 9), no pueden acreditar ante terceros la jornada de sus conductores ni la vigencia de sus documentos. La solución produce esa evidencia para los viajes de Curimón, pero queda dentro del sistema del mandante |
+| Tecnología o práctica | Documento firmado por el mandante con firma electrónica avanzada, con datos sólo del propio transportista, y servicio público de verificación que responde si el documento es auténtico y vigente sin revelar su contenido. La jornada de cada conductor entra sólo con su consentimiento. Credencial verificable como formato alternativo |
+| Nivel de madurez | Escala de niveles de madurez tecnológica de 1 a 9. Firma electrónica avanzada con verificación en línea en nivel 9, formato comprometido. Credencial verificable entre los niveles 7 y 8, sólo si los destinatarios la aceptan |
+| Fuentes | International Organization for Standardization (2013). Congreso Nacional de Chile (2002), Ley N.º 19.799. World Wide Web Consortium (2025). Ley N.º 21.719 (2024) |
+| Dónde se inserta en la arquitectura | Servicio de emisión en el contexto Personas y cumplimiento, que consulta a Flota y activos. Servicio público de verificación detrás de la puerta de enlace. Firma desde la bóveda de claves. Emisión y consentimientos en el portal del transportista. Subdocumento 13, sección 13.1 |
+| Paquetes de la EDT | EDT 12.1, sobre los paquetes 5.1 (Personas y cumplimiento) y 5.7 (Portal del transportista) |
+| Mes del cronograma | Entrevistas a destinatarios y elección del formato en el mes 4. Construcción entre los meses 8 y 10. Disponible para la cohorte inicial en la marcha blanca de la Etapa 1 |
+| Inversión requerida | Desarrollo de los servicios de emisión y de verificación sobre datos que la Etapa 1 ya produce, con la dotación del contrato y sin partida propia |
+| Efecto en el costo operacional | Firma electrónica avanzada del emisor desde el mes 13, único egreso adicional, y operación del servicio de verificación con la dotación de operación |
+| Beneficio esperado | Incentivo de adhesión que no requiere pagar al transportista. Cada adherido amplía la jornada acreditada y la evidencia de espera que sostiene los cobros. Sin beneficio monetario reconocido en el escenario base ni cobro incremental |
+| Indicador, línea base y meta | Transportistas adheridos que emitieron al menos un expediente, de no existente a 50 % de los adheridos. Verificaciones respondidas en no más de 5 segundos, 99 % |
+| Momento de medición | Mes 21 para el primer indicador. Mensual desde el mes 16 para el segundo |
+| Riesgo de adopción | Que el transportista no perciba utilidad, probabilidad media e impacto medio. Que los destinatarios no acepten el documento como prueba, probabilidad media e impacto alto. Que un conductor no consienta incluir su jornada |
+| Mitigación | Primera emisión asistida en el terminal durante el enrolamiento. Entrevistas a destinatarios reales en el mes 4, antes de construir. Expediente con la jornada de los conductores que consintieron. Es R-30 del Formulario T-16: exposición inicial 9, probabilidad 3 e impacto 3, y residual 6, probabilidad 2 e impacto 3 |
+| Contingencia | Emisión automática mensual a los transportistas que lo pidan, sin acción de su parte |
+
+## Innovación 2. Proceso. Programación dinámica de intervenciones por oportunidad de patio
+
+| Campo | Contenido |
+|---|---|
+| Problema u oportunidad | 148 unidades propias y 34 de terceros sin equipo requieren montaje durante el paso normal por terminal. La disponibilidad simultánea de unidad, autorización, kit, técnico y ventana debe coordinarse. La línea base se levanta en M6; no se atribuye un ahorro ya medido. |
+| Tecnología o práctica | Planificador determinista en Flota y activos: combina ETA y calidad de posición, autorización, compatibilidad del kit, stock, turnos, versión y ventana confirmada. Device Twins conserva configuración y Device Update distribuye paquetes a equipos homologados; las actas conservan intentos y resultados. |
+| Nivel de madurez | TRL 2 propuesto, en escala NASA de nueve niveles: concepto definido, sin prueba de concepto ejecutada. Se valida factibilidad antes del piloto de M6 y se documenta el nivel alcanzado. |
+| Fuentes | (NASA, s. f.; Microsoft, s. f.; Microsoft, s. f.) |
+| Dónde se inserta en la arquitectura | Flota y activos registra las intervenciones; Telemetría aporta actualidad y configuración; la plataforma DevSecOps construye y firma el artefacto. Manifiesto por unidad, familia, kit, versión y acta. |
+| Paquetes de la EDT | 12.2, con integración a 4.1 y 4.2; calendario del Subdocumento 7. |
+| Mes del cronograma | Diez kits piloto internos en San Bernardo en M6. Lotes externos de 60, 60 y 52 en M7, M8 y M9 en cinco terminales. Cada orden requiere adhesión aplicable, stock, ventana y reserva del proveedor. Las desviaciones se reprograman con S7 y su efecto en activación y caja. |
+| Inversión requerida | Planificador, tablero, integración y homologación del agente dentro de EDT 12.2. El escenario base usa el inventario T-11. Kits y suscripciones adicionales se evalúan por control de cambios. |
+| Efecto en el costo operacional | Ejecución, almacenamiento de actas y mantenimiento del planificador, separados de la conectividad ya presupuestada. |
+| Beneficio esperado | Minutos de preparación y visitas adicionales evitados por terminal y familia. La oferta económica mantiene la base sin beneficio monetario reconocido hasta medir el piloto. Separar minutos ya cubiertos por la tarifa de visita y atribuir el personal en la nómina. |
+| Indicador, línea base y meta | Reducir preparación inútil al menos 20 %. Validar al primer intento al menos 95 % en 20 intervenciones elegibles como mínimo. Recambio modular hasta 30 min. Montaje integral: validar referencia de 140 min de puesto en CP-UAT-02. |
+| Momento de medición | En M6 se registra por oportunidad elegible el plan manual antes de la recomendación, terminal, familia, ventana, autorización, kit, técnico, preparación, cancelación, visita adicional real y prueba. El comité valida línea base y muestra al cierre de M6; comparación por familia y terminal en M7–M9 con denominadores y exclusiones. Sin base comparable, el ahorro no se acredita. |
+| Riesgo de adopción | Inicial: ETA incorrecta media/alto; kit o agente incompatible media/alto; beneficio insuficiente media/medio; tercero sin autorización media/alto. Residual objetivo condicionado a pruebas: baja/medio, baja/alto, media/medio y media/alto, respectivamente. Si no se prueba el control, permanece el riesgo inicial. La adopción por el taller y la torre es R-31 del Formulario T-16, con exposición 6 que baja a 4 |
+| Mitigación | Calidad y actualidad de ETA, confirmación del jefe de terminal, matriz de familias, ensayo previo, paquete firmado, reversión validada y comparación trazable. |
+| Contingencia | Abortar de forma segura y reprogramar cuando la ventana se acorte; método manual homologado y versión previa sin borrar eventos. Integración lógica de terceros sin intervención física no autorizada. Si la prueba de laboratorio o el piloto M6 fallan, no escalar y someter al comité sustitución por otra innovación de proceso acreditable. |
+
+## Innovación 3. Tecnológica o de arquitectura. Acople verificado y registro térmico del semirremolque
+
+| Campo | Contenido |
+|---|---|
+| Problema u oportunidad | 210 semirremolques propios, 245 a tres años y 44 refrigerados (Caso, numerales 2.2 y 14.1, pp. 6 y 29). La verificación bloqueante comprueba la revisión técnica del semirremolque (numeral 4.4, p. 10), pero el sistema no sabe cuál va enganchado. El Caso no informa un registro de temperatura y puerta de los refrigerados durante el viaje. El kilometraje real de los semirremolques es cumplimiento del criterio 26 (capítulo 18, p. 43) y no forma parte de esta innovación |
+| Tecnología o práctica | Baliza Bluetooth de baja energía Teltonika EYE Sensor BTSMP1 con identificador, temperatura, humedad, acelerómetro y sensor de puerta, IP67, de −20 a +60 °C. Lectura por el iWave G26I a bordo y por un lector Minew G1 en cada portería. Acople inferido por señal estable y movimiento conjunto |
+| Nivel de madurez | Escala de niveles de madurez tecnológica de 1 a 9. Balizas y lectura en nivel 9. Inferencia del acople dentro de la verificación bloqueante de nivel 6 a nivel 7 en la marcha blanca |
+| Fuentes | International Organization for Standardization (2013). Teltonika Telematics (2026a, 2026b). Minew (2023). iWave Global (2026) |
+| Dónde se inserta en la arquitectura | Capa de borde con el G26I y el lector de portería. IoT Hub y Event Hubs en la capa de integración. Contextos Flota y activos (verificación bloqueante) y Telemetría y geocercas (temperatura y puerta). Consume el flujo de IoT Hub y expone el identificador del semirremolque acoplado. Sección 13.3 |
+| Paquetes de la EDT | Paquete 12.3, con los paquetes 4.2 (instalación de balizas y lectores de portería) y 5.2 (Flota y activos) |
+| Mes del cronograma | Lectores de portería en los meses 5 y 6. Balizas al paso por terminal en los meses 7 a 9, 70 por mes, fuera de la temporada de diciembre a abril. Validación de acople y temperatura sobre los lotes antes del mes 10. Activación y primera medición en la marcha blanca, antes del mes 16 |
+| Inversión requerida | Balizas y lectores de portería que compra el mandante (Caso, capítulo 11, p. 24) según el Formulario T-11. Inversión de audIT: integración en tres servicios de negocio y montaje de las balizas con personal propio |
+| Efecto en el costo operacional | Mantención de la regla de acople y del reporte de temperatura y puerta. Sin tráfico propio ni reposición por batería, que dura cinco años o más |
+| Beneficio esperado | Ningún semirremolque sale con la revisión técnica vencida. Respaldo ante el cliente de la condición de la carga refrigerada. Valor monetario pendiente de cuantificar, con la parte térmica y el acople por separado |
+| Indicador, línea base y meta | Asignaciones con semirremolque propio verificado por medición, de no verificado al asignar a 95 % o más. Viajes de los 44 refrigerados con temperatura y puerta registradas, 100 %, con línea base medida en la Etapa 1 |
+| Momento de medición | Marcha blanca antes del mes 16. Primera temporada de diciembre a abril |
+| Riesgo de adopción | Acople falso con la baliza de un semirremolque vecino, probabilidad media e impacto alto. Temperatura bajo −20 °C en el paso cordillerano. Suplantación del identificador. Batería de menor duración |
+| Mitigación | Señal estable y movimiento conjunto en los primeros minutos de marcha. Montaje a la sombra y prueba en el invierno de 2027 (meses 6 y 7). Lectura de portería como segundo control. Vigilancia del nivel de batería. El acople falso es el modo de falla que el Formulario T-16 asocia a R-22: exposición inicial 8, probabilidad 2 e impacto 4, y residual 4, probabilidad 1 e impacto 4 |
+| Contingencia | La verificación vuelve a la declaración con la lectura de portería como control. Modelo de mayor rango térmico en los semirremolques que cruzan. Reposición desde la reserva del 10 %. Modelado de amenazas STRIDE en el Subdocumento 4, sección 4.1.21 (RT-26.07) |
+
+## Innovación 4. Modelo de negocio o de contratación. Esquema de adhesión y propiedad del dispositivo
+
+| Campo | Contenido |
+|---|---|
+| Problema u oportunidad | 148 dueños de 226 camiones (Caso, numeral 14.1, p. 29) preguntan de quién es el equipo, quién lo paga y si delatará cuándo trabajan para otro cliente. La decisión 5 del numeral 16.1 está abierta (p. 34) y la restricción 2 obliga a conseguirlo por contrato, incentivo o diseño (capítulo 10, p. 23) |
+| Tecnología o práctica | Ventana de transmisión aplicada en el firmware del equipo a bordo, auditable por el dueño desde su consola de permisos. Comodato con retiro sin costo. Reparto con el transportista de la espera recuperada que su evidencia permite cobrar |
+| Nivel de madurez | Escala de niveles de madurez tecnológica de 1 a 9. Control de transmisión por ventana en nivel 8. Registro de consentimiento en nivel 8. El componente contractual no se califica en esta escala |
+| Fuentes | International Organization for Standardization (2013). Ministerio de Hacienda (2024), Ley N.º 21.719 |
+| Dónde se inserta en la arquitectura | Equipo a bordo y búfer local con la ventana. Consentimiento en Personas y cumplimiento, adhesión en Flota y activos y reparto de la espera en Liquidación y costeo, regla RN-08 del Formulario T-12. Consola de permisos en el portal. Subdocumento 13, sección 13.4 |
+| Paquetes de la EDT | EDT 12.4, sobre los paquetes 9.1 (Anexo de adhesión), 9.2 (Campaña y enrolamiento), 4.1 (Firmware) y 5.7 (Portal del transportista) |
+| Mes del cronograma | Reparto aprobado por el Comité Ejecutivo en el mes 2. Validación jurídica del anexo en los meses 2 y 3. Cohorte inicial entre los meses 6 y 9. Ventana y consola entre los meses 6 y 10. Medición desde la marcha blanca |
+| Inversión requerida | Diseño y validación jurídica del anexo, campaña en los cinco terminales y consola de consentimiento, con la dotación del contrato y sin partida propia. Los 34 equipos en comodato son parte de los 182 del alcance base y los compra el mandante (Caso, capítulo 11, p. 24) |
+| Efecto en el costo operacional | Sin costo incremental: la conectividad, el soporte y la reposición de los 34 equipos ya están en el alcance base. Disminuye el costo de gestionar objeciones de cobro |
+| Beneficio esperado | Recupero bruto referencial a 36 meses de la espera hoy objetada en un 71 % (Caso, numeral 4.7, p. 11), antes de repartirlo con los transportistas y de restar costos. Es de Curimón, no es beneficio neto ni ingreso de audIT, y no se compromete |
+| Indicador, línea base y meta | Posiciones transmitidas fuera de la ventana de un viaje, cero. Transportistas adheridos con cobro respaldado que reciben su parte, 100 %. Consentimientos revocados, menos de 10 % |
+| Momento de medición | Auditoría mensual desde el mes 13. Cada liquidación desde el mes 16. Mensual desde el mes 13 |
+| Riesgo de adopción | Adhesión bajo el 70 % en la Etapa 1, probabilidad media e impacto alto. Desconfianza en la ventana. Rechazo de la evidencia de espera por los clientes. Anexo que no resista revisión jurídica, probabilidad baja e impacto alto |
+| Mitigación | Conversación desde el mes 2 con el beneficio a la vista antes de pedir el equipo. Ventana auditable por el dueño. Validación jurídica antes de construir. La adhesión bajo la meta es R-11 del Formulario T-16: exposición inicial 12, alta, y residual 8, probabilidad 2 e impacto 4, con su contingencia en el Subdocumento 8 |
+| Contingencia | Tres medidas del Subdocumento 3 si la adhesión no llega al 40 % en el mes 9. Financiar el incentivo con el ahorro de la liquidación automática |
+
+## Innovación 5. Experiencia de usuario, sostenibilidad o impacto social. Anticipación circadiana y aviso no punitivo de descanso
+
+| Campo | Contenido |
+|---|---|
+| Problema u oportunidad | El criterio 28 exige que toda alerta indique un lugar seguro de detención alcanzable (Caso, capítulo 18, p. 43), y ese catálogo de paradores es alcance base. La brecha que queda es que la alerta reactiva no anticipa la caída de vigilancia circadiana de 02:00 a 06:00 h ni atiende la desconfianza de los 258 conductores externos hacia un sistema que perciben como vigilancia patronal (numeral 2.3, p. 6) |
+| Tecnología o práctica | Módulo predictivo sobre audIT EdgeHub, en el equipo a bordo, que cruza la curva circadiana, la jornada acumulada y la topografía del tramo sobre el catálogo de paradores del criterio 28. Enclavamiento cinético de pantalla (Ley N.º 21.377), síntesis de voz local en español y protocolo no punitivo |
+| Nivel de madurez | Escala ISO 16290 de 1 a 9. Autoevaluación TRL 2 conceptual del modelo circadiano sobre el catálogo base, sin evidencia aportada de prueba de concepto. Los componentes comerciales no acreditan la madurez del conjunto. Objetivos: TRL 6 tras los ensayos en entorno representativo de M10--M12 y TRL 7 tras el piloto operacional de M13--M15, con informe de resultados reproducible |
+| Fuentes | International Organization for Standardization (2013, 2017, 2019). National Academies of Sciences, Engineering, and Medicine (2016). Congreso Nacional de Chile (2021), Ley N.º 21.377. Ministerio del Trabajo (2003, 2006) |
+| Dónde se inserta en la arquitectura | Capa de borde con el motor circadiano y la síntesis de voz en audIT EdgeHub. Consulta pasiva en la torre y en el portal, sin registro punitivo. La gobernanza de paradores es la del criterio 28 |
+| Paquetes de la EDT | Paquete 12.5, con los paquetes 4.1 (firmware a bordo) y 5.1 (Personas y cumplimiento). El catálogo de paradores pertenece al alcance base de la plataforma |
+| Mes del cronograma | Talleres ergonómicos en M4 y motor a bordo de M4 a M9. Ensayos del prototipo integrado de M10 a M12. Piloto y validación con conductores en la marcha blanca de M13 a M15 y producción de la Etapa 1 en M16 |
+| Inversión requerida | Desarrollo incremental del motor circadiano y de la síntesis de voz en audIT EdgeHub, cinco talleres ergonómicos participativos en los terminales de San Bernardo, Antofagasta, Talca, Los Ángeles y Puerto Montt en M4, y calibración ergonómica con la escala NASA-TLX en la marcha blanca de los meses 13 a 15. El desarrollo se hace con la dotación del contrato, y los talleres y la calibración son el único egreso adicional. El catálogo de paradores es del criterio 28 y no se imputa a esta innovación. El valor va en el Sobre N.º 3 (Art. 50.2) |
+| Efecto en el costo operacional | Mantención preventiva del modelo, actualización de los perfiles circadianos y auditoría semestral de privacidad durante los 36 meses de operación. El valor va en el Sobre N.º 3 (Art. 50.2) |
+| Beneficio esperado | Reducción esperada de exposición a detenciones inseguras, incumplimientos de jornada y uso de dispositivos en marcha. Durante la marcha blanca M13--M15 se contrastarán los viajes elegibles, los desvíos evitados atribuibles a la recomendación y el consumo asociado. La frecuencia de incidentes se estimará con registros históricos comparables. El beneficio monetario para Curimón queda pendiente de cuantificar en la Oferta Económica |
+| Indicador, línea base y meta | Efectividad: 100 × episodios con recomendación válida y oportuna / episodios en que el oráculo exige parada; meta $\ge98%$. Parador verificado, compatible y alcanzable dentro del tiempo legal remanente; aviso acústico oportuno. Falta de parador y aviso tardío cuentan como fallos; denominador cero sin tasa. Línea base medida antes del piloto. Controles separados: bloqueo 100%, NASA-TLX <35, adherencia $\ge85%$, con sus líneas base en Etapa 1 |
+| Momento de medición | Mensual durante la marcha blanca M13--M15, antes de producción E1 en M16; nivel alcanzado respaldado por informe de resultados |
+| Riesgo de adopción | Que los 258 conductores externos lo perciban como vigilancia patronal encubierta o invasión de privacidad. Es R-14 del Formulario T-16: exposición inicial 9, probabilidad 3 e impacto 3 |
+| Mitigación | Talleres participativos en los cinco terminales en M4, alertas que no se transmiten como faltas laborales al mandante ni al empleador, consulta pasiva y voluntaria, anexo de adhesión con el uso permitido de cada dato e incentivo de la innovación 4. Evidencia: actas de talleres, auditoría semestral y canal confidencial de opinión. Exposición residual 6, probabilidad 2 e impacto 3 |
+| Contingencia | Si la adherencia a las paradas sugeridas queda bajo 70 % en M14 o la carga NASA-TLX supera 35 puntos, se conmuta de inmediato a notificación solo acústica por el altavoz del vehículo, sin teléfonos personales ni botones en cabina, y una mesa técnica de conductores ajusta los parámetros antes de M16 |

@@ -1,0 +1,3241 @@
+[
+  {
+    "id": "A01",
+    "nombre": "Constitución del equipo y plan de dirección inicial",
+    "duracion": 5,
+    "predecesoras": [],
+    "edt": [
+      "1.1",
+      "1.2"
+    ],
+    "fase": "Implementación",
+    "ES": 0,
+    "EF": 5,
+    "LS": 0,
+    "LF": 5,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "PREP-678",
+    "nombre": "Diseño preparatorio de contratos de interfaz datos y capacidades E2",
+    "duracion": 40,
+    "liberacion": 60,
+    "limite": 100,
+    "predecesoras": [],
+    "edt": [
+      "6.1",
+      "6.2",
+      "6.3",
+      "6.4",
+      "6.5",
+      "7.1",
+      "7.2",
+      "7.3",
+      "8.1",
+      "8.2",
+      "8.3",
+      "8.4",
+      "8.5"
+    ],
+    "fase": "Implementación",
+    "ES": 60,
+    "EF": 100,
+    "LS": 60,
+    "LF": 100,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "CPSEC-PREP",
+    "nombre": "Construir preparar y verificar agente CP-SEC-05",
+    "duracion": 80,
+    "liberacion": 100,
+    "limite": 180,
+    "predecesoras": [],
+    "edt": [
+      "4.1",
+      "10.2"
+    ],
+    "fase": "Implementación",
+    "ES": 100,
+    "EF": 180,
+    "LS": 100,
+    "LF": 180,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "INN3-REG",
+    "nombre": "Regresión y custodia de evidencia de acople y temperatura",
+    "duracion": 40,
+    "liberacion": 200,
+    "limite": 240,
+    "predecesoras": [],
+    "edt": [
+      "12.3"
+    ],
+    "fase": "Implementación",
+    "ES": 200,
+    "EF": 240,
+    "LS": 200,
+    "LF": 240,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "A02",
+    "nombre": "Levantamiento y dossier de alcance",
+    "duracion": 23,
+    "predecesoras": [
+      {
+        "id": "A01",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "2.1"
+    ],
+    "fase": "Implementación",
+    "ES": 5,
+    "EF": 28,
+    "LS": 5,
+    "LF": 28,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "A03",
+    "nombre": "Medir cobertura por ruta y terminal",
+    "duracion": 45,
+    "predecesoras": [
+      {
+        "id": "A01",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "2.2"
+    ],
+    "fase": "Implementación",
+    "ES": 5,
+    "EF": 50,
+    "LS": 35,
+    "LF": 80,
+    "HT": 30,
+    "HL": 26
+  },
+  {
+    "id": "A04",
+    "nombre": "Consultar factibilidad telemática y autorización de datos",
+    "duracion": 60,
+    "predecesoras": [
+      {
+        "id": "A01",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "2.3"
+    ],
+    "fase": "Implementación",
+    "ES": 5,
+    "EF": 65,
+    "LS": 60,
+    "LF": 120,
+    "HT": 55,
+    "HL": 47
+  },
+  {
+    "id": "A04-HW",
+    "nombre": "Compra y recepción de hardware del mandante por lote",
+    "duracion": 75,
+    "predecesoras": [
+      {
+        "id": "A01",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "1.3"
+    ],
+    "limite": 100,
+    "evidencia": "Recepción conforme, stock asignado y especificación aprobada",
+    "fase": "Implementación",
+    "ES": 5,
+    "EF": 80,
+    "LS": 21,
+    "LF": 96,
+    "HT": 16,
+    "HL": 0
+  },
+  {
+    "id": "DIR-REC",
+    "nombre": "Dirección comunicaciones revisión y reservas de capacidad",
+    "duracion": 395,
+    "predecesoras": [
+      {
+        "id": "A01",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "1.1",
+      "1.2"
+    ],
+    "limite": 400,
+    "fase": "Implementación",
+    "ES": 5,
+    "EF": 400,
+    "LS": 5,
+    "LF": 400,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "R-H1",
+    "nombre": "Revisión de alcance por la contraparte",
+    "duracion": 10,
+    "predecesoras": [
+      {
+        "id": "A02",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [],
+    "fase": "Implementación",
+    "ES": 28,
+    "EF": 38,
+    "LS": 28,
+    "LF": 38,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "A11-LECT",
+    "nombre": "Instalar y probar cinco lectores en portería",
+    "duracion": 24,
+    "predecesoras": [
+      {
+        "id": "A04-HW",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "12.3"
+    ],
+    "liberacion": 80,
+    "limite": 120,
+    "evidencia": "10 h de Electrónica en M5–M6; un lector por terminal",
+    "fase": "Implementación",
+    "ES": 80,
+    "EF": 104,
+    "LS": 96,
+    "LF": 120,
+    "HT": 16,
+    "HL": 16
+  },
+  {
+    "id": "H1",
+    "nombre": "Acta H1 · E-25 M2",
+    "duracion": 0,
+    "predecesoras": [
+      {
+        "id": "R-H1",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [],
+    "limite": 40,
+    "evidencia": "Acta de aceptación suscrita por la Contraparte Técnica",
+    "fase": "Implementación",
+    "mes_e25": 2,
+    "ES": 38,
+    "EF": 38,
+    "LS": 38,
+    "LF": 38,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "A05",
+    "nombre": "Diseñar arquitectura, seguridad y modelo de datos",
+    "duracion": 28,
+    "predecesoras": [
+      {
+        "id": "H1",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "2.4"
+    ],
+    "fase": "Implementación",
+    "ES": 38,
+    "EF": 66,
+    "LS": 38,
+    "LF": 66,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "A06-ANEXO",
+    "nombre": "Preparar anexo y validar modalidades de adhesión",
+    "duracion": 20,
+    "predecesoras": [
+      {
+        "id": "H1",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "9.1",
+      "12.4"
+    ],
+    "limite": 60,
+    "evidencia": "Validación jurídica del mandante",
+    "fase": "Implementación",
+    "ES": 38,
+    "EF": 58,
+    "LS": 40,
+    "LF": 60,
+    "HT": 2,
+    "HL": 0
+  },
+  {
+    "id": "R-H2",
+    "nombre": "Revisión de diseño por la contraparte",
+    "duracion": 10,
+    "predecesoras": [
+      {
+        "id": "A05",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [],
+    "fase": "Implementación",
+    "ES": 66,
+    "EF": 76,
+    "LS": 66,
+    "LF": 76,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "A05-COST",
+    "nombre": "Estudiar costo real por ruta y contrato",
+    "duracion": 40,
+    "predecesoras": [
+      {
+        "id": "A05",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "2.5"
+    ],
+    "liberacion": 70,
+    "limite": 120,
+    "evidencia": "Informe por ruta y contrato; se requiere acceso a datos históricos antes del inicio",
+    "fase": "Implementación",
+    "ES": 70,
+    "EF": 110,
+    "LS": 80,
+    "LF": 120,
+    "HT": 10,
+    "HL": 0
+  },
+  {
+    "id": "A06-LOTE",
+    "nombre": "Convocar y reunir consentimientos y agendas para primeros lotes",
+    "duracion": 48,
+    "predecesoras": [
+      {
+        "id": "A06-ANEXO",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "9.2",
+      "12.4"
+    ],
+    "limite": 120,
+    "evidencia": "Padrón y ventanas iniciales por VIN; las autorizaciones se verifican por lote",
+    "fase": "Implementación",
+    "ES": 58,
+    "EF": 106,
+    "LS": 72,
+    "LF": 120,
+    "HT": 14,
+    "HL": 14
+  },
+  {
+    "id": "A06-CAMP",
+    "nombre": "Enrolar y medir conversión; preparar corte H7",
+    "duracion": 180,
+    "predecesoras": [
+      {
+        "id": "A06-ANEXO",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "9.2",
+      "9.3",
+      "12.4"
+    ],
+    "liberacion": 120,
+    "limite": 310,
+    "evidencia": "Anexos vigentes, indicadores por modalidad; 104 en M16",
+    "fase": "Implementación",
+    "ES": 120,
+    "EF": 300,
+    "LS": 120,
+    "LF": 300,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "A07-SALA",
+    "nombre": "Remediar sala y habilitar gabinetes; ensayar aislamiento",
+    "duracion": 80,
+    "predecesoras": [
+      {
+        "id": "A05",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "3.4"
+    ],
+    "liberacion": 70,
+    "limite": 190,
+    "evidencia": "24 h de aislamiento por sitio",
+    "fase": "Implementación",
+    "ES": 70,
+    "EF": 150,
+    "LS": 110,
+    "LF": 190,
+    "HT": 40,
+    "HL": 40
+  },
+  {
+    "id": "A08-BI0",
+    "nombre": "Preparar contratos, catálogo y mapeos del repositorio",
+    "duracion": 30,
+    "predecesoras": [
+      {
+        "id": "A05",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "7.3"
+    ],
+    "liberacion": 70,
+    "limite": 110,
+    "fase": "Implementación",
+    "ES": 70,
+    "EF": 100,
+    "LS": 80,
+    "LF": 110,
+    "HT": 10,
+    "HL": 10
+  },
+  {
+    "id": "A11-INN2",
+    "nombre": "Preparar agenda dinámica y criterio de piloto de patio",
+    "duracion": 20,
+    "predecesoras": [
+      {
+        "id": "A05",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "12.2"
+    ],
+    "liberacion": 75,
+    "limite": 110,
+    "fase": "Implementación",
+    "ES": 75,
+    "EF": 95,
+    "LS": 90,
+    "LF": 110,
+    "HT": 15,
+    "HL": 15
+  },
+  {
+    "id": "INN1-D",
+    "nombre": "Validar el formato de expediente con destinatarios",
+    "duracion": 10,
+    "predecesoras": [
+      {
+        "id": "A05",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "12.1"
+    ],
+    "liberacion": 65,
+    "limite": 80,
+    "fase": "Implementación",
+    "ES": 66,
+    "EF": 76,
+    "LS": 70,
+    "LF": 80,
+    "HT": 4,
+    "HL": 4
+  },
+  {
+    "id": "INN5-D",
+    "nombre": "Talleres de circadiano y diseño del aviso no punitivo",
+    "duracion": 10,
+    "predecesoras": [
+      {
+        "id": "A05",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "12.5"
+    ],
+    "liberacion": 65,
+    "limite": 80,
+    "fase": "Implementación",
+    "ES": 66,
+    "EF": 76,
+    "LS": 70,
+    "LF": 80,
+    "HT": 4,
+    "HL": 4
+  },
+  {
+    "id": "H2",
+    "nombre": "Acta H2 · E-25 M4",
+    "duracion": 0,
+    "predecesoras": [
+      {
+        "id": "R-H2",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [],
+    "limite": 80,
+    "evidencia": "Acta de aceptación suscrita por la Contraparte Técnica",
+    "fase": "Implementación",
+    "mes_e25": 4,
+    "ES": 76,
+    "EF": 76,
+    "LS": 76,
+    "LF": 76,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "COST-M6",
+    "nombre": "Entregar estudio de costo real por ruta y contrato a Finanzas",
+    "duracion": 0,
+    "predecesoras": [
+      {
+        "id": "A05-COST",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "2.5"
+    ],
+    "limite": 120,
+    "evidencia": "Registro de entrega y fuente de datos; control interno M6, sin pago propio",
+    "fase": "Implementación",
+    "ES": 110,
+    "EF": 110,
+    "LS": 120,
+    "LF": 120,
+    "HT": 10,
+    "HL": 10
+  },
+  {
+    "id": "A06-H12",
+    "nombre": "Enrolar refuerzo y medir conversión; preparar corte H12",
+    "duracion": 100,
+    "predecesoras": [
+      {
+        "id": "A06-CAMP",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "9.2",
+      "9.3",
+      "12.4"
+    ],
+    "liberacion": 300,
+    "limite": 410,
+    "evidencia": "Anexos vigentes, indicadores y padrón; 134 en M21",
+    "fase": "Implementación",
+    "ES": 300,
+    "EF": 400,
+    "LS": 310,
+    "LF": 410,
+    "HT": 10,
+    "HL": 10
+  },
+  {
+    "id": "INN5-C",
+    "nombre": "Construir aviso circadiano y control de privacidad",
+    "duracion": 90,
+    "predecesoras": [
+      {
+        "id": "INN5-D",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "12.5"
+    ],
+    "liberacion": 80,
+    "limite": 180,
+    "fase": "Implementación",
+    "ES": 80,
+    "EF": 170,
+    "LS": 90,
+    "LF": 180,
+    "HT": 10,
+    "HL": 10
+  },
+  {
+    "id": "A07",
+    "nombre": "Habilitar ambientes, seguridad y observabilidad",
+    "duracion": 26,
+    "predecesoras": [
+      {
+        "id": "H2",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "3.1",
+      "3.2",
+      "3.3"
+    ],
+    "fase": "Implementación",
+    "ES": 76,
+    "EF": 102,
+    "LS": 76,
+    "LF": 102,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "A11-HOM",
+    "nombre": "Homologar firmware, kit y recuperación local",
+    "duracion": 32,
+    "predecesoras": [
+      {
+        "id": "H2",
+        "tipo": "FS",
+        "lag": 0
+      },
+      {
+        "id": "A03",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "4.1"
+    ],
+    "limite": 112,
+    "evidencia": "Homologación de captura local, banco, seguridad, recuperación y continuidad de 72 h para el piloto. Habilitación de evidencia CP-SEC-05 de terceros sujeta a G13-Q.",
+    "fase": "Implementación",
+    "ES": 76,
+    "EF": 108,
+    "LS": 80,
+    "LF": 112,
+    "HT": 4,
+    "HL": 4
+  },
+  {
+    "id": "INN5-Q",
+    "nombre": "Ensayar aviso y separar métricas base e incrementales",
+    "duracion": 44,
+    "predecesoras": [
+      {
+        "id": "INN5-C",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "12.5",
+      "10.1"
+    ],
+    "liberacion": 180,
+    "limite": 230,
+    "fase": "Implementación",
+    "ES": 180,
+    "EF": 224,
+    "LS": 186,
+    "LF": 230,
+    "HT": 6,
+    "HL": 6
+  },
+  {
+    "id": "R-H3",
+    "nombre": "Revisión de ambientes por la contraparte",
+    "duracion": 10,
+    "predecesoras": [
+      {
+        "id": "A07",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [],
+    "fase": "Implementación",
+    "ES": 102,
+    "EF": 112,
+    "LS": 102,
+    "LF": 112,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "A07-DEV",
+    "nombre": "Liberar DEV/QA con control de identidad para primer sprint",
+    "duracion": 0,
+    "predecesoras": [
+      {
+        "id": "A07",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "3.1",
+      "3.2"
+    ],
+    "liberacion": 110,
+    "limite": 110,
+    "evidencia": "Disponibilidad técnica, permisos y datos de prueba antes del acta H3",
+    "fase": "Implementación",
+    "ES": 110,
+    "EF": 110,
+    "LS": 110,
+    "LF": 110,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "H3",
+    "nombre": "Acta H3 · E-25 M6",
+    "duracion": 0,
+    "predecesoras": [
+      {
+        "id": "R-H3",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [],
+    "limite": 120,
+    "evidencia": "Acta de aceptación suscrita por la Contraparte Técnica",
+    "fase": "Implementación",
+    "mes_e25": 6,
+    "ES": 112,
+    "EF": 112,
+    "LS": 112,
+    "LF": 112,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "A09-1",
+    "nombre": "Sprint 1 · Maestros, roles, permisos y vigencias",
+    "duracion": 10,
+    "predecesoras": [
+      {
+        "id": "A07-DEV",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "5.1",
+      "10.1"
+    ],
+    "fase": "Implementación",
+    "ES": 110,
+    "EF": 120,
+    "LS": 110,
+    "LF": 120,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "INN4-C",
+    "nombre": "Implementar control de adhesión, ventanas y liquidación",
+    "duracion": 70,
+    "predecesoras": [
+      {
+        "id": "A06-ANEXO",
+        "tipo": "FS",
+        "lag": 0
+      },
+      {
+        "id": "A07-DEV",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "12.4"
+    ],
+    "liberacion": 110,
+    "limite": 200,
+    "fase": "Implementación",
+    "ES": 110,
+    "EF": 180,
+    "LS": 130,
+    "LF": 200,
+    "HT": 20,
+    "HL": 20
+  },
+  {
+    "id": "A08-VIG",
+    "nombre": "Migrar y conciliar las vigencias documentales",
+    "duracion": 60,
+    "predecesoras": [
+      {
+        "id": "H3",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "7.1"
+    ],
+    "limite": 190,
+    "evidencia": "Acta de cotejo individual de unas 6.000 vigencias",
+    "fase": "Implementación",
+    "ES": 112,
+    "EF": 172,
+    "LS": 130,
+    "LF": 190,
+    "HT": 18,
+    "HL": 18
+  },
+  {
+    "id": "A08-HIST1",
+    "nombre": "Migración histórica E1 y conciliación inicial",
+    "duracion": 78,
+    "predecesoras": [
+      {
+        "id": "H3",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "7.2"
+    ],
+    "limite": 190,
+    "evidencia": "Inventario por entidad, corte y diferencias de viajes y liquidaciones",
+    "fase": "Implementación",
+    "ES": 112,
+    "EF": 190,
+    "LS": 112,
+    "LF": 190,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "A08-BI1",
+    "nombre": "Construir repositorio analítico",
+    "duracion": 68,
+    "predecesoras": [
+      {
+        "id": "A08-BI0",
+        "tipo": "FS",
+        "lag": 0
+      },
+      {
+        "id": "H3",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "7.3"
+    ],
+    "limite": 190,
+    "fase": "Implementación",
+    "ES": 112,
+    "EF": 180,
+    "LS": 122,
+    "LF": 190,
+    "HT": 10,
+    "HL": 10
+  },
+  {
+    "id": "A09-2",
+    "nombre": "Sprint 2 · Origen, custodia y evidencia de jornada",
+    "duracion": 10,
+    "predecesoras": [
+      {
+        "id": "A09-1",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "5.1",
+      "10.1"
+    ],
+    "fase": "Implementación",
+    "ES": 120,
+    "EF": 130,
+    "LS": 120,
+    "LF": 130,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "A10-CONT",
+    "nombre": "Interfaz contable y prueba de reintentos",
+    "duracion": 40,
+    "predecesoras": [
+      {
+        "id": "H3",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "6.1"
+    ],
+    "limite": 160,
+    "fase": "Implementación",
+    "ES": 112,
+    "EF": 152,
+    "LS": 120,
+    "LF": 160,
+    "HT": 8,
+    "HL": 8
+  },
+  {
+    "id": "A10-POS",
+    "nombre": "Habilitar conectores de posicionamiento de plataformas factibles",
+    "duracion": 60,
+    "predecesoras": [
+      {
+        "id": "A04",
+        "tipo": "FS",
+        "lag": 0
+      },
+      {
+        "id": "H3",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "6.2"
+    ],
+    "limite": 180,
+    "fase": "Implementación",
+    "ES": 112,
+    "EF": 172,
+    "LS": 120,
+    "LF": 180,
+    "HT": 8,
+    "HL": 8
+  },
+  {
+    "id": "A10-OEM",
+    "nombre": "Telemetría de fábrica y autenticidad de tacógrafos",
+    "duracion": 60,
+    "predecesoras": [
+      {
+        "id": "A04",
+        "tipo": "FS",
+        "lag": 0
+      },
+      {
+        "id": "H3",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "6.3"
+    ],
+    "limite": 180,
+    "fase": "Implementación",
+    "ES": 112,
+    "EF": 172,
+    "LS": 120,
+    "LF": 180,
+    "HT": 8,
+    "HL": 8
+  },
+  {
+    "id": "A10-TALLER",
+    "nombre": "Recibir costos de taller, peaje y combustible",
+    "duracion": 60,
+    "predecesoras": [
+      {
+        "id": "H3",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "6.4"
+    ],
+    "limite": 180,
+    "fase": "Implementación",
+    "ES": 112,
+    "EF": 172,
+    "LS": 120,
+    "LF": 180,
+    "HT": 8,
+    "HL": 8
+  },
+  {
+    "id": "A10-LEG",
+    "nombre": "Capa inicial de convivencia con el sistema de 2013",
+    "duracion": 66,
+    "predecesoras": [
+      {
+        "id": "H3",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "6.5"
+    ],
+    "limite": 180,
+    "fase": "Implementación",
+    "ES": 112,
+    "EF": 178,
+    "LS": 114,
+    "LF": 180,
+    "HT": 2,
+    "HL": 2
+  },
+  {
+    "id": "A11-PIL",
+    "nombre": "Piloto interno: 10 kits en San Bernardo",
+    "duracion": 8,
+    "predecesoras": [
+      {
+        "id": "A04-HW",
+        "tipo": "FS",
+        "lag": 0
+      },
+      {
+        "id": "H3",
+        "tipo": "FS",
+        "lag": 0
+      },
+      {
+        "id": "A11-HOM",
+        "tipo": "FS",
+        "lag": 0
+      },
+      {
+        "id": "A11-INN2",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "4.2",
+      "12.2"
+    ],
+    "liberacion": 112,
+    "limite": 120,
+    "evidencia": "Recepciones por VIN, ensayos de reversión y ciclo por puesto; liberar lotes con resultado",
+    "fase": "Implementación",
+    "ES": 112,
+    "EF": 120,
+    "LS": 112,
+    "LF": 120,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "A09-3",
+    "nombre": "Sprint 3 · Flota, planificación y bloqueo de asignación",
+    "duracion": 10,
+    "predecesoras": [
+      {
+        "id": "A09-2",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "5.2",
+      "5.3",
+      "10.1"
+    ],
+    "fase": "Implementación",
+    "ES": 130,
+    "EF": 140,
+    "LS": 130,
+    "LF": 140,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "A11-BAL7",
+    "nombre": "Instalar 70 balizas base y probar lectura",
+    "duracion": 20,
+    "predecesoras": [
+      {
+        "id": "A11-LECT",
+        "tipo": "FS",
+        "lag": 0
+      },
+      {
+        "id": "A11-PIL",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "12.3"
+    ],
+    "liberacion": 120,
+    "limite": 140,
+    "evidencia": "Lista por terminal; stock separado de unidades montadas",
+    "fase": "Implementación",
+    "ES": 120,
+    "EF": 140,
+    "LS": 120,
+    "LF": 140,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "L7",
+    "nombre": "Confirmar entrega y agenda de 60 kits M7",
+    "duracion": 0,
+    "predecesoras": [
+      {
+        "id": "A11-PIL",
+        "tipo": "FS",
+        "lag": 0
+      },
+      {
+        "id": "A06-LOTE",
+        "tipo": "FS",
+        "lag": 0
+      },
+      {
+        "id": "A11-INN2",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "4.2",
+      "9.2"
+    ],
+    "liberacion": 120,
+    "limite": 120,
+    "evidencia": "Disponibilidad de stock, cuadrilla, citas por VIN y consentimientos antes de intervenir Autorización previa y escrita del mandante al proveedor y revisión del acumulado del 40 % (art. 73).",
+    "fase": "Implementación",
+    "ES": 120,
+    "EF": 120,
+    "LS": 120,
+    "LF": 120,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "HIST-VALID",
+    "nombre": "Saneamiento continuo y control de cambios de datos tras corte de candidato",
+    "duracion": 50,
+    "liberacion": 172,
+    "limite": 240,
+    "predecesoras": [
+      {
+        "id": "A08-HIST1",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "7.1",
+      "7.2"
+    ],
+    "fase": "Implementación",
+    "ES": 190,
+    "EF": 240,
+    "LS": 190,
+    "LF": 240,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "A09-4",
+    "nombre": "Sprint 4 · Captura a bordo y vista de flota",
+    "duracion": 10,
+    "predecesoras": [
+      {
+        "id": "A09-3",
+        "tipo": "FS",
+        "lag": 0
+      },
+      {
+        "id": "A11-HOM",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "5.4",
+      "10.1"
+    ],
+    "fase": "Implementación",
+    "ES": 140,
+    "EF": 150,
+    "LS": 140,
+    "LF": 150,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "A11-BAL8",
+    "nombre": "Instalar 70 balizas base y probar lectura",
+    "duracion": 20,
+    "predecesoras": [
+      {
+        "id": "A11-BAL7",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "12.3"
+    ],
+    "liberacion": 140,
+    "limite": 160,
+    "fase": "Implementación",
+    "ES": 140,
+    "EF": 160,
+    "LS": 140,
+    "LF": 160,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "M7-KIT",
+    "nombre": "Montar y recepcionar 60 kits vía proveedor",
+    "duracion": 20,
+    "predecesoras": [
+      {
+        "id": "L7",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "4.2",
+      "12.2"
+    ],
+    "liberacion": 120,
+    "limite": 140,
+    "fase": "Implementación",
+    "ES": 120,
+    "EF": 140,
+    "LS": 120,
+    "LF": 140,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "INN1-C",
+    "nombre": "Construir emisión y verificación de expediente",
+    "duracion": 45,
+    "predecesoras": [
+      {
+        "id": "INN1-D",
+        "tipo": "FS",
+        "lag": 0
+      },
+      {
+        "id": "A09-3",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "12.1"
+    ],
+    "liberacion": 140,
+    "limite": 200,
+    "evidencia": "Integración incremental con 5.1 y 5.7; validar con portal G13",
+    "fase": "Implementación",
+    "ES": 140,
+    "EF": 185,
+    "LS": 155,
+    "LF": 200,
+    "HT": 15,
+    "HL": 15
+  },
+  {
+    "id": "A09-5",
+    "nombre": "Sprint 5 · Geocerca, espera y firma de entrega",
+    "duracion": 10,
+    "predecesoras": [
+      {
+        "id": "A09-4",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "5.4",
+      "5.5",
+      "10.1"
+    ],
+    "fase": "Implementación",
+    "ES": 150,
+    "EF": 160,
+    "LS": 150,
+    "LF": 160,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "A11-BAL9",
+    "nombre": "Instalar 70 balizas base y probar lectura",
+    "duracion": 20,
+    "predecesoras": [
+      {
+        "id": "A11-BAL8",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "12.3"
+    ],
+    "liberacion": 160,
+    "limite": 180,
+    "fase": "Implementación",
+    "ES": 160,
+    "EF": 180,
+    "LS": 160,
+    "LF": 180,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "L8",
+    "nombre": "Confirmar entrega y agenda de 60 kits M8",
+    "duracion": 0,
+    "predecesoras": [
+      {
+        "id": "M7-KIT",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "4.2",
+      "9.2"
+    ],
+    "liberacion": 140,
+    "limite": 140,
+    "evidencia": "Consentimientos y paso por terminal de unidades del lote M8",
+    "fase": "Implementación",
+    "ES": 140,
+    "EF": 140,
+    "LS": 140,
+    "LF": 140,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "A09-6",
+    "nombre": "Sprint 6 · Carga peligrosa y documento contable",
+    "duracion": 10,
+    "predecesoras": [
+      {
+        "id": "A09-5",
+        "tipo": "FS",
+        "lag": 0
+      },
+      {
+        "id": "A10-CONT",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "5.5",
+      "10.1"
+    ],
+    "fase": "Implementación",
+    "ES": 160,
+    "EF": 170,
+    "LS": 160,
+    "LF": 170,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "A11-INN3",
+    "nombre": "Validar lecturas de acople y temperatura sobre los lotes",
+    "duracion": 16,
+    "predecesoras": [
+      {
+        "id": "A11-LECT",
+        "tipo": "FS",
+        "lag": 0
+      },
+      {
+        "id": "A09-3",
+        "tipo": "FS",
+        "lag": 0
+      },
+      {
+        "id": "A11-BAL9",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "12.3"
+    ],
+    "limite": 200,
+    "evidencia": "Registros de acople y temperatura disponibles para pruebas integrales",
+    "fase": "Implementación",
+    "ES": 180,
+    "EF": 196,
+    "LS": 184,
+    "LF": 200,
+    "HT": 4,
+    "HL": 4
+  },
+  {
+    "id": "M8-KIT",
+    "nombre": "Montar y recepcionar 60 kits vía proveedor",
+    "duracion": 20,
+    "predecesoras": [
+      {
+        "id": "L8",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "4.2",
+      "12.2"
+    ],
+    "liberacion": 140,
+    "limite": 160,
+    "fase": "Implementación",
+    "ES": 140,
+    "EF": 160,
+    "LS": 140,
+    "LF": 160,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "A09-7",
+    "nombre": "Sprint 7 · Adhesión, alertas y candidato de entrenamiento",
+    "duracion": 10,
+    "predecesoras": [
+      {
+        "id": "A09-6",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "5.1",
+      "5.7",
+      "10.1"
+    ],
+    "fase": "Implementación",
+    "ES": 170,
+    "EF": 180,
+    "LS": 170,
+    "LF": 180,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "L9",
+    "nombre": "Confirmar entrega y agenda de 52 kits M9",
+    "duracion": 0,
+    "predecesoras": [
+      {
+        "id": "M8-KIT",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "4.2",
+      "9.2"
+    ],
+    "liberacion": 160,
+    "limite": 160,
+    "evidencia": "Consentimientos y paso por terminal de unidades del lote M9",
+    "fase": "Implementación",
+    "ES": 160,
+    "EF": 160,
+    "LS": 160,
+    "LF": 160,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "G13-Q",
+    "nombre": "Ejecutar CP-SEC-05 y verificar candidato de capacitación en PREPROD",
+    "duracion": 2,
+    "predecesoras": [
+      {
+        "id": "A09-7",
+        "tipo": "FS",
+        "lag": 0
+      },
+      {
+        "id": "A11-HOM",
+        "tipo": "FS",
+        "lag": 0
+      },
+      {
+        "id": "CPSEC-PREP",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "4.1",
+      "10.1",
+      "11.1"
+    ],
+    "liberacion": 180,
+    "limite": 190,
+    "evidencia": "Acta y digest, 8 h Seguridad + 5 h técnico + 2 h SRE antes de G13, contra reserva 10.1 y con cruce CP-HW-03. Preparación del agente de 72 h en M6–M9 presupuestada en EDT4.1.",
+    "fase": "Implementación",
+    "ES": 180,
+    "EF": 182,
+    "LS": 188,
+    "LF": 190,
+    "HT": 8,
+    "HL": 0
+  },
+  {
+    "id": "A09-8",
+    "nombre": "Sprint 8 · Costeo, liquidación, portal y candidato E1",
+    "duracion": 10,
+    "predecesoras": [
+      {
+        "id": "A09-7",
+        "tipo": "FS",
+        "lag": 0
+      },
+      {
+        "id": "A10-TALLER",
+        "tipo": "FS",
+        "lag": 0
+      },
+      {
+        "id": "A08-BI1",
+        "tipo": "SS",
+        "lag": 50
+      }
+    ],
+    "edt": [
+      "5.6",
+      "5.7",
+      "10.1"
+    ],
+    "fase": "Implementación",
+    "ES": 180,
+    "EF": 190,
+    "LS": 180,
+    "LF": 190,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "M9-KIT",
+    "nombre": "Montar y recepcionar 52 kits vía proveedor",
+    "duracion": 20,
+    "predecesoras": [
+      {
+        "id": "L9",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "4.2",
+      "12.2"
+    ],
+    "liberacion": 160,
+    "limite": 180,
+    "evidencia": "182 montajes acumulados y stock de reposición segregado",
+    "fase": "Implementación",
+    "ES": 160,
+    "EF": 180,
+    "LS": 160,
+    "LF": 180,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "G13",
+    "nombre": "Liberar candidato PREPROD y material de capacitación",
+    "duracion": 0,
+    "predecesoras": [
+      {
+        "id": "G13-Q",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "10.1",
+      "11.1"
+    ],
+    "limite": 190,
+    "evidencia": "Acta y digest de candidato entrenable en PREPROD con datos ficticios y cinco flujos T-10",
+    "fase": "Implementación",
+    "ES": 182,
+    "EF": 182,
+    "LS": 190,
+    "LF": 190,
+    "HT": 8,
+    "HL": 0
+  },
+  {
+    "id": "R-H4",
+    "nombre": "Revisión del candidato E1 por la contraparte",
+    "duracion": 10,
+    "predecesoras": [
+      {
+        "id": "A09-8",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [],
+    "fase": "Implementación",
+    "ES": 190,
+    "EF": 200,
+    "LS": 190,
+    "LF": 200,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "A12-SIS",
+    "nombre": "Ejecutar regresión integral y conciliación de Etapa 1",
+    "duracion": 16,
+    "predecesoras": [
+      {
+        "id": "A09-8",
+        "tipo": "FS",
+        "lag": 0
+      },
+      {
+        "id": "A08-VIG",
+        "tipo": "FS",
+        "lag": 0
+      },
+      {
+        "id": "A08-HIST1",
+        "tipo": "FS",
+        "lag": 0
+      },
+      {
+        "id": "A08-BI1",
+        "tipo": "FS",
+        "lag": 0
+      },
+      {
+        "id": "A10-POS",
+        "tipo": "FS",
+        "lag": 0
+      },
+      {
+        "id": "A10-OEM",
+        "tipo": "FS",
+        "lag": 0
+      },
+      {
+        "id": "A10-LEG",
+        "tipo": "FS",
+        "lag": 0
+      },
+      {
+        "id": "A07-SALA",
+        "tipo": "FS",
+        "lag": 0
+      },
+      {
+        "id": "M9-KIT",
+        "tipo": "FS",
+        "lag": 0
+      },
+      {
+        "id": "COST-M6",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "10.1"
+    ],
+    "fase": "Implementación",
+    "evidencia": "La prueba de costeo coteja una muestra con la referencia histórica del estudio. El estudio conserva su propio límite M6.",
+    "ES": 190,
+    "EF": 206,
+    "LS": 190,
+    "LF": 206,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "A12-SEC",
+    "nombre": "Verificar desempeño, resiliencia y seguridad de E1",
+    "duracion": 24,
+    "predecesoras": [
+      {
+        "id": "A09-8",
+        "tipo": "FS",
+        "lag": 0
+      },
+      {
+        "id": "A07-SALA",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "3.2",
+      "10.2"
+    ],
+    "fase": "Implementación",
+    "ES": 190,
+    "EF": 214,
+    "LS": 192,
+    "LF": 216,
+    "HT": 2,
+    "HL": 2
+  },
+  {
+    "id": "H4",
+    "nombre": "Acta H4 · E-25 M10",
+    "duracion": 0,
+    "predecesoras": [
+      {
+        "id": "R-H4",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [],
+    "limite": 200,
+    "evidencia": "Acta de aceptación suscrita por la Contraparte Técnica",
+    "fase": "Implementación",
+    "mes_e25": 10,
+    "ES": 200,
+    "EF": 200,
+    "LS": 200,
+    "LF": 200,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "A12-UAT",
+    "nombre": "Validar perfiles de usuario y armar dossier de certificación E1",
+    "duracion": 10,
+    "predecesoras": [
+      {
+        "id": "A12-SIS",
+        "tipo": "FS",
+        "lag": 0
+      },
+      {
+        "id": "A11-INN3",
+        "tipo": "FS",
+        "lag": 0
+      },
+      {
+        "id": "INN1-C",
+        "tipo": "FS",
+        "lag": 0
+      },
+      {
+        "id": "INN4-C",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "10.3"
+    ],
+    "fase": "Implementación",
+    "ES": 206,
+    "EF": 216,
+    "LS": 206,
+    "LF": 216,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "A13-FAM",
+    "nombre": "Familiarización por turnos con candidato G13",
+    "duracion": 10,
+    "predecesoras": [
+      {
+        "id": "G13",
+        "tipo": "FS",
+        "lag": 0
+      },
+      {
+        "id": "A06-LOTE",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "11.1"
+    ],
+    "fase": "Implementación",
+    "evidencia": "Familiarización por turnos desde liberación probada de PREPROD. Recalcular si G13 se atrasa.",
+    "ES": 182,
+    "EF": 192,
+    "LS": 190,
+    "LF": 200,
+    "HT": 8,
+    "HL": 0
+  },
+  {
+    "id": "R-H5",
+    "nombre": "Revisión de certificación E1 por la contraparte",
+    "duracion": 10,
+    "predecesoras": [
+      {
+        "id": "A12-UAT",
+        "tipo": "FS",
+        "lag": 0
+      },
+      {
+        "id": "A12-SEC",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [],
+    "fase": "Implementación",
+    "ES": 216,
+    "EF": 226,
+    "LS": 216,
+    "LF": 226,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "A13-PRA",
+    "nombre": "Práctica de flujos completos y certificación por perfil",
+    "duracion": 30,
+    "predecesoras": [
+      {
+        "id": "A13-FAM",
+        "tipo": "FS",
+        "lag": 0
+      },
+      {
+        "id": "A09-8",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "11.1"
+    ],
+    "fase": "Implementación",
+    "ES": 192,
+    "EF": 222,
+    "LS": 200,
+    "LF": 230,
+    "HT": 8,
+    "HL": 8
+  },
+  {
+    "id": "H5",
+    "nombre": "Acta H5 · E-25 M12",
+    "duracion": 0,
+    "predecesoras": [
+      {
+        "id": "R-H5",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [],
+    "limite": 240,
+    "evidencia": "Acta de aceptación suscrita por la Contraparte Técnica",
+    "fase": "Implementación",
+    "mes_e25": 12,
+    "ES": 226,
+    "EF": 226,
+    "LS": 226,
+    "LF": 226,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "R-H6",
+    "nombre": "Revisión del dossier de arranque de marcha blanca E1",
+    "duracion": 10,
+    "predecesoras": [
+      {
+        "id": "A12-SIS",
+        "tipo": "FS",
+        "lag": 0
+      },
+      {
+        "id": "A12-SEC",
+        "tipo": "FS",
+        "lag": 0
+      },
+      {
+        "id": "A13-PRA",
+        "tipo": "FS",
+        "lag": 0
+      },
+      {
+        "id": "INN5-Q",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [],
+    "liberacion": 230,
+    "limite": 240,
+    "fase": "Implementación",
+    "evidencia": "Revisión anticipada del dossier de arranque, separada de la aceptación de la certificación H5. H6 sigue condicionado al acta H5 y al término de la reserva.",
+    "ES": 230,
+    "EF": 240,
+    "LS": 230,
+    "LF": 240,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "A14",
+    "nombre": "Reserva de cronograma E1",
+    "duracion": 14,
+    "predecesoras": [
+      {
+        "id": "H5",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [],
+    "limite": 240,
+    "evidencia": "Reserva explícita consumible; supuesto de planificación",
+    "fase": "Implementación",
+    "ES": 226,
+    "EF": 240,
+    "LS": 226,
+    "LF": 240,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "H6",
+    "nombre": "Acta H6 · E-25 M13",
+    "duracion": 0,
+    "predecesoras": [
+      {
+        "id": "R-H6",
+        "tipo": "FS",
+        "lag": 0
+      },
+      {
+        "id": "A14",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [],
+    "liberacion": 240,
+    "limite": 240,
+    "evidencia": "Requiere acta, inicio M13, registro de reversión habilitada y verificación de disponibilidad real",
+    "fase": "Implementación",
+    "mes_e25": 13,
+    "ES": 240,
+    "EF": 240,
+    "LS": 240,
+    "LF": 240,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "A15",
+    "nombre": "Marcha blanca E1, reversión y medición diaria",
+    "duracion": 60,
+    "predecesoras": [
+      {
+        "id": "H6",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "11.2"
+    ],
+    "liberacion": 240,
+    "limite": 300,
+    "fase": "Implementación",
+    "ES": 240,
+    "EF": 300,
+    "LS": 240,
+    "LF": 300,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "A15-INN",
+    "nombre": "Activar expediente, acople y aviso circadiano en piloto",
+    "duracion": 60,
+    "predecesoras": [
+      {
+        "id": "H6",
+        "tipo": "FS",
+        "lag": 0
+      },
+      {
+        "id": "INN1-C",
+        "tipo": "FS",
+        "lag": 0
+      },
+      {
+        "id": "A11-INN3",
+        "tipo": "FS",
+        "lag": 0
+      },
+      {
+        "id": "INN5-Q",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "12.1",
+      "12.3",
+      "12.5"
+    ],
+    "liberacion": 240,
+    "limite": 300,
+    "fase": "Implementación",
+    "ES": 240,
+    "EF": 300,
+    "LS": 240,
+    "LF": 300,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "A16",
+    "nombre": "Transferir operación y certificar equipo de TI",
+    "duracion": 50,
+    "predecesoras": [
+      {
+        "id": "H6",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "11.4"
+    ],
+    "fase": "Implementación",
+    "ES": 240,
+    "EF": 290,
+    "LS": 250,
+    "LF": 300,
+    "HT": 10,
+    "HL": 10
+  },
+  {
+    "id": "A17",
+    "nombre": "Levantar y diseñar alcance E2 y dossier H8",
+    "duracion": 26,
+    "predecesoras": [
+      {
+        "id": "H6",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "2.4",
+      "8.1",
+      "8.2",
+      "8.3",
+      "8.4",
+      "8.5"
+    ],
+    "fase": "Implementación",
+    "ES": 240,
+    "EF": 266,
+    "LS": 240,
+    "LF": 266,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "A18-INT",
+    "nombre": "Escalar telemática de terceros con equipo propio",
+    "duracion": 60,
+    "predecesoras": [
+      {
+        "id": "H6",
+        "tipo": "FS",
+        "lag": 0
+      },
+      {
+        "id": "A10-POS",
+        "tipo": "FS",
+        "lag": 0
+      },
+      {
+        "id": "A10-OEM",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "4.3"
+    ],
+    "liberacion": 240,
+    "limite": 300,
+    "evidencia": "Posiciones verificadas por plataforma factible y consentimiento; universo de referencia 192 La planilla no acredita acceso ni cobertura de toda la población.",
+    "fase": "Implementación",
+    "ES": 240,
+    "EF": 300,
+    "LS": 240,
+    "LF": 300,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "R-H8",
+    "nombre": "Revisión del diseño E2 por la contraparte",
+    "duracion": 10,
+    "predecesoras": [
+      {
+        "id": "A17",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [],
+    "fase": "Implementación",
+    "ES": 266,
+    "EF": 276,
+    "LS": 266,
+    "LF": 276,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "A19",
+    "nombre": "Preparar corte, conciliación y dossier de producción E1",
+    "duracion": 10,
+    "predecesoras": [
+      {
+        "id": "A15",
+        "tipo": "FS",
+        "lag": 0
+      },
+      {
+        "id": "A16",
+        "tipo": "FS",
+        "lag": 0
+      },
+      {
+        "id": "A18-INT",
+        "tipo": "FS",
+        "lag": 0
+      },
+      {
+        "id": "A15-INN",
+        "tipo": "FS",
+        "lag": 0
+      },
+      {
+        "id": "A06-CAMP",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "11.2",
+      "6.5"
+    ],
+    "fase": "Implementación",
+    "evidencia": "Expediente de conciliación, reversión y corte. La conformidad formal de producción E1 corresponde a H7.",
+    "ES": 300,
+    "EF": 310,
+    "LS": 300,
+    "LF": 310,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "INN2-OPT",
+    "nombre": "Evaluar reglas de oportunidad de patio antes del corte H7",
+    "duracion": 10,
+    "liberacion": 300,
+    "limite": 310,
+    "predecesoras": [
+      {
+        "id": "A15",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "12.2"
+    ],
+    "fase": "Implementación",
+    "ES": 300,
+    "EF": 310,
+    "LS": 300,
+    "LF": 310,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "EST-E1-CONT",
+    "nombre": "Preparar estabilización y sostener atención E1 durante convivencia",
+    "duracion": 100,
+    "liberacion": 300,
+    "limite": 400,
+    "predecesoras": [
+      {
+        "id": "A15",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "11.4"
+    ],
+    "fase": "Implementación",
+    "ES": 300,
+    "EF": 400,
+    "LS": 300,
+    "LF": 400,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "H8",
+    "nombre": "Acta H8 · E-25 M14",
+    "duracion": 0,
+    "predecesoras": [
+      {
+        "id": "R-H8",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [],
+    "limite": 280,
+    "evidencia": "Acta de aceptación suscrita por la Contraparte Técnica",
+    "fase": "Implementación",
+    "mes_e25": 14,
+    "ES": 276,
+    "EF": 276,
+    "LS": 276,
+    "LF": 276,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "R-H7",
+    "nombre": "Revisión de paso a producción E1 por la contraparte",
+    "duracion": 10,
+    "predecesoras": [
+      {
+        "id": "A19",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [],
+    "fase": "Implementación",
+    "ES": 310,
+    "EF": 320,
+    "LS": 310,
+    "LF": 320,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "A21-LEG",
+    "nombre": "Retirar primeras funciones de legado y verificar convivencia",
+    "duracion": 60,
+    "predecesoras": [
+      {
+        "id": "A19",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "6.5"
+    ],
+    "liberacion": 300,
+    "limite": 380,
+    "evidencia": "H7 registra cambio de sistema de registro; posterior verificación de trazas",
+    "fase": "Implementación",
+    "ES": 310,
+    "EF": 370,
+    "LS": 320,
+    "LF": 380,
+    "HT": 10,
+    "HL": 10
+  },
+  {
+    "id": "A21-MED",
+    "nombre": "Medir expediente, acople y avisos en producción",
+    "duracion": 85,
+    "predecesoras": [
+      {
+        "id": "A19",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "12.1",
+      "12.3",
+      "12.5"
+    ],
+    "liberacion": 310,
+    "limite": 410,
+    "fase": "Implementación",
+    "ES": 310,
+    "EF": 395,
+    "LS": 320,
+    "LF": 405,
+    "HT": 10,
+    "HL": 10
+  },
+  {
+    "id": "H7",
+    "nombre": "Acta H7 · E-25 M16",
+    "duracion": 0,
+    "predecesoras": [
+      {
+        "id": "R-H7",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [],
+    "limite": 320,
+    "evidencia": "Acta de aceptación suscrita por la Contraparte Técnica",
+    "fase": "Implementación",
+    "mes_e25": 16,
+    "ES": 320,
+    "EF": 320,
+    "LS": 320,
+    "LF": 320,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "A20-1",
+    "nombre": "Sprint 1 E2 · Retornos y rendimiento",
+    "duracion": 10,
+    "predecesoras": [
+      {
+        "id": "H8",
+        "tipo": "FS",
+        "lag": 0
+      },
+      {
+        "id": "A08-HIST1",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "8.2",
+      "8.5",
+      "10.1"
+    ],
+    "fase": "Implementación",
+    "ES": 276,
+    "EF": 286,
+    "LS": 276,
+    "LF": 286,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "A20-2",
+    "nombre": "Sprint 2 E2 · Portal de cliente y emisiones",
+    "duracion": 10,
+    "predecesoras": [
+      {
+        "id": "A20-1",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "8.1",
+      "8.3",
+      "10.1"
+    ],
+    "fase": "Implementación",
+    "ES": 286,
+    "EF": 296,
+    "LS": 286,
+    "LF": 296,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "A21",
+    "nombre": "Estabilizar E1 y verificar traspaso en terminales",
+    "duracion": 30,
+    "predecesoras": [
+      {
+        "id": "H7",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "11.4"
+    ],
+    "limite": 360,
+    "fase": "Implementación",
+    "ES": 320,
+    "EF": 350,
+    "LS": 320,
+    "LF": 350,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "A21-PATIO",
+    "nombre": "Validar reglas de patio, acople y recepciones posteriores",
+    "duracion": 45,
+    "predecesoras": [
+      {
+        "id": "H7",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "4.2",
+      "12.2",
+      "12.3"
+    ],
+    "limite": 380,
+    "evidencia": "Seguimiento, prueba y reposición por excepción, sin montajes iniciales",
+    "fase": "Implementación",
+    "ES": 320,
+    "EF": 365,
+    "LS": 335,
+    "LF": 380,
+    "HT": 15,
+    "HL": 15
+  },
+  {
+    "id": "A20-3",
+    "nombre": "Sprint 3 E2 · Taller y kilometraje",
+    "duracion": 10,
+    "predecesoras": [
+      {
+        "id": "A20-2",
+        "tipo": "FS",
+        "lag": 0
+      },
+      {
+        "id": "A10-TALLER",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "8.4",
+      "10.1"
+    ],
+    "fase": "Implementación",
+    "ES": 296,
+    "EF": 306,
+    "LS": 296,
+    "LF": 306,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "A20-4",
+    "nombre": "Sprint 4 E2 · Integración y regresión por perfil",
+    "duracion": 10,
+    "predecesoras": [
+      {
+        "id": "A20-3",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "8.1",
+      "8.2",
+      "8.3",
+      "8.4",
+      "8.5",
+      "10.1"
+    ],
+    "fase": "Implementación",
+    "ES": 306,
+    "EF": 316,
+    "LS": 306,
+    "LF": 316,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "A20-5",
+    "nombre": "Sprint 5 E2 · Candidato, reversión y evidencias H9",
+    "duracion": 10,
+    "predecesoras": [
+      {
+        "id": "A20-4",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "8.1",
+      "8.2",
+      "8.3",
+      "8.4",
+      "8.5",
+      "10.1"
+    ],
+    "fase": "Implementación",
+    "ES": 316,
+    "EF": 326,
+    "LS": 316,
+    "LF": 326,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "R-H9",
+    "nombre": "Revisión del candidato E2 por la contraparte",
+    "duracion": 10,
+    "predecesoras": [
+      {
+        "id": "A20-5",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [],
+    "fase": "Implementación",
+    "ES": 326,
+    "EF": 336,
+    "LS": 330,
+    "LF": 340,
+    "HT": 4,
+    "HL": 0
+  },
+  {
+    "id": "A22-SIS",
+    "nombre": "Certificar regresión y aceptación de E2",
+    "duracion": 14,
+    "predecesoras": [
+      {
+        "id": "A20-5",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "10.1",
+      "10.3"
+    ],
+    "fase": "Implementación",
+    "ES": 326,
+    "EF": 340,
+    "LS": 326,
+    "LF": 340,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "A22-SEC",
+    "nombre": "Certificar desempeño y seguridad de E2",
+    "duracion": 14,
+    "predecesoras": [
+      {
+        "id": "A20-5",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "10.2"
+    ],
+    "fase": "Implementación",
+    "ES": 326,
+    "EF": 340,
+    "LS": 326,
+    "LF": 340,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "H9",
+    "nombre": "Acta H9 · E-25 M17",
+    "duracion": 0,
+    "predecesoras": [
+      {
+        "id": "R-H9",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [],
+    "limite": 340,
+    "evidencia": "Acta de aceptación suscrita por la Contraparte Técnica",
+    "fase": "Implementación",
+    "mes_e25": 17,
+    "ES": 336,
+    "EF": 336,
+    "LS": 340,
+    "LF": 340,
+    "HT": 4,
+    "HL": 4
+  },
+  {
+    "id": "R-H10",
+    "nombre": "Revisión de certificación E2 por la contraparte",
+    "duracion": 10,
+    "predecesoras": [
+      {
+        "id": "A22-SIS",
+        "tipo": "FS",
+        "lag": 0
+      },
+      {
+        "id": "A22-SEC",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [],
+    "fase": "Implementación",
+    "ES": 340,
+    "EF": 350,
+    "LS": 340,
+    "LF": 350,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "H10",
+    "nombre": "Acta H10 · E-25 M18",
+    "duracion": 0,
+    "predecesoras": [
+      {
+        "id": "R-H10",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [],
+    "limite": 360,
+    "evidencia": "Acta de aceptación suscrita por la Contraparte Técnica",
+    "fase": "Implementación",
+    "mes_e25": 18,
+    "ES": 350,
+    "EF": 350,
+    "LS": 350,
+    "LF": 350,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "R-H11",
+    "nombre": "Revisión de inicio de marcha blanca E2 por la contraparte",
+    "duracion": 10,
+    "predecesoras": [
+      {
+        "id": "A22-SIS",
+        "tipo": "FS",
+        "lag": 0
+      },
+      {
+        "id": "A22-SEC",
+        "tipo": "FS",
+        "lag": 0
+      },
+      {
+        "id": "H9",
+        "tipo": "FS",
+        "lag": 0
+      },
+      {
+        "id": "A21",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [],
+    "liberacion": 350,
+    "limite": 360,
+    "fase": "Implementación",
+    "evidencia": "Revisión anticipada del dossier de arranque. El acta H10 sigue siendo condición de H11 por la reserva A23.",
+    "ES": 350,
+    "EF": 360,
+    "LS": 350,
+    "LF": 360,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "A23",
+    "nombre": "Reserva de cronograma E2",
+    "duracion": 10,
+    "predecesoras": [
+      {
+        "id": "H10",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [],
+    "limite": 360,
+    "evidencia": "Reserva explícita consumible; supuesto de planificación",
+    "fase": "Implementación",
+    "ES": 350,
+    "EF": 360,
+    "LS": 350,
+    "LF": 360,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "H11",
+    "nombre": "Acta H11 · E-25 M19",
+    "duracion": 0,
+    "predecesoras": [
+      {
+        "id": "A23",
+        "tipo": "FS",
+        "lag": 0
+      },
+      {
+        "id": "R-H11",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [],
+    "liberacion": 360,
+    "limite": 360,
+    "evidencia": "Requiere acta, inicio M19, control de convivencia, reversión y verificación de disponibilidad real",
+    "fase": "Implementación",
+    "mes_e25": 19,
+    "ES": 360,
+    "EF": 360,
+    "LS": 360,
+    "LF": 360,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "A24",
+    "nombre": "Marcha blanca E2 con operación de E1",
+    "duracion": 40,
+    "predecesoras": [
+      {
+        "id": "H11",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "11.3"
+    ],
+    "liberacion": 360,
+    "limite": 400,
+    "fase": "Implementación",
+    "ES": 360,
+    "EF": 400,
+    "LS": 360,
+    "LF": 400,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "A24-HIST2",
+    "nombre": "Migrar y conciliar corte histórico E2",
+    "duracion": 38,
+    "predecesoras": [
+      {
+        "id": "H11",
+        "tipo": "FS",
+        "lag": 0
+      },
+      {
+        "id": "A08-HIST1",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "7.2"
+    ],
+    "liberacion": 360,
+    "limite": 400,
+    "evidencia": "Lista de registros trasladados, excepciones abiertas y conciliación del corte operativo",
+    "fase": "Implementación",
+    "ES": 360,
+    "EF": 398,
+    "LS": 362,
+    "LF": 400,
+    "HT": 2,
+    "HL": 2
+  },
+  {
+    "id": "A25",
+    "nombre": "Preparar corte E2, retirar funciones de 2013 y entregar expediente de aceptación",
+    "duracion": 10,
+    "predecesoras": [
+      {
+        "id": "A24",
+        "tipo": "FS",
+        "lag": 0
+      },
+      {
+        "id": "A24-HIST2",
+        "tipo": "FS",
+        "lag": 0
+      },
+      {
+        "id": "A21-LEG",
+        "tipo": "FS",
+        "lag": 0
+      },
+      {
+        "id": "A06-H12",
+        "tipo": "SS",
+        "lag": 90
+      },
+      {
+        "id": "A21-MED",
+        "tipo": "SS",
+        "lag": 80
+      }
+    ],
+    "edt": [
+      "11.3",
+      "6.5"
+    ],
+    "liberacion": 400,
+    "limite": 410,
+    "fase": "Implementación",
+    "evidencia": "Expediente de conciliación, reversión y corte. La conformidad formal de producción E2 corresponde a H12.",
+    "ES": 400,
+    "EF": 410,
+    "LS": 400,
+    "LF": 410,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "CE2-DAT",
+    "nombre": "Saneamiento y conciliación del histórico migrado",
+    "duracion": 80,
+    "predecesoras": [
+      {
+        "id": "A24-HIST2",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "7.2"
+    ],
+    "liberacion": 400,
+    "limite": 480,
+    "evidencia": "Diferencias conciliadas, excepciones registradas y responsables",
+    "fase": "Estabilización M21–M24",
+    "ES": 400,
+    "EF": 480,
+    "LS": 400,
+    "LF": 480,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "OP-N1",
+    "nombre": "Mesa N1 y reserva de suplencias",
+    "duracion": 720,
+    "predecesoras": [
+      {
+        "id": "A24",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "13.1"
+    ],
+    "liberacion": 400,
+    "limite": 1120,
+    "evidencia": "Cuadrante 6+1; tickets y prueba de relevo",
+    "fase": "Operación M21–M56",
+    "ES": 400,
+    "EF": 1120,
+    "LS": 400,
+    "LF": 1120,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "OP-SERV",
+    "nombre": "Operar plataforma, guardias, monitorización y SLA",
+    "duracion": 720,
+    "predecesoras": [
+      {
+        "id": "A24",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "13.2"
+    ],
+    "liberacion": 400,
+    "limite": 1120,
+    "evidencia": "Registros de disponibilidad, incidentes y guardias",
+    "fase": "Operación M21–M56",
+    "ES": 400,
+    "EF": 1120,
+    "LS": 400,
+    "LF": 1120,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "OP-CAMPO",
+    "nombre": "Supervisar el ciclo de vida de campo y coordinar proveedor",
+    "duracion": 720,
+    "predecesoras": [
+      {
+        "id": "A24",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "13.3"
+    ],
+    "liberacion": 400,
+    "limite": 1120,
+    "evidencia": "80 h internas mensuales más prestación externa; visitas, rondas y SLA Desde M19 asistencia externa por visita, supervisión específica de soporte 80 h desde M21. Acreditar capacidad y desplazamiento.",
+    "fase": "Operación M21–M56",
+    "ES": 400,
+    "EF": 1120,
+    "LS": 400,
+    "LF": 1120,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "OP-EVOL",
+    "nombre": "Mantener software y datos; autorizar madurez según demanda",
+    "duracion": 720,
+    "predecesoras": [
+      {
+        "id": "A24",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "13.4"
+    ],
+    "liberacion": 400,
+    "limite": 1120,
+    "evidencia": "Backlog y dos meses de observación antes de cada reducción",
+    "fase": "Operación M21–M56",
+    "ES": 400,
+    "EF": 1120,
+    "LS": 400,
+    "LF": 1120,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "CIERRE-PREP",
+    "nombre": "Preparar conciliación y traspaso antes del acta H12",
+    "duracion": 20,
+    "liberacion": 400,
+    "limite": 420,
+    "predecesoras": [
+      {
+        "id": "A24",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "6.5",
+      "7.2"
+    ],
+    "fase": "Implementación",
+    "ES": 400,
+    "EF": 420,
+    "LS": 400,
+    "LF": 420,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "R-H12",
+    "nombre": "Revisión del paso a producción y aceptación final por la contraparte",
+    "duracion": 10,
+    "predecesoras": [
+      {
+        "id": "A25",
+        "tipo": "FS",
+        "lag": 0
+      },
+      {
+        "id": "A06-H12",
+        "tipo": "FS",
+        "lag": 0
+      },
+      {
+        "id": "A21-MED",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [],
+    "fase": "Implementación",
+    "ES": 410,
+    "EF": 420,
+    "LS": 410,
+    "LF": 420,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "CE2-EST",
+    "nombre": "Estabilizar E2: guardia de corte, regresión y saneamiento",
+    "duracion": 80,
+    "predecesoras": [
+      {
+        "id": "A24",
+        "tipo": "FS",
+        "lag": 0
+      },
+      {
+        "id": "A25",
+        "tipo": "SS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "11.4",
+      "13.2",
+      "13.4"
+    ],
+    "liberacion": 400,
+    "limite": 480,
+    "evidencia": "Control de pendientes, incidencias, reversión y evidencia de transferencia",
+    "fase": "Estabilización M21–M24",
+    "ES": 400,
+    "EF": 480,
+    "LS": 400,
+    "LF": 480,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "CE2-LEG",
+    "nombre": "Conviver en consulta y preparar retiro del legado",
+    "duracion": 70,
+    "predecesoras": [
+      {
+        "id": "A25",
+        "tipo": "SS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "6.5"
+    ],
+    "liberacion": 400,
+    "limite": 470,
+    "evidencia": "Arquitectura y trazas conciliadas; plan de reversión preparado",
+    "fase": "Estabilización M21–M24",
+    "ES": 400,
+    "EF": 470,
+    "LS": 400,
+    "LF": 470,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "H12",
+    "nombre": "Acta H12 · E-25 M21",
+    "duracion": 0,
+    "predecesoras": [
+      {
+        "id": "R-H12",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [],
+    "limite": 420,
+    "evidencia": "Acta de aceptación suscrita por la Contraparte Técnica",
+    "fase": "Implementación",
+    "mes_e25": 21,
+    "ES": 420,
+    "EF": 420,
+    "LS": 420,
+    "LF": 420,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "CE2-OFF",
+    "nombre": "Cerrar consulta de legado y documentar retiro",
+    "duracion": 10,
+    "predecesoras": [
+      {
+        "id": "CE2-LEG",
+        "tipo": "FS",
+        "lag": 0
+      },
+      {
+        "id": "H12",
+        "tipo": "FS",
+        "lag": 0
+      },
+      {
+        "id": "CE2-DAT",
+        "tipo": "SS",
+        "lag": 70
+      }
+    ],
+    "edt": [
+      "6.5"
+    ],
+    "liberacion": 470,
+    "limite": 480,
+    "evidencia": "Acta de retiro y consulta cerrada; punto de control interno M24",
+    "fase": "Estabilización M21–M24",
+    "ES": 470,
+    "EF": 480,
+    "LS": 470,
+    "LF": 480,
+    "HT": 0,
+    "HL": 0
+  },
+  {
+    "id": "CIERRE24",
+    "nombre": "Consolidar verificación de cierre técnico M24",
+    "duracion": 0,
+    "predecesoras": [
+      {
+        "id": "CE2-EST",
+        "tipo": "FS",
+        "lag": 0
+      },
+      {
+        "id": "CE2-DAT",
+        "tipo": "FS",
+        "lag": 0
+      },
+      {
+        "id": "CE2-OFF",
+        "tipo": "FS",
+        "lag": 0
+      },
+      {
+        "id": "H12",
+        "tipo": "FS",
+        "lag": 0
+      }
+    ],
+    "edt": [
+      "6.5",
+      "7.2",
+      "11.4"
+    ],
+    "limite": 480,
+    "evidencia": "Control interno de estabilización; no genera hito de pago",
+    "fase": "Estabilización M21–M24",
+    "ES": 480,
+    "EF": 480,
+    "LS": 480,
+    "LF": 480,
+    "HT": 0,
+    "HL": 0
+  }
+]

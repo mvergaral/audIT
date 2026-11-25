@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="257.4mm" height="167.0mm" viewBox="0 0 729.6 473.4">
+<defs><marker id="fin-n" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="5.5" markerHeight="5.5" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#2B2B2B"/></marker><marker id="ini-n" viewBox="0 0 10 10" refX="0.5" refY="5" markerWidth="5.5" markerHeight="5.5" markerUnits="userSpaceOnUse" orient="auto"><path d="M10,0.8 L0,5 L10,9.2 z" fill="#2B2B2B"/></marker><marker id="fin-r" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="5.5" markerHeight="5.5" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0.8 L10,5 L0,9.2 z" fill="#C0392B"/></marker><marker id="ini-r" viewBox="0 0 10 10" refX="0.5" refY="5" markerWidth="5.5" markerHeight="5.5" markerUnits="userSpaceOnUse" orient="auto"><path d="M10,0.8 L0,5 L10,9.2 z" fill="#C0392B"/></marker></defs>
+<rect x="0" y="0" width="729.6" height="473.4" fill="#FFFFFF"/>
+<g id="grupos">
+<rect x="150.00" y="80.00" width="228.00" height="30.00" rx="3" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="378.00" y="80.00" width="57.00" height="30.00" rx="3" fill="#E6E6E6" stroke="#404040" stroke-width="0.75"/>
+<rect x="435.00" y="80.00" width="171.00" height="30.00" rx="3" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="618.00" y="80.00" width="90.00" height="30.00" rx="3" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="378.00" y="146.00" width="114.00" height="30.00" rx="3" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="492.00" y="146.00" width="38.00" height="30.00" rx="3" fill="#E6E6E6" stroke="#404040" stroke-width="0.75"/>
+<rect x="530.00" y="146.00" width="76.00" height="30.00" rx="3" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="618.00" y="146.00" width="90.00" height="30.00" rx="3" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="530.00" y="212.00" width="76.00" height="30.00" rx="3" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="618.00" y="212.00" width="90.00" height="30.00" rx="3" fill="#E6E6E6" stroke="#404040" stroke-width="0.75"/>
+<rect x="14.00" y="316.00" width="701.00" height="76.00" rx="6" fill="#FFFFFF" stroke="#404040" stroke-width="0.75"/>
+<rect x="14.00" y="408.00" width="701.60" height="48.00" rx="6" fill="#F7F8FA" stroke="#404040" stroke-width="0.75"/>
+</g>
+<g id="flechas">
+<path d="M150.00,62.00 L150.00,80.00" fill="none" stroke="#2B2B2B" stroke-width="0.4" stroke-linejoin="miter" stroke-dasharray="3.5 2.5"/>
+<path d="M150.00,110.00 L150.00,146.00" fill="none" stroke="#2B2B2B" stroke-width="0.4" stroke-linejoin="miter" stroke-dasharray="3.5 2.5"/>
+<path d="M150.00,176.00 L150.00,212.00" fill="none" stroke="#2B2B2B" stroke-width="0.4" stroke-linejoin="miter" stroke-dasharray="3.5 2.5"/>
+<path d="M150.00,242.00 L150.00,264.00" fill="none" stroke="#2B2B2B" stroke-width="0.4" stroke-linejoin="miter" stroke-dasharray="3.5 2.5"/>
+<path d="M150.00,288.00 L150.00,292.00" fill="none" stroke="#2B2B2B" stroke-width="0.4" stroke-linejoin="miter" stroke-dasharray="3.5 2.5"/>
+<path d="M245.00,62.00 L245.00,80.00" fill="none" stroke="#2B2B2B" stroke-width="0.4" stroke-linejoin="miter" stroke-dasharray="3.5 2.5"/>
+<path d="M245.00,110.00 L245.00,146.00" fill="none" stroke="#2B2B2B" stroke-width="0.4" stroke-linejoin="miter" stroke-dasharray="3.5 2.5"/>
+<path d="M245.00,176.00 L245.00,212.00" fill="none" stroke="#2B2B2B" stroke-width="0.4" stroke-linejoin="miter" stroke-dasharray="3.5 2.5"/>
+<path d="M245.00,242.00 L245.00,264.00" fill="none" stroke="#2B2B2B" stroke-width="0.4" stroke-linejoin="miter" stroke-dasharray="3.5 2.5"/>
+<path d="M245.00,288.00 L245.00,292.00" fill="none" stroke="#2B2B2B" stroke-width="0.4" stroke-linejoin="miter" stroke-dasharray="3.5 2.5"/>
+<path d="M359.00,62.00 L359.00,80.00" fill="none" stroke="#2B2B2B" stroke-width="0.4" stroke-linejoin="miter" stroke-dasharray="3.5 2.5"/>
+<path d="M359.00,110.00 L359.00,146.00" fill="none" stroke="#2B2B2B" stroke-width="0.4" stroke-linejoin="miter" stroke-dasharray="3.5 2.5"/>
+<path d="M359.00,176.00 L359.00,212.00" fill="none" stroke="#2B2B2B" stroke-width="0.4" stroke-linejoin="miter" stroke-dasharray="3.5 2.5"/>
+<path d="M359.00,242.00 L359.00,264.00" fill="none" stroke="#2B2B2B" stroke-width="0.4" stroke-linejoin="miter" stroke-dasharray="3.5 2.5"/>
+<path d="M359.00,288.00 L359.00,292.00" fill="none" stroke="#2B2B2B" stroke-width="0.4" stroke-linejoin="miter" stroke-dasharray="3.5 2.5"/>
+<path d="M378.00,62.00 L378.00,80.00" fill="none" stroke="#2B2B2B" stroke-width="0.4" stroke-linejoin="miter" stroke-dasharray="3.5 2.5"/>
+<path d="M378.00,110.00 L378.00,146.00" fill="none" stroke="#2B2B2B" stroke-width="0.4" stroke-linejoin="miter" stroke-dasharray="3.5 2.5"/>
+<path d="M378.00,176.00 L378.00,212.00" fill="none" stroke="#2B2B2B" stroke-width="0.4" stroke-linejoin="miter" stroke-dasharray="3.5 2.5"/>
+<path d="M378.00,242.00 L378.00,264.00" fill="none" stroke="#2B2B2B" stroke-width="0.4" stroke-linejoin="miter" stroke-dasharray="3.5 2.5"/>
+<path d="M378.00,288.00 L378.00,292.00" fill="none" stroke="#2B2B2B" stroke-width="0.4" stroke-linejoin="miter" stroke-dasharray="3.5 2.5"/>
+<path d="M435.00,62.00 L435.00,80.00" fill="none" stroke="#2B2B2B" stroke-width="0.4" stroke-linejoin="miter" stroke-dasharray="3.5 2.5"/>
+<path d="M435.00,110.00 L435.00,146.00" fill="none" stroke="#2B2B2B" stroke-width="0.4" stroke-linejoin="miter" stroke-dasharray="3.5 2.5"/>
+<path d="M435.00,176.00 L435.00,212.00" fill="none" stroke="#2B2B2B" stroke-width="0.4" stroke-linejoin="miter" stroke-dasharray="3.5 2.5"/>
+<path d="M435.00,242.00 L435.00,264.00" fill="none" stroke="#2B2B2B" stroke-width="0.4" stroke-linejoin="miter" stroke-dasharray="3.5 2.5"/>
+<path d="M435.00,288.00 L435.00,292.00" fill="none" stroke="#2B2B2B" stroke-width="0.4" stroke-linejoin="miter" stroke-dasharray="3.5 2.5"/>
+<path d="M492.00,62.00 L492.00,80.00" fill="none" stroke="#2B2B2B" stroke-width="0.4" stroke-linejoin="miter" stroke-dasharray="3.5 2.5"/>
+<path d="M492.00,110.00 L492.00,146.00" fill="none" stroke="#2B2B2B" stroke-width="0.4" stroke-linejoin="miter" stroke-dasharray="3.5 2.5"/>
+<path d="M492.00,176.00 L492.00,212.00" fill="none" stroke="#2B2B2B" stroke-width="0.4" stroke-linejoin="miter" stroke-dasharray="3.5 2.5"/>
+<path d="M492.00,242.00 L492.00,264.00" fill="none" stroke="#2B2B2B" stroke-width="0.4" stroke-linejoin="miter" stroke-dasharray="3.5 2.5"/>
+<path d="M492.00,288.00 L492.00,292.00" fill="none" stroke="#2B2B2B" stroke-width="0.4" stroke-linejoin="miter" stroke-dasharray="3.5 2.5"/>
+<path d="M530.00,62.00 L530.00,80.00" fill="none" stroke="#2B2B2B" stroke-width="0.4" stroke-linejoin="miter" stroke-dasharray="3.5 2.5"/>
+<path d="M530.00,110.00 L530.00,146.00" fill="none" stroke="#2B2B2B" stroke-width="0.4" stroke-linejoin="miter" stroke-dasharray="3.5 2.5"/>
+<path d="M530.00,176.00 L530.00,212.00" fill="none" stroke="#2B2B2B" stroke-width="0.4" stroke-linejoin="miter" stroke-dasharray="3.5 2.5"/>
+<path d="M530.00,242.00 L530.00,264.00" fill="none" stroke="#2B2B2B" stroke-width="0.4" stroke-linejoin="miter" stroke-dasharray="3.5 2.5"/>
+<path d="M530.00,288.00 L530.00,292.00" fill="none" stroke="#2B2B2B" stroke-width="0.4" stroke-linejoin="miter" stroke-dasharray="3.5 2.5"/>
+<path d="M587.00,62.00 L587.00,80.00" fill="none" stroke="#2B2B2B" stroke-width="0.4" stroke-linejoin="miter" stroke-dasharray="3.5 2.5"/>
+<path d="M587.00,110.00 L587.00,146.00" fill="none" stroke="#2B2B2B" stroke-width="0.4" stroke-linejoin="miter" stroke-dasharray="3.5 2.5"/>
+<path d="M587.00,176.00 L587.00,212.00" fill="none" stroke="#2B2B2B" stroke-width="0.4" stroke-linejoin="miter" stroke-dasharray="3.5 2.5"/>
+<path d="M587.00,242.00 L587.00,264.00" fill="none" stroke="#2B2B2B" stroke-width="0.4" stroke-linejoin="miter" stroke-dasharray="3.5 2.5"/>
+<path d="M587.00,288.00 L587.00,292.00" fill="none" stroke="#2B2B2B" stroke-width="0.4" stroke-linejoin="miter" stroke-dasharray="3.5 2.5"/>
+</g>
+<g id="iconos">
+<rect x="130.03" y="272.00" width="161.95" height="14.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="211.00" y="282.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">PMBOK: línea base, riesgos y cambios</text>
+<rect x="427.09" y="272.00" width="157.82" height="14.00" rx="3" fill="#FFFFFF" stroke="#8C8C8C" stroke-width="0.6"/>
+<text x="506.00" y="282.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Scrum: incrementos cada 2 semanas</text>
+</g>
+<g id="textos">
+<text x="14.00" y="18.00" font-size="11" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">Gestión híbrida e hitos contractuales</text>
+<text x="14.00" y="32.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">FEP01 · Artículo 17.1 · p.12. El detalle de actividades corresponde a S7.</text>
+<text x="150.00" y="53.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">M1</text>
+<text x="245.00" y="53.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">M6</text>
+<text x="359.00" y="53.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">M12</text>
+<text x="378.00" y="53.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">M13</text>
+<text x="435.00" y="53.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">M16</text>
+<text x="492.00" y="53.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">M19</text>
+<text x="530.00" y="53.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">M21</text>
+<text x="587.00" y="53.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">M24</text>
+<text x="666.00" y="53.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">M25–56</text>
+<text x="14.00" y="99.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">Etapa 1</text>
+<text x="264.00" y="99.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Desarrollo M1–12</text>
+<text x="406.50" y="99.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Blanca</text>
+<text x="520.50" y="99.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Producción desde M16</text>
+<text x="663.00" y="99.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Continúa</text>
+<text x="14.00" y="165.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">Etapa 2</text>
+<text x="435.00" y="165.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Desarrollo M13–18</text>
+<text x="511.00" y="165.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Blanca</text>
+<text x="568.00" y="165.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Prod. M21</text>
+<text x="663.00" y="165.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Continúa</text>
+<text x="14.00" y="231.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">Soporte</text>
+<text x="568.00" y="231.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Operación</text>
+<text x="663.00" y="231.00" font-size="9" font-family="IBM Plex Sans" text-anchor="middle" fill="#000000">Hasta M56</text>
+<text x="22.00" y="331.00" font-size="10" font-family="IBM Plex Sans" font-weight="600" text-anchor="start" fill="#000000">Frentes simultáneos</text>
+<text x="26.00" y="346.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">M13–15: marcha blanca E1 + desarrollo E2. M19–20: producción E1 + marcha blanca E2.</text>
+<text x="26.00" y="372.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">Kanban: incidencias y estabilización. Ningún cambio altera los hitos obligatorios.</text>
+<text x="24.00" y="426.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">SA-01 de S3/S7: M1 = febrero 2027; M16 = mayo 2028; M21 = octubre 2028; M56 = septiembre 2031.</text>
+<text x="24.00" y="439.00" font-size="9" font-family="IBM Plex Sans" text-anchor="start" fill="#000000">Cuatro comités y una reunión semanal gobiernan decisiones; aceptación y reversión se trazan a S9.</text>
+</g>
+</svg>

@@ -1,0 +1,131 @@
+\begin{resumenApertura}
+audIT oferta la implementación y la operación de la plataforma de Transportes Curimón como un
+contrato de alcance completo, con precios por fase y pagos contra aceptación. Los valores se
+concilian con la planilla de presupuesto 3.2 y sus partidas, sin incorporar recuperos hipotéticos
+del mandante a los cobros de audIT.
+\begin{recibe}
+\item Precio, hitos, servicios incluidos, exclusiones y condiciones comerciales de la oferta.
+\end{recibe}
+\end{resumenApertura}
+
+\section{Propuesta de valor económico}\label{sec:eco-valor}
+
+La \tabref{eco-valores} presenta los precios de implementación y de los 36 meses de operación.
+La suma es el valor total del contrato. Los valores netos, IVA y total se muestran en las tres
+monedas del \form{E-24}{73}; la fase de operación no se anticipa a implementación.
+
+\tablaMontos{Valores ofertados por fase}{eco-valores}{implementacion,operacion}
+
+El precio total neto es \montoPartida{proyecto}. El hardware de campo y de red adquirido por el
+mandante se informa por separado: no incrementa el ingreso ni el egreso de audIT.
+
+\subsection{Tipo de cambio, reajustabilidad y vigencia}\label{sec:eco-condiciones}
+
+Para esta oferta de fecha 25 de noviembre de 2026 se utilizan los parámetros convencionales
+del E-24. Esa fecha identifica la aplicación de las bases a la oferta, no una cotización de
+mercado. Los precios de ambas etapas de implementación son firmes, conforme al
+\art{9.4}{7}. La operación se oferta sin reajuste: audIT asume la variación de sus costos
+dentro del precio comprometido. El presupuesto base no incorpora reajustes de ingresos.
+
+La oferta tiene vigencia comercial de 150 días corridos contados desde la fecha de entrega.
+La vigencia y condiciones de la garantía de seriedad se acreditan por separado en el Sobre
+N.º 1; este plazo comercial no sustituye dicha garantía ni certifica su emisión.
+
+\section{Estructura de pagos detallada}\label{sec:eco-pagos}
+
+La implementación se factura contra los doce hitos del \form{E-25}{74 y 75}. Un hito
+presupuestado no acredita un acta ni un pago realizado: la aceptación exige el pronunciamiento
+de la Contraparte Técnica y las evidencias del \art{18}{13}.
+
+\subsection{Hitos de implementación}\label{sec:eco-hitos}
+
+La \tabref{hitos-e25} distribuye el precio de implementación. Los porcentajes son los de
+las bases y suman el 100 por ciento; los importes provienen de la partida implementación.
+
+\tablaHitosPago
+
+La \tabref{eco-criterios} vincula cada hito con la evidencia que debe aceptar la contraparte.
+Los protocolos detallados y sus trazas a requerimientos se conservan en T-13 y T-17.
+
+\begin{tabla}[ancho=completo]{Aceptación vinculada a los hitos de pago}{eco-criterios}{L{12mm} X}
+Hito & Evidencia y condición de aceptación \\ \midrule
+H1 & Acta de alcance, catálogo y matriz de trazabilidad aprobados. \\
+H2 & Arquitectura, seguridad y modelo de datos aprobados. \\
+H3 & Infraestructura híbrida y cuatro ambientes habilitados, con observabilidad probada. \\
+H4 & Candidato E1 con QA superado y evidencia de cobertura, listo para pruebas. \\
+H5 & Aceptación de usuario, carga, resiliencia y seguridad ofensiva E1 aprobadas. \\
+H6 & Inicio de marcha blanca E1, reversión operativa y usuarios capacitados. \\
+H7 & Cierre conforme de marcha blanca E1 y acta de paso a producción. \\
+H8 & Línea base y diseño detallado E2 aprobados. \\
+H9 & Candidato E2 con QA superado, listo para pruebas. \\
+H10 & Certificación E2 y cierre del desarrollo aceptados. \\
+H11 & Inicio de marcha blanca E2 en convivencia con E1 en producción. \\
+H12 & Paso a producción E2 y aceptación final de implementación. \\
+\end{tabla}
+
+Cada acta debe acompañarse de artefacto, verificación objetiva, trazabilidad y resolución de
+observaciones. Se respetan los plazos de revisión y subsanación del artículo 18; el modelo
+distingue fecha contractual, facturación y cobro efectivo.
+
+\subsection{Pagos mensuales de operación}\label{sec:eco-mensual}
+
+La operación se factura de M21 a M56 en 36 pagos mensuales. El caso base cobra cada servicio
+en el mes siguiente, de M22 a M57. La mensualidad neta es \montoPartida{cobro-m57}.
+El componente fijo incluye operación, soporte, mantención, nube, conectividad y los servicios
+presupuestados. No se presupuesta un componente variable positivo adicional ni cobros por hora
+fuera de ese precio. Las deducciones por incumplimiento de SLA se aplican conforme al
+\art{78}{40} y al E-25. La revisión de la factura y los indicadores no sustituye el
+procedimiento de aplicación de multas.
+
+\section{Resumen ejecutivo de valor}\label{sec:eco-resumen}
+
+La \tabref{eco-incluidos} delimita los productos y servicios comprendidos. La asignación de
+pagadores se concilia con T-11 y las hojas de proveedores para evitar que una exclusión
+comercial elimine una prestación ya costeada.
+
+\begin{tabla}[ancho=completo]{Servicios y productos incluidos}{eco-incluidos}{L{35mm} X}
+Componente & Inclusión contractual \\ \midrule
+Plataforma & Infraestructura on-premise de audIT, nube, observabilidad, seguridad y ambientes. \\
+Software y datos & Alcances E1/E2, integraciones, migración, pruebas y documentación. \\
+Instalación & Piloto, montaje externo por lotes M7--M9, banco, integración, supervisión y recepción interna. \\
+Adopción & Capacitación, acompañamiento de marchas blancas y transferencia. \\
+Operación & Mesa de ayuda, guardias, mantenimiento y campo externo por visita con coordinación interna. \\
+Innovaciones & Cinco propuestas S13/T-19, con costo y atribución de personal identificados. \\
+\end{tabla}
+
+La infraestructura, integración y atención permanecen bajo responsabilidad de audIT aunque se
+contraten servicios externos. Los criterios de cobertura y recepción son los de S3, S7 y S9.
+
+\subsection{Exclusiones}\label{sec:eco-exclusiones}
+
+Curimón adquiere el hardware de campo y de red especificado en T-11. Su referencia presupuestaria
+es \montoPartida{hardware-mandante}, informada fuera del flujo de audIT. La exclusión de
+combustible corresponde a la flota vehicular: no excluye las pruebas del grupo electrógeno
+presupuestadas por audIT. No se eliminan de la oferta la energía, infraestructura, instalación,
+conectividad ni servicios que el modelo incluye a cargo de audIT. Las ampliaciones de alcance
+requieren gestión formal de cambios.
+
+\subsection{Dependencias comerciales}\label{sec:eco-supuestos}
+
+La puesta en servicio requiere equipos homologados y recibidos, accesos a terminales, ventanas
+de montaje y factibilidad de integraciones con terceros. Las tarifas y calendarios de proveedores
+son supuestos presupuestarios hasta contar con respaldo comercial. El financiamiento inicial y
+la facilidad contingente no se presentan como aprobaciones bancarias emitidas. La subcontratación
+se ejecutará bajo las autorizaciones y límites del \art{73}{38}, manteniendo responsabilidad
+de audIT sobre el servicio.
+
+\subsection{Beneficios del mandante}\label{sec:eco-beneficios}
+
+El beneficio esperado se mide contra líneas base operacionales de S13/T-19. El recupero bruto
+referencial de INN-4 es\par\noindent\montoPartida{recupero-inn4} en 36 meses, bajo el supuesto de recuperar
+la mitad del monto objetado. No equivale a beneficio neto ni a cobro de audIT. Las otras mejoras
+se someten a medición incremental y adopción, sin incorporar ahorros hipotéticos a ingresos
+contractuales ni duplicar costos compartidos.
+
+\subsection{Términos comerciales}\label{sec:eco-terminos}
+
+La oferta comprende el alcance indivisible y el calendario del \art{17}{12}. Se expresan
+neto, IVA y total en las monedas de evaluación. La facturación sigue el E-25 y la aceptación
+del artículo 18. Las ampliaciones, exclusiones o cambios deben formalizarse sin alterar de
+manera unilateral los plazos ni los criterios de recepción. Las referencias a financiación,
+proveedores y beneficios mantienen sus condiciones de verificación y no acreditan ejecución.

@@ -1,0 +1,78 @@
+% ============================================================================
+%  Formulario T-8. Equipo de trabajo, subcontrataciones y alianzas (FEP01 p. 61)
+%  Subdocumento 12 según el Formulario T-21.
+%
+%  Las personas se presentan por rol, certificación y dedicación. El nombre
+%  es un campo del formulario y se deja como marcador hasta la propuesta
+%  final. No se escriben biografías ni relatos de trayectoria.
+%
+%  \rolTOcho{rol, nombre, certificaciones, dedicacion, meses}
+%  \subcontratoTOcho{empresa, servicio, porcentaje, justificacion}
+%  Si no se declara ningún rol, salen los ocho roles mínimos de las bases.
+% ============================================================================
+
+\DefinirFormulario{T-8}{Equipo de trabajo, subcontrataciones y alianzas}{61}
+  {Roles del equipo con nombre, certificaciones, dedicación y meses de
+   participación. Subcontrataciones y alianzas con la empresa, el servicio o
+   componente, el porcentaje del valor y la justificación.}
+
+\newcommand\rolTOcho[1]{\RegistroNuevo{t8}{#1}}
+\newcommand\subcontratoTOcho[1]{\RegistroNuevo{t8s}{#1}}
+
+\ExplSyntaxOn
+\NewDocumentEnvironment { formularioTOcho } { }
+  { \ReiniciarRegistros { t8 } \ReiniciarRegistros { t8s } }
+  {
+    \int_compare:nNnT { \CantidadRegistros { t8 } } = { 0 }
+      {
+        \clist_map_inline:nn
+          {
+            Jefe~de~Proyecto, Arquitecto~de~Solución,
+            Encargado~de~Seguridad~de~la~Información, Líder~de~Datos,
+            Líder~de~Desarrollo, Líder~de~Calidad, Líder~de~Operación~o~SRE,
+            Líder~de~Implantación~y~Gestión~del~Cambio
+          }
+          { \RegistroNuevo { t8 } { rol = {##1} } }
+      }
+    \IniciarFilas
+    \int_step_inline:nn { \CantidadRegistros { t8 } }
+      {
+        \tl_gput_right:Ne \g_audit_filas_tl
+          {
+            \exp_not:N \textbf { \audit_campo:nnn { t8 } {##1} { rol } } &
+            \audit_campo:nnn { t8 } {##1} { nombre } &
+            \audit_campo:nnn { t8 } {##1} { certificaciones } &
+            \audit_campo:nnn { t8 } {##1} { dedicacion } &
+            \audit_campo:nnn { t8 } {##1} { meses } \exp_not:N \\
+          }
+      }
+    \TablaAcumulada [ ancho = completo , fuente = condensada ]
+      { Formulario~T-8.~Equipo~de~trabajo } { t8-equipo }
+      { L{44mm} L{34mm} X L{20mm} L{24mm} }
+      { Rol & Nombre & Certificaciones & Dedicación & Meses~de~participación \\ \midrule }
+    \IniciarFilas
+    \int_compare:nNnTF { \CantidadRegistros { t8s } } = { 0 }
+      { \AgregarFila { \porCompletar & & & \\ } }
+      {
+        \int_step_inline:nn { \CantidadRegistros { t8s } }
+          {
+            \tl_gput_right:Ne \g_audit_filas_tl
+              {
+                \audit_campo:nnn { t8s } {##1} { empresa } &
+                \audit_campo:nnn { t8s } {##1} { servicio } &
+                \audit_campo:nnn { t8s } {##1} { porcentaje } &
+                \audit_campo:nnn { t8s } {##1} { justificacion } \exp_not:N \\
+              }
+          }
+      }
+    \TablaAcumulada [ ancho = completo , fuente = condensada ]
+      { Formulario~T-8.~Subcontrataciones~y~alianzas } { t8-alianzas }
+      { L{40mm} L{50mm} R{18mm} X }
+      { Empresa & Servicio~o~componente & \%~del~valor & Justificación \\ \midrule }
+  }
+\ExplSyntaxOff
+
+\expandafter\def\csname esqueleto@T-8\endcsname{%
+  \begin{formulario}{T-8}
+    \begin{formularioTOcho}\end{formularioTOcho}
+  \end{formulario}}

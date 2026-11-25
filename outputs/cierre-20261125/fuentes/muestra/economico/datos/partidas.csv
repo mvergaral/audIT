@@ -1,0 +1,7 @@
+clave;concepto;moneda;valor;iva;planilla
+# Partidas de demostración de la muestra. Usan solo valores de las bases:
+# 1 UF y 1 USD con el tipo de cambio del Formulario E-24 (FEP01 p.73). Las
+# partidas del proyecto vienen vacías de economico/datos/partidas.csv.
+demo-uf;Demostración: 1 UF del Formulario E-24;UF;1;si;
+demo-usd;Demostración: 1 USD del Formulario E-24;USD;1;si;
+demo-suma;Demostración: suma de las dos anteriores;CLP;=demo-uf+demo-usd;si;

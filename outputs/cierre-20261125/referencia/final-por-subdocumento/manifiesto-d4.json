@@ -1,0 +1,95 @@
+{
+  "grupo": "final-por-subdocumento-d4",
+  "instancia": "final",
+  "modo_folio": "subdocumento",
+  "archivos": [
+    {
+      "clave": "04",
+      "nombre": "AUDIT-Subdocumento4.pdf",
+      "folio_inicial": 1,
+      "paginas": 95,
+      "aux": "salida/aux/final-por-subdocumento/04/AUDIT-Subdocumento4.aux",
+      "log": "salida/aux/final-por-subdocumento/04/AUDIT-Subdocumento4.log"
+    },
+    {
+      "clave": "08",
+      "nombre": "AUDIT-Subdocumento8.pdf",
+      "folio_inicial": 1,
+      "paginas": 21,
+      "aux": "salida/aux/final-por-subdocumento/08/AUDIT-Subdocumento8.aux",
+      "log": "salida/aux/final-por-subdocumento/08/AUDIT-Subdocumento8.log"
+    },
+    {
+      "clave": "10",
+      "nombre": "AUDIT-Subdocumento10.pdf",
+      "folio_inicial": 1,
+      "paginas": 14,
+      "aux": "salida/aux/final-por-subdocumento/10/AUDIT-Subdocumento10.aux",
+      "log": "salida/aux/final-por-subdocumento/10/AUDIT-Subdocumento10.log"
+    },
+    {
+      "clave": "11",
+      "nombre": "AUDIT-Subdocumento11.pdf",
+      "folio_inicial": 1,
+      "paginas": 12,
+      "aux": "salida/aux/final-por-subdocumento/11/AUDIT-Subdocumento11.aux",
+      "log": "salida/aux/final-por-subdocumento/11/AUDIT-Subdocumento11.log"
+    },
+    {
+      "clave": "12",
+      "nombre": "AUDIT-Subdocumento12.pdf",
+      "folio_inicial": 1,
+      "paginas": 13,
+      "aux": "salida/aux/final-por-subdocumento/12/AUDIT-Subdocumento12.aux",
+      "log": "salida/aux/final-por-subdocumento/12/AUDIT-Subdocumento12.log"
+    },
+    {
+      "clave": "13",
+      "nombre": "AUDIT-Subdocumento13.pdf",
+      "folio_inicial": 1,
+      "paginas": 27,
+      "aux": "salida/aux/final-por-subdocumento/13/AUDIT-Subdocumento13.aux",
+      "log": "salida/aux/final-por-subdocumento/13/AUDIT-Subdocumento13.log"
+    },
+    {
+      "clave": "14",
+      "nombre": "AUDIT-Subdocumento14.pdf",
+      "folio_inicial": 1,
+      "paginas": 12,
+      "aux": "salida/aux/final-por-subdocumento/14/AUDIT-Subdocumento14.aux",
+      "log": "salida/aux/final-por-subdocumento/14/AUDIT-Subdocumento14.log"
+    },
+    {
+      "clave": "12-T-8",
+      "nombre": "AUDIT-Formulario-T-8.pdf",
+      "folio_inicial": 1,
+      "paginas": 6,
+      "aux": "salida/aux/final-por-subdocumento/12-T-8/AUDIT-Formulario-T-8.aux",
+      "log": "salida/aux/final-por-subdocumento/12-T-8/AUDIT-Formulario-T-8.log"
+    },
+    {
+      "clave": "04-T-11",
+      "nombre": "AUDIT-Formulario-T-11.pdf",
+      "folio_inicial": 1,
+      "paginas": 21,
+      "aux": "salida/aux/final-por-subdocumento/04-T-11/AUDIT-Formulario-T-11.aux",
+      "log": "salida/aux/final-por-subdocumento/04-T-11/AUDIT-Formulario-T-11.log"
+    },
+    {
+      "clave": "08-T-16",
+      "nombre": "AUDIT-Formulario-T-16.pdf",
+      "folio_inicial": 1,
+      "paginas": 15,
+      "aux": "salida/aux/final-por-subdocumento/08-T-16/AUDIT-Formulario-T-16.aux",
+      "log": "salida/aux/final-por-subdocumento/08-T-16/AUDIT-Formulario-T-16.log"
+    },
+    {
+      "clave": "13-T-19",
+      "nombre": "AUDIT-Formulario-T-19.pdf",
+      "folio_inicial": 1,
+      "paginas": 15,
+      "aux": "salida/aux/final-por-subdocumento/13-T-19/AUDIT-Formulario-T-19.aux",
+      "log": "salida/aux/final-por-subdocumento/13-T-19/AUDIT-Formulario-T-19.log"
+    }
+  ]
+}

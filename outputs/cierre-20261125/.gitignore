@@ -1,0 +1,21 @@
+# Artefactos compilados y binarios regenerables de este checkpoint.
+# Se regeneran con los flujos documentados en REANUDAR.md / compilar_directo.py.
+# Se versionan las fuentes (.tex/.md/.py/.json/.csv/.svg) y los entregables
+# económicos (.xlsx/.docx); no los PDF/PNG/JPG/logs derivados.
+*.pdf
+*.png
+*.jpg
+*.jpeg
+*.log
+*.bbl
+*.blg
+*.bcf
+*.fls
+*.fdb_latexmk
+*.synctex*
+*.run.xml
+*.xmpi
+*.plf
+*.plt
+*.ptc
+*.aux

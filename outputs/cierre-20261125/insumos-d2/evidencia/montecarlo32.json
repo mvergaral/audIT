@@ -1,0 +1,40 @@
+{
+  "corridas": 10000,
+  "semilla": 2026,
+  "regla": "Beta-PERT 0.85/1/1.4",
+  "nodos": 122,
+  "hitos": {
+    "H1": 66.1,
+    "H2": 69.4,
+    "H3": 84.5,
+    "H4": 5.9,
+    "H5": 70.7,
+    "H6": 35.7,
+    "H8": 53.8,
+    "H7": 5.8,
+    "H9": 35.3,
+    "H10": 69.0,
+    "H11": 6.3,
+    "H12": 2.1
+  },
+  "atraso_medio_dias": {
+    "H1": 0.6,
+    "H2": 0.8,
+    "H3": 0.4,
+    "H4": 5.3,
+    "H5": 1.6,
+    "H6": 3.4,
+    "H8": 2.2,
+    "H7": 13.6,
+    "H9": 3.6,
+    "H10": 1.5,
+    "H11": 15.0,
+    "H12": 17.7
+  },
+  "ambas_marchas_blancas": 4.4,
+  "H12_p90": 457.8,
+  "A14_probabilidad_agotada": 29.3,
+  "A14_holgura_mediana": 4.0,
+  "A23_probabilidad_agotada": 31.0,
+  "A23_holgura_mediana": 2.8
+}

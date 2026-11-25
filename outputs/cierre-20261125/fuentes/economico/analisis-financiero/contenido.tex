@@ -1,0 +1,213 @@
+\begin{resumenApertura}
+El análisis concilia costos, precio y liquidez de la configuración 3.2, manteniendo el precio
+aprobado para esta oferta sin reajuste de operación. Se separan la rentabilidad del proyecto,
+la tesorería financiada y los beneficios del mandante.
+\begin{recibe}
+\item Evaluación reproducible, calendario de adquisiciones, estructura de soporte y valorización de innovaciones.
+\end{recibe}
+\end{resumenApertura}
+
+\section{Costos frente a precio}\label{sec:eco-costo-precio}
+La \tabref{eco-maestro} muestra los costos netos conciliados. Personal incluye los refuerzos de
+producción y cierre de M21--M24; no se suman otra vez como incrementos. Los servicios externos
+de montaje y campo se distinguen de la contratación interna. El hardware adquirido por el
+mandante se informa separado de los egresos de audIT.
+
+\tablaMontos*{Costo neto por fase}{eco-maestro}{costo-fase-implementacion,costo-fase-operacion,costo-proyecto}
+
+La \tabref{eco-clasificacion} presenta el mismo costo neto por naturaleza para el Formulario T-22.
+
+\tablaMontos*{Costo neto por naturaleza}{eco-clasificacion}{gasto-rrhh,gasto-inversion,gasto-operacion,gasto-administracion,gasto-total}
+
+\montoPartida{gasto-proveedores} corresponde a infraestructura y servicios de operación. La
+inversión incluye infraestructura y servicios de implementación.
+
+La \tabref{eco-venta} presenta el precio por fase. El margen objetivo consolidado sobre ventas
+es 18,50\,\%. La utilidad sobre costo del Resumen equivale a 22,70\,\%.
+
+\tablaMontos{Precio neto ofertado por fase}{eco-venta}{implementacion,operacion}
+
+La \tabref{hitos-e25} distribuye el precio de implementación en los doce hitos E-25.
+
+\tablaHitosPago
+
+La operación se factura de M21 a M56 y se cobra de M22 a M57 en el caso base.
+La mensualidad neta es \montoPartida{cobro-m57}. La comisión de garantía
+de funcionamiento se atribuye a implementación por objeto aun cuando se pague en M21.
+
+La \tabref{eco-componentes} contrasta el costo y precio de cada componente. El margen se
+calcula sobre ventas; los porcentajes de componentes no se suman para obtener el consolidado.
+
+\begin{tabla}[ancho=completo,fuente=condensada]{Costo y precio por componente}{eco-componentes}{L{30mm} X X}
+Componente & Costo neto & Precio neto \\ \midrule
+Implementación directa & \montoPartida{cuadro-impl-directo-costo} & \montoPartida{cuadro-impl-directo-venta} \\
+Implementación indirecta & \montoPartida{cuadro-impl-indirecto-costo} & \montoPartida{cuadro-impl-indirecto-venta} \\
+Operación directa & \montoPartida{cuadro-op-directo-costo} & \montoPartida{cuadro-op-directo-venta} \\
+Operación indirecta & \montoPartida{cuadro-op-indirecto-costo} & \montoPartida{cuadro-op-indirecto-venta} \\
+\end{tabla}
+
+La operación indirecta se traslada sin margen en esta clasificación. El margen directo compensa
+esa distribución y mantiene 18,50 por ciento sobre la venta neta total. La plantilla RESUMEN
+presenta además utilidad sobre costo: son bases de comparación distintas.
+
+\section{Evaluación financiera}\label{sec:eco-evaluacion}
+El VAN utiliza los flujos de la Fila A en M1--M56, con M0 igual a cero y tasa mensual 1,0261894\,\%.
+La tasa pondera deuda al 0,9\,\% mensual y capital propio al 20\,\% efectivo anual supuesto.
+La TIR mensual del caso base es 79,1905\,\%.
+
+El VAN es \montoPartida{van}.
+La cola de M57 se informa aparte. La recuperación descontada sostenida ocurre en M17.
+
+La \tabref{eco-sensibilidad} conserva los escenarios calculados en la planilla. El déficit residual
+mide faltante antes de cobros bajo el orden conservador de pagos; una caja mensual de cierre
+positiva no demuestra suficiencia intramensual. Las TIR sin raíz convergente se rotulan para revisión.
+
+\begin{tabla}[ancho=completo,fuente=condensada]{Sensibilidad y liquidez del escenario}{eco-sensibilidad}{X R{28mm} L{29mm} R{29mm}}
+Escenario & VAN millones CLP & TIR mensual & Déficit millones CLP \\ \midrule
+Atraso H5 M13 & 1.060,63 & Revisar raíces & 214,45 \\
+Atraso H5 M14 & 1.056,65 & 20,18\,\% & 214,45 \\
+H5 M14 + reserva M12 & 921,56 & 13,56\,\% & 368,65 \\
+H5 M14 + reserva + facilidad & 921,56 & 13,56\,\% & 0,00 \\
+Costos +5\% & 793,27 & 13,03\,\% & 53,21 \\
+Cobros -5\% & 740,04 & 12,65\,\% & 24,06 \\
+Reserva anticipada M9 & 917,36 & 11,86\,\% & 0,00 \\
+H4 cobro M11, sin línea & 1.060,55 & 22,32\,\% & 245,25 \\
+H4 cobro M11, con línea & 1.060,55 & 22,32\,\% & 195,25 \\
+H4 cobro M11, facilidad M9 & 1.060,55 & 22,32\,\% & 0,00 \\
+H4 acta y cobro M11 & 1.060,55 & 22,32\,\% & 160,18 \\
+H12 cobro al mes siguiente & 1.060,99 & Revisar raíces & 0,00 \\
+Soporte sin reducción & 964,81 & Revisar raíces & 0,00 \\
+Soporte por madurez 3.0 & 1.064,66 & Revisar raíces & 0,00 \\
+Amortización 3.1 en cuotas desde M21 & 1.064,66 & Revisar raíces & 0,00 \\
+\end{tabla}
+
+El equilibrio nominal es \montoPartida{equilibrio-nominal}.
+Con el calendario base y escala uniforme, el umbral de venta a VAN cero es
+\par\noindent\montoPartida{equilibrio-van}.
+
+La facilidad contingente de \montoPartida{capital-adicional-h5} tiene desembolso previsto en M12
+en el escenario de atraso H5 con reserva, sujeto a disponibilidad.
+El capital inicial del caso base suma
+\par\noindent\montoPartida{capital-inicial}.
+Se financia en un 80\,\% con crédito bancario y un 20\,\% con capital propio. Los prepagos se
+programan para M17 y M18. Las condiciones de financiamiento requieren respaldo comercial.
+
+La reproducción del caso base se realizó en una copia de LibreOffice después de retirar los
+valores guardados de las fórmulas. Los resultados se contrastaron contra el archivo 3.2. La
+coincidencia del cálculo no valida por sí sola supuestos, contratos, capacidad ni una raíz
+única de TIR. El criterio de decisión combina VAN, sensibilidad y liquidez.
+
+\section{Curva S y flujo mensual}\label{sec:eco-curva}
+La \figref{eco-curva-s} compara costos acumulados con intereses y facturación acumulada.
+La \figref{eco-solvencia32} muestra por separado la caja financiada: es un saldo de tesorería,
+no una tercera serie de avance contractual. La amortización del principal afecta la caja y no
+se vuelve a contar como costo. Las dos figuras cubren M1--M56; M57 se concilia como cola de cobro.
+
+\figura{economico/costos-venta/curva-s.pdf}{Costo con intereses y facturación acumulada}{eco-curva-s}
+\figura{economico/costos-venta/solvencia-3.2.pdf}{Saldo de caja financiada del caso base}{eco-solvencia32}
+
+La \tabref{eco-flujo-mensual} permite reproducir el flujo del proyecto y distinguirlo del
+flujo financiado. Los valores se expresan en UF, con los parámetros convencionales E-24;
+el modelo conserva las series exactas en CLP y sus conversiones. Fila A excluye financiamiento;
+Fila C incorpora sus movimientos según las columnas del modelo. El saldo de caja es acumulado.
+
+\input{./economico/datos/flujo-mensual-final.tex}
+
+La cola de cobro de M57 se informa por separado y no se suma al VAN base M1--M56. Una caja
+de cierre positiva no acredita disponibilidad diaria antes de los cobros; ese orden se revisa
+en la sensibilidad de tesorería.
+
+\section{Estrategia de adquisiciones}\label{sec:eco-estrategia}
+La \tabref{eco-proveedores} relaciona las adquisiciones con su pagador y fecha de uso. Las referencias
+de presupuesto no equivalen a una cotización aceptada ni a una recepción efectiva.
+
+\begin{tabla}[ancho=completo]{Proveedores y condiciones de adquisición}{eco-proveedores}{L{32mm} L{21mm} L{25mm} X}
+Proveedor o servicio & Pagador & Ventana & Condición de puesta en servicio \\ \midrule
+Microsoft Azure por CSP & audIT & M1--M56 & Regiones Chile Central y Brazil South; circuito privado sujeto a factibilidad. \\
+Dell y equipamiento de sala & audIT & M1--M6 & Energía, clima, extinción y recepción antes de H3. \\
+Fortinet y hardware de campo & Curimón según T-11 & M5--M6 & Recepción y homologación del lote antes de montaje. \\
+iWave, Teltonika y Technoton & Curimón según T-11 & Piloto M6, lotes M7--M9 & 182 kits iniciales, 210 balizas, cinco lectores; el stock de reposición no es montaje inicial. \\
+Montaje por terminal & audIT & M7--M9 & 172 montajes externos; audIT conserva banco, recepción y prueba. \\
+Ground Control / Iridium y LTE & audIT & Activación por unidad & Cobertura medida y activación solo al recibir el equipo. \\
+GitLab y SonarSource & audIT & Según licencias & Cobertura comercial y condiciones de soporte confirmadas antes de usar. \\
+Servicio de campo y soporte fabricante & audIT & Campo desde M19; soporte M13 & Visitas y rondas por orden; fabricantes con pagos anticipados anuales. \\
+\end{tabla}
+
+El proveedor masivo termina el montaje inicial en M9; los diez pilotos de M6 ya forman parte de
+los 182 equipos. Si falta adhesión, stock o ventana se registra una desviación y se actualizan
+instalación, activación y caja; no se da por ejecutado el escenario presupuestado.
+La inversión referencial en hardware a cargo de Curimón suma \montoPartida{hardware-mandante}.
+Las licencias a cargo de audIT totalizan \montoPartida{licencias-d3} en 56 meses.
+
+Se adquiere equipamiento estándar y se conservan integración, banco, pruebas y recepción como
+responsabilidad de audIT. La negociación busca disponibilidad, garantías, soporte y calendario
+de pagos compatibles con H3 y los lotes. La dependencia de importación y homologación debe
+confirmarse antes de emitir cada orden; no se afirma una internación ni una cotización recibida.
+
+\section{Costos operacionales y perfiles}\label{sec:eco-operacion}
+
+La operación combina personal dedicado, guardia, proveedores de infraestructura, nube, licencias,
+conectividad, campo y administración. La \tabref{eco-operacion-categorias} muestra el costo por
+categoría para los 36 meses. Las partidas corresponden a Cuadro maestro y RESUMEN, sin sumar
+por segunda vez infraestructura ya incorporada a proveedores.
+
+\input{./economico/datos/operacion-categorias-final.tex}
+
+El precio de operación permanece sin reajuste. La reducción de carga variable por madurez no
+se aplica a costos fijos ni autoriza rebajar cobertura SLA. La nómina y los servicios de
+campo se controlan por separado.
+
+\subsection{Costos y tarifas por perfil}\label{sec:eco-tarifas}
+
+La \tabref{eco-tarifas-final} identifica costos y tarifas de referencia por fase, su perfil
+y el rango de comparación E-26. Los roles adicionales se declaran como tales: la referencia
+de rango no constituye una acreditación de competencias. Las tarifas desagregan el precio
+cerrado de personal y no generan facturación horaria adicional al E-25.
+
+\input{./economico/datos/tarifas-final.tex}
+
+La suma de horas por tarifa conserva la venta de personal de RESUMEN en implementación y
+operación. Se utilizan valores sin redondear en el cálculo; la presentación no modifica los
+totales del contrato ni la base del impuesto.
+
+\section{Mantención y soporte}\label{sec:eco-mantencion}
+
+El presupuesto mantiene cobertura fija, guardia y la carga variable por tramo de madurez.
+Las reducciones desde M25, M33 y M45 requieren carga observada compatible con SLA, cobertura
+por turno y capacidad de escalamiento. No son una autorización para dejar puestos sin cubrir.
+La \tabref{eco-soporte-final} identifica el costo horario y la dedicación inicial de los paquetes.
+
+\input{./economico/datos/soporte-final.tex}
+
+Las horas de cierre M21--M24 se separan del régimen para evitar duplicarlas con mantenimiento
+evolutivo. El campo externo por visita sustituye solo las tareas previstas y audIT conserva
+coordinación, stock y recepción. La mantención preventiva se programa por activo, la correctiva
+por incidente, y la evolutiva por bolsa priorizada con control de cambios y pruebas de regresión.
+Los servicios de terceros y renovaciones se trazan a Proveedores, Detalle proveedores D4 y
+Contrato de soporte. Los refuerzos por puesta en producción permanecen presupuestados.
+
+\section{Valorización de innovaciones}\label{sec:eco-innovaciones}
+La \tabref{eco-innovaciones} separa atribución de personal, egreso directo y beneficios de Curimón.
+Las horas atribuidas pertenecen a la nómina existente y no constituyen un segundo gasto.
+
+\begin{tabla}[ancho=completo]{Tratamiento presupuestario de las innovaciones}{eco-innovaciones}{L{39mm} X X}
+Innovación & Imputación & Evidencia de resultado \\ \midrule
+1. Expediente verificable & Firma \montoPartida{firma-inn1}; personal atribuido en implementación \montoPartida{innovacion-1-inversion} y operación \montoPartida{innovacion-1-costo}. & Medir expedientes y minutos evitados sin duplicar recuperos de INN-4. \\
+2. Programación de patio & Desarrollo \montoPartida{innovacion-2-inversion}; operación \montoPartida{innovacion-2-costo} atribuidos. & Comparar preparación y primer intento contra línea base. \\
+3. Acople y registro térmico & Desarrollo \montoPartida{innovacion-3-inversion}; operación \montoPartida{innovacion-3-costo} atribuidos. & El kilometraje es alcance base; medir acople y temperatura por separado. \\
+4. Comodato y sobreestadías & 34 comodatos ya incluidos en 182 kits; nuevas altas requieren capacidad y pagador. & Recupero bruto de referencia \montoPartida{recupero-inn4}; no es cobro de audIT. \\
+5. Prevención de fatiga & Personal atribuido en implementación \montoPartida{innovacion-5-inversion} y operación \montoPartida{innovacion-5-costo}; talleres y calibración \montoPartida{egreso-inn5} en Otros confirmados. & Medir resultado incremental y adopción; IVA y ejecutores a confirmar. \\
+\end{tabla}
+
+El caso base no incorpora beneficios hipotéticos de Curimón en los cobros de audIT. La atribución
+mensual de cada innovación se verifica contra la capacidad disponible antes de reservar una tarea.
+
+La \tabref{eco-innovaciones-montos} explicita inversión y operación atribuidas y el beneficio
+reconocido en el caso base. La atribución de nómina no se agrega como un segundo gasto y el
+beneficio del mandante no se transforma en venta de audIT.
+
+\tablaMontos*[fuente=condensada]{Atribución económica de las cinco innovaciones}{eco-innovaciones-montos}{innovacion-1-inversion,innovacion-1-costo,innovacion-1-beneficio,innovacion-2-inversion,innovacion-2-costo,innovacion-2-beneficio,innovacion-3-inversion,innovacion-3-costo,innovacion-3-beneficio,innovacion-4-inversion,innovacion-4-costo,innovacion-4-beneficio,innovacion-5-inversion,innovacion-5-costo,innovacion-5-beneficio}
+
+La medición incremental requiere línea base, adopción y responsable. Se mantiene beneficio
+monetario reconocido igual a cero para audIT, mientras que los resultados de Curimón se
+evalúan separadamente y sin doble conteo entre innovaciones.

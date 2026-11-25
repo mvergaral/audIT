@@ -1,0 +1,75 @@
+﻿id,referencia,estado,falta
+GEN-01,"Art. 46 fuente L13 | SUBDOC00 f. 3, 4, 9; S1 f. 19, 20, 21; S2 f. 46, 47, 48; S9 f. 314, 315, 316",referencia a corregir,Art. 46 está en SUBDOC00 ff.9–17 además del PDF independiente. La frase «anexo independiente» debe reflejar el archivo que se entregue.
+GEN-02,"Art. 46 fuente L14 | SUBDOC00 f. 3, 4, 5; S1-Anexos f. 1, 2, 3; S2-Anexos f. 1, 2, 3",abierta de ensamblaje,Secuencia 1–745 del conjunto principal comprobada. Los anexos S1 y S2 reinician y la hoja resumen omite S1/S2/S5. Resolver criterio de folios e inventario.
+GEN-03,"Art. 46 fuente L15 | S1 f. 32; S2 f. 47, 48, 49; T-6 f. 410, 411, 412",documentada en referencia,Actualizar el localizador al folio del corte regenerado.
+GEN-04,"Art. 46 fuente L16 | S3 f. 78, 106, 107; S4 f. 111, 199, 200; S6 f. 236, 252",criterio documentado; validación pendiente,Las declaraciones existen. Ratificar con el responsable el criterio de los seis campos.
+GEN-05,"Art. 46 fuente L17 | S6 f. 236, 252; S8 f. 296, 297, 305; S9 f. 316, 329, 330",acreditación humana pendiente,Declaraciones presentes. Verificar revisores y respaldo A-6 para S6/S8/S9 y consistencia con pendiente de revisión D2. Corregir «S6 verificado» si falta respaldo.
+GEN-06,"Art. 46 fuente L18 | T-11 f. 495, 511",parcial,T-11 tiene declaración propia. T-14/T-15/T-18 del snapshot no muestran sección propia. Precisar alcance por formulario y verificar las fuentes integradas y A-6.
+EMP-01,Art. 46 fuente L21 | S1 f. 33; T-6 f. 413,documentada en referencia,Actualizar el localizador al folio del corte regenerado.
+EMP-02,Art. 46 fuente L22 | S1 f. 29,abierta,S1 f.32 explica dedicaciones al contrato. En §1.3 no aparece la tabla de subrogancias anunciada ni se identifica cobertura de Gerencia General y representación.
+EMP-03,"Art. 46 fuente L23 | S1-Anexos f. 5, 6; S1 f. 22, 29, 30",parcial; referencia errónea,"S1 f.37 y Anexo 1.A f.5 conservan certificadora real y expediente. Validar coherencia con el reparo sobre expedientes ficticios, cotejar respaldo de Sobre 1 y corregir el localizador f.7."
+EMP-04,"Art. 46 fuente L24 | S1 f. 41; T-8 f. 728, 729, 730",documentada; respaldo por cotejar,T-8 incluido con alianzas. Confirmar cartas en expediente administrativo.
+NEC-01,"Art. 46 fuente L25 | S2 f. 56, 58; S2 f. 57, 58",documentada; calibración contractual,Modelo de balance y cota presentes. La calibración con históricos corresponde a H1.
+NEC-02,"Art. 46 fuente L26 | S2 f. 67; S2 f. 50, 51, 53",documentada en referencia,Actualizar el localizador al folio del corte regenerado.
+NEC-03,"Art. 46 fuente L27 | S2 f. 48, 51",documentada en PDF,Figura 2.1 en f.51. Referir folio del nuevo corte y revisar maquetación después de compilar.
+ALC-01,"Art. 46 fuente L30 | S3 f. 79, 83, 102; T-12 f. 424, 429, 432; T-18 f. 568, 570",documentada con contradicción transversal,"Comparar S3/T-12 SA-01 con S8 f.308/R-21, que en la referencia trata febrero 2027 como fecha contractual fija."
+ALC-02,"Art. 46 fuente L31 | S3 f. 103; T-18 f. 568, 569, 570; T-17 f. 598, 604, 657",diseño documentado; ensayo contractual,Procedimiento y CP-SYS-20 localizables. Los resultados se obtendrán antes del corte de producción.
+ALC-03,"Art. 46 fuente L32 | T-12 f. 421, 432, 483; T-12 f. 476, 477, 478",parcial; evidencia de oferta por verificar,"T-12 ff.476–479 declara sin localizador varios RT obligatorios de web, video y prototipo. Confirmar exigibilidad del hito y aportar artefactos/localizadores aplicables."
+ALC-04,"Art. 46 fuente L33 | T-12 f. 420, 429; T-12 f. 426, 429; T-12 f. 422, 429",diseño documentado; verificaciones contractuales,"Mantener separados compromiso y prueba. Los permisos, la adhesión y el retorno en terreno corresponden a ejecución."
+ALC-05,"Art. 46 fuente L34 | T-12 f. 419, 420, 421",documentada en referencia,Actualizar el localizador al folio del corte regenerado.
+ALC-06,"Art. 46 fuente L35 | S3 f. 78, 80",documentada en referencia,Actualizar el localizador al folio del corte regenerado.
+ARQ-01,Art. 46 fuente L38 | S4 f. 115; T-11 f. 506,documentada; acreditación de versiones pendiente,Constan las versiones y política de soporte. Adjuntar evidencia oficial del parche/canal con fecha de corte y reconciliar S4/T-11.
+ARQ-02,"Art. 46 fuente L39 | S4 f. 111, 112, 121; S4 f. 121, 136, 148",diseño documentado; aprobación contractual,S4 f.121 aclara fecha única de registro y estado propuesto de los ocho ADR. Actas y fechas efectivas corresponden a ejecución.
+ARQ-03,"Art. 46 fuente L40 | S4 f. 181; S10 f. 335, 338",documentada en referencia,Actualizar el localizador al folio del corte regenerado.
+ARQ-04,"Art. 46 fuente L41 | S4 f. 175; T-16 f. 580, 583",diseño documentado; condición de contratación,"Confirmación escrita de cobertura, selección de alternativa y ensayo de conmutación previstos."
+ARQ-05,"Art. 46 fuente L42 | S4 f. 194; S5 f. 219, 220; T-16 f. 578, 582, 583; T-17 f. 605, 682; T-17 ff. 605, 681–682; fuente catalogo-T-17.tex, CP-PERF-03",corrección en fuente; verificar PDF regenerado,"H-07 f.605 ya exige sitio admisible, pero CP-PERF-03 f.681 del snapshot fija Brazil South en título, entorno y pasos. La fuente de catálogo ya parametriza el sitio. Verificar regeneración, vía habilitante en H2 y ensayo/acta en H7 como condiciones futuras."
+ARQ-06,"Art. 46 fuente L43 | T-11 f. 496, 497, 498; T-11 f. 493, 495, 509",documentada en referencia,Actualizar el localizador al folio del corte regenerado.
+ARQ-07,"Art. 46 fuente L44 | S4 f. 122, 128, 148; T-16 f. 575, 582",diseño documentado; validaciones contractuales,"Mantener prueba de 72 horas, cobertura y contingencias como pendientes de ejecución."
+ARQ-08,Art. 46 fuente L45 | S4 f. 155,documentada; referencia literal a corregir,Figura 4.13 f.155 dice «Documentos tributarios por internet del emisor». La abreviatura «Internet del emisor» aparece en Figura 4.18 f.161.
+DAT-01,"Art. 46 fuente L46 | S5 f. 212; S5-Anexos f. 4, 5, 6",abierta de ensamblaje,"Remisión S5 f.212. Diccionario 41 pp existe en final-por-subdocumento y falta en final, manifiesto y hoja resumen."
+DAT-02,"Art. 46 fuente L47 | S5 f. 205, 206, 215; S5 f. 206, 228",documentada en referencia,Actualizar el localizador al folio del corte regenerado.
+DAT-03,"Art. 46 fuente L48 | S5 f. 206, 232",documentada en PDF; revisión humana pendiente,Última página f.232 contiene filas de declaración. Incluye pendiente explícito de validación de datos/reasignación.
+DAT-04,"Art. 46 fuente L49 | S4 f. 181; S5 f. 225; S10 f. 337; T-17 f. 606, 682",documentada en referencia,Actualizar el localizador al folio del corte regenerado.
+DAT-05,"Art. 46 fuente L50 | S5 f. 209, 210; S5-Anexos f. 13; S5-Anexos f. 33; T-17 f. 656, 668; T-17 ff. 667–668",diseño documentado; integración pendiente,Diccionario p.13 y p.33 concuerda con CP-SYS-10 ff.667–668; incluir el anexo y usar los folios nuevos.
+MET-01,"Art. 46 fuente L53 | S6 f. 237, 240, 241; T-9 f. 515",documentada en referencia,Actualizar el localizador al folio del corte regenerado.
+MET-02,"Art. 46 fuente L54 | S6 f. 241, 249; T-9 f. 515",diseño documentado; designación contractual,Designar titular y suplente por acta antes del primer sprint.
+MET-03,"Art. 46 fuente L55 | T-9 f. 515; T-10 f. 519, 520",documentada en referencia,Actualizar el localizador al folio del corte regenerado.
+MET-04,"Art. 46 fuente L56 | S6 f. 249, 251; T-10 f. 519, 520; T-15 f. 561",parcial; capacidad pendiente,"Verificar capacidad neta y nivelación por sprint sobre T-15, con dependencias por contexto y perfiles revisores."
+MET-05,"Art. 46 fuente L57 | S6 f. 244; S11 f. 348, 349, 350",parcial; capacidad pendiente,Conciliar bolsa Kanban y actividades de cierre con T-15 y S11; especificar horas netas disponibles por perfil.
+MET-06,Art. 46 fuente L58 | S6 f. 248,documentada en referencia,Actualizar el localizador al folio del corte regenerado.
+MET-07,"Art. 46 fuente L59 | S6 f. 243; S4 f. 111, 112, 114",documentada en referencia,Actualizar el localizador al folio del corte regenerado.
+MET-08,"Art. 46 fuente L60 | S6 f. 241; T-9 f. 515; T-14 f. 527, 537",documentada en referencia,Actualizar el localizador al folio del corte regenerado.
+PLA-01,"Art. 46 fuente L63 | S7 f. 256, 257, 258; T-14 f. 524, 530; T-15 f. 563",documentada en referencia,Actualizar el localizador al folio del corte regenerado.
+PLA-02,"Art. 46 fuente L64 | S7 f. 256, 270; T-14 f. 524",documentada en referencia,Actualizar el localizador al folio del corte regenerado.
+PLA-03,"Art. 46 fuente L65 | T-14 f. 528, 539; T-15 f. 559, 561",documentada en referencia,Actualizar el localizador al folio del corte regenerado.
+PLA-04,Art. 46 fuente L66 | T-15 f. 547,línea base documental; validación H1,Las horas concilian en T-15 f.547; la capacidad neta y disponibilidad por tarea/turno se validan con ejecutores.
+PLA-05,"Art. 46 fuente L67 | T-15 f. 561; T-15 f. 563; S7 f. 264, 265, 269",documentada en referencia,Actualizar el localizador al folio del corte regenerado.
+PLA-06,"Art. 46 fuente L68 | T-15 f. 559, 561; T-15 f. 559, 560, 561; T-15 f. 563; T-15 f. 563, 564",documentada en referencia,Actualizar el localizador al folio del corte regenerado.
+PLA-07,"Art. 46 fuente L69 | T-14 f. 530; T-15 f. 546, 557; S7 f. 258, 265",documentada en referencia,Actualizar el localizador al folio del corte regenerado.
+PLA-08,"Art. 46 fuente L70 | T-15 f. 557, 561, 562; S7 f. 291",línea base documental; riesgo abierto,Los enlaces y reservas existen. No atribuir holguras recuperadas ni asumir que la reserva A23 libera H12.
+PLA-09,"Art. 46 fuente L71 | S7 f. 266, 270; T-14 f. 530",documentada en referencia,Actualizar el localizador al folio del corte regenerado.
+PLA-10,"Art. 46 fuente L72 | S7 f. 263; T-18 f. 568, 569; T-16 f. 580, 583",diseño documentado; agenda contractual,Asignar ventanas y suplentes con terminales.
+PLA-11,"Art. 46 fuente L73 | T-15 f. 560; T-15 f. 557, 562; T-15 f. 557, 561",documentada en referencia,Actualizar el localizador al folio del corte regenerado.
+PLA-12,"Art. 46 fuente L74 | T-16 f. 580, 583; T-18 f. 568, 570",diseño documentado; condición contractual,R-34 cubre cierres sucesivos. Validar disponibilidad de lotes intrafronterizos.
+PLA-13,"Art. 46 fuente L75 | S3 f. 103; T-14 f. 528, 539; T-18 f. 570",documentada en referencia,Actualizar el localizador al folio del corte regenerado.
+PLA-14,"Art. 46 fuente L76 | T-14 f. 530; T-15 f. 563, 564; T-18 f. 569",documentada en referencia,Actualizar el localizador al folio del corte regenerado.
+RIE-01,"Art. 46 fuente L79 | S8 f. 295, 296, 300; T-16 f. 581, 582, 583",respuesta desactualizada,"S8 contiene 36 riesgos. T-16 indica 17 de terceros, 13 de audIT y 6 del mandante. Actualizar total y añadir R-36."
+RIE-02,"Art. 46 fuente L80 | S8 f. 300, 303, 309; T-16 f. 579, 582, 583",diseño documentado; redacción a corregir,Cambiar «reversión probada» por «ensayo de reversión previsto» o acreditar acta real si la frase pretendiera describir un resultado ya obtenido.
+RIE-03,"Art. 46 fuente L81 | T-16 f. 579, 582; T-19 f. 736; T-19 f. 738",documentada en referencia,Actualizar el localizador al folio del corte regenerado.
+RIE-04,Art. 46 fuente L82 | S8 f. 308,diseño documentado; medición contractual,S8 f.308 define estimación de frecuencia e intervalo. Se ejecuta en M13–M14.
+RIE-05,"Art. 46 fuente L83 | S8 f. 308, 312",parcial; métrica sin resultados localizados,S8 f.308 define fórmula y declara resultado en Sobre 3. Localizar razones calculadas por respuesta material y sus insumos en el corte económico; una definición no cierra el reparo original.
+RIE-06,"Art. 46 fuente L84 | S8 f. 295, 296, 298; S7 f. 264, 265, 269; T-16 f. 577, 582",parcial; riesgo de ingeniería vigente,Separar H4/H7/H12 sin margen de H11 fijo protegido por A23. D2 reprodujo simulación de 122 nodos con entradas provisionales. Validar capacidad y tres puntos y preparar respuesta realista antes de cerrar.
+RIE-07,"Art. 46 fuente L85 | T-16 f. 574, 575, 576; S8 f. 294, 296, 297",documentada en referencia,Actualizar el localizador al folio del corte regenerado.
+RIE-08,"Art. 46 fuente L86 | T-16 f. 578, 580, 583; T-16 f. 576, 582; S8 f. 300, 309",documentada en referencia,Actualizar el localizador al folio del corte regenerado.
+CAL-01,"Art. 46 fuente L89 | S9 f. 324; S9 f. 324, 325",documentada; evidencia de corte a actualizar,Figura 9.2 f.324. Alinear referencia y diagrama con malla integrada.
+CAL-02,"Art. 46 fuente L90 | T-17 f. 599, 604, 605; T-17 f. 599, 604, 617; T-17 f. 599, 604, 684",diseño documentado,El catálogo contiene las tres fichas y ensayo IP67; verificar los nuevos folios de las fichas.
+CAL-03,"Art. 46 fuente L91 | T-17 f. 597, 599, 611; T-17 f. 598, 612, 614; T-17 f. 598, 604, 605",diseño documentado; referencia a precisar,La matriz inicia en T-17 f.611; «9-rtm-29» es identificador LaTeX. Transcribir número visible/folio. Actas se generan durante ejecución.
+CAL-04,"Art. 46 fuente L92 | S9 f. 318, 321, 325; T-13 f. 593",diseño documentado; agenda contractual,Acordar agenda H1 y preservar cupos/suplentes. Simulacros de DR futuros.
+CAL-05,"Art. 46 fuente L93 | S9 f. 325, 326; T-13 f. 593",documentada en referencia,Actualizar el localizador al folio del corte regenerado.
+CAL-06,"Art. 46 fuente L94 | T-17 f. 597, 608; T-17 f. 597, 600, 601",diseño documentado; actas contractuales,T-17 inicia protocolos en f.600 y cierre en f.608. Las fichas constituyen diseño de aceptación.
+CAL-07,"Art. 46 fuente L95 | S9 f. 318; T-13 f. 593; T-17 f. 599, 607, 616; T-17 ff. 718–719",diseño incorporado; resolver restricción de fuente,"T-13 f.593 y T-17 CP-UAT-09 ff.718–719 exigen muestra real de cada GPS. Conciliar requisito de ingesta de la tercera plataforma sin exportación con SA-03 y explicitar alternativa, veredicto y acta de H5/H10."
+INN-01,"Art. 46 fuente L98 | S13 f. 379, 391, 393; T-19 f. 738; T-17 f. 599, 616, 617",diseño documentado; piloto contractual,Se documentan umbrales y decisión de continuidad; no hay resultado medido del piloto.
+INN-02,"Art. 46 fuente L99 | S13 f. 373, 374, 375; T-19 f. 739; T-14 f. 528, 539",documentada en referencia,Actualizar el localizador al folio del corte regenerado.
+INN-03,"Art. 46 fuente L100 | S13 f. 374, 375, 390; T-19 f. 742, 743, 745; T-14 f. 528, 539",documentada en referencia,Actualizar el localizador al folio del corte regenerado.
+INN-04,Art. 46 fuente L101 | S13 f. 392; T-19 f. 744,documentada en referencia,Actualizar el localizador al folio del corte regenerado.
+INN-05,"Art. 46 fuente L102 | S13 f. 374, 377, 381; T-19 f. 736, 737, 738",diseño documentado; cotejo económico pendiente,Cruzar el tratamiento de cada innovación con flujo económico vigente y vincular localizador en Sobre 3.

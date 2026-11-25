@@ -1,0 +1,19 @@
+% ============================================================================
+%  Formulario T-14. Plan de trabajo, EDT y carta Gantt (FEP01 p. 63)
+%  Formulario de contenido adjunto: lista cada exigencia de las bases y dice
+%  dónde se presenta, con \verSeccionFolio{etiqueta}.
+% ============================================================================
+
+\DefinirFormulario{T-14}{Plan de trabajo, EDT y carta Gantt}{63}
+  {El Proponente adjuntará a este formulario la información solicitada en el Subdocumento 7. La carta Gantt deberá cubrir los 56 meses del Contrato y mostrar explícitamente las ventanas de marcha blanca, los pasos a producción y el inicio de la fase de Operación.}
+
+\expandafter\def\csname esqueleto@T-14\endcsname{%
+  \begin{formulario}{T-14}
+    \begin{contenidoExigido}{T-14}
+      \exigencia{Estructura de descomposición del trabajo con el 100 \% del alcance, hasta paquetes estimables y asignables.}{}
+      \exigencia{Diccionario de la EDT con entregable, criterio de aceptación y responsable por paquete.}{}
+      \exigencia{Secuenciamiento, estimación, ruta crítica y holguras, con PERT y CPM.}{}
+      \exigencia{Carta Gantt de los 56 meses, alineada con el Artículo 17 y los hitos del Formulario E-25, con marcha blanca, pasos a producción e inicio de la Operación.}{}
+      \exigencia{Frentes de trabajo, paralelización y solapamiento de los meses 13 a 15 y 19 a 20.}{}
+    \end{contenidoExigido}
+  \end{formulario}}

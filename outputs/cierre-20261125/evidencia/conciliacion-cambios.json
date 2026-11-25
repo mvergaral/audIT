@@ -1,0 +1,62 @@
+[
+  {
+    "archivo": "anexos/observaciones-informe3.tex",
+    "motivo": "Conteo y estados respaldados; no atribuir cierres humanos, cuadros o subrogancias no acreditados.",
+    "antes": "a0943dfde00ead87923f44b8eddd3cabc4f66296cd80e7bd1a5d5c155335219e",
+    "despues": "ac509080151207c711bb1716be44062f8c79eff0b10b923f63039538ed73a19a"
+  },
+  {
+    "archivo": "subdocumentos/08-riesgos/contenido.tex",
+    "motivo": "Separar escenario civil SA-01 de fecha contractual efectiva.",
+    "antes": "64a12387202bd6473a8088df63757e13f726f945cd3f0a8b224c1a2744847c6f",
+    "despues": "f0aed7644331bd7aa794813342b1f9dab40b4bc88157cdd1db44a155dc5029bf"
+  },
+  {
+    "archivo": "subdocumentos/08-riesgos/formularios/T-16.tex",
+    "motivo": "R-21 conciliado con SA-01 y exposición residual diferenciada de reducción efectivamente acreditada.",
+    "antes": "405deb05367cea8d9ec41cadcf2296a26e07a3fea5fa9dcb74405aba5dad70ed",
+    "despues": "f19ce6d61c010b76cbdb8936ece3495ca7775c730a466ff5dbb0503f30fcba3a"
+  },
+  {
+    "archivo": "subdocumentos/04-arquitectura/contenido.tex",
+    "motivo": "No presentar como suscrito el contrato de combustible sin respaldo localizado.",
+    "antes": "99df47cb5ad98bf50d41a6eb608334ff0887b352a07e09583b102ec5b291df4e",
+    "despues": "57bdf49ebb8daf6b7f7da1f75d1f58c88be1f410ab6b46d618ec769ec67e5717"
+  },
+  {
+    "archivo": "subdocumentos/01-empresa/contenido.tex",
+    "motivo": "Retirar folios de antecedentes financieros inexistentes en el expediente localizado.",
+    "antes": "945962bc2f3f6552afd9294acc34597c27705107b5bc0655500d1dc90c3cc895",
+    "despues": "d0849c72bd3f2a6767691745fb4c88d7eb49f4cb33f292d5c881bad102bde6e4"
+  },
+  {
+    "archivo": "subdocumentos/09-calidad/formularios/catalogo-T-17.tex",
+    "motivo": "CP-INT-25 coherente con ambas ramas del sitio secundario de CP-PERF-03/R-24.",
+    "antes": "b41600e67d3b90bfc9409829dbb4ce11c76de53b8f4af0a2277903e22e2b2599",
+    "despues": "aa1266a91db73c0271aac0c04ccb319b7adbc48cd74379e88f22f71a3d3d1a79"
+  },
+  {
+    "archivo": "subdocumentos/07-plan-trabajo/formularios/T-14.tex",
+    "motivo": "Declaración propia del formulario; revisión humana pendiente explícita.",
+    "antes": "b22befc2514ae55e25c6efac89780ead46865a19aa03ec21231882d38a7e45e5",
+    "despues": "0da0c49134ab7451845cddf4f47c58dd28b92b2021492dfe20e4de8bfd7fa058"
+  },
+  {
+    "archivo": "subdocumentos/07-plan-trabajo/formularios/T-15.tex",
+    "motivo": "Declaración propia del formulario; revisión humana pendiente explícita.",
+    "antes": "14c808f01f8b42abc9fb50a194aea90dcffe6e1cb8cbcd45f85e0535a2855956",
+    "despues": "9dbd59d5118fae38b166e2c8617e5bfabf619c7fb461005b54aba96565638a72"
+  },
+  {
+    "archivo": "subdocumentos/07-plan-trabajo/formularios/T-18.tex",
+    "motivo": "Declaración propia del formulario; revisión humana pendiente explícita.",
+    "antes": "a445982335bf6056295880b6daae44a5b52441e63e5be33e2224658012638ebb",
+    "despues": "924ffc52ce3b8ff99c5b2c16a1b5f6d2c6b1158f47151606af251cbd5b285585"
+  },
+  {
+    "archivo": "subdocumentos/02-problema/anexos.tex",
+    "motivo": "Incorporar al anexo independiente los seis supuestos críticos ya descritos en el cuerpo, sin inventar supuestos nuevos.",
+    "antes": "b9b64360acca04e741eec53b3b197704de2a516ed4a35f601b63db1932333742",
+    "despues": "47fe945180cd034c3884a328db987201a0fca7129426fa059a041f9505fd9d99"
+  }
+]

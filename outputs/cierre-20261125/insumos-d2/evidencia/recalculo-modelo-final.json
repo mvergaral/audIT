@@ -1,0 +1,17 @@
+{
+  "motor": "LibreOffice",
+  "caches_retirados": 32661,
+  "formulas_comparadas": 32661,
+  "diferencias": [],
+  "errores": [],
+  "tarifas_rango": true,
+  "conciliacion_venta_personal": {
+    "Implementación": true,
+    "Operación": true
+  },
+  "venta_total": 8368352736.61588,
+  "condiciones": {
+    "vigencia": 150,
+    "operacion": "Sin reajuste; precio nominal fijo"
+  }
+}

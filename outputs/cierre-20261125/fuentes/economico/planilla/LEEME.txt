@@ -1,0 +1,14 @@
+Carpeta de la planilla de cálculo que entrega el mandante (Formulario T-22,
+FEP01 p.69) y que es el modelo financiero del Sobre N.º 3 (Formulario E-21,
+entregable 3, FEP01 pp.71 y 72).
+
+Dejar aquí un solo archivo .xlsx. La herramienta de compilación lo copia a la
+salida con el nombre que corresponde:
+
+  Informe 3        INFORME3_AUDIT_PLANILLA_20261113.xlsx
+  Propuesta final  AUDIT_ModeloFinanciero_3_20261125.xlsx, dentro de
+                   SOBRE3_AUDIT_OFERTA_ECONOMICA_20261125.ZIP
+
+El formato no genera ni modifica la planilla. herramientas/planilla.py
+compara sus celdas con economico/datos/partidas.csv (columna planilla), porque
+los valores de los tres documentos del sobre deben ser idénticos.
