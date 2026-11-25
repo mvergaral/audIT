@@ -1,0 +1,30 @@
+\subsection{A.1. Metadatos de precios consignados en el informe maestro}
+\begin{center}\footnotesize\renewcommand{\arraystretch}{1.25}
+\begin{tabularx}{\linewidth}{@{}p{3cm}Xp{3.5cm}@{}}
+\toprule\textbf{Componente} & \textbf{Producto, región, moneda y fecha declaradas} & \textbf{Régimen y valor de referencia}\\\midrule
+Intuitem / Norad & CISO Assistant Pro; UE/Chile; EUR; 16/09/2026; \url{https://ciso-assistant.com} & Lista web según maestro: 2.400 EUR/año; TCO 280 UF.\\
+Microsoft Azure & Key Vault Premium; Chile Central; USD; 16/09/2026; \url{https://azure.microsoft.com} & Retail Prices API según maestro: 1 USD/clave/mes. Flujo consolidado: 787,16 UF.\\
+Microsoft Azure & Managed HSM Standard B1; Chile Central; USD; 16/09/2026 & Alternativa de sensibilidad: 3,20 USD/h.\\
+BSI / SGS Chile & Certificación ISO 27001; Chile; CLP; 28/08/2026 & Solo por cotización. Benchmark consignado: 15.500.000 CLP inicial; 4.500.000 CLP por vigilancia.\\
+Chubb Chile & Póliza Cyber Risk; Chile; UF; 16/09/2026 & Solo por cotización. Prima consignada: 90 UF/año; flujo 420 UF.\\\bottomrule
+\end{tabularx}\end{center}
+\textbf{Evidencia de precios:} las fechas y valores son declaraciones de la fuente recibida. Las cotizaciones y capturas originales no acompañan al maestro. La licencia AGPLv3 no demuestra por sí sola una tarifa de la edición Pro o del servicio SaaS.
+
+\subsection{A.2. Dedicaciones y modelo reproducible}
+El maestro adopta \textbf{2 UF/h para CISO y DPO}, con 24 y 18 horas mensuales, respectivamente. Para QA utiliza 1 UF/h y para Legal 2 UF/h. Las bolsas de QA y Legal del flujo se distribuyen por etapa; deben conciliarse con las dedicaciones de su tabla de perfiles antes de contratar.
+\[
+\mathrm{TCO}=\sum_{m=1}^{56}C_m,\qquad
+\mathrm{VA}_{\mathrm{costo}}=\sum_{m=1}^{56}\frac{C_m}{(1+0,009)^m}.
+\]
+El código Python incluido en el maestro se conserva como fuente del cálculo. Se acompaña un verificador auxiliar de aritmética para reconstruir sus totales; el uso de código auxiliar con IA se declara en el anexo B.
+
+\subsection{A.3. Discrepancias internas conservadas y señaladas}
+\begin{enumerate}[itemsep=4pt]
+\item \textbf{Valores entre capítulos.} El flujo usa Key Vault por 787,16 UF, GRC por 280 UF y seguro por 420 UF. La síntesis/anexo del maestro también presenta 725,4 UF, 255 UF y 390 UF. La página 8 adopta el flujo como referencia; la prosa original conserva sus cifras para revisión del grupo.
+\item \textbf{Resultado GRC.} El maestro publica Purview con 3,70. La ponderación de la fila (5, 1, 5, 5, 4) con pesos (25, 20, 25, 20, 10) requiere comprobación aritmética. CISO Assistant se adopta fuera de la matriz comparativa, circunstancia declarada por el propio maestro.
+\item \textbf{Riesgo y retorno.} La exposición máxima de 55.000 UF no equivale a pérdida esperada sin una probabilidad. El RoSI presentado supone una eficacia del 85\%; no constituye retorno garantizado. El uso de Gordon--Loeb y la conversión del umbral anual deben ser revisados por el autor del modelo. Las conclusiones y el capítulo económico indican umbrales anuales distintos.
+\item \textbf{Fundamentos legales y continuidad.} El texto alterna referencias DT 569/2018 y 569/2024, y describe cláusulas internacionales tanto provisionales como suficientes. También debe verificarse la recuperación ante desastre si las claves maestras residen exclusivamente en Chile. La maquetación no acredita esos extremos.
+\end{enumerate}
+
+\subsection{A.4. Entregables citados no disponibles}
+El maestro remite al cuestionario de 30 preguntas (Persona 6), a la verificación normativa y a la declaración consolidada (Persona 8); esos archivos no están en la carpeta recibida. La bitácora GRC figura expresamente como no entregada. El cuestionario con respuestas, justificaciones e índice temático debe adjuntarse cuando lo proporcione el grupo.

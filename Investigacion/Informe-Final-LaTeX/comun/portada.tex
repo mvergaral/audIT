@@ -1,0 +1,41 @@
+% Portada de empresa con el rotulo del subdocumento sobre la zona libre
+\newcommand{\portadaSubdocumento}{%
+  \thispagestyle{empty}%
+  \begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=north west,inner sep=0pt] at (current page.north west)
+      {\includegraphics[width=\paperwidth,height=\paperheight]{portada.jpeg}};
+    \node[anchor=north west,inner sep=0pt] at ($(current page.north west)+(1.45cm,-20.4cm)$)
+      {\color{audITteal}\fontsize{11}{11}\selectfont\bfseries SUBDOCUMENTO N.\textordmasculine{}\,\elNumero};
+    \node[anchor=north west,text width=9cm,inner sep=0pt] at ($(current page.north west)+(1.45cm,-21.0cm)$)
+      {\color{white}\fontsize{19}{22}\selectfont\bfseries \elTitulo};
+  \end{tikzpicture}%
+  \clearpage}
+
+% Ficha del documento en pagina propia
+\newcommand{\fichaSubdocumento}{%
+  \thispagestyle{empty}
+  \vspace*{1.2cm}
+  {\color{audITnavy}\fontsize{28}{32}\selectfont\bfseries Ficha del documento}
+
+  \vspace{10pt}
+  {\color{audITteal}\rule{\linewidth}{2pt}}
+
+  \vspace{22pt}
+  {\small
+  \begin{longtable}{@{}p{3.5cm}p{10.5cm}@{}}
+  \color{audITgris}EMPRESA & \color{black}\laEmpresa, Empresa N.\textordmasculine{}\,\elNumeroEmpresa \\
+  \color{audITgris}SUBDOCUMENTO & \color{black}N.\textordmasculine{}\,\elNumero. \elTitulo \\
+  \color{audITgris}PROYECTO & \color{black}\elProyecto \\
+  \color{audITgris}CLIENTE & \color{black}\elCliente \\
+  \color{audITgris}LICITACIÓN & \color{black}\laLicitacion \\
+  \color{audITgris}INSTANCIA & \color{black}\laInstancia \\
+  \color{audITgris}CONTENIDO & \color{black}\laDescripcion \\
+  \color{audITgris}VERSIÓN & \color{black}\laVersion \\
+  \color{audITgris}FECHA & \color{black}\laFecha \\
+  \color{audITgris}LUGAR & \color{black}\elLugar \\
+  \end{longtable}}
+  \clearpage
+  \pagenumbering{arabic}\setcounter{page}{1}
+  \renewcommand{\contentsname}{Índice}
+  \tableofcontents
+  \clearpage}

@@ -1,0 +1,34 @@
+\subsection{Resumen ejecutivo}\label{resumen-ejecutivo}
+
+Transportes Curimón administra una flota de 374 camiones, 454 conductores (196 propios y 258 externos), 148 transportistas subcontratados y 84 clientes corporativos bajo un contrato licitado a 56 meses con operaciones entre la frontera de Chile y Argentina, es decir, hacia Mendoza. Históricamente, la operación sufría de falta de visibilidad y control sobre sus unidades, con datos de telemetría y jornadas dispersos en planillas informales, lo que impedía costear tramos reales y configuraba un riesgo real ante el nuevo marco regulatorio chileno. El presente trabajo estructura el programa integral de cumplimiento normativo (TI-12) para el proyecto, articulando la Ley N.º 21.719 sobre Protección de Datos Personales (sanciones de hasta 20.000 UTM o 4\% de ventas), la Ley N.º 21.663 de Ciberseguridad (notificación obligatoria al CSIRT Nacional en \(\le 3\text{ h}\) bajo D.S. 295/2024) y la Ley N.º 25.326 argentina para el tránsito internacional. Se descartó el uso de banda ancha satelital en toda la flota porque era una opción elevada en el precio, adoptándose una arquitectura de conectividad por capas: telemetría por celular como principal, almacenamiento local cifrado y satélite transaccional de respaldo, convergiendo en una vista operacional unificada. La solución se despliega en Azure Chile Central con réplica en East US 2 (bajo Cláusulas Contractuales Tipo), cifrado de campo (RT-11.10) con 686 claves individuales en Azure Key Vault Premium y gobierno GRC. El presupuesto de cumplimiento asciende a 8.492,16 UF netas, representando el 3,9\% del contrato de licitación y asegurando un RoSI mayor a +250\%.
+
+\subsection{Introducción}\label{introducciuxf3n}
+
+Un proyecto TIC no se puede evaluar solo por si la plataforma funciona o no. Cuando maneja datos personales y sostiene una operación crítica, como ocurre en Transportes Curimón, también debe demostrar que cumple con la ley desde el inicio. Si no existe una base legal clara, si los proveedores no tienen responsabilidades definidas o si no hay un plan para responder ante incidentes, una buena solución técnica igual puede transformarse en un riesgo para la empresa.
+
+El tema TI-12 pide identificar qué obligaciones legales afectan a un proyecto desarrollado o utilizado en Chile. Para este caso, las dos normas principales son la Ley N.º 21.719, que actualiza la protección de datos personales, y la Ley N.º 21.663, que organiza el marco nacional de ciberseguridad mediante la ANCI y el CSIRT Nacional. En términos prácticos, esto obliga a revisar la licitud del tratamiento de datos, la seguridad de la información, los derechos de los titulares, las responsabilidades de cada actor y los plazos de reporte ante incidentes.
+
+La aplicación se realiza sobre el Caso 10, Transportes Curimón S.A. El sistema licitado busca ordenar la información de una flota distribuida, vinculando datos de conductores propios y externos con rutas, jornadas y telemetría. Además, participan transportistas subcontratados, clientes corporativos y proveedores cloud. Por eso, el análisis no puede quedarse en una revisión general de leyes: debe aterrizarse en temas concretos como monitoreo por GPS, contratos de encargo, cifrado, transferencias internacionales, continuidad operacional y respuesta ante incidentes.
+
+El objetivo del informe es conectar el marco legal y técnico con decisiones concretas del proyecto. Para eso se revisan normas nacionales e internacionales, organismos, estándares y herramientas de apoyo, y luego se ordena todo en una matriz con actividades, responsables, plazos, evidencias y costos. La idea final es que el cumplimiento no quede como una declaración general, sino como una parte real de la arquitectura, el presupuesto y la ejecución del proyecto.
+
+\subsection{Delimitación del aporte propio}\label{delimitaciuxf3n-del-aporte-propio}
+
+En cumplimiento del Punto 4 de las Indicaciones, AudIT delimita su aporte propio frente a la Ficha TI-12: mientras la ficha suministró el marco conceptual general de las Leyes 21.719 y 21.663, los estándares ISO 27001/27701/42001 y las herramientas base de mercado, el grupo aportó:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  La incorporación obligatoria de la Ley argentina 25.326 por el paso fronterizo a Mendoza y del marco de atestación SOC 2 Type II para los 84 clientes.
+\item
+  La integración del Dictamen DT N.º 569/2018 para regular el monitoreo mediante GPS.
+\item
+  La evaluación de Eramba y Osano como herramientas GRC de aporte propio para ponderar el esquema On-Premise vs.~SaaS.
+\item
+  La formulación de una solución de conectividad por capas con almacenamiento local cifrado que resuelve el descontrol de flota descartando la banda ancha satelital por sobrecosto.
+\item
+  El diseño de aislamiento criptográfico de 686 llaves HSM (RT-11.10).
+\item
+  La modelación formal del TCO de 8.492,16 UF conciliado con los aranceles E-26 y el límite de inversión de Gordon-Loeb.
+\end{enumerate}

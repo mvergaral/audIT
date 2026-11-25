@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FEP · Estudio y práctica del certamen 3</title>
+<style>
+:root{--ink:#183442;--blue:#235b91;--paper:#f3f7fa;--line:#cddce5;--good:#17684c;--bad:#a33437}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.65 "Segoe UI",Arial,sans-serif}header{padding:30px max(5vw,20px);background:#183442;color:white}header p{max-width:760px;margin:8px 0}h1{font:600 clamp(28px,4vw,46px)/1.15 Georgia,serif;margin:6px 0 18px}h2,h3{line-height:1.3}nav{display:flex;gap:8px;flex-wrap:wrap;padding:12px 5vw;background:white;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:2}button,select,input{font:inherit}button{cursor:pointer;border:1px solid var(--line);border-radius:8px;background:white;color:var(--ink);padding:9px 16px}button:hover{background:#e4eff6}button[aria-pressed=true],.primary{background:var(--blue);color:white;border-color:var(--blue)}button:disabled{cursor:default;opacity:.65}:focus-visible{outline:3px solid #e9a91b;outline-offset:3px}
+main{max-width:1250px;padding:28px 24px 80px;margin:auto}.muted{color:#506d7e;font-size:15px}.notice,.tip{padding:16px 20px;background:#e4eff6;border-left:4px solid var(--blue);margin:16px 0}.layout{display:grid;grid-template-columns:270px minmax(0,1fr);gap:28px}.sidebar button{display:block;width:100%;text-align:left;margin-bottom:8px}.sidebar{align-self:start}.card,article{background:white;border:1px solid var(--line);border-radius:12px;padding:26px;margin-bottom:18px}article h1{font-size:30px;color:var(--blue)}article h2{margin-top:35px;font-size:24px}article h3{font-size:20px}article pre{white-space:pre-wrap;background:var(--paper);padding:16px}article table{display:block;overflow:auto;font-size:15px}table{border-collapse:collapse;width:100%;margin:20px 0}th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line)}th{background:#eaf1f6}blockquote{border-left:3px solid var(--blue);margin:20px 0;padding-left:18px}.toolbar{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin:14px 0 24px}.options{display:grid;gap:10px;margin:20px 0}.options button{text-align:left;padding:14px}.correct{border:2px solid var(--good)!important;background:#e6f5ed!important;color:var(--good)!important}.wrong{border:2px solid var(--bad)!important;background:#fbeaec!important;color:var(--bad)!important}textarea{width:100%;min-height:160px;padding:14px;border:1px solid #8fa7b7;border-radius:8px;font:16px/1.6 "Segoe UI",sans-serif;resize:vertical}textarea:focus{outline:2px solid var(--blue)}.feedback{padding:16px;border-radius:8px;background:#edf4fa}progress{width:200px;height:15px}.score{font-size:28px;font-weight:700}.hidden{display:none!important}input[type=number]{max-width:90px;padding:8px}footer{padding:25px 5vw;font-size:14px;border-top:1px solid var(--line)}@media(max-width:780px){.layout{grid-template-columns:1fr}.sidebar{display:flex;overflow:auto;gap:6px}.sidebar button{min-width:180px}main{padding:18px 12px}article,.card{padding:18px}nav{position:static}h1{font-size:32px}}@media print{nav,.sidebar,.toolbar,button,header{display:none}main{max-width:none;padding:0}.layout{display:block}article,.card{break-inside:avoid;border:0}body{background:white}}
+math{font-family:"Cambria Math","STIX Two Math",serif;font-size:1.15em;font-weight:normal;margin:0 .18em;line-height:1.8}math mfrac{padding:0 .15em}article p:has(math){line-height:2.2}td:has(math){padding-top:16px;padding-bottom:16px}
+summary{cursor:pointer;font-weight:600;color:var(--blue);padding:10px 0}#examples h3{scroll-margin-top:110px}#examples h4{font-size:1.1em;margin:0}#examples .feedback{overflow-x:auto}#examples .exercise-index{columns:2;column-gap:32px}#examples .exercise-index li{break-inside:avoid}#examples a{color:var(--blue)}@media(max-width:650px){#examples .exercise-index{columns:1}}
+.formula{overflow-x:auto;padding:12px 0}.formula math{min-width:max-content}#formulas h2{margin-top:30px}
+</style>
+</head>
+<body>
+<header><p>FORMULACIÓN Y EVALUACIÓN DE PROYECTOS</p><h1>Entender. Resolver. Justificar.</h1><p>Prepara el certamen 3 con la materia explicada, 50 preguntas con retroalimentación y un examen de desarrollo.</p></header>
+<nav aria-label="Secciones"><button data-page="learn" aria-pressed="true">Estudiar</button><button data-page="practice" aria-pressed="false">Practicar · 50 preguntas</button><button data-page="formulas" aria-pressed="false">Formulario</button><button data-page="examples" aria-pressed="false">Ejercicios resueltos</button><button data-page="exam" aria-pressed="false">Simulacro difícil</button><button data-page="sources" aria-pressed="false">Cobertura y fuentes</button></nav>
+<main>
+<section id="learn"><div class="notice">Empieza por <strong>Los ejercicios que debes dominar</strong>. La pauta 2026 añade trabajo anticipado, costos hundidos, oportunidad y créditos con gracia. Luego revisa Adquisiciones, Costos y las tres lecturas. El temario fue ajustado a tu aclaración.</div><div class="layout"><aside class="sidebar" id="lessonList" aria-label="Temas de estudio"></aside><article id="lesson"></article></div></section>
+<section id="practice" class="hidden"><h2>Practica y entiende cada decisión</h2><p>Selecciona una alternativa y explica tu razonamiento antes de comprobar. Puedes volver a las preguntas que hayas fallado.</p><div class="toolbar"><label>Tema <select id="topic"><option value="">Todos</option><option>Adquisiciones</option><option>Lecturas</option><option>Costos</option><option>Caja</option></select></label><label><input id="onlyWrong" type="checkbox"> Solo falladas</label><span id="stats" aria-live="polite"></span><button id="resetPractice">Reiniciar práctica</button></div><div id="question"></div><div class="toolbar"><button id="previous">Anterior</button><button id="next">Siguiente</button><span id="position"></span></div></section>
+<section id="formulas" class="hidden"><h2>Formulario del certamen 3</h2><p>Fórmulas, variables y supuestos para elegir el cálculo adecuado.</p>__FORMULARIO__</section>
+<section id="examples" class="hidden"><h2>24 ejercicios resueltos</h2><p>Dos casos por tipo de pregunta. Intenta resolver el enunciado y abre «Ver desarrollo» para comparar tu procedimiento.</p><p>Si tienes poco tiempo, parte por valor ganado, pronósticos, flujo de caja, VAN y crédito con gracia. Esos formatos aparecen en la pauta del Control 3.</p><ul class="exercise-index">__EXERCISE_INDEX__</ul>__EXERCISES__</section>
+<section id="exam" class="hidden"><h2>Simulacro de desarrollo · 100 puntos</h2><p>Tiempo sugerido de 90 minutos, con calculadora. Justifica fórmulas, sustitución, unidades e interpretación. Casos originales inspirados en la pauta del Control 3.</p><div class="toolbar"><button id="startExam" class="primary">Iniciar / continuar examen</button><strong id="clock" aria-live="off">90:00</strong><button id="finishExam">Entregar y ver pauta</button><button id="resetExam">Nuevo intento</button></div><p class="muted">El tiempo es orientativo. Las respuestas se conservan en este navegador si permite almacenamiento local. La pauta aparece al entregar. El desarrollo se puntúa mediante autocorrección por criterios.</p><div id="examBody"></div><div id="examResult" aria-live="polite"></div></section>
+<section id="sources" class="hidden"><article><h2>Qué cubre este material</h2><p><strong>Temario confirmado por el estudiante</strong> — Adquisiciones, Costos, Flujo de Caja y tres lecturas. Se retiraron los capítulos generales de alcance, EDT, cronograma, riesgos y calidad. La EDT y la programación aparecen solo como datos necesarios para presupuestar y calcular PV.</p>
+<p>Se interpretan como las tres lecturas los capítulos 4, 7 y 8 adjuntos. Los trabajos de investigación están excluidos por tu indicación. Las 50 preguntas se distribuyen en 15 de Adquisiciones, 17 de Costos, 11 de Caja y 7 de Lecturas. Los seis casos del simulacro suman 100 puntos.</p>
+<h3>Fuentes de estudio</h3><ul>
+<li>PMBOK 6, capítulo 12 — Gestión de las Adquisiciones del Proyecto (43 páginas del archivo).</li>
+<li>PMBOK 6, capítulo 7 — Gestión de los Costos del Proyecto (40 páginas).</li>
+<li>Lectura, capítulo 4 — Aspectos tributarios, legales y administrativos (22 páginas).</li>
+<li>Lectura, capítulo 7 — Cómo construir los flujos de caja (32 páginas).</li>
+<li>Lectura, capítulo 8 — Cálculo y análisis de viabilidad económica (28 páginas).</li>
+<li>FEP07.26, FEP08.26 y pauta Control 3 de 2026, utilizadas para la guía y los ejemplos anteriores.</li></ul>
+<p>Los cinco archivos adjuntos son escaneos y se revisaron mediante reconocimiento de texto. Algunos contienen páginas repetidas. Las tasas tributarias de los ejemplos son supuestos de estudio, no una actualización de legislación. Para los ejercicios se aplica la tasa indicada.</p>
+<p>Las preguntas de práctica y el simulacro son originales de estudio. Los cambios de temario usan un registro de progreso nuevo para evitar mezclar aciertos de preguntas sustituidas con las actuales.</p>
+<h3>Redondeos de la pauta</h3><p>Para el EAC combinado de la pauta, los índices 0,8504 y 0,9045 producen aproximadamente 4.953,15 UF al multiplicarse sin otro redondeo. La pauta entrega 4.952,93 UF. Prioriza el procedimiento y declara tu criterio de redondeo. En el simulacro conserva decimales hasta el final.</p><button onclick="window.print()">Imprimir esta sección</button></article></section>
+</main><footer>FEP · Preparación para el 20 de noviembre de 2026. Archivo autónomo, sin conexión. El progreso depende del almacenamiento de este navegador.</footer>
+<script>
+const DATA=__DATA__;
+const key='fep-certamen3-temario-confirmado-v2';
+let saved={};
+try{saved=JSON.parse(localStorage.getItem(key)||'{}')}catch(e){}
+let state={answers:{},drafts:{},examSubmitted:false,start:null,marks:{},...saved};
+const el=id=>document.getElementById(id);
+function save(){try{localStorage.setItem(key,JSON.stringify(state))}catch(e){el('stats').textContent='El navegador no permite guardar. Mantén esta ventana abierta.'}}
+function node(tag,text,cls){let n=document.createElement(tag);n.textContent=text;if(cls)n.className=cls;return n}
+document.querySelectorAll('[data-page]').forEach(b=>b.onclick=()=>{document.querySelectorAll('main>section').forEach(s=>s.classList.toggle('hidden',s.id!==b.dataset.page));document.querySelectorAll('[data-page]').forEach(t=>t.setAttribute('aria-pressed',String(t===b)));if(b.dataset.page==='exam')renderExam();window.scrollTo(0,0)});
+DATA.lessons.forEach((l,i)=>{let b=node('button',l.title);b.onclick=()=>{el('lesson').innerHTML=l.body;document.querySelectorAll('#lessonList button').forEach((x,j)=>x.setAttribute('aria-pressed',String(j===i)))};el('lessonList').append(b)});
+el('lessonList').firstChild.click();
+let current=0,chosen=null;
+function filtered(){return DATA.questions.map((q,i)=>i).filter(i=>(!el('topic').value||DATA.questions[i].topic===el('topic').value)&&(!el('onlyWrong').checked||(state.answers[i]!==undefined&&state.answers[i]!==DATA.questions[i].answer)))}
+function renderQuestion(){
+ const ids=filtered();current=Math.max(0,Math.min(current,ids.length-1));const id=ids[current];el('question').replaceChildren();
+ const answered=Object.keys(state.answers).length,correct=Object.keys(state.answers).filter(i=>state.answers[i]===DATA.questions[i].answer).length;
+ el('stats').textContent=answered+' / 50 répondues · '+correct+' correctas';
+ el('stats').textContent=el('stats').textContent.replace('répondues','respondidas');
+ el('position').textContent=ids.length? (current+1)+' / '+ids.length:'';
+ el('previous').disabled=current===0;el('next').disabled=current>=ids.length-1;
+ if(id===undefined){el('question').append(node('p','No hay preguntas para este filtro.'));return}
+ const q=DATA.questions[id],done=state.answers[id]!==undefined;chosen=done?state.answers[id]:null;
+ const card=node('div','', 'card');card.append(node('p',q.topic+' · Pregunta '+(id+1),'muted'),node('h3',q.prompt));
+ const options=node('div','','options');
+ q.options.forEach((text,i)=>{let b=node('button',String.fromCharCode(65+i)+'. '+text);b.disabled=done;b.setAttribute('aria-pressed',String(chosen===i));if(done&&i===q.answer)b.classList.add('correct');if(done&&i===chosen&&i!==q.answer)b.classList.add('wrong');b.onclick=()=>{chosen=i;[...options.children].forEach((x,j)=>x.setAttribute('aria-pressed',String(i===j)));check.disabled=false};options.append(b)});card.append(options);
+ let label=node('label','Tu razonamiento');let draft=document.createElement('textarea');draft.setAttribute('aria-label','Razonamiento de pregunta '+(id+1));draft.value=state.drafts['q'+id]||'';draft.oninput=()=>{state.drafts['q'+id]=draft.value;save()};label.append(draft);card.append(label);
+ let check=node('button','Comprobar','primary');check.disabled=chosen===null||done;check.onclick=()=>{state.answers[id]=chosen;save();renderQuestion()};card.append(check);
+ if(done){card.append(node('p',(chosen===q.answer?'Correcto. ':'Revisa tu respuesta. ')+q.explanation,'feedback'))}
+ el('question').append(card);
+}
+el('topic').onchange=el('onlyWrong').onchange=()=>{current=0;renderQuestion()};
+el('previous').onclick=()=>{current--;renderQuestion()};el('next').onclick=()=>{current++;renderQuestion()};
+el('resetPractice').onclick=()=>{if(confirm('¿Borrar respuestas de práctica? El examen se conserva.')){state.answers={};save();renderQuestion()}};
+function renderExam(){
+ const body=el('examBody');body.replaceChildren();
+ if(!state.start&&!state.examSubmitted){body.append(node('p','Inicia el examen para ver los seis casos.'));return}
+ DATA.exam.forEach((q,i)=>{let card=node('div','','card');card.append(node('h3',(i+1)+'. '+q.title+' · '+q.points+' puntos'),node('p',q.prompt));let text=document.createElement('textarea');text.setAttribute('aria-label','Desarrollo '+(i+1));text.placeholder='Datos → fórmula → sustitución → resultado → interpretación';text.value=state.drafts['exam'+i]||'';text.readOnly=state.examSubmitted;text.oninput=()=>{state.drafts['exam'+i]=text.value;save()};card.append(text);
+ if(state.examSubmitted){let box=node('div','','feedback');box.append(node('h4','Pauta y criterios de autocorrección'));let ul=document.createElement('ul');q.rubric.forEach(r=>ul.append(node('li',r)));box.append(ul);let label=node('label','Puntaje que te asignas (0–'+q.points+') ');let score=document.createElement('input');score.type='number';score.min=0;score.max=q.points;score.value=state.marks[i]??0;score.oninput=()=>{state.marks[i]=Math.min(q.points,Math.max(0,Number(score.value)||0));save();examScore()};label.append(score);box.append(label);card.append(box)}
+ body.append(card)});examScore();
+}
+function examScore(){el('examResult').textContent=state.examSubmitted?'Autocorrección: '+Object.values(state.marks).reduce((a,b)=>a+b,0)+' / 100 puntos. Revisa cada criterio antes de asignarte puntaje.':''}
+el('startExam').onclick=()=>{if(!state.start&&!state.examSubmitted){state.start=Date.now();save()}renderExam()};
+el('finishExam').onclick=()=>{if(!state.start||state.examSubmitted)return;const n=DATA.exam.filter((_,i)=>!(state.drafts['exam'+i]||'').trim()).length;if(confirm('¿Entregar el examen? '+n+' casos sin responder. Se mostrará la pauta.')){state.examSubmitted=true;save();renderExam()}};
+el('resetExam').onclick=()=>{if(confirm('¿Borrar el desarrollo del examen e iniciar otro intento?')){state.start=null;state.examSubmitted=false;state.marks={};for(let i=0;i<DATA.exam.length;i++)delete state.drafts['exam'+i];save();renderExam()}};
+setInterval(()=>{if(state.start&&!state.examSubmitted){let remaining=Math.max(0,5400-Math.floor((Date.now()-state.start)/1000));el('clock').textContent=remaining?String(Math.floor(remaining/60)).padStart(2,'0')+':'+String(remaining%60).padStart(2,'0'):'Tiempo sugerido cumplido';}else el('clock').textContent=state.examSubmitted?'Entregado':'90:00'},1000);
+renderQuestion();renderExam();
+</script></body></html>

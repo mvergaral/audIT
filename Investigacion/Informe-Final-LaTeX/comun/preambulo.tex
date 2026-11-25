@@ -1,0 +1,43 @@
+\usepackage{import}
+\graphicspath{{comun/assets/}{comun/assets/figuras/}}
+\usepackage{styles}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{pdflscape}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+
+\definecolor{audITnavy}{HTML}{092439}
+\definecolor{audITteal}{HTML}{16A9C4}
+\definecolor{audITgris}{HTML}{5B6675}
+
+\setlength{\parindent}{1cm}
+\renewcommand{\cftdotsep}{4}
+\renewcommand{\cftfigpresnum}{\bfseries Figura }
+\cftsetindents{figure}{0em}{5.5em}
+\renewcommand{\cfttabpresnum}{\bfseries Tabla }
+\cftsetindents{table}{0em}{5.5em}
+
+% Titulo de seccion de primer nivel a gran escala
+\titleformat{\section}[display]
+  {\normalfont\raggedright}
+  {\fontsize{86}{86}\selectfont\bfseries\color{audITteal}\thesection}
+  {2pt}
+  {\fontsize{30}{34}\selectfont\bfseries\color{audITnavy}}
+\titlespacing*{\section}{0pt}{6pt}{26pt}
+
+\titleformat{\subsection}
+  {\normalfont\Large\bfseries\color{audITnavy}}{\thesubsection}{0.6em}{}
+\titleformat{\subsubsection}
+  {\normalfont\large\bfseries\color{audITgris}}{\thesubsubsection}{0.6em}{}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.4pt}
+\fancyhead[L]{\footnotesize\color{audITgris}\laEmpresa}
+\fancyhead[R]{\footnotesize\color{audITgris}\elCorto}
+\fancyfoot[C]{\thepage}
+

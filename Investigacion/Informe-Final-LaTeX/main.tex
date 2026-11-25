@@ -1,0 +1,33 @@
+\documentclass[12pt, letterpaper, table, xcdraw]{comun/inf-pucv}
+
+\input{comun/instancia}
+\newcommand{\elCorto}{Informe Final TI-12}
+\input{comun/preambulo}
+\usepackage{fontspec}
+\setmonofont{DejaVu Sans Mono}
+\spanishplainpercent
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\newcounter{none}
+
+\title{Programa de Cumplimiento Normativo para Transportes Curimón S.A.}
+\author{AudIT · Empresa N.º 10}
+\date{21 de septiembre de 2026}
+
+\begin{document}
+
+\input{contenido/00_portada}
+\pagenumbering{roman}
+\tableofcontents
+\clearpage
+\pagenumbering{arabic}
+
+% El informe maestro remoto es la fuente única del cuerpo ensamblado.
+\input{contenido/informe_maestro}
+
+\clearpage
+\phantomsection
+\addcontentsline{toc}{section}{Bibliografía}
+\printbibliography[title={Bibliografía}]
+
+\end{document}

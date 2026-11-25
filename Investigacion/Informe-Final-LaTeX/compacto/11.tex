@@ -1,0 +1,32 @@
+\subsection{Privacidad por Arquitectura (PbD) y Derechos de los Titulares}\label{privacidad-por-arquitectura-pbd-y-derechos-de-los-titulares}
+
+En conformidad con el \textbf{principio de seguridad (Art. 3° letra f) y el deber de medidas de seguridad del Art. 14 quinquies de la Ley N.º 21.719}, el sistema implementa la privacidad desde el diseño mediante cuatro instrumentos operativos:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Tratamiento Diferenciado de Choferes (196 Propios vs.~258 Externos):} Para la dotación propia de Curimón, la base de licitud radica en la ejecución del contrato de trabajo y el cumplimiento del \textbf{Artículo 25 bis del Código del Trabajo} (control de fatiga y descansos, amparado en el Dictamen Ord. 569/2024 de la Dirección del Trabajo). Para los 258 conductores externos de pymes subcontratadas, el rastreo continuo fuera de servicio constituiría una vulneración grave; por ello, la app móvil exige \textbf{consentimiento previo y explícito (Art. 12)} y el firmware a bordo desactiva el streaming satelital inmediatamente después de confirmada la entrega en destino.
+\item
+  \textbf{Evaluación de Impacto (EIPD / DPIA - Art. 15 ter):} Al monitorear en tiempo real a 374 tractocamiones cada 30 segundos a lo largo de 41 millones de kilómetros anuales, se configura un tratamiento masivo de alto riesgo. La EIPD formalizada en la Etapa 1 introduce el \textbf{enclavamiento cinético de pantalla} (conforme a la Ley N.º 21.377 ``No Chat'', bloqueando la interfaz táctil con \(v > 0\text{ km/h}\)) y el aislamiento de datos de conducción agresiva frente a fines disciplinarios directos.
+\item
+  \textbf{Supervisión Humana ante Bloqueos Automatizados (Art. 8 bis):} La verificación bloqueante del despacho (RT-09.01) evalúa de forma algorítmica las invariantes de jornada, vigencias mecánicas y sustancias peligrosas (D.S. N.º 298) en \(\le 30\) segundos. Para cumplir con la garantía del Art. 8 bis, el sistema prohíbe el rechazo opaco: ante un bloqueo, la plataforma genera un documento con la causal específica y habilita un flujo de \textbf{revisión humana inmediata} a cargo de la torre de programación 24/7.
+\item
+  \textbf{Registro de Actividades de Tratamiento (RAT - Art. 14 ter):} Erradica las 4 planillas Excel y \textasciitilde6.000 vigencias manuales actuales mediante un catálogo automatizado en la herramienta GRC, aplicando políticas de retención legales inalterables: 5 años para jornadas laborales, 6 años para documentos tributarios (SII) y 2 años en línea para telemetría cruda (Capítulo 15 del Caso).
+\end{enumerate}
+
+\subsection{Transferencias Internacionales de Datos y Selección de Nube}\label{transferencias-internacionales-de-datos-y-selecciuxf3n-de-nube}
+
+El análisis de flujos transfronterizos bajo los \textbf{Artículos 27 y 28 de la Ley N.º 21.719} resuelve dos necesidades críticas de Curimón S.A.:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Sede Primaria y Réplica de Desastres (Vector Cloud):} La elección de \textbf{Microsoft Azure Chile Central} (Santiago) asegura la residencia territorial de los datos y el cumplimiento de RT-03.01. Sin embargo, para satisfacer el requisito \textbf{RT-07.02} (sitio secundario geográficamente desvinculado del riesgo sísmico de la cuenca central con RTO \(\le 4\text{ h}\) y RPO \(\le 15\text{ min}\)), la réplica pasiva se ubica en \textbf{Azure East US 2 (Virginia, EE.UU.)}. La legalidad de este traspaso se asegura mediante \textbf{Cláusulas Contractuales Tipo (SCC)} suscritas entre Curimón, audIT y Microsoft, complementadas con cifrado ciego: las llaves maestras residen exclusivamente en el HSM chileno, impidiendo el acceso a datos en claro por autoridades o terceros en destino.
+\item
+  \textbf{Tránsito Terrestre Internacional a Mendoza (Vector Terrestre):} Los \textbf{\textasciitilde1.900 viajes anuales} por el paso Los Libertadores activan el régimen de exportación transfronteriza. Este flujo se ampara en el \textbf{Artículo 27 letra b)} (necesidad contractual de transporte internacional) y en la \textbf{Ley N.º 25.326 de Argentina}, país que cuenta con declaración de adecuación formal por la Unión Europea. La unidad embarcada con 8 GB absorbe interrupciones de señal en alta montaña de hasta 12 días (RT-10.05) sin pérdida de integridad probatoria.
+\end{itemize}
+
+\subsection{Vínculo con la propuesta técnico-económica}\label{vuxednculo-con-la-propuesta-tuxe9cnico-econuxf3mica}
+
+Cada control descrito se ancla a un paquete de trabajo de la EDT y a un hito de pago del Formulario E-25, y se valoriza con los perfiles auditados del Formulario E-26 ---CISO, DPO, Analista QA y Asesor Legal TIC--- que sostienen el modelo del capítulo 3. La correspondencia es biunívoca: \textbf{no hay control sin partida ni partida sin control}, lo que permite que el cumplimiento normativo entre al flujo de caja como obligación contractual trazable y no como una provisión genérica.

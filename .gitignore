@@ -60,3 +60,26 @@ Informe-3/correccion-final/build/node_modules
 /debug.log
 **/salida/informe3-economica/
 outputs/3.2/trabajo/
+
+# --- Material de estudio personal (FEP / Control) ---
+# Clon anidado del mismo repositorio (no se versiona un repo dentro de sí).
+AUDIT/
+
+# Datos OCR de Tesseract (28 MB, regenerables).
+.pdfmd/
+
+# Extracciones temporales del pipeline de OCR.
+CONTROL/tmp/
+
+# Audio generado (podcast) y otros binarios grandes.
+*.wav
+
+# Artefactos de compilación LaTeX.
+*.xmpi
+*.synctex*
+
+# PDFs del material de estudio personal (escaneos/slides de gran tamaño): no se versionan.
+CASOS/
+CONTROL/**/*.pdf
+TALLER 3/*.pdf
+Investigacion/Informe-Final-LaTeX/**/*.pdf

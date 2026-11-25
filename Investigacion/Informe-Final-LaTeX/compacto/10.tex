@@ -1,0 +1,26 @@
+\subsection{Delimitación de Fronteras de Responsabilidad y Modelo Multicapa}\label{delimitaciuxf3n-de-fronteras-de-responsabilidad-y-modelo-multicapa}
+
+La implantación de una plataforma digital de misión crítica para \textbf{Transportes Curimón S.A.} (Caso 10) exige traducir los mandatos de la \textbf{Ley N.º 21.719} sobre Protección de Datos Personales y de la \textbf{Ley N.º 21.663} (Marco de Ciberseguridad) en una arquitectura técnica verificable. El diseño parte de la frontera jurídica formal fijada por el \textbf{Artículo 15 bis de la Ley N.º 21.719}:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Responsable del Tratamiento:} Transportes Curimón S.A., persona jurídica titular de la operación de transporte, custodia la base de datos de sus 454 conductores, 148 transportistas subcontratados y 84 clientes corporativos, fijando las finalidades operacionales de despacho, seguridad y liquidación.
+\item
+  \textbf{Encargado del Tratamiento:} audIT Soluciones de Software SpA y Microsoft Azure procesan los datos exclusivamente bajo instrucciones formales mediante un Acuerdo de Procesamiento de Datos (\emph{Data Processing Agreement} - DPA). audIT provee la lógica de aplicación, mientras que Azure suministra la infraestructura segura en la nube bajo certificación ISO/IEC 27018.
+\end{itemize}
+
+\begin{center}
+\begin{tikzpicture}[box/.style={draw=teal,fill=pale,rounded corners=2pt,align=center,font=\footnotesize,text width=14.5cm,inner sep=4pt},arr/.style={-{Stealth},thick,teal},node distance=3mm]
+\node[box] (a) {\textbf{Titulares y activos}\\196 conductores propios · 258 externos · 148 transportistas\\374 camiones · 84 clientes corporativos};
+\node[box,below=of a] (b) {\textbf{Captura e ingesta}\\App móvil y telemetría celular · búfer local cifrado de 8 GB\\Satélite transaccional de respaldo · TLS / mTLS};
+\node[box,below=of b] (c) {\textbf{Azure Chile Central · frontera del encargado}\\API Management · WAF · servicio de jornada · revisión humana\\RAT y derechos · cifrado de campo AES-256-GCM\\Key Vault Premium: 686 claves · evidencias inmutables};
+\node[box,below=of c] (d) {\textbf{Continuidad y transferencias}\\Réplica East US 2 · ruta a Mendoza\\Cláusulas contractuales y control de acceso a claves};
+\node[box,below=of d] (e) {\textbf{Respuesta diferenciada}\\CSIRT: 3 h / actualización / cierre · sin datos personales\\Brecha de datos: sin dilación · avisos al mandante según contrato};
+\draw[arr] (a)--(b);\draw[arr] (b)--(c);\draw[arr] (c)--(d);\draw[arr] (d)--(e);
+\end{tikzpicture}
+\end{center}
+{\footnotesize\textbf{Figura 1.} Rediagramación del mapa de arquitectura del informe maestro.}
+
+
+\emph{Explicación Integral de la Arquitectura:} La figura ilustra el ciclo de vida del dato desde su captura en terreno hasta su persistencia y fiscalización. En el borde izquierdo, los titulares interactúan mediante terminales diferenciados: la aplicación móvil recaba el consentimiento explícito de los 258 choferes externos antes de iniciar el flete, mientras que la unidad telemática de cabina almacena la cinemática en un búfer SQLite WAL de 8 GB con autonomía de hasta 288 horas (12 días, RT-10.05). La información ingresa a la región \textbf{Azure Chile Central} bajo terminación mTLS y protección WAF. En el núcleo transaccional, los datos sensibles no se guardan en texto plano: el requisito \textbf{RT-11.10} se satisface mediante Cifrado a Nivel de Campo (FLE) respaldado por \textbf{Azure Key Vault Premium}, asignando una clave simétrica por titular para garantizar el derecho a la supresión y borrado criptográfico (Art. 7) y al bloqueo temporal (Art. 8 ter). Ante contingencias, la arquitectura activa canales diferenciados: replicación cifrada hacia \textbf{Azure East US 2} mediante Cláusulas Contractuales Tipo, y reporte perentorio de ciberincidentes al \textbf{CSIRT Nacional en menos de 3 horas} (Ley N.º 21.663, Art. 9 y D.S. N.º 295/2024).

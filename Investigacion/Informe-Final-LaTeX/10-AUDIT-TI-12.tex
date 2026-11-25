@@ -1,0 +1,86 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[margin=17mm,headheight=13pt,headsep=5mm,footskip=8mm]{geometry}
+\usepackage{fontspec}
+\setmainfont{Cambria}
+\setsansfont{Arial}
+\setmonofont{DejaVu Sans Mono}[Scale=0.8]
+\usepackage[spanish,es-nodecimaldot,es-noshorthands]{babel}
+\spanishplainpercent
+\usepackage{amsmath,amssymb,booktabs,longtable,array,tabularx,calc}
+\usepackage[table]{xcolor}
+\usepackage{graphicx,tikz}
+\usetikzlibrary{arrows.meta,positioning}
+\usepackage{enumitem,fancyhdr,titlesec,microtype,etoolbox}
+\usepackage{hyperref}
+\definecolor{navy}{HTML}{123047}
+\definecolor{teal}{HTML}{087F8C}
+\definecolor{pale}{HTML}{EDF4F6}
+\hypersetup{colorlinks=true,linkcolor=navy,urlcolor=teal,pdftitle={10 - AUDIT - TI-12: Cumplimiento normativo en proyectos TIC},pdfauthor={AudIT}}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\sffamily\footnotesize\color{navy}AUDIT\quad /\quad INVESTIGACIÓN TI-12}
+\fancyhead[R]{\sffamily\footnotesize\color{navy}ICI-5444 · PUCV}
+\fancyfoot[L]{\sffamily\scriptsize Transportes Curimón S.A. · 21 de septiembre de 2026}
+\fancyfoot[R]{\sffamily\footnotesize\thepage}
+\setlength{\parindent}{0pt}\setlength{\parskip}{2pt}
+\renewcommand{\baselinestretch}{0.92}
+\renewcommand{\arraystretch}{1.15}
+\allowdisplaybreaks
+\setlength{\emergencystretch}{3em}
+\setlist{nosep,leftmargin=1.5em,topsep=4pt}
+\setcounter{secnumdepth}{0}
+\titleformat{\section}{\sffamily\Large\bfseries\color{navy}}{}{0pt}{}
+\titleformat{\subsection}{\sffamily\normalsize\bfseries\color{teal}}{}{0pt}{}
+\titleformat{\subsubsection}{\sffamily\normalsize\bfseries\color{navy}}{}{0pt}{}
+\titlespacing*{\section}{0pt}{0pt}{6pt}
+\titlespacing*{\subsection}{0pt}{5pt}{2pt}
+\titlespacing*{\subsubsection}{0pt}{4pt}{2pt}
+\newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\newcounter{none}
+\AtBeginEnvironment{longtable}{\scriptsize\setlength{\tabcolsep}{2.5pt}}
+\newcommand{\nota}[1]{\par\smallskip\noindent\colorbox{pale}{\parbox{\dimexpr\linewidth-2\fboxsep}{\footnotesize #1}}\par\smallskip}
+\newcommand{\pagina}[2]{\section{#1}\input{compacto/#2.tex}}
+\newcommand{\paginanueva}[2]{\clearpage\section{#1}\input{compacto/#2.tex}}
+\begin{document}
+\thispagestyle{empty}
+{\sffamily\color{navy}\large PONTIFICIA UNIVERSIDAD CATÓLICA\par DE VALPARAÍSO\par}
+\vspace{5mm}{\sffamily Escuela de Informática\par ICI-5444 · Taller de Formulación de Proyectos Informáticos}
+\vspace{23mm}
+{\sffamily\color{teal}\bfseries\large EMPRESA 10 / AUDIT / TI-12\par}
+\vspace{6mm}
+{\sffamily\color{navy}\bfseries\fontsize{29}{34}\selectfont Cumplimiento normativo\par en proyectos TIC\par}
+\vspace{7mm}
+{\sffamily\Large Ley 21.719, Ley 21.663 (ANCI)\par y marco internacional\par}
+\vspace{10mm}\textcolor{teal}{\rule{\linewidth}{1.3pt}}
+\vspace{6mm}
+{\large\textbf{Caso 10 · Transportes Curimón S.A.}\par Licitación TFEP-01/2026\par}
+\vspace{10mm}
+\textbf{Integrantes}\par
+Ignacio Cuevas · Alonso · Ignacio Vergara · Carlos Abarza\par
+Martín Cevallos · Marcel · Naomi · Matías Vergara
+\vspace{7mm}\textbf{Fecha de entrega}\par 21 de septiembre de 2026
+\vfill
+\begin{tabularx}{\linewidth}{@{}X@{}}
+\textbf{Contenido del informe}\\\midrule
+Resumen ejecutivo, introducción y aporte propio\\
+Marco legal chileno: protección de datos, ciberseguridad y organismos\\
+Marco internacional, normas técnicas y herramientas de apoyo\\
+Matriz de obligaciones, presupuesto a 56 meses, sensibilidad y riesgo\\
+Arquitectura de cumplimiento, privacidad desde el diseño y transferencias\\
+Integración con el caso, conclusiones y recomendaciones\\
+Referencias, trazabilidad normativa y anexos (memoria económica y declaración de IA)\\
+\end{tabularx}
+\pagina{Resumen ejecutivo e introducción}{02}
+\pagina{1. Marco legal chileno: protección de datos}{03}
+\pagina{1. Marco legal chileno: ciberseguridad y organismos}{04}
+\pagina{2. Marco internacional y normas técnicas}{05}
+\pagina{2. Herramientas de apoyo al cumplimiento}{06}
+\pagina{3. Matriz de obligaciones e impacto económico}{07}
+\pagina{3. Presupuesto y flujo de caja a 56 meses}{08}
+\pagina{3. Sensibilidad y evaluación del riesgo}{09}
+\pagina{4. Arquitectura de cumplimiento}{10}
+\pagina{4. Privacidad y transferencias internacionales}{11}
+\pagina{5. Integración, conclusiones y recomendaciones}{12}
+\pagina{Referencias y trazabilidad normativa}{13}
+\pagina{Anexo A. Memoria económica y control editorial}{14}
+\pagina{Anexo B. Declaración de uso de inteligencia artificial}{15}
+\end{document}
