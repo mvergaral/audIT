@@ -96,7 +96,7 @@
     },
     {
       "sceneId": "s11",
-      "notes": "La matriz ubica los códigos por probabilidad e impacto iniciales. Los puntos suspensivos indican que hay más códigos en la celda. El respaldo contiene el registro completo. R-17 se mantiene alto hasta que se validen los plazos, la capacidad y las ventanas de terceros antes de fijar la línea base en H1.",
+      "notes": "Mostrar la distribución inicial y recorrer los tres ejemplos de mitigación del T-16. R-17 permanece alto hasta que se validen los plazos, la capacidad y las ventanas de terceros antes de fijar la línea base en H1. Las cifras residuales son objetivos de mitigación.",
       "fragments": [
         101,
         103,

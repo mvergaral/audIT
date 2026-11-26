@@ -86,7 +86,7 @@ Fuente: T-14: paquete 11.1 · T-15: compuerta G13, actividad A13 (40 d) y reserv
 
 Tiempo: 50 s. 
 
-La matriz ubica los códigos por probabilidad e impacto iniciales. Los puntos suspensivos indican que hay más códigos en la celda. El respaldo contiene el registro completo. R-17 se mantiene alto hasta que se validen los plazos, la capacidad y las ventanas de terceros antes de fijar la línea base en H1.
+Mostrar la distribución inicial y recorrer los tres ejemplos de mitigación del T-16. R-17 permanece alto hasta que se validen los plazos, la capacidad y las ventanas de terceros antes de fijar la línea base en H1. Las cifras residuales son objetivos de mitigación.
 
 Fuente: T-16: 36 riesgos con probabilidad, impacto, exposición inicial y residual · S8 §8.1: escalas y umbrales
 

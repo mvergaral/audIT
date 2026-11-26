@@ -1358,9 +1358,13 @@ add(
 import re
 _t16 = (FINAL / 'AUDIT-Formulario-T-16.md').read_text(encoding='utf-8')
 RISK = {}
-for m in re.finditer(r'id=(R-\d+), riesgo=\{([^}]*)\}, categoria=\{([^}]*)\}, probabilidad=(\d), impacto=(\d), exposicion=(\d+)', _t16):
-    rid, desc, cat, p, i, e = m.groups()
-    RISK[rid] = dict(desc=desc, cat=cat, p=int(p), i=int(i), e=int(e))
+for m in re.finditer(
+    r'id=(R-\d+), riesgo=\{([^}]*)\}, categoria=\{([^}]*)\}, probabilidad=(\d), impacto=(\d), exposicion=(\d+)'
+    r', mitigacion=.*?, responsable=\{([^}]*)\}',
+    _t16,
+):
+    rid, desc, cat, p, i, e, responsable = m.groups()
+    RISK[rid] = dict(desc=desc, cat=cat, p=int(p), i=int(i), e=int(e), responsable=responsable)
 for row in _t16.splitlines():
     cells = [c.strip() for c in row.strip().strip('|').split('|')]
     if len(cells) == 6 and cells[0] in RISK:
@@ -1380,7 +1384,6 @@ def level(e):
     return 'Alta' if e >= 12 else 'Media' if e >= 6 else 'Baja'
 
 
-LEVEL_FILL = {'Alta': '#f4d6d6', 'Media': '#fbe9d2', 'Baja': '#e2f0e8'}
 LEVEL_INK = {'Alta': CORAL, 'Media': '#8a5a12', 'Baja': FLOTA}
 
 
@@ -1402,65 +1405,72 @@ add('Cómo lo ejecutamos', 'ACTO 2 DE 3', separador('02', 'Cómo lo ejecutamos',
 add('Cómo lo protegemos', 'ACTO 3 DE 3', separador('03', 'Cómo lo protegemos', 'Plan de riesgos del S8 y del T-16', ['36 riesgos', 'Los que más pesan', 'R-28 y AMFE', 'Reservas']),
     'S8 · T-16', 'Separador. Cambio de voz al expositor de riesgos.', 3, 1, kind='section')
 
-# Mapa de calor P×I con los 36 riesgos y distribución antes/después.
-GX, GY, CS = 90, 10, 104
-v = ''
-grid = ''
-for p in range(1, 6):
-    for i in range(1, 6):
-        lv = level(p * i)
-        x, y = GX + (i - 1) * CS, GY + (5 - p) * CS
-        grid += f'<rect x="{x}" y="{y}" width="{CS - 4}" height="{CS - 4}" rx="8" fill="{LEVEL_FILL[lv]}"/>'
-        grid += text(x + CS - 12, y + 22, str(p * i), 14, LEVEL_INK[lv], 700, 'end')
-for k in range(1, 6):
-    grid += text(GX - 18, GY + (5 - k) * CS + 58, str(k), 20, WHITE, 700, 'end')
-    grid += text(GX + (k - 1) * CS + 50, GY + 5 * CS + 28, str(k), 20, WHITE, 700, 'middle')
-grid += text(GX + 250, GY + 5 * CS + 62, 'IMPACTO', 16, MUTED, 700, 'middle', extra='letter-spacing="2"')
-grid += text(26, GY + 260, 'PROBABILIDAD', 16, MUTED, 700, 'middle', extra='letter-spacing="2" transform="rotate(-90 26 270)"')
-v += group(grid, 0)
-cells = {}
-for rid, r in RISK.items():
-    cells.setdefault((r['p'], r['i']), []).append(rid)
-chips = ''
-for (p, i), ids in cells.items():
-    x0, y0 = GX + (i - 1) * CS + 6, GY + (5 - p) * CS + 30
-    visible = ids if len(ids) <= 8 else ids[:7] + ['…']
-    for k, rid in enumerate(visible):
-        cx = x0 + (k % 2) * 46
-        cy = y0 + 10 + (k // 2) * 17
-        chips += item(text(cx, cy, rid, 13, LEVEL_INK[level(p * i)], 700))
-v += group(chips, 1)
-before = {lv: sum(level(r['e0']) == lv for r in RISK.values()) for lv in ('Alta', 'Media', 'Baja')}
-dist = (
-    text(720, 40, 'Exposición inicial de los 36 riesgos', 30, WHITE, 700)
-    + text(720, 76, 'Escala del S8: baja 1–5 · media 6–11 · alta 12–25', 19, MUTED)
-)
-for k, lv in enumerate(('Alta', 'Media', 'Baja')):
-    y = 140 + k * 85
-    width = before[lv] * 30
-    dist += (
-        text(720, y + 32, lv, 24, LEVEL_INK[lv], 700)
-        + rect_bar(860, y + 6, width, 34, LEVEL_INK[lv], 7, grow_x=True)
-        + text(872 + width, y + 32, str(before[lv]), 23, WHITE, 700)
+# Distribución de la exposición inicial y mitigación de tres riesgos del T-16.
+total_riesgos = len(RISK)
+distribucion = [
+    (rotulo, sum(level(r['e0']) == nivel for r in RISK.values()), LEVEL_INK[nivel])
+    for nivel, rotulo in (('Alta', 'Altos'), ('Media', 'Medios'), ('Baja', 'Bajo'))
+]
+resumen = text(0, 25, 'EXPOSICIÓN INICIAL · Escala S8: baja 1–5 · media 6–11 · alta 12–25', 22, MUTED, 700)
+for k, (rotulo, cantidad, color) in enumerate([('Evaluados', total_riesgos, WHITE), *distribucion]):
+    x = k * 438
+    porcentaje = f'{round(100 * cantidad / total_riesgos, 1):g}'.replace('.', ',')
+    resumen += (
+        card(x, 43, 414, 135, rx=12)
+        + text(x + 20, 77, rotulo, 23, color, 700)
+        + text(x + 20, 145, cantidad, 58, color, 700)
+        + text(x + 250, 145, f'{porcentaje} %', 24, color, 700)
     )
-dist += text(720, 420, '… indica que la celda contiene más códigos. Registro completo en el respaldo.', 20, MUTED)
-v += group(dist, 2)
-cats = {}
-for r in RISK.values():
-    cats[r['cat']] = cats.get(r['cat'], 0) + 1
+v = group(resumen, 0)
+
+riesgos_prioritarios = [
+    ('R-17', 'Plazo contractual', 'Hitos y pagos sin margen.', (
+        'Validar capacidad, ventanas y', 'estimaciones antes de H1.', 'Alertar con 1 día hábil de atraso.',
+    )),
+    ('R-11', 'Adhesión', 'Metas de 104 y 134 transportistas.', (
+        'Campaña desde el mes 1.', 'Anexo de adhesión y expediente', 'verificable como incentivo.',
+    )),
+    ('R-18', 'Marcha blanca', 'Etapa 1 en temporada de fruta.', (
+        'Analistas en cinco terminales,', 'medición diaria y reversión', 'activa.',
+    )),
+]
+barra = ''
+acumulado = 0
+for _, cantidad, color in distribucion:
+    inicio = round(1728 * acumulado / total_riesgos, 2)
+    acumulado += cantidad
+    fin = round(1728 * acumulado / total_riesgos, 2)
+    barra += rect_bar(inicio, 195, round(fin - inicio, 2), 18, color, rx=0)
+exposiciones = {RISK[rid]['e0'] for rid, *_ in riesgos_prioritarios}
+subtitulo = 'Tres riesgos prioritarios'
+if len(exposiciones) == 1:
+    subtitulo += f' · exposición inicial {next(iter(exposiciones))} (empatados)'
+v += group(barra + text(0, 257, subtitulo, 28, WHITE, 700), 1)
+
+for k, (rid, titulo, descripcion, mitigacion) in enumerate(riesgos_prioritarios):
+    x = k * 584
+    riesgo = RISK[rid]
+    v += group(
+        card(x, 280, 560, 285, rx=12)
+        + text(x + 20, 320, f'{rid} · {titulo}', 28, CORAL, 700)
+        + text(x + 20, 355, descripcion, 23)
+        + text(x + 20, 393, 'MITIGACIÓN', 19, C, 700)
+        + ''.join(text(x + 20, 425 + j * 29, linea, 23) for j, linea in enumerate(mitigacion))
+        + text(x + 20, 545, riesgo['responsable'], 20, MUTED)
+        + text(x + 420, 545, f"{riesgo['e0']} → {riesgo['e1']}", 24, C, 700),
+        2,
+    )
 v += group(
-    card(720, 460, 1008, 170, CARD_BG, STROKE, 14, CORAL)
-    + text(744, 504, 'R-17 sigue alto hasta validar el cronograma en H1.', 21, WHITE, 700)
-    + ''.join(text(744 + (k % 3) * 330, 548 + (k // 3) * 34, f'{n}  {c}', 18, MUTED, 600) for k, (c, n) in enumerate(sorted(cats.items(), key=lambda kv: -kv[1])))
-    + text(744, 616, 'El objetivo de R-17 es bajar de 12 a 6 tras la mitigación.', 17, MUTED),
+    card(0, 582, 1728, 64, '#fbeaea', 'none', 12)
+    + text(20, 622, 'R-17 permanece alto hasta validar H1. Las cifras residuales son objetivos de mitigación.', 25, CORAL, 700),
     3,
 )
 add(
     '36 riesgos evaluados y un riesgo de plazo abierto.',
-    'RIESGOS · MAPA P×I / S8 §8.1–8.2 · T-16',
+    'RIESGOS · EXPOSICIÓN Y MITIGACIÓN / S8 · T-16',
     v,
     'T-16: 36 riesgos con probabilidad, impacto, exposición inicial y residual · S8 §8.1: escalas y umbrales',
-    'La matriz ubica los códigos por probabilidad e impacto iniciales. Los puntos suspensivos indican que hay más códigos en la celda. El respaldo contiene el registro completo. R-17 se mantiene alto hasta que se validen los plazos, la capacidad y las ventanas de terceros antes de fijar la línea base en H1.',
+    'Mostrar la distribución inicial y recorrer los tres ejemplos de mitigación del T-16. R-17 permanece alto hasta que se validen los plazos, la capacidad y las ventanas de terceros antes de fijar la línea base en H1. Las cifras residuales son objetivos de mitigación.',
     50,
     4,
 )
