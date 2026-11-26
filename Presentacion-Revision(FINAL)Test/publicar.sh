@@ -6,25 +6,31 @@ set -euo pipefail
 
 AQUI="$(cd "$(dirname "$0")" && pwd)"
 if [ -e "$AQUI/../.git" ]; then REPO="$AQUI/.."; else REPO="$AQUI/../audIT"; fi
-MENSAJE="${1:-Actualiza la presentación de la Revisión 2}"
-TMP="$(mktemp -d)"
-trap 'git -C "$REPO" worktree remove --force "$TMP" >/dev/null 2>&1 || true; rm -rf "$TMP"' EXIT
+MENSAJE="${1:-Actualiza la presentación de la propuesta final}"
 
 python3 "$AQUI/construir.py"
-git -C "$REPO" fetch -q origin gh-pages
-git -C "$REPO" worktree add -q --force "$TMP" gh-pages
-git -C "$TMP" reset -q --hard origin/gh-pages
+git -C "$REPO" fetch -q origin refs/heads/gh-pages:refs/remotes/origin/gh-pages
 
-find "$TMP" -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
-cp "$AQUI/index.html" "$AQUI/harness.js" "$TMP/"
-cp -r "$AQUI/composition" "$AQUI/assets" "$TMP/"
-touch "$TMP/.nojekyll"
+TMP="$(mktemp -d)"
+PAGINAS="$TMP/gh-pages"
+limpiar() {
+  git -C "$REPO" worktree remove --force -- "$PAGINAS" >/dev/null 2>&1 || true
+  rmdir -- "$TMP" 2>/dev/null || true
+}
+trap limpiar EXIT
+git -C "$REPO" worktree add -q --detach "$PAGINAS" refs/remotes/origin/gh-pages
 
-git -C "$TMP" add -A
-if git -C "$TMP" diff --cached --quiet; then
+# Renueva los recursos de la portada y conserva las demás rutas de Pages.
+git -C "$PAGINAS" rm -rq --ignore-unmatch -- assets composition
+cp -- "$AQUI/index.html" "$AQUI/harness.js" "$PAGINAS/"
+cp -R -- "$AQUI/composition" "$AQUI/assets" "$PAGINAS/"
+touch "$PAGINAS/.nojekyll"
+
+git -C "$PAGINAS" add -A -- .nojekyll assets composition harness.js index.html
+if git -C "$PAGINAS" diff --cached --quiet; then
   echo "Sin cambios que publicar."
   exit 0
 fi
-git -C "$TMP" commit -q -m "$MENSAJE"
-git -C "$TMP" push -q origin HEAD:gh-pages
-echo "Publicado. En uno o dos minutos se verá en https://mvergaral.github.io/audIT/"
+git -C "$PAGINAS" commit -q -m "$MENSAJE"
+git -C "$PAGINAS" push -q origin HEAD:refs/heads/gh-pages
+echo "Cambios enviados a GitHub Pages. La publicación se verá en https://mvergaral.github.io/audIT/"
