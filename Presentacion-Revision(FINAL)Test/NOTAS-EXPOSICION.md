@@ -46,7 +46,7 @@ Fuente: S4 §4.1.1: productos y soporte · §4.1.3: las ocho capas (FEP02 2.1, R
 
 Tiempo: 40 s. 
 
-Seguir una petición real por la pila. [Solicitud.] La torre pide asignar conductor, tracto, semirremolque y carga. [Invariantes.] Planificación evalúa en paralelo tres condiciones y pregunta a quien es dueño de cada dato: Personas, Flota y el documento del contable. Una causa legal bloquea siempre, y el rechazo explica por qué. [Presupuesto.] El Caso da 30 segundos: dos para identidad, ocho para las tres evaluaciones en paralelo, ocho para reservar y confirmar, cuatro para veredicto y auditoría, tres para responder, y cinco de margen. [Cierre.] Ojo: es un reparto de diseño, todavía sin medición.
+[Solicitud.] La torre pide asignar conductor, tracto, semirremolque y carga. [Validaciones.] Planificación consulta en paralelo a Personas, Flota y al sistema contable. Serializa la reserva y confirma solo si las evaluaciones siguen vigentes. Una causa legal bloquea siempre y el rechazo explica por qué. [Presupuesto.] Los 30 segundos incluyen 5 de margen. Es un presupuesto de diseño pendiente de medición de extremo a extremo.
 
 Fuente: S4 §4.1.9 y Tabla 4.3: presupuesto de diseño de la asignación · Caso RT-09.01, p. 32 · S3: RN-01 a RN-04
 
@@ -70,7 +70,7 @@ Fuente: S7 §7.1, Figura 7.1 y Tabla 7.2 · T-14: diccionario de 54 paquetes · 
 
 Tiempo: 55 s. 
 
-Recorrer la Gantt hasta el día hábil 420. Las filas resumen actividades y revisiones de la malla final. Las líneas muestran precedencias visibles y el punteado indica holgura total; cuando una fila agrupa tareas indica la menor holgura. El rojo señala ventanas sin holgura. Los rombos se ubican en la fecha del acta, incluida la revisión. H4, H7 y H12 llegan al límite contractual.
+[Panorama.] Presentar la carta de 420 días hábiles, con barras rojas para las ventanas sin holgura, líneas de precedencia y rombos en las fechas de acta. [H4.] Sprints y revisión del candidato E1 hasta el día 200 (M10). [H7.] Marcha blanca, corte y revisión del paso a producción E1 hasta el día 320 (M16). [H12.] Marcha blanca E2 del día 360 al 400, corte hasta el 410 y revisión hasta el acta del día 420 (M21). Según S7, las tres actas llegan al límite contractual.
 
 Fuente: T-15: malla CPM final de 122 nodos · S7 §7.3.1 · E-25: actas H1–H12
 

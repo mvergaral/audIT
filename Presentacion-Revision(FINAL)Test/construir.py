@@ -1064,72 +1064,61 @@ add(
 
 # A2b · Verificación bloqueante del despacho: presupuesto de 30 s
 v = group(
-    card(0, 0, 330, 200, '#ffffff', STROKE, 14, NUBE)
-    + icon('tower', 24, 18, 0.24, NUBE)
-    + text(70, 46, 'Solicitud', 22, WHITE, 700)
-    + text(24, 84, 'Torre o terminal pide', 18, MUTED)
-    + text(24, 110, 'conductor + tracto +', 18, MUTED)
-    + text(24, 136, 'semirremolque + carga', 18, MUTED)
-    + chip(24, 152, 'Planificación y tráfico', NUBE, 16, 32),
+    card(0, 90, 330, 210, '#ffffff', STROKE, 14, NUBE)
+    + icon('tower', 24, 113, 0.28, NUBE)
+    + text(80, 148, 'Solicitud', 32, WHITE, 700)
+    + text(24, 196, 'Torre o terminal solicita', 24, MUTED)
+    + text(24, 231, 'conductor, tracto,', 24, WHITE)
+    + text(24, 266, 'semirremolque y carga', 24, WHITE),
     0,
 )
 inv = [
-    ('people', 'Persona y jornada', 'Identidad, descanso, Art. 25 bis, licencia · RN-01 a RN-04', 'Personas y cumplimiento'),
-    ('truck', 'Equipo', 'Vigencias del tracto y del semirremolque, compatibilidad', 'Flota y activos'),
-    ('doc', 'Carga y documento', 'Documento conforme; DS 298 en carga peligrosa', 'Planificación + contable'),
+    ('people', 'Persona y jornada', 'Identidad, descanso y licencia', 'Personas'),
+    ('truck', 'Equipo', 'Vigencias y compatibilidad', 'Flota'),
+    ('doc', 'Carga y documento', 'Conformidad documental y carga peligrosa', 'Planificación + contable'),
 ]
 invs = ''
 for k, (ic, t1, t2, owner) in enumerate(inv):
-    y = k * 70
+    y = 30 + k * 115
     invs += item(
-        arrow(336, 100, 410, y + 34, NUBE, 2.5)
-        + f'<rect x="414" y="{y}" width="760" height="62" rx="10" fill="#ffffff" stroke="{NUBE}" stroke-width="1.5"/>'
-        + icon(ic, 426, y + 13, 0.23, NUBE)
-        + text(474, y + 28, t1, 20, NUBE, 700) + text(474, y + 52, t2, 16.5, WHITE)
-        + text(1158, y + 28, owner, 15, MUTED, 600, 'end')
-        + arrow(1176, y + 31, 1250, 100, NUBE, 2.5)
+        arrow(336, 195, 410, y + 50, NUBE, 3)
+        + card(414, y, 760, 100, '#ffffff', STROKE, 12, NUBE)
+        + icon(ic, 434, y + 28, 0.28, NUBE)
+        + text(490, y + 40, t1, 29, NUBE, 700) + text(490, y + 76, t2, 24, WHITE)
+        + text(1150, y + 40, owner, 22, MUTED, 600, 'end')
+        + arrow(1178, y + 50, 1250, 195, NUBE, 3)
     )
 v += group(invs, 1)
 v += group(
-    card(1254, 0, 474, 200, '#ffffff', STROKE, 14, CORAL)
-    + icon('shield', 1276, 16, 0.25, CORAL)
-    + text(1322, 46, 'Veredicto', 22, WHITE, 700)
-    + text(1278, 84, 'Una causa legal bloquea siempre.', 18, CORAL, 700)
-    + text(1278, 112, 'El rechazo informa causa, umbral,', 17, WHITE)
-    + text(1278, 136, 'dato evaluado y versión de la regla.', 17, WHITE)
-    + text(1278, 172, 'Petición repetida: mismo resultado', 16, MUTED),
+    card(1254, 90, 474, 210, '#ffffff', STROKE, 14, CORAL)
+    + icon('shield', 1278, 113, 0.28, CORAL)
+    + text(1334, 148, 'Veredicto', 32, WHITE, 700)
+    + text(1278, 196, 'Autoriza o bloquea la salida', 27, CORAL, 700)
+    + text(1278, 231, 'Una causa legal bloquea siempre.', 24, WHITE)
+    + text(1278, 266, 'El rechazo explica la causa.', 24, WHITE),
     1,
 )
-BUD = [('Identidad e idempotencia', 2, '#7fb3bf'), ('Jornada, vigencias y aptitud', 8, NUBE), ('Reserva y confirmación', 8, SITIO),
+BUD = [('Identidad', 2, '#7fb3bf'), ('Validación en paralelo', 8, NUBE), ('Reserva y confirmación', 8, SITIO),
        ('Veredicto y auditoría', 4, '#7a8fbf'), ('Respuesta', 3, MUTED), ('Margen', 5, '#d9e3e8')]
 bx, bw = 0, 1728 / 30
-bars = text(0, 268, 'PRESUPUESTO DE EXTREMO A EXTREMO · RT-09.01 · TABLA 4.3 DEL S4', 16, NUBE, 700, extra='letter-spacing="1.5"')
+bars = text(0, 448, 'Presupuesto de diseño · Extremo a extremo', 28, NUBE, 700)
 for lab, s, colr in BUD:
     w = s * bw
     bars += item(
-        rect_bar(round(bx, 1), 288, round(w - 4, 1), 64, colr, 8, grow_x=True)
-        + text(round(bx + w / 2 - 2, 1), 328, f'{s} s', 22, '#ffffff' if colr not in ('#d9e3e8',) else MUTED, 700, 'middle')
-        + text(round(bx + 4, 1), 384 + (BUD.index((lab, s, colr)) % 2) * 26, lab, 16, WHITE, 600)
+        rect_bar(round(bx, 1), 472, round(w - 4, 1), 88, colr, 8, grow_x=True)
+        + text(round(bx + w / 2 - 2, 1), 528, f'{s} s', 32, WHITE if colr in ('#7fb3bf', '#d9e3e8') else '#ffffff', 700, 'middle')
+        + text(round(bx + w / 2 - 2, 1), 602, lab, 23, WHITE, 600, 'middle')
     )
     bx += w
-v += group(bars + text(1728, 268, '25 + 5 = 30 s', 22, CORAL, 700, 'end'), 2)
-v += group(
-    card(0, 430, 1728, 200, CARD_BG, STROKE, 14, NUBE)
-    + text(28, 476, 'Por qué no basta con leer y después confirmar', 22, WHITE, 700)
-    + text(28, 512, 'Planificación registra el intento, serializa la reserva y confirma sólo si las evaluaciones', 20, WHITE)
-    + text(28, 540, 'de Personas y de Flota siguen vigentes. Un cambio incompatible invalida el intento.', 20, WHITE)
-    + text(28, 584, 'Reparto de diseño, aún sin medición: los 660 ms del caso favorable no acreditan el extremo a extremo.', 18, MUTED)
-    + obs(1370, 452, 'Obs. 57 · secuencia citada'),
-    3,
-)
+v += group(bars + text(1728, 448, '25 s + 5 s de margen = 30 s', 30, CORAL, 700, 'end'), 2)
 add(
     'Un viaje se autoriza o se bloquea en 30 segundos.',
     'ARQUITECTURA LÓGICA · VERIFICACIÓN BLOQUEANTE / S4 §4.1.9 · Caso RT-09.01',
     v,
     'S4 §4.1.9 y Tabla 4.3: presupuesto de diseño de la asignación · Caso RT-09.01, p. 32 · S3: RN-01 a RN-04',
-    'Seguir una petición real por la pila. [Solicitud.] La torre pide asignar conductor, tracto, semirremolque y carga. [Invariantes.] Planificación evalúa en paralelo tres condiciones y pregunta a quien es dueño de cada dato: Personas, Flota y el documento del contable. Una causa legal bloquea siempre, y el rechazo explica por qué. [Presupuesto.] El Caso da 30 segundos: dos para identidad, ocho para las tres evaluaciones en paralelo, ocho para reservar y confirmar, cuatro para veredicto y auditoría, tres para responder, y cinco de margen. [Cierre.] Ojo: es un reparto de diseño, todavía sin medición.',
+    '[Solicitud.] La torre pide asignar conductor, tracto, semirremolque y carga. [Validaciones.] Planificación consulta en paralelo a Personas, Flota y al sistema contable. Serializa la reserva y confirma solo si las evaluaciones siguen vigentes. Una causa legal bloquea siempre y el rechazo explica por qué. [Presupuesto.] Los 30 segundos incluyen 5 de margen. Es un presupuesto de diseño pendiente de medición de extremo a extremo.',
     40,
-    4,
+    3,
 )
 
 # A3 · Física: nodos con hardware exacto y enlaces
@@ -1990,7 +1979,6 @@ gx = lambda d: round(GX0 + d * (GX1 - GX0) / 420, 1)
 gy = lambda aid: round(GY0 + ACTS[aid]['row'] * RH, 1)
 CRIT = CORAL
 DASH = ' stroke-dasharray="6 5"'
-DIM2 = ' data-dim-at="2"'
 grid = ''
 for m in range(0, 22):
     x = gx(m * 20)
@@ -2008,12 +1996,11 @@ for aid, a in ACTS.items():
     w = max(gx(a['ef']) - gx(a['es']), 4)
     fill = '#f6dede' if reserve else colr
     stroke = f' stroke="{CRIT}" stroke-width="1.5" stroke-dasharray="4 3"' if reserve else ''
-    dim = '' if a['crit'] else ' data-dim-at="2"'
     if a['dur'] == 0:
         x = gx(a['es'])
-        bars += f'<g data-item="1"{dim}><rect x="{x - 7}" y="{y + 4}" width="14" height="14" transform="rotate(45 {x} {y + 11})" fill="{C}" stroke="#ffffff" stroke-width="2"/></g>'
+        bars += item(f'<rect x="{x - 7}" y="{y + 4}" width="14" height="14" transform="rotate(45 {x} {y + 11})" fill="{C}" stroke="#ffffff" stroke-width="2"/>')
         continue
-    bars += f'<g data-item="1"{dim}><rect x="{gx(a["es"])}" y="{y + 4}" width="{w}" height="14" rx="4" fill="{fill}"{stroke}/></g>'
+    bars += item(f'<rect x="{gx(a["es"])}" y="{y + 4}" width="{w}" height="14" rx="4" fill="{fill}"{stroke}/>')
 links = ''
 for parent, aid, origin, start in sorted(links_in):
     pa, a = ACTS[parent], ACTS[aid]
@@ -2024,7 +2011,7 @@ for parent, aid, origin, start in sorted(links_in):
     d = f'M{x1} {y1} V{y2 - 4}' + (f' H{x2}' if abs(x2 - x1) > 2 else '')
     length = int(abs(y2 - y1) + abs(x2 - x1)) + 8
     links += (
-        f'<g{"" if both else DIM2}><path d="{d}" fill="none" stroke="{colr}" stroke-width="{2.2 if both else 1.3}" data-draw="{length}"/>'
+        f'<g><path d="{d}" fill="none" stroke="{colr}" stroke-width="{2.2 if both else 1.3}" data-draw="{length}"/>'
         f'<circle cx="{x2}" cy="{y2 - 4}" r="2.6" fill="{colr}"/></g>'
     )
 floats = ''
@@ -2054,17 +2041,55 @@ legend = (
     + f'<rect x="950" y="{legend_y - 13}" width="12" height="12" transform="rotate(45 956 {legend_y - 7})" fill="{AMBER}"/>' + text(972, legend_y, 'Hito E-25', 17, WHITE)
     + text(1716, legend_y, 'Días hábiles 0 a 420 · 20 días = 1 mes', 17, MUTED, 400, 'end')
 )
-v = group(grid + labels + bars, 0)
-v += group(links, 1)
-v += group(floats + legend, 2)
-v += group(hitos, 3)
+v = group(grid + labels + bars + links + floats + hitos + legend, 0)
+for step, (milestone, title, first_row, activities) in enumerate((
+    ('H4', 'Candidato E1', 'A09', (
+        ('Ocho sprints de E1', 'A09-1', 'A09-8'),
+        ('Revisión del candidato', 'R-H4', 'R-H4'),
+    )),
+    ('H7', 'Paso a producción E1', 'A15', (
+        ('Marcha blanca E1', 'A15', 'A15'),
+        ('Preparación del corte E1', 'A19', 'A19'),
+        ('Revisión del paso a producción', 'R-H7', 'R-H7'),
+    )),
+    ('H12', 'Aceptación final', 'A24', (
+        ('Marcha blanca E2', 'A24', 'A24'),
+        ('Preparación del corte E2', 'A25', 'A25'),
+        ('Revisión de aceptación final', 'R-H12', 'R-H12'),
+    )),
+), start=1):
+    last_row = GANTT_HITOS[milestone]
+    date = red[milestone]['es']
+    left, right = gx(ACTS[first_row]['es']) - 8, min(1728, gx(date) + 42)
+    top, bottom = gy(first_row) - 3, gy(last_row) + RH + 1
+    panel_height = 34 + 76 * len(activities)
+    panel_y = min(592 - panel_height, max(68, (top + bottom - panel_height) / 2))
+    spotlight = (
+        f'<path d="M0 40 H1728 V600 H0 Z'
+        f' M{left} {top} H{right} V{bottom} H{left} Z"'
+        ' fill="#ffffff" fill-opacity=".82" fill-rule="evenodd"/>'
+        f'<rect x="{left}" y="{top}" width="{right - left}" height="{bottom - top}"'
+        f' rx="4" fill="none" stroke="{AMBER}" stroke-width="3"/>'
+        + text(0, 24, f'{milestone} · {title}', 26, WHITE, 700)
+        + text(0, 50, f'Día {date} · sin margen contractual', 19, AMBER, 700)
+        + card(0, panel_y, 540, panel_height, '#ffffff', STROKE, 12, AMBER)
+    )
+    for index, (label, first, last) in enumerate(activities):
+        y = panel_y + 42 + 76 * index
+        start, finish = red[first]['es'], red[last]['ef']
+        spotlight += (
+            text(26, y, label, 30, WHITE, 700)
+            + text(26, y + 28, f'Días {start}–{finish}', 23, MUTED)
+        )
+    v += group(spotlight, step, extra=f'data-focus-until="{step + 1}"')
+
 add(
     'La red de actividades define la ruta crítica.',
     'CARTA GANTT Y DEPENDENCIAS / S7 §7.3.1 · T-15 · FEP01 E-25',
     v,
     'T-15: malla CPM final de 122 nodos · S7 §7.3.1 · E-25: actas H1–H12',
-    'Recorrer la Gantt hasta el día hábil 420. Las filas resumen actividades y revisiones de la malla final. Las líneas muestran precedencias visibles y el punteado indica holgura total; cuando una fila agrupa tareas indica la menor holgura. El rojo señala ventanas sin holgura. Los rombos se ubican en la fecha del acta, incluida la revisión. H4, H7 y H12 llegan al límite contractual.',
-    90,
+    '[Panorama.] Presentar la carta de 420 días hábiles, con barras rojas para las ventanas sin holgura, líneas de precedencia y rombos en las fechas de acta. [H4.] Sprints y revisión del candidato E1 hasta el día 200 (M10). [H7.] Marcha blanca, corte y revisión del paso a producción E1 hasta el día 320 (M16). [H12.] Marcha blanca E2 del día 360 al 400, corte hasta el 410 y revisión hasta el acta del día 420 (M21). Según S7, las tres actas llegan al límite contractual.',
+    55,
     4,
 )
 
@@ -3098,7 +3123,11 @@ scenes.forEach((scene,i)=>{
   scene.querySelectorAll('[data-step]').forEach(el=>{
     const at=Number(el.dataset.step)*2;
     const items=el.querySelectorAll('[data-item]');
-    if(items.length){
+    if(el.dataset.focusUntil){
+      const end=Number(el.dataset.focusUntil)*2;
+      tl.fromTo(el,{opacity:0},{opacity:1,duration:.35,ease:'power1.out'},at);
+      tl.to(el,{opacity:0,duration:.3,ease:'power1.in'},end);
+    }else if(items.length){
       tl.fromTo(el,{opacity:0},{opacity:1,duration:.01},at);
       tl.fromTo(items,{opacity:0,y:18},{opacity:1,y:0,duration:.55,ease:'power2.out',stagger:Math.min(.07,.9/items.length)},at);
     }else{
