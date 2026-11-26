@@ -1,6 +1,10 @@
-# Presentación Revisión 2
+# Propuesta Final
 
-Abrir `index.html` en Chrome o Edge. Los activos son locales; no necesita conexión. Si el navegador restringe la carga de archivos locales, ejecutar `ABRIR.cmd` y abrir http://127.0.0.1:4318/ . La consola del servidor debe permanecer abierta durante la exposición.
+Abre `index.html` en Chrome o Edge. La presentación usa archivos locales y funciona sin conexión. Si el navegador restringe su carga, ejecuta `python3 visualizar.py` y abre http://127.0.0.1:4318/. Mantén el servidor abierto durante la exposición.
+
+## Compilación
+
+Desde esta carpeta del repositorio audIT, ejecuta `python3 construir.py`. Solo necesitas Python 3. El generador lee las exportaciones de T-14, T-15, T-16 y S8 en `recursos/Formato-Oferta-audIT/salida/informe2/` y las partidas económicas del repositorio.
 
 ## Manejo (estas instrucciones no aparecen en pantalla)
 
@@ -26,9 +30,7 @@ No hay botones, menús, instrucciones ni barras visibles en la superficie de exp
 - 30 láminas de respaldo: las de la Revisión 2 (riesgos, AMFE, árbol de fallas, implantación, hitos, reversión, calidad, correcciones, innovaciones, límites y diccionario EDT) más las que salieron del recorrido principal (hardware por nodo, datos, enlace cortado, paquetes de la EDT, qué pasa si, transición, siete riesgos altos y R-28).
 - El respaldo no se muestra en el recorrido: se abre con B si una pregunta lo requiere; dentro, un número seguido de Enter salta a esa lámina. Escape vuelve.
 - El puntero del mouse está visible y se oculta tras 4 segundos sin moverlo.
-- `GUION-5-EXPOSITORES.md`: texto oral y relevos para cinco personas. `NOTAS-EXPOSICION.md`: notas por lámina.
-- `construir.py` lee los formularios vigentes del repositorio (T-14, T-15, T-16, S4, S5, S7, S8, T-19 en `recursos/Formato-Oferta-audIT/salida/informe2/`) y regenera todo con `python3 construir.py`. Requiere Python 3; no usa paquetes externos.
-- La versión original del compañero está en `original/`, como referencia.
+- `NOTAS-EXPOSICION.md` contiene las notas del recorrido actual por lámina. `GUION-5-EXPOSITORES.md` conserva el texto oral y los relevos de la versión anterior.
 
 Los cronometrajes son una pauta y requieren ensayo. Las pruebas del T-17 están diseñadas, no ejecutadas, y las exposiciones residuales son estimaciones.
 

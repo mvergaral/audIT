@@ -5,6 +5,7 @@ import csv
 import html
 import json
 import math
+import shutil
 import textwrap
 
 BASE = Path(__file__).resolve().parent
@@ -12,6 +13,7 @@ BASE = Path(__file__).resolve().parent
 AUDIT = next(p for p in (BASE.parent, BASE.parent / 'audIT') if (p / 'recursos/Formato-Oferta-audIT').is_dir())
 INF2 = AUDIT / 'recursos/Formato-Oferta-audIT/salida/informe2'
 OUT = BASE / 'composition'
+TITULO = 'Propuesta Final'
 C = '#006b7d'
 WHITE = '#102d3e'
 MUTED = '#48606e'
@@ -222,7 +224,7 @@ def add(title, eyebrow, content, source, notes, seconds=45, steps=3, backup=Fals
 # Portada formal, separada de la apertura operacional.
 v = group(
     badge(20, 52, 'TRANSPORTES CURIMÓN · TFEP-01/2026', C, '#e7f3f6', 520, 44, 22)
-    + text(20, 184, 'PROPUESTA FINAL', 94, WHITE, 700)
+    + text(20, 184, TITULO.upper(), 94, WHITE, 700)
     + text(20, 266, 'Oferta técnico-económica', 53, C, 600)
     + text(20, 322, 'Solución · ejecución · riesgos · costos y evaluación financiera', 29, MUTED)
     + line(20, 368, 1660, 368, STROKE, 3, draw=True)
@@ -232,8 +234,8 @@ v = group(
     0,
 )
 add(
-    'Propuesta final · Caso Transporte de Carga',
-    'PRESENTACIÓN TÉCNICO-COMERCIAL / PROPUESTA FINAL',
+    TITULO,
+    f'PRESENTACIÓN TÉCNICO-COMERCIAL / {TITULO.upper()}',
     v,
     'Transportes Curimón · TFEP-01/2026 · audIT Soluciones Tecnológicas SpA',
     'Presentar el recorrido de la propuesta: qué construimos, cómo lo ejecutamos, cómo lo protegemos y por qué conviene económicamente. La exposición dura 15 minutos; el resto es preguntas y evaluación.',
@@ -2893,7 +2895,7 @@ if PENDIENTES:
 # Tiempos de la versión con bloque EDT ampliado (tres láminas): se recortan láminas de apoyo para volver a 15:00.
 # Recorrido principal en tres actos (título, segundos). Lo que no está aquí va al respaldo, salvo DESCARTE.
 RECORRIDO = [
-    ('Propuesta final · Caso Transporte de Carga', 10),
+    (TITULO, 10),
     ('Una salida segura exige información confiable.', 45),
     ('Resumen de la oferta: qué recibe Transportes Curimón.', 50),
     ('La solución es híbrida: nube, sitio y flota.', 50),
@@ -2913,7 +2915,8 @@ RECORRIDO = [
     ('Tres compromisos que se pueden verificar.', 50),
     ('Preguntas y discusión', 10),
 ]
-assert sum(s for _, s in RECORRIDO) == 845, sum(s for _, s in RECORRIDO)  # 14:05 de exposición, 0:55 de margen sobre 15:00
+DURACION = sum(s for _, s in RECORRIDO)
+assert DURACION == 845, DURACION  # 14:05 de exposición, 0:55 de margen sobre 15:00
 RESPALDO_ORDEN = [
     'Cada nodo declara su hardware y su enlace.',
     'Cada dato vive en el motor que su uso exige.',
@@ -2965,7 +2968,6 @@ rest.sort(key=lambda s: RESPALDO_ORDEN.index(s['title']) if s['title'] in RESPAL
 SLIDES[:] = main + rest
 for n, s in enumerate(SLIDES, 1):
     s['id'] = f's{n:02}'
-import base64
 FONT_FACES = ''.join(
     "@font-face{font-family:'AuditSans';font-style:normal;font-weight:%s;font-display:block;src:url(data:font/woff2;base64,%s) format('woff2')}"
     % (weight, base64.b64encode((BASE / 'assets/fonts' / f'AuditSans-{name}.woff2').read_bytes()).decode())
@@ -3190,7 +3192,7 @@ window.addEventListener('load',postTimeline);
 postTimeline();'''
 
 island = json.dumps(manifest, ensure_ascii=False)
-raw = '<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>audIT · Revisión 2</title><script src="../assets/gsap.min.js"></script><style>' + css + '</style></head><body><script type="application/hyperframes-slideshow+json">' + island + '</script><main id="stage">' + ''.join(sections) + '</main><script>' + js + '</script></body></html>'
+raw = '<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>' + TITULO + '</title><script src="../assets/gsap.min.js"></script><style>' + css + '</style></head><body><script type="application/hyperframes-slideshow+json">' + island + '</script><main id="stage">' + ''.join(sections) + '</main><script>' + js + '</script></body></html>'
 OUT.mkdir(exist_ok=True)
 raw = raw.replace('src="../assets/', 'src="assets/')
 raw = raw.replace('<main id="stage">', '').replace('</main>', '')
@@ -3200,23 +3202,21 @@ raw = raw.replace(
     "scenes.forEach(stage=>{stage.style.width='1920px';stage.style.height='1080px';stage.style.transformOrigin='0 0';stage.style.transform='scale('+s+')';stage.style.left=(innerWidth-1920*s)/2+'px';stage.style.top=(innerHeight-1080*s)/2+'px'})",
 )
 (OUT / 'index.html').write_text(raw, encoding='utf-8')
-import shutil
 shutil.copytree(BASE / 'assets', OUT / 'assets', dirs_exist_ok=True)
 (BASE / 'manifest.json').write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding='utf-8')
-wrapper = '''<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>audIT · Revisión 2 · Transportes Curimón</title><script src="assets/hyperframes-player.global.js"></script><script src="assets/hyperframes-slideshow.global.js"></script><style>*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#ffffff}hyperframes-slideshow{display:block;position:relative;width:100vw;height:100vh;outline:none}hyperframes-player{position:absolute;inset:0} [data-hf-chrome]{display:none!important}#surface{position:absolute;inset:0;z-index:8;background:transparent;cursor:default}#surface.idle{cursor:none}[data-hf-presenting="true"]~#surface{display:none}body:has([data-hf-presenting="true"]) #surface{display:none}body:has([data-hf-presenting="true"]) [data-hf-chrome]{display:block!important}</style></head><body><hyperframes-slideshow tabindex="0" notes-storage-key="audit-curimon-revision2"><hyperframes-player interactive src="composition/index.html"></hyperframes-player><script type="application/hyperframes-slideshow+json">''' + island + '''</script></hyperframes-slideshow><div id="surface" aria-hidden="true"></div><script src="harness.js"></script></body></html>'''
-(BASE / 'index.html').write_text(wrapper, encoding='utf-8')
 embedded = json.dumps(raw, ensure_ascii=False).replace('</', '<\\/')
-wrapper = wrapper.replace('<title>', '<link rel="icon" href="data:,"><title>')
-wrapper = wrapper.replace(' interactive src="composition/index.html"', ' interactive')
-wrapper = wrapper.replace('<script src="harness.js">', '<script type="application/json" id="embedded-composition">' + embedded + '</script><script src="harness.js">')
+wrapper = '''<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="data:,"><title>''' + TITULO + '''</title><script src="assets/hyperframes-player.global.js"></script><script src="assets/hyperframes-slideshow.global.js"></script><style>*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#ffffff}hyperframes-slideshow{display:block;position:relative;width:100vw;height:100vh;outline:none}hyperframes-player{position:absolute;inset:0} [data-hf-chrome]{display:none!important}#surface{position:absolute;inset:0;z-index:8;background:transparent;cursor:default}#surface.idle{cursor:none}[data-hf-presenting="true"]~#surface{display:none}body:has([data-hf-presenting="true"]) #surface{display:none}body:has([data-hf-presenting="true"]) [data-hf-chrome]{display:block!important}</style></head><body><hyperframes-slideshow tabindex="0" notes-storage-key="audit-curimon-revision2"><hyperframes-player interactive></hyperframes-player><script type="application/hyperframes-slideshow+json">''' + island + '''</script></hyperframes-slideshow><div id="surface" aria-hidden="true"></div><script type="application/json" id="embedded-composition">''' + embedded + '''</script><script src="harness.js"></script></body></html>'''
 (BASE / 'index.html').write_text(wrapper, encoding='utf-8')
 (BASE / 'escenas.json').write_text(json.dumps([{k: v for k, v in s.items() if k != 'content'} for s in SLIDES], ensure_ascii=False, indent=2), encoding='utf-8')
+minutos, segundos = divmod(DURACION, 60)
+margen_minutos, margen_segundos = divmod(15 * 60 - DURACION, 60)
 (BASE / 'NOTAS-EXPOSICION.md').write_text(
-    '# Guion de exposición\n\nObjetivo: 14 minutos y 34 segundos + 26 segundos de margen. No hay asignación ficticia de expositores.\n\n'
+    f'# Notas de exposición · {TITULO}\n\n'
+    f'La pauta contempla {minutos}:{segundos:02d} de exposición y {margen_minutos}:{margen_segundos:02d} de margen.\n\n'
     + '\n\n'.join(
         f"## {i + 1}. {s['title']}\n\nTiempo: {s['seconds']} s. {'Respaldo.' if s['backup'] else ''}\n\n{s['notes']}\n\nFuente: {s['source']}"
         for i, s in enumerate(SLIDES)
     ),
     encoding='utf-8',
 )
-print(f'{len(manifest["slides"])} escenas principales; {len(manifest["slideSequences"][0]["slides"])} de respaldo; {sum(s["seconds"] for s in SLIDES if not s["backup"])} segundos objetivo.')
+print(f'{TITULO}: {len(manifest["slides"])} escenas principales, {len(manifest["slideSequences"][0]["slides"])} de respaldo y {DURACION} segundos de exposición.')
