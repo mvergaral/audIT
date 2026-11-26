@@ -26,7 +26,8 @@ No hay botones, menús, instrucciones ni barras visibles en la superficie de exp
   - Cómo lo protegemos: mapa de los 28 riesgos y reservas/holguras (S8, T-16).
   - Comercial: proveedores y adquisiciones, curva S, costos por categoría, VAN y TIR, garantías y pagos por hito (T-22, E-21, E-24, FEP01 Art. 35, 36 y p.74).
   - Cierre: tres compromisos verificables y preguntas.
-- **Cifras económicas:** salen de `Formato-Oferta-audIT/economico/datos/partidas.csv`. Lo que está vacío se muestra como «POR COMPLETAR» y `construir.py` lista al terminar lo que falta. Al llenar el CSV basta con volver a ejecutar `python3 construir.py`. La tasa de descuento, la TIR y la curva de costos se escriben en las variables `TASA_DESCUENTO`, `TIR` y `CURVA_COSTOS` del bloque comercial de `construir.py`.
+- **Curva S:** se genera a partir de la planilla corregida del Sobre 3 en `Formato-Oferta-audIT/economico/planilla/`. Compara la facturación y los costos con intereses de la hoja «Curva S» y muestra el saldo de caja de la Fila C con IVA en el panel inferior.
+- **Otras cifras económicas:** salen de `Formato-Oferta-audIT/economico/datos/partidas.csv`. Los campos vacíos se muestran como «POR COMPLETAR» y `construir.py` lista los pendientes al terminar. La tasa de descuento y la TIR se configuran en `TASA_DESCUENTO` y `TIR`.
 - 30 láminas de respaldo: las de la Revisión 2 (riesgos, AMFE, árbol de fallas, implantación, hitos, reversión, calidad, correcciones, innovaciones, límites y diccionario EDT) más las que salieron del recorrido principal (hardware por nodo, datos, enlace cortado, paquetes de la EDT, qué pasa si, transición, siete riesgos altos y R-28).
 - El respaldo no se muestra en el recorrido: se abre con B si una pregunta lo requiere; dentro, un número seguido de Enter salta a esa lámina. Escape vuelve.
 - El puntero del mouse está visible y se oculta tras 4 segundos sin moverlo.

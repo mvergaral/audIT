@@ -1,8 +1,8 @@
-# Guion de exposición
+# Notas de exposición · Propuesta Final
 
-Objetivo: 14 minutos y 34 segundos + 26 segundos de margen. No hay asignación ficticia de expositores.
+La pauta contempla 14:05 de exposición y 0:55 de margen.
 
-## 1. Propuesta final · Caso Transporte de Carga
+## 1. Propuesta Final
 
 Tiempo: 10 s. 
 
@@ -106,13 +106,13 @@ Mostrar de dónde viene cada pieza y quién la paga. La nube se contrata en Azur
 
 Fuente: T-11: especificaciones ofertadas · S4 §4.2 · T-22 (FEP01 p.69) · economico/datos/partidas.csv
 
-## 14. La curva S muestra cuándo se cobra y cuándo se gasta.
+## 14. Curva S del proyecto
 
 Tiempo: 50 s. 
 
-Leer la curva de izquierda a derecha. Los ingresos siguen la estructura de pagos de las bases: doce hitos, cada uno gatillado por un entregable aceptado, que suman el cien por ciento de la implementación al mes 21. Marcar que Etapa 1 reúne el 60 % y que la aceptación final es el mes 21. Los costos acumulados se superponen desde la planilla económica; el espacio entre ambas curvas es el capital de trabajo que audIT financia entre hitos.
+[Curva contractual.] La facturación avanza por hitos hasta H12 en M21. Ese mes se emite la primera factura de operación y el primer cobro mensual llega en M22. La facturación supera los costos desde M17. En M56, la facturación y los costos con intereses totalizan CLP 8.368 y 6.907 millones, respectivamente. [Caja.] Usamos el saldo mensual de la Fila C, con el efecto del IVA. Tras tres meses sin cobros, el mínimo de cierre es CLP 227 millones en M9. El mínimo es mensual. El orden de pagos y cobros dentro del mes se revisa en la sensibilidad de tesorería. El último cobro de operación queda en M57, fuera del horizonte graficado.
 
-Fuente: FEP01 p.74: estructura obligatoria de hitos de pago H1 a H12 (60 % Etapa 1, 40 % Etapa 2) · planilla del mandante para costos
+Fuente: Sobre 3 · Modelo financiero del 25.11.2026 · hojas «Curva S» (B:C) y «Flujo de Caja» (W) · E-21 y E-25
 
 ## 15. Costos por categoría, frente al valor ofertado.
 

@@ -5,13 +5,17 @@ import csv
 import html
 import json
 import math
+import posixpath
 import shutil
 import textwrap
+from xml.etree import ElementTree as ET
+from zipfile import ZipFile
 
 BASE = Path(__file__).resolve().parent
 # Repositorio audIT: la presentación vive dentro de él (o, en copias antiguas, a su lado).
 AUDIT = next(p for p in (BASE.parent, BASE.parent / 'audIT') if (p / 'recursos/Formato-Oferta-audIT').is_dir())
 INF2 = AUDIT / 'recursos/Formato-Oferta-audIT/salida/informe2'
+ECONOMICO = AUDIT / 'recursos/Formato-Oferta-audIT/economico'
 OUT = BASE / 'composition'
 TITULO = 'Propuesta Final'
 C = '#006b7d'
@@ -2585,7 +2589,7 @@ for page_idx, offset in enumerate(range(0, len(packages), 6)):
 # Al llenar partidas.csv basta con volver a ejecutar construir.py.
 # ==============================================================================
 def _leer_partidas():
-    ruta = AUDIT / 'recursos/Formato-Oferta-audIT/economico/datos/partidas.csv'
+    ruta = ECONOMICO / 'datos/partidas.csv'
     crudo = {}
     if ruta.is_file():
         for fila in ruta.read_text(encoding='utf-8').splitlines():
@@ -2617,7 +2621,6 @@ def _leer_partidas():
 ECON = _leer_partidas()
 TASA_DESCUENTO = None   # texto, por ejemplo '10 %' (Formulario E-24)
 TIR = None              # texto, por ejemplo '18,4 %'
-CURVA_COSTOS = None     # lista de (mes, % acumulado del valor de implementación)
 PENDIENTES = []
 
 
@@ -2722,59 +2725,147 @@ add(
 )
 
 # --- Curva S -------------------------------------------------------------------
-PAGOS = [(2, 8), (4, 7), (6, 10), (10, 10), (12, 10), (13, 5), (14, 5), (16, 10), (17, 10), (18, 10), (19, 5), (21, 10)]
-HITO_DE = {2: 'H1', 4: 'H2', 6: 'H3', 10: 'H4', 12: 'H5', 13: 'H6', 14: 'H8', 16: 'H7', 17: 'H9', 18: 'H10', 19: 'H11', 21: 'H12'}
-X0, Y0, GW, GH = 130, 520, 1540, 410
+def leer_curva_s():
+    # Se usan los valores calculados guardados en la planilla del Sobre 3.
+    planillas = [p for p in (ECONOMICO / 'planilla').glob('*.xlsx') if not p.name.startswith('~$')]
+    if len(planillas) != 1:
+        raise ValueError('La Curva S requiere una planilla .xlsx en economico/planilla/.')
+
+    with ZipFile(planillas[0]) as libro:
+        hojas = ET.fromstring(libro.read('xl/workbook.xml'))
+        relaciones = ET.fromstring(libro.read('xl/_rels/workbook.xml.rels'))
+        destinos = {rel.attrib['Id']: rel.attrib['Target'] for rel in relaciones}
+        rutas = {
+            hoja.attrib['name']: destinos[hoja.attrib['{http://schemas.openxmlformats.org/officeDocument/2006/relationships}id']]
+            for hoja in hojas.findall('.//{*}sheet')
+        }
+
+        def leer_columnas(hoja, columnas):
+            ruta = rutas[hoja]
+            ruta = ruta.lstrip('/') if ruta.startswith('/') else posixpath.normpath(posixpath.join('xl', ruta))
+            tabla = ET.fromstring(libro.read(ruta))
+            celdas = {celda.attrib['r']: celda.findtext('{*}v') for celda in tabla.findall('.//{*}c')}
+            try:
+                return [tuple(float(celdas[f'{columna}{fila}']) for columna in columnas) for fila in range(2, 58)]
+            except (KeyError, TypeError, ValueError) as error:
+                raise ValueError(f'Faltan resultados numéricos guardados en la hoja «{hoja}».') from error
+
+        contractual = leer_columnas('Curva S', ('A', 'B', 'C'))
+        # W es el saldo acumulado de la Fila C, que incluye el efecto de caja del IVA.
+        tesoreria = leer_columnas('Flujo de Caja', ('A', 'W'))
+
+    meses = list(range(1, 57))
+    if [fila[0] for fila in contractual] != meses or [fila[0] for fila in tesoreria] != meses:
+        raise ValueError('La Curva S y el saldo de caja deben cubrir M1 a M56.')
+    return [(mes, costo / 1e6, factura / 1e6, saldo / 1e6)
+            for mes, (_, costo, factura), (_, saldo) in zip(meses, contractual, tesoreria)]
 
 
-def gx(m):
-    return X0 + m / 56 * GW
+def millones(valor):
+    return f'{valor:,.0f}'.replace(',', '.')
 
 
-def gy(p):
-    return Y0 - p / 100 * GH
+def x_curva(mes):
+    return 110 + (mes - 1) / 55 * 1060
 
 
-v = ''
-for p in (0, 25, 50, 75, 100):
-    v += line(X0, gy(p), X0 + GW, gy(p), STROKE, 1.5) + text(X0 - 16, gy(p) + 7, f'{p} %', 19, MUTED, 400, 'end')
-for m in (0, 6, 12, 18, 24, 36, 48, 56):
-    v += text(gx(m), Y0 + 36, f'M{m}', 19, MUTED, 400, 'middle')
-v += line(X0, Y0, X0 + GW, Y0, MUTED, 2.5) + line(X0, gy(100), X0, Y0, MUTED, 2.5)
-v += text(X0 + GW / 2, Y0 + 78, 'Mes del proyecto · horizonte de evaluación de 56 meses (E-24)', 20, MUTED, 600, 'middle')
-v = group(v, 0)
-acum, px, py, d, largo = 0, gx(0), gy(0), f'M{gx(0):.1f} {gy(0):.1f}', 0.0
-for m, pc in PAGOS:
-    acum += pc
-    largo += abs(gx(m) - px) + abs(gy(acum) - py)
-    d += f' L{gx(m):.1f} {py:.1f} L{gx(m):.1f} {gy(acum):.1f}'
-    px, py = gx(m), gy(acum)
-marcas, acum = '', 0
-for m, pc in PAGOS:
-    acum += pc
-    marcas += circle(gx(m), gy(acum), 7, C, C, 2) + text(gx(m) - 12, gy(acum) - 8, HITO_DE[m], 18, C, 700, 'end')
+def trama_curva(marcas, y_curva):
+    return ''.join(
+        line(110, y_curva(valor), 1170, y_curva(valor), STROKE, 1.5)
+        + text(92, y_curva(valor) + 7, millones(valor), 22, MUTED, 400, 'end')
+        for valor in marcas
+    )
+
+
+def serie_curva(puntos, color, etiqueta):
+    recorrido = ' '.join(f'{x:.2f},{y:.2f}' for x, y in puntos)
+    largo = math.ceil(sum(math.dist(a, b) for a, b in zip(puntos, puntos[1:]))) + 2
+    return (f'<polyline aria-label="{etiqueta}" points="{recorrido}" fill="none" stroke="{color}" '
+            f'stroke-width="6" stroke-linecap="round" stroke-linejoin="round" data-draw="{largo}"/>')
+
+
+curva_s = leer_curva_s()
+_, costo_final, factura_final, caja_final = curva_s[-1]
+mes_minimo, _, _, caja_minima = min(curva_s, key=lambda fila: fila[3])
+mes_cruce = max((mes for mes, costo, factura, _ in curva_s if factura <= costo), default=0) + 1
+tope_curva = max(3000, math.ceil(max(costo_final, factura_final) / 3000) * 3000)
+tope_caja = max(500, math.ceil(max(fila[3] for fila in curva_s) / 500) * 500)
+piso_caja = min(0, math.floor(caja_minima / 500) * 500)
+COLOR_CAJA = '#23664c'
+TRANSICION = 21
+
+
+def y_avance(valor):
+    return 331 - valor / tope_curva * 237
+
+
+def y_caja(valor):
+    return 566 - (valor - piso_caja) / (tope_caja - piso_caja) * 147
+
+
+costo_puntos = [(x_curva(mes), y_avance(costo)) for mes, costo, _, _ in curva_s]
+factura_puntos = [(x_curva(mes), y_avance(factura)) for mes, _, factura, _ in curva_s]
+caja_puntos = [(x_curva(mes), y_caja(saldo)) for mes, _, _, saldo in curva_s]
+x_transicion = x_curva(TRANSICION)
+if mes_cruce <= len(curva_s):
+    nota_cruce = f'La facturación supera los costos desde M{mes_cruce}.'
+    marca_cruce = circle(*factura_puntos[mes_cruce - 1], 7, C, '#ffffff', 4)
+else:
+    nota_cruce = 'Los costos alcanzan o superan la facturación en M56.'
+    marca_cruce = ''
+v = group(
+    text(0, 31, 'Millones de CLP', 27, WHITE, 700)
+    + line(405, 22, 441, 22, C, 6) + text(456, 30, 'Facturación acumulada', 26, C, 700)
+    + line(800, 22, 836, 22, CORAL, 6) + text(851, 30, 'Costos acumulados con intereses', 22, CORAL, 700)
+    + text(110, 72, 'Implementación por hitos', 20, MUTED, 600)
+    + text(x_transicion + 15, 72, 'M21 · Inicio de la facturación mensual', 20, MUTED, 600)
+    + trama_curva(range(0, tope_curva + 1, 3000), y_avance)
+    + line(x_transicion, 86, x_transicion, 331, MUTED, 2, '6 7')
+    + serie_curva(costo_puntos, CORAL, 'Costos acumulados con intereses')
+    + serie_curva(factura_puntos, C, 'Facturación acumulada')
+    + line(0, 353, 1170, 353, STROKE, 2)
+    + line(0, 383, 36, 383, COLOR_CAJA, 6)
+    + text(51, 391, 'Saldo de caja financiada al cierre de cada mes · con IVA', 26, COLOR_CAJA, 700)
+    + trama_curva(range(piso_caja, tope_caja + 1, 500), y_caja)
+    + line(x_transicion, 419, x_transicion, 566, MUTED, 2, '6 7')
+    + serie_curva(caja_puntos, COLOR_CAJA, 'Saldo de caja financiada con IVA')
+    + ''.join(text(x_curva(mes), 599, f'M{mes}', 23, MUTED, 600, 'middle')
+              for mes in (1, 9, 17, 21, 28, 35, 42, 49, 56))
+    + text(110, 637, 'La operación empieza a cobrarse en M22. El último cobro queda para M57.', 22, MUTED)
+    + card(1224, 4, 504, 327, CARD_BG, STROKE, 16)
+    + text(1253, 48, 'CIERRE EN M56 · MILLONES DE CLP', 21, MUTED, 700)
+    + text(1253, 102, 'Facturación', 27, C, 700)
+    + text(1694, 102, millones(factura_final), 39, C, 700, 'end')
+    + text(1253, 165, 'Costos con intereses', 27, CORAL, 700)
+    + text(1694, 165, millones(costo_final), 39, CORAL, 700, 'end')
+    + line(1253, 194, 1694, 194, STROKE, 2)
+    + text(1253, 245, 'Diferencia acumulada', 26, WHITE, 700)
+    + text(1694, 245, f'{factura_final - costo_final:+,.0f}'.replace(',', '.'), 39, WHITE, 700, 'end')
+    + text(1253, 294, nota_cruce, 21, MUTED),
+    0,
+)
 v += group(
-    f'<path d="{d}" fill="none" stroke="{C}" stroke-width="5" stroke-linejoin="round" data-draw="{int(largo) + 40}"/>' + marcas
-    + text(gx(24), gy(88), 'Ingresos acumulados por hitos de pago', 23, C, 700)
-    + text(gx(24), gy(88) + 30, 'de implementación (% del valor de la fase)', 21, C, 400),
+    line(x_curva(mes_minimo), y_caja(caja_minima), x_curva(mes_minimo), 566, AMBER, 2, '5 5')
+    + circle(x_curva(mes_minimo), y_caja(caja_minima), 8, AMBER, '#ffffff', 4)
+    + marca_cruce
+    + card(1224, 362, 504, 204, '#f0f7f2', STROKE, 16)
+    + text(1253, 405, f'M{mes_minimo} · MENOR SALDO MENSUAL', 22, COLOR_CAJA, 700)
+    + text(1253, 467, f'CLP {millones(caja_minima)} millones', 39, WHITE, 700)
+    + text(1253, 527, f'La caja cierra M56 en CLP {millones(caja_final)} millones.', 21, MUTED),
     1,
 )
-extra_s = line(gx(21), gy(100), gx(21), Y0, AMBER, 2.5, '8 6') + text(gx(21) + 12, Y0 - 14, 'M21 · aceptación final', 19, AMBER, 700)
-if CURVA_COSTOS:
-    pts = ' '.join(f'{gx(m):.1f},{gy(pc):.1f}' for m, pc in CURVA_COSTOS)
-    extra_s += f'<polyline points="{pts}" fill="none" stroke="{CORAL}" stroke-width="5"/>' + text(gx(24), gy(70), 'Costos acumulados', 23, CORAL, 700)
-else:
-    PENDIENTES.append('curva-de-costos')
-    extra_s += pend(gx(24), gy(50), 640, 'CURVA DE COSTOS ACUMULADOS · POR COMPLETAR')
-v += group(extra_s, 2)
+TITULO_CURVA_S = 'Curva S del proyecto'
 add(
-    'La curva S muestra cuándo se cobra y cuándo se gasta.',
-    'COMERCIAL / CURVA S · T-22 · E-24 · E-25',
+    TITULO_CURVA_S,
+    'COMERCIAL / MODELO FINANCIERO CORREGIDO · CASO BASE',
     v,
-    'FEP01 p.74: estructura obligatoria de hitos de pago H1 a H12 (60 % Etapa 1, 40 % Etapa 2) · planilla del mandante para costos',
-    'Leer la curva de izquierda a derecha. Los ingresos siguen la estructura de pagos de las bases: doce hitos, cada uno gatillado por un entregable aceptado, que suman el cien por ciento de la implementación al mes 21. Marcar que Etapa 1 reúne el 60 % y que la aceptación final es el mes 21. Los costos acumulados se superponen desde la planilla económica; el espacio entre ambas curvas es el capital de trabajo que audIT financia entre hitos.',
+    'Sobre 3 · Modelo financiero del 25.11.2026 · hojas «Curva S» (B:C) y «Flujo de Caja» (W) · E-21 y E-25',
+    f'[Curva contractual.] La facturación avanza por hitos hasta H12 en M21. Ese mes se emite la primera factura de operación y el primer cobro mensual llega en M22. '
+    f'{nota_cruce} En M56, la facturación y los costos con intereses totalizan CLP {millones(factura_final)} y {millones(costo_final)} millones, respectivamente. '
+    f'[Caja.] Usamos el saldo mensual de la Fila C, con el efecto del IVA. Tras tres meses sin cobros, el mínimo de cierre es CLP {millones(caja_minima)} millones en M{mes_minimo}. '
+    'El mínimo es mensual. El orden de pagos y cobros dentro del mes se revisa en la sensibilidad de tesorería. El último cobro de operación queda en M57, fuera del horizonte graficado.',
     50,
-    3,
+    2,
 )
 
 # --- Análisis de costos --------------------------------------------------------
@@ -2908,7 +2999,7 @@ RECORRIDO = [
     ('Veintiocho riesgos evaluados; ninguno queda alto.', 50),
     ('Las reservas y holguras absorben el riesgo del plan.', 45),
     ('Proveedores y adquisiciones clave de la solución.', 55),
-    ('La curva S muestra cuándo se cobra y cuándo se gasta.', 50),
+    (TITULO_CURVA_S, 50),
     ('Costos por categoría, frente al valor ofertado.', 60),
     ('VAN y TIR: la evaluación financiera a 56 meses.', 70),
     ('Condiciones comerciales: garantías y pagos por hito.', 40),

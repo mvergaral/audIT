@@ -1,7 +1,7 @@
 [
   {
     "id": "s01",
-    "title": "Propuesta final · Caso Transporte de Carga",
+    "title": "Propuesta Final",
     "eyebrow": "PRESENTACIÓN TÉCNICO-COMERCIAL / PROPUESTA FINAL",
     "source": "Transportes Curimón · TFEP-01/2026 · audIT Soluciones Tecnológicas SpA",
     "notes": "Presentar el recorrido de la propuesta: qué construimos, cómo lo ejecutamos, cómo lo protegemos y por qué conviene económicamente. La exposición dura 15 minutos; el resto es preguntas y evaluación.",
@@ -144,12 +144,12 @@
   },
   {
     "id": "s14",
-    "title": "La curva S muestra cuándo se cobra y cuándo se gasta.",
-    "eyebrow": "COMERCIAL / CURVA S · T-22 · E-24 · E-25",
-    "source": "FEP01 p.74: estructura obligatoria de hitos de pago H1 a H12 (60 % Etapa 1, 40 % Etapa 2) · planilla del mandante para costos",
-    "notes": "Leer la curva de izquierda a derecha. Los ingresos siguen la estructura de pagos de las bases: doce hitos, cada uno gatillado por un entregable aceptado, que suman el cien por ciento de la implementación al mes 21. Marcar que Etapa 1 reúne el 60 % y que la aceptación final es el mes 21. Los costos acumulados se superponen desde la planilla económica; el espacio entre ambas curvas es el capital de trabajo que audIT financia entre hitos.",
+    "title": "Curva S del proyecto",
+    "eyebrow": "COMERCIAL / MODELO FINANCIERO CORREGIDO · CASO BASE",
+    "source": "Sobre 3 · Modelo financiero del 25.11.2026 · hojas «Curva S» (B:C) y «Flujo de Caja» (W) · E-21 y E-25",
+    "notes": "[Curva contractual.] La facturación avanza por hitos hasta H12 en M21. Ese mes se emite la primera factura de operación y el primer cobro mensual llega en M22. La facturación supera los costos desde M17. En M56, la facturación y los costos con intereses totalizan CLP 8.368 y 6.907 millones, respectivamente. [Caja.] Usamos el saldo mensual de la Fila C, con el efecto del IVA. Tras tres meses sin cobros, el mínimo de cierre es CLP 227 millones en M9. El mínimo es mensual. El orden de pagos y cobros dentro del mes se revisa en la sensibilidad de tesorería. El último cobro de operación queda en M57, fuera del horizonte graficado.",
     "seconds": 50,
-    "steps": 3,
+    "steps": 2,
     "backup": false,
     "kind": ""
   },
