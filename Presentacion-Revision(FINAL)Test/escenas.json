@@ -102,10 +102,10 @@
     "id": "s10",
     "title": "El paquete 11.1 se controla con la compuerta G13.",
     "eyebrow": "DEL ALCANCE AL CONTROL / T-14: 11.1 · T-15: G13/A13 · T-16: R-16",
-    "source": "T-14: paquete 11.1 · T-15: compuerta G13, actividad A13 (40 d) y reserva A14 · T-16: riesgo R-16",
-    "notes": "Conectar la ficha del paquete 11.1 con su control en el cronograma: G13 exige versión probada en PREPROD, datos ficticios y material antes de iniciar los 40 días hábiles de A13 (10 de familiarización y 30 prácticos). Sin G13 disponible, A13 no comienza.",
+    "source": "T-14: paquete 11.1 · T-15: red G13, A13, R-H6, A14, H6 y A15 · T-16: riesgo R-16",
+    "notes": "Recorrer el flujo principal. G13 libera PREPROD probado, datos ficticios y material. A13 ocupa los días 182 a 222. La familiarización comienza ocho días hábiles antes del cierre del último sprint y luego sigue la práctica con evaluación por turnos. La capacitación aporta evidencia a la revisión R-H6. El acta H6 habilita A15 en M13. [Revelar reserva y riesgo.] Desde H5 corre A14 durante 14 días, en paralelo con la revisión. Ambas ramas convergen en H6 el día 240. El riesgo R-16 se vigila desde la entrega G13 hasta el arranque.",
     "seconds": 40,
-    "steps": 3,
+    "steps": 2,
     "backup": false,
     "kind": ""
   },
@@ -243,7 +243,7 @@
   },
   {
     "id": "s23",
-    "title": "Cada elemento baja a paquetes que se pueden aceptar.",
+    "title": "La EDT desglosa el alcance en paquetes aceptables.",
     "eyebrow": "EDT · NIVEL 2: 54 PAQUETES / S7 §7.1 · T-14 · T-19",
     "source": "S7 Figura 7.1 · T-14: 54 paquetes · S4: seis contextos · T-19: cinco innovaciones · Caso §17.5, p. 40",
     "notes": "Recorrer de izquierda a derecha sin leer paquete por paquete. Columnas 1 y 2: lo que construye la Etapa 1, con el elemento 5 nombrado igual que los contextos de la arquitectura. [Revelar columnas 3 y 4.] Datos, Etapa 2, adhesión, calidad, implantación, innovaciones y operación. [Revelar trazabilidad.] Destacar tres decisiones de diseño: 5.1 a 5.6 son los seis contextos de S4, por lo que cada componente tiene un único paquete que lo construye; 12.1 a 12.5 son las fichas del T-19; y la adhesión es un elemento propio con responsable, porque el Caso exige tratarla como actividad. El elemento 11 produce las actas de los hitos de marcha blanca.",

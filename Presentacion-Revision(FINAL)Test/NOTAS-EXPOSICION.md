@@ -78,9 +78,9 @@ Fuente: T-15: malla CPM final de 122 nodos · S7 §7.3.1 · E-25: actas H1–H12
 
 Tiempo: 40 s. 
 
-Conectar la ficha del paquete 11.1 con su control en el cronograma: G13 exige versión probada en PREPROD, datos ficticios y material antes de iniciar los 40 días hábiles de A13 (10 de familiarización y 30 prácticos). Sin G13 disponible, A13 no comienza.
+Recorrer el flujo principal. G13 libera PREPROD probado, datos ficticios y material. A13 ocupa los días 182 a 222. La familiarización comienza ocho días hábiles antes del cierre del último sprint y luego sigue la práctica con evaluación por turnos. La capacitación aporta evidencia a la revisión R-H6. El acta H6 habilita A15 en M13. [Revelar reserva y riesgo.] Desde H5 corre A14 durante 14 días, en paralelo con la revisión. Ambas ramas convergen en H6 el día 240. El riesgo R-16 se vigila desde la entrega G13 hasta el arranque.
 
-Fuente: T-14: paquete 11.1 · T-15: compuerta G13, actividad A13 (40 d) y reserva A14 · T-16: riesgo R-16
+Fuente: T-14: paquete 11.1 · T-15: red G13, A13, R-H6, A14, H6 y A15 · T-16: riesgo R-16
 
 ## 11. 36 riesgos evaluados y un riesgo de plazo abierto.
 
@@ -178,7 +178,7 @@ Cortar los enlaces en la misma vista. [Corte.] Lo que exige estado global, asign
 
 Fuente: S4 §4.1.26: operación desconectada y reconexión · §4.2.3: funciones on-premise · §4.3: plazos sin enlace · FEP01 Art. 16.4 · Caso RT-03.10 y RT-03.13
 
-## 23. Cada elemento baja a paquetes que se pueden aceptar.
+## 23. La EDT desglosa el alcance en paquetes aceptables.
 
 Tiempo: 70 s. Respaldo.
 

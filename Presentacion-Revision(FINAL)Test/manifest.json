@@ -86,11 +86,10 @@
     },
     {
       "sceneId": "s10",
-      "notes": "Conectar la ficha del paquete 11.1 con su control en el cronograma: G13 exige versión probada en PREPROD, datos ficticios y material antes de iniciar los 40 días hábiles de A13 (10 de familiarización y 30 prácticos). Sin G13 disponible, A13 no comienza.",
+      "notes": "Recorrer el flujo principal. G13 libera PREPROD probado, datos ficticios y material. A13 ocupa los días 182 a 222. La familiarización comienza ocho días hábiles antes del cierre del último sprint y luego sigue la práctica con evaluación por turnos. La capacitación aporta evidencia a la revisión R-H6. El acta H6 habilita A15 en M13. [Revelar reserva y riesgo.] Desde H5 corre A14 durante 14 días, en paralelo con la revisión. Ambas ramas convergen en H6 el día 240. El riesgo R-16 se vigila desde la entrega G13 hasta el arranque.",
       "fragments": [
         91,
-        93,
-        95
+        93
       ]
     },
     {

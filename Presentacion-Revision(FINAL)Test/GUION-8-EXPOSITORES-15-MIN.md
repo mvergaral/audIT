@@ -89,7 +89,11 @@ H4, H7 y H12 llegan a su límite contractual. Para H12, por ejemplo, la marcha b
 
 ### 6:15 · Lámina 10 — Capacitación y compuerta G13
 
-El paquete 11.1 muestra cómo una condición técnica gobierna el plan. G13 exige una versión de preproducción probada, datos de práctica y materiales listos antes de capacitar a los usuarios. A partir de esa entrega se prevén diez días de familiarización y treinta de práctica y evaluación por turnos. Si G13 se atrasa, el inicio de la capacitación se mueve y debe revisarse su efecto sobre la marcha blanca. Ese control conecta directamente el cronograma con la gestión de riesgos.
+Para capacitar a torre, terminales y conductores, G13 libera una versión de preproducción probada con datos y materiales. La familiarización dura diez días y empieza ocho días hábiles antes del cierre del último sprint. Le siguen treinta días de práctica y evaluación por turnos. La capacitación aporta evidencia a la revisión del dossier antes del acta de arranque.
+
+[Avanzar una vez para mostrar la reserva A14.]
+
+En paralelo a la revisión corre la reserva de catorce días que parte en H5. Ambas ramas convergen en el acta H6, que habilita la marcha blanca. Esa fecha es la que protege el control del riesgo R‑16.
 
 *Referencias para el equipo · S6, S7 §§7.1–7.3, T‑14, T‑15, T‑16 R‑16 y R‑17, y E‑25.*
 

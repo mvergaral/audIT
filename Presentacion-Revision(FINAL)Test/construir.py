@@ -201,8 +201,8 @@ def tech(key, x, y, size=40):
 
 def tchip(x, y, label, key=None, colr=C, size=15, h=32):
     # Pastilla con el logo de la tecnología a la izquierda; devuelve (svg, ancho).
-    w = int(len(label) * size * 0.6) + (h + 14 if key else 22)
-    out = f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="{h // 2}" fill="#ffffff" stroke="{colr}" stroke-width="1.5"/>'
+    w = int(len(label) * size * 0.63) + (h + 21 if key else 28)
+    out = card(x, y, w, h, '#ffffff', colr, h // 2)
     if key:
         out += tech(key, x + 6, y + 4, h - 8)
     out += text(x + (h + 4 if key else 11), y + h * 0.68, label, size, colr, 600)
@@ -900,7 +900,7 @@ def plane(x, y, w, h, colr, title, sub='', ic=None):
 def tile(x, y, key, name, sub, w=158, h=112):
     # Servicio de nube: ícono oficial arriba y nombre completo debajo.
     return (
-        f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="12" fill="#ffffff" stroke="{STROKE}" stroke-width="1.5"/>'
+        card(x, y, w, h, '#ffffff', STROKE, 12)
         + tech(key, x + w / 2 - 22, y + 10, 44)
         + text(x + w / 2, y + 76, name, 16, WHITE, 700, 'middle')
         + text(x + w / 2, y + 98, sub, 14, MUTED, 500, 'middle')
@@ -938,7 +938,7 @@ v = group(
     + text(1398, 124, 'Recuperación en espera', 19, WHITE, 700)
     + text(1398, 152, 'réplicas asíncronas', 17, NUBE, 600)
     + arrow(1340, 120, 1376, 120, NUBE, 3, dashed=True)
-    + obs(560, 8, 'Obs. 71 · conteo'),
+    + obs(640, 8, 'Obs. 71 · conteo'),
     0,
 )
 v += group(
@@ -973,12 +973,13 @@ v += group(
     + text(906, 448, 'API de terceros', 17, FLOTA, 600),
     2,
 )
+componentes_x, componentes_ancho = 236, 1054
 v += group(
     text(0, 628, '47 componentes', 22, WHITE, 700)
-    + rect_bar(190, 610, round(1100 * 32 / 47), 24, NUBE, 6, grow_x=True)
-    + rect_bar(190 + round(1100 * 32 / 47), 610, round(1100 / 47), 24, '#7fb3bf', 0, grow_x=True)
-    + rect_bar(190 + round(1100 * 33 / 47), 610, round(1100 * 7 / 47), 24, SITIO, 0, grow_x=True)
-    + rect_bar(190 + round(1100 * 40 / 47), 610, round(1100 * 7 / 47), 24, FLOTA, 6, grow_x=True)
+    + rect_bar(componentes_x, 610, round(componentes_ancho * 32 / 47), 24, NUBE, 6, grow_x=True)
+    + rect_bar(componentes_x + round(componentes_ancho * 32 / 47), 610, round(componentes_ancho / 47), 24, '#7fb3bf', 0, grow_x=True)
+    + rect_bar(componentes_x + round(componentes_ancho * 33 / 47), 610, round(componentes_ancho * 7 / 47), 24, SITIO, 0, grow_x=True)
+    + rect_bar(componentes_x + round(componentes_ancho * 40 / 47), 610, round(componentes_ancho * 7 / 47), 24, FLOTA, 6, grow_x=True)
     + text(1310, 628, '32 primarios · 1 recuperación · 14 en sitio y flota', 18, MUTED, 600),
     3,
 )
@@ -994,27 +995,30 @@ add(
 
 # A2 · Lógica: ocho capas con producto y seis contextos
 LAYERS = [
-    ('Presentación', [('Next.js', 'si-nextjs'), ('React', 'si-react'), ('Flutter · 4 perfiles', 'si-flutter'), ('Portería y taller', None)]),
-    ('Borde y exposición', [('Azure Front Door Premium', 'azure-frontdoor'), ('WAF · protección volumétrica', None)]),
-    ('Puerta de enlace', [('API Management Premium', 'azure-apim'), ('mTLS · cuotas · versionado', None)]),
-    ('Servicios de negocio', [('AKS en 3 zonas', 'azure-aks'), ('Kubernetes', 'si-kubernetes'), ('.NET 10 LTS', 'si-dotnet'), ('6 contextos', None)]),
-    ('Integración y eventos', [('IoT Hub S1', 'azure-iothub'), ('Event Hubs Premium', 'azure-eventhubs'), ('Kafka', 'si-kafka'), ('Go 1.27', 'si-go')]),
-    ('Datos', [('PostgreSQL 16', 'azure-postgresql'), ('TimescaleDB', 'si-timescale'), ('Managed Redis', 'azure-managedredis'), ('Blob WORM', 'azure-storage'), ('Delta · ADLS Gen2', 'azure-storage')]),
+    (('Presentación',), [('Next.js', 'si-nextjs'), ('React', 'si-react'), ('Flutter · 4 perfiles', 'si-flutter'), ('Portería y taller', None)]),
+    (('Borde y', 'exposición'), [('Azure Front Door Premium', 'azure-frontdoor'), ('WAF · protección volumétrica', None)]),
+    (('Puerta de enlace',), [('API Management Premium', 'azure-apim'), ('mTLS · cuotas · versionado', None)]),
+    (('Servicios', 'de negocio'), [('AKS en 3 zonas', 'azure-aks'), ('Kubernetes', 'si-kubernetes'), ('.NET 10 LTS', 'si-dotnet'), ('6 contextos', None)]),
+    (('Integración', 'y eventos'), [('IoT Hub S1', 'azure-iothub'), ('Event Hubs Premium', 'azure-eventhubs'), ('Kafka', 'si-kafka'), ('Go 1.27', 'si-go')]),
+    (('Datos',), [('PostgreSQL 16', 'azure-postgresql'), ('TimescaleDB', 'si-timescale'), ('Managed Redis', 'azure-managedredis'), ('Blob WORM', 'azure-storage'), ('Delta · ADLS Gen2', 'azure-storage')]),
 ]
 LY0, LH2 = 0, 92
 v = ''
 rows = ''
-for k, (lab, comps) in enumerate(LAYERS):
+for k, (labels, comps) in enumerate(LAYERS):
     y = LY0 + k * LH2
-    body = (
-        f'<rect x="0" y="{y}" width="1120" height="{LH2 - 12}" rx="12" fill="{"#ffffff" if k != 3 else TINT[NUBE]}" stroke="{STROKE if k != 3 else NUBE}" stroke-width="2"/>'
-        + text(22, y + 48, lab, 21, NUBE if k == 3 else WHITE, 700)
-    )
-    x = 252
-    for cpt, key in comps:
-        svg_c, w = tchip(x, y + 22, cpt, key, NUBE, 15, 36)
-        body += svg_c
-        x += w + 10
+    body = card(0, y, 1120, LH2 - 12, TINT[NUBE] if k == 3 else '#ffffff', NUBE if k == 3 else STROKE, 12)
+    label_y = y + (34 if len(labels) == 2 else 49)
+    for row, label in enumerate(labels):
+        body += text(22, label_y + row * 27, label, 23, NUBE if k == 3 else WHITE, 700)
+    chip_rows = (comps[:3], comps[3:]) if k == 5 else (comps,)
+    for row, entries in enumerate(chip_rows):
+        x = 258
+        chip_y = y + (3 + row * 38 if k == 5 else 22)
+        for product, key in entries:
+            chip_svg, width = tchip(x, chip_y, product, key, NUBE, 17, 36)
+            body += chip_svg
+            x += width + 12
     if k < 5:
         body += arrow(1100, y + LH2 - 18, 1100, y + LH2 + 4, MUTED, 2.5)
     rows += item(body)
@@ -1022,10 +1026,10 @@ v += group(rows, 0)
 v += group(
     f'<rect x="1140" y="0" width="60" height="{6 * LH2 - 12}" rx="12" fill="{TINT[SITIO]}" stroke="{SITIO}" stroke-width="2"/>'
     + tech('azure-entra', 1152, 10, 36) + tech('azure-keyvault', 1152, 54, 36)
-    + text(1170, 320, 'SEGURIDAD · Entra ID · Key Vault · RBAC/ABAC', 17, SITIO, 700, 'middle', extra='transform="rotate(-90 1170 320)"')
+    + text(1170, 320, 'SEGURIDAD · Entra ID · Key Vault · RBAC/ABAC', 18.5, SITIO, 700, 'middle', extra='transform="rotate(-90 1170 320)"')
     + f'<rect x="1212" y="0" width="60" height="{6 * LH2 - 12}" rx="12" fill="#f1f3f5" stroke="{MUTED}" stroke-width="2"/>'
     + tech('azure-monitor', 1224, 10, 36)
-    + text(1242, 320, 'OBSERVABILIDAD · Azure Monitor · trazas', 17, MUTED, 700, 'middle', extra='transform="rotate(-90 1242 320)"'),
+    + text(1242, 320, 'OBSERVABILIDAD · Azure Monitor · trazas', 20, MUTED, 700, 'middle', extra='transform="rotate(-90 1242 320)"'),
     1,
 )
 CTX = [
@@ -1742,7 +1746,7 @@ for n, label in focus.items():
         if m == n:
             break
         y += (len(EDT[m - 1][3]) + 1) * LH + 10
-    tags += item(badge(x + CW - 84, y - 20, label, AMBER, '#fff0d7', 76, 26, 15, 700))
+    tags += item(badge(x + CW - 68, y - 20, label, AMBER, '#fff0d7', 60, 26, 15, 700))
 legend = (
     card(0, 508, CW, 142, '#fff6e8', AMBER, 12, AMBER)
     + text(22, 534, 'TRAZABILIDAD DE LA EDT', 15, AMBER, 700, extra='letter-spacing="2"')
@@ -1753,7 +1757,7 @@ legend = (
 )
 v += group(tags + item(legend), 2)
 add(
-    'Cada elemento baja a paquetes que se pueden aceptar.',
+    'La EDT desglosa el alcance en paquetes aceptables.',
     'EDT · NIVEL 2: 54 PAQUETES / S7 §7.1 · T-14 · T-19',
     v,
     'S7 Figura 7.1 · T-14: 54 paquetes · S4: seis contextos · T-19: cinco innovaciones · Caso §17.5, p. 40',
@@ -1834,80 +1838,73 @@ add(
     4,
 )
 
-# 11. s11 — Del Alcance al Control: Paquete 11.1 y Compuerta G13→A13 (60 s · T-14: 11.1 · T-15: G13/A13 · R-16)
-v = ''
-# Izquierda: Ficha de control del paquete 11.1 (T-14)
-v += group(
-    card(20, 24, 770, 604, CARD_BG, STROKE, 16, C, accent_top=True)
-    + badge(48, 46, 'DICCIONARIO EDT · FORMULARIO T-14', C, '#e7f3f6', None, 30, 16)
-    + text(48, 142, '11.1', 56, C, 700)
-    + text(202, 114, 'Capacitación Operacional', 36, WHITE, 600)
-    + text(202, 152, 'Torre de control · 5 terminales · conductores', 23, MUTED)
-    + line(48, 180, 760, 180, STROKE, 1.5)
-    + card(48, 202, 714, 92, CARD_ALT, STROKE, 12, C)
-    + text(72, 238, 'ENTREGABLE', 21, C, 700)
-    + text(72, 272, 'Capacitación de torre, terminales y conductores', 24, WHITE)
-    + card(48, 308, 714, 92, CARD_ALT, STROKE, 12, C)
-    + text(72, 344, 'RESPONSABLE Y VENTANA EN RED (T-15)', 21, C, 700)
-    + text(72, 378, 'Líder de Implantación  ·  Actividad A13 (días 182–222 · 8 días de holgura total)', 21, WHITE)
-    + card(48, 414, 714, 92, CARD_ALT, STROKE, 12, AMBER)
-    + text(72, 450, 'CRITERIO DE ACEPTACIÓN', 21, AMBER, 700)
-    + text(72, 484, 'G13 disponible antes de A13 · usuarios certificados', 24, WHITE)
-    + card(48, 522, 714, 82, '#f9f2e7', STROKE, 12, AMBER)
-    + text(72, 572, 'T-14 define aceptación · T-15 fija precedencia', 22, AMBER, 600),
+# Lámina 10 · Capacitación y precedencias para el arranque de la marcha blanca E1.
+v = group(
+    card(20, 20, 1688, 116, CARD_BG, STROKE, 16, C)
+    + text(52, 67, '11.1 · Capacitación operacional', 38, NAVY, 700)
+    + text(52, 108, 'Torre de control · terminales · conductores', 30, MUTED)
+    + text(1676, 67, 'Líder de Implantación', 32, NAVY, 700, 'end')
+    + text(1676, 108, 'Usuarios certificados al cierre', 30, MUTED, 400, 'end')
+    + card(20, 176, 292, 214, CARD_BG, STROKE, 16, C, accent_top=True)
+    + text(166, 226, 'G13', 34, C, 700, 'middle')
+    + text(166, 277, 'Preproducción', 36, NAVY, 700, 'middle')
+    + text(166, 322, 'Datos y material', 30, MUTED, 400, 'middle')
+    + text(166, 362, 'Probada · día 182', 29, C, 700, 'middle')
+    + arrow(322, 283, 354, 283, C, 4, draw=False)
+    + card(364, 176, 314, 214, CARD_BG, STROKE, 16, C, accent_top=True)
+    + text(521, 226, 'A13', 34, C, 700, 'middle')
+    + text(521, 277, 'Capacitación', 36, NAVY, 700, 'middle')
+    + text(521, 322, '10 d de familiarización', 27, MUTED, 400, 'middle')
+    + text(521, 362, '30 d de práctica', 29, MUTED, 400, 'middle')
+    + arrow(688, 283, 720, 283, C, 4, draw=False)
+    + card(730, 176, 292, 214, CARD_BG, STROKE, 16, C, accent_top=True)
+    + text(876, 226, 'R-H6', 34, C, 700, 'middle')
+    + text(876, 274, 'Revisión', 35, NAVY, 700, 'middle')
+    + text(876, 314, 'del dossier', 35, NAVY, 700, 'middle')
+    + text(876, 362, 'Días 230–240', 29, C, 700, 'middle')
+    + arrow(1032, 283, 1064, 283, C, 4, draw=False)
+    + card(1074, 176, 274, 214, CARD_BG, STROKE, 16, C, accent_top=True)
+    + text(1211, 226, 'H6', 34, C, 700, 'middle')
+    + text(1211, 274, 'Acta de', 35, NAVY, 700, 'middle')
+    + text(1211, 314, 'arranque', 35, NAVY, 700, 'middle')
+    + text(1211, 362, 'Día 240', 29, C, 700, 'middle')
+    + arrow(1358, 283, 1390, 283, C, 4, draw=False)
+    + card(1400, 176, 308, 214, CARD_BG, STROKE, 16, C, accent_top=True)
+    + text(1554, 226, 'A15', 34, C, 700, 'middle')
+    + text(1554, 277, 'Marcha blanca', 36, NAVY, 700, 'middle')
+    + text(1554, 322, 'Etapa 1', 30, MUTED, 400, 'middle')
+    + text(1554, 362, 'Inicio en M13', 29, C, 700, 'middle')
+    + card(20, 427, 586, 112, '#e7f3f6', STROKE, 16, C)
+    + text(52, 472, '8 días hábiles de solapamiento', 33, NAVY, 700)
+    + text(52, 513, 'Familiarización y último sprint', 30, MUTED),
     0,
 )
-# Derecha: Flujo bloqueante G13 -> A13 (40d) -> Marcha Blanca y control de R-16
+
 v += group(
-    card(820, 24, 888, 604, CARD_BG, STROKE, 16, AMBER, accent_top=True)
-    + badge(848, 52, 'RED DE PRECEDENCIAS · T-15 Y RIESGO R-16', AMBER, '#fff0d7', 415, 34, 19)
-    + text(848, 124, 'Secuencia Bloqueante de Preparación', 36, WHITE, 600)
-    # 3 nodos horizontales dentro del panel derecho
-    + card(848, 156, 248, 185, CARD_ALT, STROKE, 14, C, accent_top=True)
-    + circle(972, 204, 24, C, '#ffffff', 3, pulse=True)
-    + text(972, 211, 'G13', 18, C, 700, 'middle')
-    + text(972, 266, 'Versión lista', 27, WHITE, 600, 'middle')
-    + text(972, 300, 'PREPROD congelado', 21, MUTED, 400, 'middle')
-    + text(972, 326, 'Datos + material', 21, C, 500, 'middle')
-    + arrow(1100, 248, 1134, 248, C, 3.5, draw=True)
-    + card(1138, 156, 258, 185, CARD_ALT, STROKE, 14, AMBER, accent_top=True)
-    + circle(1267, 204, 24, AMBER, '#ffffff', 3)
-    + text(1267, 211, 'A13', 18, AMBER, 700, 'middle')
-    + text(1267, 266, 'Capacitación', 27, WHITE, 600, 'middle')
-    + text(1267, 300, '40 días hábiles', 22, AMBER, 600, 'middle')
-    + text(1267, 326, '10d + 30d prácticos', 21, MUTED, 400, 'middle')
-    + arrow(1400, 248, 1434, 248, C, 3.5, draw=True)
-    + card(1438, 156, 242, 185, CARD_ALT, STROKE, 14, C, accent_top=True)
-    + circle(1559, 204, 24, C, '#ffffff', 3)
-    + text(1559, 211, 'H6', 18, C, 700, 'middle')
-    + text(1559, 266, 'Marcha Blanca', 27, WHITE, 600, 'middle')
-    + text(1559, 300, 'Inicio en M13', 21, C, 500, 'middle')
-    + text(1559, 326, 'Usuarios acreditados', 21, MUTED, 400, 'middle'),
+    card(652, 427, 160, 112, CARD_BG, STROKE, 16, AMBER)
+    + text(732, 472, 'H5', 34, AMBER, 700, 'middle')
+    + text(732, 513, 'Día 226', 29, MUTED, 400, 'middle')
+    + arrow(822, 483, 852, 483, AMBER, 4, draw=False)
+    + card(862, 427, 266, 112, '#fff4e2', STROKE, 16, AMBER)
+    + text(995, 472, 'A14 · Reserva', 34, AMBER, 700, 'middle')
+    + text(995, 513, '14 días hábiles', 30, MUTED, 400, 'middle')
+    + line(1138, 483, 1211, 483, AMBER, 4)
+    + arrow(1211, 483, 1211, 400, AMBER, 4, draw=False)
+    + card(20, 562, 1688, 68, CARD_BG, STROKE, 16, AMBER)
+    + text(52, 607, 'R-16', 32, AMBER, 700)
+    + text(147, 607, 'G13 incompleta al día 182 o consumo de más del 50 % de A14', 29, NAVY)
+    + text(1676, 607, 'Jefe de Proyecto', 29, MUTED, 400, 'end'),
     1,
 )
-v += group(
-    # Barra segmentada de A13 (10 días familiarización + 30 días práctica + reserva A14)
-    text(848, 384, 'Desglose de Actividad A13 (40 días hábiles) y Amortiguador A14:', 25, WHITE, 600)
-    + rect_bar(848, 404, 205, 42, C, 8, grow_x=True)
-    + text(950, 432, '10 d Familiarización', 18, '#ffffff', 700, 'middle')
-    + rect_bar(1061, 404, 395, 42, AMBER, 8, grow_x=True)
-    + text(1258, 432, '30 d Práctica y Evaluación por Rol', 19, '#ffffff', 700, 'middle')
-    + rect_bar(1464, 404, 216, 42, '#e0ebef', 8, grow_x=True, stroke=C)
-    + text(1572, 432, 'Reserva A14 (14 d)', 19, C, 700, 'middle')
-    + card(848, 474, 832, 130, CARD_ALT, STROKE, 12, AMBER)
-    + text(872, 518, 'Regla de control (R-16): Sin G13 aceptado, A13 no comienza.', 25, AMBER, 700)
-    + text(872, 556, 'El adelanto de 10 días está condicionado a entorno PREPROD estable.', 23, WHITE)
-    + text(872, 588, 'Dueño: Jefe de Proyecto · Disparador: G13 incompleto o consumo > 50 % de A14.', 21, MUTED),
-    2,
-)
+
 add(
     'El paquete 11.1 se controla con la compuerta G13.',
     'DEL ALCANCE AL CONTROL / T-14: 11.1 · T-15: G13/A13 · T-16: R-16',
     v,
-    'T-14: paquete 11.1 · T-15: compuerta G13, actividad A13 (40 d) y reserva A14 · T-16: riesgo R-16',
-    'Conectar la ficha del paquete 11.1 con su control en el cronograma: G13 exige versión probada en PREPROD, datos ficticios y material antes de iniciar los 40 días hábiles de A13 (10 de familiarización y 30 prácticos). Sin G13 disponible, A13 no comienza.',
-    60,
-    3,
+    'T-14: paquete 11.1 · T-15: red G13, A13, R-H6, A14, H6 y A15 · T-16: riesgo R-16',
+    'Recorrer el flujo principal. G13 libera PREPROD probado, datos ficticios y material. A13 ocupa los días 182 a 222. La familiarización comienza ocho días hábiles antes del cierre del último sprint y luego sigue la práctica con evaluación por turnos. La capacitación aporta evidencia a la revisión R-H6. El acta H6 habilita A15 en M13. [Revelar reserva y riesgo.] Desde H5 corre A14 durante 14 días, en paralelo con la revisión. Ambas ramas convergen en H6 el día 240. El riesgo R-16 se vigila desde la entrega G13 hasta el arranque.',
+    40,
+    2,
 )
 
 # Carta Gantt de la malla final, con las actividades afines en una misma fila.
@@ -1974,7 +1971,7 @@ for key, _, nodes in gantt_rows:
                 origin = red[code]['es' if relation.startswith('SS') else 'ef'] + lag
                 links_in.add((parent, key, origin, red[node]['es']))
 
-GX0, GX1, GY0, RH = 330, 1716, 58, 540 / len(ACTS)
+GX0, GX1, GY0, RH = 384, 1716, 58, 540 / len(ACTS)
 gx = lambda d: round(GX0 + d * (GX1 - GX0) / 420, 1)
 gy = lambda aid: round(GY0 + ACTS[aid]['row'] * RH, 1)
 CRIT = CORAL
@@ -1992,7 +1989,7 @@ for aid, a in ACTS.items():
     y = gy(aid)
     reserve = aid in ('A14', 'A23')
     colr = CRIT if a['crit'] else C
-    labels += text(0, y + 15, aid, 15, colr, 700) + text(44, y + 15, GANTT_NAMES[aid], 15, WHITE, 600 if a['crit'] else 400)
+    labels += text(0, y + 15, aid, 16.5, colr, 700) + text(52, y + 15, GANTT_NAMES[aid], 16.5, WHITE, 600 if a['crit'] else 400)
     w = max(gx(a['ef']) - gx(a['es']), 4)
     fill = '#f6dede' if reserve else colr
     stroke = f' stroke="{CRIT}" stroke-width="1.5" stroke-dasharray="4 3"' if reserve else ''
@@ -2997,7 +2994,7 @@ RESPALDO_ORDEN = [
     'Cada nodo declara su hardware y su enlace.',
     'Cada dato vive en el motor que su uso exige.',
     'Si se corta el enlace, la operación sigue.',
-    'Cada elemento baja a paquetes que se pueden aceptar.',
+    'La EDT desglosa el alcance en paquetes aceptables.',
     'El diccionario hace verificable cada paquete.',
     'La transición se ejecuta en dos etapas niveladas.',
     'Diez riesgos con exposición inicial alta.',
@@ -3049,7 +3046,39 @@ FONT_FACES = ''.join(
     % (weight, base64.b64encode((BASE / 'assets/fonts' / f'AuditSans-{name}.woff2').read_bytes()).decode())
     for name, weight in (('Regular', '100 500'), ('Bold', '600 900'))
 )
-css = FONT_FACES + '''*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#ffffff;color:#102d3e;font-family:'AuditSans','Liberation Sans',Arial,sans-serif}body{position:relative}#stage{width:1920px;height:1080px;position:absolute;transform-origin:0 0}.scene{position:absolute;inset:0;width:100%;height:100%;overflow:hidden;background:#ffffff;opacity:0;visibility:hidden;pointer-events:none}.clip{position:absolute;inset:0}.scene::after{content:"";position:absolute;left:96px;right:96px;bottom:104px;height:1px;background:#bdced6}.eyebrow{position:absolute;left:96px;top:62px;font-size:23px;letter-spacing:.15em;color:#006b7d;font-weight:600}.brand{position:absolute;right:96px;top:49px;width:142px;height:54px;object-fit:contain}.headline{position:absolute;left:96px;top:132px;width:1710px;font-size:68px;line-height:1.1;font-weight:600;letter-spacing:-.035em;margin:0}.visual{position:absolute;left:96px;top:296px;width:1728px;height:650px;overflow:visible;font-family:'AuditSans','Liberation Sans',Arial,sans-serif}.source{position:absolute;left:96px;bottom:54px;font-size:19px;color:#48606e;max-width:1540px}.folio{position:absolute;right:96px;bottom:52px;font-size:23px;color:#48606e}.scene.cover .headline,.scene.operational .headline,.scene.closing .headline,.scene.section .headline{display:none}.scene.section{background:#102d3e}.scene.section .brand,.scene.section .folio,.scene.section .source,.scene.section::after{display:none}.scene.section .eyebrow{color:#7fb3bf;top:118px}.scene.section .visual{top:215px}.scene.cover .visual,.scene.operational .visual,.scene.closing .visual{top:215px}.scene.cover .eyebrow,.scene.operational .eyebrow,.scene.closing .eyebrow{top:118px}.scene.cover .brand,.scene.operational .brand,.scene.closing .brand{top:100px;width:220px;height:80px}@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto}}'''
+css = FONT_FACES + '''
+*{box-sizing:border-box}
+html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#fff;color:#102d3e;font-family:'AuditSans','Liberation Sans',Arial,sans-serif}
+body{position:relative}
+#stage{width:1920px;height:1080px;position:absolute;transform-origin:0 0}
+.scene{
+  --margen:40px;
+  position:absolute;inset:0;width:100%;height:100%;overflow:hidden;
+  background:#fff;opacity:0;visibility:hidden;pointer-events:none
+}
+.clip{position:absolute;inset:0}
+.scene::after{content:"";position:absolute;left:var(--margen);right:var(--margen);bottom:104px;height:1px;background:#bdced6}
+.eyebrow{position:absolute;left:var(--margen);right:235px;top:45px;font-size:26px;letter-spacing:.11em;color:#006b7d;font-weight:600}
+.brand{position:absolute;right:var(--margen);top:28px;width:168px;height:64px;object-fit:contain}
+.headline{
+  position:absolute;left:var(--margen);right:var(--margen);top:113px;
+  font-size:75px;line-height:1.05;font-weight:600;letter-spacing:-.035em;white-space:nowrap;margin:0
+}
+.visual{
+  position:absolute;left:var(--margen);top:248px;width:calc(100% - 2 * var(--margen));height:auto;
+  overflow:visible;font-family:'AuditSans','Liberation Sans',Arial,sans-serif
+}
+.source{position:absolute;left:var(--margen);right:132px;bottom:57px;font-size:22px;color:#48606e}
+.folio{position:absolute;right:var(--margen);bottom:54px;font-size:27px;color:#48606e}
+.scene.cover .headline,.scene.operational .headline,.scene.closing .headline,.scene.section .headline{display:none}
+.scene.section{background:#102d3e}
+.scene.section .brand,.scene.section .folio,.scene.section .source,.scene.section::after{display:none}
+.scene.section .eyebrow{color:#7fb3bf;top:96px}
+.scene.cover .visual,.scene.operational .visual,.scene.closing .visual,.scene.section .visual{top:183px}
+.scene.cover .eyebrow,.scene.operational .eyebrow,.scene.closing .eyebrow{top:96px;right:308px}
+.scene.cover .brand,.scene.operational .brand,.scene.closing .brand{top:68px;width:244px;height:89px}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto}}
+'''
 
 manifest = {'slides': [], 'slideSequences': [{'id': 'respaldo', 'label': 'Respaldo técnico', 'slides': []}]}
 sections = []
@@ -3104,13 +3133,64 @@ function centerIcons(){
     g.setAttribute('transform',`translate(${(cx-s*(b.x+b.width/2)).toFixed(1)} ${(cy-s*(b.y+b.height/2)).toFixed(1)}) scale(${s})`);
   });
 }
+function enlargeProjectionText(){
+  for(const svg of document.querySelectorAll('svg.visual')){
+    const labels=[...svg.querySelectorAll('text:not([transform])')].map(el=>({
+      el, box:el.getBBox(), size:Number(el.getAttribute('font-size'))
+    }));
+    const cards=[...svg.querySelectorAll('rect[data-card],g[data-badge] > rect')]
+      .map(el=>el.getBBox()).sort((a,b)=>a.width*a.height-b.width*b.height);
+    const changes=[];
+    for(const label of labels){
+      const {el,box,size}=label;
+      if(!box.width||!size||el.hasAttribute('data-count-to'))continue;
+      const cx=box.x+box.width/2,cy=box.y+box.height/2;
+      const card=cards.find(c=>cx>=c.x&&cx<=c.x+c.width&&cy>=c.y&&cy<=c.y+c.height);
+      const frame=card??svg.viewBox.baseVal;
+      const horizontalPadding=card ? 8 : 0,verticalPadding=card ? 3 : 0;
+      const left=Math.min(box.x,frame.x+horizontalPadding);
+      const top=Math.min(box.y,frame.y+verticalPadding);
+      const right=Math.max(box.x+box.width,frame.x+frame.width-horizontalPadding);
+      const bottom=Math.max(box.y+box.height,frame.y+frame.height-verticalPadding);
+      const x=Number(el.getAttribute('x')),y=Number(el.getAttribute('y'));
+      const increase=size<26 ? .24 : size<42 ? .17 : .09;
+      for(const factor of [1+increase,1+increase/2]){
+        const next={x:x+(box.x-x)*factor,y:y+(box.y-y)*factor,width:box.width*factor,height:box.height*factor};
+        if(next.x<left-.1||next.y<top-.1||next.x+next.width>right+.1||next.y+next.height>bottom+.1)continue;
+        const overlaps=labels.some(other=>{
+          if(other===label||!other.box.width)return false;
+          const b=other.box;
+          return next.x<b.x+b.width+1&&b.x<next.x+next.width+1
+            &&next.y<b.y+b.height+1&&b.y<next.y+next.height+1;
+        });
+        if(overlaps)continue;
+        label.box=next;
+        changes.push([el,(size*factor).toFixed(1)]);
+        break;
+      }
+    }
+    for(const [el,size] of changes)el.setAttribute('font-size',size);
+  }
+}
+function fitHeadlines(){
+  for(const title of document.querySelectorAll('.headline')){
+    if(title.scrollWidth<=title.clientWidth)continue;
+    const size=parseFloat(getComputedStyle(title).fontSize);
+    title.style.fontSize=(size*(title.clientWidth-8)/title.scrollWidth).toFixed(1)+'px';
+  }
+}
 centerIcons();
 function fitText(){
   document.querySelectorAll('svg.visual text').forEach(t=>{if(t.dataset.fs&&!t.closest('[data-badge]'))t.setAttribute('font-size',t.dataset.fs);});
   fitBadges();fitCards();
 }
 fitText();
-if(document.fonts)Promise.all(['400 20px AuditSans','700 20px AuditSans'].map(f=>document.fonts.load(f))).then(()=>{fitText();document.documentElement.dataset.fontsReady='true';});
+Promise.all(['400 20px AuditSans','700 20px AuditSans'].map(font=>document.fonts.load(font))).then(()=>{
+  fitText();
+  fitHeadlines();
+  enlargeProjectionText();
+  document.documentElement.dataset.fontsReady='true';
+});
 const master=gsap.timeline({paused:true});
 const flowLoops=[];
 const truckLoops=[];
