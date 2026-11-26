@@ -539,6 +539,44 @@ function fromHash(){const page=Number(location.hash.slice(1));go(Number.isIntege
 addEventListener('hashchange',fromHash);
 fit();fromHash();
 </script>
+<style>@media print{#audit-timer{display:none!important}}</style>
+<script>
+/* === Temporizador independiente de la navegación (00:00 / 15:00) === */
+(() => {
+  const TOTAL_MIN = 15; /* duración objetivo en minutos: cambiar aquí */
+  const total = TOTAL_MIN * 60000;
+  const box = document.createElement('div');
+  box.id = 'audit-timer';
+  box.style.cssText = 'position:fixed;left:6px;bottom:6px;z-index:2147483647;display:flex;align-items:center;gap:5px;padding:2px 6px;border:1px solid #dce4e7;border-radius:6px;background:rgba(255,255,255,.94);color:#123448;font:600 12px system-ui,sans-serif;font-variant-numeric:tabular-nums;box-shadow:0 1px 4px #0001';
+  box.innerHTML = '<span aria-label="Tiempo transcurrido">00:00</span><span style="opacity:.55;font-size:10px">/ ' + String(TOTAL_MIN).padStart(2, '0') + ':00</span><button type="button" title="Iniciar o pausar" aria-label="Iniciar">▶</button><button type="button" title="Reiniciar" aria-label="Reiniciar">↻</button>';
+  const [clock] = box.querySelectorAll('span');
+  const [toggle, reset] = box.querySelectorAll('button');
+  for (const b of [toggle, reset]) b.style.cssText = 'border:0;background:transparent;color:inherit;cursor:pointer;padding:2px;font:inherit;line-height:1';
+  let elapsed = 0, started = null;
+  function paint() {
+    const ms = Math.min(total, elapsed + (started === null ? 0 : performance.now() - started));
+    const sec = Math.floor(ms / 1000);
+    clock.textContent = String(Math.floor(sec / 60)).padStart(2, '0') + ':' + String(sec % 60).padStart(2, '0');
+    const limit = TOTAL_MIN * 60;
+    box.style.color = sec >= limit ? '#a13437' : sec >= limit - 120 ? '#a65e00' : '#123448';
+    if (ms >= total) { elapsed = total; started = null; }
+    toggle.textContent = started === null ? '▶' : 'Ⅱ';
+    toggle.setAttribute('aria-label', started === null ? 'Iniciar o continuar' : 'Pausar');
+    toggle.disabled = elapsed >= total;
+  }
+  toggle.addEventListener('click', () => {
+    if (started === null) { if (elapsed < total) started = performance.now(); }
+    else { elapsed = Math.min(total, elapsed + performance.now() - started); started = null; }
+    paint();
+    toggle.blur(); /* las flechas y la barra espaciadora siguen cambiando de lámina */
+  });
+  reset.addEventListener('click', () => { elapsed = 0; started = null; paint(); reset.blur(); });
+  for (const event of ['click', 'pointerdown', 'contextmenu']) box.addEventListener(event, e => e.stopPropagation());
+  document.body.appendChild(box);
+  paint();
+  setInterval(paint, 200);
+})();
+</script>
 </body>
 </html>
 
