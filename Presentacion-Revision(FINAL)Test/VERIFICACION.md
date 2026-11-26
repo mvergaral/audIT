@@ -1,6 +1,13 @@
 # Verificación de la presentación
 
-Revisión del 22 de octubre de 2026.
+## Revisión del 25 de noviembre de 2026
+
+- La compilación en Windows generó 19 láminas principales y 30 de respaldo, con una pauta de 14:05.
+- Los 49 SVG se analizaron como XML. Los recursos locales existen y la composición incrustada coincide con la que usa el servidor local.
+- La lámina 16 se cotejó con el modelo final del Sobre 3 en las hojas «Parámetros D2», «Indicadores» y «Sensibilidad». Los márgenes de hitos y el estado de R-17 se cotejaron con S7 y S8.
+- La revisión en Chrome sin interfaz no se completó por un fallo al iniciar el proceso gráfico. Queda pendiente verificar la proyección y las transiciones visuales en el navegador.
+
+## Revisión histórica del 22 de octubre de 2026
 
 - Chromium local: 16 diapositivas principales y 14 de respaldo localizadas mediante apertura directa de `index.html`.
 - Comprobados: avance por teclado y clic; retroceso de fragmentos antes de cambiar de diapositiva; portada, cierre, respaldo con B y regreso con Escape.

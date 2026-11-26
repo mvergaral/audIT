@@ -22,7 +22,7 @@ Fuente: S2 · S3 §3.3 · S8: verificación bloqueante de salida
 
 Tiempo: 50 s. 
 
-Vender la propuesta en una lámina. Qué entregamos: una solución híbrida de 39 componentes que sigue operando sin enlace. Cómo lo ejecutamos: 54 paquetes aceptables, dos etapas y una ruta crítica protegida. Cuánto cuesta: el valor total del proyecto y, más adelante, su explicación por categoría, VAN y TIR. Cerrar con la evidencia: cinco innovaciones con TRL, 28 riesgos con disparador y 120 casos de prueba diseñados, no ejecutados.
+Vender la propuesta en una lámina. Qué entregamos: una solución híbrida de 47 componentes que sigue operando sin enlace. Cómo lo ejecutamos: 54 paquetes aceptables, dos etapas y márgenes de aceptación por hito. Cuánto cuesta: el valor total del proyecto y, más adelante, su explicación por categoría, VAN y TIR. Cerrar con la evidencia: cinco innovaciones con TRL, 36 riesgos con disparador y 120 casos de prueba diseñados, no ejecutados.
 
 Fuente: S4 · S7 · S8 · T-11 · T-14 · T-15 · T-16 · T-17 · T-19 · economico/datos/partidas.csv
 
@@ -30,9 +30,9 @@ Fuente: S4 · S7 · S8 · T-11 · T-14 · T-15 · T-16 · T-17 · T-19 · econom
 
 Tiempo: 50 s. 
 
-Abrir con el mapa completo. [Nube.] El núcleo vive en Azure Chile Central, en tres zonas: Front Door, API Management, los seis contextos en AKS, IoT Hub y Event Hubs para la ingesta, PostgreSQL con TimescaleDB, Managed Redis y Storage; Brazil South espera como recuperación. [Sitio.] San Bernardo no aloja el núcleo: mantiene viva la torre si cae el enlace y aloja la capa anticorrupción junto al sistema contable, que sigue siendo el único emisor. Cada terminal tiene dos nodos en activo y espera y un router 5G. [Flota.] 182 camiones llevan el equipo audIT; los 192 de terceros no se intervienen y llegan por la plataforma de su proveedor. [Componentes.] Son 39 componentes: 24 en la región primaria, uno en la secundaria y 14 fuera de la nube. Por eso es híbrida, como exige el Artículo 16.
+Abrir con el mapa completo. [Nube.] El núcleo vive en Azure Chile Central, en tres zonas: Front Door, API Management, los seis contextos en AKS, IoT Hub y Event Hubs para la ingesta, PostgreSQL con TimescaleDB, Managed Redis y Storage; Brazil South espera como recuperación. [Sitio.] San Bernardo no aloja el núcleo: mantiene viva la torre si cae el enlace y aloja la capa anticorrupción junto al sistema contable, que sigue siendo el único emisor. Cada terminal tiene dos nodos en activo y espera y un router 5G. [Flota.] 182 camiones llevan el equipo audIT; los 192 de terceros no se intervienen y llegan por la plataforma de su proveedor. [Componentes.] Son 47 componentes: 32 en la región primaria, uno en la secundaria y 14 fuera de la nube. Por eso es híbrida, como exige el Artículo 16.
 
-Fuente: S4 §4.2, Tabla de planos y §4.2.3: 39 componentes (24 + 1 + 14) · T-11 · FEP01 Art. 16.1 a 16.4 · Caso RT-06.01 · íconos: Azure Architecture Icons y Simple Icons
+Fuente: S4 §4.2, Tabla de planos y §4.2.3: 47 componentes (32 + 1 + 14) · T-11 · FEP01 Art. 16.1 a 16.4 · Caso RT-06.01 · íconos: Azure Architecture Icons y Simple Icons
 
 ## 5. Ocho capas, cada una con su producto.
 
@@ -66,13 +66,13 @@ Construir el árbol en voz alta. Nivel 0: el proyecto completo. Nivel 1: trece e
 
 Fuente: S7 §7.1, Figura 7.1 y Tabla 7.2 · T-14: diccionario de 54 paquetes · PMI (2019): regla del 100 %
 
-## 9. La red de 25 actividades define la ruta crítica.
+## 9. La red de actividades define la ruta crítica.
 
 Tiempo: 55 s. 
 
-Presentar la Gantt como red, no como barras sueltas. [Barras.] Veinticinco actividades en días hábiles, del día 0 al 420, que es el mes 21. [Dependencias.] Cada flecha es una precedencia fin a inicio del T-15: por ejemplo, la certificación A12 no parte hasta que terminan migración, construcción, integraciones y piloto a bordo. [Ruta crítica.] En rojo la ruta crítica: A01, A02, A05, A07, A09, A12, la reserva A14, y luego la Etapa 2: A17, A20, A22, la reserva A23, A24 y A25. Las líneas punteadas son holguras: la marcha blanca de la Etapa 1 queda fuera de la ruta, con 20 días. [Hitos.] Los rombos son los hitos del E-25; todos caen dentro de su mes contractual.
+Recorrer la Gantt hasta el día hábil 420. Las filas resumen actividades y revisiones de la malla final. Las líneas muestran precedencias visibles y el punteado indica holgura total; cuando una fila agrupa tareas indica la menor holgura. El rojo señala ventanas sin holgura. Los rombos se ubican en la fecha del acta, incluida la revisión. H4, H7 y H12 llegan al límite contractual.
 
-Fuente: T-15: malla de precedencias, ES/EF/LS/LF y holguras (PERT, días hábiles) · S7 §7.3.1, Tabla 7.7: hitos frente a la red
+Fuente: T-15: malla CPM final de 122 nodos · S7 §7.3.1 · E-25: actas H1–H12
 
 ## 10. El paquete 11.1 se controla con la compuerta G13.
 
@@ -82,27 +82,27 @@ Conectar la ficha del paquete 11.1 con su control en el cronograma: G13 exige ve
 
 Fuente: T-14: paquete 11.1 · T-15: compuerta G13, actividad A13 (40 d) y reserva A14 · T-16: riesgo R-16
 
-## 11. Veintiocho riesgos evaluados; ninguno queda alto.
+## 11. 36 riesgos evaluados y un riesgo de plazo abierto.
 
 Tiempo: 50 s. 
 
-Partir por el panorama completo. [Mapa.] Probabilidad por impacto, de 1 a 5; el color sigue la escala del S8. [Riesgos.] Los 28 riesgos del T-16 en su celda inicial: la mayoría se concentra en exposición media; siete quedan en alta, y uno, el R-06, llega a 15. [Antes y después.] Después de mitigar, ninguno queda en alta. [Cierre.] Las categorías: técnicos, contrapartes, gestión, ciberseguridad y continuidad. Lo residual es una estimación, no una medición.
+La matriz ubica los códigos por probabilidad e impacto iniciales. Los puntos suspensivos indican que hay más códigos en la celda. El respaldo contiene el registro completo. R-17 se mantiene alto hasta que se validen los plazos, la capacidad y las ventanas de terceros antes de fijar la línea base en H1.
 
-Fuente: T-16: 28 riesgos con probabilidad, impacto, exposición inicial y residual · S8 §8.1: escalas y umbrales
+Fuente: T-16: 36 riesgos con probabilidad, impacto, exposición inicial y residual · S8 §8.1: escalas y umbrales
 
-## 12. Las reservas y holguras absorben el riesgo del plan.
+## 12. Dos reservas protegen las marchas blancas.
 
 Tiempo: 45 s. 
 
-El riesgo de plazo se trata con números del plan. [Revelar reservas.] A14 protege la Etapa 1 con 14 días hábiles: dos desviaciones estándar de su cadena crítica, 97,9 % de cumplir el inicio del mes 13. A23 hace lo mismo para la Etapa 2 con 10 días y 97,6 %. Las dos fechas a la vez: 95,6 %. Y hay una regla: si una reserva baja de la mitad cuando a su cadena le queda más de la mitad, el caso sube al Comité Ejecutivo. [Revelar holguras.] Lo que no depende de audIT queda fuera de la ruta crítica: la factibilidad con terceros puede atrasarse 61 días; un cierre del paso Los Libertadores, unos 9 días hábiles, cabe en la holgura del piloto y de la instalación.
+A14 y A23 son ventanas de planificación de 14 y 10 días. R-17 permanece alto hasta validar capacidad, ventanas y estimaciones de tres puntos con los ejecutores. La malla CPM informa márgenes; las probabilidades de cumplimiento quedan sujetas a la validación de la línea base.
 
-Fuente: S7 §7.3.1: reservas A14 y A23 (PERT, 2σ), probabilidad conjunta 95,6 % y holguras de A04, A06, A11, A15 y A18 · Caso §13.2, p. 27
+Fuente: S7 §7.3.1 · S8 §8.2 · T-15 y T-16 (R-17)
 
 ## 13. Proveedores y adquisiciones clave de la solución.
 
 Tiempo: 55 s. 
 
-Mostrar de dónde viene cada pieza y quién la paga. La nube se contrata en Azure. El hardware de San Bernardo, de los cuatro terminales y de los 182 camiones lo compra el mandante, con la marca y el modelo ofertados. Cada proveedor responde a una restricción técnica ya vista en la arquitectura. El valor por adquisición y los gastos asociados a proveedores están en la planilla económica.
+Mostrar de dónde viene cada pieza y quién la paga. La nube se contrata en Azure. audIT asume cómputo y respaldo eléctrico. El mandante compra equipos de red y de campo conforme a la asignación del T-11. Cada proveedor responde a una restricción técnica ya vista en la arquitectura. El valor por adquisición y los gastos asociados a proveedores están en la planilla económica.
 
 Fuente: T-11: especificaciones ofertadas · S4 §4.2 · T-22 (FEP01 p.69) · economico/datos/partidas.csv
 
@@ -110,7 +110,7 @@ Fuente: T-11: especificaciones ofertadas · S4 §4.2 · T-22 (FEP01 p.69) · eco
 
 Tiempo: 50 s. 
 
-[Curva contractual.] La facturación avanza por hitos hasta H12 en M21. Ese mes se emite la primera factura de operación y el primer cobro mensual llega en M22. La facturación supera los costos desde M17. En M56, la facturación y los costos con intereses totalizan CLP 8.368 y 6.907 millones, respectivamente. [Caja.] Usamos el saldo mensual de la Fila C, con el efecto del IVA. Tras tres meses sin cobros, el mínimo de cierre es CLP 227 millones en M9. El mínimo es mensual. El orden de pagos y cobros dentro del mes se revisa en la sensibilidad de tesorería. El último cobro de operación queda en M57, fuera del horizonte graficado.
+[Curva contractual.] La facturación avanza por hitos hasta H12 en M21. Ese mes se emite la primera factura de operación y el primer cobro mensual llega en M22. Facturación sobre costos desde M17. En M56, la facturación y los costos con intereses totalizan CLP 8.368 y 6.907 millones, respectivamente. [Caja.] Usamos el saldo mensual de la Fila C, con el efecto del IVA. Tras tres meses sin cobros, el mínimo de cierre es CLP 227 millones en M9. El mínimo es mensual. El orden de pagos y cobros dentro del mes se revisa en la sensibilidad de tesorería. El último cobro de operación queda en M57, fuera del horizonte graficado.
 
 Fuente: Sobre 3 · Modelo financiero del 25.11.2026 · hojas «Curva S» (B:C) y «Flujo de Caja» (W) · E-21 y E-25
 
@@ -118,7 +118,7 @@ Fuente: Sobre 3 · Modelo financiero del 25.11.2026 · hojas «Curva S» (B:C) y
 
 Tiempo: 60 s. 
 
-Las bases evalúan con severidad un presupuesto sobreestimado o subestimado, así que cada categoría debe poder justificarse con el plan de actividades. Recorrer las cinco categorías del Formulario T-22, mostrar el costo total y compararlo con el valor ofertado por fase. Decir de dónde sale el margen y qué lo protege: reservas de la ruta crítica y reserva de riesgos.
+Las bases evalúan con severidad un presupuesto sobreestimado o subestimado, así que cada categoría debe poder justificarse con el plan de actividades. Mostrar las cuatro categorías del T-22. La lámina desglosa operación en costos propios y servicios de proveedores. Comparar el costo neto total con el precio neto por fase. El margen consolidado se calcula sobre el precio de venta.
 
 Fuente: T-22 (FEP01 p.69): gastos por categoría, con los gastos de proveedores sumados a operación · E-21 · economico/datos/partidas.csv
 
@@ -126,9 +126,9 @@ Fuente: T-22 (FEP01 p.69): gastos por categoría, con los gastos de proveedores 
 
 Tiempo: 70 s. 
 
-Presentar los cuatro indicadores en este orden: horizonte de 56 meses, tasa de descuento con su justificación, VAN y TIR. Luego la sensibilidad: qué variables se mueven y cuánto cambia el VAN. Cerrar con la conclusión financiera, que debe respaldarse con la planilla; no se enuncia ninguna cifra que no esté en ella.
+El VAN usa la Fila A de M1 a M56 con M0 en cero. La tasa mensual pondera deuda al 0,9 % mensual y capital propio al 20 % efectivo anual supuesto. La TIR es la raíz reportada por el modelo y su unicidad queda por validar. El VAN sigue positivo en los cuatro escenarios mostrados. Con atraso H5 a M14 y reserva en M12 queda un déficit antes de cobros de CLP 368,65 millones. La facilidad contingente de CLP 420 millones lo cubre en el escenario modelado, sujeto a disponibilidad. El cobro de M57 y los beneficios hipotéticos para Curimón se informan por separado del VAN base.
 
-Fuente: T-22 (FEP01 p.69) · E-24: horizonte de evaluación de 56 meses · economico/datos/partidas.csv
+Fuente: Sobre 3 · Modelo financiero 25.11.2026 (Indicadores y Sensibilidad) · Análisis financiero § Evaluación financiera
 
 ## 17. Condiciones comerciales: garantías y pagos por hito.
 
@@ -142,9 +142,9 @@ Fuente: FEP01 Art. 35° y 36°, p.23 · FEP01 p.74: hitos de pago H1 a H12 · ec
 
 Tiempo: 50 s. 
 
-Cerrar con tres frases, una por acto, sin repetir las láminas. Qué construimos: una arquitectura híbrida que sigue operando sin enlace. Cómo lo ejecutamos: 54 paquetes y una ruta crítica protegida por reservas. Cómo lo protegemos: 28 riesgos con disparador, ninguno alto después de mitigar. Mencionar que la calidad tiene 120 casos diseñados y abrir las preguntas.
+Cerrar con tres frases, una por acto, sin repetir las láminas. Qué construimos: una arquitectura híbrida que sigue operando sin enlace. Cómo lo ejecutamos: 54 paquetes y reservas para los inicios de marcha blanca. Cómo lo protegemos: 36 riesgos con disparador, R-17 se mantiene alto hasta validar la línea base. Mencionar que la calidad tiene 120 casos diseñados y abrir las preguntas.
 
-Fuente: Síntesis del Informe 2: S4, S5, S7, S8 y formularios T-11 a T-19
+Fuente: Síntesis de la oferta final: S4, S5, S7, S8 y formularios T-11 a T-19
 
 ## 19. Preguntas y discusión
 
@@ -158,7 +158,7 @@ Fuente: Transportes Curimón · TFEP-01/2026 · audIT Soluciones Tecnológicas S
 
 Tiempo: 45 s. Respaldo.
 
-Bajar de la idea al equipo. [Nube.] Lo que se contrata en Azure, por subred, y Brazil South con RPO de 15 minutos y RTO de 4 horas. [Sitios.] San Bernardo va en pares: dos servidores Dell R360, dos FortiGate, clima N+1, detección por aspiración y grupo electrógeno. Cada terminal tiene dos Karbon 430 en activo y espera y un router 5G. El camión lleva el G26I, el módem Iridium, el lector CAN sin contacto y el lector de tarjeta. [Enlaces.] Cada enlace tiene medio, respaldo y tiempo de conmutación: ExpressRoute de 100 Mbit/s con VPN de respaldo en menos de un minuto; terminal fijo con 5G; camión LTE con Iridium hacia IoT Hub. [Cierre.] Cinco ambientes desde el mismo código. Todo el hardware lo compra el mandante; el detalle y las cantidades están en el T-11.
+Bajar de la idea al equipo. [Nube.] Lo que se contrata en Azure, por subred, y Brazil South con RPO de 15 minutos y RTO de 4 horas. [Sitios.] San Bernardo va en pares: dos servidores Dell R360, dos FortiGate, clima N+1, detección por aspiración y grupo electrógeno. Cada terminal tiene dos AAEON ICS-6280A en activo y espera y un router 5G. El camión lleva el G26I, el módem Iridium, el lector CAN sin contacto y el lector de tarjeta. [Enlaces.] Cada enlace tiene medio, respaldo y tiempo de conmutación: ExpressRoute de 100 Mbit/s con VPN de respaldo en menos de un minuto; terminal fijo con 5G; camión LTE con Iridium hacia IoT Hub. [Cierre.] Cinco ambientes desde el mismo código. El T-11 detalla los equipos a cargo de audIT y del mandante.
 
 Fuente: S4 §4.2.1: implementos que compra el mandante · §4.2.4: catálogo Azure · §4.2.6: ambientes y respaldos · §4.2.7: enlaces y conmutación · T-11
 
@@ -194,15 +194,7 @@ Tomar un paquete real, el 11.2, y leerlo como lo leería el mandante. [Revelar.]
 
 Fuente: T-14: paquete 11.2 · S7 Tabla 7.1: cobertura contra el alcance · T-12: RNF-011 · T-17: CP-INT-05 y CP-SYS-05
 
-## 25. ¿Y si la construcción de la Etapa 1 se atrasa 10 días?
-
-Tiempo: 35 s. Respaldo.
-
-Poner la red a prueba con una pregunta que la comisión suele hacer. [Plan.] La cadena crítica de la Etapa 1: ambientes, construcción, certificación y la reserva A14 antes del inicio fijo de la marcha blanca en el día 240. [Atraso.] Si la construcción se atrasa 10 días, la certificación se corre y la reserva baja de 14 a 4 días. [Efecto.] H5 y H6 se cumplen igual: para eso existe la reserva. Pero H4, el fin de la construcción, tiene límite el día 200 y queda dos días tarde: la reserva protege la marcha blanca, no los hitos de pago, y eso es justamente el riesgo R-17. El consumo de más de la mitad de A14 activa el R-16.
-
-Fuente: Cálculo sobre la red del T-15 (A09 +10 días hábiles) · S7 §7.3.1: reserva A14 · S8: Monte Carlo de 10.000 corridas · T-16: R-16 y R-17
-
-## 26. La transición se ejecuta en dos etapas niveladas.
+## 25. La transición se ejecuta en dos etapas niveladas.
 
 Tiempo: 90 s. Respaldo.
 
@@ -210,15 +202,15 @@ Explicar el cronograma en escala proporcional M1–M24 con extensión a M56: E1 
 
 Fuente: S3 §3.2.4 · S7 §§7.2–7.3 · T-15: nivelación Células Alfa/Beta · T-18: etapas E1/E2 y legado hasta M24
 
-## 27. Siete riesgos altos, cada uno con su disparador.
+## 26. Diez riesgos con exposición inicial alta.
 
 Tiempo: 50 s. Respaldo.
 
-Bajar a los siete de exposición alta, sin leer la tabla. [Primeros.] El más alto es R-06: Microsoft retira Azure Cache for Redis justo en el mes 20; se evita desde el diseño naciendo en Azure Managed Redis, y baja de 15 a 3. R-11, la adhesión, se vigila con un corte en el mes 9. [Medio.] Dos son de ciberseguridad y datos: el portal expuesto y la réplica de datos personales en Brazil South, que exige aprobación del mandante en el H2. [Últimos.] La marcha blanca en temporada, el bloqueo indebido de un viaje, que se calibra con la prueba en paralelo, y el R-28, que vemos a continuación.
+Mostrar los diez riesgos de exposición inicial alta, sus disparadores y los objetivos de mitigación. R-17 sigue alto mientras se valida la línea base del cronograma.
 
 Fuente: T-16: riesgos con exposición ≥ 12, respuesta, disparador, plazo y exposición residual · S8 §8.3: plan de acción
 
-## 28. R-28: cuatro causas, cuatro barreras antes del evento.
+## 27. R-28: cuatro causas, cuatro barreras antes del evento.
 
 Tiempo: 50 s. Respaldo.
 
@@ -226,7 +218,7 @@ Este es el riesgo que dio origen al bloqueo de salida. [Evento.] Que el document
 
 Fuente: S4 §4.1.13: emisión del documento sin cobertura · T-16: R-28 y análisis de modos de falla · Caso RT-09.01 (90 s) · restricción 8
 
-## 29. Registro de riesgos · R-01 a R-14.
+## 28. Registro de riesgos · R-01 a R-13.
 
 Tiempo: 30 s. Respaldo.
 
@@ -234,7 +226,15 @@ Respaldo para preguntas sobre cualquier riesgo del registro.
 
 Fuente: T-16: identificación, evaluación P×I, respuesta, disparador y exposición residual
 
-## 30. Registro de riesgos · R-15 a R-28.
+## 29. Registro de riesgos · R-14 a R-25.
+
+Tiempo: 30 s. Respaldo.
+
+Respaldo para preguntas sobre cualquier riesgo del registro.
+
+Fuente: T-16: identificación, evaluación P×I, respuesta, disparador y exposición residual
+
+## 30. Registro de riesgos · R-26 a R-37.
 
 Tiempo: 30 s. Respaldo.
 

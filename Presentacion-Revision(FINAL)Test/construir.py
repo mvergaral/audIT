@@ -14,7 +14,7 @@ from zipfile import ZipFile
 BASE = Path(__file__).resolve().parent
 # Repositorio audIT: la presentación vive dentro de él (o, en copias antiguas, a su lado).
 AUDIT = next(p for p in (BASE.parent, BASE.parent / 'audIT') if (p / 'recursos/Formato-Oferta-audIT').is_dir())
-INF2 = AUDIT / 'recursos/Formato-Oferta-audIT/salida/informe2'
+FINAL = AUDIT / 'recursos/Formato-Oferta-audIT/salida/final'
 ECONOMICO = AUDIT / 'recursos/Formato-Oferta-audIT/economico'
 OUT = BASE / 'composition'
 TITULO = 'Propuesta Final'
@@ -931,7 +931,7 @@ SERV = [('azure-frontdoor', 'Front Door', 'borde y WAF'), ('azure-apim', 'API Ma
         ('azure-eventhubs', 'Event Hubs', 'protocolo Kafka'), ('azure-postgresql', 'PostgreSQL', '+ TimescaleDB'),
         ('azure-managedredis', 'Managed Redis', 'caché'), ('azure-storage', 'Storage', 'Blob · ADLS Gen2')]
 v = group(
-    plane(0, 0, 1340, 182, NUBE, 'NUBE · Azure Chile Central, tres zonas', '24 componentes', ic='cloud')
+    plane(0, 0, 1340, 182, NUBE, 'NUBE · Azure Chile Central, tres zonas', '32 componentes', ic='cloud')
     + ''.join(tile(20 + k * 164, 52, *s) for k, s in enumerate(SERV))
     + plane(1376, 0, 352, 182, NUBE, 'Brazil South', '1', ic='cloud')
     + tech('azure-postgresql', 1398, 56, 34) + tech('azure-eventhubs', 1440, 56, 34) + tech('azure-storage', 1482, 56, 34)
@@ -948,7 +948,7 @@ v += group(
     + chip(22, 360, 'Contable: único emisor', SITIO, 16, 30)
     + chip(300, 360, 'Sistema 2013: consulta hasta M24', SITIO, 16, 30)
     + plane(900, 240, 828, 168, SITIO, 'SITIO · 4 terminales regionales', '3 por gabinete', ic='router')
-    + iline(922, 306, ['server'], '2 OnLogic Karbon 430 en activo y espera', 18, WHITE, 600)
+    + iline(922, 306, ['server'], '2 AAEON ICS-6280A en activo y espera', 18, WHITE, 600)
     + iline(922, 340, ['router'], 'Router 5G Teltonika RUTX50 · switch · UPS', 18)
     + text(922, 380, 'Operan 24 h sin enlace', 18, SITIO, 700)
     + arrow(300, 240, 300, 184, SITIO, 3.5) + tech('azure-expressroute', 312, 196, 26)
@@ -974,20 +974,20 @@ v += group(
     2,
 )
 v += group(
-    text(0, 628, '39 componentes', 22, WHITE, 700)
-    + rect_bar(190, 610, round(1100 * 24 / 39), 24, NUBE, 6, grow_x=True)
-    + rect_bar(190 + round(1100 * 24 / 39), 610, round(1100 / 39), 24, '#7fb3bf', 0, grow_x=True)
-    + rect_bar(190 + round(1100 * 25 / 39), 610, round(1100 * 7 / 39), 24, SITIO, 0, grow_x=True)
-    + rect_bar(190 + round(1100 * 32 / 39), 610, round(1100 * 7 / 39), 24, FLOTA, 6, grow_x=True)
-    + text(1310, 628, '24 nube · 1 recuperación · 7 sitio · 7 flota', 18, MUTED, 600),
+    text(0, 628, '47 componentes', 22, WHITE, 700)
+    + rect_bar(190, 610, round(1100 * 32 / 47), 24, NUBE, 6, grow_x=True)
+    + rect_bar(190 + round(1100 * 32 / 47), 610, round(1100 / 47), 24, '#7fb3bf', 0, grow_x=True)
+    + rect_bar(190 + round(1100 * 33 / 47), 610, round(1100 * 7 / 47), 24, SITIO, 0, grow_x=True)
+    + rect_bar(190 + round(1100 * 40 / 47), 610, round(1100 * 7 / 47), 24, FLOTA, 6, grow_x=True)
+    + text(1310, 628, '32 primarios · 1 recuperación · 14 en sitio y flota', 18, MUTED, 600),
     3,
 )
 add(
     'La solución es híbrida: nube, sitio y flota.',
     'ARQUITECTURA · CONTEXTO Y TRES PLANOS / S4 §4.2 · §4.2.3 · T-11 · FEP01 Art. 16',
     v,
-    'S4 §4.2, Tabla de planos y §4.2.3: 39 componentes (24 + 1 + 14) · T-11 · FEP01 Art. 16.1 a 16.4 · Caso RT-06.01 · íconos: Azure Architecture Icons y Simple Icons',
-    'Abrir con el mapa completo. [Nube.] El núcleo vive en Azure Chile Central, en tres zonas: Front Door, API Management, los seis contextos en AKS, IoT Hub y Event Hubs para la ingesta, PostgreSQL con TimescaleDB, Managed Redis y Storage; Brazil South espera como recuperación. [Sitio.] San Bernardo no aloja el núcleo: mantiene viva la torre si cae el enlace y aloja la capa anticorrupción junto al sistema contable, que sigue siendo el único emisor. Cada terminal tiene dos nodos en activo y espera y un router 5G. [Flota.] 182 camiones llevan el equipo audIT; los 192 de terceros no se intervienen y llegan por la plataforma de su proveedor. [Componentes.] Son 39 componentes: 24 en la región primaria, uno en la secundaria y 14 fuera de la nube. Por eso es híbrida, como exige el Artículo 16.',
+    'S4 §4.2, Tabla de planos y §4.2.3: 47 componentes (32 + 1 + 14) · T-11 · FEP01 Art. 16.1 a 16.4 · Caso RT-06.01 · íconos: Azure Architecture Icons y Simple Icons',
+    'Abrir con el mapa completo. [Nube.] El núcleo vive en Azure Chile Central, en tres zonas: Front Door, API Management, los seis contextos en AKS, IoT Hub y Event Hubs para la ingesta, PostgreSQL con TimescaleDB, Managed Redis y Storage; Brazil South espera como recuperación. [Sitio.] San Bernardo no aloja el núcleo: mantiene viva la torre si cae el enlace y aloja la capa anticorrupción junto al sistema contable, que sigue siendo el único emisor. Cada terminal tiene dos nodos en activo y espera y un router 5G. [Flota.] 182 camiones llevan el equipo audIT; los 192 de terceros no se intervienen y llegan por la plataforma de su proveedor. [Componentes.] Son 47 componentes: 32 en la región primaria, uno en la secundaria y 14 fuera de la nube. Por eso es híbrida, como exige el Artículo 16.',
     45,
     4,
 )
@@ -1155,7 +1155,7 @@ v += group(
     + iline(22, 448, ['server'], '2 Liebert Mini-Mate2 (N+1) · VESDA · Kidde', 18)
     + iline(22, 478, ['ups'], 'Grupo electrógeno Himoinsa HYW-8', 18, SITIO, 700)
     + plane(680, 292, 600, 206, SITIO, 'Cada terminal (×4)', 'gabinete', ic='router')
-    + iline(702, 358, ['server'], '2 OnLogic Karbon 430, activo y espera', 18, WHITE, 600)
+    + iline(702, 358, ['server'], '2 AAEON ICS-6280A, activo y espera', 18, WHITE, 600)
     + iline(702, 388, ['router'], 'Teltonika RUTX50 5G (2 SIM) · TSW202', 18)
     + iline(702, 418, ['ups'], 'UPS APC SRT1000XLI', 18)
     + iline(702, 448, ['si-fortinet'], 'En los 5 terminales: FortiAP 234G', 18)
@@ -1190,7 +1190,7 @@ add(
     'ARQUITECTURA FÍSICA / S4 §4.2.1 · §4.2.4 · §4.2.6 · §4.2.7 · T-11',
     v,
     'S4 §4.2.1: implementos que compra el mandante · §4.2.4: catálogo Azure · §4.2.6: ambientes y respaldos · §4.2.7: enlaces y conmutación · T-11',
-    'Bajar de la idea al equipo. [Nube.] Lo que se contrata en Azure, por subred, y Brazil South con RPO de 15 minutos y RTO de 4 horas. [Sitios.] San Bernardo va en pares: dos servidores Dell R360, dos FortiGate, clima N+1, detección por aspiración y grupo electrógeno. Cada terminal tiene dos Karbon 430 en activo y espera y un router 5G. El camión lleva el G26I, el módem Iridium, el lector CAN sin contacto y el lector de tarjeta. [Enlaces.] Cada enlace tiene medio, respaldo y tiempo de conmutación: ExpressRoute de 100 Mbit/s con VPN de respaldo en menos de un minuto; terminal fijo con 5G; camión LTE con Iridium hacia IoT Hub. [Cierre.] Cinco ambientes desde el mismo código. Todo el hardware lo compra el mandante; el detalle y las cantidades están en el T-11.',
+    'Bajar de la idea al equipo. [Nube.] Lo que se contrata en Azure, por subred, y Brazil South con RPO de 15 minutos y RTO de 4 horas. [Sitios.] San Bernardo va en pares: dos servidores Dell R360, dos FortiGate, clima N+1, detección por aspiración y grupo electrógeno. Cada terminal tiene dos AAEON ICS-6280A en activo y espera y un router 5G. El camión lleva el G26I, el módem Iridium, el lector CAN sin contacto y el lector de tarjeta. [Enlaces.] Cada enlace tiene medio, respaldo y tiempo de conmutación: ExpressRoute de 100 Mbit/s con VPN de respaldo en menos de un minuto; terminal fijo con 5G; camión LTE con Iridium hacia IoT Hub. [Cierre.] Cinco ambientes desde el mismo código. El T-11 detalla los equipos a cargo de audIT y del mandante.',
     45,
     4,
 )
@@ -1356,27 +1356,24 @@ add(
 
 # ACTO 3 · Riesgos desde el T-16 y el S8 vigentes, separadores de acto y simulación de atraso.
 import re
-_t16 = (INF2 / 'AUDIT-Formulario-T-16.md').read_text(encoding='utf-8')
+_t16 = (FINAL / 'AUDIT-Formulario-T-16.md').read_text(encoding='utf-8')
 RISK = {}
 for m in re.finditer(r'id=(R-\d+), riesgo=\{([^}]*)\}, categoria=\{([^}]*)\}, probabilidad=(\d), impacto=(\d), exposicion=(\d+)', _t16):
     rid, desc, cat, p, i, e = m.groups()
     RISK[rid] = dict(desc=desc, cat=cat, p=int(p), i=int(i), e=int(e))
 for row in _t16.splitlines():
     cells = [c.strip() for c in row.strip().strip('|').split('|')]
-    if len(cells) == 5 and cells[0] in RISK:
-        a, b = cells[4].split(' a ')
-        RISK[cells[0]].update(resp=cells[1], trig=cells[2], when=cells[3], e0=int(a), e1=int(b))
-assert len(RISK) == 28 and all('e1' in r for r in RISK.values()), len(RISK)
+    if len(cells) == 6 and cells[0] in RISK:
+        a, b = cells[5].split(' a ')
+        RISK[cells[0]].update(resp=cells[2], trig=cells[3], when=cells[4], e0=int(a), e1=int(b))
+assert len(RISK) == 36 and all('e1' in r for r in RISK.values()), len(RISK)
 AMFE = []
 for row in _t16.splitlines():
     cells = [c.strip() for c in row.strip().strip('|').split('|')]
     if len(cells) == 8 and cells[3].isdigit() and cells[5].isdigit():
         AMFE.append(cells)
-MC = {}
-for row in (INF2 / 'AUDIT-Subdocumento8.md').read_text(encoding='utf-8').splitlines():
-    cells = [c.strip() for c in row.strip().strip('|').split('|')]
-    if len(cells) == 5 and re.fullmatch(r'H\d+', cells[0]) and cells[4].endswith('%'):
-        MC[cells[0]] = cells[4]
+# S7 §7.3.1 y S8 §8.2 mantienen R-17 alto hasta validar la línea base.
+# La tabla T-16 da 6 como exposición objetivo tras aplicar la mitigación.
 
 
 def level(e):
@@ -1402,10 +1399,10 @@ add('Qué construimos', 'ACTO 1 DE 3', separador('01', 'Qué construimos', 'Arqu
     'S4 y S5', 'Separador. Cambio de voz: el expositor 1 presenta el problema y la arquitectura de alto nivel.', 3, 1, kind='section')
 add('Cómo lo ejecutamos', 'ACTO 2 DE 3', separador('02', 'Cómo lo ejecutamos', 'EDT, carta Gantt y compuertas', ['EDT en 3 niveles', 'Red y ruta crítica', 'Qué pasa si', 'Transición']),
     'S7 · T-14 · T-15', 'Separador. Cambio de voz al expositor de la EDT.', 3, 1, kind='section')
-add('Cómo lo protegemos', 'ACTO 3 DE 3', separador('03', 'Cómo lo protegemos', 'Plan de riesgos del S8 y del T-16', ['28 riesgos', 'Los que más pesan', 'R-28 y AMFE', 'Reservas']),
+add('Cómo lo protegemos', 'ACTO 3 DE 3', separador('03', 'Cómo lo protegemos', 'Plan de riesgos del S8 y del T-16', ['36 riesgos', 'Los que más pesan', 'R-28 y AMFE', 'Reservas']),
     'S8 · T-16', 'Separador. Cambio de voz al expositor de riesgos.', 3, 1, kind='section')
 
-# Mapa de calor P×I con los 28 riesgos y distribución antes/después.
+# Mapa de calor P×I con los 36 riesgos y distribución antes/después.
 GX, GY, CS = 90, 10, 104
 v = ''
 grid = ''
@@ -1427,49 +1424,53 @@ for rid, r in RISK.items():
 chips = ''
 for (p, i), ids in cells.items():
     x0, y0 = GX + (i - 1) * CS + 6, GY + (5 - p) * CS + 30
-    for k, rid in enumerate(sorted(ids)):
-        cx, cy = x0 + (k % 2) * 46, y0 + (k // 2) * 17
-        chips += item(text(cx, cy + 12, rid.replace('R-', 'R'), 14, LEVEL_INK[level(p * i)], 700))
+    visible = ids if len(ids) <= 8 else ids[:7] + ['…']
+    for k, rid in enumerate(visible):
+        cx = x0 + (k % 2) * 46
+        cy = y0 + 10 + (k // 2) * 17
+        chips += item(text(cx, cy, rid, 13, LEVEL_INK[level(p * i)], 700))
 v += group(chips, 1)
 before = {lv: sum(level(r['e0']) == lv for r in RISK.values()) for lv in ('Alta', 'Media', 'Baja')}
-after = {lv: sum(level(r['e1']) == lv for r in RISK.values()) for lv in ('Alta', 'Media', 'Baja')}
 dist = (
-    text(720, 40, 'Antes y después de mitigar', 30, WHITE, 700)
+    text(720, 40, 'Exposición inicial de los 36 riesgos', 30, WHITE, 700)
     + text(720, 76, 'Escala del S8: baja 1–5 · media 6–11 · alta 12–25', 19, MUTED)
 )
 for k, lv in enumerate(('Alta', 'Media', 'Baja')):
-    y = 120 + k * 110
+    y = 140 + k * 85
+    width = before[lv] * 30
     dist += (
-        text(720, y + 30, lv, 24, LEVEL_INK[lv], 700)
-        + rect_bar(860, y + 6, before[lv] * 30, 30, '#ffffff', 6, stroke=LEVEL_INK[lv])
-        + text(860 + before[lv] * 30 + 12, y + 30, f'{before[lv]} antes', 19, MUTED, 600)
-        + rect_bar(860, y + 46, max(after[lv] * 30, 3), 30, LEVEL_INK[lv], 6, grow_x=True)
-        + text(860 + max(after[lv] * 30, 3) + 12, y + 70, f'{after[lv]} después', 19, LEVEL_INK[lv], 700)
+        text(720, y + 32, lv, 24, LEVEL_INK[lv], 700)
+        + rect_bar(860, y + 6, width, 34, LEVEL_INK[lv], 7, grow_x=True)
+        + text(872 + width, y + 32, str(before[lv]), 23, WHITE, 700)
     )
+dist += text(720, 420, '… indica que la celda contiene más códigos. Registro completo en el respaldo.', 20, MUTED)
 v += group(dist, 2)
 cats = {}
 for r in RISK.values():
     cats[r['cat']] = cats.get(r['cat'], 0) + 1
 v += group(
     card(720, 460, 1008, 170, CARD_BG, STROKE, 14, CORAL)
-    + text(744, 504, f'Ningún riesgo queda alto: los {before["Alta"]} de exposición alta tienen además plan de contingencia.', 21, WHITE, 700)
+    + text(744, 504, 'R-17 sigue alto hasta validar el cronograma en H1.', 21, WHITE, 700)
     + ''.join(text(744 + (k % 3) * 330, 548 + (k // 3) * 34, f'{n}  {c}', 18, MUTED, 600) for k, (c, n) in enumerate(sorted(cats.items(), key=lambda kv: -kv[1])))
-    + text(744, 616, 'Exposición residual estimada, no medida.', 17, MUTED),
+    + text(744, 616, 'El objetivo de R-17 es bajar de 12 a 6 tras la mitigación.', 17, MUTED),
     3,
 )
 add(
-    'Veintiocho riesgos evaluados; ninguno queda alto.',
+    '36 riesgos evaluados y un riesgo de plazo abierto.',
     'RIESGOS · MAPA P×I / S8 §8.1–8.2 · T-16',
     v,
-    'T-16: 28 riesgos con probabilidad, impacto, exposición inicial y residual · S8 §8.1: escalas y umbrales',
-    'Partir por el panorama completo. [Mapa.] Probabilidad por impacto, de 1 a 5; el color sigue la escala del S8. [Riesgos.] Los 28 riesgos del T-16 en su celda inicial: la mayoría se concentra en exposición media; siete quedan en alta, y uno, el R-06, llega a 15. [Antes y después.] Después de mitigar, ninguno queda en alta. [Cierre.] Las categorías: técnicos, contrapartes, gestión, ciberseguridad y continuidad. Lo residual es una estimación, no una medición.',
+    'T-16: 36 riesgos con probabilidad, impacto, exposición inicial y residual · S8 §8.1: escalas y umbrales',
+    'La matriz ubica los códigos por probabilidad e impacto iniciales. Los puntos suspensivos indican que hay más códigos en la celda. El respaldo contiene el registro completo. R-17 se mantiene alto hasta que se validen los plazos, la capacidad y las ventanas de terceros antes de fijar la línea base en H1.',
     50,
     4,
 )
 
 # Los riesgos que más pesan: exposición alta (≥ 12).
 SHORT = {
-    'R-06': ('Retiro de Azure Cache for Redis en el mes 20', 'Diseñar desde el inicio sobre Azure Managed Redis'),
+    'R-17': ('Hitos de pago sin margen', 'Un día hábil de atraso en la cadena del hito'),
+    'R-29': ('Diferencias en la convivencia con el sistema de 2013', 'Diferencia sobre el umbral de conciliación'),
+    'R-32': ('Disponibilidad de usuarios en temporada de fruta', 'Cupos sin confirmar en M9 o asistencia < 80 %'),
+    'R-35': ('Manipulación del equipo a bordo', 'Equipo sin reporte con cobertura o sello roto'),
     'R-11': ('Adhesión bajo 104 en el mes 16 y 134 en el 21', '≤ 59 de 148 con anexo al cierre del mes 9'),
     'R-18': ('Marcha blanca E1 en temporada de fruta', 'Condición de cierre bajo umbral en el mes 14'),
     'R-23': ('Ataque al portal expone a conductores externos', 'Vulnerabilidad crítica abierta o acceso anómalo'),
@@ -1486,26 +1487,26 @@ v = group(
 )
 for k, rid in enumerate(top):
     r = RISK[rid]
-    y = 54 + k * 82
+    y = 54 + k * 57
     name, trig = SHORT.get(rid, (r['desc'][:48], r['trig'][:48]))
     v += group(item(
-        f'<rect x="0" y="{y}" width="1728" height="74" rx="10" fill="{CARD_BG if k % 2 == 0 else "#ffffff"}" stroke="{STROKE}" stroke-width="1.5"/>'
-        + text(24, y + 46, rid, 24, CORAL, 700)
-        + text(118, y + 34, name, 20, WHITE, 700)
-        + text(118, y + 60, r['cat'], 15, MUTED, 600)
-        + text(730, y + 46, f"{r['p']} × {r['i']}", 22, WHITE, 700)
-        + badge(900, y + 20, r['resp'], C if r['resp'] == 'Mitigar' else SITIO, '#ffffff', 130, 34, 17, 700)
-        + text(1080, y + 46, trig, 18, WHITE)
-        + badge(1560, y + 20, str(r['e0']), CORAL, '#fbeaea', 46, 34, 18, 700)
-        + arrow(1612, y + 37, 1650, y + 37, MUTED, 2.5)
-        + badge(1656, y + 20, str(r['e1']), FLOTA, TINT[FLOTA], 46, 34, 18, 700)
+        f'<rect x="0" y="{y}" width="1728" height="51" rx="10" fill="{CARD_BG if k % 2 == 0 else "#ffffff"}" stroke="{STROKE}" stroke-width="1.5"/>'
+        + text(24, y + 33, rid, 24, CORAL, 700)
+        + text(118, y + 22, name, 20, WHITE, 700)
+        + text(118, y + 42, r['cat'], 15, MUTED, 600)
+        + text(730, y + 33, f"{r['p']} × {r['i']}", 22, WHITE, 700)
+        + badge(900, y + 8, r['resp'], C if r['resp'] == 'Mitigar' else SITIO, '#ffffff', 130, 34, 17, 700)
+        + text(1080, y + 33, trig, 18, WHITE)
+        + badge(1560, y + 8, str(r['e0']), CORAL, '#fbeaea', 46, 34, 18, 700)
+        + arrow(1612, y + 25, 1650, y + 25, MUTED, 2.5)
+        + badge(1656, y + 8, str(r['e1']), FLOTA, TINT[FLOTA], 46, 34, 18, 700)
     ), 0 if k < 2 else 1 if k < 5 else 2)
 add(
-    'Siete riesgos altos, cada uno con su disparador.',
+    'Diez riesgos con exposición inicial alta.',
     'RIESGOS · EXPOSICIÓN ALTA / T-16 · S8 §8.3',
     v,
     'T-16: riesgos con exposición ≥ 12, respuesta, disparador, plazo y exposición residual · S8 §8.3: plan de acción',
-    'Bajar a los siete de exposición alta, sin leer la tabla. [Primeros.] El más alto es R-06: Microsoft retira Azure Cache for Redis justo en el mes 20; se evita desde el diseño naciendo en Azure Managed Redis, y baja de 15 a 3. R-11, la adhesión, se vigila con un corte en el mes 9. [Medio.] Dos son de ciberseguridad y datos: el portal expuesto y la réplica de datos personales en Brazil South, que exige aprobación del mandante en el H2. [Últimos.] La marcha blanca en temporada, el bloqueo indebido de un viaje, que se calibra con la prueba en paralelo, y el R-28, que vemos a continuación.',
+    'Mostrar los diez riesgos de exposición inicial alta, sus disparadores y los objetivos de mitigación. R-17 sigue alto mientras se valida la línea base del cronograma.',
     50,
     3,
 )
@@ -1566,68 +1567,9 @@ add(
     5,
 )
 
-# Qué pasa si A09 se atrasa 10 días (aritmética sobre la red del T-15).
-D0, D1, X0, X1 = 60, 290, 290, 1728
-dx = lambda d: round(X0 + (d - D0) * (X1 - X0) / (D1 - D0), 1)
-CH = [('A07', 'Infraestructura y ambientes', 76, 112), ('A09', 'Construcción Etapa 1', 112, 192),
-      ('A12', 'Certificación Etapa 1', 192, 226), ('A14', 'Reserva Etapa 1', 226, 240), ('A15', 'Marcha blanca E1', 240, 290)]
-DELAY = 10
-v = ''
-axis = ''
-for d in range(60, 300, 20):
-    axis += f'<line x1="{dx(d)}" y1="30" x2="{dx(d)}" y2="420" stroke="#e3ebef" stroke-width="1"/>' + text(dx(d), 22, f'día {d}', 14, MUTED, 500, 'middle')
-for d, lab in ((200, 'límite H4'), (240, 'límite H5 · H6 fijo')):
-    axis += f'<line x1="{dx(d)}" y1="30" x2="{dx(d)}" y2="420" stroke="{AMBER}" stroke-width="2" stroke-dasharray="6 5"/>' + text(dx(d) + 6, 440, lab, 15, AMBER, 700)
-plan = ''
-for k, (aid, name, s, e) in enumerate(CH):
-    y = 50 + k * 72
-    colr = '#f6dede' if aid == 'A14' else (CORAL if aid != 'A15' else C)
-    plan += text(0, y + 30, aid, 18, CORAL if aid != 'A15' else C, 700) + text(54, y + 30, name, 17, WHITE, 600)
-    ghost = ' data-dim-at="1"' if aid in ('A12', 'A14') else ''
-    plan += f'<rect x="{dx(s)}" y="{y + 10}" width="{dx(e) - dx(s)}" height="30" rx="6" fill="{colr}"' + (f' stroke="{CORAL}" stroke-dasharray="5 4"' if aid == 'A14' else '') + ghost + '/>'
-plan += text(dx(192) + 8, 50 + 72 + 60, 'H4', 15, AMBER, 700) + text(dx(226) + 8, 50 + 144 + 60, 'H5', 15, AMBER, 700)
-v += group(axis + plan + text(dx(240) - 8, 50 + 288 + 60, 'H6', 15, AMBER, 700, 'end'), 0)
-y9, y12, y14 = 50 + 72, 50 + 144, 50 + 216
-shift = dx(192 + DELAY) - dx(192)
-v += group(
-    rect_bar(dx(192), y9 + 10, shift, 30, '#e8a3a3', 0, grow_x=True)
-    + text(dx(192 + DELAY) + 8, y9 + 31, f'+{DELAY} días', 17, CORAL, 700)
-    + f'<g data-slide-from-x="{-shift}"><rect x="{dx(192 + DELAY)}" y="{y12 + 10}" width="{dx(226) - dx(192)}" height="30" rx="6" fill="{CORAL}" stroke="#ffffff" stroke-width="2"/></g>'
-    + f'<rect x="{dx(226 + DELAY)}" y="{y14 + 10}" width="{dx(240) - dx(226 + DELAY)}" height="30" rx="6" fill="{CORAL}"/>'
-    + text(dx(226) - 8, y14 + 31, 'A14: 14 → 4 días', 17, CORAL, 700, 'end'),
-    1,
-)
-v += group(
-    card(0, 470, 560, 160, '#e2f0e8', FLOTA, 14, FLOTA)
-    + text(24, 512, 'H5 y H6 se mantienen', 24, FLOTA, 700)
-    + text(24, 548, f'A12 termina el día {226 + DELAY}, antes del 240.', 18, WHITE)
-    + text(24, 576, 'La reserva A14 absorbe 10 de sus 14 días.', 18, WHITE)
-    + text(24, 604, f"Monte Carlo: H6 se cumple en {MC.get('H6', '')} de las corridas.", 16, MUTED)
-    + card(584, 470, 560, 160, '#fbeaea', CORAL, 14, CORAL)
-    + text(608, 512, 'H4 queda 2 días tarde', 24, CORAL, 700)
-    + text(608, 548, f'A09 termina el día {192 + DELAY}; su límite es el 200.', 18, WHITE)
-    + text(608, 576, 'La reserva protege H6, no los hitos de pago.', 18, WHITE)
-    + text(608, 604, f"Es el riesgo R-17 · H4 cumple en {MC.get('H4', '')}.", 16, MUTED)
-    + card(1168, 470, 560, 160, CARD_BG, STROKE, 14, SITIO)
-    + text(1192, 512, 'Se activa R-16', 24, SITIO, 700)
-    + text(1192, 548, 'Consumo > 50 % de A14: revisión', 18, WHITE)
-    + text(1192, 576, 'quincenal hasta el día 240.', 18, WHITE)
-    + text(1192, 604, 'G13 y A13 se corren, pero tienen 38 días de holgura.', 16, MUTED),
-    2,
-)
-add(
-    '¿Y si la construcción de la Etapa 1 se atrasa 10 días?',
-    'CARTA GANTT · QUÉ PASA SI / T-15 · S7 §7.3.1 · S8 Monte Carlo · T-16',
-    v,
-    'Cálculo sobre la red del T-15 (A09 +10 días hábiles) · S7 §7.3.1: reserva A14 · S8: Monte Carlo de 10.000 corridas · T-16: R-16 y R-17',
-    'Poner la red a prueba con una pregunta que la comisión suele hacer. [Plan.] La cadena crítica de la Etapa 1: ambientes, construcción, certificación y la reserva A14 antes del inicio fijo de la marcha blanca en el día 240. [Atraso.] Si la construcción se atrasa 10 días, la certificación se corre y la reserva baja de 14 a 4 días. [Efecto.] H5 y H6 se cumplen igual: para eso existe la reserva. Pero H4, el fin de la construcción, tiene límite el día 200 y queda dos días tarde: la reserva protege la marcha blanca, no los hitos de pago, y eso es justamente el riesgo R-17. El consumo de más de la mitad de A14 activa el R-16.',
-    35,
-    3,
-)
-
-# Respaldo: registro completo de los 28 riesgos (dos páginas) y AMFE completo.
+# Respaldo: registro completo de los 36 riesgos (dos páginas) y AMFE completo.
 ordered = sorted(RISK)
-for page, chunk in enumerate((ordered[:14], ordered[14:])):
+for page, chunk in enumerate(ordered[i:i + 12] for i in range(0, len(ordered), 12)):
     v = card(0, 0, 1728, 40, '#fbeaea', STROKE, 8) + ''.join(
         text(x, 27, lab, 15, CORAL, 700, extra='letter-spacing="1.5"') for x, lab in
         [(16, 'ID'), (96, 'RIESGO'), (1010, 'P×I'), (1090, 'RESP.'), (1200, 'DISPARADOR'), (1650, 'EXP.')])
@@ -1908,7 +1850,7 @@ v += group(
     + text(72, 272, 'Capacitación de torre, terminales y conductores', 24, WHITE)
     + card(48, 308, 714, 92, CARD_ALT, STROKE, 12, C)
     + text(72, 344, 'RESPONSABLE Y VENTANA EN RED (T-15)', 21, C, 700)
-    + text(72, 378, 'Líder de Implantación  ·  Actividad A13 (Día 182 al 222 · M10–M12)', 21, WHITE)
+    + text(72, 378, 'Líder de Implantación  ·  Actividad A13 (días 182–222 · 8 días de holgura total)', 21, WHITE)
     + card(48, 414, 714, 92, CARD_ALT, STROKE, 12, AMBER)
     + text(72, 450, 'CRITERIO DE ACEPTACIÓN', 21, AMBER, 700)
     + text(72, 484, 'G13 disponible antes de A13 · usuarios certificados', 24, WHITE)
@@ -1969,38 +1911,70 @@ add(
     3,
 )
 
-# Carta Gantt de la red (T-15, Tabla 7.7): 25 actividades, precedencias fin-inicio, holguras y ruta crítica.
-T15 = INF2 / 'AUDIT-Formulario-T-15.md'
+# Carta Gantt de la malla final, con las actividades afines en una misma fila.
+red = {}
+for row in (FINAL / 'AUDIT-Formulario-T-15.md').read_text(encoding='utf-8').splitlines():
+    cells = [cell.strip() for cell in row.strip().strip('|').split('|')]
+    if len(cells) == 10 and all(c.isdigit() for c in cells[3:]):
+        code, _, predecessors, duration, es, ef, _, lf, ht, _ = cells
+        red[code] = dict(preds=predecessors.split(', '), dur=int(duration),
+                         es=int(es), ef=int(ef), lf=int(lf), ht=int(ht))
+assert len(red) == 122, len(red)
+
+gantt_rows = [
+    ('A01', 'Inicio del proyecto', ('A01',)),
+    ('A02', 'Levantamiento y línea base', ('A02', 'R-H1')),
+    ('A03', 'Cobertura móvil en terreno', ('A03',)),
+    ('A04', 'Factibilidad con terceros', ('A04',)),
+    ('A05', 'Arquitectura y datos', ('A05', 'R-H2')),
+    ('A06', 'Adhesión para los primeros lotes', ('A06-ANEXO', 'A06-LOTE')),
+    ('A07', 'Ambientes y revisión', ('A07', 'R-H3')),
+    ('A08', 'Migración de vigencias', ('A08-VIG',)),
+    ('A09', 'Ocho sprints E1 y revisión', tuple(f'A09-{i}' for i in range(1, 9)) + ('R-H4',)),
+    ('A10', 'Integración contable', ('A10-CONT',)),
+    ('A11', 'Piloto a bordo', ('A11-PIL',)),
+    ('A12', 'Certificación E1 y revisión', ('A12-SIS', 'A12-SEC', 'A12-UAT', 'R-H5')),
+    ('G13', 'Entrega PREPROD a capacitación', ('G13',)),
+    ('A13', 'Capacitación por turnos', ('A13-FAM', 'A13-PRA')),
+    ('INN5', 'Innovación circadiana y revisión H6', ('INN5-D', 'INN5-C', 'INN5-Q', 'R-H6')),
+    ('A14', 'Reserva Etapa 1', ('A14',)),
+    ('A15', 'Marcha blanca E1', ('A15',)),
+    ('A16', 'Transferencia tecnológica', ('A16',)),
+    ('A17', 'Diseño Etapa 2 y revisión', ('A17', 'R-H8')),
+    ('A18', 'Lotes de instalación M7–M9', ('M7-KIT', 'M8-KIT', 'M9-KIT')),
+    ('A19', 'Corte E1 y revisión', ('A19', 'R-H7')),
+    ('A20', 'Cinco sprints Etapa 2', tuple(f'A20-{i}' for i in range(1, 6))),
+    ('A21', 'Estabilización E1', ('A21',)),
+    ('A22', 'Certificación E2 y revisión', ('A22-SIS', 'A22-SEC', 'R-H10')),
+    ('A23', 'Reserva Etapa 2', ('A23',)),
+    ('A24', 'Marcha blanca E2', ('A24',)),
+    ('A25', 'Corte E2 y revisión', ('A25', 'R-H12')),
+]
+GANTT_HITOS = {'H1': 'A02', 'H2': 'A05', 'H3': 'A07', 'H4': 'A09', 'H5': 'A12',
+               'H6': 'A15', 'H7': 'A19', 'H8': 'A17', 'H9': 'A20', 'H10': 'A22',
+               'H11': 'A24', 'H12': 'A25'}
+GANTT_NAMES = {key: label for key, label, _ in gantt_rows}
 ACTS = {}
-for row in T15.read_text(encoding='utf-8').splitlines():
-    cells = [c.strip() for c in row.strip().strip('|').split('|')]
-    if len(cells) == 11 and cells[0][:1] in 'AG' and cells[0][1:].isdigit():
-        aid, desc, preds, dur, es, ef, ls, lf, ht, hl, crit = cells
-        links_in = []
-        for p in ([] if preds == 'Ninguna' else preds.split(',')):
-            # Precedencia fin-inicio, con adelanto opcional: «A09 FS−10».
-            parts = p.strip().replace('−', '-').split()
-            links_in.append((parts[0], int(parts[1][2:]) if len(parts) > 1 else 0))
-        ACTS[aid] = dict(
-            preds=links_in, dur=int(dur), row=len(ACTS),
-            es=int(es), ef=int(ef), lf=int(lf), ht=int(ht), crit=crit == 'Sí',
-        )
-assert sum(a[0] == 'A' for a in ACTS) == 25, len(ACTS)
-GANTT_NAMES = {
-    'A01': 'Inicio del proyecto', 'A02': 'Levantamiento y línea base', 'A03': 'Cobertura móvil en terreno',
-    'A04': 'Factibilidad con terceros', 'A05': 'Arquitectura y datos', 'A06': 'Adhesión de transportistas',
-    'A07': 'Infraestructura y ambientes', 'A08': 'Migración de vigencias', 'A09': 'Construcción Etapa 1',
-    'A10': 'Integraciones', 'A11': 'Piloto a bordo', 'A12': 'Certificación Etapa 1',
-    'A13': 'Capacitación', 'A14': 'Reserva Etapa 1', 'A15': 'Marcha blanca E1',
-    'A16': 'Transferencia tecnológica', 'A17': 'Diseño Etapa 2', 'A18': 'Instalación progresiva',
-    'A19': 'Paso a producción E1', 'A20': 'Construcción Etapa 2', 'A21': 'Estabilización E1',
-    'A22': 'Certificación Etapa 2', 'A23': 'Reserva Etapa 2', 'A24': 'Marcha blanca E2',
-    'A25': 'Producción Etapa 2', 'G13': 'Entrega G13 a capacitación',
-}
-# Hitos del Formulario E-25 frente a la red (S7 Tabla 7.7): (actividad, al inicio o al final)
-GANTT_HITOS = {'H1': ('A02', 'ef'), 'H2': ('A05', 'ef'), 'H3': ('A07', 'ef'), 'H4': ('A09', 'ef'), 'H5': ('A12', 'ef'),
-               'H6': ('A15', 'es'), 'H8': ('A17', 'ef'), 'H7': ('A19', 'ef'), 'H9': ('A20', 'ef'), 'H10': ('A22', 'ef'),
-               'H11': ('A24', 'es'), 'H12': ('A25', 'ef')}
+for key, _, nodes in gantt_rows:
+    parts = [red[node] for node in nodes]
+    start, end = min(p['es'] for p in parts), max(p['ef'] for p in parts)
+    slack = min(p['ht'] for p in parts)
+    ACTS[key] = dict(row=len(ACTS), es=start, ef=end, lf=end + slack, ht=slack,
+                     dur=end - start, crit=slack == 0)
+
+node_rows = {node: key for key, _, nodes in gantt_rows for node in nodes} | GANTT_HITOS
+node_rows.update({'A07-DEV': 'A07', 'G13-Q': 'A09', 'L7': 'A11'})
+links_in = set()
+for key, _, nodes in gantt_rows:
+    for node in nodes:
+        for pred in red[node]['preds']:
+            code, _, relation = pred.partition(' ')
+            parent = node_rows.get(code)
+            if parent and parent != key:
+                lag = int(relation[2:] or 0)
+                origin = red[code]['es' if relation.startswith('SS') else 'ef'] + lag
+                links_in.add((parent, key, origin, red[node]['es']))
+
 GX0, GX1, GY0, RH = 330, 1716, 58, 540 / len(ACTS)
 gx = lambda d: round(GX0 + d * (GX1 - GX0) / 420, 1)
 gy = lambda aid: round(GY0 + ACTS[aid]['row'] * RH, 1)
@@ -2031,19 +2005,18 @@ for aid, a in ACTS.items():
         continue
     bars += f'<g data-item="1"{dim}><rect x="{gx(a["es"])}" y="{y + 4}" width="{w}" height="14" rx="4" fill="{fill}"{stroke}/></g>'
 links = ''
-for aid, a in ACTS.items():
-    for p, lag in a['preds']:
-        pa = ACTS[p]
-        x1, y1 = gx(pa['ef'] + lag), gy(p) + 18
-        x2, y2 = gx(a['es']), gy(aid) + 4
-        both = pa['crit'] and a['crit']
-        colr = CRIT if both else '#93a9b4'
-        d = f'M{x1} {y1} V{y2 - 4}' + (f' H{x2}' if x2 - x1 > 2 else '')
-        ln = int(abs(y2 - y1) + abs(x2 - x1)) + 8
-        links += (
-            f'<g{"" if both else DIM2}><path d="{d}" fill="none" stroke="{colr}" stroke-width="{2.2 if both else 1.3}" data-draw="{ln}"/>'
-            f'<circle cx="{x2 if x2 - x1 > 2 else x1}" cy="{y2 - 4}" r="2.6" fill="{colr}"/></g>'
-        )
+for parent, aid, origin, start in sorted(links_in):
+    pa, a = ACTS[parent], ACTS[aid]
+    x1, y1 = gx(origin), gy(parent) + 18
+    x2, y2 = gx(start), gy(aid) + 4
+    both = pa['crit'] and a['crit']
+    colr = CRIT if both else '#93a9b4'
+    d = f'M{x1} {y1} V{y2 - 4}' + (f' H{x2}' if abs(x2 - x1) > 2 else '')
+    length = int(abs(y2 - y1) + abs(x2 - x1)) + 8
+    links += (
+        f'<g{"" if both else DIM2}><path d="{d}" fill="none" stroke="{colr}" stroke-width="{2.2 if both else 1.3}" data-draw="{length}"/>'
+        f'<circle cx="{x2}" cy="{y2 - 4}" r="2.6" fill="{colr}"/></g>'
+    )
 floats = ''
 for aid, a in ACTS.items():
     if a['ht'] > 0:
@@ -2053,19 +2026,18 @@ for aid, a in ACTS.items():
             f'<line x1="{gx(a["lf"])}" y1="{y - 5}" x2="{gx(a["lf"])}" y2="{y + 5}" stroke="{MUTED}" stroke-width="1.5"/>'
         )
 hitos = ''
-for h, (aid, edge) in GANTT_HITOS.items():
-    x = gx(ACTS[aid][edge])
+for h, aid in GANTT_HITOS.items():
+    x = gx(red[h]['es'])
     y = gy(aid) + 11
-    h = f"{h} · {round(float(MC[h].rstrip(' %').replace(',', '.')))} %" if h in MC else h
     hitos += item(
         f'<rect x="{x - 7}" y="{y - 7}" width="14" height="14" transform="rotate(45 {x} {y})" fill="{AMBER}" stroke="#ffffff" stroke-width="2"/>'
-        + (text(x - 14, y + 5, h, 15, AMBER, 700, 'end') if edge == 'es'
+        + (text(x - 14, y + 5, h, 15, AMBER, 700, 'end') if h in ('H6', 'H11')
            else text(x - 10, y - 10, h, 15, AMBER, 700, 'end') if h.startswith('H12')
            else text(x + 10, y - 9, h, 15, AMBER, 700))
     )
 legend_y = GY0 + len(ACTS) * RH + 22
 legend = (
-    f'<rect x="0" y="{legend_y - 12}" width="26" height="12" rx="3" fill="{CRIT}"/>' + text(34, legend_y, 'Ruta crítica · 13 actividades sin holgura', 17, WHITE, 600)
+    f'<rect x="0" y="{legend_y - 12}" width="26" height="12" rx="3" fill="{CRIT}"/>' + text(34, legend_y, 'Ventana sin holgura total', 17, WHITE, 600)
     + f'<rect x="420" y="{legend_y - 12}" width="26" height="12" rx="3" fill="{C}"/>' + text(454, legend_y, 'Con holgura', 17, WHITE)
     + f'<line x1="600" y1="{legend_y - 6}" x2="640" y2="{legend_y - 6}" stroke="{MUTED}" stroke-width="1.5" stroke-dasharray="2 3"/>' + text(648, legend_y, 'Holgura total', 17, WHITE)
     + f'<rect x="800" y="{legend_y - 12}" width="26" height="12" rx="3" fill="#f6dede" stroke="{CRIT}" stroke-dasharray="4 3"/>' + text(834, legend_y, 'Reserva', 17, WHITE)
@@ -2077,11 +2049,11 @@ v += group(links, 1)
 v += group(floats + legend, 2)
 v += group(hitos, 3)
 add(
-    'La red de 25 actividades define la ruta crítica.',
+    'La red de actividades define la ruta crítica.',
     'CARTA GANTT Y DEPENDENCIAS / S7 §7.3.1 · T-15 · FEP01 E-25',
     v,
-    'T-15: malla de precedencias, ES/EF/LS/LF y holguras (PERT, días hábiles) · S7 §7.3.1, Tabla 7.7: hitos frente a la red',
-    'Presentar la Gantt como red, no como barras sueltas. [Barras.] Veinticinco actividades en días hábiles, del día 0 al 420, que es el mes 21. [Dependencias.] Cada flecha es una precedencia fin a inicio del T-15: por ejemplo, la certificación A12 no parte hasta que terminan migración, construcción, integraciones y piloto a bordo. [Ruta crítica.] En rojo la ruta crítica: A01, A02, A05, A07, A09, A12, la reserva A14, y luego la Etapa 2: A17, A20, A22, la reserva A23, A24 y A25. Las líneas punteadas son holguras: la marcha blanca de la Etapa 1 queda fuera de la ruta, con 20 días. [Hitos.] Los rombos son los hitos del E-25; todos caen dentro de su mes contractual.',
+    'T-15: malla CPM final de 122 nodos · S7 §7.3.1 · E-25: actas H1–H12',
+    'Recorrer la Gantt hasta el día hábil 420. Las filas resumen actividades y revisiones de la malla final. Las líneas muestran precedencias visibles y el punteado indica holgura total; cuando una fila agrupa tareas indica la menor holgura. El rojo señala ventanas sin holgura. Los rombos se ubican en la fecha del acta, incluida la revisión. H4, H7 y H12 llegan al límite contractual.',
     90,
     4,
 )
@@ -2145,7 +2117,7 @@ v += group(
     + badge(891, 486, 'S7 §7.2 · T-15: NIVELACIÓN DE CAPACIDAD (M13–M15)', AMBER, '#fff0d7', 495, 32, 18)
     + text(891, 548, 'Partición de equipos sin sobreasignación en solapamiento:', 26, WHITE, 600)
     + text(891, 582, '• Célula Alfa: Marcha blanca y soporte E1  |  Célula Beta: Construcción E2.', 20, AMBER)
-    + text(891, 612, '• Especialista de Seguridad e Integración: 1,0 FTE dedicado sin doble cómputo.', 20, MUTED),
+    + text(891, 612, '• M14–M15: 21,5 FTE E1 + 14,1 FTE E2 + 1,4 FTE coordinación.', 20, MUTED),
     2,
 )
 add(
@@ -2158,74 +2130,34 @@ add(
     3,
 )
 
-# Reservas y holguras como respuesta al riesgo de cronograma (S7 §7.3.1, Tabla 7.6 y holguras no críticas).
-v = group(
-    card(0, 0, 840, 650, CARD_BG, STROKE, 16, CORAL, accent_top=True)
-    + badge(28, 26, 'RESERVAS DE CONTINGENCIA · S7 TABLA 7.6', CORAL, '#fbeaea', None, 34, 17)
-    + text(28, 108, 'Dos reservas protegen la ruta crítica', 30, WHITE, 700)
-    + text(28, 142, 'Cada una mide dos desviaciones estándar PERT de la cadena que protege.', 19, MUTED),
-    0,
-)
-for k, (rid, chain, acts_txt, sigma, days, prob, end_txt) in enumerate([
-    ('A14', 'Etapa 1', 'A01 · A02 · A05 · A07 · A09 · A12', '6,89', 14, 0.979, 'hasta el día 240 (inicio M13)'),
-    ('A23', 'Etapa 2', 'A17 · A20 · A22', '5,04', 10, 0.976, 'hasta el día 360 (inicio M19)'),
-]):
-    y = 176 + k * 196
+# Reservas de planificación y validación de la línea base de plazo.
+v = ''
+for k, (rid, dias, hito, fecha) in enumerate((
+    ('A14', 14, 'H6 · Etapa 1', 'Día 240 · inicio de M13'),
+    ('A23', 10, 'H11 · Etapa 2', 'Día 360 · inicio de M19'),
+)):
+    x = k * 880
     v += group(
-        card(28, y, 784, 180, '#ffffff', STROKE, 12, CORAL)
-        + text(52, y + 44, f'Reserva {rid} · {days} días hábiles', 26, CORAL, 700)
-        + text(52, y + 80, f'Cadena {chain}: {acts_txt}', 20, WHITE, 600)
-        + text(52, y + 110, f'σ = {sigma} días · {end_txt}', 19, MUTED)
-        + rect_bar(52, y + 130, 520, 24, '#e7eef1', 8)
-        + rect_bar(52, y + 130, round(520 * prob), 24, C, 8, grow_x=True)
-        + text(590, y + 150, f'{prob * 100:.1f} %'.replace('.', ','), 26, C, 700)
-        + text(700, y + 150, 'de cumplir', 17, MUTED),
-        1,
+        card(x, 0, 848, 252, CARD_BG, STROKE, 16, C, accent_top=True)
+        + text(x + 28, 61, f'{rid} · {hito}', 26, C, 700)
+        + text(x + 28, 144, f'{dias} días hábiles', 62, WHITE, 700)
+        + text(x + 28, 211, fecha, 26, MUTED),
+        k,
     )
 v += group(
-    card(28, 568, 784, 66, '#fff6e8', AMBER, 12, AMBER)
-    + text(52, 598, 'Ambas fechas a la vez: 95,6 %', 22, AMBER, 700)
-    + text(52, 622, 'Si una reserva baja de la mitad antes de la mitad de su cadena, escala al Comité Ejecutivo.', 16.5, WHITE),
-    1,
+    card(0, 286, 1728, 313, CARD_ALT, STROKE, 16, CORAL)
+    + text(30, 344, 'R-17 · RIESGO ALTO DE ATRASO EN HITOS', 24, CORAL, 700)
+    + text(30, 413, 'Alerta con 1 día hábil de atraso en la cadena de un hito.', 32, WHITE, 700)
+    + text(30, 473, 'Si el atraso proyectado supera el margen, escala al Comité Ejecutivo.', 27, WHITE)
+    + text(30, 539, 'Antes de fijar H1: validar capacidad, ventanas de terceros y estimaciones de tres puntos.', 25, MUTED),
+    2,
 )
-slack = [
-    ('A04', 'Factibilidad con terceros', 61, 'No depende de audIT', None),
-    ('A18', 'Instalación progresiva', 40, 'Cierre Los Libertadores', 9),
-    ('A06', 'Adhesión (holgura libre)', 24, 'Antes de la capacitación', None),
-    ('A11', 'Piloto a bordo', 20, 'Cierre Los Libertadores', 9),
-    ('A15', 'Marcha blanca E1', 20, 'Extensión por Art. 17.3', None),
-]
-right = (
-    card(868, 0, 860, 650, CARD_BG, STROKE, 16, C, accent_top=True)
-    + badge(896, 26, 'HOLGURAS QUE ABSORBEN RIESGOS · S7 §7.3.1', C, '#e7f3f6', None, 34, 17)
-    + text(896, 108, 'Lo que no controla audIT va fuera de la ruta', 28, WHITE, 700)
-    + text(896, 142, 'Holgura total en días hábiles frente al evento que debe absorber.', 19, MUTED)
-)
-rows = ''
-scale = 6.2
-for k, (aid, name, ht, why, event) in enumerate(slack):
-    y = 182 + k * 88
-    body = (
-        text(896, y + 26, aid, 20, C, 700) + text(950, y + 26, name, 21, WHITE, 600)
-        + text(1700, y + 26, why, 17, MUTED, 400, 'end')
-        + rect_bar(896, y + 40, round(ht * scale), 22, C, 6, grow_x=True)
-        + text(896 + round(ht * scale) + 10, y + 58, f'{ht} d', 19, C, 700)
-    )
-    if event:
-        body += (
-            rect_bar(896, y + 66, round(event * scale), 10, CORAL, 4, grow_x=True)
-            + text(896 + round(event * scale) + 8, y + 76, f'cierre del paso: {event} d hábiles (Caso §13.2)', 16, CORAL, 600)
-        )
-    rows += item(body)
-v += group(right + rows, 2)
 add(
-    'Las reservas y holguras absorben el riesgo del plan.',
-    'RIESGOS DEL CRONOGRAMA / S7 §7.3.1 · TABLAS 7.6 Y 7.7 · T-15',
-    v,
-    'S7 §7.3.1: reservas A14 y A23 (PERT, 2σ), probabilidad conjunta 95,6 % y holguras de A04, A06, A11, A15 y A18 · Caso §13.2, p. 27',
-    'El riesgo de plazo se trata con números del plan. [Revelar reservas.] A14 protege la Etapa 1 con 14 días hábiles: dos desviaciones estándar de su cadena crítica, 97,9 % de cumplir el inicio del mes 13. A23 hace lo mismo para la Etapa 2 con 10 días y 97,6 %. Las dos fechas a la vez: 95,6 %. Y hay una regla: si una reserva baja de la mitad cuando a su cadena le queda más de la mitad, el caso sube al Comité Ejecutivo. [Revelar holguras.] Lo que no depende de audIT queda fuera de la ruta crítica: la factibilidad con terceros puede atrasarse 61 días; un cierre del paso Los Libertadores, unos 9 días hábiles, cabe en la holgura del piloto y de la instalación.',
-    60,
-    3,
+    'Dos reservas protegen las marchas blancas.',
+    'RIESGOS DEL CRONOGRAMA · T-15 · T-16 · S7 §7.3.1', v,
+    'S7 §7.3.1 · S8 §8.2 · T-15 y T-16 (R-17)',
+    'A14 y A23 son ventanas de planificación de 14 y 10 días. R-17 permanece alto hasta validar capacidad, ventanas y estimaciones de tres puntos con los ejecutores. La malla CPM informa márgenes; las probabilidades de cumplimiento quedan sujetas a la validación de la línea base.',
+    45, 3,
 )
 
 # 13. s13 — Compuertas de Aceptación, Hitos y Reservas de Red (90 s · S7 §7.3.1 · T-15 · T-18)
@@ -2271,7 +2203,7 @@ v += group(
     + badge(48, 480, 'S7 §7.3.1 · REGLA DE GOBIERNO', AMBER, '#fff0d7', None, 34, 19)
     + text(540, 505, 'Fecha contractual de hito  ≠  Holgura interna de la red', 34, AMBER, 700)
     + text(48, 558, '• Una holgura en actividades internas o el uso de las reservas A14 (14 d) y A23 (10 d) no autoriza desplazar H7 (M16) ni H12 (M21).', 25, WHITE)
-    + text(48, 598, '• S8: Monte Carlo de 10.000 corridas sobre la red del T-15; H12 se cumple en el 95,5 % de las corridas.', 23, MUTED),
+    + text(48, 598, '• H7 y H12 llegan al límite contractual, incluida la revisión de la contraparte.', 23, MUTED),
     2,
 )
 add(
@@ -2287,12 +2219,12 @@ add(
 # 14. s14 — Cierre: Compromisos Verificables de la Propuesta (45 s · Síntesis Integral)
 v = ''
 COMPROMISOS = [
-    ('01', 'Qué construimos', 'Una arquitectura híbrida de 39 componentes', 'que sigue operando sin enlace.',
+    ('01', 'Qué construimos', 'Una arquitectura híbrida de 47 componentes', 'que sigue operando sin enlace.',
      '182 G26I · 8 capas con producto · 24 h en sitio, 288 h a bordo', NUBE),
     ('02', 'Cómo lo ejecutamos', '54 paquetes aceptables y una ruta', 'crítica protegida por reservas.',
-     f"13 actividades críticas · A14 y A23 · H12 al {MC.get('H12', '')} en Monte Carlo", SITIO),
-    ('03', 'Cómo lo protegemos', '28 riesgos con disparador;', 'ninguno queda alto.',
-     'R-06 evitado desde el diseño · AMFE bajo 50 · sin documento no hay salida', CORAL),
+     'H4, H7 y H12 sin margen · reservas A14 y A23', SITIO),
+    ('03', 'Cómo lo protegemos', '36 riesgos con disparador;', 'con seguimiento especial de R-17.',
+     'R-17: H4, H7 y H12 sin margen · contingencias por riesgo', CORAL),
 ]
 for k, (num, act, l1, l2, sub, colr) in enumerate(COMPROMISOS):
     y = k * 168
@@ -2308,8 +2240,8 @@ add(
     'Tres compromisos que se pueden verificar.',
     'CIERRE / POR QUÉ LA PROPUESTA ES VIABLE',
     v,
-    'Síntesis del Informe 2: S4, S5, S7, S8 y formularios T-11 a T-19',
-    'Cerrar con tres frases, una por acto, sin repetir las láminas. Qué construimos: una arquitectura híbrida que sigue operando sin enlace. Cómo lo ejecutamos: 54 paquetes y una ruta crítica protegida por reservas. Cómo lo protegemos: 28 riesgos con disparador, ninguno alto después de mitigar. Mencionar que la calidad tiene 120 casos diseñados y abrir las preguntas.',
+    'Síntesis de la oferta final: S4, S5, S7, S8 y formularios T-11 a T-19',
+    'Cerrar con tres frases, una por acto, sin repetir las láminas. Qué construimos: una arquitectura híbrida que sigue operando sin enlace. Cómo lo ejecutamos: 54 paquetes y reservas para los inicios de marcha blanca. Cómo lo protegemos: 36 riesgos con disparador, R-17 se mantiene alto hasta validar la línea base. Mencionar que la calidad tiene 120 casos diseñados y abrir las preguntas.',
     45,
     3,
 )
@@ -2343,7 +2275,7 @@ v = ''
 limits_s15 = [
     ('01 · VERIFICACIÓN DOCUMENTAL', 'Cotejo de observaciones y trazabilidad', 'Se verificó Obs. 37, 43 y cadena RNF-011 en S3, T-12, T-14 y T-17.', 'No equivale a una auditoría de cumplimiento total de pliego.', 20, 26, C, 0),
     ('02 · PROTOCOLOS DE PRUEBA (T-17)', 'Diseño acreditado vs. ejecución futura', '120 casos (incluidos CP-INT-05 y CP-SYS-05) con diseño y criterios.', 'La ejecución y actas de resultado ocurren en etapa contractual.', 874, 26, AMBER, 1),
-    ('03 · MODELO DE CRONOGRAMA (T-15)', 'Red determinista con reservas explícitas', 'Incorpora reservas A14 (14 d), A23 (10 d) y Células Alfa y Beta.', 'Monte Carlo del S8: probabilidad por hito en 10.000 corridas.', 20, 336, C, 1),
+    ('03 · MODELO DE CRONOGRAMA (T-15)', 'Red determinista con reservas explícitas', 'Incorpora reservas A14 (14 d), A23 (10 d) y Células Alfa y Beta.', 'S8: márgenes por hito y validación de estimaciones en H1.', 20, 336, C, 1),
     ('04 · CALENDARIO CONTRACTUAL (T-18)', 'Meses relativos al hito de inicio', 'Los hitos M10, M13, M16, M19, M21, M24 y M56 son meses relativos.', 'Las fechas calendario definitivas se fijan al firmar el inicio.', 874, 336, AMBER, 2),
 ]
 for tag, title_l, desc1, desc2, xl, yl, col_l, st_l in limits_s15:
@@ -2540,7 +2472,7 @@ add(
 
 # s20 a s28 (Respaldos 06 a 14) — Diccionario Completo EDT (Paquetes 1 al 54, sin colisiones)
 # Fuente vigente: tabla del diccionario exportada del Formulario T-14 (repositorio audIT).
-T14 = INF2 / 'AUDIT-Formulario-T-14.md'
+T14 = FINAL / 'AUDIT-Formulario-T-14.md'
 packages = []
 for row in T14.read_text(encoding='utf-8').splitlines():
     cells = [c.strip() for c in row.strip().strip('|').split('|')]
@@ -2584,9 +2516,8 @@ for page_idx, offset in enumerate(range(0, len(packages), 6)):
 
 # ==============================================================================
 # BLOQUE COMERCIAL (presentación final de 15 minutos)
-# Las cifras salen de economico/datos/partidas.csv, única fuente de montos de la
-# oferta. Lo que está vacío se muestra «POR COMPLETAR»: no se inventa ninguna cifra.
-# Al llenar partidas.csv basta con volver a ejecutar construir.py.
+# Los montos de oferta salen de partidas.csv. La curva y la evaluación
+# financiera usan los resultados guardados en la planilla final del Sobre 3.
 # ==============================================================================
 def _leer_partidas():
     ruta = ECONOMICO / 'datos/partidas.csv'
@@ -2619,8 +2550,6 @@ def _leer_partidas():
 
 
 ECON = _leer_partidas()
-TASA_DESCUENTO = None   # texto, por ejemplo '10 %' (Formulario E-24)
-TIR = None              # texto, por ejemplo '18,4 %'
 PENDIENTES = []
 
 
@@ -2640,21 +2569,14 @@ def monto(clave, x, y, size=34, anchor='start', w=250):
     return pend(x - w if anchor == 'end' else x, y - 28, w)
 
 
-def dato(valor, x, y, size=34, anchor='start', w=250, clave=''):
-    if valor:
-        return text(x, y, valor, size, WHITE, 700, anchor)
-    PENDIENTES.append(clave)
-    return pend(x - w if anchor == 'end' else x, y - 28, w)
-
-
 # --- Resumen de la oferta ------------------------------------------------------
 v = ''
 RESUMEN = [
-    ('QUÉ ENTREGAMOS', NUBE, '39', 'componentes híbridos',
-     ['8 capas, cada una con su producto', '182 camiones con equipo audIT', '24 h en sitio y 288 h a bordo sin enlace']),
+    ('QUÉ ENTREGAMOS', NUBE, '47', 'componentes híbridos',
+     ['8 capas, cada una con su producto', '182 camiones con equipo audIT', '24 h en sitio · 288 h a bordo sin enlace']),
     ('CÓMO LO EJECUTAMOS', SITIO, '54', 'paquetes aceptables',
-     ['25 actividades, 13 críticas', 'Dos etapas de implementación hasta el mes 21', '36 meses de operación']),
-    ('CUÁNTO CUESTA', AMBER, None, 'valor total del proyecto',
+     ['122 nodos en la malla CPM', 'Dos etapas de implementación hasta el mes 21', '36 meses de operación']),
+    ('CUÁNTO CUESTA', AMBER, None, 'precio neto del proyecto',
      ['Implementación más 36 meses de operación', 'Costo, VAN y TIR se explican más adelante']),
 ]
 for k, (tag, colr, big, label, lines_) in enumerate(RESUMEN):
@@ -2673,7 +2595,7 @@ v += group(
     card(0, 466, 1728, 150, CARD_ALT, STROKE, 16, C)
     + text(36, 520, 'Con evidencia que se puede verificar', 22, C, 700, extra='letter-spacing="2"')
     + text(36, 580, '5 innovaciones, cada una con su TRL y sus condiciones', 26, WHITE, 600)
-    + text(790, 580, '28 riesgos con disparador', 26, WHITE, 600)
+    + text(790, 580, '36 riesgos con disparador', 26, WHITE, 600)
     + text(1180, 580, '120 casos de prueba diseñados', 26, WHITE, 600),
     3,
 )
@@ -2682,7 +2604,7 @@ add(
     'OFERTA / QUÉ ENTREGAMOS, CÓMO Y A QUÉ COSTO',
     v,
     'S4 · S7 · S8 · T-11 · T-14 · T-15 · T-16 · T-17 · T-19 · economico/datos/partidas.csv',
-    'Vender la propuesta en una lámina. Qué entregamos: una solución híbrida de 39 componentes que sigue operando sin enlace. Cómo lo ejecutamos: 54 paquetes aceptables, dos etapas y una ruta crítica protegida. Cuánto cuesta: el valor total del proyecto y, más adelante, su explicación por categoría, VAN y TIR. Cerrar con la evidencia: cinco innovaciones con TRL, 28 riesgos con disparador y 120 casos de prueba diseñados, no ejecutados.',
+    'Vender la propuesta en una lámina. Qué entregamos: una solución híbrida de 47 componentes que sigue operando sin enlace. Cómo lo ejecutamos: 54 paquetes aceptables, dos etapas y márgenes de aceptación por hito. Cuánto cuesta: el valor total del proyecto y, más adelante, su explicación por categoría, VAN y TIR. Cerrar con la evidencia: cinco innovaciones con TRL, 36 riesgos con disparador y 120 casos de prueba diseñados, no ejecutados.',
     50,
     4,
 )
@@ -2691,9 +2613,9 @@ add(
 COLS_P = [(0, 'PROVEEDOR'), (460, 'QUÉ PROVEE'), (1160, 'DÓNDE'), (1470, 'MODALIDAD')]
 PROV = [
     ('Microsoft Azure', 'Front Door, API Management, AKS, IoT Hub, Event Hubs y datos', 'Chile Central · Brazil South', 'Se contrata', 0),
-    ('Dell · Fortinet', '2 PowerEdge R360 · 2 FortiGate 90G · 2 FortiSwitch', 'San Bernardo, sala de sitio', 'Compra del mandante', 1),
-    ('APC · Himoinsa', 'UPS APC y grupo electrógeno Himoinsa HYW-8', 'San Bernardo y terminales', 'Compra del mandante', 1),
-    ('OnLogic · Teltonika', '2 Karbon 430 y router 5G RUTX50 por terminal', 'Cuatro terminales', 'Compra del mandante', 2),
+    ('Dell · Fortinet', '2 Dell R360 (audIT) · firewall y switches (mandante)', 'San Bernardo', 'Compra compartida', 1),
+    ('APC · Himoinsa', 'UPS APC y grupo electrógeno Himoinsa HYW-8', 'San Bernardo y terminales', 'Compra audIT', 1),
+    ('AAEON · Teltonika', '2 AAEON ICS-6280A y router 5G RUTX50 por terminal', 'Cuatro terminales', 'Compra compartida', 2),
     ('iWave · Iridium · Technoton', 'Computador G26I, Iridium Edge (SBD) y CANCrocodile', 'Flota audIT: 182 camiones', 'Compra del mandante', 3),
 ]
 v = group(
@@ -2710,8 +2632,10 @@ for i, (prov, que, donde, modal, st) in enumerate(PROV):
            + text(1470, y + 49, modal, 22, C if modal == 'Se contrata' else SITIO, 700))
     v += group(row, st)
 v += group(
-    text(0, 600, 'Gastos asociados a proveedores:', 24, MUTED, 600)
-    + monto('gasto-proveedores', 400, 600, 28),
+    text(0, 600, 'Infraestructura y servicios de operación', 24, MUTED, 600)
+    + monto('gasto-proveedores', 470, 600, 28)
+    + text(950, 600, 'Hardware del mandante · referencial', 24, MUTED, 600)
+    + monto('hardware-mandante', 1380, 600, 28),
     3,
 )
 add(
@@ -2719,13 +2643,13 @@ add(
     'COMERCIAL / PROVEEDORES Y ADQUISICIONES · T-11 · T-22',
     v,
     'T-11: especificaciones ofertadas · S4 §4.2 · T-22 (FEP01 p.69) · economico/datos/partidas.csv',
-    'Mostrar de dónde viene cada pieza y quién la paga. La nube se contrata en Azure. El hardware de San Bernardo, de los cuatro terminales y de los 182 camiones lo compra el mandante, con la marca y el modelo ofertados. Cada proveedor responde a una restricción técnica ya vista en la arquitectura. El valor por adquisición y los gastos asociados a proveedores están en la planilla económica.',
+    'Mostrar de dónde viene cada pieza y quién la paga. La nube se contrata en Azure. audIT asume cómputo y respaldo eléctrico. El mandante compra equipos de red y de campo conforme a la asignación del T-11. Cada proveedor responde a una restricción técnica ya vista en la arquitectura. El valor por adquisición y los gastos asociados a proveedores están en la planilla económica.',
     55,
     4,
 )
 
 # --- Curva S -------------------------------------------------------------------
-def leer_curva_s():
+def leer_modelo_financiero():
     # Se usan los valores calculados guardados en la planilla del Sobre 3.
     planillas = [p for p in (ECONOMICO / 'planilla').glob('*.xlsx') if not p.name.startswith('~$')]
     if len(planillas) != 1:
@@ -2740,11 +2664,14 @@ def leer_curva_s():
             for hoja in hojas.findall('.//{*}sheet')
         }
 
-        def leer_columnas(hoja, columnas):
+        def leer_celdas(hoja):
             ruta = rutas[hoja]
             ruta = ruta.lstrip('/') if ruta.startswith('/') else posixpath.normpath(posixpath.join('xl', ruta))
             tabla = ET.fromstring(libro.read(ruta))
-            celdas = {celda.attrib['r']: celda.findtext('{*}v') for celda in tabla.findall('.//{*}c')}
+            return {celda.attrib['r']: celda.findtext('{*}v') for celda in tabla.findall('.//{*}c')}
+
+        def leer_columnas(hoja, columnas):
+            celdas = leer_celdas(hoja)
             try:
                 return [tuple(float(celdas[f'{columna}{fila}']) for columna in columnas) for fila in range(2, 58)]
             except (KeyError, TypeError, ValueError) as error:
@@ -2753,12 +2680,22 @@ def leer_curva_s():
         contractual = leer_columnas('Curva S', ('A', 'B', 'C'))
         # W es el saldo acumulado de la Fila C, que incluye el efecto de caja del IVA.
         tesoreria = leer_columnas('Flujo de Caja', ('A', 'W'))
+        tasa = float(leer_celdas('Parámetros D2')['B10'])
+        indicadores = leer_celdas('Indicadores')
+        sensibilidad = leer_celdas('Sensibilidad')
+        casos = [(float(sensibilidad[f'M{fila}']), float(sensibilidad[f'J{fila}']))
+                 for fila in (6, 7, 4, 5)]
 
     meses = list(range(1, 57))
     if [fila[0] for fila in contractual] != meses or [fila[0] for fila in tesoreria] != meses:
         raise ValueError('La Curva S y el saldo de caja deben cubrir M1 a M56.')
-    return [(mes, costo / 1e6, factura / 1e6, saldo / 1e6)
-            for mes, (_, costo, factura), (_, saldo) in zip(meses, contractual, tesoreria)]
+    curva = [(mes, costo / 1e6, factura / 1e6, saldo / 1e6)
+             for mes, (_, costo, factura), (_, saldo) in zip(meses, contractual, tesoreria)]
+    return curva, tasa, float(indicadores["B2"]), float(indicadores["B3"]), casos
+
+
+def decimal_cl(valor, decimales):
+    return f'{valor:,.{decimales}f}'.translate(str.maketrans(',.', '.,'))
 
 
 def millones(valor):
@@ -2784,7 +2721,8 @@ def serie_curva(puntos, color, etiqueta):
             f'stroke-width="6" stroke-linecap="round" stroke-linejoin="round" data-draw="{largo}"/>')
 
 
-curva_s = leer_curva_s()
+curva_s, tasa_mensual, van_base, tir_base, sensibilidad = leer_modelo_financiero()
+assert math.isclose(van_base, ECON["van"], abs_tol=1)
 _, costo_final, factura_final, caja_final = curva_s[-1]
 mes_minimo, _, _, caja_minima = min(curva_s, key=lambda fila: fila[3])
 mes_cruce = max((mes for mes, costo, factura, _ in curva_s if factura <= costo), default=0) + 1
@@ -2808,7 +2746,7 @@ factura_puntos = [(x_curva(mes), y_avance(factura)) for mes, _, factura, _ in cu
 caja_puntos = [(x_curva(mes), y_caja(saldo)) for mes, _, _, saldo in curva_s]
 x_transicion = x_curva(TRANSICION)
 if mes_cruce <= len(curva_s):
-    nota_cruce = f'La facturación supera los costos desde M{mes_cruce}.'
+    nota_cruce = f'Facturación sobre costos desde M{mes_cruce}.'
     marca_cruce = circle(*factura_puntos[mes_cruce - 1], 7, C, '#ffffff', 4)
 else:
     nota_cruce = 'Los costos alcanzan o superan la facturación en M56.'
@@ -2841,7 +2779,7 @@ v = group(
     + line(1253, 194, 1694, 194, STROKE, 2)
     + text(1253, 245, 'Diferencia acumulada', 26, WHITE, 700)
     + text(1694, 245, f'{factura_final - costo_final:+,.0f}'.replace(',', '.'), 39, WHITE, 700, 'end')
-    + text(1253, 294, nota_cruce, 21, MUTED),
+    + text(1253, 294, nota_cruce, 18, MUTED),
     0,
 )
 v += group(
@@ -2888,15 +2826,15 @@ for i, (nom, clave) in enumerate(CATS):
     )
 v += group(
     card(1130, 0, 598, 560, CARD_BG, STROKE, 16, AMBER, accent_top=True)
-    + text(1166, 62, 'COSTO TOTAL DE LA SOLUCIÓN', 20, AMBER, 700, extra='letter-spacing="2"')
+    + text(1166, 62, 'COSTO NETO TOTAL', 20, AMBER, 700, extra='letter-spacing="2"')
     + monto('gasto-total', 1166, 130, 40, w=330)
     + line(1166, 170, 1692, 170, STROKE, 2)
-    + text(1166, 222, 'VALOR OFERTADO', 20, C, 700, extra='letter-spacing="2"')
+    + text(1166, 222, 'PRECIO NETO OFERTADO', 20, C, 700, extra='letter-spacing="2"')
     + text(1166, 290, 'Implementación', 25, MUTED, 600) + monto('implementacion', 1692, 290, 26, 'end')
     + text(1166, 360, 'Operación, 36 meses', 25, MUTED, 600) + monto('operacion', 1692, 360, 26, 'end')
     + text(1166, 430, 'Proyecto', 27, WHITE, 700) + monto('proyecto', 1692, 430, 28, 'end')
     + line(1166, 462, 1692, 462, STROKE, 2)
-    + text(1166, 512, 'Margen: valor ofertado menos costo total', 22, MUTED),
+    + text(1166, 512, f'Margen sobre ventas · {decimal_cl((ECON["proyecto"] - ECON["gasto-total"]) / ECON["proyecto"] * 100, 2)} %', 22, MUTED),
     2,
 )
 add(
@@ -2904,41 +2842,53 @@ add(
     'COMERCIAL / ANÁLISIS DE COSTOS · T-22 · E-21',
     v,
     'T-22 (FEP01 p.69): gastos por categoría, con los gastos de proveedores sumados a operación · E-21 · economico/datos/partidas.csv',
-    'Las bases evalúan con severidad un presupuesto sobreestimado o subestimado, así que cada categoría debe poder justificarse con el plan de actividades. Recorrer las cinco categorías del Formulario T-22, mostrar el costo total y compararlo con el valor ofertado por fase. Decir de dónde sale el margen y qué lo protege: reservas de la ruta crítica y reserva de riesgos.',
+    'Las bases evalúan con severidad un presupuesto sobreestimado o subestimado, así que cada categoría debe poder justificarse con el plan de actividades. Mostrar las cuatro categorías del T-22. La lámina desglosa operación en costos propios y servicios de proveedores. Comparar el costo neto total con el precio neto por fase. El margen consolidado se calcula sobre el precio de venta.',
     60,
     3,
 )
 
-# --- VAN y TIR -----------------------------------------------------------------
+# --- VAN, TIR y sensibilidad --------------------------------------------------
 v = ''
-KPI = [('HORIZONTE', C, '56 meses', 'Formulario E-24'), ('TASA DE DESCUENTO', SITIO, TASA_DESCUENTO, 'y su justificación'),
-       ('VAN', AMBER, None, 'valor actual neto'), ('TIR', CORAL, TIR, 'tasa interna de retorno')]
-for k, (tag, colr, val, sub) in enumerate(KPI):
+KPI = [
+    ('HORIZONTE', C, '56 meses', 'Flujo del proyecto M1–M56'),
+    ('DESCUENTO MENSUAL', SITIO, f'{decimal_cl(tasa_mensual * 100, 4)} %', '80 % deuda · 20 % capital propio'),
+    ('VAN DEL CASO BASE', AMBER, decimal_cl(van_base / 1e6, 2), 'Millones de CLP'),
+    ('TIR MENSUAL', CORAL, f'{decimal_cl(tir_base * 100, 2)} %', 'Unicidad de la raíz por validar'),
+]
+for k, (tag, colr, valor, sub) in enumerate(KPI):
     x = k * 440
-    body = card(x, 0, 408, 300, CARD_BG, STROKE, 16, colr, accent_top=True) + badge(x + 24, 30, tag, colr, '#eef4f6', 300, 34, 19)
-    if tag == 'VAN':
-        body += monto('van', x + 24, 150, 34, w=300)
-    else:
-        body += dato(val, x + 24, 150, 54, w=300, clave=tag.lower())
-    body += text(x + 24, 230, sub, 24, MUTED, 600)
-    v += group(body, k % 3)
+    v += group(
+        card(x, 0, 408, 209, CARD_BG, STROKE, 16, colr, accent_top=True)
+        + text(x + 24, 52, tag, 20, colr, 700)
+        + text(x + 24, 125, valor, 51, WHITE, 700)
+        + text(x + 24, 174, sub, 22, MUTED),
+        0,
+    )
 v += group(
-    card(0, 340, 1728, 230, CARD_ALT, STROKE, 16, C)
-    + text(36, 396, 'SENSIBILIDAD', 20, C, 700, extra='letter-spacing="2"')
-    + text(36, 452, 'Qué variables se mueven y cuánto cambia el VAN', 30, WHITE, 600)
-    + text(36, 500, 'El flujo de caja incluye la valorización de las cinco innovaciones.', 24, MUTED)
-    + pend(36, 524, 520, 'ESCENARIOS DE SENSIBILIDAD · POR COMPLETAR'),
-    3,
+    card(0, 235, 1728, 362, CARD_ALT, STROKE, 16, C)
+    + text(30, 280, 'SENSIBILIDAD · MILLONES DE CLP', 20, C, 700)
+    + text(1170, 328, 'VAN', 21, MUTED, 700, 'end')
+    + text(1688, 328, 'DÉFICIT ANTES DE COBROS', 21, MUTED, 700, 'end'),
+    1,
 )
-PENDIENTES.append('sensibilidad')
+for k, (nombre, (van, deficit)) in enumerate(zip((
+    'Costos +5 %', 'Cobros −5 %', 'H5 a M14 + reserva en M12', 'H5 a M14 + reserva + facilidad contingente',
+), sensibilidad)):
+    y = 370 + k * 58
+    v += group(
+        line(30, y - 28, 1698, y - 28, STROKE, 1)
+        + text(30, y + 6, nombre, 26, WHITE, 600)
+        + text(1170, y + 6, decimal_cl(van / 1e6, 2), 27, C, 700, 'end')
+        + text(1688, y + 6, decimal_cl(deficit / 1e6, 2), 27, CORAL if deficit else C, 700, 'end'),
+        1 if k < 2 else 2,
+    )
+v += group(text(30, 632, f'Facilidad de {clp(ECON["capital-adicional-h5"])} sujeta a disponibilidad.', 21, MUTED), 2)
 add(
     'VAN y TIR: la evaluación financiera a 56 meses.',
-    'COMERCIAL / VAN Y TIR · T-22 · E-24',
-    v,
-    'T-22 (FEP01 p.69) · E-24: horizonte de evaluación de 56 meses · economico/datos/partidas.csv',
-    'Presentar los cuatro indicadores en este orden: horizonte de 56 meses, tasa de descuento con su justificación, VAN y TIR. Luego la sensibilidad: qué variables se mueven y cuánto cambia el VAN. Cerrar con la conclusión financiera, que debe respaldarse con la planilla; no se enuncia ninguna cifra que no esté en ella.',
-    70,
-    4,
+    'COMERCIAL / EVALUACIÓN FINANCIERA · E-24', v,
+    'Sobre 3 · Modelo financiero 25.11.2026 (Indicadores y Sensibilidad) · Análisis financiero § Evaluación financiera',
+    'El VAN usa la Fila A de M1 a M56 con M0 en cero. La tasa mensual pondera deuda al 0,9 % mensual y capital propio al 20 % efectivo anual supuesto. La TIR es la raíz reportada por el modelo y su unicidad queda por validar. El VAN sigue positivo en los cuatro escenarios mostrados. Con atraso H5 a M14 y reserva en M12 queda un déficit antes de cobros de CLP 368,65 millones. La facilidad contingente de CLP 420 millones lo cubre en el escenario modelado, sujeto a disponibilidad. El cobro de M57 y los beneficios hipotéticos para Curimón se informan por separado del VAN base.',
+    70, 3,
 )
 
 # --- Condiciones comerciales -----------------------------------------------------
@@ -2959,14 +2909,14 @@ v += group(
     + badge(908, 30, 'PAGOS DE IMPLEMENTACIÓN', SITIO, '#e9edf6', 380, 36, 20)
     + rect_bar(908, 130, 456, 74, C, 10, grow_x=True) + text(1136, 177, 'Etapa 1 · 60 %', 28, '#ffffff', 700, 'middle')
     + rect_bar(1364, 130, 304, 74, SITIO, 10, grow_x=True) + text(1516, 177, 'Etapa 2 · 40 %', 28, '#ffffff', 700, 'middle')
-    + text(908, 262, 'Siete hitos hasta el mes 16 y cinco hasta el mes 21', 25, WHITE)
+    + text(908, 262, 'Etapa 1: H1–H7 hasta M16 · Etapa 2: H8–H12 hasta M21', 25, WHITE)
     + text(908, 306, 'Cada pago se gatilla con un entregable aceptado', 25, WHITE)
     + text(908, 400, 'Estructura obligatoria de las bases · FEP01 p.74', 20, MUTED),
     1,
 )
 v += group(
     card(0, 466, 1728, 150, CARD_ALT, STROKE, 16, AMBER)
-    + text(36, 520, 'VALOR OFERTADO', 20, AMBER, 700, extra='letter-spacing="2"')
+    + text(36, 520, 'PRECIO NETO OFERTADO', 20, AMBER, 700, extra='letter-spacing="2"')
     + text(36, 582, 'Implementación', 25, MUTED, 600) + monto('implementacion', 300, 582, 27)
     + text(760, 582, 'Operación', 25, MUTED, 600) + monto('operacion', 940, 582, 27),
     2,
@@ -2994,10 +2944,10 @@ RECORRIDO = [
     ('Un viaje se autoriza o se bloquea en 30 segundos.', 40),
     ('El camión es un nodo que opera sin red.', 45),
     ('La EDT cubre todo el alcance en 13 elementos.', 40),
-    ('La red de 25 actividades define la ruta crítica.', 55),
+    ('La red de actividades define la ruta crítica.', 55),
     ('El paquete 11.1 se controla con la compuerta G13.', 40),
-    ('Veintiocho riesgos evaluados; ninguno queda alto.', 50),
-    ('Las reservas y holguras absorben el riesgo del plan.', 45),
+    ('36 riesgos evaluados y un riesgo de plazo abierto.', 50),
+    ('Dos reservas protegen las marchas blancas.', 45),
     ('Proveedores y adquisiciones clave de la solución.', 55),
     (TITULO_CURVA_S, 50),
     ('Costos por categoría, frente al valor ofertado.', 60),
@@ -3014,12 +2964,12 @@ RESPALDO_ORDEN = [
     'Si se corta el enlace, la operación sigue.',
     'Cada elemento baja a paquetes que se pueden aceptar.',
     'El diccionario hace verificable cada paquete.',
-    '¿Y si la construcción de la Etapa 1 se atrasa 10 días?',
     'La transición se ejecuta en dos etapas niveladas.',
-    'Siete riesgos altos, cada uno con su disparador.',
+    'Diez riesgos con exposición inicial alta.',
     'R-28: cuatro causas, cuatro barreras antes del evento.',
-    'Registro de riesgos · R-01 a R-14.',
-    'Registro de riesgos · R-15 a R-28.',
+    'Registro de riesgos · R-01 a R-13.',
+    'Registro de riesgos · R-14 a R-25.',
+    'Registro de riesgos · R-26 a R-37.',
     'El AMFE completo: diez modos bajo NPR 50.',
     'El árbol de fallas modela compuertas OR y AND.',
     'Sin documento conforme, el viaje no puede salir.',
