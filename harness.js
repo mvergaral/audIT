@@ -19,9 +19,7 @@
     originalSeek(time);
     if (!timeline || !win.__hfSetTime) return;
     const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
-    // Al retroceder se salta directo al estado final, sin reproducir la animación.
-    const backward = time < lastTarget;
-    if (reduced || backward || document.documentElement.dataset.qa === 'true') {
+    if (reduced || document.documentElement.dataset.qa === 'true') {
       win.__hfSetTime(time);
     } else {
       const sameScene = Math.floor(lastTarget / 10) === Math.floor(time / 10);
@@ -38,11 +36,6 @@
     if (!c) return;
     if (c.position.fragmentIndex > 0) {
       c.resumeSlide(c.position.slideIndex, c.position.fragmentIndex - 1);
-    } else if (c.position.slideIndex > 0) {
-      // Vuelve a la lámina anterior ya con todas sus revelaciones hechas.
-      const idx = c.position.slideIndex - 1;
-      const anterior = c.slidesOf(c.position.sequenceId)[idx];
-      c.resumeSlide(idx, Math.max(0, (anterior?.fragments.length ?? 1) - 1));
     } else {
       c.prev();
     }
@@ -97,4 +90,31 @@
   },true);
   deck.focus({preventScroll:true});
   window.auditDeck = {get controller(){return deck.controller;}, get player(){return player;}};
+})();
+
+/* Temporizador independiente de la navegación. */
+(() => {
+  const box = document.createElement('div');
+  box.id = 'audit-timer';
+  box.style.cssText = 'position:fixed;left:12px;bottom:10px;z-index:2147483647;display:flex;align-items:center;gap:6px;padding:4px 7px;border:1px solid #dce4e7;border-radius:6px;background:rgba(255,255,255,.94);color:#123448;font:600 12px system-ui,sans-serif;font-variant-numeric:tabular-nums;box-shadow:0 1px 4px #0001';
+  box.innerHTML = '<span aria-label="Tiempo transcurrido">00:00</span><span style="opacity:.55;font-size:10px">/ 15:00</span><button type="button" title="Iniciar o pausar" aria-label="Iniciar">▶</button><button type="button" title="Reiniciar" aria-label="Reiniciar">↻</button>';
+  const [clock] = box.querySelectorAll('span');
+  const [toggle, reset] = box.querySelectorAll('button');
+  for (const b of [toggle,reset]) b.style.cssText='border:0;background:transparent;color:inherit;cursor:pointer;padding:2px;font:inherit;line-height:1';
+  let elapsed=0, started=null;
+  const total=900000;
+  function paint(){
+    const ms=Math.min(total,elapsed+(started===null?0:performance.now()-started));
+    const sec=Math.floor(ms/1000);
+    clock.textContent=String(Math.floor(sec/60)).padStart(2,'0')+':'+String(sec%60).padStart(2,'0');
+    box.style.color=sec>=900?'#a13437':sec>=780?'#a65e00':'#123448';
+    if(ms>=total){elapsed=total;started=null;}
+    toggle.textContent=started===null?'▶':'Ⅱ';
+    toggle.setAttribute('aria-label',started===null?'Iniciar o continuar':'Pausar');
+    toggle.disabled=elapsed>=total;
+  }
+  toggle.addEventListener('click',()=>{if(started===null){if(elapsed<total)started=performance.now();}else{elapsed=Math.min(total,elapsed+performance.now()-started);started=null;}paint();document.querySelector('hyperframes-slideshow')?.focus({preventScroll:true});});
+  reset.addEventListener('click',()=>{elapsed=0;started=null;paint();document.querySelector('hyperframes-slideshow')?.focus({preventScroll:true});});
+  for(const event of ['click','pointerdown','contextmenu'])box.addEventListener(event,e=>e.stopPropagation());
+  document.body.appendChild(box);paint();setInterval(paint,200);
 })();
