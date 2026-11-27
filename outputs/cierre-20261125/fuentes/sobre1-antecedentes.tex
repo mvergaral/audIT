@@ -8,6 +8,13 @@
 \input{configuracion/instancia}
 \input{configuracion/subdocumentos}
 
+% El estilo espera que longtable avance el contador al abrir la tabla numerada.
+% Las diez tablas de este sobre son numeradas. En versiones anteriores se avanza aquí.
+\makeatletter
+\@ifpackagelater{longtable}{2025/01/01}{}{%
+  \AddToHook{env/tabla/begin}{\refstepcounter{table}}}
+\makeatother
+
 \ImagenMediaFirma{}
 \ImagenFirmaCompleta{}
 \renewcommand\textoPie{%
@@ -73,7 +80,13 @@ Archivo digital de respaldo & \texttt{SOBRE1\_AUDIT\_ANTECEDENTES\_OFERENTE\_202
 \section*{Hoja Resumen y Formulario A-5}\label{sec:s1-a5}
 \rotuloSimuladoSobreUno
 
-La \tabref{s1-indice-folios} identifica los documentos y secciones contenidos en este ejemplar y sus folios. Las nóminas identifican los antecedentes respaldados mediante las piezas simuladas adjuntas. El respaldo digital del ejemplar físico se denomina \texttt{SOBRE1\_AUDIT\_ANTECEDENTES\_OFERENTE\_20261125.ZIP}. Los sobres electrónicos de entrega simultánea se denominan \texttt{SOBRE2\_AUDIT\_OFERTA\_TECNICA\_20261125.ZIP} y \texttt{SOBRE3\_AUDIT\_OFERTA\_ECONOMICA\_20261125.ZIP}.
+La \tabref{s1-indice-folios} presenta el índice A-5 con los documentos, las secciones y sus folios. Las nóminas identifican los antecedentes respaldados mediante las piezas simuladas adjuntas.
+
+\noindent Respaldo digital del ejemplar físico\par
+\noindent\texttt{SOBRE1\_AUDIT\_ANTECEDENTES\_OFERENTE\_20261125.ZIP}\par
+\noindent Sobres electrónicos de entrega simultánea\par
+\noindent\texttt{SOBRE2\_AUDIT\_OFERTA\_TECNICA\_20261125.ZIP}\par
+\noindent\texttt{SOBRE3\_AUDIT\_OFERTA\_ECONOMICA\_20261125.ZIP}\par
 
 \begin{tabla}[ancho=completo]{Índice de documentos y folios conforme al Formulario A-5}{s1-indice-folios}{C{10mm} X C{16mm} C{16mm} L{55mm}}
 \textbf{N.º} & \textbf{Documento} & \textbf{Inicio} & \textbf{Término} & \textbf{Observación} \\ \midrule
